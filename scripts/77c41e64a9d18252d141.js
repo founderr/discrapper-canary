@@ -994,7 +994,7 @@
                         disabled: I,
                         placeholder: S,
                         ...N
-                    } = e, [f, g] = n.useState(null != l ? l : ""), A = s.map((e, t) => (0, a.jsxs)("span", {
+                    } = e, [g, f] = n.useState(null != l ? l : ""), A = s.map((e, t) => (0, a.jsxs)("span", {
                         className: i(u.tag, {
                             [u.disabledTag]: I
                         }),
@@ -1008,19 +1008,19 @@
                             })
                         })]
                     }, t)), L = n.useCallback(() => {
-                        let e = f.trim();
-                        if (0 !== e.length)(null == T || !(s.length >= T)) && (E(e), g(""))
-                    }, [f, T, E, s.length]), m = n.useCallback(e => {
+                        let e = g.trim();
+                        if (0 !== e.length)(null == T || !(s.length >= T)) && (E(e), f(""))
+                    }, [g, T, E, s.length]), m = n.useCallback(e => {
                         switch (e.keyCode) {
                             case d.KeyboardKeys.BACKSPACE:
-                                0 === f.length && s.length > 0 && (e.preventDefault(), e.stopPropagation(), c(s.length - 1));
+                                0 === g.length && s.length > 0 && (e.preventDefault(), e.stopPropagation(), c(s.length - 1));
                                 break;
                             case d.KeyboardKeys.ENTER:
                             case d.KeyboardKeys.TAB:
                             case d.KeyboardKeys.COMMA:
                                 e.preventDefault(), e.stopPropagation(), L()
                         }
-                    }, [L, f.length, c, s.length]);
+                    }, [L, g.length, c, s.length]);
                     return (0, a.jsxs)("div", {
                         className: i(t, u.inputWrapper, {
                             [u.disabled]: I
@@ -1029,9 +1029,9 @@
                             className: u.inputOuter,
                             inputClassName: u.inputInner,
                             ...N,
-                            value: f,
+                            value: g,
                             onKeyDown: m,
-                            onChange: g,
+                            onChange: f,
                             maxLength: _,
                             disabled: I,
                             onBlur: L,
@@ -1809,7 +1809,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return g
                 }
             });
             var a = s("37983");
@@ -1844,12 +1844,12 @@
                 })
             }
 
-            function f(e) {
+            function g(e) {
                 let {
                     guildId: t,
                     showCTA: s,
                     responsive: n = !0
-                } = e, f = [
+                } = e, g = [
                     [I.default.Messages.GUILD_STORE_PREVIEW_CHIP_ROLE_ACCESS, I.default.Messages.GUILD_STORE_PREVIEW_CHIP_GAME_TUTORIALS],
                     [I.default.Messages.GUILD_STORE_PREVIEW_CHIP_DOPE_WALLPAPERS, I.default.Messages.GUILD_STORE_PREVIEW_CHIP_PFP_ART],
                     [I.default.Messages.GUILD_STORE_PREVIEW_CHIP_FILTER_PRESETS, I.default.Messages.GUILD_STORE_PREVIEW_CHIP_SONG_DROPS],
@@ -1865,7 +1865,7 @@
                             className: S.content,
                             children: [(0, a.jsx)("div", {
                                 className: S.pillContainer,
-                                children: f.map((e, t) => (0, a.jsx)(N, {
+                                children: g.map((e, t) => (0, a.jsx)(N, {
                                     pills: e
                                 }, "pill-row-".concat(t)))
                             }), (0, a.jsxs)("div", {
@@ -2196,10 +2196,10 @@
                     return S
                 },
                 createListingNameColumn: function() {
-                    return f
+                    return g
                 },
                 createCurrencyAmountColumn: function() {
-                    return g
+                    return f
                 },
                 createPersonCountColumn: function() {
                     return A
@@ -2265,7 +2265,7 @@
                 })
             }
 
-            function f(e) {
+            function g(e) {
                 let {
                     cellClassName: t,
                     key: s,
@@ -2301,7 +2301,7 @@
                 })
             }
 
-            function g(e) {
+            function f(e) {
                 let {
                     cellClassName: t,
                     getAmount: s,
@@ -2609,8 +2609,8 @@
                 I = s("445940"),
                 S = s("578706"),
                 N = s("381546"),
-                f = s("68238"),
-                g = s("717559"),
+                g = s("68238"),
+                f = s("717559"),
                 A = s("207353"),
                 L = s("215393"),
                 m = s("397056"),
@@ -2636,7 +2636,7 @@
                     payoutStatus: a,
                     ppgDeferralReasons: n,
                     periodEndDate: i
-                } = (0, g.getStatusForPeriod)(t), r = null != i ? u(i).add(15, "days").toISOString() : void 0, o = (0, E.formatNextPaymentDate)(r, "MMM D");
+                } = (0, f.getStatusForPeriod)(t), r = null != i ? u(i).add(15, "days").toISOString() : void 0, o = (0, E.formatNextPaymentDate)(r, "MMM D");
                 switch (s) {
                     case m.PaymentPayoutGroupStatuses.OPEN:
                         return (0, l.jsxs)(l.Fragment, {
@@ -2704,7 +2704,7 @@
                     renderHeader() {
                         let e = (0, l.jsx)(c.Tooltip, {
                             text: C.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT_DISCLAIMER,
-                            children: e => (0, l.jsx)(f.default, {
+                            children: e => (0, l.jsx)(g.default, {
                                 className: O.amountDisclaimer,
                                 ...e
                             })
@@ -2743,7 +2743,7 @@
                     renderHeader() {
                         let e = (0, l.jsx)(c.Tooltip, {
                             text: C.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_NEXT_PAYMENT_DISCLAIMER,
-                            children: e => (0, l.jsx)(f.default, {
+                            children: e => (0, l.jsx)(g.default, {
                                 className: O.statusDisclaimer,
                                 ...e
                             })
@@ -3133,8 +3133,8 @@
                         return (null == e ? void 0 : e.isOwner(t)) === !0
                     }),
                     {
-                        error: f,
-                        loading: g,
+                        error: g,
+                        loading: f,
                         createEnableRequest: A,
                         submittedRequest: L
                     } = (0, d.default)(null == e ? void 0 : e.id),
@@ -3172,8 +3172,8 @@
                 return a.useEffect(() => {
                     v && O()
                 }, [O, v]), {
-                    resubmittingEnableRequest: g,
-                    resubmissionError: f,
+                    resubmittingEnableRequest: f,
+                    resubmissionError: g,
                     isGuildOwner: N,
                     createEnableRequest: A,
                     resubmittedRequest: L,
@@ -3634,8 +3634,8 @@
                 I = s("782340"),
                 S = s("583810"),
                 N = s("68422"),
-                f = s("578817");
-            let g = [16, 16, 14, 14, 12, 10, 8];
+                g = s("578817");
+            let f = [16, 16, 14, 14, 12, 10, 8];
             var A = function(e) {
                 var t, s;
                 let {
@@ -3660,7 +3660,7 @@
                     id: l.id,
                     splash: l.discoverySplash,
                     size: 240 * (0, u.getDevicePixelRatio)()
-                }), U = (0, r.isThemeDark)(D) ? N : f, v = null !== (t = _.default.getGuildIconURL({
+                }), U = (0, r.isThemeDark)(D) ? N : g, v = null !== (t = _.default.getGuildIconURL({
                     id: l.id,
                     icon: l.icon,
                     size: 40
@@ -3677,7 +3677,7 @@
                         children: (0, a.jsx)(o.Text, {
                             className: S.acronym,
                             style: {
-                                fontSize: null !== (s = g[e.length]) && void 0 !== s ? s : g[g.length - 1]
+                                fontSize: null !== (s = f[e.length]) && void 0 !== s ? s : f[f.length - 1]
                             },
                             variant: "text-sm/normal",
                             children: e
@@ -3851,14 +3851,14 @@
                         guildId: d,
                         uploadId: S,
                         roles: N,
-                        image: f,
-                        hideErrorModal: g
+                        image: g,
+                        hideErrorModal: f
                     } = e, A = o.default.sanitizeEmojiName(s.name.split(".")[0]), L = o.default.isFileTooBig(s);
                     if (L) {
                         if ("image/gif" === s.type) return T(s.name, s.size, d, S);
-                        if (null != f) {
+                        if (null != g) {
                             let e;
-                            t = (0, l.downsizeImage)(f, 128, 128);
+                            t = (0, l.downsizeImage)(g, 128, 128);
                             try {
                                 e = o.default.isDataTooBig(t)
                             } catch (e) {
@@ -3888,7 +3888,7 @@
                             upload_id: S
                         }), e = E.default.Messages.EMOJI_TOO_BIG.format({
                             maxSize: u.EMOJI_MAX_FILESIZE_KB
-                        }), s = i.ImageInputUploadErrors.TOO_BIG) : (null != n.image || n.code === c.AbortCodes.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) && (s = i.ImageInputUploadErrors.RESIZE_GIF)), 429 === l && (e = E.default.Messages.RATE_LIMITED, s = i.ImageInputUploadErrors.RATE_LIMIT), null != e && !g && a.default.show({
+                        }), s = i.ImageInputUploadErrors.TOO_BIG) : (null != n.image || n.code === c.AbortCodes.INVALID_FILE_ASSET_SIZE_RESIZE_GIF) && (s = i.ImageInputUploadErrors.RESIZE_GIF)), 429 === l && (e = E.default.Messages.RATE_LIMITED, s = i.ImageInputUploadErrors.RATE_LIMIT), null != e && !f && a.default.show({
                             title: E.default.Messages.GENERIC_ERROR_TITLE,
                             body: e
                         }), s
@@ -4184,220 +4184,221 @@
                 I = s("42203"),
                 S = s("27618"),
                 N = s("697218"),
-                f = s("354023"),
-                g = s("49111"),
+                g = s("354023"),
+                f = s("49111"),
                 A = s("745049"),
                 L = s("782340");
             let m = new d.default("AuditLogUtils"),
                 C = -1,
                 O = () => ({
-                    [g.AuditLogChangeKeys.REASON]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
+                    [f.AuditLogChangeKeys.REASON]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
                 }),
                 h = () => ({
-                    [g.AuditLogChangeKeys.NAME]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
-                    [g.AuditLogChangeKeys.DESCRIPTION]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE),
-                    [g.AuditLogChangeKeys.ICON_HASH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_ICON_HASH_CHANGE,
-                    [g.AuditLogChangeKeys.SPLASH_HASH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SPLASH_HASH_CHANGE,
-                    [g.AuditLogChangeKeys.DISCOVERY_SPLASH_HASH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DISCOVERY_SPLASH_HASH_CHANGE,
-                    [g.AuditLogChangeKeys.BANNER_HASH]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_REMOVE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_CHANGE),
-                    [g.AuditLogChangeKeys.OWNER_ID]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_OWNER_ID_CHANGE,
-                    [g.AuditLogChangeKeys.REGION]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_REGION_CHANGE,
-                    [g.AuditLogChangeKeys.PREFERRED_LOCALE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREFERRED_LOCALE_CHANGE,
-                    [g.AuditLogChangeKeys.AFK_CHANNEL_ID]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CHANGE),
-                    [g.AuditLogChangeKeys.AFK_TIMEOUT]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_TIMEOUT_CHANGE,
-                    [g.AuditLogChangeKeys.SYSTEM_CHANNEL_ID]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_DISABLE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_CHANGE),
-                    [g.AuditLogChangeKeys.RULES_CHANNEL_ID]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CHANGE),
-                    [g.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CHANGE),
-                    [g.AuditLogChangeKeys.MFA_LEVEL]: {
-                        [g.MFALevels.NONE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_DISABLED,
-                        [g.MFALevels.ELEVATED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_ENABLED
+                    [f.AuditLogChangeKeys.NAME]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
+                    [f.AuditLogChangeKeys.DESCRIPTION]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE),
+                    [f.AuditLogChangeKeys.ICON_HASH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_ICON_HASH_CHANGE,
+                    [f.AuditLogChangeKeys.SPLASH_HASH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SPLASH_HASH_CHANGE,
+                    [f.AuditLogChangeKeys.DISCOVERY_SPLASH_HASH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DISCOVERY_SPLASH_HASH_CHANGE,
+                    [f.AuditLogChangeKeys.BANNER_HASH]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_REMOVE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_CHANGE),
+                    [f.AuditLogChangeKeys.OWNER_ID]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_OWNER_ID_CHANGE,
+                    [f.AuditLogChangeKeys.REGION]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_REGION_CHANGE,
+                    [f.AuditLogChangeKeys.PREFERRED_LOCALE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREFERRED_LOCALE_CHANGE,
+                    [f.AuditLogChangeKeys.AFK_CHANNEL_ID]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CHANGE),
+                    [f.AuditLogChangeKeys.AFK_TIMEOUT]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_TIMEOUT_CHANGE,
+                    [f.AuditLogChangeKeys.SYSTEM_CHANNEL_ID]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_DISABLE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_CHANGE),
+                    [f.AuditLogChangeKeys.RULES_CHANNEL_ID]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CHANGE),
+                    [f.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CHANGE),
+                    [f.AuditLogChangeKeys.MFA_LEVEL]: {
+                        [f.MFALevels.NONE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_DISABLED,
+                        [f.MFALevels.ELEVATED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_ENABLED
                     },
-                    [g.AuditLogChangeKeys.WIDGET_ENABLED]: {
+                    [f.AuditLogChangeKeys.WIDGET_ENABLED]: {
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_ENABLED,
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_DISABLED
                     },
-                    [g.AuditLogChangeKeys.WIDGET_CHANNEL_ID]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_DELETE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_CHANGE),
-                    [g.AuditLogChangeKeys.VERIFICATION_LEVEL]: {
-                        [g.VerificationLevels.NONE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_NONE,
-                        [g.VerificationLevels.LOW]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_LOW,
-                        [g.VerificationLevels.MEDIUM]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_MEDIUM,
-                        [g.VerificationLevels.HIGH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_HIGH,
-                        [g.VerificationLevels.VERY_HIGH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_VERY_HIGH
+                    [f.AuditLogChangeKeys.WIDGET_CHANNEL_ID]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_DELETE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_CHANGE),
+                    [f.AuditLogChangeKeys.VERIFICATION_LEVEL]: {
+                        [f.VerificationLevels.NONE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_NONE,
+                        [f.VerificationLevels.LOW]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_LOW,
+                        [f.VerificationLevels.MEDIUM]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_MEDIUM,
+                        [f.VerificationLevels.HIGH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_HIGH,
+                        [f.VerificationLevels.VERY_HIGH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_VERY_HIGH
                     },
-                    [g.AuditLogChangeKeys.DEFAULT_MESSAGE_NOTIFICATIONS]: {
-                        [g.UserNotificationSettings.ALL_MESSAGES]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ALL_MESSAGES,
-                        [g.UserNotificationSettings.ONLY_MENTIONS]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ONLY_MENTIONS
+                    [f.AuditLogChangeKeys.DEFAULT_MESSAGE_NOTIFICATIONS]: {
+                        [f.UserNotificationSettings.ALL_MESSAGES]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ALL_MESSAGES,
+                        [f.UserNotificationSettings.ONLY_MENTIONS]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ONLY_MENTIONS
                     },
-                    [g.AuditLogChangeKeys.VANITY_URL_CODE]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_DELETE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_CHANGE),
-                    [g.AuditLogChangeKeys.EXPLICIT_CONTENT_FILTER]: {
-                        [g.GuildExplicitContentFilterTypes.DISABLED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_DISABLE,
-                        [g.GuildExplicitContentFilterTypes.MEMBERS_WITHOUT_ROLES]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_MEMBERS_WITHOUT_ROLES,
-                        [g.GuildExplicitContentFilterTypes.ALL_MEMBERS]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_ALL_MEMBERS
+                    [f.AuditLogChangeKeys.VANITY_URL_CODE]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_DELETE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_CHANGE),
+                    [f.AuditLogChangeKeys.EXPLICIT_CONTENT_FILTER]: {
+                        [f.GuildExplicitContentFilterTypes.DISABLED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_DISABLE,
+                        [f.GuildExplicitContentFilterTypes.MEMBERS_WITHOUT_ROLES]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_MEMBERS_WITHOUT_ROLES,
+                        [f.GuildExplicitContentFilterTypes.ALL_MEMBERS]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_ALL_MEMBERS
                     },
-                    [g.AuditLogChangeKeys.PREMIUM_PROGRESS_BAR_ENABLED]: {
+                    [f.AuditLogChangeKeys.PREMIUM_PROGRESS_BAR_ENABLED]: {
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_ENABLED,
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_DISABLED
                     },
-                    [g.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
-                    [g.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATIONS,
-                    [g.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTIONS,
-                    [g.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_REMINDER_NOTIFICATIONS,
-                    [g.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
+                    [f.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
+                    [f.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATIONS,
+                    [f.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTIONS,
+                    [f.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_REMINDER_NOTIFICATIONS,
+                    [f.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
                     ...O()
                 }),
                 R = () => ({
-                    [g.AuditLogChangeKeys.NAME]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE),
-                    [g.AuditLogChangeKeys.POSITION]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE),
-                    [g.AuditLogChangeKeys.TOPIC]: Z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR),
-                    [g.AuditLogChangeKeys.BITRATE]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CHANGE),
-                    [g.AuditLogChangeKeys.RTC_REGION_OVERRIDE]: Z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CHANGE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_DELETE),
-                    [g.AuditLogChangeKeys.USER_LIMIT]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CHANGE),
-                    [g.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
-                    [g.AuditLogChangeKeys.PERMISSIONS_RESET]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_RESET,
-                    [g.AuditLogChangeKeys.PERMISSIONS_GRANTED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_GRANTED,
-                    [g.AuditLogChangeKeys.PERMISSIONS_DENIED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_DENIED,
-                    [g.AuditLogChangeKeys.REASON]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
-                    [g.AuditLogChangeKeys.NSFW]: {
+                    [f.AuditLogChangeKeys.NAME]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE),
+                    [f.AuditLogChangeKeys.POSITION]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE),
+                    [f.AuditLogChangeKeys.TOPIC]: Z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR),
+                    [f.AuditLogChangeKeys.BITRATE]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CHANGE),
+                    [f.AuditLogChangeKeys.RTC_REGION_OVERRIDE]: Z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CHANGE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_DELETE),
+                    [f.AuditLogChangeKeys.USER_LIMIT]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CHANGE),
+                    [f.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
+                    [f.AuditLogChangeKeys.PERMISSIONS_RESET]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_RESET,
+                    [f.AuditLogChangeKeys.PERMISSIONS_GRANTED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_GRANTED,
+                    [f.AuditLogChangeKeys.PERMISSIONS_DENIED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_DENIED,
+                    [f.AuditLogChangeKeys.REASON]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
+                    [f.AuditLogChangeKeys.NSFW]: {
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_DISABLED,
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_ENABLED
                     },
-                    [g.AuditLogChangeKeys.TYPE]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CHANGE),
-                    [g.AuditLogChangeKeys.VIDEO_QUALITY_MODE]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CHANGE),
-                    [g.AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CHANGE)
+                    [f.AuditLogChangeKeys.TYPE]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CHANGE),
+                    [f.AuditLogChangeKeys.VIDEO_QUALITY_MODE]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CHANGE),
+                    [f.AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CHANGE)
                 }),
                 D = () => ({
-                    [g.AuditLogChangeKeys.NICK]: Z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE),
-                    [g.AuditLogChangeKeys.DEAF]: {
+                    [f.AuditLogChangeKeys.NICK]: Z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE),
+                    [f.AuditLogChangeKeys.DEAF]: {
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON,
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_OFF
                     },
-                    [g.AuditLogChangeKeys.MUTE]: {
+                    [f.AuditLogChangeKeys.MUTE]: {
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_ON,
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_OFF
                     },
-                    [g.AuditLogChangeKeys.ROLES_REMOVE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_REMOVE,
-                    [g.AuditLogChangeKeys.ROLES_ADD]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_ADD,
-                    [g.AuditLogChangeKeys.PRUNE_DELETE_DAYS]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE_DELETE_DAYS,
-                    [g.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL]: Z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL_REMOVED),
-                    [g.AuditLogChangeKeys.BYPASSES_VERIFICATION]: {
+                    [f.AuditLogChangeKeys.ROLES_REMOVE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_REMOVE,
+                    [f.AuditLogChangeKeys.ROLES_ADD]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_ADD,
+                    [f.AuditLogChangeKeys.PRUNE_DELETE_DAYS]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE_DELETE_DAYS,
+                    [f.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL]: Z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL_REMOVED),
+                    [f.AuditLogChangeKeys.BYPASSES_VERIFICATION]: {
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_ON,
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_OFF
                     },
-                    [g.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
+                    [f.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
                     ...O()
                 }),
                 M = () => ({
-                    [g.AuditLogChangeKeys.NAME]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE),
-                    [g.AuditLogChangeKeys.PERMISSIONS_GRANTED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
-                    [g.AuditLogChangeKeys.PERMISSIONS_DENIED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
-                    [g.AuditLogChangeKeys.COLOR]: {
+                    [f.AuditLogChangeKeys.NAME]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE),
+                    [f.AuditLogChangeKeys.PERMISSIONS_GRANTED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
+                    [f.AuditLogChangeKeys.PERMISSIONS_DENIED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
+                    [f.AuditLogChangeKeys.COLOR]: {
                         "#000000": L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_NONE,
                         [C]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_IOS
                     },
-                    [g.AuditLogChangeKeys.HOIST]: {
+                    [f.AuditLogChangeKeys.HOIST]: {
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_ON,
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_OFF
                     },
-                    [g.AuditLogChangeKeys.MENTIONABLE]: {
+                    [f.AuditLogChangeKeys.MENTIONABLE]: {
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_ON,
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_OFF
                     },
-                    [g.AuditLogChangeKeys.ICON_HASH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_ICON_HASH_CHANGE,
-                    [g.AuditLogChangeKeys.UNICODE_EMOJI]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
+                    [f.AuditLogChangeKeys.ICON_HASH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_ICON_HASH_CHANGE,
+                    [f.AuditLogChangeKeys.UNICODE_EMOJI]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
                     ...O()
                 }),
                 G = () => ({
-                    [g.AuditLogChangeKeys.CODE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
-                    [g.AuditLogChangeKeys.CHANNEL_ID]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
-                    [g.AuditLogChangeKeys.MAX_USES]: {
+                    [f.AuditLogChangeKeys.CODE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
+                    [f.AuditLogChangeKeys.CHANNEL_ID]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
+                    [f.AuditLogChangeKeys.MAX_USES]: {
                         0: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE_INFINITE,
                         [C]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE
                     },
-                    [g.AuditLogChangeKeys.MAX_AGE]: {
+                    [f.AuditLogChangeKeys.MAX_AGE]: {
                         0: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE_INFINITE,
                         [C]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE
                     },
-                    [g.AuditLogChangeKeys.TEMPORARY]: {
+                    [f.AuditLogChangeKeys.TEMPORARY]: {
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_ON,
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_OFF
                     },
                     ...O()
                 }),
                 x = () => ({
-                    [g.AuditLogChangeKeys.CHANNEL_ID]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE),
-                    [g.AuditLogChangeKeys.NAME]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE),
-                    [g.AuditLogChangeKeys.AVATAR_HASH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
-                    [g.AuditLogChangeKeys.REASON]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
+                    [f.AuditLogChangeKeys.CHANNEL_ID]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE),
+                    [f.AuditLogChangeKeys.NAME]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE),
+                    [f.AuditLogChangeKeys.AVATAR_HASH]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
+                    [f.AuditLogChangeKeys.REASON]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
                 }),
                 p = () => ({
-                    [g.AuditLogChangeKeys.NAME]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE),
+                    [f.AuditLogChangeKeys.NAME]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE),
                     ...O()
                 }),
                 U = () => ({
-                    [g.AuditLogChangeKeys.NAME]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE),
-                    [g.AuditLogChangeKeys.TAGS]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE),
-                    [g.AuditLogChangeKeys.DESCRIPTION]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
+                    [f.AuditLogChangeKeys.NAME]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE),
+                    [f.AuditLogChangeKeys.TAGS]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE),
+                    [f.AuditLogChangeKeys.DESCRIPTION]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
                     ...O()
                 }),
                 v = () => ({
-                    [g.AuditLogChangeKeys.ENABLE_EMOTICONS]: {
+                    [f.AuditLogChangeKeys.ENABLE_EMOTICONS]: {
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_ON,
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_OFF
                     },
-                    [g.AuditLogChangeKeys.EXPIRE_BEHAVIOR]: {
+                    [f.AuditLogChangeKeys.EXPIRE_BEHAVIOR]: {
                         0: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_REMOVE_SYNCED_ROLE,
                         1: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_KICK_FROM_SERVER
                     },
-                    [g.AuditLogChangeKeys.EXPIRE_GRACE_PERIOD]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_GRACE_PERIOD,
+                    [f.AuditLogChangeKeys.EXPIRE_GRACE_PERIOD]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_GRACE_PERIOD,
                     ...O()
                 }),
                 j = () => ({
-                    [g.AuditLogChangeKeys.TOPIC]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE),
-                    [g.AuditLogChangeKeys.PRIVACY_LEVEL]: {
+                    [f.AuditLogChangeKeys.TOPIC]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE),
+                    [f.AuditLogChangeKeys.PRIVACY_LEVEL]: {
                         [A.GuildScheduledEventPrivacyLevel.GUILD_ONLY]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
                         [A.GuildScheduledEventPrivacyLevel.PUBLIC]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC
                     },
                     ...O()
                 }),
                 P = () => ({
-                    [g.AuditLogChangeKeys.NAME]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
-                    [g.AuditLogChangeKeys.DESCRIPTION]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DESCRIPTION_CREATE,
-                    [g.AuditLogChangeKeys.PRIVACY_LEVEL]: {
+                    [f.AuditLogChangeKeys.NAME]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
+                    [f.AuditLogChangeKeys.DESCRIPTION]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DESCRIPTION_CREATE,
+                    [f.AuditLogChangeKeys.PRIVACY_LEVEL]: {
                         [A.GuildScheduledEventPrivacyLevel.GUILD_ONLY]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
                         [A.GuildScheduledEventPrivacyLevel.PUBLIC]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC
                     },
-                    [g.AuditLogChangeKeys.STATUS]: {
+                    [f.AuditLogChangeKeys.STATUS]: {
                         [A.GuildScheduledEventStatus.SCHEDULED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_SCHEDULED,
                         [A.GuildScheduledEventStatus.ACTIVE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_ACTIVE,
                         [A.GuildScheduledEventStatus.COMPLETED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_COMPLETED,
                         [A.GuildScheduledEventStatus.CANCELED]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_CANCELED
                     },
-                    [g.AuditLogChangeKeys.ENTITY_TYPE]: {
+                    [f.AuditLogChangeKeys.ENTITY_TYPE]: {
                         [A.GuildScheduledEventEntityTypes.NONE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_NONE,
                         [A.GuildScheduledEventEntityTypes.STAGE_INSTANCE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_STAGE_INSTANCE,
                         [A.GuildScheduledEventEntityTypes.VOICE]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_VOICE,
                         [A.GuildScheduledEventEntityTypes.EXTERNAL]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_EXTERNAL
                     },
-                    [g.AuditLogChangeKeys.CHANNEL_ID]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL),
-                    [g.AuditLogChangeKeys.LOCATION]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION),
+                    [f.AuditLogChangeKeys.CHANNEL_ID]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL),
+                    [f.AuditLogChangeKeys.LOCATION]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION),
+                    [f.AuditLogChangeKeys.RECURRENCE_RULE]: X(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE_CLEAR, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE),
                     ...O()
                 }),
                 y = () => ({
-                    [g.AuditLogChangeKeys.NAME]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE),
-                    [g.AuditLogChangeKeys.ARCHIVED]: {
+                    [f.AuditLogChangeKeys.NAME]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE),
+                    [f.AuditLogChangeKeys.ARCHIVED]: {
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_ARCHIVED,
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNARCHIVED
                     },
-                    [g.AuditLogChangeKeys.LOCKED]: {
+                    [f.AuditLogChangeKeys.LOCKED]: {
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_LOCKED,
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNLOCKED
                     },
-                    [g.AuditLogChangeKeys.INVITABLE]: {
+                    [f.AuditLogChangeKeys.INVITABLE]: {
                         true: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_ENABLED,
                         false: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_DISABLED
                     },
-                    [g.AuditLogChangeKeys.AUTO_ARCHIVE_DURATION]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CHANGE),
-                    [g.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
+                    [f.AuditLogChangeKeys.AUTO_ARCHIVE_DURATION]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CHANGE),
+                    [f.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
                     ...O()
                 }),
                 b = e => {
@@ -4409,170 +4410,170 @@
                     }), t
                 },
                 B = {
-                    [g.AuditLogTargetTypes.CHANNEL]: {
-                        [g.AuditLogChangeKeys.ID]: !0,
-                        [g.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0
+                    [f.AuditLogTargetTypes.CHANNEL]: {
+                        [f.AuditLogChangeKeys.ID]: !0,
+                        [f.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0
                     },
-                    [g.AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
-                        [g.AuditLogChangeKeys.TYPE]: !0,
-                        [g.AuditLogChangeKeys.ID]: !0,
-                        [g.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0
+                    [f.AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
+                        [f.AuditLogChangeKeys.TYPE]: !0,
+                        [f.AuditLogChangeKeys.ID]: !0,
+                        [f.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0
                     },
-                    [g.AuditLogTargetTypes.INVITE]: {
-                        [g.AuditLogChangeKeys.INVITER_ID]: !0,
-                        [g.AuditLogChangeKeys.USES]: !0
+                    [f.AuditLogTargetTypes.INVITE]: {
+                        [f.AuditLogChangeKeys.INVITER_ID]: !0,
+                        [f.AuditLogChangeKeys.USES]: !0
                     },
-                    [g.AuditLogTargetTypes.WEBHOOK]: {
-                        [g.AuditLogChangeKeys.TYPE]: !0,
-                        [g.AuditLogChangeKeys.APPLICATION_ID]: !0
+                    [f.AuditLogTargetTypes.WEBHOOK]: {
+                        [f.AuditLogChangeKeys.TYPE]: !0,
+                        [f.AuditLogChangeKeys.APPLICATION_ID]: !0
                     },
-                    [g.AuditLogTargetTypes.INTEGRATION]: {
-                        [g.AuditLogChangeKeys.TYPE]: !0
+                    [f.AuditLogTargetTypes.INTEGRATION]: {
+                        [f.AuditLogChangeKeys.TYPE]: !0
                     },
-                    [g.AuditLogTargetTypes.THREAD]: {
-                        [g.AuditLogChangeKeys.ID]: !0,
-                        [g.AuditLogChangeKeys.TYPE]: !0
+                    [f.AuditLogTargetTypes.THREAD]: {
+                        [f.AuditLogChangeKeys.ID]: !0,
+                        [f.AuditLogChangeKeys.TYPE]: !0
                     },
-                    [g.AuditLogTargetTypes.STICKER]: {
-                        [g.AuditLogChangeKeys.ID]: !0,
-                        [g.AuditLogChangeKeys.TYPE]: !0,
-                        [g.AuditLogChangeKeys.ASSET]: !0,
-                        [g.AuditLogChangeKeys.FORMAT_TYPE]: !0,
-                        [g.AuditLogChangeKeys.AVAILABLE]: !0,
-                        [g.AuditLogChangeKeys.GUILD_ID]: !0
+                    [f.AuditLogTargetTypes.STICKER]: {
+                        [f.AuditLogChangeKeys.ID]: !0,
+                        [f.AuditLogChangeKeys.TYPE]: !0,
+                        [f.AuditLogChangeKeys.ASSET]: !0,
+                        [f.AuditLogChangeKeys.FORMAT_TYPE]: !0,
+                        [f.AuditLogChangeKeys.AVAILABLE]: !0,
+                        [f.AuditLogChangeKeys.GUILD_ID]: !0
                     }
                 };
 
             function F(e) {
                 switch (e.action) {
-                    case g.AuditLogActions.GUILD_UPDATE:
+                    case f.AuditLogActions.GUILD_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATE;
-                    case g.AuditLogActions.CHANNEL_CREATE:
-                        let t = null != e.changes ? e.changes.find(e => e.key === g.AuditLogChangeKeys.TYPE) : null;
+                    case f.AuditLogActions.CHANNEL_CREATE:
+                        let t = null != e.changes ? e.changes.find(e => e.key === f.AuditLogChangeKeys.TYPE) : null;
                         if (null == t) throw Error("[AuditLog] Could not find type change for channel create");
                         switch (t.newValue) {
-                            case g.ChannelTypes.GUILD_STAGE_VOICE:
+                            case f.ChannelTypes.GUILD_STAGE_VOICE:
                                 return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_STAGE_CREATE;
-                            case g.ChannelTypes.GUILD_VOICE:
+                            case f.ChannelTypes.GUILD_VOICE:
                                 return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VOICE_CREATE;
-                            case g.ChannelTypes.GUILD_CATEGORY:
+                            case f.ChannelTypes.GUILD_CATEGORY:
                                 return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_CATEGORY_CREATE;
                             default:
                                 return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TEXT_CREATE
                         }
-                    case g.AuditLogActions.CHANNEL_UPDATE:
+                    case f.AuditLogActions.CHANNEL_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_UPDATE;
-                    case g.AuditLogActions.CHANNEL_DELETE:
+                    case f.AuditLogActions.CHANNEL_DELETE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DELETE;
-                    case g.AuditLogActions.CHANNEL_OVERWRITE_CREATE:
+                    case f.AuditLogActions.CHANNEL_OVERWRITE_CREATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_CREATE;
-                    case g.AuditLogActions.CHANNEL_OVERWRITE_UPDATE:
+                    case f.AuditLogActions.CHANNEL_OVERWRITE_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_UPDATE;
-                    case g.AuditLogActions.CHANNEL_OVERWRITE_DELETE:
+                    case f.AuditLogActions.CHANNEL_OVERWRITE_DELETE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_DELETE;
-                    case g.AuditLogActions.MEMBER_KICK:
+                    case f.AuditLogActions.MEMBER_KICK:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_KICK;
-                    case g.AuditLogActions.MEMBER_PRUNE:
+                    case f.AuditLogActions.MEMBER_PRUNE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE;
-                    case g.AuditLogActions.MEMBER_BAN_ADD:
+                    case f.AuditLogActions.MEMBER_BAN_ADD:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_MEMBER_BAN_ADD;
-                    case g.AuditLogActions.MEMBER_BAN_REMOVE:
+                    case f.AuditLogActions.MEMBER_BAN_REMOVE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BAN_REMOVE;
-                    case g.AuditLogActions.MEMBER_UPDATE:
+                    case f.AuditLogActions.MEMBER_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_UPDATE;
-                    case g.AuditLogActions.MEMBER_ROLE_UPDATE:
+                    case f.AuditLogActions.MEMBER_ROLE_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLE_UPDATE;
-                    case g.AuditLogActions.MEMBER_MOVE:
+                    case f.AuditLogActions.MEMBER_MOVE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MOVE;
-                    case g.AuditLogActions.MEMBER_DISCONNECT:
+                    case f.AuditLogActions.MEMBER_DISCONNECT:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DISCONNECT;
-                    case g.AuditLogActions.BOT_ADD:
+                    case f.AuditLogActions.BOT_ADD:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_BOT_ADD;
-                    case g.AuditLogActions.ROLE_CREATE:
+                    case f.AuditLogActions.ROLE_CREATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_CREATE;
-                    case g.AuditLogActions.ROLE_UPDATE:
+                    case f.AuditLogActions.ROLE_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UPDATE;
-                    case g.AuditLogActions.ROLE_DELETE:
+                    case f.AuditLogActions.ROLE_DELETE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_DELETE;
-                    case g.AuditLogActions.INVITE_CREATE:
+                    case f.AuditLogActions.INVITE_CREATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CREATE;
-                    case g.AuditLogActions.INVITE_UPDATE:
+                    case f.AuditLogActions.INVITE_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_UPDATE;
-                    case g.AuditLogActions.INVITE_DELETE:
+                    case f.AuditLogActions.INVITE_DELETE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_DELETE;
-                    case g.AuditLogActions.WEBHOOK_CREATE:
+                    case f.AuditLogActions.WEBHOOK_CREATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CREATE;
-                    case g.AuditLogActions.WEBHOOK_UPDATE:
+                    case f.AuditLogActions.WEBHOOK_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_UPDATE;
-                    case g.AuditLogActions.WEBHOOK_DELETE:
+                    case f.AuditLogActions.WEBHOOK_DELETE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_DELETE;
-                    case g.AuditLogActions.EMOJI_CREATE:
+                    case f.AuditLogActions.EMOJI_CREATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_CREATE;
-                    case g.AuditLogActions.EMOJI_UPDATE:
+                    case f.AuditLogActions.EMOJI_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_UPDATE;
-                    case g.AuditLogActions.EMOJI_DELETE:
+                    case f.AuditLogActions.EMOJI_DELETE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_DELETE;
-                    case g.AuditLogActions.STICKER_CREATE:
+                    case f.AuditLogActions.STICKER_CREATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_CREATE;
-                    case g.AuditLogActions.STICKER_UPDATE:
+                    case f.AuditLogActions.STICKER_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_UPDATE;
-                    case g.AuditLogActions.STICKER_DELETE:
+                    case f.AuditLogActions.STICKER_DELETE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_DELETE;
-                    case g.AuditLogActions.MESSAGE_DELETE:
+                    case f.AuditLogActions.MESSAGE_DELETE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_DELETE;
-                    case g.AuditLogActions.MESSAGE_BULK_DELETE:
+                    case f.AuditLogActions.MESSAGE_BULK_DELETE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_BULK_DELETE;
-                    case g.AuditLogActions.MESSAGE_PIN:
+                    case f.AuditLogActions.MESSAGE_PIN:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_PIN;
-                    case g.AuditLogActions.MESSAGE_UNPIN:
+                    case f.AuditLogActions.MESSAGE_UNPIN:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_UNPIN;
-                    case g.AuditLogActions.INTEGRATION_CREATE:
+                    case f.AuditLogActions.INTEGRATION_CREATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_CREATE;
-                    case g.AuditLogActions.INTEGRATION_UPDATE:
+                    case f.AuditLogActions.INTEGRATION_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_UPDATE;
-                    case g.AuditLogActions.INTEGRATION_DELETE:
+                    case f.AuditLogActions.INTEGRATION_DELETE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_DELETE;
-                    case g.AuditLogActions.STAGE_INSTANCE_CREATE:
+                    case f.AuditLogActions.STAGE_INSTANCE_CREATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_CREATE;
-                    case g.AuditLogActions.STAGE_INSTANCE_UPDATE:
+                    case f.AuditLogActions.STAGE_INSTANCE_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_UPDATE;
-                    case g.AuditLogActions.STAGE_INSTANCE_DELETE:
+                    case f.AuditLogActions.STAGE_INSTANCE_DELETE:
                         if (null != e.userId) return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_DELETE;
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_DELETE_NO_USER;
-                    case g.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE:
+                    case f.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_SCHEDULED_EVENT_CREATE;
-                    case g.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE:
+                    case f.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_SCHEDULED_EVENT_UPDATE;
-                    case g.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE:
+                    case f.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_SCHEDULED_EVENT_DELETE;
-                    case g.AuditLogActions.THREAD_CREATE:
-                        let s = null != e.changes ? e.changes.find(e => e.key === g.AuditLogChangeKeys.TYPE) : null;
+                    case f.AuditLogActions.THREAD_CREATE:
+                        let s = null != e.changes ? e.changes.find(e => e.key === f.AuditLogChangeKeys.TYPE) : null;
                         if (null == s) throw Error("[AuditLog] Could not find type change for thread create");
                         switch (s.newValue) {
-                            case g.ChannelTypes.PRIVATE_THREAD:
+                            case f.ChannelTypes.PRIVATE_THREAD:
                                 return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_PRIVATE_THREAD_CREATE;
-                            case g.ChannelTypes.ANNOUNCEMENT_THREAD:
+                            case f.ChannelTypes.ANNOUNCEMENT_THREAD:
                                 return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_ANNOUNCEMENT_THREAD_CREATE;
                             default:
                                 return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_CREATE
                         }
-                    case g.AuditLogActions.THREAD_UPDATE:
+                    case f.AuditLogActions.THREAD_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_UPDATE;
-                    case g.AuditLogActions.THREAD_DELETE:
+                    case f.AuditLogActions.THREAD_DELETE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_DELETE;
-                    case g.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE:
+                    case f.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_UPDATE;
-                    case g.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE:
+                    case f.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_BLOCK_MESSAGE;
-                    case g.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL:
+                    case f.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAG_TO_CHANNEL_MESSAGE;
-                    case g.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
+                    case f.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_USER_COMMUNICATION_DISABLED_MESSAGE;
-                    case g.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED:
+                    case f.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED:
                         return L.default.Messages.CREATOR_MONETIZATION_APPLIED_AUDIT_LOG_TITLE;
-                    case g.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED:
+                    case f.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED:
                         return L.default.Messages.CREATOR_MONETIZATION_TERMS_ACCEPTED_AUDIT_LOG_TITLE;
-                    case g.AuditLogActions.CLYDE_AI_PROFILE_UPDATE:
+                    case f.AuditLogActions.CLYDE_AI_PROFILE_UPDATE:
                         return L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_PROFILE_UPDATE;
                     default:
                         return null
@@ -4587,94 +4588,94 @@
 
             function V(e, t) {
                 switch (e) {
-                    case g.Permissions.CREATE_INSTANT_INVITE:
+                    case f.Permissions.CREATE_INSTANT_INVITE:
                         return L.default.Messages.CREATE_INSTANT_INVITE;
-                    case g.Permissions.KICK_MEMBERS:
+                    case f.Permissions.KICK_MEMBERS:
                         return L.default.Messages.KICK_MEMBERS;
-                    case g.Permissions.BAN_MEMBERS:
+                    case f.Permissions.BAN_MEMBERS:
                         return L.default.Messages.BAN_MEMBERS;
-                    case g.Permissions.ADMINISTRATOR:
+                    case f.Permissions.ADMINISTRATOR:
                         return L.default.Messages.ADMINISTRATOR;
-                    case g.Permissions.MANAGE_CHANNELS:
-                        if (t.targetType === g.AuditLogTargetTypes.CHANNEL || t.targetType === g.AuditLogTargetTypes.CHANNEL_OVERWRITE) return L.default.Messages.MANAGE_CHANNEL;
+                    case f.Permissions.MANAGE_CHANNELS:
+                        if (t.targetType === f.AuditLogTargetTypes.CHANNEL || t.targetType === f.AuditLogTargetTypes.CHANNEL_OVERWRITE) return L.default.Messages.MANAGE_CHANNEL;
                         return L.default.Messages.MANAGE_CHANNELS;
-                    case g.Permissions.MANAGE_GUILD:
+                    case f.Permissions.MANAGE_GUILD:
                         return L.default.Messages.MANAGE_SERVER;
-                    case g.Permissions.VIEW_GUILD_ANALYTICS:
+                    case f.Permissions.VIEW_GUILD_ANALYTICS:
                         return L.default.Messages.VIEW_GUILD_ANALYTICS;
-                    case g.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS:
+                    case f.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS:
                         return L.default.Messages.VIEW_CREATOR_MONETIZATION_ANALYTICS;
-                    case g.Permissions.CHANGE_NICKNAME:
+                    case f.Permissions.CHANGE_NICKNAME:
                         return L.default.Messages.CHANGE_NICKNAME;
-                    case g.Permissions.MANAGE_NICKNAMES:
+                    case f.Permissions.MANAGE_NICKNAMES:
                         return L.default.Messages.MANAGE_NICKNAMES;
-                    case g.Permissions.MANAGE_ROLES:
+                    case f.Permissions.MANAGE_ROLES:
                         return L.default.Messages.MANAGE_ROLES;
-                    case g.Permissions.MANAGE_WEBHOOKS:
+                    case f.Permissions.MANAGE_WEBHOOKS:
                         return L.default.Messages.MANAGE_WEBHOOKS;
-                    case g.Permissions.CREATE_GUILD_EXPRESSIONS:
+                    case f.Permissions.CREATE_GUILD_EXPRESSIONS:
                         return L.default.Messages.CREATE_EXPRESSIONS;
-                    case g.Permissions.MANAGE_GUILD_EXPRESSIONS:
+                    case f.Permissions.MANAGE_GUILD_EXPRESSIONS:
                         return L.default.Messages.MANAGE_EXPRESSIONS;
-                    case g.Permissions.VIEW_AUDIT_LOG:
+                    case f.Permissions.VIEW_AUDIT_LOG:
                         return L.default.Messages.VIEW_AUDIT_LOG;
-                    case g.Permissions.VIEW_CHANNEL:
+                    case f.Permissions.VIEW_CHANNEL:
                         return L.default.Messages.READ_MESSAGES;
-                    case g.Permissions.SEND_MESSAGES:
+                    case f.Permissions.SEND_MESSAGES:
                         return L.default.Messages.SEND_MESSAGES;
-                    case g.Permissions.SEND_TTS_MESSAGES:
+                    case f.Permissions.SEND_TTS_MESSAGES:
                         return L.default.Messages.SEND_TTS_MESSAGES;
-                    case g.Permissions.USE_APPLICATION_COMMANDS:
+                    case f.Permissions.USE_APPLICATION_COMMANDS:
                         return L.default.Messages.USE_APPLICATION_COMMANDS;
-                    case g.Permissions.MANAGE_MESSAGES:
+                    case f.Permissions.MANAGE_MESSAGES:
                         return L.default.Messages.MANAGE_MESSAGES;
-                    case g.Permissions.EMBED_LINKS:
+                    case f.Permissions.EMBED_LINKS:
                         return L.default.Messages.EMBED_LINKS;
-                    case g.Permissions.ATTACH_FILES:
+                    case f.Permissions.ATTACH_FILES:
                         return L.default.Messages.ATTACH_FILES;
-                    case g.Permissions.READ_MESSAGE_HISTORY:
+                    case f.Permissions.READ_MESSAGE_HISTORY:
                         return L.default.Messages.READ_MESSAGE_HISTORY;
-                    case g.Permissions.MENTION_EVERYONE:
+                    case f.Permissions.MENTION_EVERYONE:
                         return L.default.Messages.MENTION_EVERYONE;
-                    case g.Permissions.USE_EXTERNAL_EMOJIS:
+                    case f.Permissions.USE_EXTERNAL_EMOJIS:
                         return L.default.Messages.USE_EXTERNAL_EMOJIS;
-                    case g.Permissions.USE_EXTERNAL_STICKERS:
+                    case f.Permissions.USE_EXTERNAL_STICKERS:
                         return L.default.Messages.USE_EXTERNAL_STICKERS;
-                    case g.Permissions.ADD_REACTIONS:
+                    case f.Permissions.ADD_REACTIONS:
                         return L.default.Messages.ADD_REACTIONS;
-                    case g.Permissions.CONNECT:
+                    case f.Permissions.CONNECT:
                         return L.default.Messages.CONNECT;
-                    case g.Permissions.SPEAK:
+                    case f.Permissions.SPEAK:
                         return L.default.Messages.SPEAK;
-                    case g.Permissions.MUTE_MEMBERS:
+                    case f.Permissions.MUTE_MEMBERS:
                         return L.default.Messages.MUTE_MEMBERS;
-                    case g.Permissions.DEAFEN_MEMBERS:
+                    case f.Permissions.DEAFEN_MEMBERS:
                         return L.default.Messages.DEAFEN_MEMBERS;
-                    case g.Permissions.MOVE_MEMBERS:
+                    case f.Permissions.MOVE_MEMBERS:
                         return L.default.Messages.MOVE_MEMBERS;
-                    case g.Permissions.USE_VAD:
+                    case f.Permissions.USE_VAD:
                         return L.default.Messages.USE_VAD;
-                    case g.Permissions.PRIORITY_SPEAKER:
+                    case f.Permissions.PRIORITY_SPEAKER:
                         return L.default.Messages.PRIORITY_SPEAKER;
-                    case g.Permissions.STREAM:
+                    case f.Permissions.STREAM:
                         return L.default.Messages.VIDEO;
-                    case g.Permissions.REQUEST_TO_SPEAK:
+                    case f.Permissions.REQUEST_TO_SPEAK:
                         return L.default.Messages.REQUEST_TO_SPEAK;
-                    case g.Permissions.CREATE_EVENTS:
+                    case f.Permissions.CREATE_EVENTS:
                         return L.default.Messages.CREATE_EVENTS;
-                    case g.Permissions.MANAGE_EVENTS:
+                    case f.Permissions.MANAGE_EVENTS:
                         return L.default.Messages.MANAGE_EVENTS;
-                    case g.Permissions.CREATE_PUBLIC_THREADS:
+                    case f.Permissions.CREATE_PUBLIC_THREADS:
                         return L.default.Messages.CREATE_PUBLIC_THREADS;
-                    case g.Permissions.CREATE_PRIVATE_THREADS:
+                    case f.Permissions.CREATE_PRIVATE_THREADS:
                         return L.default.Messages.CREATE_PRIVATE_THREADS;
-                    case g.Permissions.SEND_MESSAGES_IN_THREADS:
+                    case f.Permissions.SEND_MESSAGES_IN_THREADS:
                         return L.default.Messages.SEND_MESSAGES_IN_THREADS;
-                    case g.Permissions.MANAGE_THREADS:
+                    case f.Permissions.MANAGE_THREADS:
                         return L.default.Messages.MANAGE_THREADS;
-                    case g.Permissions.MODERATE_MEMBERS:
+                    case f.Permissions.MODERATE_MEMBERS:
                         return L.default.Messages.MODERATE_MEMBER;
-                    case g.Permissions.SET_VOICE_CHANNEL_STATUS:
+                    case f.Permissions.SET_VOICE_CHANNEL_STATUS:
                         return L.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE
                 }
                 return null
@@ -4686,41 +4687,41 @@
                 return e.forEach(e => {
                     let a = function(e, t) {
                             switch (e.targetType) {
-                                case g.AuditLogTargetTypes.GUILD:
+                                case f.AuditLogTargetTypes.GUILD:
                                     return t;
-                                case g.AuditLogTargetTypes.CHANNEL:
-                                case g.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-                                    return K(e, g.AuditLogChangeKeys.NAME, e => I.default.getChannel(e), e => (0, o.computeChannelName)(e, N.default, S.default, !0));
-                                case g.AuditLogTargetTypes.USER:
-                                    return K(e, g.AuditLogChangeKeys.NICK, e => N.default.getUser(e), void 0);
-                                case g.AuditLogTargetTypes.ROLE:
-                                    return K(e, g.AuditLogChangeKeys.NAME, e => t.getRole(e), e => e.name);
-                                case g.AuditLogTargetTypes.INVITE:
-                                    return K(e, g.AuditLogChangeKeys.CODE, g.NOOP_NULL);
-                                case g.AuditLogTargetTypes.INTEGRATION:
-                                    return K(e, g.AuditLogChangeKeys.TYPE, e => c.default.integrations.find(t => t.id === e), e => e.name);
-                                case g.AuditLogTargetTypes.WEBHOOK:
-                                    return K(e, g.AuditLogChangeKeys.NAME, e => c.default.webhooks.find(t => t.id === e), e => e.name);
-                                case g.AuditLogTargetTypes.EMOJI:
-                                    return K(e, g.AuditLogChangeKeys.NAME, e => u.default.getGuildEmoji(t.id).find(t => t.id === e), e => e.name);
-                                case g.AuditLogTargetTypes.STICKER:
-                                    return K(e, g.AuditLogChangeKeys.NAME, e => _.default.getStickerById(e), e => e.name);
-                                case g.AuditLogTargetTypes.STAGE_INSTANCE:
-                                    return K(e, g.AuditLogChangeKeys.TOPIC, e => {
+                                case f.AuditLogTargetTypes.CHANNEL:
+                                case f.AuditLogTargetTypes.CHANNEL_OVERWRITE:
+                                    return K(e, f.AuditLogChangeKeys.NAME, e => I.default.getChannel(e), e => (0, o.computeChannelName)(e, N.default, S.default, !0));
+                                case f.AuditLogTargetTypes.USER:
+                                    return K(e, f.AuditLogChangeKeys.NICK, e => N.default.getUser(e), void 0);
+                                case f.AuditLogTargetTypes.ROLE:
+                                    return K(e, f.AuditLogChangeKeys.NAME, e => t.getRole(e), e => e.name);
+                                case f.AuditLogTargetTypes.INVITE:
+                                    return K(e, f.AuditLogChangeKeys.CODE, f.NOOP_NULL);
+                                case f.AuditLogTargetTypes.INTEGRATION:
+                                    return K(e, f.AuditLogChangeKeys.TYPE, e => c.default.integrations.find(t => t.id === e), e => e.name);
+                                case f.AuditLogTargetTypes.WEBHOOK:
+                                    return K(e, f.AuditLogChangeKeys.NAME, e => c.default.webhooks.find(t => t.id === e), e => e.name);
+                                case f.AuditLogTargetTypes.EMOJI:
+                                    return K(e, f.AuditLogChangeKeys.NAME, e => u.default.getGuildEmoji(t.id).find(t => t.id === e), e => e.name);
+                                case f.AuditLogTargetTypes.STICKER:
+                                    return K(e, f.AuditLogChangeKeys.NAME, e => _.default.getStickerById(e), e => e.name);
+                                case f.AuditLogTargetTypes.STAGE_INSTANCE:
+                                    return K(e, f.AuditLogChangeKeys.TOPIC, e => {
                                         var s;
                                         return null === (s = Object.values(E.default.getStageInstancesByGuild(t.id))) || void 0 === s ? void 0 : s.find(t => t.id === e)
                                     }, e => e.topic);
-                                case g.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
-                                    return K(e, g.AuditLogChangeKeys.NAME, e => c.default.guildScheduledEvents.find(t => t.id === e), e => e.name);
-                                case g.AuditLogTargetTypes.THREAD:
-                                    return K(e, g.AuditLogChangeKeys.NAME, e => c.default.threads.find(t => t.id === e), e => e.name);
-                                case g.AuditLogTargetTypes.APPLICATION_COMMAND:
+                                case f.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
+                                    return K(e, f.AuditLogChangeKeys.NAME, e => c.default.guildScheduledEvents.find(t => t.id === e), e => e.name);
+                                case f.AuditLogTargetTypes.THREAD:
+                                    return K(e, f.AuditLogChangeKeys.NAME, e => c.default.threads.find(t => t.id === e), e => e.name);
+                                case f.AuditLogTargetTypes.APPLICATION_COMMAND:
                                     if (e.targetId === e.options.application_id) {
                                         let t = c.default.integrations.find(t => t.application_id === e.targetId);
                                         if (null != t) return t.name;
                                         return e.targetId
                                     }
-                                    return K(e, g.AuditLogChangeKeys.NAME, e => c.default.applicationCommands.find(t => t.id === e), e => {
+                                    return K(e, f.AuditLogChangeKeys.NAME, e => c.default.applicationCommands.find(t => t.id === e), e => {
                                         let t = null != e.name_localized && "" !== e.name_localized ? e.name_localized : e.name;
                                         return e.type === r.ApplicationCommandType.CHAT ? "/⁠".concat(t) : t
                                     });
@@ -4729,19 +4730,19 @@
                             }
                         }(e, t),
                         l = N.default.getUser(e.userId);
-                    if (null != l && (null != a || e.action === g.AuditLogActions.MEMBER_PRUNE || e.action === g.AuditLogActions.MEMBER_DISCONNECT || e.action === g.AuditLogActions.MEMBER_MOVE || e.action === g.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED || e.action === g.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED)) {
+                    if (null != l && (null != a || e.action === f.AuditLogActions.MEMBER_PRUNE || e.action === f.AuditLogActions.MEMBER_DISCONNECT || e.action === f.AuditLogActions.MEMBER_MOVE || e.action === f.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED || e.action === f.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED)) {
                         if (null != (e = (e = (e = e.set("user", l)).set("target", a)).set("options", function(e) {
                                 if (null != e.options) {
                                     let a = {
                                         ...e.options
                                     };
                                     switch (e.options.type) {
-                                        case g.AuditLogSubtargetTypes.USER:
+                                        case f.AuditLogSubtargetTypes.USER:
                                             var t, s;
                                             (null === (t = e.options) || void 0 === t ? void 0 : t.id) != null && (a.subtarget = W(null == e ? void 0 : null === (s = e.options) || void 0 === s ? void 0 : s.id, e => N.default.getUser(e), e => e.tag));
                                             break;
-                                        case g.AuditLogSubtargetTypes.ROLE:
-                                            null != e.options.role_name && (a.subtarget = W(e.options.role_name, g.NOOP_NULL))
+                                        case f.AuditLogSubtargetTypes.ROLE:
+                                            null != e.options.role_name && (a.subtarget = W(e.options.role_name, f.NOOP_NULL))
                                     }
                                     return null != e.options.channel_id && (a.channel = K(e, "", e => I.default.getChannel(e), void 0, e.options.channel_id)), null != e.options.members_removed && 0 !== e.options.members_removed && (a.count = e.options.members_removed), a
                                 }
@@ -4750,38 +4751,38 @@
                             let s = [];
                             e.changes.forEach(a => {
                                 let l = function(e, t, s) {
-                                    if (t.action === g.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE) {
+                                    if (t.action === f.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE) {
                                         let t = e.newValue || e.oldValue;
                                         switch (t.type) {
-                                            case g.ApplicationCommandPermissionTypes.ROLE:
+                                            case f.ApplicationCommandPermissionTypes.ROLE:
                                                 e.subtarget = W(t.id, e => s.getRole(e), e => e.name);
                                                 break;
-                                            case g.ApplicationCommandPermissionTypes.USER:
+                                            case f.ApplicationCommandPermissionTypes.USER:
                                                 e.subtarget = W(t.id, e => N.default.getUser(e), e => e.tag);
                                                 break;
-                                            case g.ApplicationCommandPermissionTypes.CHANNEL:
+                                            case f.ApplicationCommandPermissionTypes.CHANNEL:
                                                 t.id === n(s.id).subtract(1).toString() ? e.subtarget = L.default.Messages.ALL_CHANNELS : e.subtarget = W(t.id, e => I.default.getChannel(e), e => (0, o.computeChannelName)(e, N.default, S.default, !0))
                                         }
                                         return e
                                     }
                                     switch (e.key) {
-                                        case g.AuditLogChangeKeys.OWNER_ID:
+                                        case f.AuditLogChangeKeys.OWNER_ID:
                                             return Y(e, e => N.default.getUser(e));
-                                        case g.AuditLogChangeKeys.CHANNEL_ID:
-                                        case g.AuditLogChangeKeys.AFK_CHANNEL_ID:
-                                        case g.AuditLogChangeKeys.SYSTEM_CHANNEL_ID:
-                                        case g.AuditLogChangeKeys.RULES_CHANNEL_ID:
-                                        case g.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID:
+                                        case f.AuditLogChangeKeys.CHANNEL_ID:
+                                        case f.AuditLogChangeKeys.AFK_CHANNEL_ID:
+                                        case f.AuditLogChangeKeys.SYSTEM_CHANNEL_ID:
+                                        case f.AuditLogChangeKeys.RULES_CHANNEL_ID:
+                                        case f.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID:
                                             return Y(e, e => I.default.getChannel(e), e => (0, o.computeChannelName)(e, N.default, S.default, !0));
-                                        case g.AuditLogChangeKeys.AFK_TIMEOUT:
+                                        case f.AuditLogChangeKeys.AFK_TIMEOUT:
                                             return Y(e, e => e / 60);
-                                        case g.AuditLogChangeKeys.BITRATE:
+                                        case f.AuditLogChangeKeys.BITRATE:
                                             return Y(e, e => e / 1e3);
-                                        case g.AuditLogChangeKeys.COLOR:
+                                        case f.AuditLogChangeKeys.COLOR:
                                             return Y(e, e => (0, i.int2hex)(e).toUpperCase());
-                                        case g.AuditLogChangeKeys.MAX_AGE:
+                                        case f.AuditLogChangeKeys.MAX_AGE:
                                             return Y(e, e => {
-                                                let t = f.default.getMaxAgeOptions.find(t => {
+                                                let t = g.default.getMaxAgeOptions.find(t => {
                                                     let {
                                                         value: s
                                                     } = t;
@@ -4789,24 +4790,24 @@
                                                 });
                                                 return t ? t.label : e
                                             });
-                                        case g.AuditLogChangeKeys.PERMISSIONS: {
+                                        case f.AuditLogChangeKeys.PERMISSIONS: {
                                             let t = [],
                                                 {
                                                     added: s,
                                                     removed: a
                                                 } = w(e.oldValue, e.newValue);
                                             if (s.length > 0) {
-                                                let e = new T.AuditLogChange(g.AuditLogChangeKeys.PERMISSIONS_GRANTED, null, s);
+                                                let e = new T.AuditLogChange(f.AuditLogChangeKeys.PERMISSIONS_GRANTED, null, s);
                                                 t.push(e)
                                             }
                                             if (a.length > 0) {
-                                                let e = new T.AuditLogChange(g.AuditLogChangeKeys.PERMISSIONS_DENIED, null, a);
+                                                let e = new T.AuditLogChange(f.AuditLogChangeKeys.PERMISSIONS_DENIED, null, a);
                                                 t.push(e)
                                             }
                                             return t
                                         }
-                                        case g.AuditLogChangeKeys.PERMISSIONS_GRANTED:
-                                        case g.AuditLogChangeKeys.PERMISSIONS_DENIED: {
+                                        case f.AuditLogChangeKeys.PERMISSIONS_GRANTED:
+                                        case f.AuditLogChangeKeys.PERMISSIONS_DENIED: {
                                             let t = [],
                                                 {
                                                     added: s,
@@ -4817,28 +4818,28 @@
                                                 t.push(a)
                                             }
                                             if (a.length > 0) {
-                                                let e = new T.AuditLogChange(g.AuditLogChangeKeys.PERMISSIONS_RESET, a, a);
+                                                let e = new T.AuditLogChange(f.AuditLogChangeKeys.PERMISSIONS_RESET, a, a);
                                                 t.push(e)
                                             }
                                             return t
                                         }
-                                        case g.AuditLogChangeKeys.PREFERRED_LOCALE:
+                                        case f.AuditLogChangeKeys.PREFERRED_LOCALE:
                                             return Y(e, e => {
                                                 let t = L.default.getAvailableLocales().find(t => t.value === e);
                                                 return null != t ? t.name : null
                                             });
-                                        case g.AuditLogChangeKeys.VIDEO_QUALITY_MODE:
-                                            return Y(e, e => e === g.VideoQualityMode.FULL ? L.default.Messages.VIDEO_QUALITY_MODE_FULL : L.default.Messages.VIDEO_QUALITY_MODE_AUTO);
-                                        case g.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAGS:
+                                        case f.AuditLogChangeKeys.VIDEO_QUALITY_MODE:
+                                            return Y(e, e => e === f.VideoQualityMode.FULL ? L.default.Messages.VIDEO_QUALITY_MODE_FULL : L.default.Messages.VIDEO_QUALITY_MODE_AUTO);
+                                        case f.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAGS:
                                             return function(e) {
                                                 let t = {
-                                                        [g.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATIONS]: g.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS,
-                                                        [g.SystemChannelFlags.SUPPRESS_PREMIUM_SUBSCRIPTIONS]: g.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS,
-                                                        [g.SystemChannelFlags.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS]: g.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS,
-                                                        [g.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES]: g.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES
+                                                        [f.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATIONS]: f.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS,
+                                                        [f.SystemChannelFlags.SUPPRESS_PREMIUM_SUBSCRIPTIONS]: f.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS,
+                                                        [f.SystemChannelFlags.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS]: f.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS,
+                                                        [f.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES]: f.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES
                                                     },
                                                     s = [];
-                                                return Object.values(g.SystemChannelFlags).forEach(a => {
+                                                return Object.values(f.SystemChannelFlags).forEach(a => {
                                                     let n = (e.oldValue & a) === a,
                                                         l = (e.newValue & a) === a;
                                                     if (n === l) return;
@@ -4865,7 +4866,7 @@
                     r = [],
                     o = [],
                     d = {
-                        ...g.Permissions
+                        ...f.Permissions
                     };
                 for (let e in d) {
                     let t = d[e];
@@ -5114,7 +5115,7 @@
                     editorState: E.createEmptyEditorState([])
                 }), {
                     editorState: N
-                } = s, [f, g] = n.useState(!0), A = null, L = e => {
+                } = s, [g, f] = n.useState(!0), A = null, L = e => {
                     S(t => ({
                         ...t,
                         editorState: e
@@ -5129,19 +5130,19 @@
                 }, R = e => {
                     A = e
                 }, D = () => {
-                    g(!0)
+                    f(!0)
                 }, M = () => {
-                    g(!1), null != N && E.isEmpty(N) && C()
+                    f(!1), null != N && E.isEmpty(N) && C()
                 }, G = e => {
                     if (null == N) return;
                     let t = E.getFirstTextBlock(N);
                     if (t.length >= 512) return !0;
                     let s = N;
-                    return s = E.updateContent(e, s), L(s = m(s = E.truncateContent(s, 512))), !f && g(!0), !0
+                    return s = E.updateContent(e, s), L(s = m(s = E.truncateContent(s, 512))), !g && f(!0), !0
                 }, x = e => (e.preventDefault(), !0), p = e => {
                     if (e = null != e ? e.replace(/\n/g, "") : "", null == N) return;
                     let t = N;
-                    return t = E.updateContent(e, t), t = m(t = E.truncateContent(t, 512)), !f && g(!0), L(t), !0
+                    return t = E.updateContent(e, t), t = m(t = E.truncateContent(t, 512)), !g && f(!0), L(t), !0
                 }, U = null != N && E.getFirstTextBlock(N).length > 0;
                 return (0, a.jsx)("div", {
                     className: t,
@@ -5171,7 +5172,7 @@
                                         return
                                     }
                                     let s = N;
-                                    L(s = E.truncateContent(s, 0)), !f && Promise.resolve().then(() => h())
+                                    L(s = E.truncateContent(s, 0)), !g && Promise.resolve().then(() => h())
                                 },
                                 hasContent: U,
                                 className: I.searchIcon
@@ -5224,8 +5225,8 @@
                 I = s("84339"),
                 S = s("510889"),
                 N = s("287103"),
-                f = s("900938"),
-                g = s("161778"),
+                g = s("900938"),
+                f = s("161778"),
                 A = s("305961"),
                 L = s("102985"),
                 m = s("941886"),
@@ -5299,8 +5300,8 @@
                     rawLogs: j,
                     theme: P,
                     hide: y
-                } = (0, c.useStateFromStoresObject)([f.default, A.default, N.default, L.default, g.default], () => {
-                    let e = f.default.getGuildId(),
+                } = (0, c.useStateFromStoresObject)([g.default, A.default, N.default, L.default, f.default], () => {
+                    let e = g.default.getGuildId(),
                         t = A.default.getGuild(e),
                         s = N.default.logs;
                     return {
@@ -5313,7 +5314,7 @@
                         hasError: N.default.hasError,
                         hasOlderLogs: N.default.hasOlderLogs,
                         rawLogs: null != s && null != t ? s : [],
-                        theme: g.default.theme,
+                        theme: f.default.theme,
                         hide: L.default.enabled
                     }
                 }), [b, B] = n.useState({
@@ -5495,8 +5496,8 @@
                 I = s("27618"),
                 S = s("697218"),
                 N = s("461380"),
-                f = s("258078"),
-                g = s("404008"),
+                g = s("258078"),
+                f = s("404008"),
                 A = s("158998"),
                 L = s("309021"),
                 m = s("49111"),
@@ -5559,11 +5560,11 @@
                 getActionTypeColor(e) {
                     switch (e) {
                         case m.AuditLogActionTypes.CREATE:
-                            return f.default.Colors.STATUS_GREEN;
+                            return g.default.Colors.STATUS_GREEN;
                         case m.AuditLogActionTypes.DELETE:
-                            return f.default.Colors.STATUS_RED;
+                            return g.default.Colors.STATUS_RED;
                         default:
-                            return f.default.Colors.STATUS_YELLOW
+                            return g.default.Colors.STATUS_YELLOW
                     }
                 }
                 getRowAccentColor() {
@@ -5665,9 +5666,9 @@
                                 oldValue: i,
                                 newValue: r
                             } = s, d = null;
-                            if (t.action === m.AuditLogActions.MEMBER_ROLE_UPDATE ? d = this.renderRoleUpdate(s) : (t.targetType === m.AuditLogTargetTypes.ROLE || t.action === m.AuditLogActions.CHANNEL_OVERWRITE_CREATE || t.action === m.AuditLogActions.CHANNEL_OVERWRITE_UPDATE) && (d = this.renderPermissionUpdate(s)), (t.action === m.AuditLogActions.CHANNEL_UPDATE || t.action === m.AuditLogActions.CHANNEL_CREATE) && s.key === m.AuditLogChangeKeys.TYPE && (null != i && (i = (0, g.channelTypeString)({
+                            if (t.action === m.AuditLogActions.MEMBER_ROLE_UPDATE ? d = this.renderRoleUpdate(s) : (t.targetType === m.AuditLogTargetTypes.ROLE || t.action === m.AuditLogActions.CHANNEL_OVERWRITE_CREATE || t.action === m.AuditLogActions.CHANNEL_OVERWRITE_UPDATE) && (d = this.renderPermissionUpdate(s)), (t.action === m.AuditLogActions.CHANNEL_UPDATE || t.action === m.AuditLogActions.CHANNEL_CREATE) && s.key === m.AuditLogChangeKeys.TYPE && (null != i && (i = (0, f.channelTypeString)({
                                     type: i
-                                })), null != r && (r = (0, g.channelTypeString)({
+                                })), null != r && (r = (0, f.channelTypeString)({
                                     type: r
                                 }))), t.action === m.AuditLogActions.MEMBER_UPDATE && s.key === m.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL) {
                                 if (null == (r = o(r)) || !r.isValid()) return null;
@@ -5817,7 +5818,7 @@
                         variant: "text-xs/normal",
                         children: "• ".concat(I, "—").concat(S)
                     });
-                    let f = c ? l : m.NOOP;
+                    let g = c ? l : m.NOOP;
                     return (0, a.jsx)(d.ListNavigatorItem, {
                         id: t.id,
                         children: l => (0, a.jsxs)("div", {
@@ -5825,7 +5826,7 @@
                             children: [(0, a.jsxs)(u.Clickable, {
                                 className: T,
                                 "aria-expanded": n,
-                                onClick: f,
+                                onClick: g,
                                 ...l,
                                 children: [(0, a.jsx)(u.Popout, {
                                     preload: () => (0, E.default)(t.userId, o.getAvatarURL(r, 80), {
@@ -5910,8 +5911,8 @@
                 I = s("353575"),
                 S = s("296839"),
                 N = s("4443"),
-                f = s("151866"),
-                g = s("646834"),
+                g = s("151866"),
+                f = s("646834"),
                 A = s("124188"),
                 L = s("155158"),
                 m = s("143460"),
@@ -5927,7 +5928,7 @@
                 } = e, {
                     editingRule: M,
                     setEditingRule: G
-                } = (0, f.useAutomodEditingRuleState)(), {
+                } = (0, g.useAutomodEditingRuleState)(), {
                     guild: x,
                     subsection: p
                 } = (0, l.useStateFromStoresObject)([o.default], () => o.default.getProps()), U = null !== (s = null !== (t = null == x ? void 0 : x.id) && void 0 !== t ? t : R) && void 0 !== s ? s : "", v = null != M, [j] = (0, I.useSyncAutomodRulesEffect)(U), {
@@ -6033,7 +6034,7 @@
                         guild: x,
                         withDivider: !1,
                         className: h.explicitContentFilterSection
-                    }), (0, a.jsx)(g.default, {
+                    }), (0, a.jsx)(f.default, {
                         guildId: U,
                         existingRules: b
                     }), v && (0, a.jsx)("div", {
@@ -6071,12 +6072,12 @@
                     hasChanges: I,
                     editingRule: S,
                     errorMessage: N,
-                    saveEditingRule: f
+                    saveEditingRule: g
                 } = (0, u.useAutomodEditingRuleActions)(), {
-                    updateRule: g
+                    updateRule: f
                 } = (0, d.useAutomodRulesList)(t), A = null != S, L = A && !(0, o.isBackendPersistedRule)(S), m = A || I || L, C = async () => {
                     if (!I && !L) return _();
-                    null != S && !L && g(S);
+                    null != S && !L && f(S);
                     let e = s.find(e => {
                         let {
                             id: t
@@ -6084,10 +6085,10 @@
                         return t === (null == S ? void 0 : S.id)
                     });
                     try {
-                        let e = await f(s);
-                        null != e && g(e)
+                        let e = await g(s);
+                        null != e && f(e)
                     } catch (t) {
-                        null != e && g(e)
+                        null != e && f(e)
                     }
                 }, O = c.default.Messages.CANCEL, h = !I && A ? c.default.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({
                     ruleName: null == S ? void 0 : S.name
@@ -6242,12 +6243,12 @@
                 let {
                     guildId: t,
                     triggerType: s
-                } = e, N = n.useMemo(() => () => (0, c.createDefaultRule)(t, s), [t, s]), [f] = n.useState(N), [g, A] = n.useState(!1), {
+                } = e, N = n.useMemo(() => () => (0, c.createDefaultRule)(t, s), [t, s]), [g] = n.useState(N), [f, A] = n.useState(!1), {
                     editingRule: L,
                     createNewEditingRule: m
                 } = (0, _.useAutomodEditingRuleState)(), {
                     getDefaultRuleName: C
-                } = E.triggerConfigs[s], O = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), h = !(0, c.isBackendPersistedRule)(L) && (null == L ? void 0 : L.triggerType) === s, [R, D] = n.useState(h ? L : f), M = (0, l.useSpring)({
+                } = E.triggerConfigs[s], O = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), h = !(0, c.isBackendPersistedRule)(L) && (null == L ? void 0 : L.triggerType) === s, [R, D] = n.useState(h ? L : g), M = (0, l.useSpring)({
                     opacity: h ? 0 : 1,
                     pointerEvents: h ? "none" : "all",
                     config: {
@@ -6264,10 +6265,10 @@
                     },
                     immediate: O,
                     onStart: () => {
-                        D(h ? L : f)
+                        D(h ? L : g)
                     },
                     onRest: () => {
-                        D(h ? L : f), A(h)
+                        D(h ? L : g), A(h)
                     }
                 });
                 return null == L || h ? (0, a.jsxs)("div", {
@@ -6280,7 +6281,7 @@
                         style: G,
                         children: (0, a.jsx)(T.default, {
                             rule: R,
-                            persistEdit: g
+                            persistEdit: f
                         })
                     }), (0, a.jsx)(l.animated.div, {
                         className: S.animatedNewRuleContainer,
@@ -6492,8 +6493,8 @@
                     onFocus: I,
                     onRemove: S,
                     isSelected: N,
-                    isSelecting: f,
-                    error: g,
+                    isSelecting: g,
+                    error: f,
                     forceShowErrorTooltip: A
                 } = e, L = n.useRef(null), m = n.useRef(null), [C, O] = n.useState(!1), {
                     ref: h,
@@ -6540,8 +6541,8 @@
                             [_.isEditing]: C,
                             [_.smallBlink]: !C && !G,
                             [_.isSelected]: N,
-                            [_.isSelecting]: f,
-                            [_.isError]: null != g && !C
+                            [_.isSelecting]: g,
+                            [_.isError]: null != f && !C
                         }),
                         children: [(0, a.jsxs)(o.Clickable, {
                             tag: "div",
@@ -6551,14 +6552,14 @@
                             onMouseEnter: () => p(!0),
                             onMouseLeave: () => p(!1),
                             className: i(_.chipletContainerInner, {
-                                [_.isSelecting]: f,
+                                [_.isSelecting]: g,
                                 [_.isEditing]: C
                             }),
                             ref: m,
                             children: [(0, a.jsx)("input", {
                                 className: i(_.chipletInput, {
                                     [_.isEditing]: C,
-                                    [_.isSelecting]: f
+                                    [_.isSelecting]: g
                                 }),
                                 ref: L,
                                 onChange: j,
@@ -6572,7 +6573,7 @@
                                 value: t,
                                 isEditing: C,
                                 isSelected: N,
-                                error: g,
+                                error: f,
                                 forceShowErrorTooltip: x || C
                             })]
                         }), !C && (0, a.jsx)(o.Clickable, {
@@ -6668,7 +6669,7 @@
                     placeholder: _,
                     className: I,
                     maxTags: S
-                } = e, N = n.useRef(null), f = n.useRef(null), g = n.useRef(null), A = (0, c.useChipletState)(s), {
+                } = e, N = n.useRef(null), g = n.useRef(null), f = n.useRef(null), A = (0, c.useChipletState)(s), {
                     handlePasteEvent: L,
                     handleInputChange: m,
                     handleKeyDown: C,
@@ -6680,9 +6681,9 @@
                     handleResetTagSelections: G,
                     handleInputBlurEvent: x
                 } = (0, c.useChipletStateHandlers)(A, {
-                    scrollerRef: g,
+                    scrollerRef: f,
                     mainInputRef: N,
-                    mainContainerRef: f
+                    mainContainerRef: g
                 }), {
                     state: {
                         value: p,
@@ -6713,18 +6714,18 @@
                                 var e;
                                 null === (e = N.current) || void 0 === e || e.blur(), setTimeout(() => {
                                     var e;
-                                    return null === (e = f.current) || void 0 === e ? void 0 : e.focus()
+                                    return null === (e = g.current) || void 0 === e ? void 0 : e.focus()
                                 }, 16)
                             }))
                         } else M(e, !0), y(!0)
                     }, [D, M, v, U]);
                 return (0, a.jsxs)("div", {
                     className: i(E.mainContainer, I),
-                    ref: f,
+                    ref: g,
                     tabIndex: 0,
                     onKeyUp: O,
                     children: [(0, a.jsxs)(T, {
-                        ref: g,
+                        ref: f,
                         onClick: b,
                         children: [U.map((e, t) => (0, a.jsx)(d.default, {
                             value: e,
@@ -7105,13 +7106,13 @@
                     guildId: I,
                     toggled: S,
                     onToggleAction: N
-                } = e, f = e => () => N(e), g = (0, o.getActionInfo)(s.type, s, T), A = null === (t = s.metadata) || void 0 === t ? void 0 : t.durationSeconds, L = null != A ? (0, c.getFriendlyDurationString)(A) : null, m = (0, n.useStateFromStores)([r.default, i.default], () => r.default.can(u.Permissions.MODERATE_MEMBERS, i.default.getGuild(I)), [I]);
-                if (null == g) return null;
+                } = e, g = e => () => N(e), f = (0, o.getActionInfo)(s.type, s, T), A = null === (t = s.metadata) || void 0 === t ? void 0 : t.durationSeconds, L = null != A ? (0, c.getFriendlyDurationString)(A) : null, m = (0, n.useStateFromStores)([r.default, i.default], () => r.default.can(u.Permissions.MODERATE_MEMBERS, i.default.getGuild(I)), [I]);
+                if (null == f) return null;
                 let {
                     headerText: C,
                     descriptionText: O,
                     icon: h
-                } = g;
+                } = f;
                 return (0, a.jsxs)("div", {
                     className: _.actionContainer,
                     children: [(0, a.jsx)("div", {
@@ -7142,7 +7143,7 @@
                                     friendlyDurationString: t
                                 })
                             }(T, L), m && (0, a.jsx)(l.Clickable, {
-                                onClick: f(!0),
+                                onClick: g(!0),
                                 className: _.editChannel,
                                 tag: "span",
                                 role: "link",
@@ -7158,7 +7159,7 @@
                             children: (0, a.jsx)(l.Checkbox, {
                                 type: l.Checkbox.Types.INVERTED,
                                 value: S,
-                                onChange: f(!1),
+                                onChange: g(!1),
                                 disabled: !m,
                                 className: _.actionCheckbox
                             })
@@ -7193,12 +7194,12 @@
                     triggerType: _,
                     toggled: T,
                     onToggleAction: I
-                } = e, S = e => () => I(e), N = (0, u.getActionInfo)(s.type, s, _), f = null === (t = s.metadata) || void 0 === t ? void 0 : t.channelId, g = (0, n.useStateFromStores)([d.default, o.default, r.default], () => {
-                    let e = r.default.getChannel(f);
+                } = e, S = e => () => I(e), N = (0, u.getActionInfo)(s.type, s, _), g = null === (t = s.metadata) || void 0 === t ? void 0 : t.channelId, f = (0, n.useStateFromStores)([d.default, o.default, r.default], () => {
+                    let e = r.default.getChannel(g);
                     if (null == e) return null;
                     let t = (0, i.computeChannelName)(e, d.default, o.default);
                     return t
-                }, [f]);
+                }, [g]);
                 if (null == N) return null;
                 let {
                     headerText: A,
@@ -7226,8 +7227,8 @@
                         }), T && (0, a.jsxs)(l.Text, {
                             color: "text-muted",
                             variant: "text-xs/medium",
-                            children: [null != g && c.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({
-                                channelName: g
+                            children: [null != f && c.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({
+                                channelName: f
                             }), (0, a.jsx)(l.Clickable, {
                                 onClick: S(!0),
                                 className: E.editChannel,
@@ -7375,27 +7376,27 @@
                 T = s("452938");
 
             function I(e) {
-                var t, s, I, S, N, f;
+                var t, s, I, S, N, g;
                 let {
-                    rule: g,
+                    rule: f,
                     onChangeRule: A
                 } = e, L = n.useCallback(e => {
                     A({
-                        ...g,
+                        ...f,
                         triggerMetadata: {
-                            ...g.triggerMetadata,
+                            ...f.triggerMetadata,
                             keywordFilter: e
                         }
                     })
-                }, [A, g]), m = n.useCallback(e => {
+                }, [A, f]), m = n.useCallback(e => {
                     A({
-                        ...g,
+                        ...f,
                         triggerMetadata: {
-                            ...g.triggerMetadata,
+                            ...f.triggerMetadata,
                             allowList: e
                         }
                     })
-                }, [A, g]);
+                }, [A, f]);
                 return (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsxs)("div", {
                         className: T.cardContentsContainer,
@@ -7405,16 +7406,16 @@
                             children: [(0, a.jsx)(o.default, {
                                 onChangeText: L,
                                 maxWordCount: E.MAX_KEYWORDS_PER_KEYWORD_FILTER,
-                                initialValue: null === (t = g.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
+                                initialValue: null === (t = f.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
                             }), (0, a.jsx)(r.default, {
-                                rule: g,
+                                rule: f,
                                 onChangeRule: A,
-                                collapsed: (null == g ? void 0 : null === (s = g.triggerMetadata) || void 0 === s ? void 0 : s.regexPatterns) == null || (null == g ? void 0 : null === (I = g.triggerMetadata) || void 0 === I ? void 0 : I.regexPatterns.length) === 0
+                                collapsed: (null == f ? void 0 : null === (s = f.triggerMetadata) || void 0 === s ? void 0 : s.regexPatterns) == null || (null == f ? void 0 : null === (I = f.triggerMetadata) || void 0 === I ? void 0 : I.regexPatterns.length) === 0
                             }), (0, a.jsx)(l.default, {
                                 onChange: m,
-                                initialValue: null === (S = g.triggerMetadata) || void 0 === S ? void 0 : S.allowList,
+                                initialValue: null === (S = f.triggerMetadata) || void 0 === S ? void 0 : S.allowList,
                                 maxWordCount: E.MAX_KEYWORDS_PER_ALLOWLIST_KEYWORD_FILTER_RULE,
-                                collapsed: (null === (N = g.triggerMetadata) || void 0 === N ? void 0 : N.allowList) == null || (null === (f = g.triggerMetadata) || void 0 === f ? void 0 : f.allowList.length) === 0
+                                collapsed: (null === (N = f.triggerMetadata) || void 0 === N ? void 0 : N.allowList) == null || (null === (g = f.triggerMetadata) || void 0 === g ? void 0 : g.allowList.length) === 0
                             })]
                         }), (0, a.jsx)(c.default, {
                             type: c.default.Type.ARROW_DOWN
@@ -7422,7 +7423,7 @@
                             step: 2,
                             header: _.default.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
                             children: (0, a.jsx)(i.default, {
-                                rule: g,
+                                rule: f,
                                 onChangeRule: A
                             })
                         }), (0, a.jsx)(c.default, {
@@ -7431,7 +7432,7 @@
                             step: 3,
                             header: _.default.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
                             children: (0, a.jsx)(d.default, {
-                                rule: g,
+                                rule: f,
                                 onChangeRule: A
                             })
                         })]
@@ -7560,15 +7561,15 @@
                 } = e, {
                     patterns: E,
                     valueError: N,
-                    errors: f,
-                    validatePatternsChanged: g,
+                    errors: g,
+                    validatePatternsChanged: f,
                     validateEditingValueChanged: A
                 } = (0, u.default)(l, r), [L] = n.useState(() => ({
                     tags: E,
                     value: "",
                     selections: [],
                     isSelecting: !1
-                })), m = n.useMemo(() => f.reduce((e, t) => {
+                })), m = n.useMemo(() => g.reduce((e, t) => {
                     let {
                         pattern: s,
                         message: a,
@@ -7582,9 +7583,9 @@
                         erroringCharacterLength: l,
                         erroringCharacterOffset: i
                     }, e)
-                }, {}), [f, E]), C = n.useCallback(e => {
-                    g(e, E)
-                }, [g, E]), O = n.useCallback(e => {
+                }, {}), [g, E]), C = n.useCallback(e => {
+                    f(e, E)
+                }, [f, E]), O = n.useCallback(e => {
                     A(e)
                 }, [A]);
                 return (0, a.jsxs)("div", {
@@ -7600,8 +7601,8 @@
                         text: _.default.Messages.GUILD_AUTOMOD_REGEX_SUBTEXT.format({
                             helpArticle: I
                         }),
-                        hasErrors: f.length > 0 || null != N,
-                        errorText: null !== (s = null === (t = f.find(e => {
+                        hasErrors: g.length > 0 || null != N,
+                        errorText: null !== (s = null === (t = g.find(e => {
                             let {
                                 pattern: t
                             } = e;
@@ -7744,8 +7745,8 @@
                 var t, s;
                 let {
                     rule: N,
-                    onChangeRule: f
-                } = e, [g, A] = n.useState(null === (t = N.triggerMetadata) || void 0 === t ? void 0 : t.mentionTotalLimit), L = (0, d.useIsMentionRaidExperimentEnabled)(N.guildId, !1);
+                    onChangeRule: g
+                } = e, [f, A] = n.useState(null === (t = N.triggerMetadata) || void 0 === t ? void 0 : t.mentionTotalLimit), L = (0, d.useIsMentionRaidExperimentEnabled)(N.guildId, !1);
                 return (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsxs)("div", {
                         className: S.cardContentsContainer,
@@ -7775,9 +7776,9 @@
                                 }), (0, a.jsx)("div", {
                                     className: S.stepperContainer,
                                     children: (0, a.jsx)(i.default, {
-                                        value: g,
+                                        value: f,
                                         onChange: e => {
-                                            A(e), f({
+                                            A(e), g({
                                                 ...N,
                                                 triggerMetadata: {
                                                     ...N.triggerMetadata,
@@ -7815,7 +7816,7 @@
                                         type: l.Checkbox.Types.INVERTED,
                                         value: null === (s = N.triggerMetadata) || void 0 === s ? void 0 : s.mentionRaidProtectionEnabled,
                                         onChange: (e, t) => {
-                                            f({
+                                            g({
                                                 ...N,
                                                 triggerMetadata: {
                                                     ...N.triggerMetadata,
@@ -7834,7 +7835,7 @@
                             header: I.default.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
                             children: (0, a.jsx)(u.default, {
                                 rule: N,
-                                onChangeRule: f
+                                onChangeRule: g
                             })
                         }), (0, a.jsx)(_.default, {
                             type: _.default.Type.CROSS
@@ -7843,7 +7844,7 @@
                             header: I.default.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
                             children: (0, a.jsx)(c.default, {
                                 rule: N,
-                                onChangeRule: f
+                                onChangeRule: g
                             })
                         })]
                     })
@@ -7878,7 +7879,7 @@
                         setEditingRule: S
                     } = (0, r.useAutomodEditingRuleState)(), {
                         isLoading: N
-                    } = (0, r.useAutomodEditingRuleActions)(), [f] = n.useState(() => !(0, l.isBackendPersistedRule)(t)), g = (null == T ? void 0 : T.id) === t.id || s, A = (0, i.isDefaultRuleId)(null == t ? void 0 : t.id), L = g && null != T ? T : t, m = n.useMemo(() => (0, o.createOnPreventNavigation)(t.name), [null == t ? void 0 : t.name]), C = n.useCallback(() => {
+                    } = (0, r.useAutomodEditingRuleActions)(), [g] = n.useState(() => !(0, l.isBackendPersistedRule)(t)), f = (null == T ? void 0 : T.id) === t.id || s, A = (0, i.isDefaultRuleId)(null == t ? void 0 : t.id), L = f && null != T ? T : t, m = n.useMemo(() => (0, o.createOnPreventNavigation)(t.name), [null == t ? void 0 : t.name]), C = n.useCallback(() => {
                         I(t.guildId, t.triggerType)
                     }, [t.guildId, t.triggerType, I]), O = n.useCallback(e => {
                         !N && S(e, !0)
@@ -7887,24 +7888,24 @@
                         E && S(t, !0)
                     }, [E, t, S]);
                     let h = n.useCallback(() => {
-                        g ? !_ && S(null) : _ ? m(() => {
+                        f ? !_ && S(null) : _ ? m(() => {
                             S(t)
                         }) : S(t)
-                    }, [g, _, m, t, S]);
+                    }, [f, _, m, t, S]);
                     return (0, a.jsx)(u.default, {
                         renderHeader: (0, a.jsx)(c.default, {
                             rule: L,
-                            forceSetup: f && !g && !A,
+                            forceSetup: g && !f && !A,
                             triggerType: t.triggerType,
-                            isEditMode: g,
+                            isEditMode: f,
                             isDefaultRule: A,
                             onChangeRule: O,
                             onSetupRule: C
                         }),
-                        isStuck: g && _,
-                        isExpanded: g,
+                        isStuck: f && _,
+                        isExpanded: f,
                         onExpand: h,
-                        children: g && (0, a.jsx)(d.default, {
+                        children: f && (0, a.jsx)(d.default, {
                             rule: L,
                             isLoading: N,
                             onChangeRule: O
@@ -7937,7 +7938,7 @@
                         isExpanded: l,
                         isStuck: T,
                         onExpand: I
-                    } = e, S = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [N, f] = n.useState(!0), [g, A] = n.useState(!1), {
+                    } = e, S = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [N, g] = n.useState(!0), [f, A] = n.useState(!1), {
                         ref: L,
                         height: m = 0
                     } = (0, u.default)(), {
@@ -7965,7 +7966,7 @@
                     };
                     return n.useLayoutEffect(() => {
                         let e = setTimeout(() => {
-                            f(!1)
+                            g(!1)
                         }, 100);
                         return () => clearTimeout(e)
                     }, []), (0, a.jsx)(d.Clickable, {
@@ -7980,7 +7981,7 @@
                         onMouseUp: x,
                         children: (0, a.jsxs)(r.animated.div, {
                             className: i(_.contentExpandContainer, {
-                                [_.showOverflow]: l && g
+                                [_.showOverflow]: l && f
                             }),
                             style: D,
                             children: [(0, a.jsx)(d.Clickable, {
@@ -8071,8 +8072,8 @@
                 I = s("183866"),
                 S = s("316841"),
                 N = s("788112"),
-                f = s("143460"),
-                g = s("782340"),
+                g = s("143460"),
+                f = s("782340"),
                 A = s("69754");
 
             function L(e) {
@@ -8147,9 +8148,9 @@
                             onChange: r,
                             checked: null !== (t = null == s ? void 0 : s.enabled) && void 0 !== t && t
                         }), (0, a.jsx)(i.Tooltip, {
-                            text: g.default.Messages.MORE,
+                            text: f.default.Messages.MORE,
                             position: "top",
-                            "aria-label": g.default.Messages.MORE_OPTIONS,
+                            "aria-label": f.default.Messages.MORE_OPTIONS,
                             children: e => (0, a.jsx)(i.Clickable, {
                                 ...e,
                                 onClick: o,
@@ -8183,15 +8184,15 @@
                     saveRule: _
                 } = (0, T.useAutomodEditingRuleActions)(), {
                     updateRule: S
-                } = (0, E.useAutomodRulesList)(t.guildId), [N, f] = n.useState(t.enabled), m = (0, l.throttle)(async (e, s) => {
+                } = (0, E.useAutomodRulesList)(t.guildId), [N, g] = n.useState(t.enabled), m = (0, l.throttle)(async (e, s) => {
                     if (s.preventDefault(), s.stopPropagation(), !d) {
                         let e = {
                             ...t,
                             enabled: !N
                         };
-                        f(!N);
+                        g(!N);
                         let s = await _(e, []);
-                        if (null != s) S(s), f(s.enabled)
+                        if (null != s) S(s), g(s.enabled)
                     }
                 }, 300), h = e => {
                     C(e), r(e)
@@ -8240,9 +8241,9 @@
                             onChange: m,
                             checked: null != N && N
                         }), !s && (0, a.jsx)(i.Tooltip, {
-                            text: g.default.Messages.MORE,
+                            text: f.default.Messages.MORE,
                             position: "top",
-                            "aria-label": g.default.Messages.MORE_OPTIONS,
+                            "aria-label": f.default.Messages.MORE_OPTIONS,
                             children: e => (0, a.jsx)(i.Clickable, {
                                 ...e,
                                 onClick: h,
@@ -8299,7 +8300,7 @@
                         children: (0, a.jsx)(i.Button, {
                             size: i.Button.Sizes.SMALL,
                             onClick: s,
-                            children: t === f.AutomodTriggerType.KEYWORD ? g.default.Messages.CREATE : g.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
+                            children: t === g.AutomodTriggerType.KEYWORD ? f.default.Messages.CREATE : f.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
                         })
                     })]
                 })
@@ -8429,7 +8430,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return g
+                    return f
                 }
             });
             var a = s("37983");
@@ -8461,7 +8462,7 @@
                 }) : null
             }
 
-            function f(e) {
+            function g(e) {
                 let {
                     guildId: t
                 } = e, s = (0, n.useStateFromStores)([o.default], () => o.default.getGuild(t), [t]), d = (0, n.useStateFromStores)([r.default], () => null != s ? r.default.getChannel(s.rulesChannelId) : null, [s]), u = () => {
@@ -8490,7 +8491,7 @@
                 })
             }
 
-            function g(e) {
+            function f(e) {
                 let {
                     rule: t,
                     onChangeRule: s
@@ -8500,7 +8501,7 @@
                         className: S.cardContentsContainer,
                         children: [(0, a.jsx)(E.default, {
                             step: 1,
-                            header: (0, a.jsx)(f, {
+                            header: (0, a.jsx)(g, {
                                 guildId: t.guildId
                             })
                         }), (0, a.jsx)(_.default, {
@@ -8639,27 +8640,27 @@
                 T = s("452938");
 
             function I(e) {
-                var t, s, I, S, N, f;
+                var t, s, I, S, N, g;
                 let {
-                    rule: g,
+                    rule: f,
                     onChangeRule: A
                 } = e, L = n.useCallback(e => {
                     A({
-                        ...g,
+                        ...f,
                         triggerMetadata: {
-                            ...g.triggerMetadata,
+                            ...f.triggerMetadata,
                             keywordFilter: e
                         }
                     })
-                }, [A, g]), m = n.useCallback(e => {
+                }, [A, f]), m = n.useCallback(e => {
                     A({
-                        ...g,
+                        ...f,
                         triggerMetadata: {
-                            ...g.triggerMetadata,
+                            ...f.triggerMetadata,
                             allowList: e
                         }
                     })
-                }, [A, g]);
+                }, [A, f]);
                 return (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsxs)("div", {
                         className: T.cardContentsContainer,
@@ -8669,16 +8670,16 @@
                             children: [(0, a.jsx)(o.default, {
                                 onChangeText: L,
                                 maxWordCount: E.MAX_KEYWORDS_PER_KEYWORD_FILTER,
-                                initialValue: null === (t = g.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
+                                initialValue: null === (t = f.triggerMetadata) || void 0 === t ? void 0 : t.keywordFilter
                             }), (0, a.jsx)(r.default, {
-                                rule: g,
+                                rule: f,
                                 onChangeRule: A,
-                                collapsed: (null == g ? void 0 : null === (s = g.triggerMetadata) || void 0 === s ? void 0 : s.regexPatterns) == null || (null == g ? void 0 : null === (I = g.triggerMetadata) || void 0 === I ? void 0 : I.regexPatterns.length) === 0
+                                collapsed: (null == f ? void 0 : null === (s = f.triggerMetadata) || void 0 === s ? void 0 : s.regexPatterns) == null || (null == f ? void 0 : null === (I = f.triggerMetadata) || void 0 === I ? void 0 : I.regexPatterns.length) === 0
                             }), (0, a.jsx)(l.default, {
                                 onChange: m,
-                                initialValue: null === (S = g.triggerMetadata) || void 0 === S ? void 0 : S.allowList,
+                                initialValue: null === (S = f.triggerMetadata) || void 0 === S ? void 0 : S.allowList,
                                 maxWordCount: E.MAX_KEYWORDS_PER_ALLOWLIST_KEYWORD_FILTER_RULE,
-                                collapsed: (null === (N = g.triggerMetadata) || void 0 === N ? void 0 : N.allowList) == null || (null === (f = g.triggerMetadata) || void 0 === f ? void 0 : f.allowList.length) === 0
+                                collapsed: (null === (N = f.triggerMetadata) || void 0 === N ? void 0 : N.allowList) == null || (null === (g = f.triggerMetadata) || void 0 === g ? void 0 : g.allowList.length) === 0
                             })]
                         }), (0, a.jsx)(c.default, {
                             type: c.default.Type.ARROW_DOWN
@@ -8686,7 +8687,7 @@
                             step: 2,
                             header: _.default.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
                             children: (0, a.jsx)(i.default, {
-                                rule: g,
+                                rule: f,
                                 onChangeRule: A
                             })
                         }), (0, a.jsx)(c.default, {
@@ -8695,7 +8696,7 @@
                             step: 3,
                             header: _.default.Messages.GUILD_AUTOMOD_ROLES_EXEMPTION_HEADER,
                             children: (0, a.jsx)(d.default, {
-                                rule: g,
+                                rule: f,
                                 onChangeRule: A,
                                 onlyRoles: !0
                             })
@@ -8835,7 +8836,7 @@
                             }
                         })
                     }, [c]),
-                    f = a.useCallback(function(e) {
+                    g = a.useCallback(function(e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                         c(s => {
                             let {
@@ -8852,7 +8853,7 @@
                             }
                         })
                     }, [c]),
-                    g = a.useCallback(e => {
+                    f = a.useCallback(e => {
                         var t;
                         c(e => {
                             let {
@@ -8975,13 +8976,13 @@
                     }, [L]),
                     R = a.useCallback(e => {
                         let t = e.metaKey || e.ctrlKey;
-                        "Meta" !== e.key && (r.NEXT_CHIP_INPUT_KEY.has(e.key) ? L(e) : "Backspace" === e.key ? m(e) : "Escape" === e.key ? g(e) : "a" === e.key && t ? O(e) : r.CHIPLET_STATE_HISTORY_KEYS.has(e.key) && t && C(e))
-                    }, [L, m, g, O, C]),
+                        "Meta" !== e.key && (r.NEXT_CHIP_INPUT_KEY.has(e.key) ? L(e) : "Backspace" === e.key ? m(e) : "Escape" === e.key ? f(e) : "a" === e.key && t ? O(e) : r.CHIPLET_STATE_HISTORY_KEYS.has(e.key) && t && C(e))
+                    }, [L, m, f, O, C]),
                     D = a.useCallback(e => {
                         if (document.activeElement !== l.current) return;
                         let t = e.metaKey || e.ctrlKey;
-                        "Backspace" === e.key ? m(e) : "a" === e.key && t ? O(e) : "Escape" === e.key ? g(e) : r.CHIPLET_STATE_HISTORY_KEYS.has(e.key) && t ? C(e) : "Meta" !== e.key && g(e)
-                    }, [C, m, O, g, l]);
+                        "Backspace" === e.key ? m(e) : "a" === e.key && t ? O(e) : "Escape" === e.key ? f(e) : r.CHIPLET_STATE_HISTORY_KEYS.has(e.key) && t ? C(e) : "Meta" !== e.key && f(e)
+                    }, [C, m, O, f, l]);
                 return {
                     handlePasteEvent: T,
                     handleInputChange: A,
@@ -8990,8 +8991,8 @@
                     handleRemoveTag: I,
                     handleTagChangeEvent: S,
                     handleSelectTag: N,
-                    handleUnselectTag: f,
-                    handleResetTagSelections: g,
+                    handleUnselectTag: g,
+                    handleResetTagSelections: f,
                     handleInputBlurEvent: h
                 }
             }
@@ -9161,7 +9162,7 @@
                     return E
                 },
                 getRuleInfo: function() {
-                    return g
+                    return f
                 }
             });
             var a = s("116320"),
@@ -9228,7 +9229,7 @@
                 N = e => {
                     if (e === u.AutomodTriggerType.KEYWORD) return c.default.Messages.GUILD_AUTOMOD_LINK_FILTER_MATCHING_STRATEGY_DESCRIPTION.format()
                 },
-                f = e => {
+                g = e => {
                     switch (e) {
                         case u.AutomodTriggerType.MENTION_SPAM:
                             return a.default;
@@ -9242,14 +9243,14 @@
                     }
                 };
 
-            function g(e, t) {
+            function f(e, t) {
                 var s, a, n, i, r;
                 return null != e && _(e) ? {
                     headerText: null !== (s = T(e, t)) && void 0 !== s ? s : "",
                     headerSubtext: null !== (a = I(e, t)) && void 0 !== a ? a : "",
                     descriptionText: null !== (n = S(e)) && void 0 !== n ? n : "",
                     descriptionSubtext: null !== (i = N(e)) && void 0 !== i ? i : "",
-                    icon: null !== (r = f(e)) && void 0 !== r ? r : l.default
+                    icon: null !== (r = g(e)) && void 0 !== r ? r : l.default
                 } : null
             }
         },
@@ -9257,7 +9258,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 getPerkIcon: function() {
-                    return g
+                    return f
                 }
             }), s("70102");
             var a = s("414456"),
@@ -9275,57 +9276,57 @@
                 I = s("619911"),
                 S = s("698015"),
                 N = s("427459"),
-                f = s("392568");
+                g = s("392568");
 
-            function g(e, t) {
+            function f(e, t) {
                 if (t) return {
                     icon: l.default,
-                    className: f.unlocked
+                    className: g.unlocked
                 };
                 switch (e) {
                     case N.PerkIcons.EMOJI:
                         return {
-                            icon: i.default, className: n(f.icon, f.emoji)
+                            icon: i.default, className: n(g.icon, g.emoji)
                         };
                     case N.PerkIcons.AUDIO:
                         return {
-                            icon: r.default, className: n(f.icon, f.audio)
+                            icon: r.default, className: n(g.icon, g.audio)
                         };
                     case N.PerkIcons.ANIMATED:
                         return {
-                            icon: o.default, className: n(f.icon, f.animated)
+                            icon: o.default, className: n(g.icon, g.animated)
                         };
                     case N.PerkIcons.CUSTOMIZATION:
                         return {
-                            icon: u.default, className: n(f.icon, f.customization)
+                            icon: u.default, className: n(g.icon, g.customization)
                         };
                     case N.PerkIcons.UPLOAD:
                         return {
-                            icon: S.default, className: n(f.icon, f.upload)
+                            icon: S.default, className: n(g.icon, g.upload)
                         };
                     case N.PerkIcons.VANITY:
                         return {
-                            icon: _.default, className: n(f.icon, f.vanity)
+                            icon: _.default, className: n(g.icon, g.vanity)
                         };
                     case N.PerkIcons.STREAM:
                         return {
-                            icon: I.default, className: n(f.icon, f.stream)
+                            icon: I.default, className: n(g.icon, g.stream)
                         };
                     case N.PerkIcons.STICKER:
                         return {
-                            icon: T.default, className: n(f.icon, f.sticker)
+                            icon: T.default, className: n(g.icon, g.sticker)
                         };
                     case N.PerkIcons.CUSTOM_ROLE_ICON:
                         return {
-                            icon: d.default, className: n(f.icon, f.customRoleIcon)
+                            icon: d.default, className: n(g.icon, g.customRoleIcon)
                         };
                     case N.PerkIcons.STAGE_VIDEO:
                         return {
-                            icon: E.default, className: n(f.icon, f.stage)
+                            icon: E.default, className: n(g.icon, g.stage)
                         };
                     case N.PerkIcons.SOUNDBOARD:
                         return {
-                            icon: c.default, className: n(f.icon, f.soundboard)
+                            icon: c.default, className: n(g.icon, g.soundboard)
                         }
                 }
                 throw Error("Unexpected perk icon ".concat(e))
@@ -9445,8 +9446,8 @@
                             onClick: S
                         } = e,
                         N = E.hasFeature(c),
-                        f = (0, o.minimumRequiredTierForGuildFeature)(c);
-                    return (N ? (null != f && (n = d.default.Messages.PREMIUM_GUILD_INCLUDED), t = (0, a.jsxs)(a.Fragment, {
+                        g = (0, o.minimumRequiredTierForGuildFeature)(c);
+                    return (N ? (null != g && (n = d.default.Messages.PREMIUM_GUILD_INCLUDED), t = (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(r.default, {
                             className: u.unlockedIcon
                         }), (0, a.jsx)(i.Heading, {
@@ -9454,13 +9455,13 @@
                             className: u.description,
                             children: d.default.Messages.PREMIUM_GUILD_TIER_UNLOCKED
                         })]
-                    })) : (null != f && (n = d.default.Messages.CLICK_TO_LEARN_MORE), t = (0, a.jsxs)(a.Fragment, {
+                    })) : (null != g && (n = d.default.Messages.CLICK_TO_LEARN_MORE), t = (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(r.default, {
                             className: u.icon
                         }), (0, a.jsx)(i.Heading, {
                             variant: "eyebrow",
                             className: u.description,
-                            children: null != f && (0, o.getShortenedTierName)(f)
+                            children: null != g && (0, o.getShortenedTierName)(g)
                         })]
                     })), s = T || null == n ? (0, a.jsx)("div", {
                         className: l(u.availabilityIndicator, _),
@@ -9633,15 +9634,15 @@
                 return t.push(I.GUILD_JOIN_REQUESTS_BY_ID(e.id)), t.push(I.GUILD_JOIN_REQUESTS_BY_STATUS(e.guildId, e.applicationStatus)), t
             }
             let N = new n.default(S, e => "".concat(e.id)),
-                f = new n.default(S, e => "".concat(e.id)),
-                g = new n.default(S, e => "".concat(e.actionedAt));
+                g = new n.default(S, e => "".concat(e.id)),
+                f = new n.default(S, e => "".concat(e.actionedAt));
 
             function A(e) {
                 return N.get(e)
             }
 
             function L(e) {
-                N.set(e.id, e), (0, r.isSubmittedApplicationStatus)(e.applicationStatus) && (g.delete(e.id), f.set(e.id, e)), (0, r.isActionedApplicationStatus)(e.applicationStatus) && (f.delete(e.id), g.set(e.id, e))
+                N.set(e.id, e), (0, r.isSubmittedApplicationStatus)(e.applicationStatus) && (f.delete(e.id), g.set(e.id, e)), (0, r.isActionedApplicationStatus)(e.applicationStatus) && (g.delete(e.id), f.set(e.id, e))
             }
 
             function m(e) {
@@ -9660,7 +9661,7 @@
             class R extends a.default.Store {
                 getRequests(e, t) {
                     let s = I.GUILD_JOIN_REQUESTS_BY_STATUS(e, t);
-                    return (0, r.isActionedApplicationStatus)(t) ? g.values(s) : (0, r.isSubmittedApplicationStatus)(t) ? f.values(s) : N.values(s)
+                    return (0, r.isActionedApplicationStatus)(t) ? f.values(s) : (0, r.isSubmittedApplicationStatus)(t) ? g.values(s) : N.values(s)
                 }
                 getSubmittedGuildJoinRequestTotal(e) {
                     return c(e)
@@ -9728,7 +9729,7 @@
                     let l = (t = a, N.get(t));
                     if (null != l) {
                         ;
-                        _(n, null, l.applicationStatus), s = a, N.delete(s), f.delete(s), g.delete(s)
+                        _(n, null, l.applicationStatus), s = a, N.delete(s), g.delete(s), f.delete(s)
                     }
                 },
                 GUILD_JOIN_REQUESTS_SET_APPLICATION_STATUS: function(e) {
@@ -9747,7 +9748,7 @@
                     if (a === O[s]) return;
                     O[s] = a;
                     let n = null !== (t = C[s]) && void 0 !== t ? t : o.GuildJoinRequestApplicationStatuses.SUBMITTED;
-                    (0, r.isActionedApplicationStatus)(n) && g.clear(), (0, r.isSubmittedApplicationStatus)(n) && f.clear()
+                    (0, r.isActionedApplicationStatus)(n) && f.clear(), (0, r.isSubmittedApplicationStatus)(n) && g.clear()
                 },
                 GUILD_JOIN_REQUESTS_SET_SELECTED: function(e) {
                     let {
@@ -9907,12 +9908,12 @@
                     var t;
                     let {
                         guildId: s
-                    } = e, T = (0, l.useStateFromStores)([d.default], () => d.default.get(s)), [I, S] = n.useState(null), [N, f] = n.useState(null !== (t = null == T ? void 0 : T.description) && void 0 !== t ? t : ""), g = n.useRef(!1), A = n.useRef(!1);
+                    } = e, T = (0, l.useStateFromStores)([d.default], () => d.default.get(s)), [I, S] = n.useState(null), [N, g] = n.useState(null !== (t = null == T ? void 0 : T.description) && void 0 !== t ? t : ""), f = n.useRef(!1), A = n.useRef(!1);
                     n.useEffect(() => () => {
                         A.current = !0
                     }, []);
                     let L = n.useCallback(async () => {
-                        if (!g.current) {
+                        if (!f.current) {
                             S(null);
                             try {
                                 await o.default.updateVerificationFormDescription(s, N)
@@ -9922,7 +9923,7 @@
                                 S(e.getAnyErrorMessage())
                             } finally {
                                 if (A.current) return;
-                                g.current = !1
+                                f.current = !1
                             }
                         }
                     }, [N, s]);
@@ -9934,7 +9935,7 @@
                             value: null != N ? N : "",
                             placeholder: E.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
                             onChange: e => {
-                                f(e)
+                                g(e)
                             },
                             onBlur: L,
                             autosize: !0
@@ -10110,7 +10111,7 @@
                     end: (e, t) => {
                         null != e && !t.didDrop() && E(e.field, null, !0)
                     }
-                }), [, f] = (0, o.useDrop)({
+                }), [, g] = (0, o.useDrop)({
                     accept: I,
                     hover: (e, s) => {
                         var a;
@@ -10126,9 +10127,9 @@
                         E(e.field, t, !0)
                     }
                 });
-                return n.useLayoutEffect(() => (N(f(S)), () => {
-                    f(null), N(null)
-                }), [N, f]), (0, a.jsxs)("div", {
+                return n.useLayoutEffect(() => (N(g(S)), () => {
+                    g(null), N(null)
+                }), [N, g]), (0, a.jsxs)("div", {
                     ref: S,
                     "data-dnd-name": "field-".concat(t),
                     className: i(_.dragContainer, {
@@ -10256,8 +10257,8 @@
                         onDrop: I,
                         onEdit: S,
                         onRemove: N,
-                        title: f
-                    } = e, g = s.values, A = g.slice(0, 1), L = g.length - A.length;
+                        title: g
+                    } = e, f = s.values, A = f.slice(0, 1), L = f.length - A.length;
                     return (0, a.jsxs)(u.default, {
                         field: s,
                         index: n,
@@ -10266,7 +10267,7 @@
                         onDrop: I,
                         onEdit: S,
                         onRemove: N,
-                        title: f,
+                        title: g,
                         children: [(0, a.jsx)(d.TermsFieldBody, {
                             className: l(E.fieldBackground, {
                                 [E.withFooter]: 0 !== L
@@ -10383,7 +10384,7 @@
             var N = function(e) {
                 let {
                     guild: t
-                } = e, l = r.default.can(E.Permissions.MANAGE_GUILD, t), N = t.verificationLevel, f = N === E.VerificationLevels.VERY_HIGH ? d.default : o.default, g = n.useMemo(() => I(N), [N]), A = S[N], L = (0, a.jsx)("div", {
+                } = e, l = r.default.can(E.Permissions.MANAGE_GUILD, t), N = t.verificationLevel, g = N === E.VerificationLevels.VERY_HIGH ? d.default : o.default, f = n.useMemo(() => I(N), [N]), A = S[N], L = (0, a.jsx)("div", {
                     className: T.verificationLevelTitle,
                     children: _.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format({
                         verificationLevelHook: function() {
@@ -10393,7 +10394,7 @@
                                     color: A
                                 },
                                 variant: "text-sm/semibold",
-                                children: g
+                                children: f
                             }, "hook")
                         }
                     })
@@ -10402,7 +10403,7 @@
                     title: L,
                     children: (0, a.jsxs)("div", {
                         className: T.verificationContainer,
-                        children: [(0, a.jsx)(f, {
+                        children: [(0, a.jsx)(g, {
                             width: 20,
                             height: 20,
                             className: T.icon
@@ -10574,13 +10575,13 @@
                     index: T,
                     isDragEnabled: S,
                     submittedGuildJoinRequestsCount: N,
-                    removeFormField: f,
-                    updateFormField: g,
+                    removeFormField: g,
+                    updateFormField: f,
                     updateFormFieldOrder: A
                 } = e, L = async () => {
-                    await f(T)
+                    await g(T)
                 }, m = async e => {
-                    await g(T, e)
+                    await f(T, e)
                 }, C = async (e, t, s) => {
                     await A(e, t, s)
                 }, O = (0, n.uniqueId)(), h = t === T, R = {
@@ -10740,7 +10741,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return g
+                    return f
                 }
             }), s("222007");
             var a = s("37983"),
@@ -10758,27 +10759,27 @@
                 I = s("26754"),
                 S = s("546470"),
                 N = s("394294"),
-                f = s("782340"),
-                g = function(e) {
+                g = s("782340"),
+                f = function(e) {
                     let {
                         guild: t,
                         submittedGuildJoinRequestsCount: s,
-                        onFormFieldUpdate: g,
+                        onFormFieldUpdate: f,
                         hideVerificationLevelField: A
                     } = e, L = n.useRef(!1), [m, C] = n.useState(null), [O, h] = n.useState(e.formFields), R = n.useRef(e.formFields), D = n.useMemo(() => O.filter(d.isAutomaticApprovalFormField), [O]), M = n.useMemo(() => O.filter(d.isManualApprovalFormField), [O]), G = M.length, x = n.useMemo(() => O.length === N.MAX_FORM_ELEMENTS, [O]), p = n.useMemo(() => O.some(o.isTermsFormField), [O]), U = n.useMemo(() => O.some(e => !(0, o.isTermsFormField)(e)), [O]), v = G > 1, j = (0, r.useIsMemberVerificationManualApproval)(t.id), P = n.useCallback(() => {
-                        (0, l.showToast)((0, l.createToast)(f.default.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
+                        (0, l.showToast)((0, l.createToast)(g.default.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
                     }, []), y = n.useCallback(async e => {
                         if (!L.current) {
                             L.current = !0;
                             try {
-                                await i.default.updateVerificationForm(t.id, e), g(), h(e), R.current = e
+                                await i.default.updateVerificationForm(t.id, e), f(), h(e), R.current = e
                             } catch (e) {
                                 throw h(R.current), e
                             } finally {
                                 null != m && C(null), L.current = !1
                             }
                         }
-                    }, [m, t.id, g]), b = n.useCallback(async e => {
+                    }, [m, t.id, f]), b = n.useCallback(async e => {
                         let t = e.field_type === o.VerificationFormFieldTypes.TERMS ? [e, ...O] : [...O, e];
                         await y(t)
                     }, [O, y]), B = n.useCallback(async (e, t) => {
@@ -10820,9 +10821,9 @@
                     });
                     return j ? (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(I.default, {
-                            text: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_AUTOMATIC_APPROVAL_DIVIDER
+                            text: g.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_AUTOMATIC_APPROVAL_DIVIDER
                         }), V, (0, a.jsx)(I.default, {
-                            text: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_DIVIDER
+                            text: g.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_DIVIDER
                         }), !U && (0, a.jsx)(u.default, {
                             addFormField: b,
                             hasManualFormFields: G > 0
@@ -10864,8 +10865,8 @@
                 I = s("645266"),
                 S = s("914985"),
                 N = s("308073"),
-                f = s("565556"),
-                g = s("553275"),
+                g = s("565556"),
+                f = s("553275"),
                 A = s("691307"),
                 L = s("314143"),
                 m = s("721302"),
@@ -10889,7 +10890,7 @@
                     })
                 }, []);
                 if (null == s) return null;
-                let x = (0, g.getSearchState)(!1, !1, M);
+                let x = (0, f.getSearchState)(!1, !1, M);
                 return (0, a.jsx)(l, {
                     children: (0, a.jsx)("div", {
                         className: R.settingsColumn,
@@ -10922,7 +10923,7 @@
                                                     searchState: x,
                                                     compact: !0,
                                                     onSelectRow: G
-                                                }), x !== g.SearchState.SUCCESS_STILL_INDEXING && (0, a.jsx)(L.default, {
+                                                }), x !== f.SearchState.SUCCESS_STILL_INDEXING && (0, a.jsx)(L.default, {
                                                     guildId: s.id
                                                 })]
                                             }) : (0, a.jsx)("div", {
@@ -10944,7 +10945,7 @@
                                                 })
                                             })]
                                         })
-                                    }, "body"), (0, a.jsx)(f.default, {
+                                    }, "body"), (0, a.jsx)(g.default, {
                                         guildId: s.id
                                     })]
                                 })
@@ -11370,9 +11371,9 @@
                 I = s("739726"),
                 S = s("782340"),
                 N = s("540583");
-            let f = "guild-product-listings-header";
+            let g = "guild-product-listings-header";
 
-            function g(e) {
+            function f(e) {
                 let {
                     guildId: t,
                     handleCreateOrEditProduct: o
@@ -11380,7 +11381,7 @@
                     publishedOnly: !1
                 }), {
                     shouldRestrictUpdatingCreatorMonetizationSettings: _
-                } = (0, r.useShouldRestrictUpdatingCreatorMonetizationSettings)(t), g = e => {
+                } = (0, r.useShouldRestrictUpdatingCreatorMonetizationSettings)(t), f = e => {
                     (0, u.updateGuildProductListing)(t, e, {
                         published: !1
                     })
@@ -11402,17 +11403,17 @@
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(l.FormTitle, {
                         className: N.productListingsHeader,
-                        id: f,
+                        id: g,
                         children: m ? S.default.Messages.GUILD_PRODUCTS_YOUR_PRODUCTS_HEADER : S.default.Messages.GUILD_PRODUCTS_NO_PRODUCTS_HEADER
                     }), m ? (0, a.jsx)("ul", {
                         className: N.productListings,
-                        "aria-labelledby": f,
+                        "aria-labelledby": g,
                         children: d.map(e => (0, a.jsx)("li", {
                             children: (0, a.jsx)(I.default, {
                                 guildId: t,
                                 product: e,
                                 onEditProduct: () => o(e.id),
-                                onUnpublishProduct: () => g(e.id),
+                                onUnpublishProduct: () => f(e.id),
                                 onDeleteProduct: () => A(e.id, e.name),
                                 onCopyProductLink: () => L(t, e.id),
                                 onTestDownload: () => T.default.open({
@@ -11455,7 +11456,7 @@
                         }), S.default.Messages.GUILD_PRODUCTS_CREATE_PRODUCT_BUTTON]
                     }), (0, a.jsx)(o.default, {
                         size: 24
-                    }), (0, a.jsx)(g, {
+                    }), (0, a.jsx)(f, {
                         guildId: t,
                         handleCreateOrEditProduct: n
                     })]
@@ -11485,9 +11486,9 @@
                 I = s("442379"),
                 S = s("559821"),
                 N = s("762051"),
-                f = s("782340");
+                g = s("782340");
 
-            function g(e) {
+            function f(e) {
                 let {
                     listingId: t
                 } = e, s = (0, I.useGuildProductListingById)(t);
@@ -11508,7 +11509,7 @@
                     children: [(0, a.jsx)(d.default, {
                         revenue: A.metrics.revenue,
                         revenueTrend: A.metrics.revenuePctChange,
-                        summaryMetricLabel: f.default.Messages.GUILD_PRODUCT_PURCHASES_TITLE,
+                        summaryMetricLabel: g.default.Messages.GUILD_PRODUCT_PURCHASES_TITLE,
                         summaryMetricValue: null !== (s = A.metrics.paymentsCount) && void 0 !== s ? s : "-",
                         summaryMetricTrend: null !== (r = A.metrics.paymentsCountChange) && void 0 !== r ? r : 0,
                         summaryMetricTrendIsPercent: !1,
@@ -11517,21 +11518,21 @@
                             earningsData: A
                         })
                     }), (0, a.jsx)(l.FormSection, {
-                        title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_HEADER,
+                        title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_HEADER,
                         children: (0, a.jsx)(o.default, {
-                            ListingIdLabel: g,
+                            ListingIdLabel: f,
                             payoutsByPeriod: A.payoutsByPeriod,
                             team: null === (t = A.application) || void 0 === t ? void 0 : t.team
                         })
                     }), (0, a.jsx)(l.FormSection, {
-                        title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TITLE,
+                        title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TITLE,
                         disabled: L,
                         children: (0, a.jsx)(E.default, {
                             guildId: I,
                             application: A.application
                         })
                     }), (0, a.jsx)(l.FormSection, {
-                        title: f.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
+                        title: g.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
                         children: (0, a.jsx)(_.default, {
                             guildId: I,
                             allPeriods: A.payoutsByPeriod
@@ -11560,8 +11561,8 @@
                 I = s("697218"),
                 S = s("701909"),
                 N = s("442379"),
-                f = s("533161"),
-                g = s("166364"),
+                g = s("533161"),
+                f = s("166364"),
                 A = s("691659"),
                 L = s("49111"),
                 m = s("782340"),
@@ -11613,9 +11614,9 @@
                             children: m.default.Messages.GUILD_PRODUCTS_PAYMENT_SECTION
                         }) : null]
                     }),
-                    p = (0, r.match)(D).with("basic_info", () => (0, l.jsx)(f.default, {
+                    p = (0, r.match)(D).with("basic_info", () => (0, l.jsx)(g.default, {
                         guildId: t
-                    })).with("manage_listings", () => (0, l.jsx)(g.default, {
+                    })).with("manage_listings", () => (0, l.jsx)(f.default, {
                         guildId: t
                     })).with("payment", () => (0, l.jsx)(A.default, {
                         guildId: t
@@ -12086,7 +12087,7 @@
                     id: e,
                     icon: T,
                     size: s
-                }), S = a.useMemo(() => null != _ && _.length > t ? _.slice(0, t) : _, [_, t]), N = null != _ && _.length > t ? _.length - t : null, f = null == c ? void 0 : c.slug, g = null != f ? i.MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(f) : void 0, A = null == E ? void 0 : null === (r = E.guild) || void 0 === r ? void 0 : r.name, L = null == E ? void 0 : null === (o = E.role_subscription) || void 0 === o ? void 0 : o.subscriber_count, m = !d && null != A && null != T && null != I;
+                }), S = a.useMemo(() => null != _ && _.length > t ? _.slice(0, t) : _, [_, t]), N = null != _ && _.length > t ? _.length - t : null, g = null == c ? void 0 : c.slug, f = null != g ? i.MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(g) : void 0, A = null == E ? void 0 : null === (r = E.guild) || void 0 === r ? void 0 : r.name, L = null == E ? void 0 : null === (o = E.role_subscription) || void 0 === o ? void 0 : o.subscriber_count, m = !d && null != A && null != T && null != I;
                 return m ? {
                     hasAllImperativeDetails: m,
                     isLoading: d,
@@ -12094,7 +12095,7 @@
                         guildName: A,
                         guildIcon: T,
                         guildAvatarUrl: I,
-                        storePageUrl: g,
+                        storePageUrl: f,
                         subscriberCount: L,
                         emojisToShow: S,
                         notShownEmojiCount: N
@@ -12388,10 +12389,10 @@
                     className: d.noticeContainer,
                     children: c.getAnyErrorMessage()
                 });
-                let f = null;
-                return null != T ? f = T : _ ? f = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_PENDING : null != I ? (f = I, t = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA) : N ? f = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_READ_ONLY_FOR_PENDING_NEW_OWNER_PENDING_NOTICE : S && (f = o.default.Messages.CREATOR_MONETIZATION_SETTINGS_RESTRICTED_NOTICE), null != f ? (0, a.jsx)(i.default, {
+                let g = null;
+                return null != T ? g = T : _ ? g = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_PENDING : null != I ? (g = I, t = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA) : N ? g = o.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_READ_ONLY_FOR_PENDING_NEW_OWNER_PENDING_NOTICE : S && (g = o.default.Messages.CREATOR_MONETIZATION_SETTINGS_RESTRICTED_NOTICE), null != g ? (0, a.jsx)(i.default, {
                     className: d.noticeContainer,
-                    notice: f,
+                    notice: g,
                     ctaLabel: t,
                     ctaLoading: u,
                     onClick: E
@@ -12422,12 +12423,12 @@
                         paginationCaretClassName: l,
                         intervalBetweenAutomaticItemRotations: _,
                         renderItem: T
-                    } = e, I = n.useMemo(() => new r.Interval, []), [S, N] = n.useState(u.SlideDirection.LEFT), [f, g] = n.useState(0), [A, L] = n.useState(!1), [m, C] = n.useState(!1), O = n.useCallback((e, t) => {
-                        g(s => {
+                    } = e, I = n.useMemo(() => new r.Interval, []), [S, N] = n.useState(u.SlideDirection.LEFT), [g, f] = n.useState(0), [A, L] = n.useState(!1), [m, C] = n.useState(!1), O = n.useCallback((e, t) => {
+                        f(s => {
                             let a = s + t;
                             return a < 0 ? a = e.length - 1 : a > e.length - 1 && (a = 0), a
                         })
-                    }, [g]), h = n.useCallback(() => {
+                    }, [f]), h = n.useCallback(() => {
                         !m && O(t, 1)
                     }, [O, t, m]), R = n.useCallback(() => {
                         !m && O(t, -1)
@@ -12450,12 +12451,12 @@
                                 "aria-label": c.default.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_PREVIOUS_CARD_ARIA_LABEL
                             })
                         }), (0, a.jsx)(u.default, {
-                            step: f,
+                            step: g,
                             direction: S,
                             onAnimationStart: () => C(!0),
                             onAnimationEnd: () => C(!1),
                             className: i(E.carousel, s),
-                            children: T(t[f])
+                            children: T(t[g])
                         }), (0, a.jsx)(o.Clickable, {
                             className: i(E.carouselCaret, l),
                             onClick: h,
@@ -12622,9 +12623,9 @@
                 I = s("151185"),
                 S = s("432153"),
                 N = s("782340"),
-                f = s("490984");
+                g = s("490984");
 
-            function g(e) {
+            function f(e) {
                 return String(e)
             }
 
@@ -12636,18 +12637,18 @@
                     className: l
                 } = e;
                 return (0, a.jsxs)("div", {
-                    className: i(f.label, l),
+                    className: i(g.label, l),
                     children: [t, (0, a.jsxs)("div", {
-                        className: f.labelText,
+                        className: g.labelText,
                         children: [(0, a.jsx)(o.Text, {
                             variant: "text-md/normal",
                             color: "none",
-                            className: f.labelTitle,
+                            className: g.labelTitle,
                             children: s
                         }), null != n && "" !== n ? (0, a.jsx)(o.Text, {
                             variant: "text-xs/semibold",
                             color: "text-muted",
-                            className: f.labelSubtitle,
+                            className: g.labelSubtitle,
                             children: n
                         }) : null]
                     })]
@@ -12657,10 +12658,10 @@
             function L() {
                 return (0, a.jsx)(A, {
                     icon: (0, a.jsx)(I.default, {
-                        className: f.labelIcon
+                        className: g.labelIcon
                     }),
                     title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL,
-                    className: f.createLabel
+                    className: g.createLabel
                 })
             }
 
@@ -12675,7 +12676,7 @@
                     o = null != l ? (0, d.computeChannelName)(l, T.default, _.default) : void 0;
                 return (0, a.jsx)(A, {
                     icon: null != i && (0, a.jsx)(i, {
-                        className: f.labelIcon
+                        className: g.labelIcon
                     }),
                     title: r,
                     subtitle: o
@@ -12698,7 +12699,7 @@
                     initialChannelId: i,
                     omitChannelIds: u,
                     "aria-labelledby": I,
-                    onChange: f
+                    onChange: g
                 } = e, A = N.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_SELECT_CREATE_LABEL, L = (0, r.useStateFromStores)([E.default], () => E.default.getCategories(t), [t]), m = (0, S.useChannelWithTemplateFallback)(null != l ? l : ""), O = n.useMemo(() => {
                     let e = [{
                             value: null,
@@ -12731,12 +12732,12 @@
                             return s => (0, a.jsx)(e, {
                                 ...s,
                                 guildId: t,
-                                onSubmit: f
+                                onSubmit: g
                             })
-                        }) : f(e)
+                        }) : g(e)
                     },
-                    isSelected: e => null != l && g(e) === g(l),
-                    serialize: g,
+                    isSelected: e => null != l && f(e) === f(l),
+                    serialize: f,
                     renderOptionLabel: C,
                     renderOptionValue: e => {
                         let [t] = e;
@@ -12771,8 +12772,8 @@
                 I = s("145131"),
                 S = s("555158"),
                 N = s("191814"),
-                f = s("476765"),
-                g = s("228220"),
+                g = s("476765"),
+                f = s("228220"),
                 A = s("973956"),
                 L = s("958706"),
                 m = s("782340"),
@@ -12803,15 +12804,15 @@
                             }), s && t()
                         }
                     })
-                }, [i, S]), f = n.useMemo(() => null == I && null == s.name ? null : function() {
+                }, [i, S]), g = n.useMemo(() => null == I && null == s.name ? null : function() {
                     return (0, a.jsx)(d.default, {
                         className: C.emoji,
                         emojiId: s.id,
                         emojiName: s.name,
                         animated: null == I ? void 0 : I.animated
                     })
-                }, [s, I]), g = "";
-                return null != I ? g = ":".concat(I.name, ":") : null != s.name && (g = E.default.convertSurrogateToName(s.name)), (0, a.jsx)(o.Popout, {
+                }, [s, I]), f = "";
+                return null != I ? f = ":".concat(I.name, ":") : null != s.name && (f = E.default.convertSurrogateToName(s.name)), (0, a.jsx)(o.Popout, {
                     animation: o.Popout.Animation.NONE,
                     position: "top",
                     renderPopout: N,
@@ -12826,11 +12827,11 @@
                                 className: C.emojiButton,
                                 active: s,
                                 tabIndex: 0,
-                                renderButtonContents: f
+                                renderButtonContents: g
                             }), (0, a.jsx)(o.TextInput, {
                                 inputClassName: C.emojiText,
                                 placeholder: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EMOJI_PLACEHOLDER,
-                                value: g,
+                                value: f,
                                 "aria-labelledby": l,
                                 readOnly: !0
                             })]
@@ -12851,7 +12852,7 @@
                     onDelete: c,
                     transitionState: E,
                     onClose: _
-                } = e, T = (0, f.useUID)(), S = (0, f.useUID)(), A = (0, f.useUID)(), [L, h] = n.useState(null !== (t = null == l ? void 0 : l.description) && void 0 !== t ? t : ""), [R, D] = n.useState(() => ({
+                } = e, T = (0, g.useUID)(), S = (0, g.useUID)(), A = (0, g.useUID)(), [L, h] = n.useState(null !== (t = null == l ? void 0 : l.description) && void 0 !== t ? t : ""), [R, D] = n.useState(() => ({
                     id: null == l ? void 0 : l.emoji_id,
                     name: null == l ? void 0 : l.emoji_name
                 })), M = d && "" !== L && (null != R.id || null != R.name);
@@ -12917,7 +12918,7 @@
                                     onClick: () => {
                                         c(), _()
                                     },
-                                    children: (0, a.jsx)(g.default, {
+                                    children: (0, a.jsx)(f.default, {
                                         "aria-label": m.default.Messages.DELETE
                                     })
                                 })]
@@ -12942,7 +12943,7 @@
                     onDelete: d,
                     transitionState: u,
                     onClose: c
-                } = e, [E, _] = n.useState(null == l ? void 0 : l.ref_id), T = (0, f.useUID)(), I = (0, a.jsxs)(a.Fragment, {
+                } = e, [E, _] = n.useState(null == l ? void 0 : l.ref_id), T = (0, g.useUID)(), I = (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(S.default, {
                         messageType: S.HelpMessageTypes.WARNING,
                         children: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_MODAL_WARNING
@@ -12990,7 +12991,7 @@
                     onClose: d,
                     onDelete: u,
                     guildId: c
-                } = e, [E, _] = n.useState(null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : ""), T = (0, f.useUID)(), I = (0, a.jsx)(o.FormSection, {
+                } = e, [E, _] = n.useState(null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : ""), T = (0, g.useUID)(), I = (0, a.jsx)(o.FormSection, {
                     title: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_NAME_TITLE,
                     titleId: T,
                     children: (0, a.jsx)(o.TextArea, {
@@ -13046,8 +13047,8 @@
                 I = s("484456"),
                 S = s("559979"),
                 N = s("752520"),
-                f = s("498030"),
-                g = s("782340"),
+                g = s("498030"),
+                f = s("782340"),
                 A = s("405625");
 
             function L(e) {
@@ -13068,7 +13069,7 @@
                     dragPreview: h,
                     drop: R,
                     isDragging: D
-                } = (0, f.default)(m, E, _, N);
+                } = (0, g.default)(m, E, _, N);
                 return O(C), h(R(m)), (0, a.jsxs)("div", {
                     ref: m,
                     className: i(A.card, {
@@ -13106,7 +13107,7 @@
                         children: !L && (0, a.jsx)(o.Clickable, {
                             className: A.cardActionButton,
                             onClick: L ? void 0 : S,
-                            "aria-label": g.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EDIT_ARIA_LABEL,
+                            "aria-label": f.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EDIT_ARIA_LABEL,
                             "aria-disabled": L,
                             children: (0, a.jsx)(c.default, {
                                 className: A.cardActionButtonIcon
@@ -13258,7 +13259,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return g
+                    return f
                 }
             });
             var a = s("37983"),
@@ -13276,14 +13277,14 @@
                 I = s("459662"),
                 S = s("49111"),
                 N = s("988268"),
-                f = s("276541");
+                g = s("276541");
 
-            function g() {
+            function f() {
                 let e;
                 let t = (0, l.useStateFromStores)([u.default], () => u.default.getGuild()),
                     {
                         application: s,
-                        loading: g
+                        loading: f
                     } = (0, o.default)(null == t ? void 0 : t.id, N.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS),
                     A = n.useRef(null),
                     L = (0, c.default)(null != t ? t : void 0);
@@ -13291,7 +13292,7 @@
                     null != t && (0, E.isEligibleForNewBadge)(t) && (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE)
                 }, [t]);
                 let m = (null == t ? void 0 : t.hasFeature(S.GuildFeatures.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(S.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
-                return e = null == t || g ? (0, a.jsx)(r.Spinner, {}) : null != L ? (0, a.jsx)(T.default, {
+                return e = null == t || f ? (0, a.jsx)(r.Spinner, {}) : null != L ? (0, a.jsx)(T.default, {
                     guild: t,
                     config: L
                 }) : m ? (0, a.jsx)(I.default, {
@@ -13300,14 +13301,14 @@
                     guild: t,
                     application: s
                 }), (0, a.jsx)("div", {
-                    className: f.settingsColumn,
+                    className: g.settingsColumn,
                     children: (0, a.jsx)("div", {
-                        className: f.settingsContainer,
+                        className: g.settingsContainer,
                         children: (0, a.jsx)(r.ScrollerAuto, {
-                            className: f.settingsScroller,
+                            className: g.settingsScroller,
                             children: (0, a.jsx)("main", {
                                 ref: A,
-                                className: f.settingsContent,
+                                className: g.settingsContent,
                                 children: (0, a.jsx)(r.FocusRingScope, {
                                     containerRef: A,
                                     children: e
@@ -13340,8 +13341,8 @@
                 I = s("45299"),
                 S = s("731898"),
                 N = s("608684"),
-                f = s("965397"),
-                g = s("191814"),
+                g = s("965397"),
+                f = s("191814"),
                 A = s("476765"),
                 L = s("950603"),
                 m = s("593195"),
@@ -13473,7 +13474,7 @@
                     children: [null != k && (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(x.default, {
                             children: k.getAnyErrorMessage()
-                        }), (0, a.jsx)(g.default, {
+                        }), (0, a.jsx)(f.default, {
                             size: 16
                         })]
                     }), l ? null : (0, a.jsxs)(a.Fragment, {
@@ -13543,7 +13544,7 @@
                             onChange: J,
                             "aria-label": K,
                             disabled: $
-                        }), (0, a.jsx)(g.default, {
+                        }), (0, a.jsx)(f.default, {
                             size: 16
                         }), (0, a.jsx)(L.default, {
                             onChange: J,
@@ -13594,7 +13595,7 @@
                     }), (0, a.jsx)(E.default, {
                         component: "div",
                         className: j.contentRegion,
-                        children: Q && (0, a.jsx)(f.default, {
+                        children: Q && (0, a.jsx)(g.default, {
                             children: (0, a.jsx)(I.default, {
                                 submitting: V,
                                 disabled: !q,
@@ -13618,7 +13619,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return g
                 }
             }), s("222007"), s("881410");
             var a = s("37983"),
@@ -13657,10 +13658,10 @@
                 })
             }
 
-            function f(e) {
+            function g(e) {
                 let {
                     children: t
-                } = e, [s, l] = n.useState(!1), i = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), d = t.flatMap(e => e.items.map(e => e.completed)), _ = d.filter(e => e).length / d.length, f = 1 === _, g = (0, r.useSpring)({
+                } = e, [s, l] = n.useState(!1), i = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), d = t.flatMap(e => e.items.map(e => e.completed)), _ = d.filter(e => e).length / d.length, g = 1 === _, f = (0, r.useSpring)({
                     width: "".concat(100 * _, "%"),
                     immediate: i
                 }), A = [I.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_PROMO_PAGE.format({
@@ -13672,7 +13673,7 @@
                 }), I.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_LINK_TIER_STRUCTURE.format({
                     tierStructureGuideUrl: T.SERVER_SUBSCRIPTIONS_PREMIUM_CHECKLIST_EDUCATIONAL_URLS.TIER_STRUCTURE_GUIDE
                 })], L = s ? null : (0, a.jsxs)(a.Fragment, {
-                    children: [!f && t.map((e, t) => {
+                    children: [!g && t.map((e, t) => {
                         let {
                             title: s,
                             items: l
@@ -13716,11 +13717,11 @@
                                 direction: s ? E.default.Directions.DOWN : E.default.Directions.UP,
                                 className: S.headerCaret
                             })]
-                        }), !f && (0, a.jsx)("div", {
+                        }), !g && (0, a.jsx)("div", {
                             className: S.progressBarOuter,
                             children: (0, a.jsx)(r.animated.div, {
                                 className: S.progressBarInner,
-                                style: g
+                                style: f
                             })
                         }), L]
                     })
@@ -13749,8 +13750,8 @@
                 I = s("191814"),
                 S = s("449008"),
                 N = s("257869"),
-                f = s("837008"),
-                g = s("757715"),
+                g = s("837008"),
+                f = s("757715"),
                 A = s("432153"),
                 L = s("195367"),
                 m = s("258984"),
@@ -13771,7 +13772,7 @@
                 let {
                     application: t,
                     guild: s
-                } = e, n = (0, f.useSubscriptionsSettings)(s.id), l = (0, f.useSubscriptionListingsForGuild)(s.id), i = l.some(e => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset), r = l.map(e => null == s ? void 0 : s.roles[e.role_id]), o = r.some(e => null != e && 0 !== e.color), d = l.some(e => e.role_benefits.benefits.length > 0), u = null != t && s.hasFeature(x.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED), c = [{
+                } = e, n = (0, g.useSubscriptionsSettings)(s.id), l = (0, g.useSubscriptionListingsForGuild)(s.id), i = l.some(e => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset), r = l.map(e => null == s ? void 0 : s.roles[e.role_id]), o = r.some(e => null != e && 0 !== e.color), d = l.some(e => e.role_benefits.benefits.length > 0), u = null != t && s.hasFeature(x.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED), c = [{
                     title: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PAYMENT,
                     items: [{
                         description: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_PAYMENT_ENABLE,
@@ -13860,7 +13861,7 @@
                 }, [E, _, r.id, S]), (0, a.jsx)(N.GroupListingsFetchContextProvider, {
                     guildId: r.id,
                     refetchOnMount: !0,
-                    children: (0, a.jsx)(g.RoleSubscriptionSettingsDisabledContextProvider, {
+                    children: (0, a.jsx)(f.RoleSubscriptionSettingsDisabledContextProvider, {
                         guildId: r.id,
                         children: (0, a.jsx)(M.TabBarContextProvider, {
                             initialTab: t,
@@ -13883,10 +13884,10 @@
                         currentTab: _,
                         setCurrentTab: I
                     } = (0, M.useTabBarState)(),
-                    f = (0, N.useGroupListingsFetchContext)(),
-                    g = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
+                    g = (0, N.useGroupListingsFetchContext)(),
+                    f = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
                     C = (0, L.default)(s.id),
-                    R = s.isOwner(g),
+                    R = s.isOwner(f),
                     U = () => {
                         let e = s.roles[s.id];
                         o.default.close();
@@ -13898,7 +13899,7 @@
                             roles: t
                         }), (0, A.announceCreateTemplateChannels)(s.id), (0, E.transitionTo)(x.Routes.CHANNEL(s.id, p.StaticChannelRoute.ROLE_SUBSCRIPTIONS))
                     };
-                if (!f) return (0, a.jsx)(i.Spinner, {});
+                if (!g) return (0, a.jsx)(i.Spinner, {});
                 switch (_) {
                     case M.TabBarSection.BASIC_INFO:
                         t = (0, a.jsx)(h.default, {
@@ -14020,8 +14021,8 @@
                 I = s("351825"),
                 S = s("858560"),
                 N = s("808388"),
-                f = s("837008"),
-                g = s("719726"),
+                g = s("837008"),
+                f = s("719726"),
                 A = s("757715"),
                 L = s("167109"),
                 m = s("172589"),
@@ -14032,7 +14033,7 @@
                 D = e => {
                     let [t, s] = n.useState(!0), [a, l] = n.useState();
                     return n.useEffect(() => {
-                        s(!0), (0, g.getPriceTiers)(e).then(e => {
+                        s(!0), (0, f.getPriceTiers)(e).then(e => {
                             l(e), s(!1)
                         })
                     }, [e]), {
@@ -14046,7 +14047,7 @@
                     guildId: t,
                     priceTiers: l,
                     groupListingId: T
-                } = e, g = (0, f.useSubscriptionListingsForGroup)(T), {
+                } = e, f = (0, g.useSubscriptionListingsForGroup)(T), {
                     editStateIds: D,
                     addNewEditStateId: M,
                     addNewEditStateFromTemplate: G,
@@ -14091,7 +14092,7 @@
                         children: [v.map(e => (0, a.jsx)(m.default, {
                             guildId: t,
                             initialEditStateId: e,
-                            allSubscriptionListings: g,
+                            allSubscriptionListings: f,
                             priceTiers: l,
                             groupListingId: T,
                             onDeleteEditState: () => x(e),
@@ -14128,7 +14129,7 @@
                     guildId: t
                 } = e, {
                     priceTiers: s
-                } = D(t), n = (0, f.useGroupListingsForGuild)(t), {
+                } = D(t), n = (0, g.useGroupListingsForGuild)(t), {
                     maxTiers: l
                 } = (0, N.useRoleSubscriptionMaxTiersExperiment)(t), i = n.map(e => e.id);
                 return (0, a.jsxs)(u.FormSection, {
@@ -14171,8 +14172,8 @@
                 I = s("913801"),
                 S = s("45299"),
                 N = s("545158"),
-                f = s("716241"),
-                g = s("465869"),
+                g = s("716241"),
+                f = s("465869"),
                 A = s("900938"),
                 L = s("973262"),
                 m = s("965397"),
@@ -14200,11 +14201,11 @@
                         let e = {};
                         R !== l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE) && (e.store_page_enabled = R), ((null == d ? void 0 : d.store_page_primary_color) == null && P !== v || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color)) && (e.store_page_primary_color = P), b !== (null == d ? void 0 : d.store_page_trailer_url) && (e.store_page_trailer_url = b), H !== (null == d ? void 0 : d.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = H), !u.isEmpty(e) && (await A(l.id, e), "store_page_enabled" in e && h.default.track(M.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
                             enabled: R,
-                            ...(0, f.collectGuildAnalyticsMetadata)(l.id)
+                            ...(0, g.collectGuildAnalyticsMetadata)(l.id)
                         }))
                     }, K = M.MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(k), W = null != b && b === (null == d ? void 0 : d.store_page_trailer_url), {
                         shouldRestrictUpdatingCreatorMonetizationSettings: z
-                    } = (0, g.useShouldRestrictUpdatingCreatorMonetizationSettings)(l.id), X = z || !F;
+                    } = (0, f.useShouldRestrictUpdatingCreatorMonetizationSettings)(l.id), X = z || !F;
                     return (0, a.jsxs)("div", {
                         children: [(0, a.jsx)(T.FormTitle, {
                             tag: "h1",
@@ -14391,8 +14392,8 @@
                 I = s("77078"),
                 S = s("430568"),
                 N = s("419830"),
-                f = s("385976"),
-                g = s("405645"),
+                g = s("385976"),
+                f = s("405645"),
                 A = s("233069"),
                 L = s("245997"),
                 m = s("305961"),
@@ -14421,7 +14422,7 @@
                     emojiId: s,
                     emojiName: a,
                     className: n
-                } = e, i = (0, E.useStateFromStores)([f.default], () => null != s ? f.default.getCustomEmojiById(s) : void 0);
+                } = e, i = (0, E.useStateFromStores)([g.default], () => null != s ? g.default.getCustomEmojiById(s) : void 0);
                 return (0, l.jsx)(S.default, {
                     emojiId: s,
                     emojiName: a,
@@ -14533,7 +14534,7 @@
                     existingIntangibleBenefits: n,
                     onSubmit: r,
                     onClose: o
-                } = e, d = s.role_benefits.benefits, [u, c] = i.useState(() => new Set(d)), E = i.useMemo(() => d.filter(p.isChannelBenefit), [d]), T = (0, v.default)(E), S = i.useMemo(() => d.filter(p.isIntangibleBenefit), [d]), N = i.useMemo(() => new Set(T.filter(e => a.some(t => t.ref_id === e.ref_id))), [T, a]), f = i.useMemo(() => new Set(S.filter(e => n.some(t => (0, _.default)(e, t)))), [n, S]), g = (0, C.useUID)();
+                } = e, d = s.role_benefits.benefits, [u, c] = i.useState(() => new Set(d)), E = i.useMemo(() => d.filter(p.isChannelBenefit), [d]), T = (0, v.default)(E), S = i.useMemo(() => d.filter(p.isIntangibleBenefit), [d]), N = i.useMemo(() => new Set(T.filter(e => a.some(t => t.ref_id === e.ref_id))), [T, a]), g = i.useMemo(() => new Set(S.filter(e => n.some(t => (0, _.default)(e, t)))), [n, S]), f = (0, C.useUID)();
 
                 function A(e, t) {
                     c(s => {
@@ -14546,15 +14547,15 @@
                         e.preventDefault();
                         let t = d.filter(e => u.has(e)),
                             s = t.filter(p.isChannelBenefit).filter(e => !N.has(e)),
-                            a = t.filter(p.isIntangibleBenefit).filter(e => !f.has(e));
+                            a = t.filter(p.isIntangibleBenefit).filter(e => !g.has(e));
                         r(s, a), o()
                     },
                     children: (0, l.jsxs)(I.ModalRoot, {
                         transitionState: t,
-                        "aria-labelledby": g,
+                        "aria-labelledby": f,
                         children: [(0, l.jsxs)(I.ModalHeader, {
                             children: [(0, l.jsx)(I.Heading, {
-                                id: g,
+                                id: f,
                                 variant: "heading-md/semibold",
                                 children: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_MODAL_HEADER.format({
                                     tierName: s.name
@@ -14576,7 +14577,7 @@
                                 title: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_TITLE,
                                 selectAllText: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_INTANGIBLE_BENEFITS,
                                 benefits: S,
-                                dupeBenefits: f,
+                                dupeBenefits: g,
                                 selectedBenefits: u,
                                 onToggleBenefit: A
                             })]
@@ -14602,7 +14603,7 @@
                     role: a,
                     channelCount: n,
                     onSelect: i
-                } = e, r = (0, g.useRoleIcon)({
+                } = e, r = (0, f.useRoleIcon)({
                     guildId: s,
                     roleId: a.id,
                     size: H
@@ -14970,12 +14971,12 @@
                 I = s("49111"),
                 S = s("782340"),
                 N = s("153893");
-            let f = (0, c.makeLazy)({
+            let g = (0, c.makeLazy)({
                 createPromise: () => s.el("282585").then(s.bind(s, "282585")),
                 webpackId: "282585"
             });
 
-            function g(e) {
+            function f(e) {
                 let t = (0, r.getDarkness)(e) > .25;
                 return (0, u.getColor)(t ? I.Color.WHITE_500 : I.Color.PRIMARY_530)
             }
@@ -14991,7 +14992,7 @@
                     s(d)
                 }
 
-                function f(e) {
+                function g(e) {
                     s(e), u(e)
                 }
                 let A = t === I.DEFAULT_ROLE_COLOR,
@@ -14999,7 +15000,7 @@
                     m = (0, a.jsx)(_.default, {
                         width: 32,
                         height: 24,
-                        color: g(t)
+                        color: f(t)
                     }),
                     C = (0, o.useRadioGroup)({
                         orientation: "horizontal",
@@ -15073,7 +15074,7 @@
                             renderPopout: e => (0, a.jsx)(E.CustomColorPicker, {
                                 ...e,
                                 value: t,
-                                onChange: f
+                                onChange: g
                             }),
                             children: e => (0, a.jsx)(o.Clickable, {
                                 ...e,
@@ -15083,7 +15084,7 @@
                                     className: N.dropperIcon,
                                     width: 14,
                                     height: 14,
-                                    color: g(L)
+                                    color: f(L)
                                 })
                             })
                         })]
@@ -15105,7 +15106,7 @@
                     value: s,
                     onChange: n,
                     disabled: l
-                }) : (0, a.jsx)(f, {
+                }) : (0, a.jsx)(g, {
                     defaultColor: I.DEFAULT_ROLE_COLOR,
                     colors: I.ROLE_COLORS,
                     value: s,
@@ -15146,10 +15147,10 @@
                     className: l,
                     onClick: r,
                     disabled: _ = !1
-                } = e, N = n.useRef(null), f = n.useMemo(() => null != t ? (0, d.getRoleIconProps)(t, S) : null, [t]), g = null != f ? (0, a.jsx)(E.default, {
+                } = e, N = n.useRef(null), g = n.useMemo(() => null != t ? (0, d.getRoleIconProps)(t, S) : null, [t]), f = null != g ? (0, a.jsx)(E.default, {
                     enableTooltip: !1,
                     className: I.icon,
-                    ...f
+                    ...g
                 }) : (0, a.jsx)(c.default, {
                     className: I.icon
                 });
@@ -15165,8 +15166,8 @@
                         children: [(0, a.jsx)("div", {
                             ref: N,
                             className: I.preview,
-                            children: g
-                        }), null != f ? (0, a.jsx)(u.ImageUploaderIcon, {
+                            children: f
+                        }), null != g ? (0, a.jsx)(u.ImageUploaderIcon, {
                             className: I.uploaderIcon
                         }) : null]
                     })
@@ -15236,8 +15237,8 @@
                 I = s("153160"),
                 S = s("577357"),
                 N = s("837008"),
-                f = s("648825"),
-                g = s("757715"),
+                g = s("648825"),
+                f = s("757715"),
                 A = s("406876"),
                 L = s("167109"),
                 m = s("110498"),
@@ -15257,7 +15258,7 @@
                     groupListingId: x,
                     onBeforeDispatchNewListing: p,
                     onAfterDispatchNewListing: U
-                } = e, [v, j] = n.useState(r), P = (0, d.useStateFromStores)([f.default], () => f.default.getSubscriptionListing(v)), y = null == P, [b, B] = n.useState(y), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, V = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, k = (0, g.useRoleSubscriptionSettingsDisabled)(), [w] = L.useName(v), [Y] = L.usePriceTier(v), [K] = L.useDescription(v), [W] = L.useImage(v, 1024), z = "" !== w ? w : h.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, X = "" !== w && null != W && "" !== K && null != Y && !k, Z = L.useHasChanges(v), {
+                } = e, [v, j] = n.useState(r), P = (0, d.useStateFromStores)([g.default], () => g.default.getSubscriptionListing(v)), y = null == P, [b, B] = n.useState(y), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, V = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, k = (0, f.useRoleSubscriptionSettingsDisabled)(), [w] = L.useName(v), [Y] = L.usePriceTier(v), [K] = L.useDescription(v), [W] = L.useImage(v, 1024), z = "" !== w ? w : h.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, X = "" !== w && null != W && "" !== K && null != Y && !k, Z = L.useHasChanges(v), {
                     loading: J,
                     error: Q,
                     handleCreateOrUpdateFromEditState: q
@@ -15384,8 +15385,8 @@
                 I = s("851088"),
                 S = s("385881"),
                 N = s("253414"),
-                f = s("782340"),
-                g = s("332227"),
+                g = s("782340"),
+                f = s("332227"),
                 A = s("888512");
 
             function L(e) {
@@ -15416,24 +15417,24 @@
                             children: [(0, a.jsx)(o.Heading, {
                                 variant: "heading-md/semibold",
                                 className: A.publishListingInfoHeader,
-                                children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DRAFT_BANNER_TITLE
+                                children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DRAFT_BANNER_TITLE
                             }), (0, a.jsx)(o.FormText, {
                                 type: o.FormText.Types.DESCRIPTION,
-                                children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DRAFT_BANNER_DESCRIPTION
+                                children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DRAFT_BANNER_DESCRIPTION
                             })]
                         }), (0, a.jsx)(o.Tooltip, {
                             shouldShow: x,
-                            tooltipClassName: g.autoWidth,
-                            text: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SAVE_BEFORE_PUBLISH_TOOLTIP,
+                            tooltipClassName: f.autoWidth,
+                            text: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SAVE_BEFORE_PUBLISH_TOOLTIP,
                             children: e => (0, a.jsx)(o.Button, {
                                 ...e,
                                 disabled: x,
                                 color: o.Button.Colors.CUSTOM,
-                                wrapperClassName: g.autoWidth,
-                                className: i(A.publishButton, g.autoWidth),
+                                wrapperClassName: f.autoWidth,
+                                className: i(A.publishButton, f.autoWidth),
                                 onClick: O,
                                 submitting: m,
-                                children: f.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_PUBLISH_DRAFT_CTA
+                                children: g.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_PUBLISH_DRAFT_CTA
                             })
                         })]
                     }), (0, a.jsx)(T.default, {
@@ -15450,7 +15451,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return g
                 }
             });
             var a = s("37983"),
@@ -15469,15 +15470,15 @@
                 S = s("332227"),
                 N = s("754433");
 
-            function f(e) {
+            function g(e) {
                 var t;
                 let {
                     onDeleteEditState: l
                 } = e, {
-                    editStateId: f,
-                    guildId: g,
+                    editStateId: g,
+                    guildId: f,
                     groupListingId: A
-                } = (0, E.useEditStateContext)(), L = (0, r.useStateFromStores)([u.default], () => u.default.getSubscriptionListing(f)), m = null == L ? void 0 : L.id, C = (0, _.default)(g), O = n.useMemo(() => {
+                } = (0, E.useEditStateContext)(), L = (0, r.useStateFromStores)([u.default], () => u.default.getSubscriptionListing(g)), m = null == L ? void 0 : L.id, C = (0, _.default)(f), O = n.useMemo(() => {
                     var e;
                     return null != C && null != L && (null !== (e = C[L.role_id]) && void 0 !== e ? e : 0)
                 }, [C, L]), h = 0 === O, R = null == m, D = null !== (t = null == L ? void 0 : L.archived) && void 0 !== t && t, {
@@ -15490,7 +15491,7 @@
                     let e = async () => {
                         if (!R) {
                             i(null != A, "group listing doesnt exist"), i(null != m, "subscription listing doesnt exist");
-                            let e = await M(g, A, m);
+                            let e = await M(f, A, m);
                             if (!e) return
                         }
                         null == l || l()
@@ -15561,7 +15562,7 @@
                                         confirmText: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ARCHIVE_BUTTON,
                                         cancelText: I.default.Messages.CANCEL,
                                         onConfirm: () => {
-                                            x(g, A, m)
+                                            x(f, A, m)
                                         },
                                         confirmButtonColor: o.Button.Colors.RED,
                                         ...t,
@@ -15602,8 +15603,8 @@
                 I = s("167109"),
                 S = s("620199"),
                 N = s("561205"),
-                f = s("49111"),
-                g = s("782340"),
+                g = s("49111"),
+                f = s("782340"),
                 A = s("332227"),
                 L = s("78185");
 
@@ -15623,7 +15624,7 @@
                     var e;
                     return null !== (e = null == t ? void 0 : t.map(e => ({
                         value: e,
-                        label: (0, c.formatPrice)(e, f.CurrencyCodes.USD)
+                        label: (0, c.formatPrice)(e, g.CurrencyCodes.USD)
                     }))) && void 0 !== e ? e : []
                 }, [t]);
 
@@ -15635,18 +15636,18 @@
                     B = (0, d.useUID)(),
                     F = (0, d.useUID)();
                 return (0, a.jsxs)(N.default, {
-                    title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BASIC_INFO_SECTION_TITLE,
+                    title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BASIC_INFO_SECTION_TITLE,
                     intiallyExpanded: !0,
                     children: [(0, a.jsxs)("div", {
                         className: L.formSplit,
                         children: [(0, a.jsx)("div", {
                             className: L.formSplitHalf,
                             children: (0, a.jsx)(i.FormSection, {
-                                title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_TITLE,
+                                title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_TITLE,
                                 titleId: b,
                                 disabled: y,
                                 children: (0, a.jsx)(i.TextInput, {
-                                    placeholder: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_PLACEHOLDER,
+                                    placeholder: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_NAME_PLACEHOLDER,
                                     value: C,
                                     inputClassName: A.formInput,
                                     onChange: O,
@@ -15657,14 +15658,14 @@
                         }), (0, a.jsx)("div", {
                             className: L.formSplitHalf,
                             children: (0, a.jsx)(i.FormSection, {
-                                title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_TITLE,
+                                title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_TITLE,
                                 titleId: B,
                                 disabled: y,
                                 children: (0, a.jsx)(i.SingleSelect, {
                                     options: j,
                                     className: A.formInput,
                                     isDisabled: y || null == t,
-                                    placeholder: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_PLACEHOLDER,
+                                    placeholder: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_PLACEHOLDER,
                                     value: h,
                                     onChange: R,
                                     maxVisibleItems: 5,
@@ -15676,11 +15677,11 @@
                     }), (0, a.jsx)(o.default, {
                         size: 24
                     }), (0, a.jsx)(i.FormSection, {
-                        title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DESCRIPTION_TITLE,
+                        title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DESCRIPTION_TITLE,
                         titleId: F,
                         disabled: y,
                         children: (0, a.jsx)(i.TextArea, {
-                            placeholder: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DESCRIPTION_PLACEHOLDER,
+                            placeholder: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DESCRIPTION_PLACEHOLDER,
                             value: D,
                             rows: 2,
                             autosize: !0,
@@ -15694,14 +15695,14 @@
                     }), (0, a.jsxs)("div", {
                         className: L.iconSection,
                         children: [(0, a.jsxs)(i.FormSection, {
-                            title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SYMBOL_TITLE,
+                            title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SYMBOL_TITLE,
                             className: L.iconSectionDescription,
                             disabled: y,
                             children: [(0, a.jsx)(i.FormText, {
                                 type: i.FormText.Types.DESCRIPTION,
                                 className: A.formDescription,
                                 disabled: y,
-                                children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SYMBOL_DESCRIPTION
+                                children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SYMBOL_DESCRIPTION
                             }), (0, a.jsx)(u.default, {
                                 onChange: P,
                                 buttonCTA: p,
@@ -15884,8 +15885,8 @@
                 I = s("677847"),
                 S = s("88681"),
                 N = s("798204"),
-                f = s("677795"),
-                g = s("782340"),
+                g = s("677795"),
+                f = s("782340"),
                 A = s("332227");
 
             function L(e) {
@@ -15898,16 +15899,16 @@
                     isFullServerGating: D
                 } = (0, c.default)(L), M = (0, r.useUID)(), G = (0, o.useRoleSubscriptionSettingsDisabled)();
                 return (0, a.jsxs)(E.default, {
-                    title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BENEFITS_HEADER_TITLE,
-                    description: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BENEFITS_HEADER_SUBTITLE,
+                    title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BENEFITS_HEADER_TITLE,
+                    description: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_BENEFITS_HEADER_SUBTITLE,
                     children: [(0, a.jsxs)(l.FormSection, {
-                        title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_HEADER_TITLE,
+                        title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_HEADER_TITLE,
                         disabled: G,
                         children: [(0, a.jsx)(l.FormText, {
                             type: l.FormText.Types.DESCRIPTION,
                             className: A.formDescription,
                             disabled: G,
-                            children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_HEADER_SUBTITLE
+                            children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_IMPORT_HEADER_SUBTITLE
                         }), (0, a.jsx)(_.default, {
                             channelBenefits: m,
                             intangibleBenefits: O,
@@ -15929,7 +15930,7 @@
                                         })),
                                         a = e.filter(e => !s.has(e)).map(e => ({
                                             ref_id: e,
-                                            ref_type: f.GuildRoleSubscriptionBenefitTypes.CHANNEL
+                                            ref_type: g.GuildRoleSubscriptionBenefitTypes.CHANNEL
                                         }));
                                     return [...t, ...a]
                                 })
@@ -15939,14 +15940,14 @@
                     }), (0, a.jsx)(i.default, {
                         size: 24
                     }), (0, a.jsxs)(l.FormSection, {
-                        title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_TITLE,
+                        title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_TITLE,
                         titleId: M,
                         disabled: G,
                         children: [(0, a.jsx)(l.FormText, {
                             type: l.FormText.Types.DESCRIPTION,
                             className: A.formDescription,
                             disabled: G,
-                            children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_DESCRIPTION
+                            children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_DESCRIPTION
                         }), D && (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)(T.default, {
                                 "aria-labelledby": M,
@@ -15958,13 +15959,13 @@
                     }), (0, a.jsx)(i.default, {
                         size: 24
                     }), (0, a.jsxs)(l.FormSection, {
-                        title: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_TITLE,
+                        title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_TITLE,
                         disabled: G,
                         children: [(0, a.jsx)(l.FormText, {
                             type: l.FormText.Types.DESCRIPTION,
                             className: A.formDescription,
                             disabled: G,
-                            children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_DESCRIPTION
+                            children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_DESCRIPTION
                         }), (0, a.jsx)(N.default, {})]
                     }), (0, a.jsx)(i.default, {
                         size: 24
@@ -15999,17 +16000,17 @@
                 let {
                     editStateId: e,
                     guildId: t
-                } = (0, d.useEditStateContext)(), [N, f] = u.useTierEmojiIds(e, t), g = (0, c.default)(t, e), {
+                } = (0, d.useEditStateContext)(), [N, g] = u.useTierEmojiIds(e, t), f = (0, c.default)(t, e), {
                     setCurrentTab: A
                 } = (0, T.useTabBarState)(), L = () => A(T.TabBarSection.EMOJIS), m = (0, n.useStateFromStores)([i.default], () => i.default.getGuild(t)), C = null == m ? void 0 : m.getMaxRoleSubscriptionEmojiSlots();
 
                 function O(e) {
-                    null == N ? f(new Set(e)) : f(new Set([...N, ...e]))
+                    null == N ? g(new Set(e)) : g(new Set([...N, ...e]))
                 }
 
                 function h(e) {
                     let t = new Set(N);
-                    t.delete(e), f(t)
+                    t.delete(e), g(t)
                 }
                 let R = (0, o.useRoleSubscriptionSettingsDisabled)();
                 return (0, a.jsxs)(l.FormSection, {
@@ -16028,7 +16029,7 @@
                         tierEmojiIds: N,
                         guildId: t,
                         onRemoveEmoji: function(e) {
-                            let t = e.roles.filter(e => e !== (null == g ? void 0 : g.id));
+                            let t = e.roles.filter(e => e !== (null == f ? void 0 : f.id));
                             t.length > 0 ? h(e.id) : (0, l.openModalLazy)(async () => {
                                 let {
                                     default: t
@@ -16149,7 +16150,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return g
+                    return f
                 }
             }), s("222007");
             var a = s("37983"),
@@ -16167,13 +16168,13 @@
                 I = s("59767"),
                 S = s("561205"),
                 N = s("782340"),
-                f = s("332227");
+                g = s("332227");
 
-            function g() {
+            function f() {
                 var e;
                 let {
                     editStateId: t
-                } = (0, E.useEditStateContext)(), [s, l] = _.useTrialInterval(t), [g, A] = _.useTrialLimit(t), L = (0, u.useSubscriptionTrial)(t), {
+                } = (0, E.useEditStateContext)(), [s, l] = _.useTrialInterval(t), [f, A] = _.useTrialLimit(t), L = (0, u.useSubscriptionTrial)(t), {
                     options: m
                 } = (0, I.default)(null !== (e = null == L ? void 0 : L.active_trial) && void 0 !== e ? e : null), C = (0, T.default)(), O = null != s, h = n.useCallback(e => {
                     let t = m.find(e => e.isDefault);
@@ -16194,7 +16195,7 @@
                         disabled: !O || R,
                         children: [(0, a.jsx)(r.FormText, {
                             type: r.FormText.Types.DESCRIPTION,
-                            className: f.formDescription,
+                            className: g.formDescription,
                             disabled: !O || R,
                             children: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TIME_LIMIT_DESCRIPTION
                         }), (0, a.jsx)(o.default, {
@@ -16202,7 +16203,7 @@
                         }), (0, a.jsx)(r.SingleSelect, {
                             "aria-labelledby": D,
                             options: m,
-                            className: f.formInput,
+                            className: g.formInput,
                             placeholder: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_DISABLED,
                             value: s,
                             onChange: l,
@@ -16218,14 +16219,14 @@
                         disabled: !O || R,
                         children: [(0, a.jsx)(r.FormText, {
                             type: r.FormText.Types.DESCRIPTION,
-                            className: f.formDescription,
+                            className: g.formDescription,
                             disabled: !O || R,
                             children: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_DESCRIPTION
                         }), (0, a.jsx)(r.SingleSelect, {
                             "aria-labelledby": M,
                             options: C,
-                            className: f.formInput,
-                            value: g,
+                            className: g.formInput,
+                            value: f,
                             onChange: A,
                             maxVisibleItems: 5,
                             isDisabled: !O || R,
@@ -16261,7 +16262,7 @@
                 let {
                     editStateId: e,
                     guildId: t
-                } = (0, r.useEditStateContext)(), [, S] = o.useRoleIcon(e, t), [N, f] = o.useRoleColor(e, t), g = o.useRole(e, t);
+                } = (0, r.useEditStateContext)(), [, S] = o.useRoleIcon(e, t), [N, g] = o.useRoleColor(e, t), f = o.useRole(e, t);
 
                 function A() {
                     (0, n.openModalLazy)(async () => {
@@ -16291,7 +16292,7 @@
                         disabled: L,
                         children: (0, a.jsx)(c.default, {
                             value: N,
-                            onChange: f,
+                            onChange: g,
                             disabled: L
                         })
                     }), (0, a.jsx)(l.default, {
@@ -16309,7 +16310,7 @@
                             }), (0, a.jsxs)("div", {
                                 className: I.iconUploaderContainer,
                                 children: [(0, a.jsx)(E.default, {
-                                    role: g,
+                                    role: f,
                                     "aria-label": _.default.Messages.ROLE_ICON_CHOOSE_IMAGE,
                                     onClick: A,
                                     disabled: L
@@ -16331,12 +16332,12 @@
                             "aria-hidden": !0,
                             children: [(0, a.jsx)(u.default, {
                                 guildId: t,
-                                role: g,
+                                role: f,
                                 className: I.messageContainer,
                                 theme: "light"
                             }), (0, a.jsx)(u.default, {
                                 guildId: t,
-                                role: g,
+                                role: f,
                                 className: I.messageContainer,
                                 theme: "dark"
                             })]
@@ -16596,7 +16597,7 @@
                     return T
                 },
                 default: function() {
-                    return f
+                    return g
                 }
             }), s("222007");
             var a = s("37983"),
@@ -16720,7 +16721,7 @@
                 })
             }
 
-            function f(e) {
+            function g(e) {
                 let {
                     guild: t,
                     monetizationEligibility: s
@@ -16776,8 +16777,8 @@
                 I = s("382531"),
                 S = s("865332"),
                 N = s("439044"),
-                f = s("912839"),
-                g = s("600719");
+                g = s("912839"),
+                f = s("600719");
 
             function A(e) {
                 return (0, n.isThemeDark)(e) ? u.revenueSharePercentageDark : u.revenueSharePercentageLight
@@ -16905,11 +16906,11 @@
                         children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2
                     }), (0, a.jsx)("img", {
                         className: u.roleSubscriptionSocial,
-                        src: g,
+                        src: f,
                         alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_1_ALT
                     }), (0, a.jsx)("img", {
                         className: u.roleSubscriptionLanyardIllo,
-                        src: f,
+                        src: g,
                         alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_2_ALT
                     })]
                 })
@@ -16980,7 +16981,7 @@
                 S = s("782340"),
                 N = s("702864");
 
-            function f(e) {
+            function g(e) {
                 let {
                     subscribers: t
                 } = e;
@@ -17006,7 +17007,7 @@
                 })
             }
 
-            function g(e) {
+            function f(e) {
                 let {
                     guildName: t,
                     guildIcon: s,
@@ -17029,7 +17030,7 @@
                             variant: "heading-lg/semibold",
                             color: "header-primary",
                             children: t
-                        }), null != l && (0, a.jsx)(f, {
+                        }), null != l && (0, a.jsx)(g, {
                             subscribers: l
                         })]
                     })]
@@ -17137,12 +17138,12 @@
                     guildAvatarUrl: T,
                     subscriberCount: I,
                     emojisToShow: S,
-                    notShownEmojiCount: f,
+                    notShownEmojiCount: g,
                     storePageUrl: m
                 } = o.details;
                 return (0, a.jsxs)("div", {
                     className: N.guildCard,
-                    children: [(0, a.jsx)(g, {
+                    children: [(0, a.jsx)(f, {
                         guildIcon: c,
                         guildName: E,
                         guildAvatarUrl: T,
@@ -17153,7 +17154,7 @@
                         quoteAttributionTitle: r
                     }), (0, a.jsx)(L, {
                         emojisToShow: S,
-                        notShownEmojiCount: f,
+                        notShownEmojiCount: g,
                         storePageUrl: m
                     })]
                 })
@@ -17185,10 +17186,10 @@
             "use strict";
             s.r(t), s.d(t, {
                 MarketingSections: function() {
-                    return f
+                    return g
                 },
                 default: function() {
-                    return g
+                    return f
                 }
             });
             var a = s("37983");
@@ -17208,7 +17209,7 @@
                 S = s("396076"),
                 N = s("97743");
 
-            function f(e) {
+            function g(e) {
                 let {
                     onboardingMarketing: t,
                     onboardingMarketingError: s
@@ -17246,7 +17247,7 @@
                 })
             }
 
-            function g(e) {
+            function f(e) {
                 let {
                     guild: t
                 } = e, s = (0, d.default)(t), {
@@ -17254,7 +17255,7 @@
                     eligibilityError: _,
                     eligibility: T
                 } = s, S = (0, r.useCreatorMonetizationIneligibleReasons)(T), {
-                    isLoading: g,
+                    isLoading: f,
                     error: A,
                     creatorMonetizationOnboardingMarketing: L
                 } = (0, o.default)(t.id);
@@ -17269,7 +17270,7 @@
                     }
                 }, {
                     disableTrack: null == t.id || null == T
-                }), E || null == T || g) ? (0, a.jsx)(l.Spinner, {}) : T.actionRequired ? (0, a.jsx)(I.default, {
+                }), E || null == T || f) ? (0, a.jsx)(l.Spinner, {}) : T.actionRequired ? (0, a.jsx)(I.default, {
                     guild: t
                 }) : null != _ ? (0, a.jsx)(u.default, {
                     children: _.message
@@ -17278,7 +17279,7 @@
                     children: [(0, a.jsx)(c.default, {
                         guild: t,
                         monetizationEligibility: s
-                    }), (0, a.jsx)(f, {
+                    }), (0, a.jsx)(g, {
                         onboardingMarketing: L,
                         onboardingMarketingError: A
                     })]
@@ -17611,8 +17612,8 @@
                 I = s("130437"),
                 S = s("940958"),
                 N = s("657650"),
-                f = s("441901"),
-                g = s("49111"),
+                g = s("441901"),
+                f = s("49111"),
                 A = s("782340"),
                 L = s("794819");
 
@@ -17621,7 +17622,7 @@
                     payoutsByPeriod: t,
                     team: s
                 } = e, l = (0, c.useRoleSubscriptionSettingsDisabled)(), r = l ? null : A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EDIT_PAYMENT_METHOD_LINK.format({
-                    url: null != s ? g.MarketingURLs.DEVELOPER_PORTAL_PAYOUT_SETTINGS(s.id) : null
+                    url: null != s ? f.MarketingURLs.DEVELOPER_PORTAL_PAYOUT_SETTINGS(s.id) : null
                 });
                 return 0 === t.length ? (0, a.jsxs)(n.FormText, {
                     type: n.FormText.Types.DESCRIPTION,
@@ -17667,7 +17668,7 @@
                     children: [D && (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(l.default, {
                             children: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_INSIGHTS_NOTICE_TEXT.format({
-                                insightsURL: g.MarketingURLs.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(d)
+                                insightsURL: f.MarketingURLs.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(d)
                             })
                         }), (0, a.jsx)(i.default, {
                             size: 32
@@ -17681,7 +17682,7 @@
                             className: L.metricsContainer,
                             children: [(0, a.jsx)(S.default, {
                                 label: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_REVENUE,
-                                value: (0, o.formatPrice)(null !== (t = R.revenue) && void 0 !== t ? t : 0, g.CurrencyCodes.USD),
+                                value: (0, o.formatPrice)(null !== (t = R.revenue) && void 0 !== t ? t : 0, f.CurrencyCodes.USD),
                                 additionalContent: (0, a.jsx)(S.MetricTrend, {
                                     value: R.revenuePctChange,
                                     isPercent: !0
@@ -17720,7 +17721,7 @@
                     }), (0, a.jsx)(n.FormSection, {
                         title: A.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
                         className: L.formSection,
-                        children: (0, a.jsx)(f.default, {
+                        children: (0, a.jsx)(g.default, {
                             guildId: d,
                             allPeriods: h
                         })
@@ -17759,8 +17760,8 @@
                 I = s("37785"),
                 S = s("599110"),
                 N = s("837008"),
-                f = s("757715"),
-                g = s("352807"),
+                g = s("757715"),
+                f = s("352807"),
                 A = s("417186"),
                 L = s("441901"),
                 m = s("341020"),
@@ -17798,12 +17799,12 @@
                     error: E
                 } = (0, d.default)(), {
                     fetchSubscriptionsSettings: _
-                } = (0, N.useFetchSubscriptionsSettings)(), T = (0, f.useRoleSubscriptionSettingsDisabled)(), I = n.useMemo(() => s.map(e => ({
+                } = (0, N.useFetchSubscriptionsSettings)(), T = (0, g.useRoleSubscriptionSettingsDisabled)(), I = n.useMemo(() => s.map(e => ({
                     label: e.name,
                     value: e.id
                 })), [s]), S = async () => {
                     let e = await u(t, r, O.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS);
-                    e && (_(t.id), (0, g.openActionCompleteSuccessModal)({
+                    e && (_(t.id), (0, f.openActionCompleteSuccessModal)({
                         Icon: m.default,
                         title: R.default.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_TITLE,
                         body: R.default.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_SUBTITLE
@@ -17838,24 +17839,24 @@
                 let {
                     guild: t,
                     hideDisableSection: s = !1
-                } = e, d = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()), N = t.isOwner(d), f = (0, o.useIsExpeditedOnboardingGuild)(t), g = (0, l.useStateFromStores)([T.default], () => T.default.isFocused()), {
+                } = e, d = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()), N = t.isOwner(d), g = (0, o.useIsExpeditedOnboardingGuild)(t), f = (0, l.useStateFromStores)([T.default], () => T.default.isFocused()), {
                     teams: m,
                     loading: O
                 } = (0, E.default)({
-                    refreshOnDepChange: g
+                    refreshOnDepChange: f
                 }), x = n.useMemo(() => m.filter(e => {
                     var t;
                     return e.payout_account_status !== h.PayoutAccountStatuses.BLOCKED && (0, c.isUserTeamAdministrator)(null !== (t = null == d ? void 0 : d.id) && void 0 !== t ? t : "", e)
                 }), [m, d]), p = x.length > 0, U = n.useCallback(async () => {
                     S.default.track(C.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
-                        is_onboarding_v2: f,
+                        is_onboarding_v2: g,
                         has_eligible_team: p,
                         guild_id: t.id,
                         is_owner: N
                     });
                     let e = await (0, u.generateDeveloperPortalLink)(C.RelativeMarketingURLs.DEVELOPER_PORTAL_TEAMS);
                     (0, r.default)(e)
-                }, [t, N, f, p]), v = n.useCallback(e => N ? (0, a.jsx)(I.default, {
+                }, [t, N, g, p]), v = n.useCallback(e => N ? (0, a.jsx)(I.default, {
                     onClick: U,
                     children: e
                 }) : e, [U, N]);
@@ -17950,8 +17951,8 @@
                 I = s("578706"),
                 S = s("381546"),
                 N = s("68238"),
-                f = s("781896"),
-                g = s("772280"),
+                g = s("781896"),
+                f = s("772280"),
                 A = s("153160"),
                 L = s("648825"),
                 m = s("434014"),
@@ -18079,7 +18080,7 @@
                     } = e;
                     return (0, l.jsxs)(p, {
                         className: G.subscribersCell,
-                        children: [null != t ? t : "-", " ", (0, l.jsx)(f.default, {
+                        children: [null != t ? t : "-", " ", (0, l.jsx)(g.default, {
                             className: G.subscribersIcon,
                             "aria-hidden": !0
                         })]
@@ -18121,7 +18122,7 @@
                         return (0, l.jsx)(E.Clickable, {
                             className: o(G.cell, G.toggleExpandCell),
                             onClick: () => a(e.key),
-                            children: (0, l.jsx)(g.default, {
+                            children: (0, l.jsx)(f.default, {
                                 className: o(G.caretIcon, {
                                     [G.caretDownIcon]: n
                                 })
@@ -18372,7 +18373,7 @@
                     var t;
                     let s = Object.values(null !== (t = e.ppgs) && void 0 !== t ? t : {})[0];
                     return (null == s ? void 0 : s.status) === u.PaymentPayoutGroupStatuses.OPEN || (null == s ? void 0 : s.status) === u.PaymentPayoutGroupStatuses.PAYOUT_DEFERRED
-                }), N = T.length > 0, f = I.length > 0, g = S.length > 0;
+                }), N = T.length > 0, g = I.length > 0, f = S.length > 0;
                 return null == _ ? null : (0, a.jsxs)("div", {
                     children: [(0, a.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
@@ -18382,7 +18383,7 @@
                     }), (0, a.jsx)(o.default, {
                         size: 16
                     }), (0, a.jsx)(l.Button, {
-                        disabled: N || f || g,
+                        disabled: N || g || f,
                         look: l.Button.Looks.FILLED,
                         color: l.Button.Colors.RED,
                         onClick: () => {
@@ -18869,8 +18870,8 @@
                 I = [],
                 S = [],
                 N = [],
-                f = [],
                 g = [],
+                f = [],
                 A = [],
                 L = [],
                 m = [],
@@ -18957,10 +18958,10 @@
                     return S
                 }
                 get webhooks() {
-                    return f
+                    return g
                 }
                 get guildScheduledEvents() {
-                    return g
+                    return f
                 }
                 get automodRules() {
                     return A
@@ -19009,7 +19010,7 @@
                 },
                 AUDIT_LOG_FETCH_SUCCESS: function(e) {
                     var t;
-                    p = 0, C = !1, O = !1, R = !0, D = !1, I = U(e.logs), S = e.integrations, f = e.webhooks, g = e.guildScheduledEvents, A = null !== (t = e.automodRules) && void 0 !== t ? t : [], L = e.threads, m = e.applicationCommands, e.logs.length < E.AUDIT_LOG_PAGE_LIMIT && (R = !1)
+                    p = 0, C = !1, O = !1, R = !0, D = !1, I = U(e.logs), S = e.integrations, g = e.webhooks, f = e.guildScheduledEvents, A = null !== (t = e.automodRules) && void 0 !== t ? t : [], L = e.threads, m = e.applicationCommands, e.logs.length < E.AUDIT_LOG_PAGE_LIMIT && (R = !1)
                 },
                 AUDIT_LOG_FETCH_FAIL: function() {
                     O = !1, D = !0, I = []
@@ -19030,7 +19031,7 @@
                         threads: i,
                         applicationCommands: r
                     } = e;
-                    if (h = !1, S = s, f = a, g = n, A = l, L = i, m = r, (0 === t.length || t.length < E.AUDIT_LOG_PAGE_LIMIT) && (R = !1), t.length > 0) {
+                    if (h = !1, S = s, g = a, f = n, A = l, L = i, m = r, (0 === t.length || t.length < E.AUDIT_LOG_PAGE_LIMIT) && (R = !1), t.length > 0) {
                         let e = U(t);
                         I = [...I, ...e]
                     }
@@ -19061,7 +19062,7 @@
                     })
                 },
                 GUILD_SETTINGS_CLOSE: function() {
-                    I = [], N = [], G = E.AuditLogActions.ALL, M = null, x = {}, p = 0, C = !0, S = [], f = [], g = [], A = [], L = []
+                    I = [], N = [], G = E.AuditLogActions.ALL, M = null, x = {}, p = 0, C = !0, S = [], g = [], f = [], A = [], L = []
                 }
             })
         },
@@ -19336,9 +19337,9 @@
                 I = s("991170"),
                 S = s("900938"),
                 N = s("53948"),
-                f = s("49111");
-            let g = new Set,
-                A = f.FormStates.CLOSED,
+                g = s("49111");
+            let f = new Set,
+                A = g.FormStates.CLOSED,
                 L = !1,
                 m = !1,
                 C = [],
@@ -19373,19 +19374,19 @@
                 let {
                     section: t
                 } = e;
-                if (null != a || t !== f.GuildSettingsSections.ROLES) return !1;
+                if (null != a || t !== g.GuildSettingsSections.ROLES) return !1;
                 U()
             }
 
             function U() {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                a = S.default.getProps().guild, L = !1, m = !1, l = void 0, g.clear(), A = f.FormStates.OPEN, O = [...C = null != a ? r(a.roles).values().value() : []], R = !1, e && (G.clear(), M.forEach((e, t) => {
+                a = S.default.getProps().guild, L = !1, m = !1, l = void 0, f.clear(), A = g.FormStates.OPEN, O = [...C = null != a ? r(a.roles).values().value() : []], R = !1, e && (G.clear(), M.forEach((e, t) => {
                     G.set(t, [...e])
                 }))
             }
             let v = r.debounce(() => {
                 let e = !1;
-                m && !(m = x().length > 0) && (e = !0), [...g].forEach(t => {
+                m && !(m = x().length > 0) && (e = !0), [...f].forEach(t => {
                     r.isEqual(P(t), function(e) {
                         return O.find(t => {
                             let {
@@ -19393,8 +19394,8 @@
                             } = t;
                             return s === e
                         })
-                    }(t)) && (g.delete(t), e = !0)
-                }), 0 === g.size && (L = !1), R && r.isEqual(M, G) && (e = !0, R = !1), e && B.emitChange()
+                    }(t)) && (f.delete(t), e = !0)
+                }), 0 === f.size && (L = !1), R && r.isEqual(M, G) && (e = !0, R = !1), e && B.emitChange()
             }, 500);
 
             function j(e, t) {
@@ -19404,7 +19405,7 @@
                     ...e,
                     ...t
                 };
-                C[s] = a, C = [...C], L = !0, g.add(a.id), v()
+                C[s] = a, C = [...C], L = !0, f.add(a.id), v()
             }
 
             function P(e) {
@@ -19420,10 +19421,10 @@
                 let {
                     guildId: t
                 } = e;
-                if (null == a || t !== a.id || A === f.FormStates.SUBMITTING) return !1;
+                if (null == a || t !== a.id || A === g.FormStates.SUBMITTING) return !1;
                 a = S.default.getProps().guild;
                 let s = [];
-                null != a && (s = r(a.roles).values().value()), g.forEach(e => {
+                null != a && (s = r(a.roles).values().value()), f.forEach(e => {
                     let t = P(e),
                         a = -1,
                         n = s.find((t, s) => {
@@ -19432,8 +19433,8 @@
                             } = t;
                             if (n === e) return a = s, !0
                         });
-                    null == n || null == t ? g.delete(e) : s[a] = t
-                }), 0 === g.size && (L = !1), m = !1, C = [...s]
+                    null == n || null == t ? f.delete(e) : s[a] = t
+                }), 0 === f.size && (L = !1), m = !1, C = [...s]
             }
             class b extends u.default.Store {
                 initialize() {
@@ -19455,7 +19456,7 @@
                     return a
                 }
                 get editedRoleIds() {
-                    return Array.from(g)
+                    return Array.from(f)
                 }
                 get editedRoleIdsForConfigurations() {
                     return D
@@ -19610,7 +19611,7 @@
                     R = !0, D.add(a.id), G.set(a.id, s), v()
                 },
                 GUILD_SETTINGS_CLOSE: function() {
-                    a = null, O = C = [], M.clear(), g.clear(), G.clear(), D = new Set, L = !1, m = !1, R = !1, A = f.FormStates.CLOSED
+                    a = null, O = C = [], M.clear(), f.clear(), G.clear(), D = new Set, L = !1, m = !1, R = !1, A = g.FormStates.CLOSED
                 },
                 GUILD_ROLE_CREATE: y,
                 GUILD_ROLE_UPDATE: y,
@@ -19618,13 +19619,13 @@
                     return D.has(e.roleId) && (D.delete(e.roleId), M.delete(e.roleId), G.delete(e.roleId), R = !1), y(e)
                 },
                 GUILD_SETTINGS_ROLES_SUBMITTING: function() {
-                    A = f.FormStates.SUBMITTING
+                    A = g.FormStates.SUBMITTING
                 },
                 GUILD_SETTINGS_ROLES_SAVE_FAIL: function(e) {
                     let {
                         message: t
                     } = e;
-                    A = f.FormStates.OPEN, l = t
+                    A = g.FormStates.OPEN, l = t
                 },
                 GUILD_SETTINGS_ROLES_SAVE_SUCCESS: function() {
                     U(!1)
@@ -19838,8 +19839,8 @@
                 I = s("642950"),
                 S = s("465395"),
                 N = s("510889"),
-                f = s("161778"),
-                g = s("242020"),
+                g = s("161778"),
+                f = s("242020"),
                 A = s("766274"),
                 L = s("42203"),
                 m = s("305961"),
@@ -20161,7 +20162,7 @@
                         var s;
                         let {
                             actionFilter: n
-                        } = this.props, l = (0, g.getActionType)(e.value), i = (0, g.getTargetType)(e.value), r = e.value === n;
+                        } = this.props, l = (0, f.getActionType)(e.value), i = (0, f.getTargetType)(e.value), r = e.value === n;
                         return (0, a.jsxs)(E.ComboboxItem, {
                             value: e.value,
                             selectedColor: E.ComboboxItem.Colors.BRAND,
@@ -20337,7 +20338,7 @@
                     }
                 }
             }
-            var V = c.default.connectStores([x.default, p.default, m.default, f.default, C.default, O.default], () => {
+            var V = c.default.connectStores([x.default, p.default, m.default, g.default, C.default, O.default], () => {
                 let e = p.default.getGuildId(),
                     t = m.default.getGuild(e),
                     s = x.default.logs,
@@ -20355,7 +20356,7 @@
                     logs: null != s && null != t ? D.transformLogs(s, t) : [],
                     actionFilter: x.default.actionFilter,
                     userIdFilter: x.default.userIdFilter,
-                    theme: f.default.theme,
+                    theme: g.default.theme,
                     hide: C.default.enabled
                 }
             })(H)
@@ -20385,8 +20386,8 @@
                 I = s("430568"),
                 S = s("376556"),
                 N = s("679653"),
-                f = s("90625"),
-                g = s("506885"),
+                g = s("90625"),
+                f = s("506885"),
                 A = s("981601"),
                 L = s("161778"),
                 m = s("42203"),
@@ -20438,6 +20439,7 @@
                         [U.AuditLogTargetTypes.STICKER]: j.targetSticker,
                         [U.AuditLogTargetTypes.STAGE_INSTANCE]: j.targetStageInstance,
                         [U.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT]: j.targetGuildScheduledEvent,
+                        [U.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION]: j.targetGuildScheduledEvent,
                         [U.AuditLogTargetTypes.THREAD]: j.thread,
                         [U.AuditLogTargetTypes.APPLICATION_COMMAND]: j.applicationCommand,
                         [U.AuditLogTargetTypes.AUTO_MODERATION_RULE]: j.autoModerationRule,
@@ -20532,7 +20534,8 @@
                             channelHook: (e, t) => (0, a.jsx)("span", {
                                 onContextMenu: n,
                                 children: e
-                            }, t)
+                            }, t),
+                            subtarget: r.subtarget
                         })
                     }) : null
                 }
@@ -20603,13 +20606,13 @@
                                         backgroundColor: o.oldValue
                                     }
                                 }, t),
-                                oldTagHook: (e, t) => (0, a.jsx)(f.default, {
+                                oldTagHook: (e, t) => (0, a.jsx)(g.default, {
                                     tag: i,
-                                    size: f.default.Sizes.SMALL
+                                    size: g.default.Sizes.SMALL
                                 }, t),
-                                newTagHook: (e, t) => (0, a.jsx)(f.default, {
+                                newTagHook: (e, t) => (0, a.jsx)(g.default, {
                                     tag: r,
-                                    size: f.default.Sizes.SMALL
+                                    size: g.default.Sizes.SMALL
                                 }, t),
                                 oldEmojiHook: (e, t) => (0, a.jsx)(I.default, {
                                     emojiId: i
@@ -20709,8 +20712,8 @@
                         let {
                             title: s,
                             id: l
-                        } = t, d = e.role_ids.map(i).filter(M.isNotNullish), u = e.channel_ids.map(r).filter(M.isNotNullish), c = t.role_ids.map(i).filter(M.isNotNullish), E = t.channel_ids.map(r).filter(M.isNotNullish), _ = o.difference(c, d), I = o.difference(d, c), S = o.difference(E, u), N = o.difference(u, E), f = [];
-                        return (!o.isEqual(e.title, t.title) && f.push("title"), !o.isEqual(e.description, t.description) && f.push("description"), 0 === _.length && 0 === I.length && 0 === S.length && 0 === N.length && 0 === f.length) ? null : (0, a.jsxs)("li", {
+                        } = t, d = e.role_ids.map(i).filter(M.isNotNullish), u = e.channel_ids.map(r).filter(M.isNotNullish), c = t.role_ids.map(i).filter(M.isNotNullish), E = t.channel_ids.map(r).filter(M.isNotNullish), _ = o.difference(c, d), I = o.difference(d, c), S = o.difference(E, u), N = o.difference(u, E), g = [];
+                        return (!o.isEqual(e.title, t.title) && g.push("title"), !o.isEqual(e.description, t.description) && g.push("description"), 0 === _.length && 0 === I.length && 0 === S.length && 0 === N.length && 0 === g.length) ? null : (0, a.jsxs)("li", {
                             children: [(0, a.jsxs)("div", {
                                 className: j.onboardingChangeLogItemTitle,
                                 children: [(0, a.jsx)(b, {
@@ -20745,7 +20748,7 @@
                                     children: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_CHANNELS.format({
                                         channels: N.join(", ")
                                     })
-                                }), f.map((s, n) => (0, a.jsx)(T.Text, {
+                                }), g.map((s, n) => (0, a.jsx)(T.Text, {
                                     variant: "text-md/normal",
                                     children: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_VALUE_CHANGE.format({
                                         key: s,
@@ -20972,6 +20975,8 @@
                             return this.renderChangeDetails(R.StageInstanceChangeStrings());
                         case U.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
                             return this.renderChangeDetails(R.GuildScheduledEventChangeStrings());
+                        case U.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION:
+                            return this.renderChangeDetails(R.GuildScheduledEventExceptionChangeStrings());
                         case U.AuditLogTargetTypes.THREAD:
                             return this.renderChangeDetails(R.ThreadChangeStrings());
                         case U.AuditLogTargetTypes.APPLICATION_COMMAND:
@@ -21002,7 +21007,7 @@
                         }
                     } = e;
                     if (null != n && null != l) return (0, a.jsx)(T.Popout, {
-                        preload: () => (0, g.default)(l, n.getAvatarURL(t, 80), {
+                        preload: () => (0, f.default)(l, n.getAvatarURL(t, 80), {
                             guildId: t
                         }),
                         renderPopout: e => (0, a.jsx)(A.default, {
@@ -21138,8 +21143,8 @@
                     s = E.default.advancedMode,
                     [I, S] = (0, r.getChattableDefaultChannels)(e.id, [...t]),
                     N = (0, r.getMinimumSetOfDefaultChannelIds)(e.id, t, E.default.editedOnboardingPrompts),
-                    f = (0, r.getMinimumSetOfDefaultChannelIds)(e.id, t, E.default.editedOnboardingPrompts, r.isChattableChannelId);
-                if (i.default.getEnabled(e.id) && (!s && (S.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || I.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN) || s && (N.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || f.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN))) {
+                    g = (0, r.getMinimumSetOfDefaultChannelIds)(e.id, t, E.default.editedOnboardingPrompts, r.isChattableChannelId);
+                if (i.default.getEnabled(e.id) && (!s && (S.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || I.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN) || s && (N.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || g.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN))) {
                     n.default.show({
                         title: T.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
                         body: T.default.Messages.DEFAULT_CHANNELS_SAVE_INVALID_DEFAULT_CHANNELS
@@ -21159,11 +21164,11 @@
                             channelIds: t
                         })
                     } catch (s) {
-                        var g;
+                        var f;
                         let {
                             fieldName: e,
                             error: t
-                        } = null !== (g = new(0, l.APIError)(s).getAnyErrorMessageAndField()) && void 0 !== g ? g : {};
+                        } = null !== (f = new(0, l.APIError)(s).getAnyErrorMessageAndField()) && void 0 !== f ? f : {};
                         n.default.show({
                             title: T.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
                             body: [e, t].filter(d.isNotNullish).join(": ")
@@ -21235,10 +21240,10 @@
                     return N
                 },
                 deleteNewMemberAction: function() {
-                    return f
+                    return g
                 },
                 reorderNewMemberActions: function() {
-                    return g
+                    return f
                 },
                 updateNewMemberActionIconData: function() {
                     return A
@@ -21309,14 +21314,14 @@
                 })
             }
 
-            function f(e) {
+            function g(e) {
                 i.default.dispatch({
                     type: "GUILD_SETTINGS_ONBOARDING_DELETE_NEW_MEMBER_ACTION",
                     channelId: e
                 })
             }
 
-            function g(e) {
+            function f(e) {
                 i.default.dispatch({
                     type: "GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION",
                     actions: e
@@ -21444,7 +21449,7 @@
                 })
             }
             async function G(e, t) {
-                var s, a, o, u, E, I, S, N, f;
+                var s, a, o, u, E, I, S, N, g;
                 i.default.dispatch({
                     type: "GUILD_HOME_SETTINGS_UPDATE_START"
                 });
@@ -21469,7 +21474,7 @@
                         enabled: null == r ? void 0 : r.enabled
                     }), n.body
                 } catch (t) {
-                    let e = n.flatMap(null !== (f = t.body) && void 0 !== f ? f : {}, e => e);
+                    let e = n.flatMap(null !== (g = t.body) && void 0 !== g ? g : {}, e => e);
                     i.default.dispatch({
                         type: "GUILD_HOME_SETTINGS_UPDATE_FAIL"
                     }), r.default.show({
@@ -21541,10 +21546,10 @@
                 }, c.resourceChannels = [...c.resourceChannels]
             }
 
-            function f() {
+            function g() {
                 E = !1, c = n.cloneDeep(Object.assign({}, r.default.getSettings(u)))
             }
-            class g extends l.default.PersistedStore {
+            class f extends l.default.PersistedStore {
                 initialize(e) {
                     null != e && (_ = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(o.default, r.default)
                 }
@@ -21590,8 +21595,8 @@
                     return void 0 !== s && (null != s || null != t.icon && null == s)
                 }
             }
-            g.displayName = "GuildSettingsOnboardingHomeSettingsStore", g.persistKey = "GuildSettingsOnboardingHomeSettingsStore";
-            var A = new g(i.default, {
+            f.displayName = "GuildSettingsOnboardingHomeSettingsStore", f.persistKey = "GuildSettingsOnboardingHomeSettingsStore";
+            var A = new f(i.default, {
                 GUILD_SETTINGS_INIT: I,
                 GUILD_SETTINGS_SET_SECTION: I,
                 GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET: I,
@@ -21601,8 +21606,8 @@
                 GUILD_HOME_SETTINGS_UPDATE_START: function() {
                     E = !0
                 },
-                GUILD_HOME_SETTINGS_UPDATE_SUCCESS: f,
-                GUILD_HOME_SETTINGS_UPDATE_FAIL: f,
+                GUILD_HOME_SETTINGS_UPDATE_SUCCESS: g,
+                GUILD_HOME_SETTINGS_UPDATE_FAIL: g,
                 GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: function(e) {
                     let {
                         action: t
@@ -21723,14 +21728,14 @@
                 I = s("49111");
             let S = new Set,
                 N = _.GuildSettingsOnboardingPage.LANDING,
-                f = null;
+                g = null;
 
-            function g(e) {
+            function f(e) {
                 let {
                     subsection: t
                 } = e;
-                if (r.default.getGuildId() === f) return !1;
-                N = t === I.GuildSettingsSubsections.SERVER_GUIDE ? _.GuildSettingsOnboardingPage.HOME_SETTINGS : _.GuildSettingsOnboardingPage.LANDING, f = r.default.getGuildId()
+                if (r.default.getGuildId() === g) return !1;
+                N = t === I.GuildSettingsSubsections.SERVER_GUIDE ? _.GuildSettingsOnboardingPage.HOME_SETTINGS : _.GuildSettingsOnboardingPage.LANDING, g = r.default.getGuildId()
             }
             class A extends a.default.Store {
                 initialize() {
@@ -21743,15 +21748,15 @@
                     return N
                 }
                 hasChanges() {
-                    if (null == f) return !1;
-                    let e = l.default.isAdvancedMode(f);
+                    if (null == g) return !1;
+                    let e = l.default.isAdvancedMode(g);
                     if (N === _.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) return e ? u.default.hasChanges() || E.default.hasChanges() : u.default.hasChanges();
                     if (N === _.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) return E.default.hasChanges();
                     if (N === _.GuildSettingsOnboardingPage.HOME_SETTINGS) return c.default.hasChanges();
                     return !1
                 }
                 hasConfiguredAnythingForCurrentStep() {
-                    if (null == f) return !1;
+                    if (null == g) return !1;
                     if (N === _.GuildSettingsOnboardingPage.SAFETY_CHECK) return !0;
                     if (N === _.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) return u.default.editedDefaultChannelIds.size > 0;
                     if (N === _.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) return E.default.editedOnboardingPrompts.length > 0;
@@ -21762,19 +21767,19 @@
                     return N === _.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS && null != E.default.errors.find(e => null != e)
                 }
                 showNotice() {
-                    if (null == f) return !1;
-                    if ((0, T.isOnboardingWizardCompleted)(f)) return this.hasChanges();
+                    if (null == g) return !1;
+                    if ((0, T.isOnboardingWizardCompleted)(g)) return this.hasChanges();
                     let e = o.default.getCurrentPage();
                     return (N !== _.GuildSettingsOnboardingPage.SAFETY_CHECK || e === d.GuildSettingsSafetyPage.OVERVIEW) && null != N && N !== _.GuildSettingsOnboardingPage.LANDING
                 }
                 canCloseEarly() {
-                    return null == f || !this.hasErrors() && (!(0, T.isOnboardingWizardCompleted)(f) || !this.hasChanges())
+                    return null == g || !this.hasErrors() && (!(0, T.isOnboardingWizardCompleted)(g) || !this.hasChanges())
                 }
             }
             A.displayName = "GuildSettingsOnboardingStore";
             var L = new A(n.default, {
-                GUILD_SETTINGS_INIT: g,
-                GUILD_SETTINGS_SET_SECTION: g,
+                GUILD_SETTINGS_INIT: f,
+                GUILD_SETTINGS_SET_SECTION: f,
                 GUILD_SETTINGS_ONBOARDING_STEP: function(e) {
                     let {
                         step: t
@@ -21950,8 +21955,8 @@
                 I = s("45029"),
                 S = s("851490"),
                 N = s("904383"),
-                f = s("223729"),
-                g = s("49111"),
+                g = s("223729"),
+                f = s("49111"),
                 A = s("782340"),
                 L = s("622802");
 
@@ -22037,7 +22042,7 @@
                         isFirstChannel: _,
                         isLastChannel: m,
                         tooltipDirection: h = "right"
-                    } = e, R = (0, N.useIsChecked)(t.id, n.id), D = (0, N.useIsDisabled)(t.id, n.id), M = (0, N.useDisabledTooltip)(t.id, n.id), G = (0, N.useTooltip)(l.id, n.id), x = (0, f.default)(l), p = null != x.find(e => e.id === t.id), U = (0, c.useIsChattableChannel)(t.id), v = e => {
+                    } = e, R = (0, N.useIsChecked)(t.id, n.id), D = (0, N.useIsDisabled)(t.id, n.id), M = (0, N.useDisabledTooltip)(t.id, n.id), G = (0, N.useTooltip)(l.id, n.id), x = (0, g.default)(l), p = null != x.find(e => e.id === t.id), U = (0, c.useIsChattableChannel)(t.id), v = e => {
                         if (D) return;
                         e.stopPropagation();
                         let n = (0, u.canChannelBeDefault)(l.id, t.id);
@@ -22128,7 +22133,7 @@
                                         color: o.Button.Colors.PRIMARY,
                                         className: L.lockedPill,
                                         innerClassName: L.lockedPillInner,
-                                        onClick: g.NOOP,
+                                        onClick: f.NOOP,
                                         children: [(0, a.jsx)(I.default, {
                                             width: 16,
                                             height: 16
@@ -22187,7 +22192,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return g
                 }
             });
             var a = s("37983");
@@ -22207,7 +22212,7 @@
                 S = s("782340"),
                 N = s("873536");
 
-            function f(e) {
+            function g(e) {
                 let {
                     guild: t,
                     scrollToQuestions: s
@@ -22222,14 +22227,14 @@
                         })
                     }), (0, a.jsxs)("div", {
                         className: N.channelList,
-                        children: [(0, a.jsx)(L, {}), 0 === r.length && (0, a.jsx)(g, {}), (0, a.jsx)(A, {
+                        children: [(0, a.jsx)(L, {}), 0 === r.length && (0, a.jsx)(f, {}), (0, a.jsx)(A, {
                             channels: r
                         })]
                     })]
                 })
             }
 
-            function g() {
+            function f() {
                 return (0, a.jsxs)("div", {
                     className: N.emptyState,
                     children: [(0, a.jsx)("div", {
@@ -22338,7 +22343,7 @@
                 let {
                     guildId: t,
                     scrollToQuestions: s
-                } = e, N = (0, n.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), f = (0, n.useStateFromStores)([E.default], () => E.default.editedDefaultChannelIds), [g, A] = (0, o.useChattableDefaultChannels)(t, [...f]), [L, m] = (0, _.useEditedChattableDefaultChannelsWithQuestions)(t, [...f]), C = N ? m.length : A.length, O = N ? L.length : g.length, h = C < T.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING, R = O >= T.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN, D = m.length - A.length, M = (0, a.jsx)(d.default, {
+                } = e, N = (0, n.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), g = (0, n.useStateFromStores)([E.default], () => E.default.editedDefaultChannelIds), [f, A] = (0, o.useChattableDefaultChannels)(t, [...g]), [L, m] = (0, _.useEditedChattableDefaultChannelsWithQuestions)(t, [...g]), C = N ? m.length : A.length, O = N ? L.length : f.length, h = C < T.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING, R = O >= T.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN, D = m.length - A.length, M = (0, a.jsx)(d.default, {
                     color: l.default.unsafe_rawColors.BRAND_500.css,
                     backgroundColor: l.default.unsafe_rawColors.WHITE_100.css,
                     className: S.icon,
@@ -22590,8 +22595,8 @@
                 I = s("161188"),
                 S = s("245997"),
                 N = s("923959"),
-                f = s("98292"),
-                g = s("461380"),
+                g = s("98292"),
+                f = s("461380"),
                 A = s("36694"),
                 L = s("45029"),
                 m = s("900938"),
@@ -22610,7 +22615,7 @@
             function j(e) {
                 let {
                     guild: t
-                } = e, l = (0, r.useStateFromStores)([c.default], () => c.default.getEnabled(t.id)), i = (0, r.useStateFromStores)([I.default], () => I.default.hasFetched(t.id)), d = (0, D.default)(t), S = (0, r.useStateFromStores)([O.default], () => O.default.editedDefaultChannelIds), N = d.filter(e => !S.has(e.id)), [g, m] = n.useState(!1);
+                } = e, l = (0, r.useStateFromStores)([c.default], () => c.default.getEnabled(t.id)), i = (0, r.useStateFromStores)([I.default], () => I.default.hasFetched(t.id)), d = (0, D.default)(t), S = (0, r.useStateFromStores)([O.default], () => O.default.editedDefaultChannelIds), N = d.filter(e => !S.has(e.id)), [f, m] = n.useState(!1);
                 n.useEffect(() => {
                     !i && !l && (0, T.fetchTopReadChannels)(t.id)
                 }, [t.id, i, l]);
@@ -22626,7 +22631,7 @@
                         })
                     })
                 };
-                return g || 0 === N.length ? null : (0, a.jsxs)("div", {
+                return f || 0 === N.length ? null : (0, a.jsxs)("div", {
                     className: v.recommendations,
                     children: [(0, a.jsx)(o.Text, {
                         variant: "text-md/medium",
@@ -22664,7 +22669,7 @@
                                         children: [(0, a.jsx)(E.ChannelItemIcon, {
                                             channel: e,
                                             guild: t
-                                        }), (0, a.jsx)(f.default, {
+                                        }), (0, a.jsx)(g.default, {
                                             className: v.name,
                                             children: (0, a.jsx)(o.Text, {
                                                 className: v.channelText,
@@ -22674,7 +22679,7 @@
                                                 children: e.name
                                             })
                                         })]
-                                    }), null != e.topic && e.topic.length > 0 ? (0, a.jsx)(f.default, {
+                                    }), null != e.topic && e.topic.length > 0 ? (0, a.jsx)(g.default, {
                                         children: (0, a.jsx)(o.Text, {
                                             className: v.topic,
                                             variant: "text-xs/normal",
@@ -22732,8 +22737,8 @@
                         children: [(0, a.jsx)(o.Clickable, {
                             className: v.collapseButton,
                             onClick: () => I(e => !e),
-                            children: (0, a.jsx)(g.default, {
-                                direction: T ? g.default.Directions.DOWN : g.default.Directions.UP,
+                            children: (0, a.jsx)(f.default, {
+                                direction: T ? f.default.Directions.DOWN : f.default.Directions.UP,
                                 height: 16,
                                 width: 16
                             })
@@ -22835,8 +22840,8 @@
                 I = s("634544"),
                 S = s("379532"),
                 N = s("569912"),
-                f = s("129092"),
-                g = s("205454"),
+                g = s("129092"),
+                f = s("205454"),
                 A = s("768596"),
                 L = s("656913"),
                 m = s("694187"),
@@ -22888,7 +22893,7 @@
                         })
                     })
                 }, [t, l]), u = (0, r.default)([O.default], () => O.default.getId());
-                return (0, f.isWelcomeMessageEmpty)(l) ? (0, a.jsx)(d.Button, {
+                return (0, g.isWelcomeMessageEmpty)(l) ? (0, a.jsx)(d.Button, {
                     size: d.Button.Sizes.SMALL,
                     onClick: o,
                     children: (0, a.jsx)(d.Text, {
@@ -22937,7 +22942,7 @@
                     channelId: I.channelId,
                     icon: I.icon
                 }), y = null;
-                null != R && (0, f.isChannelValidForNewMemberAction)(R) ? !j && (y = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : y = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL;
+                null != R && (0, g.isChannelValidForNewMemberAction)(R) ? !j && (y = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : y = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL;
                 let {
                     drag: B,
                     dragSourcePosition: F,
@@ -22997,10 +23002,10 @@
                             })
                         }) : (0, a.jsx)("div", {
                             className: X.actionItemEmojiWrapper,
-                            children: (0, a.jsx)(g.default, {
+                            children: (0, a.jsx)(f.default, {
                                 emojiId: null === (o = I.emoji) || void 0 === o ? void 0 : o.id,
                                 emojiName: null === (u = I.emoji) || void 0 === u ? void 0 : u.name,
-                                size: g.CTAEmojiSize.MEDIUM,
+                                size: f.CTAEmojiSize.MEDIUM,
                                 defaultComponent: (0, a.jsx)(K, {})
                             })
                         }), (0, a.jsxs)("div", {
@@ -23091,7 +23096,7 @@
                         onDragStart: u,
                         onDragReset: c,
                         onDragComplete: E
-                    }, e.channelId)), (0, a.jsx)(es, {}), s.length < f.NEW_MEMBER_ACTION_MAX && (0, a.jsx)(ea, {
+                    }, e.channelId)), (0, a.jsx)(es, {}), s.length < g.NEW_MEMBER_ACTION_MAX && (0, a.jsx)(ea, {
                         guildId: t,
                         onAddAction: l
                     })]
@@ -23330,8 +23335,8 @@
                     title: I,
                     channelId: S,
                     description: N
-                } = l, g = h.default.getChannel(S), A = null;
-                (null == g || !(0, f.isChannelValidForResourceChannel)(g)) && (A = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_RESOURCE_CHANNEL);
+                } = l, f = h.default.getChannel(S), A = null;
+                (null == f || !(0, g.isChannelValidForResourceChannel)(f)) && (A = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_RESOURCE_CHANNEL);
                 let L = null == N || 0 === N.length,
                     m = b.default.getResourceChannelIconURL({
                         channelId: l.channelId,
@@ -23375,7 +23380,7 @@
                             })
                         })
                     }, [t, l, G, x]);
-                return null == T || null == g ? null : (0, a.jsxs)("div", {
+                return null == T || null == f ? null : (0, a.jsxs)("div", {
                     className: i(X.resourceChannelContainer),
                     children: [(0, a.jsxs)("div", {
                         className: i(X.resourceChannel, {
@@ -23486,7 +23491,7 @@
                     let e = u.map(e => e.channel.id);
                     (0, V.dismissSuggestedChannels)(t, e)
                 }, [t, u]);
-                return u.length <= 0 || l.length >= f.RESOURCE_CHANNEL_MAX ? null : (0, a.jsxs)(a.Fragment, {
+                return u.length <= 0 || l.length >= g.RESOURCE_CHANNEL_MAX ? null : (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)("div", {
                         className: X.suggestedChannelsSection,
                         children: [(0, a.jsx)(d.Text, {
@@ -23564,7 +23569,7 @@
                         onDragStart: o,
                         onDragReset: u,
                         onDragComplete: c
-                    }, e.channelId)), l.length < f.RESOURCE_CHANNEL_MAX && (0, a.jsxs)(d.Clickable, {
+                    }, e.channelId)), l.length < g.RESOURCE_CHANNEL_MAX && (0, a.jsxs)(d.Clickable, {
                         className: X.addActionItem,
                         onClick: _,
                         children: [(0, a.jsx)(P.default, {}), (0, a.jsx)(d.Text, {
@@ -23763,8 +23768,8 @@
                 I = s("131835"),
                 S = s("435076"),
                 N = s("642807"),
-                f = s("330724"),
-                g = s("259483"),
+                g = s("330724"),
+                f = s("259483"),
                 A = s("682327"),
                 L = s("671932"),
                 m = s("49111"),
@@ -23783,17 +23788,17 @@
                 c.object = s ? m.AnalyticsObjects.ONBOARDING_EDIT : m.AnalyticsObjects.ONBOARDING_REVIEW;
                 let E = async function() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                    d ? (await (0, f.enableGuildOnboarding)(t, !1), T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
+                    d ? (await (0, g.enableGuildOnboarding)(t, !1), T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                         ...(0, r.collectGuildAnalyticsMetadata)(t),
-                        action_taken: g.GuildSettingsCTAs[g.GuildSettingsCTAs.TOGGLE_DISABLED],
+                        action_taken: f.GuildSettingsCTAs[f.GuildSettingsCTAs.TOGGLE_DISABLED],
                         location: c
-                    })) : (await (0, f.enableGuildOnboarding)(t, !0), e && (0, S.enableHomeSettings)(t, !0), s ? T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
+                    })) : (await (0, g.enableGuildOnboarding)(t, !0), e && (0, S.enableHomeSettings)(t, !0), s ? T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                         ...(0, r.collectGuildAnalyticsMetadata)(t),
-                        action_taken: g.GuildSettingsCTAs[g.GuildSettingsCTAs.TOGGLE_ENABLED],
+                        action_taken: f.GuildSettingsCTAs[f.GuildSettingsCTAs.TOGGLE_ENABLED],
                         location: c
                     }) : T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                         ...(0, r.collectGuildAnalyticsMetadata)(t),
-                        step: g.GuildSettingsOnboardingPage[g.GuildSettingsOnboardingPage.REVIEW],
+                        step: f.GuildSettingsOnboardingPage[f.GuildSettingsOnboardingPage.REVIEW],
                         back: !1,
                         skip: !1,
                         completed: !0
@@ -23801,7 +23806,7 @@
                 }, N = () => {
                     T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                         ...(0, r.collectGuildAnalyticsMetadata)(t),
-                        action_taken: g.GuildSettingsCTAs[g.GuildSettingsCTAs.PREVIEW],
+                        action_taken: f.GuildSettingsCTAs[f.GuildSettingsCTAs.PREVIEW],
                         location: c
                     }), (0, I.startPreview)(t)
                 }, A = (0, a.jsxs)(a.Fragment, {
@@ -23810,9 +23815,9 @@
                         onEdit: () => {
                             T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                                 ...(0, r.collectGuildAnalyticsMetadata)(t),
-                                action_taken: g.GuildSettingsCTAs[g.GuildSettingsCTAs.EDIT_DEFAULT_CHANNELS],
+                                action_taken: f.GuildSettingsCTAs[f.GuildSettingsCTAs.EDIT_DEFAULT_CHANNELS],
                                 location: c
-                            }), (0, I.setOnboardingStep)(g.GuildSettingsOnboardingPage.DEFAULT_CHANNELS)
+                            }), (0, I.setOnboardingStep)(f.GuildSettingsOnboardingPage.DEFAULT_CHANNELS)
                         },
                         disableGoodStatus: s
                     }), (0, a.jsx)(_.default, {
@@ -23822,9 +23827,9 @@
                         onEdit: () => {
                             T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                                 ...(0, r.collectGuildAnalyticsMetadata)(t),
-                                action_taken: g.GuildSettingsCTAs[g.GuildSettingsCTAs.EDIT_CUSTOMIZATION_QUESTIONS],
+                                action_taken: f.GuildSettingsCTAs[f.GuildSettingsCTAs.EDIT_CUSTOMIZATION_QUESTIONS],
                                 location: c
-                            }), (0, I.setOnboardingStep)(g.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS)
+                            }), (0, I.setOnboardingStep)(f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS)
                         },
                         disableGoodStatus: s
                     }), l && (0, a.jsxs)(a.Fragment, {
@@ -23835,9 +23840,9 @@
                             onEdit: () => {
                                 T.default.track(m.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_EDIT_PAGE_CLICKED, {
                                     ...(0, r.collectGuildAnalyticsMetadata)(t),
-                                    action_taken: g.GuildSettingsCTAs[g.GuildSettingsCTAs.EDIT_HOME_SETTINGS],
+                                    action_taken: f.GuildSettingsCTAs[f.GuildSettingsCTAs.EDIT_HOME_SETTINGS],
                                     location: c
-                                }), (0, I.setOnboardingStep)(g.GuildSettingsOnboardingPage.HOME_SETTINGS)
+                                }), (0, I.setOnboardingStep)(f.GuildSettingsOnboardingPage.HOME_SETTINGS)
                             },
                             disableGoodStatus: s
                         })]
@@ -24040,8 +24045,8 @@
                 I = s("716241"),
                 S = s("137215"),
                 N = s("965397"),
-                f = s("599110"),
-                g = s("659500"),
+                g = s("599110"),
+                f = s("659500"),
                 A = s("900938"),
                 L = s("851490"),
                 m = s("131835"),
@@ -24097,8 +24102,8 @@
                             delay: 1e3
                         })
                     }
-                    return g.ComponentDispatch.subscribe(j.ComponentActions.EMPHASIZE_NOTICE, e), () => {
-                        g.ComponentDispatch.unsubscribe(j.ComponentActions.EMPHASIZE_NOTICE, e)
+                    return f.ComponentDispatch.subscribe(j.ComponentActions.EMPHASIZE_NOTICE, e), () => {
+                        f.ComponentDispatch.unsubscribe(j.ComponentActions.EMPHASIZE_NOTICE, e)
                     }
                 }, [W]);
                 let z = (0, E.useToken)(d.default.colors.BACKGROUND_FLOATING).hex(),
@@ -24136,14 +24141,14 @@
                         }
                         return !0
                     }, ee = async () => {
-                        f.default.track(j.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+                        g.default.track(j.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                             ...(0, I.collectGuildAnalyticsMetadata)(l),
                             step: M.GuildSettingsOnboardingPage[A],
                             back: !1,
                             skip: !B
                         }), (0, m.dismissEducationUpsell)((0, M.pageToEducationUpsellType)(A)), await $() && (0, m.goToNextOnboardingStep)(l, A)
                     }, et = async () => {
-                        f.default.track(j.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+                        g.default.track(j.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                             ...(0, I.collectGuildAnalyticsMetadata)(l),
                             step: M.GuildSettingsOnboardingPage[A],
                             back: !0,
@@ -24257,8 +24262,8 @@
                 I = s("653274"),
                 S = s("131835"),
                 N = s("330724"),
-                f = s("136278"),
-                g = s("682327"),
+                g = s("136278"),
+                f = s("682327"),
                 A = s("457461"),
                 L = s("49111"),
                 m = s("653138"),
@@ -24269,7 +24274,7 @@
                 let {
                     guildId: t,
                     prompts: s
-                } = e, r = (0, l.useStateFromStores)([I.default], () => I.default.editedDefaultChannelIds), [d, T] = (0, u.useChannelCoverageForOnboarding)(t, s, [...r]), S = d.length, N = d.length + T.length, f = S / N * 100, g = Math.max(Math.ceil(85 * N / 100) - S, 0), [A, L] = n.useState(!1);
+                } = e, r = (0, l.useStateFromStores)([I.default], () => I.default.editedDefaultChannelIds), [d, T] = (0, u.useChannelCoverageForOnboarding)(t, s, [...r]), S = d.length, N = d.length + T.length, g = S / N * 100, f = Math.max(Math.ceil(85 * N / 100) - S, 0), [A, L] = n.useState(!1);
                 return (0, a.jsxs)("div", {
                     className: O.channelCoverage,
                     children: [(0, a.jsxs)(i.Clickable, {
@@ -24277,7 +24282,7 @@
                         onClick: () => L(!A),
                         children: [(0, a.jsxs)("div", {
                             className: O.warningTextContainer,
-                            children: [f <= 85 && (0, a.jsx)(_.default, {
+                            children: [g <= 85 && (0, a.jsx)(_.default, {
                                 width: 16,
                                 height: 16,
                                 className: O.warning
@@ -24293,8 +24298,8 @@
                             className: O.progressContainer,
                             children: [(0, a.jsx)(i.Progress, {
                                 className: O.coverageProgress,
-                                foregroundColor: f > 85 ? "var(--status-positive)" : "var(--status-warning)",
-                                percent: f
+                                foregroundColor: g > 85 ? "var(--status-positive)" : "var(--status-warning)",
+                                percent: g
                             }), (0, a.jsx)(E.default, {
                                 className: O.caret,
                                 open: A
@@ -24326,7 +24331,7 @@
                             })
                         }), (0, a.jsx)("div", {
                             className: O.channelCoverageHint,
-                            children: g > 0 ? (0, a.jsxs)(a.Fragment, {
+                            children: f > 0 ? (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(_.default, {
                                     width: 16,
                                     height: 16
@@ -24334,7 +24339,7 @@
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: C.default.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE_ADD_HELP.format({
-                                        numChannels: g
+                                        numChannels: f
                                     })
                                 })]
                             }) : (0, a.jsx)(i.Text, {
@@ -24361,7 +24366,7 @@
                 let {
                     guild: t,
                     saveOnClose: s
-                } = e, r = (0, l.useStateFromStores)([d.default], () => d.default.isLoading()), o = (0, l.useStateFromStores)([f.default], () => f.default.editedOnboardingPrompts), u = (0, l.useStateFromStores)([f.default], () => f.default.advancedMode), c = n.useRef(!1);
+                } = e, r = (0, l.useStateFromStores)([d.default], () => d.default.isLoading()), o = (0, l.useStateFromStores)([g.default], () => g.default.editedOnboardingPrompts), u = (0, l.useStateFromStores)([g.default], () => g.default.advancedMode), c = n.useRef(!1);
                 if (n.useEffect(() => {
                         !r && !c.current && 0 === o.length && (c.current = !0, !u && (0, N.editGuildOnboardingPrompts)(t, [(0, m.getDefaultPrompt)()], !1))
                     }), n.useEffect(() => {
@@ -24406,7 +24411,7 @@
                             })
                         }), (0, a.jsx)("div", {
                             className: O.dot
-                        }), (0, a.jsx)(g.AdvancedModeToggle, {
+                        }), (0, a.jsx)(f.AdvancedModeToggle, {
                             guildId: t.id
                         })]
                     }), (0, a.jsx)(h, {
@@ -24424,7 +24429,7 @@
 
             function M() {
                 let e = (0, l.useStateFromStores)([T.default], () => T.default.getGuild()),
-                    t = (0, l.useStateFromStores)([f.default], () => f.default.submitting);
+                    t = (0, l.useStateFromStores)([g.default], () => g.default.submitting);
                 return null == e ? null : (0, a.jsx)(r.default, {
                     onSave: () => {
                         try {
@@ -24459,8 +24464,8 @@
                 I = s("228220"),
                 S = s("449008"),
                 N = s("653274"),
-                f = s("330724"),
-                g = s("136278"),
+                g = s("330724"),
+                f = s("136278"),
                 A = s("594523"),
                 L = s("653138"),
                 m = s("782340"),
@@ -24496,9 +24501,9 @@
                     onDragStart: p,
                     onDragComplete: x,
                     onDragReset: U
-                }), H = (0, r.useStateFromStoresObject)([g.default], () => {
+                }), H = (0, r.useStateFromStoresObject)([f.default], () => {
                     var e;
-                    return null !== (e = g.default.errors[A]) && void 0 !== e ? e : O
+                    return null !== (e = f.default.errors[A]) && void 0 !== e ? e : O
                 }), [V, k] = n.useState(!1), [w, Y] = n.useState(!1), K = null !== (t = H.options) && void 0 !== t ? t : H.optionErrors.filter(S.isNotNullish)[0], W = H.config, z = v && l.options.length >= L.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD, X = (0, c.getMinimumSetOfDefaultChannelIds)(s.id, Array.from(j), [l]).length - j.size, Z = n.useRef(null);
                 return (n.useLayoutEffect(() => {
                     setTimeout(() => {
@@ -24550,7 +24555,7 @@
                             className: C.removeButton,
                             children: (0, a.jsx)(o.Clickable, {
                                 className: C.closeIcon,
-                                onClick: () => (0, f.deleteGuildOnboardingPrompt)(s, l.id),
+                                onClick: () => (0, g.deleteGuildOnboardingPrompt)(s, l.id),
                                 children: (0, a.jsx)(I.default, {
                                     height: 16,
                                     width: 16
@@ -24588,7 +24593,7 @@
                             inputClassName: C.titleInput,
                             inputRef: Z,
                             value: l.title,
-                            onChange: e => (0, f.editGuildOnboardingPrompt)(s, l.id, {
+                            onChange: e => (0, g.editGuildOnboardingPrompt)(s, l.id, {
                                 title: e
                             }),
                             placeholder: m.default.Messages.ONBOARDING_PROMPT_TITLE_PLACEHOLDER,
@@ -24624,7 +24629,7 @@
                                     size: 20,
                                     type: o.Checkbox.Types.INVERTED,
                                     value: !l.singleSelect,
-                                    onChange: (e, t) => (0, f.editGuildOnboardingPrompt)(s, l.id, {
+                                    onChange: (e, t) => (0, g.editGuildOnboardingPrompt)(s, l.id, {
                                         singleSelect: !t
                                     }),
                                     children: (0, a.jsx)(o.Text, {
@@ -24636,7 +24641,7 @@
                                     size: 20,
                                     type: o.Checkbox.Types.INVERTED,
                                     value: l.inOnboarding && l.required,
-                                    onChange: (e, t) => (0, f.editGuildOnboardingPrompt)(s, l.id, {
+                                    onChange: (e, t) => (0, g.editGuildOnboardingPrompt)(s, l.id, {
                                         required: t
                                     }),
                                     disabled: !l.inOnboarding,
@@ -24661,7 +24666,7 @@
                                 className: C.removeButton,
                                 children: (0, a.jsx)(o.Clickable, {
                                     className: C.closeIcon,
-                                    onClick: () => (0, f.deleteGuildOnboardingPrompt)(s, l.id),
+                                    onClick: () => (0, g.deleteGuildOnboardingPrompt)(s, l.id),
                                     children: (0, a.jsx)(I.default, {
                                         height: 16,
                                         width: 16
@@ -24687,7 +24692,7 @@
                 function r(e) {
                     return (0, a.jsx)(o.Clickable, {
                         className: C.example,
-                        onClick: () => (0, f.editGuildOnboardingPrompt)(s, t.id, {
+                        onClick: () => (0, g.editGuildOnboardingPrompt)(s, t.id, {
                             title: e
                         }),
                         children: (0, a.jsx)(o.Text, {
@@ -24722,7 +24727,7 @@
                     handleDragStart: d,
                     handleDragReset: c,
                     handleDragComplete: _
-                } = (0, u.default)(s.options, e => (0, f.editGuildOnboardingPrompt)(t, s.id, {
+                } = (0, u.default)(s.options, e => (0, g.editGuildOnboardingPrompt)(t, s.id, {
                     options: e
                 }));
                 return (0, a.jsxs)("div", {
@@ -24772,8 +24777,8 @@
                 I = s("351825"),
                 S = s("330724"),
                 N = s("653138"),
-                f = s("782340"),
-                g = s("504540");
+                g = s("782340"),
+                f = s("504540");
 
             function A(e) {
                 var t, n, i, d;
@@ -24803,12 +24808,12 @@
                     customEmoji: v,
                     unicodeEmoji: j
                 } = (0, E.default)(null === (t = m.emoji) || void 0 === t ? void 0 : t.id, null === (n = m.emoji) || void 0 === n ? void 0 : n.name), P = (0, N.isEmojiEmpty)(m.emoji) || null != v || null != j;
-                return !P && (D = f.default.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI), (0, a.jsxs)(o.Clickable, {
-                    className: l(g.optionCard, {
-                        [g.hasError]: C || null != D,
-                        [g.dropIndicatorBefore]: null != x && M < x,
-                        [g.dropIndicatorAfter]: null != x && M > x,
-                        [g.singleColumn]: A
+                return !P && (D = g.default.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI), (0, a.jsxs)(o.Clickable, {
+                    className: l(f.optionCard, {
+                        [f.hasError]: C || null != D,
+                        [f.dropIndicatorBefore]: null != x && M < x,
+                        [f.dropIndicatorAfter]: null != x && M > x,
+                        [f.singleColumn]: A
                     }),
                     onClick: () => (0, o.openModalLazy)(async () => {
                         let {
@@ -24836,28 +24841,28 @@
                     onMouseLeave: () => U(!1),
                     innerRef: e => G(p(e)),
                     children: [(0, a.jsx)("div", {
-                        className: g.dragContainer,
+                        className: f.dragContainer,
                         children: (0, a.jsx)(T.default, {
-                            className: g.dragIcon
+                            className: f.dragIcon
                         })
                     }), (0, a.jsxs)("div", {
-                        className: g.optionCardRow,
+                        className: f.optionCardRow,
                         children: [(0, a.jsx)("div", {
-                            className: g.emoji,
+                            className: f.emoji,
                             children: (0, a.jsx)(_.default, {
                                 emojiId: null === (i = m.emoji) || void 0 === i ? void 0 : i.id,
                                 emojiName: null === (d = m.emoji) || void 0 === d ? void 0 : d.name,
                                 defaultComponent: null
                             })
                         }), (0, a.jsxs)("div", {
-                            className: g.text,
+                            className: f.text,
                             children: [(0, a.jsx)(o.Text, {
                                 variant: "text-md/medium",
                                 color: "header-primary",
                                 lineClamp: 1,
                                 children: m.title
                             }), "" !== m.description && (0, a.jsx)(o.Text, {
-                                className: g.description,
+                                className: f.description,
                                 variant: "text-xs/normal",
                                 color: "header-secondary",
                                 children: m.description
@@ -24897,31 +24902,31 @@
                     })
                 };
                 return (0, a.jsx)(o.Clickable, {
-                    className: l(g.optionCard, g.addOptionCard, {
-                        [g.addFirstOptionCard]: 0 === n.options.length,
-                        [g.singleColumn]: r
+                    className: l(f.optionCard, f.addOptionCard, {
+                        [f.addFirstOptionCard]: 0 === n.options.length,
+                        [f.singleColumn]: r
                     }),
                     onClick: () => {
                         u && n.options.length + 1 === N.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD ? d.default.show({
-                            title: f.default.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_TITLE,
-                            body: f.default.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_DESCRIPTION.format({
+                            title: g.default.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_TITLE,
+                            body: g.default.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_DESCRIPTION.format({
                                 thresholdCount: N.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD
                             }),
-                            confirmText: f.default.Messages.OKAY,
-                            cancelText: f.default.Messages.CANCEL,
+                            confirmText: g.default.Messages.OKAY,
+                            cancelText: g.default.Messages.CANCEL,
                             onConfirm: E
                         }) : E()
                     },
                     children: (0, a.jsxs)("div", {
-                        className: g.optionCardRow,
+                        className: f.optionCardRow,
                         children: [(0, a.jsx)(I.default, {
-                            className: g.plusIcon,
+                            className: f.plusIcon,
                             width: 24,
                             height: 24
                         }), (0, a.jsx)(o.Text, {
                             variant: "text-md/medium",
                             color: "header-primary",
-                            children: f.default.Messages.ONBOARDING_PROMPT_ADD_OPTION
+                            children: g.default.Messages.ONBOARDING_PROMPT_ADD_OPTION
                         })]
                     })
                 })
@@ -24949,8 +24954,8 @@
                 I = s("136278"),
                 S = s("253308"),
                 N = s("653138"),
-                f = s("782340"),
-                g = s("108852");
+                g = s("782340"),
+                f = s("108852");
 
             function A(e) {
                 let {
@@ -24976,33 +24981,33 @@
                     S(A(C))
                 }, [S, A, C]), (0, a.jsxs)("div", {
                     ref: C,
-                    className: i(g.separatorSection, {
-                        [g.dropIndicatorBefore]: null != L && E < L,
-                        [g.dropIndicatorAfter]: null != L && E > L
+                    className: i(f.separatorSection, {
+                        [f.dropIndicatorBefore]: null != L && E < L,
+                        [f.dropIndicatorAfter]: null != L && E > L
                     }),
                     children: [!l && c.length < N.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING ? (0, a.jsxs)(o.Clickable, {
-                        className: g.addPrompt,
+                        className: f.addPrompt,
                         onClick: () => (0, T.editGuildOnboardingPrompts)(t, [...d, (0, N.getEmptyPrompt)(!0)], !1),
                         children: [(0, a.jsx)(_.default, {
-                            className: g.plusIcon,
+                            className: f.plusIcon,
                             width: 20,
                             height: 20
                         }), (0, a.jsx)(o.Text, {
                             variant: "text-md/medium",
                             color: "text-brand",
-                            children: f.default.Messages.ONBOARDING_PROMPT_ADD_PROMPT
+                            children: g.default.Messages.ONBOARDING_PROMPT_ADD_PROMPT
                         })]
                     }) : null, s ? null : (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)("div", {
-                            className: g.divider
+                            className: f.divider
                         }), (0, a.jsx)(o.Heading, {
                             variant: "heading-md/bold",
-                            children: f.default.Messages.ONBOARDING_QUESTIONS_POST_JOIN_HEADER
+                            children: g.default.Messages.ONBOARDING_QUESTIONS_POST_JOIN_HEADER
                         }), (0, a.jsx)(o.Text, {
                             variant: "text-sm/normal",
                             color: "header-secondary",
-                            className: g.subtitle,
-                            children: f.default.Messages.ONBOARDING_QUESTIONS_POST_JOIN_SUBHEADER
+                            className: f.subtitle,
+                            children: g.default.Messages.ONBOARDING_QUESTIONS_POST_JOIN_SUBHEADER
                         })]
                     })]
                 })
@@ -25041,8 +25046,8 @@
                         }));
                     if (s.length > N.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING) {
                         d.default.show({
-                            title: f.default.Messages.ONBOARDING_QUESTIONS_CANNOT_MOVE,
-                            body: f.default.Messages.ONBOARDING_QUESTIONS_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({
+                            title: g.default.Messages.ONBOARDING_QUESTIONS_CANNOT_MOVE,
+                            body: g.default.Messages.ONBOARDING_QUESTIONS_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({
                                 numQuestions: N.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING
                             })
                         });
@@ -25054,12 +25059,12 @@
                         children: [s ? null : (0, a.jsxs)("div", {
                             children: [(0, a.jsx)(o.Heading, {
                                 variant: "heading-md/bold",
-                                children: f.default.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_HEADER
+                                children: g.default.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_HEADER
                             }), (0, a.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                className: g.subtitle,
-                                children: f.default.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_SUBHEADER
+                                className: f.subtitle,
+                                children: g.default.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_SUBHEADER
                             })]
                         }), m.map((e, t) => (0, a.jsx)(S.default, {
                             guild: u,
@@ -25087,16 +25092,16 @@
                             onPromptDragReset: R,
                             onPromptDragComplete: D
                         }, e.id)), L.length < N.MAX_NUM_PROMPTS ? (0, a.jsxs)(o.Clickable, {
-                            className: g.addPrompt,
+                            className: f.addPrompt,
                             onClick: () => (0, T.editGuildOnboardingPrompts)(u, [...L, (0, N.getEmptyPrompt)(!1)], !1),
                             children: [(0, a.jsx)(_.default, {
-                                className: g.plusIcon,
+                                className: f.plusIcon,
                                 width: 20,
                                 height: 20
                             }), (0, a.jsx)(o.Text, {
                                 variant: "text-md/medium",
                                 color: "text-brand",
-                                children: f.default.Messages.ONBOARDING_PROMPT_ADD_PROMPT
+                                children: g.default.Messages.ONBOARDING_PROMPT_ADD_PROMPT
                             })]
                         }) : null]
                     })]
@@ -25134,8 +25139,8 @@
                 I = s("620193"),
                 S = s("423487"),
                 N = s("435076"),
-                f = s("642807"),
-                g = s("682327"),
+                g = s("642807"),
+                f = s("682327"),
                 A = s("653138"),
                 L = s("782340"),
                 m = s("967476");
@@ -25244,7 +25249,7 @@
 
             function h(e) {
                 let t = O(e),
-                    s = (0, g.useAdvancedModeReady)(e);
+                    s = (0, f.useAdvancedModeReady)(e);
                 return t || s
             }
 
@@ -25254,7 +25259,7 @@
                     guildId: d,
                     onEdit: u,
                     disableGoodStatus: c
-                } = e, _ = (0, l.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(d)), T = (0, l.useStateFromStores)([r.default], () => (0, o.getMinimumSetOfDefaultChannelIds)(d, r.default.getDefaultChannelIds(d), r.default.getOnboardingPrompts(d)).length), [, I] = (0, o.useChattableDefaultChannels)(d, _), S = I.length, N = O(d), f = (0, g.useAdvancedModeReady)(d), h = (0, l.useStateFromStores)([r.default], () => r.default.isAdvancedMode(d));
+                } = e, _ = (0, l.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(d)), T = (0, l.useStateFromStores)([r.default], () => (0, o.getMinimumSetOfDefaultChannelIds)(d, r.default.getDefaultChannelIds(d), r.default.getOnboardingPrompts(d)).length), [, I] = (0, o.useChattableDefaultChannels)(d, _), S = I.length, N = O(d), g = (0, f.useAdvancedModeReady)(d), h = (0, l.useStateFromStores)([r.default], () => r.default.isAdvancedMode(d));
                 let R = (t = N, s = h, n = S, i = T, s ? L.default.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS_ADVANCED.format({
                     numDefaultChannels: n,
                     numFromQuestions: i - n
@@ -25273,7 +25278,7 @@
                         className: m.channelIcon
                     }),
                     hasStarted: S > 0 || h,
-                    status: N || f ? c ? "none" : "good" : "required",
+                    status: N || g ? c ? "none" : "good" : "required",
                     onEdit: u
                 })
             }
@@ -25283,8 +25288,8 @@
                     guildId: t,
                     onEdit: s,
                     disableGoodStatus: n
-                } = e, i = (0, l.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(t)), d = (0, l.useStateFromStoresArray)([r.default], () => r.default.getOnboardingPrompts(t)), u = d.length, [c, E] = (0, o.useChannelCoverageForOnboarding)(t, d, i), _ = c.length, I = c.length + E.length, S = _ / I * 100, N = (0, l.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), f = u > 0, g = "none";
-                return f && (S >= 85 && !n ? g = "good" : S < 85 && (g = "warning")), (0, a.jsx)(C, {
+                } = e, i = (0, l.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(t)), d = (0, l.useStateFromStoresArray)([r.default], () => r.default.getOnboardingPrompts(t)), u = d.length, [c, E] = (0, o.useChannelCoverageForOnboarding)(t, d, i), _ = c.length, I = c.length + E.length, S = _ / I * 100, N = (0, l.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), g = u > 0, f = "none";
+                return g && (S >= 85 && !n ? f = "good" : S < 85 && (f = "warning")), (0, a.jsx)(C, {
                     title: N ? L.default.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : L.default.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER,
                     description: L.default.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE.format({
                         numChannels: _,
@@ -25301,8 +25306,8 @@
                         height: 24,
                         className: m.channelIcon
                     }),
-                    hasStarted: f,
-                    status: g,
+                    hasStarted: g,
+                    status: f,
                     onEdit: s
                 })
             }
@@ -25312,9 +25317,9 @@
                     guildId: t,
                     onEdit: s,
                     disableGoodStatus: o
-                } = e, c = (0, l.useStateFromStores)([f.default], () => f.default.getSettings()), E = (0, l.useStateFromStores)([r.default], () => r.default.getEnabled(t)), {
+                } = e, c = (0, l.useStateFromStores)([g.default], () => g.default.getSettings()), E = (0, l.useStateFromStores)([r.default], () => r.default.getEnabled(t)), {
                     serverGuideOptional: _
-                } = (0, u.useOptionalOnboardingHomeAdminExperiment)(t), T = (0, d.isSettingsValid)(c), S = c.enabled, g = n.useCallback(() => {
+                } = (0, u.useOptionalOnboardingHomeAdminExperiment)(t), T = (0, d.isSettingsValid)(c), S = c.enabled, f = n.useCallback(() => {
                     (0, N.enableHomeSettings)(t, !S)
                 }, [t, S]), A = !(0, d.isSettingsEmpty)(c), O = "none";
                 A && (T && !o ? O = "good" : !T && (O = "required"));
@@ -25324,7 +25329,7 @@
                 return A && _ && E && (R = (0, a.jsx)(i.Switch, {
                     className: m.inlineSwitch,
                     checked: S,
-                    onChange: g,
+                    onChange: f,
                     disabled: !T
                 })), (0, a.jsx)(C, {
                     title: L.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_TITLE,
@@ -25371,10 +25376,10 @@
                     return N
                 },
                 useGuildMembers: function() {
-                    return f
+                    return g
                 },
                 useGuildRoleMembers: function() {
-                    return g
+                    return f
                 },
                 useQueryGuildMembers: function() {
                     return A
@@ -25405,7 +25410,7 @@
             let S = 50,
                 N = 1e3;
 
-            function f(e, t) {
+            function g(e, t) {
                 let s = (0, i.useStateFromStoresArray)([r.default], () => {
                         let s = r.default.getMembers(e);
                         return null == t ? s : s.filter(t)
@@ -25436,12 +25441,12 @@
                 }, [s, n, e])
             }
 
-            function g(e, t, s) {
+            function f(e, t, s) {
                 a.useEffect(() => {
                     (0, _.requestMembersForRole)(e, t).catch(s)
                 }, [e, t]);
                 let n = a.useCallback(e => e.roles.includes(t), [t]);
-                return f(e, n)
+                return g(e, n)
             }
 
             function A(e, t) {
@@ -25499,8 +25504,8 @@
                 I = s("531493"),
                 S = s("900938"),
                 N = s("986654"),
-                f = s("462752"),
-                g = s("505002"),
+                g = s("462752"),
+                f = s("505002"),
                 A = s("893448"),
                 L = s("376252"),
                 m = s("728955"),
@@ -25550,7 +25555,7 @@
                     }, [M.id, null == G ? void 0 : G.id]), null == G) return null;
                 switch (R) {
                     case C.GuildSettingsRoleEditSections.DISPLAY:
-                        t = (0, a.jsx)(g.default, {
+                        t = (0, a.jsx)(f.default, {
                             guild: M,
                             role: G,
                             locked: U,
@@ -25568,7 +25573,7 @@
                         });
                         break;
                     case C.GuildSettingsRoleEditSections.VERIFICATIONS:
-                        t = (0, a.jsx)(f.default, {
+                        t = (0, a.jsx)(g.default, {
                             guild: M,
                             role: G,
                             locked: U,
@@ -25657,7 +25662,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return g
+                    return f
                 }
             }), s("222007");
             var a = s("37983"),
@@ -25729,7 +25734,7 @@
                 })
             }
 
-            function f() {
+            function g() {
                 let e = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion),
                     t = n.useMemo(() => [{
                         backgroundClass: I.bannerClubs,
@@ -25825,7 +25830,7 @@
                 })
             }
 
-            function g(e) {
+            function f(e) {
                 let {
                     guild: t,
                     everyoneRole: s,
@@ -25842,7 +25847,7 @@
                         tag: o.FormTitleTags.H2,
                         children: [(0, a.jsxs)("div", {
                             className: I.container,
-                            children: [(0, a.jsx)(f, {}), (0, a.jsx)(o.Heading, {
+                            children: [(0, a.jsx)(g, {}), (0, a.jsx)(o.Heading, {
                                 variant: "heading-xl/semibold",
                                 children: T.default.Messages.ROLE_OVERVIEW_EMPTY_SUBHEADER
                             }), (0, a.jsx)(o.Text, {
@@ -25889,8 +25894,8 @@
                 I = s("726527"),
                 S = s("405645"),
                 N = s("915675"),
-                f = s("957255"),
-                g = s("211248"),
+                g = s("957255"),
+                f = s("211248"),
                 A = s("673220"),
                 L = s("462579"),
                 m = s("433487"),
@@ -25922,7 +25927,7 @@
                     renderHeader: o,
                     headerHeight: u,
                     query: c
-                } = e, _ = (0, d.useStateFromStores)([x.default], () => x.default.getRoleMemberCount(s.id), [s.id]), T = (0, d.useStateFromStores)([f.default], () => f.default.getHighestRole(s), [s]), I = c.trim();
+                } = e, _ = (0, d.useStateFromStores)([x.default], () => x.default.getRoleMemberCount(s.id), [s.id]), T = (0, d.useStateFromStores)([g.default], () => g.default.getHighestRole(s), [s]), I = c.trim();
                 n.useEffect(() => {
                     (0, G.fetchMemberCounts)(s.id)
                 }, [s.id]);
@@ -25933,13 +25938,13 @@
                     }), S.current = !0)
                 }, [c]);
                 let N = n.useMemo(() => i.filter(e => (0, p.filterRole)(e, I)), [i, I]),
-                    g = n.useMemo(() => [...i, l], [i, l]),
+                    f = n.useMemo(() => [...i, l], [i, l]),
                     {
                         draggingId: A,
                         handleDragStart: L,
                         handleDragReset: m,
                         handleDragComplete: C
-                    } = (0, v.default)(g),
+                    } = (0, v.default)(f),
                     O = n.useCallback(e => {
                         var n;
                         let {
@@ -25991,7 +25996,7 @@
                     role: d,
                     guild: E,
                     highestRole: S,
-                    currentPosition: f,
+                    currentPosition: g,
                     memberCount: O,
                     onDragStart: R,
                     onDragReset: D,
@@ -26004,7 +26009,7 @@
                     type: F,
                     item: () => (R(d.id), {
                         id: d.id,
-                        position: f
+                        position: g
                     }),
                     canDrag: () => V && !H,
                     collect: e => ({
@@ -26063,8 +26068,8 @@
                 return (0, a.jsxs)(u.Clickable, {
                     className: i(b.roleRow, {
                         [b.roleRowDisableHover]: G,
-                        [b.containerDragBefore]: null != X && f < X,
-                        [b.containerDragAfter]: null != X && f > X
+                        [b.containerDragBefore]: null != X && g < X,
+                        [b.containerDragAfter]: null != X && g > X
                     }),
                     onClick: q,
                     onContextMenu: J,
@@ -26127,11 +26132,11 @@
                         })
                     }), (0, a.jsxs)("div", {
                         className: i(b.buttonsContainer, B.buttonsSpacing),
-                        children: [(0, a.jsx)(g.default, {
+                        children: [(0, a.jsx)(f.default, {
                             className: i(b.circleButton, b.editButton),
                             tooltip: H ? y.default.Messages.VIEW : y.default.Messages.EDIT,
-                            color: g.CircleIconButtonColors.SECONDARY,
-                            size: g.CircleIconButtonSizes.SIZE_36,
+                            color: f.CircleIconButtonColors.SECONDARY,
+                            size: f.CircleIconButtonSizes.SIZE_36,
                             icon: H ? (0, a.jsx)(L.default, {
                                 width: 20,
                                 height: 20
@@ -26140,11 +26145,11 @@
                                 height: 20
                             }),
                             onClick: q
-                        }), (0, a.jsx)(g.default, {
+                        }), (0, a.jsx)(f.default, {
                             className: b.circleButton,
                             tooltip: y.default.Messages.MORE,
-                            color: g.CircleIconButtonColors.SECONDARY,
-                            size: g.CircleIconButtonSizes.SIZE_36,
+                            color: f.CircleIconButtonColors.SECONDARY,
+                            size: f.CircleIconButtonSizes.SIZE_36,
                             icon: (0, a.jsx)(m.default, {
                                 width: 20,
                                 height: 20
@@ -26207,8 +26212,8 @@
                 I = s("900938"),
                 S = s("986654"),
                 N = s("482763"),
-                f = s("620296"),
-                g = s("500053"),
+                g = s("620296"),
+                f = s("500053"),
                 A = s("53948"),
                 L = s("49111");
 
@@ -26263,14 +26268,14 @@
                     setEditRoleId: m,
                     selectedSection: C,
                     setSelectedSection: O
-                }) : _ ? (0, a.jsx)(g.default, {
+                }) : _ ? (0, a.jsx)(f.default, {
                     setEditRoleId: m,
                     guild: s,
                     everyoneRole: d,
                     otherRoles: c,
                     setSelectedSection: O,
                     refToScroller: t
-                }) : (0, a.jsx)(f.default, {
+                }) : (0, a.jsx)(g.default, {
                     guild: s,
                     everyoneRole: d,
                     setEditRoleId: m
@@ -26298,7 +26303,7 @@
                     everyoneRole: d,
                     otherRoles: u,
                     setSelectedSection: c
-                } = e, [E, _] = n.useState(""), [T, I] = n.useState(o.DEFAULT_HEADER_HEIGHT_PX), S = E.trim(), N = n.useMemo(() => u.filter(e => (0, l.filterRole)(e, S)), [u, S]), f = n.useCallback(() => (0, a.jsx)(r.default, {
+                } = e, [E, _] = n.useState(""), [T, I] = n.useState(o.DEFAULT_HEADER_HEIGHT_PX), S = E.trim(), N = n.useMemo(() => u.filter(e => (0, l.filterRole)(e, S)), [u, S]), g = n.useCallback(() => (0, a.jsx)(r.default, {
                     guild: s,
                     everyoneRole: d,
                     filteredRoles: N,
@@ -26313,7 +26318,7 @@
                     everyoneRole: d,
                     otherRoles: u,
                     setSelectedSection: c,
-                    renderHeader: f,
+                    renderHeader: g,
                     headerHeight: T,
                     query: E
                 })
@@ -26391,7 +26396,7 @@
                     children: [(0, a.jsx)(c.default, {
                         role: s,
                         onClick: d
-                    }), (0, a.jsx)(f, {
+                    }), (0, a.jsx)(g, {
                         guild: t,
                         query: l,
                         setQuery: o
@@ -26426,7 +26431,7 @@
                 })
             }
 
-            function f(e) {
+            function g(e) {
                 let {
                     guild: t,
                     query: s,
@@ -26508,7 +26513,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return g
+                    return f
                 }
             });
             var a = s("37983");
@@ -26527,11 +26532,11 @@
                 I = s("49111"),
                 S = s("944305"),
                 N = s("782340"),
-                f = s("195072"),
-                g = function(e) {
+                g = s("195072"),
+                f = function(e) {
                     let {
                         guild: t,
-                        disabled: g,
+                        disabled: f,
                         role: A
                     } = e, L = (0, i.default)(), m = (0, u.useRoleIconForPreview)(t.id, A), {
                         analyticsLocations: C
@@ -26566,7 +26571,7 @@
                             perks: (0, S.customRoleIconUpsellPerks)()
                         }))
                     }, D = (0, a.jsx)(d.default, {
-                        className: f.availabilityIndicator,
+                        className: g.availabilityIndicator,
                         guild: t,
                         guildFeature: I.GuildFeatures.ROLE_ICONS,
                         tooltipPosition: "top",
@@ -26577,45 +26582,45 @@
                         })
                     });
                     return (0, a.jsxs)(l.FormItem, {
-                        className: f.container,
+                        className: g.container,
                         children: [(0, a.jsxs)(l.FormTitle, {
-                            className: f.formTitle,
+                            className: g.formTitle,
                             children: [(0, a.jsx)("div", {
                                 children: N.default.Messages.FORM_LABEL_ROLE_ICON
                             }), D]
                         }), (0, a.jsx)(l.FormText, {
-                            className: f.description,
+                            className: g.description,
                             children: N.default.Messages.ROLE_ICON_HELP
                         }), (0, a.jsxs)("div", {
-                            className: f.rolePreviewArea,
+                            className: g.rolePreviewArea,
                             children: [(0, a.jsx)("div", {
-                                className: f.previewContainer,
+                                className: g.previewContainer,
                                 children: null != m ? (0, a.jsx)(_.default, {
                                     ...m,
-                                    className: f.roleIconPreview,
+                                    className: g.roleIconPreview,
                                     enableTooltip: !1
                                 }) : (0, a.jsx)(E.default, {
                                     width: 24,
                                     height: 24,
-                                    className: f.preview
+                                    className: g.preview
                                 })
                             }), (0, a.jsx)(l.Button, {
-                                className: f.button,
+                                className: g.button,
                                 color: (0, n.isThemeLight)(L) ? l.Button.Colors.PRIMARY : l.Button.Colors.WHITE,
                                 look: l.Button.Looks.OUTLINED,
                                 onClick: () => t.hasFeature(I.GuildFeatures.ROLE_ICONS) ? O() : R({
                                     object: I.AnalyticsObjects.UPLOAD_IMAGE
                                 }),
-                                disabled: g,
+                                disabled: f,
                                 children: N.default.Messages.ROLE_ICON_CHOOSE_IMAGE
                             }), null != m ? (0, a.jsx)(l.Button, {
-                                className: f.button,
+                                className: g.button,
                                 color: (0, n.isThemeLight)(L) ? l.Button.Colors.BLACK : l.Button.Colors.TRANSPARENT,
                                 look: l.Button.Looks.BLANK,
                                 onClick: () => {
                                     (0, T.updateRoleIcon)(A.id, null, null)
                                 },
-                                disabled: g,
+                                disabled: f,
                                 children: N.default.Messages.REMOVE_ICON
                             }) : null]
                         })]
@@ -26644,9 +26649,9 @@
                 I = s("49111"),
                 S = s("214509"),
                 N = s("782340"),
-                f = s("817760");
+                g = s("817760");
 
-            function g(e) {
+            function f(e) {
                 var t, s;
                 let n, {
                     theme: l,
@@ -26658,12 +26663,12 @@
                 if ((null == E ? void 0 : E.application) != null) o(null != E.application.bot, "bot is null"), n = (0, a.jsx)(c.default, {
                     size: u.AvatarSizes.SIZE_24,
                     user: E.application.bot,
-                    className: f.verifiedIcon
+                    className: g.verifiedIcon
                 });
                 else if (null != r) {
                     let e = (0, d.isThemeLight)(l) ? r.icon.lightSVG : r.icon.darkSVG;
                     n = (0, a.jsx)("img", {
-                        className: f.verifiedIcon,
+                        className: g.verifiedIcon,
                         src: e,
                         alt: N.default.Messages.IMG_ALT_LOGO.format({
                             name: r.name
@@ -26671,10 +26676,10 @@
                     })
                 }
                 return (0, a.jsxs)("div", {
-                    className: i(f.verifiedRow, (null == r ? void 0 : r.hasMetadata) === !0 || (null == E ? void 0 : E.role_connections_metadata) != null && (null == E ? void 0 : E.role_connections_metadata.length) > 0 ? f.verifiedRowWithMetadata : null),
+                    className: i(g.verifiedRow, (null == r ? void 0 : r.hasMetadata) === !0 || (null == E ? void 0 : E.role_connections_metadata) != null && (null == E ? void 0 : E.role_connections_metadata.length) > 0 ? g.verifiedRowWithMetadata : null),
                     children: [n, (0, a.jsx)(u.Text, {
                         variant: "text-md/medium",
-                        className: f.verifiedText,
+                        className: g.verifiedText,
                         children: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_ACCOUNT.format({
                             platformName: null !== (s = null == r ? void 0 : r.name) && void 0 !== s ? s : null == E ? void 0 : null === (t = E.application) || void 0 === t ? void 0 : t.name
                         })
@@ -26684,11 +26689,11 @@
                         look: u.Button.Looks.BLANK,
                         onClick: _,
                         disabled: I,
-                        className: f.closeButton,
+                        className: g.closeButton,
                         children: (0, a.jsx)(u.Tooltip, {
                             text: N.default.Messages.REMOVE,
                             children: e => (0, a.jsx)(T.default, {
-                                className: f.closeIcon,
+                                className: g.closeIcon,
                                 ...e
                             })
                         })
@@ -26707,15 +26712,15 @@
                     applicationId: E,
                     metadataField: _,
                     operator: T
-                } = e, I = null !== (s = null == r ? void 0 : r.index) && void 0 !== s ? s : -1, N = null != T ? T : S.OperatorTypes.GREATER_THAN, g = Math.round(Number(null !== (l = null == r ? void 0 : null === (t = r.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== l ? l : 0));
-                N === S.OperatorTypes.GREATER_THAN ? g = Math.max(1, g + 1) : N === S.OperatorTypes.LESS_THAN && (g = Math.max(0, g - 1));
-                let [A, L] = n.useState(g.toString());
+                } = e, I = null !== (s = null == r ? void 0 : r.index) && void 0 !== s ? s : -1, N = null != T ? T : S.OperatorTypes.GREATER_THAN, f = Math.round(Number(null !== (l = null == r ? void 0 : null === (t = r.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== l ? l : 0));
+                N === S.OperatorTypes.GREATER_THAN ? f = Math.max(1, f + 1) : N === S.OperatorTypes.LESS_THAN && (f = Math.max(0, f - 1));
+                let [A, L] = n.useState(f.toString());
                 return n.useEffect(() => {
                     L(A)
                 }, [A]), (0, a.jsx)(u.TextInput, {
                     inputRef: i,
                     type: "number",
-                    className: f.numericalRuleInput,
+                    className: g.numericalRuleInput,
                     size: u.TextInput.Sizes.MINI,
                     value: A,
                     onChange: e => {
@@ -26750,22 +26755,22 @@
                     locked: d
                 } = e;
                 return (0, a.jsxs)("div", {
-                    className: f.ruleContainer,
+                    className: g.ruleContainer,
                     children: [(0, a.jsxs)("div", {
                         children: [(0, a.jsx)(u.Text, {
                             variant: "text-md/bold",
-                            className: f.ruleItemHeader,
+                            className: g.ruleItemHeader,
                             children: t
                         }), (0, a.jsx)("div", {
-                            className: f.numericalRuleSubItemContainer,
+                            className: g.numericalRuleSubItemContainer,
                             children: (0, a.jsx)(u.Text, {
                                 variant: "text-md/normal",
-                                className: f.numericalRuleSubText,
+                                className: g.numericalRuleSubText,
                                 children: s
                             })
                         })]
                     }), (0, a.jsx)(u.Switch, {
-                        className: f.ruleItemSwitch,
+                        className: g.ruleItemSwitch,
                         checked: (null == l ? void 0 : l.configuration.value) === "1",
                         onChange: e => {
                             var t, s;
@@ -26804,32 +26809,32 @@
                     platform: o,
                     operator: _,
                     applicationId: d
-                }, i), g = null != l ? l.format({
+                }, i), f = null != l ? l.format({
                     metadataHook: () => N
                 }) : (0, a.jsxs)(a.Fragment, {
                     children: [N, (0, a.jsx)("span", {
-                        className: f.fieldText,
+                        className: g.fieldText,
                         children: s
                     })]
                 });
                 return (0, a.jsxs)("div", {
-                    className: f.ruleContainer,
+                    className: g.ruleContainer,
                     children: [(0, a.jsxs)("div", {
-                        className: f.ruleContainerLabel,
+                        className: g.ruleContainerLabel,
                         children: [(0, a.jsx)(u.Text, {
                             variant: "text-md/bold",
-                            className: f.ruleItemHeader,
+                            className: g.ruleItemHeader,
                             children: t
                         }), (0, a.jsx)("div", {
-                            className: f.numericalRuleSubItemContainer,
+                            className: g.numericalRuleSubItemContainer,
                             children: (0, a.jsx)(u.Text, {
                                 variant: "text-md/normal",
-                                className: f.numericalRuleSubText,
-                                children: g
+                                className: g.numericalRuleSubText,
+                                children: f
                             })
                         })]
                     }), (0, a.jsx)(u.Switch, {
-                        className: f.ruleItemSwitch,
+                        className: g.ruleItemSwitch,
                         checked: I,
                         onChange: e => {
                             var t, s, a;
@@ -27243,8 +27248,8 @@
                         })
                 }
                 return (0, a.jsxs)("div", {
-                    className: f.container,
-                    children: [(0, a.jsx)(g, {
+                    className: g.container,
+                    children: [(0, a.jsx)(f, {
                         theme: r,
                         platform: u,
                         integration: d,
@@ -27276,8 +27281,8 @@
                 I = s("423487"),
                 S = s("701909"),
                 N = s("36402"),
-                f = s("766419"),
-                g = s("531493"),
+                g = s("766419"),
+                f = s("531493"),
                 A = s("50693"),
                 L = s("609542"),
                 m = s("91816"),
@@ -27340,9 +27345,9 @@
                 } = (0, m.useScrolledToTop)(), P = (0, d.useStateFromStores)([N.default], () => {
                     var e;
                     return null === (e = N.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[s.id]
-                }, [s.id, t.id]), y = (0, d.useStateFromStoresArray)([g.default], () => {
+                }, [s.id, t.id]), y = (0, d.useStateFromStoresArray)([f.default], () => {
                     var e;
-                    return null !== (e = g.default.getEditedRoleConnectionConfigurationsMap().get(s.id)) && void 0 !== e ? e : []
+                    return null !== (e = f.default.getEditedRoleConnectionConfigurationsMap().get(s.id)) && void 0 !== e ? e : []
                 }), b = y.length > 1 ? E.ConnectionConfigurationRuleOperator.OR : E.ConnectionConfigurationRuleOperator.AND, B = n.useMemo(() => b === E.ConnectionConfigurationRuleOperator.OR ? y.flat() : null != y && y.length > 0 ? y[0] : [], [b, y]), F = n.useMemo(() => new Set(B.map(e => e.connectionType)), [B]);
 
                 function H(e) {
@@ -27354,7 +27359,7 @@
                         applicationId: t,
                         operator: void 0,
                         value: void 0
-                    }), (0, f.updateRoleConnectionConfigurations)(s.id, x(a, b))
+                    }), (0, g.updateRoleConnectionConfigurations)(s.id, x(a, b))
                 }
 
                 function V() {
@@ -27386,7 +27391,7 @@
                             children: [(0, a.jsx)(T.default, {}), R.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION]
                         })
                     })), k = (0, a.jsxs)(a.Fragment, {
-                        children: [(w = () => (0, f.updateRoleConnectionConfigurations)(s.id, []), Y = l, (0, a.jsxs)(a.Fragment, {
+                        children: [(w = () => (0, g.updateRoleConnectionConfigurations)(s.id, []), Y = l, (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsxs)("div", {
                                 className: D.headerTitleContainer,
                                 children: [(0, a.jsx)("div", {
@@ -27429,7 +27434,7 @@
                                     "aria-labelledby": G
                                 })
                             })
-                        }(l, s.id, b, B, (e, t) => (0, f.updateRoleConnectionConfigurations)(s.id, x(e, t))), function(e, t, s, n, l) {
+                        }(l, s.id, b, B, (e, t) => (0, g.updateRoleConnectionConfigurations)(s.id, x(e, t))), function(e, t, s, n, l) {
                             function i(s, a) {
                                 let n = [];
                                 for (let t of e) n.push({
@@ -27482,7 +27487,7 @@
                                     integrations: l
                                 }, e[0].configuration.connectionType + ":" + e[0].index))
                             })
-                        }(B, e => (0, f.updateRoleConnectionConfigurations)(s.id, x(e, b)), l, s.id, o), e]
+                        }(B, e => (0, g.updateRoleConnectionConfigurations)(s.id, x(e, b)), l, s.id, o), e]
                     })
                 }
                 return (0, a.jsx)(u.AdvancedScrollerAuto, {
@@ -27540,8 +27545,8 @@
                 I = s("291655"),
                 S = s("766274"),
                 N = s("957255"),
-                f = s("439932"),
-                g = s("766419"),
+                g = s("439932"),
+                f = s("766419"),
                 A = s("50693"),
                 L = s("243863"),
                 m = s("91816"),
@@ -27558,7 +27563,7 @@
                     createPromise: () => s.el("282585").then(s.bind(s, "282585")),
                     webpackId: "282585"
                 }),
-                v = o.debounce((e, t) => (0, g.updateRoleName)(e, t), 200);
+                v = o.debounce((e, t) => (0, f.updateRoleName)(e, t), 200);
 
             function j(e) {
                 let {
@@ -27601,7 +27606,7 @@
                         disabled: s,
                         onChange: e => {
                             var s, a;
-                            return s = t, a = e, void(s.color !== a && (a !== R.DEFAULT_ROLE_COLOR || 0 !== s.color) && (a === R.DEFAULT_ROLE_COLOR && (a = 0), (0, g.updateRoleColor)(s.id, a)))
+                            return s = t, a = e, void(s.color !== a && (a !== R.DEFAULT_ROLE_COLOR || 0 !== s.color) && (a === R.DEFAULT_ROLE_COLOR && (a = 0), (0, f.updateRoleColor)(s.id, a)))
                         },
                         customPickerPosition: "right"
                     }, t.id)]
@@ -27642,30 +27647,30 @@
                         src: p,
                         name: i.name
                     },
-                    g = (0, E.useRoleIconForPreview)(r, i);
+                    f = (0, E.useRoleIconForPreview)(r, i);
                 return (0, a.jsx)(u.FocusBlock, {
                     children: (0, a.jsxs)("div", {
                         className: M.previewContainer,
                         "aria-hidden": !0,
                         children: [(0, a.jsx)("div", {
-                            className: (0, f.getThemeClass)(R.ThemeTypes.LIGHT),
+                            className: (0, g.getThemeClass)(R.ThemeTypes.LIGHT),
                             children: (0, a.jsx)("div", {
                                 className: M.messageContainer,
                                 children: (0, a.jsx)(I.default, {
                                     author: d,
                                     message: o,
-                                    roleIcon: null != g ? g : N,
+                                    roleIcon: null != f ? f : N,
                                     isGroupStart: !0
                                 })
                             })
                         }), (0, a.jsx)("div", {
-                            className: (0, f.getThemeClass)(R.ThemeTypes.DARK),
+                            className: (0, g.getThemeClass)(R.ThemeTypes.DARK),
                             children: (0, a.jsx)("div", {
                                 className: M.messageContainer,
                                 children: (0, a.jsx)(I.default, {
                                     author: d,
                                     message: o,
-                                    roleIcon: null != g ? g : c,
+                                    roleIcon: null != f ? f : c,
                                     isGroupStart: !0
                                 })
                             })
@@ -27683,7 +27688,7 @@
                     children: [(0, a.jsx)(u.FormSwitch, {
                         disabled: s,
                         value: t.hoist,
-                        onChange: e => (0, g.toggleRoleSettings)(t.id, e, t.mentionable),
+                        onChange: e => (0, f.toggleRoleSettings)(t.id, e, t.mentionable),
                         hideBorder: !0,
                         children: D.default.Messages.FORM_LABEL_HOIST_DESCRIPTION
                     }), (0, a.jsx)(u.FormDivider, {
@@ -27691,7 +27696,7 @@
                     }), (0, a.jsx)(u.FormSwitch, {
                         disabled: s,
                         value: t.mentionable,
-                        onChange: e => (0, g.toggleRoleSettings)(t.id, t.hoist, e),
+                        onChange: e => (0, f.toggleRoleSettings)(t.id, t.hoist, e),
                         note: D.default.Messages.FORM_LABEL_MENTIONABLE_DESCRIPTION,
                         hideBorder: !0,
                         children: D.default.Messages.FORM_LABEL_MENTIONABLE.format()
@@ -27807,16 +27812,16 @@
                     guild: t,
                     role: S,
                     selectedSection: N,
-                    setSelectedSection: f
-                } = e, g = n.useCallback(e => {
-                    f(e)
-                }, [f]), A = (0, l.useStateFromStores)([c.default], () => {
+                    setSelectedSection: g
+                } = e, f = n.useCallback(e => {
+                    g(e)
+                }, [g]), A = (0, l.useStateFromStores)([c.default], () => {
                     var e;
                     return null === (e = c.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[S.id]
                 }, [S.id, t.id]), L = t.id === S.id, m = (0, E.default)(S);
                 n.useEffect(() => {
-                    L && f(_.GuildSettingsRoleEditSections.PERMISSIONS)
-                }, [L, f]);
+                    L && g(_.GuildSettingsRoleEditSections.PERMISSIONS)
+                }, [L, g]);
                 let C = (0, o.useHasGuildRoleItems)(t, S);
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)("div", {
@@ -27854,7 +27859,7 @@
                         selectedItem: N,
                         type: "top",
                         look: "brand",
-                        onItemSelect: g,
+                        onItemSelect: f,
                         children: [(0, a.jsx)(i.TabBar.Item, {
                             className: I.tabBarItem,
                             id: _.GuildSettingsRoleEditSections.DISPLAY,
@@ -27903,8 +27908,8 @@
                 I = s("555158"),
                 S = s("810567"),
                 N = s("381546"),
-                f = s("155207"),
-                g = s("599110"),
+                g = s("155207"),
+                f = s("599110"),
                 A = s("36402"),
                 L = s("592407"),
                 m = s("531493"),
@@ -27978,7 +27983,7 @@
                     }
                 }
 
-                function f(e) {
+                function g(e) {
                     let n = T.default.getUser(t.id);
                     null != n && (0, d.openContextMenuLazy)(e, async () => {
                         let {
@@ -28007,7 +28012,7 @@
                         children: e => (0, a.jsxs)(o.Clickable, {
                             ...e,
                             className: x.memberRow,
-                            onContextMenu: f,
+                            onContextMenu: g,
                             children: [(0, a.jsx)(R.default, {
                                 className: x.memberDetails,
                                 avatarURL: t.avatarURL,
@@ -28047,7 +28052,7 @@
                     className: p.contentWidth,
                     children: (0, a.jsxs)("div", {
                         className: i(x.memberRow, x.emptyRowContainer),
-                        children: [(0, a.jsx)(f.default, {}), (0, a.jsx)(o.Text, {
+                        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(o.Text, {
                             className: x.emptyRowText,
                             variant: "text-sm/semibold",
                             color: "text-muted",
@@ -28149,11 +28154,11 @@
                 } = (0, O.default)(0), {
                     scrolledToTop: S,
                     handleScroll: N
-                } = (0, h.useScrolledToTop)(), f = l.managed || d, L = (0, C.useGuildRoleMembers)(t.id, l.id), m = (0, r.useStateFromStores)([A.default], () => {
+                } = (0, h.useScrolledToTop)(), g = l.managed || d, L = (0, C.useGuildRoleMembers)(t.id, l.id), m = (0, r.useStateFromStores)([A.default], () => {
                     var e, s;
                     return null !== (s = null === (e = A.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[l.id]) && void 0 !== s ? s : 0
                 }), R = m > L.length, U = () => {
-                    g.default.track(M.AnalyticEvents.OPEN_MODAL, {
+                    f.default.track(M.AnalyticEvents.OPEN_MODAL, {
                         type: "Add Role Members",
                         location_page: "Role Settings",
                         location_section: "Members"
@@ -28187,7 +28192,7 @@
                                 }), (0, a.jsx)(y, {
                                     query: c,
                                     setQuery: E,
-                                    locked: f,
+                                    locked: g,
                                     handleAddClick: U
                                 }), R ? (0, a.jsx)(I.default, {
                                     className: x.searchWarning,
@@ -28201,7 +28206,7 @@
                         query: c,
                         guildId: t.id,
                         roleId: l.id,
-                        locked: f,
+                        locked: g,
                         onScroll: N,
                         roleMembers: L,
                         handleAddClick: U
@@ -28231,8 +28236,8 @@
                 I = s("465305"),
                 S = s("991170"),
                 N = s("766419"),
-                f = s("507453"),
-                g = s("50693"),
+                g = s("507453"),
+                f = s("50693"),
                 A = s("91816"),
                 L = s("449804"),
                 m = s("53948"),
@@ -28295,7 +28300,7 @@
                 } = e;
                 if (0 === n.length) return (0, a.jsxs)("div", {
                     className: h.noResultsContainer,
-                    children: [(0, a.jsx)(f.default, {
+                    children: [(0, a.jsx)(g.default, {
                         className: h.noResults
                     }), (0, a.jsx)(d.Text, {
                         variant: "text-sm/normal",
@@ -28346,8 +28351,8 @@
                     })
                 })).filter(e => e.permissions.length > 0), {
                     headerHeight: N,
-                    headerRef: f
-                } = (0, g.default)(0), {
+                    headerRef: g
+                } = (0, f.default)(0), {
                     scrolledToTop: D,
                     handleScroll: G
                 } = (0, A.useScrolledToTop)(), x = n.useRef(!1);
@@ -28367,7 +28372,7 @@
                             className: i(R.header, R.stickyHeader, {
                                 [R.stickyHeaderElevated]: !D
                             }),
-                            ref: f,
+                            ref: g,
                             children: [(0, a.jsx)(A.default, {
                                 guild: t,
                                 role: s,
@@ -28421,8 +28426,8 @@
                 I = s("957255"),
                 S = s("730988"),
                 N = s("246053"),
-                f = s("151185"),
-                g = s("531493"),
+                g = s("151185"),
+                f = s("531493"),
                 A = s("476324"),
                 L = s("983521"),
                 m = s("91816"),
@@ -28441,8 +28446,8 @@
                         selectedItem: I,
                         onClick: S,
                         currentPosition: N,
-                        onDragStart: f,
-                        onDragReset: g,
+                        onDragStart: g,
+                        onDragReset: f,
                         onDragComplete: L,
                         roleStyle: m
                     } = e,
@@ -28452,7 +28457,7 @@
                     G = (null === (t = E.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
                     [, x] = (0, r.useDrag)({
                         type: D,
-                        item: () => (f(E.id), {
+                        item: () => (g(E.id), {
                             id: E.id,
                             position: N
                         }),
@@ -28460,7 +28465,7 @@
                         end: (e, t) => {
                             let s = t.getDropResult();
                             if (null == s) {
-                                g();
+                                f();
                                 return
                             }
                             L(s.roleId)
@@ -28538,7 +28543,7 @@
                     currentRoleId: s,
                     setCurrentRoleId: l,
                     setSelectedSection: r
-                } = e, o = (0, d.useStateFromStores)([g.default], () => g.default.roles), c = (0, d.useStateFromStores)([I.default], () => I.default.getHighestRole(t)), T = (0, d.useStateFromStores)([_.default], () => _.default.roleStyle), [A, O] = n.useState(o.length), {
+                } = e, o = (0, d.useStateFromStores)([f.default], () => f.default.roles), c = (0, d.useStateFromStores)([I.default], () => I.default.getHighestRole(t)), T = (0, d.useStateFromStores)([_.default], () => _.default.roleStyle), [A, O] = n.useState(o.length), {
                     scrolledToTop: D,
                     handleScroll: G
                 } = (0, m.useScrolledToTop)(), {
@@ -28591,7 +28596,7 @@
                                     className: R.addRole,
                                     ...e,
                                     onClick: P,
-                                    children: (0, a.jsx)(f.default, {
+                                    children: (0, a.jsx)(g.default, {
                                         width: 20,
                                         height: 20
                                     })
@@ -28973,8 +28978,8 @@
                 I = s("772871"),
                 S = s("900084"),
                 N = s("860170"),
-                f = s("766829"),
-                g = s("994428"),
+                g = s("766829"),
+                f = s("994428"),
                 A = s("782340"),
                 L = s("642622");
 
@@ -28987,10 +28992,10 @@
                     O = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentPage());
                 if (n.useEffect(() => {
                         (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.COMMUNITY_GUILD_SETTINGS_SAFETY, {
-                            dismissAction: g.ContentDismissActionType.AUTO
+                            dismissAction: f.ContentDismissActionType.AUTO
                         })
                     }, []), null == C) return null;
-                let h = (0, f.getGuildSafetySettings)(C);
+                let h = (0, g.getGuildSafetySettings)(C);
                 switch (O) {
                     case I.GuildSettingsSafetyPage.OVERVIEW:
                         t = (0, a.jsx)(S.default, {
@@ -29153,22 +29158,22 @@
                 (0, i.useSyncAutomodRulesEffect)(t.id);
                 let N = (0, r.useAvailableTriggerTypes)(t.id),
                     {
-                        rulesByTriggerType: f
+                        rulesByTriggerType: g
                     } = (0, i.useAutomodRulesList)(t.id),
                     {
-                        numEnabledRules: g,
+                        numEnabledRules: f,
                         numRules: A
                     } = n.useMemo(() => {
                         let e = 0,
                             t = 0;
-                        if (null == f) return {
+                        if (null == g) return {
                             numEnabledRules: e,
                             numRules: t
                         };
                         let s = Object.values(N).flat();
                         return s.forEach(s => {
                             var a;
-                            let n = null === (a = f[s]) || void 0 === a ? void 0 : a.filter(d.isNotNullish);
+                            let n = null === (a = g[s]) || void 0 === a ? void 0 : a.filter(d.isNotNullish);
                             if (null == n || 0 === n.length) {
                                 t++;
                                 return
@@ -29180,7 +29185,7 @@
                             numEnabledRules: e,
                             numRules: t
                         }
-                    }, [N, f]),
+                    }, [N, g]),
                     L = (0, E.getGuildSafetySettings)(t),
                     m = L[c.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION],
                     C = L[c.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION],
@@ -29219,7 +29224,7 @@
                                 icon: s("799036"),
                                 title: _.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
                                 subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-                                    enabled: g,
+                                    enabled: f,
                                     total: A
                                 }),
                                 page: c.GuildSettingsSafetyPage.AUTOMOD
@@ -29294,10 +29299,10 @@
                     I = s.mfaLevel,
                     S = (0, l.useStateFromStores)([o.default], () => null != s && o.default.can(E.Permissions.MANAGE_GUILD, s), [s]),
                     N = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
-                    f = s.isOwner(N),
-                    g = null == N ? void 0 : N.mfaEnabled,
+                    g = s.isOwner(N),
+                    f = null == N ? void 0 : N.mfaEnabled,
                     A = I === E.MFALevels.ELEVATED,
-                    L = f && g,
+                    L = g && f,
                     m = (0, n.throttle)(async e => {
                         L && await u.default.updateMFALevel({
                             guildId: s.id,
@@ -29306,7 +29311,7 @@
                         })
                     }, 1e3);
                 if (!S) return null;
-                !L && (t = f ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_DETAIL.format({
+                !L && (t = g ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_DETAIL.format({
                     settingsHook: () => r.default.open(E.UserSettingsSections.ACCOUNT)
                 }) : _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_DETAIL);
                 let C = s.hasFeature(E.GuildFeatures.DISCOVERABLE);
@@ -29324,7 +29329,7 @@
                             children: [_.default.Messages.GUILD_SETTINGS_SAFETY_MFA_BODY, " ", t]
                         })]
                     }), !L || A && C ? (0, a.jsx)(i.Tooltip, {
-                        text: C ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_DISCOVERABLE_DISABLED_TOOLTIP : f ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_TOOLTIP : _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_TOOLTIP,
+                        text: C ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_DISCOVERABLE_DISABLED_TOOLTIP : g ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_TOOLTIP : _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_TOOLTIP,
                         children: e => (0, a.jsx)(c.default, {
                             checked: A,
                             disabled: !0,
@@ -29377,7 +29382,7 @@
                         ...n,
                         permissions: i.default.remove(n.permissions, e)
                     }
-                })), f = (0, a.jsxs)(a.Fragment, {
+                })), g = (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)("div", {
                         className: I.itemContent,
                         children: [(0, a.jsx)(r.Heading, {
@@ -29408,7 +29413,7 @@
                     children: e => (0, a.jsx)("div", {
                         className: l(I.simpleItemWrapper, I.disabled),
                         ...e,
-                        children: f
+                        children: g
                     })
                 }) : (0, a.jsx)(r.Clickable, {
                     onClick: () => {
@@ -29423,10 +29428,10 @@
                         })
                     },
                     className: l(I.simpleItemWrapper, I.clickable),
-                    children: f
+                    children: g
                 }) : (0, a.jsx)("div", {
                     className: I.simpleItemWrapper,
-                    children: f
+                    children: g
                 })
             }
         },
@@ -29455,8 +29460,8 @@
                 I = s("567062"),
                 S = s("42203"),
                 N = s("923959"),
-                f = s("957255"),
-                g = s("27618"),
+                g = s("957255"),
+                f = s("27618"),
                 A = s("697218"),
                 L = s("593195"),
                 m = s("592407"),
@@ -29471,8 +29476,8 @@
                     isExpanded: s,
                     selectedChannelId: l,
                     className: r
-                } = e, I = (0, _.useCanEnableRaidAlerts)(t), N = t.canHaveRaidActivityAlerts(), [f, g] = n.useState(N), A = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(l), [l]), m = (0, c.default)(A), D = async () => {
-                    g(!f);
+                } = e, I = (0, _.useCanEnableRaidAlerts)(t), N = t.canHaveRaidActivityAlerts(), [g, f] = n.useState(N), A = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(l), [l]), m = (0, c.default)(A), D = async () => {
+                    f(!g);
                     try {
                         var e;
                         await (0, E.setGuildRaidAlerts)(t, !N);
@@ -29488,7 +29493,7 @@
                             (0, u.trackWithMetadata)(O.AnalyticEvents.GUILD_RAID_ALERTS_SETUP, e)
                         }
                     } catch (e) {
-                        (0, d.showToast)((0, d.createToast)(h.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, d.ToastType.FAILURE)), g(!N)
+                        (0, d.showToast)((0, d.createToast)(h.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, d.ToastType.FAILURE)), f(!N)
                     }
                 };
                 return (0, a.jsxs)("div", {
@@ -29513,7 +29518,7 @@
                             }), " ", m]
                         })]
                     }), (0, a.jsx)(C.default, {
-                        checked: f,
+                        checked: g,
                         onChange: D,
                         disabled: !I || null == l
                     })]
@@ -29527,20 +29532,20 @@
                     selectedChannelId: n,
                     setSelectedChannelId: l,
                     className: E
-                } = e, _ = null !== (t = s.safetyAlertsChannelId) && void 0 !== t ? t : null, I = (0, o.useStateFromStoresArray)([N.default, A.default, g.default, f.default], () => {
+                } = e, _ = null !== (t = s.safetyAlertsChannelId) && void 0 !== t ? t : null, I = (0, o.useStateFromStoresArray)([N.default, A.default, f.default, g.default], () => {
                     let e = N.default.getChannels(s.id),
                         t = e[0, N.GUILD_SELECTABLE_CHANNELS_KEY].filter(e => {
                             let {
                                 channel: t
                             } = e;
-                            return t.type === r.ChannelTypes.GUILD_TEXT && f.default.can(O.Permissions.SEND_MESSAGES, t)
+                            return t.type === r.ChannelTypes.GUILD_TEXT && g.default.can(O.Permissions.SEND_MESSAGES, t)
                         }).map(e => {
                             let {
                                 channel: t
                             } = e;
                             return {
                                 value: t.id,
-                                label: (0, c.computeChannelName)(t, A.default, g.default, !0)
+                                label: (0, c.computeChannelName)(t, A.default, f.default, !0)
                             }
                         });
                     return null != _ ? t : [...t]
@@ -29817,8 +29822,8 @@
                 I = s("462579"),
                 S = s("641892"),
                 N = s("690343"),
-                f = s("782340"),
-                g = s("642622"),
+                g = s("782340"),
+                f = s("642622"),
                 A = s("628652");
 
             function L(e) {
@@ -29842,13 +29847,13 @@
                         } = await s.el("77078").then(s.bind(s, "77078"));
                         return s => (0, a.jsx)(t, {
                             ...s,
-                            header: f.default.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
-                            cancelText: f.default.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
-                            confirmText: f.default.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
+                            header: g.default.Messages.MEMBER_VERIFICATION_WARNING_TITLE,
+                            cancelText: g.default.Messages.MEMBER_VERIFICATION_WARNING_CANCEL,
+                            confirmText: g.default.Messages.MEMBER_VERIFICATION_WARNING_CONFIRM,
                             onConfirm: () => T(e),
                             children: (0, a.jsx)(o.Text, {
                                 variant: "text-md/normal",
-                                children: f.default.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
+                                children: g.default.Messages.MEMBER_VERIFICATION_AUTOMATIC_WARNING
                             })
                         })
                     }) : T(e)
@@ -29865,27 +29870,27 @@
                     })
                 };
                 return (0, a.jsxs)("div", {
-                    className: g.itemWrapper,
+                    className: f.itemWrapper,
                     children: [(0, a.jsxs)("div", {
-                        className: g.itemContent,
+                        className: f.itemContent,
                         children: [(0, a.jsx)(o.Heading, {
                             variant: "text-md/semibold",
                             color: "header-primary",
-                            children: f.default.Messages.GUILD_SETTINGS_SAFETY_RULES_SCREENING
+                            children: g.default.Messages.GUILD_SETTINGS_SAFETY_RULES_SCREENING
                         }), (l || i && !c) && (0, a.jsx)(o.Text, {
                             variant: "text-sm/medium",
                             color: "header-secondary",
-                            children: f.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
+                            children: g.default.Messages.GUILD_SETTINGS_SAFETY_RULES_EDIT_SUBTITLE
                         }), !l && (0, a.jsx)("div", {
                             className: A.pillRow,
                             children: r && (0, a.jsxs)(o.Text, {
                                 color: "interactive-normal",
                                 variant: "text-xs/medium",
-                                className: g.valuePill,
+                                className: f.valuePill,
                                 children: [(0, a.jsx)(S.default, {
                                     width: 16,
                                     height: 16
-                                }), f.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
+                                }), g.default.Messages.GUILD_SETTINGS_SAFETY_RULES_FORM_PILL]
                             })
                         })]
                     }), (0, a.jsx)("div", {
@@ -29899,7 +29904,7 @@
                                 },
                                 children: (0, a.jsx)(o.Tooltip, {
                                     tooltipContentClassName: A.tooltip,
-                                    text: f.default.Messages.PREVIEW,
+                                    text: g.default.Messages.PREVIEW,
                                     children: e => (0, a.jsx)(I.default, {
                                         height: 24,
                                         width: 24,
@@ -29913,7 +29918,7 @@
                             })]
                         }) : (0, a.jsx)(o.Button, {
                             size: o.Button.Sizes.SMALL,
-                            children: f.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
+                            children: g.default.Messages.GUILD_AUTOMOD_RULE_SETUP_BUTTON
                         })
                     })]
                 })
@@ -29923,7 +29928,7 @@
                 var t;
                 let {
                     guild: s
-                } = e, [l, o] = n.useState(!1), [I, S] = n.useState(!1), N = n.useRef(!1), f = n.useCallback(() => {
+                } = e, [l, o] = n.useState(!1), [I, S] = n.useState(!1), N = n.useRef(!1), g = n.useCallback(() => {
                     N.current = !0
                 }, []), m = (0, _.useSubmittedGuildJoinRequestTotal)({
                     guildId: s.id
@@ -29942,12 +29947,12 @@
                     isExpanded: l,
                     onExpand: () => o(!l),
                     children: (0, a.jsx)("div", {
-                        className: i(g.itemBodyContainer, A.rulesScreeningItems),
+                        className: i(f.itemBodyContainer, A.rulesScreeningItems),
                         children: I && (0, a.jsx)(T.default, {
                             guild: s,
                             submittedGuildJoinRequestsCount: m,
                             formFields: O,
-                            onFormFieldUpdate: f,
+                            onFormFieldUpdate: g,
                             hideVerificationLevelField: !0
                         })
                     })
@@ -30122,8 +30127,8 @@
                 I = s("412707"),
                 S = s("646186"),
                 N = s("7331"),
-                f = s("736271"),
-                g = s("283167"),
+                g = s("736271"),
+                f = s("283167"),
                 A = s("10641"),
                 L = s("298878"),
                 m = s("184890"),
@@ -30176,8 +30181,8 @@
                 eI = s("902273"),
                 eS = s("721822"),
                 eN = s("925538"),
-                ef = s("631011"),
-                eg = s("191329"),
+                eg = s("631011"),
+                ef = s("191329"),
                 eA = s("851545"),
                 eL = s("527042"),
                 em = s("977887"),
@@ -30213,7 +30218,7 @@
                     canManageRoles: E,
                     canManageGuildExpressions: _,
                     canManageWebhooks: T,
-                    canManageBans: g,
+                    canManageBans: f,
                     canAccessMembersPage: m,
                     canViewGuildAnalytics: R,
                     isOwner: G,
@@ -30235,7 +30240,7 @@
                     isGuildEligibleForRoleSubscriptions: (0, v.isGuildEligibleForRoleSubscriptions)(t.id),
                     isExpeditedMonetizationOnboardingGuild: (0, N.isExpeditedMonetizationOnboardingGuild)(t),
                     isUserInCreatorMonetizationEligibleCountry: (0, N.isUserInCreatorMonetizationEligibleCountry)(),
-                    shouldRestrictUpdatingRoleSubscriptionSettings: (0, f.shouldRestrictUpdatingCreatorMonetizationSettings)(t.id)
+                    shouldRestrictUpdatingRoleSubscriptionSettings: (0, g.shouldRestrictUpdatingCreatorMonetizationSettings)(t.id)
                 }), ea = (0, p.isGuildEligibleForGuildProducts)(t.id, "guild_settings"), ek = !1 === t.hasFeature(ey.GuildFeatures.CREATOR_MONETIZABLE) && !1 === t.hasFeature(ey.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL), ew = ea && ek ? {
                     label: (0, a.jsx)("div", {
                         className: eH.roleSubLabel,
@@ -30405,7 +30410,7 @@
                     label: eF.default.Messages.BANS,
                     element: eS.default,
                     type: c.ContentTypes.CUSTOM,
-                    predicate: () => g
+                    predicate: () => f
                 }, {
                     section: c.SectionTypes.DIVIDER,
                     predicate: () => n || R
@@ -30462,10 +30467,10 @@
                     section: ey.GuildSettingsSections.DISCOVERY,
                     impressionName: l.ImpressionNames.GUILD_SETTINGS_DISCOVERY,
                     label: eF.default.Messages.DISCOVERY,
-                    element: eg.default,
+                    element: ef.default,
                     notice: {
                         stores: [ei.default],
-                        element: eg.GuildSettingsDiscoveryNotice
+                        element: ef.GuildSettingsDiscoveryNotice
                     },
                     predicate: () => n && t.hasFeature(ey.GuildFeatures.COMMUNITY),
                     ariaLabel: t.hasFeature(ey.GuildFeatures.DISCOVERABLE) ? eF.default.Messages.DISCOVERY : eF.default.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
@@ -30489,7 +30494,7 @@
                     impressionName: l.ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME,
                     label: eF.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
                     ariaLabel: eF.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
-                    element: ef.default,
+                    element: eg.default,
                     notice: {
                         stores: [Y.default],
                         element: W.default
@@ -30713,8 +30718,8 @@
                         canManageWebhooks: I,
                         canManageBans: S,
                         canAccessMembersPage: N,
-                        canViewGuildAnalytics: f,
-                        isOwner: g,
+                        canViewGuildAnalytics: g,
+                        isOwner: f,
                         isOwnerWithRequiredMfaLevel: A,
                         showDirtyGuildTemplateIndicator: L,
                         memberCount: m,
@@ -30737,8 +30742,8 @@
                             canManageWebhooks: I,
                             canManageBans: S,
                             canAccessMembersPage: N,
-                            canViewGuildAnalytics: f,
-                            isOwner: g,
+                            canViewGuildAnalytics: g,
+                            isOwner: f,
                             isOwnerWithRequiredMfaLevel: A,
                             showDirtyGuildTemplateIndicator: L,
                             memberCount: m,
@@ -30777,7 +30782,7 @@
                     isGuildMetadataLoaded: d
                 } = (0, i.useStateFromStoresObject)([ei.default], () => ei.default.getProps()), {
                     AnalyticsLocationProvider: u
-                } = (0, T.default)(E.default.GUILD_SETTINGS), c = (0, i.useStateFromStores)([k.default], () => k.default.theme), _ = (0, i.useStateFromStores)([k.default], () => k.default.darkSidebar ? ey.ThemeTypes.DARK : void 0), I = (0, i.useStateFromStores)([z.default], () => null != s ? z.default.getChannels(s.id).SELECTABLE : null, [s]), S = (0, i.useStateFromStoresObject)([Z.default], () => null != s ? Z.default.getGuildPermissionProps(s) : eK), N = null == s ? void 0 : s.id, f = (0, i.useStateFromStores)([Z.default], () => null != s && Z.default.canAccessGuildSettings(s)), A = null != s && (0, $.staffOnlyGuildSettingsAccess)(s.id), L = A || f, C = A || S.canViewGuildAnalytics, {
+                } = (0, T.default)(E.default.GUILD_SETTINGS), c = (0, i.useStateFromStores)([k.default], () => k.default.theme), _ = (0, i.useStateFromStores)([k.default], () => k.default.darkSidebar ? ey.ThemeTypes.DARK : void 0), I = (0, i.useStateFromStores)([z.default], () => null != s ? z.default.getChannels(s.id).SELECTABLE : null, [s]), S = (0, i.useStateFromStoresObject)([Z.default], () => null != s ? Z.default.getGuildPermissionProps(s) : eK), N = null == s ? void 0 : s.id, g = (0, i.useStateFromStores)([Z.default], () => null != s && Z.default.canAccessGuildSettings(s)), A = null != s && (0, $.staffOnlyGuildSettingsAccess)(s.id), L = A || g, C = A || S.canViewGuildAnalytics, {
                     shouldFetchMemberInsights: O,
                     hasAccessRate: h
                 } = (0, i.useStateFromStoresObject)([ea.default], () => ({
@@ -30785,7 +30790,7 @@
                     hasAccessRate: null != s && ea.default.getMemberInsights(s.id).hasAccessRate
                 }));
                 n.useEffect(() => {
-                    !d && null != N && (0, g.fetchMetadataForGuild)(N)
+                    !d && null != N && (0, f.fetchMetadataForGuild)(N)
                 }, [d, N]), n.useEffect(() => {
                     L && C && O && null != N && (0, es.fetchMemberInsights)(N)
                 }, [L, C, O, N]);
@@ -30857,8 +30862,8 @@
                 I = s("915639"),
                 S = s("525065"),
                 N = s("305961"),
-                f = s("37785"),
-                g = s("68238"),
+                g = s("37785"),
+                f = s("68238"),
                 A = s("956089"),
                 L = s("599110"),
                 m = s("199938"),
@@ -30895,7 +30900,7 @@
                 k = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                     return t || e === D.AbortCodes.NOT_ENOUGH_GUILD_MEMBERS ? (0, a.jsx)(c.FormErrorBlock, {
-                        icon: g.default,
+                        icon: f.default,
                         className: p.notEnoughMembersError,
                         backgroundColor: c.FormErrorBlockColors.BACKGROUND_ACCENT,
                         children: x.default.Messages.GUILD_ANALYTICS_ERROR_GUILD_SIZE
@@ -31017,7 +31022,7 @@
                                     children: [N, (0, a.jsx)(c.TooltipContainer, {
                                         text: x.default.Messages.MEMBER_INSIGHTS_ACCESS_RATE_TOOLTIP,
                                         className: p.insightsTooltip,
-                                        children: (0, a.jsx)(g.default, {
+                                        children: (0, a.jsx)(f.default, {
                                             className: p.insightsTooltipIcon
                                         })
                                     })]
@@ -31068,7 +31073,7 @@
                                         className: p.actionText,
                                         variant: "text-sm/normal",
                                         children: x.default.Messages.ACCESS_RATE_ACTION_BOTS.format({
-                                            integrationsHook: (e, t) => (0, a.jsx)(f.default, {
+                                            integrationsHook: (e, t) => (0, a.jsx)(g.default, {
                                                 onClick: () => C.default.setSection(D.GuildSettingsSections.INTEGRATIONS),
                                                 className: p.link,
                                                 children: e
@@ -31102,7 +31107,7 @@
                                     className: p.actionText,
                                     variant: "text-sm/normal",
                                     children: x.default.Messages.ACCESS_RATE_ACTION_SUCCESS.format({
-                                        insightsHook: (e, s) => (0, a.jsx)(f.default, {
+                                        insightsHook: (e, s) => (0, a.jsx)(g.default, {
                                             onClick: () => w(t),
                                             className: p.link,
                                             children: e
@@ -31203,8 +31208,8 @@
                 I = s("102985"),
                 S = s("697218"),
                 N = s("941886"),
-                f = s("810567"),
-                g = s("258078"),
+                g = s("810567"),
+                f = s("258078"),
                 A = s("117362"),
                 L = s("655518"),
                 m = s("158998"),
@@ -31244,15 +31249,15 @@
                     children: [(0, a.jsxs)(d.ModalHeader, {
                         className: p.header,
                         separator: !1,
-                        children: [(0, a.jsx)(g.default, {
-                            size: g.default.Sizes.SIZE_24,
+                        children: [(0, a.jsx)(f.default, {
+                            size: f.default.Sizes.SIZE_24,
                             className: p.userUsername,
                             children: m.default.getUserTag(l, {
                                 mode: "username",
                                 identifiable: r ? "never" : "always"
                             })
-                        }), r || l.isPomelo() ? null : (0, a.jsxs)(g.default, {
-                            size: g.default.Sizes.SIZE_24,
+                        }), r || l.isPomelo() ? null : (0, a.jsxs)(f.default, {
+                            size: f.default.Sizes.SIZE_24,
                             className: p.userDiscrim,
                             children: ["#", l.discriminator]
                         })]
@@ -31465,7 +31470,7 @@
                                     children: x.default.Messages.BANS_HINT.format({
                                         onModerationClick: this.handleModerationClick
                                     })
-                                }), null == t && (0, a.jsx)(f.default, {
+                                }), null == t && (0, a.jsx)(g.default, {
                                     className: p.searchBar,
                                     query: null != i ? i : "",
                                     placeholder: x.default.Messages.BANS_SEARCH_PLACEHOLDER,
@@ -31534,8 +31539,8 @@
                 I = s("841098"),
                 S = s("716241"),
                 N = s("685665"),
-                f = s("770115"),
-                g = s("102985"),
+                g = s("770115"),
+                f = s("102985"),
                 A = s("697218"),
                 L = s("941886"),
                 m = s("810567"),
@@ -31561,12 +31566,12 @@
                     ban: r,
                     hideDiscriminator: o,
                     onClose: d
-                } = e, [c, T] = n.useState(!1), [I, f] = n.useState(null), {
-                    analyticsLocations: g
-                } = (0, N.default)(), A = null !== (t = null == g ? void 0 : g[0]) && void 0 !== t ? t : null;
+                } = e, [c, T] = n.useState(!1), [I, g] = n.useState(null), {
+                    analyticsLocations: f
+                } = (0, N.default)(), A = null !== (t = null == f ? void 0 : f[0]) && void 0 !== t ? t : null;
                 async function L() {
                     if (null != l) {
-                        f(null), T(!0);
+                        g(null), T(!0);
                         try {
                             await E.default.unbanUser(l.id, i.id), d(), h.default.track(U.AnalyticEvents.GUILD_BAN_REMOVED, {
                                 ...(0, S.collectGuildAnalyticsMetadata)(l.id),
@@ -31575,7 +31580,7 @@
                                 location: A
                             })
                         } catch (e) {
-                            f(new _.default(e)), T(!1)
+                            g(new _.default(e)), T(!1)
                         }
                     }
                 }
@@ -31691,7 +31696,7 @@
                     guild: s,
                     sortedBans: l,
                     bans: i
-                } = e, r = (0, d.default)([g.default], () => g.default.hidePersonalInformation, []), o = n.useCallback(e => {
+                } = e, r = (0, d.default)([f.default], () => f.default.hidePersonalInformation, []), o = n.useCallback(e => {
                     var t;
                     if (null == i && 0 === e) return 60;
                     let s = l[e],
@@ -31739,7 +31744,7 @@
                     }
                     if (!r) try {
                         o(!0);
-                        let [e, s] = (0, f.splitQuery)(l), a = e[0];
+                        let [e, s] = (0, g.splitQuery)(l), a = e[0];
                         M.default.setSearchQuery(l), await E.default.searchGuildBans(t, a, s), o(!1)
                     } catch (e) {
                         o(!1)
@@ -31789,11 +31794,11 @@
                 let {
                     guild: l,
                     searchQuery: c
-                } = (0, d.default)([G.default], () => G.default.getProps(), [], r.isEqual), _ = null != c && c.trim().length > 0, S = (0, T.default)(_), N = _ !== S, [g] = (0, d.default)([G.default], () => G.default.getBans(), [], R.isVersionEqual), m = null !== (e = null == g ? void 0 : g.size) && void 0 !== e ? e : 0, C = (0, I.default)(), O = null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : "", h = n.useRef(null), D = n.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
+                } = (0, d.default)([G.default], () => G.default.getProps(), [], r.isEqual), _ = null != c && c.trim().length > 0, S = (0, T.default)(_), N = _ !== S, [f] = (0, d.default)([G.default], () => G.default.getBans(), [], R.isVersionEqual), m = null !== (e = null == f ? void 0 : f.size) && void 0 !== e ? e : 0, C = (0, I.default)(), O = null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : "", h = n.useRef(null), D = n.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
                     if (null == t || 0 === e.trim().length) return !1;
                     let [
                         [s], a
-                    ] = (0, f.splitQuery)(e);
+                    ] = (0, g.splitQuery)(e);
                     return !!a.includes(t.id) || null != s && (!!(t.username.toLowerCase().includes(s.toLowerCase()) || null != t.globalName && t.globalName.toLowerCase().includes(s.toLowerCase())) || !1)
                 }, []), M = n.useCallback((e, t, s) => {
                     if (null == e || 0 === s) return [];
@@ -31803,7 +31808,7 @@
                         null != e && D(t)(e) && a.push(e)
                     }
                     return a
-                }, [D]), x = n.useMemo(() => M(g, c, m), [g, M, c, m]), p = null != g, U = x.length % 1e3 == 0 && x.length > 0 && p, P = 0 === x.length, [y, F] = n.useState({
+                }, [D]), x = n.useMemo(() => M(f, c, m), [f, M, c, m]), p = null != f, U = x.length % 1e3 == 0 && x.length > 0 && p, P = 0 === x.length, [y, F] = n.useState({
                     currentPage: 1,
                     pageSize: 100
                 });
@@ -31844,7 +31849,7 @@
                         className: i(j.scrollerContainer),
                         children: [!P && (0, a.jsx)(b, {
                             guild: l,
-                            bans: g,
+                            bans: f,
                             sortedBans: Y,
                             ref: h
                         }), !U && P && (0, a.jsxs)(L.default, {
@@ -31902,8 +31907,8 @@
                 I = s("923959"),
                 S = s("305961"),
                 N = s("957255"),
-                f = s("27618"),
-                g = s("697218"),
+                g = s("27618"),
+                f = s("697218"),
                 A = s("945330"),
                 L = s("268997"),
                 m = s("592407"),
@@ -31958,9 +31963,9 @@
                         location: "c1af51_1"
                     }, {
                         autoTrackExposure: !0
-                    }), N = (0, r.useStateFromStores)([S.default], () => S.default.getGuild("942897714956472401")), f = I && E && !(null != N);
-                    if (t && s && !f) return null;
-                    let g = async () => {
+                    }), N = (0, r.useStateFromStores)([S.default], () => S.default.getGuild("942897714956472401")), g = I && E && !(null != N);
+                    if (t && s && !g) return null;
+                    let f = async () => {
                         try {
                             let e = await o.default.post({
                                 url: h.Endpoints.JOIN_ADMIN_SERVER(l),
@@ -31969,7 +31974,7 @@
                             m.default.close(), (0, T.transitionToGuild)(e.body.id)
                         } catch {}
                     };
-                    return i && !f ? null : (0, a.jsxs)("div", {
+                    return i && !g ? null : (0, a.jsxs)("div", {
                         className: M.upsellContainer,
                         children: [(0, a.jsxs)("div", {
                             className: M.upsellContent,
@@ -32002,9 +32007,9 @@
                             })
                         }), (0, a.jsxs)("div", {
                             className: M.upsellFooter,
-                            children: [f && (0, a.jsx)(u.Button, {
+                            children: [g && (0, a.jsx)(u.Button, {
                                 size: u.Button.Sizes.SMALL,
-                                onClick: g,
+                                onClick: f,
                                 className: M.upsellButton,
                                 children: D.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_ADMIN_SERVER
                             }), s ? null : (0, a.jsx)(u.Button, {
@@ -32063,7 +32068,7 @@
                         } = e;
                         t.type === h.ChannelTypes.GUILD_TEXT && A.push({
                             value: t.id,
-                            label: (0, E.computeChannelName)(t, g.default, f.default, !0)
+                            label: (0, E.computeChannelName)(t, f.default, g.default, !0)
                         })
                     });
                     let L = () => {
@@ -32326,8 +32331,8 @@
                 I = s("68238"),
                 S = s("240292"),
                 N = s("701909"),
-                f = s("49111"),
-                g = s("533613"),
+                g = s("49111"),
+                f = s("533613"),
                 A = s("782340"),
                 L = s("430364"),
                 m = s("175717"),
@@ -32465,17 +32470,17 @@
             var j = e => {
                 let {
                     guild: t
-                } = e, [s, l] = n.useState(0), [i, o] = n.useState(0), [T, I] = n.useState(), S = (0, r.useStateFromStores)([_.default], () => _.default.can(f.Permissions.ADMINISTRATOR, t)), O = (0, u.useInServerBadgingExperiment)(t.id), h = null == T ? void 0 : T.offsetWidth, R = null == T ? void 0 : T.offsetHeight;
+                } = e, [s, l] = n.useState(0), [i, o] = n.useState(0), [T, I] = n.useState(), S = (0, r.useStateFromStores)([_.default], () => _.default.can(g.Permissions.ADMINISTRATOR, t)), O = (0, u.useInServerBadgingExperiment)(t.id), h = null == T ? void 0 : T.offsetWidth, R = null == T ? void 0 : T.offsetHeight;
                 n.useEffect(() => {
                     null != h && l(h / 2), null != R && o(R / 2)
                 }, [h, R, l, o]), n.useEffect(() => {
-                    (0, c.hideHotspot)(g.HotspotLocations.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL)
+                    (0, c.hideHotspot)(f.HotspotLocations.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL)
                 }, []);
                 let D = () => {
                         E.default.open()
                     },
                     M = O ? A.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY_WITH_HELP_ARTICLE.format({
-                        helpdeskArticle: N.default.getArticleURL(f.HelpdeskArticles.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
+                        helpdeskArticle: N.default.getArticleURL(g.HelpdeskArticles.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
                     }) : A.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY;
                 return (0, a.jsxs)("div", {
                     className: L.container,
@@ -32524,7 +32529,7 @@
                         className: L.body,
                         variant: "text-sm/normal",
                         children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_LEARN_MORE.format({
-                            helpdeskArticle: N.default.getArticleURL(f.HelpdeskArticles.GUILD_COMMUNITY_FEATURE)
+                            helpdeskArticle: N.default.getArticleURL(g.HelpdeskArticles.GUILD_COMMUNITY_FEATURE)
                         })
                     }), (0, a.jsx)("div", {
                         className: L.features,
@@ -32539,7 +32544,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return g
+                    return f
                 }
             }), s("222007");
             var a, n, l = s("37983"),
@@ -32556,7 +32561,7 @@
                 S = s("812735"),
                 N = s("756058");
             (n = a || (a = {}))[n.LOADING = 0] = "LOADING", n[n.INTRO = 1] = "INTRO", n[n.SETTINGS = 2] = "SETTINGS";
-            let f = e => {
+            let g = e => {
                 let {
                     setWelcomeView: t,
                     setShowCreateModal: a
@@ -32646,7 +32651,7 @@
                     })]
                 })
             };
-            var g = () => {
+            var f = () => {
                 let {
                     guild: e
                 } = (0, r.useStateFromStores)([_.default], () => _.default.getProps()), [t, s] = i.useState(0), [a, n] = i.useState(!1);
@@ -32662,7 +32667,7 @@
                             type: o.Spinner.Type.SPINNING_CIRCLE
                         });
                     case 1:
-                        return (0, l.jsx)(f, {
+                        return (0, l.jsx)(g, {
                             setWelcomeView: s,
                             setShowCreateModal: n
                         });
@@ -32698,8 +32703,8 @@
                 I = s("679653"),
                 S = s("419830"),
                 N = s("385976"),
-                f = s("233706"),
-                g = s("223170"),
+                g = s("233706"),
+                f = s("223170"),
                 A = s("478964"),
                 L = s("310457"),
                 m = s("42203"),
@@ -32723,7 +32728,7 @@
                             guildId: r,
                             welcomeChannel: o,
                             onEdit: T,
-                            onChannelReorder: g,
+                            onChannelReorder: f,
                             isDropHovered: A,
                             index: C
                         } = e,
@@ -32736,7 +32741,7 @@
                         F = (0, I.default)(x, !1),
                         {
                             homeSettingsEnabled: H
-                        } = (0, f.useOnboardingHomeAdminExperiment)(r),
+                        } = (0, g.useOnboardingHomeAdminExperiment)(r),
                         [, V] = (0, d.useDrag)({
                             type: y,
                             item: {
@@ -32744,16 +32749,16 @@
                                 index: C
                             },
                             end: (e, t) => {
-                                null != e && !t.didDrop() && g(e.channel, null, !0)
+                                null != e && !t.didDrop() && f(e.channel, null, !0)
                             }
                         }),
                         [, k] = (0, d.useDrop)({
                             accept: y,
                             hover: e => {
-                                g(e.channel, C, !1)
+                                f(e.channel, C, !1)
                             },
                             drop: e => {
-                                g(e.channel, C, !0)
+                                f(e.channel, C, !0)
                             }
                         });
                     return n.useLayoutEffect(() => (V(k(M)), () => {
@@ -32785,7 +32790,7 @@
                                     ...t,
                                     guildId: r,
                                     welcomeChannel: o,
-                                    onChannelReorder: g,
+                                    onChannelReorder: f,
                                     setShowConfirmModal: h,
                                     onEdit: T,
                                     index: C
@@ -32849,36 +32854,36 @@
                     enabled: y
                 } = r, {
                     homeSettingsEnabled: B
-                } = (0, f.useOnboardingHomeAdminExperiment)(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : ""), F = () => {
-                    if (null != l) R !== d.description && ((0, g.saveWelcomeScreen)(l.id, {
+                } = (0, g.useOnboardingHomeAdminExperiment)(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : ""), F = () => {
+                    if (null != l) R !== d.description && ((0, f.saveWelcomeScreen)(l.id, {
                         description: null == R ? void 0 : R.trim()
                     }), N(!0))
                 }, H = e => {
-                    if (null != l) !o(e, d.channels) && ((0, g.saveWelcomeScreen)(l.id, {
+                    if (null != l) !o(e, d.channels) && ((0, f.saveWelcomeScreen)(l.id, {
                         channels: e
                     }), N(!0))
                 }, V = e => {
-                    if (null != l) e !== d.enabled && ((0, g.saveWelcomeScreen)(l.id, {
+                    if (null != l) e !== d.enabled && ((0, f.saveWelcomeScreen)(l.id, {
                         enabled: e
                     }), m(!E), N(!0))
                 }, k = e => {
                     if (null == e) return;
                     let t = [...null != G ? G : [], e];
-                    (0, g.updateSettings)({
+                    (0, f.updateSettings)({
                         channels: t
                     }), H(t)
                 }, w = e => t => {
                     let s = [...null != G ? G : []];
-                    null == t ? s.splice(e, 1) : s[e] = t, (0, g.updateSettings)({
+                    null == t ? s.splice(e, 1) : s[e] = t, (0, f.updateSettings)({
                         channels: s
-                    }), H(s), 0 === s.length && y && ((0, g.updateSettings)({
+                    }), H(s), 0 === s.length && y && ((0, f.updateSettings)({
                         enabled: !1
                     }), V(!1))
                 }, Y = (e, t, s) => {
                     if (null == G) return;
                     let a = G.indexOf(e),
                         n = [...G];
-                    null != t && t !== a && (n.splice(a, 1), n.splice(t, 0, e), (0, g.updateSettings)({
+                    null != t && t !== a && (n.splice(a, 1), n.splice(t, 0, e), (0, f.updateSettings)({
                         channels: n
                     })), s ? (H(n), I(null)) : I(t)
                 }, K = n.useRef(!1);
@@ -32911,7 +32916,7 @@
                             is_enabled: y
                         })
                     }
-                }, [S, G, R, y, l, K]), n.useEffect(() => () => (0, g.clearWelcomeScreenSettings)(), []);
+                }, [S, G, R, y, l, K]), n.useEffect(() => () => (0, f.clearWelcomeScreenSettings)(), []);
                 let W = n.useCallback(() => {
                     null != l && x.default.open(l.id, U.GuildSettingsSections.ONBOARDING)
                 }, [l]);
@@ -32986,7 +32991,7 @@
                                     className: P.descriptionInput,
                                     placeholder: j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_DESCRIPTION_PLACEHOLDER,
                                     onChange: e => {
-                                        (0, g.updateSettings)({
+                                        (0, f.updateSettings)({
                                             description: e
                                         })
                                     },
@@ -33066,8 +33071,8 @@
                 I = s("453910"),
                 S = s("283167"),
                 N = s("868246"),
-                f = s("324105"),
-                g = s("385976"),
+                g = s("324105"),
+                f = s("385976"),
                 A = s("407063"),
                 L = s("694187"),
                 m = s("608684"),
@@ -33179,7 +33184,7 @@
                                     children: s ? H.default.Messages.GUILD_SETTINGS_DISABLE_DISCOVERABLE : H.default.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
                                 })
                             })]
-                        }), (0, a.jsx)(f.default, {
+                        }), (0, a.jsx)(g.default, {
                             className: V.guildCard,
                             loading: null == e,
                             guild: e
@@ -33247,7 +33252,7 @@
                         emojiDiscoverabilityEnabled: o
                     } = s, d = i;
                     if (null == d && null != n) {
-                        let e = g.default.getGuildEmoji(n.id);
+                        let e = f.default.getGuildEmoji(n.id);
                         d = {
                             ...n,
                             premiumSubscriptionCount: null == n ? void 0 : n.premiumSubscriberCount,
@@ -33583,8 +33588,8 @@
                 I = s("694187"),
                 S = s("608684"),
                 N = s("957255"),
-                f = s("93581"),
-                g = s("414943"),
+                g = s("93581"),
+                f = s("414943"),
                 A = s("578706"),
                 L = s("381546"),
                 m = s("315102"),
@@ -33859,7 +33864,7 @@
                                                                 className: p.description,
                                                                 children: x.default.Messages.DISCOVERY_LANDING_PAGE_CATEGORY_DESCRIPTION
                                                             })]
-                                                        }), (0, a.jsx)(g.default, {
+                                                        }), (0, a.jsx)(f.default, {
                                                             value: y.primaryCategoryId === G.DEFAULT_DISCOVERY_CATEGORY_ID ? null : null == y ? void 0 : y.primaryCategoryId,
                                                             placeholder: x.default.Messages.SELECT,
                                                             options: eo,
@@ -34085,7 +34090,7 @@
                                                 }) : null]
                                             }), !y.isPublished && (0, a.jsx)("div", {
                                                 className: p.checklist,
-                                                children: (0, a.jsx)(f.default, {
+                                                children: (0, a.jsx)(g.default, {
                                                     title: x.default.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_TITLE,
                                                     children: er,
                                                     buttonLabel: x.default.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_PUBLISH,
@@ -34133,8 +34138,8 @@
                 I = s("150021"),
                 S = s("133403"),
                 N = s("349389"),
-                f = s("84339"),
-                g = s("250666"),
+                g = s("84339"),
+                f = s("250666"),
                 A = s("341595"),
                 L = s("345988"),
                 m = s("153043"),
@@ -34393,7 +34398,7 @@
                         revision: v.default.getEmojiRevision(e.id),
                         emojis: v.default.getEmojis(e.id)
                     })),
-                    I = (0, f.default)(d),
+                    I = (0, g.default)(d),
                     [S, L] = n.useState(!1),
                     [R, D] = n.useState(!1),
                     G = n.useRef(null);
@@ -34433,7 +34438,7 @@
                             ...s
                         })
                     })
-                }, Z = (0, g.isCreatorMonetizationEnabledGuild)(e);
+                }, Z = (0, f.isCreatorMonetizationEnabledGuild)(e);
                 return (0, a.jsxs)("div", {
                     className: F.emojiSettings,
                     children: [0 === k ? null : (0, a.jsx)(N.default, {
@@ -34551,13 +34556,13 @@
                     guild: t
                 } = e, {
                     inventorySettings: s
-                } = t, N = (null == s ? void 0 : s.isEmojiPackCollectible) !== !1, f = (0, u.useHasInventoryGuildSettingsPermission)(t), {
-                    showSettingsToggle: g
+                } = t, N = (null == s ? void 0 : s.isEmojiPackCollectible) !== !1, g = (0, u.useHasInventoryGuildSettingsPermission)(t), {
+                    showSettingsToggle: f
                 } = (0, r.useInventoryGuildSettingsExperiment)({
                     guildId: t.id
                 }), [A, L] = n.useState(N), [m, C] = n.useState(void 0), O = (0, l.useStateFromStores)([c.default], () => c.default.locale);
                 n.useEffect(() => {
-                    if (!f) return;
+                    if (!g) return;
                     let e = async () => {
                         var e;
                         let s = await (0, o.getPackMetadata)({
@@ -34566,7 +34571,7 @@
                         C(null !== (e = null == s ? void 0 : s.collectedCount) && void 0 !== e ? e : 0)
                     };
                     e()
-                }, [t.id, f]);
+                }, [t.id, g]);
                 let h = async () => {
                     try {
                         L(!N), await (0, o.updateInventorySettings)({
@@ -34582,7 +34587,7 @@
                         L(N)
                     }
                 };
-                return g && f ? (0, a.jsxs)(i.FormSection, {
+                return f && g ? (0, a.jsxs)(i.FormSection, {
                     children: [(0, a.jsx)(i.FormSwitch, {
                         className: S.marginBottom8,
                         value: A,
@@ -34805,8 +34810,8 @@
                 I = s("131835"),
                 S = s("330724"),
                 N = s("136278"),
-                f = s("397947"),
-                g = s("259483"),
+                g = s("397947"),
+                f = s("259483"),
                 A = s("867928"),
                 L = s("706866"),
                 m = s("764151"),
@@ -34828,10 +34833,10 @@
                 let t, {
                         guildId: s
                     } = e,
-                    l = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentPage()),
-                    _ = (0, r.useStateFromStores)([f.default], () => {
-                        let e = (0, g.pageToEducationUpsellType)(l);
-                        return null != e && !f.default.isEducationUpsellDismissed(e)
+                    l = (0, r.useStateFromStores)([g.default], () => g.default.getCurrentPage()),
+                    _ = (0, r.useStateFromStores)([g.default], () => {
+                        let e = (0, f.pageToEducationUpsellType)(l);
+                        return null != e && !g.default.isEducationUpsellDismissed(e)
                     }),
                     N = (0, A.default)(s),
                     G = !N && _,
@@ -34841,33 +34846,33 @@
                 switch (n.useEffect(() => {
                         (0, u.markDismissibleContentAsDismissed)(o.DismissibleContent.COMMUNITY_ONBOARDING_NEW_BADGE)
                     }, []), l) {
-                    case g.GuildSettingsOnboardingPage.LANDING:
+                    case f.GuildSettingsOnboardingPage.LANDING:
                         t = N ? (0, a.jsx)(C.default, {
                             completed: !0,
                             guildId: s
                         }) : (0, a.jsx)(h.default, {});
                         break;
-                    case g.GuildSettingsOnboardingPage.SAFETY_CHECK:
+                    case f.GuildSettingsOnboardingPage.SAFETY_CHECK:
                         t = (0, a.jsx)(R.default, {
                             hideChangelog: !0
                         });
                         break;
-                    case g.GuildSettingsOnboardingPage.DEFAULT_CHANNELS:
+                    case f.GuildSettingsOnboardingPage.DEFAULT_CHANNELS:
                         t = (0, a.jsx)(L.default, {
                             saveOnClose: !N
                         });
                         break;
-                    case g.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS:
+                    case f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS:
                         t = (0, a.jsx)(O.default, {
                             saveOnClose: !N
                         });
                         break;
-                    case g.GuildSettingsOnboardingPage.HOME_SETTINGS:
+                    case f.GuildSettingsOnboardingPage.HOME_SETTINGS:
                         t = (0, a.jsx)(m.default, {
                             saveOnClose: !N
                         });
                         break;
-                    case g.GuildSettingsOnboardingPage.REVIEW:
+                    case f.GuildSettingsOnboardingPage.REVIEW:
                         t = (0, a.jsx)(C.default, {
                             completed: N,
                             guildId: s
@@ -34877,17 +34882,17 @@
                     className: i(M.onboardingContainer, {
                         [M.upsellOnTop]: G
                     }),
-                    children: [!N && l !== g.GuildSettingsOnboardingPage.LANDING && (0, a.jsx)(p, {
+                    children: [!N && l !== f.GuildSettingsOnboardingPage.LANDING && (0, a.jsx)(p, {
                         setOnboardingStep: I.setOnboardingStep,
                         page: l,
                         homeSettingsEnabled: x
-                    }), N && l !== g.GuildSettingsOnboardingPage.LANDING && (0, a.jsx)("div", {
+                    }), N && l !== f.GuildSettingsOnboardingPage.LANDING && (0, a.jsx)("div", {
                         children: (0, a.jsxs)(d.Button, {
                             innerClassName: M.backButton,
                             look: d.Button.Looks.BLANK,
                             size: d.Button.Sizes.MIN,
                             onClick: () => {
-                                (0, S.resetGuildOnboardingPrompts)(), (0, T.resetDefaultChannels)(), (0, I.setOnboardingStep)(g.GuildSettingsOnboardingPage.LANDING)
+                                (0, S.resetGuildOnboardingPrompts)(), (0, T.resetDefaultChannels)(), (0, I.setOnboardingStep)(f.GuildSettingsOnboardingPage.LANDING)
                             },
                             children: [(0, a.jsx)(E.default, {
                                 className: M.arrow,
@@ -34909,20 +34914,20 @@
                     page: t,
                     setOnboardingStep: s,
                     homeSettingsEnabled: n
-                } = e, l = (0, r.useStateFromStores)([f.default], () => f.default.hasErrors()), o = e => {
+                } = e, l = (0, r.useStateFromStores)([g.default], () => g.default.hasErrors()), o = e => {
                     if (!l) return () => s(e)
                 }, u = (0, r.useStateFromStores)([N.default], () => N.default.advancedMode);
                 return (0, a.jsxs)("div", {
                     className: M.progressContainer,
                     children: [(0, a.jsxs)(d.Clickable, {
                         className: i(M.progressBarContainer, M.clickableProgressBar),
-                        onClick: o(g.GuildSettingsOnboardingPage.SAFETY_CHECK),
+                        onClick: o(f.GuildSettingsOnboardingPage.SAFETY_CHECK),
                         children: [(0, a.jsx)("div", {
                             className: i(M.progressBar, {
-                                [M.progressBarCurrent]: t === g.GuildSettingsOnboardingPage.SAFETY_CHECK
+                                [M.progressBarCurrent]: t === f.GuildSettingsOnboardingPage.SAFETY_CHECK
                             })
                         }), (0, a.jsx)(d.Text, {
-                            color: t === g.GuildSettingsOnboardingPage.SAFETY_CHECK ? "text-brand" : "text-muted",
+                            color: t === f.GuildSettingsOnboardingPage.SAFETY_CHECK ? "text-brand" : "text-muted",
                             variant: "text-xs/medium",
                             children: D.default.Messages.GUILD_ONBOARDING_SETUP_STEP_SAFETY.format({
                                 stepNumber: 1
@@ -34930,13 +34935,13 @@
                         })]
                     }), (0, a.jsxs)(d.Clickable, {
                         className: i(M.progressBarContainer, M.clickableProgressBar),
-                        onClick: o(g.GuildSettingsOnboardingPage.DEFAULT_CHANNELS),
+                        onClick: o(f.GuildSettingsOnboardingPage.DEFAULT_CHANNELS),
                         children: [(0, a.jsx)("div", {
                             className: i(M.progressBar, {
-                                [M.progressBarCurrent]: t === g.GuildSettingsOnboardingPage.DEFAULT_CHANNELS
+                                [M.progressBarCurrent]: t === f.GuildSettingsOnboardingPage.DEFAULT_CHANNELS
                             })
                         }), (0, a.jsx)(d.Text, {
-                            color: t === g.GuildSettingsOnboardingPage.DEFAULT_CHANNELS ? "text-brand" : "text-muted",
+                            color: t === f.GuildSettingsOnboardingPage.DEFAULT_CHANNELS ? "text-brand" : "text-muted",
                             variant: "text-xs/medium",
                             children: u ? D.default.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS_ADVANCED.format({
                                 stepNumber: 2
@@ -34946,13 +34951,13 @@
                         })]
                     }), (0, a.jsxs)(d.Clickable, {
                         className: i(M.progressBarContainer, M.clickableProgressBar),
-                        onClick: o(g.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS),
+                        onClick: o(f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS),
                         children: [(0, a.jsx)("div", {
                             className: i(M.progressBar, {
-                                [M.progressBarCurrent]: t === g.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS
+                                [M.progressBarCurrent]: t === f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS
                             })
                         }), (0, a.jsx)(d.Text, {
-                            color: t === g.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS ? "text-brand" : "text-muted",
+                            color: t === f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS ? "text-brand" : "text-muted",
                             variant: "text-xs/medium",
                             children: u ? D.default.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS_ADVANCED.format({
                                 stepNumber: 3
@@ -34962,13 +34967,13 @@
                         })]
                     }), n && (0, a.jsxs)(d.Clickable, {
                         className: i(M.progressBarContainer, M.clickableProgressBar),
-                        onClick: o(g.GuildSettingsOnboardingPage.HOME_SETTINGS),
+                        onClick: o(f.GuildSettingsOnboardingPage.HOME_SETTINGS),
                         children: [(0, a.jsx)("div", {
                             className: i(M.progressBar, {
-                                [M.progressBarCurrent]: t === g.GuildSettingsOnboardingPage.HOME_SETTINGS
+                                [M.progressBarCurrent]: t === f.GuildSettingsOnboardingPage.HOME_SETTINGS
                             })
                         }), (0, a.jsx)(d.Text, {
-                            color: t === g.GuildSettingsOnboardingPage.HOME_SETTINGS ? "text-brand" : "text-muted",
+                            color: t === f.GuildSettingsOnboardingPage.HOME_SETTINGS ? "text-brand" : "text-muted",
                             variant: "text-xs/medium",
                             children: D.default.Messages.GUILD_ONBOARDING_SETUP_STEP_HOME.format({
                                 stepNumber: 4
@@ -34978,10 +34983,10 @@
                         className: M.progressBarContainer,
                         children: [(0, a.jsx)("div", {
                             className: i(M.progressBar, {
-                                [M.progressBarCurrent]: t === g.GuildSettingsOnboardingPage.REVIEW
+                                [M.progressBarCurrent]: t === f.GuildSettingsOnboardingPage.REVIEW
                             })
                         }), (0, a.jsx)(d.Text, {
-                            color: t === g.GuildSettingsOnboardingPage.REVIEW ? "text-brand" : "text-muted",
+                            color: t === f.GuildSettingsOnboardingPage.REVIEW ? "text-brand" : "text-muted",
                             variant: "text-xs/medium",
                             children: D.default.Messages.GUILD_ONBOARDING_SETUP_STEP_REVIEW.format({
                                 stepNumber: 3 + (n ? 1 : 0) + 1
@@ -35016,8 +35021,8 @@
                 I = s("45299"),
                 S = s("734575"),
                 N = s("841098"),
-                f = s("812204"),
-                g = s("716241"),
+                g = s("812204"),
+                f = s("716241"),
                 A = s("685665"),
                 L = s("320954"),
                 m = s("679653"),
@@ -35071,10 +35076,10 @@
                 eS = "".concat(3600);
 
             function eN(e) {
-                return ef(e[0])
+                return eg(e[0])
             }
 
-            function ef(e) {
+            function eg(e) {
                 if (null == e) return;
                 let {
                     label: t,
@@ -35088,7 +35093,7 @@
                 })
             }
 
-            function eg(e) {
+            function ef(e) {
                 return {
                     value: e.id,
                     label: (0, m.computeChannelName)(e, w.default, k.default),
@@ -35315,7 +35320,7 @@
                         let {
                             channel: t
                         } = e;
-                        return eg(t)
+                        return ef(t)
                     }).value();
                     return o.unshift({
                         value: eu,
@@ -35332,7 +35337,7 @@
                                         options: o,
                                         onChange: this.handleAFKChannelChange,
                                         isDisabled: !s,
-                                        renderOptionLabel: ef,
+                                        renderOptionLabel: eg,
                                         renderOptionValue: eN
                                     })
                                 })
@@ -35371,7 +35376,7 @@
                         let {
                             channel: t
                         } = e;
-                        return eg(t)
+                        return ef(t)
                     }).value();
                     o.unshift({
                         value: ec,
@@ -35389,7 +35394,7 @@
                             options: o,
                             isDisabled: !n,
                             onChange: this.handleSystemChannelChange,
-                            renderOptionLabel: ef,
+                            renderOptionLabel: eg,
                             renderOptionValue: eN
                         }), (0, a.jsx)(T.FormText, {
                             className: er.marginTop8,
@@ -35879,7 +35884,7 @@
                             guild: n,
                             analyticsLocations: l
                         } = this.props;
-                        (0, g.trackWithMetadata)(es.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
+                        (0, f.trackWithMetadata)(es.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
                             location: {
                                 section: t,
                                 object: es.AnalyticsObjects.LEARN_MORE
@@ -35939,7 +35944,7 @@
                 } = (0, c.useStateFromStoresObject)([ee.default], () => ee.default.getProps()), r = (0, N.default)(), {
                     AnalyticsLocationProvider: d,
                     analyticsLocations: u
-                } = (0, A.default)(f.default.OVERVIEW);
+                } = (0, A.default)(g.default.OVERVIEW);
                 n.useEffect(() => {
                     (0, v.hideHotspot)(U.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
                 }, []);
@@ -35953,8 +35958,8 @@
                         isGuildAdmin: V.default.can(es.Permissions.ADMINISTRATOR, t)
                     })),
                     S = (0, c.useStateFromStores)([H.default], () => H.default.getMemberCount(null == t ? void 0 : t.id)),
-                    g = (0, c.useStateFromStores)([w.default], () => w.default.getCurrentUser());
-                o(null != g, "GuildSettingsOverview: currentUser cannot be undefined");
+                    f = (0, c.useStateFromStores)([w.default], () => w.default.getCurrentUser());
+                o(null != f, "GuildSettingsOverview: currentUser cannot be undefined");
                 let {
                     enableDeadchat: m
                 } = O.SimpleDeadchatPromptExperiment.useExperiment({
@@ -35973,7 +35978,7 @@
                         guild: t,
                         errors: s,
                         submitting: l,
-                        currentUser: g,
+                        currentUser: f,
                         guildMemberCount: S,
                         theme: r,
                         analyticsLocations: u,
@@ -36024,8 +36029,8 @@
                 I = s("417385"),
                 S = s("735201"),
                 N = s("555158"),
-                f = s("599110"),
-                g = s("427459"),
+                g = s("599110"),
+                f = s("427459"),
                 A = s("701909"),
                 L = s("900938"),
                 m = s("49111"),
@@ -36058,9 +36063,9 @@
                 let {
                     appliedGuildBoosts: t,
                     guildId: s
-                } = e, n = (0, g.getGracePeriodEndingDate)(t, s), l = (0, g.getTierName)((0, g.getGuildTierFromAppliedBoostCount)(t.length, s));
+                } = e, n = (0, f.getGracePeriodEndingDate)(t, s), l = (0, f.getTierName)((0, f.getGuildTierFromAppliedBoostCount)(t.length, s));
                 if (null == n || null == l) return null;
-                let i = (0, g.appliedGuildBoostsRequiredForPerks)(t, s);
+                let i = (0, f.appliedGuildBoostsRequiredForPerks)(t, s);
                 return (0, a.jsxs)(N.default, {
                     messageType: N.HelpMessageTypes.WARNING,
                     children: [(0, a.jsx)("div", {
@@ -36118,12 +36123,12 @@
                             })
                         })]
                     }), (0, a.jsx)(T.default, {
-                        tiers: (0, g.getTiers)(null != e && e.hasFeature(m.GuildFeatures.COMMUNITY) && e.maxStageVideoChannelUsers >= m.MAX_STAGE_VIDEO_USER_LIMIT_TIER01),
+                        tiers: (0, f.getTiers)(null != e && e.hasFeature(m.GuildFeatures.COMMUNITY) && e.maxStageVideoChannelUsers >= m.MAX_STAGE_VIDEO_USER_LIMIT_TIER01),
                         renderTier: D
                     }), (0, a.jsx)("div", {
                         className: O.divider
                     }), s ? (0, a.jsx)(_.default, {}) : null, s ? (0, a.jsx)(E.default, {
-                        onOpenPremiumClick: () => void f.default.track(m.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                        onOpenPremiumClick: () => void g.default.track(m.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                             location: {
                                 page: m.AnalyticsPages.GUILD_SETTINGS,
                                 section: m.AnalyticsSections.NITRO_CROSS_PROMO_FROM_BOOSTING,
@@ -36162,8 +36167,8 @@
                 I = s("298878"),
                 S = s("610174"),
                 N = s("413476"),
-                f = s("413266"),
-                g = s("926809"),
+                g = s("413266"),
+                f = s("926809"),
                 A = s("466818"),
                 L = s("42203"),
                 m = s("957255"),
@@ -36197,13 +36202,13 @@
                     location: "1a2662_1"
                 }, {
                     autoTrackExposure: l
-                }), r = (0, g.useIsMentionRaidExperimentEnabled)(t.id), u = (0, o.useStateFromStores)([L.default], () => L.default.getChannel(t.safetyAlertsChannelId), [t.safetyAlertsChannelId]), c = (0, _.default)(u), S = null != u, A = n.useMemo(() => {
+                }), r = (0, f.useIsMentionRaidExperimentEnabled)(t.id), u = (0, o.useStateFromStores)([L.default], () => L.default.getChannel(t.safetyAlertsChannelId), [t.safetyAlertsChannelId]), c = (0, _.default)(u), S = null != u, A = n.useMemo(() => {
                     let e = (null == u ? void 0 : u.type) != null ? (0, T.getSimpleChannelIconComponent)(u.type) : null;
                     return null != e ? e : R.default
                 }, [u]);
 
                 function C() {
-                    i && (0, f.openSafetyChannelSetupModal)(t.id)
+                    i && (0, g.openSafetyChannelSetupModal)(t.id)
                 }
                 return l ? (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(d.FormDivider, {
@@ -36624,8 +36629,8 @@
                 I = s("817963"),
                 S = s("305122"),
                 N = s("235004"),
-                f = s("520497"),
-                g = s("812809"),
+                g = s("520497"),
+                f = s("812809"),
                 A = s("697218"),
                 L = s("941886"),
                 m = s("245307"),
@@ -36720,14 +36725,14 @@
                 n.useEffect(() => {
                     (0, S.maybeFetchSoundboardSounds)()
                 }, []);
-                let A = n.useMemo(() => l.reduce((e, t) => (e[t.soundId] = new Audio((0, f.default)(t.soundId)), e), {}), [l]),
+                let A = n.useMemo(() => l.reduce((e, t) => (e[t.soundId] = new Audio((0, g.default)(t.soundId)), e), {}), [l]),
                     m = 0 === l.length && !i;
 
                 function C(e) {
                     var t;
                     null === (t = o.current) || void 0 === t || t.pause();
                     let s = A[e.soundId];
-                    null != s && (o.current = s, s.currentTime = 0, s.volume = (0, g.default)(e.volume), s.play())
+                    null != s && (o.current = s, s.currentTime = 0, s.volume = (0, f.default)(e.volume), s.play())
                 }
                 n.useEffect(() => () => {
                     var e;
@@ -36828,12 +36833,12 @@
                     soundId: _,
                     name: T,
                     user: N,
-                    userId: f,
-                    emojiId: g,
+                    userId: g,
+                    emojiId: f,
                     emojiName: L
-                } = t, m = (0, d.useStateFromStores)([A.default], () => null != N ? N : A.default.getUser(f), [f, N]), {
+                } = t, m = (0, d.useStateFromStores)([A.default], () => null != N ? N : A.default.getUser(g), [g, N]), {
                     canManageGuildExpression: M
-                } = (0, I.useManageResourcePermissions)(o), G = n.useMemo(() => M(t), [t, M]), x = null != g || null != L, [p, U] = n.useState(!1);
+                } = (0, I.useManageResourcePermissions)(o), G = n.useMemo(() => M(t), [t, M]), x = null != f || null != L, [p, U] = n.useState(!1);
                 async function v() {
                     if (!p) {
                         U(!0);
@@ -36847,14 +36852,14 @@
                 return n.useEffect(() => {
                     null == m && e();
                     async function e() {
-                        await (0, c.getUser)(f)
+                        await (0, c.getUser)(g)
                     }
-                }, [m, f]), (0, a.jsxs)("div", {
+                }, [m, g]), (0, a.jsxs)("div", {
                     className: i(P.row, {
                         [P.active]: l
                     }),
                     children: [x ? (0, a.jsx)(E.default, {
-                        emojiId: g,
+                        emojiId: f,
                         emojiName: L,
                         className: P.emoji
                     }) : (0, a.jsx)(O.default, {
@@ -36951,8 +36956,8 @@
                 I = s("701909"),
                 S = s("900938"),
                 N = s("49111"),
-                f = s("560241"),
-                g = s("782340"),
+                g = s("560241"),
+                f = s("782340"),
                 A = s("163810");
             let L = {
                     page: N.AnalyticsPages.GUILD_SETTINGS,
@@ -36970,11 +36975,11 @@
                         children: [(0, a.jsx)(l.Heading, {
                             className: A.upsellHeader,
                             variant: "heading-xl/semibold",
-                            children: g.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_TITLE
+                            children: f.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_TITLE
                         }), (0, a.jsx)(l.Text, {
                             className: A.upsellDescription,
                             variant: "text-md/normal",
-                            children: g.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_DESCRIPTION_FREE_SLOTS
+                            children: f.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_DESCRIPTION_FREE_SLOTS
                         }), (0, a.jsxs)("div", {
                             className: A.upsellButtons,
                             children: [(0, a.jsx)(l.Button, {
@@ -36987,7 +36992,7 @@
                                     guildId: t.id,
                                     totalNumberOfSlotsToAssign: n
                                 }),
-                                children: g.default.Messages.GUILD_SETTINGS_STICKERS_BOOST_SERVER
+                                children: f.default.Messages.GUILD_SETTINGS_STICKERS_BOOST_SERVER
                             }), (0, a.jsx)(l.Button, {
                                 innerClassName: A.upsellButton,
                                 color: l.Button.Colors.WHITE,
@@ -36997,23 +37002,23 @@
                                         section: N.AnalyticsSections.GUILD_SETTINGS_STICKERS
                                     }
                                 }),
-                                children: g.default.Messages.LEARN_MORE
+                                children: f.default.Messages.LEARN_MORE
                             })]
                         })]
                     })
                 },
                 C = () => (0, a.jsxs)(l.FormSection, {
-                    title: g.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HEADING,
+                    title: f.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HEADING,
                     children: [(0, a.jsx)(l.FormText, {
                         type: l.FormTextTypes.DESCRIPTION,
-                        children: g.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_INSTRUCTIONS.format({
-                            fileSize: (0, _.formatKbSize)(f.MAX_STICKER_FILE_SIZE, {
+                        children: f.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_INSTRUCTIONS.format({
+                            fileSize: (0, _.formatKbSize)(g.MAX_STICKER_FILE_SIZE, {
                                 useKibibytes: !0
                             })
                         })
                     }), (0, a.jsx)(l.FormText, {
                         type: l.FormTextTypes.DESCRIPTION,
-                        children: g.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HELP.format({
+                        children: f.default.Messages.GUILD_SETTINGS_STICKERS_UPLOAD_AUTO_RESIZE_HELP.format({
                             articleUrl: I.default.getArticleURL(N.HelpdeskArticles.STICKERS_UPLOAD)
                         })
                     })]
@@ -37028,11 +37033,11 @@
                         u = (0, T.getNextTier)(r, l.id),
                         c = (0, T.getTotalStickerCountForTier)(r),
                         E = i.length;
-                    return null == u || r === N.BoostedGuildTiers.TIER_3 || o > 0 ? (0, a.jsx)(a.Fragment, {}) : (E > c ? (t = g.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_HEADER.format({
+                    return null == u || r === N.BoostedGuildTiers.TIER_3 || o > 0 ? (0, a.jsx)(a.Fragment, {}) : (E > c ? (t = f.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_HEADER.format({
                         level: u
-                    }), s = g.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_TEXT.format({
+                    }), s = f.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TOO_MANY_STICKERS_TEXT.format({
                         level: u
-                    }), n = N.AnalyticsObjects.BOOST_UPSELL_BANNER_LOST_LEVEL) : (t = g.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER, s = g.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TEXT.format({
+                    }), n = N.AnalyticsObjects.BOOST_UPSELL_BANNER_LOST_LEVEL) : (t = f.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_BANNER_HEADER, s = f.default.Messages.GUILD_SETTINGS_STICKERS_UPSELL_BANNER_TEXT.format({
                         level: u,
                         numAdditional: (0, T.getIncrementalStickerCountForTier)(u)
                     }), n = N.AnalyticsObjects.BOOST_UPSELL_BANNER_SLOTS_FULL), (0, a.jsx)(d.default, {
@@ -37060,7 +37065,7 @@
                 let o = e.premiumTier !== N.BoostedGuildTiers.NONE || t.length > 0;
                 return (0, a.jsx)(s, {
                     children: (0, a.jsxs)(l.FormSection, {
-                        title: g.default.Messages.GUILD_SETTINGS_STICKERS,
+                        title: f.default.Messages.GUILD_SETTINGS_STICKERS,
                         tag: l.FormTitleTags.H1,
                         children: [o ? (0, a.jsxs)("div", {
                             children: [(0, a.jsx)(O, {
@@ -37106,8 +37111,8 @@
                 I = s("448993"),
                 S = s("883069"),
                 N = s("569808"),
-                f = s("658329"),
-                g = s("578706"),
+                g = s("658329"),
+                f = s("578706"),
                 A = s("381546"),
                 L = s("900938"),
                 m = s("579033"),
@@ -37246,21 +37251,21 @@
                             children: C.default.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_WILL_COPY
                         }), (0, a.jsxs)("div", {
                             className: O.descriptionRow,
-                            children: [(0, a.jsx)(g.default, {
+                            children: [(0, a.jsx)(f.default, {
                                 className: O.descriptionIcon,
                                 color: u.default.unsafe_rawColors.GREEN_360.css,
                                 backgroundColor: u.default.unsafe_rawColors.WHITE_500.css
                             }), C.default.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_CHANNELS]
                         }), (0, a.jsxs)("div", {
                             className: O.descriptionRow,
-                            children: [(0, a.jsx)(g.default, {
+                            children: [(0, a.jsx)(f.default, {
                                 className: O.descriptionIcon,
                                 color: u.default.unsafe_rawColors.GREEN_360.css,
                                 backgroundColor: u.default.unsafe_rawColors.WHITE_500.css
                             }), C.default.Messages.GUILD_TEMPLATES_FORM_DESCRIPTION_ROLES]
                         }), (0, a.jsxs)("div", {
                             className: O.descriptionRow,
-                            children: [(0, a.jsx)(g.default, {
+                            children: [(0, a.jsx)(f.default, {
                                 className: O.descriptionIcon,
                                 color: u.default.unsafe_rawColors.GREEN_360.css,
                                 backgroundColor: u.default.unsafe_rawColors.WHITE_500.css
@@ -37359,7 +37364,7 @@
                         children: (0, a.jsx)(_.default, {
                             buttonLook: c.Button.Looks.FILLED,
                             buttonColor: c.Button.Colors.BRAND,
-                            value: (0, f.default)(s.code)
+                            value: (0, g.default)(s.code)
                         })
                     }), s.isDirty && (0, a.jsx)(c.Text, {
                         color: "text-warning",
@@ -37530,8 +37535,8 @@
                 I = s("379532"),
                 S = s("52393"),
                 N = s("102985"),
-                f = s("409633"),
-                g = s("181114"),
+                g = s("409633"),
+                f = s("181114"),
                 A = s("118503"),
                 L = s("427459"),
                 m = s("900938"),
@@ -37585,7 +37590,7 @@
                                     uses: l
                                 })
                             }) : null]
-                        }), (0, a.jsx)(f.default, {
+                        }), (0, a.jsx)(g.default, {
                             prefix: "".concat("https://discord.gg", "/"),
                             value: n,
                             onChange: this.handleInviteCodeChange,
@@ -37605,7 +37610,7 @@
                     })
                 }
                 renderUpsellButton() {
-                    return (0, a.jsxs)(g.default, {
+                    return (0, a.jsxs)(f.default, {
                         color: o.Button.Colors.GREEN,
                         className: i(G.marginTop16),
                         innerClassName: G.upsellButton,
@@ -37760,8 +37765,8 @@
                 I = s("27618"),
                 S = s("102985"),
                 N = s("697218"),
-                f = s("592407"),
-                g = s("900938"),
+                g = s("592407"),
+                f = s("900938"),
                 A = s("49111"),
                 L = s("782340"),
                 m = s("686184");
@@ -37891,22 +37896,22 @@
                         } = this.props;
                         null != t && (this.setState({
                             internalEnabled: e
-                        }), f.default.updateEmbed(t.id, e, s))
+                        }), g.default.updateEmbed(t.id, e, s))
                     }, this.handleChannelSelect = e => {
                         let {
                             guild: t,
                             widgetEnabled: s
                         } = this.props;
-                        null != t && f.default.updateEmbed(t.id, s, e !== C ? e : null)
+                        null != t && g.default.updateEmbed(t.id, s, e !== C ? e : null)
                     }
                 }
             }
-            var R = o.default.connectStores([g.default, S.default], () => {
+            var R = o.default.connectStores([f.default, S.default], () => {
                 let {
                     guild: e,
                     embedChannelId: t,
                     embedEnabled: s
-                } = g.default.getProps();
+                } = f.default.getProps();
                 return {
                     guild: e,
                     widgetChannelId: t,
@@ -37994,8 +37999,8 @@
                     changeTitle: I,
                     value: S,
                     options: N,
-                    className: f,
-                    onChange: g
+                    className: g,
+                    onChange: f
                 } = e, [A, L] = n.useState(S), [m, C] = n.useState(!1), [O, h] = n.useState(!1), R = n.useRef(null);
                 n.useEffect(() => {
                     L(S)
@@ -38004,7 +38009,7 @@
                 }, []);
                 let D = N.find(e => e.value === A),
                     M = e => {
-                        !e.disabled && e.value !== A && (h(!0), null == g || g(e), L(e.value), R.current = setTimeout(() => {
+                        !e.disabled && e.value !== A && (h(!0), null == f || f(e), L(e.value), R.current = setTimeout(() => {
                             h(!1), C(!1)
                         }, 1e3))
                     };
@@ -38019,7 +38024,7 @@
                         children: _.default.Messages.CHANGE
                     }),
                     loading: O,
-                    className: f,
+                    className: g,
                     children: N.map((e, t) => (0, a.jsx)(E.default, {
                         title: e.title,
                         description: e.description,
@@ -38203,8 +38208,8 @@
                 I = s("923959"),
                 S = s("381546"),
                 N = s("423487"),
-                f = s("701909"),
-                g = s("299039"),
+                g = s("701909"),
+                f = s("299039"),
                 A = s("592407"),
                 L = s("49111"),
                 m = s("782340"),
@@ -38301,7 +38306,7 @@
                         description: m.default.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE_DESCRIPTION,
                         failingDescription: m.default.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_SAFE_DESCRIPTION_FAILING_GUIDELINES.format({
                             termsURL: L.MarketingURLs.TERMS,
-                            guidelinesURL: f.default.getArticleURL(L.HelpdeskArticles.PUBLIC_GUILD_GUILDLINES)
+                            guidelinesURL: g.default.getArticleURL(L.HelpdeskArticles.PUBLIC_GUILD_GUILDLINES)
                         }),
                         checked: null == E ? void 0 : E.safeEnvironment
                     }, {
@@ -38324,7 +38329,7 @@
                         }),
                         failingDescription: m.default.Messages.GUILD_SETTINGS_DISCOVERY_CHECKLIST_AGE_DESCRIPTION_FAILING.format({
                             minimumGuildAge: Math.ceil(E.minimumGuildAge / 7),
-                            passDate: u(g.default.extractTimestamp(l)).add(E.minimumGuildAge, "days").format("LL")
+                            passDate: u(f.default.extractTimestamp(l)).add(E.minimumGuildAge, "days").format("LL")
                         }),
                         checked: null == E ? void 0 : E.age
                     }, {
@@ -38538,8 +38543,8 @@
                 I = s("149632"),
                 S = s("525065"),
                 N = s("84190"),
-                f = s("49111"),
-                g = s("782340"),
+                g = s("49111"),
+                f = s("782340"),
                 A = s("667395"),
                 L = s("319765");
             let m = ["322850917248663552", "172018499005317120", "414234792121597953", "228406572756369408"],
@@ -38562,7 +38567,7 @@
                 }), [t.id]), [x, p] = (0, o.useStateFromStoresArray)([S.default], () => [null, S.default.getMemberCount(t.id)], [t.id]), U = n.useCallback(() => {
                     null != s && s()
                 }, [s]), v = null;
-                return l ? G ? v = g.default.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !M && (v = g.default.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : v = g.default.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, a.jsxs)("div", {
+                return l ? G ? v = f.default.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !M && (v = f.default.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : v = f.default.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, a.jsxs)("div", {
                     className: A.container,
                     children: [(0, a.jsx)("img", {
                         alt: "",
@@ -38579,7 +38584,7 @@
                         }), (0, a.jsx)(T.default, {
                             className: A.previewCard,
                             guild: t,
-                            description: g.default.Messages.GUILD_SETTINGS_DISCOVERY_PREVIEW_DESCRIPTION,
+                            description: f.default.Messages.GUILD_SETTINGS_DISCOVERY_PREVIEW_DESCRIPTION,
                             presenceCount: x,
                             memberCount: p
                         }), (0, a.jsx)(T.default, {
@@ -38592,14 +38597,14 @@
                     }), (0, a.jsx)(d.Heading, {
                         className: A.header,
                         variant: "heading-xl/semibold",
-                        children: g.default.Messages.GUILD_SETTINGS_DISCOVERY_HEADER
+                        children: f.default.Messages.GUILD_SETTINGS_DISCOVERY_HEADER
                     }), (0, a.jsx)(d.Text, {
                         variant: "text-md/normal",
                         className: A.valueProp,
                         color: "header-secondary",
-                        children: g.default.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION.format({
+                        children: f.default.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION.format({
                             onLinkClick: () => (0, I.navigateToAndTrackHelpCenterClick)({
-                                articleId: f.HelpdeskArticles.SERVER_DISCOVERY,
+                                articleId: g.HelpdeskArticles.SERVER_DISCOVERY,
                                 guildId: t.id,
                                 pageView: c.DiscoverySettingsViews.INTRO
                             })
@@ -38608,9 +38613,9 @@
                         variant: "text-md/normal",
                         className: A.byline,
                         color: "header-secondary",
-                        children: g.default.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION_SUBHEADING.format({
+                        children: f.default.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION_SUBHEADING.format({
                             onGuidelinesClick: () => (0, I.navigateToAndTrackHelpCenterClick)({
-                                articleId: f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES,
+                                articleId: g.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES,
                                 guildId: t.id,
                                 pageView: c.DiscoverySettingsViews.INTRO
                             })
@@ -38624,7 +38629,7 @@
                             size: d.Button.Sizes.LARGE,
                             disabled: !M || !l,
                             onClick: U,
-                            children: g.default.Messages.GUILD_SETTINGS_SET_UP_DISCOVERY
+                            children: f.default.Messages.GUILD_SETTINGS_SET_UP_DISCOVERY
                         })
                     }), (0, a.jsx)(N.default, {
                         className: A.checklist,
@@ -38638,7 +38643,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return g
+                    return f
                 }
             }), s("222007"), s("424973");
             var a = s("37983"),
@@ -38656,15 +38661,15 @@
                 I = s("958706"),
                 S = s("782340"),
                 N = s("311352");
-            let f = e => {
+            let g = e => {
                 var t;
                 let {
                     reason: s = "",
                     emoji_name: l,
                     onSetReason: u,
                     onSelectEmoji: S,
-                    onClearPressed: f,
-                    reasonMinLength: g,
+                    onClearPressed: g,
+                    reasonMinLength: f,
                     reasonMaxLength: A,
                     placeholder: L,
                     position: m
@@ -38711,7 +38716,7 @@
                             inputClassName: N.reason,
                             placeholder: L,
                             value: s,
-                            minLength: g,
+                            minLength: f,
                             maxLength: A,
                             onChange: e => {
                                 u(e)
@@ -38719,7 +38724,7 @@
                             defaultDirty: (null == s ? void 0 : s.length) > 0
                         }, "text-input-".concat(m, "-").concat(h)), (null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0) > 0 || null != l ? (0, a.jsx)(o.Button, {
                             className: N.clearStatusButton,
-                            onClick: f,
+                            onClick: g,
                             look: o.Button.Looks.BLANK,
                             size: o.Button.Sizes.NONE,
                             tabIndex: -1,
@@ -38731,14 +38736,14 @@
                     })]
                 })
             };
-            var g = e => {
+            var f = e => {
                 let {
                     reasonMinLength: t,
                     reasonMaxLength: s,
                     guildId: n,
                     reasons: l
                 } = e, i = [S.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_ONE, S.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_TWO, S.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_THREE, S.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_FOUR], r = [];
-                for (let e = 0; e < 4; e++) r.push((0, a.jsx)(f, {
+                for (let e = 0; e < 4; e++) r.push((0, a.jsx)(g, {
                     position: e,
                     placeholder: i[e],
                     ...l[e],
@@ -39091,7 +39096,7 @@
                     imageClassName: s,
                     iconWrapperClassName: n,
                     ...E
-                } = e, S = (0, r.default)(), N = (0, i.isThemeDark)(S) ? T : I, f = {
+                } = e, S = (0, r.default)(), N = (0, i.isThemeDark)(S) ? T : I, g = {
                     height: 18,
                     width: 18,
                     color: (0, o.getColor)(N)
@@ -39105,9 +39110,9 @@
                         [_.avatarUploaderInnerSquareDisabled]: !t
                     }),
                     icon: null != E.image && "" !== E.image ? (0, a.jsx)(d.default, {
-                        ...f
+                        ...g
                     }) : (0, a.jsx)(u.default, {
-                        ...f
+                        ...g
                     }),
                     iconClassName: l(_.avatarUploadIcon, _.hideDefaultIcon),
                     iconWrapperClassName: n,
@@ -39187,8 +39192,8 @@
                 }, {
                     icon: S,
                     description: N,
-                    color: f,
-                    tooltip: g
+                    color: g,
+                    tooltip: f
                 } = n[s];
                 return (0, l.jsxs)("div", {
                     className: I.emojiErrorItem,
@@ -39206,9 +39211,9 @@
                         })]
                     }), (0, l.jsx)(r.TooltipContainer, {
                         position: "right",
-                        text: g,
+                        text: f,
                         children: (0, l.jsx)(_.default, {
-                            color: f
+                            color: g
                         })
                     })]
                 })
@@ -39295,15 +39300,15 @@
                     "aria-label": _,
                     filters: T,
                     setLoading: I
-                } = e, S = n.createRef(), N = n.useRef(null), [f, g] = n.useState(!1);
+                } = e, S = n.createRef(), N = n.useRef(null), [g, f] = n.useState(!1);
                 n.useEffect(() => {
-                    f && A()
-                }, [f]);
+                    g && A()
+                }, [g]);
                 let A = () => {
                         null !== N.current && ((0, l.closeModal)(N.current), N.current = null)
                     },
                     L = async e => {
-                        null == I || I(!0), await c(e, t), g(!0), null == I || I(!1)
+                        null == I || I(!0), await c(e, t), f(!0), null == I || I(!1)
                     }, m = async e => {
                         var t, n, i;
                         if (e.stopPropagation(), e.preventDefault(), (null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null || (null === (i = e.currentTarget) || void 0 === i ? void 0 : null === (n = i.files) || void 0 === n ? void 0 : n.length) === 0) return;
@@ -39610,8 +39615,8 @@
                 I = s("735201"),
                 S = s("26989"),
                 N = s("697218"),
-                f = s("773309"),
-                g = s("533403"),
+                g = s("773309"),
+                f = s("533403"),
                 A = s("427459"),
                 L = s("159885"),
                 m = s("49111"),
@@ -39648,7 +39653,7 @@
                     let l = {
                             numRequired: 0,
                             y: 0,
-                            key: f.FIRST_TIER_KEY
+                            key: g.FIRST_TIER_KEY
                         },
                         i = (0, A.getAppliedGuildBoostsRequired)(s),
                         r = e.map(e => {
@@ -39660,7 +39665,7 @@
                                 key: e.tier
                             }
                         });
-                    return (0, a.jsx)(f.default, {
+                    return (0, a.jsx)(g.default, {
                         className: n > 0 ? O.progressWithSubscriptions : O.progress,
                         progress: n,
                         tiers: [l, ...r],
@@ -39691,7 +39696,7 @@
                     return (0, a.jsxs)("div", {
                         ref: this.defaultTierRef,
                         className: O.subscribers,
-                        children: [(0, a.jsx)(g.default, {
+                        children: [(0, a.jsx)(f.default, {
                             guildId: null != s ? s : void 0,
                             users: e,
                             renderUser: this.renderSubscriber,
@@ -39844,8 +39849,8 @@
                 I = s("879473"),
                 S = s("912702"),
                 N = s("381546"),
-                f = s("45029"),
-                g = s("956089"),
+                g = s("45029"),
+                f = s("956089"),
                 A = s("427459"),
                 L = s("49111"),
                 m = s("782340"),
@@ -39916,9 +39921,9 @@
                     className: T
                 } = e, I = e => {
                     null == n || n(e)
-                }, [N, f] = o.useState(0);
+                }, [N, g] = o.useState(0);
                 return o.useLayoutEffect(() => {
-                    s && f(1)
+                    s && g(1)
                 }, [s]), (0, r.jsx)(c.Spring, {
                     from: {
                         unlockedTranslateY: 50
@@ -39972,7 +39977,7 @@
                     withCardBody: d = !0,
                     guildId: c,
                     showHeaderLockStatus: E = !0
-                } = e, I = (0, A.getAppliedGuildBoostsRequired)(c)[n.tier], S = l && s >= I, N = n.tier !== L.BoostedGuildTiers.NONE && n.tier !== L.BoostedGuildTiers.TIER_1, f = (e, t) => {
+                } = e, I = (0, A.getAppliedGuildBoostsRequired)(c)[n.tier], S = l && s >= I, N = n.tier !== L.BoostedGuildTiers.NONE && n.tier !== L.BoostedGuildTiers.TIER_1, g = (e, t) => {
                     let {
                         icon: s,
                         className: a
@@ -39988,7 +39993,7 @@
                             className: C.perkText,
                             children: [(0, r.jsxs)("div", {
                                 className: C.perkTitle,
-                                children: [e.title, e.isNew ? (0, r.jsx)(g.TextBadge, {
+                                children: [e.title, e.isNew ? (0, r.jsx)(f.TextBadge, {
                                     className: C.newBadge,
                                     text: m.default.Messages.NEW
                                 }) : null]
@@ -40027,7 +40032,7 @@
                                 children: m.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_PREVIOUS_PERKS
                             }) : null, null != n.perks && (0, r.jsx)("div", {
                                 className: C.perks,
-                                children: n.perks.map(e => f(e, S))
+                                children: n.perks.map(e => g(e, S))
                             })]
                         })
                     })]
@@ -40068,7 +40073,7 @@
                             children: m.default.Messages.GUILD_SETTINGS_PREMIUM_GUILD_TIER_REQUIREMENT.format({
                                 required: t
                             })
-                        }), (0, r.jsx)(f.default, {
+                        }), (0, r.jsx)(g.default, {
                             className: C.tierLock
                         })]
                     })
@@ -40100,7 +40105,7 @@
                         isDisabled: l,
                         sticker: S,
                         canManageSticker: N
-                    } = e, [f, g] = n.useState(!1), [A, L] = (0, d.default)(null, 4e3), m = () => {
+                    } = e, [g, f] = n.useState(!1), [A, L] = (0, d.default)(null, 4e3), m = () => {
                         (0, r.openModalLazy)(async () => {
                             let {
                                 default: e
@@ -40112,11 +40117,11 @@
                             })
                         })
                     }, C = async () => {
-                        L(null), g(!0);
+                        L(null), f(!0);
                         try {
                             await (0, E.deleteGuildSticker)(S)
                         } catch (e) {
-                            L(e.body.message), g(!1)
+                            L(e.body.message), f(!1)
                         }
                     };
                     return (0, a.jsx)(r.Tooltip, {
@@ -40129,7 +40134,7 @@
                             }),
                             children: [(0, a.jsxs)("div", {
                                 className: i(I.content, {
-                                    [I.contentRemoving]: f
+                                    [I.contentRemoving]: g
                                 }),
                                 children: [(0, a.jsx)(_.default, {
                                     className: I.sticker,
@@ -40171,7 +40176,7 @@
                                         })
                                     })]
                                 }) : null]
-                            }), f && (0, a.jsx)(r.Spinner, {
+                            }), g && (0, a.jsx)(r.Spinner, {
                                 className: I.spinner
                             })]
                         })
@@ -40200,8 +40205,8 @@
                 I = s("817963"),
                 S = s("151185"),
                 N = s("599110"),
-                f = s("427459"),
-                g = s("169105"),
+                g = s("427459"),
+                f = s("169105"),
                 A = s("467094"),
                 L = s("364685"),
                 m = s("566171"),
@@ -40211,14 +40216,14 @@
                 R = s("782340"),
                 D = s("9278"),
                 M = s("116407");
-            let G = e => e < (0, f.getTotalStickerCountForTier)(h.BoostedGuildTiers.NONE) ? h.BoostedGuildTiers.NONE : e < (0, f.getTotalStickerCountForTier)(h.BoostedGuildTiers.TIER_1) ? h.BoostedGuildTiers.TIER_1 : e < (0, f.getTotalStickerCountForTier)(h.BoostedGuildTiers.TIER_2) ? h.BoostedGuildTiers.TIER_2 : e < (0, f.getTotalStickerCountForTier)(h.BoostedGuildTiers.TIER_3) ? h.BoostedGuildTiers.TIER_3 : h.BoostedGuildTiers.NONE,
+            let G = e => e < (0, g.getTotalStickerCountForTier)(h.BoostedGuildTiers.NONE) ? h.BoostedGuildTiers.NONE : e < (0, g.getTotalStickerCountForTier)(h.BoostedGuildTiers.TIER_1) ? h.BoostedGuildTiers.TIER_1 : e < (0, g.getTotalStickerCountForTier)(h.BoostedGuildTiers.TIER_2) ? h.BoostedGuildTiers.TIER_2 : e < (0, g.getTotalStickerCountForTier)(h.BoostedGuildTiers.TIER_3) ? h.BoostedGuildTiers.TIER_3 : h.BoostedGuildTiers.NONE,
                 x = e => {
                     let {
                         children: t,
                         currentGuildTier: s,
                         guildStickers: n,
                         tier: l
-                    } = e, i = s < l, r = (0, f.getIncrementalStickerCountForTier)(l);
+                    } = e, i = s < l, r = (0, g.getIncrementalStickerCountForTier)(l);
                     return (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(d.Heading, {
                             color: "header-primary",
@@ -40228,7 +40233,7 @@
                             variant: "text-xs/normal",
                             children: R.default.Messages.GUILD_STICKER_SETTINGS_REMAINING_SLOTS_AVAILABLE.format({
                                 numTotal: r,
-                                numAvailable: (0, f.getAvailableStickerSlotCount)(n, l)
+                                numAvailable: (0, g.getAvailableStickerSlotCount)(n, l)
                             })
                         })]
                     })
@@ -40312,9 +40317,9 @@
                 } = e, l = (0, c.default)(), [u, S] = n.useState(!0), N = (0, r.useStateFromStores)([L.default], () => {
                     var e;
                     return null !== (e = L.default.getStickersByGuildId(t.id)) && void 0 !== e ? e : []
-                }, [t]), D = (0, g.useHasFreeStickerSlotsDesignUpdatesExperiment)(t.id), {
+                }, [t]), D = (0, f.useHasFreeStickerSlotsDesignUpdatesExperiment)(t.id), {
                     analyticsLocations: p
-                } = (0, E.default)(), P = t.hasFeature(h.GuildFeatures.MORE_STICKERS) ? h.BoostedGuildTiers.TIER_3 : t.premiumTier, y = t.hasFeature(h.GuildFeatures.MORE_STICKERS) ? (0, f.getAppliedGuildBoostsRequired)(t.id)[h.BoostedGuildTiers.TIER_3] : t.premiumSubscriberCount;
+                } = (0, E.default)(), P = t.hasFeature(h.GuildFeatures.MORE_STICKERS) ? h.BoostedGuildTiers.TIER_3 : t.premiumTier, y = t.hasFeature(h.GuildFeatures.MORE_STICKERS) ? (0, g.getAppliedGuildBoostsRequired)(t.id)[h.BoostedGuildTiers.TIER_3] : t.premiumSubscriberCount;
                 if (n.useEffect(() => {
                         let e = !1,
                             s = async () => {
@@ -40385,12 +40390,12 @@
                             } = e,
                             {
                                 canCreateExpressions: S,
-                                canManageGuildExpression: g
+                                canManageGuildExpression: f
                             } = (0, I.getManageResourcePermissions)(t),
                             A = E[T - 1],
-                            L = null != A ? (0, f.getTotalStickerCountForTier)(A.tier) : 0,
-                            m = (0, f.getTotalStickerCountForTier)(c.tier),
-                            x = (0, f.getIncrementalStickerCountForTier)(c.tier),
+                            L = null != A ? (0, g.getTotalStickerCountForTier)(A.tier) : 0,
+                            m = (0, g.getTotalStickerCountForTier)(c.tier),
+                            x = (0, g.getIncrementalStickerCountForTier)(c.tier),
                             p = N.slice(L, m),
                             B = p.length > 0,
                             F = P < c.tier,
@@ -40418,7 +40423,7 @@
                                 page: h.AnalyticsPages.GUILD_SETTINGS,
                                 section: h.AnalyticsSections.GUILD_SETTINGS_STICKERS,
                                 object: h.AnalyticsObjects.BOOST_UPSELL_LOST_LEVEL_HEADER,
-                                objectType: (0, f.boostedGuildTierToAnalyticsObjectType)(c.tier)
+                                objectType: (0, g.boostedGuildTierToAnalyticsObjectType)(c.tier)
                             }
                         }) : $ ? n = (0, a.jsx)(_.default, {
                             guild: t,
@@ -40430,7 +40435,7 @@
                                 page: h.AnalyticsPages.GUILD_SETTINGS,
                                 section: h.AnalyticsSections.GUILD_SETTINGS_STICKERS,
                                 object: h.AnalyticsObjects.BOOST_UPSELL_NEXT_LEVEL_HEADER,
-                                objectType: (0, f.boostedGuildTierToAnalyticsObjectType)(c.tier)
+                                objectType: (0, g.boostedGuildTierToAnalyticsObjectType)(c.tier)
                             }
                         }) : q && (n = (0, a.jsx)(j, {
                             guild: t
@@ -40451,7 +40456,7 @@
                                 }), p.map(e => (0, a.jsx)(O.default, {
                                     isDisabled: F,
                                     sticker: e,
-                                    canManageSticker: g(e)
+                                    canManageSticker: f(e)
                                 }, e.id)), J]
                             }), !F && !k && 0 === p.length && (0, a.jsx)("div", {
                                 className: i(M.emptyTierWrapper, M.unusedTierWrapper),
@@ -40478,7 +40483,7 @@
                                     })
                                 }), (0, a.jsx)(d.Button, {
                                     color: D ? d.Button.Colors.GREEN : d.Button.Colors.BRAND,
-                                    onClick: () => b((0, f.getAppliedGuildBoostsRequired)(t.id)[c.tier] - t.premiumSubscriberCount, c.tier),
+                                    onClick: () => b((0, g.getAppliedGuildBoostsRequired)(t.id)[c.tier] - t.premiumSubscriberCount, c.tier),
                                     children: R.default.Messages.GUILD_STICKER_SETTINGS_BUY_LEVEL
                                 })]
                             })]
@@ -40771,6 +40776,7 @@
                 else if (e <= o.AuditLogActions.HOME_SETTINGS_UPDATE) return o.AuditLogTargetTypes.HOME_SETTINGS;
                 else if (e <= o.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE) return o.AuditLogTargetTypes.VOICE_CHANNEL_STATUS;
                 else if (e === o.AuditLogActions.CLYDE_AI_PROFILE_UPDATE) return o.AuditLogTargetTypes.CLYDE_AI;
+                else if (e <= o.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) return o.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION;
                 return i.default.captureMessage("Unknown target type for: ".concat(e)), o.AuditLogTargetTypes.UNKNOWN
             }
 
@@ -40789,6 +40795,7 @@
                     case o.AuditLogActions.INTEGRATION_CREATE:
                     case o.AuditLogActions.STAGE_INSTANCE_CREATE:
                     case o.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE:
+                    case o.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
                     case o.AuditLogActions.THREAD_CREATE:
                     case o.AuditLogActions.AUTO_MODERATION_RULE_CREATE:
                     case o.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED:
@@ -40816,6 +40823,7 @@
                     case o.AuditLogActions.MEMBER_DISCONNECT:
                     case o.AuditLogActions.STAGE_INSTANCE_DELETE:
                     case o.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE:
+                    case o.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE:
                     case o.AuditLogActions.THREAD_DELETE:
                     case o.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE:
                     case o.AuditLogActions.AUTO_MODERATION_RULE_DELETE:
@@ -40838,6 +40846,7 @@
                     case o.AuditLogActions.MEMBER_MOVE:
                     case o.AuditLogActions.STAGE_INSTANCE_UPDATE:
                     case o.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE:
+                    case o.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
                     case o.AuditLogActions.THREAD_UPDATE:
                     case o.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE:
                     case o.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED:
@@ -40930,8 +40939,8 @@
                     buttonLabel: l,
                     buttonCallback: i,
                     disabled: d
-                } = e, [_, S] = n.useState(!1), N = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), f = s.flatMap(e => e.items.map(e => e.completed)), g = f.filter(e => e).length / f.length, A = (0, r.useSpring)({
-                    width: "".concat(100 * g, "%"),
+                } = e, [_, S] = n.useState(!1), N = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), g = s.flatMap(e => e.items.map(e => e.completed)), f = g.filter(e => e).length / g.length, A = (0, r.useSpring)({
+                    width: "".concat(100 * f, "%"),
                     immediate: N
                 });
                 return (0, a.jsxs)("div", {
@@ -40978,7 +40987,7 @@
                             color: u.Button.Colors.BRAND_NEW,
                             hover: u.Button.Colors.BRAND_NEW,
                             onClick: i,
-                            disabled: 1 !== g || d,
+                            disabled: 1 !== f || d,
                             children: l
                         })]
                     })]
@@ -41278,7 +41287,7 @@
                     className: l,
                     minValue: E,
                     maxValue: _
-                } = e, [T, I] = n.useState(t), S = c(T) || null != E && T <= E, N = c(T) || null != _ && T >= _, f = e => {
+                } = e, [T, I] = n.useState(t), S = c(T) || null != E && T <= E, N = c(T) || null != _ && T >= _, g = e => {
                     s(c(e) ? null != E ? E : 0 : e), I(e)
                 };
                 return (0, a.jsx)(r.FocusRing, {
@@ -41287,7 +41296,7 @@
                         className: i(u.actions, l),
                         children: [(0, a.jsx)(r.Clickable, {
                             onClick: e => {
-                                e.stopPropagation(), !S && f(T - 1)
+                                e.stopPropagation(), !S && g(T - 1)
                             },
                             tabIndex: -1,
                             className: i(u.iconWrapper, u.subtract, {
@@ -41301,14 +41310,14 @@
                         }), (0, a.jsx)(r.TextInput, {
                             value: "".concat(T),
                             onChange: e => {
-                                if (c(e)) return f(e);
+                                if (c(e)) return g(e);
                                 let t = parseInt(e);
-                                if (!isNaN(t)) return null != _ && t >= _ ? f(_) : null != E && t <= E ? f(E) : f(t)
+                                if (!isNaN(t)) return null != _ && t >= _ ? g(_) : null != E && t <= E ? g(E) : g(t)
                             },
                             inputClassName: u.value
                         }), (0, a.jsx)(r.Clickable, {
                             onClick: e => {
-                                e.stopPropagation(), !N && f(T + 1)
+                                e.stopPropagation(), !N && g(T + 1)
                             },
                             tabIndex: -1,
                             className: i(u.iconWrapper, u.add, {
@@ -41435,8 +41444,8 @@
                 I = s("782340"),
                 S = s("688541");
             let N = -1,
-                f = (0, E.cssValueToNumber)(u.default.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
-                g = (0, E.cssValueToNumber)(u.default.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
+                g = (0, E.cssValueToNumber)(u.default.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH),
+                f = (0, E.cssValueToNumber)(u.default.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE),
                 A = {
                     tension: 140,
                     friction: 30
@@ -41450,7 +41459,7 @@
                     let {
                         tiers: e
                     } = this.props;
-                    return e[e.length - 1].y + g / 2
+                    return e[e.length - 1].y + f / 2
                 }
                 getProgressHeight(e) {
                     let {
@@ -41529,9 +41538,9 @@
                         tiers: o
                     } = this.props, d = o[s], u = i >= e.numRequired, E = null != d && e.key === d.key, T = e.key === o[0].key;
                     l = T ? S.tierFirst : E ? S.tierCurrent : u ? S.tierAccomplished : S.tierInProgress;
-                    let I = e.y - (T ? 0 : g / 2),
+                    let I = e.y - (T ? 0 : f / 2),
                         N = this.state.tierMarkerActive === t,
-                        f = !T && E && N;
+                        g = !T && E && N;
                     return (0, a.jsx)(c.Tooltip, {
                         text: this.renderTierMarkerTooltip(e),
                         position: "right",
@@ -41541,7 +41550,7 @@
                                 scale: 1
                             },
                             to: {
-                                scale: f ? 1.625 : 1
+                                scale: g ? 1.625 : 1
                             },
                             config: L,
                             children: t => (0, a.jsx)(r.animated.div, {
@@ -41551,7 +41560,7 @@
                                     top: I,
                                     transform: t.scale.interpolate(e => "scale(".concat(e, ")"))
                                 },
-                                children: f && (0, a.jsx)(_.default, {
+                                children: g && (0, a.jsx)(_.default, {
                                     className: S.currentTierIcon
                                 })
                             })
@@ -41567,13 +41576,13 @@
                         children: [(0, a.jsx)("rect", {
                             x: "0",
                             y: "0",
-                            width: f,
+                            width: g,
                             height: e,
                             fill: "white"
                         }), t.map(e => (0, a.jsx)("circle", {
-                            cx: f / 2,
+                            cx: g / 2,
                             cy: e.y,
-                            r: f / 2,
+                            r: g / 2,
                             fill: "black"
                         }, e.key))]
                     })
@@ -41623,8 +41632,8 @@
                             height: n
                         },
                         children: [(0, a.jsxs)("svg", {
-                            viewBox: "0 0 ".concat(f, " ").concat(n),
-                            width: f,
+                            viewBox: "0 0 ".concat(g, " ").concat(n),
+                            width: g,
                             height: n,
                             children: [this.renderProgressMask(n), this.renderProgressBar(n, s)]
                         }), (0, a.jsx)("div", {
@@ -42644,322 +42653,329 @@
             "use strict";
             s.r(t), s.d(t, {
                 DEFAULT_FOR_STRINGS_KEY: function() {
-                    return j
-                },
-                GuildChangeStrings: function() {
-                    return y
-                },
-                ChannelChangeStrings: function() {
-                    return b
-                },
-                UserChangeStrings: function() {
                     return B
                 },
-                RoleChangeStrings: function() {
-                    return F
-                },
-                OnboardingPromptChangeStrings: function() {
+                GuildChangeStrings: function() {
                     return H
                 },
-                OnboardingChangeStrings: function() {
+                ChannelChangeStrings: function() {
                     return V
                 },
-                HomeSettingsChangeStrings: function() {
+                UserChangeStrings: function() {
                     return k
                 },
-                InviteChangeStrings: function() {
+                RoleChangeStrings: function() {
                     return w
                 },
-                WebhookChangeStrings: function() {
+                OnboardingPromptChangeStrings: function() {
                     return Y
                 },
-                EmojiChangeStrings: function() {
+                OnboardingChangeStrings: function() {
                     return K
                 },
-                StickerChangeStrings: function() {
+                HomeSettingsChangeStrings: function() {
                     return W
                 },
-                IntegrationChangeStrings: function() {
+                InviteChangeStrings: function() {
                     return z
                 },
-                StageInstanceChangeStrings: function() {
+                WebhookChangeStrings: function() {
                     return X
                 },
-                GuildScheduledEventChangeStrings: function() {
+                EmojiChangeStrings: function() {
                     return Z
                 },
-                ThreadChangeStrings: function() {
+                StickerChangeStrings: function() {
                     return J
                 },
-                CommandPermissionChangeStrings: function() {
+                IntegrationChangeStrings: function() {
                     return Q
                 },
-                AutoModerationRuleChangeStrings: function() {
+                StageInstanceChangeStrings: function() {
                     return q
                 },
-                GuildSoundboardChangeStrings: function() {
+                GuildScheduledEventChangeStrings: function() {
                     return $
                 },
-                VoiceChannelStatusStrings: function() {
+                GuildScheduledEventExceptionChangeStrings: function() {
                     return ee
                 },
-                ClydeAiChangeStrings: function() {
+                ThreadChangeStrings: function() {
                     return et
                 },
-                NotRenderedChanges: function() {
+                CommandPermissionChangeStrings: function() {
                     return es
                 },
-                ACTION_FILTER_ITEMS: function() {
+                AutoModerationRuleChangeStrings: function() {
                     return ea
                 },
-                getChangeTitle: function() {
+                GuildSoundboardChangeStrings: function() {
                     return en
                 },
-                getStringForAddedChannelFlag: function() {
+                VoiceChannelStatusStrings: function() {
                     return el
                 },
-                getStringForRemovedChannelFlag: function() {
+                ClydeAiChangeStrings: function() {
                     return ei
                 },
-                getStringForPermission: function() {
+                NotRenderedChanges: function() {
                     return er
                 },
-                transformLogs: function() {
+                ACTION_FILTER_ITEMS: function() {
                     return eo
+                },
+                getChangeTitle: function() {
+                    return ed
+                },
+                getStringForAddedChannelFlag: function() {
+                    return eu
+                },
+                getStringForRemovedChannelFlag: function() {
+                    return ec
+                },
+                getStringForPermission: function() {
+                    return eE
+                },
+                transformLogs: function() {
+                    return e_
                 }
             }), s("70102"), s("424973");
             var a = s("552442"),
                 n = s.n(a),
-                l = s("611221"),
-                i = s("498574"),
-                r = s("316693"),
-                o = s("509043"),
-                d = s("798609"),
-                u = s("679653"),
-                c = s("605250"),
-                E = s("385976"),
-                _ = s("454686"),
-                T = s("863636"),
-                I = s("698882"),
-                S = s("287103"),
-                N = s("834052"),
-                f = s("364685"),
-                g = s("242020"),
-                A = s("42203"),
-                L = s("26989"),
-                m = s("27618"),
-                C = s("697218"),
-                O = s("568734"),
-                h = s("449008"),
-                R = s("354023"),
-                D = s("49111"),
-                M = s("724210"),
-                G = s("680894"),
-                x = s("143460"),
-                p = s("745049"),
-                U = s("782340");
-            let v = new c.default("AuditLogUtils"),
-                j = -1,
-                P = () => ({
-                    [D.AuditLogChangeKeys.REASON]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
-                }),
-                y = () => ({
-                    [D.AuditLogChangeKeys.NAME]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
-                    [D.AuditLogChangeKeys.DESCRIPTION]: eI(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE),
-                    [D.AuditLogChangeKeys.ICON_HASH]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_ICON_HASH_CHANGE,
-                    [D.AuditLogChangeKeys.SPLASH_HASH]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SPLASH_HASH_CHANGE,
-                    [D.AuditLogChangeKeys.DISCOVERY_SPLASH_HASH]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DISCOVERY_SPLASH_HASH_CHANGE,
-                    [D.AuditLogChangeKeys.BANNER_HASH]: eI(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_REMOVE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_CHANGE),
-                    [D.AuditLogChangeKeys.OWNER_ID]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_OWNER_ID_CHANGE,
-                    [D.AuditLogChangeKeys.REGION]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_REGION_CHANGE,
-                    [D.AuditLogChangeKeys.PREFERRED_LOCALE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREFERRED_LOCALE_CHANGE,
-                    [D.AuditLogChangeKeys.AFK_CHANNEL_ID]: eI(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CLEAR, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CHANGE),
-                    [D.AuditLogChangeKeys.AFK_TIMEOUT]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_TIMEOUT_CHANGE,
-                    [D.AuditLogChangeKeys.SYSTEM_CHANNEL_ID]: eI(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_DISABLE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_CHANGE),
-                    [D.AuditLogChangeKeys.RULES_CHANNEL_ID]: eI(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CLEAR, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CHANGE),
-                    [D.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID]: eI(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CLEAR, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CHANGE),
-                    [D.AuditLogChangeKeys.MFA_LEVEL]: {
-                        [D.MFALevels.NONE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_DISABLED,
-                        [D.MFALevels.ELEVATED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_ENABLED
-                    },
-                    [D.AuditLogChangeKeys.WIDGET_ENABLED]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_ENABLED,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_DISABLED
-                    },
-                    [D.AuditLogChangeKeys.WIDGET_CHANNEL_ID]: eI(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_DELETE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_CHANGE),
-                    [D.AuditLogChangeKeys.VERIFICATION_LEVEL]: {
-                        [D.VerificationLevels.NONE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_NONE,
-                        [D.VerificationLevels.LOW]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_LOW,
-                        [D.VerificationLevels.MEDIUM]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_MEDIUM,
-                        [D.VerificationLevels.HIGH]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_HIGH,
-                        [D.VerificationLevels.VERY_HIGH]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_VERY_HIGH
-                    },
-                    [D.AuditLogChangeKeys.DEFAULT_MESSAGE_NOTIFICATIONS]: {
-                        [D.UserNotificationSettings.ALL_MESSAGES]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ALL_MESSAGES,
-                        [D.UserNotificationSettings.ONLY_MENTIONS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ONLY_MENTIONS
-                    },
-                    [D.AuditLogChangeKeys.VANITY_URL_CODE]: eI(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_DELETE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_CHANGE),
-                    [D.AuditLogChangeKeys.EXPLICIT_CONTENT_FILTER]: {
-                        [D.GuildExplicitContentFilterTypes.DISABLED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_DISABLE,
-                        [D.GuildExplicitContentFilterTypes.MEMBERS_WITHOUT_ROLES]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_MEMBERS_WITHOUT_ROLES,
-                        [D.GuildExplicitContentFilterTypes.ALL_MEMBERS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_ALL_MEMBERS
-                    },
-                    [D.AuditLogChangeKeys.PREMIUM_PROGRESS_BAR_ENABLED]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_ENABLED,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_DISABLED
-                    },
-                    [D.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
-                    [D.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATIONS,
-                    [D.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTIONS,
-                    [D.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_REMINDER_NOTIFICATIONS,
-                    [D.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
-                    ...P()
-                }),
-                b = () => ({
-                    [D.AuditLogChangeKeys.NAME]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE),
-                    [D.AuditLogChangeKeys.POSITION]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE),
-                    [D.AuditLogChangeKeys.TOPIC]: eS(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR),
-                    [D.AuditLogChangeKeys.BITRATE]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CHANGE),
-                    [D.AuditLogChangeKeys.RTC_REGION_OVERRIDE]: eS(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CHANGE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_DELETE),
-                    [D.AuditLogChangeKeys.USER_LIMIT]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CHANGE),
-                    [D.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
-                    [D.AuditLogChangeKeys.PERMISSIONS_RESET]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_RESET,
-                    [D.AuditLogChangeKeys.PERMISSIONS_GRANTED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_GRANTED,
-                    [D.AuditLogChangeKeys.PERMISSIONS_DENIED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_DENIED,
-                    [D.AuditLogChangeKeys.REASON]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
-                    [D.AuditLogChangeKeys.NSFW]: {
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_DISABLED,
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_ENABLED
-                    },
-                    [D.AuditLogChangeKeys.TYPE]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CHANGE),
-                    [D.AuditLogChangeKeys.VIDEO_QUALITY_MODE]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CHANGE),
-                    [D.AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CHANGE),
-                    [D.AuditLogChangeKeys.FLAGS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_FLAGS_CHANGE,
-                    [D.AuditLogChangeKeys.AVAILABLE_TAG_ADD]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_ADD,
-                    [D.AuditLogChangeKeys.AVAILABLE_TAG_EDIT]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_UPDATE,
-                    [D.AuditLogChangeKeys.AVAILABLE_TAG_DELETE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_DELETE
-                }),
-                B = () => ({
-                    [D.AuditLogChangeKeys.NICK]: eS(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE),
-                    [D.AuditLogChangeKeys.DEAF]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_OFF
-                    },
-                    [D.AuditLogChangeKeys.MUTE]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_ON,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_OFF
-                    },
-                    [D.AuditLogChangeKeys.ROLES_REMOVE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_REMOVE,
-                    [D.AuditLogChangeKeys.ROLES_ADD]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_ADD,
-                    [D.AuditLogChangeKeys.PRUNE_DELETE_DAYS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE_DELETE_DAYS,
-                    [D.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL]: eS(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL_REMOVED),
-                    [D.AuditLogChangeKeys.BYPASSES_VERIFICATION]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_ON,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_OFF
-                    },
-                    [D.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
-                    ...P()
-                }),
+                l = s("866227"),
+                i = s.n(l),
+                r = s("611221"),
+                o = s("498574"),
+                d = s("316693"),
+                u = s("509043"),
+                c = s("798609"),
+                E = s("679653"),
+                _ = s("605250"),
+                T = s("385976"),
+                I = s("454686"),
+                S = s("863636"),
+                N = s("698882"),
+                g = s("287103"),
+                f = s("834052"),
+                A = s("364685"),
+                L = s("242020"),
+                m = s("42203"),
+                C = s("26989"),
+                O = s("27618"),
+                h = s("697218"),
+                R = s("888400"),
+                D = s("568734"),
+                M = s("449008"),
+                G = s("354023"),
+                x = s("299039"),
+                p = s("49111"),
+                U = s("724210"),
+                v = s("680894"),
+                j = s("143460"),
+                P = s("745049"),
+                y = s("782340");
+            let b = new _.default("AuditLogUtils"),
+                B = -1,
                 F = () => ({
-                    [D.AuditLogChangeKeys.NAME]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE),
-                    [D.AuditLogChangeKeys.DESCRIPTION]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
-                    [D.AuditLogChangeKeys.PERMISSIONS_GRANTED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
-                    [D.AuditLogChangeKeys.PERMISSIONS_DENIED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
-                    [D.AuditLogChangeKeys.COLOR]: {
-                        "#000000": U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_NONE,
-                        [j]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_IOS
-                    },
-                    [D.AuditLogChangeKeys.HOIST]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_ON,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_OFF
-                    },
-                    [D.AuditLogChangeKeys.MENTIONABLE]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_ON,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_OFF
-                    },
-                    [D.AuditLogChangeKeys.ICON_HASH]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_ICON_HASH_CHANGE,
-                    [D.AuditLogChangeKeys.UNICODE_EMOJI]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
-                    ...P()
+                    [p.AuditLogChangeKeys.REASON]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
                 }),
                 H = () => ({
-                    ...P(),
-                    [D.AuditLogChangeKeys.TITLE]: e => {
-                        let {
-                            oldValue: t,
-                            newValue: s
-                        } = e;
-                        return null != t ? (0 === t.length && (t = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE), U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CHANGE.format({
-                            oldValue: t,
-                            newValue: s
-                        })) : U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CREATE
+                    [p.AuditLogChangeKeys.NAME]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
+                    [p.AuditLogChangeKeys.DESCRIPTION]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE),
+                    [p.AuditLogChangeKeys.ICON_HASH]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_ICON_HASH_CHANGE,
+                    [p.AuditLogChangeKeys.SPLASH_HASH]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SPLASH_HASH_CHANGE,
+                    [p.AuditLogChangeKeys.DISCOVERY_SPLASH_HASH]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DISCOVERY_SPLASH_HASH_CHANGE,
+                    [p.AuditLogChangeKeys.BANNER_HASH]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_REMOVE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_CHANGE),
+                    [p.AuditLogChangeKeys.OWNER_ID]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_OWNER_ID_CHANGE,
+                    [p.AuditLogChangeKeys.REGION]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_REGION_CHANGE,
+                    [p.AuditLogChangeKeys.PREFERRED_LOCALE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREFERRED_LOCALE_CHANGE,
+                    [p.AuditLogChangeKeys.AFK_CHANNEL_ID]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CLEAR, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CHANGE),
+                    [p.AuditLogChangeKeys.AFK_TIMEOUT]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_TIMEOUT_CHANGE,
+                    [p.AuditLogChangeKeys.SYSTEM_CHANNEL_ID]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_DISABLE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_CHANGE),
+                    [p.AuditLogChangeKeys.RULES_CHANNEL_ID]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CLEAR, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CHANGE),
+                    [p.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CLEAR, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CHANGE),
+                    [p.AuditLogChangeKeys.MFA_LEVEL]: {
+                        [p.MFALevels.NONE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_DISABLED,
+                        [p.MFALevels.ELEVATED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_ENABLED
                     },
-                    [D.AuditLogChangeKeys.DESCRIPTION]: e => {
+                    [p.AuditLogChangeKeys.WIDGET_ENABLED]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_ENABLED,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_DISABLED
+                    },
+                    [p.AuditLogChangeKeys.WIDGET_CHANNEL_ID]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_DELETE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_CHANGE),
+                    [p.AuditLogChangeKeys.VERIFICATION_LEVEL]: {
+                        [p.VerificationLevels.NONE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_NONE,
+                        [p.VerificationLevels.LOW]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_LOW,
+                        [p.VerificationLevels.MEDIUM]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_MEDIUM,
+                        [p.VerificationLevels.HIGH]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_HIGH,
+                        [p.VerificationLevels.VERY_HIGH]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_VERY_HIGH
+                    },
+                    [p.AuditLogChangeKeys.DEFAULT_MESSAGE_NOTIFICATIONS]: {
+                        [p.UserNotificationSettings.ALL_MESSAGES]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ALL_MESSAGES,
+                        [p.UserNotificationSettings.ONLY_MENTIONS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ONLY_MENTIONS
+                    },
+                    [p.AuditLogChangeKeys.VANITY_URL_CODE]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_DELETE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_CHANGE),
+                    [p.AuditLogChangeKeys.EXPLICIT_CONTENT_FILTER]: {
+                        [p.GuildExplicitContentFilterTypes.DISABLED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_DISABLE,
+                        [p.GuildExplicitContentFilterTypes.MEMBERS_WITHOUT_ROLES]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_MEMBERS_WITHOUT_ROLES,
+                        [p.GuildExplicitContentFilterTypes.ALL_MEMBERS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_ALL_MEMBERS
+                    },
+                    [p.AuditLogChangeKeys.PREMIUM_PROGRESS_BAR_ENABLED]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_ENABLED,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_DISABLED
+                    },
+                    [p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
+                    [p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATIONS,
+                    [p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTIONS,
+                    [p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_REMINDER_NOTIFICATIONS,
+                    [p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
+                    ...F()
+                }),
+                V = () => ({
+                    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE),
+                    [p.AuditLogChangeKeys.POSITION]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE),
+                    [p.AuditLogChangeKeys.TOPIC]: eL(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR),
+                    [p.AuditLogChangeKeys.BITRATE]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CHANGE),
+                    [p.AuditLogChangeKeys.RTC_REGION_OVERRIDE]: eL(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CHANGE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_DELETE),
+                    [p.AuditLogChangeKeys.USER_LIMIT]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CHANGE),
+                    [p.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
+                    [p.AuditLogChangeKeys.PERMISSIONS_RESET]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_RESET,
+                    [p.AuditLogChangeKeys.PERMISSIONS_GRANTED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_GRANTED,
+                    [p.AuditLogChangeKeys.PERMISSIONS_DENIED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_DENIED,
+                    [p.AuditLogChangeKeys.REASON]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
+                    [p.AuditLogChangeKeys.NSFW]: {
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_DISABLED,
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_ENABLED
+                    },
+                    [p.AuditLogChangeKeys.TYPE]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CHANGE),
+                    [p.AuditLogChangeKeys.VIDEO_QUALITY_MODE]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CHANGE),
+                    [p.AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CHANGE),
+                    [p.AuditLogChangeKeys.FLAGS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_FLAGS_CHANGE,
+                    [p.AuditLogChangeKeys.AVAILABLE_TAG_ADD]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_ADD,
+                    [p.AuditLogChangeKeys.AVAILABLE_TAG_EDIT]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_UPDATE,
+                    [p.AuditLogChangeKeys.AVAILABLE_TAG_DELETE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_DELETE
+                }),
+                k = () => ({
+                    [p.AuditLogChangeKeys.NICK]: eL(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE),
+                    [p.AuditLogChangeKeys.DEAF]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_OFF
+                    },
+                    [p.AuditLogChangeKeys.MUTE]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_ON,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_OFF
+                    },
+                    [p.AuditLogChangeKeys.ROLES_REMOVE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_REMOVE,
+                    [p.AuditLogChangeKeys.ROLES_ADD]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_ADD,
+                    [p.AuditLogChangeKeys.PRUNE_DELETE_DAYS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE_DELETE_DAYS,
+                    [p.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL]: eL(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL_REMOVED),
+                    [p.AuditLogChangeKeys.BYPASSES_VERIFICATION]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_ON,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_OFF
+                    },
+                    [p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
+                    ...F()
+                }),
+                w = () => ({
+                    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE),
+                    [p.AuditLogChangeKeys.DESCRIPTION]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
+                    [p.AuditLogChangeKeys.PERMISSIONS_GRANTED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
+                    [p.AuditLogChangeKeys.PERMISSIONS_DENIED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
+                    [p.AuditLogChangeKeys.COLOR]: {
+                        "#000000": y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_NONE,
+                        [B]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_IOS
+                    },
+                    [p.AuditLogChangeKeys.HOIST]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_ON,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_OFF
+                    },
+                    [p.AuditLogChangeKeys.MENTIONABLE]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_ON,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_OFF
+                    },
+                    [p.AuditLogChangeKeys.ICON_HASH]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_ICON_HASH_CHANGE,
+                    [p.AuditLogChangeKeys.UNICODE_EMOJI]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
+                    ...F()
+                }),
+                Y = () => ({
+                    ...F(),
+                    [p.AuditLogChangeKeys.TITLE]: e => {
                         let {
                             oldValue: t,
                             newValue: s
                         } = e;
-                        return null != t ? (0 === t.length && (t = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE), U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CHANGE.format({
+                        return null != t ? (0 === t.length && (t = y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE), y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CHANGE.format({
                             oldValue: t,
                             newValue: s
-                        })) : U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CREATE.format({
+                        })) : y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CREATE
+                    },
+                    [p.AuditLogChangeKeys.DESCRIPTION]: e => {
+                        let {
+                            oldValue: t,
+                            newValue: s
+                        } = e;
+                        return null != t ? (0 === t.length && (t = y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE), y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CHANGE.format({
+                            oldValue: t,
+                            newValue: s
+                        })) : y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CREATE.format({
                             newValue: s
                         })
                     },
-                    [D.AuditLogChangeKeys.OPTIONS]: () => U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_CHANGED_OPTIONS,
-                    [D.AuditLogChangeKeys.SINGLE_SELECT]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_SINGLE_SELECT,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_MULTI_SELECT
+                    [p.AuditLogChangeKeys.OPTIONS]: () => y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_CHANGED_OPTIONS,
+                    [p.AuditLogChangeKeys.SINGLE_SELECT]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_SINGLE_SELECT,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_MULTI_SELECT
                     },
-                    [D.AuditLogChangeKeys.REQUIRED]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_REQUIRED,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_OPTIONAL
+                    [p.AuditLogChangeKeys.REQUIRED]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_REQUIRED,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_OPTIONAL
                     }
                 }),
-                V = () => ({
-                    ...P(),
-                    [D.AuditLogChangeKeys.DEFAULT_CHANNEL_IDS]: e => {
+                K = () => ({
+                    ...F(),
+                    [p.AuditLogChangeKeys.DEFAULT_CHANNEL_IDS]: e => {
                         let {
                             newValue: t
                         } = e;
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DEFAULT_CHANNEL_IDS.format({
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DEFAULT_CHANNEL_IDS.format({
                             count: t.length
                         })
                     },
-                    [D.AuditLogChangeKeys.ENABLE_DEFAULT_CHANNELS]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE_DEFAULT_CHANNELS,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE_DEFAULT_CHANNELS
+                    [p.AuditLogChangeKeys.ENABLE_DEFAULT_CHANNELS]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE_DEFAULT_CHANNELS,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE_DEFAULT_CHANNELS
                     },
-                    [D.AuditLogChangeKeys.ENABLE_ONBOARDING_PROMPTS]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE_PROMPTS,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE_PROMPTS
+                    [p.AuditLogChangeKeys.ENABLE_ONBOARDING_PROMPTS]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE_PROMPTS,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE_PROMPTS
                     },
-                    [D.AuditLogChangeKeys.ENABLED]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE
+                    [p.AuditLogChangeKeys.ENABLED]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE
                     }
                 }),
-                k = () => ({
-                    ...P(),
-                    [D.AuditLogChangeKeys.WELCOME_MESSAGE]: () => U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_WELCOME_MESSAGE,
-                    [D.AuditLogChangeKeys.NEW_MEMBER_ACTIONS]: () => U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_NEW_MEMBER_ACTIONS,
-                    [D.AuditLogChangeKeys.RESOURCE_CHANNELS]: () => U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_RESOURCE_CHANNELS
+                W = () => ({
+                    ...F(),
+                    [p.AuditLogChangeKeys.WELCOME_MESSAGE]: () => y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_WELCOME_MESSAGE,
+                    [p.AuditLogChangeKeys.NEW_MEMBER_ACTIONS]: () => y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_NEW_MEMBER_ACTIONS,
+                    [p.AuditLogChangeKeys.RESOURCE_CHANNELS]: () => y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_RESOURCE_CHANNELS
                 }),
-                w = () => ({
-                    [D.AuditLogChangeKeys.CODE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
-                    [D.AuditLogChangeKeys.CHANNEL_ID]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
-                    [D.AuditLogChangeKeys.MAX_USES]: {
-                        0: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE_INFINITE,
-                        [j]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE
+                z = () => ({
+                    [p.AuditLogChangeKeys.CODE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
+                    [p.AuditLogChangeKeys.CHANNEL_ID]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
+                    [p.AuditLogChangeKeys.MAX_USES]: {
+                        0: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE_INFINITE,
+                        [B]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE
                     },
-                    [D.AuditLogChangeKeys.MAX_AGE]: {
-                        0: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE_INFINITE,
-                        [j]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE
+                    [p.AuditLogChangeKeys.MAX_AGE]: {
+                        0: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE_INFINITE,
+                        [B]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE
                     },
-                    [D.AuditLogChangeKeys.TEMPORARY]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_ON,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_OFF
+                    [p.AuditLogChangeKeys.TEMPORARY]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_ON,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_OFF
                     },
-                    [D.AuditLogChangeKeys.FLAGS]: e => {
+                    [p.AuditLogChangeKeys.FLAGS]: e => {
                         let {
                             newValue: t
                         } = e;
@@ -42968,829 +42984,853 @@
                                 newValue: t
                             } = e;
                             return t.map(e => (function(e) {
-                                if (e === i.GuildInviteFlags.IS_GUEST_INVITE) return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_INVITE_GUEST_INVITE;
+                                if (e === o.GuildInviteFlags.IS_GUEST_INVITE) return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_INVITE_GUEST_INVITE;
                                 return null
-                            })(e)).filter(h.isNotNullish)
+                            })(e)).filter(M.isNotNullish)
                         }({
                             newValue: t
                         })
                     },
-                    ...P()
-                }),
-                Y = () => ({
-                    [D.AuditLogChangeKeys.CHANNEL_ID]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE),
-                    [D.AuditLogChangeKeys.NAME]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE),
-                    [D.AuditLogChangeKeys.AVATAR_HASH]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
-                    [D.AuditLogChangeKeys.REASON]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
-                }),
-                K = () => ({
-                    [D.AuditLogChangeKeys.NAME]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE),
-                    ...P()
-                }),
-                W = () => ({
-                    [D.AuditLogChangeKeys.NAME]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE),
-                    [D.AuditLogChangeKeys.TAGS]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE),
-                    [D.AuditLogChangeKeys.DESCRIPTION]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
-                    ...P()
-                }),
-                z = () => ({
-                    [D.AuditLogChangeKeys.ENABLE_EMOTICONS]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_ON,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_OFF
-                    },
-                    [D.AuditLogChangeKeys.EXPIRE_BEHAVIOR]: {
-                        0: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_REMOVE_SYNCED_ROLE,
-                        1: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_KICK_FROM_SERVER
-                    },
-                    [D.AuditLogChangeKeys.EXPIRE_GRACE_PERIOD]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_GRACE_PERIOD,
-                    ...P()
+                    ...F()
                 }),
                 X = () => ({
-                    [D.AuditLogChangeKeys.TOPIC]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE),
-                    [D.AuditLogChangeKeys.PRIVACY_LEVEL]: {
-                        [p.GuildScheduledEventPrivacyLevel.GUILD_ONLY]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
-                        [p.GuildScheduledEventPrivacyLevel.PUBLIC]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC
-                    },
-                    ...P()
+                    [p.AuditLogChangeKeys.CHANNEL_ID]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE),
+                    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE),
+                    [p.AuditLogChangeKeys.AVATAR_HASH]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
+                    [p.AuditLogChangeKeys.REASON]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
                 }),
                 Z = () => ({
-                    [D.AuditLogChangeKeys.NAME]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
-                    [D.AuditLogChangeKeys.DESCRIPTION]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DESCRIPTION_CREATE,
-                    [D.AuditLogChangeKeys.PRIVACY_LEVEL]: {
-                        [p.GuildScheduledEventPrivacyLevel.GUILD_ONLY]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
-                        [p.GuildScheduledEventPrivacyLevel.PUBLIC]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC
-                    },
-                    [D.AuditLogChangeKeys.STATUS]: {
-                        [p.GuildScheduledEventStatus.SCHEDULED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_SCHEDULED,
-                        [p.GuildScheduledEventStatus.ACTIVE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_ACTIVE,
-                        [p.GuildScheduledEventStatus.COMPLETED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_COMPLETED,
-                        [p.GuildScheduledEventStatus.CANCELED]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_CANCELED
-                    },
-                    [D.AuditLogChangeKeys.ENTITY_TYPE]: {
-                        [p.GuildScheduledEventEntityTypes.NONE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_NONE,
-                        [p.GuildScheduledEventEntityTypes.STAGE_INSTANCE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_STAGE_INSTANCE,
-                        [p.GuildScheduledEventEntityTypes.VOICE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_VOICE,
-                        [p.GuildScheduledEventEntityTypes.EXTERNAL]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_EXTERNAL
-                    },
-                    [D.AuditLogChangeKeys.CHANNEL_ID]: eI(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL_CLEAR, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL),
-                    [D.AuditLogChangeKeys.LOCATION]: eI(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION_CLEAR, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION),
-                    [D.AuditLogChangeKeys.IMAGE_HASH]: eI(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_IMAGE_HASH_REMOVE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_IMAGE_HASH_CHANGE),
-                    ...P()
+                    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE),
+                    ...F()
                 }),
                 J = () => ({
-                    [D.AuditLogChangeKeys.NAME]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE),
-                    [D.AuditLogChangeKeys.ARCHIVED]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_ARCHIVED,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNARCHIVED
-                    },
-                    [D.AuditLogChangeKeys.LOCKED]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_LOCKED,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNLOCKED
-                    },
-                    [D.AuditLogChangeKeys.INVITABLE]: {
-                        true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_ENABLED,
-                        false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_DISABLED
-                    },
-                    [D.AuditLogChangeKeys.AUTO_ARCHIVE_DURATION]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CHANGE),
-                    [D.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
-                    [D.AuditLogChangeKeys.FLAGS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_FLAGS_CHANGE,
-                    ...P()
+                    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE),
+                    [p.AuditLogChangeKeys.TAGS]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE),
+                    [p.AuditLogChangeKeys.DESCRIPTION]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
+                    ...F()
                 }),
-                Q = e => {
+                Q = () => ({
+                    [p.AuditLogChangeKeys.ENABLE_EMOTICONS]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_ON,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_OFF
+                    },
+                    [p.AuditLogChangeKeys.EXPIRE_BEHAVIOR]: {
+                        0: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_REMOVE_SYNCED_ROLE,
+                        1: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_KICK_FROM_SERVER
+                    },
+                    [p.AuditLogChangeKeys.EXPIRE_GRACE_PERIOD]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_GRACE_PERIOD,
+                    ...F()
+                }),
+                q = () => ({
+                    [p.AuditLogChangeKeys.TOPIC]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE),
+                    [p.AuditLogChangeKeys.PRIVACY_LEVEL]: {
+                        [P.GuildScheduledEventPrivacyLevel.GUILD_ONLY]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
+                        [P.GuildScheduledEventPrivacyLevel.PUBLIC]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC
+                    },
+                    ...F()
+                }),
+                $ = () => ({
+                    [p.AuditLogChangeKeys.NAME]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
+                    [p.AuditLogChangeKeys.DESCRIPTION]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DESCRIPTION_CREATE,
+                    [p.AuditLogChangeKeys.PRIVACY_LEVEL]: {
+                        [P.GuildScheduledEventPrivacyLevel.GUILD_ONLY]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
+                        [P.GuildScheduledEventPrivacyLevel.PUBLIC]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC
+                    },
+                    [p.AuditLogChangeKeys.STATUS]: {
+                        [P.GuildScheduledEventStatus.SCHEDULED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_SCHEDULED,
+                        [P.GuildScheduledEventStatus.ACTIVE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_ACTIVE,
+                        [P.GuildScheduledEventStatus.COMPLETED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_COMPLETED,
+                        [P.GuildScheduledEventStatus.CANCELED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_CANCELED
+                    },
+                    [p.AuditLogChangeKeys.ENTITY_TYPE]: {
+                        [P.GuildScheduledEventEntityTypes.NONE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_NONE,
+                        [P.GuildScheduledEventEntityTypes.STAGE_INSTANCE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_STAGE_INSTANCE,
+                        [P.GuildScheduledEventEntityTypes.VOICE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_VOICE,
+                        [P.GuildScheduledEventEntityTypes.EXTERNAL]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_EXTERNAL
+                    },
+                    [p.AuditLogChangeKeys.CHANNEL_ID]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL_CLEAR, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL),
+                    [p.AuditLogChangeKeys.LOCATION]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION_CLEAR, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION),
+                    [p.AuditLogChangeKeys.IMAGE_HASH]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_IMAGE_HASH_REMOVE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_IMAGE_HASH_CHANGE),
+                    ...F()
+                }),
+                ee = () => ({
+                    [p.AuditLogChangeKeys.SCHEDULED_START_TIME]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_SCHEDULED_START_TIME_REMOVED, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_SCHEDULED_START_TIME_CHANGE),
+                    [p.AuditLogChangeKeys.SCHEDULED_END_TIME]: eA(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_SCHEDULED_END_TIME_REMOVED, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_SCHEDULED_END_TIME_CHANGE),
+                    [p.AuditLogChangeKeys.IS_CANCELED]: e => {
+                        if (null != e.oldValue || !0 === e.newValue) {
+                            if (!e.oldValue && e.newValue) return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_IS_CANCELED_CANCELED;
+                            if (e.oldValue && !e.newValue) return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_IS_CANCELED_RESTORED
+                        }
+                        return ""
+                    },
+                    ...F()
+                }),
+                et = () => ({
+                    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE),
+                    [p.AuditLogChangeKeys.ARCHIVED]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_ARCHIVED,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNARCHIVED
+                    },
+                    [p.AuditLogChangeKeys.LOCKED]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_LOCKED,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNLOCKED
+                    },
+                    [p.AuditLogChangeKeys.INVITABLE]: {
+                        true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_ENABLED,
+                        false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_DISABLED
+                    },
+                    [p.AuditLogChangeKeys.AUTO_ARCHIVE_DURATION]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CHANGE),
+                    [p.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
+                    [p.AuditLogChangeKeys.FLAGS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_FLAGS_CHANGE,
+                    ...F()
+                }),
+                es = e => {
                     let t = {
-                        ...P()
+                        ...F()
                     };
                     return null == e || e.forEach(e => {
-                        e.newValue ? e.newValue.permission ? t[e.key] = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_GRANTED : t[e.key] = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_DENIED : t[e.key] = U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_REMOVED
+                        e.newValue ? e.newValue.permission ? t[e.key] = y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_GRANTED : t[e.key] = y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_DENIED : t[e.key] = y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_REMOVED
                     }), t
                 },
-                q = () => {
+                ea = () => {
                     let e = {
-                        [D.AuditLogChangeKeys.NAME]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NAME_UPDATE,
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_TYPE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_TYPE_UPDATE,
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_EVENT_TYPE_UPDATE,
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_ACTIONS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ACTIONS_UPDATE,
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_ENABLED]: {
-                            true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ENABLED_UPDATE,
-                            false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_DISABLED_UPDATE
+                        [p.AuditLogChangeKeys.NAME]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NAME_UPDATE,
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_TYPE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_TYPE_UPDATE,
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_EVENT_TYPE_UPDATE,
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_ACTIONS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ACTIONS_UPDATE,
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_ENABLED]: {
+                            true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ENABLED_UPDATE,
+                            false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_DISABLED_UPDATE
                         },
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_EXEMPT_ROLES_UPDATE,
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_CHANNELS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_EXEMPT_CHANNELS_UPDATE,
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_METADATA]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_METADATA_UPDATE,
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_ADD_KEYWORDS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ADD_KEYWORDS,
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_KEYWORDS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_REMOVE_KEYWORDS,
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_ADD_REGEX_PATTERNS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ADD_REGEX_PATTERNS,
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_REGEX_PATTERNS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_REMOVE_REGEX_PATTERNS,
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_ADD_ALLOW_LIST]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ADD_ALLOW_LIST,
-                        [D.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_ALLOW_LIST]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_REMOVE_ALLOW_LIST,
-                        ...P()
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_EXEMPT_ROLES_UPDATE,
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_CHANNELS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_EXEMPT_CHANNELS_UPDATE,
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_METADATA]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_METADATA_UPDATE,
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_ADD_KEYWORDS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ADD_KEYWORDS,
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_KEYWORDS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_REMOVE_KEYWORDS,
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_ADD_REGEX_PATTERNS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ADD_REGEX_PATTERNS,
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_REGEX_PATTERNS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_REMOVE_REGEX_PATTERNS,
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_ADD_ALLOW_LIST]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ADD_ALLOW_LIST,
+                        [p.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_ALLOW_LIST]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_REMOVE_ALLOW_LIST,
+                        ...F()
                     };
                     return e
                 },
-                $ = () => ({
-                    [D.AuditLogChangeKeys.NAME]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_NAME_CHANGE),
-                    [D.AuditLogChangeKeys.VOLUME]: eT(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_VOLUME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_VOLUME_CHANGE),
-                    [D.AuditLogChangeKeys.EMOJI_NAME]: eS(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_REPLACE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_REMOVE),
-                    [D.AuditLogChangeKeys.EMOJI_ID]: eS(U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_REPLACE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_CREATE, U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_REMOVE),
-                    ...P()
+                en = () => ({
+                    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_NAME_CHANGE),
+                    [p.AuditLogChangeKeys.VOLUME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_VOLUME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_VOLUME_CHANGE),
+                    [p.AuditLogChangeKeys.EMOJI_NAME]: eL(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_REPLACE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_REMOVE),
+                    [p.AuditLogChangeKeys.EMOJI_ID]: eL(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_REPLACE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_REMOVE),
+                    ...F()
                 }),
-                ee = () => ({
-                    [D.AuditLogChangeKeys.STATUS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_STATUS_CREATE,
-                    ...P()
+                el = () => ({
+                    [p.AuditLogChangeKeys.STATUS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_STATUS_CREATE,
+                    ...F()
                 }),
-                et = () => ({
-                    [D.AuditLogChangeKeys.NAME]: e => {
+                ei = () => ({
+                    [p.AuditLogChangeKeys.NAME]: e => {
                         let {
                             newValue: t
                         } = e;
-                        return "" === t || null == t ? U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_NAME_RESET : U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_NAME_UPDATED
+                        return "" === t || null == t ? y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_NAME_RESET : y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_NAME_UPDATED
                     },
-                    [D.AuditLogChangeKeys.AVATAR_HASH]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_AVATAR_UPDATED,
-                    [D.AuditLogChangeKeys.BANNER_HASH]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_BANNER_UPDATED,
-                    [D.AuditLogChangeKeys.THEME_COLORS]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_THEME_COLORS_UPDATED,
-                    [D.AuditLogChangeKeys.PERSONALITY]: e => {
+                    [p.AuditLogChangeKeys.AVATAR_HASH]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_AVATAR_UPDATED,
+                    [p.AuditLogChangeKeys.BANNER_HASH]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_BANNER_UPDATED,
+                    [p.AuditLogChangeKeys.THEME_COLORS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_THEME_COLORS_UPDATED,
+                    [p.AuditLogChangeKeys.PERSONALITY]: e => {
                         let {
                             newValue: t
                         } = e;
-                        return "" === t ? U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_PERSONALITY_RESET : U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_PERSONALITY_UPDATED
+                        return "" === t ? y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_PERSONALITY_RESET : y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_PERSONALITY_UPDATED
                     },
-                    ...P()
+                    ...F()
                 }),
-                es = {
-                    [D.AuditLogTargetTypes.CHANNEL]: {
-                        [D.AuditLogChangeKeys.ID]: !0,
-                        [D.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0
+                er = {
+                    [p.AuditLogTargetTypes.CHANNEL]: {
+                        [p.AuditLogChangeKeys.ID]: !0,
+                        [p.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0
                     },
-                    [D.AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
-                        [D.AuditLogChangeKeys.TYPE]: !0,
-                        [D.AuditLogChangeKeys.ID]: !0,
-                        [D.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0
+                    [p.AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
+                        [p.AuditLogChangeKeys.TYPE]: !0,
+                        [p.AuditLogChangeKeys.ID]: !0,
+                        [p.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0
                     },
-                    [D.AuditLogTargetTypes.INVITE]: {
-                        [D.AuditLogChangeKeys.INVITER_ID]: !0,
-                        [D.AuditLogChangeKeys.USES]: !0
+                    [p.AuditLogTargetTypes.INVITE]: {
+                        [p.AuditLogChangeKeys.INVITER_ID]: !0,
+                        [p.AuditLogChangeKeys.USES]: !0
                     },
-                    [D.AuditLogTargetTypes.WEBHOOK]: {
-                        [D.AuditLogChangeKeys.TYPE]: !0,
-                        [D.AuditLogChangeKeys.APPLICATION_ID]: !0
+                    [p.AuditLogTargetTypes.WEBHOOK]: {
+                        [p.AuditLogChangeKeys.TYPE]: !0,
+                        [p.AuditLogChangeKeys.APPLICATION_ID]: !0
                     },
-                    [D.AuditLogTargetTypes.INTEGRATION]: {
-                        [D.AuditLogChangeKeys.TYPE]: !0
+                    [p.AuditLogTargetTypes.INTEGRATION]: {
+                        [p.AuditLogChangeKeys.TYPE]: !0
                     },
-                    [D.AuditLogTargetTypes.THREAD]: {
-                        [D.AuditLogChangeKeys.ID]: !0,
-                        [D.AuditLogChangeKeys.TYPE]: !0
+                    [p.AuditLogTargetTypes.THREAD]: {
+                        [p.AuditLogChangeKeys.ID]: !0,
+                        [p.AuditLogChangeKeys.TYPE]: !0
                     },
-                    [D.AuditLogTargetTypes.STICKER]: {
-                        [D.AuditLogChangeKeys.ID]: !0,
-                        [D.AuditLogChangeKeys.TYPE]: !0,
-                        [D.AuditLogChangeKeys.ASSET]: !0,
-                        [D.AuditLogChangeKeys.FORMAT_TYPE]: !0,
-                        [D.AuditLogChangeKeys.AVAILABLE]: !0,
-                        [D.AuditLogChangeKeys.GUILD_ID]: !0
+                    [p.AuditLogTargetTypes.STICKER]: {
+                        [p.AuditLogChangeKeys.ID]: !0,
+                        [p.AuditLogChangeKeys.TYPE]: !0,
+                        [p.AuditLogChangeKeys.ASSET]: !0,
+                        [p.AuditLogChangeKeys.FORMAT_TYPE]: !0,
+                        [p.AuditLogChangeKeys.AVAILABLE]: !0,
+                        [p.AuditLogChangeKeys.GUILD_ID]: !0
                     },
-                    [D.AuditLogTargetTypes.GUILD_HOME]: {
-                        [D.AuditLogChangeKeys.ENTITY_TYPE]: !0
+                    [p.AuditLogTargetTypes.GUILD_HOME]: {
+                        [p.AuditLogChangeKeys.ENTITY_TYPE]: !0
                     },
-                    [D.AuditLogTargetTypes.GUILD_ONBOARDING]: {
-                        [D.AuditLogChangeKeys.PROMPTS]: !0
+                    [p.AuditLogTargetTypes.GUILD_ONBOARDING]: {
+                        [p.AuditLogChangeKeys.PROMPTS]: !0
                     },
-                    [D.AuditLogTargetTypes.GUILD_SOUNDBOARD]: {
-                        [D.AuditLogChangeKeys.ID]: !0,
-                        [D.AuditLogChangeKeys.SOUND_ID]: !0
+                    [p.AuditLogTargetTypes.GUILD_SOUNDBOARD]: {
+                        [p.AuditLogChangeKeys.ID]: !0,
+                        [p.AuditLogChangeKeys.SOUND_ID]: !0
                     },
-                    [D.AuditLogTargetTypes.CLYDE_AI]: {
-                        [D.AuditLogChangeKeys.CLYDE_PROFILE_ID]: !0,
-                        [D.AuditLogChangeKeys.AUTHOR_ID]: !0
+                    [p.AuditLogTargetTypes.CLYDE_AI]: {
+                        [p.AuditLogChangeKeys.CLYDE_PROFILE_ID]: !0,
+                        [p.AuditLogChangeKeys.AUTHOR_ID]: !0
                     }
                 },
-                ea = () => [{
-                    value: D.AuditLogActions.ALL,
-                    label: U.default.Messages.GUILD_SETTINGS_FILTER_ALL_ACTIONS,
-                    valueLabel: U.default.Messages.GUILD_SETTINGS_FILTER_ALL
+                eo = () => [{
+                    value: p.AuditLogActions.ALL,
+                    label: y.default.Messages.GUILD_SETTINGS_FILTER_ALL_ACTIONS,
+                    valueLabel: y.default.Messages.GUILD_SETTINGS_FILTER_ALL
                 }, {
-                    value: D.AuditLogActions.GUILD_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_UPDATE
+                    value: p.AuditLogActions.GUILD_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_UPDATE
                 }, {
-                    value: D.AuditLogActions.CHANNEL_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_CREATE
+                    value: p.AuditLogActions.CHANNEL_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_CREATE
                 }, {
-                    value: D.AuditLogActions.CHANNEL_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_UPDATE
+                    value: p.AuditLogActions.CHANNEL_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_UPDATE
                 }, {
-                    value: D.AuditLogActions.CHANNEL_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_DELETE
+                    value: p.AuditLogActions.CHANNEL_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_DELETE
                 }, {
-                    value: D.AuditLogActions.CHANNEL_OVERWRITE_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_CREATE
+                    value: p.AuditLogActions.CHANNEL_OVERWRITE_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_CREATE
                 }, {
-                    value: D.AuditLogActions.CHANNEL_OVERWRITE_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_UPDATE
+                    value: p.AuditLogActions.CHANNEL_OVERWRITE_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_UPDATE
                 }, {
-                    value: D.AuditLogActions.CHANNEL_OVERWRITE_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_DELETE
+                    value: p.AuditLogActions.CHANNEL_OVERWRITE_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_DELETE
                 }, {
-                    value: D.AuditLogActions.MEMBER_KICK,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_KICK
+                    value: p.AuditLogActions.MEMBER_KICK,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_KICK
                 }, {
-                    value: D.AuditLogActions.MEMBER_PRUNE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_PRUNE
+                    value: p.AuditLogActions.MEMBER_PRUNE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_PRUNE
                 }, {
-                    value: D.AuditLogActions.MEMBER_BAN_ADD,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_ADD
+                    value: p.AuditLogActions.MEMBER_BAN_ADD,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_ADD
                 }, {
-                    value: D.AuditLogActions.MEMBER_BAN_REMOVE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_REMOVE
+                    value: p.AuditLogActions.MEMBER_BAN_REMOVE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_REMOVE
                 }, {
-                    value: D.AuditLogActions.MEMBER_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_UPDATE
+                    value: p.AuditLogActions.MEMBER_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_UPDATE
                 }, {
-                    value: D.AuditLogActions.MEMBER_ROLE_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_ROLE_UPDATE
+                    value: p.AuditLogActions.MEMBER_ROLE_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_ROLE_UPDATE
                 }, {
-                    value: D.AuditLogActions.MEMBER_MOVE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_MOVE
+                    value: p.AuditLogActions.MEMBER_MOVE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_MOVE
                 }, {
-                    value: D.AuditLogActions.MEMBER_DISCONNECT,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_DISCONNECT
+                    value: p.AuditLogActions.MEMBER_DISCONNECT,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_DISCONNECT
                 }, {
-                    value: D.AuditLogActions.BOT_ADD,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_BOT_ADD
+                    value: p.AuditLogActions.BOT_ADD,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_BOT_ADD
                 }, {
-                    value: D.AuditLogActions.THREAD_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_CREATE
+                    value: p.AuditLogActions.THREAD_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_CREATE
                 }, {
-                    value: D.AuditLogActions.THREAD_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_UPDATE
+                    value: p.AuditLogActions.THREAD_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_UPDATE
                 }, {
-                    value: D.AuditLogActions.THREAD_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_DELETE
+                    value: p.AuditLogActions.THREAD_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_DELETE
                 }, {
-                    value: D.AuditLogActions.ROLE_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE
+                    value: p.AuditLogActions.ROLE_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE
                 }, {
-                    value: D.AuditLogActions.ROLE_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_UPDATE
+                    value: p.AuditLogActions.ROLE_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_UPDATE
                 }, {
-                    value: D.AuditLogActions.ROLE_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_DELETE
+                    value: p.AuditLogActions.ROLE_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_DELETE
                 }, {
-                    value: D.AuditLogActions.ONBOARDING_PROMPT_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_PROMPT_CREATE
+                    value: p.AuditLogActions.ONBOARDING_PROMPT_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_PROMPT_CREATE
                 }, {
-                    value: D.AuditLogActions.ONBOARDING_PROMPT_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_PROMPT_UPDATE
+                    value: p.AuditLogActions.ONBOARDING_PROMPT_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_PROMPT_UPDATE
                 }, {
-                    value: D.AuditLogActions.ONBOARDING_PROMPT_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_PROMPT_DELETE
+                    value: p.AuditLogActions.ONBOARDING_PROMPT_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_PROMPT_DELETE
                 }, {
-                    value: D.AuditLogActions.ONBOARDING_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ONBOARDING_CREATE
+                    value: p.AuditLogActions.ONBOARDING_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ONBOARDING_CREATE
                 }, {
-                    value: D.AuditLogActions.ONBOARDING_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ONBOARDING_UPDATE
+                    value: p.AuditLogActions.ONBOARDING_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ONBOARDING_UPDATE
                 }, {
-                    value: D.AuditLogActions.HOME_SETTINGS_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_HOME_SETTINGS_CREATE
+                    value: p.AuditLogActions.HOME_SETTINGS_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_HOME_SETTINGS_CREATE
                 }, {
-                    value: D.AuditLogActions.HOME_SETTINGS_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_HOME_SETTINGS_UPDATE
+                    value: p.AuditLogActions.HOME_SETTINGS_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_HOME_SETTINGS_UPDATE
                 }, {
-                    value: D.AuditLogActions.INVITE_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_CREATE
+                    value: p.AuditLogActions.INVITE_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_CREATE
                 }, {
-                    value: D.AuditLogActions.INVITE_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_UPDATE
+                    value: p.AuditLogActions.INVITE_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_UPDATE
                 }, {
-                    value: D.AuditLogActions.INVITE_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_DELETE
+                    value: p.AuditLogActions.INVITE_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_DELETE
                 }, {
-                    value: D.AuditLogActions.WEBHOOK_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_CREATE
+                    value: p.AuditLogActions.WEBHOOK_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_CREATE
                 }, {
-                    value: D.AuditLogActions.WEBHOOK_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_UPDATE
+                    value: p.AuditLogActions.WEBHOOK_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_UPDATE
                 }, {
-                    value: D.AuditLogActions.WEBHOOK_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_DELETE
+                    value: p.AuditLogActions.WEBHOOK_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_DELETE
                 }, {
-                    value: D.AuditLogActions.EMOJI_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_CREATE
+                    value: p.AuditLogActions.EMOJI_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_CREATE
                 }, {
-                    value: D.AuditLogActions.EMOJI_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_UPDATE
+                    value: p.AuditLogActions.EMOJI_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_UPDATE
                 }, {
-                    value: D.AuditLogActions.EMOJI_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_DELETE
+                    value: p.AuditLogActions.EMOJI_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_DELETE
                 }, {
-                    value: D.AuditLogActions.MESSAGE_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_DELETE
+                    value: p.AuditLogActions.MESSAGE_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_DELETE
                 }, {
-                    value: D.AuditLogActions.MESSAGE_BULK_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_BULK_DELETE
+                    value: p.AuditLogActions.MESSAGE_BULK_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_BULK_DELETE
                 }, {
-                    value: D.AuditLogActions.MESSAGE_PIN,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_PIN
+                    value: p.AuditLogActions.MESSAGE_PIN,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_PIN
                 }, {
-                    value: D.AuditLogActions.MESSAGE_UNPIN,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_UNPIN
+                    value: p.AuditLogActions.MESSAGE_UNPIN,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_UNPIN
                 }, {
-                    value: D.AuditLogActions.INTEGRATION_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_CREATE
+                    value: p.AuditLogActions.INTEGRATION_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_CREATE
                 }, {
-                    value: D.AuditLogActions.INTEGRATION_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_UPDATE
+                    value: p.AuditLogActions.INTEGRATION_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_UPDATE
                 }, {
-                    value: D.AuditLogActions.INTEGRATION_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_DELETE
+                    value: p.AuditLogActions.INTEGRATION_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_DELETE
                 }, {
-                    value: D.AuditLogActions.STICKER_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_CREATE
+                    value: p.AuditLogActions.STICKER_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_CREATE
                 }, {
-                    value: D.AuditLogActions.STICKER_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_UPDATE
+                    value: p.AuditLogActions.STICKER_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_UPDATE
                 }, {
-                    value: D.AuditLogActions.STICKER_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_DELETE
+                    value: p.AuditLogActions.STICKER_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_DELETE
                 }, {
-                    value: D.AuditLogActions.STAGE_INSTANCE_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_CREATE
+                    value: p.AuditLogActions.STAGE_INSTANCE_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_CREATE
                 }, {
-                    value: D.AuditLogActions.STAGE_INSTANCE_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_UPDATE
+                    value: p.AuditLogActions.STAGE_INSTANCE_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_UPDATE
                 }, {
-                    value: D.AuditLogActions.STAGE_INSTANCE_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_DELETE
+                    value: p.AuditLogActions.STAGE_INSTANCE_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_DELETE
                 }, {
-                    value: D.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE
+                    value: p.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE
                 }, {
-                    value: D.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE
+                    value: p.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE
                 }, {
-                    value: D.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_DELETE
+                    value: p.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_DELETE
                 }, {
-                    value: D.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_APPLICATION_COMMAND_PERMISSION_UPDATE
+                    value: p.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_APPLICATION_COMMAND_PERMISSION_UPDATE
                 }, {
-                    value: D.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTO_MODERATION_BLOCK_MESSAGE
+                    value: p.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTO_MODERATION_BLOCK_MESSAGE
                 }, {
-                    value: D.AuditLogActions.AUTO_MODERATION_RULE_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE
+                    value: p.AuditLogActions.AUTO_MODERATION_RULE_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE
                 }, {
-                    value: D.AuditLogActions.AUTO_MODERATION_RULE_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_UPDATE
+                    value: p.AuditLogActions.AUTO_MODERATION_RULE_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_UPDATE
                 }, {
-                    value: D.AuditLogActions.AUTO_MODERATION_RULE_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_DELETE
+                    value: p.AuditLogActions.AUTO_MODERATION_RULE_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_DELETE
                 }, {
-                    value: D.AuditLogActions.GUILD_HOME_FEATURE_ITEM,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_HOME_FEATURE_ITEM
+                    value: p.AuditLogActions.GUILD_HOME_FEATURE_ITEM,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_HOME_FEATURE_ITEM
                 }, {
-                    value: D.AuditLogActions.GUILD_HOME_REMOVE_ITEM,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_HOME_REMOVE_ITEM
+                    value: p.AuditLogActions.GUILD_HOME_REMOVE_ITEM,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_HOME_REMOVE_ITEM
                 }, {
-                    value: D.AuditLogActions.SOUNDBOARD_SOUND_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_SOUNDBOARD_SOUND_CREATE
+                    value: p.AuditLogActions.SOUNDBOARD_SOUND_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_SOUNDBOARD_SOUND_CREATE
                 }, {
-                    value: D.AuditLogActions.SOUNDBOARD_SOUND_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_SOUNDBOARD_SOUND_UPDATE
+                    value: p.AuditLogActions.SOUNDBOARD_SOUND_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_SOUNDBOARD_SOUND_UPDATE
                 }, {
-                    value: D.AuditLogActions.SOUNDBOARD_SOUND_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_SOUNDBOARD_SOUND_DELETE
+                    value: p.AuditLogActions.SOUNDBOARD_SOUND_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_SOUNDBOARD_SOUND_DELETE
                 }, {
-                    value: D.AuditLogActions.CLYDE_AI_PROFILE_UPDATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CLYDE_AI_PROFIE_UPDATE
+                    value: p.AuditLogActions.CLYDE_AI_PROFILE_UPDATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CLYDE_AI_PROFIE_UPDATE
                 }, {
-                    value: D.AuditLogActions.VOICE_CHANNEL_STATUS_CREATE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_VOICE_CHANNEL_STATUS_CREATE
+                    value: p.AuditLogActions.VOICE_CHANNEL_STATUS_CREATE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_VOICE_CHANNEL_STATUS_CREATE
                 }, {
-                    value: D.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE,
-                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_VOICE_CHANNEL_STATUS_DELETE
+                    value: p.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE,
+                    label: y.default.Messages.GUILD_SETTINGS_ACTION_FILTER_VOICE_CHANNEL_STATUS_DELETE
                 }];
 
-            function en(e) {
+            function ed(e) {
                 switch (e.action) {
-                    case D.AuditLogActions.GUILD_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATE;
-                    case D.AuditLogActions.CHANNEL_CREATE:
-                        let t = null != e.changes ? e.changes.find(e => e.key === D.AuditLogChangeKeys.TYPE) : null;
+                    case p.AuditLogActions.GUILD_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATE;
+                    case p.AuditLogActions.CHANNEL_CREATE:
+                        let t = null != e.changes ? e.changes.find(e => e.key === p.AuditLogChangeKeys.TYPE) : null;
                         if (null == t) throw Error("[AuditLog] Could not find type change for channel create");
                         switch (t.newValue) {
-                            case D.ChannelTypes.GUILD_STAGE_VOICE:
-                                return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_STAGE_CREATE;
-                            case D.ChannelTypes.GUILD_VOICE:
-                                return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VOICE_CREATE;
-                            case D.ChannelTypes.GUILD_CATEGORY:
-                                return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_CATEGORY_CREATE;
+                            case p.ChannelTypes.GUILD_STAGE_VOICE:
+                                return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_STAGE_CREATE;
+                            case p.ChannelTypes.GUILD_VOICE:
+                                return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VOICE_CREATE;
+                            case p.ChannelTypes.GUILD_CATEGORY:
+                                return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_CATEGORY_CREATE;
                             default:
-                                return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TEXT_CREATE
+                                return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TEXT_CREATE
                         }
-                    case D.AuditLogActions.CHANNEL_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_UPDATE;
-                    case D.AuditLogActions.CHANNEL_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DELETE;
-                    case D.AuditLogActions.CHANNEL_OVERWRITE_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_CREATE;
-                    case D.AuditLogActions.CHANNEL_OVERWRITE_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_UPDATE;
-                    case D.AuditLogActions.CHANNEL_OVERWRITE_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_DELETE;
-                    case D.AuditLogActions.MEMBER_KICK:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_KICK;
-                    case D.AuditLogActions.MEMBER_PRUNE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE;
-                    case D.AuditLogActions.MEMBER_BAN_ADD:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BAN_ADD;
-                    case D.AuditLogActions.MEMBER_BAN_REMOVE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BAN_REMOVE;
-                    case D.AuditLogActions.MEMBER_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_UPDATE;
-                    case D.AuditLogActions.MEMBER_ROLE_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLE_UPDATE;
-                    case D.AuditLogActions.MEMBER_MOVE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MOVE;
-                    case D.AuditLogActions.MEMBER_DISCONNECT:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DISCONNECT;
-                    case D.AuditLogActions.BOT_ADD:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_BOT_ADD;
-                    case D.AuditLogActions.ROLE_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_CREATE;
-                    case D.AuditLogActions.ROLE_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UPDATE;
-                    case D.AuditLogActions.ROLE_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_DELETE;
-                    case D.AuditLogActions.INVITE_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CREATE;
-                    case D.AuditLogActions.INVITE_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_UPDATE;
-                    case D.AuditLogActions.INVITE_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_DELETE;
-                    case D.AuditLogActions.WEBHOOK_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CREATE;
-                    case D.AuditLogActions.WEBHOOK_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_UPDATE;
-                    case D.AuditLogActions.WEBHOOK_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_DELETE;
-                    case D.AuditLogActions.EMOJI_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_CREATE;
-                    case D.AuditLogActions.EMOJI_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_UPDATE;
-                    case D.AuditLogActions.EMOJI_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_DELETE;
-                    case D.AuditLogActions.STICKER_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_CREATE;
-                    case D.AuditLogActions.STICKER_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_UPDATE;
-                    case D.AuditLogActions.STICKER_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_DELETE;
-                    case D.AuditLogActions.MESSAGE_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_DELETE;
-                    case D.AuditLogActions.MESSAGE_BULK_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_BULK_DELETE;
-                    case D.AuditLogActions.MESSAGE_PIN:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_PIN;
-                    case D.AuditLogActions.MESSAGE_UNPIN:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_UNPIN;
-                    case D.AuditLogActions.INTEGRATION_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_CREATE;
-                    case D.AuditLogActions.INTEGRATION_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_UPDATE;
-                    case D.AuditLogActions.INTEGRATION_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_DELETE;
-                    case D.AuditLogActions.STAGE_INSTANCE_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_CREATE;
-                    case D.AuditLogActions.STAGE_INSTANCE_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_UPDATE;
-                    case D.AuditLogActions.STAGE_INSTANCE_DELETE:
-                        if (null != e.userId) return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_DELETE;
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_DELETE_NO_USER;
-                    case D.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CREATE;
-                    case D.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_UPDATE;
-                    case D.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DELETE;
-                    case D.AuditLogActions.THREAD_CREATE:
-                        let s = null != e.changes ? e.changes.find(e => e.key === D.AuditLogChangeKeys.TYPE) : null;
+                    case p.AuditLogActions.CHANNEL_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_UPDATE;
+                    case p.AuditLogActions.CHANNEL_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DELETE;
+                    case p.AuditLogActions.CHANNEL_OVERWRITE_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_CREATE;
+                    case p.AuditLogActions.CHANNEL_OVERWRITE_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_UPDATE;
+                    case p.AuditLogActions.CHANNEL_OVERWRITE_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_DELETE;
+                    case p.AuditLogActions.MEMBER_KICK:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_KICK;
+                    case p.AuditLogActions.MEMBER_PRUNE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE;
+                    case p.AuditLogActions.MEMBER_BAN_ADD:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BAN_ADD;
+                    case p.AuditLogActions.MEMBER_BAN_REMOVE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BAN_REMOVE;
+                    case p.AuditLogActions.MEMBER_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_UPDATE;
+                    case p.AuditLogActions.MEMBER_ROLE_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLE_UPDATE;
+                    case p.AuditLogActions.MEMBER_MOVE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MOVE;
+                    case p.AuditLogActions.MEMBER_DISCONNECT:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DISCONNECT;
+                    case p.AuditLogActions.BOT_ADD:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_BOT_ADD;
+                    case p.AuditLogActions.ROLE_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_CREATE;
+                    case p.AuditLogActions.ROLE_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UPDATE;
+                    case p.AuditLogActions.ROLE_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_DELETE;
+                    case p.AuditLogActions.INVITE_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CREATE;
+                    case p.AuditLogActions.INVITE_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_UPDATE;
+                    case p.AuditLogActions.INVITE_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_DELETE;
+                    case p.AuditLogActions.WEBHOOK_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CREATE;
+                    case p.AuditLogActions.WEBHOOK_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_UPDATE;
+                    case p.AuditLogActions.WEBHOOK_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_DELETE;
+                    case p.AuditLogActions.EMOJI_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_CREATE;
+                    case p.AuditLogActions.EMOJI_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_UPDATE;
+                    case p.AuditLogActions.EMOJI_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_DELETE;
+                    case p.AuditLogActions.STICKER_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_CREATE;
+                    case p.AuditLogActions.STICKER_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_UPDATE;
+                    case p.AuditLogActions.STICKER_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_DELETE;
+                    case p.AuditLogActions.MESSAGE_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_DELETE;
+                    case p.AuditLogActions.MESSAGE_BULK_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_BULK_DELETE;
+                    case p.AuditLogActions.MESSAGE_PIN:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_PIN;
+                    case p.AuditLogActions.MESSAGE_UNPIN:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_UNPIN;
+                    case p.AuditLogActions.INTEGRATION_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_CREATE;
+                    case p.AuditLogActions.INTEGRATION_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_UPDATE;
+                    case p.AuditLogActions.INTEGRATION_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_DELETE;
+                    case p.AuditLogActions.STAGE_INSTANCE_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_CREATE;
+                    case p.AuditLogActions.STAGE_INSTANCE_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_UPDATE;
+                    case p.AuditLogActions.STAGE_INSTANCE_DELETE:
+                        if (null != e.userId) return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_DELETE;
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_DELETE_NO_USER;
+                    case p.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CREATE;
+                    case p.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_UPDATE;
+                    case p.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DELETE;
+                    case p.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
+                    case p.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_UPDATE;
+                    case p.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_DELETE;
+                    case p.AuditLogActions.THREAD_CREATE:
+                        let s = null != e.changes ? e.changes.find(e => e.key === p.AuditLogChangeKeys.TYPE) : null;
                         if (null == s) throw Error("[AuditLog] Could not find type change for thread create");
                         switch (s.newValue) {
-                            case D.ChannelTypes.PRIVATE_THREAD:
-                                return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_PRIVATE_THREAD_CREATE;
-                            case D.ChannelTypes.ANNOUNCEMENT_THREAD:
-                                return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ANNOUNCEMENT_THREAD_CREATE;
+                            case p.ChannelTypes.PRIVATE_THREAD:
+                                return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_PRIVATE_THREAD_CREATE;
+                            case p.ChannelTypes.ANNOUNCEMENT_THREAD:
+                                return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ANNOUNCEMENT_THREAD_CREATE;
                             default:
-                                return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_CREATE
+                                return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_CREATE
                         }
-                    case D.AuditLogActions.THREAD_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UPDATE;
-                    case D.AuditLogActions.THREAD_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_DELETE;
-                    case D.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_UPDATE;
-                    case D.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_BLOCK_MESSAGE;
-                    case D.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL:
+                    case p.AuditLogActions.THREAD_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UPDATE;
+                    case p.AuditLogActions.THREAD_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_DELETE;
+                    case p.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_UPDATE;
+                    case p.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_BLOCK_MESSAGE;
+                    case p.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL:
                         var a;
-                        if ((null === (a = e.options) || void 0 === a ? void 0 : a.auto_moderation_rule_trigger_type) === x.AutomodTriggerType.USER_PROFILE.toString()) return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAGGED_USER_PROFILE;
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAG_TO_CHANNEL_MESSAGE;
-                    case D.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_USER_COMMUNICATION_DISABLED_MESSAGE;
-                    case D.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_QUARANTINE_USER;
-                    case D.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED:
-                        return U.default.Messages.CREATOR_MONETIZATION_APPLIED_AUDIT_LOG_TITLE;
-                    case D.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED:
-                        return U.default.Messages.CREATOR_MONETIZATION_TERMS_ACCEPTED_AUDIT_LOG_TITLE;
-                    case D.AuditLogActions.AUTO_MODERATION_RULE_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_CREATE;
-                    case D.AuditLogActions.AUTO_MODERATION_RULE_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_UPDATE;
-                    case D.AuditLogActions.AUTO_MODERATION_RULE_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_DELETE;
-                    case D.AuditLogActions.ONBOARDING_PROMPT_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_CREATE;
-                    case D.AuditLogActions.ONBOARDING_PROMPT_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_UPDATE;
-                    case D.AuditLogActions.ONBOARDING_PROMPT_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DELETE;
-                    case D.AuditLogActions.ONBOARDING_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_CREATE;
-                    case D.AuditLogActions.ONBOARDING_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_UPDATE;
-                    case D.AuditLogActions.HOME_SETTINGS_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CREATE;
-                    case D.AuditLogActions.HOME_SETTINGS_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_UPDATE;
-                    case D.AuditLogActions.GUILD_HOME_FEATURE_ITEM:
-                        let n = null != e.changes ? e.changes.find(e => e.key === D.AuditLogChangeKeys.ENTITY_TYPE) : null;
-                        if (null == n) return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_ITEM;
+                        if ((null === (a = e.options) || void 0 === a ? void 0 : a.auto_moderation_rule_trigger_type) === j.AutomodTriggerType.USER_PROFILE.toString()) return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAGGED_USER_PROFILE;
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAG_TO_CHANNEL_MESSAGE;
+                    case p.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_USER_COMMUNICATION_DISABLED_MESSAGE;
+                    case p.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_QUARANTINE_USER;
+                    case p.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED:
+                        return y.default.Messages.CREATOR_MONETIZATION_APPLIED_AUDIT_LOG_TITLE;
+                    case p.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED:
+                        return y.default.Messages.CREATOR_MONETIZATION_TERMS_ACCEPTED_AUDIT_LOG_TITLE;
+                    case p.AuditLogActions.AUTO_MODERATION_RULE_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_CREATE;
+                    case p.AuditLogActions.AUTO_MODERATION_RULE_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_UPDATE;
+                    case p.AuditLogActions.AUTO_MODERATION_RULE_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_DELETE;
+                    case p.AuditLogActions.ONBOARDING_PROMPT_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_CREATE;
+                    case p.AuditLogActions.ONBOARDING_PROMPT_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_UPDATE;
+                    case p.AuditLogActions.ONBOARDING_PROMPT_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DELETE;
+                    case p.AuditLogActions.ONBOARDING_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_CREATE;
+                    case p.AuditLogActions.ONBOARDING_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_UPDATE;
+                    case p.AuditLogActions.HOME_SETTINGS_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CREATE;
+                    case p.AuditLogActions.HOME_SETTINGS_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_UPDATE;
+                    case p.AuditLogActions.GUILD_HOME_FEATURE_ITEM:
+                        let n = null != e.changes ? e.changes.find(e => e.key === p.AuditLogChangeKeys.ENTITY_TYPE) : null;
+                        if (null == n) return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_ITEM;
                         switch (n.newValue) {
-                            case l.GuildFeedItemTypes.MESSAGE:
-                                return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_MESSAGE;
-                            case l.GuildFeedItemTypes.FORUM_POST:
-                                return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_FORUM_POST;
+                            case r.GuildFeedItemTypes.MESSAGE:
+                                return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_MESSAGE;
+                            case r.GuildFeedItemTypes.FORUM_POST:
+                                return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_FORUM_POST;
                             default:
-                                return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_ITEM
+                                return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_ITEM
                         }
-                    case D.AuditLogActions.GUILD_HOME_REMOVE_ITEM:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_REMOVE_ITEM;
-                    case D.AuditLogActions.SOUNDBOARD_SOUND_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_CREATED;
-                    case D.AuditLogActions.SOUNDBOARD_SOUND_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_UPDATED;
-                    case D.AuditLogActions.SOUNDBOARD_SOUND_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_DELETED;
-                    case D.AuditLogActions.VOICE_CHANNEL_STATUS_CREATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_CREATED;
-                    case D.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_DELETED;
-                    case D.AuditLogActions.CLYDE_AI_PROFILE_UPDATE:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_PROFILE_UPDATE;
+                    case p.AuditLogActions.GUILD_HOME_REMOVE_ITEM:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_REMOVE_ITEM;
+                    case p.AuditLogActions.SOUNDBOARD_SOUND_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_CREATED;
+                    case p.AuditLogActions.SOUNDBOARD_SOUND_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_UPDATED;
+                    case p.AuditLogActions.SOUNDBOARD_SOUND_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_DELETED;
+                    case p.AuditLogActions.VOICE_CHANNEL_STATUS_CREATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_CREATED;
+                    case p.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_DELETED;
+                    case p.AuditLogActions.CLYDE_AI_PROFILE_UPDATE:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CLYDE_AI_PROFILE_UPDATE;
                     default:
                         return null
                 }
             }
 
-            function el(e) {
+            function eu(e) {
                 switch (e) {
-                    case M.ChannelFlags.GUILD_FEED_REMOVED:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_REMOVE_CHANNEL;
-                    case M.ChannelFlags.ACTIVE_CHANNELS_REMOVED:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_REMOVE_CHANNEL;
-                    case M.ChannelFlags.PINNED:
-                        return U.default.Messages.PINNED_POST
+                    case U.ChannelFlags.GUILD_FEED_REMOVED:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_REMOVE_CHANNEL;
+                    case U.ChannelFlags.ACTIVE_CHANNELS_REMOVED:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_REMOVE_CHANNEL;
+                    case U.ChannelFlags.PINNED:
+                        return y.default.Messages.PINNED_POST
                 }
                 return null
             }
 
-            function ei(e) {
+            function ec(e) {
                 switch (e) {
-                    case M.ChannelFlags.GUILD_FEED_REMOVED:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_UNREMOVE_CHANNEL;
-                    case M.ChannelFlags.ACTIVE_CHANNELS_REMOVED:
-                        return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_UNREMOVE_CHANNEL;
-                    case M.ChannelFlags.PINNED:
-                        return U.default.Messages.UNPINNED_POST
+                    case U.ChannelFlags.GUILD_FEED_REMOVED:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_UNREMOVE_CHANNEL;
+                    case U.ChannelFlags.ACTIVE_CHANNELS_REMOVED:
+                        return y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_UNREMOVE_CHANNEL;
+                    case U.ChannelFlags.PINNED:
+                        return y.default.Messages.UNPINNED_POST
                 }
                 return null
             }
 
-            function er(e, t) {
+            function eE(e, t) {
                 switch (e) {
-                    case D.Permissions.CREATE_INSTANT_INVITE:
-                        return U.default.Messages.CREATE_INSTANT_INVITE;
-                    case D.Permissions.KICK_MEMBERS:
-                        return U.default.Messages.KICK_MEMBERS;
-                    case D.Permissions.BAN_MEMBERS:
-                        return U.default.Messages.BAN_MEMBERS;
-                    case D.Permissions.ADMINISTRATOR:
-                        return U.default.Messages.ADMINISTRATOR;
-                    case D.Permissions.MANAGE_CHANNELS:
-                        if (t.targetType === D.AuditLogTargetTypes.CHANNEL || t.targetType === D.AuditLogTargetTypes.CHANNEL_OVERWRITE) return U.default.Messages.MANAGE_CHANNEL;
-                        return U.default.Messages.MANAGE_CHANNELS;
-                    case D.Permissions.MANAGE_GUILD:
-                        return U.default.Messages.MANAGE_SERVER;
-                    case D.Permissions.VIEW_GUILD_ANALYTICS:
-                        return U.default.Messages.VIEW_GUILD_ANALYTICS;
-                    case D.Permissions.CHANGE_NICKNAME:
-                        return U.default.Messages.CHANGE_NICKNAME;
-                    case D.Permissions.MANAGE_NICKNAMES:
-                        return U.default.Messages.MANAGE_NICKNAMES;
-                    case D.Permissions.MANAGE_ROLES:
-                        return U.default.Messages.MANAGE_ROLES;
-                    case D.Permissions.MANAGE_WEBHOOKS:
-                        return U.default.Messages.MANAGE_WEBHOOKS;
-                    case D.Permissions.CREATE_GUILD_EXPRESSIONS:
-                        return U.default.Messages.CREATE_EXPRESSIONS;
-                    case D.Permissions.MANAGE_GUILD_EXPRESSIONS:
-                        return U.default.Messages.MANAGE_EXPRESSIONS;
-                    case D.Permissions.VIEW_AUDIT_LOG:
-                        return U.default.Messages.VIEW_AUDIT_LOG;
-                    case D.Permissions.VIEW_CHANNEL:
-                        return U.default.Messages.READ_MESSAGES;
-                    case D.Permissions.SEND_MESSAGES:
-                        return U.default.Messages.SEND_MESSAGES;
-                    case D.Permissions.SEND_TTS_MESSAGES:
-                        return U.default.Messages.SEND_TTS_MESSAGES;
-                    case D.Permissions.USE_APPLICATION_COMMANDS:
-                        return U.default.Messages.USE_APPLICATION_COMMANDS;
-                    case D.Permissions.MANAGE_MESSAGES:
-                        return U.default.Messages.MANAGE_MESSAGES;
-                    case D.Permissions.EMBED_LINKS:
-                        return U.default.Messages.EMBED_LINKS;
-                    case D.Permissions.ATTACH_FILES:
-                        return U.default.Messages.ATTACH_FILES;
-                    case D.Permissions.READ_MESSAGE_HISTORY:
-                        return U.default.Messages.READ_MESSAGE_HISTORY;
-                    case D.Permissions.MENTION_EVERYONE:
-                        return U.default.Messages.MENTION_EVERYONE;
-                    case D.Permissions.USE_EXTERNAL_EMOJIS:
-                        return U.default.Messages.USE_EXTERNAL_EMOJIS;
-                    case D.Permissions.USE_EXTERNAL_STICKERS:
-                        return U.default.Messages.USE_EXTERNAL_STICKERS;
-                    case D.Permissions.ADD_REACTIONS:
-                        return U.default.Messages.ADD_REACTIONS;
-                    case D.Permissions.CONNECT:
-                        return U.default.Messages.CONNECT;
-                    case D.Permissions.SPEAK:
-                        return U.default.Messages.SPEAK;
-                    case D.Permissions.MUTE_MEMBERS:
-                        return U.default.Messages.MUTE_MEMBERS;
-                    case D.Permissions.DEAFEN_MEMBERS:
-                        return U.default.Messages.DEAFEN_MEMBERS;
-                    case D.Permissions.MOVE_MEMBERS:
-                        return U.default.Messages.MOVE_MEMBERS;
-                    case D.Permissions.USE_VAD:
-                        return U.default.Messages.USE_VAD;
-                    case D.Permissions.PRIORITY_SPEAKER:
-                        return U.default.Messages.PRIORITY_SPEAKER;
-                    case D.Permissions.STREAM:
-                        return U.default.Messages.VIDEO;
-                    case D.Permissions.REQUEST_TO_SPEAK:
-                        return U.default.Messages.REQUEST_TO_SPEAK;
-                    case D.Permissions.CREATE_EVENTS:
-                        return U.default.Messages.CREATE_EVENTS;
-                    case D.Permissions.MANAGE_EVENTS:
-                        return U.default.Messages.MANAGE_EVENTS;
-                    case D.Permissions.CREATE_PUBLIC_THREADS:
-                        return U.default.Messages.CREATE_PUBLIC_THREADS;
-                    case D.Permissions.CREATE_PRIVATE_THREADS:
-                        return U.default.Messages.CREATE_PRIVATE_THREADS;
-                    case D.Permissions.SEND_MESSAGES_IN_THREADS:
-                        return U.default.Messages.SEND_MESSAGES_IN_THREADS;
-                    case D.Permissions.MANAGE_THREADS:
-                        return U.default.Messages.MANAGE_THREADS;
-                    case D.Permissions.MODERATE_MEMBERS:
-                        return U.default.Messages.MODERATE_MEMBER;
-                    case D.Permissions.USE_CLYDE_AI:
-                        return U.default.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI;
-                    case D.Permissions.SET_VOICE_CHANNEL_STATUS:
-                        return U.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE
+                    case p.Permissions.CREATE_INSTANT_INVITE:
+                        return y.default.Messages.CREATE_INSTANT_INVITE;
+                    case p.Permissions.KICK_MEMBERS:
+                        return y.default.Messages.KICK_MEMBERS;
+                    case p.Permissions.BAN_MEMBERS:
+                        return y.default.Messages.BAN_MEMBERS;
+                    case p.Permissions.ADMINISTRATOR:
+                        return y.default.Messages.ADMINISTRATOR;
+                    case p.Permissions.MANAGE_CHANNELS:
+                        if (t.targetType === p.AuditLogTargetTypes.CHANNEL || t.targetType === p.AuditLogTargetTypes.CHANNEL_OVERWRITE) return y.default.Messages.MANAGE_CHANNEL;
+                        return y.default.Messages.MANAGE_CHANNELS;
+                    case p.Permissions.MANAGE_GUILD:
+                        return y.default.Messages.MANAGE_SERVER;
+                    case p.Permissions.VIEW_GUILD_ANALYTICS:
+                        return y.default.Messages.VIEW_GUILD_ANALYTICS;
+                    case p.Permissions.CHANGE_NICKNAME:
+                        return y.default.Messages.CHANGE_NICKNAME;
+                    case p.Permissions.MANAGE_NICKNAMES:
+                        return y.default.Messages.MANAGE_NICKNAMES;
+                    case p.Permissions.MANAGE_ROLES:
+                        return y.default.Messages.MANAGE_ROLES;
+                    case p.Permissions.MANAGE_WEBHOOKS:
+                        return y.default.Messages.MANAGE_WEBHOOKS;
+                    case p.Permissions.CREATE_GUILD_EXPRESSIONS:
+                        return y.default.Messages.CREATE_EXPRESSIONS;
+                    case p.Permissions.MANAGE_GUILD_EXPRESSIONS:
+                        return y.default.Messages.MANAGE_EXPRESSIONS;
+                    case p.Permissions.VIEW_AUDIT_LOG:
+                        return y.default.Messages.VIEW_AUDIT_LOG;
+                    case p.Permissions.VIEW_CHANNEL:
+                        return y.default.Messages.READ_MESSAGES;
+                    case p.Permissions.SEND_MESSAGES:
+                        return y.default.Messages.SEND_MESSAGES;
+                    case p.Permissions.SEND_TTS_MESSAGES:
+                        return y.default.Messages.SEND_TTS_MESSAGES;
+                    case p.Permissions.USE_APPLICATION_COMMANDS:
+                        return y.default.Messages.USE_APPLICATION_COMMANDS;
+                    case p.Permissions.MANAGE_MESSAGES:
+                        return y.default.Messages.MANAGE_MESSAGES;
+                    case p.Permissions.EMBED_LINKS:
+                        return y.default.Messages.EMBED_LINKS;
+                    case p.Permissions.ATTACH_FILES:
+                        return y.default.Messages.ATTACH_FILES;
+                    case p.Permissions.READ_MESSAGE_HISTORY:
+                        return y.default.Messages.READ_MESSAGE_HISTORY;
+                    case p.Permissions.MENTION_EVERYONE:
+                        return y.default.Messages.MENTION_EVERYONE;
+                    case p.Permissions.USE_EXTERNAL_EMOJIS:
+                        return y.default.Messages.USE_EXTERNAL_EMOJIS;
+                    case p.Permissions.USE_EXTERNAL_STICKERS:
+                        return y.default.Messages.USE_EXTERNAL_STICKERS;
+                    case p.Permissions.ADD_REACTIONS:
+                        return y.default.Messages.ADD_REACTIONS;
+                    case p.Permissions.CONNECT:
+                        return y.default.Messages.CONNECT;
+                    case p.Permissions.SPEAK:
+                        return y.default.Messages.SPEAK;
+                    case p.Permissions.MUTE_MEMBERS:
+                        return y.default.Messages.MUTE_MEMBERS;
+                    case p.Permissions.DEAFEN_MEMBERS:
+                        return y.default.Messages.DEAFEN_MEMBERS;
+                    case p.Permissions.MOVE_MEMBERS:
+                        return y.default.Messages.MOVE_MEMBERS;
+                    case p.Permissions.USE_VAD:
+                        return y.default.Messages.USE_VAD;
+                    case p.Permissions.PRIORITY_SPEAKER:
+                        return y.default.Messages.PRIORITY_SPEAKER;
+                    case p.Permissions.STREAM:
+                        return y.default.Messages.VIDEO;
+                    case p.Permissions.REQUEST_TO_SPEAK:
+                        return y.default.Messages.REQUEST_TO_SPEAK;
+                    case p.Permissions.CREATE_EVENTS:
+                        return y.default.Messages.CREATE_EVENTS;
+                    case p.Permissions.MANAGE_EVENTS:
+                        return y.default.Messages.MANAGE_EVENTS;
+                    case p.Permissions.CREATE_PUBLIC_THREADS:
+                        return y.default.Messages.CREATE_PUBLIC_THREADS;
+                    case p.Permissions.CREATE_PRIVATE_THREADS:
+                        return y.default.Messages.CREATE_PRIVATE_THREADS;
+                    case p.Permissions.SEND_MESSAGES_IN_THREADS:
+                        return y.default.Messages.SEND_MESSAGES_IN_THREADS;
+                    case p.Permissions.MANAGE_THREADS:
+                        return y.default.Messages.MANAGE_THREADS;
+                    case p.Permissions.MODERATE_MEMBERS:
+                        return y.default.Messages.MODERATE_MEMBER;
+                    case p.Permissions.USE_CLYDE_AI:
+                        return y.default.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI;
+                    case p.Permissions.SET_VOICE_CHANNEL_STATUS:
+                        return y.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE
                 }
                 return null
             }
 
-            function eo(e, t) {
+            function e_(e, t) {
                 let s = [];
                 return e.forEach(e => {
                     let a = function(e, t) {
                             switch (e.targetType) {
-                                case D.AuditLogTargetTypes.GUILD:
-                                case D.AuditLogTargetTypes.GUILD_HOME:
+                                case p.AuditLogTargetTypes.GUILD:
+                                case p.AuditLogTargetTypes.GUILD_HOME:
                                     return t;
-                                case D.AuditLogTargetTypes.CHANNEL:
-                                case D.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-                                    return eE(e, D.AuditLogChangeKeys.NAME, e => A.default.getChannel(e), e => (0, u.computeChannelName)(e, C.default, m.default, !0));
-                                case D.AuditLogTargetTypes.USER:
-                                    return eE(e, D.AuditLogChangeKeys.NICK, e => C.default.getUser(e), e => e);
-                                case D.AuditLogTargetTypes.ROLE:
-                                    return eE(e, D.AuditLogChangeKeys.NAME, e => t.getRole(e), e => e.name);
-                                case D.AuditLogTargetTypes.ONBOARDING_PROMPT:
-                                    let s = eE(e, D.AuditLogChangeKeys.ID, e => T.default.getOnboardingPrompt(e), e => e.title);
-                                    return null != s ? s : U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE;
-                                case D.AuditLogTargetTypes.GUILD_ONBOARDING:
+                                case p.AuditLogTargetTypes.CHANNEL:
+                                case p.AuditLogTargetTypes.CHANNEL_OVERWRITE:
+                                    return eN(e, p.AuditLogChangeKeys.NAME, e => m.default.getChannel(e), e => (0, E.computeChannelName)(e, h.default, O.default, !0));
+                                case p.AuditLogTargetTypes.USER:
+                                    return eN(e, p.AuditLogChangeKeys.NICK, e => h.default.getUser(e), e => e);
+                                case p.AuditLogTargetTypes.ROLE:
+                                    return eN(e, p.AuditLogChangeKeys.NAME, e => t.getRole(e), e => e.name);
+                                case p.AuditLogTargetTypes.ONBOARDING_PROMPT:
+                                    let s = eN(e, p.AuditLogChangeKeys.ID, e => S.default.getOnboardingPrompt(e), e => e.title);
+                                    return null != s ? s : y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE;
+                                case p.AuditLogTargetTypes.GUILD_ONBOARDING:
                                     return t;
-                                case D.AuditLogTargetTypes.INVITE:
-                                    return eE(e, D.AuditLogChangeKeys.CODE, D.NOOP_NULL);
-                                case D.AuditLogTargetTypes.INTEGRATION:
-                                    return eE(e, D.AuditLogChangeKeys.TYPE, e => S.default.integrations.find(t => t.id === e), e => e.name);
-                                case D.AuditLogTargetTypes.WEBHOOK:
-                                    return eE(e, D.AuditLogChangeKeys.NAME, e => S.default.webhooks.find(t => t.id === e), e => e.name);
-                                case D.AuditLogTargetTypes.EMOJI:
-                                    return eE(e, D.AuditLogChangeKeys.NAME, e => E.default.getGuildEmoji(t.id).find(t => t.id === e), e => e.name);
-                                case D.AuditLogTargetTypes.STICKER:
-                                    return eE(e, D.AuditLogChangeKeys.NAME, e => f.default.getStickerById(e), e => e.name);
-                                case D.AuditLogTargetTypes.STAGE_INSTANCE:
-                                    return eE(e, D.AuditLogChangeKeys.TOPIC, e => {
+                                case p.AuditLogTargetTypes.INVITE:
+                                    return eN(e, p.AuditLogChangeKeys.CODE, p.NOOP_NULL);
+                                case p.AuditLogTargetTypes.INTEGRATION:
+                                    return eN(e, p.AuditLogChangeKeys.TYPE, e => g.default.integrations.find(t => t.id === e), e => e.name);
+                                case p.AuditLogTargetTypes.WEBHOOK:
+                                    return eN(e, p.AuditLogChangeKeys.NAME, e => g.default.webhooks.find(t => t.id === e), e => e.name);
+                                case p.AuditLogTargetTypes.EMOJI:
+                                    return eN(e, p.AuditLogChangeKeys.NAME, e => T.default.getGuildEmoji(t.id).find(t => t.id === e), e => e.name);
+                                case p.AuditLogTargetTypes.STICKER:
+                                    return eN(e, p.AuditLogChangeKeys.NAME, e => A.default.getStickerById(e), e => e.name);
+                                case p.AuditLogTargetTypes.STAGE_INSTANCE:
+                                    return eN(e, p.AuditLogChangeKeys.TOPIC, e => {
                                         var s;
-                                        return null === (s = Object.values(N.default.getStageInstancesByGuild(t.id))) || void 0 === s ? void 0 : s.find(t => t.id === e)
+                                        return null === (s = Object.values(f.default.getStageInstancesByGuild(t.id))) || void 0 === s ? void 0 : s.find(t => t.id === e)
                                     }, e => e.topic);
-                                case D.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
-                                    return eE(e, D.AuditLogChangeKeys.NAME, e => S.default.guildScheduledEvents.find(t => t.id === e), e => e.name);
-                                case D.AuditLogTargetTypes.THREAD:
-                                    return eE(e, D.AuditLogChangeKeys.NAME, e => S.default.threads.find(t => t.id === e), e => e.name);
-                                case D.AuditLogTargetTypes.APPLICATION_COMMAND:
+                                case p.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
+                                case p.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION:
+                                    return eN(e, p.AuditLogChangeKeys.NAME, e => g.default.guildScheduledEvents.find(t => t.id === e), e => e.name);
+                                case p.AuditLogTargetTypes.THREAD:
+                                    return eN(e, p.AuditLogChangeKeys.NAME, e => g.default.threads.find(t => t.id === e), e => e.name);
+                                case p.AuditLogTargetTypes.APPLICATION_COMMAND:
                                     if (e.targetId === e.options.application_id) {
-                                        let t = S.default.integrations.find(t => t.application_id === e.targetId);
+                                        let t = g.default.integrations.find(t => t.application_id === e.targetId);
                                         if (null != t) return t.name;
                                         return e.targetId
                                     }
-                                    return eE(e, D.AuditLogChangeKeys.NAME, e => S.default.applicationCommands.find(t => t.id === e), e => {
+                                    return eN(e, p.AuditLogChangeKeys.NAME, e => g.default.applicationCommands.find(t => t.id === e), e => {
                                         let t = null != e.name_localized && "" !== e.name_localized ? e.name_localized : e.name;
-                                        return e.type === d.ApplicationCommandType.CHAT ? "/⁠".concat(t) : t
+                                        return e.type === c.ApplicationCommandType.CHAT ? "/⁠".concat(t) : t
                                     });
-                                case D.AuditLogTargetTypes.AUTO_MODERATION_RULE:
-                                    return eE(e, D.AuditLogChangeKeys.NAME, e => S.default.automodRules.find(t => t.id === e), e => e.name);
-                                case D.AuditLogTargetTypes.GUILD_SOUNDBOARD:
-                                    return eE(e, D.AuditLogChangeKeys.NAME, D.NOOP_NULL);
-                                case D.AuditLogTargetTypes.HOME_SETTINGS:
-                                    return eE(e, D.AuditLogChangeKeys.GUILD_ID, e => I.default.getSettings(e), () => U.default.Messages.SERVER_GUIDE, t.id);
-                                case D.AuditLogTargetTypes.VOICE_CHANNEL_STATUS:
-                                    return eE(e, D.AuditLogChangeKeys.STATUS, e => A.default.getChannel(e), e => (0, u.computeChannelName)(e, C.default, m.default, !0));
-                                case D.AuditLogTargetTypes.CLYDE_AI:
-                                    return eE(e, D.AuditLogChangeKeys.NAME, e => L.default.getMember(t.id, G.CLYDE_AI_USER_ID), e => U.default.Messages.CLYDE_NAME);
+                                case p.AuditLogTargetTypes.AUTO_MODERATION_RULE:
+                                    return eN(e, p.AuditLogChangeKeys.NAME, e => g.default.automodRules.find(t => t.id === e), e => e.name);
+                                case p.AuditLogTargetTypes.GUILD_SOUNDBOARD:
+                                    return eN(e, p.AuditLogChangeKeys.NAME, p.NOOP_NULL);
+                                case p.AuditLogTargetTypes.HOME_SETTINGS:
+                                    return eN(e, p.AuditLogChangeKeys.GUILD_ID, e => N.default.getSettings(e), () => y.default.Messages.SERVER_GUIDE, t.id);
+                                case p.AuditLogTargetTypes.VOICE_CHANNEL_STATUS:
+                                    return eN(e, p.AuditLogChangeKeys.STATUS, e => m.default.getChannel(e), e => (0, E.computeChannelName)(e, h.default, O.default, !0));
+                                case p.AuditLogTargetTypes.CLYDE_AI:
+                                    return eN(e, p.AuditLogChangeKeys.NAME, e => C.default.getMember(t.id, v.CLYDE_AI_USER_ID), e => y.default.Messages.CLYDE_NAME);
                                 default:
-                                    return v.warn("Unknown targetType for log", e), null
+                                    return b.warn("Unknown targetType for log", e), null
                             }
                         }(e, t),
-                        l = C.default.getUser(e.userId);
-                    if (null != a || [D.AuditLogActions.MEMBER_PRUNE, D.AuditLogActions.MEMBER_DISCONNECT, D.AuditLogActions.MEMBER_MOVE, D.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED, D.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED].includes(e.action)) {
+                        l = h.default.getUser(e.userId);
+                    if (null != a || [p.AuditLogActions.MEMBER_PRUNE, p.AuditLogActions.MEMBER_DISCONNECT, p.AuditLogActions.MEMBER_MOVE, p.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED, p.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED].includes(e.action)) {
                         if (null != (e = (e = (e = e.set("user", l)).set("target", a)).set("options", function(e) {
                                 if (null != e.options) {
-                                    let t = {
+                                    let s = {
                                         ...e.options
                                     };
                                     switch (e.options.type) {
-                                        case D.AuditLogSubtargetTypes.USER:
-                                            t.subtarget = e_(e.options.id, e => C.default.getUser(e), e => e.tag);
+                                        case p.AuditLogSubtargetTypes.USER:
+                                            s.subtarget = eg(e.options.id, e => h.default.getUser(e), e => e.tag);
                                             break;
-                                        case D.AuditLogSubtargetTypes.ROLE:
-                                            t.subtarget = e_(e.options.role_name, D.NOOP_NULL)
+                                        case p.AuditLogSubtargetTypes.ROLE:
+                                            s.subtarget = eg(e.options.role_name, p.NOOP_NULL)
                                     }
-                                    return null != e.options.channel_id && (t.channel = eE(e, "", e => A.default.getChannel(e), e => e, e.options.channel_id)), null != e.options.members_removed && 0 !== e.options.members_removed && (t.count = e.options.members_removed), t
+                                    if (null != e.options.channel_id && (s.channel = eN(e, "", e => m.default.getChannel(e), e => e, e.options.channel_id)), null != e.options.members_removed && 0 !== e.options.members_removed && (s.count = e.options.members_removed), null != e.options.event_exception_id) {
+                                        var t;
+                                        let a = g.default.guildScheduledEvents.find(t => t.id === e.targetId),
+                                            n = null == a ? void 0 : a.guild_scheduled_event_exceptions.find(t => t.event_exception_id === e.options.event_exception_id);
+                                        s.subtarget = (0, R.dateFormat)(i(x.default.extractTimestamp(null !== (t = null == n ? void 0 : n.event_exception_id) && void 0 !== t ? t : "0")), "LL")
+                                    }
+                                    return s
                                 }
                                 return e.options
                             }(e))).changes) {
                             let s = [];
                             e.changes.forEach(a => {
                                 let l = function(e, t, s) {
-                                    if (t.action === D.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE) {
+                                    if (t.action === p.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE) {
                                         let t = e.newValue || e.oldValue;
                                         switch (t.type) {
-                                            case D.ApplicationCommandPermissionTypes.ROLE:
-                                                e.subtarget = e_(t.id, e => s.getRole(e), e => e.name);
+                                            case p.ApplicationCommandPermissionTypes.ROLE:
+                                                e.subtarget = eg(t.id, e => s.getRole(e), e => e.name);
                                                 break;
-                                            case D.ApplicationCommandPermissionTypes.USER:
-                                                e.subtarget = e_(t.id, e => C.default.getUser(e), e => e.tag);
+                                            case p.ApplicationCommandPermissionTypes.USER:
+                                                e.subtarget = eg(t.id, e => h.default.getUser(e), e => e.tag);
                                                 break;
-                                            case D.ApplicationCommandPermissionTypes.CHANNEL:
-                                                t.id === n(s.id).subtract(1).toString() ? e.subtarget = U.default.Messages.ALL_CHANNELS : e.subtarget = e_(t.id, e => A.default.getChannel(e), e => (0, u.computeChannelName)(e, C.default, m.default, !0))
+                                            case p.ApplicationCommandPermissionTypes.CHANNEL:
+                                                t.id === n(s.id).subtract(1).toString() ? e.subtarget = y.default.Messages.ALL_CHANNELS : e.subtarget = eg(t.id, e => m.default.getChannel(e), e => (0, E.computeChannelName)(e, h.default, O.default, !0))
                                         }
                                         return e
                                     }
                                     switch (e.key) {
-                                        case D.AuditLogChangeKeys.OWNER_ID:
-                                            return ec(e, e => C.default.getUser(e));
-                                        case D.AuditLogChangeKeys.CHANNEL_ID:
-                                        case D.AuditLogChangeKeys.AFK_CHANNEL_ID:
-                                        case D.AuditLogChangeKeys.SYSTEM_CHANNEL_ID:
-                                        case D.AuditLogChangeKeys.RULES_CHANNEL_ID:
-                                        case D.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID:
-                                            return ec(e, e => A.default.getChannel(e), e => (0, u.computeChannelName)(e, C.default, m.default, !0));
-                                        case D.AuditLogChangeKeys.AFK_TIMEOUT:
-                                            return ec(e, e => e / 60);
-                                        case D.AuditLogChangeKeys.BITRATE:
-                                            return ec(e, e => e / 1e3);
-                                        case D.AuditLogChangeKeys.COLOR:
-                                            return ec(e, e => (0, o.int2hex)(e).toUpperCase());
-                                        case D.AuditLogChangeKeys.THEME_COLORS:
-                                            return ec(e, e => "".concat((0, o.int2hex)(e[0]).toUpperCase(), ", ").concat((0, o.int2hex)(e[1]).toUpperCase()));
-                                        case D.AuditLogChangeKeys.MAX_AGE:
-                                            return ec(e, e => {
-                                                let t = R.default.getMaxAgeOptions.find(t => {
+                                        case p.AuditLogChangeKeys.OWNER_ID:
+                                            return eS(e, e => h.default.getUser(e));
+                                        case p.AuditLogChangeKeys.CHANNEL_ID:
+                                        case p.AuditLogChangeKeys.AFK_CHANNEL_ID:
+                                        case p.AuditLogChangeKeys.SYSTEM_CHANNEL_ID:
+                                        case p.AuditLogChangeKeys.RULES_CHANNEL_ID:
+                                        case p.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID:
+                                            return eS(e, e => m.default.getChannel(e), e => (0, E.computeChannelName)(e, h.default, O.default, !0));
+                                        case p.AuditLogChangeKeys.AFK_TIMEOUT:
+                                            return eS(e, e => e / 60);
+                                        case p.AuditLogChangeKeys.BITRATE:
+                                            return eS(e, e => e / 1e3);
+                                        case p.AuditLogChangeKeys.COLOR:
+                                            return eS(e, e => (0, u.int2hex)(e).toUpperCase());
+                                        case p.AuditLogChangeKeys.THEME_COLORS:
+                                            return eS(e, e => "".concat((0, u.int2hex)(e[0]).toUpperCase(), ", ").concat((0, u.int2hex)(e[1]).toUpperCase()));
+                                        case p.AuditLogChangeKeys.MAX_AGE:
+                                            return eS(e, e => {
+                                                let t = G.default.getMaxAgeOptions.find(t => {
                                                     let {
                                                         value: s
                                                     } = t;
@@ -43798,40 +43838,40 @@
                                                 });
                                                 return t ? t.label : e
                                             });
-                                        case D.AuditLogChangeKeys.PERMISSIONS: {
+                                        case p.AuditLogChangeKeys.PERMISSIONS: {
                                             let t = [],
                                                 {
                                                     added: s,
                                                     removed: a
-                                                } = ed(e.oldValue, e.newValue);
+                                                } = eT(e.oldValue, e.newValue);
                                             if (s.length > 0) {
-                                                let e = new g.AuditLogChange(D.AuditLogChangeKeys.PERMISSIONS_GRANTED, null, s);
+                                                let e = new L.AuditLogChange(p.AuditLogChangeKeys.PERMISSIONS_GRANTED, null, s);
                                                 t.push(e)
                                             }
                                             if (a.length > 0) {
-                                                let e = new g.AuditLogChange(D.AuditLogChangeKeys.PERMISSIONS_DENIED, null, a);
+                                                let e = new L.AuditLogChange(p.AuditLogChangeKeys.PERMISSIONS_DENIED, null, a);
                                                 t.push(e)
                                             }
                                             return t
                                         }
-                                        case D.AuditLogChangeKeys.PERMISSIONS_GRANTED:
-                                        case D.AuditLogChangeKeys.PERMISSIONS_DENIED: {
+                                        case p.AuditLogChangeKeys.PERMISSIONS_GRANTED:
+                                        case p.AuditLogChangeKeys.PERMISSIONS_DENIED: {
                                             let t = [],
                                                 {
                                                     added: s,
                                                     removed: a
-                                                } = ed(e.oldValue, e.newValue);
+                                                } = eT(e.oldValue, e.newValue);
                                             if (s.length > 0) {
-                                                let a = new g.AuditLogChange(e.key, null, s);
+                                                let a = new L.AuditLogChange(e.key, null, s);
                                                 t.push(a)
                                             }
                                             if (a.length > 0) {
-                                                let e = new g.AuditLogChange(D.AuditLogChangeKeys.PERMISSIONS_RESET, a, a);
+                                                let e = new L.AuditLogChange(p.AuditLogChangeKeys.PERMISSIONS_RESET, a, a);
                                                 t.push(e)
                                             }
                                             return t
                                         }
-                                        case D.AuditLogChangeKeys.FLAGS: {
+                                        case p.AuditLogChangeKeys.FLAGS: {
                                             let t = [],
                                                 {
                                                     added: s,
@@ -43839,13 +43879,13 @@
                                                 } = function(e, t) {
                                                     let s = "number" == typeof e ? e : 0,
                                                         a = "number" == typeof t ? t : 0,
-                                                        n = O.removeFlag(a, s),
-                                                        l = O.removeFlag(s, a),
+                                                        n = D.removeFlag(a, s),
+                                                        l = D.removeFlag(s, a),
                                                         i = [],
                                                         r = [];
-                                                    for (let e in M.ChannelFlags) {
-                                                        let t = M.ChannelFlags[e];
-                                                        O.hasFlag(n, t) && i.push(t), O.hasFlag(l, t) && r.push(t)
+                                                    for (let e in U.ChannelFlags) {
+                                                        let t = U.ChannelFlags[e];
+                                                        D.hasFlag(n, t) && i.push(t), D.hasFlag(l, t) && r.push(t)
                                                     }
                                                     return {
                                                         added: i,
@@ -43853,71 +43893,71 @@
                                                     }
                                                 }(e.oldValue, e.newValue);
                                             if (s.length > 0) {
-                                                let a = new g.AuditLogChange(e.key, null, s);
+                                                let a = new L.AuditLogChange(e.key, null, s);
                                                 t.push(a)
                                             }
                                             if (a.length > 0) {
-                                                let s = new g.AuditLogChange(e.key, a, null);
+                                                let s = new L.AuditLogChange(e.key, a, null);
                                                 t.push(s)
                                             }
                                             return t
                                         }
-                                        case D.AuditLogChangeKeys.PREFERRED_LOCALE:
-                                            return ec(e, e => {
-                                                let t = U.default.getAvailableLocales().find(t => t.value === e);
+                                        case p.AuditLogChangeKeys.PREFERRED_LOCALE:
+                                            return eS(e, e => {
+                                                let t = y.default.getAvailableLocales().find(t => t.value === e);
                                                 return null != t ? t.name : null
                                             });
-                                        case D.AuditLogChangeKeys.VIDEO_QUALITY_MODE:
-                                            return ec(e, e => e === D.VideoQualityMode.FULL ? U.default.Messages.VIDEO_QUALITY_MODE_FULL : U.default.Messages.VIDEO_QUALITY_MODE_AUTO);
-                                        case D.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAGS:
+                                        case p.AuditLogChangeKeys.VIDEO_QUALITY_MODE:
+                                            return eS(e, e => e === p.VideoQualityMode.FULL ? y.default.Messages.VIDEO_QUALITY_MODE_FULL : y.default.Messages.VIDEO_QUALITY_MODE_AUTO);
+                                        case p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAGS:
                                             return function(e) {
                                                 let t = {
-                                                        [D.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATIONS]: D.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS,
-                                                        [D.SystemChannelFlags.SUPPRESS_PREMIUM_SUBSCRIPTIONS]: D.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS,
-                                                        [D.SystemChannelFlags.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS]: D.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS,
-                                                        [D.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES]: D.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES
+                                                        [p.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATIONS]: p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS,
+                                                        [p.SystemChannelFlags.SUPPRESS_PREMIUM_SUBSCRIPTIONS]: p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS,
+                                                        [p.SystemChannelFlags.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS]: p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS,
+                                                        [p.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES]: p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES
                                                     },
                                                     s = [];
-                                                return Object.values(D.SystemChannelFlags).forEach(a => {
+                                                return Object.values(p.SystemChannelFlags).forEach(a => {
                                                     let n = (e.oldValue & a) === a,
                                                         l = (e.newValue & a) === a;
                                                     if (n === l) return;
-                                                    let i = new g.AuditLogChange(t[a], !n, !l);
+                                                    let i = new L.AuditLogChange(t[a], !n, !l);
                                                     s.push(i)
                                                 }), s
                                             }(e);
-                                        case D.AuditLogChangeKeys.AUTO_MODERATION_ACTIONS:
-                                            if (t.targetType === D.AuditLogTargetTypes.AUTO_MODERATION_RULE) return ec(e, e => e.map(e => e.type), e => e.map(_.actionTypeToName).join(","));
+                                        case p.AuditLogChangeKeys.AUTO_MODERATION_ACTIONS:
+                                            if (t.targetType === p.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eS(e, e => e.map(e => e.type), e => e.map(I.actionTypeToName).join(","));
                                             break;
-                                        case D.AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE:
-                                            if (t.targetType === D.AuditLogTargetTypes.AUTO_MODERATION_RULE) return ec(e, _.eventTypeToName);
+                                        case p.AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE:
+                                            if (t.targetType === p.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eS(e, I.eventTypeToName);
                                             break;
-                                        case D.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_TYPE:
-                                            if (t.targetType === D.AuditLogTargetTypes.AUTO_MODERATION_RULE) return ec(e, _.triggerTypeToName);
+                                        case p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_TYPE:
+                                            if (t.targetType === p.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eS(e, I.triggerTypeToName);
                                             break;
-                                        case D.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_METADATA:
-                                            if (t.targetType === D.AuditLogTargetTypes.AUTO_MODERATION_RULE) return ec(e, e => {
-                                                if (null != e && "object" == typeof e) return null != e.keyword_filter && Array.isArray(e.keyword_filter) ? U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_METADATA_KEYWORDS_UPDATE.plainFormat({
+                                        case p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_METADATA:
+                                            if (t.targetType === p.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eS(e, e => {
+                                                if (null != e && "object" == typeof e) return null != e.keyword_filter && Array.isArray(e.keyword_filter) ? y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_METADATA_KEYWORDS_UPDATE.plainFormat({
                                                     newValue: e.keyword_filter.map(e => "'".concat(e, "'")).join(", ")
                                                 }) : JSON.stringify(e);
                                                 return e
                                             });
                                             break;
-                                        case D.AuditLogChangeKeys.AUTO_MODERATION_ADD_KEYWORDS:
-                                        case D.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_KEYWORDS:
-                                        case D.AuditLogChangeKeys.AUTO_MODERATION_ADD_REGEX_PATTERNS:
-                                        case D.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_REGEX_PATTERNS:
-                                        case D.AuditLogChangeKeys.AUTO_MODERATION_ADD_ALLOW_LIST:
-                                        case D.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_ALLOW_LIST:
-                                            if (t.targetType === D.AuditLogTargetTypes.AUTO_MODERATION_RULE) return ec(e, e => null != e && Array.isArray(e) ? e.map(e => "'".concat(e, "'")).join(", ") : JSON.stringify(e));
+                                        case p.AuditLogChangeKeys.AUTO_MODERATION_ADD_KEYWORDS:
+                                        case p.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_KEYWORDS:
+                                        case p.AuditLogChangeKeys.AUTO_MODERATION_ADD_REGEX_PATTERNS:
+                                        case p.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_REGEX_PATTERNS:
+                                        case p.AuditLogChangeKeys.AUTO_MODERATION_ADD_ALLOW_LIST:
+                                        case p.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_ALLOW_LIST:
+                                            if (t.targetType === p.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eS(e, e => null != e && Array.isArray(e) ? e.map(e => "'".concat(e, "'")).join(", ") : JSON.stringify(e));
                                             break;
-                                        case D.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_CHANNELS:
-                                            if (t.targetType === D.AuditLogTargetTypes.AUTO_MODERATION_RULE) return ec(e, e => e.map(A.default.getChannel).filter(e => null != e).map(e => (0, u.computeChannelName)(e, C.default, m.default, !0)), e => null != e && e.length > 0 ? e.join(", ") : U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE);
+                                        case p.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_CHANNELS:
+                                            if (t.targetType === p.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eS(e, e => e.map(m.default.getChannel).filter(e => null != e).map(e => (0, E.computeChannelName)(e, h.default, O.default, !0)), e => null != e && e.length > 0 ? e.join(", ") : y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE);
                                             break;
-                                        case D.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES:
-                                            if (t.targetType === D.AuditLogTargetTypes.AUTO_MODERATION_RULE) return ec(e, e => e.map(e => s.getRole(e)).filter(e => null != e).map(e => e.name), e => null != e && e.length > 0 ? e.join(", ") : U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE);
+                                        case p.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES:
+                                            if (t.targetType === p.AuditLogTargetTypes.AUTO_MODERATION_RULE) return eS(e, e => e.map(e => s.getRole(e)).filter(e => null != e).map(e => e.name), e => null != e && e.length > 0 ? e.join(", ") : y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE);
                                             break;
-                                        case D.AuditLogChangeKeys.AVAILABLE_TAGS:
+                                        case p.AuditLogChangeKeys.AVAILABLE_TAGS:
                                             return function(e) {
                                                 let {
                                                     oldValue: t,
@@ -43932,19 +43972,22 @@
                                                         i[e.id] = e
                                                     }), a.length < n.length) {
                                                     for (let e in i)
-                                                        if (null == l[e]) return new g.AuditLogChange(D.AuditLogChangeKeys.AVAILABLE_TAG_ADD, null, eu(i[e]))
+                                                        if (null == l[e]) return new L.AuditLogChange(p.AuditLogChangeKeys.AVAILABLE_TAG_ADD, null, eI(i[e]))
                                                 }
                                                 if (a.length > n.length) {
                                                     for (let e in l)
-                                                        if (null == i[e]) return new g.AuditLogChange(D.AuditLogChangeKeys.AVAILABLE_TAG_DELETE, null, eu(l[e]))
+                                                        if (null == i[e]) return new L.AuditLogChange(p.AuditLogChangeKeys.AVAILABLE_TAG_DELETE, null, eI(l[e]))
                                                 }
                                                 for (let e in l) {
                                                     let t = l[e],
                                                         s = i[e];
-                                                    if ((null == s ? void 0 : s.name) !== t.name || (null == s ? void 0 : s.emoji_id) !== t.emoji_id || (null == s ? void 0 : s.emoji_name) !== t.emoji_name) return new g.AuditLogChange(D.AuditLogChangeKeys.AVAILABLE_TAG_EDIT, eu(t), eu(s))
+                                                    if ((null == s ? void 0 : s.name) !== t.name || (null == s ? void 0 : s.emoji_id) !== t.emoji_id || (null == s ? void 0 : s.emoji_name) !== t.emoji_name) return new L.AuditLogChange(p.AuditLogChangeKeys.AVAILABLE_TAG_EDIT, eI(t), eI(s))
                                                 }
                                                 return e
-                                            }(e)
+                                            }(e);
+                                        case p.AuditLogChangeKeys.SCHEDULED_START_TIME:
+                                        case p.AuditLogChangeKeys.SCHEDULED_END_TIME:
+                                            return eS(e, e => (0, R.dateFormat)(i(new Date(e)), "LLLL"))
                                     }
                                     return e
                                 }(a, e, t);
@@ -43956,24 +43999,24 @@
                 }), s
             }
 
-            function ed(e, t) {
-                let s = r.default.deserialize("string" == typeof e ? e : 0),
-                    a = r.default.deserialize("string" == typeof t ? t : 0),
-                    n = r.default.remove(a, s),
-                    l = r.default.remove(s, a),
+            function eT(e, t) {
+                let s = d.default.deserialize("string" == typeof e ? e : 0),
+                    a = d.default.deserialize("string" == typeof t ? t : 0),
+                    n = d.default.remove(a, s),
+                    l = d.default.remove(s, a),
                     i = [],
-                    o = [];
-                for (let e in D.Permissions) {
-                    let t = D.Permissions[e];
-                    r.default.has(n, t) && i.push(t), r.default.has(l, t) && o.push(t)
+                    r = [];
+                for (let e in p.Permissions) {
+                    let t = p.Permissions[e];
+                    d.default.has(n, t) && i.push(t), d.default.has(l, t) && r.push(t)
                 }
                 return {
                     added: i,
-                    removed: o
+                    removed: r
                 }
             }
 
-            function eu(e) {
+            function eI(e) {
                 return null == e ? null : {
                     id: e.id,
                     name: e.name,
@@ -43983,18 +44026,18 @@
                 }
             }
 
-            function ec(e, t, s) {
+            function eS(e, t, s) {
                 let a = e.newValue,
                     n = e.oldValue;
-                return null != e.newValue && (a = t(e.newValue), null != s && null != a && (a = s(a))), null != e.oldValue && (n = t(e.oldValue), null != s && null != n && (n = s(n))), new g.AuditLogChange(e.key, n || e.oldValue, a || e.newValue)
+                return null != e.newValue && (a = t(e.newValue), null != s && null != a && (a = s(a))), null != e.oldValue && (n = t(e.oldValue), null != s && null != n && (n = s(n))), new L.AuditLogChange(e.key, n || e.oldValue, a || e.newValue)
             }
 
-            function eE(e, t, s, a, n) {
+            function eN(e, t, s, a, n) {
                 let l = null;
                 n = null != n ? n : e.targetId;
                 let i = s(n);
                 if (null != i && null != a && (l = a(i)), null == l) {
-                    let t = S.default.deletedTargets[e.targetType];
+                    let t = g.default.deletedTargets[e.targetType];
                     null != t && null != t[n] && (l = t[n])
                 }
                 if (null == l && null != e.changes) {
@@ -44004,21 +44047,21 @@
                 return null != l ? l : n
             }
 
-            function e_(e, t, s) {
+            function eg(e, t, s) {
                 let a = e,
                     n = t(e);
                 return null != n && null != s && (a = s(n)), a
             }
 
-            function eT(e, t) {
+            function ef(e, t) {
                 return s => null == s.oldValue ? e : t
             }
 
-            function eI(e, t) {
+            function eA(e, t) {
                 return s => null == s.newValue ? e : t
             }
 
-            function eS(e, t, s, a) {
+            function eL(e, t, s, a) {
                 return n => {
                     if (null != n.newValue && null != n.oldValue) return e;
                     if (null != n.newValue) return t;
@@ -44063,7 +44106,7 @@
                 S = s("782340");
             a = s("591205"), (l = n || (n = {})).GROUP_DM = "GROUP_DM", l.DM = "DM", l.FRIEND = "FRIEND", l.CHANNEL = "CHANNEL";
             let N = (e, t) => null != e && o.default.isMember(e, t),
-                f = e => {
+                g = e => {
                     let {
                         omitUserIds: t,
                         suggestedUserIds: s,
@@ -44085,7 +44128,7 @@
                             }), r.numFriends++)
                         }
                 },
-                g = e => {
+                f = e => {
                     let {
                         suggestedChannelIds: t,
                         maxRowsWithoutQuery: s,
@@ -44282,10 +44325,10 @@
                         ...e,
                         includeGroupDms: !1,
                         limit: 1
-                    }), g({
+                    }), f({
                         ...e,
                         suggestedChannelIds: l
-                    })), f({
+                    })), g({
                         ...e,
                         suggestedUserIds: n
                     }), A({
@@ -44485,10 +44528,10 @@
                     return N
                 },
                 INVITE_OPTIONS_7_DAYS: function() {
-                    return f
+                    return g
                 },
                 INVITE_OPTIONS_30_DAYS: function() {
-                    return g
+                    return f
                 },
                 INVITE_OPTIONS_FOREVER: function() {
                     return A
@@ -44544,14 +44587,14 @@
                 N = n(86400, () => a.default.Messages.DURATION_DAYS.format({
                     days: 1
                 })),
-                f = n(604800, () => a.default.Messages.DURATION_DAYS.format({
+                g = n(604800, () => a.default.Messages.DURATION_DAYS.format({
                     days: 7
                 })),
-                g = n(2592e3, () => a.default.Messages.DURATION_DAYS.format({
+                f = n(2592e3, () => a.default.Messages.DURATION_DAYS.format({
                     days: 30
                 })),
                 A = n(0, () => a.default.Messages.MAX_AGE_NEVER),
-                L = [_, T, I, S, N, f, g, A]
+                L = [_, T, I, S, N, g, f, A]
         },
         162948: function(e, t, s) {
             "use strict";
