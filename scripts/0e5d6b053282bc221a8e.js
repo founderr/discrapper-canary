@@ -5246,7 +5246,7 @@
             }
             async function c() {
                 let e = await r();
-                if (0 !== e.length) return o("Backup from ".concat(new Date().toLocaleDateString()))
+                if (!(e.length > 0)) return o("Backup from ".concat(new Date().toLocaleDateString()))
             }
         },
         380353: function(e, t, s) {
@@ -10475,7 +10475,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "dedef569c5adcc9ecfddff94d14d27d812d69c07", e.substring(0, 7)),
+                    S = (e = "25d4d45cb8f6e1f4575358f4e866faed7e93ed50", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10488,7 +10488,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "253282", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "253287", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
