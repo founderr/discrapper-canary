@@ -4873,7 +4873,6 @@
                 highlighted: "highlighted__8c37f",
                 inner: "inner__9fd0b",
                 innerDisabled: "innerDisabled__37f59 inner__9fd0b",
-                premiumTutorialEmojiImage: "premiumTutorialEmojiImage__6b0d8",
                 profileBioInput: "profileBioInput__82aa1",
                 sansAttachButton: "sansAttachButton__996a4",
                 sansAttachButtonCreatePost: "sansAttachButtonCreatePost_cfab47",
