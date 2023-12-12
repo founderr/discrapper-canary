@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["83523"], {
+    ["59145"], {
         448105: function(e, t, n) {
             "use strict";
             e.exports = function(e, t) {
@@ -1908,8 +1908,8 @@
                 P = n("705955"),
                 F = n("957255"),
                 G = n("824563"),
-                V = n("18494"),
-                b = n("697218"),
+                b = n("18494"),
+                V = n("697218"),
                 B = n("316133"),
                 j = n("941886"),
                 H = n("145131"),
@@ -2188,7 +2188,7 @@
                     } = this.props;
                     if (n) return this.renderFriendsBody();
                     let s = (0, J.default)(null !== (e = this.getInviteKey()) && void 0 !== e ? e : ""),
-                        a = b.default.getCurrentUser();
+                        a = V.default.getCurrentUser();
                     u(null != a, "InstantInviteModal: user cannot be undefined");
                     let o = t.isOwner(a),
                         d = o ? es.default.Messages.INVITE_SHARE_LINK_OWN_SERVER : es.default.Messages.SHARE_INVITE_LINK_FOR_ACCESS;
@@ -2455,22 +2455,22 @@
                     welcomeToServer: M,
                     page: D,
                     analyticsLocation: G
-                } = e, [b, j] = i.useState(D === er.InstantInviteModalPages.GUEST ? f.GuildInviteFlags.IS_GUEST_INVITE : 0), {
+                } = e, [V, j] = i.useState(D === er.InstantInviteModalPages.GUEST ? f.GuildInviteFlags.IS_GUEST_INVITE : 0), {
                     AnalyticsLocationProvider: H,
                     analyticsLocations: k
-                } = (0, v.default)(T.default.INSTANT_INVITE_MODAL), W = (0, E.useStateFromStores)([U.default, V.default], () => {
-                    let e = V.default.getVoiceChannelId();
+                } = (0, v.default)(T.default.INSTANT_INVITE_MODAL), W = (0, E.useStateFromStores)([U.default, b.default], () => {
+                    let e = b.default.getVoiceChannelId();
                     if (null == e) return null;
                     let t = U.default.getChannel(e);
                     return (null == t ? void 0 : t.guild_id) === o.id ? t : null
-                }), K = null != W && !(0, m.default)(W) && [ei.InstantInviteSources.GUILD_CONTEXT_MENU, ei.InstantInviteSources.GUILD_HEADER].includes(d), Y = (0, O.default)(o.id), Z = (0, E.useStateFromStores)([V.default, U.default, y.default], () => {
-                    if (K && ((0, z.hasFlag)(b, f.GuildInviteFlags.IS_GUEST_INVITE) || D === er.InstantInviteModalPages.GUEST)) return W;
+                }), K = null != W && !(0, m.default)(W) && [ei.InstantInviteSources.GUILD_CONTEXT_MENU, ei.InstantInviteSources.GUILD_HEADER].includes(d), Y = (0, O.default)(o.id), Z = (0, E.useStateFromStores)([b.default, U.default, y.default], () => {
+                    if (K && ((0, z.hasFlag)(V, f.GuildInviteFlags.IS_GUEST_INVITE) || D === er.InstantInviteModalPages.GUEST)) return W;
                     if (D === er.InstantInviteModalPages.GUEST) return 1 === Y.length ? Y[0] : void 0;
                     if (null != u) return u;
-                    let e = V.default.getChannelId(),
+                    let e = b.default.getChannelId(),
                         t = null == e || (0, el.isStaticChannelRoute)(e) ? void 0 : U.default.getChannel(e);
                     return (null == t ? void 0 : t.isThread()) && (t = U.default.getChannel(t.parent_id)), null != t ? t : y.default.getDefaultChannel(o.id, !0, ei.Permissions.CREATE_INSTANT_INVITE)
-                }, [K, b, D, u, o.id, W, Y]), [X, Q] = i.useState(null), J = null != X ? X : Z, $ = null;
+                }, [K, V, D, u, o.id, W, Y]), [X, Q] = i.useState(null), J = null != X ? X : Z, $ = null;
                 null != h ? $ = er.InviteTargetTypes.STREAM : null != I && ($ = er.InviteTargetTypes.EMBEDDED_APPLICATION);
                 let ee = null != u ? u.getGuildId() : null != o ? o.id : null,
                     et = (0, E.useStateFromStores)([w.default], () => {
@@ -2549,8 +2549,8 @@
                     autoTrackExposure: eP
                 }), {
                     maxAge: eG,
-                    maxUses: eV,
-                    temporary: eb,
+                    maxUses: eb,
+                    temporary: eV,
                     savedMaxAge: eB
                 } = ex, ej = i.useCallback(() => {
                     let {
@@ -2560,7 +2560,7 @@
                     e === er.InstantInviteModalPages.SETTINGS && null != t ? ew(t) : C()
                 }, [ew, ex, C]), eH = i.useCallback(() => {
                     let e = null == J ? void 0 : J.id;
-                    0 === eV && 0 === eG && !eb && eO ? ey({
+                    0 === eb && 0 === eG && !eV && eO ? ey({
                         networkError: void 0,
                         showVanityURL: !0
                     }) : null != e && (ey({
@@ -2568,19 +2568,19 @@
                         showVanityURL: !1
                     }), _.default.createInvite(e, {
                         max_age: eG,
-                        max_uses: eV,
+                        max_uses: eb,
                         target_type: $,
                         target_user_id: h,
                         target_application_id: null == eT ? void 0 : eT.id,
-                        temporary: eb,
-                        flags: b
+                        temporary: eV,
+                        flags: V
                     }, d).catch(e => ey({
                         networkError: e,
                         showVanityURL: eO
                     }))), eG !== ec.value && eB !== ec.value && ey({
                         savedMaxAge: ec.value
                     })
-                }, [eO, J, d, null == eT ? void 0 : eT.id, $, h, eG, eV, eb, b, ey, eB]), ek = (0, p.default)(J), eW = (0, p.default)(b), eK = ek !== J, eY = eW !== b;
+                }, [eO, J, d, null == eT ? void 0 : eT.id, $, h, eG, eb, eV, V, ey, eB]), ek = (0, p.default)(J), eW = (0, p.default)(V), eK = ek !== J, eY = eW !== V;
                 return i.useEffect(() => {
                     (eK || eY) && eH()
                 }, [eH, eK, eY]), (0, r.jsx)(H, {
@@ -2613,7 +2613,7 @@
                         setModalState: ey,
                         changePage: ew,
                         onGenerateNewLink: eH,
-                        inviteFlags: b,
+                        inviteFlags: V,
                         setInviteFlags: j,
                         showGuestInviteToggleForCurrentVoiceChannel: K,
                         setInviteChannel: Q,
@@ -4429,6 +4429,44 @@
                     })
                 }
             }).Text = p, r.Image = g, i = r
+        },
+        37785: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return u
+                }
+            });
+            var r = n("37983"),
+                i = n("884691"),
+                l = n("77078"),
+                s = n("393414"),
+                a = n("49111"),
+                u = i.forwardRef(function(e, t) {
+                    let {
+                        href: n,
+                        children: u,
+                        onClick: o,
+                        onKeyPress: d,
+                        focusProps: c,
+                        ...f
+                    } = e, E = i.useCallback(e => {
+                        !e.repeat && ((e.charCode === a.KeyboardKeys.SPACE || e.charCode === a.KeyboardKeys.ENTER) && (e.preventDefault(), null != n && (0, s.transitionTo)(n), null == o || o()), null == d || d(e))
+                    }, [n, d, o]), h = i.useCallback(e => {
+                        !e.metaKey && !e.shiftKey && 0 === e.button && (e.preventDefault(), e.stopPropagation(), null != n && (0, s.transitionTo)(n), null == o || o())
+                    }, [n, o]), I = (0, r.jsx)("a", {
+                        ref: t,
+                        href: n,
+                        onClick: h,
+                        onKeyPress: E,
+                        ...f,
+                        children: u
+                    });
+                    return (0, r.jsx)(l.FocusRing, {
+                        ...c,
+                        children: I
+                    })
+                })
         },
         98292: function(e, t, n) {
             "use strict";
