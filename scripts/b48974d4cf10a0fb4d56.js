@@ -1679,7 +1679,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "253691"
+                        buildNumber: "253700"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -2156,7 +2156,7 @@
                     case ec.NoticeTypes.UNVERIFIED_ACCOUNT:
                         return (0, a.jsxs)(el.default, {
                             color: el.NoticeColors.DEFAULT,
-                            children: [eC.default.Messages.NOTICE_UNVERIFIED_ACCOUNT, (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                            children: [eC.default.Messages.NOTICE_UNVERIFIED_ACCOUNT_UU, (0, a.jsx)(el.PrimaryCTANoticeButton, {
                                 noticeType: ec.NoticeTypes.UNVERIFIED_ACCOUNT,
                                 onClick: () => {
                                     c.default.verifyResend(), d.default.show({
@@ -2168,7 +2168,7 @@
                                         onConfirmSecondary: L.openClaimAccountModal
                                     })
                                 },
-                                children: eC.default.Messages.RESEND
+                                children: eC.default.Messages.RESEND_EMAIL_SHORT
                             })]
                         });
                     case ec.NoticeTypes.SCHEDULED_MAINTENANCE:

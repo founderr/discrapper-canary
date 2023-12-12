@@ -6046,7 +6046,7 @@
                 default: function() {
                     return g
                 }
-            }), n("222007");
+            }), n("222007"), n("781738");
             var a = n("37983"),
                 l = n("884691"),
                 s = n("65597"),
@@ -6077,11 +6077,16 @@
                     })
                 }, [t.guild_id]);
                 let R = async e => {
-                    T === _ && g(), null == e || e.preventDefault(), M(null), N(!0), await r.default.updateVoiceChannelStatus(t.id, T).then(e => {
+                    T === _ && g(), null == e || e.preventDefault(), M(null), N(!0);
+                    let n = T.length,
+                        a = T.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length;
+                    await r.default.updateVoiceChannelStatus(t.id, T).then(e => {
                         204 === e.status ? (p.default.track(m.AnalyticEvents.VOICE_CHANNEL_TOPIC_SET, {
                             guild_id: t.guild_id,
                             channel_id: t.id,
-                            media_session_id: I
+                            media_session_id: I,
+                            raw_length: n,
+                            text_length: a
                         }), g()) : M(e.body.message)
                     }, e => {
                         M(e.body.message)
