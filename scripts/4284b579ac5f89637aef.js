@@ -1,10 +1,10 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["29988"], {
+    ["42632"], {
         430568: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return T
                 }
             }), n("222007"), n("70102"), n("843762"), n("424973");
             var l = n("37983"),
@@ -19,11 +19,11 @@
                 f = n("845579"),
                 p = n("901165"),
                 E = n("62843"),
-                h = n("315102"),
-                I = n("402671"),
-                C = n("866190"),
-                m = n("115279");
-            class A extends a.PureComponent {
+                I = n("315102"),
+                h = n("402671"),
+                m = n("866190"),
+                A = n("115279");
+            class C extends a.PureComponent {
                 componentWillUnmount() {
                     var e;
                     null === (e = this.cancelLoadImage) || void 0 === e || e.call(this)
@@ -45,14 +45,14 @@
                         } = this.state;
                     if (null != t) return t;
                     if (null != n) {
-                        let e = m.EMOJI_SIZE_MAP[o];
-                        return h.default.getEmojiURL({
+                        let e = A.EMOJI_SIZE_MAP[o];
+                        return I.default.getEmojiURL({
                             id: n,
                             animated: i && !0 === a && (!0 === s || u || !0 === r),
                             size: e
                         })
                     }
-                    if (null != l) return I.default.getURL(l)
+                    if (null != l) return h.default.getURL(l)
                 }
                 render() {
                     var e;
@@ -68,18 +68,18 @@
                         emojiId: f,
                         autoplay: p,
                         isInteracting: E,
-                        ...h
-                    } = this.props, I = this.getSrc();
-                    return null == I || "" === I ? (0, l.jsx)("span", {
+                        ...I
+                    } = this.props, h = this.getSrc();
+                    return null == h || "" === h ? (0, l.jsx)("span", {
                         className: i("emoji", "emoji-text"),
                         children: n
                     }) : (s && (t = {
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave
                     }), (0, a.createElement)("img", {
-                        ...h,
+                        ...I,
                         key: this.key,
-                        src: I,
+                        src: h,
                         alt: null !== (e = null != u ? u : n) && void 0 !== e ? e : void 0,
                         draggable: !1,
                         ...t,
@@ -122,10 +122,10 @@
                     }
                 }
             }
-            A.defaultProps = {
+            C.defaultProps = {
                 isInteracting: !1
             };
-            let T = function(e) {
+            let _ = function(e) {
                 if (null == window.IntersectionObserver) return function(t) {
                     return (0, l.jsx)(e, {
                         ...t,
@@ -199,16 +199,16 @@
                         })
                     }
                 }
-            }(A);
+            }(C);
 
-            function _(e) {
+            function T(e) {
                 let t = f.AnimateEmoji.useSetting(),
                     n = {
                         autoplay: null == e.autoplay ? t : e.autoplay,
                         allowAnimatedEmoji: t
                     },
-                    a = __OVERLAY__ ? (0, d.useStateFromStores)([p.default], () => p.default.isInstanceFocused()) : (0, C.useIsWindowFocused)();
-                return (0, l.jsx)(T, {
+                    a = __OVERLAY__ ? (0, d.useStateFromStores)([p.default], () => p.default.isInstanceFocused()) : (0, m.useIsWindowFocused)();
+                return (0, l.jsx)(_, {
                     ...e,
                     ...n,
                     isFocused: a
@@ -378,13 +378,13 @@
                 f = n("102985"),
                 p = n("599110"),
                 E = n("306160"),
-                h = n("568734"),
-                I = n("354023"),
-                C = n("865699"),
-                m = n("91366"),
-                A = n("49111"),
-                T = n("782340"),
-                _ = n("435808"),
+                I = n("568734"),
+                h = n("354023"),
+                m = n("865699"),
+                A = n("91366"),
+                C = n("49111"),
+                _ = n("782340"),
+                T = n("435808"),
                 g = n("905518"),
                 v = n("173791"),
                 N = n("926622");
@@ -397,36 +397,36 @@
                         hideValue: s,
                         onCopy: r,
                         disabled: o
-                    } = e, [c, f] = a.useState(!1), [p, h] = a.useState(!1), I = a.useMemo(() => new u.DelayedCall(1e3, () => h(!1)), [h]);
+                    } = e, [c, f] = a.useState(!1), [p, I] = a.useState(!1), h = a.useMemo(() => new u.DelayedCall(1e3, () => I(!1)), [I]);
                     return a.useEffect(() => () => {
-                        I.cancel()
-                    }, [I]), (0, l.jsxs)("div", {
+                        h.cancel()
+                    }, [h]), (0, l.jsxs)("div", {
                         className: i(g.input, v.flexJustifyBetween, v.flexCenter, {
                             [g.success]: p,
                             [g.focused]: c
                         }),
                         children: [(0, l.jsx)(d.TextInput, {
-                            className: _.copyInput,
+                            className: T.copyInput,
                             name: "invite",
-                            value: s ? T.default.Messages.INSTANT_INVITE_HIDDEN : t,
+                            value: s ? _.default.Messages.INSTANT_INVITE_HIDDEN : t,
                             editable: !1,
-                            inputClassName: _.noBorder,
+                            inputClassName: T.noBorder,
                             autoFocus: n,
                             onFocus: () => n ? f(!0) : null,
                             onBlur: () => n ? f(!1) : null,
                             spellCheck: "false",
                             onClick: e => e.currentTarget.select(),
-                            "aria-label": T.default.Messages.FORM_LABEL_INVITE_LINK,
+                            "aria-label": _.default.Messages.FORM_LABEL_INVITE_LINK,
                             disabled: o
                         }), E.SUPPORTS_COPY ? (0, l.jsx)(d.Button, {
                             size: d.Button.Sizes.SMALL,
                             color: p ? d.Button.Colors.GREEN : d.Button.Colors.BRAND,
-                            className: _.copyButton,
+                            className: T.copyButton,
                             onClick: () => {
-                                h(!0), I.delay(), r(t)
+                                I(!0), h.delay(), r(t)
                             },
                             disabled: o,
-                            children: p ? T.default.Messages.INVITE_COPIED : T.default.Messages.COPY
+                            children: p ? _.default.Messages.INVITE_COPIED : _.default.Messages.COPY
                         }) : null]
                     })
                 }),
@@ -442,9 +442,9 @@
                         setInviteFlags: v,
                         showGuestInviteToggleForCurrentVoiceChannel: y,
                         copyValue: P,
-                        changePage: b,
+                        changePage: M,
                         inviteChannel: x,
-                        source: M,
+                        source: b,
                         code: O,
                         guildScheduledEvent: L,
                         disabled: F
@@ -453,48 +453,48 @@
                         maxUses: U,
                         networkError: D,
                         showVanityURL: j
-                    } = u, k = a.useCallback(() => {
-                        (0, E.copy)(P), p.default.track(A.AnalyticEvents.COPY_INSTANT_INVITE, {
+                    } = u, V = a.useCallback(() => {
+                        (0, E.copy)(P), p.default.track(C.AnalyticEvents.COPY_INSTANT_INVITE, {
                             server: c.default.getGuildId(),
                             channel: null == x ? void 0 : x.id,
                             channel_type: null == x ? void 0 : x.type,
-                            location: M,
+                            location: b,
                             code: O,
                             guild_scheduled_event_id: null == L ? void 0 : L.id
                         })
-                    }, [P, x, M, O, L]);
+                    }, [P, x, b, O, L]);
                     return (0, l.jsxs)(l.Fragment, {
                         children: [(0, l.jsx)(S, {
                             value: P,
                             autoFocus: s,
-                            onCopy: k,
+                            onCopy: V,
                             disabled: F
                         }), f ? (0, l.jsx)("div", {
-                            className: _.temporaryMembershipContainerBackground,
+                            className: T.temporaryMembershipContainerBackground,
                             children: (0, l.jsx)(d.FormSwitch, {
-                                className: _.temporaryMembershipContainer,
-                                value: (0, h.hasFlag)(g, r.GuildInviteFlags.IS_GUEST_INVITE),
-                                onChange: e => v((0, h.setFlag)(g, r.GuildInviteFlags.IS_GUEST_INVITE, e)),
-                                note: T.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
+                                className: T.temporaryMembershipContainer,
+                                value: (0, I.hasFlag)(g, r.GuildInviteFlags.IS_GUEST_INVITE),
+                                onChange: e => v((0, I.setFlag)(g, r.GuildInviteFlags.IS_GUEST_INVITE, e)),
+                                note: _.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
                                 disabled: F,
                                 hideBorder: !0,
-                                children: y ? T.default.Messages.GRANT_GUEST_MEMBERSHIP_VOICE_ONLY : T.default.Messages.GRANT_GUEST_MEMBERSHIP
+                                children: y ? _.default.Messages.GRANT_GUEST_MEMBERSHIP_VOICE_ONLY : _.default.Messages.GRANT_GUEST_MEMBERSHIP
                             })
                         }) : null, n || j ? null : (0, l.jsxs)(d.Text, {
                             variant: "text-xs/normal",
-                            className: i(N.marginTop8, _.footerText),
-                            children: [(0, I.maxAgeString)(R, U), " ", s ? (0, l.jsx)(d.Anchor, {
-                                onClick: () => b(m.InstantInviteModalPages.SETTINGS),
-                                children: T.default.Messages.INVITE_EDIT_LINK
+                            className: i(N.marginTop8, T.footerText),
+                            children: [(0, h.maxAgeString)(R, U), " ", s ? (0, l.jsx)(d.Anchor, {
+                                onClick: () => M(A.InstantInviteModalPages.SETTINGS),
+                                children: _.default.Messages.INVITE_EDIT_LINK
                             }) : null]
                         }), !n && s && j ? (0, l.jsxs)(d.Text, {
                             variant: "text-xs/normal",
-                            className: i(N.marginTop8, _.footerText),
-                            children: [T.default.Messages.INVITE_VANITY_USED, " ", (0, l.jsx)(d.Anchor, {
-                                onClick: () => b(m.InstantInviteModalPages.SETTINGS),
-                                children: T.default.Messages.INVITE_EDIT_LINK
+                            className: i(N.marginTop8, T.footerText),
+                            children: [_.default.Messages.INVITE_VANITY_USED, " ", (0, l.jsx)(d.Anchor, {
+                                onClick: () => M(A.InstantInviteModalPages.SETTINGS),
+                                children: _.default.Messages.INVITE_EDIT_LINK
                             })]
-                        }) : null, null != D ? (0, l.jsx)(C.InviteErrorMessage, {
+                        }) : null, null != D ? (0, l.jsx)(m.InviteErrorMessage, {
                             guild: t,
                             error: D,
                             onClose: o
@@ -534,7 +534,7 @@
                         tag: "span",
                         children: e
                     })
-                }), [p]), h = a.useCallback(e => (0, l.jsx)(s.Anchor, {
+                }), [p]), I = a.useCallback(e => (0, l.jsx)(s.Anchor, {
                     href: o.MarketingURLs.INVITES_HELP,
                     target: "_blank",
                     children: (0, l.jsx)(s.Text, {
@@ -543,15 +543,15 @@
                         tag: "span",
                         children: e
                     })
-                }), []), I = n.code !== o.AbortCodes.TOO_MANY_INVITES ? n.getAnyErrorMessage() : r.default.can(o.Permissions.MANAGE_GUILD, t) ? u.default.Messages.TOO_MANY_INVITES_ERROR.format({
+                }), []), h = n.code !== o.AbortCodes.TOO_MANY_INVITES ? n.getAnyErrorMessage() : r.default.can(o.Permissions.MANAGE_GUILD, t) ? u.default.Messages.TOO_MANY_INVITES_ERROR.format({
                     inviteListHook: E,
-                    inviteHelpHook: h
+                    inviteHelpHook: I
                 }) : u.default.Messages.TOO_MANY_INVITES_ERROR_MEMBER;
                 return (0, l.jsx)(s.Text, {
                     className: d.errorMessage,
                     variant: "text-xs/normal",
                     color: "text-danger",
-                    children: I
+                    children: h
                 })
             }
         },
@@ -570,13 +570,13 @@
                 f = n("913144"),
                 p = n("21121"),
                 E = n("934306"),
-                h = n("288518"),
-                I = n("486503"),
-                C = n("233069"),
-                m = n("42203"),
-                A = n("305961"),
-                T = n("660478"),
-                _ = n("282109"),
+                I = n("288518"),
+                h = n("486503"),
+                m = n("233069"),
+                A = n("42203"),
+                C = n("305961"),
+                _ = n("660478"),
+                T = n("282109"),
                 g = n("697218"),
                 v = n("299039"),
                 N = n("724210");
@@ -597,7 +597,7 @@
             function y(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(e) {
                     var t, n;
-                    let l = null !== (n = null !== (t = T.default.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
+                    let l = null !== (n = null !== (t = _.default.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
                         a = e.isMessageRequestTimestamp;
                     if (null != a) {
                         let e = u(a).valueOf(),
@@ -609,22 +609,22 @@
                 return {
                     channelId: e.id,
                     lastMessageId: t,
-                    isFavorite: _.default.isMessagesFavorite(e.id) && (0, p.isInMainTabsExperiment)(),
-                    isRequest: h.default.isMessageRequest(e.id) || I.default.isSpam(e.id)
+                    isFavorite: T.default.isMessagesFavorite(e.id) && (0, p.isInMainTabsExperiment)(),
+                    isRequest: I.default.isMessageRequest(e.id) || h.default.isSpam(e.id)
                 }
             }
 
             function P() {
-                S.clear(), Object.values(m.default.getMutablePrivateChannels()).forEach(e => {
+                S.clear(), Object.values(A.default.getMutablePrivateChannels()).forEach(e => {
                     S.set(e.id, y(e))
-                }), (0, p.isInMainTabsExperiment)() && (0, E.isSplitMessagesTab)() && _.default.getAddedToMessages().forEach(e => {
-                    let t = m.default.getChannel(e);
-                    null != t && (0, C.isGuildTextChannelType)(t.type) && S.set(t.id, y(t))
+                }), (0, p.isInMainTabsExperiment)() && (0, E.isSplitMessagesTab)() && T.default.getAddedToMessages().forEach(e => {
+                    let t = A.default.getChannel(e);
+                    null != t && (0, m.isGuildTextChannelType)(t.type) && S.set(t.id, y(t))
                 })
             }
 
-            function b() {
-                let e = m.default.getMutablePrivateChannels();
+            function M() {
+                let e = A.default.getMutablePrivateChannels();
                 for (let t in e) S.set(t, y(e[t]))
             }
             let x = (l = [], a = [], s = [], () => {
@@ -642,9 +642,9 @@
                     return s.push(t)
                 }), a = t), s
             });
-            class M extends d.default.Store {
+            class b extends d.default.Store {
                 initialize() {
-                    this.waitFor(m.default, A.default, g.default, h.default, _.default), this.syncWith([_.default, h.default], P)
+                    this.waitFor(A.default, C.default, g.default, I.default, T.default), this.syncWith([T.default, I.default], P)
                 }
                 getPrivateChannelIds() {
                     return x()
@@ -663,26 +663,26 @@
                     }), e
                 }
             }
-            M.displayName = "PrivateChannelSortStore";
-            var O = new M(f.default, {
+            b.displayName = "PrivateChannelSortStore";
+            var O = new b(f.default, {
                 CONNECTION_OPEN: P,
                 CONNECTION_OPEN_SUPPLEMENTAL: P,
                 OVERLAY_INITIALIZE: P,
-                CACHE_LOADED: b,
-                CACHE_LOADED_LAZY: b,
+                CACHE_LOADED: M,
+                CACHE_LOADED_LAZY: M,
                 CHANNEL_UPDATES: function(e) {
                     let {
                         channels: t
                     } = e;
                     t.forEach(e => {
-                        ((0, C.isPrivate)(e.type) || S.has(e.id)) && S.set(e.id, y(e))
+                        ((0, m.isPrivate)(e.type) || S.has(e.id)) && S.set(e.id, y(e))
                     })
                 },
                 CHANNEL_CREATE: function(e) {
                     let {
                         channel: t
                     } = e;
-                    if (!(0, C.isPrivate)(t.type) || t.id === N.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return !1;
+                    if (!(0, m.isPrivate)(t.type) || t.id === N.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return !1;
                     S.set(t.id, y(t))
                 },
                 CHANNEL_DELETE: function(e) {
@@ -697,7 +697,7 @@
                         message: n
                     } = e;
                     if (!S.has(t)) return !1;
-                    let l = m.default.getChannel(t);
+                    let l = A.default.getChannel(t);
                     return null != l && S.set(t, y(l, n.id))
                 },
                 GUILD_CREATE: function(e) {
@@ -705,44 +705,6 @@
                     return S.delete(t)
                 }
             })
-        },
-        37785: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return o
-                }
-            });
-            var l = n("37983"),
-                a = n("884691"),
-                s = n("77078"),
-                i = n("393414"),
-                r = n("49111"),
-                o = a.forwardRef(function(e, t) {
-                    let {
-                        href: n,
-                        children: o,
-                        onClick: u,
-                        onKeyPress: d,
-                        focusProps: c,
-                        ...f
-                    } = e, p = a.useCallback(e => {
-                        !e.repeat && ((e.charCode === r.KeyboardKeys.SPACE || e.charCode === r.KeyboardKeys.ENTER) && (e.preventDefault(), null != n && (0, i.transitionTo)(n), null == u || u()), null == d || d(e))
-                    }, [n, d, u]), E = a.useCallback(e => {
-                        !e.metaKey && !e.shiftKey && 0 === e.button && (e.preventDefault(), e.stopPropagation(), null != n && (0, i.transitionTo)(n), null == u || u())
-                    }, [n, u]), h = (0, l.jsx)("a", {
-                        ref: t,
-                        href: n,
-                        onClick: E,
-                        onKeyPress: p,
-                        ...f,
-                        children: o
-                    });
-                    return (0, l.jsx)(s.FocusRing, {
-                        ...c,
-                        children: h
-                    })
-                })
         },
         62843: function(e, t, n) {
             "use strict";
