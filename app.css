@@ -82913,6 +82913,10 @@ input::-webkit-inner-spin-button {
     margin-bottom: 10px
 }
 
+.itemTypeTitleForTallerCard__90049 {
+    padding-left: 8px
+}
+
 .newItemTypeBadge__7e6f7 {
     margin-left: 8px;
     margin-top: 28px
@@ -82993,6 +82997,14 @@ input::-webkit-inner-spin-button {
     .closeWrapper__1e132 {
         width: inherit
     }
+}
+
+.categories__57a0d>.categoryWrapper__042a8 {
+    margin-top: 40px
+}
+
+.categories__57a0d>.categoryWrapper__042a8~.categoryWrapper__042a8 {
+    margin-top: 80px
 }
 
 .modalRoot__71dee {
@@ -83478,9 +83490,7 @@ input::-webkit-inner-spin-button {
 
 .checkmark__2ccd6 {
     width: 100%;
-    color: white;
-    transition: opacity.5s;
-    filter: drop-shadow(0 0 1px rgba(0, 0, 0, .2))
+    transition: opacity.5s
 }
 
 .limitedTimeBadge__19a7e {

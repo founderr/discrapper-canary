@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["8011"], {
+    ["23780"], {
         767590: function(e, t, n) {
             var a = n("890022"),
                 l = n("566040"),
@@ -12,6 +12,12 @@
                 if (!s || t < 1) return [];
                 for (var d = 0, o = 0, c = Array(u(s / t)); d < s;) c[o++] = a(e, d, d += t);
                 return c
+            }
+        },
+        969176: function(e, t, n) {
+            var a = n("354069");
+            e.exports = function(e, t) {
+                return a(e, t)
             }
         },
         846165: function(e, t, n) {

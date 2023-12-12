@@ -2191,7 +2191,7 @@
                         Y = (0, r.useStateFromStores)([v.default], () => v.default.getActivities()),
                         q = (0, r.useStateFromStores)([m.default], () => m.default.getSettings().clipsEnabled),
                         X = (0, r.useStateFromStores)([m.default], () => m.default.getLastClipsSession()),
-                        Q = (0, r.useStateFromStores)([m.default], () => m.default.getState().newClipIds),
+                        Q = (0, r.useStateFromStoresArray)([m.default], () => m.default.getNewClipIds()),
                         J = (0, r.useStateFromStores)([M.default], () => null == M.default.getCurrentSidebarChannelId(B.id)),
                         $ = (0, r.useStateFromStores)([g.HotspotStore], () => g.HotspotStore.hasHotspot(g.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
                         ee = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, F.CLIPS_GALLERY_MODAL_KEY)),
@@ -2611,7 +2611,7 @@
                     type: "UPLOAD_TEXT_AS_FILE",
                     icon: m.default,
                     display: _.default.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
-                })), A && v !== S.AppContext.POPOUT && L.push({
+                })), A && t && v !== S.AppContext.POPOUT && L.push({
                     type: "CLIPS",
                     icon: f.default,
                     display: _.default.Messages.CLIPS_SHARE_A_CLIP,

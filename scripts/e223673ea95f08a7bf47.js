@@ -284,13 +284,12 @@
                     onChangeApplicationAudioEnabled: y,
                     onClose: D
                 } = e, [O, k] = n.useState(null), {
-                    onShareClick: F,
-                    canAttachFiles: G
+                    onShareClick: F
                 } = (0, I.default)({
                     channelId: s,
                     setExporting: e => k(null != e ? "share" : null)
                 });
-                async function B() {
+                async function G() {
                     let e = f.default.getChannel(s);
                     k("export");
                     try {
@@ -319,7 +318,7 @@
                         k(null)
                     }
                 }
-                async function U() {
+                async function B() {
                     k("export");
                     try {
                         let e = await (0, S.exportClip)(t, {
@@ -334,7 +333,7 @@
                     }
                 }
 
-                function V() {
+                function U() {
                     (0, o.openModalLazy)(async () => {
                         let {
                             default: e
@@ -388,29 +387,24 @@
                         })]
                     }), (0, a.jsxs)("div", {
                         className: j.clipFormFooter,
-                        children: [(0, a.jsx)(o.Tooltip, {
-                            shouldShow: !G,
-                            text: M.default.Messages.CLIPS_CANNOT_ATTACH_FILE_TO_CHANNEL,
-                            children: e => (0, a.jsx)(o.Button, {
-                                ...e,
-                                submitting: "share" === O,
-                                disabled: !G || null != O && "share" !== O,
-                                color: o.Button.Colors.BRAND,
-                                wrapperClassName: j.clipFormFooterPrimaryButton,
-                                onClick: () => F({
-                                    clip: {
-                                        ...t,
-                                        name: p
-                                    },
-                                    cropData: i,
-                                    applicationAudioEnabled: P,
-                                    voiceAudioEnabled: x,
-                                    onShareComplete: () => {
-                                        u.closeModal(T.CLIPS_EDIT_MODAL_KEY), u.closeModal(T.CLIPS_GALLERY_MODAL_KEY)
-                                    }
-                                }),
-                                children: M.default.Messages.CLIPS_EDIT_SHARE_CLIP
-                            })
+                        children: [(0, a.jsx)(o.Button, {
+                            submitting: "share" === O,
+                            disabled: null != O && "share" !== O,
+                            color: o.Button.Colors.BRAND,
+                            wrapperClassName: j.clipFormFooterPrimaryButton,
+                            onClick: () => F({
+                                clip: {
+                                    ...t,
+                                    name: p
+                                },
+                                cropData: i,
+                                applicationAudioEnabled: P,
+                                voiceAudioEnabled: x,
+                                onShareComplete: () => {
+                                    u.closeModal(T.CLIPS_EDIT_MODAL_KEY), u.closeModal(T.CLIPS_GALLERY_MODAL_KEY)
+                                }
+                            }),
+                            children: M.default.Messages.CLIPS_EDIT_SHARE_CLIP
                         }), (0, a.jsx)(o.Tooltip, {
                             text: M.default.Messages.SAVE_CHANGES,
                             children: e => (0, a.jsx)(o.Button, {
@@ -430,8 +424,8 @@
                             renderPopout: e => (0, a.jsx)(R, {
                                 ...e,
                                 channelId: s,
-                                onExportToFile: U,
-                                onExportToSoundboard: B
+                                onExportToFile: B,
+                                onExportToSoundboard: G
                             }),
                             children: (e, t) => {
                                 let {
@@ -467,7 +461,7 @@
                                 }),
                                 disabled: null != O,
                                 color: o.Button.Colors.PRIMARY,
-                                onClick: V,
+                                onClick: U,
                                 children: (0, a.jsx)(g.default, {})
                             })
                         })]
