@@ -2269,10 +2269,12 @@
 
             function u(e, t) {
                 let {
-                    message: n
+                    message: n,
+                    asPartialPreview: u
                 } = e;
                 return (0, r.jsx)(i.default, {
                     message: n,
+                    asPartialPreview: u,
                     content: t
                 })
             }
