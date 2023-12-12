@@ -3147,17 +3147,15 @@
                 c = n("42723"),
                 f = n("605475");
 
-            function h(e) {
-                let {
-                    isActive: t
-                } = e, [n, h, C] = (0, a.useStateFromStoresArray)([i.default, u.default], () => [u.default.getCurrentDesktopIcon(), u.default.isEditorOpen, o.default.isPremium(i.default.getCurrentUser())]), m = f.ICONS_BY_ID[n], p = n !== d.FreemiumAppIconIds.DEFAULT && (C || h), E = (0, s.useRedesignIconContext)().enabled, g = (0, l.jsx)(r.default, {
+            function h() {
+                let [e, t, n] = (0, a.useStateFromStoresArray)([i.default, u.default], () => [u.default.getCurrentDesktopIcon(), u.default.isEditorOpen, o.default.isPremium(i.default.getCurrentUser())]), h = f.ICONS_BY_ID[e], C = e !== d.FreemiumAppIconIds.DEFAULT && (n || t), m = (0, s.useRedesignIconContext)().enabled, p = (0, l.jsx)(r.default, {
                     width: 30,
-                    height: E ? 30 : 22
+                    height: m ? 30 : 22
                 });
-                return t && null != m && p ? (0, l.jsx)(c.default, {
-                    id: n,
+                return null != h && C ? (0, l.jsx)(c.default, {
+                    id: e,
                     width: 48
-                }) : g
+                }) : p
             }
         },
         651896: function(e, t, n) {
@@ -12942,9 +12940,7 @@
                                     }
                                 }
                             },
-                            children: (0, l.jsx)(f.default, {
-                                isActive: q
-                            })
+                            children: (0, l.jsx)(f.default, {})
                         })
                     }),
                     $ = W ? (0, l.jsx)(o.Popout, {
