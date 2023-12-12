@@ -8349,14 +8349,15 @@
                         remainingBurstCurrency: x,
                         forceHideReactionCreates: O,
                         remainingReactions: L,
-                        combinedReactions: R
+                        combinedReactions: R,
+                        visibleReactionsCount: y
                     } = this.props, {
-                        disableTransitionAppear: y
-                    } = this.state, P = A ? I : g, D = e.reactions.length > 0;
-                    return D || C ? (0, a.jsxs)(o.default, {
+                        disableTransitionAppear: P
+                    } = this.state, D = A ? I : g, j = y > 0;
+                    return j || C ? (0, a.jsxs)(o.default, {
                         component: "div",
-                        className: i(P.reactions, T),
-                        transitionAppear: !y,
+                        className: i(D.reactions, T),
+                        transitionAppear: !P,
                         role: "group",
                         transitionLeave: !1,
                         id: (0, h.getMessageReactionsId)(e),
@@ -8380,10 +8381,10 @@
                             onClick: t => {
                                 t.stopPropagation(), (0, _.showReactionsModal)(c, e)
                             },
-                            className: i(P.reaction, S, P.remainingReactions),
+                            className: i(D.reaction, S, D.remainingReactions),
                             "aria-label": p.default.Messages.ADD_REACTION,
                             children: (0, a.jsxs)(u.Text, {
-                                className: P.reactionInner,
+                                className: D.reactionInner,
                                 variant: "text-sm/normal",
                                 children: ["+", L]
                             })
@@ -8394,8 +8395,8 @@
                             useChatFontScaling: A,
                             isHovered: this.state.isHovered,
                             className: i({
-                                [P.forceShow]: C && !D,
-                                [P.forceShowLook]: C
+                                [D.forceShow]: C && !j,
+                                [D.forceShowLook]: C
                             }),
                             hasBurstTabUI: M,
                             hasTwoButtonBurstUI: v
@@ -8407,8 +8408,8 @@
                             useChatFontScaling: A,
                             isHovered: this.state.isHovered,
                             className: i({
-                                [P.forceShow]: C && !D,
-                                [P.forceShowLook]: C
+                                [D.forceShow]: C && !j,
+                                [D.forceShowLook]: C
                             })
                         })]
                     }) : null
@@ -8434,13 +8435,15 @@
                     hasTwoButtonEntryPoint: E
                 } = (0, d.useBurstReactionsExperiment)(u), _ = (0, r.useStateFromStores)([c.default], () => c.default.remainingBurstCurrency), {
                     combinedReactions: p,
-                    remainingReactions: g
+                    remainingReactions: g,
+                    visibleReactionsCount: I
                 } = s.useMemo(() => {
                     let e = [],
                         t = S(n.reactions, i),
                         a = null != l && l < t.length,
                         s = a ? t.slice(0, l) : t,
-                        r = t.length - s.length;
+                        r = t.length - s.length,
+                        o = t.length;
                     return s.forEach(t => {
                         t.burst_count > 0 && e.push({
                             ...t,
@@ -8448,14 +8451,16 @@
                         }), t.count > 0 && e.push({
                             ...t,
                             type: f.ReactionTypes.NORMAL
-                        })
+                        }), null != t.me_vote && --o
                     }), {
                         combinedReactions: e,
+                        visibleReactionsCount: o,
                         remainingReactions: r
                     }
                 }, [i, l, n.reactions]);
                 return (0, a.jsx)(A, {
                     ...e,
+                    visibleReactionsCount: I,
                     combinedReactions: p,
                     remainingReactions: g,
                     burstReactionsEnabled: m,
