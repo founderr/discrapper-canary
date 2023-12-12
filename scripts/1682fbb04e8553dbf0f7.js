@@ -497,7 +497,7 @@
                     return i
                 },
                 default: function() {
-                    return P
+                    return D
                 }
             });
             var l, i, a = n("37983"),
@@ -607,7 +607,7 @@
                 })
             }
 
-            function P(e) {
+            function D(e) {
                 var t;
                 let {
                     className: n,
@@ -625,8 +625,8 @@
                     isMember: G = !1,
                     isHub: M = !1,
                     speakers: w,
-                    speakerCount: P,
-                    rsvped: D,
+                    speakerCount: D,
+                    rsvped: P,
                     canInvite: b,
                     location: j,
                     truncate: V,
@@ -685,10 +685,10 @@
                             guildEventId: J,
                             eventPreview: Q,
                             recurrenceId: ee
-                        }), C && null != l && null != w && P > 0 && (0, a.jsx)(L.default, {
+                        }), C && null != l && null != w && D > 0 && (0, a.jsx)(L.default, {
                             guild: l,
                             speakers: w,
-                            speakerCount: P,
+                            speakerCount: D,
                             className: U.spacing
                         }), (0, a.jsx)("hr", {
                             className: U.divider
@@ -706,7 +706,7 @@
                                 isActive: C,
                                 isUserLurking: g,
                                 isMember: G,
-                                rsvped: D,
+                                rsvped: P,
                                 onRsvpClick: Y,
                                 onJoinGuildClick: B,
                                 onGoToGuildClick: Z,
@@ -719,7 +719,7 @@
                                 isJoined: p,
                                 isActive: C,
                                 isUserLurking: g,
-                                rsvped: D,
+                                rsvped: P,
                                 canInvite: b,
                                 isChannelPublic: et,
                                 onContextMenu: H,
@@ -844,8 +844,8 @@
                 } = a, R = (0, r.useStateFromStores)([f.default], () => f.default.getChannel(a.channel_id), [a]), O = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(m), [m]), {
                     canManageGuildEvent: L
                 } = (0, o.useManageResourcePermissions)(null != R ? R : O), x = L(a), G = (0, r.useStateFromStores)([u.default], () => u.default.isLurking(m), [m]), M = a.entity_type === S.GuildScheduledEventEntityTypes.STAGE_INSTANCE, [U, w] = i.useState(M), [k, {
-                    loading: P,
-                    error: D
+                    loading: D,
+                    error: P
                 }] = (0, v.default)();
                 if (!x) return null;
                 let b = y === S.GuildScheduledEventPrivacyLevel.PUBLIC ? T.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL : T.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
@@ -925,15 +925,15 @@
                             }), (0, l.jsx)(d.Button, {
                                 color: d.Button.Colors.GREEN,
                                 onClick: V,
-                                submitting: P,
+                                submitting: D,
                                 className: p.button,
                                 children: T.default.Messages.START_EVENT
                             })]
-                        }), null != D && null != D.getAnyErrorMessage() ? (0, l.jsx)(d.Text, {
+                        }), null != P && null != P.getAnyErrorMessage() ? (0, l.jsx)(d.Text, {
                             color: "text-danger",
                             variant: "text-sm/normal",
                             className: p.errorMessage,
-                            children: D.getAnyErrorMessage()
+                            children: P.getAnyErrorMessage()
                         }) : null]
                     })
                 })
@@ -1231,7 +1231,10 @@
                 !__OVERLAY__ && (clearTimeout(u), u = setTimeout(() => f(), 15e3))
             }
             async function f(e, t) {
-                await E(null != t ? {
+                null == e || e === r.ME ? await l.default.patch({
+                    url: r.Endpoints.USER_GUILD_SETTINGS(r.ME),
+                    body: t
+                }) : await E(null != t ? {
                     [null != e ? e : r.ME]: t
                 } : {})
             }

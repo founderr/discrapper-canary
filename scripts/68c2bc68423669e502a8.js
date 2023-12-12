@@ -4978,7 +4978,10 @@
                 !__OVERLAY__ && (clearTimeout(s), s = setTimeout(() => f(), 15e3))
             }
             async function f(e, t) {
-                await E(null != t ? {
+                null == e || e === a.ME ? await i.default.patch({
+                    url: a.Endpoints.USER_GUILD_SETTINGS(a.ME),
+                    body: t
+                }) : await E(null != t ? {
                     [null != e ? e : a.ME]: t
                 } : {})
             }
