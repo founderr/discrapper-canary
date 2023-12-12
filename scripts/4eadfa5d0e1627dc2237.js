@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["92660"], {
+    ["3240"], {
         533662: function(e, t, l) {
             "use strict";
             e.exports = l.p + "71c2b8b8dce7967a6cba.svg"
@@ -434,84 +434,6 @@
                         }, [E, l, o]);
                     return f
                 }
-        },
-        397680: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return s
-                },
-                getEventException: function() {
-                    return r
-                }
-            });
-            var n = l("446674"),
-                a = l("398604");
-
-            function s(e, t) {
-                let l = (0, n.useStateFromStoresArray)([a.default], () => {
-                    var e, l;
-                    return null !== (l = null === (e = a.default.getGuildScheduledEvent(t)) || void 0 === e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== l ? l : []
-                });
-                return i(l, e)
-            }
-
-            function r(e, t) {
-                var l, n;
-                let s = null !== (n = null === (l = a.default.getGuildScheduledEvent(t)) || void 0 === l ? void 0 : l.guild_scheduled_event_exceptions) && void 0 !== n ? n : [];
-                return i(s, e)
-            }
-
-            function i(e, t) {
-                let l = null == e ? void 0 : e.find(e => e.event_exception_id === t);
-                return l
-            }
-        },
-        466148: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return d
-                },
-                getEventSchedule: function() {
-                    return o
-                }
-            });
-            var n = l("627445"),
-                a = l.n(n),
-                s = l("446674"),
-                r = l("398604"),
-                i = l("397680"),
-                u = l("822516");
-
-            function d(e, t, l) {
-                var n;
-                let d = null !== (n = (0, s.useStateFromStores)([r.default], () => r.default.getGuildScheduledEvent(e))) && void 0 !== n ? n : l;
-                a(null != d, "Event must be defined"), t = null != t ? t : (0, u.getNextRecurrenceIdInEvent)(d);
-                let o = (0, i.default)(t, e);
-                return c(d, o, t)
-            }
-
-            function o(e, t) {
-                let l = (0, i.getEventException)(t, e.id);
-                return c(e, l, t)
-            }
-
-            function c(e, t, l) {
-                if (null == e.recurrence_rule || null == l) return {
-                    startTime: new Date(e.scheduled_start_time),
-                    endTime: null != e.scheduled_end_time ? new Date(e.scheduled_end_time) : null
-                };
-                let n = (0, u.getBaseScheduleForRecurrence)(l, e),
-                    {
-                        startDate: a,
-                        endDate: s
-                    } = (0, u.getScheduleForRecurrenceWithException)(n, t);
-                return {
-                    startTime: a.toDate(),
-                    endTime: null == s ? void 0 : s.toDate()
-                }
-            }
         },
         799547: function(e, t, l) {
             "use strict";

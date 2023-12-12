@@ -859,8 +859,8 @@
                 m = n("379304"),
                 S = n("534222"),
                 g = n("601131"),
-                v = n("834052"),
-                N = n("715243"),
+                N = n("834052"),
+                v = n("715243"),
                 A = n("458574"),
                 T = n("963150"),
                 h = n("308798"),
@@ -885,7 +885,7 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, d = t.isGuildStageVoice(), r = (0, i.useStateFromStores)([v.default], () => d ? v.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, A.default)(t), m = (0, S.useActiveEvent)(t.id), N = (0, g.default)(null == m ? void 0 : m.id, n, t), T = (0, x.default)(t, r), h = (0, p.useAddToFavoritesItem)(t), O = (0, p.useRemoveFromFavoritesItem)(t), C = (0, _.default)(t), U = (0, E.default)(t), D = (0, M.default)(t), y = (0, L.default)(t), R = (0, I.default)(t), G = (0, F.default)(t, n), V = (0, c.default)({
+                } = e, d = t.isGuildStageVoice(), r = (0, i.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, A.default)(t), m = (0, S.useActiveEvent)(t.id), v = (0, g.default)(null == m ? void 0 : m.id, n, t), T = (0, x.default)(t, r), h = (0, p.useAddToFavoritesItem)(t), O = (0, p.useRemoveFromFavoritesItem)(t), C = (0, _.default)(t), U = (0, E.default)(t), D = (0, M.default)(t), y = (0, L.default)(t), R = (0, I.default)(t), G = (0, F.default)(t, n), V = (0, c.default)({
                     id: t.id,
                     label: P.default.Messages.COPY_ID_CHANNEL
                 }), k = (0, b.default)(t), j = (0, o.default)(t);
@@ -895,7 +895,7 @@
                     "aria-label": P.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: l,
                     children: [(0, a.jsx)(s.MenuGroup, {
-                        children: null != m ? N : T
+                        children: null != m ? v : T
                     }), (0, a.jsxs)(s.MenuGroup, {
                         children: [U, C, h]
                     }), (0, a.jsxs)(s.MenuGroup, {
@@ -919,7 +919,7 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, d = t.isGuildStageVoice(), r = (0, i.useStateFromStores)([v.default], () => d ? v.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, C.default)(t), _ = (0, A.default)(t), E = (0, S.useActiveEvent)(t.id), V = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, x.default)(t, r), j = (0, p.useAddToFavoritesItem)(t), w = (0, p.useRemoveFromFavoritesItem)(t), H = (0, M.default)(t), B = (0, L.default)(t), Y = (0, I.default)(t), W = (0, O.default)(t, n, r), q = (0, F.default)(t, n), K = (0, R.default)(t, n), Q = (0, G.default)(t, n.id), Z = (0, N.default)(t, n), X = (0, T.default)(t, n), J = (0, h.default)(t), z = (0, c.default)({
+                } = e, d = t.isGuildStageVoice(), r = (0, i.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, C.default)(t), _ = (0, A.default)(t), E = (0, S.useActiveEvent)(t.id), V = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, x.default)(t, r), j = (0, p.useAddToFavoritesItem)(t), w = (0, p.useRemoveFromFavoritesItem)(t), H = (0, M.default)(t), B = (0, L.default)(t), Y = (0, I.default)(t), W = (0, O.default)(t, n, r), q = (0, F.default)(t, n), K = (0, R.default)(t, n), Q = (0, G.default)(t, n.id), Z = (0, v.default)(t, n), X = (0, T.default)(t, n), J = (0, h.default)(t), z = (0, c.default)({
                     id: t.id,
                     label: P.default.Messages.COPY_ID_CHANNEL
                 }), $ = (0, b.default)(t), ee = (0, o.default)(t), et = (0, D.default)(t), en = (0, m.default)(t), ea = (0, U.default)(t);
@@ -1045,33 +1045,33 @@
                         muted: t
                     })
                 }
-                let v = E.default.Messages.MUTE_CHANNEL_GENERIC,
-                    N = E.default.Messages.UNMUTE_CHANNEL_GENERIC;
+                let N = E.default.Messages.MUTE_CHANNEL_GENERIC,
+                    v = E.default.Messages.UNMUTE_CHANNEL_GENERIC;
                 switch (e.type) {
                     case p.ChannelTypes.GUILD_CATEGORY:
-                        v = E.default.Messages.MUTE_CATEGORY, N = E.default.Messages.UNMUTE_CATEGORY;
+                        N = E.default.Messages.MUTE_CATEGORY, v = E.default.Messages.UNMUTE_CATEGORY;
                         break;
                     case p.ChannelTypes.GROUP_DM:
-                        v = E.default.Messages.MUTE_CONVERSATION, N = E.default.Messages.UNMUTE_CONVERSATION;
+                        N = E.default.Messages.MUTE_CONVERSATION, v = E.default.Messages.UNMUTE_CONVERSATION;
                         break;
                     case p.ChannelTypes.DM:
-                        v = E.default.Messages.MUTE_CHANNEL.format({
+                        N = E.default.Messages.MUTE_CHANNEL.format({
                             name: _
-                        }), N = E.default.Messages.UNMUTE_CHANNEL.format({
+                        }), v = E.default.Messages.UNMUTE_CHANNEL.format({
                             name: _
                         });
                         break;
                     default:
-                        v = E.default.Messages.MUTE_CHANNEL_GENERIC, N = E.default.Messages.UNMUTE_CHANNEL_GENERIC
+                        N = E.default.Messages.MUTE_CHANNEL_GENERIC, v = E.default.Messages.UNMUTE_CHANNEL_GENERIC
                 }
                 return n ? (0, a.jsx)(l.MenuItem, {
                     id: "unmute-channel",
-                    label: N,
+                    label: v,
                     subtext: s,
                     action: () => g(!1)
                 }) : (0, a.jsx)(l.MenuItem, {
                     id: "mute-channel",
-                    label: v,
+                    label: N,
                     action: () => g(!0),
                     children: m().map(n => {
                         let {
@@ -1240,7 +1240,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return o
                 }
             });
             var a = n("37983");
@@ -1248,25 +1248,16 @@
             var i = n("77078"),
                 s = n("377114"),
                 u = n("834052"),
-                l = n("644224"),
-                d = n("907566"),
-                o = n("782340");
+                l = n("907566"),
+                d = n("782340");
 
-            function r(e) {
-                l.default.trackExposure({
-                    location: "d67daf_1"
-                });
-                let t = l.default.useExperiment({
-                        location: "d67daf_2"
-                    }, {
-                        autoTrackExposure: !1
-                    }),
-                    n = u.default.isLive(e.id);
-                return e.isGuildStageVoice() && n && t.reportModal ? (0, a.jsx)(i.MenuItem, {
+            function o(e) {
+                let t = u.default.isLive(e.id);
+                return e.isGuildStageVoice() && t ? (0, a.jsx)(i.MenuItem, {
                     id: "report-stage",
-                    label: o.default.Messages.REPORT_MODAL_REPORT_STAGE_MENU_ITEM,
+                    label: d.default.Messages.REPORT_MODAL_REPORT_STAGE_MENU_ITEM,
                     action: () => (0, s.showReportModalForStageChannel)(e),
-                    icon: d.default,
+                    icon: l.default,
                     color: "danger"
                 }) : null
             }
@@ -1943,10 +1934,10 @@
                     return g
                 },
                 inviteUserToStage: function() {
-                    return v
+                    return N
                 },
                 audienceAckRequestToSpeak: function() {
-                    return N
+                    return v
                 },
                 moveSelfToAudience: function() {
                     return A
@@ -2000,7 +1991,7 @@
                 })
             }
 
-            function v(e, t) {
+            function N(e, t) {
                 let n = e.getGuildId();
                 return i(null != n, "This channel cannot be guildless."), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n, t),
@@ -2012,7 +2003,7 @@
                 })
             }
 
-            function N(e, t) {
+            function v(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     a = null == e ? void 0 : e.getGuildId();
                 i(null != a, "This channel cannot be guildless.");
@@ -2089,7 +2080,7 @@
                 let i = r.default.getVoiceChannelId() === e.id;
                 !i && (0, p.connectToStage)(e);
                 let s = await (0, E.startStageInstance)(e.id, t, n, a);
-                return N(e, !1, !0), s
+                return v(e, !1, !0), s
             }
             async function O(e, t, n) {
                 if ("" === t) return;
@@ -2202,29 +2193,6 @@
             function l(e) {
                 return a.default.delete(i.Endpoints.STAGE_INSTANCE(e))
             }
-        },
-        644224: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return a
-                }
-            });
-            var a = (0, n("862205").createExperiment)({
-                kind: "user",
-                id: "2021-05_stages_in_app_reporting_experiment",
-                label: "Stages In App Reporting Experiment",
-                defaultConfig: {
-                    reportModal: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Can see in-app reporting modal",
-                    config: {
-                        reportModal: !0
-                    }
-                }]
-            })
         },
         76539: function(e, t, n) {
             "use strict";
