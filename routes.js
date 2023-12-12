@@ -4605,7 +4605,7 @@
                     gradient: {
                         light: {
                             color: "WHITE_500",
-                            opacity: .1
+                            opacity: .4
                         },
                         dark: {
                             color: "WHITE_500",
@@ -5759,7 +5759,7 @@
                     },
                     gradient: {
                         light: {
-                            color: "BLACK_500",
+                            color: "WHITE_500",
                             opacity: .1
                         },
                         dark: {
@@ -7410,6 +7410,16 @@
                     [I.DARKER]: {
                         raw: "PLUM_11",
                         opacity: .12
+                    },
+                    gradient: {
+                        light: {
+                            color: "WHITE_500",
+                            opacity: .4
+                        },
+                        dark: {
+                            color: "WHITE_500",
+                            opacity: .1
+                        }
                     }
                 },
                 REDESIGN_INPUT_CONTROL_ACTIVE_BG: {

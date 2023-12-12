@@ -6090,7 +6090,7 @@
                     },
                     light: {
                         color: "white.500",
-                        opacity: .1
+                        opacity: .4
                     }
                 },
                 "card-secondary-pressed-bg": {
