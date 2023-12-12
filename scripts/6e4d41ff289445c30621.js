@@ -678,7 +678,9 @@
                                 children: el.default.Messages.COLLECTIBLES_SHOP
                             })]
                         }), (0, l.jsx)(d.AdvancedScroller, {
-                            className: es.shopScroll,
+                            className: n(es.shopScroll, {
+                                [es.shopScrollBackgroundPrimary]: ec
+                            }),
                             ref: em,
                             onScroll: eE,
                             children: (0, l.jsxs)("div", {
