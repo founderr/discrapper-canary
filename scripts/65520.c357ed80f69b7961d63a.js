@@ -1,53 +1,53 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["15938"], {
+    ["65520"], {
         981112: function(e, t, i) {
             "use strict";
             i.r(t), i.d(t, {
                 stageAttachmentFiles: function() {
-                    return p
+                    return _
                 },
                 default: function() {
-                    return n
+                    return a
                 }
             }), i("808653"), i("222007"), i("70102");
-            var n, a = i("811022"),
+            var a, s = i("811022"),
                 r = i("994440"),
-                s = i("282928"),
+                n = i("282928"),
                 l = i("142852"),
                 o = i("402752"),
                 d = i("572868"),
                 c = i("49111"),
                 h = i("894488"),
                 u = i("782340");
-            let f = new a.default("CloudUploaderBase.tsx");
-            async function p(e) {
+            let f = new s.default("CloudUploaderBase.tsx");
+            async function _(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     i = arguments.length > 2 ? arguments[2] : void 0,
-                    n = e.map(e => new Promise((n, a) => {
+                    a = e.map(e => new Promise((a, s) => {
                         switch (e.status) {
-                            case s.CloudUploadStatus.NOT_STARTED:
+                            case n.CloudUploadStatus.NOT_STARTED:
                                 e.upload();
                                 break;
-                            case s.CloudUploadStatus.COMPLETED:
-                                n("complete");
+                            case n.CloudUploadStatus.COMPLETED:
+                                a("complete");
                                 break;
-                            case s.CloudUploadStatus.ERROR:
-                                t && e.error !== c.AbortCodes.ENTITY_TOO_LARGE ? e.upload() : a(Error("File failed to upload"));
+                            case n.CloudUploadStatus.ERROR:
+                                t && e.error !== c.AbortCodes.ENTITY_TOO_LARGE ? e.upload() : s(Error("File failed to upload"));
                                 break;
-                            case s.CloudUploadStatus.CANCELED:
-                                a(Error("Upload is canceled"))
+                            case n.CloudUploadStatus.CANCELED:
+                                s(Error("Upload is canceled"))
                         }
                         e.on("complete", () => {
-                            n("complete")
+                            a("complete")
                         }), e.on("error", () => {
-                            a(Error("File ".concat(e.id, " failed to upload")))
+                            s(Error("File ".concat(e.id, " failed to upload")))
                         }), e.on("progress", (e, t) => {
                             null == i || i(e, t)
                         })
                     }));
-                await Promise.all(n)
+                await Promise.all(a)
             }
-            n = class extends d.default {
+            a = class extends d.default {
                 _fileSize() {
                     return this.files.reduce((e, t) => {
                         var i;
@@ -75,11 +75,11 @@
                         }),
                         t = this.files.some(e => e.isImage),
                         i = this.files.some(e => e.isVideo),
-                        n = this._fileSize();
-                    f.log("setUploadingTextForUI - total content: ".concat(n, " bytes and ").concat(this.files.length, " attachments for ").concat(this.id)), this._file = {
+                        a = this._fileSize();
+                    f.log("setUploadingTextForUI - total content: ".concat(a, " bytes and ").concat(this.files.length, " attachments for ").concat(this.id)), this._file = {
                         ...this._file,
-                        totalPostCompressionSize: n,
-                        currentSize: n,
+                        totalPostCompressionSize: a,
+                        currentSize: a,
                         name: e,
                         hasVideo: i,
                         hasImage: t,
@@ -117,7 +117,7 @@
                 async cancelItem(e) {
                     f.log("Cancel called for ".concat(this.id, " for item ").concat(e));
                     let t = this.files.find(t => t.id === e);
-                    if (null == t || t.status === s.CloudUploadStatus.CANCELED) return;
+                    if (null == t || t.status === n.CloudUploadStatus.CANCELED) return;
                     let i = this.files.indexOf(t);
                     this.files = [...this.files.slice(0, i), ...this.files.slice(i + 1)], this._file = {
                         ...this._file,
@@ -125,11 +125,11 @@
                     }, await (0, r.cancelGetAttachmentFile)(t), t.cancel(), this.emit("cancel-upload-item", this._file), 0 === this.files.length && this.cancel()
                 }
                 failed() {
-                    return this.files.some(e => e.status === s.CloudUploadStatus.ERROR)
+                    return this.files.some(e => e.status === n.CloudUploadStatus.ERROR)
                 }
                 _remainingUploadCount() {
                     let e = this.files;
-                    return e.length - e.filter(e => e.status === s.CloudUploadStatus.COMPLETED).length
+                    return e.length - e.filter(e => e.status === n.CloudUploadStatus.COMPLETED).length
                 }
                 clear() {
                     this.cancel(), this.files = []
@@ -143,23 +143,23 @@
             "use strict";
             i.r(t), i.d(t, {
                 default: function() {
-                    return n
+                    return a
                 }
             }), i("222007"), i("70102");
-            var n, a = i("44170"),
+            var a, s = i("44170"),
                 r = i("917351"),
-                s = i.n(r),
+                n = i.n(r),
                 l = i("605250"),
                 o = i("402752"),
                 d = i("894488");
             let c = new l.default("UploaderBase.tsx");
-            n = class extends a.EventEmitter {
+            a = class extends s.EventEmitter {
                 _addAttachmentsToPayload(e, t, i) {
-                    let n = {
+                    let a = {
                             ...e
                         },
-                        a = [...s.get(n, t, []), ...i];
-                    return s.set(n, t, a)
+                        s = [...n.get(a, t, []), ...i];
+                    return n.set(a, t, s)
                 }
                 clearProcessingMessageInterval() {
                     null != this.processingMessageChangeInterval && (clearInterval(this.processingMessageChangeInterval), this.processingMessageChangeInterval = void 0)
@@ -189,23 +189,23 @@
                     }
                 }
                 constructor(e, t = "POST", i) {
-                    var n;
+                    var a;
                     super(), this._token = "", this._lastUpdate = 0, this._loaded = 0, this._aborted = !1, this._errored = !1, this._raiseEndpointErrors = !1, this.alreadyStarted = !1, this._handleStart = e => {
                         this._cancel = e, !this.alreadyStarted && this.emit("start", this._file), this.alreadyStarted = !0
                     }, this._handleProgress = (e, t, i) => {
-                        let n = Date.now(),
-                            a = (0, o.calculateProgress)(e, t),
-                            r = Math.floor((e - this._loaded) / ((n - this._lastUpdate) / 1e3));
+                        let a = Date.now(),
+                            s = (0, o.calculateProgress)(e, t),
+                            r = Math.floor((e - this._loaded) / ((a - this._lastUpdate) / 1e3));
                         if (null != i) {
-                            var s;
-                            null === (s = this._file.items) || void 0 === s || s.forEach(e => {
+                            var n;
+                            null === (n = this._file.items) || void 0 === n || n.forEach(e => {
                                 e.item.progress = i[e.id]
                             })
                         }
-                        this._lastUpdate = n, this._loaded = e, this._file = {
+                        this._lastUpdate = a, this._loaded = e, this._file = {
                             ...this._file,
                             currentSize: t,
-                            progress: a,
+                            progress: s,
                             rate: r
                         }, this.emit("progress", this._file)
                     }, this._handleException = e => {
@@ -221,12 +221,12 @@
                         let {
                             code: t,
                             reason: i,
-                            body: n
+                            body: a
                         } = e;
-                        this.clearProcessingMessageInterval(), !this._aborted && (this._errored = !0, c.log("_handleError: ".concat(t, " (").concat(JSON.stringify(i), ") for ").concat(this.id)), this.emit("error", this._file, t, n, i), this.removeAllListeners())
+                        this.clearProcessingMessageInterval(), !this._aborted && (this._errored = !0, c.log("_handleError: ".concat(t, " (").concat(JSON.stringify(i), ") for ").concat(this.id)), this.emit("error", this._file, t, a, i), this.removeAllListeners())
                     }, this._handleComplete = e => {
                         this.clearProcessingMessageInterval(), c.log("_handleComplete for ".concat(this.id)), this.emit("complete", this._file, e), this.removeAllListeners()
-                    }, this.id = s.uniqueId("Uploader"), this._url = e, this._method = t, this._raiseEndpointErrors = null !== (n = null == i ? void 0 : i.raiseEndpointErrors) && void 0 !== n && n
+                    }, this.id = n.uniqueId("Uploader"), this._url = e, this._method = t, this._raiseEndpointErrors = null !== (a = null == i ? void 0 : i.raiseEndpointErrors) && void 0 !== a && a
                 }
             }
         },
@@ -237,11 +237,11 @@
                     return o
                 }
             });
-            var n = i("37983");
+            var a = i("37983");
             i("884691");
-            var a = i("77078"),
+            var s = i("77078"),
                 r = i("974889"),
-                s = i("954016"),
+                n = i("954016"),
                 l = i("49111");
 
             function o(e) {
@@ -251,17 +251,17 @@
                     locationObject: d,
                     openInPopout: c,
                     initialSelectedApplicationId: h,
-                    initialSlide: u = s.ActivityShelfSlides.DIRECTORY,
+                    initialSlide: u = n.ActivityShelfSlides.DIRECTORY,
                     enableSelectedTextChannelInvite: f = !1,
-                    analyticsLocations: p
+                    analyticsLocations: _
                 } = e;
                 c && (0, r.default)(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-                let _ = c ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
-                return (0, a.openModalLazy)(async () => {
+                let p = c ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT;
+                return (0, s.openModalLazy)(async () => {
                     let {
                         default: e
                     } = await i.el("605455").then(i.bind(i, "605455"));
-                    return i => (0, n.jsx)(e, {
+                    return i => (0, a.jsx)(e, {
                         ...i,
                         channel: t,
                         guildId: o,
@@ -269,103 +269,12 @@
                         initialSlide: u,
                         initialSelectedApplicationId: h,
                         enableSelectedTextChannelInvite: f,
-                        analyticsLocations: p
+                        analyticsLocations: _
                     })
                 }, {
-                    modalKey: s.ACTIVITY_SHELF_WEB_MODAL_KEY,
-                    contextKey: _
+                    modalKey: n.ACTIVITY_SHELF_WEB_MODAL_KEY,
+                    contextKey: p
                 })
-            }
-        },
-        149022: function(e, t, i) {
-            "use strict";
-
-            function n() {
-                return {
-                    textValue: "",
-                    richValue: [{
-                        type: "line",
-                        children: [{
-                            text: ""
-                        }]
-                    }]
-                }
-            }
-
-            function a(e) {
-                return {
-                    textValue: e,
-                    richValue: s(e)
-                }
-            }
-            i.r(t), i.d(t, {
-                createEmptyState: function() {
-                    return n
-                },
-                createState: function() {
-                    return a
-                },
-                toRichValue: function() {
-                    return s
-                },
-                voidToOptionValue: function() {
-                    return l
-                }
-            }), i("70102");
-            let r = Object.freeze([Object.freeze({
-                type: "line",
-                children: Object.freeze([Object.freeze({
-                    text: ""
-                })])
-            })]);
-
-            function s(e) {
-                return "" !== e ? e.split("\n").map(e => ({
-                    type: "line",
-                    children: [{
-                        text: e
-                    }]
-                })) : r
-            }
-
-            function l(e) {
-                switch (e.type) {
-                    case "userMention":
-                        return {
-                            type: "userMention", userId: e.userId
-                        };
-                    case "channelMention":
-                        return {
-                            type: "channelMention", channelId: e.channelId
-                        };
-                    case "staticRouteLink":
-                        return {
-                            type: "staticRouteLink", channelId: e.channelId
-                        };
-                    case "soundboard":
-                        return {
-                            type: "soundboard", soundId: e.soundId
-                        };
-                    case "roleMention":
-                        return {
-                            type: "roleMention", roleId: e.roleId
-                        };
-                    case "textMention":
-                        return {
-                            type: "textMention", text: e.name
-                        };
-                    case "emoji":
-                        return {
-                            type: "emoji", name: e.emoji.name, surrogate: e.emoji.surrogate
-                        };
-                    case "customEmoji":
-                        return {
-                            type: "customEmoji", emojiId: e.emoji.emojiId, name: e.emoji.name, animated: e.emoji.animated
-                        };
-                    case "testInlineVoid":
-                        throw Error("Unable to convert test types")
-                }
-                return null
             }
         },
         166960: function(e, t, i) {
@@ -375,8 +284,8 @@
                     return r
                 }
             });
-            var n = i("862205");
-            let a = (0, n.createExperiment)({
+            var a = i("862205");
+            let s = (0, a.createExperiment)({
                 kind: "user",
                 id: "2023-05_referral_trials_birthday_moment",
                 label: "Referral Trials Birthday Moment",
@@ -391,7 +300,7 @@
                     }
                 }]
             });
-            var r = a
+            var r = s
         },
         1607: function(e, t, i) {
             "use strict";
@@ -400,8 +309,8 @@
                     return r
                 }
             });
-            var n = i("862205");
-            let a = (0, n.createExperiment)({
+            var a = i("862205");
+            let s = (0, a.createExperiment)({
                 kind: "user",
                 id: "2023-02_referral_trials",
                 label: "Referral Trials",
@@ -416,28 +325,28 @@
                     }
                 }]
             });
-            var r = a
+            var r = s
         },
         967241: function(e, t, i) {
             "use strict";
             i.r(t), i.d(t, {
                 openThreadSidebarForViewing: function() {
-                    return y
-                },
-                openThreadSidebarForCreating: function() {
                     return A
                 },
+                openThreadSidebarForCreating: function() {
+                    return v
+                },
                 closeThreadSidebar: function() {
-                    return I
+                    return O
                 },
                 closeAndClearThreadSidebar: function() {
-                    return v
+                    return y
                 }
             });
-            var n = i("627445"),
-                a = i.n(n),
+            var a = i("627445"),
+                s = i.n(a),
                 r = i("917351"),
-                s = i.n(r),
+                n = i.n(r),
                 l = i("913144"),
                 o = i("295426"),
                 d = i("244201"),
@@ -445,27 +354,27 @@
                 h = i("565298"),
                 u = i("393414"),
                 f = i("144491"),
-                p = i("845579"),
-                _ = i("474643"),
-                m = i("18494"),
-                C = i("800762"),
+                _ = i("845579"),
+                p = i("474643"),
+                C = i("18494"),
+                m = i("800762"),
                 g = i("659500"),
                 E = i("648564"),
                 T = i("49111"),
                 S = i("724210");
 
-            function y(e, t, i) {
+            function A(e, t, i) {
                 d.MainWindowDispatch.dispatch(T.ComponentActions.POPOUT_CLOSE);
-                let n = !s.isEmpty(C.default.getVoiceStatesForChannel(e.id));
-                if (t || !p.UseThreadSidebar.getSetting() || __OVERLAY__ || n) {
+                let a = !n.isEmpty(m.default.getVoiceStatesForChannel(e.id));
+                if (t || !_.UseThreadSidebar.getSetting() || __OVERLAY__ || a) {
                     l.default.dispatch({
                         type: "SIDEBAR_CLOSE",
                         baseChannelId: e.parent_id
                     }), null != i ? (0, f.transitionToThread)(e, i) : (0, f.transitionToChannel)(e.id);
                     return
                 }
-                a(null != e.parent_id, "all threads must have parents");
-                let r = m.default.getChannelId();
+                s(null != e.parent_id, "all threads must have parents");
+                let r = C.default.getChannelId();
                 e.parent_id !== r && !(0, S.isGuildHomeChannel)(r) && (0, f.transitionToChannel)(e.parent_id), (0, u.transitionTo)(T.Routes.CHANNEL_THREAD_VIEW((0, h.getGuildIdForGenericRedirect)(e), (0, S.isGuildHomeChannel)(r) ? S.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? E.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
                     g.ComponentDispatch.dispatch(T.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                         channelId: e.id
@@ -473,16 +382,16 @@
                 }, 0)
             }
 
-            function A(e, t, i) {
-                a(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), a(!__OVERLAY__, "Cannot create threads in the overlay."), (0, c.trackWithMetadata)(T.AnalyticEvents.THREAD_CREATION_STARTED, {
+            function v(e, t, i) {
+                s(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), s(!__OVERLAY__, "Cannot create threads in the overlay."), (0, c.trackWithMetadata)(T.AnalyticEvents.THREAD_CREATION_STARTED, {
                     location: i,
                     channel_id: e.id,
                     guild_id: e.guild_id
-                }), d.MainWindowDispatch.dispatch(T.ComponentActions.POPOUT_CLOSE), m.default.getChannelId() !== e.id && (0, f.transitionToChannel)(e.id);
-                let n = _.default.getDraft(e.id, _.DraftType.FirstThreadMessage);
-                if ("" === n) {
-                    let t = _.default.getDraft(e.id, _.DraftType.ChannelMessage);
-                    o.default.saveDraft(e.id, "", _.DraftType.ChannelMessage), o.default.saveDraft(e.id, t, _.DraftType.FirstThreadMessage)
+                }), d.MainWindowDispatch.dispatch(T.ComponentActions.POPOUT_CLOSE), C.default.getChannelId() !== e.id && (0, f.transitionToChannel)(e.id);
+                let a = p.default.getDraft(e.id, p.DraftType.FirstThreadMessage);
+                if ("" === a) {
+                    let t = p.default.getDraft(e.id, p.DraftType.ChannelMessage);
+                    o.default.saveDraft(e.id, "", p.DraftType.ChannelMessage), o.default.saveDraft(e.id, t, p.DraftType.FirstThreadMessage)
                 }
                 setTimeout(() => {
                     l.default.dispatch({
@@ -494,25 +403,25 @@
                 }, 0)
             }
 
-            function I(e, t) {
+            function O(e, t) {
                 (0, u.transitionTo)(T.Routes.CHANNEL(e, (0, S.isGuildHomeChannel)(t) ? S.StaticChannelRoute.GUILD_HOME : t)), l.default.dispatch({
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: t
                 })
             }
 
-            function v(e) {
+            function y(e) {
                 l.default.dispatch({
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: e
                 }), l.default.dispatch({
                     type: "DRAFT_CLEAR",
                     channelId: e,
-                    draftType: _.DraftType.FirstThreadMessage
+                    draftType: p.DraftType.FirstThreadMessage
                 }), l.default.dispatch({
                     type: "DRAFT_CLEAR",
                     channelId: e,
-                    draftType: _.DraftType.ThreadSettings
+                    draftType: p.DraftType.ThreadSettings
                 })
             }
         },
@@ -523,26 +432,26 @@
                     return l
                 }
             });
-            var n = i("37983");
+            var a = i("37983");
             i("884691");
-            var a = i("469563"),
+            var s = i("469563"),
                 r = i("509317"),
-                s = i("75196"),
-                l = (0, a.replaceIcon)(function(e) {
+                n = i("75196"),
+                l = (0, s.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: i = 24,
-                        color: a = "currentColor",
+                        color: s = "currentColor",
                         foreground: r,
                         ...l
                     } = e;
-                    return (0, n.jsx)("svg", {
-                        ...(0, s.default)(l),
+                    return (0, a.jsx)("svg", {
+                        ...(0, n.default)(l),
                         width: t,
                         height: i,
                         viewBox: "0 0 24 24",
-                        children: (0, n.jsx)("path", {
-                            fill: a,
+                        children: (0, a.jsx)("path", {
+                            fill: s,
                             className: r,
                             d: "M20 7H12L10.553 5.106C10.214 4.428 9.521 4 8.764 4H3C2.447 4 2 4.447 2 5V19C2 20.104 2.895 21 4 21H20C21.104 21 22 20.104 22 19V9C22 7.896 21.104 7 20 7Z"
                         })
@@ -564,13 +473,13 @@
                     return d
                 }
             });
-            var n = i("228256");
+            var a = i("228256");
             let {
-                Layer: a,
+                Layer: s,
                 LayerContainer: r,
-                LayerProvider: s
-            } = (0, n.createLayer)("Chat"), l = r, o = s;
-            var d = a
+                LayerProvider: n
+            } = (0, a.createLayer)("Chat"), l = r, o = n;
+            var d = s
         }
     }
 ]);

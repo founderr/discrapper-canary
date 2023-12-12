@@ -27054,14 +27054,16 @@
                     message: t,
                     channel: x,
                     shouldMention: a,
-                    showMentionToggle: o
+                    showMentionToggle: o,
+                    source: y
                 } = i;
                 s.default.dispatch({
                     type: "CREATE_PENDING_REPLY",
                     message: t,
                     channel: x,
                     shouldMention: a,
-                    showMentionToggle: o
+                    showMentionToggle: o,
+                    source: y
                 })
             }
 
