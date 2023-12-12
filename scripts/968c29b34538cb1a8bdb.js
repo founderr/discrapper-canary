@@ -94,8 +94,8 @@
                 S = n("21121"),
                 v = n("325796"),
                 y = n("364281"),
-                m = n("797694"),
-                _ = n("512395"),
+                _ = n("797694"),
+                m = n("512395"),
                 w = n("15684"),
                 N = n("401690"),
                 T = n("755624"),
@@ -362,7 +362,7 @@
                 }
                 constructor(e, t) {
                     var n, i;
-                    this.id = e, this.sortedNamedCategories = null, this.sections = null, this.rows = null, this.firstVoiceChannel = void 0, this.allChannelsById = null, this.version = 0, this.hideMutedChannels = M.default.isGuildCollapsed(this.id), this.mutedChannelIds = M.default.getMutedChannels(this.id), this.optedInChannels = null !== (n = M.default.getOptedInChannelsWithPendingUpdates(this.id)) && void 0 !== n ? n : M.default.getOptedInChannels(this.id), this.optInEnabled = (0, _.isOptInEnabledForGuild)(this.id), this.hideResourceChannels = (0, p.canSeeOnboardingHome)(this.id), this.favoriteChannelIds = new Set(null !== (i = M.default.getGuildFavorites(this.id)) && void 0 !== i ? i : []), this.suggestedFavoriteChannelId = y.default.getSuggestedChannelId(this.id), this.collapsedCategoryIds = R.default.getCollapsedCategories();
+                    this.id = e, this.sortedNamedCategories = null, this.sections = null, this.rows = null, this.firstVoiceChannel = void 0, this.allChannelsById = null, this.version = 0, this.hideMutedChannels = M.default.isGuildCollapsed(this.id), this.mutedChannelIds = M.default.getMutedChannels(this.id), this.optedInChannels = null !== (n = M.default.getOptedInChannelsWithPendingUpdates(this.id)) && void 0 !== n ? n : M.default.getOptedInChannels(this.id), this.optInEnabled = (0, m.isOptInEnabledForGuild)(this.id), this.hideResourceChannels = (0, p.canSeeOnboardingHome)(this.id), this.favoriteChannelIds = new Set(null !== (i = M.default.getGuildFavorites(this.id)) && void 0 !== i ? i : []), this.suggestedFavoriteChannelId = y.default.getSuggestedChannelId(this.id), this.collapsedCategoryIds = R.default.getCollapsedCategories();
                     let s = A.default.getMutableGuildChannelsForGuild(this.id),
                         l = b.default.getGuild(this.id),
                         a = {},
@@ -531,7 +531,7 @@
                     return !1
                 }
                 constructor(e, t, n) {
-                    if (super(e), this.enabled = !1, this.RECENTS_THROTTLE = 5e3, this.isThrottled = !1, this.isCollapsed = m.default.isCollapsed(e.id), this.enabled = function() {
+                    if (super(e), this.enabled = !1, this.RECENTS_THROTTLE = 5e3, this.isThrottled = !1, this.isCollapsed = _.default.isCollapsed(e.id), this.enabled = function() {
                             return !1
                         }() && Object.keys(t).length >= es.MIN_READABLE_CHANNELS, this.enabled)
                         for (let e of Object.values(t))(0, L.isGuildReadableType)(e.type) && !(0, L.isThread)(e.type) && (this.channels[e.id] = new ec(this, e, n))
@@ -929,16 +929,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 isRecentlyActiveChannelsEnabled: function() {
-                    return l
+                    return s
                 }
             });
             var i = n("650033");
-            n("362391");
-            var s = n("126198");
 
-            function l() {
-                return !!(i.default.get("enable_recently_active") || (0, s.getCombinedCurryExperimentValue)("recentChannels")) || !1
+            function s() {
+                return i.default.get("enable_recently_active")
             }
+            n("362391")
         },
         364281: function(e, t, n) {
             "use strict";
@@ -1077,7 +1076,7 @@
                 }
             }
 
-            function m(e) {
+            function _(e) {
                 var t;
                 if (null != S[e]) return;
                 let n = u.default.getChannels(e),
@@ -1092,7 +1091,7 @@
                 })), v[e] = Date.now())
             }
 
-            function _() {
+            function m() {
                 Object.keys(S).forEach(e => {
                     let t = S[e];
                     S[e] = new Set([...t].filter(t => !f.default.isChannelOrParentOptedIn(e, t)))
@@ -1100,17 +1099,17 @@
             }
             class w extends s.default.Store {
                 initialize() {
-                    this.waitFor(u.default, h.default, c.default, f.default, g.default, d.default), this.syncWith([f.default], _)
+                    this.waitFor(u.default, h.default, c.default, f.default, g.default, d.default), this.syncWith([f.default], m)
                 }
                 getNewChannelIds(e) {
                     var t;
-                    return null != e && null == S[e] && m(e), null != e && null !== (t = S[e]) && void 0 !== t ? t : E
+                    return null != e && null == S[e] && _(e), null != e && null !== (t = S[e]) && void 0 !== t ? t : E
                 }
                 shouldIndicateNewChannel(e, t) {
                     var n;
                     if (null == e) return !1;
                     let i = C.default.getGuild(e);
-                    return !!(null != i && i.hasFeature(I.GuildFeatures.COMMUNITY)) && (null != e && null == S[e] && m(e), (null === (n = S[e]) || void 0 === n ? void 0 : n.has(t)) && null == g.default.getTrackedAckMessageId(t))
+                    return !!(null != i && i.hasFeature(I.GuildFeatures.COMMUNITY)) && (null != e && null == S[e] && _(e), (null === (n = S[e]) || void 0 === n ? void 0 : n.has(t)) && null == g.default.getTrackedAckMessageId(t))
                 }
             }
             w.displayName = "NewChannelsStore";
@@ -1131,7 +1130,7 @@
                     } = e;
                     if (null == t) return !1;
                     let i = S[t];
-                    return null == i || v[t] < Date.now() - p.default.Millis.HOUR ? (m(t), !0) : (null != n && y(t, n), !1)
+                    return null == i || v[t] < Date.now() - p.default.Millis.HOUR ? (_(t), !0) : (null != n && y(t, n), !1)
                 },
                 SIDEBAR_VIEW_CHANNEL: function(e) {
                     let {
