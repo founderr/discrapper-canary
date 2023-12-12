@@ -19110,8 +19110,8 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 }
 
 .planInfo_cd8cba {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     margin-top: 8px
 }
 
@@ -19423,8 +19423,8 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -32716,7 +32716,7 @@ html .progress__4ef76 {
     text-align: center;
     border-radius: 3px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: .875rem;
     padding: 12px 0;
     margin-top: 16px;
     color: var(--white-500);
@@ -81628,8 +81628,8 @@ input::-webkit-inner-spin-button {
 
 .bodyText__923f7 {
     color: var(--interactive-normal);
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     font-weight: 500;
     margin-bottom: 16px
 }
@@ -81676,8 +81676,8 @@ input::-webkit-inner-spin-button {
 }
 
 .trialCheckboxLabel__0297c {
-    font-size: 14px;
-    line-height: 18px
+    font-size: .875rem;
+    line-height: 1.125rem
 }
 
 .loader_acb69b {
@@ -103635,53 +103635,6 @@ html .invoiceCancelRow_a8669b {
 .button_c61774 {
     width: 80px;
     margin: 0 auto
-}
-
-.title__76b2b {
-    font-size: 24px;
-    line-height: 30px;
-    margin-top: 20px;
-    margin-bottom: 12px
-}
-
-.subtitle__28a2f {
-    font-size: 16px;
-    line-height: 20px;
-    margin-bottom: 36px
-}
-
-.footer__835f2 {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%
-}
-
-.title__6536e {
-    margin-top: 20px;
-    margin-bottom: 12px
-}
-
-.subtitle__8d09e {
-    margin-bottom: 12px
-}
-
-.question__39a6b {
-    margin-bottom: 16px
-}
-
-.modal_bff660 {
-    width: 440px
-}
-
-.otherField__38d6b {
-    margin-left: 40px;
-    margin-bottom: 20px
-}
-
-.footer__17495 {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%
 }
 
 .container_fd3603 {
