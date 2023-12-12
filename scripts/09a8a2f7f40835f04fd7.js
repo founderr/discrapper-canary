@@ -6476,6 +6476,7 @@
                 SEASONAL_GIFTING_OPTION_CUP: "Wumpus Cup",
                 SEASONAL_GIFTING_INFO_TOOLTIP: "Your friend will see this image when they receive their gift.",
                 SEASONAL_GIFTING_POPUP_HEADER: "Looking for a holiday gift?",
+                SEASONAL_GIFTING_DM_POPUP_CTA: "Try it out",
                 PREMIUM_MARKETING_HERO_HEADER: "Make Discord yours",
                 PREMIUM_MARKETING_HERO_BODY: "Upgrade your emoji, personalize your profile, and stand out in your servers.",
                 PREMIUM_MARKETING_FEATURE_EMOJI_TITLE: "More Emoji Power",

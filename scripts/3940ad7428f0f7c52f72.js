@@ -6632,6 +6632,7 @@
                 SEASONAL_GIFTING_DM_POPUP_BODY: "Изпрати персонализиран Nitro подарък, за да разпръснеш празнично веселие и хаос!",
                 SEASONAL_GIFTING_MAKE_SOMEONES_DAY_TOOLTIP: "Накарай някой да се усмихне, като му изпратиш малко Nitro.",
                 SEASONAL_GIFTING_SEND_GIFT_CTA: "Изпрати подарък",
+                SEASONAL_GIFTING_DM_POPUP_CTA: "Изпробвай",
                 PREMIUM_MARKETING_HERO_HEADER: "Направи Discord свой",
                 PREMIUM_MARKETING_HERO_BODY: "Надгради емотиконите си, персонализирай потребителския си профил и се откроявай в твоите сървъри.",
                 PREMIUM_MARKETING_FEATURE_EMOJI_TITLE: "Повече емотиконска сила",
