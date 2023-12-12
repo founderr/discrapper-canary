@@ -15151,6 +15151,9 @@
                 computeIsMuted: function() {
                     return r
                 },
+                isTemporarilyMuted: function() {
+                    return s
+                },
                 default: function() {
                     return i
                 }
@@ -15163,6 +15166,14 @@
                     mute_config: i
                 } = e;
                 return !!n && (null == (t = i) || null == t.end_time || new Date(t.end_time) >= new Date)
+            }
+
+            function s(e) {
+                let {
+                    muted: t,
+                    mute_config: n
+                } = e;
+                return !!t && null != n && null != n.end_time && new Date(n.end_time) >= new Date
             }
             i = class {
                 reset() {
@@ -41817,6 +41828,10 @@
                     let t = B(e);
                     return (0, o.computeIsMuted)(t)
                 }
+                isTemporarilyMuted(e) {
+                    let t = B(e);
+                    return (0, o.isTemporarilyMuted)(t)
+                }
                 getMuteConfig(e) {
                     let t = B(e);
                     return t.mute_config
@@ -49483,7 +49498,7 @@
                         var i;
                         let d = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "253621"
+                                build_number: "253625"
                             },
                             E = l.default.getCurrentUser();
                         null != E && (d.user_id = E.id, d.user_name = E.tag, null != E.email && (d.email = E.email));

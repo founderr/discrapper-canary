@@ -5465,7 +5465,8 @@
                     I = null !== (m = s.filter(t => t.guild_id === e.id)[0]) && void 0 !== m ? m : {},
                     N = Object.values(r.default.getMutableGuildChannelsForGuild(e.id)).filter(e => u.default.can(T.Permissions.VIEW_CHANNEL, e));
                 return _.push(function(e, t) {
-                    if (c.default.isMuted(t.id)) {
+                    let s = c.default.isMuted(t.id) && !c.default.isTemporarilyMuted(t.id);
+                    if (s) {
                         if (e !== f.Mode.DontCare) return {
                             label: "Unmuting the guild and marking it as read",
                             apply: e => {
@@ -5655,7 +5656,7 @@
 
             function E(e, t, s, a) {
                 var n, l, r, u;
-                let E = d.default.isMuted(e.id),
+                let E = d.default.isMuted(e.id) && !d.default.isTemporarilyMuted(e.id),
                     T = d.default.getMessageNotifications(e.id),
                     m = T === S.UserNotificationSettings.ALL_MESSAGES,
                     _ = i.default.getMutableGuildChannelsForGuild(e.id),
@@ -5721,7 +5722,7 @@
 
             function T(e) {
                 let t = Date.now() - u.default.Millis.DAYS_30,
-                    s = d.default.isMuted(e.id),
+                    s = d.default.isMuted(e.id) && !d.default.isTemporarilyMuted(e.id),
                     a = d.default.getMessageNotifications(e.id),
                     n = a === S.UserNotificationSettings.ALL_MESSAGES,
                     i = o.default.getMemberCount(e.id),
@@ -10475,7 +10476,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "aebea861377a8f3f66f36fef9a3f746f3e2e0203", e.substring(0, 7)),
+                    S = (e = "ba835d5bba880d88df33e6eb1aeda14d6c422caa", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10488,7 +10489,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "253621", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "253625", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
