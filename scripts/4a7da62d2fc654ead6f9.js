@@ -1679,7 +1679,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "253583"
+                        buildNumber: "253587"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -32842,7 +32842,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return p
                 }
             }), n("222007");
             var a = n("37983");
@@ -32863,7 +32863,8 @@
                 I = n("953314"),
                 T = n("986675"),
                 S = n("518151");
-            class N extends i.default {
+            let N = "PremiumServerDriveAnnouncementModal";
+            class A extends i.default {
                 _initialize() {
                     l.default.subscribe("POST_CONNECTION_OPEN", this.mayShowAnnouncementModal), l.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
                 }
@@ -32875,7 +32876,7 @@
                         let t = (0, S.extractAnnouncementModalContent)({
                             content: e
                         });
-                        return null != t && ((0, s.openModalLazy)(async () => {
+                        return null != t && ((0, s.closeModal)(N), (0, s.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("518151").then(n.bind(n, "518151"));
@@ -32883,6 +32884,8 @@
                                 renderModalProps: n,
                                 properties: t
                             })
+                        }, {
+                            modalKey: N
                         }), !0)
                     }, this.handlePreview = e => {
                         let {
@@ -32934,7 +32937,7 @@
                     }
                 }
             }
-            var A = new N
+            var p = new A
         },
         78291: function(e, t, n) {
             "use strict";
