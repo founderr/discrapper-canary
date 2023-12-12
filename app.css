@@ -19427,8 +19427,8 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -107086,6 +107086,16 @@ html .invoiceCancelRow_a8669b {
 
 .tooltip__68b59 {
     max-width: none
+}
+
+.showAllCheckboxContainer__32ee0 {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px
+}
+
+.showAllCheckbox_be0771 {
+    flex-grow: 0
 }
 
 .tabs__8ef81 {
