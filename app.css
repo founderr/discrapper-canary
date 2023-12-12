@@ -58666,7 +58666,7 @@ html .progress__4ef76 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 1rem;
     gap: 4px
 }
 
@@ -83466,15 +83466,16 @@ input::-webkit-inner-spin-button {
 }
 
 .cardText_e9b824 {
-    height: 168px;
-    width: 100%;
+    height: 170px;
+    width: calc(100% + 4px);
     padding: 23px;
     box-sizing: border-box;
     z-index: 1;
     display: flex;
     flex-direction: column;
     position: absolute;
-    bottom: 0
+    bottom: -2px;
+    left: -2px
 }
 
 .cardTextBlur_e2acf1 {
