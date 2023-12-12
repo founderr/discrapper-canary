@@ -28,7 +28,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return r
                 }
             });
             var i = n("446674"),
@@ -58,7 +58,7 @@
             s.displayName = "PurchasedItemsFestivityStore", s.persistKey = "PurchasedItemsFestivityStore", s.migrations = [e => ({
                 ...e
             })];
-            var u = new s(a.default, {
+            var r = new s(a.default, {
                 LOGOUT: function() {
                     o = {
                         canPlayWowMoment: !1,
@@ -118,146 +118,154 @@
                     return a
                 },
                 prefetch: function() {
-                    return P
+                    return b
                 },
                 default: function() {
-                    return x
+                    return F
                 }
             }), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
             var a, o, s = n("37983"),
-                u = n("884691"),
-                r = n("907002"),
-                d = n("446674"),
-                c = n("913144"),
-                m = n("206230"),
-                l = n("58608"),
-                M = n("599110"),
-                w = n("560528"),
-                p = n("659500"),
-                _ = n("676379"),
-                f = n("23377"),
-                h = n("895497"),
-                E = n("604448"),
-                W = n("833572"),
-                S = n("170486"),
-                T = n("49111"),
-                I = n("600608"),
-                g = n("788936"),
-                y = n("90976"),
-                C = n("664182");
-            async function P(e) {
+                r = n("884691"),
+                u = n("414456"),
+                d = n.n(u),
+                c = n("907002"),
+                m = n("446674"),
+                l = n("913144"),
+                M = n("206230"),
+                w = n("58608"),
+                p = n("599110"),
+                _ = n("560528"),
+                f = n("659500"),
+                h = n("676379"),
+                E = n("23377"),
+                W = n("895497"),
+                S = n("604448"),
+                T = n("833572"),
+                I = n("170486"),
+                g = n("49111"),
+                y = n("600608"),
+                C = n("788936"),
+                P = n("90976"),
+                x = n("664182");
+            async function b(e) {
                 try {
-                    c.default.dispatch({
+                    l.default.dispatch({
                         type: "PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA",
                         value: !0
                     });
-                    let t = e ? E : g;
-                    window.matchMedia("(min-width: 1012px) and (max-width: 1980px)").matches || window.matchMedia("(min-height: 720px) and (max-height: 1408px)").matches ? t = e ? W : y : (window.matchMedia("(min-width: 1980px)").matches || window.matchMedia("(min-height: 1408px)").matches) && (t = e ? S : C);
+                    let t = e ? S : C;
+                    window.matchMedia("(min-width: 1012px) and (max-width: 1980px)").matches || window.matchMedia("(min-height: 720px) and (max-height: 1408px)").matches ? t = e ? T : P : (window.matchMedia("(min-width: 1980px)").matches || window.matchMedia("(min-height: 1408px)").matches) && (t = e ? I : x);
                     let n = await fetch(t).then(async e => {
                         let t = await e.blob(),
                             n = window.URL.createObjectURL(t);
                         return n
                     });
-                    c.default.dispatch({
+                    l.default.dispatch({
                         type: "PURCHASED_ITEMS_FESTIVITY_FETCH_WOW_MOMENT_MEDIA_SUCCESS",
                         wumpusMedia: n
                     })
                 } catch (e) {
-                    c.default.dispatch({
+                    l.default.dispatch({
                         type: "PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA",
                         value: !1
                     })
                 }
             }(o = a || (a = {})).WUMPUS_FLIGHT = "wumpus_flight", o.GRADIENT_HIGHLIGHT = "gradient_highlight";
-            var x = function() {
-                let e = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion),
+            var F = function() {
+                let e = (0, m.useStateFromStores)([M.default], () => M.default.useReducedMotion),
                     {
                         wumpusMedia: t,
                         isFetchingMedia: n,
                         canPlayWowMoment: a
-                    } = (0, d.useStateFromStoresObject)([f.default], () => ({
-                        wumpusMedia: f.default.wowMomentWumpusMedia,
-                        isFetchingMedia: f.default.isFetchingWowMomentMedia,
-                        canPlayWowMoment: f.default.canPlayWowMoment
+                    } = (0, m.useStateFromStoresObject)([E.default], () => ({
+                        wumpusMedia: E.default.wowMomentWumpusMedia,
+                        isFetchingMedia: E.default.isFetchingWowMomentMedia,
+                        canPlayWowMoment: E.default.canPlayWowMoment
                     })),
-                    [o, c] = u.useState(!1),
-                    E = (0, w.getChromeVersion)(),
-                    W = (0, w.supportsHEVCAlpha)(),
-                    S = E > 52 || -1 === E || W,
-                    g = W ? "video/mp4" : "video/webm",
-                    y = S && !e && a && null === t && !1 === n;
-                y && P(W), u.useEffect(() => {
+                    [o, u] = r.useState(!1),
+                    l = (0, _.getChromeVersion)(),
+                    S = (0, _.supportsHEVCAlpha)(),
+                    T = l > 52 || -1 === l || S,
+                    I = S ? "video/mp4" : "video/webm",
+                    C = T && !e && a && null === t && !1 === n;
+                C && b(S), r.useEffect(() => {
                     function t() {
                         let {
                             enabled: t
-                        } = h.NitroStandardWowMomentExperiment.getCurrentConfig({
+                        } = W.NitroStandardWowMomentExperiment.getCurrentConfig({
                             location: "PremumSubscriptionWowMoment.tsx"
                         });
-                        t && (c(!0), i = setTimeout(() => {
-                            c(!1), x(!0), M.default.track(T.AnalyticEvents.PREMIUM_WOW_MOMENT_VIEWED, {
+                        t && (u(!0), i = setTimeout(() => {
+                            u(!1), x(!0), p.default.track(g.AnalyticEvents.PREMIUM_WOW_MOMENT_VIEWED, {
                                 wow_moment_type: "gradient_highlight"
                             })
-                        }, 2e3), e && (0, _.setCanPlayWowMoment)(!1))
+                        }, 2e3), e && (0, h.setCanPlayWowMoment)(!1))
                     }
-                    return p.ComponentDispatch.subscribe(T.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED, t), () => {
-                        p.ComponentDispatch.unsubscribe(T.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED, t)
+                    return f.ComponentDispatch.subscribe(g.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED, t), () => {
+                        f.ComponentDispatch.unsubscribe(g.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED, t)
                     }
-                }, [e, S]);
-                let [C, x] = u.useState(!1), [b, F] = u.useState(!1), N = (0, r.useSpring)({
-                    opacity: C ? .2 : 0,
+                }, [e, T]);
+                let [P, x] = r.useState(!1), [F, N] = r.useState(!1), U = (0, c.useSpring)({
+                    opacity: P ? .2 : 0,
                     config: {
                         duration: 100
                     },
                     immediate: e
-                }), U = (0, r.useSpring)({
-                    x: b ? "100%" : "-100%",
+                }), v = (0, c.useSpring)({
+                    x: F ? "100%" : "-100%",
                     config: {
                         duration: 500
                     },
-                    immediate: e || !b
+                    immediate: e || !F
                 });
-                return u.useEffect(() => {
+                r.useEffect(() => {
                     let e = -1;
-                    return C && (e = window.setTimeout(() => {
-                        F(!0)
+                    return P && (e = window.setTimeout(() => {
+                        N(!0)
                     }, 1e3)), () => {
                         window.clearTimeout(e)
                     }
-                }, [C]), u.useEffect(() => {
+                }, [P]), r.useEffect(() => {
                     let e = -1;
-                    return b && (e = window.setTimeout(() => {
-                        F(!1), x(!1)
+                    return F && (e = window.setTimeout(() => {
+                        N(!1), x(!1)
                     }, 1e3)), () => {
                         window.clearTimeout(e)
                     }
-                }, [b]), (0, s.jsxs)("div", {
-                    className: I.wrapper,
-                    children: [o && null !== t && (0, s.jsx)(l.default, {
+                }, [F]);
+                let O = o && null !== t,
+                    A = O || P;
+                return (0, s.jsxs)("div", {
+                    className: d({
+                        [y.wrapper]: !A,
+                        [y.activeWrapper]: A
+                    }),
+                    children: [O && (0, s.jsx)(w.default, {
                         autoPlay: !0,
-                        className: I.videoWrapper,
+                        className: y.videoWrapper,
                         onPlay: () => {
-                            clearTimeout(i), M.default.track(T.AnalyticEvents.PREMIUM_WOW_MOMENT_VIEWED, {
+                            clearTimeout(i), p.default.track(g.AnalyticEvents.PREMIUM_WOW_MOMENT_VIEWED, {
                                 wow_moment_type: "wumpus_flight"
                             })
                         },
                         onTimeUpdate: e => {
-                            e.currentTarget.currentTime > 4 && (0, _.setCanPlayWowMoment)(!0)
+                            e.currentTarget.currentTime > 4 && (0, h.setCanPlayWowMoment)(!0)
                         },
                         onEnded: () => {
-                            c(!1)
+                            u(!1)
                         },
                         children: (0, s.jsx)("source", {
                             src: t,
-                            type: g
+                            type: I
                         })
-                    }), (0, s.jsx)(r.animated.div, {
-                        className: I.gadientHighlight,
-                        style: N
-                    }), (0, s.jsx)(r.animated.div, {
-                        className: I.swipeWrapper,
-                        style: U,
+                    }), (0, s.jsx)(c.animated.div, {
+                        className: y.gadientHighlight,
+                        style: U
+                    }), (0, s.jsx)(c.animated.div, {
+                        className: y.swipeWrapper,
+                        style: v,
                         children: (0, s.jsxs)("svg", {
-                            className: I.swipe,
+                            className: y.swipe,
                             viewBox: "0 0 848 1024",
                             fill: "none",
                             children: [(0, s.jsx)("path", {
