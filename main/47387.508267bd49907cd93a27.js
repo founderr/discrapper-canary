@@ -1597,9 +1597,6 @@
         956597: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                getOfferEndsText: function() {
-                    return D
-                },
                 PremiumTrialGradientBadge: function() {
                     return y
                 },

@@ -108,6 +108,10 @@
             "use strict";
             e.exports = n.p + "7e0036fd6cea3d4fa30e.svg"
         },
+        121432: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "21351b92881882ca8597.svg"
+        },
         367574: function(e, t, n) {
             "use strict";
             e.exports = n.p + "148fd8378ac32a66783c.svg"
@@ -1679,7 +1683,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "253714"
+                        buildNumber: "253720"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -32842,7 +32846,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return A
                 }
             }), n("222007");
             var a = n("37983");
@@ -32861,10 +32865,9 @@
                 C = n("247820"),
                 h = n("641078"),
                 I = n("953314"),
-                T = n("986675"),
-                S = n("518151");
-            let N = "PremiumServerDriveAnnouncementModal";
-            class A extends i.default {
+                T = n("518151");
+            let S = "PremiumServerDriveAnnouncementModal";
+            class N extends i.default {
                 _initialize() {
                     l.default.subscribe("POST_CONNECTION_OPEN", this.mayShowAnnouncementModal), l.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
                 }
@@ -32873,10 +32876,10 @@
                 }
                 constructor(...e) {
                     super(...e), this.maybeOpenServerDriveAnnouncementModal = e => {
-                        let t = (0, S.extractAnnouncementModalContent)({
+                        let t = (0, T.extractAnnouncementModalContent)({
                             content: e
                         });
-                        return null != t && ((0, s.closeModal)(N), (0, s.openModalLazy)(async () => {
+                        return null != t && ((0, s.closeModal)(S), (0, s.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("518151").then(n.bind(n, "518151"));
@@ -32885,7 +32888,7 @@
                                 properties: t
                             })
                         }, {
-                            modalKey: N
+                            modalKey: S
                         }), !0)
                     }, this.handlePreview = e => {
                         let {
@@ -32900,14 +32903,7 @@
                             let e = await (0, C.fetchPremiumMarketingContent)();
                             for (let t of e)
                                 if (this.maybeOpenServerDriveAnnouncementModal(t)) break
-                        }!(0, s.hasAnyModalOpen)() && (0, T.isEligibleForQ4DropAnnouncementModal)() && (0, s.openModalLazy)(async () => {
-                            let {
-                                default: e
-                            } = await n.el("986675").then(n.bind(n, "986675"));
-                            return t => (0, a.jsx)(e, {
-                                renderModalProps: t
-                            })
-                        }), !(0, s.hasAnyModalOpen)() && await (0, h.isEligibleForBOGOAnnouncementModal)() && (0, s.openModalLazy)(async () => {
+                        }!(0, s.hasAnyModalOpen)() && await (0, h.isEligibleForBOGOAnnouncementModal)() && (0, s.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("981125").then(n.bind(n, "981125"));
@@ -32937,7 +32933,7 @@
                     }
                 }
             }
-            var p = new A
+            var A = new N
         },
         78291: function(e, t, n) {
             "use strict";
@@ -33274,6 +33270,37 @@
                     })]
                 })
             }
+        },
+        215429: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var s = n("669491"),
+                l = n("819855"),
+                i = n("77078"),
+                r = n("841098"),
+                o = e => {
+                    let {
+                        className: t
+                    } = e, n = (0, r.default)(), o = (0, i.useToken)(s.default.colors.BACKGROUND_ACCENT).hex();
+                    return (0, a.jsx)("svg", {
+                        width: "700",
+                        height: "120",
+                        viewBox: "0 0 700 120",
+                        className: t,
+                        xmlns: "http://www.w3.org/2000/svg",
+                        children: (0, a.jsx)("path", {
+                            fill: (0, l.isThemeDark)(n) ? o : "white",
+                            opacity: "1",
+                            d: "M351 39.047C185.4 -31.2102 48 9.77319 0 39.047V583.068C0 587.486 3.58174 591.068 8.00002 591.068H692C696.418 591.068 700 587.486 700 583.068V39.047C653.333 68.3208 516.6 109.304 351 39.047Z"
+                        })
+                    })
+                }
         },
         518151: function(e, t, n) {
             "use strict";
@@ -33678,6 +33705,202 @@
                 i = () => (0, a.jsx)(s.default, {
                     copy: l.default.Messages.NEW
                 })
+        },
+        702542: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return g
+                }
+            }), n("222007");
+            var a = n("37983"),
+                s = n("884691"),
+                l = n("414456"),
+                i = n.n(l),
+                r = n("446674"),
+                o = n("77078"),
+                u = n("206230"),
+                d = n("10641"),
+                c = n("933629"),
+                f = n("560176"),
+                E = n("633667"),
+                _ = n("476765"),
+                C = n("956089"),
+                h = n("58608"),
+                I = n("599110"),
+                T = n("215429"),
+                S = n("49111"),
+                N = n("994428"),
+                A = n("727505");
+            let p = e => {
+                    let {
+                        tagText: t,
+                        className: n
+                    } = e;
+                    return (0, a.jsx)(C.TextBadge, {
+                        className: i(A.tag, n),
+                        text: t
+                    })
+                },
+                m = e => {
+                    let {
+                        header: t,
+                        subHeader: n,
+                        imageSrc: s,
+                        tagText: l,
+                        wideStyle: r
+                    } = e;
+                    return (0, a.jsxs)("div", {
+                        className: i(A.featureCard, {
+                            [A.wideStyle]: r
+                        }),
+                        children: [null != l ? (0, a.jsx)(p, {
+                            tagText: l,
+                            className: A.featureCardTag
+                        }) : null, (0, a.jsx)("img", {
+                            alt: "",
+                            className: i(A.featureCardImg, {
+                                [A.wideStyle]: r
+                            }),
+                            src: s
+                        }), (0, a.jsxs)("div", {
+                            className: A.featureCardTextGroup,
+                            children: [(0, a.jsx)(o.Heading, {
+                                variant: "heading-lg/extrabold",
+                                className: A.featureCardTextHeader,
+                                children: t
+                            }), (0, a.jsx)(o.Text, {
+                                variant: "text-sm/normal",
+                                children: n
+                            })]
+                        })]
+                    })
+                };
+
+            function g(e) {
+                let {
+                    className: t,
+                    renderModalProps: n,
+                    video: l,
+                    videoClassName: C,
+                    modalDismissibleContent: p,
+                    modalTopExtra: g,
+                    header: R,
+                    headerClassName: O,
+                    subHeader: L,
+                    subHeaderExtra: v,
+                    featureCards: M,
+                    changeLogId: P,
+                    button: D
+                } = e, {
+                    onClose: y,
+                    transitionState: x
+                } = n, b = (0, _.useUID)(), U = M.length % 2 == 0, G = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), [j, k] = s.useState(Date.now()), [w, F] = s.useState(0), [B, H] = s.useState(0), [V, Y] = s.useState(!1), [W, K] = s.useState(!0), z = s.useRef(j), q = s.useRef(w), Q = s.useRef(B), Z = s.useRef(V), X = s.useRef(W);
+
+                function J() {
+                    let e = Date.now(),
+                        t = e - z.current,
+                        n = q.current,
+                        a = Q.current;
+                    return Z.current && (F(n += t), !X.current && H(a += t)), k(e), [n, a]
+                }
+                return s.useEffect(() => {
+                    z.current = j, q.current = w, Q.current = B, Z.current = V, X.current = W
+                }, [j, w, B, V, W]), s.useEffect(() => () => {
+                    let [e, t] = J();
+                    I.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_PLAYED, {
+                        change_log_id: P,
+                        seconds_played: Math.round(e / 1e3)
+                    }), I.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_UNMUTE, {
+                        change_log_id: P,
+                        seconds_unmuted: Math.round(t / 1e3)
+                    })
+                }, [P]), s.useEffect(() => {
+                    if (null == p) return;
+                    (0, d.requestMarkDismissibleContentAsShown)(p);
+                    let e = Date.now();
+                    return I.default.track(S.AnalyticEvents.CHANGE_LOG_OPENED, {
+                        change_log_id: P
+                    }), () => {
+                        I.default.track(S.AnalyticEvents.CHANGE_LOG_CLOSED, {
+                            change_log_id: P,
+                            seconds_open: Math.round((Date.now() - e) / 1e3)
+                        }), (0, d.markDismissibleContentAsDismissed)(p, {
+                            dismissAction: N.ContentDismissActionType.DISMISS
+                        })
+                    }
+                }, [p, P]), (0, a.jsxs)(o.ModalRoot, {
+                    className: i(A.root, t),
+                    transitionState: x,
+                    "aria-labelledby": b,
+                    children: [(0, a.jsx)(o.ModalCloseButton, {
+                        className: A.closeButton,
+                        onClick: y
+                    }), (0, a.jsx)(T.default, {
+                        className: A.splash
+                    }), null == g ? void 0 : g(), (0, a.jsxs)(o.ModalContent, {
+                        className: A.content,
+                        children: [(0, a.jsx)(o.Heading, {
+                            variant: "display-md",
+                            className: i(A.headerText, O),
+                            children: R
+                        }), "video" === l.type ? (0, a.jsx)(h.default, {
+                            className: i(A.video, C),
+                            autoPlay: !G,
+                            loop: !0,
+                            muted: !0,
+                            controls: !0,
+                            controlsList: "nofullscreen nodownload noremoteplayback noplaybackrate",
+                            src: l.src,
+                            poster: l.poster,
+                            onPlay: e => {
+                                I.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+                                    change_log_id: P
+                                }), k(Date.now()), Y(!0), K(e.currentTarget.muted)
+                            },
+                            onEnded: e => {
+                                J(), K(e.currentTarget.muted), Y(!1)
+                            },
+                            onVolumeChange: e => {
+                                J(), K(e.currentTarget.muted)
+                            },
+                            onPause: e => {
+                                J(), K(e.currentTarget.muted), Y(!1)
+                            },
+                            disablePictureInPicture: !0
+                        }) : (0, a.jsx)(f.EmbedVideo, {
+                            className: i(A.video, C),
+                            allowFullScreen: !1,
+                            href: l.href,
+                            thumbnail: l.thumbnail,
+                            video: l.embed,
+                            provider: E.SupportedEmbedIFrame.YOUTUBE,
+                            maxWidth: l.embed.width,
+                            maxHeight: l.embed.height,
+                            renderVideoComponent: c.renderVideoComponent,
+                            renderImageComponent: c.renderImageComponent,
+                            renderLinkComponent: c.renderMaskedLinkComponent,
+                            onPlay: () => {
+                                I.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+                                    change_log_id: P
+                                })
+                            }
+                        }), (0, a.jsx)(o.Heading, {
+                            variant: "heading-lg/extrabold",
+                            className: A.bodyText,
+                            children: L
+                        }), null == v ? void 0 : v(), (0, a.jsx)("div", {
+                            className: i(A.featureCardGroup, {
+                                [A.wideStyle]: U
+                            }),
+                            children: M.map((e, t) => (0, a.jsx)(m, {
+                                ...e,
+                                wideStyle: U
+                            }, "".concat(e.header, "_").concat(t)))
+                        }), D()]
+                    })]
+                })
+            }
         },
         630140: function(e, t, n) {
             "use strict";
