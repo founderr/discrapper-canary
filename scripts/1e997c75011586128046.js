@@ -2023,8 +2023,9 @@
                                     variant: "text-lg/bold",
                                     children: t.name
                                 }), (0, l.jsx)(u.Text, {
-                                    className: V.description,
+                                    className: n(V.description, V.innerMask),
                                     variant: "text-md/normal",
+                                    lineClamp: 3,
                                     children: t.summary
                                 }), (0, l.jsx)("div", {
                                     className: V.innerBlur,
