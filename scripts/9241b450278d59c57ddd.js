@@ -3875,6 +3875,8 @@
                 LANGUAGE: "Idioma",
                 LANGUAGE_SELECT: "Elige un idioma",
                 LANGUAGE_UPDATED: "Se ha actualizado el idioma.",
+                ESLATAM_LANGUAGE_LAUNCH_NOTICE: "Discord ahora tiene disponible el espa\xf1ol latinoamericano.",
+                ESLATAM_LANGUAGE_LAUNCH_NOTICE_CTA: "Cambiar Idioma",
                 CHECKING_FOR_UPDATES: "Buscando actualizaciones",
                 UPDATE_AVAILABLE: "Descargando actualizaci\xf3n",
                 UPDATE_DOWNLOADED: "\xa1Actualizaci\xf3n lista!",
