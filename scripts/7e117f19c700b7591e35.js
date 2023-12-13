@@ -971,7 +971,7 @@
                             let a = e[2],
                                 s = a.startsWith("https://discordapp.com/nitro") || a.startsWith("https://discord.com/nitro"),
                                 r = a.startsWith("https://discordapp.com/hypesquad") || a.startsWith("https://discord.com/hypesquad"),
-                                o = a.startsWith("/shop/fullscreen?source=1");
+                                o = a.startsWith("/shop/fullscreen?source=1") || a.startsWith("/activities");
                             return l = s || r ? e => {
                                 f.default.track(g.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                                     location: x
