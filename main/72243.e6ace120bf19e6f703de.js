@@ -47326,6 +47326,10 @@
                     throttlePeriod: 9e5,
                     throttleKeys: e => [e.tab_opened]
                 },
+                [f.AnalyticEvents.NOW_PLAYING_CARD_HOVERED]: {
+                    throttlePeriod: 9e5,
+                    throttleKeys: e => [e.tab_opened]
+                },
                 [f.AnalyticEvents.START_SPEAKING]: {
                     throttlePeriod: 9e5,
                     throttleKeys: e => [e.server]
@@ -49443,7 +49447,7 @@
                         var i;
                         let d = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "253813"
+                                build_number: "253821"
                             },
                             E = l.default.getCurrentUser();
                         null != E && (d.user_id = E.id, d.user_name = E.tag, null != E.email && (d.email = E.email));
