@@ -7777,58 +7777,54 @@
                         shouldRedactExplicitContent: l
                     } = this.props;
                     if (0 === t.length || e.isPoll()) return null;
-                    let i = t.filter(e => null == e.flags || !(0, es.hasFlag)(e.flags, eT.MessageAttachmentFlags.IS_THUMBNAIL)),
-                        {
-                            gifAutoPlay: r,
-                            canDeleteAttachments: o,
-                            inlineAttachmentMedia: u,
-                            onAttachmentContextMenu: d,
-                            shouldHideMediaOptions: c
-                        } = this.props,
-                        f = i.map(e => (0, et.carouselAssetFromAttachment)(e, c, l)).filter(el.isNotNullish),
-                        m = {
-                            source: "Media Mosaic",
-                            guild_id: s.guild_id,
-                            channel_id: s.id,
-                            channel_type: s.type
-                        },
-                        h = f.length > 1 ? (0, et.createMediaOnClickOverrides)(f, m) : {},
-                        E = (0, es.hasFlag)(n, eT.MessageFlags.IS_VOICE_MESSAGE),
-                        p = i.map(t => {
-                            let n = {
-                                    message: e,
-                                    attachment: t,
-                                    autoPlayGif: r,
-                                    canRemoveAttachment: o && (i.length > 1 || "" !== e.content),
-                                    className: eA.embedWrapper,
-                                    inlineMedia: u,
-                                    onContextMenu: null != d ? e => {
-                                        e.stopPropagation(), e.preventDefault(), d(e, t)
-                                    } : void 0,
-                                    onRemoveAttachment: this.handleRemoveAttachment,
-                                    renderAudioComponent: E ? e_.renderVoiceMessageAudioComponent : e_.renderAudioComponent,
-                                    renderImageComponent: e_.renderImageComponent,
-                                    renderPlaintextFilePreview: e_.renderPlaintextFilePreview,
-                                    renderVideoComponent: e_.renderVideoComponent,
-                                    onPlay: (e, n, a) => {
-                                        en.default.track(eT.AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
-                                            guild_id: s.guild_id,
-                                            channel_id: s.id,
-                                            channel_type: s.type,
-                                            type: t.content_type,
-                                            flags: t.flags,
-                                            size: t.size,
-                                            duration: a
-                                        })
-                                    },
-                                    gifFavoriteButton: eL(t)
+                    let i = t.filter(e => null == e.flags || !(0, es.hasFlag)(e.flags, eT.MessageAttachmentFlags.IS_THUMBNAIL));
+                    if (0 === i.length) return null;
+                    let {
+                        gifAutoPlay: r,
+                        canDeleteAttachments: o,
+                        inlineAttachmentMedia: u,
+                        onAttachmentContextMenu: d,
+                        shouldHideMediaOptions: c
+                    } = this.props, f = i.map(e => (0, et.carouselAssetFromAttachment)(e, c, l)).filter(el.isNotNullish), m = {
+                        source: "Media Mosaic",
+                        guild_id: s.guild_id,
+                        channel_id: s.id,
+                        channel_type: s.type
+                    }, h = f.length > 1 ? (0, et.createMediaOnClickOverrides)(f, m) : {}, E = (0, es.hasFlag)(n, eT.MessageFlags.IS_VOICE_MESSAGE), p = i.map(t => {
+                        let n = {
+                                message: e,
+                                attachment: t,
+                                autoPlayGif: r,
+                                canRemoveAttachment: o && (i.length > 1 || "" !== e.content),
+                                className: eA.embedWrapper,
+                                inlineMedia: u,
+                                onContextMenu: null != d ? e => {
+                                    e.stopPropagation(), e.preventDefault(), d(e, t)
+                                } : void 0,
+                                onRemoveAttachment: this.handleRemoveAttachment,
+                                renderAudioComponent: E ? e_.renderVoiceMessageAudioComponent : e_.renderAudioComponent,
+                                renderImageComponent: e_.renderImageComponent,
+                                renderPlaintextFilePreview: e_.renderPlaintextFilePreview,
+                                renderVideoComponent: e_.renderVideoComponent,
+                                onPlay: (e, n, a) => {
+                                    en.default.track(eT.AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
+                                        guild_id: s.guild_id,
+                                        channel_id: s.id,
+                                        channel_type: s.type,
+                                        type: t.content_type,
+                                        flags: t.flags,
+                                        size: t.size,
+                                        duration: a
+                                    })
                                 },
-                                a = (0, Q.getBestEffortSrcUrl)({
-                                    proxyURL: t.proxy_url,
-                                    url: t.url
-                                });
-                            return a in h && (n.onClick = h[a]), n
-                        });
+                                gifFavoriteButton: eL(t)
+                            },
+                            a = (0, Q.getBestEffortSrcUrl)({
+                                proxyURL: t.proxy_url,
+                                url: t.url
+                            });
+                        return a in h && (n.onClick = h[a]), n
+                    });
                     return (0, a.jsx)(ee.default, {
                         attachments: p
                     })
