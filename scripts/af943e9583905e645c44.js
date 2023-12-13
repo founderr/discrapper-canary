@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["7968"], {
+    ["63470"], {
         448105: function(e, t, n) {
             "use strict";
             e.exports = function(e, t) {
@@ -1903,8 +1903,8 @@
                 D = n("373469"),
                 U = n("19766"),
                 x = n("42203"),
-                w = n("923959"),
-                y = n("330154"),
+                y = n("923959"),
+                w = n("330154"),
                 b = n("705955"),
                 P = n("957255"),
                 F = n("824563"),
@@ -2463,19 +2463,19 @@
                     if (null == e) return null;
                     let t = x.default.getChannel(e);
                     return (null == t ? void 0 : t.guild_id) === o.id ? t : null
-                }), K = null != W && !(0, N.default)(W) && [ei.InstantInviteSources.GUILD_CONTEXT_MENU, ei.InstantInviteSources.GUILD_HEADER].includes(d), Y = (0, M.default)(o.id), Z = (0, E.useStateFromStores)([V.default, x.default, w.default], () => {
+                }), K = null != W && !(0, N.default)(W) && [ei.InstantInviteSources.GUILD_CONTEXT_MENU, ei.InstantInviteSources.GUILD_HEADER].includes(d), Y = (0, M.default)(o.id), Z = (0, E.useStateFromStores)([V.default, x.default, y.default], () => {
                     if (K && ((0, z.hasFlag)(G, f.GuildInviteFlags.IS_GUEST_INVITE) || D === el.InstantInviteModalPages.GUEST)) return W;
                     if (D === el.InstantInviteModalPages.GUEST) return 1 === Y.length ? Y[0] : void 0;
                     if (null != u) return u;
                     let e = V.default.getChannelId(),
                         t = null == e || (0, er.isStaticChannelRoute)(e) ? void 0 : x.default.getChannel(e);
-                    return (null == t ? void 0 : t.isThread()) && (t = x.default.getChannel(t.parent_id)), null != t ? t : w.default.getDefaultChannel(o.id, !0, ei.Permissions.CREATE_INSTANT_INVITE)
+                    return (null == t ? void 0 : t.isThread()) && (t = x.default.getChannel(t.parent_id)), null != t ? t : y.default.getDefaultChannel(o.id, !0, ei.Permissions.CREATE_INSTANT_INVITE)
                 }, [K, G, D, u, o.id, W, Y]), [X, Q] = i.useState(null), J = null != X ? X : Z, $ = null;
                 null != h ? $ = el.InviteTargetTypes.STREAM : null != I && ($ = el.InviteTargetTypes.EMBEDDED_APPLICATION);
                 let ee = null != u ? u.getGuildId() : null != o ? o.id : null,
-                    et = (0, E.useStateFromStores)([y.default], () => {
+                    et = (0, E.useStateFromStores)([w.default], () => {
                         let e = null != J ? J.id : null;
-                        return null == e ? null : y.default.getInvite(e, {
+                        return null == e ? null : w.default.getInvite(e, {
                             targetType: $,
                             targetUserId: h,
                             targetApplicationId: I
@@ -2530,17 +2530,17 @@
                     showVanityURL: eM,
                     currentPage: null != D ? D : el.InstantInviteModalPages.MAIN,
                     lastPage: void 0
-                }), ew = i.useCallback(e => {
+                }), ey = i.useCallback(e => {
                     ex(t => ({
                         ...t,
                         ...e
                     }))
-                }, []), ey = i.useCallback(e => {
-                    ew({
+                }, []), ew = i.useCallback(e => {
+                    ey({
                         currentPage: e,
                         lastPage: eU.currentPage
                     })
-                }, [eU.currentPage, ew]), eb = (eR || K) && D !== el.InstantInviteModalPages.GUEST && !eM && !eI && !eD, {
+                }, [eU.currentPage, ey]), eb = (eR || K) && D !== el.InstantInviteModalPages.GUEST && !eM && !eI && !eD, {
                     enabled: eP
                 } = O.GuestVoiceInvitesExperiment.useExperiment({
                     guildId: null == o ? void 0 : o.id,
@@ -2557,13 +2557,13 @@
                         currentPage: e,
                         lastPage: t
                     } = eU;
-                    e === el.InstantInviteModalPages.SETTINGS && null != t ? ey(t) : C()
-                }, [ey, eU, C]), eH = i.useCallback(() => {
+                    e === el.InstantInviteModalPages.SETTINGS && null != t ? ew(t) : C()
+                }, [ew, eU, C]), eH = i.useCallback(() => {
                     let e = null == J ? void 0 : J.id;
-                    0 === eV && 0 === eF && !eG && eM ? ew({
+                    0 === eV && 0 === eF && !eG && eM ? ey({
                         networkError: void 0,
                         showVanityURL: !0
-                    }) : null != e && (ew({
+                    }) : null != e && (ey({
                         networkError: void 0,
                         showVanityURL: !1
                     }), _.default.createInvite(e, {
@@ -2574,13 +2574,13 @@
                         target_application_id: null == eT ? void 0 : eT.id,
                         temporary: eG,
                         flags: G
-                    }, d).catch(e => ew({
+                    }, d).catch(e => ey({
                         networkError: e,
                         showVanityURL: eM
-                    }))), eF !== ec.value && eB !== ec.value && ew({
+                    }))), eF !== ec.value && eB !== ec.value && ey({
                         savedMaxAge: ec.value
                     })
-                }, [eM, J, d, null == eT ? void 0 : eT.id, $, h, eF, eV, eG, G, ew, eB]), ek = (0, p.default)(J), eW = (0, p.default)(G), eK = ek !== J, eY = eW !== G;
+                }, [eM, J, d, null == eT ? void 0 : eT.id, $, h, eF, eV, eG, G, ey, eB]), ek = (0, p.default)(J), eW = (0, p.default)(G), eK = ek !== J, eY = eW !== G;
                 return i.useEffect(() => {
                     (eK || eY) && eH()
                 }, [eH, eK, eY]), (0, l.jsx)(H, {
@@ -2610,8 +2610,8 @@
                         isGuestInviteCreationToggleEnabled: eP && eb,
                         shouldHideTemporaryInviteToggle: eP && eb || D === el.InstantInviteModalPages.GUEST,
                         modalState: eU,
-                        setModalState: ew,
-                        changePage: ey,
+                        setModalState: ey,
+                        changePage: ew,
                         onGenerateNewLink: eH,
                         inviteFlags: G,
                         setInviteFlags: j,
@@ -4009,13 +4009,13 @@
                 })
             }
 
-            function w() {
+            function y() {
                 let e = h.default.getId();
                 R.forEach(null, t => t.rebuildMember(e))
             }
-            class y extends d.default.Store {
+            class w extends d.default.Store {
                 initialize() {
-                    this.waitFor(v.default, p.default, I.default, g.default, T.default, m.default, h.default, _.default, E.default), this.syncWith([m.default], w), this.syncWith([E.default], x)
+                    this.waitFor(v.default, p.default, I.default, g.default, T.default, m.default, h.default, _.default, E.default), this.syncWith([m.default], y), this.syncWith([E.default], x)
                 }
                 getProps(e, t) {
                     let n = R.get(e, O(t));
@@ -4031,8 +4031,8 @@
                     return n.rows
                 }
             }
-            y.displayName = "ChannelMemberStore";
-            var b = new y(c.default, {
+            w.displayName = "ChannelMemberStore";
+            var b = new w(c.default, {
                 CONNECTION_OPEN: D,
                 OVERLAY_INITIALIZE: D,
                 GUILD_MEMBER_LIST_UPDATE: function(e) {
@@ -4620,6 +4620,44 @@
                     })
                 }
             }).Text = p, l.Image = g, i = l
+        },
+        37785: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return u
+                }
+            });
+            var l = n("37983"),
+                i = n("884691"),
+                r = n("77078"),
+                s = n("393414"),
+                a = n("49111"),
+                u = i.forwardRef(function(e, t) {
+                    let {
+                        href: n,
+                        children: u,
+                        onClick: o,
+                        onKeyPress: d,
+                        focusProps: c,
+                        ...f
+                    } = e, E = i.useCallback(e => {
+                        !e.repeat && ((e.charCode === a.KeyboardKeys.SPACE || e.charCode === a.KeyboardKeys.ENTER) && (e.preventDefault(), null != n && (0, s.transitionTo)(n), null == o || o()), null == d || d(e))
+                    }, [n, d, o]), h = i.useCallback(e => {
+                        !e.metaKey && !e.shiftKey && 0 === e.button && (e.preventDefault(), e.stopPropagation(), null != n && (0, s.transitionTo)(n), null == o || o())
+                    }, [n, o]), I = (0, l.jsx)("a", {
+                        ref: t,
+                        href: n,
+                        onClick: h,
+                        onKeyPress: E,
+                        ...f,
+                        children: u
+                    });
+                    return (0, l.jsx)(r.FocusRing, {
+                        ...c,
+                        children: I
+                    })
+                })
         },
         98292: function(e, t, n) {
             "use strict";
