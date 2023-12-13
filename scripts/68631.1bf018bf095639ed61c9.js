@@ -411,7 +411,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return m
                 }
             });
             var r = n("37983");
@@ -420,24 +420,27 @@
                 l = n("77078"),
                 i = n("812204"),
                 a = n("685665"),
-                u = n("21526"),
-                o = n("782340"),
-                c = n("898689"),
-                d = e => {
+                u = n("393414"),
+                o = n("21526"),
+                c = n("49111"),
+                d = n("782340"),
+                f = n("898689"),
+                m = e => {
                     let {
                         onClose: t
                     } = e, {
                         analyticsLocations: n
-                    } = (0, a.default)(), d = () => {
-                        t(), (0, u.openCollectiblesShop)({
+                    } = (0, a.default)(), m = () => {
+                        t(), (0, u.transitionTo)(c.Routes.COLLECTIBLES_SHOP), (0, o.openCollectiblesShop)({
+                            openInLayer: !1,
                             analyticsSource: i.default.PREMIUM_PAYMENT_MODAL,
                             analyticsLocations: n
                         })
                     };
                     return (0, r.jsxs)("div", {
-                        className: c.container,
+                        className: f.container,
                         children: [(0, r.jsx)("div", {
-                            className: c.iconBackground,
+                            className: f.iconBackground,
                             children: (0, r.jsx)(s.ShopIcon, {
                                 width: 20,
                                 height: 20,
@@ -446,10 +449,10 @@
                         }), (0, r.jsx)(l.Text, {
                             variant: "text-sm/normal",
                             color: "header-primary",
-                            children: o.default.Messages.COLLECTIBLES_GIFT_CODE_MODAL_UPSELL.format({
+                            children: d.default.Messages.COLLECTIBLES_GIFT_CODE_MODAL_UPSELL.format({
                                 checkItOut: e => (0, r.jsx)(l.Clickable, {
-                                    className: c.link,
-                                    onClick: d,
+                                    className: f.link,
+                                    onClick: m,
                                     children: e
                                 })
                             })
