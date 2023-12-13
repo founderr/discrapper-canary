@@ -515,10 +515,7 @@
                     channelId: t,
                     onClose: i,
                     transitionState: r
-                } = e, [N, S] = n.useState(""), [A, M] = n.useState("descending"), [R, y] = n.useState(!0), [P, j] = n.useState(null), D = n.useDeferredValue(N), O = (0, u.useStateFromStores)([E.default], () => E.default.getClips()), H = (0, u.useStateFromStores)([E.default], () => E.default.getPendingClips()), w = (0, u.useStateFromStores)([E.default], () => E.default.getSettings().storageLocation), b = (0, u.useStateFromStoresArray)([E.default], () => {
-                    var e;
-                    return null !== (e = E.default.getNewClipIds()) && void 0 !== e ? e : []
-                }), {
+                } = e, [N, S] = n.useState(""), [A, M] = n.useState("descending"), [R, y] = n.useState(!0), [P, j] = n.useState(null), D = n.useDeferredValue(N), O = (0, u.useStateFromStores)([E.default], () => E.default.getClips()), H = (0, u.useStateFromStores)([E.default], () => E.default.getPendingClips()), w = (0, u.useStateFromStores)([E.default], () => E.default.getSettings().storageLocation), b = (0, u.useStateFromStoresArray)([E.default], () => E.default.getNewClipIds()), {
                     AnalyticsLocationProvider: U
                 } = (0, m.default)(p.default.CLIPS_GALLERY), k = n.useMemo(() => [...H, ...O], [O, H]);
                 (0, h.default)({

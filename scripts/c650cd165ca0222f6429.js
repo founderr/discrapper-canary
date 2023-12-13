@@ -660,10 +660,10 @@
                     let w = r.useCallback(() => {
                             T("error"), x("error"), S(), null == E || E()
                         }, [T, x, S, E]),
-                        N = r.useCallback(e => {
+                        O = r.useCallback(e => {
                             T("verify"), x("verify"), _(e)
                         }, [x, _, T]),
-                        O = r.useCallback(() => {
+                        N = r.useCallback(() => {
                             T("render"), null == f || f()
                         }, [f, T]),
                         k = r.useCallback(() => {
@@ -678,8 +678,8 @@
                     return ((null == n || "" === n) && (n = u.RECAPTCHA_SITE_KEY), t === d.CaptchaTypes.RECAPTCHA) ? (0, a.jsx)(s.default, {
                         ...y,
                         onLoad: I,
-                        onRender: O,
-                        onVerify: N,
+                        onRender: N,
+                        onVerify: O,
                         onError: w,
                         sitekey: n
                     }) : t === d.CaptchaTypes.HCAPTCHA ? (0, a.jsx)(i.default, {
@@ -688,7 +688,7 @@
                         sitekey: n,
                         onLoad: I,
                         onError: w,
-                        onVerify: N,
+                        onVerify: O,
                         onChalExpired: D,
                         onOpen: k,
                         onClose: L
@@ -696,8 +696,8 @@
                         ...y,
                         sitekey: n,
                         onLoad: I,
-                        onRender: O,
-                        onVerify: N,
+                        onRender: N,
+                        onVerify: O,
                         onError: w
                     })
                 }
@@ -709,7 +709,7 @@
                 MetricEvents: function() {
                     return a
                 }
-            }), n("222007"), (r = a || (a = {})).APP_CRASHED = "app_crashed", r.SOCKET_CRASHED = "socket_crashed", r.MESSAGE_REQUEST_VIEW = "message_request_view", r.SPAM_MESSAGE_REQUEST_VIEW = "spam_message_request_view", r.SPAM_MESSAGE_REQUEST_ERROR_VIEW = "spam_message_request_error_view", r.FAMILY_CENTER_VIEW = "family_center_view", r.SAFETY_HUB_VIEW = "safety_hub_view", r.MESSAGE_REQUEST_COUNT_DRIFT = "message_request_count_drift", r.FORUM_CHANNEL_GRID_AUTO_ENABLED = "forum_channel_grid_auto_enabled", r.REMIX_FONT_LOADING_ERROR = "remix_font_loading_error", r.AFK_NOT_IDLE = "afk_not_idle", r.CAPTCHA_EVENT = "captcha_event", r.SAFETY_WARNING_VIEW = "safety_warning_view", r.SAFETY_WARNING_MODAL_VIEW = "safety_warning_modal_view", r.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT = "explicit_media_scan_client_timed_out", r.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING = "explicit_media_scan_client_timing", r.OTA_CHECK_ATTEMPT = "OtaCheckAttempt", r.OTA_ASSET_DOWNLOAD_ATTEMPT = "OtaAssetDownloadAttempt", r.OTA_UPDATE_CHECK = "ota_update_check", r.OTA_ASSET_DOWNLOAD = "ota_asset_download"
+            }), n("222007"), (r = a || (a = {})).APP_CRASHED = "app_crashed", r.SOCKET_CRASHED = "socket_crashed", r.MESSAGE_REQUEST_VIEW = "message_request_view", r.SPAM_MESSAGE_REQUEST_VIEW = "spam_message_request_view", r.SPAM_MESSAGE_REQUEST_ERROR_VIEW = "spam_message_request_error_view", r.FAMILY_CENTER_VIEW = "family_center_view", r.SAFETY_HUB_VIEW = "safety_hub_view", r.MESSAGE_REQUEST_COUNT_DRIFT = "message_request_count_drift", r.FORUM_CHANNEL_GRID_AUTO_ENABLED = "forum_channel_grid_auto_enabled", r.REMIX_FONT_LOADING_ERROR = "remix_font_loading_error", r.AFK_NOT_IDLE = "afk_not_idle", r.CAPTCHA_EVENT = "captcha_event", r.SAFETY_WARNING_VIEW = "safety_warning_view", r.SAFETY_WARNING_MODAL_VIEW = "safety_warning_modal_view", r.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT = "explicit_media_scan_client_timed_out", r.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING = "explicit_media_scan_client_timing", r.OTA_CHECK_ATTEMPT = "OtaCheckAttempt", r.OTA_ASSET_DOWNLOAD_ATTEMPT = "OtaAssetDownloadAttempt", r.OTA_UPDATE_CHECK = "ota_update_check", r.OTA_ASSET_DOWNLOAD = "ota_asset_download", r.DEBUG_OTA_200_TIMEOUT = "debug_ota_200_timeout"
         },
         615361: function(e, t, n) {
             "use strict";

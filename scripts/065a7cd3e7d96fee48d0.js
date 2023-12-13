@@ -1243,7 +1243,7 @@
                             },
                             oldFormErrors: !0
                         }).then(e => {
-                            if (null == e.body || "199ba82c26ab8891969c65ebf55de532886f7af8" === e.body.hash) return this._handleUpdateNotAvailable();
+                            if (null == e.body || "5920f58abf1adb927603933ef232c48a35948b2e" === e.body.hash) return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
                             if (Date.now() - f > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
@@ -1277,114 +1277,6 @@
                         this.checkForUpdates()
                     }), this._checkInterval = setInterval(this.checkForUpdates, e)
                 }
-            }
-        },
-        531674: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                getMuteTimes: function() {
-                    return S
-                },
-                default: function() {
-                    return N
-                }
-            }), n("222007");
-            var l = n("37983");
-            n("884691");
-            var a = n("866227"),
-                s = n.n(a),
-                i = n("446674"),
-                r = n("77078"),
-                o = n("820542"),
-                u = n("519705"),
-                d = n("319165"),
-                c = n("282109"),
-                f = n("679653"),
-                E = n("49111"),
-                h = n("468200"),
-                _ = n("782340");
-            let S = () => [{
-                    value: h.MuteUntilSeconds.MINUTES_15,
-                    label: _.default.Messages.MUTE_DURATION_15_MINUTES
-                }, {
-                    value: h.MuteUntilSeconds.HOURS_1,
-                    label: _.default.Messages.MUTE_DURATION_1_HOUR
-                }, {
-                    value: h.MuteUntilSeconds.HOURS_3,
-                    label: _.default.Messages.MUTE_DURATION_3_HOURS
-                }, {
-                    value: h.MuteUntilSeconds.HOURS_8,
-                    label: _.default.Messages.MUTE_DURATION_8_HOURS
-                }, {
-                    value: h.MuteUntilSeconds.HOURS_24,
-                    label: _.default.Messages.MUTE_DURATION_24_HOURS
-                }, {
-                    value: h.MuteUntilSeconds.ALWAYS,
-                    label: _.default.Messages.MUTE_DURATION_ALWAYS
-                }],
-                T = e => {
-                    let t = e > 0 ? s().add(e, "second").toISOString() : null;
-                    return {
-                        muted: !0,
-                        mute_config: {
-                            selected_time_window: e,
-                            end_time: t
-                        }
-                    }
-                };
-
-            function N(e, t) {
-                let [n, a] = (0, i.useStateFromStoresArray)([c.default], () => [c.default.isChannelMuted(e.guild_id, e.id), c.default.getChannelMuteConfig(e.guild_id, e.id)]), s = (0, d.useMutedUntilText)(a), h = (0, f.default)(e, !0);
-
-                function N(t) {
-                    t && e.type === E.ChannelTypes.GUILD_CATEGORY && (0, o.categoryCollapse)(e.id), u.default.updateChannelOverrideSettings(e.guild_id, e.id, {
-                        muted: t
-                    })
-                }
-                let p = _.default.Messages.MUTE_CHANNEL_GENERIC,
-                    I = _.default.Messages.UNMUTE_CHANNEL_GENERIC;
-                switch (e.type) {
-                    case E.ChannelTypes.GUILD_CATEGORY:
-                        p = _.default.Messages.MUTE_CATEGORY, I = _.default.Messages.UNMUTE_CATEGORY;
-                        break;
-                    case E.ChannelTypes.GROUP_DM:
-                        p = _.default.Messages.MUTE_CONVERSATION, I = _.default.Messages.UNMUTE_CONVERSATION;
-                        break;
-                    case E.ChannelTypes.DM:
-                        p = _.default.Messages.MUTE_CHANNEL.format({
-                            name: h
-                        }), I = _.default.Messages.UNMUTE_CHANNEL.format({
-                            name: h
-                        });
-                        break;
-                    default:
-                        p = _.default.Messages.MUTE_CHANNEL_GENERIC, I = _.default.Messages.UNMUTE_CHANNEL_GENERIC
-                }
-                return n ? (0, l.jsx)(r.MenuItem, {
-                    id: "unmute-channel",
-                    label: I,
-                    subtext: s,
-                    action: () => N(!1)
-                }) : (0, l.jsx)(r.MenuItem, {
-                    id: "mute-channel",
-                    label: p,
-                    action: () => N(!0),
-                    children: S().map(n => {
-                        let {
-                            value: a,
-                            label: s
-                        } = n;
-                        return (0, l.jsx)(r.MenuItem, {
-                            id: "".concat(a),
-                            label: s,
-                            action: () => (function(n) {
-                                e.type === E.ChannelTypes.GUILD_CATEGORY && (0, o.categoryCollapse)(e.id);
-                                let l = T(n);
-                                u.default.updateChannelOverrideSettings(e.guild_id, e.id, l, t)
-                            })(a)
-                        }, a)
-                    })
-                })
             }
         },
         619436: function(e, t, n) {
@@ -1646,13 +1538,10 @@
                 } = e, {
                     hasClips: c,
                     hasNewClips: f
-                } = (0, a.useStateFromStoresObject)([o.default], () => {
-                    var e;
-                    return {
-                        hasClips: o.default.hasClips(),
-                        hasNewClips: (null !== (e = o.default.getNewClipIds()) && void 0 !== e ? e : []).length > 0
-                    }
-                });
+                } = (0, a.useStateFromStoresObject)([o.default], () => ({
+                    hasClips: o.default.hasClips(),
+                    hasNewClips: o.default.getNewClipIds().length > 0
+                }));
                 return c ? (0, l.jsx)(r.Icon, {
                     className: t,
                     icon: i.default,
@@ -3074,7 +2963,7 @@
                         disableInteraction: w = !1,
                         hasThread: B,
                         treatSpam: H
-                    } = t, Y = y.MessageTypesWithLazyLoadedReferences.has(x.type) ? x.messageReference : void 0, V = (0, r.useStateFromStores)([c.default], () => c.default.getMessageByReference(Y)), K = (0, r.useStateFromStores)([E.default], () => x.type === y.MessageTypes.THREAD_STARTER_MESSAGE && V.state === c.ReferencedMessageState.LOADED ? E.default.getChannel(V.message.channel_id) : null), Q = f.InlineAttachmentMedia.useSetting(), z = f.InlineEmbedMedia.useSetting(), W = f.RenderEmbeds.useSetting() && !x.author.isClyde(), q = f.GifAutoPlay.useSetting(), Z = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (n = x.editedTimestamp) && void 0 !== n ? n : x.timestamp).valueOf()), X = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (a = null == T ? void 0 : T.guild_id) && void 0 !== a ? a : "", (null !== (s = x.editedTimestamp) && void 0 !== s ? s : x.timestamp).valueOf()), J = (0, d.default)(null == T ? void 0 : T.id), {
+                    } = t, V = y.MessageTypesWithLazyLoadedReferences.has(x.type) ? x.messageReference : void 0, Y = (0, r.useStateFromStores)([c.default], () => c.default.getMessageByReference(V)), K = (0, r.useStateFromStores)([E.default], () => x.type === y.MessageTypes.THREAD_STARTER_MESSAGE && Y.state === c.ReferencedMessageState.LOADED ? E.default.getChannel(Y.message.channel_id) : null), Q = f.InlineAttachmentMedia.useSetting(), z = f.InlineEmbedMedia.useSetting(), W = f.RenderEmbeds.useSetting() && !x.author.isClyde(), q = f.GifAutoPlay.useSetting(), Z = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (n = x.editedTimestamp) && void 0 !== n ? n : x.timestamp).valueOf()), X = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (a = null == T ? void 0 : T.guild_id) && void 0 !== a ? a : "", (null !== (s = x.editedTimestamp) && void 0 !== s ? s : x.timestamp).valueOf()), J = (0, d.default)(null == T ? void 0 : T.id), {
                         disableReactionCreates: $
                     } = (0, g.default)(T), {
                         content: ee,
@@ -3085,14 +2974,14 @@
                         allowHeading: Z.showListsAndHeaders || X.showListsAndHeaders,
                         allowLinks: Z.showMaskedLinks || X.showMaskedLinks,
                         previewLinkTarget: Z.showMaskedLinks || X.showMaskedLinks
-                    }), en = (0, m.default)(x), el = (0, r.useStateFromStores)([E.default], () => x.hasFlag(y.MessageFlags.HAS_THREAD) && E.default.getChannel(x.id)), ea = x.type === y.MessageTypes.THREAD_STARTER_MESSAGE && V.state === c.ReferencedMessageState.LOADED && null != K, es = !ea && void 0 === _, ei = (0, R.default)({
+                    }), en = (0, m.default)(x), el = (0, r.useStateFromStores)([E.default], () => x.hasFlag(y.MessageFlags.HAS_THREAD) && E.default.getChannel(x.id)), ea = x.type === y.MessageTypes.THREAD_STARTER_MESSAGE && Y.state === c.ReferencedMessageState.LOADED && null != K, es = !ea && void 0 === _, ei = (0, R.default)({
                         message: x,
                         channel: T,
                         enabled: es
                     }), er = (0, u.useShouldRedactExplicitContent)(T.id, x.author.id);
                     return ea ? (0, l.jsx)(e, {
                         ...t,
-                        message: V.message,
+                        message: Y.message,
                         channel: K,
                         hasThread: !1
                     }) : (h.default.isBlocked(x.author.id) ? _ = P.default.Messages.BLOCKED_MESSAGE_COUNT : (0, p.isSpam)(x) && H && (_ = P.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== _) ? (0, l.jsx)(b, {
@@ -3107,7 +2996,7 @@
                             [U.disableInteraction]: w,
                             [U.groupStart]: t.isGroupStart
                         }),
-                        childrenRepliedMessage: (0, D.default)(x, T, Y, V, F),
+                        childrenRepliedMessage: (0, D.default)(x, T, V, Y, F),
                         childrenHeader: (0, M.default)({
                             ...t,
                             author: en,
@@ -6962,7 +6851,7 @@
                 }
             }
 
-            function Y() {
+            function V() {
                 let e = function() {
                         var e, t;
                         let n = {},
@@ -6976,7 +6865,7 @@
                     }(),
                     t = function(e) {
                         let t = [];
-                        M.default.getSortedPrivateChannels().forEach(n => V(e, t, null, n.id));
+                        M.default.getSortedPrivateChannels().forEach(n => Y(e, t, null, n.id));
                         let n = U.default.getFlattenedGuildIds();
                         return n.forEach(n => {
                             if (null == n) return;
@@ -6984,9 +6873,9 @@
                                 a = I.default.getActiveJoinedUnreadThreadsForGuild(n);
                             l.forEach(l => {
                                 var s;
-                                V(e, t, n, l);
+                                Y(e, t, n, l);
                                 let i = null !== (s = a[l]) && void 0 !== s ? s : {};
-                                for (let l in i) V(e, t, n, l)
+                                for (let l in i) Y(e, t, n, l)
                             })
                         }), f.sortBy(t, e => e.sortOrder)
                     }(e);
@@ -6998,7 +6887,7 @@
                 }
             }
 
-            function V(e, t, n, l) {
+            function Y(e, t, n, l) {
                 if (null == l) return;
                 let a = M.default.getChannel(l);
                 if (null == a) return;
@@ -7066,7 +6955,7 @@
             }
 
             function K(e) {
-                let [t, n] = r.useState(() => new B(Y(), e)), [l, a] = r.useState(!1), s = r.useRef(Date.now()), [i, o] = r.useState(() => Y());
+                let [t, n] = r.useState(() => new B(V(), e)), [l, a] = r.useState(!1), s = r.useRef(Date.now()), [i, o] = r.useState(() => V());
                 return r.useEffect(() => {
                     let e = e => o(e);
                     return t.on("change", e), o(t.state), () => {
@@ -7075,7 +6964,7 @@
                 }, [t]), r.useEffect(() => {
                     if (null == i || i.channels.length > 0 || l) return;
                     let t = Date.now(),
-                        r = Y();
+                        r = V();
                     0 === r.channels.length || t - s.current < 1e4 ? a(!0) : (s.current = Date.now(), n(new B(r, e)))
                 }, [i, l, e]), r.useLayoutEffect(t.maybeLoadMore, [null == i ? void 0 : i.channels, null == i ? void 0 : i.loadState]), r.useEffect(() => (y.default.addChangeListener(t.reloadMessages), () => y.default.removeChangeListener(t.reloadMessages)), [t.reloadMessages]), r.useEffect(() => (F.default.addChangeListener(t.handleUserGuildSettingsStoreChange), () => F.default.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]), r.useEffect(() => (g.default.addChangeListener(t.handleJoinedThreadsStoreChange), () => g.default.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]), r.useEffect(() => (m.default.addChangeListener(t.handleActiveThreadsStoreChange), () => m.default.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]), [i, t]
             }
@@ -7768,7 +7657,7 @@
                         })
                     }, "display-username-".concat(t, "-").concat(r.id))]
                 },
-                Y = (e, t, n) => {
+                V = (e, t, n) => {
                     let {
                         channel: a,
                         text: s
@@ -7790,7 +7679,7 @@
                         }) : null]
                     })
                 },
-                V = e => {
+                Y = e => {
                     let t, n, {
                         id: a,
                         searchId: s,
@@ -7828,7 +7717,7 @@
                         })]
                     })
                 },
-                K = e => (0, l.jsx)(V, {
+                K = e => (0, l.jsx)(Y, {
                     ...e,
                     className: k.user,
                     renderResult: H
@@ -7850,9 +7739,9 @@
                     },
                     [j.SearchTokenTypes.FILTER_IN]: {
                         titleText: () => G.default.Messages.SEARCH_GROUP_HEADER_CHANNELS,
-                        component: e => (0, l.jsx)(V, {
+                        component: e => (0, l.jsx)(Y, {
                             ...e,
-                            renderResult: Y
+                            renderResult: V
                         })
                     },
                     [j.SearchAutocompleteGroups.DATES]: {
@@ -8139,7 +8028,7 @@
                                 h = null != E ? (0, l.jsx)(E, {
                                     searchId: n
                                 }) : null,
-                                _ = null !== (u = f.component) && void 0 !== u ? u : V,
+                                _ = null !== (u = f.component) && void 0 !== u ? u : Y,
                                 S = s.type === j.SearchPopoutModes.FILTER_ALL;
                             return (0, l.jsxs)("ul", {
                                 role: "group",
@@ -9053,8 +8942,8 @@
                 w = n("374363"),
                 B = n("271938"),
                 H = n("250404"),
-                Y = n("533222"),
-                V = n("42203"),
+                V = n("533222"),
+                Y = n("42203"),
                 K = n("47319"),
                 Q = n("320268"),
                 z = n("26989"),
@@ -9239,7 +9128,7 @@
                             let {
                                 voiceChannelId: t,
                                 voiceState: n
-                            } = e, l = V.default.getChannel(t), a = (null == l ? void 0 : l.isGuildStageVoice()) && (null == n ? void 0 : n.suppress);
+                            } = e, l = Y.default.getChannel(t), a = (null == l ? void 0 : l.isGuildStageVoice()) && (null == n ? void 0 : n.suppress);
                             return !1 === q.default.getInputDetected() && !a
                         }
                     },
@@ -9247,7 +9136,7 @@
                         predicate: e => {
                             let {
                                 voiceChannelId: t
-                            } = e, n = V.default.getChannel(t);
+                            } = e, n = Y.default.getChannel(t);
                             return !q.default.getOpenH264() && null != t && eo.default.hasVideo(t) && null != n && n.isGuildStageVoice()
                         }
                     },
@@ -9255,8 +9144,8 @@
                         predicate: () => $.default.isConnected() && q.default.isHardwareMute(),
                         metadata: () => {
                             let e = q.default.getInputDeviceId(),
-                                t = Y.default.getVendor(e),
-                                n = Y.default.getModel(e);
+                                t = V.default.getVendor(e),
+                                n = V.default.getModel(e);
                             if (null != t && null != n) return {
                                 vendor: t,
                                 model: n
