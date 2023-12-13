@@ -18519,36 +18519,6 @@
                 })
             }
         },
-        268997: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                CommunityAdminServerExperiment: function() {
-                    return n
-                }
-            });
-            var a = s("862205");
-            let n = (0, a.createExperiment)({
-                kind: "guild",
-                id: "2022-06_community_admin_server",
-                label: "Show the button to join the admin server in community overview server settings page",
-                defaultConfig: {
-                    enabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Show button if requirements met",
-                    config: {
-                        enabled: !0
-                    }
-                }, {
-                    id: 2,
-                    label: "Bypass requirements",
-                    config: {
-                        enabled: !0
-                    }
-                }]
-            })
-        },
         827159: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -31896,12 +31866,12 @@
                 _ = s("413476"),
                 T = s("239380"),
                 I = s("923959"),
-                S = s("305961"),
-                N = s("957255"),
-                g = s("27618"),
-                f = s("697218"),
-                A = s("945330"),
-                L = s("268997"),
+                S = s("525065"),
+                N = s("305961"),
+                g = s("957255"),
+                f = s("27618"),
+                A = s("697218"),
+                L = s("945330"),
                 m = s("592407"),
                 C = s("900938"),
                 O = s("271407"),
@@ -31940,32 +31910,29 @@
                     let {
                         discoveryEnabled: t,
                         onboardingEnabled: s,
-                        guildId: l
-                    } = e, [i, c] = n.useState(!0 === d.default.get(x)), [E, _] = n.useState(!1);
+                        guild: l
+                    } = e, [i, c] = n.useState(!0 === d.default.get(x)), E = (0, r.useStateFromStores)([S.default], () => {
+                        var e;
+                        return null !== (e = S.default.getMemberCount(l.id)) && void 0 !== e ? e : 0
+                    }), [_, I] = n.useState(!1);
                     n.useEffect(() => {
-                        o.default.get(h.Endpoints.GUILD_ADMIN_SERVER_ELIGIBILITY(l)).then(e => {
-                            _(e.body.eligible_for_admin_server)
-                        }).catch(() => _(!1))
+                        o.default.get(h.Endpoints.GUILD_ADMIN_SERVER_ELIGIBILITY(l.id)).then(e => {
+                            I(e.body.eligible_for_admin_server)
+                        }).catch(() => I(!1))
                     }, []);
-                    let {
-                        enabled: I
-                    } = L.CommunityAdminServerExperiment.useExperiment({
-                        guildId: l,
-                        location: "c1af51_1"
-                    }, {
-                        autoTrackExposure: !0
-                    }), N = (0, r.useStateFromStores)([S.default], () => S.default.getGuild("942897714956472401")), g = I && E && !(null != N);
-                    if (t && s && !g) return null;
-                    let f = async () => {
+                    let g = (0, r.useStateFromStores)([N.default], () => N.default.getGuild("942897714956472401")),
+                        f = l.isCommunity() && E >= 1e3 && _ && !(null != g);
+                    if (t && s && !f) return null;
+                    let A = async () => {
                         try {
                             let e = await o.default.post({
-                                url: h.Endpoints.JOIN_ADMIN_SERVER(l),
+                                url: h.Endpoints.JOIN_ADMIN_SERVER(l.id),
                                 oldFormErrors: !0
                             });
                             m.default.close(), (0, T.transitionToGuild)(e.body.id)
                         } catch {}
                     };
-                    return i && !g ? null : (0, a.jsxs)("div", {
+                    return i && !f ? null : (0, a.jsxs)("div", {
                         className: M.upsellContainer,
                         children: [(0, a.jsxs)("div", {
                             className: M.upsellContent,
@@ -31992,15 +31959,15 @@
                             onClick: () => {
                                 d.default.set(x, !0), c(!0)
                             },
-                            children: (0, a.jsx)(A.default, {
+                            children: (0, a.jsx)(L.default, {
                                 width: 24,
                                 height: 24
                             })
                         }), (0, a.jsxs)("div", {
                             className: M.upsellFooter,
-                            children: [g && (0, a.jsx)(u.Button, {
+                            children: [f && (0, a.jsx)(u.Button, {
                                 size: u.Button.Sizes.SMALL,
-                                onClick: f,
+                                onClick: A,
                                 className: M.upsellButton,
                                 children: D.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_ADMIN_SERVER
                             }), s ? null : (0, a.jsx)(u.Button, {
@@ -32036,9 +32003,9 @@
                         {
                             canManageGuild: s,
                             isGuildAdmin: l
-                        } = (0, r.useStateFromStoresObject)([N.default], () => ({
-                            canManageGuild: N.default.can(h.Permissions.MANAGE_GUILD, t),
-                            isGuildAdmin: N.default.can(h.Permissions.ADMINISTRATOR, t)
+                        } = (0, r.useStateFromStoresObject)([g.default], () => ({
+                            canManageGuild: g.default.can(h.Permissions.MANAGE_GUILD, t),
+                            isGuildAdmin: g.default.can(h.Permissions.ADMINISTRATOR, t)
                         })),
                         o = (0, r.useStateFromStores)([I.default], () => null != t ? I.default.getChannels(t.id) : null),
                         c = n.useMemo(R.calculateLocaleOptions, []),
@@ -32052,14 +32019,14 @@
                             autoTrackExposure: s
                         });
                     if (null == t) return null;
-                    let A = [];
+                    let N = [];
                     null != o && o[0, I.GUILD_SELECTABLE_CHANNELS_KEY].forEach(e => {
                         let {
                             channel: t
                         } = e;
-                        t.type === h.ChannelTypes.GUILD_TEXT && A.push({
+                        t.type === h.ChannelTypes.GUILD_TEXT && N.push({
                             value: t.id,
-                            label: (0, E.computeChannelName)(t, f.default, g.default, !0)
+                            label: (0, E.computeChannelName)(t, A.default, f.default, !0)
                         })
                     });
                     let L = () => {
@@ -32149,7 +32116,7 @@
                         children: [T ? (0, a.jsx)(U, {
                             discoveryEnabled: t.features.has(h.GuildFeatures.DISCOVERABLE),
                             onboardingEnabled: t.features.has(h.GuildFeatures.GUILD_ONBOARDING),
-                            guildId: t.id
+                            guild: t
                         }) : null, (0, a.jsxs)(u.FormSection, {
                             className: i(M.twoColumnFormSection, M.firstSection),
                             children: [(0, a.jsxs)("div", {
@@ -32166,7 +32133,7 @@
                                 className: M.selectColumn,
                                 children: (0, a.jsx)(u.SearchableSelect, {
                                     value: t.rulesChannelId,
-                                    options: A,
+                                    options: N,
                                     onChange: G,
                                     isDisabled: !s
                                 })
@@ -32189,7 +32156,7 @@
                                 className: M.selectColumn,
                                 children: (0, a.jsx)(u.SearchableSelect, {
                                     value: t.publicUpdatesChannelId,
-                                    options: A,
+                                    options: N,
                                     onChange: v,
                                     isDisabled: !s
                                 })
@@ -32213,7 +32180,7 @@
                                     className: M.selectColumn,
                                     children: (0, a.jsx)(u.SearchableSelect, {
                                         value: t.safetyAlertsChannelId,
-                                        options: A,
+                                        options: N,
                                         onChange: p,
                                         isDisabled: !s
                                     })
