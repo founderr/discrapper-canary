@@ -6548,6 +6548,174 @@
                 })
             }
         },
+        809071: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                updateSubscriptionInvoicePreview: function() {
+                    return S
+                },
+                useSubscriptionInvoicePreview: function() {
+                    return T
+                },
+                useGetSubscriptionInvoice: function() {
+                    return m
+                },
+                getItemUnitPriceWithDiscount: function() {
+                    return _
+                }
+            }), s("222007");
+            var a = s("884691"),
+                n = s("446674"),
+                l = s("872717"),
+                i = s("448993"),
+                r = s("195358"),
+                o = s("521012"),
+                d = s("719923"),
+                u = s("49111");
+            async function c(e) {
+                let {
+                    items: t,
+                    paymentSourceId: s,
+                    trialId: a,
+                    code: n,
+                    applyEntitlements: o = !1,
+                    currency: c,
+                    renewal: S,
+                    metadata: E
+                } = e;
+                t = (0, d.coerceExistingItemsToNewItemInterval)(t);
+                let f = {
+                    items: t.map(e => {
+                        let {
+                            planId: t,
+                            ...s
+                        } = e;
+                        return {
+                            ...s,
+                            plan_id: t
+                        }
+                    }),
+                    payment_source_id: s,
+                    trial_id: a,
+                    code: n,
+                    apply_entitlements: o,
+                    currency: c,
+                    renewal: S,
+                    metadata: E
+                };
+                try {
+                    let e = await l.default.post({
+                        url: u.Endpoints.BILLING_SUBSCRIPTIONS_PREVIEW,
+                        body: f,
+                        oldFormErrors: !0
+                    });
+                    return r.default.createInvoiceFromServer(e.body)
+                } catch (e) {
+                    throw new i.BillingError(e)
+                }
+            }
+            async function S(e) {
+                let {
+                    subscriptionId: t,
+                    items: s,
+                    paymentSourceId: a,
+                    renewal: n,
+                    currency: o,
+                    applyEntitlements: c = !1,
+                    analyticsLocations: S,
+                    analyticsLocation: E
+                } = e;
+                null != s && (s = (0, d.coerceExistingItemsToNewItemInterval)(s));
+                let f = {
+                    items: null == s ? void 0 : s.map(e => {
+                        let {
+                            planId: t,
+                            ...s
+                        } = e;
+                        return {
+                            ...s,
+                            plan_id: t
+                        }
+                    }),
+                    payment_source_id: a,
+                    renewal: n,
+                    apply_entitlements: c,
+                    currency: o
+                };
+                try {
+                    let e = await l.default.patch({
+                        url: u.Endpoints.BILLING_SUBSCRIPTION_PREVIEW(t),
+                        query: {
+                            location: E,
+                            location_stack: S
+                        },
+                        body: f,
+                        oldFormErrors: !0
+                    });
+                    return r.default.createInvoiceFromServer(e.body)
+                } catch (e) {
+                    throw new i.BillingError(e)
+                }
+            }
+            async function E(e) {
+                let {
+                    subscriptionId: t,
+                    preventFetch: s
+                } = e;
+                if (s) return null;
+                let a = await l.default.get({
+                    url: u.Endpoints.BILLING_SUBSCRIPTION_INVOICE(t),
+                    oldFormErrors: !0
+                });
+                return r.default.createInvoiceFromServer(a.body)
+            }
+
+            function f(e, t) {
+                let {
+                    preventFetch: s = !1
+                } = e, [l, i] = (0, a.useState)(null), [r, d] = (0, a.useState)(null), u = (0, n.useStateFromStores)([o.default], () => o.default.getSubscriptions());
+                return (0, a.useEffect)(() => {
+                    let e = !1;
+                    async function a() {
+                        try {
+                            d(null), i(null);
+                            let s = await t();
+                            !e && i(s)
+                        } catch (t) {
+                            !e && d(t)
+                        }
+                    }
+                    return !s && a(), () => {
+                        e = !0
+                    }
+                }, [s, t, u]), [l, r]
+            }
+
+            function T(e) {
+                if ("subscriptionId" in e && null == e.subscriptionId) {
+                    let {
+                        subscriptionId: t,
+                        ...s
+                    } = e;
+                    e = s
+                }
+                let t = (0, a.useCallback)(() => "subscriptionId" in e ? S(e) : "items" in e ? c(e) : null, [JSON.stringify(e)]);
+                return f(e, t)
+            }
+
+            function m(e) {
+                let t = (0, a.useCallback)(() => E(e), [JSON.stringify(e)]);
+                return f(e, t)
+            }
+
+            function _(e) {
+                let t = e.subscriptionPlanPrice;
+                return e.discounts.forEach(s => {
+                    let a = s.amount / e.quantity;
+                    t -= a
+                }), t
+            }
+        },
         921149: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -10496,7 +10664,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "e27d59627bf7fc4b44d931297adc76008431c965", e.substring(0, 7)),
+                    S = (e = "ae7deaf2d7e9b87e9eecb0f7b9017fa186b7ec4f", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10509,7 +10677,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "253822", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "253827", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
