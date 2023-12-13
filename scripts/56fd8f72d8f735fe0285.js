@@ -1038,6 +1038,7 @@
                         }), (0, a.jsx)(u.Tooltip, {
                             text: A.default.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
                             position: "top",
+                            align: "left",
                             forceOpen: N,
                             shouldShow: !0,
                             color: u.Tooltip.Colors.BRAND,
