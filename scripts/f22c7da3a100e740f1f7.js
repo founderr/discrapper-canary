@@ -2601,13 +2601,13 @@
                 n = r("884691"),
                 i = r("414456"),
                 l = r.n(i),
-                o = r("65597"),
-                s = r("872717"),
-                c = r("77078"),
-                d = r("850068"),
-                u = r("521012"),
-                h = r("811199"),
-                p = r("49111"),
+                o = r("192927"),
+                s = r("65597"),
+                c = r("872717"),
+                d = r("77078"),
+                u = r("850068"),
+                h = r("521012"),
+                p = r("811199"),
                 f = r("694735"),
                 m = r("186720");
             let g = [{
@@ -2630,39 +2630,43 @@
                     value: "1024422698568122368"
                 }],
                 y = {
-                    [p.SubscriptionStatusTypes.UNPAID]: "Unpaid",
-                    [p.SubscriptionStatusTypes.ACTIVE]: "Active",
-                    [p.SubscriptionStatusTypes.PAST_DUE]: "Past Due",
-                    [p.SubscriptionStatusTypes.CANCELED]: "Canceled",
-                    [p.SubscriptionStatusTypes.ENDED]: "Ended",
-                    [p.SubscriptionStatusTypes.ACCOUNT_HOLD]: "Account Hold",
-                    [p.SubscriptionStatusTypes.BILLING_RETRY]: "Billing Retry",
-                    [p.SubscriptionStatusTypes.PAUSED]: "Paused"
+                    [o.SubscriptionStatusTypes.UNPAID]: "Unpaid",
+                    [o.SubscriptionStatusTypes.ACTIVE]: "Active",
+                    [o.SubscriptionStatusTypes.PAST_DUE]: "Past Due",
+                    [o.SubscriptionStatusTypes.CANCELED]: "Canceled",
+                    [o.SubscriptionStatusTypes.ENDED]: "Ended",
+                    [o.SubscriptionStatusTypes.ACCOUNT_HOLD]: "Account Hold",
+                    [o.SubscriptionStatusTypes.BILLING_RETRY]: "Billing Retry",
+                    [o.SubscriptionStatusTypes.PAUSED]: "Paused",
+                    [o.SubscriptionStatusTypes.PAUSE_PENDING]: "Pause Pending"
                 },
                 b = [{
                     label: "Unpaid",
-                    value: p.SubscriptionStatusTypes.UNPAID
+                    value: o.SubscriptionStatusTypes.UNPAID
                 }, {
                     label: "Active",
-                    value: p.SubscriptionStatusTypes.ACTIVE
+                    value: o.SubscriptionStatusTypes.ACTIVE
                 }, {
                     label: "Past Due",
-                    value: p.SubscriptionStatusTypes.PAST_DUE
+                    value: o.SubscriptionStatusTypes.PAST_DUE
                 }, {
                     label: "Canceled",
-                    value: p.SubscriptionStatusTypes.CANCELED
+                    value: o.SubscriptionStatusTypes.CANCELED
                 }, {
                     label: "Ended",
-                    value: p.SubscriptionStatusTypes.ENDED
+                    value: o.SubscriptionStatusTypes.ENDED
                 }, {
                     label: "Account Hold",
-                    value: p.SubscriptionStatusTypes.ACCOUNT_HOLD
+                    value: o.SubscriptionStatusTypes.ACCOUNT_HOLD
                 }, {
                     label: "Billing Retry",
-                    value: p.SubscriptionStatusTypes.BILLING_RETRY
+                    value: o.SubscriptionStatusTypes.BILLING_RETRY
                 }, {
                     label: "Paused",
-                    value: p.SubscriptionStatusTypes.PAUSED
+                    value: o.SubscriptionStatusTypes.PAUSED
+                }, {
+                    label: "Pause Pending",
+                    value: o.SubscriptionStatusTypes.PAUSE_PENDING
                 }],
                 x = {
                     "511651880837840896": "Nitro Monthly",
@@ -2674,21 +2678,21 @@
                 };
 
             function k() {
-                let [e, t] = n.useState("511651880837840896"), r = (0, o.default)([u.default], () => u.default.getPremiumSubscription()), i = async () => {
-                    await s.default.post({
+                let [e, t] = n.useState("511651880837840896"), r = (0, s.default)([h.default], () => h.default.getPremiumSubscription()), i = async () => {
+                    await c.default.post({
                         url: "/debug/subscription",
                         body: {
                             plan_id: e
                         }
-                    }), await (0, d.fetchSubscriptions)()
-                }, p = async () => {
-                    await s.default.delete("/debug/subscription"), await (0, d.fetchSubscriptions)()
+                    }), await (0, u.fetchSubscriptions)()
+                }, o = async () => {
+                    await c.default.delete("/debug/subscription"), await (0, u.fetchSubscriptions)()
                 };
-                return (0, a.jsx)(c.ScrollerThin, {
+                return (0, a.jsx)(d.ScrollerThin, {
                     className: l(f.panel),
                     children: (0, a.jsxs)("div", {
                         className: m.panelInner,
-                        children: [(0, a.jsx)(c.Text, {
+                        children: [(0, a.jsx)(d.Text, {
                             style: {
                                 marginBottom: "16px"
                             },
@@ -2697,23 +2701,23 @@
                         }), (0, a.jsxs)("section", {
                             className: m.buttons,
                             children: [null == r && (0, a.jsxs)(a.Fragment, {
-                                children: [(0, a.jsx)(c.Text, {
+                                children: [(0, a.jsx)(d.Text, {
                                     variant: "text-md/normal",
                                     children: " Subscription Type"
-                                }), (0, a.jsx)(c.Select, {
+                                }), (0, a.jsx)(d.Select, {
                                     serialize: e => e,
                                     isSelected: t => t === e,
                                     options: g,
                                     select: t,
-                                    popoutLayerContext: h.devToolsLayerContext
-                                }), (0, a.jsx)(c.Button, {
-                                    size: c.Button.Sizes.SMALL,
+                                    popoutLayerContext: p.devToolsLayerContext
+                                }), (0, a.jsx)(d.Button, {
+                                    size: d.Button.Sizes.SMALL,
                                     onClick: i,
                                     children: "Create Subscription"
                                 })]
-                            }), (0, a.jsx)(c.Button, {
-                                size: c.Button.Sizes.SMALL,
-                                onClick: p,
+                            }), (0, a.jsx)(d.Button, {
+                                size: d.Button.Sizes.SMALL,
+                                onClick: o,
                                 children: "Delete Subscription"
                             })]
                         }), null != r && (0, a.jsx)(v, {
@@ -2730,7 +2734,7 @@
                     if (null == e && (e = t.status), e in y) return y[e];
                     throw Error("Unknown status")
                 }, n = async e => {
-                    await s.default.patch({
+                    await c.default.patch({
                         url: "/debug/subscription",
                         body: {
                             subscription_status: e
@@ -2741,7 +2745,7 @@
                     "1024422698568122368": !0
                 };
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(c.Text, {
+                    children: [(0, a.jsx)(d.Text, {
                         style: {
                             marginTop: "15px"
                         },
@@ -2749,7 +2753,7 @@
                         children: "Existing Subscription"
                     }), (0, a.jsxs)("div", {
                         className: l(m.card, i ? m.gradientWrapperTier0 : m.gradientWrapperTier2),
-                        children: [(0, a.jsxs)(c.Text, {
+                        children: [(0, a.jsxs)(d.Text, {
                             variant: "text-md/normal",
                             children: [" Subscription Type: ", (() => {
                                 let e = t.planIdFromItems;
@@ -2757,21 +2761,21 @@
                                 if (e in x) return x[e];
                                 throw Error("Unknown plan id")
                             })(), " "]
-                        }), (0, a.jsxs)(c.Text, {
+                        }), (0, a.jsxs)(d.Text, {
                             variant: "text-md/normal",
                             children: [" Subscription ID ", t.id, " "]
-                        }), (0, a.jsxs)(c.Text, {
+                        }), (0, a.jsxs)(d.Text, {
                             style: {
                                 marginBottom: "15px"
                             },
                             variant: "text-md/normal",
                             children: ["Subscription Status: ", r()]
-                        }), (0, a.jsx)(c.Select, {
+                        }), (0, a.jsx)(d.Select, {
                             serialize: e => r(e),
                             isSelected: e => e === t.status,
                             options: b,
                             select: n,
-                            popoutLayerContext: h.devToolsLayerContext
+                            popoutLayerContext: p.devToolsLayerContext
                         })]
                     })]
                 })
