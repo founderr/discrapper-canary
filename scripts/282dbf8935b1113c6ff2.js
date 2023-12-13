@@ -4,7 +4,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return x
+                    return E
                 }
             }), a("222007");
             var s = a("37983"),
@@ -15,75 +15,77 @@
                 d = a("476765"),
                 u = a("418298"),
                 r = a("356581"),
-                m = a("782340"),
-                c = a("353096");
-            let h = (0, d.uid)();
+                m = a("186859"),
+                c = a("782340"),
+                h = a("353096");
+            let L = (0, d.uid)();
 
-            function x(e) {
+            function E(e) {
                 let {
                     channelId: t,
                     answer: a,
                     index: o,
                     onAnswerTextChange: d,
-                    transitionState: x,
-                    onClose: C
+                    transitionState: E,
+                    onClose: x
                 } = e, {
-                    emoji: E,
-                    hasUpload: L,
-                    gifUrl: M,
-                    gifFilename: g
+                    emoji: C,
+                    hasUpload: M,
+                    gifUrl: g,
+                    gifFilename: j
                 } = (0, r.default)({
                     channelId: t,
                     uploadId: a.uploadId,
                     image: a.image
-                }), [j, p] = i.useState(a.text);
+                }), [T, p] = i.useState(a.text);
                 return (0, s.jsxs)(n.ModalRoot, {
                     size: n.ModalSize.DYNAMIC,
-                    className: l(c.modal, {
-                        [c.hasImage]: L,
-                        [c.hasEmoji]: null != E
+                    className: l(h.modal, {
+                        [h.hasImage]: M,
+                        [h.hasEmoji]: null != C
                     }),
-                    transitionState: x,
-                    "aria-label": m.default.Messages.CREATE_POLL_EDIT_IMAGE_DESCRIPTION,
+                    transitionState: E,
+                    "aria-label": c.default.Messages.CREATE_POLL_EDIT_IMAGE_DESCRIPTION,
                     children: [(0, s.jsx)(u.PollCreationMediaPreview, {
-                        hasUpload: L,
-                        gifUrl: M,
-                        gifFilename: g,
-                        imageClassName: c.imagePreview,
-                        emoji: E,
-                        emojiClassName: c.emojiPreview
+                        hasUpload: M,
+                        gifUrl: g,
+                        gifFilename: j,
+                        imageClassName: h.imagePreview,
+                        emoji: C,
+                        emojiClassName: h.emojiPreview
                     }), (0, s.jsxs)(n.ModalContent, {
-                        className: c.content,
+                        className: h.content,
                         children: [(0, s.jsx)(n.FormTitle, {
                             tag: n.FormTitleTags.LABEL,
-                            htmlFor: h,
-                            children: m.default.Messages.CREATE_POLL_ALT_TEXT_LABEL
+                            htmlFor: L,
+                            children: c.default.Messages.CREATE_POLL_ALT_TEXT_LABEL
                         }), (0, s.jsx)(n.TextInput, {
-                            id: h,
-                            value: j,
-                            inputClassName: c.input,
+                            id: L,
+                            value: T,
+                            inputClassName: h.input,
                             onChange: p,
+                            maxLength: m.MAX_POLL_ANSWER_LENGTH,
                             autoFocus: !0
                         })]
                     }), (0, s.jsxs)(n.ModalFooter, {
-                        className: c.footer,
+                        className: h.footer,
                         children: [(0, s.jsx)(n.Button, {
                             look: n.ButtonLooks.FILLED,
                             size: n.Button.Sizes.MEDIUM,
                             onClick: () => {
-                                null != j && d(j, o), C()
+                                null != T && d(T, o), x()
                             },
                             children: (0, s.jsx)(n.Text, {
                                 variant: "text-md/semibold",
-                                children: m.default.Messages.SAVE
+                                children: c.default.Messages.SAVE
                             })
                         }), (0, s.jsx)(n.Button, {
                             look: n.ButtonLooks.LINK,
                             size: n.Button.Sizes.MEDIUM,
-                            onClick: C,
+                            onClick: x,
                             children: (0, s.jsx)(n.Text, {
                                 variant: "text-md/semibold",
-                                children: m.default.Messages.CANCEL
+                                children: c.default.Messages.CANCEL
                             })
                         })]
                     })]

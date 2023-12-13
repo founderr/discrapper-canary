@@ -11035,9 +11035,25 @@
             n.r(t), n.d(t, {
                 POLL_CREATION_MODAL_KEY: function() {
                     return a
+                },
+                MIN_NUMBER_OF_ANSWERS_PER_POLL: function() {
+                    return s
+                },
+                MAX_NUMBER_OF_ANSWERS_PER_POLL: function() {
+                    return l
+                },
+                MAX_POLL_QUESTION_LENGTH: function() {
+                    return i
+                },
+                MAX_POLL_ANSWER_LENGTH: function() {
+                    return r
                 }
             });
-            let a = "POLL_CREATION_MODAL_KEY"
+            let a = "POLL_CREATION_MODAL_KEY",
+                s = 1,
+                l = 6,
+                i = 300,
+                r = 55
         },
         209346: function(e, t, n) {
             "use strict";
