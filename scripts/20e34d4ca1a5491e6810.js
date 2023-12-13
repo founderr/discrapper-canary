@@ -413,7 +413,7 @@
                 RecurrenceOptions: function() {
                     return l
                 }
-            }), (a = l || (l = {}))[a.NONE = 0] = "NONE", a[a.WEEKLY = 1] = "WEEKLY", a[a.MONTHLY = 2] = "MONTHLY", a[a.YEARLY = 3] = "YEARLY", a[a.WEEKDAY_ONLY = 4] = "WEEKDAY_ONLY"
+            }), (a = l || (l = {}))[a.NONE = 0] = "NONE", a[a.WEEKLY = 1] = "WEEKLY", a[a.MONTHLY = 2] = "MONTHLY", a[a.YEARLY = 3] = "YEARLY", a[a.WEEKDAY_ONLY = 4] = "WEEKDAY_ONLY", a[a.BIWEEKLY = 5] = "BIWEEKLY"
         },
         651072: function(e, t, n) {
             "use strict";
@@ -498,10 +498,10 @@
                     return p
                 },
                 areSchedulesIdentical: function() {
-                    return x
+                    return I
                 },
                 getRRule: function() {
-                    return I
+                    return x
                 },
                 generateNextRecurrences: function() {
                     return L
@@ -538,10 +538,10 @@
                         t = e.hour();
                     return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0)
                 },
-                S = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
-                v = (e, t) => {
+                v = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
+                S = (e, t) => {
                     let n = e.diff(t, "days");
-                    return n > 1 ? S(e, t) : e.calendar(t)
+                    return n > 1 ? v(e, t) : e.calendar(t)
                 };
 
             function m(e, t, n) {
@@ -550,8 +550,8 @@
                     a = null != t && "" !== t ? r(t) : void 0,
                     s = null != t && l.isSame(a, "day");
                 return {
-                    startDateTimeString: v(l, n),
-                    endDateTimeString: null != a ? s ? a.format("LT") : S(a, n) : void 0,
+                    startDateTimeString: S(l, n),
+                    endDateTimeString: null != a ? s ? a.format("LT") : v(a, n) : void 0,
                     currentOrPastEvent: l <= n,
                     upcomingEvent: l <= r().add(1, "hour"),
                     withinStartWindow: l <= r().add(15, "minute"),
@@ -597,11 +597,11 @@
                 return null == e || null == t ? null == e && null == t : e.isSame(t)
             }
 
-            function x(e, t) {
+            function I(e, t) {
                 return null == e || null == t ? null == e && null == t : p(e.startDate, t.startDate) && p(e.endDate, t.endDate)
             }
 
-            function I(e) {
+            function x(e) {
                 var t;
                 let n = null != e.byWeekday ? [...e.byWeekday] : null,
                     l = null === (t = e.byNWeekday) || void 0 === t ? void 0 : t.map(e => new(0, s.Weekday)(e.day).nth(e.n)),
@@ -676,6 +676,12 @@
                                 dtstart: r,
                                 freq: s.RRule.WEEKLY
                             });
+                        case o.RecurrenceOptions.BIWEEKLY:
+                            return new s.RRule({
+                                dtstart: r,
+                                freq: s.RRule.WEEKLY,
+                                interval: 2
+                            });
                         case o.RecurrenceOptions.MONTHLY:
                             return new s.RRule({
                                 dtstart: r,
@@ -727,10 +733,11 @@
 
             function j(e, t) {
                 if (null == t) return o.RecurrenceOptions.NONE;
-                let n = I(t);
+                let n = x(t);
                 switch (n.options.freq) {
                     case s.RRule.WEEKLY:
-                        return o.RecurrenceOptions.WEEKLY;
+                        if (n.options.interval < 1 || n.options.interval > 2) return o.RecurrenceOptions.NONE;
+                        return 1 === n.options.interval ? o.RecurrenceOptions.WEEKLY : o.RecurrenceOptions.BIWEEKLY;
                     case s.RRule.YEARLY:
                         return o.RecurrenceOptions.YEARLY;
                     case s.RRule.MONTHLY:
@@ -827,6 +834,11 @@
                                 weekday: l
                             })
                         }, {
+                            value: o.RecurrenceOptions.BIWEEKLY,
+                            label: c.default.Messages.CREATE_EVENT_RECUR_BIWEEKLY.format({
+                                weekday: l
+                            })
+                        }, {
                             value: o.RecurrenceOptions.MONTHLY,
                             label: c.default.Messages.CREATE_EVENT_RECUR_MONTHLY.format({
                                 nth: n,
@@ -845,7 +857,7 @@
                         value: o.RecurrenceOptions.WEEKDAY_ONLY,
                         label: c.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS
                     }), a
-                }(t), _ = e => e.toString(), S = (0, l.jsxs)("div", {
+                }(t), _ = e => e.toString(), v = (0, l.jsxs)("div", {
                     className: d.title,
                     children: [c.default.Messages.CREATE_EVENT_RECUR_LABEL, (0, l.jsx)(i.TextBadge, {
                         text: c.default.Messages.NEW,
@@ -853,7 +865,7 @@
                     })]
                 });
                 return (0, l.jsx)(r.FormItem, {
-                    title: S,
+                    title: v,
                     required: !0,
                     children: (0, l.jsx)(r.Select, {
                         placeholder: "gaming",
@@ -893,8 +905,8 @@
                     guildId: n,
                     onScheduleChange: a,
                     onRecurrenceChange: _,
-                    onTimeChange: S,
-                    timeSelected: v = !0,
+                    onTimeChange: v,
+                    timeSelected: S = !0,
                     schedule: m,
                     recurrenceRule: C,
                     showEndDate: N = !1,
@@ -903,7 +915,7 @@
                 } = e, {
                     analyticsLocations: p
                 } = (0, u.default)(i.default.EVENT_SETTINGS), {
-                    enabled: x
+                    enabled: I
                 } = d.default.useExperiment({
                     guildId: null != n ? n : "",
                     location: p[0]
@@ -911,7 +923,7 @@
                     autoTrackExposure: !1
                 });
                 if (null == m) return null;
-                let I = null,
+                let x = null,
                     L = m.startDate,
                     A = r(),
                     y = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
@@ -926,7 +938,7 @@
                 return null != L && d.default.trackExposure({
                     guildId: null != n ? n : "",
                     location: p[0]
-                }), N && (I = null != m.endDate || T ? (0, l.jsxs)(l.Fragment, {
+                }), N && (x = null != m.endDate || T ? (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsxs)("div", {
                         className: g.doubleInput,
                         children: [(0, l.jsx)(s.FormItem, {
@@ -1006,16 +1018,16 @@
                             children: (0, l.jsx)(s.TimeInput, {
                                 value: m.startDate,
                                 onChange: e => {
-                                    e.isValid() && (null == S || S(!0), a({
+                                    e.isValid() && (null == v || v(!0), a({
                                         ...m,
                                         startDate: e
                                     }))
                                 },
-                                hideValue: !v,
+                                hideValue: !S,
                                 disabled: R
                             })
                         })]
-                    }), I, x && null != L && null != _ && (0, l.jsx)(E.default, {
+                    }), x, I && null != L && null != _ && (0, l.jsx)(E.default, {
                         onRecurrenceChange: _,
                         startDate: L,
                         recurrenceRule: C
@@ -1369,8 +1381,8 @@
                     setShowGuildPopout: a,
                     handleGuildNameClick: s,
                     source: _,
-                    speakers: S,
-                    speakerCount: v,
+                    speakers: v,
+                    speakerCount: S,
                     audienceCount: m,
                     channelName: C
                 } = e, N = t.id;
@@ -1431,8 +1443,8 @@
                             children: n.description
                         }), (0, r.jsx)(c.default, {
                             guild: t,
-                            speakers: S,
-                            speakerCount: v,
+                            speakers: v,
+                            speakerCount: S,
                             className: g.speakers
                         }), null != C && (0, r.jsxs)(r.Fragment, {
                             children: [(0, r.jsx)("hr", {
@@ -1477,8 +1489,8 @@
                 h = n("998716"),
                 g = n("911457"),
                 _ = n("49111"),
-                S = n("745049"),
-                v = n("782340"),
+                v = n("745049"),
+                S = n("782340"),
                 m = n("600329");
 
             function C(e) {
@@ -1525,7 +1537,7 @@
                     channel_id: r.id,
                     topic: i.topic,
                     description: i.description,
-                    privacy_level: null !== (t = i.privacyLevel) && void 0 !== t ? t : S.GuildScheduledEventPrivacyLevel.PUBLIC
+                    privacy_level: null !== (t = i.privacyLevel) && void 0 !== t ? t : v.GuildScheduledEventPrivacyLevel.PUBLIC
                 }, c = (0, E.useStageParticipants)(r.id, h.StageChannelParticipantNamedIndex.SPEAKER), d = (0, E.useStageParticipantsCount)(r.id, h.StageChannelParticipantNamedIndex.AUDIENCE), _ = c.slice(0, 5);
                 return null == _.find(e => {
                     var t;
@@ -1576,12 +1588,12 @@
                                 id: s,
                                 className: m.title,
                                 variant: "heading-xl/semibold",
-                                children: v.default.Messages.START_STAGE_PUBLIC_PREVIEW_TITLE
+                                children: S.default.Messages.START_STAGE_PUBLIC_PREVIEW_TITLE
                             }), (0, l.jsx)(r.Text, {
                                 className: m.subtitle,
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
-                                children: v.default.Messages.START_STAGE_PUBLIC_PREVIEW_SUBTITLE
+                                children: S.default.Messages.START_STAGE_PUBLIC_PREVIEW_SUBTITLE
                             })]
                         }), (0, l.jsxs)("div", {
                             className: m.list,
@@ -1589,17 +1601,17 @@
                                 icon: (0, l.jsx)(C, {
                                     icon: i.default
                                 }),
-                                text: v.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_ONE
+                                text: S.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_ONE
                             }), (0, l.jsx)(N, {
                                 icon: (0, l.jsx)(C, {
                                     icon: o.default
                                 }),
-                                text: v.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_TWO
+                                text: S.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_TWO
                             }), (0, l.jsx)(N, {
                                 icon: (0, l.jsx)(C, {
                                     icon: u.default
                                 }),
-                                text: v.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_THREE
+                                text: S.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_THREE
                             }), (0, l.jsx)(N, {
                                 icon: (0, l.jsx)(c.default, {
                                     className: m.badgeIconBackground,
@@ -1607,7 +1619,7 @@
                                     width: 40,
                                     height: 40
                                 }),
-                                text: v.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_FOUR.format({
+                                text: S.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_FOUR.format({
                                     articleURL: d.default.getArticleURL(_.HelpdeskArticles.STAGE_CHANNEL_GUIDELINES)
                                 })
                             })]
@@ -1617,19 +1629,19 @@
                             color: r.Button.Colors.GREEN,
                             onClick: E,
                             submitting: f,
-                            children: v.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_BUTTON
+                            children: S.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_BUTTON
                         }), (0, l.jsx)(r.Button, {
                             color: r.Button.Colors.PRIMARY,
                             className: m.cancelButton,
                             onClick: h,
-                            children: v.default.Messages.CANCEL
+                            children: S.default.Messages.CANCEL
                         }), (0, l.jsx)(r.Button, {
                             look: r.Button.Looks.LINK,
                             color: r.Button.Colors.LINK,
                             className: m.backButton,
                             onClick: g,
                             size: r.Button.Sizes.MIN,
-                            children: v.default.Messages.BACK
+                            children: S.default.Messages.BACK
                         })]
                     })]
                 })
@@ -1656,16 +1668,16 @@
                 h = n("269596"),
                 g = n("27618"),
                 _ = n("697218"),
-                S = n("228427"),
-                v = n("599110"),
+                v = n("228427"),
+                S = n("599110"),
                 m = n("887143"),
                 C = n("834052"),
                 N = n("151642"),
                 T = n("29846"),
                 R = n("837979"),
                 p = n("49111"),
-                x = n("745049"),
-                I = n("533613"),
+                I = n("745049"),
+                x = n("533613"),
                 L = n("782340"),
                 A = n("529555");
 
@@ -1690,7 +1702,7 @@
                                 let n = t.find(t => t.id === e);
                                 null != n && a(n)
                             },
-                            renderOptionPrefix: () => (0, l.jsx)(S.default, {
+                            renderOptionPrefix: () => (0, l.jsx)(v.default, {
                                 height: 24
                             })
                         })
@@ -1699,7 +1711,7 @@
             }
 
             function D(e) {
-                var t, n, r, g, _, S, D, M;
+                var t, n, r, g, _, v, D, M;
                 let {
                     channel: j,
                     guild: O,
@@ -1707,24 +1719,24 @@
                     error: k,
                     loading: G,
                     onSave: U,
-                    onEventSave: P,
-                    onClose: V,
-                    onSelectChannel: B,
+                    onEventSave: B,
+                    onClose: P,
+                    onSelectChannel: V,
                     isEvent: b = !1,
                     defaultOptions: H,
                     isSlideReady: Y = !0
-                } = e, F = a.useMemo(() => C.default.getStageInstanceByChannel(j.id), [j.id]), [W, Z] = a.useState(null !== (n = null !== (t = null == H ? void 0 : H.topic) && void 0 !== t ? t : null == F ? void 0 : F.topic) && void 0 !== n ? n : ""), [z, K] = a.useState(null !== (r = null == H ? void 0 : H.description) && void 0 !== r ? r : ""), [q] = a.useState(b), [X, J] = a.useState(null !== (g = null == H ? void 0 : H.schedule) && void 0 !== g ? g : {
+                } = e, F = a.useMemo(() => C.default.getStageInstanceByChannel(j.id), [j.id]), [W, Z] = a.useState(null !== (n = null !== (t = null == H ? void 0 : H.topic) && void 0 !== t ? t : null == F ? void 0 : F.topic) && void 0 !== n ? n : ""), [K, z] = a.useState(null !== (r = null == H ? void 0 : H.description) && void 0 !== r ? r : ""), [q] = a.useState(b), [X, J] = a.useState(null !== (g = null == H ? void 0 : H.schedule) && void 0 !== g ? g : {
                     startDate: (0, d.getInitialEventStartDate)()
-                }), [Q, $] = a.useState(q && (null == H ? void 0 : H.schedule) != null), ee = (0, m.useCanSendStageStartNotification)(j), et = (0, m.useDefaultSendStartStageNotificationToggle)(j), en = null == F && ee && !q, [el, ea] = a.useState(en && et), er = (0, i.useStateFromStores)([h.default], () => h.default.hasHotspot(I.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), es = x.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [ei] = a.useState(null !== (S = null !== (_ = null == H ? void 0 : H.privacyLevel) && void 0 !== _ ? _ : null == F ? void 0 : F.privacy_level) && void 0 !== S ? S : es), [eu, eo] = a.useState(null == H ? void 0 : H.recurrenceRule), ec = (0, N.useStageBlockedUsersCount)(j.id), [ed, ef] = a.useState(!1), eE = (0, o.default)(j), eh = (0, c.useChannelsUserCanStartStageIn)(O), eg = null != B, e_ = eh.length > 1;
+                }), [Q, $] = a.useState(q && (null == H ? void 0 : H.schedule) != null), ee = (0, m.useCanSendStageStartNotification)(j), et = (0, m.useDefaultSendStartStageNotificationToggle)(j), en = null == F && ee && !q, [el, ea] = a.useState(en && et), er = (0, i.useStateFromStores)([h.default], () => h.default.hasHotspot(x.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), es = I.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [ei] = a.useState(null !== (v = null !== (_ = null == H ? void 0 : H.privacyLevel) && void 0 !== _ ? _ : null == F ? void 0 : F.privacy_level) && void 0 !== v ? v : es), [eu, eo] = a.useState(null == H ? void 0 : H.recurrenceRule), ec = (0, N.useStageBlockedUsersCount)(j.id), [ed, ef] = a.useState(!1), eE = (0, o.default)(j), eh = (0, c.useChannelsUserCanStartStageIn)(O), eg = null != V, e_ = eh.length > 1;
                 a.useEffect(() => {
-                    v.default.track(p.AnalyticEvents.START_STAGE_OPENED, {
+                    S.default.track(p.AnalyticEvents.START_STAGE_OPENED, {
                         stage_instance_id: null == F ? void 0 : F.id,
                         can_start_public_stage: !1,
                         guild_id: j.guild_id
                     })
                 }, []);
-                let eS = e => {
-                    if (e.preventDefault(), ei === x.GuildScheduledEventPrivacyLevel.PUBLIC && W.length < 20 && !ed) {
+                let ev = e => {
+                    if (e.preventDefault(), ei === I.GuildScheduledEventPrivacyLevel.PUBLIC && W.length < 20 && !ed) {
                         ef(!0);
                         return
                     }
@@ -1735,23 +1747,23 @@
                     };
                     if (q) {
                         if (!Q) return;
-                        null == P || P({
+                        null == B || B({
                             ...t,
                             schedule: X,
-                            description: z,
-                            entityType: x.GuildScheduledEventEntityTypes.STAGE_INSTANCE
+                            description: K,
+                            entityType: I.GuildScheduledEventEntityTypes.STAGE_INSTANCE
                         });
                         return
                     }
                     null == U || U(t)
                 };
                 let {
-                    color: ev,
+                    color: eS,
                     text: em
                 } = (D = F, M = ei, q ? {
                     color: u.Button.Colors.BRAND,
                     text: L.default.Messages.SCHEDULE_EVENT
-                } : M === x.GuildScheduledEventPrivacyLevel.PUBLIC && (null == D ? void 0 : D.privacy_level) !== x.GuildScheduledEventPrivacyLevel.PUBLIC ? {
+                } : M === I.GuildScheduledEventPrivacyLevel.PUBLIC && (null == D ? void 0 : D.privacy_level) !== I.GuildScheduledEventPrivacyLevel.PUBLIC ? {
                     color: u.Button.Colors.BRAND,
                     text: L.default.Messages.CONTINUE
                 } : null == D ? {
@@ -1775,7 +1787,7 @@
                                 channelId: j.id
                             })
                         }), (0, l.jsxs)("form", {
-                            onSubmit: eS,
+                            onSubmit: ev,
                             className: A.form,
                             children: [(0, l.jsxs)(u.FormItem, {
                                 title: b ? L.default.Messages.GUILD_EVENT_CREATE_TOPIC_LABEL : L.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_LABEL,
@@ -1803,7 +1815,7 @@
                             }), eg && e_ ? (0, l.jsx)(y, {
                                 stageChannelsInGuild: eh,
                                 channel: j,
-                                onSelectChannel: B
+                                onSelectChannel: V
                             }) : null, q && (0, l.jsxs)(l.Fragment, {
                                 children: [(0, l.jsx)(E.default, {
                                     className: A.formItem,
@@ -1829,9 +1841,9 @@
                                 className: A.formItem,
                                 children: (0, l.jsx)(u.TextArea, {
                                     placeholder: L.default.Messages.GUILD_EVENT_CREATE_DESCRIPTION_PLACEHOLDER,
-                                    value: z,
-                                    onChange: e => K(e),
-                                    maxLength: x.GUILD_EVENT_MAX_DESCRIPTION_LENGTH
+                                    value: K,
+                                    onChange: e => z(e),
+                                    maxLength: I.GUILD_EVENT_MAX_DESCRIPTION_LENGTH
                                 })
                             }), en ? (0, l.jsx)(f.default, {
                                 sendStartNotification: el,
@@ -1852,15 +1864,15 @@
                         })]
                     }), (0, l.jsxs)(u.ModalFooter, {
                         children: [(0, l.jsx)(u.Button, {
-                            color: ev,
-                            onClick: eS,
+                            color: eS,
+                            onClick: ev,
                             disabled: "" === W || null == ei || b && !eN,
                             submitting: G,
                             children: em
                         }), (0, l.jsx)(u.Button, {
                             color: u.Button.Colors.PRIMARY,
                             className: A.cancelButton,
-                            onClick: V,
+                            onClick: P,
                             children: L.default.Messages.CANCEL
                         })]
                     })]
@@ -1888,8 +1900,8 @@
                 h = n("767680"),
                 g = n("249873"),
                 _ = n("837979"),
-                S = n("782340"),
-                v = n("636843");
+                v = n("782340"),
+                S = n("636843");
 
             function m(e) {
                 let {
@@ -1906,27 +1918,27 @@
                 } = e;
                 return (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsxs)("div", {
-                        className: v.content,
+                        className: S.content,
                         children: [(0, l.jsx)(d.default, {
                             children: (0, l.jsx)("div", {
-                                className: v.stageIconBackground,
+                                className: S.stageIconBackground,
                                 children: (0, l.jsx)(o.default, {
                                     width: 32,
                                     height: 32,
-                                    className: v.stageIcon
+                                    className: S.stageIcon
                                 })
                             })
                         }), (0, l.jsx)(s.Heading, {
                             id: r,
                             variant: "heading-xl/semibold",
                             color: "header-primary",
-                            className: v.headerTitle,
-                            children: null == a ? S.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TITLE : S.default.Messages.EDIT_STAGE_CHANNEL_TITLE
+                            className: S.headerTitle,
+                            children: null == a ? v.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TITLE : v.default.Messages.EDIT_STAGE_CHANNEL_TITLE
                         }), (0, l.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             color: "header-secondary",
-                            className: v.headerSubtitle,
-                            children: null == a ? S.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_SUBTITLE : S.default.Messages.EDIT_STAGE_SUBTITLE
+                            className: S.headerSubtitle,
+                            children: null == a ? v.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_SUBTITLE : v.default.Messages.EDIT_STAGE_SUBTITLE
                         })]
                     }), (0, l.jsx)(E.default, {
                         guild: t,
@@ -1947,14 +1959,14 @@
                     onClose: n,
                     transitionState: o,
                     ...d
-                } = e, E = (0, u.useUID)(), S = (0, r.useStateFromStores)([i.default], () => i.default.getGuild(t.guild_id)), C = a.useMemo(() => c.default.getStageInstanceByChannel(t.id), [t.id]), {
+                } = e, E = (0, u.useUID)(), v = (0, r.useStateFromStores)([i.default], () => i.default.getGuild(t.guild_id)), C = a.useMemo(() => c.default.getStageInstanceByChannel(t.id), [t.id]), {
                     loading: N,
                     error: T,
                     onSave: R
                 } = (0, h.default)(t, n), {
                     modalStep: p,
-                    setModalStep: x,
-                    readySlide: I,
+                    setModalStep: I,
+                    readySlide: x,
                     handleSlideReady: L,
                     savedOptions: A,
                     handleSettingsSave: y,
@@ -1966,8 +1978,8 @@
                     onSave: R
                 });
                 return (a.useEffect(() => {
-                    null == S && n()
-                }, [S, n]), null == S) ? null : (0, l.jsx)(s.ModalRoot, {
+                    null == v && n()
+                }, [v, n]), null == v) ? null : (0, l.jsx)(s.ModalRoot, {
                     transitionState: o,
                     "aria-labelledby": E,
                     ...d,
@@ -1979,9 +1991,9 @@
                         children: [(0, l.jsx)(s.Slide, {
                             id: _.StartStageSteps.STAGE_CHANNEL_SETTINGS,
                             children: (0, l.jsx)("div", {
-                                className: v.slideContainer,
+                                className: S.slideContainer,
                                 children: (0, l.jsx)(m, {
-                                    guild: S,
+                                    guild: v,
                                     channel: t,
                                     stageInstance: C,
                                     headerId: E,
@@ -1990,22 +2002,22 @@
                                     error: T,
                                     onSave: y,
                                     defaultOptions: A,
-                                    isSlideReady: I === _.StartStageSteps.STAGE_CHANNEL_SETTINGS
+                                    isSlideReady: x === _.StartStageSteps.STAGE_CHANNEL_SETTINGS
                                 })
                             })
                         }), (0, l.jsx)(s.Slide, {
                             id: _.StartStageSteps.PUBLIC_STAGE_PREVIEW,
                             children: (0, l.jsx)("div", {
-                                className: v.slideContainer,
+                                className: S.slideContainer,
                                 children: (0, l.jsx)(f.default, {
                                     headerId: E,
-                                    guild: S,
+                                    guild: v,
                                     channel: t,
                                     stageData: A,
                                     loading: N,
                                     onNext: D,
                                     onCancel: n,
-                                    onBack: () => x(_.StartStageSteps.STAGE_CHANNEL_SETTINGS)
+                                    onBack: () => I(_.StartStageSteps.STAGE_CHANNEL_SETTINGS)
                                 })
                             })
                         })]
@@ -2035,8 +2047,8 @@
                     [f, E] = l.useState(!1),
                     [h, g] = l.useState(null),
                     _ = l.useMemo(() => c.default.getStageInstanceByChannel(null == e ? void 0 : e.id), [null == e ? void 0 : e.id]),
-                    S = (0, u.useCanSendStageStartNotification)(e),
-                    v = async l => {
+                    v = (0, u.useCanSendStageStartNotification)(e),
+                    S = async l => {
                         let {
                             topic: u,
                             privacyLevel: c,
@@ -2046,7 +2058,7 @@
                             E(!0), g(null), null != n && (a.default.selectGuild(n), r.default.selectVoiceChannel(e.id));
                             try {
                                 let n;
-                                null != _ ? n = await o.editStage(e, u, c) : (n = await o.startStage(e, u, c, null != f && f), S && i.hideHotspot(d.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), t(n)
+                                null != _ ? n = await o.editStage(e, u, c) : (n = await o.startStage(e, u, c, null != f && f), v && i.hideHotspot(d.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), t(n)
                             } catch (t) {
                                 let e = new s.APIError(t);
                                 g(e), E(!1)
@@ -2056,7 +2068,7 @@
                 return {
                     loading: f,
                     error: h,
-                    onSave: v
+                    onSave: S
                 }
             }
         },
@@ -2165,7 +2177,7 @@
                 h = n("474293"),
                 g = n("580357"),
                 _ = n("491088");
-            let S = {
+            let v = {
                     SMOL: "Smol",
                     MINI: "Mini",
                     SMALLER: "Smaller",
@@ -2175,25 +2187,25 @@
                     LARGER: "Larger",
                     XLARGE: "XLarge"
                 },
-                v = {
-                    [S.SMOL]: 16,
-                    [S.MINI]: 20,
-                    [S.SMALLER]: 24,
-                    [S.SMALL]: 30,
-                    [S.MEDIUM]: 40,
-                    [S.LARGE]: 50,
-                    [S.LARGER]: 64,
-                    [S.XLARGE]: 100
+                S = {
+                    [v.SMOL]: 16,
+                    [v.MINI]: 20,
+                    [v.SMALLER]: 24,
+                    [v.SMALL]: 30,
+                    [v.MEDIUM]: 40,
+                    [v.LARGE]: 50,
+                    [v.LARGER]: 64,
+                    [v.XLARGE]: 100
                 },
                 m = {
-                    [S.SMOL]: [10, 10, 8, 6, 6, 4],
-                    [S.MINI]: [12, 12, 10, 10, 8, 6, 4],
-                    [S.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
-                    [S.SMALL]: [14, 14, 12, 12, 10, 8, 6],
-                    [S.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
-                    [S.LARGE]: [18, 18, 16, 16, 14, 12, 10],
-                    [S.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-                    [S.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
+                    [v.SMOL]: [10, 10, 8, 6, 6, 4],
+                    [v.MINI]: [12, 12, 10, 10, 8, 6, 4],
+                    [v.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
+                    [v.SMALL]: [14, 14, 12, 12, 10, 8, 6],
+                    [v.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
+                    [v.LARGE]: [18, 18, 16, 16, 14, 12, 10],
+                    [v.LARGER]: [19, 19, 17, 17, 15, 13, 11],
+                    [v.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
                 };
             class C extends a.PureComponent {
                 renderAcronym() {
@@ -2231,15 +2243,15 @@
                         showTooltip: f,
                         tooltipPosition: E,
                         onClick: g,
-                        to: S,
-                        badgeStrokeColor: v,
+                        to: v,
+                        badgeStrokeColor: S,
                         animate: C,
                         tabIndex: N,
                         iconSrc: T,
                         "aria-hidden": R,
                         ...p
-                    } = this.props, x = m[u], I = null != g ? c.Clickable : "div";
-                    return (0, l.jsxs)(I, {
+                    } = this.props, I = m[u], x = null != g ? c.Clickable : "div";
+                    return (0, l.jsxs)(x, {
                         className: s(_.icon, a, (0, h.getClass)(_, "iconSize", u), {
                             [null !== (e = (0, h.getClass)(_, "iconActive", u)) && void 0 !== e ? e : ""]: i,
                             [_.iconInactive]: !i,
@@ -2247,10 +2259,10 @@
                         }),
                         "aria-hidden": R,
                         style: null == n.icon ? {
-                            fontSize: (null !== (t = x[n.acronym.length]) && void 0 !== t ? t : x[x.length - 1]) * d,
+                            fontSize: (null !== (t = I[n.acronym.length]) && void 0 !== t ? t : I[I.length - 1]) * d,
                             ...o
                         } : o,
-                        onClick: null != S || null == g ? void 0 : g,
+                        onClick: null != v || null == g ? void 0 : g,
                         tabIndex: N,
                         ...p,
                         children: [this.renderAcronym(), this.renderBadge()]
@@ -2304,7 +2316,7 @@
                 return {
                     style: {
                         ...a,
-                        backgroundImage: (0, E.makeCssUrlString)(null != l ? l : t.getIconURL(v[r], n && f.default.isFocused()))
+                        backgroundImage: (0, E.makeCssUrlString)(null != l ? l : t.getIconURL(S[r], n && f.default.isFocused()))
                     }
                 }
             })((0, d.backgroundImagePreloader)(e => (0, l.jsx)(C, {
@@ -2317,8 +2329,8 @@
                     })
                 }
             }
-            T.Sizes = S, T.defaultProps = {
-                size: S.LARGE,
+            T.Sizes = v, T.defaultProps = {
+                size: v.LARGE,
                 textScale: 1,
                 showBadge: !1,
                 showTooltip: !1,
@@ -2706,10 +2718,10 @@
                     return _
                 },
                 viewGuild: function() {
-                    return S
+                    return v
                 },
                 makeDiscoverableGuild: function() {
-                    return v
+                    return S
                 },
                 trackDiscoveryViewed: function() {
                     return m
@@ -2730,10 +2742,10 @@
                     return p
                 },
                 trackGuildJoinClicked: function() {
-                    return x
+                    return I
                 },
                 getDiscoverableGuild: function() {
-                    return I
+                    return x
                 }
             }), n("222007");
             var l, a, r = n("522632"),
@@ -2778,7 +2790,7 @@
                     search: E.location.search
                 }, l)), null == a || a()
             }
-            async function S(e) {
+            async function v(e) {
                 let t, {
                     loadId: n,
                     guildId: a,
@@ -2823,7 +2835,7 @@
                     })
             }
 
-            function v(e) {
+            function S(e) {
                 return {
                     id: e.id,
                     name: e.name,
@@ -2924,7 +2936,7 @@
                 })
             }
 
-            function x(e) {
+            function I(e) {
                 let t = u.default.getLoadId(e);
                 E.default.track(h.AnalyticEvents.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
                     guild_id: e,
@@ -2932,7 +2944,7 @@
                     guild_size: d.default.getMemberCount(e)
                 })
             }
-            async function I(e) {
+            async function x(e) {
                 try {
                     var t, n;
                     let l = await s.default.get({
@@ -2944,7 +2956,7 @@
                         }),
                         a = null === (n = l.body) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : t[0];
                     if (null == a) return a;
-                    return v(a)
+                    return S(a)
                 } catch (e) {
                     return null
                 }

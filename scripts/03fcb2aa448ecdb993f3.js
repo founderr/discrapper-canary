@@ -4,7 +4,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return C
                 }
             }), n("222007");
             var l = n("37983"),
@@ -24,16 +24,16 @@
                 T = n("957255"),
                 S = n("49111"),
                 m = n("782340"),
-                C = n("413075"),
-                v = e => {
+                v = n("413075"),
+                C = e => {
                     let {
                         channel: t,
                         onClose: n,
-                        onConfirm: v,
+                        onConfirm: C,
                         transitionState: g
                     } = e, D = (0, a.default)(t, !0), R = t.id, I = t.isForumPost(), M = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(t.getGuildId())), A = (0, E.useGuildChannelScheduledEvents)(R), {
-                        isSubscriptionGated: y
-                    } = (0, s.default)(t.id), L = (0, c.default)(M, t), [O, p] = u.useState(null), G = (0, r.useStateFromStores)([N.default], () => t.isOwner(N.default.getId()), [t]), U = (0, r.useStateFromStores)([T.default], () => T.default.can(t.isThread() ? S.Permissions.MANAGE_THREADS : S.Permissions.MANAGE_CHANNELS, t), [t]), w = (0, r.useStateFromStores)([_.default], () => {
+                        isSubscriptionGated: L
+                    } = (0, s.default)(t.id), y = (0, c.default)(M, t), [O, p] = u.useState(null), G = (0, r.useStateFromStores)([N.default], () => t.isOwner(N.default.getId()), [t]), U = (0, r.useStateFromStores)([T.default], () => T.default.can(t.isThread() ? S.Permissions.MANAGE_THREADS : S.Permissions.MANAGE_CHANNELS, t), [t]), w = (0, r.useStateFromStores)([_.default], () => {
                         var e;
                         return null !== (e = _.default.getCount(t.id)) && void 0 !== e ? e : 0
                     }, [t.id]), H = I && (U || G && w < 1), F = A.length > 0 && (t.type === S.ChannelTypes.GUILD_VOICE || t.type === S.ChannelTypes.GUILD_STAGE_VOICE);
@@ -63,7 +63,7 @@
                                     children: m.default.Messages.CANNOT_DELETE_CHANNEL
                                 })
                             }), (0, l.jsxs)(i.ModalContent, {
-                                className: C.modalContent,
+                                className: v.modalContent,
                                 children: [(0, l.jsx)(i.Text, {
                                     variant: "text-md/normal",
                                     children: t
@@ -99,11 +99,11 @@
                             }), (0, l.jsxs)(i.ModalContent, {
                                 children: [(0, l.jsx)(i.Text, {
                                     variant: "text-md/normal",
-                                    className: C.modalText,
+                                    className: v.modalText,
                                     children: t
                                 }), (0, l.jsx)(i.Text, {
                                     variant: "text-md/normal",
-                                    className: C.modalText,
+                                    className: v.modalText,
                                     children: m.default.Messages.DESIGNATE_OTHER_CHANNEL.format({
                                         onClick: () => {
                                             f.default.open(M.id, S.GuildSettingsSections.COMMUNITY), null == n || n()
@@ -142,11 +142,11 @@
                                     channelName: D
                                 })
                             };
-                            else if (y && L > 0) return {
+                            else if (L && y > 0) return {
                                 deleteText: m.default.Messages.DELETE_CHANNEL,
                                 deleteBody: m.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_DELETE_CHANNEL_BODY.format({
                                     channelName: D,
-                                    numGuildRoleSubscriptionMembers: L
+                                    numGuildRoleSubscriptionMembers: y
                                 })
                             };
                             return {
@@ -166,7 +166,7 @@
                                     children: e
                                 })
                             }), (0, l.jsxs)(i.ModalContent, {
-                                className: C.modalContent,
+                                className: v.modalContent,
                                 children: [(0, l.jsx)(i.Text, {
                                     variant: "text-md/normal",
                                     color: "header-primary",
@@ -174,14 +174,14 @@
                                 }), F ? (0, l.jsx)(i.Text, {
                                     variant: "text-md/normal",
                                     color: "header-secondary",
-                                    className: C.warningText,
+                                    className: v.warningText,
                                     children: m.default.Messages.GUILD_EVENT_CHANNEL_DELETE_GUILD_EVENTS.format({
                                         count: A.length
                                     })
                                 }) : null]
                             }), (0, l.jsxs)(i.ModalFooter, {
                                 children: [(0, l.jsx)(i.Button, {
-                                    onClick: v,
+                                    onClick: C,
                                     color: i.Button.Colors.RED,
                                     children: e
                                 }), (0, l.jsx)(i.Button, {
@@ -337,10 +337,10 @@
                     return m
                 },
                 completeNewMemberAction: function() {
-                    return C
+                    return v
                 },
                 getBlockForChannelDeletion: function() {
-                    return v
+                    return C
                 }
             }), n("808653");
             var l = n("872717"),
@@ -436,7 +436,7 @@
                     server_guide_channel_type: "member action",
                     channel_action_type: l.actionType
                 }), (0, d.transitionToChannel)(t)
-            }, C = (e, t) => {
+            }, v = (e, t) => {
                 if (u.default.dispatch({
                         type: "COMPLETE_NEW_MEMBER_ACTION",
                         guildId: e,
@@ -459,7 +459,7 @@
                     url: N.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t)
                 })
             };
-            async function v(e, t) {
+            async function C(e, t) {
                 if (null == e) return !1;
                 let n = (0, _.canSeeOnboardingHome)(e);
                 if (!n) return !1;
@@ -507,10 +507,10 @@
                     return m
                 },
                 settingsFromServer: function() {
-                    return C
+                    return v
                 },
                 settingsToServer: function() {
-                    return v
+                    return C
                 },
                 actionsFromServer: function() {
                     return g
@@ -576,7 +576,7 @@
                 }
             }
 
-            function C(e) {
+            function v(e) {
                 if (null == e) return null;
                 let {
                     welcome_message: t,
@@ -595,7 +595,7 @@
                 }
             }
 
-            function v(e, t) {
+            function C(e, t) {
                 var n, l;
                 if (null == t) return null;
                 let {
@@ -833,7 +833,7 @@
                 RecurrenceOptions: function() {
                     return l
                 }
-            }), (u = l || (l = {}))[u.NONE = 0] = "NONE", u[u.WEEKLY = 1] = "WEEKLY", u[u.MONTHLY = 2] = "MONTHLY", u[u.YEARLY = 3] = "YEARLY", u[u.WEEKDAY_ONLY = 4] = "WEEKDAY_ONLY"
+            }), (u = l || (l = {}))[u.NONE = 0] = "NONE", u[u.WEEKLY = 1] = "WEEKLY", u[u.MONTHLY = 2] = "MONTHLY", u[u.YEARLY = 3] = "YEARLY", u[u.WEEKDAY_ONLY = 4] = "WEEKDAY_ONLY", u[u.BIWEEKLY = 5] = "BIWEEKLY"
         },
         49129: function(e, t, n) {
             "use strict";
@@ -1057,10 +1057,10 @@
                     return m
                 },
                 useActiveEvent: function() {
-                    return C
+                    return v
                 },
                 useActiveEventsByChannel: function() {
-                    return v
+                    return C
                 },
                 useGuildUpcomingEventsNotice: function() {
                     return g
@@ -1120,7 +1120,7 @@
                 }, [t, e])
             }
 
-            function C(e) {
+            function v(e) {
                 return (0, u.useStateFromStores)([c.default, i.default, o.default], () => {
                     let t = i.default.getChannel(e);
                     if (!o.default.can(T.Permissions.VIEW_CHANNEL, t)) return null;
@@ -1131,7 +1131,7 @@
                 }, [e])
             }
 
-            function v(e) {
+            function C(e) {
                 let t = (0, u.useStateFromStoresArray)([c.default], () => c.default.getGuildScheduledEventsForGuild(e), [e]),
                     n = l.useMemo(() => {
                         let e = new Map;
@@ -1245,7 +1245,7 @@
                     return m
                 },
                 getBaseScheduleForRecurrence: function() {
-                    return v
+                    return C
                 },
                 getScheduleForRecurrenceWithException: function() {
                     return g
@@ -1266,10 +1266,10 @@
                     return A
                 },
                 getNextRecurrenceIdInEvent: function() {
-                    return y
+                    return L
                 },
                 isValidRecurrence: function() {
-                    return L
+                    return y
                 },
                 recurrenceOptionToRecurrenceRule: function() {
                     return p
@@ -1318,7 +1318,7 @@
                 }
             }
 
-            function C(e, t) {
+            function v(e, t) {
                 let n;
                 return null != e && (n = {
                     startDate: r(e),
@@ -1326,9 +1326,9 @@
                 }, null != t && (n.endDate = r(t))), n
             }
 
-            function v(e, t) {
+            function C(e, t) {
                 let n = function(e) {
-                        return C(e.scheduled_start_time, e.scheduled_end_time)
+                        return v(e.scheduled_start_time, e.scheduled_end_time)
                     }(t),
                     l = r(a.default.extractTimestamp(e)),
                     u = (null == n ? void 0 : n.endDate) != null ? l.clone().add(n.endDate.diff(n.startDate)) : void 0;
@@ -1349,7 +1349,7 @@
             }
 
             function D(e) {
-                return C(e.scheduledStartTime, e.scheduledEndTime)
+                return v(e.scheduledStartTime, e.scheduledEndTime)
             }
 
             function R(e, t) {
@@ -1393,13 +1393,13 @@
                 return u
             }
 
-            function y(e) {
+            function L(e) {
                 var t;
                 let n = null == (t = e).recurrence_rule ? null : new Date(t.scheduled_start_time);
                 return null != n ? a.default.fromTimestamp(Math.floor(n.getTime() / d.default.Millis.SECOND) * d.default.Millis.SECOND) : null
             }
 
-            function L(e, t) {
+            function y(e, t) {
                 if (null == t || null == e) return !1;
                 let n = new Date(e.start),
                     l = a.default.extractTimestamp(t),
@@ -1434,6 +1434,12 @@
                             return new i.RRule({
                                 dtstart: r,
                                 freq: i.RRule.WEEKLY
+                            });
+                        case o.RecurrenceOptions.BIWEEKLY:
+                            return new i.RRule({
+                                dtstart: r,
+                                freq: i.RRule.WEEKLY,
+                                interval: 2
                             });
                         case o.RecurrenceOptions.MONTHLY:
                             return new i.RRule({
@@ -1489,7 +1495,8 @@
                 let n = M(t);
                 switch (n.options.freq) {
                     case i.RRule.WEEKLY:
-                        return o.RecurrenceOptions.WEEKLY;
+                        if (n.options.interval < 1 || n.options.interval > 2) return o.RecurrenceOptions.NONE;
+                        return 1 === n.options.interval ? o.RecurrenceOptions.WEEKLY : o.RecurrenceOptions.BIWEEKLY;
                     case i.RRule.YEARLY:
                         return o.RecurrenceOptions.YEARLY;
                     case i.RRule.MONTHLY:
