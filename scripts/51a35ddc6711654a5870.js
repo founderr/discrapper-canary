@@ -11,6 +11,7 @@
                 "./call_ringing.mp3": "173447",
                 "./call_ringing_beat.mp3": "942044",
                 "./call_ringing_halloween.mp3": "707746",
+                "./call_ringing_snowsgiving.mp3": "753257",
                 "./clip_error.mp3": "933574",
                 "./clip_save.mp3": "393686",
                 "./ddr-down.mp3": "497452",
@@ -121,6 +122,10 @@
         707746: function(e, t, n) {
             "use strict";
             e.exports = n.p + "e19cc32298b291be6b3d.mp3"
+        },
+        753257: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "3c6cc93eaab97c478abe.mp3"
         },
         933574: function(e, t, n) {
             "use strict";
@@ -358,7 +363,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             });
             var s = n("913144"),
@@ -395,23 +400,23 @@
             m = n("412905");
             let {
                 enable: E,
-                isNotSupported: S
+                isNotSupported: g
             } = m;
-            var g = {
+            var S = {
                 enable: E,
                 toggleSelfMute() {
                     let {
                         context: e = p.MediaEngineContextTypes.DEFAULT,
                         syncRemote: t = !0
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    return S() ? Promise.resolve() : d.default.isEnabled() ? s.default.dispatch({
+                    return g() ? Promise.resolve() : d.default.isEnabled() ? s.default.dispatch({
                         type: "AUDIO_TOGGLE_SELF_MUTE",
                         context: e,
                         syncRemote: t
                     }) : this.enable(!0)
                 },
                 setTemporarySelfMute(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_TEMPORARY_SELF_MUTE",
                         mute: e
                     })
@@ -421,7 +426,7 @@
                         context: e = p.MediaEngineContextTypes.DEFAULT,
                         syncRemote: t = !0
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_TOGGLE_SELF_DEAF",
                         context: e,
                         syncRemote: t
@@ -429,7 +434,7 @@
                 },
                 toggleLocalMute(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p.MediaEngineContextTypes.DEFAULT;
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_TOGGLE_LOCAL_MUTE",
                         context: t,
                         userId: e
@@ -447,7 +452,7 @@
                     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.MediaEngineContextTypes.DEFAULT,
                         a = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
                         u = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
                         context: n,
                         userId: e,
@@ -478,7 +483,7 @@
                 setMode(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.MediaEngineContextTypes.DEFAULT;
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_MODE",
                         context: n,
                         mode: e,
@@ -489,19 +494,19 @@
                     })
                 },
                 setInputVolume(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_INPUT_VOLUME",
                         volume: e
                     })
                 },
                 setOutputVolume(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_OUTPUT_VOLUME",
                         volume: e
                     })
                 },
                 setInputDevice(e, t) {
-                    if (!S()) {
+                    if (!g()) {
                         if (null != t) {
                             let n = d.default.getInputDevices(),
                                 s = d.default.getInputDeviceId();
@@ -514,7 +519,7 @@
                     }
                 },
                 setOutputDevice(e, t) {
-                    if (!S()) {
+                    if (!g()) {
                         if (null != t) {
                             let n = d.default.getOutputDevices(),
                                 s = d.default.getOutputDeviceId();
@@ -527,7 +532,7 @@
                     }
                 },
                 setVideoDevice(e, t) {
-                    if (!S()) {
+                    if (!g()) {
                         if (null != t) {
                             let n = d.default.getVideoDevices(),
                                 s = d.default.getVideoDeviceId();
@@ -540,27 +545,27 @@
                     }
                 },
                 setEchoCancellation(e, t) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_ECHO_CANCELLATION",
                         enabled: e,
                         location: t
                     })
                 },
                 setLoopback(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_LOOPBACK",
                         enabled: e
                     })
                 },
                 setNoiseSuppression(e, t) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_NOISE_SUPPRESSION",
                         enabled: e,
                         location: t
                     })
                 },
                 setNoiseCancellation(e, t) {
-                    !S() && (s.default.dispatch({
+                    !g() && (s.default.dispatch({
                         type: "AUDIO_SET_NOISE_CANCELLATION",
                         enabled: e,
                         location: t
@@ -571,26 +576,26 @@
                     }))
                 },
                 setAutomaticGainControl(e, t) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_AUTOMATIC_GAIN_CONTROL",
                         enabled: e,
                         location: t
                     })
                 },
                 setExperimentalEncoders(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_EXPERIMENTAL_ENCODERS",
                         enabled: e
                     })
                 },
                 setHardwareH264(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_HARDWARE_H264",
                         enabled: e
                     })
                 },
                 setAttenuation(e, t, n) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_ATTENUATION",
                         attenuation: e,
                         attenuateWhileSpeakingSelf: t,
@@ -598,42 +603,42 @@
                     })
                 },
                 setQoS(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_QOS",
                         enabled: e
                     })
                 },
                 reset() {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_RESET"
                     })
                 },
                 setSilenceWarning(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_DISPLAY_SILENCE_WARNING",
                         enabled: e
                     })
                 },
                 setDebugLogging(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_DEBUG_LOGGING",
                         enabled: e
                     })
                 },
                 setVideoHook(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_VIDEO_HOOK",
                         enabled: e
                     })
                 },
                 setExperimentalSoundshare(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE",
                         enabled: e
                     })
                 },
                 setAudioSubsystem(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "AUDIO_SET_SUBSYSTEM",
                         subsystem: e
                     })
@@ -651,37 +656,37 @@
                     })
                 },
                 setOpenH264(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_OPEN_H264",
                         enabled: e
                     })
                 },
                 setAV1Enabled(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_AV1",
                         enabled: e
                     })
                 },
                 setH265Enabled(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_H265",
                         enabled: e
                     })
                 },
                 setAecDump(e) {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_AEC_DUMP",
                         enabled: e
                     })
                 },
                 interact() {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "MEDIA_ENGINE_INTERACTION_REQUIRED",
                         required: !1
                     })
                 },
                 enableSoundshare() {
-                    !S() && s.default.dispatch({
+                    !g() && s.default.dispatch({
                         type: "MEDIA_ENGINE_ENABLE_SOUNDSHARE"
                     })
                 }
@@ -958,8 +963,8 @@
                 _ = n("599110"),
                 m = n("49111"),
                 E = n("353927"),
-                S = n("782340"),
-                g = n("113508");
+                g = n("782340"),
+                S = n("113508");
 
             function A(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E.MediaEngineContextTypes.DEFAULT,
@@ -983,14 +988,14 @@
                     }, [n, t, e]),
                     O = r.default.supports(E.Features.DISABLE_VIDEO) && !n ? (0, s.jsx)(u.MenuCheckboxItem, {
                         id: "disable-video",
-                        label: S.default.Messages.DISABLE_VIDEO,
+                        label: g.default.Messages.DISABLE_VIDEO,
                         action: () => {
                             if (v) {
                                 i.default.show({
-                                    title: S.default.Messages.UNSTABLE_CONNECTION,
-                                    body: S.default.Messages.UNSTABLE_CONNECTION_REASON_2,
-                                    confirmText: S.default.Messages.TURN_ON_VIDEO_ANYWAY,
-                                    cancelText: S.default.Messages.LEAVE_VIDEO_OFF,
+                                    title: g.default.Messages.UNSTABLE_CONNECTION,
+                                    body: g.default.Messages.UNSTABLE_CONNECTION_REASON_2,
+                                    confirmText: g.default.Messages.TURN_ON_VIDEO_ANYWAY,
+                                    cancelText: g.default.Messages.LEAVE_VIDEO_OFF,
                                     onConfirm: () => d.default.setDisableLocalVideo(e, m.VideoToggleState.MANUAL_ENABLED)
                                 });
                                 return
@@ -1000,16 +1005,16 @@
                         },
                         checked: b,
                         subtext: v ? (0, s.jsxs)("div", {
-                            className: g.videoPaused,
+                            className: S.videoPaused,
                             children: [(0, s.jsx)(f.default, {
                                 width: 12,
-                                className: g.warningCircle
-                            }), S.default.Messages.UNSTABLE_CONNECTION]
+                                className: S.warningCircle
+                            }), g.default.Messages.UNSTABLE_CONNECTION]
                         }) : null
                     }, "disable-video") : null,
                     h = n ? null : (0, s.jsx)(u.MenuCheckboxItem, {
                         id: "soundboard-sound-mute",
-                        label: S.default.Messages.MUTE_SOUNDBOARD,
+                        label: g.default.Messages.MUTE_SOUNDBOARD,
                         action: () => {
                             let n = c.default.getRTCConnection();
                             _.default.track(m.AnalyticEvents.AUDIO_LOCAL_SOUNDBOARD_MUTE_TOGGLED, {
@@ -1024,21 +1029,21 @@
                     }, "soundboard-sound-mute");
                 return n ? [(0, s.jsx)(u.MenuCheckboxItem, {
                     id: "mute",
-                    label: S.default.Messages.SOUND_MUTE,
+                    label: g.default.Messages.SOUND_MUTE,
                     action: () => d.default.toggleSelfMute({
                         context: t
                     }),
                     checked: D
                 }, "self-mute"), (0, s.jsx)(u.MenuCheckboxItem, {
                     id: "deafen",
-                    label: S.default.Messages.DEAFEN,
+                    label: g.default.Messages.DEAFEN,
                     action: () => d.default.toggleSelfDeaf({
                         context: t
                     }),
                     checked: I
                 }, "self-deafen"), O] : [(0, s.jsx)(u.MenuCheckboxItem, {
                     id: "mute",
-                    label: S.default.Messages.SOUND_MUTE,
+                    label: g.default.Messages.SOUND_MUTE,
                     action: () => d.default.toggleLocalMute(e, t),
                     checked: D
                 }, "self-mute"), h, O]

@@ -11,6 +11,7 @@
                 "./call_ringing.mp3": "173447",
                 "./call_ringing_beat.mp3": "942044",
                 "./call_ringing_halloween.mp3": "707746",
+                "./call_ringing_snowsgiving.mp3": "753257",
                 "./clip_error.mp3": "933574",
                 "./clip_save.mp3": "393686",
                 "./ddr-down.mp3": "497452",
@@ -129,6 +130,10 @@
         707746: function(e, t, s) {
             "use strict";
             e.exports = s.p + "e19cc32298b291be6b3d.mp3"
+        },
+        753257: function(e, t, s) {
+            "use strict";
+            e.exports = s.p + "3c6cc93eaab97c478abe.mp3"
         },
         933574: function(e, t, s) {
             "use strict";

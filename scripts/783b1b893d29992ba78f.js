@@ -11,6 +11,7 @@
                 "./call_ringing.mp3": "173447",
                 "./call_ringing_beat.mp3": "942044",
                 "./call_ringing_halloween.mp3": "707746",
+                "./call_ringing_snowsgiving.mp3": "753257",
                 "./clip_error.mp3": "933574",
                 "./clip_save.mp3": "393686",
                 "./ddr-down.mp3": "497452",
@@ -125,6 +126,10 @@
         707746: function(e, t, n) {
             "use strict";
             e.exports = n.p + "e19cc32298b291be6b3d.mp3"
+        },
+        753257: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "3c6cc93eaab97c478abe.mp3"
         },
         933574: function(e, t, n) {
             "use strict";
@@ -369,8 +374,8 @@
                 u = n("884691"),
                 o = n("77078"),
                 r = n("545158"),
-                a = n("37785"),
-                i = n("709681"),
+                i = n("37785"),
+                a = n("709681"),
                 c = n("782340"),
                 d = n("865201");
             let p = [{
@@ -406,7 +411,7 @@
                     asanaTask: f
                 } = e;
                 u.useEffect(() => {
-                    (0, i.playSound)("success", .1)
+                    (0, a.playSound)("success", .1)
                 }, []);
                 let m = u.useRef(p[Math.floor(Math.random() * p.length)]).current;
                 return (0, s.jsx)(o.ModalRoot, {
@@ -428,7 +433,7 @@
                         }), (0, s.jsxs)(o.Text, {
                             className: d.submitText,
                             variant: "text-sm/normal",
-                            children: ["Thanks for submitting a ", (0, s.jsx)(a.default, {
+                            children: ["Thanks for submitting a ", (0, s.jsx)(i.default, {
                                 onClick: () => (0, r.default)(f.permalink_url),
                                 children: "bug"
                             }), "!", (0, s.jsx)("br", {}), (0, s.jsx)(l, {
@@ -533,17 +538,17 @@
                 u = n("913144"),
                 o = n("168067"),
                 r = n("157246");
-            let a = {
+            let i = {
                 soundpack: r.Soundpacks.CLASSIC
             };
-            class i extends s.default.PersistedStore {
+            class a extends s.default.PersistedStore {
                 initialize(e) {
                     o.default.subscribe({
                         location: "1"
-                    }, () => this.emitChange()), null != e && (a = e)
+                    }, () => this.emitChange()), null != e && (i = e)
                 }
                 getState() {
-                    return a
+                    return i
                 }
                 getSoundpack() {
                     var e;
@@ -554,16 +559,16 @@
                     }, {
                         autoTrackExposure: !1
                     });
-                    return t && (e = a.soundpack, Object.values(r.Soundpacks).includes(e)) ? a.soundpack : r.Soundpacks.CLASSIC
+                    return t && (e = i.soundpack, Object.values(r.Soundpacks).includes(e)) ? i.soundpack : r.Soundpacks.CLASSIC
                 }
             }
-            i.displayName = "SoundpackStore", i.persistKey = "SoundpackStore";
-            var c = new i(u.default, {
+            a.displayName = "SoundpackStore", a.persistKey = "SoundpackStore";
+            var c = new a(u.default, {
                 SET_SOUNDPACK: function(e) {
                     let {
                         soundpack: t
                     } = e;
-                    a = {
+                    i = {
                         soundpack: t
                     }
                 }
@@ -632,24 +637,24 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return a
                 }
             });
             var s = n("37983"),
                 u = n("884691"),
                 o = n("77078"),
                 r = n("393414"),
-                a = n("49111"),
-                i = u.forwardRef(function(e, t) {
+                i = n("49111"),
+                a = u.forwardRef(function(e, t) {
                     let {
                         href: n,
-                        children: i,
+                        children: a,
                         onClick: c,
                         onKeyPress: d,
                         focusProps: p,
                         ...l
                     } = e, f = u.useCallback(e => {
-                        !e.repeat && ((e.charCode === a.KeyboardKeys.SPACE || e.charCode === a.KeyboardKeys.ENTER) && (e.preventDefault(), null != n && (0, r.transitionTo)(n), null == c || c()), null == d || d(e))
+                        !e.repeat && ((e.charCode === i.KeyboardKeys.SPACE || e.charCode === i.KeyboardKeys.ENTER) && (e.preventDefault(), null != n && (0, r.transitionTo)(n), null == c || c()), null == d || d(e))
                     }, [n, d, c]), m = u.useCallback(e => {
                         !e.metaKey && !e.shiftKey && 0 === e.button && (e.preventDefault(), e.stopPropagation(), null != n && (0, r.transitionTo)(n), null == c || c())
                     }, [n, c]), _ = (0, s.jsx)("a", {
@@ -658,7 +663,7 @@
                         onClick: m,
                         onKeyPress: f,
                         ...l,
-                        children: i
+                        children: a
                     });
                     return (0, s.jsx)(o.FocusRing, {
                         ...p,
@@ -671,10 +676,10 @@
             let s;
             n.r(t), n.d(t, {
                 createSoundForPack: function() {
-                    return a
+                    return i
                 },
                 createSound: function() {
-                    return i
+                    return a
                 },
                 playSound: function() {
                     return c
@@ -684,14 +689,14 @@
                 o = n("319291"),
                 r = n("102985");
 
-            function a(e, t) {
+            function i(e, t) {
                 var n;
                 let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
                     u = (0, o.default)(t);
-                return i(null !== (n = u[e]) && void 0 !== n ? n : e, e, s)
+                return a(null !== (n = u[e]) && void 0 !== n ? n : e, e, s)
             }
 
-            function i(e, t) {
+            function a(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
                 return new s(e, t, n)
             }
@@ -701,8 +706,8 @@
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     s = arguments.length > 2 ? arguments[2] : void 0;
                 if (r.default.disableSounds) return;
-                let a = (0, o.default)(u.default.getSoundpack()),
-                    c = i(null !== (t = a[e]) && void 0 !== t ? t : e, e, n);
+                let i = (0, o.default)(u.default.getSoundpack()),
+                    c = a(null !== (t = i[e]) && void 0 !== t ? t : e, e, n);
                 return null != s ? c.playWithListener().then(e => {
                     e && s()
                 }) : c.play(), c
@@ -723,8 +728,8 @@
                 u = n.n(s),
                 o = n("520497"),
                 r = n("812809"),
-                a = n("42887"),
-                i = n("773336");
+                i = n("42887"),
+                a = n("773336");
             let c = "default",
                 d = c;
 
@@ -735,9 +740,9 @@
 
             function l() {
                 null != window.navigator.mediaDevices && window.navigator.mediaDevices.enumerateDevices().then(e => {
-                    let t = a.default.getOutputDevices(),
-                        n = u(t).sortBy(e => e.index).findIndex(e => e.id === a.default.getOutputDeviceId()),
-                        s = t[a.default.getOutputDeviceId()],
+                    let t = i.default.getOutputDevices(),
+                        n = u(t).sortBy(e => e.index).findIndex(e => e.id === i.default.getOutputDeviceId()),
+                        s = t[i.default.getOutputDeviceId()],
                         o = e.filter(e => "audiooutput" === e.kind && "communications" !== e.deviceId),
                         r = o[n];
                     null != s && (null == r || r.label !== s.name) && (r = o.find(e => e.label === s.name)), d = null != r ? r.deviceId : c
@@ -745,7 +750,7 @@
                     d = c
                 })
             }
-            i.isPlatformEmbedded && (a.default.addChangeListener(l), l());
+            a.isPlatformEmbedded && (i.default.addChangeListener(l), l());
             class f {
                 get volume() {
                     return this._volume
@@ -788,7 +793,7 @@
                     return this._audio = null !== (e = this._audio) && void 0 !== e ? e : new Promise((e, t) => {
                         let s = new Audio;
                         s.src = n("89400")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), s.onloadeddata = () => {
-                            s.volume = Math.min(a.default.getOutputVolume() / 100 * this._volume, 1), i.isPlatformEmbedded && s.setSinkId(d), e(s)
+                            s.volume = Math.min(i.default.getOutputVolume() / 100 * this._volume, 1), a.isPlatformEmbedded && s.setSinkId(d), e(s)
                         }, s.onerror = () => t(Error("could not play audio")), s.onended = () => this._destroyAudio(), s.load()
                     }), this._audio
                 }

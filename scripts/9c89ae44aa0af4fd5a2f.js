@@ -1675,7 +1675,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "254166"
+                        buildNumber: "254173"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -11579,17 +11579,14 @@
                     })),
                     n = (0, u.useStateFromStores)([T.default], () => T.default.hasIncomingCalls()),
                     i = (0, u.useStateFromStores)([_.default], () => _.default.isSoundDisabled("call_ringing")),
-                    m = (0, E.useIsHolidayRingtoneEligible)(),
-                    p = (0, u.useStateFromStores)([_.default], () => {
-                        var e;
-                        return (null === (e = c.default.ringtone) || void 0 === e ? void 0 : e.name) == null || _.default.isSoundDisabled(c.default.ringtone.name)
-                    }),
+                    m = E.default.useIsRingtoneEligible(),
+                    p = E.default.useIsRingtoneDisabled(),
                     g = (0, u.useStateFromStores)([h.default], () => h.default.disableSounds),
                     R = (0, u.useStateFromStores)([f.default], () => f.default.getSoundpack()),
                     O = s.useRef(!1),
                     L = (0, r.useStableMemo)(() => {
                         let e = "call_ringing";
-                        if (m && !p) return (0, I.createSound)(c.default.ringtone.name, e);
+                        if (m && !p) return (0, I.createSound)(c.default.ringtone, e);
                         if (R === S.Soundpacks.CLASSIC) {
                             let t = 500 === l.random(1, 1e3) ? "call_ringing_beat" : "call_ringing";
                             return (0, I.createSound)(t, e)
@@ -12980,7 +12977,7 @@
                 f = n("167359"),
                 _ = n("206230"),
                 C = n("619443"),
-                h = n("684581"),
+                h = n("488284"),
                 T = n("870696"),
                 I = n("168851"),
                 S = n("50647"),
@@ -13169,9 +13166,8 @@
                         })];
                         return e[o.random(e.length - 1)]
                     }(), this._eventLoadingText = function() {
-                        var e;
-                        let t = null === (e = h.default.getLoadingTips) || void 0 === e ? void 0 : e.call(h.default);
-                        if (null != t) return t[o.random(t.length - 1)]
+                        let e = h.default.getLoadingTips();
+                        if (null != e && e.length > 0) return e[o.random(e.length - 1)]
                     }(), this.handleReady = () => {
                         this.setState({
                             ready: !0
@@ -20274,21 +20270,6 @@
                     }), o.default.launch(u, () => {})
                 }
             }
-        },
-        488284: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                useIsHolidayRingtoneEligible: function() {
-                    return s
-                }
-            }), n("424973"), n("446674"), n("193990"), n("845579"), n("385649"), n("599110");
-            var a = n("684581");
-
-            function s() {
-                let e = a.default.useIsEligible();
-                return e && null != a.default.ringtone && null != a.default.soundSettingsLabel
-            }
-            n("49111"), n("782340")
         },
         236199: function(e, t, n) {
             "use strict";

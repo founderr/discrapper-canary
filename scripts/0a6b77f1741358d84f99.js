@@ -11,6 +11,7 @@
                 "./call_ringing.mp3": "173447",
                 "./call_ringing_beat.mp3": "942044",
                 "./call_ringing_halloween.mp3": "707746",
+                "./call_ringing_snowsgiving.mp3": "753257",
                 "./clip_error.mp3": "933574",
                 "./clip_save.mp3": "393686",
                 "./ddr-down.mp3": "497452",
@@ -125,6 +126,10 @@
         707746: function(e, t, n) {
             "use strict";
             e.exports = n.p + "e19cc32298b291be6b3d.mp3"
+        },
+        753257: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "3c6cc93eaab97c478abe.mp3"
         },
         933574: function(e, t, n) {
             "use strict";
@@ -993,10 +998,10 @@
                         outputDeviceId: v,
                         outputDevices: b,
                         outputVolume: N,
-                        speaking: C = !1
+                        speaking: x = !1
                     } = e,
-                    x = u.first(_),
-                    M = null != x && x.disabled,
+                    C = u.first(_),
+                    M = null != C && C.disabled,
                     R = u.first(b),
                     U = null != R && R.disabled,
                     y = [{
@@ -1032,7 +1037,7 @@
                         })]
                     })]
                 }) : (0, s.jsx)(A, {
-                    speaking: C,
+                    speaking: x,
                     inputMode: a,
                     threshold: p,
                     autoThreshold: f,

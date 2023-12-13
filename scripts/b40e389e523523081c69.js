@@ -5217,14 +5217,17 @@
                 listSnapshots: function() {
                     return r
                 },
+                takeSnapshot: function() {
+                    return o
+                },
                 restoreSnapshot: function() {
                     return d
                 },
                 restoreNewestSnapshot: function() {
-                    return u
-                },
-                maybeBackupSettings: function() {
                     return c
+                },
+                backupSettings: function() {
+                    return S
                 }
             });
             var a = s("917351"),
@@ -5245,14 +5248,25 @@
             async function d(e) {
                 return (await l.default.post(i.Endpoints.RESTORE_NOTIFICATION_SNAPSHOT(e))).body
             }
-            async function u() {
+            async function u(e) {
+                return (await l.default.delete(i.Endpoints.NOTIFICATION_SNAPSHOT(e))).body
+            }
+            async function c() {
                 let e = await r(),
                     t = n.sortBy(e, e => new Date(e.recorded_at).getTime());
                 0 !== t.length && await d(t[t.length - 1].id)
             }
-            async function c() {
-                let e = await r();
-                if (!(e.length > 0)) return o("Backup from ".concat(new Date().toLocaleDateString()))
+            async function S(e) {
+                if (e.length > 0) {
+                    var t;
+                    let s = n.sum(e.map(e => e.length)),
+                        a = null !== (t = n.max(e.map(e => e.length))) && void 0 !== t ? t : 0;
+                    if (e.length >= 5 || s + a > 1e6) {
+                        let t = n.sortBy(e, e => new Date(e.recorded_at).getTime());
+                        await u(t[0].id)
+                    }
+                }
+                return o("Backup from ".concat(new Date().toLocaleDateString()))
             }
         },
         380353: function(e, t, s) {
@@ -5298,60 +5312,62 @@
             "use strict";
             s.r(t), s.d(t, {
                 useGuildMigrationSteps: function() {
-                    return O
+                    return M
                 },
                 saveSettings: function() {
-                    return x
+                    return R
                 },
                 revertToOldSystem: function() {
-                    return M
+                    return D
                 }
             }), s("222007"), s("808653");
             var a = s("884691"),
-                n = s("917351"),
+                n = s("627445"),
                 l = s.n(n),
-                i = s("446674"),
-                r = s("872717"),
-                o = s("913144"),
-                d = s("404118"),
-                u = s("519705"),
-                c = s("542827"),
-                S = s("679428"),
-                E = s("42507"),
-                f = s("350522"),
-                T = s("305961"),
-                m = s("677099"),
-                _ = s("282109"),
-                g = s("449008"),
-                h = s("649649"),
-                I = s("845868"),
-                N = s("287223"),
-                p = s("76618"),
-                C = s("380353"),
-                A = s("49111");
+                i = s("917351"),
+                r = s.n(i),
+                o = s("446674"),
+                d = s("872717"),
+                u = s("913144"),
+                c = s("404118"),
+                S = s("519705"),
+                E = s("542827"),
+                f = s("679428"),
+                T = s("42507"),
+                m = s("350522"),
+                _ = s("305961"),
+                g = s("677099"),
+                h = s("282109"),
+                I = s("449008"),
+                N = s("649649"),
+                p = s("845868"),
+                C = s("287223"),
+                A = s("76618"),
+                O = s("380353"),
+                x = s("49111");
 
-            function O() {
-                let [e, t] = a.useState(C.defaultThresholds), [s, n] = a.useState([]), [o, d] = a.useState([]), [u, c] = a.useState({}), [S, _] = a.useState(!1);
-                (0, E.useFrecencySettings)(), a.useEffect(() => {
-                    r.default.get("/users/@me/notification-migration-data2").then(e => {
+            function M() {
+                let [e, t] = a.useState(O.defaultThresholds), [s, n] = a.useState([]), [l, i] = a.useState([]), [u, c] = a.useState({}), [S, E] = a.useState(!1);
+                (0, T.useFrecencySettings)(), a.useEffect(() => {
+                    d.default.get("/users/@me/notification-migration-data2").then(e => {
                         let {
                             body: {
                                 guild_noise: t,
                                 usage: s
                             }
                         } = e;
-                        n(t), d(function(e) {
+                        n(t), i(function(e) {
                             var t, s, a;
-                            let n = l.keyBy(null !== (t = e.voice_joins) && void 0 !== t ? t : [], "channel_id"),
-                                i = l.keyBy(null !== (s = e.message_sends) && void 0 !== s ? s : [], "channel_id");
+                            let n = r.keyBy(null !== (t = e.voice_joins) && void 0 !== t ? t : [], "channel_id"),
+                                l = r.keyBy(null !== (s = e.message_sends) && void 0 !== s ? s : [], "channel_id");
                             return (null !== (a = e.channel_opens) && void 0 !== a ? a : []).map(e => {
-                                var t, s, a, l, r, o, d, u, c, S, E;
+                                var t, s, a, i, r, o, d, u, c, S, E;
                                 let f = null !== (t = n[e.channel_id]) && void 0 !== t ? t : {},
-                                    T = null !== (s = i[e.channel_id]) && void 0 !== s ? s : {};
+                                    T = null !== (s = l[e.channel_id]) && void 0 !== s ? s : {};
                                 return {
                                     channel_id: e.channel_id,
                                     num_year_opens: Number(null !== (a = e.year_opens) && void 0 !== a ? a : 0),
-                                    num_month_opens: Number(null !== (l = e.one_month_opens) && void 0 !== l ? l : 0),
+                                    num_month_opens: Number(null !== (i = e.one_month_opens) && void 0 !== i ? i : 0),
                                     num_three_month_opens: Number(null !== (r = e.three_month_opens) && void 0 !== r ? r : 0),
                                     num_six_month_opens: Number(null !== (o = e.six_month_opens) && void 0 !== o ? o : 0),
                                     num_messages: Number(null !== (d = null == T ? void 0 : T.num_messages) && void 0 !== d ? d : 0),
@@ -5360,17 +5376,17 @@
                                     num_three_month_voice_joins: Number(null !== (S = null == f ? void 0 : f.three_month_opens) && void 0 !== S ? S : 0),
                                     num_six_month_voice_joins: Number(null !== (E = null == f ? void 0 : f.six_month_opens) && void 0 !== E ? E : 0)
                                 }
-                            }).filter(g.isNotNullish)
+                            }).filter(I.isNotNullish)
                         }(s))
                     }).catch(e => {
-                        403 === e.status && _(!0)
+                        403 === e.status && E(!0)
                     })
                 }, []);
-                let h = (0, i.useStateFromStoresArray)([T.default], () => Object.values(T.default.getGuilds())),
-                    p = a.useCallback(() => {
+                let f = (0, o.useStateFromStoresArray)([_.default], () => Object.values(_.default.getGuilds())),
+                    h = a.useCallback(() => {
                         let t = {};
-                        for (let a of h) t[a.id] = function(e, t, s, a, n) {
-                            let [l, i, r] = f.default.hasConsented(A.Consents.PERSONALIZATION) ? (0, N.guessGuildModeWithRemoteData)(e, t, s, a) : (0, N.guessGuildModeWithLocalData)(e), o = (0, I.default)(e, null != n ? n : l, s, a, t).filter(g.isNotNullish);
+                        for (let a of f) t[a.id] = function(e, t, s, a, n) {
+                            let [l, i, r] = m.default.hasConsented(x.Consents.PERSONALIZATION) ? (0, C.guessGuildModeWithRemoteData)(e, t, s, a) : (0, C.guessGuildModeWithLocalData)(e), o = (0, p.default)(e, null != n ? n : l, s, a, t).filter(I.isNotNullish);
                             return {
                                 guildId: e.id,
                                 mode: l,
@@ -5379,11 +5395,11 @@
                                 actions: o,
                                 overrideMode: n
                             }
-                        }(a, e, s, o, u[a.id]);
+                        }(a, e, s, l, u[a.id]);
                         return t
-                    }, [h, e, s, o, u]),
-                    [O, x] = a.useState(() => p());
-                a.useEffect(() => x(p()), [p]);
+                    }, [f, e, s, l, u]),
+                    [N, A] = a.useState(() => h());
+                a.useEffect(() => A(h()), [h]);
                 let M = a.useCallback((e, t) => {
                     c(s => ({
                         ...s,
@@ -5391,7 +5407,7 @@
                     }))
                 }, []);
                 return {
-                    guildPlans: O,
+                    guildPlans: N,
                     overrideGuild: M,
                     setThresholds: t,
                     getDebug: () => (function(e, t) {
@@ -5403,21 +5419,21 @@
                                 var s;
                                 return e + Number(null !== (s = t.num_month_opens) && void 0 !== s ? s : 0)
                             }, 0),
-                            n = m.default.getFlattenedGuildIds(),
-                            i = l.sortBy(Object.values(e), e => {
+                            n = g.default.getFlattenedGuildIds(),
+                            l = r.sortBy(Object.values(e), e => {
                                 let t = n.indexOf(e.guildId);
                                 return -1 === t ? n.length : t
                             }),
-                            r = [
-                                ["Everything", new Set([C.Mode.CareALot])],
-                                ["Essentials", new Set([C.Mode.CareALittle])],
-                                ["Nothing", new Set([C.Mode.DontCare])]
+                            i = [
+                                ["Everything", new Set([O.Mode.CareALot])],
+                                ["Essentials", new Set([O.Mode.CareALittle])],
+                                ["Nothing", new Set([O.Mode.DontCare])]
                             ].map(e => {
-                                let [t, s] = e, a = i.filter(e => {
+                                let [t, s] = e, a = l.filter(e => {
                                     var t;
                                     return s.has(null !== (t = e.overrideMode) && void 0 !== t ? t : e.mode)
                                 }), n = a.map(e => {
-                                    let t = T.default.getGuild(e.guildId),
+                                    let t = _.default.getGuild(e.guildId),
                                         s = e.actions.map(e => {
                                             var t;
                                             return "- ".concat(e.label).concat(null !== (t = e.debug) && void 0 !== t ? t : "")
@@ -5426,48 +5442,67 @@
                                 });
                                 return "# ".concat(t, "\n\n").concat(n.join("\n\n"))
                             });
-                        return "\n# Basic Stats\n- Total channel visits (yr): ".concat(s, "\n- Total channel visits (month): ").concat(a, "\n\n").concat(r.join("\n\n"))
-                    })(Object.values(O), o),
+                        return "\n# Basic Stats\n- Total channel visits (yr): ".concat(s, "\n- Total channel visits (month): ").concat(a, "\n\n").concat(i.join("\n\n"))
+                    })(Object.values(N), l),
                     showWarning: S
                 }
             }
-            async function x(e) {
+            async function R(e) {
                 let t = {};
                 for (let n of Object.values(e)) {
                     var s, a;
-                    let e = null !== (s = _.default.getAllSettings().userGuildSettings[n.guildId]) && void 0 !== s ? s : {},
+                    let e = null !== (s = h.default.getAllSettings().userGuildSettings[n.guildId]) && void 0 !== s ? s : {},
                         l = {};
                     for (let t of n.actions) null === (a = t.apply) || void 0 === a || a.call(t, l, e);
                     t[n.guildId] = l
                 }
-                await (0, h.maybeBackupSettings)(), await u.default.setAccountFlag(p.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0);
-                let n = await S.default.saveUserGuildSettingsBulk(t);
-                o.default.dispatch({
+                await v(), l((await (0, N.listSnapshots)()).length > 0, "No snapshot exists before migration."), await S.default.setAccountFlag(A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0);
+                let n = await f.default.saveUserGuildSettingsBulk(t);
+                u.default.dispatch({
                     type: "USER_GUILD_SETTINGS_FULL_UPDATE",
                     userGuildSettings: n
-                }), o.default.dispatch({
+                }), u.default.dispatch({
                     type: "RECOMPUTE_READ_STATES"
                 });
-                let l = Object.values(e).filter(e => e.actions.some(e => e.needsMarkedAsRead)).map(e => e.guildId);
-                l.length > 0 && (0, c.default)(l, void 0, () => {
-                    o.default.dispatch({
+                let i = Object.values(e).filter(e => e.actions.some(e => e.needsMarkedAsRead)).map(e => e.guildId);
+                i.length > 0 && (0, E.default)(i, void 0, () => {
+                    u.default.dispatch({
                         type: "RECOMPUTE_READ_STATES"
                     })
                 })
             }
-            async function M() {
-                let e = await (0, h.listSnapshots)(),
-                    t = l.sortBy(e, e => new Date(e.recorded_at).getTime());
+            async function v() {
+                let e = await (0, N.listSnapshots)();
+                if (e.length > 0) {
+                    let t = await
+                    function() {
+                        return new Promise(e => {
+                            c.default.show({
+                                title: "Create new Backup?",
+                                body: "It looks like you already have one notification settings backup. Would you like us to delete the old backup and take a new one, or skip taking a new backup and keep the old one?",
+                                confirmText: "Take New Backup",
+                                cancelText: "Skip Backup",
+                                onConfirm: () => e(!0),
+                                onCancel: () => e(!1)
+                            })
+                        })
+                    }();
+                    t && (0, N.backupSettings)(e)
+                } else(0, N.takeSnapshot)("Backup from ".concat(new Date().toLocaleDateString()))
+            }
+            async function D() {
+                let e = await (0, N.listSnapshots)(),
+                    t = r.sortBy(e, e => new Date(e.recorded_at).getTime());
                 if (t.length > 0) {
                     let e = t[t.length - 1];
-                    await new Promise(t => d.default.show({
+                    await new Promise(t => c.default.show({
                         title: "Please Confirm",
                         body: "This will turn off the new notification system and restore your " + "notification settings to a backup created on ".concat(new Date(e.recorded_at).toLocaleDateString()),
                         onConfirm: t,
                         cancelText: "Cancel",
                         onCancel: () => {}
-                    })), await (0, h.restoreSnapshot)(e.id)
-                } else await u.default.setAccountFlag(p.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
+                    })), await (0, N.restoreSnapshot)(e.id)
+                } else await S.default.setAccountFlag(A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !1)
             }
         },
         845868: function(e, t, s) {
@@ -10689,7 +10724,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "110f8f0a8569f970a0596bb5efda2f2df915b89e", e.substring(0, 7)),
+                    S = (e = "f9f227a5ca9d9ecf266983adf0a011f41b3a3e6b", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10702,7 +10737,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "254166", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "254173", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -17832,7 +17867,7 @@
                     location: "791c79_2"
                 }, {
                     autoTrackExposure: !1
-                }), d = (0, g.useIsHolidayRingtoneEligible)();
+                }), d = g.default.useIsRingtoneEligible();
                 n.useEffect(() => {
                     p.default.trackExposure({
                         location: "791c79_3"
@@ -17843,12 +17878,11 @@
                         t.stopPropagation(), t.preventDefault(), null != S.current && S.current.stop(), S.current = L.playSound(e)
                     }, []),
                     T = n.useCallback((e, s) => {
-                        var a;
-                        let n = t.filter(t => t !== e);
-                        !s && n.push(e), e === (null === (a = _.default.ringtone) || void 0 === a ? void 0 : a.name) && R.default.track(U.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
+                        let a = t.filter(t => t !== e);
+                        !s && a.push(e), e === _.default.ringtone && R.default.track(U.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
                             toggled_on: s,
                             sound_name: e
-                        }), c.default.setDisabledSounds(n)
+                        }), c.default.setDisabledSounds(a)
                     }, [t]);
                 n.useEffect(() => () => {
                     var e;
@@ -17894,8 +17928,8 @@
                     label: B.default.Messages.SOUND_INCOMING_RING,
                     sound: "call_ringing"
                 }, ...d ? [{
-                    label: _.default.soundSettingsLabel(),
-                    sound: _.default.ringtone.name,
+                    label: _.default.getRingtoneSettingsLabel(),
+                    sound: _.default.ringtone,
                     disabled: t.includes("call_ringing")
                 }] : [], {
                     label: B.default.Messages.SOUND_STREAM_STARTED,
