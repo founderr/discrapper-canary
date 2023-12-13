@@ -19426,15 +19426,18 @@
                     h.current = Date.now(), n(e, t, a)
                 }, [n]), E = a.useCallback((e, t, n) => {
                     if (c(e, t, n), null != h.current) {
-                        var a, l, s;
-                        a = e, l = p, s = Date.now() - h.current, r.default.track(o.AnalyticEvents.PREMIUM_FEATURE_USAGE, {
-                            feature_name: "".concat(u.AnalyticsPremiumFeatureNames.SHARED_CANVAS, "_").concat(a.type),
-                            feature_tier: u.AnalyticsPremiumFeatureTiers.FREE,
-                            media_session_id: l.getMediaSessionId(),
-                            parent_media_session_id: l.parentMediaSessionId,
-                            guild_id: l.guildId,
-                            duration: s
-                        }), h.current = null
+                        if (null != p) {
+                            var a, l, s;
+                            a = e, l = p, s = Date.now() - h.current, r.default.track(o.AnalyticEvents.PREMIUM_FEATURE_USAGE, {
+                                feature_name: "".concat(u.AnalyticsPremiumFeatureNames.SHARED_CANVAS, "_").concat(a.type),
+                                feature_tier: u.AnalyticsPremiumFeatureTiers.FREE,
+                                media_session_id: l.getMediaSessionId(),
+                                parent_media_session_id: l.parentMediaSessionId,
+                                guild_id: l.guildId,
+                                duration: s
+                            })
+                        }
+                        h.current = null
                     }
                 }, [c, p]);
                 return {
