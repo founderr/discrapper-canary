@@ -94,11 +94,11 @@
                         gifAttachmentState: void 0
                     }, a)
                 }, [t, M, j]), k = l.useCallback(e => {
-                    m(a => {
+                    j(t, e), m(a => {
                         let t = [...a];
                         return t.splice(e, 1), t
                     })
-                }, []);
+                }, [t, j]);
                 l.useEffect(() => () => {
                     r.removeAllPollUploadAttachments(t)
                 }, [t]);
