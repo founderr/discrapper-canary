@@ -5384,7 +5384,7 @@
                 let V = (0, o.default)([S.default], () => S.default.getProfileEffectById(null == s ? void 0 : s.profileEffectID)),
                     [H, W] = (0, o.useStateFromStoresArray)([h.default], () => {
                         var e;
-                        return [(0, _.isPremiumCollectiblesCategory)(h.default.getCategoryForProduct(null === (e = l.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, _.isPremiumCollectiblesCategory)(h.default.getCategoryForProduct(null == V ? void 0 : V.skuId))]
+                        return [(0, _.isPremiumCollectiblesProduct)(h.default.getProduct(null === (e = l.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, _.isPremiumCollectiblesProduct)(h.default.getProduct(null == V ? void 0 : V.skuId))]
                     }),
                     z = a.useCallback(() => {
                         var e, t, n, a;

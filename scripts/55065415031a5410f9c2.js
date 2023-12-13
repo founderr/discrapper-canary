@@ -116,25 +116,25 @@
                         for (let i = 0; i < r; i++)
                             for (let u = i ? 0 : 1; u * r < t * (r - i); u++) a.push(((e[I + (S >> 1)] >> ((1 & S++) << 2) & 15) / 7.5 - 1) * n);
                         return a
-                    }, T = m(C, _, (l >> 18 & 31) / 31), A = m(3, 3, 1.25 * ((s >> 3 & 63) / 63)), L = m(3, 3, 1.25 * ((s >> 9 & 63) / 63)), g = f && m(5, 5, p), v = n(e), R = u(v > 1 ? 32 : 32 * v), O = u(v > 1 ? 32 / v : 32), N = new Uint8Array(R * O * 4), y = [], M = [];
+                    }, T = m(C, _, (l >> 18 & 31) / 31), A = m(3, 3, 1.25 * ((s >> 3 & 63) / 63)), L = m(3, 3, 1.25 * ((s >> 9 & 63) / 63)), v = f && m(5, 5, p), g = n(e), R = u(g > 1 ? 32 : 32 * g), O = u(g > 1 ? 32 / g : 32), N = new Uint8Array(R * O * 4), M = [], P = [];
                     for (let e = 0, n = 0; e < O; e++)
                         for (let u = 0; u < R; u++, n += 4) {
                             let l = o,
                                 s = c,
                                 E = d,
                                 p = h;
-                            for (let e = 0, r = a(C, f ? 5 : 3); e < r; e++) y[e] = i(t / R * (u + .5) * e);
-                            for (let r = 0, n = a(_, f ? 5 : 3); r < n; r++) M[r] = i(t / O * (e + .5) * r);
+                            for (let e = 0, r = a(C, f ? 5 : 3); e < r; e++) M[e] = i(t / R * (u + .5) * e);
+                            for (let r = 0, n = a(_, f ? 5 : 3); r < n; r++) P[r] = i(t / O * (e + .5) * r);
                             for (let e = 0, t = 0; e < _; e++)
-                                for (let r = e ? 0 : 1, n = 2 * M[e]; r * _ < C * (_ - e); r++, t++) l += T[t] * y[r] * n;
+                                for (let r = e ? 0 : 1, n = 2 * P[e]; r * _ < C * (_ - e); r++, t++) l += T[t] * M[r] * n;
                             for (let e = 0, t = 0; e < 3; e++)
-                                for (let r = e ? 0 : 1, n = 2 * M[e]; r < 3 - e; r++, t++) {
-                                    let e = y[r] * n;
+                                for (let r = e ? 0 : 1, n = 2 * P[e]; r < 3 - e; r++, t++) {
+                                    let e = M[r] * n;
                                     s += A[t] * e, E += L[t] * e
                                 }
                             if (f)
                                 for (let e = 0, t = 0; e < 5; e++)
-                                    for (let r = e ? 0 : 1, n = 2 * M[e]; r < 5 - e; r++, t++) p += g[t] * y[r] * n;
+                                    for (let r = e ? 0 : 1, n = 2 * P[e]; r < 5 - e; r++, t++) p += v[t] * M[r] * n;
                             let I = l - 2 / 3 * s,
                                 S = (3 * l - I + E) / 2,
                                 m = S - E;
@@ -575,7 +575,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return y
+                    return M
                 }
             }), r("222007");
             var n = r("37983"),
@@ -599,8 +599,8 @@
                 T = r("234251"),
                 A = r("659117"),
                 L = r("765221"),
-                g = r("49111"),
-                v = r("646718"),
+                v = r("49111"),
+                g = r("646718"),
                 R = r("782340"),
                 O = r("705057");
 
@@ -618,7 +618,7 @@
                 } = (0, p.default)({
                     analyticsLocations: i,
                     isTryItOut: C
-                }), [g, N] = a.useState(() => {
+                }), [v, N] = a.useState(() => {
                     var e;
                     if (null != o) return o;
                     if (void 0 !== I) return I;
@@ -626,21 +626,21 @@
                     let n = (0, f.getAvatarDecorationsFromCategories)(r);
                     return null !== (e = n.find(e => (0, T.isEqualAvatarDecoration)(e, t.avatarDecoration))) && void 0 !== e ? e : null
                 }), {
-                    category: y,
-                    purchase: M
-                } = (0, E.default)(null == g ? void 0 : g.skuId), P = m.default.canUseCollectibles(t), D = a.useRef(null), H = (0, _.default)(i), {
+                    category: M,
+                    purchase: P
+                } = (0, E.default)(null == v ? void 0 : v.skuId), y = m.default.canUseCollectibles(t), D = a.useRef(null), H = (0, _.default)(i), {
                     shopForAllEnabled: x
                 } = (0, d.default)({
                     location: "AvatarDecorationModal"
-                }), U = (0, T.isEqualAvatarDecoration)(g, void 0 === I ? null == t ? void 0 : t.avatarDecoration : I), b = () => {
-                    S(g), u()
+                }), U = (0, T.isEqualAvatarDecoration)(v, void 0 === I ? null == t ? void 0 : t.avatarDecoration : I), b = () => {
+                    S(v), u()
                 }, w = a.useCallback(() => {
                     u(), (0, c.openCollectiblesShop)({
                         analyticsLocations: i,
                         analyticsSource: s.default.EDIT_AVATAR_DECORATION_MODAL,
-                        initialProductSkuId: null != g ? g.skuId : void 0
+                        initialProductSkuId: null != v ? v.skuId : void 0
                     })
-                }, [i, u, g]);
+                }, [i, u, v]);
                 return (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsxs)(l.ModalHeader, {
                         separator: !1,
@@ -652,7 +652,7 @@
                                     variant: "heading-lg/semibold",
                                     children: R.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
                                 }),
-                                children: !P && !x && (0, n.jsx)(l.Heading, {
+                                children: !y && !x && (0, n.jsx)(l.Heading, {
                                     variant: "text-sm/normal",
                                     children: R.default.Messages.CHANGE_DECORATION_MODAL_SHOP_PREVIEW_HEADER_STARTER_DESC
                                 })
@@ -666,7 +666,7 @@
                         scrollbarType: "none",
                         children: [(0, n.jsx)(L.default, {
                             user: t,
-                            pendingAvatarDecoration: g,
+                            pendingAvatarDecoration: v,
                             selectedAvatarDecorationRef: D,
                             onSelect: e => {
                                 N(e), null != e && H(e)
@@ -675,24 +675,24 @@
                         }), (0, n.jsx)(A.default, {
                             className: O.modalPreview,
                             user: t,
-                            avatarDecorationOverride: g
+                            avatarDecorationOverride: v
                         })]
                     }), (0, n.jsxs)(l.ModalFooter, {
                         className: O.modalFooter,
                         children: [(() => {
-                            let e = null != M && (!(0, f.isPremiumCollectiblesPurchase)(M) || P);
-                            if (e || null === g) return (0, n.jsx)(l.Button, {
+                            let e = null != P && (!(0, f.isPremiumCollectiblesPurchase)(P) || y);
+                            if (e || null === v) return (0, n.jsx)(l.Button, {
                                 onClick: b,
                                 disabled: U,
                                 children: R.default.Messages.AVATAR_DECORATION_MODAL_APPLY
                             });
-                            let r = P || !(0, f.isPremiumCollectiblesCategory)(y);
+                            let r = y || !(0, f.isPremiumCollectiblesCategory)(M);
                             return r ? (0, n.jsx)(l.Button, {
                                 className: O.modalFooterShopButton,
                                 onClick: w,
                                 children: R.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
                             }) : (0, n.jsx)(h.default, {
-                                subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
+                                subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
                                 buttonText: m.default.isPremium(t) ? R.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : R.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
                             })
                         })(), (0, n.jsx)(l.Button, {
@@ -705,7 +705,7 @@
                 })
             }
 
-            function y(e) {
+            function M(e) {
                 let {
                     transitionState: t,
                     analyticsLocations: r,
@@ -720,9 +720,9 @@
                     purchases: T,
                     isFetchingCategories: A,
                     isFetchingPurchases: L
-                } = (0, C.default)(), v = A || L && 0 === T.size;
+                } = (0, C.default)(), g = A || L && 0 === T.size;
                 return a.useEffect(() => {
-                    S.default.track(g.AnalyticEvents.OPEN_MODAL, {
+                    S.default.track(v.AnalyticEvents.OPEN_MODAL, {
                         type: "Edit Avatar Decoration Modal",
                         location_stack: p
                     })
@@ -735,8 +735,8 @@
                     children: (0, n.jsx)(l.ModalRoot, {
                         transitionState: t,
                         className: O.modal,
-                        size: v ? l.ModalSize.DYNAMIC : l.ModalSize.MEDIUM,
-                        children: v ? (0, n.jsx)(l.Spinner, {
+                        size: g ? l.ModalSize.DYNAMIC : l.ModalSize.MEDIUM,
+                        children: g ? (0, n.jsx)(l.Spinner, {
                             className: O.spinner,
                             type: l.Spinner.Type.SPINNING_CIRCLE
                         }) : (0, n.jsx)(N, {
@@ -824,11 +824,11 @@
                     category: T,
                     product: A,
                     purchase: L
-                } = (0, d.default)(null == r ? void 0 : r.skuId), g = _.default.canUseCollectibles(t), v = (0, c.isPremiumCollectiblesPurchase)(L), R = (0, c.isPremiumCollectiblesCategory)(T), {
+                } = (0, d.default)(null == r ? void 0 : r.skuId), v = _.default.canUseCollectibles(t), g = (0, c.isPremiumCollectiblesPurchase)(L), R = (0, c.isPremiumCollectiblesCategory)(T), {
                     shopForAllEnabled: O
                 } = (0, o.default)({
                     location: "AvatarDecorationModalPreview"
-                }), N = !g && v;
+                }), N = !v && g;
                 return null != A && (null == L || N) ? (0, n.jsxs)("div", {
                     className: i(I.modalPreview, I.shopPreviewContainer, a),
                     children: [(0, n.jsx)(f.default, {
@@ -845,7 +845,7 @@
                             children: A.name
                         }), (0, n.jsx)(s.Text, {
                             variant: "text-sm/normal",
-                            children: N ? p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, u.match)([R, g]).with([!0, !0], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).with([!1, !0], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM).with([!1, !1], () => O ? p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM : p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE).exhaustive()
+                            children: N ? p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, u.match)([R, v]).with([!0, !0], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).with([!1, !0], () => p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM).with([!1, !1], () => O ? p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM : p.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE).exhaustive()
                         })]
                     })]
                 }) : (0, n.jsxs)("div", {
@@ -953,8 +953,8 @@
                 T = r("643070"),
                 A = r("688318"),
                 L = r("782340"),
-                g = r("654353");
-            let v = () => 80,
+                v = r("654353");
+            let g = () => 80,
                 R = e => {
                     let {
                         children: t,
@@ -964,7 +964,7 @@
                         ...l
                     } = e;
                     return (0, n.jsx)(c.Clickable, {
-                        className: u(g.decorationGridItem, i ? g.selected : void 0, r),
+                        className: u(v.decorationGridItem, i ? v.selected : void 0, r),
                         ...l,
                         onClick: a,
                         children: t
@@ -979,39 +979,39 @@
                         isSelected: l = !1,
                         ...c
                     } = e, _ = (0, o.default)([f.default], () => {
-                        let e = f.default.getCategoryForProduct(r.skuId);
-                        return (0, C.isPremiumCollectiblesCategory)(e)
-                    }), p = (0, o.default)([E.default], () => E.default.isItemViewed(r)), v = m.default.canUseCollectibles(t), O = u === T.Section.PREMIUM_PURCHASE && !v, [N, y] = a.useState(l);
+                        let e = f.default.getProduct(r.skuId);
+                        return (0, C.isPremiumCollectiblesProduct)(e)
+                    }), p = (0, o.default)([E.default], () => E.default.isItemViewed(r)), g = m.default.canUseCollectibles(t), O = u === T.Section.PREMIUM_PURCHASE && !g, [N, M] = a.useState(l);
                     a.useEffect(() => {
-                        l && y(!0)
+                        l && M(!0)
                     }, [l]);
-                    let M = a.useRef(null),
-                        P = (0, d.default)(null != i ? i : M),
+                    let P = a.useRef(null),
+                        y = (0, d.default)(null != i ? i : P),
                         {
                             avatarDecorationSrc: D
                         } = (0, A.default)({
                             user: t,
                             avatarDecorationOverride: r,
                             size: 80,
-                            animateOnHover: !P
+                            animateOnHover: !y
                         });
                     return (0, n.jsxs)(R, {
-                        className: O ? g.decorationGridItemChurned : void 0,
-                        innerRef: null != i ? i : M,
+                        className: O ? v.decorationGridItemChurned : void 0,
+                        innerRef: null != i ? i : P,
                         isSelected: l,
                         ...c,
                         children: [(0, n.jsx)("img", {
-                            className: g.presetDecorationImg,
+                            className: v.presetDecorationImg,
                             src: D,
                             alt: r.label
                         }), (() => {
-                            let e = u === T.Section.PURCHASE || u === T.Section.PREMIUM_PURCHASE && v;
+                            let e = u === T.Section.PURCHASE || u === T.Section.PREMIUM_PURCHASE && g;
                             if (e) return null;
                             let t = !p && !l && !N;
                             return t ? (0, n.jsx)(S.PremiumBadge, {
-                                className: g.newBadge,
+                                className: v.newBadge,
                                 text: (0, n.jsxs)("div", {
-                                    className: g.newBadgeText,
+                                    className: v.newBadgeText,
                                     children: [(0, n.jsx)(I.default, {
                                         width: 12,
                                         height: 12
@@ -1026,7 +1026,7 @@
                                     height: 12
                                 }),
                                 color: s.default.BACKGROUND_ACCENT,
-                                className: g.iconBadge
+                                className: v.iconBadge
                             })
                         })()]
                     })
@@ -1041,7 +1041,7 @@
                 } = e, s = (0, T.default)();
                 return (0, n.jsx)(c.MasonryList, {
                     fade: !0,
-                    className: g.list,
+                    className: v.list,
                     columns: 3,
                     sections: s.map(e => {
                         let {
@@ -1066,7 +1066,7 @@
                             isSelected: null === r,
                             onSelect: () => i(null),
                             children: [(0, n.jsx)(p.default, {
-                                className: g.notAllowedIcon
+                                className: v.notAllowedIcon
                             }), (0, n.jsx)(c.Text, {
                                 variant: "text-xs/normal",
                                 color: "header-primary",
@@ -1076,7 +1076,7 @@
                             style: d,
                             onSelect: u,
                             children: [(0, n.jsx)(_.default, {
-                                className: g.shopIcon
+                                className: v.shopIcon
                             }), (0, n.jsx)(c.Text, {
                                 variant: "text-xs/normal",
                                 color: "header-primary",
@@ -1102,7 +1102,7 @@
                             header: t
                         } = s[e];
                         return (0, n.jsx)("div", {
-                            className: g.headings,
+                            className: v.headings,
                             children: (0, n.jsx)(c.HeadingLevel, {
                                 forceLevel: 5,
                                 children: (0, n.jsx)(c.Heading, {
@@ -1115,7 +1115,7 @@
                     },
                     getSectionHeight: e => s[e].height,
                     getItemKey: (e, t) => s[e].items[t].id,
-                    getItemHeight: v
+                    getItemHeight: g
                 })
             }
         },
@@ -1161,16 +1161,15 @@
                         location: "useAvatarDecorationSections"
                     }),
                     n = (0, l.default)([o.default], () => o.default.purchases),
-                    [a, p] = (0, l.useStateFromStoresArray)([s.default], () => [s.default.categories, s.default.categorySkuIdsByProductSkuId]);
+                    [a, p] = (0, l.useStateFromStoresArray)([s.default], () => [s.default.categories, s.default.products]);
                 return (0, i.useMemo)(() => {
                     let e = (0, u.uniqBy)([...(0, d.getAvatarDecorationsFromPurchases)(n), ...(0, d.getAvatarDecorationsFromCategories)(a)], "id"),
                         i = e.reduce((e, r) => {
-                            let i = n.get(r.skuId),
-                                u = (0, d.isPremiumCollectiblesPurchase)(i);
-                            if (u && 0 === e.premium_purchase.length && (e.premium_purchase = e.premium_preview, e.premium_preview = []), u) return e.premium_purchase.push(r), e;
-                            if (null != i) return e.purchase.push(r), e;
-                            let l = a.get(p[r.skuId]);
-                            if (!t && (0, d.isPremiumCollectiblesCategory)(l)) {
+                            let a = n.get(r.skuId),
+                                i = (0, d.isPremiumCollectiblesPurchase)(a);
+                            if (i && 0 === e.premium_purchase.length && (e.premium_purchase = e.premium_preview, e.premium_preview = []), i) return e.premium_purchase.push(r), e;
+                            if (null != a) return e.purchase.push(r), e;
+                            if (!t && (0, d.isPremiumCollectiblesProduct)(p.get(r.skuId))) {
                                 let t = e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview;
                                 return t.push(r), e
                             }
@@ -1203,7 +1202,7 @@
                         } = e;
                         return t.length > 0
                     })
-                }, [a, n, p, t, r])
+                }, [a, p, n, t, r])
             }
         },
         619935: function(e, t, r) {
@@ -1465,9 +1464,9 @@
                     return d
                 }
                 isItemViewed(e) {
-                    var t;
-                    let r = l.default.getCategoryForProduct(e.skuId);
-                    return null != r && (null === (t = d.categoryItemViews[r.skuId]) || void 0 === t ? void 0 : t[e.type]) != null
+                    var t, r;
+                    let n = null === (t = l.default.getProduct(e.skuId)) || void 0 === t ? void 0 : t.categorySkuId;
+                    return null != n && (null === (r = d.categoryItemViews[n]) || void 0 === r ? void 0 : r[e.type]) != null
                 }
                 reset() {
                     d = c()
@@ -1809,10 +1808,11 @@
                         currency: n,
                         price: s,
                         prices: c,
-                        ...d
+                        category_sku_id: d,
+                        ...f
                     } = t;
                     return new e({
-                        ...super.fromServer(d),
+                        ...super.fromServer(f),
                         currency: n,
                         price: s,
                         prices: null == (r = c) ? {} : Object.keys(r).reduce((e, t) => {
@@ -1826,7 +1826,8 @@
                                 paymentSourcePrices: {}
                             }, e
                         }, {}),
-                        items: d.items.reduce((e, t) => (0, a.match)(t).with({
+                        categorySkuId: d,
+                        items: f.items.reduce((e, t) => (0, a.match)(t).with({
                             type: i.CollectiblesItemType.AVATAR_DECORATION
                         }, t => (e.push(l.default.fromServer(t)), e)).with({
                             type: i.CollectiblesItemType.PROFILE_EFFECT
@@ -1834,7 +1835,7 @@
                     })
                 }
                 constructor(e) {
-                    super(e), this.currency = e.currency, this.price = e.price, this.prices = e.prices, this.summary = e.summary, this.items = e.items
+                    super(e), this.currency = e.currency, this.price = e.price, this.prices = e.prices, this.summary = e.summary, this.items = e.items, this.categorySkuId = e.categorySkuId
                 }
             }
         },
@@ -2022,10 +2023,10 @@
                     return L
                 },
                 MAX_HOME_HEADER_OVERLAY_HEIGHT: function() {
-                    return g
+                    return v
                 },
                 VIDEO_BACKGROUND_ASPECT_RATIO: function() {
-                    return v
+                    return g
                 },
                 MAX_VIDEO_OVERLAY_HEIGHT: function() {
                     return R
@@ -2052,9 +2053,9 @@
                 T = s / p,
                 A = s / I,
                 L = s / S,
-                g = s / m,
-                v = l.BACKGROUND_REPLACEMENT_SIZE.width / l.BACKGROUND_REPLACEMENT_SIZE.height,
-                R = s / v;
+                v = s / m,
+                g = l.BACKGROUND_REPLACEMENT_SIZE.width / l.BACKGROUND_REPLACEMENT_SIZE.height,
+                R = s / g;
             (a = u || (u = {}))[a.CROP_GIF_START = 0] = "CROP_GIF_START", a[a.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", a[a.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"
         },
         649844: function(e, t, r) {
@@ -2090,14 +2091,14 @@
                     analyticsLocation: T,
                     analyticsSourceLocation: A,
                     isGift: L = !1,
-                    giftMessage: g,
-                    subscriptionTier: v,
+                    giftMessage: v,
+                    subscriptionTier: g,
                     trialId: R,
                     postSuccessGuild: O,
                     openInvoiceId: N,
-                    applicationId: y,
-                    referralTrialOfferId: M,
-                    giftRecipient: P,
+                    applicationId: M,
+                    referralTrialOfferId: P,
+                    giftRecipient: y,
                     returnRef: D
                 } = null != e ? e : {}, H = !1, x = (0, a.v4)(), U = o.default.getCurrentUser(), b = (0, f.isPremiumExactly)(U, C.PremiumTypes.TIER_2);
                 (0, i.openModalLazy)(async () => {
@@ -2112,11 +2113,11 @@
                         return (0, n.jsx)(e, {
                             ...i,
                             loadId: x,
-                            subscriptionTier: v,
-                            skuId: v,
+                            subscriptionTier: g,
+                            skuId: g,
                             isGift: L,
-                            giftMessage: g,
-                            giftRecipient: P,
+                            giftMessage: v,
+                            giftRecipient: y,
                             initialPlanId: t,
                             followupSKUInfo: _,
                             onClose: (e, t) => {
@@ -2134,8 +2135,8 @@
                             postSuccessGuild: O,
                             planGroup: C.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                             openInvoiceId: N,
-                            applicationId: y,
-                            referralTrialOfferId: M,
+                            applicationId: M,
+                            referralTrialOfferId: P,
                             returnRef: D
                         })
                     }
@@ -2150,7 +2151,7 @@
                             subscription_type: E.SubscriptionTypes.PREMIUM,
                             is_gift: L,
                             eligible_for_trial: null != R,
-                            application_id: y,
+                            application_id: M,
                             location_stack: S
                         }), (0, u.clearError)(), (0, l.clearPurchaseTokenAuthState)(), null == h || h(H), H && (null == I || I())
                     },

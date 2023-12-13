@@ -1947,8 +1947,8 @@
                         isSelected: c,
                         ...d
                     } = e, E = (0, u.default)([m.default], () => m.default.getProfileEffectById(l.id)), _ = (0, u.default)([f.default], () => {
-                        let e = f.default.getCategoryForProduct(l.skuId);
-                        return (0, C.isPremiumCollectiblesCategory)(e)
+                        let e = f.default.getProduct(l.skuId);
+                        return (0, C.isPremiumCollectiblesProduct)(e)
                     }), T = (0, u.default)([h.default], () => h.default.isItemViewed(l)), R = r.useRef(null), {
                         accessibilityLabel: M,
                         thumbnailPreviewSrc: x,
@@ -2130,16 +2130,15 @@
                         location: "useProfileEffectSections"
                     }),
                     i = (0, a.default)([u.default], () => u.default.purchases),
-                    [r, _] = (0, a.useStateFromStoresArray)([o.default], () => [o.default.categories, o.default.categorySkuIdsByProductSkuId]);
+                    [r, _] = (0, a.useStateFromStoresArray)([o.default], () => [o.default.categories, o.default.products]);
                 return (0, l.useMemo)(() => {
                     let e = (0, s.uniqBy)([...(0, d.getProfileEffectsFromPurchases)(i), ...(0, d.getProfileEffectsFromCategories)(r)], "id"),
                         l = e.reduce((e, n) => {
-                            let l = i.get(n.skuId),
-                                s = (0, d.isPremiumCollectiblesPurchase)(l);
-                            if (s) return e.premium_purchase.push(n), e;
-                            if (null != l) return e.purchase.push(n), e;
-                            let a = r.get(_[n.skuId]);
-                            if (!t && (0, d.isPremiumCollectiblesCategory)(a)) {
+                            let r = i.get(n.skuId),
+                                l = (0, d.isPremiumCollectiblesPurchase)(r);
+                            if (l) return e.premium_purchase.push(n), e;
+                            if (null != r) return e.purchase.push(n), e;
+                            if (!t && (0, d.isPremiumCollectiblesProduct)(_.get(n.skuId))) {
                                 let t = e.premium_purchase;
                                 return t.push(n), e
                             }
@@ -2171,7 +2170,7 @@
                         } = e;
                         return t.length > 0
                     })
-                }, [r, i, _, t, n])
+                }, [r, _, i, t, n])
             }
         },
         520497: function(e, t, n) {

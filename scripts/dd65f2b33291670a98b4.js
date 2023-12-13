@@ -1301,7 +1301,7 @@
                     disableCustomColor: L = !1
                 } = e, {
                     analyticsLocations: b
-                } = (0, o.default)(), T = (0, n.useStateFromStores)([f.default], () => f.default.getCategoryForProduct(t.skuId)), _ = s.useRef(null), I = (0, i.default)(_), {
+                } = (0, o.default)(), T = (0, n.useStateFromStores)([f.default], () => f.default.getCategory(t.categorySkuId)), _ = s.useRef(null), I = (0, i.default)(_), {
                     buttonColors: v
                 } = (0, C.default)(T), N = null == v || L ? void 0 : {
                     background: v.secondary.toHslString(),

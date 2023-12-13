@@ -2814,8 +2814,10 @@
                         if (null == t) return;
                         let s = (0, l.getAvatarDecorationsFromCategories)(t),
                             a = s.filter(e => {
-                                let t = n.default.getCategoryForProduct(e.skuId);
-                                return (0, l.isPremiumCollectiblesCategory)(t)
+                                let {
+                                    skuId: t
+                                } = e, s = n.default.getProduct(t);
+                                return (0, l.isPremiumCollectiblesProduct)(s)
                             });
                         return a[Math.floor(Math.random() * a.length)]
                     }, [t, e])
@@ -2843,8 +2845,10 @@
                         if (null == t) return;
                         let s = (0, l.getProfileEffectsFromCategories)(t),
                             a = s.filter(e => {
-                                let t = n.default.getCategoryForProduct(e.skuId);
-                                return (0, l.isPremiumCollectiblesCategory)(t)
+                                let {
+                                    skuId: t
+                                } = e, s = n.default.getProduct(t);
+                                return (0, l.isPremiumCollectiblesProduct)(s)
                             }).map(e => e.id);
                         return a[Math.floor(Math.random() * a.length)]
                     }, [t, e])
@@ -10664,7 +10668,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "0ab64280a494ae23effa44a6ba3af7ab3fcfbfd4", e.substring(0, 7)),
+                    S = (e = "c41ba613e2a018730fb0cf94a837dcc22feb583d", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10677,7 +10681,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "254038", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "254044", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
