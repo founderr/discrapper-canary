@@ -2416,7 +2416,7 @@
                             [T.bottom]: null == D && "bottom" === e.position
                         },
                         F = 490;
-                    null != D && (F = (null === (v = N.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (y = b.query) || void 0 === y ? void 0 : y.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245);
+                    null != D && (F = (null === (v = N.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (y = b.query) || void 0 === y ? void 0 : y.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
                     let G = (0, l.jsx)(f.default, {
                         id: R,
                         className: o(T.autocomplete, H),
