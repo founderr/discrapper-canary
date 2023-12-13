@@ -30401,7 +30401,6 @@
                     impressionName: l.ImpressionNames.GUILD_SETTINGS_BANS,
                     label: eF.default.Messages.BANS,
                     element: eS.default,
-                    type: c.ContentTypes.CUSTOM,
                     predicate: () => f
                 }, {
                     section: c.SectionTypes.DIVIDER,
