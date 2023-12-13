@@ -1675,7 +1675,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "253827"
+                        buildNumber: "253851"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
