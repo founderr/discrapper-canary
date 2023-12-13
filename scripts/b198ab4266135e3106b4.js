@@ -864,8 +864,8 @@
                 m = n("379304"),
                 S = n("534222"),
                 g = n("601131"),
-                N = n("47495"),
-                v = n("834052"),
+                v = n("47495"),
+                N = n("834052"),
                 A = n("715243"),
                 T = n("458574"),
                 h = n("963150"),
@@ -891,10 +891,10 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, d = t.isGuildStageVoice(), r = (0, i.useStateFromStores)([v.default], () => d ? v.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, T.default)(t), m = (0, S.useActiveEvent)(t.id), A = (0, g.default)(null == m ? void 0 : m.id, n, t), h = (0, R.default)(t, r), I = (0, p.useAddToFavoritesItem)(t), C = (0, p.useRemoveFromFavoritesItem)(t), U = (0, _.default)(t), L = (0, E.default)(t), y = (0, O.default)(t), G = (0, D.default)(t), F = (0, M.default)(t), P = (0, V.default)(t, n), k = (0, c.default)({
+                } = e, d = t.isGuildStageVoice(), r = (0, i.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, T.default)(t), m = (0, S.useActiveEvent)(t.id), A = (0, g.default)(null == m ? void 0 : m.id, n, t), h = (0, R.default)(t, r), I = (0, p.useAddToFavoritesItem)(t), C = (0, p.useRemoveFromFavoritesItem)(t), U = (0, _.default)(t), L = (0, E.default)(t), y = (0, O.default)(t), G = (0, D.default)(t), F = (0, M.default)(t), P = (0, V.default)(t, n), k = (0, c.default)({
                     id: t.id,
                     label: w.default.Messages.COPY_ID_CHANNEL
-                }), j = (0, x.default)(t), H = (0, o.default)(t), B = (0, N.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuFavorite"), Y = (0, b.default)(t);
+                }), j = (0, x.default)(t), H = (0, o.default)(t), B = (0, v.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuFavorite"), Y = (0, b.default)(t);
                 return (0, a.jsxs)(s.Menu, {
                     navId: "channel-context",
                     onClose: u.closeContextMenu,
@@ -925,10 +925,10 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, d = t.isGuildStageVoice(), r = (0, i.useStateFromStores)([v.default], () => d ? v.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, U.default)(t), _ = (0, T.default)(t), E = (0, S.useActiveEvent)(t.id), P = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, R.default)(t, r), j = (0, p.useAddToFavoritesItem)(t), H = (0, p.useRemoveFromFavoritesItem)(t), B = (0, O.default)(t), Y = (0, D.default)(t), W = (0, M.default)(t), q = (0, C.default)(t, n, r), K = (0, V.default)(t, n), Q = (0, G.default)(t, n), Z = (0, F.default)(t, n.id), X = (0, A.default)(t, n), J = (0, h.default)(t, n), z = (0, I.default)(t), $ = (0, c.default)({
+                } = e, d = t.isGuildStageVoice(), r = (0, i.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, U.default)(t), _ = (0, T.default)(t), E = (0, S.useActiveEvent)(t.id), P = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, R.default)(t, r), j = (0, p.useAddToFavoritesItem)(t), H = (0, p.useRemoveFromFavoritesItem)(t), B = (0, O.default)(t), Y = (0, D.default)(t), W = (0, M.default)(t), q = (0, C.default)(t, n, r), K = (0, V.default)(t, n), Q = (0, G.default)(t, n), Z = (0, F.default)(t, n.id), X = (0, A.default)(t, n), J = (0, h.default)(t, n), z = (0, I.default)(t), $ = (0, c.default)({
                     id: t.id,
                     label: w.default.Messages.COPY_ID_CHANNEL
-                }), ee = (0, x.default)(t), et = (0, o.default)(t), en = (0, y.default)(t), ea = (0, m.default)(t), ei = (0, L.default)(t), es = (0, N.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuNormal"), eu = (0, b.default)(t);
+                }), ee = (0, x.default)(t), et = (0, o.default)(t), en = (0, y.default)(t), ea = (0, m.default)(t), ei = (0, L.default)(t), es = (0, v.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuNormal"), eu = (0, b.default)(t);
                 return (0, a.jsxs)(s.Menu, {
                     navId: "channel-context",
                     onClose: u.closeContextMenu,
@@ -1051,33 +1051,33 @@
                         muted: t
                     })
                 }
-                let N = E.default.Messages.MUTE_CHANNEL_GENERIC,
-                    v = E.default.Messages.UNMUTE_CHANNEL_GENERIC;
+                let v = E.default.Messages.MUTE_CHANNEL_GENERIC,
+                    N = E.default.Messages.UNMUTE_CHANNEL_GENERIC;
                 switch (e.type) {
                     case p.ChannelTypes.GUILD_CATEGORY:
-                        N = E.default.Messages.MUTE_CATEGORY, v = E.default.Messages.UNMUTE_CATEGORY;
+                        v = E.default.Messages.MUTE_CATEGORY, N = E.default.Messages.UNMUTE_CATEGORY;
                         break;
                     case p.ChannelTypes.GROUP_DM:
-                        N = E.default.Messages.MUTE_CONVERSATION, v = E.default.Messages.UNMUTE_CONVERSATION;
+                        v = E.default.Messages.MUTE_CONVERSATION, N = E.default.Messages.UNMUTE_CONVERSATION;
                         break;
                     case p.ChannelTypes.DM:
-                        N = E.default.Messages.MUTE_CHANNEL.format({
+                        v = E.default.Messages.MUTE_CHANNEL.format({
                             name: _
-                        }), v = E.default.Messages.UNMUTE_CHANNEL.format({
+                        }), N = E.default.Messages.UNMUTE_CHANNEL.format({
                             name: _
                         });
                         break;
                     default:
-                        N = E.default.Messages.MUTE_CHANNEL_GENERIC, v = E.default.Messages.UNMUTE_CHANNEL_GENERIC
+                        v = E.default.Messages.MUTE_CHANNEL_GENERIC, N = E.default.Messages.UNMUTE_CHANNEL_GENERIC
                 }
                 return n ? (0, a.jsx)(l.MenuItem, {
                     id: "unmute-channel",
-                    label: v,
+                    label: N,
                     subtext: s,
                     action: () => g(!1)
                 }) : (0, a.jsx)(l.MenuItem, {
                     id: "mute-channel",
-                    label: N,
+                    label: v,
                     action: () => g(!0),
                     children: m().map(n => {
                         let {
@@ -1725,19 +1725,19 @@
                     voiceChannelActivityNotifsEnabled: n
                 } = u.useExperiment({
                     location: "useVoiceActivityNotificationSettingsExperiment",
-                    guildId: null !== (t = e.getGuildId()) && void 0 !== t ? t : ""
+                    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : ""
                 }, {
-                    disable: e.type !== i.ChannelTypes.GUILD_VOICE,
+                    disable: (null == e ? void 0 : e.type) !== i.ChannelTypes.GUILD_VOICE,
                     autoTrackExposure: !1
                 }), {
                     enabled: a
                 } = s.useExperiment({
                     location: "useVoiceActivityNotificationSettingsExperiment"
                 }, {
-                    disable: e.type !== i.ChannelTypes.GUILD_VOICE || !n,
+                    disable: (null == e ? void 0 : e.type) !== i.ChannelTypes.GUILD_VOICE || !n,
                     autoTrackExposure: !0
                 });
-                return e.type === i.ChannelTypes.GUILD_VOICE && n && a
+                return (null == e ? void 0 : e.type) === i.ChannelTypes.GUILD_VOICE && n && a
             }
         },
         675961: function(e, t, n) {
@@ -1940,10 +1940,10 @@
                     return g
                 },
                 inviteUserToStage: function() {
-                    return N
+                    return v
                 },
                 audienceAckRequestToSpeak: function() {
-                    return v
+                    return N
                 },
                 moveSelfToAudience: function() {
                     return A
@@ -1997,7 +1997,7 @@
                 })
             }
 
-            function N(e, t) {
+            function v(e, t) {
                 let n = e.getGuildId();
                 return i(null != n, "This channel cannot be guildless."), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n, t),
@@ -2009,7 +2009,7 @@
                 })
             }
 
-            function v(e, t) {
+            function N(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     a = null == e ? void 0 : e.getGuildId();
                 i(null != a, "This channel cannot be guildless.");
@@ -2086,7 +2086,7 @@
                 let i = r.default.getVoiceChannelId() === e.id;
                 !i && (0, p.connectToStage)(e);
                 let s = await (0, E.startStageInstance)(e.id, t, n, a);
-                return v(e, !1, !0), s
+                return N(e, !1, !0), s
             }
             async function O(e, t, n) {
                 if ("" === t) return;

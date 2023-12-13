@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["12180"], {
+    ["28192"], {
         717837: function(e, t, n) {
             "use strict";
             e.exports = function(e) {
@@ -14,7 +14,7 @@
             "use strict";
             e.exports = function(e) {
                 var t, n;
-                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), E.test(e) ? e = e.substr(0, e.length - 2) : g.test(e) && (e = e.substr(0, e.length - 1)), (n = x.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = _.exec(e)) && d.test(n[1]) && (e = n[1], b.test(e) ? e += "e" : y.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = v.exec(e)) && d.test(n[1]) && (e = n[1] + "i"), (n = C.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = N.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = j.exec(e)) ? c.test(n[1]) && (e = n[1]) : (n = h.exec(e)) && c.test(n[1]) && (e = n[1]), (n = m.exec(e)) && (c.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && c.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
+                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), E.test(e) ? e = e.substr(0, e.length - 2) : x.test(e) && (e = e.substr(0, e.length - 1)), (n = g.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = v.exec(e)) && d.test(n[1]) && (e = n[1], b.test(e) ? e += "e" : y.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = _.exec(e)) && d.test(n[1]) && (e = n[1] + "i"), (n = C.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = I.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = S.exec(e)) ? c.test(n[1]) && (e = n[1]) : (n = h.exec(e)) && c.test(n[1]) && (e = n[1]), (n = m.exec(e)) && (c.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && c.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
             };
             var i = {
                     ational: "ate",
@@ -58,17 +58,17 @@
                 f = RegExp("^" + l + s + "[^aeiouwxy]$"),
                 p = /ll$/,
                 m = /^(.+?)e$/,
-                v = /^(.+?)y$/,
+                _ = /^(.+?)y$/,
                 h = /^(.+?(s|t))(ion)$/,
-                _ = /^(.+?)(ed|ing)$/,
+                v = /^(.+?)(ed|ing)$/,
                 b = /(at|bl|iz)$/,
-                x = /^(.+?)eed$/,
-                g = /^.+?[^s]s$/,
+                g = /^(.+?)eed$/,
+                x = /^.+?[^s]s$/,
                 E = /^.+?(ss|i)es$/,
                 y = /([^aeiouylsz])\1$/,
                 C = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
-                N = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-                j = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
+                I = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+                S = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
         },
         949041: function(e, t, n) {
             "use strict";
@@ -256,6 +256,24 @@
             var i = n("884691");
             let r = i.createContext(void 0);
             var s = r
+        },
+        177589: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return u
+                }
+            });
+            var i = n("429928"),
+                r = n("36539"),
+                s = n("502651"),
+                l = n("671071"),
+                a = n("322631"),
+                o = n("947297");
+
+            function u(e) {
+                return (0, r.default)(e) ? o.XBOX_APPLICATION_ID_PREFIX + e.name : (0, i.default)(e) && null != e.party && null != e.party.id ? l.SpotifyApplication.id : (0, s.default)(e) && null != e.url ? a.TWITCH_APPLICATION_ID_PREFIX + e.url : null != e.application_id ? e.application_id : null
+            }
         },
         232268: function(e, t, n) {
             "use strict";
@@ -488,6 +506,51 @@
                     }
                 }
         },
+        322631: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                TWITCH_APPLICATION_ID_PREFIX: function() {
+                    return a
+                },
+                default: function() {
+                    return i
+                }
+            });
+            var i, r = n("376556"),
+                s = n("653047"),
+                l = n("782340");
+            let a = "twitch:";
+            i = class extends s.default {
+                getIconURL() {
+                    return r.default.get("twitch").icon.lightPNG
+                }
+                constructor(e) {
+                    super(e), this.id = "".concat(a).concat(e.url), this.name = l.default.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH
+                }
+            }
+        },
+        947297: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                XBOX_APPLICATION_ID_PREFIX: function() {
+                    return l
+                },
+                default: function() {
+                    return i
+                }
+            });
+            var i, r = n("376556"),
+                s = n("653047");
+            let l = "xbox:";
+            i = class extends s.default {
+                getIconURL() {
+                    return r.default.get("xbox").icon.lightPNG
+                }
+                constructor(e) {
+                    super(e), this.id = "".concat(l).concat(e.name), this.name = e.name
+                }
+            }
+        },
         476108: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -542,6 +605,71 @@
                         path: t
                     } = e;
                     return o.lastViewedNonVoicePath = t, !0
+                }
+            })
+        },
+        843823: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return d
+                }
+            }), n("222007");
+            var i = n("446674"),
+                r = n("913144"),
+                s = n("27618");
+            let l = !1,
+                a = Object.freeze({
+                    userAffinities: [],
+                    affinityUserIds: new Set,
+                    lastFetched: 0
+                }),
+                o = {
+                    ...a
+                };
+
+            function u() {
+                o.affinityUserIds = new Set(o.userAffinities.map(e => e.user_id).filter(e => !s.default.isBlocked(e)))
+            }
+            class c extends i.default.PersistedStore {
+                initialize(e) {
+                    this.waitFor(s.default), null != e && (o.userAffinities = e.userAffinities, o.affinityUserIds = new Set(e.affinityUserIds), o.lastFetched = e.lastFetched), this.syncWith([s.default], u)
+                }
+                needsRefresh() {
+                    return Date.now() - o.lastFetched > 864e5
+                }
+                getFetching() {
+                    return l
+                }
+                getState() {
+                    return o
+                }
+                getUserAffinities() {
+                    return o.userAffinities
+                }
+                getUserAffinitiesUserIds() {
+                    return o.affinityUserIds
+                }
+            }
+            c.displayName = "UserAffinitiesStore", c.persistKey = "UserAffinitiesStore", c.migrations = [e => null];
+            var d = new c(r.default, {
+                LOAD_USER_AFFINITIES_SUCCESS: function(e) {
+                    var t;
+                    let {
+                        affinities: n
+                    } = e;
+                    o.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : [], o.lastFetched = Date.now(), u(), l = !1
+                },
+                LOAD_USER_AFFINITIES: function() {
+                    l = !0
+                },
+                LOAD_USER_AFFINITIES_FAILURE: function() {
+                    l = !1
+                },
+                LOGOUT: function() {
+                    o = {
+                        ...a
+                    }
                 }
             })
         },
@@ -856,7 +984,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 Icon: function() {
-                    return v
+                    return _
                 },
                 Divider: function() {
                     return h
@@ -877,7 +1005,7 @@
                 f = n("772280"),
                 p = n("587974"),
                 m = n("133934");
-            let v = e => {
+            let _ = e => {
                     let {
                         className: t,
                         iconClassName: n,
@@ -888,20 +1016,20 @@
                         color: c,
                         foreground: d,
                         background: f,
-                        icon: v,
+                        icon: _,
                         onClick: h,
-                        onContextMenu: _,
+                        onContextMenu: v,
                         tooltip: b = null,
-                        tooltipColor: x,
-                        tooltipPosition: g = "bottom",
+                        tooltipColor: g,
+                        tooltipPosition: x = "bottom",
                         hideOnClick: E = !0,
                         role: y,
                         "aria-label": C,
-                        "aria-hidden": N,
-                        "aria-checked": j,
-                        "aria-expanded": S,
-                        "aria-haspopup": T
-                    } = e, z = (0, i.jsx)(v, {
+                        "aria-hidden": I,
+                        "aria-checked": S,
+                        "aria-expanded": A,
+                        "aria-haspopup": N
+                    } = e, T = (0, i.jsx)(_, {
                         x: 0,
                         y: 0,
                         width: 24,
@@ -910,22 +1038,22 @@
                         foreground: null != d ? d : void 0,
                         background: null != f ? f : void 0,
                         color: c
-                    }), R = C;
-                    return null == R && "string" == typeof b && (R = b), (0, i.jsx)(u.Tooltip, {
+                    }), j = C;
+                    return null == j && "string" == typeof b && (j = b), (0, i.jsx)(u.Tooltip, {
                         text: b,
-                        color: x,
-                        position: g,
+                        color: g,
+                        position: x,
                         hideOnClick: E,
                         children: e => {
                             let {
                                 onMouseEnter: b,
-                                onMouseLeave: x,
-                                onFocus: g,
+                                onMouseLeave: g,
+                                onFocus: x,
                                 onBlur: E
                             } = e;
                             return null == h ? (0, i.jsx)("div", {
                                 className: l(t, [m.iconWrapper]),
-                                children: (0, i.jsx)(v, {
+                                children: (0, i.jsx)(_, {
                                     x: 0,
                                     y: 0,
                                     width: 24,
@@ -934,19 +1062,19 @@
                                     foreground: null != d ? d : void 0,
                                     background: null != f ? f : void 0,
                                     color: c,
-                                    "aria-hidden": N,
+                                    "aria-hidden": I,
                                     onMouseEnter: b,
-                                    onMouseLeave: x,
-                                    onFocus: g,
+                                    onMouseLeave: g,
+                                    onFocus: x,
                                     onBlur: E
                                 })
                             }) : (0, i.jsxs)(u.Clickable, {
                                 tag: "div",
                                 onClick: a ? void 0 : h,
-                                onContextMenu: a ? void 0 : _,
+                                onContextMenu: a ? void 0 : v,
                                 onMouseEnter: b,
-                                onMouseLeave: x,
-                                onFocus: g,
+                                onMouseLeave: g,
+                                onFocus: x,
                                 onBlur: E,
                                 className: l(t, {
                                     [m.iconWrapper]: !0,
@@ -954,16 +1082,16 @@
                                     [m.selected]: s
                                 }),
                                 role: y,
-                                "aria-label": R,
-                                "aria-hidden": N,
-                                "aria-checked": j,
-                                "aria-haspopup": T,
-                                "aria-expanded": S,
+                                "aria-label": j,
+                                "aria-hidden": I,
+                                "aria-checked": S,
+                                "aria-haspopup": N,
+                                "aria-expanded": A,
                                 tabIndex: a || null == h ? -1 : 0,
                                 children: [o ? (0, i.jsx)(p.default, {
                                     mask: p.default.Masks.HEADER_BAR_BADGE,
-                                    children: z
-                                }) : z, o ? (0, i.jsx)("span", {
+                                    children: T
+                                }) : T, o ? (0, i.jsx)("span", {
                                     className: m.iconBadge
                                 }) : null, r]
                             })
@@ -978,7 +1106,7 @@
                         className: l(m.divider, t)
                     })
                 },
-                _ = e => {
+                v = e => {
                     let {
                         className: t,
                         innerClassName: n,
@@ -986,24 +1114,24 @@
                         childrenBottom: d,
                         toolbar: f,
                         onDoubleClick: p,
-                        "aria-label": v,
+                        "aria-label": _,
                         "aria-labelledby": h,
-                        role: _,
+                        role: v,
                         scrollable: b,
-                        transparent: x = !1
-                    } = e, g = r.useRef(null), E = r.useContext(c.default);
+                        transparent: g = !1
+                    } = e, x = r.useRef(null), E = r.useContext(c.default);
                     return (0, i.jsx)("section", {
                         className: l(t, m.container, {
-                            [m.themed]: !x,
-                            [m.transparent]: x,
+                            [m.themed]: !g,
+                            [m.transparent]: g,
                             [m.themedMobile]: o.isMobile
                         }),
-                        "aria-label": v,
+                        "aria-label": _,
                         "aria-labelledby": h,
-                        role: _,
-                        ref: g,
+                        role: v,
+                        ref: x,
                         children: (0, i.jsxs)(u.FocusRingScope, {
-                            containerRef: g,
+                            containerRef: x,
                             children: [(0, i.jsxs)("div", {
                                 className: m.upperContainer,
                                 children: [(0, i.jsxs)("div", {
@@ -1023,7 +1151,7 @@
                         })
                     })
                 };
-            _.Icon = v, _.Title = e => {
+            v.Icon = _, v.Title = e => {
                 let {
                     className: t,
                     wrapperClassName: n,
@@ -1053,7 +1181,7 @@
                     onContextMenu: s,
                     children: f
                 })
-            }, _.Divider = h, _.Caret = function(e) {
+            }, v.Divider = h, v.Caret = function(e) {
                 let {
                     direction: t = "right"
                 } = e;
@@ -1063,7 +1191,7 @@
                     className: m.caret
                 })
             };
-            var b = _
+            var b = v
         },
         353386: function(e, t, n) {
             "use strict";

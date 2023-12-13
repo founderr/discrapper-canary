@@ -7,10 +7,10 @@
                     return i
                 },
                 categoryExpand: function() {
-                    return s
+                    return l
                 },
                 categoryCollapseAll: function() {
-                    return l
+                    return s
                 },
                 categoryExpandAll: function() {
                     return u
@@ -25,14 +25,14 @@
                 })
             }
 
-            function s(e) {
+            function l(e) {
                 a.default.dispatch({
                     type: "CATEGORY_EXPAND",
                     id: e
                 })
             }
 
-            function l(e) {
+            function s(e) {
                 a.default.dispatch({
                     type: "CATEGORY_COLLAPSE_ALL",
                     guildId: e
@@ -50,19 +50,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return l
                 }
             });
             var a = n("37983");
             n("884691");
             var i = n("685665");
 
-            function s(e, t) {
+            function l(e, t) {
                 return function(n) {
                     let {
-                        AnalyticsLocationProvider: s
+                        AnalyticsLocationProvider: l
                     } = (0, i.default)(t);
-                    return (0, a.jsx)(s, {
+                    return (0, a.jsx)(l, {
                         children: (0, a.jsx)(e, {
                             ...n
                         })
@@ -74,14 +74,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return U
+                    return v
                 }
             });
             var a = n("37983");
             n("884691");
             var i = n("77078"),
-                s = n("272030"),
-                l = n("158534"),
+                l = n("272030"),
+                s = n("158534"),
                 u = n("812204"),
                 r = n("861370"),
                 o = n("20209"),
@@ -104,19 +104,19 @@
                 let {
                     channel: t,
                     onSelect: n
-                } = e, l = (0, M.default)(t), u = (0, A.default)(t), o = (0, S.default)(t), E = (0, _.default)(t), g = (0, f.default)(t), C = (0, d.default)(t), L = (0, N.default)(t), h = (0, r.default)({
+                } = e, s = (0, M.default)(t), u = (0, A.default)(t), o = (0, S.default)(t), E = (0, _.default)(t), g = (0, f.default)(t), C = (0, d.default)(t), L = (0, N.default)(t), h = (0, r.default)({
                     id: t.id,
                     label: O.default.Messages.COPY_ID_CHANNEL
-                }), p = (0, c.useShouldUseNewNotificationSystem)("ChannelCategoryFavoritesMenu"), U = (0, T.default)(t);
+                }), p = (0, c.useShouldUseNewNotificationSystem)("ChannelCategoryFavoritesMenu"), v = (0, T.default)(t);
                 return (0, a.jsxs)(i.Menu, {
                     navId: "channel-context",
-                    onClose: s.closeContextMenu,
+                    onClose: l.closeContextMenu,
                     "aria-label": O.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: n,
                     children: [(0, a.jsx)(i.MenuGroup, {
-                        children: l
+                        children: s
                     }), (0, a.jsxs)(i.MenuGroup, {
-                        children: [u, p ? U : o]
+                        children: [u, p ? v : o]
                     }), (0, a.jsxs)(i.MenuGroup, {
                         children: [E, g, C]
                     }), (0, a.jsx)(i.MenuGroup, {
@@ -131,16 +131,16 @@
                 let {
                     channel: t,
                     guild: n,
-                    onSelect: l
-                } = e, u = (0, M.default)(t), o = (0, A.default)(t), N = (0, S.default)(t), h = (0, _.default)(t), p = (0, f.default)(t), U = (0, C.default)(t), v = (0, d.default)(t), I = (0, E.default)(t, n), m = (0, g.default)(t), y = (0, r.default)({
+                    onSelect: s
+                } = e, u = (0, M.default)(t), o = (0, A.default)(t), N = (0, S.default)(t), h = (0, _.default)(t), p = (0, f.default)(t), v = (0, C.default)(t), U = (0, d.default)(t), I = (0, E.default)(t, n), m = (0, g.default)(t), y = (0, r.default)({
                     id: t.id,
                     label: O.default.Messages.COPY_ID_CHANNEL
                 }), R = (0, L.default)(t), F = (0, c.useShouldUseNewNotificationSystem)("ChannelCategoryNormalMenu"), G = (0, T.default)(t);
                 return (0, a.jsxs)(i.Menu, {
                     navId: "channel-context",
-                    onClose: s.closeContextMenu,
+                    onClose: l.closeContextMenu,
                     "aria-label": O.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-                    onSelect: l,
+                    onSelect: s,
                     children: [(0, a.jsx)(i.MenuGroup, {
                         children: u
                     }, "mark-as-read"), (0, a.jsxs)(i.MenuGroup, {
@@ -148,13 +148,13 @@
                     }, "channel-actions"), (0, a.jsxs)(i.MenuGroup, {
                         children: [o, F ? G : N]
                     }, "notifications"), (0, a.jsxs)(i.MenuGroup, {
-                        children: [U, v, I, m]
+                        children: [v, U, I, m]
                     }, "admin-actions"), (0, a.jsx)(i.MenuGroup, {
                         children: y
                     }, "developer-actions")]
                 })
             }
-            var U = (0, l.default)(function(e) {
+            var v = (0, s.default)(function(e) {
                 let t = (0, o.default)();
                 return t ? (0, a.jsx)(h, {
                     ...e
@@ -173,8 +173,8 @@
             var a = n("37983");
             n("884691");
             var i = n("446674"),
-                s = n("77078"),
-                l = n("820542"),
+                l = n("77078"),
+                s = n("820542"),
                 u = n("870691"),
                 r = n("42203"),
                 o = n("49111"),
@@ -186,10 +186,10 @@
                         n = Object.values(t).filter(e => e.type === o.ChannelTypes.GUILD_CATEGORY);
                     return 0 === n.length || n.every(e => u.default.isCollapsed(e.id))
                 });
-                return t ? null : (0, a.jsx)(s.MenuItem, {
+                return t ? null : (0, a.jsx)(l.MenuItem, {
                     id: "collapse-all-categories",
                     label: d.default.Messages.COLLAPSE_ALL_CATEGORIES,
-                    action: () => (0, l.categoryCollapseAll)(e.guild_id)
+                    action: () => (0, s.categoryCollapseAll)(e.guild_id)
                 })
             }
         },
@@ -203,17 +203,17 @@
             var a = n("37983");
             n("884691");
             var i = n("446674"),
-                s = n("77078"),
-                l = n("820542"),
+                l = n("77078"),
+                s = n("820542"),
                 u = n("870691"),
                 r = n("782340");
 
             function o(e) {
                 let t = (0, i.useStateFromStores)([u.default], () => u.default.isCollapsed(e.id), [e.id]);
-                return (0, a.jsx)(s.MenuCheckboxItem, {
+                return (0, a.jsx)(l.MenuCheckboxItem, {
                     id: "collapse-category",
                     label: r.default.Messages.COLLAPSE_CATEGORY,
-                    action: () => t ? (0, l.categoryExpand)(e.id) : (0, l.categoryCollapse)(e.id),
+                    action: () => t ? (0, s.categoryExpand)(e.id) : (0, s.categoryCollapse)(e.id),
                     checked: t
                 })
             }
@@ -228,17 +228,17 @@
             var a = n("37983");
             n("884691");
             var i = n("446674"),
-                s = n("77078"),
-                l = n("957255"),
+                l = n("77078"),
+                s = n("957255"),
                 u = n("49111"),
                 r = n("782340");
 
             function o(e, t) {
                 let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
-                    d = (0, i.useStateFromStores)([l.default], () => l.default.can(u.Permissions.MANAGE_CHANNELS, e), [e]);
+                    d = (0, i.useStateFromStores)([s.default], () => s.default.can(u.Permissions.MANAGE_CHANNELS, e), [e]);
                 if (__OVERLAY__ || !d) return null;
                 let c = () => {
-                    (0, s.openModalLazy)(async () => {
+                    (0, l.openModalLazy)(async () => {
                         let {
                             default: t
                         } = await n.el("581354").then(n.bind(n, "581354"));
@@ -252,13 +252,13 @@
                 };
                 switch (o) {
                     case u.ChannelTypes.GUILD_TEXT:
-                        return (0, a.jsx)(s.MenuItem, {
+                        return (0, a.jsx)(l.MenuItem, {
                             id: "create-text-channel",
                             label: r.default.Messages.CREATE_TEXT_CHANNEL,
                             action: c
                         });
                     case u.ChannelTypes.GUILD_VOICE:
-                        return (0, a.jsx)(s.MenuItem, {
+                        return (0, a.jsx)(l.MenuItem, {
                             id: "create-voice-channel",
                             label: r.default.Messages.CREATE_VOICE_CHANNEL,
                             action: c
@@ -278,14 +278,14 @@
             var a = n("37983");
             n("884691");
             var i = n("77078"),
-                s = n("200008"),
-                l = n("782340");
+                l = n("200008"),
+                s = n("782340");
 
             function u(e) {
                 return (0, a.jsx)(i.MenuItem, {
                     id: "delete-channel",
-                    label: l.default.Messages.DELETE_CATEGORY,
-                    subtext: l.default.Messages.DELETE_CATEGORY_SUBTEXT,
+                    label: s.default.Messages.DELETE_CATEGORY,
+                    subtext: s.default.Messages.DELETE_CATEGORY_SUBTEXT,
                     color: "danger",
                     action: () => (0, i.openModalLazy)(async () => {
                         let {
@@ -294,7 +294,7 @@
                         return n => (0, a.jsx)(t, {
                             ...n,
                             onConfirm: () => {
-                                n.onClose(), (0, s.removeFavoriteCategory)(e.id)
+                                n.onClose(), (0, l.removeFavoriteCategory)(e.id)
                             },
                             channel: e
                         })
@@ -312,8 +312,8 @@
             var a = n("37983");
             n("884691");
             var i = n("446674"),
-                s = n("77078"),
-                l = n("18054"),
+                l = n("77078"),
+                s = n("18054"),
                 u = n("957255"),
                 r = n("49111"),
                 o = n("782340");
@@ -330,10 +330,10 @@
                     canManageWebhooks: u.default.can(r.Permissions.MANAGE_WEBHOOKS, e),
                     canAccessChannel: u.default.can(e.accessPermissions, e)
                 }), [e]);
-                return !__OVERLAY__ && c && (t || n || d) ? (0, a.jsx)(s.MenuItem, {
+                return !__OVERLAY__ && c && (t || n || d) ? (0, a.jsx)(l.MenuItem, {
                     id: "edit-channel",
                     label: e.type === r.ChannelTypes.GUILD_CATEGORY ? o.default.Messages.EDIT_CATEGORY : o.default.Messages.EDIT_CHANNEL,
-                    action: () => l.default.open(e.id)
+                    action: () => s.default.open(e.id)
                 }) : null
             }
         },
@@ -347,8 +347,8 @@
             var a = n("37983");
             n("884691");
             var i = n("446674"),
-                s = n("77078"),
-                l = n("267363"),
+                l = n("77078"),
+                s = n("267363"),
                 u = n("680986"),
                 r = n("689275"),
                 o = n("755624"),
@@ -385,11 +385,11 @@
                         }, [e]);
                     return e.isForumLikeChannel() ? t > 0 : n
                 }(e);
-                return (0, a.jsx)(s.MenuItem, {
+                return (0, a.jsx)(l.MenuItem, {
                     id: "mark-channel-read",
                     label: E.default.Messages.MARK_AS_READ,
                     action: function() {
-                        (0, l.ackChannel)(e)
+                        (0, s.ackChannel)(e)
                     },
                     disabled: !t
                 })
@@ -408,8 +408,8 @@
             var a = n("37983");
             n("884691");
             var i = n("866227"),
-                s = n.n(i),
-                l = n("446674"),
+                l = n.n(i),
+                s = n("446674"),
                 u = n("77078"),
                 r = n("820542"),
                 o = n("519705"),
@@ -439,7 +439,7 @@
                     label: N.default.Messages.MUTE_DURATION_ALWAYS
                 }],
                 C = e => {
-                    let t = e > 0 ? s().add(e, "second").toISOString() : null;
+                    let t = e > 0 ? l().add(e, "second").toISOString() : null;
                     return {
                         muted: !0,
                         mute_config: {
@@ -450,7 +450,7 @@
                 };
 
             function M(e, t) {
-                let [n, i] = (0, l.useStateFromStoresArray)([c.default], () => [c.default.isChannelMuted(e.guild_id, e.id), c.default.getChannelMuteConfig(e.guild_id, e.id)]), s = (0, d.useMutedUntilText)(i), E = (0, f.default)(e, !0);
+                let [n, i] = (0, s.useStateFromStoresArray)([c.default], () => [c.default.isChannelMuted(e.guild_id, e.id), c.default.getChannelMuteConfig(e.guild_id, e.id)]), l = (0, d.useMutedUntilText)(i), E = (0, f.default)(e, !0);
 
                 function M(t) {
                     t && e.type === _.ChannelTypes.GUILD_CATEGORY && (0, r.categoryCollapse)(e.id), o.default.updateChannelOverrideSettings(e.guild_id, e.id, {
@@ -479,7 +479,7 @@
                 return n ? (0, a.jsx)(u.MenuItem, {
                     id: "unmute-channel",
                     label: S,
-                    subtext: s,
+                    subtext: l,
                     action: () => M(!1)
                 }) : (0, a.jsx)(u.MenuItem, {
                     id: "mute-channel",
@@ -488,11 +488,11 @@
                     children: g().map(n => {
                         let {
                             value: i,
-                            label: s
+                            label: l
                         } = n;
                         return (0, a.jsx)(u.MenuItem, {
                             id: "".concat(i),
-                            label: s,
+                            label: l,
                             action: () => (function(n) {
                                 e.type === _.ChannelTypes.GUILD_CATEGORY && (0, r.categoryCollapse)(e.id);
                                 let a = C(n);
@@ -516,8 +516,8 @@
             var a = n("37983");
             n("884691");
             var i = n("446674"),
-                s = n("77078"),
-                l = n("519705"),
+                l = n("77078"),
+                s = n("519705"),
                 u = n("721281"),
                 r = n("282109"),
                 o = n("49111"),
@@ -586,18 +586,18 @@
                     C = c(e, g);
                 return null == C ? null : (0, a.jsxs)(a.Fragment, {
                     children: [e.isForumLikeChannel() ? (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(s.MenuCheckboxItem, {
+                        children: [(0, a.jsx)(l.MenuCheckboxItem, {
                             id: "new-forum-threads-created",
                             label: d.default.Messages.FORUM_NEW_POSTS_CREATED,
                             checked: _,
-                            action: () => l.default.setForumThreadsCreated(e, !_)
-                        }), (0, a.jsx)(s.MenuSeparator, {})]
+                            action: () => s.default.setForumThreadsCreated(e, !_)
+                        }), (0, a.jsx)(l.MenuSeparator, {})]
                     }) : null, C.map(i => {
                         let {
                             setting: u,
                             label: r
                         } = i;
-                        return (0, a.jsx)(s.MenuRadioItem, {
+                        return (0, a.jsx)(l.MenuRadioItem, {
                             group: "channel-notifications",
                             id: "".concat(u),
                             label: r,
@@ -617,7 +617,7 @@
                             }(f, e, g) : void 0,
                             action: () => {
                                 var e;
-                                return e = u, void(null != t && l.default.updateChannelOverrideSettings(t, n, {
+                                return e = u, void(null != t && s.default.updateChannelOverrideSettings(t, n, {
                                     message_notifications: e
                                 }))
                             },
@@ -629,7 +629,7 @@
 
             function _(e) {
                 var t, n;
-                let l = f(e),
+                let s = f(e),
                     _ = (0, i.useStateFromStores)([r.default], () => r.default.resolvedMessageNotifications(e), [e]),
                     E = (0, i.useStateFromStores)([r.default], () => r.default.getChannelOverrides(e.guild_id)[e.id], [e.guild_id, e.id]),
                     N = null == E ? o.UserNotificationSettings.NULL : E.message_notifications,
@@ -640,11 +640,11 @@
                         } = e;
                         return t === _
                     })) || void 0 === t ? void 0 : t.label;
-                return null != l ? (0, a.jsx)(s.MenuItem, {
+                return null != s ? (0, a.jsx)(l.MenuItem, {
                     id: "channel-notifications",
                     label: d.default.Messages.NOTIFICATION_SETTINGS,
                     subtext: C,
-                    children: l
+                    children: s
                 }) : null
             }
         },
@@ -658,8 +658,8 @@
             var a = n("37983");
             n("884691");
             var i = n("446674"),
-                s = n("77078"),
-                l = n("498139"),
+                l = n("77078"),
+                s = n("498139"),
                 u = n("629220"),
                 r = n("512395"),
                 o = n("282109"),
@@ -669,7 +669,7 @@
             function f(e) {
                 let {
                     isFavoritesPerk: t
-                } = (0, l.useFavoritesServerExperiment)("useChannelOptInItems"), n = (0, r.useOptInEnabledForGuild)(e.guild_id), f = (0, i.useStateFromStores)([o.default], () => o.default.isChannelOptedIn(e.guild_id, e.id)), _ = (0, i.useStateFromStores)([o.default], () => null != e.parent_id && o.default.isChannelOptedIn(e.guild_id, e.parent_id)), E = (0, i.useStateFromStores)([o.default], () => o.default.isFavorite(e.guild_id, e.id)), N = () => {
+                } = (0, s.useFavoritesServerExperiment)("useChannelOptInItems"), n = (0, r.useOptInEnabledForGuild)(e.guild_id), f = (0, i.useStateFromStores)([o.default], () => o.default.isChannelOptedIn(e.guild_id, e.id)), _ = (0, i.useStateFromStores)([o.default], () => null != e.parent_id && o.default.isChannelOptedIn(e.guild_id, e.parent_id)), E = (0, i.useStateFromStores)([o.default], () => o.default.isFavorite(e.guild_id, e.id)), N = () => {
                     (0, u.setOptInChannel)(e.guild_id, e.id, !f, {
                         section: d.AnalyticsSections.CONTEXT_MENU
                     })
@@ -679,7 +679,7 @@
                     })
                 };
                 if (!n || e.isThread()) return null;
-                if (e.isCategory()) return (0, a.jsx)(s.MenuItem, {
+                if (e.isCategory()) return (0, a.jsx)(l.MenuItem, {
                     id: "opt-into-category",
                     label: f ? c.default.Messages.CHANNEL_OPT_OUT : c.default.Messages.CHANNEL_OPT_IN,
                     action: () => N()
@@ -687,7 +687,7 @@
                 let C = E ? c.default.Messages.REMOVE_FAVORITE : c.default.Messages.ADD_FAVORITE,
                     M = E ? c.default.Messages.UNPIN_CHANNEL : c.default.Messages.PIN_CHANNEL_TO_TOP;
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(s.MenuItem, {
+                    children: [(0, a.jsx)(l.MenuItem, {
                         id: "opt-in-favorite-channel",
                         label: t ? M : C,
                         action: () => {
@@ -695,11 +695,11 @@
                                 section: d.AnalyticsSections.CONTEXT_MENU
                             })
                         }
-                    }), _ ? (0, a.jsx)(s.MenuItem, {
+                    }), _ ? (0, a.jsx)(l.MenuItem, {
                         id: "opt-out-category",
                         label: c.default.Messages.CHANNEL_OPT_OUT_PARENT_CATEGORY,
                         action: () => g()
-                    }) : (0, a.jsx)(s.MenuItem, {
+                    }) : (0, a.jsx)(l.MenuItem, {
                         id: "opt-into-channel",
                         label: f ? c.default.Messages.CHANNEL_OPT_OUT : c.default.Messages.CHANNEL_OPT_IN,
                         action: () => N()
@@ -734,8 +734,8 @@
             }), n("222007");
             var a = n("249654"),
                 i = n("151426"),
-                s = n("872173"),
-                l = n("42203"),
+                l = n("872173"),
+                s = n("42203"),
                 u = n("957255"),
                 r = n("379881"),
                 o = n("843455");
@@ -755,7 +755,7 @@
                         continue
                     }
                     if (n.type === i.FavoriteChannelType.CATEGORY) continue;
-                    let a = l.default.getChannel(t);
+                    let a = s.default.getChannel(t);
                     if (null == a || !a.isPrivate() && !u.default.can(o.Permissions.VIEW_CHANNEL, a)) {
                         delete e[t];
                         continue
@@ -765,42 +765,42 @@
 
             function f(e, t) {
                 let n = r.default.isFavorite(e);
-                !n && s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                !n && l.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
                     n.favoriteChannels[e] = i.FavoriteChannel.create({
                         nickname: "",
                         type: i.FavoriteChannelType.REFERENCE_ORIGINAL,
                         position: d(),
                         parentId: null != t ? t : "0"
                     }), c(n.favoriteChannels)
-                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+                }, l.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
             function _(e) {
                 let t = r.default.getFavorite(e);
-                null != t && s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                null != t && l.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
                     if (delete n.favoriteChannels[e], t.type === i.FavoriteChannelType.CATEGORY)
                         for (let t in n.favoriteChannels) n.favoriteChannels[t].parentId === e && (n.favoriteChannels[t].parentId = "0");
                     c(n.favoriteChannels)
-                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+                }, l.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
             function E(e, t) {
                 let n = r.default.isFavorite(e);
-                n && s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                n && l.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
                     n.favoriteChannels[e].nickname = null != t ? t : ""
-                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+                }, l.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
             function N(e) {
                 let t = a.default.fromTimestamp(Date.now());
-                s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                l.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
                     n.favoriteChannels[t] = i.FavoriteChannel.create({
                         nickname: e,
                         type: i.FavoriteChannelType.CATEGORY,
                         position: d(),
                         parentId: "0"
                     })
-                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+                }, l.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
             function g(e) {
@@ -808,35 +808,35 @@
             }
 
             function C(e) {
-                s.PreloadedUserSettingsActionCreators.updateAsync("favorites", t => {
+                l.PreloadedUserSettingsActionCreators.updateAsync("favorites", t => {
                     for (let a of e)
                         if (null != a.position && (t.favoriteChannels[a.id].position = a.position), void 0 !== a.parent_id) {
                             var n;
                             t.favoriteChannels[a.id].parentId = null !== (n = a.parent_id) && void 0 !== n ? n : "0"
                         }
-                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+                }, l.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
             function M() {
-                s.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
+                l.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
                     e.muted = !e.muted
-                }, s.UserSettingsDelay.INFREQUENT_USER_ACTION)
+                }, l.UserSettingsDelay.INFREQUENT_USER_ACTION)
             }
         },
         20209: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return s
                 }
             });
             var a = n("446674"),
                 i = n("162771"),
-                s = n("49111");
+                l = n("49111");
 
-            function l() {
+            function s() {
                 let e = (0, a.useStateFromStores)([i.default], () => i.default.getGuildId());
-                return e === s.FAVORITES
+                return e === l.FAVORITES
             }
         },
         390008: function(e, t, n) {
@@ -849,18 +849,18 @@
             var a = n("37983");
             n("884691");
             var i = n("446674"),
-                s = n("77078"),
-                l = n("162771"),
+                l = n("77078"),
+                s = n("162771"),
                 u = n("49111"),
                 r = n("782340");
 
             function o(e) {
-                let t = (0, i.useStateFromStores)([l.default], () => l.default.getGuildId());
-                return __OVERLAY__ || t !== u.FAVORITES ? null : (0, a.jsx)(s.MenuItem, {
+                let t = (0, i.useStateFromStores)([s.default], () => s.default.getGuildId());
+                return __OVERLAY__ || t !== u.FAVORITES ? null : (0, a.jsx)(l.MenuItem, {
                     id: "set-channel-nickname",
                     label: r.default.Messages.CHANGE_NICKNAME,
                     action: function() {
-                        (0, s.openModalLazy)(async () => {
+                        (0, l.openModalLazy)(async () => {
                             let {
                                 default: t
                             } = await n.el("353228").then(n.bind(n, "353228"));
@@ -877,7 +877,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 VoiceActivityNotificationGuildExperiment: function() {
-                    return l
+                    return s
                 },
                 useVoiceActivityNotificationSettingsExperiment: function() {
                     return u
@@ -885,7 +885,7 @@
             });
             var a = n("862205"),
                 i = n("49111");
-            let s = (0, a.createExperiment)({
+            let l = (0, a.createExperiment)({
                     kind: "user",
                     id: "2023-11_voice_activity_notification_user",
                     label: "Voice Activity Notifications for User",
@@ -900,7 +900,7 @@
                         }
                     }]
                 }),
-                l = (0, a.createExperiment)({
+                s = (0, a.createExperiment)({
                     kind: "guild",
                     id: "2023-11_voice_activity_notification_guild",
                     label: "General Voice Channel Notifications for Guild",
@@ -936,21 +936,21 @@
                 var t;
                 let {
                     voiceChannelActivityNotifsEnabled: n
-                } = l.useExperiment({
+                } = s.useExperiment({
                     location: "useVoiceActivityNotificationSettingsExperiment",
-                    guildId: null !== (t = e.getGuildId()) && void 0 !== t ? t : ""
+                    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : ""
                 }, {
-                    disable: e.type !== i.ChannelTypes.GUILD_VOICE,
+                    disable: (null == e ? void 0 : e.type) !== i.ChannelTypes.GUILD_VOICE,
                     autoTrackExposure: !1
                 }), {
                     enabled: a
-                } = s.useExperiment({
+                } = l.useExperiment({
                     location: "useVoiceActivityNotificationSettingsExperiment"
                 }, {
-                    disable: e.type !== i.ChannelTypes.GUILD_VOICE || !n,
+                    disable: (null == e ? void 0 : e.type) !== i.ChannelTypes.GUILD_VOICE || !n,
                     autoTrackExposure: !0
                 });
-                return e.type === i.ChannelTypes.GUILD_VOICE && n && a
+                return (null == e ? void 0 : e.type) === i.ChannelTypes.GUILD_VOICE && n && a
             }
         }
     }
