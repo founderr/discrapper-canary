@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["59211"], {
+    ["50099"], {
         361345: function(e, t, n) {
             "use strict";
             e.exports = n.p + "7a280f89e607805835b8.png"
@@ -48,6 +48,14 @@
             "use strict";
             e.exports = n.p + "48956fccb1adf21b366d.png"
         },
+        910549: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "f46d6b0cbeeea15ecd81.png"
+        },
+        559965: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "a2c4ffe04406bdb03384.png"
+        },
         160864: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -59,8 +67,8 @@
                 s = n("884691"),
                 i = n("414456"),
                 a = n.n(i),
-                o = n("77078"),
-                l = n("716849"),
+                l = n("77078"),
+                o = n("716849"),
                 c = n("552917"),
                 u = n("109036"),
                 d = n("336522"),
@@ -165,9 +173,9 @@
                         let s = e.dataTransfer;
                         if (null == s) return;
                         s.dropEffect = "copy";
-                        let i = (0, o.hasModalOpen)(d.UPLOAD_ERROR_MODAL_KEY);
-                        if (i && (0, o.closeModal)(d.UPLOAD_ERROR_MODAL_KEY), e.stopPropagation(), e.preventDefault(), null === (t = (n = this.props).onDragOver) || void 0 === t || t.call(n, e), !this.state.isDragging) {
-                            (0, l.maybeFetchPremiumLikelihood)(c.default);
+                        let i = (0, l.hasModalOpen)(d.UPLOAD_ERROR_MODAL_KEY);
+                        if (i && (0, l.closeModal)(d.UPLOAD_ERROR_MODAL_KEY), e.stopPropagation(), e.preventDefault(), null === (t = (n = this.props).onDragOver) || void 0 === t || t.call(n, e), !this.state.isDragging) {
+                            (0, o.maybeFetchPremiumLikelihood)(c.default);
                             let e = null === (r = this.elementDOMRef.current) || void 0 === r ? void 0 : r.ownerDocument.defaultView,
                                 t = null != e && s.types instanceof e.DOMStringList && s.types.contains("application/x-moz-file");
                             (t || -1 !== s.types.indexOf("Files")) && this.setState(e => e.isDragging ? {} : {
@@ -222,11 +230,11 @@
                     width: t = 24,
                     height: n = 24,
                     color: a = s.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: o = "",
-                    ...l
+                    colorClass: l = "",
+                    ...o
                 } = e;
                 return (0, r.jsx)("svg", {
-                    ...(0, i.default)(l),
+                    ...(0, i.default)(o),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: t,
                     height: n,
@@ -237,7 +245,7 @@
                         fillRule: "evenodd",
                         d: "M19.12 2a.5.5 0 0 1 .43.76L8.22 21.64a.75.75 0 0 1-.64.36h-2.7a.5.5 0 0 1-.43-.76L15.78 2.36a.75.75 0 0 1 .64-.36h2.7Z",
                         clipRule: "evenodd",
-                        className: o
+                        className: l
                     })
                 })
             }
@@ -252,8 +260,8 @@
                     return u
                 }
             }), n("222007");
-            var r, s, i, a, o = n("884691"),
-                l = n("917351");
+            var r, s, i, a, l = n("884691"),
+                o = n("917351");
 
             function c(e) {
                 return 2 === e || 3 === e ? 1 : 0
@@ -269,8 +277,8 @@
                     throttleDuration: u = 300,
                     orientation: d,
                     usePointerEvents: p = !1
-                } = e, [h, f] = o.useState(!1), v = o.useRef(0), g = o.useRef(null == t ? 0 : t);
-                return o.useLayoutEffect(() => {
+                } = e, [h, f] = l.useState(!1), v = l.useRef(0), g = l.useRef(null == t ? 0 : t);
+                return l.useLayoutEffect(() => {
                     if (!h || null == n.current) return;
 
                     function e(e) {
@@ -278,10 +286,10 @@
                             n = 0 === d || 2 === d,
                             i = (t - v.current) * (n ? -1 : 1),
                             a = g.current + i;
-                        return (0, l.clamp)(a, null != s ? s : 0, null != r ? r : a)
+                        return (0, o.clamp)(a, null != s ? s : 0, null != r ? r : a)
                     }
-                    let t = (0, l.throttle)(i, u),
-                        o = r => {
+                    let t = (0, o.throttle)(i, u),
+                        l = r => {
                             if (null == n.current) return null;
                             let s = e(r),
                                 i = 1 === c(d) ? "width" : "height";
@@ -294,11 +302,11 @@
                         },
                         x = p ? "pointerup" : "mouseup",
                         D = p ? "pointermove" : "mousemove",
-                        E = n.current.ownerDocument;
-                    return E.addEventListener(x, m), E.addEventListener(D, o), () => {
-                        E.removeEventListener(x, m), E.removeEventListener(D, o), t.cancel()
+                        O = n.current.ownerDocument;
+                    return O.addEventListener(x, m), O.addEventListener(D, l), () => {
+                        O.removeEventListener(x, m), O.removeEventListener(D, l), t.cancel()
                     }
-                }, [h, i, s, r, d, n, u, a, p]), o.useCallback(e => {
+                }, [h, i, s, r, d, n, u, a, p]), l.useCallback(e => {
                     let t = 1 === c(d);
                     null != n.current && (g.current = t ? n.current.offsetWidth : n.current.offsetHeight), v.current = t ? e.screenX : e.screenY, f(!0)
                 }, [d, n])
@@ -329,8 +337,8 @@
                 s = n("884691"),
                 i = n("414456"),
                 a = n.n(i),
-                o = n("907002"),
-                l = n("77078"),
+                l = n("907002"),
+                o = n("77078"),
                 c = n("913144"),
                 u = n("474293"),
                 d = n("958706"),
@@ -341,67 +349,71 @@
                 friction: 24
             };
             var v = function(e) {
+                var t;
                 let {
-                    tabIndex: t,
-                    className: n,
-                    renderButtonContents: i,
-                    active: v,
-                    onClick: g,
-                    "aria-controls": m,
-                    focusProps: x
-                } = e, [D, E] = s.useState(!1), [O, b] = s.useState(0), j = D || v, L = (0, u.getClass)(h, "emojiButton", j ? "Hovered" : "Normal"), N = function(e) {
-                    let t = -e % d.EmojiSprites.PickerPerRow * 22,
-                        n = -(22 * Math.floor(e / d.EmojiSprites.PickerPerRow));
-                    return {
-                        backgroundPosition: "".concat(t, "px ").concat(n, "px"),
-                        backgroundSize: "".concat(22 * d.EmojiSprites.PickerPerRow, "px ").concat(22 * Math.ceil(d.EmojiSprites.PickerCount / d.EmojiSprites.PickerPerRow), "px")
-                    }
-                }(O), T = s.useCallback(() => {
-                    if (j) return;
-                    let e = Math.floor(Math.random() * d.EmojiSprites.PickerCount);
-                    E(!0), b(e), c.default.dispatch({
-                        type: "EMOJI_INTERACTION_INITIATED",
-                        interaction: d.EmojiInteractionPoint.EmojiButtonMouseEntered
-                    })
-                }, [j, E, b]), I = s.useCallback(() => {
-                    E(!1)
-                }, [E]), R = s.useCallback(() => {
-                    c.default.dispatch({
-                        type: "EMOJI_INTERACTION_INITIATED",
-                        interaction: d.EmojiInteractionPoint.EmojiButtonFocused
-                    })
-                }, []);
-                return (0, r.jsx)(l.Button, {
-                    look: l.Button.Looks.BLANK,
-                    size: l.Button.Sizes.NONE,
-                    tabIndex: t,
-                    className: a(L, n),
-                    onMouseEnter: T,
-                    onMouseOver: T,
-                    onMouseLeave: I,
-                    onFocus: R,
-                    onClick: g,
+                    tabIndex: n,
+                    className: i,
+                    renderButtonContents: v,
+                    active: g,
+                    onClick: m,
+                    "aria-controls": x,
+                    focusProps: D
+                } = e, [O, b] = s.useState(!1), [j, E] = s.useState(50), L = O || g, N = (0, u.getClass)(h, "emojiButton", L ? "Hovered" : "Normal");
+                let T = (t = j, {
+                        "--custom-emoji-sprite-size": "".concat(24, "px"),
+                        "--custom-emoji-sprite-row": Math.floor(t / 20),
+                        "--custom-emoji-sprite-col": t % 20
+                    }),
+                    I = s.useCallback(() => {
+                        if (!L) b(!0), E(Math.floor(77 * Math.random())), c.default.dispatch({
+                            type: "EMOJI_INTERACTION_INITIATED",
+                            interaction: d.EmojiInteractionPoint.EmojiButtonMouseEntered
+                        })
+                    }, [L, b, E]),
+                    R = s.useCallback(() => {
+                        b(!1)
+                    }, [b]),
+                    A = s.useCallback(() => {
+                        c.default.dispatch({
+                            type: "EMOJI_INTERACTION_INITIATED",
+                            interaction: d.EmojiInteractionPoint.EmojiButtonFocused
+                        })
+                    }, []);
+                return (0, r.jsx)(o.Button, {
+                    look: o.Button.Looks.BLANK,
+                    size: o.Button.Sizes.NONE,
+                    tabIndex: n,
+                    className: a(N, i),
+                    onMouseEnter: I,
+                    onMouseOver: I,
+                    onMouseLeave: R,
+                    onFocus: A,
+                    onClick: m,
                     "aria-label": p.default.Messages.SELECT_EMOJI,
-                    "aria-controls": m,
-                    "aria-expanded": v,
+                    "aria-controls": x,
+                    "aria-expanded": g,
                     "aria-haspopup": "dialog",
-                    focusProps: x,
-                    children: null != i ? i() : (0, r.jsx)(o.Spring, {
+                    focusProps: D,
+                    children: null != v ? v() : (0, r.jsx)(l.Spring, {
                         config: f,
                         to: {
-                            value: j ? 1 : 0
+                            value: L ? 1 : 0
                         },
                         children: e => {
                             let {
                                 value: t
                             } = e;
-                            return (0, r.jsx)(o.animated.div, {
-                                className: h.sprite,
+                            return (0, r.jsxs)(l.animated.div, {
+                                className: h.spriteContainer,
                                 style: {
-                                    ...N,
-                                    transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")")),
-                                    filter: t.to(e => "grayscale(".concat(100 - 100 * e, "%)"))
-                                }
+                                    ...T,
+                                    transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
+                                },
+                                children: [(0, r.jsx)("div", {
+                                    className: a(h.sprite, h.spriteColored, L ? h.active : h.inactive)
+                                }), (0, r.jsx)("div", {
+                                    className: a(h.sprite, h.spriteGreyscale, L ? h.inactive : h.active)
+                                })]
                             })
                         }
                     })
@@ -466,8 +478,8 @@
                 s = n("884691"),
                 i = n("414456"),
                 a = n.n(i),
-                o = n("353386"),
-                l = n("394846"),
+                l = n("353386"),
+                o = n("394846"),
                 c = n("77078"),
                 u = n("597590"),
                 d = n("980428"),
@@ -480,8 +492,8 @@
                         iconClassName: n,
                         children: s,
                         selected: i = !1,
-                        disabled: o = !1,
-                        showBadge: l = !1,
+                        disabled: l = !1,
+                        showBadge: o = !1,
                         color: u,
                         foreground: d,
                         background: p,
@@ -490,10 +502,10 @@
                         onContextMenu: m,
                         tooltip: x = null,
                         tooltipColor: D,
-                        tooltipPosition: E = "bottom",
-                        hideOnClick: O = !0,
-                        role: b,
-                        "aria-label": j,
+                        tooltipPosition: O = "bottom",
+                        hideOnClick: b = !0,
+                        role: j,
+                        "aria-label": E,
                         "aria-hidden": L,
                         "aria-checked": N,
                         "aria-expanded": T,
@@ -507,18 +519,18 @@
                         foreground: null != d ? d : void 0,
                         background: null != p ? p : void 0,
                         color: u
-                    }), M = j;
-                    return null == M && "string" == typeof x && (M = x), (0, r.jsx)(c.Tooltip, {
+                    }), A = E;
+                    return null == A && "string" == typeof x && (A = x), (0, r.jsx)(c.Tooltip, {
                         text: x,
                         color: D,
-                        position: E,
-                        hideOnClick: O,
+                        position: O,
+                        hideOnClick: b,
                         children: e => {
                             let {
                                 onMouseEnter: x,
                                 onMouseLeave: D,
-                                onFocus: E,
-                                onBlur: O
+                                onFocus: O,
+                                onBlur: b
                             } = e;
                             return null == g ? (0, r.jsx)("div", {
                                 className: a(t, [f.iconWrapper]),
@@ -534,33 +546,33 @@
                                     "aria-hidden": L,
                                     onMouseEnter: x,
                                     onMouseLeave: D,
-                                    onFocus: E,
-                                    onBlur: O
+                                    onFocus: O,
+                                    onBlur: b
                                 })
                             }) : (0, r.jsxs)(c.Clickable, {
                                 tag: "div",
-                                onClick: o ? void 0 : g,
-                                onContextMenu: o ? void 0 : m,
+                                onClick: l ? void 0 : g,
+                                onContextMenu: l ? void 0 : m,
                                 onMouseEnter: x,
                                 onMouseLeave: D,
-                                onFocus: E,
-                                onBlur: O,
+                                onFocus: O,
+                                onBlur: b,
                                 className: a(t, {
                                     [f.iconWrapper]: !0,
-                                    [f.clickable]: !o && null != g,
+                                    [f.clickable]: !l && null != g,
                                     [f.selected]: i
                                 }),
-                                role: b,
-                                "aria-label": M,
+                                role: j,
+                                "aria-label": A,
                                 "aria-hidden": L,
                                 "aria-checked": N,
                                 "aria-haspopup": I,
                                 "aria-expanded": T,
-                                tabIndex: o || null == g ? -1 : 0,
-                                children: [l ? (0, r.jsx)(h.default, {
+                                tabIndex: l || null == g ? -1 : 0,
+                                children: [o ? (0, r.jsx)(h.default, {
                                     mask: h.default.Masks.HEADER_BAR_BADGE,
                                     children: R
-                                }) : R, l ? (0, r.jsx)("span", {
+                                }) : R, o ? (0, r.jsx)("span", {
                                     className: f.iconBadge
                                 }) : null, s]
                             })
@@ -588,19 +600,19 @@
                         role: m,
                         scrollable: x,
                         transparent: D = !1
-                    } = e, E = s.useRef(null), O = s.useContext(u.default);
+                    } = e, O = s.useRef(null), b = s.useContext(u.default);
                     return (0, r.jsx)("section", {
                         className: a(t, f.container, {
                             [f.themed]: !D,
                             [f.transparent]: D,
-                            [f.themedMobile]: l.isMobile
+                            [f.themedMobile]: o.isMobile
                         }),
                         "aria-label": v,
                         "aria-labelledby": g,
                         role: m,
-                        ref: E,
+                        ref: O,
                         children: (0, r.jsxs)(c.FocusRingScope, {
-                            containerRef: E,
+                            containerRef: O,
                             children: [(0, r.jsxs)("div", {
                                 className: f.upperContainer,
                                 children: [(0, r.jsxs)("div", {
@@ -608,8 +620,8 @@
                                         [f.scrollable]: x
                                     }),
                                     onDoubleClick: h,
-                                    children: [l.isMobile && null != O ? (0, r.jsx)(o.default, {
-                                        onClick: O,
+                                    children: [o.isMobile && null != b ? (0, r.jsx)(l.default, {
+                                        onClick: b,
                                         className: f.hamburger
                                     }) : null, i]
                                 }), null != p ? (0, r.jsx)("div", {
@@ -626,8 +638,8 @@
                     wrapperClassName: n,
                     children: s,
                     onContextMenu: i,
-                    onClick: o,
-                    id: l,
+                    onClick: l,
+                    id: o,
                     muted: u = !1,
                     level: d = 1
                 } = e, p = (0, r.jsx)(c.HeadingLevel, {
@@ -636,12 +648,12 @@
                         variant: "heading-md/semibold",
                         color: u ? "header-secondary" : void 0,
                         className: a(t, f.title),
-                        id: l,
+                        id: o,
                         children: s
                     })
                 });
-                return null != o ? (0, r.jsx)(c.Clickable, {
-                    onClick: o,
+                return null != l ? (0, r.jsx)(c.Clickable, {
+                    onClick: l,
                     onContextMenu: i,
                     className: a(n, f.titleWrapper),
                     children: p
@@ -666,7 +678,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return l
                 }
             });
             var r = n("37983");
@@ -674,7 +686,7 @@
             var s = n("580420"),
                 i = n.n(s),
                 a = n("249907"),
-                o = e => {
+                l = e => {
                     let {
                         open: t = !1,
                         className: n,

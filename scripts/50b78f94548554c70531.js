@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["58990"], {
+    ["20324"], {
         856670: function(e, t, n) {
             "use strict";
             e.exports = n.p + "018197f71e03e53562e7.svg"
@@ -7,6 +7,14 @@
         693029: function(e, t, n) {
             "use strict";
             e.exports = n.p + "7e5dd7f59f96cc264184.svg"
+        },
+        910549: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "f46d6b0cbeeea15ecd81.png"
+        },
+        559965: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "a2c4ffe04406bdb03384.png"
         },
         666020: function(e, t, n) {
             "use strict";
@@ -163,10 +171,10 @@
                     return T
                 },
                 disableAccount: function() {
-                    return S
+                    return p
                 },
                 saveAccountRequest: function() {
-                    return p
+                    return S
                 },
                 saveAccountChanges: function() {
                     return N
@@ -190,13 +198,13 @@
                     return L
                 },
                 setSingleTryItOutCollectiblesItem: function() {
-                    return P
-                },
-                clearErrors: function() {
                     return g
                 },
-                resetPendingAccountChanges: function() {
+                clearErrors: function() {
                     return m
+                },
+                resetPendingAccountChanges: function() {
+                    return P
                 },
                 resetAllPending: function() {
                     return U
@@ -233,7 +241,7 @@
                 })
             }
 
-            function S(e, t) {
+            function p(e, t) {
                 let n = t ? _.default.Messages.DELETE_ACCOUNT : _.default.Messages.DISABLE_ACCOUNT,
                     i = t ? f.Endpoints.DELETE_ACCOUNT : f.Endpoints.DISABLE_ACCOUNT;
                 return (0, c.default)(t => r.default.post({
@@ -252,7 +260,7 @@
                     d.default.logoutInternal(), (0, o.transitionTo)(f.Routes.DEFAULT_LOGGED_OUT)
                 })
             }
-            async function p(e) {
+            async function S(e) {
                 let t = await r.default.patch({
                         url: f.Endpoints.ME,
                         oldFormErrors: !0,
@@ -286,7 +294,7 @@
                     avatar: d,
                     avatarDecoration: I,
                     newPassword: T,
-                    globalName: S
+                    globalName: p
                 } = e;
                 return u.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SUBMIT"
@@ -298,7 +306,7 @@
                         password: o,
                         avatar: d,
                         discriminator: n,
-                        global_name: S,
+                        global_name: p,
                         new_password: T,
                         ...e
                     };
@@ -307,7 +315,7 @@
                         s = (0, E.getDevicePushProvider)();
                     null != s && null != a && (u.push_provider = s, u.push_token = a);
                     let c = i.default.get(f.DEVICE_VOIP_TOKEN);
-                    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != c && (u.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, u.push_voip_token = c), p(u)
+                    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != c && (u.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, u.push_voip_token = c), S(u)
                 }, {
                     checkEnabled: !1,
                     modalProps: {
@@ -374,20 +382,20 @@
                 })
             }
 
-            function P(e) {
+            function g(e) {
                 u.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM",
                     item: e
                 })
             }
 
-            function g() {
+            function m() {
                 u.default.dispatch({
                     type: "USER_SETTINGS_CLEAR_ERRORS"
                 })
             }
 
-            function m() {
+            function P() {
                 u.default.dispatch({
                     type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
                 })
@@ -1083,8 +1091,8 @@
                 _ = n("882641"),
                 I = n("384830"),
                 T = n("958706"),
-                S = n("782340"),
-                p = n("545456");
+                p = n("782340"),
+                S = n("545456");
 
             function N(e) {
                 let {
@@ -1100,7 +1108,7 @@
                 } = e, L = (0, I.default)({
                     emojiId: N,
                     emojiName: C
-                }), P = (0, o.useStateFromStores)([E.default], () => null != n ? E.default.getDefaultChannel(n) : null), g = i.createRef(), m = (0, d.default)(g), U = () => {
+                }), g = (0, o.useStateFromStores)([E.default], () => null != n ? E.default.getDefaultChannel(n) : null), m = i.createRef(), P = (0, d.default)(m), U = () => {
                     R(void 0), A(void 0)
                 }, O = e => (t, n) => {
                     let r = (null == t ? void 0 : t.id) == null;
@@ -1110,8 +1118,8 @@
                 };
                 return (0, r.jsx)(a.FormItem, {
                     required: h,
-                    title: S.default.Messages.GUILD_STICKER_UPLOAD_RELATED_EMOJI_TITLE,
-                    className: u(t, p.section),
+                    title: p.default.Messages.GUILD_STICKER_UPLOAD_RELATED_EMOJI_TITLE,
+                    className: u(t, S.section),
                     error: l,
                     children: (0, r.jsx)(a.Popout, {
                         animation: a.Popout.Animation.NONE,
@@ -1126,7 +1134,7 @@
                                 onNavigateAway: t,
                                 onSelectEmoji: O(t),
                                 guildId: n,
-                                channel: P
+                                channel: g
                             })
                         },
                         children: (e, t) => {
@@ -1135,10 +1143,10 @@
                             } = t;
                             return (0, r.jsxs)("div", {
                                 ...e,
-                                className: p.emojiInput,
-                                ref: g,
+                                className: S.emojiInput,
+                                ref: m,
                                 children: [(0, r.jsx)(_.default, {
-                                    className: p.emojiButton,
+                                    className: S.emojiButton,
                                     active: n,
                                     tabIndex: 0,
                                     renderButtonContents: null != N || null != C ? () => (0, r.jsx)(s.default, {
@@ -1146,14 +1154,14 @@
                                         emojiId: N
                                     }) : null
                                 }), (0, r.jsx)(a.TextInput, {
-                                    inputClassName: p.emojiText,
-                                    placeholder: S.default.Messages.GUILD_STICKER_UPLOAD_RELATED_EMOJI_PLACEHOLDER,
+                                    inputClassName: S.emojiText,
+                                    placeholder: p.default.Messages.GUILD_STICKER_UPLOAD_RELATED_EMOJI_PLACEHOLDER,
                                     value: null != L ? ":".concat(L, ":") : "",
                                     readOnly: !0
-                                }), m && null != L && (0, r.jsx)(c.default, {
+                                }), P && null != L && (0, r.jsx)(c.default, {
                                     ...e,
                                     onClick: D,
-                                    className: p.removeButton
+                                    className: S.removeButton
                                 })]
                             })
                         }
@@ -1309,10 +1317,10 @@
                     return T
                 },
                 setPendingThemeColors: function() {
-                    return S
+                    return p
                 },
                 resetPendingMemberChanges: function() {
-                    return p
+                    return S
                 },
                 resetPendingProfileChanges: function() {
                     return N
@@ -1427,14 +1435,14 @@
                 })
             }
 
-            function S(e) {
+            function p(e) {
                 i.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS",
                     themeColors: e
                 })
             }
 
-            function p() {
+            function S() {
                 i.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES"
                 })
@@ -1478,9 +1486,9 @@
                 _ = n("49111");
             let I = _.FormStates.CLOSED,
                 T = {},
-                S = !1;
+                p = !1;
 
-            function p() {
+            function S() {
                 I = _.FormStates.CLOSED, T = {}, s = null, c = void 0, d = []
             }
 
@@ -1546,7 +1554,7 @@
                     return d
                 }
                 getIsDisableSubmit() {
-                    return S
+                    return p
                 }
             }
             v.displayName = "GuildIdentitySettingsStore";
@@ -1554,9 +1562,9 @@
                 GUILD_IDENTITY_SETTINGS_INIT: function(e) {
                     s = e.guild, I = _.FormStates.OPEN, T = {}, c = e.source, d = e.analyticsLocations
                 },
-                GUILD_IDENTITY_SETTINGS_CLOSE: p,
+                GUILD_IDENTITY_SETTINGS_CLOSE: S,
                 GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-                    N(), p()
+                    N(), S()
                 },
                 GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
                     s = e.guild, T = {}
@@ -1619,7 +1627,7 @@
                     let {
                         disable: t
                     } = e;
-                    S = t
+                    p = t
                 }
             })
         },
@@ -1774,8 +1782,8 @@
                     initialPlanId: t,
                     followupSKUInfo: I,
                     onClose: T,
-                    onComplete: S,
-                    onSubscriptionConfirmation: p,
+                    onComplete: p,
+                    onSubscriptionConfirmation: S,
                     analyticsLocations: N,
                     analyticsObject: C,
                     analyticsLocation: h,
@@ -1783,14 +1791,14 @@
                     isGift: A = !1,
                     giftMessage: R,
                     subscriptionTier: L,
-                    trialId: P,
-                    postSuccessGuild: g,
-                    openInvoiceId: m,
+                    trialId: g,
+                    postSuccessGuild: m,
+                    openInvoiceId: P,
                     applicationId: U,
                     referralTrialOfferId: O,
                     giftRecipient: D,
                     returnRef: y
-                } = null != e ? e : {}, M = !1, G = (0, i.v4)(), x = s.default.getCurrentUser(), w = (0, f.isPremiumExactly)(x, _.PremiumTypes.TIER_2);
+                } = null != e ? e : {}, G = !1, M = (0, i.v4)(), x = s.default.getCurrentUser(), w = (0, f.isPremiumExactly)(x, _.PremiumTypes.TIER_2);
                 (0, l.openModalLazy)(async () => {
                     let {
                         default: e
@@ -1802,7 +1810,7 @@
                         } = n;
                         return (0, r.jsx)(e, {
                             ...l,
-                            loadId: G,
+                            loadId: M,
                             subscriptionTier: L,
                             skuId: L,
                             isGift: A,
@@ -1811,20 +1819,20 @@
                             initialPlanId: t,
                             followupSKUInfo: I,
                             onClose: (e, t) => {
-                                i(), null == T || T(e), e && (null == p || p(), !A && null != t && t === _.PremiumSubscriptionSKUs.TIER_2 && !w && d.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
+                                i(), null == T || T(e), e && (null == S || S(), !A && null != t && t === _.PremiumSubscriptionSKUs.TIER_2 && !w && d.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
                             },
                             onComplete: () => {
-                                M = !0, null == S || S(), !A && (0, a.setCanPlayWowMoment)(!0)
+                                G = !0, null == p || p(), !A && (0, a.setCanPlayWowMoment)(!0)
                             },
-                            onSubscriptionConfirmation: p,
+                            onSubscriptionConfirmation: S,
                             analyticsLocations: N,
                             analyticsObject: C,
                             analyticsLocation: h,
                             analyticsSourceLocation: v,
-                            trialId: P,
-                            postSuccessGuild: g,
+                            trialId: g,
+                            postSuccessGuild: m,
                             planGroup: _.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                            openInvoiceId: m,
+                            openInvoiceId: P,
                             applicationId: U,
                             referralTrialOfferId: O,
                             returnRef: y
@@ -1833,17 +1841,17 @@
                 }, {
                     modalKey: "payment-modal",
                     onCloseCallback: () => {
-                        !M && c.default.track(E.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                            load_id: G,
+                        !G && c.default.track(E.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+                            load_id: M,
                             payment_type: E.PurchaseTypeToAnalyticsPaymentType[E.PurchaseTypes.SUBSCRIPTION],
                             location: null != h ? h : C,
                             source: v,
                             subscription_type: E.SubscriptionTypes.PREMIUM,
                             is_gift: A,
-                            eligible_for_trial: null != P,
+                            eligible_for_trial: null != g,
                             application_id: U,
                             location_stack: N
-                        }), (0, u.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == T || T(M), M && (null == p || p())
+                        }), (0, u.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == T || T(G), G && (null == S || S())
                     },
                     onCloseRequest: E.NOOP
                 })
@@ -2011,10 +2019,10 @@
                     return T
                 },
                 setPendingBio: function() {
-                    return S
+                    return p
                 },
                 setPendingPronouns: function() {
-                    return p
+                    return S
                 },
                 setPendingAccentColor: function() {
                     return N
@@ -2115,14 +2123,14 @@
                 })
             }
 
-            function S(e) {
+            function p(e) {
                 i.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO",
                     bio: e
                 })
             }
 
-            function p(e) {
+            function S(e) {
                 i.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
                     pronouns: e
@@ -2204,67 +2212,71 @@
                 friction: 24
             };
             var I = function(e) {
+                var t;
                 let {
-                    tabIndex: t,
-                    className: n,
-                    renderButtonContents: l,
-                    active: I,
-                    onClick: T,
+                    tabIndex: n,
+                    className: l,
+                    renderButtonContents: I,
+                    active: T,
+                    onClick: p,
                     "aria-controls": S,
-                    focusProps: p
-                } = e, [N, C] = i.useState(!1), [h, v] = i.useState(0), A = N || I, R = (0, c.getClass)(E, "emojiButton", A ? "Hovered" : "Normal"), L = function(e) {
-                    let t = -e % d.EmojiSprites.PickerPerRow * 22,
-                        n = -(22 * Math.floor(e / d.EmojiSprites.PickerPerRow));
-                    return {
-                        backgroundPosition: "".concat(t, "px ").concat(n, "px"),
-                        backgroundSize: "".concat(22 * d.EmojiSprites.PickerPerRow, "px ").concat(22 * Math.ceil(d.EmojiSprites.PickerCount / d.EmojiSprites.PickerPerRow), "px")
-                    }
-                }(h), P = i.useCallback(() => {
-                    if (A) return;
-                    let e = Math.floor(Math.random() * d.EmojiSprites.PickerCount);
-                    C(!0), v(e), s.default.dispatch({
-                        type: "EMOJI_INTERACTION_INITIATED",
-                        interaction: d.EmojiInteractionPoint.EmojiButtonMouseEntered
-                    })
-                }, [A, C, v]), g = i.useCallback(() => {
-                    C(!1)
-                }, [C]), m = i.useCallback(() => {
-                    s.default.dispatch({
-                        type: "EMOJI_INTERACTION_INITIATED",
-                        interaction: d.EmojiInteractionPoint.EmojiButtonFocused
-                    })
-                }, []);
+                    focusProps: N
+                } = e, [C, h] = i.useState(!1), [v, A] = i.useState(50), R = C || T, L = (0, c.getClass)(E, "emojiButton", R ? "Hovered" : "Normal");
+                let g = (t = v, {
+                        "--custom-emoji-sprite-size": "".concat(24, "px"),
+                        "--custom-emoji-sprite-row": Math.floor(t / 20),
+                        "--custom-emoji-sprite-col": t % 20
+                    }),
+                    m = i.useCallback(() => {
+                        if (!R) h(!0), A(Math.floor(77 * Math.random())), s.default.dispatch({
+                            type: "EMOJI_INTERACTION_INITIATED",
+                            interaction: d.EmojiInteractionPoint.EmojiButtonMouseEntered
+                        })
+                    }, [R, h, A]),
+                    P = i.useCallback(() => {
+                        h(!1)
+                    }, [h]),
+                    U = i.useCallback(() => {
+                        s.default.dispatch({
+                            type: "EMOJI_INTERACTION_INITIATED",
+                            interaction: d.EmojiInteractionPoint.EmojiButtonFocused
+                        })
+                    }, []);
                 return (0, r.jsx)(a.Button, {
                     look: a.Button.Looks.BLANK,
                     size: a.Button.Sizes.NONE,
-                    tabIndex: t,
-                    className: u(R, n),
-                    onMouseEnter: P,
-                    onMouseOver: P,
-                    onMouseLeave: g,
-                    onFocus: m,
-                    onClick: T,
+                    tabIndex: n,
+                    className: u(L, l),
+                    onMouseEnter: m,
+                    onMouseOver: m,
+                    onMouseLeave: P,
+                    onFocus: U,
+                    onClick: p,
                     "aria-label": f.default.Messages.SELECT_EMOJI,
                     "aria-controls": S,
-                    "aria-expanded": I,
+                    "aria-expanded": T,
                     "aria-haspopup": "dialog",
-                    focusProps: p,
-                    children: null != l ? l() : (0, r.jsx)(o.Spring, {
+                    focusProps: N,
+                    children: null != I ? I() : (0, r.jsx)(o.Spring, {
                         config: _,
                         to: {
-                            value: A ? 1 : 0
+                            value: R ? 1 : 0
                         },
                         children: e => {
                             let {
                                 value: t
                             } = e;
-                            return (0, r.jsx)(o.animated.div, {
-                                className: E.sprite,
+                            return (0, r.jsxs)(o.animated.div, {
+                                className: E.spriteContainer,
                                 style: {
-                                    ...L,
-                                    transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")")),
-                                    filter: t.to(e => "grayscale(".concat(100 - 100 * e, "%)"))
-                                }
+                                    ...g,
+                                    transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
+                                },
+                                children: [(0, r.jsx)("div", {
+                                    className: u(E.sprite, E.spriteColored, R ? E.active : E.inactive)
+                                }), (0, r.jsx)("div", {
+                                    className: u(E.sprite, E.spriteGreyscale, R ? E.inactive : E.active)
+                                })]
                             })
                         }
                     })
@@ -2724,7 +2736,7 @@
                     return v
                 },
                 useFullScreenLayerStore: function() {
-                    return p
+                    return S
                 },
                 openFullScreenLayer: function() {
                     return A
@@ -2745,9 +2757,9 @@
                 _ = n("159885"),
                 I = n("983782"),
                 T = n("275495");
-            let S = (0, _.cssValueToNumber)(d.default.FULL_SCREEN_LAYER_ANIMATION_DURATION);
+            let p = (0, _.cssValueToNumber)(d.default.FULL_SCREEN_LAYER_ANIMATION_DURATION);
             (i = r || (r = {}))[i.ENTERING = 1] = "ENTERING", i[i.ENTERED = 2] = "ENTERED", i[i.EXITING = 3] = "EXITING", i[i.EXITED = 4] = "EXITED";
-            let p = (0, c.default)(e => ({
+            let S = (0, c.default)(e => ({
                 fullScreenLayers: [],
                 addLayer: t => e(e => {
                     let {
@@ -2808,13 +2820,13 @@
             function v() {
                 let {
                     reducedMotion: e
-                } = u.useContext(f.AccessibilityPreferencesContext), t = e.enabled, n = t ? h : C, r = p(e => e.fullScreenLayers);
+                } = u.useContext(f.AccessibilityPreferencesContext), t = e.enabled, n = t ? h : C, r = S(e => e.fullScreenLayers);
                 return (0, l.jsx)(s.TransitionGroup, {
                     children: r.map(e => (0, l.jsx)(s.CSSTransition, {
                         classNames: n,
-                        timeout: S,
+                        timeout: p,
                         onEntered: () => {
-                            p.setState({
+                            S.setState({
                                 fullScreenLayers: r.map(t => t.key === e.key ? {
                                     ...t,
                                     transitionState: 2
@@ -2836,7 +2848,7 @@
                         Layer: r
                     } = t,
                     i = null != n ? n : a();
-                return p.setState(t => ({
+                return S.setState(t => ({
                     fullScreenLayers: [...t.fullScreenLayers, {
                         key: i,
                         transitionState: 1,
@@ -2847,7 +2859,7 @@
             }
 
             function R(e) {
-                p.setState(t => ({
+                S.setState(t => ({
                     fullScreenLayers: t.fullScreenLayers.filter(t => t.key !== e)
                 }))
             }
@@ -2856,7 +2868,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 Sizes: function() {
-                    return p
+                    return S
                 },
                 default: function() {
                     return h
@@ -2876,8 +2888,8 @@
                 _ = n("368121"),
                 I = n("523096"),
                 T = n("587974"),
-                S = n("494101");
-            let p = {
+                p = n("494101");
+            let S = {
                 SIZE_16: 16,
                 SIZE_24: 24,
                 SIZE_32: 32,
@@ -2902,10 +2914,10 @@
                         let t = null == a && null == l && s === e.length - 1,
                             o = n(e[s], t, s);
                         u.push(t ? (0, r.jsx)("div", {
-                            className: S.avatarContainer,
+                            className: p.avatarContainer,
                             children: o
                         }, N(null !== (c = e[s]) && void 0 !== c ? c : null, s)) : (0, r.jsx)(T.default, {
-                            className: S.avatarContainerMasked,
+                            className: p.avatarContainerMasked,
                             height: i,
                             width: i,
                             mask: T.default.Masks.VOICE_USER_SUMMARY_ITEM,
@@ -2943,8 +2955,8 @@
                 }
                 renderIcon() {
                     return this.props.renderIcon ? (0, r.jsx)(_.default, {
-                        foreground: S.foreground,
-                        className: S.icon
+                        foreground: p.foreground,
+                        className: p.icon
                     }) : null
                 }
                 render() {
@@ -2976,19 +2988,19 @@
                             popoutUserId: null
                         }),
                         children: n => (0, r.jsxs)("div", {
-                            className: u(e, S.container, function() {
-                                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p.SIZE_24;
+                            className: u(e, p.container, function() {
+                                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.SIZE_24;
                                 switch (e) {
-                                    case p.SIZE_16:
-                                        return S.size16;
-                                    case p.SIZE_24:
-                                        return S.size24;
-                                    case p.SIZE_32:
-                                        return S.size32;
-                                    case p.SIZE_56:
-                                        return S.size56;
+                                    case S.SIZE_16:
+                                        return p.size16;
+                                    case S.SIZE_24:
+                                        return p.size24;
+                                    case S.SIZE_32:
+                                        return p.size32;
+                                    case S.SIZE_56:
+                                        return p.size56;
                                     default:
-                                        return S.size24
+                                        return p.size24
                                 }
                             }(t)),
                             ref: this._ref,
@@ -3008,7 +3020,7 @@
                         } = this.props;
                         if (null == e) {
                             if (!this.props.showDefaultAvatarsForNullUsers) return (0, r.jsx)("div", {
-                                className: S.emptyUser
+                                className: p.emptyUser
                             });
                             {
                                 let e = (null != n ? n : 0) % I.default.DEFAULT_AVATARS.length,
@@ -3016,17 +3028,17 @@
                                 return (0, r.jsx)("img", {
                                     src: t,
                                     alt: "",
-                                    className: S.avatar
+                                    className: p.avatar
                                 })
                             }
                         }
                         let o = (0, r.jsx)("img", {
                             src: e.getAvatarURL(l, u),
                             alt: e.username,
-                            className: S.avatar
+                            className: p.avatar
                         }, e.id);
                         return i ? (0, r.jsx)(s.Clickable, {
-                            className: S.clickableAvatar,
+                            className: p.clickableAvatar,
                             onClick: () => {
                                 null != this._ref.current && null != e && this.setState({
                                     popoutUserId: e.id
@@ -3042,13 +3054,13 @@
                 max: 10,
                 renderMoreUsers: function(e) {
                     return (0, r.jsx)("div", {
-                        className: S.moreUsers,
+                        className: p.moreUsers,
                         children: e
                     })
                 },
                 renderIcon: !1,
                 showDefaultAvatarsForNullUsers: !1,
-                size: p.SIZE_24
+                size: S.SIZE_24
             };
             var h = C
         }
