@@ -735,8 +735,8 @@
                 N = r("175768"),
                 L = r("358344"),
                 E = r("34971"),
-                A = r("134034"),
-                _ = r("79953"),
+                _ = r("134034"),
+                A = r("79953"),
                 R = r("388557"),
                 P = r("238161"),
                 O = r("20950"),
@@ -777,7 +777,7 @@
                         }, {
                             id: "stores",
                             name: "Stores",
-                            render: () => (0, a.jsx)(_.default, {})
+                            render: () => (0, a.jsx)(A.default, {})
                         }, {
                             id: "dispatcher",
                             name: "Dispatcher",
@@ -786,7 +786,7 @@
                         return h.default.isDeveloper && e.push({
                             id: "quick_actions",
                             name: "Quick Actions",
-                            render: () => (0, a.jsx)(A.default, {})
+                            render: () => (0, a.jsx)(_.default, {})
                         }), e.push({
                             id: "colors",
                             name: "Colors",
@@ -942,7 +942,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return _
+                    return A
                 }
             }), r("222007");
             var a = r("37983"),
@@ -1073,10 +1073,10 @@
                         })
                     }
                 }],
-                A = {
+                _ = {
                     events: {
                         label: "Events",
-                        filter: e => Object.entries(A).filter(e => {
+                        filter: e => Object.entries(_).filter(e => {
                             let [t] = e;
                             return "events" !== t
                         }).map(t => {
@@ -1100,13 +1100,13 @@
                     }
                 };
 
-            function _() {
+            function A() {
                 let e = n.useRef(null),
                     t = (0, c.useStateFromStores)([y.default], () => y.default.loggedEvents),
-                    [r, i] = n.useState(Object.keys(A)),
+                    [r, i] = n.useState(Object.keys(_)),
                     o = t.filter(e => {
                         for (let t of r)
-                            if (A[t].filter(e)) return !0;
+                            if (_[t].filter(e)) return !0;
                         return !1
                     }),
                     [s, u] = n.useState(void 0),
@@ -1137,7 +1137,7 @@
                             className: j.toolbarDivider
                         }), (0, a.jsx)("div", {
                             className: j.filters,
-                            children: Object.entries(A).map(e => {
+                            children: Object.entries(_).map(e => {
                                 let [t, n] = e;
                                 return (0, a.jsx)(d.Clickable, {
                                     className: l(j.filter, r.includes(t) && j.activeFilter),
@@ -1233,12 +1233,12 @@
                     return e
                 }, e
             }
-            let A = {
+            let _ = {
                     ...b.semanticColorTokens,
                     ...m.componentColorTokens,
                     ...g.gradients
                 },
-                _ = {
+                A = {
                     ...M(b.semanticColorTokens),
                     ...M(m.componentColorTokens)
                 },
@@ -1263,7 +1263,7 @@
                 return Object.keys(e).forEach(r => {
                     let a = e[r];
                     if ("name" in a) a = function e(t) {
-                        let r = A[t.name];
+                        let r = _[t.name];
                         return "name" in r ? e(r) : r
                     }(a);
                     t[r] = {
@@ -1309,8 +1309,8 @@
                     return [o, s, c, d, u, h]
                 }("color-override-03-03-23", {
                     rawPalette: y.rawPalette,
-                    semanticTokens: _
-                }), [b, A] = i.useState(""), [P, O] = i.useState({}), [M, B] = i.useState({}), D = i.useMemo(() => {
+                    semanticTokens: A
+                }), [b, _] = i.useState(""), [P, O] = i.useState({}), [M, B] = i.useState({}), D = i.useMemo(() => {
                     let e = Object.keys(a);
                     return e.reduce((e, t) => [...e, {
                         value: t,
@@ -1463,7 +1463,7 @@
                                 onClick: () => {
                                     s({
                                         rawPalette: y.rawPalette,
-                                        semanticTokens: _
+                                        semanticTokens: A
                                     })
                                 },
                                 children: "Reset all"
@@ -1478,8 +1478,8 @@
                             children: [(0, n.jsx)(S.default, {
                                 size: S.default.Sizes.SMALL,
                                 query: b,
-                                onChange: A,
-                                onClear: () => A(""),
+                                onChange: _,
+                                onClear: () => _(""),
                                 placeholder: "Search tokens",
                                 "aria-label": "Search tokens"
                             }), " "]
@@ -1493,9 +1493,9 @@
                                 margin: 8,
                                 alignItems: "center"
                             },
-                            children: Object.keys(_).filter(e => "" === b || e.toLowerCase().includes(b)).map(t => {
+                            children: Object.keys(A).filter(e => "" === b || e.toLowerCase().includes(b)).map(t => {
                                 var r;
-                                let a = _[t][e],
+                                let a = A[t][e],
                                     o = null == l[t] ? {
                                         ...a
                                     } : l[t][e],
@@ -2836,7 +2836,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return _
+                    return A
                 }
             }), r("222007");
             var a = r("37983"),
@@ -2935,8 +2935,8 @@
                     }
                 }, [j]);
                 let {
-                    id: A,
-                    expires_at: _,
+                    id: _,
+                    expires_at: A,
                     redeemed_at: R,
                     trial_id: P,
                     subscription_trial: O
@@ -2945,8 +2945,8 @@
                         value: t
                     } = e;
                     return t === P
-                })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", I = null != _, B = null != _ && new Date(_).getTime() < Date.now(), D = (null == O ? void 0 : O.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, H = async () => {
-                    N(!0), I ? await w(A, "trial") : await (0, d.acknowledgeUserOffer)(s), h(), N(!1)
+                })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", I = null != A, B = null != A && new Date(A).getTime() < Date.now(), D = (null == O ? void 0 : O.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, H = async () => {
+                    N(!0), I ? await w(_, "trial") : await (0, d.acknowledgeUserOffer)(s), h(), N(!1)
                 };
                 n.useEffect(() => {
                     if (b) {
@@ -2977,7 +2977,7 @@
                             children: M
                         }), (0, a.jsx)(c.Clickable, {
                             onClick: async () => {
-                                N(!0), await T(A, "trial"), h(), N(!1)
+                                N(!0), await T(_, "trial"), h(), N(!1)
                             },
                             children: (0, a.jsx)(m.default, {
                                 className: l(C.icon, C.trashIcon)
@@ -2986,12 +2986,12 @@
                     }), (0, a.jsxs)(c.Clickable, {
                         className: l(C.row, C.idRow),
                         onClick: () => {
-                            (0, g.copy)(A), x(!0)
+                            (0, g.copy)(_), x(!0)
                         },
                         children: [(0, a.jsxs)(c.Text, {
                             variant: "eyebrow",
                             color: "always-white",
-                            children: ["Offer: ", A]
+                            children: ["Offer: ", _]
                         }), b ? (0, a.jsx)(f.default, {
                             className: l(C.icon, C.noMargin)
                         }) : (0, a.jsx)(p.default, {
@@ -3051,7 +3051,7 @@
                 })
             }
 
-            function A(e) {
+            function _(e) {
                 var t, r;
                 let {
                     offer: i,
@@ -3072,8 +3072,8 @@
                     expires_at: N,
                     applied_at: L,
                     discount_id: E,
-                    discount: A
-                } = i, _ = null !== (r = null === (t = o.find(e => {
+                    discount: _
+                } = i, A = null !== (r = null === (t = o.find(e => {
                     let {
                         value: t
                     } = e;
@@ -3107,7 +3107,7 @@
                         children: [(0, a.jsx)(c.Heading, {
                             variant: "heading-lg/semibold",
                             color: "text-normal",
-                            children: _
+                            children: A
                         }), (0, a.jsx)(c.Clickable, {
                             onClick: async () => {
                                 k(!0), await T(j, "discount"), s(), k(!1)
@@ -3148,7 +3148,7 @@
                         children: (0, a.jsxs)(c.Text, {
                             variant: "eyebrow",
                             color: "text-normal",
-                            children: [A.amount, "% off"]
+                            children: [_.amount, "% off"]
                         })
                     }), (0, a.jsxs)("div", {
                         className: C.badgeContainer,
@@ -3180,7 +3180,7 @@
                 })
             }
 
-            function _() {
+            function A() {
                 let [e, t] = n.useState([]), [r, i] = n.useState([]), [o, p] = n.useState(), [f, m] = n.useState(), [g, y] = n.useState([]), [x, k] = n.useState([]), [T, w] = n.useState(!0);
                 n.useEffect(() => {
                     (0 === e.length || 0 === r.length || T) && S().then(e => {
@@ -3202,7 +3202,7 @@
                         k(r)
                     }))
                 }, [T]);
-                let _ = async () => {
+                let A = async () => {
                     null != o && (await j(o, "trial"), w(!0))
                 }, R = async () => {
                     null != f && (await j(f, "discount"), w(!0))
@@ -3250,7 +3250,7 @@
                                     select: e => p(e),
                                     popoutLayerContext: b.devToolsLayerContext
                                 }), (0, a.jsx)(c.Button, {
-                                    onClick: _,
+                                    onClick: A,
                                     children: "Create"
                                 })]
                             })]
@@ -3289,7 +3289,7 @@
                             children: [(0, a.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
                                 children: "Existing Discount Offers"
-                            }), x.map(e => (0, a.jsx)(A, {
+                            }), x.map(e => (0, a.jsx)(_, {
                                 offer: e,
                                 offerOptions: r,
                                 forceRefetch: () => w(!0)
@@ -3303,7 +3303,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return A
+                    return _
                 }
             }), r("222007");
             var a = r("37983"),
@@ -3438,13 +3438,13 @@
                     }
                 }];
 
-            function A() {
+            function _() {
                 let [e, t] = n.useState(""), r = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(t => 0 === e.length || s(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), m = o.find(e => e.key === c), {
                     TabBar: y,
                     renderSelectedTab: b
                 } = (0, j.default)({
                     tabs: E
-                }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), A = n.useCallback(e => {
+                }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), _ = n.useCallback(e => {
                     p.default.dispatch({
                         type: "SET_TRACK_TRIGGERS",
                         enabled: e
@@ -3460,7 +3460,7 @@
                             className: w.triggersEnable,
                             children: (0, a.jsx)(h.Switch, {
                                 checked: v,
-                                onChange: A,
+                                onChange: _,
                                 className: w.toolbarSwitch
                             })
                         }), (0, a.jsx)(h.Button, {
@@ -3910,19 +3910,22 @@
                     type: "BILLING_USER_OFFER_FETCH_START"
                 });
                 try {
-                    var e, t;
-                    let r = await a.default.post({
+                    var e, t, r;
+                    let l = await a.default.post({
                             url: i.Endpoints.USER_OFFER
                         }),
-                        l = null !== (e = r.body.user_trial_offer) && void 0 !== e ? e : null,
-                        o = null !== (t = r.body.user_discount) && void 0 !== t ? t : null;
+                        o = null !== (e = l.body.user_trial_offer) && void 0 !== e ? e : null,
+                        s = null !== (t = l.body.user_discount) && void 0 !== t ? t : null,
+                        c = null !== (r = l.body.user_discount_offer) && void 0 !== r ? r : null;
                     return n.default.dispatch({
                         type: "BILLING_USER_OFFER_FETCH_SUCCESS",
-                        userTrialOffer: l,
-                        userDiscount: o
+                        userTrialOffer: o,
+                        userDiscount: s,
+                        userDiscountOffer: c
                     }), {
-                        userTrialOffer: l,
-                        userDiscount: o
+                        userTrialOffer: o,
+                        userDiscount: s,
+                        userDiscountOffer: c
                     }
                 } catch (e) {
                     n.default.dispatch({
