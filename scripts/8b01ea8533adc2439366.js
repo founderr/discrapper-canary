@@ -11403,7 +11403,7 @@
                             u = I(D, o),
                             f = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
                             m = k.has(o),
-                            h = B ? f >= W : void 0,
+                            h = B ? f >= W && 0 !== f : void 0,
                             E = Z && null !== (r = null == u ? void 0 : u.me_vote) && void 0 !== r && r,
                             p = T({
                                 didSelfVote: E,
