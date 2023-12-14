@@ -1,22 +1,110 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["28192"], {
+    ["97831"], {
         717837: function(e, t, n) {
             "use strict";
             e.exports = function(e) {
                 return (e = String(e || ""), s.test(e)) ? "rtl" : l.test(e) ? "ltr" : "neutral"
             };
-            var i = "֑-߿יִ-﷽ﹰ-ﻼ",
-                r = "A-Za-z\xc0-\xd6\xd8-\xf6\xf8-ʸ̀-֐ࠀ-῿‎Ⰰ-﬜︀-﹯﻽-￿",
-                s = RegExp("^[^" + r + "]*[" + i + "]"),
-                l = RegExp("^[^" + i + "]*[" + r + "]")
+            var r = "֑-߿יִ-﷽ﹰ-ﻼ",
+                i = "A-Za-z\xc0-\xd6\xd8-\xf6\xf8-ʸ̀-֐ࠀ-῿‎Ⰰ-﬜︀-﹯﻽-￿",
+                s = RegExp("^[^" + i + "]*[" + r + "]"),
+                l = RegExp("^[^" + r + "]*[" + i + "]")
+        },
+        397613: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                ErrorBoundary: function() {
+                    return l
+                }
+            }), n("70102"), n("222007");
+            var r = n("884691");
+            let i = (0, r.createContext)(null),
+                s = {
+                    didCatch: !1,
+                    error: null
+                };
+            class l extends r.Component {
+                static getDerivedStateFromError(e) {
+                    return {
+                        didCatch: !0,
+                        error: e
+                    }
+                }
+                resetErrorBoundary() {
+                    let {
+                        error: e
+                    } = this.state;
+                    if (null !== e) {
+                        for (var t, n, r = arguments.length, i = Array(r), l = 0; l < r; l++) i[l] = arguments[l];
+                        null === (t = (n = this.props).onReset) || void 0 === t || t.call(n, {
+                            args: i,
+                            reason: "imperative-api"
+                        }), this.setState(s)
+                    }
+                }
+                componentDidCatch(e, t) {
+                    var n, r;
+                    null === (n = (r = this.props).onError) || void 0 === n || n.call(r, e, t)
+                }
+                componentDidUpdate(e, t) {
+                    let {
+                        didCatch: n
+                    } = this.state, {
+                        resetKeys: r
+                    } = this.props;
+                    if (n && null !== t.error && function() {
+                            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+                                t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+                            return e.length !== t.length || e.some((e, n) => !Object.is(e, t[n]))
+                        }(e.resetKeys, r)) {
+                        var i, l;
+                        null === (i = (l = this.props).onReset) || void 0 === i || i.call(l, {
+                            next: r,
+                            prev: e.resetKeys,
+                            reason: "keys"
+                        }), this.setState(s)
+                    }
+                }
+                render() {
+                    let {
+                        children: e,
+                        fallbackRender: t,
+                        FallbackComponent: n,
+                        fallback: s
+                    } = this.props, {
+                        didCatch: l,
+                        error: a
+                    } = this.state, o = e;
+                    if (l) {
+                        let e = {
+                            error: a,
+                            resetErrorBoundary: this.resetErrorBoundary
+                        };
+                        if ((0, r.isValidElement)(s)) o = s;
+                        else if ("function" == typeof t) o = t(e);
+                        else if (n) o = (0, r.createElement)(n, e);
+                        else throw a
+                    }
+                    return (0, r.createElement)(i.Provider, {
+                        value: {
+                            didCatch: l,
+                            error: a,
+                            resetErrorBoundary: this.resetErrorBoundary
+                        }
+                    }, o)
+                }
+                constructor(e) {
+                    super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = s
+                }
+            }
         },
         111633: function(e, t, n) {
             "use strict";
             e.exports = function(e) {
                 var t, n;
-                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), E.test(e) ? e = e.substr(0, e.length - 2) : x.test(e) && (e = e.substr(0, e.length - 1)), (n = g.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = v.exec(e)) && d.test(n[1]) && (e = n[1], b.test(e) ? e += "e" : y.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = _.exec(e)) && d.test(n[1]) && (e = n[1] + "i"), (n = C.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = I.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = S.exec(e)) ? c.test(n[1]) && (e = n[1]) : (n = h.exec(e)) && c.test(n[1]) && (e = n[1]), (n = m.exec(e)) && (c.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && c.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
+                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), x.test(e) ? e = e.substr(0, e.length - 2) : b.test(e) && (e = e.substr(0, e.length - 1)), (n = g.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = _.exec(e)) && d.test(n[1]) && (e = n[1], E.test(e) ? e += "e" : y.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = m.exec(e)) && d.test(n[1]) && (e = n[1] + "i"), (n = C.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = I.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = S.exec(e)) ? c.test(n[1]) && (e = n[1]) : (n = v.exec(e)) && c.test(n[1]) && (e = n[1]), (n = h.exec(e)) && (c.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && c.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
             };
-            var i = {
+            var r = {
                     ational: "ate",
                     tional: "tion",
                     enci: "ence",
@@ -39,7 +127,7 @@
                     biliti: "ble",
                     logi: "log"
                 },
-                r = {
+                i = {
                     icate: "ic",
                     ative: "",
                     alize: "al",
@@ -57,14 +145,14 @@
                 d = RegExp("^" + l + "?" + s),
                 f = RegExp("^" + l + s + "[^aeiouwxy]$"),
                 p = /ll$/,
-                m = /^(.+?)e$/,
-                _ = /^(.+?)y$/,
-                h = /^(.+?(s|t))(ion)$/,
-                v = /^(.+?)(ed|ing)$/,
-                b = /(at|bl|iz)$/,
+                h = /^(.+?)e$/,
+                m = /^(.+?)y$/,
+                v = /^(.+?(s|t))(ion)$/,
+                _ = /^(.+?)(ed|ing)$/,
+                E = /(at|bl|iz)$/,
                 g = /^(.+?)eed$/,
-                x = /^.+?[^s]s$/,
-                E = /^.+?(ss|i)es$/,
+                b = /^.+?[^s]s$/,
+                x = /^.+?(ss|i)es$/,
                 y = /([^aeiouylsz])\1$/,
                 C = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
                 I = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
@@ -74,34 +162,34 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return i
                 }
             }), n("70102");
-            var i = n("884691");
+            var r = n("884691");
 
-            function r() {
-                let e = (0, i.createContext)(void 0);
+            function i() {
+                let e = (0, r.createContext)(void 0);
                 return {
                     Provider: t => {
                         let {
                             initialStore: n,
-                            createStore: r,
+                            createStore: i,
                             children: s
-                        } = t, l = (0, i.useRef)();
-                        return !l.current && (n && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !r && (r = () => n)), l.current = r()), (0, i.createElement)(e.Provider, {
+                        } = t, l = (0, r.useRef)();
+                        return !l.current && (n && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !i && (i = () => n)), l.current = i()), (0, r.createElement)(e.Provider, {
                             value: l.current
                         }, s)
                     },
                     useStore: function(t) {
                         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.is,
-                            r = (0, i.useContext)(e);
-                        if (!r) throw Error("Seems like you have not used zustand provider as an ancestor.");
-                        return r(t, n)
+                            i = (0, r.useContext)(e);
+                        if (!i) throw Error("Seems like you have not used zustand provider as an ancestor.");
+                        return i(t, n)
                     },
                     useStoreApi: () => {
-                        let t = (0, i.useContext)(e);
+                        let t = (0, r.useContext)(e);
                         if (!t) throw Error("Seems like you have not used zustand provider as an ancestor.");
-                        return (0, i.useMemo)(() => ({
+                        return (0, r.useMemo)(() => ({
                             getState: t.getState,
                             setState: t.setState,
                             subscribe: t.subscribe,
@@ -130,7 +218,7 @@
         926607: function(e, t, n) {
             "use strict";
 
-            function i(e, t) {
+            function r(e, t) {
                 return !t && (t = e.slice(0)), Object.freeze(Object.defineProperties(e, {
                     raw: {
                         value: Object.freeze(t)
@@ -139,7 +227,7 @@
             }
             n.r(t), n.d(t, {
                 _: function() {
-                    return i
+                    return r
                 }
             })
         },
@@ -147,23 +235,23 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return i
                 }
             });
-            var i = n("913144"),
-                r = {
+            var r = n("913144"),
+                i = {
                     toggleMembersSection() {
-                        i.default.dispatch({
+                        r.default.dispatch({
                             type: "CHANNEL_TOGGLE_MEMBERS_SECTION"
                         })
                     },
                     toggleProfilePanelSection() {
-                        i.default.dispatch({
+                        r.default.dispatch({
                             type: "PROFILE_PANEL_TOGGLE_SECTION"
                         })
                     },
                     toggleSummariesSection() {
-                        i.default.dispatch({
+                        r.default.dispatch({
                             type: "CHANNEL_TOGGLE_SUMMARIES_SECTION"
                         })
                     }
@@ -173,11 +261,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return h
                 }
             }), n("222007");
-            var i = n("37983"),
-                r = n("884691"),
+            var r = n("37983"),
+                i = n("884691"),
                 s = n("414456"),
                 l = n.n(s),
                 a = n("77078"),
@@ -186,13 +274,13 @@
                 c = n("49111"),
                 d = n("782340"),
                 f = n("519409");
-            class p extends r.Component {
+            class p extends i.Component {
                 render() {
-                    return (0, i.jsxs)("div", {
+                    return (0, r.jsxs)("div", {
                         className: f.streamerModeEnabled,
-                        children: [(0, i.jsx)("div", {
+                        children: [(0, r.jsx)("div", {
                             className: f.streamerModeEnabledImage
-                        }), (0, i.jsx)(a.Clickable, {
+                        }), (0, r.jsx)(a.Clickable, {
                             className: l(f.streamerModeEnabledBtn, {
                                 [f.disabled]: this.props.disableButton
                             }),
@@ -210,7 +298,7 @@
             p.defaultProps = {
                 disableButton: !1
             };
-            var m = p
+            var h = p
         },
         7037: function(e, t, n) {
             "use strict";
@@ -219,26 +307,26 @@
                     return l
                 }
             });
-            var i = n("37983");
+            var r = n("37983");
             n("884691");
-            var r = n("669491"),
+            var i = n("669491"),
                 s = n("75196");
             let l = e => {
                 let {
                     width: t = 24,
                     height: n = 24,
-                    color: l = r.default.colors.INTERACTIVE_NORMAL,
+                    color: l = i.default.colors.INTERACTIVE_NORMAL,
                     colorClass: a = "",
                     ...o
                 } = e;
-                return (0, i.jsx)("svg", {
+                return (0, r.jsx)("svg", {
                     ...(0, s.default)(o),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: t,
                     height: n,
                     fill: "none",
                     viewBox: "0 0 24 24",
-                    children: (0, i.jsx)("path", {
+                    children: (0, r.jsx)("path", {
                         fill: "string" == typeof l ? l : l.css,
                         d: "M12.7 3.3a1 1 0 0 0-1.4 0l-5 5a1 1 0 0 0 1.4 1.4L11 6.42V20a1 1 0 1 0 2 0V6.41l3.3 3.3a1 1 0 0 0 1.4-1.42l-5-5Z",
                         className: a
@@ -253,9 +341,9 @@
                     return s
                 }
             });
-            var i = n("884691");
-            let r = i.createContext(void 0);
-            var s = r
+            var r = n("884691");
+            let i = r.createContext(void 0);
+            var s = i
         },
         177589: function(e, t, n) {
             "use strict";
@@ -264,15 +352,15 @@
                     return u
                 }
             });
-            var i = n("429928"),
-                r = n("36539"),
+            var r = n("429928"),
+                i = n("36539"),
                 s = n("502651"),
                 l = n("671071"),
                 a = n("322631"),
                 o = n("947297");
 
             function u(e) {
-                return (0, r.default)(e) ? o.XBOX_APPLICATION_ID_PREFIX + e.name : (0, i.default)(e) && null != e.party && null != e.party.id ? l.SpotifyApplication.id : (0, s.default)(e) && null != e.url ? a.TWITCH_APPLICATION_ID_PREFIX + e.url : null != e.application_id ? e.application_id : null
+                return (0, i.default)(e) ? o.XBOX_APPLICATION_ID_PREFIX + e.name : (0, r.default)(e) && null != e.party && null != e.party.id ? l.SpotifyApplication.id : (0, s.default)(e) && null != e.url ? a.TWITCH_APPLICATION_ID_PREFIX + e.url : null != e.application_id ? e.application_id : null
             }
         },
         232268: function(e, t, n) {
@@ -282,19 +370,19 @@
                     return l
                 }
             });
-            var i = n("37983");
+            var r = n("37983");
             n("884691");
-            var r = n("65597"),
+            var i = n("65597"),
                 s = n("880731");
 
             function l(e) {
                 let {
                     children: t,
                     confettiLocation: n
-                } = e, l = (0, r.default)([s.default], () => s.default.isEnabled({
+                } = e, l = (0, i.default)([s.default], () => s.default.isEnabled({
                     confettiLocation: n
                 }));
-                return l ? (0, i.jsx)(i.Fragment, {
+                return l ? (0, r.jsx)(r.Fragment, {
                     children: t
                 }) : null
             }
@@ -306,29 +394,29 @@
                     return a
                 }
             });
-            var i = n("884691"),
-                r = n("65597"),
+            var r = n("884691"),
+                i = n("65597"),
                 s = n("526887"),
                 l = n("880731");
 
             function a() {
                 let {
                     createMultipleConfettiAt: e
-                } = i.useContext(s.ConfettiCannonContext), t = (0, r.default)([l.default], () => l.default.getState()), n = i.useCallback(e => ({
+                } = r.useContext(s.ConfettiCannonContext), t = (0, i.default)([l.default], () => l.default.getState()), n = r.useCallback(e => ({
                     size: {
                         type: "static-random",
                         minValue: e.confettiSize - 7,
                         maxValue: e.confettiSize + 7
                     }
-                }), []), a = i.useMemo(() => ({
-                    fire: (i, r, s) => {
+                }), []), a = r.useMemo(() => ({
+                    fire: (r, i, s) => {
                         var l, a;
                         let o = (null == s ? void 0 : s.settings) != null ? {
                                 ...t,
                                 ...s.settings
                             } : t,
                             u = n(o);
-                        e(i, r, u, (null !== (l = null == s ? void 0 : s.count) && void 0 !== l ? l : o.confettiCount) * (null !== (a = null == s ? void 0 : s.countMultiplier) && void 0 !== a ? a : 1), {
+                        e(r, i, u, (null !== (l = null == s ? void 0 : s.count) && void 0 !== l ? l : o.confettiCount) * (null !== (a = null == s ? void 0 : s.countMultiplier) && void 0 !== a ? a : 1), {
                             sprite: null == s ? void 0 : s.sprite
                         })
                     }
@@ -343,16 +431,16 @@
                     return s
                 }
             });
-            var i = n("446674"),
-                r = n("160299");
+            var r = n("446674"),
+                i = n("160299");
 
             function s() {
                 let {
                     localizedPricingPromo: e,
                     hasError: t
-                } = (0, i.useStateFromStoresObject)([r.default], () => ({
-                    localizedPricingPromo: r.default.localizedPricingPromo,
-                    hasError: r.default.localizedPricingPromoHasError
+                } = (0, r.useStateFromStoresObject)([i.default], () => ({
+                    localizedPricingPromo: i.default.localizedPricingPromo,
+                    hasError: i.default.localizedPricingPromoHasError
                 }));
                 return t ? null : e
             }
@@ -364,13 +452,13 @@
                     return s
                 }
             });
-            var i = n("759843"),
-                r = n("428958");
+            var r = n("759843"),
+                i = n("428958");
 
             function s(e, t) {
-                (0, r.default)({
-                    type: i.ImpressionTypes.VIEW,
-                    name: i.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
+                (0, i.default)({
+                    type: r.ImpressionTypes.VIEW,
+                    name: r.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
                     properties: {
                         country_code: t,
                         action_location: e
@@ -385,8 +473,8 @@
                     return o
                 }
             }), n("222007");
-            var i = n("748820"),
-                r = n("49671"),
+            var r = n("748820"),
+                i = n("49671"),
                 s = n("599110"),
                 l = n("49111");
             let a = new class e {
@@ -396,11 +484,11 @@
                         s.default.track(e, {
                             ... function() {
                                 var e, t, n;
-                                let i = "--campaign-id=",
-                                    s = null !== (n = null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n ? n : [];
+                                let r = "--campaign-id=",
+                                    s = null !== (n = null === i.default || void 0 === i.default ? void 0 : null === (t = i.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n ? n : [];
                                 for (let e of s)
-                                    if (e.startsWith(i)) return {
-                                        referrer: e.substr(i.length)
+                                    if (e.startsWith(r)) return {
+                                        referrer: e.substr(r.length)
                                     };
                                 return {}
                             }(),
@@ -418,10 +506,10 @@
                                         css_transfer_byte_size: 0
                                     };
                                 return null != window.performance && null != window.performance.getEntries && window.performance.getEntries().forEach(n => {
-                                    let i = null != n.encodedBodySize ? n.encodedBodySize : n.decodedBodySize,
-                                        r = null != n.decodedBodySize ? n.decodedBodySize : n.encodedBodySize,
+                                    let r = null != n.encodedBodySize ? n.encodedBodySize : n.decodedBodySize,
+                                        i = null != n.decodedBodySize ? n.decodedBodySize : n.encodedBodySize,
                                         s = n.transferSize;
-                                    null != r && null != i && (e = !0, t.total_compressed_byte_size += i, t.total_uncompressed_byte_size += r, null != s && (t.total_uncompressed_byte_size += s), "resource" === n.entryType && ("script" === n.initiatorType && null != n.name && null != n.name.match(/\.js/) && (t.js_compressed_byte_size += i, t.js_uncompressed_byte_size += r, null != s && (t.js_uncompressed_byte_size += s)), "link" === n.initiatorType && null != n.name && null != n.name.match(/\.css/) && (t.css_compressed_byte_size += i, t.css_uncompressed_byte_size += r, null != s && (t.css_uncompressed_byte_size += s))))
+                                    null != i && null != r && (e = !0, t.total_compressed_byte_size += r, t.total_uncompressed_byte_size += i, null != s && (t.total_uncompressed_byte_size += s), "resource" === n.entryType && ("script" === n.initiatorType && null != n.name && null != n.name.match(/\.js/) && (t.js_compressed_byte_size += r, t.js_uncompressed_byte_size += i, null != s && (t.js_uncompressed_byte_size += s)), "link" === n.initiatorType && null != n.name && null != n.name.match(/\.css/) && (t.css_compressed_byte_size += r, t.css_uncompressed_byte_size += i, null != s && (t.css_uncompressed_byte_size += s))))
                                 }), e ? t : {}
                             }(),
                             load_id: this.loadId,
@@ -434,7 +522,7 @@
                     !this.appUIViewed && (this.trackEvent(l.AnalyticEvents.APP_UI_VIEWED, e), this.appUIViewed = !0)
                 }
                 constructor() {
-                    this.loadId = (0, i.v4)(), this.appUIViewed = !1
+                    this.loadId = (0, r.v4)(), this.appUIViewed = !1
                 }
             };
 
@@ -452,8 +540,8 @@
                     return u
                 }
             });
-            var i = n("373469"),
-                r = n("824563"),
+            var r = n("373469"),
+                i = n("824563"),
                 s = n("27618"),
                 l = n("599110"),
                 a = n("49111");
@@ -461,16 +549,16 @@
                     let {
                         displayProfile: t,
                         isMobile: n,
-                        loadDurationMs: i,
-                        activity: r,
+                        loadDurationMs: r,
+                        activity: i,
                         customStatusActivity: s,
                         status: o
                     } = e;
                     l.default.track(a.AnalyticEvents.DM_PROFILE_VIEWED, {
                         has_mobile_indicator: n,
-                        has_activity: null != r && (null == r ? void 0 : r.type) !== a.ActivityTypes.CUSTOM_STATUS,
-                        has_game_activity: (null == r ? void 0 : r.type) === a.ActivityTypes.PLAYING,
-                        load_duration_ms: i,
+                        has_activity: null != i && (null == i ? void 0 : i.type) !== a.ActivityTypes.CUSTOM_STATUS,
+                        has_game_activity: (null == i ? void 0 : i.type) === a.ActivityTypes.PLAYING,
+                        load_duration_ms: r,
                         profile_user_status: o,
                         has_custom_status: null != s,
                         has_profile_effect: null != t.profileEffectId,
@@ -487,8 +575,8 @@
                     var t;
                     if (null == e) return {};
                     let n = e.userId,
-                        l = null != i.default.getAnyStreamForUser(n),
-                        o = r.default.findActivity(n, e => {
+                        l = null != r.default.getAnyStreamForUser(n),
+                        o = i.default.findActivity(n, e => {
                             let {
                                 type: t
                             } = e;
@@ -513,16 +601,16 @@
                     return a
                 },
                 default: function() {
-                    return i
+                    return r
                 }
             });
-            var i, r = n("376556"),
+            var r, i = n("376556"),
                 s = n("653047"),
                 l = n("782340");
             let a = "twitch:";
-            i = class extends s.default {
+            r = class extends s.default {
                 getIconURL() {
-                    return r.default.get("twitch").icon.lightPNG
+                    return i.default.get("twitch").icon.lightPNG
                 }
                 constructor(e) {
                     super(e), this.id = "".concat(a).concat(e.url), this.name = l.default.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH
@@ -536,15 +624,15 @@
                     return l
                 },
                 default: function() {
-                    return i
+                    return r
                 }
             });
-            var i, r = n("376556"),
+            var r, i = n("376556"),
                 s = n("653047");
             let l = "xbox:";
-            i = class extends s.default {
+            r = class extends s.default {
                 getIconURL() {
-                    return r.default.get("xbox").icon.lightPNG
+                    return i.default.get("xbox").icon.lightPNG
                 }
                 constructor(e) {
                     super(e), this.id = "".concat(l).concat(e.name), this.name = e.name
@@ -558,8 +646,8 @@
                     return d
                 }
             });
-            var i = n("446674"),
-                r = n("95410"),
+            var r = n("446674"),
+                i = n("95410"),
                 s = n("913144"),
                 l = n("49111");
             let a = {
@@ -568,7 +656,7 @@
                 },
                 o = a,
                 u = "LAST_VIEWED_PATH";
-            class c extends i.default.PersistedStore {
+            class c extends r.default.PersistedStore {
                 initialize() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a;
                     o = null != e ? e : a
@@ -588,8 +676,8 @@
                 }
             }
             c.displayName = "DefaultRouteStore", c.persistKey = "DefaultRouteStore", c.migrations = [() => {
-                let e = r.default.get(u, null);
-                return r.default.remove(u), {
+                let e = i.default.get(u, null);
+                return i.default.remove(u), {
                     lastViewedPath: e
                 }
             }];
@@ -615,8 +703,8 @@
                     return d
                 }
             }), n("222007");
-            var i = n("446674"),
-                r = n("913144"),
+            var r = n("446674"),
+                i = n("913144"),
                 s = n("27618");
             let l = !1,
                 a = Object.freeze({
@@ -631,7 +719,7 @@
             function u() {
                 o.affinityUserIds = new Set(o.userAffinities.map(e => e.user_id).filter(e => !s.default.isBlocked(e)))
             }
-            class c extends i.default.PersistedStore {
+            class c extends r.default.PersistedStore {
                 initialize(e) {
                     this.waitFor(s.default), null != e && (o.userAffinities = e.userAffinities, o.affinityUserIds = new Set(e.affinityUserIds), o.lastFetched = e.lastFetched), this.syncWith([s.default], u)
                 }
@@ -652,7 +740,7 @@
                 }
             }
             c.displayName = "UserAffinitiesStore", c.persistKey = "UserAffinitiesStore", c.migrations = [e => null];
-            var d = new c(r.default, {
+            var d = new c(i.default, {
                 LOAD_USER_AFFINITIES_SUCCESS: function(e) {
                     var t;
                     let {
@@ -680,8 +768,8 @@
                     return f
                 }
             });
-            var i = n("37983"),
-                r = n("884691"),
+            var r = n("37983"),
+                i = n("884691"),
                 s = n("414456"),
                 l = n.n(s),
                 a = n("546671"),
@@ -698,13 +786,13 @@
                     [u.DOWN]: o.down,
                     [u.LEFT]: o.left
                 };
-            class d extends r.PureComponent {
+            class d extends i.PureComponent {
                 render() {
                     let {
                         direction: e,
                         className: t
                     } = this.props;
-                    return (0, i.jsx)(a.default, {
+                    return (0, r.jsx)(a.default, {
                         className: l(o.arrow, t, {
                             [c[e]]: !0
                         })
@@ -721,25 +809,25 @@
                     return a
                 }
             });
-            var i = n("37983");
+            var r = n("37983");
             n("884691");
-            var r = n("414456"),
-                s = n.n(r),
+            var i = n("414456"),
+                s = n.n(i),
                 l = n("561445"),
                 a = e => {
                     let {
                         aspectRatio: t,
                         style: n,
-                        className: r,
+                        className: i,
                         children: a
                     } = e;
-                    return (0, i.jsx)("div", {
-                        className: s(l.outer, r),
+                    return (0, r.jsx)("div", {
+                        className: s(l.outer, i),
                         style: {
                             paddingTop: "".concat(1 / t * 100, "%"),
                             ...n
                         },
-                        children: (0, i.jsx)("div", {
+                        children: (0, r.jsx)("div", {
                             className: l.inner,
                             children: a
                         })
@@ -753,15 +841,15 @@
                     return f
                 }
             }), n("222007");
-            var i = n("37983"),
-                r = n("884691"),
+            var r = n("37983"),
+                i = n("884691"),
                 s = n("414456"),
                 l = n.n(s),
                 a = n("77078"),
                 o = n("145131"),
                 u = n("461380"),
                 c = n("298619");
-            class d extends r.PureComponent {
+            class d extends i.PureComponent {
                 handleClick(e) {
                     let {
                         onBreadcrumbClick: t
@@ -773,7 +861,7 @@
                         breadcrumbs: e,
                         className: t
                     } = this.props, n = e.map(this.renderBreadcrumb);
-                    return (0, i.jsx)(o.default, {
+                    return (0, r.jsx)(o.default, {
                         justify: o.default.Justify.START,
                         className: l(c.breadcrumbs, t),
                         children: n
@@ -783,27 +871,27 @@
                     super(...e), this.renderBreadcrumb = (e, t) => {
                         let {
                             activeId: n,
-                            onBreadcrumbClick: r,
+                            onBreadcrumbClick: i,
                             breadcrumbs: s,
                             renderCustomBreadcrumb: o,
                             separatorClassName: d
-                        } = this.props, f = e.id === n, p = t === s.length - 1, m = null != o ? o(e, f) : (0, i.jsx)("span", {
+                        } = this.props, f = e.id === n, p = t === s.length - 1, h = null != o ? o(e, f) : (0, r.jsx)("span", {
                             className: l(c.breadcrumb, {
                                 [c.activeBreadcrumb]: f,
-                                [c.interactiveBreadcrumb]: null != r
+                                [c.interactiveBreadcrumb]: null != i
                             }),
                             children: e.label
                         });
-                        return (0, i.jsxs)("div", {
+                        return (0, r.jsxs)("div", {
                             className: l(c.breadcrumbWrapper, {
                                 [c.breadcrumbFinalWrapper]: p
                             }),
-                            children: [null != r ? (0, i.jsx)(a.Clickable, {
+                            children: [null != i ? (0, r.jsx)(a.Clickable, {
                                 tag: "span",
                                 onClick: () => this.handleClick(e),
                                 className: c.breadcrumbClickWrapper,
-                                children: m
-                            }) : m, p ? null : (0, i.jsx)(u.default, {
+                                children: h
+                            }) : h, p ? null : (0, r.jsx)(u.default, {
                                 className: l(c.breadcrumbArrow, d),
                                 direction: u.default.Directions.RIGHT
                             })]
@@ -820,49 +908,49 @@
                     return f
                 }
             });
-            var i = n("37983"),
-                r = n("884691"),
+            var r = n("37983"),
+                i = n("884691"),
                 s = n("414456"),
                 l = n.n(s),
                 a = n("77078"),
                 o = n("145131"),
                 u = n("296165"),
                 c = n("926622");
-            class d extends r.PureComponent {
+            class d extends i.PureComponent {
                 render() {
                     let {
                         title: e,
                         description: t,
                         agreement: n,
-                        disagreement: r,
+                        disagreement: i,
                         onAgree: s,
                         onDisagree: d,
                         imageClassName: f
                     } = this.props;
-                    return (0, i.jsxs)(o.default, {
+                    return (0, r.jsxs)(o.default, {
                         className: u.gatedContent,
                         justify: o.default.Justify.CENTER,
                         align: o.default.Align.CENTER,
                         direction: o.default.Direction.VERTICAL,
-                        children: [(0, i.jsx)("div", {
+                        children: [(0, r.jsx)("div", {
                             className: l(u.image, f)
-                        }), (0, i.jsx)("div", {
+                        }), (0, r.jsx)("div", {
                             className: l(u.title, c.marginBottom8),
                             children: e
-                        }), (0, i.jsx)("div", {
+                        }), (0, r.jsx)("div", {
                             className: l(u.description, c.marginBottom20),
                             children: t
-                        }), (0, i.jsxs)(o.default, {
+                        }), (0, r.jsxs)(o.default, {
                             justify: o.default.Justify.CENTER,
                             align: o.default.Align.CENTER,
                             grow: 0,
-                            children: [null != r ? (0, i.jsx)(a.Button, {
+                            children: [null != i ? (0, r.jsx)(a.Button, {
                                 className: u.action,
                                 size: a.ButtonSizes.LARGE,
                                 color: a.ButtonColors.PRIMARY,
                                 onClick: d,
-                                children: r
-                            }) : null, null != n ? (0, i.jsx)(a.Button, {
+                                children: i
+                            }) : null, null != n ? (0, r.jsx)(a.Button, {
                                 className: u.action,
                                 color: a.Button.Colors.RED,
                                 size: a.ButtonSizes.LARGE,
@@ -882,8 +970,8 @@
                     return f
                 }
             });
-            var i = n("37983"),
-                r = n("884691"),
+            var r = n("37983"),
+                i = n("884691"),
                 s = n("414456"),
                 l = n.n(s),
                 a = n("77078"),
@@ -893,25 +981,25 @@
                 BLOCK: u.block,
                 INLINE: u.inline
             };
-            class d extends r.PureComponent {
+            class d extends i.PureComponent {
                 render() {
                     let {
                         children: e,
                         className: t,
                         textClassName: n,
-                        type: r = c.BLOCK,
+                        type: i = c.BLOCK,
                         style: s
                     } = this.props;
-                    return (0, i.jsxs)("div", {
-                        className: l(t, r),
+                    return (0, r.jsxs)("div", {
+                        className: l(t, i),
                         style: s,
-                        children: [(0, i.jsxs)(a.Text, {
+                        children: [(0, r.jsxs)(a.Text, {
                             variant: "text-sm/bold",
                             tag: "div",
                             color: "text-positive",
                             className: u.pro,
                             children: [o.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
-                        }), (0, i.jsx)(a.Text, {
+                        }), (0, r.jsx)(a.Text, {
                             className: l(u.tip, n),
                             variant: "text-sm/normal",
                             children: e
@@ -929,13 +1017,13 @@
                     return a
                 }
             });
-            var i = n("37983");
+            var r = n("37983");
             n("884691");
-            var r = n("469563"),
+            var i = n("469563"),
                 s = n("7037"),
                 l = n("246053"),
-                a = (0, r.replaceIcon)(function(e) {
-                    return (0, i.jsx)(l.default, {
+                a = (0, i.replaceIcon)(function(e) {
+                    return (0, r.jsx)(l.default, {
                         ...e,
                         direction: l.default.Directions.UP
                     })
@@ -948,30 +1036,30 @@
                     return a
                 }
             });
-            var i = n("37983");
+            var r = n("37983");
             n("884691");
-            var r = n("469563"),
+            var i = n("469563"),
                 s = n("736616"),
                 l = n("75196"),
-                a = (0, r.replaceIcon)(function(e) {
+                a = (0, i.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
-                        color: r = "currentColor",
+                        color: i = "currentColor",
                         foreground: s,
                         ...a
                     } = e;
-                    return (0, i.jsxs)("svg", {
+                    return (0, r.jsxs)("svg", {
                         viewBox: "0 0 24 24",
                         ...(0, l.default)(a),
                         width: t,
                         height: n,
-                        children: [(0, i.jsx)("path", {
-                            fill: r,
+                        children: [(0, r.jsx)("path", {
+                            fill: i,
                             className: s,
                             d: "M9.09091 12C9.09091 13.5786 10.3935 14.8571 12 14.8571C13.6065 14.8571 14.9091 13.5786 14.9091 12C14.9091 10.4214 13.6065 9.14286 12 9.14286C10.3935 9.14286 9.09091 10.4214 9.09091 12ZM13.3402 12C13.3402 12.789 12.689 13.4286 11.8857 13.4286C11.0823 13.4286 10.4311 12.789 10.4311 12C10.4311 11.211 11.0823 10.5714 11.8857 10.5714C12.689 10.5714 13.3402 11.211 13.3402 12Z"
-                        }), (0, i.jsx)("path", {
-                            fill: r,
+                        }), (0, r.jsx)("path", {
+                            fill: i,
                             className: s,
                             d: "M4 2C2.89543 2 2 2.89543 2 4V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V4C22 2.89543 21.1046 2 20 2H4ZM4 12C4 12 7.38036 7 12 7C16.6196 7 20 12 20 12C20 12 16.6196 17 12 17C7.38036 17 4 12 4 12Z"
                         })]
@@ -984,17 +1072,17 @@
             "use strict";
             n.r(t), n.d(t, {
                 Icon: function() {
-                    return _
+                    return m
                 },
                 Divider: function() {
-                    return h
+                    return v
                 },
                 default: function() {
-                    return b
+                    return E
                 }
             });
-            var i = n("37983"),
-                r = n("884691"),
+            var r = n("37983"),
+                i = n("884691"),
                 s = n("414456"),
                 l = n.n(s),
                 a = n("353386"),
@@ -1004,82 +1092,82 @@
                 d = n("980428"),
                 f = n("772280"),
                 p = n("587974"),
-                m = n("133934");
-            let _ = e => {
+                h = n("133934");
+            let m = e => {
                     let {
                         className: t,
                         iconClassName: n,
-                        children: r,
+                        children: i,
                         selected: s = !1,
                         disabled: a = !1,
                         showBadge: o = !1,
                         color: c,
                         foreground: d,
                         background: f,
-                        icon: _,
-                        onClick: h,
-                        onContextMenu: v,
-                        tooltip: b = null,
+                        icon: m,
+                        onClick: v,
+                        onContextMenu: _,
+                        tooltip: E = null,
                         tooltipColor: g,
-                        tooltipPosition: x = "bottom",
-                        hideOnClick: E = !0,
+                        tooltipPosition: b = "bottom",
+                        hideOnClick: x = !0,
                         role: y,
                         "aria-label": C,
                         "aria-hidden": I,
                         "aria-checked": S,
                         "aria-expanded": A,
                         "aria-haspopup": N
-                    } = e, T = (0, i.jsx)(_, {
+                    } = e, T = (0, r.jsx)(m, {
                         x: 0,
                         y: 0,
                         width: 24,
                         height: 24,
-                        className: l(n, m.icon),
+                        className: l(n, h.icon),
                         foreground: null != d ? d : void 0,
                         background: null != f ? f : void 0,
                         color: c
                     }), j = C;
-                    return null == j && "string" == typeof b && (j = b), (0, i.jsx)(u.Tooltip, {
-                        text: b,
+                    return null == j && "string" == typeof E && (j = E), (0, r.jsx)(u.Tooltip, {
+                        text: E,
                         color: g,
-                        position: x,
-                        hideOnClick: E,
+                        position: b,
+                        hideOnClick: x,
                         children: e => {
                             let {
-                                onMouseEnter: b,
+                                onMouseEnter: E,
                                 onMouseLeave: g,
-                                onFocus: x,
-                                onBlur: E
+                                onFocus: b,
+                                onBlur: x
                             } = e;
-                            return null == h ? (0, i.jsx)("div", {
-                                className: l(t, [m.iconWrapper]),
-                                children: (0, i.jsx)(_, {
+                            return null == v ? (0, r.jsx)("div", {
+                                className: l(t, [h.iconWrapper]),
+                                children: (0, r.jsx)(m, {
                                     x: 0,
                                     y: 0,
                                     width: 24,
                                     height: 24,
-                                    className: l(n, m.icon),
+                                    className: l(n, h.icon),
                                     foreground: null != d ? d : void 0,
                                     background: null != f ? f : void 0,
                                     color: c,
                                     "aria-hidden": I,
-                                    onMouseEnter: b,
+                                    onMouseEnter: E,
                                     onMouseLeave: g,
-                                    onFocus: x,
-                                    onBlur: E
+                                    onFocus: b,
+                                    onBlur: x
                                 })
-                            }) : (0, i.jsxs)(u.Clickable, {
+                            }) : (0, r.jsxs)(u.Clickable, {
                                 tag: "div",
-                                onClick: a ? void 0 : h,
-                                onContextMenu: a ? void 0 : v,
-                                onMouseEnter: b,
+                                onClick: a ? void 0 : v,
+                                onContextMenu: a ? void 0 : _,
+                                onMouseEnter: E,
                                 onMouseLeave: g,
-                                onFocus: x,
-                                onBlur: E,
+                                onFocus: b,
+                                onBlur: x,
                                 className: l(t, {
-                                    [m.iconWrapper]: !0,
-                                    [m.clickable]: !a && null != h,
-                                    [m.selected]: s
+                                    [h.iconWrapper]: !0,
+                                    [h.clickable]: !a && null != v,
+                                    [h.selected]: s
                                 }),
                                 role: y,
                                 "aria-label": j,
@@ -1087,26 +1175,26 @@
                                 "aria-checked": S,
                                 "aria-haspopup": N,
                                 "aria-expanded": A,
-                                tabIndex: a || null == h ? -1 : 0,
-                                children: [o ? (0, i.jsx)(p.default, {
+                                tabIndex: a || null == v ? -1 : 0,
+                                children: [o ? (0, r.jsx)(p.default, {
                                     mask: p.default.Masks.HEADER_BAR_BADGE,
                                     children: T
-                                }) : T, o ? (0, i.jsx)("span", {
-                                    className: m.iconBadge
-                                }) : null, r]
+                                }) : T, o ? (0, r.jsx)("span", {
+                                    className: h.iconBadge
+                                }) : null, i]
                             })
                         }
                     })
                 },
-                h = e => {
+                v = e => {
                     let {
                         className: t
                     } = e;
-                    return (0, i.jsx)("div", {
-                        className: l(m.divider, t)
+                    return (0, r.jsx)("div", {
+                        className: l(h.divider, t)
                     })
                 },
-                v = e => {
+                _ = e => {
                     let {
                         className: t,
                         innerClassName: n,
@@ -1114,84 +1202,84 @@
                         childrenBottom: d,
                         toolbar: f,
                         onDoubleClick: p,
-                        "aria-label": _,
-                        "aria-labelledby": h,
-                        role: v,
-                        scrollable: b,
+                        "aria-label": m,
+                        "aria-labelledby": v,
+                        role: _,
+                        scrollable: E,
                         transparent: g = !1
-                    } = e, x = r.useRef(null), E = r.useContext(c.default);
-                    return (0, i.jsx)("section", {
-                        className: l(t, m.container, {
-                            [m.themed]: !g,
-                            [m.transparent]: g,
-                            [m.themedMobile]: o.isMobile
+                    } = e, b = i.useRef(null), x = i.useContext(c.default);
+                    return (0, r.jsx)("section", {
+                        className: l(t, h.container, {
+                            [h.themed]: !g,
+                            [h.transparent]: g,
+                            [h.themedMobile]: o.isMobile
                         }),
-                        "aria-label": _,
-                        "aria-labelledby": h,
-                        role: v,
-                        ref: x,
-                        children: (0, i.jsxs)(u.FocusRingScope, {
-                            containerRef: x,
-                            children: [(0, i.jsxs)("div", {
-                                className: m.upperContainer,
-                                children: [(0, i.jsxs)("div", {
-                                    className: l(m.children, n, {
-                                        [m.scrollable]: b
+                        "aria-label": m,
+                        "aria-labelledby": v,
+                        role: _,
+                        ref: b,
+                        children: (0, r.jsxs)(u.FocusRingScope, {
+                            containerRef: b,
+                            children: [(0, r.jsxs)("div", {
+                                className: h.upperContainer,
+                                children: [(0, r.jsxs)("div", {
+                                    className: l(h.children, n, {
+                                        [h.scrollable]: E
                                     }),
                                     onDoubleClick: p,
-                                    children: [o.isMobile && null != E ? (0, i.jsx)(a.default, {
-                                        onClick: E,
-                                        className: m.hamburger
+                                    children: [o.isMobile && null != x ? (0, r.jsx)(a.default, {
+                                        onClick: x,
+                                        className: h.hamburger
                                     }) : null, s]
-                                }), null != f ? (0, i.jsx)("div", {
-                                    className: m.toolbar,
+                                }), null != f ? (0, r.jsx)("div", {
+                                    className: h.toolbar,
                                     children: f
                                 }) : null]
                             }), d]
                         })
                     })
                 };
-            v.Icon = _, v.Title = e => {
+            _.Icon = m, _.Title = e => {
                 let {
                     className: t,
                     wrapperClassName: n,
-                    children: r,
+                    children: i,
                     onContextMenu: s,
                     onClick: a,
                     id: o,
                     muted: c = !1,
                     level: d = 1
-                } = e, f = (0, i.jsx)(u.HeadingLevel, {
+                } = e, f = (0, r.jsx)(u.HeadingLevel, {
                     forceLevel: d,
-                    children: (0, i.jsx)(u.Heading, {
+                    children: (0, r.jsx)(u.Heading, {
                         variant: "heading-md/semibold",
                         color: c ? "header-secondary" : void 0,
-                        className: l(t, m.title),
+                        className: l(t, h.title),
                         id: o,
-                        children: r
+                        children: i
                     })
                 });
-                return null != a ? (0, i.jsx)(u.Clickable, {
+                return null != a ? (0, r.jsx)(u.Clickable, {
                     onClick: a,
                     onContextMenu: s,
-                    className: l(n, m.titleWrapper),
+                    className: l(n, h.titleWrapper),
                     children: f
-                }) : (0, i.jsx)("div", {
-                    className: l(n, m.titleWrapper),
+                }) : (0, r.jsx)("div", {
+                    className: l(n, h.titleWrapper),
                     onContextMenu: s,
                     children: f
                 })
-            }, v.Divider = h, v.Caret = function(e) {
+            }, _.Divider = v, _.Caret = function(e) {
                 let {
                     direction: t = "right"
                 } = e;
-                return "right" === t ? (0, i.jsx)(f.default, {
-                    className: m.caret
-                }) : (0, i.jsx)(d.default, {
-                    className: m.caret
+                return "right" === t ? (0, r.jsx)(f.default, {
+                    className: h.caret
+                }) : (0, r.jsx)(d.default, {
+                    className: h.caret
                 })
             };
-            var b = v
+            var E = _
         },
         353386: function(e, t, n) {
             "use strict";
@@ -1200,24 +1288,24 @@
                     return a
                 }
             });
-            var i = n("37983");
+            var r = n("37983");
             n("884691");
-            var r = n("580420"),
-                s = n.n(r),
+            var i = n("580420"),
+                s = n.n(i),
                 l = n("249907"),
                 a = e => {
                     let {
                         open: t = !1,
                         className: n,
-                        ...r
+                        ...i
                     } = e;
-                    return (0, i.jsxs)("button", {
+                    return (0, r.jsxs)("button", {
                         type: "button",
                         className: s(l.btnHamburger, {
                             [l.btnHamburgerOpen]: t
                         }, n),
-                        ...r,
-                        children: [(0, i.jsx)("span", {}), (0, i.jsx)("span", {}), (0, i.jsx)("span", {}), (0, i.jsx)("span", {}), (0, i.jsx)("span", {}), (0, i.jsx)("span", {})]
+                        ...i,
+                        children: [(0, r.jsx)("span", {}), (0, r.jsx)("span", {}), (0, r.jsx)("span", {}), (0, r.jsx)("span", {}), (0, r.jsx)("span", {}), (0, r.jsx)("span", {})]
                     })
                 }
         }

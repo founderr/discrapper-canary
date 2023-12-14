@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["5710"], {
+    ["69892"], {
         542455: function(t, e, r) {
             "use strict";
 
@@ -536,7 +536,7 @@
                                 data: l
                             }, c), function(e, r) {
                                 return o(function(n) {
-                                    return G(t)(e.key, r).catch(function(t) {
+                                    return U(t)(e.key, r).catch(function(t) {
                                         if (404 !== t.status) throw t;
                                         return n()
                                     })
@@ -544,7 +544,7 @@
                             })
                         }
                     },
-                    q = function(t) {
+                    E = function(t) {
                         return function(e, r, n) {
                             var i = f(n);
                             return i.queryParameters["X-Algolia-User-ID"] = e, t.transporter.write({
@@ -556,7 +556,7 @@
                             }, i)
                         }
                     },
-                    E = function(t) {
+                    q = function(t) {
                         return function(e, r, n) {
                             return t.transporter.write({
                                 method: v,
@@ -578,9 +578,9 @@
                                     destination: r
                                 }
                             }, n), function(r, n) {
-                                return J(t)(e, {
+                                return F(t)(e, {
                                     methods: {
-                                        waitTask: tV
+                                        waitTask: tB
                                     }
                                 }).waitTask(r.taskID, n)
                             })
@@ -589,21 +589,21 @@
                     C = function(t) {
                         return function(r, n, i) {
                             return N(t)(r, n, e({}, i, {
-                                scope: [tJ.Rules]
+                                scope: [tF.Rules]
                             }))
                         }
                     },
                     A = function(t) {
                         return function(r, n, i) {
                             return N(t)(r, n, e({}, i, {
-                                scope: [tJ.Settings]
+                                scope: [tF.Settings]
                             }))
                         }
                     },
                     z = function(t) {
                         return function(r, n, i) {
                             return N(t)(r, n, e({}, i, {
-                                scope: [tJ.Synonyms]
+                                scope: [tF.Synonyms]
                             }))
                         }
                     },
@@ -614,14 +614,14 @@
                                 path: l("1/keys/%s", e)
                             }, r), function(r, n) {
                                 return o(function(r) {
-                                    return G(t)(e, n).then(r).catch(function(t) {
+                                    return U(t)(e, n).then(r).catch(function(t) {
                                         if (404 !== t.status) throw t
                                     })
                                 })
                             })
                         }
                     },
-                    G = function(t) {
+                    U = function(t) {
                         return function(e, r) {
                             return t.transporter.read({
                                 method: "GET",
@@ -629,7 +629,7 @@
                             }, r)
                         }
                     },
-                    U = function(t) {
+                    G = function(t) {
                         return function(e) {
                             return t.transporter.read({
                                 method: "GET",
@@ -637,7 +637,7 @@
                             }, e)
                         }
                     },
-                    L = function(t) {
+                    V = function(t) {
                         return function(e) {
                             return t.transporter.read({
                                 method: "GET",
@@ -645,7 +645,7 @@
                             }, e)
                         }
                     },
-                    V = function(t) {
+                    B = function(t) {
                         return function(e, r) {
                             return t.transporter.read({
                                 method: "GET",
@@ -653,7 +653,7 @@
                             }, r)
                         }
                     },
-                    F = function(t) {
+                    L = function(t) {
                         return function(e) {
                             var n = e || {},
                                 i = n.retrieveMappings,
@@ -664,7 +664,7 @@
                             }, a)
                         }
                     },
-                    J = function(t) {
+                    F = function(t) {
                         return function(e) {
                             var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                             return c({
@@ -674,7 +674,7 @@
                             }, r.methods)
                         }
                     },
-                    W = function(t) {
+                    J = function(t) {
                         return function(e) {
                             return t.transporter.read({
                                 method: "GET",
@@ -682,7 +682,7 @@
                             }, e)
                         }
                     },
-                    B = function(t) {
+                    W = function(t) {
                         return function(e) {
                             return t.transporter.read({
                                 method: "GET",
@@ -716,9 +716,9 @@
                                     destination: r
                                 }
                             }, n), function(r, n) {
-                                return J(t)(e, {
+                                return F(t)(e, {
                                     methods: {
-                                        waitTask: tV
+                                        waitTask: tB
                                     }
                                 }).waitTask(r.taskID, n)
                             })
@@ -734,9 +734,9 @@
                                 }
                             }, r), function(e, r) {
                                 return Promise.all(Object.keys(e.taskID).map(function(n) {
-                                    return J(t)(n, {
+                                    return F(t)(n, {
                                         methods: {
-                                            waitTask: tV
+                                            waitTask: tB
                                         }
                                     }).waitTask(e.taskID[n], r)
                                 }))
@@ -778,7 +778,7 @@
                                     s = a.facetName,
                                     o = a.facetQuery,
                                     u = r(a, ["facetName", "facetQuery"]);
-                                return J(t)(n.indexName, {
+                                return F(t)(n.indexName, {
                                     methods: {
                                         searchForFacetValues: tM
                                     }
@@ -802,7 +802,7 @@
                                 path: l("1/keys/%s/restore", e)
                             }, r), function(r, n) {
                                 return o(function(r) {
-                                    return G(t)(e, n).catch(function(t) {
+                                    return U(t)(e, n).catch(function(t) {
                                         if (404 !== t.status) throw t;
                                         return r()
                                     })
@@ -836,7 +836,7 @@
                                 } : {}
                             }, c), function(r, n) {
                                 return o(function(r) {
-                                    return G(t)(e, n).then(function(t) {
+                                    return U(t)(e, n).then(function(t) {
                                         var e;
                                         return (e = t, Object.keys(i).filter(function(t) {
                                             return -1 !== h.indexOf(t)
@@ -857,7 +857,7 @@
                                     requests: e
                                 }
                             }, r), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
@@ -887,7 +887,7 @@
                                     return t.hits.length < n.hitsPerPage
                                 },
                                 request: function(r) {
-                                    return tG(t)("", e({}, n, {}, r)).then(function(t) {
+                                    return tU(t)("", e({}, n, {}, r)).then(function(t) {
                                         return e({}, t, {
                                             hits: t.hits.map(function(t) {
                                                 return delete t._highlightResult, t
@@ -908,7 +908,7 @@
                                     return t.hits.length < n.hitsPerPage
                                 },
                                 request: function(r) {
-                                    return tU(t)("", e({}, n, {}, r)).then(function(t) {
+                                    return tG(t)("", e({}, n, {}, r)).then(function(t) {
                                         return e({}, t, {
                                             hits: t.hits.map(function(t) {
                                                 return delete t._highlightResult, t
@@ -942,7 +942,7 @@
                                 })
                             }(), function(e, r) {
                                 return Promise.all(e.taskIDs.map(function(e) {
-                                    return tV(t)(e, r)
+                                    return tB(t)(e, r)
                                 }))
                             })
                         }
@@ -953,7 +953,7 @@
                                 method: v,
                                 path: l("1/indexes/%s/clear", t.indexName)
                             }, e), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
@@ -966,7 +966,7 @@
                                 method: v,
                                 path: l("1/indexes/%s/rules/clear", t.indexName)
                             }, a), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
@@ -979,7 +979,7 @@
                                 method: v,
                                 path: l("1/indexes/%s/synonyms/clear", t.indexName)
                             }, a), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
@@ -990,7 +990,7 @@
                                 path: l("1/indexes/%s/deleteByQuery", t.indexName),
                                 data: e
                             }, r), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
@@ -1000,7 +1000,7 @@
                                 method: g,
                                 path: l("1/indexes/%s", t.indexName)
                             }, e), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
@@ -1011,7 +1011,7 @@
                                     taskID: t.taskIDs[0]
                                 }
                             }), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
@@ -1022,7 +1022,7 @@
                                     objectID: t
                                 }
                             });
-                            return tu(t)(n, tF.DeleteObject, r)
+                            return tu(t)(n, tL.DeleteObject, r)
                         }
                     },
                     tg = function(t) {
@@ -1034,7 +1034,7 @@
                                 method: g,
                                 path: l("1/indexes/%s/rules/%s", t.indexName, e)
                             }, s), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
@@ -1047,7 +1047,7 @@
                                 method: g,
                                 path: l("1/indexes/%s/synonyms/%s", t.indexName, e)
                             }, s), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
@@ -1166,7 +1166,7 @@
                                     taskID: t.taskIDs[0]
                                 }
                             }), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
@@ -1175,7 +1175,7 @@
                             var i = n || {},
                                 a = i.createIfNotExists,
                                 s = r(i, ["createIfNotExists"]),
-                                o = a ? tF.PartialUpdateObject : tF.PartialUpdateObjectNoCreate;
+                                o = a ? tL.PartialUpdateObject : tL.PartialUpdateObjectNoCreate;
                             return tu(t)(e, o, s)
                         }
                     },
@@ -1195,12 +1195,12 @@
                                             destination: r
                                         }
                                     }, i), function(e, r) {
-                                        return tV(t)(e.taskID, r)
+                                        return tB(t)(e.taskID, r)
                                     })
                                 },
                                 m = Math.random().toString(36).substring(7),
                                 g = "".concat(t.indexName, "_tmp_").concat(m),
-                                y = tq({
+                                y = tE({
                                     appId: t.appId,
                                     transporter: t.transporter,
                                     indexName: g
@@ -1252,23 +1252,23 @@
                     },
                     tR = function(t) {
                         return function(e, r) {
-                            return u(tq(t)([e], r).then(function(t) {
+                            return u(tE(t)([e], r).then(function(t) {
                                 return {
                                     objectID: t.objectIDs[0],
                                     taskID: t.taskIDs[0]
                                 }
                             }), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
-                    tq = function(t) {
+                    tE = function(t) {
                         return function(e, n) {
                             var i = n || {},
                                 a = i.autoGenerateObjectIDIfNotExist,
                                 s = r(i, ["autoGenerateObjectIDIfNotExist"]),
-                                o = a ? tF.AddObject : tF.UpdateObject;
-                            if (o === tF.UpdateObject) {
+                                o = a ? tL.AddObject : tL.UpdateObject;
+                            if (o === tL.UpdateObject) {
                                 var c = !0,
                                     l = !1,
                                     h = void 0;
@@ -1291,7 +1291,7 @@
                             return tu(t)(e, o, s)
                         }
                     },
-                    tE = function(t) {
+                    tq = function(t) {
                         return function(e, r) {
                             return tN(t)([e], r)
                         }
@@ -1307,7 +1307,7 @@
                                 path: l("1/indexes/%s/rules/batch", t.indexName),
                                 data: e
                             }, o), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
@@ -1327,7 +1327,7 @@
                                 path: l("1/indexes/%s/synonyms/batch", t.indexName),
                                 data: e
                             }, o), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
@@ -1355,7 +1355,7 @@
                             }, n)
                         }
                     },
-                    tG = function(t) {
+                    tU = function(t) {
                         return function(e, r) {
                             return t.transporter.read({
                                 method: v,
@@ -1366,7 +1366,7 @@
                             }, r)
                         }
                     },
-                    tU = function(t) {
+                    tG = function(t) {
                         return function(e, r) {
                             return t.transporter.read({
                                 method: v,
@@ -1377,7 +1377,7 @@
                             }, r)
                         }
                     },
-                    tL = function(t) {
+                    tV = function(t) {
                         return function(e, n) {
                             var i = n || {},
                                 a = i.forwardToReplicas,
@@ -1387,11 +1387,11 @@
                                 path: l("1/indexes/%s/settings", t.indexName),
                                 data: e
                             }, s), function(e, r) {
-                                return tV(t)(e.taskID, r)
+                                return tB(t)(e.taskID, r)
                             })
                         }
                     },
-                    tV = function(t) {
+                    tB = function(t) {
                         return function(e, r) {
                             return o(function(n) {
                                 var i;
@@ -1406,20 +1406,20 @@
                             })
                         }
                     },
-                    tF = {
+                    tL = {
                         AddObject: "addObject",
                         UpdateObject: "updateObject",
                         PartialUpdateObject: "partialUpdateObject",
                         PartialUpdateObjectNoCreate: "partialUpdateObjectNoCreate",
                         DeleteObject: "deleteObject"
                     },
-                    tJ = {
+                    tF = {
                         Settings: "settings",
                         Synonyms: "synonyms",
                         Rules: "rules"
                     };
 
-                function tW(t, r, o) {
+                function tJ(t, r, o) {
                     var u, l, f, p, m, g, v, y, _, x, P = {
                         appId: t,
                         apiKey: r,
@@ -1606,37 +1606,37 @@
                             copyRules: C,
                             moveIndex: K,
                             listIndices: $,
-                            getLogs: U,
-                            listClusters: B,
+                            getLogs: G,
+                            listClusters: W,
                             multipleSearchForFacetValues: Z,
-                            getApiKey: G,
+                            getApiKey: U,
                             addApiKey: R,
-                            listApiKeys: W,
+                            listApiKeys: J,
                             updateApiKey: tn,
                             deleteApiKey: M,
                             restoreApiKey: te,
-                            assignUserID: q,
-                            assignUserIDs: E,
-                            getUserID: V,
+                            assignUserID: E,
+                            assignUserIDs: q,
+                            getUserID: B,
                             searchUserIDs: tr,
                             listUserIDs: H,
-                            getTopUserIDs: L,
+                            getTopUserIDs: V,
                             removeUserID: tt,
-                            hasPendingMappings: F,
+                            hasPendingMappings: L,
                             initIndex: function(t) {
                                 return function(e) {
-                                    return J(t)(e, {
+                                    return F(t)(e, {
                                         methods: {
                                             batch: ti,
                                             delete: td,
                                             getObject: t_,
                                             getObjects: tP,
                                             saveObject: tR,
-                                            saveObjects: tq,
+                                            saveObjects: tE,
                                             search: tz,
                                             searchForFacetValues: tM,
-                                            waitTask: tV,
-                                            setSettings: tL,
+                                            waitTask: tB,
+                                            setSettings: tV,
                                             getSettings: tS,
                                             partialUpdateObject: tO,
                                             partialUpdateObjects: tj,
@@ -1651,16 +1651,16 @@
                                             saveSynonym: tC,
                                             saveSynonyms: tA,
                                             getSynonym: tT,
-                                            searchSynonyms: tU,
+                                            searchSynonyms: tG,
                                             browseSynonyms: to,
                                             deleteSynonym: tv,
                                             clearSynonyms: th,
                                             replaceAllObjects: tI,
                                             replaceAllSynonyms: tk,
-                                            searchRules: tG,
+                                            searchRules: tU,
                                             getRule: tw,
                                             deleteRule: tg,
-                                            saveRule: tE,
+                                            saveRule: tq,
                                             saveRules: tN,
                                             replaceAllRules: tD,
                                             browseRules: ts,
@@ -1759,7 +1759,7 @@
                         }
                     }, v.methods)
                 }
-                return tW.version = "4.1.0", tW
+                return tJ.version = "4.1.0", tJ
             }, "object" == typeof e && void 0 !== t ? t.exports = i() : "function" == typeof define && define.amd ? define(i) : (n = n || self).algoliasearch = i()
         },
         717837: function(t, e, r) {
@@ -1792,6 +1792,94 @@
                 var e = n(t),
                     r = e % 1;
                 return e == e ? r ? e - r : e : 0
+            }
+        },
+        397613: function(t, e, r) {
+            "use strict";
+            r.r(e), r.d(e, {
+                ErrorBoundary: function() {
+                    return s
+                }
+            }), r("70102"), r("222007");
+            var n = r("884691");
+            let i = (0, n.createContext)(null),
+                a = {
+                    didCatch: !1,
+                    error: null
+                };
+            class s extends n.Component {
+                static getDerivedStateFromError(t) {
+                    return {
+                        didCatch: !0,
+                        error: t
+                    }
+                }
+                resetErrorBoundary() {
+                    let {
+                        error: t
+                    } = this.state;
+                    if (null !== t) {
+                        for (var e, r, n = arguments.length, i = Array(n), s = 0; s < n; s++) i[s] = arguments[s];
+                        null === (e = (r = this.props).onReset) || void 0 === e || e.call(r, {
+                            args: i,
+                            reason: "imperative-api"
+                        }), this.setState(a)
+                    }
+                }
+                componentDidCatch(t, e) {
+                    var r, n;
+                    null === (r = (n = this.props).onError) || void 0 === r || r.call(n, t, e)
+                }
+                componentDidUpdate(t, e) {
+                    let {
+                        didCatch: r
+                    } = this.state, {
+                        resetKeys: n
+                    } = this.props;
+                    if (r && null !== e.error && function() {
+                            let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+                                e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+                            return t.length !== e.length || t.some((t, r) => !Object.is(t, e[r]))
+                        }(t.resetKeys, n)) {
+                        var i, s;
+                        null === (i = (s = this.props).onReset) || void 0 === i || i.call(s, {
+                            next: n,
+                            prev: t.resetKeys,
+                            reason: "keys"
+                        }), this.setState(a)
+                    }
+                }
+                render() {
+                    let {
+                        children: t,
+                        fallbackRender: e,
+                        FallbackComponent: r,
+                        fallback: a
+                    } = this.props, {
+                        didCatch: s,
+                        error: o
+                    } = this.state, u = t;
+                    if (s) {
+                        let t = {
+                            error: o,
+                            resetErrorBoundary: this.resetErrorBoundary
+                        };
+                        if ((0, n.isValidElement)(a)) u = a;
+                        else if ("function" == typeof e) u = e(t);
+                        else if (r) u = (0, n.createElement)(r, t);
+                        else throw o
+                    }
+                    return (0, n.createElement)(i.Provider, {
+                        value: {
+                            didCatch: s,
+                            error: o,
+                            resetErrorBoundary: this.resetErrorBoundary
+                        }
+                    }, u)
+                }
+                constructor(t) {
+                    super(t), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = a
+                }
             }
         },
         111633: function(t, e, r) {
