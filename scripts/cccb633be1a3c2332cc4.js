@@ -174,10 +174,10 @@
             "use strict";
             o.r(t), o.d(t, {
                 CollectiblesCollectedModalInner: function() {
-                    return B
+                    return L
                 },
                 default: function() {
-                    return D
+                    return y
                 }
             }), o("222007");
             var n = o("37983"),
@@ -201,61 +201,65 @@
                 v = o("697218"),
                 _ = o("730297"),
                 x = o("806410"),
-                I = o("923702"),
-                A = o("716120"),
-                O = o("408381"),
-                m = o("57940"),
+                A = o("923702"),
+                I = o("716120"),
+                m = o("408381"),
+                O = o("57940"),
                 N = o("782340"),
                 h = o("99242"),
-                L = o("53708");
-            let B = e => {
+                B = o("53708");
+            let L = e => {
                 var t, o;
                 let {
                     product: a,
                     onClose: s,
                     confettiTarget: i,
-                    confettiCanvas: B,
-                    category: D,
-                    analyticsLocations: M
+                    confettiCanvas: L,
+                    category: y,
+                    analyticsLocations: k
                 } = e, {
-                    confettiColors: y,
-                    confettiSprites: R,
-                    backgroundColors: k,
+                    confettiColors: D,
+                    confettiSprites: M,
+                    backgroundColors: R,
                     buttonColors: j
-                } = (0, m.default)(D), w = null != j ? {
-                    background: (0, O.getBackgroundGradient)(j, 90),
+                } = (0, O.default)(y), w = null != j ? {
+                    background: (0, m.getBackgroundGradient)(j, 90),
                     color: j.text.toHslString()
-                } : void 0, P = null != k ? {
-                    background: (0, O.getBackgroundGradient)(k, 135)
-                } : void 0, H = (0, c.default)([v.default], () => {
+                } : void 0, P = null != R ? {
+                    background: (0, m.getBackgroundGradient)(R, 135)
+                } : {
+                    backgroundColor: "var(--modal-background)"
+                }, H = (0, c.default)([v.default], () => {
                     let e = v.default.getCurrentUser();
                     return u(null != e, "User cannot be undefined"), e
-                }), U = (0, c.default)([C.default], () => C.default.useReducedMotion), z = null !== (t = a.items.find(_.isAvatarDecorationRecord)) && void 0 !== t ? t : null, G = null !== (o = a.items.find(x.isProfileEffectRecord)) && void 0 !== o ? o : null, {
+                }), z = (0, c.default)([C.default], () => C.default.useReducedMotion), U = null !== (t = a.items.find(_.isAvatarDecorationRecord)) && void 0 !== t ? t : null, G = null !== (o = a.items.find(x.isProfileEffectRecord)) && void 0 !== o ? o : null, {
                     avatarDecorationSrc: W
                 } = (0, F.default)({
                     user: H,
-                    avatarDecorationOverride: z,
+                    avatarDecorationOverride: U,
                     size: (0, p.getDecorationSizeForAvatarSize)(d.AvatarSizes.SIZE_120)
                 }), V = r.useRef(null), {
                     analyticsLocations: X,
                     AnalyticsLocationProvider: Z
-                } = (0, g.default)([...M, E.default.COLLECTIBLES_COLLECTED_MODAL]), K = (0, b.default)({
+                } = (0, g.default)([...k, E.default.COLLECTIBLES_COLLECTED_MODAL]), K = (0, b.default)({
                     analyticsLocations: X
                 });
-                return null == z && null == G ? null : (0, n.jsxs)(Z, {
+                return null == U && null == G ? null : (0, n.jsxs)(Z, {
                     children: [(0, n.jsxs)("div", {
                         className: h.modalInner,
                         ref: V,
                         style: P,
                         children: [(0, n.jsxs)("div", {
-                            className: h.bannerContainer,
-                            children: [null != D && (0, n.jsx)(A.default, {
-                                asset: D.banner,
-                                size: 440,
+                            className: l(h.bannerContainer, {
+                                [h.bannerBackgroundFallback]: null == R
+                            }),
+                            children: [null != y && (0, n.jsx)(I.default, {
+                                asset: y.banner,
+                                size: (0, m.getAssetSizeByHeight)(440),
                                 className: h.decorationBanner
-                            }), null != z && (0, n.jsx)(d.Avatar, {
+                            }), null != U && (0, n.jsx)(d.Avatar, {
                                 size: d.AvatarSizes.SIZE_120,
-                                src: L,
+                                src: B,
                                 avatarDecoration: W,
                                 className: h.avatarDecoration,
                                 "aria-label": a.name
@@ -268,7 +272,7 @@
                             })]
                         }), (0, n.jsxs)("div", {
                             className: l(h.collectedInfoContainer, {
-                                [h.default]: null == k
+                                [h.default]: null == R
                             }),
                             children: [(0, n.jsxs)("div", {
                                 className: h.collectedTextContainer,
@@ -285,7 +289,7 @@
                                 })]
                             }), (0, n.jsx)(d.Button, {
                                 onClick: () => {
-                                    s(), (0, f.popLayer)(), K(), null != z ? (0, p.openAvatarDecorationModal)({
+                                    s(), (0, f.popLayer)(), K(), null != U ? (0, p.openAvatarDecorationModal)({
                                         initialSelectedDecoration: a.items.find(_.isAvatarDecorationRecord),
                                         analyticsLocations: X
                                     }) : null != G && (0, T.openProfileEffectModal)({
@@ -301,15 +305,15 @@
                             className: h.modalCloseButton,
                             withCircleBackground: !0
                         })]
-                    }), !U && (0, n.jsx)(I.default, {
+                    }), !z && (0, n.jsx)(A.default, {
                         confettiTarget: null != i ? i : V.current,
-                        confettiCanvas: B,
-                        sprites: null != R ? R : m.DEFAULT_CONFETTI_SPRITES,
-                        colors: null != y ? y : m.DEFAULT_CONFETTI_COLORS
+                        confettiCanvas: L,
+                        sprites: null != M ? M : O.DEFAULT_CONFETTI_SPRITES,
+                        colors: null != D ? D : O.DEFAULT_CONFETTI_COLORS
                     })]
                 })
             };
-            var D = e => {
+            var y = e => {
                 let {
                     transitionState: t,
                     product: o,
@@ -329,7 +333,7 @@
                         className: h.modalRoot,
                         children: (0, n.jsx)(d.ModalContent, {
                             className: h.modalContent,
-                            children: (0, n.jsx)(B, {
+                            children: (0, n.jsx)(L, {
                                 product: o,
                                 category: a,
                                 onClose: l,
@@ -345,18 +349,23 @@
             "use strict";
             o.r(t), o.d(t, {
                 MAX_CONTENT_WIDTH: function() {
-                    return n
-                },
-                getLogoSize: function() {
                     return r
                 },
-                getBackgroundGradient: function() {
+                getAssetSizeByHeight: function() {
                     return a
+                },
+                getLogoSize: function() {
+                    return l
+                },
+                getBackgroundGradient: function() {
+                    return s
                 }
             });
-            let n = 1060,
-                r = e => 3.8 * e,
-                a = function(e) {
+            var n = o("547630");
+            let r = 1060,
+                a = e => e * (0, n.default)(),
+                l = e => 3.8 * e,
+                s = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
                         {
                             primary: o,

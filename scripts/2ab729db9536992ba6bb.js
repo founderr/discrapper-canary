@@ -58,11 +58,11 @@
                 L = s("815297"),
                 m = s("574073"),
                 I = s("291655"),
-                _ = s("946964"),
-                S = s("649844"),
+                S = s("946964"),
+                _ = s("649844"),
                 T = s("635956"),
-                h = s("38766"),
-                g = s("184900"),
+                g = s("38766"),
+                h = s("184900"),
                 M = s("493390"),
                 v = s("217513"),
                 x = s("790618"),
@@ -109,7 +109,7 @@
                         className: ee.subscribeNow,
                         innerRef: i,
                         onClick: () => {
-                            (0, S.default)({
+                            (0, _.default)({
                                 subscriptionTier: J.PremiumSubscriptionSKUs.TIER_2,
                                 analyticsLocations: s,
                                 returnRef: i
@@ -132,10 +132,10 @@
                     } = (0, B.default)({
                         location: "CollectiblesProductPreviewInfo"
                     }), {
-                        giftingEnabled: S
+                        giftingEnabled: _
                     } = (0, k.default)({
                         location: "CollectiblesProductPreviewInfo"
-                    }), g = D.default.canUseCollectibles(s), [v, x] = (0, n.useStateFromStoresArray)([b.default], () => [b.default.getPurchase(t.skuId), b.default.isClaiming === t.skuId]), O = (0, h.default)({
+                    }), h = D.default.canUseCollectibles(s), [v, x] = (0, n.useStateFromStoresArray)([b.default], () => [b.default.getPurchase(t.skuId), b.default.isClaiming === t.skuId]), O = (0, g.default)({
                         analyticsLocations: m
                     }), {
                         buttonColors: P,
@@ -230,7 +230,7 @@
                                         className: ee.priceTag,
                                         children: $.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
                                     });
-                                    if (!S || g) return (0, a.jsx)(G.default, {
+                                    if (!_ || h) return (0, a.jsx)(G.default, {
                                         product: t,
                                         className: ee.priceTag
                                     });
@@ -272,7 +272,7 @@
                                 className: ee.buttonsContainer,
                                 children: [(0, a.jsxs)("div", {
                                     className: ee.primaryButtons,
-                                    children: [I && F && !g ? ed($.default.Messages.UNLOCK_WITH_NITRO) : g || I ? null != v ? (0, a.jsx)(o.Button, {
+                                    children: [I && F && !h ? ed($.default.Messages.UNLOCK_WITH_NITRO) : h || I ? null != v ? (0, a.jsx)(o.Button, {
                                         className: ee.button,
                                         look: o.Button.Looks.FILLED,
                                         onClick: () => {
@@ -304,17 +304,17 @@
                                         style: A,
                                         className: ee.button,
                                         look: o.Button.Looks.FILLED,
-                                        onClick: () => (0, _.default)({
+                                        onClick: () => (0, S.default)({
                                             skuId: t.skuId,
                                             analyticsLocations: m,
                                             onClose: e => e ? C() : (0, Q.NOOP)()
                                         }),
                                         children: er ? $.default.Messages.COLLECTIBLES_BUY_PROFILE_EFFECT : $.default.Messages.COLLECTIBLES_BUY_DECORATION
-                                    }) : ed($.default.Messages.COLLECTIBLES_NON_PREMIUM_SHOP_CTA), S && !F && (0, a.jsx)(W.default, {
+                                    }) : ed($.default.Messages.COLLECTIBLES_NON_PREMIUM_SHOP_CTA), _ && !F && (0, a.jsx)(W.default, {
                                         product: t,
                                         onSuccess: C
                                     })]
-                                }), S || !I || F || null != v || g ? null : (0, a.jsx)(T.default, {
+                                }), _ || !I || F || null != v || h ? null : (0, a.jsx)(T.default, {
                                     subscriptionTier: J.PremiumSubscriptionSKUs.TIER_2,
                                     fullWidth: !0,
                                     color: o.Button.Colors.WHITE,
@@ -336,7 +336,7 @@
                                 color: "none",
                                 className: ee.disclaimer,
                                 variant: "text-xxs/normal",
-                                children: null != v ? null : g || I ? F ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER : er ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECT_PREMIUM_PURCHASE_DISCLAIMER : $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER : er ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECTS_NON_PREMIUM_PURCHASE_DISCLAIMER : $.default.Messages.COLLECTIBLES_DETAILS_MODAL_NON_PREMIUM_PURCHASE_DISCLAIMER
+                                children: null != v ? null : h || I ? F ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER : er ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECT_PREMIUM_PURCHASE_DISCLAIMER : $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER : er ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECTS_NON_PREMIUM_PURCHASE_DISCLAIMER : $.default.Messages.COLLECTIBLES_DETAILS_MODAL_NON_PREMIUM_PURCHASE_DISCLAIMER
                             })]
                         })]
                     })
@@ -351,7 +351,7 @@
                     }, [t]), c = l.useMemo(() => t.items.find(U.isProfileEffectRecord), [t]);
                     return (0, a.jsxs)("div", {
                         className: null != d ? ee.previewsContainerInner : ee.profileEffectPreviewsContainerInner,
-                        children: [(0, a.jsx)(g.default, {
+                        children: [(0, a.jsx)(h.default, {
                             ...o,
                             user: s,
                             canUsePremiumCustomization: i,
@@ -457,7 +457,7 @@
                                 className: null != I ? ee.collectiblePreviewsContainerWithChat : ee.collectiblePreviewsContainerNoChat,
                                 children: [(0, a.jsx)(y.default, {
                                     asset: r.banner,
-                                    size: 540,
+                                    size: (0, V.getAssetSizeByHeight)(540),
                                     className: ee.categoryBanner
                                 }), (0, a.jsx)(eo, {
                                     user: C,
@@ -499,15 +499,15 @@
                         className: L,
                         isGroupStart: m,
                         hideSimpleEmbedContent: I = !0,
-                        disableInteraction: _
-                    } = e, S = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), T = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (s = null == E ? void 0 : E.guild_id) && void 0 !== s ? s : "", (null !== (l = i.editedTimestamp) && void 0 !== l ? l : i.timestamp).valueOf()), {
-                        content: h
+                        disableInteraction: S
+                    } = e, _ = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), T = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (s = null == E ? void 0 : E.guild_id) && void 0 !== s ? s : "", (null !== (l = i.editedTimestamp) && void 0 !== l ? l : i.timestamp).valueOf()), {
+                        content: g
                     } = (0, u.default)(i, {
                         hideSimpleEmbedContent: I,
-                        allowList: S.showListsAndHeaders || T.showListsAndHeaders,
-                        allowHeading: S.showListsAndHeaders || T.showListsAndHeaders,
-                        allowLinks: S.showMaskedLinks || T.showMaskedLinks,
-                        previewLinkTarget: S.showMaskedLinks || T.showMaskedLinks
+                        allowList: _.showListsAndHeaders || T.showListsAndHeaders,
+                        allowHeading: _.showListsAndHeaders || T.showListsAndHeaders,
+                        allowLinks: _.showMaskedLinks || T.showMaskedLinks,
+                        previewLinkTarget: _.showMaskedLinks || T.showMaskedLinks
                     });
                     return (0, a.jsx)(r.default, {
                         compact: C,
@@ -521,8 +521,8 @@
                             channel: E,
                             guildId: void 0
                         }),
-                        childrenMessageContent: (0, d.default)(e, h),
-                        disableInteraction: _
+                        childrenMessageContent: (0, d.default)(e, g),
+                        disableInteraction: S
                     })
                 })
         }

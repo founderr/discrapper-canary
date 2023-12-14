@@ -116,7 +116,7 @@
                         for (let i = 0; i < r; i++)
                             for (let u = i ? 0 : 1; u * r < t * (r - i); u++) a.push(((e[I + (S >> 1)] >> ((1 & S++) << 2) & 15) / 7.5 - 1) * n);
                         return a
-                    }, T = m(C, _, (l >> 18 & 31) / 31), A = m(3, 3, 1.25 * ((s >> 3 & 63) / 63)), L = m(3, 3, 1.25 * ((s >> 9 & 63) / 63)), v = f && m(5, 5, p), g = n(e), R = u(g > 1 ? 32 : 32 * g), O = u(g > 1 ? 32 / g : 32), N = new Uint8Array(R * O * 4), M = [], P = [];
+                    }, T = m(C, _, (l >> 18 & 31) / 31), A = m(3, 3, 1.25 * ((s >> 3 & 63) / 63)), L = m(3, 3, 1.25 * ((s >> 9 & 63) / 63)), v = f && m(5, 5, p), g = n(e), R = u(g > 1 ? 32 : 32 * g), O = u(g > 1 ? 32 / g : 32), N = new Uint8Array(R * O * 4), M = [], y = [];
                     for (let e = 0, n = 0; e < O; e++)
                         for (let u = 0; u < R; u++, n += 4) {
                             let l = o,
@@ -124,17 +124,17 @@
                                 E = d,
                                 p = h;
                             for (let e = 0, r = a(C, f ? 5 : 3); e < r; e++) M[e] = i(t / R * (u + .5) * e);
-                            for (let r = 0, n = a(_, f ? 5 : 3); r < n; r++) P[r] = i(t / O * (e + .5) * r);
+                            for (let r = 0, n = a(_, f ? 5 : 3); r < n; r++) y[r] = i(t / O * (e + .5) * r);
                             for (let e = 0, t = 0; e < _; e++)
-                                for (let r = e ? 0 : 1, n = 2 * P[e]; r * _ < C * (_ - e); r++, t++) l += T[t] * M[r] * n;
+                                for (let r = e ? 0 : 1, n = 2 * y[e]; r * _ < C * (_ - e); r++, t++) l += T[t] * M[r] * n;
                             for (let e = 0, t = 0; e < 3; e++)
-                                for (let r = e ? 0 : 1, n = 2 * P[e]; r < 3 - e; r++, t++) {
+                                for (let r = e ? 0 : 1, n = 2 * y[e]; r < 3 - e; r++, t++) {
                                     let e = M[r] * n;
                                     s += A[t] * e, E += L[t] * e
                                 }
                             if (f)
                                 for (let e = 0, t = 0; e < 5; e++)
-                                    for (let r = e ? 0 : 1, n = 2 * P[e]; r < 5 - e; r++, t++) p += v[t] * M[r] * n;
+                                    for (let r = e ? 0 : 1, n = 2 * y[e]; r < 5 - e; r++, t++) p += v[t] * M[r] * n;
                             let I = l - 2 / 3 * s,
                                 S = (3 * l - I + E) / 2,
                                 m = S - E;
@@ -627,8 +627,8 @@
                     return null !== (e = n.find(e => (0, T.isEqualAvatarDecoration)(e, t.avatarDecoration))) && void 0 !== e ? e : null
                 }), {
                     category: M,
-                    purchase: P
-                } = (0, E.default)(null == v ? void 0 : v.skuId), y = m.default.canUseCollectibles(t), D = a.useRef(null), H = (0, _.default)(i), {
+                    purchase: y
+                } = (0, E.default)(null == v ? void 0 : v.skuId), P = m.default.canUseCollectibles(t), D = a.useRef(null), H = (0, _.default)(i), {
                     shopForAllEnabled: x
                 } = (0, d.default)({
                     location: "AvatarDecorationModal"
@@ -652,7 +652,7 @@
                                     variant: "heading-lg/semibold",
                                     children: R.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
                                 }),
-                                children: !y && !x && (0, n.jsx)(l.Heading, {
+                                children: !P && !x && (0, n.jsx)(l.Heading, {
                                     variant: "text-sm/normal",
                                     children: R.default.Messages.CHANGE_DECORATION_MODAL_SHOP_PREVIEW_HEADER_STARTER_DESC
                                 })
@@ -680,13 +680,13 @@
                     }), (0, n.jsxs)(l.ModalFooter, {
                         className: O.modalFooter,
                         children: [(() => {
-                            let e = null != P && (!(0, f.isPremiumCollectiblesPurchase)(P) || y);
+                            let e = null != y && (!(0, f.isPremiumCollectiblesPurchase)(y) || P);
                             if (e || null === v) return (0, n.jsx)(l.Button, {
                                 onClick: b,
                                 disabled: U,
                                 children: R.default.Messages.AVATAR_DECORATION_MODAL_APPLY
                             });
-                            let r = y || !(0, f.isPremiumCollectiblesCategory)(M);
+                            let r = P || !(0, f.isPremiumCollectiblesCategory)(M);
                             return r ? (0, n.jsx)(l.Button, {
                                 className: O.modalFooterShopButton,
                                 onClick: w,
@@ -985,19 +985,19 @@
                     a.useEffect(() => {
                         l && M(!0)
                     }, [l]);
-                    let P = a.useRef(null),
-                        y = (0, d.default)(null != i ? i : P),
+                    let y = a.useRef(null),
+                        P = (0, d.default)(null != i ? i : y),
                         {
                             avatarDecorationSrc: D
                         } = (0, A.default)({
                             user: t,
                             avatarDecorationOverride: r,
                             size: 80,
-                            animateOnHover: !y
+                            animateOnHover: !P
                         });
                     return (0, n.jsxs)(R, {
                         className: O ? v.decorationGridItemChurned : void 0,
-                        innerRef: null != i ? i : P,
+                        innerRef: null != i ? i : y,
                         isSelected: l,
                         ...c,
                         children: [(0, n.jsx)("img", {
@@ -1948,18 +1948,23 @@
             "use strict";
             r.r(t), r.d(t, {
                 MAX_CONTENT_WIDTH: function() {
-                    return n
-                },
-                getLogoSize: function() {
                     return a
                 },
-                getBackgroundGradient: function() {
+                getAssetSizeByHeight: function() {
                     return i
+                },
+                getLogoSize: function() {
+                    return u
+                },
+                getBackgroundGradient: function() {
+                    return l
                 }
             });
-            let n = 1060,
-                a = e => 3.8 * e,
-                i = function(e) {
+            var n = r("547630");
+            let a = 1060,
+                i = e => e * (0, n.default)(),
+                u = e => 3.8 * e,
+                l = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
                         {
                             primary: r,
@@ -2097,8 +2102,8 @@
                     postSuccessGuild: O,
                     openInvoiceId: N,
                     applicationId: M,
-                    referralTrialOfferId: P,
-                    giftRecipient: y,
+                    referralTrialOfferId: y,
+                    giftRecipient: P,
                     returnRef: D
                 } = null != e ? e : {}, H = !1, x = (0, a.v4)(), U = o.default.getCurrentUser(), b = (0, f.isPremiumExactly)(U, C.PremiumTypes.TIER_2);
                 (0, i.openModalLazy)(async () => {
@@ -2117,7 +2122,7 @@
                             skuId: g,
                             isGift: L,
                             giftMessage: v,
-                            giftRecipient: y,
+                            giftRecipient: P,
                             initialPlanId: t,
                             followupSKUInfo: _,
                             onClose: (e, t) => {
@@ -2136,7 +2141,7 @@
                             planGroup: C.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                             openInvoiceId: N,
                             applicationId: M,
-                            referralTrialOfferId: P,
+                            referralTrialOfferId: y,
                             returnRef: D
                         })
                     }
