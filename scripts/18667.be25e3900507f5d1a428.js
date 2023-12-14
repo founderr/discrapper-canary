@@ -1,44 +1,44 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["76546"], {
+    ["18667"], {
         255403: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return E
                 }
             });
             var i = n("759843"),
                 a = n("872717"),
-                r = n("913144"),
-                s = n("448993"),
+                s = n("913144"),
+                r = n("448993"),
                 o = n("599110"),
                 u = n("840707"),
                 l = n("210898"),
                 d = n("856368"),
-                c = n("697543"),
-                g = n("49111"),
-                f = n("782340");
+                g = n("697543"),
+                c = n("49111"),
+                m = n("782340");
             n("2581");
-            var m = {
-                resetSuggestions: () => r.default.dispatch({
+            var E = {
+                resetSuggestions: () => s.default.dispatch({
                     type: "POMELO_SUGGESTIONS_RESET"
                 }),
                 async fetchSuggestionsRegistration(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1500;
-                    if ((0, c.hasRegistrationUsernameSuggestions)()) {
-                        r.default.dispatch({
+                    if ((0, g.hasRegistrationUsernameSuggestions)()) {
+                        s.default.dispatch({
                             type: "POMELO_SUGGESTIONS_RESET"
                         });
                         try {
                             var n;
                             let i = await a.default.get({
-                                url: g.Endpoints.POMELO_SUGGESTIONS_UNAUTHED,
+                                url: c.Endpoints.POMELO_SUGGESTIONS_UNAUTHED,
                                 query: null == e ? void 0 : {
                                     global_name: e
                                 },
                                 timeout: t
                             });
-                            if (i.ok && (null === (n = i.body) || void 0 === n ? void 0 : n.username) != null) return r.default.dispatch({
+                            if (i.ok && (null === (n = i.body) || void 0 === n ? void 0 : n.username) != null) return s.default.dispatch({
                                 type: "POMELO_REGISTRATION_SUGGESTIONS_SUCCESS",
                                 suggestion: i.body,
                                 source: e
@@ -51,11 +51,15 @@
                 async fetchSuggestions(e) {
                     if ((0, d.isInPomeloSuggestionsExperiment)()) try {
                         var t;
+                        s.default.dispatch({
+                            type: "POMELO_SUGGESTIONS_FETCH",
+                            usernameSuggestionLoading: !0
+                        });
                         let n = await a.default.get({
-                            url: g.Endpoints.POMELO_SUGGESTIONS,
+                            url: c.Endpoints.POMELO_SUGGESTIONS,
                             timeout: e
                         });
-                        if (n.ok && (null === (t = n.body) || void 0 === t ? void 0 : t.username) != null) return r.default.dispatch({
+                        if (n.ok && (null === (t = n.body) || void 0 === t ? void 0 : t.username) != null) return s.default.dispatch({
                             type: "POMELO_SUGGESTIONS_SUCCESS",
                             suggestion: n.body
                         })
@@ -67,24 +71,24 @@
                     var t, n;
                     let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
                         d = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                        c = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-                    let m = (t = e, !1 === /^[A-Za-z0-9_.]*$/.test(t) ? f.default.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID : t.includes("..") ? f.default.Messages.POMELO_EXISTING_FLOW_ERROR_DOT_DOT : t.length < 2 || t.length > 32 ? f.default.Messages.POMELO_EXISTING_FLOW_ERROR_LIMIT.format({
+                        g = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+                    let E = (t = e, !1 === /^[A-Za-z0-9_.]*$/.test(t) ? m.default.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID : t.includes("..") ? m.default.Messages.POMELO_EXISTING_FLOW_ERROR_DOT_DOT : t.length < 2 || t.length > 32 ? m.default.Messages.POMELO_EXISTING_FLOW_ERROR_LIMIT.format({
                         maxNum: 32,
                         minNum: 2
                     }) : void 0);
-                    if (null != m) return o.default.track(g.AnalyticEvents.POMELO_ERRORS, {
-                        reason: m,
+                    if (null != E) return o.default.track(c.AnalyticEvents.POMELO_ERRORS, {
+                        reason: E,
                         username_error: !0,
                         location: a,
-                        one_click_flow: c
-                    }), r.default.dispatch({
+                        one_click_flow: g
+                    }), s.default.dispatch({
                         type: "POMELO_ATTEMPT_FAILURE",
                         username: e,
-                        error: m
+                        error: E
                     });
                     if ((0, l.getPomeloAttempt)()) try {
                         let t = await u.default.post({
-                            url: d ? g.Endpoints.POMELO_ATTEMPT_UNAUTHED : g.Endpoints.POMELO_ATTEMPT,
+                            url: d ? c.Endpoints.POMELO_ATTEMPT_UNAUTHED : c.Endpoints.POMELO_ATTEMPT,
                             body: {
                                 username: e
                             },
@@ -95,26 +99,26 @@
                                 }
                             }
                         });
-                        t.body.taken && o.default.track(g.AnalyticEvents.POMELO_ERRORS, {
+                        t.body.taken && o.default.track(c.AnalyticEvents.POMELO_ERRORS, {
                             reason: "already_taken",
                             username_error: !0,
                             location: a,
-                            one_click_flow: c
-                        }), r.default.dispatch({
+                            one_click_flow: g
+                        }), s.default.dispatch({
                             type: "POMELO_ATTEMPT_SUCCESS",
                             username: e,
                             taken: t.body.taken
                         })
                     } catch (u) {
                         ;
-                        let t = new s.APIError(u),
+                        let t = new r.APIError(u),
                             i = null !== (n = t.getAnyErrorMessage()) && void 0 !== n ? n : void 0;
-                        o.default.track(g.AnalyticEvents.POMELO_ERRORS, {
+                        o.default.track(c.AnalyticEvents.POMELO_ERRORS, {
                             reason: i,
                             username_error: !0,
                             location: a,
-                            one_click_flow: c
-                        }), r.default.dispatch({
+                            one_click_flow: g
+                        }), s.default.dispatch({
                             username: e,
                             type: "POMELO_ATTEMPT_FAILURE",
                             error: null != t.status && t.status < 500 && 401 !== t.status ? i : void 0,
@@ -127,7 +131,7 @@
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                         n = await u.default.post({
                             body: e,
-                            url: g.Endpoints.POMELO_CREATE,
+                            url: c.Endpoints.POMELO_CREATE,
                             trackedActionData: {
                                 event: i.NetworkActionNames.POMELO_CREATE,
                                 properties: {
@@ -135,7 +139,7 @@
                                 }
                             }
                         });
-                    return r.default.dispatch({
+                    return s.default.dispatch({
                         type: "CURRENT_USER_UPDATE",
                         user: n.body
                     }), n.body
@@ -146,7 +150,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 getPomeloAttempt: function() {
-                    return r
+                    return s
                 }
             });
             var i = n("862205");
@@ -165,7 +169,7 @@
                         }
                     }]
                 }),
-                r = () => a.getCurrentConfig({
+                s = () => a.getCurrentConfig({
                     location: "c22166_1"
                 }, {
                     autoTrackExposure: !1
@@ -175,7 +179,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 usePomeloDebounceDelay: function() {
-                    return r
+                    return s
                 }
             });
             var i = n("862205");
@@ -218,7 +222,7 @@
                         }
                     }]
                 }),
-                r = () => a.useExperiment({
+                s = () => a.useExperiment({
                     location: "52560d_1"
                 }, {
                     autoTrackExposure: !1
@@ -233,8 +237,8 @@
             });
             var i = n("693566"),
                 a = n.n(i),
-                r = n("446674"),
-                s = n("913144");
+                s = n("446674"),
+                r = n("913144");
             let o = {
                     taken: null,
                     error: void 0,
@@ -252,7 +256,8 @@
                             suggestion: {
                                 username: void 0
                             },
-                            fetched: !1
+                            fetched: !1,
+                            usernameSuggestionLoading: !1
                         },
                         registration: {
                             suggestion: {
@@ -263,7 +268,7 @@
                         }
                     }
                 };
-            class l extends r.default.Store {
+            class l extends s.default.Store {
                 isRateLimited() {
                     return null != u.retryAfterTime && Date.now() < u.retryAfterTime
                 }
@@ -277,6 +282,9 @@
                 usernameSuggestion() {
                     return u.suggestions.migration.suggestion.username
                 }
+                usernameSuggestionLoading() {
+                    return u.suggestions.migration.usernameSuggestionLoading
+                }
                 isCurrentUsernameInvalid() {
                     return u.currentUsernameInvalid
                 }
@@ -288,7 +296,7 @@
                 }
             }
             l.displayName = "PomeloStore";
-            var d = new l(s.default, {
+            var d = new l(r.default, {
                 POMELO_ATTEMPT_SUCCESS: function(e) {
                     let {
                         username: t,
@@ -319,7 +327,8 @@
                         suggestion: {
                             username: void 0
                         },
-                        fetched: !1
+                        fetched: !1,
+                        usernameSuggestionLoading: !1
                     }, u.suggestions.registration = {
                         suggestion: {
                             username: void 0
@@ -334,8 +343,15 @@
                     } = e;
                     u.suggestions.migration = {
                         suggestion: t,
-                        fetched: !0
+                        fetched: !0,
+                        usernameSuggestionLoading: !1
                     }, (null == t ? void 0 : t.invalid_current_username) === !0 && (u.currentUsernameInvalid = !0)
+                },
+                POMELO_SUGGESTIONS_FETCH: function(e) {
+                    let {
+                        usernameSuggestionLoading: t
+                    } = e;
+                    u.suggestions.migration.usernameSuggestionLoading = t
                 },
                 POMELO_REGISTRATION_SUGGESTIONS_SUCCESS: function(e) {
                     let {
@@ -356,7 +372,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 isInPomeloSuggestionsExperiment: function() {
-                    return r
+                    return s
                 }
             });
             var i = n("862205");
@@ -375,7 +391,7 @@
                         }
                     }]
                 }),
-                r = () => a.getCurrentConfig({
+                s = () => a.getCurrentConfig({
                     location: "1907ae_1"
                 }, {
                     autoTrackExposure: !1
@@ -394,37 +410,37 @@
             "use strict";
             n.r(t), n.d(t, {
                 getUserAvatarURLForPomelo: function() {
-                    return g
+                    return c
                 },
                 getDefaultPomelo: function() {
-                    return f
+                    return m
                 },
                 shouldSkipToEditUsername: function() {
-                    return v
-                },
-                formatPomeloForEditing: function() {
                     return O
                 },
+                formatPomeloForEditing: function() {
+                    return S
+                },
                 getMemberSince: function() {
-                    return p
+                    return R
                 },
                 formatUsernameLiveCheckValidation: function() {
-                    return R
+                    return T
                 }
             }), n("781738"), n("222007"), n("794252");
             var i = n("866227"),
                 a = n.n(i),
-                r = n("506838"),
-                s = n("315102"),
+                s = n("506838"),
+                r = n("315102"),
                 o = n("299039"),
                 u = n("159885"),
                 l = n("644417"),
                 d = n("935583"),
-                c = n("782340");
+                g = n("782340");
 
-            function g(e) {
+            function c(e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                return s.default.getUserAvatarURL({
+                return r.default.getUserAvatarURL({
                     id: e.id,
                     avatar: e.avatar,
                     bot: e.bot,
@@ -432,32 +448,32 @@
                 }, t, 80)
             }
 
-            function f(e) {
+            function m(e) {
                 let t = (0, u.stripDiacritics)(e.username).replace(d.dirtyChars, "").replace(d.coalescePeriods, ".").toLowerCase();
                 return "".concat(t).concat(e.discriminator).substring(0, 32)
             }
-            let m = ["@", "#", ":"],
-                E = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
+            let E = ["@", "#", ":"],
+                f = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
                 _ = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
 
-            function v(e) {
+            function O(e) {
                 var t, n;
                 let i = e.username.toLowerCase();
                 if ((t = i, n = d.CONTROL_CHARACTERS_CODE, t.split("").filter(e => !n.includes(e.charCodeAt(0))).join("")).length < 2) return !0;
-                for (let e of m)
+                for (let e of E)
                     if (i.includes(e)) return !0;
                 for (let e of _)
                     if (i === e.toLowerCase()) return !0;
-                for (let e of E)
+                for (let e of f)
                     if (i.includes(e.toLowerCase())) return !0;
                 return !1
             }
 
-            function O(e) {
+            function S(e) {
                 return e.toLowerCase().replace(/\s/g, "").replace("@", "")
             }
 
-            function p(e) {
+            function R(e) {
                 let t = o.default.extractTimestamp(e);
                 try {
                     return a(new Date(t)).format("MMM DD, YYYY")
@@ -465,14 +481,14 @@
                 return null
             }
 
-            function R(e) {
-                return (0, r.match)(e).with({
+            function T(e) {
+                return (0, s.match)(e).with({
                     rateLimited: !0
                 }, () => ({
                     type: l.NameValidationState.RATE_LIMIT,
-                    message: c.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT
+                    message: g.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT
                 })).with({
-                    error: r.P.not(r.P.nullish)
+                    error: s.P.not(s.P.nullish)
                 }, e => {
                     let {
                         error: t
@@ -485,14 +501,14 @@
                     taken: !1
                 }, () => ({
                     type: l.NameValidationState.AVAILABLE,
-                    message: c.default.Messages.POMELO_EXISTING_FLOW_AVAILABLE
+                    message: g.default.Messages.POMELO_EXISTING_FLOW_AVAILABLE
                 })).with({
                     taken: !0
                 }, () => ({
                     type: l.NameValidationState.ERROR,
-                    message: c.default.Messages.POMELO_EXISTING_FLOW_ERROR_UNAVAILABLE
+                    message: g.default.Messages.POMELO_EXISTING_FLOW_ERROR_UNAVAILABLE
                 })).with({
-                    error: r.P.nullish
+                    error: s.P.nullish
                 }, () => ({
                     type: l.NameValidationState.INTERNAL_ERROR,
                     message: ""
@@ -503,10 +519,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 useUURegistrationExperiment: function() {
-                    return r
+                    return s
                 },
                 hasRegistrationUsernameSuggestions: function() {
-                    return s
+                    return r
                 }
             });
             var i = n("862205");
@@ -548,12 +564,12 @@
                         }
                     }]
                 }),
-                r = () => a.useExperiment({
+                s = () => a.useExperiment({
                     location: "83ca1a_3"
                 }, {
                     autoTrackExposure: !1
                 }),
-                s = () => a.getCurrentConfig({
+                r = () => a.getCurrentConfig({
                     location: "83ca1a_4"
                 }, {
                     autoTrackExposure: !1
@@ -568,8 +584,8 @@
             });
             var i = n("884691"),
                 a = n("917351"),
-                r = n("65597"),
-                s = n("255403"),
+                s = n("65597"),
+                r = n("255403"),
                 o = n("947962"),
                 u = n("2581"),
                 l = n("415133");
@@ -577,110 +593,13 @@
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-                    c = (0, r.default)([u.default], () => u.default.validate(e), [e]),
-                    g = (0, r.default)([u.default], () => u.default.isRateLimited()),
-                    f = (0, o.usePomeloDebounceDelay)(),
-                    m = i.useMemo(() => (0, a.debounce)(e => s.default.attemptPomelo(e, n ? "registration" : "modal", n, d), f), [f, n, d]);
+                    g = (0, s.default)([u.default], () => u.default.validate(e), [e]),
+                    c = (0, s.default)([u.default], () => u.default.isRateLimited()),
+                    m = (0, o.usePomeloDebounceDelay)(),
+                    E = i.useMemo(() => (0, a.debounce)(e => r.default.attemptPomelo(e, n ? "registration" : "modal", n, d), m), [m, n, d]);
                 return i.useEffect(() => {
-                    t && !g && null == c && "" !== e && m(e)
-                }, [t, g, c, e, m]), i.useMemo(() => null != c ? (0, l.formatUsernameLiveCheckValidation)(c) : void 0, [c])
-            }
-        },
-        79345: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                useUsernameStatus: function() {
-                    return r
-                }
-            }), n("222007");
-            var i = n("884691"),
-                a = n("44984");
-            let r = function(e) {
-                let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : void 0,
-                    s = (0, a.useUsernameLiveCheck)(e, t, n),
-                    [o, u] = i.useState(void 0);
-                return i.useEffect(() => {
-                    "" === e || e === r ? u(void 0) : null != s && u(s)
-                }, [s, e, r]), o
-            }
-        },
-        447997: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return u
-                }
-            }), n("222007");
-            var i = n("37983"),
-                a = n("884691"),
-                r = n("907002"),
-                s = n("230606");
-            let o = () => {
-                let e = a.useRef(null),
-                    [t, n] = a.useState(0),
-                    i = a.useMemo(() => new s.default(e => {
-                        let [t] = e;
-                        return n(t.contentRect.height)
-                    }), []);
-                return a.useLayoutEffect(() => (null != e.current && i.observe(e.current), () => i.disconnect()), [i]), {
-                    ref: e,
-                    height: t
-                }
-            };
-
-            function u(e) {
-                let {
-                    show: t,
-                    children: n,
-                    top: a = 0,
-                    bottom: s = 0
-                } = e, {
-                    ref: u,
-                    height: l
-                } = o(), d = (0, r.useSpring)({
-                    from: {
-                        height: 0,
-                        paddingBottom: "0px",
-                        marginTop: "0px"
-                    },
-                    to: {
-                        height: t ? l : 0,
-                        paddingBottom: t ? "".concat(s, "px") : "0px",
-                        marginTop: t ? "".concat(a, "px") : "0px"
-                    },
-                    config: {
-                        tension: 170,
-                        friction: 26
-                    }
-                }), c = (0, r.useSpring)({
-                    from: {
-                        opacity: 0
-                    },
-                    to: {
-                        opacity: t ? 1 : 0
-                    },
-                    config: {
-                        duration: 200,
-                        easing: t ? e => e ** 4 : e => e * (2 - e)
-                    }
-                });
-                return (0, i.jsx)(r.animated.div, {
-                    style: {
-                        overflow: "hidden",
-                        height: d.height,
-                        paddingBottom: d.paddingBottom,
-                        marginTop: d.marginTop
-                    },
-                    children: (0, i.jsx)(r.animated.div, {
-                        style: {
-                            opacity: c.opacity
-                        },
-                        ref: u,
-                        children: n
-                    })
-                })
+                    t && !c && null == g && "" !== e && E(e)
+                }, [t, c, g, e, E]), i.useMemo(() => null != g ? (0, l.formatUsernameLiveCheckValidation)(g) : void 0, [g])
             }
         }
     }
