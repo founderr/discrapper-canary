@@ -113535,7 +113535,8 @@ html .invoiceCancelRow_c1bfe7 {
     border-radius: 11px;
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    position: relative
 }
 
 .featureCard_f69a9f.wideStyle__37e4e {
