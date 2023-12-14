@@ -10880,9 +10880,12 @@
                             section: O.AnalyticsSections.GUILD_SETTINGS_MEMBERS
                         }
                     })
+                }, []), x = n.useRef(null), p = n.useCallback(() => {
+                    var e;
+                    null === (e = x.current) || void 0 === e || e.resetSearchText()
                 }, []);
                 if (null == s) return null;
-                let x = (0, f.getSearchState)(!1, !1, M);
+                let U = (0, f.getSearchState)(!1, !1, M);
                 return (0, a.jsx)(l, {
                     children: (0, a.jsx)("div", {
                         className: R.settingsColumn,
@@ -10909,13 +10912,15 @@
                                             }), D ? (0, a.jsxs)("div", {
                                                 className: i(R.mainTableContainer),
                                                 children: [(0, a.jsx)(m.default, {
-                                                    guild: s
+                                                    guild: s,
+                                                    ref: x
                                                 }), (0, a.jsx)(A.default, {
                                                     guild: s,
-                                                    searchState: x,
+                                                    searchState: U,
                                                     compact: !0,
-                                                    onSelectRow: G
-                                                }), x !== f.SearchState.SUCCESS_STILL_INDEXING && (0, a.jsx)(L.default, {
+                                                    onSelectRow: G,
+                                                    onResetForNewMembers: p
+                                                }), U !== f.SearchState.SUCCESS_STILL_INDEXING && (0, a.jsx)(L.default, {
                                                     guildId: s.id
                                                 })]
                                             }) : (0, a.jsx)("div", {

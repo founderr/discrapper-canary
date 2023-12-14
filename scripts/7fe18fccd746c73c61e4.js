@@ -25,21 +25,21 @@
                         onReset: S,
                         onSave: E,
                         onSaveText: C,
-                        onResetText: g,
-                        onSaveButtonColor: m,
+                        onResetText: m,
+                        onSaveButtonColor: g,
                         disabled: _,
                         saveButtonTooltip: p
-                    } = e, I = r.useRef(null), [{
-                        spring: M
-                    }, v] = (0, a.useSpring)(() => ({
+                    } = e, v = r.useRef(null), [{
+                        spring: I
+                    }, M] = (0, a.useSpring)(() => ({
                         spring: 0
                     }));
                     r.useEffect(() => {
                         function e() {
-                            v({
+                            M({
                                 spring: 1,
                                 config: a.config.gentle
-                            }), v({
+                            }), M({
                                 spring: 0,
                                 config: a.config.gentle,
                                 delay: 1e3
@@ -48,12 +48,12 @@
                         return s.ComponentDispatch.subscribe(o.ComponentActions.EMPHASIZE_NOTICE, e), () => {
                             s.ComponentDispatch.unsubscribe(o.ComponentActions.EMPHASIZE_NOTICE, e)
                         }
-                    }, [v]);
-                    let N = M.to({
+                    }, [M]);
+                    let b = I.to({
                             range: [0, 1],
                             output: [(0, i.useToken)(u.default.colors.TEXT_NORMAL).hex(), (0, i.useToken)(u.default.unsafe_rawColors.WHITE_500).hex()]
                         }),
-                        b = M.to({
+                        N = I.to({
                             range: [0, 1],
                             output: [(0, i.useToken)(u.default.colors.BACKGROUND_FLOATING).hex(), (0, i.useToken)(u.default.colors.STATUS_DANGER).hex()]
                         }),
@@ -61,19 +61,19 @@
                     return (0, l.jsx)(a.animated.div, {
                         className: c.container,
                         style: {
-                            backgroundColor: b
+                            backgroundColor: N
                         },
                         children: (0, l.jsx)("div", {
                             className: c.flexContainer,
-                            ref: I,
+                            ref: v,
                             children: (0, l.jsxs)(i.FocusRingScope, {
-                                containerRef: I,
+                                containerRef: v,
                                 children: [(0, l.jsx)("div", {
                                     className: c.shrinkingContainer,
                                     children: (0, l.jsx)(a.animated.div, {
                                         className: c.message,
                                         style: {
-                                            color: null != f ? R : N
+                                            color: null != f ? R : b
                                         },
                                         children: null !== (t = null != f ? f : n) && void 0 !== t ? t : d.default.Messages.SETTINGS_NOTICE_MESSAGE
                                     })
@@ -87,15 +87,15 @@
                                         onClick: S,
                                         children: (0, l.jsx)(a.animated.span, {
                                             style: {
-                                                color: N
+                                                color: b
                                             },
-                                            children: null != g ? g : d.default.Messages.RESET
+                                            children: null != m ? m : d.default.Messages.RESET
                                         })
                                     }), null != E ? (0, l.jsx)(i.Tooltip, {
                                         text: p,
                                         children: e => (0, l.jsx)(i.Button, {
                                             size: i.Button.Sizes.SMALL,
-                                            color: null != m ? m : i.Button.Colors.GREEN,
+                                            color: null != g ? g : i.Button.Colors.GREEN,
                                             submitting: h,
                                             disabled: _,
                                             onClick: E,
@@ -311,15 +311,15 @@
                 S = n("691386"),
                 E = n("770115"),
                 C = n("490931"),
-                g = n("225982"),
-                m = n("178406");
+                m = n("225982"),
+                g = n("178406");
             let _ = new c.default("MemberSafetySearchManagerV2");
 
             function p(e) {
                 return "guild_".concat(e)
             }
 
-            function I(e) {
+            function v(e) {
                 return {
                     requestState: e,
                     abortController: null,
@@ -329,31 +329,31 @@
                     previousPagination: null
                 }
             }(a = l || (l = {}))[a.FAILED = 0] = "FAILED", a[a.UNFETCHED = 1] = "UNFETCHED", a[a.PENDING = 2] = "PENDING", a[a.SUCCEEDED = 3] = "SUCCEEDED", a[a.STILL_INDEXING = 4] = "STILL_INDEXING";
-            let M = (0, d.default)(e => ({}));
+            let I = (0, d.default)(e => ({}));
 
-            function v(e, t) {
-                let n = M.getState()[e];
-                return null == n && (n = I(1)), n = {
+            function M(e, t) {
+                let n = I.getState()[e];
+                return null == n && (n = v(1)), n = {
                     ...n,
                     ...t
-                }, M.setState(t => ({
+                }, I.setState(t => ({
                     ...t,
                     [e]: n
                 })), n
             }
 
-            function N(e) {
-                return M.getState()[e]
+            function b(e) {
+                return I.getState()[e]
             }
 
-            function b(e) {
-                let t = N(e);
-                return null == t && v(e, t = I(1)), t
+            function N(e) {
+                let t = b(e);
+                return null == t && M(e, t = v(1)), t
             }
 
             function R(e) {
-                let t = N(e);
-                null != t && v(e, {
+                let t = b(e);
+                null != t && M(e, {
                     requestState: 3,
                     abortController: null,
                     lastUpdated: Date.now()
@@ -363,7 +363,7 @@
             function T(e) {
                 var t;
                 let n = p(e);
-                t = n, M.setState(e => {
+                t = n, I.setState(e => {
                     let n = {
                         ...e
                     };
@@ -376,11 +376,11 @@
             }(u = r || (r = {}))[u.FIRST_PAGE_CHUNK = 0] = "FIRST_PAGE_CHUNK", u[u.CURRENT_SEARCH_CHUNK = 1] = "CURRENT_SEARCH_CHUNK", u[u.NEXT_SEARCH_CHUNK = 2] = "NEXT_SEARCH_CHUNK", u[u.PREVIOUS_SEARCH_CHUNK = 3] = "PREVIOUS_SEARCH_CHUNK";
             async function A(e) {
                 var t, n, l, r;
-                let a = m.default.getSearchStateByGuildId(e),
-                    u = m.default.getPaginationStateByGuildId(e),
+                let a = g.default.getSearchStateByGuildId(e),
+                    u = g.default.getPaginationStateByGuildId(e),
                     i = p(e),
-                    d = b(i),
-                    [c, I] = function(e, t, n) {
+                    d = N(i),
+                    [c, v] = function(e, t, n) {
                         var l, r, a, u, i, s;
                         let o = function(e, t) {
                                 var n;
@@ -400,7 +400,7 @@
                                     }
                                 }(t), {
                                     previousPagination: u
-                                } = b(p(e)), i = t.currentPage, s = null !== (n = null == u ? void 0 : u.currentPage) && void 0 !== n ? n : 0, o = m.default.getElasticSearchPaginationByGuildId(e);
+                                } = N(p(e)), i = t.currentPage, s = null !== (n = null == u ? void 0 : u.currentPage) && void 0 !== n ? n : 0, o = g.default.getElasticSearchPaginationByGuildId(e);
                                 switch (!0) {
                                     case null == o:
                                     case l === a && 0 === l:
@@ -416,11 +416,11 @@
                                         return 1
                                 }
                             }(e, n),
-                            d = m.default.getElasticSearchPaginationByGuildId(e),
+                            d = g.default.getElasticSearchPaginationByGuildId(e),
                             c = (0, S.getSearchChunkLimit)(n);
                         switch (o) {
                             case 0: {
-                                let t = m.default.getLastCursorTimestamp(e);
+                                let t = g.default.getLastCursorTimestamp(e);
                                 return [null, {
                                     limit: c,
                                     after: {
@@ -448,7 +448,7 @@
                                 (0, h.assertNever)(o)
                         }
                     }(e, d, u);
-                let M = (t = function(e) {
+                let I = (t = function(e) {
                     var t;
                     let n = {
                             or_query: {},
@@ -486,21 +486,21 @@
                     return o.size > 0 && (n.and_query.role_ids = {
                         and_query: Array.from(o)
                     }), n
-                }(a), null == (n = I) ? t : {
+                }(a), null == (n = v) ? t : {
                     ...t,
                     ...n
                 });
                 if (function(e, t) {
-                        let n = b(e);
+                        let n = N(e);
                         return s(n.query, t)
-                    }(i, M) && (0, o.isEqual)(c, d.cursor)) return;
+                    }(i, I) && (0, o.isEqual)(c, d.cursor)) return;
                 let T = function(e, t, n, l) {
-                    let r = N(e);
+                    let r = b(e);
                     if ((null == r ? void 0 : r.requestState) === 2) {
                         var a;
                         null === (a = r.abortController) || void 0 === a || a.abort()
                     }
-                    return v(e, {
+                    return M(e, {
                         requestState: 2,
                         abortController: new AbortController,
                         lastUpdated: Date.now(),
@@ -508,21 +508,21 @@
                         cursor: n,
                         previousPagination: l
                     })
-                }(i, M, c, u);
+                }(i, I, c, u);
                 try {
                     ;
                     if (_.info("Making member search request", {
                             query: T.query,
                             guildId: e
                         }), null == T.query) throw Error("Query is null");
-                    await (0, g.searchGuildMembers)(e, T.query, {
+                    await (0, m.searchGuildMembers)(e, T.query, {
                         signal: null !== (r = null === (l = T.abortController) || void 0 === l ? void 0 : l.signal) && void 0 !== r ? r : void 0
                     })
                 } catch (e) {
                     if (-1 === e.code) return;
                     ! function(e) {
-                        let t = N(e);
-                        null != t && v(e, {
+                        let t = b(e);
+                        null != t && M(e, {
                             requestState: 0,
                             abortController: null,
                             lastUpdated: Date.now()
@@ -534,7 +534,7 @@
             }
 
             function y(e) {
-                return M(t => {
+                return I(t => {
                     var n;
                     let l = p(e);
                     return (null === (n = t[l]) || void 0 === n ? void 0 : n.requestState) === 2
@@ -542,7 +542,7 @@
             }
 
             function G(e) {
-                return M(t => {
+                return I(t => {
                     var n;
                     let l = p(e);
                     return (null === (n = t[l]) || void 0 === n ? void 0 : n.requestState) === 4
@@ -588,7 +588,7 @@
                 let {
                     guildId: t
                 } = e, n = p(t);
-                v(n, {
+                M(n, {
                     requestState: 4,
                     abortController: null,
                     lastUpdated: Date.now()
@@ -658,15 +658,15 @@
                 S = n("41594"),
                 E = n("539938"),
                 C = n("393414"),
-                g = n("401642"),
-                m = n("982108"),
+                m = n("401642"),
+                g = n("982108"),
                 _ = n("42203"),
                 p = n("923959"),
-                I = n("305961"),
-                M = n("18494"),
-                v = n("98292"),
-                N = n("155207"),
-                b = n("466818"),
+                v = n("305961"),
+                I = n("18494"),
+                M = n("98292"),
+                b = n("155207"),
+                N = n("466818"),
                 R = n("914985"),
                 T = n("714247"),
                 x = n("565556"),
@@ -709,7 +709,7 @@
                                         className: j.returnIcon,
                                         guild: t,
                                         channel: n
-                                    }), (0, l.jsx)(v.default, {
+                                    }), (0, l.jsx)(M.default, {
                                         children: (0, l.jsx)(s.Text, {
                                             variant: "text-xs/medium",
                                             color: "none",
@@ -721,7 +721,7 @@
                         })
                     }) : (0, l.jsx)("div", {}),
                     children: [(0, l.jsx)(E.default.Icon, {
-                        icon: N.default,
+                        icon: b.default,
                         "aria-hidden": !0
                     }), (0, l.jsx)(E.default.Title, {
                         children: u
@@ -732,9 +732,9 @@
             function w(e) {
                 let {
                     guildId: t
-                } = e, n = (0, i.useStateFromStores)([I.default], () => I.default.getGuild(t)), {
+                } = e, n = (0, i.useStateFromStores)([v.default], () => v.default.getGuild(t)), {
                     AnalyticsLocationProvider: a
-                } = (0, d.default)(o.default.MEMBER_SAFETY_PAGE), c = (0, b.useCanAccessMemberSafetyPage)(t), S = (0, h.useCanAccessGuildMemberModView)(t), E = (0, i.useStateFromStores)([M.default], () => M.default.getLastSelectedChannelId(t)), v = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(E)), N = r.useRef(null);
+                } = (0, d.default)(o.default.MEMBER_SAFETY_PAGE), c = (0, N.useCanAccessMemberSafetyPage)(t), S = (0, h.useCanAccessGuildMemberModView)(t), E = (0, i.useStateFromStores)([I.default], () => I.default.getLastSelectedChannelId(t)), M = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(E)), b = r.useRef(null);
                 r.useEffect(() => {
                     if (!c && null != n) {
                         var e;
@@ -742,9 +742,9 @@
                         (0, C.transitionToGuild)(n.id, t)
                     }
                 }, [n, c]);
-                let L = (0, i.useStateFromStores)([m.default], () => null != m.default.getGuildSidebarState(t), [t]),
+                let L = (0, i.useStateFromStores)([g.default], () => null != g.default.getGuildSidebarState(t), [t]),
                     w = r.useCallback(e => {
-                        S ? (0, f.openGuildMemberModViewSidebar)(e.guildId, e.userId, G.StaticChannelRoute.MEMBER_SAFETY) : (0, g.openUserProfileModal)({
+                        S ? (0, f.openGuildMemberModViewSidebar)(e.guildId, e.userId, G.StaticChannelRoute.MEMBER_SAFETY) : (0, m.openUserProfileModal)({
                             userId: e.userId,
                             guildId: e.guildId,
                             analyticsLocation: {
@@ -759,10 +759,10 @@
                         }),
                         children: [(0, l.jsx)(D, {
                             guild: n,
-                            previousChannel: v
+                            previousChannel: M
                         }), (0, l.jsx)(s.AdvancedScroller, {
                             className: u(j.scroller),
-                            ref: N,
+                            ref: b,
                             children: (0, l.jsxs)("div", {
                                 className: u(U.content, j.container),
                                 children: [(0, l.jsx)(R.default, {
@@ -785,7 +785,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return m
                 }
             });
             var l = n("37983"),
@@ -818,26 +818,31 @@
                 })
             }
 
-            function g(e) {
+            function m(e) {
                 let {
                     guild: t,
                     className: n,
                     onPageChange: a,
                     onMemberSelect: i
-                } = e, g = (0, s.default)([d.default], () => d.default.getEstimatedMemberSearchCountByGuildId(t.id), [t.id]), m = (0, o.useIsMakingRequestV2)(t.id), _ = (0, o.useIsStillIndexingV2)(t.id), p = r.useCallback(e => {
+                } = e, m = (0, s.default)([d.default], () => d.default.getEstimatedMemberSearchCountByGuildId(t.id), [t.id]), g = (0, o.useIsMakingRequestV2)(t.id), _ = (0, o.useIsStillIndexingV2)(t.id), p = r.useCallback(e => {
                     null != e && (null == i || i(e))
-                }, [i]), I = (0, c.getSearchState)(_, m, g);
+                }, [i]), v = (0, c.getSearchState)(_, g, m), I = r.useRef(null), M = r.useCallback(() => {
+                    var e;
+                    null === (e = I.current) || void 0 === e || e.resetSearchText()
+                }, []);
                 return (0, l.jsxs)("div", {
                     className: u(E.mainTableContainer, n),
                     children: [(0, l.jsx)(S.default, {
-                        guild: t
+                        guild: t,
+                        ref: I
                     }), (0, l.jsx)(C, {
                         guild: t
                     }), (0, l.jsx)(f.default, {
                         guild: t,
                         onSelectRow: p,
-                        searchState: I
-                    }), I !== c.SearchState.SUCCESS_STILL_INDEXING && (0, l.jsx)(h.default, {
+                        searchState: v,
+                        onResetForNewMembers: M
+                    }), v !== c.SearchState.SUCCESS_STILL_INDEXING && (0, l.jsx)(h.default, {
                         guildId: t.id,
                         onPageChange: a
                     })]
