@@ -269,6 +269,260 @@
                 }
             }
         },
+        811475: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                activityInviteKey: function() {
+                    return N
+                },
+                default: function() {
+                    return L
+                }
+            }), n("222007");
+            var s = n("37983"),
+                a = n("884691"),
+                l = n("627445"),
+                i = n.n(l),
+                r = n("446674"),
+                o = n("77078"),
+                u = n("819689"),
+                d = n("803816"),
+                c = n("767993"),
+                f = n("716241"),
+                h = n("651057"),
+                C = n("299285"),
+                p = n("850391"),
+                m = n("149022"),
+                E = n("681060"),
+                g = n("884351"),
+                S = n("671071"),
+                _ = n("401848"),
+                A = n("718422"),
+                T = n("49111"),
+                M = n("782340"),
+                I = n("216220");
+            let N = "ActivityInvite";
+            class v extends a.PureComponent {
+                componentDidMount() {
+                    this.fetchApplication()
+                }
+                componentDidUpdate(e) {
+                    let {
+                        activity: t
+                    } = this.props;
+                    t.application_id !== e.activity.application_id && this.fetchApplication()
+                }
+                fetchApplication() {
+                    let {
+                        activity: e,
+                        application: t
+                    } = this.props;
+                    null != e.application_id && null == t && h.default.fetchApplication(e.application_id)
+                }
+                renderTitle() {
+                    let {
+                        activity: e
+                    } = this.props;
+                    switch (e.type) {
+                        case T.ActivityTypes.LISTENING:
+                            return M.default.Messages.INVITE_EMBED_LISTENING_INVITE;
+                        case T.ActivityTypes.PLAYING:
+                        case T.ActivityTypes.STREAMING:
+                        default:
+                            return M.default.Messages.INVITE_EMBED_GAME_INVITE
+                    }
+                }
+                render() {
+                    let {
+                        textValue: e,
+                        richValue: t,
+                        textFocused: n,
+                        contentWarningProps: a
+                    } = this.state, {
+                        activity: l,
+                        analyticsLocations: r,
+                        channel: u,
+                        activityActionType: f,
+                        cooldown: h,
+                        application: C,
+                        transitionState: m,
+                        onClose: g
+                    } = this.props, S = h > 0, _ = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
+                        seconds: Math.round((h + 1e3) / 1e3)
+                    }) : null;
+                    return (0, s.jsxs)(o.ModalRoot, {
+                        size: o.ModalSize.SMALL,
+                        transitionState: m,
+                        "aria-label": this.renderTitle(),
+                        children: [(0, s.jsx)(o.ModalHeader, {
+                            separator: !1,
+                            children: (0, s.jsx)(o.Heading, {
+                                variant: "heading-lg/semibold",
+                                children: this.renderTitle()
+                            })
+                        }), (0, s.jsxs)(o.ModalContent, {
+                            children: [(0, s.jsx)("div", {
+                                className: I.subHeader,
+                                children: M.default.Messages.MESSAGE_PREVIEW
+                            }), (0, s.jsx)(d.default, {
+                                activityActionType: f,
+                                activity: l,
+                                className: I.preview,
+                                application: C,
+                                partyId: null != l.party ? l.party.id : null,
+                                isPreview: !0,
+                                analyticsLocations: r
+                            }), (0, s.jsx)("div", {
+                                className: I.subHeader,
+                                children: M.default.Messages.ADD_A_COMMENT_OPTIONAL
+                            }), (0, s.jsx)(o.Popout, {
+                                position: "top",
+                                onRequestClose: () => {
+                                    var e;
+                                    null == a || null === (e = a.onCancel) || void 0 === e || e.call(a), this.setState({
+                                        contentWarningProps: null
+                                    })
+                                },
+                                shouldShow: null != a,
+                                renderPopout: e => {
+                                    let {
+                                        closePopout: t
+                                    } = e;
+                                    return i(null != a, "ActivityInvite.render - renderPopout: contentWarningProps cannot be null"), (0, s.jsx)(c.default, {
+                                        onClose: t,
+                                        ...a
+                                    })
+                                },
+                                children: () => (0, s.jsx)(E.default, {
+                                    className: I.textArea,
+                                    textValue: e,
+                                    richValue: t,
+                                    focused: n,
+                                    channel: u,
+                                    onChange: this.handleTextChange,
+                                    onSubmit: this.handleShare,
+                                    type: p.ChatInputTypes.FORM,
+                                    parentModalKey: N
+                                })
+                            })]
+                        }), (0, s.jsxs)(o.ModalFooter, {
+                            children: [(0, s.jsx)(o.Tooltip, {
+                                text: _,
+                                children: e => (0, s.jsx)("div", {
+                                    ...e,
+                                    children: (0, s.jsx)(o.Button, {
+                                        disabled: S,
+                                        onClick: this.handleShare,
+                                        children: M.default.Messages.INVITE_EMBED_SEND_INVITE
+                                    })
+                                })
+                            }), (0, s.jsx)(o.Button, {
+                                look: o.Button.Looks.LINK,
+                                color: o.Button.Colors.PRIMARY,
+                                onClick: g,
+                                children: M.default.Messages.CANCEL
+                            })]
+                        })]
+                    })
+                }
+                constructor(...e) {
+                    super(...e), this.state = {
+                        ...(0, m.createEmptyState)(),
+                        textFocused: !0,
+                        contentWarningProps: null
+                    }, this.trackInvite = e => {
+                        if (null != e && e.ok) {
+                            let {
+                                activity: t,
+                                channel: n,
+                                activityActionType: s
+                            } = this.props, a = "";
+                            switch (s) {
+                                case T.ActivityActionTypes.JOIN:
+                                    a = "Invite to Join";
+                                    break;
+                                case T.ActivityActionTypes.LISTEN:
+                                    a = "Invite to Listen";
+                                    break;
+                                case T.ActivityActionTypes.WATCH:
+                                    a = "Invite to Watch"
+                            }
+                            return f.default.trackWithMetadata(T.AnalyticEvents.INVITE_SENT, {
+                                location: "Channel Text Area - ".concat(a),
+                                invite_type: t.type === T.ActivityTypes.LISTENING ? T.LoggingInviteTypes.SPOTIFY : T.LoggingInviteTypes.APPLICATION,
+                                application_id: t.application_id,
+                                guild_id: n.getGuildId(),
+                                channel_id: n.id,
+                                message_id: null != e ? e.body.id : null
+                            }), Promise.resolve()
+                        }
+                    }, this.handleTextChange = (e, t, n) => {
+                        this.setState({
+                            textValue: t,
+                            richValue: n
+                        })
+                    }, this.handleShare = () => {
+                        let {
+                            channel: e,
+                            activity: t,
+                            activityActionType: n,
+                            cooldown: s,
+                            onClose: a
+                        } = this.props, {
+                            textValue: l,
+                            contentWarningProps: i
+                        } = this.state;
+                        if (s > 0) return Promise.resolve({
+                            shouldClear: !1,
+                            shouldRefocus: !0
+                        });
+                        let r = g.default.parse(e, l),
+                            o = {
+                                activity: t,
+                                type: n
+                            };
+                        return null != i ? (this.setState({
+                            contentWarningProps: null
+                        }), u.default.sendMessage(e.id, r, !0, {
+                            activityAction: o
+                        }).then(e => this.trackInvite(e)), a(), Promise.resolve({
+                            shouldClear: !0,
+                            shouldRefocus: !0
+                        })) : (0, A.applyChatRestrictions)({
+                            openWarningPopout: e => this.setState({
+                                contentWarningProps: e
+                            }),
+                            type: p.ChatInputTypes.FORM,
+                            content: l,
+                            channel: e
+                        }).then(t => {
+                            let {
+                                valid: n
+                            } = t;
+                            return n ? (u.default.sendMessage(e.id, r, !0, {
+                                activityAction: o
+                            }).then(e => this.trackInvite(e)), a(), {
+                                shouldClear: !1,
+                                shouldRefocus: !1
+                            }) : {
+                                shouldClear: !1,
+                                shouldRefocus: !1
+                            }
+                        })
+                    }
+                }
+            }
+            var L = r.default.connectStores([_.default, C.default], e => {
+                let {
+                    channel: t,
+                    activity: n
+                } = e;
+                return {
+                    cooldown: _.default.getSlowmodeCooldownGuess(t.id),
+                    application: null != n.application_id ? C.default.getApplication(n.application_id) : S.SpotifyApplication
+                }
+            })(v)
+        },
         779454: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -2349,31 +2603,32 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return N
+                    return v
                 }
             });
             var s = n("37983"),
                 a = n("884691"),
                 l = n("171210"),
                 i = n("77078"),
-                r = n("685665"),
-                o = n("716849"),
-                u = n("552917"),
-                d = n("967241"),
-                c = n("351825"),
-                f = n("956089"),
-                h = n("599110"),
-                C = n("659500"),
-                p = n("254490"),
-                m = n("412861"),
-                E = n("149022"),
-                g = n("64096"),
-                S = n("49111"),
-                _ = n("186859"),
-                A = n("782340"),
-                T = n("648198");
+                r = n("811475"),
+                o = n("685665"),
+                u = n("716849"),
+                d = n("552917"),
+                c = n("967241"),
+                f = n("351825"),
+                h = n("956089"),
+                C = n("599110"),
+                p = n("659500"),
+                m = n("254490"),
+                E = n("412861"),
+                g = n("149022"),
+                S = n("64096"),
+                _ = n("49111"),
+                A = n("186859"),
+                T = n("782340"),
+                M = n("648198");
 
-            function M(e, t, a, l) {
+            function I(e, t, a, l) {
                 (0, i.openModalLazy)(async () => {
                     let {
                         default: i
@@ -2385,14 +2640,16 @@
                         activityActionType: a,
                         analyticsLocations: l
                     })
+                }, {
+                    modalKey: r.activityInviteKey
                 })
             }
-            let I = /(.*)```(\w+)\n(.*)```(.*)/s;
+            let N = /(.*)```(\w+)\n(.*)```(.*)/s;
 
-            function N(e) {
+            function v(e) {
                 let {
                     channel: t,
-                    options: N,
+                    options: r,
                     onFileUpload: v,
                     onClose: L,
                     onSelect: R,
@@ -2401,12 +2658,12 @@
                     setValue: O,
                     openClips: D
                 } = e;
-                (0, o.useMaybeFetchPremiumLikelihood)(u.default);
+                (0, u.useMaybeFetchPremiumLikelihood)(d.default);
                 let {
                     analyticsLocations: j
-                } = (0, r.default)();
+                } = (0, o.default)();
                 a.useEffect(() => {
-                    h.default.track(S.AnalyticEvents.OPEN_POPOUT, {
+                    C.default.track(_.AnalyticEvents.OPEN_POPOUT, {
                         type: "Send Attachment",
                         channel_id: t.id,
                         guild_id: t.guild_id
@@ -2414,11 +2671,11 @@
                 }, [t.guild_id, t.id]);
 
                 function P() {
-                    (0, d.openThreadSidebarForCreating)(t, void 0, "Plus Button")
+                    (0, c.openThreadSidebarForCreating)(t, void 0, "Plus Button")
                 }
 
                 function b() {
-                    h.default.track(S.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), O("/", (0, E.toRichValue)("/"))
+                    C.default.track(_.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), O("/", (0, g.toRichValue)("/"))
                 }
 
                 function F() {
@@ -2435,7 +2692,7 @@
                             channel: t
                         })
                     }, {
-                        modalKey: _.POLL_CREATION_MODAL_KEY
+                        modalKey: A.POLL_CREATION_MODAL_KEY
                     })
                 }
 
@@ -2443,10 +2700,10 @@
                     let e = y,
                         n = "txt",
                         s = "",
-                        a = y.match(I);
-                    null != a && (s = a[1], n = a[2], e = a[3], s += a[4]), (0, m.promptToUpload)([(0, p.makeFile)(new Blob([e], {
+                        a = y.match(N);
+                    null != a && (s = a[1], n = a[2], e = a[3], s += a[4]), (0, E.promptToUpload)([(0, m.makeFile)(new Blob([e], {
                         type: "text/plain"
-                    }), "message.".concat(n))], t, x), C.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.CLEAR_TEXT), "" !== s && C.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.INSERT_TEXT, {
+                    }), "message.".concat(n))], t, x), p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.CLEAR_TEXT), "" !== s && p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.INSERT_TEXT, {
                         plainText: s
                     })
                 }
@@ -2454,33 +2711,33 @@
                     onSelect: R,
                     navId: "channel-attach",
                     onClose: L,
-                    "aria-label": A.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-                    className: T.menu,
-                    children: N.map(function(e) {
+                    "aria-label": T.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+                    className: M.menu,
+                    children: r.map(function(e) {
                         var n;
                         let a = (0, s.jsxs)("div", {
-                            className: T.optionLabel,
+                            className: M.optionLabel,
                             children: [(0, s.jsx)(e.icon, {
-                                className: T.optionIcon
+                                className: M.optionIcon
                             }), (0, s.jsx)("div", {
-                                className: T.optionName,
+                                className: M.optionName,
                                 children: e.display
-                            }), null != e.badgeVal && e.badgeVal > 0 && (0, s.jsx)(f.NumberBadge, {
-                                className: T.badge,
+                            }), null != e.badgeVal && e.badgeVal > 0 && (0, s.jsx)(h.NumberBadge, {
+                                className: M.badge,
                                 color: null !== (n = e.badgeColor) && void 0 !== n ? n : l.default.STATUS_DANGER,
                                 count: e.badgeVal
                             })]
                         });
                         switch (e.type) {
-                            case g.AttachmentTypes.UPLOAD_A_FILE:
+                            case S.AttachmentTypes.UPLOAD_A_FILE:
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "upload-file",
                                     label: a,
                                     subtext: (0, s.jsx)("span", {
-                                        className: T.tipSubtext,
-                                        children: A.default.Messages.UPLOAD_FILE_SUBTEXT.format({
-                                            icon: (e, t) => (0, s.jsx)(c.default, {
-                                                className: T.tipIcon,
+                                        className: M.tipSubtext,
+                                        children: T.default.Messages.UPLOAD_FILE_SUBTEXT.format({
+                                            icon: (e, t) => (0, s.jsx)(f.default, {
+                                                className: M.tipIcon,
                                                 width: 16,
                                                 height: 16
                                             }, t)
@@ -2488,69 +2745,69 @@
                                     }),
                                     action: v
                                 }, "upload-file");
-                            case g.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
+                            case S.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
                                 if ("" === y) return null;
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "upload-text-as-file",
                                     label: a,
                                     action: H
                                 }, "upload-text-as-file");
-                            case g.AttachmentTypes.CLIPS:
+                            case S.AttachmentTypes.CLIPS:
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "clips",
                                     label: a,
                                     action: F
                                 }, "clips");
-                            case g.AttachmentTypes.POLL:
+                            case S.AttachmentTypes.POLL:
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "poll",
                                     label: a,
                                     action: U
                                 }, "poll");
-                            case g.AttachmentTypes.INVITE_TO_PLAY_GAME:
+                            case S.AttachmentTypes.INVITE_TO_PLAY_GAME:
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "play",
                                     label: a,
                                     action: () => {
                                         var n;
-                                        return n = e.activity, void(h.default.track(S.AnalyticEvents.OPEN_MODAL, {
+                                        return n = e.activity, void(C.default.track(_.AnalyticEvents.OPEN_MODAL, {
                                             type: "Send Join Invite",
                                             application_id: n.application_id,
-                                            location: S.AnalyticsSections.CHANNEL_TEXT_AREA
-                                        }), M(n, t, S.ActivityActionTypes.JOIN, j))
+                                            location: _.AnalyticsSections.CHANNEL_TEXT_AREA
+                                        }), I(n, t, _.ActivityActionTypes.JOIN, j))
                                     }
                                 }, "play");
-                            case g.AttachmentTypes.INVITE_TO_LISTEN:
+                            case S.AttachmentTypes.INVITE_TO_LISTEN:
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "listen",
                                     label: a,
                                     action: () => {
                                         var n;
-                                        return n = e.activity, void(h.default.track(S.AnalyticEvents.OPEN_MODAL, {
+                                        return n = e.activity, void(C.default.track(_.AnalyticEvents.OPEN_MODAL, {
                                             type: "Send Listen Invite",
-                                            location: S.AnalyticsSections.CHANNEL_TEXT_AREA
-                                        }), M(n, t, S.ActivityActionTypes.LISTEN, j))
+                                            location: _.AnalyticsSections.CHANNEL_TEXT_AREA
+                                        }), I(n, t, _.ActivityActionTypes.LISTEN, j))
                                     }
                                 }, "listen");
-                            case g.AttachmentTypes.INVITE_TO_WATCH:
+                            case S.AttachmentTypes.INVITE_TO_WATCH:
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "watch",
                                     label: a,
                                     action: () => {
                                         var n;
-                                        return n = e.activity, void(h.default.track(S.AnalyticEvents.OPEN_MODAL, {
+                                        return n = e.activity, void(C.default.track(_.AnalyticEvents.OPEN_MODAL, {
                                             type: "Send Watch Invite",
-                                            location: S.AnalyticsSections.CHANNEL_TEXT_AREA
-                                        }), M(n, t, S.ActivityActionTypes.WATCH, j))
+                                            location: _.AnalyticsSections.CHANNEL_TEXT_AREA
+                                        }), I(n, t, _.ActivityActionTypes.WATCH, j))
                                     }
                                 }, "watch");
-                            case g.AttachmentTypes.CREATE_THREAD:
+                            case S.AttachmentTypes.CREATE_THREAD:
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "THREAD",
                                     label: a,
                                     action: P
                                 }, "THREAD");
-                            case g.AttachmentTypes.SLASH_COMMAND:
+                            case S.AttachmentTypes.SLASH_COMMAND:
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "SLASH_COMMAND",
                                     label: a,
