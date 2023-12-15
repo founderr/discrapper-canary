@@ -19397,8 +19397,8 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -122128,7 +122128,7 @@ div.nagbar_c731ff {
     --info-warning-text: var(--black-500);
     --input-background: hsl(var(--black-500-hsl) / 0.08);
     --input-focused-border: hsl(var(--black-500-hsl) / 0.16);
-    --input-placeholder-text: var(--primary-500);
+    --input-placeholder-text: var(--primary-460);
     --interactive-active: var(--primary-860);
     --interactive-hover: var(--primary-600);
     --interactive-muted: var(--primary-300);
