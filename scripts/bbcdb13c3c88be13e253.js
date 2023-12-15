@@ -10746,7 +10746,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "e074459e58352bfb6ca49fb3664b898fa465b893", e.substring(0, 7)),
+                    S = (e = "ccc9b054714fc260c5e1bafcc3b706a1c9665987", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10759,7 +10759,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "254776", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "254788", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -14250,7 +14250,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return Q
+                    return W
                 }
             }), s("222007");
             var a = s("37983"),
@@ -14261,130 +14261,127 @@
                 o = s("151426"),
                 d = s("819855"),
                 u = s("77078"),
-                c = s("913144"),
-                S = s("452804"),
-                E = s("79112"),
-                f = s("485328"),
-                T = s("180748"),
-                m = s("206230"),
-                _ = s("951212"),
-                g = s("714657"),
-                h = s("10641"),
-                I = s("692038"),
-                N = s("815297"),
-                p = s("574073"),
-                C = s("291655"),
-                A = s("87469"),
-                O = s("697218"),
-                x = s("145131"),
-                M = s("476765"),
-                R = s("773336"),
-                v = s("161778"),
-                D = s("168973"),
-                L = s("845579"),
-                P = s("403338"),
-                j = s("449550"),
-                b = s("49111"),
-                U = s("994428"),
-                y = s("894488"),
-                B = s("559980"),
-                F = s("782340"),
-                G = s("358237"),
-                k = s("926622");
-            let H = {
+                c = s("452804"),
+                S = s("79112"),
+                E = s("485328"),
+                f = s("180748"),
+                T = s("206230"),
+                m = s("951212"),
+                _ = s("714657"),
+                g = s("10641"),
+                h = s("692038"),
+                I = s("815297"),
+                N = s("574073"),
+                p = s("291655"),
+                C = s("697218"),
+                A = s("145131"),
+                O = s("476765"),
+                x = s("773336"),
+                M = s("161778"),
+                R = s("168973"),
+                v = s("845579"),
+                D = s("403338"),
+                L = s("449550"),
+                P = s("49111"),
+                j = s("994428"),
+                b = s("894488"),
+                U = s("782340"),
+                y = s("358237"),
+                B = s("926622");
+            let F = {
                     COZY: "cozy",
                     COMPACT: "compact"
                 },
-                w = (0, M.uid)(),
-                V = (0, M.uid)(),
-                Y = (0, M.uid)(),
-                W = "1337",
-                K = e => {
+                G = (0, O.uid)(),
+                k = (0, O.uid)(),
+                H = (0, O.uid)(),
+                w = "1337",
+                V = e => {
                     let t = 0;
-                    return [(0, I.createMessageRecord)({
-                        ...(0, N.default)({
-                            channelId: W,
-                            content: F.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
+                    return [(0, h.createMessageRecord)({
+                        ...(0, I.default)({
+                            channelId: w,
+                            content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
                         }),
-                        state: b.MessageStates.SENT,
+                        state: P.MessageStates.SENT,
                         id: "".concat(t++)
-                    }), (0, I.createMessageRecord)({
-                        ...(0, N.default)({
-                            channelId: W,
-                            content: (0, d.isThemeDark)(e) ? F.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : F.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
+                    }), (0, h.createMessageRecord)({
+                        ...(0, I.default)({
+                            channelId: w,
+                            content: (0, d.isThemeDark)(e) ? U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
                         }),
-                        state: b.MessageStates.SENT,
+                        state: P.MessageStates.SENT,
                         id: "".concat(t++)
-                    }), (0, I.createMessageRecord)({
-                        ...(0, N.default)({
-                            channelId: W,
-                            content: F.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
+                    }), (0, h.createMessageRecord)({
+                        ...(0, I.default)({
+                            channelId: w,
+                            content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
                         }),
-                        state: b.MessageStates.SENT,
+                        state: P.MessageStates.SENT,
                         id: "".concat(t++)
-                    }), (0, I.createMessageRecord)({
-                        ...(0, N.default)({
-                            channelId: W,
-                            content: F.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
+                    }), (0, h.createMessageRecord)({
+                        ...(0, I.default)({
+                            channelId: w,
+                            content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
                         }),
-                        state: b.MessageStates.SENT,
+                        state: P.MessageStates.SENT,
                         id: "".concat(t++)
-                    }), (0, I.createMessageRecord)({
-                        ...(0, N.default)({
-                            channelId: W,
-                            content: F.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
+                    }), (0, h.createMessageRecord)({
+                        ...(0, I.default)({
+                            channelId: w,
+                            content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
                         }),
-                        state: b.MessageStates.SENT,
+                        state: P.MessageStates.SENT,
                         id: "".concat(t)
                     })]
                 };
-            class z extends n.Component {
+            class Y extends n.Component {
                 renderZoomSlider() {
-                    return R.isPlatformEmbedded ? (0, a.jsxs)(u.FormItem, {
-                        className: k.marginTop20,
+                    return x.isPlatformEmbedded ? (0, a.jsxs)(u.FormItem, {
+                        className: B.marginTop20,
                         children: [(0, a.jsx)(u.FormTitle, {
-                            id: w,
+                            id: G,
                             tag: u.FormTitleTags.H5,
-                            className: k.marginBottom8,
-                            children: F.default.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
+                            className: B.marginBottom8,
+                            children: U.default.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
                         }), (0, a.jsx)(u.Slider, {
-                            className: i(k.marginTop20, k.marginBottom4),
+                            className: i(B.marginTop20, B.marginBottom4),
                             initialValue: this.props.zoom,
-                            defaultValue: b.Accessibility.ZOOM_DEFAULT,
-                            markers: b.Accessibility.ZOOM_SCALES,
+                            defaultValue: P.Accessibility.ZOOM_DEFAULT,
+                            markers: P.Accessibility.ZOOM_SCALES,
                             stickToMarkers: !0,
                             onValueChange: this.handleZoomChange,
                             onValueRender: this.handleSliderRender,
-                            "aria-labelledby": w
+                            "aria-labelledby": G
                         }), (0, a.jsx)(u.FormText, {
                             type: u.FormText.Types.DESCRIPTION,
-                            children: F.default.Messages.USER_SETTINGS_APPEARANCE_ZOOM_TIP.format({
-                                modKey: f.default.modKey
+                            children: U.default.Messages.USER_SETTINGS_APPEARANCE_ZOOM_TIP.format({
+                                modKey: E.default.modKey
                             })
                         })]
                     }) : null
                 }
                 renderFontScaleSlider() {
                     return (0, a.jsxs)(u.FormItem, {
-                        className: k.marginTop20,
+                        className: B.marginTop20,
                         children: [(0, a.jsx)(u.FormTitle, {
-                            id: V,
+                            id: k,
                             tag: u.FormTitleTags.H5,
-                            className: k.marginBottom8,
-                            children: F.default.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
-                        }), (0, a.jsx)(x.default, {
-                            align: x.default.Align.CENTER,
+                            className: B.marginBottom8,
+                            children: U.default.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
+                        }), (0, a.jsx)(A.default, {
+                            align: A.default.Align.CENTER,
                             children: (0, a.jsx)(u.Slider, {
-                                className: i(k.marginTop20, k.marginBottom4),
+                                className: i(B.marginTop20, B.marginBottom4),
                                 initialValue: this.props.fontSize,
-                                defaultValue: b.Accessibility.FONT_SIZE_DEFAULT,
-                                markers: b.Accessibility.FONT_SIZES,
+                                defaultValue: P.Accessibility.FONT_SIZE_DEFAULT,
+                                markers: P.Accessibility.FONT_SIZES,
                                 stickToMarkers: !0,
                                 onValueChange: this.handleFontSizeChange,
                                 onValueRender: this.handleSliderRenderPX,
                                 onMarkerRender: this.handleSliderRenderPX,
                                 getAriaValueText: this.handleSliderValueText,
-                                "aria-labelledby": V
+                                "aria-labelledby": k
                             })
                         })]
                     })
@@ -14395,23 +14392,23 @@
                         messageGroupSpacing: t
                     } = this.props;
                     return (0, a.jsxs)(u.FormItem, {
-                        className: k.marginTop20,
+                        className: B.marginTop20,
                         children: [(0, a.jsx)(u.FormTitle, {
-                            id: Y,
+                            id: H,
                             tag: u.FormTitleTags.H5,
-                            className: k.marginBottom8,
-                            children: F.default.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
+                            className: B.marginBottom8,
+                            children: U.default.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
                         }), (0, a.jsx)(u.Slider, {
-                            className: i(k.marginTop20, k.marginBottom4),
+                            className: i(B.marginTop20, B.marginBottom4),
                             initialValue: t,
-                            defaultValue: e ? y.DEFAULT_COMPACT_SPACING : y.DEFAULT_COZY_SPACING,
-                            markers: y.MESSAGE_GROUP_SPACING,
+                            defaultValue: e ? b.DEFAULT_COMPACT_SPACING : b.DEFAULT_COZY_SPACING,
+                            markers: b.MESSAGE_GROUP_SPACING,
                             stickToMarkers: !0,
                             onValueChange: this.handleMessageSpacingChange,
                             onValueRender: this.handleSliderRenderPX,
                             onMarkerRender: this.handleSliderRenderPX,
                             getAriaValueText: this.handleSliderValueText,
-                            "aria-labelledby": Y
+                            "aria-labelledby": H
                         })]
                     })
                 }
@@ -14424,15 +14421,15 @@
                     } = this.props, l = (0, d.isThemeDark)(t) ? this.darkMessages : this.lightMessages;
                     return (0, a.jsx)(u.FocusBlock, {
                         children: (0, a.jsx)(u.Card, {
-                            className: i(G.preview, k.marginBottom40, e ? G.compactPreview : void 0, "group-spacing-".concat(null != s ? s : e ? y.DEFAULT_COMPACT_SPACING : y.DEFAULT_COZY_SPACING)),
+                            className: i(y.preview, B.marginBottom40, e ? y.compactPreview : void 0, "group-spacing-".concat(null != s ? s : e ? b.DEFAULT_COMPACT_SPACING : b.DEFAULT_COZY_SPACING)),
                             outline: !0,
                             "aria-hidden": !0,
-                            children: l.map((t, s) => (0, a.jsx)(C.default, {
-                                author: (0, p.getMessageAuthor)(t),
+                            children: l.map((t, s) => (0, a.jsx)(p.default, {
+                                author: (0, N.getMessageAuthor)(t),
                                 message: t,
                                 compact: e,
                                 isGroupStart: s % 2 == 0,
-                                className: 0 === s ? G.firstMessage : void 0,
+                                className: 0 === s ? y.firstMessage : void 0,
                                 hideSimpleEmbedContent: n
                             }, t.id))
                         })
@@ -14442,107 +14439,88 @@
                     let {
                         theme: e,
                         useForcedColors: t,
-                        useAMOLEDTheme: s,
-                        darkSidebar: n,
-                        gradientPreset: l
-                    } = this.props, r = A.default.getCurrentConfig({
-                        location: "5832dc_1"
-                    }, {
-                        autoTrackExposure: !1
-                    }).enabledAMOLEDThemeOption;
+                        darkSidebar: s,
+                        gradientPreset: n
+                    } = this.props;
                     return t ? (0, a.jsx)(u.FormItem, {
-                        className: i(k.marginTop8, k.marginBottom40),
+                        className: i(B.marginTop8, B.marginBottom40),
                         title: (0, a.jsx)("div", {
-                            className: G.themeTitle,
+                            className: y.themeTitle,
                             children: (0, a.jsx)("div", {
-                                className: G.title,
-                                children: F.default.Messages.THEME
+                                className: y.title,
+                                children: U.default.Messages.THEME
                             })
                         }),
                         children: (0, a.jsx)(u.FormText, {
                             type: u.FormText.Types.DEFAULT,
-                            className: G.forcedColorsWarning,
-                            children: (0, _.canEnableForcedColors)() ? F.default.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
+                            className: y.forcedColorsWarning,
+                            children: (0, m.canEnableForcedColors)() ? U.default.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
                                 onClick: () => {
-                                    E.default.open(b.UserSettingsSections.ACCESSIBILITY)
+                                    S.default.open(P.UserSettingsSections.ACCESSIBILITY)
                                 }
-                            }) : F.default.Messages.THEME_DISABLED_FOR_FORCED_COLORS
+                            }) : U.default.Messages.THEME_DISABLED_FOR_FORCED_COLORS
                         })
                     }) : (0, a.jsxs)(u.FormItem, {
-                        className: k.marginTop8,
+                        className: B.marginTop8,
                         title: (0, a.jsxs)("div", {
-                            className: G.themeTitle,
+                            className: y.themeTitle,
                             children: [(0, a.jsx)("div", {
-                                className: G.title,
-                                children: F.default.Messages.THEME
-                            }), (0, a.jsx)(P.ClientThemesSidebarButton, {})]
+                                className: y.title,
+                                children: U.default.Messages.THEME
+                            }), (0, a.jsx)(D.ClientThemesSidebarButton, {})]
                         }),
-                        children: [(0, a.jsx)(P.UserSettingsAppearanceClientThemes, {}), (0, a.jsx)(j.UserSettingsAppearanceInAppIcon, {}), r && (0, a.jsx)(u.FormSwitch, {
-                            value: s === B.AMOLEDThemeState.ON,
-                            onChange: this.handleAMOLEDThemeChange,
-                            className: k.marginTop20,
-                            note: F.default.Messages.EXPERIMENTAL_AMOLED_MODE_NOTE,
-                            children: "AMOLED Mode (Staff Only)"
-                        }), (0, a.jsx)(u.FormSwitch, {
-                            value: n && (0, d.isThemeLight)(e) && !t,
-                            disabled: e !== b.ThemeTypes.LIGHT || t || null != l,
+                        children: [(0, a.jsx)(D.UserSettingsAppearanceClientThemes, {}), (0, a.jsx)(L.UserSettingsAppearanceInAppIcon, {}), (0, a.jsx)(u.FormSwitch, {
+                            value: s && (0, d.isThemeLight)(e) && !t,
+                            disabled: e !== P.ThemeTypes.LIGHT || t || null != n,
                             onChange: this.handleDarkSidebarChecked,
-                            className: k.marginTop20,
-                            children: F.default.Messages.ACCESSIBILITY_DARK_SIDEBAR
+                            className: B.marginTop20,
+                            children: U.default.Messages.ACCESSIBILITY_DARK_SIDEBAR
                         })]
                     })
                 }
                 renderDisplayMode() {
                     return (0, a.jsxs)(u.FormItem, {
-                        title: F.default.Messages.MESSAGE_DISPLAY_MODE_LABEL,
-                        className: k.marginTop8,
+                        title: U.default.Messages.MESSAGE_DISPLAY_MODE_LABEL,
+                        className: B.marginTop8,
                         children: [(0, a.jsx)(u.RadioGroup, {
                             options: [{
-                                name: F.default.Messages.COZY_MODE,
-                                value: H.COZY
+                                name: U.default.Messages.COZY_MODE,
+                                value: F.COZY
                             }, {
-                                name: F.default.Messages.COMPACT_MODE,
-                                value: H.COMPACT
+                                name: U.default.Messages.COMPACT_MODE,
+                                value: F.COMPACT
                             }],
                             onChange: this.handleMessageDisplayModeChange,
-                            value: this.props.messageDisplayCompact ? H.COMPACT : H.COZY
+                            value: this.props.messageDisplayCompact ? F.COMPACT : F.COZY
                         }), (0, a.jsx)(u.FormSwitch, {
                             value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
                             disabled: !this.props.messageDisplayCompact,
                             onChange: this.handleDisplayCompactAvatarsChanged,
-                            className: k.marginTop20,
-                            children: F.default.Messages.DISPLAY_COMPACT_AVATARS
+                            className: B.marginTop20,
+                            children: U.default.Messages.DISPLAY_COMPACT_AVATARS
                         })]
                     })
                 }
                 handleDarkSidebarChecked() {
-                    (0, T.toggleDarkSidebar)()
-                }
-                handleAMOLEDThemeChange(e) {
-                    c.default.dispatch({
-                        type: "UNSYNCED_USER_SETTINGS_UPDATE",
-                        settings: {
-                            useAMOLEDTheme: e ? B.AMOLEDThemeState.ON : B.AMOLEDThemeState.OFF
-                        }
-                    })
+                    (0, f.toggleDarkSidebar)()
                 }
                 renderScalingAndSpacing() {
                     return (0, a.jsxs)(a.Fragment, {
                         children: [this.renderFontScaleSlider(), this.renderMessageGroupSpacingSlider(), this.renderZoomSlider(), (0, a.jsx)(u.FormDivider, {
-                            className: k.marginTop20
+                            className: B.marginTop20
                         })]
                     })
                 }
                 render() {
                     return (0, a.jsxs)(u.FormSection, {
                         tag: u.FormTitleTags.H1,
-                        title: F.default.Messages.APPEARANCE,
+                        title: U.default.Messages.APPEARANCE,
                         children: [this.renderPreview(), this.renderTheme(), this.renderDisplayMode(), this.renderScalingAndSpacing(), (0, a.jsx)(u.Text, {
                             variant: "text-md/normal",
-                            className: k.marginTop20,
-                            children: F.default.Messages.APPEARANCE_SETTINGS_ACCESSIBILITY_LINK.format({
+                            className: B.marginTop20,
+                            children: U.default.Messages.APPEARANCE_SETTINGS_ACCESSIBILITY_LINK.format({
                                 onAccessibilityClick() {
-                                    E.default.open(b.UserSettingsSections.ACCESSIBILITY)
+                                    S.default.open(P.UserSettingsSections.ACCESSIBILITY)
                                 }
                             })
                         })]
@@ -14555,12 +14533,12 @@
                     return "".concat(e.toFixed(0), "px")
                 }
                 handleSliderValueText(e) {
-                    return F.default.Messages.PIXEL_VALUE_A11Y_TEXT.format({
+                    return U.default.Messages.PIXEL_VALUE_A11Y_TEXT.format({
                         value: e
                     })
                 }
                 handleFontSizeChange(e) {
-                    (0, T.setFontSize)(e)
+                    (0, f.setFontSize)(e)
                 }
                 handleMessageSpacingChange(e) {
                     switch (e) {
@@ -14569,60 +14547,59 @@
                         case 8:
                         case 16:
                         case 24:
-                            (0, T.setMessageGroupSpacing)(e)
+                            (0, f.setMessageGroupSpacing)(e)
                     }
                 }
                 handleZoomChange(e) {
-                    (0, T.setZoom)(e)
+                    (0, f.setZoom)(e)
                 }
                 constructor(...e) {
-                    super(...e), this.darkMessages = K(b.ThemeTypes.DARK), this.lightMessages = K(b.ThemeTypes.LIGHT), this.handleDisplayCompactAvatarsChanged = e => {
-                        S.default.updatedUnsyncedSettings({
+                    super(...e), this.darkMessages = V(P.ThemeTypes.DARK), this.lightMessages = V(P.ThemeTypes.LIGHT), this.handleDisplayCompactAvatarsChanged = e => {
+                        c.default.updatedUnsyncedSettings({
                             displayCompactAvatars: e
                         })
                     }, this.handleMessageDisplayModeChange = e => {
                         let {
                             value: t
                         } = e;
-                        L.MessageDisplayCompact.updateSetting(t === H.COMPACT), (0, T.setMessageGroupSpacing)()
+                        v.MessageDisplayCompact.updateSetting(t === F.COMPACT), (0, f.setMessageGroupSpacing)()
                     }
                 }
             }
 
-            function Q() {
-                let e = L.MessageDisplayCompact.useSetting(),
-                    t = L.InlineEmbedMedia.useSetting(),
-                    s = L.RenderEmbeds.useSetting(),
-                    l = L.ClientThemeSettings.useSetting();
+            function W() {
+                let e = v.MessageDisplayCompact.useSetting(),
+                    t = v.InlineEmbedMedia.useSetting(),
+                    s = v.RenderEmbeds.useSetting(),
+                    l = v.ClientThemeSettings.useSetting();
                 n.useEffect(() => {
-                    (0, h.markDismissibleContentAsDismissed)(o.DismissibleContent.CLIENT_THEMES_SETTINGS_BADGE, {
-                        dismissAction: U.ContentDismissActionType.AUTO,
+                    (0, g.markDismissibleContentAsDismissed)(o.DismissibleContent.CLIENT_THEMES_SETTINGS_BADGE, {
+                        dismissAction: j.ContentDismissActionType.AUTO,
                         forceTrack: !0
-                    }), (0, h.markDismissibleContentAsDismissed)(o.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_BADGE, {
-                        dismissAction: U.ContentDismissActionType.AUTO,
+                    }), (0, g.markDismissibleContentAsDismissed)(o.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_BADGE, {
+                        dismissAction: j.ContentDismissActionType.AUTO,
                         forceTrack: !0
-                    }), (0, h.markDismissibleContentAsDismissed)(o.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK, {
-                        dismissAction: U.ContentDismissActionType.AUTO,
+                    }), (0, g.markDismissibleContentAsDismissed)(o.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK, {
+                        dismissAction: j.ContentDismissActionType.AUTO,
                         forceTrack: !0
                     })
                 }, []);
-                let i = (0, r.useStateFromStoresObject)([v.default, D.default, m.default, O.default, g.default], () => {
+                let i = (0, r.useStateFromStoresObject)([M.default, R.default, T.default, C.default, _.default], () => {
                     var e, t;
                     return {
-                        theme: v.default.theme,
-                        useForcedColors: m.default.useForcedColors,
-                        useSystemTheme: D.default.useSystemTheme,
-                        useAMOLEDTheme: D.default.useAMOLEDTheme,
-                        darkSidebar: v.default.darkSidebar,
-                        fontSize: m.default.fontSize,
-                        zoom: m.default.zoom,
-                        messageGroupSpacing: m.default.messageGroupSpacing,
-                        displayCompactAvatars: D.default.displayCompactAvatars,
-                        isStaff: null !== (t = null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
-                        gradientPreset: g.default.gradientPreset
+                        theme: M.default.theme,
+                        useForcedColors: T.default.useForcedColors,
+                        useSystemTheme: R.default.useSystemTheme,
+                        darkSidebar: M.default.darkSidebar,
+                        fontSize: T.default.fontSize,
+                        zoom: T.default.zoom,
+                        messageGroupSpacing: T.default.messageGroupSpacing,
+                        displayCompactAvatars: R.default.displayCompactAvatars,
+                        isStaff: null !== (t = null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
+                        gradientPreset: _.default.gradientPreset
                     }
                 });
-                return (0, a.jsx)(z, {
+                return (0, a.jsx)(Y, {
                     messageDisplayCompact: e,
                     hideSimpleEmbedContent: t && s,
                     clientTheme: l,
