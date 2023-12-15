@@ -5848,31 +5848,6 @@
                 return m ? [c.Mode.CareALittle, c.Confidence.Low, "Visisted 1 channel in the last month ".concat(h)] : _ ? [c.Mode.CareALittle, c.Confidence.Low, "Visited 5+ channels ever ".concat(h)] : s ? [c.Mode.DontCare, c.Confidence.High, "Muted ".concat(h)] : [c.Mode.CareALittle, c.Confidence.Low, "Not muted ".concat(h)]
             }
         },
-        999819: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                default: function() {
-                    return l
-                }
-            });
-            var a = s("862205");
-            let n = (0, a.createExperiment)({
-                kind: "user",
-                id: "2023-11_keybind_indicators",
-                label: "Overlay Keybind Indicators",
-                defaultConfig: {
-                    showKeybindIndicators: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Show Keybind Indicators - Overlay",
-                    config: {
-                        showKeybindIndicators: !0
-                    }
-                }]
-            });
-            var l = n
-        },
         946964: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -10746,7 +10721,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "b487faad0a025339be1be32a2b02c40480bb20c7", e.substring(0, 7)),
+                    S = (e = "f4882ccacb5b229dcf5bf0501fe1bf85980aad54", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10759,7 +10734,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "254798", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "254804", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
