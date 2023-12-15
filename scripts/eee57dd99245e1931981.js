@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["60814"], {
+    ["31617"], {
         496559: function(e, t, n) {
             "use strict";
             e.exports = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='271' height='141'><g fill='#000000' fill-rule='evenodd'><rect width='130' height='20' rx='5'/><rect width='254' height='20' y='30' rx='5'/><rect width='190' height='20' y='60' rx='5'/><rect width='66' height='32' y='102' rx='3'/></g></svg>"
@@ -135,14 +135,6 @@
         760238: function(e, t, n) {
             "use strict";
             e.exports = n.p + "635eaaafc2a09bc126b9.jpg"
-        },
-        26511: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "20fd6ce03205c6a9281c.svg"
-        },
-        934514: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "f52c432f64584d12cac0.svg"
         },
         728791: function(e, t, n) {
             "use strict";
@@ -11235,41 +11227,32 @@
             "use strict";
             n.r(t), n.d(t, {
                 buildPlatformPollResources: function() {
-                    return o
+                    return i
                 },
                 getAvatarUrl: function() {
-                    return u
+                    return r
                 }
             }), n("794252");
-            var a = n("414456"),
-                s = n.n(a),
-                l = n("506838"),
-                i = n("418009"),
-                r = n("944313");
+            var a = n("506838"),
+                s = n("418009"),
+                l = n("944313");
 
-            function o(e, t) {
-                let n = (0, l.match)(t).with(i.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => r.normalStylesImageOnlyAnswers).otherwise(() => r.normalStylesDefault),
-                    a = s(n, r.mutedMixinStyles),
-                    o = r.votedStyles,
-                    u = s(n, r.mutedMixinStyles),
-                    d = {
+            function i(e, t) {
+                let n = (0, a.match)(t).with(s.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => l.normalStylesImageOnlyAnswers).otherwise(() => l.normalStylesDefault),
+                    i = {
                         styles: {
-                            loser: a,
+                            loser: n,
                             normal: n,
-                            notVoted: u,
-                            selected: s(n, r.selectedMixinStyles),
-                            voted: s(o, {
-                                [r.imageVotedAndVictorMixinStyles]: t === i.PollLayoutTypes.IMAGE_ONLY_ANSWERS
-                            }),
-                            victor: s(r.victorStyles, {
-                                [r.imageVotedAndVictorMixinStyles]: t === i.PollLayoutTypes.IMAGE_ONLY_ANSWERS
-                            })
+                            notVoted: n,
+                            selected: n,
+                            voted: l.votedStyles,
+                            victor: l.victorStyles
                         }
                     };
-                return d
+                return i
             }
 
-            function u(e, t) {
+            function r(e, t) {
                 return e.getAvatarURL(t, 20, !1)
             }
         },
@@ -11474,7 +11457,7 @@
                     }, () => void 0).with({
                         isEditingVote: !0
                     }, () => ({
-                        label: _.default.Messages.POLL_SUBMIT_VOTE_EDIT,
+                        label: _.default.Messages.POLL_SUBMIT_VOTE,
                         presentation: "button",
                         enabled: K,
                         type: "submit"
@@ -11609,10 +11592,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 PollAnswers: function() {
-                    return v
+                    return R
                 },
                 PollMediaView: function() {
-                    return y
+                    return U
+                },
+                PollAnswerSelectedIcon: function() {
+                    return G
+                },
+                PollAnswerVictorIcon: function() {
+                    return B
+                },
+                PollAnswerVotedIcon: function() {
+                    return k
                 }
             }), n("794252");
             var a, s, l = n("37983"),
@@ -11623,41 +11615,45 @@
                 d = n("65597"),
                 c = n("77078"),
                 f = n("430568"),
-                m = n("385976"),
-                h = n("845579"),
-                E = n("952368"),
-                p = n("866190"),
-                _ = n("847511"),
-                g = n("74232"),
-                I = n("782340"),
-                T = n("652886");
+                m = n("449918"),
+                h = n("20606"),
+                E = n("385976"),
+                p = n("845579"),
+                _ = n("952368"),
+                g = n("578706"),
+                I = n("866190"),
+                T = n("847511"),
+                C = n("74232"),
+                S = n("49111"),
+                A = n("782340"),
+                N = n("652886");
 
-            function C(e) {
+            function M(e) {
                 let {
                     className: t,
                     children: n
                 } = e;
                 return (0, l.jsx)("ul", {
-                    "aria-label": I.default.Messages.POLL_OPTIONS_ARIA,
+                    "aria-label": A.default.Messages.POLL_OPTIONS_ARIA,
                     className: t,
                     children: n
                 })
             }
 
-            function S(e) {
+            function v(e) {
                 let {
                     className: t,
                     children: n
                 } = e;
                 return (0, l.jsx)("div", {
-                    "aria-label": I.default.Messages.POLL_OPTIONS_ARIA,
+                    "aria-label": A.default.Messages.POLL_OPTIONS_ARIA,
                     role: "group",
                     className: t,
                     children: n
                 })
             }
 
-            function A(e) {
+            function x(e) {
                 let {
                     className: t,
                     children: n
@@ -11665,14 +11661,14 @@
                     orientation: "vertical"
                 });
                 return (0, l.jsx)("div", {
-                    "aria-label": I.default.Messages.POLL_OPTIONS_ARIA,
+                    "aria-label": A.default.Messages.POLL_OPTIONS_ARIA,
                     ...a,
                     className: t,
                     children: n
                 })
             }
 
-            function N(e) {
+            function O(e) {
                 let {
                     className: t,
                     onClick: n,
@@ -11681,14 +11677,14 @@
                 } = e;
                 return (0, l.jsx)(c.Clickable, {
                     role: "checkbox",
-                    className: o(t, T.enabled),
+                    className: o(t, N.enabled),
                     onClick: n,
                     "aria-checked": a,
                     children: s
                 })
             }
 
-            function M(e) {
+            function L(e) {
                 let t, {
                     className: n,
                     children: a,
@@ -11699,7 +11695,7 @@
                 } = e;
                 return t = r ? i ? 0 : -1 : u ? 0 : -1, (0, l.jsx)(c.Clickable, {
                     role: "radio",
-                    className: o(n, T.enabled),
+                    className: o(n, N.enabled),
                     onClick: s,
                     "aria-checked": i,
                     tabIndex: t,
@@ -11707,7 +11703,7 @@
                 })
             }
 
-            function v(e) {
+            function R(e) {
                 let {
                     answers: t,
                     isInteractive: n,
@@ -11726,22 +11722,22 @@
                     isInteractive: !0,
                     canSelectMultipleAnswers: !1
                 }, () => ({
-                    ContainerComponent: A,
+                    ContainerComponent: x,
                     answerElementType: 1
                 })).with({
                     isInteractive: !0,
                     canSelectMultipleAnswers: !0
                 }, () => ({
-                    ContainerComponent: S,
+                    ContainerComponent: v,
                     answerElementType: 2
                 })).otherwise(() => ({
-                    ContainerComponent: C,
+                    ContainerComponent: M,
                     answerElementType: 0
                 }));
                 return (0, l.jsx)(c, {
                     className: i,
-                    children: t.map((e, t) => (0, l.jsx)(x, {
-                        className: o(T.answer, r),
+                    children: t.map((e, t) => (0, l.jsx)(y, {
+                        className: o(N.answer, r),
                         answer: e,
                         isFirstAnswer: 0 === t,
                         elementType: f,
@@ -11751,7 +11747,7 @@
                 })
             }
 
-            function x(e) {
+            function y(e) {
                 let {
                     className: t,
                     answer: n,
@@ -11762,8 +11758,8 @@
                 } = e, {
                     channelId: d,
                     messageId: c
-                } = (0, g.useMessageIds)(), f = (0, g.useStyleClass)(n.style), m = !0 === n.isSelected, h = i.useCallback(() => {
-                    _.default.handlePollAnswerTapped({
+                } = (0, C.useMessageIds)(), f = (0, C.useStyleClass)(n.style), m = !0 === n.isSelected, h = i.useCallback(() => {
+                    T.default.handlePollAnswerTapped({
                         channelId: d,
                         messageId: c,
                         answerId: n.answerId
@@ -11776,7 +11772,7 @@
                             children: a
                         });
                     case 1:
-                        return (0, l.jsx)(M, {
+                        return (0, l.jsx)(L, {
                             className: o(t, f),
                             onClick: h,
                             isSelected: m,
@@ -11785,7 +11781,7 @@
                             children: a
                         });
                     case 2:
-                        return (0, l.jsx)(N, {
+                        return (0, l.jsx)(O, {
                             className: o(t, f),
                             onClick: h,
                             isSelected: m,
@@ -11794,35 +11790,34 @@
                 }
             }
 
-            function O(e) {
-                var t, n;
+            function P(e) {
                 let {
-                    attachment: a,
-                    alt: s,
-                    className: i
-                } = e, r = (0, p.useIsWindowFocused)(), o = h.GifAutoPlay.useSetting();
-                return (0, l.jsx)(E.default, {
-                    className: i,
-                    imageClassName: T.attachmentImage,
-                    src: null != a.proxy_url && "" !== a.proxy_url ? a.proxy_url : a.url,
-                    alt: s,
+                    attachment: t,
+                    alt: n,
+                    className: a
+                } = e, s = (0, I.useIsWindowFocused)(), i = p.GifAutoPlay.useSetting();
+                return (0, l.jsx)(_.default, {
+                    className: a,
+                    imageClassName: N.attachmentImage,
+                    src: null != t.proxy_url && "" !== t.proxy_url ? t.proxy_url : t.url,
+                    alt: n,
                     responsive: !0,
-                    width: null !== (t = a.width) && void 0 !== t ? t : 1,
-                    height: null !== (n = a.height) && void 0 !== n ? n : 1,
-                    autoPlay: o,
-                    shouldAnimate: r,
+                    width: 212,
+                    height: 212,
+                    autoPlay: i,
+                    shouldAnimate: s,
                     shouldRenderAccessory: !1
                 })
             }
 
-            function L(e) {
+            function D(e) {
                 let {
                     alt: t,
                     className: n,
                     emoji: a
-                } = e, s = (0, d.default)([m.default], () => {
+                } = e, s = (0, d.default)([E.default], () => {
                     var e, t, n;
-                    return null !== (n = null === (e = m.default.getCustomEmojiById(null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.animated) && void 0 !== n && n
+                    return null !== (n = null === (e = E.default.getCustomEmojiById(null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.animated) && void 0 !== n && n
                 }, [a.id]);
                 return (0, l.jsx)(f.default, {
                     className: n,
@@ -11833,7 +11828,7 @@
                 })
             }
 
-            function R(e, t) {
+            function j(e, t) {
                 return null != e ? (0, l.jsx)("div", {
                     className: e,
                     children: t
@@ -11842,7 +11837,7 @@
                 })
             }
 
-            function y(e) {
+            function U(e) {
                 var t;
                 let {
                     media: n,
@@ -11853,29 +11848,65 @@
                     alt: o
                 } = e, {
                     message: u
-                } = (0, g.usePollContext)(), d = null !== (t = null != o ? o : n.text) && void 0 !== t ? t : "";
+                } = (0, C.usePollContext)(), d = null !== (t = null != o ? o : n.text) && void 0 !== t ? t : "";
                 if (n.attachmentIds.length > 0) {
                     let e = u.attachments.find(e => e.id === n.attachmentIds[0]);
-                    if (null != e) return R(a, (0, l.jsx)(O, {
+                    if (null != e) return j(a, (0, l.jsx)(P, {
                         className: s,
                         attachment: e,
                         alt: d
                     }))
                 }
-                return null != n.emoji ? R(a, (0, l.jsx)(L, {
+                return null != n.emoji ? j(a, (0, l.jsx)(D, {
                     className: i,
                     emoji: n.emoji,
                     alt: d
                 })) : void 0 !== r ? (0, l.jsx)(l.Fragment, {
                     children: r
                 }) : null
+            }
+
+            function b(e) {
+                let {
+                    size: t,
+                    color: n,
+                    className: a
+                } = e;
+                return (0, l.jsx)(g.default, {
+                    width: t,
+                    height: t,
+                    className: a,
+                    color: n,
+                    backgroundColor: (0, m.getColor)(S.Color.WHITE_500)
+                })
+            }
+
+            function G(e) {
+                return (0, l.jsx)(b, {
+                    color: (0, m.getColor)(S.Color.BRAND_500),
+                    ...e
+                })
+            }
+
+            function B(e) {
+                return (0, l.jsx)(b, {
+                    color: h.default.POLLS_VICTOR_BORDER,
+                    ...e
+                })
+            }
+
+            function k(e) {
+                return (0, l.jsx)(b, {
+                    color: h.default.POLLS_VOTED_BORDER,
+                    ...e
+                })
             }(s = a || (a = {}))[s.LIST_ITEM = 0] = "LIST_ITEM", s[s.RADIO = 1] = "RADIO", s[s.CHECKBOX = 2] = "CHECKBOX"
         },
         619544: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return m
                 }
             });
             var a = n("37983");
@@ -11886,81 +11917,85 @@
                 r = n("77078"),
                 o = n("426490"),
                 u = n("782340"),
-                d = n("314164"),
-                c = n("26511");
+                d = n("314164");
 
-            function f(e) {
+            function c(e) {
                 let {
                     didSelfVote: t,
                     label: n,
-                    myAvatarUrl: s,
-                    percentage: l
+                    percentage: s
                 } = e;
                 return (0, a.jsxs)("div", {
                     className: d.votesData,
-                    children: [null != s && (0, a.jsx)(r.Avatar, {
-                        className: d.avatarForSelected,
-                        size: r.AvatarSizes.SIZE_16,
-                        src: s,
-                        "aria-hidden": !0
-                    }), t && (0, a.jsx)(i.VisuallyHidden, {
+                    children: [t && (0, a.jsx)(i.VisuallyHidden, {
                         children: u.default.Messages.POLL_ANSWER_VOTED_ARIA
                     }), (0, a.jsxs)(r.Text, {
-                        variant: "text-xs/semibold",
+                        variant: "text-md/semibold",
                         color: "none",
-                        children: [l, "%"]
+                        children: [s, "%"]
                     }), (0, a.jsx)(r.Text, {
-                        variant: "text-xxs/semibold",
+                        variant: "text-xs/semibold",
                         color: "none",
                         children: n
                     })]
                 })
             }
 
-            function m(e) {
+            function f(e) {
                 let {
                     answer: t,
-                    canShowVoteCounts: n,
-                    myAvatarUrl: s
-                } = e, i = !0 === t.isSelected, r = !0 === t.didSelfVote;
+                    hasVoted: n,
+                    isExpired: s,
+                    myAvatarUrl: i
+                } = e, r = n || s, u = !0 === t.isSelected, f = !0 === t.didSelfVote, m = !0 === t.isVictor;
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(o.PollMediaView, {
-                        attachmentClassName: d.attachment,
+                        attachmentClassName: l(d.attachment, {
+                            [d.attachmentWithResults]: r
+                        }),
                         emojiClassName: d.emoji,
                         media: t.pollMedia,
                         fallback: (0, a.jsx)("div", {
                             className: l(d.attachment, d.mediaMissing)
                         })
-                    }), i && (0, a.jsx)("img", {
-                        className: d.selectedIcon,
-                        src: c,
-                        alt: ""
-                    }), n && (0, a.jsx)(f, {
-                        didSelfVote: r,
-                        percentage: t.votesPercentage,
-                        label: t.votes,
-                        myAvatarUrl: r ? s : void 0
+                    }), u && (0, a.jsx)(o.PollAnswerSelectedIcon, {
+                        size: 40,
+                        className: d.selectedIcon
+                    }), r && (0, a.jsxs)(a.Fragment, {
+                        children: [(0, a.jsx)(c, {
+                            didSelfVote: f,
+                            percentage: t.votesPercentage,
+                            label: t.votes,
+                            myAvatarUrl: f ? i : void 0
+                        }), !s && f && (0, a.jsx)(o.PollAnswerVotedIcon, {
+                            size: 18,
+                            className: d.pollAnswerIcon
+                        }), m && (0, a.jsx)(o.PollAnswerVictorIcon, {
+                            size: 18,
+                            className: d.pollAnswerIcon
+                        })]
                     })]
                 })
             }
 
-            function h(e) {
+            function m(e) {
                 let {
-                    canShowVoteCounts: t,
-                    myAvatarUrl: n,
-                    ...s
+                    isExpired: t,
+                    hasVoted: n,
+                    myAvatarUrl: s,
+                    ...l
                 } = e;
                 return (0, a.jsx)(o.PollAnswers, {
                     className: d.answersContainer,
                     answerClassName: d.answer,
-                    canShowVoteCounts: t,
-                    myAvatarUrl: n,
-                    renderAnswerContent: e => (0, a.jsx)(m, {
+                    myAvatarUrl: s,
+                    renderAnswerContent: e => (0, a.jsx)(f, {
                         answer: e,
-                        canShowVoteCounts: t,
-                        myAvatarUrl: n
+                        isExpired: t,
+                        hasVoted: n,
+                        myAvatarUrl: s
                     }),
-                    ...s
+                    ...l
                 })
             }
         },
@@ -12060,7 +12095,7 @@
                     children: t
                 } = e;
                 return (0, a.jsx)(u.Text, {
-                    variant: "text-md/normal",
+                    variant: "text-sm/normal",
                     color: "text-muted",
                     children: t
                 })
@@ -12076,7 +12111,7 @@
                     onClick: n,
                     className: i(s, h.textButton),
                     children: (0, a.jsx)(u.Text, {
-                        variant: "text-md/semibold",
+                        variant: "text-sm/semibold",
                         color: "text-link",
                         children: t
                     })
@@ -12101,7 +12136,6 @@
                     children: t.label
                 }) : "textButton" === t.presentation ? (0, a.jsx)(_, {
                     onClick: i,
-                    className: h.editButton,
                     children: t.label
                 }) : (0, a.jsx)(p, {
                     children: t.label
@@ -12116,8 +12150,8 @@
                 } = e, l = (0, f.useStyleClass)(n.containerStyle), u = function(e, t) {
                     let n = {
                         answers: t.answers,
-                        canShowVoteCounts: t.canShowVoteCounts,
                         hasVoted: t.hasVoted,
+                        isExpired: t.isExpired,
                         myAvatarUrl: t.myAvatarUrl,
                         isInteractive: t.canTapAnswers,
                         canSelectMultipleAnswers: t.canSelectMultipleAnswers,
@@ -12204,62 +12238,72 @@
             function d(e) {
                 let {
                     answer: t,
-                    canShowVoteCounts: n,
-                    myAvatarUrl: d
-                } = e, c = !0 === t.isSelected;
+                    isExpired: n,
+                    hasVoted: d,
+                    myAvatarUrl: c
+                } = e, f = d || n, m = !0 === t.isSelected, h = !0 === t.didSelfVote, E = !0 === t.isVictor;
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [n && (0, a.jsx)("span", {
-                        className: o.votePercentageBar,
-                        style: {
-                            width: "".concat(t.votesPercentage, "%")
-                        },
-                        "aria-hidden": !0
-                    }), (0, a.jsxs)("div", {
-                        className: o.answerContent,
-                        children: [(0, a.jsx)(i.PollMediaView, {
-                            attachmentClassName: o.attachment,
-                            containerClassName: o.mediaContainer,
-                            emojiClassName: o.emoji,
-                            media: t.pollMedia,
-                            fallback: null,
-                            alt: ""
-                        }), (0, a.jsx)(l.Text, {
-                            className: o.label,
-                            variant: "text-sm/semibold",
-                            color: "none",
-                            children: t.pollMedia.text
-                        }), (c || t.didSelfVote) && (0, a.jsx)(l.Avatar, {
-                            className: o.avatarForSelected,
-                            size: l.AvatarSizes.SIZE_20,
-                            src: d,
+                    children: [(0, a.jsxs)("div", {
+                        className: o.answerInner,
+                        children: [f && (0, a.jsx)("span", {
+                            className: o.votePercentageBar,
+                            style: {
+                                width: "".concat(t.votesPercentage, "%")
+                            },
                             "aria-hidden": !0
-                        }), t.didSelfVote && (0, a.jsx)(s.VisuallyHidden, {
-                            children: r.default.Messages.POLL_ANSWER_VOTED_ARIA
-                        }), n && (0, a.jsx)(u, {
-                            percentage: t.votesPercentage,
-                            label: t.votes
+                        }), (0, a.jsxs)("div", {
+                            className: o.answerContent,
+                            children: [(0, a.jsx)(i.PollMediaView, {
+                                attachmentClassName: o.attachment,
+                                containerClassName: o.mediaContainer,
+                                media: t.pollMedia,
+                                fallback: null,
+                                alt: ""
+                            }), (0, a.jsx)(l.Text, {
+                                className: o.label,
+                                variant: "text-sm/semibold",
+                                color: "none",
+                                children: t.pollMedia.text
+                            }), (m || t.didSelfVote) && (0, a.jsx)(l.Avatar, {
+                                className: o.avatarForSelected,
+                                size: l.AvatarSizes.SIZE_20,
+                                src: c,
+                                "aria-hidden": !0
+                            }), t.didSelfVote && (0, a.jsx)(s.VisuallyHidden, {
+                                children: r.default.Messages.POLL_ANSWER_VOTED_ARIA
+                            }), f && (0, a.jsx)(u, {
+                                percentage: t.votesPercentage,
+                                label: t.votes
+                            })]
                         })]
+                    }), !n && h && (0, a.jsx)(i.PollAnswerVotedIcon, {
+                        size: 18,
+                        className: o.pollAnswerIcon
+                    }), E && (0, a.jsx)(i.PollAnswerVictorIcon, {
+                        size: 18,
+                        className: o.pollAnswerIcon
                     })]
                 })
             }
 
             function c(e) {
                 let {
-                    canShowVoteCounts: t,
-                    myAvatarUrl: n,
-                    ...s
+                    hasVoted: t,
+                    isExpired: n,
+                    myAvatarUrl: s,
+                    ...l
                 } = e;
                 return (0, a.jsx)(i.PollAnswers, {
                     className: o.answersContainer,
                     answerClassName: o.answer,
-                    canShowVoteCounts: t,
-                    myAvatarUrl: n,
+                    myAvatarUrl: s,
                     renderAnswerContent: e => (0, a.jsx)(d, {
                         answer: e,
-                        canShowVoteCounts: t,
-                        myAvatarUrl: n
+                        isExpired: n,
+                        hasVoted: t,
+                        myAvatarUrl: s
                     }),
-                    ...s
+                    ...l
                 })
             }
         },
