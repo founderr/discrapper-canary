@@ -16770,6 +16770,10 @@
                 POLL_EXPIRY_MINUTES_REMAINING: "{minutes, plural, one {1 min} other {{minutes} mins left}}",
                 POLL_EXPIRED: "Poll closed",
                 POLL_NOT_INTERACTIVE: "View original message to interact",
+                POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nothing to see here",
+                POLL_NO_VOTES_FOR_ANSWER_BODY: "There are no votes for this answer.",
+                POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Reveal voters",
+                POLL_TAP_FOR_VOTERS_A11Y_IOS: "Reveals voters",
                 FORM_LABEL_OVERLAY_SHOW_MUTE_DEAFEN_KEYBINDS: "Show mute and deafen keybinds",
                 KEYBIND_NOTIFICATION_DESCRIPTION: "Now you can see your keybind for toggling mute in the overlay.",
                 PROBLEMATIC_GPU_DRIVER_DETECTED: "There is currently a known issue with your GPU driver version which may affect the Go Live quality. If you experience this issue, learn more about how to fix it [here]({helpCenterLink}).",
@@ -18279,7 +18283,7 @@
                 u = E("782340");
             (0, a.setUpdateRules)(s.default), (0, n.default)(u.default, o.default, T.default), i.default.Emitter.injectBatchEmitChanges(r.batchUpdates), i.default.PersistedStore.disableWrites = __OVERLAY__, i.default.initialize();
             let L = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("254927", ", Version Hash: ").concat("85a2c0f19a366c9e9a04ec73eb5f010dfa18afc6")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("254929", ", Version Hash: ").concat("59efec189b631f306bbfd7b10045a3e16a695dae")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20584,8 +20588,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "254927", "254927"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("254927")), _ = 0), _
+                let _ = parseInt((e = "254929", "254929"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("254929")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
@@ -29046,8 +29050,11 @@
                 getPlatformName: function() {
                     return u
                 },
-                getOS: function() {
+                getNativePlatform: function() {
                     return L
+                },
+                getOS: function() {
+                    return C
                 }
             }), (o = t || (t = {})).WINDOWS = "WINDOWS", o.OSX = "OSX", o.LINUX = "LINUX", o.WEB = "WEB";
             let n = window.DiscordNative,
@@ -29100,6 +29107,16 @@
             }
 
             function L() {
+                switch (i) {
+                    case "ios":
+                    case "android":
+                        return i;
+                    default:
+                        return "web"
+                }
+            }
+
+            function C() {
                 let {
                     userAgent: e
                 } = window.navigator;
