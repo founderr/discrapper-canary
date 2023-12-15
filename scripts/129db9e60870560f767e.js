@@ -20,7 +20,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return R
+                    return y
                 }
             });
             var s = a("37983");
@@ -31,8 +31,8 @@
                 o = a("997289"),
                 d = a("812204"),
                 c = a("685665"),
-                u = a("649844"),
-                i = a("915639"),
+                i = a("649844"),
+                u = a("915639"),
                 _ = a("697218"),
                 m = a("181114"),
                 E = a("599110"),
@@ -50,23 +50,23 @@
             let b = "2023_summer_bogo",
                 x = "DnkvLW5052Y";
 
-            function R(e) {
+            function y(e) {
                 let {
                     renderModalProps: t
                 } = e, {
                     onClose: a
-                } = t, R = (0, n.useStateFromStores)([i.default], () => i.default.locale), y = R.split("-")[0], S = {
-                    url: "".concat((0, A.YOUTUBE_EMBED_URL)(x), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat("en" === y ? "0" : "1", "&cc_lang_pref=").concat("zh-CN" === R ? "zh-Hans" : "zh-TW" === R ? "zh-Hant" : y),
+                } = t, y = (0, n.useStateFromStores)([u.default], () => u.default.locale), R = y.split("-")[0], S = {
+                    url: "".concat((0, A.YOUTUBE_EMBED_URL)(x), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat("en" === R ? "0" : "1", "&cc_lang_pref=").concat("zh-CN" === y ? "zh-Hans" : "zh-TW" === y ? "zh-Hant" : R),
                     width: 498,
                     height: 280
                 }, {
                     location: v
                 } = (0, o.useAnalyticsContext)(), {
                     analyticsLocations: L
-                } = (0, c.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), G = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()), B = (0, f.isPremiumExactly)(G, h.PremiumTypes.TIER_2), H = (0, f.isPremium)(G) && !B;
+                } = (0, c.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), G = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()), j = (0, f.isPremiumExactly)(G, h.PremiumTypes.TIER_2), B = (0, f.isPremium)(G) && !j;
                 return (0, s.jsx)(g.default, {
                     renderModalProps: t,
-                    video: {
+                    heroArt: {
                         type: "embed",
                         embed: S,
                         thumbnail: {
@@ -106,7 +106,7 @@
                     }],
                     changeLogId: b,
                     button: () => {
-                        let e = H ? "upgrade_plan_button" : "get_nitro_button",
+                        let e = B ? "upgrade_plan_button" : "get_nitro_button",
                             t = Date.now();
                         return (0, s.jsxs)(m.default, {
                             className: C.buttonWide,
@@ -119,7 +119,7 @@
                                     cta_type: e,
                                     seconds_open: Math.round((Date.now() - t) / 1e3),
                                     target: "bogo_payment_model"
-                                }), (0, u.default)({
+                                }), (0, i.default)({
                                     subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
                                     analyticsLocations: L,
                                     analyticsObject: {
@@ -187,8 +187,8 @@
                 o = a("446674"),
                 d = a("77078"),
                 c = a("206230"),
-                u = a("10641"),
-                i = a("933629"),
+                i = a("10641"),
+                u = a("933629"),
                 _ = a("560176"),
                 m = a("633667"),
                 E = a("476765"),
@@ -248,21 +248,21 @@
                 let {
                     className: t,
                     renderModalProps: a,
-                    video: r,
-                    videoClassName: N,
+                    heroArt: r,
+                    heroArtClassName: N,
                     modalDismissibleContent: p,
                     modalTopExtra: D,
                     header: T,
                     headerClassName: b,
                     subHeader: x,
-                    subHeaderExtra: R,
-                    featureCards: y,
+                    subHeaderExtra: y,
+                    featureCards: R,
                     changeLogId: S,
                     button: v
                 } = e, {
                     onClose: L,
                     transitionState: G
-                } = a, B = (0, E.useUID)(), H = y.length % 2 == 0, j = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [U, I] = n.useState(Date.now()), [w, k] = n.useState(0), [P, V] = n.useState(0), [F, Y] = n.useState(!1), [z, K] = n.useState(!0), W = n.useRef(U), X = n.useRef(w), q = n.useRef(P), Z = n.useRef(F), J = n.useRef(z);
+                } = a, j = (0, E.useUID)(), B = R.length % 2 == 0, H = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [U, I] = n.useState(Date.now()), [w, k] = n.useState(0), [P, V] = n.useState(0), [F, Y] = n.useState(!1), [z, K] = n.useState(!0), W = n.useRef(U), X = n.useRef(w), q = n.useRef(P), Z = n.useRef(F), J = n.useRef(z);
 
                 function Q() {
                     let e = Date.now(),
@@ -283,7 +283,7 @@
                         seconds_unmuted: Math.round(t / 1e3)
                     })
                 }, [S]), n.useEffect(() => {
-                    null != p && (0, u.requestMarkDismissibleContentAsShown)(p);
+                    null != p && (0, i.requestMarkDismissibleContentAsShown)(p);
                     let e = Date.now();
                     return g.default.track(A.AnalyticEvents.CHANGE_LOG_OPENED, {
                         change_log_id: S
@@ -291,14 +291,14 @@
                         g.default.track(A.AnalyticEvents.CHANGE_LOG_CLOSED, {
                             change_log_id: S,
                             seconds_open: Math.round((Date.now() - e) / 1e3)
-                        }), null != p && (0, u.markDismissibleContentAsDismissed)(p, {
+                        }), null != p && (0, i.markDismissibleContentAsDismissed)(p, {
                             dismissAction: O.ContentDismissActionType.DISMISS
                         })
                     }
                 }, [p, S]), (0, s.jsxs)(d.ModalRoot, {
                     className: l(C.root, t),
                     transitionState: G,
-                    "aria-labelledby": B,
+                    "aria-labelledby": j,
                     children: [(0, s.jsx)(d.ModalCloseButton, {
                         className: C.closeButton,
                         onClick: L
@@ -312,7 +312,7 @@
                             children: T
                         }), "video" === r.type ? (0, s.jsx)(f.default, {
                             className: l(C.video, N),
-                            autoPlay: !j,
+                            autoPlay: !H,
                             loop: !0,
                             muted: !0,
                             controls: !0,
@@ -334,7 +334,7 @@
                                 Q(), K(e.currentTarget.muted), Y(!1)
                             },
                             disablePictureInPicture: !0
-                        }) : (0, s.jsx)(_.EmbedVideo, {
+                        }) : "embed" === r.type ? (0, s.jsx)(_.EmbedVideo, {
                             className: l(C.video, N),
                             allowFullScreen: !1,
                             href: r.href,
@@ -343,25 +343,29 @@
                             provider: m.SupportedEmbedIFrame.YOUTUBE,
                             maxWidth: r.embed.width,
                             maxHeight: r.embed.height,
-                            renderVideoComponent: i.renderVideoComponent,
-                            renderImageComponent: i.renderImageComponent,
-                            renderLinkComponent: i.renderMaskedLinkComponent,
+                            renderVideoComponent: u.renderVideoComponent,
+                            renderImageComponent: u.renderImageComponent,
+                            renderLinkComponent: u.renderMaskedLinkComponent,
                             onPlay: () => {
                                 g.default.track(A.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
                                     change_log_id: S
                                 })
                             }
-                        }), (0, s.jsx)(d.Heading, {
+                        }) : "image" === r.type ? (0, s.jsx)("img", {
+                            alt: "",
+                            className: l(C.video, N),
+                            src: r.src
+                        }) : null, (0, s.jsx)(d.Heading, {
                             variant: "heading-lg/extrabold",
                             className: C.bodyText,
                             children: x
-                        }), null == R ? void 0 : R(), (0, s.jsx)("div", {
+                        }), null == y ? void 0 : y(), (0, s.jsx)("div", {
                             className: l(C.featureCardGroup, {
-                                [C.wideStyle]: H
+                                [C.wideStyle]: B
                             }),
-                            children: y.map((e, t) => (0, s.jsx)(M, {
+                            children: R.map((e, t) => (0, s.jsx)(M, {
                                 ...e,
-                                wideStyle: H
+                                wideStyle: B
                             }, "".concat(e.header, "_").concat(t)))
                         }), v()]
                     })]
