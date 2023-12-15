@@ -1675,7 +1675,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "254671"
+                        buildNumber: "254676"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -33033,17 +33033,18 @@
                     i.default.unsubscribe("POST_CONNECTION_OPEN", this.mayShowAnnouncementModal), i.default.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
                 }
                 constructor(...e) {
-                    super(...e), this.maybeOpenServerDriveAnnouncementModal = e => {
-                        let t = (0, T.extractAnnouncementModalContent)({
-                            content: e
+                    super(...e), this.maybeOpenServerDriveAnnouncementModal = (e, t) => {
+                        let i = (0, T.extractAnnouncementModalContent)({
+                            content: e,
+                            isPreview: t
                         });
-                        return null != t && ((0, s.closeModal)(S), (0, s.openModalLazy)(async () => {
+                        return null != i && ((0, s.closeModal)(S), (0, s.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("518151").then(n.bind(n, "518151"));
-                            return n => (0, a.jsx)(e, {
-                                renderModalProps: n,
-                                properties: t
+                            return t => (0, a.jsx)(e, {
+                                renderModalProps: t,
+                                properties: i
                             })
                         }, {
                             modalKey: S
@@ -33052,7 +33053,7 @@
                         let {
                             properties: t
                         } = e;
-                        this.maybeOpenServerDriveAnnouncementModal(t)
+                        this.maybeOpenServerDriveAnnouncementModal(t, !0)
                     }, this.mayShowAnnouncementModal = async () => {
                         if (await (0, h.maybeFetchActiveBogoPromotion)(), await (0, o.maybeGetPacksForUser)("try packs modal"), E.ProcessArgs.isDisallowPopupsSet()) return;
                         if (!(0, s.hasAnyModalOpen)() && _.default.getCurrentConfig({
@@ -33060,7 +33061,7 @@
                             }).enabled) {
                             let e = await (0, C.fetchPremiumMarketingContent)();
                             for (let t of e)
-                                if (this.maybeOpenServerDriveAnnouncementModal(t)) break
+                                if (this.maybeOpenServerDriveAnnouncementModal(t, !1)) break
                         }!(0, s.hasAnyModalOpen)() && await (0, h.isEligibleForBOGOAnnouncementModal)() && (0, s.openModalLazy)(async () => {
                             let {
                                 default: e
@@ -33477,16 +33478,17 @@
                 l = n("997289"),
                 r = n("812204"),
                 o = n("685665"),
-                u = n("286235"),
-                d = n("516129"),
-                c = n("702542");
-            let E = ["announcementModalVariant1"];
+                u = n("10641"),
+                d = n("286235"),
+                c = n("516129"),
+                E = n("702542");
 
             function f(e) {
                 let {
-                    content: t
-                } = e, n = i.PremiumMarketingComponentProperties.fromBinary((0, s.base64decode)(t));
-                return null != n.properties.oneofKind && E.includes(n.properties.oneofKind) ? n : null
+                    content: t,
+                    isPreview: n
+                } = e, a = i.PremiumMarketingComponentProperties.fromBinary((0, s.base64decode)(t));
+                return "announcementModalVariant1" !== a.properties.oneofKind ? null : !n && (0, u.isDismissibleContentDismissed)(Number(a.properties.announcementModalVariant1.dismissKey)) ? null : (n && (a.properties.announcementModalVariant1.dismissKey = ""), a)
             }
 
             function _(e) {
@@ -33499,17 +33501,17 @@
                     analyticsLocations: i
                 } = (0, o.default)(r.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL);
                 if ("announcementModalVariant1" === n.properties.oneofKind) {
-                    let e = (0, d.adaptAnnouncementModalVariant1)({
+                    let e = (0, c.adaptAnnouncementModalVariant1)({
                         content: n.properties.announcementModalVariant1,
                         renderModalProps: t,
                         analyticsLocations: i,
                         analyticsLocation: s
                     });
-                    return (0, a.jsx)(c.default, {
+                    return (0, a.jsx)(E.default, {
                         ...e
                     })
                 }
-                return u.default.captureMessage("Property type ".concat(n.properties.oneofKind, " is not supported to render ServerDriveAnnouncementModal")), null
+                return d.default.captureMessage("Property type ".concat(n.properties.oneofKind, " is not supported to render ServerDriveAnnouncementModal")), null
             }
         },
         106457: function(e, t, n) {
@@ -33635,12 +33637,11 @@
                     content: h,
                     renderModalProps: I,
                     analyticsLocations: T,
-                    analyticsLocation: S,
-                    modalDismissibleContent: N
-                } = e, A = "AnnouncementModalVariant1", {
-                    onClose: m
-                } = I, p = null != h.button && "" !== h.button.copy ? h.button.copy : f.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, g = (null === (t = h.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = h.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
-                    (0, r.transitionTo)(E.Routes.APPLICATION_STORE), m()
+                    analyticsLocation: S
+                } = e, N = "AnnouncementModalVariant1", {
+                    onClose: A
+                } = I, m = null != h.button && "" !== h.button.copy ? h.button.copy : f.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, p = (null === (t = h.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", g = (null === (n = h.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+                    (0, r.transitionTo)(E.Routes.APPLICATION_STORE), A()
                 } : () => (0, l.default)({
                     subscriptionTier: c.PremiumSubscriptionSKUs.TIER_2,
                     analyticsLocations: T,
@@ -33650,9 +33651,9 @@
                         objectType: E.AnalyticsObjectTypes.TIER_2
                     },
                     onClose: e => {
-                        e && m()
+                        e && A()
                     }
-                }), O = "" !== h.helpArticleId ? () => (0, a.jsx)(i.Anchor, {
+                }), R = "" !== h.helpArticleId ? () => (0, a.jsx)(i.Anchor, {
                     className: _.termsApplyAnchor,
                     href: d.default.getArticleURL(h.helpArticleId),
                     children: (0, a.jsx)(i.Heading, {
@@ -33665,7 +33666,7 @@
                     renderModalProps: I,
                     header: h.header,
                     subHeader: h.subheader,
-                    subHeaderExtra: O,
+                    subHeaderExtra: R,
                     video: {
                         type: "video",
                         src: h.videoLink
@@ -33676,7 +33677,7 @@
                         imageSrc: e.imageLink,
                         tagText: "" !== e.pill ? e.pill : void 0
                     })),
-                    changeLogId: A,
+                    changeLogId: N,
                     button: () => {
                         let e = Date.now();
                         return (0, a.jsxs)(o.default, {
@@ -33686,20 +33687,20 @@
                             size: i.Button.Sizes.SMALL,
                             onClick: () => {
                                 u.default.track(E.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-                                    change_log_id: A,
-                                    cta_type: g,
+                                    change_log_id: N,
+                                    cta_type: p,
                                     seconds_open: Math.round((Date.now() - e) / 1e3),
-                                    target: A
-                                }), R()
+                                    target: N
+                                }), g()
                             },
                             children: [(0, a.jsx)("img", {
                                 alt: "",
                                 className: _.nitroIconSubHeader,
                                 src: C
-                            }), p]
+                            }), m]
                         })
                     },
-                    modalDismissibleContent: N
+                    modalDismissibleContent: "" !== h.dismissKey ? Number(h.dismissKey) : void 0
                 }
             }
         },
@@ -33974,8 +33975,7 @@
                         seconds_unmuted: Math.round(t / 1e3)
                     })
                 }, [P]), s.useEffect(() => {
-                    if (null == m) return;
-                    (0, d.requestMarkDismissibleContentAsShown)(m);
+                    null != m && (0, d.requestMarkDismissibleContentAsShown)(m);
                     let e = Date.now();
                     return I.default.track(S.AnalyticEvents.CHANGE_LOG_OPENED, {
                         change_log_id: P
@@ -33983,7 +33983,7 @@
                         I.default.track(S.AnalyticEvents.CHANGE_LOG_CLOSED, {
                             change_log_id: P,
                             seconds_open: Math.round((Date.now() - e) / 1e3)
-                        }), (0, d.markDismissibleContentAsDismissed)(m, {
+                        }), null != m && (0, d.markDismissibleContentAsDismissed)(m, {
                             dismissAction: N.ContentDismissActionType.DISMISS
                         })
                     }
@@ -45540,7 +45540,8 @@
                         subheader: "",
                         videoLink: "",
                         helpArticleId: "",
-                        featureCards: []
+                        featureCards: [],
+                        dismissKey: ""
                     };
                     return globalThis.Object.defineProperty(t, i.MESSAGE_TYPE, {
                         enumerable: !1,
@@ -45571,6 +45572,9 @@
                             case 6:
                                 s.button = u.internalBinaryRead(e, e.uint32(), n, s.button);
                                 break;
+                            case 7:
+                                s.dismissKey = e.string();
+                                break;
                             default:
                                 let l = n.readUnknownField;
                                 if ("throw" === l) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(a, ") for ").concat(this.typeName));
@@ -45583,7 +45587,7 @@
                 internalBinaryWrite(e, t, n) {
                     "" !== e.header && t.tag(1, i.WireType.LengthDelimited).string(e.header), "" !== e.subheader && t.tag(2, i.WireType.LengthDelimited).string(e.subheader), "" !== e.videoLink && t.tag(3, i.WireType.LengthDelimited).string(e.videoLink), "" !== e.helpArticleId && t.tag(4, i.WireType.LengthDelimited).string(e.helpArticleId);
                     for (let a = 0; a < e.featureCards.length; a++) r.internalBinaryWrite(e.featureCards[a], t.tag(5, i.WireType.LengthDelimited).fork(), n).join();
-                    e.button && u.internalBinaryWrite(e.button, t.tag(6, i.WireType.LengthDelimited).fork(), n).join();
+                    e.button && u.internalBinaryWrite(e.button, t.tag(6, i.WireType.LengthDelimited).fork(), n).join(), "" !== e.dismissKey && t.tag(7, i.WireType.LengthDelimited).string(e.dismissKey);
                     let a = n.writeUnknownFields;
                     return !1 !== a && (!0 == a ? i.UnknownFieldHandler.onWrite : a)(this.typeName, e, t), t
                 }
@@ -45619,6 +45623,11 @@
                         name: "button",
                         kind: "message",
                         T: () => u
+                    }, {
+                        no: 7,
+                        name: "dismiss_key",
+                        kind: "scalar",
+                        T: 9
                     }])
                 }
             }

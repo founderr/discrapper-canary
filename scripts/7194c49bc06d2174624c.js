@@ -31,13 +31,13 @@
                 o = a("997289"),
                 d = a("812204"),
                 c = a("685665"),
-                i = a("649844"),
-                u = a("915639"),
+                u = a("649844"),
+                i = a("915639"),
                 _ = a("697218"),
                 m = a("181114"),
                 E = a("599110"),
-                f = a("701909"),
-                N = a("719923"),
+                N = a("701909"),
+                f = a("719923"),
                 g = a("702542"),
                 h = a("646718"),
                 A = a("49111"),
@@ -55,7 +55,7 @@
                     renderModalProps: t
                 } = e, {
                     onClose: a
-                } = t, R = (0, n.useStateFromStores)([u.default], () => u.default.locale), y = R.split("-")[0], S = {
+                } = t, R = (0, n.useStateFromStores)([i.default], () => i.default.locale), y = R.split("-")[0], S = {
                     url: "".concat((0, A.YOUTUBE_EMBED_URL)(x), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat("en" === y ? "0" : "1", "&cc_lang_pref=").concat("zh-CN" === R ? "zh-Hans" : "zh-TW" === R ? "zh-Hant" : y),
                     width: 498,
                     height: 280
@@ -63,7 +63,7 @@
                     location: v
                 } = (0, o.useAnalyticsContext)(), {
                     analyticsLocations: L
-                } = (0, c.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), G = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()), B = (0, N.isPremiumExactly)(G, h.PremiumTypes.TIER_2), H = (0, N.isPremium)(G) && !B;
+                } = (0, c.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), G = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()), B = (0, f.isPremiumExactly)(G, h.PremiumTypes.TIER_2), H = (0, f.isPremium)(G) && !B;
                 return (0, s.jsx)(g.default, {
                     renderModalProps: t,
                     video: {
@@ -81,7 +81,7 @@
                     subHeader: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_SUBHEADER,
                     subHeaderExtra: () => (0, s.jsx)(l.Anchor, {
                         className: C.termsApplyAnchor,
-                        href: f.default.getArticleURL(A.HelpdeskArticles.SUMMER_2023_BOGO),
+                        href: N.default.getArticleURL(A.HelpdeskArticles.SUMMER_2023_BOGO),
                         children: (0, s.jsx)(l.Heading, {
                             variant: "heading-md/normal",
                             className: C.termsApplyBodyText,
@@ -91,7 +91,7 @@
                     featureCards: [{
                         header: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_HEADER,
                         subHeader: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_BODY_FORMATTED.format({
-                            helpCenterLink: f.default.getArticleURL(A.HelpdeskArticles.REMIXING)
+                            helpCenterLink: N.default.getArticleURL(A.HelpdeskArticles.REMIXING)
                         }),
                         imageSrc: p,
                         tagText: O.default.Messages.EARLY_ACCESS
@@ -119,7 +119,7 @@
                                     cta_type: e,
                                     seconds_open: Math.round((Date.now() - t) / 1e3),
                                     target: "bogo_payment_model"
-                                }), (0, i.default)({
+                                }), (0, u.default)({
                                     subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
                                     analyticsLocations: L,
                                     analyticsObject: {
@@ -187,13 +187,13 @@
                 o = a("446674"),
                 d = a("77078"),
                 c = a("206230"),
-                i = a("10641"),
-                u = a("933629"),
+                u = a("10641"),
+                i = a("933629"),
                 _ = a("560176"),
                 m = a("633667"),
                 E = a("476765"),
-                f = a("956089"),
-                N = a("58608"),
+                N = a("956089"),
+                f = a("58608"),
                 g = a("599110"),
                 h = a("215429"),
                 A = a("49111"),
@@ -204,7 +204,7 @@
                         tagText: t,
                         className: a
                     } = e;
-                    return (0, s.jsx)(f.TextBadge, {
+                    return (0, s.jsx)(N.TextBadge, {
                         className: l(C.tag, a),
                         text: t
                     })
@@ -249,7 +249,7 @@
                     className: t,
                     renderModalProps: a,
                     video: r,
-                    videoClassName: f,
+                    videoClassName: N,
                     modalDismissibleContent: p,
                     modalTopExtra: D,
                     header: T,
@@ -283,8 +283,7 @@
                         seconds_unmuted: Math.round(t / 1e3)
                     })
                 }, [S]), n.useEffect(() => {
-                    if (null == p) return;
-                    (0, i.requestMarkDismissibleContentAsShown)(p);
+                    null != p && (0, u.requestMarkDismissibleContentAsShown)(p);
                     let e = Date.now();
                     return g.default.track(A.AnalyticEvents.CHANGE_LOG_OPENED, {
                         change_log_id: S
@@ -292,7 +291,7 @@
                         g.default.track(A.AnalyticEvents.CHANGE_LOG_CLOSED, {
                             change_log_id: S,
                             seconds_open: Math.round((Date.now() - e) / 1e3)
-                        }), (0, i.markDismissibleContentAsDismissed)(p, {
+                        }), null != p && (0, u.markDismissibleContentAsDismissed)(p, {
                             dismissAction: O.ContentDismissActionType.DISMISS
                         })
                     }
@@ -311,8 +310,8 @@
                             variant: "display-md",
                             className: l(C.headerText, b),
                             children: T
-                        }), "video" === r.type ? (0, s.jsx)(N.default, {
-                            className: l(C.video, f),
+                        }), "video" === r.type ? (0, s.jsx)(f.default, {
+                            className: l(C.video, N),
                             autoPlay: !j,
                             loop: !0,
                             muted: !0,
@@ -336,7 +335,7 @@
                             },
                             disablePictureInPicture: !0
                         }) : (0, s.jsx)(_.EmbedVideo, {
-                            className: l(C.video, f),
+                            className: l(C.video, N),
                             allowFullScreen: !1,
                             href: r.href,
                             thumbnail: r.thumbnail,
@@ -344,9 +343,9 @@
                             provider: m.SupportedEmbedIFrame.YOUTUBE,
                             maxWidth: r.embed.width,
                             maxHeight: r.embed.height,
-                            renderVideoComponent: u.renderVideoComponent,
-                            renderImageComponent: u.renderImageComponent,
-                            renderLinkComponent: u.renderMaskedLinkComponent,
+                            renderVideoComponent: i.renderVideoComponent,
+                            renderImageComponent: i.renderImageComponent,
+                            renderLinkComponent: i.renderMaskedLinkComponent,
                             onPlay: () => {
                                 g.default.track(A.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
                                     change_log_id: S
