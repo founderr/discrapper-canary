@@ -107510,7 +107510,7 @@ html .invoiceCancelRow_a8669b {
     display: flex;
     flex-direction: column;
     flex: 1 1 0;
-    height: 430px;
+    height: 308px;
     text-align: left
 }
 
@@ -107518,7 +107518,23 @@ html .invoiceCancelRow_a8669b {
     background-color: var(--bg-base-tertiary);
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
+    display: flex;
     padding: 16px
+}
+
+.headerLeft__2d213 {
+    flex: 1 1 auto
+}
+
+.headerRight_e35cff {
+    align-items: center;
+    color: var(--header-secondary);
+    display: flex
+}
+
+.columnTooltip__15feb strong {
+    color: var(--text-brand);
+    font-weight: 500
 }
 
 .everything__3aef9 .header__7facf strong {
@@ -107579,7 +107595,8 @@ html .invoiceCancelRow_a8669b {
 }
 
 .content__9acd0 {
-    min-height: 600px;
+    min-height: 500px;
+    max-height: 500px;
     padding: 0 16px 16px;
     text-align: center;
     width: 960px
@@ -107591,38 +107608,15 @@ html .invoiceCancelRow_a8669b {
 }
 
 .introIcon__0e3e1 {
-    margin-top: 32px
+    margin-top: 40px
 }
 
-.subtitle_eee1c4 strong {
-    color: var(--header-primary);
-    font-weight: 600
+.reviewIcon__7d092 {
+    margin-top: 0
 }
 
-.subTabs__1af51 {
-    background-color: var(--bg-base-tertiary);
-    border-radius: 12px;
-    display: flex;
-    margin-bottom: 40px;
-    padding: 4px 8px
-}
-
-.subTab_b51704 {
-    border-radius: 12px;
-    cursor: pointer;
-    display: flex;
-    flex: 1 1 0;
-    flex-direction: column;
-    height: 54px;
-    justify-content: center
-}
-
-.subTab_b51704.active__44bce {
-    background-color: var(--bg-base-secondary)
-}
-
-.reviewContainer_f98c27 {
-    display: flex
+.helpfulTips__3819f {
+    margin-bottom: 8px
 }
 
 .buttons_fac1ba {

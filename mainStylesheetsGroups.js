@@ -17554,11 +17554,14 @@
             "use strict";
             e.exports = {
                 column: "column__04851",
+                columnTooltip: "columnTooltip__15feb",
                 container: "container__3d8ce",
                 essentials: "essentials__05db9",
                 everything: "everything__3aef9",
                 guilds: "guilds__108bc",
                 header: "header__7facf",
+                headerLeft: "headerLeft__2d213",
+                headerRight: "headerRight_e35cff",
                 none: "none__5721d",
                 showAllCheckbox: "showAllCheckbox_be0771",
                 showAllCheckboxContainer: "showAllCheckboxContainer__32ee0",
@@ -17568,17 +17571,14 @@
         650287: function(e, t, o) {
             "use strict";
             e.exports = {
-                active: "active__44bce",
                 buttons: "buttons_fac1ba",
                 content: "content__9acd0",
                 dismiss: "dismiss_c7051e",
                 header: "header__2953d",
+                helpfulTips: "helpfulTips__3819f",
                 introIcon: "introIcon__0e3e1",
-                reviewContainer: "reviewContainer_f98c27",
-                right: "right__48241",
-                subTab: "subTab_b51704",
-                subTabs: "subTabs__1af51",
-                subtitle: "subtitle_eee1c4"
+                reviewIcon: "reviewIcon__7d092",
+                right: "right__48241"
             }
         },
         805986: function(e, t, o) {

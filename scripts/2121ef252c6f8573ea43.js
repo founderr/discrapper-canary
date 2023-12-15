@@ -5314,13 +5314,13 @@
                 useGuildMigrationSteps: function() {
                     return M
                 },
-                saveSettings: function() {
+                useSaveSettings: function() {
                     return R
                 },
                 revertToOldSystem: function() {
-                    return D
+                    return L
                 }
-            }), s("222007"), s("808653");
+            }), s("222007"), s("808653"), s("70102");
             var a = s("884691"),
                 n = s("627445"),
                 l = s.n(n),
@@ -5447,7 +5447,24 @@
                     showWarning: S
                 }
             }
-            async function R(e) {
+
+            function R() {
+                let [e, t] = a.useState(!1), [s, n] = a.useState(!1), l = a.useCallback(async e => {
+                    if (s) throw Error("Already submitted notifications migration");
+                    t(!0);
+                    try {
+                        await v(e), n(!1)
+                    } finally {
+                        t(!1)
+                    }
+                }, [s]);
+                return {
+                    submitting: e,
+                    submitted: s,
+                    saveSettings: l
+                }
+            }
+            async function v(e) {
                 let t = {};
                 for (let n of Object.values(e)) {
                     var s, a;
@@ -5456,7 +5473,7 @@
                     for (let t of n.actions) null === (a = t.apply) || void 0 === a || a.call(t, l, e);
                     t[n.guildId] = l
                 }
-                await v(), l((await (0, N.listSnapshots)()).length > 0, "No snapshot exists before migration."), await S.default.setAccountFlag(A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0);
+                await D(), l((await (0, N.listSnapshots)()).length > 0, "No snapshot exists before migration."), await S.default.setAccountFlag(A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS, !0);
                 let n = await f.default.saveUserGuildSettingsBulk(t);
                 u.default.dispatch({
                     type: "USER_GUILD_SETTINGS_FULL_UPDATE",
@@ -5471,7 +5488,7 @@
                     })
                 })
             }
-            async function v() {
+            async function D() {
                 let e = await (0, N.listSnapshots)();
                 if (e.length > 0) {
                     let t = await
@@ -5490,7 +5507,7 @@
                     t && (0, N.backupSettings)(e)
                 } else(0, N.takeSnapshot)("Backup from ".concat(new Date().toLocaleDateString()))
             }
-            async function D() {
+            async function L() {
                 let e = await (0, N.listSnapshots)(),
                     t = r.sortBy(e, e => new Date(e.recorded_at).getTime());
                 if (t.length > 0) {
@@ -5782,7 +5799,12 @@
                     let s = Math.max(t.careALittle.minOpens, e.totalOpensAcrossAllServers * t.careALittle.yearOpenPerc);
                     if (e.guildOpens > s && !I) return [c.Mode.CareALittle, c.Confidence.Low, "0.1% of ".concat(e.label, " channel visits ").concat(v)]
                 }
-                return R > t.careALittle.sentMessages ? [c.Mode.CareALittle, c.Confidence.Low, "Sent a few messages ".concat(v)] : u || I ? [c.Mode.DontCare, c.Confidence.Low, "Muted ".concat(v)] : [c.Mode.CareALittle, c.Confidence.Low, "Not muted ".concat(v)]
+                if (R > t.careALittle.sentMessages) return [c.Mode.CareALittle, c.Confidence.Low, "Sent a few messages ".concat(v)];
+                if (!u) return [c.Mode.CareALittle, c.Confidence.Low, "Not muted ".concat(v)];
+                {
+                    let e = I || 0 === x[2].guildOpens ? c.Confidence.High : c.Confidence.Low;
+                    return [c.Mode.DontCare, e, "Muted ".concat(v)]
+                }
             }
 
             function f(e, t, s, a) {
@@ -10724,7 +10746,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "3e52704c0e2a12389260568a1295d165efd6bd19", e.substring(0, 7)),
+                    S = (e = "1138a4c066f4d44b4228166f96d72dd37e57b38e", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10737,7 +10759,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "254637", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "254640", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
