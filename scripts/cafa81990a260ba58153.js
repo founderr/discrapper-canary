@@ -241,7 +241,7 @@
                     saveSettings: h
                 } = (0, m.useSaveSettings)(), {
                     guildPlans: f,
-                    overrideGuild: O,
+                    overrideGuild: v,
                     getDebug: C,
                     showWarning: b
                 } = (0, m.useGuildMigrationSteps)();
@@ -287,11 +287,11 @@
                             selectedTab: d,
                             onClick: o,
                             submitted: u
-                        }), d === I.Tab.Intro ? (0, a.jsx)(_, {}) : d === I.Tab.Customize ? (0, a.jsx)(j, {
+                        }), d === I.Tab.Intro ? (0, a.jsx)(_, {}) : d === I.Tab.Customize ? (0, a.jsx)(O, {
                             guildPlans: f,
-                            overrideGuild: O,
+                            overrideGuild: v,
                             getDebug: C
-                        }) : (0, a.jsx)(v, {
+                        }) : (0, a.jsx)(j, {
                             guildPlans: f
                         }), (0, a.jsxs)(i.ModalFooter, {
                             className: N.buttons,
@@ -367,7 +367,7 @@
                 })
             }
 
-            function j(e) {
+            function O(e) {
                 let {
                     guildPlans: t,
                     overrideGuild: s,
@@ -386,7 +386,7 @@
                             className: N.subtitle,
                             variant: "text-md/medium",
                             color: "header-secondary",
-                            children: [g.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SUB_TITLE_1, (0, a.jsx)("br", {}), g.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SUB_TITLE_2]
+                            children: [g.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SUB_TITLE_1, (0, a.jsx)("br", {}), g.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SUB_TITLE_2, " (RIGHT CLICK FOR NOW)"]
                         })]
                     }), n ? (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(i.Button, {
@@ -452,7 +452,7 @@
                 })
             }
 
-            function v(e) {
+            function j(e) {
                 return (0, a.jsxs)("div", {
                     className: N.content,
                     children: [(0, a.jsxs)("div", {

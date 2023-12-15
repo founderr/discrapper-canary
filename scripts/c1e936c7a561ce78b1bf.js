@@ -5453,7 +5453,7 @@
                     if (s) throw Error("Already submitted notifications migration");
                     t(!0);
                     try {
-                        await v(e), n(!1)
+                        await v(e), n(!0)
                     } finally {
                         t(!1)
                     }
@@ -10746,7 +10746,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "ccc9b054714fc260c5e1bafcc3b706a1c9665987", e.substring(0, 7)),
+                    S = (e = "f8d5dfcae00513a41634292b90fd51addff59647", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10759,7 +10759,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "254788", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "254791", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
