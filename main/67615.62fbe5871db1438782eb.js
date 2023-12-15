@@ -7953,10 +7953,12 @@
                 return !1
             }
             let M = (e, t) => {
-                if (t) {
-                    (0, T.sendMultiChannelMessagesForScanning)(e);
-                    return
-                }(0, T.sendMessagesForScanning)(e[0].channel_id, e.map(e => e.id))
+                if (0 !== e.length) {
+                    if (t) {
+                        (0, T.sendMultiChannelMessagesForScanning)(e);
+                        return
+                    }(0, T.sendMessagesForScanning)(e[0].channel_id, e.map(e => e.id))
+                }
             };
 
             function L(e, t) {
@@ -8057,7 +8059,7 @@
                 } = function(e) {
                     let t = e.filter(e => G(e) && (0, m.shouldRedactExplicitContent)(e)),
                         n = e.map(e => {
-                            if ("referenced_message" in e && null != e.referenced_message && G(e.referenced_message)) return e.referenced_message
+                            if (null != e && "referenced_message" in e && null != e.referenced_message && G(e.referenced_message)) return e.referenced_message
                         }).filter(function(e) {
                             return null != e
                         });
