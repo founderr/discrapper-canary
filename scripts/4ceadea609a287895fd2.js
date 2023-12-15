@@ -1675,7 +1675,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "254875"
+                        buildNumber: "254881"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -23475,7 +23475,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return M
                 }
             });
             var a = n("37983"),
@@ -23499,9 +23499,10 @@
                 m = n("36512"),
                 A = n("638441"),
                 p = n("49111"),
-                g = n("782340"),
-                R = n("561368");
-            let O = (0, A.default)(function(e) {
+                g = n("988268"),
+                R = n("782340"),
+                O = n("561368");
+            let L = (0, A.default)(function(e) {
                     let {
                         party: t,
                         onUserContextMenu: n,
@@ -23517,14 +23518,19 @@
                         applicationStreams: c,
                         currentActivities: E,
                         voiceChannels: f
-                    } = t, _ = u.length, h = c.length, T = E.length, A = f.length > 0, g = s.useCallback(() => {
+                    } = t, _ = u.length, h = c.length, T = E.length, A = f.length > 0, R = s.useCallback(() => {
+                        let e = E.filter(e => {
+                            var t, n;
+                            return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === g.ApplicationTypes.GAME
+                        }).map(e => e.game.name);
                         C.default.track(p.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
                             num_users: _,
                             num_streams: h,
                             num_activities: T,
-                            in_voice_channel: A
+                            in_voice_channel: A,
+                            games_detected: e
                         })
-                    }, [_, h, T, A]), O = o(g, 9e5);
+                    }, [_, h, T, A, E]), L = o(R, 9e5);
                     return null != l || null != r ? (0, a.jsx)(d.Popout, {
                         position: "left",
                         renderPopout: e => {
@@ -23543,9 +23549,9 @@
                             } = t;
                             return (0, a.jsx)(N.default, {
                                 ...e,
-                                onMouseEnter: O,
+                                onMouseEnter: L,
                                 "aria-haspopup": "menu",
-                                className: R.itemCard,
+                                className: O.itemCard,
                                 active: n,
                                 children: (0, a.jsxs)("div", {
                                     children: [l, r]
@@ -23554,9 +23560,9 @@
                         }
                     }) : null
                 }),
-                L = l.throttle(() => E.fetchUserAffinities(!1), 3e5);
+                v = l.throttle(() => E.fetchUserAffinities(!1), 3e5);
 
-            function v() {
+            function M() {
                 let {
                     nowPlayingCards: e,
                     loaded: t,
@@ -23571,32 +23577,32 @@
                     currentUser: _.default.getCurrentUser()
                 }));
                 s.useEffect(() => (c.default.wait(() => T.mount()), () => c.default.wait(() => T.unmount())), [null == l ? void 0 : l.id]), s.useEffect(() => {
-                    n && !i && L()
+                    n && !i && v()
                 }, [n, i]);
                 let r = null;
                 return t ? (r = e.length > 0 ? e.map(e => {
                     let {
                         party: t
                     } = e;
-                    return (0, a.jsx)(O, {
+                    return (0, a.jsx)(L, {
                         party: t
                     }, t.id)
                 }) : (0, a.jsxs)("div", {
-                    className: R.emptyCard,
+                    className: O.emptyCard,
                     children: [(0, a.jsx)(d.Heading, {
                         variant: "heading-md/semibold",
-                        className: R.emptyHeader,
-                        children: g.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
+                        className: O.emptyHeader,
+                        children: R.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
                     }), (0, a.jsx)(d.Text, {
                         color: "none",
-                        className: R.emptyText,
+                        className: O.emptyText,
                         variant: "text-sm/normal",
-                        children: g.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
+                        children: R.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
                     })]
                 }), (0, a.jsx)(a.Fragment, {
                     children: r
                 })) : (0, a.jsx)("div", {
-                    className: R.emptyCard,
+                    className: O.emptyCard,
                     children: (0, a.jsx)(d.Spinner, {})
                 })
             }
@@ -24708,7 +24714,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return C
                 }
             });
             var a = n("37983"),
@@ -24722,30 +24728,36 @@
                 c = n("250529"),
                 E = n("391950"),
                 f = n("49111"),
-                _ = n("782340");
+                _ = n("988268"),
+                h = n("782340");
 
-            function h(e) {
+            function C(e) {
                 let {
                     party: t,
                     close: n,
-                    onSelect: h
-                } = e, C = (0, u.default)(t), T = (0, E.default)(t), I = (0, c.default)(t), S = (0, d.default)(t), N = (0, r.default)(t), m = (0, o.default)(t);
+                    onSelect: C
+                } = e, T = (0, u.default)(t), I = (0, E.default)(t), S = (0, c.default)(t), N = (0, d.default)(t), m = (0, r.default)(t), A = (0, o.default)(t);
                 return s.useEffect(() => {
+                    let e = t.currentActivities.filter(e => {
+                        var t, n;
+                        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === _.ApplicationTypes.GAME
+                    }).map(e => e.game.name);
                     l.default.track(f.AnalyticEvents.OPEN_POPOUT, {
-                        type: "Now Playing Card Popout"
+                        type: "Now Playing Card Popout",
+                        games_detected: e
                     })
                 }, []), (0, a.jsxs)(i.Menu, {
                     navId: "now-playing-menu",
                     onClose: n,
-                    "aria-label": _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
-                    onSelect: h,
-                    children: [C, (0, a.jsxs)(i.MenuGroup, {
-                        children: [T, I]
-                    }), (0, a.jsx)(i.MenuGroup, {
-                        children: S
+                    "aria-label": h.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+                    onSelect: C,
+                    children: [T, (0, a.jsxs)(i.MenuGroup, {
+                        children: [I, S]
                     }), (0, a.jsx)(i.MenuGroup, {
                         children: N
-                    }), m]
+                    }), (0, a.jsx)(i.MenuGroup, {
+                        children: m
+                    }), A]
                 })
             }
         },
