@@ -145,17 +145,17 @@
                         color: P.text.toHslString()
                     } : void 0, y = null != N ? {
                         background: (0, V.getBackgroundGradient)(N, 135)
-                    } : void 0, F = (0, j.isPremiumCollectiblesCategory)(d), en = l.useMemo(() => {
+                    } : void 0, F = (0, j.isPremiumCollectiblesCategory)(d), en = (0, j.extractPriceByPurchaseTypes)(t, q.PriceSetAssignmentPurchaseTypes.DEFAULT), eo = (null == en ? void 0 : en.amount) === 0, er = l.useMemo(() => {
                         var e;
                         return null !== (e = t.items.find(w.isAvatarDecorationRecord)) && void 0 !== e ? e : null
-                    }, [t]), eo = l.useMemo(() => {
+                    }, [t]), eu = l.useMemo(() => {
                         var e;
                         return null !== (e = t.items.find(U.isProfileEffectRecord)) && void 0 !== e ? e : null
-                    }, [t]), er = null != eo && null == en, eu = null != en && null == eo;
-                    l.useEffect(() => (eu && (0, u.setPendingAvatarDecoration)(en), () => {
+                    }, [t]), ed = null != eu && null == er, ec = null != er && null == eu;
+                    l.useEffect(() => (ec && (0, u.setPendingAvatarDecoration)(er), () => {
                         (0, u.setPendingAvatarDecoration)(void 0)
-                    }), [eu, en]);
-                    let ed = e => (0, a.jsx)(T.default, {
+                    }), [ec, er]);
+                    let ef = e => (0, a.jsx)(T.default, {
                             subscriptionTier: J.PremiumSubscriptionSKUs.TIER_2,
                             fullWidth: !0,
                             buttonText: e,
@@ -170,11 +170,11 @@
                             }
                         }),
                         {
-                            avatarDecorationSrc: ec,
-                            eventHandlers: ef
+                            avatarDecorationSrc: eE,
+                            eventHandlers: eC
                         } = (0, E.default)({
                             user: s,
-                            avatarDecorationOverride: en,
+                            avatarDecorationOverride: er,
                             size: ea
                         });
                     return (0, a.jsxs)("div", {
@@ -194,13 +194,13 @@
                                 category: d,
                                 display: "modal"
                             })]
-                        }), null != en && (0, a.jsx)("div", {
+                        }), null != er && (0, a.jsx)("div", {
                             className: ee.avatarPreviewContainer,
                             children: (0, a.jsx)(o.Avatar, {
-                                ...ef,
+                                ...eC,
                                 "aria-label": $.default.Messages.USER_SETTINGS_AVATAR,
                                 size: es,
-                                avatarDecoration: ec,
+                                avatarDecoration: eE,
                                 src: et
                             })
                         }), (0, a.jsxs)("div", {
@@ -234,15 +234,14 @@
                                         product: t,
                                         className: ee.priceTag
                                     });
-                                    let e = (0, j.extractPriceByPurchaseTypes)(t, q.PriceSetAssignmentPurchaseTypes.DEFAULT);
-                                    if (null == e) return null;
-                                    let s = (0, j.extractPriceByPurchaseTypes)(t, q.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2);
+                                    if (null == en) return null;
+                                    let e = (0, j.extractPriceByPurchaseTypes)(t, q.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2);
                                     return (0, a.jsxs)("div", {
                                         className: ee.priceTagContainer,
                                         children: [(0, a.jsx)(K.default, {
-                                            price: e
-                                        }), null != s && (0, a.jsx)(K.default, {
-                                            price: s,
+                                            price: en
+                                        }), null != e && !eo && (0, a.jsx)(K.default, {
+                                            price: e,
                                             variant: "text-xs/medium",
                                             className: ee.premiumPriceTag,
                                             renderPrice: e => $.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW.format({
@@ -272,16 +271,16 @@
                                 className: ee.buttonsContainer,
                                 children: [(0, a.jsxs)("div", {
                                     className: ee.primaryButtons,
-                                    children: [I && F && !h ? ed($.default.Messages.UNLOCK_WITH_NITRO) : h || I ? null != v ? (0, a.jsx)(o.Button, {
+                                    children: [I && F && !h && !eo ? ef($.default.Messages.UNLOCK_WITH_NITRO) : h || I || eo ? null != v ? (0, a.jsx)(o.Button, {
                                         className: ee.button,
                                         look: o.Button.Looks.FILLED,
                                         onClick: () => {
-                                            C(), (0, r.popLayer)(), O(), eu ? (0, f.openAvatarDecorationModal)({
+                                            C(), (0, r.popLayer)(), O(), ec ? (0, f.openAvatarDecorationModal)({
                                                 analyticsLocations: m,
-                                                initialSelectedDecoration: null != en ? en : null
-                                            }) : er && (0, M.openProfileEffectModal)({
+                                                initialSelectedDecoration: null != er ? er : null
+                                            }) : ed && (0, M.openProfileEffectModal)({
                                                 analyticsLocations: m,
-                                                initialSelectedEffectId: null == eo ? void 0 : eo.id
+                                                initialSelectedEffectId: null == eu ? void 0 : eu.id
                                             })
                                         },
                                         children: $.default.Messages.COLLECTIBLES_USE_NOW
@@ -309,8 +308,8 @@
                                             analyticsLocations: m,
                                             onClose: e => e ? C() : (0, Q.NOOP)()
                                         }),
-                                        children: er ? $.default.Messages.COLLECTIBLES_BUY_PROFILE_EFFECT : $.default.Messages.COLLECTIBLES_BUY_DECORATION
-                                    }) : ed($.default.Messages.COLLECTIBLES_NON_PREMIUM_SHOP_CTA), _ && !F && (0, a.jsx)(W.default, {
+                                        children: ed ? $.default.Messages.COLLECTIBLES_BUY_PROFILE_EFFECT : $.default.Messages.COLLECTIBLES_BUY_DECORATION
+                                    }) : ef($.default.Messages.COLLECTIBLES_NON_PREMIUM_SHOP_CTA), _ && !F && !eo && (0, a.jsx)(W.default, {
                                         product: t,
                                         onSuccess: C
                                     })]
@@ -336,7 +335,7 @@
                                 color: "none",
                                 className: ee.disclaimer,
                                 variant: "text-xxs/normal",
-                                children: null != v ? null : h || I ? F ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER : er ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECT_PREMIUM_PURCHASE_DISCLAIMER : $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER : er ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECTS_NON_PREMIUM_PURCHASE_DISCLAIMER : $.default.Messages.COLLECTIBLES_DETAILS_MODAL_NON_PREMIUM_PURCHASE_DISCLAIMER
+                                children: null != v ? null : h || I ? F ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER : ed ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECT_PREMIUM_PURCHASE_DISCLAIMER : $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER : ed ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECTS_NON_PREMIUM_PURCHASE_DISCLAIMER : $.default.Messages.COLLECTIBLES_DETAILS_MODAL_NON_PREMIUM_PURCHASE_DISCLAIMER
                             })]
                         })]
                     })
