@@ -1675,7 +1675,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "255028"
+                        buildNumber: "255036"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -16333,75 +16333,80 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return S
                 }
-            }), n("222007");
+            }), n("222007"), n("808653");
             var a = n("917351"),
                 s = n.n(a),
                 i = n("446674"),
                 l = n("913144"),
-                r = n("766274"),
-                o = n("697218"),
-                u = n("390790");
-            let d = {},
-                c = 0,
-                E = !1,
+                r = n("258516"),
+                o = n("766274"),
+                u = n("697218"),
+                d = n("390790");
+            let c = {},
+                E = 0,
                 f = !1,
-                _ = new Set,
-                h = new Set;
+                _ = !1,
+                h = new Set,
+                C = new Set;
 
-            function C(e) {
-                var t;
+            function T(e, t) {
+                var n;
                 return {
                     key: e.suggested_user.id,
-                    name: null === (t = s.first(e.reasons)) || void 0 === t ? void 0 : t.name,
-                    user: new r.default(e.suggested_user),
-                    mutualFriendsCount: e.mutual_friends_count
+                    name: null === (n = s.first(e.reasons)) || void 0 === n ? void 0 : n.name,
+                    user: new o.default(e.suggested_user),
+                    mutualFriendsCount: e.mutual_friends_count,
+                    isUnseen: !t && !e.is_viewed
                 }
-            }(0, a.debounce)(e => u.default.viewSuggestions(e), 15e3);
-            class T extends i.default.Store {
+            }(0, a.debounce)(e => d.default.viewSuggestions(e), 15e3);
+            class I extends i.default.Store {
                 initialize() {
-                    this.waitFor(o.default)
+                    this.waitFor(u.default)
                 }
                 getSuggestionCount() {
-                    return c
+                    return E
                 }
                 getSuggestions() {
-                    return Object.entries(d).map(e => {
+                    return Object.entries(c).map(e => {
                         let [t, n] = e;
                         return n
                     })
                 }
                 getSuggestion(e) {
-                    return d[e]
+                    return c[e]
                 }
             }
-            T.displayName = "FriendSuggestionStore";
-            var I = new T(l.default, {
+            I.displayName = "FriendSuggestionStore";
+            var S = new I(l.default, {
                 CONNECTION_OPEN: function(e) {
-                    d = {}, (c = e.friendSuggestionCount) > 0 && (f = !0, E || !f || (E = !0, f = !1, u.default.fetch()))
+                    c = {}, (E = e.friendSuggestionCount) > 0 && (_ = !0, f || !_ || (f = !0, _ = !1, d.default.fetch()))
                 },
                 FRIEND_SUGGESTION_CREATE: function(e) {
-                    let t = C(e.suggestion);
-                    if (null != d[t.key]) return !1;
-                    c++, d = {
-                        ...d,
+                    let t = T(e.suggestion);
+                    if (null != c[t.key]) return !1;
+                    E++, c = {
+                        ...c,
                         [t.key]: t
                     }
                 },
                 FRIEND_SUGGESTION_DELETE: function(e) {
-                    c = Math.max(0, --c), delete d[e.suggestedUserId]
+                    E = Math.max(0, --E), delete c[e.suggestedUserId]
                 },
                 LOAD_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
-                    var t;
-                    E = !1, t = e.suggestions, d = s.chain(t).map(C).keyBy(e => e.key).value(), c = s.keys(d).length
+                    f = !1, c = function(e) {
+                        let t = e.reduce((e, t) => e + (t.is_viewed ? 0 : 1), 0) === e.length,
+                            n = !(0, r.isInFriendSuggestionSeenStateExperiment)() || t;
+                        return s.chain(e).map(e => T(e, n)).keyBy(e => e.key).value()
+                    }(e.suggestions), E = s.keys(c).length
                 },
                 LOAD_FRIEND_SUGGESTIONS_FAILURE: function() {
-                    E = !1, d = {}
+                    f = !1, c = {}
                 },
                 VIEWED_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
                     e.userIds.forEach(e => {
-                        _.add(e), h.delete(e)
+                        h.add(e), C.delete(e)
                     })
                 }
             })
