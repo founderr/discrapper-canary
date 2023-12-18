@@ -8,6 +8,22 @@
             "use strict";
             e.exports = l.p + "792a9ed858431240f0e6.svg"
         },
+        185370: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                ICON_SIZE: function() {
+                    return a
+                }
+            });
+            let a = {
+                xxs: 12,
+                xs: 16,
+                sm: 18,
+                md: 24,
+                lg: 32,
+                custom: void 0
+            }
+        },
         743087: function(e, t, l) {
             "use strict";
             l.r(t), l.d(t, {
@@ -85,7 +101,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return O
+                    return b
                 }
             }), l("222007");
             var a, n, i = l("37983"),
@@ -96,105 +112,118 @@
                 u = l.n(d),
                 c = l("446674"),
                 f = l("862337"),
-                p = l("77078"),
-                m = l("812204"),
-                h = l("685665"),
+                p = l("185370"),
+                m = l("504318"),
+                h = l("77078"),
+                E = l("812204"),
+                v = l("685665"),
                 _ = l("730859"),
-                E = l("739034"),
-                L = l("697218"),
-                C = l("944832"),
-                g = l("561744"),
-                v = l("491920"),
-                x = l("826432"),
-                I = l("228220"),
-                T = l("15165"),
-                N = l("58608"),
-                S = l("599110"),
-                A = l("449008"),
-                M = l("299039"),
-                R = l("803725"),
+                C = l("739034"),
+                g = l("697218"),
+                L = l("944832"),
+                x = l("561744"),
+                T = l("491920"),
+                I = l("826432"),
+                S = l("228220"),
+                N = l("15165"),
+                A = l("58608"),
+                M = l("599110"),
+                R = l("449008"),
+                P = l("299039"),
+                j = l("803725"),
                 y = l("135284"),
-                P = l("49111"),
-                j = l("782340"),
-                D = l("593262");
+                D = l("49111"),
+                O = l("782340"),
+                H = l("593262"),
+                w = l("339010");
             (n = a || (a = {})).DELETE = "delete", n.EDIT = "edit", n.SHARE = "share";
-            var O = function(e) {
+            var b = function(e) {
                 var t, l, a;
                 let {
                     clip: n,
                     exporting: r,
                     actionsDisabled: d,
                     isNew: u,
-                    onDelete: E,
-                    onEdit: C,
-                    onShare: v
-                } = e, x = (0, c.useStateFromStoresArray)([L.default], () => n.users.map(e => L.default.getUser(e)).filter(A.isNotNullish)), {
-                    AnalyticsLocationProvider: I
-                } = (0, h.default)(m.default.CLIPS_GALLERY_ITEM), T = s.useRef(null), N = (0, g.default)(null !== (a = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0), R = s.useRef(new f.DelayedCall(500, () => {
+                    onDelete: p,
+                    onEdit: m,
+                    onShare: C
+                } = e, L = (0, c.useStateFromStoresArray)([g.default], () => n.users.map(e => g.default.getUser(e)).filter(R.isNotNullish)), {
+                    AnalyticsLocationProvider: T
+                } = (0, v.default)(E.default.CLIPS_GALLERY_ITEM), [I, S] = s.useState(!1), N = s.useRef(null), A = (0, x.default)(null !== (a = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0), j = s.useRef(new f.DelayedCall(500, () => {
                     var e;
-                    let t = T.current;
-                    null != t && (t.currentTime = N.current, null === (e = T.current) || void 0 === e || e.play())
+                    let t = N.current;
+                    null != t && (t.currentTime = A.current, null === (e = N.current) || void 0 === e || e.play())
                 })), y = s.useCallback(() => {
                     var e;
-                    null === (e = R.current) || void 0 === e || e.delay()
-                }, []), O = s.useCallback(() => {
+                    S(!0), null === (e = j.current) || void 0 === e || e.delay()
+                }, []), w = s.useCallback(() => {
                     var e, t, l;
-                    let a = T.current;
-                    null === (e = R.current) || void 0 === e || e.cancel(), null != a && (a.pause(), a.currentTime = null !== (l = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== l ? l : 0)
-                }, [null === (l = n.editMetadata) || void 0 === l ? void 0 : l.start]), w = !n.name, U = new Date(M.default.extractTimestamp(n.id)), k = U.toLocaleDateString(), V = U.toLocaleTimeString([], {
+                    S(!1);
+                    let a = N.current;
+                    null === (e = j.current) || void 0 === e || e.cancel(), null != a && (a.pause(), a.currentTime = null !== (l = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== l ? l : 0)
+                }, [null === (l = n.editMetadata) || void 0 === l ? void 0 : l.start]), b = s.useCallback(e => {
+                    var t, l;
+                    (null === (l = e.relatedTarget) || void 0 === l ? void 0 : null === (t = l.parentElement) || void 0 === t ? void 0 : t.parentElement) !== e.currentTarget.parentElement && w()
+                }, [w]), B = new Date(P.default.extractTimestamp(n.id)), z = B.toLocaleDateString(), F = B.toLocaleTimeString([], {
                     hour: "2-digit",
                     minute: "2-digit"
-                }), B = "".concat(k, " • ").concat(V);
-                return (0, i.jsx)(I, {
-                    children: (0, i.jsxs)(p.Clickable, {
+                }), G = "".concat(z, " • ").concat(F);
+                return (0, i.jsx)(T, {
+                    children: (0, i.jsxs)(h.ClickableContainer, {
                         "aria-disabled": d,
-                        "aria-label": j.default.Messages.EDIT,
+                        "aria-label": O.default.Messages.EDIT,
                         onClick: d ? void 0 : () => {
-                            C(n), S.default.track(P.AnalyticEvents.CLIP_GALLERY_CARD_CLICKED)
+                            m(n), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_CLICKED)
                         },
-                        className: o(D.clipItem, {
-                            [D.disabled]: d
+                        className: o(H.clipItem, {
+                            [H.disabled]: d
                         }),
+                        onBlur: b,
+                        onFocus: y,
                         onMouseOver: y,
-                        onMouseLeave: O,
-                        children: [(0, i.jsx)(H, {
+                        onMouseLeave: w,
+                        children: [(0, i.jsx)(k, {
                             clip: n,
                             isNew: u,
-                            videoRef: T
+                            videoRef: N
                         }), (0, i.jsxs)("div", {
-                            className: D.clipFooter,
-                            children: [w ? (0, i.jsx)(p.Heading, {
-                                className: D.clipTitle,
-                                color: "text-muted",
-                                variant: "heading-lg/medium",
-                                children: j.default.Messages.CLIPS_UNTITLED
-                            }) : (0, i.jsx)(p.Heading, {
-                                className: D.clipTitle,
-                                color: "text-normal",
-                                variant: "heading-lg/medium",
-                                children: n.name
-                            }), (0, i.jsx)(p.Text, {
-                                className: D.clipMetadata,
+                            className: H.clipFooter,
+                            children: [(0, i.jsx)(U, {
+                                clip: n,
+                                focused: I,
+                                onFocus: y
+                            }), (0, i.jsx)(h.Text, {
+                                className: H.clipMetadata,
                                 color: "text-normal",
                                 variant: "text-md/medium",
                                 children: n.applicationName
-                            }), (0, i.jsx)(p.Text, {
-                                className: D.clipMetadata,
+                            }), (0, i.jsx)(h.Text, {
+                                className: H.clipMetadata,
                                 color: "text-normal",
                                 variant: "text-md/medium",
-                                children: B
+                                children: G
                             }), (0, i.jsxs)("div", {
-                                className: D.usersAndDelete,
+                                className: H.usersAndDelete,
                                 children: [(0, i.jsx)(_.default, {
                                     maxUsers: 4,
-                                    users: x
-                                }), (0, i.jsx)(b, {
+                                    users: L,
+                                    onFocus: e => {
+                                        var t, l, a, n;
+                                        let i = e.relatedTarget,
+                                            s = null === (l = e.currentTarget.parentElement) || void 0 === l ? void 0 : null === (t = l.parentElement) || void 0 === t ? void 0 : t.parentElement;
+                                        if ((null == i ? void 0 : i.parentElement) !== s)(null == i ? void 0 : null === (n = i.parentElement) || void 0 === n ? void 0 : null === (a = n.parentElement) || void 0 === a ? void 0 : a.parentElement) !== s && y()
+                                    }
+                                }), I && (0, i.jsx)(V, {
                                     clip: n,
                                     actionsDisabled: d,
                                     exporting: r,
-                                    onDelete: E,
-                                    onEdit: C,
-                                    onShare: v
+                                    onDelete: p,
+                                    onEdit: m,
+                                    onShare: C,
+                                    onBlur: e => {
+                                        var t;
+                                        (null === (t = e.relatedTarget) || void 0 === t ? void 0 : t.parentElement) !== e.currentTarget.parentElement && w()
+                                    }
                                 })]
                             })]
                         })]
@@ -202,7 +231,7 @@
                 })
             };
 
-            function H(e) {
+            function k(e) {
                 let {
                     clip: t,
                     isNew: l,
@@ -213,33 +242,33 @@
                         a = null != t.editMetadata ? t.editMetadata.end - t.editMetadata.start : null;
                     return null != a && 1e3 * a < t.length && (e = 1e3 * a, l = !0), [l, u.duration(e)]
                 }, [t.length, t.editMetadata]), d = "".concat(o.seconds()).padStart(2, "0");
-                return (0, i.jsxs)(C.default, {
+                return (0, i.jsxs)(L.default, {
                     aspectRatio: 16 / 9,
-                    className: D.clipThumbContainer,
-                    children: [(0, i.jsx)(w, {
+                    className: H.clipThumbContainer,
+                    children: [(0, i.jsx)(B, {
                         clip: t,
                         videoRef: a
                     }), (0, i.jsxs)("div", {
-                        className: D.clipBadges,
+                        className: H.clipBadges,
                         children: [n && (0, i.jsx)("div", {
-                            className: D.clipProcessingBadge,
-                            children: (0, i.jsx)(p.Text, {
+                            className: H.clipProcessingBadge,
+                            children: (0, i.jsx)(h.Text, {
                                 variant: "text-md/medium",
                                 color: "always-white",
-                                children: j.default.Messages.CLIPS_PROCESSING_BADGE
+                                children: O.default.Messages.CLIPS_PROCESSING_BADGE
                             })
-                        }), !n && l && (0, i.jsxs)(p.Text, {
-                            className: D.clipNewBadge,
+                        }), !n && l && (0, i.jsxs)(h.Text, {
+                            className: H.clipNewBadge,
                             variant: "eyebrow",
                             color: "always-white",
-                            children: [(0, i.jsx)(x.default, {
-                                className: D.newIcon
-                            }), j.default.Messages.NEW.toUpperCase()]
+                            children: [(0, i.jsx)(I.default, {
+                                className: H.newIcon
+                            }), O.default.Messages.NEW.toUpperCase()]
                         }), !n && (0, i.jsxs)("div", {
-                            className: D.clipDurationBadge,
-                            children: [r ? (0, i.jsx)(T.default, {
-                                className: D.clipDurationEditIcon
-                            }) : null, (0, i.jsx)(p.Text, {
+                            className: H.clipDurationBadge,
+                            children: [r ? (0, i.jsx)(N.default, {
+                                className: H.clipDurationEditIcon
+                            }) : null, (0, i.jsx)(h.Text, {
                                 variant: "text-md/medium",
                                 color: "always-white",
                                 children: "".concat(o.minutes(), ":").concat(d)
@@ -249,90 +278,140 @@
                 })
             }
 
-            function w(e) {
+            function U(e) {
+                var t;
+                let {
+                    clip: l,
+                    focused: a,
+                    onFocus: n
+                } = e, r = !l.name, [d, u] = s.useState(!1), [c, f] = s.useState(null !== (t = l.name) && void 0 !== t ? t : ""), [E, v] = s.useState(!1), _ = async () => {
+                    v(!0), await (0, j.updateClipMetadata)(l.id, {
+                        name: c
+                    }), v(!1), u(!1)
+                };
+                return d ? (0, i.jsx)(h.TextInput, {
+                    inputClassName: o(w["heading-lg/medium"], H.clipTitleInput),
+                    onClick: e => e.stopPropagation(),
+                    value: c,
+                    autoFocus: !0,
+                    onKeyDown: e => {
+                        "Enter" === e.key && _()
+                    },
+                    disabled: E,
+                    onChange: f,
+                    onBlur: _
+                }) : (0, i.jsxs)(h.Clickable, {
+                    className: H.clipTitleInputPlaceholder,
+                    onFocus: n,
+                    onClick: e => {
+                        e.stopPropagation(), u(!0)
+                    },
+                    children: [r ? (0, i.jsx)(h.Heading, {
+                        className: H.clipTitle,
+                        color: "text-muted",
+                        variant: "heading-lg/medium",
+                        children: O.default.Messages.CLIPS_ADD_A_TITLE
+                    }) : (0, i.jsx)(h.Heading, {
+                        className: H.clipTitle,
+                        color: "text-normal",
+                        variant: "heading-lg/medium",
+                        children: l.name
+                    }), a && (0, i.jsx)(m.PencilIcon, {
+                        "aria-label": O.default.Messages.EDIT,
+                        color: h.tokens.colors.TEXT_MUTED,
+                        height: p.ICON_SIZE.sm,
+                        width: p.ICON_SIZE.sm,
+                        className: H.clipTitleIcon
+                    })]
+                })
+            }
+
+            function B(e) {
                 let {
                     clip: t,
                     videoRef: l
                 } = e, a = (0, y.useClipProtocolURL)(t);
-                return 0 === t.length ? (0, i.jsx)(p.Spinner, {
-                    type: p.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
-                    className: D.clipThumb
-                }) : null != a ? (0, i.jsx)(N.default, {
+                return 0 === t.length ? (0, i.jsx)(h.Spinner, {
+                    type: h.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
+                    className: H.clipThumb
+                }) : null != a ? (0, i.jsx)(A.default, {
                     preload: "metadata",
                     muted: !0,
                     poster: t.thumbnail,
                     src: a,
                     loop: !0,
-                    className: D.clipThumb,
+                    className: H.clipThumb,
                     ref: l
                 }) : (0, i.jsx)("img", {
                     alt: "",
                     src: t.thumbnail,
-                    className: D.clipThumb
+                    className: H.clipThumb
                 })
             }
 
-            function b(e) {
+            function V(e) {
                 let {
                     clip: t,
                     exporting: l,
                     actionsDisabled: a,
                     onDelete: n,
                     onEdit: s,
-                    onShare: r
-                } = e, o = (0, E.default)();
+                    onShare: r,
+                    onBlur: o
+                } = e, d = (0, C.default)();
                 return (0, i.jsxs)("div", {
-                    className: D.buttonContainer,
-                    children: [null != n && (0, i.jsx)(p.Tooltip, {
-                        text: j.default.Messages.DELETE,
-                        children: e => (0, i.jsx)(p.Button, {
+                    className: H.buttonContainer,
+                    children: [null != n && (0, i.jsx)(h.Tooltip, {
+                        text: O.default.Messages.DELETE,
+                        children: e => (0, i.jsx)(h.Button, {
                             ...e,
                             disabled: a,
-                            color: o ? p.Button.Colors.RED : p.Button.Colors.PRIMARY,
+                            color: d ? h.Button.Colors.RED : h.Button.Colors.PRIMARY,
                             onClick: e => {
-                                e.stopPropagation(), e.shiftKey ? (0, R.deleteClip)(t.filepath) : n(t), S.default.track(P.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+                                e.stopPropagation(), e.shiftKey ? (0, j.deleteClip)(t.filepath) : n(t), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
                                     type: "delete"
                                 })
                             },
-                            className: D.button,
-                            size: p.Button.Sizes.NONE,
-                            look: p.Button.Looks.FILLED,
-                            children: (0, i.jsx)(I.default, {
-                                className: D.miniIcon
+                            className: H.button,
+                            size: h.Button.Sizes.NONE,
+                            look: h.Button.Looks.FILLED,
+                            children: (0, i.jsx)(S.default, {
+                                className: H.miniIcon
                             })
                         })
-                    }), (0, i.jsx)(p.Tooltip, {
-                        text: j.default.Messages.EDIT,
-                        children: e => (0, i.jsx)(p.Button, {
+                    }), (0, i.jsx)(h.Tooltip, {
+                        text: O.default.Messages.EDIT,
+                        children: e => (0, i.jsx)(h.Button, {
                             ...e,
                             disabled: a,
-                            color: p.Button.Colors.PRIMARY,
+                            color: h.Button.Colors.PRIMARY,
                             onClick: e => {
-                                e.stopPropagation(), s(t), S.default.track(P.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+                                e.stopPropagation(), s(t), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
                                     type: "edit"
                                 })
                             },
-                            className: D.button,
-                            size: p.Button.Sizes.NONE,
-                            look: p.Button.Looks.FILLED,
-                            children: (0, i.jsx)(T.default, {
-                                className: D.miniIcon
+                            className: H.button,
+                            size: h.Button.Sizes.NONE,
+                            look: h.Button.Looks.FILLED,
+                            children: (0, i.jsx)(N.default, {
+                                className: H.miniIcon
                             })
                         })
-                    }), (0, i.jsx)(p.Button, {
+                    }), (0, i.jsx)(h.Button, {
                         disabled: a && !l,
                         submitting: l,
-                        color: p.Button.Colors.BRAND,
+                        color: h.Button.Colors.BRAND,
+                        onBlur: o,
                         onClick: e => {
-                            e.stopPropagation(), r(t), S.default.track(P.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+                            e.stopPropagation(), r(t), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
                                 type: "share"
                             })
                         },
-                        className: D.button,
-                        size: p.Button.Sizes.NONE,
-                        look: p.Button.Looks.FILLED,
-                        children: (0, i.jsx)(v.default, {
-                            className: D.miniIcon
+                        className: H.button,
+                        size: h.Button.Sizes.NONE,
+                        look: h.Button.Looks.FILLED,
+                        children: (0, i.jsx)(T.default, {
+                            className: H.miniIcon
                         })
                     })]
                 })
@@ -342,7 +421,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return _
+                    return E
                 }
             });
             var a = l("37983"),
@@ -359,19 +438,19 @@
                 m = l("782340"),
                 h = l("518677");
 
-            function _(e) {
+            function E(e) {
                 let {
                     isEmptyBecauseQuery: t,
                     closePopout: l
-                } = e, i = (0, r.default)([u.default], () => u.default.getKeybindForAction(p.GlobalKeybindActions.SAVE_CLIP)), _ = (0, r.default)([f.default], () => f.default.getSettings().clipsEnabled), E = t ? h.noSearchResultsImage : h.noClipsImage, L = n.useCallback(() => {
+                } = e, i = (0, r.default)([u.default], () => u.default.getKeybindForAction(p.GlobalKeybindActions.SAVE_CLIP)), E = (0, r.default)([f.default], () => f.default.getSettings().clipsEnabled), v = t ? h.noSearchResultsImage : h.noClipsImage, _ = n.useCallback(() => {
                     l(), d.default.open(p.UserSettingsSections.CLIPS)
                 }, [l]), C = (() => {
-                    if (!_) return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_CLIPS_NOT_ENABLED.format({
-                        onClick: L
+                    if (!E) return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_CLIPS_NOT_ENABLED.format({
+                        onClick: _
                     });
                     if (t) return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_MATCH_QUERY;
                     if (null == i) return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_NO_KEYBIND_SET.format({
-                        onClick: L
+                        onClick: _
                     });
                     {
                         let e = c.toString(i.shortcut, !0);
@@ -392,7 +471,7 @@
                     children: (0, a.jsxs)("div", {
                         className: h.content,
                         children: [(0, a.jsx)("div", {
-                            className: E
+                            className: v
                         }), (0, a.jsx)(o.Text, {
                             variant: "text-md/medium",
                             className: s(h.noClipsText, {
@@ -484,7 +563,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return N
+                    return S
                 }
             }), l("222007");
             var a = l("37983"),
@@ -500,49 +579,49 @@
                 p = l("812204"),
                 m = l("685665"),
                 h = l("428958"),
-                _ = l("299039"),
-                E = l("386045"),
-                L = l("803725"),
+                E = l("299039"),
+                v = l("386045"),
+                _ = l("803725"),
                 C = l("142485"),
                 g = l("552022"),
-                v = l("548405"),
+                L = l("548405"),
                 x = l("411445"),
-                I = l("80028"),
-                T = l("305085");
+                T = l("80028"),
+                I = l("305085");
 
-            function N(e) {
+            function S(e) {
                 let {
                     channelId: t,
                     onClose: i,
                     transitionState: r
-                } = e, [N, S] = n.useState(""), [A, M] = n.useState("descending"), [R, y] = n.useState(!0), [P, j] = n.useState(null), D = n.useDeferredValue(N), O = (0, u.useStateFromStores)([E.default], () => E.default.getClips()), H = (0, u.useStateFromStores)([E.default], () => E.default.getPendingClips()), w = (0, u.useStateFromStores)([E.default], () => E.default.getSettings().storageLocation), b = (0, u.useStateFromStoresArray)([E.default], () => E.default.getNewClipIds()), {
-                    AnalyticsLocationProvider: U
-                } = (0, m.default)(p.default.CLIPS_GALLERY), k = n.useMemo(() => [...H, ...O], [O, H]);
+                } = e, [S, N] = n.useState(""), [A, M] = n.useState("descending"), [R, P] = n.useState(!0), [j, y] = n.useState(null), D = n.useDeferredValue(S), O = (0, u.useStateFromStores)([v.default], () => v.default.getClips()), H = (0, u.useStateFromStores)([v.default], () => v.default.getPendingClips()), w = (0, u.useStateFromStores)([v.default], () => v.default.getSettings().storageLocation), b = (0, u.useStateFromStoresArray)([v.default], () => v.default.getNewClipIds()), {
+                    AnalyticsLocationProvider: k
+                } = (0, m.default)(p.default.CLIPS_GALLERY), U = n.useMemo(() => [...H, ...O], [O, H]);
                 (0, h.default)({
                     type: d.ImpressionTypes.MODAL,
                     name: d.ImpressionNames.CLIP_GALLERY_VIEWED,
                     properties: {
-                        number_of_clips_loaded: k.length
+                        number_of_clips_loaded: U.length
                     }
                 }, {
                     disableTrack: R
-                }, [k.length, R]), n.useEffect(() => L.clearNewClipIds, []);
-                let V = n.useMemo(() => o(k).filter(e => {
+                }, [U.length, R]), n.useEffect(() => _.clearNewClipIds, []);
+                let B = n.useMemo(() => o(U).filter(e => {
                     if ("" === D.trim()) return !0;
                     let t = D.toLowerCase();
                     return null != e.name && "" !== e.name && s(t, e.name.toLowerCase()) || s(t, e.applicationName.toLowerCase())
-                }).sort((e, t) => "ascending" === A ? _.default.compare(e.id, t.id) : "descending" === A ? _.default.compare(t.id, e.id) : 0).chunk(3).value(), [k, D, A]);
+                }).sort((e, t) => "ascending" === A ? E.default.compare(e.id, t.id) : "descending" === A ? E.default.compare(t.id, e.id) : 0).chunk(3).value(), [U, D, A]);
                 n.useEffect(() => {
                     (async function e() {
-                        y(!0);
+                        P(!0);
                         try {
-                            await L.loadClipsDirectory(w)
+                            await _.loadClipsDirectory(w)
                         } finally {
-                            y(!1)
+                            P(!1)
                         }
                     })()
                 }, [w]);
-                let B = n.useCallback(e => {
+                let V = n.useCallback(e => {
                         (0, f.openModalLazy)(async () => {
                             let {
                                 default: n
@@ -553,16 +632,16 @@
                                 clip: e
                             })
                         }, {
-                            modalKey: I.CLIPS_EDIT_MODAL_KEY
+                            modalKey: T.CLIPS_EDIT_MODAL_KEY
                         })
                     }, [t]),
                     {
                         onShareClick: z
                     } = (0, C.default)({
                         channelId: t,
-                        setExporting: j
+                        setExporting: y
                     }),
-                    G = n.useCallback(e => {
+                    F = n.useCallback(e => {
                         (0, f.openModalLazy)(async () => {
                             let {
                                 default: t
@@ -574,51 +653,51 @@
                             })
                         })
                     }, []),
-                    F = n.useCallback(e => {
+                    G = n.useCallback(e => {
                         let {
                             row: t
-                        } = e, l = V[t];
+                        } = e, l = B[t];
                         return (0, a.jsx)("div", {
-                            className: T.clipsRow,
+                            className: I.clipsRow,
                             children: l.map(e => {
                                 let t = 0 === e.length;
                                 return (0, a.jsx)(g.default, {
-                                    actionsDisabled: null != P || t,
-                                    exporting: P === e.id,
+                                    actionsDisabled: null != j || t,
+                                    exporting: j === e.id,
                                     isNew: b.includes(e.id),
-                                    onDelete: G,
-                                    onEdit: B,
+                                    onDelete: F,
+                                    onEdit: V,
                                     onShare: e => z({
                                         clip: e,
-                                        onShareComplete: () => c.closeModal(I.CLIPS_GALLERY_MODAL_KEY)
+                                        onShareComplete: () => c.closeModal(T.CLIPS_GALLERY_MODAL_KEY)
                                     }),
                                     clip: e
                                 }, e.id)
                             })
                         }, "clips-gallery-".concat(t))
-                    }, [V, b, P, z, G, B]),
-                    Y = R || 0 !== V.length ? R ? (0, a.jsx)("div", {
-                        className: T.spinnerContainer,
+                    }, [B, b, j, z, F, V]),
+                    Y = R || 0 !== B.length ? R ? (0, a.jsx)("div", {
+                        className: I.spinnerContainer,
                         children: (0, a.jsx)(f.Spinner, {})
                     }) : (0, a.jsx)(f.List, {
-                        className: T.clipGrid,
-                        sections: [V.length],
+                        className: I.clipGrid,
+                        sections: [B.length],
                         sectionHeight: 0,
                         rowHeight: 328.25,
-                        renderRow: F
-                    }) : (0, a.jsx)(v.default, {
-                        isEmptyBecauseQuery: k.length > 0,
+                        renderRow: G
+                    }) : (0, a.jsx)(L.default, {
+                        isEmptyBecauseQuery: U.length > 0,
                         closePopout: i
                     });
                 return (0, a.jsx)(f.ModalRoot, {
                     size: f.ModalSize.DYNAMIC,
                     transitionState: r,
-                    className: T.root,
-                    children: (0, a.jsxs)(U, {
+                    className: I.root,
+                    children: (0, a.jsxs)(k, {
                         children: [(0, a.jsx)(x.default, {
                             onClose: i,
-                            filterQuery: N,
-                            setFilterQuery: S,
+                            filterQuery: S,
+                            setFilterQuery: N,
                             sortOrder: A,
                             setSortOrder: M
                         }), Y]
@@ -649,24 +728,24 @@
                 let {
                     channelId: m,
                     editMetadata: h,
-                    analyticsLocations: _
-                } = t, E = i.default.getChannel(m);
-                if (null != E) try {
-                    var L;
+                    analyticsLocations: E
+                } = t, v = i.default.getChannel(m);
+                if (null != v) try {
+                    var _;
                     let t = await (0, c.exportClip)(e, h),
-                        l = null !== (L = e.name) && void 0 !== L ? L : (0, f.CLIP_NAME_TEMPLATE)(o.default.extractTimestamp(e.id)),
+                        l = null !== (_ = e.name) && void 0 !== _ ? _ : (0, f.CLIP_NAME_TEMPLATE)(o.default.extractTimestamp(e.id)),
                         a = (0, u.default)(l);
                     (0, d.promptToUpload)([new File([t], "".concat("" !== a ? a : "clip", ".mp4"), {
                         type: "video/mp4"
-                    })], E, s.DraftType.ChannelMessage, {
+                    })], v, s.DraftType.ChannelMessage, {
                         filesMetadata: [{
                             clip: e
                         }]
                     }), r.default.track(p.AnalyticEvents.CLIP_SHARED, {
-                        location_stack: _,
-                        guild_id: E.guild_id,
-                        channel_id: E.id,
-                        channel_type: E.type,
+                        location_stack: E,
+                        guild_id: v.guild_id,
+                        channel_id: v.id,
+                        channel_type: v.type,
                         application_id: e.applicationId,
                         clip_id: e.id
                     })
@@ -726,14 +805,14 @@
                         } = e;
                         l(a.id);
                         try {
-                            var c, f, p, m, h, _, E, L, C, g;
+                            var c, f, p, m, h, E, v, _, C, g;
                             let e = (0, i.canAttachClipsToChannel)(t);
                             await (0, s.shareClip)(a, {
                                 channelId: e ? t : void 0,
                                 analyticsLocations: r,
                                 editMetadata: {
-                                    start: null !== (_ = null !== (h = null == n ? void 0 : n.start) && void 0 !== h ? h : null === (c = a.editMetadata) || void 0 === c ? void 0 : c.start) && void 0 !== _ ? _ : 0,
-                                    end: null !== (L = null !== (E = null == n ? void 0 : n.end) && void 0 !== E ? E : null === (f = a.editMetadata) || void 0 === f ? void 0 : f.end) && void 0 !== L ? L : a.length / 1e3,
+                                    start: null !== (E = null !== (h = null == n ? void 0 : n.start) && void 0 !== h ? h : null === (c = a.editMetadata) || void 0 === c ? void 0 : c.start) && void 0 !== E ? E : 0,
+                                    end: null !== (_ = null !== (v = null == n ? void 0 : n.end) && void 0 !== v ? v : null === (f = a.editMetadata) || void 0 === f ? void 0 : f.end) && void 0 !== _ ? _ : a.length / 1e3,
                                     applicationAudio: null === (C = null != o ? o : null === (p = a.editMetadata) || void 0 === p ? void 0 : p.applicationAudio) || void 0 === C || C,
                                     voiceAudio: null === (g = null != d ? d : null === (m = a.editMetadata) || void 0 === m ? void 0 : m.voiceAudio) || void 0 === g || g
                                 }
@@ -906,7 +985,7 @@
                     return g
                 },
                 promptToUpload: function() {
-                    return v
+                    return L
                 }
             }), l("424973"), l("222007"), l("70102");
             var a = l("255397"),
@@ -922,9 +1001,9 @@
                 p = l("254490"),
                 m = l("719923"),
                 h = l("834021"),
-                _ = l("49111"),
-                E = l("894488"),
-                L = l("646718"),
+                E = l("49111"),
+                v = l("894488"),
+                _ = l("646718"),
                 C = l("782340");
 
             function g(e, t) {
@@ -938,19 +1017,19 @@
                     f = [];
                 for (let e of t) u += 1, r += e.size, i.push(e.size), e.size > d && (d = e.size), null != e.type ? f.push(e.type) : f.push("unknown");
                 if (d > n) {
-                    (0, o.trackWithMetadata)(_.AnalyticEvents.FILE_SIZE_LIMIT_EXCEEDED, {
+                    (0, o.trackWithMetadata)(E.AnalyticEvents.FILE_SIZE_LIMIT_EXCEEDED, {
                         channel_id: e.id,
                         guild_id: a,
                         user_individual_file_size_limit: n,
                         pre_compression_file_sizes: i,
                         pre_compression_aggregate_file_size: r,
                         num_attachments: u,
-                        error_type: E.FileUploadErrorTypes.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
+                        error_type: v.FileUploadErrorTypes.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
                         attachment_mimetypes: f
                     }), (0, s.openUploadError)({
                         title: C.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
                         help: (0, h.getErrorHelp)(l, a),
-                        showPremiumUpsell: !(0, m.isPremiumExactly)(l, L.PremiumTypes.TIER_2),
+                        showPremiumUpsell: !(0, m.isPremiumExactly)(l, _.PremiumTypes.TIER_2),
                         fileSize: d
                     });
                     return
@@ -962,7 +1041,7 @@
                 })
             }
 
-            function v(e, t, l) {
+            function L(e, t, l) {
                 let {
                     filesMetadata: o,
                     requireConfirm: c = !0,
@@ -971,24 +1050,24 @@
                 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
                 if (e.length < 1) return;
                 if (null != o && o.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
-                let E = t.getGuildId();
-                if ((0, h.filesExceedUploadLimits)(e, E)) {
+                let v = t.getGuildId();
+                if ((0, h.filesExceedUploadLimits)(e, v)) {
                     g(t, e);
                     return
                 }
-                if (u.default.getUploadCount(t.id, l) + e.length > _.MAX_UPLOAD_COUNT) {
+                if (u.default.getUploadCount(t.id, l) + e.length > E.MAX_UPLOAD_COUNT) {
                     (0, s.openUploadError)({
                         title: C.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
                         help: C.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
-                            limit: _.MAX_UPLOAD_COUNT
+                            limit: E.MAX_UPLOAD_COUNT
                         })
-                    }), f.default.track(_.AnalyticEvents.UPLOAD_FILE_LIMIT_ERROR, {
+                    }), f.default.track(E.AnalyticEvents.UPLOAD_FILE_LIMIT_ERROR, {
                         existing_count: u.default.getUploadCount(t.id, l),
                         new_count: e.length
                     });
                     return
                 }
-                if ((t.type === _.ChannelTypes.GUILD_VOICE || t.type === _.ChannelTypes.GUILD_STAGE_VOICE) && !d.default.getChatOpen(t.id) && a.default.updateChatOpen(t.id, !0), c) {
+                if ((t.type === E.ChannelTypes.GUILD_VOICE || t.type === E.ChannelTypes.GUILD_STAGE_VOICE) && !d.default.getChatOpen(t.id) && a.default.updateChatOpen(t.id, !0), c) {
                     let a = Array.from(e).map((e, t) => ({
                         file: e,
                         platform: r.UploadPlatform.WEB,
