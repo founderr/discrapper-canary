@@ -2635,7 +2635,8 @@
                     [p.SubscriptionStatusTypes.ENDED]: "Ended",
                     [p.SubscriptionStatusTypes.ACCOUNT_HOLD]: "Account Hold",
                     [p.SubscriptionStatusTypes.BILLING_RETRY]: "Billing Retry",
-                    [p.SubscriptionStatusTypes.PAUSED]: "Paused"
+                    [p.SubscriptionStatusTypes.PAUSED]: "Paused",
+                    [p.SubscriptionStatusTypes.PAUSE_PENDING]: "Pause Pending"
                 },
                 b = [{
                     label: "Unpaid",
@@ -2661,6 +2662,9 @@
                 }, {
                     label: "Paused",
                     value: p.SubscriptionStatusTypes.PAUSED
+                }, {
+                    label: "Pause Pending",
+                    value: p.SubscriptionStatusTypes.PAUSE_PENDING
                 }],
                 x = {
                     "511651880837840896": "Nitro Monthly",
