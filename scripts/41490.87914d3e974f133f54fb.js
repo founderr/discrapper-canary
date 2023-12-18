@@ -7831,7 +7831,7 @@
                     channelId: t,
                     option: n,
                     keyboardModeEnabled: r
-                } = e, g = i.useRef(null), [C, T] = i.useState(!1), v = f.default.getUpload(t, n.name, c.DraftType.ChannelMessage), y = i.useRef(null), x = i.useCallback(() => {
+                } = e, g = i.useRef(null), [C, T] = i.useState(!1), v = f.default.getUpload(t, n.name, c.DraftType.SlashCommand), y = i.useRef(null), x = i.useCallback(() => {
                     T(!0)
                 }, []), I = i.useCallback(() => {
                     T(!1)
@@ -7847,7 +7847,7 @@
                         channelId: t,
                         id: n.name,
                         file: i,
-                        draftType: c.DraftType.ChannelMessage
+                        draftType: c.DraftType.SlashCommand
                     })
                 }, [t, n]);
                 return (i.useEffect(() => {
@@ -7859,7 +7859,7 @@
                     channelId: t,
                     upload: v,
                     keyboardModeEnabled: r,
-                    draftType: c.DraftType.ChannelMessage,
+                    draftType: c.DraftType.SlashCommand,
                     label: (0, l.jsxs)(i.Fragment, {
                         children: [(0, l.jsxs)(s.Text, {
                             tag: "span",
@@ -7886,7 +7886,7 @@
                     className: o(E.emptyOption, {
                         [E.emptyOptionActive]: C
                     }),
-                    draftType: c.DraftType.ChannelMessage,
+                    draftType: c.DraftType.SlashCommand,
                     ref: y,
                     children: [(0, l.jsx)("span", {
                         className: o(E.optionName, {
@@ -7923,7 +7923,7 @@
                                             channelId: t,
                                             id: n.name,
                                             file: l,
-                                            draftType: c.DraftType.ChannelMessage
+                                            draftType: c.DraftType.SlashCommand
                                         }), e.currentTarget.value = ""
                                     }
                                 },
@@ -8027,7 +8027,7 @@
                 let i = a.default.getCurrentlySelectedChannelId(),
                     r = n.children.map(n => {
                         if (t.type === l.ApplicationCommandOptionType.ATTACHMENT) {
-                            let e = u.default.getUpload(i, t.name, s.DraftType.ChannelMessage);
+                            let e = u.default.getUpload(i, t.name, s.DraftType.SlashCommand);
                             if (null != e) {
                                 var r;
                                 return {
@@ -13055,7 +13055,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return g
                 }
             }), n("222007");
             var l = n("37983"),
@@ -13066,14 +13066,15 @@
                 a = n("446674"),
                 u = n("798609"),
                 d = n("383018"),
-                c = n("585722"),
-                f = n("640830"),
-                p = n("939563"),
-                m = n("385887"),
-                h = n("782340"),
-                E = n("835906");
+                c = n("474643"),
+                f = n("585722"),
+                p = n("640830"),
+                m = n("939563"),
+                h = n("385887"),
+                E = n("782340"),
+                S = n("835906");
 
-            function S(e, t, n) {
+            function g(e, t, n) {
                 let {
                     attributes: i,
                     children: r,
@@ -13086,26 +13087,26 @@
                             u = 0;
                         if (null != s && s.id === o.command.id) {
                             var c;
-                            let t = f.getOptionNames(e);
+                            let t = p.getOptionNames(e);
                             for (let e of null !== (c = s.options) && void 0 !== c ? c : []) t.includes(e.name) ? u++ : a++
                         }
-                        let p = {};
+                        let f = {};
                         if (a > 0) {
                             let e;
-                            e = u > 0 ? h.default.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({
+                            e = u > 0 ? E.default.Messages.COMMANDS_OPTIONAL_COUNT_REMAINING.format({
                                 count: a
-                            }) : h.default.Messages.COMMANDS_OPTION_COUNT.format({
+                            }) : E.default.Messages.COMMANDS_OPTION_COUNT.format({
                                 count: a
-                            }), p["data-trailing-placeholder"] = e
+                            }), f["data-trailing-placeholder"] = e
                         }
                         return (0, l.jsx)("div", {
-                            className: E.applicationCommand,
+                            className: S.applicationCommand,
                             ...i,
-                            ...p,
+                            ...f,
                             children: r
                         });
                     case "applicationCommandOption":
-                        return (0, l.jsx)(g, {
+                        return (0, l.jsx)(C, {
                             attributes: i,
                             channelId: n,
                             element: o,
@@ -13115,19 +13116,19 @@
                         return null
                 }
             }
-            let g = e => {
+            let C = e => {
                 let t, {
                         channelId: n,
                         element: r,
-                        attributes: f,
-                        children: S
+                        attributes: p,
+                        children: g
                     } = e,
-                    g = (0, s.useSelected)(),
-                    C = (0, s.useFocused)(),
-                    T = (0, s.useSlateStatic)(),
+                    C = (0, s.useSelected)(),
+                    T = (0, s.useFocused)(),
+                    v = (0, s.useSlateStatic)(),
                     {
-                        optionType: v,
-                        errored: y
+                        optionType: y,
+                        errored: x
                     } = (0, a.useStateFromStoresObject)([d.default], () => {
                         var e, t, l;
                         return {
@@ -13135,37 +13136,37 @@
                             errored: (null === (l = d.default.getOptionState(n, r.optionName)) || void 0 === l ? void 0 : null === (t = l.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
                         }
                     }, [n, r.optionName]),
-                    x = (0, a.useStateFromStores)([c.default], () => c.default.getUpload(n, r.optionName, T.chatInputType.drafts.type), [n, T.chatInputType.drafts.type, r.optionName]),
-                    I = r.children[r.children.length - 1],
-                    N = null != I && m.TextUtils.isText(I) && I.text.endsWith("\n"),
-                    _ = o(E.inlineElement, E.optionPill, {
-                        [E.selectedPill]: C && g,
-                        [E.erroredPill]: (!C || !g) && y
+                    I = (0, a.useStateFromStores)([f.default], () => f.default.getUpload(n, r.optionName, c.DraftType.SlashCommand), [n, r.optionName]),
+                    N = r.children[r.children.length - 1],
+                    _ = null != N && h.TextUtils.isText(N) && N.text.endsWith("\n"),
+                    A = o(S.inlineElement, S.optionPill, {
+                        [S.selectedPill]: T && C,
+                        [S.erroredPill]: (!T || !C) && x
                     }),
-                    A = i.useCallback(() => {
-                        !m.EditorUtils.isVoid(T, r) && p.SlateTransforms.selectCommandOption(T, r.optionName, !0)
-                    }, [T, r]);
-                return t = v === u.ApplicationCommandOptionType.ATTACHMENT ? (null == x ? void 0 : x.filename) != null ? (0, l.jsxs)("span", {
-                    className: o(E.optionPillValue, E.attachmentFilename),
+                    R = i.useCallback(() => {
+                        !h.EditorUtils.isVoid(v, r) && m.SlateTransforms.selectCommandOption(v, r.optionName, !0)
+                    }, [v, r]);
+                return t = y === u.ApplicationCommandOptionType.ATTACHMENT ? (null == I ? void 0 : I.filename) != null ? (0, l.jsxs)("span", {
+                    className: o(S.optionPillValue, S.attachmentFilename),
                     contentEditable: !1,
-                    children: [x.filename, S]
+                    children: [I.filename, g]
                 }) : (0, l.jsxs)("span", {
-                    className: o(E.optionPillValue, E.readonlyPillValue),
+                    className: o(S.optionPillValue, S.readonlyPillValue),
                     contentEditable: !1,
-                    children: [h.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, S]
+                    children: [E.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, g]
                 }) : (0, l.jsxs)("span", {
-                    className: E.optionPillValue,
-                    children: [S, N ? (0, l.jsx)("span", {
-                        className: E.newLine,
+                    className: S.optionPillValue,
+                    children: [g, _ ? (0, l.jsx)("span", {
+                        className: S.newLine,
                         contentEditable: !1
                     }) : null]
                 }), (0, l.jsxs)("span", {
-                    ...f,
-                    className: _,
+                    ...p,
+                    className: A,
                     children: [(0, l.jsxs)("span", {
-                        className: E.optionPillKey,
+                        className: S.optionPillKey,
                         contentEditable: !1,
-                        onClick: A,
+                        onClick: R,
                         children: [r.optionDisplayName, "​"]
                     }), t, (0, l.jsx)("span", {
                         contentEditable: !1,

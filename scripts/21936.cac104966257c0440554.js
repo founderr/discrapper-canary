@@ -22,8 +22,8 @@
                 f = a("50885"),
                 g = a("49111"),
                 v = a("782340"),
-                M = a("831839"),
-                x = a("926622");
+                x = a("831839"),
+                M = a("926622");
 
             function E(e) {
                 var t, a, n, r;
@@ -58,8 +58,8 @@
                 return (0, l.jsx)("img", {
                     ref: f,
                     src: d,
-                    className: i(M.icon, {
-                        [M.image]: !c
+                    className: i(x.icon, {
+                        [x.image]: !c
                     }),
                     "aria-hidden": !0,
                     alt: "",
@@ -80,8 +80,8 @@
                         file: this.props.upload.item.file
                     });
                     return (0, l.jsx)("div", {
-                        className: i(M.icon, {
-                            [M[null !== (e = this.props.upload.classification) && void 0 !== e ? e : ""]]: !0
+                        className: i(x.icon, {
+                            [x[null !== (e = this.props.upload.classification) && void 0 !== e ? e : ""]]: !0
                         })
                     })
                 }
@@ -116,37 +116,37 @@
                         "aria-label": v.default.Messages.ATTACH_FILES,
                         size: r.ModalSize.DYNAMIC,
                         transitionState: t,
-                        className: i(M.uploadModal),
+                        className: i(x.uploadModal),
                         children: [(0, l.jsxs)("div", {
-                            className: M.inner,
+                            className: x.inner,
                             children: [(0, l.jsxs)("div", {
-                                className: i(M.file, {
-                                    [M.expandable]: e.isImage
+                                className: i(x.file, {
+                                    [x.expandable]: e.isImage
                                 }),
                                 children: [(0, l.jsx)(j, {
                                     upload: e
                                 }), (0, l.jsxs)("div", {
-                                    className: M.description,
+                                    className: x.description,
                                     children: [(0, l.jsx)("div", {
-                                        className: M.filename,
+                                        className: x.filename,
                                         children: e.showLargeMessageDialog ? v.default.Messages.LARGE_MESSAGE_UPLOAD_TITLE_MAX_LENGTH.format({
                                             maxLength: a
                                         }) : e.filename
                                     }), e.showLargeMessageDialog ? (0, l.jsx)("div", {
-                                        className: M.subtitle,
+                                        className: x.subtitle,
                                         children: v.default.Messages.LARGE_MESSAGE_UPLOAD_SUBTITLE
                                     }) : null]
                                 })]
                             }), (0, l.jsx)("div", {
-                                className: M.comment,
+                                className: x.comment,
                                 children: (0, l.jsxs)(s.Fragment, {
                                     children: [(0, l.jsx)("div", {
-                                        className: M.label,
+                                        className: x.label,
                                         children: (0, l.jsx)("span", {
                                             children: v.default.Messages.UPLOAD_AREA_FILENAME
                                         })
                                     }), (0, l.jsx)(r.TextInput, {
-                                        className: i(M.channelTextAreaUpload, x.marginTop8),
+                                        className: i(x.channelTextAreaUpload, M.marginTop8),
                                         value: this.state.filename,
                                         onChange: e => this.setState({
                                             filename: e
@@ -156,12 +156,12 @@
                                         }
                                     }), e.isImage ? (0, l.jsxs)(s.Fragment, {
                                         children: [(0, l.jsx)("div", {
-                                            className: M.label,
+                                            className: x.label,
                                             children: (0, l.jsx)("span", {
                                                 children: v.default.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_LABEL
                                             })
                                         }), (0, l.jsx)(r.TextInput, {
-                                            className: i(M.channelTextAreaUpload, x.marginTop8),
+                                            className: i(x.channelTextAreaUpload, M.marginTop8),
                                             placeholder: v.default.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_PLACEHOLDER,
                                             value: this.state.description,
                                             onChange: e => this.setState({
@@ -172,7 +172,7 @@
                                             }
                                         })]
                                     }) : null, !0 !== n && (0, l.jsx)(r.Checkbox, {
-                                        className: x.marginBottom20,
+                                        className: M.marginBottom20,
                                         value: o,
                                         onChange: (e, t) => this.setState({
                                             hasSpoiler: t
@@ -185,9 +185,9 @@
                                 })
                             })]
                         }), (0, l.jsx)("div", {
-                            className: M.footer,
+                            className: x.footer,
                             children: (0, l.jsxs)("div", {
-                                className: i(M.hasSpoilers, M.footerRightAlign),
+                                className: i(x.hasSpoilers, x.footerRightAlign),
                                 children: [(0, l.jsx)(r.Button, {
                                     type: "button",
                                     look: r.Button.Looks.LINK,
@@ -313,7 +313,7 @@
                     return s
                 },
                 default: function() {
-                    return x
+                    return M
                 }
             });
             var l, s, n = a("37983"),
@@ -330,17 +330,17 @@
                 g = a("782340"),
                 v = a("864147");
 
-            function M(e) {
+            function x(e) {
                 e.stopPropagation()
             }(l = s || (s = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM";
-            var x = i.forwardRef(function(e, t) {
+            var M = i.forwardRef(function(e, t) {
                 let {
                     id: a,
                     channelId: l,
                     className: s,
                     children: i,
                     actions: r,
-                    handleEditModal: x,
+                    handleEditModal: M,
                     keyboardModeEnabled: E,
                     onKeyDown: j,
                     draftType: A,
@@ -364,7 +364,7 @@
                                         e.preventDefault(), c.default.remove(l, a, A);
                                         return;
                                     case f.KeyboardKeys.E:
-                                        null != x && (e.preventDefault(), x(e));
+                                        null != M && (e.preventDefault(), M(e));
                                         return;
                                     case f.KeyboardKeys.BACKSPACE:
                                         e.ctrlKey ? (e.preventDefault(), c.default.clearAll(l, A)) : (e.preventDefault(), c.default.remove(l, a, A));
@@ -389,7 +389,7 @@
                                     className: o(v.actionBar, {
                                         [v.smallActionBar]: C
                                     }),
-                                    onContextMenu: M,
+                                    onContextMenu: x,
                                     "aria-label": g.default.Messages.ATTACHMENT_UTILITIES,
                                     children: (0, n.jsx)(m.default, {
                                         className: o({
@@ -430,10 +430,10 @@
             "use strict";
             a.r(t), a.d(t, {
                 UploadIcon: function() {
-                    return I
+                    return T
                 },
                 default: function() {
-                    return C
+                    return I
                 }
             }), a("222007"), a("511434"), a("313619"), a("654714"), a("287168"), a("956660");
             var l = a("37983"),
@@ -444,42 +444,41 @@
                 o = a("81594"),
                 d = a("467339"),
                 u = a("966724"),
-                c = a("474643"),
-                m = a("505684"),
-                h = a("462579"),
-                p = a("867544"),
-                f = a("987772"),
-                g = a("228220"),
-                v = a("58608"),
-                M = a("103603"),
+                c = a("505684"),
+                m = a("462579"),
+                h = a("867544"),
+                p = a("987772"),
+                f = a("228220"),
+                g = a("58608"),
+                v = a("103603"),
                 x = a("9560"),
-                E = a("271972"),
-                j = a("782340"),
-                A = a("454101");
-            let L = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
+                M = a("271972"),
+                E = a("782340"),
+                j = a("454101");
+            let A = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
 
-            function N(e) {
+            function L(e) {
                 let {
                     alt: t,
                     spoiler: a,
                     renderContent: n
                 } = e, [i, r] = s.useState(!1);
-                return (0, l.jsx)(m.ObscuredDisplayContext.Provider, {
+                return (0, l.jsx)(c.ObscuredDisplayContext.Provider, {
                     value: !a,
-                    children: (0, l.jsx)(m.default, {
-                        type: m.default.Types.ATTACHMENT,
+                    children: (0, l.jsx)(c.default, {
+                        type: c.default.Types.ATTACHMENT,
                         onReveal: () => r(!0),
-                        className: A.spoilerContainer,
+                        className: j.spoilerContainer,
                         children: e => (0, l.jsxs)("div", {
-                            className: A.spoilerWrapper,
+                            className: j.spoilerWrapper,
                             children: [n(e), (0, l.jsxs)("div", {
-                                className: A.tags,
+                                className: j.tags,
                                 children: [null != t && "" !== t ? (0, l.jsx)("span", {
-                                    className: A.altTag,
-                                    children: j.default.Messages.IMAGE_ALT
+                                    className: j.altTag,
+                                    children: E.default.Messages.IMAGE_ALT
                                 }) : null, i && a ? (0, l.jsx)("span", {
-                                    className: A.altTag,
-                                    children: j.default.Messages.SPOILER
+                                    className: j.altTag,
+                                    children: E.default.Messages.SPOILER
                                 }) : null]
                             })]
                         })
@@ -487,19 +486,19 @@
                 })
             }
 
-            function S(e) {
+            function N(e) {
                 let {
                     file: t,
                     alt: a,
                     spoiler: n,
-                    size: o = E.AttachmentListItemSizes.MEDIUM,
+                    size: o = M.AttachmentListItemSizes.MEDIUM,
                     onMouseEnter: d
                 } = e, [u, c] = s.useState(), [m, h] = s.useState({
                     width: 0,
                     height: 0
-                }), p = o === E.AttachmentListItemSizes.SMALL;
+                }), p = o === M.AttachmentListItemSizes.SMALL;
                 s.useEffect(() => {
-                    if (null == t || !1 === L.includes(t.type)) return;
+                    if (null == t || !1 === A.includes(t.type)) return;
                     let e = URL.createObjectURL(t);
                     c(e);
                     let a = new Image;
@@ -507,7 +506,7 @@
                         let {
                             width: e,
                             height: t
-                        } = (0, M.zoomFit)(a.width, a.height);
+                        } = (0, v.zoomFit)(a.width, a.height);
                         h({
                             width: e,
                             height: t
@@ -523,9 +522,9 @@
                         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                         return null == u ? (0, l.jsx)(l.Fragment, {}) : (0, l.jsx)("img", {
                             src: u,
-                            className: i(A.media, {
-                                [A.spoiler]: e,
-                                [A.imageSmall]: p
+                            className: i(j.media, {
+                                [j.spoiler]: e,
+                                [j.imageSmall]: p
                             }),
                             "aria-hidden": !0,
                             alt: null != a ? a : "",
@@ -534,22 +533,22 @@
                     }, [u, p, a, m]),
                     g = s.useCallback(() => {
                         null != u && (0, r.openModal)(e => (0, l.jsx)(r.ModalRoot, {
-                            className: A.modal,
+                            className: j.modal,
                             ...e,
                             size: r.ModalSize.DYNAMIC,
-                            "aria-label": j.default.Messages.IMAGE,
+                            "aria-label": E.default.Messages.IMAGE,
                             children: f(!1, !0)
                         }))
                     }, [u, f]);
                 return (0, l.jsx)("div", {
                     onMouseEnter: d,
-                    className: i(A.mediaContainer, {
-                        [A.imageSmall]: p
+                    className: i(j.mediaContainer, {
+                        [j.imageSmall]: p
                     }),
                     children: (0, l.jsx)(r.Clickable, {
                         onClick: g,
-                        className: A.clickableMedia,
-                        children: (0, l.jsx)(N, {
+                        className: j.clickableMedia,
+                        children: (0, l.jsx)(L, {
                             alt: a,
                             spoiler: n,
                             renderContent: f
@@ -558,7 +557,7 @@
                 })
             }
 
-            function T(e) {
+            function S(e) {
                 let {
                     file: t,
                     alt: a,
@@ -574,15 +573,15 @@
                     }
                 }, [t]), (0, l.jsx)("div", {
                     onMouseEnter: r,
-                    className: A.mediaContainer,
-                    children: (0, l.jsx)(N, {
+                    className: j.mediaContainer,
+                    children: (0, l.jsx)(L, {
                         alt: a,
                         spoiler: n,
-                        renderContent: e => (0, l.jsx)(v.default, {
+                        renderContent: e => (0, l.jsx)(g.default, {
                             ref: c,
                             src: d,
-                            className: i(A.media, {
-                                [A.spoiler]: e
+                            className: i(j.media, {
+                                [j.spoiler]: e
                             }),
                             onError: o,
                             preload: "none",
@@ -592,20 +591,20 @@
                 })
             }
 
-            function I(e) {
+            function T(e) {
                 var t;
                 let {
                     upload: a,
-                    size: n = E.AttachmentListItemSizes.MEDIUM,
+                    size: n = M.AttachmentListItemSizes.MEDIUM,
                     onMouseEnter: r
-                } = e, [o, d] = s.useState(!1), c = n === E.AttachmentListItemSizes.SMALL;
-                return a.isImage && a.item.platform === u.UploadPlatform.WEB ? (0, l.jsx)(S, {
+                } = e, [o, d] = s.useState(!1), c = n === M.AttachmentListItemSizes.SMALL;
+                return a.isImage && a.item.platform === u.UploadPlatform.WEB ? (0, l.jsx)(N, {
                     file: a.item.file,
                     alt: a.description,
                     spoiler: a.spoiler,
                     size: n,
                     onMouseEnter: r
-                }) : !o && a.isVideo && a.item.platform === u.UploadPlatform.WEB ? (0, l.jsx)(T, {
+                }) : !o && a.isVideo && a.item.platform === u.UploadPlatform.WEB ? (0, l.jsx)(S, {
                     file: a.item.file,
                     alt: a.description,
                     spoiler: a.spoiler,
@@ -613,34 +612,34 @@
                     onVideoLoadError: () => d(!0)
                 }) : (0, l.jsx)("div", {
                     onMouseEnter: r,
-                    className: i(A.icon, A.imageContainer, {
-                        [A[null !== (t = a.classification) && void 0 !== t ? t : ""]]: !0,
-                        [A.imageSmall]: c
+                    className: i(j.icon, j.imageContainer, {
+                        [j[null !== (t = a.classification) && void 0 !== t ? t : ""]]: !0,
+                        [j.imageSmall]: c
                     }),
                     children: (0, l.jsx)("div", {
-                        className: A.tags,
+                        className: j.tags,
                         children: a.spoiler ? (0, l.jsx)("span", {
-                            className: A.altTag,
-                            children: j.default.Messages.SPOILER
+                            className: j.altTag,
+                            children: E.default.Messages.SPOILER
                         }) : null
                     })
                 })
             }
 
-            function C(e) {
+            function I(e) {
                 let {
                     channelId: t,
                     draftType: a,
                     upload: n,
                     keyboardModeEnabled: u,
-                    label: m,
-                    size: v = E.AttachmentListItemSizes.MEDIUM,
-                    canEdit: M = !0,
-                    hideFileName: L = !1
-                } = e, N = v === E.AttachmentListItemSizes.SMALL, S = e => {
+                    label: c,
+                    size: g = M.AttachmentListItemSizes.MEDIUM,
+                    canEdit: v = !0,
+                    hideFileName: A = !1
+                } = e, L = g === M.AttachmentListItemSizes.SMALL, N = e => {
                     e.stopPropagation(), (0, r.openModal)(e => (0, l.jsx)(d.default, {
                         ...e,
-                        draftType: c.DraftType.ChannelMessage,
+                        draftType: a,
                         upload: n,
                         channelId: t,
                         onSubmit: e => {
@@ -657,46 +656,46 @@
                         }
                     }))
                 };
-                return (0, l.jsxs)(E.default, {
+                return (0, l.jsxs)(M.default, {
                     actions: (0, l.jsxs)(s.Fragment, {
-                        children: [M ? (0, l.jsx)(x.default, {
+                        children: [v ? (0, l.jsx)(x.default, {
                             className: i({
-                                [A.action]: N
+                                [j.action]: L
                             }),
-                            tooltip: j.default.Messages.ATTACHMENT_UTILITIES_SPOILER,
+                            tooltip: E.default.Messages.ATTACHMENT_UTILITIES_SPOILER,
                             onClick: () => o.default.update(t, n.id, a, {
                                 spoiler: !n.spoiler
                             }),
-                            children: n.spoiler ? (0, l.jsx)(p.default, {
+                            children: n.spoiler ? (0, l.jsx)(h.default, {
                                 className: i({
-                                    [A.actionBarIcon]: N
+                                    [j.actionBarIcon]: L
                                 })
-                            }) : (0, l.jsx)(h.default, {
+                            }) : (0, l.jsx)(m.default, {
                                 className: i({
-                                    [A.actionBarIcon]: N
+                                    [j.actionBarIcon]: L
                                 })
                             })
-                        }) : null, M ? (0, l.jsx)(x.default, {
+                        }) : null, v ? (0, l.jsx)(x.default, {
                             className: i({
-                                [A.action]: N
+                                [j.action]: L
                             }),
-                            tooltip: j.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
-                            onClick: S,
-                            children: (0, l.jsx)(f.default, {
+                            tooltip: E.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
+                            onClick: N,
+                            children: (0, l.jsx)(p.default, {
                                 className: i({
-                                    [A.actionBarIcon]: N
+                                    [j.actionBarIcon]: L
                                 })
                             })
                         }) : null, (0, l.jsx)(x.default, {
                             className: i({
-                                [A.action]: N
+                                [j.action]: L
                             }),
-                            tooltip: j.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
+                            tooltip: E.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
                             onClick: () => o.default.remove(t, n.id, a),
                             dangerous: !0,
-                            children: (0, l.jsx)(g.default, {
+                            children: (0, l.jsx)(f.default, {
                                 className: i({
-                                    [A.actionBarIcon]: N
+                                    [j.actionBarIcon]: L
                                 })
                             })
                         })]
@@ -704,21 +703,21 @@
                     draftType: a,
                     id: n.id,
                     channelId: t,
-                    handleEditModal: S,
+                    handleEditModal: N,
                     keyboardModeEnabled: u,
-                    size: v,
+                    size: g,
                     className: i({
-                        [A.attachmentItemSmall]: N
+                        [j.attachmentItemSmall]: L
                     }),
-                    children: [(0, l.jsx)(I, {
+                    children: [(0, l.jsx)(T, {
                         upload: n,
-                        size: v
-                    }), !L && (0, l.jsx)("div", {
-                        className: A.filenameContainer,
+                        size: g
+                    }), !A && (0, l.jsx)("div", {
+                        className: j.filenameContainer,
                         children: (0, l.jsx)(r.Text, {
-                            className: A.filename,
+                            className: j.filename,
                             variant: "text-sm/normal",
-                            children: null != m ? m : n.filename
+                            children: null != c ? c : n.filename
                         })
                     })]
                 })
