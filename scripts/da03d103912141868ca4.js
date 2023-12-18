@@ -898,13 +898,13 @@
                 g = n("601131"),
                 N = n("47495"),
                 v = n("834052"),
-                T = n("715243"),
-                A = n("458574"),
+                A = n("715243"),
+                T = n("458574"),
                 h = n("963150"),
                 I = n("308798"),
                 C = n("47006"),
-                O = n("809259"),
-                M = n("878526"),
+                M = n("809259"),
+                O = n("878526"),
                 U = n("44141"),
                 L = n("531674"),
                 b = n("619436"),
@@ -923,7 +923,7 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, o = t.isGuildStageVoice(), r = (0, a.useStateFromStores)([v.default], () => o ? v.default.getStageInstanceByChannel(t.id) : void 0, [o, t.id]), f = (0, A.default)(t), m = (0, S.useActiveEvent)(t.id), T = (0, g.default)(null == m ? void 0 : m.id, n, t), h = (0, R.default)(t, r), I = (0, p.useAddToFavoritesItem)(t), M = (0, p.useRemoveFromFavoritesItem)(t), U = (0, _.default)(t), L = (0, E.default)(t), D = (0, O.default)(t), G = (0, b.default)(t), F = (0, C.default)(t), P = (0, V.default)(t, n), k = (0, c.default)({
+                } = e, o = t.isGuildStageVoice(), r = (0, a.useStateFromStores)([v.default], () => o ? v.default.getStageInstanceByChannel(t.id) : void 0, [o, t.id]), f = (0, T.default)(t), m = (0, S.useActiveEvent)(t.id), A = (0, g.default)(null == m ? void 0 : m.id, n, t), h = (0, R.default)(t, r), I = (0, p.useAddToFavoritesItem)(t), O = (0, p.useRemoveFromFavoritesItem)(t), U = (0, _.default)(t), L = (0, E.default)(t), D = (0, M.default)(t), G = (0, b.default)(t), F = (0, C.default)(t), P = (0, V.default)(t, n), k = (0, c.default)({
                     id: t.id,
                     label: w.default.Messages.COPY_ID_CHANNEL
                 }), j = (0, x.default)(t), H = (0, d.default)(t), B = (0, N.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuFavorite"), Y = (0, y.default)(t);
@@ -933,7 +933,7 @@
                     "aria-label": w.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: l,
                     children: [(0, i.jsx)(s.MenuGroup, {
-                        children: null != m ? T : h
+                        children: null != m ? A : h
                     }), (0, i.jsxs)(s.MenuGroup, {
                         children: [L, U, I]
                     }), (0, i.jsxs)(s.MenuGroup, {
@@ -941,7 +941,7 @@
                     }), (0, i.jsx)(s.MenuGroup, {
                         children: H
                     }), (0, i.jsx)(s.MenuGroup, {
-                        children: M
+                        children: O
                     }), (0, i.jsxs)(s.MenuGroup, {
                         children: [P, f]
                     }), (0, i.jsx)(s.MenuGroup, {
@@ -957,7 +957,7 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, o = t.isGuildStageVoice(), r = (0, a.useStateFromStores)([v.default], () => o ? v.default.getStageInstanceByChannel(t.id) : void 0, [o, t.id]), f = (0, U.default)(t), _ = (0, A.default)(t), E = (0, S.useActiveEvent)(t.id), P = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, R.default)(t, r), j = (0, p.useAddToFavoritesItem)(t), H = (0, p.useRemoveFromFavoritesItem)(t), B = (0, O.default)(t), Y = (0, b.default)(t), W = (0, C.default)(t), K = (0, M.default)(t, n, r), q = (0, V.default)(t, n), Q = (0, G.default)(t, n), Z = (0, F.default)(t, n.id), X = (0, T.default)(t, n), z = (0, h.default)(t, n), J = (0, I.default)(t), $ = (0, c.default)({
+                } = e, o = t.isGuildStageVoice(), r = (0, a.useStateFromStores)([v.default], () => o ? v.default.getStageInstanceByChannel(t.id) : void 0, [o, t.id]), f = (0, U.default)(t), _ = (0, T.default)(t), E = (0, S.useActiveEvent)(t.id), P = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, R.default)(t, r), j = (0, p.useAddToFavoritesItem)(t), H = (0, p.useRemoveFromFavoritesItem)(t), B = (0, M.default)(t), Y = (0, b.default)(t), W = (0, C.default)(t), K = (0, O.default)(t, n, r), q = (0, V.default)(t, n), Q = (0, G.default)(t, n), Z = (0, F.default)(t, n.id), X = (0, A.default)(t, n), z = (0, h.default)(t, n), J = (0, I.default)(t), $ = (0, c.default)({
                     id: t.id,
                     label: w.default.Messages.COPY_ID_CHANNEL
                 }), ee = (0, x.default)(t), et = (0, d.default)(t), en = (0, D.default)(t), ei = (0, m.default)(t), ea = (0, L.default)(t), es = (0, N.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuNormal"), eu = (0, y.default)(t);
@@ -1755,11 +1755,17 @@
         567707: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                default: function() {
-                    return i
+                getLockscreenWidgetConfig: function() {
+                    return l
+                },
+                useLockscreenWidgetConfig: function() {
+                    return o
                 }
             });
-            var i = (0, n("862205").createExperiment)({
+            var i = n("249654"),
+                a = n("862205"),
+                s = n("718517");
+            let u = (0, a.createExperiment)({
                 kind: "guild",
                 id: "2023-12_voice_lockscreen_widget",
                 label: "Voice live activity (guild)",
@@ -1789,7 +1795,29 @@
                         voiceChannelActivityNotifsEnabled: !0
                     }
                 }]
-            })
+            });
+
+            function l(e, t) {
+                let n = i.default.age(e) >= 30 * s.default.Millis.DAY;
+                return u.getCurrentConfig({
+                    location: t,
+                    guildId: e
+                }, {
+                    disable: n,
+                    autoTrackExposure: !0
+                })
+            }
+
+            function o(e, t, n) {
+                let a = i.default.age(e) >= 30 * s.default.Millis.DAY;
+                return u.useExperiment({
+                    location: t,
+                    guildId: e
+                }, {
+                    disable: a,
+                    autoTrackExposure: n
+                })
+            }
         },
         242757: function(e, t, n) {
             "use strict";
@@ -1862,13 +1890,7 @@
                     autoTrackExposure: !1
                 }), {
                     voiceChannelActivityNotifsEnabled: o
-                } = a.default.useExperiment({
-                    location: "useVoiceActivityNotificationSettingsExperiment",
-                    guildId: null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : ""
-                }, {
-                    disable: (null == e ? void 0 : e.type) !== s.ChannelTypes.GUILD_VOICE,
-                    autoTrackExposure: !1
-                }), {
+                } = (0, a.useLockscreenWidgetConfig)(null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : "", "useVoiceActivityNotificationSettingsExperiment", !1), {
                     enabled: d
                 } = u.useExperiment({
                     location: "useVoiceActivityNotificationSettingsExperiment"
@@ -1880,19 +1902,14 @@
             }
 
             function d(e) {
-                var t, n;
+                var t;
                 let {
-                    voiceChannelActivityNotifsEnabled: i
+                    voiceChannelActivityNotifsEnabled: n
                 } = l.getCurrentConfig({
                     guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : "",
                     location: "hasVoiceChannelActivityNotifsEnabled"
-                }), {
-                    voiceChannelActivityNotifsEnabled: s
-                } = a.default.getCurrentConfig({
-                    guildId: null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : "",
-                    location: "hasVoiceChannelActivityNotifsEnabled"
-                });
-                return i || s
+                }), i = null != e && null != e.guild_id && (0, a.getLockscreenWidgetConfig)(e.guild_id, "hasVoiceChannelActivityNotifsEnabled").voiceChannelActivityNotifsEnabled;
+                return n || i
             }
         },
         168067: function(e, t, n) {
@@ -2059,10 +2076,10 @@
                     return v
                 },
                 moveSelfToAudience: function() {
-                    return T
+                    return A
                 },
                 setUserSuppress: function() {
-                    return A
+                    return T
                 },
                 moveUserToAudience: function() {
                     return h
@@ -2074,10 +2091,10 @@
                     return C
                 },
                 editStage: function() {
-                    return O
+                    return M
                 },
                 endStage: function() {
-                    return M
+                    return O
                 }
             });
             var i = n("627445"),
@@ -2143,7 +2160,7 @@
                 })
             }
 
-            function T(e) {
+            function A(e) {
                 let t = null == e ? void 0 : e.getGuildId();
                 return a(null != t, "This channel cannot be guildless."), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(t),
@@ -2156,7 +2173,7 @@
                 })
             }
 
-            function A(e, t, n) {
+            function T(e, t, n) {
                 let i = e.getGuildId();
                 return a(null != i, "This channel cannot be guildless."), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(i, t),
@@ -2170,7 +2187,7 @@
             function h(e, t) {
                 if (null == t || null == e) return;
                 let n = t.getGuildId();
-                return a(null != n, "This channel cannot be guildless."), A(t, e.id, !0), u.default.patch({
+                return a(null != n, "This channel cannot be guildless."), T(t, e.id, !0), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n, e.id),
                     body: {
                         suppress: !0,
@@ -2201,12 +2218,12 @@
                 let s = await (0, E.startStageInstance)(e.id, t, n, i);
                 return v(e, !1, !0), s
             }
-            async function O(e, t, n) {
+            async function M(e, t, n) {
                 if ("" === t) return;
                 let i = await (0, E.updateStageInstance)(e.id, t, n);
                 return i
             }
-            async function M(e) {
+            async function O(e) {
                 await (0, E.endStageInstance)(e.id)
             }
         },

@@ -97,17 +97,17 @@
                 M = n("531674"),
                 S = n("619436"),
                 T = n("625399"),
-                v = n("339876"),
+                L = n("339876"),
                 h = n("782340");
 
-            function O(e) {
+            function v(e) {
                 let {
                     channel: t,
                     onSelect: n
-                } = e, s = (0, A.default)(t), u = (0, M.default)(t), o = (0, S.default)(t), E = (0, _.default)(t), N = (0, f.default)(t), C = (0, d.default)(t), v = (0, g.default)(t), O = (0, r.default)({
+                } = e, s = (0, A.default)(t), u = (0, M.default)(t), o = (0, S.default)(t), E = (0, _.default)(t), N = (0, f.default)(t), C = (0, d.default)(t), L = (0, g.default)(t), v = (0, r.default)({
                     id: t.id,
                     label: h.default.Messages.COPY_ID_CHANNEL
-                }), L = (0, c.useShouldUseNewNotificationSystem)("ChannelCategoryFavoritesMenu"), p = (0, T.default)(t);
+                }), O = (0, c.useShouldUseNewNotificationSystem)("ChannelCategoryFavoritesMenu"), p = (0, T.default)(t);
                 return (0, a.jsxs)(i.Menu, {
                     navId: "channel-context",
                     onClose: l.closeContextMenu,
@@ -116,26 +116,26 @@
                     children: [(0, a.jsx)(i.MenuGroup, {
                         children: s
                     }), (0, a.jsxs)(i.MenuGroup, {
-                        children: [u, L ? p : o]
+                        children: [u, O ? p : o]
                     }), (0, a.jsxs)(i.MenuGroup, {
                         children: [E, N, C]
                     }), (0, a.jsx)(i.MenuGroup, {
-                        children: v
+                        children: L
                     }), (0, a.jsx)(i.MenuGroup, {
-                        children: O
+                        children: v
                     })]
                 })
             }
 
-            function L(e) {
+            function O(e) {
                 let {
                     channel: t,
                     guild: n,
                     onSelect: s
-                } = e, u = (0, A.default)(t), o = (0, M.default)(t), g = (0, S.default)(t), O = (0, _.default)(t), L = (0, f.default)(t), p = (0, C.default)(t), U = (0, d.default)(t), I = (0, E.default)(t, n), y = (0, N.default)(t), m = (0, r.default)({
+                } = e, u = (0, A.default)(t), o = (0, M.default)(t), g = (0, S.default)(t), v = (0, _.default)(t), O = (0, f.default)(t), p = (0, C.default)(t), U = (0, d.default)(t), I = (0, E.default)(t, n), y = (0, N.default)(t), m = (0, r.default)({
                     id: t.id,
                     label: h.default.Messages.COPY_ID_CHANNEL
-                }), R = (0, v.default)(t), G = (0, c.useShouldUseNewNotificationSystem)("ChannelCategoryNormalMenu"), b = (0, T.default)(t);
+                }), R = (0, L.default)(t), b = (0, c.useShouldUseNewNotificationSystem)("ChannelCategoryNormalMenu"), G = (0, T.default)(t);
                 return (0, a.jsxs)(i.Menu, {
                     navId: "channel-context",
                     onClose: l.closeContextMenu,
@@ -144,9 +144,9 @@
                     children: [(0, a.jsx)(i.MenuGroup, {
                         children: u
                     }, "mark-as-read"), (0, a.jsxs)(i.MenuGroup, {
-                        children: [R, O, L]
+                        children: [R, v, O]
                     }, "channel-actions"), (0, a.jsxs)(i.MenuGroup, {
-                        children: [o, G ? b : g]
+                        children: [o, b ? G : g]
                     }, "notifications"), (0, a.jsxs)(i.MenuGroup, {
                         children: [p, U, I, y]
                     }, "admin-actions"), (0, a.jsx)(i.MenuGroup, {
@@ -156,9 +156,9 @@
             }
             var p = (0, s.default)(function(e) {
                 let t = (0, o.default)();
-                return t ? (0, a.jsx)(O, {
+                return t ? (0, a.jsx)(v, {
                     ...e
-                }) : (0, a.jsx)(L, {
+                }) : (0, a.jsx)(O, {
                     ...e
                 })
             }, [u.default.CONTEXT_MENU, u.default.CHANNEL_CATEGORY_MENU])
@@ -876,11 +876,17 @@
         567707: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                default: function() {
-                    return a
+                getLockscreenWidgetConfig: function() {
+                    return u
+                },
+                useLockscreenWidgetConfig: function() {
+                    return r
                 }
             });
-            var a = (0, n("862205").createExperiment)({
+            var a = n("249654"),
+                i = n("862205"),
+                l = n("718517");
+            let s = (0, i.createExperiment)({
                 kind: "guild",
                 id: "2023-12_voice_lockscreen_widget",
                 label: "Voice live activity (guild)",
@@ -910,7 +916,29 @@
                         voiceChannelActivityNotifsEnabled: !0
                     }
                 }]
-            })
+            });
+
+            function u(e, t) {
+                let n = a.default.age(e) >= 30 * l.default.Millis.DAY;
+                return s.getCurrentConfig({
+                    location: t,
+                    guildId: e
+                }, {
+                    disable: n,
+                    autoTrackExposure: !0
+                })
+            }
+
+            function r(e, t, n) {
+                let i = a.default.age(e) >= 30 * l.default.Millis.DAY;
+                return s.useExperiment({
+                    location: t,
+                    guildId: e
+                }, {
+                    disable: i,
+                    autoTrackExposure: n
+                })
+            }
         },
         721281: function(e, t, n) {
             "use strict";
@@ -968,13 +996,7 @@
                     autoTrackExposure: !1
                 }), {
                     voiceChannelActivityNotifsEnabled: r
-                } = i.default.useExperiment({
-                    location: "useVoiceActivityNotificationSettingsExperiment",
-                    guildId: null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : ""
-                }, {
-                    disable: (null == e ? void 0 : e.type) !== l.ChannelTypes.GUILD_VOICE,
-                    autoTrackExposure: !1
-                }), {
+                } = (0, i.useLockscreenWidgetConfig)(null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : "", "useVoiceActivityNotificationSettingsExperiment", !1), {
                     enabled: o
                 } = s.useExperiment({
                     location: "useVoiceActivityNotificationSettingsExperiment"
@@ -986,19 +1008,14 @@
             }
 
             function o(e) {
-                var t, n;
+                var t;
                 let {
-                    voiceChannelActivityNotifsEnabled: a
+                    voiceChannelActivityNotifsEnabled: n
                 } = u.getCurrentConfig({
                     guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : "",
                     location: "hasVoiceChannelActivityNotifsEnabled"
-                }), {
-                    voiceChannelActivityNotifsEnabled: l
-                } = i.default.getCurrentConfig({
-                    guildId: null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : "",
-                    location: "hasVoiceChannelActivityNotifsEnabled"
-                });
-                return a || l
+                }), a = null != e && null != e.guild_id && (0, i.getLockscreenWidgetConfig)(e.guild_id, "hasVoiceChannelActivityNotifsEnabled").voiceChannelActivityNotifsEnabled;
+                return n || a
             }
         }
     }
