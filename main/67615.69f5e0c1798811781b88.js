@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["89562"], {
+    ["67615"], {
         273215: function(e, t, n) {
             "use strict";
             e.exports = n.p + "63900a1ba1f23d305c53.png"
@@ -3577,29 +3577,27 @@
             }
 
             function o(e, t) {
-                var n;
-                let a = (0, i.useStateFromStores)([l.default], () => l.default.getChannel(e)),
-                    u = (null == a ? void 0 : a.guild_id) != null ? r : s,
-                    o = u.useExperiment({
-                        guildId: null !== (n = null == a ? void 0 : a.guild_id) && void 0 !== n ? n : "",
+                let n = (0, i.useStateFromStores)([l.default], () => l.default.getChannel(e)),
+                    a = (null == n ? void 0 : n.guild_id) != null ? r : s,
+                    u = a.useExperiment({
+                        guildId: null == n ? void 0 : n.guild_id,
                         location: t
                     }, {
                         autoTrackExposure: !1
                     });
-                return o.enabled
+                return u.enabled
             }
 
             function d(e, t) {
-                var n;
-                let a = (0, i.useStateFromStores)([l.default], () => l.default.getChannel(e)),
-                    u = (null == a ? void 0 : a.guild_id) != null ? r : s,
-                    o = u.useExperiment({
-                        guildId: null !== (n = null == a ? void 0 : a.guild_id) && void 0 !== n ? n : "",
+                let n = (0, i.useStateFromStores)([l.default], () => l.default.getChannel(e)),
+                    a = (null == n ? void 0 : n.guild_id) != null ? r : s,
+                    u = a.useExperiment({
+                        guildId: null == n ? void 0 : n.guild_id,
                         location: t
                     }, {
                         autoTrackExposure: !1
                     });
-                return o.actionBarEnabled
+                return u.actionBarEnabled
             }
         },
         810793: function(e, t, n) {

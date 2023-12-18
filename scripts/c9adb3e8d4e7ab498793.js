@@ -6766,45 +6766,44 @@
                 T = n("621262");
 
             function v(e) {
-                var t;
                 let {
-                    channel: n,
-                    hasActiveStream: l,
-                    themeable: v = !1
-                } = e, x = (0, i.useStateFromStores)([h.default], () => {
+                    channel: t,
+                    hasActiveStream: n,
+                    themeable: l = !1
+                } = e, v = (0, i.useStateFromStores)([h.default], () => {
                     let e = h.default.getCurrentUser();
                     return s(null != e, "CenterControlTray: currentUser cannot be undefined"), e
-                }), N = (0, u.default)(), {
-                    isSharedCanvasEnabled: A
+                }), x = (0, u.default)(), {
+                    isSharedCanvasEnabled: N
                 } = d.default.useExperiment({
-                    guildId: null !== (t = null == n ? void 0 : n.guild_id) && void 0 !== t ? t : "",
+                    guildId: null == t ? void 0 : t.guild_id,
                     location: "b7309a_1"
                 }), {
-                    enableViewerClipping: M
+                    enableViewerClipping: A
                 } = o.default.useExperiment({
                     location: "VoiceEffectsActionBar"
                 }, {
                     autoTrackExposure: !1
-                }), R = (0, r.default)(f.default);
-                if (null == n || null != N) return null;
-                let j = (0, c.default)(n),
-                    L = p.default.can({
+                }), M = (0, r.default)(f.default);
+                if (null == t || null != x) return null;
+                let R = (0, c.default)(t),
+                    j = p.default.can({
                         permission: I.Permissions.ADD_REACTIONS,
-                        user: x,
-                        context: n
+                        user: v,
+                        context: t
                     });
                 return (0, a.jsxs)("div", {
                     className: T.voiceEffectsActionBar,
-                    children: [j && (0, a.jsx)(S.default, {
-                        channel: n,
-                        themeable: v
-                    }), L && (0, a.jsx)(g.default, {
-                        channel: n
-                    }), M && R && (0, a.jsx)(m.default, {
-                        channel: n
-                    }), A && l && (0, a.jsx)(E.default, {}), A && l && (0, a.jsx)(C.default, {
-                        channel: n
-                    }), A && l && (0, a.jsx)(_.default, {})]
+                    children: [R && (0, a.jsx)(S.default, {
+                        channel: t,
+                        themeable: l
+                    }), j && (0, a.jsx)(g.default, {
+                        channel: t
+                    }), A && M && (0, a.jsx)(m.default, {
+                        channel: t
+                    }), N && n && (0, a.jsx)(E.default, {}), N && n && (0, a.jsx)(C.default, {
+                        channel: t
+                    }), N && n && (0, a.jsx)(_.default, {})]
                 })
             }
         },
