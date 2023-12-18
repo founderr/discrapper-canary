@@ -4654,8 +4654,7 @@
                     initialHeaderLevel: m
                 }), [c, f, m]);
                 return (0, a.jsx)(r.Text, {
-                    className: i(n, {
-                        [d.markup]: null == f,
+                    className: i(n, d.markup, {
                         [u.lineClamp2Plus]: null != f && f > 1,
                         [u.lineClamp1]: 1 === f
                     }),

@@ -70,7 +70,7 @@
                 r = Math.max,
                 s = Math.min;
             e.exports = function(e, t, A) {
-                var o, i, u, d, c, f, C = 0,
+                var o, i, d, u, c, f, C = 0,
                     g = !1,
                     h = !1,
                     T = !0;
@@ -79,24 +79,24 @@
                 function m(t) {
                     var A = o,
                         a = i;
-                    return o = i = void 0, C = t, d = e.apply(a, A)
+                    return o = i = void 0, C = t, u = e.apply(a, A)
                 }
-                t = n(t) || 0, a(A) && (g = !!A.leading, u = (h = "maxWait" in A) ? r(n(A.maxWait) || 0, t) : u, T = "trailing" in A ? !!A.trailing : T);
+                t = n(t) || 0, a(A) && (g = !!A.leading, d = (h = "maxWait" in A) ? r(n(A.maxWait) || 0, t) : d, T = "trailing" in A ? !!A.trailing : T);
 
                 function p(e) {
                     var A = e - f,
                         a = e - C;
-                    return void 0 === f || A >= t || A < 0 || h && a >= u
+                    return void 0 === f || A >= t || A < 0 || h && a >= d
                 }
 
                 function U() {
                     var e, A, a, n, r = l();
                     if (p(r)) return I(r);
-                    c = setTimeout(U, (A = (e = r) - f, a = e - C, n = t - A, h ? s(n, u - a) : n))
+                    c = setTimeout(U, (A = (e = r) - f, a = e - C, n = t - A, h ? s(n, d - a) : n))
                 }
 
                 function I(e) {
-                    return (c = void 0, T && o) ? m(e) : (o = i = void 0, d)
+                    return (c = void 0, T && o) ? m(e) : (o = i = void 0, u)
                 }
 
                 function v() {
@@ -105,16 +105,16 @@
                     if (o = arguments, i = this, f = A, a) {
                         if (void 0 === c) {
                             ;
-                            return C = e = f, c = setTimeout(U, t), g ? m(e) : d
+                            return C = e = f, c = setTimeout(U, t), g ? m(e) : u
                         }
                         if (h) return clearTimeout(c), c = setTimeout(U, t), m(f)
                     }
-                    return void 0 === c && (c = setTimeout(U, t)), d
+                    return void 0 === c && (c = setTimeout(U, t)), u
                 }
                 return v.cancel = function() {
                     void 0 !== c && clearTimeout(c), C = 0, o = f = i = c = void 0
                 }, v.flush = function() {
-                    return void 0 === c ? d : I(l())
+                    return void 0 === c ? u : I(l())
                 }, v
             }
         },
@@ -165,7 +165,7 @@
                 s = /^[-+]0x[0-9a-f]+$/i,
                 o = /^0b[01]+$/i,
                 i = /^0o[0-7]+$/i,
-                u = parseInt;
+                d = parseInt;
             e.exports = function(e) {
                 if ("number" == typeof e) return e;
                 if (n(e)) return r;
@@ -176,7 +176,7 @@
                 if ("string" != typeof e) return 0 === e ? e : +e;
                 e = a(e);
                 var A = o.test(e);
-                return A || i.test(e) ? u(e.slice(2), A ? 2 : 8) : s.test(e) ? r : +e
+                return A || i.test(e) ? d(e.slice(2), A ? 2 : 8) : s.test(e) ? r : +e
             }
         },
         606863: function(e, t, A) {
@@ -225,8 +225,8 @@
                 s = A("77078"),
                 o = A("659500"),
                 i = A("49111"),
-                u = A("782340"),
-                d = A("317404"),
+                d = A("782340"),
+                u = A("317404"),
                 c = function(e) {
                     var t;
                     let {
@@ -270,28 +270,28 @@
                         }),
                         q = (0, s.useToken)(r.default.colors.TEXT_DANGER).hex();
                     return (0, a.jsx)(n.animated.div, {
-                        className: d.container,
+                        className: u.container,
                         style: {
                             backgroundColor: N
                         },
                         children: (0, a.jsx)("div", {
-                            className: d.flexContainer,
+                            className: u.flexContainer,
                             ref: I,
                             children: (0, a.jsxs)(s.FocusRingScope, {
                                 containerRef: I,
                                 children: [(0, a.jsx)("div", {
-                                    className: d.shrinkingContainer,
+                                    className: u.shrinkingContainer,
                                     children: (0, a.jsx)(n.animated.div, {
-                                        className: d.message,
+                                        className: u.message,
                                         style: {
                                             color: null != c ? q : x
                                         },
-                                        children: null !== (t = null != c ? c : A) && void 0 !== t ? t : u.default.Messages.SETTINGS_NOTICE_MESSAGE
+                                        children: null !== (t = null != c ? c : A) && void 0 !== t ? t : d.default.Messages.SETTINGS_NOTICE_MESSAGE
                                     })
                                 }), (0, a.jsxs)("div", {
-                                    className: d.actions,
+                                    className: u.actions,
                                     children: [null != C && (0, a.jsx)(s.Button, {
-                                        className: d.resetButton,
+                                        className: u.resetButton,
                                         size: s.Button.Sizes.SMALL,
                                         color: s.Button.Colors.PRIMARY,
                                         look: s.Button.Looks.LINK,
@@ -300,7 +300,7 @@
                                             style: {
                                                 color: x
                                             },
-                                            children: null != T ? T : u.default.Messages.RESET
+                                            children: null != T ? T : d.default.Messages.RESET
                                         })
                                     }), null != g ? (0, a.jsx)(s.Tooltip, {
                                         text: U,
@@ -311,7 +311,7 @@
                                             disabled: p,
                                             onClick: g,
                                             ...e,
-                                            children: null != h ? h : u.default.Messages.SAVE_CHANGES
+                                            children: null != h ? h : d.default.Messages.SAVE_CHANGES
                                         })
                                     }) : null]
                                 })]
@@ -591,15 +591,15 @@
                             body: a,
                             signal: e
                         },
-                        u = "POST" === this._method ? l.default.post : l.default.patch;
+                        d = "POST" === this._method ? l.default.post : l.default.patch;
                     try {
-                        let e = await u(i);
+                        let e = await d(i);
                         return this._handleComplete(e.body), e.body
                     } catch (e) {
-                        var d;
+                        var u;
                         if (this._raiseEndpointErrors) throw new n.APIError(e);
                         this._handleError({
-                            code: null == e ? void 0 : null === (d = e.body) || void 0 === d ? void 0 : d.code,
+                            code: null == e ? void 0 : null === (u = e.body) || void 0 === u ? void 0 : u.code,
                             body: null == e ? void 0 : e.body
                         })
                     }
@@ -625,7 +625,7 @@
             function o(e, t) {
                 let A = (0, l.useStateFromStores)([s.default], () => s.default.getGuildApplication(e, t)),
                     [o, i] = a.useState(null == A),
-                    [u, d] = a.useState(),
+                    [d, u] = a.useState(),
                     [c, f] = a.useState(!1),
                     C = a.useCallback(async () => {
                         if (null == A && null != e) {
@@ -636,7 +636,7 @@
                                     includeTeam: !0
                                 })
                             } catch (e) {
-                                d(new n.APIError(e))
+                                u(new n.APIError(e))
                             } finally {
                                 i(!1)
                             }
@@ -646,7 +646,7 @@
                     !c && C()
                 }, [c, C]), {
                     application: A,
-                    error: u,
+                    error: d,
                     loading: o
                 }
             }
@@ -670,7 +670,7 @@
                     return i
                 },
                 COMMON_CONFETTI_ENVIRONMENT: function() {
-                    return u
+                    return d
                 }
             });
             var a = A("516555"),
@@ -707,7 +707,7 @@
                         maxValue: o
                     }
                 },
-                u = new a.Environment
+                d = new a.Environment
         },
         931164: function(e, t, A) {
             "use strict";
@@ -735,17 +735,17 @@
                         }
                     }
                 },
-                u = s.default.combineAndInjectMentionRule(o, [s.default.createReactRules(s.default.defaultReactRuleOptions), {
+                d = s.default.combineAndInjectMentionRule(o, [s.default.createReactRules(s.default.defaultReactRuleOptions), {
                     header: i
                 }]),
-                d = s.default.reactParserFor(u);
-            var c = d
+                u = s.default.reactParserFor(d);
+            var c = u
         },
         17692: function(e, t, A) {
             "use strict";
             A.r(t), A.d(t, {
                 default: function() {
-                    return d
+                    return u
                 }
             });
             var a = A("37983"),
@@ -755,23 +755,22 @@
                 s = A("77078"),
                 o = A("931164"),
                 i = A("289162"),
-                u = A("632215");
+                d = A("632215");
 
-            function d(e) {
+            function u(e) {
                 let {
                     color: t,
                     className: A,
                     variant: n,
-                    text: d,
+                    text: u,
                     lineClamp: c
-                } = e, f = (0, s.usePrivateHeadingLevel)(), C = l.useMemo(() => null == d ? null : (0, o.default)(d, !0, {
+                } = e, f = (0, s.usePrivateHeadingLevel)(), C = l.useMemo(() => null == u ? null : (0, o.default)(u, !0, {
                     allowHeading: null == c,
                     allowList: null == c,
                     initialHeaderLevel: f
-                }), [d, c, f]);
+                }), [u, c, f]);
                 return (0, a.jsx)(s.Text, {
-                    className: r(A, {
-                        [u.markup]: null == c,
+                    className: r(A, d.markup, {
                         [i.lineClamp2Plus]: null != c && c > 1,
                         [i.lineClamp1]: 1 === c
                     }),
@@ -796,15 +795,15 @@
                 s = A("748820"),
                 o = A("77078"),
                 i = A("149022"),
-                u = A("681060"),
-                d = A("233069"),
+                d = A("681060"),
+                u = A("233069"),
                 c = A("474643"),
                 f = A("49111"),
                 C = A("782340"),
                 g = A("68233"),
                 h = A("253469");
             let T = (0, s.v4)(),
-                m = (0, d.createChannelRecord)({
+                m = (0, u.createChannelRecord)({
                     id: "1",
                     type: f.ChannelTypes.DM
                 });
@@ -840,7 +839,7 @@
                     "aria-labelledby": A,
                     className: n,
                     id: s,
-                    autoFocus: d,
+                    autoFocus: u,
                     maxLength: f,
                     onChange: h,
                     onSubmit: I,
@@ -850,13 +849,13 @@
                     value: N,
                     enableThemedBackground: q = !1,
                     parentModalKey: O
-                } = e, R = (0, o.useFormContext)(), [L, D] = l.useState(() => (0, i.toRichValue)(N)), P = l.useRef(!0 === d), V = null != A ? A : null == R ? void 0 : R.titleId, j = null !== (t = null == R ? void 0 : R.errorId) && void 0 !== t ? t : T, b = l.useMemo(() => ({
+                } = e, R = (0, o.useFormContext)(), [L, D] = l.useState(() => (0, i.toRichValue)(N)), P = l.useRef(!0 === u), V = null != A ? A : null == R ? void 0 : R.titleId, j = null !== (t = null == R ? void 0 : R.errorId) && void 0 !== t ? t : T, b = l.useMemo(() => ({
                     analyticsName: "simple",
                     autocomplete: {
                         alwaysUseLayer: !0,
                         small: !0
                     },
-                    disableAutoFocus: !0 !== d,
+                    disableAutoFocus: !0 !== u,
                     drafts: {
                         type: c.DraftType.ChannelMessage
                     },
@@ -870,8 +869,8 @@
                         useDisabledStylesOnSubmit: !0,
                         disableEnterToSubmit: !0
                     }
-                }), [d]);
-                return (0, a.jsxs)(u.default, {
+                }), [u]);
+                return (0, a.jsxs)(d.default, {
                     "aria-describedby": j,
                     "aria-labelledby": V,
                     innerClassName: r(n, g.textArea),
@@ -994,8 +993,8 @@
                 s = A("448993"),
                 o = A("282928"),
                 i = A("966724"),
-                u = A("142852"),
-                d = A("793825"),
+                d = A("142852"),
+                u = A("793825"),
                 c = A("605250"),
                 f = A("305961"),
                 C = A("572679"),
@@ -1010,7 +1009,7 @@
                     if (this.uploads.length >= A) throw n.AccessibilityAnnouncer.announce(m.default.Messages.GUILD_PRODUCT_A11Y_TOO_MANY_ATTACHMENTS.format({
                         maxAttachmentsCount: A
                     })), Error("Too many attachments");
-                    e.target = u.UploadTargets.GUILD_PRODUCT_ATTACHMENT;
+                    e.target = d.UploadTargets.GUILD_PRODUCT_ATTACHMENT;
                     let a = new o.CloudUpload(e, this.guildId);
                     a.upload(), a.on("error", A => {
                         var l;
@@ -1056,30 +1055,30 @@
                     if (s) throw Error("Cannot create product with failed attachments");
                     "unlinkRole" in n && (t = n.unlinkRole);
                     let i = this.uploads.filter(e => !this.existingAttachmentIds.has(e.id)),
-                        u = this.uploads.filter(e => this.existingAttachmentIds.has(e.id)).map(e => {
+                        d = this.uploads.filter(e => this.existingAttachmentIds.has(e.id)).map(e => {
                             var t;
                             return {
                                 filename: null === (t = e.item.file) || void 0 === t ? void 0 : t.name,
                                 id: e.id
                             }
                         }),
-                        d = await this.createCloudUploader().uploadFiles(i, {
+                        u = await this.createCloudUploader().uploadFiles(i, {
                             ...n,
                             price_tier: A,
                             create_new_role: a,
                             image_name: l,
                             unlink_role: t,
-                            attachments: u.length > 0 ? u : void 0
+                            attachments: d.length > 0 ? d : void 0
                         }, {
                             addFilesTo: "attachments"
                         });
-                    return p.log("Created/updated product:", d), null != d && (this.isEdit ? await r.default.dispatch({
+                    return p.log("Created/updated product:", u), null != u && (this.isEdit ? await r.default.dispatch({
                         type: "GUILD_PRODUCT_UPDATE",
-                        product: d
+                        product: u
                     }) : await r.default.dispatch({
                         type: "GUILD_PRODUCT_CREATE",
-                        product: d
-                    })), d
+                        product: u
+                    })), u
                 }
                 constructor({
                     guildId: e,
@@ -1094,7 +1093,7 @@
                     }, this.isEdit = null != t;
                     let l = null == t ? T.Endpoints.GUILD_PRODUCTS(e) : T.Endpoints.GUILD_PRODUCT_LISTINGS(e, t),
                         n = null == t ? "POST" : "PATCH";
-                    this.createCloudUploader = () => (0, d.createCloudUploader)(l, n), this.guildId = e, this.onFileSizeError = A;
+                    this.createCloudUploader = () => (0, u.createCloudUploader)(l, n), this.guildId = e, this.onFileSizeError = A;
                     let r = null === (a = g.default.getGuildProduct(null != t ? t : "")) || void 0 === a ? void 0 : a.attachments;
                     null != r && (this.uploads = r.map(t => {
                         var A;
@@ -1118,25 +1117,25 @@
                 let {
                     editSkuId: n,
                     onFileSizeError: r
-                } = t, o = (0, l.default)([f.default], () => f.default.getGuild(e)), [i, u] = a.useState({
+                } = t, o = (0, l.default)([f.default], () => f.default.getGuild(e)), [i, d] = a.useState({
                     editSkuId: n,
                     onFileSizeError: r
-                }), d = a.useMemo(() => new U({
+                }), u = a.useMemo(() => new U({
                     guildId: e,
                     ...i
-                }), [e, i]), [c, C] = a.useState(d.generateInitialProgresses), [, g] = a.useState(null);
+                }), [e, i]), [c, C] = a.useState(u.generateInitialProgresses), [, g] = a.useState(null);
                 a.useLayoutEffect(() => {
-                    C(d.generateInitialProgresses())
-                }, [d]);
+                    C(u.generateInitialProgresses())
+                }, [u]);
                 let [h, m] = a.useState(), [p, I] = a.useState(), v = a.useCallback(e => {
-                    d.deleteAttachment(e) && g({})
-                }, [d]), E = a.useCallback(e => {
-                    d.addAttachment(e, C), g({})
-                }, [d]), x = a.useCallback(async e => {
+                    u.deleteAttachment(e) && g({})
+                }, [u]), E = a.useCallback(e => {
+                    u.addAttachment(e, C), g({})
+                }, [u]), x = a.useCallback(async e => {
                     try {
                         m(e), I(void 0);
-                        let t = await d.saveProductWithAttachments(e);
-                        return null != t && u({
+                        let t = await u.saveProductWithAttachments(e);
+                        return null != t && d({
                             editSkuId: t.id,
                             onFileSizeError: r
                         }), g({}), t
@@ -1150,15 +1149,15 @@
                     } finally {
                         m(void 0)
                     }
-                }, [d, r]), N = a.useCallback(() => {
-                    d.cancelUnusedUploads(), g({})
-                }, [d]);
+                }, [u, r]), N = a.useCallback(() => {
+                    u.cancelUnusedUploads(), g({})
+                }, [u]);
                 a.useEffect(() => () => {
-                    d.cancelUnusedUploads()
-                }, [d]);
+                    u.cancelUnusedUploads()
+                }, [u]);
                 let {
                     uploads: q
-                } = d, O = !q.every(e => d.existingAttachmentIds.has(e.id)) || q.length !== d.existingAttachmentIds.size;
+                } = u, O = !q.every(e => u.existingAttachmentIds.has(e.id)) || q.length !== u.existingAttachmentIds.size;
                 return {
                     addAttachment: E,
                     cancelUnusedUploads: N,
@@ -1170,7 +1169,7 @@
                     changesSaving: h,
                     saveError: p,
                     hasUnsavedAttachmentChanges: O,
-                    canAttachFiles: q.length < d.target.getMaxAttachmentsCount(),
+                    canAttachFiles: q.length < u.target.getMaxAttachmentsCount(),
                     canAttachArchives: null !== (A = null == o ? void 0 : o.hasFeature(T.GuildFeatures.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE)) && void 0 !== A && A
                 }
             }
@@ -1190,8 +1189,8 @@
                 s = A("17692"),
                 o = A("191814"),
                 i = A("476765"),
-                u = A("538137"),
-                d = A("600785"),
+                d = A("538137"),
+                u = A("600785"),
                 c = A("246421"),
                 f = A("782340"),
                 C = A("767165");
@@ -1206,7 +1205,7 @@
                     className: n(C.productThumbnailContainer, A),
                     children: [l, !t && (0, a.jsxs)("div", {
                         className: C.purchaseToUnlockBadge,
-                        children: [(0, a.jsx)(d.default, {
+                        children: [(0, a.jsx)(u.default, {
                             className: C.lockIcon,
                             width: 16,
                             height: 16,
@@ -1231,7 +1230,7 @@
                         variant: A,
                         color: null != t ? "text-link" : "interactive-hover",
                         children: f.default.Messages.GUILD_PRODUCT_CARD_SEE_FULL_DESCRIPTION
-                    }), (0, a.jsx)(u.default, {
+                    }), (0, a.jsx)(d.default, {
                         className: C.arrowIcon,
                         backgroundColor: "currentColor",
                         width: 16,
@@ -1255,8 +1254,8 @@
                     imageUrl: t,
                     name: A,
                     description: l,
-                    formattedPrice: u,
-                    role: d,
+                    formattedPrice: d,
+                    role: u,
                     ctaComponent: T,
                     shouldShowFullDescriptionButton: m = !0,
                     onShowFullDescription: p,
@@ -1301,11 +1300,11 @@
                             }), m && (0, a.jsx)(h, {
                                 onShowFullDescription: p,
                                 variant: L
-                            }), x || null == d || "" === d.name ? null : (0, a.jsxs)(a.Fragment, {
+                            }), x || null == u || "" === u.name ? null : (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(o.default, {
                                     size: 16
                                 }), (0, a.jsx)(c.default, {
-                                    role: d
+                                    role: u
                                 })]
                             })]
                         }), v]
@@ -1315,7 +1314,7 @@
                             variant: "text-md/medium",
                             color: "interactive-active",
                             className: C.productPrice,
-                            children: null != u ? u : f.default.Messages.GUILD_PRODUCT_CARD_EMPTY_PRICE
+                            children: null != d ? d : f.default.Messages.GUILD_PRODUCT_CARD_EMPTY_PRICE
                         }), (0, a.jsx)(r.Text, {
                             variant: "text-xxs/normal",
                             color: "text-normal",
@@ -1365,8 +1364,8 @@
                 s = A("77078"),
                 o = A("160864"),
                 i = A("966724"),
-                u = A("20606"),
-                d = A("191814"),
+                d = A("20606"),
+                u = A("191814"),
                 c = A("476765"),
                 f = A("857171"),
                 C = A("945330"),
@@ -1399,8 +1398,8 @@
                         children: [(0, a.jsx)(g.default, {
                             width: 16,
                             height: 16,
-                            color: u.default.INTERACTIVE_MUTED
-                        }), (0, a.jsx)(d.default, {
+                            color: d.default.INTERACTIVE_MUTED
+                        }), (0, a.jsx)(u.default, {
                             size: 10,
                             horizontal: !0
                         }), (0, a.jsx)(s.Text, {
@@ -1435,14 +1434,14 @@
                     uploads: A,
                     canAttachFiles: n,
                     canAttachArchives: r,
-                    addAttachment: u,
+                    addAttachment: d,
                     deleteAttachment: c,
                     fileUploadProgresses: C
                 } = (0, T.useGuildProductAttachmentManagerContext)(), g = l.useRef(!1);
 
                 function m(e) {
                     try {
-                        for (let t of e) u({
+                        for (let t of e) d({
                             platform: i.UploadPlatform.WEB,
                             file: t
                         });
@@ -1481,7 +1480,7 @@
                             color: "always-white",
                             children: I.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON
                         })]
-                    }), (0, a.jsx)(d.default, {
+                    }), (0, a.jsx)(u.default, {
                         size: 12
                     }), (0, a.jsx)(s.Text, {
                         id: E,
@@ -1514,7 +1513,7 @@
             "use strict";
             A.r(t), A.d(t, {
                 default: function() {
-                    return u
+                    return d
                 }
             });
             var a = A("37983");
@@ -1526,12 +1525,12 @@
                 o = A("782340"),
                 i = A("411531");
 
-            function u(e) {
+            function d(e) {
                 let {
                     locked: t,
                     role: A,
-                    textVariant: u = "text-xs/medium"
-                } = e, d = (0, n.useToken)(n.tokens.colors.INTERACTIVE_NORMAL).hex();
+                    textVariant: d = "text-xs/medium"
+                } = e, u = (0, n.useToken)(n.tokens.colors.INTERACTIVE_NORMAL).hex();
                 return (0, a.jsx)("div", {
                     className: i.roleTagContainer,
                     children: (0, a.jsxs)("div", {
@@ -1545,7 +1544,7 @@
                             size: 8,
                             horizontal: !0
                         }), (0, a.jsxs)(n.Text, {
-                            variant: u,
+                            variant: d,
                             color: "text-normal",
                             children: [(0, a.jsx)(n.HiddenVisually, {
                                 children: o.default.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER
@@ -1555,7 +1554,7 @@
                                 size: 8,
                                 horizontal: !0
                             }), (0, a.jsx)(s.default, {
-                                color: d
+                                color: u
                             })]
                         })]
                     })
@@ -1577,8 +1576,8 @@
                 s = A("77078"),
                 o = A("191814"),
                 i = A("423487"),
-                u = A("782340"),
-                d = A("55472");
+                d = A("782340"),
+                u = A("55472");
             (l = a || (a = {})).DANGER = "danger", l.WARNING = "warning";
 
             function c(e) {
@@ -1598,25 +1597,25 @@
                     } finally {
                         T(!1)
                     }
-                }, p = null != a ? a : u.default.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
+                }, p = null != a ? a : d.default.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
                 return (0, n.jsxs)(s.ModalRoot, {
-                    className: d.container,
+                    className: u.container,
                     size: s.ModalSize.DYNAMIC,
                     transitionState: t,
                     "aria-label": p,
                     children: [(0, n.jsxs)(s.ModalContent, {
-                        className: d.content,
+                        className: u.content,
                         children: [(0, n.jsxs)("div", {
-                            className: d.header,
+                            className: u.header,
                             children: [(0, n.jsx)(i.default, {
                                 width: 20,
                                 height: 20,
                                 className: function(e) {
                                     switch (e) {
                                         case "danger":
-                                            return d.dangerIcon;
+                                            return u.dangerIcon;
                                         case "warning":
-                                            return d.warningIcon
+                                            return u.warningIcon
                                     }
                                 }(g)
                             }), (0, n.jsx)(o.default, {
@@ -1632,7 +1631,7 @@
                         }), (0, n.jsx)(s.Text, {
                             variant: "text-md/normal",
                             color: "text-muted",
-                            className: d.body,
+                            className: u.body,
                             children: l
                         })]
                     }), (0, n.jsxs)(s.ModalFooter, {
@@ -1727,7 +1726,7 @@
                 o = A("782340");
 
             function i(e, t, i) {
-                var u, d, c;
+                var d, u, c;
                 switch (e.code) {
                     case s.AbortCodes.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
                         (0, r.openErrorDialog)(o.default.Messages.GUILD_PRODUCT_TOO_MANY_PUBLISHED_PRODUCT_ERROR_TITLE, o.default.Messages.GUILD_PRODUCT_TOO_MANY_PUBLISHED_PRODUCT_ERROR_BODY, n.IconVariant.DANGER);
@@ -1740,12 +1739,12 @@
                         break;
                     case s.AbortCodes.MONETIZATION_TERMS_NOT_ACCEPTED:
                         ;
-                        u = t, (0, l.openModalLazy)(async () => {
+                        d = t, (0, l.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await A.el("300770").then(A.bind(A, "300770"));
                             return t => (0, a.jsx)(e, {
-                                guildId: u,
+                                guildId: d,
                                 ...t
                             })
                         });
@@ -1761,7 +1760,7 @@
                         break;
                     default:
                         ;
-                        let g = null !== (c = e.getFirstFieldErrorMessage(["published"])) && void 0 !== c ? c : (null === (d = e.hasFieldErrors) || void 0 === d ? void 0 : d.call(e)) ? void 0 : e.message;
+                        let g = null !== (c = e.getFirstFieldErrorMessage(["published"])) && void 0 !== c ? c : (null === (u = e.hasFieldErrors) || void 0 === u ? void 0 : u.call(e)) ? void 0 : e.message;
                         if (null != g)(0, r.openErrorDialog)(o.default.Messages.GUILD_PRODUCT_GENERIC_ERROR_TITLE, g, n.IconVariant.WARNING)
                 }
             }
@@ -1780,8 +1779,8 @@
                 s = A("77078"),
                 o = A("694187"),
                 i = A("818643"),
-                u = A("987772"),
-                d = A("228220"),
+                d = A("987772"),
+                u = A("228220"),
                 c = A("782340"),
                 f = A("610828");
             let C = "custom-image",
@@ -1792,24 +1791,24 @@
                         disabled: n = !1,
                         name: o,
                         alt: i,
-                        data: u
-                    } = e, d = o === A, c = (0, s.useRadioItem)({
-                        isSelected: d,
+                        data: d
+                    } = e, u = o === A, c = (0, s.useRadioItem)({
+                        isSelected: u,
                         label: i
                     }), C = n ? void 0 : () => {
-                        l(u, o)
+                        l(d, o)
                     };
                     return (0, a.jsx)(s.Clickable, {
                         ref: t,
                         className: r(f.radioOption, {
-                            [f.selected]: d,
+                            [f.selected]: u,
                             [f.disabled]: n
                         }),
                         onClick: C,
                         "aria-disabled": n,
                         ...c,
                         children: (0, a.jsx)("img", {
-                            src: u,
+                            src: d,
                             alt: i,
                             className: f.radioOptionImage
                         })
@@ -1890,7 +1889,7 @@
                                 "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_CUSTOM_IMAGE_ARIA_LABEL.format({
                                     filename: x
                                 }),
-                                children: (0, a.jsx)(u.default, {
+                                children: (0, a.jsx)(d.default, {
                                     className: f.editIcon
                                 })
                             })
@@ -1904,7 +1903,7 @@
                                 "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({
                                     filename: x
                                 }),
-                                children: (0, a.jsx)(d.default, {
+                                children: (0, a.jsx)(u.default, {
                                     className: f.deleteIcon
                                 })
                             })
@@ -1946,8 +1945,8 @@
                 s = A("414456"),
                 o = A.n(s),
                 i = A("627445"),
-                u = A.n(i),
-                d = A("171210"),
+                d = A.n(i),
+                u = A("171210"),
                 c = A("65597"),
                 f = A("266491"),
                 C = A("77078"),
@@ -2065,16 +2064,16 @@
                     onClose: el
                 } = e, [en, er] = r.useState(ee), es = (0, c.default)([b.default], () => null == en ? null : b.default.getGuildProduct(en), [en]), eo = (null == es ? void 0 : es.published) === !0, {
                     application: ei
-                } = (0, m.default)(R, Z.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), eu = S.PRODUCT_IMAGE_PRESETS[0], ed = (0, c.default)([T.default], () => T.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, V.useIsWindowFocused)(), eC = r.useCallback(() => {
+                } = (0, m.default)(R, Z.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), ed = S.PRODUCT_IMAGE_PRESETS[0], eu = (0, c.default)([T.default], () => T.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, V.useIsWindowFocused)(), eC = r.useCallback(() => {
                     var e;
-                    return (null == es ? void 0 : null === (e = es.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? eu.data : (0, P.getAssetURL)(es.image_asset.application_id, es.image_asset, 600, ef && ec ? void 0 : "webp")
-                }, [eu, es, ef, ec]), {
+                    return (null == es ? void 0 : null === (e = es.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? ed.data : (0, P.getAssetURL)(es.image_asset.application_id, es.image_asset, 600, ef && ec ? void 0 : "webp")
+                }, [ed, es, ef, ec]), {
                     shouldRestrictUpdatingCreatorMonetizationSettings: eg
                 } = (0, I.useShouldRestrictUpdatingCreatorMonetizationSettings)(R);
                 r.useEffect(() => {
                     eg && (el(), (0, K.openErrorDialog)(H.default.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_TITLE, H.default.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_BODY))
                 }, [eg, el]);
-                let [eh, eT] = r.useState(null !== (l = null == es ? void 0 : es.name) && void 0 !== l ? l : ""), [em, ep] = r.useState(null !== (s = null == es ? void 0 : es.description) && void 0 !== s ? s : ""), [eU, eI] = r.useState(null !== (o = null == es ? void 0 : es.price_tier) && void 0 !== o ? o : void 0), [ev, eE] = r.useState(eC), [ex, eN] = r.useState(null !== (i = null == es ? void 0 : null === (t = es.image_asset) || void 0 === t ? void 0 : t.filename) && void 0 !== i ? i : eu.name), [eq, eO] = r.useState(!1), [eR, eL] = r.useState(), eD = r.useMemo(() => null != eU ? (0, D.formatPrice)(eU, y.CurrencyCodes.USD) : void 0, [eU]), [eP, eV] = r.useState(!0), {
+                let [eh, eT] = r.useState(null !== (l = null == es ? void 0 : es.name) && void 0 !== l ? l : ""), [em, ep] = r.useState(null !== (s = null == es ? void 0 : es.description) && void 0 !== s ? s : ""), [eU, eI] = r.useState(null !== (o = null == es ? void 0 : es.price_tier) && void 0 !== o ? o : void 0), [ev, eE] = r.useState(eC), [ex, eN] = r.useState(null !== (i = null == es ? void 0 : null === (t = es.image_asset) || void 0 === t ? void 0 : t.filename) && void 0 !== i ? i : ed.name), [eq, eO] = r.useState(!1), [eR, eL] = r.useState(), eD = r.useMemo(() => null != eU ? (0, D.formatPrice)(eU, y.CurrencyCodes.USD) : void 0, [eU]), [eP, eV] = r.useState(!0), {
                     changesSaving: ej,
                     saveError: eb,
                     saveProductWithAttachments: eM,
@@ -2116,8 +2115,8 @@
                             message: (0, n.jsxs)("div", {
                                 className: w.successNoticeMessage,
                                 children: [(0, n.jsx)(L.default, {
-                                    color: d.default.BUTTON_POSITIVE_BACKGROUND,
-                                    backgroundColor: d.default.WHITE
+                                    color: u.default.BUTTON_POSITIVE_BACKGROUND,
+                                    backgroundColor: u.default.WHITE
                                 }), (0, n.jsx)(C.Text, {
                                     variant: "text-md/medium",
                                     children: "draft" === ew ? H.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_SAVE_DRAFT_SUCCESS : "update_publish" === ew ? H.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_MODAL_UPDATE_PUBLISH_SUCCESS : H.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_MODAL_UNPUBLISH_SUCCESS
@@ -2154,7 +2153,7 @@
                     if (eO(!1), null != A) {
                         if (null != e.name && eT(A.name), null != e.description && ep(A.description), null != eX) {
                             let e = A.role_id;
-                            u(null != e, "Cannot update role without role ID"), await g.default.updateRole(R, e, eX)
+                            d(null != e, "Cannot update role without role ID"), await g.default.updateRole(R, e, eX)
                         }
                         ez(void 0), er(A.id), "published" in e && !0 === e.published && el()
                     }
@@ -2297,7 +2296,7 @@
                                     disabledTooltip: eo ? H.default.Messages.GUILD_PRODUCT_UNPUBLISH_REQUIRES_SAVE : H.default.Messages.GUILD_PRODUCT_PUBLISH_REQUIRES_SAVE,
                                     published: eo,
                                     onClick: () => {
-                                        u(e1, "Attempting to publish/unpublish when not allowed"), ek(eo ? "unpublish" : "publish"), e9({
+                                        d(e1, "Attempting to publish/unpublish when not allowed"), ek(eo ? "unpublish" : "publish"), e9({
                                             ...eY,
                                             published: !eo
                                         })
@@ -2327,7 +2326,7 @@
                                     productType: eZ,
                                     ctaComponent: (0, n.jsx)(N.default, {
                                         shineSize: N.default.ShineSizes.SMALL,
-                                        pauseAnimation: ed || !ef,
+                                        pauseAnimation: eu || !ef,
                                         className: w.productPreviewCtaButton,
                                         children: H.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
                                     }),
@@ -2379,7 +2378,7 @@
                                     disabled: !e0,
                                     submitting: eB,
                                     onClick: () => {
-                                        u(e0, "cannot save changes for published product without adding all fields"), ek("update_publish"), e9(eY)
+                                        d(e0, "cannot save changes for published product without adding all fields"), ek("update_publish"), e9(eY)
                                     },
                                     children: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_SAVE_CHANGES_BUTTON
                                 }) : (0, n.jsx)(n.Fragment, {
@@ -2388,7 +2387,7 @@
                                         disabled: !e$,
                                         submitting: eB,
                                         onClick: () => {
-                                            u(e$, "cannot save changes without name or price tier"), ek("draft"), e9(eY)
+                                            d(e$, "cannot save changes without name or price tier"), ek("draft"), e9(eY)
                                         },
                                         children: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_SAVE_DRAFT_BUTTON
                                     })
@@ -2429,8 +2428,8 @@
                 s = A("77078"),
                 o = A("476765"),
                 i = A("952479"),
-                u = A("867544"),
-                d = A("782340"),
+                d = A("867544"),
+                u = A("782340"),
                 c = A("972623");
 
             function f(e) {
@@ -2453,12 +2452,12 @@
                         children: [(0, a.jsx)(s.Heading, {
                             variant: "text-sm/semibold",
                             color: "header-primary",
-                            children: n ? d.default.Messages.GUILD_PRODUCT_UNPUBLISH_TITLE : d.default.Messages.GUILD_PRODUCT_PUBLISH_TITLE
+                            children: n ? u.default.Messages.GUILD_PRODUCT_UNPUBLISH_TITLE : u.default.Messages.GUILD_PRODUCT_PUBLISH_TITLE
                         }), (0, a.jsx)(s.Text, {
                             id: g,
                             variant: "text-sm/normal",
                             color: "text-normal",
-                            children: n ? d.default.Messages.GUILD_PRODUCT_UNPUBLISH_DESCRIPTION : d.default.Messages.GUILD_PRODUCT_PUBLISH_DESCRIPTION
+                            children: n ? u.default.Messages.GUILD_PRODUCT_UNPUBLISH_DESCRIPTION : u.default.Messages.GUILD_PRODUCT_PUBLISH_DESCRIPTION
                         })]
                     }), (0, a.jsx)(s.Tooltip, {
                         text: t ? A : void 0,
@@ -2476,7 +2475,7 @@
                             grow: !1,
                             onClick: t ? void 0 : C,
                             submitting: f,
-                            children: [n ? d.default.Messages.GUILD_PRODUCT_EDIT_MODAL_UNPUBLISH_BUTTON : d.default.Messages.GUILD_PRODUCT_EDIT_MODAL_PUBLISH_BUTTON, n ? (0, a.jsx)(u.default, {
+                            children: [n ? u.default.Messages.GUILD_PRODUCT_EDIT_MODAL_UNPUBLISH_BUTTON : u.default.Messages.GUILD_PRODUCT_EDIT_MODAL_PUBLISH_BUTTON, n ? (0, a.jsx)(d.default, {
                                 className: c.buttonIcon,
                                 color: "currentColor",
                                 foregroundColor: "currentColor"
@@ -2509,8 +2508,8 @@
                 s = A("65597"),
                 o = A("77078"),
                 i = A("305961"),
-                u = A("191814"),
-                d = A("945330"),
+                d = A("191814"),
+                u = A("945330"),
                 c = A("152224"),
                 f = A("228220"),
                 C = A("204203"),
@@ -2542,7 +2541,7 @@
                         style: {
                             backgroundColor: (0, r.int2hex)(l.color)
                         }
-                    }), (0, a.jsx)(u.default, {
+                    }), (0, a.jsx)(d.default, {
                         size: 8,
                         horizontal: !0
                     }), (0, a.jsx)(o.Text, {
@@ -2550,14 +2549,14 @@
                         color: "text-normal",
                         children: l.name
                     }), null != A && (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(u.default, {
+                        children: [(0, a.jsx)(d.default, {
                             size: 12,
                             horizontal: !0
                         }), (0, a.jsx)(o.Clickable, {
                             "aria-label": m.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ATTACHED_ROLE_ARIA,
                             onClick: A,
                             className: p.attachedRoleClose,
-                            children: (0, a.jsx)(d.default, {
+                            children: (0, a.jsx)(u.default, {
                                 width: 16,
                                 height: 16,
                                 className: p.attachedRoleCloseIcon
@@ -2604,7 +2603,7 @@
                         children: [(0, a.jsx)(c.default, {
                             height: 18,
                             width: 18
-                        }), (0, a.jsx)(u.default, {
+                        }), (0, a.jsx)(d.default, {
                             horizontal: !0,
                             size: 8
                         }), m.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_1_TITLE]
@@ -2619,7 +2618,7 @@
                         children: [(0, a.jsx)(f.default, {
                             height: 18,
                             width: 18
-                        }), (0, a.jsx)(u.default, {
+                        }), (0, a.jsx)(d.default, {
                             horizontal: !0,
                             size: 8
                         }), m.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_2_TITLE]
@@ -2636,7 +2635,7 @@
                     newRoleParams: t,
                     setNewRoleParams: l,
                     guildId: r,
-                    productId: d,
+                    productId: u,
                     listingRoleId: c,
                     error: f
                 } = e, g = (0, s.default)([i.default], () => {
@@ -2648,7 +2647,7 @@
                 return null === t ? (0, a.jsxs)(o.FormItem, {
                     title: (0, a.jsxs)("div", {
                         className: p.warningTitle,
-                        children: [(0, a.jsx)(v, {}), (0, a.jsx)(u.default, {
+                        children: [(0, a.jsx)(v, {}), (0, a.jsx)(d.default, {
                             horizontal: !0,
                             size: 4
                         }), m.default.Messages.GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_HEADER]
@@ -2660,14 +2659,14 @@
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: m.default.Messages.GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_DESCRIPTION
-                    }), (0, a.jsx)(u.default, {
+                    }), (0, a.jsx)(d.default, {
                         size: 8
                     }), (0, a.jsxs)("div", {
                         className: p.reattachRoleRow,
                         children: [(0, a.jsx)(I, {
                             role: g,
                             onRemove: void 0
-                        }), (0, a.jsx)(u.default, {
+                        }), (0, a.jsx)(d.default, {
                             horizontal: !0,
                             size: 8
                         }), (0, a.jsxs)(o.Button, {
@@ -2680,7 +2679,7 @@
                                 variant: "text-md/normal",
                                 color: "none",
                                 children: m.default.Messages.GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_UNDO_CTA
-                            }), (0, a.jsx)(u.default, {
+                            }), (0, a.jsx)(d.default, {
                                 horizontal: !0,
                                 size: 8
                             }), (0, a.jsx)(C.default, {
@@ -2698,12 +2697,12 @@
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: m.default.Messages.GUILD_PRODUCT_SETTINGS_ATTACHED_ROLE_DESCRIPTION
-                    }), (0, a.jsx)(u.default, {
+                    }), (0, a.jsx)(d.default, {
                         size: 8
                     }), (0, a.jsx)(I, {
                         role: g,
                         onRemove: () => {
-                            n(null != d, "productId cannot be null"), n(null != g, "no role attached"), ! function(e) {
+                            n(null != u, "productId cannot be null"), n(null != g, "no role attached"), ! function(e) {
                                 let {
                                     onConfirm: t,
                                     roleName: l
@@ -2739,7 +2738,7 @@
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: m.default.Messages.GUILD_PRODUCT_SETTINGS_ADD_ROLE_DESCRIPTION
-                    }), (0, a.jsx)(u.default, {
+                    }), (0, a.jsx)(d.default, {
                         size: 8
                     }), (0, a.jsx)(h.default, {
                         newRoleParams: t,
@@ -2763,12 +2762,12 @@
                 s = A("77078"),
                 o = A("973262"),
                 i = A("191814"),
-                u = A("476765"),
-                d = A("422403"),
+                d = A("476765"),
+                u = A("422403"),
                 c = A("49111"),
                 f = A("782340"),
                 C = A("513706");
-            let g = (0, u.uid)();
+            let g = (0, d.uid)();
 
             function h(e) {
                 let {
@@ -2776,7 +2775,7 @@
                     setNewRoleParams: A
                 } = e, {
                     name: l,
-                    color: u
+                    color: d
                 } = t, h = e => A(t => (n(null != t, "newRoleParams should be defined"), {
                     ...t,
                     color: e
@@ -2798,12 +2797,12 @@
                         className: C.roleColorContainer,
                         children: [(0, a.jsx)(s.HiddenVisually, {
                             children: f.default.Messages.GUILD_PRODUCT_SETTINGS_SELECT_ROLE_COLOR_ARIA.format({
-                                color: (0, r.int2hex)(u)
+                                color: (0, r.int2hex)(d)
                             })
                         }), (0, a.jsx)("div", {
                             className: C.roleColorPreview,
                             style: {
-                                backgroundColor: (0, r.int2hex)(u)
+                                backgroundColor: (0, r.int2hex)(d)
                             }
                         }), (0, a.jsx)(i.default, {
                             size: 8,
@@ -2811,7 +2810,7 @@
                         }), (0, a.jsx)(s.Popout, {
                             renderPopout: e => (0, a.jsx)(o.CustomColorPicker, {
                                 ...e,
-                                value: u,
+                                value: d,
                                 onChange: h
                             }),
                             children: e => (0, a.jsx)(s.Clickable, {
@@ -2819,7 +2818,7 @@
                                 tag: "span",
                                 "aria-label": f.default.Messages.GUILD_PRODUCT_SETTINGS_CREATE_ROLE_SELECT_COLOR_ARIA,
                                 className: C.dropperIconContainer,
-                                children: (0, a.jsx)(d.default, {
+                                children: (0, a.jsx)(u.default, {
                                     width: 16,
                                     height: 16,
                                     className: C.dropperIcon
@@ -2873,8 +2872,8 @@
                 s = A("974667"),
                 o = A("509043"),
                 i = A("77078"),
-                u = A("248559"),
-                d = A("449918"),
+                d = A("248559"),
+                u = A("449918"),
                 c = A("526975"),
                 f = A("36694"),
                 C = A("422403"),
@@ -2890,7 +2889,7 @@
                     isDefault: A = !1,
                     isCustom: l = !1,
                     isSelected: n = !1,
-                    disabled: u = !1,
+                    disabled: d = !1,
                     style: c = {},
                     onClick: g,
                     "aria-label": T
@@ -2900,12 +2899,12 @@
                     children: (0, a.jsxs)("button", {
                         type: "button",
                         className: r(m.colorPickerSwatch, {
-                            [m.disabled]: u,
+                            [m.disabled]: d,
                             [m.default]: A,
                             [m.custom]: l,
                             [m.noColor]: null == t
                         }),
-                        disabled: u,
+                        disabled: d,
                         onClick: () => null == g ? void 0 : g(t),
                         style: {
                             ...c,
@@ -2918,14 +2917,14 @@
                             foreground: m.colorPickerDropperFg,
                             width: 14,
                             height: 14,
-                            color: (0, d.getColor)(I ? h.Color.WHITE_500 : h.Color.BLACK_500)
+                            color: (0, u.getColor)(I ? h.Color.WHITE_500 : h.Color.BLACK_500)
                         }) : null, function() {
                             let e = 16,
                                 t = 16;
                             if ((l || A) && (e = 32, t = 24), n) return (0, a.jsx)(f.default, {
                                 width: e,
                                 height: t,
-                                color: (0, d.getColor)(I ? h.Color.WHITE_500 : h.Color.BLACK_500)
+                                color: (0, u.getColor)(I ? h.Color.WHITE_500 : h.Color.BLACK_500)
                             })
                         }()]
                     })
@@ -2972,9 +2971,9 @@
                     onClose: n,
                     suggestedColors: r,
                     middle: s,
-                    footer: d,
+                    footer: u,
                     showEyeDropper: f
-                } = e, h = (0, u.default)(), [p, U] = l.useState(() => {
+                } = e, h = (0, d.default)(), [p, U] = l.useState(() => {
                     let e = null != t ? t : 0,
                         A = (0, o.int2hex)(e);
                     return {
@@ -3065,7 +3064,7 @@
                             className: m.suggestedColor,
                             onClick: () => I(e)
                         }, "".concat(e, "-").concat(t)))
-                    }), d]
+                    }), u]
                 })
             });
 
@@ -3077,8 +3076,8 @@
                     colors: n,
                     value: o,
                     disabled: i,
-                    onChange: u,
-                    renderDefaultButton: d,
+                    onChange: d,
+                    renderDefaultButton: u,
                     renderCustomButton: c,
                     colorContainerClassName: f
                 } = e, C = e => (0, a.jsx)("div", {
@@ -3086,7 +3085,7 @@
                     children: e.map(e => (0, a.jsx)(U, {
                         color: e,
                         isSelected: e === o,
-                        onClick: u,
+                        onClick: d,
                         disabled: i
                     }, e))
                 }), g = n.slice(0, n.length / 2), h = n.slice(n.length / 2, n.length), T = (0, s.default)({
@@ -3109,10 +3108,10 @@
                                 ...s,
                                 children: [(0, a.jsx)("div", {
                                     className: r(m.defaultContainer, f),
-                                    children: d({
+                                    children: u({
                                         value: o,
                                         color: A,
-                                        onChange: u,
+                                        onChange: d,
                                         disabled: i
                                     })
                                 }), (0, a.jsx)("div", {
@@ -3175,11 +3174,11 @@
                 s = A("458960"),
                 o = A("77078"),
                 i = A("866893");
-            let u = {
+            let d = {
                 friction: 7,
                 tension: 60
             };
-            class d extends l.Component {
+            class u extends l.Component {
                 componentWillAppear(e) {
                     this.animateTo(1).start(e)
                 }
@@ -3194,7 +3193,7 @@
                 }
                 animateTo(e) {
                     return s.default.spring(this.animation, {
-                        ...u,
+                        ...d,
                         toValue: e
                     })
                 }
@@ -3227,8 +3226,8 @@
                     super(...e), this.animation = new s.default.Value(0)
                 }
             }
-            d.contextType = o.AccessibilityPreferencesContext;
-            var c = d
+            u.contextType = o.AccessibilityPreferencesContext;
+            var c = u
         },
         857171: function(e, t, A) {
             "use strict";
@@ -3251,8 +3250,8 @@
                     innerClassName: l,
                     onChange: o,
                     "aria-label": i,
-                    "aria-describedby": u,
-                    filters: d,
+                    "aria-describedby": d,
+                    filters: u,
                     multiple: c = !1,
                     disabled: f = !1,
                     submitting: C = !1,
@@ -3274,10 +3273,10 @@
                         }), (0, a.jsx)(s.default, {
                             tabIndex: 0,
                             onChange: o,
-                            filters: d,
+                            filters: u,
                             multiple: c,
                             "aria-label": i,
-                            "aria-describedby": u,
+                            "aria-describedby": d,
                             disabled: f
                         })]
                     })
