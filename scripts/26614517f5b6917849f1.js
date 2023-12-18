@@ -9748,11 +9748,11 @@
                         }));
                         h(Math.max(e, 36))
                     }, []);
-                if (n.useEffect(() => {
-                        N();
-                        let e = (0, l.debounce)(N, 100);
-                        window.addEventListener("resize", e)
-                    }, [N]), null == t) return null;
+                n.useEffect(() => {
+                    N();
+                    let e = (0, l.debounce)(N, 100);
+                    window.addEventListener("resize", e)
+                }, [N]);
                 let p = {
                         [E.AccountStandingState.ALL_GOOD]: {
                             title: _.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
@@ -9887,30 +9887,31 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return i
+                    return r
                 }
             });
             var a = s("37983");
             s("884691");
             var n = s("77078"),
-                l = s("130479");
+                l = s("130479"),
+                i = s("53708");
 
-            function i(e) {
+            function r(e) {
                 let {
                     user: t,
                     size: s
-                } = e, i = (0, n.getAvatarSpecs)(s);
+                } = e, r = (0, n.getAvatarSpecs)(s), o = null != t ? t.getAvatarURL(null, r.size) : i;
                 return (0, a.jsx)("div", {
                     className: l.avatarBackground,
                     children: (0, a.jsx)("div", {
                         className: l.avatar,
                         style: {
-                            width: i.size,
-                            height: i.size
+                            width: r.size,
+                            height: r.size
                         },
                         children: (0, a.jsx)(n.Avatar, {
-                            src: t.getAvatarURL(null, i.size),
-                            "aria-label": t.username,
+                            src: o,
+                            "aria-hidden": !0,
                             size: s
                         })
                     })
@@ -10721,7 +10722,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "2e27d217b592571b6061fc8b3c39f3b5833e26a0", e.substring(0, 7)),
+                    S = (e = "040c8b5d05847f02e63e58ce68b7028a95d07cf7", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10734,7 +10735,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "255080", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "255082", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
