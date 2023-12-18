@@ -396,7 +396,7 @@
                     iconClassName: R,
                     subtitle: G,
                     subtitleColor: x,
-                    hangStatus: H,
+                    enableHangStatus: H,
                     channel: {
                         type: b
                     },
@@ -506,7 +506,7 @@
                                     className: p.children,
                                     children: V
                                 }) : null]
-                            }), null == H && null != G ? (0, C.jsx)("div", {
+                            }), H || null == G ? null : (0, C.jsx)("div", {
                                 className: p.linkBottom,
                                 children: (0, C.jsx)(u.Text, {
                                     color: null != x ? x : "text-muted",
@@ -514,7 +514,7 @@
                                     className: p.subtitle,
                                     children: G
                                 })
-                            }) : null, null != H ? H : null, Z && Ba.length > 0 && Ba.map((B, e) => (0, C.jsx)("span", {
+                            }), Z && Ba.length > 0 && Ba.map((B, e) => (0, C.jsx)("span", {
                                 className: p.ripple,
                                 style: {
                                     top: B.y,
@@ -568,7 +568,7 @@
                         onMouseEnter: P,
                         onMouseLeave: w,
                         children: [i || !c || r && !BF ? null : (0, C.jsx)("div", {
-                            className: t(p.unread, $ ? p.unreadImportant : void 0, null != H ? p.unreadWithHangStatus : void 0)
+                            className: t(p.unread, $ ? p.unreadImportant : void 0)
                         }), null !== (e = null == y ? void 0 : y(BA)) && void 0 !== e ? e : BA]
                     })
                 })
