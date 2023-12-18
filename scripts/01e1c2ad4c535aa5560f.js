@@ -284,29 +284,34 @@
                     clip: l,
                     focused: a,
                     onFocus: n
-                } = e, r = !l.name, [d, u] = s.useState(!1), [c, f] = s.useState(null !== (t = l.name) && void 0 !== t ? t : ""), [E, v] = s.useState(!1), _ = async () => {
-                    v(!0), await (0, j.updateClipMetadata)(l.id, {
-                        name: c
-                    }), v(!1), u(!1)
+                } = e, [r, d] = s.useState(l.name), u = !l.name, [c, f] = s.useState(!1), [E, v] = s.useState(null !== (t = l.name) && void 0 !== t ? t : ""), [_, C] = s.useState(!1), g = async () => {
+                    C(!0), await (0, j.updateClipMetadata)(l.id, {
+                        name: E
+                    }), C(!1), f(!1)
                 };
-                return d ? (0, i.jsx)(h.TextInput, {
+                return (s.useEffect(() => {
+                    if (r !== l.name) {
+                        var e;
+                        d(l.name), v(null !== (e = l.name) && void 0 !== e ? e : "")
+                    }
+                }, [l.name, r]), c) ? (0, i.jsx)(h.TextInput, {
                     inputClassName: o(w["heading-lg/medium"], H.clipTitleInput),
                     onClick: e => e.stopPropagation(),
-                    value: c,
+                    value: E,
                     autoFocus: !0,
                     onKeyDown: e => {
-                        "Enter" === e.key && _()
+                        "Enter" === e.key && g()
                     },
-                    disabled: E,
-                    onChange: f,
-                    onBlur: _
+                    disabled: _,
+                    onChange: v,
+                    onBlur: g
                 }) : (0, i.jsxs)(h.Clickable, {
                     className: H.clipTitleInputPlaceholder,
                     onFocus: n,
                     onClick: e => {
-                        e.stopPropagation(), u(!0)
+                        e.stopPropagation(), f(!0)
                     },
-                    children: [r ? (0, i.jsx)(h.Heading, {
+                    children: [u ? (0, i.jsx)(h.Heading, {
                         className: H.clipTitle,
                         color: "text-muted",
                         variant: "heading-lg/medium",
