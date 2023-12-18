@@ -75,75 +75,78 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return A
+                    return H
                 }
             });
             var l = s("37983"),
                 i = s("884691"),
-                r = s("759843"),
-                a = s("446674"),
-                n = s("77078"),
-                d = s("428958"),
-                o = s("20606"),
-                u = s("465869"),
-                c = s("619443"),
-                C = s("38112"),
-                _ = s("602818"),
-                f = s("539938"),
-                h = s("305961"),
-                L = s("191814"),
-                S = s("741515"),
-                x = s("657199"),
-                I = s("387678"),
-                p = s("634388"),
-                E = s("893399"),
-                g = s("10589"),
-                T = s("208713"),
-                P = s("803692"),
-                R = s("90324"),
-                m = s("624416"),
-                O = s("3081"),
-                j = s("907038"),
-                v = s("874146"),
-                G = s("724210"),
-                D = s("660516"),
-                U = s("782340"),
-                N = s("261974");
+                r = s("414456"),
+                a = s.n(r),
+                n = s("759843"),
+                d = s("446674"),
+                o = s("77078"),
+                u = s("428958"),
+                c = s("20606"),
+                C = s("465869"),
+                _ = s("619443"),
+                f = s("38112"),
+                h = s("602818"),
+                L = s("539938"),
+                S = s("305961"),
+                x = s("191814"),
+                I = s("741515"),
+                p = s("657199"),
+                E = s("387678"),
+                g = s("634388"),
+                T = s("893399"),
+                P = s("10589"),
+                R = s("208713"),
+                m = s("803692"),
+                O = s("90324"),
+                j = s("624416"),
+                v = s("3081"),
+                G = s("907038"),
+                D = s("874146"),
+                U = s("724210"),
+                N = s("660516"),
+                M = s("782340"),
+                w = s("261974"),
+                A = s("305794");
 
-            function M(e) {
+            function V(e) {
                 var t;
                 let {
                     guildId: s,
                     productId: i
                 } = e, {
                     loaded: r,
-                    subscriptionsSettings: d
-                } = (0, S.useMonetizationSettings)(s), o = (0, a.useStateFromStores)([h.default], () => h.default.getGuild(s)), {
+                    subscriptionsSettings: a
+                } = (0, I.useMonetizationSettings)(s), n = (0, d.useStateFromStores)([S.default], () => S.default.getGuild(s)), {
                     selectedTab: u,
                     isPhantomPreview: c,
                     categoryTabs: C
-                } = (0, p.useGuildShopDisplayContext)(), _ = !r || null == d, f = null == o || !c && _;
-                return f ? (0, l.jsx)(n.Spinner, {}) : (0, l.jsx)(I.default, {
-                    defaultSortOption: null !== (t = null == d ? void 0 : d.store_page_guild_products_default_sort) && void 0 !== t ? t : v.GuildProductSortOptions.NAME,
+                } = (0, g.useGuildShopDisplayContext)(), _ = !r || null == a, f = null == n || !c && _;
+                return f ? (0, l.jsx)(o.Spinner, {}) : (0, l.jsx)(E.default, {
+                    defaultSortOption: null !== (t = null == a ? void 0 : a.store_page_guild_products_default_sort) && void 0 !== t ? t : D.GuildProductSortOptions.NAME,
                     children: (0, l.jsxs)("div", {
-                        className: N.contentContainer,
-                        children: [(0, l.jsx)(O.default, {
-                            guild: o,
-                            subscriptionsSettings: d
-                        }), (0, l.jsx)(L.default, {
+                        className: w.contentContainer,
+                        children: [(0, l.jsx)(v.default, {
+                            guild: n,
+                            subscriptionsSettings: a
+                        }), (0, l.jsx)(x.default, {
                             size: 32
-                        }), C.length > 0 && (0, l.jsx)(P.GuildShopCategorySelector, {
-                            guild: o
+                        }), C.length > 0 && (0, l.jsx)(m.GuildShopCategorySelector, {
+                            guild: n
                         }), (0, l.jsxs)("div", {
-                            className: N.tabContainer,
-                            children: [(0, l.jsx)(L.default, {
+                            className: w.tabContainer,
+                            children: [(0, l.jsx)(x.default, {
                                 size: 32
-                            }), c && (0, l.jsx)(R.default, {
+                            }), c && (0, l.jsx)(O.default, {
                                 guildId: s
-                            }), u === E.GuildShopTab.GUILD_PRODUCTS && (0, l.jsx)(g.GuildProductCardGrid, {
+                            }), u === T.GuildShopTab.GUILD_PRODUCTS && (0, l.jsx)(P.GuildProductCardGrid, {
                                 guildId: s,
                                 productId: i
-                            }), u === E.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS && (0, l.jsx)(T.default, {
+                            }), u === T.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS && (0, l.jsx)(R.default, {
                                 guildId: s
                             })]
                         })]
@@ -151,63 +154,63 @@
                 })
             }
 
-            function w(e) {
+            function b(e) {
                 let {
                     guildId: t,
                     productId: s
-                } = e, L = (0, a.useStateFromStores)([c.default], () => c.default.isConnected()), S = (0, a.useStateFromStores)([h.default], () => h.default.getGuild(t)), {
+                } = e, r = (0, d.useStateFromStores)([_.default], () => _.default.isConnected()), x = (0, d.useStateFromStores)([S.default], () => S.default.getGuild(t)), {
                     shouldHideGuildPurchaseEntryPoints: I,
                     restrictionsLoading: E
-                } = (0, u.useShouldHideGuildPurchaseEntryPoints)(t), {
-                    selectedTab: g,
-                    isPhantomPreview: T,
-                    categoryTabs: P
-                } = (0, p.useGuildShopDisplayContext)(), R = L && (null == S || 0 === P.length && !T || I && !E);
+                } = (0, C.useShouldHideGuildPurchaseEntryPoints)(t), {
+                    selectedTab: T,
+                    isPhantomPreview: P,
+                    categoryTabs: R
+                } = (0, g.useGuildShopDisplayContext)(), m = r && (null == x || 0 === R.length && !P || I && !E);
                 return i.useEffect(() => {
-                    R && (0, x.handleInaccessiblePage)(t, G.StaticChannelRoute.GUILD_SHOP)
-                }, [t, R]), (0, d.default)({
-                    type: D.ImpressionTypes.PAGE,
-                    name: r.ImpressionNames.GUILD_SHOP_PAGE,
+                    m && (0, p.handleInaccessiblePage)(t, U.StaticChannelRoute.GUILD_SHOP)
+                }, [t, m]), (0, u.default)({
+                    type: N.ImpressionTypes.PAGE,
+                    name: n.ImpressionNames.GUILD_SHOP_PAGE,
                     properties: {
                         product_id: s,
-                        tab: g
+                        tab: T
                     }
                 }, {
-                    disableTrack: R
+                    disableTrack: m
                 }), (0, l.jsxs)("div", {
-                    className: N.container,
-                    children: [(0, l.jsxs)(f.default, {
-                        children: [(0, l.jsx)(f.default.Icon, {
-                            icon: j.default,
+                    className: a(A.chat, w.container),
+                    children: [(0, l.jsxs)(L.default, {
+                        children: [(0, l.jsx)(L.default.Icon, {
+                            icon: G.default,
                             "aria-hidden": !0,
-                            color: o.default.INTERACTIVE_ACTIVE
-                        }), (0, l.jsx)(f.default.Title, {
-                            children: U.default.Messages.GUILD_SHOP_CHANNEL_LABEL
-                        }), (0, l.jsx)(m.default, {})]
-                    }), (0, l.jsx)(n.ScrollerNone, {
-                        className: N.content,
-                        children: L ? (0, l.jsx)(M, {
+                            color: c.default.INTERACTIVE_ACTIVE
+                        }), (0, l.jsx)(L.default.Title, {
+                            children: M.default.Messages.GUILD_SHOP_CHANNEL_LABEL
+                        }), (0, l.jsx)(j.default, {})]
+                    }), (0, l.jsx)(o.ScrollerNone, {
+                        className: w.content,
+                        children: r ? (0, l.jsx)(V, {
                             guildId: t,
                             productId: s
-                        }) : (0, l.jsx)(n.Spinner, {})
-                    }), (0, l.jsx)(_.default, {
-                        className: N.sparkleCloudTop
-                    }), (0, l.jsx)(C.default, {
-                        className: N.sparkleCloudBottom
+                        }) : (0, l.jsx)(o.Spinner, {})
+                    }), (0, l.jsx)(h.default, {
+                        className: w.sparkleCloudTop
+                    }), (0, l.jsx)(f.default, {
+                        className: w.sparkleCloudBottom
                     })]
                 })
             }
 
-            function A(e) {
+            function H(e) {
                 let {
                     guildId: t,
                     productId: s,
                     initialTab: i
                 } = e;
-                return null == i && null != s && (i = E.GuildShopTab.GUILD_PRODUCTS), (0, l.jsx)(p.default, {
+                return null == i && null != s && (i = T.GuildShopTab.GUILD_PRODUCTS), (0, l.jsx)(g.default, {
                     initialTab: i,
                     guildId: t,
-                    children: (0, l.jsx)(w, {
+                    children: (0, l.jsx)(b, {
                         initialTab: i,
                         productId: s,
                         guildId: t
