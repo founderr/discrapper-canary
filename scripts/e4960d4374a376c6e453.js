@@ -7395,123 +7395,151 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return H
+                    return K
                 }
-            });
+            }), s("222007");
             var a = s("37983"),
                 n = s("884691"),
                 l = s("414456"),
                 i = s.n(l),
                 r = s("446674"),
-                o = s("77078"),
-                d = s("913144"),
-                u = s("850068"),
-                c = s("583367"),
-                S = s("316718"),
-                E = s("775433"),
-                f = s("79112"),
-                T = s("642950"),
-                m = s("736642"),
-                _ = s("251334"),
-                g = s("308592"),
-                h = s("424876"),
-                I = s("699260"),
-                N = s("102985"),
-                p = s("26092"),
-                C = s("160299"),
-                A = s("357957"),
-                O = s("521012"),
-                x = s("437712"),
-                M = s("145131"),
-                R = s("953109"),
-                v = s("599110"),
-                D = s("719923"),
-                L = s("646105"),
-                P = s("995362"),
-                j = s("58820"),
-                b = s("646718"),
-                U = s("49111"),
-                y = s("397336"),
-                B = s("782340"),
-                F = s("404234");
+                o = s("669491"),
+                d = s("77078"),
+                u = s("913144"),
+                c = s("850068"),
+                S = s("583367"),
+                E = s("316718"),
+                f = s("775433"),
+                T = s("79112"),
+                m = s("642950"),
+                _ = s("736642"),
+                g = s("251334"),
+                h = s("308592"),
+                I = s("424876"),
+                N = s("699260"),
+                p = s("102985"),
+                C = s("26092"),
+                A = s("160299"),
+                O = s("357957"),
+                x = s("521012"),
+                M = s("437712"),
+                R = s("145131"),
+                v = s("953109"),
+                D = s("423487"),
+                L = s("599110"),
+                P = s("701909"),
+                j = s("719923"),
+                b = s("646105"),
+                U = s("995362"),
+                y = s("58820"),
+                B = s("646718"),
+                F = s("49111"),
+                G = s("397336"),
+                k = s("782340"),
+                H = s("404234");
+            let w = new Set([F.SubscriptionStatusTypes.ACTIVE, F.SubscriptionStatusTypes.PAST_DUE]);
 
-            function G() {
-                return (0, a.jsx)(o.Card, {
-                    className: F.noItemsCard,
-                    type: o.Card.Types.CUSTOM,
-                    children: (0, a.jsxs)(M.default, {
-                        align: M.default.Align.CENTER,
-                        children: [(0, a.jsx)(R.default, {
+            function V() {
+                return n.useEffect(() => {
+                    L.default.track(F.AnalyticEvents.TOOLTIP_VIEWED, {
+                        type: "subscription_settings_duplicate_subscriptions"
+                    })
+                }, []), (0, a.jsxs)("div", {
+                    className: H.duplicateSubscriptionsBanner,
+                    children: [(0, a.jsx)(D.default, {
+                        color: o.default.unsafe_rawColors.RED_360.css
+                    }), (0, a.jsx)(d.Text, {
+                        className: H.duplicateSubscriptionsBannerText,
+                        variant: "text-sm/normal",
+                        children: k.default.Messages.DUPLICATE_SUBSCRIPTIONS_BANNER.format({
+                            helpCenterLink: P.default.getArticleURL(F.HelpdeskArticles.NITRO)
+                        })
+                    })]
+                })
+            }
+
+            function Y() {
+                return (0, a.jsx)(d.Card, {
+                    className: H.noItemsCard,
+                    type: d.Card.Types.CUSTOM,
+                    children: (0, a.jsxs)(R.default, {
+                        align: R.default.Align.CENTER,
+                        children: [(0, a.jsx)(v.default, {
                             game: null,
-                            size: R.default.Sizes.SMALL,
-                            className: F.noItemsIcon
+                            size: v.default.Sizes.SMALL,
+                            className: H.noItemsIcon
                         }), (0, a.jsx)("span", {
-                            className: F.cardText,
-                            children: B.default.Messages.USER_SETTINGS_NO_SUBSCRIPTION_CREDIT
+                            className: H.cardText,
+                            children: k.default.Messages.USER_SETTINGS_NO_SUBSCRIPTION_CREDIT
                         })]
                     })
                 })
             }
 
-            function k() {
-                let e = (0, r.useStateFromStores)([x.default], () => x.default.getForApplication(b.PREMIUM_SUBSCRIPTION_APPLICATION));
+            function W() {
+                let e = (0, r.useStateFromStores)([M.default], () => M.default.getForApplication(B.PREMIUM_SUBSCRIPTION_APPLICATION));
                 return n.useEffect(() => {
-                    (0, S.fetchUserEntitlementsForApplication)(b.PREMIUM_SUBSCRIPTION_APPLICATION)
+                    (0, E.fetchUserEntitlementsForApplication)(B.PREMIUM_SUBSCRIPTION_APPLICATION)
                 }, []), (0, a.jsxs)("section", {
-                    className: F.sectionAccountCredit,
-                    children: [(0, a.jsx)(o.FormTitle, {
-                        className: F.accountCreditTitle,
-                        tag: o.FormTitleTags.H1,
-                        children: B.default.Messages.BILLING_SUBSCRIPTION_CREDIT
+                    className: H.sectionAccountCredit,
+                    children: [(0, a.jsx)(d.FormTitle, {
+                        className: H.accountCreditTitle,
+                        tag: d.FormTitleTags.H1,
+                        children: k.default.Messages.BILLING_SUBSCRIPTION_CREDIT
                     }), (0, a.jsx)("p", {
-                        className: F.accountCreditDescription,
-                        children: B.default.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
-                    }), null != e && D.default.hasAccountCredit(e) ? (0, a.jsx)(L.default, {
-                        className: F.accountCredit,
+                        className: H.accountCreditDescription,
+                        children: k.default.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
+                    }), null != e && j.default.hasAccountCredit(e) ? (0, a.jsx)(b.default, {
+                        className: H.accountCredit,
                         entitlements: e
-                    }) : (0, a.jsx)(G, {})]
+                    }) : (0, a.jsx)(Y, {})]
                 })
             }
-            var H = function() {
-                let e = (0, r.useStateFromStores)([O.default], () => O.default.getPremiumTypeSubscription()),
-                    t = (0, r.useStateFromStores)([A.default], () => null != e && null != e.paymentSourceId ? A.default.getPaymentSource(e.paymentSourceId) : null, [e]),
-                    s = (0, r.useStateFromStores)([O.default], () => O.default.hasFetchedSubscriptions()),
-                    l = (0, r.useStateFromStores)([C.default], () => C.default.isBusy),
-                    S = (0, g.useSubscriptionPlansLoaded)(),
-                    x = (0, r.useStateFromStores)([p.default], () => p.default.getSubsection());
-                return (n.useEffect(() => (d.default.wait(() => {
-                    (0, E.fetchPremiumSubscriptionPlans)(), u.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), u.fetchPaymentSources()
+            var K = function() {
+                let e = (0, r.useStateFromStores)([x.default], () => x.default.getPremiumTypeSubscription()),
+                    t = (0, r.useStateFromStores)([x.default], () => {
+                        let e = x.default.getPremiumTypeSubscriptions(),
+                            t = (null != e ? e : []).filter(e => w.has(e.status));
+                        return t.length > 1
+                    }),
+                    s = (0, r.useStateFromStores)([O.default], () => null != e && null != e.paymentSourceId ? O.default.getPaymentSource(e.paymentSourceId) : null, [e]),
+                    l = (0, r.useStateFromStores)([x.default], () => x.default.hasFetchedSubscriptions()),
+                    o = (0, r.useStateFromStores)([A.default], () => A.default.isBusy),
+                    E = (0, h.useSubscriptionPlansLoaded)(),
+                    M = (0, r.useStateFromStores)([C.default], () => C.default.getSubsection());
+                return (n.useEffect(() => (u.default.wait(() => {
+                    (0, f.fetchPremiumSubscriptionPlans)(), c.fetchSubscriptions(), (0, S.fetchGuildBoostSlots)(), c.fetchPaymentSources()
                 }), function() {
-                    f.default.clearSubsection()
-                }), []), N.default.enabled) ? (0, a.jsx)(T.default, {}) : s && S ? x === y.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(I.default, {
-                    onGoBack: () => f.default.clearSubsection()
-                }) : x === y.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(_.default, {
-                    onGoBack: () => f.default.clearSubsection()
+                    T.default.clearSubsection()
+                }), []), p.default.enabled) ? (0, a.jsx)(m.default, {}) : l && E ? M === G.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(N.default, {
+                    onGoBack: () => T.default.clearSubsection()
+                }) : M === G.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(g.default, {
+                    onGoBack: () => T.default.clearSubsection()
                 }) : (0, a.jsx)("div", {
-                    className: F.container,
+                    className: H.container,
                     children: (0, a.jsxs)("div", {
-                        className: F.content,
-                        children: [null != e ? (0, a.jsx)(j.default, {
-                            className: F.subscriptionDetails,
+                        className: H.content,
+                        children: [t ? (0, a.jsx)(V, {}) : null, null != e ? (0, a.jsx)(y.default, {
+                            className: H.subscriptionDetails,
                             subscription: e,
-                            paymentSource: t,
-                            busy: l
-                        }) : (0, a.jsx)(j.SubscriptionDetailsEmpty, {
-                            className: F.subscriptionDetails
-                        }), (0, a.jsx)(h.default, {
-                            onClickManageSubscription: () => f.default.setSection(U.UserSettingsSections.SUBSCRIPTIONS, y.ROLE_SUBSCRIPTION_SUBSECTION)
-                        }), (0, a.jsx)(m.default, {
+                            paymentSource: s,
+                            busy: o
+                        }) : (0, a.jsx)(y.SubscriptionDetailsEmpty, {
+                            className: H.subscriptionDetails
+                        }), (0, a.jsx)(I.default, {
+                            onClickManageSubscription: () => T.default.setSection(F.UserSettingsSections.SUBSCRIPTIONS, G.ROLE_SUBSCRIPTION_SUBSECTION)
+                        }), (0, a.jsx)(_.default, {
                             onClickManageSubscription: () => {
-                                f.default.setSection(U.UserSettingsSections.SUBSCRIPTIONS, y.APPLICATION_SUBSCRIPTION_SUBSECTION), v.default.track(U.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
+                                T.default.setSection(F.UserSettingsSections.SUBSCRIPTIONS, G.APPLICATION_SUBSCRIPTION_SUBSECTION), L.default.track(F.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
                             }
-                        }), (0, a.jsx)(k, {}), null != e ? (0, a.jsx)(P.default, {
+                        }), (0, a.jsx)(W, {}), null != e ? (0, a.jsx)(U.default, {
                             subscription: e,
                             withOverheadSeparator: !1
                         }) : null]
                     })
                 }) : (0, a.jsx)("div", {
-                    className: i(F.container, F.loading),
-                    children: (0, a.jsx)(o.Spinner, {})
+                    className: i(H.container, H.loading),
+                    children: (0, a.jsx)(d.Spinner, {})
                 })
             }
         },
@@ -10722,7 +10750,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "040c8b5d05847f02e63e58ce68b7028a95d07cf7", e.substring(0, 7)),
+                    S = (e = "dc74aa41b394e552412102bae64f3de866db17e9", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10735,7 +10763,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "255082", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "255094", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
