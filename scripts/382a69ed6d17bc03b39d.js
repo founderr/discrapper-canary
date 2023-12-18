@@ -9514,12 +9514,14 @@
                         body: s
                     } = t, {
                         classifications: a,
-                        account_standing: l
-                    } = s, i = a.find(t => t.id === e);
-                    null != i ? n.default.dispatch({
+                        account_standing: l,
+                        is_dsa_eligible: i
+                    } = s, r = a.find(t => t.id === e);
+                    null != r ? n.default.dispatch({
                         type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
-                        classification: i,
-                        accountStanding: l
+                        classification: r,
+                        accountStanding: l,
+                        isDsaEligible: i
                     }) : n.default.dispatch({
                         type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
                         error: "Classification not found.",
@@ -9586,7 +9588,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return T
+                    return _
                 }
             });
             var a = s("816494"),
@@ -9601,8 +9603,10 @@
                 },
                 c = !1,
                 S = !1,
-                E = null;
-            class f extends l.default.Store {
+                E = null,
+                f = null,
+                T = !1;
+            class m extends l.default.Store {
                 isFetching() {
                     return c
                 }
@@ -9624,9 +9628,15 @@
                 getClassificationRequestState(e) {
                     return d[e]
                 }
+                getAppealClassificationId() {
+                    return f
+                }
+                getIsDsaEligible() {
+                    return T
+                }
             }
-            f.displayName = "SafetyHubStore";
-            var T = new f(i.default, {
+            m.displayName = "SafetyHubStore";
+            var _ = new m(i.default, {
                 SAFETY_HUB_FETCH_START: function(e) {
                     c = !0
                 },
@@ -9649,9 +9659,10 @@
                 SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function(e) {
                     let {
                         classification: t,
-                        accountStanding: s
+                        accountStanding: s,
+                        isDsaEligible: a
                     } = e;
-                    o[t.id] = t, d[t.id] = r.ClassificationRequestState.SUCCESS, u = s, c = !1, E = null
+                    o[t.id] = t, d[t.id] = r.ClassificationRequestState.SUCCESS, u = s, c = !1, E = null, T = a
                 },
                 SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(e) {
                     let {
@@ -9660,10 +9671,19 @@
                     } = e;
                     c = !1, E = t, d[s] = r.ClassificationRequestState.FAILED
                 },
+                SAFETY_HUB_APPEAL_OPEN: function(e) {
+                    let {
+                        classificationId: t
+                    } = e;
+                    f = t
+                },
+                SAFETY_HUB_APPEAL_CLOSE: function() {
+                    f = null
+                },
                 LOGOUT: function() {
                     c = !1, o = {}, u = {
                         state: r.AccountStandingState.ALL_GOOD
-                    }
+                    }, f = null
                 }
             })
         },
@@ -9734,12 +9754,14 @@
 
             function d(e) {
                 let t = (0, n.useStateFromStores)([r.default], () => r.default.getClassification(e)),
-                    s = (0, n.useStateFromStores)([r.default], () => r.default.getClassificationRequestState(e));
+                    s = (0, n.useStateFromStores)([r.default], () => r.default.getClassificationRequestState(e)),
+                    l = (0, n.useStateFromStores)([r.default], () => r.default.getIsDsaEligible());
                 return a.useEffect(() => {
                     void 0 === t && null == s && i.getSafetyHubDataForClassification(e)
                 }, [e, t, s]), {
                     classification: t,
-                    classificationRequestState: s
+                    classificationRequestState: s,
+                    isDsaEligible: l
                 }
             }
 
@@ -10812,7 +10834,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "96284523ca300f4bfec6116c1e366c84cd48b35a", e.substring(0, 7)),
+                    S = (e = "fa7e860eea54d0b08c334f7b5670fe5822e53732", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10825,7 +10847,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "255260", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "255283", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
