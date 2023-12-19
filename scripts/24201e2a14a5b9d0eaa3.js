@@ -176,10 +176,6 @@
             "use strict";
             e.exports = n.p + "053ece9d4d0e004f1c47.svg"
         },
-        635348: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "f0eae807823459e917a6.gif"
-        },
         271861: function(e, t, n) {
             "use strict";
             e.exports = n.p + "c7fa42bca0c3ea28f681.svg"
@@ -15472,7 +15468,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 HangStatusPopout: function() {
-                    return I
+                    return _
                 }
             }), n("222007");
             var a = n("37983"),
@@ -15489,9 +15485,8 @@
                 p = n("32346"),
                 m = n("925749"),
                 E = n("782340"),
-                C = n("492013"),
-                g = n("635348");
-            let S = e => {
+                C = n("492013");
+            let g = e => {
                     e.stopPropagation(), (0, o.openModalLazy)(async () => {
                         let {
                             default: e
@@ -15501,7 +15496,7 @@
                         })
                     })
                 },
-                _ = e => {
+                S = e => {
                     let {
                         style: t,
                         className: n,
@@ -15518,14 +15513,14 @@
                         })
                     })
                 },
-                I = e => {
+                _ = e => {
                     let {
                         currentStatus: t
                     } = e, n = l.useRef(p.default.getRecentCustomStatuses()), s = (0, m.getHangStatusOptions)(), r = (e, t) => {
                         e.stopPropagation(), (0, h.updateHangStatus)(t, !0)
-                    }, I = (e, t) => {
+                    }, _ = (e, t) => {
                         e.stopPropagation(), (0, h.updateCustomHangStatus)(t.status, t.emoji, !0)
-                    }, T = l.useCallback(e => {
+                    }, I = l.useCallback(e => {
                         e.stopPropagation(), (0, h.clearHangStatus)(!0)
                     }, []);
                     return (0, a.jsxs)("div", {
@@ -15537,7 +15532,7 @@
                                 return (0, a.jsx)(o.Clickable, {
                                     "aria-label": l.title,
                                     onClick: e => r(e, n),
-                                    children: (0, a.jsx)(_, {
+                                    children: (0, a.jsx)(S, {
                                         className: i(C.iconWidget, {
                                             [C.selectedWidget]: n === (null == t ? void 0 : t.state)
                                         }),
@@ -15556,18 +15551,10 @@
                                         } : {}
                                     })
                                 }, n)
-                            }), (0, a.jsx)(_, {
-                                className: i(C.iconWidget, C.disabledWidget),
-                                name: E.default.Messages.STATUS_COMING_SOON,
-                                icon: (0, a.jsx)("img", {
-                                    src: g,
-                                    alt: "",
-                                    className: i(C.icon, C.comingSoonIcon)
-                                })
                             }), (0, a.jsx)(o.Clickable, {
                                 "aria-label": E.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
-                                onClick: T,
-                                children: (0, a.jsx)(_, {
+                                onClick: I,
+                                children: (0, a.jsx)(S, {
                                     className: C.optionButton,
                                     name: E.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
                                     icon: (0, a.jsx)(c.default, {
@@ -15584,8 +15571,8 @@
                                 let l = e.status === (null == t ? void 0 : t.details) && u.isEqual(e.emoji, null == t ? void 0 : t.emoji);
                                 return (0, a.jsx)(o.Clickable, {
                                     "aria-label": e.status,
-                                    onClick: t => I(t, e),
-                                    children: (0, a.jsx)(_, {
+                                    onClick: t => _(t, e),
+                                    children: (0, a.jsx)(S, {
                                         className: i(C.iconWidget, {
                                             [C.selectedWidget]: l
                                         }),
@@ -15604,8 +15591,8 @@
                                 }, "custom-status-".concat(n))
                             }), n.current.length > 0 ? (0, a.jsx)(o.Clickable, {
                                 "aria-label": null != t ? E.default.Messages.STATUS_POPOUT_EDIT_CUSTOM : E.default.Messages.STATUS_POPOUT_SET_CUSTOM,
-                                onClick: S,
-                                children: (0, a.jsx)(_, {
+                                onClick: g,
+                                children: (0, a.jsx)(S, {
                                     className: C.optionButton,
                                     name: null != t ? E.default.Messages.STATUS_POPOUT_EDIT_CUSTOM : E.default.Messages.STATUS_POPOUT_SET_CUSTOM,
                                     icon: (0, a.jsx)(f.default, {
@@ -15616,7 +15603,7 @@
                                 })
                             }, "custom-status-edit") : (0, a.jsxs)(o.Clickable, {
                                 "aria-label": E.default.Messages.STATUS_POPOUT_SET_CUSTOM,
-                                onClick: S,
+                                onClick: g,
                                 className: C.setCustomButton,
                                 children: [(0, a.jsx)(f.default, {
                                     className: C.editIcon,
