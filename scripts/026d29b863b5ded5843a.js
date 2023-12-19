@@ -1,28 +1,28 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["42632"], {
+    ["15106"], {
         430568: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return S
                 }
             }), n("222007"), n("70102"), n("843762"), n("424973");
             var l = n("37983"),
                 a = n("884691"),
                 s = n("414456"),
-                i = n.n(s),
-                r = n("817736"),
-                o = n.n(r),
+                o = n.n(s),
+                i = n("817736"),
+                r = n.n(i),
                 u = n("118810"),
                 d = n("446674"),
                 c = n("407063"),
-                f = n("845579"),
-                p = n("901165"),
-                E = n("62843"),
+                p = n("845579"),
+                f = n("901165"),
+                h = n("62843"),
                 I = n("315102"),
-                h = n("402671"),
+                E = n("402671"),
                 m = n("866190"),
-                A = n("115279");
+                _ = n("115279");
             class C extends a.PureComponent {
                 componentWillUnmount() {
                     var e;
@@ -36,23 +36,23 @@
                             emojiName: l,
                             animated: a,
                             shouldAnimate: s,
-                            isFocused: i,
-                            isInteracting: r,
-                            size: o = "default"
+                            isFocused: o,
+                            isInteracting: i,
+                            size: r = "default"
                         } = e,
                         {
                             hover: u
                         } = this.state;
                     if (null != t) return t;
                     if (null != n) {
-                        let e = A.EMOJI_SIZE_MAP[o];
+                        let e = _.EMOJI_SIZE_MAP[r];
                         return I.default.getEmojiURL({
                             id: n,
-                            animated: i && !0 === a && (!0 === s || u || !0 === r),
+                            animated: o && !0 === a && (!0 === s || u || !0 === i),
                             size: e
                         })
                     }
-                    if (null != l) return h.default.getURL(l)
+                    if (null != l) return E.default.getURL(l)
                 }
                 render() {
                     var e;
@@ -60,18 +60,18 @@
                     let {
                         emojiName: n,
                         animated: s,
-                        className: r,
-                        size: o = "default",
+                        className: i,
+                        size: r = "default",
                         alt: u,
                         shouldAnimate: d,
                         isFocused: c,
-                        emojiId: f,
-                        autoplay: p,
-                        isInteracting: E,
+                        emojiId: p,
+                        autoplay: f,
+                        isInteracting: h,
                         ...I
-                    } = this.props, h = this.getSrc();
-                    return null == h || "" === h ? (0, l.jsx)("span", {
-                        className: i("emoji", "emoji-text"),
+                    } = this.props, E = this.getSrc();
+                    return null == E || "" === E ? (0, l.jsx)("span", {
+                        className: o("emoji", "emoji-text"),
                         children: n
                     }) : (s && (t = {
                         onMouseEnter: this.onMouseEnter,
@@ -79,17 +79,17 @@
                     }), (0, a.createElement)("img", {
                         ...I,
                         key: this.key,
-                        src: h,
+                        src: E,
                         alt: null !== (e = null != u ? u : n) && void 0 !== e ? e : void 0,
                         draggable: !1,
                         ...t,
-                        className: i("emoji", r, {
-                            jumboable: "jumbo" === o
+                        className: o("emoji", i, {
+                            jumboable: "jumbo" === r
                         }),
                         onError: this.onError,
                         "data-type": "emoji",
-                        ...null != f && "" !== f ? {
-                            "data-id": f
+                        ...null != p && "" !== p ? {
+                            "data-id": p
                         } : {
                             "data-name": n
                         }
@@ -125,7 +125,7 @@
             C.defaultProps = {
                 isInteracting: !1
             };
-            let _ = function(e) {
+            let g = function(e) {
                 if (null == window.IntersectionObserver) return function(t) {
                     return (0, l.jsx)(e, {
                         ...t,
@@ -143,9 +143,9 @@
                             if (null == l) return;
                             let a = l[1];
                             if (e.intersectionRatio >= .7) {
-                                var s, i;
+                                var s, o;
                                 if (-1 !== t.indexOf(a)) return;
-                                let n = Math.abs(e.intersectionRect.bottom - Number(null === (s = e.rootBounds) || void 0 === s ? void 0 : s.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (i = e.rootBounds) || void 0 === i ? void 0 : i.top));
+                                let n = Math.abs(e.intersectionRect.bottom - Number(null === (s = e.rootBounds) || void 0 === s ? void 0 : s.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (o = e.rootBounds) || void 0 === o ? void 0 : o.top));
                                 n ? t.unshift(a) : t.push(a), a.forceUpdate(), n && t.length > 100 && t[100].forceUpdate()
                             } else {
                                 let e = t.indexOf(a); - 1 !== e && (t.splice(e, 1), a.forceUpdate(), e < 100 && t.length >= 100 && t[99].forceUpdate())
@@ -155,13 +155,13 @@
                         threshold: .7
                     });
 
-                function i(e) {
-                    let t = o.findDOMNode(e);
+                function o(e) {
+                    let t = r.findDOMNode(e);
                     (0, u.isElement)(t) && (n.push([t, e]), s.observe(t))
                 }
 
-                function r(e) {
-                    let l = o.findDOMNode(e);
+                function i(e) {
+                    let l = r.findDOMNode(e);
                     s.unobserve(l);
                     let a = n.findIndex(t => {
                         let [n, l] = t;
@@ -173,26 +173,26 @@
                         return e.animated && e.autoplay
                     }
                     componentDidMount() {
-                        this.shouldAutoplay(this.props) && i(this)
+                        this.shouldAutoplay(this.props) && o(this)
                     }
                     componentDidUpdate(e) {
                         let t = this.shouldAutoplay(e),
                             n = this.shouldAutoplay(this.props);
-                        n !== t && (n ? i(this) : r(this))
+                        n !== t && (n ? o(this) : i(this))
                     }
                     componentWillUnmount() {
-                        this.shouldAutoplay(this.props) && r(this)
+                        this.shouldAutoplay(this.props) && i(this)
                     }
                     render() {
                         let n = t.indexOf(this),
                             {
                                 autoplay: a,
                                 allowAnimatedEmoji: s,
-                                ...i
+                                ...o
                             } = this.props;
-                        return (0, l.jsx)(E.MessagesInteractionContext.Consumer, {
+                        return (0, l.jsx)(h.MessagesInteractionContext.Consumer, {
                             children: t => (0, l.jsx)(e, {
-                                ...i,
+                                ...o,
                                 autoplay: a || !1,
                                 shouldAnimate: -1 !== n && n < 100 && !t.disableAnimations && s
                             })
@@ -201,14 +201,14 @@
                 }
             }(C);
 
-            function T(e) {
-                let t = f.AnimateEmoji.useSetting(),
+            function S(e) {
+                let t = p.AnimateEmoji.useSetting(),
                     n = {
                         autoplay: null == e.autoplay ? t : e.autoplay,
                         allowAnimatedEmoji: t
                     },
-                    a = __OVERLAY__ ? (0, d.useStateFromStores)([p.default], () => p.default.isInstanceFocused()) : (0, m.useIsWindowFocused)();
-                return (0, l.jsx)(_, {
+                    a = __OVERLAY__ ? (0, d.useStateFromStores)([f.default], () => f.default.isInstanceFocused()) : (0, m.useIsWindowFocused)();
+                return (0, l.jsx)(g, {
                     ...e,
                     ...n,
                     isFocused: a
@@ -219,30 +219,30 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return r
                 }
             }), n("702976"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
             var l = n("872717"),
                 a = n("913144"),
                 s = n("568734"),
-                i = n("299285"),
-                r = n("49111"),
-                o = {
+                o = n("299285"),
+                i = n("49111"),
+                r = {
                     async createApplication(e) {
                         let {
                             name: t,
                             guildId: n,
                             type: s,
-                            teamId: i
-                        } = e, o = await l.default.post({
-                            url: r.Endpoints.APPLICATIONS,
+                            teamId: o
+                        } = e, r = await l.default.post({
+                            url: i.Endpoints.APPLICATIONS,
                             body: {
                                 name: t,
                                 type: s,
                                 guild_id: n,
-                                team_id: i
+                                team_id: o
                             }
-                        }), u = o.body;
+                        }), u = r.body;
                         return null != n && null != s && a.default.dispatch({
                             type: "APPLICATION_FETCH_SUCCESS",
                             application: u
@@ -253,41 +253,41 @@
                             includeTeam: t,
                             ...n
                         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, s = await l.default.get({
-                            url: r.Endpoints.GUILD_APPLICATIONS(e),
+                            url: i.Endpoints.GUILD_APPLICATIONS(e),
                             query: {
                                 ...n,
                                 include_team: t
                             }
-                        }), i = s.body;
+                        }), o = s.body;
                         return a.default.dispatch({
                             type: "APPLICATIONS_FETCH_SUCCESS",
-                            applications: i
-                        }), i
+                            applications: o
+                        }), o
                     },
                     async transferApplication(e) {
                         let {
                             applicationId: t,
                             teamId: n
                         } = e, s = await l.default.post({
-                            url: r.Endpoints.APPLICATION_OWNER_TRANSFER(t),
+                            url: i.Endpoints.APPLICATION_OWNER_TRANSFER(t),
                             body: {
                                 team_id: n
                             }
-                        }), i = s.body;
+                        }), o = s.body;
                         return a.default.dispatch({
                             type: "APPLICATION_FETCH_SUCCESS",
-                            application: i
-                        }), i
+                            application: o
+                        }), o
                     },
                     async fetchApplications(e) {
                         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                             n = e;
                         if (!t && (n = e.filter(e => {
                                 var t, n;
-                                let l = i.default.getApplication(e),
-                                    a = (0, s.hasFlag)(null !== (n = null == l ? void 0 : l.flags) && void 0 !== n ? n : 0, r.ApplicationFlags.EMBEDDED),
-                                    o = a && (null == l ? void 0 : null === (t = l.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null;
-                                return !(null != l && !o) && !i.default.isFetchingApplication(e) && !i.default.didFetchingApplicationFail(e) && e.length > 0
+                                let l = o.default.getApplication(e),
+                                    a = (0, s.hasFlag)(null !== (n = null == l ? void 0 : l.flags) && void 0 !== n ? n : 0, i.ApplicationFlags.EMBEDDED),
+                                    r = a && (null == l ? void 0 : null === (t = l.embeddedActivityConfig) || void 0 === t ? void 0 : t.supported_platforms) == null;
+                                return !(null != l && !r) && !o.default.isFetchingApplication(e) && !o.default.didFetchingApplicationFail(e) && e.length > 0
                             })), n.length > 0) {
                             let e;
                             a.default.dispatch({
@@ -296,7 +296,7 @@
                             });
                             try {
                                 e = await l.default.get({
-                                    url: r.Endpoints.APPLICATIONS_PUBLIC,
+                                    url: i.Endpoints.APPLICATIONS_PUBLIC,
                                     query: new URLSearchParams(n.map(e => ["application_ids", e])).toString(),
                                     oldFormErrors: !0
                                 })
@@ -318,7 +318,7 @@
                             type: "APPLICATION_FETCH",
                             applicationId: e
                         }), l.default.get({
-                            url: r.Endpoints.APPLICATION_PUBLIC(e),
+                            url: i.Endpoints.APPLICATION_PUBLIC(e),
                             query: {
                                 with_guild: t
                             },
@@ -360,144 +360,144 @@
             "use strict";
             n.r(t), n.d(t, {
                 RawInviteCopyInputConnected: function() {
-                    return S
+                    return v
                 },
                 InviteCopyInput: function() {
-                    return y
+                    return N
                 }
             }), n("222007");
             var l = n("37983"),
                 a = n("884691"),
                 s = n("414456"),
-                i = n.n(s),
-                r = n("498574"),
-                o = n("446674"),
+                o = n.n(s),
+                i = n("498574"),
+                r = n("446674"),
                 u = n("862337"),
                 d = n("77078"),
                 c = n("162771"),
-                f = n("102985"),
-                p = n("599110"),
-                E = n("306160"),
+                p = n("102985"),
+                f = n("599110"),
+                h = n("306160"),
                 I = n("568734"),
-                h = n("354023"),
+                E = n("354023"),
                 m = n("865699"),
-                A = n("91366"),
+                _ = n("91366"),
                 C = n("49111"),
-                _ = n("782340"),
-                T = n("435808"),
-                g = n("905518"),
-                v = n("173791"),
-                N = n("926622");
-            let S = o.default.connectStores([f.default], () => ({
-                    hideValue: f.default.hideInstantInvites
+                g = n("782340"),
+                S = n("435808"),
+                T = n("905518"),
+                y = n("173791"),
+                A = n("926622");
+            let v = r.default.connectStores([p.default], () => ({
+                    hideValue: p.default.hideInstantInvites
                 }))(e => {
                     let {
                         value: t,
                         autoFocus: n,
                         hideValue: s,
-                        onCopy: r,
-                        disabled: o
-                    } = e, [c, f] = a.useState(!1), [p, I] = a.useState(!1), h = a.useMemo(() => new u.DelayedCall(1e3, () => I(!1)), [I]);
+                        onCopy: i,
+                        disabled: r
+                    } = e, [c, p] = a.useState(!1), [f, I] = a.useState(!1), E = a.useMemo(() => new u.DelayedCall(1e3, () => I(!1)), [I]);
                     return a.useEffect(() => () => {
-                        h.cancel()
-                    }, [h]), (0, l.jsxs)("div", {
-                        className: i(g.input, v.flexJustifyBetween, v.flexCenter, {
-                            [g.success]: p,
-                            [g.focused]: c
+                        E.cancel()
+                    }, [E]), (0, l.jsxs)("div", {
+                        className: o(T.input, y.flexJustifyBetween, y.flexCenter, {
+                            [T.success]: f,
+                            [T.focused]: c
                         }),
                         children: [(0, l.jsx)(d.TextInput, {
-                            className: T.copyInput,
+                            className: S.copyInput,
                             name: "invite",
-                            value: s ? _.default.Messages.INSTANT_INVITE_HIDDEN : t,
+                            value: s ? g.default.Messages.INSTANT_INVITE_HIDDEN : t,
                             editable: !1,
-                            inputClassName: T.noBorder,
+                            inputClassName: S.noBorder,
                             autoFocus: n,
-                            onFocus: () => n ? f(!0) : null,
-                            onBlur: () => n ? f(!1) : null,
+                            onFocus: () => n ? p(!0) : null,
+                            onBlur: () => n ? p(!1) : null,
                             spellCheck: "false",
                             onClick: e => e.currentTarget.select(),
-                            "aria-label": _.default.Messages.FORM_LABEL_INVITE_LINK,
-                            disabled: o
-                        }), E.SUPPORTS_COPY ? (0, l.jsx)(d.Button, {
+                            "aria-label": g.default.Messages.FORM_LABEL_INVITE_LINK,
+                            disabled: r
+                        }), h.SUPPORTS_COPY ? (0, l.jsx)(d.Button, {
                             size: d.Button.Sizes.SMALL,
-                            color: p ? d.Button.Colors.GREEN : d.Button.Colors.BRAND,
-                            className: T.copyButton,
+                            color: f ? d.Button.Colors.GREEN : d.Button.Colors.BRAND,
+                            className: S.copyButton,
                             onClick: () => {
-                                I(!0), h.delay(), r(t)
+                                I(!0), E.delay(), i(t)
                             },
-                            disabled: o,
-                            children: p ? _.default.Messages.INVITE_COPIED : _.default.Messages.COPY
+                            disabled: r,
+                            children: f ? g.default.Messages.INVITE_COPIED : g.default.Messages.COPY
                         }) : null]
                     })
                 }),
-                y = e => {
+                N = e => {
                     let {
                         guild: t,
                         noInvitesAvailable: n,
                         showFriends: s,
-                        onClose: o,
+                        onClose: r,
                         modalState: u,
-                        isGuestInviteCreationToggleEnabled: f,
-                        inviteFlags: g,
-                        setInviteFlags: v,
-                        showGuestInviteToggleForCurrentVoiceChannel: y,
-                        copyValue: P,
-                        changePage: M,
-                        inviteChannel: x,
-                        source: b,
+                        isGuestInviteCreationToggleEnabled: p,
+                        inviteFlags: T,
+                        setInviteFlags: y,
+                        showGuestInviteToggleForCurrentVoiceChannel: N,
+                        copyValue: x,
+                        changePage: b,
+                        inviteChannel: P,
+                        source: M,
                         code: O,
                         guildScheduledEvent: L,
                         disabled: F
                     } = e, {
                         maxAge: R,
-                        maxUses: U,
-                        networkError: D,
-                        showVanityURL: j
-                    } = u, V = a.useCallback(() => {
-                        (0, E.copy)(P), p.default.track(C.AnalyticEvents.COPY_INSTANT_INVITE, {
+                        maxUses: j,
+                        networkError: U,
+                        showVanityURL: k
+                    } = u, w = a.useCallback(() => {
+                        (0, h.copy)(x), f.default.track(C.AnalyticEvents.COPY_INSTANT_INVITE, {
                             server: c.default.getGuildId(),
-                            channel: null == x ? void 0 : x.id,
-                            channel_type: null == x ? void 0 : x.type,
-                            location: b,
+                            channel: null == P ? void 0 : P.id,
+                            channel_type: null == P ? void 0 : P.type,
+                            location: M,
                             code: O,
                             guild_scheduled_event_id: null == L ? void 0 : L.id
                         })
-                    }, [P, x, b, O, L]);
+                    }, [x, P, M, O, L]);
                     return (0, l.jsxs)(l.Fragment, {
-                        children: [(0, l.jsx)(S, {
-                            value: P,
+                        children: [(0, l.jsx)(v, {
+                            value: x,
                             autoFocus: s,
-                            onCopy: V,
+                            onCopy: w,
                             disabled: F
-                        }), f ? (0, l.jsx)("div", {
-                            className: T.temporaryMembershipContainerBackground,
+                        }), p ? (0, l.jsx)("div", {
+                            className: S.temporaryMembershipContainerBackground,
                             children: (0, l.jsx)(d.FormSwitch, {
-                                className: T.temporaryMembershipContainer,
-                                value: (0, I.hasFlag)(g, r.GuildInviteFlags.IS_GUEST_INVITE),
-                                onChange: e => v((0, I.setFlag)(g, r.GuildInviteFlags.IS_GUEST_INVITE, e)),
-                                note: _.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
+                                className: S.temporaryMembershipContainer,
+                                value: (0, I.hasFlag)(T, i.GuildInviteFlags.IS_GUEST_INVITE),
+                                onChange: e => y((0, I.setFlag)(T, i.GuildInviteFlags.IS_GUEST_INVITE, e)),
+                                note: g.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
                                 disabled: F,
                                 hideBorder: !0,
-                                children: y ? _.default.Messages.GRANT_GUEST_MEMBERSHIP_VOICE_ONLY : _.default.Messages.GRANT_GUEST_MEMBERSHIP
+                                children: N ? g.default.Messages.GRANT_GUEST_MEMBERSHIP_VOICE_ONLY : g.default.Messages.GRANT_GUEST_MEMBERSHIP
                             })
-                        }) : null, n || j ? null : (0, l.jsxs)(d.Text, {
+                        }) : null, n || k ? null : (0, l.jsxs)(d.Text, {
                             variant: "text-xs/normal",
-                            className: i(N.marginTop8, T.footerText),
-                            children: [(0, h.maxAgeString)(R, U), " ", s ? (0, l.jsx)(d.Anchor, {
-                                onClick: () => M(A.InstantInviteModalPages.SETTINGS),
-                                children: _.default.Messages.INVITE_EDIT_LINK
+                            className: o(A.marginTop8, S.footerText),
+                            children: [(0, E.maxAgeString)(R, j), " ", s ? (0, l.jsx)(d.Anchor, {
+                                onClick: () => b(_.InstantInviteModalPages.SETTINGS),
+                                children: g.default.Messages.INVITE_EDIT_LINK
                             }) : null]
-                        }), !n && s && j ? (0, l.jsxs)(d.Text, {
+                        }), !n && s && k ? (0, l.jsxs)(d.Text, {
                             variant: "text-xs/normal",
-                            className: i(N.marginTop8, T.footerText),
-                            children: [_.default.Messages.INVITE_VANITY_USED, " ", (0, l.jsx)(d.Anchor, {
-                                onClick: () => M(A.InstantInviteModalPages.SETTINGS),
-                                children: _.default.Messages.INVITE_EDIT_LINK
+                            className: o(A.marginTop8, S.footerText),
+                            children: [g.default.Messages.INVITE_VANITY_USED, " ", (0, l.jsx)(d.Anchor, {
+                                onClick: () => b(_.InstantInviteModalPages.SETTINGS),
+                                children: g.default.Messages.INVITE_EDIT_LINK
                             })]
-                        }) : null, null != D ? (0, l.jsx)(m.InviteErrorMessage, {
+                        }) : null, null != U ? (0, l.jsx)(m.InviteErrorMessage, {
                             guild: t,
-                            error: D,
-                            onClose: o
+                            error: U,
+                            onClose: r
                         }) : null]
                     })
                 }
@@ -512,9 +512,9 @@
             var l = n("37983"),
                 a = n("884691"),
                 s = n("77078"),
-                i = n("592407"),
-                r = n("957255"),
-                o = n("49111"),
+                o = n("592407"),
+                i = n("957255"),
+                r = n("49111"),
                 u = n("782340"),
                 d = n("435808");
 
@@ -523,19 +523,19 @@
                     guild: t,
                     error: n,
                     onClose: c
-                } = e, f = t.id, p = a.useCallback(() => {
-                    c(), i.default.open(f, o.GuildSettingsSections.INSTANT_INVITES)
-                }, [f, c]), E = a.useCallback(e => (0, l.jsx)(s.Clickable, {
+                } = e, p = t.id, f = a.useCallback(() => {
+                    c(), o.default.open(p, r.GuildSettingsSections.INSTANT_INVITES)
+                }, [p, c]), h = a.useCallback(e => (0, l.jsx)(s.Clickable, {
                     className: d.errorLink,
-                    onClick: p,
+                    onClick: f,
                     children: (0, l.jsx)(s.Text, {
                         variant: "text-xs/normal",
                         color: "text-link",
                         tag: "span",
                         children: e
                     })
-                }), [p]), I = a.useCallback(e => (0, l.jsx)(s.Anchor, {
-                    href: o.MarketingURLs.INVITES_HELP,
+                }), [f]), I = a.useCallback(e => (0, l.jsx)(s.Anchor, {
+                    href: r.MarketingURLs.INVITES_HELP,
                     target: "_blank",
                     children: (0, l.jsx)(s.Text, {
                         variant: "text-xs/normal",
@@ -543,168 +543,55 @@
                         tag: "span",
                         children: e
                     })
-                }), []), h = n.code !== o.AbortCodes.TOO_MANY_INVITES ? n.getAnyErrorMessage() : r.default.can(o.Permissions.MANAGE_GUILD, t) ? u.default.Messages.TOO_MANY_INVITES_ERROR.format({
-                    inviteListHook: E,
+                }), []), E = n.code !== r.AbortCodes.TOO_MANY_INVITES ? n.getAnyErrorMessage() : i.default.can(r.Permissions.MANAGE_GUILD, t) ? u.default.Messages.TOO_MANY_INVITES_ERROR.format({
+                    inviteListHook: h,
                     inviteHelpHook: I
                 }) : u.default.Messages.TOO_MANY_INVITES_ERROR_MEMBER;
                 return (0, l.jsx)(s.Text, {
                     className: d.errorMessage,
                     variant: "text-xs/normal",
                     color: "text-danger",
-                    children: h
+                    children: E
                 })
             }
         },
-        287850: function(e, t, n) {
+        37785: function(e, t, n) {
             "use strict";
-            let l, a, s;
             n.r(t), n.d(t, {
                 default: function() {
-                    return O
+                    return r
                 }
-            }), n("222007"), n("424973");
-            var i, r, o = n("866227"),
-                u = n.n(o),
-                d = n("446674"),
-                c = n("407846"),
-                f = n("913144"),
-                p = n("21121"),
-                E = n("934306"),
-                I = n("288518"),
-                h = n("486503"),
-                m = n("233069"),
-                A = n("42203"),
-                C = n("305961"),
-                _ = n("660478"),
-                T = n("282109"),
-                g = n("697218"),
-                v = n("299039"),
-                N = n("724210");
-            (r = i || (i = {})).DEFAULT = "DEFAULT", r.FAVORITE = "FAVORITE";
-            let S = new c.default(e => {
-                let {
-                    isRequest: t,
-                    isFavorite: n
-                } = e;
-                return t ? [] : [n ? "FAVORITE" : "DEFAULT"]
-            }, e => {
-                let {
-                    lastMessageId: t
-                } = e;
-                return -t
             });
-
-            function y(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(e) {
-                    var t, n;
-                    let l = null !== (n = null !== (t = _.default.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
-                        a = e.isMessageRequestTimestamp;
-                    if (null != a) {
-                        let e = u(a).valueOf(),
-                            t = v.default.fromTimestamp(e);
-                        return v.default.compare(l, t) > 0 ? l : t
-                    }
-                    return l
-                }(e);
-                return {
-                    channelId: e.id,
-                    lastMessageId: t,
-                    isFavorite: T.default.isMessagesFavorite(e.id) && (0, p.isInMainTabsExperiment)(),
-                    isRequest: I.default.isMessageRequest(e.id) || h.default.isSpam(e.id)
-                }
-            }
-
-            function P() {
-                S.clear(), Object.values(A.default.getMutablePrivateChannels()).forEach(e => {
-                    S.set(e.id, y(e))
-                }), (0, p.isInMainTabsExperiment)() && (0, E.isSplitMessagesTab)() && T.default.getAddedToMessages().forEach(e => {
-                    let t = A.default.getChannel(e);
-                    null != t && (0, m.isGuildTextChannelType)(t.type) && S.set(t.id, y(t))
-                })
-            }
-
-            function M() {
-                let e = A.default.getMutablePrivateChannels();
-                for (let t in e) S.set(t, y(e[t]))
-            }
-            let x = (l = [], a = [], s = [], () => {
-                let e = S.values("FAVORITE"),
-                    t = S.values("DEFAULT");
-                return (l !== e || a !== t) && (s = [], e.forEach(e => {
+            var l = n("37983"),
+                a = n("884691"),
+                s = n("77078"),
+                o = n("393414"),
+                i = n("49111"),
+                r = a.forwardRef(function(e, t) {
                     let {
-                        channelId: t
-                    } = e;
-                    return s.push(t)
-                }), l = e, t.forEach(e => {
-                    let {
-                        channelId: t
-                    } = e;
-                    return s.push(t)
-                }), a = t), s
-            });
-            class b extends d.default.Store {
-                initialize() {
-                    this.waitFor(A.default, C.default, g.default, I.default, T.default), this.syncWith([T.default, I.default], P)
-                }
-                getPrivateChannelIds() {
-                    return x()
-                }
-                getSortedChannels() {
-                    return [S.values("FAVORITE"), S.values("DEFAULT")]
-                }
-                serializeForOverlay() {
-                    let e = {};
-                    return S.values().forEach(t => {
-                        let {
-                            channelId: n,
-                            lastMessageId: l
-                        } = t;
-                        e[n] = l
-                    }), e
-                }
-            }
-            b.displayName = "PrivateChannelSortStore";
-            var O = new b(f.default, {
-                CONNECTION_OPEN: P,
-                CONNECTION_OPEN_SUPPLEMENTAL: P,
-                OVERLAY_INITIALIZE: P,
-                CACHE_LOADED: M,
-                CACHE_LOADED_LAZY: M,
-                CHANNEL_UPDATES: function(e) {
-                    let {
-                        channels: t
-                    } = e;
-                    t.forEach(e => {
-                        ((0, m.isPrivate)(e.type) || S.has(e.id)) && S.set(e.id, y(e))
+                        href: n,
+                        children: r,
+                        onClick: u,
+                        onKeyPress: d,
+                        focusProps: c,
+                        ...p
+                    } = e, f = a.useCallback(e => {
+                        !e.repeat && ((e.charCode === i.KeyboardKeys.SPACE || e.charCode === i.KeyboardKeys.ENTER) && (e.preventDefault(), null != n && (0, o.transitionTo)(n), null == u || u()), null == d || d(e))
+                    }, [n, d, u]), h = a.useCallback(e => {
+                        !e.metaKey && !e.shiftKey && 0 === e.button && (e.preventDefault(), e.stopPropagation(), null != n && (0, o.transitionTo)(n), null == u || u())
+                    }, [n, u]), I = (0, l.jsx)("a", {
+                        ref: t,
+                        href: n,
+                        onClick: h,
+                        onKeyPress: f,
+                        ...p,
+                        children: r
+                    });
+                    return (0, l.jsx)(s.FocusRing, {
+                        ...c,
+                        children: I
                     })
-                },
-                CHANNEL_CREATE: function(e) {
-                    let {
-                        channel: t
-                    } = e;
-                    if (!(0, m.isPrivate)(t.type) || t.id === N.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return !1;
-                    S.set(t.id, y(t))
-                },
-                CHANNEL_DELETE: function(e) {
-                    let {
-                        channel: t
-                    } = e;
-                    return S.delete(t.id)
-                },
-                MESSAGE_CREATE: function(e) {
-                    let {
-                        channelId: t,
-                        message: n
-                    } = e;
-                    if (!S.has(t)) return !1;
-                    let l = A.default.getChannel(t);
-                    return null != l && S.set(t, y(l, n.id))
-                },
-                GUILD_CREATE: function(e) {
-                    let t = e.guild.id;
-                    return S.delete(t)
-                }
-            })
+                })
         },
         62843: function(e, t, n) {
             "use strict";
@@ -723,16 +610,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 SUPPORTS_COPY: function() {
-                    return i
+                    return o
                 },
                 copy: function() {
-                    return r
+                    return i
                 }
             }), n("70102");
             var l = n("281071"),
                 a = n("773336"),
                 s = n("50885");
-            let i = (() => {
+            let o = (() => {
                 if (a.isPlatformEmbedded) return null != s.default.copy;
                 try {
                     return document.queryCommandEnabled("copy") || document.queryCommandSupported("copy")
@@ -741,27 +628,27 @@
                 }
             })();
 
-            function r(e) {
-                return !!i && (a.isPlatformEmbedded ? (s.default.copy(e), !0) : l.copy(e))
+            function i(e) {
+                return !!o && (a.isPlatformEmbedded ? (s.default.copy(e), !0) : l.copy(e))
             }
         },
         866190: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 useIsWindowFocused: function() {
-                    return r
+                    return i
                 }
             });
             var l = n("884691"),
                 a = n("446674"),
                 s = n("244201"),
-                i = n("471671");
+                o = n("471671");
 
-            function r() {
+            function i() {
                 let {
                     windowId: e
                 } = l.useContext(s.default);
-                return (0, a.useStateFromStores)([i.default], () => i.default.isFocused(e), [e])
+                return (0, a.useStateFromStores)([o.default], () => o.default.isFocused(e), [e])
             }
         },
         498574: function(e, t, n) {

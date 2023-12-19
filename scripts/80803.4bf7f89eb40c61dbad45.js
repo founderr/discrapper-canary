@@ -5481,14 +5481,11 @@
                 toggleBurstReactionPicker: function() {
                     return l
                 },
-                toggleFreeUserSentPopout: function() {
+                addReactionPickerAnimation: function() {
                     return s
                 },
-                addReactionPickerAnimation: function() {
-                    return a
-                },
                 clearReactionPickerAnimation: function() {
-                    return r
+                    return a
                 }
             });
             var n = i("913144");
@@ -5500,14 +5497,7 @@
                 })
             }
 
-            function s(e) {
-                n.default.dispatch({
-                    type: "BURST_REACTION_SHOW_FREE_USER_SENT_POPOUT",
-                    emoji: e
-                })
-            }
-
-            function a(e, t, i, l) {
+            function s(e, t, i, l) {
                 n.default.dispatch({
                     type: "BURST_REACTION_PICKER_ANIMATION_ADD",
                     messageId: e,
@@ -5517,7 +5507,7 @@
                 })
             }
 
-            function r(e, t, i) {
+            function a(e, t, i) {
                 n.default.dispatch({
                     type: "BURST_REACTION_PICKER_ANIMATION_CLEAR",
                     messageId: e,

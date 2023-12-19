@@ -7017,7 +7017,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 ButtonAddReaction: function() {
-                    return P
+                    return R
                 }
             }), n("702976"), n("222007");
             var a = n("37983"),
@@ -7041,14 +7041,13 @@
                 C = n("719923"),
                 S = n("590527"),
                 A = n("875978"),
-                N = n("255135"),
-                M = n("49111"),
-                v = n("958706"),
-                x = n("646718"),
-                O = n("782340"),
-                L = n("550244"),
-                R = n("314934");
-            class P extends s.Component {
+                N = n("49111"),
+                M = n("958706"),
+                v = n("646718"),
+                x = n("782340"),
+                O = n("550244"),
+                L = n("314934");
+            class R extends s.Component {
                 render() {
                     let {
                         type: e,
@@ -7058,15 +7057,15 @@
                         useChatFontScaling: l
                     } = this.props, {
                         isReactionPickerActive: r
-                    } = this.state, o = t.state === M.MessageStates.SENDING, u = e === A.ReactionTypes.BURST;
-                    if (o || (0, T.hasFlag)(t.flags, M.MessageFlags.EPHEMERAL)) return null;
+                    } = this.state, o = t.state === N.MessageStates.SENDING, u = e === A.ReactionTypes.BURST;
+                    if (o || (0, T.hasFlag)(t.flags, N.MessageFlags.EPHEMERAL)) return null;
                     let m = p.default.getCurrentUser(),
                         h = (0, C.isPremium)(m),
-                        E = u ? O.default.Messages.ADD_BURST_REACTION : O.default.Messages.ADD_REACTION;
+                        E = u ? x.default.Messages.ADD_BURST_REACTION : x.default.Messages.ADD_REACTION;
                     !h && u && (E = (0, a.jsx)(f.NitroTooltipLabel, {
-                        tooltipText: O.default.Messages.ADD_BURST_REACTION
+                        tooltipText: x.default.Messages.ADD_BURST_REACTION
                     }));
-                    let _ = l ? R : L;
+                    let _ = l ? L : O;
                     return (0, a.jsx)(d.Popout, {
                         shouldShow: r,
                         onRequestClose: this.handleReactionPickerToggle,
@@ -7079,7 +7078,7 @@
                             return (0, a.jsx)(d.TooltipContainer, {
                                 text: E,
                                 color: d.TooltipColors.PRIMARY,
-                                "aria-label": u ? O.default.Messages.ADD_BURST_REACTION : O.default.Messages.ADD_REACTION,
+                                "aria-label": u ? x.default.Messages.ADD_BURST_REACTION : x.default.Messages.ADD_REACTION,
                                 tooltipClassName: _.addReactionTooltip,
                                 children: (0, a.jsxs)(d.Clickable, {
                                     ...e,
@@ -7089,13 +7088,13 @@
                                     onMouseEnter: () => {
                                         c.default.dispatch({
                                             type: "EMOJI_INTERACTION_INITIATED",
-                                            interaction: v.EmojiInteractionPoint.AddReactionPopoutMouseEntered
+                                            interaction: M.EmojiInteractionPoint.AddReactionPopoutMouseEntered
                                         })
                                     },
                                     onFocus: () => {
                                         c.default.dispatch({
                                             type: "EMOJI_INTERACTION_INITIATED",
-                                            interaction: v.EmojiInteractionPoint.AddReactionPopoutFocused
+                                            interaction: M.EmojiInteractionPoint.AddReactionPopoutFocused
                                         })
                                     },
                                     className: i(_.reactionBtn, {
@@ -7135,25 +7134,18 @@
                     }, this.handleAddReactionClick = e => {
                         let {
                             type: t,
-                            channel: n,
-                            remainingBurstCurrency: a
+                            channel: n
                         } = this.props;
-                        if (e.stopPropagation(), t === A.ReactionTypes.BURST && null != a && a < 1) {
-                            let e = p.default.getCurrentUser();
-                            if ((0, C.isPremium)(e)) {
-                                (0, N.openOutOfBurstsModal)();
-                                return
-                            }(0, m.openBurstReactionsUpsellModal)({
-                                analytics: {
-                                    type: x.PremiumUpsellTypes.BURST_REACTION_UPSELL,
-                                    page: null != n.getGuildId() ? M.AnalyticsPages.GUILD_CHANNEL : M.AnalyticsPages.DM_CHANNEL,
-                                    section: (0, E.getBurstAnalyticsSection)(n),
-                                    object: M.AnalyticsObjects.INLINE_REACTION_PICKER_UPSELL
-                                }
-                            });
-                            return
-                        }
-                        this.handleReactionPickerToggle()
+                        e.stopPropagation();
+                        let a = p.default.getCurrentUser();
+                        t === A.ReactionTypes.BURST && !(0, C.isPremium)(a) && (0, m.openBurstReactionsUpsellModal)({
+                            analytics: {
+                                type: v.PremiumUpsellTypes.BURST_REACTION_UPSELL,
+                                page: null != n.getGuildId() ? N.AnalyticsPages.GUILD_CHANNEL : N.AnalyticsPages.DM_CHANNEL,
+                                section: (0, E.getBurstAnalyticsSection)(n),
+                                object: N.AnalyticsObjects.INLINE_REACTION_PICKER_UPSELL
+                            }
+                        }), this.handleReactionPickerToggle()
                     }, this.renderReactionPopout = e => {
                         let {
                             closePopout: t
@@ -7165,9 +7157,9 @@
                             openPopoutType: "message_reaction_emoji_picker",
                             ...i && {
                                 openPopoutType: "message_super_reaction_emoji_picker",
-                                page: null != s.getGuildId() ? M.AnalyticsPages.GUILD_CHANNEL : M.AnalyticsPages.DM_CHANNEL,
+                                page: null != s.getGuildId() ? N.AnalyticsPages.GUILD_CHANNEL : N.AnalyticsPages.DM_CHANNEL,
                                 section: (0, E.getBurstAnalyticsSection)(s),
-                                object: M.AnalyticsObjects.REACTION_RAIL
+                                object: N.AnalyticsObjects.REACTION_RAIL
                             }
                         }, c = (0, a.jsx)(_.ReactionPicker, {
                             closePopout: t,
@@ -7180,7 +7172,7 @@
                         });
                         return (0, a.jsx)(u.DialogContext.Consumer, {
                             children: e => e ? (0, a.jsx)(d.Dialog, {
-                                "aria-label": O.default.Messages.REACTION_PICKER,
+                                "aria-label": x.default.Messages.REACTION_PICKER,
                                 children: c
                             }) : c
                         })

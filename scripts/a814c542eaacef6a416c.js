@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["9759"], {
+    ["7264"], {
         18054: function(B, e, E) {
             "use strict";
             E.r(e), E.d(e, {
@@ -7,10 +7,10 @@
                     return a
                 },
                 close: function() {
-                    return o
+                    return r
                 },
                 setSection: function() {
-                    return r
+                    return o
                 },
                 updateChannel: function() {
                     return D
@@ -25,18 +25,18 @@
                     return A
                 }
             }), E("702976");
-            var C = E("872717"),
-                n = E("913144"),
-                l = E("81732");
+            var t = E("872717"),
+                l = E("913144"),
+                n = E("81732");
             E("21121"), E("693051"), E("921245");
-            var t = E("263024");
+            var C = E("263024");
             E("492114");
             var F = E("42203"),
                 i = E("54239"),
                 u = E("49111");
 
             function a(B, e, E) {
-                n.default.dispatch({
+                l.default.dispatch({
                     type: "CHANNEL_SETTINGS_INIT",
                     channelId: B,
                     location: e,
@@ -44,14 +44,14 @@
                 })
             }
 
-            function o() {
-                n.default.dispatch({
+            function r() {
+                l.default.dispatch({
                     type: "CHANNEL_SETTINGS_CLOSE"
                 })
             }
 
-            function r(B) {
-                n.default.dispatch({
+            function o(B) {
+                l.default.dispatch({
                     type: "CHANNEL_SETTINGS_SET_SECTION",
                     section: B
                 })
@@ -61,50 +61,50 @@
                 let {
                     name: e,
                     type: E,
-                    topic: C,
-                    bitrate: l,
-                    userLimit: t,
+                    topic: t,
+                    bitrate: n,
+                    userLimit: C,
                     nsfw: F,
                     flags: i,
                     rateLimitPerUser: u,
                     defaultThreadRateLimitPerUser: a,
-                    defaultAutoArchiveDuration: o,
-                    template: r,
+                    defaultAutoArchiveDuration: r,
+                    template: o,
                     defaultReactionEmoji: D,
                     rtcRegion: d,
                     videoQualityMode: s,
                     autoArchiveDuration: A,
                     locked: c,
-                    invitable: _,
+                    invitable: f,
                     availableTags: N,
-                    defaultSortOrder: f,
-                    defaultForumLayout: m,
-                    iconEmoji: T,
+                    defaultSortOrder: _,
+                    defaultForumLayout: T,
+                    iconEmoji: m,
                     themeColor: h
                 } = B;
-                n.default.dispatch({
+                l.default.dispatch({
                     type: "CHANNEL_SETTINGS_UPDATE",
                     name: e,
                     channelType: E,
-                    topic: C,
-                    bitrate: l,
-                    userLimit: t,
+                    topic: t,
+                    bitrate: n,
+                    userLimit: C,
                     nsfw: F,
                     flags: i,
                     rateLimitPerUser: u,
                     defaultThreadRateLimitPerUser: a,
-                    defaultAutoArchiveDuration: o,
-                    template: r,
+                    defaultAutoArchiveDuration: r,
+                    template: o,
                     defaultReactionEmoji: D,
                     rtcRegion: d,
                     videoQualityMode: s,
                     autoArchiveDuration: A,
                     locked: c,
-                    invitable: _,
+                    invitable: f,
                     availableTags: N,
-                    defaultSortOrder: f,
-                    defaultForumLayout: m,
-                    iconEmoji: T,
+                    defaultSortOrder: _,
+                    defaultForumLayout: T,
+                    iconEmoji: m,
                     themeColor: h
                 })
             }
@@ -113,55 +113,55 @@
                     name: E,
                     type: i,
                     position: a,
-                    topic: o,
-                    bitrate: r,
+                    topic: r,
+                    bitrate: o,
                     userLimit: D,
                     nsfw: d,
                     flags: s,
                     permissionOverwrites: A,
                     rateLimitPerUser: c,
-                    defaultThreadRateLimitPerUser: _,
+                    defaultThreadRateLimitPerUser: f,
                     defaultAutoArchiveDuration: N,
-                    template: f,
-                    defaultReactionEmoji: m,
-                    rtcRegion: T,
+                    template: _,
+                    defaultReactionEmoji: T,
+                    rtcRegion: m,
                     videoQualityMode: h,
                     autoArchiveDuration: v,
-                    locked: S,
-                    invitable: I,
+                    locked: I,
+                    invitable: S,
                     availableTags: p,
                     defaultSortOrder: L,
                     defaultForumLayout: g,
                     iconEmoji: O,
                     themeColor: U
                 } = e, y = F.default.getChannel(B);
-                return n.default.dispatch({
+                return l.default.dispatch({
                     type: "CHANNEL_SETTINGS_SUBMIT"
-                }), await t.default.unarchiveThreadIfNecessary(B), C.default.patch({
+                }), await C.default.unarchiveThreadIfNecessary(B), t.default.patch({
                     url: u.Endpoints.CHANNEL(B),
                     body: {
                         name: E,
                         type: i,
                         position: a,
-                        topic: o,
-                        bitrate: r,
+                        topic: r,
+                        bitrate: o,
                         user_limit: D,
                         nsfw: d,
                         flags: s,
                         permission_overwrites: A,
                         rate_limit_per_user: c,
-                        default_thread_rate_limit_per_user: _,
+                        default_thread_rate_limit_per_user: f,
                         default_auto_archive_duration: N,
-                        template: f,
-                        rtc_region: T,
+                        template: _,
+                        rtc_region: m,
                         video_quality_mode: h,
                         auto_archive_duration: v,
-                        locked: S,
-                        invitable: I,
-                        default_reaction_emoji: null != m ? {
-                            emoji_id: null == m ? void 0 : m.emojiId,
-                            emoji_name: null == m ? void 0 : m.emojiName
-                        } : null === m ? null : void 0,
+                        locked: I,
+                        invitable: S,
+                        default_reaction_emoji: null != T ? {
+                            emoji_id: null == T ? void 0 : T.emojiId,
+                            emoji_name: null == T ? void 0 : T.emojiName
+                        } : null === T ? null : void 0,
                         available_tags: null == p ? void 0 : p.map(B => ({
                             id: B.id,
                             name: B.name,
@@ -179,13 +179,13 @@
                     },
                     oldFormErrors: !0
                 }).then(e => {
-                    n.default.dispatch({
+                    l.default.dispatch({
                         type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
                         channelId: B
                     });
                     let E = null == y ? void 0 : y.getGuildId();
-                    return null != E && !(null == y ? void 0 : y.isThread()) && l.default.checkGuildTemplateDirty(E), e
-                }, B => (n.default.dispatch({
+                    return null != E && !(null == y ? void 0 : y.isThread()) && n.default.checkGuildTemplateDirty(E), e
+                }, B => (l.default.dispatch({
                     type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
                     errors: B.body
                 }), B))
@@ -193,12 +193,12 @@
 
             function s(B) {
                 let e = F.default.getChannel(B);
-                C.default.delete({
+                t.default.delete({
                     url: u.Endpoints.CHANNEL(B),
                     oldFormErrors: !0
                 }).then(() => {
                     let B = null == e ? void 0 : e.getGuildId();
-                    null != B && !(null == e ? void 0 : e.isThread()) && l.default.checkGuildTemplateDirty(B), o()
+                    null != B && !(null == e ? void 0 : e.isThread()) && n.default.checkGuildTemplateDirty(B), r()
                 })
             }
             var A = {
@@ -206,10 +206,10 @@
                 open: function(B, e, E) {
                     a(B, e, E), (0, i.pushLayer)(u.Layers.CHANNEL_SETTINGS)
                 },
-                close: o,
-                setSection: r,
+                close: r,
+                setSection: o,
                 selectPermissionOverwrite: function(B) {
-                    n.default.dispatch({
+                    l.default.dispatch({
                         type: "CHANNEL_SETTINGS_OVERWRITE_SELECT",
                         overwriteId: B
                     })
@@ -218,7 +218,7 @@
                 saveChannel: d,
                 deleteChannel: s,
                 updateVoiceChannelStatus: function(B, e) {
-                    return C.default.put({
+                    return t.default.put({
                         url: u.Endpoints.UPDATE_VOICE_CHANNEL_STATUS(B),
                         body: {
                             status: e
@@ -231,43 +231,43 @@
             "use strict";
             E.r(e), E.d(e, {
                 ChannelItemIcon: function() {
-                    return M
+                    return R
                 },
                 default: function() {
-                    return R
+                    return j
                 }
             }), E("222007");
-            var C = E("37983"),
-                n = E("884691"),
-                l = E("414456"),
-                t = E.n(l),
+            var t = E("37983"),
+                l = E("884691"),
+                n = E("414456"),
+                C = E.n(n),
                 F = E("974667"),
                 i = E("446674"),
                 u = E("77078"),
                 a = E("430568"),
-                o = E("789394"),
-                r = E("843962"),
+                r = E("789394"),
+                o = E("843962"),
                 D = E("679653"),
                 d = E("419830"),
                 s = E("565298"),
                 A = E("965381"),
                 c = E("305961"),
-                _ = E("824563"),
+                f = E("824563"),
                 N = E("191542"),
-                f = E("697218"),
-                m = E("37785"),
-                T = E("98292"),
+                _ = E("697218"),
+                T = E("37785"),
+                m = E("98292"),
                 h = E("587974"),
                 v = E("50885"),
-                S = E("49111"),
-                I = E("133335"),
+                I = E("49111"),
+                S = E("133335"),
                 p = E("404135");
             let L = (B, e, E) => {
-                    n.useLayoutEffect(() => {
-                        let C = null;
-                        return B > 0 && (clearTimeout(C), C = setTimeout(() => {
-                            E(), clearTimeout(C)
-                        }, 4 * e)), () => clearTimeout(C)
+                    l.useLayoutEffect(() => {
+                        let t = null;
+                        return B > 0 && (clearTimeout(t), t = setTimeout(() => {
+                            E(), clearTimeout(t)
+                        }, 4 * e)), () => clearTimeout(t)
                     }, [B, e, E])
                 },
                 g = {
@@ -288,87 +288,87 @@
                 let {
                     channel: e
                 } = B;
-                return (0, C.jsx)(U, {
-                    src: (0, r.getChannelIconURL)(e),
+                return (0, t.jsx)(U, {
+                    src: (0, o.getChannelIconURL)(e),
                     "aria-hidden": !0,
                     size: u.AvatarSizes.SIZE_20
                 })
             }
 
-            function j(B) {
+            function M(B) {
                 let {
                     channel: e
-                } = B, E = (0, i.useStateFromStores)([f.default], () => f.default.getUser(null == e ? void 0 : e.recipients[0])), n = (0, i.useStateFromStores)([N.default], () => !(null == E || null == e || e.isMultiUserDM()) && null != N.default.getTypingUsers(null == e ? void 0 : e.id)[null == E ? void 0 : E.id]), {
-                    status: l,
-                    isMobile: t
-                } = (0, i.useStateFromStoresObject)([_.default], () => null == E || null == e || e.isMultiUserDM() ? {
+                } = B, E = (0, i.useStateFromStores)([_.default], () => _.default.getUser(null == e ? void 0 : e.recipients[0])), l = (0, i.useStateFromStores)([N.default], () => !(null == E || null == e || e.isMultiUserDM()) && null != N.default.getTypingUsers(null == e ? void 0 : e.id)[null == E ? void 0 : E.id]), {
+                    status: n,
+                    isMobile: C
+                } = (0, i.useStateFromStoresObject)([f.default], () => null == E || null == e || e.isMultiUserDM() ? {
                     status: null,
                     isMobile: !1
                 } : {
-                    status: _.default.getStatus(E.id),
-                    isMobile: _.default.isMobileOnline(E.id)
+                    status: f.default.getStatus(E.id),
+                    isMobile: f.default.isMobileOnline(E.id)
                 });
-                return (0, C.jsx)(U, {
+                return (0, t.jsx)(U, {
                     size: u.AvatarSizes.SIZE_20,
                     src: null == E ? void 0 : E.getAvatarURL(void 0, 40),
-                    status: l,
-                    isMobile: t,
-                    isTyping: n,
+                    status: n,
+                    isMobile: C,
+                    isTyping: l,
                     "aria-label": null == E ? void 0 : E.username,
                     statusTooltip: !0
                 })
             }
-            let M = B => {
+            let R = B => {
                 let {
                     className: e,
                     channel: E,
-                    guild: n,
-                    locked: l,
+                    guild: l,
+                    locked: n,
                     hasActiveThreads: F,
                     withGuildIcon: a
-                } = B, o = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(E.guild_id), [E.guild_id]), r = a ? null == o ? void 0 : o.getIconURL(48) : null, D = null != r, s = function(B, e, E) {
+                } = B, r = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(E.guild_id), [E.guild_id]), o = a ? null == r ? void 0 : r.getIconURL(48) : null, D = null != o, s = function(B, e, E) {
                     switch (B.type) {
-                        case S.ChannelTypes.DM:
+                        case I.ChannelTypes.DM:
                             return function() {
-                                return (0, C.jsx)(j, {
+                                return (0, t.jsx)(M, {
                                     channel: B
                                 })
                             };
-                        case S.ChannelTypes.GROUP_DM:
+                        case I.ChannelTypes.GROUP_DM:
                             return function() {
-                                return (0, C.jsx)(y, {
+                                return (0, t.jsx)(y, {
                                     channel: B
                                 })
                             };
                         default:
                             return (0, d.getChannelIconComponent)(B, e, E)
                     }
-                }(E, n, {
-                    locked: l,
+                }(E, l, {
+                    locked: n,
                     hasActiveThreads: F
                 });
                 if (null == s) return null;
-                let A = (0, d.getChannelIconTooltipText)(E, n, l, F),
-                    _ = D && null != o ? "".concat(o.name, " - ").concat(A, " icon") : "".concat(A, " icon");
-                return (0, C.jsx)(u.Tooltip, {
+                let A = (0, d.getChannelIconTooltipText)(E, l, n, F),
+                    f = D && null != r ? "".concat(r.name, " - ").concat(A, " icon") : "".concat(A, " icon");
+                return (0, t.jsx)(u.Tooltip, {
                     text: A,
                     delay: 500,
-                    children: B => (0, C.jsxs)("div", {
+                    children: B => (0, t.jsxs)("div", {
                         ...B,
                         role: "img",
-                        "aria-label": _,
-                        className: t(p.iconContainer, {
+                        "aria-label": f,
+                        className: C(p.iconContainer, {
                             [p.iconContainerWithGuildIcon]: D
                         }),
-                        children: [D && (0, C.jsx)(h.default, {
+                        children: [D && (0, t.jsx)(h.default, {
                             mask: h.MaskIDs.GUILD_ICON_WITH_CHANNEL_TYPE,
-                            children: (0, C.jsx)("img", {
+                            children: (0, t.jsx)("img", {
                                 alt: "",
-                                src: r,
+                                src: o,
                                 className: p.channelGuildIcon
                             })
-                        }), (0, C.jsx)(s, {
-                            className: t(p.icon, {
+                        }), (0, t.jsx)(s, {
+                            className: C(p.icon, {
                                 [p.iconWithGuildIcon]: D
                             }, e)
                         })]
@@ -376,29 +376,29 @@
                 })
             };
 
-            function R(B) {
+            function j(B) {
                 var e;
                 let {
                     channel: E,
-                    name: l,
+                    name: n,
                     muted: i,
-                    selected: r,
+                    selected: o,
                     connected: d,
                     unread: c,
-                    locked: _,
+                    locked: f,
                     hasActiveThreads: N,
-                    onClick: f,
+                    onClick: _,
                     onMouseDown: h,
                     onMouseUp: v,
                     onContextMenu: U,
                     connectDragPreview: y,
-                    className: j,
-                    iconClassName: R,
+                    className: M,
+                    iconClassName: j,
                     subtitle: G,
-                    subtitleColor: x,
-                    enableHangStatus: H,
+                    subtitleColor: H,
+                    enableHangStatus: b,
                     channel: {
-                        type: b
+                        type: x
                     },
                     onMouseEnter: P,
                     onMouseLeave: w,
@@ -409,33 +409,33 @@
                     forceInteractable: W,
                     mentionCount: z,
                     unreadMode: Y,
-                    isFavoriteSuggestion: Q,
-                    withGuildIcon: X
+                    isFavoriteSuggestion: q,
+                    withGuildIcon: Z
                 } = B, {
-                    enabled: Z,
-                    left: q
-                } = o.ChannelEmojisExperiment.useExperiment({
+                    enabled: Q,
+                    left: X
+                } = r.ChannelEmojisExperiment.useExperiment({
                     location: "337985_1"
                 }, {
                     autoTrackExposure: !1
-                }), $ = Y === I.UnreadMode.IMPORTANT || null != z && z > 0, {
+                }), $ = Y === S.UnreadMode.IMPORTANT || null != z && z > 0, {
                     role: BB,
                     ...Be
-                } = (0, F.useListItem)(E.id), BE = n.useRef(null), BC = n.useRef(null), Bn = (0, s.default)(E), Bl = S.Routes.CHANNEL(Bn, E.id), Bt = (0, D.default)(E), BF = E.isGuildVocal(), {
+                } = (0, F.useListItem)(E.id), BE = l.useRef(null), Bt = l.useRef(null), Bl = (0, s.default)(E), Bn = I.Routes.CHANNEL(Bl, E.id), BC = (0, D.default)(E), BF = E.isGuildVocal(), {
                     reducedMotion: Bi
-                } = n.useContext(u.AccessibilityPreferencesContext), Bu = Bi.enabled, [Ba, Bo] = n.useState([]);
+                } = l.useContext(u.AccessibilityPreferencesContext), Bu = Bi.enabled, [Ba, Br] = l.useState([]);
                 L(Ba.length, 500, () => {
-                    Bo([])
+                    Br([])
                 });
-                let Br = B => {
+                let Bo = B => {
                         if (Bu) return;
                         let e = B.currentTarget.getBoundingClientRect(),
                             E = e.width > e.height ? e.width : e.height,
-                            C = B.pageX - e.x - E / 2,
-                            n = B.pageY - e.y - E / 2;
-                        Bo([...Ba, {
-                            x: C,
-                            y: n,
+                            t = B.pageX - e.x - E / 2,
+                            l = B.pageY - e.y - E / 2;
+                        Br([...Ba, {
+                            x: t,
+                            y: l,
                             size: E
                         }])
                     },
@@ -443,78 +443,78 @@
                         emoji: BD,
                         color: Bd
                     } = (0, A.useChannelEmojiAndColor)(E),
-                    Bs = Z ? (0, C.jsx)(a.default, {
+                    Bs = Q ? (0, t.jsx)(a.default, {
                         emojiName: BD.name,
                         emojiId: BD.id,
                         src: BD.url,
                         className: p.twemoji
                     }) : null,
-                    BA = (0, C.jsx)("div", {
-                        className: t({
-                            [p.favoritesSuggestion]: Q
+                    BA = (0, t.jsx)("div", {
+                        className: C({
+                            [p.favoritesSuggestion]: q
                         }),
-                        children: (0, C.jsxs)(m.default, {
+                        children: (0, t.jsxs)(T.default, {
                             role: BF && !d ? "button" : "link",
-                            href: BF ? void 0 : Bl,
+                            href: BF ? void 0 : Bn,
                             target: "_blank",
                             ref: BE,
-                            className: t(p.link, {
+                            className: C(p.link, {
                                 [p.linkWithChannelEmoji]: null != Bs
                             }),
                             onMouseDown: B => {
-                                Z && 0 === B.button && Br(B)
+                                Q && 0 === B.button && Bo(B)
                             },
-                            onClick: () => null == f ? void 0 : f(E),
+                            onClick: () => null == _ ? void 0 : _(E),
                             ...Be,
                             "aria-label": k,
                             focusProps: {
                                 enabled: !1
                             },
-                            children: [Z && (0, C.jsx)("div", {
+                            children: [Q && (0, t.jsx)("div", {
                                 className: p.emojiColorFill,
                                 style: {
                                     backgroundColor: Bd,
-                                    opacity: r ? 1 : 0
+                                    opacity: o ? 1 : 0
                                 }
-                            }), (0, C.jsxs)("div", {
+                            }), (0, t.jsxs)("div", {
                                 className: p.linkTop,
-                                children: [null != Bs && q && (0, C.jsx)("div", {
-                                    className: t(p.channelEmoji, p.channelEmojiLeftOfIcon),
+                                children: [null != Bs && X && (0, t.jsx)("div", {
+                                    className: C(p.channelEmoji, p.channelEmojiLeftOfIcon),
                                     style: {
                                         backgroundColor: Bd
                                     },
                                     children: Bs
-                                }), (0, C.jsx)(M, {
-                                    className: R,
+                                }), (0, t.jsx)(R, {
+                                    className: j,
                                     channel: E,
                                     guild: J,
                                     hasActiveThreads: N,
-                                    locked: _,
-                                    withGuildIcon: X
-                                }), null != Bs && !q && (0, C.jsx)("div", {
-                                    className: t(p.channelEmoji, p.channelEmojiRightOfIcon),
+                                    locked: f,
+                                    withGuildIcon: Z
+                                }), null != Bs && !X && (0, t.jsx)("div", {
+                                    className: C(p.channelEmoji, p.channelEmojiRightOfIcon),
                                     style: {
                                         backgroundColor: Bd
                                     },
                                     children: Bs
-                                }), (0, C.jsx)(T.default, {
-                                    className: t(p.name),
+                                }), (0, t.jsx)(m.default, {
+                                    className: C(p.name),
                                     "aria-hidden": !0,
-                                    children: null == l ? Bt : l
-                                }), n.Children.count(V) > 0 ? (0, C.jsx)("div", {
+                                    children: null == n ? BC : n
+                                }), l.Children.count(V) > 0 ? (0, t.jsx)("div", {
                                     onClick: O,
                                     className: p.children,
                                     children: V
                                 }) : null]
-                            }), H || null == G ? null : (0, C.jsx)("div", {
+                            }), b || null == G ? null : (0, t.jsx)("div", {
                                 className: p.linkBottom,
-                                children: (0, C.jsx)(u.Text, {
-                                    color: null != x ? x : "text-muted",
+                                children: (0, t.jsx)(u.Text, {
+                                    color: null != H ? H : "text-muted",
                                     variant: "text-xs/medium",
                                     className: p.subtitle,
                                     children: G
                                 })
-                            }), Z && Ba.length > 0 && Ba.map((B, e) => (0, C.jsx)("span", {
+                            }), Q && Ba.length > 0 && Ba.map((B, e) => (0, t.jsx)("span", {
                                 className: p.ripple,
                                 style: {
                                     top: B.y,
@@ -528,47 +528,47 @@
                             }, "ripple-".concat(e)))]
                         })
                     });
-                return (0, C.jsx)(u.FocusRing, {
+                return (0, t.jsx)(u.FocusRing, {
                     focusTarget: BE,
-                    ringTarget: BC,
+                    ringTarget: Bt,
                     offset: {
                         top: 2,
                         bottom: 2,
                         right: 4
                     },
-                    children: (0, C.jsxs)("div", {
-                        className: t(j, null != f || null != v || null != h || W ? p.wrapper : p.notInteractive, (() => {
-                            if (r && !Z) return g.SELECTED;
+                    children: (0, t.jsxs)("div", {
+                        className: C(M, null != _ || null != v || null != h || W ? p.wrapper : p.notInteractive, (() => {
+                            if (o && !Q) return g.SELECTED;
                             if (d) return g.CONNECTED;
-                            if (_) return g.LOCKED;
+                            if (f) return g.LOCKED;
                             if (i) return g.MUTED;
                             if (c) return $ ? g.UNREAD_IMPORTANT : g.UNREAD_LESS_IMPORTANT;
                             return null
                         })(), function(B) {
                             switch (B) {
-                                case S.ChannelTypes.GUILD_STAGE_VOICE:
-                                case S.ChannelTypes.GUILD_VOICE:
+                                case I.ChannelTypes.GUILD_STAGE_VOICE:
+                                case I.ChannelTypes.GUILD_VOICE:
                                     return p.typeVoice;
-                                case S.ChannelTypes.ANNOUNCEMENT_THREAD:
-                                case S.ChannelTypes.PUBLIC_THREAD:
-                                case S.ChannelTypes.PRIVATE_THREAD:
+                                case I.ChannelTypes.ANNOUNCEMENT_THREAD:
+                                case I.ChannelTypes.PUBLIC_THREAD:
+                                case I.ChannelTypes.PRIVATE_THREAD:
                                     return p.typeThread;
-                                case S.ChannelTypes.GUILD_ANNOUNCEMENT:
-                                case S.ChannelTypes.GUILD_TEXT:
-                                case S.ChannelTypes.GUILD_STORE:
-                                case S.ChannelTypes.GUILD_FORUM:
-                                case S.ChannelTypes.GUILD_MEDIA:
+                                case I.ChannelTypes.GUILD_ANNOUNCEMENT:
+                                case I.ChannelTypes.GUILD_TEXT:
+                                case I.ChannelTypes.GUILD_STORE:
+                                case I.ChannelTypes.GUILD_FORUM:
+                                case I.ChannelTypes.GUILD_MEDIA:
                                 default:
                                     return p.typeDefault
                             }
-                        }(null != K ? K : b)),
+                        }(null != K ? K : x)),
                         onMouseUp: B => null == v ? void 0 : v(B, E),
                         onMouseDown: B => null == h ? void 0 : h(B, E),
                         onContextMenu: B => null == U ? void 0 : U(B, E),
                         onMouseEnter: P,
                         onMouseLeave: w,
-                        children: [i || !c || r && !BF ? null : (0, C.jsx)("div", {
-                            className: t(p.unread, $ ? p.unreadImportant : void 0)
+                        children: [i || !c || o && !BF ? null : (0, t.jsx)("div", {
+                            className: C(p.unread, $ ? p.unreadImportant : void 0)
                         }), null !== (e = null == y ? void 0 : y(BA)) && void 0 !== e ? e : BA]
                     })
                 })
@@ -578,22 +578,22 @@
             "use strict";
             E.r(e), E.d(e, {
                 DEFAULT_CHANNEL_EMOJI: function() {
-                    return C
+                    return t
                 },
                 CHANNEL_EMOJI_BACKGROUND_OPACITY_LIGHT: function() {
-                    return n
-                },
-                CHANNEL_EMOJI_BACKGROUND_OPACITY_DARK: function() {
                     return l
                 },
+                CHANNEL_EMOJI_BACKGROUND_OPACITY_DARK: function() {
+                    return n
+                },
                 DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR: function() {
-                    return t
+                    return C
                 }
             });
-            let C = "\uD83D\uDCAC",
-                n = .16,
-                l = .2,
-                t = "#607D8B"
+            let t = "\uD83D\uDCAC",
+                l = .16,
+                n = .2,
+                C = "#607D8B"
         },
         965381: function(B, e, E) {
             "use strict";
@@ -602,19 +602,19 @@
                     return d
                 }
             }), E("222007"), E("884691");
-            var C = E("446674"),
-                n = E("36763");
+            var t = E("446674"),
+                l = E("36763");
             E("18054");
-            var l = E("362391"),
-                t = E("385976");
+            var n = E("362391"),
+                C = E("385976");
             E("872173");
             var F = E("374363");
             E("42203");
             var i = E("284679"),
                 u = E("21121"),
                 a = E("934306"),
-                o = E("807362"),
-                r = E("132568");
+                r = E("807362"),
+                o = E("132568");
 
             function D(B) {
                 return "#" + B.toString(16).toUpperCase()
@@ -622,43 +622,43 @@
 
             function d(B) {
                 var e, E, d, s, A, c;
-                let _, N, f = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    m = function() {
-                        let B = (0, l.default)("enable_channel_emojis"),
+                let f, N, _ = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                    T = function() {
+                        let B = (0, n.default)("enable_channel_emojis"),
                             e = (0, a.useOnNewPanels)(),
                             E = (0, u.useInMainTabsExperiment)();
                         return B || E && !e
                     }(),
-                    T = (0, l.default)("user_channel_emoji_overrides"),
+                    m = (0, n.default)("user_channel_emoji_overrides"),
                     {
                         emoji: h,
                         color: v
                     } = function(B) {
-                        var e, E, n, l, t, i, u;
-                        let a = (0, C.useStateFromStores)([F.default], () => {
-                                var e, E, C;
-                                let n = null === (e = F.default.settings.guilds) || void 0 === e ? void 0 : e.guilds;
-                                return null != B ? null == n ? void 0 : null === (C = n[B.guild_id]) || void 0 === C ? void 0 : null === (E = C.channels) || void 0 === E ? void 0 : E[B.id] : null
+                        var e, E, l, n, C, i, u;
+                        let a = (0, t.useStateFromStores)([F.default], () => {
+                                var e, E, t;
+                                let l = null === (e = F.default.settings.guilds) || void 0 === e ? void 0 : e.guilds;
+                                return null != B ? null == l ? void 0 : null === (t = l[B.guild_id]) || void 0 === t ? void 0 : null === (E = t.channels) || void 0 === E ? void 0 : E[B.id] : null
                             }),
-                            o = null == a ? void 0 : a.iconEmoji;
+                            r = null == a ? void 0 : a.iconEmoji;
                         return {
-                            emoji: (null == o ? void 0 : null === (e = o.id) || void 0 === e ? void 0 : e.value) != null || (null == o ? void 0 : null === (E = o.name) || void 0 === E ? void 0 : E.value) != null ? {
-                                id: null !== (i = null == o ? void 0 : null === (n = o.id) || void 0 === n ? void 0 : n.value) && void 0 !== i ? i : null,
-                                name: null !== (u = null == o ? void 0 : null === (l = o.name) || void 0 === l ? void 0 : l.value) && void 0 !== u ? u : null
+                            emoji: (null == r ? void 0 : null === (e = r.id) || void 0 === e ? void 0 : e.value) != null || (null == r ? void 0 : null === (E = r.name) || void 0 === E ? void 0 : E.value) != null ? {
+                                id: null !== (i = null == r ? void 0 : null === (l = r.id) || void 0 === l ? void 0 : l.value) && void 0 !== i ? i : null,
+                                name: null !== (u = null == r ? void 0 : null === (n = r.name) || void 0 === n ? void 0 : n.value) && void 0 !== u ? u : null
                             } : null,
-                            color: (null == o ? void 0 : null === (t = o.color) || void 0 === t ? void 0 : t.value) != null ? D(Number(o.color.value)) : null
+                            color: (null == r ? void 0 : null === (C = r.color) || void 0 === C ? void 0 : C.value) != null ? D(Number(r.color.value)) : null
                         }
                     }(B),
                     {
-                        emoji: S,
-                        color: I
+                        emoji: I,
+                        color: S
                     } = function(B) {
-                        var e, E, C;
-                        let n = null !== (e = null == B ? void 0 : B.iconEmoji) && void 0 !== e ? e : null;
+                        var e, E, t;
+                        let l = null !== (e = null == B ? void 0 : B.iconEmoji) && void 0 !== e ? e : null;
                         return {
-                            emoji: null != n ? {
-                                id: null !== (E = n.id) && void 0 !== E ? E : null,
-                                name: null !== (C = n.name) && void 0 !== C ? C : null
+                            emoji: null != l ? {
+                                id: null !== (E = l.id) && void 0 !== E ? E : null,
+                                name: null !== (t = l.name) && void 0 !== t ? t : null
                             } : null,
                             color: (null == B ? void 0 : B.themeColor) != null ? D(B.themeColor) : null
                         }
@@ -666,35 +666,35 @@
                     p = function() {
                         let {
                             theme: B
-                        } = (0, n.useThemeContext)();
-                        return "dark" === B ? r.CHANNEL_EMOJI_BACKGROUND_OPACITY_DARK : r.CHANNEL_EMOJI_BACKGROUND_OPACITY_LIGHT
+                        } = (0, l.useThemeContext)();
+                        return "dark" === B ? o.CHANNEL_EMOJI_BACKGROUND_OPACITY_DARK : o.CHANNEL_EMOJI_BACKGROUND_OPACITY_LIGHT
                     }();
-                if ((null == h ? void 0 : h.name) != null && T) {
-                    let B = null !== (e = null != v ? v : (null == h ? void 0 : h.id) == null ? o.default[h.name] : null) && void 0 !== e ? e : r.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
-                    _ = {
+                if ((null == h ? void 0 : h.name) != null && m) {
+                    let B = null !== (e = null != v ? v : (null == h ? void 0 : h.id) == null ? r.default[h.name] : null) && void 0 !== e ? e : o.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
+                    f = {
                         id: null !== (E = null == h ? void 0 : h.id) && void 0 !== E ? E : null,
-                        name: null !== (d = null == h ? void 0 : h.name) && void 0 !== d ? d : r.DEFAULT_CHANNEL_EMOJI,
+                        name: null !== (d = null == h ? void 0 : h.name) && void 0 !== d ? d : o.DEFAULT_CHANNEL_EMOJI,
                         url: void 0
-                    }, N = f ? (0, i.hexWithOpacity)(B, p) : B
+                    }, N = _ ? (0, i.hexWithOpacity)(B, p) : B
                 } else {
-                    let B = null !== (s = null != I ? I : (null == S ? void 0 : S.name) != null && (null == S ? void 0 : S.id) == null ? o.default[S.name] : null) && void 0 !== s ? s : r.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
-                    _ = {
-                        id: null !== (A = null == S ? void 0 : S.id) && void 0 !== A ? A : null,
-                        name: null !== (c = null == S ? void 0 : S.name) && void 0 !== c ? c : r.DEFAULT_CHANNEL_EMOJI,
+                    let B = null !== (s = null != S ? S : (null == I ? void 0 : I.name) != null && (null == I ? void 0 : I.id) == null ? r.default[I.name] : null) && void 0 !== s ? s : o.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
+                    f = {
+                        id: null !== (A = null == I ? void 0 : I.id) && void 0 !== A ? A : null,
+                        name: null !== (c = null == I ? void 0 : I.name) && void 0 !== c ? c : o.DEFAULT_CHANNEL_EMOJI,
                         url: void 0
-                    }, N = f ? (0, i.hexWithOpacity)(B, p) : B
+                    }, N = _ ? (0, i.hexWithOpacity)(B, p) : B
                 }
-                let L = (0, C.useStateFromStores)([t.default], () => null != _.id ? t.default.getUsableCustomEmojiById(_.id) : null);
-                return m ? {
-                    emoji: null != _.id && null != L ? {
-                        ..._,
+                let L = (0, t.useStateFromStores)([C.default], () => null != f.id ? C.default.getUsableCustomEmojiById(f.id) : null);
+                return T ? {
+                    emoji: null != f.id && null != L ? {
+                        ...f,
                         url: L.url
-                    } : _,
+                    } : f,
                     color: N
                 } : {
-                    color: f ? (0, i.hexWithOpacity)(r.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR, p) : r.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR,
+                    color: _ ? (0, i.hexWithOpacity)(o.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR, p) : o.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR,
                     emoji: {
-                        name: r.DEFAULT_CHANNEL_EMOJI,
+                        name: o.DEFAULT_CHANNEL_EMOJI,
                         id: null,
                         url: void 0
                     }
@@ -705,10 +705,10 @@
             "use strict";
             E.r(e), E.d(e, {
                 default: function() {
-                    return n
+                    return l
                 }
             });
-            let C = Object.freeze({
+            let t = Object.freeze({
                 "\uD83D\uDE00": "#E67E22",
                 "\uD83D\uDE03": "#E67E22",
                 "\uD83D\uDE04": "#E67E22",
@@ -2559,7 +2559,7 @@
                 "\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC73\uDB40\uDC63\uDB40\uDC74\uDB40\uDC7F": "#206694",
                 "\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC77\uDB40\uDC6C\uDB40\uDC73\uDB40\uDC7F": "#11806A"
             });
-            var n = C
+            var l = t
         },
         921245: function(B, e, E) {
             "use strict";
@@ -2567,7 +2567,7 @@
         },
         492114: function(B, e, E) {
             "use strict";
-            let C, n, l, t, F, i;
+            let t, l, n, C, F, i;
             E.r(e), E.d(e, {
                 default: function() {
                     return G
@@ -2575,60 +2575,60 @@
             }), E("808653"), E("702976"), E("222007");
             var u = E("917351"),
                 a = E.n(u),
-                o = E("866227"),
-                r = E.n(o),
+                r = E("866227"),
+                o = E.n(r),
                 D = E("446674"),
                 d = E("872717"),
                 s = E("913144"),
                 A = E("233069"),
                 c = E("813006"),
-                _ = E("517763"),
+                f = E("517763"),
                 N = E("766274"),
-                f = E("42203"),
-                m = E("49111");
-            let T = m.FormStates.CLOSED,
+                _ = E("42203"),
+                T = E("49111");
+            let m = T.FormStates.CLOSED,
                 h = {},
                 v = {},
-                S = !1,
                 I = !1,
+                S = !1,
                 p = null,
                 L = ["name", "type", "topic_", "bitrate_", "userLimit_", "nsfw_", "flags_", "rateLimitPerUser_", "defaultThreadRateLimitPerUser", "defaultAutoArchiveDuration", "template", "defaultReactionEmoji", "rtcRegion", "videoQualityMode", "threadMetadata", "banner", "availableTags", "defaultSortOrder", "defaultForumLayout", "iconEmoji", "themeColor"];
 
             function g(B) {
-                let e = f.default.getChannel(B.channelId);
+                let e = _.default.getChannel(B.channelId);
                 if (null == e) return U();
-                T = m.FormStates.OPEN, t = l = e, p = "location" in B && null != B.location ? B.location : null, n = "subsection" in B ? B.subsection : null, null != t && (t = t.set("nsfw", t.isNSFW())), F = f.default.getChannel(t.parent_id), i = t.getGuildId(), h = {}, O({
+                m = T.FormStates.OPEN, C = n = e, p = "location" in B && null != B.location ? B.location : null, l = "subsection" in B ? B.subsection : null, null != C && (C = C.set("nsfw", C.isNSFW())), F = _.default.getChannel(C.parent_id), i = C.getGuildId(), h = {}, O({
                     type: "CHANNEL_SETTINGS_SET_SECTION",
-                    section: null != C ? C : m.ChannelSettingsSections.OVERVIEW,
-                    subsection: n
+                    section: null != t ? t : T.ChannelSettingsSections.OVERVIEW,
+                    subsection: l
                 })
             }
 
             function O(B) {
-                C = B.section, n = B.subsection, null != t && C === m.ChannelSettingsSections.INSTANT_INVITES && (S = !0, d.default.get({
-                    url: m.Endpoints.INSTANT_INVITES(t.id),
+                t = B.section, l = B.subsection, null != C && t === T.ChannelSettingsSections.INSTANT_INVITES && (I = !0, d.default.get({
+                    url: T.Endpoints.INSTANT_INVITES(C.id),
                     oldFormErrors: !0
                 }).then(B => {
-                    S = !1, s.default.dispatch({
+                    I = !1, s.default.dispatch({
                         type: "CHANNEL_SETTINGS_LOADED_INVITES",
                         invites: B.body
                     })
-                }, () => S = !1))
+                }, () => I = !1))
             }
 
             function U() {
-                I = !1, T = m.FormStates.CLOSED, C = null, t = l = null, F = null, v = {}
+                S = !1, m = T.FormStates.CLOSED, t = null, C = n = null, F = null, v = {}
             }
             let y = a.debounce(() => {
-                if (null == t || null == l) return !1;
-                let B = t.toJS(),
-                    e = l.toJS(),
+                if (null == C || null == n) return !1;
+                let B = C.toJS(),
+                    e = n.toJS(),
                     E = L.every(E => B[E] === e[E]);
-                E && t !== l && (t = l, R.emitChange())
+                E && C !== n && (C = n, j.emitChange())
             }, 500);
 
-            function j(B) {
-                return new _.default({
+            function M(B) {
+                return new f.default({
                     code: B.code,
                     temporary: B.temporary,
                     revoked: B.revoked,
@@ -2638,48 +2638,48 @@
                     uses: B.uses,
                     maxUses: B.max_uses,
                     maxAge: B.max_age,
-                    createdAt: r(B.created_at),
+                    createdAt: o(B.created_at),
                     type: B.type
                 })
             }
-            class M extends D.default.Store {
+            class R extends D.default.Store {
                 initialize() {
-                    this.waitFor(f.default)
+                    this.waitFor(_.default)
                 }
                 hasChanges() {
-                    return t !== l
+                    return C !== n
                 }
                 isOpen() {
-                    return I
+                    return S
                 }
                 getSection() {
-                    return C
+                    return t
                 }
                 getInvites() {
                     return {
                         invites: v,
-                        loading: S
+                        loading: I
                     }
                 }
                 showNotice() {
                     return this.hasChanges()
                 }
                 getChannel() {
-                    return t
+                    return C
                 }
                 getFormState() {
-                    return T
+                    return m
                 }
                 getCategory() {
                     return F
                 }
                 getProps() {
                     return {
-                        submitting: T === m.FormStates.SUBMITTING,
+                        submitting: m === T.FormStates.SUBMITTING,
                         errors: h,
-                        channel: t,
-                        section: C,
-                        subsection: n,
+                        channel: C,
+                        section: t,
+                        subsection: l,
                         invites: v,
                         selectedOverwriteId: i,
                         hasChanges: this.hasChanges(),
@@ -2687,23 +2687,23 @@
                     }
                 }
             }
-            M.displayName = "ChannelSettingsStore";
-            let R = new M(s.default, {
+            R.displayName = "ChannelSettingsStore";
+            let j = new R(s.default, {
                 CHANNEL_SETTINGS_INIT: g,
                 CHANNEL_SETTINGS_OPEN: function(B) {
-                    I = !0, g(B)
+                    S = !0, g(B)
                 },
                 CHANNEL_SETTINGS_SUBMIT: function() {
-                    T = m.FormStates.SUBMITTING, h = {}
+                    m = T.FormStates.SUBMITTING, h = {}
                 },
                 CHANNEL_SETTINGS_SUBMIT_SUCCESS: function() {
-                    l = t, T = m.FormStates.OPEN
+                    n = C, m = T.FormStates.OPEN
                 },
                 CHANNEL_SETTINGS_SUBMIT_FAILURE: function(B) {
                     var e;
-                    T = m.FormStates.OPEN, h = Object.keys(null !== (e = B.errors) && void 0 !== e ? e : {}).reduce((e, E) => {
-                        let C = B.errors[E];
-                        return (0, u.isArray)(C) ? e[E] = C.join("\n") : e[E] = C, e
+                    m = T.FormStates.OPEN, h = Object.keys(null !== (e = B.errors) && void 0 !== e ? e : {}).reduce((e, E) => {
+                        let t = B.errors[E];
+                        return (0, u.isArray)(t) ? e[E] = t.join("\n") : e[E] = t, e
                     }, {})
                 },
                 CHANNEL_SETTINGS_CLOSE: U,
@@ -2717,64 +2717,64 @@
                     let {
                         name: e,
                         channelType: E,
-                        topic: C,
-                        bitrate: n,
-                        userLimit: l,
+                        topic: t,
+                        bitrate: l,
+                        userLimit: n,
                         nsfw: F,
                         flags: i,
                         rateLimitPerUser: u,
                         defaultThreadRateLimitPerUser: a,
-                        autoArchiveDuration: o,
-                        locked: r,
+                        autoArchiveDuration: r,
+                        locked: o,
                         invitable: D,
                         defaultAutoArchiveDuration: d,
                         template: s,
                         defaultReactionEmoji: A,
                         rtcRegion: c,
-                        videoQualityMode: _,
+                        videoQualityMode: f,
                         availableTags: N,
-                        defaultSortOrder: f,
-                        defaultForumLayout: m,
-                        iconEmoji: T,
+                        defaultSortOrder: _,
+                        defaultForumLayout: T,
+                        iconEmoji: m,
                         themeColor: h
                     } = B;
-                    if (null == t) return !1;
-                    null != e && (t = t.set("name", e)), null != C && (t = t.set("topic", C)), null != n && (t = t.set("bitrate", n)), null != l && (t = t.set("userLimit", l)), null != F && (t = t.set("nsfw", F)), null != i && (t = t.set("flags", i)), null != u && (t = t.set("rateLimitPerUser", u)), null != a && (t = t.set("defaultThreadRateLimitPerUser", a)), null != o && (t = t.set("threadMetadata", {
-                        ...t.threadMetadata,
-                        autoArchiveDuration: o
-                    })), null != r && (t = t.set("threadMetadata", {
-                        ...t.threadMetadata,
-                        locked: r
-                    })), null != D && (t = t.set("threadMetadata", {
-                        ...t.threadMetadata,
+                    if (null == C) return !1;
+                    null != e && (C = C.set("name", e)), null != t && (C = C.set("topic", t)), null != l && (C = C.set("bitrate", l)), null != n && (C = C.set("userLimit", n)), null != F && (C = C.set("nsfw", F)), null != i && (C = C.set("flags", i)), null != u && (C = C.set("rateLimitPerUser", u)), null != a && (C = C.set("defaultThreadRateLimitPerUser", a)), null != r && (C = C.set("threadMetadata", {
+                        ...C.threadMetadata,
+                        autoArchiveDuration: r
+                    })), null != o && (C = C.set("threadMetadata", {
+                        ...C.threadMetadata,
+                        locked: o
+                    })), null != D && (C = C.set("threadMetadata", {
+                        ...C.threadMetadata,
                         invitable: D
-                    })), null != d && (t = t.set("defaultAutoArchiveDuration", d)), null != s && (t = t.set("template", s)), null != E && (t = t.set("type", E)), void 0 !== c && (t = t.set("rtcRegion", c)), null != _ && (t = t.set("videoQualityMode", _)), void 0 !== A && (t = t.set("defaultReactionEmoji", A)), null != N && (t = t.set("availableTags", N)), null != f && (t = t.set("defaultSortOrder", f)), null != m && (t = t.set("defaultForumLayout", m)), void 0 !== T && (t = t.set("iconEmoji", T)), null != h && (t = t.set("themeColor", h)), y()
+                    })), null != d && (C = C.set("defaultAutoArchiveDuration", d)), null != s && (C = C.set("template", s)), null != E && (C = C.set("type", E)), void 0 !== c && (C = C.set("rtcRegion", c)), null != f && (C = C.set("videoQualityMode", f)), void 0 !== A && (C = C.set("defaultReactionEmoji", A)), null != N && (C = C.set("availableTags", N)), null != _ && (C = C.set("defaultSortOrder", _)), null != T && (C = C.set("defaultForumLayout", T)), void 0 !== m && (C = C.set("iconEmoji", m)), null != h && (C = C.set("themeColor", h)), y()
                 },
                 CHANNEL_SETTINGS_SET_SECTION: O,
                 CHANNEL_SETTINGS_LOADED_INVITES: function(B) {
                     v = {}, B.invites.forEach(B => {
-                        v[B.code] = j(B)
+                        v[B.code] = M(B)
                     })
                 },
                 CHANNEL_UPDATES: function(B) {
                     let {
                         channels: e
                     } = B;
-                    if (null == t) return !1;
+                    if (null == C) return !1;
                     let E = !1;
                     for (let B of e)(function(B) {
-                        if (null == l || l.id !== B) return !1;
-                        if (l === t) {
-                            let e = f.default.getChannel(B);
+                        if (null == n || n.id !== B) return !1;
+                        if (n === C) {
+                            let e = _.default.getChannel(B);
                             if (null == e) return !1;
-                            t = l = e, F = f.default.getChannel(t.parent_id)
+                            C = n = e, F = _.default.getChannel(C.parent_id)
                         } else {
-                            let e = f.default.getChannel(B);
+                            let e = _.default.getChannel(B);
                             if (null == e) return !1;
-                            l = e, null != t && (t = t.set("permissionOverwrites", l.permissionOverwrites), F = f.default.getChannel(t.parent_id))
+                            n = e, null != C && (C = C.set("permissionOverwrites", n.permissionOverwrites), F = _.default.getChannel(C.parent_id))
                         }
                         return !0
-                    })(B.id) && null != t && (null != i && null == t.permissionOverwrites[i] && (i = t.getGuildId()), E = !0);
+                    })(B.id) && null != C && (null != i && null == C.permissionOverwrites[i] && (i = C.getGuildId()), E = !0);
                     return E
                 },
                 CHANNEL_DELETE: function(B) {
@@ -2783,8 +2783,8 @@
                             id: e
                         }
                     } = B;
-                    if (null == t || t.id !== e) return !1;
-                    T = m.FormStates.CLOSED
+                    if (null == C || C.id !== e) return !1;
+                    m = T.FormStates.CLOSED
                 },
                 INSTANT_INVITE_REVOKE_SUCCESS: function(B) {
                     v = {
@@ -2794,11 +2794,162 @@
                 INSTANT_INVITE_CREATE_SUCCESS: function(B) {
                     v = {
                         ...v,
-                        [B.invite.code]: j(B.invite)
+                        [B.invite.code]: M(B.invite)
                     }
                 }
             });
-            var G = R
+            var G = j
+        },
+        287850: function(B, e, E) {
+            "use strict";
+            let t, l, n;
+            E.r(e), E.d(e, {
+                default: function() {
+                    return U
+                }
+            }), E("222007"), E("424973");
+            var C, F, i = E("866227"),
+                u = E.n(i),
+                a = E("446674"),
+                r = E("407846"),
+                o = E("913144"),
+                D = E("21121"),
+                d = E("934306"),
+                s = E("288518"),
+                A = E("486503"),
+                c = E("233069"),
+                f = E("42203"),
+                N = E("305961"),
+                _ = E("660478"),
+                T = E("282109"),
+                m = E("697218"),
+                h = E("299039"),
+                v = E("724210");
+            (F = C || (C = {})).DEFAULT = "DEFAULT", F.FAVORITE = "FAVORITE";
+            let I = new r.default(B => {
+                let {
+                    isRequest: e,
+                    isFavorite: E
+                } = B;
+                return e ? [] : [E ? "FAVORITE" : "DEFAULT"]
+            }, B => {
+                let {
+                    lastMessageId: e
+                } = B;
+                return -e
+            });
+
+            function S(B) {
+                let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(B) {
+                    var e, E;
+                    let t = null !== (E = null !== (e = _.default.lastMessageId(B.id)) && void 0 !== e ? e : B.lastMessageId) && void 0 !== E ? E : B.id,
+                        l = B.isMessageRequestTimestamp;
+                    if (null != l) {
+                        let B = u(l).valueOf(),
+                            e = h.default.fromTimestamp(B);
+                        return h.default.compare(t, e) > 0 ? t : e
+                    }
+                    return t
+                }(B);
+                return {
+                    channelId: B.id,
+                    lastMessageId: e,
+                    isFavorite: T.default.isMessagesFavorite(B.id) && (0, D.isInMainTabsExperiment)(),
+                    isRequest: s.default.isMessageRequest(B.id) || A.default.isSpam(B.id)
+                }
+            }
+
+            function p() {
+                I.clear(), Object.values(f.default.getMutablePrivateChannels()).forEach(B => {
+                    I.set(B.id, S(B))
+                }), (0, D.isInMainTabsExperiment)() && (0, d.isSplitMessagesTab)() && T.default.getAddedToMessages().forEach(B => {
+                    let e = f.default.getChannel(B);
+                    null != e && (0, c.isGuildTextChannelType)(e.type) && I.set(e.id, S(e))
+                })
+            }
+
+            function L() {
+                let B = f.default.getMutablePrivateChannels();
+                for (let e in B) I.set(e, S(B[e]))
+            }
+            let g = (t = [], l = [], n = [], () => {
+                let B = I.values("FAVORITE"),
+                    e = I.values("DEFAULT");
+                return (t !== B || l !== e) && (n = [], B.forEach(B => {
+                    let {
+                        channelId: e
+                    } = B;
+                    return n.push(e)
+                }), t = B, e.forEach(B => {
+                    let {
+                        channelId: e
+                    } = B;
+                    return n.push(e)
+                }), l = e), n
+            });
+            class O extends a.default.Store {
+                initialize() {
+                    this.waitFor(f.default, N.default, m.default, s.default, T.default), this.syncWith([T.default, s.default], p)
+                }
+                getPrivateChannelIds() {
+                    return g()
+                }
+                getSortedChannels() {
+                    return [I.values("FAVORITE"), I.values("DEFAULT")]
+                }
+                serializeForOverlay() {
+                    let B = {};
+                    return I.values().forEach(e => {
+                        let {
+                            channelId: E,
+                            lastMessageId: t
+                        } = e;
+                        B[E] = t
+                    }), B
+                }
+            }
+            O.displayName = "PrivateChannelSortStore";
+            var U = new O(o.default, {
+                CONNECTION_OPEN: p,
+                CONNECTION_OPEN_SUPPLEMENTAL: p,
+                OVERLAY_INITIALIZE: p,
+                CACHE_LOADED: L,
+                CACHE_LOADED_LAZY: L,
+                CHANNEL_UPDATES: function(B) {
+                    let {
+                        channels: e
+                    } = B;
+                    e.forEach(B => {
+                        ((0, c.isPrivate)(B.type) || I.has(B.id)) && I.set(B.id, S(B))
+                    })
+                },
+                CHANNEL_CREATE: function(B) {
+                    let {
+                        channel: e
+                    } = B;
+                    if (!(0, c.isPrivate)(e.type) || e.id === v.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return !1;
+                    I.set(e.id, S(e))
+                },
+                CHANNEL_DELETE: function(B) {
+                    let {
+                        channel: e
+                    } = B;
+                    return I.delete(e.id)
+                },
+                MESSAGE_CREATE: function(B) {
+                    let {
+                        channelId: e,
+                        message: E
+                    } = B;
+                    if (!I.has(e)) return !1;
+                    let t = f.default.getChannel(e);
+                    return null != t && I.set(e, S(t, E.id))
+                },
+                GUILD_CREATE: function(B) {
+                    let e = B.guild.id;
+                    return I.delete(e)
+                }
+            })
         }
     }
 ]);
