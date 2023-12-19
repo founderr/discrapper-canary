@@ -9691,14 +9691,23 @@
             "use strict";
             s.r(t), s.d(t, {
                 getClassificationRelativeIncidentTime: function() {
-                    return l
+                    return i
+                },
+                getAttachmentFilename: function() {
+                    return r
                 }
             });
             var a = s("866227"),
-                n = s.n(a);
+                n = s.n(a),
+                l = s("894488");
 
-            function l(e) {
+            function i(e) {
                 return n().to(n(e))
+            }
+
+            function r(e) {
+                var t;
+                return "".concat(l.SPOILER_ATTACHMENT_PREFIX, "_").concat(null !== (t = e.filename) && void 0 !== t ? t : ".png")
             }
         },
         310888: function(e, t, s) {
@@ -10834,7 +10843,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "4c7905ec62024ce6e9952244a2de2cccba054580", e.substring(0, 7)),
+                    S = (e = "23ab94ddb9c6623237b29756511b6e479a4891a4", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10847,7 +10856,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "255481", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "255496", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
