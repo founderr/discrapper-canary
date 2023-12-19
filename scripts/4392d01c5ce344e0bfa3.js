@@ -29629,6 +29629,7 @@
                 } = (0, d.default)();
                 return (0, a.jsxs)(o.TooltipContainer, {
                     text: (0, a.jsx)(h.NitroTooltipLabel, {
+                        textColor: "always-white",
                         tooltipText: s
                     }),
                     position: "top",
