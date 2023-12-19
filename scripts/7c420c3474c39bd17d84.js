@@ -15540,11 +15540,7 @@
                                         icon: (0, a.jsx)("img", {
                                             src: l.icon,
                                             alt: "",
-                                            className: C.icon,
-                                            style: null != l.size ? {
-                                                width: l.size,
-                                                height: l.size
-                                            } : {}
+                                            className: C.icon
                                         }),
                                         style: n === (null == t ? void 0 : t.state) ? {
                                             backgroundColor: null != l.color ? l.color : void 0
@@ -32253,7 +32249,7 @@
                         text: (0, p.getHangStatusText)(t),
                         children: (0, a.jsx)(m.default, {
                             hangStatusActivity: t,
-                            className: i(L.icon, n, {
+                            className: i(L.hangStatusIcon, n, {
                                 [L.selfHangStatus]: l
                             })
                         })
