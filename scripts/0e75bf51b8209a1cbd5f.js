@@ -286,7 +286,7 @@
                     onFocus: n
                 } = e, [r, d] = s.useState(l.name), u = !l.name, [c, f] = s.useState(!1), [E, v] = s.useState(null !== (t = l.name) && void 0 !== t ? t : ""), [_, C] = s.useState(!1), g = async () => {
                     C(!0), await (0, j.updateClipMetadata)(l.id, {
-                        name: E
+                        name: "" === E ? void 0 : E
                     }), C(!1), f(!1)
                 };
                 return (s.useEffect(() => {
