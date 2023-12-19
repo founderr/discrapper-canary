@@ -1575,7 +1575,8 @@
                     CLYDE_PROFILES_GENERATE_PERSONALITY: "/clyde-profiles/generate-personality",
                     POLL_ANSWERS: (_, E) => "/channels/".concat(_, "/polls/").concat(E, "/answers"),
                     PREMIUM_MARKETING: "/premium-marketing",
-                    QUESTS_CURRENT_QUESTS: "/quests/@me"
+                    QUESTS_CURRENT_QUESTS: "/quests/@me",
+                    ATTACHMENTS_REFRESH_URLS: "/attachments/refresh-urls"
                 }),
                 a6 = Object.freeze({
                     INDEX: "/",
