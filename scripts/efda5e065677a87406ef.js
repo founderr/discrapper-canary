@@ -1675,7 +1675,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "255574"
+                        buildNumber: "255601"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -8542,7 +8542,9 @@
                         client_heartbeat_version: 17
                     },
                     l = o.default.getMemoryUsageElectronRenderer();
-                null != l && (i.client_heartbeat_renderer_memory = l), r.default.track(d.AnalyticEvents.CLIENT_HEARTBEAT, i), s.default.set(c, Date.now().toString())
+                null != l && (i.client_heartbeat_renderer_memory = l);
+                let E = o.default.getMemoryUsageElectronRendererUsedHeapSize();
+                null != E && (i.client_heartbeat_renderer_memory_used_heap = E), r.default.track(d.AnalyticEvents.CLIENT_HEARTBEAT, i), s.default.set(c, Date.now().toString())
             }
             let S = null,
                 N = !0;
