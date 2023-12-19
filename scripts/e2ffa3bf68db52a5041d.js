@@ -15623,7 +15623,7 @@
                                     foreground: C.editIconColor
                                 }), (0, a.jsx)(o.Text, {
                                     variant: "text-xs/medium",
-                                    color: "header-primary",
+                                    color: "interactive-active",
                                     children: E.default.Messages.STATUS_POPOUT_SET_CUSTOM
                                 })]
                             }, "custom-status-edit-full")]

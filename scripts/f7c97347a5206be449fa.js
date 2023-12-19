@@ -4,7 +4,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return p
+                    return C
                 }
             }), l("222007");
             var a = l("37983"),
@@ -26,7 +26,7 @@
                 v = l("782340"),
                 g = l("645897");
 
-            function N(e) {
+            function p(e) {
                 let {
                     customStatusEmoji: t,
                     setCustomStatusEmoji: l,
@@ -88,7 +88,7 @@
                 })
             }
 
-            function p(e) {
+            function C(e) {
                 var t, l;
                 let {
                     transitionState: o,
@@ -100,7 +100,7 @@
                     let e = x.default.canUseEmojisEverywhere(c.default.getCurrentUser()) && null != d.default.getUsableCustomEmojiById(r.id);
                     T = e ? r : null
                 } else(null == r ? void 0 : r.name) != null && (T = r);
-                let [p, C] = n.useState(S), [E, _] = n.useState(T);
+                let [C, N] = n.useState(S), [E, _] = n.useState(T);
                 return (0, a.jsxs)(s.ModalRoot, {
                     className: g.modal,
                     transitionState: o,
@@ -118,7 +118,7 @@
                                 height: 16,
                                 className: g.closeIcon
                             })
-                        }), (0, a.jsx)(N, {
+                        }), (0, a.jsx)(p, {
                             customStatusEmoji: E,
                             setCustomStatusEmoji: _,
                             onClose: i
@@ -131,8 +131,8 @@
                                 children: v.default.Messages.STATUS_LEAD_IN_JUST
                             }), (0, a.jsx)(s.TextInput, {
                                 className: g.customInput,
-                                value: p,
-                                onChange: e => C(e.substring(0, 50)),
+                                value: C,
+                                onChange: e => N(e.substring(0, 60)),
                                 placeholder: v.default.Messages.CUSTOM_HANG_STATUS_PLACEHOLDER
                             })]
                         })]
@@ -145,16 +145,14 @@
                             }), (0, a.jsx)(s.Text, {
                                 color: "text-muted",
                                 variant: "text-sm/normal",
-                                className: g.subtitle,
                                 children: v.default.Messages.SET_STATUS_MODAL_SUBTITLE
                             })]
                         }), (0, a.jsx)(s.Button, {
                             onClick: () => {
-                                let e = p.trim();
+                                let e = C.trim();
                                 "" !== e && ((0, f.updateCustomHangStatus)(e, E, !0), i())
                             },
-                            className: g.button,
-                            disabled: "" === p.trim(),
+                            disabled: "" === C.trim(),
                             children: v.default.Messages.SET_STATUS_MODAL_CTA
                         })]
                     })]
