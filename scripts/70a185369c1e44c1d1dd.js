@@ -13955,21 +13955,23 @@
                         listing: n,
                         step: l,
                         guildId: i
-                    } = e, u = (0, m.useSubscriptionsSettings)(i), c = (0, o.default)(S.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
+                    } = e, u = (0, m.useSubscriptionsSettings)(i), c = (0, o.default)(S.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY), p = (() => {
+                        var e;
+                        if (c) return null;
+                        let t = (null == u ? void 0 : null === (e = u.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null ? (0, h.getAssetURL)(u.cover_image_asset.application_id, u.cover_image_asset, 440) : void 0;
+                        return null == t && l !== d.Step.CONFIRM ? null : null == t ? (0, a.jsx)("div", {
+                            className: I.headerImageEmpty
+                        }) : (0, a.jsx)("img", {
+                            src: t,
+                            alt: "",
+                            className: I.headerImage
+                        })
+                    })();
                     return (0, a.jsxs)("div", {
                         className: s(I.headerContainer, {
-                            [I.headerEmpty]: c
+                            [I.headerEmpty]: c || null == p
                         }),
-                        children: [(() => {
-                            var e;
-                            if (c) return null;
-                            let t = (null == u ? void 0 : null === (e = u.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null ? (0, h.getAssetURL)(u.cover_image_asset.application_id, u.cover_image_asset, 440) : void 0;
-                            return (0, a.jsx)("img", {
-                                src: t,
-                                alt: "",
-                                className: I.headerImage
-                            })
-                        })(), (() => {
+                        children: [p, (() => {
                             if (l !== d.Step.CONFIRM) return null;
                             let e = null == n.image_asset ? void 0 : (0, h.getAssetURL)(n.application_id, n.image_asset, 80);
                             return (0, a.jsx)("div", {
