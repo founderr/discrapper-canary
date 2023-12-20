@@ -1694,7 +1694,8 @@
                     REPORT_SECOND_LOOK: "/report-review",
                     COLLECTIBLES_SHOP: "/shop",
                     COLLECTIBLES_SHOP_FULLSCREEN: "/shop/fullscreen",
-                    COLLECTIBLES_SHOP_PRODUCT_DETAIL: _ => "/shop/product/".concat(_)
+                    COLLECTIBLES_SHOP_PRODUCT_DETAIL: _ => "/shop/product/".concat(_),
+                    ACCOUNT_STANDING: "/account-standing"
                 }),
                 a4 = (0, aX.wrapPaths)(a5),
                 a8 = (0, aX.wrapPaths)(a6, [":", "?", "@"]);
