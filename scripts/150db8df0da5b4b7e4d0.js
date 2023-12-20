@@ -2820,11 +2820,8 @@
         235898: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
-                useMaybeFetchCollectiblesCategories: function() {
-                    return d
-                },
                 default: function() {
-                    return u
+                    return d
                 }
             }), s("222007");
             var a = s("884691"),
@@ -2835,28 +2832,6 @@
                 o = s("775416");
 
             function d() {
-                let e = "useMaybeFetchCollectiblesCategories";
-                (0, l.useTriggerDebuggingAA)({
-                    location: e + " auto on",
-                    autoTrackExposure: !0
-                }), (0, l.useTriggerDebuggingAA)({
-                    location: e + " auto off",
-                    autoTrackExposure: !1
-                });
-                let [t, s, o, d] = (0, n.useStateFromStoresArray)([r.default], () => {
-                    var e;
-                    return [r.default.isFetching, r.default.error, null !== (e = r.default.lastFetched) && void 0 !== e ? e : 0, r.default.categories]
-                });
-                return (0, a.useEffect)(() => {
-                    !(t || s || Date.now() - o < 6e5) && (0, i.fetchCollectiblesCategories)()
-                }, [t, o, s]), {
-                    isFetching: t,
-                    categories: d,
-                    error: s
-                }
-            }
-
-            function u() {
                 var e;
                 let t = "useFetchCollectiblesCategoriesAndPurchases";
                 (0, l.useTriggerDebuggingAA)({
@@ -2868,9 +2843,29 @@
                 });
                 let {
                     isFetching: s,
-                    categories: r,
+                    categories: d,
                     error: u
-                } = d(), {
+                } = function() {
+                    let e = "useMaybeFetchCollectiblesCategories";
+                    (0, l.useTriggerDebuggingAA)({
+                        location: e + " auto on",
+                        autoTrackExposure: !0
+                    }), (0, l.useTriggerDebuggingAA)({
+                        location: e + " auto off",
+                        autoTrackExposure: !1
+                    });
+                    let [t, s, o, d] = (0, n.useStateFromStoresArray)([r.default], () => {
+                        var e;
+                        return [r.default.isFetching, r.default.error, null !== (e = r.default.lastFetched) && void 0 !== e ? e : 0, r.default.categories]
+                    });
+                    return (0, a.useEffect)(() => {
+                        !(t || s || Date.now() - o < 6e5) && (0, i.fetchCollectiblesCategories)()
+                    }, [t, o, s]), {
+                        isFetching: t,
+                        categories: d,
+                        error: s
+                    }
+                }(), {
                     isClaiming: c,
                     fetchError: S,
                     claimError: E,
@@ -2901,7 +2896,7 @@
                     isFetchingCategories: s,
                     isFetchingPurchases: f,
                     isClaiming: c,
-                    categories: r,
+                    categories: d,
                     purchases: m,
                     error: T
                 }
@@ -10081,7 +10076,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "8900013040739834700cc443859480a611915e73", e.substring(0, 7)),
+                    S = (e = "53eb7874f8068ea7a1c06cdf011b5edece433d2b", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     m = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10094,7 +10089,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "255914", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "255920", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]

@@ -132,12 +132,12 @@
                     }), {
                         buttonColors: R,
                         backgroundColors: P
-                    } = (0, X.default)(c), x = null != R ? {
+                    } = (0, X.default)(t.categorySkuId), x = null != R ? {
                         background: (0, K.getBackgroundGradient)(R, 90),
                         color: R.text.toHslString()
                     } : void 0, w = null != P ? {
                         background: (0, K.getBackgroundGradient)(P, 135)
-                    } : void 0, F = (0, j.isPremiumCollectiblesCategory)(c), ei = (0, j.extractPriceByPurchaseTypes)(t, Z.PriceSetAssignmentPurchaseTypes.DEFAULT), eo = (null == ei ? void 0 : ei.amount) === 0, [en] = t.items;
+                    } : void 0, F = (0, j.isPremiumCollectiblesProduct)(t), ei = (0, j.extractPriceByPurchaseTypes)(t, Z.PriceSetAssignmentPurchaseTypes.DEFAULT), eo = (null == ei ? void 0 : ei.amount) === 0, [en] = t.items;
                     a.useEffect(() => {
                         if ((null == en ? void 0 : en.type) === r.CollectiblesItemType.AVATAR_DECORATION) return (0, u.setPendingAvatarDecoration)(en), () => (0, u.setPendingAvatarDecoration)(void 0)
                     }, [en]);
@@ -170,7 +170,7 @@
                             className: $.titleContainer,
                             children: [(0, s.jsx)("div", {
                                 children: (0, s.jsx)("img", {
-                                    className: c.skuId === i.CollectiblesCategorySkuId.WINTER ? $.winterTitleImage : $.titleImage,
+                                    className: t.categorySkuId === i.CollectiblesCategorySkuId.WINTER ? $.winterTitleImage : $.titleImage,
                                     src: (0, j.getCollectiblesAssetURL)(c.logo, {
                                         size: es
                                     }),
@@ -283,7 +283,6 @@
                                         onClick: async () => {
                                             await (0, b.claimPremiumCollectiblesProduct)(t.skuId), T(), (0, Y.default)({
                                                 product: t,
-                                                category: c,
                                                 analyticsLocations: L
                                             })
                                         },
@@ -442,7 +441,7 @@
                             }), (0, s.jsxs)("div", {
                                 className: (null == _ ? void 0 : _.type) === r.CollectiblesItemType.AVATAR_DECORATION ? $.collectiblePreviewsContainerWithChat : $.collectiblePreviewsContainerNoChat,
                                 children: [(0, s.jsx)(w.default, {
-                                    asset: d.banner,
+                                    asset: i.banner,
                                     size: (0, K.getAssetSizeByHeight)(540),
                                     className: $.categoryBanner
                                 }), (0, s.jsx)(eo, {

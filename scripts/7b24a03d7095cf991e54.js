@@ -213,64 +213,63 @@
                     onClose: o,
                     confettiTarget: a,
                     confettiCanvas: s,
-                    category: i,
-                    analyticsLocations: h
+                    analyticsLocations: i
                 } = e, {
-                    confettiColors: L,
-                    confettiSprites: B,
-                    backgroundColors: R,
-                    buttonColors: D
-                } = (0, m.default)(i), k = null != D ? {
-                    background: (0, v.getBackgroundGradient)(D, 90),
-                    color: D.text.toHslString()
-                } : void 0, M = null != R ? {
-                    background: (0, v.getBackgroundGradient)(R, 135)
+                    confettiColors: h,
+                    confettiSprites: L,
+                    backgroundColors: B,
+                    buttonColors: R
+                } = (0, m.default)(t.categorySkuId), D = null != R ? {
+                    background: (0, v.getBackgroundGradient)(R, 90),
+                    color: R.text.toHslString()
+                } : void 0, k = null != B ? {
+                    background: (0, v.getBackgroundGradient)(B, 135)
                 } : {
                     backgroundColor: "var(--modal-background)"
-                }, j = (0, c.default)([A.default], () => {
+                }, M = (0, c.default)([A.default], () => {
                     let e = A.default.getCurrentUser();
                     return u(null != e, "User cannot be undefined"), e
-                }), P = (0, c.default)([E.default], () => E.default.useReducedMotion), [w] = t.items, {
-                    avatarDecorationSrc: H
+                }), j = (0, c.default)([E.default], () => E.default.useReducedMotion), [P] = t.items, {
+                    avatarDecorationSrc: w
                 } = (0, b.default)({
-                    user: j,
-                    avatarDecorationOverride: (null == w ? void 0 : w.type) === C.CollectiblesItemType.AVATAR_DECORATION ? w : null,
+                    user: M,
+                    avatarDecorationOverride: (null == P ? void 0 : P.type) === C.CollectiblesItemType.AVATAR_DECORATION ? P : null,
                     size: (0, F.getDecorationSizeForAvatarSize)(d.AvatarSizes.SIZE_120)
-                }), z = n.useRef(null), {
-                    analyticsLocations: U,
-                    AnalyticsLocationProvider: V
-                } = (0, g.default)([...h, p.default.COLLECTIBLES_COLLECTED_MODAL]), G = (0, T.default)({
-                    analyticsLocations: U
+                }), H = n.useRef(null), {
+                    analyticsLocations: z,
+                    AnalyticsLocationProvider: U
+                } = (0, g.default)([...i, p.default.COLLECTIBLES_COLLECTED_MODAL]), V = (0, T.default)({
+                    analyticsLocations: z
                 });
-                return (0, r.jsxs)(V, {
+                return (0, r.jsxs)(U, {
                     children: [(0, r.jsxs)("div", {
                         className: y.modalInner,
-                        ref: z,
-                        style: M,
+                        ref: H,
+                        style: k,
                         children: [(0, r.jsxs)("div", {
                             className: l(y.bannerContainer, {
-                                [y.bannerBackgroundFallback]: null == R
+                                [y.bannerBackgroundFallback]: null == B
                             }),
-                            children: [null != i && (0, r.jsx)(O.default, {
-                                asset: i.banner,
+                            children: [(0, r.jsx)(O.default, {
+                                asset: t.banner,
                                 size: (0, v.getAssetSizeByHeight)(440),
                                 className: y.decorationBanner
-                            }), (null == w ? void 0 : w.type) === C.CollectiblesItemType.AVATAR_DECORATION && (0, r.jsx)(d.Avatar, {
+                            }), (null == P ? void 0 : P.type) === C.CollectiblesItemType.AVATAR_DECORATION && (0, r.jsx)(d.Avatar, {
                                 size: d.AvatarSizes.SIZE_120,
                                 src: N,
-                                avatarDecoration: H,
+                                avatarDecoration: w,
                                 className: y.avatarDecoration,
                                 "aria-label": t.name
-                            }), (null == w ? void 0 : w.type) === C.CollectiblesItemType.PROFILE_EFFECT && (0, r.jsx)("div", {
+                            }), (null == P ? void 0 : P.type) === C.CollectiblesItemType.PROFILE_EFFECT && (0, r.jsx)("div", {
                                 className: y.profileEffectShopPreview,
                                 children: (0, r.jsx)(S.default, {
                                     forCollectedModal: !0,
-                                    profileEffectId: w.id
+                                    profileEffectId: P.id
                                 })
                             })]
                         }), (0, r.jsxs)("div", {
                             className: l(y.collectedInfoContainer, {
-                                [y.default]: null == R
+                                [y.default]: null == B
                             }),
                             children: [(0, r.jsxs)("div", {
                                 className: y.collectedTextContainer,
@@ -283,22 +282,22 @@
                                 }), (0, r.jsx)(d.Text, {
                                     color: "always-white",
                                     variant: "text-sm/normal",
-                                    children: (null == w ? void 0 : w.type) === C.CollectiblesItemType.PROFILE_EFFECT ? x.default.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION : x.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
+                                    children: (null == P ? void 0 : P.type) === C.CollectiblesItemType.PROFILE_EFFECT ? x.default.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION : x.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
                                 })]
                             }), (0, r.jsx)(d.Button, {
                                 onClick: () => {
-                                    if (o(), (0, f.popLayer)(), G(), (null == w ? void 0 : w.type) === C.CollectiblesItemType.AVATAR_DECORATION) {
+                                    if (o(), (0, f.popLayer)(), V(), (null == P ? void 0 : P.type) === C.CollectiblesItemType.AVATAR_DECORATION) {
                                         (0, F.openAvatarDecorationModal)({
-                                            initialSelectedDecoration: w,
-                                            analyticsLocations: U
+                                            initialSelectedDecoration: P,
+                                            analyticsLocations: z
                                         });
                                         return
-                                    }(null == w ? void 0 : w.type) === C.CollectiblesItemType.PROFILE_EFFECT && (0, I.openProfileEffectModal)({
-                                        initialSelectedEffectId: w.id,
-                                        analyticsLocations: U
+                                    }(null == P ? void 0 : P.type) === C.CollectiblesItemType.PROFILE_EFFECT && (0, I.openProfileEffectModal)({
+                                        initialSelectedEffectId: P.id,
+                                        analyticsLocations: z
                                     })
                                 },
-                                style: k,
+                                style: D,
                                 children: x.default.Messages.COLLECTIBLES_USE_NOW
                             })]
                         }), (0, r.jsx)(d.ModalCloseButton, {
@@ -306,11 +305,11 @@
                             className: y.modalCloseButton,
                             withCircleBackground: !0
                         })]
-                    }), !P && (0, r.jsx)(_.default, {
-                        confettiTarget: null != a ? a : z.current,
+                    }), !j && (0, r.jsx)(_.default, {
+                        confettiTarget: null != a ? a : H.current,
                         confettiCanvas: s,
-                        sprites: null != B ? B : m.DEFAULT_CONFETTI_SPRITES,
-                        colors: null != L ? L : m.DEFAULT_CONFETTI_COLORS
+                        sprites: null != L ? L : m.DEFAULT_CONFETTI_SPRITES,
+                        colors: null != h ? h : m.DEFAULT_CONFETTI_COLORS
                     })]
                 })
             };
@@ -318,15 +317,14 @@
                 let {
                     transitionState: t,
                     product: o,
-                    category: a,
-                    onClose: l,
-                    analyticsLocations: i
-                } = e, u = n.useRef(new s.Environment), [c, C] = n.useState(null);
+                    onClose: a,
+                    analyticsLocations: l
+                } = e, i = n.useRef(new s.Environment), [u, c] = n.useState(null);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [(0, r.jsx)(s.ConfettiCanvas, {
-                        ref: C,
+                        ref: c,
                         className: y.confettiCanvas,
-                        environment: u.current
+                        environment: i.current
                     }), (0, r.jsx)(d.ModalRoot, {
                         hideShadow: !0,
                         transitionState: t,
@@ -336,10 +334,9 @@
                             className: y.modalContent,
                             children: (0, r.jsx)(h, {
                                 product: o,
-                                category: a,
-                                onClose: l,
-                                confettiCanvas: c,
-                                analyticsLocations: i
+                                onClose: a,
+                                confettiCanvas: u,
+                                analyticsLocations: l
                             })
                         })
                     })]
@@ -503,7 +500,7 @@
             var S = e => {
                 let t = (0, l.default)([i.default], () => i.default.saturation);
                 if (null == e) return {};
-                let o = T[e.skuId];
+                let o = T[e];
                 return (null == o ? void 0 : o.backgroundColors) == null || 1 === t ? null != o ? o : {} : {
                     ...o,
                     backgroundColors: {
