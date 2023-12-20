@@ -21566,7 +21566,7 @@
                 c = 6 * l.default.Millis.SECOND,
                 d = new o.default("Clips"),
                 f = e => "Discord_Clip_".concat(e, ".mp4"),
-                E = 2,
+                E = 3,
                 h = 1,
                 p = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
                 _ = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
@@ -49922,7 +49922,7 @@
                         var i;
                         let d = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "255696"
+                                build_number: "255699"
                             },
                             f = l.default.getCurrentUser();
                         null != f && (d.user_id = f.id, d.user_name = f.tag, null != f.email && (d.email = f.email));
