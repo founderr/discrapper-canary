@@ -6329,7 +6329,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return A
+                    return T
                 }
             }), a("222007");
             var l = a("37983"),
@@ -6338,94 +6338,93 @@
                 i = a.n(s),
                 d = a("509043"),
                 r = a("65597"),
-                u = a("854588"),
-                o = a("77078"),
-                c = a("851387"),
-                f = a("841098"),
-                m = a("206230"),
-                h = a("388491"),
-                E = a("506885"),
-                g = a("217513"),
-                I = a("528438"),
-                _ = a("430312"),
-                x = a("305961"),
-                v = a("697218"),
-                S = a("928201"),
-                C = a("387111"),
-                N = a("158998"),
-                p = a("590456"),
-                T = a("933488");
+                u = a("77078"),
+                o = a("851387"),
+                c = a("841098"),
+                f = a("206230"),
+                m = a("388491"),
+                h = a("506885"),
+                E = a("217513"),
+                g = a("528438"),
+                I = a("430312"),
+                _ = a("305961"),
+                x = a("697218"),
+                v = a("928201"),
+                S = a("387111"),
+                C = a("158998"),
+                N = a("590456"),
+                p = a("933488");
 
-            function A(e) {
+            function T(e) {
                 var t;
                 let {
                     guildId: a,
                     welcomeMessage: s,
-                    className: A
-                } = e, j = (0, f.default)(), M = (0, r.default)([x.default], () => x.default.getGuild(a)), D = (0, r.default)([m.default], () => m.default.syncProfileThemeWithUserTheme), F = (0, r.default)([m.default], () => m.default.useReducedMotion), L = (0, r.default)([v.default], () => v.default.getUser(null == s ? void 0 : s.authorIds[0])), R = (0, r.default)([v.default], () => v.default.getCurrentUser()), b = (0, g.default)(null == L ? void 0 : L.id, a), [G] = (0, I.default)(L, b), y = D ? j : null !== (t = (0, h.getProfileTheme)(G)) && void 0 !== t ? t : j, O = u.default.meta.resolveSemanticColor(y, u.default.colors.BACKGROUND_SECONDARY), H = n.useMemo(() => {
+                    className: T
+                } = e, A = (0, c.default)(), j = (0, r.default)([_.default], () => _.default.getGuild(a)), M = (0, r.default)([f.default], () => f.default.syncProfileThemeWithUserTheme), D = (0, r.default)([f.default], () => f.default.useReducedMotion), F = (0, r.default)([x.default], () => x.default.getUser(null == s ? void 0 : s.authorIds[0])), L = (0, r.default)([x.default], () => x.default.getCurrentUser()), R = (0, E.default)(null == F ? void 0 : F.id, a), [b] = (0, g.default)(F, R), G = M ? A : null !== (t = (0, m.getProfileTheme)(b)) && void 0 !== t ? t : A, y = (0, u.useToken)(u.tokens.colors.BACKGROUND_SECONDARY, G).hex(), O = n.useMemo(() => {
                     var e;
                     return null !== (e = null == s ? void 0 : s.authorIds) && void 0 !== e ? e : []
                 }, [s]);
                 n.useEffect(() => {
-                    c.default.requestMembersById(a, H)
-                }, [a, H]), n.useEffect(() => {
-                    null != L && (0, E.default)(L.id, L.getAvatarURL(a, 48), {
+                    o.default.requestMembersById(a, O)
+                }, [a, O]), n.useEffect(() => {
+                    null != F && (0, h.default)(F.id, F.getAvatarURL(a, 48), {
                         guildId: a
                     })
-                }, [L, a]);
-                let k = (0, N.useName)(R);
-                if (null == L || null == R || null == s) return null;
-                let U = null != M && M.ownerId === L.id;
+                }, [F, a]);
+                let H = (0, C.useName)(L);
+                if (null == F || null == L || null == s) return null;
+                let k = null != j && j.ownerId === F.id;
                 return (0, l.jsx)("div", {
-                    className: i(T.welcomeMessageContainer, A),
-                    children: (0, l.jsxs)(_.default, {
-                        className: T.welcomeMessageProfileContainer,
-                        user: L,
+                    className: i(p.welcomeMessageContainer, T),
+                    children: (0, l.jsxs)(I.default, {
+                        className: p.welcomeMessageProfileContainer,
+                        user: F,
                         guildId: a,
-                        profileType: p.UserProfileTypes.CARD,
+                        profileType: N.UserProfileTypes.CARD,
                         forceShowPremium: !0,
                         useDefaultClientTheme: !0,
                         children: [(0, l.jsx)("div", {
-                            className: T.avatarBackground
-                        }), F ? (0, l.jsx)(o.Avatar, {
-                            src: L.getAvatarURL(a, 48),
-                            size: o.AvatarSizes.SIZE_48,
-                            className: T.avatar,
-                            "aria-label": L.username
-                        }) : (0, l.jsx)(o.AnimatedAvatar, {
-                            src: L.getAvatarURL(a, 48),
-                            size: o.AvatarSizes.SIZE_48,
-                            className: T.avatar,
-                            "aria-label": L.username
+                            className: p.avatarBackground
+                        }), D ? (0, l.jsx)(u.Avatar, {
+                            src: F.getAvatarURL(a, 48),
+                            size: u.AvatarSizes.SIZE_48,
+                            className: p.avatar,
+                            "aria-label": F.username
+                        }) : (0, l.jsx)(u.AnimatedAvatar, {
+                            src: F.getAvatarURL(a, 48),
+                            size: u.AvatarSizes.SIZE_48,
+                            className: p.avatar,
+                            "aria-label": F.username
                         }), (0, l.jsx)("div", {
-                            className: T.avatarBorder,
+                            className: p.avatarBorder,
                             style: {
-                                backgroundColor: null != G ? (0, d.int2rgba)(G, 1) : O
+                                backgroundColor: null != b ? (0, d.int2rgba)(b, 1) : y
                             }
                         }), (0, l.jsxs)("div", {
-                            className: T.welcomeMessageContent,
+                            className: p.welcomeMessageContent,
                             children: [(0, l.jsxs)("div", {
-                                className: T.adminUsernameContainer,
-                                children: [(0, l.jsx)(o.Text, {
+                                className: p.adminUsernameContainer,
+                                children: [(0, l.jsx)(u.Text, {
                                     variant: "text-sm/semibold",
-                                    children: C.default.getName(a, null, L)
-                                }), U ? (0, l.jsx)(S.default, {
-                                    className: T.ownerIcon
+                                    children: S.default.getName(a, null, F)
+                                }), k ? (0, l.jsx)(v.default, {
+                                    className: p.ownerIcon
                                 }) : null]
-                            }), (0, l.jsx)(o.Text, {
+                            }), (0, l.jsx)(u.Text, {
                                 variant: "text-md/medium",
                                 children: function(e, t) {
                                     let a = e.split(/\[@username\]/g);
                                     return (0, l.jsx)("span", {
                                         children: a.map((e, n) => (0, l.jsxs)(l.Fragment, {
-                                            children: [e, n < a.length - 1 ? (0, l.jsx)(o.Text, {
+                                            children: [e, n < a.length - 1 ? (0, l.jsx)(u.Text, {
                                                 tag: "span",
                                                 variant: "text-md/semibold",
                                                 children: "@".concat(t)
                                             }) : null]
                                         }))
                                     })
-                                }(null == s ? void 0 : s.message, null != k ? k : R.username)
+                                }(null == s ? void 0 : s.message, null != H ? H : L.username)
                             })]
                         })]
                     })

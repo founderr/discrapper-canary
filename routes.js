@@ -8858,7 +8858,7 @@
                 }),
                 radii: T.Radius,
                 spacing: L,
-                meta: {
+                internal: {
                     isSemanticColor: _ => "object" == typeof _ && null !== _ && D in _,
                     resolveSemanticColor(_, E, I) {
                         _ = function(_) {
