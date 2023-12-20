@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["9024"], {
+    ["32"], {
         448105: function(e, t, n) {
             "use strict";
             e.exports = function(e, t) {
@@ -25,10 +25,10 @@
                     return T
                 },
                 disableAccount: function() {
-                    return A
+                    return p
                 },
                 saveAccountRequest: function() {
-                    return p
+                    return A
                 },
                 saveAccountChanges: function() {
                     return g
@@ -49,22 +49,22 @@
                     return R
                 },
                 setPendingProfileEffectId: function() {
-                    return m
-                },
-                setSingleTryItOutCollectiblesItem: function() {
                     return U
                 },
-                clearErrors: function() {
+                setSingleTryItOutCollectiblesItem: function() {
                     return h
                 },
+                clearErrors: function() {
+                    return m
+                },
                 resetPendingAccountChanges: function() {
-                    return v
+                    return P
                 },
                 resetAllPending: function() {
-                    return y
+                    return v
                 },
                 resetAndCloseUserProfileForm: function() {
-                    return P
+                    return y
                 },
                 setDisableSubmit: function() {
                     return b
@@ -95,7 +95,7 @@
                 })
             }
 
-            function A(e, t) {
+            function p(e, t) {
                 let n = t ? _.default.Messages.DELETE_ACCOUNT : _.default.Messages.DISABLE_ACCOUNT,
                     l = t ? f.Endpoints.DELETE_ACCOUNT : f.Endpoints.DISABLE_ACCOUNT;
                 return (0, s.default)(t => i.default.post({
@@ -114,7 +114,7 @@
                     c.default.logoutInternal(), (0, a.transitionTo)(f.Routes.DEFAULT_LOGGED_OUT)
                 })
             }
-            async function p(e) {
+            async function A(e) {
                 let t = await i.default.patch({
                         url: f.Endpoints.ME,
                         oldFormErrors: !0,
@@ -148,7 +148,7 @@
                     avatar: c,
                     avatarDecoration: S,
                     newPassword: T,
-                    globalName: A
+                    globalName: p
                 } = e;
                 return o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SUBMIT"
@@ -160,7 +160,7 @@
                         password: a,
                         avatar: c,
                         discriminator: n,
-                        global_name: A,
+                        global_name: p,
                         new_password: T,
                         ...e
                     };
@@ -169,7 +169,7 @@
                         d = (0, E.getDevicePushProvider)();
                     null != d && null != r && (o.push_provider = d, o.push_token = r);
                     let s = l.default.get(f.DEVICE_VOIP_TOKEN);
-                    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != s && (o.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = s), p(o)
+                    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != s && (o.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = s), A(o)
                 }, {
                     checkEnabled: !1,
                     modalProps: {
@@ -229,39 +229,39 @@
                 })
             }
 
-            function m(e) {
+            function U(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID",
                     profileEffectId: e
                 })
             }
 
-            function U(e) {
+            function h(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM",
                     item: e
                 })
             }
 
-            function h() {
+            function m() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_CLEAR_ERRORS"
                 })
             }
 
-            function v() {
+            function P() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
                 })
             }
 
-            function y() {
+            function v() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_RESET_ALL_PENDING"
                 })
             }
 
-            function P() {
+            function y() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
                 })
@@ -442,184 +442,6 @@
                         }), Promise.reject(t)))
                     }
                 }
-        },
-        535348: function(e, t, n) {
-            "use strict";
-            var i, l;
-            n.r(t), n.d(t, {
-                SelfStreamAndVideoAlertType: function() {
-                    return i
-                }
-            }), (l = i || (i = {}))[l.STREAM = 0] = "STREAM", l[l.VIDEO = 1] = "VIDEO"
-        },
-        301603: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return d
-                }
-            });
-            var i = n("446674"),
-                l = n("629109"),
-                u = n("271938"),
-                o = n("42887"),
-                a = n("49111"),
-                r = n("353927");
-
-            function d(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.MediaEngineContextTypes.DEFAULT,
-                    n = (0, i.useStateFromStores)([u.default], () => u.default.getId()),
-                    d = (0, i.useStateFromStores)([o.default], () => o.default.supports(r.Features.DISABLE_VIDEO) && o.default.isVideoEnabled()),
-                    s = (0, i.useStateFromStores)([o.default], () => o.default.isLocalVideoDisabled(n, t), [n, t]),
-                    c = null == e || e === n;
-                return [c && (d || s), s, e => {
-                    let i = e ? a.VideoToggleState.DISABLED : a.VideoToggleState.MANUAL_ENABLED;
-                    l.default.setDisableLocalVideo(n, i, t)
-                }]
-            }
-        },
-        632616: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return r
-                }
-            });
-            var i = n("37983");
-            n("884691");
-            var l = n("452804"),
-                u = n("135230"),
-                o = n("535348"),
-                a = n("782340");
-
-            function r(e) {
-                let {
-                    type: t,
-                    onConfirm: n,
-                    ...r
-                } = e, d = t === o.SelfStreamAndVideoAlertType.STREAM ? a.default.Messages.HIDE_SELF_STREAM_CONFIRMATION_HEADER : a.default.Messages.HIDE_SELF_VIDEO_CONFIRMATION_HEADER, s = t === o.SelfStreamAndVideoAlertType.STREAM ? a.default.Messages.HIDE_SELF_STREAM_CONFIRMATION_BODY : a.default.Messages.HIDE_SELF_VIDEO_CONFIRMATION_BODY;
-                return (0, i.jsx)(u.default, {
-                    confirmText: a.default.Messages.CONFIRM,
-                    secondaryConfirmText: a.default.Messages.DONT_ASK_AGAIN,
-                    title: d,
-                    cancelText: a.default.Messages.CANCEL,
-                    onConfirm: n,
-                    onConfirmSecondary: () => {
-                        l.default.updatedUnsyncedSettings({
-                            disableHideSelfStreamAndVideoConfirmationAlert: !0
-                        }), n()
-                    },
-                    body: s,
-                    ...r
-                })
-            }
-        },
-        243288: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return d
-                }
-            });
-            var i = n("37983");
-            n("884691");
-            var l = n("446674"),
-                u = n("77078"),
-                o = n("255397"),
-                a = n("191145"),
-                r = n("782340");
-
-            function d(e) {
-                let t = (0, l.useStateFromStores)([a.default], () => a.default.getVoiceParticipantsHidden(e));
-                return (0, i.jsx)(u.MenuCheckboxItem, {
-                    id: "no-video-hide",
-                    label: r.default.Messages.STREAM_SHOW_NON_VIDEO,
-                    checked: !t,
-                    action: () => o.default.toggleVoiceParticipantsHidden(e, !t)
-                })
-            }
-        },
-        321135: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return f
-                }
-            }), n("222007");
-            var i = n("37983");
-            n("884691");
-            var l = n("446674"),
-                u = n("77078"),
-                o = n("168973"),
-                a = n("301603"),
-                r = n("632616"),
-                d = n("535348"),
-                s = n("353927"),
-                c = n("782340");
-
-            function f(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.MediaEngineContextTypes.DEFAULT,
-                    [n, f, E] = (0, a.default)(e, t),
-                    _ = (0, l.useStateFromStores)([o.default], () => o.default.disableHideSelfStreamAndVideoConfirmationAlert);
-                return n ? (0, i.jsx)(u.MenuCheckboxItem, {
-                    id: "self-video-hide",
-                    label: c.default.Messages.SHOW_SELF_VIDEO,
-                    checked: !f,
-                    action: () => {
-                        if (_ || f) return E(!f);
-                        (0, u.openModal)(e => (0, i.jsx)(r.default, {
-                            ...e,
-                            type: d.SelfStreamAndVideoAlertType.VIDEO,
-                            onConfirm: () => E(!f)
-                        }))
-                    }
-                }) : null
-            }
-        },
-        873254: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return c
-                }
-            });
-            var i = n("37983");
-            n("884691");
-            var l = n("446674"),
-                u = n("77078"),
-                o = n("648911"),
-                a = n("271938"),
-                r = n("42887"),
-                d = n("782340"),
-                s = n("431024");
-
-            function c(e) {
-                let t = (0, u.useModalContext)(),
-                    c = (0, l.useStateFromStores)([r.default], () => r.default.isVideoEnabled()),
-                    f = (0, l.useStateFromStores)([a.default], () => a.default.getId() === e),
-                    E = (0, o.default)();
-                return (!c || E) && f ? (0, i.jsx)(u.MenuItem, {
-                    id: "change-video-background",
-                    label: (0, i.jsx)("div", {
-                        className: s.item,
-                        children: c ? d.default.Messages.CAMERA_CHANGE_VIDEO_BACKGROUND_MENU_ITEM : d.default.Messages.CAMERA_PREVIEW_MENU_ITEM
-                    }),
-                    action: function() {
-                        (0, u.openModalLazy)(async () => {
-                            let {
-                                default: e
-                            } = await n.el("381736").then(n.bind(n, "381736"));
-                            return t => (0, i.jsx)(e, {
-                                ...t,
-                                videoEnabled: c
-                            })
-                        }, {
-                            modalKey: "camera-preview",
-                            contextKey: t
-                        })
-                    }
-                }) : null
-            }
         },
         861370: function(e, t, n) {
             "use strict";
@@ -1019,7 +841,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 toggleRequestToSpeak: function() {
-                    return p
+                    return A
                 },
                 inviteUserToStage: function() {
                     return g
@@ -1040,13 +862,13 @@
                     return R
                 },
                 startStage: function() {
-                    return m
-                },
-                editStage: function() {
                     return U
                 },
-                endStage: function() {
+                editStage: function() {
                     return h
+                },
+                endStage: function() {
+                    return m
                 }
             });
             var i = n("627445"),
@@ -1064,14 +886,14 @@
                 _ = n("230324"),
                 S = n("738983"),
                 T = n("808422"),
-                A = n("49111");
+                p = n("49111");
 
-            function p(e, t) {
+            function A(e, t) {
                 let n = e.getGuildId();
-                return l(null != n, "This channel cannot be guildless."), t && (0, d.trackWithMetadata)(A.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED, {
+                return l(null != n, "This channel cannot be guildless."), t && (0, d.trackWithMetadata)(p.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED, {
                     ...(0, _.getStageChannelMetadata)(e)
                 }), o.default.patch({
-                    url: A.Endpoints.UPDATE_VOICE_STATE(n),
+                    url: p.Endpoints.UPDATE_VOICE_STATE(n),
                     body: {
                         request_to_speak_timestamp: t ? new Date().toISOString() : null,
                         channel_id: e.id
@@ -1082,7 +904,7 @@
             function g(e, t) {
                 let n = e.getGuildId();
                 return l(null != n, "This channel cannot be guildless."), o.default.patch({
-                    url: A.Endpoints.UPDATE_VOICE_STATE(n, t),
+                    url: p.Endpoints.UPDATE_VOICE_STATE(n, t),
                     body: {
                         suppress: !1,
                         request_to_speak_timestamp: new Date().toISOString(),
@@ -1097,10 +919,10 @@
                 l(null != i, "This channel cannot be guildless.");
                 let u = c.default.getVoiceStateForChannel(e.id),
                     a = (0, T.getAudienceRequestToSpeakState)(u);
-                return a === T.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !t && (0, d.trackWithMetadata)(A.AnalyticEvents.PROMOTED_TO_SPEAKER, {
+                return a === T.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !t && (0, d.trackWithMetadata)(p.AnalyticEvents.PROMOTED_TO_SPEAKER, {
                     ...(0, _.getStageChannelMetadata)(e)
                 }), o.default.patch({
-                    url: A.Endpoints.UPDATE_VOICE_STATE(i),
+                    url: p.Endpoints.UPDATE_VOICE_STATE(i),
                     body: {
                         suppress: t,
                         request_to_speak_timestamp: null,
@@ -1115,7 +937,7 @@
             function C(e) {
                 let t = null == e ? void 0 : e.getGuildId();
                 return l(null != t, "This channel cannot be guildless."), o.default.patch({
-                    url: A.Endpoints.UPDATE_VOICE_STATE(t),
+                    url: p.Endpoints.UPDATE_VOICE_STATE(t),
                     body: {
                         suppress: !0,
                         channel_id: e.id,
@@ -1128,7 +950,7 @@
             function N(e, t, n) {
                 let i = e.getGuildId();
                 return l(null != i, "This channel cannot be guildless."), o.default.patch({
-                    url: A.Endpoints.UPDATE_VOICE_STATE(i, t),
+                    url: p.Endpoints.UPDATE_VOICE_STATE(i, t),
                     body: {
                         suppress: n,
                         channel_id: e.id
@@ -1140,7 +962,7 @@
                 if (null == t || null == e) return;
                 let n = t.getGuildId();
                 return l(null != n, "This channel cannot be guildless."), N(t, e.id, !0), o.default.patch({
-                    url: A.Endpoints.UPDATE_VOICE_STATE(n, e.id),
+                    url: p.Endpoints.UPDATE_VOICE_STATE(n, e.id),
                     body: {
                         suppress: !0,
                         channel_id: t.id,
@@ -1163,19 +985,19 @@
                     };
                 n ? (d.allow = u.default.add(d.allow, t), d.deny = u.default.remove(d.deny, t)) : (d.allow = u.default.remove(d.allow, t), d.deny = u.default.add(d.deny, t)), a.default.updatePermissionOverwrite(e.id, d)
             }
-            async function m(e, t, n, i) {
+            async function U(e, t, n, i) {
                 if ("" === t) return;
                 let l = s.default.getVoiceChannelId() === e.id;
                 !l && (0, E.connectToStage)(e);
                 let u = await (0, S.startStageInstance)(e.id, t, n, i);
                 return I(e, !1, !0), u
             }
-            async function U(e, t, n) {
+            async function h(e, t, n) {
                 if ("" === t) return;
                 let i = await (0, S.updateStageInstance)(e.id, t, n);
                 return i
             }
-            async function h(e) {
+            async function m(e) {
                 await (0, S.endStageInstance)(e.id)
             }
         },
@@ -1349,13 +1171,13 @@
                 let n = (0, E.default)(),
                     S = null == n ? void 0 : n.id,
                     T = null == n ? void 0 : n.guild_id,
-                    A = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(T), [T]),
-                    p = (0, l.useStateFromStores)([r.default], () => null != S ? r.default.getVoiceStateForChannel(S, e.id) : null, [S, e.id]),
+                    p = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(T), [T]),
+                    A = (0, l.useStateFromStores)([r.default], () => null != S ? r.default.getVoiceStateForChannel(S, e.id) : null, [S, e.id]),
                     g = (null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.id,
                     I = (0, f.default)(),
                     C = (0, l.useStateFromStores)([c.default], () => c.default.getPermissionsForUser(e.id, S), [S, e.id]),
                     N = (0, s.useCanModerateRequestToSpeak)(S);
-                if (null == n || null == A || null == p || C.speaker) return null;
+                if (null == n || null == p || null == A || C.speaker) return null;
                 let O = () => {
                     g ? (0, d.audienceAckRequestToSpeak)(n, !1) : (0, d.inviteUserToStage)(n, e.id)
                 };
@@ -1405,7 +1227,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return A
                 }
             }), n("424973");
             var i = n("917351"),
@@ -1447,7 +1269,7 @@
                     recentUses: e.recentUses.map(Number).filter(e => e > 0)
                 })), f.pendingUsages)
             }
-            class A extends u.default.PersistedStore {
+            class p extends u.default.PersistedStore {
                 initialize(e) {
                     this.waitFor(d.default), null != e && (f = e), this.syncWith([d.default], S), this.syncWith([r.default], T)
                 }
@@ -1461,8 +1283,8 @@
                     return E
                 }
             }
-            A.displayName = "StickersPersistedStore", A.persistKey = "StickersPersistedStoreV2";
-            var p = new A(o.default, {
+            p.displayName = "StickersPersistedStore", p.persistKey = "StickersPersistedStoreV2";
+            var A = new p(o.default, {
                 STICKER_TRACK_USAGE: e => {
                     let {
                         stickerIds: t
@@ -1534,10 +1356,10 @@
                     return T
                 },
                 setPendingBio: function() {
-                    return A
+                    return p
                 },
                 setPendingPronouns: function() {
-                    return p
+                    return A
                 },
                 setPendingAccentColor: function() {
                     return g
@@ -1558,7 +1380,7 @@
                     return R
                 },
                 setTryItOutThemeColors: function() {
-                    return m
+                    return U
                 }
             });
             var i = n("872717"),
@@ -1638,14 +1460,14 @@
                 })
             }
 
-            function A(e) {
+            function p(e) {
                 l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO",
                     bio: e
                 })
             }
 
-            function p(e) {
+            function A(e) {
                 l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
                     pronouns: e
@@ -1694,26 +1516,11 @@
                 }), f(c.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
             }
 
-            function m(e) {
+            function U(e) {
                 l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
                     themeColors: e
                 }), f(c.AnalyticsPremiumFeatureNames.PROFILE_THEME_COLOR)
-            }
-        },
-        648911: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return o
-                }
-            });
-            var i = n("446674"),
-                l = n("42887"),
-                u = n("512244");
-
-            function o() {
-                return (0, i.useStateFromStores)([l.default], () => (0, u.default)(l.default))
             }
         },
         662255: function(e, t, n) {
