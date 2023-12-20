@@ -925,10 +925,11 @@
                         } = (0, u.useExplicitContentSettingOrDefault)(),
                         f = (0, l.default)([s.default], () => s.default.getFriendIDs().includes(t)),
                         h = (0, l.default)([i.default], () => i.default.getCurrentUser()),
-                        p = (0, l.default)([a.default], () => a.default.getChannel(e));
-                    if (!n || null == h || h.id === t || null == p) return !1;
-                    let g = p.isDM() || p.isGroupDM();
-                    return g && f ? (0, o.getShouldObscureForSetting)(c) : g ? (0, o.getShouldObscureForSetting)(m) : (0, o.getShouldObscureForSetting)(d)
+                        p = (0, l.default)([a.default], () => {
+                            let t = a.default.getChannel(e);
+                            return null != t && t.isPrivate()
+                        });
+                    return !!n && null != h && h.id !== t && (p && f ? (0, o.getShouldObscureForSetting)(c) : p ? (0, o.getShouldObscureForSetting)(m) : (0, o.getShouldObscureForSetting)(d))
                 },
                 c = () => {
                     let e = (0, r.useIsEligibleForExplicitMediaRedaction)(),
