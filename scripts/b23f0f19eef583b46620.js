@@ -12874,7 +12874,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 HomeButton: function() {
-                    return Z
+                    return W
                 }
             }), n("222007");
             var l = n("37983"),
@@ -12894,32 +12894,31 @@
                 E = n("520480"),
                 g = n("813531"),
                 I = n("749387"),
-                S = n("45062"),
-                _ = n("260488"),
-                N = n("254358"),
-                T = n("12896"),
-                A = n("27618"),
-                L = n("18494"),
-                v = n("697218"),
-                R = n("340412"),
-                x = n("330338"),
-                M = n("535974"),
-                O = n("352326"),
-                y = n("774223"),
-                D = n("15738"),
-                b = n("956089"),
-                j = n("108189"),
-                G = n("964889"),
-                U = n("709681"),
-                P = n("957833"),
-                w = n("610898"),
-                F = n("829562"),
-                B = n("255991"),
-                V = n("49111"),
-                H = n("646718"),
-                k = n("782340"),
-                Y = n("973321");
-            let K = {
+                S = n("260488"),
+                _ = n("254358"),
+                N = n("12896"),
+                T = n("27618"),
+                A = n("18494"),
+                L = n("697218"),
+                v = n("340412"),
+                R = n("330338"),
+                x = n("535974"),
+                M = n("352326"),
+                O = n("774223"),
+                y = n("15738"),
+                D = n("956089"),
+                b = n("108189"),
+                j = n("964889"),
+                G = n("709681"),
+                U = n("957833"),
+                P = n("610898"),
+                w = n("829562"),
+                F = n("255991"),
+                B = n("49111"),
+                V = n("646718"),
+                H = n("782340"),
+                k = n("973321");
+            let Y = {
                 origin: {
                     x: -16,
                     y: 0
@@ -12932,68 +12931,68 @@
                 }
             };
 
-            function W(e) {
+            function K(e) {
                 let {
                     selected: t,
                     user: n,
                     badge: h,
                     link: p,
                     showProgressBadge: m
-                } = e, S = (0, i.useStateFromStores)([c.default], () => c.default.isEditorOpen), [_, N] = a.useState(!1), [A, L] = a.useState(!1), [v, R] = a.useState(null), [x, M] = a.useState(0), [O, G] = a.useState(!1), {
-                    canViewBroadcasts: P
+                } = e, S = (0, i.useStateFromStores)([c.default], () => c.default.isEditorOpen), [_, T] = a.useState(!1), [A, L] = a.useState(!1), [v, R] = a.useState(null), [x, M] = a.useState(0), [j, U] = a.useState(!1), {
+                    canViewBroadcasts: V
                 } = C.default.useExperiment({
                     location: "home_button_no_track"
                 }, {
                     autoTrackExposure: !1
-                }), H = (0, g.default)(), W = H.length > 0 && P;
+                }), K = (0, g.default)(), W = K.length > 0 && V;
                 (0, E.useTrackNewBroadcastDetected)(), a.useEffect(() => {
-                    H.length > 0 && u.default.getDetectableGames()
-                }, [H]);
+                    K.length > 0 && u.default.getDetectableGames()
+                }, [K]);
                 let Z = (0, s.useTreeItem)("home"),
                     z = () => {
                         R(null), M(0), clearTimeout(v)
                     };
                 if (null == n) return null;
-                let X = k.default.Messages.DIRECT_MESSAGES;
-                A && (X = r.default.get(V.DISCODO_STORAGE_KEY) ? k.default.Messages.DISCODO_ENABLED : k.default.Messages.DISCODO_DISABLED), H.length > 0 && C.default.trackExposure({
+                let X = H.default.Messages.DIRECT_MESSAGES;
+                A && (X = r.default.get(B.DISCODO_STORAGE_KEY) ? H.default.Messages.DISCODO_ENABLED : H.default.Messages.DISCODO_DISABLED), K.length > 0 && C.default.trackExposure({
                     location: "home_button"
                 });
                 let Q = null;
                 !t && m ? Q = (0, l.jsx)(d.default, {
-                    className: Y.downloadProgress,
+                    className: k.downloadProgress,
                     determineOwnVisibility: !1
-                }) : W && (Q = (0, l.jsx)(y.default, {
-                    className: Y.broadcastBadge
+                }) : W && (Q = (0, l.jsx)(O.default, {
+                    className: k.broadcastBadge
                 }));
                 let q = t || _ || S,
                     J = (0, l.jsx)(o.BlobMask, {
                         highlight: W,
                         selected: q,
-                        lowerBadge: h > 0 ? (0, B.renderMentionBadge)(h) : null,
+                        lowerBadge: h > 0 ? (0, F.renderMentionBadge)(h) : null,
                         upperBadge: Q,
-                        lowerBadgeWidth: (0, b.getBadgeWidthForValue)(h),
-                        children: (0, l.jsx)(j.default, {
-                            onMouseEnter: () => N(!0),
-                            onMouseLeave: () => N(!1),
+                        lowerBadgeWidth: (0, D.getBadgeWidthForValue)(h),
+                        children: (0, l.jsx)(b.default, {
+                            onMouseEnter: () => T(!0),
+                            onMouseLeave: () => T(!1),
                             onClick: () => {
                                 if (!__OVERLAY__ && (null != v && clearTimeout(v), R(setTimeout(z, 500)), M(x + 1), 15 === x)) {
                                     z();
-                                    let e = !r.default.get(V.DISCODO_STORAGE_KEY);
-                                    r.default.set(V.DISCODO_STORAGE_KEY, e), e ? (0, U.playSound)("discodo") : (0, U.playSound)("user_leave"), L(!0), setTimeout(() => {
+                                    let e = !r.default.get(B.DISCODO_STORAGE_KEY);
+                                    r.default.set(B.DISCODO_STORAGE_KEY, e), e ? (0, G.playSound)("discodo") : (0, G.playSound)("user_leave"), L(!0), setTimeout(() => {
                                         L(!1)
                                     }, 1e3)
                                 }
                             },
                             selected: q,
-                            ariaLabel: k.default.Messages.DIRECT_MESSAGES,
+                            ariaLabel: H.default.Messages.DIRECT_MESSAGES,
                             ...Z,
                             to: {
                                 pathname: p,
                                 state: {
                                     analyticsSource: {
-                                        page: V.AnalyticsPages.GUILD_CHANNEL,
-                                        section: V.AnalyticsSections.NAVIGATION,
-                                        object: V.AnalyticsObjects.BUTTON_HOME
+                                        page: B.AnalyticsPages.GUILD_CHANNEL,
+                                        section: B.AnalyticsSections.NAVIGATION,
+                                        object: B.AnalyticsObjects.BUTTON_HOME
                                     }
                                 }
                             },
@@ -13011,32 +13010,32 @@
                             })
                         },
                         onRequestClose: () => {
-                            G(!1)
+                            U(!1)
                         },
                         spacing: 8,
-                        shouldShow: O,
+                        shouldShow: j,
                         children: () => J
                     }) : null;
                 return (0, l.jsx)("div", {
-                    className: Y.tutorialContainer,
+                    className: k.tutorialContainer,
                     onMouseEnter: () => {
-                        G(!0)
+                        U(!0)
                     },
                     onMouseLeave: () => {
                         setTimeout(() => {
-                            G(!1)
+                            U(!1)
                         }, 250)
                     },
-                    children: (0, l.jsx)(T.default, {
-                        inlineSpecs: K,
+                    children: (0, l.jsx)(N.default, {
+                        inlineSpecs: Y,
                         tutorialId: "friends-list",
                         position: "right",
-                        children: (0, l.jsxs)(w.ListItem, {
-                            children: [(0, l.jsx)(D.default, {
+                        children: (0, l.jsxs)(P.ListItem, {
+                            children: [(0, l.jsx)(y.default, {
                                 selected: t,
                                 hovered: _,
-                                className: Y.pill
-                            }), null != $ ? $ : (0, l.jsx)(F.default, {
+                                className: k.pill
+                            }), null != $ ? $ : (0, l.jsx)(w.default, {
                                 color: o.Tooltip.Colors.PRIMARY,
                                 hideOnClick: !0,
                                 text: X,
@@ -13048,49 +13047,45 @@
                 })
             }
 
-            function Z() {
-                let e = (0, P.useIsHomeSelected)(),
-                    t = (0, i.useStateFromStores)([O.default, M.default], () => {
-                        let e = (0, d.getDispatchApplicationStates)(O.default.activeItems, M.default),
+            function W() {
+                let e = (0, U.useIsHomeSelected)(),
+                    t = (0, i.useStateFromStores)([M.default, x.default], () => {
+                        let e = (0, d.getDispatchApplicationStates)(M.default.activeItems, x.default),
                             {
                                 total: t,
                                 progress: n
-                            } = G.getCombinedProgress(e),
-                            l = G.calculateProgressPercentage(n, t);
+                            } = j.getCombinedProgress(e),
+                            l = j.calculateProgressPercentage(n, t);
                         return l > 0 && l < 100
                     }),
                     n = (0, i.useStateFromStores)([p.default], () => p.default.getUserIdsToValidate()),
-                    s = (0, i.useStateFromStores)([A.default], () => A.default.getPendingCount()),
-                    r = Object.keys(H.SubscriptionTrials),
+                    s = (0, i.useStateFromStores)([T.default], () => T.default.getPendingCount()),
+                    r = Object.keys(V.SubscriptionTrials),
                     {
                         unviewedTrialCount: o,
                         unviewedDiscountCount: u
-                    } = (0, i.useStateFromStoresObject)([R.default], () => ({
-                        unviewedTrialCount: R.default.getUnacknowledgedOffers(r).length,
-                        unviewedDiscountCount: R.default.getUnacknowledgedDiscountOffers().length
+                    } = (0, i.useStateFromStoresObject)([v.default], () => ({
+                        unviewedTrialCount: v.default.getUnacknowledgedOffers(r).length,
+                        unviewedDiscountCount: v.default.getUnacknowledgedDiscountOffers().length
                     })),
                     c = o + u,
-                    f = (0, i.useStateFromStores)([v.default], () => v.default.getCurrentUser()),
-                    C = (0, _.useMessageRequestsCount)(),
+                    f = (0, i.useStateFromStores)([L.default], () => L.default.getCurrentUser()),
+                    C = (0, S.useMessageRequestsCount)(),
                     E = s + c + C,
                     g = E === c && c > 0 && s + C === 0,
                     {
                         enabled: I
-                    } = (0, N.default)(!0);
+                    } = (0, _.default)(!0);
                 a.useEffect(() => {
-                    S.DMListShopButtonExperiment.trackExposure({
-                        location: "home"
-                    })
-                }, []), a.useEffect(() => {
                     n.length > 0 && (0, h.fetchBroadcasterBuckets)()
                 }, [n]), (0, m.default)();
-                let T = x.default.getHomeLink();
-                return I && g && (T = V.Routes.APPLICATION_STORE), (0, l.jsx)(W, {
+                let N = R.default.getHomeLink();
+                return I && g && (N = B.Routes.APPLICATION_STORE), (0, l.jsx)(K, {
                     selected: e,
                     user: f,
-                    selectedChannelId: L.default.getChannelId(V.ME),
+                    selectedChannelId: A.default.getChannelId(B.ME),
                     badge: E,
-                    link: T,
+                    link: N,
                     showProgressBadge: t
                 })
             }

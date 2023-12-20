@@ -3129,32 +3129,27 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return o
+                    return u
                 }
             }), s("424973"), s("222007");
             var a = s("884691"),
                 n = s("151426"),
                 l = s("509802"),
                 r = s("195362"),
-                i = s("45062"),
-                u = s("994428"),
-                o = () => {
+                i = s("994428"),
+                u = () => {
                     let {
-                        canViewBadge: e
-                    } = (0, i.default)({
-                        location: "useCollectiblesShopTabNewBadge"
-                    }), {
-                        newBadgeEnabled: t
+                        newBadgeEnabled: e
                     } = (0, r.default)({
                         location: "useCollectiblesShopTabNewBadge"
-                    }), s = a.useMemo(() => {
-                        let s = [];
-                        return e && s.push(n.DismissibleContent.COLLECTIBLES_SHOP_TAB_NEW_BADGE), t && s.push(n.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_NEW_BADGE), s
-                    }, [e, t]), [o, d] = (0, l.useDismissibleContentGroup)(s, void 0, !0);
+                    }), t = a.useMemo(() => {
+                        let t = [];
+                        return t.push(n.DismissibleContent.COLLECTIBLES_SHOP_TAB_NEW_BADGE), e && t.push(n.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_NEW_BADGE), t
+                    }, [e]), [s, u] = (0, l.useDismissibleContentGroup)(t, void 0, !0);
                     return {
-                        collectiblesShopTabNewBadge: o,
+                        collectiblesShopTabNewBadge: s,
                         dismissCollectiblesShopTabNewBadge: () => {
-                            null != o && d(u.ContentDismissActionType.AUTO)
+                            null != s && u(i.ContentDismissActionType.AUTO)
                         }
                     }
                 }
