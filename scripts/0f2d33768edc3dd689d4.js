@@ -210,7 +210,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return P
+                    return b
                 }
             }), l("222007");
             var a = l("37983"),
@@ -237,11 +237,12 @@
                 _ = l("643290"),
                 L = l("431734"),
                 T = l("80028"),
-                M = l("782340"),
-                j = l("515597"),
-                A = l("446825").Buffer;
+                M = l("846325"),
+                j = l("782340"),
+                A = l("515597"),
+                R = l("446825").Buffer;
 
-            function R(e) {
+            function P(e) {
                 let {
                     closePopout: t,
                     onExportToFile: l,
@@ -254,54 +255,54 @@
                 }));
                 return (0, a.jsxs)(o.Menu, {
                     navId: "clips-export",
-                    "aria-label": M.default.Messages.CLIPS_EDIT_EXPORT,
+                    "aria-label": j.default.Messages.CLIPS_EDIT_EXPORT,
                     onClose: t,
                     onSelect: t,
                     children: [i ? (0, a.jsx)(o.MenuItem, {
                         icon: x.default,
                         id: "clips-export-soundboard",
-                        label: M.default.Messages.CLIPS_EXPORT_TO_SOUNDBOARD,
+                        label: j.default.Messages.CLIPS_EXPORT_TO_SOUNDBOARD,
                         action: n
                     }) : null, (0, a.jsx)(o.MenuItem, {
                         icon: C.default,
                         id: "clips-export-file",
-                        label: M.default.Messages.CLIPS_EXPORT_TO_FILE,
+                        label: j.default.Messages.CLIPS_EXPORT_TO_FILE,
                         action: l
                     })]
                 })
             }
 
-            function P(e) {
+            function b(e) {
                 let {
                     clip: t,
                     cropData: i,
                     channelId: s,
                     clipName: p,
                     voiceAudioEnabled: x,
-                    applicationAudioEnabled: P,
-                    onSetClipName: b,
-                    onChangeVoiceAudioEnabled: w,
-                    onChangeApplicationAudioEnabled: y,
-                    onClose: D
-                } = e, [O, k] = n.useState(null), {
-                    onShareClick: F
+                    applicationAudioEnabled: b,
+                    onSetClipName: w,
+                    onChangeVoiceAudioEnabled: y,
+                    onChangeApplicationAudioEnabled: D,
+                    onClose: O
+                } = e, [k, F] = n.useState(null), {
+                    onShareClick: G
                 } = (0, I.default)({
                     channelId: s,
-                    setExporting: e => k(null != e ? "share" : null)
+                    setExporting: e => F(null != e ? "share" : null)
                 });
-                async function G() {
+                async function B() {
                     let e = f.default.getChannel(s);
-                    k("export");
+                    F("export");
                     try {
                         let n = await (0, S.exportClip)(t, {
                             ...i,
-                            applicationAudio: P,
+                            applicationAudio: b,
                             voiceAudio: x
                         });
-                        D(), (0, o.openModalLazy)(async () => {
+                        O(), (0, o.openModalLazy)(async () => {
                             let {
                                 default: i
-                            } = await l.el("823749").then(l.bind(l, "823749")), r = (null == e ? void 0 : e.guild_id) != null ? m.default.getGuild(e.guild_id) : null, s = null != r && (0, c.getManageResourcePermissions)(r, v.default, E.default).canCreateExpressions, u = null == p || "" === p ? (0, T.CLIP_NAME_TEMPLATE)(N.default.extractTimestamp(t.id)) : p;
+                            } = await l.el("823749").then(l.bind(l, "823749")), r = (null == e ? void 0 : e.guild_id) != null ? m.default.getGuild(e.guild_id) : null, s = null != r && (0, c.getManageResourcePermissions)(r, v.default, E.default).canCreateExpressions, u = null == p || "" === p ? (0, T.CLIP_NAME_TEMPLATE)(N.default.extractTimestamp(t.id)) : p, o = u.slice(0, M.MAX_LENGTH_SOUND_NAME);
                             return t => (0, a.jsx)(i, {
                                 ...t,
                                 showGuildPicker: !0,
@@ -310,30 +311,30 @@
                                     file: new File([n], "".concat(u, ".mp4"), {
                                         type: "video/mp4"
                                     }),
-                                    name: u
+                                    name: o
                                 }
                             })
                         })
                     } catch (e) {} finally {
-                        k(null)
+                        F(null)
                     }
                 }
-                async function B() {
-                    k("export");
+                async function U() {
+                    F("export");
                     try {
                         let e = await (0, S.exportClip)(t, {
                                 ...i,
-                                applicationAudio: P,
+                                applicationAudio: b,
                                 voiceAudio: x
                             }),
                             l = await e.arrayBuffer();
-                        await d.default.fileManager.saveWithDialog(A.from(l), (0, T.CLIPS_EXPORT_FILENAME)(t.id))
+                        await d.default.fileManager.saveWithDialog(R.from(l), (0, T.CLIPS_EXPORT_FILENAME)(t.id))
                     } catch (e) {} finally {
-                        k(null)
+                        F(null)
                     }
                 }
 
-                function U() {
+                function V() {
                     (0, o.openModalLazy)(async () => {
                         let {
                             default: e
@@ -342,105 +343,105 @@
                             clip: t,
                             ...l,
                             onDelete: async () => {
-                                await l.onClose(), D()
+                                await l.onClose(), O()
                             }
                         })
                     })
                 }
                 return (0, a.jsxs)("div", {
-                    className: j.clipForm,
+                    className: A.clipForm,
                     children: [(0, a.jsxs)("div", {
-                        className: r(j.clipFormSection, j.editSection),
+                        className: r(A.clipFormSection, A.editSection),
                         children: [(0, a.jsx)(o.FormItem, {
-                            className: j.clipFormItem,
-                            title: M.default.Messages.CLIPS_EDIT_TITLE,
+                            className: A.clipFormItem,
+                            title: j.default.Messages.CLIPS_EDIT_TITLE,
                             children: (0, a.jsx)(o.TextInput, {
                                 onChange: e => {
-                                    "" === e ? b(void 0) : b(e)
+                                    "" === e ? w(void 0) : w(e)
                                 },
                                 value: p,
                                 minLength: T.CLIP_NAME_MIN_CHAR_LENGTH,
                                 maxLength: T.CLIP_NAME_MAX_CHAR_LENGTH,
-                                placeholder: M.default.Messages.CLIPS_UNTITLED
+                                placeholder: j.default.Messages.CLIPS_UNTITLED
                             })
                         }), (0, a.jsxs)("div", {
-                            className: j.clipFormSwitches,
+                            className: A.clipFormSwitches,
                             children: [(0, a.jsx)(o.FormSwitch, {
-                                onChange: y,
-                                value: P,
+                                onChange: D,
+                                value: b,
                                 hideBorder: !0,
-                                children: M.default.Messages.CLIPS_EDIT_GAME_AUDIO
+                                children: j.default.Messages.CLIPS_EDIT_GAME_AUDIO
                             }), (0, a.jsx)(o.FormSwitch, {
-                                onChange: w,
+                                onChange: y,
                                 value: x,
                                 hideBorder: !0,
-                                children: M.default.Messages.CLIPS_EDIT_VOICE_CHANNEL_AUDIO
+                                children: j.default.Messages.CLIPS_EDIT_VOICE_CHANNEL_AUDIO
                             })]
                         })]
                     }), (0, a.jsxs)("div", {
-                        className: r(j.clipFormSection, j.metadataSection),
+                        className: r(A.clipFormSection, A.metadataSection),
                         children: [(0, a.jsx)(_.default, {
                             clip: t
                         }), (0, a.jsx)(L.default, {
-                            className: j.userList,
+                            className: A.userList,
                             clip: t
                         })]
                     }), (0, a.jsxs)("div", {
-                        className: j.clipFormFooter,
+                        className: A.clipFormFooter,
                         children: [(0, a.jsx)(o.Button, {
-                            submitting: "share" === O,
-                            disabled: null != O && "share" !== O,
+                            submitting: "share" === k,
+                            disabled: null != k && "share" !== k,
                             color: o.Button.Colors.BRAND,
-                            wrapperClassName: j.clipFormFooterPrimaryButton,
-                            onClick: () => F({
+                            wrapperClassName: A.clipFormFooterPrimaryButton,
+                            onClick: () => G({
                                 clip: {
                                     ...t,
                                     name: p
                                 },
                                 cropData: i,
-                                applicationAudioEnabled: P,
+                                applicationAudioEnabled: b,
                                 voiceAudioEnabled: x,
                                 onShareComplete: () => {
                                     u.closeModal(T.CLIPS_EDIT_MODAL_KEY), u.closeModal(T.CLIPS_GALLERY_MODAL_KEY)
                                 }
                             }),
-                            children: M.default.Messages.CLIPS_EDIT_SHARE_CLIP
+                            children: j.default.Messages.CLIPS_EDIT_SHARE_CLIP
                         }), (0, a.jsx)(o.Tooltip, {
-                            text: M.default.Messages.SAVE_CHANGES,
+                            text: j.default.Messages.SAVE_CHANGES,
                             children: e => (0, a.jsx)(o.Button, {
                                 ...e,
                                 size: o.Button.Sizes.ICON,
-                                className: j.clipFormFooterButton,
-                                disabled: null != O,
-                                wrapperClassName: r(j.clipFormFooterButton, {
-                                    [j.submittingWrapperFix]: null != O
+                                className: A.clipFormFooterButton,
+                                disabled: null != k,
+                                wrapperClassName: r(A.clipFormFooterButton, {
+                                    [A.submittingWrapperFix]: null != k
                                 }),
                                 color: o.Button.Colors.PRIMARY,
-                                onClick: D,
+                                onClick: O,
                                 children: (0, a.jsx)(h.default, {})
                             })
                         }), (0, a.jsx)(o.Popout, {
                             position: "top",
-                            renderPopout: e => (0, a.jsx)(R, {
+                            renderPopout: e => (0, a.jsx)(P, {
                                 ...e,
                                 channelId: s,
-                                onExportToFile: B,
-                                onExportToSoundboard: G
+                                onExportToFile: U,
+                                onExportToSoundboard: B
                             }),
                             children: (e, t) => {
                                 let {
                                     isShown: l
                                 } = t;
                                 return (0, a.jsx)(o.Tooltip, {
-                                    text: l ? null : M.default.Messages.CLIPS_EDIT_EXPORT,
+                                    text: l ? null : j.default.Messages.CLIPS_EDIT_EXPORT,
                                     children: t => (0, a.jsx)(o.Button, {
                                         ...t,
                                         size: o.Button.Sizes.ICON,
-                                        wrapperClassName: r(j.clipFormFooterButton, {
-                                            [j.submittingWrapperFix]: null != O
+                                        wrapperClassName: r(A.clipFormFooterButton, {
+                                            [A.submittingWrapperFix]: null != k
                                         }),
-                                        submitting: "export" === O,
-                                        disabled: null != O && "export" !== O,
+                                        submitting: "export" === k,
+                                        disabled: null != k && "export" !== k,
                                         color: o.Button.Colors.PRIMARY,
                                         onClick: l => {
                                             var a, n;
@@ -451,17 +452,17 @@
                                 })
                             }
                         }), (0, a.jsx)(o.Tooltip, {
-                            text: M.default.Messages.DELETE,
+                            text: j.default.Messages.DELETE,
                             children: e => (0, a.jsx)(o.Button, {
                                 ...e,
                                 size: o.Button.Sizes.ICON,
-                                className: j.clipFormFooterButton,
-                                wrapperClassName: r(j.clipFormFooterButton, {
-                                    [j.submittingWrapperFix]: null != O
+                                className: A.clipFormFooterButton,
+                                wrapperClassName: r(A.clipFormFooterButton, {
+                                    [A.submittingWrapperFix]: null != k
                                 }),
-                                disabled: null != O,
+                                disabled: null != k,
                                 color: o.Button.Colors.PRIMARY,
-                                onClick: U,
+                                onClick: V,
                                 children: (0, a.jsx)(g.default, {})
                             })
                         })]
