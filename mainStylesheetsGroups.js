@@ -5868,15 +5868,6 @@
                 skeleton: "skeleton__5ac25"
             }
         },
-        322853: function(e, t, o) {
-            "use strict";
-            e.exports = {
-                coachmark: "coachmark_db913c",
-                imageLoader: "imageLoader__0a236",
-                loading: "loading__9320e",
-                shopArt: "shopArt_acfdd5"
-            }
-        },
         216365: function(e, t, o) {
             "use strict";
             e.exports = {
