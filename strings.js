@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["85664"], {
+    ["14907"], {
         229353: function(e, _, E) {
             e.exports = Object.freeze({
                 DISCORD: "Discord",
@@ -18296,7 +18296,7 @@
                 u = E("782340");
             (0, a.setUpdateRules)(s.default), (0, n.default)(u.default, o.default, T.default), i.default.Emitter.injectBatchEmitChanges(r.batchUpdates), i.default.PersistedStore.disableWrites = __OVERLAY__, i.default.initialize();
             let L = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, O.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("255840", ", Version Hash: ").concat("bf304d717bbab9bd3892a0e58e4838bec3b71151")), t.default.setTags({
+            new(0, O.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("255848", ", Version Hash: ").concat("a30bd48dd9ad8ac7bdbe9341690404ebe2c8a814")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), A.init(), (0, R.cleanupTempFiles)()
         },
@@ -20765,8 +20765,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "255840", "255840"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("255840")), _ = 0), _
+                let _ = parseInt((e = "255848", "255848"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("255848")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
@@ -25872,6 +25872,36 @@
                 }
             }
             var S = new T
+        },
+        651693: function(e, _, E) {
+            "use strict";
+            E.r(_), E.d(_, {
+                isImageFile: function() {
+                    return r
+                },
+                isAnimatedImageUrl: function() {
+                    return a
+                },
+                isVideoUrl: function() {
+                    return s
+                },
+                isVideoFile: function() {
+                    return T
+                }
+            }), E("222007");
+            var t = E("773336");
+            let o = (e, _) => {
+                    if (null == e) return !1;
+                    let [E, t] = e.split(/\?/, 1);
+                    return _.test(E)
+                },
+                n = /\.(png|jpe?g|webp|gif|heic|heif|dng)$/i,
+                r = e => null != e && n.test(e),
+                i = /\.(webp|gif)$/i,
+                a = e => o(e, i),
+                I = (0, t.isIOS)() ? /\.(mp4|mov)$/i : ((0, t.isAndroid)(), /\.(mp4|webm|mov)$/i),
+                s = e => o(e, I),
+                T = e => null != e && I.test(e)
         },
         643857: function(e, _, E) {
             "use strict";
