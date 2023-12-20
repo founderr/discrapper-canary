@@ -29,13 +29,13 @@
                 _ = t("42203"),
                 L = t("305961"),
                 g = t("27618"),
-                v = t("697218"),
-                p = t("476765"),
+                p = t("697218"),
+                v = t("476765"),
                 I = t("483093"),
                 A = t("782340"),
                 S = t("159260");
-            let R = (0, p.uid)(),
-                j = (0, p.uid)();
+            let R = (0, v.uid)(),
+                j = (0, v.uid)();
 
             function V(e) {
                 return 1 === e.type
@@ -62,7 +62,7 @@
             }
 
             function B(e) {
-                let l = (0, T.computeChannelName)(e, v.default, g.default);
+                let l = (0, T.computeChannelName)(e, p.default, g.default);
                 return {
                     tag: {
                         type: M.RichTagTypes.CHANNEL,
@@ -160,7 +160,7 @@
                     }), l.forEach(e => {
                         e in t && (a[e] = D(t[e]))
                     }), a
-                })(n, s, o), [n, s, o]), m = r.useMemo(() => Object.keys(u), [u]), [T, x] = r.useState(""), [H, N] = r.useState(!1), [g, v] = r.useState(!1), [p, I] = r.useState(!1), {
+                })(n, s, o), [n, s, o]), m = r.useMemo(() => Object.keys(u), [u]), [T, x] = r.useState(""), [H, N] = r.useState(!1), [g, p] = r.useState(!1), [v, I] = r.useState(!1), {
                     sections: O,
                     sectionCounts: U
                 } = r.useMemo(() => {
@@ -188,7 +188,7 @@
                         }).map(e => e.row.record.id);
                     i(new Set(t), new Set(a))
                 }, [i]), F = () => {
-                    N(!1), v(!1)
+                    N(!1), p(!1)
                 };
                 r.useEffect(() => {
                     let e = setTimeout(() => {
@@ -199,7 +199,7 @@
                     }
                 }, [H, g]);
                 let k = (e, l, t) => {
-                        t.stopPropagation(), t.preventDefault(), 2 === l ? N(e) : (1 === l || N(e), v(e))
+                        t.stopPropagation(), t.preventDefault(), 2 === l ? N(e) : (1 === l || N(e), p(e))
                     },
                     P = r.useCallback(e => {
                         let l = {
@@ -263,11 +263,11 @@
                             inputProps: {
                                 "aria-labelledby": R,
                                 "aria-controls": j,
-                                "aria-expanded": p,
+                                "aria-expanded": v,
                                 onFocus: e => k(!0, 2, e),
                                 onBlur: e => k(!1, 2, e)
                             }
-                        }), p && (0, d.jsx)("div", {
+                        }), v && (0, d.jsx)("div", {
                             className: S.resultsListParent,
                             onFocus: e => k(!0, 1, e),
                             onBlur: e => k(!1, 1, e),
@@ -487,8 +487,8 @@
                 let {
                     guildId: g
                 } = e, {
-                    analyticsLocations: v
-                } = (0, c.default)(), p = null !== (l = null == v ? void 0 : v[0]) && void 0 !== l ? l : null, I = (0, x.useCanAccessBulkBanningFeature)(g, p), {
+                    analyticsLocations: p
+                } = (0, c.default)(), v = null !== (l = null == p ? void 0 : p[0]) && void 0 !== l ? l : null, I = (0, x.useCanAccessBulkBanningFeature)(g, v), {
                     selectedUserIds: A,
                     clearSelection: S
                 } = (0, H.default)(g), R = A.size > 0, j = async (e, l, t, a) => {
@@ -500,7 +500,7 @@
                             target_user_ids: [...A],
                             mod_user_id: m.default.getId(),
                             successful_user_ids: n.body.banned_users,
-                            location: p
+                            location: v
                         })
                     } catch (e) {
                         (0, o.showToast)((0, o.createToast)(_.default.Messages.BAN_MULTIPLE_FAILED_TOAST, o.ToastType.FAILURE))
@@ -548,7 +548,7 @@
                                     action_type: T.ModerationActionType.BAN,
                                     target_user_ids: [...A],
                                     mod_user_id: m.default.getId(),
-                                    location: p
+                                    location: v
                                 }), (0, o.openModalLazy)(async () => {
                                     let {
                                         default: e
@@ -686,125 +686,153 @@
             "use strict";
             t.r(l), t.d(l, {
                 default: function() {
-                    return I
+                    return b
                 }
             }), t("222007");
             var a = t("37983"),
                 n = t("884691"),
                 s = t("414456"),
                 i = t.n(s),
-                C = t("907002"),
-                o = t("65597"),
-                d = t("750560"),
-                r = t("206230"),
-                u = t("685665"),
-                c = t("334572"),
-                m = t("866190"),
-                f = t("130037"),
-                E = t("178406"),
-                h = t("645266"),
-                M = t("913132"),
-                T = t("553275"),
-                x = t("151123"),
-                H = t("337092"),
-                N = t("850646"),
-                _ = t("894282"),
-                L = t("474507");
-            let g = {
-                    mass: 1.2,
-                    friction: 26,
-                    tension: 210
+                C = t("714617"),
+                o = t.n(C),
+                d = t("907002"),
+                r = t("65597"),
+                u = t("750560"),
+                c = t("206230"),
+                m = t("685665"),
+                f = t("334572"),
+                E = t("866190"),
+                h = t("130037"),
+                M = t("178406"),
+                T = t("645266"),
+                x = t("913132"),
+                H = t("553275"),
+                N = t("151123"),
+                _ = t("337092"),
+                L = t("850646"),
+                g = t("894282"),
+                p = t("474507");
+            let v = {
+                    transform: "translate3d(15%, 0, 0)",
+                    opacity: .3
                 },
-                v = e => e.shiftKey || e.key === _.KeyboardKeysUpdated.SHIFT,
-                p = e => e.metaKey || e.ctrlKey;
-
-            function I(e) {
-                var l;
-                let {
-                    guild: t,
-                    className: s,
-                    searchState: _,
-                    compact: I,
-                    onSelectRow: A,
-                    onResetForNewMembers: S
-                } = e, R = (0, o.useStateFromStoresObject)([E.default], () => E.default.getPaginationStateByGuildId(t.id), [t.id]), [j] = (0, o.default)([E.default], () => E.default.getPagedMembersByGuildId(t.id), [t.id], c.isVersionEqual), V = (0, o.default)([r.default], () => r.default.useReducedMotion), b = (0, m.useIsWindowFocused)(), [D, B] = n.useState(!1), [O, y] = n.useState(!1);
-                n.useEffect(() => {
-                    !b && (B(!1), y(!1))
-                }, [b]), n.useLayoutEffect(() => {
-                    let e = e => {
-                            v(e) && B(!0), p(e) && y(!0)
-                        },
-                        l = e => {
-                            v(e) && B(!1), p(e) && y(!1)
-                        };
-                    return window.addEventListener("keydown", e), window.addEventListener("keyup", l), () => {
-                        window.removeEventListener("keydown", e), window.removeEventListener("keyup", l)
-                    }
-                }, []), n.useEffect(() => {
-                    (0, h.initializeMemberSafetyStore)(t.id)
-                }, [t.id]);
-                let w = n.useMemo(() => {
-                    var e;
-                    return null !== (e = j[R.currentPage]) && void 0 !== e ? e : []
-                }, [R.currentPage, j]);
-                (0, d.useSubscribeGuildMembers)({
-                    [t.id]: w
-                }), n.useEffect(() => {
-                    (0, h.getMemberSupplemental)(t.id, w)
-                }, [t.id, w]);
-                let U = (0, C.useTransition)(w, {
-                        key: e => e,
-                        trail: 100,
-                        immediate: V,
-                        from(e) {
-                            let l = E.default.getEnhancedMember(t.id, e),
-                                a = E.default.getLastRefreshTimestamp(t.id),
-                                n = null != l && l.refreshTimestamp === a;
-                            return null != l && 0 !== a && n ? {
-                                transform: "translate3d(100%, 0, 0)",
-                                opacity: 0
-                            } : {
-                                transform: "translate3d(0, 0, 0)",
-                                opacity: 1
-                            }
-                        },
-                        enter: {
-                            transform: "translate3d(0, 0, 0)",
-                            opacity: 1
-                        },
-                        config: g
-                    }),
-                    {
-                        analyticsLocations: Z
-                    } = (0, u.default)(),
-                    F = null !== (l = null == Z ? void 0 : Z[0]) && void 0 !== l ? l : null;
-                return n.useEffect(() => {
-                    (0, f.trackMembersPageViewed)(t.id, F)
-                }, [t.id, F]), (0, a.jsxs)("table", {
-                    className: i(L.table, s),
-                    children: [(0, a.jsx)(x.default, {
-                        guildId: t.id,
-                        currentPagedMembers: w
-                    }), (0, a.jsx)("tbody", {
-                        children: _ === T.SearchState.SUCCESS_FULL || _ === T.SearchState.LOADING ? (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(N.default, {
-                                guild: t,
-                                onSubmit: S
-                            }), U((e, l) => (0, a.jsx)(H.default, {
-                                userId: l,
-                                guildId: t.id,
-                                style: e,
-                                onSelect: A,
-                                isHoldingAdvancedInfoKey: D && O,
-                                compact: I
-                            }, l))]
-                        }) : (0, a.jsx)("td", {
-                            colSpan: 7,
-                            children: (0, a.jsx)(M.default, {
-                                searchState: _
+                I = {
+                    transform: "translate3d(5%, 0, 0)",
+                    opacity: .5
+                },
+                A = {
+                    transform: "translate3d(0, 0, 0)",
+                    opacity: 1
+                },
+                S = {
+                    mass: 1.1,
+                    friction: 24,
+                    tension: 260
+                },
+                R = e => e.shiftKey || e.key === g.KeyboardKeysUpdated.SHIFT,
+                j = e => e.metaKey || e.ctrlKey,
+                V = n.memo(function(e) {
+                    let {
+                        members: l,
+                        guild: t,
+                        className: s,
+                        searchState: C,
+                        compact: o,
+                        onSelectRow: m,
+                        onResetForNewMembers: f
+                    } = e, h = (0, r.default)([c.default], () => c.default.useReducedMotion), g = (0, E.useIsWindowFocused)(), [V, b] = n.useState(!1), [D, B] = n.useState(!1);
+                    n.useEffect(() => {
+                        !g && (b(!1), B(!1))
+                    }, [g]), n.useLayoutEffect(() => {
+                        let e = e => {
+                                R(e) && b(!0), j(e) && B(!0)
+                            },
+                            l = e => {
+                                R(e) && b(!1), j(e) && B(!1)
+                            };
+                        return window.addEventListener("keydown", e), window.addEventListener("keyup", l), () => {
+                            window.removeEventListener("keydown", e), window.removeEventListener("keyup", l)
+                        }
+                    }, []), (0, u.useSubscribeGuildMembers)({
+                        [t.id]: l
+                    }), n.useEffect(() => {
+                        (0, T.getMemberSupplemental)(t.id, l)
+                    }, [t.id, l]);
+                    let O = l.length > 30,
+                        y = (0, d.useTransition)(l, {
+                            key: e => e,
+                            trail: O ? 5 : 15,
+                            immediate: h,
+                            from(e) {
+                                let l = M.default.getEnhancedMember(t.id, e),
+                                    a = M.default.getLastRefreshTimestamp(t.id),
+                                    n = null != l && l.refreshTimestamp === a;
+                                return null != l && 0 !== a && n ? O ? I : v : A
+                            },
+                            enter: A,
+                            config: S
+                        });
+                    return (0, a.jsxs)("table", {
+                        className: i(p.table, s),
+                        children: [(0, a.jsx)(N.default, {
+                            guildId: t.id,
+                            currentPagedMembers: l
+                        }), (0, a.jsx)("tbody", {
+                            children: C === H.SearchState.SUCCESS_FULL || C === H.SearchState.LOADING ? (0, a.jsxs)(a.Fragment, {
+                                children: [(0, a.jsx)(L.default, {
+                                    guild: t,
+                                    onSubmit: f
+                                }), y((e, l) => (0, a.jsx)(_.default, {
+                                    userId: l,
+                                    guildId: t.id,
+                                    style: e,
+                                    onSelect: m,
+                                    isHoldingAdvancedInfoKey: V && D,
+                                    compact: o
+                                }, l))]
+                            }) : (0, a.jsx)("td", {
+                                colSpan: 7,
+                                children: (0, a.jsx)(x.default, {
+                                    searchState: C
+                                })
                             })
-                        })
-                    })]
+                        })]
+                    })
+                }, function(e, l) {
+                    let t = o(e.members, l.members),
+                        a = e.guild.id === l.guild.id,
+                        n = e.searchState === l.searchState,
+                        s = e.compact === l.compact;
+                    return t && a && n && s
+                });
+            var b = function(e) {
+                var l, t;
+                let {
+                    guild: s,
+                    className: i,
+                    searchState: C,
+                    compact: o,
+                    onSelectRow: d,
+                    onResetForNewMembers: u
+                } = e, c = (0, r.useStateFromStoresObject)([M.default], () => M.default.getPaginationStateByGuildId(s.id), [s.id]), [E] = (0, r.default)([M.default], () => M.default.getPagedMembersByGuildId(s.id), [s.id], f.isVersionEqual);
+                n.useEffect(() => {
+                    (0, T.initializeMemberSafetyStore)(s.id)
+                }, [s.id]);
+                let x = n.useDeferredValue(null !== (l = E[c.currentPage]) && void 0 !== l ? l : []),
+                    {
+                        analyticsLocations: H
+                    } = (0, m.default)(),
+                    N = null !== (t = null == H ? void 0 : H[0]) && void 0 !== t ? t : null;
+                return n.useEffect(() => {
+                    (0, h.trackMembersPageViewed)(s.id, N)
+                }, [s.id, N]), (0, a.jsx)(V, {
+                    members: x,
+                    guild: s,
+                    className: i,
+                    searchState: C,
+                    compact: o,
+                    onSelectRow: d,
+                    onResetForNewMembers: u
                 })
             }
         },
@@ -837,8 +865,8 @@
                 _ = t("466818"),
                 L = t("178406"),
                 g = t("645266"),
-                v = t("624663"),
-                p = t("413989"),
+                p = t("624663"),
+                v = t("413989"),
                 I = t("49111"),
                 A = t("782340"),
                 S = t("368715"),
@@ -973,7 +1001,7 @@
                     selectedUserIds: h,
                     addUsers: M,
                     clearSelection: T
-                } = (0, v.default)(t), x = C.requireUnusualDmActivity || C.requireCommunicationDisabled || C.requireUnusualAccountActivity || C.requireUsernameQuarantined, H = C.selectedRoleIds.size > 0, [N, g] = n.useState(null == r.default.get(b, null)), D = n.useCallback(() => {
+                } = (0, p.default)(t), x = C.requireUnusualDmActivity || C.requireCommunicationDisabled || C.requireUnusualAccountActivity || C.requireUsernameQuarantined, H = C.selectedRoleIds.size > 0, [N, g] = n.useState(null == r.default.get(b, null)), D = n.useCallback(() => {
                     r.default.set(b, Date.now()), g(!1)
                 }, []), {
                     analyticsLocations: B
@@ -1019,7 +1047,7 @@
                                 let {
                                     closePopout: l
                                 } = e;
-                                return (0, a.jsx)(p.default, {
+                                return (0, a.jsx)(v.default, {
                                     guildId: t,
                                     onClose: l
                                 })
@@ -1218,7 +1246,7 @@
                 let {
                     guildId: l,
                     onClose: t
-                } = e, s = (0, h.useTrackMemberFilterRolesUsed)(l), C = (0, m.default)([M.default], () => M.default.getSearchStateByGuildId(l), [l], c), [d, u] = n.useState(C.selectedRoleIds), g = (0, E.useRoleRows)(l, L, !0), v = (e, t) => {
+                } = e, s = (0, h.useTrackMemberFilterRolesUsed)(l), C = (0, m.default)([M.default], () => M.default.getSearchStateByGuildId(l), [l], c), [d, u] = n.useState(C.selectedRoleIds), g = (0, E.useRoleRows)(l, L, !0), p = (e, t) => {
                     let {
                         record: n
                     } = e;
@@ -1247,11 +1275,11 @@
                             })]
                         })
                     }, n.id)
-                }, p = (e, l) => g.reduce((t, a) => {
+                }, v = (e, l) => g.reduce((t, a) => {
                     let {
                         record: n
                     } = a, s = e.has(n.id);
-                    return o(l.toLowerCase(), n.name.toLowerCase()) ? t.push(v(a, s)) : s && t.push(v(a, s)), t
+                    return o(l.toLowerCase(), n.name.toLowerCase()) ? t.push(p(a, s)) : s && t.push(p(a, s)), t
                 }, []), I = n.useCallback(e => {
                     (0, T.updateSearchState)(l, {
                         selectedRoleIds: e
@@ -1271,7 +1299,7 @@
                     multiSelect: !0,
                     showScrollbar: !0,
                     autoFocus: !0,
-                    children: e => p(d, e)
+                    children: e => v(d, e)
                 })
             }
         },
@@ -1279,9 +1307,9 @@
             "use strict";
             t.r(l), t.d(l, {
                 default: function() {
-                    return X
+                    return el
                 }
-            });
+            }), t("222007");
             var a = t("37983"),
                 n = t("884691"),
                 s = t("414456"),
@@ -1294,145 +1322,162 @@
                 c = t("669491"),
                 m = t("77078"),
                 f = t("87657"),
-                E = t("685665"),
-                h = t("681937"),
-                M = t("509"),
-                T = t("654017"),
-                x = t("305961"),
-                H = t("957255"),
-                N = t("697218"),
-                _ = t("91551"),
-                L = t("4845"),
-                g = t("635731"),
+                E = t("149638"),
+                h = t("685665"),
+                M = t("681937"),
+                T = t("509"),
+                x = t("654017"),
+                H = t("305961"),
+                N = t("957255"),
+                _ = t("697218"),
+                L = t("91551"),
+                g = t("4845"),
+                p = t("635731"),
                 v = t("491401"),
-                p = t("663745"),
-                I = t("781896"),
-                A = t("864982"),
-                S = t("151185"),
-                R = t("387111"),
-                j = t("158998"),
-                V = t("536999"),
-                b = t("466818"),
-                D = t("178406"),
-                B = t("150162"),
-                O = t("998940"),
-                y = t("624663"),
-                w = t("553275"),
-                U = t("412013"),
-                Z = t("451373"),
-                F = t("49111"),
-                k = t("782340"),
-                P = t("236807");
-            let Y = n.memo(function(e) {
-                    let {
-                        member: l
-                    } = e, t = n.useMemo(() => (0, M.isCommunicationDisabled)(l.communicationDisabledUntil), [l.communicationDisabledUntil]), s = n.useMemo(() => null == l.communicationDisabledUntil ? new Date : new Date(l.communicationDisabledUntil), [l.communicationDisabledUntil]), C = (0, V.isInMembersTableSafetySignalsExperiment)(l.guildId);
-                    return (0, a.jsxs)("div", {
-                        className: i(P.flagContainer),
-                        children: [l.hasUnusualDmActivity && (0, a.jsx)(m.Tooltip, {
-                            text: k.default.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY_TOOLTIP,
-                            children: e => {
-                                let {
-                                    onMouseEnter: l,
-                                    onMouseLeave: t
-                                } = e;
-                                return (0, a.jsx)(L.default, {
-                                    width: 20,
-                                    height: 20,
-                                    onMouseEnter: l,
-                                    onMouseLeave: t,
-                                    color: c.default.colors.TEXT_MUTED.css
-                                })
-                            }
-                        }), t && (0, a.jsx)(m.Tooltip, {
-                            "aria-label": k.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP,
-                            allowOverflow: !0,
-                            text: (0, a.jsxs)("div", {
-                                className: P.communicationDisabledTooltip,
-                                children: [(0, a.jsx)("div", {
-                                    children: k.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP
-                                }), (0, a.jsx)(_.default, {
-                                    deadline: s,
-                                    showUnits: !0,
-                                    stopAtOneSec: !0
-                                })]
-                            }),
-                            children: e => {
-                                let {
-                                    onMouseEnter: l,
-                                    onMouseLeave: t
-                                } = e;
-                                return (0, a.jsx)(v.default, {
-                                    width: 20,
-                                    height: 20,
-                                    onMouseEnter: l,
-                                    onMouseLeave: t,
-                                    color: c.default.colors.TEXT_DANGER.css
-                                })
-                            }
-                        }), C && (0, T.isSpammer)(l.userId) && (0, a.jsx)(m.Tooltip, {
-                            text: k.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY_TOOLTIP,
-                            children: e => {
-                                let {
-                                    onMouseEnter: l,
-                                    onMouseLeave: t
-                                } = e;
-                                return (0, a.jsx)(A.default, {
-                                    width: 20,
-                                    height: 20,
-                                    onMouseEnter: l,
-                                    onMouseLeave: t,
-                                    color: c.default.colors.TEXT_DANGER.css
-                                })
-                            }
-                        }), C && (0, h.hasAutomodQuarantinedProfile)(l) && (0, a.jsx)(m.Tooltip, {
-                            text: k.default.Messages.MEMBER_SAFETY_QUARANTINED_USER_TOOLTIP,
-                            children: e => {
-                                let {
-                                    onMouseEnter: l,
-                                    onMouseLeave: t
-                                } = e;
-                                return (0, a.jsx)(g.default, {
-                                    width: 20,
-                                    height: 20,
-                                    onMouseEnter: l,
-                                    onMouseLeave: t,
-                                    color: c.default.colors.TEXT_MUTED.css
-                                })
-                            }
-                        })]
+                I = t("663745"),
+                A = t("781896"),
+                S = t("864982"),
+                R = t("151185"),
+                j = t("387111"),
+                V = t("158998"),
+                b = t("536999"),
+                D = t("466818"),
+                B = t("178406"),
+                O = t("150162"),
+                y = t("998940"),
+                w = t("624663"),
+                U = t("553275"),
+                Z = t("412013"),
+                F = t("451373"),
+                k = t("49111"),
+                P = t("782340"),
+                Y = t("236807");
+            let G = n.memo(function(e) {
+                let {
+                    member: l
+                } = e, t = n.useMemo(() => (0, T.isCommunicationDisabled)(l.communicationDisabledUntil), [l.communicationDisabledUntil]), s = n.useMemo(() => null == l.communicationDisabledUntil ? new Date : new Date(l.communicationDisabledUntil), [l.communicationDisabledUntil]), C = (0, b.isInMembersTableSafetySignalsExperiment)(l.guildId);
+                return (0, a.jsxs)("div", {
+                    className: i(Y.flagContainer),
+                    children: [l.hasUnusualDmActivity && (0, a.jsx)(m.Tooltip, {
+                        text: P.default.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY_TOOLTIP,
+                        children: e => {
+                            let {
+                                onMouseEnter: l,
+                                onMouseLeave: t
+                            } = e;
+                            return (0, a.jsx)(g.default, {
+                                width: 20,
+                                height: 20,
+                                onMouseEnter: l,
+                                onMouseLeave: t,
+                                color: c.default.colors.TEXT_MUTED.css
+                            })
+                        }
+                    }), t && (0, a.jsx)(m.Tooltip, {
+                        "aria-label": P.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP,
+                        allowOverflow: !0,
+                        text: (0, a.jsxs)("div", {
+                            className: Y.communicationDisabledTooltip,
+                            children: [(0, a.jsx)("div", {
+                                children: P.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP
+                            }), (0, a.jsx)(L.default, {
+                                deadline: s,
+                                showUnits: !0,
+                                stopAtOneSec: !0
+                            })]
+                        }),
+                        children: e => {
+                            let {
+                                onMouseEnter: l,
+                                onMouseLeave: t
+                            } = e;
+                            return (0, a.jsx)(v.default, {
+                                width: 20,
+                                height: 20,
+                                onMouseEnter: l,
+                                onMouseLeave: t,
+                                color: c.default.colors.TEXT_DANGER.css
+                            })
+                        }
+                    }), C && (0, x.isSpammer)(l.userId) && (0, a.jsx)(m.Tooltip, {
+                        text: P.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY_TOOLTIP,
+                        children: e => {
+                            let {
+                                onMouseEnter: l,
+                                onMouseLeave: t
+                            } = e;
+                            return (0, a.jsx)(S.default, {
+                                width: 20,
+                                height: 20,
+                                onMouseEnter: l,
+                                onMouseLeave: t,
+                                color: c.default.colors.TEXT_DANGER.css
+                            })
+                        }
+                    }), C && (0, M.hasAutomodQuarantinedProfile)(l) && (0, a.jsx)(m.Tooltip, {
+                        text: P.default.Messages.MEMBER_SAFETY_QUARANTINED_USER_TOOLTIP,
+                        children: e => {
+                            let {
+                                onMouseEnter: l,
+                                onMouseLeave: t
+                            } = e;
+                            return (0, a.jsx)(p.default, {
+                                width: 20,
+                                height: 20,
+                                onMouseEnter: l,
+                                onMouseLeave: t,
+                                color: c.default.colors.TEXT_MUTED.css
+                            })
+                        }
+                    })]
+                })
+            });
+
+            function J(e) {
+                let {
+                    member: l
+                } = e, t = (0, u.default)([H.default], () => H.default.getGuild(l.guildId), [l.guildId]), s = n.useMemo(() => {
+                    var e;
+                    if (null == t) return [];
+                    let a = null !== (e = null == t ? void 0 : t.roles) && void 0 !== e ? e : {};
+                    return null == l.highestRoleId ? l.roles : l.roles.filter(e => null != e && e !== l.highestRoleId).sort((e, l) => {
+                        var t, n, s, i;
+                        return null !== (i = null !== (s = null === (t = a[l]) || void 0 === t ? void 0 : t.position) && void 0 !== s ? s : 0 - (null === (n = a[e]) || void 0 === n ? void 0 : n.position)) && void 0 !== i ? i : 0
                     })
-                }),
-                G = n.memo(function(e) {
+                }, [l.roles, l.highestRoleId, t]);
+                return null == t || 0 === s.length ? null : (0, a.jsx)("div", {
+                    className: Y.roleTooltipItemContainer,
+                    children: s.map(e => (0, a.jsx)(Z.default, {
+                        className: i(Y.roleTooltipItem),
+                        role: t.roles[e],
+                        guildId: l.guildId
+                    }, e))
+                })
+            }
+            let q = n.memo(function(e) {
                     let {
                         member: l,
                         highestRole: t
-                    } = e, s = (0, u.default)([x.default], () => x.default.getGuild(l.guildId), [l.guildId]), C = n.useMemo(() => {
-                        var e;
-                        if (null == s) return [];
-                        let t = null !== (e = null == s ? void 0 : s.roles) && void 0 !== e ? e : {};
-                        return null == l.highestRoleId ? l.roles : l.roles.filter(e => null != e && e !== l.highestRoleId).sort((e, l) => {
-                            var a, n, s, i;
-                            return null !== (i = null !== (s = null === (a = t[l]) || void 0 === a ? void 0 : a.position) && void 0 !== s ? s : 0 - (null === (n = t[e]) || void 0 === n ? void 0 : n.position)) && void 0 !== i ? i : 0
-                        })
-                    }, [l.roles, l.highestRoleId, s]), o = new Intl.NumberFormat(k.default.getLocale()).format(C.length), d = (0, w.useContextMenuModerateRoles)(l), r = (0, u.default)([H.default], () => H.default.can(F.Permissions.MANAGE_ROLES, s), [s]);
+                    } = e, s = (0, u.default)([H.default], () => H.default.getGuild(l.guildId), [l.guildId]), [C, o] = n.useState(!1), d = l.roles.length - 1, r = n.useMemo(() => new Intl.NumberFormat(P.default.getLocale()).format(d), [d]), c = (0, U.useContextMenuModerateRoles)(l), f = (0, u.default)([N.default], () => N.default.can(k.Permissions.MANAGE_ROLES, s), [s]), E = n.useCallback(e => () => {
+                        o(!0), null == e || e()
+                    }, []), h = n.useCallback(e => () => {
+                        o(!1), null == e || e()
+                    }, []);
                     return null == s ? null : (0, a.jsxs)("div", {
-                        className: i(P.roleContainer),
-                        children: [null != t && (0, a.jsx)(U.default, {
-                            className: i(P.roleTooltipItem, P.highestRole),
+                        className: i(Y.roleContainer),
+                        children: [null != t && (0, a.jsx)(Z.default, {
+                            className: i(Y.roleTooltipItem, Y.highestRole),
                             role: t,
                             guildId: l.guildId
-                        }), C.length > 0 && (0, a.jsx)(m.Tooltip, {
-                            "aria-label": k.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP,
-                            tooltipContentClassName: P.roleTooltip,
+                        }), d > 0 && (0, a.jsx)(m.Tooltip, {
+                            "aria-label": P.default.Messages.MEMBER_SAFETY_MORE_ROLES_TOOLTIP,
+                            tooltipContentClassName: Y.roleTooltip,
                             allowOverflow: !0,
                             text: (0, a.jsx)("div", {
-                                className: P.roleTooltipItemContainer,
-                                children: C.map(e => (0, a.jsx)(U.default, {
-                                    className: i(P.roleTooltipItem),
-                                    role: s.roles[e],
-                                    guildId: l.guildId
-                                }, e))
+                                className: Y.roleTooltipSafetyContainer,
+                                children: C ? (0, a.jsx)(J, {
+                                    member: l
+                                }) : P.default.Messages.MEMBER_SAFETY_MORE_ROLES_TOOLTIP
                             }),
                             children: e => {
                                 let {
@@ -1440,30 +1485,30 @@
                                     onMouseLeave: t
                                 } = e;
                                 return (0, a.jsx)(m.Clickable, {
-                                    className: i(P.otherRoles),
-                                    onMouseEnter: l,
-                                    onMouseLeave: t,
+                                    className: i(Y.otherRoles),
+                                    onMouseEnter: E(l),
+                                    onMouseLeave: h(t),
                                     children: (0, a.jsxs)(m.Text, {
                                         variant: "text-xs/medium",
                                         color: "header-primary",
-                                        children: ["+", o]
+                                        children: ["+", r]
                                     })
                                 })
                             }
-                        }), r && (0, a.jsx)(m.Tooltip, {
-                            text: k.default.Messages.MEMBER_SAFETY_TABLE_ADD_ROLES_TOOLTIP,
+                        }), f && (0, a.jsx)(m.Tooltip, {
+                            text: P.default.Messages.MEMBER_SAFETY_TABLE_ADD_ROLES_TOOLTIP,
                             children: e => {
                                 let {
                                     onMouseEnter: l,
                                     onMouseLeave: t
                                 } = e;
                                 return (0, a.jsx)(m.Clickable, {
-                                    className: i(P.otherRoles, P.addRoleContainer),
-                                    onClick: d,
+                                    className: i(Y.otherRoles, Y.addRoleContainer),
+                                    onClick: c,
                                     onMouseEnter: l,
                                     onMouseLeave: t,
-                                    children: (0, a.jsx)(S.default, {
-                                        className: i(P.addRoleIcon),
+                                    children: (0, a.jsx)(R.default, {
+                                        className: i(Y.addRoleIcon),
                                         width: 16,
                                         height: 16
                                     })
@@ -1472,70 +1517,80 @@
                         })]
                     })
                 }),
-                J = n.memo(function(e) {
+                z = n.memo(function(e) {
                     var l;
                     let {
                         member: t,
                         user: n
                     } = e;
                     return null == n || null == t ? null : (0, a.jsxs)("div", {
-                        className: i(P.memberNameContainer),
+                        className: i(Y.memberNameContainer),
                         children: [(0, a.jsx)("div", {
-                            className: i(P.memberAvatar),
+                            className: i(Y.memberAvatar),
                             children: (0, a.jsx)(f.default, {
                                 user: n
                             })
                         }), (0, a.jsx)("div", {
-                            className: i(P.memberName),
+                            className: i(Y.memberName),
                             children: (0, a.jsx)(m.Text, {
                                 variant: "text-sm/medium",
                                 children: (0, a.jsx)(m.NameWithRole, {
-                                    name: R.default.getName(t.guildId, null, n),
+                                    name: j.default.getName(t.guildId, null, n),
                                     color: null !== (l = t.colorString) && void 0 !== l ? l : void 0,
-                                    className: i(P.memberNameText)
+                                    className: i(Y.memberNameText)
                                 })
                             })
                         }), (0, a.jsx)("div", {
-                            className: i(P.memberGlobalName),
+                            className: i(Y.memberGlobalName),
                             children: (0, a.jsx)(m.Text, {
                                 variant: "text-xs/normal",
                                 color: "header-secondary",
-                                children: j.default.getUserTag(n)
+                                children: V.default.getUserTag(n)
                             })
                         })]
                     })
-                }),
-                q = n.memo(function(e) {
-                    var l;
-                    let {
-                        member: t,
-                        showLongDate: s
-                    } = e, C = n.useMemo(() => {
-                        let e = t.joinedAtTimestamp;
-                        return null == e ? null : (0, O.formatDateRelativeTime)(e, O.MembersTableDateFormats.JOINED_AT)
-                    }, [t.joinedAtTimestamp]), o = new Date(null !== (l = t.joinedAtTimestamp) && void 0 !== l ? l : 0).toLocaleDateString(k.default.getLocale(), O.MEMBER_JOIN_DATE_TOOLTIP_CONFIG);
-                    return null == C ? null : s ? (0, a.jsx)("div", {
-                        className: i(P.joinedAtContainer),
-                        children: (0, a.jsx)(m.Text, {
+                });
+
+            function K(e) {
+                let l = null == e ? null : (0, y.formatDateRelativeTime)(e, y.MembersTableDateFormats.JOINED_AT),
+                    t = new Date(null != e ? e : 0).toLocaleDateString(P.default.getLocale(), y.MEMBER_JOIN_DATE_TOOLTIP_CONFIG);
+                return {
+                    short: l,
+                    long: t
+                }
+            }
+
+            function W(e) {
+                let {
+                    member: l,
+                    showLongDate: t
+                } = e, [s, C] = n.useState(null);
+                return (n.useEffect(() => {
+                    C(K(l.joinedAtTimestamp))
+                }, [l.joinedAtTimestamp]), (0, E.default)(() => {
+                    C(K(l.joinedAtTimestamp))
+                }, 1e4), (null == s ? void 0 : s.short) == null) ? null : t ? (0, a.jsx)("div", {
+                    className: i(Y.joinedAtContainer),
+                    children: (0, a.jsx)(m.Text, {
+                        variant: "text-sm/medium",
+                        color: "text-normal",
+                        children: s.long
+                    })
+                }) : (0, a.jsx)("div", {
+                    className: i(Y.joinedAtContainer),
+                    children: (0, a.jsx)(m.Tooltip, {
+                        align: "left",
+                        text: s.long,
+                        children: e => (0, a.jsx)(m.Text, {
+                            ...e,
                             variant: "text-sm/medium",
                             color: "text-normal",
-                            children: o
-                        })
-                    }) : (0, a.jsx)("div", {
-                        className: i(P.joinedAtContainer),
-                        children: (0, a.jsx)(m.Tooltip, {
-                            align: "left",
-                            text: o,
-                            children: e => (0, a.jsx)(m.Text, {
-                                ...e,
-                                variant: "text-sm/medium",
-                                color: "text-normal",
-                                children: C
-                            })
+                            children: s.short
                         })
                     })
-                }),
-                z = n.memo(function(e) {
+                })
+            }
+            let X = n.memo(function(e) {
                     let {
                         member: l,
                         showLongDate: t
@@ -1544,8 +1599,8 @@
                         accountCreationDateLong: i
                     } = n.useMemo(() => {
                         let e = r.default.extractTimestamp(l.userId),
-                            t = (0, O.formatDateRelativeTime)(e, O.MembersTableDateFormats.ACCOUNT_AGE),
-                            a = new Date(e).toLocaleDateString(k.default.getLocale(), O.ACCOUNT_AGE_DATE_TOOLTIP_CONFIG);
+                            t = (0, y.formatDateRelativeTime)(e, y.MembersTableDateFormats.ACCOUNT_AGE),
+                            a = new Date(e).toLocaleDateString(P.default.getLocale(), y.ACCOUNT_AGE_DATE_TOOLTIP_CONFIG);
                         return {
                             accountCreationDateShort: t,
                             accountCreationDateLong: a
@@ -1566,7 +1621,7 @@
                         })
                     })
                 }),
-                K = n.memo(function(e) {
+                Q = n.memo(function(e) {
                     var l;
                     let {
                         member: t,
@@ -1577,64 +1632,64 @@
                         onOpenProfileMenu: r,
                         inviterUser: c,
                         inviterMember: f,
-                        compact: h
-                    } = e, M = (0, u.default)([H.default, x.default], () => H.default.can(F.Permissions.MANAGE_GUILD, x.default.getGuild(t.guildId)), [t.guildId]), {
+                        compact: E
+                    } = e, M = (0, u.default)([N.default, H.default], () => N.default.can(k.Permissions.MANAGE_GUILD, H.default.getGuild(t.guildId)), [t.guildId]), {
                         selectedUserIds: T,
-                        addUsers: N,
+                        addUsers: x,
                         removeUser: _
-                    } = (0, y.default)(t.guildId), {
+                    } = (0, w.default)(t.guildId), {
                         analyticsLocations: L
-                    } = (0, E.default)(), g = null !== (l = null == L ? void 0 : L[0]) && void 0 !== l ? l : null, v = (0, b.useCanAccessBulkBanningFeature)(t.guildId, g, !0), A = (0, b.useCanBulkBanUser)(t.guildId, v, t.userId), S = n.useCallback(e => {
-                        e.stopPropagation(), e.preventDefault(), null != t && A && (T.has(t.userId) ? _(t.userId) : N([t.userId]))
-                    }, [N, A, t, _, T]);
+                    } = (0, h.default)(), g = null !== (l = null == L ? void 0 : L[0]) && void 0 !== l ? l : null, p = (0, D.useCanAccessBulkBanningFeature)(t.guildId, g, !0), v = (0, D.useCanBulkBanUser)(t.guildId, p, t.userId), S = n.useCallback(e => {
+                        e.stopPropagation(), e.preventDefault(), null != t && v && (T.has(t.userId) ? _(t.userId) : x([t.userId]))
+                    }, [x, v, t, _, T]);
                     return (0, a.jsxs)(a.Fragment, {
-                        children: [v && (0, a.jsx)(m.Tooltip, {
-                            tooltipClassName: P.disabledActionTooltip,
-                            shouldShow: !A,
-                            text: k.default.Messages.MEMBER_SAFETY_ACTION_PERMISSIONS_MISSING,
+                        children: [p && (0, a.jsx)(m.Tooltip, {
+                            tooltipClassName: Y.disabledActionTooltip,
+                            shouldShow: !v,
+                            text: P.default.Messages.MEMBER_SAFETY_ACTION_PERMISSIONS_MISSING,
                             children: e => (0, a.jsx)("td", {
                                 ...e,
                                 children: (0, a.jsx)("div", {
-                                    className: i(P.checkbox, P.xsmallCol),
+                                    className: i(Y.checkbox, Y.xsmallCol),
                                     children: (0, a.jsx)(m.Clickable, {
                                         onClick: S,
                                         children: (0, a.jsx)(m.Checkbox, {
                                             type: m.Checkbox.Types.INVERTED,
                                             value: T.has(t.userId),
-                                            disabled: !A
+                                            disabled: !v
                                         })
                                     })
                                 })
                             })
                         }), (0, a.jsx)("td", {
                             className: i({
-                                [P.compact]: h
+                                [Y.compact]: E
                             }),
-                            children: (0, a.jsx)(J, {
+                            children: (0, a.jsx)(z, {
                                 member: t,
                                 user: s
                             })
                         }), (0, a.jsx)("td", {
-                            className: i(P.smallCol, {
-                                [P.compact]: h
+                            className: i(Y.smallCol, {
+                                [Y.compact]: E
                             }),
-                            children: (0, a.jsx)(q, {
+                            children: (0, a.jsx)(W, {
                                 showLongDate: o,
                                 member: t
                             })
                         }), (0, a.jsx)("td", {
-                            className: i(P.smallCol, {
-                                [P.compact]: h
+                            className: i(Y.smallCol, {
+                                [Y.compact]: E
                             }),
-                            children: (0, a.jsx)(z, {
+                            children: (0, a.jsx)(X, {
                                 showLongDate: o,
                                 member: t
                             })
                         }), M && (0, a.jsx)("td", {
-                            className: i(P.smallCol, {
-                                [P.compact]: h
+                            className: i(Y.smallCol, {
+                                [Y.compact]: E
                             }),
-                            children: (0, a.jsx)(Z.default, {
+                            children: (0, a.jsx)(F.default, {
                                 inviteCode: t.sourceInviteCode,
                                 inviterUser: c,
                                 inviterMember: f,
@@ -1642,28 +1697,28 @@
                                 integrationType: t.integrationType
                             })
                         }), (0, a.jsx)("td", {
-                            className: i(P.mediumCol, {
-                                [P.compact]: h
+                            className: i(Y.mediumCol, {
+                                [Y.compact]: E
                             }),
-                            children: (0, a.jsx)(G, {
+                            children: (0, a.jsx)(q, {
                                 member: t,
                                 highestRole: C
                             })
                         }), (0, a.jsx)("td", {
-                            className: i(P.smallCol, {
-                                [P.compact]: h
+                            className: i(Y.smallCol, {
+                                [Y.compact]: E
                             }),
-                            children: (0, a.jsx)(Y, {
+                            children: (0, a.jsx)(G, {
                                 member: t
                             })
                         }), (0, a.jsx)("td", {
-                            className: i(P.smallCol, {
-                                [P.compact]: h
+                            className: i(Y.smallCol, {
+                                [Y.compact]: E
                             }),
                             children: (0, a.jsxs)("div", {
-                                className: i(P.actionCell),
+                                className: i(Y.actionCell),
                                 children: [(0, a.jsx)(m.Tooltip, {
-                                    text: k.default.Messages.MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP,
+                                    text: P.default.Messages.MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP,
                                     children: e => {
                                         let {
                                             onMouseEnter: l,
@@ -1673,15 +1728,15 @@
                                             onMouseEnter: l,
                                             onMouseLeave: t,
                                             onClick: r,
-                                            className: i(P.button),
-                                            children: (0, a.jsx)(I.default, {
-                                                width: W,
-                                                height: W
+                                            className: i(Y.button),
+                                            children: (0, a.jsx)(A.default, {
+                                                width: $,
+                                                height: $
                                             })
                                         })
                                     }
                                 }), (0, a.jsx)(m.Tooltip, {
-                                    text: k.default.Messages.MEMBER_SAFETY_TABLE_OVERFLOW_TOOLTIP,
+                                    text: P.default.Messages.MEMBER_SAFETY_TABLE_OVERFLOW_TOOLTIP,
                                     children: e => {
                                         let {
                                             onMouseEnter: l,
@@ -1691,10 +1746,10 @@
                                             onMouseEnter: l,
                                             onMouseLeave: t,
                                             onClick: d,
-                                            className: i(P.button),
-                                            children: (0, a.jsx)(p.default, {
-                                                width: W,
-                                                height: W
+                                            className: i(Y.button),
+                                            children: (0, a.jsx)(I.default, {
+                                                width: $,
+                                                height: $
                                             })
                                         })
                                     }
@@ -1703,8 +1758,9 @@
                         })]
                     })
                 }),
-                W = 18;
-            var X = n.memo(function(e) {
+                $ = 18,
+                ee = ["sourceInviteCode", "joinSourceType", "inviterId", "integrationType", "joinedAt", "joinedAtTimestamp"];
+            var el = n.memo(function(e) {
                 var l;
                 let {
                     userId: t,
@@ -1714,25 +1770,25 @@
                     rowSelected: c,
                     isHoldingAdvancedInfoKey: m = !1,
                     compact: f = !1
-                } = e, E = (0, u.default)([D.default], () => D.default.getEnhancedMember(s, t), [s, t]), h = (0, w.useHighestRole)(E), M = (0, u.default)([N.default], () => N.default.getUser(t), [t]), T = (0, u.default)([D.default], () => {
+                } = e, E = (0, u.default)([B.default], () => B.default.getEnhancedMember(s, t), [s, t]), h = (0, U.useHighestRole)(E), M = (0, u.default)([_.default], () => _.default.getUser(t), [t]), T = (0, u.default)([B.default], () => {
                     var e;
-                    return D.default.getEnhancedMember(s, null !== (e = null == E ? void 0 : E.inviterId) && void 0 !== e ? e : "")
-                }), x = (0, w.useContextMenuModerateUser)(null != E ? E : void 0), H = n.useCallback(e => {
+                    return B.default.getEnhancedMember(s, null !== (e = null == E ? void 0 : E.inviterId) && void 0 !== e ? e : "")
+                }), x = (0, U.useContextMenuModerateUser)(null != E ? E : void 0), H = n.useCallback(e => {
                     e.stopPropagation(), e.preventDefault(), x(e)
-                }, [x]), _ = n.useCallback(e => {
+                }, [x]), N = n.useCallback(e => {
                     e.stopPropagation(), e.preventDefault(), null != E && (null == r || r(E))
                 }, [r, E]), L = n.useCallback(e => {
-                    e.stopPropagation(), e.preventDefault(), null != E && (0, w.openMemberProfile)(E)
-                }, [E]), g = n.useCallback((e, l) => d((0, C.omit)(e, ["sourceInviteCode"]), (0, C.omit)(l, ["sourceInviteCode"])), []);
-                return null == E ? null : (0, a.jsx)(B.default, {
+                    e.stopPropagation(), e.preventDefault(), null != E && (0, U.openMemberProfile)(E)
+                }, [E]), g = n.useCallback((e, l) => d((0, C.omit)(e, ee), (0, C.omit)(l, ee)), []);
+                return null == E ? null : (0, a.jsx)(O.default, {
                     role: "row",
                     value: E,
                     style: o,
-                    className: i(P.roundedRow, P.memberRowContainer, c && P.selected),
+                    className: i(Y.roundedRow, Y.memberRowContainer, c && Y.selected),
                     equalityFn: g,
-                    onClick: _,
+                    onClick: N,
                     onContextMenu: H,
-                    children: (0, a.jsx)(K, {
+                    children: (0, a.jsx)(Q, {
                         member: E,
                         user: M,
                         highestRole: h,
@@ -1750,7 +1806,7 @@
             "use strict";
             t.r(l), t.d(l, {
                 default: function() {
-                    return p
+                    return v
                 }
             });
             var a = t("37983"),
@@ -1895,7 +1951,7 @@
                 })
             }
 
-            function v(e) {
+            function p(e) {
                 let {
                     type: l
                 } = e, t = _(l);
@@ -1908,7 +1964,7 @@
                     }
                 })
             }
-            var p = n.memo(function(e) {
+            var v = n.memo(function(e) {
                 let {
                     inviteCode: l,
                     inviterUser: t,
@@ -1923,7 +1979,7 @@
                     case !o.hasTooltip || o.hasTooltip && (null == n || null == t):
                         if (s === M.JoinSourceType.INTEGRATION && null != C) return (0, a.jsxs)("div", {
                             className: x.inviteContainer,
-                            children: [(0, a.jsx)(v, {
+                            children: [(0, a.jsx)(p, {
                                 type: C
                             }), (0, a.jsx)(i.Text, {
                                 variant: "text-sm/medium",
@@ -1995,19 +2051,19 @@
                             guild: s
                         })
                     })
-                }, [s, d]), _ = (0, u.default)([h.default], () => h.default.getSearchStateByGuildId(s.id), [s.id], r), L = (0, E.useTrackMemberSearchUsed)(s.id), [g, v] = n.useState(_.query), p = n.useCallback(e => {
+                }, [s, d]), _ = (0, u.default)([h.default], () => h.default.getSearchStateByGuildId(s.id), [s.id], r), L = (0, E.useTrackMemberSearchUsed)(s.id), [g, p] = n.useState(_.query), v = n.useCallback(e => {
                     let l = e.trim();
                     l.length > 0 && L(), (0, M.updateSearchState)(s.id, {
                         query: l
                     })
-                }, [s.id, L]), I = n.useCallback(o(p, 300), [p]), A = n.useCallback(e => {
-                    v(e), I(e)
+                }, [s.id, L]), I = n.useCallback(o(v, 300), [v]), A = n.useCallback(e => {
+                    p(e), I(e)
                 }, [I]), S = n.useCallback(() => {
-                    v(""), p("")
-                }, [p]);
+                    p(""), v("")
+                }, [v]);
                 return n.useImperativeHandle(l, () => ({
                     resetSearchText() {
-                        v("")
+                        p("")
                     }
                 })), (0, a.jsxs)("div", {
                     className: i(H.searchHeaderContainer),
@@ -2058,9 +2114,9 @@
             "use strict";
             t.r(l), t.d(l, {
                 default: function() {
-                    return N
+                    return H
                 }
-            }), t("222007");
+            });
             var a = t("37983"),
                 n = t("884691"),
                 s = t("414456"),
@@ -2071,69 +2127,68 @@
                 r = t("77078"),
                 u = t("812204"),
                 c = t("781896"),
-                m = t("334572"),
-                f = t("493910"),
-                E = t("466818"),
-                h = t("178406"),
-                M = t("645266"),
-                T = t("782340"),
-                x = t("236807"),
-                H = t("821118");
+                m = t("493910"),
+                f = t("466818"),
+                E = t("178406"),
+                h = t("645266"),
+                M = t("782340"),
+                T = t("236807"),
+                x = t("821118");
 
-            function N(e) {
+            function H(e) {
                 let {
                     guild: l,
                     onSubmit: s
-                } = e, [C] = (0, d.default)([h.default], () => h.default.getMembersByGuildId(l.id, f.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [l.id], m.isVersionEqual), N = (0, d.default)([h.default], () => {
-                    let e = h.default.getNewMemberTimestamp(l.id);
+                } = e, C = (0, d.default)([E.default], () => E.default.getMembersCountByGuildId(l.id, m.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [l.id]), H = (0, d.default)([E.default], () => {
+                    let e = E.default.getNewMemberTimestamp(l.id);
                     return o(e).format("h:mm A")
-                }, [l.id]), _ = (0, d.default)([h.default], () => h.default.hasDefaultSearchStateByGuildId(l.id), [l.id]), L = n.useCallback(() => {
-                    (0, M.refreshMemberSafetyTimestamp)(l.id), null == s || s()
-                }, [l.id, s]), g = n.useCallback(() => {
-                    _ ? L() : (0, r.openModalLazy)(async () => {
+                }, [l.id]), N = (0, d.default)([E.default], () => E.default.hasDefaultSearchStateByGuildId(l.id), [l.id]), _ = n.useCallback(() => {
+                    (0, h.refreshMemberSafetyTimestamp)(l.id), null == s || s()
+                }, [l.id, s]), L = n.useCallback(() => {
+                    N ? _() : (0, r.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await t.el("756912").then(t.bind(t, "756912"));
                         return l => (0, a.jsx)(e, {
                             ...l,
-                            onConfirm: L
+                            onConfirm: _
                         })
                     })
-                }, [L, _]), v = new Intl.NumberFormat(T.default.getLocale()).format(C.length), p = (0, E.useCanAccessInviteCodeFeature)(l.id), I = (0, E.useCanAccessBulkBanningFeature)(l.id, u.default.MEMBER_SAFETY_PAGE), A = n.useMemo(() => 1 + (p ? 1 : 0) + (I ? 1 : 0), [p, I]);
-                return 0 === C.length ? null : (0, a.jsxs)("tr", {
-                    className: i(H.newMembersNotice),
-                    onClick: g,
+                }, [_, N]), g = new Intl.NumberFormat(M.default.getLocale()).format(C), p = (0, f.useCanAccessInviteCodeFeature)(l.id), v = (0, f.useCanAccessBulkBanningFeature)(l.id, u.default.MEMBER_SAFETY_PAGE), I = n.useMemo(() => 1 + (p ? 1 : 0) + (v ? 1 : 0), [p, v]);
+                return 0 === C ? null : (0, a.jsxs)("tr", {
+                    className: i(x.newMembersNotice),
+                    onClick: L,
                     children: [(0, a.jsx)("td", {
                         colSpan: 3,
                         children: (0, a.jsx)(r.Text, {
                             variant: "text-sm/normal",
                             color: "always-white",
-                            children: T.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
-                                count: v,
-                                date: N
+                            children: M.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
+                                count: g,
+                                date: H
                             })
                         })
                     }), (0, a.jsx)("td", {
-                        colSpan: A
+                        colSpan: I
                     }), (0, a.jsx)("td", {
                         colSpan: 2,
                         children: (0, a.jsx)("div", {
-                            className: i(x.actionCell),
+                            className: i(T.actionCell),
                             children: (0, a.jsx)(r.Button, {
                                 size: r.Button.Sizes.SMALL,
                                 color: r.Button.Colors.TRANSPARENT,
                                 look: r.Button.Looks.LINK,
-                                className: i(H.memberNoticeActionButton),
+                                className: i(x.memberNoticeActionButton),
                                 children: (0, a.jsxs)(r.Text, {
                                     variant: "text-sm/normal",
                                     color: "always-white",
-                                    className: i(H.memberNoticeAction),
+                                    className: i(x.memberNoticeAction),
                                     children: [(0, a.jsx)("div", {
-                                        children: T.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_ACTION
+                                        children: M.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_ACTION
                                     }), (0, a.jsx)(c.default, {
                                         width: 20,
                                         height: 20,
-                                        className: i(H.memberNoticeActionIcon)
+                                        className: i(x.memberNoticeActionIcon)
                                     })]
                                 })
                             })
