@@ -4792,10 +4792,12 @@
                         })
                     }, this.renderVoiceChannelEffects = () => {
                         let {
-                            channel: e
+                            channel: e,
+                            callContainerDimensions: t
                         } = this.props;
                         return (0, a.jsx)(ej.default, {
                             children: (0, a.jsx)(et.default, {
+                                callHeight: t.height,
                                 channelId: e.id
                             })
                         })
@@ -29768,32 +29770,36 @@
 
             function E(e) {
                 let {
-                    channelId: t
-                } = e, n = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), [s, i] = l.useState([]);
+                    channelId: t,
+                    callHeight: n
+                } = e, s = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), [i, r] = l.useState([]);
                 l.useEffect(() => {
                     function e(e) {
                         let {
-                            channelId: a,
-                            emoji: l
+                            channelId: n,
+                            emoji: a
                         } = e;
-                        a === t && !n && null != l && i(e => [...e, {
+                        n === t && !s && null != a && r(e => [...e, {
                             key: (0, u.v4)(),
-                            ...l
+                            ...a
                         }])
                     }
                     return d.default.subscribe("VOICE_CHANNEL_EFFECT_SEND", e), () => {
                         d.default.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e)
                     }
-                }, [t, n]);
-                let r = l.useCallback(e => {
-                    i(t => t.filter(t => t.key !== e))
+                }, [t, s]);
+                let c = l.useCallback(e => {
+                    r(t => t.filter(t => t.key !== e))
                 }, []);
-                return n ? null : (0, a.jsx)("div", {
+                return s ? null : (0, a.jsx)("div", {
                     className: h.container,
+                    style: {
+                        top: n - 16
+                    },
                     "aria-hidden": !0,
-                    children: s.map(e => (0, a.jsx)(m, {
+                    children: i.map(e => (0, a.jsx)(m, {
                         emoji: e,
-                        onAnimationEnd: r
+                        onAnimationEnd: c
                     }, e.key))
                 })
             }
