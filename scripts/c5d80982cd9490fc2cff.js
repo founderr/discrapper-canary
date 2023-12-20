@@ -13435,39 +13435,86 @@
             "use strict";
             n.r(t), n.d(t, {
                 SafetyHubView: function() {
-                    return r
-                },
-                SafetyHubLinks: function() {
-                    return f
-                },
-                SafetyHubPolicyNoticeKeys: function() {
-                    return m
-                },
-                SafetySystemNotificationEmbedKeys: function() {
-                    return h
-                },
-                SafetyHubAnalyticsActions: function() {
                     return o
                 },
-                SafetyHubAnalyticsActionSource: function() {
+                SafetyHubLinks: function() {
+                    return h
+                },
+                SafetyHubPolicyNoticeKeys: function() {
+                    return E
+                },
+                SafetySystemNotificationCtaType: function() {
                     return u
+                },
+                SafetySystemNotificationEmbedKeys: function() {
+                    return _
+                },
+                SafetyHubAnalyticsActions: function() {
+                    return d
+                },
+                SafetyHubAnalyticsActionSource: function() {
+                    return c
                 }
             });
-            var a, s, l, i, r, o, u, d, c = n("49111");
-            (a = r || (r = {})).SETTINGS = "SETTINGS", a.ACCOUNT_STANDING = "ACCOUNT_STANDING";
-            class f {}
-            f.TOS_LINK = "https://discord.com/terms", f.COMMUNITY_GUIDELINES = "https://discord.com/guidelines", f.APPEALS_LINK = "https://support.discord.com/hc/requests/new";
-            class m {}
-            m.CLASSIFICATION_ID = "classification_id", m.INCIDENT_TIMESTAMP = "incident_time";
+            var a, s, l, i, r, o, u, d, c, f, m = n("49111");
+            (a = o || (o = {})).SETTINGS = "SETTINGS", a.ACCOUNT_STANDING = "ACCOUNT_STANDING";
             class h {}
-            h.ICON_TYPE = "icon_type", h.HEADER = "header", h.BODY = "body", h.CTAS = "ctas", h.TIMESTAMP = "timestamp", h.THEME = "theme", h.CLIENT_VERSION_MESSAGE = "client_version_message", h.LEARN_MORE_LINK = "learn_more_link", h.CLASSIFICATION_ID = "classification_id", (s = o || (o = {}))[s.ViewViolationDetail = 0] = "ViewViolationDetail", s[s.ViewViolationsDropdown = 1] = "ViewViolationsDropdown", s[s.ClickLetUsKnow = 2] = "ClickLetUsKnow", (l = u || (u = {}))[l.SystemDM = 0] = "SystemDM", l[l.StandingTab = 1] = "StandingTab", Object.freeze({
-                SPEED_BUMP: c.AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP,
-                COLLECT_SIGNAL: c.AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL,
-                CONFIRM_SUBMISSION: c.AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION,
-                REQUEST_SENT: c.AnalyticsSections.APPEAL_INGESTION_REQUEST_SENT,
-                THANKS: c.AnalyticsSections.APPEAL_INGESTION_THANKS,
-                SPAM: c.AnalyticsSections.APPEAL_INGESTION_SPAM
-            }), (i = d || (d = {})).DIDNT_VIOLATE = "TODO i18n a", i.STRICT_OR_UNFAIR = "TODO i18n b", i.PENALTY = "TODO i18n c", i.SOMETHING_ELSE = "TODO i18n d"
+            h.TOS_LINK = "https://discord.com/terms", h.COMMUNITY_GUIDELINES = "https://discord.com/guidelines", h.APPEALS_LINK = "https://support.discord.com/hc/requests/new";
+            class E {}
+            E.CLASSIFICATION_ID = "classification_id", E.INCIDENT_TIMESTAMP = "incident_time", (s = u || (u = {})).POLICY_VIOLATION_DETAIL = "policy_violation_detail", s.LEARN_MORE_LINK = "learn_more_link";
+            class _ {}
+            _.ICON_TYPE = "icon_type", _.HEADER = "header", _.BODY = "body", _.CTAS = "ctas", _.TIMESTAMP = "timestamp", _.THEME = "theme", _.CLIENT_VERSION_MESSAGE = "client_version_message", _.LEARN_MORE_LINK = "learn_more_link", _.CLASSIFICATION_ID = "classification_id", (l = d || (d = {}))[l.ViewViolationDetail = 0] = "ViewViolationDetail", l[l.ViewViolationsDropdown = 1] = "ViewViolationsDropdown", l[l.ClickLetUsKnow = 2] = "ClickLetUsKnow", (i = c || (c = {}))[i.SystemDM = 0] = "SystemDM", i[i.StandingTab = 1] = "StandingTab", Object.freeze({
+                SPEED_BUMP: m.AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP,
+                COLLECT_SIGNAL: m.AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL,
+                CONFIRM_SUBMISSION: m.AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION,
+                REQUEST_SENT: m.AnalyticsSections.APPEAL_INGESTION_REQUEST_SENT,
+                THANKS: m.AnalyticsSections.APPEAL_INGESTION_THANKS,
+                SPAM: m.AnalyticsSections.APPEAL_INGESTION_SPAM
+            }), (r = f || (f = {})).DIDNT_VIOLATE = "TODO i18n a", r.STRICT_OR_UNFAIR = "TODO i18n b", r.PENALTY = "TODO i18n c", r.SOMETHING_ELSE = "TODO i18n d"
+        },
+        736393: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                getClassificationRelativeIncidentTime: function() {
+                    return r
+                },
+                getAttachmentFilename: function() {
+                    return o
+                },
+                parseMessageEmbedForProps: function() {
+                    return u
+                }
+            }), n("808653");
+            var a = n("866227"),
+                s = n.n(a),
+                l = n("170213"),
+                i = n("894488");
+
+            function r(e) {
+                return s().to(s(e))
+            }
+
+            function o(e) {
+                var t;
+                return "".concat(i.SPOILER_ATTACHMENT_PREFIX, "_").concat(null !== (t = e.filename) && void 0 !== t ? t : ".png")
+            }
+
+            function u(e) {
+                var t, n, a, s;
+                if (null == e.fields) return;
+                let i = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});
+                return {
+                    header: null !== (t = i[l.SafetySystemNotificationEmbedKeys.HEADER]) && void 0 !== t ? t : "",
+                    icon: i[l.SafetySystemNotificationEmbedKeys.ICON_TYPE],
+                    body: null !== (n = i[l.SafetySystemNotificationEmbedKeys.BODY]) && void 0 !== n ? n : "",
+                    ctas: (null !== (a = i[l.SafetySystemNotificationEmbedKeys.CTAS]) && void 0 !== a ? a : "").split(",").filter(e => "" !== e),
+                    timestamp: parseFloat(null !== (s = i[l.SafetySystemNotificationEmbedKeys.TIMESTAMP]) && void 0 !== s ? s : 0),
+                    theme: i[l.SafetySystemNotificationEmbedKeys.THEME],
+                    learn_more_link: i[l.SafetySystemNotificationEmbedKeys.LEARN_MORE_LINK],
+                    classification_id: i[l.SafetySystemNotificationEmbedKeys.CLASSIFICATION_ID]
+                }
+            }
+            n("782340")
         },
         705423: function(e, t, n) {
             "use strict";
@@ -13554,162 +13601,148 @@
             "use strict";
             n.r(t), n.d(t, {
                 SafetySystemNotification: function() {
-                    return C
+                    return T
                 }
-            }), n("808653");
-            var a, s, l = n("37983");
+            });
+            var a = n("37983");
             n("884691");
-            var i = n("866227"),
-                r = n.n(i),
-                o = n("669491"),
-                u = n("779807"),
-                d = n("77078"),
-                c = n("733160"),
-                f = n("170213"),
-                m = n("782340"),
-                h = n("289487");
-            let E = e => r().diff(r.unix(e), "days");
-            (s = a || (a = {})).POLICY_VIOLATION_DETAIL = "policy_violation_detail", s.LEARN_MORE_LINK = "learn_more_link";
+            var s = n("866227"),
+                l = n.n(s),
+                i = n("669491"),
+                r = n("779807"),
+                o = n("77078"),
+                u = n("733160"),
+                d = n("736393"),
+                c = n("170213"),
+                f = n("782340"),
+                m = n("289487");
+            let h = e => l().diff(l.unix(e), "days");
 
-            function _(e) {
+            function E(e) {
                 let {
                     classificationId: t
                 } = e;
-                return (0, l.jsx)(d.Anchor, {
+                return (0, a.jsx)(o.Anchor, {
                     onClick: () => {
-                        (0, d.openModalLazy)(async () => {
+                        (0, o.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("825138").then(n.bind(n, "825138"));
-                            return n => (0, l.jsx)(e, {
+                            return n => (0, a.jsx)(e, {
                                 classificationId: t,
-                                source: f.SafetyHubAnalyticsActionSource.SystemDM,
+                                source: c.SafetyHubAnalyticsActionSource.SystemDM,
                                 transitionState: n.transitionState,
                                 onClose: n.onClose
                             })
                         })
                     },
-                    className: h.detailsButton,
-                    children: m.default.Messages.SAFETY_SYSTEM_NOTIFICATION_SEE_DETAILS_BUTTON
+                    className: m.detailsButton,
+                    children: f.default.Messages.SAFETY_SYSTEM_NOTIFICATION_SEE_DETAILS_BUTTON
+                })
+            }
+
+            function _(e) {
+                let {
+                    learnMoreLink: t
+                } = e;
+                return (0, a.jsx)(o.Anchor, {
+                    className: m.detailsButton,
+                    href: t,
+                    children: f.default.Messages.SAFETY_SYSTEM_NOTIFICATION_LEARN_MORE_BUTTON
                 })
             }
 
             function p(e) {
                 let {
-                    learnMoreLink: t
-                } = e;
-                return (0, l.jsx)(d.Anchor, {
-                    className: h.detailsButton,
-                    href: t,
-                    children: m.default.Messages.SAFETY_SYSTEM_NOTIFICATION_LEARN_MORE_BUTTON
-                })
-            }
-
-            function I(e) {
-                let {
                     ctaType: t,
                     classificationId: n,
-                    learnMoreLink: a
+                    learnMoreLink: s
                 } = e;
                 switch (t) {
-                    case "policy_violation_detail":
+                    case c.SafetySystemNotificationCtaType.POLICY_VIOLATION_DETAIL:
                         if (null == n) return null;
-                        return (0, l.jsx)(_, {
+                        return (0, a.jsx)(E, {
                             classificationId: n
                         });
-                    case "learn_more_link":
-                        if (null == a) return null;
-                        return (0, l.jsx)(p, {
-                            learnMoreLink: a
+                    case c.SafetySystemNotificationCtaType.LEARN_MORE_LINK:
+                        if (null == s) return null;
+                        return (0, a.jsx)(_, {
+                            learnMoreLink: s
                         });
                     default:
                         return null
                 }
             }
 
-            function g(e) {
+            function I(e) {
                 let {
                     iconType: t
                 } = e, n = {
-                    default: (0, l.jsx)(c.default, {
-                        color: o.default.colors.TEXT_LINK.css
+                    default: (0, a.jsx)(u.default, {
+                        color: i.default.colors.TEXT_LINK.css
                     }),
-                    danger: (0, l.jsx)(u.WarningIcon, {
-                        color: o.default.colors.STATUS_DANGER
+                    danger: (0, a.jsx)(r.WarningIcon, {
+                        color: i.default.colors.STATUS_DANGER
                     })
                 };
-                return null != t && t in n ? (0, l.jsx)("div", {
-                    className: h.icon,
+                return null != t && t in n ? (0, a.jsx)("div", {
+                    className: m.icon,
                     children: n[t]
                 }) : null
             }
 
-            function T(e) {
+            function g(e) {
                 let {
                     children: t,
                     theme: n
-                } = e, a = {
-                    default: h.defaultFooterContainer,
-                    danger: h.dangerFooterContainer
+                } = e, s = {
+                    default: m.defaultFooterContainer,
+                    danger: m.dangerFooterContainer
                 };
-                return (0, l.jsx)("div", {
-                    className: a[null != n ? n : "default"],
+                return (0, a.jsx)("div", {
+                    className: s[null != n ? n : "default"],
                     children: t
                 })
             }
 
-            function C(e) {
+            function T(e) {
                 var t, n;
                 if (null == e.embed || null == e.embed.fields) return null;
-                let a = function(e) {
-                    var t, n;
-                    if (null == e.fields) return {};
-                    let a = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});
-                    return {
-                        header: a[f.SafetySystemNotificationEmbedKeys.HEADER],
-                        icon: a[f.SafetySystemNotificationEmbedKeys.ICON_TYPE],
-                        body: a[f.SafetySystemNotificationEmbedKeys.BODY],
-                        ctas: (null !== (t = a[f.SafetySystemNotificationEmbedKeys.CTAS]) && void 0 !== t ? t : "").split(",").filter(e => "" !== e),
-                        timestamp: parseFloat(null !== (n = a[f.SafetySystemNotificationEmbedKeys.TIMESTAMP]) && void 0 !== n ? n : 0),
-                        theme: a[f.SafetySystemNotificationEmbedKeys.THEME],
-                        learn_more_link: a[f.SafetySystemNotificationEmbedKeys.LEARN_MORE_LINK],
-                        classification_id: a[f.SafetySystemNotificationEmbedKeys.CLASSIFICATION_ID]
-                    }
-                }(e.embed);
-                return (0, l.jsxs)(d.Clickable, {
-                    className: h.safetyPolicyNoticeContainer,
-                    children: [(0, l.jsxs)("div", {
-                        className: h.noticeContent,
-                        children: [(0, l.jsxs)("div", {
-                            className: h.headerRow,
-                            children: [(0, l.jsx)(g, {
-                                iconType: a.icon
-                            }), (0, l.jsx)(d.Text, {
+                let s = (0, d.parseMessageEmbedForProps)(e.embed);
+                return null == s ? null : (0, a.jsxs)(o.Clickable, {
+                    className: m.safetyPolicyNoticeContainer,
+                    children: [(0, a.jsxs)("div", {
+                        className: m.noticeContent,
+                        children: [(0, a.jsxs)("div", {
+                            className: m.headerRow,
+                            children: [(0, a.jsx)(I, {
+                                iconType: s.icon
+                            }), (0, a.jsx)(o.Text, {
                                 variant: "text-md/semibold",
-                                children: a.header
+                                children: s.header
                             })]
-                        }), (0, l.jsx)("div", {
-                            className: h.incidentTiming,
-                            children: (0, l.jsx)(d.Text, {
+                        }), (0, a.jsx)("div", {
+                            className: m.incidentTiming,
+                            children: (0, a.jsx)(o.Text, {
                                 variant: "text-xs/medium",
-                                children: m.default.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
-                                    daysAgo: E(null !== (n = a.timestamp) && void 0 !== n ? n : 0)
+                                children: f.default.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
+                                    daysAgo: h(null !== (n = s.timestamp) && void 0 !== n ? n : 0)
                                 })
                             })
-                        }), (0, l.jsx)("div", {
-                            className: h.noticeBody,
-                            children: (0, l.jsx)(d.Text, {
+                        }), (0, a.jsx)("div", {
+                            className: m.noticeBody,
+                            children: (0, a.jsx)(o.Text, {
                                 variant: "text-md/normal",
                                 color: "text-muted",
-                                children: a.body
+                                children: s.body
                             })
                         })]
-                    }), (0, l.jsx)(T, {
-                        theme: a.theme,
-                        children: null === (t = a.ctas) || void 0 === t ? void 0 : t.map(e => (0, l.jsx)(I, {
+                    }), (0, a.jsx)(g, {
+                        theme: s.theme,
+                        children: null === (t = s.ctas) || void 0 === t ? void 0 : t.map(e => (0, a.jsx)(p, {
                             ctaType: e,
-                            classificationId: a.classification_id,
-                            learnMoreLink: a.learn_more_link
+                            classificationId: s.classification_id,
+                            learnMoreLink: s.learn_more_link
                         }, e))
                     })]
                 })

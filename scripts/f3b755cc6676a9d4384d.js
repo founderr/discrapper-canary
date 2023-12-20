@@ -240,7 +240,7 @@
             "use strict";
             n.r(e), n.d(e, {
                 default: function() {
-                    return f
+                    return T
                 }
             });
             var i = n("816494"),
@@ -288,7 +288,7 @@
                 }
             }
             _.displayName = "SafetyHubStore";
-            var f = new _(l.default, {
+            var T = new _(l.default, {
                 SAFETY_HUB_FETCH_START: function(t) {
                     A = !0
                 },
@@ -338,29 +338,6 @@
                     }, E = null
                 }
             })
-        },
-        736393: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                getClassificationRelativeIncidentTime: function() {
-                    return l
-                },
-                getAttachmentFilename: function() {
-                    return o
-                }
-            });
-            var i = n("866227"),
-                a = n.n(i),
-                s = n("894488");
-
-            function l(t) {
-                return a().to(a(t))
-            }
-
-            function o(t) {
-                var e;
-                return "".concat(s.SPOILER_ATTACHMENT_PREFIX, "_").concat(null !== (e = t.filename) && void 0 !== e ? e : ".png")
-            }
         },
         132206: function(t, e, n) {
             "use strict";
@@ -444,7 +421,7 @@
             "use strict";
             n.r(e), n.d(e, {
                 default: function() {
-                    return M
+                    return y
                 }
             }), n("222007");
             var i = n("37983"),
@@ -461,8 +438,8 @@
                 E = n("77078"),
                 I = n("599110"),
                 _ = n("908539"),
-                f = n("132206"),
-                T = n("698609"),
+                T = n("132206"),
+                f = n("698609"),
                 C = n("380676"),
                 N = n("170213"),
                 L = n("49111"),
@@ -481,7 +458,7 @@
                     [_.ActionType.USER_WARNING]: [l.ChatAlertIcon, s.default.colors.STATUS_WARNING]
                 },
                 p = d.WarningIcon,
-                g = t => {
+                U = t => {
                     let {
                         classificationTypeText: e
                     } = t;
@@ -498,7 +475,7 @@
                         })
                     })
                 },
-                U = t => {
+                g = t => {
                     let {
                         actions: e
                     } = t, n = e.filter(t => t.descriptions.length > 0);
@@ -628,7 +605,7 @@
                         }), l]
                     })
                 };
-            var M = t => {
+            var y = t => {
                 var e;
                 let {
                     classificationId: n,
@@ -637,7 +614,7 @@
                 } = t, {
                     classification: o,
                     classificationRequestState: c
-                } = (0, T.useSafetyHubClassification)(n), r = (0, f.useSafetyHubAccountStanding)();
+                } = (0, f.useSafetyHubClassification)(n), r = (0, T.useSafetyHubAccountStanding)();
                 a.useEffect(() => {
                     I.default.track(L.AnalyticEvents.SAFETY_HUB_ACTION, {
                         action: N.SafetyHubAnalyticsActions.ViewViolationDetail,
@@ -651,11 +628,11 @@
                 let u = null != o.flagged_content && o.flagged_content.length > 0;
                 return (0, i.jsxs)("div", {
                     className: h.classificationContainer,
-                    children: [(0, i.jsx)(g, {
+                    children: [(0, i.jsx)(U, {
                         classificationTypeText: o.description
                     }), u && (0, i.jsx)(C.ClassificationEvidence, {
                         flaggedContent: null !== (e = o.flagged_content) && void 0 !== e ? e : []
-                    }), (0, i.jsx)(U, {
+                    }), (0, i.jsx)(g, {
                         actions: o.actions
                     }), (0, i.jsx)(H, {
                         classificationTypeText: o.description,
@@ -758,8 +735,8 @@
                 E = n("697218"),
                 I = n("780571"),
                 _ = n("377502"),
-                f = n("736393"),
-                T = n("49111"),
+                T = n("736393"),
+                f = n("49111"),
                 C = n("719347"),
                 N = n("782340"),
                 L = n("161730");
@@ -768,7 +745,7 @@
                         var e, n;
                         return {
                             ...t,
-                            filename: (0, f.getAttachmentFilename)(t),
+                            filename: (0, T.getAttachmentFilename)(t),
                             size: 0,
                             width: null !== (e = t.width) && void 0 !== e ? e : 100,
                             height: null !== (n = t.height) && void 0 !== n ? n : 100,
@@ -779,12 +756,12 @@
                         ...(0, r.default)({
                             nonce: t.id,
                             content: t.content,
-                            type: T.MessageTypes.DEFAULT,
+                            type: f.MessageTypes.DEFAULT,
                             channelId: ""
                         }),
                         timestamp: new Date(s.default.extractTimestamp(t.id)).toISOString(),
                         attachments: e,
-                        state: T.MessageStates.SENT
+                        state: f.MessageStates.SENT
                     })
                 },
                 h = t => {
