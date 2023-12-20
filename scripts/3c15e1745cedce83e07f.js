@@ -1256,8 +1256,8 @@
                 v = s("71010"),
                 U = s("290877"),
                 D = s("437712"),
-                b = s("552712"),
-                j = s("698041"),
+                j = s("552712"),
+                b = s("698041"),
                 G = s("167726"),
                 y = s("471671"),
                 B = s("895530"),
@@ -1817,7 +1817,7 @@
                     }
                 }
             }
-            var eI = (0, R.default)((0, m.default)(i.default.connectStores([U.default, L.default, M.default, y.default, j.default, b.default, G.default, p.default, N.default, v.default, h.default, D.default], e => {
+            var eI = (0, R.default)((0, m.default)(i.default.connectStores([U.default, L.default, M.default, y.default, b.default, j.default, G.default, p.default, N.default, v.default, h.default, D.default], e => {
                 let t, s, a, {
                     inputSkuId: n,
                     applicationId: l,
@@ -1827,10 +1827,10 @@
                 } = e;
                 if (null == l) {
                     if (null == n) throw Error("Needs applicationId or skuId");
-                    t = n, null != (l = null != (s = b.default.get(n)) ? s.applicationId : null) && (a = N.default.getApplication(l))
+                    t = n, null != (l = null != (s = j.default.get(n)) ? s.applicationId : null) && (a = N.default.getApplication(l))
                 } else if (null == n) {
                     if (null == l) throw Error("Needs applicationId or skuId");
-                    null != (a = N.default.getApplication(l)) && (t = a.destinationSkuId), s = null != t ? b.default.get(t) : null
+                    null != (a = N.default.getApplication(l)) && (t = a.destinationSkuId), s = null != t ? j.default.get(t) : null
                 }(null == s ? void 0 : s.flags) != null && (0, Y.hasFlag)(s.flags, eo.SKUFlags.STICKER_PACK) && (s = null);
                 let o = null != l && (G.default.inTestModeForApplication(l) || p.default.inDevModeForApplication(l));
                 return {
@@ -1841,7 +1841,7 @@
                     shouldFetchStatistics: i && null != l && v.default.shouldFetchStatisticsForApplication(l),
                     sku: s,
                     isFocused: y.default.isFocused(),
-                    storeListing: j.default.getStoreListing({
+                    storeListing: b.default.getStoreListing({
                         storeListingId: r,
                         skuId: t,
                         channelId: null != u ? u.id : null,
@@ -2936,52 +2936,6 @@
                 }) : null
             }
         },
-        195362: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                default: function() {
-                    return l
-                }
-            });
-            var a = s("862205");
-            let n = (0, a.createExperiment)({
-                kind: "user",
-                id: "2023-11_shop_for_all_full_launch_nitro_user_upsell",
-                label: "Shop For All Full Launch Nitro User Upsell Experiment",
-                defaultConfig: {
-                    newBadgeEnabled: !1,
-                    coachmarkEnabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enables New Badge",
-                    config: {
-                        newBadgeEnabled: !0,
-                        coachmarkEnabled: !1
-                    }
-                }, {
-                    id: 2,
-                    label: "Enables Coachmark",
-                    config: {
-                        newBadgeEnabled: !1,
-                        coachmarkEnabled: !0
-                    }
-                }]
-            });
-            var l = e => {
-                let {
-                    location: t,
-                    autoTrackExposure: s = !0,
-                    trackExposureOptions: a = {}
-                } = e;
-                return n.useExperiment({
-                    location: t
-                }, {
-                    autoTrackExposure: s,
-                    trackExposureOptions: a
-                })
-            }
-        },
         104385: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -3124,35 +3078,6 @@
                     })]
                 })
             }
-        },
-        833514: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                default: function() {
-                    return u
-                }
-            }), s("424973"), s("222007");
-            var a = s("884691"),
-                n = s("151426"),
-                l = s("509802"),
-                r = s("195362"),
-                i = s("994428"),
-                u = () => {
-                    let {
-                        newBadgeEnabled: e
-                    } = (0, r.default)({
-                        location: "useCollectiblesShopTabNewBadge"
-                    }), t = a.useMemo(() => {
-                        let t = [];
-                        return t.push(n.DismissibleContent.COLLECTIBLES_SHOP_TAB_NEW_BADGE), e && t.push(n.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_NEW_BADGE), t
-                    }, [e]), [s, u] = (0, l.useDismissibleContentGroup)(t, void 0, !0);
-                    return {
-                        collectiblesShopTabNewBadge: s,
-                        dismissCollectiblesShopTabNewBadge: () => {
-                            null != s && u(i.ContentDismissActionType.AUTO)
-                        }
-                    }
-                }
         },
         516322: function(e, t, s) {
             "use strict";
@@ -3504,8 +3429,8 @@
                 v = s("224456"),
                 U = s("656564"),
                 D = s("124989"),
-                b = s("14528"),
-                j = s("443817"),
+                j = s("14528"),
+                b = s("443817"),
                 G = s("759308");
             let y = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
                 B = e => {
@@ -3598,25 +3523,25 @@
                         stickers: {
                             title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
                             description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                            imageSource: y(s, g, b),
+                            imageSource: y(s, g, j),
                             imageClassName: t.stickersImage
                         },
                         stickersBurst: {
                             title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                            imageSource: y(s, g, b),
+                            imageSource: y(s, g, j),
                             imageClassName: t.stickersImage
                         },
                         stickersPerkDiscoverability: {
                             title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                            imageSource: y(s, g, b),
+                            imageSource: y(s, g, j),
                             imageClassName: t.stickersImage
                         },
                         streaming: {
                             title: c.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
-                            imageSource: j,
+                            imageSource: b,
                             imageClassName: t.streamingImage
                         },
                         superReactions: {
@@ -3751,7 +3676,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return j
+                    return b
                 }
             }), s("222007");
             var a = s("37983");
@@ -3786,7 +3711,7 @@
                 v = s("816571"),
                 U = s("114244"),
                 D = s("991119");
-            let b = new Map([
+            let j = new Map([
                 ["BG", r],
                 ["CZ", o],
                 ["HU", S],
@@ -3819,13 +3744,13 @@
                 ["HR", f]
             ]);
 
-            function j(e) {
+            function b(e) {
                 let {
                     className: t,
                     countryCode: s
                 } = e;
-                if (null == s || !b.has(s)) return null;
-                let n = b.get(s);
+                if (null == s || !j.has(s)) return null;
+                let n = j.get(s);
                 return (0, a.jsx)("img", {
                     className: t,
                     "aria-hidden": !0,
@@ -4088,20 +4013,20 @@
                 v = s("154889"),
                 U = s("917247"),
                 D = s("254893"),
-                b = s("840326"),
-                j = s("646718"),
+                j = s("840326"),
+                b = s("646718"),
                 G = s("49111"),
                 y = s("265921"),
                 B = function(e) {
                     let {
-                        entrypoint: t = j.PremiumMarketingEntrypoints.UserSettings
+                        entrypoint: t = b.PremiumMarketingEntrypoints.UserSettings
                     } = e, s = (0, S.useBlockedPaymentsConfig)(), {
                         AnalyticsLocationProvider: l,
                         sourceAnalyticsLocations: B,
                         analyticsLocations: k
                     } = (0, f.default)(T.default.PREMIUM_MARKETING), {
                         enabled: H
-                    } = (0, L.default)(), K = (0, i.useStateFromStores)([A.default], () => A.default.hasFetchedSubscriptions()), F = (0, i.useStateFromStores)([N.default], () => N.default.getCurrentUser()), W = (0, U.usePremiumTrialOffer)(), w = (0, v.usePremiumDiscountOffer)(), V = (0, R.useSubscriptionPlansLoaded)(), [Y, z] = n.useState(!0), Z = n.useRef(0), X = (0, C.isPremiumExactly)(F, j.PremiumTypes.TIER_2), Q = (0, x.useLocalizedPromoQuery)(), J = null == Q ? void 0 : Q.countryCode, q = (0, i.useStateFromStores)([P.default], () => P.default.hasFetched);
+                    } = (0, L.default)(), K = (0, i.useStateFromStores)([A.default], () => A.default.hasFetchedSubscriptions()), F = (0, i.useStateFromStores)([N.default], () => N.default.getCurrentUser()), W = (0, U.usePremiumTrialOffer)(), w = (0, v.usePremiumDiscountOffer)(), V = (0, R.useSubscriptionPlansLoaded)(), [Y, z] = n.useState(!0), Z = n.useRef(0), X = (0, C.isPremiumExactly)(F, b.PremiumTypes.TIER_2), Q = (0, x.useLocalizedPromoQuery)(), J = null == Q ? void 0 : Q.countryCode, q = (0, i.useStateFromStores)([P.default], () => P.default.hasFetched);
                     n.useEffect(() => {
                         !q && c.getNitroAffinity()
                     }, [q]), n.useEffect(() => {
@@ -4129,10 +4054,10 @@
                     let [$, ee] = n.useState(!1), et = (0, i.useStateFromStores)([p.default], () => p.default.enabled);
                     if (et) return (0, a.jsx)(I.default, {});
                     if (s) return (0, a.jsx)(m.BlockedPaymentsContentSettings, {});
-                    let es = t === j.PremiumMarketingEntrypoints.ApplicationStoreHome;
+                    let es = t === b.PremiumMarketingEntrypoints.ApplicationStoreHome;
                     return es && X && !H ? (0, a.jsx)(l, {
                         children: (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(b.default, {}), (0, a.jsx)(u.default, {
+                            children: [(0, a.jsx)(j.default, {}), (0, a.jsx)(u.default, {
                                 onChange: e => {
                                     e && !$ && (g.default.track(G.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                                         location_stack: k
@@ -4718,16 +4643,16 @@
                         isEasterEggTriggered: v,
                         onHover: U,
                         onUnhover: D
-                    } = (0, S.default)(5), b = (0, i.debounce)(() => {
+                    } = (0, S.default)(5), j = (0, i.debounce)(() => {
                         _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                             card_type: (0, i.snakeCase)(t)
                         })
                     }, 800);
                     e = {
-                        onMouseEnter: b,
+                        onMouseEnter: j,
                         ...e
                     };
-                    let j = L !== l || null == l || m;
+                    let b = L !== l || null == l || m;
                     return (n.useEffect(() => {
                         I && T && (p(!0), _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
                             card_type: t
@@ -4761,7 +4686,7 @@
                                 })
                             })]
                         })
-                    }) : j ? (0, a.jsx)("div", {
+                    }) : b ? (0, a.jsx)("div", {
                         className: r(C.noFlipCardContainer, {
                             [C.forceShadow]: E,
                             [C.reducedMotion]: I
@@ -5161,8 +5086,8 @@
                 v = s("782340"),
                 U = s("992250"),
                 D = s("640754"),
-                b = s("510407"),
-                j = s("657890"),
+                j = s("510407"),
+                b = s("657890"),
                 G = s("823986");
             let y = e => {
                     let {
@@ -5187,7 +5112,7 @@
                             premiumType: s
                         } = e,
                         n = (0, c.default)();
-                    t = s === h.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? D : b : (0, u.isThemeDark)(n) ? j : G;
+                    t = s === h.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? D : j : (0, u.isThemeDark)(n) ? b : G;
                     let l = (0, N.getPremiumTypeDisplayName)(s);
                     return (0, a.jsx)("img", {
                         src: t,
@@ -5304,8 +5229,8 @@
                         hideCTAs: m = !1,
                         headingOverride: p,
                         hidePill: D = !1,
-                        selectedPlanColumnClassName: b,
-                        selectedPlanTier: j = h.PremiumTypes.TIER_2
+                        selectedPlanColumnClassName: j,
+                        selectedPlanTier: b = h.PremiumTypes.TIER_2
                     } = e,
                     {
                         AnalyticsLocationProvider: G
@@ -5597,7 +5522,7 @@
                         }), (0, a.jsxs)("div", {
                             className: U.tableWrapper,
                             children: [(0, a.jsx)("div", {
-                                className: et === h.PremiumSubscriptionSKUs.TIER_0 || es === h.PremiumTypes.TIER_0 || j === h.PremiumTypes.TIER_0 ? r(b, U.tier0ColumnOuter) : r(b, U.tier2ColumnOuter),
+                                className: et === h.PremiumSubscriptionSKUs.TIER_0 || es === h.PremiumTypes.TIER_0 || b === h.PremiumTypes.TIER_0 ? r(j, U.tier0ColumnOuter) : r(j, U.tier2ColumnOuter),
                                 children: s
                             }), (0, a.jsxs)("table", {
                                 className: U.table,
@@ -5848,8 +5773,8 @@
                 v = s("627474"),
                 U = s("904871"),
                 D = s("360776"),
-                b = s("525505"),
-                j = s("881155"),
+                j = s("525505"),
+                b = s("881155"),
                 G = s("646718"),
                 y = s("880552"),
                 B = s("679324"),
@@ -5927,7 +5852,7 @@
                                 active: !0,
                                 children: (0, a.jsx)(O.default, {
                                     showWumpus: !0,
-                                    tier0CTAButton: ee === G.PremiumSubscriptionSKUs.TIER_2 || es || null != q ? (0, a.jsx)(j.default, {
+                                    tier0CTAButton: ee === G.PremiumSubscriptionSKUs.TIER_2 || es || null != q ? (0, a.jsx)(b.default, {
                                         forceInverted: !0,
                                         showIcon: !1,
                                         subscriptionTier: G.PremiumSubscriptionSKUs.TIER_0,
@@ -5935,13 +5860,13 @@
                                         look: o.ButtonLooks.OUTLINED,
                                         color: o.ButtonColors.WHITE,
                                         buttonShineClassName: void 0
-                                    }) : (0, a.jsx)(j.default, {
+                                    }) : (0, a.jsx)(b.default, {
                                         forceInverted: !0,
                                         showIcon: !1,
                                         subscriptionTier: G.PremiumSubscriptionSKUs.TIER_0,
                                         className: y.marginTopForButtons
                                     }),
-                                    tier2CTAButton: ee === G.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(j.default, {
+                                    tier2CTAButton: ee === G.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(b.default, {
                                         forceInverted: !0,
                                         showIcon: !1,
                                         subscriptionTier: G.PremiumSubscriptionSKUs.TIER_2,
@@ -5949,7 +5874,7 @@
                                         look: o.ButtonLooks.OUTLINED,
                                         color: o.ButtonColors.WHITE,
                                         buttonShineClassName: void 0
-                                    }) : (0, a.jsx)(j.default, {
+                                    }) : (0, a.jsx)(b.default, {
                                         forceInverted: !0,
                                         showIcon: !1,
                                         subscriptionTier: G.PremiumSubscriptionSKUs.TIER_2,
@@ -5973,7 +5898,7 @@
                             className: s ? y.perkCardsContainerSpacingFullscreen : y.perkCardsContainerSpacingSettings
                         }), (0, a.jsxs)("div", {
                             className: y.planComparisonTableContainer,
-                            children: [(0, a.jsx)(b.default, {
+                            children: [(0, a.jsx)(j.default, {
                                 className: y.planComparisonTable,
                                 hideCTAs: !0
                             }), s ? (0, a.jsxs)(a.Fragment, {
@@ -6065,40 +5990,39 @@
             "use strict";
             s.r(t), s.d(t, {
                 useShouldScrollToWhatsNew: function() {
-                    return I
+                    return E
                 },
                 useClearNewBadge: function() {
-                    return T
+                    return I
                 },
                 default: function() {
-                    return f
+                    return T
                 }
             }), s("222007");
             var a = s("884691"),
                 n = s("65597"),
                 l = s("151426"),
                 r = s("619935"),
-                i = s("833514"),
-                u = s("10641"),
-                o = s("235145"),
-                d = s("374363"),
-                c = s("184684"),
-                _ = s("397336");
-            let E = [
-                    [l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, c.WhatsNewAvatarDecoRollout, l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP],
-                    [l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, c.WhatsNewProfileFXRollout, l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP]
+                i = s("10641"),
+                u = s("235145"),
+                o = s("374363"),
+                d = s("184684"),
+                c = s("397336");
+            let _ = [
+                    [l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, d.WhatsNewAvatarDecoRollout, l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP],
+                    [l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, d.WhatsNewProfileFXRollout, l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP]
                 ],
-                I = () => E.some(e => {
+                E = () => _.some(e => {
                     let [t, s, a] = e, {
                         flipped: n
                     } = s.getCurrentConfig({
                         location: "useShouldShowNewBadge"
                     });
-                    return !!n && !(0, u.isDismissibleContentDismissed)(t)
+                    return !!n && !(0, i.isDismissibleContentDismissed)(t)
                 }),
-                T = () => {
+                I = () => {
                     let e = (0, r.useBlockedPaymentsConfig)(),
-                        t = E.map(e => {
+                        t = _.map(e => {
                             let [t, s] = e, {
                                 flipped: a
                             } = s.getCurrentConfig({
@@ -6106,33 +6030,31 @@
                             });
                             return a ? t : null
                         }).filter(e => null != e),
-                        [s] = (0, o.useGetDismissibleContent)(e ? [] : t),
+                        [s] = (0, u.useGetDismissibleContent)(e ? [] : t),
                         a = null != s && t.includes(s) && !e;
-                    a && (0, u.markDismissibleContentAsDismissed)(s)
+                    a && (0, i.markDismissibleContentAsDismissed)(s)
                 };
-            var f = () => {
+            var T = () => {
                 let e = (0, r.useBlockedPaymentsConfig)(),
-                    t = (0, n.default)([d.default], () => d.default.hasLoaded(_.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
-                    s = E.map(e => {
+                    t = (0, n.default)([o.default], () => o.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
+                    s = _.map(e => {
                         let [t, s, a] = e, {
                             flipped: n
                         } = s.getCurrentConfig({
                             location: "useShouldShowNewBadge"
-                        }), l = null != a && (0, u.isDismissibleContentDismissed)(a);
+                        }), l = null != a && (0, i.isDismissibleContentDismissed)(a);
                         return n && !l ? t : null
                     }).filter(e => null != e);
                 a.useEffect(() => {
-                    t && E.forEach(e => {
+                    t && _.forEach(e => {
                         let [t, s, a] = e;
                         if (null == a) return;
-                        let n = (0, u.isDismissibleContentDismissed)(a);
-                        n && (0, u.markDismissibleContentAsDismissed)(t)
+                        let n = (0, i.isDismissibleContentDismissed)(a);
+                        n && (0, i.markDismissibleContentAsDismissed)(t)
                     })
                 }, [s, t]);
-                let [l] = (0, o.useGetDismissibleContent)(e ? [] : s), {
-                    collectiblesShopTabNewBadge: c
-                } = (0, i.default)(), I = null != l && s.includes(l);
-                return I && !e && !(null != c)
+                let [l] = (0, u.useGetDismissibleContent)(e ? [] : s), d = null != l && s.includes(l);
+                return d && !e
             }
         },
         119829: function(e, t, s) {
@@ -6182,7 +6104,7 @@
                     return n
                 },
                 default: function() {
-                    return b
+                    return j
                 }
             });
             var a, n, l = s("65597"),
@@ -6215,13 +6137,13 @@
                 U = s("165870"),
                 D = s("443646");
             (a = n || (n = {})).AVATAR_DECORATIONS = "avatarDecorations", a.CLIENT_THEMES = "clientThemes", a.CLIPS = "clips", a.EARLY_ACCESS = "earlyAccess", a.ENTRANCE_SOUNDS = "entranceSounds", a.PROFILE_EFFECTS = "profileEffects", a.PROFILES = "profiles", a.REMIXING = "remixing", a.SERVER_BOOSTS = "serverBoosts", a.SPECIAL_MEMBER_PRICING = "specialMemberPricing", a.SPECIAL_SHOP_PERKS = "specialShopPerks", a.UNLIMITED_SUPER_REACTIONS = "unlimitedSuperReactions", a.UPCOMING_DROP_UNTIMED = "upcomingDropUntimed";
-            var b = () => {
+            var j = () => {
                 let {
                     analyticsLocations: e
                 } = (0, o.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, l.default)([I.default], () => I.default.getPremiumTypeSubscription()), s = null != t ? f.default.getPremiumPlanItem(t) : null, a = null != s ? f.default.getSkuIdForPlan(s.planId) : null, n = a === R.PremiumSubscriptionSKUs.TIER_2, {
-                    flipped: b
-                } = (0, S.useWhatsNewAvatarDecoRollout)(), {
                     flipped: j
+                } = (0, S.useWhatsNewAvatarDecoRollout)(), {
+                    flipped: b
                 } = (0, S.useWhatsNewProfileFXRollout)(), G = (0, d.default)(E.default), y = (0, _.default)({
                     scrollPosition: p.ProfileCustomizationScrollPositions.TRY_IT_OUT,
                     analyticsLocations: e
@@ -6240,7 +6162,7 @@
                         onCtaClick: B,
                         pillText: N.default.Messages.EARLY_ACCESS,
                         perkImage: P,
-                        canReveal: b,
+                        canReveal: j,
                         dismissibleContentType: r.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
                     } : {
                         name: "avatarDecorations",
@@ -6249,7 +6171,7 @@
                         description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
                         pillText: N.default.Messages.EARLY_ACCESS,
                         perkImage: P,
-                        canReveal: b,
+                        canReveal: j,
                         dismissibleContentType: r.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
                     },
                     clientThemes: {
@@ -6333,7 +6255,7 @@
                         onCtaClick: B,
                         pillText: N.default.Messages.EARLY_ACCESS,
                         perkImage: x,
-                        canReveal: j,
+                        canReveal: b,
                         dismissibleContentType: r.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
                     } : {
                         name: "profileEffects",
@@ -6342,7 +6264,7 @@
                         description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
                         pillText: N.default.Messages.EARLY_ACCESS,
                         perkImage: x,
-                        canReveal: j,
+                        canReveal: b,
                         dismissibleContentType: r.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
                     },
                     profiles: {

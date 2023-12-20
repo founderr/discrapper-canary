@@ -1885,7 +1885,7 @@
                     value: t,
                     action: n,
                     shouldShow: a
-                } = e, o = (0, s.useStateFromStores)([u.default], () => u.default.getKeybindForAction(n)), r = (0, d.useRedesignIconContext)().enabled;
+                } = e, o = (0, s.useStateFromStores)([u.default], () => u.default.getKeybindForAction(n, !1, !0)), r = (0, d.useRedesignIconContext)().enabled;
                 if (null == o || !a) return null;
                 let c = h.toString(o.shortcut),
                     f = r ? m[n].new : m[n].legacy,

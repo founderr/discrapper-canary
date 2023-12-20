@@ -10081,7 +10081,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "99c3bd5ef4a2843fd6b659875880643734add938", e.substring(0, 7)),
+                    S = (e = "56d01e6d743560ce75392dabeb763160f12dd1d3", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     m = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10094,7 +10094,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "255901", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "255906", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
