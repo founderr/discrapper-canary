@@ -1659,7 +1659,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "256152"
+                        buildNumber: "256166"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -24147,114 +24147,6 @@
                 })
             }
         },
-        356070: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return h
-                }
-            }), n("424973");
-            var a = n("37983");
-            n("884691");
-            var s = n("917351"),
-                i = n.n(s),
-                l = n("77078"),
-                r = n("86621"),
-                o = n("506885"),
-                u = n("981601"),
-                d = n("479020"),
-                c = n("449008"),
-                E = n("49111"),
-                f = n("683168");
-            let _ = (0, r.default)(e => {
-                let {
-                    member: t,
-                    empty: n,
-                    analyticsContext: s,
-                    guildId: i
-                } = e;
-                if (n) return (0, a.jsx)("div", {
-                    className: f.partyMemberEmpty
-                });
-                if (null == t) return (0, a.jsx)("div", {
-                    className: f.partyMemberUnknown,
-                    children: (0, a.jsx)(d.default, {
-                        className: f.partyMemberUnknownIcon
-                    })
-                });
-                let r = {
-                    location: {
-                        ...s.location,
-                        object: E.AnalyticsObjects.AVATAR
-                    }
-                };
-                return (0, a.jsx)("div", {
-                    className: f.partyMemberKnown,
-                    children: (0, a.jsx)(l.Popout, {
-                        preload: () => (0, o.default)(t.id, t.getAvatarURL(i, 80), {
-                            guildId: i
-                        }),
-                        renderPopout: e => (0, a.jsx)(u.default, {
-                            ...e,
-                            userId: t.id,
-                            analyticsParams: r
-                        }),
-                        position: "left",
-                        children: e => (0, a.jsx)(l.Avatar, {
-                            ...e,
-                            src: t.getAvatarURL(i, 24),
-                            "aria-label": t.username,
-                            size: l.AvatarSizes.SIZE_24,
-                            className: f.partyMember
-                        })
-                    })
-                })
-            });
-            var h = e => {
-                let {
-                    partySize: t,
-                    members: n,
-                    minAvatarsShown: s = 1,
-                    maxAvatarsShown: l = 2,
-                    guildId: r
-                } = e, {
-                    unknownSize: o,
-                    totalSize: u,
-                    knownSize: d
-                } = t;
-                if (u < s) return null;
-                let E = i(n).filter(c.isNotNullish).take(l).map(e => (0, a.jsx)(_, {
-                    member: e,
-                    guildId: r
-                }, e.id)).value();
-                for (let e = 0; e < o && E.length < l; e++) E.push((0, a.jsx)(_, {
-                    guildId: r
-                }, "unknown-member-".concat(e)));
-                let h = u - d - o;
-                for (let e = 0; e < h && E.length < l; e++) E.push((0, a.jsx)(_, {
-                    empty: !0,
-                    guildId: r
-                }, "empty-member-".concat(e)));
-                let C = Math.max(Math.min(u - E.length, 99), 0);
-                if (1 === C) {
-                    let e = n[l];
-                    E.push((0, a.jsx)(_, {
-                        member: e,
-                        guildId: r
-                    }, e.id))
-                }
-                return (0, a.jsx)("div", {
-                    className: f.wrapper,
-                    children: (0, a.jsxs)("div", {
-                        className: f.partyMembers,
-                        children: [E, C > 1 ? (0, a.jsxs)("div", {
-                            className: f.partyMemberOverflow,
-                            children: ["+", C]
-                        }) : null]
-                    })
-                })
-            }
-        },
         36512: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -44773,39 +44665,6 @@
                 }, i.TwitterIcon, void 0, {
                     size: 20
                 })
-        },
-        479020: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return i
-                }
-            });
-            var a = n("37983");
-            n("884691");
-            var s = n("75196");
-
-            function i(e) {
-                let {
-                    width: t = 24,
-                    height: n = 24,
-                    color: i = "currentColor",
-                    ...l
-                } = e;
-                return (0, a.jsxs)("svg", {
-                    ...(0, s.default)(l),
-                    width: t,
-                    height: n,
-                    viewBox: "0 0 24 24",
-                    children: [(0, a.jsx)("path", {
-                        fill: i,
-                        d: "M12 14C7.289 14 4 16.467 4 20V22H20V20C20 16.467 16.711 14 12 14ZM11 19C10.447 19 10 18.553 10 18C10 17.447 10.447 17 11 17C11.553 17 12 17.447 12 18C12 18.553 11.553 19 11 19ZM14 19C13.447 19 13 18.553 13 18C13 17.447 13.447 17 14 17C14.553 17 15 17.447 15 18C15 18.553 14.553 19 14 19Z"
-                    }), (0, a.jsx)("path", {
-                        fill: i,
-                        d: "M18 6H17.91C17.432 3.167 14.967 1 12 1C9.033 1 6.568 3.167 6.09 6H6C4.896 6 4 6.896 4 8V9C4 10.104 4.896 11 6 11C6 12.102 6.897 13 8 13H16C17.104 13 18 12.102 18 11C19.104 11 20 10.104 20 9V8C20 6.896 19.104 6 18 6ZM16 10H8V6H16V10Z"
-                    })]
-                })
-            }
         },
         663449: function(e, t, n) {
             "use strict";
