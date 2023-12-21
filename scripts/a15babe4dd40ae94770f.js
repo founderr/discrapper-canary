@@ -229,10 +229,10 @@
                     return U
                 },
                 resetAndCloseUserProfileForm: function() {
-                    return y
+                    return O
                 },
                 setDisableSubmit: function() {
-                    return O
+                    return y
                 }
             });
             var i = n("872717"),
@@ -419,13 +419,13 @@
                 })
             }
 
-            function y() {
+            function O() {
                 a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
                 })
             }
 
-            function O(e) {
+            function y(e) {
                 a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
                     disable: e
@@ -592,46 +592,6 @@
             };
             var d = c
         },
-        167338: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                ChatAlertIcon: function() {
-                    return a
-                }
-            });
-            var i = n("37983");
-            n("884691");
-            var r = n("669491"),
-                l = n("75196");
-            let a = e => {
-                let {
-                    width: t = 24,
-                    height: n = 24,
-                    color: a = r.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: o = "",
-                    ...s
-                } = e;
-                return (0, i.jsxs)("svg", {
-                    ...(0, l.default)(s),
-                    xmlns: "http://www.w3.org/2000/svg",
-                    width: t,
-                    height: n,
-                    fill: "none",
-                    viewBox: "0 0 24 24",
-                    children: [(0, i.jsx)("path", {
-                        fill: "string" == typeof a ? a : a.css,
-                        d: "M12.03 21.5c-.05.28-.27.5-.54.5H2.2a1 1 0 0 1-.75-1.66l2.06-2.37a.52.52 0 0 0 .04-.61 10 10 0 1 1 18.32-3.77c-.01.12-.17.14-.22.04a3.06 3.06 0 0 0-5.3 0l-3.95 6.9c-.19.32-.3.65-.37.98Z",
-                        className: o
-                    }), (0, i.jsx)("path", {
-                        fill: "string" == typeof a ? a : a.css,
-                        fillRule: "evenodd",
-                        d: "M18.09 14.63c.4-.7 1.43-.7 1.82 0l3.96 6.9c.38.66-.12 1.47-.91 1.47h-7.92c-.79 0-1.3-.81-.91-1.48l3.96-6.9Zm.46 1.87h.9c.3 0 .52.26.5.55l-.22 2.02c-.01.16-.17.26-.33.23a1.93 1.93 0 0 0-.8 0c-.16.03-.32-.07-.33-.23l-.21-2.02a.5.5 0 0 1 .5-.55ZM19 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z",
-                        clipRule: "evenodd",
-                        className: o
-                    })]
-                })
-            }
-        },
         733154: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -702,40 +662,6 @@
                 })
             }
         },
-        426383: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                ChevronLargeRightIcon: function() {
-                    return a
-                }
-            });
-            var i = n("37983");
-            n("884691");
-            var r = n("669491"),
-                l = n("75196");
-            let a = e => {
-                let {
-                    width: t = 24,
-                    height: n = 24,
-                    color: a = r.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: o = "",
-                    ...s
-                } = e;
-                return (0, i.jsx)("svg", {
-                    ...(0, l.default)(s),
-                    xmlns: "http://www.w3.org/2000/svg",
-                    width: t,
-                    height: n,
-                    fill: "none",
-                    viewBox: "0 0 24 24",
-                    children: (0, i.jsx)("path", {
-                        fill: "string" == typeof a ? a : a.css,
-                        d: "M8.3 3.3a1 1 0 0 0 0 1.4l7.29 7.3-7.3 7.3a1 1 0 1 0 1.42 1.4l8-8a1 1 0 0 0 0-1.4l-8-8a1 1 0 0 0-1.42 0Z",
-                        className: o
-                    })
-                })
-            }
-        },
         31745: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -777,40 +703,6 @@
                         clipRule: "evenodd",
                         className: u
                     })]
-                })
-            }
-        },
-        803027: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                CloseSmallIcon: function() {
-                    return a
-                }
-            });
-            var i = n("37983");
-            n("884691");
-            var r = n("669491"),
-                l = n("75196");
-            let a = e => {
-                let {
-                    width: t = 24,
-                    height: n = 24,
-                    color: a = r.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: o = "",
-                    ...s
-                } = e;
-                return (0, i.jsx)("svg", {
-                    ...(0, l.default)(s),
-                    xmlns: "http://www.w3.org/2000/svg",
-                    width: t,
-                    height: n,
-                    fill: "none",
-                    viewBox: "0 0 24 24",
-                    children: (0, i.jsx)("path", {
-                        fill: "string" == typeof a ? a : a.css,
-                        d: "M17.3 18.7a1 1 0 0 0 1.4-1.4L13.42 12l5.3-5.3a1 1 0 0 0-1.42-1.4L12 10.58l-5.3-5.3a1 1 0 0 0-1.4 1.42L10.58 12l-5.3 5.3a1 1 0 1 0 1.42 1.4L12 13.42l5.3 5.3Z",
-                        className: o
-                    })
                 })
             }
         },
@@ -3087,8 +2979,8 @@
                     trialId: L,
                     postSuccessGuild: R,
                     openInvoiceId: U,
-                    applicationId: y,
-                    referralTrialOfferId: O,
+                    applicationId: O,
+                    referralTrialOfferId: y,
                     giftRecipient: M,
                     returnRef: P,
                     subscription: D
@@ -3127,8 +3019,8 @@
                             postSuccessGuild: R,
                             planGroup: _.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                             openInvoiceId: U,
-                            applicationId: y,
-                            referralTrialOfferId: O,
+                            applicationId: O,
+                            referralTrialOfferId: y,
                             returnRef: P,
                             subscription: D
                         })
@@ -3144,7 +3036,7 @@
                             subscription_type: E.SubscriptionTypes.PREMIUM,
                             is_gift: v,
                             eligible_for_trial: null != L,
-                            application_id: y,
+                            application_id: O,
                             location_stack: T
                         }), (0, a.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == S || S(x), x && (null == h || h())
                     },
@@ -3643,9 +3535,6 @@
             "use strict";
             var i, r, l, a, o, s, u, c, d, f;
             n.r(t), n.d(t, {
-                ActionType: function() {
-                    return l
-                },
                 AccountStandingState: function() {
                     return a
                 },
@@ -3839,52 +3728,33 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return x
+                    return L
                 }
-            }), n("222007");
+            });
             var i = n("37983"),
                 r = n("884691"),
                 l = n("669491"),
-                a = n("167338"),
-                o = n("426383"),
-                s = n("165984"),
-                u = n("503420"),
-                c = n("803027"),
-                d = n("877585"),
-                f = n("47693"),
-                E = n("779807"),
-                _ = n("77078"),
-                I = n("599110"),
-                S = n("908539"),
-                p = n("132206"),
-                h = n("698609"),
-                T = n("380676"),
-                C = n("170213"),
-                A = n("49111"),
-                N = n("782340"),
-                v = n("383496");
-            let g = {
-                    [S.ActionType.BAN]: [s.CircleExclamationPointIcon, l.default.colors.STATUS_DANGER],
-                    [S.ActionType.GLOBAL_QUARANTINE]: [E.WarningIcon, l.default.colors.STATUS_WARNING],
-                    [S.ActionType.DISABLE_SUSPICIOUS_ACTIVITY]: [E.WarningIcon, l.default.colors.STATUS_WARNING],
-                    [S.ActionType.LIMITED_ACCESS]: [u.ClockIcon, l.default.colors.STATUS_WARNING],
-                    [S.ActionType.REQUIRE_VERIFICATION]: [E.WarningIcon, l.default.colors.STATUS_WARNING],
-                    [S.ActionType.TEMP_BAN]: [u.ClockIcon, l.default.colors.STATUS_WARNING],
-                    [S.ActionType.USER_MESSAGE_REMOVAL]: [f.TrashIcon, l.default.colors.STATUS_DANGER],
-                    [S.ActionType.USER_SPAMMER]: [E.WarningIcon, l.default.colors.STATUS_WARNING],
-                    [S.ActionType.USER_USERNAME_MANGLE]: [c.CloseSmallIcon, l.default.colors.STATUS_WARNING],
-                    [S.ActionType.USER_WARNING]: [a.ChatAlertIcon, l.default.colors.STATUS_WARNING]
-                },
-                m = E.WarningIcon,
-                L = e => {
+                a = n("748802"),
+                o = n("877585"),
+                s = n("77078"),
+                u = n("599110"),
+                c = n("908539"),
+                d = n("132206"),
+                f = n("698609"),
+                E = n("380676"),
+                _ = n("170213"),
+                I = n("49111"),
+                S = n("782340"),
+                p = n("383496");
+            let h = e => {
                     let {
                         classificationTypeText: t
                     } = e;
                     return (0, i.jsx)("div", {
-                        className: v.classificationHeader,
-                        children: (0, i.jsx)(_.Heading, {
+                        className: p.classificationHeader,
+                        children: (0, i.jsx)(s.Heading, {
                             variant: "heading-xl/normal",
-                            children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V2.format({
+                            children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V2.format({
                                 classification_type: t,
                                 classificationHook: (e, t) => (0, i.jsx)("strong", {
                                     children: e
@@ -3893,79 +3763,67 @@
                         })
                     })
                 },
-                R = e => {
+                T = e => {
                     let {
                         actions: t
                     } = e, n = t.filter(e => e.descriptions.length > 0);
                     return 0 === n.length ? null : (0, i.jsxs)("div", {
-                        className: v.classificationActionsTakenContainer,
-                        children: [(0, i.jsx)(_.Text, {
+                        className: p.classificationActionsTakenContainer,
+                        children: [(0, i.jsx)(s.Text, {
                             variant: "eyebrow",
                             color: "text-muted",
-                            children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER
-                        }), (0, i.jsx)("div", {
-                            className: v.classificationActionsTakenCard,
-                            children: t.map(e => (0, i.jsx)(U, {
+                            children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER
+                        }), (0, i.jsx)("ul", {
+                            className: p.classificationActionsTakenList,
+                            children: t.map(e => (0, i.jsx)(C, {
                                 action: e
                             }, e.id))
                         })]
                     })
                 },
-                U = e => {
+                C = e => {
                     let {
                         action: t
-                    } = e, [n, r] = t.action_type in g ? g[t.action_type] : [m, l.default.colors.STATUS_WARNING];
+                    } = e;
                     return (0, i.jsx)(i.Fragment, {
-                        children: t.descriptions.map((e, t) => (0, i.jsxs)("div", {
-                            className: v.classificationActionsTakenRow,
-                            children: [(0, i.jsx)("div", {
-                                className: v.classificationActionsTakenRowIcon,
-                                children: (0, i.jsx)(n, {
-                                    width: 15,
-                                    height: 15,
-                                    color: r,
-                                    style: {
-                                        marginLeft: 1
-                                    }
-                                })
-                            }), (0, i.jsx)(_.Text, {
-                                variant: "text-sm/normal",
-                                color: "interactive-normal",
+                        children: t.descriptions.map((e, t) => (0, i.jsx)("li", {
+                            className: p.classificationActionsTakenRow,
+                            children: (0, i.jsx)(s.Text, {
+                                tag: "span",
+                                variant: "heading-md/normal",
+                                color: "text-normal",
                                 children: e
-                            })]
+                            })
                         }, t))
                     })
                 },
-                y = e => {
+                A = e => {
                     let {
                         classificationTypeText: t,
                         policyExplainerLink: n
                     } = e;
-                    return (0, i.jsxs)(_.Anchor, {
+                    return (0, i.jsxs)(s.Anchor, {
                         href: n,
-                        className: v.classificationPolicyCard,
+                        className: p.classificationPolicyCard,
                         useDefaultUnderlineStyles: !1,
                         children: [(0, i.jsx)("div", {
-                            className: v.classificationPolicyCardIcon,
-                            children: (0, i.jsx)(d.ShieldIcon, {
-                                width: 32,
-                                height: 32,
+                            className: p.classificationPolicyCardIcon,
+                            children: (0, i.jsx)(o.ShieldIcon, {
+                                width: 24,
+                                height: 24,
                                 color: l.default.colors.FOCUS_PRIMARY
                             })
-                        }), (0, i.jsxs)("div", {
-                            className: v.classificationPolicyDescriptionContainer,
-                            children: [(0, i.jsx)(_.Text, {
-                                variant: "text-md/bold",
-                                children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER.format({
+                        }), (0, i.jsx)("div", {
+                            className: p.classificationPolicyDescriptionContainer,
+                            children: (0, i.jsx)(s.Text, {
+                                variant: "text-md/normal",
+                                children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER.format({
                                     classificationDescription: t
                                 })
-                            }), (0, i.jsx)(_.Text, {
-                                variant: "text-sm/normal",
-                                children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT
-                            })]
+                            })
                         }), (0, i.jsx)("div", {
-                            className: v.classificationPolicyLinkIcon,
-                            children: (0, i.jsx)(o.ChevronLargeRightIcon, {
+                            className: p.classificationPolicyLinkIcon,
+                            children: (0, i.jsx)(a.ChevronSmallRightIcon, {
                                 width: 24,
                                 height: 24,
                                 color: l.default.colors.INTERACTIVE_NORMAL
@@ -3973,30 +3831,30 @@
                         })]
                     })
                 },
-                O = () => (0, i.jsx)(_.Text, {
+                N = () => (0, i.jsx)(s.Text, {
                     variant: "text-md/normal",
                     color: "text-muted",
-                    children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
+                    children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
                 }),
-                M = e => (0, i.jsx)(_.Text, {
+                v = e => (0, i.jsx)(s.Text, {
                     variant: "text-md/normal",
                     color: "text-muted",
-                    children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
-                        letUsKnowHook: (t, n) => (0, i.jsx)(_.Anchor, {
+                    children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
+                        letUsKnowHook: (t, n) => (0, i.jsx)(s.Anchor, {
                             href: e.appealLink,
                             onClick: e.letUsKnowClick,
                             children: t
                         }, n)
                     })
                 }),
-                P = e => (0, i.jsx)("div", {
-                    className: v.classificationLetUsKnowContainer,
-                    children: e.hasBeenAppealed ? (0, i.jsx)(O, {}) : (0, i.jsx)(M, {
-                        appealLink: C.SafetyHubLinks.APPEALS_LINK,
+                g = e => (0, i.jsx)("div", {
+                    className: p.classificationLetUsKnowContainer,
+                    children: e.hasBeenAppealed ? (0, i.jsx)(N, {}) : (0, i.jsx)(v, {
+                        appealLink: _.SafetyHubLinks.APPEALS_LINK,
                         letUsKnowClick: e.onLetUsKnowClick
                     })
                 }),
-                D = e => {
+                m = e => {
                     let {
                         tosLink: t,
                         communityGuidelinesLink: n,
@@ -4005,25 +3863,25 @@
                         appealComponent: a
                     } = e;
                     return (0, i.jsxs)("div", {
-                        className: v.classificationActionExplanationContainer,
-                        children: [(0, i.jsx)(_.Text, {
+                        className: p.classificationActionExplanationContainer,
+                        children: [(0, i.jsx)(s.Text, {
                             variant: "eyebrow",
                             color: "text-muted",
-                            children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_HEADER
-                        }), (0, i.jsx)(_.Text, {
-                            className: v.guidelinesExplanation,
+                            children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_HEADER
+                        }), (0, i.jsx)(s.Text, {
+                            className: p.guidelinesExplanation,
                             variant: "text-sm/normal",
-                            children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_DESCRIPTION.format({
+                            children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_DESCRIPTION.format({
                                 tosLink: t,
                                 communityGuidelinesLink: n
                             })
-                        }), (0, i.jsx)(y, {
+                        }), (0, i.jsx)(A, {
                             classificationTypeText: r,
                             policyExplainerLink: l
                         }), a]
                     })
                 };
-            var x = e => {
+            var L = e => {
                 var t;
                 let {
                     classificationId: n,
@@ -4032,37 +3890,37 @@
                 } = e, {
                     classification: o,
                     classificationRequestState: s
-                } = (0, h.useSafetyHubClassification)(n), u = (0, p.useSafetyHubAccountStanding)();
+                } = (0, f.useSafetyHubClassification)(n), S = (0, d.useSafetyHubAccountStanding)();
                 r.useEffect(() => {
-                    I.default.track(A.AnalyticEvents.SAFETY_HUB_ACTION, {
-                        action: C.SafetyHubAnalyticsActions.ViewViolationDetail,
-                        account_standing: u.state,
+                    u.default.track(I.AnalyticEvents.SAFETY_HUB_ACTION, {
+                        action: _.SafetyHubAnalyticsActions.ViewViolationDetail,
+                        account_standing: S.state,
                         classification_ids: [Number(n)],
                         source: l
                     })
                 }, []);
-                if (null == o && s === S.ClassificationRequestState.FAILED) return a(), null;
+                if (null == o && s === c.ClassificationRequestState.FAILED) return a(), null;
                 if (null == o) return null;
-                let c = null != o.flagged_content && o.flagged_content.length > 0;
+                let C = null != o.flagged_content && o.flagged_content.length > 0;
                 return (0, i.jsxs)("div", {
-                    className: v.classificationContainer,
-                    children: [(0, i.jsx)(L, {
+                    className: p.classificationContainer,
+                    children: [(0, i.jsx)(h, {
                         classificationTypeText: o.description
-                    }), c && (0, i.jsx)(T.ClassificationEvidence, {
+                    }), C && (0, i.jsx)(E.ClassificationEvidence, {
                         flaggedContent: null !== (t = o.flagged_content) && void 0 !== t ? t : []
-                    }), (0, i.jsx)(R, {
+                    }), (0, i.jsx)(T, {
                         actions: o.actions
-                    }), (0, i.jsx)(D, {
+                    }), (0, i.jsx)(m, {
                         classificationTypeText: o.description,
-                        tosLink: C.SafetyHubLinks.TOS_LINK,
-                        communityGuidelinesLink: C.SafetyHubLinks.COMMUNITY_GUIDELINES,
+                        tosLink: _.SafetyHubLinks.TOS_LINK,
+                        communityGuidelinesLink: _.SafetyHubLinks.COMMUNITY_GUIDELINES,
                         policyExplainerLink: o.explainer_link,
-                        appealComponent: (0, i.jsx)(P, {
+                        appealComponent: (0, i.jsx)(g, {
                             hasBeenAppealed: null != o.appeal_status,
                             onLetUsKnowClick: () => {
-                                I.default.track(A.AnalyticEvents.SAFETY_HUB_ACTION, {
-                                    action: C.SafetyHubAnalyticsActions.ClickLetUsKnow,
-                                    account_standing: u.state,
+                                u.default.track(I.AnalyticEvents.SAFETY_HUB_ACTION, {
+                                    action: _.SafetyHubAnalyticsActions.ClickLetUsKnow,
+                                    account_standing: S.state,
                                     classification_ids: [Number(n)],
                                     source: l
                                 })
