@@ -14728,7 +14728,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return eN
+                    return eT
                 }
             }), n("222007");
             var l = n("37983"),
@@ -14778,39 +14778,40 @@
                 Z = n("957255"),
                 z = n("824563"),
                 X = n("568307"),
-                Q = n("101125"),
-                q = n("703370"),
-                J = n("953109"),
-                $ = n("37785"),
-                ee = n("491605"),
-                et = n("437825"),
-                en = n("893011"),
-                el = n("76539"),
-                ea = n("985622"),
-                es = n("619911"),
-                ei = n("962541"),
-                er = n("762489"),
-                eo = n("329858"),
-                eu = n("956089"),
-                ed = n("980423"),
-                ec = n("599110"),
-                ef = n("773336"),
-                eh = n("974165"),
-                eC = n("733335"),
-                ep = n("49111"),
-                em = n("272505"),
-                eE = n("411511"),
-                eg = n("782340"),
-                eI = n("333695");
-            let eS = (0, E.default)(function(e) {
+                Q = n("18494"),
+                q = n("101125"),
+                J = n("703370"),
+                $ = n("953109"),
+                ee = n("37785"),
+                et = n("491605"),
+                en = n("437825"),
+                el = n("893011"),
+                ea = n("76539"),
+                es = n("985622"),
+                ei = n("619911"),
+                er = n("962541"),
+                eo = n("762489"),
+                eu = n("329858"),
+                ed = n("956089"),
+                ec = n("980423"),
+                ef = n("599110"),
+                eh = n("773336"),
+                eC = n("974165"),
+                ep = n("733335"),
+                em = n("49111"),
+                eE = n("272505"),
+                eg = n("411511"),
+                eI = n("782340"),
+                eS = n("333695");
+            let e_ = (0, E.default)(function(e) {
                 let {
                     message: t
                 } = e;
-                return (0, l.jsx)(er.default, {
+                return (0, l.jsx)(eo.default, {
                     children: t
                 })
             });
-            class e_ extends a.PureComponent {
+            class eN extends a.PureComponent {
                 componentDidUpdate(e) {
                     !e.dropsActivityPanelExperienceBlocked && this.props.dropsActivityPanelExperienceBlocked && this.setState({
                         isDropsActivityPanelTooltipOpen: !1
@@ -14822,7 +14823,7 @@
                         activity: t,
                         embeddedActivity: n
                     } = this.props;
-                    return null != e && (null != n ? n.application_id === e.id : null != t && t.application_id === e.id && t.type === ep.ActivityTypes.PLAYING && (0, N.default)(t, ep.ActivityFlags.JOIN))
+                    return null != e && (null != n ? n.application_id === e.id : null != t && t.application_id === e.id && t.type === em.ActivityTypes.PLAYING && (0, N.default)(t, em.ActivityFlags.JOIN))
                 }
                 renderGoLiveButton() {
                     let e, t, n, a;
@@ -14835,16 +14836,16 @@
                         runningGame: d,
                         embeddedActivity: c
                     } = this.props;
-                    return (null != d || null == c) && (r || s && null != d) ? (r ? (e = !1, t = this.handleClickStopStreamingButton, n = ea.default, a = eg.default.Messages.STOP_STREAMING) : u ? (e = !1, t = this.handleClickGoLiveButton, n = es.default, a = null != d ? eg.default.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({
+                    return (null != d || null == c) && (r || s && null != d) ? (r ? (e = !1, t = this.handleClickStopStreamingButton, n = es.default, a = eI.default.Messages.STOP_STREAMING) : u ? (e = !1, t = this.handleClickGoLiveButton, n = ei.default, a = null != d ? eI.default.Messages.ACTIVITY_PANEL_GO_LIVE_STREAM_GAME.format({
                         game: d.name
-                    }) : eg.default.Messages.ACTIVITY_PANEL_GO_LIVE) : (e = !0, t = null, n = es.default, a = null != o && (0, B.isVoiceChannel)(o.type) ? eg.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != i ? eg.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : eg.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD), (0, l.jsx)("div", {
-                        className: eI.panelButtonContainer,
-                        children: (0, l.jsx)(ei.default, {
+                    }) : eI.default.Messages.ACTIVITY_PANEL_GO_LIVE) : (e = !0, t = null, n = ei.default, a = null != o && (0, B.isVoiceChannel)(o.type) ? eI.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE : null != i ? eI.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_GUILD : eI.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NOT_IN_GUILD), (0, l.jsx)("div", {
+                        className: eS.panelButtonContainer,
+                        children: (0, l.jsx)(er.default, {
                             tooltipText: a,
                             disabled: e,
                             onClick: t,
                             icon: n,
-                            iconForeground: eI.actionIcon
+                            iconForeground: eS.actionIcon
                         })
                     })) : null
                 }
@@ -14852,11 +14853,11 @@
                     let {
                         embeddedActivity: e
                     } = this.props;
-                    return this.isJoinableActivity() && null == e ? (0, l.jsx)(ei.default, {
-                        tooltipText: eg.default.Messages.INVITE_EMBED_INVITE_TO_JOIN,
+                    return this.isJoinableActivity() && null == e ? (0, l.jsx)(er.default, {
+                        tooltipText: eI.default.Messages.INVITE_EMBED_INVITE_TO_JOIN,
                         onClick: this.handleClickInviteButton,
-                        icon: el.default,
-                        iconForeground: eI.actionIcon
+                        icon: ea.default,
+                        iconForeground: eS.actionIcon
                     }) : null
                 }
                 renderDropsButton() {
@@ -14880,9 +14881,9 @@
                             onClose: a
                         }),
                         children: () => (0, l.jsxs)(l.Fragment, {
-                            children: [this.state.showDropsSparkles && this.renderSparkles(), (0, l.jsx)(ei.default, {
-                                "aria-label": eg.default.Messages.DROPS_ENABLED,
-                                tooltipText: n ? null : eg.default.Messages.DROPS_ENABLED,
+                            children: [this.state.showDropsSparkles && this.renderSparkles(), (0, l.jsx)(er.default, {
+                                "aria-label": eI.default.Messages.DROPS_ENABLED,
+                                tooltipText: n ? null : eI.default.Messages.DROPS_ENABLED,
                                 onClick: this.handleClickDropsButton,
                                 icon: y.default
                             })]
@@ -14894,24 +14895,24 @@
                         embeddedActivity: e,
                         channel: t
                     } = this.props;
-                    return null == e || null == t ? null : (0, l.jsx)(ei.default, {
-                        tooltipText: eg.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
+                    return null == e || null == t ? null : (0, l.jsx)(er.default, {
+                        tooltipText: eI.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
                         onClick: this.handleClickLeaveEmbeddedActivityButton(e.application_id, t),
-                        icon: en.default,
-                        iconForeground: eI.actionIcon
+                        icon: el.default,
+                        iconForeground: eS.actionIcon
                     })
                 }
                 renderBroadcastButton() {
                     let {
                         channel: e
                     } = this.props;
-                    return null != e && (0, B.isVoiceChannel)(e.type) ? null : (0, l.jsx)(eh.default, {})
+                    return null != e && (0, B.isVoiceChannel)(e.type) ? null : (0, l.jsx)(eC.default, {})
                 }
                 renderBroadcastSettingsButton() {
                     let {
                         broadcast: e
                     } = this.props;
-                    return null == e ? null : (0, l.jsx)(eC.default, {})
+                    return null == e ? null : (0, l.jsx)(ep.default, {})
                 }
                 renderSparkles() {
                     let {
@@ -14924,11 +14925,11 @@
                         return e
                     }
                     return (0, l.jsx)("div", {
-                        className: eI.sparkleContainer,
-                        children: (0, l.jsx)(ee.default, {
+                        className: eS.sparkleContainer,
+                        children: (0, l.jsx)(et.default, {
                             importData: t,
                             shouldAnimate: !e,
-                            className: eI.sparkles
+                            className: eS.sparkles
                         })
                     })
                 }
@@ -14941,7 +14942,7 @@
                         i = this.renderBroadcastButton(),
                         r = this.renderBroadcastSettingsButton();
                     return null == e && null == n && null == a ? null : (0, l.jsxs)("div", {
-                        className: eI.actions,
+                        className: eS.actions,
                         children: [i, e, r, n, null == e ? a : s, t]
                     })
                 }
@@ -14950,7 +14951,7 @@
                         runningGame: e,
                         application: t
                     } = this.props;
-                    return null != t ? t.name : null != e ? e.name : eg.default.Messages.STATUS_UNKNOWN
+                    return null != t ? t.name : null != e ? e.name : eI.default.Messages.STATUS_UNKNOWN
                 }
                 renderGame() {
                     let {
@@ -14960,31 +14961,31 @@
                         runningGame: a
                     } = this.props, s = this.getGameName();
                     return (0, l.jsxs)("div", {
-                        className: i(eI.gameWrapper, {
-                            [eI.clickableGameWrapper]: null != n
+                        className: i(eS.gameWrapper, {
+                            [eS.clickableGameWrapper]: null != n
                         }),
                         children: [(0, l.jsxs)("div", {
-                            className: eI.gameIconWrapper,
-                            children: [(0, l.jsx)(J.default, {
-                                className: eI.gameIcon,
+                            className: eS.gameIconWrapper,
+                            children: [(0, l.jsx)($.default, {
+                                className: eS.gameIcon,
                                 game: n,
                                 pid: null == a ? void 0 : a.pid
-                            }), e ? (0, l.jsx)(et.default, {
-                                className: eI.liveBadge
+                            }), e ? (0, l.jsx)(en.default, {
+                                className: eS.liveBadge
                             }) : null]
                         }), (0, l.jsx)("div", {
-                            className: i(eI.info, {
-                                [eI.infoWithDrops]: null != t
+                            className: i(eS.info, {
+                                [eS.infoWithDrops]: null != t
                             }),
                             children: null != s ? (0, l.jsxs)(l.Fragment, {
-                                children: [(0, l.jsx)(eo.default, {
+                                children: [(0, l.jsx)(eu.default, {
                                     children: s
                                 }), null != t && (0, l.jsx)("div", {
-                                    className: eI.dropsBadgeWrapper,
-                                    children: (0, l.jsx)(eu.TextBadge, {
-                                        text: eg.default.Messages.DROPS_AVAILABLE,
+                                    className: eS.dropsBadgeWrapper,
+                                    children: (0, l.jsx)(ed.TextBadge, {
+                                        text: eI.default.Messages.DROPS_AVAILABLE,
                                         color: c.default.unsafe_rawColors.BRAND_500.css,
-                                        className: eI.dropsBadge
+                                        className: eS.dropsBadge
                                     })
                                 })]
                             }) : null
@@ -15001,25 +15002,25 @@
                         sanitizedTitle: s
                     } = (0, U.default)(n);
                     return (0, l.jsxs)("div", {
-                        className: eI.gameWrapper,
+                        className: eS.gameWrapper,
                         children: [e ? (0, l.jsx)(P.default, {
                             title: s
-                        }) : (0, l.jsx)(ed.default, {
-                            look: ed.default.Looks.GRAY,
-                            size: ed.default.Sizes.SMALL,
-                            className: eI.liveIndicator
+                        }) : (0, l.jsx)(ec.default, {
+                            look: ec.default.Looks.GRAY,
+                            size: ec.default.Sizes.SMALL,
+                            className: eS.liveIndicator
                         }), (0, l.jsxs)("div", {
-                            className: i(eI.info, {
-                                [eI.infoWithDrops]: null != t
+                            className: i(eS.info, {
+                                [eS.infoWithDrops]: null != t
                             }),
-                            children: [(0, l.jsx)(eo.default, {
+                            children: [(0, l.jsx)(eu.default, {
                                 children: a
                             }), null != t && (0, l.jsx)("div", {
-                                className: eI.dropsBadgeWrapper,
-                                children: (0, l.jsx)(eu.TextBadge, {
-                                    text: eg.default.Messages.DROPS_AVAILABLE,
+                                className: eS.dropsBadgeWrapper,
+                                children: (0, l.jsx)(ed.TextBadge, {
+                                    text: eI.default.Messages.DROPS_AVAILABLE,
                                     color: c.default.unsafe_rawColors.BRAND_500.css,
-                                    className: eI.dropsBadge
+                                    className: eS.dropsBadge
                                 })
                             })]
                         })]
@@ -15036,21 +15037,21 @@
                     let s = {
                         start: n.connectedSince
                     };
-                    return e = null != a.guild_id ? ep.Routes.CHANNEL(a.guild_id, a.id) : ep.Routes.CHANNEL(ep.ME, a.id), (0, l.jsxs)("div", {
-                        className: eI.gameWrapper,
-                        children: [(0, l.jsx)(J.default, {
-                            className: eI.gameIcon,
+                    return e = null != a.guild_id ? em.Routes.CHANNEL(a.guild_id, a.id) : em.Routes.CHANNEL(em.ME, a.id), (0, l.jsxs)("div", {
+                        className: eS.gameWrapper,
+                        children: [(0, l.jsx)($.default, {
+                            className: eS.gameIcon,
                             game: t
                         }), (0, l.jsxs)("div", {
-                            className: eI.info,
-                            children: [(0, l.jsx)($.default, {
+                            className: eS.info,
+                            children: [(0, l.jsx)(ee.default, {
                                 href: e,
                                 onClick: this.handleApplicationLinkClick,
-                                children: (0, l.jsx)(eo.default, {
-                                    className: eI.activityName,
+                                children: (0, l.jsx)(eu.default, {
+                                    className: eS.activityName,
                                     children: n.name
                                 })
-                            }), (0, l.jsx)(eS, {
+                            }), (0, l.jsx)(e_, {
                                 timestamps: s
                             })]
                         })]
@@ -15066,9 +15067,9 @@
                         className: r
                     } = this.props;
                     return a || (this.isJoinableActivity() || e) && (null != n || null != t) ? (0, l.jsx)("div", {
-                        className: i(eI.panel, r),
+                        className: i(eS.panel, r),
                         children: (0, l.jsxs)("div", {
-                            className: eI.body,
+                            className: eS.body,
                             children: [(() => null == n || a && (null == s ? void 0 : s.pid) == null ? null != t ? this.renderEmbeddedActivity() : this.renderScreenshare() : this.renderGame())(), this.renderActions()]
                         })
                     }) : null
@@ -15104,7 +15105,7 @@
                                 ...t,
                                 selectSource: !1,
                                 guildId: i,
-                                analyticsLocation: ep.AnalyticsLocations.ACTIVITY_PANEL
+                                analyticsLocation: em.AnalyticsLocations.ACTIVITY_PANEL
                             })
                         }).then(e => {
                             null != e && (this.modalKey = e)
@@ -15124,7 +15125,7 @@
                             activity: e,
                             analyticsContext: t
                         } = this.props;
-                        o(null != e, "Received null activity"), ec.default.track(ep.AnalyticEvents.OPEN_MODAL, {
+                        o(null != e, "Received null activity"), ef.default.track(em.AnalyticEvents.OPEN_MODAL, {
                             type: "Send Join Invite",
                             application_id: e.application_id,
                             location: t.location
@@ -15137,7 +15138,7 @@
                         } = this.props;
                         if (null == e) return;
                         let l = (0, O.getDrop)(e);
-                        null != l && (ec.default.track(ep.AnalyticEvents.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
+                        null != l && (ef.default.track(em.AnalyticEvents.DROPS_ACTIVITY_PANEL_BUTTON_CLICK, {
                             user_id: n,
                             drops_quest_id: l.dropsQuestId,
                             game_id: l.dropsGameId,
@@ -15164,54 +15165,52 @@
                             channel: t,
                             embeddedActivity: n
                         } = this.props;
-                        o(null != t, "Channel is null during navigation click"), o(null != n, "Activity null during navigation click"), (0, B.isVoiceChannel)(t.type) && C.default.selectParticipant(t.id, n.application_id), p.default.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ep.ME, t.id), (0, B.isTextChannel)(t.type) && (0, S.updateActivityPanelMode)(em.ActivityPanelModes.PANEL)
+                        o(null != t, "Channel is null during navigation click"), o(null != n, "Activity null during navigation click"), (0, B.isVoiceChannel)(t.type) && C.default.selectParticipant(t.id, n.application_id), p.default.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : em.ME, t.id), (0, B.isTextChannel)(t.type) && (0, S.updateActivityPanelMode)(eE.ActivityPanelModes.PANEL)
                     }
                 }
             }
-            var eN = (0, g.default)(function(e) {
+            var eT = (0, g.default)(function(e) {
                 var t;
                 let {
                     guildId: n,
                     ...a
-                } = e, s = (0, u.useStateFromStores)([H.default], () => H.default.getId()), i = (0, u.useStateFromStores)([X.default, q.default], () => (0, w.default)(X.default, q.default)), r = (0, u.useStateFromStores)([_.default], () => _.default.getConnectedActivityChannelId()), o = (0, u.useStateFromStores)([k.default], () => k.default.getChannel(r)), [c, f] = (0, u.useStateFromStoresArray)([V.default], () => [V.default.getCurrentUserActiveStream(), V.default.getStreamerActiveStreamMetadata()]), h = (0, u.useStateFromStores)([I.default], () => I.default.useReducedMotion), C = (0, u.useStateFromStores)([M.default], () => M.default.getActivityPanelTooltipAction()), {
-                    partnerGame: p,
-                    dropsActivityPanelExperienceBlocked: m,
-                    showDropsSparkles: E
-                } = (0, x.useActivityPanelDrop)(eE.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), [g, S] = (0, u.useStateFromStoresArray)([K.default, Z.default, _.default, Y.default], () => {
-                    let e = !1,
-                        t = null;
-                    if (null != o) t = _.default.getSelfEmbeddedActivityForChannel(o.id), e = (0, B.isVoiceChannel)(o.type) && j.canStreamInChannel(o, K.default, Z.default, !1);
-                    else if (null != n) {
-                        let t = j.getStreamEligibleChannels(Y.default.getChannels(n), K.default, Z.default);
-                        e = t.length > 0
+                } = e, s = (0, u.useStateFromStores)([H.default], () => H.default.getId()), i = (0, u.useStateFromStores)([X.default, J.default], () => (0, w.default)(X.default, J.default)), r = (0, u.useStateFromStores)([Q.default, k.default], () => k.default.getChannel(Q.default.getVoiceChannelId())), o = (0, u.useStateFromStores)([_.default], () => _.default.getConnectedActivityChannelId()), c = (0, u.useStateFromStores)([k.default], () => k.default.getChannel(o)), [f, h] = (0, u.useStateFromStoresArray)([V.default], () => [V.default.getCurrentUserActiveStream(), V.default.getStreamerActiveStreamMetadata()]), C = (0, u.useStateFromStores)([I.default], () => I.default.useReducedMotion), p = (0, u.useStateFromStores)([M.default], () => M.default.getActivityPanelTooltipAction()), {
+                    partnerGame: m,
+                    dropsActivityPanelExperienceBlocked: E,
+                    showDropsSparkles: g
+                } = (0, x.useActivityPanelDrop)(eg.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), S = (0, u.useStateFromStores)([_.default], () => null != c ? _.default.getSelfEmbeddedActivityForChannel(c.id) : null), N = (0, u.useStateFromStores)([K.default, Z.default, Y.default], () => {
+                    if (null != r) return j.canStreamInChannel(r, K.default, Z.default, !1);
+                    if (null != n) {
+                        let e = j.getStreamEligibleChannels(Y.default.getChannels(n), K.default, Z.default);
+                        return e.length > 0
                     }
-                    return [e, t]
-                }), [N] = (0, T.default)([null !== (t = function() {
-                    if (null != f && null != f.id) return f.id;
+                    return !1
+                }), [A] = (0, T.default)([null !== (t = function() {
+                    if (null != h && null != h.id) return h.id;
                     if (null != i && null != i.id) return i.id;
                     if (null != S) return S.application_id
-                }()) && void 0 !== t ? t : ""]), A = (0, u.useStateFromStores)([W.default], () => (0, G.default)(W.default) && (0, ef.isWindows)()), v = (0, u.useStateFromStores)([z.default], () => null != s ? z.default.findActivity(s, e => e.type === ep.ActivityTypes.PLAYING) : null), R = null != c && c.ownerId === s && c.state !== ep.ApplicationStreamStates.ENDED, O = (0, u.useStateFromStores)([Q.default], () => Q.default.getBroadcast()), y = (0, L.default)() && null != i;
-                return (0, l.jsx)(e_, {
+                }()) && void 0 !== t ? t : ""]), v = (0, u.useStateFromStores)([W.default], () => (0, G.default)(W.default) && (0, eh.isWindows)()), R = (0, u.useStateFromStores)([z.default], () => null != s ? z.default.findActivity(s, e => e.type === em.ActivityTypes.PLAYING) : null), O = null != f && f.ownerId === s && f.state !== em.ApplicationStreamStates.ENDED, y = (0, u.useStateFromStores)([q.default], () => q.default.getBroadcast()), D = (0, L.default)() && null != i;
+                return (0, l.jsx)(eN, {
                     ...a,
                     guildId: n,
-                    canGoLive: A,
-                    activity: v,
+                    canGoLive: v,
+                    activity: R,
                     embeddedActivity: S,
-                    showDropsSparkles: E,
-                    dropsPartnerGame: p,
-                    dropsActivityPanelExperienceBlocked: m,
+                    showDropsSparkles: g,
+                    dropsPartnerGame: m,
+                    dropsActivityPanelExperienceBlocked: E,
                     userId: s,
                     runningGame: i,
-                    application: N,
-                    useReducedMotion: h,
-                    isStreaming: R,
-                    channel: o,
-                    canStream: g,
-                    dropsTooltipAction: C,
-                    stream: c,
-                    streamMetadata: f,
-                    broadcast: O,
-                    canStartBroadcast: y
+                    application: A,
+                    useReducedMotion: C,
+                    isStreaming: O,
+                    channel: c,
+                    canStream: N,
+                    dropsTooltipAction: p,
+                    stream: f,
+                    streamMetadata: h,
+                    broadcast: y,
+                    canStartBroadcast: D
                 })
             })
         },
