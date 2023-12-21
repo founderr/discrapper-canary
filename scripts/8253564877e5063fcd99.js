@@ -1,7 +1,7 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
     ["16054"], {
         89400: function(e, t, n) {
-            var i = {
+            var a = {
                 "./activities-rocket-time.mp3": "329160",
                 "./activity_end.mp3": "376343",
                 "./activity_launch.mp3": "865814",
@@ -72,20 +72,20 @@
                 "./user_moved.mp3": "455307"
             };
 
-            function a(e) {
+            function i(e) {
                 return n(s(e))
             }
 
             function s(e) {
-                if (!n.o(i, e)) {
+                if (!n.o(a, e)) {
                     var t = Error("Cannot find module '" + e + "'");
                     throw t.code = "MODULE_NOT_FOUND", t
                 }
-                return i[e]
+                return a[e]
             }
-            a.id = '"89400"', a.keys = function() {
-                return Object.keys(i)
-            }, a.resolve = s, e.exports = a
+            i.id = '"89400"', i.keys = function() {
+                return Object.keys(a)
+            }, i.resolve = s, e.exports = i
         },
         606863: function(e, t, n) {
             "use strict";
@@ -398,8 +398,8 @@
                     return g
                 }
             });
-            var i = n("913144"),
-                a = n("504385"),
+            var a = n("913144"),
+                i = n("504385"),
                 s = n("439141"),
                 u = n("533222"),
                 l = n("42887"),
@@ -413,16 +413,16 @@
                 (0, d.playSound)("mention3")
             }
 
-            function _(e, t, n, i, a) {
+            function _(e, t, n, a, i) {
                 if (t === n) return;
                 let s = e[t],
                     l = e[n];
                 o.default.track(c.AnalyticEvents.MEDIA_DEVICE_CHANGED, {
                     device_from_name: u.default.getCertifiedDeviceName(t, null != s ? s.name : ""),
                     device_to_name: u.default.getCertifiedDeviceName(n, null != l ? l.name : ""),
-                    device_type: i,
+                    device_type: a,
                     device_is_certified: u.default.isCertified(n),
-                    location: a
+                    location: i
                 })
             }
             let E = {
@@ -441,14 +441,14 @@
                         context: e = f.MediaEngineContextTypes.DEFAULT,
                         syncRemote: t = !0
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    return S() ? Promise.resolve() : l.default.isEnabled() ? i.default.dispatch({
+                    return S() ? Promise.resolve() : l.default.isEnabled() ? a.default.dispatch({
                         type: "AUDIO_TOGGLE_SELF_MUTE",
                         context: e,
                         syncRemote: t
                     }) : this.enable(!0)
                 },
                 setTemporarySelfMute(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_TEMPORARY_SELF_MUTE",
                         mute: e
                     })
@@ -458,7 +458,7 @@
                         context: e = f.MediaEngineContextTypes.DEFAULT,
                         syncRemote: t = !0
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_TOGGLE_SELF_DEAF",
                         context: e,
                         syncRemote: t
@@ -466,7 +466,7 @@
                 },
                 toggleLocalMute(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.MediaEngineContextTypes.DEFAULT;
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_TOGGLE_LOCAL_MUTE",
                         context: t,
                         userId: e
@@ -474,7 +474,7 @@
                 },
                 toggleLocalSoundboardMute(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.MediaEngineContextTypes.DEFAULT;
-                    i.default.dispatch({
+                    a.default.dispatch({
                         type: "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE",
                         context: t,
                         userId: e
@@ -482,31 +482,31 @@
                 },
                 setDisableLocalVideo(e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.MediaEngineContextTypes.DEFAULT,
-                        a = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
+                        i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
                         s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
                         context: n,
                         userId: e,
                         videoToggleState: t,
-                        persist: a,
+                        persist: i,
                         isAutomatic: s
                     })
                 },
                 setLocalVolume(e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.MediaEngineContextTypes.DEFAULT;
-                    i.default.dispatch({
+                    a.default.dispatch({
                         type: "AUDIO_SET_LOCAL_VOLUME",
                         context: n,
                         userId: e,
-                        volume: (0, a.snapVolumeToDefault)(t, n)
+                        volume: (0, i.snapVolumeToDefault)(t, n)
                     })
                 },
                 setLocalPan(e, t, n) {
-                    let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : f.MediaEngineContextTypes.DEFAULT;
-                    i.default.dispatch({
+                    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : f.MediaEngineContextTypes.DEFAULT;
+                    a.default.dispatch({
                         type: "AUDIO_SET_LOCAL_PAN",
-                        context: a,
+                        context: i,
                         userId: e,
                         left: t,
                         right: n
@@ -515,7 +515,7 @@
                 setMode(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.MediaEngineContextTypes.DEFAULT;
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_MODE",
                         context: n,
                         mode: e,
@@ -526,13 +526,13 @@
                     })
                 },
                 setInputVolume(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_INPUT_VOLUME",
                         volume: e
                     })
                 },
                 setOutputVolume(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_OUTPUT_VOLUME",
                         volume: e
                     })
@@ -541,10 +541,10 @@
                     if (!S()) {
                         if (null != t) {
                             let n = l.default.getInputDevices(),
-                                i = l.default.getInputDeviceId();
-                            _(n, i, e, "Audio Input", t)
+                                a = l.default.getInputDeviceId();
+                            _(n, a, e, "Audio Input", t)
                         }
-                        i.default.dispatch({
+                        a.default.dispatch({
                             type: "AUDIO_SET_INPUT_DEVICE",
                             id: e
                         }), p()
@@ -554,10 +554,10 @@
                     if (!S()) {
                         if (null != t) {
                             let n = l.default.getOutputDevices(),
-                                i = l.default.getOutputDeviceId();
-                            _(n, i, e, "Audio Output", t)
+                                a = l.default.getOutputDeviceId();
+                            _(n, a, e, "Audio Output", t)
                         }
-                        i.default.dispatch({
+                        a.default.dispatch({
                             type: "AUDIO_SET_OUTPUT_DEVICE",
                             id: e
                         }), p()
@@ -567,67 +567,67 @@
                     if (!S()) {
                         if (null != t) {
                             let n = l.default.getVideoDevices(),
-                                i = l.default.getVideoDeviceId();
-                            _(n, i, e, "Video", t)
+                                a = l.default.getVideoDeviceId();
+                            _(n, a, e, "Video", t)
                         }
-                        i.default.dispatch({
+                        a.default.dispatch({
                             type: "MEDIA_ENGINE_SET_VIDEO_DEVICE",
                             id: e
                         })
                     }
                 },
                 setEchoCancellation(e, t) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_ECHO_CANCELLATION",
                         enabled: e,
                         location: t
                     })
                 },
                 setLoopback(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_LOOPBACK",
                         enabled: e
                     })
                 },
                 setNoiseSuppression(e, t) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_NOISE_SUPPRESSION",
                         enabled: e,
                         location: t
                     })
                 },
                 setNoiseCancellation(e, t) {
-                    !S() && (i.default.dispatch({
+                    !S() && (a.default.dispatch({
                         type: "AUDIO_SET_NOISE_CANCELLATION",
                         enabled: e,
                         location: t
-                    }), i.default.dispatch({
+                    }), a.default.dispatch({
                         type: "AUDIO_SET_NOISE_SUPPRESSION",
                         enabled: !e,
                         location: t
                     }))
                 },
                 setAutomaticGainControl(e, t) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_AUTOMATIC_GAIN_CONTROL",
                         enabled: e,
                         location: t
                     })
                 },
                 setExperimentalEncoders(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "MEDIA_ENGINE_SET_EXPERIMENTAL_ENCODERS",
                         enabled: e
                     })
                 },
                 setHardwareH264(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "MEDIA_ENGINE_SET_HARDWARE_H264",
                         enabled: e
                     })
                 },
                 setAttenuation(e, t, n) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_ATTENUATION",
                         attenuation: e,
                         attenuateWhileSpeakingSelf: t,
@@ -635,90 +635,90 @@
                     })
                 },
                 setQoS(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_QOS",
                         enabled: e
                     })
                 },
                 reset() {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_RESET"
                     })
                 },
                 setSilenceWarning(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_DISPLAY_SILENCE_WARNING",
                         enabled: e
                     })
                 },
                 setDebugLogging(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_DEBUG_LOGGING",
                         enabled: e
                     })
                 },
                 setVideoHook(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "MEDIA_ENGINE_SET_VIDEO_HOOK",
                         enabled: e
                     })
                 },
                 setExperimentalSoundshare(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE",
                         enabled: e
                     })
                 },
                 setAudioSubsystem(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "AUDIO_SET_SUBSYSTEM",
                         subsystem: e
                     })
                 },
                 setVideoEnabled(e) {
-                    (0, s.applyInitialVideoBackgroundOption)(), i.default.dispatch({
+                    (0, s.applyInitialVideoBackgroundOption)(), a.default.dispatch({
                         type: "MEDIA_ENGINE_SET_VIDEO_ENABLED",
                         enabled: e
                     })
                 },
                 setGoLiveSource(e) {
-                    (null == e ? void 0 : e.qualityOptions) != null && (0, r.trackStreamSettingsUpdate)(e.qualityOptions.preset, e.qualityOptions.resolution, e.qualityOptions.frameRate), i.default.dispatch({
+                    (null == e ? void 0 : e.qualityOptions) != null && (0, r.trackStreamSettingsUpdate)(e.qualityOptions.preset, e.qualityOptions.resolution, e.qualityOptions.frameRate), a.default.dispatch({
                         type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE",
                         settings: e
                     })
                 },
                 setOpenH264(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "MEDIA_ENGINE_SET_OPEN_H264",
                         enabled: e
                     })
                 },
                 setAV1Enabled(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "MEDIA_ENGINE_SET_AV1",
                         enabled: e
                     })
                 },
                 setH265Enabled(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "MEDIA_ENGINE_SET_H265",
                         enabled: e
                     })
                 },
                 setAecDump(e) {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "MEDIA_ENGINE_SET_AEC_DUMP",
                         enabled: e
                     })
                 },
                 interact() {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "MEDIA_ENGINE_INTERACTION_REQUIRED",
                         required: !1
                     })
                 },
                 enableSoundshare() {
-                    !S() && i.default.dispatch({
+                    !S() && a.default.dispatch({
                         type: "MEDIA_ENGINE_ENABLE_SOUNDSHARE"
                     })
                 }
@@ -731,20 +731,20 @@
                     return u
                 }
             });
-            var i = n("913144"),
-                a = n("679428"),
+            var a = n("913144"),
+                i = n("679428"),
                 s = n("282109"),
                 u = {
                     update(e) {
-                        i.default.dispatch({
+                        a.default.dispatch({
                             type: "CHANNEL_COLLAPSE",
                             channelId: e
                         })
                     },
                     toggleCollapseGuild(e) {
-                        a.default.saveUserGuildSettings(e, {
+                        i.default.saveUserGuildSettings(e, {
                             hide_muted_channels: !s.default.isGuildCollapsed(e)
-                        }), i.default.dispatch({
+                        }), a.default.dispatch({
                             type: "GUILD_TOGGLE_COLLAPSE_MUTED",
                             guildId: e
                         })
@@ -761,9 +761,9 @@
                     return m
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("77078"),
+            var i = n("77078"),
                 s = n("913144"),
                 u = n("605250"),
                 l = n("42887"),
@@ -774,11 +774,11 @@
             let f = new u.default("AudioActionCreators");
 
             function p() {
-                (0, a.openModalLazy)(async () => {
+                (0, i.openModalLazy)(async () => {
                     let {
                         default: e
                     } = await n.el("649486").then(n.bind(n, "649486"));
-                    return t => (0, i.jsx)(e, {
+                    return t => (0, a.jsx)(e, {
                         source: "Unsupported Browser",
                         ...t
                     })
@@ -786,14 +786,14 @@
             }
 
             function _() {
-                return !l.default.isSupported() && ((0, a.openModal)(e => (0, i.jsx)(a.ConfirmModal, {
+                return !l.default.isSupported() && ((0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
                     header: c.default.Messages.UNSUPPORTED_BROWSER,
                     confirmText: c.default.Messages.DOWNLOAD_APP,
                     cancelText: c.default.Messages.CANCEL,
                     onConfirm: p,
-                    confirmButtonColor: a.Button.Colors.BRAND,
+                    confirmButtonColor: i.Button.Colors.BRAND,
                     ...e,
-                    children: (0, i.jsx)(a.Text, {
+                    children: (0, a.jsx)(i.Text, {
                         variant: "text-md/normal",
                         children: c.default.Messages.UNSUPPORTED_BROWSER_DETAILS
                     })
@@ -841,30 +841,30 @@
                     return u
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("669491"),
+            var i = n("669491"),
                 s = n("75196");
             let u = e => {
                 let {
                     width: t = 24,
                     height: n = 24,
-                    color: u = a.default.colors.INTERACTIVE_NORMAL,
+                    color: u = i.default.colors.INTERACTIVE_NORMAL,
                     colorClass: l = "",
                     ...o
                 } = e;
-                return (0, i.jsxs)("svg", {
+                return (0, a.jsxs)("svg", {
                     ...(0, s.default)(o),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: t,
                     height: n,
                     fill: "none",
                     viewBox: "0 0 24 24",
-                    children: [(0, i.jsx)("path", {
+                    children: [(0, a.jsx)("path", {
                         d: "M19 14a1 1 0 0 1 1 1v3h3a1 1 0 0 1 0 2h-3v3a1 1 0 0 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1Z",
                         fill: "string" == typeof u ? u : u.css,
                         className: l
-                    }), (0, i.jsx)("path", {
+                    }), (0, a.jsx)("path", {
                         d: "M16.83 12.93c.26-.27.26-.75-.08-.92A9.5 9.5 0 0 0 12.47 11h-.94A9.53 9.53 0 0 0 2 20.53c0 .81.66 1.47 1.47 1.47h.22c.24 0 .44-.17.5-.4.29-1.12.84-2.17 1.32-2.91.14-.21.43-.1.4.15l-.26 2.61c-.02.3.2.55.5.55h7.64c.12 0 .17-.31.06-.36C12.82 21.14 12 20.22 12 19a3 3 0 0 1 3-3h.5a.5.5 0 0 0 .5-.5V15c0-.8.31-1.53.83-2.07ZM12 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z",
                         fill: "string" == typeof u ? u : u.css,
                         className: l
@@ -879,9 +879,9 @@
                     return H
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
                 u = n("272030"),
                 l = n("838446"),
@@ -897,19 +897,19 @@
                 S = n("534222"),
                 g = n("601131"),
                 N = n("47495"),
-                v = n("834052"),
+                T = n("834052"),
                 A = n("715243"),
-                T = n("458574"),
+                v = n("458574"),
                 h = n("963150"),
                 I = n("308798"),
-                C = n("47006"),
-                M = n("809259"),
+                M = n("47006"),
+                C = n("809259"),
                 O = n("878526"),
                 U = n("44141"),
                 L = n("531674"),
                 b = n("619436"),
-                y = n("625399"),
-                D = n("339876"),
+                D = n("625399"),
+                y = n("339876"),
                 x = n("702741"),
                 R = n("782000"),
                 G = n("45593"),
@@ -923,30 +923,30 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, o = t.isGuildStageVoice(), r = (0, a.useStateFromStores)([v.default], () => o ? v.default.getStageInstanceByChannel(t.id) : void 0, [o, t.id]), f = (0, T.default)(t), m = (0, S.useActiveEvent)(t.id), A = (0, g.default)(null == m ? void 0 : m.id, n, t), h = (0, R.default)(t, r), I = (0, p.useAddToFavoritesItem)(t), O = (0, p.useRemoveFromFavoritesItem)(t), U = (0, _.default)(t), L = (0, E.default)(t), D = (0, M.default)(t), G = (0, b.default)(t), F = (0, C.default)(t), P = (0, V.default)(t, n), k = (0, c.default)({
+                } = e, o = t.isGuildStageVoice(), r = (0, i.useStateFromStores)([T.default], () => o ? T.default.getStageInstanceByChannel(t.id) : void 0, [o, t.id]), f = (0, v.default)(t), m = (0, S.useActiveEvent)(t.id), A = (0, g.default)(null == m ? void 0 : m.id, n, t), h = (0, R.default)(t, r), I = (0, p.useAddToFavoritesItem)(t), O = (0, p.useRemoveFromFavoritesItem)(t), U = (0, _.default)(t), L = (0, E.default)(t), y = (0, C.default)(t), G = (0, b.default)(t), F = (0, M.default)(t), P = (0, V.default)(t, n), k = (0, c.default)({
                     id: t.id,
                     label: w.default.Messages.COPY_ID_CHANNEL
-                }), j = (0, x.default)(t), H = (0, d.default)(t), B = (0, N.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuFavorite"), Y = (0, y.default)(t);
-                return (0, i.jsxs)(s.Menu, {
+                }), j = (0, x.default)(t), H = (0, d.default)(t), B = (0, N.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuFavorite"), Y = (0, D.default)(t);
+                return (0, a.jsxs)(s.Menu, {
                     navId: "channel-context",
                     onClose: u.closeContextMenu,
                     "aria-label": w.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: l,
-                    children: [(0, i.jsx)(s.MenuGroup, {
+                    children: [(0, a.jsx)(s.MenuGroup, {
                         children: null != m ? A : h
-                    }), (0, i.jsxs)(s.MenuGroup, {
+                    }), (0, a.jsxs)(s.MenuGroup, {
                         children: [L, U, I]
-                    }), (0, i.jsxs)(s.MenuGroup, {
-                        children: [D, B ? Y : G, F]
-                    }), (0, i.jsx)(s.MenuGroup, {
+                    }), (0, a.jsxs)(s.MenuGroup, {
+                        children: [y, B ? Y : G, F]
+                    }), (0, a.jsx)(s.MenuGroup, {
                         children: H
-                    }), (0, i.jsx)(s.MenuGroup, {
+                    }), (0, a.jsx)(s.MenuGroup, {
                         children: O
-                    }), (0, i.jsxs)(s.MenuGroup, {
+                    }), (0, a.jsxs)(s.MenuGroup, {
                         children: [P, f]
-                    }), (0, i.jsx)(s.MenuGroup, {
+                    }), (0, a.jsx)(s.MenuGroup, {
                         children: j
-                    }), (0, i.jsx)(s.MenuGroup, {
+                    }), (0, a.jsx)(s.MenuGroup, {
                         children: k
                     })]
                 })
@@ -957,39 +957,39 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, o = t.isGuildStageVoice(), r = (0, a.useStateFromStores)([v.default], () => o ? v.default.getStageInstanceByChannel(t.id) : void 0, [o, t.id]), f = (0, U.default)(t), _ = (0, T.default)(t), E = (0, S.useActiveEvent)(t.id), P = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, R.default)(t, r), j = (0, p.useAddToFavoritesItem)(t), H = (0, p.useRemoveFromFavoritesItem)(t), B = (0, M.default)(t), Y = (0, b.default)(t), W = (0, C.default)(t), K = (0, O.default)(t, n, r), q = (0, V.default)(t, n), Q = (0, G.default)(t, n), Z = (0, F.default)(t, n.id), X = (0, A.default)(t, n), z = (0, h.default)(t, n), J = (0, I.default)(t), $ = (0, c.default)({
+                } = e, o = t.isGuildStageVoice(), r = (0, i.useStateFromStores)([T.default], () => o ? T.default.getStageInstanceByChannel(t.id) : void 0, [o, t.id]), f = (0, U.default)(t), _ = (0, v.default)(t), E = (0, S.useActiveEvent)(t.id), P = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, R.default)(t, r), j = (0, p.useAddToFavoritesItem)(t), H = (0, p.useRemoveFromFavoritesItem)(t), B = (0, C.default)(t), Y = (0, b.default)(t), W = (0, M.default)(t), K = (0, O.default)(t, n, r), q = (0, V.default)(t, n), Q = (0, G.default)(t, n), Z = (0, F.default)(t, n.id), X = (0, A.default)(t, n), z = (0, h.default)(t, n), J = (0, I.default)(t), $ = (0, c.default)({
                     id: t.id,
                     label: w.default.Messages.COPY_ID_CHANNEL
-                }), ee = (0, x.default)(t), et = (0, d.default)(t), en = (0, D.default)(t), ei = (0, m.default)(t), ea = (0, L.default)(t), es = (0, N.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuNormal"), eu = (0, y.default)(t);
-                return (0, i.jsxs)(s.Menu, {
+                }), ee = (0, x.default)(t), et = (0, d.default)(t), en = (0, y.default)(t), ea = (0, m.default)(t), ei = (0, L.default)(t), es = (0, N.useShouldUseNewNotificationSystem)("ChannelListVoiceContextMenuNormal"), eu = (0, D.default)(t);
+                return (0, a.jsxs)(s.Menu, {
                     navId: "channel-context",
                     onClose: u.closeContextMenu,
                     "aria-label": w.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: l,
-                    children: [(0, i.jsx)(s.MenuGroup, {
+                    children: [(0, a.jsx)(s.MenuGroup, {
                         children: null != E ? P : k
-                    }), (0, i.jsx)(s.MenuGroup, {
+                    }), (0, a.jsx)(s.MenuGroup, {
                         children: f
-                    }, "mark-as-read"), (0, i.jsxs)(s.MenuGroup, {
+                    }, "mark-as-read"), (0, a.jsxs)(s.MenuGroup, {
                         children: [K, et, en, j, _]
-                    }, "channel-actions"), (0, i.jsxs)(s.MenuGroup, {
-                        children: [Z, q, Q, B, ei, ee]
-                    }, "voice-actions"), (0, i.jsxs)(s.MenuGroup, {
-                        children: [ea, es ? eu : Y]
-                    }, "notifications"), (0, i.jsx)(s.MenuGroup, {
+                    }, "channel-actions"), (0, a.jsxs)(s.MenuGroup, {
+                        children: [Z, q, Q, B, ea, ee]
+                    }, "voice-actions"), (0, a.jsxs)(s.MenuGroup, {
+                        children: [ei, es ? eu : Y]
+                    }, "notifications"), (0, a.jsx)(s.MenuGroup, {
                         children: H
-                    }), (0, i.jsxs)(s.MenuGroup, {
+                    }), (0, a.jsxs)(s.MenuGroup, {
                         children: [W, X, z, J]
-                    }, "admin-actions"), (0, i.jsx)(s.MenuGroup, {
+                    }, "admin-actions"), (0, a.jsx)(s.MenuGroup, {
                         children: $
                     }, "developer-actions")]
                 })
             }
             var H = (0, o.default)((0, l.default)(function(e) {
                 let t = (0, f.default)();
-                return t ? (0, i.jsx)(k, {
+                return t ? (0, a.jsx)(k, {
                     ...e
-                }) : (0, i.jsx)(j, {
+                }) : (0, a.jsx)(j, {
                     ...e
                 })
             }, {
@@ -1003,17 +1003,17 @@
                     return d
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
                 u = n("126501"),
                 l = n("816092"),
                 o = n("782340");
 
             function d(e) {
-                let t = (0, a.useStateFromStores)([l.default], () => l.default.isCollapsed(e.id), [e.id]);
-                return __OVERLAY__ ? null : (0, i.jsx)(s.MenuCheckboxItem, {
+                let t = (0, i.useStateFromStores)([l.default], () => l.default.isCollapsed(e.id), [e.id]);
+                return __OVERLAY__ ? null : (0, a.jsx)(s.MenuCheckboxItem, {
                     id: "hide-voice-names",
                     label: o.default.Messages.VOICE_CHANNEL_HIDE_NAMES,
                     action: () => u.default.update(e.id),
@@ -1031,10 +1031,10 @@
                     return g
                 }
             }), n("222007");
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("866227"),
-                s = n.n(a),
+            var i = n("866227"),
+                s = n.n(i),
                 u = n("446674"),
                 l = n("77078"),
                 o = n("820542"),
@@ -1076,7 +1076,7 @@
                 };
 
             function g(e, t) {
-                let [n, a] = (0, u.useStateFromStoresArray)([c.default], () => [c.default.isChannelMuted(e.guild_id, e.id), c.default.getChannelMuteConfig(e.guild_id, e.id)]), s = (0, r.useMutedUntilText)(a), _ = (0, f.default)(e, !0);
+                let [n, i] = (0, u.useStateFromStoresArray)([c.default], () => [c.default.isChannelMuted(e.guild_id, e.id), c.default.getChannelMuteConfig(e.guild_id, e.id)]), s = (0, r.useMutedUntilText)(i), _ = (0, f.default)(e, !0);
 
                 function g(t) {
                     t && e.type === p.ChannelTypes.GUILD_CATEGORY && (0, o.categoryCollapse)(e.id), d.default.updateChannelOverrideSettings(e.guild_id, e.id, {
@@ -1084,47 +1084,47 @@
                     })
                 }
                 let N = E.default.Messages.MUTE_CHANNEL_GENERIC,
-                    v = E.default.Messages.UNMUTE_CHANNEL_GENERIC;
+                    T = E.default.Messages.UNMUTE_CHANNEL_GENERIC;
                 switch (e.type) {
                     case p.ChannelTypes.GUILD_CATEGORY:
-                        N = E.default.Messages.MUTE_CATEGORY, v = E.default.Messages.UNMUTE_CATEGORY;
+                        N = E.default.Messages.MUTE_CATEGORY, T = E.default.Messages.UNMUTE_CATEGORY;
                         break;
                     case p.ChannelTypes.GROUP_DM:
-                        N = E.default.Messages.MUTE_CONVERSATION, v = E.default.Messages.UNMUTE_CONVERSATION;
+                        N = E.default.Messages.MUTE_CONVERSATION, T = E.default.Messages.UNMUTE_CONVERSATION;
                         break;
                     case p.ChannelTypes.DM:
                         N = E.default.Messages.MUTE_CHANNEL.format({
                             name: _
-                        }), v = E.default.Messages.UNMUTE_CHANNEL.format({
+                        }), T = E.default.Messages.UNMUTE_CHANNEL.format({
                             name: _
                         });
                         break;
                     default:
-                        N = E.default.Messages.MUTE_CHANNEL_GENERIC, v = E.default.Messages.UNMUTE_CHANNEL_GENERIC
+                        N = E.default.Messages.MUTE_CHANNEL_GENERIC, T = E.default.Messages.UNMUTE_CHANNEL_GENERIC
                 }
-                return n ? (0, i.jsx)(l.MenuItem, {
+                return n ? (0, a.jsx)(l.MenuItem, {
                     id: "unmute-channel",
-                    label: v,
+                    label: T,
                     subtext: s,
                     action: () => g(!1)
-                }) : (0, i.jsx)(l.MenuItem, {
+                }) : (0, a.jsx)(l.MenuItem, {
                     id: "mute-channel",
                     label: N,
                     action: () => g(!0),
                     children: m().map(n => {
                         let {
-                            value: a,
+                            value: i,
                             label: s
                         } = n;
-                        return (0, i.jsx)(l.MenuItem, {
-                            id: "".concat(a),
+                        return (0, a.jsx)(l.MenuItem, {
+                            id: "".concat(i),
                             label: s,
                             action: () => (function(n) {
                                 e.type === p.ChannelTypes.GUILD_CATEGORY && (0, o.categoryCollapse)(e.id);
-                                let i = S(n);
-                                d.default.updateChannelOverrideSettings(e.guild_id, e.id, i, t)
-                            })(a)
-                        }, a)
+                                let a = S(n);
+                                d.default.updateChannelOverrideSettings(e.guild_id, e.id, a, t)
+                            })(i)
+                        }, i)
                     })
                 })
             }
@@ -1139,9 +1139,9 @@
                     return p
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
                 u = n("519705"),
                 l = n("721281"),
@@ -1150,12 +1150,12 @@
                 r = n("782340");
 
             function c(e) {
-                var t, n, i;
-                let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                var t, n, a;
+                let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 switch (e.type) {
                     case d.ChannelTypes.GUILD_VOICE:
                         ;
-                        return a ? (t = e, [{
+                        return i ? (t = e, [{
                             setting: d.UserNotificationSettings.NULL,
                             label: null != t.parent_id ? r.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : r.default.Messages.FORM_LABEL_DEFAULT
                         }, {
@@ -1182,9 +1182,9 @@
                         }];
                     default:
                         ;
-                        return i = e, [{
+                        return a = e, [{
                             setting: d.UserNotificationSettings.NULL,
-                            label: null != i.parent_id ? r.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : r.default.Messages.FORM_LABEL_DEFAULT
+                            label: null != a.parent_id ? r.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : r.default.Messages.FORM_LABEL_DEFAULT
                         }, {
                             setting: d.UserNotificationSettings.ALL_MESSAGES,
                             label: r.default.Messages.FORM_LABEL_ALL_MESSAGES
@@ -1201,29 +1201,29 @@
             function f(e) {
                 let t = e.getGuildId(),
                     n = e.id,
-                    f = (0, a.useStateFromStores)([o.default], () => {
+                    f = (0, i.useStateFromStores)([o.default], () => {
                         let n = d.UserNotificationSettings.NULL;
                         return null != e.parent_id && (n = o.default.getChannelMessageNotifications(t, e.parent_id)), n !== d.UserNotificationSettings.NULL ? n : o.default.getMessageNotifications(t)
                     }, [t, e.parent_id]),
-                    p = (0, a.useStateFromStores)([o.default], () => o.default.getNewForumThreadsCreated(e)),
-                    _ = (0, a.useStateFromStores)([o.default], () => o.default.getChannelOverrides(t)[n], [t, n]),
+                    p = (0, i.useStateFromStores)([o.default], () => o.default.getNewForumThreadsCreated(e)),
+                    _ = (0, i.useStateFromStores)([o.default], () => o.default.getChannelOverrides(t)[n], [t, n]),
                     E = null == _ ? d.UserNotificationSettings.NULL : _.message_notifications,
                     m = (0, l.useVoiceActivityNotificationSettingsExperiment)(e),
                     S = c(e, m);
-                return null == S ? null : (0, i.jsxs)(i.Fragment, {
-                    children: [e.isForumLikeChannel() ? (0, i.jsxs)(i.Fragment, {
-                        children: [(0, i.jsx)(s.MenuCheckboxItem, {
+                return null == S ? null : (0, a.jsxs)(a.Fragment, {
+                    children: [e.isForumLikeChannel() ? (0, a.jsxs)(a.Fragment, {
+                        children: [(0, a.jsx)(s.MenuCheckboxItem, {
                             id: "new-forum-threads-created",
                             label: r.default.Messages.FORUM_NEW_POSTS_CREATED,
                             checked: p,
                             action: () => u.default.setForumThreadsCreated(e, !p)
-                        }), (0, i.jsx)(s.MenuSeparator, {})]
-                    }) : null, S.map(a => {
+                        }), (0, a.jsx)(s.MenuSeparator, {})]
+                    }) : null, S.map(i => {
                         let {
                             setting: l,
                             label: o
-                        } = a;
-                        return (0, i.jsx)(s.MenuRadioItem, {
+                        } = i;
+                        return (0, a.jsx)(s.MenuRadioItem, {
                             group: "channel-notifications",
                             id: "".concat(l),
                             label: o,
@@ -1256,8 +1256,8 @@
             function p(e) {
                 var t, n;
                 let u = f(e),
-                    p = (0, a.useStateFromStores)([o.default], () => o.default.resolvedMessageNotifications(e), [e]),
-                    _ = (0, a.useStateFromStores)([o.default], () => o.default.getChannelOverrides(e.guild_id)[e.id], [e.guild_id, e.id]),
+                    p = (0, i.useStateFromStores)([o.default], () => o.default.resolvedMessageNotifications(e), [e]),
+                    _ = (0, i.useStateFromStores)([o.default], () => o.default.getChannelOverrides(e.guild_id)[e.id], [e.guild_id, e.id]),
                     E = null == _ ? d.UserNotificationSettings.NULL : _.message_notifications,
                     m = (0, l.useVoiceActivityNotificationSettingsExperiment)(e),
                     S = E === d.UserNotificationSettings.NULL && e.isGuildStageVoice() ? r.default.Messages.FORM_LABEL_ONLY_MENTIONS.format() : null === (n = c(e, m)) || void 0 === n ? void 0 : null === (t = n.find(e => {
@@ -1266,7 +1266,7 @@
                         } = e;
                         return t === p
                     })) || void 0 === t ? void 0 : t.label;
-                return null != u ? (0, i.jsx)(s.MenuItem, {
+                return null != u ? (0, a.jsx)(s.MenuItem, {
                     id: "channel-notifications",
                     label: r.default.Messages.NOTIFICATION_SETTINGS,
                     subtext: S,
@@ -1281,9 +1281,9 @@
                     return d
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("77078"),
+            var i = n("77078"),
                 s = n("377114"),
                 u = n("834052"),
                 l = n("907566"),
@@ -1291,7 +1291,7 @@
 
             function d(e) {
                 let t = u.default.isLive(e.id);
-                return e.isGuildStageVoice() && t ? (0, i.jsx)(a.MenuItem, {
+                return e.isGuildStageVoice() && t ? (0, a.jsx)(i.MenuItem, {
                     id: "report-stage",
                     label: o.default.Messages.REPORT_MODAL_REPORT_STAGE_MENU_ITEM,
                     action: () => (0, s.showReportModalForStageChannel)(e),
@@ -1307,9 +1307,9 @@
                     return r
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
                 u = n("244480"),
                 l = n("923510"),
@@ -1317,19 +1317,19 @@
                 d = n("782340");
 
             function r(e, t) {
-                let n = (0, a.useStateFromStores)([o.default], () => o.default.can(l.MODERATE_STAGE_CHANNEL_PERMISSIONS, e), [e]);
-                return null != t && n ? (0, i.jsx)(s.MenuItem, {
+                let n = (0, i.useStateFromStores)([o.default], () => o.default.can(l.MODERATE_STAGE_CHANNEL_PERMISSIONS, e), [e]);
+                return null != t && n ? (0, a.jsx)(s.MenuItem, {
                     id: "end-stage",
                     label: d.default.Messages.END_STAGE,
                     color: "danger",
                     action: function() {
-                        (0, s.openModal)(t => (0, i.jsx)(s.ConfirmModal, {
+                        (0, s.openModal)(t => (0, a.jsx)(s.ConfirmModal, {
                             ...t,
                             header: d.default.Messages.END_STAGE_TITLE,
                             confirmText: d.default.Messages.END_STAGE,
                             cancelText: d.default.Messages.CANCEL,
                             onConfirm: () => (0, u.endStage)(e),
-                            children: (0, i.jsx)(s.Text, {
+                            children: (0, a.jsx)(s.Text, {
                                 variant: "text-md/normal",
                                 color: "header-secondary",
                                 children: d.default.Messages.EXPLICIT_END_STAGE_SUBTITLE
@@ -1346,9 +1346,9 @@
                     return p
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
                 u = n("18054"),
                 l = n("843624"),
@@ -1359,18 +1359,18 @@
                 f = n("782340");
 
             function p(e, t) {
-                let p = (0, a.useStateFromStores)([d.default], () => d.default.can(c.Permissions.MANAGE_CHANNELS, t)),
-                    _ = (0, a.useStateFromStores)([d.default], () => d.default.can(c.Permissions.SET_VOICE_CHANNEL_STATUS, e)),
+                let p = (0, i.useStateFromStores)([d.default], () => d.default.can(c.Permissions.MANAGE_CHANNELS, t)),
+                    _ = (0, i.useStateFromStores)([d.default], () => d.default.can(c.Permissions.SET_VOICE_CHANNEL_STATUS, e)),
                     E = (0, o.useIsConnectedToVoiceChannel)(e),
-                    m = (0, a.useStateFromStores)([r.default], () => r.default.getChannelStatus(e)),
+                    m = (0, i.useStateFromStores)([r.default], () => r.default.getChannelStatus(e)),
                     S = null != m && m.length > 0;
-                return e.isGuildVoice() && (p || _) ? !E && p && S ? (0, i.jsx)(s.MenuItem, {
+                return e.isGuildVoice() && (p || _) ? !E && p && S ? (0, a.jsx)(s.MenuItem, {
                     id: "clear-status",
                     label: f.default.Messages.VOICE_CHANNEL_CLEAR_STATUS,
                     action: () => {
                         u.default.updateVoiceChannelStatus(e.id, "")
                     }
-                }) : E && _ ? (0, i.jsx)(s.MenuItem, {
+                }) : E && _ ? (0, a.jsx)(s.MenuItem, {
                     id: "set-status",
                     label: f.default.Messages.VOICE_CHANNEL_SET_STATUS,
                     action: () => {
@@ -1378,7 +1378,7 @@
                             let {
                                 default: t
                             } = await n.el("843624").then(n.bind(n, "843624"));
-                            return n => (0, i.jsx)(t, {
+                            return n => (0, a.jsx)(t, {
                                 channel: e,
                                 ...n
                             })
@@ -1396,9 +1396,9 @@
                     return p
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("446674"),
+            var i = n("446674"),
                 s = n("155823"),
                 u = n("987317"),
                 l = n("305122"),
@@ -1409,11 +1409,11 @@
                 f = n("782340");
 
             function p(e, t) {
-                let n = (0, a.useStateFromStores)([d.default], () => d.default.can(c.Permissions.CONNECT, e), [e]),
-                    p = (0, a.useStateFromStores)([r.default], () => r.default.getVoiceChannelId()),
+                let n = (0, i.useStateFromStores)([d.default], () => d.default.can(c.Permissions.CONNECT, e), [e]),
+                    p = (0, i.useStateFromStores)([r.default], () => r.default.getVoiceChannelId()),
                     _ = (0, o.useCustomJoinSound)(t),
                     E = p === e.id;
-                return e.isGuildVocal() && n && null != _ && !E ? (0, i.jsx)(s.MenuItem, {
+                return e.isGuildVocal() && n && null != _ && !E ? (0, a.jsx)(s.MenuItem, {
                     id: "join-muted-custom-join-sound",
                     label: f.default.Messages.VOICE_CHANNEL_MUTED_CUSTOM_JOIN_SOUND,
                     action: () => {
@@ -1429,9 +1429,9 @@
                     return c
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
                 u = n("255397"),
                 l = n("393414"),
@@ -1440,8 +1440,8 @@
                 r = n("782340");
 
             function c(e, t) {
-                let n = (0, a.useStateFromStores)([o.default], () => o.default.can(d.Permissions.CONNECT, e), [e]);
-                return n && e.isGuildVocal() ? (0, i.jsx)(s.MenuItem, {
+                let n = (0, i.useStateFromStores)([o.default], () => o.default.can(d.Permissions.CONNECT, e), [e]);
+                return n && e.isGuildVocal() ? (0, a.jsx)(s.MenuItem, {
                     id: "open-chat",
                     label: r.default.Messages.OPEN_CHAT,
                     action: () => {
@@ -1472,9 +1472,9 @@
                     return r
                 }
             });
-            var i = n("516555"),
-                a = n("839491");
-            let s = a,
+            var a = n("516555"),
+                i = n("839491");
+            let s = i,
                 u = ["#FF73FA", "#FFC0FF", "#FFD836", "#FF9A15", "#A5F7DE", "#51BC9D", "#AEC7FF", "#3E70DD"],
                 l = [n("606863"), s, n("164654"), n("540346"), n("526094"), n("367469"), n("23933"), {
                     src: n("283397"),
@@ -1506,7 +1506,7 @@
                         maxValue: o
                     }
                 },
-                r = new i.Environment
+                r = new a.Environment
         },
         200008: function(e, t, n) {
             "use strict";
@@ -1533,8 +1533,8 @@
                     return g
                 }
             }), n("222007");
-            var i = n("249654"),
-                a = n("151426"),
+            var a = n("249654"),
+                i = n("151426"),
                 s = n("872173"),
                 u = n("42203"),
                 l = n("957255"),
@@ -1555,9 +1555,9 @@
                         delete e[t];
                         continue
                     }
-                    if (n.type === a.FavoriteChannelType.CATEGORY) continue;
-                    let i = u.default.getChannel(t);
-                    if (null == i || !i.isPrivate() && !l.default.can(d.Permissions.VIEW_CHANNEL, i)) {
+                    if (n.type === i.FavoriteChannelType.CATEGORY) continue;
+                    let a = u.default.getChannel(t);
+                    if (null == a || !a.isPrivate() && !l.default.can(d.Permissions.VIEW_CHANNEL, a)) {
                         delete e[t];
                         continue
                     }
@@ -1567,9 +1567,9 @@
             function f(e, t) {
                 let n = o.default.isFavorite(e);
                 !n && s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
-                    n.favoriteChannels[e] = a.FavoriteChannel.create({
+                    n.favoriteChannels[e] = i.FavoriteChannel.create({
                         nickname: "",
-                        type: a.FavoriteChannelType.REFERENCE_ORIGINAL,
+                        type: i.FavoriteChannelType.REFERENCE_ORIGINAL,
                         position: r(),
                         parentId: null != t ? t : "0"
                     }), c(n.favoriteChannels)
@@ -1579,7 +1579,7 @@
             function p(e) {
                 let t = o.default.getFavorite(e);
                 null != t && s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
-                    if (delete n.favoriteChannels[e], t.type === a.FavoriteChannelType.CATEGORY)
+                    if (delete n.favoriteChannels[e], t.type === i.FavoriteChannelType.CATEGORY)
                         for (let t in n.favoriteChannels) n.favoriteChannels[t].parentId === e && (n.favoriteChannels[t].parentId = "0");
                     c(n.favoriteChannels)
                 }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
@@ -1593,11 +1593,11 @@
             }
 
             function E(e) {
-                let t = i.default.fromTimestamp(Date.now());
+                let t = a.default.fromTimestamp(Date.now());
                 s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
-                    n.favoriteChannels[t] = a.FavoriteChannel.create({
+                    n.favoriteChannels[t] = i.FavoriteChannel.create({
                         nickname: e,
-                        type: a.FavoriteChannelType.CATEGORY,
+                        type: i.FavoriteChannelType.CATEGORY,
                         position: r(),
                         parentId: "0"
                     })
@@ -1610,10 +1610,10 @@
 
             function S(e) {
                 s.PreloadedUserSettingsActionCreators.updateAsync("favorites", t => {
-                    for (let i of e)
-                        if (null != i.position && (t.favoriteChannels[i.id].position = i.position), void 0 !== i.parent_id) {
+                    for (let a of e)
+                        if (null != a.position && (t.favoriteChannels[a.id].position = a.position), void 0 !== a.parent_id) {
                             var n;
-                            t.favoriteChannels[i.id].parentId = null !== (n = i.parent_id) && void 0 !== n ? n : "0"
+                            t.favoriteChannels[a.id].parentId = null !== (n = a.parent_id) && void 0 !== n ? n : "0"
                         }
                 }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
@@ -1634,20 +1634,20 @@
                     return u
                 }
             });
-            var i = n("446674"),
-                a = n("398604");
+            var a = n("446674"),
+                i = n("398604");
 
             function s(e, t) {
-                let n = (0, i.useStateFromStoresArray)([a.default], () => {
+                let n = (0, a.useStateFromStoresArray)([i.default], () => {
                     var e, n;
-                    return null !== (n = null === (e = a.default.getGuildScheduledEvent(t)) || void 0 === e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== n ? n : []
+                    return null !== (n = null === (e = i.default.getGuildScheduledEvent(t)) || void 0 === e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== n ? n : []
                 });
                 return l(n, e)
             }
 
             function u(e, t) {
-                var n, i;
-                let s = null !== (i = null === (n = a.default.getGuildScheduledEvent(t)) || void 0 === n ? void 0 : n.guild_scheduled_event_exceptions) && void 0 !== i ? i : [];
+                var n, a;
+                let s = null !== (a = null === (n = i.default.getGuildScheduledEvent(t)) || void 0 === n ? void 0 : n.guild_scheduled_event_exceptions) && void 0 !== a ? a : [];
                 return l(s, e)
             }
 
@@ -1666,17 +1666,17 @@
                     return r
                 }
             });
-            var i = n("627445"),
-                a = n.n(i),
+            var a = n("627445"),
+                i = n.n(a),
                 s = n("446674"),
                 u = n("398604"),
                 l = n("397680"),
                 o = n("822516");
 
             function d(e, t, n) {
-                var i;
-                let d = null !== (i = (0, s.useStateFromStores)([u.default], () => u.default.getGuildScheduledEvent(e))) && void 0 !== i ? i : n;
-                a(null != d, "Event must be defined"), t = null != t ? t : (0, o.getNextRecurrenceIdInEvent)(d);
+                var a;
+                let d = null !== (a = (0, s.useStateFromStores)([u.default], () => u.default.getGuildScheduledEvent(e))) && void 0 !== a ? a : n;
+                i(null != d, "Event must be defined"), t = null != t ? t : (0, o.getNextRecurrenceIdInEvent)(d);
                 let r = (0, l.default)(t, e);
                 return c(d, r, t)
             }
@@ -1691,13 +1691,13 @@
                     startTime: new Date(e.scheduled_start_time),
                     endTime: null != e.scheduled_end_time ? new Date(e.scheduled_end_time) : null
                 };
-                let i = (0, o.getBaseScheduleForRecurrence)(n, e),
+                let a = (0, o.getBaseScheduleForRecurrence)(n, e),
                     {
-                        startDate: a,
+                        startDate: i,
                         endDate: s
-                    } = (0, o.getScheduleForRecurrenceWithException)(i, t);
+                    } = (0, o.getScheduleForRecurrenceWithException)(a, t);
                 return {
-                    startTime: a.toDate(),
+                    startTime: i.toDate(),
                     endTime: null == s ? void 0 : s.toDate()
                 }
             }
@@ -1709,9 +1709,9 @@
                     return f
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
                 u = n("817963"),
                 l = n("244480"),
@@ -1723,7 +1723,7 @@
             function f(e, t, n) {
                 let {
                     canManageGuildEvent: f
-                } = (0, u.useManageResourcePermissions)(null != n ? n : t), p = (0, a.useStateFromStores)([o.default], () => o.default.isActive(e)), _ = (0, a.useStateFromStores)([o.default], () => o.default.getGuildScheduledEvent(e), [e]), E = f(_);
+                } = (0, u.useManageResourcePermissions)(null != n ? n : t), p = (0, i.useStateFromStores)([o.default], () => o.default.isActive(e)), _ = (0, i.useStateFromStores)([o.default], () => o.default.getGuildScheduledEvent(e), [e]), E = f(_);
                 if (null == e || !E || !p || (null == _ ? void 0 : _.entity_type) === r.GuildScheduledEventEntityTypes.EXTERNAL) return null;
                 let m = () => {
                     if (null == n ? void 0 : n.isGuildStageVoice()) {
@@ -1732,17 +1732,17 @@
                     }
                     null != e && d.default.endEvent(e, t.id), (0, s.closeAllModals)()
                 };
-                return (0, i.jsx)(s.MenuItem, {
+                return (0, a.jsx)(s.MenuItem, {
                     id: c.default.Messages.END_EVENT,
                     label: c.default.Messages.END_EVENT,
                     action: function() {
-                        (0, s.openModal)(e => (0, i.jsx)(s.ConfirmModal, {
+                        (0, s.openModal)(e => (0, a.jsx)(s.ConfirmModal, {
                             ...e,
                             header: c.default.Messages.END_EVENT,
                             confirmText: c.default.Messages.GUILD_EVENT_END_PROMPT_CONFIRM,
                             cancelText: c.default.Messages.CANCEL,
                             onConfirm: m,
-                            children: (0, i.jsx)(s.Text, {
+                            children: (0, a.jsx)(s.Text, {
                                 variant: "text-md/normal",
                                 children: c.default.Messages.GUILD_EVENT_EXTERNAL_END_PROMPT_TITLE
                             })
@@ -1752,102 +1752,34 @@
                 })
             }
         },
-        567707: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                getLockscreenWidgetConfig: function() {
-                    return l
-                },
-                useLockscreenWidgetConfig: function() {
-                    return o
-                }
-            });
-            var i = n("249654"),
-                a = n("862205"),
-                s = n("718517");
-            let u = (0, a.createExperiment)({
-                kind: "guild",
-                id: "2023-12_voice_lockscreen_widget",
-                label: "Voice live activity (guild)",
-                defaultConfig: {
-                    showWidget: !1,
-                    voiceChannelActivityNotifsEnabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Off (notif only)",
-                    config: {
-                        showWidget: !1,
-                        voiceChannelActivityNotifsEnabled: !1
-                    }
-                }, {
-                    id: 2,
-                    label: "On (widget + notif)",
-                    config: {
-                        showWidget: !0,
-                        voiceChannelActivityNotifsEnabled: !1
-                    }
-                }, {
-                    id: 3,
-                    label: "On (widget + notifs++)",
-                    config: {
-                        showWidget: !0,
-                        voiceChannelActivityNotifsEnabled: !0
-                    }
-                }]
-            });
-
-            function l(e, t) {
-                let n = i.default.age(e) >= 30 * s.default.Millis.DAY;
-                return u.getCurrentConfig({
-                    location: t,
-                    guildId: e
-                }, {
-                    disable: n,
-                    autoTrackExposure: !0
-                })
-            }
-
-            function o(e, t, n) {
-                let a = i.default.age(e) >= 30 * s.default.Millis.DAY;
-                return u.useExperiment({
-                    location: t,
-                    guildId: e
-                }, {
-                    disable: a,
-                    autoTrackExposure: n
-                })
-            }
-        },
         242757: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 canViewInviteModal: function() {
-                    return a
+                    return i
                 }
             });
-            var i = n("49111");
+            var a = n("49111");
 
-            function a(e, t, n, a) {
+            function i(e, t, n, i) {
                 let s = null != n ? n : t,
-                    u = null != s && e.can(i.Permissions.CREATE_INSTANT_INVITE, s);
-                return u || null != t && null != t.vanityURLCode || (null == a ? void 0 : a.invite_code) != null
+                    u = null != s && e.can(a.Permissions.CREATE_INSTANT_INVITE, s);
+                return u || null != t && null != t.vanityURLCode || (null == i ? void 0 : i.invite_code) != null
             }
         },
         721281: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 useVoiceActivityNotificationSettingsExperiment: function() {
-                    return o
+                    return l
                 },
                 hasVoiceChannelActivityNotifsEnabled: function() {
-                    return d
+                    return o
                 }
             });
-            var i = n("862205"),
-                a = n("567707"),
-                s = n("49111");
-            let u = (0, i.createExperiment)({
+            var a = n("862205"),
+                i = n("49111");
+            let s = (0, a.createExperiment)({
                     kind: "user",
                     id: "2023-11_voice_activity_notification_user",
                     label: "Voice Activity Notifications for User",
@@ -1862,7 +1794,7 @@
                         }
                     }]
                 }),
-                l = (0, i.createExperiment)({
+                u = (0, a.createExperiment)({
                     kind: "guild",
                     id: "2023-11_voice_activity_notification_guild",
                     label: "General Voice Channel Notifications for Guild",
@@ -1878,48 +1810,46 @@
                     }]
                 });
 
-            function o(e) {
-                var t, n;
-                let {
-                    voiceChannelActivityNotifsEnabled: i
-                } = l.useExperiment({
-                    location: "useVoiceActivityNotificationSettingsExperiment",
-                    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : ""
-                }, {
-                    disable: (null == e ? void 0 : e.type) !== s.ChannelTypes.GUILD_VOICE,
-                    autoTrackExposure: !1
-                }), {
-                    voiceChannelActivityNotifsEnabled: o
-                } = (0, a.useLockscreenWidgetConfig)(null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : "", "useVoiceActivityNotificationSettingsExperiment", !1), {
-                    enabled: d
-                } = u.useExperiment({
-                    location: "useVoiceActivityNotificationSettingsExperiment"
-                }, {
-                    disable: (null == e ? void 0 : e.type) !== s.ChannelTypes.GUILD_VOICE || !i,
-                    autoTrackExposure: !0
-                });
-                return (null == e ? void 0 : e.type) === s.ChannelTypes.GUILD_VOICE && (o || i && d)
-            }
-
-            function d(e) {
+            function l(e) {
                 var t;
                 let {
                     voiceChannelActivityNotifsEnabled: n
-                } = l.getCurrentConfig({
+                } = u.useExperiment({
+                    location: "useVoiceActivityNotificationSettingsExperiment",
+                    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : ""
+                }, {
+                    disable: (null == e ? void 0 : e.type) !== i.ChannelTypes.GUILD_VOICE,
+                    autoTrackExposure: !1
+                }), {
+                    enabled: a
+                } = s.useExperiment({
+                    location: "useVoiceActivityNotificationSettingsExperiment"
+                }, {
+                    disable: (null == e ? void 0 : e.type) !== i.ChannelTypes.GUILD_VOICE || !n,
+                    autoTrackExposure: !0
+                });
+                return (null == e ? void 0 : e.type) === i.ChannelTypes.GUILD_VOICE && n && a
+            }
+
+            function o(e) {
+                var t;
+                let {
+                    voiceChannelActivityNotifsEnabled: n
+                } = u.getCurrentConfig({
                     guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : "",
                     location: "hasVoiceChannelActivityNotifsEnabled"
-                }), i = null != e && null != e.guild_id && (0, a.getLockscreenWidgetConfig)(e.guild_id, "hasVoiceChannelActivityNotifsEnabled").voiceChannelActivityNotifsEnabled;
-                return n || i
+                });
+                return n
             }
         },
         168067: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return a
                 }
             });
-            var i = (0, n("862205").createExperiment)({
+            var a = (0, n("862205").createExperiment)({
                 kind: "user",
                 id: "2023-03_april_fools",
                 label: "April Fools 2023",
@@ -1939,13 +1869,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 Soundpacks: function() {
-                    return a
+                    return i
                 },
                 getSoundpackOptionsAprilFools2023: function() {
                     return u
                 }
             });
-            var i, a, s = n("782340");
+            var a, i, s = n("782340");
 
             function u() {
                 return [{
@@ -1955,7 +1885,7 @@
                     value: "detune",
                     label: s.default.Messages.SOUNDPACK_DETUNE_LABEL
                 }]
-            }(i = a || (a = {})).CLASSIC = "classic", i.DETUNE = "detune"
+            }(a = i || (i = {})).CLASSIC = "classic", a.DETUNE = "detune"
         },
         870696: function(e, t, n) {
             "use strict";
@@ -1964,14 +1894,14 @@
                     return d
                 }
             });
-            var i = n("446674"),
-                a = n("913144"),
+            var a = n("446674"),
+                i = n("913144"),
                 s = n("168067"),
                 u = n("157246");
             let l = {
                 soundpack: u.Soundpacks.CLASSIC
             };
-            class o extends i.default.PersistedStore {
+            class o extends a.default.PersistedStore {
                 initialize(e) {
                     s.default.subscribe({
                         location: "1"
@@ -1993,7 +1923,7 @@
                 }
             }
             o.displayName = "SoundpackStore", o.persistKey = "SoundpackStore";
-            var d = new o(a.default, {
+            var d = new o(i.default, {
                 SET_SOUNDPACK: function(e) {
                     let {
                         soundpack: t
@@ -2011,9 +1941,9 @@
                     return s
                 }
             });
-            var i = n("157246");
-            let a = {
-                [i.Soundpacks.CLASSIC]: {
+            var a = n("157246");
+            let i = {
+                [a.Soundpacks.CLASSIC]: {
                     discodo: "discodo",
                     message1: "message1",
                     deafen: "deafen",
@@ -2037,7 +1967,7 @@
                     poggermode_achievement_unlock: "poggermode_achievement_unlock",
                     stage_waiting: "stage_waiting"
                 },
-                [i.Soundpacks.DETUNE]: {
+                [a.Soundpacks.DETUNE]: {
                     discodo: "detune_discodo",
                     message1: "detune_message1",
                     deafen: "detune_deafen",
@@ -2060,7 +1990,7 @@
             };
 
             function s(e) {
-                return a[e]
+                return i[e]
             }
         },
         244480: function(e, t, n) {
@@ -2073,13 +2003,13 @@
                     return N
                 },
                 audienceAckRequestToSpeak: function() {
-                    return v
+                    return T
                 },
                 moveSelfToAudience: function() {
                     return A
                 },
                 setUserSuppress: function() {
-                    return T
+                    return v
                 },
                 moveUserToAudience: function() {
                     return h
@@ -2088,17 +2018,17 @@
                     return I
                 },
                 startStage: function() {
-                    return C
+                    return M
                 },
                 editStage: function() {
-                    return M
+                    return C
                 },
                 endStage: function() {
                     return O
                 }
             });
-            var i = n("627445"),
-                a = n.n(i),
+            var a = n("627445"),
+                i = n.n(a),
                 s = n("316693"),
                 u = n("872717"),
                 l = n("450911");
@@ -2116,7 +2046,7 @@
 
             function g(e, t) {
                 let n = e.getGuildId();
-                return a(null != n, "This channel cannot be guildless."), t && (0, d.trackWithMetadata)(S.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED, {
+                return i(null != n, "This channel cannot be guildless."), t && (0, d.trackWithMetadata)(S.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED, {
                     ...(0, _.getStageChannelMetadata)(e)
                 }), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n),
@@ -2129,7 +2059,7 @@
 
             function N(e, t) {
                 let n = e.getGuildId();
-                return a(null != n, "This channel cannot be guildless."), u.default.patch({
+                return i(null != n, "This channel cannot be guildless."), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n, t),
                     body: {
                         suppress: !1,
@@ -2139,16 +2069,16 @@
                 })
             }
 
-            function v(e, t) {
+            function T(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    i = null == e ? void 0 : e.getGuildId();
-                a(null != i, "This channel cannot be guildless.");
+                    a = null == e ? void 0 : e.getGuildId();
+                i(null != a, "This channel cannot be guildless.");
                 let s = c.default.getVoiceStateForChannel(e.id),
                     l = (0, m.getAudienceRequestToSpeakState)(s);
                 return l === m.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !t && (0, d.trackWithMetadata)(S.AnalyticEvents.PROMOTED_TO_SPEAKER, {
                     ...(0, _.getStageChannelMetadata)(e)
                 }), u.default.patch({
-                    url: S.Endpoints.UPDATE_VOICE_STATE(i),
+                    url: S.Endpoints.UPDATE_VOICE_STATE(a),
                     body: {
                         suppress: t,
                         request_to_speak_timestamp: null,
@@ -2162,7 +2092,7 @@
 
             function A(e) {
                 let t = null == e ? void 0 : e.getGuildId();
-                return a(null != t, "This channel cannot be guildless."), u.default.patch({
+                return i(null != t, "This channel cannot be guildless."), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(t),
                     body: {
                         suppress: !0,
@@ -2173,10 +2103,10 @@
                 })
             }
 
-            function T(e, t, n) {
-                let i = e.getGuildId();
-                return a(null != i, "This channel cannot be guildless."), u.default.patch({
-                    url: S.Endpoints.UPDATE_VOICE_STATE(i, t),
+            function v(e, t, n) {
+                let a = e.getGuildId();
+                return i(null != a, "This channel cannot be guildless."), u.default.patch({
+                    url: S.Endpoints.UPDATE_VOICE_STATE(a, t),
                     body: {
                         suppress: n,
                         channel_id: e.id
@@ -2187,7 +2117,7 @@
             function h(e, t) {
                 if (null == t || null == e) return;
                 let n = t.getGuildId();
-                return a(null != n, "This channel cannot be guildless."), T(t, e.id, !0), u.default.patch({
+                return i(null != n, "This channel cannot be guildless."), v(t, e.id, !0), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n, e.id),
                     body: {
                         suppress: !0,
@@ -2199,11 +2129,11 @@
             }
 
             function I(e, t, n) {
-                let i = e.getGuildId();
-                a(null != i, "Channel cannot be guildless");
-                let u = e.permissionOverwrites[i],
+                let a = e.getGuildId();
+                i(null != a, "Channel cannot be guildless");
+                let u = e.permissionOverwrites[a],
                     d = {
-                        id: i,
+                        id: a,
                         type: o.PermissionOverwriteType.ROLE,
                         allow: f.default.NONE,
                         deny: f.default.NONE,
@@ -2211,17 +2141,17 @@
                     };
                 n ? (d.allow = s.default.add(d.allow, t), d.deny = s.default.remove(d.deny, t)) : (d.allow = s.default.remove(d.allow, t), d.deny = s.default.add(d.deny, t)), l.default.updatePermissionOverwrite(e.id, d)
             }
-            async function C(e, t, n, i) {
+            async function M(e, t, n, a) {
                 if ("" === t) return;
-                let a = r.default.getVoiceChannelId() === e.id;
-                !a && (0, p.connectToStage)(e);
-                let s = await (0, E.startStageInstance)(e.id, t, n, i);
-                return v(e, !1, !0), s
+                let i = r.default.getVoiceChannelId() === e.id;
+                !i && (0, p.connectToStage)(e);
+                let s = await (0, E.startStageInstance)(e.id, t, n, a);
+                return T(e, !1, !0), s
             }
-            async function M(e, t, n) {
+            async function C(e, t, n) {
                 if ("" === t) return;
-                let i = await (0, E.updateStageInstance)(e.id, t, n);
-                return i
+                let a = await (0, E.updateStageInstance)(e.id, t, n);
+                return a
             }
             async function O(e) {
                 await (0, E.endStageInstance)(e.id)
@@ -2240,8 +2170,8 @@
                     return p
                 }
             }), n("808653"), n("222007"), n("917351");
-            var i = n("945956"),
-                a = n("387111"),
+            var a = n("945956"),
+                i = n("387111"),
                 s = n("991170"),
                 u = n("834052"),
                 l = n("837979"),
@@ -2249,10 +2179,10 @@
                 d = n("606762"),
                 r = n("782340");
 
-            function c(e, t, n, i) {
+            function c(e, t, n, a) {
                 let s = t[0],
-                    u = a.default.getName(e, n, s),
-                    l = null != i ? i : t.length;
+                    u = i.default.getName(e, n, s),
+                    l = null != a ? a : t.length;
                 return 1 === l && null != s ? u : null == s ? r.default.Messages.SPEAKING_COUNT.format({
                     count: l
                 }) : r.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
@@ -2281,7 +2211,7 @@
                     channel_id: e.id,
                     guild_id: e.guild_id,
                     topic: null == t ? void 0 : t.topic,
-                    media_session_id: i.default.getMediaSessionId(),
+                    media_session_id: a.default.getMediaSessionId(),
                     request_to_speak_state: s.default.canEveryoneRole(o.Permissions.REQUEST_TO_SPEAK, e) ? l.RequestToSpeakPermissionStates.EVERYONE : l.RequestToSpeakPermissionStates.NO_ONE,
                     stage_instance_id: null == t ? void 0 : t.id
                 }
@@ -2300,11 +2230,11 @@
                     return l
                 }
             });
-            var i = n("872717"),
-                a = n("49111");
+            var a = n("872717"),
+                i = n("49111");
             async function s(e, t, n, s, u) {
-                let l = await i.default.post({
-                    url: a.Endpoints.STAGE_INSTANCES,
+                let l = await a.default.post({
+                    url: i.Endpoints.STAGE_INSTANCES,
                     body: {
                         channel_id: e,
                         topic: t,
@@ -2316,8 +2246,8 @@
                 return l.body
             }
             async function u(e, t, n) {
-                let s = await i.default.patch({
-                    url: a.Endpoints.STAGE_INSTANCE(e),
+                let s = await a.default.patch({
+                    url: i.Endpoints.STAGE_INSTANCE(e),
                     body: {
                         topic: t,
                         privacy_level: n
@@ -2327,7 +2257,7 @@
             }
 
             function l(e) {
-                return i.default.delete(a.Endpoints.STAGE_INSTANCE(e))
+                return a.default.delete(i.Endpoints.STAGE_INSTANCE(e))
             }
         },
         259141: function(e, t, n) {
@@ -2337,13 +2267,13 @@
                     return u
                 }
             });
-            var i = n("446674"),
-                a = n("271938"),
+            var a = n("446674"),
+                i = n("271938"),
                 s = n("800762");
 
             function u(e) {
                 return function(e) {
-                    return (0, i.useStateFromStores)([s.default, a.default], () => s.default.isInChannel(e, a.default.getId()))
+                    return (0, a.useStateFromStores)([s.default, i.default], () => s.default.isInChannel(e, i.default.getId()))
                 }(null == e ? void 0 : e.id)
             }
         },
@@ -2354,45 +2284,45 @@
                     return l
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("469563"),
+            var i = n("469563"),
                 s = n("715072"),
                 u = n("75196"),
-                l = (0, a.replaceIcon)(function(e) {
+                l = (0, i.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
-                        color: a = "currentColor",
+                        color: i = "currentColor",
                         foreground: s,
                         ...l
                     } = e;
-                    return 16 === t || 16 === n ? (0, i.jsxs)("svg", {
+                    return 16 === t || 16 === n ? (0, a.jsxs)("svg", {
                         ...(0, u.default)(l),
                         width: t,
                         height: n,
                         viewBox: "0 0 16 16",
-                        children: [(0, i.jsx)("path", {
+                        children: [(0, a.jsx)("path", {
                             className: s,
-                            fill: a,
+                            fill: i,
                             d: "M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"
-                        }), (0, i.jsx)("path", {
+                        }), (0, a.jsx)("path", {
                             className: s,
-                            fill: a,
+                            fill: i,
                             d: "M6.5 8.00667C7.88 8.00667 9 6.88667 9 5.50667C9 4.12667 7.88 3.00667 6.5 3.00667C5.12 3.00667 4 4.12667 4 5.50667C4 6.88667 5.12 8.00667 6.5 8.00667Z"
-                        }), (0, i.jsx)("path", {
+                        }), (0, a.jsx)("path", {
                             className: s,
-                            fill: a,
+                            fill: i,
                             d: "M6.5 8.34C3.26 8.34 1 9.98666 1 12.34V13.0067H12V12.34C12 9.98 9.74 8.34 6.5 8.34Z"
                         })]
-                    }) : (0, i.jsx)("svg", {
+                    }) : (0, a.jsx)("svg", {
                         ...(0, u.default)(l),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",
-                        children: (0, i.jsx)("path", {
+                        children: (0, a.jsx)("path", {
                             className: s,
-                            fill: a,
+                            fill: i,
                             fillRule: "evenodd",
                             clipRule: "evenodd",
                             d: "M21 3H24V5H21V8H19V5H16V3H19V0H21V3ZM10 12C12.205 12 14 10.205 14 8C14 5.795 12.205 4 10 4C7.795 4 6 5.795 6 8C6 10.205 7.795 12 10 12ZM10 13C5.289 13 2 15.467 2 19V20H18V19C18 15.467 14.711 13 10 13Z"
@@ -2404,7 +2334,7 @@
         },
         709681: function(e, t, n) {
             "use strict";
-            let i;
+            let a;
             n.r(t), n.d(t, {
                 createSoundForPack: function() {
                     return l
@@ -2416,34 +2346,34 @@
                     return d
                 }
             });
-            var a = n("870696"),
+            var i = n("870696"),
                 s = n("319291"),
                 u = n("102985");
 
             function l(e, t) {
                 var n;
-                let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-                    a = (0, s.default)(t);
-                return o(null !== (n = a[e]) && void 0 !== n ? n : e, e, i)
+                let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+                    i = (0, s.default)(t);
+                return o(null !== (n = i[e]) && void 0 !== n ? n : e, e, a)
             }
 
             function o(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-                return new i(e, t, n)
+                return new a(e, t, n)
             }
 
             function d(e) {
                 var t;
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-                    i = arguments.length > 2 ? arguments[2] : void 0;
+                    a = arguments.length > 2 ? arguments[2] : void 0;
                 if (u.default.disableSounds) return;
-                let l = (0, s.default)(a.default.getSoundpack()),
+                let l = (0, s.default)(i.default.getSoundpack()),
                     d = o(null !== (t = l[e]) && void 0 !== t ? t : e, e, n);
-                return null != i ? d.playWithListener().then(e => {
-                    e && i()
+                return null != a ? d.playWithListener().then(e => {
+                    e && a()
                 }) : d.play(), d
             }
-            i = n("895737").WebAudioSound
+            a = n("895737").WebAudioSound
         },
         895737: function(e, t, n) {
             "use strict";
@@ -2455,8 +2385,8 @@
                     return p
                 }
             }), n("70102");
-            var i = n("917351"),
-                a = n.n(i),
+            var a = n("917351"),
+                i = n.n(a),
                 s = n("520497"),
                 u = n("812809"),
                 l = n("42887"),
@@ -2472,11 +2402,11 @@
             function f() {
                 null != window.navigator.mediaDevices && window.navigator.mediaDevices.enumerateDevices().then(e => {
                     let t = l.default.getOutputDevices(),
-                        n = a(t).sortBy(e => e.index).findIndex(e => e.id === l.default.getOutputDeviceId()),
-                        i = t[l.default.getOutputDeviceId()],
+                        n = i(t).sortBy(e => e.index).findIndex(e => e.id === l.default.getOutputDeviceId()),
+                        a = t[l.default.getOutputDeviceId()],
                         s = e.filter(e => "audiooutput" === e.kind && "communications" !== e.deviceId),
                         u = s[n];
-                    null != i && (null == u || u.label !== i.name) && (u = s.find(e => e.label === i.name)), r = null != u ? u.deviceId : d
+                    null != a && (null == u || u.label !== a.name) && (u = s.find(e => e.label === a.name)), r = null != u ? u.deviceId : d
                 }).catch(() => {
                     r = d
                 })
@@ -2522,10 +2452,10 @@
                 _ensureAudio() {
                     var e;
                     return this._audio = null !== (e = this._audio) && void 0 !== e ? e : new Promise((e, t) => {
-                        let i = new Audio;
-                        i.src = n("89400")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), i.onloadeddata = () => {
-                            i.volume = Math.min(l.default.getOutputVolume() / 100 * this._volume, 1), o.isPlatformEmbedded && i.setSinkId(r), e(i)
-                        }, i.onerror = () => t(Error("could not play audio")), i.onended = () => this._destroyAudio(), i.load()
+                        let a = new Audio;
+                        a.src = n("89400")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), a.onloadeddata = () => {
+                            a.volume = Math.min(l.default.getOutputVolume() / 100 * this._volume, 1), o.isPlatformEmbedded && a.setSinkId(r), e(a)
+                        }, a.onerror = () => t(Error("could not play audio")), a.onended = () => this._destroyAudio(), a.load()
                     }), this._audio
                 }
                 constructor(e, t, n) {
