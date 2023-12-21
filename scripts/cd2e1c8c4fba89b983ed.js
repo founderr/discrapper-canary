@@ -746,7 +746,7 @@
                     },
                     secondaryDecodedRate: g,
                     secureFramesProtocolVersion: function(e) {
-                        return e >= 100 ? "MLS Test (".concat(e, ")") : e > 0 ? "Static Key Test (".concat(e, ")") : "Disabled"
+                        return e > 0 ? "Static Key Test (".concat(e, ")") : "Disabled"
                     },
                     speechExpandRate: g,
                     targetDelay: p,

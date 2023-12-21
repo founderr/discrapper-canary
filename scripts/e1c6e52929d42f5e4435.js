@@ -553,11 +553,8 @@
                 getNickname: function() {
                     return i
                 },
-                useName: function() {
-                    return d
-                },
                 default: function() {
-                    return f
+                    return d
                 }
             });
             var u = n("446674"),
@@ -581,14 +578,12 @@
                 var u;
                 return null == n ? s.default.Messages.UNKNOWN_USER : null !== (u = i(e, t, n)) && void 0 !== u ? u : o.default.getName(n)
             }
-
-            function d(e, t, n) {
-                return (0, u.useStateFromStores)([a.default, r.default, l.default], () => c(e, t, n))
-            }
-            var f = {
+            var d = {
                 getNickname: i,
                 getName: c,
-                useName: d
+                useName: function(e, t, n) {
+                    return (0, u.useStateFromStores)([a.default, r.default, l.default], () => c(e, t, n))
+                }
             }
         },
         840707: function(e, t, n) {
