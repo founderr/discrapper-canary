@@ -50019,7 +50019,7 @@
                         var i;
                         let d = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "256395"
+                                build_number: "256406"
                             },
                             f = l.default.getCurrentUser();
                         null != f && (d.user_id = f.id, d.user_name = f.tag, null != f.email && (d.email = f.email));
@@ -52299,6 +52299,9 @@
             var m = {
                 URL_REGEX: f,
                 isDiscordHostname: h,
+                isDiscordLocalhost: function(e, t) {
+                    return null != e && null != t && (window.location.host === e || !1)
+                },
                 isDiscordProtocol: p,
                 isDiscordUrl: _,
                 isDiscordUri: S,
@@ -52326,7 +52329,7 @@
                     }
                 },
                 makeUrl: function(e) {
-                    let t = location.host;
+                    let t = __DEV__ ? window.GLOBAL_ENV.INVITE_HOST : location.host;
                     return "".concat(location.protocol, "//").concat(t).concat(e)
                 }
             }

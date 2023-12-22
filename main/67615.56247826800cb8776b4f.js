@@ -2977,7 +2977,7 @@
                     hostname: S = "",
                     host: A,
                     query: y
-                } = a.parse(e), L = O.default.isDiscordHostname(S) || window.location.host === A;
+                } = a.parse(e), L = O.default.isDiscordHostname(S) || O.default.isDiscordLocalhost(A, S);
                 if (L && (null == r ? void 0 : r.startsWith("/application-directory"))) {
                     let [, , e, t] = r.split("/"), i = null != e && (0, o.isSnowflake)(e) ? e : void 0;
                     return a => {
