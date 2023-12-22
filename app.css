@@ -109211,7 +109211,7 @@ html .invoiceCancelRow_a8669b {
     display: flex;
     flex-direction: column;
     row-gap: 12px;
-    padding: 4px 15px 20px
+    padding: 4px 16px 12px
 }
 
 .answerInputsContainer__22676 {
@@ -109278,10 +109278,25 @@ html .invoiceCancelRow_a8669b {
     color: var(--interactive-muted)
 }
 
+.duration__6fc84 {
+    padding-top: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px
+}
+
+.durationSelect__181aa {
+    width: 150px;
+    min-width: 6rem;
+    padding: 4px 2px 4px 10px;
+    gap: 4px;
+    font-weight: 400
+}
+
 .footer__1028f {
     display: flex;
     flex-direction: row;
-    padding: 15px 20px;
     margin: 0;
     background: var(--background-secondary-alt)
 }

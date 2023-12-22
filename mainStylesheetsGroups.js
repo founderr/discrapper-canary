@@ -19278,6 +19278,8 @@
                 container: "container__1b71e",
                 content: "content__808b1",
                 defaultContainer: "defaultContainer__28189",
+                duration: "duration__6fc84",
+                durationSelect: "durationSelect__181aa",
                 footer: "footer__1028f",
                 formInput: "formInput_c28524",
                 header: "header__96d08",

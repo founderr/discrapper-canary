@@ -340,8 +340,7 @@
                     content: l,
                     tts: s,
                     flags: o,
-                    nonce: u,
-                    poll: d
+                    nonce: u
                 } = t;
                 r.default.sendMessage(e.id, {
                     content: l,
@@ -351,8 +350,7 @@
                 }, void 0, {
                     nonce: u,
                     flags: o,
-                    ...i,
-                    poll: d
+                    ...i
                 })
             }
         },

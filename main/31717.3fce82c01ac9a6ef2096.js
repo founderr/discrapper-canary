@@ -2929,8 +2929,7 @@
             }
 
             function h(e) {
-                var t;
-                let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "0";
+                var t, n;
                 if (null == e) return;
                 let a = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {
                     var n, a, l;
@@ -2948,9 +2947,10 @@
                         poll_media: i
                     }
                 });
+                let l = (null == e ? void 0 : e.duration) != null ? (n = e.duration, new Date(Date.now() + 36e5 * n).toISOString()) : "0";
                 return {
                     ...e,
-                    expiry: n,
+                    expiry: l,
                     answers: a
                 }
             }
