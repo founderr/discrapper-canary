@@ -79294,13 +79294,9 @@ input::-webkit-inner-spin-button {
     display: grid;
     padding: var(--spacing-16);
     border-top: 1px solid var(--background-modifier-accent);
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 3fr 3fr 1fr;
     grid-gap: var(--spacing-16);
     gap: var(--spacing-16)
-}
-
-.clipFormFooterPrimaryButton_f1c890 {
-    grid-column: span 3
 }
 
 .clipFormFooterButton_aff5b9 {
