@@ -10054,7 +10054,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "013ddf08e78cbfff3478761e7356860d29a9d70a", e.substring(0, 7)),
+                    S = (e = "b5b77fa2e22c2a52cb68894ae252f92cd2fa2493", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     m = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10067,7 +10067,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "256633", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "256650", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -16895,7 +16895,8 @@
                     })
                 }
                 render() {
-                    let e = o(this.props.keybinds).reject(e => e.managed && e.action !== L.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET).reject(e => !this.props.allowSoundboard && (e.action === L.GlobalKeybindActions.SOUNDBOARD || e.action === L.GlobalKeybindActions.SOUNDBOARD_HOLD)).sortBy(e => e.id).sortBy(e => !0 === e.managed ? -1 : 0).value();
+                    let e = this.props.enableClips,
+                        t = o(this.props.keybinds).reject(e => e.managed && ![L.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, L.GlobalKeybindActions.SAVE_CLIP].includes(e.action)).reject(t => !e && t.action === L.GlobalKeybindActions.SAVE_CLIP).reject(e => !this.props.allowSoundboard && (e.action === L.GlobalKeybindActions.SOUNDBOARD || e.action === L.GlobalKeybindActions.SOUNDBOARD_HOLD)).sortBy(e => e.id).sortBy(e => !0 === e.managed ? -1 : 0).value();
                     return (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(c.FormSection, {
                             tag: c.FormTitleTags.H1,
@@ -16920,7 +16921,7 @@
                                         })
                                     })]
                                 }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsxs)(c.FormSection, {
-                                    children: [this.renderKeybinds(e), this.renderEmpty(e)]
+                                    children: [this.renderKeybinds(t), this.renderEmpty(t)]
                                 })]
                             }) : (0, a.jsx)(O.default, {
                                 messageType: O.HelpMessageTypes.INFO,
