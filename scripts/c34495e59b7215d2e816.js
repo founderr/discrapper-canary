@@ -1659,7 +1659,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "256757"
+                        buildNumber: "256759"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -12063,43 +12063,6 @@
                 })
             }
         },
-        417313: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return i
-                }
-            });
-            var a = n("862205");
-            let s = (0, a.createExperiment)({
-                kind: "user",
-                id: "2023-11_collectibles_gifting",
-                label: "Collectibles Gifting",
-                defaultConfig: {
-                    giftingEnabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Collectibles Gifting Enabled",
-                    config: {
-                        giftingEnabled: !0
-                    }
-                }]
-            });
-            var i = e => {
-                let {
-                    location: t,
-                    autoTrackExposure: n = !0,
-                    trackExposureOptions: a = {}
-                } = e;
-                return s.useExperiment({
-                    location: t
-                }, {
-                    autoTrackExposure: n,
-                    trackExposureOptions: a
-                })
-            }
-        },
         252551: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -12163,7 +12126,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return c
                 }
             }), n("222007");
             var a = n("151426"),
@@ -12174,20 +12137,14 @@
                 o = n("697218"),
                 u = n("197881"),
                 d = n("158998"),
-                c = n("417313"),
-                E = () => {
+                c = () => {
                     let e = (0, i.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
-                        {
-                            giftingEnabled: t
-                        } = (0, c.default)({
-                            location: "useCollectiblesShopTabCoachmark"
-                        }),
-                        n = (0, i.useStateFromStores)([r.default], () => r.default.hasLayers()),
-                        E = (0, s.useModalsStore)(s.hasAnyModalOpenSelector),
-                        f = E || n || u.ProcessArgs.isDisallowPopupsSet(),
-                        _ = t && (0, d.ageEligibleForPremiumUpsell)(e) ? [a.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK] : [],
-                        [h] = (0, l.useDismissibleContentGroup)(f ? [] : _, void 0, !0);
-                    return h
+                        t = (0, i.useStateFromStores)([r.default], () => r.default.hasLayers()),
+                        n = (0, s.useModalsStore)(s.hasAnyModalOpenSelector),
+                        c = n || t || u.ProcessArgs.isDisallowPopupsSet(),
+                        E = (0, d.ageEligibleForPremiumUpsell)(e) ? [a.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK] : [],
+                        [f] = (0, l.useDismissibleContentGroup)(c ? [] : E, void 0, !0);
+                    return f
                 }
         },
         927175: function(e, t, n) {
