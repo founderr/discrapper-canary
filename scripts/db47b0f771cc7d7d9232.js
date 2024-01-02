@@ -1907,48 +1907,73 @@
         827922: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
+                useGetKeybindNotification: function() {
+                    return m
+                },
                 default: function() {
-                    return f
+                    return E
                 }
-            });
+            }), n("222007");
             var i = n("37983");
             n("884691");
-            var a = n("77078"),
-                l = n("539405"),
-                s = n("910340"),
-                o = n("415518"),
-                r = n("849467"),
-                d = n("6791"),
-                u = n("782340"),
-                c = n("672294");
+            var a = n("151426"),
+                l = n("77078"),
+                s = n("539405"),
+                o = n("910340"),
+                r = n("235145"),
+                d = n("415518"),
+                u = n("849467"),
+                c = n("999819"),
+                f = n("6791"),
+                h = n("994428"),
+                p = n("782340"),
+                g = n("672294");
 
-            function f() {
+            function m() {
+                let [e, t] = (0, r.useGetDismissibleContent)([a.DismissibleContent.OVERLAY_KEYBIND_NOTIFICATION]), {
+                    showKeybindIndicators: n
+                } = c.default.useExperiment({
+                    location: "Overlay"
+                }, {
+                    autoTrackExposure: !1
+                });
+                return {
+                    showKeybindIndicators: null != e && n,
+                    dismissKeybindNotification: t
+                }
+            }
+
+            function E(e) {
                 let {
-                    trackView: e,
-                    trackClick: t
-                } = (0, s.makeAnalyticsTrackers)(d.OverlayNotificationType.KeybindIndicatorsNotification, {
-                    notif_type: d.OverlayNotificationType.KeybindIndicatorsNotification
-                }), n = (0, i.jsxs)("div", {
-                    className: c.notificationBody,
+                    markAsDismissed: t
+                } = e, {
+                    trackView: n,
+                    trackClick: a
+                } = (0, o.makeAnalyticsTrackers)(f.OverlayNotificationType.KeybindIndicatorsNotification, {
+                    notif_type: f.OverlayNotificationType.KeybindIndicatorsNotification
+                }), r = (0, i.jsxs)("div", {
+                    className: g.notificationBody,
                     children: [(0, i.jsx)("div", {
-                        className: c.iconContainer,
-                        children: (0, i.jsx)(r.default, {
+                        className: g.iconContainer,
+                        children: (0, i.jsx)(u.default, {
                             height: 28,
                             width: 28
                         })
-                    }), (0, i.jsx)(a.Text, {
+                    }), (0, i.jsx)(l.Text, {
                         variant: "text-sm/normal",
-                        children: u.default.Messages.KEYBIND_NOTIFICATION_DESCRIPTION
+                        children: p.default.Messages.KEYBIND_NOTIFICATION_DESCRIPTION
                     })]
                 });
                 return {
                     icon: null,
-                    body: n,
-                    colorScheme: o.ColorSchemes.PRIMARY,
+                    body: r,
+                    colorScheme: d.ColorSchemes.PRIMARY,
                     onDismissClick: (e, n) => {
-                        t("dismiss"), l.default.updateNotificationStatus(n)
+                        a("dismiss"), t(h.ContentDismissActionType.DISMISS), s.default.updateNotificationStatus(n)
                     },
-                    onNotificationShow: e
+                    onNotificationShow: () => {
+                        t(h.ContentDismissActionType.AUTO_DISMISS), n()
+                    }
                 }
             }
         },
@@ -2276,7 +2301,7 @@
             let i;
             n.r(t), n.d(t, {
                 default: function() {
-                    return ef
+                    return eh
                 }
             }), n("424973");
             var a = n("37983"),
@@ -2327,23 +2352,24 @@
                 Z = n("819068"),
                 X = n("999819"),
                 J = n("878624"),
-                Q = n("485415"),
-                q = n("206496"),
-                $ = n("684325"),
-                ee = n("762243"),
-                et = n("265268"),
-                en = n("6791"),
-                ei = n("49111"),
-                ea = n("782340"),
-                el = n("885971");
+                Q = n("827922"),
+                q = n("485415"),
+                $ = n("206496"),
+                ee = n("684325"),
+                et = n("762243"),
+                en = n("265268"),
+                ei = n("6791"),
+                ea = n("49111"),
+                el = n("782340"),
+                es = n("885971");
             p.default.PersistedStore.disableWrites = __OVERLAY__, p.default.initialize();
-            let es = null;
+            let eo = null;
 
-            function eo(e) {
+            function er(e) {
                 e.preventDefault()
             }
 
-            function er(e) {
+            function ed(e) {
                 (0, E.openContextMenuLazy)(e, async () => {
                     let {
                         default: e
@@ -2353,7 +2379,7 @@
                     })
                 })
             }
-            let ed = e => {
+            let eu = e => {
                     let {
                         keybind: t,
                         onClick: n,
@@ -2361,10 +2387,10 @@
                         locked: l
                     } = e, s = l ? g.Clickable : "div";
                     return (0, a.jsx)(s, {
-                        className: o(el.overlayBackground, {
-                            [el.overlayActive]: !l,
-                            [el.overlayLocked]: l,
-                            [el.previewMode]: !l && i
+                        className: o(es.overlayBackground, {
+                            [es.overlayActive]: !l,
+                            [es.overlayLocked]: l,
+                            [es.previewMode]: !l && i
                         }),
                         onMouseDown: e => {
                             let {
@@ -2372,11 +2398,11 @@
                                 target: i,
                                 button: a
                             } = e;
-                            a === ei.MouseButtons.PRIMARY && t === i && n()
+                            a === ea.MouseButtons.PRIMARY && t === i && n()
                         },
-                        onContextMenu: er,
+                        onContextMenu: ed,
                         children: l ? null : (0, a.jsx)("div", {
-                            className: el.closeContainer,
+                            className: es.closeContainer,
                             children: (0, a.jsx)(v.default, {
                                 variant: v.default.Variants.BOLD,
                                 keybind: t,
@@ -2385,7 +2411,7 @@
                         })
                     })
                 },
-                eu = e => {
+                ec = e => {
                     let {
                         keyCode: t,
                         shiftKey: n,
@@ -2401,7 +2427,7 @@
                         ctrlKey: l
                     }
                 };
-            class ec extends l.Component {
+            class ef extends l.Component {
                 handleLock() {
                     !(0, g.hasAnyModalOpen)() && !B.default.isOpen() && S.default.setLocked(!0, (0, Z.getPID)())
                 }
@@ -2421,14 +2447,14 @@
                             return
                         }
                         if (!e.locked && this.props.locked) {
-                            if (window.addEventListener("contextmenu", eo, !1), null != es) {
-                                let e = Date.now() - es;
-                                S.default.track(ei.AnalyticEvents.OVERLAY_LOCKED, {
+                            if (window.addEventListener("contextmenu", er, !1), null != eo) {
+                                let e = Date.now() - eo;
+                                S.default.track(ea.AnalyticEvents.OVERLAY_LOCKED, {
                                     unlocked_duration: e
-                                }), es = null
+                                }), eo = null
                             }
-                            C.default.disable(), this.activeKeyEventShapes = [], F.default.isPinned(ei.OverlayWidgets.TEXT) && (C.default.setLayout(y.OVERLAY_LOCKED_LAYOUT), C.default.enable())
-                        } else e.locked && !this.props.locked && (window.removeEventListener("contextmenu", eo, !1), null == es && (es = Date.now(), S.default.track(ei.AnalyticEvents.OVERLAY_UNLOCKED)), C.default.disable(), this.activeKeyEventShapes = [], C.default.setLayout(y.OVERLAY_LAYOUT), C.default.enable());
+                            C.default.disable(), this.activeKeyEventShapes = [], F.default.isPinned(ea.OverlayWidgets.TEXT) && (C.default.setLayout(y.OVERLAY_LOCKED_LAYOUT), C.default.enable())
+                        } else e.locked && !this.props.locked && (window.removeEventListener("contextmenu", er, !1), null == eo && (eo = Date.now(), S.default.track(ea.AnalyticEvents.OVERLAY_UNLOCKED)), C.default.disable(), this.activeKeyEventShapes = [], C.default.setLayout(y.OVERLAY_LAYOUT), C.default.enable());
                         e.keybindKeyCodes !== this.props.keybindKeyCodes && (this.lockEventShape = (0, K.toBrowserEvents)(this.props.keybindKeyCodes))
                     }
                 }
@@ -2443,48 +2469,50 @@
                         game: s,
                         canStartBroadcast: o,
                         canBroadcast: r,
-                        showKeybindNotification: d
+                        showKeybindNotification: d,
+                        dismissKeybindNotification: u
                     } = this.props;
-                    S.default.track(ei.AnalyticEvents.OVERLAY_INITIALIZED, {
+                    S.default.track(ea.AnalyticEvents.OVERLAY_INITIALIZED, {
                         voice_widget_connected: e,
-                        text_widget_connected: F.default.isPinned(ei.OverlayWidgets.TEXT)
+                        text_widget_connected: F.default.isPinned(ea.OverlayWidgets.TEXT)
                     }), X.default.trackExposure({
                         location: "Overlay"
                     });
-                    let u = n && !i && null != s,
-                        c = e && null != a && null != l,
-                        f = {
-                            type: en.OverlayNudgeTypes.WELCOME
+                    let c = n && !i && null != s,
+                        f = e && null != a && null != l,
+                        h = {
+                            type: ei.OverlayNudgeTypes.WELCOME
                         };
-                    if (d ? f = {
-                            type: en.OverlayNudgeTypes.KEYBIND_INDICATORS
-                        } : u && !e && o ? (I.default.trackExposure({
+                    if (d ? h = {
+                            type: ei.OverlayNudgeTypes.KEYBIND_INDICATORS,
+                            markAsDismissed: u
+                        } : c && !e && o ? (I.default.trackExposure({
                             location: "overlay_notification"
-                        }), r && (f = {
-                            type: en.OverlayNudgeTypes.BROADCAST,
+                        }), r && (h = {
+                            type: ei.OverlayNudgeTypes.BROADCAST,
                             game: s
-                        })) : u && c ? f = {
-                            type: en.OverlayNudgeTypes.GO_LIVE_VOICE,
+                        })) : c && f ? h = {
+                            type: ei.OverlayNudgeTypes.GO_LIVE_VOICE,
                             game: s,
                             voiceChannelId: l,
                             voiceGuild: a
-                        } : u && (f = {
-                            type: en.OverlayNudgeTypes.GO_LIVE_NON_VOICE,
+                        } : c && (h = {
+                            type: ei.OverlayNudgeTypes.GO_LIVE_NON_VOICE,
                             game: s
-                        }), S.default.overlayMounted(f), window.addEventListener("resize", this.handleWindowResize), t && window.addEventListener("contextmenu", eo, !1), Y.isPlatformEmbedded) {
+                        }), S.default.overlayMounted(h), window.addEventListener("resize", this.handleWindowResize), t && window.addEventListener("contextmenu", er, !1), Y.isPlatformEmbedded) {
                         let e = z.default.requireModule("discord_overlay2");
                         void 0 !== e.setPerfInfoCallback && (e.setPerfInfoCallback(e => {
-                            S.default.track(ei.AnalyticEvents.OVERLAY_PERF_INFO, e)
+                            S.default.track(ea.AnalyticEvents.OVERLAY_PERF_INFO, e)
                         }), e.broadcastCommand({
                             message: "set_perf_report_interval",
                             interval: 9e5
                         })), z.default.on("REQUEST_OPEN_EXTERNAL_URL", (e, t) => {
                             F.default.getDisableExternalLinkAlert() || t === V.default.getLastURL() ? z.default.send("OPEN_EXTERNAL_URL", t) : m.default.show({
-                                title: ea.default.Messages.OVERLAY_LINK_ALERT_TITLE,
-                                body: ea.default.Messages.OVERLAY_LINK_ALERT_BODY,
-                                secondaryConfirmText: ea.default.Messages.OVERLAY_LINK_ALERT_SECONDARY,
-                                confirmText: ea.default.Messages.CONTINUE,
-                                cancelText: ea.default.Messages.CANCEL,
+                                title: el.default.Messages.OVERLAY_LINK_ALERT_TITLE,
+                                body: el.default.Messages.OVERLAY_LINK_ALERT_BODY,
+                                secondaryConfirmText: el.default.Messages.OVERLAY_LINK_ALERT_SECONDARY,
+                                confirmText: el.default.Messages.CONTINUE,
+                                cancelText: el.default.Messages.CANCEL,
                                 onConfirmSecondary: () => {
                                     S.default.disableExternalLinkAlert(), z.default.send("OPEN_EXTERNAL_URL", t)
                                 },
@@ -2495,16 +2523,16 @@
                     window.addEventListener("keydown", this.onKeyDownGlobal, !0), window.addEventListener("keyup", this.onKeyUpGlobal, !0)
                 }
                 componentWillUnmount() {
-                    window.removeEventListener("resize", this.handleWindowResize), window.removeEventListener("keydown", this.onKeyDownGlobal, !0), window.removeEventListener("keyup", this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener("contextmenu", eo, !1), R.default.terminate(), N.default.terminate(), M.default.terminate()
+                    window.removeEventListener("resize", this.handleWindowResize), window.removeEventListener("keydown", this.onKeyDownGlobal, !0), window.removeEventListener("keyup", this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener("contextmenu", er, !1), R.default.terminate(), N.default.terminate(), M.default.terminate()
                 }
                 renderInvalidSizeMessage() {
                     return (0, a.jsx)(W.default, {
                         justify: W.default.Justify.CENTER,
                         align: W.default.Align.CENTER,
-                        className: el.invalidContainer,
+                        className: es.invalidContainer,
                         children: (0, a.jsx)("div", {
-                            className: el.inactiveContainer,
-                            children: ea.default.Messages.OVERLAY_TOO_SMALL.format(Z.OVERLAY_MIN_RESOLUTION)
+                            className: es.inactiveContainer,
+                            children: el.default.Messages.OVERLAY_TOO_SMALL.format(Z.OVERLAY_MIN_RESOLUTION)
                         })
                     })
                 }
@@ -2527,25 +2555,25 @@
                     let p = e || s,
                         g = D.default.getId();
                     return (0, a.jsxs)("div", {
-                        className: el.overlay,
-                        children: [(0, a.jsx)($.default, {}), s && (0, a.jsx)("header", {
-                            className: el.previewingInGameHeader,
-                            children: ea.default.Messages.OVERLAY_IN_GAME_PREVIEW_HEADER
-                        }), i, (!e || r.has(ei.OverlayActiveRegions.TEXT_WIDGET)) && (0, a.jsx)(ed, {
+                        className: es.overlay,
+                        children: [(0, a.jsx)(ee.default, {}), s && (0, a.jsx)("header", {
+                            className: es.previewingInGameHeader,
+                            children: el.default.Messages.OVERLAY_IN_GAME_PREVIEW_HEADER
+                        }), i, (!e || r.has(ea.OverlayActiveRegions.TEXT_WIDGET)) && (0, a.jsx)(eu, {
                             locked: e,
                             keybind: t,
                             onClick: e ? this.handleDeactivate : this.handleLock,
                             isPreviewingInGame: s
-                        }), (0, Z.validResolution)(d) ? (0, a.jsx)(q.default, {
+                        }), (0, Z.validResolution)(d) ? (0, a.jsx)($.default, {
                             className: o({
-                                [el.layoutLocked]: e,
-                                [el.layoutUnlocked]: !e
+                                [es.layoutLocked]: e,
+                                [es.layoutUnlocked]: !e
                             })
-                        }) : e ? null : this.renderInvalidSizeMessage(), (0, a.jsx)(et.default, {}), null != u && null != c && (0, a.jsx)(ee.default, {
+                        }) : e ? null : this.renderInvalidSizeMessage(), (0, a.jsx)(en.default, {}), null != u && null != c && (0, a.jsx)(et.default, {
                             streamerId: g,
                             guildId: u.id,
                             channelId: c
-                        }), (0, a.jsx)(Q.default, {
+                        }), (0, a.jsx)(q.default, {
                             locked: p,
                             keybind: t
                         }), (0, a.jsx)(J.default, {})]
@@ -2555,7 +2583,7 @@
                     super(e), this.handleWindowResize = c(() => {
                         this.forceUpdate()
                     }, 500), this.activeKeyEventShapes = [], this.lockEventShape = (0, K.toBrowserEvents)(this.props.keybindKeyCodes), this.getActiveKeyEventIndex = e => this.activeKeyEventShapes.findIndex(t => h(t, e)), this.onKeyDownGlobal = e => {
-                        let t = eu(e),
+                        let t = ec(e),
                             n = this.getActiveKeyEventIndex(t) > -1,
                             i = [16, 17, 18, 91].includes(e.keyCode);
                         !n && !i && this.activeKeyEventShapes.push(t);
@@ -2565,18 +2593,18 @@
                             locked: l,
                             activeRegions: s
                         } = this.props;
-                        t.keyCode === d.codes.esc && l && s.has(ei.OverlayActiveRegions.TEXT_WIDGET) && S.default.deactivateAllRegions()
+                        t.keyCode === d.codes.esc && l && s.has(ea.OverlayActiveRegions.TEXT_WIDGET) && S.default.deactivateAllRegions()
                     }, this.onKeyUpGlobal = e => {
-                        let t = eu(e),
+                        let t = ec(e),
                             n = this.getActiveKeyEventIndex(t);
                         n > -1 && this.activeKeyEventShapes.splice(n, 1)
                     };
-                    let t = e.locked && F.default.isPinned(ei.OverlayWidgets.TEXT);
+                    let t = e.locked && F.default.isPinned(ea.OverlayWidgets.TEXT);
                     C.default.setLayout(t ? y.OVERLAY_LOCKED_LAYOUT : y.OVERLAY_LAYOUT), t && C.default.enable()
                 }
             }
 
-            function ef() {
+            function eh() {
                 let {
                     locked: e,
                     initialized: t,
@@ -2598,15 +2626,12 @@
                 }), m = (0, _.default)() && null != c, E = (0, p.useStateFromStores)([L.default], () => null != L.default.getCurrentUserActiveStream()), {
                     AnalyticsLocationProvider: S
                 } = (0, T.default)(O.default.OVERLAY), {
-                    showKeybindIndicators: v
-                } = X.default.useExperiment({
-                    location: "Overlay"
-                }, {
-                    autoTrackExposure: !1
-                });
+                    showKeybindIndicators: v,
+                    dismissKeybindNotification: y
+                } = (0, Q.useGetKeybindNotification)();
                 return (0, a.jsx)(S, {
                     children: (0, a.jsx)(g.RedesignIconContextProvider, {
-                        children: (0, a.jsx)(ec, {
+                        children: (0, a.jsx)(ef, {
                             locked: e,
                             initialized: t,
                             incompatibleApp: n,
@@ -2623,7 +2648,8 @@
                             isStreaming: E,
                             canBroadcast: h,
                             canStartBroadcast: m,
-                            showKeybindNotification: v
+                            showKeybindNotification: v,
+                            dismissKeybindNotification: y
                         })
                     })
                 })
@@ -5077,7 +5103,7 @@
                             case V.OverlayNudgeTypes.GO_LIVE_NON_VOICE:
                                 return (0, g.default)(e);
                             case V.OverlayNudgeTypes.KEYBIND_INDICATORS:
-                                return (0, O.default)();
+                                return (0, O.default)(e);
                             case V.OverlayNudgeTypes.NEWS:
                             default:
                                 return (0, v.default)(e)
