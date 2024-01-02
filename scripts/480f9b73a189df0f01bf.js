@@ -1254,11 +1254,12 @@
                         currency: a,
                         price: u,
                         prices: c,
-                        category_sku_id: d,
-                        ...E
+                        type: d,
+                        category_sku_id: E,
+                        ..._
                     } = t;
                     return new e({
-                        ...super.fromServer(E),
+                        ...super.fromServer(_),
                         currency: a,
                         price: u,
                         prices: null == (r = c) ? {} : Object.keys(r).reduce((e, t) => {
@@ -1272,8 +1273,9 @@
                                 paymentSourcePrices: {}
                             }, e
                         }, {}),
-                        categorySkuId: d,
-                        items: E.items.reduce((e, t) => (0, n.match)(t).with({
+                        type: d,
+                        categorySkuId: E,
+                        items: _.items.reduce((e, t) => (0, n.match)(t).with({
                             type: l.CollectiblesItemType.AVATAR_DECORATION
                         }, t => (e.push(i.default.fromServer(t)), e)).with({
                             type: l.CollectiblesItemType.PROFILE_EFFECT
@@ -1281,7 +1283,7 @@
                     })
                 }
                 constructor(e) {
-                    super(e), this.currency = e.currency, this.price = e.price, this.prices = e.prices, this.summary = e.summary, this.items = e.items, this.categorySkuId = e.categorySkuId
+                    super(e), this.currency = e.currency, this.price = e.price, this.prices = e.prices, this.summary = e.summary, this.type = e.type, this.items = e.items, this.categorySkuId = e.categorySkuId
                 }
             }
         },
