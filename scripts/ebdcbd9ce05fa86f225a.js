@@ -105,7 +105,7 @@
                 l = s("840707"),
                 E = s("49111"),
                 _ = {
-                    createGuildFromTemplate: async function e(e, a, s, _) {
+                    createGuildFromTemplate: async function e(e, a, s, _, d) {
                         try {
                             let t = await l.default.post({
                                 url: E.Endpoints.GUILDS,
@@ -115,7 +115,8 @@
                                     channels: s.channels,
                                     system_channel_id: s.system_channel_id,
                                     roles: s.roles,
-                                    guild_template_code: s.code
+                                    guild_template_code: s.code,
+                                    staff_only: !!d || void 0
                                 },
                                 trackedActionData: {
                                     event: n.NetworkActionNames.GUILD_CREATE,
@@ -139,7 +140,7 @@
                     return t
                 },
                 getGuildTemplatesMap: function() {
-                    return T
+                    return i
                 }
             });
             var n, t, l = s("316693"),
@@ -147,7 +148,7 @@
                 _ = s("49111"),
                 d = s("782340");
 
-            function T() {
+            function i() {
                 return {
                     CREATE: {
                         id: "CREATE",
@@ -568,7 +569,7 @@
             "use strict";
             s.r(a), s.d(a, {
                 GUILD_TEMPLATE_ICONS: function() {
-                    return i
+                    return T
                 }
             });
             var n = s("819963"),
@@ -577,12 +578,12 @@
                 E = s("50308"),
                 _ = s("774406"),
                 d = s("20264"),
-                T = s("472977");
-            let i = {
+                i = s("472977");
+            let T = {
                 CREATE: l,
                 GAMING: _,
                 FRIENDS: E,
-                STUDY: T,
+                STUDY: i,
                 CLUBS: t,
                 CREATORS: n,
                 LOCAL_COMMUNITY: d,
@@ -605,11 +606,11 @@
                 E = s("77078"),
                 _ = s("450911"),
                 d = s("448993"),
-                T = s("923959"),
-                i = s("305961"),
+                i = s("923959"),
+                T = s("305961"),
                 r = s("145131"),
-                L = s("476263"),
-                u = s("476765"),
+                u = s("476263"),
+                L = s("476765"),
                 M = s("782340"),
                 C = s("910287");
 
@@ -620,7 +621,7 @@
                     onClose: o,
                     onChannelPromptCompleted: I,
                     isSlideReady: A
-                } = e, [c, p] = t.useState(""), [N, G] = t.useState(null), [m, f] = t.useState(!1), U = (0, u.useUID)(), D = (0, l.useStateFromStores)([i.default], () => i.default.getGuild(a), [a]), O = t.useRef(null);
+                } = e, [c, p] = t.useState(""), [N, G] = t.useState(null), [m, f] = t.useState(!1), U = (0, L.useUID)(), D = (0, l.useStateFromStores)([T.default], () => T.default.getGuild(a), [a]), O = t.useRef(null);
                 t.useEffect(() => {
                     var e;
                     A && (null === (e = O.current) || void 0 === e || e.focus())
@@ -628,7 +629,7 @@
                 let h = t.useCallback(async e => {
                         if (e.preventDefault(), null == D) return;
                         f(!0), G(null);
-                        let a = T.default.getDefaultChannel(D.id);
+                        let a = i.default.getDefaultChannel(D.id);
                         try {
                             let e = M.default.Messages.NUF_CHANNEL_PROMPT_CHANNEL_TOPIC_TEMPLATE.format({
                                 topic: c
@@ -659,7 +660,7 @@
                             className: C.header,
                             direction: r.default.Direction.VERTICAL,
                             separator: !1,
-                            children: [null != D && (0, n.jsx)(L.default, {
+                            children: [null != D && (0, n.jsx)(u.default, {
                                 guild: D
                             }), (0, n.jsx)(E.Text, {
                                 className: C.guildName,
@@ -736,11 +737,11 @@
                 E = s("77078"),
                 _ = s("145131"),
                 d = s("599110"),
-                T = s("350956"),
-                i = s("49111"),
+                i = s("350956"),
+                T = s("49111"),
                 r = s("782340"),
-                L = s("196481"),
-                u = s("819963"),
+                u = s("196481"),
+                L = s("819963"),
                 M = s("20264");
             let C = .5 > Math.random();
 
@@ -752,7 +753,7 @@
                     hasFooter: o = !0
                 } = e, I = (0, n.jsx)(n.Fragment, {
                     children: (0, n.jsx)(E.Button, {
-                        className: L.backButton,
+                        className: u.backButton,
                         look: E.Button.Looks.BLANK,
                         size: E.Button.Sizes.MIN,
                         onClick: s,
@@ -761,7 +762,7 @@
                 });
 
                 function A(e) {
-                    d.default.track(i.AnalyticEvents.GUILD_CREATION_INTENT_SELECTED, {
+                    d.default.track(T.AnalyticEvents.GUILD_CREATION_INTENT_SELECTED, {
                         skipped: null == e,
                         is_community: !!e
                     }), t(!!e)
@@ -769,45 +770,45 @@
                 let c = (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsxs)(E.ModalHeader, {
                         direction: _.default.Direction.VERTICAL,
-                        className: L.header,
+                        className: u.header,
                         separator: !1,
                         children: [(0, n.jsx)(E.Heading, {
-                            className: l(L.title),
+                            className: l(u.title),
                             variant: "heading-xl/semibold",
                             children: r.default.Messages.CREATION_INTENT_TITLE
                         }), (0, n.jsx)(E.Text, {
-                            className: L.subtitle,
+                            className: u.subtitle,
                             color: "header-secondary",
                             variant: "text-md/normal",
                             children: r.default.Messages.CREATION_INTENT_DESCRIPTION
                         }), null != a && (0, n.jsx)(E.ModalCloseButton, {
-                            className: L.closeButton,
+                            className: u.closeButton,
                             onClick: a
                         })]
                     }), (0, n.jsxs)(E.ModalContent, {
-                        className: L.optionsList,
+                        className: u.optionsList,
                         children: [C ? (0, n.jsxs)(n.Fragment, {
-                            children: [(0, n.jsx)(T.default, {
-                                icon: u,
+                            children: [(0, n.jsx)(i.default, {
+                                icon: L,
                                 message: r.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
                                 onClick: () => A(!1)
-                            }), (0, n.jsx)(T.default, {
+                            }), (0, n.jsx)(i.default, {
                                 icon: M,
                                 message: r.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
                                 onClick: () => A(!0)
                             })]
                         }) : (0, n.jsxs)(n.Fragment, {
-                            children: [(0, n.jsx)(T.default, {
+                            children: [(0, n.jsx)(i.default, {
                                 icon: M,
                                 message: r.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
                                 onClick: () => A(!0)
-                            }), (0, n.jsx)(T.default, {
-                                icon: u,
+                            }), (0, n.jsx)(i.default, {
+                                icon: L,
                                 message: r.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
                                 onClick: () => A(!1)
                             })]
                         }), (0, n.jsx)(E.Text, {
-                            className: L.skip,
+                            className: u.skip,
                             color: "header-secondary",
                             variant: "text-sm/normal",
                             children: r.default.Messages.CREATION_INTENT_SKIP.format({
@@ -836,10 +837,10 @@
             "use strict";
             s.r(a), s.d(a, {
                 useCustomizeGuildSlide: function() {
-                    return I
+                    return A
                 },
                 default: function() {
-                    return A
+                    return c
                 }
             }), s("222007");
             var n = s("37983"),
@@ -848,130 +849,141 @@
                 E = s.n(l),
                 _ = s("77078"),
                 d = s("851387"),
-                T = s("68130"),
-                i = s("145131"),
-                r = s("476765"),
+                i = s("68130"),
+                T = s("697218"),
+                r = s("145131"),
+                u = s("476765"),
                 L = s("651879"),
-                u = s("326678"),
-                M = s("49111"),
-                C = s("782340"),
-                o = s("852243");
+                M = s("326678"),
+                C = s("49111"),
+                o = s("782340"),
+                I = s("852243");
 
-            function I(e) {
+            function A(e) {
+                var a;
                 let {
-                    guildTemplate: a,
-                    onClose: s,
-                    onBack: l,
-                    onHubGuildInfoSet: I,
-                    onGuildCreated: A,
-                    isSlideReady: c,
-                    hasFooter: p = !0,
-                    isCommunity: N = !1
-                } = e, [G, m] = t.useState(L.default.getGuildNameSuggestion()), [f, U] = t.useState(null), [D, O] = t.useState(!1), [h, g] = t.useState(null), y = (0, r.useUID)(), R = t.useRef(null);
+                    guildTemplate: s,
+                    onClose: l,
+                    onBack: A,
+                    onHubGuildInfoSet: c,
+                    onGuildCreated: p,
+                    isSlideReady: N,
+                    hasFooter: G = !0,
+                    isCommunity: m = !1
+                } = e, [f, U] = t.useState(L.default.getGuildNameSuggestion()), [D, O] = t.useState(null), [h, g] = t.useState(!1), [y, R] = t.useState(null), x = !!(null === (a = T.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()), [P, S] = t.useState(x), j = (0, u.useUID)(), H = t.useRef(null);
                 t.useEffect(() => {
                     var e;
-                    c && (null === (e = R.current) || void 0 === e || e.focus())
-                }, [c]);
-                let x = t.useCallback(async e => {
-                        if (e.preventDefault(), null != a) {
-                            O(!0), g(null);
+                    N && (null === (e = H.current) || void 0 === e || e.focus())
+                }, [N]);
+                let V = t.useCallback(async e => {
+                        if (e.preventDefault(), null != s) {
+                            g(!0), R(null);
                             try {
-                                if (null != I) I(G, f);
+                                if (null != c) c(f, D);
                                 else {
-                                    let e = await u.default.createGuildFromTemplate(G, f, a, N);
-                                    d.default.transitionToGuildSync(e.id), null == A || A(e.id)
+                                    let e = await M.default.createGuildFromTemplate(f, D, s, m, P);
+                                    d.default.transitionToGuildSync(e.id), null == p || p(e.id)
                                 }
                             } catch (e) {
-                                g(e)
+                                R(e)
                             }
-                            O(!1)
+                            g(!1)
                         }
-                    }, [a, f, G, A, I, N]),
-                    P = (0, n.jsxs)(n.Fragment, {
+                    }, [s, D, f, p, c, m, P]),
+                    F = (0, n.jsxs)(n.Fragment, {
                         children: [(0, n.jsx)(_.Button, {
                             color: _.Button.Colors.BRAND,
-                            onClick: x,
-                            disabled: 0 === G.length,
-                            submitting: D,
-                            children: null != I ? C.default.Messages.NEXT : C.default.Messages.CREATE
+                            onClick: V,
+                            disabled: 0 === f.length,
+                            submitting: h,
+                            children: null != c ? o.default.Messages.NEXT : o.default.Messages.CREATE
                         }), (0, n.jsx)(_.Button, {
                             look: _.Button.Looks.BLANK,
                             size: _.Button.Sizes.MIN,
-                            onClick: l,
-                            children: C.default.Messages.BACK
+                            onClick: A,
+                            children: o.default.Messages.BACK
                         })]
                     }),
-                    S = (0, n.jsxs)(n.Fragment, {
+                    v = (0, n.jsxs)(n.Fragment, {
                         children: [(0, n.jsxs)(_.ModalHeader, {
-                            direction: i.default.Direction.VERTICAL,
-                            className: o.header,
+                            direction: r.default.Direction.VERTICAL,
+                            className: I.header,
                             separator: !1,
                             children: [(0, n.jsx)(_.Heading, {
-                                className: E(o.title),
+                                className: E(I.title),
                                 variant: "heading-xl/semibold",
-                                children: C.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER
+                                children: o.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER
                             }), (0, n.jsx)(_.Text, {
-                                className: o.subtitle,
+                                className: I.subtitle,
                                 color: "header-secondary",
                                 variant: "text-md/normal",
-                                children: C.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER
-                            }), null != s && (0, n.jsx)(_.ModalCloseButton, {
-                                className: o.closeButton,
-                                onClick: s
+                                children: o.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER
+                            }), null != l && (0, n.jsx)(_.ModalCloseButton, {
+                                className: I.closeButton,
+                                onClick: l
                             })]
                         }), (0, n.jsxs)(_.ModalContent, {
-                            className: o.createGuild,
+                            className: I.createGuild,
                             children: [(0, n.jsx)("div", {
-                                className: o.uploadIcon,
-                                children: (0, n.jsx)(T.default, {
-                                    icon: f,
-                                    onChange: U
+                                className: I.uploadIcon,
+                                children: (0, n.jsx)(i.default, {
+                                    icon: D,
+                                    onChange: O
                                 })
                             }), (0, n.jsxs)("form", {
-                                onSubmit: x,
+                                onSubmit: V,
                                 children: [(0, n.jsxs)(_.FormItem, {
-                                    className: o.nameInput,
-                                    error: null == h ? void 0 : h.getFirstFieldErrorMessage("name"),
+                                    className: I.nameInput,
+                                    error: null == y ? void 0 : y.getFirstFieldErrorMessage("name"),
                                     children: [(0, n.jsx)(_.FormTitle, {
                                         tag: "label",
-                                        htmlFor: y,
-                                        children: C.default.Messages.FORM_LABEL_SERVER_NAME
+                                        htmlFor: j,
+                                        children: o.default.Messages.FORM_LABEL_SERVER_NAME
                                     }), (0, n.jsx)(_.TextInput, {
                                         type: "text",
-                                        value: G,
+                                        value: f,
                                         maxLength: 100,
-                                        onChange: m,
-                                        inputRef: R,
-                                        id: y
+                                        onChange: U,
+                                        inputRef: H,
+                                        id: j
                                     })]
+                                }), x && (0, n.jsx)(_.FormSwitch, {
+                                    hideBorder: !0,
+                                    value: P,
+                                    onChange: e => S(e),
+                                    note: (0, n.jsx)(n.Fragment, {
+                                        children: "Only Discord employees would be able to join this server"
+                                    }),
+                                    className: I.formItemSpaced,
+                                    children: "Staff Only"
                                 }), (0, n.jsx)(_.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    className: o.guidelines,
-                                    children: C.default.Messages.CREATE_SERVER_GUIDELINES.format({
-                                        guidelinesURL: M.MarketingURLs.GUIDELINES
+                                    className: I.guidelines,
+                                    children: o.default.Messages.CREATE_SERVER_GUIDELINES.format({
+                                        guidelinesURL: C.MarketingURLs.GUIDELINES
                                     })
                                 })]
-                            }), null == h || h.hasFieldErrors() ? null : (0, n.jsx)(_.Text, {
+                            }), null == y || y.hasFieldErrors() ? null : (0, n.jsx)(_.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-danger",
-                                children: h.message
+                                children: y.message
                             })]
-                        }), p && (0, n.jsx)(_.ModalFooter, {
-                            justify: i.default.Justify.BETWEEN,
-                            children: P
+                        }), G && (0, n.jsx)(_.ModalFooter, {
+                            justify: r.default.Justify.BETWEEN,
+                            children: F
                         })]
                     });
                 return {
-                    content: S,
-                    footer: P
+                    content: v,
+                    footer: F
                 }
             }
 
-            function A(e) {
+            function c(e) {
                 let {
                     content: a
-                } = I(e);
+                } = A(e);
                 return a
             }
         },
@@ -988,11 +1000,11 @@
                 E = s.n(l),
                 _ = s("77078"),
                 d = s("145131"),
-                T = s("579333"),
-                i = s("350956"),
+                i = s("579333"),
+                T = s("350956"),
                 r = s("47212"),
-                L = s("782340"),
-                u = s("238428");
+                u = s("782340"),
+                L = s("238428");
 
             function M(e) {
                 let {
@@ -1002,8 +1014,8 @@
                 } = e, E = t.useCallback(() => {
                     s(a)
                 }, [a, s]);
-                return (0, n.jsx)(i.default, {
-                    icon: T.GUILD_TEMPLATE_ICONS[a.id],
+                return (0, n.jsx)(T.default, {
+                    icon: i.GUILD_TEMPLATE_ICONS[a.id],
                     message: a.label,
                     onClick: E,
                     autoFocus: l
@@ -1016,68 +1028,68 @@
                     isNewUser: s,
                     onClose: t,
                     onChooseTemplate: l,
-                    onJoin: T
-                } = e, i = (0, r.getGuildTemplatesMap)();
+                    onJoin: i
+                } = e, T = (0, r.getGuildTemplatesMap)();
                 return (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsxs)(_.ModalHeader, {
                         direction: d.default.Direction.VERTICAL,
-                        className: u.header,
+                        className: L.header,
                         separator: !1,
                         children: [(0, n.jsx)(_.Heading, {
-                            className: u.title,
+                            className: L.title,
                             variant: "heading-xl/semibold",
-                            children: s ? L.default.Messages.NUF_DESKTOP_TEMPLATES_TITLE : L.default.Messages.CREATE_GUILD_WITH_TEMPLATES_TITLE
+                            children: s ? u.default.Messages.NUF_DESKTOP_TEMPLATES_TITLE : u.default.Messages.CREATE_GUILD_WITH_TEMPLATES_TITLE
                         }), (0, n.jsx)(_.Text, {
-                            className: u.subtitle,
+                            className: L.subtitle,
                             color: "header-secondary",
                             variant: "text-md/normal",
-                            children: L.default.Messages.NUF_DESKTOP_TEMPLATES_SUBTITLE
+                            children: u.default.Messages.NUF_DESKTOP_TEMPLATES_SUBTITLE
                         }), null != t && (0, n.jsx)(_.ModalCloseButton, {
-                            className: u.closeButton,
+                            className: L.closeButton,
                             onClick: t
                         })]
                     }), (0, n.jsxs)(_.ModalContent, {
-                        className: E(u.templatesList, a),
+                        className: E(L.templatesList, a),
                         paddingFix: !1,
                         children: [(0, n.jsx)(M, {
-                            guildTemplate: i[r.GuildTemplateId.CREATE],
+                            guildTemplate: T[r.GuildTemplateId.CREATE],
                             onClick: l,
                             autoFocus: !0
                         }), (0, n.jsx)(_.Text, {
-                            className: u.optionHeader,
+                            className: L.optionHeader,
                             color: "header-secondary",
                             variant: "text-xs/bold",
-                            children: L.default.Messages.GUILD_TEMPLATE_SELECTOR_OPTION_HEADER
+                            children: u.default.Messages.GUILD_TEMPLATE_SELECTOR_OPTION_HEADER
                         }), (0, n.jsx)(M, {
-                            guildTemplate: i[r.GuildTemplateId.GAMING],
+                            guildTemplate: T[r.GuildTemplateId.GAMING],
                             onClick: l
                         }), (0, n.jsx)(M, {
-                            guildTemplate: i[r.GuildTemplateId.SCHOOL_CLUB],
+                            guildTemplate: T[r.GuildTemplateId.SCHOOL_CLUB],
                             onClick: l
                         }), (0, n.jsx)(M, {
-                            guildTemplate: i[r.GuildTemplateId.STUDY],
+                            guildTemplate: T[r.GuildTemplateId.STUDY],
                             onClick: l
                         }), (0, n.jsx)(M, {
-                            guildTemplate: i[r.GuildTemplateId.FRIENDS],
+                            guildTemplate: T[r.GuildTemplateId.FRIENDS],
                             onClick: l
                         }), (0, n.jsx)(M, {
-                            guildTemplate: i[r.GuildTemplateId.CREATORS],
+                            guildTemplate: T[r.GuildTemplateId.CREATORS],
                             onClick: l
                         }), (0, n.jsx)(M, {
-                            guildTemplate: i[r.GuildTemplateId.LOCAL_COMMUNITY],
+                            guildTemplate: T[r.GuildTemplateId.LOCAL_COMMUNITY],
                             onClick: l
                         })]
-                    }), null != T && (0, n.jsxs)(_.ModalFooter, {
-                        className: u.footer,
+                    }), null != i && (0, n.jsxs)(_.ModalFooter, {
+                        className: L.footer,
                         children: [(0, n.jsx)(_.Heading, {
                             variant: "heading-lg/semibold",
-                            className: u.footerTitle,
-                            children: L.default.Messages.NUF_HAVE_AN_INVITE_ALREADY
+                            className: L.footerTitle,
+                            children: u.default.Messages.NUF_HAVE_AN_INVITE_ALREADY
                         }), (0, n.jsx)(_.Button, {
-                            className: u.footerButton,
+                            className: L.footerButton,
                             color: _.Button.Colors.PRIMARY,
-                            onClick: T,
-                            children: L.default.Messages.JOIN_SERVER_TITLE
+                            onClick: i,
+                            children: u.default.Messages.JOIN_SERVER_TITLE
                         })]
                     })]
                 })
