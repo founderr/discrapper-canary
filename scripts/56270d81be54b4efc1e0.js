@@ -70,10 +70,10 @@
                 T = s("679653"),
                 _ = s("419830"),
                 x = s("47495"),
-                C = s("348077"),
+                I = s("348077"),
                 p = s("308305"),
-                I = s("319165"),
-                O = s("233069"),
+                O = s("319165"),
+                C = s("233069"),
                 M = s("42203"),
                 v = s("245997"),
                 L = s("525065"),
@@ -84,12 +84,12 @@
                 G = s("145131"),
                 U = s("612434"),
                 F = s("449008"),
-                P = s("701909"),
-                H = s("34676"),
-                D = s("49111"),
-                w = s("468200"),
-                k = s("782340"),
-                y = s("296884");
+                D = s("701909"),
+                w = s("34676"),
+                P = s("49111"),
+                H = s("468200"),
+                y = s("782340"),
+                k = s("296884");
             (l = i || (i = {})).MUTED = "muted", l.MESSAGE_NOTIFICATIONS = "message_notifications", l.SUPPRESS_EVERYONE = "suppress_everyone", l.SUPPRESS_ROLES = "suppress_roles", l.MOBILE_PUSH = "mobile_push", l.MUTE_EVENTS = "mute_scheduled_events", l.NOTIFY_HIGHLIGHTS = "notify_highlights";
             class B extends n.PureComponent {
                 static getDerivedStateFromProps(e, t) {
@@ -150,10 +150,10 @@
                         children: [(0, a.jsxs)(G.default.Child, {
                             children: [(0, a.jsx)(g.Heading, {
                                 variant: "heading-lg/semibold",
-                                children: k.default.Messages.NOTIFICATION_SETTINGS
+                                children: y.default.Messages.NOTIFICATION_SETTINGS
                             }), (0, a.jsx)(g.Text, {
                                 variant: "text-md/normal",
-                                className: y.guildName,
+                                className: k.guildName,
                                 children: e.name
                             })]
                         }), (0, a.jsx)(G.default.Child, {
@@ -168,7 +168,7 @@
                     return (0, a.jsx)(g.ModalFooter, {
                         children: (0, a.jsx)(g.Button, {
                             onClick: this.props.onClose,
-                            children: k.default.Messages.DONE
+                            children: y.default.Messages.DONE
                         })
                     })
                 }
@@ -178,33 +178,33 @@
                         muted: t,
                         muteConfig: s,
                         guild: i
-                    } = this.props, l = null !== (e = null == s ? void 0 : s.selected_time_window) && void 0 !== e ? e : w.MuteUntilSeconds.ALWAYS;
+                    } = this.props, l = null !== (e = null == s ? void 0 : s.selected_time_window) && void 0 !== e ? e : H.MuteUntilSeconds.ALWAYS;
                     return null == i ? null : (0, a.jsxs)(g.FormItem, {
-                        className: y.largeSpacing,
+                        className: k.largeSpacing,
                         children: [(0, a.jsx)(g.FormSwitch, {
                             hideBorder: !0,
                             value: t,
-                            onChange: e => this.handleCheckboxChange("muted", e, H.NotificationLabel.muted(e)),
-                            note: k.default.Messages.FORM_LABEL_MUTE_SERVER_DESCRIPTION,
-                            children: k.default.Messages.FORM_LABEL_MUTE_SERVER.format({
+                            onChange: e => this.handleCheckboxChange("muted", e, w.NotificationLabel.muted(e)),
+                            note: y.default.Messages.FORM_LABEL_MUTE_SERVER_DESCRIPTION,
+                            children: y.default.Messages.FORM_LABEL_MUTE_SERVER.format({
                                 name: i.name
                             })
                         }), t ? (0, a.jsxs)(G.default, {
-                            className: y.spacing,
+                            className: k.spacing,
                             align: G.default.Align.CENTER,
                             children: [(0, a.jsxs)(G.default, {
                                 direction: G.default.Direction.VERTICAL,
-                                className: y.muteUntilTextWrapper,
+                                className: k.muteUntilTextWrapper,
                                 children: [(0, a.jsx)(g.FormTitle, {
                                     tag: "h3",
-                                    className: y.muteUntilTitle,
-                                    children: k.default.Messages.MUTE_UNTIL
-                                }), (0, a.jsx)(I.default, {
-                                    className: y.muteUntilText,
+                                    className: k.muteUntilTitle,
+                                    children: y.default.Messages.MUTE_UNTIL
+                                }), (0, a.jsx)(O.default, {
+                                    className: k.muteUntilText,
                                     muteConfig: s
                                 })]
                             }), (0, a.jsx)(g.SingleSelect, {
-                                className: y.muteTimeSelector,
+                                className: k.muteTimeSelector,
                                 options: (0, x.getMuteTimeOptions)(),
                                 value: l,
                                 onChange: this.handleSelectMuteTime
@@ -220,24 +220,24 @@
                         memberCount: i
                     } = this.props;
                     return (0, a.jsxs)("div", {
-                        className: y.spacing,
+                        className: k.spacing,
                         children: [(0, a.jsx)(g.FormItem, {
-                            title: k.default.Messages.FORM_LABEL_SERVER_NOTIFICATION_SETTINGS,
-                            className: y.largeSpacing,
+                            title: y.default.Messages.FORM_LABEL_SERVER_NOTIFICATION_SETTINGS,
+                            className: k.largeSpacing,
                             children: (0, a.jsx)(g.RadioGroup, {
                                 disabled: s,
                                 value: t,
-                                onChange: e => this.handleRadioChange("message_notifications", e, H.NotificationLabel.notifications(e.value)),
+                                onChange: e => this.handleRadioChange("message_notifications", e, w.NotificationLabel.notifications(e.value)),
                                 options: (e = i, [{
-                                    name: k.default.Messages.FORM_LABEL_ALL_MESSAGES,
-                                    value: D.UserNotificationSettings.ALL_MESSAGES,
-                                    desc: null != e && e >= D.MAX_MEMBERS_NOTIFY_ALL_MESSAGES ? k.default.Messages.LARGE_GUILD_NOTIFY_ALL_MESSAGES_DESCRIPTION : null
+                                    name: y.default.Messages.FORM_LABEL_ALL_MESSAGES,
+                                    value: P.UserNotificationSettings.ALL_MESSAGES,
+                                    desc: null != e && e >= P.MAX_MEMBERS_NOTIFY_ALL_MESSAGES ? y.default.Messages.LARGE_GUILD_NOTIFY_ALL_MESSAGES_DESCRIPTION : null
                                 }, {
-                                    name: k.default.Messages.FORM_LABEL_ONLY_MENTIONS.format(),
-                                    value: D.UserNotificationSettings.ONLY_MENTIONS
+                                    name: y.default.Messages.FORM_LABEL_ONLY_MENTIONS.format(),
+                                    value: P.UserNotificationSettings.ONLY_MENTIONS
                                 }, {
-                                    name: k.default.Messages.FORM_LABEL_NOTHING,
-                                    value: D.UserNotificationSettings.NO_MESSAGES
+                                    name: y.default.Messages.FORM_LABEL_NOTHING,
+                                    value: P.UserNotificationSettings.NO_MESSAGES
                                 }])
                             })
                         }), (0, a.jsx)(g.FormDivider, {})]
@@ -254,47 +254,47 @@
                         guildId: r
                     } = this.props;
                     return (0, a.jsxs)(g.FormItem, {
-                        className: y.largeSpacing,
+                        className: k.largeSpacing,
                         children: [(0, a.jsx)(g.FormSwitch, {
-                            onChange: e => this.handleCheckboxChange("suppress_everyone", e, H.NotificationLabel.suppressEveryone(e)),
+                            onChange: e => this.handleCheckboxChange("suppress_everyone", e, w.NotificationLabel.suppressEveryone(e)),
                             value: e,
-                            children: k.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format()
+                            children: y.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format()
                         }), (0, a.jsx)(g.FormSwitch, {
-                            onChange: e => this.handleCheckboxChange("suppress_roles", e, H.NotificationLabel.suppressRoles(e)),
+                            onChange: e => this.handleCheckboxChange("suppress_roles", e, w.NotificationLabel.suppressRoles(e)),
                             value: t,
-                            children: k.default.Messages.FORM_LABEL_SUPPRESS_ROLES
+                            children: y.default.Messages.FORM_LABEL_SUPPRESS_ROLES
                         }), (0, a.jsx)(g.FormSwitch, {
                             onChange: e => {
                                 S.default.updateGuildNotificationSettings(r, {
-                                    notify_highlights: e ? D.HighlightSettings.DISABLED : D.HighlightSettings.ENABLED
-                                }, H.NotificationLabel.highlights(!e))
+                                    notify_highlights: e ? P.HighlightSettings.DISABLED : P.HighlightSettings.ENABLED
+                                }, w.NotificationLabel.highlights(!e))
                             },
-                            value: i || n === D.HighlightSettings.DISABLED,
+                            value: i || n === P.HighlightSettings.DISABLED,
                             disabled: i,
                             note: (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(g.Text, {
                                     variant: "text-sm/normal",
-                                    children: k.default.Messages.HIGHLIGHTS_NOTE_SUBTEXT
+                                    children: y.default.Messages.HIGHLIGHTS_NOTE_SUBTEXT
                                 }), (0, a.jsx)("div", {
-                                    className: y.highlightsLink,
+                                    className: k.highlightsLink,
                                     children: (0, a.jsx)(g.Anchor, {
-                                        href: P.default.getArticleURL(D.HelpdeskArticles.HIGHLIGHTS),
-                                        children: k.default.Messages.HIGHLIGHTS_LEARN_MORE
+                                        href: D.default.getArticleURL(P.HelpdeskArticles.HIGHLIGHTS),
+                                        children: y.default.Messages.HIGHLIGHTS_LEARN_MORE
                                     })
                                 })]
                             }),
                             children: (0, a.jsx)(a.Fragment, {
-                                children: k.default.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS
+                                children: y.default.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS
                             })
                         }), (0, a.jsx)(g.FormSwitch, {
                             value: l,
-                            onChange: e => this.handleCheckboxChange("mute_scheduled_events", e, H.NotificationLabel.mutedEvents(e)),
-                            children: k.default.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS
+                            onChange: e => this.handleCheckboxChange("mute_scheduled_events", e, w.NotificationLabel.mutedEvents(e)),
+                            children: y.default.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS
                         }), (0, a.jsx)(g.FormSwitch, {
                             value: !i && s,
                             disabled: i,
-                            onChange: e => this.handleCheckboxChange("mobile_push", e, H.NotificationLabel.mobilePush(e)),
-                            children: k.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS
+                            onChange: e => this.handleCheckboxChange("mobile_push", e, w.NotificationLabel.mobilePush(e)),
+                            children: y.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS
                         })]
                     })
                 }
@@ -306,7 +306,7 @@
                         let {
                             channel: s
                         } = e;
-                        return s.type !== D.ChannelTypes.GUILD_CATEGORY || null != t[s.id] && t[s.id].length > 0
+                        return s.type !== P.ChannelTypes.GUILD_CATEGORY || null != t[s.id] && t[s.id].length > 0
                     }).map(e => {
                         let {
                             channel: t
@@ -317,15 +317,15 @@
                         }
                     }).value();
                     return (0, a.jsxs)(g.FormItem, {
-                        title: k.default.Messages.NOTIFICATION_OVERRIDES,
-                        className: y.largeSpacing,
+                        title: y.default.Messages.NOTIFICATION_OVERRIDES,
+                        className: k.largeSpacing,
                         children: [(0, a.jsx)(g.FormText, {
                             type: g.FormText.Types.DESCRIPTION,
-                            className: y.smallSpacing,
-                            children: k.default.Messages.ADD_CHANNEL_TO_OVERRIDE
+                            className: k.smallSpacing,
+                            children: y.default.Messages.ADD_CHANNEL_TO_OVERRIDE
                         }), (0, a.jsx)(g.SearchableSelect, {
                             value: "",
-                            placeholder: k.default.Messages.SELECT_CHANNEL_OR_CATEGORY,
+                            placeholder: y.default.Messages.SELECT_CHANNEL_OR_CATEGORY,
                             renderOptionLabel: this.renderOptionLabel,
                             options: s,
                             onChange: this.handleSelectChange
@@ -362,40 +362,40 @@
                         }, d.id)
                     }).filter(F.isNotNullish);
                     return (0 === r.size || 0 === d.length) && d.push((0, a.jsx)("div", {
-                        className: y.overridePlaceholder,
+                        className: k.overridePlaceholder,
                         children: (0, a.jsx)(g.Text, {
-                            className: y.overrideHeader,
+                            className: k.overrideHeader,
                             variant: "text-sm/semibold",
-                            children: k.default.Messages.ADD_CHANNEL_TO_OVERRIDE
+                            children: y.default.Messages.ADD_CHANNEL_TO_OVERRIDE
                         })
                     }, "placeholder")), (0, a.jsxs)("div", {
-                        className: y.overrideList,
+                        className: k.overrideList,
                         children: [(0, a.jsxs)(G.default, {
                             children: [(0, a.jsx)(g.Heading, {
                                 variant: "eyebrow",
-                                className: y.headerName,
-                                children: k.default.Messages.CHANNEL_OR_CATEGORY
+                                className: k.headerName,
+                                children: y.default.Messages.CHANNEL_OR_CATEGORY
                             }), (0, a.jsx)(g.Heading, {
                                 variant: "eyebrow",
-                                className: y.headerOption,
-                                children: k.default.Messages.FORM_LABEL_ALL
+                                className: k.headerOption,
+                                children: y.default.Messages.FORM_LABEL_ALL
                             }), (0, a.jsx)(g.Heading, {
                                 variant: "eyebrow",
-                                className: y.headerOption,
-                                children: k.default.Messages.FORM_LABEL_MENTIONS
+                                className: k.headerOption,
+                                children: y.default.Messages.FORM_LABEL_MENTIONS
                             }), (0, a.jsx)(g.Heading, {
                                 variant: "eyebrow",
-                                className: y.headerOption,
-                                children: k.default.Messages.FORM_LABEL_NOTHING
+                                className: k.headerOption,
+                                children: y.default.Messages.FORM_LABEL_NOTHING
                             }), (0, a.jsx)(g.Heading, {
                                 variant: "eyebrow",
-                                className: y.headerOption,
+                                className: k.headerOption,
                                 children: (0, a.jsx)(g.Tooltip, {
-                                    text: k.default.Messages.FORM_LABEL_MUTE_SERVER_DESCRIPTION,
+                                    text: y.default.Messages.FORM_LABEL_MUTE_SERVER_DESCRIPTION,
                                     position: "bottom",
                                     children: e => (0, a.jsx)("span", {
                                         ...e,
-                                        children: k.default.Messages.SOUND_MUTE
+                                        children: y.default.Messages.SOUND_MUTE
                                     })
                                 })
                             })]
@@ -404,7 +404,7 @@
                 }
                 render() {
                     return (0, a.jsxs)(g.ModalRoot, {
-                        "aria-label": k.default.Messages.NOTIFICATION_SETTINGS,
+                        "aria-label": y.default.Messages.NOTIFICATION_SETTINGS,
                         size: g.ModalSize.MEDIUM,
                         transitionState: this.props.transitionState,
                         children: [this.renderHeader(), (0, a.jsxs)(g.ModalContent, {
@@ -437,7 +437,7 @@
                                 selected_time_window: e,
                                 end_time: t
                             }
-                        }, H.NotificationLabels.Muted)
+                        }, w.NotificationLabels.Muted)
                     }, this.handleDeleteOverride = e => {
                         let {
                             overrides: t
@@ -484,7 +484,7 @@
                                     type: t
                                 }
                             } = e;
-                            return (0, O.isGuildSelectableChannelType)(t) || t === D.ChannelTypes.GUILD_CATEGORY
+                            return (0, C.isGuildSelectableChannelType)(t) || t === P.ChannelTypes.GUILD_CATEGORY
                         }),
                         notifyHighlights: R.default.getNotifyHighlights(t)
                     }
@@ -498,7 +498,7 @@
 
             function Y(e) {
                 let t = (0, x.useShouldUseNewNotificationSystem)("NotificationSettingsModal"),
-                    s = t ? C.default : V;
+                    s = t ? I.default : V;
                 return (0, a.jsx)(s, {
                     ...e
                 })
@@ -533,6 +533,86 @@
                     children: (0, i.jsx)("path", {
                         fill: "string" == typeof n ? n : n.css,
                         d: "M9.7 2.89c.18-.07.32-.24.37-.43a2 2 0 0 1 3.86 0c.05.2.19.36.38.43A7 7 0 0 1 19 9.5v2.09c0 .12.05.24.13.33l1.1 1.22a3 3 0 0 1 .77 2.01v.28c0 .67-.34 1.29-.95 1.56-1.31.6-4 1.51-8.05 1.51-4.05 0-6.74-.91-8.05-1.5-.61-.28-.95-.9-.95-1.57v-.28a3 3 0 0 1 .77-2l1.1-1.23a.5.5 0 0 0 .13-.33V9.5a7 7 0 0 1 4.7-6.61ZM9.18 19.84A.16.16 0 0 0 9 20a3 3 0 1 0 6 0c0-.1-.09-.17-.18-.16a24.86 24.86 0 0 1-5.64 0Z",
+                        className: r
+                    })
+                })
+            }
+        },
+        225389: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                CircleInformationIcon: function() {
+                    return n
+                }
+            });
+            var i = s("37983");
+            s("884691");
+            var l = s("669491"),
+                a = s("75196");
+            let n = e => {
+                let {
+                    width: t = 24,
+                    height: s = 24,
+                    secondaryColor: n = "transparent",
+                    secondaryColorClass: r = "",
+                    color: d = l.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: o = "",
+                    ...u
+                } = e;
+                return (0, i.jsxs)("svg", {
+                    ...(0, a.default)(u),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: s,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: [(0, i.jsx)("circle", {
+                        cx: "12",
+                        cy: "12",
+                        r: "10",
+                        fill: "string" == typeof n ? n : n.css,
+                        className: r
+                    }), (0, i.jsx)("path", {
+                        fill: "string" == typeof d ? d : d.css,
+                        fillRule: "evenodd",
+                        d: "M23 12a11 11 0 1 1-22 0 11 11 0 0 1 22 0Zm-9.5-4.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Zm-.77 3.96a1 1 0 1 0-1.96-.42l-1.04 4.86a2.77 2.77 0 0 0 4.31 2.83l.24-.17a1 1 0 1 0-1.16-1.62l-.24.17a.77.77 0 0 1-1.2-.79l1.05-4.86Z",
+                        clipRule: "evenodd",
+                        className: o
+                    })]
+                })
+            }
+        },
+        833222: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                DenyIcon: function() {
+                    return n
+                }
+            });
+            var i = s("37983");
+            s("884691");
+            var l = s("669491"),
+                a = s("75196");
+            let n = e => {
+                let {
+                    width: t = 24,
+                    height: s = 24,
+                    color: n = l.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: r = "",
+                    ...d
+                } = e;
+                return (0, i.jsx)("svg", {
+                    ...(0, a.default)(d),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: s,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, i.jsx)("path", {
+                        fill: "string" == typeof n ? n : n.css,
+                        fillRule: "evenodd",
+                        d: "M23 12a11 11 0 1 1-22 0 11 11 0 0 1 22 0Zm-2 0a9 9 0 0 1-14.62 7.03L19.03 6.38A8.96 8.96 0 0 1 21 12ZM4.97 17.62 17.62 4.97A9 9 0 0 0 4.97 17.62Z",
+                        clipRule: "evenodd",
                         className: r
                     })
                 })
@@ -580,7 +660,7 @@
             var i = s("49111"),
                 l = s("133335"),
                 a = s("782340");
-            let n = () => [{
+            let n = e => [{
                     label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
                     value: i.UserNotificationSettings.ALL_MESSAGES
                 }, {
@@ -590,12 +670,13 @@
                     label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NONE,
                     value: i.UserNotificationSettings.NO_MESSAGES
                 }],
-                r = () => [{
+                r = e => [{
                     label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
                     value: l.UnreadSetting.ALL_MESSAGES
                 }, {
+                    value: l.UnreadSetting.ONLY_MENTIONS,
                     label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-                    value: l.UnreadSetting.ONLY_MENTIONS
+                    disabled: (null == e ? void 0 : e.notificationSetting) === i.UserNotificationSettings.ALL_MESSAGES
                 }]
         },
         661740: function(e, t, s) {
@@ -715,10 +796,10 @@
                 T = s("282109"),
                 _ = s("697218"),
                 x = s("449008"),
-                C = s("34676"),
+                I = s("34676"),
                 p = s("47495"),
-                I = s("437756"),
-                O = s("277796"),
+                O = s("437756"),
+                C = s("277796"),
                 M = s("507313"),
                 v = s("661740"),
                 L = s("432082"),
@@ -758,8 +839,8 @@
                             null != s && c.default.updateChannelOverrideSettings(t, e, {
                                 muted: !1,
                                 message_notifications: T.default.resolvedMessageNotifications(s),
-                                flags: (0, O.withChannelUnreadFlags)(T.default.getChannelIdFlags(s.guild_id, s.id), T.default.resolveUnreadSetting(s))
-                            }, C.NotificationLabels.OverrideCreated)
+                                flags: (0, C.withChannelUnreadFlags)(T.default.getChannelIdFlags(s.guild_id, s.id), T.default.resolveUnreadSetting(s))
+                            }, I.NotificationLabels.OverrideCreated)
                         }
                     }), n.length > 0 && (0, i.jsxs)("div", {
                         className: R.table,
@@ -803,16 +884,16 @@
                 let {
                     channel: t,
                     categories: s
-                } = e, a = (0, o.useToken)(d.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(null == t ? void 0 : t.parent_id)), E = (0, I.useChannelPresetSettings)(t), [T, x] = l.useState(!1);
+                } = e, a = (0, o.useToken)(d.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(null == t ? void 0 : t.parent_id)), E = (0, O.useChannelPresetSettings)(t), [T, x] = l.useState(!1);
                 if (null == t) return null;
-                let C = j.default.Messages.NO_CATEGORY,
+                let I = j.default.Messages.NO_CATEGORY,
                     p = (0, g.getChannelIconComponent)(t);
-                t.type === A.ChannelTypes.GUILD_CATEGORY && null != t.guild_id && "" !== t.guild_id ? C = j.default.Messages.NUM_CHANNELS.format({
+                t.type === A.ChannelTypes.GUILD_CATEGORY && null != t.guild_id && "" !== t.guild_id ? I = j.default.Messages.NUM_CHANNELS.format({
                     num: null != s[t.id] ? s[t.id].length : 0
-                }) : null != c && (C = j.default.Messages.IN_CATEGORY.format({
+                }) : null != c && (I = j.default.Messages.IN_CATEGORY.format({
                     categoryName: (0, f.computeChannelName)(c, _.default, m.default)
                 }));
-                let O = T ? M.Presets.CUSTOM : E.preset;
+                let C = T ? M.Presets.CUSTOM : E.preset;
                 return (0, i.jsx)("div", {
                     children: (0, i.jsxs)("div", {
                         className: n(R.row, R.channel),
@@ -830,7 +911,7 @@
                                 }), (0, i.jsx)(o.Text, {
                                     variant: "text-xs/medium",
                                     className: R.modColor,
-                                    children: C
+                                    children: I
                                 })]
                             })]
                         }), (0, i.jsx)("div", {
@@ -840,8 +921,8 @@
                                     color: a,
                                     shape: o.Checkbox.Shapes.ROUND,
                                     type: o.Checkbox.Types.INVERTED,
-                                    value: O === M.Presets.ALL_MESSAGES,
-                                    onChange: () => ((0, I.updateChannelPreset)(t.guild_id, t.id, M.Presets.ALL_MESSAGES), x(!1))
+                                    value: C === M.Presets.ALL_MESSAGES,
+                                    onChange: () => ((0, O.updateChannelPreset)(t.guild_id, t.id, M.Presets.ALL_MESSAGES), x(!1))
                                 })
                             })
                         }), (0, i.jsx)("div", {
@@ -851,8 +932,8 @@
                                     color: a,
                                     shape: o.Checkbox.Shapes.ROUND,
                                     type: o.Checkbox.Types.INVERTED,
-                                    value: O === M.Presets.MENTIONS,
-                                    onChange: () => ((0, I.updateChannelPreset)(t.guild_id, t.id, M.Presets.MENTIONS), x(!1))
+                                    value: C === M.Presets.MENTIONS,
+                                    onChange: () => ((0, O.updateChannelPreset)(t.guild_id, t.id, M.Presets.MENTIONS), x(!1))
                                 })
                             })
                         }), (0, i.jsx)("div", {
@@ -862,8 +943,8 @@
                                     color: a,
                                     shape: o.Checkbox.Shapes.ROUND,
                                     type: o.Checkbox.Types.INVERTED,
-                                    value: O === M.Presets.NOTHING,
-                                    onChange: () => ((0, I.updateChannelPreset)(t.guild_id, t.id, M.Presets.NOTHING), x(!1))
+                                    value: C === M.Presets.NOTHING,
+                                    onChange: () => ((0, O.updateChannelPreset)(t.guild_id, t.id, M.Presets.NOTHING), x(!1))
                                 })
                             })
                         }), (0, i.jsx)("div", {
@@ -882,12 +963,12 @@
                                     color: a,
                                     shape: o.Checkbox.Shapes.ROUND,
                                     type: o.Checkbox.Types.INVERTED,
-                                    value: O === M.Presets.CUSTOM,
+                                    value: C === M.Presets.CUSTOM,
                                     onChange: () => x(!0)
                                 })
                             })
                         }), (0, i.jsx)(h.default, {
-                            onClick: () => (0, I.updateChannelToGuildDefault)(t.guild_id, t.id),
+                            onClick: () => (0, O.updateChannelToGuildDefault)(t.guild_id, t.id),
                             className: R.removeButton
                         })]
                     })
@@ -943,7 +1024,7 @@
                         channels: (0, d.default)(e._categories, e, _),
                         categories: e
                     }
-                })), C = a(c).filter(e => {
+                })), I = a(c).filter(e => {
                     let {
                         channel: t
                     } = e;
@@ -966,7 +1047,7 @@
                         children: (0, i.jsx)(r.SearchableSelect, {
                             value: "",
                             onChange: l,
-                            options: C,
+                            options: I,
                             renderOptionLabel: e => {
                                 let t = h.default.getChannel(e.value);
                                 if (null == t) return e.label;
@@ -1169,179 +1250,224 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return O
+                    return v
                 }
-            }), s("222007");
+            }), s("222007"), s("702976");
             var i = s("37983"),
                 l = s("884691"),
                 a = s("414456"),
                 n = s.n(a),
                 r = s("65597"),
-                d = s("77078"),
-                o = s("519705"),
-                u = s("282109"),
-                c = s("593195"),
-                h = s("956089"),
-                f = s("34676"),
-                N = s("277796"),
-                g = s("546770"),
-                S = s("286844"),
-                E = s("507313"),
-                m = s("49111"),
-                T = s("133335"),
-                _ = s("397336"),
-                x = s("782340"),
-                C = s("297697"),
-                p = s("587621");
-            let I = () => [{
-                value: E.Presets.ALL_MESSAGES,
-                name: x.default.Messages.NOTIFICATION_PRESET_1
+                d = s("225389"),
+                o = s("833222"),
+                u = s("77078"),
+                c = s("519705"),
+                h = s("282109"),
+                f = s("593195"),
+                N = s("956089"),
+                g = s("34676"),
+                S = s("277796"),
+                E = s("546770"),
+                m = s("286844"),
+                T = s("507313"),
+                _ = s("49111"),
+                x = s("133335"),
+                I = s("397336"),
+                p = s("782340"),
+                O = s("297697"),
+                C = s("587621");
+            let M = () => [{
+                value: T.Presets.ALL_MESSAGES,
+                name: p.default.Messages.NOTIFICATION_PRESET_1
             }, {
-                value: E.Presets.MENTIONS,
-                name: x.default.Messages.NOTIFICATION_PRESET_2
+                value: T.Presets.MENTIONS,
+                name: p.default.Messages.NOTIFICATION_PRESET_2
             }, {
-                value: E.Presets.NOTHING,
-                name: x.default.Messages.NOTIFICATION_PRESET_3
+                value: T.Presets.NOTHING,
+                name: p.default.Messages.NOTIFICATION_PRESET_3
             }, {
-                value: E.Presets.CUSTOM,
-                name: x.default.Messages.NOTIFICATION_PRESET_CUSTOM
+                value: T.Presets.CUSTOM,
+                name: p.default.Messages.NOTIFICATION_PRESET_CUSTOM
             }];
 
-            function O(e) {
+            function v(e) {
                 let {
                     guildId: t
-                } = e, s = (0, r.default)([u.default], () => u.default.getGuildFlags(t)), a = (0, r.default)([u.default], () => {
-                    let e = u.default.getGuildUnreadSetting(t),
-                        s = u.default.getMessageNotifications(t);
-                    return e === T.UnreadSetting.UNSET ? s === m.UserNotificationSettings.ALL_MESSAGES ? T.UnreadSetting.ALL_MESSAGES : T.UnreadSetting.ONLY_MENTIONS : e
-                }), n = (0, r.default)([u.default], () => u.default.getMessageNotifications(t)), [c, h] = (0, l.useState)(!1), p = c ? E.Presets.CUSTOM : (0, E.presetFromSettings)(a, n), O = e => {
-                    if (e === E.Presets.CUSTOM) {
-                        h(!0);
+                } = e, s = (0, r.default)([h.default], () => h.default.getGuildFlags(t)), a = (0, r.default)([h.default], () => {
+                    let e = h.default.getGuildUnreadSetting(t),
+                        s = h.default.getMessageNotifications(t);
+                    return e === x.UnreadSetting.UNSET ? s === _.UserNotificationSettings.ALL_MESSAGES ? x.UnreadSetting.ALL_MESSAGES : x.UnreadSetting.ONLY_MENTIONS : e
+                }), n = (0, r.default)([h.default], () => h.default.getMessageNotifications(t)), [f, N] = (0, l.useState)(!1), C = f ? T.Presets.CUSTOM : (0, T.presetFromSettings)(a, n), v = e => {
+                    if (e === T.Presets.CUSTOM) {
+                        N(!0);
                         return
                     }
-                    h(!1), (0, g.updateGuildPreset)(t, e)
+                    N(!1), (0, E.updateGuildPreset)(t, e)
                 };
                 return (0, i.jsxs)("div", {
-                    children: [(0, i.jsx)(d.SegmentedControl, {
-                        value: p,
-                        options: I(),
+                    children: [(0, i.jsx)(u.SegmentedControl, {
+                        value: C,
+                        options: M(),
                         onChange: e => {
                             let {
                                 value: t
                             } = e;
-                            return O(t)
+                            return v(t)
                         },
                         look: "pill"
                     }), (0, i.jsxs)("div", {
-                        className: C.grid,
-                        children: [(0, i.jsx)(M, {
+                        className: O.grid,
+                        children: [(0, i.jsx)(L, {
                             unreadSetting: a
-                        }), (0, i.jsx)(v, {
+                        }), (0, i.jsx)(A, {
                             notificationSetting: n
                         })]
                     }), (0, i.jsxs)("div", {
-                        className: C.grid,
+                        className: O.grid,
                         style: {
                             textAlign: "center"
                         },
                         children: [(0, i.jsxs)("div", {
-                            children: [(0, i.jsx)(d.Text, {
+                            children: [(0, i.jsx)(u.Text, {
                                 variant: "text-xs/bold",
                                 color: "text-muted",
                                 style: {
                                     textTransform: "uppercase"
                                 },
-                                children: x.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE
-                            }), (0, i.jsx)(d.Text, {
+                                children: p.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE
+                            }), (0, i.jsx)(u.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: x.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE
+                                children: p.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE
                             })]
                         }), (0, i.jsxs)("div", {
-                            children: [(0, i.jsx)(d.Text, {
+                            children: [(0, i.jsx)(u.Text, {
                                 variant: "text-xs/bold",
                                 color: "text-muted",
                                 style: {
                                     textTransform: "uppercase"
                                 },
-                                children: x.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE
-                            }), (0, i.jsx)(d.Text, {
+                                children: p.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE
+                            }), (0, i.jsx)(u.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: x.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE
+                                children: p.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE
                             })]
                         })]
                     }), (0, i.jsxs)("div", {
-                        className: C.grid,
-                        children: [(0, i.jsx)(d.SingleSelect, {
-                            className: C.input,
+                        className: O.grid,
+                        children: [(0, i.jsx)(u.SingleSelect, {
+                            value: a,
+                            className: O.input,
                             onChange: e => {
-                                h(!1), o.default.updateGuildNotificationSettings(t, {
-                                    flags: (0, N.withGuildUnreadFlags)(s, e === T.UnreadSetting.ALL_MESSAGES ? _.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES : _.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
-                                }, f.NotificationLabel.unreads(e))
+                                N(!1), c.default.updateGuildNotificationSettings(t, {
+                                    flags: (0, S.withGuildUnreadFlags)(s, e === x.UnreadSetting.ALL_MESSAGES ? I.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES : I.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
+                                }, g.NotificationLabel.unreads(e))
                             },
-                            options: (0, S.getUnreadSelectOptions)(),
-                            value: a
-                        }), (0, i.jsx)(d.SingleSelect, {
-                            className: C.input,
+                            options: (0, m.getUnreadSelectOptions)({
+                                notificationSetting: n
+                            }),
+                            renderOptionLabel: e => {
+                                let t = e.disabled && e.value === x.UnreadSetting.ONLY_MENTIONS && a !== x.UnreadSetting.ONLY_MENTIONS;
+                                return (0, i.jsxs)(i.Fragment, {
+                                    children: [(0, i.jsx)("div", {
+                                        children: (0, i.jsx)(u.Text, {
+                                            variant: "text-md/normal",
+                                            color: e.disabled ? "text-muted" : void 0,
+                                            children: e.label
+                                        })
+                                    }), t && (0, i.jsx)(u.Tooltip, {
+                                        text: p.default.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED,
+                                        children: e => (0, i.jsx)(o.DenyIcon, {
+                                            ...e,
+                                            width: 20,
+                                            height: 20,
+                                            className: O.muted
+                                        })
+                                    })]
+                                })
+                            }
+                        }), (0, i.jsx)(u.SingleSelect, {
+                            className: O.input,
                             value: n,
                             onChange: e => {
-                                h(!1), o.default.updateGuildNotificationSettings(t, {
+                                N(!1);
+                                let s = {
                                     message_notifications: e
-                                }, f.NotificationLabel.notifications(e))
+                                };
+                                e === _.UserNotificationSettings.ALL_MESSAGES && a !== x.UnreadSetting.ALL_MESSAGES && (s.flags = (0, S.withGuildUnreadFlags)(h.default.getGuildFlags(t), I.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)), c.default.updateGuildNotificationSettings(t, s, g.NotificationLabel.notifications(e))
                             },
-                            options: (0, S.getPushNotificationSelectOptions)()
+                            options: (0, m.getPushNotificationSelectOptions)({
+                                notificationSetting: n
+                            }),
+                            renderOptionLabel: e => {
+                                let t = e.value === _.UserNotificationSettings.ALL_MESSAGES && a !== x.UnreadSetting.ALL_MESSAGES && n !== _.UserNotificationSettings.ALL_MESSAGES;
+                                return (0, i.jsxs)(i.Fragment, {
+                                    children: [(0, i.jsx)(u.Text, {
+                                        variant: "text-md/normal",
+                                        children: e.label
+                                    }), t && (0, i.jsx)(u.Tooltip, {
+                                        text: p.default.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING,
+                                        children: e => (0, i.jsx)(d.CircleInformationIcon, {
+                                            ...e,
+                                            width: 20,
+                                            height: 20,
+                                            className: O.muted
+                                        })
+                                    })]
+                                })
+                            }
                         })]
                     })]
                 })
             }
 
-            function M(e) {
+            function L(e) {
                 let {
                     unreadSetting: t
                 } = e, s = [{
                     badged: !0,
                     unread: !0,
                     muted: !1,
-                    name: x.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_1
+                    name: p.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_1
                 }, {
                     badged: !1,
                     unread: !0,
                     muted: !0,
-                    name: x.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_2
+                    name: p.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_2
                 }, {
                     badged: !1,
                     unread: !1,
                     muted: !0,
-                    name: x.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_3
+                    name: p.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_3
                 }];
-                return t === T.UnreadSetting.ALL_MESSAGES && (s[1].muted = !1), (0, i.jsx)("div", {
-                    className: C.channeList,
+                return t === x.UnreadSetting.ALL_MESSAGES && (s[1].muted = !1), (0, i.jsx)("div", {
+                    className: O.channeList,
                     children: s.map(e => (0, i.jsxs)("div", {
-                        className: C.channelListChannel,
+                        className: O.channelListChannel,
                         children: [(0, i.jsxs)("div", {
-                            className: C.channelListChannelName,
+                            className: O.channelListChannelName,
                             children: [(0, i.jsx)("div", {
-                                className: n(C.unread, {
-                                    [C.hidden]: !e.unread,
-                                    [C.unreadMuted]: e.muted
+                                className: n(O.unread, {
+                                    [O.hidden]: !e.unread,
+                                    [O.unreadMuted]: e.muted
                                 })
-                            }), (0, i.jsx)(c.default, {
+                            }), (0, i.jsx)(f.default, {
                                 height: 12,
                                 width: 12,
-                                className: n(C.channelListChannelIcon, {
-                                    [C.muted]: e.muted
+                                className: n(O.channelListChannelIcon, {
+                                    [O.muted]: e.muted
                                 })
-                            }), (0, i.jsx)(d.Text, {
+                            }), (0, i.jsx)(u.Text, {
                                 variant: "text-xs/normal",
                                 color: e.muted ? "text-muted" : void 0,
                                 children: e.name
                             })]
                         }), (0, i.jsx)("div", {
-                            className: n(C.badge, {
-                                [C.hidden]: !e.badged
+                            className: n(O.badge, {
+                                [O.hidden]: !e.badged
                             }),
-                            children: (0, i.jsx)(h.NumberBadge, {
+                            children: (0, i.jsx)(N.NumberBadge, {
                                 count: 1
                             })
                         })]
@@ -1349,36 +1475,36 @@
                 })
             }
 
-            function v(e) {
+            function A(e) {
                 return (0, i.jsxs)("div", {
-                    className: C.mockMessage,
-                    children: [e.notificationSetting === m.UserNotificationSettings.NO_MESSAGES && (0, i.jsx)("div", {
-                        className: C.mockMessageDisabled
+                    className: O.mockMessage,
+                    children: [e.notificationSetting === _.UserNotificationSettings.NO_MESSAGES && (0, i.jsx)("div", {
+                        className: O.mockMessageDisabled
                     }), (0, i.jsx)("div", {
                         children: (0, i.jsx)("img", {
-                            className: C.mockMessageAvatar,
-                            src: p,
+                            className: O.mockMessageAvatar,
+                            src: C,
                             alt: ""
                         })
                     }), (0, i.jsxs)("div", {
-                        children: [(0, i.jsx)(d.Text, {
+                        children: [(0, i.jsx)(u.Text, {
                             variant: "text-xs/medium",
-                            children: x.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR
-                        }), e.notificationSetting === m.UserNotificationSettings.ALL_MESSAGES && (0, i.jsx)(d.Text, {
+                            children: p.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR
+                        }), e.notificationSetting === _.UserNotificationSettings.ALL_MESSAGES && (0, i.jsx)(u.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            children: x.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_MESSAGE
-                        }), e.notificationSetting !== m.UserNotificationSettings.ALL_MESSAGES && (0, i.jsxs)(i.Fragment, {
-                            children: [(0, i.jsxs)(d.Text, {
+                            children: p.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_MESSAGE
+                        }), e.notificationSetting !== _.UserNotificationSettings.ALL_MESSAGES && (0, i.jsxs)(i.Fragment, {
+                            children: [(0, i.jsxs)(u.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-link",
                                 tag: "span",
                                 children: ["@Roka", " "]
-                            }), (0, i.jsx)(d.Text, {
+                            }), (0, i.jsx)(u.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
                                 tag: "span",
-                                children: x.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_MESSAGE
+                                children: p.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_MESSAGE
                             })]
                         })]
                     })]
