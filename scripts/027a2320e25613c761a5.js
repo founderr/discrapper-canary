@@ -1659,7 +1659,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "256816"
+                        buildNumber: "256825"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -11067,7 +11067,7 @@
                     return s
                 },
                 default: function() {
-                    return m
+                    return p
                 }
             });
             var a, s, i = n("884691"),
@@ -11075,66 +11075,75 @@
                 r = n("583367"),
                 o = n("650509"),
                 u = n("933326"),
-                d = n("568500"),
-                c = n("534222"),
-                E = n("341563"),
-                f = n("702411"),
-                _ = n("226511"),
-                h = n("735201"),
-                C = n("957255"),
-                T = n("833781"),
-                I = n("572182"),
-                S = n("201952"),
-                N = n("427459"),
-                A = n("49111");
+                d = n("73675"),
+                c = n("568500"),
+                E = n("534222"),
+                f = n("341563"),
+                _ = n("702411"),
+                h = n("226511"),
+                C = n("735201"),
+                T = n("957255"),
+                I = n("833781"),
+                S = n("572182"),
+                N = n("201952"),
+                A = n("427459"),
+                m = n("49111");
 
-            function m(e) {
+            function p(e) {
                 var t;
                 let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
                     {
                         lastFetchedAt: a
-                    } = (0, l.useStateFromStoresObject)([h.default], () => ({
-                        appliedGuildBoosts: h.default.getAppliedGuildBoostsForGuild(n),
-                        lastFetchedAt: h.default.getLastFetchedAtForGuild(n)
+                    } = (0, l.useStateFromStoresObject)([C.default], () => ({
+                        appliedGuildBoosts: C.default.getAppliedGuildBoostsForGuild(n),
+                        lastFetchedAt: C.default.getLastFetchedAtForGuild(n)
                     })),
                     {
                         lastDismissedGracePeriod: s,
-                        isGracePeriodVisible: m
-                    } = (0, l.useStateFromStoresObject)([T.default], () => ({
-                        lastDismissedGracePeriod: T.default.getLastDismissedGracePeriodForGuild(n),
-                        isGracePeriodVisible: T.default.isVisible(n)
+                        isGracePeriodVisible: p
+                    } = (0, l.useStateFromStoresObject)([I.default], () => ({
+                        lastDismissedGracePeriod: I.default.getLastDismissedGracePeriodForGuild(n),
+                        isGracePeriodVisible: I.default.isVisible(n)
                     })),
-                    p = (0, l.useStateFromStores)([_.default], () => _.default.isVisible(e)),
-                    g = (0, l.useStateFromStores)([S.default], () => S.default.isVisible(e)),
-                    R = (0, l.useStateFromStores)([C.default], () => C.default.can(A.Permissions.ADMINISTRATOR, e)),
-                    O = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
-                    L = null != e ? e.premiumSubscriberCount : 0,
-                    v = (0, N.getGuildTierFromAppliedBoostCount)(L, n) !== A.BoostedGuildTiers.NONE,
-                    M = null != a && Date.now() - a <= 432e5,
-                    P = !M && !O && R && v,
-                    D = (0, d.useGuildHasLiveChannelNotice)(n),
-                    y = null != (0, c.useGuildUpcomingEventsNotice)(n),
-                    x = (0, l.useStateFromStores)([I.default], () => I.default.isVisible(e)),
-                    b = f.default.useShouldShowChannelNotice(n),
+                    g = (0, l.useStateFromStores)([h.default], () => h.default.isVisible(e)),
+                    R = (0, l.useStateFromStores)([N.default], () => N.default.isVisible(e)),
+                    O = (0, l.useStateFromStores)([T.default], () => T.default.can(m.Permissions.ADMINISTRATOR, e)),
+                    L = null != s && Date.now() - s <= m.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
+                    v = null != e ? e.premiumSubscriberCount : 0,
+                    M = (0, A.getGuildTierFromAppliedBoostCount)(v, n) !== m.BoostedGuildTiers.NONE,
+                    P = null != a && Date.now() - a <= 432e5,
+                    D = !P && !L && O && M,
+                    y = (0, c.useGuildHasLiveChannelNotice)(n),
+                    x = (0, l.useStateFromStores)([S.default], () => S.default.isVisible(e)),
+                    b = _.default.useShouldShowChannelNotice(n),
                     U = (0, o.useUnseenEndedApplicationSubscriptionEntitlements)(e),
                     {
                         enableStudyGroup: G
-                    } = (0, E.useHubStudyGroupExperiment)(e),
+                    } = (0, f.useHubStudyGroupExperiment)(e),
                     j = U.length > 0,
-                    k = G && !(null == e ? void 0 : e.hasFeature(A.GuildFeatures.HUB));
+                    k = G && !(null == e ? void 0 : e.hasFeature(m.GuildFeatures.HUB)),
+                    {
+                        canSeeUpcomingEventsNotices: w
+                    } = d.default.useExperiment({
+                        guildId: n,
+                        location: "useVisibleConnectedNotice"
+                    }, {
+                        autoTrackExposure: !1
+                    }),
+                    F = null != (0, E.useGuildUpcomingEventsNotice)(n);
                 if (i.useEffect(() => {
                         u.default.getGuildEventsForCurrentUser(n)
                     }, [n]), i.useEffect(() => {
                         let e = -1;
-                        return P && (e = window.setTimeout(() => {
+                        return D && (e = window.setTimeout(() => {
                             null != n && (0, r.fetchAppliedGuildBoostsForGuild)(n)
                         }, 3e4 * Math.random())), () => {
                             window.clearTimeout(e)
                         }
-                    }, [n, P]), p) return 0;
-                if (m) return 1;
-                if (g) return 2;
-                else if (D || y) return 3;
+                    }, [n, D]), g) return 0;
+                if (p) return 1;
+                if (R) return 2;
+                else if (y || w && null != F) return 3;
                 else if (x) return 4;
                 else if (b) return 5;
                 else if (j) return 6;
