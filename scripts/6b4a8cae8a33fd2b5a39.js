@@ -10194,7 +10194,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "e9110ea728493845c06d515bec57dbad8eccdc76", e.substring(0, 7)),
+                    S = (e = "86c95b4b6a6d23d0576195ed3a7b8bbaf3900b39", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     m = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10207,7 +10207,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "256798", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "256805", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -13585,7 +13585,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return C
+                    return A
                 }
             }), s("222007");
             var a = s("37983"),
@@ -13596,98 +13596,104 @@
                 o = s("70614"),
                 d = s("898065"),
                 u = s("84460"),
-                c = s("686470"),
-                S = s("167726"),
-                E = s("956089"),
-                f = s("306160"),
-                m = s("701909"),
-                T = s("773336"),
-                _ = s("50885"),
-                g = s("845579"),
-                h = s("271445"),
-                I = s("49111"),
-                N = s("782340"),
-                p = s("393149");
+                c = s("655151"),
+                S = s("686470"),
+                E = s("167726"),
+                f = s("956089"),
+                m = s("306160"),
+                T = s("701909"),
+                _ = s("773336"),
+                g = s("50885"),
+                h = s("845579"),
+                I = s("271445"),
+                N = s("49111"),
+                p = s("782340"),
+                C = s("393149");
 
-            function C() {
+            function A() {
                 let e = (0, l.useStateFromStores)([u.default], () => u.default.getIsEnabled(), []),
-                    [t] = n.useState(() => _.default.getEnableHardwareAcceleration()),
-                    s = g.DisableGamesTab.useSetting(),
-                    C = g.DeveloperMode.useSetting(),
-                    A = g.DisableHomeAutoNav.useSetting(),
                     {
-                        hasLibraryApplication: O,
-                        testModeApplicationId: x
-                    } = (0, l.useStateFromStoresObject)([S.default, c.default], () => ({
-                        hasLibraryApplication: c.default.hasLibraryApplication(),
-                        testModeApplicationId: S.default.testModeApplicationId
+                        enabled: t
+                    } = c.ExperimentDevelopersGetDeveloperShelf.useExperiment({
+                        location: "UserSettingsAdvanced"
+                    }),
+                    [s] = n.useState(() => g.default.getEnableHardwareAcceleration()),
+                    A = h.DisableGamesTab.useSetting(),
+                    O = h.DeveloperMode.useSetting(),
+                    x = h.DisableHomeAutoNav.useSetting(),
+                    {
+                        hasLibraryApplication: M,
+                        testModeApplicationId: R
+                    } = (0, l.useStateFromStoresObject)([E.default, S.default], () => ({
+                        hasLibraryApplication: S.default.hasLibraryApplication(),
+                        testModeApplicationId: E.default.testModeApplicationId
                     })),
-                    M = n.useCallback(e => {
-                        g.DisableGamesTab.updateSetting(!e)
+                    v = n.useCallback(e => {
+                        h.DisableGamesTab.updateSetting(!e)
                     }, []),
-                    R = n.useCallback(e => {
-                        e ? (0, r.openModal)(e => (0, a.jsx)(h.default, {
+                    L = n.useCallback(e => {
+                        e ? (0, r.openModal)(e => (0, a.jsx)(I.default, {
                             ...e
                         })) : o.reset()
                     }, []),
-                    v = n.useCallback(e => {
+                    D = n.useCallback(e => {
                         (0, r.openModal)(t => (0, a.jsx)(r.ConfirmModal, {
-                            header: N.default.Messages.SWITCH_HARDWARE_ACCELERATION,
-                            confirmText: N.default.Messages.OKAY,
-                            cancelText: N.default.Messages.CANCEL,
-                            onConfirm: () => _.default.setEnableHardwareAcceleration(e),
+                            header: p.default.Messages.SWITCH_HARDWARE_ACCELERATION,
+                            confirmText: p.default.Messages.OKAY,
+                            cancelText: p.default.Messages.CANCEL,
+                            onConfirm: () => g.default.setEnableHardwareAcceleration(e),
                             ...t,
                             children: (0, a.jsx)(r.Text, {
                                 variant: "text-sm/normal",
-                                children: N.default.Messages.SWITCH_HARDWARE_ACCELERATION_BODY
+                                children: p.default.Messages.SWITCH_HARDWARE_ACCELERATION_BODY
                             })
                         }))
                     }, []),
-                    L = n.useCallback(e => {
-                        g.DisableHomeAutoNav.updateSetting(!e)
+                    P = n.useCallback(e => {
+                        h.DisableHomeAutoNav.updateSetting(!e)
                     }, []);
                 return (0, a.jsxs)(r.FormSection, {
                     tag: r.FormTitleTags.H1,
-                    title: N.default.Messages.SETTINGS_ADVANCED,
-                    children: [f.SUPPORTS_COPY && (0, a.jsx)(r.FormSwitch, {
-                        value: C,
-                        onChange: g.DeveloperMode.updateSetting,
-                        note: N.default.Messages.DEVELOPER_MODE_HELP_TEXT.format({
-                            apiDocsUrl: I.MarketingURLs.API_DOCS
+                    title: p.default.Messages.SETTINGS_ADVANCED,
+                    children: [m.SUPPORTS_COPY && (0, a.jsx)(r.FormSwitch, {
+                        value: O,
+                        onChange: h.DeveloperMode.updateSetting,
+                        note: p.default.Messages.DEVELOPER_MODE_HELP_TEXT.format({
+                            apiDocsUrl: N.MarketingURLs.API_DOCS
                         }),
-                        children: N.default.Messages.DEVELOPER_MODE
-                    }), T.isPlatformEmbedded && (0, a.jsx)(r.FormSwitch, {
-                        value: t,
-                        onChange: v,
-                        note: N.default.Messages.HARDWARE_ACCELERATION_HELP_TEXT,
-                        children: N.default.Messages.HARDWARE_ACCELERATION
-                    }), O && (0, a.jsx)(r.FormSwitch, {
-                        value: !s,
-                        onChange: M,
-                        note: N.default.Messages.USER_SETTINGS_SHOW_LIBRARY_NOTE,
-                        children: N.default.Messages.USER_SETTINGS_SHOW_LIBRARY
-                    }), C && (0, a.jsx)(r.FormSwitch, {
-                        value: null != x,
-                        note: N.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_NOTE,
-                        onChange: R,
-                        children: N.default.Messages.DEVELOPER_APPLICATION_TEST_MODE
-                    }), C && (0, a.jsx)(r.FormSwitch, {
-                        value: e,
-                        note: N.default.Messages.DEVELOPER_ACTIVITY_SHELF_NOTE,
-                        onChange: d.toggleEnableDeveloperActivityShelf,
-                        children: N.default.Messages.DEVELOPER_ACTIVITY_SHELF
-                    }), (0, a.jsx)(r.FormSwitch, {
+                        children: p.default.Messages.DEVELOPER_MODE
+                    }), _.isPlatformEmbedded && (0, a.jsx)(r.FormSwitch, {
+                        value: s,
+                        onChange: D,
+                        note: p.default.Messages.HARDWARE_ACCELERATION_HELP_TEXT,
+                        children: p.default.Messages.HARDWARE_ACCELERATION
+                    }), M && (0, a.jsx)(r.FormSwitch, {
                         value: !A,
-                        note: N.default.Messages.USER_SETTINGS_HOME_AUTO_NAV_HELP_TEXT.format({
-                            helpCenterLink: m.default.getArticleURL(I.HelpdeskArticles.GUILD_HOME)
-                        }),
+                        onChange: v,
+                        note: p.default.Messages.USER_SETTINGS_SHOW_LIBRARY_NOTE,
+                        children: p.default.Messages.USER_SETTINGS_SHOW_LIBRARY
+                    }), O && (0, a.jsx)(r.FormSwitch, {
+                        value: null != R,
+                        note: p.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_NOTE,
                         onChange: L,
+                        children: p.default.Messages.DEVELOPER_APPLICATION_TEST_MODE
+                    }), O && !t ? (0, a.jsx)(r.FormSwitch, {
+                        value: e,
+                        note: p.default.Messages.DEVELOPER_ACTIVITY_SHELF_NOTE,
+                        onChange: d.toggleEnableDeveloperActivityShelf,
+                        children: p.default.Messages.DEVELOPER_ACTIVITY_SHELF
+                    }) : null, (0, a.jsx)(r.FormSwitch, {
+                        value: !x,
+                        note: p.default.Messages.USER_SETTINGS_HOME_AUTO_NAV_HELP_TEXT.format({
+                            helpCenterLink: T.default.getArticleURL(N.HelpdeskArticles.GUILD_HOME)
+                        }),
+                        onChange: P,
                         children: (0, a.jsxs)("div", {
-                            className: p.badgedItem,
-                            children: [N.default.Messages.USER_SETTINGS_HOME_AUTO_NAV, (0, a.jsx)(E.TextBadge, {
-                                text: N.default.Messages.BETA,
+                            className: C.badgedItem,
+                            children: [p.default.Messages.USER_SETTINGS_HOME_AUTO_NAV, (0, a.jsx)(f.TextBadge, {
+                                text: p.default.Messages.BETA,
                                 color: i.default.unsafe_rawColors.BRAND_500.css,
-                                className: p.betaTag
+                                className: C.betaTag
                             })]
                         })
                     })]
