@@ -739,8 +739,8 @@
                 A = r("79953"),
                 R = r("388557"),
                 P = r("238161"),
-                M = r("20950"),
-                O = r("724209"),
+                O = r("20950"),
+                M = r("724209"),
                 I = r("782340"),
                 B = r("978482"),
                 D = r("694735");
@@ -773,7 +773,7 @@
                         }, {
                             id: "triggers",
                             name: "Triggers",
-                            render: () => (0, a.jsx)(M.default, {})
+                            render: () => (0, a.jsx)(O.default, {})
                         }, {
                             id: "stores",
                             name: "Stores",
@@ -837,7 +837,7 @@
                         TabBar: r,
                         renderSelectedTab: i,
                         selectedTabId: l
-                    } = (0, O.default)({
+                    } = (0, M.default)({
                         tabs: t,
                         initialSelectedTabId: null !== (e = b.default.lastOpenTabId) && void 0 !== e ? e : void 0,
                         onChangeTab: e => {
@@ -1320,7 +1320,7 @@
                             semanticTokens: o
                         })
                     }, [r, t, a]),
-                    M = i.useMemo(() => {
+                    O = i.useMemo(() => {
                         let a = Object.keys(r).map(t => {
                                 let a = r[t],
                                     {
@@ -1348,7 +1348,7 @@
                             });
                         return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(y).filter(e => y[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(E).filter(e => E[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(n.join("\n"), "\n      }\n    ")
                     }, [e, r, t, y, E]),
-                    O = i.useCallback(e => {
+                    M = i.useCallback(e => {
                         let t = "",
                             r = "",
                             a = !1;
@@ -1446,7 +1446,7 @@
                             }), (0, n.jsx)(b.Button, {
                                 size: b.Button.Sizes.MIN,
                                 onClick: () => {
-                                    navigator.clipboard.writeText(O(r))
+                                    navigator.clipboard.writeText(M(r))
                                 },
                                 children: "Export"
                             })]
@@ -1568,7 +1568,7 @@
                     }), (0, n.jsx)(h.Helmet, {
                         children: (0, n.jsx)("style", {
                             id: "devtools-color-overrides",
-                            children: M
+                            children: O
                         })
                     })]
                 })
@@ -2941,13 +2941,13 @@
                     expires_at: A,
                     redeemed_at: R,
                     trial_id: P,
-                    subscription_trial: M
-                } = s, O = null !== (r = null === (t = u.find(e => {
+                    subscription_trial: O
+                } = s, M = null !== (r = null === (t = u.find(e => {
                     let {
                         value: t
                     } = e;
                     return t === P
-                })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", I = null != A, B = null != A && new Date(A).getTime() < Date.now(), D = (null == M ? void 0 : M.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, H = async () => {
+                })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", I = null != A, B = null != A && new Date(A).getTime() < Date.now(), D = (null == O ? void 0 : O.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, H = async () => {
                     N(!0), I ? await w(_, "trial") : await (0, d.acknowledgeUserOffer)(s), h(), N(!1)
                 };
                 n.useEffect(() => {
@@ -2976,7 +2976,7 @@
                         children: [(0, a.jsx)(c.Heading, {
                             variant: "heading-lg/semibold",
                             color: "always-white",
-                            children: O
+                            children: M
                         }), (0, a.jsx)(c.Clickable, {
                             onClick: async () => {
                                 N(!0), await T(_, "trial"), h(), N(!1)
@@ -3018,8 +3018,8 @@
                             variant: "eyebrow",
                             color: "always-white",
                             children: ["Trial Length:", " ", (0, y.formatIntervalDuration)({
-                                intervalType: null !== (i = null == M ? void 0 : M.interval) && void 0 !== i ? i : k.SubscriptionIntervalTypes.MONTH,
-                                intervalCount: null !== (o = null == M ? void 0 : M.interval_count) && void 0 !== o ? o : 1,
+                                intervalType: null !== (i = null == O ? void 0 : O.interval) && void 0 !== i ? i : k.SubscriptionIntervalTypes.MONTH,
+                                intervalCount: null !== (o = null == O ? void 0 : O.interval_count) && void 0 !== o ? o : 1,
                                 capitalize: !1
                             })]
                         })
@@ -3080,7 +3080,7 @@
                         value: t
                     } = e;
                     return t === E
-                })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", R = null != N, P = null != N && new Date(N).getTime() < Date.now(), M = async () => {
+                })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", R = null != N, P = null != N && new Date(N).getTime() < Date.now(), O = async () => {
                     k(!0), R ? await w(j, "discount") : await (0, d.acknowledgeUserOffer)(void 0, i), s(), k(!1)
                 };
                 n.useEffect(() => {
@@ -3101,8 +3101,8 @@
                         }
                     }
                 }, [u, y]);
-                let O = "Active";
-                return P && (O = "Expired"), R && (O = "Acknowledged"), (0, a.jsxs)("div", {
+                let M = "Active";
+                return P && (M = "Expired"), R && (M = "Acknowledged"), (0, a.jsxs)("div", {
                     className: l(C.card, C.discount),
                     children: [(0, a.jsxs)("div", {
                         className: l(C.row, C.nameRow),
@@ -3155,15 +3155,15 @@
                     }), (0, a.jsxs)("div", {
                         className: C.badgeContainer,
                         children: [(0, a.jsx)(c.Clickable, {
-                            onClick: M,
+                            onClick: O,
                             className: l(C.badge, C.clickable, {
                                 [C.acked]: R,
                                 [C.expired]: P
                             }),
                             children: (0, a.jsx)(c.Text, {
                                 variant: "eyebrow",
-                                color: "Acknowledged" === O ? void 0 : "always-white",
-                                children: O
+                                color: "Acknowledged" === M ? void 0 : "always-white",
+                                children: M
                             })
                         }), null != L && (0, a.jsx)("div", {
                             className: l(C.badge, C.badgeBottom, C.redeemed),
@@ -3912,19 +3912,22 @@
                     type: "BILLING_USER_OFFER_FETCH_START"
                 });
                 try {
-                    var e, t;
-                    let r = await a.default.post({
+                    var e, t, r;
+                    let l = await a.default.post({
                             url: i.Endpoints.USER_OFFER
                         }),
-                        l = null !== (e = r.body.user_trial_offer) && void 0 !== e ? e : null,
-                        o = null !== (t = r.body.user_discount) && void 0 !== t ? t : null;
+                        o = null !== (e = l.body.user_trial_offer) && void 0 !== e ? e : null,
+                        s = null !== (t = l.body.user_discount) && void 0 !== t ? t : null,
+                        c = null !== (r = l.body.user_discount_offer) && void 0 !== r ? r : null;
                     return n.default.dispatch({
                         type: "BILLING_USER_OFFER_FETCH_SUCCESS",
-                        userTrialOffer: l,
-                        userDiscount: o
+                        userTrialOffer: o,
+                        userDiscount: s,
+                        userDiscountOffer: c
                     }), {
-                        userTrialOffer: l,
-                        userDiscount: o
+                        userTrialOffer: o,
+                        userDiscount: s,
+                        userDiscountOffer: c
                     }
                 } catch (e) {
                     n.default.dispatch({

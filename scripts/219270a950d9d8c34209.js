@@ -1188,15 +1188,15 @@
                     locationSection: a,
                     transitionState: C,
                     onClose: L
-                } = e, N = (0, I.getAvailableGuildBoostSlots)(_.default.boostSlots);
+                } = e, v = (0, I.getAvailableGuildBoostSlots)(_.default.boostSlots);
                 o(null != r || null != i, "Must either provide slots or an initial selected guild"), o(!(null == r ? void 0 : r.some(e => e.isOnCooldown())), "If slots are provided, they must not be on cooldown");
-                let v = [null == r ? "UNUSED_QUANTITY_SELECT" : null, null == i ? "GUILD_SELECT" : null, "CONFIRM", "SUCCESS"].filter(e => null != e),
+                let N = [null == r ? "UNUSED_QUANTITY_SELECT" : null, null == i ? "GUILD_SELECT" : null, "CONFIRM", "SUCCESS"].filter(e => null != e),
                     [O, M] = (0, u.useStateFromStoresArray)([f.default], () => [f.default.isModifyingAppliedBoost, f.default.applyBoostError]),
                     [x, y] = s.useState(""),
-                    [U, D] = s.useState(v[0]),
+                    [U, D] = s.useState(N[0]),
                     [P, b] = s.useState(!1),
                     [w, B] = s.useState(i),
-                    [F, G] = s.useState(null != r ? r : N.slice(0, 1)),
+                    [F, G] = s.useState(null != r ? r : v.slice(0, 1)),
                     j = s.useMemo(() => null == F ? [] : F.map(e => {
                         let {
                             premiumGuildSubscription: t
@@ -1215,7 +1215,7 @@
                     },
                     H = {
                         UNUSED_QUANTITY_SELECT: {
-                            body: () => (o(!(null == r && 0 === N.length), "Cannot provide no slots if there are no other available slots"), (0, l.jsxs)("div", {
+                            body: () => (o(!(null == r && 0 === v.length), "Cannot provide no slots if there are no other available slots"), (0, l.jsxs)("div", {
                                 className: A.quantitySelectorBody,
                                 children: [(0, l.jsx)(c.Heading, {
                                     variant: "heading-md/semibold",
@@ -1229,9 +1229,9 @@
                                     className: A.quantitySelectorWrapper,
                                     children: [(0, l.jsx)(p.default, {
                                         value: F.length,
-                                        onChange: e => G(N.slice(0, e)),
+                                        onChange: e => G(v.slice(0, e)),
                                         minValue: 1,
-                                        maxValue: N.length
+                                        maxValue: v.length
                                     }), (0, l.jsx)(c.Text, {
                                         className: A.quantitySelectorLabel,
                                         variant: "text-md/normal",
@@ -1302,7 +1302,7 @@
                             },
                             footer() {
                                 let e = F.length,
-                                    t = "CONFIRM" === v[0] ? k : () => D(v[v.indexOf(U) - 1]),
+                                    t = "CONFIRM" === N[0] ? k : () => D(N[N.indexOf(U) - 1]),
                                     n = async () => {
                                         if (null != w && (null == F ? void 0 : F.length) !== 0) {
                                             o(!F.some(e => e.isOnCooldown()), "Cannot use a premium guild subscription slot while on cooldown");
@@ -1364,7 +1364,7 @@
                         className: W.bodyClass,
                         children: (0, l.jsx)(c.Sequencer, {
                             step: U,
-                            steps: v,
+                            steps: N,
                             children: W.body()
                         })
                     }), null === (n = W.footer) || void 0 === n ? void 0 : n.call(W), (0, l.jsx)(c.ModalCloseButton, {
@@ -3549,18 +3549,19 @@
             let u = {
                     userOffersLastFetchedAtDate: void 0,
                     userTrialOffers: {},
-                    userDiscounts: {}
+                    userDiscountOffers: {},
+                    userDiscounts: void 0
                 },
                 c = u;
 
             function d() {
-                c.userTrialOffers = {}, c.userDiscounts = {}, c.userOffersLastFetchedAtDate = void 0
+                c.userTrialOffers = {}, c.userDiscountOffers = {}, c.userOffersLastFetchedAtDate = void 0
             }
             let f = () => !0;
 
             function E() {
                 let e = a.default.getPremiumTypeSubscription();
-                return null != e && (c.userTrialOffers = {}, c.userDiscounts = {}, !0)
+                return null != e && (c.userTrialOffers = {}, c.userDiscountOffers = {}, !0)
             }
             class _ extends r.default.PersistedStore {
                 initialize(e) {
@@ -3569,8 +3570,8 @@
                 getUserTrialOffer(e) {
                     if (null !== e) return c.userTrialOffers[e]
                 }
-                getUserDiscount(e) {
-                    if (null !== e) return c.userDiscounts[e]
+                getUserDiscountOffer(e) {
+                    if (null !== e) return c.userDiscountOffers[e]
                 }
                 getAnyOfUserTrialOfferId(e) {
                     for (let t of e)
@@ -3595,7 +3596,7 @@
                 }
                 getUnacknowledgedDiscountOffers() {
                     let e = l.default.getCurrentUser();
-                    return (0, s.isPremium)(e) ? [] : Object.values(c.userDiscounts).filter(e => null == e.expires_at)
+                    return (0, s.isPremium)(e) ? [] : Object.values(c.userDiscountOffers).filter(e => null == e.expires_at)
                 }
                 getUnacknowledgedOffers(e) {
                     let t = l.default.getCurrentUser();
@@ -3611,7 +3612,13 @@
                     d()
                 }
             }
-            _.displayName = "UserOfferStore", _.persistKey = "UserOfferStore";
+            _.displayName = "UserOfferStore", _.persistKey = "UserOfferStore", _.migrations = [e => {
+                let t = null == e ? void 0 : e.userDiscounts;
+                if (null != t) return {
+                    ...e,
+                    userDiscountOffers: t
+                }
+            }];
             var p = new _(i.default, {
                 BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: function(e) {
                     let {
@@ -3628,16 +3635,17 @@
                 BILLING_USER_OFFER_FETCH_SUCCESS: function(e) {
                     let {
                         userTrialOffer: t,
-                        userDiscount: n
+                        userDiscount: n,
+                        userDiscountOffer: r
                     } = e;
-                    null == t && null == n && d(), null != t ? (c.userTrialOffers[t.trial_id] = t, c.userDiscounts = {}) : null != n && (c.userDiscounts[n.discount_id] = n, c.userTrialOffers = {}), c.userOffersLastFetchedAtDate = Date.now()
+                    null == t && null == n && null == r && d(), null != t ? (c.userTrialOffers[t.trial_id] = t, c.userDiscountOffers = {}) : null != n ? (c.userDiscountOffers[n.discount_id] = n, c.userTrialOffers = {}) : null != r && (c.userDiscountOffers[r.discount_id] = r, c.userTrialOffers = {}), c.userOffersLastFetchedAtDate = Date.now()
                 },
                 BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: function(e) {
                     let {
                         userTrialOffer: t,
                         userDiscount: n
                     } = e;
-                    null != t ? c.userTrialOffers[t.trial_id] = t : c.userTrialOffers = {}, null != n ? c.userDiscounts[n.discount_id] = n : c.userDiscounts = {}, c.userOffersLastFetchedAtDate = Date.now()
+                    null != t ? c.userTrialOffers[t.trial_id] = t : c.userTrialOffers = {}, null != n ? c.userDiscountOffers[n.discount_id] = n : c.userDiscountOffers = {}, c.userOffersLastFetchedAtDate = Date.now()
                 },
                 LOGOUT: d
             })
@@ -3924,8 +3932,8 @@
                         iconSrc: T,
                         "aria-hidden": A,
                         ...C
-                    } = this.props, L = S[o], N = null != p ? c.Clickable : "div";
-                    return (0, r.jsxs)(N, {
+                    } = this.props, L = S[o], v = null != p ? c.Clickable : "div";
+                    return (0, r.jsxs)(v, {
                         className: s(h.icon, i, (0, _.getClass)(h, "iconSize", o), {
                             [null !== (e = (0, _.getClass)(h, "iconActive", o)) && void 0 !== e ? e : ""]: a,
                             [h.iconInactive]: !a,
@@ -4025,7 +4033,7 @@
                     return T
                 },
                 PremiumPaymentAnimationTier2: function() {
-                    return N
+                    return v
                 },
                 PremiumPaymentGuildAnimation: function() {
                     return U
@@ -4255,19 +4263,19 @@
                     delay: 1e3
                 }
             });
-            class N extends f.PureComponent {
+            class v extends f.PureComponent {
                 static getNextScene(e) {
                     switch (e) {
-                        case N.Scenes.IDLE_ENTRY:
-                            return N.Scenes.IDLE_LOOP;
-                        case N.Scenes.BOOST_START:
-                            return N.Scenes.BOOST_LOOP;
-                        case N.Scenes.BOOST_END:
-                            return N.Scenes.VICTORY;
-                        case N.Scenes.VICTORY:
-                            return N.Scenes.IDLE_ENTRY;
-                        case N.Scenes.ERROR:
-                            return N.Scenes.IDLE_LOOP;
+                        case v.Scenes.IDLE_ENTRY:
+                            return v.Scenes.IDLE_LOOP;
+                        case v.Scenes.BOOST_START:
+                            return v.Scenes.BOOST_LOOP;
+                        case v.Scenes.BOOST_END:
+                            return v.Scenes.VICTORY;
+                        case v.Scenes.VICTORY:
+                            return v.Scenes.IDLE_ENTRY;
+                        case v.Scenes.ERROR:
+                            return v.Scenes.IDLE_LOOP;
                         default:
                             return e
                     }
@@ -4389,8 +4397,8 @@
                     }
                 }
             }
-            N.Scenes = l, (c = s || (s = {})).ENTRY = "entry", c.IDLE = "idle", c.STARS = "stars", c.ERROR = "error", c.SUCCESS = "success";
-            let v = {
+            v.Scenes = l, (c = s || (s = {})).ENTRY = "entry", c.IDLE = "idle", c.STARS = "stars", c.ERROR = "error", c.SUCCESS = "success";
+            let N = {
                     entry: {
                         BEG: 0,
                         END: 180
@@ -4553,7 +4561,7 @@
                             className: m.guildBackground,
                             importData: this.importData,
                             nextScene: n ? "idle" : t,
-                            sceneSegments: v,
+                            sceneSegments: N,
                             onScenePlay: r,
                             onSceneComplete: i,
                             pauseWhileUnfocused: l,

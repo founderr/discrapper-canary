@@ -12885,19 +12885,22 @@
                     type: "BILLING_USER_OFFER_FETCH_START"
                 });
                 try {
-                    var e, t;
-                    let n = await a.default.post({
+                    var e, t, n;
+                    let i = await a.default.post({
                             url: l.Endpoints.USER_OFFER
                         }),
-                        i = null !== (e = n.body.user_trial_offer) && void 0 !== e ? e : null,
-                        r = null !== (t = n.body.user_discount) && void 0 !== t ? t : null;
+                        r = null !== (e = i.body.user_trial_offer) && void 0 !== e ? e : null,
+                        o = null !== (t = i.body.user_discount) && void 0 !== t ? t : null,
+                        u = null !== (n = i.body.user_discount_offer) && void 0 !== n ? n : null;
                     return s.default.dispatch({
                         type: "BILLING_USER_OFFER_FETCH_SUCCESS",
-                        userTrialOffer: i,
-                        userDiscount: r
+                        userTrialOffer: r,
+                        userDiscount: o,
+                        userDiscountOffer: u
                     }), {
-                        userTrialOffer: i,
-                        userDiscount: r
+                        userTrialOffer: r,
+                        userDiscount: o,
+                        userDiscountOffer: u
                     }
                 } catch (e) {
                     s.default.dispatch({
