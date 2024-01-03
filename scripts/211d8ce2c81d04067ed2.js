@@ -9792,6 +9792,7 @@
                         }), (0, a.jsx)(r.Text, {
                             variant: "text-xs/medium",
                             color: "header-primary",
+                            className: I.soundText,
                             children: null == t ? h.default.Messages.NONE : s ? h.default.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
                                 soundName: t.name,
                                 subtextHook: f
@@ -10194,7 +10195,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "6eda3b2943f2c0cad6e224fdac4c7647148d54ea", e.substring(0, 7)),
+                    S = (e = "00f430ba9ff60334a93fd1e64de8155fce08bff9", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     m = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10207,7 +10208,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "257057", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "257059", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
