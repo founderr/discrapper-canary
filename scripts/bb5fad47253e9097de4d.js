@@ -685,7 +685,7 @@
                 EMBEDDED_ACTIVITY_CHANGE_ACTIVITY_CONFIRM_BODY: "Sigur vrei să te deconectezi de la **!!{currentApplicationName}!!** \xeen **!!{currentApplicationChannelName}!!**?",
                 EMBEDDED_ACTIVITY_CURRENT_APPLICATION_DEFAULT: "o activitate",
                 EMBEDDED_ACTIVITY_TARGET_APPLICATION_DEFAULT: "altă activitate",
-                EMBEDDED_ACTIVITY_CURRENT_APPLICATION_CHANNEL_DEFAULT: "canalul actual",
+                EMBEDDED_ACTIVITY_CURRENT_APPLICATION_CHANNEL_DEFAULT: "canalul său actual",
                 SPECTATE: "Urmărește",
                 EMBEDDED_ACTIVITIES_IN_VIDEO_CALL_MOBILE_PREVIEW_SUBTITLE_SHORT: "\xcen cur\xe2nd pe acest sistem de operare",
                 EMBEDDED_ACTIVITIES_MOBILE_ACTIVITY_PREVIEW_A11Y_LABEL: "O previzualizare a {applicationName}",

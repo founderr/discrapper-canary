@@ -10100,7 +10100,7 @@
                 VOICE_PANEL_BAD_CONNECTION_CTA_SUB_LABEL: "Някои от участниците ще имат само аудио.",
                 VOICE_PANEL_SCREENSHARE_SHORTCUTS: "Клавишни комбинации за споделяне на екрана",
                 VOICE_PANEL_HIDE_DRAWER: "Скриване на чекмедже",
-                VOICE_PANEL_SHOW_DRAWER: "Показване на чекмедже за настройки",
+                VOICE_PANEL_SHOW_DRAWER: "Показване на менюто за настройки",
                 NUF_DESKTOP_TEMPLATES_TITLE: "Създай свой първи сървър в Discord",
                 NUF_DESKTOP_TEMPLATES_SUBTITLE: "Сървърът ти е мястото, където се събираш със своите приятели.\n Направи си свой и започвай да говориш.",
                 TOO_MANY_USER_GUILDS_TITLE_2: "Ти си на границата от {quantity, number} сървъра.",

@@ -16014,7 +16014,7 @@
                 DOMAIN_VERIFICATION_DESCRIPTION: "あなたがドメインを所有していることを認証して、プロフィールで自慢しましょう！",
                 DOMAIN_VERIFICATION_LABEL: "ドメイン",
                 DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_1: "ドメイン名プロバイダにサインインする",
-                DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_2: "新しいDNS記録を作製する：",
+                DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_2: "新しいDNSレコードを作成する:",
                 DOMAIN_VERIFICATION_DNS_WARNING: "DNS記録のプロパゲーションには数分かかる可能性があります。",
                 DOMAIN_VERIFICATION_RECORD_NAME: "お名前",
                 DOMAIN_VERIFICATION_RECORD_TYPE: "種別",
