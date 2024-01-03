@@ -167,6 +167,43 @@
                 })
             }
         },
+        362415: function(e, t, a) {
+            "use strict";
+            a.r(t), a.d(t, {
+                useTrackPollCreationEvents: function() {
+                    return r
+                }
+            }), a("424973");
+            var l = a("884691"),
+                n = a("716241"),
+                s = a("49111");
+
+            function r(e, t, a, r) {
+                let i = l.useCallback(() => {
+                    let l = [],
+                        i = 0,
+                        o = 0,
+                        u = 0;
+                    t.forEach(e => {
+                        null != e.text && l.push(e.text);
+                        let t = e.image;
+                        null != t && (null != t.emoji ? o += 1 : null != t.stickerId ? u += 1 : null != t.gifAttachmentState && (i += 1))
+                    }), n.default.trackWithMetadata(s.AnalyticEvents.POLL_CREATION_CANCELLED, {
+                        question_text: e,
+                        answers_text: l,
+                        answers_count: t.length,
+                        attachments_count: i,
+                        emojis_count: o,
+                        stickers_count: u,
+                        allow_multiselect: a,
+                        layout_type: r
+                    })
+                }, [t, a, e, r]);
+                return {
+                    trackPollCreationCancelled: i
+                }
+            }
+        },
         418298: function(e, t, a) {
             "use strict";
             a.r(t), a.d(t, {
@@ -403,12 +440,12 @@
                 A = a("562228"),
                 m = a("104182"),
                 L = a("741138"),
-                p = a("418298"),
-                T = a("612805"),
-                x = a("53013"),
-                C = a("233365"),
-                O = a("264317"),
-                R = a("375614"),
+                p = a("362415"),
+                T = a("418298"),
+                x = a("612805"),
+                C = a("53013"),
+                O = a("233365"),
+                R = a("264317"),
                 I = a("186859"),
                 N = a("660516"),
                 h = a("782340"),
@@ -484,10 +521,10 @@
                     submitting: z
                 } = (0, m.default)(t, s), {
                     trackPollCreationCancelled: X
-                } = (0, R.useTrackPollCreationEvents)(_, i, D, j), K = n.useRef([]), {
+                } = (0, p.useTrackPollCreationEvents)(_, i, D, j), K = n.useRef([]), {
                     togglePollExpressionPicker: Z,
                     lastActiveParentIndex: J
-                } = (0, O.default)(j), Q = n.useCallback(() => {
+                } = (0, R.default)(j), Q = n.useCallback(() => {
                     o(null != J, "Must have an active input");
                     let e = K.current[J];
                     return o(null != e, "Expected a mounted answer input component"), e.getBoundingClientRect()
@@ -495,7 +532,7 @@
                     X(), s()
                 }, [s, X]), ee = n.useCallback(() => {
                     let e = _.length > 0 || i.some(e => (0, A.isAnswerFilled)(e, j));
-                    e ? (0, C.default)({
+                    e ? (0, O.default)({
                         title: h.default.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE,
                         body: h.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY,
                         cta: h.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_CTA_EXIT,
@@ -539,14 +576,14 @@
                             onChange: L,
                             maxLength: I.MAX_POLL_QUESTION_LENGTH,
                             autoFocus: !0
-                        }), (0, l.jsx)(T.default, {
+                        }), (0, l.jsx)(x.default, {
                             selectedLayoutType: j,
                             onSelectedLayoutType: S
                         }), (0, l.jsxs)("div", {
                             className: r(P.answerInputsContainer, q ? P.defaultContainer : P.imageOnlyContainer),
                             role: "group",
                             "aria-label": h.default.Messages.POLL_OPTIONS_ARIA,
-                            children: [i.map((e, a) => (0, l.jsx)(p.default, {
+                            children: [i.map((e, a) => (0, l.jsx)(T.default, {
                                 answer: e,
                                 channelId: t.id,
                                 index: a,
@@ -596,7 +633,7 @@
                                 children: h.default.Messages.CREATE_POLL_POST
                             })
                         })]
-                    }), (0, l.jsx)(x.default, {
+                    }), (0, l.jsx)(C.default, {
                         channel: t,
                         layout: j,
                         parentModalKey: I.POLL_CREATION_MODAL_KEY,
@@ -861,43 +898,6 @@
                     pollExpressionPickerId: E,
                     chatInputType: _,
                     lastActiveParentIndex: t
-                }
-            }
-        },
-        375614: function(e, t, a) {
-            "use strict";
-            a.r(t), a.d(t, {
-                useTrackPollCreationEvents: function() {
-                    return r
-                }
-            }), a("424973");
-            var l = a("884691"),
-                n = a("716241"),
-                s = a("49111");
-
-            function r(e, t, a, r) {
-                let i = l.useCallback(() => {
-                    let l = [],
-                        i = 0,
-                        o = 0,
-                        u = 0;
-                    t.forEach(e => {
-                        null != e.text && l.push(e.text);
-                        let t = e.image;
-                        null != t && (null != t.emoji ? o += 1 : null != t.stickerId ? u += 1 : null != t.gifAttachmentState && (i += 1))
-                    }), n.default.trackWithMetadata(s.AnalyticEvents.POLL_CREATION_CANCELLED, {
-                        question_text: e,
-                        answers_text: l,
-                        answers_count: t.length,
-                        attachments_count: i,
-                        emojis_count: o,
-                        stickers_count: u,
-                        allow_multiselect: a,
-                        layout_type: r
-                    })
-                }, [t, a, e, r]);
-                return {
-                    trackPollCreationCancelled: i
                 }
             }
         }
