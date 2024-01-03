@@ -297,7 +297,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return M
+                    return V
                 }
             }), l("222007");
             var i = l("37983"),
@@ -310,39 +310,41 @@
                 o = l("811425"),
                 u = l("845579"),
                 f = l("697218"),
-                v = l("811305"),
-                h = l("58608"),
-                m = l("449008"),
-                I = l("387111"),
-                E = l("159885"),
-                x = l("549548"),
-                p = l("607573"),
-                C = l("555584"),
-                T = l("817039"),
-                g = l("687292"),
-                S = l("141962"),
-                A = l("639028"),
-                _ = l("782340"),
-                N = l("277277"),
-                j = l("728791");
+                v = l("604525"),
+                h = l("811305"),
+                m = l("58608"),
+                I = l("449008"),
+                E = l("387111"),
+                x = l("159885"),
+                p = l("84460"),
+                C = l("549548"),
+                T = l("607573"),
+                S = l("555584"),
+                g = l("817039"),
+                A = l("687292"),
+                _ = l("141962"),
+                N = l("639028"),
+                j = l("782340"),
+                D = l("277277"),
+                M = l("728791");
 
-            function D(e) {
+            function y(e) {
                 let {
                     value: t,
                     icon: l
                 } = e;
                 return (0, i.jsxs)(c.Text, {
-                    className: N.activityTag,
+                    className: D.activityTag,
                     color: "interactive-normal",
                     variant: "text-xs/semibold",
-                    children: [(0, m.isNotNullish)(l) ? (0, i.jsx)(l, {
-                        className: N.icon,
+                    children: [(0, I.isNotNullish)(l) ? (0, i.jsx)(l, {
+                        className: D.icon,
                         backgroundColor: "interactive-normal"
                     }) : null, t]
                 })
             }
 
-            function y(e) {
+            function L(e) {
                 var t, l, a;
                 let {
                     activity: n,
@@ -350,165 +352,174 @@
                     channel: d,
                     guildId: o,
                     large: u = !1
-                } = e, h = null !== (t = null == n ? void 0 : n.connections) && void 0 !== t ? t : [], p = (0, r.useStateFromStoresArray)([f.default], () => Array.from(h).map(e => {
+                } = e, v = null !== (t = null == n ? void 0 : n.connections) && void 0 !== t ? t : [], m = (0, r.useStateFromStoresArray)([f.default], () => Array.from(v).map(e => {
                     let [t] = e;
                     return f.default.getUser(t)
-                }).filter(m.isNotNullish)), C = I.default.getName(o, null == d ? void 0 : d.id, null == p ? void 0 : p[0]);
-                if (C = (0, E.truncateText)(C, 15), null == n || 0 === p.length) {
-                    let e = "".concat((0, x.default)(null !== (l = s.maxParticipants) && void 0 !== l ? l : 0));
+                }).filter(I.isNotNullish)), p = E.default.getName(o, null == d ? void 0 : d.id, null == m ? void 0 : m[0]);
+                if (p = (0, x.truncateText)(p, 15), null == n || 0 === m.length) {
+                    let e = "".concat((0, C.default)(null !== (l = s.maxParticipants) && void 0 !== l ? l : 0));
                     return u && (e = null !== (a = s.description) && void 0 !== a ? a : ""), (0, i.jsx)(c.Text, {
-                        className: N.activitySubtitleText,
+                        className: D.activitySubtitleText,
                         variant: "text-xs/normal",
                         color: "interactive-normal",
                         children: e
                     })
                 }
                 return (0, i.jsxs)("div", {
-                    className: N.activitySubtitleText,
+                    className: D.activitySubtitleText,
                     children: [(0, i.jsx)(c.Text, {
-                        className: N.usersArePlayingText,
+                        className: D.usersArePlayingText,
                         variant: "text-xs/normal",
-                        children: p.length > 1 ? _.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
-                            username: C,
-                            count: p.length - 1
-                        }) : _.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
-                            username: C
+                        children: m.length > 1 ? j.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+                            username: p,
+                            count: m.length - 1
+                        }) : j.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
+                            username: p
                         })
-                    }), (0, i.jsx)(v.default, {
-                        size: u ? v.Sizes.SIZE_24 : v.Sizes.SIZE_16,
+                    }), (0, i.jsx)(h.default, {
+                        size: u ? h.Sizes.SIZE_24 : h.Sizes.SIZE_16,
                         guildId: o,
-                        users: p,
+                        users: m,
                         max: 6
                     })]
                 })
             }
 
-            function M(e) {
+            function V(e) {
                 var t;
                 let {
                     activityItem: l,
                     channel: n,
-                    guildId: r,
-                    locationObject: f,
-                    onActivityItemVisible: v,
-                    onActivityItemSelected: m,
-                    large: I = !1
+                    guildId: f,
+                    locationObject: h,
+                    onActivityItemVisible: I,
+                    onActivityItemSelected: E,
+                    large: x = !1
                 } = e, {
-                    imageBackground: E,
-                    videoUrl: _,
-                    activityAction: M,
-                    joinableEmbeddedApp: L,
-                    onActivityItemSelected: V,
-                    labelType: R,
-                    staffReleasePhase: b
-                } = (0, p.default)({
+                    imageBackground: V,
+                    videoUrl: R,
+                    activityAction: b,
+                    joinableEmbeddedApp: O,
+                    onActivityItemSelected: H,
+                    labelType: B,
+                    staffReleasePhase: w
+                } = (0, T.default)({
                     activityItem: l,
                     channel: n,
-                    guildId: r,
-                    locationObject: f,
-                    onActivityItemVisible: v,
-                    onActivityItemSelected: m,
-                    embeddedActivitiesManager: S.default
-                }), {
-                    application: O
-                } = l, H = a.useCallback(e => e && (null == v ? void 0 : v({
+                    guildId: f,
+                    locationObject: h,
+                    onActivityItemVisible: I,
+                    onActivityItemSelected: E,
+                    embeddedActivitiesManager: _.default
+                }), F = (0, r.useStateFromStores)([p.default], () => p.default.isApplicationInDevShelf(l.application.id), [l.application.id]), {
+                    application: k
+                } = l, Y = a.useCallback(e => e && (null == I ? void 0 : I({
                     applicationId: l.application.id
-                })), [l.application.id, v]), B = (0, o.useIsVisible)(H, .8, !0), [F, w] = a.useState(!1), [k, Y] = a.useState(F);
+                })), [l.application.id, I]), P = (0, o.useIsVisible)(Y, .8, !0), [U, G] = a.useState(!1), [Z, W] = a.useState(U);
                 a.useEffect(() => {
-                    F && Y(!0)
-                }, [F]);
-                let P = () => w(!0),
-                    U = () => w(!1),
-                    G = u.DeveloperMode.useSetting();
+                    U && W(!0)
+                }, [U]);
+                let z = () => G(!0),
+                    K = () => G(!1),
+                    X = u.DeveloperMode.useSetting();
                 return (0, i.jsxs)(c.Clickable, {
-                    onClick: M === p.ActivityAction.START ? V : void 0,
-                    onContextMenu: G ? e => {
-                        (0, d.openContextMenu)(e, e => (0, i.jsx)(A.default, {
-                            application: O,
+                    onClick: b === T.ActivityAction.START ? H : void 0,
+                    onContextMenu: X ? e => {
+                        (0, d.openContextMenu)(e, e => (0, i.jsx)(N.default, {
+                            application: k,
                             ...e
                         }))
                     } : void 0,
-                    className: s(N.activityItem, {
-                        [N.large]: !0 === I,
-                        [N.disabled]: M !== p.ActivityAction.START
+                    className: s(D.activityItem, {
+                        [D.large]: !0 === x,
+                        [D.disabled]: b !== T.ActivityAction.START
                     }),
                     children: [(0, i.jsxs)("div", {
-                        ref: B,
-                        className: s(N.activityImageContainer, {
-                            [N.large]: !0 === I
+                        ref: P,
+                        className: s(D.activityImageContainer, {
+                            [D.large]: !0 === x
                         }),
-                        onMouseEnter: P,
-                        onFocus: P,
-                        onMouseLeave: U,
-                        onBlur: U,
-                        children: [(0, i.jsx)(T.default, {
-                            imageBackground: E,
-                            applicationName: O.name,
-                            imageClassName: s(N.activityImage, {
-                                [N.large]: !0 === I
+                        onMouseEnter: z,
+                        onFocus: z,
+                        onMouseLeave: K,
+                        onBlur: K,
+                        children: [(0, i.jsx)(g.default, {
+                            imageBackground: V,
+                            applicationName: k.name,
+                            imageClassName: s(D.activityImage, {
+                                [D.large]: !0 === x
                             }),
-                            imageNotFoundClassName: N.brokenImageIconWrapper
-                        }), null != _ && k && M === p.ActivityAction.START ? (0, i.jsx)("div", {
-                            className: s(N.activityVideo, {
-                                [N.videoFadeOut]: !F
+                            imageNotFoundClassName: D.brokenImageIconWrapper
+                        }), null != R && Z && b === T.ActivityAction.START ? (0, i.jsx)("div", {
+                            className: s(D.activityVideo, {
+                                [D.videoFadeOut]: !U
                             }),
-                            onAnimationEnd: () => F ? null : Y(!1),
-                            children: (0, i.jsx)(h.default, {
-                                className: N.activityVideo,
-                                src: _,
+                            onAnimationEnd: () => U ? null : W(!1),
+                            children: (0, i.jsx)(m.default, {
+                                className: D.activityVideo,
+                                src: R,
                                 loop: !0,
                                 autoPlay: !0,
                                 muted: !0
                             })
-                        }) : null, M !== p.ActivityAction.START ? (0, i.jsx)(C.ActivityActionOverlayButton, {
-                            action: M,
-                            onClick: V
+                        }) : null, b !== T.ActivityAction.START ? (0, i.jsx)(S.ActivityActionOverlayButton, {
+                            action: b,
+                            onClick: H
                         }) : null, (0, i.jsx)("div", {
-                            className: N.overlayBadge,
+                            className: D.overlayBadge,
                             children: (0, i.jsx)("div", {
-                                className: N.badgeContainer,
-                                children: (0, i.jsx)(g.default, {
-                                    name: O.name,
-                                    labelType: R
+                                className: D.badgeContainer,
+                                children: (0, i.jsx)(A.default, {
+                                    name: k.name,
+                                    labelType: B
                                 })
                             })
-                        })]
+                        }), F ? (0, i.jsx)(c.Tooltip, {
+                            text: j.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
+                            children: e => (0, i.jsx)("div", {
+                                className: D.devShelfBadge,
+                                ...e,
+                                children: (0, i.jsx)(v.default, {
+                                    className: D.devShelfIcon
+                                })
+                            })
+                        }) : null]
                     }), (0, i.jsxs)("div", {
-                        className: s(N.activityTextContainer, {
-                            [N.large]: I
+                        className: s(D.activityTextContainer, {
+                            [D.large]: x
                         }),
-                        children: [I ? (0, i.jsx)(c.Text, {
-                            className: N.activityMaxParticipantsLarge,
+                        children: [x ? (0, i.jsx)(c.Text, {
+                            className: D.activityMaxParticipantsLarge,
                             variant: "text-xs/normal",
                             color: "interactive-normal",
-                            children: (0, x.default)(null !== (t = O.maxParticipants) && void 0 !== t ? t : 0)
+                            children: (0, C.default)(null !== (t = k.maxParticipants) && void 0 !== t ? t : 0)
                         }) : null, (0, i.jsxs)("div", {
-                            className: N.activityName,
+                            className: D.activityName,
                             children: [(0, i.jsx)(c.Heading, {
-                                className: N.activityTitleText,
+                                className: D.activityTitleText,
                                 variant: "heading-md/semibold",
                                 color: "interactive-active",
-                                children: O.name
-                            }), null != b ? (0, i.jsx)(c.Tooltip, {
-                                text: b,
+                                children: k.name
+                            }), null != w ? (0, i.jsx)(c.Tooltip, {
+                                text: w,
                                 children: e => (0, i.jsx)("img", {
-                                    className: N.staffBadge,
-                                    alt: b,
-                                    src: j,
+                                    className: D.staffBadge,
+                                    alt: w,
+                                    src: M,
                                     ...e
                                 })
                             }) : null]
-                        }), (0, i.jsx)(y, {
-                            activity: null == L ? void 0 : L.embeddedActivity,
-                            application: O,
+                        }), (0, i.jsx)(L, {
+                            activity: null == O ? void 0 : O.embeddedActivity,
+                            application: k,
                             channel: n,
-                            guildId: r,
-                            large: I
+                            guildId: f,
+                            large: x
                         }), (0, i.jsx)("div", {
-                            className: N.activityTagsContainer,
-                            children: O.tags.slice(0, 3).map(e => (0, i.jsx)(D, {
+                            className: D.activityTagsContainer,
+                            children: k.tags.slice(0, 3).map(e => (0, i.jsx)(y, {
                                 value: e
-                            }, "activity-tag-".concat(O.id, "-").concat(e)))
+                            }, "activity-tag-".concat(k.id, "-").concat(e)))
                         })]
                     })]
                 })
@@ -540,15 +551,15 @@
                 p = l("387111"),
                 C = l("159885"),
                 T = l("191225"),
-                g = l("686569"),
-                S = l("607573"),
+                S = l("686569"),
+                g = l("607573"),
                 A = l("555584"),
                 _ = l("817039"),
                 N = l("687292"),
                 j = l("141962"),
                 D = l("905647"),
-                y = l("49111"),
-                M = l("782340"),
+                M = l("49111"),
+                y = l("782340"),
                 L = l("753587"),
                 V = l("728791");
 
@@ -562,12 +573,12 @@
                     onActivityItemSelected: H
                 } = e, {
                     imageBackground: B,
-                    videoUrl: F,
-                    activityAction: w,
+                    videoUrl: w,
+                    activityAction: F,
                     staffReleasePhase: k,
                     onActivityItemSelected: Y,
                     labelType: P
-                } = (0, S.default)({
+                } = (0, g.default)({
                     activityItem: t,
                     channel: n,
                     guildId: R,
@@ -578,16 +589,16 @@
                 }), {
                     enableShelfToDetailPage: U,
                     enableMinimalActivityDetails: G
-                } = g.ExperimentShelfToDetailPage.useExperiment({
+                } = S.ExperimentShelfToDetailPage.useExperiment({
                     location: "05846b_1"
                 }), Z = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), W = (0, r.useStateFromStoresArray)([T.default, f.default], () => T.default.getUsersHavePlayedByApp(t.application.id).filter(e => {
                     var t;
                     return (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) !== e
                 }).map(e => f.default.getUser(e)).filter(x.isNotNullish), [t.application.id]), z = null != W[0] ? (0, C.truncateText)(p.default.getName(null, null, W[0]), 25) : null, K = null;
-                null != z && W.length > 1 ? K = M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
+                null != z && W.length > 1 ? K = y.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
                     username1: z,
                     extras: W.length - 1
-                }) : null != z && (K = M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format({
+                }) : null != z && (K = y.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format({
                     username1: z
                 }));
                 let X = a.useCallback(e => e && (null == O ? void 0 : O({
@@ -601,14 +612,14 @@
                 }, [J]);
                 let et = () => Q(!0),
                     el = () => Q(!1),
-                    ei = null == t.application.maxParticipants || -1 === t.application.maxParticipants ? M.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : M.default.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({
+                    ei = null == t.application.maxParticipants || -1 === t.application.maxParticipants ? y.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : y.default.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({
                         count: t.application.maxParticipants
                     }),
                     ea = a.useCallback(() => {
-                        U ? E.ComponentDispatch.dispatch(y.ComponentActions.SHOW_ACTIVITY_DETAILS, {
+                        U ? E.ComponentDispatch.dispatch(M.ComponentActions.SHOW_ACTIVITY_DETAILS, {
                             applicationId: t.application.id
-                        }) : w === S.ActivityAction.START && Y()
-                    }, [w, t, U, Y]),
+                        }) : F === g.ActivityAction.START && Y()
+                    }, [F, t, U, Y]),
                     en = D.ACTIVITIES_EXTRA_DETAILS[t.application.id],
                     es = (null == en ? void 0 : en.playersSuggestionMin) != null && (null == en ? void 0 : en.playersSuggestionMax) != null ? "".concat(en.playersSuggestionMin, " - ").concat(en.playersSuggestionMax) : void 0;
                 return (0, i.jsxs)(c.Clickable, {
@@ -640,20 +651,20 @@
                             applicationName: t.application.name,
                             imageClassName: L.activityImage,
                             imageNotFoundClassName: L.brokenImageIconWrapper
-                        }), !Z && null != F && $ ? (0, i.jsx)("div", {
+                        }), !Z && null != w && $ ? (0, i.jsx)("div", {
                             className: s(L.video, {
                                 [L.videoFadeOut]: !J
                             }),
                             onAnimationEnd: () => J ? null : ee(!1),
                             children: (0, i.jsx)(I.default, {
                                 className: L.video,
-                                src: F,
+                                src: w,
                                 loop: !0,
                                 autoPlay: !0,
                                 muted: !0
                             })
-                        }) : null, w !== S.ActivityAction.START ? (0, i.jsx)(A.ActivityActionOverlayButton, {
-                            action: w,
+                        }) : null, F !== g.ActivityAction.START ? (0, i.jsx)(A.ActivityActionOverlayButton, {
+                            action: F,
                             onClick: Y
                         }) : null, G && null != es ? (0, i.jsx)("div", {
                             className: L.minimalDetailsContainer,
@@ -727,7 +738,7 @@
                             }),
                             children: [(0, i.jsx)(c.Text, {
                                 variant: "text-sm/semibold",
-                                children: M.default.Messages.LEARN_MORE
+                                children: y.default.Messages.LEARN_MORE
                             }), (0, i.jsx)(h.default, {
                                 width: 16,
                                 height: 16
@@ -763,15 +774,15 @@
                 p = l("471671"),
                 C = l("145131"),
                 T = l("980428"),
-                g = l("599110"),
-                S = l("659500"),
+                S = l("599110"),
+                g = l("659500"),
                 A = l("159885"),
                 _ = l("84460"),
                 N = l("550766"),
                 j = l("686569"),
                 D = l("623611"),
-                y = l("293564"),
-                M = l("218274"),
+                M = l("293564"),
+                y = l("218274"),
                 L = l("891209"),
                 V = l("954016"),
                 R = l("49111"),
@@ -779,11 +790,11 @@
                 O = l("203509"),
                 H = l("851815"),
                 B = l("255293");
-            let F = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
-                w = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
+            let w = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
+                F = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
                 k = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MIN_WIDTH),
                 Y = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_WIDTH),
-                P = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + F + (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
+                P = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + w + (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
 
             function U(e) {
                 let {
@@ -804,7 +815,7 @@
                     autoTrackExposure: !0
                 }), {
                     width: W
-                } = (0, E.useScreenDimensions)(), z = a.useMemo(() => Z ? Math.max(k, Math.min(W - 2 * F, Y)) : w, [W, Z]), K = (0, c.useStateFromStores)([_.default], () => _.default.getIsEnabled(), []), {
+                } = (0, E.useScreenDimensions)(), z = a.useMemo(() => Z ? Math.max(k, Math.min(W - 2 * w, Y)) : F, [W, Z]), K = (0, c.useStateFromStores)([_.default], () => _.default.getIsEnabled(), []), {
                     AnalyticsLocationProvider: X
                 } = (0, m.default)(P), [q, J] = a.useState(p), Q = (0, u.default)(q), [$, ee] = a.useState(null), [et, el] = a.useState(f), [ei, ea] = a.useState(void 0), [en] = (0, I.default)(null == et ? [] : [et]), es = a.useRef(null), er = a.useMemo(() => ({
                     application_id: et,
@@ -833,15 +844,15 @@
                         el(t), J(V.ActivityShelfSlides.DETAIL_PAGE)
                     }, []);
                 a.useEffect(() => {
-                    g.default.track(R.AnalyticEvents.OPEN_MODAL, {
+                    S.default.track(R.AnalyticEvents.OPEN_MODAL, {
                         type: "Activity Shelf",
                         channel_id: null == t ? void 0 : t.id,
                         guild_id: l
                     })
-                }, [t, l]), a.useEffect(() => (S.ComponentDispatch.subscribe(R.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ec), () => {
-                    S.ComponentDispatch.unsubscribe(R.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ec)
-                }), [ec]), a.useEffect(() => (S.ComponentDispatch.subscribe(R.ComponentActions.SHOW_ACTIVITY_DETAILS, ed), () => {
-                    S.ComponentDispatch.unsubscribe(R.ComponentActions.SHOW_ACTIVITY_DETAILS, ed)
+                }, [t, l]), a.useEffect(() => (g.ComponentDispatch.subscribe(R.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ec), () => {
+                    g.ComponentDispatch.unsubscribe(R.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, ec)
+                }), [ec]), a.useEffect(() => (g.ComponentDispatch.subscribe(R.ComponentActions.SHOW_ACTIVITY_DETAILS, ed), () => {
+                    g.ComponentDispatch.unsubscribe(R.ComponentActions.SHOW_ACTIVITY_DETAILS, ed)
                 }), [ed]), a.useEffect(() => {
                     N.dismissNewActivityIndicator()
                 }, []);
@@ -877,7 +888,7 @@
                             ...er,
                             ...e
                         };
-                    g.default.track(R.AnalyticEvents.ACTIVITY_SHELF_CLOSE, i)
+                    S.default.track(R.AnalyticEvents.ACTIVITY_SHELF_CLOSE, i)
                 }, [null == t ? void 0 : t.id, er, l]), (0, i.jsx)(X, {
                     children: (0, i.jsxs)(o.ModalRoot, {
                         className: s(O.root, {
@@ -949,7 +960,7 @@
                                 },
                                 children: (0, i.jsx)(G, {
                                     slide: q,
-                                    children: (0, i.jsx)(y.default, {
+                                    children: (0, i.jsx)(M.default, {
                                         scrollerRef: es,
                                         channel: t,
                                         guildId: l,
@@ -968,7 +979,7 @@
                                 },
                                 children: (0, i.jsx)(G, {
                                     slide: q,
-                                    children: (0, i.jsx)(M.default, {
+                                    children: (0, i.jsx)(y.default, {
                                         applicationId: et,
                                         selectedChannelId: ei,
                                         setSelectedChannelId: ea,
@@ -998,7 +1009,7 @@
                             children: (() => {
                                 switch (q) {
                                     case V.ActivityShelfSlides.DIRECTORY:
-                                        return (0, i.jsx)(y.ActivityDirectoryFooter, {});
+                                        return (0, i.jsx)(M.ActivityDirectoryFooter, {});
                                     case V.ActivityShelfSlides.SELECT_CHANNEL:
                                         return (0, i.jsxs)(i.Fragment, {
                                             children: [(0, i.jsx)("div", {
@@ -1006,7 +1017,7 @@
                                             }), (0, i.jsx)(o.ModalFooter, {
                                                 separator: !1,
                                                 className: O.footer,
-                                                children: (0, i.jsx)(M.ChannelSelectorFooter, {
+                                                children: (0, i.jsx)(y.ChannelSelectorFooter, {
                                                     onBack: eo,
                                                     onClose: d,
                                                     guildId: l,
@@ -1050,7 +1061,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return M
+                    return y
                 }
             }), l("222007");
             var i = l("37983"),
@@ -1072,16 +1083,16 @@
                 p = l("248210"),
                 C = l("525167"),
                 T = l("698372"),
-                g = l("969380"),
-                S = l("817039"),
+                S = l("969380"),
+                g = l("817039"),
                 A = l("141962"),
                 _ = l("231457"),
                 N = l("707181"),
                 j = l("905647"),
                 D = l("782340"),
-                y = l("185767");
+                M = l("185767");
 
-            function M(e) {
+            function y(e) {
                 var t;
                 let {
                     applicationId: l,
@@ -1096,98 +1107,98 @@
                         guildId: n
                     })
                 }, [n]);
-                let x = (0, g.default)({
+                let x = (0, S.default)({
                         applicationId: null != l ? l : "",
                         size: 2048
                     }),
                     p = (0, E.useActivityShelfItemData)(null != n ? n : null, l);
                 if (null == p) return null;
                 let T = null != p.activity.activity_preview_video_asset_id ? (0, C.default)(l, p.activity.activity_preview_video_asset_id) : null,
-                    S = j.ACTIVITIES_EXTRA_DETAILS[l],
-                    A = (null == S ? void 0 : S.playersSuggestionMin) != null && (null == S ? void 0 : S.playersSuggestionMax) != null ? "".concat(S.playersSuggestionMin, " - ").concat(S.playersSuggestionMax) : void 0;
+                    g = j.ACTIVITIES_EXTRA_DETAILS[l],
+                    A = (null == g ? void 0 : g.playersSuggestionMin) != null && (null == g ? void 0 : g.playersSuggestionMax) != null ? "".concat(g.playersSuggestionMin, " - ").concat(g.playersSuggestionMax) : void 0;
                 return (0, i.jsx)(I, {
                     children: (0, i.jsx)("div", {
-                        className: y.scrollContainer,
+                        className: M.scrollContainer,
                         children: (0, i.jsxs)(s.Scroller, {
-                            className: y.scroller,
+                            className: M.scroller,
                             children: [(0, i.jsx)("div", {
-                                className: y.launcherOuterContainer,
+                                className: M.launcherOuterContainer,
                                 children: (0, i.jsx)(L, {
                                     activityItem: p,
                                     onLaunch: f,
                                     channelId: d
                                 })
                             }), (0, i.jsxs)("div", {
-                                className: y.activityDetailsContainer,
+                                className: M.activityDetailsContainer,
                                 children: [(0, i.jsxs)("div", {
                                     children: [null != T ? (0, i.jsx)("div", {
-                                        className: y.heroVideoContainer,
+                                        className: M.heroVideoContainer,
                                         children: (0, i.jsx)(h.default, {
                                             loop: !0,
                                             autoPlay: !0,
                                             muted: !0,
-                                            className: y.heroVideo,
+                                            className: M.heroVideo,
                                             src: T,
                                             poster: x.url
                                         })
                                     }) : null, (0, i.jsx)("div", {
-                                        className: y.detailsTitle,
+                                        className: M.detailsTitle,
                                         children: (0, i.jsx)(s.Heading, {
                                             variant: "heading-xxl/bold",
                                             children: p.application.name
                                         })
                                     }), (0, i.jsxs)("div", {
-                                        className: y.detailsDetails,
+                                        className: M.detailsDetails,
                                         children: [null != A ? (0, i.jsxs)("div", {
-                                            className: y.detailItem,
+                                            className: M.detailItem,
                                             children: [(0, i.jsx)(u.default, {
                                                 width: 16,
                                                 height: 16
                                             }), (0, i.jsx)(s.Text, {
                                                 variant: "text-xs/semibold",
-                                                className: y.detailItemText,
+                                                className: M.detailItemText,
                                                 children: D.default.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format({
                                                     nPlayers: A
                                                 })
                                             })]
-                                        }) : null, (null == S ? void 0 : S.timeSuggestionMinutes) != null ? (0, i.jsxs)("div", {
-                                            className: y.detailItem,
+                                        }) : null, (null == g ? void 0 : g.timeSuggestionMinutes) != null ? (0, i.jsxs)("div", {
+                                            className: M.detailItem,
                                             children: [(0, i.jsx)(o.default, {
                                                 width: 16,
                                                 height: 16
                                             }), (0, i.jsx)(s.Text, {
                                                 variant: "text-xs/semibold",
-                                                className: y.detailItemText,
+                                                className: M.detailItemText,
                                                 children: D.default.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({
-                                                    nMinutes: S.timeSuggestionMinutes
+                                                    nMinutes: g.timeSuggestionMinutes
                                                 })
                                             })]
                                         }) : null, (0, i.jsxs)("div", {
-                                            className: y.detailItem,
+                                            className: M.detailItem,
                                             children: [(0, i.jsx)(v.default, {
                                                 width: 16,
                                                 height: 16
                                             }), (0, i.jsx)(s.Text, {
                                                 variant: "text-xs/semibold",
-                                                className: y.detailItemText,
+                                                className: M.detailItemText,
                                                 children: p.application.tags.slice(0, 3).join(", ")
                                             })]
                                         })]
                                     })]
                                 }), (0, i.jsx)(s.Heading, {
                                     variant: "heading-lg/medium",
-                                    className: y.detailsDescription,
+                                    className: M.detailsDescription,
                                     children: p.application.description
                                 }), (0, i.jsx)("div", {
-                                    className: y.divider
+                                    className: M.divider
                                 }), (0, i.jsx)("div", {
-                                    className: y.imagesContainer,
-                                    children: (null !== (t = null == S ? void 0 : S.gameplayImageUrls) && void 0 !== t ? t : []).map(e => (0, i.jsx)("img", {
+                                    className: M.imagesContainer,
+                                    children: (null !== (t = null == g ? void 0 : g.gameplayImageUrls) && void 0 !== t ? t : []).map(e => (0, i.jsx)("img", {
                                         src: e,
                                         alt: D.default.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format({
                                             activityName: p.application.name
                                         }),
-                                        className: y.activityImage
+                                        className: M.activityImage
                                     }, e))
                                 })]
                             })]
@@ -1202,26 +1213,26 @@
                     activityItem: o,
                     onLaunch: u,
                     channelId: v
-                } = e, h = (0, g.default)({
+                } = e, h = (0, S.default)({
                     applicationId: o.application.id,
                     size: 2048
                 }), {
                     analyticsLocations: m
                 } = (0, c.default)(), E = (0, T.default)(), [C, j] = a.useState(null !== (t = (0, x.getActivityGuildSuggestion)({
                     allowGdmActivityChannelSuggestion: !0
-                })) && void 0 !== t ? t : void 0), [M, L] = a.useState(null !== (r = (0, p.getActivityVoiceChannelSuggestion)({
+                })) && void 0 !== t ? t : void 0), [y, L] = a.useState(null !== (r = (0, p.getActivityVoiceChannelSuggestion)({
                     guildId: C,
                     allowGdmActivityChannelSuggestion: !0
-                })) && void 0 !== r ? r : void 0), V = (0, n.default)([d.default], () => d.default.getChannel(M), [M]), R = (0, x.useSelectGuildOptions)(), b = (0, p.useSelectVoiceChannelOptions)(C), O = a.useCallback(() => {
-                    null != M && (0, I.default)({
+                })) && void 0 !== r ? r : void 0), V = (0, n.default)([d.default], () => d.default.getChannel(y), [y]), R = (0, x.useSelectGuildOptions)(), b = (0, p.useSelectVoiceChannelOptions)(C), O = a.useCallback(() => {
+                    null != y && (0, I.default)({
                         activityItem: o,
                         currentActivity: E,
-                        channelId: M,
+                        channelId: y,
                         guildId: C,
                         embeddedActivitiesManager: A.default,
                         analyticsLocations: m
                     }).then(u)
-                }, [o, m, E, u, M, C]), H = a.useCallback(() => {
+                }, [o, m, E, u, y, C]), H = a.useCallback(() => {
                     (0, s.openModalLazy)(async () => {
                         let {
                             default: e
@@ -1232,21 +1243,21 @@
                             analyticsLocations: m
                         })
                     })
-                }, [o, m]), B = null == V || null != V.guild_id && !(null != C && null != M && R.some(e => e.value === C) && b.some(e => e.value.channel.id === M)) && !0;
+                }, [o, m]), B = null == V || null != V.guild_id && !(null != C && null != y && R.some(e => e.value === C) && b.some(e => e.value.channel.id === y)) && !0;
                 return (0, i.jsxs)("div", {
-                    className: y.launcherInnerContainer,
-                    children: [(0, i.jsx)(S.default, {
+                    className: M.launcherInnerContainer,
+                    children: [(0, i.jsx)(g.default, {
                         applicationName: o.application.name,
                         imageBackground: h,
-                        imageClassName: y.launchImage,
-                        imageNotFoundClassName: y.brokenLaunchImage
+                        imageClassName: M.launchImage,
+                        imageNotFoundClassName: M.brokenLaunchImage
                     }), (0, i.jsx)(s.Text, {
                         variant: "text-md/medium",
                         children: D.default.Messages.EMBEDDED_ACTIVITIES_START_OR_SHARE
                     }), null == v ? (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)(s.Select, {
                             placeholder: D.default.Messages.GUILD_SELECT,
-                            optionClassName: y.option,
+                            optionClassName: M.option,
                             options: R,
                             renderOptionValue: e => {
                                 let t = e.find(e => e.value === C);
@@ -1272,13 +1283,13 @@
                             serialize: e => e
                         }), (0, i.jsx)(s.Select, {
                             placeholder: D.default.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
-                            optionClassName: y.option,
+                            optionClassName: M.option,
                             options: b,
                             isSelected: e => {
                                 let {
                                     channel: t
                                 } = e;
-                                return t.id === M
+                                return t.id === y
                             },
                             select: e => {
                                 let {
@@ -1293,7 +1304,7 @@
                                 return t.id
                             },
                             renderOptionValue: () => {
-                                let e = b.find(e => e.value.channel.id === M);
+                                let e = b.find(e => e.value.channel.id === y);
                                 return null == e ? null : (0, i.jsx)(_.SelectChannelOption, {
                                     channel: e.value.channel,
                                     users: e.value.users
@@ -1317,7 +1328,7 @@
                             onClick: O,
                             children: D.default.Messages.START
                         }), (0, i.jsx)("div", {
-                            className: y.divider
+                            className: M.divider
                         }), (0, i.jsx)(s.Button, {
                             fullWidth: !0,
                             color: s.Button.Colors.PRIMARY,
@@ -1325,14 +1336,14 @@
                             children: D.default.Messages.SHARE
                         })]
                     }) : (0, i.jsxs)("div", {
-                        className: y.singleRowShareContainer,
+                        className: M.singleRowShareContainer,
                         children: [(0, i.jsx)(s.Button, {
                             fullWidth: !0,
                             disabled: B,
                             onClick: O,
                             children: D.default.Messages.START
                         }), (0, i.jsx)(s.Button, {
-                            className: y.shareIconButton,
+                            className: M.shareIconButton,
                             color: s.Button.Colors.PRIMARY,
                             onClick: H,
                             children: (0, i.jsx)(f.default, {})
@@ -1370,15 +1381,15 @@
                 p = l("614175"),
                 C = l("903178"),
                 T = l("955153"),
-                g = l("84460"),
-                S = l("550766"),
+                S = l("84460"),
+                g = l("550766"),
                 A = l("337697"),
                 _ = l("686569"),
                 N = l("91761"),
                 j = l("607384"),
                 D = l("702173"),
-                y = l("490080"),
-                M = l("62276"),
+                M = l("490080"),
+                y = l("62276"),
                 L = l("954016"),
                 V = l("49111"),
                 R = l("782340"),
@@ -1386,8 +1397,8 @@
                 O = l("661825"),
                 H = l("846175"),
                 B = l("888181"),
-                F = l("924306"),
-                w = l("252262");
+                w = l("924306"),
+                F = l("252262");
             let k = (0, c.cssValueToNumber)(o.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
                 Y = (0, c.cssValueToNumber)(o.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
                 P = (0, c.cssValueToNumber)(o.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT),
@@ -1426,9 +1437,9 @@
                 } = (0, h.default)(v.default.ACTIVITY_DIRECTORY), ei = (0, D.default)(null == t ? void 0 : t.id), {
                     isDeveloperActivityShelfEnabled: ea,
                     filter: en
-                } = (0, d.useStateFromStoresObject)([g.default], () => ({
-                    filter: g.default.getFilter(),
-                    isDeveloperActivityShelfEnabled: g.default.getIsEnabled()
+                } = (0, d.useStateFromStoresObject)([S.default], () => ({
+                    filter: S.default.getFilter(),
+                    isDeveloperActivityShelfEnabled: S.default.getIsEnabled()
                 }));
                 a.useEffect(() => {
                     let e = G.current;
@@ -1451,7 +1462,7 @@
                     autoTrackExposure: !0
                 });
                 if (a.useEffect(() => {
-                        (ei || null != l) && (0, S.fetchShelf)({
+                        (ei || null != l) && (0, g.fetchShelf)({
                             guildId: l,
                             force: !0
                         })
@@ -1481,7 +1492,7 @@
                         });
                         if (X) return es ? null : (0, i.jsxs)(i.Fragment, {
                             children: [(0, i.jsx)("img", {
-                                src: w,
+                                src: F,
                                 alt: R.default.Messages.EMBEDDED_ACTIVITIES_STAYING_FREE_POSTER_ALT,
                                 className: b.poster
                             }), (0, i.jsx)("div", {
@@ -1505,7 +1516,7 @@
                                 children: (0, i.jsx)(x.default, {
                                     autoPlay: !0,
                                     src: B,
-                                    poster: F,
+                                    poster: w,
                                     className: b.poster,
                                     loop: !0,
                                     muted: !0
@@ -1537,7 +1548,7 @@
                             ref: G,
                             className: b.scroller,
                             children: [eu, function() {
-                                let e = es || er || ec ? M.default : y.default;
+                                let e = es || er || ec ? y.default : M.default;
                                 return ed ? (0, i.jsx)(i.Fragment, {
                                     children: $.map((a, r) => {
                                         let [d, u] = a;
@@ -1615,15 +1626,15 @@
                 p = l("191225"),
                 C = l("986214"),
                 T = l("161918"),
-                g = l("248210"),
-                S = l("525167"),
+                S = l("248210"),
+                g = l("525167"),
                 A = l("698372"),
                 _ = l("969380"),
                 N = l("141962"),
                 j = l("231457"),
                 D = l("49111"),
-                y = l("782340"),
-                M = l("943453");
+                M = l("782340"),
+                y = l("943453");
 
             function L(e) {
                 let t = (0, n.useStateFromStores)([v.default, h.default], () => {
@@ -1642,17 +1653,17 @@
                     selectedChannelId: h,
                     setSelectedChannelId: p,
                     enableSelectedTextChannelInvite: C
-                } = e, A = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), N = (0, T.useActivityShelfItemData)(null != o ? o : null, null != d ? d : ""), [D, R] = a.useState(C && !u.default.disableInviteWithTextChannelActivityLaunch), b = (0, g.useSelectVoiceChannelOptions)(o);
+                } = e, A = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), N = (0, T.useActivityShelfItemData)(null != o ? o : null, null != d ? d : ""), [D, R] = a.useState(C && !u.default.disableInviteWithTextChannelActivityLaunch), b = (0, S.useSelectVoiceChannelOptions)(o);
                 a.useEffect(() => {
                     var e;
                     x.fetchShelf({
                         guildId: o
-                    }), p(null !== (e = (0, g.getActivityVoiceChannelSuggestion)({
+                    }), p(null !== (e = (0, S.getActivityVoiceChannelSuggestion)({
                         guildId: o
                     })) && void 0 !== e ? e : void 0)
                 }, [o, p]);
                 let O = null == N ? void 0 : N.activity.activity_preview_video_asset_id,
-                    H = null != O ? (0, S.default)(null !== (t = null == N ? void 0 : N.application.id) && void 0 !== t ? t : "", O) : null,
+                    H = null != O ? (0, g.default)(null !== (t = null == N ? void 0 : N.application.id) && void 0 !== t ? t : "", O) : null,
                     {
                         url: B
                     } = (0, _.default)({
@@ -1660,18 +1671,18 @@
                         size: 1024,
                         names: V
                     }),
-                    F = (0, n.useStateFromStores)([v.default], () => v.default.getGuild(o)),
-                    w = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())),
+                    w = (0, n.useStateFromStores)([v.default], () => v.default.getGuild(o)),
+                    F = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())),
                     k = L(null != o ? o : void 0);
-                if ((null == N ? void 0 : N.application) == null || null == F) return null;
-                let Y = (null == w ? void 0 : w.name) == null || (null == w ? void 0 : w.name) === "" ? y.default.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : "#".concat(w.name);
+                if ((null == N ? void 0 : N.application) == null || null == w) return null;
+                let Y = (null == F ? void 0 : F.name) == null || (null == F ? void 0 : F.name) === "" ? M.default.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : "#".concat(F.name);
                 return (0, i.jsxs)(s.Scroller, {
-                    className: M.scroll,
+                    className: y.scroll,
                     children: [null != H || null != B ? (0, i.jsx)(I.default, {
                         aspectRatio: 16 / 9,
-                        className: M.imageContainer,
+                        className: y.imageContainer,
                         children: (0, i.jsx)(E.default, {
-                            className: M.video,
+                            className: y.video,
                             src: H,
                             loop: !0,
                             autoPlay: !A,
@@ -1679,18 +1690,18 @@
                             muted: !0
                         })
                     }) : null, (0, i.jsxs)("div", {
-                        className: M.descriptionArea,
+                        className: y.descriptionArea,
                         children: [(0, i.jsx)(s.Heading, {
                             variant: "heading-xl/semibold",
                             children: null == N ? void 0 : N.application.name
                         }), (0, i.jsx)(s.Text, {
-                            className: M.descriptionAreaSubtext,
+                            className: y.descriptionAreaSubtext,
                             variant: "text-md/normal",
                             children: null == N ? void 0 : N.application.description
                         })]
                     }), (0, i.jsx)(s.Select, {
-                        placeholder: y.default.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
-                        optionClassName: M.option,
+                        placeholder: M.default.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
+                        optionClassName: y.option,
                         options: b,
                         isSelected: e => {
                             let {
@@ -1730,7 +1741,7 @@
                             })
                         }
                     }), k && C ? (0, i.jsxs)(s.Clickable, {
-                        className: M.checkboxContainer,
+                        className: y.checkboxContainer,
                         onClick: () => {
                             let e = !D;
                             r.default.updatedUnsyncedSettings({
@@ -1739,12 +1750,12 @@
                         },
                         children: [(0, i.jsx)(s.Checkbox, {
                             type: s.Checkbox.Types.INVERTED,
-                            className: M.checkbox,
+                            className: y.checkbox,
                             value: D,
                             displayOnly: !0
                         }), (0, i.jsxs)(s.Text, {
                             variant: "text-sm/normal",
-                            children: [y.default.Messages.EMBEDDED_ACTIVITIES_SEND_ACTIVITY_INVITE, " ", (0, i.jsx)("strong", {
+                            children: [M.default.Messages.EMBEDDED_ACTIVITIES_SEND_ACTIVITY_INVITE, " ", (0, i.jsx)("strong", {
                                 children: Y
                             })]
                         })]
@@ -1764,11 +1775,11 @@
                 } = e, {
                     AnalyticsLocationProvider: I,
                     analyticsLocations: E
-                } = (0, o.default)(d.default.ACTIVITY_CHANNEL_SELECTOR), g = (0, T.useActivityShelfItemData)(null != l ? l : null, null != t ? t : null), S = (0, A.default)(), _ = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())), j = (0, n.useStateFromStores)([u.default], () => h && !u.default.disableInviteWithTextChannelActivityLaunch), V = (0, n.useStateFromStores)([p.default], () => null != v && "" !== v && p.default.getEmbeddedActivitiesForChannel(v).some(e => e.application_id === t)), R = L(l), b = async () => {
-                    if (null == v || "" === v || null == g || null == l || "" === l) return;
+                } = (0, o.default)(d.default.ACTIVITY_CHANNEL_SELECTOR), S = (0, T.useActivityShelfItemData)(null != l ? l : null, null != t ? t : null), g = (0, A.default)(), _ = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())), j = (0, n.useStateFromStores)([u.default], () => h && !u.default.disableInviteWithTextChannelActivityLaunch), V = (0, n.useStateFromStores)([p.default], () => null != v && "" !== v && p.default.getEmbeddedActivitiesForChannel(v).some(e => e.application_id === t)), R = L(l), b = async () => {
+                    if (null == v || "" === v || null == S || null == l || "" === l) return;
                     let e = await (0, C.default)({
-                        activityItem: g,
-                        currentActivity: S,
+                        activityItem: S,
+                        currentActivity: g,
                         locationObject: a,
                         channelId: v,
                         guildId: l,
@@ -1778,27 +1789,27 @@
                     e && (c(), null != _ && R && j && await x.sendEmbeddedActivityInvite({
                         activityChannelId: v,
                         invitedChannelId: _.id,
-                        applicationId: g.application.id,
+                        applicationId: S.application.id,
                         location: D.AnalyticsLocations.ACTIVITY_SHELF
                     }))
                 };
                 return (0, i.jsx)(I, {
                     children: (0, i.jsxs)("div", {
-                        className: M.footerContainer,
+                        className: y.footerContainer,
                         children: [(0, i.jsx)(s.Clickable, {
                             onClick: r,
-                            className: M.backToBrowse,
+                            className: y.backToBrowse,
                             children: (0, i.jsx)(s.Text, {
                                 color: "header-secondary",
                                 variant: "text-md/normal",
-                                children: y.default.Messages.BACK
+                                children: M.default.Messages.BACK
                             })
                         }), null == v ? (0, i.jsx)("div", {}) : (0, i.jsx)(s.Button, {
-                            className: M.launchButton,
+                            className: y.launchButton,
                             onClick: b,
                             color: V ? s.Button.Colors.GREEN : void 0,
                             fullWidth: !0,
-                            children: V ? y.default.Messages.EMBEDDED_ACTIVITIES_JOIN : y.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH
+                            children: V ? M.default.Messages.EMBEDDED_ACTIVITIES_JOIN : M.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH
                         })]
                     })
                 })
@@ -2095,6 +2106,39 @@
                 size: r.AvatarSizes.SIZE_24
             };
             var v = f
+        },
+        604525: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return n
+                }
+            });
+            var i = l("37983");
+            l("884691");
+            var a = l("75196");
+
+            function n(e) {
+                let {
+                    width: t = 24,
+                    height: l = 24,
+                    color: n = "currentColor",
+                    foreground: s,
+                    ...r
+                } = e;
+                return (0, i.jsx)("svg", {
+                    ...(0, a.default)(r),
+                    width: t,
+                    height: l,
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    children: (0, i.jsx)("path", {
+                        d: "M7.39344 5.33333L5.33333 7.39344V16.6065L7.39348 18.6667H16.6065L18.6667 16.6065V7.39344L16.6065 5.33333H7.39344ZM11.0485 15.6879H9.20459C9.20459 14.1627 7.96392 12.922 6.43868 12.922V11.078C7.96392 11.078 9.20459 9.83735 9.20459 8.31211H11.0485C11.0485 9.82534 10.3057 11.159 9.17607 12C10.3057 12.8411 11.0485 14.1747 11.0485 15.6879ZM17.5556 12.922C16.0304 12.922 14.7896 14.1627 14.7896 15.6879H12.9457C12.9457 14.1747 13.6885 12.8411 14.8181 12C13.6885 11.159 12.9457 9.82534 12.9457 8.31211H14.7896C14.7896 9.83735 16.0304 11.078 17.5556 11.078V12.922Z",
+                        fill: n,
+                        className: s
+                    })
+                })
+            }
         },
         988150: function(e, t, l) {
             "use strict";
