@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["27726"], {
+    ["84545"], {
         234997: function(e, t, n) {
             "use strict";
             e.exports = n.p + "870ce21aeffa60252eb0.svg"
@@ -49,7 +49,7 @@
                     return N
                 },
                 default: function() {
-                    return v
+                    return T
                 }
             }), n("222007"), n("781738");
             var l = n("37983"),
@@ -69,12 +69,12 @@
                 _ = n("447365");
             let N = "VoiceChannelStatusModal";
 
-            function v(e) {
+            function T(e) {
                 let {
                     channel: t,
                     transitionState: n,
-                    onClose: v
-                } = e, T = (0, a.default)([r.default], () => r.default.getChannelStatus(t)), I = (0, a.default)([f.default], () => f.default.getMediaSessionId()), [g, m] = u.useState(null != T ? T : ""), [A, p] = u.useState(!1), [L, O] = u.useState(null);
+                    onClose: T
+                } = e, v = (0, a.default)([r.default], () => r.default.getChannelStatus(t)), g = (0, a.default)([f.default], () => f.default.getMediaSessionId()), [I, m] = u.useState(null != v ? v : ""), [A, L] = u.useState(!1), [p, O] = u.useState(null);
                 u.useEffect(() => {
                     C.default.track(S.AnalyticEvents.OPEN_MODAL, {
                         type: "Voice Channel Topic Modal",
@@ -82,21 +82,21 @@
                     })
                 }, [t.guild_id]);
                 let y = async e => {
-                    g === T && v(), null == e || e.preventDefault(), O(null), p(!0);
-                    let n = g.length,
-                        l = g.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length;
-                    await d.default.updateVoiceChannelStatus(t.id, g).then(e => {
+                    I === v && T(), null == e || e.preventDefault(), O(null), L(!0);
+                    let n = I.length,
+                        l = I.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length;
+                    await d.default.updateVoiceChannelStatus(t.id, I).then(e => {
                         204 === e.status ? (C.default.track(S.AnalyticEvents.VOICE_CHANNEL_TOPIC_SET, {
                             guild_id: t.guild_id,
                             channel_id: t.id,
-                            media_session_id: I,
+                            media_session_id: g,
                             raw_length: n,
                             text_length: l
-                        }), v()) : O(e.body.message)
+                        }), T()) : O(e.body.message)
                     }, e => {
                         O(e.body.message)
-                    }), p(!1)
-                }, [M, V] = u.useState((0, o.toRichValue)(g));
+                    }), L(!1)
+                }, [M, D] = u.useState((0, o.toRichValue)(I));
                 return (0, l.jsx)("form", {
                     onSubmit: y,
                     className: _.form,
@@ -110,7 +110,7 @@
                                 separator: !1,
                                 children: [(0, l.jsx)(i.ModalCloseButton, {
                                     className: _.closeButton,
-                                    onClick: v
+                                    onClick: T
                                 }), (0, l.jsx)("div", {
                                     className: _.headerImage
                                 }), (0, l.jsx)(i.FormTitle, {
@@ -127,7 +127,7 @@
                                 title: h.default.Messages.VOICE_CHANNEL_STATUS,
                                 children: [(0, l.jsx)(c.default, {
                                     innerClassName: _.textArea,
-                                    textValue: g,
+                                    textValue: I,
                                     richValue: M,
                                     placeholder: h.default.Messages.VOICE_CHANNEL_STATUS_MODAL_PREFILL_CHANNEL.format({
                                         channelName: t.name
@@ -135,7 +135,7 @@
                                     focused: !0,
                                     channel: t,
                                     onChange: (e, t, n) => {
-                                        m(t), V(n)
+                                        m(t), D(n)
                                     },
                                     onSubmit: () => (y(), Promise.resolve({
                                         shouldClear: !1,
@@ -149,9 +149,9 @@
                                     maxCharacterCount: 500,
                                     showRemainingCharsAfterCount: 250,
                                     emojiPickerCloseOnModalOuterClick: !0
-                                }), null != L ? (0, l.jsx)(i.FormErrorBlock, {
+                                }), null != p ? (0, l.jsx)(i.FormErrorBlock, {
                                     className: _.error,
-                                    children: L
+                                    children: p
                                 }) : null]
                             })]
                         }), (0, l.jsxs)(i.ModalFooter, {
@@ -159,13 +159,13 @@
                             direction: E.default.Direction.HORIZONTAL,
                             children: [(0, l.jsx)(i.Button, {
                                 color: i.Button.Colors.PRIMARY,
-                                onClick: v,
+                                onClick: T,
                                 children: h.default.Messages.CANCEL
                             }), (0, l.jsx)(i.Button, {
                                 onClick: y,
                                 submitting: A,
                                 className: _.button,
-                                disabled: g.length > 500,
+                                disabled: I.length > 500,
                                 children: h.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SET_STATUS
                             })]
                         })]
@@ -205,6 +205,69 @@
                         }), (0, u.copy)((0, s.getChannelLinkToCopy)(e, f, t, n))
                     }
                 })
+            }
+        },
+        308798: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return C
+                }
+            });
+            var l = n("37983");
+            n("884691");
+            var u = n("446674"),
+                a = n("77078"),
+                i = n("18054"),
+                d = n("819689"),
+                r = n("430475"),
+                s = n("610730"),
+                o = n("271938"),
+                c = n("957255"),
+                f = n("49111"),
+                E = n("782340");
+
+            function C(e) {
+                let t = e.isForumPost(),
+                    C = (0, u.useStateFromStores)([o.default], () => e.isOwner(o.default.getId()), [e]),
+                    {
+                        canManageChannel: S,
+                        canAccessChannel: h
+                    } = (0, u.useStateFromStoresObject)([c.default], () => ({
+                        canAccessChannel: c.default.can(e.accessPermissions, e),
+                        canManageChannel: c.default.can(e.isThread() ? f.Permissions.MANAGE_THREADS : f.Permissions.MANAGE_CHANNELS, e)
+                    }), [e]),
+                    _ = (0, u.useStateFromStores)([s.default], () => {
+                        var t;
+                        return null !== (t = s.default.getCount(e.id)) && void 0 !== t ? t : 0
+                    }, [e.id]),
+                    {
+                        firstMessage: N
+                    } = (0, u.useStateFromStores)([r.default], () => r.default.getMessage(e.id), [e.id]),
+                    T = t && (S || C && _ < 1),
+                    v = t && C && !S && _ > 0 && null != N;
+                return h && (S || T || v) ? (0, l.jsx)(a.MenuItem, {
+                    id: "delete-channel",
+                    label: (() => {
+                        if (e.type === f.ChannelTypes.GUILD_CATEGORY) return E.default.Messages.DELETE_CATEGORY;
+                        if (e.isForumPost()) return T ? E.default.Messages.DELETE_FORUM_POST : E.default.Messages.DELETE_MESSAGE;
+                        if (e.isThread()) return E.default.Messages.DELETE_THREAD;
+                        return E.default.Messages.DELETE_CHANNEL
+                    })(),
+                    color: "danger",
+                    action: () => (0, a.openModalLazy)(async () => {
+                        let {
+                            default: t
+                        } = await n.el("575351").then(n.bind(n, "575351"));
+                        return n => (0, l.jsx)(t, {
+                            ...n,
+                            onConfirm: () => {
+                                n.onClose(), v ? d.default.deleteMessage(e.id, e.id) : i.default.deleteChannel(e.id)
+                            },
+                            channel: e
+                        })
+                    })
+                }) : null
             }
         },
         962199: function(e, t, n) {
@@ -373,11 +436,11 @@
                     h = (0, c.default)(),
                     _ = (null == h ? void 0 : h.channelId) === e.id,
                     N = (0, d.useIsVoiceChannelLocked)(e) && !e.isPrivate(),
-                    v = (0, d.default)(e),
-                    T = (0, u.default)([s.default], () => s.default.isInChannel(e.id)),
-                    I = !T && v || N,
-                    g = (0, f.default)();
-                if (!_ && 0 === g.length) return null;
+                    T = (0, d.default)(e),
+                    v = (0, u.default)([s.default], () => s.default.isInChannel(e.id)),
+                    g = !v && T || N,
+                    I = (0, f.default)();
+                if (!_ && 0 === I.length) return null;
                 let m = t => {
                     if (!t.twoWayLink || t.revoked) {
                         (0, i.default)(t.type, "Console Transfer Item");
@@ -410,8 +473,8 @@
                             (0, o.handoffRemote)(h)
                         },
                         icon: (0, E.default)(void 0),
-                        disabled: I
-                    }) : g.map(e => (0, l.jsx)(a.MenuItem, {
+                        disabled: g
+                    }) : I.map(e => (0, l.jsx)(a.MenuItem, {
                         id: "transfer-".concat(e.type, "-").concat(e.id),
                         label: function(e, t) {
                             if (e === C.PlatformTypes.XBOX) return t ? S.default.Messages.TRANSFER_VOICE_TO_XBOX : S.default.Messages.JOIN_ON_XBOX;
@@ -420,7 +483,7 @@
                         }(e.type, t),
                         action: () => m(e),
                         icon: (0, E.default)(e.type),
-                        disabled: I
+                        disabled: g
                     }, e.id))
                 })
             }
@@ -566,16 +629,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
-                },
-                useActiveEvent: function() {
                     return T
                 },
+                useActiveEvent: function() {
+                    return v
+                },
                 useActiveEventsByChannel: function() {
-                    return I
+                    return g
                 },
                 useGuildUpcomingEventsNotice: function() {
-                    return g
+                    return I
                 },
                 useGuildActiveEvent: function() {
                     return m
@@ -584,10 +647,10 @@
                     return A
                 },
                 useFirstActiveEventChannel: function() {
-                    return p
+                    return L
                 },
                 useImminentUpcomingGuildEvents: function() {
-                    return L
+                    return p
                 }
             }), n("222007"), n("808653");
             var l = n("884691"),
@@ -607,7 +670,7 @@
                 _ = n("49111");
             let N = [];
 
-            function v(e, t) {
+            function T(e, t) {
                 return (0, u.useStateFromStoresArray)([r.default, a.default, c.default, s.default, i.default, d.default], () => {
                     let n = r.default.getGuild(e);
                     if (null == n) return N;
@@ -632,7 +695,7 @@
                 }, [t, e])
             }
 
-            function T(e) {
+            function v(e) {
                 return (0, u.useStateFromStores)([c.default, i.default, s.default], () => {
                     let t = i.default.getChannel(e);
                     if (!s.default.can(_.Permissions.VIEW_CHANNEL, t)) return null;
@@ -643,7 +706,7 @@
                 }, [e])
             }
 
-            function I(e) {
+            function g(e) {
                 let t = (0, u.useStateFromStoresArray)([c.default], () => c.default.getGuildScheduledEventsForGuild(e), [e]),
                     n = l.useMemo(() => {
                         let e = new Map;
@@ -655,7 +718,7 @@
                 return n
             }
 
-            function g(e) {
+            function I(e) {
                 var t, n;
                 let l = (t = e, (0, u.useStateFromStoresArray)([c.default, i.default, s.default], () => {
                         let e = c.default.getGuildScheduledEventsByIndex(c.StaticGuildEventIndexes.GUILD_EVENT_UPCOMING(t));
@@ -706,7 +769,7 @@
                 return (0, u.useStateFromStores)([c.default], () => c.default.getGuildScheduledEventsByIndex(c.StaticGuildEventIndexes.CHANNEL_EVENT_UPCOMING(e)), [e])
             }
 
-            function p(e) {
+            function L(e) {
                 return (0, u.useStateFromStores)([i.default, c.default], () => {
                     let t = c.default.getGuildScheduledEventsByIndex(c.StaticGuildEventIndexes.GUILD_EVENT_ACTIVE(e)).find(e => {
                         let t = i.default.getChannel(e.channel_id);
@@ -716,7 +779,7 @@
                 }, [e])
             }
 
-            function L(e) {
+            function p(e) {
                 let [t, n] = l.useState(() => Date.now());
                 l.useEffect(() => {
                     let e = setInterval(() => {
