@@ -49993,7 +49993,7 @@
                         var i;
                         let d = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "256781"
+                                build_number: "256798"
                             },
                             f = l.default.getCurrentUser();
                         null != f && (d.user_id = f.id, d.user_name = f.tag, null != f.email && (d.email = f.email));
@@ -56418,7 +56418,6 @@
                     videoBitrateFloor: 15e4
                 },
                 ei = {
-                    featureEnabled: !0,
                     windowLength: 5,
                     allowedPoorFpsRatio: 1,
                     fpsThreshold: 5,
