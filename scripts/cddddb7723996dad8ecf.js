@@ -751,7 +751,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return c
+                    return d
                 }
             });
             var l = a("37983"),
@@ -760,37 +760,41 @@
                 r = a.n(s),
                 i = a("241488"),
                 o = a("254398"),
-                u = a("264317");
+                u = a("264317"),
+                c = a("929574");
 
-            function c(e) {
+            function d(e) {
                 let {
                     channel: t,
                     layout: a,
                     parentModalKey: s,
-                    lastActiveInputIndex: c,
-                    onEmojiSelect: d,
-                    onGifSelect: E,
-                    positionTargetRef: f
+                    lastActiveInputIndex: d,
+                    onEmojiSelect: E,
+                    onGifSelect: f,
+                    positionTargetRef: _
                 } = e, {
-                    showPollExpressionPicker: _,
-                    closePollExpressionPicker: A,
-                    chatInputType: m
-                } = (0, u.default)(a), L = n.useCallback(e => {
-                    r(null != c, "Expected to have an active input"), (null == e ? void 0 : e.gifSrc) != null && E(t.id, c, (0, o.makeTenorProxyURL)(e.gifSrc)), A()
-                }, [A, c, E, t.id]), p = n.useCallback(e => {
-                    r(null != c, "Expected to have an active input"), r(null != e, "Expected to have an emoji"), d(e, c), A()
-                }, [c, d, A]), T = n.useCallback(() => {}, []);
-                return _ ? (0, l.jsx)(i.default, {
-                    positionTargetRef: f,
-                    type: m,
+                    showPollExpressionPicker: A,
+                    closePollExpressionPicker: m,
+                    chatInputType: L
+                } = (0, u.default)(a), p = n.useCallback(e => {
+                    r(null != d, "Expected to have an active input"), (null == e ? void 0 : e.gifSrc) != null && f(t.id, d, (0, o.makeTenorProxyURL)(e.gifSrc)), m()
+                }, [m, d, f, t.id]), T = n.useCallback(e => {
+                    r(null != d, "Expected to have an active input"), r(null != e, "Expected to have an emoji"), E(e, d), m()
+                }, [d, E, m]), C = n.useCallback(() => {}, []);
+                return A ? (0, l.jsx)(i.default, {
+                    positionTargetRef: _,
+                    type: L,
                     hideGifFavorites: !0,
                     includeCreateEmojiButton: !1,
-                    onSelectGIF: L,
-                    onSelectEmoji: p,
-                    onSelectSticker: T,
+                    onSelectGIF: p,
+                    onSelectEmoji: T,
+                    onSelectSticker: C,
                     channel: t,
                     parentModalKey: s,
-                    closeOnModalOuterClick: !0
+                    closeOnModalOuterClick: !0,
+                    position: "bottom",
+                    align: "left",
+                    positionLayerClassName: c.expressionPickerPositionLayer
                 }) : null
             }
         },
