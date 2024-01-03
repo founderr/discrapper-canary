@@ -17950,7 +17950,7 @@
                                         color: "header-primary",
                                         tag: "span",
                                         className: R.spanCorrection,
-                                        children: L.default.Messages.GUILD_AUTOMOD_NOTIFICATION_TITLE
+                                        children: L.default.Messages.GUILD_AUTOMOD_NOTFICATION_ALERT_TITLE
                                     })]
                                 }),
                                 compact: n,
