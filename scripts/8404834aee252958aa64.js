@@ -14320,11 +14320,15 @@
                                 activeSubscription: B,
                                 analyticsSubscriptionType: L.SubscriptionTypes.GUILD,
                                 trialId: n,
-                                trialFooterMessageOverride: (null == q ? void 0 : q.active_trial) != null ? O.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_RENEWAL_FOOTER.format({
-                                    trialInterval: (0, T.formatPlanIntervalDuration)(q.active_trial),
+                                trialFooterMessageOverride: (null == q ? void 0 : q.active_trial) != null ? O.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_RENEWAL_FOOTER_V2.format({
+                                    buttonText: O.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SUBSCRIBE,
+                                    interval: (0, T.formatPlanIntervalDuration)(U),
                                     days: 1,
                                     contactLink: L.MarketingURLs.CONTACT,
-                                    helpdeskArticle: I.default.getArticleURL(L.HelpdeskArticles.ROLE_SUBSCRIPTION_TRIAL)
+                                    cancelSubscriptionArticle: I.default.getArticleURL(L.HelpdeskArticles.ROLE_SUBSCRIPTION_CANCEL),
+                                    helpdeskArticle: I.default.getArticleURL(L.HelpdeskArticles.ROLE_SUBSCRIPTION_TRIAL),
+                                    paidServiceTermsArticle: I.default.getArticleURL(L.HelpdeskArticles.PAID_TERMS),
+                                    tierName: U.name
                                 }) : void 0,
                                 analyticsLocations: Q,
                                 analyticsLocation: s,

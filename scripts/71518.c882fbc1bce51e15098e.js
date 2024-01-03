@@ -18,16 +18,16 @@
             var i = n("884691"),
                 a = n("65597"),
                 r = n("552712"),
-                s = n("21526"),
-                l = n("853987"),
+                l = n("21526"),
+                s = n("853987"),
                 u = n("49111");
 
             function o(e) {
                 let t = (0, a.default)([r.default], () => null != e ? r.default.get(e) : null),
                     n = null != t && t.productLine !== u.SKUProductLines.COLLECTIBLES,
-                    [o, c] = (0, a.useStateFromStoresArray)([l.default], () => [l.default.isFetching, l.default.getProduct(e)]);
+                    [o, c] = (0, a.useStateFromStoresArray)([s.default], () => [s.default.isFetching, s.default.getProduct(e)]);
                 return (0, i.useEffect)(() => {
-                    null != e && null == c && !n && !o && (0, s.fetchCollectiblesProduct)(e)
+                    null != e && null == c && !n && !o && (0, l.fetchCollectiblesProduct)(e)
                 }, [e, c, n, o]), {
                     product: c,
                     isFetching: o
@@ -44,8 +44,8 @@
             var i = n("37983"),
                 a = n("884691"),
                 r = n("627445"),
-                s = n.n(r),
-                l = n("612039"),
+                l = n.n(r),
+                s = n("612039"),
                 u = n("916187"),
                 o = n("154889"),
                 c = n("917247"),
@@ -104,16 +104,16 @@
                         setHasAcceptedTerms: ei,
                         purchaseType: ea,
                         setEntitlementsGranted: er,
-                        startedPaymentFlowWithPaymentSourcesRef: es
+                        startedPaymentFlowWithPaymentSourcesRef: el
                     } = (0, S.usePaymentContext)(),
                     {
-                        isGift: el,
+                        isGift: es,
                         giftMessage: eu,
                         giftRecipient: eo
                     } = (0, f.useGiftContext)();
-                s(null != ee, "Step should be set");
+                l(null != ee, "Step should be set");
                 let ec = a.useRef(null),
-                    [ed, ep] = (0, l.default)(!1, 500),
+                    [ed, ep] = (0, s.default)(!1, 500),
                     em = null !== (n = null != g ? g : F) && void 0 !== n ? n : null,
                     ef = null != em && (!en || (0, C.SubscriptionTrials)[em].skus.includes(Q)) ? em : null,
                     eS = (0, c.usePremiumTrialOffer)(F),
@@ -138,18 +138,18 @@
                     eE = null != K && C.MULTI_MONTH_PLANS.has(K.id) && null != ev && !(0, u.isPaymentSourceEligibleForMultiMonthPlans)(ev) ? Error(_.default.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
                     ey = a.useRef(null),
                     [eT, ex] = a.useState(null),
-                    eC = !el && null != eS && null != Q && (0, C.SubscriptionTrials)[eS.trial_id].skus.includes(Q),
+                    eC = !es && null != eS && null != Q && (0, C.SubscriptionTrials)[eS.trial_id].skus.includes(Q),
                     eb = null == eh ? void 0 : null === (t = eh.discount) || void 0 === t ? void 0 : t.plan_ids,
-                    e_ = !el && null != eh && null != eb && null != K && eb.includes(K.id),
-                    eN = el && (0, m.shouldShowCustomGiftExperience)(eo, !0, "PaymentModalReviewStep"),
+                    e_ = !es && null != eh && null != eb && null != K && eb.includes(K.id),
+                    eN = es && (0, m.shouldShowCustomGiftExperience)(eo, !0, "PaymentModalReviewStep"),
                     eg = null == O && null == U && ea === b.PurchaseTypes.SUBSCRIPTION,
                     eL = (0, v.inOneStepSubscriptionCheckout)({
                         isTrial: eC,
-                        isGift: el,
+                        isGift: es,
                         selectedSkuId: Q,
-                        startedPaymentFlowWithPaymentSources: es.current
+                        startedPaymentFlowWithPaymentSources: el.current
                     }),
-                    eA = el && ea === b.PurchaseTypes.ONE_TIME,
+                    eA = es && ea === b.PurchaseTypes.ONE_TIME,
                     ej = eA || (eL ? eg && en : en),
                     eR = a.useCallback(() => {
                         if (eL) {
@@ -163,7 +163,7 @@
                     legalTermsNodeRef: ey,
                     onPaymentSourceChange: e => X(null != e ? e.id : null),
                     handlePaymentSourceAdd: () => N(h.Step.ADD_PAYMENT_STEPS)
-                }) : null == D || el ? (s(null != K, "Expected plan to be selected"), r = (0, i.jsx)(d.default, {
+                }) : null == D || es ? (l(null != K, "Expected plan to be selected"), r = (0, i.jsx)(d.default, {
                     selectedPlanId: K.id,
                     paymentSources: V,
                     onPaymentSourceChange: e => X(null != e ? e.id : null),
@@ -179,10 +179,10 @@
                     reviewWarningMessage: A,
                     purchaseState: et,
                     referralTrialOfferId: F,
-                    isTrial: eC,
+                    isTrial: eC || null != g && null != L,
                     isDiscount: e_,
                     handleClose: G
-                })) : (s(null != K, "Expected plan to be selected"), r = (0, i.jsx)(p.default, {
+                })) : (l(null != K, "Expected plan to be selected"), r = (0, i.jsx)(p.default, {
                     premiumSubscription: D,
                     paymentSources: V,
                     priceOptions: z,
@@ -248,8 +248,8 @@
             n("884691");
             var a = n("812952"),
                 r = n("978679"),
-                s = n("659632"),
-                l = n("635357"),
+                l = n("659632"),
+                s = n("635357"),
                 u = n("782340"),
                 o = n("588937");
 
@@ -259,8 +259,8 @@
                 } = e, {
                     isGift: n,
                     giftRecipient: c
-                } = (0, l.useGiftContext)();
-                return !n || (0, s.shouldShowCustomGiftExperience)(c, !0, "GiftNote") ? null : (0, i.jsx)(a.default, {
+                } = (0, s.useGiftContext)();
+                return !n || (0, l.shouldShowCustomGiftExperience)(c, !0, "GiftNote") ? null : (0, i.jsx)(a.default, {
                     className: o.paymentNote,
                     iconSize: a.default.Sizes.SMALL,
                     icon: r.default,
@@ -280,8 +280,8 @@
             n("884691");
             var a = n("627445"),
                 r = n.n(a),
-                s = n("976979"),
-                l = n("65597"),
+                l = n("976979"),
+                s = n("65597"),
                 u = n("77078"),
                 o = n("703332"),
                 c = n("812952"),
@@ -384,9 +384,9 @@
                     Z = null != F ? F : v.NO_PAYMENT_SOURCE,
                     K = null != Y ? Y[Z] : null;
                 r(null != z, "SKU must exist and be fetched."), r(null != y, "Application must exist.");
-                let Q = (0, l.default)([m.default, E.default], () => E.default.inTestModeForApplication(y.id) || m.default.inDevModeForApplication(y.id), [y.id]),
-                    J = (0, l.default)([P.default], () => P.default.enabled),
-                    X = s.CountryCodesSets.EEA_COUNTRIES.has(I.default.ipCountryCodeWithFallback),
+                let Q = (0, s.default)([m.default, E.default], () => E.default.inTestModeForApplication(y.id) || m.default.inDevModeForApplication(y.id), [y.id]),
+                    J = (0, s.default)([P.default], () => P.default.enabled),
+                    X = l.CountryCodesSets.EEA_COUNTRIES.has(I.default.ipCountryCodeWithFallback),
                     q = C === N.PurchaseState.PURCHASING || C === N.PurchaseState.COMPLETED,
                     $ = null != F ? w[F].type : null;
                 return (0, i.jsxs)("div", {
@@ -464,8 +464,8 @@
             n("884691");
             var a = n("506838"),
                 r = n("265586"),
-                s = n("65597"),
-                l = n("77078"),
+                l = n("65597"),
+                s = n("77078"),
                 u = n("606292"),
                 o = n("688318"),
                 c = n("426188"),
@@ -478,7 +478,7 @@
                 P = n("782340"),
                 I = n("433264"),
                 v = n("93902");
-            let E = S.default.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+            let E = S.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 
             function y(e) {
                 let {
@@ -489,7 +489,7 @@
                     avatarPlaceholderSrc: r
                 } = (0, o.default)({
                     avatarDecorationOverride: t,
-                    size: (0, u.getDecorationSizeForAvatarSize)(l.AvatarSizes.SIZE_152)
+                    size: (0, u.getDecorationSizeForAvatarSize)(s.AvatarSizes.SIZE_152)
                 });
                 return (0, i.jsx)("div", {
                     className: I.giftMainAnimationWrapper,
@@ -498,7 +498,7 @@
                         avatarDecoration: n,
                         src: r,
                         className: I.avatar,
-                        size: l.AvatarSizes.SIZE_152,
+                        size: s.AvatarSizes.SIZE_152,
                         "aria-label": P.default.Messages.USER_SETTINGS_AVATAR
                     })
                 })
@@ -507,7 +507,7 @@
             function T(e) {
                 let {
                     id: t
-                } = e, n = (0, s.default)([m.default], () => {
+                } = e, n = (0, l.default)([m.default], () => {
                     var e;
                     return null === (e = m.default.getProfileEffectById(t)) || void 0 === e ? void 0 : e.config
                 });
@@ -529,8 +529,8 @@
                 } = e, {
                     selectedGiftStyle: n
                 } = (0, h.useGiftContext)(), {
-                    product: s
-                } = (0, c.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), l = null == s ? void 0 : s.items[0], u = (0, a.match)(l).with({
+                    product: l
+                } = (0, c.useFetchCollectiblesProduct)(null == t ? void 0 : t.id), s = null == l ? void 0 : l.items[0], u = (0, a.match)(s).with({
                     type: r.CollectiblesItemType.AVATAR_DECORATION
                 }, e => (0, i.jsx)(y, {
                     avatarDecoration: e
@@ -560,8 +560,8 @@
             var i = n("37983"),
                 a = n("884691"),
                 r = n("627445"),
-                s = n.n(r),
-                l = n("976979"),
+                l = n.n(r),
+                s = n("976979"),
                 u = n("446674"),
                 o = n("77078"),
                 c = n("335430"),
@@ -621,12 +621,12 @@
                     } = (0, h.useGiftContext)(),
                     $ = S.paymentSourceId,
                     ee = (0, u.useStateFromStores)([T.default], () => T.default.get(A));
-                s(null != ee, "Missing newPlan");
+                l(null != ee, "Missing newPlan");
                 let et = (0, u.useStateFromStores)([E.default], () => E.default.hidePersonalInformation);
                 n = z ? R.default.Messages.BILLING_PURCHASE_DETAILS_HEADER : (0, x.isPremiumSubscriptionPlan)(A) ? (0, x.getBillingReviewSubheader)(r, ee) : R.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
                     planName: ee.name
                 });
-                let en = l.CountryCodesSets.EEA_COUNTRIES.has(y.default.ipCountryCodeWithFallback),
+                let en = s.CountryCodesSets.EEA_COUNTRIES.has(y.default.ipCountryCodeWithFallback),
                     ei = Y === I.PurchaseState.PURCHASING || Y === I.PurchaseState.COMPLETED,
                     ea = (0, v.inOneStepSubscriptionCheckout)({
                         isTrial: !1,
@@ -742,23 +742,23 @@
                     premiumSubscription: t,
                     onInvoiceError: n,
                     priceOptions: r,
-                    preventFetch: s
-                } = e, [l, u] = (0, b.useGetSubscriptionInvoice)({
+                    preventFetch: l
+                } = e, [s, u] = (0, b.useGetSubscriptionInvoice)({
                     subscriptionId: t.id,
-                    preventFetch: s
+                    preventFetch: l
                 });
                 a.useEffect(() => {
                     n(u)
                 }, [n, u]);
                 let c = (0, x.isPrepaidPaymentSource)(r.paymentSourceId);
-                return null != l ? (0, i.jsxs)(_.PremiumInvoiceTable, {
+                return null != s ? (0, i.jsxs)(_.PremiumInvoiceTable, {
                     className: M.invoice,
                     children: [(0, i.jsx)(A.PremiumSubscriptionCurrentInvoiceRows, {
-                        invoice: l,
+                        invoice: s,
                         isPrepaidPaymentSource: c
                     }), (0, i.jsx)(A.SubscriptionInvoiceFooter, {
                         premiumSubscription: t,
-                        renewalInvoice: l,
+                        renewalInvoice: s,
                         isUpdate: !0,
                         isPrepaidPaymentSource: c
                     })]
@@ -770,8 +770,8 @@
                     premiumSubscription: t,
                     newPlan: n,
                     onInvoiceError: r,
-                    planGroup: s,
-                    priceOptions: l,
+                    planGroup: l,
+                    priceOptions: s,
                     preventFetch: u
                 } = e, {
                     selectedSkuId: c,
@@ -780,13 +780,13 @@
                     isGift: p
                 } = (0, h.useGiftContext)(), {
                     analyticsLocations: m
-                } = (0, S.default)(), I = (0, x.getItemsWithUpsertedPlanIdForGroup)(t, n.id, 1, new Set(s)), [E, y] = (0, b.useSubscriptionInvoicePreview)({
+                } = (0, S.default)(), I = (0, x.getItemsWithUpsertedPlanIdForGroup)(t, n.id, 1, new Set(l)), [E, y] = (0, b.useSubscriptionInvoicePreview)({
                     subscriptionId: t.id,
                     items: I,
                     renewal: !1,
                     applyEntitlements: !0,
-                    paymentSourceId: l.paymentSourceId,
-                    currency: l.currency,
+                    paymentSourceId: s.paymentSourceId,
+                    currency: s.currency,
                     preventFetch: u,
                     analyticsLocations: m,
                     analyticsLocation: f.default.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW
@@ -794,8 +794,8 @@
                     subscriptionId: t.id,
                     items: I,
                     renewal: !0,
-                    paymentSourceId: l.paymentSourceId,
-                    currency: l.currency,
+                    paymentSourceId: s.paymentSourceId,
+                    currency: s.currency,
                     preventFetch: u,
                     analyticsLocations: m,
                     analyticsLocation: f.default.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
@@ -815,7 +815,7 @@
                 if (null == E || null == T || L) return (0, i.jsx)(o.Spinner, {
                     className: w.spinner
                 });
-                let j = (0, x.isPrepaidPaymentSource)(l.paymentSourceId);
+                let j = (0, x.isPrepaidPaymentSource)(s.paymentSourceId);
                 return (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(A.SubscriptionPeriodResetNotice, {
                         proratedInvoice: E,
@@ -842,8 +842,8 @@
             function G(e) {
                 var t, n;
                 let r, {
-                        premiumSubscription: s,
-                        newPlan: l,
+                        premiumSubscription: l,
+                        newPlan: s,
                         onInvoiceError: u,
                         planGroup: c,
                         priceOptions: p,
@@ -856,9 +856,9 @@
                     {
                         analyticsLocations: y
                     } = (0, S.default)(),
-                    T = (0, x.getItemsWithUpsertedPlanIdForGroup)(s, l.id, 1, new Set(c)),
+                    T = (0, x.getItemsWithUpsertedPlanIdForGroup)(l, s.id, 1, new Set(c)),
                     [C, _] = (0, b.useSubscriptionInvoicePreview)({
-                        subscriptionId: s.id,
+                        subscriptionId: l.id,
                         items: T,
                         renewal: !0,
                         paymentSourceId: p.paymentSourceId,
@@ -879,18 +879,18 @@
                 }), null == r) ? null : (0, i.jsx)(m.default, {
                     onChange: E,
                     finePrint: (0, i.jsx)(d.default, {
-                        subscriptionPlan: l,
+                        subscriptionPlan: s,
                         paymentSourceType: null === (t = v[null !== (n = p.paymentSourceId) && void 0 !== n ? n : ""]) || void 0 === t ? void 0 : t.type,
                         basePrice: r,
-                        currentSubscription: s,
+                        currentSubscription: l,
                         planGroup: c
                     }),
                     forceShow: !0,
-                    showPricingLink: l.currency !== j.CurrencyCodes.USD,
+                    showPricingLink: s.currency !== j.CurrencyCodes.USD,
                     showWithdrawalWaiver: I,
                     disabled: P,
-                    subscriptionPlan: l,
-                    currentSubscription: s,
+                    subscriptionPlan: s,
+                    currentSubscription: l,
                     planGroup: c
                 })
             }
@@ -900,8 +900,8 @@
                         premiumSubscription: n,
                         newPlan: a,
                         planGroup: r,
-                        priceOptions: s,
-                        preventFetch: l
+                        priceOptions: l,
+                        preventFetch: s
                     } = e,
                     {
                         analyticsLocations: u
@@ -911,9 +911,9 @@
                         items: (0, x.getItemsWithUpsertedPlanIdForGroup)(n, a.id, 1, new Set(r)),
                         renewal: !0,
                         applyEntitlements: !1,
-                        paymentSourceId: s.paymentSourceId,
-                        currency: s.currency,
-                        preventFetch: l,
+                        paymentSourceId: l.paymentSourceId,
+                        currency: l.currency,
+                        preventFetch: s,
                         analyticsLocations: u,
                         analyticsLocation: "billing_switch_plan_renewal_mutation_renewal_invoice_preview"
                     });
@@ -924,7 +924,7 @@
                     children: (0, i.jsx)(o.Spinner, {})
                 });
                 t = n.type === j.SubscriptionTypes.PREMIUM ? (0, x.getDisplayName)(a.id) : a.name;
-                let p = (0, x.isPrepaidPaymentSource)(s.paymentSourceId);
+                let p = (0, x.isPrepaidPaymentSource)(l.paymentSourceId);
                 return (0, i.jsxs)("div", {
                     className: w.bodyText,
                     children: [(0, i.jsx)("div", {
@@ -938,7 +938,7 @@
                             children: R.default.Messages.PREMIUM_SUBSCRIPTION_UPDATES
                         }), (0, i.jsx)(_.PremiumInvoiceTableRow, {
                             label: t,
-                            value: (0, x.getFormattedRateForPlan)(a, s, !0)
+                            value: (0, x.getFormattedRateForPlan)(a, l, !0)
                         }), (0, i.jsx)(N.default, {
                             invoice: c
                         }), (0, i.jsx)(_.PremiumInvoiceTableDivider, {}), (0, i.jsx)(A.SubscriptionInvoiceFooter, {
@@ -961,8 +961,8 @@
             var i = n("37983"),
                 a = n("884691"),
                 r = n("414456"),
-                s = n.n(r),
-                l = n("446674"),
+                l = n.n(r),
+                s = n("446674"),
                 u = n("206230"),
                 o = n("471671"),
                 c = n("629758");
@@ -974,8 +974,8 @@
                         pauseWhileUnfocused: i,
                         pause: a,
                         isWindowFocused: r,
-                        useReducedMotion: s
-                    } = this.props, [l, {
+                        useReducedMotion: l
+                    } = this.props, [s, {
                         default: u
                     }] = await Promise.all([e(), n.el("245749").then(n.t.bind(n, "245749", 23))]);
                     null != this.animationRef && (this.animation = u.loadAnimation({
@@ -983,8 +983,8 @@
                         renderer: "svg",
                         loop: !0,
                         autoplay: !0,
-                        animationData: l
-                    }), this.animation.addEventListener("loopComplete", this.handleLoopComplete), this.animation.addEventListener("complete", this.handleComplete), this.playScene(t), (i && !r || a || s) && this.animation.pause())
+                        animationData: s
+                    }), this.animation.addEventListener("loopComplete", this.handleLoopComplete), this.animation.addEventListener("complete", this.handleComplete), this.playScene(t), (i && !r || a || l) && this.animation.pause())
                 }
                 componentWillUnmount() {
                     this.isUnmounted = !0, null != this.animation && (this.animation.destroy(), this.animation = void 0)
@@ -994,11 +994,11 @@
                     let {
                         nextScene: a,
                         pauseWhileUnfocused: r,
-                        pause: s,
-                        isWindowFocused: l,
+                        pause: l,
+                        isWindowFocused: s,
                         useReducedMotion: u
                     } = this.props;
-                    a !== this.currentScene && this.shouldForcePlayAfter() && !s && this.playScene(a), null != this.animation && (r && !e.isWindowFocused && l && !u && !0 !== s ? this.animation.play() : (u || r && e.isWindowFocused && !l) && this.animation.pause()), !e.pause && s ? null === (t = this.animation) || void 0 === t || t.pause() : e.pause && !s && !u && (null === (n = this.animation) || void 0 === n || n.play()), e.nextScene !== a && s && (this.playScene(a), null === (i = this.animation) || void 0 === i || i.pause())
+                    a !== this.currentScene && this.shouldForcePlayAfter() && !l && this.playScene(a), null != this.animation && (r && !e.isWindowFocused && s && !u && !0 !== l ? this.animation.play() : (u || r && e.isWindowFocused && !s) && this.animation.pause()), !e.pause && l ? null === (t = this.animation) || void 0 === t || t.pause() : e.pause && !l && !u && (null === (n = this.animation) || void 0 === n || n.play()), e.nextScene !== a && l && (this.playScene(a), null === (i = this.animation) || void 0 === i || i.pause())
                 }
                 shouldForcePlayAfter() {
                     let {
@@ -1014,14 +1014,14 @@
                         useReducedMotion: i
                     } = this.props, a = n[e], r = n[this.currentScene];
                     if (null != this.animation && (e === this.currentScene || a.BEG !== r.BEG || a.END !== r.END) && this.animation.playSegments([a.BEG, a.END], !0), this.currentScene = e, null != t && t(this.currentScene), i) {
-                        var s;
-                        null === (s = this.animation) || void 0 === s || s.pause()
+                        var l;
+                        null === (l = this.animation) || void 0 === l || l.pause()
                     }
                 }
                 render() {
                     return (0, i.jsx)("div", {
                         ref: this.handleSetRef,
-                        className: s(this.props.className, c.wrapper)
+                        className: l(this.props.className, c.wrapper)
                     })
                 }
                 constructor(...e) {
@@ -1053,7 +1053,7 @@
                 let {
                     componentRef: t,
                     ...n
-                } = e, a = (0, l.useStateFromStores)([o.default], () => o.default.isFocused()), r = (0, l.useStateFromStores)([u.default], () => u.default.useReducedMotion);
+                } = e, a = (0, s.useStateFromStores)([o.default], () => o.default.isFocused()), r = (0, s.useStateFromStores)([u.default], () => u.default.useReducedMotion);
                 return (0, i.jsx)(d, {
                     ...n,
                     isWindowFocused: a,
@@ -1078,16 +1078,16 @@
                     width: t = 14,
                     height: n = 14,
                     color: r = "currentColor",
-                    foreground: s,
-                    ...l
+                    foreground: l,
+                    ...s
                 } = e;
                 return (0, i.jsx)("svg", {
-                    ...(0, a.default)(l),
+                    ...(0, a.default)(s),
                     width: t,
                     height: n,
                     viewBox: "0 0 14 14",
                     children: (0, i.jsx)("path", {
-                        className: s,
+                        className: l,
                         fill: r,
                         d: "M12,0 C12.8284271,0 14,1.17157288 14,2 L14,12 C14,12.8284271 12.8284271,14 12,14 L2,14 C1.17157288,14 0,12.8284271 0,12 L0,2 C0,1.17157288 1.17157288,0 2,0 L12,0 Z M8,3 L6,3 L6,8 L8,8 L8,3 Z M8,11 L8,9 L6,9 L6,11 L8,11 Z"
                     })
@@ -1104,8 +1104,8 @@
             var i = n("37983"),
                 a = n("884691"),
                 r = n("516555");
-            let s = [n("315147")],
-                l = ["#FFFFFF"],
+            let l = [n("315147")],
+                s = ["#FFFFFF"],
                 u = 1e3 / 60,
                 o = {
                     velocity: {
@@ -1196,8 +1196,8 @@
                         environment: h
                     }), (0, i.jsx)(r.SpriteCanvas, {
                         ref: p,
-                        colors: l,
-                        sprites: s,
+                        colors: s,
+                        sprites: l,
                         spriteWidth: 6,
                         spriteHeight: 6
                     })]

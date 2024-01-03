@@ -2781,7 +2781,7 @@
                             checkboxLabel: eV,
                             checkboxClassname: ez,
                             checkboxLabelClassname: eJ,
-                            finePrint: (0, s.jsx)(f.default, {
+                            finePrint: null != en ? en : (0, s.jsx)(f.default, {
                                 hide: eu || eo,
                                 subscriptionPlan: eA,
                                 renewalInvoice: eM,
@@ -2793,7 +2793,7 @@
                             showPricingLink: eA.currency !== w.CurrencyCodes.USD,
                             showWithdrawalWaiver: eK,
                             disabled: eO,
-                            isTrial: eu,
+                            isTrial: eu && null == en,
                             isDiscount: eo,
                             subscriptionPlan: eA,
                             isGift: ep
