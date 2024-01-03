@@ -1248,7 +1248,7 @@
                             },
                             oldFormErrors: !0
                         }).then(e => {
-                            if (null == e.body || "c85772b090fa99173a41e47af8266a43593457a1" === e.body.hash) return this._handleUpdateNotAvailable();
+                            if (null == e.body || "46a2b8b4431c675e20f92a456e6d113c4652852a" === e.body.hash) return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
                             if (Date.now() - f > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
@@ -2274,7 +2274,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return E
                 }
             }), n("222007");
             var l = n("446674"),
@@ -2282,9 +2282,11 @@
                 s = n("449008"),
                 i = n("49111");
             let r = [],
-                o = {};
+                o = {},
+                u = null,
+                d = 0;
 
-            function u(e) {
+            function c(e) {
                 let t = null;
                 try {
                     t = JSON.parse(e.launch_parameters)
@@ -2304,7 +2306,7 @@
                 }
                 return null
             }
-            class d extends l.default.Store {
+            class f extends l.default.Store {
                 getInvites() {
                     return r
                 }
@@ -2316,20 +2318,26 @@
                     var t, n;
                     return null !== (n = null === (t = o[e.invite_id]) || void 0 === t ? void 0 : t.joinable) && void 0 !== n && n
                 }
+                getLastUnseenInvite() {
+                    return u
+                }
+                getUnseenInviteCount() {
+                    return d
+                }
             }
-            d.displayName = "GameInviteStore";
-            var c = new d(a.default, {
+            f.displayName = "GameInviteStore";
+            var E = new f(a.default, {
                 CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
                     let {
                         gameInvites: t
                     } = e;
-                    r = t.map(u).filter(s.isNotNullish)
+                    r = t.map(c).filter(s.isNotNullish)
                 },
                 GAME_INVITE_CREATE: function(e) {
                     let {
                         gameInvite: t
-                    } = e, n = u(t);
-                    null != n && (r = [...r, n])
+                    } = e, n = c(t);
+                    null != n && (r = [...r, n], u = t, d += 1)
                 },
                 GAME_INVITE_DELETE: function(e) {
                     let {
@@ -2342,6 +2350,9 @@
                         installed: e.installed,
                         joinable: e.joinable
                     }
+                },
+                GAME_INVITE_CLEAR_UNSEEN: function(e) {
+                    u = null, d = 0
                 }
             })
         },
@@ -2381,6 +2392,9 @@
                 },
                 acceptInvite: function() {
                     return u
+                },
+                clearUnseenInvites: function() {
+                    return d
                 }
             }), n("70102");
             var l = n("913144"),
@@ -2392,8 +2406,8 @@
                     let t = e.parsed_launch_parameters.titleId,
                         n = e.parsed_launch_parameters.inviteToken;
                     if (!(0, s.isWindows)() || null == t || null == n) return;
-                    let a = await d(t, !1),
-                        i = await f(n);
+                    let a = await c(t, !1),
+                        i = await E(n);
                     l.default.dispatch({
                         type: "GAME_INVITE_UPDATE_STATUS",
                         inviteId: e.invite_id,
@@ -2405,18 +2419,24 @@
             async function o(e) {
                 if (e.platform_type === i.PlatformTypes.XBOX) {
                     let t = e.parsed_launch_parameters.titleId;
-                    return !!(0, s.isWindows)() && null != t && await c(t)
+                    return !!(0, s.isWindows)() && null != t && await f(t)
                 }
                 throw Error("Unsupported invite platform " + e.platform_type)
             }
             async function u(e) {
                 if (e.platform_type === i.PlatformTypes.XBOX) {
                     let t = e.parsed_launch_parameters.inviteToken;
-                    return !!(0, s.isWindows)() && null != t && await E(t)
+                    return !!(0, s.isWindows)() && null != t && await h(t)
                 }
                 throw Error("Unsupported invite platform " + e.platform_type)
             }
-            async function d(e, t) {
+
+            function d() {
+                l.default.dispatch({
+                    type: "GAME_INVITE_CLEAR_UNSEEN"
+                })
+            }
+            async function c(e, t) {
                 if (!(0, s.isWindows)()) return !1;
                 let n = await (0, a.default)();
                 return new Promise((l, a) => {
@@ -2429,7 +2449,7 @@
                     })
                 })
             }
-            async function c(e) {
+            async function f(e) {
                 if (!(0, s.isWindows)()) return !1;
                 let t = await (0, a.default)();
                 return new Promise((n, l) => {
@@ -2442,7 +2462,7 @@
                     })
                 })
             }
-            async function f(e) {
+            async function E(e) {
                 if (!(0, s.isWindows)()) return !1;
                 let t = await (0, a.default)();
                 return new Promise((n, l) => {
@@ -2455,7 +2475,7 @@
                     })
                 })
             }
-            async function E(e) {
+            async function h(e) {
                 if (!(0, s.isWindows)()) return !1;
                 let t = await (0, a.default)();
                 return new Promise((n, l) => {
@@ -5509,52 +5529,65 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return N
                 }
             });
-            var l = n("37983");
-            n("884691");
-            var a = n("446674"),
-                s = n("913796"),
-                i = n("660478"),
-                r = n("697218"),
-                o = n("826267"),
-                u = n("664336"),
-                d = n("333491"),
-                c = n("263362"),
-                f = n("133335"),
-                E = n("782340"),
-                h = n("759956");
+            var l = n("37983"),
+                a = n("884691"),
+                s = n("446674"),
+                i = n("954732"),
+                r = n("22082"),
+                o = n("913796"),
+                u = n("660478"),
+                d = n("697218"),
+                c = n("826267"),
+                f = n("664336"),
+                E = n("333491"),
+                h = n("263362"),
+                _ = n("470965"),
+                S = n("133335"),
+                T = n("782340"),
+                p = n("759956");
 
-            function _(e) {
+            function N(e) {
                 let {
                     onOpen: t,
                     onClose: n,
-                    className: _
-                } = e, S = (0, s.useInDesktopNotificationCenterExperiment)(), T = (0, a.useStateFromStores)([r.default], () => r.default.getCurrentUser()), p = (0, a.useStateFromStores)([i.default], () => !!S && (null == T ? void 0 : T.id) != null && i.default.getMentionCount(T.id, f.ReadStateTypes.NOTIFICATION_CENTER) > 0);
-                return (0, l.jsx)(c.RecentsPopout, {
+                    className: N
+                } = e, I = (0, o.useInDesktopNotificationCenterExperiment)(), m = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), A = a.useRef(null), g = (0, s.useStateFromStores)([u.default], () => !!I && (null == m ? void 0 : m.id) != null && u.default.getMentionCount(m.id, S.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
+                    enabled: C
+                } = r.default.useExperiment({
+                    location: "RecentsButton"
+                }, {
+                    autoTrackExposure: !1
+                }), R = (0, s.useStateFromStores)([i.default], () => C && i.default.getUnseenInviteCount() > 0);
+                return (0, l.jsx)(h.RecentsPopout, {
                     onOpen: t,
                     onClose: n,
                     badgeState: {
-                        badgeForYou: p
+                        badgeForYou: g
                     },
                     popoutPosition: "bottom",
                     popoutAlign: "right",
-                    children: (e, t, n) => (0, l.jsx)("div", {
-                        className: h.recentsIcon,
-                        children: (0, l.jsx)(u.Icon, {
+                    children: (e, t, n) => (0, l.jsxs)("div", {
+                        ref: A,
+                        className: p.recentsIcon,
+                        children: [C && (0, l.jsx)(_.default, {
+                            inboxIconRef: A,
+                            recentsPopoutShown: t
+                        }), (0, l.jsx)(f.Icon, {
                             ...n,
-                            className: _,
+                            className: N,
                             onClick: e,
-                            icon: o.default,
-                            "aria-label": E.default.Messages.INBOX,
-                            tooltip: t ? null : E.default.Messages.INBOX,
+                            icon: c.default,
+                            "aria-label": T.default.Messages.INBOX,
+                            tooltip: t ? null : T.default.Messages.INBOX,
                             selected: t,
-                            showBadge: p,
-                            children: (0, l.jsx)(d.default, {
-                                className: h.todoBadge
+                            showBadge: g || R,
+                            children: (0, l.jsx)(E.default, {
+                                className: p.todoBadge
                             })
-                        })
+                        })]
                     })
                 })
             }
@@ -5794,7 +5827,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return m
                 }
             });
             var l = n("37983");
@@ -5806,108 +5839,23 @@
                 o = n("77078"),
                 u = n("590514"),
                 d = n("20606"),
-                c = n("22082"),
-                f = n("979268"),
-                E = n("520899"),
-                h = n("913796"),
-                _ = n("826267"),
-                S = n("956089"),
-                T = n("124031"),
-                p = n("782340"),
-                N = n("804220");
-
-            function I(e) {
-                let t = (0, h.useInDesktopNotificationCenterExperiment)();
-                return t ? (0, l.jsx)(m, {
-                    ...e
-                }) : (0, l.jsx)(A, {
-                    ...e
-                })
-            }
+                c = n("954732"),
+                f = n("22082"),
+                E = n("979268"),
+                h = n("520899"),
+                _ = n("913796"),
+                S = n("826267"),
+                T = n("956089"),
+                p = n("124031"),
+                N = n("782340"),
+                I = n("804220");
 
             function m(e) {
-                let {
-                    tab: t,
-                    setTab: n,
-                    children: a,
-                    badgeState: h,
-                    closePopout: I
-                } = e, {
-                    showReminders: m
-                } = f.default.useExperiment({
-                    location: "RecentsHeader"
-                }, {
-                    autoTrackExposure: !1
-                }), {
-                    enabled: A
-                } = c.default.useExperiment({
-                    location: "RecentsHeader"
-                }), g = (0, i.default)([E.default], () => E.default.getMessageReminders()), C = g.length;
-                return (0, l.jsxs)(u.Header, {
-                    className: s(N.header, N.expanded),
-                    children: [(0, l.jsxs)("div", {
-                        className: s(N.expandedInboxHeader),
-                        children: [(0, l.jsx)(_.default, {
-                            className: N.inboxIcon
-                        }), (0, l.jsx)(o.Text, {
-                            className: N.inboxTitle,
-                            variant: "text-lg/semibold",
-                            children: p.default.Messages.INBOX
-                        }), (0, l.jsx)(T.default, {
-                            closePopout: I
-                        })]
-                    }), (0, l.jsxs)("div", {
-                        className: s(N.expandedTabSection),
-                        children: [(0, l.jsxs)(o.TabBar, {
-                            selectedItem: t,
-                            type: "top-pill",
-                            onItemSelect: n,
-                            children: [(0, l.jsxs)(o.TabBar.Item, {
-                                id: r.InboxTab.FOR_YOU,
-                                "aria-label": p.default.Messages.FOR_YOU,
-                                className: s(N.tab, N.expanded, {
-                                    [N.active]: t === r.InboxTab.FOR_YOU
-                                }),
-                                children: [p.default.Messages.FOR_YOU, (null == h ? void 0 : h.badgeForYou) ? (0, l.jsx)(S.CircleBadge, {
-                                    color: d.default.STATUS_DANGER,
-                                    className: s(N.iconBadge)
-                                }) : null]
-                            }), (0, l.jsx)(o.TabBar.Item, {
-                                id: r.InboxTab.UNREADS,
-                                className: s(N.tab, N.expanded, {
-                                    [N.active]: t === r.InboxTab.UNREADS
-                                }),
-                                children: p.default.Messages.UNREADS_TAB_LABEL
-                            }), (0, l.jsx)(o.TabBar.Item, {
-                                "aria-label": p.default.Messages.MENTIONS,
-                                id: r.InboxTab.MENTIONS,
-                                className: s(N.tab, N.expanded, {
-                                    [N.active]: t === r.InboxTab.MENTIONS
-                                }),
-                                children: p.default.Messages.MENTIONS
-                            }), A ? (0, l.jsx)(o.TabBar.Item, {
-                                "aria-label": "game_invites",
-                                id: r.InboxTab.GAME_INVITES,
-                                className: s(N.tab, N.expanded, {
-                                    [N.active]: t === r.InboxTab.GAME_INVITES
-                                }),
-                                children: p.default.Messages.GAME_INVITES
-                            }) : null, m ? (0, l.jsxs)(o.TabBar.Item, {
-                                "aria-label": "todos",
-                                id: r.InboxTab.TODOS,
-                                className: s(N.tab, N.expanded, {
-                                    [N.active]: t === r.InboxTab.TODOS
-                                }),
-                                children: [p.default.Messages.MESSAGE_REMINDERS_HEADER, C > 0 ? (0, l.jsx)(S.CircleBadge, {
-                                    color: d.default.STATUS_DANGER,
-                                    className: s(N.iconBadge)
-                                }) : null]
-                            }) : null]
-                        }), (0, l.jsx)("div", {
-                            className: N.controls,
-                            children: a
-                        })]
-                    })]
+                let t = (0, _.useInDesktopNotificationCenterExperiment)();
+                return t ? (0, l.jsx)(A, {
+                    ...e
+                }) : (0, l.jsx)(g, {
+                    ...e
                 })
             }
 
@@ -5915,58 +5863,147 @@
                 let {
                     tab: t,
                     setTab: n,
+                    children: a,
+                    badgeState: _,
+                    closePopout: m
+                } = e, {
+                    showReminders: A
+                } = E.default.useExperiment({
+                    location: "RecentsHeader"
+                }, {
+                    autoTrackExposure: !1
+                }), {
+                    enabled: g
+                } = f.default.useExperiment({
+                    location: "RecentsHeader"
+                }), C = (0, i.default)([c.default], () => c.default.getUnseenInviteCount()), R = (0, i.default)([h.default], () => h.default.getMessageReminders()), O = R.length;
+                return (0, l.jsxs)(u.Header, {
+                    className: s(I.header, I.expanded),
+                    children: [(0, l.jsxs)("div", {
+                        className: s(I.expandedInboxHeader),
+                        children: [(0, l.jsx)(S.default, {
+                            className: I.inboxIcon
+                        }), (0, l.jsx)(o.Text, {
+                            className: I.inboxTitle,
+                            variant: "text-lg/semibold",
+                            children: N.default.Messages.INBOX
+                        }), (0, l.jsx)(p.default, {
+                            closePopout: m
+                        })]
+                    }), (0, l.jsxs)("div", {
+                        className: s(I.expandedTabSection),
+                        children: [(0, l.jsxs)(o.TabBar, {
+                            selectedItem: t,
+                            type: "top-pill",
+                            onItemSelect: n,
+                            children: [(0, l.jsxs)(o.TabBar.Item, {
+                                id: r.InboxTab.FOR_YOU,
+                                "aria-label": N.default.Messages.FOR_YOU,
+                                className: s(I.tab, I.expanded, {
+                                    [I.active]: t === r.InboxTab.FOR_YOU
+                                }),
+                                children: [N.default.Messages.FOR_YOU, (null == _ ? void 0 : _.badgeForYou) ? (0, l.jsx)(T.CircleBadge, {
+                                    color: d.default.STATUS_DANGER,
+                                    className: s(I.iconBadge)
+                                }) : null]
+                            }), (0, l.jsx)(o.TabBar.Item, {
+                                id: r.InboxTab.UNREADS,
+                                className: s(I.tab, I.expanded, {
+                                    [I.active]: t === r.InboxTab.UNREADS
+                                }),
+                                children: N.default.Messages.UNREADS_TAB_LABEL
+                            }), (0, l.jsx)(o.TabBar.Item, {
+                                "aria-label": N.default.Messages.MENTIONS,
+                                id: r.InboxTab.MENTIONS,
+                                className: s(I.tab, I.expanded, {
+                                    [I.active]: t === r.InboxTab.MENTIONS
+                                }),
+                                children: N.default.Messages.MENTIONS
+                            }), g ? (0, l.jsxs)(o.TabBar.Item, {
+                                "aria-label": "game_invites",
+                                id: r.InboxTab.GAME_INVITES,
+                                className: s(I.tab, I.expanded, {
+                                    [I.active]: t === r.InboxTab.GAME_INVITES
+                                }),
+                                children: [N.default.Messages.GAME_INVITES, C > 0 ? (0, l.jsx)(T.CircleBadge, {
+                                    color: d.default.STATUS_DANGER,
+                                    className: s(I.iconBadge)
+                                }) : null]
+                            }) : null, A ? (0, l.jsxs)(o.TabBar.Item, {
+                                "aria-label": "todos",
+                                id: r.InboxTab.TODOS,
+                                className: s(I.tab, I.expanded, {
+                                    [I.active]: t === r.InboxTab.TODOS
+                                }),
+                                children: [N.default.Messages.MESSAGE_REMINDERS_HEADER, O > 0 ? (0, l.jsx)(T.CircleBadge, {
+                                    color: d.default.STATUS_DANGER,
+                                    className: s(I.iconBadge)
+                                }) : null]
+                            }) : null]
+                        }), (0, l.jsx)("div", {
+                            className: I.controls,
+                            children: a
+                        })]
+                    })]
+                })
+            }
+
+            function g(e) {
+                let {
+                    tab: t,
+                    setTab: n,
                     children: a
                 } = e, {
                     showReminders: i
-                } = f.default.useExperiment({
+                } = E.default.useExperiment({
                     location: "489e3f_2"
                 }, {
                     autoTrackExposure: !1
-                }), d = (0, h.useInDesktopNotificationCenterExperiment)(), {
-                    enabled: E
-                } = c.default.useExperiment({
+                }), d = (0, _.useInDesktopNotificationCenterExperiment)(), {
+                    enabled: c
+                } = f.default.useExperiment({
                     location: "RecentsHeader"
                 });
                 return (0, l.jsxs)(u.Header, {
-                    className: N.header,
+                    className: I.header,
                     children: [(0, l.jsxs)(o.TabBar, {
                         selectedItem: t,
                         type: "top-pill",
                         onItemSelect: n,
-                        className: N.tabBar,
+                        className: I.tabBar,
                         children: [d ? (0, l.jsx)(o.TabBar.Item, {
                             id: r.InboxTab.FOR_YOU,
-                            className: s(N.tab, {
-                                [N.active]: t === r.InboxTab.FOR_YOU
+                            className: s(I.tab, {
+                                [I.active]: t === r.InboxTab.FOR_YOU
                             }),
-                            children: p.default.Messages.FOR_YOU
+                            children: N.default.Messages.FOR_YOU
                         }) : null, (0, l.jsx)(o.TabBar.Item, {
                             id: r.InboxTab.MENTIONS,
-                            className: s(N.tab, {
-                                [N.active]: t === r.InboxTab.MENTIONS
+                            className: s(I.tab, {
+                                [I.active]: t === r.InboxTab.MENTIONS
                             }),
-                            children: p.default.Messages.MENTIONS
+                            children: N.default.Messages.MENTIONS
                         }), (0, l.jsx)(o.TabBar.Item, {
                             id: r.InboxTab.UNREADS,
-                            className: s(N.tab, {
-                                [N.active]: t === r.InboxTab.UNREADS
+                            className: s(I.tab, {
+                                [I.active]: t === r.InboxTab.UNREADS
                             }),
-                            children: p.default.Messages.UNREADS_TAB_LABEL
-                        }), E ? (0, l.jsx)(o.TabBar.Item, {
+                            children: N.default.Messages.UNREADS_TAB_LABEL
+                        }), c ? (0, l.jsx)(o.TabBar.Item, {
                             id: r.InboxTab.GAME_INVITES,
-                            className: s(N.tab, {
-                                [N.active]: t === r.InboxTab.GAME_INVITES
+                            className: s(I.tab, {
+                                [I.active]: t === r.InboxTab.GAME_INVITES
                             }),
-                            children: p.default.Messages.GAME_INVITES
+                            children: N.default.Messages.GAME_INVITES
                         }) : null, i ? (0, l.jsx)(o.TabBar.Item, {
                             id: r.InboxTab.TODOS,
-                            className: s(N.tab, {
-                                [N.active]: t === r.InboxTab.TODOS
+                            className: s(I.tab, {
+                                [I.active]: t === r.InboxTab.TODOS
                             }),
-                            children: p.default.Messages.MESSAGE_REMINDERS_HEADER
+                            children: N.default.Messages.MESSAGE_REMINDERS_HEADER
                         }) : null]
                     }), (0, l.jsx)("div", {
-                        className: N.controls,
+                        className: I.controls,
                         children: a
                     })]
                 })
@@ -7250,7 +7287,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return T
                 }
             }), n("222007");
             var l = n("37983"),
@@ -7261,47 +7298,53 @@
                 o = n("151426"),
                 u = n("77078"),
                 d = n("954732"),
-                c = n("64318"),
-                f = n("833150"),
-                E = n("34549"),
-                h = n("782340"),
-                _ = n("643000");
+                c = n("362189"),
+                f = n("64318"),
+                E = n("833150"),
+                h = n("34549"),
+                _ = n("782340"),
+                S = n("643000");
 
-            function S(e) {
+            function T(e) {
                 let {
                     setTab: t,
                     badgeState: n,
                     closePopout: s
-                } = e, S = (0, r.useStateFromStores)([d.default], () => d.default.getInvites()), [T, p] = a.useMemo(() => i.partition(S, e => {
+                } = e, T = (0, r.useStateFromStores)([d.default], () => d.default.getInvites()), [p, N] = a.useMemo(() => i.partition(T, e => {
                     let t = (Date.now() - new Date(e.created_at).getTime()) / 1e3;
                     return t < e.ttl
-                }), [S]), N = a.useCallback(() => {}, []), I = a.useCallback(() => {}, []);
+                }), [T]);
+                a.useEffect(() => {
+                    (0, c.clearUnseenInvites)()
+                });
+                let I = a.useCallback(() => {}, []),
+                    m = a.useCallback(() => {}, []);
                 return (0, l.jsxs)("div", {
-                    className: _.container,
-                    children: [(0, l.jsx)(c.default, {
+                    className: S.container,
+                    children: [(0, l.jsx)(f.default, {
                         tab: o.InboxTab.GAME_INVITES,
                         setTab: t,
                         badgeState: n,
                         closePopout: s
                     }), (0, l.jsx)(u.AdvancedScrollerThin, {
                         children: (0, l.jsxs)("div", {
-                            className: _.invitesContainer,
-                            children: [T.length > 0 && (0, l.jsxs)(l.Fragment, {
-                                children: [(0, l.jsx)(E.default, {
-                                    title: h.default.Messages.GAME_INVITES_RECENT_HEADER,
-                                    onDelete: N
+                            className: S.invitesContainer,
+                            children: [p.length > 0 && (0, l.jsxs)(l.Fragment, {
+                                children: [(0, l.jsx)(h.default, {
+                                    title: _.default.Messages.GAME_INVITES_RECENT_HEADER,
+                                    onDelete: I
                                 }), (0, l.jsx)(l.Fragment, {
-                                    children: T.map(e => (0, l.jsx)(f.default, {
+                                    children: p.map(e => (0, l.jsx)(E.default, {
                                         invite: e,
                                         expired: !1
                                     }, e.invite_id))
                                 })]
-                            }), p.length > 0 && (0, l.jsxs)(l.Fragment, {
-                                children: [(0, l.jsx)(E.default, {
-                                    title: h.default.Messages.GAME_INVITES_EXPIRED_HEADER,
-                                    onDelete: I
+                            }), N.length > 0 && (0, l.jsxs)(l.Fragment, {
+                                children: [(0, l.jsx)(h.default, {
+                                    title: _.default.Messages.GAME_INVITES_EXPIRED_HEADER,
+                                    onDelete: m
                                 }), (0, l.jsx)(l.Fragment, {
-                                    children: p.map(e => (0, l.jsx)(f.default, {
+                                    children: N.map(e => (0, l.jsx)(E.default, {
                                         invite: e,
                                         expired: !0
                                     }, e.invite_id))
@@ -7352,6 +7395,80 @@
                         })]
                     })
                 }
+        },
+        470965: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return E
+                }
+            }), n("222007");
+            var l = n("37983"),
+                a = n("884691"),
+                s = n("65597"),
+                i = n("862337"),
+                r = n("77078"),
+                o = n("954732"),
+                u = n("362189"),
+                d = n("697218"),
+                c = n("782340"),
+                f = n("400004");
+
+            function E(e) {
+                let {
+                    inboxIconRef: t,
+                    recentsPopoutShown: n
+                } = e, [E, h] = a.useState(!1), _ = (0, s.default)([o.default], () => o.default.getLastUnseenInvite()), S = (0, s.default)([d.default], () => null != _ ? d.default.getUser(_.inviter_id) : null);
+                return (a.useEffect(() => {
+                    n && h(!1)
+                }, [n]), a.useEffect(() => {
+                    if (null == _) {
+                        h(!1);
+                        return
+                    }(0, u.updateInviteStatus)(_), h(!0);
+                    let e = new i.Timeout;
+                    return e.start(5e3, () => {
+                        h(!1)
+                    }), () => {
+                        e.stop()
+                    }
+                }, [_]), E && null != _ && null != S) ? (0, l.jsxs)(r.TooltipLayer, {
+                    tooltipClassName: f.tooltip,
+                    tooltipContentClassName: f.tooltipContent,
+                    targetElementRef: t,
+                    position: "bottom",
+                    color: r.TooltipColors.BLACK,
+                    children: [(0, l.jsxs)("div", {
+                        className: f.iconContainer,
+                        children: [(0, l.jsx)("img", {
+                            className: f.inviteImage,
+                            src: _.application_asset,
+                            alt: "Game Invite"
+                        }), (0, l.jsx)("div", {
+                            className: f.offsetAvatarContainer,
+                            children: (0, l.jsx)(r.Avatar, {
+                                "aria-label": "Inviter",
+                                className: f.inviterImage,
+                                src: S.getAvatarURL(null, 24),
+                                size: r.AvatarSizes.SIZE_24
+                            })
+                        })]
+                    }), (0, l.jsxs)("div", {
+                        className: f.titleContainer,
+                        children: [(0, l.jsx)(r.Text, {
+                            className: f.title,
+                            variant: "text-xs/semibold",
+                            children: c.default.Messages.GAME_INVITES_INVITE_FROM.format({
+                                username: S.username
+                            })
+                        }), (0, l.jsx)(r.Text, {
+                            className: f.subtitle,
+                            variant: "text-xxs/medium",
+                            children: _.application_name
+                        })]
+                    })]
+                }) : null
+            }
         },
         93015: function(e, t, n) {
             "use strict";
