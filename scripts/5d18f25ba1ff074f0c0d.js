@@ -8,7 +8,7 @@
             "use strict";
             t.r(a), t.d(a, {
                 default: function() {
-                    return f
+                    return m
                 }
             });
             var s = t("37983"),
@@ -17,38 +17,39 @@
                 d = t("65597"),
                 i = t("77078"),
                 o = t("519705"),
-                r = t("155084"),
-                c = t("282109"),
+                c = t("155084"),
+                r = t("282109"),
                 u = t("945330"),
                 E = t("898260"),
-                N = t("844911"),
-                R = t("327944"),
-                T = t("964974"),
-                _ = t("49111"),
-                A = t("782340"),
+                N = t("34676"),
+                R = t("844911"),
+                T = t("327944"),
+                _ = t("964974"),
+                A = t("49111"),
+                f = t("782340"),
                 x = t("572266");
 
-            function f(e) {
+            function m(e) {
                 let {
                     transitionState: a,
                     onClose: t,
-                    handleBlock: f,
+                    handleBlock: m,
                     channelId: h,
-                    warningId: m,
+                    warningId: M,
                     senderId: S
-                } = e, M = () => {
+                } = e, v = () => {
                     t()
-                }, v = (0, T.getSafetyTips)();
+                }, C = (0, _.getSafetyTips)();
                 n.useEffect(() => {
-                    (0, N.trackViewedEvent)(_.AnalyticEvents.SAFETY_WARNING_MODAL_VIEWED, {
+                    (0, R.trackViewedEvent)(A.AnalyticEvents.SAFETY_WARNING_MODAL_VIEWED, {
                         channelId: h,
-                        warningId: m,
+                        warningId: M,
                         senderId: S
-                    }), r.default.increment({
+                    }), c.default.increment({
                         name: l.MetricEvents.SAFETY_WARNING_MODAL_VIEW
                     })
-                }, [h, m, S]);
-                let C = (0, d.default)([c.default], () => c.default.isChannelMuted(null, h));
+                }, [h, M, S]);
+                let g = (0, d.default)([r.default], () => r.default.isChannelMuted(null, h));
                 return (0, s.jsx)(i.ModalRoot, {
                     transitionState: a,
                     children: (0, s.jsxs)(i.Scroller, {
@@ -62,14 +63,14 @@
                                 children: [(0, s.jsx)(i.Text, {
                                     variant: "eyebrow",
                                     color: "status-positive-text",
-                                    children: A.default.Messages.STRANGER_DANGER_TIPS_HEADER
+                                    children: f.default.Messages.STRANGER_DANGER_TIPS_HEADER
                                 }), (0, s.jsx)(i.Heading, {
                                     variant: "heading-xl/bold",
                                     color: "status-positive-text",
-                                    children: A.default.Messages.STRANGER_DANGER_TIPS_DESCRIPTION
+                                    children: f.default.Messages.STRANGER_DANGER_TIPS_DESCRIPTION
                                 })]
                             }), (0, s.jsx)(i.Button, {
-                                "aria-label": A.default.Messages.CLOSE,
+                                "aria-label": f.default.Messages.CLOSE,
                                 look: i.Button.Looks.BLANK,
                                 size: i.Button.Sizes.NONE,
                                 onClick: t,
@@ -85,7 +86,7 @@
                             className: x.modalContent,
                             children: [(0, s.jsx)("div", {
                                 className: x.tipsSection,
-                                children: v.map((e, a) => (0, s.jsxs)("div", {
+                                children: C.map((e, a) => (0, s.jsxs)("div", {
                                     className: x.tipRow,
                                     children: [(0, s.jsx)(i.Heading, {
                                         variant: "heading-md/semibold",
@@ -103,7 +104,7 @@
                                     className: x.moreHeading,
                                     variant: "eyebrow",
                                     color: "header-secondary",
-                                    children: A.default.Messages.STRANGER_DANGER_MORE_HEADER
+                                    children: f.default.Messages.STRANGER_DANGER_MORE_HEADER
                                 }), (0, s.jsxs)("div", {
                                     className: x.tipsSection,
                                     children: [(0, s.jsxs)("div", {
@@ -113,36 +114,36 @@
                                             children: [(0, s.jsx)(i.Text, {
                                                 variant: "text-md/semibold",
                                                 color: "header-primary",
-                                                children: A.default.Messages.STRANGER_DANGER_MORE_MUTE
+                                                children: f.default.Messages.STRANGER_DANGER_MORE_MUTE
                                             }), (0, s.jsx)(i.Text, {
                                                 variant: "text-xs/medium",
                                                 color: "header-secondary",
-                                                children: A.default.Messages.STRANGER_DANGER_MORE_MUTE_DESCRIPTION
+                                                children: f.default.Messages.STRANGER_DANGER_MORE_MUTE_DESCRIPTION
                                             })]
                                         }), (0, s.jsx)(i.Button, {
                                             size: i.Button.Sizes.SMALL,
                                             color: i.Button.Colors.PRIMARY,
-                                            "aria-label": A.default.Messages.STRANGER_DANGER_MORE_MUTE,
-                                            onClick: C ? () => {
+                                            "aria-label": f.default.Messages.STRANGER_DANGER_MORE_MUTE,
+                                            onClick: g ? () => {
                                                 o.default.updateChannelOverrideSettings(null, h, {
                                                     muted: !1
-                                                }), (0, i.showToast)((0, i.createToast)(A.default.Messages.STRANGER_DANGER_UNMUTE_CONFIRM, i.ToastType.SUCCESS)), (0, N.trackCtaEvent)({
+                                                }, N.NotificationLabels.Unmuted), (0, i.showToast)((0, i.createToast)(f.default.Messages.STRANGER_DANGER_UNMUTE_CONFIRM, i.ToastType.SUCCESS)), (0, R.trackCtaEvent)({
                                                     channelId: h,
-                                                    warningId: m,
+                                                    warningId: M,
                                                     senderId: S,
-                                                    cta: N.CtaEventTypes.USER_MODAL_UNMUTE
+                                                    cta: R.CtaEventTypes.USER_MODAL_UNMUTE
                                                 })
                                             } : () => {
                                                 o.default.updateChannelOverrideSettings(null, h, {
                                                     muted: !0
-                                                }), (0, i.showToast)((0, i.createToast)(A.default.Messages.STRANGER_DANGER_MUTE_CONFIRM, i.ToastType.SUCCESS)), (0, N.trackCtaEvent)({
+                                                }, N.NotificationLabels.Muted), (0, i.showToast)((0, i.createToast)(f.default.Messages.STRANGER_DANGER_MUTE_CONFIRM, i.ToastType.SUCCESS)), (0, R.trackCtaEvent)({
                                                     channelId: h,
-                                                    warningId: m,
+                                                    warningId: M,
                                                     senderId: S,
-                                                    cta: N.CtaEventTypes.USER_MODAL_MUTE
+                                                    cta: R.CtaEventTypes.USER_MODAL_MUTE
                                                 })
                                             },
-                                            children: C ? A.default.Messages.STRANGER_DANGER_MORE_UNMUTE : A.default.Messages.STRANGER_DANGER_MORE_MUTE
+                                            children: g ? f.default.Messages.STRANGER_DANGER_MORE_UNMUTE : f.default.Messages.STRANGER_DANGER_MORE_MUTE
                                         })]
                                     }), (0, s.jsx)(E.default, {}), (0, s.jsxs)("div", {
                                         className: x.safetyAction,
@@ -151,26 +152,26 @@
                                             children: [(0, s.jsx)(i.Text, {
                                                 variant: "text-md/semibold",
                                                 color: "header-primary",
-                                                children: A.default.Messages.STRANGER_DANGER_MORE_BLOCK
+                                                children: f.default.Messages.STRANGER_DANGER_MORE_BLOCK
                                             }), (0, s.jsx)(i.Text, {
                                                 variant: "text-xs/medium",
                                                 color: "header-secondary",
-                                                children: A.default.Messages.STRANGER_DANGER_MORE_BLOCK_DESCRIPTION
+                                                children: f.default.Messages.STRANGER_DANGER_MORE_BLOCK_DESCRIPTION
                                             })]
                                         }), (0, s.jsx)(i.Button, {
                                             size: i.Button.Sizes.SMALL,
                                             color: i.Button.Colors.RED,
-                                            "aria-label": A.default.Messages.STRANGER_DANGER_BANNER_BLOCK,
+                                            "aria-label": f.default.Messages.STRANGER_DANGER_BANNER_BLOCK,
                                             onClick: () => {
-                                                M(), f()
+                                                v(), m()
                                             },
-                                            children: A.default.Messages.STRANGER_DANGER_BANNER_BLOCK
+                                            children: f.default.Messages.STRANGER_DANGER_BANNER_BLOCK
                                         })]
                                     })]
                                 })]
-                            }), (0, s.jsx)(R.default, {
+                            }), (0, s.jsx)(T.default, {
                                 channelId: h,
-                                warningId: m,
+                                warningId: M,
                                 senderId: S
                             })]
                         })]
@@ -182,7 +183,7 @@
             "use strict";
             t.r(a), t.d(a, {
                 default: function() {
-                    return f
+                    return x
                 }
             });
             var s = t("37983"),
@@ -191,8 +192,8 @@
                 d = t.n(l),
                 i = t("65597"),
                 o = t("877585"),
-                r = t("77078"),
-                c = t("251144"),
+                c = t("77078"),
+                r = t("251144"),
                 u = t("20662"),
                 E = t("277734"),
                 N = t("764828"),
@@ -201,12 +202,12 @@
                 _ = t("657792"),
                 A = t("677841");
 
-            function x() {
+            function f() {
                 return (0, s.jsxs)("div", {
                     className: d(A.toast, _.toast),
                     children: [(0, s.jsx)(o.ShieldIcon, {
-                        color: r.tokens.colors.TEXT_BRAND
-                    }), (0, s.jsx)(r.Text, {
+                        color: c.tokens.colors.TEXT_BRAND
+                    }), (0, s.jsx)(c.Text, {
                         className: A.content,
                         color: "header-primary",
                         variant: "text-md/normal",
@@ -215,14 +216,14 @@
                 })
             }
 
-            function f(e) {
+            function x(e) {
                 let {
                     channelId: a,
                     warningId: t,
                     senderId: l
-                } = e, o = (0, i.default)([N.default], () => N.default.getChannelSafetyWarning(a, t)), A = n.useMemo(() => (null == o ? void 0 : o.feedback_type) === N.SafetyWarningFeedbackTypes.UPVOTE, [o]), f = n.useMemo(() => (null == o ? void 0 : o.feedback_type) === N.SafetyWarningFeedbackTypes.DOWNVOTE, [o]), h = n.useCallback((e, n) => {
-                    (null == o ? void 0 : o.feedback_type) !== e && ((0, E.setChannelSafetyWarningFeedback)(a, t, e), (0, r.showToast)((0, r.createToast)(T.default.Messages.STRANGER_DANGER_FEEDBACK_CONFIRM, r.ToastType.CUSTOM, {
-                        component: (0, s.jsx)(x, {})
+                } = e, o = (0, i.default)([N.default], () => N.default.getChannelSafetyWarning(a, t)), A = n.useMemo(() => (null == o ? void 0 : o.feedback_type) === N.SafetyWarningFeedbackTypes.UPVOTE, [o]), x = n.useMemo(() => (null == o ? void 0 : o.feedback_type) === N.SafetyWarningFeedbackTypes.DOWNVOTE, [o]), m = n.useCallback((e, n) => {
+                    (null == o ? void 0 : o.feedback_type) !== e && ((0, E.setChannelSafetyWarningFeedback)(a, t, e), (0, c.showToast)((0, c.createToast)(T.default.Messages.STRANGER_DANGER_FEEDBACK_CONFIRM, c.ToastType.CUSTOM, {
+                        component: (0, s.jsx)(f, {})
                     })), (0, R.trackCtaEvent)({
                         channelId: a,
                         warningId: t,
@@ -232,29 +233,29 @@
                 }, [o, a, t, l]);
                 return (0, s.jsxs)("div", {
                     className: _.feedback,
-                    children: [(0, s.jsx)(r.Text, {
+                    children: [(0, s.jsx)(c.Text, {
                         variant: "text-sm/medium",
                         color: "text-normal",
                         children: T.default.Messages.STRANGER_DANGER_WAS_THIS_HELPFUL
                     }), (0, s.jsxs)("div", {
                         className: _.buttonsContainer,
-                        children: [(0, s.jsx)(r.Clickable, {
+                        children: [(0, s.jsx)(c.Clickable, {
                             className: d([_.buttonsBackground, A ? _.buttonsBackgroundActive : _.buttonsBackgroundInactive, {
                                 [_.disabled]: A
                             }]),
-                            onClick: () => h(N.SafetyWarningFeedbackTypes.UPVOTE, R.CtaEventTypes.FEEDBACK_UPVOTE),
+                            onClick: () => m(N.SafetyWarningFeedbackTypes.UPVOTE, R.CtaEventTypes.FEEDBACK_UPVOTE),
                             "aria-label": T.default.Messages.STRANGER_DANGER_THUMBS_UP_A11Y,
                             children: (0, s.jsx)(u.default, {
                                 className: _.buttonIcon,
                                 color: "interactive-normal"
                             })
-                        }), (0, s.jsx)(r.Clickable, {
-                            className: d([_.buttonsBackground, f ? _.buttonsBackgroundActive : _.buttonsBackgroundInactive, {
-                                [_.disabled]: f
+                        }), (0, s.jsx)(c.Clickable, {
+                            className: d([_.buttonsBackground, x ? _.buttonsBackgroundActive : _.buttonsBackgroundInactive, {
+                                [_.disabled]: x
                             }]),
-                            onClick: () => h(N.SafetyWarningFeedbackTypes.DOWNVOTE, R.CtaEventTypes.FEEDBACK_DOWNVOTE),
+                            onClick: () => m(N.SafetyWarningFeedbackTypes.DOWNVOTE, R.CtaEventTypes.FEEDBACK_DOWNVOTE),
                             "aria-label": T.default.Messages.STRANGER_DANGER_THUMBS_DOWN_A11Y,
-                            children: (0, s.jsx)(c.default, {
+                            children: (0, s.jsx)(r.default, {
                                 className: _.buttonIcon,
                                 color: "interactive-normal"
                             })

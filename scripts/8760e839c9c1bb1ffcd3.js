@@ -399,10 +399,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 getMuteTimes: function() {
-                    return g
+                    return C
                 },
                 default: function() {
-                    return M
+                    return A
                 }
             }), n("222007");
             var a = n("37983");
@@ -415,30 +415,31 @@
                 o = n("519705"),
                 d = n("319165"),
                 f = n("282109"),
-                c = n("679653"),
-                _ = n("49111"),
-                E = n("468200"),
-                N = n("782340");
-            let g = () => [{
-                    value: E.MuteUntilSeconds.MINUTES_15,
-                    label: N.default.Messages.MUTE_DURATION_15_MINUTES
+                c = n("34676"),
+                _ = n("679653"),
+                E = n("49111"),
+                N = n("468200"),
+                g = n("782340");
+            let C = () => [{
+                    value: N.MuteUntilSeconds.MINUTES_15,
+                    label: g.default.Messages.MUTE_DURATION_15_MINUTES
                 }, {
-                    value: E.MuteUntilSeconds.HOURS_1,
-                    label: N.default.Messages.MUTE_DURATION_1_HOUR
+                    value: N.MuteUntilSeconds.HOURS_1,
+                    label: g.default.Messages.MUTE_DURATION_1_HOUR
                 }, {
-                    value: E.MuteUntilSeconds.HOURS_3,
-                    label: N.default.Messages.MUTE_DURATION_3_HOURS
+                    value: N.MuteUntilSeconds.HOURS_3,
+                    label: g.default.Messages.MUTE_DURATION_3_HOURS
                 }, {
-                    value: E.MuteUntilSeconds.HOURS_8,
-                    label: N.default.Messages.MUTE_DURATION_8_HOURS
+                    value: N.MuteUntilSeconds.HOURS_8,
+                    label: g.default.Messages.MUTE_DURATION_8_HOURS
                 }, {
-                    value: E.MuteUntilSeconds.HOURS_24,
-                    label: N.default.Messages.MUTE_DURATION_24_HOURS
+                    value: N.MuteUntilSeconds.HOURS_24,
+                    label: g.default.Messages.MUTE_DURATION_24_HOURS
                 }, {
-                    value: E.MuteUntilSeconds.ALWAYS,
-                    label: N.default.Messages.MUTE_DURATION_ALWAYS
+                    value: N.MuteUntilSeconds.ALWAYS,
+                    label: g.default.Messages.MUTE_DURATION_ALWAYS
                 }],
-                C = e => {
+                M = e => {
                     let t = e > 0 ? l().add(e, "second").toISOString() : null;
                     return {
                         muted: !0,
@@ -449,43 +450,43 @@
                     }
                 };
 
-            function M(e, t) {
-                let [n, i] = (0, s.useStateFromStoresArray)([f.default], () => [f.default.isChannelMuted(e.guild_id, e.id), f.default.getChannelMuteConfig(e.guild_id, e.id)]), l = (0, d.useMutedUntilText)(i), E = (0, c.default)(e, !0);
+            function A(e, t) {
+                let [n, i] = (0, s.useStateFromStoresArray)([f.default], () => [f.default.isChannelMuted(e.guild_id, e.id), f.default.getChannelMuteConfig(e.guild_id, e.id)]), l = (0, d.useMutedUntilText)(i), N = (0, _.default)(e, !0);
 
-                function M(t) {
-                    t && e.type === _.ChannelTypes.GUILD_CATEGORY && (0, r.categoryCollapse)(e.id), o.default.updateChannelOverrideSettings(e.guild_id, e.id, {
+                function A(t) {
+                    t && e.type === E.ChannelTypes.GUILD_CATEGORY && (0, r.categoryCollapse)(e.id), o.default.updateChannelOverrideSettings(e.guild_id, e.id, {
                         muted: t
-                    })
+                    }, c.NotificationLabel.muted(t))
                 }
-                let A = N.default.Messages.MUTE_CHANNEL_GENERIC,
-                    S = N.default.Messages.UNMUTE_CHANNEL_GENERIC;
+                let S = g.default.Messages.MUTE_CHANNEL_GENERIC,
+                    T = g.default.Messages.UNMUTE_CHANNEL_GENERIC;
                 switch (e.type) {
-                    case _.ChannelTypes.GUILD_CATEGORY:
-                        A = N.default.Messages.MUTE_CATEGORY, S = N.default.Messages.UNMUTE_CATEGORY;
+                    case E.ChannelTypes.GUILD_CATEGORY:
+                        S = g.default.Messages.MUTE_CATEGORY, T = g.default.Messages.UNMUTE_CATEGORY;
                         break;
-                    case _.ChannelTypes.GROUP_DM:
-                        A = N.default.Messages.MUTE_CONVERSATION, S = N.default.Messages.UNMUTE_CONVERSATION;
+                    case E.ChannelTypes.GROUP_DM:
+                        S = g.default.Messages.MUTE_CONVERSATION, T = g.default.Messages.UNMUTE_CONVERSATION;
                         break;
-                    case _.ChannelTypes.DM:
-                        A = N.default.Messages.MUTE_CHANNEL.format({
-                            name: E
-                        }), S = N.default.Messages.UNMUTE_CHANNEL.format({
-                            name: E
+                    case E.ChannelTypes.DM:
+                        S = g.default.Messages.MUTE_CHANNEL.format({
+                            name: N
+                        }), T = g.default.Messages.UNMUTE_CHANNEL.format({
+                            name: N
                         });
                         break;
                     default:
-                        A = N.default.Messages.MUTE_CHANNEL_GENERIC, S = N.default.Messages.UNMUTE_CHANNEL_GENERIC
+                        S = g.default.Messages.MUTE_CHANNEL_GENERIC, T = g.default.Messages.UNMUTE_CHANNEL_GENERIC
                 }
                 return n ? (0, a.jsx)(u.MenuItem, {
                     id: "unmute-channel",
-                    label: S,
+                    label: T,
                     subtext: l,
-                    action: () => M(!1)
+                    action: () => A(!1)
                 }) : (0, a.jsx)(u.MenuItem, {
                     id: "mute-channel",
-                    label: A,
-                    action: () => M(!0),
-                    children: g().map(n => {
+                    label: S,
+                    action: () => A(!0),
+                    children: C().map(n => {
                         let {
                             value: i,
                             label: l
@@ -494,9 +495,9 @@
                             id: "".concat(i),
                             label: l,
                             action: () => (function(n) {
-                                e.type === _.ChannelTypes.GUILD_CATEGORY && (0, r.categoryCollapse)(e.id);
-                                let a = C(n);
-                                o.default.updateChannelOverrideSettings(e.guild_id, e.id, a, t)
+                                e.type === E.ChannelTypes.GUILD_CATEGORY && (0, r.categoryCollapse)(e.id);
+                                let a = M(n);
+                                o.default.updateChannelOverrideSettings(e.guild_id, e.id, a, c.NotificationLabels.Muted, t)
                             })(i)
                         }, i)
                     })
@@ -507,10 +508,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 useChannelNotificationRadioItems: function() {
-                    return c
+                    return _
                 },
                 default: function() {
-                    return _
+                    return E
                 }
             });
             var a = n("37983");
@@ -520,79 +521,80 @@
                 s = n("519705"),
                 u = n("721281"),
                 r = n("282109"),
-                o = n("49111"),
-                d = n("782340");
+                o = n("34676"),
+                d = n("49111"),
+                f = n("782340");
 
-            function f(e) {
+            function c(e) {
                 var t, n, a;
                 let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 switch (e.type) {
-                    case o.ChannelTypes.GUILD_VOICE:
+                    case d.ChannelTypes.GUILD_VOICE:
                         ;
                         return i ? (t = e, [{
-                            setting: o.UserNotificationSettings.NULL,
-                            label: null != t.parent_id ? d.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : d.default.Messages.FORM_LABEL_DEFAULT
+                            setting: d.UserNotificationSettings.NULL,
+                            label: null != t.parent_id ? f.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : f.default.Messages.FORM_LABEL_DEFAULT
                         }, {
-                            setting: o.UserNotificationSettings.ALL_MESSAGES,
-                            label: d.default.Messages.FORM_LABEL_ALL_VOICE_ACTIVITY
+                            setting: d.UserNotificationSettings.ALL_MESSAGES,
+                            label: f.default.Messages.FORM_LABEL_ALL_VOICE_ACTIVITY
                         }, {
-                            setting: o.UserNotificationSettings.ONLY_MENTIONS,
-                            label: d.default.Messages.FORM_LABEL_ONLY_TEXT_MENTIONS.format()
+                            setting: d.UserNotificationSettings.ONLY_MENTIONS,
+                            label: f.default.Messages.FORM_LABEL_ONLY_TEXT_MENTIONS.format()
                         }, {
-                            setting: o.UserNotificationSettings.NO_MESSAGES,
-                            label: d.default.Messages.FORM_LABEL_NOTHING
+                            setting: d.UserNotificationSettings.NO_MESSAGES,
+                            label: f.default.Messages.FORM_LABEL_NOTHING
                         }]) : null;
-                    case o.ChannelTypes.GUILD_STAGE_VOICE:
+                    case d.ChannelTypes.GUILD_STAGE_VOICE:
                         ;
                         return n = e, [{
-                            setting: o.UserNotificationSettings.NULL,
-                            label: null != n.parent_id ? d.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : d.default.Messages.FORM_LABEL_DEFAULT
+                            setting: d.UserNotificationSettings.NULL,
+                            label: null != n.parent_id ? f.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : f.default.Messages.FORM_LABEL_DEFAULT
                         }, {
-                            setting: o.UserNotificationSettings.ONLY_MENTIONS,
-                            label: d.default.Messages.FORM_LABEL_LIVE_STAGES_ONLY
+                            setting: d.UserNotificationSettings.ONLY_MENTIONS,
+                            label: f.default.Messages.FORM_LABEL_LIVE_STAGES_ONLY
                         }, {
-                            setting: o.UserNotificationSettings.NO_MESSAGES,
-                            label: d.default.Messages.FORM_LABEL_NOTHING
+                            setting: d.UserNotificationSettings.NO_MESSAGES,
+                            label: f.default.Messages.FORM_LABEL_NOTHING
                         }];
                     default:
                         ;
                         return a = e, [{
-                            setting: o.UserNotificationSettings.NULL,
-                            label: null != a.parent_id ? d.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : d.default.Messages.FORM_LABEL_DEFAULT
+                            setting: d.UserNotificationSettings.NULL,
+                            label: null != a.parent_id ? f.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : f.default.Messages.FORM_LABEL_DEFAULT
                         }, {
-                            setting: o.UserNotificationSettings.ALL_MESSAGES,
-                            label: d.default.Messages.FORM_LABEL_ALL_MESSAGES
+                            setting: d.UserNotificationSettings.ALL_MESSAGES,
+                            label: f.default.Messages.FORM_LABEL_ALL_MESSAGES
                         }, {
-                            setting: o.UserNotificationSettings.ONLY_MENTIONS,
-                            label: d.default.Messages.FORM_LABEL_ONLY_MENTIONS.format()
+                            setting: d.UserNotificationSettings.ONLY_MENTIONS,
+                            label: f.default.Messages.FORM_LABEL_ONLY_MENTIONS.format()
                         }, {
-                            setting: o.UserNotificationSettings.NO_MESSAGES,
-                            label: d.default.Messages.FORM_LABEL_NOTHING
+                            setting: d.UserNotificationSettings.NO_MESSAGES,
+                            label: f.default.Messages.FORM_LABEL_NOTHING
                         }]
                 }
             }
 
-            function c(e) {
+            function _(e) {
                 let t = e.getGuildId(),
                     n = e.id,
-                    c = (0, i.useStateFromStores)([r.default], () => {
-                        let n = o.UserNotificationSettings.NULL;
-                        return null != e.parent_id && (n = r.default.getChannelMessageNotifications(t, e.parent_id)), n !== o.UserNotificationSettings.NULL ? n : r.default.getMessageNotifications(t)
+                    _ = (0, i.useStateFromStores)([r.default], () => {
+                        let n = d.UserNotificationSettings.NULL;
+                        return null != e.parent_id && (n = r.default.getChannelMessageNotifications(t, e.parent_id)), n !== d.UserNotificationSettings.NULL ? n : r.default.getMessageNotifications(t)
                     }, [t, e.parent_id]),
-                    _ = (0, i.useStateFromStores)([r.default], () => r.default.getNewForumThreadsCreated(e)),
-                    E = (0, i.useStateFromStores)([r.default], () => r.default.getChannelOverrides(t)[n], [t, n]),
-                    N = null == E ? o.UserNotificationSettings.NULL : E.message_notifications,
-                    g = (0, u.useVoiceActivityNotificationSettingsExperiment)(e),
-                    C = f(e, g);
-                return null == C ? null : (0, a.jsxs)(a.Fragment, {
+                    E = (0, i.useStateFromStores)([r.default], () => r.default.getNewForumThreadsCreated(e)),
+                    N = (0, i.useStateFromStores)([r.default], () => r.default.getChannelOverrides(t)[n], [t, n]),
+                    g = null == N ? d.UserNotificationSettings.NULL : N.message_notifications,
+                    C = (0, u.useVoiceActivityNotificationSettingsExperiment)(e),
+                    M = c(e, C);
+                return null == M ? null : (0, a.jsxs)(a.Fragment, {
                     children: [e.isForumLikeChannel() ? (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(l.MenuCheckboxItem, {
                             id: "new-forum-threads-created",
-                            label: d.default.Messages.FORUM_NEW_POSTS_CREATED,
-                            checked: _,
-                            action: () => s.default.setForumThreadsCreated(e, !_)
+                            label: f.default.Messages.FORUM_NEW_POSTS_CREATED,
+                            checked: E,
+                            action: () => s.default.setForumThreadsCreated(e, !E)
                         }), (0, a.jsx)(l.MenuSeparator, {})]
-                    }) : null, C.map(i => {
+                    }) : null, M.map(i => {
                         let {
                             setting: u,
                             label: r
@@ -601,48 +603,48 @@
                             group: "channel-notifications",
                             id: "".concat(u),
                             label: r,
-                            subtext: u === o.UserNotificationSettings.NULL ? function(e, t) {
+                            subtext: u === d.UserNotificationSettings.NULL ? function(e, t) {
                                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                                 switch (e) {
-                                    case o.UserNotificationSettings.ALL_MESSAGES:
-                                        return t.type === o.ChannelTypes.GUILD_VOICE && n ? d.default.Messages.FORM_LABEL_ALL_VOICE_ACTIVITY : d.default.Messages.FORM_LABEL_ALL_MESSAGES;
-                                    case o.UserNotificationSettings.ONLY_MENTIONS:
-                                        return d.default.Messages.FORM_LABEL_ONLY_MENTIONS.format();
-                                    case o.UserNotificationSettings.NO_MESSAGES:
-                                        return d.default.Messages.FORM_LABEL_NOTHING;
-                                    case o.UserNotificationSettings.NULL:
+                                    case d.UserNotificationSettings.ALL_MESSAGES:
+                                        return t.type === d.ChannelTypes.GUILD_VOICE && n ? f.default.Messages.FORM_LABEL_ALL_VOICE_ACTIVITY : f.default.Messages.FORM_LABEL_ALL_MESSAGES;
+                                    case d.UserNotificationSettings.ONLY_MENTIONS:
+                                        return f.default.Messages.FORM_LABEL_ONLY_MENTIONS.format();
+                                    case d.UserNotificationSettings.NO_MESSAGES:
+                                        return f.default.Messages.FORM_LABEL_NOTHING;
+                                    case d.UserNotificationSettings.NULL:
                                     default:
                                         return
                                 }
-                            }(c, e, g) : void 0,
+                            }(_, e, C) : void 0,
                             action: () => {
                                 var e;
                                 return e = u, void(null != t && s.default.updateChannelOverrideSettings(t, n, {
                                     message_notifications: e
-                                }))
+                                }, o.NotificationLabel.notifications(e)))
                             },
-                            checked: u === N
+                            checked: u === g
                         }, u)
                     })]
                 })
             }
 
-            function _(e) {
+            function E(e) {
                 var t, n;
-                let s = c(e),
-                    _ = (0, i.useStateFromStores)([r.default], () => r.default.resolvedMessageNotifications(e), [e]),
+                let s = _(e),
+                    o = (0, i.useStateFromStores)([r.default], () => r.default.resolvedMessageNotifications(e), [e]),
                     E = (0, i.useStateFromStores)([r.default], () => r.default.getChannelOverrides(e.guild_id)[e.id], [e.guild_id, e.id]),
-                    N = null == E ? o.UserNotificationSettings.NULL : E.message_notifications,
+                    N = null == E ? d.UserNotificationSettings.NULL : E.message_notifications,
                     g = (0, u.useVoiceActivityNotificationSettingsExperiment)(e),
-                    C = N === o.UserNotificationSettings.NULL && e.isGuildStageVoice() ? d.default.Messages.FORM_LABEL_ONLY_MENTIONS.format() : null === (n = f(e, g)) || void 0 === n ? void 0 : null === (t = n.find(e => {
+                    C = N === d.UserNotificationSettings.NULL && e.isGuildStageVoice() ? f.default.Messages.FORM_LABEL_ONLY_MENTIONS.format() : null === (n = c(e, g)) || void 0 === n ? void 0 : null === (t = n.find(e => {
                         let {
                             setting: t
                         } = e;
-                        return t === _
+                        return t === o
                     })) || void 0 === t ? void 0 : t.label;
                 return null != s ? (0, a.jsx)(l.MenuItem, {
                     id: "channel-notifications",
-                    label: d.default.Messages.NOTIFICATION_SETTINGS,
+                    label: f.default.Messages.NOTIFICATION_SETTINGS,
                     subtext: C,
                     children: s
                 }) : null

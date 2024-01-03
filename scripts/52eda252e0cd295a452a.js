@@ -14,8 +14,8 @@
                 d = l("272030"),
                 i = l("851387"),
                 s = l("383173"),
-                r = l("677099"),
-                o = l("542827"),
+                o = l("677099"),
+                r = l("542827"),
                 c = l("734134"),
                 f = l("49111"),
                 m = l("782340");
@@ -26,29 +26,29 @@
                     folderId: E,
                     folderName: _,
                     folderColor: M,
-                    unread: p,
-                    onSelect: S
-                } = e, b = (0, n.useStateFromStores)([r.default], () => r.default.getGuildFolderById(E), [E]), g = (0, c.default)(null !== (t = null == b ? void 0 : b.guildIds) && void 0 !== t ? t : []), L = (0, n.useStateFromStores)([s.default], () => s.default.getExpandedFolders().size > 0);
+                    unread: b,
+                    onSelect: p
+                } = e, S = (0, n.useStateFromStores)([o.default], () => o.default.getGuildFolderById(E), [E]), L = (0, c.default)(null !== (t = null == S ? void 0 : S.guildIds) && void 0 !== t ? t : []), g = (0, n.useStateFromStores)([s.default], () => s.default.getExpandedFolders().size > 0);
                 return (0, a.jsxs)(u.Menu, {
                     navId: "guild-context",
                     "aria-label": m.default.Messages.GUILD_ACTIONS_MENU_LABEL,
                     onClose: d.closeContextMenu,
-                    onSelect: S,
+                    onSelect: p,
                     children: [(0, a.jsx)(u.MenuGroup, {
                         children: (0, a.jsx)(u.MenuItem, {
                             id: "mark-folder-read",
                             label: m.default.Messages.SERVER_FOLDER_MARK_AS_READ,
                             action: function() {
-                                if (null == b) return;
+                                if (null == S) return;
                                 let {
                                     guildIds: e
-                                } = b;
-                                (0, o.default)(e, f.AnalyticsSections.GUILD_LIST)
+                                } = S;
+                                (0, r.default)(e, f.AnalyticsSections.GUILD_LIST)
                             },
-                            disabled: !p
+                            disabled: !b
                         })
-                    }), null != g ? (0, a.jsx)(u.MenuGroup, {
-                        children: g
+                    }), null != L ? (0, a.jsx)(u.MenuGroup, {
+                        children: L
                     }) : null, (0, a.jsxs)(u.MenuGroup, {
                         children: [(0, a.jsx)(u.MenuItem, {
                             id: "folder-settings",
@@ -64,7 +64,7 @@
                                     folderColor: M
                                 })
                             })
-                        }), L && (0, a.jsx)(u.MenuItem, {
+                        }), g && (0, a.jsx)(u.MenuItem, {
                             id: "folder-collapse",
                             label: m.default.Messages.SERVER_FOLDER_COLLAPSE_ALL,
                             action: () => i.default.collapseAllFolders()
@@ -77,7 +77,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return _
+                    return M
                 }
             });
             var a = l("37983"),
@@ -86,12 +86,13 @@
                 d = l.n(u),
                 i = l("446674"),
                 s = l("77078"),
-                r = l("519705"),
-                o = l("531674"),
+                o = l("519705"),
+                r = l("531674"),
                 c = l("862205"),
                 f = l("282109"),
-                m = l("782340");
-            let E = (0, c.createExperiment)({
+                m = l("34676"),
+                E = l("782340");
+            let _ = (0, c.createExperiment)({
                 kind: "user",
                 id: "2022-02_guild_folder_mute",
                 label: "Guild Folder Mute",
@@ -107,10 +108,10 @@
                 }]
             });
 
-            function _(e, t) {
+            function M(e, t) {
                 let {
                     enabled: l
-                } = E.useExperiment({
+                } = _.useExperiment({
                     location: "74d87e_1"
                 }, {
                     autoTrackExposure: !1
@@ -122,18 +123,18 @@
                             end_time: l > 0 ? d().add(l, "second").toISOString() : null
                         } : void 0
                     }]));
-                    r.default.updateGuildNotificationSettingsBulk(a, t)
-                }, [e, t, u]), _ = n.useCallback(() => {
-                    r.default.updateGuildNotificationSettingsBulk(Object.fromEntries(e.filter(e => u[e]).map(e => [e, {
+                    o.default.updateGuildNotificationSettingsBulk(a, m.NotificationLabels.Muted, t)
+                }, [e, t, u]), M = n.useCallback(() => {
+                    o.default.updateGuildNotificationSettingsBulk(Object.fromEntries(e.filter(e => u[e]).map(e => [e, {
                         muted: !1
-                    }])), t)
+                    }])), m.NotificationLabels.Unmuted, t)
                 }, [e, t, u]);
                 return l ? (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(s.MenuItem, {
                         id: "mute-folder",
-                        label: m.default.Messages.SERVER_FOLDER_MUTE_ALL,
+                        label: E.default.Messages.SERVER_FOLDER_MUTE_ALL,
                         action: () => c(),
-                        children: (0, o.getMuteTimes)().map(e => {
+                        children: (0, r.getMuteTimes)().map(e => {
                             let {
                                 value: t,
                                 label: l
@@ -146,8 +147,8 @@
                         })
                     }), (0, a.jsx)(s.MenuItem, {
                         id: "unmute-folder",
-                        label: m.default.Messages.SERVER_FOLDER_UNMUTE_ALL,
-                        action: _
+                        label: E.default.Messages.SERVER_FOLDER_UNMUTE_ALL,
+                        action: M
                     })]
                 }) : null
             }

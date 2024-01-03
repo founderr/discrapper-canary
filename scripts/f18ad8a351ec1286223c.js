@@ -15785,7 +15785,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return C
+                    return S
                 }
             }), n("222007");
             var a = n("37983"),
@@ -15798,39 +15798,40 @@
                 d = n("998650"),
                 c = n("664336"),
                 f = n("659500"),
-                h = n("957825"),
-                p = n("49111"),
-                m = n("782340"),
-                E = n("290236");
+                h = n("34676"),
+                p = n("957825"),
+                m = n("49111"),
+                E = n("782340"),
+                C = n("290236");
 
-            function C(e) {
+            function S(e) {
                 let {
                     channel: t
-                } = e, n = (0, i.useRedesignIconContext)().enabled, [C, S] = (0, s.useStateFromStoresArray)([u.default], () => [u.default.isChannelMuted(t.getGuildId(), t.id), u.default.resolvedMessageNotifications(t)], [t]), [g, _] = l.useState(!1);
+                } = e, n = (0, i.useRedesignIconContext)().enabled, [S, g] = (0, s.useStateFromStoresArray)([u.default], () => [u.default.isChannelMuted(t.getGuildId(), t.id), u.default.resolvedMessageNotifications(t)], [t]), [_, I] = l.useState(!1);
                 l.useEffect(() => {
-                    let e = () => _(!0);
-                    return f.ComponentDispatch.subscribe(p.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
-                        f.ComponentDispatch.unsubscribe(p.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e)
+                    let e = () => I(!0);
+                    return f.ComponentDispatch.subscribe(m.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
+                        f.ComponentDispatch.unsubscribe(m.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e)
                     }
                 }, []);
-                let I = e => {
+                let T = e => {
                         e.shiftKey ? r.default.updateChannelOverrideSettings(t.guild_id, t.id, {
-                            muted: !C
-                        }) : _(e => !e)
+                            muted: !S
+                        }, h.NotificationLabel.muted(!S)) : I(e => !e)
                     },
-                    T = m.default.Messages.NOTIFICATION_SETTINGS;
+                    v = E.default.Messages.NOTIFICATION_SETTINGS;
                 return (0, a.jsx)(i.Popout, {
-                    shouldShow: g,
+                    shouldShow: _,
                     animation: i.Popout.Animation.NONE,
                     position: "bottom",
                     align: "right",
                     autoInvert: !1,
-                    onRequestClose: () => _(!1),
-                    renderPopout: e => (0, a.jsx)(h.default, {
+                    onRequestClose: () => I(!1),
+                    renderPopout: e => (0, a.jsx)(p.default, {
                         ...e,
                         channel: t,
                         navId: "channel-context",
-                        label: m.default.Messages.CHANNEL_ACTIONS_MENU_LABEL
+                        label: E.default.Messages.CHANNEL_ACTIONS_MENU_LABEL
                     }),
                     children: (e, t) => {
                         let {
@@ -15838,11 +15839,11 @@
                         } = t;
                         return (0, a.jsx)(c.default.Icon, {
                             ...e,
-                            onClick: I,
-                            tooltip: l ? null : T,
-                            icon: C || S !== p.UserNotificationSettings.ALL_MESSAGES ? d.default : o.default,
-                            foreground: C && !n ? E.strikethrough : null,
-                            "aria-label": T,
+                            onClick: T,
+                            tooltip: l ? null : v,
+                            icon: S || g !== m.UserNotificationSettings.ALL_MESSAGES ? d.default : o.default,
+                            foreground: S && !n ? C.strikethrough : null,
+                            "aria-label": v,
                             selected: l
                         })
                     }

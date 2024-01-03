@@ -4,7 +4,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return E
                 }
             }), n("70102");
             var l = n("759843"),
@@ -12,61 +12,62 @@
                 a = n("913144"),
                 s = n("81732"),
                 r = n("282109"),
-                d = n("840707"),
-                u = n("519705"),
-                o = n("49111"),
-                c = n("397336"),
-                f = {
+                d = n("34676"),
+                u = n("840707"),
+                o = n("519705"),
+                c = n("49111"),
+                f = n("397336"),
+                E = {
                     createChannel(e) {
                         let {
                             guildId: t,
                             type: n,
-                            name: f,
-                            permissionOverwrites: E = [],
-                            bitrate: h,
-                            userLimit: _,
-                            parentId: v,
-                            skuId: C,
-                            branchId: g
+                            name: E,
+                            permissionOverwrites: h = [],
+                            bitrate: _,
+                            userLimit: v,
+                            parentId: C,
+                            skuId: g,
+                            branchId: S
                         } = e;
                         a.default.dispatch({
                             type: "CREATE_CHANNEL_MODAL_SUBMIT"
                         });
-                        let S = {
+                        let T = {
                             type: n,
-                            name: f,
-                            permission_overwrites: E
+                            name: E,
+                            permission_overwrites: h
                         };
-                        if (null != h && h !== o.BITRATE_DEFAULT && (S.bitrate = h), null != _ && _ > 0 && (S.user_limit = _), null != v && (S.parent_id = v), n === o.ChannelTypes.GUILD_STORE) {
-                            if (null == C) throw Error("Unexpected missing SKU");
-                            S.sku_id = C, S.branch_id = g
+                        if (null != _ && _ !== c.BITRATE_DEFAULT && (T.bitrate = _), null != v && v > 0 && (T.user_limit = v), null != C && (T.parent_id = C), n === c.ChannelTypes.GUILD_STORE) {
+                            if (null == g) throw Error("Unexpected missing SKU");
+                            T.sku_id = g, T.branch_id = S
                         }
-                        return d.default.post({
-                            url: o.Endpoints.GUILD_CHANNELS(t),
-                            body: S,
+                        return u.default.post({
+                            url: c.Endpoints.GUILD_CHANNELS(t),
+                            body: T,
                             oldFormErrors: !0,
                             trackedActionData: {
                                 event: l.NetworkActionNames.CHANNEL_CREATE,
                                 properties: e => {
                                     var t, n;
                                     return (0, i.exact)({
-                                        is_private: E.length > 0,
+                                        is_private: h.length > 0,
                                         channel_id: null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.id,
                                         channel_type: null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.type
                                     })
                                 }
                             }
-                        }).then(e => (r.default.isOptInEnabled(t) && u.default.updateChannelOverrideSettings(t, e.body.id, {
-                            flags: c.ChannelNotificationSettingsFlags.OPT_IN_ENABLED
-                        }), s.default.checkGuildTemplateDirty(t), e), e => {
+                        }).then(e => (r.default.isOptInEnabled(t) && o.default.updateChannelOverrideSettings(t, e.body.id, {
+                            flags: f.ChannelNotificationSettingsFlags.OPT_IN_ENABLED
+                        }, d.NotificationLabels.OptedIn), s.default.checkGuildTemplateDirty(t), e), e => {
                             throw a.default.dispatch({
                                 type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE",
                                 errors: e.body
                             }), e
                         })
                     },
-                    createRoleSubscriptionTemplateChannel: (e, t, n, a) => d.default.post({
-                        url: o.Endpoints.GUILD_CHANNELS(e),
+                    createRoleSubscriptionTemplateChannel: (e, t, n, a) => u.default.post({
+                        url: c.Endpoints.GUILD_CHANNELS(e),
                         body: {
                             name: t,
                             type: n,
@@ -116,41 +117,41 @@
                             type: "NOTIFICATION_SETTINGS_MODAL_CLOSE"
                         })
                     },
-                    updateGuildNotificationSettings(e, t, n) {
-                        let l = (0, u.getCurrentGuildSettings)(e);
+                    updateGuildNotificationSettings(e, t, n, l) {
+                        let i = (0, u.getCurrentGuildSettings)(e);
                         s.default.saveUserGuildSettings(e, t), a.default.dispatch({
                             type: "USER_GUILD_SETTINGS_GUILD_UPDATE",
                             guildId: e,
                             settings: t
-                        }), (0, u.trackGuildNotificationSettingsUpdate)(e, t, l, n)
+                        }), (0, u.trackGuildNotificationSettingsUpdate)(e, t, i, n, l)
                     },
-                    updateGuildAndChannelNotificationSettings(e, t, n) {
-                        let l = Object.keys(t.channel_overrides),
-                            i = (0, u.getCurrentGuildSettings)(e),
-                            r = (0, u.getManyCurrentChannelSettings)(e, l);
+                    updateGuildAndChannelNotificationSettings(e, t, n, l) {
+                        let i = Object.keys(t.channel_overrides),
+                            r = (0, u.getCurrentGuildSettings)(e),
+                            d = (0, u.getManyCurrentChannelSettings)(e, i);
                         s.default.saveUserGuildSettings(e, t), a.default.dispatch({
                             type: "USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE",
                             guildId: e,
                             settings: t
-                        }), (0, u.trackGuildNotificationSettingsUpdate)(e, t, i, n), Object.keys(t.channel_overrides).forEach(l => {
-                            let i = r.get(l);
-                            (0, u.trackChannelNotificationSettingsUpdate)(e, l, t.channel_overrides[l], i, n)
+                        }), (0, u.trackGuildNotificationSettingsUpdate)(e, t, r, n, l), Object.keys(t.channel_overrides).forEach(i => {
+                            let a = d.get(i);
+                            (0, u.trackChannelNotificationSettingsUpdate)(e, i, t.channel_overrides[i], a, n, l)
                         })
                     },
-                    updateGuildNotificationSettingsBulk(e, t) {
-                        let n = Object.keys(e),
-                            l = (0, u.getManyCurrentGuildSettings)(n);
+                    updateGuildNotificationSettingsBulk(e, t, n) {
+                        let l = Object.keys(e),
+                            i = (0, u.getManyCurrentGuildSettings)(l);
                         s.default.saveUserGuildSettingsBulk(e), Object.entries(e).forEach(e => {
-                            let [n, i] = e, s = l.get(n);
+                            let [l, s] = e, r = i.get(l);
                             a.default.dispatch({
                                 type: "USER_GUILD_SETTINGS_GUILD_UPDATE",
-                                guildId: n,
-                                settings: i
-                            }), (0, u.trackGuildNotificationSettingsUpdate)(n, i, s, t)
+                                guildId: l,
+                                settings: s
+                            }), (0, u.trackGuildNotificationSettingsUpdate)(l, s, r, t, n)
                         })
                     },
-                    updateChannelOverrideSettings(e, t, n, l) {
-                        let r = (0, u.getCurrentChannelSettings)(e, t);
+                    updateChannelOverrideSettings(e, t, n, l, r) {
+                        let d = (0, u.getCurrentChannelSettings)(e, t);
                         s.default.saveUserGuildSettings(e, {
                             channel_overrides: {
                                 [t]: n
@@ -160,18 +161,18 @@
                             guildId: e,
                             channelId: t,
                             settings: n
-                        }), i.AccessibilityAnnouncer.announce(f.default.Messages.A11Y_ANNOUNCEMENT_CHANNEL_SETTINGS_UPDATED), (0, u.trackChannelNotificationSettingsUpdate)(e, t, n, r, l)
+                        }), i.AccessibilityAnnouncer.announce(f.default.Messages.A11Y_ANNOUNCEMENT_CHANNEL_SETTINGS_UPDATED), (0, u.trackChannelNotificationSettingsUpdate)(e, t, n, d, l, r)
                     },
-                    updateChannelOverrideSettingsBulk(e, t, n) {
-                        let l = Object.keys(t),
-                            i = (0, u.getManyCurrentChannelSettings)(e, l);
+                    updateChannelOverrideSettingsBulk(e, t, n, l) {
+                        let i = Object.keys(t),
+                            r = (0, u.getManyCurrentChannelSettings)(e, i);
                         s.default.saveUserGuildSettings(e, {
                             channel_overrides: t
                         }), a.default.dispatch({
                             type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK",
                             guildId: e,
                             overrides: t
-                        }), Object.keys(t).forEach(l => (0, u.trackChannelNotificationSettingsUpdate)(e, l, t[l], i.get(l), n))
+                        }), Object.keys(t).forEach(i => (0, u.trackChannelNotificationSettingsUpdate)(e, i, t[i], r.get(i), n, l))
                     },
                     setForumThreadsCreated(e, t) {
                         let n = t ? c.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON : c.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF,
@@ -179,7 +180,7 @@
                             i = r.default.getChannelFlags(e);
                         this.updateChannelOverrideSettings(e.guild_id, e.id, {
                             flags: i & ~l | n
-                        })
+                        }, u.NotificationLabel.forumThreadsCreated(t))
                     },
                     async setAccountFlag(e, t) {
                         let n = r.default.accountNotificationSettings.flags,

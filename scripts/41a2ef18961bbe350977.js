@@ -20,7 +20,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return E
                 }
             }), n("70102");
             var l = n("759843"),
@@ -28,61 +28,62 @@
                 r = n("913144"),
                 s = n("81732"),
                 a = n("282109"),
-                u = n("840707"),
-                o = n("519705"),
-                d = n("49111"),
-                c = n("397336"),
-                f = {
+                u = n("34676"),
+                o = n("840707"),
+                d = n("519705"),
+                c = n("49111"),
+                f = n("397336"),
+                E = {
                     createChannel(e) {
                         let {
                             guildId: t,
                             type: n,
-                            name: f,
-                            permissionOverwrites: E = [],
-                            bitrate: _,
-                            userLimit: p,
-                            parentId: h,
-                            skuId: S,
-                            branchId: m
+                            name: E,
+                            permissionOverwrites: _ = [],
+                            bitrate: p,
+                            userLimit: h,
+                            parentId: S,
+                            skuId: m,
+                            branchId: M
                         } = e;
                         r.default.dispatch({
                             type: "CREATE_CHANNEL_MODAL_SUBMIT"
                         });
-                        let M = {
+                        let L = {
                             type: n,
-                            name: f,
-                            permission_overwrites: E
+                            name: E,
+                            permission_overwrites: _
                         };
-                        if (null != _ && _ !== d.BITRATE_DEFAULT && (M.bitrate = _), null != p && p > 0 && (M.user_limit = p), null != h && (M.parent_id = h), n === d.ChannelTypes.GUILD_STORE) {
-                            if (null == S) throw Error("Unexpected missing SKU");
-                            M.sku_id = S, M.branch_id = m
+                        if (null != p && p !== c.BITRATE_DEFAULT && (L.bitrate = p), null != h && h > 0 && (L.user_limit = h), null != S && (L.parent_id = S), n === c.ChannelTypes.GUILD_STORE) {
+                            if (null == m) throw Error("Unexpected missing SKU");
+                            L.sku_id = m, L.branch_id = M
                         }
-                        return u.default.post({
-                            url: d.Endpoints.GUILD_CHANNELS(t),
-                            body: M,
+                        return o.default.post({
+                            url: c.Endpoints.GUILD_CHANNELS(t),
+                            body: L,
                             oldFormErrors: !0,
                             trackedActionData: {
                                 event: l.NetworkActionNames.CHANNEL_CREATE,
                                 properties: e => {
                                     var t, n;
                                     return (0, i.exact)({
-                                        is_private: E.length > 0,
+                                        is_private: _.length > 0,
                                         channel_id: null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.id,
                                         channel_type: null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.type
                                     })
                                 }
                             }
-                        }).then(e => (a.default.isOptInEnabled(t) && o.default.updateChannelOverrideSettings(t, e.body.id, {
-                            flags: c.ChannelNotificationSettingsFlags.OPT_IN_ENABLED
-                        }), s.default.checkGuildTemplateDirty(t), e), e => {
+                        }).then(e => (a.default.isOptInEnabled(t) && d.default.updateChannelOverrideSettings(t, e.body.id, {
+                            flags: f.ChannelNotificationSettingsFlags.OPT_IN_ENABLED
+                        }, u.NotificationLabels.OptedIn), s.default.checkGuildTemplateDirty(t), e), e => {
                             throw r.default.dispatch({
                                 type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE",
                                 errors: e.body
                             }), e
                         })
                     },
-                    createRoleSubscriptionTemplateChannel: (e, t, n, r) => u.default.post({
-                        url: d.Endpoints.GUILD_CHANNELS(e),
+                    createRoleSubscriptionTemplateChannel: (e, t, n, r) => o.default.post({
+                        url: c.Endpoints.GUILD_CHANNELS(e),
                         body: {
                             name: t,
                             type: n,
@@ -369,11 +370,11 @@
                         channelName: h,
                         mentionCount: c
                     })],
-                    A = o({
+                    L = o({
                         isSubscriptionGated: _,
                         needSubscriptionToAccess: p
                     });
-                return null != A && M.push(A), M.join(", ")
+                return null != L && M.push(L), M.join(", ")
             }
         },
         130037: function(e, t, n) {
@@ -983,8 +984,8 @@
                 S = n("648825"),
                 m = n("866595"),
                 M = n("432153"),
-                A = n("549590"),
-                L = n("59767"),
+                L = n("549590"),
+                A = n("59767"),
                 v = n("679027"),
                 C = n("971150"),
                 g = n("677795"),
@@ -1048,7 +1049,7 @@
             }
 
             function O(e, t) {
-                let n = (0, A.default)(t, e),
+                let n = (0, L.default)(t, e),
                     i = l.useMemo(() => {
                         var e, t;
                         return {
@@ -1060,7 +1061,7 @@
             }
 
             function F(e, t) {
-                let n = (0, A.default)(t, e),
+                let n = (0, L.default)(t, e),
                     i = (0, C.useEditStateStore)(t => {
                         var n;
                         return null === (n = t.listings[e]) || void 0 === n ? void 0 : n.roleColor
@@ -1082,7 +1083,7 @@
             }
 
             function D(e, t) {
-                let n = (0, A.default)(t, e),
+                let n = (0, L.default)(t, e),
                     i = l.useMemo(() => {
                         var e;
                         return null !== (e = null == n ? void 0 : n.color) && void 0 !== e ? e : T.DEFAULT_ROLE_COLOR
@@ -1091,7 +1092,7 @@
             }
 
             function b(e, t) {
-                let n = (0, A.default)(t, e),
+                let n = (0, L.default)(t, e),
                     i = l.useMemo(() => null == n ? C.AllChannelAccessOptions.SOME_CHANNELS_ACCESS : (0, m.isAllChannelsRole)(n) ? C.AllChannelAccessOptions.ALL_CHANNELS_ACCESS : C.AllChannelAccessOptions.SOME_CHANNELS_ACCESS, [n]);
                 return N(e, "channelAccessFormat", i)
             }
@@ -1121,7 +1122,7 @@
             }
 
             function W(e, t) {
-                let n = (0, A.default)(t, e),
+                let n = (0, L.default)(t, e),
                     i = (0, o.useStateFromStoresArray)([f.default], () => f.default.getGuildEmoji(t), [t]),
                     r = l.useMemo(() => null == n ? H : P(i, n.id), [i, n]);
                 return N(e, "tierEmojiIds", r)
@@ -1132,7 +1133,7 @@
                 let n = (0, h.useSubscriptionTrial)(e),
                     {
                         selectedOption: l
-                    } = (0, L.default)(null !== (t = null == n ? void 0 : n.active_trial) && void 0 !== t ? t : null);
+                    } = (0, A.default)(null !== (t = null == n ? void 0 : n.active_trial) && void 0 !== t ? t : null);
                 return N(e, "trialInterval", null != l ? l : null)
             }
 
@@ -1560,10 +1561,10 @@
                     return m
                 },
                 announceCreateTemplateChannels: function() {
-                    return A
+                    return L
                 },
                 announceDeleteTemplateChannels: function() {
-                    return L
+                    return A
                 },
                 createChannelsFromTemplateTierBenefits: function() {
                     return v
@@ -1641,7 +1642,7 @@
                 return i
             }
 
-            function A(e) {
+            function L(e) {
                 let t = M(e);
                 h[e] = t, t.forEach(e => {
                     let t = e.set("flags", p.ChannelFlags.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
@@ -1652,7 +1653,7 @@
                 })
             }
 
-            function L(e) {
+            function A(e) {
                 var t;
                 let n = null !== (t = h[e]) && void 0 !== t ? t : M(e);
                 n.forEach(e => {
@@ -1953,8 +1954,8 @@
                     role: r,
                     theme: m,
                     content: M = h.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
-                    className: A
-                } = e, L = (0, a.useStateFromStores)([f.default], () => f.default.getCurrentUser()), v = E.default.useName(n, null, L), C = (0, u.getRoleIconProps)(r), g = i.useMemo(() => (0, o.createMessageRecord)({
+                    className: L
+                } = e, A = (0, a.useStateFromStores)([f.default], () => f.default.getCurrentUser()), v = E.default.useName(n, null, A), C = (0, u.getRoleIconProps)(r), g = i.useMemo(() => (0, o.createMessageRecord)({
                     ...(0, d.default)({
                         channelId: "0",
                         content: M,
@@ -1962,16 +1963,16 @@
                         type: void 0,
                         messageReference: void 0,
                         allowedMentions: void 0,
-                        author: L
+                        author: A
                     }),
                     state: p.MessageStates.SENT,
                     id: "0"
-                }), [L, M]), T = {
+                }), [A, M]), T = {
                     nick: v,
                     colorString: null !== (t = r.colorString) && void 0 !== t ? t : void 0
                 };
                 return (0, l.jsx)("div", {
-                    className: s((0, _.getThemeClass)(m), S.container, A),
+                    className: s((0, _.getThemeClass)(m), S.container, L),
                     children: (0, l.jsx)(c.default, {
                         hideTimestamp: !0,
                         author: T,
@@ -2010,14 +2011,14 @@
                         isGroupStart: h,
                         hideSimpleEmbedContent: S = !0,
                         disableInteraction: m
-                    } = e, M = (0, a.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), A = (0, a.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (i = r.editedTimestamp) && void 0 !== i ? i : r.timestamp).valueOf()), {
-                        content: L
+                    } = e, M = (0, a.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), L = (0, a.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (i = r.editedTimestamp) && void 0 !== i ? i : r.timestamp).valueOf()), {
+                        content: A
                     } = (0, o.default)(r, {
                         hideSimpleEmbedContent: S,
-                        allowList: M.showListsAndHeaders || A.showListsAndHeaders,
-                        allowHeading: M.showListsAndHeaders || A.showListsAndHeaders,
-                        allowLinks: M.showMaskedLinks || A.showMaskedLinks,
-                        previewLinkTarget: M.showMaskedLinks || A.showMaskedLinks
+                        allowList: M.showListsAndHeaders || L.showListsAndHeaders,
+                        allowHeading: M.showListsAndHeaders || L.showListsAndHeaders,
+                        allowLinks: M.showMaskedLinks || L.showMaskedLinks,
+                        previewLinkTarget: M.showMaskedLinks || L.showMaskedLinks
                     });
                     return (0, l.jsx)(u.default, {
                         compact: _,
@@ -2031,7 +2032,7 @@
                             channel: E,
                             guildId: void 0
                         }),
-                        childrenMessageContent: (0, d.default)(e, L),
+                        childrenMessageContent: (0, d.default)(e, A),
                         disableInteraction: m
                     })
                 })

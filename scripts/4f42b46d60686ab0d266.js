@@ -177,8 +177,8 @@
                     invitable: p,
                     availableTags: O,
                     defaultSortOrder: U,
-                    defaultForumLayout: F,
-                    iconEmoji: L,
+                    defaultForumLayout: L,
+                    iconEmoji: F,
                     themeColor: R
                 } = t, G = r.default.getChannel(e);
                 return l.default.dispatch({
@@ -216,11 +216,11 @@
                             moderated: e.moderated
                         })),
                         default_sort_order: U,
-                        default_forum_layout: F,
-                        icon_emoji: null != L ? {
-                            id: L.id,
-                            name: L.name
-                        } : null === L ? null : void 0,
+                        default_forum_layout: L,
+                        icon_emoji: null != F ? {
+                            id: F.id,
+                            name: F.name
+                        } : null === F ? null : void 0,
                         theme_color: R
                     },
                     oldFormErrors: !0
@@ -302,41 +302,41 @@
                             type: "NOTIFICATION_SETTINGS_MODAL_CLOSE"
                         })
                     },
-                    updateGuildNotificationSettings(e, t, n) {
-                        let a = (0, d.getCurrentGuildSettings)(e);
+                    updateGuildNotificationSettings(e, t, n, a) {
+                        let l = (0, d.getCurrentGuildSettings)(e);
                         u.default.saveUserGuildSettings(e, t), i.default.dispatch({
                             type: "USER_GUILD_SETTINGS_GUILD_UPDATE",
                             guildId: e,
                             settings: t
-                        }), (0, d.trackGuildNotificationSettingsUpdate)(e, t, a, n)
+                        }), (0, d.trackGuildNotificationSettingsUpdate)(e, t, l, n, a)
                     },
-                    updateGuildAndChannelNotificationSettings(e, t, n) {
-                        let a = Object.keys(t.channel_overrides),
-                            l = (0, d.getCurrentGuildSettings)(e),
-                            r = (0, d.getManyCurrentChannelSettings)(e, a);
+                    updateGuildAndChannelNotificationSettings(e, t, n, a) {
+                        let l = Object.keys(t.channel_overrides),
+                            r = (0, d.getCurrentGuildSettings)(e),
+                            s = (0, d.getManyCurrentChannelSettings)(e, l);
                         u.default.saveUserGuildSettings(e, t), i.default.dispatch({
                             type: "USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE",
                             guildId: e,
                             settings: t
-                        }), (0, d.trackGuildNotificationSettingsUpdate)(e, t, l, n), Object.keys(t.channel_overrides).forEach(a => {
-                            let l = r.get(a);
-                            (0, d.trackChannelNotificationSettingsUpdate)(e, a, t.channel_overrides[a], l, n)
+                        }), (0, d.trackGuildNotificationSettingsUpdate)(e, t, r, n, a), Object.keys(t.channel_overrides).forEach(l => {
+                            let i = s.get(l);
+                            (0, d.trackChannelNotificationSettingsUpdate)(e, l, t.channel_overrides[l], i, n, a)
                         })
                     },
-                    updateGuildNotificationSettingsBulk(e, t) {
-                        let n = Object.keys(e),
-                            a = (0, d.getManyCurrentGuildSettings)(n);
+                    updateGuildNotificationSettingsBulk(e, t, n) {
+                        let a = Object.keys(e),
+                            l = (0, d.getManyCurrentGuildSettings)(a);
                         u.default.saveUserGuildSettingsBulk(e), Object.entries(e).forEach(e => {
-                            let [n, l] = e, u = a.get(n);
+                            let [a, u] = e, r = l.get(a);
                             i.default.dispatch({
                                 type: "USER_GUILD_SETTINGS_GUILD_UPDATE",
-                                guildId: n,
-                                settings: l
-                            }), (0, d.trackGuildNotificationSettingsUpdate)(n, l, u, t)
+                                guildId: a,
+                                settings: u
+                            }), (0, d.trackGuildNotificationSettingsUpdate)(a, u, r, t, n)
                         })
                     },
-                    updateChannelOverrideSettings(e, t, n, a) {
-                        let r = (0, d.getCurrentChannelSettings)(e, t);
+                    updateChannelOverrideSettings(e, t, n, a, r) {
+                        let s = (0, d.getCurrentChannelSettings)(e, t);
                         u.default.saveUserGuildSettings(e, {
                             channel_overrides: {
                                 [t]: n
@@ -346,18 +346,18 @@
                             guildId: e,
                             channelId: t,
                             settings: n
-                        }), l.AccessibilityAnnouncer.announce(c.default.Messages.A11Y_ANNOUNCEMENT_CHANNEL_SETTINGS_UPDATED), (0, d.trackChannelNotificationSettingsUpdate)(e, t, n, r, a)
+                        }), l.AccessibilityAnnouncer.announce(c.default.Messages.A11Y_ANNOUNCEMENT_CHANNEL_SETTINGS_UPDATED), (0, d.trackChannelNotificationSettingsUpdate)(e, t, n, s, a, r)
                     },
-                    updateChannelOverrideSettingsBulk(e, t, n) {
-                        let a = Object.keys(t),
-                            l = (0, d.getManyCurrentChannelSettings)(e, a);
+                    updateChannelOverrideSettingsBulk(e, t, n, a) {
+                        let l = Object.keys(t),
+                            r = (0, d.getManyCurrentChannelSettings)(e, l);
                         u.default.saveUserGuildSettings(e, {
                             channel_overrides: t
                         }), i.default.dispatch({
                             type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK",
                             guildId: e,
                             overrides: t
-                        }), Object.keys(t).forEach(a => (0, d.trackChannelNotificationSettingsUpdate)(e, a, t[a], l.get(a), n))
+                        }), Object.keys(t).forEach(l => (0, d.trackChannelNotificationSettingsUpdate)(e, l, t[l], r.get(l), n, a))
                     },
                     setForumThreadsCreated(e, t) {
                         let n = t ? f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON : f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF,
@@ -365,7 +365,7 @@
                             l = r.default.getChannelFlags(e);
                         this.updateChannelOverrideSettings(e.guild_id, e.id, {
                             flags: l & ~a | n
-                        })
+                        }, d.NotificationLabel.forumThreadsCreated(t))
                     },
                     async setAccountFlag(e, t) {
                         let n = r.default.accountNotificationSettings.flags,
@@ -507,10 +507,10 @@
                     let {
                         channel: t,
                         onSelect: n
-                    } = e, u = (0, f.default)(t), r = (0, _.default)(t), v = (0, M.default)(t), p = (0, o.default)(t), O = (0, h.default)(t), U = (0, c.default)(t), F = (0, s.default)({
+                    } = e, u = (0, f.default)(t), r = (0, _.default)(t), v = (0, M.default)(t), p = (0, o.default)(t), O = (0, h.default)(t), U = (0, c.default)(t), L = (0, s.default)({
                         id: t.id,
                         label: A.default.Messages.COPY_ID_THREAD
-                    }), L = (0, T.default)(t, "Context Menu"), R = (0, C.default)(t), G = (0, m.default)(t), y = (0, g.default)(t), D = (0, N.default)(t.id), b = (0, S.default)(t), P = (0, I.default)(t), H = (0, E.default)(t, {
+                    }), F = (0, T.default)(t, "Context Menu"), R = (0, C.default)(t), G = (0, m.default)(t), y = (0, g.default)(t), D = (0, N.default)(t.id), b = (0, S.default)(t), P = (0, I.default)(t), H = (0, E.default)(t, {
                         hoist: !0
                     }), x = (0, d.useAddToFavoritesItem)(t), j = (0, d.useRemoveFromFavoritesItem)(t);
                     return (0, a.jsxs)(l.Menu, {
@@ -521,7 +521,7 @@
                         children: [(0, a.jsx)(l.MenuGroup, {
                             children: r
                         }, "mark-as-read"), (0, a.jsxs)(l.MenuGroup, {
-                            children: [L, b, p, O, y, D, u, x]
+                            children: [F, b, p, O, y, D, u, x]
                         }, "thread-actions"), (0, a.jsxs)(l.MenuGroup, {
                             children: [v, G]
                         }, "notifications"), (0, a.jsx)(l.MenuGroup, {
@@ -529,7 +529,7 @@
                         }), (0, a.jsxs)(l.MenuGroup, {
                             children: [P, H, R, U]
                         }, "admin-actions"), (0, a.jsx)(l.MenuGroup, {
-                            children: F
+                            children: L
                         }, "developer-actions")]
                     })
                 }, [r.default.CONTEXT_MENU, r.default.CHANNEL_LIST_THREAD_MENU])
@@ -723,10 +723,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 getMuteTimes: function() {
-                    return S
+                    return h
                 },
                 default: function() {
-                    return C
+                    return g
                 }
             }), n("222007");
             var a = n("37983");
@@ -739,30 +739,31 @@
                 d = n("519705"),
                 o = n("319165"),
                 f = n("282109"),
-                c = n("679653"),
-                _ = n("49111"),
-                E = n("468200"),
-                T = n("782340");
-            let S = () => [{
-                    value: E.MuteUntilSeconds.MINUTES_15,
-                    label: T.default.Messages.MUTE_DURATION_15_MINUTES
+                c = n("34676"),
+                _ = n("679653"),
+                E = n("49111"),
+                T = n("468200"),
+                S = n("782340");
+            let h = () => [{
+                    value: T.MuteUntilSeconds.MINUTES_15,
+                    label: S.default.Messages.MUTE_DURATION_15_MINUTES
                 }, {
-                    value: E.MuteUntilSeconds.HOURS_1,
-                    label: T.default.Messages.MUTE_DURATION_1_HOUR
+                    value: T.MuteUntilSeconds.HOURS_1,
+                    label: S.default.Messages.MUTE_DURATION_1_HOUR
                 }, {
-                    value: E.MuteUntilSeconds.HOURS_3,
-                    label: T.default.Messages.MUTE_DURATION_3_HOURS
+                    value: T.MuteUntilSeconds.HOURS_3,
+                    label: S.default.Messages.MUTE_DURATION_3_HOURS
                 }, {
-                    value: E.MuteUntilSeconds.HOURS_8,
-                    label: T.default.Messages.MUTE_DURATION_8_HOURS
+                    value: T.MuteUntilSeconds.HOURS_8,
+                    label: S.default.Messages.MUTE_DURATION_8_HOURS
                 }, {
-                    value: E.MuteUntilSeconds.HOURS_24,
-                    label: T.default.Messages.MUTE_DURATION_24_HOURS
+                    value: T.MuteUntilSeconds.HOURS_24,
+                    label: S.default.Messages.MUTE_DURATION_24_HOURS
                 }, {
-                    value: E.MuteUntilSeconds.ALWAYS,
-                    label: T.default.Messages.MUTE_DURATION_ALWAYS
+                    value: T.MuteUntilSeconds.ALWAYS,
+                    label: S.default.Messages.MUTE_DURATION_ALWAYS
                 }],
-                h = e => {
+                C = e => {
                     let t = e > 0 ? i().add(e, "second").toISOString() : null;
                     return {
                         muted: !0,
@@ -773,43 +774,43 @@
                     }
                 };
 
-            function C(e, t) {
-                let [n, l] = (0, u.useStateFromStoresArray)([f.default], () => [f.default.isChannelMuted(e.guild_id, e.id), f.default.getChannelMuteConfig(e.guild_id, e.id)]), i = (0, o.useMutedUntilText)(l), E = (0, c.default)(e, !0);
+            function g(e, t) {
+                let [n, l] = (0, u.useStateFromStoresArray)([f.default], () => [f.default.isChannelMuted(e.guild_id, e.id), f.default.getChannelMuteConfig(e.guild_id, e.id)]), i = (0, o.useMutedUntilText)(l), T = (0, _.default)(e, !0);
 
-                function C(t) {
-                    t && e.type === _.ChannelTypes.GUILD_CATEGORY && (0, s.categoryCollapse)(e.id), d.default.updateChannelOverrideSettings(e.guild_id, e.id, {
+                function g(t) {
+                    t && e.type === E.ChannelTypes.GUILD_CATEGORY && (0, s.categoryCollapse)(e.id), d.default.updateChannelOverrideSettings(e.guild_id, e.id, {
                         muted: t
-                    })
+                    }, c.NotificationLabel.muted(t))
                 }
-                let g = T.default.Messages.MUTE_CHANNEL_GENERIC,
-                    N = T.default.Messages.UNMUTE_CHANNEL_GENERIC;
+                let N = S.default.Messages.MUTE_CHANNEL_GENERIC,
+                    M = S.default.Messages.UNMUTE_CHANNEL_GENERIC;
                 switch (e.type) {
-                    case _.ChannelTypes.GUILD_CATEGORY:
-                        g = T.default.Messages.MUTE_CATEGORY, N = T.default.Messages.UNMUTE_CATEGORY;
+                    case E.ChannelTypes.GUILD_CATEGORY:
+                        N = S.default.Messages.MUTE_CATEGORY, M = S.default.Messages.UNMUTE_CATEGORY;
                         break;
-                    case _.ChannelTypes.GROUP_DM:
-                        g = T.default.Messages.MUTE_CONVERSATION, N = T.default.Messages.UNMUTE_CONVERSATION;
+                    case E.ChannelTypes.GROUP_DM:
+                        N = S.default.Messages.MUTE_CONVERSATION, M = S.default.Messages.UNMUTE_CONVERSATION;
                         break;
-                    case _.ChannelTypes.DM:
-                        g = T.default.Messages.MUTE_CHANNEL.format({
-                            name: E
-                        }), N = T.default.Messages.UNMUTE_CHANNEL.format({
-                            name: E
+                    case E.ChannelTypes.DM:
+                        N = S.default.Messages.MUTE_CHANNEL.format({
+                            name: T
+                        }), M = S.default.Messages.UNMUTE_CHANNEL.format({
+                            name: T
                         });
                         break;
                     default:
-                        g = T.default.Messages.MUTE_CHANNEL_GENERIC, N = T.default.Messages.UNMUTE_CHANNEL_GENERIC
+                        N = S.default.Messages.MUTE_CHANNEL_GENERIC, M = S.default.Messages.UNMUTE_CHANNEL_GENERIC
                 }
                 return n ? (0, a.jsx)(r.MenuItem, {
                     id: "unmute-channel",
-                    label: N,
+                    label: M,
                     subtext: i,
-                    action: () => C(!1)
+                    action: () => g(!1)
                 }) : (0, a.jsx)(r.MenuItem, {
                     id: "mute-channel",
-                    label: g,
-                    action: () => C(!0),
-                    children: S().map(n => {
+                    label: N,
+                    action: () => g(!0),
+                    children: h().map(n => {
                         let {
                             value: l,
                             label: i
@@ -818,9 +819,9 @@
                             id: "".concat(l),
                             label: i,
                             action: () => (function(n) {
-                                e.type === _.ChannelTypes.GUILD_CATEGORY && (0, s.categoryCollapse)(e.id);
-                                let a = h(n);
-                                d.default.updateChannelOverrideSettings(e.guild_id, e.id, a, t)
+                                e.type === E.ChannelTypes.GUILD_CATEGORY && (0, s.categoryCollapse)(e.id);
+                                let a = C(n);
+                                d.default.updateChannelOverrideSettings(e.guild_id, e.id, a, c.NotificationLabels.Muted, t)
                             })(l)
                         }, l)
                     })
@@ -1790,17 +1791,17 @@
                 O = null,
                 U = ["name", "type", "topic_", "bitrate_", "userLimit_", "nsfw_", "flags_", "rateLimitPerUser_", "defaultThreadRateLimitPerUser", "defaultAutoArchiveDuration", "template", "defaultReactionEmoji", "rtcRegion", "videoQualityMode", "threadMetadata", "banner", "availableTags", "defaultSortOrder", "defaultForumLayout", "iconEmoji", "themeColor"];
 
-            function F(e) {
+            function L(e) {
                 let t = N.default.getChannel(e.channelId);
                 if (null == t) return R();
-                m = M.FormStates.OPEN, u = i = t, O = "location" in e && null != e.location ? e.location : null, l = "subsection" in e ? e.subsection : null, null != u && (u = u.set("nsfw", u.isNSFW())), r = N.default.getChannel(u.parent_id), s = u.getGuildId(), I = {}, L({
+                m = M.FormStates.OPEN, u = i = t, O = "location" in e && null != e.location ? e.location : null, l = "subsection" in e ? e.subsection : null, null != u && (u = u.set("nsfw", u.isNSFW())), r = N.default.getChannel(u.parent_id), s = u.getGuildId(), I = {}, F({
                     type: "CHANNEL_SETTINGS_SET_SECTION",
                     section: null != a ? a : M.ChannelSettingsSections.OVERVIEW,
                     subsection: l
                 })
             }
 
-            function L(e) {
+            function F(e) {
                 a = e.section, l = e.subsection, null != u && a === M.ChannelSettingsSections.INSTANT_INVITES && (v = !0, E.default.get({
                     url: M.Endpoints.INSTANT_INVITES(u.id),
                     oldFormErrors: !0
@@ -1885,9 +1886,9 @@
             }
             D.displayName = "ChannelSettingsStore";
             let b = new D(T.default, {
-                CHANNEL_SETTINGS_INIT: F,
+                CHANNEL_SETTINGS_INIT: L,
                 CHANNEL_SETTINGS_OPEN: function(e) {
-                    p = !0, F(e)
+                    p = !0, L(e)
                 },
                 CHANNEL_SETTINGS_SUBMIT: function() {
                     m = M.FormStates.SUBMITTING, I = {}
@@ -1946,7 +1947,7 @@
                         invitable: _
                     })), null != E && (u = u.set("defaultAutoArchiveDuration", E)), null != T && (u = u.set("template", T)), null != n && (u = u.set("type", n)), void 0 !== h && (u = u.set("rtcRegion", h)), null != C && (u = u.set("videoQualityMode", C)), void 0 !== S && (u = u.set("defaultReactionEmoji", S)), null != g && (u = u.set("availableTags", g)), null != N && (u = u.set("defaultSortOrder", N)), null != M && (u = u.set("defaultForumLayout", M)), void 0 !== m && (u = u.set("iconEmoji", m)), null != I && (u = u.set("themeColor", I)), G()
                 },
-                CHANNEL_SETTINGS_SET_SECTION: L,
+                CHANNEL_SETTINGS_SET_SECTION: F,
                 CHANNEL_SETTINGS_LOADED_INVITES: function(e) {
                     A = {}, e.invites.forEach(e => {
                         A[e.code] = y(e)
