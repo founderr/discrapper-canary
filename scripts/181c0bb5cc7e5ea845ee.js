@@ -1248,7 +1248,7 @@
                             },
                             oldFormErrors: !0
                         }).then(e => {
-                            if (null == e.body || "65de3a2696b4faa1dea579e59173fce9cccc08d3" === e.body.hash) return this._handleUpdateNotAvailable();
+                            if (null == e.body || "65d6f8f348bcd943e141356d075eb7830c3c45fc" === e.body.hash) return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
                             if (Date.now() - f > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
