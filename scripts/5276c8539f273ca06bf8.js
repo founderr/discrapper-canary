@@ -29,13 +29,13 @@
                 _ = t("42203"),
                 L = t("305961"),
                 g = t("27618"),
-                p = t("697218"),
-                v = t("476765"),
+                v = t("697218"),
+                p = t("476765"),
                 I = t("483093"),
                 A = t("782340"),
                 S = t("159260");
-            let R = (0, v.uid)(),
-                j = (0, v.uid)();
+            let R = (0, p.uid)(),
+                j = (0, p.uid)();
 
             function V(e) {
                 return 1 === e.type
@@ -62,7 +62,7 @@
             }
 
             function B(e) {
-                let l = (0, T.computeChannelName)(e, p.default, g.default);
+                let l = (0, T.computeChannelName)(e, v.default, g.default);
                 return {
                     tag: {
                         type: M.RichTagTypes.CHANNEL,
@@ -160,7 +160,7 @@
                     }), l.forEach(e => {
                         e in t && (a[e] = D(t[e]))
                     }), a
-                })(n, s, o), [n, s, o]), m = r.useMemo(() => Object.keys(u), [u]), [T, x] = r.useState(""), [H, N] = r.useState(!1), [g, p] = r.useState(!1), [v, I] = r.useState(!1), {
+                })(n, s, o), [n, s, o]), m = r.useMemo(() => Object.keys(u), [u]), [T, x] = r.useState(""), [H, N] = r.useState(!1), [g, v] = r.useState(!1), [p, I] = r.useState(!1), {
                     sections: O,
                     sectionCounts: U
                 } = r.useMemo(() => {
@@ -188,7 +188,7 @@
                         }).map(e => e.row.record.id);
                     i(new Set(t), new Set(a))
                 }, [i]), F = () => {
-                    N(!1), p(!1)
+                    N(!1), v(!1)
                 };
                 r.useEffect(() => {
                     let e = setTimeout(() => {
@@ -199,7 +199,7 @@
                     }
                 }, [H, g]);
                 let k = (e, l, t) => {
-                        t.stopPropagation(), t.preventDefault(), 2 === l ? N(e) : (1 === l || N(e), p(e))
+                        t.stopPropagation(), t.preventDefault(), 2 === l ? N(e) : (1 === l || N(e), v(e))
                     },
                     P = r.useCallback(e => {
                         let l = {
@@ -263,11 +263,11 @@
                             inputProps: {
                                 "aria-labelledby": R,
                                 "aria-controls": j,
-                                "aria-expanded": v,
+                                "aria-expanded": p,
                                 onFocus: e => k(!0, 2, e),
                                 onBlur: e => k(!1, 2, e)
                             }
-                        }), v && (0, d.jsx)("div", {
+                        }), p && (0, d.jsx)("div", {
                             className: S.resultsListParent,
                             onFocus: e => k(!0, 1, e),
                             onBlur: e => k(!1, 1, e),
@@ -487,8 +487,8 @@
                 let {
                     guildId: g
                 } = e, {
-                    analyticsLocations: p
-                } = (0, c.default)(), v = null !== (l = null == p ? void 0 : p[0]) && void 0 !== l ? l : null, I = (0, x.useCanAccessBulkBanningFeature)(g, v), {
+                    analyticsLocations: v
+                } = (0, c.default)(), p = null !== (l = null == v ? void 0 : v[0]) && void 0 !== l ? l : null, I = (0, x.useCanAccessBulkBanningFeature)(g, p), {
                     selectedUserIds: A,
                     clearSelection: S
                 } = (0, H.default)(g), R = A.size > 0, j = async (e, l, t, a) => {
@@ -500,7 +500,7 @@
                             target_user_ids: [...A],
                             mod_user_id: m.default.getId(),
                             successful_user_ids: n.body.banned_users,
-                            location: v
+                            location: p
                         })
                     } catch (e) {
                         (0, o.showToast)((0, o.createToast)(_.default.Messages.BAN_MULTIPLE_FAILED_TOAST, o.ToastType.FAILURE))
@@ -548,7 +548,7 @@
                                     action_type: T.ModerationActionType.BAN,
                                     target_user_ids: [...A],
                                     mod_user_id: m.default.getId(),
-                                    location: v
+                                    location: p
                                 }), (0, o.openModalLazy)(async () => {
                                     let {
                                         default: e
@@ -711,8 +711,8 @@
                 _ = t("337092"),
                 L = t("850646"),
                 g = t("894282"),
-                p = t("474507");
-            let v = {
+                v = t("474507");
+            let p = {
                     transform: "translate3d(15%, 0, 0)",
                     opacity: .3
                 },
@@ -767,13 +767,13 @@
                                 let l = M.default.getEnhancedMember(t.id, e),
                                     a = M.default.getLastRefreshTimestamp(t.id),
                                     n = null != l && l.refreshTimestamp === a;
-                                return null != l && 0 !== a && n ? O ? I : v : A
+                                return null != l && 0 !== a && n ? O ? I : p : A
                             },
                             enter: A,
                             config: S
                         });
                     return (0, a.jsxs)("table", {
-                        className: i(p.table, s),
+                        className: i(v.table, s),
                         children: [(0, a.jsx)(N.default, {
                             guildId: t.id,
                             currentPagedMembers: l
@@ -865,8 +865,8 @@
                 _ = t("466818"),
                 L = t("178406"),
                 g = t("645266"),
-                p = t("624663"),
-                v = t("413989"),
+                v = t("624663"),
+                p = t("413989"),
                 I = t("49111"),
                 A = t("782340"),
                 S = t("368715"),
@@ -887,16 +887,16 @@
                         requireCommunicationDisabled: !s.requireCommunicationDisabled
                     })
                 }, [l, s, i]), m = n.useCallback(() => {
-                    !C && i(H.MemberSafetyFlagType.UNUSUAL_ACCOUNT_ACTIVITY), (0, g.updateSearchState)(l, {
+                    s.requireUnusualAccountActivity && i(H.MemberSafetyFlagType.UNUSUAL_ACCOUNT_ACTIVITY), (0, g.updateSearchState)(l, {
                         ...s,
                         requireUnusualAccountActivity: !s.requireUnusualAccountActivity
                     })
-                }, [C, l, s, i]), f = n.useCallback(() => {
-                    !C && i(H.MemberSafetyFlagType.USERNAME_QUARANTINED), (0, g.updateSearchState)(l, {
+                }, [l, s, i]), f = n.useCallback(() => {
+                    !s.requireUsernameQuarantined && i(H.MemberSafetyFlagType.USERNAME_QUARANTINED), (0, g.updateSearchState)(l, {
                         ...s,
                         requireUsernameQuarantined: !s.requireUsernameQuarantined
                     })
-                }, [C, l, s, i]);
+                }, [l, s, i]);
                 return (0, a.jsx)(u.Menu, {
                     navId: "member-safety-flags",
                     onClose: t,
@@ -1001,7 +1001,7 @@
                     selectedUserIds: h,
                     addUsers: M,
                     clearSelection: T
-                } = (0, p.default)(t), x = C.requireUnusualDmActivity || C.requireCommunicationDisabled || C.requireUnusualAccountActivity || C.requireUsernameQuarantined, H = C.selectedRoleIds.size > 0, [N, g] = n.useState(null == r.default.get(b, null)), D = n.useCallback(() => {
+                } = (0, v.default)(t), x = C.requireUnusualDmActivity || C.requireCommunicationDisabled || C.requireUnusualAccountActivity || C.requireUsernameQuarantined, H = C.selectedRoleIds.size > 0, [N, g] = n.useState(null == r.default.get(b, null)), D = n.useCallback(() => {
                     r.default.set(b, Date.now()), g(!1)
                 }, []), {
                     analyticsLocations: B
@@ -1047,7 +1047,7 @@
                                 let {
                                     closePopout: l
                                 } = e;
-                                return (0, a.jsx)(v.default, {
+                                return (0, a.jsx)(p.default, {
                                     guildId: t,
                                     onClose: l
                                 })
@@ -1246,7 +1246,7 @@
                 let {
                     guildId: l,
                     onClose: t
-                } = e, s = (0, h.useTrackMemberFilterRolesUsed)(l), C = (0, m.default)([M.default], () => M.default.getSearchStateByGuildId(l), [l], c), [d, u] = n.useState(C.selectedRoleIds), g = (0, E.useRoleRows)(l, L, !0), p = (e, t) => {
+                } = e, s = (0, h.useTrackMemberFilterRolesUsed)(l), C = (0, m.default)([M.default], () => M.default.getSearchStateByGuildId(l), [l], c), [d, u] = n.useState(C.selectedRoleIds), g = (0, E.useRoleRows)(l, L, !0), v = (e, t) => {
                     let {
                         record: n
                     } = e;
@@ -1275,11 +1275,11 @@
                             })]
                         })
                     }, n.id)
-                }, v = (e, l) => g.reduce((t, a) => {
+                }, p = (e, l) => g.reduce((t, a) => {
                     let {
                         record: n
                     } = a, s = e.has(n.id);
-                    return o(l.toLowerCase(), n.name.toLowerCase()) ? t.push(p(a, s)) : s && t.push(p(a, s)), t
+                    return o(l.toLowerCase(), n.name.toLowerCase()) ? t.push(v(a, s)) : s && t.push(v(a, s)), t
                 }, []), I = n.useCallback(e => {
                     (0, T.updateSearchState)(l, {
                         selectedRoleIds: e
@@ -1299,7 +1299,7 @@
                     multiSelect: !0,
                     showScrollbar: !0,
                     autoFocus: !0,
-                    children: e => v(d, e)
+                    children: e => p(d, e)
                 })
             }
         },
@@ -1332,8 +1332,8 @@
                 _ = t("697218"),
                 L = t("91551"),
                 g = t("4845"),
-                p = t("635731"),
-                v = t("491401"),
+                v = t("635731"),
+                p = t("491401"),
                 I = t("663745"),
                 A = t("781896"),
                 S = t("864982"),
@@ -1391,7 +1391,7 @@
                                 onMouseEnter: l,
                                 onMouseLeave: t
                             } = e;
-                            return (0, a.jsx)(v.default, {
+                            return (0, a.jsx)(p.default, {
                                 width: 20,
                                 height: 20,
                                 onMouseEnter: l,
@@ -1421,7 +1421,7 @@
                                 onMouseEnter: l,
                                 onMouseLeave: t
                             } = e;
-                            return (0, a.jsx)(p.default, {
+                            return (0, a.jsx)(v.default, {
                                 width: 20,
                                 height: 20,
                                 onMouseEnter: l,
@@ -1639,13 +1639,13 @@
                         removeUser: _
                     } = (0, w.default)(t.guildId), {
                         analyticsLocations: L
-                    } = (0, h.default)(), g = null !== (l = null == L ? void 0 : L[0]) && void 0 !== l ? l : null, p = (0, D.useCanAccessBulkBanningFeature)(t.guildId, g, !0), v = (0, D.useCanBulkBanUser)(t.guildId, p, t.userId), S = n.useCallback(e => {
-                        e.stopPropagation(), e.preventDefault(), null != t && v && (T.has(t.userId) ? _(t.userId) : x([t.userId]))
-                    }, [x, v, t, _, T]);
+                    } = (0, h.default)(), g = null !== (l = null == L ? void 0 : L[0]) && void 0 !== l ? l : null, v = (0, D.useCanAccessBulkBanningFeature)(t.guildId, g, !0), p = (0, D.useCanBulkBanUser)(t.guildId, v, t.userId), S = n.useCallback(e => {
+                        e.stopPropagation(), e.preventDefault(), null != t && p && (T.has(t.userId) ? _(t.userId) : x([t.userId]))
+                    }, [x, p, t, _, T]);
                     return (0, a.jsxs)(a.Fragment, {
-                        children: [p && (0, a.jsx)(m.Tooltip, {
+                        children: [v && (0, a.jsx)(m.Tooltip, {
                             tooltipClassName: Y.disabledActionTooltip,
-                            shouldShow: !v,
+                            shouldShow: !p,
                             text: P.default.Messages.MEMBER_SAFETY_ACTION_PERMISSIONS_MISSING,
                             children: e => (0, a.jsx)("td", {
                                 ...e,
@@ -1656,7 +1656,7 @@
                                         children: (0, a.jsx)(m.Checkbox, {
                                             type: m.Checkbox.Types.INVERTED,
                                             value: T.has(t.userId),
-                                            disabled: !v
+                                            disabled: !p
                                         })
                                     })
                                 })
@@ -1806,7 +1806,7 @@
             "use strict";
             t.r(l), t.d(l, {
                 default: function() {
-                    return v
+                    return p
                 }
             });
             var a = t("37983"),
@@ -1951,7 +1951,7 @@
                 })
             }
 
-            function p(e) {
+            function v(e) {
                 let {
                     type: l
                 } = e, t = _(l);
@@ -1964,7 +1964,7 @@
                     }
                 })
             }
-            var v = n.memo(function(e) {
+            var p = n.memo(function(e) {
                 let {
                     inviteCode: l,
                     inviterUser: t,
@@ -1979,7 +1979,7 @@
                     case !o.hasTooltip || o.hasTooltip && (null == n || null == t):
                         if (s === M.JoinSourceType.INTEGRATION && null != C) return (0, a.jsxs)("div", {
                             className: x.inviteContainer,
-                            children: [(0, a.jsx)(p, {
+                            children: [(0, a.jsx)(v, {
                                 type: C
                             }), (0, a.jsx)(i.Text, {
                                 variant: "text-sm/medium",
@@ -2051,19 +2051,19 @@
                             guild: s
                         })
                     })
-                }, [s, d]), _ = (0, u.default)([h.default], () => h.default.getSearchStateByGuildId(s.id), [s.id], r), L = (0, E.useTrackMemberSearchUsed)(s.id), [g, p] = n.useState(_.query), v = n.useCallback(e => {
+                }, [s, d]), _ = (0, u.default)([h.default], () => h.default.getSearchStateByGuildId(s.id), [s.id], r), L = (0, E.useTrackMemberSearchUsed)(s.id), [g, v] = n.useState(_.query), p = n.useCallback(e => {
                     let l = e.trim();
                     l.length > 0 && L(), (0, M.updateSearchState)(s.id, {
                         query: l
                     })
-                }, [s.id, L]), I = n.useCallback(o(v, 300), [v]), A = n.useCallback(e => {
-                    p(e), I(e)
+                }, [s.id, L]), I = n.useCallback(o(p, 300), [p]), A = n.useCallback(e => {
+                    v(e), I(e)
                 }, [I]), S = n.useCallback(() => {
-                    p(""), v("")
-                }, [v]);
+                    v(""), p("")
+                }, [p]);
                 return n.useImperativeHandle(l, () => ({
                     resetSearchText() {
-                        p("")
+                        v("")
                     }
                 })), (0, a.jsxs)("div", {
                     className: i(H.searchHeaderContainer),
@@ -2154,7 +2154,7 @@
                             onConfirm: _
                         })
                     })
-                }, [_, N]), g = new Intl.NumberFormat(M.default.getLocale()).format(C), p = (0, f.useCanAccessInviteCodeFeature)(l.id), v = (0, f.useCanAccessBulkBanningFeature)(l.id, u.default.MEMBER_SAFETY_PAGE), I = n.useMemo(() => 1 + (p ? 1 : 0) + (v ? 1 : 0), [p, v]);
+                }, [_, N]), g = new Intl.NumberFormat(M.default.getLocale()).format(C), v = (0, f.useCanAccessInviteCodeFeature)(l.id), p = (0, f.useCanAccessBulkBanningFeature)(l.id, u.default.MEMBER_SAFETY_PAGE), I = n.useMemo(() => 1 + (v ? 1 : 0) + (p ? 1 : 0), [v, p]);
                 return 0 === C ? null : (0, a.jsxs)("tr", {
                     className: i(x.newMembersNotice),
                     onClick: L,
