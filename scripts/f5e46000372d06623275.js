@@ -56,8 +56,9 @@
                     })
                 },
                 fetchPins(e) {
-                    let s = i.default.getPinnedMessages(e);
-                    (null == s || !s.loaded && !s.loading) && (n.default.dispatch({
+                    let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                        t = i.default.getPinnedMessages(e);
+                    (s || null == t || !t.loaded && !t.loading) && (n.default.dispatch({
                         type: "LOAD_PINNED_MESSAGES",
                         channelId: e
                     }), a.default.get({
