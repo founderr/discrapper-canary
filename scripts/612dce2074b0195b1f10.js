@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["39608"], {
+    ["87474"], {
         704426: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -31,6 +31,46 @@
                         d: "M20.7 12.7a1 1 0 0 0 0-1.4l-5-5a1 1 0 1 0-1.4 1.4l3.29 3.3H4a1 1 0 1 0 0 2h13.59l-3.3 3.3a1 1 0 0 0 1.42 1.4l5-5Z",
                         className: o
                     })
+                })
+            }
+        },
+        167338: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                ChatAlertIcon: function() {
+                    return l
+                }
+            });
+            var r = n("37983");
+            n("884691");
+            var i = n("669491"),
+                u = n("75196");
+            let l = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: l = i.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: o = "",
+                    ...s
+                } = e;
+                return (0, r.jsxs)("svg", {
+                    ...(0, u.default)(s),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: [(0, r.jsx)("path", {
+                        fill: "string" == typeof l ? l : l.css,
+                        d: "M12.03 21.5c-.05.28-.27.5-.54.5H2.2a1 1 0 0 1-.75-1.66l2.06-2.37a.52.52 0 0 0 .04-.61 10 10 0 1 1 18.32-3.77c-.01.12-.17.14-.22.04a3.06 3.06 0 0 0-5.3 0l-3.95 6.9c-.19.32-.3.65-.37.98Z",
+                        className: o
+                    }), (0, r.jsx)("path", {
+                        fill: "string" == typeof l ? l : l.css,
+                        fillRule: "evenodd",
+                        d: "M18.09 14.63c.4-.7 1.43-.7 1.82 0l3.96 6.9c.38.66-.12 1.47-.91 1.47h-7.92c-.79 0-1.3-.81-.91-1.48l3.96-6.9Zm.46 1.87h.9c.3 0 .52.26.5.55l-.22 2.02c-.01.16-.17.26-.33.23a1.93 1.93 0 0 0-.8 0c-.16.03-.32-.07-.33-.23l-.21-2.02a.5.5 0 0 1 .5-.55ZM19 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z",
+                        clipRule: "evenodd",
+                        className: o
+                    })]
                 })
             }
         },
@@ -1459,7 +1499,7 @@
                     onCopyProductLink: f,
                     onTestDownload: I,
                     disabled: m = !1
-                } = e, L = (0, s.useListingThumbnailUrl)(t, 600), R = null !== t.price_tier ? (0, h.formatPrice)(t.price_tier, p.CurrencyCodes.USD) : void 0, v = (0, _.useProductType)(t);
+                } = e, L = (0, s.useListingThumbnailUrl)(t, 600), v = null !== t.price_tier ? (0, h.formatPrice)(t.price_tier, p.CurrencyCodes.USD) : void 0, R = (0, _.useProductType)(t);
                 return (0, r.jsxs)(l.ClickableContainer, {
                     tag: "article",
                     className: u(E.productCardClickable, E.productCard, {
@@ -1509,14 +1549,14 @@
                                 children: [(0, r.jsx)(l.Text, {
                                     variant: "text-md/normal",
                                     color: "header-secondary",
-                                    children: R
-                                }), null != v ? (0, r.jsxs)(r.Fragment, {
+                                    children: v
+                                }), null != R ? (0, r.jsxs)(r.Fragment, {
                                     children: [(0, r.jsx)("div", {
                                         className: E.dotSeparator
                                     }), (0, r.jsx)(l.Text, {
                                         variant: "text-md/normal",
                                         color: "header-secondary",
-                                        children: v
+                                        children: R
                                     })]
                                 }) : null]
                             }), (0, r.jsx)(a.default, {
@@ -1906,7 +1946,7 @@
                     return L
                 },
                 useSubscriptionTrial: function() {
-                    return R
+                    return v
                 }
             }), n("222007"), n("424973");
             var r = n("884691"),
@@ -2076,7 +2116,7 @@
                         error: n
                     }
                 },
-                R = e => (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getSubscriptionTrial(e) : null)
+                v = e => (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getSubscriptionTrial(e) : null)
         },
         136185: function(e, t, n) {
             "use strict";

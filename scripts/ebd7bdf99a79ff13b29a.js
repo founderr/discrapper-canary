@@ -78,6 +78,12 @@
                 },
                 getRaidAlertResolveCTAText: function() {
                     return U
+                },
+                getUserIdOfAutomodAction: function() {
+                    return C
+                },
+                IS_BACKWARDS_COMPAT_RAID_TYPE: function() {
+                    return y
                 }
             }), n("222007");
             var o = n("884691"),
@@ -290,6 +296,11 @@
                         return O.default.Messages.GUILD_ANTIRAID_EMBED_RESOLVE_REASON_OTHER
                 }
             }
+
+            function C(e) {
+                return M(e, a.AutomodNotificationEmbedKeys.ACTION_BY_USER_ID)
+            }
+            let y = void 0
         },
         143460: function(e, t, n) {
             "use strict";
