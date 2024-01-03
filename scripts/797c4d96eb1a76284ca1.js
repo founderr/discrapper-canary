@@ -73,20 +73,20 @@
                 A = a("555759"),
                 T = a("271938"),
                 y = a("42203"),
-                S = a("525065"),
-                v = a("305961"),
-                E = a("957255"),
+                v = a("525065"),
+                E = a("305961"),
+                S = a("957255"),
                 m = a("824563"),
-                M = a("27618"),
-                h = a("18494"),
+                h = a("27618"),
+                M = a("18494"),
                 N = a("101125"),
                 C = a("697218"),
                 g = a("800762"),
                 O = a("953998"),
                 b = a("387111"),
-                j = a("550766"),
+                G = a("550766"),
                 L = a("191225"),
-                G = a("706508"),
+                j = a("706508"),
                 x = a("612696"),
                 U = a("871388"),
                 F = a("152311"),
@@ -109,7 +109,7 @@
                         } = e;
                         return a.has(t.id)
                     }) : a
-                }, [t, e]), Q = (0, R.default)(), q = (0, i.useStateFromStores)([E.default], () => null == e || e.isPrivate() || E.default.can(P.Permissions.SEND_MESSAGES, e), [e]), W = (0, i.useStateFromStoresArray)([O.default], () => [...z.map(e => null != e.application_id && O.default.getState(e.application_id, P.ActivityActionTypes.JOIN) === P.ActivityActionStates.LOADING), ...K.map(e => O.default.getState(e.application_id, P.ActivityActionTypes.JOIN) === P.ActivityActionStates.LOADING)], [z, K]), Z = (0, r.default)([...z.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...K.map(e => e.application_id)]), $ = null == e ? void 0 : e.id, ee = (0, i.useStateFromStoresArray)([y.default, v.default, S.default, M.default, h.default, g.default, E.default], () => [...z.map(e => (0, x.default)({
+                }, [t, e]), Q = (0, R.default)(), q = (0, i.useStateFromStores)([S.default], () => null == e || e.isPrivate() || S.default.can(P.Permissions.SEND_MESSAGES, e), [e]), W = (0, i.useStateFromStoresArray)([O.default], () => [...z.map(e => null != e.application_id && O.default.getState(e.application_id, P.ActivityActionTypes.JOIN) === P.ActivityActionStates.LOADING), ...K.map(e => O.default.getState(e.application_id, P.ActivityActionTypes.JOIN) === P.ActivityActionStates.LOADING)], [z, K]), Z = (0, r.default)([...z.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...K.map(e => e.application_id)]), $ = null == e ? void 0 : e.id, ee = (0, i.useStateFromStoresArray)([y.default, E.default, v.default, h.default, M.default, g.default, S.default], () => [...z.map(e => (0, x.default)({
                     user: null != t ? t : H,
                     activity: e,
                     application: Z.find(t => (null == t ? void 0 : t.id) === e.application_id),
@@ -117,12 +117,12 @@
                     currentUser: H,
                     isEmbedded: (0, F.default)(e),
                     ChannelStore: y.default,
-                    GuildStore: v.default,
-                    GuildMemberCountStore: S.default,
-                    RelationshipStore: M.default,
-                    SelectedChannelStore: h.default,
+                    GuildStore: E.default,
+                    GuildMemberCountStore: v.default,
+                    RelationshipStore: h.default,
+                    SelectedChannelStore: M.default,
                     VoiceStateStore: g.default,
-                    PermissionStore: E.default
+                    PermissionStore: S.default
                 })), ...K.map(e => (0, x.default)({
                     user: null != t ? t : H,
                     activity: e,
@@ -131,12 +131,12 @@
                     currentUser: H,
                     isEmbedded: !0,
                     ChannelStore: y.default,
-                    GuildStore: v.default,
-                    GuildMemberCountStore: S.default,
-                    RelationshipStore: M.default,
-                    SelectedChannelStore: h.default,
+                    GuildStore: E.default,
+                    GuildMemberCountStore: v.default,
+                    RelationshipStore: h.default,
+                    SelectedChannelStore: M.default,
                     VoiceStateStore: g.default,
-                    PermissionStore: E.default
+                    PermissionStore: S.default
                 }))], [z, Z, $, H, K, t]), et = (0, i.useStateFromStoresArray)([c.default, T.default], () => z.map(e => e.type === P.ActivityTypes.LISTENING && null != t ? (0, p.default)(c.default, T.default, t, e) : void 0), [t, z]), ea = (0, s.useAnalyticsContext)();
                 if (!q) return null;
                 let en = (a, n) => {
@@ -154,9 +154,9 @@
                     },
                     ei = (i, d) => {
                         let u = y.default.getChannel(i),
-                            s = null == u ? void 0 : v.default.getGuild(u.guild_id);
+                            s = null == u ? void 0 : E.default.getGuild(u.guild_id);
                         if (null != u && null != s) {
-                            if (null != t) return j.sendEmbeddedActivityInviteUser({
+                            if (null != t) return G.sendEmbeddedActivityInviteUser({
                                 channelId: u.id,
                                 applicationId: d,
                                 userId: t.id,
@@ -177,7 +177,7 @@
                             }, {
                                 modalKey: "use-activity-items-embedded-invite-modal"
                             });
-                            if ((null == e ? void 0 : e.id) != null) return j.sendEmbeddedActivityInvite({
+                            if ((null == e ? void 0 : e.id) != null) return G.sendEmbeddedActivityInvite({
                                 activityChannelId: u.id,
                                 invitedChannelId: e.id,
                                 applicationId: d,
@@ -191,7 +191,7 @@
                             userId: t.id,
                             sessionId: e.session_id,
                             applicationId: e.application_id,
-                            channelId: h.default.getVoiceChannelId(),
+                            channelId: M.default.getVoiceChannelId(),
                             messageId: null,
                             intent: Y.ActivityIntent.PLAY,
                             embedded: (0, U.default)(e, P.ActivityFlags.EMBEDDED)
@@ -204,7 +204,7 @@
                             analyticsLocations: w
                         })
                     }, ed = async t => {
-                        await (0, G.default)({
+                        await (0, j.default)({
                             activity: t,
                             currentEmbeddedApplication: Q,
                             activityChannelId: null == e ? void 0 : e.id,
@@ -215,7 +215,7 @@
                     }, eu = [];
                 return null == X || X.forEach(a => {
                     let i = (null == t ? void 0 : t.id) != null && a.connections.has(null == t ? void 0 : t.id),
-                        d = E.default.can(P.Permissions.CREATE_INSTANT_INVITE, e);
+                        d = S.default.can(P.Permissions.CREATE_INSTANT_INVITE, e);
                     null != a.activity_id && !i && d && eu.push((0, n.jsx)(l.MenuItem, {
                         id: "invite-to-join-embedded",
                         label: k.default.Messages.USER_ACTIVITY_ACTION_INVITE_TO_JOIN,
@@ -304,7 +304,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return v
+                    return E
                 }
             });
             var n = a("37983");
@@ -324,29 +324,29 @@
                 A = a("44141"),
                 T = a("531674"),
                 y = a("49111"),
-                S = a("782340"),
-                v = (0, s.default)((0, u.default)(function(e) {
+                v = a("782340"),
+                E = (0, s.default)((0, u.default)(function(e) {
                     let {
                         channel: t,
                         selected: u,
                         onSelect: s
-                    } = e, r = t.isOwner(p.default.getId()), y = (0, A.default)(t), v = (0, T.default)(t), E = (0, _.default)(t, u), m = (0, c.default)({
+                    } = e, r = t.isOwner(p.default.getId()), y = (0, A.default)(t), E = (0, T.default)(t), S = (0, _.default)(t, u), m = (0, c.default)({
                         id: t.id,
-                        label: S.default.Messages.COPY_ID_CHANNEL
-                    }), M = (0, o.default)(t), h = (0, f.useAddToFavoritesItem)(t), N = (0, f.useRemoveFromFavoritesItem)(t), C = (0, I.default)(t);
+                        label: v.default.Messages.COPY_ID_CHANNEL
+                    }), h = (0, o.default)(t), M = (0, f.useAddToFavoritesItem)(t), N = (0, f.useRemoveFromFavoritesItem)(t), C = (0, I.default)(t);
                     return null == t || t.isManaged() ? null : (0, n.jsxs)(i.Menu, {
                         navId: "gdm-context",
-                        "aria-label": S.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+                        "aria-label": v.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                         onClose: d.closeContextMenu,
                         onSelect: s,
                         children: [(0, n.jsx)(i.MenuGroup, {
                             children: y
                         }), (0, n.jsxs)(i.MenuGroup, {
-                            children: [h, C]
+                            children: [M, C]
                         }), (0, n.jsxs)(i.MenuGroup, {
                             children: [r ? (0, n.jsx)(i.MenuItem, {
                                 id: "instant-invites",
-                                label: S.default.Messages.INSTANT_INVITES,
+                                label: v.default.Messages.INSTANT_INVITES,
                                 action: () => (0, i.openModalLazy)(async () => {
                                     let {
                                         default: e
@@ -365,22 +365,22 @@
                                         l.default.setIcon(t.id, a), null === (n = e.onClose) || void 0 === n || n.call(e)
                                     },
                                     multiple: !1,
-                                    "aria-label": S.default.Messages.CHANGE_ICON,
+                                    "aria-label": v.default.Messages.CHANGE_ICON,
                                     ...e,
                                     ref: a
                                 }),
-                                label: S.default.Messages.CHANGE_ICON
+                                label: v.default.Messages.CHANGE_ICON
                             }), null != t.icon ? (0, n.jsx)(i.MenuItem, {
                                 id: "remove-icon",
-                                label: S.default.Messages.REMOVE_ICON,
+                                label: v.default.Messages.REMOVE_ICON,
                                 action: () => l.default.setIcon(t.id, null)
                             }) : null]
                         }), (0, n.jsx)(i.MenuGroup, {
-                            children: M
-                        }), (0, n.jsx)(i.MenuGroup, {
-                            children: v
+                            children: h
                         }), (0, n.jsx)(i.MenuGroup, {
                             children: E
+                        }), (0, n.jsx)(i.MenuGroup, {
+                            children: S
                         }), (0, n.jsx)(i.MenuGroup, {
                             children: N
                         }), (0, n.jsx)(i.MenuGroup, {
@@ -555,7 +555,7 @@
                     id: "favorite-channel",
                     label: f(e, !0),
                     color: "danger",
-                    action: () => (0, l.openModalLazy)(async () => {
+                    action: () => e.type === r.ChannelTypes.GUILD_CATEGORY ? (0, l.openModalLazy)(async () => {
                         let {
                             default: t
                         } = await a.el("338052").then(a.bind(a, "338052"));
@@ -566,7 +566,7 @@
                             },
                             channel: e
                         })
-                    })
+                    }) : (0, s.removeFavoriteChannel)(e.id)
                 })
             }
         },

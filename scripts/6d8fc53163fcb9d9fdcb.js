@@ -1490,7 +1490,7 @@
                     id: "favorite-channel",
                     label: c(e, !0),
                     color: "danger",
-                    action: () => (0, i.openModalLazy)(async () => {
+                    action: () => e.type === o.ChannelTypes.GUILD_CATEGORY ? (0, i.openModalLazy)(async () => {
                         let {
                             default: t
                         } = await n.el("338052").then(n.bind(n, "338052"));
@@ -1501,7 +1501,7 @@
                             },
                             channel: e
                         })
-                    })
+                    }) : (0, s.removeFavoriteChannel)(e.id)
                 })
             }
         },
