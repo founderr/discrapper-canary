@@ -5589,6 +5589,16 @@
                 "guild-notifications-bottom-sheet-pill-background": {
                     light: "white.500",
                     dark: "primary.700"
+                },
+                "activity-card-icon-overlay": {
+                    dark: {
+                        color: "primary.600",
+                        opacity: .85
+                    },
+                    light: {
+                        color: "primary.600",
+                        opacity: .85
+                    }
                 }
             })
         },
