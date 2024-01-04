@@ -99,6 +99,9 @@
                 updateFavoriteChannels: function() {
                     return E
                 },
+                updateFavoriteChannelParent: function() {
+                    return A
+                },
                 toggleFavoriteServerMuted: function() {
                     return g
                 }
@@ -185,6 +188,12 @@
                             var n;
                             t.favoriteChannels[r.id].parentId = null !== (n = r.parent_id) && void 0 !== n ? n : "0"
                         }
+                }, i.UserSettingsDelay.FREQUENT_USER_ACTION)
+            }
+
+            function A(e, t) {
+                i.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                    n.favoriteChannels[e].parentId = null != t ? t : "0"
                 }, i.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 

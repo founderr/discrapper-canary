@@ -149,8 +149,11 @@
                 updateFavoriteChannels: function() {
                     return p
                 },
-                toggleFavoriteServerMuted: function() {
+                updateFavoriteChannelParent: function() {
                     return A
+                },
+                toggleFavoriteServerMuted: function() {
+                    return T
                 }
             }), n("222007");
             var a = n("249654"),
@@ -238,7 +241,13 @@
                 }, l.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
-            function A() {
+            function A(e, t) {
+                l.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                    n.favoriteChannels[e].parentId = null != t ? t : "0"
+                }, l.UserSettingsDelay.FREQUENT_USER_ACTION)
+            }
+
+            function T() {
                 l.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
                     e.muted = !e.muted
                 }, l.UserSettingsDelay.INFREQUENT_USER_ACTION)
@@ -293,10 +302,10 @@
                     }
                 }, [T, S, null == t ? void 0 : t.id]), g = i.useCallback(() => {
                     (null == p ? void 0 : p.id) != null && (d.default.open(p.id, E.GuildSettingsSections.INTEGRATIONS), s.default.setSection(E.IntegrationSettingsSections.APPLICATION, null == t ? void 0 : t.id))
-                }, [null == t ? void 0 : t.id, null == p ? void 0 : p.id]), M = i.useCallback(() => {
+                }, [null == t ? void 0 : t.id, null == p ? void 0 : p.id]), U = i.useCallback(() => {
                     r.default.open(E.UserSettingsSections.AUTHORIZED_APPS)
-                }, []), U = _ === E.AppContext.POPOUT;
-                if (!(null == t ? void 0 : t.bot) || !A || U || !I && !v) return null;
+                }, []), M = _ === E.AppContext.POPOUT;
+                if (!(null == t ? void 0 : t.bot) || !A || M || !I && !v) return null;
                 let R = [];
                 return I && R.push((0, a.jsx)(u.MenuItem, {
                     id: "manage-integration",
@@ -305,7 +314,7 @@
                 }, "manage-integration")), v && R.push((0, a.jsx)(u.MenuItem, {
                     id: "manage-authorized-app",
                     label: N.default.Messages.MANAGE_AUTHORIZED_APP,
-                    action: M
+                    action: U
                 }, "manage-authorized-app")), R
             }
         },
@@ -567,17 +576,17 @@
                             context: I
                         } = e,
                         g = (0, s.useStateFromStores)([N.default], () => N.default.getGuild(null != S ? S : T.guild_id)),
-                        M = (0, s.useStateFromStores)([C.default], () => C.default.getUser(l)),
-                        U = (0, E.default)({
-                            user: M,
+                        U = (0, s.useStateFromStores)([C.default], () => C.default.getUser(l)),
+                        M = (0, E.default)({
+                            user: U,
                             guildId: null == g ? void 0 : g.id,
                             channel: T,
                             context: I
                         }),
                         {
                             commands: R,
-                            sectionDescriptors: m,
-                            loading: h
+                            sectionDescriptors: h,
+                            loading: m
                         } = o.useDiscovery(T, {
                             commandType: n
                         }, {
@@ -587,16 +596,16 @@
                             sections: O
                         } = i.useMemo(() => {
                             let e = {};
-                            return m.forEach(t => {
+                            return h.forEach(t => {
                                 e[t.id] = t
                             }), {
                                 sections: e
                             }
-                        }, [m]),
-                        y = i.useRef(h.current);
+                        }, [h]),
+                        y = i.useRef(m.current);
                     i.useEffect(() => {
-                        h.current !== y.current && (y.current = h.current, null == v || v())
-                    }, [h, v]);
+                        m.current !== y.current && (y.current = m.current, null == v || v())
+                    }, [m, v]);
                     let D = i.useCallback(e => {
                         u(null != T, "menu item should not show if channel is null");
                         let t = O[e.applicationId],
@@ -625,7 +634,7 @@
                             }
                         }, e.id)
                     }, [T, g, l, O]);
-                    return h.current ? t = (0, a.jsx)(r.MenuItem, {
+                    return m.current ? t = (0, a.jsx)(r.MenuItem, {
                         id: "menu-commands-placeholder",
                         render: () => (0, a.jsx)(f.default, {}),
                         disabled: !0
@@ -633,8 +642,8 @@
                         id: "menu-commands-empty",
                         label: p.default.Messages.APPLICATION_COMMAND_NO_COMMANDS,
                         disabled: !0
-                    }, "menu-commands-empty") : R.map(D), null != U && (t = (0, a.jsxs)(a.Fragment, {
-                        children: [t, (0, a.jsx)(r.MenuSeparator, {}, "separator"), U]
+                    }, "menu-commands-empty") : R.map(D), null != M && (t = (0, a.jsxs)(a.Fragment, {
+                        children: [t, (0, a.jsx)(r.MenuSeparator, {}, "separator"), M]
                     }))), (0, a.jsx)(r.MenuItem, {
                         id: "apps",
                         label: p.default.Messages.APPS,

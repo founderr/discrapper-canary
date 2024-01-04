@@ -74,7 +74,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return U
                 }
             });
             var a = n("37983");
@@ -107,7 +107,7 @@
                 } = e, l = (0, M.default)(t), u = (0, A.default)(t), o = (0, S.default)(t), _ = (0, E.default)(t), N = (0, c.default)(t), C = (0, d.default)(t), L = (0, g.default)(t), h = (0, r.default)({
                     id: t.id,
                     label: O.default.Messages.COPY_ID_CHANNEL
-                }), p = (0, f.useShouldUseNewNotificationSystem)("ChannelCategoryFavoritesMenu"), v = (0, T.default)(t);
+                }), p = (0, f.useShouldUseNewNotificationSystem)("ChannelCategoryFavoritesMenu"), U = (0, T.default)(t);
                 return (0, a.jsxs)(i.Menu, {
                     navId: "channel-context",
                     onClose: s.closeContextMenu,
@@ -116,7 +116,7 @@
                     children: [(0, a.jsx)(i.MenuGroup, {
                         children: l
                     }), (0, a.jsxs)(i.MenuGroup, {
-                        children: [u, p ? v : o]
+                        children: [u, p ? U : o]
                     }), (0, a.jsxs)(i.MenuGroup, {
                         children: [_, N, C]
                     }), (0, a.jsx)(i.MenuGroup, {
@@ -132,7 +132,7 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, u = (0, M.default)(t), o = (0, A.default)(t), g = (0, S.default)(t), h = (0, E.default)(t), p = (0, c.default)(t), v = (0, C.default)(t), U = (0, d.default)(t), I = (0, _.default)(t, n), m = (0, N.default)(t), y = (0, r.default)({
+                } = e, u = (0, M.default)(t), o = (0, A.default)(t), g = (0, S.default)(t), h = (0, E.default)(t), p = (0, c.default)(t), U = (0, C.default)(t), v = (0, d.default)(t), I = (0, _.default)(t, n), m = (0, N.default)(t), y = (0, r.default)({
                     id: t.id,
                     label: O.default.Messages.COPY_ID_CHANNEL
                 }), R = (0, L.default)(t), F = (0, f.useShouldUseNewNotificationSystem)("ChannelCategoryNormalMenu"), G = (0, T.default)(t);
@@ -148,13 +148,13 @@
                     }, "channel-actions"), (0, a.jsxs)(i.MenuGroup, {
                         children: [o, F ? G : g]
                     }, "notifications"), (0, a.jsxs)(i.MenuGroup, {
-                        children: [v, U, I, m]
+                        children: [U, v, I, m]
                     }, "admin-actions"), (0, a.jsx)(i.MenuGroup, {
                         children: y
                     }, "developer-actions")]
                 })
             }
-            var v = (0, l.default)(function(e) {
+            var U = (0, l.default)(function(e) {
                 let t = (0, o.default)();
                 return t ? (0, a.jsx)(h, {
                     ...e
@@ -793,8 +793,11 @@
                 updateFavoriteChannels: function() {
                     return C
                 },
-                toggleFavoriteServerMuted: function() {
+                updateFavoriteChannelParent: function() {
                     return M
+                },
+                toggleFavoriteServerMuted: function() {
+                    return A
                 }
             }), n("222007");
             var a = n("249654"),
@@ -882,7 +885,13 @@
                 }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
-            function M() {
+            function M(e, t) {
+                s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                    n.favoriteChannels[e].parentId = null != t ? t : "0"
+                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+            }
+
+            function A() {
                 s.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
                     e.muted = !e.muted
                 }, s.UserSettingsDelay.INFREQUENT_USER_ACTION)
