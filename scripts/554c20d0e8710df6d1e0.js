@@ -715,13 +715,13 @@
                 _ = s("155207"),
                 E = s("781896"),
                 I = s("430025"),
-                T = s("137783"),
-                f = s("439937"),
+                f = s("137783"),
+                T = s("439937"),
                 S = s("31225"),
                 R = s("49111"),
                 p = s("782340"),
-                m = s("786832");
-            let N = [{
+                A = s("786832");
+            let m = [{
                     feature: R.SKUFeatureTypes.SINGLE_PLAYER,
                     getText: () => p.default.Messages.APPLICATION_STORE_SINGLE_PLAYER,
                     getTooltip: () => p.default.Messages.APPLICATION_STORE_SINGLE_PLAYER_TOOLTIP,
@@ -760,7 +760,7 @@
                     feature: R.SKUFeatureTypes.RICH_PRESENCE,
                     getText: () => p.default.Messages.APPLICATION_STORE_RICH_PRESENCE,
                     getTooltip: () => p.default.Messages.APPLICATION_STORE_RICH_PRESENCE_TOOLTIP,
-                    IconComponent: T.default
+                    IconComponent: f.default
                 }, {
                     feature: R.SKUFeatureTypes.DISCORD_GAME_INVITES,
                     getText: () => p.default.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES,
@@ -785,27 +785,27 @@
                     feature: R.SKUFeatureTypes.SECURE_NETWORKING,
                     getText: () => p.default.Messages.APPLICATION_STORE_SECURE_NETWORKING,
                     getTooltip: () => p.default.Messages.APPLICATION_STORE_SECURE_NETWORKING_TOOLTIP,
-                    IconComponent: f.default
+                    IconComponent: T.default
                 }],
-                A = e => {
+                N = e => {
                     let {
                         IconComponent: t,
                         text: s,
                         tooltip: n
                     } = e;
                     return (0, a.jsxs)("div", {
-                        className: m.row,
+                        className: A.row,
                         children: [(0, a.jsx)(r.Tooltip, {
                             text: n,
                             children: e => (0, a.jsx)(t, {
-                                className: m.featureIcon,
+                                className: A.featureIcon,
                                 ...e
                             })
                         }), (0, a.jsx)("span", {
-                            className: m.featureText,
+                            className: A.featureText,
                             children: s
                         }), (0, a.jsx)(u.default, {
-                            className: m.checkmarkIcon
+                            className: A.checkmarkIcon
                         })]
                     })
                 };
@@ -813,7 +813,7 @@
                 render() {
                     let {
                         sku: e
-                    } = this.props, t = N.filter(t => {
+                    } = this.props, t = m.filter(t => {
                         let {
                             feature: s
                         } = t;
@@ -825,14 +825,14 @@
                             getText: n,
                             getTooltip: r
                         } = e;
-                        return (0, a.jsx)(A, {
+                        return (0, a.jsx)(N, {
                             IconComponent: s,
                             text: n(),
                             tooltip: r()
                         }, t)
                     });
                     return 0 === t.length ? null : (0, a.jsxs)("div", {
-                        className: m.features,
+                        className: A.features,
                         children: [(0, a.jsx)(l.default, {
                             children: p.default.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES
                         }), t]
@@ -891,8 +891,8 @@
                 _ = s("158998"),
                 E = s("49111"),
                 I = s("782340"),
-                T = s("997672");
-            let f = {
+                f = s("997672");
+            let T = {
                 [E.StoreRecommendationTypes.NOW_PLAYING]: {
                     single: (e, t) => I.default.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
                         user1: e.username,
@@ -941,7 +941,7 @@
             };
             class S extends n.PureComponent {
                 renderDescription(e, t) {
-                    let s = f[e];
+                    let s = T[e];
                     return 1 === t.length ? s.single(t[0].user, e => this.renderActivityDiscordTag(e)) : 2 === t.length ? s.double(t[0].user, t[1].user, e => this.renderActivityDiscordTag(e)) : s.other(t.length)
                 }
                 renderActivityDiscordTag(e) {
@@ -950,7 +950,7 @@
                         renderPopout: t => this.renderUserPopout(e, t),
                         position: "right",
                         children: t => (0, a.jsx)("span", {
-                            className: T.username,
+                            className: f.username,
                             ...t,
                             children: e.username
                         })
@@ -965,9 +965,9 @@
                         userInfo: n
                     } = e;
                     return 0 === n.length ? null : (0, a.jsxs)("div", {
-                        className: l(T.recommendationActivity, t),
+                        className: l(f.recommendationActivity, t),
                         children: [(0, a.jsx)(c.default, {
-                            className: T.players,
+                            className: f.players,
                             users: n.map(e => {
                                 let {
                                     user: t
@@ -978,7 +978,7 @@
                             max: 4,
                             renderMoreUsers: this.renderPlayerOverflow
                         }), (0, a.jsx)("div", {
-                            className: T.description,
+                            className: f.description,
                             children: this.renderDescription(s, n)
                         })]
                     })
@@ -988,11 +988,11 @@
                         ...t,
                         userId: e.id
                     }), this.renderUserTooltip = (e, t, s) => (0, a.jsxs)("div", {
-                        className: T.tooltip,
+                        className: f.tooltip,
                         children: [(0, a.jsx)("div", {
                             children: _.default.getUserTag(e)
                         }), (0, a.jsx)(d.default, {
-                            className: T.tooltipTimestamp,
+                            className: f.tooltipTimestamp,
                             start: t,
                             end: s,
                             location: d.default.Locations.ACTIVITY_FEED
@@ -1010,8 +1010,8 @@
                                     decoration: "never"
                                 }),
                                 children: s => (0, a.jsx)(i.Avatar, {
-                                    className: l(T.playerAvatar, {
-                                        [T.avatarMasked]: !n
+                                    className: l(f.playerAvatar, {
+                                        [f.avatarMasked]: !n
                                     }),
                                     src: e.getAvatarURL(void 0, 32),
                                     "aria-label": e.username,
@@ -1022,7 +1022,7 @@
                             })
                         }, e.id)
                     }, this.renderPlayerOverflow = (e, t, s) => (0, a.jsx)("div", {
-                        className: T.playerOverflow,
+                        className: f.playerOverflow,
                         children: e
                     }, s)
                 }
@@ -1033,7 +1033,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return T
                 }
             }), s("70102");
             var a, n, r = s("37983");
@@ -1073,7 +1073,7 @@
                         })]
                     })
                 }),
-                T = e => {
+                f = e => {
                     let {
                         data: t,
                         className: s
@@ -1097,8 +1097,8 @@
                     }
                     throw Error("Unknown type")
                 };
-            T.Types = a;
-            var f = T
+            f.Types = a;
+            var T = f
         },
         592433: function(e, t, s) {
             "use strict";
@@ -1144,15 +1144,15 @@
                 _ = s("685665"),
                 E = s("539938"),
                 I = s("595426"),
-                T = s("697218"),
-                f = s("145131"),
+                f = s("697218"),
+                T = s("145131"),
                 S = s("216422"),
                 R = s("49111"),
                 p = s("646718"),
-                m = s("782340"),
-                N = s("309285");
-            let A = l.default.connectStores([T.default], () => ({
-                user: T.default.getCurrentUser()
+                A = s("782340"),
+                m = s("309285");
+            let N = l.default.connectStores([f.default], () => ({
+                user: f.default.getCurrentUser()
             }))((0, d.default)((0, o.default)(e => {
                 let {
                     AnalyticsLocationProvider: t
@@ -1161,31 +1161,31 @@
                     user: o
                 } = e;
                 return l ? (0, a.jsxs)("div", {
-                    className: N.homeWrapperNormal,
+                    className: m.homeWrapperNormal,
                     children: [(0, a.jsx)(u.default, {
                         section: R.AnalyticsSections.NAVIGATION,
                         children: (0, a.jsxs)(E.default, {
                             isAuthenticated: l,
-                            className: N.headerBar,
+                            className: m.headerBar,
                             children: [(0, a.jsx)(E.default.Icon, {
                                 icon: S.default,
                                 "aria-hidden": !0
                             }), (0, a.jsx)(E.default.Title, {
-                                children: m.default.Messages.PREMIUM
+                                children: A.default.Messages.PREMIUM
                             })]
                         })
                     }), (0, a.jsx)(t, {
                         children: (0, a.jsx)(i.AdvancedScrollerAuto, {
-                            className: N.scroller,
+                            className: m.scroller,
                             ref: s,
-                            children: null == o ? (0, a.jsx)(f.default, {
-                                align: f.default.Align.CENTER,
-                                justify: f.default.Justify.CENTER,
+                            children: null == o ? (0, a.jsx)(T.default, {
+                                align: T.default.Align.CENTER,
+                                justify: T.default.Justify.CENTER,
                                 children: (0, a.jsx)(i.Spinner, {
-                                    className: N.spinner
+                                    className: m.spinner
                                 })
                             }) : (0, a.jsx)("div", {
-                                className: N.premiumContainer,
+                                className: m.premiumContainer,
                                 children: (0, a.jsx)(I.default, {
                                     entrypoint: p.PremiumMarketingEntrypoints.ApplicationStoreHome
                                 })
@@ -1196,7 +1196,7 @@
                     to: R.Routes.LOGIN
                 })
             })));
-            var g = A
+            var g = N
         },
         294135: function(e, t, s) {
             "use strict";
@@ -1217,14 +1217,14 @@
                 _ = s("599560"),
                 E = s("316718"),
                 I = s("55620"),
-                T = s("901582"),
-                f = s("790219"),
+                f = s("901582"),
+                T = s("790219"),
                 S = s("151540"),
                 R = s("86621"),
                 p = s("984376"),
-                m = s("84460"),
-                N = s("299285"),
-                A = s("69927"),
+                A = s("84460"),
+                m = s("299285"),
+                N = s("69927"),
                 g = s("791160"),
                 P = s("661579"),
                 C = s("539938"),
@@ -1236,8 +1236,8 @@
                 v = s("71010"),
                 U = s("290877"),
                 D = s("437712"),
-                j = s("552712"),
-                b = s("698041"),
+                b = s("552712"),
+                j = s("698041"),
                 G = s("167726"),
                 y = s("471671"),
                 B = s("895530"),
@@ -1598,7 +1598,7 @@
                             children: this.renderListing()
                         });
                         return (0, a.jsxs)(n.Fragment, {
-                            children: [(0, a.jsx)(A.AppPageTitle, {
+                            children: [(0, a.jsx)(N.AppPageTitle, {
                                 location: e.name
                             }), this.renderJsonLD(), this.renderHeader(e, t), (0, a.jsx)(et.default, {
                                 game: e
@@ -1607,17 +1607,17 @@
                     }
                     return l ? (0, a.jsxs)("div", {
                         className: e_.listingWrapper,
-                        children: [(0, a.jsx)(A.AppPageTitle, {
+                        children: [(0, a.jsx)(N.AppPageTitle, {
                             location: e.name
-                        }), this.renderJsonLD(), (0, a.jsx)(T.default, {
+                        }), this.renderJsonLD(), (0, a.jsx)(f.default, {
                             section: eo.AnalyticsSections.NAVIGATION,
                             children: this.renderHeader(e, t)
-                        }), (0, a.jsx)(T.default, {
+                        }), (0, a.jsx)(f.default, {
                             section: eo.AnalyticsSections.BODY,
                             children: this.renderListing()
                         })]
                     }) : (0, a.jsxs)("div", {
-                        children: [(0, a.jsx)(A.AppPageTitle, {
+                        children: [(0, a.jsx)(N.AppPageTitle, {
                             location: e.name
                         }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
                     })
@@ -1749,7 +1749,7 @@
                                     className: l(e_.headerPurchase, {
                                         [e_.active]: o
                                     }),
-                                    children: [null != t ? (0, P.default)(t) : null, null != e && null != t ? (0, a.jsx)(f.default, {
+                                    children: [null != t ? (0, P.default)(t) : null, null != e && null != t ? (0, a.jsx)(T.default, {
                                         wrapperClassName: e_.headerActionButton,
                                         applicationId: e.id,
                                         skuId: t.id,
@@ -1772,7 +1772,7 @@
                             pageSize: s,
                             isFocused: n
                         } = this.props;
-                        return (0, a.jsx)(T.default, {
+                        return (0, a.jsx)(f.default, {
                             section: eo.AnalyticsSections.HERO,
                             children: (0, a.jsx)(ee.default, {
                                 pageSize: s,
@@ -1797,7 +1797,7 @@
                     }
                 }
             }
-            var eI = (0, R.default)((0, p.default)(i.default.connectStores([U.default, L.default, M.default, y.default, b.default, j.default, G.default, m.default, N.default, v.default, h.default, D.default], e => {
+            var eI = (0, R.default)((0, p.default)(i.default.connectStores([U.default, L.default, M.default, y.default, j.default, b.default, G.default, A.default, m.default, v.default, h.default, D.default], e => {
                 let t, s, a, {
                     inputSkuId: n,
                     applicationId: r,
@@ -1807,21 +1807,21 @@
                 } = e;
                 if (null == r) {
                     if (null == n) throw Error("Needs applicationId or skuId");
-                    t = n, null != (r = null != (s = j.default.get(n)) ? s.applicationId : null) && (a = N.default.getApplication(r))
+                    t = n, null != (r = null != (s = b.default.get(n)) ? s.applicationId : null) && (a = m.default.getApplication(r))
                 } else if (null == n) {
                     if (null == r) throw Error("Needs applicationId or skuId");
-                    null != (a = N.default.getApplication(r)) && (t = a.destinationSkuId), s = null != t ? j.default.get(t) : null
+                    null != (a = m.default.getApplication(r)) && (t = a.destinationSkuId), s = null != t ? b.default.get(t) : null
                 }(null == s ? void 0 : s.flags) != null && (0, Y.hasFlag)(s.flags, eo.SKUFlags.STICKER_PACK) && (s = null);
-                let o = null != r && (G.default.inTestModeForApplication(r) || m.default.inDevModeForApplication(r));
+                let o = null != r && (G.default.inTestModeForApplication(r) || A.default.inDevModeForApplication(r));
                 return {
                     skuId: t,
-                    application: null != r ? N.default.getApplication(r) : null,
+                    application: null != r ? m.default.getApplication(r) : null,
                     isFetchingEntitlements: null != r && D.default.applicationIdsFetching.has(r),
                     didFetchEntitlements: null != r && D.default.applicationIdsFetched.has(r),
                     shouldFetchStatistics: i && null != r && v.default.shouldFetchStatisticsForApplication(r),
                     sku: s,
                     isFocused: y.default.isFocused(),
-                    storeListing: b.default.getStoreListing({
+                    storeListing: j.default.getStoreListing({
                         storeListingId: l,
                         skuId: t,
                         channelId: null != u ? u.id : null,
@@ -1956,34 +1956,34 @@
                 _ = s("737960"),
                 E = s("667247"),
                 I = s("493765"),
-                T = s("485328"),
-                f = s("269936"),
+                f = s("485328"),
+                T = s("269936"),
                 S = s("967889"),
                 R = s("393414"),
                 p = s("970366"),
-                m = s("592433"),
-                N = s("489749"),
-                A = s("75576"),
+                A = s("592433"),
+                m = s("489749"),
+                N = s("75576"),
                 g = s("49111"),
                 P = s("782340"),
                 C = s("128403");
-            let O = (0, f.makeLazy)({
+            let O = (0, T.makeLazy)({
                 createPromise: () => s.el("972119").then(s.bind(s, "972119")),
                 webpackId: "972119"
             });
 
             function M(e) {
-                return e < A.PAGE_WIDTH_THRESHOLD ? A.PageSizes.SMALL : A.PageSizes.LARGE
+                return e < N.PAGE_WIDTH_THRESHOLD ? N.PageSizes.SMALL : N.PageSizes.LARGE
             }
             i.default.initialize();
             class L extends n.PureComponent {
                 componentDidMount() {
                     (0, u.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
                         e.pathname.startsWith(g.Routes.APPLICATION_STORE) && (0, u.updateLocation)(e)
-                    }), this.props.isAuthenticated && (0, o.fetchPaymentSources)(), T.default.disable(), T.default.setLayout(E.APPLICATION_STORE_LAYOUT), T.default.enable(), (0, p.trackAppUIViewed)("application_store")
+                    }), this.props.isAuthenticated && (0, o.fetchPaymentSources)(), f.default.disable(), f.default.setLayout(E.APPLICATION_STORE_LAYOUT), f.default.enable(), (0, p.trackAppUIViewed)("application_store")
                 }
                 componentWillUnmount() {
-                    null != this.stopListeningToHistory && this.stopListeningToHistory(), T.default.disable(), T.default.setLayout(I.DEFAULT_LAYOUT), T.default.enable()
+                    null != this.stopListeningToHistory && this.stopListeningToHistory(), f.default.disable(), f.default.setLayout(I.DEFAULT_LAYOUT), f.default.enable()
                 }
                 renderCustomErrorMessage() {
                     return (0, a.jsxs)("div", {
@@ -2028,7 +2028,7 @@
                         return (0, a.jsx)(d.default, {
                             page: g.AnalyticsPages.STORE_LISTING,
                             root: !0,
-                            children: (0, a.jsx)(N.default, {
+                            children: (0, a.jsx)(m.default, {
                                 skuId: t,
                                 applicationId: s,
                                 slug: n,
@@ -2044,7 +2044,7 @@
                             render: () => (0, a.jsx)(d.default, {
                                 page: g.AnalyticsPages.STORE_DIRECTORY_HOME,
                                 root: !0,
-                                children: (0, a.jsx)(m.default, {})
+                                children: (0, a.jsx)(A.default, {})
                             })
                         }), (0, a.jsx)(l.Route, {
                             path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
@@ -2070,7 +2070,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return N
+                    return m
                 }
             });
             var a = s("37983"),
@@ -2085,12 +2085,12 @@
                 _ = s("552712"),
                 E = s("698041"),
                 I = s("764206"),
-                T = s("271560"),
-                f = s("760936"),
+                f = s("271560"),
+                T = s("760936"),
                 S = s("697092"),
                 R = s("782340"),
                 p = s("825704");
-            class m extends n.Component {
+            class A extends n.Component {
                 renderReasons(e, t, s) {
                     return 0 === e.length && 0 === t.length ? null : (0, a.jsx)("div", {
                         className: p.section,
@@ -2098,7 +2098,7 @@
                             className: p.sectionContent,
                             children: [e.map(e => (0, a.jsx)("div", {
                                 className: p.unit,
-                                children: (0, a.jsx)(f.default, {
+                                children: (0, a.jsx)(T.default, {
                                     reason: e,
                                     hidePersonalInformation: s
                                 })
@@ -2142,22 +2142,22 @@
                     })
                 }
             }
-            var N = i.default.connectStores([_.default, d.default, E.default, u.default, c.default, o.default], e => {
+            var m = i.default.connectStores([_.default, d.default, E.default, u.default, c.default, o.default], e => {
                 let {
                     sku: t
                 } = e;
                 return {
-                    socialReasons: (0, T.getSocialRecommendationReasons)(t.id, _.default, d.default, u.default, c.default),
-                    nonSocialReasons: (0, T.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
+                    socialReasons: (0, f.getSocialRecommendationReasons)(t.id, _.default, d.default, u.default, c.default),
+                    nonSocialReasons: (0, f.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
                     hidePersonalInformation: o.default.hidePersonalInformation
                 }
-            })(m)
+            })(A)
         },
         572158: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return T
                 }
             }), s("424973"), s("222007");
             var a = s("37983"),
@@ -2172,7 +2172,7 @@
                 _ = s("454589"),
                 E = s("49111"),
                 I = s("870103");
-            class T extends n.PureComponent {
+            class f extends n.PureComponent {
                 componentDidMount() {
                     let {
                         sku: e,
@@ -2224,7 +2224,7 @@
                     })
                 }
             }
-            var f = (0, i.default)(r.default.connectStores([u.default, c.default], e => {
+            var T = (0, i.default)(r.default.connectStores([u.default, c.default], e => {
                 let {
                     sku: t
                 } = e, s = null != t ? u.default.getApplication(t.applicationId) : null, a = null != s && null != s.primarySkuId && s.primarySkuId !== t.id ? s.primarySkuId : null;
@@ -2233,7 +2233,7 @@
                     isFetchingPrimarySku: null != a && c.default.isFetching(a),
                     primarySku: null != a ? c.default.get(a) : null
                 }
-            })(T))
+            })(f))
         },
         489749: function(e, t, s) {
             "use strict";
@@ -2288,7 +2288,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return N
+                    return m
                 }
             }), s("222007");
             var a = s("37983"),
@@ -2303,8 +2303,8 @@
                 _ = s("773336"),
                 E = s("75576"),
                 I = s("49111"),
-                T = s("782340"),
-                f = s("502604");
+                f = s("782340"),
+                T = s("502604");
             let S = {
                 [I.OperatingSystems.WINDOWS]: _.PlatformTypes.WINDOWS,
                 [I.OperatingSystems.MACOS]: _.PlatformTypes.OSX,
@@ -2321,12 +2321,12 @@
                     return (0, a.jsx)(i.Button, {
                         size: r ? i.Button.Sizes.MIN : i.Button.Sizes.LARGE,
                         fullWidth: !r,
-                        color: e ? f.tabSelectedColor : f.tabNotSelectedColor,
+                        color: e ? T.tabSelectedColor : T.tabNotSelectedColor,
                         className: l({
-                            [f.tabPageLarge]: r,
-                            [f.tabPageSmall]: !r,
-                            [f.tabSelected]: e,
-                            [f.tabNotSelected]: !e
+                            [T.tabPageLarge]: r,
+                            [T.tabPageSmall]: !r,
+                            [T.tabSelected]: e,
+                            [T.tabNotSelected]: !e
                         }),
                         onClick: n,
                         children: t
@@ -2334,37 +2334,37 @@
                 }
             }
             let p = e => [{
-                key: T.default.Messages.APPLICATION_STORE_SPECS_OS,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_OS,
                 value: e.operating_system_version
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_CPU,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_CPU,
                 value: e.cpu
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_MEMORY,
-                value: null != e.ram ? T.default.Messages.APPLICATION_STORE_SPECS_MEMORY_VALUE.format({
+                key: f.default.Messages.APPLICATION_STORE_SPECS_MEMORY,
+                value: null != e.ram ? f.default.Messages.APPLICATION_STORE_SPECS_MEMORY_VALUE.format({
                     size: (0, d.formatSize)(1e3 * e.ram, {
                         showDecimalForGB: !1
                     })
                 }) : null
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_VIDEO,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_VIDEO,
                 value: e.gpu
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_STORAGE,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_STORAGE,
                 value: null != e.disk ? (0, d.formatSize)(1e3 * e.disk, {
                     showDecimalForGB: !1
                 }) : null
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_SOUND,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_SOUND,
                 value: e.sound_card
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_NETWORK,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_NETWORK,
                 value: e.network
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_NOTES,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_NOTES,
                 value: e.notes
             }];
-            class m extends n.PureComponent {
+            class A extends n.PureComponent {
                 static getDerivedStateFromProps(e, t) {
                     let {
                         systemRequirements: s
@@ -2383,9 +2383,9 @@
                         selectedOperatingSystem: s
                     } = this.state, n = Object.keys(t);
                     return 1 === n.length ? null : (0, a.jsxs)(o.default, {
-                        className: f.tabs,
+                        className: T.tabs,
                         children: [(0, a.jsx)("div", {
-                            className: f.separator
+                            className: T.separator
                         }), n.map(t => (0, a.jsx)(R, {
                             active: t === s,
                             onClick: () => this.handleSelectOperatingSystem(t),
@@ -2393,11 +2393,11 @@
                             children: function(e) {
                                 switch (e) {
                                     case I.OperatingSystems.WINDOWS:
-                                        return T.default.Messages.WINDOWS;
+                                        return f.default.Messages.WINDOWS;
                                     case I.OperatingSystems.MACOS:
-                                        return T.default.Messages.MACOS;
+                                        return f.default.Messages.MACOS;
                                     case I.OperatingSystems.LINUX:
-                                        return T.default.Messages.LINUX
+                                        return f.default.Messages.LINUX
                                 }
                             }(t)
                         }, t))]
@@ -2409,15 +2409,15 @@
                         n = s.map((e, t) => {
                             let s = null != e.value ? e.value.trim() : null;
                             return null == s || 0 === s.length ? null : (0, a.jsxs)("div", {
-                                className: f.requirement,
+                                className: T.requirement,
                                 children: [(0, a.jsxs)("span", {
-                                    className: f.requirementKey,
+                                    className: T.requirementKey,
                                     children: [e.key, ":"]
                                 }), s]
                             }, t)
                         }).filter(c.isNotNullish);
                     return (0, a.jsxs)("div", {
-                        className: f.requirements,
+                        className: T.requirements,
                         children: [(0, a.jsx)(u.default, {
                             tag: "h4",
                             children: t
@@ -2430,15 +2430,15 @@
                         recommended: t
                     } = this.props.systemRequirements[this.state.selectedOperatingSystem];
                     return (0, a.jsxs)("div", {
-                        className: f.requirementsContainer,
-                        children: [this.renderRequirementsSection(e, T.default.Messages.APPLICATION_STORE_SPECS_MINIMUM), this.renderRequirementsSection(t, T.default.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)]
+                        className: T.requirementsContainer,
+                        children: [this.renderRequirementsSection(e, f.default.Messages.APPLICATION_STORE_SPECS_MINIMUM), this.renderRequirementsSection(t, f.default.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)]
                     })
                 }
                 render() {
                     return (0, a.jsxs)("div", {
                         className: this.props.className,
                         children: [(0, a.jsx)(u.default, {
-                            children: T.default.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS
+                            children: f.default.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS
                         }), this.renderTabs(), this.renderBody()]
                     })
                 }
@@ -2457,7 +2457,7 @@
                     }
                 }
             }
-            var N = m
+            var m = A
         },
         951765: function(e, t, s) {
             "use strict";
@@ -2556,14 +2556,14 @@
                 _ = s("984376"),
                 E = s("267567"),
                 I = s("393414"),
-                T = s("239380"),
-                f = s("813006"),
+                f = s("239380"),
+                T = s("813006"),
                 S = s("305961"),
                 R = s("895530"),
                 p = s("145131"),
-                m = s("476263"),
-                N = s("36694"),
-                A = s("75576"),
+                A = s("476263"),
+                m = s("36694"),
+                N = s("75576"),
                 g = s("49111"),
                 P = s("782340"),
                 C = s("214197");
@@ -2604,7 +2604,7 @@
                         pageSize: u
                     } = this.props;
                     if (t && s) return null;
-                    let d = new f.default(e),
+                    let d = new T.default(e),
                         c = P.default.Messages.LURKER_MODE_VIEW_GUILD,
                         _ = this.handleJoinOrView,
                         E = o.Button.Looks.FILLED,
@@ -2613,21 +2613,21 @@
                         align: p.default.Align.CENTER,
                         children: [(0, a.jsx)("div", {
                             children: P.default.Messages.JOINED_GUILD
-                        }), (0, a.jsx)(N.default, {
+                        }), (0, a.jsx)(m.default, {
                             className: C.joinedCheckmark
                         })]
                     })) : n && t && (c = P.default.Messages.JOIN_GUILD) : (c = P.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
-                        className: l(i, u === A.PageSizes.SMALL ? C.inviteSmall : C.inviteLarge),
+                        className: l(i, u === N.PageSizes.SMALL ? C.inviteSmall : C.inviteLarge),
                         children: [(0, a.jsx)(R.default, {
                             children: P.default.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
                         }), (0, a.jsxs)("div", {
                             className: C.content,
                             children: [(0, a.jsxs)("div", {
                                 className: C.info,
-                                children: [(0, a.jsx)(m.default, {
+                                children: [(0, a.jsx)(A.default, {
                                     guild: d,
                                     active: !0,
-                                    size: m.default.Sizes.LARGE,
+                                    size: A.default.Sizes.LARGE,
                                     className: C.guildIcon
                                 }), (0, a.jsxs)("div", {
                                     className: C.infoText,
@@ -2655,7 +2655,7 @@
                             skuId: t,
                             isInGuild: s,
                             isLurking: a
-                        } = this.props, n = () => (0, T.transitionToGuild)(e.id);
+                        } = this.props, n = () => (0, f.transitionToGuild)(e.id);
                         if (a)(0, c.joinPublishedStoreListingSkuGuild)(t).then(n);
                         else if (s) n();
                         else try {
@@ -2815,13 +2815,13 @@
             "use strict";
             s.r(t), s.d(t, {
                 BlockedPaymentsContentSettings: function() {
-                    return m
+                    return A
                 },
                 BlockedPaymentsContentModal: function() {
-                    return N
+                    return m
                 },
                 BlockedPaymentsWarning: function() {
-                    return A
+                    return N
                 }
             });
             var a = s("37983");
@@ -2837,8 +2837,8 @@
                 _ = s("701909"),
                 E = s("619935"),
                 I = s("49111"),
-                T = s("782340"),
-                f = s("653842"),
+                f = s("782340"),
+                T = s("653842"),
                 S = s("584503"),
                 R = s("45656");
 
@@ -2847,69 +2847,69 @@
                     className: t
                 } = e, s = (0, o.default)(), n = (0, i.isThemeDark)(s) ? S : R;
                 return (0, a.jsxs)("div", {
-                    className: r(f.container, t),
+                    className: r(T.container, t),
                     children: [(0, a.jsx)(u.Heading, {
-                        className: f.header,
+                        className: T.header,
                         variant: "heading-xl/semibold",
-                        children: T.default.Messages.REGION_BLOCKED_PAYMENTS_HEADER
+                        children: f.default.Messages.REGION_BLOCKED_PAYMENTS_HEADER
                     }), (0, a.jsxs)(u.Text, {
-                        className: f.description,
+                        className: T.description,
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: [(0, a.jsx)("p", {
-                            children: T.default.Messages.REGION_BLOCKED_PAYMENTS_BODY
+                            children: f.default.Messages.REGION_BLOCKED_PAYMENTS_BODY
                         }), (0, a.jsx)("p", {
-                            children: T.default.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
+                            children: f.default.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
                                 helpdeskArticle: _.default.getArticleURL(I.HelpdeskArticles.BLOCKED_PAYMENTS)
                             })
                         })]
                     }), (0, a.jsx)("img", {
                         src: n,
-                        className: f.splashImage,
+                        className: T.splashImage,
                         alt: "Blocked Payments"
                     })]
                 })
             }
 
-            function m() {
+            function A() {
                 return (0, a.jsx)(p, {
-                    className: f.settings
+                    className: T.settings
                 })
             }
 
-            function N(e) {
+            function m(e) {
                 let {
                     onClose: t
                 } = e;
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(u.ModalHeader, {
-                        className: f.blockedPaymentsModalHeader,
+                        className: T.blockedPaymentsModalHeader,
                         justify: d.default.Justify.END,
                         children: (0, a.jsx)(u.ModalCloseButton, {
                             onClick: t
                         })
                     }), (0, a.jsx)(u.ModalContent, {
-                        className: f.blockedPaymentsModalContent,
+                        className: T.blockedPaymentsModalContent,
                         children: (0, a.jsx)(p, {
-                            className: f.modal
+                            className: T.modal
                         })
                     })]
                 })
             }
 
-            function A(e) {
+            function N(e) {
                 let {
                     className: t
                 } = e, s = (0, E.useBlockedPaymentsConfig)();
                 return s ? (0, a.jsxs)(u.Card, {
-                    className: r(f.blockedPaymentsWarning, t),
+                    className: r(T.blockedPaymentsWarning, t),
                     type: u.Card.Types.CUSTOM,
                     children: [(0, a.jsx)(c.default, {
-                        className: f.blockedPaymentsWarningIcon,
+                        className: T.blockedPaymentsWarningIcon,
                         color: l.default.unsafe_rawColors.YELLOW_300.css
                     }), (0, a.jsx)(u.Text, {
                         variant: "text-sm/normal",
-                        children: T.default.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
+                        children: f.default.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
                             helpdeskArticle: _.default.getArticleURL(I.HelpdeskArticles.BLOCKED_PAYMENTS)
                         })
                     })]
@@ -2941,6 +2941,24 @@
                 })
             }
         },
+        177589: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var a = s("429928"),
+                n = s("36539"),
+                r = s("502651"),
+                l = s("671071"),
+                i = s("322631"),
+                u = s("947297");
+
+            function o(e) {
+                return (0, n.default)(e) ? u.XBOX_APPLICATION_ID_PREFIX + e.name : (0, a.default)(e) && null != e.party && null != e.party.id ? l.SpotifyApplication.id : (0, r.default)(e) && null != e.url ? i.TWITCH_APPLICATION_ID_PREFIX + e.url : null != e.application_id ? e.application_id : null
+            }
+        },
         909469: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -2951,7 +2969,7 @@
                     return I
                 },
                 getLocalizedPricingBannerStrings: function() {
-                    return T
+                    return f
                 }
             }), s("222007"), s("424973");
             var a = s("592861"),
@@ -2996,45 +3014,45 @@
                         country: r
                     })
                 },
-                T = e => {
+                f = e => {
                     let {
                         localizedPricingPromo: t,
                         subscription: s,
                         forceSingleLine: a = !1,
                         userLocale: I
                     } = e, {
-                        countryCode: T,
+                        countryCode: f,
                         amount: S,
                         currency: R,
                         paymentSourceTypes: p
-                    } = t, m = 0 !== p.length, N = f(T), A = (0, l.formatPrice)(S, R, {
+                    } = t, A = 0 !== p.length, m = T(f), N = (0, l.formatPrice)(S, R, {
                         style: "currency",
                         currency: R,
                         currencyDisplay: "symbol",
-                        localeOverride: N
+                        localeOverride: m
                     }), g = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY.format({
                         helpCenterLink: r.default.getArticleURL(i.HelpdeskArticles.LOCALIZED_PRICING),
                         currencyISOCode: R.toUpperCase(),
-                        localizedPriceWithCurrencySymbol: A
+                        localizedPriceWithCurrencySymbol: N
                     });
                     if (c.has(R) && (g = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_EXISTING_CURRENCY.format({
                             helpCenterLink: r.default.getArticleURL(i.HelpdeskArticles.LOCALIZED_PRICING),
-                            localizedPriceWithCurrencySymbol: A
+                            localizedPriceWithCurrencySymbol: N
                         })), d.has(R) && (g = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY_WITH_AMBIGUOUS_SYMBOL.format({
                             helpCenterLink: r.default.getArticleURL(i.HelpdeskArticles.LOCALIZED_PRICING),
                             currencyISOCode: R.toUpperCase(),
-                            localizedPriceWithCurrencySymbol: A
+                            localizedPriceWithCurrencySymbol: N
                         })), null != s && !s.hasPremiumNitroMonthly && (g = o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_WITHOUT_PRICE.format({
                             helpCenterLink: r.default.getArticleURL(i.HelpdeskArticles.LOCALIZED_PRICING),
                             currencyISOCode: R.toUpperCase()
                         })), R === u.CurrencyCodes.EUR && (g = a ? o.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE_SINGLE_STRING.format({
-                            country: (0, n.getI18NCountryName)(T),
+                            country: (0, n.getI18NCountryName)(f),
                             currencyISOCode: R.toUpperCase(),
                             helpCenterLink: r.default.getArticleURL(i.HelpdeskArticles.LOCALIZED_PRICING)
                         }) : o.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE.format({
                             currencyISOCode: R.toUpperCase(),
                             helpCenterLink: r.default.getArticleURL(i.HelpdeskArticles.LOCALIZED_PRICING)
-                        })), m) {
+                        })), A) {
                         let e = E.filter(e => p.includes(e)),
                             t = p.filter(e => !E.includes(e)),
                             s = [...e, ...t],
@@ -3054,16 +3072,16 @@
                     }
                     return {
                         localizedPricingBannerHeader: o.default.Messages.LOCALIZED_PRICING_BANNER_HEADER.format({
-                            country: (0, n.getI18NCountryName)(T)
+                            country: (0, n.getI18NCountryName)(f)
                         }),
                         localizedPricingBannerBody: g,
                         localizedPricingBannerLinkOnly: o.default.Messages.LOCALIZED_PRICING_BANNER_LINK_ONLY.format({
                             helpCenterLink: r.default.getArticleURL(i.HelpdeskArticles.LOCALIZED_PRICING)
                         }),
-                        localizedPricingBannerSubNotif: m ? void 0 : o.default.Messages.LOCALIZED_PRICING_BANNER_SUB_NOTIF
+                        localizedPricingBannerSubNotif: A ? void 0 : o.default.Messages.LOCALIZED_PRICING_BANNER_SUB_NOTIF
                     }
                 },
-                f = e => {
+                T = e => {
                     let t = a.default.find(t => t.alpha2 === e);
                     return null == t ? void 0 : t.localeForICU
                 }
@@ -3184,14 +3202,14 @@
                     onTier0TrialPeriod: _,
                     onTier2TrialPeriod: E,
                     onNonTier2Subscriber: I,
-                    onTier2Subscriber: T,
-                    onCustomCriteria: f
-                } = e, S = (0, i.usePremiumTrialOffer)(), R = (0, l.usePremiumDiscountOffer)(), p = (0, a.useStateFromStores)([n.default], () => n.default.getPremiumTypeSubscription()), m = r.default.getPremiumTypeFromSubscription(p);
-                if (null != f) {
-                    let e = f();
+                    onTier2Subscriber: f,
+                    onCustomCriteria: T
+                } = e, S = (0, i.usePremiumTrialOffer)(), R = (0, l.usePremiumDiscountOffer)(), p = (0, a.useStateFromStores)([n.default], () => n.default.getPremiumTypeSubscription()), A = r.default.getPremiumTypeFromSubscription(p);
+                if (null != T) {
+                    let e = T();
                     if (null != e) return e
                 }
-                return null != S && (0, u.SubscriptionTrials)[S.trial_id].skus.includes(u.PremiumSubscriptionSKUs.TIER_0) ? null != d ? d : t : null != S && (0, u.SubscriptionTrials)[S.trial_id].skus.includes(u.PremiumSubscriptionSKUs.TIER_2) ? null != c ? c : t : null != p && null != p.trialId && m === u.PremiumTypes.TIER_0 ? null != _ ? _ : t : null != p && null != p.trialId && m === u.PremiumTypes.TIER_2 ? null != E ? E : t : null != R ? null != s ? s : t : null == m ? null != o ? o : t : m === u.PremiumTypes.TIER_0 || m === u.PremiumTypes.TIER_1 ? null != I ? I : t : m === u.PremiumTypes.TIER_2 ? null != T ? T : t : t
+                return null != S && (0, u.SubscriptionTrials)[S.trial_id].skus.includes(u.PremiumSubscriptionSKUs.TIER_0) ? null != d ? d : t : null != S && (0, u.SubscriptionTrials)[S.trial_id].skus.includes(u.PremiumSubscriptionSKUs.TIER_2) ? null != c ? c : t : null != p && null != p.trialId && A === u.PremiumTypes.TIER_0 ? null != _ ? _ : t : null != p && null != p.trialId && A === u.PremiumTypes.TIER_2 ? null != E ? E : t : null != R ? null != s ? s : t : null == A ? null != o ? o : t : A === u.PremiumTypes.TIER_0 || A === u.PremiumTypes.TIER_1 ? null != I ? I : t : A === u.PremiumTypes.TIER_2 ? null != f ? f : t : t
             }
         },
         331358: function(e, t, s) {
@@ -3213,14 +3231,14 @@
                 _ = s("737117"),
                 E = s("550722"),
                 I = s("113705"),
-                T = s("743437"),
-                f = s("404875"),
+                f = s("743437"),
+                T = s("404875"),
                 S = s("118536"),
                 R = s("411389"),
                 p = s("840456"),
-                m = s("720917"),
-                N = s("982784"),
-                A = s("19530"),
+                A = s("720917"),
+                m = s("982784"),
+                N = s("19530"),
                 g = s("215541"),
                 P = s("663411"),
                 C = s("126304"),
@@ -3232,8 +3250,8 @@
                 v = s("224456"),
                 U = s("656564"),
                 D = s("124989"),
-                j = s("14528"),
-                b = s("443817"),
+                b = s("14528"),
+                j = s("443817"),
                 G = s("759308");
             let y = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
                 B = e => {
@@ -3289,7 +3307,7 @@
                                     onTryItOutClick: t
                                 })
                             },
-                            imageSource: f,
+                            imageSource: T,
                             imageClassName: t.perGuildProfilesImage
                         },
                         longerMessages: {
@@ -3301,13 +3319,13 @@
                         moreGuilds: {
                             title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                            imageSource: y(s, T, D),
+                            imageSource: y(s, f, D),
                             imageClassName: t.moreGuildsImage
                         },
                         moreGuildsAlt: {
                             title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                            imageSource: y(s, p, m),
+                            imageSource: y(s, p, A),
                             imageClassName: t.moreGuildsAltImage
                         },
                         remix: {
@@ -3320,31 +3338,31 @@
                         soundboard: {
                             title: c.default.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
                             description: c.default.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-                            imageSource: y(s, N, A),
+                            imageSource: y(s, m, N),
                             imageClassName: t.soundboardImage
                         },
                         stickers: {
                             title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
                             description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                            imageSource: y(s, g, j),
+                            imageSource: y(s, g, b),
                             imageClassName: t.stickersImage
                         },
                         stickersBurst: {
                             title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                            imageSource: y(s, g, j),
+                            imageSource: y(s, g, b),
                             imageClassName: t.stickersImage
                         },
                         stickersPerkDiscoverability: {
                             title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                            imageSource: y(s, g, j),
+                            imageSource: y(s, g, b),
                             imageClassName: t.stickersImage
                         },
                         streaming: {
                             title: c.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
-                            imageSource: b,
+                            imageSource: j,
                             imageClassName: t.streamingImage
                         },
                         superReactions: {
@@ -3393,8 +3411,8 @@
                 _ = s("881155"),
                 E = s("694540"),
                 I = s("646718"),
-                T = s("49111"),
-                f = s("782340"),
+                f = s("49111"),
+                T = s("782340"),
                 S = s("737047"),
                 R = function(e) {
                     let {
@@ -3414,7 +3432,7 @@
                                 children: [(0, a.jsx)(i.Heading, {
                                     variant: "display-sm",
                                     color: "always-white",
-                                    children: null == n ? f.default.Messages.BOGO_BUY_HEADLINE : f.default.Messages.BOGO_UPGRADE_HEADLINE
+                                    children: null == n ? T.default.Messages.BOGO_BUY_HEADLINE : T.default.Messages.BOGO_UPGRADE_HEADLINE
                                 }), (0, a.jsx)(i.Text, {
                                     className: S.countdown,
                                     variant: "text-sm/medium",
@@ -3424,14 +3442,14 @@
                                 }), (0, a.jsx)(i.Text, {
                                     variant: "text-sm/medium",
                                     color: "always-white",
-                                    children: null == n ? f.default.Messages.BOGO_PERKS_SUBTITLE_NON_SUB_FORMATTED.format({
-                                        helpCenterLink: o.default.getArticleURL(T.HelpdeskArticles.SUMMER_2023_BOGO)
-                                    }) : f.default.Messages.BOGO_PERKS_SUBTITLE_SUB_FORMATTED.format({
-                                        helpCenterLink: o.default.getArticleURL(T.HelpdeskArticles.SUMMER_2023_BOGO)
+                                    children: null == n ? T.default.Messages.BOGO_PERKS_SUBTITLE_NON_SUB_FORMATTED.format({
+                                        helpCenterLink: o.default.getArticleURL(f.HelpdeskArticles.SUMMER_2023_BOGO)
+                                    }) : T.default.Messages.BOGO_PERKS_SUBTITLE_SUB_FORMATTED.format({
+                                        helpCenterLink: o.default.getArticleURL(f.HelpdeskArticles.SUMMER_2023_BOGO)
                                     })
                                 })]
                             }), (0, a.jsx)(_.default, {
-                                buttonText: f.default.Messages.BOGO_CLAIM_OFFER,
+                                buttonText: T.default.Messages.BOGO_CLAIM_OFFER,
                                 buttonTextClassName: S.subscribeButtonText,
                                 subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2,
                                 className: S.subscribeButton,
@@ -3479,7 +3497,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return b
+                    return j
                 }
             }), s("222007");
             var a = s("37983");
@@ -3495,14 +3513,14 @@
                 _ = s("463145"),
                 E = s("416227"),
                 I = s("325793"),
-                T = s("180790"),
-                f = s("167990"),
+                f = s("180790"),
+                T = s("167990"),
                 S = s("886676"),
                 R = s("972956"),
                 p = s("521507"),
-                m = s("175949"),
-                N = s("837861"),
-                A = s("664803"),
+                A = s("175949"),
+                m = s("837861"),
+                N = s("664803"),
                 g = s("854299"),
                 P = s("700684"),
                 C = s("479997"),
@@ -3514,7 +3532,7 @@
                 v = s("816571"),
                 U = s("114244"),
                 D = s("991119");
-            let j = new Map([
+            let b = new Map([
                 ["BG", l],
                 ["CZ", o],
                 ["HU", S],
@@ -3525,13 +3543,13 @@
                 ["IS", p],
                 ["IE", R],
                 ["LV", P],
-                ["LI", N],
-                ["LT", A],
+                ["LI", m],
+                ["LT", N],
                 ["LU", g],
                 ["MT", C],
                 ["SK", D],
                 ["SI", U],
-                ["GR", T],
+                ["GR", f],
                 ["FI", E],
                 ["PT", h],
                 ["NO", M],
@@ -3541,19 +3559,19 @@
                 ["FR", I],
                 ["DE", d],
                 ["ES", _],
-                ["IT", m],
+                ["IT", A],
                 ["NL", O],
                 ["PL", L],
-                ["HR", f]
+                ["HR", T]
             ]);
 
-            function b(e) {
+            function j(e) {
                 let {
                     className: t,
                     countryCode: s
                 } = e;
-                if (null == s || !j.has(s)) return null;
-                let n = j.get(s);
+                if (null == s || !b.has(s)) return null;
+                let n = b.get(s);
                 return (0, a.jsx)("img", {
                     className: t,
                     "aria-hidden": !0,
@@ -3587,7 +3605,7 @@
                     (0, o.useTrackLocalizedPricingPromoImpression)(c.AnalyticsSections.SETTINGS_PREMIUM_BANNER, s);
                     let I = (0, n.useStateFromStores)([i.default], () => i.default.getPremiumTypeSubscription()),
                         {
-                            localizedPricingBannerBody: T
+                            localizedPricingBannerBody: f
                         } = (0, u.getLocalizedPricingBannerStrings)({
                             localizedPricingPromo: t,
                             subscription: I,
@@ -3605,7 +3623,7 @@
                                 color: "none",
                                 variant: "text-md/normal",
                                 className: _.bannerBody,
-                                children: T
+                                children: f
                             })
                         })]
                     })
@@ -3631,53 +3649,53 @@
                 _ = s("218435"),
                 E = s("881155"),
                 I = s("646718"),
-                T = s("49111"),
-                f = s("456217"),
+                f = s("49111"),
+                T = s("456217"),
                 S = function(e) {
                     let {
                         localizedPricingPromo: t,
                         smallGap: s
                     } = e, n = t.countryCode, S = (0, l.useStateFromStores)([u.default], () => u.default.locale);
-                    (0, c.useTrackLocalizedPricingPromoImpression)(T.AnalyticsSections.SETTINGS_PREMIUM_BANNER, n);
+                    (0, c.useTrackLocalizedPricingPromoImpression)(f.AnalyticsSections.SETTINGS_PREMIUM_BANNER, n);
                     let R = (0, l.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()),
                         {
                             localizedPricingBannerHeader: p,
-                            localizedPricingBannerBody: m
+                            localizedPricingBannerBody: A
                         } = (0, d.getLocalizedPricingBannerStrings)({
                             localizedPricingPromo: t,
                             subscription: R,
                             userLocale: S
                         }),
-                        N = n.toLowerCase() + "Banner";
+                        m = n.toLowerCase() + "Banner";
                     return (0, a.jsxs)("div", {
-                        className: r(f.bannerContainer, {
-                            [f.smallGap]: s,
-                            [f.bigGap]: !s
+                        className: r(T.bannerContainer, {
+                            [T.smallGap]: s,
+                            [T.bigGap]: !s
                         }),
                         children: [(0, a.jsx)("div", {
-                            className: r(f[N], f.bannerImageContainer)
+                            className: r(T[m], T.bannerImageContainer)
                         }), (0, a.jsx)(i.Heading, {
-                            className: f.bannerHeading,
+                            className: T.bannerHeading,
                             variant: "heading-xl/semibold",
                             children: p
                         }), (0, a.jsx)("div", {
-                            className: f.textContainer,
+                            className: T.textContainer,
                             children: (0, a.jsx)(i.Text, {
                                 color: "none",
                                 variant: "text-md/normal",
-                                className: f.bannerBody,
-                                children: m
+                                className: T.bannerBody,
+                                children: A
                             })
                         }), (0, a.jsxs)("div", {
-                            className: f.ctaButtonContainer,
+                            className: T.ctaButtonContainer,
                             children: [(0, a.jsx)(E.default, {
                                 forceInverted: !0,
-                                className: f.ctaButton,
+                                className: T.ctaButton,
                                 subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2
                             }), (0, a.jsx)(_.default, {
                                 forceWhite: !0,
                                 subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2,
-                                className: f.ctaButton
+                                className: T.ctaButton
                             })]
                         })]
                     })
@@ -3705,7 +3723,7 @@
             function I(e) {
                 let {
                     smallerText: t
-                } = e, s = (0, i.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), r = s.map((e, t) => (0, a.jsx)(T, {
+                } = e, s = (0, i.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), r = s.map((e, t) => (0, a.jsx)(f, {
                     affinity: e,
                     applyMask: t !== s.length - 1
                 }, e.id)), l = e => null != e.globalName ? e.globalName : e.username, o = n.useMemo(() => 3 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
@@ -3738,7 +3756,7 @@
                 })
             }
 
-            function T(e) {
+            function f(e) {
                 let {
                     affinity: t,
                     applyMask: s
@@ -3797,14 +3815,14 @@
                 _ = s("583367"),
                 E = s("775433"),
                 I = s("642950"),
-                T = s("812204"),
-                f = s("685665"),
+                f = s("812204"),
+                T = s("685665"),
                 S = s("619935"),
                 R = s("308592"),
                 p = s("245187"),
-                m = s("102985"),
-                N = s("697218"),
-                A = s("521012"),
+                A = s("102985"),
+                m = s("697218"),
+                N = s("521012"),
                 g = s("599110"),
                 P = s("764364"),
                 C = s("446488"),
@@ -3816,20 +3834,20 @@
                 v = s("154889"),
                 U = s("917247"),
                 D = s("254893"),
-                j = s("840326"),
-                b = s("646718"),
+                b = s("840326"),
+                j = s("646718"),
                 G = s("49111"),
                 y = s("265921"),
                 B = function(e) {
                     let {
-                        entrypoint: t = b.PremiumMarketingEntrypoints.UserSettings
+                        entrypoint: t = j.PremiumMarketingEntrypoints.UserSettings
                     } = e, s = (0, S.useBlockedPaymentsConfig)(), {
                         AnalyticsLocationProvider: r,
                         sourceAnalyticsLocations: B,
                         analyticsLocations: k
-                    } = (0, f.default)(T.default.PREMIUM_MARKETING), {
+                    } = (0, T.default)(f.default.PREMIUM_MARKETING), {
                         enabled: H
-                    } = (0, L.default)(), K = (0, i.useStateFromStores)([A.default], () => A.default.hasFetchedSubscriptions()), F = (0, i.useStateFromStores)([N.default], () => N.default.getCurrentUser()), W = (0, U.usePremiumTrialOffer)(), w = (0, v.usePremiumDiscountOffer)(), V = (0, R.useSubscriptionPlansLoaded)(), [Y, z] = n.useState(!0), Z = n.useRef(0), X = (0, P.isPremiumExactly)(F, b.PremiumTypes.TIER_2), Q = (0, x.useLocalizedPromoQuery)(), J = null == Q ? void 0 : Q.countryCode, q = (0, i.useStateFromStores)([C.default], () => C.default.hasFetched);
+                    } = (0, L.default)(), K = (0, i.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), F = (0, i.useStateFromStores)([m.default], () => m.default.getCurrentUser()), W = (0, U.usePremiumTrialOffer)(), w = (0, v.usePremiumDiscountOffer)(), V = (0, R.useSubscriptionPlansLoaded)(), [Y, z] = n.useState(!0), Z = n.useRef(0), X = (0, P.isPremiumExactly)(F, j.PremiumTypes.TIER_2), Q = (0, x.useLocalizedPromoQuery)(), J = null == Q ? void 0 : Q.countryCode, q = (0, i.useStateFromStores)([C.default], () => C.default.hasFetched);
                     n.useEffect(() => {
                         !q && c.getNitroAffinity()
                     }, [q]), n.useEffect(() => {
@@ -3854,13 +3872,13 @@
                             load_duration_ms: Z.current
                         })
                     }, [B, Y]);
-                    let [$, ee] = n.useState(!1), et = (0, i.useStateFromStores)([m.default], () => m.default.enabled);
+                    let [$, ee] = n.useState(!1), et = (0, i.useStateFromStores)([A.default], () => A.default.enabled);
                     if (et) return (0, a.jsx)(I.default, {});
                     if (s) return (0, a.jsx)(p.BlockedPaymentsContentSettings, {});
-                    let es = t === b.PremiumMarketingEntrypoints.ApplicationStoreHome;
+                    let es = t === j.PremiumMarketingEntrypoints.ApplicationStoreHome;
                     return es && X && !H ? (0, a.jsx)(r, {
                         children: (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(j.default, {}), (0, a.jsx)(u.default, {
+                            children: [(0, a.jsx)(b.default, {}), (0, a.jsx)(u.default, {
                                 onChange: e => {
                                     e && !$ && (g.default.track(G.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                                         location_stack: k
@@ -3896,7 +3914,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return T
                 }
             });
             var a = s("37983");
@@ -3912,40 +3930,40 @@
                 _ = s("646718"),
                 E = s("49111"),
                 I = s("782340"),
-                T = s("507759"),
-                f = e => {
+                f = s("507759"),
+                T = e => {
                     let t, {
                             premiumSubscription: s,
                             className: n,
-                            isFullscreen: f = !1
+                            isFullscreen: T = !1
                         } = e,
                         S = (0, c.useIsInPremiumOfferExperience)();
                     if (null == s) return null;
                     let R = null != s ? d.default.getPremiumPlanItem(s) : null,
                         p = d.default.isBoostOnlySubscription(s);
                     if (p ? t = I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != R && (t = d.default.getDisplayPremiumType(R.planId)), null == t) return null;
-                    let m = () => i.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
-                        N = null != R ? d.default.getSkuIdForPlan(R.planId) : null,
-                        A = N === _.PremiumSubscriptionSKUs.TIER_1;
+                    let A = () => i.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
+                        m = null != R ? d.default.getSkuIdForPlan(R.planId) : null,
+                        N = m === _.PremiumSubscriptionSKUs.TIER_1;
                     return (0, a.jsxs)(l.Card, {
-                        className: r(T.container, n, {
-                            [T.lightTextLink]: f,
-                            [T.centerText]: S
+                        className: r(f.container, n, {
+                            [f.lightTextLink]: T,
+                            [f.centerText]: S
                         }),
                         type: l.Card.Types.CUSTOM,
                         children: [(0, a.jsx)(u.default, {
-                            className: r(T.icon, {
-                                [T.lightThemeColorOnly]: S || f
+                            className: r(f.icon, {
+                                [f.lightThemeColorOnly]: S || T
                             })
                         }), (0, a.jsx)(l.Text, {
                             variant: "text-sm/medium",
-                            color: S || f ? "always-white" : "text-normal",
-                            children: A ? I.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
+                            color: S || T ? "always-white" : "text-normal",
+                            children: N ? I.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
                                 helpdeskArticle: o.default.getArticleURL(E.HelpdeskArticles.PREMIUM_DETAILS),
-                                onSubscriptionsClick: m
+                                onSubscriptionsClick: A
                             }) : I.default.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
                                 subscriptionName: t,
-                                onSubscriptionsClick: m
+                                onSubscriptionsClick: A
                             })
                         })]
                     })
@@ -4033,7 +4051,7 @@
                         giftMessage: n,
                         subscriptionTier: E,
                         ...I
-                    } = e, T = (0, u.default)(), f = (0, l.isThemeDark)(T) || s, S = f ? i.ButtonColors.WHITE : i.ButtonColors.BRAND, R = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
+                    } = e, f = (0, u.default)(), T = (0, l.isThemeDark)(f) || s, S = T ? i.ButtonColors.WHITE : i.ButtonColors.BRAND, R = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
                     return (0, a.jsx)(o.default, {
                         isGift: !0,
                         color: S,
@@ -4041,7 +4059,7 @@
                         hover: i.ButtonHovers.BRAND,
                         buttonText: R,
                         giftMessage: n,
-                        className: r(t, f ? _.buttonWhite : _.buttonBrand),
+                        className: r(t, T ? _.buttonWhite : _.buttonBrand),
                         subscriptionTier: E,
                         ...I
                     })
@@ -4067,23 +4085,23 @@
                 _ = s("446488"),
                 E = s("182650"),
                 I = s("324878"),
-                T = s("641078"),
-                f = s("871948"),
+                f = s("641078"),
+                T = s("871948"),
                 S = s("401135"),
                 R = s("218435"),
                 p = s("881155"),
-                m = s("782340"),
-                N = s("30126");
+                A = s("782340"),
+                m = s("30126");
 
-            function A(e) {
+            function N(e) {
                 let {
                     variant: t = "text-lg/normal"
                 } = e, s = (0, S.useCheapestMonthlyPrice)();
                 return (0, a.jsx)(l.Text, {
                     variant: t,
                     color: "always-white",
-                    className: N.description,
-                    children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
+                    className: m.description,
+                    children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
                         cheapestMonthlyPrice: s
                     })
                 })
@@ -4095,7 +4113,7 @@
                     subscriptionTier: n
                 } = e, {
                     AnalyticsLocationProvider: S
-                } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), P = (0, E.useIsInPremiumOfferExperience)(), C = (0, T.useIsEligibleForBogoPromotion)(), {
+                } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), P = (0, E.useIsInPremiumOfferExperience)(), C = (0, f.useIsEligibleForBogoPromotion)(), {
                     marketingEnabled: O
                 } = c.default.useExperiment({
                     location: "HeroHeading"
@@ -4108,58 +4126,58 @@
                 let L = O && M.length > 0;
                 return (0, a.jsx)(S, {
                     children: (0, a.jsxs)("div", {
-                        className: r(N.container, s, {
-                            [N.settingsContainer]: !t,
-                            [N.affinityHeight]: !t && L
+                        className: r(m.container, s, {
+                            [m.settingsContainer]: !t,
+                            [m.affinityHeight]: !t && L
                         }),
                         "data-testid": "v2-marketing-page-hero-header",
                         children: [(0, a.jsxs)("div", {
-                            className: t ? N.fullscreenTextContainer : N.settingsTextContainer,
+                            className: t ? m.fullscreenTextContainer : m.settingsTextContainer,
                             children: [(0, a.jsx)(l.Heading, {
                                 variant: t ? "display-lg" : "display-md",
                                 color: "always-white",
-                                children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
+                                children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
                             }), L ? (0, a.jsx)("div", {
-                                className: N.affinityDescription,
-                                children: (0, a.jsx)(f.default, {
+                                className: m.affinityDescription,
+                                children: (0, a.jsx)(T.default, {
                                     smallerText: !t
                                 })
-                            }) : (0, a.jsx)(A, {}), C ? (0, a.jsx)("div", {
-                                className: N.buttonContainer,
+                            }) : (0, a.jsx)(N, {}), C ? (0, a.jsx)("div", {
+                                className: m.buttonContainer,
                                 children: (0, a.jsx)(R.default, {
-                                    className: N.button,
+                                    className: m.button,
                                     forceWhite: !0
                                 })
                             }) : (0, a.jsxs)(a.Fragment, {
                                 children: [P ? null : (0, a.jsxs)("div", {
-                                    className: N.buttonContainer,
+                                    className: m.buttonContainer,
                                     children: [(0, a.jsx)(p.default, {
                                         forceInverted: !0,
-                                        className: N.button,
+                                        className: m.button,
                                         subscriptionTier: n
                                     }), (0, a.jsx)(R.default, {
-                                        className: N.button,
+                                        className: m.button,
                                         forceWhite: !0
                                     })]
                                 }), g ? (0, a.jsx)("div", {
-                                    className: N.buttonContainer,
+                                    className: m.buttonContainer,
                                     children: (0, a.jsx)(R.default, {
-                                        className: N.button,
+                                        className: m.button,
                                         forceWhite: !0
                                     })
                                 }) : null]
-                            }), L && (0, a.jsx)(A, {
+                            }), L && (0, a.jsx)(N, {
                                 variant: "text-md/normal"
                             })]
                         }), P ? null : (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)(d.StretchedSparkleStar, {
-                                className: t ? N.fullscreenSparkleStar1 : N.settingsSparkleStar1
+                                className: t ? m.fullscreenSparkleStar1 : m.settingsSparkleStar1
                             }), (0, a.jsx)(d.StretchedSparkleStar, {
-                                className: t ? N.fullscreenSparkleStar2 : N.settingsSparkleStar2
+                                className: t ? m.fullscreenSparkleStar2 : m.settingsSparkleStar2
                             }), (0, a.jsx)(d.StretchedSparkleStar, {
-                                className: t ? N.fullscreenSparkleStar3 : N.settingsSparkleStar3
+                                className: t ? m.fullscreenSparkleStar3 : m.settingsSparkleStar3
                             }), (0, a.jsx)(d.StretchedSparkleStar, {
-                                className: t ? N.fullscreenSparkleStar4 : N.settingsSparkleStar4
+                                className: t ? m.fullscreenSparkleStar4 : m.settingsSparkleStar4
                             })]
                         })]
                     })
@@ -4185,25 +4203,25 @@
                 _ = s("516322"),
                 E = s("441413"),
                 I = s("238956"),
-                T = s("837899"),
-                f = s("425190"),
+                f = s("837899"),
+                T = s("425190"),
                 S = s("599110"),
                 R = s("331358"),
                 p = s("49111"),
-                m = s("782340"),
-                N = s("305224");
-            let A = e => {
+                A = s("782340"),
+                m = s("305224");
+            let N = e => {
                     let {
                         isShowingAll: t,
                         onClick: s
                     } = e;
                     return (0, a.jsxs)(u.Clickable, {
                         onClick: s,
-                        className: N.customButton,
-                        children: [t ? m.default.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : m.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, a.jsx)(f.default, {
-                            className: N.arrow
-                        }) : (0, a.jsx)(T.default, {
-                            className: N.arrow
+                        className: m.customButton,
+                        children: [t ? A.default.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : A.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, a.jsx)(T.default, {
+                            className: m.arrow
+                        }) : (0, a.jsx)(f.default, {
+                            className: m.arrow
                         })]
                     })
                 },
@@ -4216,32 +4234,32 @@
                         imageClassName: i,
                         titleBadge: o,
                         isNew: I = !1,
-                        isEarlyAccess: T = !1
+                        isEarlyAccess: f = !1
                     } = e, {
-                        AnalyticsLocationProvider: f,
+                        AnalyticsLocationProvider: T,
                         analyticsLocations: S
                     } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD);
-                    return (0, a.jsx)(f, {
+                    return (0, a.jsx)(T, {
                         children: (0, a.jsxs)("div", {
-                            className: l(N.perkCard, n),
+                            className: l(m.perkCard, n),
                             children: [I ? (0, a.jsx)(E.default, {
-                                className: N.perkCardNewBadge,
+                                className: m.perkCardNewBadge,
                                 shouldInheritBackgroundColor: !0,
                                 shouldInheritTextColor: !0
-                            }) : null, T ? (0, a.jsx)(_.default, {
-                                className: N.perkCardEarlyAccessBadge
+                            }) : null, f ? (0, a.jsx)(_.default, {
+                                className: m.perkCardEarlyAccessBadge
                             }) : null, (0, a.jsx)("img", {
                                 src: r,
                                 alt: "",
-                                className: l(i, N.perksCardArt)
+                                className: l(i, m.perksCardArt)
                             }), (0, a.jsxs)("div", {
                                 children: [(0, a.jsxs)(u.Heading, {
                                     variant: "heading-lg/extrabold",
-                                    className: N.perkCardHeading,
+                                    className: m.perkCardHeading,
                                     children: [t, " ", o]
                                 }), (0, a.jsx)(u.Text, {
                                     variant: "text-sm/normal",
-                                    className: N.perkCardDescription,
+                                    className: m.perkCardDescription,
                                     children: "function" == typeof s ? s(S) : s
                                 })]
                             })]
@@ -4253,23 +4271,23 @@
                     className: t,
                     isSubscriberNitroHome: s = !1
                 } = e, [r, d] = n.useState(!1), _ = (0, R.usePerkCards)({
-                    styles: N
+                    styles: m
                 }), E = (0, i.default)([o.default], () => o.default.useReducedMotion), {
-                    analyticsLocations: T
-                } = (0, c.default)(), f = (0, I.useIsRemixANitroPerk)(), P = [_.emoji, _.streaming, _.upload, _.customAppIcons, _.soundboard, f ? _.remix : _.videoBackground, _.superReactions, _.stickersPerkDiscoverability, _.badgeAlt];
+                    analyticsLocations: f
+                } = (0, c.default)(), T = (0, I.useIsRemixANitroPerk)(), P = [_.emoji, _.streaming, _.upload, _.customAppIcons, _.soundboard, T ? _.remix : _.videoBackground, _.superReactions, _.stickersPerkDiscoverability, _.badgeAlt];
                 return (0, a.jsxs)("div", {
-                    className: l(N.perksContainer, t, {
-                        [N.partiallyHidden]: s && !r,
-                        [N.subscriberNitroHome]: s,
-                        [N.reducedMotion]: E
+                    className: l(m.perksContainer, t, {
+                        [m.partiallyHidden]: s && !r,
+                        [m.subscriberNitroHome]: s,
+                        [m.reducedMotion]: E
                     }),
                     children: [(0, a.jsx)(u.Heading, {
                         variant: "heading-xxl/extrabold",
-                        className: N.perksTitle,
-                        children: s ? m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE
+                        className: m.perksTitle,
+                        children: s ? A.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : A.default.Messages.PREMIUM_MARKETING_PERKS_TITLE
                     }), (0, a.jsx)("div", {
-                        className: l(N.perkCardContainer, {
-                            [N.perkCardContainerExpanded]: r
+                        className: l(m.perkCardContainer, {
+                            [m.perkCardContainerExpanded]: r
                         }),
                         children: P.map(e => null != e && (0, a.jsx)(g, {
                             ...e
@@ -4277,21 +4295,21 @@
                     }), s && (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)("div", {
                             className: l({
-                                [N.sizeGizmo]: !r,
-                                [N.sizeGizmoExpanded]: r
+                                [m.sizeGizmo]: !r,
+                                [m.sizeGizmoExpanded]: r
                             }),
-                            children: (0, a.jsx)(A, {
+                            children: (0, a.jsx)(N, {
                                 onClick: () => {
                                     S.default.track(p.AnalyticEvents.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
-                                        location_stack: T,
+                                        location_stack: f,
                                         was_expanded: r
                                     }), d(!r)
                                 },
                                 isShowingAll: r
                             })
                         }), (0, a.jsx)("div", {
-                            className: l(N.cover, {
-                                [N.hidden]: r
+                            className: l(m.cover, {
+                                [m.hidden]: r
                             })
                         })]
                     })]
@@ -4305,7 +4323,7 @@
                     return n
                 },
                 default: function() {
-                    return N
+                    return m
                 }
             });
             var a, n, r = s("37983"),
@@ -4318,13 +4336,13 @@
                 _ = s("521012"),
                 E = s("719923"),
                 I = s("367226"),
-                T = s("628550"),
-                f = s("558566"),
+                f = s("628550"),
+                T = s("558566"),
                 S = s("646718"),
                 R = s("782340"),
                 p = s("650734");
             (a = n || (n = {})).PERKS_DISCOVERABILITY = "perks_discoverability", a.WHATS_NEW = "whats_new";
-            let m = e => {
+            let A = e => {
                 let t = (0, o.default)([_.default], () => _.default.getPremiumTypeSubscription()),
                     s = null != t ? E.default.getPremiumPlanItem(t) : null,
                     a = null != s ? E.default.getSkuIdForPlan(s.planId) : null,
@@ -4341,7 +4359,7 @@
                     subtitle: R.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
                 }
             };
-            var N = e => {
+            var m = e => {
                 let {
                     className: t,
                     variant: s = "perks_discoverability",
@@ -4364,17 +4382,17 @@
                     });
                     return () => cancelAnimationFrame(t)
                 }, [i, o, E]);
-                let S = (0, T.default)(),
-                    R = m(E),
-                    N = [];
+                let S = (0, f.default)(),
+                    R = A(E),
+                    m = [];
                 switch (s) {
                     case "perks_discoverability":
-                        N = [S.profiles, S.clientThemes, S.serverBoosts];
+                        m = [S.profiles, S.clientThemes, S.serverBoosts];
                         break;
                     case "whats_new":
-                        N = [S.earlyAccess, _ ? S.specialShopPerks : S.specialMemberPricing, S.unlimitedSuperReactions]
+                        m = [S.earlyAccess, _ ? S.specialShopPerks : S.specialMemberPricing, S.unlimitedSuperReactions]
                 }
-                let A = N.some(e => null != e.pillText);
+                let N = m.some(e => null != e.pillText);
                 return (0, r.jsxs)("div", {
                     ref: i,
                     className: u(p.section, {
@@ -4391,14 +4409,14 @@
                         color: "header-primary",
                         className: u(p.subtitle, {
                             [p.fullWidth]: E || n,
-                            [p.moreSubtitleMargin]: A,
+                            [p.moreSubtitleMargin]: N,
                             [p.leftAlignSubtitle]: n,
                             [p.centerAlignSubtitle]: !n
                         }),
                         children: R.subtitle
                     }), (0, r.jsx)("div", {
                         className: p.cardContainer,
-                        children: N.map((e, t) => (0, r.jsx)(f.default, {
+                        children: m.map((e, t) => (0, r.jsx)(T.default, {
                             ...e,
                             forceShadow: a
                         }, "".concat(e.name, "_").concat(t)))
@@ -4425,14 +4443,14 @@
                 _ = s("599110"),
                 E = s("719923"),
                 I = s("837797"),
-                T = s("154889"),
-                f = s("917247"),
+                f = s("154889"),
+                T = s("917247"),
                 S = s("119829"),
                 R = s("628550"),
                 p = s("881155"),
-                m = s("646718"),
-                N = s("49111"),
-                A = s("994428"),
+                A = s("646718"),
+                m = s("49111"),
+                N = s("994428"),
                 g = s("782340"),
                 P = s("651187");
             let C = e => {
@@ -4441,26 +4459,26 @@
                         canReveal: s = !0,
                         dismissibleContentType: r,
                         forceShadow: E
-                    } = e, I = (0, u.default)([d.default], () => d.default.useReducedMotion), [T, f] = n.useState(!1), [p, m] = n.useState(!1), M = (0, R.default)(), [L, h] = (0, c.useGetDismissibleContent)(null != r && s ? [r] : []), {
+                    } = e, I = (0, u.default)([d.default], () => d.default.useReducedMotion), [f, T] = n.useState(!1), [p, A] = n.useState(!1), M = (0, R.default)(), [L, h] = (0, c.useGetDismissibleContent)(null != r && s ? [r] : []), {
                         easterEggLevel: x,
                         isEasterEggTriggered: v,
                         onHover: U,
                         onUnhover: D
-                    } = (0, S.default)(5), j = (0, i.debounce)(() => {
-                        _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
+                    } = (0, S.default)(5), b = (0, i.debounce)(() => {
+                        _.default.track(m.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                             card_type: (0, i.snakeCase)(t)
                         })
                     }, 800);
                     e = {
-                        onMouseEnter: j,
+                        onMouseEnter: b,
                         ...e
                     };
-                    let b = L !== r || null == r || p;
+                    let j = L !== r || null == r || p;
                     return (n.useEffect(() => {
-                        I && T && (m(!0), _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+                        I && f && (A(!0), _.default.track(m.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
                             card_type: t
-                        }), null != r && h(A.ContentDismissActionType.TAKE_ACTION))
-                    }, [I, T, r, t, h]), s) ? t === R.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
+                        }), null != r && h(N.ContentDismissActionType.TAKE_ACTION))
+                    }, [I, f, r, t, h]), s) ? t === R.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
                         className: l(P.flipCardContainer, {
                             [P.forceShadow]: E
                         }),
@@ -4489,7 +4507,7 @@
                                 })
                             })]
                         })
-                    }) : b ? (0, a.jsx)("div", {
+                    }) : j ? (0, a.jsx)("div", {
                         className: l(P.noFlipCardContainer, {
                             [P.forceShadow]: E,
                             [P.reducedMotion]: I
@@ -4502,16 +4520,16 @@
                             [P.forceShadow]: E
                         }),
                         children: (0, a.jsxs)(o.Clickable, {
-                            onClick: () => f(!0),
+                            onClick: () => T(!0),
                             className: l(P.flipCard, P.clickable, {
-                                [P.flipped]: T,
-                                [P.partialFlipCard]: !p && !T,
+                                [P.flipped]: f,
+                                [P.partialFlipCard]: !p && !f,
                                 [P.reducedMotion]: I
                             }),
                             onTransitionEnd: e => {
-                                T && "transform" === e.propertyName && e.target.classList.contains(P.flipCard) && (m(!0), _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+                                f && "transform" === e.propertyName && e.target.classList.contains(P.flipCard) && (A(!0), _.default.track(m.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
                                     card_type: t
-                                }), null != r && h(A.ContentDismissActionType.TAKE_ACTION))
+                                }), null != r && h(N.ContentDismissActionType.TAKE_ACTION))
                             },
                             children: [(0, a.jsx)("div", {
                                 className: P.flipCardHidden,
@@ -4534,7 +4552,7 @@
                             }), (0, a.jsx)("div", {
                                 className: P.flipCardButtonContainer,
                                 children: (0, a.jsx)(o.Button, {
-                                    onClick: () => f(!0),
+                                    onClick: () => T(!0),
                                     children: g.default.Messages.REVEAL
                                 })
                             })]
@@ -4557,9 +4575,9 @@
                         pillText: _,
                         onClick: S,
                         onCtaClick: R,
-                        onMouseEnter: N,
-                        className: A
-                    } = e, C = (0, f.usePremiumTrialOffer)(), O = null == C ? void 0 : C.subscription_trial, M = (0, T.usePremiumDiscountOffer)(), L = (0, E.formatTrialCtaIntervalDuration)({
+                        onMouseEnter: m,
+                        className: N
+                    } = e, C = (0, T.usePremiumTrialOffer)(), O = null == C ? void 0 : C.subscription_trial, M = (0, f.usePremiumDiscountOffer)(), L = (0, E.formatTrialCtaIntervalDuration)({
                         intervalType: null == O ? void 0 : O.interval,
                         intervalCount: null == O ? void 0 : O.interval_count
                     }), h = (0, I.useResponseOnUserState)({
@@ -4572,10 +4590,10 @@
                         })
                     });
                     return (0, a.jsxs)(o.Clickable, {
-                        className: l(P.card, A, {
+                        className: l(P.card, N, {
                             [P.clickable]: null != S
                         }),
-                        onMouseEnter: N,
+                        onMouseEnter: m,
                         style: {
                             backgroundImage: null != c ? "url(".concat(c, ")") : void 0
                         },
@@ -4609,7 +4627,7 @@
                                 className: P.cardDescriptionText,
                                 children: [n, (0, a.jsx)("br", {}), " ", (0, a.jsx)("br", {}), r]
                             }) : null, u ? (0, a.jsx)(p.default, {
-                                subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
+                                subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
                                 buttonText: h,
                                 color: o.Button.Colors.GREEN,
                                 look: o.Button.Looks.FILLED
@@ -4710,7 +4728,7 @@
                 I = (0, r.jsxs)("defs", {
                     children: [c, _, E]
                 }),
-                T = e => {
+                f = e => {
                     let {
                         className: t,
                         fill: s,
@@ -4739,7 +4757,7 @@
                         }), I]
                     })
                 },
-                f = e => {
+                T = e => {
                     let {
                         className: t,
                         fill: s,
@@ -4775,13 +4793,13 @@
                 } = e, a = (0, i.default)(), n = (0, l.isThemeDark)(a) ? d : u, c = (0, l.isThemeDark)(a) ? "#F2F3F5" : "url(#".concat(o, ")");
                 switch (s) {
                     case 0:
-                        return (0, r.jsx)(f, {
+                        return (0, r.jsx)(T, {
                             className: t,
                             fill: c,
                             gradient: n
                         });
                     case 1:
-                        return (0, r.jsx)(T, {
+                        return (0, r.jsx)(f, {
                             className: t,
                             fill: c,
                             gradient: n
@@ -4795,7 +4813,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return T
                 }
             });
             var a = s("37983");
@@ -4811,40 +4829,40 @@
                 _ = s("881155"),
                 E = s("646718"),
                 I = s("49111"),
-                T = s("895185"),
-                f = function(e) {
+                f = s("895185"),
+                T = function(e) {
                     var t, s;
                     let {
                         isVisible: n,
-                        isFullscreen: f,
+                        isFullscreen: T,
                         subscriptionTier: S
-                    } = e, R = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, p = (0, o.usePremiumDiscountOffer)(), m = (0, o.discountOfferHasTier)(p, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, i.default)([u.default], () => u.default.useReducedMotion), A = (0, l.useSpring)({
+                    } = e, R = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, p = (0, o.usePremiumDiscountOffer)(), A = (0, o.discountOfferHasTier)(p, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, m = (0, i.default)([u.default], () => u.default.useReducedMotion), N = (0, l.useSpring)({
                         transform: n ? "translateY(-100%)" : "translateY(0%)",
                         opacity: n ? 1 : 0,
                         config: {
                             tension: 120,
                             friction: 12
                         },
-                        immediate: N
+                        immediate: m
                     }), g = {
                         section: I.AnalyticsSections.MARKETING_FLOATING_CTA
                     };
                     return (0, a.jsx)(l.animated.div, {
-                        className: r(T.wrapper, {
-                            [T.fullscreenWrapper]: f,
-                            [T.invisible]: !n
+                        className: r(f.wrapper, {
+                            [f.fullscreenWrapper]: T,
+                            [f.invisible]: !n
                         }),
-                        style: A,
+                        style: N,
                         children: (0, a.jsxs)("div", {
-                            className: T.innerWrapper,
+                            className: f.innerWrapper,
                             children: [(0, a.jsx)(_.default, {
-                                className: T.button,
-                                shinyButtonClassName: T.shinyButton,
-                                subscriptionTier: null !== (s = null != S ? S : null == R ? void 0 : R.sku_id) && void 0 !== s ? s : m,
+                                className: f.button,
+                                shinyButtonClassName: f.shinyButton,
+                                subscriptionTier: null !== (s = null != S ? S : null == R ? void 0 : R.sku_id) && void 0 !== s ? s : A,
                                 premiumModalAnalyticsLocation: g,
                                 isPersistentCTA: !0
                             }), (0, a.jsx)(c.default, {
-                                className: T.button,
+                                className: f.button,
                                 premiumModalAnalyticsLocation: g
                             })]
                         })
@@ -4870,14 +4888,14 @@
                 _ = s("812204"),
                 E = s("685665"),
                 I = s("308592"),
-                T = s("805172"),
-                f = s("915639"),
+                f = s("805172"),
+                T = s("915639"),
                 S = s("697218"),
                 R = s("521012"),
                 p = s("36694"),
-                m = s("945330"),
-                N = s("719923"),
-                A = s("153160"),
+                A = s("945330"),
+                m = s("719923"),
+                N = s("153160"),
                 g = s("324878"),
                 P = s("917247"),
                 C = s("641078"),
@@ -4889,8 +4907,8 @@
                 v = s("782340"),
                 U = s("992250"),
                 D = s("640754"),
-                j = s("510407"),
-                b = s("657890"),
+                b = s("510407"),
+                j = s("657890"),
                 G = s("823986");
             let y = e => {
                     let {
@@ -4915,8 +4933,8 @@
                             premiumType: s
                         } = e,
                         n = (0, c.default)();
-                    t = s === h.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? D : j : (0, u.isThemeDark)(n) ? b : G;
-                    let r = (0, N.getPremiumTypeDisplayName)(s);
+                    t = s === h.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? D : b : (0, u.isThemeDark)(n) ? j : G;
+                    let r = (0, m.getPremiumTypeDisplayName)(s);
                     return (0, a.jsx)("img", {
                         src: t,
                         className: U.logo,
@@ -4956,7 +4974,7 @@
                             children: v.default.Messages.INCLUDED
                         })]
                     }) : (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(m.default, {
+                        children: [(0, a.jsx)(A.default, {
                             className: U.closeIcon,
                             "aria-hidden": !0
                         }), (0, a.jsx)(o.HiddenVisually, {
@@ -5030,10 +5048,10 @@
                 let s, {
                         className: r,
                         hideCTAs: p = !1,
-                        headingOverride: m,
+                        headingOverride: A,
                         hidePill: D = !1,
-                        selectedPlanColumnClassName: j,
-                        selectedPlanTier: b = h.PremiumTypes.TIER_2
+                        selectedPlanColumnClassName: b,
+                        selectedPlanTier: j = h.PremiumTypes.TIER_2
                     } = e,
                     {
                         AnalyticsLocationProvider: G
@@ -5050,12 +5068,12 @@
                 });
                 let {
                     marketingEnabled: Z
-                } = (0, T.default)({
+                } = (0, f.default)({
                     location: z
-                }), X = (0, c.default)(), Q = (0, u.isThemeLight)(X), J = (0, i.useStateFromStores)([S.default], () => S.default.getCurrentUser()), q = (0, N.isPremiumExactly)(J, h.PremiumTypes.TIER_2), $ = (0, P.usePremiumTrialOffer)(), ee = null == $ ? void 0 : null === (t = $.subscription_trial) || void 0 === t ? void 0 : t.sku_id, et = (0, g.useCurrentPremiumTrialTier)(), es = (0, C.useIsEligibleForBogoPromotion)();
+                }), X = (0, c.default)(), Q = (0, u.isThemeLight)(X), J = (0, i.useStateFromStores)([S.default], () => S.default.getCurrentUser()), q = (0, m.isPremiumExactly)(J, h.PremiumTypes.TIER_2), $ = (0, P.usePremiumTrialOffer)(), ee = null == $ ? void 0 : null === (t = $.subscription_trial) || void 0 === t ? void 0 : t.sku_id, et = (0, g.useCurrentPremiumTrialTier)(), es = (0, C.useIsEligibleForBogoPromotion)();
                 if (!V || !Y) return null;
-                let ea = N.default.getDefaultPrice(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-                    en = N.default.getDefaultPrice(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+                let ea = m.default.getDefaultPrice(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+                    en = m.default.getDefaultPrice(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
                     er = {
                         label: (0, a.jsx)(o.Heading, {
                             className: U.textColor,
@@ -5075,12 +5093,12 @@
                         }),
                         column1: (0, a.jsx)(a.Fragment, {
                             children: (0, a.jsx)(K, {
-                                text: N.default.formatPriceString(ea, h.SubscriptionIntervalTypes.MONTH)
+                                text: m.default.formatPriceString(ea, h.SubscriptionIntervalTypes.MONTH)
                             })
                         }),
                         column2: (0, a.jsx)(a.Fragment, {
                             children: (0, a.jsx)(K, {
-                                text: N.default.formatPriceString(en, h.SubscriptionIntervalTypes.MONTH)
+                                text: m.default.formatPriceString(en, h.SubscriptionIntervalTypes.MONTH)
                             })
                         })
                     }, {
@@ -5128,10 +5146,10 @@
                             text: v.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
                         }),
                         column1: (0, a.jsx)(K, {
-                            text: (0, N.getMaxFileSizeForPremiumType)(h.PremiumTypes.TIER_0)
+                            text: (0, m.getMaxFileSizeForPremiumType)(h.PremiumTypes.TIER_0)
                         }),
                         column2: (0, a.jsx)(K, {
-                            text: (0, N.getMaxFileSizeForPremiumType)(h.PremiumTypes.TIER_2)
+                            text: (0, m.getMaxFileSizeForPremiumType)(h.PremiumTypes.TIER_2)
                         })
                     }, {
                         label: (0, a.jsx)(H, {
@@ -5147,7 +5165,7 @@
                         label: (0, a.jsx)(H, {
                             text: v.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
                                 numBoosts: h.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-                                percentageOff: (0, A.formatPercent)(f.default.locale, h.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+                                percentageOff: (0, N.formatPercent)(T.default.locale, h.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
                             })
                         }),
                         column1: (0, a.jsx)(F, {
@@ -5320,11 +5338,11 @@
                         children: [(0, a.jsx)(o.Heading, {
                             className: l(U.titleText, U.textColor),
                             variant: "heading-xxl/extrabold",
-                            children: null != m ? m : v.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
+                            children: null != A ? A : v.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
                         }), (0, a.jsxs)("div", {
                             className: U.tableWrapper,
                             children: [(0, a.jsx)("div", {
-                                className: ee === h.PremiumSubscriptionSKUs.TIER_0 || et === h.PremiumTypes.TIER_0 || b === h.PremiumTypes.TIER_0 ? l(j, U.tier0ColumnOuter) : l(j, U.tier2ColumnOuter),
+                                className: ee === h.PremiumSubscriptionSKUs.TIER_0 || et === h.PremiumTypes.TIER_0 || j === h.PremiumTypes.TIER_0 ? l(b, U.tier0ColumnOuter) : l(b, U.tier2ColumnOuter),
                                 children: s
                             }), (0, a.jsxs)("table", {
                                 className: U.table,
@@ -5348,7 +5366,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return T
                 }
             });
             var a = s("37983");
@@ -5381,34 +5399,34 @@
                     });
                     if (a && s === c.PremiumSubscriptionSKUs.TIER_2) return _.default.Messages.BOGO_CHANGE_LOG_REDEEM
                 },
-                T = (e, t, s, a) => t || s ? _.default.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === c.PremiumSubscriptionSKUs.TIER_2 ? _.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+                f = (e, t, s, a) => t || s ? _.default.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === c.PremiumSubscriptionSKUs.TIER_2 ? _.default.Messages.PREMIUM_DISCOUNT_CTA.format({
                     percent: a
                 }) : void 0;
-            var f = e => {
+            var T = e => {
                 var t;
                 let {
                     forceInverted: s,
                     subscriptionTier: c,
-                    isEligibleForBogoPromotion: f = !1,
+                    isEligibleForBogoPromotion: T = !1,
                     isPersistentCTA: S = !1,
                     useShorterCTA: R = !1,
                     ...p
-                } = e, m = (0, l.default)(), N = (0, n.isThemeDark)(m) || s, A = null === (t = (0, o.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, i.formatTrialOfferIntervalDuration)({
-                    intervalType: null == A ? void 0 : A.interval,
-                    intervalCount: null == A ? void 0 : A.interval_count
-                }), P = (0, u.usePremiumDiscountOffer)(), C = null != A && c === A.sku_id, O = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != P ? T(c, R, S, P.discount.amount) : I({
+                } = e, A = (0, l.default)(), m = (0, n.isThemeDark)(A) || s, N = null === (t = (0, o.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, i.formatTrialOfferIntervalDuration)({
+                    intervalType: null == N ? void 0 : N.interval,
+                    intervalCount: null == N ? void 0 : N.interval_count
+                }), P = (0, u.usePremiumDiscountOffer)(), C = null != N && c === N.sku_id, O = T ? _.default.Messages.BOGO_CLAIM_OFFER : null != P ? f(c, R, S, P.discount.amount) : I({
                     showTrialCTA: C,
                     subscriptionTier: c,
                     shouldShowUpsells: !1,
                     trialDurationCopy: g,
                     isPersistentCTA: S,
-                    subscriptionTrial: A
+                    subscriptionTrial: N
                 });
                 return (0, a.jsx)(d.default, {
                     color: r.ButtonColors.BRAND,
-                    look: N ? r.ButtonLooks.INVERTED : void 0,
-                    buttonShineClassName: "buttonShineClassName" in p ? p.buttonShineClassName : N ? E.brandShine : void 0,
-                    trialId: null == A ? void 0 : A.id,
+                    look: m ? r.ButtonLooks.INVERTED : void 0,
+                    buttonShineClassName: "buttonShineClassName" in p ? p.buttonShineClassName : m ? E.brandShine : void 0,
+                    trialId: null == N ? void 0 : N.id,
                     buttonText: O,
                     buttonTextClassName: C ? E.freeTrialText : void 0,
                     onlyShineOnHover: !0,
@@ -5421,7 +5439,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return T
+                    return f
                 }
             });
             var a = s("37983");
@@ -5437,33 +5455,33 @@
                 _ = s("903610"),
                 E = s("35257"),
                 I = s("871938"),
-                T = e => {
+                f = e => {
                     let {
                         className: t
                     } = e, {
                         AnalyticsLocationProvider: s
                     } = (0, u.default)(i.default.PREMIUM_MARKETING_GIFT_SECTION), n = (0, o.useIsSeasonalGiftingActive)(), {
-                        enabled: T
+                        enabled: f
                     } = o.SeasonalGiftingMarketingExperiment.useExperiment({
                         location: "GiftNitro"
                     }, {
                         autoTrackExposure: n
-                    }), f = T && n;
+                    }), T = f && n;
                     return (0, a.jsx)(s, {
                         children: (0, a.jsx)("div", {
                             className: r(_.container, t),
                             style: {
-                                backgroundImage: "url(".concat(f ? I : E, ")")
+                                backgroundImage: "url(".concat(T ? I : E, ")")
                             },
                             children: (0, a.jsxs)("div", {
                                 className: _.textContainer,
                                 children: [(0, a.jsx)(l.Heading, {
                                     variant: "heading-lg/extrabold",
                                     className: _.heading,
-                                    children: f ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : c.default.Messages.GIFT_NITRO
+                                    children: T ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : c.default.Messages.GIFT_NITRO
                                 }), (0, a.jsx)(l.Text, {
                                     variant: "text-sm/medium",
-                                    children: f ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+                                    children: T ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
                                 }), (0, a.jsx)(d.default, {
                                     isGift: !0,
                                     className: _.giftCardButton,
@@ -5481,7 +5499,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return T
+                    return f
                 }
             });
             var a = s("37983");
@@ -5497,7 +5515,7 @@
                 _ = s("782340"),
                 E = s("4047"),
                 I = s("230724"),
-                T = e => {
+                f = e => {
                     let {
                         className: t
                     } = e, {
@@ -5556,14 +5574,14 @@
                 _ = s("594098"),
                 E = s("719923"),
                 I = s("182650"),
-                T = s("300962"),
-                f = s("959905"),
+                f = s("300962"),
+                T = s("959905"),
                 S = s("154889"),
                 R = s("917247"),
                 p = s("460680"),
-                m = s("411205"),
-                N = s("934570"),
-                A = s("641078"),
+                A = s("411205"),
+                m = s("934570"),
+                N = s("641078"),
                 g = s("400307"),
                 P = s("159646"),
                 C = s("379521"),
@@ -5575,17 +5593,17 @@
                 v = s("525505"),
                 U = s("881155"),
                 D = s("646718"),
-                j = s("880552"),
-                b = s("679324"),
+                b = s("880552"),
+                j = s("679324"),
                 G = s("905498"),
                 y = s("452637"),
                 B = e => {
                     var t;
                     let {
                         isFullscreen: s
-                    } = e, [r, B] = n.useState(!1), [k, H] = n.useState(!1), [K, F] = n.useState(!1), W = (0, i.useStateFromStores)([c.default], () => c.default.getPremiumTypeSubscription()), w = null != W ? (0, E.getPremiumPlanItem)(W) : null, V = null != w ? E.default.getSkuIdForPlan(w.planId) : null, Y = null !== V && V !== D.PremiumSubscriptionSKUs.TIER_2 ? D.PremiumSubscriptionSKUs.TIER_2 : null, z = (0, f.useLocalizedPromoQuery)(), Z = null != z, X = (0, S.usePremiumDiscountOffer)(), Q = (0, R.usePremiumTrialOffer)(), J = null == Q ? void 0 : null === (t = Q.subscription_trial) || void 0 === t ? void 0 : t.sku_id, q = (0, I.useIsInPremiumOfferExperience)(), $ = (0, A.useIsEligibleForBogoPromotion)(), {
+                    } = e, [r, B] = n.useState(!1), [k, H] = n.useState(!1), [K, F] = n.useState(!1), W = (0, i.useStateFromStores)([c.default], () => c.default.getPremiumTypeSubscription()), w = null != W ? (0, E.getPremiumPlanItem)(W) : null, V = null != w ? E.default.getSkuIdForPlan(w.planId) : null, Y = null !== V && V !== D.PremiumSubscriptionSKUs.TIER_2 ? D.PremiumSubscriptionSKUs.TIER_2 : null, z = (0, T.useLocalizedPromoQuery)(), Z = null != z, X = (0, S.usePremiumDiscountOffer)(), Q = (0, R.usePremiumTrialOffer)(), J = null == Q ? void 0 : null === (t = Q.subscription_trial) || void 0 === t ? void 0 : t.sku_id, q = (0, I.useIsInPremiumOfferExperience)(), $ = (0, N.useIsEligibleForBogoPromotion)(), {
                         enabled: ee
-                    } = (0, T.default)(), et = "PremiumMarketingHome";
+                    } = (0, f.default)(), et = "PremiumMarketingHome";
                     return (0, d.useTriggerDebuggingAA)({
                         location: et + " auto on",
                         autoTrackExposure: !0
@@ -5595,17 +5613,17 @@
                     }), n.useEffect(() => {
                         F(!0)
                     }, []), (0, a.jsxs)("div", {
-                        className: j.container,
+                        className: b.container,
                         "data-cy": "tier-0-marketing-page",
                         children: [(0, a.jsx)(P.default, {
                             premiumSubscription: W,
-                            className: l(s ? j.fullscreenExistingSubscriberSpacing : j.existingSubscriberSpacing, {
-                                [j.zIndex1]: q
+                            className: l(s ? b.fullscreenExistingSubscriberSpacing : b.existingSubscriberSpacing, {
+                                [b.zIndex1]: q
                             }),
                             isFullscreen: s
                         }), s || q ? (0, a.jsx)(C.default, {
                             lifted: !s && q
-                        }) : null, !s && Z ? (0, a.jsx)(N.default, {
+                        }) : null, !s && Z ? (0, a.jsx)(m.default, {
                             localizedPricingPromo: z,
                             smallGap: !0
                         }) : (0, a.jsx)(u.VisibilitySensor, {
@@ -5616,19 +5634,19 @@
                                 subscriptionTier: Y,
                                 isFullscreen: s || q,
                                 className: l({
-                                    [j.fullscreenHero]: s,
-                                    [j.settingsHeroNoBackground]: !s && q,
-                                    [j.trialMarketingMargin]: q,
-                                    [j.settingsHeroBogoHeight]: !s && $,
-                                    [j.settingsHeroBogoMarginFullscreen]: s && $,
-                                    [j.noTopPaddingOverride]: null != W
+                                    [b.fullscreenHero]: s,
+                                    [b.settingsHeroNoBackground]: !s && q,
+                                    [b.trialMarketingMargin]: q,
+                                    [b.settingsHeroBogoHeight]: !s && $,
+                                    [b.settingsHeroBogoMarginFullscreen]: s && $,
+                                    [b.noTopPaddingOverride]: null != W
                                 })
                             })
                         }), (0, a.jsxs)("div", {
-                            className: s ? j.premiumTierCardsContainerFullscreen : j.premiumTierCardsContainerSettings,
+                            className: s ? b.premiumTierCardsContainerFullscreen : b.premiumTierCardsContainerSettings,
                             children: [(0, a.jsx)(p.default, {
                                 isFullscreen: s
-                            }), s && Z && (0, a.jsx)(m.default, {
+                            }), s && Z && (0, a.jsx)(A.default, {
                                 localizedPricingPromo: z
                             }), (0, a.jsx)(u.VisibilitySensor, {
                                 onChange: e => H(e),
@@ -5640,7 +5658,7 @@
                                         forceInverted: !0,
                                         showIcon: !1,
                                         subscriptionTier: D.PremiumSubscriptionSKUs.TIER_0,
-                                        className: j.marginTopForButtons,
+                                        className: b.marginTopForButtons,
                                         look: o.ButtonLooks.OUTLINED,
                                         color: o.ButtonColors.WHITE,
                                         buttonShineClassName: void 0
@@ -5648,13 +5666,13 @@
                                         forceInverted: !0,
                                         showIcon: !1,
                                         subscriptionTier: D.PremiumSubscriptionSKUs.TIER_0,
-                                        className: j.marginTopForButtons
+                                        className: b.marginTopForButtons
                                     }),
                                     tier2CTAButton: J === D.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(U.default, {
                                         forceInverted: !0,
                                         showIcon: !1,
                                         subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2,
-                                        className: j.marginTopForButtons,
+                                        className: b.marginTopForButtons,
                                         look: o.ButtonLooks.OUTLINED,
                                         color: o.ButtonColors.WHITE,
                                         buttonShineClassName: void 0
@@ -5662,53 +5680,53 @@
                                         forceInverted: !0,
                                         showIcon: !1,
                                         subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2,
-                                        className: j.marginTopForButtons,
+                                        className: b.marginTopForButtons,
                                         isEligibleForBogoPromotion: $
                                     })
                                 })
                             })]
                         }), s && !ee ? (0, a.jsxs)("div", {
-                            className: j.whatsNewSection,
+                            className: b.whatsNewSection,
                             children: [(0, a.jsx)(L.default, {
                                 variant: L.PerksDiscoverabilityVariants.WHATS_NEW
                             }), (0, a.jsx)(L.default, {}), q ? (0, a.jsx)(h.default, {
-                                className: j.pdSparklesTop,
+                                className: b.pdSparklesTop,
                                 variant: h.SparkleVariants.TOP
                             }) : null, q ? (0, a.jsx)(h.default, {
-                                className: j.pdSparklesBottom,
+                                className: b.pdSparklesBottom,
                                 variant: h.SparkleVariants.BOTTOM
                             }) : null]
                         }) : null, (0, a.jsx)(M.default, {
-                            className: s ? j.perkCardsContainerSpacingFullscreen : j.perkCardsContainerSpacingSettings
+                            className: s ? b.perkCardsContainerSpacingFullscreen : b.perkCardsContainerSpacingSettings
                         }), (0, a.jsxs)("div", {
-                            className: j.planComparisonTableContainer,
+                            className: b.planComparisonTableContainer,
                             children: [(0, a.jsx)(v.default, {
-                                className: j.planComparisonTable,
+                                className: b.planComparisonTable,
                                 hideCTAs: !0
                             }), s ? (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(_.default, {
                                     src: G,
-                                    className: j.tableLeftSideDecoration,
+                                    className: b.tableLeftSideDecoration,
                                     width: 197,
                                     height: 486,
                                     zoomable: !1
                                 }), (0, a.jsx)(_.default, {
                                     src: y,
-                                    className: j.tableRightSideDecoration,
+                                    className: b.tableRightSideDecoration,
                                     width: 241,
                                     height: 552,
                                     zoomable: !1
                                 })]
                             }) : null]
                         }), (0, a.jsx)("div", {
-                            className: s ? j.footerSpacingFullscreen : j.footerSpacing
+                            className: s ? b.footerSpacingFullscreen : b.footerSpacing
                         }), (0, a.jsx)(x.default, {
                             isVisible: !r && !k && K,
                             isFullscreen: s,
                             subscriptionTier: Y
                         }), (0, a.jsx)(_.default, {
-                            src: b,
-                            className: j.bottomIllustration,
+                            src: j,
+                            className: b.bottomIllustration,
                             width: 112,
                             height: 85,
                             zoomable: !1
@@ -5780,7 +5798,7 @@
                     return I
                 },
                 default: function() {
-                    return T
+                    return f
                 }
             }), s("222007");
             var a = s("884691"),
@@ -5818,7 +5836,7 @@
                         a = null != s && t.includes(s) && !e;
                     a && (0, i.markDismissibleContentAsDismissed)(s)
                 };
-            var T = () => {
+            var f = () => {
                 let e = (0, l.useBlockedPaymentsConfig)(),
                     t = (0, n.default)([o.default], () => o.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
                     s = _.map(e => {
@@ -5888,7 +5906,7 @@
                     return n
                 },
                 default: function() {
-                    return j
+                    return b
                 }
             });
             var a, n, r = s("65597"),
@@ -5901,14 +5919,14 @@
                 _ = s("38766"),
                 E = s("42887"),
                 I = s("521012"),
-                T = s("701909"),
-                f = s("719923"),
+                f = s("701909"),
+                T = s("719923"),
                 S = s("184684"),
                 R = s("646718"),
                 p = s("49111"),
-                m = s("397336"),
-                N = s("782340"),
-                A = s("571685"),
+                A = s("397336"),
+                m = s("782340"),
+                N = s("571685"),
                 g = s("994679"),
                 P = s("620826"),
                 C = s("333078"),
@@ -5921,15 +5939,15 @@
                 U = s("165870"),
                 D = s("443646");
             (a = n || (n = {})).AVATAR_DECORATIONS = "avatarDecorations", a.CLIENT_THEMES = "clientThemes", a.CLIPS = "clips", a.EARLY_ACCESS = "earlyAccess", a.ENTRANCE_SOUNDS = "entranceSounds", a.PROFILE_EFFECTS = "profileEffects", a.PROFILES = "profiles", a.REMIXING = "remixing", a.SERVER_BOOSTS = "serverBoosts", a.SPECIAL_MEMBER_PRICING = "specialMemberPricing", a.SPECIAL_SHOP_PERKS = "specialShopPerks", a.UNLIMITED_SUPER_REACTIONS = "unlimitedSuperReactions", a.UPCOMING_DROP_UNTIMED = "upcomingDropUntimed";
-            var j = () => {
+            var b = () => {
                 let {
                     analyticsLocations: e
-                } = (0, o.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, r.default)([I.default], () => I.default.getPremiumTypeSubscription()), s = null != t ? f.default.getPremiumPlanItem(t) : null, a = null != s ? f.default.getSkuIdForPlan(s.planId) : null, n = a === R.PremiumSubscriptionSKUs.TIER_2, {
-                    flipped: j
-                } = (0, S.useWhatsNewAvatarDecoRollout)(), {
+                } = (0, o.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, r.default)([I.default], () => I.default.getPremiumTypeSubscription()), s = null != t ? T.default.getPremiumPlanItem(t) : null, a = null != s ? T.default.getSkuIdForPlan(s.planId) : null, n = a === R.PremiumSubscriptionSKUs.TIER_2, {
                     flipped: b
+                } = (0, S.useWhatsNewAvatarDecoRollout)(), {
+                    flipped: j
                 } = (0, S.useWhatsNewProfileFXRollout)(), G = (0, d.default)(E.default), y = (0, _.default)({
-                    scrollPosition: m.ProfileCustomizationScrollPositions.TRY_IT_OUT,
+                    scrollPosition: A.ProfileCustomizationScrollPositions.TRY_IT_OUT,
                     analyticsLocations: e
                 }), B = () => {
                     (0, c.openCollectiblesShop)({
@@ -5939,85 +5957,85 @@
                 }, k = {
                     avatarDecorations: n ? {
                         name: "avatarDecorations",
-                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_SUB,
-                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
-                        descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
+                        title: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_SUB,
+                        description: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
+                        descriptionCta: m.default.Messages.VISIT_THE_SHOP_CTA,
                         onCtaClick: B,
-                        pillText: N.default.Messages.EARLY_ACCESS,
+                        pillText: m.default.Messages.EARLY_ACCESS,
                         perkImage: C,
-                        canReveal: j,
+                        canReveal: b,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
                     } : {
                         name: "avatarDecorations",
-                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_NON_SUB,
-                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
-                        pillText: N.default.Messages.EARLY_ACCESS,
+                        title: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_NON_SUB,
+                        description: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
+                        pillText: m.default.Messages.EARLY_ACCESS,
                         perkImage: C,
-                        canReveal: j,
+                        canReveal: b,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
                     },
                     clientThemes: {
                         name: "clientThemes",
-                        title: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_SUBTITLE,
-                        description: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_DESCRIPTION,
-                        descriptionCta: N.default.Messages.TAKE_ME_THERE,
+                        title: m.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_SUBTITLE,
+                        description: m.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_DESCRIPTION,
+                        descriptionCta: m.default.Messages.TAKE_ME_THERE,
                         onCtaClick: () => {
                             i.default.open(p.UserSettingsSections.APPEARANCE, null, {
                                 openWithoutBackstack: !0,
                                 analyticsLocations: e
                             })
                         },
-                        perkImage: A
+                        perkImage: N
                     },
                     clips: n ? {
                         name: "clips",
-                        title: N.default.Messages.CLIPS,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
-                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_SUB,
-                        descriptionCta: G ? N.default.Messages.TAKE_ME_THERE : N.default.Messages.LEARN_MORE,
-                        pillText: N.default.Messages.EARLY_ACCESS,
+                        title: m.default.Messages.CLIPS,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
+                        description: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_SUB,
+                        descriptionCta: G ? m.default.Messages.TAKE_ME_THERE : m.default.Messages.LEARN_MORE,
+                        pillText: m.default.Messages.EARLY_ACCESS,
                         onCtaClick: G ? () => {
                             i.default.open(p.UserSettingsSections.CLIPS, null, {
                                 openWithoutBackstack: !0,
                                 analyticsLocations: e
                             })
                         } : () => {
-                            window.open(T.default.getArticleURL(p.HelpdeskArticles.CLIPS), "_blank")
+                            window.open(f.default.getArticleURL(p.HelpdeskArticles.CLIPS), "_blank")
                         },
                         perkImage: O
                     } : {
                         name: "clips",
-                        title: N.default.Messages.CLIPS,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
-                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
-                        pillText: N.default.Messages.EARLY_ACCESS,
+                        title: m.default.Messages.CLIPS,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
+                        description: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
+                        pillText: m.default.Messages.EARLY_ACCESS,
                         perkImage: O
                     },
                     earlyAccess: n ? {
                         name: "earlyAccess",
-                        title: N.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
-                        subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE,
-                        description: N.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
+                        title: m.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
+                        subtitle: m.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE,
+                        description: m.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
                         perkImage: M
                     } : {
                         name: "earlyAccess",
-                        title: N.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
-                        subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE,
-                        description: N.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
+                        title: m.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
+                        subtitle: m.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE,
+                        description: m.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
                         isPremiumGetCta: !0,
                         perkImage: M
                     },
                     entranceSounds: n ? {
                         name: "entranceSounds",
-                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
-                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
-                        descriptionCta: N.default.Messages.TAKE_ME_THERE,
+                        title: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
+                        description: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
+                        descriptionCta: m.default.Messages.TAKE_ME_THERE,
                         onCtaClick: () => {
-                            i.default.open(p.UserSettingsSections.VOICE, m.SOUNDBOARD_SUBSECTION, {
+                            i.default.open(p.UserSettingsSections.VOICE, A.SOUNDBOARD_SUBSECTION, {
                                 openWithoutBackstack: !0,
                                 analyticsLocations: e
                             })
@@ -6025,62 +6043,62 @@
                         perkImage: L
                     } : {
                         name: "entranceSounds",
-                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
-                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
+                        title: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
+                        description: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
                         perkImage: L
                     },
                     profileEffects: n ? {
                         name: "profileEffects",
-                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
-                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
-                        descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
+                        title: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
+                        description: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
+                        descriptionCta: m.default.Messages.VISIT_THE_SHOP_CTA,
                         onCtaClick: B,
-                        pillText: N.default.Messages.EARLY_ACCESS,
+                        pillText: m.default.Messages.EARLY_ACCESS,
                         perkImage: x,
-                        canReveal: b,
+                        canReveal: j,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
                     } : {
                         name: "profileEffects",
-                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
-                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
-                        pillText: N.default.Messages.EARLY_ACCESS,
+                        title: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
+                        description: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
+                        pillText: m.default.Messages.EARLY_ACCESS,
                         perkImage: x,
-                        canReveal: b,
+                        canReveal: j,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
                     },
                     profiles: {
                         name: "profiles",
-                        title: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
-                        description: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
-                        descriptionCta: N.default.Messages.TAKE_ME_THERE,
+                        title: m.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
+                        description: m.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
+                        descriptionCta: m.default.Messages.TAKE_ME_THERE,
                         onCtaClick: y,
                         perkImage: g
                     },
                     remixing: n ? {
                         name: "remixing",
-                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
-                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_SUB,
+                        title: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
+                        description: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_SUB,
                         perkImage: v,
-                        pillText: N.default.Messages.EARLY_ACCESS
+                        pillText: m.default.Messages.EARLY_ACCESS
                     } : {
                         name: "remixing",
-                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
-                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_NON_SUB,
+                        title: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
+                        description: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_NON_SUB,
                         perkImage: v,
-                        pillText: N.default.Messages.EARLY_ACCESS
+                        pillText: m.default.Messages.EARLY_ACCESS
                     },
                     serverBoosts: {
                         name: "serverBoosts",
-                        title: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_SUBTITLE,
-                        description: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_DESCRIPTION,
-                        descriptionCta: N.default.Messages.TAKE_ME_THERE,
+                        title: m.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_SUBTITLE,
+                        description: m.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_DESCRIPTION,
+                        descriptionCta: m.default.Messages.TAKE_ME_THERE,
                         onCtaClick: () => {
                             i.default.open(p.UserSettingsSections.GUILD_BOOSTING, null, {
                                 openWithoutBackstack: !0,
@@ -6091,55 +6109,55 @@
                     },
                     specialMemberPricing: n ? {
                         name: "specialMemberPricing",
-                        title: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
-                        subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
-                        description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
-                        descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
+                        title: m.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
+                        subtitle: m.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
+                        description: m.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
+                        descriptionCta: m.default.Messages.VISIT_THE_SHOP_CTA,
                         onCtaClick: B,
                         perkImage: U
                     } : {
                         name: "specialMemberPricing",
-                        title: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
-                        subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
-                        description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
+                        title: m.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
+                        subtitle: m.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
+                        description: m.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                         isPremiumGetCta: !0,
                         perkImage: U
                     },
                     specialShopPerks: n ? {
                         name: "specialShopPerks",
-                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
-                        description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
-                        descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
+                        title: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
+                        description: m.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
+                        descriptionCta: m.default.Messages.VISIT_THE_SHOP_CTA,
                         onCtaClick: B,
                         perkImage: U
                     } : {
                         name: "specialShopPerks",
-                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
-                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
-                        description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
-                        descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
+                        title: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
+                        subtitle: m.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
+                        description: m.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
+                        descriptionCta: m.default.Messages.VISIT_THE_SHOP_CTA,
                         onCtaClick: B,
                         perkImage: U
                     },
                     unlimitedSuperReactions: n ? {
                         name: "unlimitedSuperReactions",
-                        title: N.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
-                        subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
-                        description: N.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_SUB,
+                        title: m.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
+                        subtitle: m.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
+                        description: m.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_SUB,
                         perkImage: D
                     } : {
                         name: "unlimitedSuperReactions",
-                        title: N.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
-                        subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
-                        description: N.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_NON_SUB,
+                        title: m.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
+                        subtitle: m.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
+                        description: m.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_NON_SUB,
                         isPremiumGetCta: !0,
                         perkImage: D
                     },
                     upcomingDropUntimed: {
                         name: "upcomingDropUntimed",
-                        title: N.default.Messages.NEW_DROP,
-                        pillText: N.default.Messages.COMING_SOON,
+                        title: m.default.Messages.NEW_DROP,
+                        pillText: m.default.Messages.COMING_SOON,
                         backgroundImage: h
                     }
                 };
@@ -6182,6 +6200,51 @@
                     })
                 }
         },
+        322631: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                TWITCH_APPLICATION_ID_PREFIX: function() {
+                    return i
+                },
+                default: function() {
+                    return a
+                }
+            });
+            var a, n = s("376556"),
+                r = s("653047"),
+                l = s("782340");
+            let i = "twitch:";
+            a = class extends r.default {
+                getIconURL() {
+                    return n.default.get("twitch").icon.lightPNG
+                }
+                constructor(e) {
+                    super(e), this.id = "".concat(i).concat(e.url), this.name = l.default.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH
+                }
+            }
+        },
+        947297: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                XBOX_APPLICATION_ID_PREFIX: function() {
+                    return l
+                },
+                default: function() {
+                    return a
+                }
+            });
+            var a, n = s("376556"),
+                r = s("653047");
+            let l = "xbox:";
+            a = class extends r.default {
+                getIconURL() {
+                    return n.default.get("xbox").icon.lightPNG
+                }
+                constructor(e) {
+                    super(e), this.id = "".concat(l).concat(e.name), this.name = e.name
+                }
+            }
+        },
         1017: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -6203,7 +6266,7 @@
             function E(e) {
                 let t = !1;
                 return e.forEach(e => {
-                    t = !1 !== T(e) || t
+                    t = !1 !== f(e) || t
                 }), t
             }
 
@@ -6218,7 +6281,7 @@
                 }, delete _[e], !0
             }
 
-            function T(e) {
+            function f(e) {
                 var t, s, a, n;
                 let {
                     user: l,
@@ -6229,13 +6292,13 @@
                 if (null == d) return I(l.id);
                 let E = (0, r.default)(d);
                 if (null == E) return I(l.id);
-                let T = _[l.id];
-                null != T && T.gameId !== E && I(l.id);
-                let f = null !== (s = null === (t = d.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== s ? s : Date.now(),
+                let f = _[l.id];
+                null != f && f.gameId !== E && I(l.id);
+                let T = null !== (s = null === (t = d.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== s ? s : Date.now(),
                     S = {
                         userId: l.id,
                         activity: d,
-                        startedPlaying: f
+                        startedPlaying: T
                     };
                 return a = E, n = S, c = {
                     ...c,
@@ -6252,13 +6315,13 @@
                 }, !0
             }
 
-            function f() {
+            function T() {
                 let e = !1;
                 if (!i.default.needsRefresh() && !d) {
                     let t;
                     c = {}, _ = {}, t = !1, l.default.getUserIds().forEach(e => {
                         let s = u.default.getUser(e);
-                        null != s && (t = T({
+                        null != s && (t = f({
                             user: s,
                             activities: l.default.getActivities(e)
                         }) || t)
@@ -6268,7 +6331,7 @@
             }
             class S extends a.default.Store {
                 initialize() {
-                    this.waitFor(i.default), this.syncWith([i.default], f)
+                    this.waitFor(i.default), this.syncWith([i.default], T)
                 }
                 get games() {
                     return c
@@ -6304,13 +6367,78 @@
                     let {
                         updates: t
                     } = e;
-                    return t.map(e => T(e)).some(e => e)
+                    return t.map(e => f(e)).some(e => e)
                 },
                 PRESENCES_REPLACE: function(e) {
                     let {
                         presences: t
                     } = e;
                     return E(t)
+                }
+            })
+        },
+        843823: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                default: function() {
+                    return c
+                }
+            }), s("222007");
+            var a = s("446674"),
+                n = s("913144"),
+                r = s("27618");
+            let l = !1,
+                i = Object.freeze({
+                    userAffinities: [],
+                    affinityUserIds: new Set,
+                    lastFetched: 0
+                }),
+                u = {
+                    ...i
+                };
+
+            function o() {
+                u.affinityUserIds = new Set(u.userAffinities.map(e => e.user_id).filter(e => !r.default.isBlocked(e)))
+            }
+            class d extends a.default.PersistedStore {
+                initialize(e) {
+                    this.waitFor(r.default), null != e && (u.userAffinities = e.userAffinities, u.affinityUserIds = new Set(e.affinityUserIds), u.lastFetched = e.lastFetched), this.syncWith([r.default], o)
+                }
+                needsRefresh() {
+                    return Date.now() - u.lastFetched > 864e5
+                }
+                getFetching() {
+                    return l
+                }
+                getState() {
+                    return u
+                }
+                getUserAffinities() {
+                    return u.userAffinities
+                }
+                getUserAffinitiesUserIds() {
+                    return u.affinityUserIds
+                }
+            }
+            d.displayName = "UserAffinitiesStore", d.persistKey = "UserAffinitiesStore", d.migrations = [e => null];
+            var c = new d(n.default, {
+                LOAD_USER_AFFINITIES_SUCCESS: function(e) {
+                    var t;
+                    let {
+                        affinities: s
+                    } = e;
+                    u.userAffinities = null !== (t = s.user_affinities) && void 0 !== t ? t : [], u.lastFetched = Date.now(), o(), l = !1
+                },
+                LOAD_USER_AFFINITIES: function() {
+                    l = !0
+                },
+                LOAD_USER_AFFINITIES_FAILURE: function() {
+                    l = !1
+                },
+                LOGOUT: function() {
+                    u = {
+                        ...i
+                    }
                 }
             })
         },
@@ -6457,22 +6585,22 @@
                 return E("Thing", e)
             }
 
-            function T(e) {
+            function f(e) {
                 return E("Product", e)
             }
-            T.Image = function(e) {
+            f.Image = function(e) {
                 if (null == e) return null;
                 let t = e.filter(e => null != e && "" !== e);
                 return 0 === t.length ? null : 1 === t.length ? t[0] : t
             };
 
-            function f(e) {
+            function T(e) {
                 return E("Offer", e)
             }
 
             function S(e) {
                 return E("QuantitativeValue", e)
-            }(u = n || (n = {})).DAMAGED = "http://schema.org/DamagedCondition", u.NEW = "http://schema.org/NewCondition", u.REFURBISHED = "http://schema.org/RefurbishedCondition", u.USED = "http://schema.org/UsedCondition", (o = r || (r = {})).DISCONTINUED = "http://schema.org/Discontinued", o.IN_STOCK = "http://schema.org/InStock", o.IN_STORE_ONLY = "http://schema.org/InStoreOnly", o.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", o.ONLINE_ONLY = "http://schema.org/OnlineOnly", o.OUT_OF_STOCK = "http://schema.org/OutOfStock", o.PREORDER = "http://schema.org/PreOrder", o.PRESALE = "http://schema.org/PreSale", o.SOLD_OUT = "http://schema.org/SoldOut", f.ItemConditions = n, f.ItemAvailability = r, (d = l || (l = {})).YEARLY = "ANN", d.MONTHLY = "MON", S.UnitCodes = l;
+            }(u = n || (n = {})).DAMAGED = "http://schema.org/DamagedCondition", u.NEW = "http://schema.org/NewCondition", u.REFURBISHED = "http://schema.org/RefurbishedCondition", u.USED = "http://schema.org/UsedCondition", (o = r || (r = {})).DISCONTINUED = "http://schema.org/Discontinued", o.IN_STOCK = "http://schema.org/InStock", o.IN_STORE_ONLY = "http://schema.org/InStoreOnly", o.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", o.ONLINE_ONLY = "http://schema.org/OnlineOnly", o.OUT_OF_STOCK = "http://schema.org/OutOfStock", o.PREORDER = "http://schema.org/PreOrder", o.PRESALE = "http://schema.org/PreSale", o.SOLD_OUT = "http://schema.org/SoldOut", T.ItemConditions = n, T.ItemAvailability = r, (d = l || (l = {})).YEARLY = "ANN", d.MONTHLY = "MON", S.UnitCodes = l;
             class R extends _.Component {
                 render() {
                     let {
@@ -6494,7 +6622,7 @@
                 return E("Organization", e)
             }, R.ItemPage = function(e) {
                 return E("ItemPage", e)
-            }, R.Product = T, R.Offer = f, R.Rating = function(e) {
+            }, R.Product = f, R.Offer = T, R.Rating = function(e) {
                 return E("Rating", e)
             }, R.AggregateRating = function(e) {
                 return E("AggregateRating", e)
@@ -6523,16 +6651,16 @@
                 _ = s("216422"),
                 E = s("49111"),
                 I = s("782340"),
-                T = s("822304");
-            let f = e => {
+                f = s("822304");
+            let T = e => {
                     let {
                         IconComponent: t,
                         className: s
                     } = e;
                     return (0, n.jsx)("div", {
-                        className: i(T.iconCircle, s),
+                        className: i(f.iconCircle, s),
                         children: (0, n.jsx)(t, {
-                            className: T.icon
+                            className: f.icon
                         })
                     })
                 },
@@ -6544,14 +6672,14 @@
                         className: r
                     } = e;
                     return (0, n.jsxs)("div", {
-                        className: i(T.recommendationReason, r),
+                        className: i(f.recommendationReason, r),
                         children: [t, (0, n.jsxs)("div", {
-                            className: T.description,
+                            className: f.description,
                             children: [null != s ? (0, n.jsx)("div", {
-                                className: T.smallHeader,
+                                className: f.smallHeader,
                                 children: s
                             }) : null, (0, n.jsx)("div", {
-                                className: T.text,
+                                className: f.text,
                                 children: a
                             })]
                         })]
@@ -6565,7 +6693,7 @@
                     } = this.props;
                     if (e.type === E.StoreRecommendationTypes.RECENT_RELEASE_DATE) return (0, n.jsx)(S, {
                         className: t,
-                        circle: (0, n.jsx)(f, {
+                        circle: (0, n.jsx)(T, {
                             IconComponent: o.default
                         }),
                         smallHeader: I.default.Messages.APPLICATION_STORE_NEW_RELEASE,
@@ -6573,7 +6701,7 @@
                     });
                     if (e.type === E.StoreRecommendationTypes.RELEASE_DATE) return (0, n.jsx)(S, {
                         className: t,
-                        circle: (0, n.jsx)(f, {
+                        circle: (0, n.jsx)(T, {
                             IconComponent: o.default
                         }),
                         smallHeader: I.default.Messages.APPLICATION_STORE_DETAILS_RELEASE_DATE,
@@ -6581,31 +6709,31 @@
                     });
                     if (e.type === E.StoreRecommendationTypes.EARLY_ACCESS) return null != e.releaseDate ? (0, n.jsx)(S, {
                         className: t,
-                        circle: (0, n.jsx)(f, {
+                        circle: (0, n.jsx)(T, {
                             IconComponent: c.default,
-                            className: T.earlyAccess
+                            className: f.earlyAccess
                         }),
                         smallHeader: I.default.Messages.APPLICATION_STORE_EARLY_ACCESS,
                         text: (0, u.dateFormat)(e.releaseDate, "LL")
                     }) : (0, n.jsx)(S, {
                         className: t,
-                        circle: (0, n.jsx)(f, {
+                        circle: (0, n.jsx)(T, {
                             IconComponent: c.default,
-                            className: T.earlyAccess
+                            className: f.earlyAccess
                         }),
                         text: I.default.Messages.APPLICATION_STORE_EARLY_ACCESS
                     });
                     return e.type === E.StoreRecommendationTypes.FLAVOR_TEXT ? (0, n.jsx)(S, {
-                        circle: (0, n.jsx)(f, {
+                        circle: (0, n.jsx)(T, {
                             IconComponent: d.default
                         }),
                         text: e.flavorText,
                         className: t
                     }) : e.type === E.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT ? (0, n.jsx)(S, {
                         className: t,
-                        circle: (0, n.jsx)(f, {
+                        circle: (0, n.jsx)(T, {
                             IconComponent: _.default,
-                            className: T.premiumCircle
+                            className: f.premiumCircle
                         }),
                         text: I.default.Messages.APPLICATION_STORE_FREE_PREMIUM_CONTENT
                     }) : null
