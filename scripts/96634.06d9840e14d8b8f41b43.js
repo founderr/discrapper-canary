@@ -152,40 +152,44 @@
                 r = l("49111");
             let u = Object.freeze({});
             async function d(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u,
-                    {
-                        channelId: l = null,
-                        paymentSource: d = null
-                    } = t;
+                let {
+                    code: t,
+                    options: l = u,
+                    onRedeemed: d,
+                    onError: o
+                } = e, {
+                    channelId: c = null,
+                    paymentSource: E = null
+                } = l;
                 s.default.dispatch({
                     type: "GIFT_CODE_REDEEM",
-                    code: e
+                    code: t
                 });
                 try {
-                    let t = await i.default.post({
-                        url: r.Endpoints.GIFT_CODE_REDEEM(e),
+                    let e = await i.default.post({
+                        url: r.Endpoints.GIFT_CODE_REDEEM(t),
                         body: {
-                            channel_id: l,
-                            payment_source_id: null == d ? void 0 : d.id,
-                            gateway_checkout_context: await (0, a.createGatewayCheckoutContext)(d)
+                            channel_id: c,
+                            payment_source_id: null == E ? void 0 : E.id,
+                            gateway_checkout_context: await (0, a.createGatewayCheckoutContext)(E)
                         },
                         oldFormErrors: !0
                     });
                     return s.default.dispatch({
                         type: "GIFT_CODE_REDEEM_SUCCESS",
-                        code: e,
-                        entitlement: t.body
-                    }), {
-                        code: e,
-                        entitlement: t
+                        code: t,
+                        entitlement: e.body
+                    }), null == d || d(), {
+                        code: t,
+                        entitlement: e
                     }
                 } catch (l) {
-                    let t = new n.BillingError(l);
+                    let e = new n.BillingError(l);
                     throw s.default.dispatch({
                         type: "GIFT_CODE_REDEEM_FAILURE",
-                        code: e,
-                        error: t
-                    }), t
+                        code: t,
+                        error: e
+                    }), null == o || o(e), e
                 }
             }
             var o = {

@@ -842,8 +842,11 @@
                         } = this.props;
                         if (null == e) throw Error("GiftCode is null at acceptance.");
                         try {
-                            await d.default.redeemGiftCode(e.code, {
-                                channelId: t
+                            await d.default.redeemGiftCode({
+                                code: e.code,
+                                options: {
+                                    channelId: t
+                                }
                             }), this.setState({
                                 accepted: !0
                             }), null == s || s()

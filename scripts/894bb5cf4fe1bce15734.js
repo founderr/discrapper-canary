@@ -1215,7 +1215,9 @@
                         try {
                             this.setState({
                                 error: null
-                            }), await f.default.redeemGiftCode(n), e(O.Routes.APP)
+                            }), await f.default.redeemGiftCode({
+                                code: n
+                            }), e(O.Routes.APP)
                         } catch (e) {
                             this.setState({
                                 error: e
