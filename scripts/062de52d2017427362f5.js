@@ -62,7 +62,8 @@
                         body: e
                     } = t, {
                         classifications: a,
-                        account_standing: n
+                        guild_classifications: n,
+                        account_standing: r
                     } = e;
                     a.forEach(t => {
                         if (null != t.flagged_content && t.flagged_content.length > 0) {
@@ -76,8 +77,8 @@
                         }
                     }), s.default.dispatch({
                         type: "SAFETY_HUB_FETCH_SUCCESS",
-                        classifications: a,
-                        accountStanding: n
+                        classifications: a.concat(null != n ? n : []),
+                        accountStanding: r
                     })
                 }).catch(t => {
                     var e, a;
