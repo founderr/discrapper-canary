@@ -12803,12 +12803,12 @@
                     className: o.votesData,
                     children: [(0, a.jsxs)(l.Text, {
                         className: o.voteDataLine,
-                        variant: "text-xs/semibold",
+                        variant: "text-md/semibold",
                         color: "none",
                         children: [t, "%"]
                     }), (0, a.jsx)(l.Text, {
                         className: o.voteDataLine,
-                        variant: "text-xxs/semibold",
+                        variant: "text-xs/semibold",
                         color: "none",
                         children: n
                     })]
