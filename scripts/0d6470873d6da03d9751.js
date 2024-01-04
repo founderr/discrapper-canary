@@ -145,7 +145,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 useCustomizeGuildSlide: function() {
-                    return _
+                    return x
                 },
                 default: function() {
                     return I
@@ -163,93 +163,94 @@
                 C = s("476765"),
                 m = s("651879"),
                 f = s("326678"),
-                E = s("49111"),
-                T = s("782340"),
-                x = s("852243");
+                T = s("49111"),
+                E = s("782340"),
+                _ = s("852243");
 
-            function _(e) {
+            function x(e) {
                 var t;
                 let {
                     guildTemplate: s,
                     onClose: i,
-                    onBack: _,
+                    onBack: x,
                     onHubGuildInfoSet: I,
                     onGuildCreated: L,
                     isSlideReady: h,
                     hasFooter: g = !0,
-                    isCommunity: S = !1
-                } = e, [N, p] = a.useState(m.default.getGuildNameSuggestion()), [M, j] = a.useState(null), [A, U] = a.useState(!1), [D, B] = a.useState(null), H = !!(null === (t = u.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()), [O, G] = a.useState(H), R = (0, C.useUID)(), y = a.useRef(null);
+                    isCommunity: N = !1
+                } = e, [S, p] = a.useState(m.default.getGuildNameSuggestion()), [M, A] = a.useState(null), [j, U] = a.useState(!1), [B, D] = a.useState(null), H = !!(null === (t = u.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()), [O, G] = a.useState(H), R = (0, C.useUID)(), y = a.useRef(null);
                 a.useEffect(() => {
                     var e;
                     h && (null === (e = y.current) || void 0 === e || e.focus())
                 }, [h]);
                 let v = a.useCallback(async e => {
                         if (e.preventDefault(), null != s) {
-                            U(!0), B(null);
+                            U(!0), D(null);
                             try {
-                                if (null != I) I(N, M);
+                                if (null != I) I(S, M);
                                 else {
-                                    let e = await f.default.createGuildFromTemplate(N, M, s, S, O);
+                                    let e = await f.default.createGuildFromTemplate(S, M, s, N, O);
                                     d.default.transitionToGuildSync(e.id), null == L || L(e.id)
                                 }
                             } catch (e) {
-                                B(e)
+                                D(e)
                             }
                             U(!1)
                         }
-                    }, [s, M, N, L, I, S, O]),
+                    }, [s, M, S, L, I, N, O]),
                     b = (0, l.jsxs)(l.Fragment, {
                         children: [(0, l.jsx)(r.Button, {
                             color: r.Button.Colors.BRAND,
                             onClick: v,
-                            disabled: 0 === N.length,
-                            submitting: A,
-                            children: null != I ? T.default.Messages.NEXT : T.default.Messages.CREATE
+                            disabled: 0 === S.length,
+                            submitting: j,
+                            children: null != I ? E.default.Messages.NEXT : E.default.Messages.CREATE
                         }), (0, l.jsx)(r.Button, {
+                            className: _.backButton,
                             look: r.Button.Looks.BLANK,
                             size: r.Button.Sizes.MIN,
-                            onClick: _,
-                            children: T.default.Messages.BACK
+                            onClick: x,
+                            children: E.default.Messages.BACK
                         })]
                     }),
                     F = (0, l.jsxs)(l.Fragment, {
                         children: [(0, l.jsxs)(r.ModalHeader, {
                             direction: c.default.Direction.VERTICAL,
-                            className: x.header,
+                            className: _.header,
                             separator: !1,
                             children: [(0, l.jsx)(r.Heading, {
-                                className: n(x.title),
+                                className: n(_.title),
                                 variant: "heading-xl/semibold",
-                                children: T.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER
+                                children: E.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER
                             }), (0, l.jsx)(r.Text, {
-                                className: x.subtitle,
+                                className: _.subtitle,
                                 color: "header-secondary",
                                 variant: "text-md/normal",
-                                children: T.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER
+                                children: E.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER
                             }), null != i && (0, l.jsx)(r.ModalCloseButton, {
-                                className: x.closeButton,
+                                className: _.closeButton,
                                 onClick: i
                             })]
                         }), (0, l.jsxs)(r.ModalContent, {
-                            className: x.createGuild,
+                            className: _.createGuild,
                             children: [(0, l.jsx)("div", {
-                                className: x.uploadIcon,
+                                className: _.uploadIcon,
                                 children: (0, l.jsx)(o.default, {
                                     icon: M,
-                                    onChange: j
+                                    onChange: A
                                 })
                             }), (0, l.jsxs)("form", {
                                 onSubmit: v,
                                 children: [(0, l.jsxs)(r.FormItem, {
-                                    className: x.nameInput,
-                                    error: null == D ? void 0 : D.getFirstFieldErrorMessage("name"),
+                                    className: _.nameInput,
+                                    error: null == B ? void 0 : B.getFirstFieldErrorMessage("name"),
                                     children: [(0, l.jsx)(r.FormTitle, {
                                         tag: "label",
                                         htmlFor: R,
-                                        children: T.default.Messages.FORM_LABEL_SERVER_NAME
+                                        children: E.default.Messages.FORM_LABEL_SERVER_NAME
                                     }), (0, l.jsx)(r.TextInput, {
                                         type: "text",
-                                        value: N,
+                                        value: S,
                                         maxLength: 100,
                                         onChange: p,
                                         inputRef: y,
@@ -259,23 +260,24 @@
                                     hideBorder: !0,
                                     value: O,
                                     onChange: e => G(e),
-                                    note: (0, l.jsx)(l.Fragment, {
-                                        children: "Only Discord employees would be able to join this server"
-                                    }),
-                                    className: x.formItemSpaced,
-                                    children: "Staff Only"
+                                    note: E.default.Messages.GUILD_CREATE_STAFF_ONLY_HINT,
+                                    className: _.formItemSpaced,
+                                    children: (0, l.jsx)(r.FormTitle, {
+                                        tag: "label",
+                                        children: "Staff Only"
+                                    })
                                 }), (0, l.jsx)(r.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    className: x.guidelines,
-                                    children: T.default.Messages.CREATE_SERVER_GUIDELINES.format({
-                                        guidelinesURL: E.MarketingURLs.GUIDELINES
+                                    className: _.guidelines,
+                                    children: E.default.Messages.CREATE_SERVER_GUIDELINES.format({
+                                        guidelinesURL: T.MarketingURLs.GUIDELINES
                                     })
                                 })]
-                            }), null == D || D.hasFieldErrors() ? null : (0, l.jsx)(r.Text, {
+                            }), null == B || B.hasFieldErrors() ? null : (0, l.jsx)(r.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-danger",
-                                children: D.message
+                                children: B.message
                             })]
                         }), g && (0, l.jsx)(r.ModalFooter, {
                             justify: c.default.Justify.BETWEEN,
@@ -291,7 +293,7 @@
             function I(e) {
                 let {
                     content: t
-                } = _(e);
+                } = x(e);
                 return t
             }
         },
@@ -364,11 +366,11 @@
                     l.useEffect(() => {
                         f()
                     }, []);
-                    let E = l.useMemo(() => m.filter(e => !(null == C ? void 0 : C.has(e.id))), [m, C]),
-                        T = l.useMemo(() => m.filter(e => null == C ? void 0 : C.has(e.id)), [m, C]);
+                    let T = l.useMemo(() => m.filter(e => !(null == C ? void 0 : C.has(e.id))), [m, C]),
+                        E = l.useMemo(() => m.filter(e => null == C ? void 0 : C.has(e.id)), [m, C]);
                     return {
-                        availableGuilds: E,
-                        addedGuilds: T,
+                        availableGuilds: T,
+                        addedGuilds: E,
                         loading: s
                     }
                 }
@@ -390,10 +392,10 @@
                 C = s("476263"),
                 m = s("433487"),
                 f = s("209397"),
-                E = s("175703"),
-                T = s("782340"),
-                x = s("653609"),
-                _ = s("631662"),
+                T = s("175703"),
+                E = s("782340"),
+                _ = s("653609"),
+                x = s("631662"),
                 I = s("529861");
 
             function L(e) {
@@ -402,18 +404,18 @@
                     onClick: s
                 } = e;
                 return (0, i.jsxs)(u.Clickable, {
-                    className: x.clickableGuildRow,
+                    className: _.clickableGuildRow,
                     onClick: s,
                     children: [(0, i.jsx)(C.default, {
                         guild: t,
                         size: C.default.Sizes.MEDIUM,
                         active: !0
                     }), (0, i.jsx)(u.Text, {
-                        className: x.guildName,
+                        className: _.guildName,
                         variant: "text-md/semibold",
                         children: t.name
                     }), (0, i.jsx)("img", {
-                        className: x.arrow,
+                        className: _.arrow,
                         alt: "",
                         src: I
                     })]
@@ -426,21 +428,21 @@
                     guild: s
                 } = e, l = (0, o.useStateFromStores)([f.default], () => f.default.getDirectoryEntry(t, s.id));
                 return (0, i.jsxs)("div", {
-                    className: x.guildRow,
+                    className: _.guildRow,
                     children: [(0, i.jsx)(C.default, {
                         guild: s,
                         size: C.default.Sizes.MEDIUM,
                         active: !0
                     }), (0, i.jsx)(u.Text, {
-                        className: x.guildName,
+                        className: _.guildName,
                         variant: "text-md/normal",
                         children: s.name
-                    }), (0, i.jsx)(E.default, {
+                    }), (0, i.jsx)(T.default, {
                         entry: l,
                         forceLightTheme: !0,
                         children: e => (0, i.jsx)(m.default, {
                             ...e,
-                            className: x.overflowIcon
+                            className: _.overflowIcon
                         })
                     })]
                 })
@@ -457,36 +459,36 @@
                         addedGuilds: m,
                         loading: f
                     } = e,
-                    [E, I] = n.useState(0);
+                    [T, I] = n.useState(0);
                 return t = f ? (0, i.jsx)("div", {
-                    className: x.emptyContainer,
+                    className: _.emptyContainer,
                     children: (0, i.jsx)(u.Spinner, {})
-                }) : 0 === E ? 0 === C.length ? (0, i.jsxs)("div", {
-                    className: x.emptyContainer,
+                }) : 0 === T ? 0 === C.length ? (0, i.jsxs)("div", {
+                    className: _.emptyContainer,
                     children: [(0, i.jsx)("img", {
-                        src: _,
+                        src: x,
                         alt: "",
-                        className: x.emptyImage
+                        className: _.emptyImage
                     }), (0, i.jsx)(u.Text, {
-                        className: x.emptyText,
+                        className: _.emptyText,
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        children: T.default.Messages.HUB_CHOOSE_GUILD_EMPTY
+                        children: E.default.Messages.HUB_CHOOSE_GUILD_EMPTY
                     })]
                 }) : C.map(e => (0, i.jsx)(L, {
                     guild: e,
                     onClick: () => a(e)
                 }, e.id)) : 0 === m.length ? (0, i.jsxs)("div", {
-                    className: x.emptyContainer,
+                    className: _.emptyContainer,
                     children: [(0, i.jsx)("img", {
-                        src: _,
+                        src: x,
                         alt: "",
-                        className: x.emptyImage
+                        className: _.emptyImage
                     }), (0, i.jsx)(u.Text, {
-                        className: x.emptyText,
+                        className: _.emptyText,
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        children: T.default.Messages.HUB_CHOOSE_GUILD_ADDED_EMPTY
+                        children: E.default.Messages.HUB_CHOOSE_GUILD_ADDED_EMPTY
                     })]
                 }) : m.map(e => (0, i.jsx)(h, {
                     directoryChannelId: s,
@@ -494,57 +496,57 @@
                 }, e.id)), (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsxs)(u.ModalHeader, {
                         direction: c.default.Direction.VERTICAL,
-                        className: x.header,
+                        className: _.header,
                         separator: !1,
                         children: [null != l && (0, i.jsx)(u.ModalCloseButton, {
-                            className: x.closeButton,
+                            className: _.closeButton,
                             onClick: l
                         }), (0, i.jsx)(u.Heading, {
-                            className: x.title,
+                            className: _.title,
                             variant: "heading-xl/semibold",
-                            children: T.default.Messages.HUB_CHOOSE_GUILD_TITLE.format({
+                            children: E.default.Messages.HUB_CHOOSE_GUILD_TITLE.format({
                                 guildName: o
                             })
                         }), (0, i.jsx)(u.Text, {
-                            className: x.subtitle,
+                            className: _.subtitle,
                             color: "header-secondary",
                             variant: "text-md/normal",
-                            children: T.default.Messages.HUB_CHOOSE_GUILD_SUBTITLE
+                            children: E.default.Messages.HUB_CHOOSE_GUILD_SUBTITLE
                         }), (0, i.jsxs)(u.TabBar, {
-                            className: x.tabBar,
-                            selectedItem: E,
+                            className: _.tabBar,
+                            selectedItem: T,
                             onItemSelect: I,
                             type: "top",
                             look: "brand",
                             children: [(0, i.jsx)(u.TabBar.Item, {
-                                className: d(x.tabBarItem, {
-                                    [x.selectedTab]: 0 === E
+                                className: d(_.tabBarItem, {
+                                    [_.selectedTab]: 0 === T
                                 }),
                                 id: 0,
-                                children: T.default.Messages.HUB_CHOOSE_GUILD_CHOOSE_TAB
+                                children: E.default.Messages.HUB_CHOOSE_GUILD_CHOOSE_TAB
                             }), (0, i.jsx)(u.TabBar.Item, {
-                                className: d(x.tabBarItem, {
-                                    [x.selectedTab]: 1 === E
+                                className: d(_.tabBarItem, {
+                                    [_.selectedTab]: 1 === T
                                 }),
                                 id: 1,
-                                children: T.default.Messages.HUB_CHOOSE_GUILD_ADDED_TAB
+                                children: E.default.Messages.HUB_CHOOSE_GUILD_ADDED_TAB
                             })]
                         })]
                     }), (0, i.jsx)(u.ModalContent, {
-                        className: x.guildList,
+                        className: _.guildList,
                         paddingFix: !1,
                         children: t
                     }), (0, i.jsxs)(u.ModalFooter, {
-                        className: x.footer,
+                        className: _.footer,
                         children: [(0, i.jsx)(u.Heading, {
                             variant: "heading-lg/semibold",
-                            className: x.footerTitle,
-                            children: T.default.Messages.HUB_CREATE_GUILD_LABEL
+                            className: _.footerTitle,
+                            children: E.default.Messages.HUB_CREATE_GUILD_LABEL
                         }), (0, i.jsx)(u.Button, {
-                            className: x.footerButton,
+                            className: _.footerButton,
                             color: u.Button.Colors.PRIMARY,
                             onClick: r,
-                            children: T.default.Messages.HUB_CREATE_GUILD_CTA
+                            children: E.default.Messages.HUB_CREATE_GUILD_CTA
                         })]
                     })]
                 })
@@ -569,42 +571,42 @@
                 C = s("694410"),
                 m = s("426253"),
                 f = s("640952"),
-                E = s("351531"),
-                T = s("926818"),
-                x = s("730647"),
-                _ = s("49111"),
+                T = s("351531"),
+                E = s("926818"),
+                _ = s("730647"),
+                x = s("49111"),
                 I = s("719223");
 
             function L(e) {
                 let {
                     directoryChannelId: t,
                     transitionState: s,
-                    initialSlide: L = x.CreateOrAddGuildSlideTypes.CHOOSE_GUILD,
+                    initialSlide: L = _.CreateOrAddGuildSlideTypes.CHOOSE_GUILD,
                     onClose: h,
                     directoryGuildName: g,
-                    directoryGuildId: S,
-                    currentCategoryId: N
-                } = e, [p, M] = a.useState(L), [j, A] = a.useState(null), [U, D] = a.useState(null), [B, H] = a.useState(null), [O, G] = a.useState(null), [R, y] = a.useState(null), [v, b] = a.useState(""), [F, k] = a.useState(null != N ? N : x.DirectoryEntryCategories.UNCATEGORIZED), [Z, V] = a.useState(!1), {
+                    directoryGuildId: N,
+                    currentCategoryId: S
+                } = e, [p, M] = a.useState(L), [A, j] = a.useState(null), [U, B] = a.useState(null), [D, H] = a.useState(null), [O, G] = a.useState(null), [R, y] = a.useState(null), [v, b] = a.useState(""), [F, k] = a.useState(null != S ? S : _.DirectoryEntryCategories.UNCATEGORIZED), [Z, V] = a.useState(!1), {
                     availableGuilds: w,
                     addedGuilds: P,
                     loading: z
-                } = (0, C.default)(S, t);
+                } = (0, C.default)(N, t);
                 a.useEffect(() => {
                     M(L)
                 }, [M, L]);
                 let Y = async () => {
                     let e = R;
                     if (!Z) {
-                        if (null == B || null == U) return;
-                        let t = await r.default.createGuildFromTemplate(B, O, U);
+                        if (null == D || null == U) return;
+                        let t = await r.default.createGuildFromTemplate(D, O, U);
                         y(e = new o.default(t))
                     }
-                    null != e && (await c.addDirectoryGuildEntry(t, e.id, v, F), M(x.CreateOrAddGuildSlideTypes.CONFIRMATION))
+                    null != e && (await c.addDirectoryGuildEntry(t, e.id, v, F), M(_.CreateOrAddGuildSlideTypes.CONFIRMATION))
                 }, X = {
                     impression_group: i.ImpressionGroups.DIRECTORY_GUILD_ADD_FLOW
                 };
                 return (0, l.jsx)("div", {
-                    className: (0, u.getThemeClass)(_.ThemeTypes.LIGHT),
+                    className: (0, u.getThemeClass)(x.ThemeTypes.LIGHT),
                     children: (0, l.jsx)(n.ModalRoot, {
                         transitionState: s,
                         disableTrack: !0,
@@ -613,19 +615,19 @@
                             children: (0, l.jsxs)(n.Slides, {
                                 activeSlide: p,
                                 width: 440,
-                                onSlideReady: e => A(e),
+                                onSlideReady: e => j(e),
                                 children: [(0, l.jsx)(n.Slide, {
-                                    id: x.CreateOrAddGuildSlideTypes.CHOOSE_GUILD,
+                                    id: _.CreateOrAddGuildSlideTypes.CHOOSE_GUILD,
                                     impressionName: i.ImpressionNames.HUB_EXISTING_GUILD_CHOOSE,
                                     impressionProperties: X,
                                     children: (0, l.jsx)(m.default, {
                                         directoryChannelId: t,
                                         directoryGuildName: g,
                                         onGuildChosen: e => {
-                                            V(!0), M(x.CreateOrAddGuildSlideTypes.CUSTOMIZE_EXISTING_GUILD), y(e)
+                                            V(!0), M(_.CreateOrAddGuildSlideTypes.CUSTOMIZE_EXISTING_GUILD), y(e)
                                         },
                                         handleChooseCreate: () => {
-                                            V(!1), M(x.CreateOrAddGuildSlideTypes.GUILD_TEMPLATES)
+                                            V(!1), M(_.CreateOrAddGuildSlideTypes.GUILD_TEMPLATES)
                                         },
                                         onClose: h,
                                         availableGuilds: w,
@@ -633,32 +635,32 @@
                                         loading: z
                                     })
                                 }), (0, l.jsx)(n.Slide, {
-                                    id: x.CreateOrAddGuildSlideTypes.GUILD_TEMPLATES,
+                                    id: _.CreateOrAddGuildSlideTypes.GUILD_TEMPLATES,
                                     impressionName: i.ImpressionNames.HUB_CREATE_GUILD_TEMPLATE,
                                     impressionProperties: X,
-                                    children: (0, l.jsx)(T.default, {
+                                    children: (0, l.jsx)(E.default, {
                                         directoryGuildName: g,
                                         onChooseTemplate: e => {
-                                            V(!1), M(x.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD), D(e)
+                                            V(!1), M(_.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD), B(e)
                                         },
                                         onClose: h,
-                                        onBack: () => M(x.CreateOrAddGuildSlideTypes.CHOOSE_GUILD)
+                                        onBack: () => M(_.CreateOrAddGuildSlideTypes.CHOOSE_GUILD)
                                     })
                                 }), (0, l.jsx)(n.Slide, {
-                                    id: x.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD,
+                                    id: _.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD,
                                     impressionName: i.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
                                     impressionProperties: X,
                                     children: (0, l.jsx)(d.default, {
                                         guildTemplate: U,
                                         onHubGuildInfoSet: (e, t) => {
-                                            H(e), G(t), M(x.CreateOrAddGuildSlideTypes.CUSTOMIZE_EXISTING_GUILD)
+                                            H(e), G(t), M(_.CreateOrAddGuildSlideTypes.CUSTOMIZE_EXISTING_GUILD)
                                         },
                                         onClose: h,
-                                        onBack: () => M(x.CreateOrAddGuildSlideTypes.GUILD_TEMPLATES),
-                                        isSlideReady: j === x.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD
+                                        onBack: () => M(_.CreateOrAddGuildSlideTypes.GUILD_TEMPLATES),
+                                        isSlideReady: A === _.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD
                                     })
                                 }), (0, l.jsx)(n.Slide, {
-                                    id: x.CreateOrAddGuildSlideTypes.CUSTOMIZE_EXISTING_GUILD,
+                                    id: _.CreateOrAddGuildSlideTypes.CUSTOMIZE_EXISTING_GUILD,
                                     impressionName: i.ImpressionNames.HUB_EXISTING_GUILD_CUSTOMIZE,
                                     impressionProperties: X,
                                     children: (0, l.jsx)(f.default, {
@@ -668,14 +670,14 @@
                                         categoryId: F,
                                         onCategoryIdChange: k,
                                         onSubmit: Y,
-                                        onBack: () => M(Z ? x.CreateOrAddGuildSlideTypes.CHOOSE_GUILD : x.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD),
+                                        onBack: () => M(Z ? _.CreateOrAddGuildSlideTypes.CHOOSE_GUILD : _.CreateOrAddGuildSlideTypes.CUSTOMIZE_NEW_GUILD),
                                         onClose: h
                                     })
                                 }), (0, l.jsx)(n.Slide, {
-                                    id: x.CreateOrAddGuildSlideTypes.CONFIRMATION,
+                                    id: _.CreateOrAddGuildSlideTypes.CONFIRMATION,
                                     impressionName: i.ImpressionNames.DIRECTORY_ADD_GUILD_CONFIRMATION,
                                     impressionProperties: X,
-                                    children: (0, l.jsx)(E.default, {
+                                    children: (0, l.jsx)(T.default, {
                                         directoryGuildName: g,
                                         guildToAdd: R,
                                         isExistingGuildFlow: Z,
@@ -712,16 +714,16 @@
                     categoryId: C,
                     onCategoryIdChange: m,
                     onSubmit: f,
-                    onClose: E,
-                    onBack: T
-                } = e, [x, _] = a.useState(!1), [I, L] = a.useState(null), h = async () => {
-                    _(!0);
+                    onClose: T,
+                    onBack: E
+                } = e, [_, x] = a.useState(!1), [I, L] = a.useState(null), h = async () => {
+                    x(!0);
                     try {
                         await f()
                     } catch (e) {
                         L(new n.default(e))
                     }
-                    _(!1)
+                    x(!1)
                 };
                 return (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsxs)(i.ModalHeader, {
@@ -737,9 +739,9 @@
                             color: "header-secondary",
                             variant: "text-md/normal",
                             children: o.default.Messages.HUB_CUSTOMIZE_GUILD_SUBTITLE
-                        }), null != E && (0, l.jsx)(i.ModalCloseButton, {
+                        }), null != T && (0, l.jsx)(i.ModalCloseButton, {
                             className: u.closeButton,
-                            onClick: E
+                            onClick: T
                         })]
                     }), (0, l.jsxs)(i.ModalContent, {
                         className: u.createGuild,
@@ -771,13 +773,13 @@
                         children: [(0, l.jsx)(i.Button, {
                             color: i.Button.Colors.BRAND,
                             onClick: h,
-                            submitting: x,
+                            submitting: _,
                             disabled: "" === s || C === d.DirectoryEntryCategories.UNCATEGORIZED,
                             children: o.default.Messages.HUB_ADD_SERVER_CTA
                         }), (0, l.jsx)(i.Button, {
                             look: i.Button.Looks.BLANK,
                             size: i.Button.Sizes.MIN,
-                            onClick: T,
+                            onClick: E,
                             children: o.default.Messages.BACK
                         })]
                     })]

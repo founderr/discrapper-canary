@@ -898,6 +898,7 @@
                             submitting: h,
                             children: null != c ? o.default.Messages.NEXT : o.default.Messages.CREATE
                         }), (0, n.jsx)(_.Button, {
+                            className: I.backButton,
                             look: _.Button.Looks.BLANK,
                             size: _.Button.Sizes.MIN,
                             onClick: A,
@@ -951,11 +952,12 @@
                                     hideBorder: !0,
                                     value: P,
                                     onChange: e => S(e),
-                                    note: (0, n.jsx)(n.Fragment, {
-                                        children: "Only Discord employees would be able to join this server"
-                                    }),
+                                    note: o.default.Messages.GUILD_CREATE_STAFF_ONLY_HINT,
                                     className: I.formItemSpaced,
-                                    children: "Staff Only"
+                                    children: (0, n.jsx)(_.FormTitle, {
+                                        tag: "label",
+                                        children: "Staff Only"
+                                    })
                                 }), (0, n.jsx)(_.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
@@ -1038,7 +1040,7 @@
                         children: [(0, n.jsx)(_.Heading, {
                             className: L.title,
                             variant: "heading-xl/semibold",
-                            children: s ? u.default.Messages.NUF_DESKTOP_TEMPLATES_TITLE : u.default.Messages.CREATE_GUILD_WITH_TEMPLATES_TITLE
+                            children: s ? u.default.Messages.NUF_DESKTOP_TEMPLATES_TITLE : u.default.Messages.GUILD_CREATE_TITLE
                         }), (0, n.jsx)(_.Text, {
                             className: L.subtitle,
                             color: "header-secondary",
