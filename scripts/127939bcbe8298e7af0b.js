@@ -12,15 +12,15 @@
                 u = n("77078"),
                 o = n("244201"),
                 i = n("778588"),
-                r = n("144747"),
-                s = n("49111");
+                s = n("144747"),
+                r = n("49111");
 
             function d() {
                 let e = (0, u.useModalsStore)(e => !Object.entries(e).every(e => {
                         let [t, n] = e;
                         return 0 === n.length
                     })),
-                    t = (0, a.useStateFromStores)([r.default], () => r.default.isOpen()),
+                    t = (0, a.useStateFromStores)([s.default], () => s.default.isOpen()),
                     n = (0, a.useStateFromStores)([i.default], () => i.default.hasLayers()),
                     [d, c] = l.useState(!1),
                     f = (0, o.useWindowDispatch)();
@@ -32,8 +32,8 @@
                     function t() {
                         c(!1)
                     }
-                    return f.subscribe(s.ComponentActions.POPOUT_SHOW, e), f.subscribe(s.ComponentActions.POPOUT_HIDE, t), () => {
-                        f.unsubscribe(s.ComponentActions.POPOUT_SHOW, e), f.unsubscribe(s.ComponentActions.POPOUT_HIDE, t)
+                    return f.subscribe(r.ComponentActions.POPOUT_SHOW, e), f.subscribe(r.ComponentActions.POPOUT_HIDE, t), () => {
+                        f.unsubscribe(r.ComponentActions.POPOUT_SHOW, e), f.unsubscribe(r.ComponentActions.POPOUT_HIDE, t)
                     }
                 }, [f]), e || t || d || n
             }
@@ -67,8 +67,8 @@
                 u = n("446674"),
                 o = n("827560"),
                 i = n("244201"),
-                r = n("206230"),
-                s = n("659500"),
+                s = n("206230"),
+                r = n("659500"),
                 d = n("49111");
             let c = (0, a.debounce)(e => {
                 setTimeout(() => {
@@ -79,30 +79,30 @@
 
             function f(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
-                    a = (0, u.useStateFromStores)([r.default], () => r.default.keyboardModeEnabled),
+                    a = (0, u.useStateFromStores)([s.default], () => s.default.keyboardModeEnabled),
                     f = (0, o.default)(),
                     [E, p] = l.useState(!1),
-                    T = (0, i.useWindowDispatch)();
+                    m = (0, i.useWindowDispatch)();
                 return l.useEffect(() => {
                     if (t) return n.addEventListener("blur", e), () => n.removeEventListener("blur", e);
 
                     function e() {
-                        f && (T.dispatch(d.ComponentActions.POPOUT_CLOSE), s.ComponentDispatch.dispatch(d.ComponentActions.CONTEXT_MENU_CLOSE))
+                        f && (m.dispatch(d.ComponentActions.POPOUT_CLOSE), r.ComponentDispatch.dispatch(d.ComponentActions.CONTEXT_MENU_CLOSE))
                     }
-                }, [n, f, t, T]), l.useEffect(() => {
+                }, [n, f, t, m]), l.useEffect(() => {
                     var l, u, o;
                     if (a || !E || !t) return;
                     let i = f;
 
-                    function r(t) {
+                    function s(t) {
                         let n = t.relatedTarget;
                         setTimeout(() => {
                             (null == n || "BUTTON" === n.tagName) && !i && c(e)
                         }, 100)
                     }
-                    return null === (l = e.current) || void 0 === l || l.addEventListener("focusout", r), (null === (u = n.document.activeElement) || void 0 === u ? void 0 : u.tagName) !== "IFRAME" && !i && (null === (o = e.current) || void 0 === o || o.focus()), () => {
+                    return null === (l = e.current) || void 0 === l || l.addEventListener("focusout", s), (null === (u = n.document.activeElement) || void 0 === u ? void 0 : u.tagName) !== "IFRAME" && !i && (null === (o = e.current) || void 0 === o || o.focus()), () => {
                         var t;
-                        null === (t = e.current) || void 0 === t || t.removeEventListener("focusout", r), i = !0
+                        null === (t = e.current) || void 0 === t || t.removeEventListener("focusout", s), i = !0
                     }
                 }, [t, E, a, e, n, f]), p
             }
@@ -135,15 +135,15 @@
                 u = n("414456"),
                 o = n.n(u),
                 i = n("841076"),
-                r = n("748820"),
-                s = n("446674"),
+                s = n("748820"),
+                r = n("446674"),
                 d = n("292687"),
                 c = n("614818"),
                 f = n("161778"),
                 E = n("659500"),
                 p = n("157945"),
-                T = n("828466"),
-                m = n("954016"),
+                m = n("828466"),
+                T = n("954016"),
                 _ = n("49111"),
                 S = n("165544");
 
@@ -157,20 +157,20 @@
                     queryParams: C,
                     allowPopups: N = !1,
                     referrerPolicy: I = "origin"
-                } = e, O = (0, s.useStateFromStores)([d.default], () => d.default.getWindow(_.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), A = (0, i.useMemoOne)(() => (0, r.v4)(), [t]), v = a.useRef(null), L = (0, p.default)(v, S, null == O ? window : O), h = {
+                } = e, v = (0, r.useStateFromStores)([d.default], () => d.default.getWindow(_.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), O = (0, i.useMemoOne)(() => (0, s.v4)(), [t]), L = a.useRef(null), A = (0, p.default)(L, S, null == v ? window : v), h = {
                     ...C,
-                    frame_id: A,
-                    platform: m.ActivityPlatform.DESKTOP
+                    frame_id: O,
+                    platform: T.ActivityPlatform.DESKTOP
                 }, [y, M] = a.useState(!1), R = f.default.theme, g = {
                     ...u
                 };
                 return R === _.ThemeTypes.LIGHT ? g.colorScheme = "light" : g.colorScheme = "dark", a.useEffect(() => (E.ComponentDispatch.dispatch(_.ComponentActions.IFRAME_MOUNT, {
-                    id: A
+                    id: O
                 }), () => {
                     E.ComponentDispatch.dispatch(_.ComponentActions.IFRAME_UNMOUNT, {
-                        id: A
+                        id: O
                     })
-                }), [A]), E.ComponentDispatch.subscribe(_.ComponentActions.MANUAL_IFRAME_RESIZING, e => {
+                }), [O]), E.ComponentDispatch.subscribe(_.ComponentActions.MANUAL_IFRAME_RESIZING, e => {
                     let {
                         resizing: t
                     } = e;
@@ -181,9 +181,9 @@
                     referrerPolicy: I,
                     onLoad: function(e) {
                         var n;
-                        null == o || o(e.target), v.current = e.target, L(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.default.HELLO, h], null != t ? t : "")
+                        null == o || o(e.target), L.current = e.target, A(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.default.HELLO, h], null != t ? t : "")
                     },
-                    sandbox: (0, T.default)({
+                    sandbox: (0, m.default)({
                         allowPopups: N
                     }),
                     className: n,
@@ -227,7 +227,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 getActionRowErrorText: function() {
-                    return m
+                    return T
                 },
                 createComponents: function() {
                     return function e(t, n) {
@@ -237,52 +237,52 @@
                             {
                                 includeEmojiSrc: i
                             } = a;
-                        return t.map((t, T) => {
-                            var m, S, C, N, I, O;
+                        return t.map((t, m) => {
+                            var T, S, C, N, I, v;
                             if (!_(t.type)) return null;
-                            let A = o.concat(T);
+                            let O = o.concat(m);
                             switch (t.type) {
                                 case u.ComponentType.ACTION_ROW:
-                                    let v = null != t.components ? e(t.components, n, l, a, A) : void 0;
+                                    let L = null != t.components ? e(t.components, n, l, a, O) : void 0;
                                     return {
-                                        type: u.ComponentType.ACTION_ROW, indices: A, components: v
+                                        type: u.ComponentType.ACTION_ROW, indices: O, components: L
                                     };
                                 case u.ComponentType.BUTTON:
                                     if (f.includes(n) && null != t.custom_id && E.test(t.custom_id) && !(0, d.default)(l)) return null;
-                                    let L = null != t.emoji ? p(t.emoji, i) : void 0;
+                                    let A = null != t.emoji ? p(t.emoji, i) : void 0;
                                     return {
-                                        type: u.ComponentType.BUTTON, customId: t.custom_id, style: t.style, disabled: t.disabled, url: t.url, label: t.label, emoji: L, indices: A, applicationId: n
+                                        type: u.ComponentType.BUTTON, customId: t.custom_id, style: t.style, disabled: t.disabled, url: t.url, label: t.label, emoji: A, indices: O, applicationId: n
                                     };
                                 case u.ComponentType.STRING_SELECT:
                                     return {
                                         type: u.ComponentType.STRING_SELECT, customId: t.custom_id, disabled: t.disabled, options: t.options.map(e => ({
-                                            type: r.SelectOptionType.STRING,
+                                            type: s.SelectOptionType.STRING,
                                             label: e.label,
                                             value: e.value,
                                             default: e.default,
                                             description: e.description,
                                             emoji: null != e.emoji ? p(e.emoji, i) : void 0
-                                        })), placeholder: null !== (m = t.placeholder) && void 0 !== m ? m : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, indices: A, applicationId: n
+                                        })), placeholder: null !== (T = t.placeholder) && void 0 !== T ? T : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, indices: O, applicationId: n
                                     };
                                 case u.ComponentType.INPUT_TEXT:
                                     return {
-                                        type: t.type, style: t.style, customId: t.custom_id, label: t.label, value: t.value, placeholder: t.placeholder, disabled: t.disabled, required: t.required, minLength: t.min_length, maxLength: t.max_length, indices: A
+                                        type: t.type, style: t.style, customId: t.custom_id, label: t.label, value: t.value, placeholder: t.placeholder, disabled: t.disabled, required: t.required, minLength: t.min_length, maxLength: t.max_length, indices: O
                                     };
                                 case u.ComponentType.USER_SELECT:
                                     return {
-                                        type: u.ComponentType.USER_SELECT, customId: t.custom_id, disabled: t.disabled, placeholder: null !== (S = t.placeholder) && void 0 !== S ? S : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, defaultValues: t.default_values, indices: A, applicationId: n, selectedOptions: (0, s.getSnowflakeSelectDefaultValues)(t.default_values, l)
+                                        type: u.ComponentType.USER_SELECT, customId: t.custom_id, disabled: t.disabled, placeholder: null !== (S = t.placeholder) && void 0 !== S ? S : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, defaultValues: t.default_values, indices: O, applicationId: n, selectedOptions: (0, r.getSnowflakeSelectDefaultValues)(t.default_values, l)
                                     };
                                 case u.ComponentType.ROLE_SELECT:
                                     return {
-                                        type: u.ComponentType.ROLE_SELECT, customId: t.custom_id, disabled: t.disabled, placeholder: null !== (C = t.placeholder) && void 0 !== C ? C : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, defaultValues: t.default_values, indices: A, applicationId: n, selectedOptions: (0, s.getSnowflakeSelectDefaultValues)(t.default_values, l)
+                                        type: u.ComponentType.ROLE_SELECT, customId: t.custom_id, disabled: t.disabled, placeholder: null !== (C = t.placeholder) && void 0 !== C ? C : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, defaultValues: t.default_values, indices: O, applicationId: n, selectedOptions: (0, r.getSnowflakeSelectDefaultValues)(t.default_values, l)
                                     };
                                 case u.ComponentType.MENTIONABLE_SELECT:
                                     return {
-                                        type: u.ComponentType.MENTIONABLE_SELECT, customId: t.custom_id, disabled: t.disabled, placeholder: null !== (N = t.placeholder) && void 0 !== N ? N : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, defaultValues: t.default_values, indices: A, applicationId: n, selectedOptions: (0, s.getSnowflakeSelectDefaultValues)(t.default_values, l)
+                                        type: u.ComponentType.MENTIONABLE_SELECT, customId: t.custom_id, disabled: t.disabled, placeholder: null !== (N = t.placeholder) && void 0 !== N ? N : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, defaultValues: t.default_values, indices: O, applicationId: n, selectedOptions: (0, r.getSnowflakeSelectDefaultValues)(t.default_values, l)
                                     };
                                 case u.ComponentType.CHANNEL_SELECT:
                                     return {
-                                        type: u.ComponentType.CHANNEL_SELECT, customId: t.custom_id, disabled: t.disabled, placeholder: null !== (I = t.placeholder) && void 0 !== I ? I : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, indices: A, channelTypes: t.channel_types, defaultValues: t.default_values, applicationId: n, selectedOptions: (0, s.getSnowflakeSelectDefaultValues)(t.default_values, l, null !== (O = t.channel_types) && void 0 !== O ? O : [])
+                                        type: u.ComponentType.CHANNEL_SELECT, customId: t.custom_id, disabled: t.disabled, placeholder: null !== (I = t.placeholder) && void 0 !== I ? I : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, indices: O, channelTypes: t.channel_types, defaultValues: t.default_values, applicationId: n, selectedOptions: (0, r.getSnowflakeSelectDefaultValues)(t.default_values, l, null !== (v = t.channel_types) && void 0 !== v ? v : [])
                                     };
                                 default:
                                     return null
@@ -296,8 +296,8 @@
                 u = n("798609"),
                 o = n("3765"),
                 i = n("315102"),
-                r = n("192112"),
-                s = n("704257"),
+                s = n("192112"),
+                r = n("704257"),
                 d = n("988878"),
                 c = n("782340");
             let f = ["934240649153220678", "936929561302675456", "762275850782900254", "1022952195194359889"],
@@ -312,12 +312,12 @@
                         size: 48
                     }) : void 0
                 }),
-                T = e => (null == e ? void 0 : e.errorCode) === 429 ? c.default.Messages.INTERACTION_RATE_LIMITED : c.default.Messages.APPLICATION_COMMAND_FAILED,
-                m = (e, t, n) => {
+                m = e => (null == e ? void 0 : e.errorCode) === 429 ? c.default.Messages.INTERACTION_RATE_LIMITED : c.default.Messages.APPLICATION_COMMAND_FAILED,
+                T = (e, t, n) => {
                     let l = (null == e ? void 0 : e.data.interactionType) === u.InteractionTypes.MESSAGE_COMPONENT && (null == e ? void 0 : e.state) === o.InteractionState.FAILED ? e.data.indices : null;
                     if (null != l && a.isEqual(l.slice(0, l.length - 1), n.indices)) {
                         var i;
-                        return null !== (i = null == t ? void 0 : t.interactionError) && void 0 !== i ? i : T(e)
+                        return null !== (i = null == t ? void 0 : t.interactionError) && void 0 !== i ? i : m(e)
                     }
                 },
                 _ = e => {
@@ -339,20 +339,20 @@
             let l, a, u, o, i;
             n.r(t), n.d(t, {
                 InteractionModalState: function() {
-                    return s
+                    return r
                 },
                 default: function() {
                     return S
                 }
             });
-            var r, s, d = n("627445"),
+            var s, r, d = n("627445"),
                 c = n.n(d),
                 f = n("446674"),
                 E = n("913144"),
                 p = n("819689"),
-                T = n("798609"),
-                m = n("274800");
-            (r = s || (s = {}))[r.IN_FLIGHT = 0] = "IN_FLIGHT", r[r.ERRORED = 1] = "ERRORED", r[r.SUCCEEDED = 2] = "SUCCEEDED";
+                m = n("798609"),
+                T = n("274800");
+            (s = r || (r = {}))[s.IN_FLIGHT = 0] = "IN_FLIGHT", s[s.ERRORED = 1] = "ERRORED", s[s.SUCCEEDED = 2] = "SUCCEEDED";
             class _ extends f.default.Store {
                 getModalState(e) {
                     return e !== l ? null : a
@@ -379,14 +379,14 @@
                     let {
                         messageId: t,
                         nonce: n,
-                        data: r
+                        data: s
                     } = e;
-                    switch (r.interactionType) {
-                        case T.InteractionTypes.APPLICATION_COMMAND:
-                            return u = t, o = r.channelId, i = n, !1;
-                        case T.InteractionTypes.MODAL_SUBMIT:
+                    switch (s.interactionType) {
+                        case m.InteractionTypes.APPLICATION_COMMAND:
+                            return u = t, o = s.channelId, i = n, !1;
+                        case m.InteractionTypes.MODAL_SUBMIT:
                             return c(null == l || 1 === a || 2 === a, "cannot submit multiple modals at once"), l = n, a = 0, setTimeout(() => {
-                                l === n && 0 === a && (0, m.setFailed)(n)
+                                l === n && 0 === a && (0, T.setFailed)(n)
                             }, 1e4), !0;
                         default:
                             return !1
@@ -421,33 +421,33 @@
                 u = n.n(a),
                 o = n("446674"),
                 i = n("872717"),
-                r = n("913144"),
-                s = n("798609"),
+                s = n("913144"),
+                r = n("798609"),
                 d = n("763898"),
                 c = n("711562"),
                 f = n("274800"),
                 E = n("271938"),
                 p = n("42203"),
-                T = n("26989"),
-                m = n("162771"),
+                m = n("26989"),
+                T = n("162771"),
                 _ = n("315102"),
                 S = n("299039"),
                 C = n("812684"),
                 N = n("470055"),
                 I = n("524094"),
-                O = n("49111"),
-                A = n("782340");
-            let v = e => {
+                v = n("49111"),
+                O = n("782340");
+            let L = e => {
                 let t = !0;
                 return e.forEach(e => {
                     !e() && (t = !1)
                 }), t
             };
 
-            function L(e) {
+            function A(e) {
                 return l.useMemo(() => {
-                    let t = m.default.getGuildId(),
-                        n = null != t && null != e.bot ? T.default.getMember(t, e.bot.id) : void 0,
+                    let t = T.default.getGuildId(),
+                        n = null != t && null != e.bot ? m.default.getMember(t, e.bot.id) : void 0,
                         l = _.default.getApplicationIconURL({
                             id: e.id,
                             icon: e.icon,
@@ -469,10 +469,10 @@
                 let {
                     application: a,
                     customId: c,
-                    components: T,
-                    channelId: m
-                } = e, _ = null === (n = p.default.getChannel(m)) || void 0 === n ? void 0 : n.guild_id, I = (0, d.default)(), [h, y] = l.useState(null), [R, g] = l.useState(null), b = (0, o.useStateFromStores)([N.default], () => N.default.getModalState(R), [R]), D = l.useMemo(() => (0, C.createComponents)(T, a.id, _), [T, a.id, _]), U = l.useRef(new Set), w = l.useCallback(() => {
-                    y(null), g(null), v(U.current) && g(function(e, t) {
+                    components: m,
+                    channelId: T
+                } = e, _ = null === (n = p.default.getChannel(T)) || void 0 === n ? void 0 : n.guild_id, I = (0, d.default)(), [h, y] = l.useState(null), [R, g] = l.useState(null), b = (0, o.useStateFromStores)([N.default], () => N.default.getModalState(R), [R]), D = l.useMemo(() => (0, C.createComponents)(m, a.id, _), [m, a.id, _]), w = l.useRef(new Set), U = l.useCallback(() => {
+                    y(null), g(null), L(w.current) && g(function(e, t) {
                         let n = S.default.fromTimestamp(Date.now()),
                             l = e.channelId,
                             a = p.default.getChannel(l);
@@ -480,14 +480,14 @@
                         let o = M(e.customId, e.components, []);
                         (0, f.addQueued)(n, {
                             data: {
-                                interactionType: s.InteractionTypes.MODAL_SUBMIT
+                                interactionType: r.InteractionTypes.MODAL_SUBMIT
                             }
                         });
-                        let r = () => {
+                        let s = () => {
                             (null == t || !t.aborted) && i.default.post({
-                                url: O.Endpoints.INTERACTIONS,
+                                url: v.Endpoints.INTERACTIONS,
                                 body: {
-                                    type: s.InteractionTypes.MODAL_SUBMIT,
+                                    type: r.InteractionTypes.MODAL_SUBMIT,
                                     application_id: e.application.id,
                                     channel_id: a.id,
                                     guild_id: a.guild_id,
@@ -501,30 +501,30 @@
                                 },
                                 signal: t
                             }).catch(e => {
-                                429 === e.status ? setTimeout(r, 1e3 * e.body.retry_after) : (0, f.setFailed)(n)
+                                429 === e.status ? setTimeout(s, 1e3 * e.body.retry_after) : (0, f.setFailed)(n)
                             })
                         };
-                        return r(), n
+                        return s(), n
                     }(e, I))
                 }, [I, e]);
                 l.useEffect(() => {
-                    b === N.InteractionModalState.SUCCEEDED && (r.default.dispatch({
+                    b === N.InteractionModalState.SUCCEEDED && (s.default.dispatch({
                         type: "CLEAR_INTERACTION_MODAL_STATE",
                         id: c
-                    }), t()), b === N.InteractionModalState.ERRORED && y(A.default.Messages.INTERACTION_FORM_SUBMISSION_FAILED)
+                    }), t()), b === N.InteractionModalState.ERRORED && y(O.default.Messages.INTERACTION_FORM_SUBMISSION_FAILED)
                 }, [R, b, t, c]);
                 let {
                     applicationIconURL: x,
                     applicationName: P
-                } = L(a);
+                } = A(a);
                 return {
                     components: D,
                     applicationIconURL: x,
                     applicationName: P,
                     submissionState: b,
                     error: h,
-                    validators: U.current,
-                    onSubmit: w
+                    validators: w.current,
+                    onSubmit: U
                 }
             }
 
@@ -536,15 +536,15 @@
                     applicationIconURL: l,
                     applicationName: a,
                     applicationBaseUrl: o
-                } = L(t), i = p.default.getChannel(e.channelId);
+                } = A(t), i = p.default.getChannel(e.channelId);
                 u(null != i, "channel should not be null");
-                let r = "".concat(e.channelId, ":").concat(t.id, ":").concat(n),
-                    s = {
-                        instance_id: r,
+                let s = "".concat(e.channelId, ":").concat(t.id, ":").concat(n),
+                    r = {
+                        instance_id: s,
                         custom_id: n,
                         channel_id: e.channelId
                     };
-                null != i.guild_id && "" !== i.guild_id && (s.guild_id = i.guild_id);
+                null != i.guild_id && "" !== i.guild_id && (r.guild_id = i.guild_id);
                 let d = new URL(null != o ? o : "");
                 d.pathname = e.iframePath;
                 let c = d.toString();
@@ -552,19 +552,19 @@
                     applicationIconURL: l,
                     applicationName: a,
                     applicationBaseUrl: o,
-                    queryParams: s,
+                    queryParams: r,
                     iframeUrl: c
                 }
             }
             let M = (e, t, n) => t.map((t, l) => {
                 let a = [...n, l];
                 switch (t.type) {
-                    case s.ComponentType.ACTION_ROW:
+                    case r.ComponentType.ACTION_ROW:
                         var o;
                         return {
                             type: t.type, components: M(e, null !== (o = t.components) && void 0 !== o ? o : [], a)
                         };
-                    case s.ComponentType.INPUT_TEXT: {
+                    case r.ComponentType.INPUT_TEXT: {
                         let n = I.default.getInteractionComponentState(e, a);
                         return {
                             type: t.type,
@@ -572,7 +572,7 @@
                             value: (null == n ? void 0 : n.type) === t.type ? n.value : null
                         }
                     }
-                    case s.ComponentType.STRING_SELECT: {
+                    case r.ComponentType.STRING_SELECT: {
                         let n = I.default.getInteractionComponentState(e, a);
                         return {
                             type: t.type,
@@ -597,8 +597,8 @@
                 u = n("292381");
             let o = new u.default(196606),
                 i = 0,
-                r = new u.default(196606),
-                s = new u.default(196606);
+                s = new u.default(196606),
+                r = new u.default(196606);
 
             function d(e) {
                 return e.join("-")
@@ -612,8 +612,8 @@
             }
 
             function f(e) {
-                let t = r.get(e);
-                null != t && s.delete(t), r.delete(e), o.delete(e), i++
+                let t = s.get(e);
+                null != t && r.delete(t), s.delete(e), o.delete(e), i++
             }
             class E extends l.default.Store {
                 getInteractionComponentStates() {
@@ -633,7 +633,7 @@
             E.displayName = "LocalInteractionComponentStateStore";
             var p = new E(a.default, {
                 LOGOUT: function() {
-                    o.clear(), r.clear(), s.clear(), i++
+                    o.clear(), s.clear(), r.clear(), i++
                 },
                 QUEUE_INTERACTION_COMPONENT_STATE: function(e) {
                     let {
@@ -642,7 +642,7 @@
                         indices: l,
                         state: a
                     } = e;
-                    r.set(t, n), s.set(n, {
+                    s.set(t, n), r.set(n, {
                         messageId: t,
                         indices: l
                     }), c(t, l, a)
@@ -674,16 +674,16 @@
                         nonce: t
                     } = e;
                     if (null == t) return !1;
-                    let n = s.get(t);
+                    let n = r.get(t);
                     if (null == n) return !1;
-                    r.delete(n.messageId), s.delete(t), i++
+                    s.delete(n.messageId), r.delete(t), i++
                 },
                 INTERACTION_FAILURE: function(e) {
                     let {
                         nonce: t
                     } = e;
                     if (null == t) return !1;
-                    let n = s.get(t);
+                    let n = r.get(t);
                     if (null == n) return !1;
                     ! function(e) {
                         let {
@@ -715,7 +715,7 @@
                     return p
                 },
                 getSnowflakeSelectDefaultValues: function() {
-                    return T
+                    return m
                 }
             }), n("222007");
             var l = n("374158"),
@@ -723,8 +723,8 @@
                 u = n("42203"),
                 o = n("26989"),
                 i = n("305961"),
-                r = n("697218"),
-                s = n("25292"),
+                s = n("697218"),
+                r = n("25292"),
                 d = n("387111"),
                 c = n("192112");
             let f = 1e3;
@@ -735,9 +735,9 @@
                 let o = e === a.ComponentType.USER_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
                     i = e === a.ComponentType.ROLE_SELECT || e === a.ComponentType.MENTIONABLE_SELECT,
                     {
-                        users: r,
+                        users: s,
                         roles: f
-                    } = s.default.queryMentionResults({
+                    } = r.default.queryMentionResults({
                         query: t,
                         channel: l,
                         canMentionEveryone: !1,
@@ -749,7 +749,7 @@
                         checkRecentlyTalkedOnEmptyQuery: !1,
                         limit: 15
                     }),
-                    E = r.map(e => {
+                    E = s.map(e => {
                         var t;
                         let a = d.default.getNickname(l.getGuildId(), n, e.user);
                         return {
@@ -769,7 +769,7 @@
             function p(e, t, n) {
                 let l = u.default.getChannel(t);
                 if (null == l) return [];
-                let a = s.default.queryApplicationCommandChannelResults({
+                let a = r.default.queryApplicationCommandChannelResults({
                         query: e,
                         channel: l,
                         channelTypes: n,
@@ -783,7 +783,7 @@
                 return o
             }
 
-            function T(e, t) {
+            function m(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
                 if (null == e) return;
                 let a = i.default.getGuild(t);
@@ -791,11 +791,11 @@
                     switch (e.type) {
                         case l.SnowflakeSelectDefaultValueTypes.USER:
                             var t;
-                            let i = r.default.getUser(e.id);
+                            let i = s.default.getUser(e.id);
                             if (null == i) return null;
-                            let s = null != a ? o.default.getNick(a.id, i.id) : void 0;
+                            let r = null != a ? o.default.getNick(a.id, i.id) : void 0;
                             return {
-                                type: c.SelectOptionType.USER, value: i.id, label: null !== (t = null != s ? s : i.globalName) && void 0 !== t ? t : i.username
+                                type: c.SelectOptionType.USER, value: i.id, label: null !== (t = null != r ? r : i.globalName) && void 0 !== t ? t : i.username
                             };
                         case l.SnowflakeSelectDefaultValueTypes.ROLE:
                             if (null == a) return null;
@@ -827,15 +827,15 @@
                 u = n("769846"),
                 o = n("77078"),
                 i = n("817477"),
-                r = n("944654"),
-                s = n("944832"),
+                s = n("944654"),
+                r = n("944832"),
                 d = n("79798"),
                 c = n("945330"),
                 f = n("159885"),
                 E = n("732523"),
                 p = n("988268"),
-                T = n("782340"),
-                m = n("442605");
+                m = n("782340"),
+                T = n("442605");
             let _ = (0, f.cssValueToNumber)(u.default.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
                 S = (0, f.cssValueToNumber)(u.default.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
                 C = (0, f.cssValueToNumber)(u.default.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
@@ -849,33 +849,33 @@
                 } = e, {
                     applicationIconURL: f,
                     applicationName: I,
-                    queryParams: O,
-                    iframeUrl: A
+                    queryParams: v,
+                    iframeUrl: O
                 } = (0, E.useIframeModalState)(e), {
-                    width: v,
-                    height: L
-                } = (0, r.useScreenDimensions)(), h = a.useMemo(() => {
-                    let e = Math.min((L - N - 2 * C) * 16 / 9, S);
-                    return Math.max(_, Math.min(v - 2 * C, e))
-                }, [v, L]);
+                    width: L,
+                    height: A
+                } = (0, s.useScreenDimensions)(), h = a.useMemo(() => {
+                    let e = Math.min((A - N - 2 * C) * 16 / 9, S);
+                    return Math.max(_, Math.min(L - 2 * C, e))
+                }, [L, A]);
                 return (0, l.jsx)(o.ModalRoot, {
                     ...e,
                     size: o.ModalSize.DYNAMIC,
-                    className: m.root,
+                    className: T.root,
                     children: (0, l.jsxs)("div", {
                         style: {
                             width: h
                         },
                         children: [(0, l.jsxs)(o.ModalHeader, {
                             separator: !1,
-                            className: m.modalHeader,
+                            className: T.modalHeader,
                             children: [(0, l.jsx)(o.Avatar, {
                                 src: f,
                                 size: o.AvatarSizes.SIZE_32,
                                 "aria-label": I,
-                                className: m.applicationIcon
+                                className: T.applicationIcon
                             }), (0, l.jsxs)("div", {
-                                className: m.flexRow,
+                                className: T.flexRow,
                                 children: [(0, l.jsxs)("div", {
                                     children: [(0, l.jsx)(o.Heading, {
                                         variant: "heading-sm/bold",
@@ -887,104 +887,31 @@
                                     })]
                                 }), (0, l.jsx)(d.default, {
                                     type: p.BotTagTypes.BOT,
-                                    className: m.botTag,
+                                    className: T.botTag,
                                     verified: null === (t = e.application.bot) || void 0 === t ? void 0 : t.verified
                                 })]
                             }), (0, l.jsx)(o.Button, {
                                 onClick: u,
-                                innerClassName: m.closeButton,
-                                className: m.closeButtonContainer,
+                                innerClassName: T.closeButton,
+                                className: T.closeButtonContainer,
                                 look: o.Button.Looks.BLANK,
                                 size: o.Button.Sizes.NONE,
-                                "aria-label": T.default.Messages.DISMISS,
+                                "aria-label": m.default.Messages.DISMISS,
                                 children: (0, l.jsx)(c.default, {
-                                    className: m.closeIcon
+                                    className: T.closeIcon
                                 })
                             })]
-                        }), (0, l.jsx)(s.default, {
+                        }), (0, l.jsx)(r.default, {
                             aspectRatio: 16 / 9,
                             children: (0, l.jsx)(i.EmbedIFrameWithLoadingBackground, {
-                                url: A,
+                                url: O,
                                 shouldRefocus: !0,
-                                className: m.iframe,
-                                queryParams: O
+                                className: T.iframe,
+                                queryParams: v
                             })
                         })]
                     })
                 })
-            }
-        },
-        274800: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                queueInteractionComponentState: function() {
-                    return o
-                },
-                addQueued: function() {
-                    return i
-                },
-                setFailed: function() {
-                    return r
-                },
-                fetchMessageInteractionData: function() {
-                    return s
-                }
-            });
-            var l = n("872717"),
-                a = n("913144"),
-                u = n("49111");
-
-            function o(e, t, n, l) {
-                a.default.dispatch({
-                    type: "QUEUE_INTERACTION_COMPONENT_STATE",
-                    messageId: e,
-                    nonce: t,
-                    state: n,
-                    indices: l
-                })
-            }
-
-            function i(e, t) {
-                let {
-                    data: n,
-                    messageId: l,
-                    onCreate: u,
-                    onSuccess: o,
-                    onFailure: i
-                } = t;
-                a.default.dispatch({
-                    type: "INTERACTION_QUEUE",
-                    data: n,
-                    nonce: e,
-                    messageId: l,
-                    onCreate: u,
-                    onSuccess: o,
-                    onFailure: i
-                })
-            }
-
-            function r(e, t, n) {
-                a.default.dispatch({
-                    type: "INTERACTION_FAILURE",
-                    nonce: e,
-                    errorMessage: n,
-                    errorCode: t
-                })
-            }
-            async function s(e, t) {
-                let n = await l.default.get({
-                    url: u.Endpoints.MESSAGE_INTERACTION_DATA(e, t),
-                    oldFormErrors: !0
-                });
-                if (n.ok) {
-                    let l = n.body;
-                    a.default.dispatch({
-                        type: "LOAD_MESSAGE_INTERACTION_DATA_SUCCESS",
-                        channelId: e,
-                        messageId: t,
-                        interactionData: l
-                    })
-                }
             }
         },
         614818: function(e, t, n) {

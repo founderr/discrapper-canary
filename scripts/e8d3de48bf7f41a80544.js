@@ -282,9 +282,9 @@
                 c = n("286509"),
                 f = n("676223"),
                 m = n("407908"),
-                h = n("649486"),
-                E = n("860285"),
-                _ = n("769791"),
+                E = n("649486"),
+                _ = n("860285"),
+                h = n("769791"),
                 p = n("662285"),
                 I = n("866253"),
                 g = n("981601"),
@@ -328,13 +328,13 @@
                     })
                 }
                 handleOpenSpotifyTrack(e) {
-                    (0, _.openTrack)(e)
+                    (0, h.openTrack)(e)
                 }
                 handleOpenSpotifyArtist(e, t, n) {
-                    (0, _.openArtist)(e, t, n)
+                    (0, h.openArtist)(e, t, n)
                 }
                 handleOpenSpotifyAlbum(e, t) {
-                    (0, _.openAlbum)(e, t)
+                    (0, h.openAlbum)(e, t)
                 }
                 shouldRenderCustomButton() {
                     let {
@@ -404,7 +404,7 @@
                         } = this.props;
                         null != e && null != t && u.sync(e, t)
                     }, this.handleDownloadApp = () => {
-                        (0, i.openModal)(e => (0, a.jsx)(h.default, {
+                        (0, i.openModal)(e => (0, a.jsx)(E.default, {
                             source: "Game Invite",
                             ...e
                         }))
@@ -454,9 +454,9 @@
                             className: c,
                             channelId: f,
                             message: m,
-                            hideParty: h,
-                            isSyncable: E,
-                            isLaunchable: _,
+                            hideParty: E,
+                            isSyncable: _,
+                            isLaunchable: h,
                             guildId: p
                         } = this.props;
                         if (null != l) e = l.name;
@@ -474,16 +474,16 @@
                             className: c,
                             coverImage: this.getCoverImage(),
                             isPreview: r,
-                            isGameLaunchable: _,
+                            isGameLaunchable: h,
                             isLoading: o || this.state.sending,
                             activityActionType: d,
                             isInBrowser: !P.isPlatformEmbedded,
-                            isSyncable: E,
+                            isSyncable: _,
                             isSender: u,
                             channelId: f,
                             guildId: null != p ? p : void 0,
                             message: m,
-                            hideParty: h,
+                            hideParty: E,
                             onJoin: this.handleJoin,
                             onInvite: this.handleInvite,
                             onSync: this.handleSync,
@@ -501,7 +501,7 @@
             G.defaultProps = {
                 isPreview: !1
             };
-            var k = l.default.connectStores([p.default, A.default, v.default, M.default, E.default, L.default, S.default, O.default, x.default, N.default], e => {
+            var k = l.default.connectStores([p.default, A.default, v.default, M.default, _.default, L.default, S.default, O.default, x.default, N.default], e => {
                 let {
                     activity: t,
                     analyticsLocations: n,
@@ -528,17 +528,17 @@
                     }),
                     f = null != t && p.default.canPlay(t),
                     m = p.default.getSyncingWith(),
-                    h = null != m && null != l && m.userId === l;
+                    E = null != m && null != l && m.userId === l;
                 return {
                     analyticsLocations: n,
                     partyMembers: c,
                     connectedApplication: null != r ? S.default.getApplication(r) : null,
                     myPartyId: null != u && null != u.party ? u.party.id : null,
                     isLaunching: d,
-                    isSyncable: f && !h,
+                    isSyncable: f && !E,
                     isLaunchable: null != r && (0, D.isLaunchable)({
                         LibraryApplicationStore: M.default,
-                        LaunchableGameStore: E.default,
+                        LaunchableGameStore: _.default,
                         DispatchApplicationStore: L.default,
                         ConnectedAppsStore: S.default,
                         applicationId: r
@@ -570,9 +570,9 @@
                     fullWidth: n = !1,
                     size: f = l.Button.Sizes.LARGE,
                     color: m,
-                    customDisabledColor: h,
-                    hideNotLaunchable: E,
-                    tooltipPosition: _,
+                    customDisabledColor: E,
+                    hideNotLaunchable: _,
+                    tooltipPosition: h,
                     onClick: p,
                     className: I,
                     source: g,
@@ -584,8 +584,8 @@
                     fullWidth: n,
                     size: f,
                     color: m,
-                    customDisabledColor: h,
-                    tooltipPosition: _,
+                    customDisabledColor: E,
+                    tooltipPosition: h,
                     onClick: p,
                     className: I,
                     hover: S,
@@ -603,7 +603,7 @@
                     storeListingAnalyticsProperties: T
                 }) : (0, a.jsx)(d.default, {
                     ...N,
-                    hideNotLaunchable: E,
+                    hideNotLaunchable: _,
                     applicationId: t.id
                 })
             }
@@ -626,9 +626,9 @@
                 c = n("73961"),
                 f = n("465527"),
                 m = n("55620"),
-                h = n("79112"),
-                E = n("308757"),
-                _ = n("997289"),
+                E = n("79112"),
+                _ = n("308757"),
+                h = n("997289"),
                 p = n("84460"),
                 I = n("299285"),
                 g = n("661579"),
@@ -723,16 +723,16 @@
                             isWindowFocused: c,
                             color: f,
                             customDisabledColor: m,
-                            pauseAnimation: h,
-                            isEntitled: E,
-                            asGift: _,
+                            pauseAnimation: E,
+                            isEntitled: _,
+                            asGift: h,
                             sku: p,
                             entitlementBranchId: I,
                             isInTestMode: g,
                             innerClassName: T
                         } = this.props,
-                        C = !0 === E && (null == p || p.type !== j.SKUTypes.CONSUMABLE),
-                        S = !0 === n.disabled || null != p && !p.available && !(null != I) && !g || C && !_,
+                        C = !0 === _ && (null == p || p.type !== j.SKUTypes.CONSUMABLE),
+                        S = !0 === n.disabled || null != p && !p.available && !(null != I) && !g || C && !h,
                         A = n.disabledTooltipText,
                         N = {
                             wrapperClassName: l,
@@ -748,7 +748,7 @@
                         };
                     return (t = !0 === n.useShinyButton ? (0, a.jsxs)(O.default, {
                         ...N,
-                        pauseAnimation: !c || h,
+                        pauseAnimation: !c || E,
                         children: [n.buttonIcon, e]
                     }) : (0, a.jsxs)(u.Button, {
                         ...N,
@@ -831,7 +831,7 @@
                             isInTestMode: u,
                             storeListingAnalyticsProperties: f,
                             asGift: m,
-                            forceDistribution: _
+                            forceDistribution: h
                         } = this.props;
                         if (null == a) throw Error("should not be able to buy without sku");
                         if (null != o && null != e && o(e), null != a.externalPurchaseUrl) {
@@ -848,10 +848,10 @@
                             return
                         }
                         let p = null != l;
-                        if (!a.premium || _ || i || u || p) {
-                            if ((a.requiresPayment || _) && !p) {
+                        if (!a.premium || h || i || u || p) {
+                            if ((a.requiresPayment || h) && !p) {
                                 if (null != s) try {
-                                    await (0, E.openSKUPaymentModal)(n, s, this.analyticsLocation, {
+                                    await (0, _.openSKUPaymentModal)(n, s, this.analyticsLocation, {
                                         promotionId: null != f ? f.promotionId : null,
                                         isGift: m
                                     })
@@ -872,7 +872,7 @@
                             var I;
                             I = this.analyticsLocation, R.default.track(j.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                                 location: I
-                            }), h.default.open(j.UserSettingsSections.PREMIUM)
+                            }), E.default.open(j.UserSettingsSections.PREMIUM)
                         }
                     }
                 }
@@ -892,7 +892,7 @@
                     channelId: l,
                     skuId: i,
                     ...r
-                } = e, u = (0, o.useStateFromStores)([p.default, v.default], () => v.default.inTestModeForApplication(s) || p.default.inDevModeForApplication(s), [s]), [d, c, f, m, h, E] = (0, o.useStateFromStoresArray)([I.default, S.default, M.default, A.default], () => {
+                } = e, u = (0, o.useStateFromStores)([p.default, v.default], () => v.default.inTestModeForApplication(s) || p.default.inDevModeForApplication(s), [s]), [d, c, f, m, E, _] = (0, o.useStateFromStoresArray)([I.default, S.default, M.default, A.default], () => {
                     let e = I.default.getApplication(s),
                         t = S.default.getCurrentUser(),
                         a = null == i && null != e ? e.destinationSkuId : i,
@@ -901,7 +901,7 @@
                         o = null != a ? A.default.isEntitledToSku(t, a, s, r) : null,
                         u = P.default.canInstallPremiumApplications(t);
                     return [e, t, l, o, u, a]
-                }), g = (0, o.useStateFromStores)([x.default], () => x.default.isFocused()), T = (0, o.useStateFromStores)([N.default], () => N.default.isPurchasingSKU), O = (0, o.useStateFromStores)([C.default], () => C.default.locale), L = (0, _.useAnalyticsContext)();
+                }), g = (0, o.useStateFromStores)([x.default], () => x.default.isFocused()), T = (0, o.useStateFromStores)([N.default], () => N.default.isPurchasingSKU), O = (0, o.useStateFromStores)([C.default], () => C.default.locale), L = (0, h.useAnalyticsContext)();
                 if (null != n && null == l) throw Error("Unexpected entitlementBranchId without a channelId");
                 return (0, a.jsx)(B, {
                     ...r,
@@ -914,13 +914,13 @@
                     isAuthenticated: null != c,
                     isInTestMode: u,
                     isEntitled: m,
-                    isUserPremium: h,
+                    isUserPremium: E,
                     isWindowFocused: g,
                     isPurchasing: T,
                     locale: O,
                     analyticsContext: L,
                     ref: t,
-                    targetSkuId: E
+                    targetSkuId: _
                 })
             })
         },
@@ -942,9 +942,9 @@
                 c = n("860285"),
                 f = n("86878"),
                 m = n("568307"),
-                h = n("535974"),
-                E = n("181114"),
-                _ = n("837899"),
+                E = n("535974"),
+                _ = n("181114"),
+                h = n("837899"),
                 p = n("773336"),
                 I = n("780009"),
                 g = n("49111"),
@@ -967,7 +967,7 @@
                         onClick: this.handleDropdownClick,
                         children: [(0, a.jsx)("div", {
                             className: C.arrowSeparator
-                        }), (0, a.jsx)(_.default, {
+                        }), (0, a.jsx)(h.default, {
                             className: C.dropdownArrow
                         })]
                     }) : null
@@ -1013,7 +1013,7 @@
                     } = this.props;
                     if (!l) return c ? null : this.renderDisabledButton(T.default.Messages.GAME_ACTION_BUTTON_PLAY, p.isPlatformEmbedded ? T.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : T.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
                     if (u) return this.renderDisabledButton(T.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
-                    let f = d ? E.default : o.Button;
+                    let f = d ? _.default : o.Button;
                     return (0, a.jsxs)(f, {
                         className: i(C.playButton, e),
                         innerClassName: C.playButtonContents,
@@ -1072,7 +1072,7 @@
                 let {
                     applicationId: t,
                     libraryApplication: n
-                } = e, s = (0, d.useAnalyticsContext)(), [l, i] = (0, r.useStateFromStoresArray)([f.default, c.default, h.default], () => [f.default.isConnected(t) || c.default.isLaunchable(t) || null != n && h.default.isLaunchable(n.id, n.branchId), c.default.launchingGames.has(t)], [t, n]), o = (0, r.useStateFromStores)([m.default], () => new Set(m.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, r.useStateFromStores)([h.default], () => null != n ? h.default.getState(n.id, n.branchId) : null, [n]);
+                } = e, s = (0, d.useAnalyticsContext)(), [l, i] = (0, r.useStateFromStoresArray)([f.default, c.default, E.default], () => [f.default.isConnected(t) || c.default.isLaunchable(t) || null != n && E.default.isLaunchable(n.id, n.branchId), c.default.launchingGames.has(t)], [t, n]), o = (0, r.useStateFromStores)([m.default], () => new Set(m.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, r.useStateFromStores)([E.default], () => null != n ? E.default.getState(n.id, n.branchId) : null, [n]);
                 return (0, a.jsx)(S, {
                     ...e,
                     analyticsContext: s,
@@ -1106,9 +1106,9 @@
                 c = n("997289"),
                 f = n("605250"),
                 m = n("393414"),
-                h = n("677225"),
-                E = n("9377"),
-                _ = n("148813"),
+                E = n("677225"),
+                _ = n("9377"),
+                h = n("148813"),
                 p = n("535974"),
                 I = n("352326"),
                 g = n("964889"),
@@ -1319,7 +1319,7 @@
             function R(e) {
                 let {
                     libraryApplication: t
-                } = e, n = (0, c.useAnalyticsContext)(), [a, s] = (0, r.useStateFromStoresArray)([p.default, I.default], () => [(0, E.getDefaultLibraryApplicationAction)(t, p.default, I.default), p.default.getState(t.id, t.branchId)], [t]), i = (0, r.useStateFromStores)([_.default], () => _.default.isSyncing(t.id, t.branchId), [t]), o = (0, r.useStateFromStores)([h.default], () => h.default.hasNoBuild(t.id, t.branchId), [t]);
+                } = e, n = (0, c.useAnalyticsContext)(), [a, s] = (0, r.useStateFromStoresArray)([p.default, I.default], () => [(0, _.getDefaultLibraryApplicationAction)(t, p.default, I.default), p.default.getState(t.id, t.branchId)], [t]), i = (0, r.useStateFromStores)([h.default], () => h.default.isSyncing(t.id, t.branchId), [t]), o = (0, r.useStateFromStores)([E.default], () => E.default.hasNoBuild(t.id, t.branchId), [t]);
                 return (0, l.jsx)(L, {
                     ...e,
                     analyticsContext: n,
@@ -1351,18 +1351,18 @@
                 c = n("661579"),
                 f = n("880013"),
                 m = n("216422"),
-                h = n("782340"),
-                E = n("130104");
+                E = n("782340"),
+                _ = n("130104");
             (l = a || (a = {}))[l.DIRECTORY_HERO = 1] = "DIRECTORY_HERO", l[l.DIRECTORY_TILE = 2] = "DIRECTORY_TILE", l[l.DIRECTORY_SEARCH = 3] = "DIRECTORY_SEARCH", l[l.LISTING = 4] = "LISTING", l[l.EMBED = 5] = "EMBED", (i = s || (s = {}))[i.IN_LIBRARY = 1] = "IN_LIBRARY", i[i.ON_SALE = 2] = "ON_SALE", i[i.PREMIUM = 3] = "PREMIUM", i[i.DEFAULT = 4] = "DEFAULT", i[i.ENTITLEMENT_BRANCH = 5] = "ENTITLEMENT_BRANCH";
-            let _ = e => {
+            let h = e => {
                     let {
                         className: t
                     } = e;
                     return (0, r.jsxs)("div", {
-                        className: d(E.row, t),
+                        className: d(_.row, t),
                         children: [(0, r.jsx)(f.default, {
-                            className: E.icon
-                        }), h.default.Messages.APPLICATION_STORE_IN_LIBRARY]
+                            className: _.icon
+                        }), E.default.Messages.APPLICATION_STORE_IN_LIBRARY]
                     })
                 },
                 p = e => {
@@ -1371,9 +1371,9 @@
                         className: n
                     } = e;
                     return (0, r.jsxs)("div", {
-                        className: d(E.row, n),
+                        className: d(_.row, n),
                         children: [(0, r.jsx)(m.default, {
-                            className: E.icon
+                            className: _.icon
                         }), (0, c.default)(t)]
                     })
                 },
@@ -1383,7 +1383,7 @@
                         className: n
                     } = e;
                     return (0, r.jsx)("div", {
-                        className: d(E.salePercentage, n),
+                        className: d(_.salePercentage, n),
                         children: t.getDisplaySalePercentage()
                     })
                 },
@@ -1393,7 +1393,7 @@
                         className: n
                     } = e;
                     return (0, r.jsx)("div", {
-                        className: d(E.originalAmount, n),
+                        className: d(_.originalAmount, n),
                         children: (0, c.default)(t, !1)
                     })
                 },
@@ -1413,7 +1413,7 @@
                         className: n
                     } = e;
                     return (0, r.jsxs)("div", {
-                        className: d(E.row, n),
+                        className: d(_.row, n),
                         children: [(0, r.jsx)(I, {
                             sku: t
                         }), (0, r.jsx)(g, {
@@ -1429,7 +1429,7 @@
                     } = e;
                     return (0, r.jsx)("div", {
                         className: t,
-                        children: h.default.Messages.APPLICATION_STORE_FREE
+                        children: E.default.Messages.APPLICATION_STORE_FREE
                     })
                 };
             class A extends o.PureComponent {
@@ -1458,7 +1458,7 @@
                                 className: d(t, n)
                             });
                         case 1:
-                            return (0, r.jsx)(_, {
+                            return (0, r.jsx)(h, {
                                 className: d(t, n)
                             });
                         case 3:
@@ -1491,16 +1491,16 @@
                         case 3:
                             return (0, r.jsx)(p, {
                                 sku: n,
-                                className: d(E.directoryHeroPricePremium, t)
+                                className: d(_.directoryHeroPricePremium, t)
                             });
                         case 2:
                             return (0, r.jsx)(C, {
                                 sku: n,
-                                className: d(E.directoryHeroPrice, t)
+                                className: d(_.directoryHeroPrice, t)
                             });
                         default:
                             return (0, r.jsx)(T, {
-                                className: d(E.directoryHeroPrice, t),
+                                className: d(_.directoryHeroPrice, t),
                                 sku: n
                             })
                     }
@@ -1518,7 +1518,7 @@
                         case 2:
                             t = (0, r.jsxs)(o.Fragment, {
                                 children: [(0, r.jsxs)("div", {
-                                    className: E.row,
+                                    className: _.row,
                                     children: [(0, r.jsx)(T, {
                                         sku: a
                                     }), (0, r.jsx)(I, {
@@ -1535,7 +1535,7 @@
                             })
                     }
                     return (0, r.jsx)("div", {
-                        className: d(E.listingPrice, n),
+                        className: d(_.listingPrice, n),
                         children: t
                     })
                 }
@@ -1546,13 +1546,13 @@
                         case 1:
                             return this.renderDirectoryHero(e);
                         case 2:
-                            return this.renderGeneric(e, E.directoryTilePrice);
+                            return this.renderGeneric(e, _.directoryTilePrice);
                         case 3:
-                            return this.renderGeneric(e, E.directorySearchPrice);
+                            return this.renderGeneric(e, _.directorySearchPrice);
                         case 4:
                             return this.renderListing(e);
                         case 5:
-                            return this.renderGeneric(e, E.embedPrice);
+                            return this.renderGeneric(e, _.embedPrice);
                         default:
                             throw Error("Invalid Price Unit Type")
                     }
@@ -1579,9 +1579,9 @@
                 c = n("85871"),
                 f = n("231561"),
                 m = n("347374"),
-                h = n("271560"),
-                E = n("4919"),
-                _ = n("458331"),
+                E = n("271560"),
+                _ = n("4919"),
+                h = n("458331"),
                 p = n("49111"),
                 I = n("384560");
             class g extends s.PureComponent {
@@ -1595,7 +1595,7 @@
                         renderCustomTitle: i,
                         renderCustomMedia: r,
                         isEmbed: o
-                    } = this.props, u = o ? E.ResponsiveEmbedTile : _.default;
+                    } = this.props, u = o ? _.ResponsiveEmbedTile : h.default;
                     return (0, a.jsx)(u, {
                         className: s,
                         renderMedia: null != r ? r : this.renderMedia,
@@ -1649,8 +1649,8 @@
                                 className: i(I.splashContainer, {
                                     [I.splashContainerHorizontal]: o
                                 }),
-                                video: null != u.previewVideo ? (0, h.getAssetURL)(r.applicationId, u.previewVideo) : void 0,
-                                image: null != u.thumbnail ? (0, h.getAssetURL)(r.applicationId, u.thumbnail, 600) : null,
+                                video: null != u.previewVideo ? (0, E.getAssetURL)(r.applicationId, u.previewVideo) : void 0,
+                                image: null != u.thumbnail ? (0, E.getAssetURL)(r.applicationId, u.thumbnail, 600) : null,
                                 title: r.name,
                                 playing: e,
                                 muted: t,
@@ -1797,9 +1797,9 @@
                 c = n("79112"),
                 f = n("4919"),
                 m = n("86621"),
-                h = n("737960"),
-                E = n("206230"),
-                _ = n("491232"),
+                E = n("737960"),
+                _ = n("206230"),
+                h = n("491232"),
                 p = n("210721"),
                 I = n("583711"),
                 g = n("65324"),
@@ -1931,7 +1931,7 @@
                     }, i = !e.isSubscription && null != t || !e.isSelfRedeemable && s || e.isExistingPremiumSubscriptionDisallowed && (0, D.isPremium)(n);
                     return (e.redeemed || i || e.isClaimed || !n.verified) && (l.color = d.Button.Colors.BRAND, l.disabled = !0), (0, a.jsx)(d.Button, {
                         ...l,
-                        className: (0, _.isCollectiblesGiftCode)(e) ? w.collectiblesAcceptButton : null,
+                        className: (0, h.isCollectiblesGiftCode)(e) ? w.collectiblesAcceptButton : null,
                         size: d.Button.Sizes.SMALL,
                         children: e.redeemed ? k.default.Messages.GIFT_EMBED_BUTTON_CLAIMED : null != e.giftStyle ? k.default.Messages.SEASONAL_GIFTING_OPEN_GIFT : k.default.Messages.GIFT_EMBED_BUTTON_ACCEPT
                     })
@@ -1966,7 +1966,7 @@
                     let r = a.isPreorder() ? k.default.Messages.PREORDER_SKU_NAME.format({
                         name: a.name
                     }) : a.name;
-                    if (e.redeemed) return e.isSubscription || (0, _.isCollectiblesGiftCode)(e) ? k.default.Messages.GIFT_EMBED_BODY_CLAIMED_SELF_SUBSCRIPTION : k.default.Messages.GIFT_EMBED_BODY_CLAIMED_SELF.format({
+                    if (e.redeemed) return e.isSubscription || (0, h.isCollectiblesGiftCode)(e) ? k.default.Messages.GIFT_EMBED_BODY_CLAIMED_SELF_SUBSCRIPTION : k.default.Messages.GIFT_EMBED_BODY_CLAIMED_SELF.format({
                         skuName: r,
                         onViewInLibrary: this.handleViewLibrary
                     });
@@ -2062,7 +2062,7 @@
                     }) : (0, a.jsx)(f.ResponsiveLoadingEmbedTile, {
                         isHorizontal: n >= f.HORIZONTAL_EMBED_BREAKPOINT
                     });
-                    return (0, _.isCollectiblesGiftCode)(e) ? (0, a.jsx)("div", {
+                    return (0, h.isCollectiblesGiftCode)(e) ? (0, a.jsx)("div", {
                         className: w.collectiblesEmbedWrapper,
                         children: this.renderEmbed()
                     }) : this.renderEmbed()
@@ -2144,13 +2144,13 @@
                     }
                 }
             }
-            let Y = (0, h.default)((0, m.default)(V));
-            var W = u.default.connectStores([S.default, v.default, N.default, A.default, M.default, C.default, E.default], e => {
+            let Y = (0, E.default)((0, m.default)(V));
+            var W = u.default.connectStores([S.default, v.default, N.default, A.default, M.default, C.default, _.default], e => {
                 let {
                     code: t,
                     author: n,
                     currentUser: a
-                } = e, s = S.default.get(t), l = null != s ? v.default.get(s.skuId) : null, i = null != s && null != s.userId ? N.default.getUser(s.userId) : null, r = E.default.useReducedMotion;
+                } = e, s = S.default.get(t), l = null != s ? v.default.get(s.skuId) : null, i = null != s && null != s.userId ? N.default.getUser(s.userId) : null, r = _.default.useReducedMotion;
                 return {
                     sku: l,
                     giftCode: s,
@@ -2168,7 +2168,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 OperatingSystemSection: function() {
-                    return E
+                    return _
                 }
             }), n("70102");
             var a = n("37983");
@@ -2197,7 +2197,7 @@
                 }
             };
 
-            function h(e) {
+            function E(e) {
                 let {
                     operatingSystem: t,
                     className: n
@@ -2212,7 +2212,7 @@
                     })
                 })
             }
-            let E = e => {
+            let _ = e => {
                 let {
                     systems: t,
                     className: n,
@@ -2220,7 +2220,7 @@
                 } = e;
                 return (0, a.jsx)("div", {
                     className: l(f.OSSection, n),
-                    children: t.map(e => (0, a.jsx)(h, {
+                    children: t.map(e => (0, a.jsx)(E, {
                         operatingSystem: e,
                         className: l(f.purchaseUnitOperatingSystem, s)
                     }, e))
@@ -2249,9 +2249,9 @@
                 c = n("465527"),
                 f = n("55620"),
                 m = n("775433"),
-                h = n("524503"),
-                E = n("333955"),
-                _ = n("308592"),
+                E = n("524503"),
+                _ = n("333955"),
+                h = n("308592"),
                 p = n("846286"),
                 I = n("314058"),
                 g = n("509167"),
@@ -2297,8 +2297,8 @@
                 if (null == c) {
                     let e = await (0, f.fetchAllStoreListingsForApplication)(t),
                         a = e.find(e => e.sku.id === n);
-                    l(null != a, "Could not find store listing for sku"), a.sku.type === x.SKUTypes.SUBSCRIPTION_GROUP && await (0, h.fetchAllSubscriptionListingsDataForApplication)(t, a.id)
-                }(null == (c = null != c ? c : M.default.get(n)) ? void 0 : c.type) === x.SKUTypes.SUBSCRIPTION && !(0, _.getSubscriptionPlansLoaded)([c.id]) && await (0, m.fetchSubscriptionPlansForSKU)(c.id);
+                    l(null != a, "Could not find store listing for sku"), a.sku.type === x.SKUTypes.SUBSCRIPTION_GROUP && await (0, E.fetchAllSubscriptionListingsDataForApplication)(t, a.id)
+                }(null == (c = null != c ? c : M.default.get(n)) ? void 0 : c.type) === x.SKUTypes.SUBSCRIPTION && !(0, h.getSubscriptionPlansLoaded)([c.id]) && await (0, m.fetchSubscriptionPlansForSKU)(c.id);
                 let {
                     enabled: T
                 } = I.default.getCurrentConfig({
@@ -2342,7 +2342,7 @@
                         initialPlanId: n,
                         analyticsLocationObject: s,
                         analyticsLocations: l,
-                        renderHeader: (e, t, n) => (0, a.jsx)(E.PurchaseHeader, {
+                        renderHeader: (e, t, n) => (0, a.jsx)(_.PurchaseHeader, {
                             step: n,
                             onClose: () => t(!1)
                         })
@@ -2387,7 +2387,7 @@
                 } = {
                     ...y,
                     ...l
-                }, h = L();
+                }, E = L();
                 return u.then(() => new Promise((l, o) => {
                     r.default.dispatch({
                         type: "SKU_PURCHASE_MODAL_OPEN",
@@ -2424,7 +2424,7 @@
                             })
                         }
                     }, {
-                        contextKey: h
+                        contextKey: E
                     })
                 }))
             }
@@ -2450,9 +2450,9 @@
                 c = n("359606"),
                 f = n("883610"),
                 m = n("4919"),
-                h = n("86621"),
-                E = n("737960"),
-                _ = n("299285"),
+                E = n("86621"),
+                _ = n("737960"),
+                h = n("299285"),
                 p = n("686470"),
                 I = n("290877"),
                 g = n("552712"),
@@ -2613,7 +2613,7 @@
             function x(e) {
                 let {
                     skuId: t
-                } = e, n = g.default.get(t), a = null != n ? _.default.getApplication(n.applicationId) : null;
+                } = e, n = g.default.get(t), a = null != n ? h.default.getApplication(n.applicationId) : null;
                 return {
                     sku: n,
                     application: a,
@@ -2623,9 +2623,9 @@
                     libraryApplication: null != n ? p.default.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
                 }
             }
-            let O = (0, E.default)((0, h.default)(M));
+            let O = (0, _.default)((0, E.default)(M));
             var L = i.default.connectStores(v, x)(O);
-            let R = (0, h.default)(i.default.connectStores(v, x)(M))
+            let R = (0, E.default)(i.default.connectStores(v, x)(M))
         },
         550762: function(e, t, n) {
             "use strict";
@@ -3058,9 +3058,9 @@
                 c = n("685665"),
                 f = n("442939"),
                 m = n("870346"),
-                h = n("950104"),
-                E = n("42203"),
-                _ = n("697218"),
+                E = n("950104"),
+                _ = n("42203"),
+                h = n("697218"),
                 p = n("155207"),
                 I = n("811305"),
                 g = n("568734"),
@@ -3089,7 +3089,7 @@
                 } = e, {
                     analyticsLocations: G,
                     AnalyticsLocationProvider: k
-                } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), w = (0, u.useAnalyticsContext)(), H = B.channel_id, F = (0, l.useStateFromStores)([E.default], () => E.default.getChannel(H), [H]), V = null == F ? void 0 : F.guild_id, Y = null != F && (F.isGuildVoice() || F.isPrivate()), W = (0, l.useStateFromStores)([A.default], () => A.default.getSelfEmbeddedActivityForChannel(H)), K = (null == W ? void 0 : W.application_id) === U, [z, Z] = (0, f.default)([U, null !== (n = null == W ? void 0 : W.application_id) && void 0 !== n ? n : ""]), J = (0, x.default)(null !== (i = null == z ? void 0 : z.maxParticipants) && void 0 !== i ? i : 0), [X] = (0, l.useStateFromStoresArray)([A.default], () => Y ? A.default.getEmbeddedActivitiesForChannel(H).filter(e => e.application_id === U) : [], [U, H, Y]), q = Array.from(null !== (C = null == X ? void 0 : X.connections.keys()) && void 0 !== C ? C : []), Q = (0, l.useStateFromStoresArray)([_.default], () => q.map(e => _.default.getUser(e)).filter(T.isNotNullish), [q]), $ = (0, O.default)({
+                } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), w = (0, u.useAnalyticsContext)(), H = B.channel_id, F = (0, l.useStateFromStores)([_.default], () => _.default.getChannel(H), [H]), V = null == F ? void 0 : F.guild_id, Y = null != F && (F.isGuildVoice() || F.isPrivate()), W = (0, l.useStateFromStores)([A.default], () => A.default.getSelfEmbeddedActivityForChannel(H)), K = (null == W ? void 0 : W.application_id) === U, [z, J] = (0, f.default)([U, null !== (n = null == W ? void 0 : W.application_id) && void 0 !== n ? n : ""]), Z = (0, x.default)(null !== (i = null == z ? void 0 : z.maxParticipants) && void 0 !== i ? i : 0), [X] = (0, l.useStateFromStoresArray)([A.default], () => Y ? A.default.getEmbeddedActivitiesForChannel(H).filter(e => e.application_id === U) : [], [U, H, Y]), q = Array.from(null !== (C = null == X ? void 0 : X.connections.keys()) && void 0 !== C ? C : []), Q = (0, l.useStateFromStoresArray)([h.default], () => q.map(e => h.default.getUser(e)).filter(T.isNotNullish), [q]), $ = (0, O.default)({
                     applicationId: U,
                     size: b
                 }), ee = m.default.getWindowOpen(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT), et = Q.length > 0 ? D.default.Messages.JOIN : D.default.Messages.START, en = async () => {
@@ -3106,17 +3106,17 @@
                         });
                         if (null != X && Q.length > 0) await (0, M.default)({
                             activity: X,
-                            currentEmbeddedApplication: Z,
+                            currentEmbeddedApplication: J,
                             activityChannelId: H,
                             embeddedActivitiesManager: L.default,
                             locationObject: w.location,
                             analyticsLocations: G
                         });
                         else {
-                            let e = F.isPrivate() && !h.default.isCallActive(H),
+                            let e = F.isPrivate() && !E.default.isCallActive(H),
                                 t = () => (0, v.default)({
                                     activityItem: n,
-                                    currentActivity: Z,
+                                    currentActivity: J,
                                     channelId: H,
                                     guildId: V,
                                     embeddedActivitiesManager: L.default,
@@ -3181,7 +3181,7 @@
                                         className: j.peopleIcon
                                     }), (0, a.jsx)(r.Text, {
                                         variant: "text-xs/semibold",
-                                        children: J
+                                        children: Z
                                     })]
                                 }), (0, a.jsx)("div", {
                                     className: j.buttonWrapper,
@@ -3217,9 +3217,9 @@
                 c = n("162771"),
                 f = n("697218"),
                 m = n("174622"),
-                h = n("627490"),
-                E = n("599110"),
-                _ = n("613676"),
+                E = n("627490"),
+                _ = n("599110"),
+                h = n("613676"),
                 p = n("721698"),
                 I = n("349503"),
                 g = n("412707"),
@@ -3242,7 +3242,7 @@
                 s.useEffect(() => {
                     (0, p.getEmbedApplication)(N)
                 }, [N]), s.useEffect(() => {
-                    P && O === I.FetchState.FETCHED && E.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+                    P && O === I.FetchState.FETCHED && _.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                         application_id: N,
                         device_platform: l.isMobile ? "mobile_web" : "desktop_web",
                         sender_user_id: M.author.id,
@@ -3250,7 +3250,7 @@
                         channel_id: M.channel_id
                     })
                 }, [P, N, null == y ? void 0 : y.id, M.channel_id, R, M.author.id, O]), s.useEffect(() => {
-                    P && x && E.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+                    P && x && _.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                         device_platform: l.isMobile ? "mobile_web" : "desktop_web",
                         sender_user_id: M.author.id,
                         guild_id: R,
@@ -3258,7 +3258,7 @@
                     })
                 }, [P, R, x, M.author.id, M.channel_id]);
                 let U = e => {
-                    E.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
+                    _.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
                         application_id: N,
                         device_platform: l.isMobile ? "mobile_web" : "desktop_web",
                         clicked_section: e,
@@ -3322,7 +3322,7 @@
                                 children: (0, a.jsxs)(r.Clickable, {
                                     className: A.guildCountContainer,
                                     onClick: () => U("application_guild_count"),
-                                    children: [(0, a.jsx)(h.default, {
+                                    children: [(0, a.jsx)(E.default, {
                                         width: 16,
                                         height: 16,
                                         className: A.guildCountIcon
@@ -3333,7 +3333,7 @@
                             })]
                         }), (0, a.jsx)(m.default.Button, {
                             onClick: () => {
-                                null != v && (0, _.installApplication)({
+                                null != v && (0, h.installApplication)({
                                     applicationId: N,
                                     customInstallUrl: v.custom_install_url,
                                     installParams: v.install_params,
@@ -3442,7 +3442,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return h
                 }
             }), n("222007"), n("702976");
             var a = n("446674"),
@@ -3456,17 +3456,17 @@
                 c = n("49111");
             let f = "ChannelFollowingBumpChannels",
                 m = new Set,
-                h = new Set;
-            class E extends a.default.Store {
+                E = new Set;
+            class _ extends a.default.Store {
                 initialize() {
                     this.waitFor(i.default), m = new Set(s.default.get(f))
                 }
                 shouldShowBump(e) {
-                    return h.has(e)
+                    return E.has(e)
                 }
             }
-            E.displayName = "ChannelFollowingPublishBumpStore";
-            var _ = new E(l.default, {
+            _.displayName = "ChannelFollowingPublishBumpStore";
+            var h = new _(l.default, {
                 MESSAGE_CREATE: function(e) {
                     var t;
                     let {
@@ -3479,28 +3479,28 @@
                         i = u.default.getCurrentUser(),
                         f = null != l && l.type === c.ChannelTypes.GUILD_ANNOUNCEMENT && a.type === c.MessageTypes.DEFAULT && (null != i && (null === (t = a.author) || void 0 === t ? void 0 : t.id) === i.id ? o.default.can(c.Permissions.SEND_MESSAGES, l) : o.default.can(c.Permissions.MANAGE_MESSAGES, l)) && !d.hasFlag(Number(a.flags), c.MessageFlags.CROSSPOSTED);
                     if (!f) return !1;
-                    h.add(a.id)
+                    E.add(a.id)
                 },
                 MESSAGE_UPDATE: function(e) {
                     let {
                         message: t
-                    } = e, n = h.has(t.id);
-                    n && d.hasFlag(Number(t.flags), c.MessageFlags.CROSSPOSTED) && h.delete(t.id)
+                    } = e, n = E.has(t.id);
+                    n && d.hasFlag(Number(t.flags), c.MessageFlags.CROSSPOSTED) && E.delete(t.id)
                 },
                 CHANNEL_SELECT: function(e) {
-                    h.clear()
+                    E.clear()
                 },
                 CHANNEL_FOLLOWING_PUBLISH_BUMP_DISMISSED: function(e) {
                     let {
                         messageId: t
                     } = e;
-                    h.delete(t)
+                    E.delete(t)
                 },
                 CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY: function(e) {
                     let {
                         channelId: t
                     } = e;
-                    m.add(t), s.default.set(f, m), h.clear()
+                    m.add(t), s.default.set(f, m), E.clear()
                 }
             })
         },
@@ -3508,7 +3508,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return _
                 }
             });
             var a = n("37983"),
@@ -3522,46 +3522,46 @@
                 c = n("713573"),
                 f = n("850642"),
                 m = n("782340"),
-                h = n("35847"),
-                E = e => {
+                E = n("35847"),
+                _ = e => {
                     let {
                         channelId: t,
                         messageId: n
-                    } = e, E = (0, l.useStateFromStores)([f.default], () => f.default.shouldShowBump(n), [n]), _ = s.useCallback(() => {
+                    } = e, _ = (0, l.useStateFromStores)([f.default], () => f.default.shouldShowBump(n), [n]), h = s.useCallback(() => {
                         r.default.dismissPublishBump(n), (0, o.default)(t, n)
                     }, [t, n]), p = s.useCallback(() => {
                         r.default.dismissPublishBump(n)
                     }, [n]), I = s.useCallback(() => {
                         r.default.permanentlyHidePublishBump(t)
                     }, [t]);
-                    return E ? (0, a.jsxs)("div", {
-                        className: h.container,
+                    return _ ? (0, a.jsxs)("div", {
+                        className: E.container,
                         children: [(0, a.jsxs)("div", {
-                            className: h.bumpBox,
+                            className: E.bumpBox,
                             children: [(0, a.jsx)(d.default, {
-                                className: h.icon
+                                className: E.icon
                             }), (0, a.jsx)(c.default, {
-                                className: h.tagline,
+                                className: E.tagline,
                                 size: c.default.Sizes.SIZE_14,
                                 children: m.default.Messages.NEWS_CHANNEL_PUBLISH_BUMP
                             }), (0, a.jsx)(i.Button, {
                                 color: i.Button.Colors.LINK,
                                 look: i.Button.Looks.LINK,
                                 size: i.Button.Sizes.MIN,
-                                className: h.publish,
-                                onClick: _,
+                                className: E.publish,
+                                onClick: h,
                                 children: m.default.Messages.NEWS_CHANNEL_PUBLISH
                             }), (0, a.jsx)(i.Clickable, {
                                 onClick: p,
                                 children: (0, a.jsx)(u.default, {
-                                    className: h.closeIcon,
+                                    className: E.closeIcon,
                                     width: 16,
                                     height: 16
                                 })
                             })]
                         }), (0, a.jsx)(i.Text, {
                             color: "text-muted",
-                            className: h.hidePermanently,
+                            className: E.hidePermanently,
                             variant: "text-sm/normal",
                             children: (0, a.jsx)(i.Clickable, {
                                 onClick: I,
@@ -3589,16 +3589,16 @@
                 c = n("161585"),
                 f = n("305961"),
                 m = n("697218"),
-                h = n("402671"),
-                E = n("49111"),
-                _ = n("958706");
+                E = n("402671"),
+                _ = n("49111"),
+                h = n("958706");
 
             function p(e) {
                 let t = f.default.getGuild(e);
-                return null != t && (t.nsfwLevel === E.GuildNSFWContentLevel.DEFAULT || t.nsfwLevel === E.GuildNSFWContentLevel.SAFE)
+                return null != t && (t.nsfwLevel === _.GuildNSFWContentLevel.DEFAULT || t.nsfwLevel === _.GuildNSFWContentLevel.SAFE)
             }
             async function I(e, t) {
-                var n, E, I;
+                var n, _, I;
                 let g = t.getGuildId();
                 if (null == g) return;
                 let T = f.default.getGuild(g);
@@ -3625,18 +3625,18 @@
                         autoTrackExposure: !1
                     }).viewAndUseEnabled,
                     v = f.default.getGuilds(),
-                    x = Object.keys(v).filter(p).map(e => l.default.getUsableGuildEmoji(e)).flat().filter(e => null == h.default.getEmojiUnavailableReason({
+                    x = Object.keys(v).filter(p).map(e => l.default.getUsableGuildEmoji(e)).flat().filter(e => null == E.default.getEmojiUnavailableReason({
                         emoji: e,
                         channel: t,
                         guildId: g,
-                        intention: _.EmojiIntention.CHAT,
+                        intention: h.EmojiIntention.CHAT,
                         canViewAndUsePackEmoji: M
                     })).sort((e, t) => -a.default.compare(e.id, t.id));
                 if (x.length > 10) {
                     let n = x[Math.floor(Math.pow(Math.random(), 2) * x.length)];
                     s.default.sendMessage(t.id, r.default.parse(t, n.allNamesString), !1, {
                         messageReference: {
-                            guild_id: null !== (E = t.getGuildId()) && void 0 !== E ? E : void 0,
+                            guild_id: null !== (_ = t.getGuildId()) && void 0 !== _ ? _ : void 0,
                             channel_id: t.id,
                             message_id: e
                         }
@@ -3658,7 +3658,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return E
                 }
             }), n("222007");
             var a = n("37983");
@@ -3674,7 +3674,7 @@
                 f = n("782340"),
                 m = n("19676");
 
-            function h(e) {
+            function E(e) {
                 let {
                     message: t,
                     channel: s,
@@ -3702,7 +3702,7 @@
                         className: l(m.embedContent, {
                             [m.compact]: r
                         }),
-                        children: (0, a.jsx)(E, {
+                        children: (0, a.jsx)(_, {
                             message: t
                         })
                     }), (0, a.jsx)("div", {
@@ -3718,7 +3718,7 @@
                 })
             }
 
-            function E(e) {
+            function _(e) {
                 var t;
                 let {
                     message: n
@@ -3757,9 +3757,9 @@
                 c = n("41170"),
                 f = n("46829"),
                 m = n("840817"),
-                h = n("304198"),
-                E = n("599110"),
-                _ = n("659500"),
+                E = n("304198"),
+                _ = n("599110"),
+                h = n("659500"),
                 p = n("315176"),
                 I = n("49111"),
                 g = n("782340"),
@@ -3780,7 +3780,7 @@
                     }, 500);
                     return () => clearInterval(e)
                 }, [A]), null == l.guild_id) ? null : (0, a.jsxs)("div", {
-                    children: [(0, a.jsx)(h.default, {
+                    children: [(0, a.jsx)(E.default, {
                         className: i(T.mainContainer, {
                             [T.compact]: C
                         }),
@@ -3804,12 +3804,12 @@
                             children: (0, a.jsx)(o.Button, {
                                 color: o.Button.Colors.PRIMARY,
                                 onClick: () => {
-                                    E.default.track(I.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                    _.default.track(I.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
                                         message_id: t.id,
                                         channel_id: l.id,
                                         guild_id: l.guild_id,
                                         action_type: "upload_file"
-                                    }), _.ComponentDispatch.dispatch(I.ComponentActions.UPLOAD_FILE), (0, u.createPendingReply)({
+                                    }), h.ComponentDispatch.dispatch(I.ComponentActions.UPLOAD_FILE), (0, u.createPendingReply)({
                                         message: t,
                                         channel: l,
                                         shouldMention: !0
@@ -3822,7 +3822,7 @@
                             children: (0, a.jsx)(o.Button, {
                                 color: o.Button.Colors.PRIMARY,
                                 onClick: () => {
-                                    E.default.track(I.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                    _.default.track(I.AnalyticEvents.CHANNEL_PROMPT_ACTION_CLICKED, {
                                         message_id: t.id,
                                         channel_id: l.id,
                                         guild_id: l.guild_id,
@@ -3905,9 +3905,9 @@
                 c = n("174622"),
                 f = n("335189"),
                 m = n("473591"),
-                h = n("371348"),
-                E = n("857697"),
-                _ = n("988268"),
+                E = n("371348"),
+                _ = n("857697"),
+                h = n("988268"),
                 p = n("782340"),
                 I = n("786860");
 
@@ -3955,14 +3955,14 @@
                         })
                     })]
                 });
-                let C = (0, h.default)(n, !1, 56);
+                let C = (0, E.default)(n, !1, 56);
                 return (0, a.jsxs)(c.default, {
                     children: [(0, a.jsx)(c.default.Header, {
                         text: p.default.Messages.CLYDE_PROFILE_EMBED_HEADER
                     }), (0, a.jsxs)(c.default.Body, {
                         children: [(0, a.jsxs)(r.Clickable, {
                             className: I.profileInfoContainer,
-                            onClick: () => (0, E.default)(n),
+                            onClick: () => (0, _.default)(n),
                             children: [(0, a.jsx)(r.Avatar, {
                                 src: C,
                                 size: r.AvatarSizes.SIZE_56,
@@ -3972,13 +3972,13 @@
                                 children: [(0, a.jsx)(c.default.Info, {
                                     title: n.name
                                 }), (0, a.jsx)(d.default, {
-                                    type: _.BotTagTypes.AI
+                                    type: h.BotTagTypes.AI
                                 })]
                             })]
                         }), (0, a.jsx)(c.default.Button, {
                             className: I.applyButton,
                             onClick: () => {
-                                (0, E.default)(n)
+                                (0, _.default)(n)
                             },
                             color: c.default.Button.Colors.BRAND,
                             children: p.default.Messages.CLYDE_PROFILE_APPLY
@@ -4040,9 +4040,9 @@
                 c = n("837008"),
                 f = n("903724"),
                 m = n("393414"),
-                h = n("923959"),
-                E = n("305961"),
-                _ = n("599110"),
+                E = n("923959"),
+                _ = n("305961"),
+                h = n("599110"),
                 p = n("551254"),
                 I = n("991148"),
                 g = n("893399"),
@@ -4062,7 +4062,7 @@
                     children: n,
                     initialTab: l,
                     guildId: i
-                } = e, N = (0, r.default)([E.default], () => E.default.getGuild(i)), M = (0, I.useGuildShopPreviewVisible)(N, "guild_shop_page"), v = (0, p.useIsEligibleForSubscriptionsInGuildShop)(i, "guild_shop_page"), x = (null == N ? void 0 : N.hasFeature(S.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0, O = (0, f.useRoleSubscriptionsVisibleInGuild)(null == N ? void 0 : N.id), L = null === (t = (0, c.useSubscriptionsSettings)(i)) || void 0 === t ? void 0 : t.server_shop_tab_order, R = [], y = g.GuildShopTab.GUILD_SHOP_FULL_PREVIEW;
+                } = e, N = (0, r.default)([_.default], () => _.default.getGuild(i)), M = (0, I.useGuildShopPreviewVisible)(N, "guild_shop_page"), v = (0, p.useIsEligibleForSubscriptionsInGuildShop)(i, "guild_shop_page"), x = (null == N ? void 0 : N.hasFeature(S.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0, O = (0, f.useRoleSubscriptionsVisibleInGuild)(null == N ? void 0 : N.id), L = null === (t = (0, c.useSubscriptionsSettings)(i)) || void 0 === t ? void 0 : t.server_shop_tab_order, R = [], y = g.GuildShopTab.GUILD_SHOP_FULL_PREVIEW;
                 x && O ? (R.push(L === T.ServerShopTabOrder.PRODUCTS_FIRST ? g.GuildShopTab.GUILD_PRODUCTS : g.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), R.push(L === T.ServerShopTabOrder.PRODUCTS_FIRST ? g.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS : g.GuildShopTab.GUILD_PRODUCTS), y = R[0]) : x && !O ? (R.push(g.GuildShopTab.GUILD_PRODUCTS), y = g.GuildShopTab.GUILD_PRODUCTS) : !x && O && (R.push(g.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), y = g.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS, M && R.push(g.GuildShopTab.GUILD_PRODUCTS_PREVIEW)), l = null != l ? l : y;
                 let [P, D] = s.useState(l), j = M && !(O && v) || P === g.GuildShopTab.GUILD_PRODUCTS_PREVIEW;
                 return s.useEffect(() => {
@@ -4081,9 +4081,9 @@
                             if (P === g.GuildShopTab.GUILD_PRODUCTS_PREVIEW) e.stopPropagation(), D(g.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), t.action_taken = C.GuildShopPreviewClickActions.DISMISS_TAB_PREVIEW;
                             else {
                                 var n;
-                                (0, m.replaceWith)(S.Routes.CHANNEL(i, null === (n = h.default.getDefaultChannel(i)) || void 0 === n ? void 0 : n.id)), t.action_taken = C.GuildShopPreviewClickActions.DISMISS_FULL_PREVIEW
+                                (0, m.replaceWith)(S.Routes.CHANNEL(i, null === (n = E.default.getDefaultChannel(i)) || void 0 === n ? void 0 : n.id)), t.action_taken = C.GuildShopPreviewClickActions.DISMISS_FULL_PREVIEW
                             }
-                            _.default.track(S.AnalyticEvents.GUILD_SHOP_PREVIEW_CLICK, t)
+                            h.default.track(S.AnalyticEvents.GUILD_SHOP_PREVIEW_CLICK, t)
                         }
                     },
                     children: n
@@ -4108,9 +4108,9 @@
                 c = n("716241"),
                 f = n("428958"),
                 m = n("442379"),
-                h = n("537325"),
-                E = n("305961"),
-                _ = n("476263"),
+                E = n("537325"),
+                _ = n("305961"),
+                h = n("476263"),
                 p = n("191814"),
                 I = n("898260"),
                 g = n("599110"),
@@ -4125,7 +4125,7 @@
                 var t;
                 let {
                     guildId: n
-                } = e, l = (0, u.useStateFromStores)([E.default], () => E.default.getGuild(n)), {
+                } = e, l = (0, u.useStateFromStores)([_.default], () => _.default.getGuild(n)), {
                     loading: v,
                     subscriptionsSettings: x
                 } = (0, T.useMonetizationSettings)(n), {
@@ -4135,7 +4135,7 @@
                 }), R = s.useCallback(async () => {
                     g.default.track(A.AnalyticEvents.GUILD_SHOP_EMBED_CLICKED, {
                         ...(0, c.collectGuildAnalyticsMetadata)(n)
-                    }), await (0, h.default)(A.Routes.SERVER_SHOP(n))
+                    }), await (0, E.default)(A.Routes.SERVER_SHOP(n))
                 }, [n]);
                 (0, f.default)({
                     type: r.ImpressionTypes.VIEW,
@@ -4186,7 +4186,7 @@
                         size: 16
                     }), (0, a.jsxs)("div", {
                         className: M.guildShopEmbedFooter,
-                        children: [(0, a.jsx)(_.default, {
+                        children: [(0, a.jsx)(h.default, {
                             guild: l
                         }), (0, a.jsxs)("ul", {
                             className: M.guildShopSummary,
@@ -4256,9 +4256,9 @@
                 c = n("132349"),
                 f = n("845579"),
                 m = n("26989"),
-                h = n("697218"),
-                E = n("476263"),
-                _ = n("191814"),
+                E = n("697218"),
+                _ = n("476263"),
+                h = n("191814"),
                 p = n("246053"),
                 I = n("58608"),
                 g = n("158998"),
@@ -4281,7 +4281,7 @@
                         variant: "text-sm/medium",
                         color: "header-primary",
                         children: M.default.Messages.GUILD_STORE_HERO_SHOW_MORE_DESCRIPTION_LABEL
-                    }), (0, a.jsx)(_.default, {
+                    }), (0, a.jsx)(h.default, {
                         size: 4,
                         horizontal: !0
                     }), (0, a.jsx)(p.default, {
@@ -4327,9 +4327,9 @@
                 let {
                     nickname: I,
                     nickcolor: T
-                } = (l = p, (0, r.useStateFromStoresObject)([m.default, h.default], () => {
+                } = (l = p, (0, r.useStateFromStoresObject)([m.default, E.default], () => {
                     var e, t;
-                    let n = h.default.getCurrentUser();
+                    let n = E.default.getCurrentUser();
                     i(null != n, "user cannot be null");
                     let a = m.default.getMember(l, n.id);
                     return {
@@ -4351,7 +4351,7 @@
                             children: null == f ? void 0 : f.description
                         })
                     }), L && (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(_.default, {
+                        children: [(0, a.jsx)(h.default, {
                             size: 4
                         }), (0, a.jsx)(x, {
                             onClick: () => (0, N.default)({
@@ -4369,12 +4369,12 @@
                     children: [(0, a.jsxs)("div", {
                         className: v.infoContainer,
                         children: [(0, a.jsx)("div", {
-                            children: (0, a.jsx)(E.default, {
+                            children: (0, a.jsx)(_.default, {
                                 guild: c,
-                                size: E.default.Sizes.LARGER,
+                                size: _.default.Sizes.LARGER,
                                 iconSrc: null == c.icon || U ? (0, d.getAssetCDNUrl)("server_products/storefront/default-guild-icon.jpg") : void 0
                             })
-                        }), (0, a.jsx)(_.default, {
+                        }), (0, a.jsx)(h.default, {
                             size: 16,
                             horizontal: !0
                         }), (0, a.jsxs)("div", {
@@ -4391,7 +4391,7 @@
                                     })
                                 })
                             }), (0, a.jsxs)(a.Fragment, {
-                                children: [(0, a.jsx)(_.default, {
+                                children: [(0, a.jsx)(h.default, {
                                     size: 8
                                 }), (0, a.jsx)(o.Text, {
                                     variant: "text-md/normal",
@@ -4407,7 +4407,7 @@
                                             }, t)
                                         }
                                     })
-                                }), (0, a.jsx)(_.default, {
+                                }), (0, a.jsx)(h.default, {
                                     size: 9
                                 }), G]
                             })]
@@ -4614,7 +4614,7 @@
                     variant: l,
                     text: c,
                     lineClamp: f
-                } = e, m = (0, r.usePrivateHeadingLevel)(), h = s.useMemo(() => null == c ? null : (0, o.default)(c, !0, {
+                } = e, m = (0, r.usePrivateHeadingLevel)(), E = s.useMemo(() => null == c ? null : (0, o.default)(c, !0, {
                     allowHeading: null == f,
                     allowList: null == f,
                     initialHeaderLevel: m
@@ -4627,7 +4627,7 @@
                     color: t,
                     variant: l,
                     lineClamp: f,
-                    children: h
+                    children: E
                 })
             }
         },
@@ -4647,9 +4647,9 @@
                 c = n("394846"),
                 f = n("171718"),
                 m = n("446674"),
-                h = n("77078"),
-                E = n("774146"),
-                _ = n("161778"),
+                E = n("77078"),
+                _ = n("774146"),
+                h = n("161778"),
                 p = n("271938"),
                 I = n("697218"),
                 g = n("476765"),
@@ -4698,7 +4698,7 @@
                         text: n,
                         onClick: a
                     } = e;
-                    return (0, l.jsx)(h.Anchor, {
+                    return (0, l.jsx)(E.Anchor, {
                         useDefaultUnderlineStyles: !1,
                         href: t,
                         className: N.downloadButton,
@@ -4721,13 +4721,13 @@
                             url: f,
                             platformKey: m
                         } = n,
-                        E = d(),
-                        _ = o(N.icon, c, u);
+                        _ = d(),
+                        h = o(N.icon, c, u);
                     if (Array.isArray(f)) t = f.map((e, t) => {
                         let n = r ? e.url() : "";
                         return (0, l.jsx)(x, {
                             url: n,
-                            onClick: () => a(E),
+                            onClick: () => a(_),
                             text: e.getText()
                         }, "".concat(n, "-").concat(t))
                     });
@@ -4735,7 +4735,7 @@
                         let e = r ? f() : void 0;
                         t = (0, l.jsx)(x, {
                             url: e,
-                            onClick: () => a(E),
+                            onClick: () => a(_),
                             text: A.default.Messages.DOWNLOAD
                         })
                     }
@@ -4749,15 +4749,15 @@
                             children: [(0, l.jsxs)("div", {
                                 className: N.iconWrap,
                                 children: [(0, l.jsx)("div", {
-                                    className: _
+                                    className: h
                                 }), (0, l.jsx)("div", {
-                                    className: o(N.active, _)
+                                    className: o(N.active, h)
                                 })]
                             }), (0, l.jsxs)("div", {
-                                children: [(0, l.jsx)(h.Heading, {
+                                children: [(0, l.jsx)(E.Heading, {
                                     className: N.platformName,
                                     variant: "heading-lg/semibold",
-                                    children: E
+                                    children: _
                                 }), (0, l.jsx)("div", {
                                     className: o(N.downloadButtons, {
                                         [N.list]: Array.isArray(t)
@@ -4774,7 +4774,7 @@
                     source: t,
                     onClose: n,
                     transitionState: a
-                } = e, s = (0, m.useStateFromStores)([I.default], () => I.default.getCurrentUser()), r = (0, m.useStateFromStores)([_.default], () => _.default.theme), o = (0, m.useStateFromStores)([p.default], () => p.default.getFingerprint()), u = null == s || s.isClaimed(), [C, x] = i.useState(function() {
+                } = e, s = (0, m.useStateFromStores)([I.default], () => I.default.getCurrentUser()), r = (0, m.useStateFromStores)([h.default], () => h.default.theme), o = (0, m.useStateFromStores)([p.default], () => p.default.getFingerprint()), u = null == s || s.isClaimed(), [C, x] = i.useState(function() {
                     var e;
                     switch (null === (e = d.os) || void 0 === e ? void 0 : e.family) {
                         case "OS X":
@@ -4805,7 +4805,7 @@
                         has_e_mail: u,
                         referring_location: t,
                         qr_code: !1
-                    }), !u && (n(), E.openClaimAccountModal())
+                    }), !u && (n(), _.openClaimAccountModal())
                 }
 
                 function R(e) {
@@ -4820,26 +4820,26 @@
                     })
                 }, [t]);
                 let y = (0, g.useUID)();
-                return (0, l.jsx)(h.ModalRoot, {
+                return (0, l.jsx)(E.ModalRoot, {
                     className: N.downloadApps,
                     transitionState: a,
                     "aria-labelledby": y,
                     children: (0, l.jsx)("div", {
                         className: N.inner,
-                        children: (0, l.jsxs)(h.HeadingLevel, {
-                            component: (0, l.jsx)(h.HiddenVisually, {
-                                children: (0, l.jsx)(h.H, {
+                        children: (0, l.jsxs)(E.HeadingLevel, {
+                            component: (0, l.jsx)(E.HiddenVisually, {
+                                children: (0, l.jsx)(E.H, {
                                     id: y,
                                     children: A.default.Messages.DOWNLOAD_APP
                                 })
                             }),
-                            children: [(0, l.jsx)(h.ModalCloseButton, {
+                            children: [(0, l.jsx)(E.ModalCloseButton, {
                                 onClick: n,
                                 className: N.modalCloseButton
                             }), !c.isMobile && (0, l.jsx)("div", {
                                 className: N.platformsWrap,
-                                children: (0, l.jsx)(h.HeadingLevel, {
-                                    component: (0, l.jsx)(h.Heading, {
+                                children: (0, l.jsx)(E.HeadingLevel, {
+                                    component: (0, l.jsx)(E.Heading, {
                                         variant: "heading-lg/semibold",
                                         className: N.header,
                                         children: A.default.Messages.DOWNLOAD_DESKTOP_TITLE
@@ -4858,9 +4858,9 @@
                                 })
                             }), (0, l.jsx)("div", {
                                 className: N.platformsWrap,
-                                children: (0, l.jsxs)(h.HeadingLevel, {
+                                children: (0, l.jsxs)(E.HeadingLevel, {
                                     component: (0, l.jsx)(l.Fragment, {
-                                        children: !c.isMobile && (0, l.jsx)(h.Heading, {
+                                        children: !c.isMobile && (0, l.jsx)(E.Heading, {
                                             variant: "heading-lg/semibold",
                                             className: N.header,
                                             children: A.default.Messages.DOWNLOAD_MOBILE_TITLE
@@ -4876,7 +4876,7 @@
                                             onMouseEnter: R,
                                             claimed: u
                                         }, e.platformKey))
-                                    }), (0, l.jsx)(h.Text, {
+                                    }), (0, l.jsx)(E.Text, {
                                         className: N.footer,
                                         variant: "text-sm/normal",
                                         children: A.default.Messages.DOWNLOAD_DESKTOP_FOOTER.format()
@@ -5049,20 +5049,20 @@
                 c = n("600785"),
                 f = n("246421"),
                 m = n("782340"),
-                h = n("767165");
+                E = n("767165");
 
-            function E(e) {
+            function _(e) {
                 let {
                     hidePurchaseToUnlockBadge: t,
                     className: n,
                     children: s
                 } = e;
                 return (0, a.jsxs)("div", {
-                    className: l(h.productThumbnailContainer, n),
+                    className: l(E.productThumbnailContainer, n),
                     children: [s, !t && (0, a.jsxs)("div", {
-                        className: h.purchaseToUnlockBadge,
+                        className: E.purchaseToUnlockBadge,
                         children: [(0, a.jsx)(c.default, {
-                            className: h.lockIcon,
+                            className: E.lockIcon,
                             width: 16,
                             height: 16,
                             color: "currentColor",
@@ -5070,14 +5070,14 @@
                         }), (0, a.jsx)(i.Text, {
                             variant: "text-sm/normal",
                             color: "always-white",
-                            className: h.unlockText,
+                            className: E.unlockText,
                             children: m.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_TO_UNLOCK
                         })]
                     })]
                 })
             }
 
-            function _(e) {
+            function h(e) {
                 let {
                     onShowFullDescription: t,
                     variant: n
@@ -5087,17 +5087,17 @@
                         color: null != t ? "text-link" : "interactive-hover",
                         children: m.default.Messages.GUILD_PRODUCT_CARD_SEE_FULL_DESCRIPTION
                     }), (0, a.jsx)(d.default, {
-                        className: h.arrowIcon,
+                        className: E.arrowIcon,
                         backgroundColor: "currentColor",
                         width: 16,
                         height: 16
                     })]
                 });
                 return null == t ? (0, a.jsx)("div", {
-                    className: h.showMoreButton,
+                    className: E.showMoreButton,
                     children: s
                 }) : (0, a.jsx)(i.Clickable, {
-                    className: l(h.showMoreButton, h.hasAction),
+                    className: l(E.showMoreButton, E.hasAction),
                     onClick: e => {
                         e.stopPropagation(), null != t && t()
                     },
@@ -5126,24 +5126,24 @@
                     thumbnailHeight: O = 187,
                     descriptionTextVariant: L = "text-sm/normal"
                 } = e, R = (0, u.uid)(), y = (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(E, {
+                    children: [(0, a.jsx)(_, {
                         hidePurchaseToUnlockBadge: !0,
                         children: (0, a.jsx)("img", {
                             alt: "",
                             src: t,
-                            className: h.productThumbnail,
+                            className: E.productThumbnail,
                             style: {
                                 height: O
                             }
                         })
                     }), (0, a.jsxs)("div", {
-                        className: h.productDetails,
+                        className: E.productDetails,
                         children: [(0, a.jsxs)("div", {
-                            className: h.productDetailContent,
+                            className: E.productDetailContent,
                             children: [(0, a.jsx)(i.Heading, {
                                 variant: "text-md/medium",
                                 color: "header-primary",
-                                className: h.productName,
+                                className: E.productName,
                                 id: R,
                                 children: n
                             }), (0, a.jsx)(i.FocusBlock, {
@@ -5153,7 +5153,7 @@
                                     lineClamp: M,
                                     text: s
                                 })
-                            }), I && (0, a.jsx)(_, {
+                            }), I && (0, a.jsx)(h, {
                                 onShowFullDescription: g,
                                 variant: L
                             }), N || null == c || "" === c.name ? null : (0, a.jsxs)(a.Fragment, {
@@ -5165,19 +5165,19 @@
                             })]
                         }), S]
                     }), (0, a.jsxs)("div", {
-                        className: h.purchaseDetails,
+                        className: E.purchaseDetails,
                         children: [(0, a.jsx)(i.Text, {
                             variant: "text-md/medium",
                             color: "interactive-active",
-                            className: h.productPrice,
+                            className: E.productPrice,
                             children: null != d ? d : m.default.Messages.GUILD_PRODUCT_CARD_EMPTY_PRICE
                         }), (0, a.jsx)(i.Text, {
                             variant: "text-xxs/normal",
                             color: "text-normal",
-                            className: h.productType,
+                            className: E.productType,
                             children: T
                         }), (0, a.jsx)("div", {
-                            className: h.productActionButton,
+                            className: E.productActionButton,
                             onClick: e => {
                                 e.stopPropagation()
                             },
@@ -5186,7 +5186,7 @@
                     })]
                 });
                 return null == C ? (0, a.jsx)("article", {
-                    className: l(h.productCard, A ? h.opaqueBackground : h.solidBackground),
+                    className: l(E.productCard, A ? E.opaqueBackground : E.solidBackground),
                     "aria-labelledby": R,
                     children: y
                 }) : (0, a.jsx)("div", {
@@ -5199,7 +5199,7 @@
                         "aria-label": m.default.Messages.GUILD_SHOP_LISTING_CARD_A11Y_LABEL.format({
                             productName: n
                         }),
-                        className: l(h.productCard, A ? h.opaqueBackground : h.solidBackground, h.cardClickableContainer),
+                        className: l(E.productCard, A ? E.opaqueBackground : E.solidBackground, E.cardClickableContainer),
                         onClick: C,
                         children: y
                     })
@@ -5227,7 +5227,7 @@
             function f(e) {
                 let {
                     code: t
-                } = e, [n, f] = t.split("-"), m = (0, u.useFetchGuildProductListing)(n, f), h = (0, l.default)([o.default], () => o.default.getGuildId());
+                } = e, [n, f] = t.split("-"), m = (0, u.useFetchGuildProductListing)(n, f), E = (0, l.default)([o.default], () => o.default.getGuildId());
                 return ((0, r.default)({
                     type: c.ImpressionTypes.VIEW,
                     name: s.ImpressionNames.GUILD_PRODUCT_LISTING_EMBED,
@@ -5237,7 +5237,7 @@
                     }
                 }, {
                     disableTrack: null == m
-                }), null == m || h !== n) ? null : (0, a.jsx)(d.GuildProductListingPublicCard, {
+                }), null == m || E !== n) ? null : (0, a.jsx)(d.GuildProductListingPublicCard, {
                     guildProductListing: m,
                     guildId: n,
                     location: i.default.GUILD_PRODUCT_EMBED_CARD,
@@ -5281,7 +5281,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return h
                 }
             });
             var a = n("37983");
@@ -5296,15 +5296,15 @@
                 c = n("565559"),
                 f = n("35018"),
                 m = n("898998"),
-                h = n("782340"),
-                E = n("418530");
+                E = n("782340"),
+                _ = n("418530");
 
-            function _(e) {
-                var t, n, s, _;
+            function h(e) {
+                var t, n, s, h;
                 let {
                     guildId: p,
                     productId: I
-                } = e, g = (0, i.default)([c.default], () => c.default.getGuildProduct(I)), T = (null !== (_ = null == g ? void 0 : null === (t = g.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== _ ? _ : 0) > 1, C = null == g ? void 0 : null === (s = g.attachments) || void 0 === s ? void 0 : null === (n = s[0]) || void 0 === n ? void 0 : n.id;
+                } = e, g = (0, i.default)([c.default], () => c.default.getGuildProduct(I)), T = (null !== (h = null == g ? void 0 : null === (t = g.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== h ? h : 0) > 1, C = null == g ? void 0 : null === (s = g.attachments) || void 0 === s ? void 0 : null === (n = s[0]) || void 0 === n ? void 0 : n.id;
                 return T ? (0, a.jsxs)(r.Button, {
                     onClick: function() {
                         f.default.open({
@@ -5312,9 +5312,9 @@
                             productId: I
                         })
                     },
-                    innerClassName: E.textWithIcon,
+                    innerClassName: _.textWithIcon,
                     children: [(0, a.jsx)("div", {
-                        children: h.default.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_MULTIPLE_FILES
+                        children: E.default.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_MULTIPLE_FILES
                     }), (0, a.jsx)(o.default, {
                         size: 8,
                         horizontal: !0
@@ -5327,9 +5327,9 @@
                     guildId: p,
                     productId: I,
                     attachmentId: C,
-                    innerClassName: E.textWithIcon,
+                    innerClassName: _.textWithIcon,
                     children: [(0, a.jsx)("div", {
-                        children: h.default.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_SINGLE_FILE
+                        children: E.default.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_SINGLE_FILE
                     }), (0, a.jsx)(o.default, {
                         size: 8,
                         horizontal: !0
@@ -5359,9 +5359,9 @@
                 c = n("757515"),
                 f = n("727411"),
                 m = n("492724"),
-                h = n("928576"),
-                E = n("739726"),
-                _ = n("358404"),
+                E = n("928576"),
+                _ = n("739726"),
+                h = n("358404"),
                 p = n("875746");
 
             function I(e) {
@@ -5378,16 +5378,16 @@
                     thumbnailHeight: M,
                     descriptionTextVariant: v = "text-sm/normal",
                     showOpaqueBackground: x = !1
-                } = e, O = (0, s.default)([o.default], () => o.default.getGuild(I), [I]), L = null == O ? void 0 : O.roles[null !== (t = null == n ? void 0 : n.role_id) && void 0 !== t ? t : ""], R = (0, l.useListingThumbnailUrl)(n, 600), y = (0, h.useProductType)(n), P = (0, d.useCanManageGuildProduct)(O), {
+                } = e, O = (0, s.default)([o.default], () => o.default.getGuild(I), [I]), L = null == O ? void 0 : O.roles[null !== (t = null == n ? void 0 : n.role_id) && void 0 !== t ? t : ""], R = (0, l.useListingThumbnailUrl)(n, 600), y = (0, E.useProductType)(n), P = (0, d.useCanManageGuildProduct)(O), {
                     shouldHideGuildPurchaseEntryPoints: D
-                } = (0, r.useShouldHideGuildPurchaseEntryPoints)(I), j = (0, h.usePrice)(n);
+                } = (0, r.useShouldHideGuildPurchaseEntryPoints)(I), j = (0, E.usePrice)(n);
                 if (null == O || D) return null;
-                let b = () => (0, _.openGuildProductInfoModal)({
+                let b = () => (0, h.openGuildProductInfoModal)({
                         guildId: I,
                         guildProductListingId: n.id,
                         analyticsLocation: g
                     }),
-                    U = (0, a.jsx)(E.GuildProductListingPopout, {
+                    U = (0, a.jsx)(_.GuildProductListingPopout, {
                         product: n,
                         guildId: I,
                         showEditProduct: P,
@@ -5456,9 +5456,9 @@
                 c = n("866190"),
                 f = n("442379"),
                 m = n("565559"),
-                h = n("777133"),
-                E = n("407417"),
-                _ = n("782340");
+                E = n("777133"),
+                _ = n("407417"),
+                h = n("782340");
 
             function p(e) {
                 let {
@@ -5469,33 +5469,33 @@
                 l(null != I, "guild cannot be null"), l(null != p, "guildProductListing cannot be null");
                 let C = (0, f.useCanManageGuildProduct)(I);
                 if (C) return (0, a.jsx)(r.Tooltip, {
-                    text: _.default.Messages.GUILD_PRODUCT_PURCHASE_DISABLED_TOOLTIP,
+                    text: h.default.Messages.GUILD_PRODUCT_PURCHASE_DISABLED_TOOLTIP,
                     children: e => (0, a.jsx)(r.Button, {
                         ...e,
                         color: r.Button.Colors.BRAND,
                         disabled: !0,
-                        children: _.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
+                        children: h.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
                     })
                 });
                 if (!p.has_entitlement) return (0, a.jsx)(d.default, {
                     shineSize: d.default.ShineSizes.SMALL,
                     pauseAnimation: g || !T,
-                    onClick: () => (0, h.openGuildProductPurchaseModal)({
+                    onClick: () => (0, E.openGuildProductPurchaseModal)({
                         guildProductListing: p,
                         guildId: I.id,
                         sourceAnalyticsLocations: s
                     }),
-                    children: _.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
+                    children: h.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
                 });
                 {
                     let e = null != p.attachments;
-                    return e ? (0, a.jsx)(E.default, {
+                    return e ? (0, a.jsx)(_.default, {
                         guildId: I.id,
                         productId: p.id
                     }) : (0, a.jsx)(r.Button, {
                         color: r.Button.Colors.PRIMARY,
                         disabled: !0,
-                        children: _.default.Messages.GUILD_PRODUCT_CARD_PURCHASED
+                        children: h.default.Messages.GUILD_PRODUCT_CARD_PURCHASED
                     })
                 }
             }
@@ -5596,7 +5596,7 @@
                     guildProductListing: t,
                     guildId: d,
                     sourceAnalyticsLocations: c
-                } = e, f = !1, m = (0, s.v4)(), h = () => {
+                } = e, f = !1, m = (0, s.v4)(), E = () => {
                     f = !0
                 };
                 (0, l.openModalLazy)(async () => {
@@ -5613,7 +5613,7 @@
                             guildId: d
                         },
                         loadId: m,
-                        onComplete: h
+                        onComplete: E
                     })
                 }, {
                     onCloseCallback: () => {
@@ -5722,7 +5722,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return h
                 }
             });
             var a = n("37983");
@@ -5737,20 +5737,20 @@
                 c = n("790369"),
                 f = n("49111"),
                 m = n("782340"),
-                h = n("910444");
+                E = n("910444");
 
-            function E(e) {
+            function _(e) {
                 let {
                     guildId: t,
                     user: n,
                     username: r
                 } = e, o = (0, s.default)([i.default], () => !i.default.useReducedMotion), u = n.getAvatarURL(t, 56, o), d = (0, a.jsx)("img", {
                     src: u,
-                    className: h.userAvatar,
+                    className: E.userAvatar,
                     alt: ""
                 });
                 return (0, a.jsxs)("div", {
-                    className: h.thankYouCard,
+                    className: E.thankYouCard,
                     role: "img",
                     "aria-label": m.default.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({
                         username: r
@@ -5758,7 +5758,7 @@
                     children: [(0, a.jsx)(c.default, {
                         avatar: d
                     }), (0, a.jsx)(l.Text, {
-                        className: h.thankYouText,
+                        className: E.thankYouText,
                         tag: "p",
                         color: "status-positive-text",
                         variant: "heading-xl/medium",
@@ -5776,14 +5776,14 @@
                 })
             }
 
-            function _(e) {
+            function h(e) {
                 var t, s, l;
                 let {
                     channel: i,
                     message: c,
-                    compact: h
-                } = e, _ = (0, r.default)(c), p = (0, o.useUsernameHook)(c.author, i.id, i.guild_id)(_), I = m.default.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
-                    username: _.nick,
+                    compact: E
+                } = e, h = (0, r.default)(c), p = (0, o.useUsernameHook)(c.author, i.id, i.guild_id)(h), I = m.default.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
+                    username: h.nick,
                     usernameHook: p,
                     productName: null !== (l = null === (s = c.purchaseNotification) || void 0 === s ? void 0 : null === (t = s.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== l ? l : "",
                     handleProductListingClick: () => {
@@ -5795,10 +5795,10 @@
                     children: [(0, a.jsx)(d.default, {
                         icon: n("127067"),
                         timestamp: c.timestamp,
-                        compact: h,
+                        compact: E,
                         children: I
-                    }), (0, a.jsx)(E, {
-                        username: _.nick,
+                    }), (0, a.jsx)(_, {
+                        username: h.nick,
                         guildId: i.guild_id,
                         user: c.author
                     })]
@@ -5844,14 +5844,14 @@
                 let {
                     channel: f,
                     message: m
-                } = e, h = null !== (n = null === (t = m.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n, E = h ? (0, d.getRenewButtonLabels)() : (0, d.getJoinButtonLabels)(), _ = f.guild_id, p = (0, l.useStateFromStores)([i.default], () => {
+                } = e, E = null !== (n = null === (t = m.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n, _ = E ? (0, d.getRenewButtonLabels)() : (0, d.getJoinButtonLabels)(), h = f.guild_id, p = (0, l.useStateFromStores)([i.default], () => {
                     var e;
-                    return null === (e = i.default.getGuild(_)) || void 0 === e ? void 0 : e.systemChannelFlags
-                }, [_]), I = null != p && (0, o.hasFlag)(p, c.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES), g = s.useMemo(() => (0, u.getRoleSubscriptionPurchaseSystemMessageEventProperties)(f, m), [f, m]);
+                    return null === (e = i.default.getGuild(h)) || void 0 === e ? void 0 : e.systemChannelFlags
+                }, [h]), I = null != p && (0, o.hasFlag)(p, c.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES), g = s.useMemo(() => (0, u.getRoleSubscriptionPurchaseSystemMessageEventProperties)(f, m), [f, m]);
                 return I ? null : (0, a.jsx)(r.default, {
                     channel: f,
                     message: m,
-                    buttonLabels: E,
+                    buttonLabels: _,
                     stickers: d.STICKERS,
                     event: c.AnalyticEvents.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CTA_CLICKED,
                     eventProperties: g
@@ -5876,9 +5876,9 @@
                 c = n("304198"),
                 f = n("843257"),
                 m = n("721629"),
-                h = n("988521"),
-                E = n("49111"),
-                _ = n("724210"),
+                E = n("988521"),
+                _ = n("49111"),
+                h = n("724210"),
                 p = n("782340"),
                 I = n("158404");
 
@@ -5919,7 +5919,7 @@
                     "aria-label": p.default.Messages.ROLE_SUBSCRIPTION_WELCOME_CARD_ARIA_LABEL.format({
                         username: s
                     }),
-                    children: [(0, a.jsx)(h.default, {
+                    children: [(0, a.jsx)(E.default, {
                         guildId: t,
                         user: n,
                         className: I.welcomeCardBadge
@@ -5932,7 +5932,7 @@
             function C(e) {
                 var t, l;
                 let {
-                    channel: h,
+                    channel: E,
                     message: p,
                     compact: I
                 } = e, g = (0, o.default)(p), C = function(e) {
@@ -5942,18 +5942,18 @@
                         message: a
                     } = e, l = n.guild_id, o = (0, u.useUsernameHook)(a.author, n.id, l)(t), {
                         analyticsLocations: c
-                    } = (0, r.default)(i.default.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE), m = a.roleSubscriptionData, h = s.useCallback(() => {
-                        (0, d.transitionTo)(E.Routes.CHANNEL(l, _.StaticChannelRoute.ROLE_SUBSCRIPTIONS), null, null, c), (null == m ? void 0 : m.role_subscription_listing_id) != null && (0, f.trackRoleSubscriptionPurchaseMessageTierClick)(l, n.id, a.id, m.role_subscription_listing_id)
+                    } = (0, r.default)(i.default.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE), m = a.roleSubscriptionData, E = s.useCallback(() => {
+                        (0, d.transitionTo)(_.Routes.CHANNEL(l, h.StaticChannelRoute.ROLE_SUBSCRIPTIONS), null, null, c), (null == m ? void 0 : m.role_subscription_listing_id) != null && (0, f.trackRoleSubscriptionPurchaseMessageTierClick)(l, n.id, a.id, m.role_subscription_listing_id)
                     }, [l, n, a, m, c]);
                     return null == m ? null : (0, f.getRoleSubscriptionPurchaseSystemMessageFormattedContent)({
                         username: t.nick,
                         usernameOnClickHandler: o,
-                        roleSubscriptionOnClickHandler: h,
+                        roleSubscriptionOnClickHandler: E,
                         guildId: l,
                         roleSubscriptionData: a.roleSubscriptionData
                     })
                 }({
-                    channel: h,
+                    channel: E,
                     message: p,
                     author: g
                 }), S = (null === (t = p.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (l = p.roleSubscriptionData) || void 0 === l ? void 0 : l.total_months_subscribed) <= 1;
@@ -5964,11 +5964,11 @@
                         compact: I,
                         children: C
                     }), S && (0, a.jsx)(T, {
-                        guildId: h.guild_id,
+                        guildId: E.guild_id,
                         user: p.author,
                         username: g.nick
                     }), (0, a.jsx)(m.default, {
-                        channel: h,
+                        channel: E,
                         message: p
                     })]
                 })
@@ -6074,9 +6074,9 @@
                 c = n("305961"),
                 f = n("697218"),
                 m = n("933326"),
-                h = n("398604"),
-                E = n("322224"),
-                _ = n("914169"),
+                E = n("398604"),
+                _ = n("322224"),
+                h = n("914169"),
                 p = n("843455");
 
             function I(e) {
@@ -6087,9 +6087,9 @@
                     guild: C,
                     channel: S,
                     isMember: A
-                } = (0, l.useStateFromStoresObject)([h.default, c.default, u.default, d.default, f.default], () => {
+                } = (0, l.useStateFromStoresObject)([E.default, c.default, u.default, d.default, f.default], () => {
                     var e, t;
-                    let a = null !== (t = h.default.getGuildScheduledEvent(I)) && void 0 !== t ? t : void 0,
+                    let a = null !== (t = E.default.getGuildScheduledEvent(I)) && void 0 !== t ? t : void 0,
                         s = c.default.getGuild(n),
                         l = u.default.getChannel(null == a ? void 0 : a.channel_id),
                         i = d.default.isMember(n, null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
@@ -6101,8 +6101,8 @@
                     }
                 }, [n, I]);
                 return s.useEffect(() => {
-                    (null == T ? void 0 : T.id) == null && E.default.fetchGuildEvent(n, I), m.default.getGuildEventUserCounts(n, I, null != g ? [g] : []), m.default.getGuildEventsForCurrentUser(n)
-                }, [I, n, null == T ? void 0 : T.id, g]), (0, a.jsx)(_.default, {
+                    (null == T ? void 0 : T.id) == null && _.default.fetchGuildEvent(n, I), m.default.getGuildEventUserCounts(n, I, null != g ? [g] : []), m.default.getGuildEventsForCurrentUser(n)
+                }, [I, n, null == T ? void 0 : T.id, g]), (0, a.jsx)(h.default, {
                     guild: C,
                     channel: S,
                     guildScheduledEvent: T,
@@ -6112,7 +6112,7 @@
                         if ((0, r.shouldShowMembershipVerificationGate)(n)) {
                             (0, i.openMemberVerificationModal)(n);
                             return
-                        }(null == S ? void 0 : S.isGuildStageVoice()) ? (0, o.connectAndOpen)(S) : (null == S ? void 0 : S.isGuildVoice()) && E.default.joinVoiceEvent(S.guild_id, S.id)
+                        }(null == S ? void 0 : S.isGuildStageVoice()) ? (0, o.connectAndOpen)(S) : (null == S ? void 0 : S.isGuildVoice()) && _.default.joinVoiceEvent(S.guild_id, S.id)
                     },
                     recurrenceId: g
                 })
@@ -6141,15 +6141,15 @@
                 var t;
                 let {
                     code: m
-                } = e, h = (0, s.useStateFromStores)([o.default], () => o.default.getGuildTemplate(m));
-                if (null == h || h.state === u.GuildTemplateStates.RESOLVING) return (0, a.jsxs)(i.default, {
+                } = e, E = (0, s.useStateFromStores)([o.default], () => o.default.getGuildTemplate(m));
+                if (null == E || E.state === u.GuildTemplateStates.RESOLVING) return (0, a.jsxs)(i.default, {
                     children: [(0, a.jsx)(i.default.Header, {
                         text: d.default.Messages.GUILD_TEMPLATE_RESOLVING_TITLE
                     }), (0, a.jsx)(i.default.Body, {
                         resolving: !0
                     })]
                 });
-                if (h.state === u.GuildTemplateStates.EXPIRED) return (0, a.jsxs)(i.default, {
+                if (E.state === u.GuildTemplateStates.EXPIRED) return (0, a.jsxs)(i.default, {
                     children: [(0, a.jsx)(i.default.Header, {
                         text: d.default.Messages.GUILD_TEMPLATE_INVALID_TITLE
                     }), (0, a.jsxs)(i.default.Body, {
@@ -6161,7 +6161,7 @@
                         })]
                     })]
                 });
-                let E = __OVERLAY__ ? (0, a.jsx)(i.default.Button, {
+                let _ = __OVERLAY__ ? (0, a.jsx)(i.default.Button, {
                     isDisabled: !0,
                     color: i.default.Button.Colors.PRIMARY,
                     children: d.default.Messages.GUILD_TEMPLATE_EMBED_VIEW_IN_APP
@@ -6173,11 +6173,11 @@
                             } = await n.el("843456").then(n.bind(n, "843456"));
                             return t => (0, a.jsx)(e, {
                                 ...t,
-                                guildTemplate: h
+                                guildTemplate: E
                             })
                         })
                     },
-                    submitting: h.state === u.GuildTemplateStates.ACCEPTING,
+                    submitting: E.state === u.GuildTemplateStates.ACCEPTING,
                     color: i.default.Button.Colors.GREEN,
                     children: d.default.Messages.GUILD_TEMPLATE_OPEN
                 });
@@ -6190,12 +6190,12 @@
                             children: [(0, a.jsx)(r.default, {
                                 className: c.icon
                             }), (0, a.jsx)(i.default.Info, {
-                                title: h.name,
+                                title: E.name,
                                 children: d.default.Messages.GUILD_TEMPLATE_USAGES.format({
-                                    usageCount: String(null !== (t = h.usageCount) && void 0 !== t ? t : 0)
+                                    usageCount: String(null !== (t = E.usageCount) && void 0 !== t ? t : 0)
                                 })
                             })]
-                        }), E]
+                        }), _]
                     })]
                 })
             }
@@ -6219,9 +6219,9 @@
                 c = n("367376"),
                 f = n("884351"),
                 m = n("574073"),
-                h = n("356070"),
-                E = n("393414"),
-                _ = n("42203"),
+                E = n("356070"),
+                _ = n("393414"),
+                h = n("42203"),
                 p = n("305961"),
                 I = n("697218"),
                 g = n("316133"),
@@ -6248,18 +6248,18 @@
                         rawName: t
                     } = e;
                     return "channel_id" === t
-                })) || void 0 === v ? void 0 : v.rawValue, G = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(U)), k = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(B)), w = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), H = (0, i.useStateFromStores)([], () => D.author.id === (null == w ? void 0 : w.id)), F = null === (L = j.recipients) || void 0 === L ? void 0 : L.find(e => e !== D.author.id), V = (0, i.useStateFromStores)([I.default], () => null != F ? I.default.getUser(F) : null), Y = (0, m.default)(D), W = (0, C.useUsername)({
+                })) || void 0 === v ? void 0 : v.rawValue, G = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(U)), k = (0, i.useStateFromStores)([h.default], () => h.default.getChannel(B)), w = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), H = (0, i.useStateFromStores)([], () => D.author.id === (null == w ? void 0 : w.id)), F = null === (L = j.recipients) || void 0 === L ? void 0 : L.find(e => e !== D.author.id), V = (0, i.useStateFromStores)([I.default], () => null != F ? I.default.getUser(F) : null), Y = (0, m.default)(D), W = (0, C.useUsername)({
                     message: D,
                     channel: j,
                     author: Y,
                     compact: b,
                     guildId: void 0
-                }), K = (0, A.useName)(j.getGuildId(), j.id, V), z = (0, i.useStateFromStoresArray)([g.default], () => null != k ? g.default.getVoiceStatesForChannel(k) : [], [k]), Z = z.some(e => e.user.id === (null == w ? void 0 : w.id)), J = null === (P = D.embeds[0]) || void 0 === P ? void 0 : null === (y = P.fields) || void 0 === y ? void 0 : null === (R = y.find(e => {
+                }), K = (0, A.useName)(j.getGuildId(), j.id, V), z = (0, i.useStateFromStoresArray)([g.default], () => null != k ? g.default.getVoiceStatesForChannel(k) : [], [k]), J = z.some(e => e.user.id === (null == w ? void 0 : w.id)), Z = null === (P = D.embeds[0]) || void 0 === P ? void 0 : null === (y = P.fields) || void 0 === y ? void 0 : null === (R = y.find(e => {
                     let {
                         rawName: t
                     } = e;
                     return "voice_user_ids" === t
-                })) || void 0 === R ? void 0 : R.rawValue, X = null != J ? J.split(",") : [], q = (0, i.useStateFromStoresArray)([I.default], () => X.map(e => I.default.getUser(e)).filter(Boolean)), Q = null != G && null != k;
+                })) || void 0 === R ? void 0 : R.rawValue, X = null != Z ? Z.split(",") : [], q = (0, i.useStateFromStoresArray)([I.default], () => X.map(e => I.default.getUser(e)).filter(Boolean)), Q = null != G && null != k;
                 if (!Q) return (0, a.jsx)(S.default, {
                     className: l(M.mainContainer),
                     iconNode: (0, a.jsx)(d.default, {
@@ -6294,7 +6294,7 @@
                                 children: ee
                             }), z.length > 0 ? (0, a.jsx)("div", {
                                 className: M.participants,
-                                children: (0, a.jsx)(h.default, {
+                                children: (0, a.jsx)(E.default, {
                                     guildId: U,
                                     partySize: {
                                         knownSize: z.length,
@@ -6306,7 +6306,7 @@
                                 })
                             }) : (0, a.jsx)("div", {
                                 className: l(M.participants, M.disabled),
-                                children: (0, a.jsx)(h.default, {
+                                children: (0, a.jsx)(E.default, {
                                     guildId: U,
                                     partySize: {
                                         knownSize: q.length,
@@ -6322,11 +6322,11 @@
                             children: [(0, a.jsxs)(r.Button, {
                                 color: r.Button.Colors.BRAND,
                                 onClick: () => {
-                                    null != B && null != U && ((0, E.transitionTo)(N.Routes.CHANNEL(U, B)), u.default.selectVoiceChannel(B))
+                                    null != B && null != U && ((0, _.transitionTo)(N.Routes.CHANNEL(U, B)), u.default.selectVoiceChannel(B))
                                 },
                                 className: M.button,
                                 innerClassName: M.buttonInner,
-                                disabled: Z,
+                                disabled: J,
                                 children: [(0, a.jsx)(T.default, {}), "Join Hangout"]
                             }), (0, a.jsx)(r.Button, {
                                 color: r.Button.Colors.PRIMARY,
@@ -6575,9 +6575,9 @@
                 c = n("65597"),
                 f = n("77078"),
                 m = n("206230"),
-                h = n("716241"),
-                E = n("606292"),
-                _ = n("955735"),
+                E = n("716241"),
+                _ = n("606292"),
+                h = n("955735"),
                 p = n("537325"),
                 I = n("651693"),
                 g = n("380986"),
@@ -6608,7 +6608,7 @@
                     channel: k
                 } = e, w = (0, P.useMediaPostEmbedData)(r, G), {
                     setPopout: H
-                } = (0, T.default)(G.id, j.DEFAULT_POPOUTS), F = (0, g.useContextMenuMessage)(G, k, H, !0), V = A.GifAutoPlay.useSetting(), Y = (0, R.useIsWindowFocused)(), [W, K] = s.useState(!1), [z, Z] = s.useState((null == w ? void 0 : w.coverImage) == null), J = (0, c.default)([m.default], () => m.default.useReducedMotion), X = (0, c.default)([N.default, M.default], () => {
+                } = (0, T.default)(G.id, j.DEFAULT_POPOUTS), F = (0, g.useContextMenuMessage)(G, k, H, !0), V = A.GifAutoPlay.useSetting(), Y = (0, R.useIsWindowFocused)(), [W, K] = s.useState(!1), [z, J] = s.useState((null == w ? void 0 : w.coverImage) == null), Z = (0, c.default)([m.default], () => m.default.useReducedMotion), X = (0, c.default)([N.default, M.default], () => {
                     var e;
                     return N.default.isMember(null == w ? void 0 : w.guildId, null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
                 }, [w]), q = (0, c.default)([N.default], () => {
@@ -6621,7 +6621,7 @@
                 }, [K]), en = s.useCallback(() => {
                     K(!1)
                 }, [K]), ea = s.useCallback(async () => {
-                    null != w && ((0, h.trackWithMetadata)(D.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+                    null != w && ((0, E.trackWithMetadata)(D.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
                         media_post_id: w.threadId,
                         channel_id: k.id,
                         can_access: w.canAccess,
@@ -6642,7 +6642,7 @@
                     })),
                     ei = (0, O.getAvatarDecorationURL)({
                         avatarDecoration: null === (t = w.user) || void 0 === t ? void 0 : t.avatarDecoration,
-                        size: (0, E.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_40),
+                        size: (0, _.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_40),
                         canAnimate: $
                     }),
                     er = null === (n = w.user) || void 0 === n ? void 0 : n.getAvatarURL(w.guildId, 40, $),
@@ -6664,8 +6664,8 @@
                                 [U.spoiler]: w.shouldSpoiler
                             }),
                             onContextMenu: F,
-                            onError: () => Z(!0)
-                        }) : (0, a.jsx)(_.default, {
+                            onError: () => J(!0)
+                        }) : (0, a.jsx)(h.default, {
                             src: !(Y && (V || W)) && ed ? "".concat(eu, "?format=png") : eu,
                             backgroundSrc: "".concat(eu, "?format=png"),
                             alt: b.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
@@ -6675,7 +6675,7 @@
                             }),
                             imageChildClassName: U.thumbnailImage,
                             onContextMenu: F,
-                            onError: () => Z(!0)
+                            onError: () => J(!0)
                         })), null != w.coverImageOverlayText && (0, a.jsx)(f.Clickable, {
                             onClick: ea,
                             children: (0, a.jsx)("div", {
@@ -6768,7 +6768,7 @@
                                     children: w.ctaText
                                 })
                             }) : (0, a.jsx)(v.default, {
-                                pauseAnimation: J,
+                                pauseAnimation: Z,
                                 onClick: ea,
                                 className: i(U.ctaButtonContent, U.subscribeButton),
                                 color: f.Button.Colors.CUSTOM,
@@ -6801,14 +6801,14 @@
                 c = n("162771"),
                 f = n("697218"),
                 m = n("639440"),
-                h = n("690563"),
-                E = n("921387"),
-                _ = n("711326"),
+                E = n("690563"),
+                _ = n("921387"),
+                h = n("711326"),
                 p = n("49111");
 
             function I(e, t) {
-                let n = (0, h.useEligibleForGuildMediaChannelPostPreviewEmbed)(),
-                    I = (0, _.getMediaPostEmbedChannelPath)(e),
+                let n = (0, E.useEligibleForGuildMediaChannelPostPreviewEmbed)(),
+                    I = (0, h.getMediaPostEmbedChannelPath)(e),
                     g = (0, s.default)([u.default, r.default], () => {
                         let e = r.default.getId();
                         return u.default.isMember(null == I ? void 0 : I.guildId, e)
@@ -6822,9 +6822,9 @@
                         user: M,
                         selectedGuildId: v,
                         canAccess: x
-                    } = (0, s.useStateFromStoresObject)([E.default, d.default, o.default, f.default, c.default], () => {
+                    } = (0, s.useStateFromStoresObject)([_.default, d.default, o.default, f.default, c.default], () => {
                         var e;
-                        let t = null === (e = E.default.getMediaPostEmbed(null == I ? void 0 : I.threadId)) || void 0 === e ? void 0 : e.media,
+                        let t = null === (e = _.default.getMediaPostEmbed(null == I ? void 0 : I.threadId)) || void 0 === e ? void 0 : e.media,
                             n = d.default.getGuild(null == I ? void 0 : I.guildId),
                             a = o.default.getChannel(null == I ? void 0 : I.channelId),
                             s = f.default.getUser(null == t ? void 0 : t.author_id),
@@ -6840,7 +6840,7 @@
                         }
                     }, [I]),
                     O = a.useMemo(() => {
-                        let e = (0, _.getMediaPostEmbedCommonData)({
+                        let e = (0, h.getMediaPostEmbedCommonData)({
                             mediaPostEmbedData: S,
                             guild: A,
                             parentChannel: N,
@@ -6855,8 +6855,8 @@
                     }, [S, A, N, M, v, x]);
                 return a.useEffect(() => {
                     if ((null == I ? void 0 : I.threadId) != null) {
-                        let e = E.default.getEmbedFetchState(I.threadId);
-                        !0 === n && e === E.FetchState.NOT_FETCHED && (!g || !1 !== T) && (g || !C) && (0, m.fetchMediaPostEmbed)(null == I ? void 0 : I.threadId)
+                        let e = _.default.getEmbedFetchState(I.threadId);
+                        !0 === n && e === _.FetchState.NOT_FETCHED && (!g || !1 !== T) && (g || !C) && (0, m.fetchMediaPostEmbed)(null == I ? void 0 : I.threadId)
                     }
                 }, [I, n, g, T, C]), O
             }
@@ -6999,17 +6999,17 @@
                 if (null == n) return;
                 let f = r.default.getMessages(e),
                     m = f.toArray().filter(e => 0 > d.default.compare(e.id, t)).sort((e, t) => d.default.compare(e.id, t.id)).reverse()[0],
-                    h = null == m ? d.default.atPreviousMillisecond(t) : m.id,
-                    E = 0;
+                    E = null == m ? d.default.atPreviousMillisecond(t) : m.id,
+                    _ = 0;
                 f.forAll(e => {
-                    d.default.compare(e.id, h) > 0 && (0, o.shouldBadgeMessage)(e, n) && E++
+                    d.default.compare(e.id, E) > 0 && (0, o.shouldBadgeMessage)(e, n) && _++
                 });
-                let _ = i.default.getChannel(e);
-                null != _ && _.isThread() && (_.isArchivedThread() && await l.default.unarchiveThread(_, !1), !s.default.hasJoined(e) && await l.default.joinThread(_, "Mark Unread")), a.default.post({
-                    url: c.Endpoints.MESSAGE_ACK(e, h),
+                let h = i.default.getChannel(e);
+                null != h && h.isThread() && (h.isArchivedThread() && await l.default.unarchiveThread(h, !1), !s.default.hasJoined(e) && await l.default.joinThread(h, "Mark Unread")), a.default.post({
+                    url: c.Endpoints.MESSAGE_ACK(e, E),
                     body: {
                         manual: !0,
-                        mention_count: E
+                        mention_count: _
                     },
                     oldFormErrors: !0
                 })
@@ -7033,9 +7033,9 @@
                 c = n("913144"),
                 f = n("62587"),
                 m = n("85589"),
-                h = n("166257"),
-                E = n("432173"),
-                _ = n("219013"),
+                E = n("166257"),
+                _ = n("432173"),
+                h = n("219013"),
                 p = n("697218"),
                 I = n("79945"),
                 g = n("790950"),
@@ -7061,12 +7061,12 @@
                     } = this.state, o = t.state === A.MessageStates.SENDING, u = e === S.ReactionTypes.BURST;
                     if (o || (0, T.hasFlag)(t.flags, A.MessageFlags.EPHEMERAL)) return null;
                     let m = p.default.getCurrentUser(),
-                        h = (0, C.isPremium)(m),
-                        E = u ? v.default.Messages.ADD_BURST_REACTION : v.default.Messages.ADD_REACTION;
-                    !h && u && (E = (0, a.jsx)(f.NitroTooltipLabel, {
+                        E = (0, C.isPremium)(m),
+                        _ = u ? v.default.Messages.ADD_BURST_REACTION : v.default.Messages.ADD_REACTION;
+                    !E && u && (_ = (0, a.jsx)(f.NitroTooltipLabel, {
                         tooltipText: v.default.Messages.ADD_BURST_REACTION
                     }));
-                    let _ = l ? O : x;
+                    let h = l ? O : x;
                     return (0, a.jsx)(d.Popout, {
                         shouldShow: r,
                         onRequestClose: this.handleReactionPickerToggle,
@@ -7077,10 +7077,10 @@
                                 isShown: l
                             } = t;
                             return (0, a.jsx)(d.TooltipContainer, {
-                                text: E,
+                                text: _,
                                 color: d.TooltipColors.PRIMARY,
                                 "aria-label": u ? v.default.Messages.ADD_BURST_REACTION : v.default.Messages.ADD_REACTION,
-                                tooltipClassName: _.addReactionTooltip,
+                                tooltipClassName: h.addReactionTooltip,
                                 children: (0, a.jsxs)(d.Clickable, {
                                     ...e,
                                     onClick: e => {
@@ -7098,16 +7098,16 @@
                                             interaction: N.EmojiInteractionPoint.AddReactionPopoutFocused
                                         })
                                     },
-                                    className: i(_.reactionBtn, {
-                                        [_.active]: l
+                                    className: i(h.reactionBtn, {
+                                        [h.active]: l
                                     }, n),
                                     children: [u ? (0, a.jsx)(a.Fragment, {
                                         children: (0, a.jsx)(g.default, {
-                                            className: _.icon
+                                            className: h.icon
                                         })
                                     }) : (0, a.jsx)(a.Fragment, {
                                         children: (0, a.jsx)(I.default, {
-                                            className: _.icon
+                                            className: h.icon
                                         })
                                     }), s]
                                 })
@@ -7125,7 +7125,7 @@
                             message: a,
                             isForumToolbar: s
                         } = this.props;
-                        (0, h.addReaction)(n.id, a.id, (0, E.toReactionEmoji)(e), s ? h.ReactionLocations.FORUM_TOOLBAR : h.ReactionLocations.MESSAGE, {
+                        (0, E.addReaction)(n.id, a.id, (0, _.toReactionEmoji)(e), s ? E.ReactionLocations.FORUM_TOOLBAR : E.ReactionLocations.MESSAGE, {
                             burst: t
                         })
                     }, this.handleReactionPickerToggle = () => {
@@ -7143,7 +7143,7 @@
                             analytics: {
                                 type: M.PremiumUpsellTypes.BURST_REACTION_UPSELL,
                                 page: null != n.getGuildId() ? A.AnalyticsPages.GUILD_CHANNEL : A.AnalyticsPages.DM_CHANNEL,
-                                section: (0, E.getBurstAnalyticsSection)(n),
+                                section: (0, _.getBurstAnalyticsSection)(n),
                                 object: A.AnalyticsObjects.INLINE_REACTION_PICKER_UPSELL
                             }
                         }), this.handleReactionPickerToggle()
@@ -7159,10 +7159,10 @@
                             ...i && {
                                 openPopoutType: "message_super_reaction_emoji_picker",
                                 page: null != s.getGuildId() ? A.AnalyticsPages.GUILD_CHANNEL : A.AnalyticsPages.DM_CHANNEL,
-                                section: (0, E.getBurstAnalyticsSection)(s),
+                                section: (0, _.getBurstAnalyticsSection)(s),
                                 object: A.AnalyticsObjects.REACTION_RAIL
                             }
-                        }, c = (0, a.jsx)(_.ReactionPicker, {
+                        }, c = (0, a.jsx)(h.ReactionPicker, {
                             closePopout: t,
                             channel: s,
                             onSelectEmoji: (e, n, a) => {
@@ -7226,9 +7226,9 @@
                 c = n("256572"),
                 f = n("42203"),
                 m = n("957255"),
-                h = n("780571"),
-                E = n("568734"),
-                _ = n("383667"),
+                E = n("780571"),
+                _ = n("568734"),
+                h = n("383667"),
                 p = n("574073"),
                 I = n("865343"),
                 g = n("39331"),
@@ -7268,7 +7268,7 @@
                         allowHeading: F || V.showListsAndHeaders || Y.showListsAndHeaders,
                         allowLinks: V.showMaskedLinks || Y.showMaskedLinks,
                         previewLinkTarget: V.showMaskedLinks || Y.showMaskedLinks
-                    }), z = s.type === x.MessageTypes.REPLY ? s.messageReference : void 0, Z = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(z)), J = (0, r.useListItem)(s.id), X = (0, p.default)(s), q = (0, o.useStateFromStores)([f.default], () => s.hasFlag(x.MessageFlags.HAS_THREAD) && f.default.getChannel(s.id)), Q = (0, d.useRoleIcon)({
+                    }), z = s.type === x.MessageTypes.REPLY ? s.messageReference : void 0, J = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(z)), Z = (0, r.useListItem)(s.id), X = (0, p.default)(s), q = (0, o.useStateFromStores)([f.default], () => s.hasFlag(x.MessageFlags.HAS_THREAD) && f.default.getChannel(s.id)), Q = (0, d.useRoleIcon)({
                         guildId: j.guild_id,
                         roleId: X.iconRoleId
                     }), $ = (0, o.useStateFromStores)([m.default], () => m.default.can(x.Permissions.CREATE_INSTANT_INVITE, j)), ee = (0, T.default)({
@@ -7276,17 +7276,17 @@
                         channel: j,
                         enabled: k
                     });
-                    if ((0, _.default)(s, $)) return null;
+                    if ((0, h.default)(s, $)) return null;
                     let et = (0, I.getMessageAriaLabelledBy)(s),
                         en = (0, I.getMessageAriaDescribedBy)(s);
-                    return (0, a.jsx)(h.default, {
+                    return (0, a.jsx)(E.default, {
                         compact: l,
                         className: i(L, {
-                            [O.ephemeral]: (0, E.hasFlag)(s.flags, x.MessageFlags.EPHEMERAL),
+                            [O.ephemeral]: (0, _.hasFlag)(s.flags, x.MessageFlags.EPHEMERAL),
                             [O.disableInteraction]: P
                         }),
                         disableInteraction: P,
-                        childrenRepliedMessage: (0, v.default)(s, j, z, Z, l),
+                        childrenRepliedMessage: (0, v.default)(s, j, z, J, l),
                         childrenExecutedCommand: (0, M.default)(s, j, l),
                         childrenHeader: (0, A.default)({
                             ...e,
@@ -7307,10 +7307,211 @@
                         "aria-labelledby": et,
                         "aria-describedby": en,
                         messageRef: ee,
-                        ...J,
+                        ...Z,
                         ...H
                     })
                 })
+        },
+        885968: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return v
+                }
+            }), n("222007");
+            var a = n("37983"),
+                s = n("884691"),
+                l = n("414456"),
+                i = n.n(l),
+                r = n("77078"),
+                o = n("446674"),
+                u = n("997289"),
+                d = n("191225"),
+                c = n("706508"),
+                f = n("501260"),
+                m = n("969380"),
+                E = n("817039"),
+                _ = n("141962"),
+                h = n("685665"),
+                p = n("653047"),
+                I = n("271938"),
+                g = n("824563"),
+                T = n("697218"),
+                C = n("811305"),
+                S = n("449008"),
+                A = n("954016"),
+                N = n("782340"),
+                M = n("502079");
+
+            function v(e) {
+                var t, n;
+                let {
+                    application: l,
+                    activityInstance: v,
+                    channelId: x,
+                    guildId: O
+                } = e, [L, R] = s.useState(!1), {
+                    analyticsLocations: y
+                } = (0, h.default)(), P = (0, u.useAnalyticsContext)(), {
+                    containerRef: D,
+                    isStacked: j
+                } = function() {
+                    let e = s.useRef(null),
+                        [t, n] = s.useState(!1);
+                    return s.useEffect(() => {
+                        let t = new ResizeObserver(() => (function() {
+                                var t;
+                                let a = null === (t = e.current) || void 0 === t ? void 0 : t.offsetWidth;
+                                null != a && n(a < 512)
+                            })()),
+                            a = e.current;
+                        return null != a && t.observe(a), () => {
+                            t.disconnect()
+                        }
+                    }, [e]), {
+                        containerRef: e,
+                        isStacked: t
+                    }
+                }(), b = (0, m.default)({
+                    applicationId: l.id,
+                    size: 1024
+                }), U = (0, o.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(x).find(e => e.activity_id === v.id)), B = (0, o.useStateFromStoresArray)([T.default], () => (null == U ? void 0 : U.connections) == null ? [] : Array.from(U.connections.values()).map(e => T.default.getUser(e.user_id)).filter(S.isNotNullish)), G = (0, o.useStateFromStores)([g.default], () => {
+                    var e, t;
+                    let n = null == U ? void 0 : null === (e = U.connections) || void 0 === e ? void 0 : e.values().next().value;
+                    return null == n ? null : null === (t = g.default.findActivity(n.user_id, e => e.application_id === l.id)) || void 0 === t ? void 0 : t.details
+                }), k = s.useMemo(() => {
+                    let e = new p.default(l);
+                    return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = A.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
+                }, [l]), w = function(e, t, n) {
+                    let a = (0, o.useStateFromStores)([d.default], () => {
+                            var n;
+                            return (null === (n = d.default.getSelfEmbeddedActivityForChannel(t)) || void 0 === n ? void 0 : n.application_id) === e.id
+                        }),
+                        s = (0, f.useEmbeddedActivityJoinability)({
+                            userId: I.default.getId(),
+                            activity: n,
+                            channelId: t,
+                            application: e
+                        });
+                    if (null == n) return {
+                        status: N.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED
+                    };
+                    if (a) return {
+                        tooltip: N.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
+                    };
+                    switch (s) {
+                        case f.EmbeddedActivityJoinability.CAN_JOIN:
+                            return null;
+                        case f.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+                            return {
+                                tooltip: N.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS
+                            };
+                        case f.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED:
+                            return {
+                                tooltip: N.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE
+                            };
+                        case f.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+                            return {
+                                tooltip: N.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS
+                            };
+                        case f.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS:
+                            return {
+                                tooltip: N.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS
+                            };
+                        case f.EmbeddedActivityJoinability.CHANNEL_FULL:
+                            return {
+                                tooltip: N.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL
+                            };
+                        case f.EmbeddedActivityJoinability.NO_CHANNEL_CONNECT_PERMISSION:
+                            return {
+                                tooltip: N.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_VOICE_PERMISSION
+                            };
+                        case f.EmbeddedActivityJoinability.NO_CHANNEL:
+                        case f.EmbeddedActivityJoinability.NO_GUILD:
+                        case f.EmbeddedActivityJoinability.NO_USER:
+                        case f.EmbeddedActivityJoinability.IS_AFK_CHANNEL:
+                            return {
+                                tooltip: N.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL
+                            }
+                    }
+                }(k, x, U), H = async () => {
+                    if (null != U) {
+                        R(!0);
+                        try {
+                            await (0, c.default)({
+                                activity: U,
+                                currentEmbeddedApplication: k,
+                                activityChannelId: x,
+                                locationObject: P.location,
+                                embeddedActivitiesManager: _.default,
+                                analyticsLocations: y
+                            })
+                        } finally {
+                            R(!1)
+                        }
+                    }
+                };
+                return (0, a.jsx)("div", {
+                    className: i(M.outerContainer, {
+                        [M.rowLayout]: !j,
+                        [M.stackedLayout]: j
+                    }),
+                    ref: D,
+                    children: (0, a.jsxs)("div", {
+                        className: M.container,
+                        children: [(0, a.jsx)("div", {
+                            className: M.imgContainer,
+                            children: (0, a.jsx)(E.default, {
+                                imageBackground: b,
+                                applicationName: l.name,
+                                imageClassName: M.img,
+                                imageNotFoundClassName: M.imgBroken
+                            })
+                        }), (0, a.jsxs)("div", {
+                            className: M.contentContainer,
+                            children: [(0, a.jsxs)("div", {
+                                className: M.info,
+                                children: [(0, a.jsx)(r.Heading, {
+                                    variant: "heading-lg/bold",
+                                    children: null == l ? void 0 : l.name
+                                }), (0, a.jsx)(r.Text, {
+                                    variant: "text-md/medium",
+                                    lineClamp: j ? 3 : 1,
+                                    children: null !== (n = null !== (t = null == w ? void 0 : w.status) && void 0 !== t ? t : G) && void 0 !== n ? n : N.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
+                                })]
+                            }), (0, a.jsxs)("div", {
+                                className: M.cta,
+                                children: [(0, a.jsx)(r.Tooltip, {
+                                    text: null == w ? void 0 : w.tooltip,
+                                    children: e => {
+                                        let {
+                                            onClick: t,
+                                            ...n
+                                        } = e;
+                                        return (0, a.jsx)(r.Button, {
+                                            ...n,
+                                            onClick: () => {
+                                                H(), null == t || t()
+                                            },
+                                            color: r.ButtonColors.GREEN,
+                                            submitting: L,
+                                            disabled: null != w,
+                                            children: N.default.Messages.EMBEDDED_ACTIVITIES_JOIN
+                                        })
+                                    }
+                                }), (0, a.jsx)("div", {
+                                    className: M.avatars,
+                                    children: (0, a.jsx)(C.default, {
+                                        guildId: O,
+                                        users: B,
+                                        max: 4
+                                    })
+                                })]
+                            })]
+                        })]
+                    })
+                })
+            }
         },
         808440: function(e, t, n) {
             "use strict";
@@ -7330,9 +7531,9 @@
                 c = n("42793"),
                 f = n("141254"),
                 m = n("116616"),
-                h = n("271938"),
-                E = n("305961"),
-                _ = n("337543"),
+                E = n("271938"),
+                _ = n("305961"),
+                h = n("337543"),
                 p = n("430625"),
                 I = n("740589"),
                 g = n("472315"),
@@ -7352,9 +7553,9 @@
                 } = e, {
                     invite: O,
                     inviteError: L
-                } = (0, l.useStateFromStoresObject)([_.default], () => ({
-                    invite: _.default.getInvite(t),
-                    inviteError: _.default.getInviteError(t)
+                } = (0, l.useStateFromStoresObject)([h.default], () => ({
+                    invite: h.default.getInvite(t),
+                    inviteError: h.default.getInviteError(t)
                 }), [t]);
                 s.useEffect(() => {
                     null == O && i.default.resolveInvite(t)
@@ -7366,8 +7567,8 @@
                     {
                         analyticsLocations: y
                     } = (0, o.default)(),
-                    P = (0, l.useStateFromStores)([E.default], () => (null == O ? void 0 : O.guild) != null ? E.default.getGuild(O.guild.id) : null, [O]),
-                    D = (0, l.useStateFromStores)([h.default], () => h.default.getId()),
+                    P = (0, l.useStateFromStores)([_.default], () => (null == O ? void 0 : O.guild) != null ? _.default.getGuild(O.guild.id) : null, [O]),
+                    D = (0, l.useStateFromStores)([E.default], () => E.default.getId()),
                     j = (0, l.useStateFromStores)([u.default], () => {
                         var e;
                         return u.default.getGuildScheduledEvent(null === (e = R.guild_scheduled_event) || void 0 === e ? void 0 : e.id)
@@ -7480,13 +7681,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 MessageAccessories: function() {
-                    return ey
+                    return eb
                 },
                 default: function() {
-                    return eP
+                    return eU
                 },
                 SimpleMessageAccessories: function() {
-                    return eD
+                    return eB
                 }
             }), n("222007"), n("702976"), n("70102"), n("881410");
             var a = n("37983"),
@@ -7500,93 +7701,97 @@
                 c = n("77078"),
                 f = n("819689"),
                 m = n("710306"),
-                h = n("501076"),
-                E = n("627697"),
-                _ = n("527088"),
-                p = n("193865"),
-                I = n("222650"),
-                g = n("576060"),
-                T = n("139514"),
-                C = n("810044"),
-                S = n("447435"),
-                A = n("963119"),
-                N = n("925685"),
-                M = n("406043"),
-                v = n("294519"),
-                x = n("477558"),
-                O = n("812224"),
-                L = n("383247"),
-                R = n("267567"),
-                y = n("367376"),
-                P = n("467475"),
-                D = n("801177"),
-                j = n("985883"),
-                b = n("311830"),
-                U = n("626301"),
-                B = n("428786"),
-                G = n("705423"),
-                k = n("315021"),
-                w = n("24373"),
-                H = n("943508"),
-                F = n("300322"),
-                V = n("415829"),
-                Y = n("845579"),
-                W = n("271938"),
-                K = n("26989"),
-                z = n("88093"),
-                Z = n("957255"),
-                J = n("697218"),
-                X = n("560176"),
-                q = n("952368"),
-                Q = n("328620"),
-                $ = n("688622"),
-                ee = n("124297"),
-                et = n("377502"),
-                en = n("323273"),
-                ea = n("599110"),
-                es = n("240873"),
-                el = n("568734"),
-                ei = n("449008"),
-                er = n("299039"),
-                eo = n("253981"),
-                eu = n("605160"),
-                ed = n("865446"),
-                ec = n("913491"),
-                ef = n("583022"),
-                em = n("125247"),
-                eh = n("476714"),
-                eE = n("808440"),
-                e_ = n("865343"),
-                ep = n("5982"),
-                eI = n("933629"),
-                eg = n("600536"),
-                eT = n("592707"),
-                eC = n("49111"),
-                eS = n("646718"),
-                eA = n("782340"),
-                eN = n("30554"),
-                eM = n("872364");
+                E = n("501076"),
+                _ = n("798609"),
+                h = n("627697"),
+                p = n("527088"),
+                I = n("299285"),
+                g = n("193865"),
+                T = n("222650"),
+                C = n("576060"),
+                S = n("139514"),
+                A = n("810044"),
+                N = n("447435"),
+                M = n("963119"),
+                v = n("925685"),
+                x = n("406043"),
+                O = n("294519"),
+                L = n("477558"),
+                R = n("812224"),
+                y = n("383247"),
+                P = n("267567"),
+                D = n("367376"),
+                j = n("467475"),
+                b = n("801177"),
+                U = n("985883"),
+                B = n("311830"),
+                G = n("626301"),
+                k = n("428786"),
+                w = n("705423"),
+                H = n("315021"),
+                F = n("24373"),
+                V = n("943508"),
+                Y = n("300322"),
+                W = n("415829"),
+                K = n("845579"),
+                z = n("653047"),
+                J = n("271938"),
+                Z = n("26989"),
+                X = n("88093"),
+                q = n("957255"),
+                Q = n("697218"),
+                $ = n("560176"),
+                ee = n("952368"),
+                et = n("328620"),
+                en = n("688622"),
+                ea = n("124297"),
+                es = n("377502"),
+                el = n("323273"),
+                ei = n("599110"),
+                er = n("240873"),
+                eo = n("568734"),
+                eu = n("449008"),
+                ed = n("299039"),
+                ec = n("253981"),
+                ef = n("605160"),
+                em = n("865446"),
+                eE = n("913491"),
+                e_ = n("583022"),
+                eh = n("125247"),
+                ep = n("885968"),
+                eI = n("476714"),
+                eg = n("808440"),
+                eT = n("865343"),
+                eC = n("5982"),
+                eS = n("933629"),
+                eA = n("600536"),
+                eN = n("592707"),
+                eM = n("49111"),
+                ev = n("646718"),
+                ex = n("782340"),
+                eO = n("30554"),
+                eL = n("872364");
 
-            function ev() {
+            function eR() {
                 return (0, a.jsxs)("div", {
-                    className: eN.nitroFileSizeUpsell,
+                    className: eO.nitroFileSizeUpsell,
                     children: [(0, a.jsx)("img", {
-                        src: eM,
-                        className: eN.nitroBadgeSvg,
+                        src: eL,
+                        className: eO.nitroBadgeSvg,
                         alt: ""
                     }), (0, a.jsx)(c.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        className: eN.nitroFileSizeUpsellText,
-                        children: eA.default.Messages.LARGE_FILE_UPLOAD_POWERED_BY_NITRO.format({
-                            onClick: () => (0, U.navigateToPremiumMarketingPage)()
+                        className: eO.nitroFileSizeUpsellText,
+                        children: ex.default.Messages.LARGE_FILE_UPLOAD_POWERED_BY_NITRO.format({
+                            onClick: () => (0, G.navigateToPremiumMarketingPage)()
                         })
                     })]
                 })
             }
-            let ex = new Set([eC.MessageEmbedTypes.AUTO_MODERATION_MESSAGE, eC.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION, eC.MessageEmbedTypes.APPLICATION_NEWS, eC.MessageEmbedTypes.POST_PREVIEW, eC.MessageEmbedTypes.SAFETY_POLICY_NOTICE, eC.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION]),
-                eO = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
-                eL = (e, t, n) => () => {
+            let ey = new Set([eM.MessageEmbedTypes.AUTO_MODERATION_MESSAGE, eM.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION, eM.MessageEmbedTypes.APPLICATION_NEWS, eM.MessageEmbedTypes.POST_PREVIEW, eM.MessageEmbedTypes.SAFETY_POLICY_NOTICE, eM.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION]),
+                eP = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
+                eD = (e, t, n) => () => {
                     let s = null != t ? t : n;
                     if (null == s) return null;
                     let {
@@ -7595,36 +7800,36 @@
                         width: r,
                         height: o
                     } = s;
-                    return (0, a.jsx)(eh.default, {
+                    return (0, a.jsx)(eI.default, {
                         width: r,
                         height: o,
                         src: null != i && "" !== i ? i : l,
                         url: null != e && "" !== e ? e : null != i && "" !== i ? i : l,
                         format: null != n ? u.GIFType.VIDEO : u.GIFType.IMAGE,
-                        className: eN.gifFavoriteButton
+                        className: eO.gifFavoriteButton
                     })
                 },
-                eR = e => () => {
+                ej = e => () => {
                     let {
                         proxy_url: t,
                         width: n,
                         height: s
                     } = e;
-                    return q.IMAGE_GIF_RE.test(e.filename) && null != n && null != s ? (0, a.jsx)(eh.default, {
+                    return ee.IMAGE_GIF_RE.test(e.filename) && null != n && null != s ? (0, a.jsx)(eI.default, {
                         width: n,
                         height: s,
                         src: t,
                         url: t,
                         format: u.GIFType.IMAGE,
-                        className: eN.gifFavoriteButton
+                        className: eO.gifFavoriteButton
                     }) : null
                 };
-            class ey extends s.Component {
+            class eb extends s.Component {
                 shouldRenderInvite(e) {
                     let {
                         channel: t
                     } = this.props;
-                    return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && eO.has(e))
+                    return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && eP.has(e))
                 }
                 shouldComponentUpdate(e, t) {
                     var n, a;
@@ -7651,8 +7856,8 @@
                     })))
                 }
                 renderSocialProofingFileSizeNitroUpsell(e) {
-                    let t = e.attachments.some(e => e.size > eS.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE);
-                    return (0, ed.shouldShowNitroUpsell)("attachment") && t ? (0, a.jsx)(ev, {}) : null
+                    let t = e.attachments.some(e => e.size > ev.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE);
+                    return (0, em.shouldShowNitroUpsell)("attachment") && t ? (0, a.jsx)(eR, {}) : null
                 }
                 renderCodedLinks(e) {
                     return 0 === e.codedLinks.length ? null : e.codedLinks.map(t => {
@@ -7660,36 +7865,36 @@
                             type: n,
                             code: s
                         } = t;
-                        if (n === T.CodedLinkType.INVITE) return this.shouldRenderInvite(s) ? (0, a.jsx)(eE.default, {
+                        if (n === S.CodedLinkType.INVITE) return this.shouldRenderInvite(s) ? (0, a.jsx)(eg.default, {
                             code: s,
                             author: e.author,
                             getAcceptInviteContext: this.getAcceptInviteContext
                         }, s) : null;
-                        if (n === T.CodedLinkType.TEMPLATE) return (0, a.jsx)(O.default, {
+                        if (n === S.CodedLinkType.TEMPLATE) return (0, a.jsx)(R.default, {
                             code: s
                         }, s);
-                        if (n === T.CodedLinkType.EVENT) return (0, a.jsx)(x.default, {
+                        if (n === S.CodedLinkType.EVENT) return (0, a.jsx)(L.default, {
                             code: s
                         }, s);
-                        else if (n === T.CodedLinkType.CHANNEL_LINK) return (0, a.jsx)(em.default, {
+                        else if (n === S.CodedLinkType.CHANNEL_LINK) return (0, a.jsx)(eh.default, {
                             code: s,
                             messageData: e
                         }, s);
-                        else if (n === T.CodedLinkType.APP_DIRECTORY_PROFILE) return (0, a.jsx)(_.default, {
+                        else if (n === S.CodedLinkType.APP_DIRECTORY_PROFILE) return (0, a.jsx)(p.default, {
                             code: s,
                             message: e
                         }, s);
-                        else if (n === T.CodedLinkType.CLYDE_PROFILE) return (0, a.jsx)(g.default, {
+                        else if (n === S.CodedLinkType.CLYDE_PROFILE) return (0, a.jsx)(C.default, {
                             code: s
                         }, s);
-                        else if (n === T.CodedLinkType.ACTIVITY_BOOKMARK) return (0, a.jsx)(E.default, {
+                        else if (n === S.CodedLinkType.ACTIVITY_BOOKMARK) return (0, a.jsx)(h.default, {
                             applicationId: s,
                             message: e
                         }, s);
-                        else if (n === T.CodedLinkType.GUILD_PRODUCT) return (0, a.jsx)(v.default, {
+                        else if (n === S.CodedLinkType.GUILD_PRODUCT) return (0, a.jsx)(O.default, {
                             code: s
                         }, s);
-                        else if (n === T.CodedLinkType.SERVER_SHOP) return (0, a.jsx)(C.default, {
+                        else if (n === S.CodedLinkType.SERVER_SHOP) return (0, a.jsx)(A.default, {
                             guildId: s
                         }, s);
                         else throw Error("Unknown coded link type: ".concat(n))
@@ -7703,9 +7908,9 @@
                         type: l,
                         content: i,
                         giftInfo: r
-                    } = e, o = J.default.getCurrentUser();
+                    } = e, o = Q.default.getCurrentUser();
                     return null != o && t.length > 0 ? t.map(e => (0, a.jsx)("div", {
-                        className: eN.giftCodeContainer,
+                        className: eO.giftCodeContainer,
                         children: (0, a.jsx)(m.default, {
                             code: e,
                             author: n,
@@ -7725,8 +7930,8 @@
                         canRenderReferralEmbed: s
                     } = this.props;
                     return n !== r.MessageTypes.PREMIUM_REFERRAL || null == t ? null : (0, a.jsx)("div", {
-                        className: eN.referralContainer,
-                        children: (0, a.jsx)(B.default, {
+                        className: eO.referralContainer,
+                        children: (0, a.jsx)(k.default, {
                             userTrialOfferId: t,
                             canRenderReferralEmbed: null != s && s
                         })
@@ -7743,7 +7948,7 @@
                         channel: o,
                         forceAddReactions: u
                     } = this.props;
-                    return n ? null : (0, a.jsx)(eT.default, {
+                    return n ? null : (0, a.jsx)(eN.default, {
                         message: e,
                         channel: o,
                         disableReactionCreates: t,
@@ -7764,7 +7969,7 @@
                         shouldRedactExplicitContent: l
                     } = this.props;
                     if (0 === t.length || e.isPoll()) return null;
-                    let i = t.filter(e => null == e.flags || !(0, el.hasFlag)(e.flags, eC.MessageAttachmentFlags.IS_THUMBNAIL));
+                    let i = t.filter(e => null == e.flags || !(0, eo.hasFlag)(e.flags, eM.MessageAttachmentFlags.IS_THUMBNAIL));
                     if (0 === i.length) return null;
                     let {
                         gifAutoPlay: r,
@@ -7772,29 +7977,29 @@
                         inlineAttachmentMedia: u,
                         onAttachmentContextMenu: d,
                         shouldHideMediaOptions: c
-                    } = this.props, f = i.map(e => (0, en.carouselAssetFromAttachment)(e, c, l)).filter(ei.isNotNullish), m = {
+                    } = this.props, f = i.map(e => (0, el.carouselAssetFromAttachment)(e, c, l)).filter(eu.isNotNullish), m = {
                         source: "Media Mosaic",
                         guild_id: s.guild_id,
                         channel_id: s.id,
                         channel_type: s.type
-                    }, h = f.length > 1 ? (0, en.createMediaOnClickOverrides)(f, m) : {}, E = (0, el.hasFlag)(n, eC.MessageFlags.IS_VOICE_MESSAGE), _ = i.map(t => {
+                    }, E = f.length > 1 ? (0, el.createMediaOnClickOverrides)(f, m) : {}, _ = (0, eo.hasFlag)(n, eM.MessageFlags.IS_VOICE_MESSAGE), h = i.map(t => {
                         let n = {
                                 message: e,
                                 attachment: t,
                                 autoPlayGif: r,
                                 canRemoveAttachment: o && (i.length > 1 || "" !== e.content),
-                                className: eN.embedWrapper,
+                                className: eO.embedWrapper,
                                 inlineMedia: u,
                                 onContextMenu: null != d ? e => {
                                     e.stopPropagation(), e.preventDefault(), d(e, t)
                                 } : void 0,
                                 onRemoveAttachment: this.handleRemoveAttachment,
-                                renderAudioComponent: E ? eI.renderVoiceMessageAudioComponent : eI.renderAudioComponent,
-                                renderImageComponent: eI.renderImageComponent,
-                                renderPlaintextFilePreview: eI.renderPlaintextFilePreview,
-                                renderVideoComponent: eI.renderVideoComponent,
+                                renderAudioComponent: _ ? eS.renderVoiceMessageAudioComponent : eS.renderAudioComponent,
+                                renderImageComponent: eS.renderImageComponent,
+                                renderPlaintextFilePreview: eS.renderPlaintextFilePreview,
+                                renderVideoComponent: eS.renderVideoComponent,
                                 onPlay: (e, n, a) => {
-                                    ea.default.track(eC.AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
+                                    ei.default.track(eM.AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
                                         guild_id: s.guild_id,
                                         channel_id: s.id,
                                         channel_type: s.type,
@@ -7804,16 +8009,16 @@
                                         duration: a
                                     })
                                 },
-                                gifFavoriteButton: eR(t)
+                                gifFavoriteButton: ej(t)
                             },
-                            a = (0, $.getBestEffortSrcUrl)({
+                            a = (0, en.getBestEffortSrcUrl)({
                                 proxyURL: t.proxy_url,
                                 url: t.url
                             });
-                        return a in h && (n.onClick = h[a]), n
+                        return a in E && (n.onClick = E[a]), n
                     });
-                    return (0, a.jsx)(et.default, {
-                        attachments: _
+                    return (0, a.jsx)(es.default, {
+                        attachments: h
                     })
                 }
                 renderEmbeds(e) {
@@ -7822,17 +8027,17 @@
                         showClydeAiEmbeds: n
                     } = this.props;
                     return 0 !== e.embeds.length && t ? e.embeds.map(t => {
-                        if (ex.has(t.type) || !n && (0, es.isClydeAiThoughtsEmbed)(t) || (0, es.isServerShopArticleEmbed)(t)) return null;
+                        if (ey.has(t.type) || !n && (0, er.isClydeAiThoughtsEmbed)(t) || (0, er.isServerShopArticleEmbed)(t)) return null;
                         let s = {
-                            renderImageComponent: eI.renderImageComponent,
-                            renderVideoComponent: eI.renderVideoComponent,
-                            renderLinkComponent: eI.renderMaskedLinkComponent
+                            renderImageComponent: eS.renderImageComponent,
+                            renderVideoComponent: eS.renderVideoComponent,
+                            renderLinkComponent: eS.renderMaskedLinkComponent
                         };
-                        if (t.type === eC.MessageEmbedTypes.ARTICLE && null != t.url && /^https?:\/\/(?:canary|ptb|www)?\.discord(?:app)?\.com\/store\/skus\/(?:[0-9]+)/.test(t.url) && null != t.provider && "Discord" === t.provider.name) {
-                            let n = eo.default.safeParseWithQuery(t.url);
+                        if (t.type === eM.MessageEmbedTypes.ARTICLE && null != t.url && /^https?:\/\/(?:canary|ptb|www)?\.discord(?:app)?\.com\/store\/skus\/(?:[0-9]+)/.test(t.url) && null != t.provider && "Discord" === t.provider.name) {
+                            let n = ec.default.safeParseWithQuery(t.url);
                             if (null != n && null != n.pathname) {
                                 let l = n.pathname.split("/")[3];
-                                if (null != l) return (0, a.jsx)(h.default, {
+                                if (null != l) return (0, a.jsx)(E.default, {
                                     skuId: l,
                                     renderFallback: () => this.renderEmbed(t, s, e.id, e.channel_id)
                                 }, t.id)
@@ -7842,7 +8047,7 @@
                     }) : null
                 }
                 renderComponentAccessories(e) {
-                    return null == e.components || 0 === e.components.length || !1 === this.props.renderComponentAccessory ? null : (0, a.jsx)(L.default, {
+                    return null == e.components || 0 === e.components.length || !1 === this.props.renderComponentAccessory ? null : (0, a.jsx)(y.default, {
                         message: e
                     })
                 }
@@ -7851,7 +8056,7 @@
                     let {
                         channel: t
                     } = this.props;
-                    return (0, a.jsx)(ep.default, {
+                    return (0, a.jsx)(eC.default, {
                         channel: t,
                         message: e,
                         hideParty: !1
@@ -7861,13 +8066,13 @@
                     let {
                         channel: t
                     } = this.props;
-                    return t.type !== eC.ChannelTypes.GUILD_ANNOUNCEMENT || (0, el.hasFlag)(e.flags, eC.MessageFlags.EPHEMERAL) ? null : (0, a.jsx)(I.default, {
+                    return t.type !== eM.ChannelTypes.GUILD_ANNOUNCEMENT || (0, eo.hasFlag)(e.flags, eM.MessageFlags.EPHEMERAL) ? null : (0, a.jsx)(T.default, {
                         channelId: e.channel_id,
                         messageId: e.id
                     })
                 }
                 renderEphemeralAccessories(e) {
-                    return (0, el.hasFlag)(e.flags, eC.MessageFlags.EPHEMERAL) ? (0, a.jsx)(ee.default, {
+                    return (0, eo.hasFlag)(e.flags, eM.MessageFlags.EPHEMERAL) ? (0, a.jsx)(ea.default, {
                         message: e,
                         onDeleteMessage: () => {
                             f.default.dismissAutomatedMessage(e)
@@ -7875,29 +8080,29 @@
                     }) : null
                 }
                 renderStickersAccessories(e) {
-                    let t = (0, w.getMessageStickers)(e),
+                    let t = (0, F.getMessageStickers)(e),
                         {
                             channel: n,
                             isInteracting: s
                         } = this.props;
-                    return 0 === t.length ? null : t.map(e => (0, a.jsx)(H.default, {
+                    return 0 === t.length ? null : t.map(e => (0, a.jsx)(V.default, {
                         channel: n,
                         isInteracting: s,
                         renderableSticker: e
                     }, e.id))
                 }
                 renderThreadAccessories(e) {
-                    if (e.hasFlag(eC.MessageFlags.HAS_THREAD) && !1 !== this.props.renderThreadAccessory) return (0, a.jsx)(V.default, {
+                    if (e.hasFlag(eM.MessageFlags.HAS_THREAD) && !1 !== this.props.renderThreadAccessory) return (0, a.jsx)(W.default, {
                         message: e,
                         compact: this.props.compact
                     })
                 }
                 renderThreadRoleMentionWarning(e) {
-                    if (!e.hasFlag(eC.MessageFlags.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD) || !this.props.isCurrentUser) return;
-                    let t = Date.now() - er.default.extractTimestamp(e.id);
+                    if (!e.hasFlag(eM.MessageFlags.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD) || !this.props.isCurrentUser) return;
+                    let t = Date.now() - ed.default.extractTimestamp(e.id);
                     if (!(t >= 9e5)) return (0, a.jsx)("div", {
-                        className: eN.threadRoleMentionFailure,
-                        children: eA.default.Messages.THREAD_ROLE_MENTION_FAILURE
+                        className: eO.threadRoleMentionFailure,
+                        children: ex.default.Messages.THREAD_ROLE_MENTION_FAILURE
                     })
                 }
                 renderSuppressConfirmModal() {
@@ -7907,9 +8112,9 @@
                     } = this.props;
                     return (0, a.jsxs)(c.DeclarativeConfirmModal, {
                         dismissable: !0,
-                        header: eA.default.Messages.SUPPRESS_EMBED_TITLE,
-                        confirmText: eA.default.Messages.SUPPRESS_EMBED_CONFIRM,
-                        cancelText: eA.default.Messages.CANCEL,
+                        header: ex.default.Messages.SUPPRESS_EMBED_TITLE,
+                        confirmText: ex.default.Messages.SUPPRESS_EMBED_CONFIRM,
+                        cancelText: ex.default.Messages.CANCEL,
                         onCancel: () => this.setState({
                             showSuppressModal: !1
                         }),
@@ -7921,12 +8126,12 @@
                         children: [(0, a.jsx)(c.Text, {
                             variant: "text-md/normal",
                             color: "text-normal",
-                            className: eN.confirmText,
-                            children: eA.default.Messages.SUPPRESS_EMBED_BODY
+                            className: eO.confirmText,
+                            children: ex.default.Messages.SUPPRESS_EMBED_BODY
                         }), (0, a.jsx)(c.Text, {
                             variant: "text-md/normal",
                             color: "text-muted",
-                            children: eA.default.Messages.SUPPRESS_EMBED_TIP
+                            children: ex.default.Messages.SUPPRESS_EMBED_TIP
                         })]
                     })
                 }
@@ -7945,9 +8150,9 @@
                     }
                     return (0, a.jsx)(c.DeclarativeConfirmModal, {
                         dismissable: !0,
-                        header: eA.default.Messages.REMOVE_ATTACHMENT_TITLE,
-                        confirmText: eA.default.Messages.REMOVE_ATTACHMENT_CONFIRM,
-                        cancelText: eA.default.Messages.CANCEL,
+                        header: ex.default.Messages.REMOVE_ATTACHMENT_TITLE,
+                        confirmText: ex.default.Messages.REMOVE_ATTACHMENT_CONFIRM,
+                        cancelText: ex.default.Messages.CANCEL,
                         onCancel: () => this.setState({
                             showRemoveAttachmentModal: !1,
                             attachmentToDelete: null
@@ -7962,32 +8167,46 @@
                         children: (0, a.jsx)(c.Text, {
                             variant: "text-md/normal",
                             color: "text-normal",
-                            className: eN.confirmText,
-                            children: eA.default.Messages.REMOVE_ATTACHMENT_BODY
+                            className: eO.confirmText,
+                            children: ex.default.Messages.REMOVE_ATTACHMENT_BODY
                         })
                     })
                 }
                 renderInteractionPremiumUpsell(e) {
                     let t = e.applicationId;
-                    return e.type !== r.MessageTypes.INTERACTION_PREMIUM_UPSELL || null == t ? null : (0, a.jsx)(eg.default, {
+                    return e.type !== r.MessageTypes.INTERACTION_PREMIUM_UPSELL || null == t ? null : (0, a.jsx)(eA.default, {
                         applicationId: t,
                         guildId: this.props.channel.guild_id
                     })
                 }
+                renderEmbeddedApplicationStart(e) {
+                    var t;
+                    let {
+                        application: n,
+                        activityInstance: s,
+                        interaction: l
+                    } = e, i = null != n ? z.default.createFromServer(n) : I.default.getApplication(null !== (t = e.applicationId) && void 0 !== t ? t : "");
+                    return null == i || null == s || (null == l ? void 0 : l.type) !== _.InteractionTypes.APPLICATION_COMMAND ? null : (0, a.jsx)(ep.default, {
+                        application: i,
+                        activityInstance: s,
+                        channelId: this.props.channel.id,
+                        guildId: this.props.channel.guild_id
+                    })
+                }
                 renderMediaPostEmbeds(e) {
-                    return e.embeds.flatMap(t => t.type !== eC.MessageEmbedTypes.POST_PREVIEW || null == t.url ? [] : (0, a.jsx)(D.default, {
+                    return e.embeds.flatMap(t => t.type !== eM.MessageEmbedTypes.POST_PREVIEW || null == t.url ? [] : (0, a.jsx)(b.default, {
                         embedUrl: t.url,
                         message: e,
                         channel: this.props.channel
                     }, t.id))
                 }
                 renderSafetyPolicyNotice(e) {
-                    return 1 === e.embeds.length && e.embeds[0].type === eC.MessageEmbedTypes.SAFETY_POLICY_NOTICE ? (0, a.jsx)(G.SafetyPolicyNotice, {
+                    return 1 === e.embeds.length && e.embeds[0].type === eM.MessageEmbedTypes.SAFETY_POLICY_NOTICE ? (0, a.jsx)(w.SafetyPolicyNotice, {
                         message: e
                     }) : null
                 }
                 renderSafetySystemNotification(e) {
-                    return 1 === e.embeds.length && e.embeds[0].type === eC.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION ? (0, a.jsx)(k.SafetySystemNotification, {
+                    return 1 === e.embeds.length && e.embeds[0].type === eM.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION ? (0, a.jsx)(H.SafetySystemNotification, {
                         embed: e.embeds[0]
                     }) : null
                 }
@@ -7996,16 +8215,16 @@
                     let {
                         obscuredAttachments: t,
                         obscuredEmbeds: n
-                    } = (0, S.getObscuredMediaForMessage)(e);
-                    return 0 === t.length && 0 === n.length ? null : (0, a.jsx)(N.default, {
+                    } = (0, N.getObscuredMediaForMessage)(e);
+                    return 0 === t.length && 0 === n.length ? null : (0, a.jsx)(v.default, {
                         message: e
                     })
                 }
                 renderPoll(e, t) {
-                    if (null != t) return (0, a.jsx)(b.default, {
+                    if (null != t) return (0, a.jsx)(B.default, {
                         message: e,
                         poll: t,
-                        className: eN.pollContainer
+                        className: eO.pollContainer
                     })
                 }
                 render() {
@@ -8016,11 +8235,11 @@
                     } = this.props, {
                         showSuppressModal: s,
                         showRemoveAttachmentModal: l
-                    } = this.state, r = this.renderCodedLinks(t), o = this.renderGiftCodes(t), u = this.renderReferralTrial(t), d = this.renderAttachments(t), c = this.renderSocialProofingFileSizeNitroUpsell(t), f = this.renderEmbeds(t), m = this.renderActivityInvite(t), h = this.renderReactions(t), E = this.renderPublishBump(t), _ = this.renderEphemeralAccessories(t), p = this.renderStickersAccessories(t), I = this.renderThreadAccessories(t), g = this.renderComponentAccessories(t), T = this.renderThreadRoleMentionWarning(t), C = this.renderInteractionPremiumUpsell(t), S = this.renderMediaPostEmbeds(t), A = this.renderSafetyPolicyNotice(t), N = this.renderSafetySystemNotification(t), M = this.renderMediaObscureNotice(t), v = this.renderPoll(t, n);
-                    return null == r && null == d && null == f && null == m && null == h && null == o && null == u && null == E && null == _ && null == p && null == I && null == g && null == T && null == S && null == A && null != C && null == v ? null : (0, a.jsxs)("div", {
-                        id: (0, e_.getMessageAccessoriesId)(t),
-                        className: i(e, eN.container),
-                        children: [T, v, r, o, u, S, d, f, M, m, p, g, C, c, h, E, _, s && this.renderSuppressConfirmModal(), l && this.renderRemoveAttachmentConfirmModal(), I, A, N]
+                    } = this.state, r = this.renderCodedLinks(t), o = this.renderGiftCodes(t), u = this.renderReferralTrial(t), d = this.renderAttachments(t), c = this.renderSocialProofingFileSizeNitroUpsell(t), f = this.renderEmbeds(t), m = this.renderActivityInvite(t), E = this.renderReactions(t), _ = this.renderPublishBump(t), h = this.renderEphemeralAccessories(t), p = this.renderStickersAccessories(t), I = this.renderThreadAccessories(t), g = this.renderComponentAccessories(t), T = this.renderThreadRoleMentionWarning(t), C = this.renderEmbeddedApplicationStart(t), S = this.renderInteractionPremiumUpsell(t), A = this.renderMediaPostEmbeds(t), N = this.renderSafetyPolicyNotice(t), M = this.renderSafetySystemNotification(t), v = this.renderMediaObscureNotice(t), x = this.renderPoll(t, n);
+                    return null == r && null == d && null == f && null == m && null == E && null == o && null == u && null == _ && null == h && null == p && null == I && null == g && null == C && null == T && null == A && null == N && null != S && null == x ? null : (0, a.jsxs)("div", {
+                        id: (0, eT.getMessageAccessoriesId)(t),
+                        className: i(e, eO.container),
+                        children: [T, x, r, o, u, A, d, f, v, m, p, g, C, S, c, E, _, h, s && this.renderSuppressConfirmModal(), l && this.renderRemoveAttachmentConfirmModal(), I, N, M]
                     })
                 }
                 constructor(...e) {
@@ -8047,11 +8266,11 @@
                             canSuppressEmbeds: r,
                             hasSpoilerEmbeds: o,
                             shouldRedactExplicitContent: u
-                        } = this.props, d = (0, eu.getObscureReasonForEmbed)(e, s, n, o, u);
-                        return e.type === eC.MessageEmbedTypes.GIFT ? null : (0, a.jsx)(Q.GIFAccessoryContext.Provider, {
-                            value: eL(e.url, e.image, e.video),
-                            children: (0, a.jsx)(X.default, {
-                                className: eN.embedWrapper,
+                        } = this.props, d = (0, ef.getObscureReasonForEmbed)(e, s, n, o, u);
+                        return e.type === eM.MessageEmbedTypes.GIFT ? null : (0, a.jsx)(et.GIFAccessoryContext.Provider, {
+                            value: eD(e.url, e.image, e.video),
+                            children: (0, a.jsx)($.default, {
+                                className: eO.embedWrapper,
                                 embed: e,
                                 obscureReason: null != d ? d : void 0,
                                 autoPlayGif: l,
@@ -8064,9 +8283,9 @@
                                 ...t
                             })
                         }, e.id)
-                    }, this.renderEmbedTitle = (e, t) => e.type === eC.MessageEmbedTypes.RICH ? y.default.parseEmbedTitle(t, !0, {
+                    }, this.renderEmbedTitle = (e, t) => e.type === eM.MessageEmbedTypes.RICH ? D.default.parseEmbedTitle(t, !0, {
                         channelId: this.props.channel.id
-                    }) : t, this.renderEmbedDescription = (e, t, n) => e.type === eC.MessageEmbedTypes.RICH ? y.default.parse(t, !0, {
+                    }) : t, this.renderEmbedDescription = (e, t, n) => e.type === eM.MessageEmbedTypes.RICH ? D.default.parse(t, !0, {
                         channelId: this.props.channel.id,
                         allowLinks: !0,
                         allowEmojiLinks: !0,
@@ -8090,60 +8309,60 @@
                 }
             }
 
-            function eP(e) {
+            function eU(e) {
                 var t, n, s;
                 let {
                     channel: l,
                     message: i,
                     renderSuppressEmbeds: r
-                } = e, u = (0, o.useStateFromStores)([W.default], () => W.default.getId()), d = Y.InlineAttachmentMedia.useSetting(), c = Y.InlineEmbedMedia.useSetting(), f = Y.RenderEmbeds.useSetting(), m = f && !(0, ec.default)(e.message), h = Y.RenderReactions.useSetting(), E = Y.GifAutoPlay.useSetting(), _ = (0, o.useStateFromStores)([z.default], () => null == l.guild_id || z.default.canChatInGuild(l.guild_id), [l]), I = (0, o.useStateFromStores)([R.default], () => null != l.guild_id && R.default.isLurking(l.guild_id), [l]), g = (0, o.useStateFromStores)([K.default], () => K.default.isCurrentUserGuest(l.guild_id), [l]), T = (0, o.useStateFromStores)([K.default, J.default], () => {
+                } = e, u = (0, o.useStateFromStores)([J.default], () => J.default.getId()), d = K.InlineAttachmentMedia.useSetting(), c = K.InlineEmbedMedia.useSetting(), f = K.RenderEmbeds.useSetting(), m = f && !(0, eE.default)(e.message), E = K.RenderReactions.useSetting(), _ = K.GifAutoPlay.useSetting(), h = (0, o.useStateFromStores)([X.default], () => null == l.guild_id || X.default.canChatInGuild(l.guild_id), [l]), p = (0, o.useStateFromStores)([P.default], () => null != l.guild_id && P.default.isLurking(l.guild_id), [l]), I = (0, o.useStateFromStores)([Z.default], () => Z.default.isCurrentUserGuest(l.guild_id), [l]), T = (0, o.useStateFromStores)([Z.default, Q.default], () => {
                     var e, t;
-                    let n = J.default.getCurrentUser();
-                    return null !== (t = null != l.guild_id && null != n ? null === (e = K.default.getMember(l.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+                    let n = Q.default.getCurrentUser();
+                    return null !== (t = null != l.guild_id && null != n ? null === (e = Z.default.getMember(l.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
                 }), {
                     canAddNewReactions: C,
                     canManageMessages: S
-                } = (0, o.useStateFromStoresObject)([Z.default], () => ({
-                    canAddNewReactions: _ && Z.default.can(eC.Permissions.ADD_REACTIONS, l),
-                    canManageMessages: Z.default.can(eC.Permissions.MANAGE_MESSAGES, l)
-                }), [_, l]), [, N] = (0, M.useCurrentUserCommunicationDisabled)(l.guild_id), v = (0, F.useIsActiveChannelOrUnarchivableThread)(l), x = (u === i.author.id || S) && i.author.id !== eC.LOCAL_BOT_ID && !i.author.isClyde() && !1 !== r && !(0, el.hasFlag)(i.flags, eC.MessageFlags.EPHEMERAL) && v, O = u === i.author.id && v, L = i.author.id === u, y = i.isFirstMessageInForumPost(l), D = (0, ef.default)({
+                } = (0, o.useStateFromStoresObject)([q.default], () => ({
+                    canAddNewReactions: h && q.default.can(eM.Permissions.ADD_REACTIONS, l),
+                    canManageMessages: q.default.can(eM.Permissions.MANAGE_MESSAGES, l)
+                }), [h, l]), [, A] = (0, x.useCurrentUserCommunicationDisabled)(l.guild_id), N = (0, Y.useIsActiveChannelOrUnarchivableThread)(l), v = (u === i.author.id || S) && i.author.id !== eM.LOCAL_BOT_ID && !i.author.isClyde() && !1 !== r && !(0, eo.hasFlag)(i.flags, eM.MessageFlags.EPHEMERAL) && N, O = u === i.author.id && N, L = i.author.id === u, R = i.isFirstMessageInForumPost(l), y = (0, e_.default)({
                     channel: l,
-                    canChat: _,
-                    renderReactions: h,
+                    canChat: h,
+                    renderReactions: E,
                     canAddNewReactions: C,
-                    isLurking: I,
-                    isGuest: g,
-                    communicationDisabled: N,
-                    isActiveChannelOrUnarchivableThread: v
-                }), b = (0, p.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), U = (0, p.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = l.guild_id) && void 0 !== n ? n : "", (null !== (s = i.editedTimestamp) && void 0 !== s ? s : i.timestamp).valueOf()), B = (0, P.default)(null == l ? void 0 : l.id), G = (0, j.default)(i), k = (0, A.useShouldRedactExplicitContent)(l.id, i.author.id);
-                return (0, a.jsx)(ey, {
-                    canSuppressEmbeds: x,
+                    isLurking: p,
+                    isGuest: I,
+                    communicationDisabled: A,
+                    isActiveChannelOrUnarchivableThread: N
+                }), D = (0, g.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), b = (0, g.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = l.guild_id) && void 0 !== n ? n : "", (null !== (s = i.editedTimestamp) && void 0 !== s ? s : i.timestamp).valueOf()), B = (0, j.default)(null == l ? void 0 : l.id), G = (0, U.default)(i), k = (0, M.useShouldRedactExplicitContent)(l.id, i.author.id);
+                return (0, a.jsx)(eb, {
+                    canSuppressEmbeds: v,
                     canDeleteAttachments: O,
-                    ...D,
-                    disableReactionReads: !!y || D.disableReactionReads,
+                    ...y,
+                    disableReactionReads: !!R || y.disableReactionReads,
                     ...e,
-                    isLurking: I && _,
-                    isGuest: g && _,
-                    isPendingMember: T && _,
+                    isLurking: p && h,
+                    isGuest: I && h,
+                    isPendingMember: T && h,
                     isCurrentUser: L,
                     inlineAttachmentMedia: d,
                     inlineEmbedMedia: c,
                     renderEmbeds: m,
-                    gifAutoPlay: E,
+                    gifAutoPlay: _,
                     canRenderReferralEmbed: l.isDM(),
                     poll: G,
-                    showListsAndHeaders: b.showListsAndHeaders || U.showListsAndHeaders,
-                    showMaskedLinks: b.showMaskedLinks || U.showMaskedLinks,
+                    showListsAndHeaders: D.showListsAndHeaders || b.showListsAndHeaders,
+                    showMaskedLinks: D.showMaskedLinks || b.showMaskedLinks,
                     shouldHideMediaOptions: B,
-                    showClydeAiEmbeds: !!(0, ei.isNotNullish)(e.showClydeAiEmbeds) && e.showClydeAiEmbeds,
+                    showClydeAiEmbeds: !!(0, eu.isNotNullish)(e.showClydeAiEmbeds) && e.showClydeAiEmbeds,
                     shouldRedactExplicitContent: k
                 })
             }
-            ey.defaultProps = {
+            eb.defaultProps = {
                 renderEmbeds: !0,
                 compact: !1
             };
-            let eD = e => {
+            let eB = e => {
                 var t, n, s;
                 let {
                     message: l,
@@ -8154,8 +8373,8 @@
                     disableReactionCreates: d = !0,
                     disableReactionUpdates: c = !0,
                     ...f
-                } = e, m = Y.InlineAttachmentMedia.useSetting(), h = Y.InlineEmbedMedia.useSetting(), E = Y.RenderEmbeds.useSetting() && !l.author.isClyde(), _ = Y.GifAutoPlay.useSetting(), I = (0, p.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = l.editedTimestamp) && void 0 !== t ? t : l.timestamp).valueOf()), g = (0, p.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = i.guild_id) && void 0 !== n ? n : "", (null !== (s = l.editedTimestamp) && void 0 !== s ? s : l.timestamp).valueOf()), T = (0, P.default)(null == i ? void 0 : i.id), C = (0, A.useShouldRedactExplicitContent)(i.id, l.author.id);
-                return (0, a.jsx)(ey, {
+                } = e, m = K.InlineAttachmentMedia.useSetting(), E = K.InlineEmbedMedia.useSetting(), _ = K.RenderEmbeds.useSetting() && !l.author.isClyde(), h = K.GifAutoPlay.useSetting(), p = (0, g.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = l.editedTimestamp) && void 0 !== t ? t : l.timestamp).valueOf()), I = (0, g.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = i.guild_id) && void 0 !== n ? n : "", (null !== (s = l.editedTimestamp) && void 0 !== s ? s : l.timestamp).valueOf()), T = (0, j.default)(null == i ? void 0 : i.id), C = (0, M.useShouldRedactExplicitContent)(i.id, l.author.id);
+                return (0, a.jsx)(eb, {
                     ...f,
                     message: l,
                     channel: i,
@@ -8167,11 +8386,11 @@
                     renderComponentAccessory: o,
                     renderThreadAccessory: u,
                     inlineAttachmentMedia: m,
-                    inlineEmbedMedia: h,
-                    renderEmbeds: E,
-                    gifAutoPlay: _,
-                    showListsAndHeaders: I.showListsAndHeaders || g.showListsAndHeaders,
-                    showMaskedLinks: I.showMaskedLinks || g.showMaskedLinks,
+                    inlineEmbedMedia: E,
+                    renderEmbeds: _,
+                    gifAutoPlay: h,
+                    showListsAndHeaders: p.showListsAndHeaders || I.showListsAndHeaders,
+                    showMaskedLinks: p.showMaskedLinks || I.showMaskedLinks,
                     shouldHideMediaOptions: T,
                     showClydeAiEmbeds: !1,
                     shouldRedactExplicitContent: C
@@ -8182,7 +8401,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return E
                 }
             });
             var a = n("37983");
@@ -8197,35 +8416,35 @@
                 c = n("49111"),
                 f = n("450484"),
                 m = n("738766"),
-                h = e => {
+                E = e => {
                     var t;
                     let {
                         channel: n,
-                        message: h,
-                        hideParty: E
+                        message: E,
+                        hideParty: _
                     } = e, {
-                        analyticsLocations: _
+                        analyticsLocations: h
                     } = (0, i.default)(), p = (0, s.useStateFromStores)([u.default], () => u.default.getId()), I = (0, s.useStateFromStores)([d.default], () => {
-                        if (null == h.application) return d.default.findActivity(h.author.id, e => e.type === c.ActivityTypes.LISTENING);
+                        if (null == E.application) return d.default.findActivity(E.author.id, e => e.type === c.ActivityTypes.LISTENING);
                         {
                             var e;
-                            let t = h.author.id;
-                            return (null === (e = h.activity) || void 0 === e ? void 0 : e.type) === c.ActivityActionTypes.JOIN_REQUEST && (t = t === p && n.isPrivate() ? n.getRecipientId() : p), d.default.getApplicationActivity(t, h.application.id)
+                            let t = E.author.id;
+                            return (null === (e = E.activity) || void 0 === e ? void 0 : e.type) === c.ActivityActionTypes.JOIN_REQUEST && (t = t === p && n.isPrivate() ? n.getRecipientId() : p), d.default.getApplicationActivity(t, E.application.id)
                         }
-                    }, [h, n, p]);
+                    }, [E, n, p]);
                     return (0, a.jsx)(l.default, {
                         className: m.container,
                         activity: I,
-                        activityActionType: null != h.activity ? h.activity.type : null,
-                        partyId: null != h.activity ? h.activity.party_id : null,
-                        userId: h.author.id,
-                        application: null != (t = h).application ? r.default.createFromServer(t.application) : null != t.activity && null != t.activity.party_id && (0, f.isSpotifyParty)(t.activity.party_id) ? o.SpotifyApplication : void 0,
-                        message: h,
+                        activityActionType: null != E.activity ? E.activity.type : null,
+                        partyId: null != E.activity ? E.activity.party_id : null,
+                        userId: E.author.id,
+                        application: null != (t = E).application ? r.default.createFromServer(t.application) : null != t.activity && null != t.activity.party_id && (0, f.isSpotifyParty)(t.activity.party_id) ? o.SpotifyApplication : void 0,
+                        message: E,
                         channelId: n.id,
                         guildId: n.getGuildId(),
-                        hideParty: E,
-                        isSender: h.author.id === p,
-                        analyticsLocations: _
+                        hideParty: _,
+                        isSender: E.author.id === p,
+                        analyticsLocations: h
                     })
                 }
         },
@@ -8253,21 +8472,21 @@
                     applicationId: t,
                     guildId: n
                 } = e, m = (0, i.useApplication)(t), {
-                    listingsLoaded: h
-                } = (0, i.useFetchListingsForApplication)(t, null == m ? void 0 : m.primarySkuId), E = (0, s.useStateFromStores)([r.default], () => r.default.getSubscriptionGroupListingForApplication(t), [t]), _ = null != E ? (0, o.getPayableSubscriptionListing)(E) : null, {
+                    listingsLoaded: E
+                } = (0, i.useFetchListingsForApplication)(t, null == m ? void 0 : m.primarySkuId), _ = (0, s.useStateFromStores)([r.default], () => r.default.getSubscriptionGroupListingForApplication(t), [t]), h = null != _ ? (0, o.getPayableSubscriptionListing)(_) : null, {
                     openModal: p,
                     canOpenModal: I
                 } = (0, d.default)({
-                    listing: _,
+                    listing: h,
                     guildId: n,
-                    groupListingId: null == E ? void 0 : E.id,
+                    groupListingId: null == _ ? void 0 : _.id,
                     showBenefitsFirst: !0,
                     analyticsLocation: c.AnalyticsLocations.INTERACTION_RESPONSE
                 });
                 return (0, a.jsx)(u.default, {
                     size: l.Button.Sizes.MEDIUM,
                     onClick: () => p(),
-                    disabled: !I || !h,
+                    disabled: !I || !E,
                     children: f.default.Messages.INTERACTION_PREMIUM_UPSELL_CTA
                 })
             }
@@ -8293,9 +8512,9 @@
                 c = n("865343"),
                 f = n("621698"),
                 m = n("350134"),
-                h = n("782340"),
-                E = n("550244"),
-                _ = n("314934");
+                E = n("782340"),
+                _ = n("550244"),
+                h = n("314934");
             let p = (e, t) => null == e && null == t || e === t,
                 I = (e, t) => e.findIndex(e => p(e.emoji.id, null == t ? void 0 : t.id) && p(e.emoji.name, null == t ? void 0 : t.name)),
                 g = (e, t) => {
@@ -8333,7 +8552,7 @@
                         visibleReactionsCount: x
                     } = this.props, {
                         disableTransitionAppear: O
-                    } = this.state, L = A ? _ : E, R = x > 0;
+                    } = this.state, L = A ? h : _, R = x > 0;
                     return R || C ? (0, a.jsxs)(r.default, {
                         component: "div",
                         className: i(L.reactions, T),
@@ -8362,7 +8581,7 @@
                                 t.stopPropagation(), (0, m.showReactionsModal)(g, e)
                             },
                             className: i(L.reaction, S, L.remainingReactions),
-                            "aria-label": h.default.Messages.ADD_REACTION,
+                            "aria-label": E.default.Messages.ADD_REACTION,
                             children: (0, a.jsxs)(o.Text, {
                                 className: L.reactionInner,
                                 variant: "text-sm/normal",
@@ -8445,14 +8664,14 @@
                 c = n("738107"),
                 f = n("875978"),
                 m = n("350134"),
-                h = n("550244"),
-                E = n("314934");
-            let _ = s.memo(function(e) {
+                E = n("550244"),
+                _ = n("314934");
+            let h = s.memo(function(e) {
                     let t, n, {
                             useChatFontScaling: s,
                             hideEmoji: l,
                             emoji: u,
-                            className: _,
+                            className: h,
                             count: p,
                             me: I,
                             me_burst: g,
@@ -8467,7 +8686,7 @@
                         x = v === f.ReactionTypes.BURST,
                         O = (0, m.isMeReaction)(I, g, v),
                         L = (0, d.useEmojiColorPalette)(x && null != C ? C : []),
-                        R = s ? E : h,
+                        R = s ? _ : E,
                         y = x ? T : p,
                         P = (0, c.getMinCounterWidth)(y, m.REACTION_MIN_WIDTH_DIGITS),
                         D = {};
@@ -8486,7 +8705,7 @@
                         borderColor: n
                     };
                     return (0, a.jsxs)("div", {
-                        className: i(R.reaction, R.reactionInner, _, {
+                        className: i(R.reaction, R.reactionInner, h, {
                             [R.reactionMe]: O,
                             [R.reactionReadOnly]: S && !A && !M && !N
                         }),
@@ -8515,10 +8734,10 @@
                         e && !i && !o && d(() => {
                             r(!0)
                         })
-                    }, [i, o]), h = (0, u.useIsVisible)(c), E = (!i || o) && !t, p = E ? _ : m.Reaction;
+                    }, [i, o]), E = (0, u.useIsVisible)(c), _ = (!i || o) && !t, p = _ ? h : m.Reaction;
                     return (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)("div", {
-                            ref: h
+                            ref: E
                         }), n.map(e => {
                             var t, n;
                             return (0, a.jsx)(p, {
@@ -8547,9 +8766,9 @@
                 c = n("798609"),
                 f = n("63522"),
                 m = n("881536"),
-                h = n("441979"),
-                E = n("605250"),
-                _ = n("201131"),
+                E = n("441979"),
+                _ = n("605250"),
+                h = n("201131"),
                 p = n("95039"),
                 I = n("289967"),
                 g = n("866027"),
@@ -8581,8 +8800,8 @@
                 W = n("888393"),
                 K = n("548703"),
                 z = n("859316"),
-                Z = n("427655"),
-                J = n("161225"),
+                J = n("427655"),
+                Z = n("161225"),
                 X = n("41163"),
                 q = n("830220"),
                 Q = n("924399"),
@@ -8601,9 +8820,9 @@
                 ec = n("512622"),
                 ef = n("874612"),
                 em = n("703712"),
-                eh = n("659500"),
-                eE = n("387111"),
-                e_ = n("286235"),
+                eE = n("659500"),
+                e_ = n("387111"),
+                eh = n("286235"),
                 ep = n("299039"),
                 eI = n("95045"),
                 eg = n("232259"),
@@ -8645,7 +8864,7 @@
                     compact: n,
                     channel: s
                 } = e, l = (0, eg.useUsernameHook)(t.author, s.id, s.guild_id);
-                return (0, a.jsx)(J.default, {
+                return (0, a.jsx)(Z.default, {
                     message: t,
                     compact: n,
                     usernameHook: l
@@ -8663,7 +8882,7 @@
                         compact: s
                     } = e, {
                         author: i
-                    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([k.default], () => k.default.getUser(t.mentions[0]), [t]), u = eE.default.getName(null, r, o), d = (0, eg.useUsernameHook)(i, r, n.guild_id), c = (0, eg.useUsernameHook)(o, r, n.guild_id);
+                    } = t, r = t.getChannelId(), o = (0, l.useStateFromStores)([k.default], () => k.default.getUser(t.mentions[0]), [t]), u = e_.default.getName(null, r, o), d = (0, eg.useUsernameHook)(i, r, n.guild_id), c = (0, eg.useUsernameHook)(o, r, n.guild_id);
                     return n.isThread() ? (0, a.jsx)(eu.default, {
                         message: t,
                         channel: n,
@@ -8715,14 +8934,14 @@
                     } = e, {
                         id: r,
                         author: o
-                    } = t, d = P.default.getId(), c = t.getChannelId(), f = (0, l.useStateFromStores)([D.default], () => D.default.isCallActive(c, r), [c, r]), m = (0, l.useStateFromStores)([w.default], () => w.default.getVoiceState(eT.ME, d)), h = !f && null != t.call && !t.call.participants.includes(d), E = f && (null == m || m.channelId !== c), _ = s.useCallback(() => u.default.selectVoiceChannel(c), [c]), p = (0, eg.useUsernameHook)(o, c, i.guild_id);
+                    } = t, d = P.default.getId(), c = t.getChannelId(), f = (0, l.useStateFromStores)([D.default], () => D.default.isCallActive(c, r), [c, r]), m = (0, l.useStateFromStores)([w.default], () => w.default.getVoiceState(eT.ME, d)), E = !f && null != t.call && !t.call.participants.includes(d), _ = f && (null == m || m.channelId !== c), h = s.useCallback(() => u.default.selectVoiceChannel(c), [c]), p = (0, eg.useUsernameHook)(o, c, i.guild_id);
                     return (0, a.jsx)(Y.default, {
                         compact: n,
                         message: t,
-                        missed: h,
-                        joinable: E,
+                        missed: E,
+                        joinable: _,
                         usernameHook: p,
-                        onClickJoinCall: _
+                        onClickJoinCall: h
                     })
                 },
                 [eT.MessageTypes.CHANNEL_NAME_CHANGE]: function(e) {
@@ -8766,9 +8985,9 @@
                             let e = j.default.getChannel(r);
                             null != e && (0, M.transitionToGuild)(e.guild_id, e.id)
                         }
-                        setTimeout(() => eh.ComponentDispatch.dispatch(eT.ComponentActions.TOGGLE_CHANNEL_PINS), 0)
+                        setTimeout(() => eE.ComponentDispatch.dispatch(eT.ComponentActions.TOGGLE_CHANNEL_PINS), 0)
                     }, [r]), u = (0, eg.useUsernameHook)(i, r, l.guild_id);
-                    return (0, a.jsx)(Z.default, {
+                    return (0, a.jsx)(J.default, {
                         message: t,
                         compact: n,
                         usernameHook: u,
@@ -8823,21 +9042,21 @@
                             id: o
                         },
                         messageReference: u
-                    } = t, c = t.getChannelId(), f = (0, l.useStateFromStores)([B.default], () => B.default.findActivity(o, e => e.type === eT.ActivityTypes.PLAYING), [o]), m = (0, l.useStateFromStores)([j.default], () => null != u ? j.default.getChannel(u.channel_id) : null, [u]), h = null == u ? void 0 : u.guild_id, E = (0, eg.useUsernameHook)(r, c, i.guild_id), _ = s.useCallback(() => {
-                        null != m && null != h && (0, d.watchStreamAndTransitionToStream)({
+                    } = t, c = t.getChannelId(), f = (0, l.useStateFromStores)([B.default], () => B.default.findActivity(o, e => e.type === eT.ActivityTypes.PLAYING), [o]), m = (0, l.useStateFromStores)([j.default], () => null != u ? j.default.getChannel(u.channel_id) : null, [u]), E = null == u ? void 0 : u.guild_id, _ = (0, eg.useUsernameHook)(r, c, i.guild_id), h = s.useCallback(() => {
+                        null != m && null != E && (0, d.watchStreamAndTransitionToStream)({
                             streamType: eC.StreamTypes.GUILD,
                             ownerId: o,
                             channelId: m.id,
-                            guildId: h
+                            guildId: E
                         })
-                    }, [o, m, h]);
+                    }, [o, m, E]);
                     return null != u && null != m && null != u.guild_id ? (0, a.jsx)($.default, {
                         message: t,
                         compact: n,
                         channel: m,
                         playingActivity: f,
-                        onJoinStream: _,
-                        usernameHook: E
+                        onJoinStream: h,
+                        usernameHook: _
                     }) : null
                 },
                 [eT.MessageTypes.GUILD_DISCOVERY_DISQUALIFIED]: function(e) {
@@ -8924,7 +9143,7 @@
                         compact: n,
                         channel: s
                     } = e;
-                    return (0, _.isAutomodMessageRecord)(t) ? (0, a.jsx)(V.default, {
+                    return (0, h.isAutomodMessageRecord)(t) ? (0, a.jsx)(V.default, {
                         message: t,
                         compact: n,
                         channel: s
@@ -9019,13 +9238,13 @@
                         message: s,
                         channel: r,
                         compact: u
-                    } = e, d = (0, eg.useUsernameHook)(s.author, r.id, r.guild_id), c = (0, l.useStateFromStores)([U.default], () => U.default.can(eT.Permissions.MUTE_MEMBERS, r)), f = (0, l.useStateFromStores)([x.default], () => x.default.getParticipant(r.id, s.author.id)), m = new Date(ep.default.extractTimestamp(s.id)).toISOString() === new Date(null !== (n = null == f ? void 0 : null === (t = f.voiceState) || void 0 === t ? void 0 : t.requestToSpeakTimestamp) && void 0 !== n ? n : 0).toISOString(), h = c && (null == f ? void 0 : f.rtsState) === O.RequestToSpeakStates.REQUESTED_TO_SPEAK && m;
+                    } = e, d = (0, eg.useUsernameHook)(s.author, r.id, r.guild_id), c = (0, l.useStateFromStores)([U.default], () => U.default.can(eT.Permissions.MUTE_MEMBERS, r)), f = (0, l.useStateFromStores)([x.default], () => x.default.getParticipant(r.id, s.author.id)), m = new Date(ep.default.extractTimestamp(s.id)).toISOString() === new Date(null !== (n = null == f ? void 0 : null === (t = f.voiceState) || void 0 === t ? void 0 : t.requestToSpeakTimestamp) && void 0 !== n ? n : 0).toISOString(), E = c && (null == f ? void 0 : f.rtsState) === O.RequestToSpeakStates.REQUESTED_TO_SPEAK && m;
                     return (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(es.default, {
                             message: s,
                             compact: u,
                             usernameHook: d
-                        }), h ? (0, a.jsxs)(i.Button, {
+                        }), E ? (0, a.jsxs)(i.Button, {
                             wrapperClassName: eA.inviteToSpeakButtonWrapper,
                             innerClassName: eA.inviteToSpeakButtonInner,
                             look: i.Button.Looks.FILLED,
@@ -9062,7 +9281,7 @@
                         channel: n,
                         compact: s
                     } = e;
-                    return (0, a.jsx)(h.default, {
+                    return (0, a.jsx)(E.default, {
                         message: t,
                         channel: n,
                         compact: s
@@ -9104,7 +9323,7 @@
                 } = t, i = ev[l];
                 if (null == i) {
                     var r;
-                    return r = Error("unknown message type ".concat(t.type)), e_.default.captureException(r), new(0, E.default)("SystemMessage").error("", r), null
+                    return r = Error("unknown message type ".concat(t.type)), eh.default.captureException(r), new(0, _.default)("SystemMessage").error("", r), null
                 }
                 return (0, a.jsx)(F.default, {
                     message: t,
@@ -9220,9 +9439,9 @@
                 c = n("836417"),
                 f = n("377253"),
                 m = n("697218"),
-                h = n("659500"),
-                E = n("791776"),
-                _ = n("568734"),
+                E = n("659500"),
+                _ = n("791776"),
+                h = n("568734"),
                 p = n("773336"),
                 I = n("158998"),
                 g = n("441823"),
@@ -9251,7 +9470,7 @@
                             decoration: "never"
                         })),
                         i = "<@".concat(e, ">");
-                    h.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.INSERT_TEXT, {
+                    E.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.INSERT_TEXT, {
                         plainText: l,
                         rawText: i
                     }), o.default.startTyping(t)
@@ -9299,10 +9518,10 @@
                     id: o
                 } = t, {
                     id: m,
-                    flags: h
-                } = e, E = (0, _.hasFlag)(h, S.MessageFlags.EPHEMERAL), I = (0, T.default)(e), g = (0, u.useAppContext)();
+                    flags: E
+                } = e, _ = (0, h.hasFlag)(E, S.MessageFlags.EPHEMERAL), I = (0, T.default)(e), g = (0, u.useAppContext)();
                 return s.useCallback((e, t) => {
-                    if (E) return;
+                    if (_) return;
                     if (!p.isPlatformEmbedded) {
                         let t = e.target;
                         if ("A" === t.tagName && "" !== t.textContent || null == window.getSelection) return;
@@ -9311,8 +9530,8 @@
                     }
                     let s = d.default.getChannel(o),
                         u = f.default.getMessage(o, m),
-                        h = c.default.isEditing(o, m);
-                    null != s && null != u && !h && (l({
+                        E = c.default.isEditing(o, m);
+                    null != s && null != u && !E && (l({
                         contextMenu: !0
                     }), (0, i.openContextMenuLazy)(e, async () => {
                         if (I) {
@@ -9343,7 +9562,7 @@
                         }),
                         context: g
                     }))
-                }, [E, o, m, l, g, I, r])
+                }, [_, o, m, l, g, I, r])
             }
 
             function j(e, t) {
@@ -9391,10 +9610,10 @@
                     [i, r] = s.useState(n);
                 l.current = i || l.current;
                 let o = s.useCallback(() => {
-                        !i && (h.ComponentDispatch.dispatchKeyed(S.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, a, !0), r(!0))
+                        !i && (E.ComponentDispatch.dispatchKeyed(S.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, a, !0), r(!0))
                     }, [i, a]),
                     u = s.useCallback(() => {
-                        h.ComponentDispatch.dispatchKeyed(S.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, a, !1), r(!1)
+                        E.ComponentDispatch.dispatchKeyed(S.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, a, !1), r(!1)
                     }, [a]);
                 return {
                     hasHovered: l.current,
@@ -9407,11 +9626,11 @@
             function k(e, t) {
                 let [n, a] = s.useState(!1), [l, i] = s.useState(!1), r = s.useCallback(t => {
                     var n, s;
-                    let l = null !== (s = null === (n = (0, E.eventOwnerDocument)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;
+                    let l = null !== (s = null === (n = (0, _.eventOwnerDocument)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;
                     (t.target === t.currentTarget || t.currentTarget.contains(l)) && (i(!0), a(!0)), null != e && e(t)
                 }, [e]), o = s.useCallback(e => {
                     var n, s;
-                    let l = null !== (s = null === (n = (0, E.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;
+                    let l = null !== (s = null === (n = (0, _.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== s ? s : null;
                     (e.target === e.currentTarget || !e.currentTarget.contains(l)) && a(!1), null != t && t(e)
                 }, [t]);
                 return {
@@ -9514,11 +9733,11 @@
                     message: c,
                     channel: f,
                     enabled: m = !0
-                } = e, h = (0, l.useStateFromStores)([r.default], () => {
+                } = e, E = (0, l.useStateFromStores)([r.default], () => {
                     var e;
                     let t = r.default.getGuild(f.guild_id);
                     return null !== (e = null == t ? void 0 : t.hasFeature(d.GuildFeatures.COMMUNITY)) && void 0 !== e && e
-                }, [f.guild_id]), E = (null === (t = c.messageReference) || void 0 === t ? void 0 : t.guild_id) != null && null != c.webhookId && c.hasFlag(d.MessageFlags.IS_CROSSPOST) && null != f.guild_id, _ = f.type === s.ChannelTypes.GUILD_ANNOUNCEMENT && h, p = !c.hasFlag(d.MessageFlags.EPHEMERAL) && (E || _), I = E && null != c.messageReference ? c.messageReference.message_id : c.id, g = E && null != c.messageReference ? c.messageReference.channel_id : f.id, T = E && (null === (n = c.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? c.messageReference.guild_id : f.guild_id, C = a.useCallback(e => {
+                }, [f.guild_id]), _ = (null === (t = c.messageReference) || void 0 === t ? void 0 : t.guild_id) != null && null != c.webhookId && c.hasFlag(d.MessageFlags.IS_CROSSPOST) && null != f.guild_id, h = f.type === s.ChannelTypes.GUILD_ANNOUNCEMENT && E, p = !c.hasFlag(d.MessageFlags.EPHEMERAL) && (_ || h), I = _ && null != c.messageReference ? c.messageReference.message_id : c.id, g = _ && null != c.messageReference ? c.messageReference.channel_id : f.id, T = _ && (null === (n = c.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? c.messageReference.guild_id : f.guild_id, C = a.useCallback(e => {
                     e ? u.default.handleMessageBecameVisible({
                         messageId: I,
                         channelId: f.id,
@@ -9555,9 +9774,9 @@
                 c = n("77078"),
                 f = n("970728"),
                 m = n("191225"),
-                h = n("969380"),
-                E = n("817039"),
-                _ = n("812204"),
+                E = n("969380"),
+                _ = n("817039"),
+                h = n("812204"),
                 p = n("685665"),
                 I = n("442939"),
                 g = n("419830"),
@@ -9691,11 +9910,11 @@
                 }, [H, V, W]);
                 let K = (0, u.useStateFromStores)([S.default], () => null != d.guild ? S.default.getGuild(d.guild.id) : null, [d]),
                     z = (0, I.default)([w.id])[0],
-                    Z = (0, u.useStateFromStores)([m.default], () => {
+                    J = (0, u.useStateFromStores)([m.default], () => {
                         var e;
                         return (null == d ? void 0 : d.channel) != null && (null === (e = m.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.application_id) === w.id
                     }),
-                    J = (0, u.useStateFromStores)([m.default], () => {
+                    Z = (0, u.useStateFromStores)([m.default], () => {
                         var e;
                         let t = (null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? m.default.getEmbeddedActivitiesForChannel(d.channel.id) : [];
                         return t.some(e => {
@@ -9709,8 +9928,8 @@
                     q = (0, u.useStateFromStores)([A.default], () => null != X && A.default.can(R.Permissions.USE_EMBEDDED_ACTIVITIES, X), [X]),
                     {
                         analyticsLocations: Q
-                    } = (0, p.default)(_.default.INVITE_EMBED),
-                    $ = (0, h.default)({
+                    } = (0, p.default)(h.default.INVITE_EMBED),
+                    $ = (0, E.default)({
                         applicationId: w.id,
                         size: j
                     }),
@@ -9722,7 +9941,7 @@
                     if (null == d.guild) return (0, a.jsx)(L.default, {});
                     K = new T.default(d.guild)
                 }
-                let es = ea && !q || ea && Z,
+                let es = ea && !q || ea && J,
                     el = () => {
                         f.default.acceptInviteAndTransitionToInviteChannel({
                             inviteKey: d.code,
@@ -9730,7 +9949,7 @@
                             analyticsLocations: Q
                         })
                     };
-                return (ea && Z && (l = P.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !q && (l = P.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Z ? P.default.Messages.INVITE_EMBED_JOINED : J || !ea ? P.default.Messages.JOIN : P.default.Messages.START, null == d.code || "" === d.code) ? null : (0, a.jsxs)("div", {
+                return (ea && J && (l = P.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !q && (l = P.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = J ? P.default.Messages.INVITE_EMBED_JOINED : Z || !ea ? P.default.Messages.JOIN : P.default.Messages.START, null == d.code || "" === d.code) ? null : (0, a.jsxs)("div", {
                     className: D.container,
                     ref: H,
                     children: [(0, a.jsx)("div", {
@@ -9738,7 +9957,7 @@
                             [D.large]: F,
                             [D.stacked]: Y
                         }),
-                        children: (0, a.jsx)(E.default, {
+                        children: (0, a.jsx)(_.default, {
                             imageBackground: $,
                             applicationName: null !== (n = null == z ? void 0 : z.name) && void 0 !== n ? n : "",
                             imageClassName: i(D.img, {
@@ -9767,14 +9986,14 @@
                                 channel: X,
                                 guild: K,
                                 isStacked: Y,
-                                hasEnded: !J
+                                hasEnded: !Z
                             })]
                         }), (0, a.jsxs)("div", {
                             className: i(D.currentState, {
                                 [D.large]: F,
-                                [D.split]: !J && Y
+                                [D.split]: !Z && Y
                             }),
-                            children: [!J && ea ? (0, a.jsxs)("div", {
+                            children: [!Z && ea ? (0, a.jsxs)("div", {
                                 className: i(D.endedNote, {
                                     [D.large]: F
                                 }),
@@ -9792,7 +10011,7 @@
                                 isStacked: Y
                             }), (0, a.jsxs)("div", {
                                 className: D.cta,
-                                children: [null != K && J ? (0, a.jsx)("div", {
+                                children: [null != K && Z ? (0, a.jsx)("div", {
                                     className: D.avatars,
                                     children: (0, a.jsx)(x.default, {
                                         guildId: K.id,
@@ -9846,7 +10065,7 @@
                 let {
                     author: u,
                     inviteError: d
-                } = e, c = (0, s.useStateFromStores)([l.default], () => l.default.getId()), f = c === u.id, m = f ? o.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID : o.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, h = (0, r.getDescriptiveInviteError)(null == d ? void 0 : d.code);
+                } = e, c = (0, s.useStateFromStores)([l.default], () => l.default.getId()), f = c === u.id, m = f ? o.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID : o.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, E = (0, r.getDescriptiveInviteError)(null == d ? void 0 : d.code);
                 return (0, a.jsxs)(i.default, {
                     children: [(0, a.jsx)(i.default.Header, {
                         text: m
@@ -9855,8 +10074,8 @@
                             expired: !0
                         }), (0, a.jsx)(i.default.Info, {
                             expired: !0,
-                            title: null !== (t = null == h ? void 0 : h.title) && void 0 !== t ? t : o.default.Messages.INVITE_BUTTON_INVALID,
-                            children: null !== (n = null == h ? void 0 : h.description) && void 0 !== n ? n : null == d ? void 0 : d.message
+                            title: null !== (t = null == E ? void 0 : E.title) && void 0 !== t ? t : o.default.Messages.INVITE_BUTTON_INVALID,
+                            children: null !== (n = null == E ? void 0 : E.description) && void 0 !== n ? n : null == d ? void 0 : d.message
                         })]
                     })]
                 })
@@ -9880,16 +10099,16 @@
                 c = n("27618"),
                 f = n("174622"),
                 m = n("158998"),
-                h = n("49111"),
-                E = n("782340"),
-                _ = n("18978");
+                E = n("49111"),
+                _ = n("782340"),
+                h = n("18978");
 
             function p(e) {
                 var t;
                 let {
                     invite: n,
                     getAcceptInviteContext: p
-                } = e, I = (0, l.useStateFromStores)([u.default], () => u.default.getId()), g = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === I, T = n.state === h.InviteStates.ACCEPTING, C = (0, l.useStateFromStores)([c.default], () => {
+                } = e, I = (0, l.useStateFromStores)([u.default], () => u.default.getId()), g = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === I, T = n.state === E.InviteStates.ACCEPTING, C = (0, l.useStateFromStores)([c.default], () => {
                     var e;
                     return null != n.inviter && c.default.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id)
                 }), S = s.useCallback(() => {
@@ -9906,10 +10125,10 @@
                 }, [n.code, p]);
                 if (null == n.inviter) return null;
                 let N = C ? S : A,
-                    M = E.default.Messages.INVITE_BUTTON_ADD_FRIEND,
+                    M = _.default.Messages.INVITE_BUTTON_ADD_FRIEND,
                     v = f.default.Button.Colors.GREEN;
-                C ? (M = E.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, v = f.default.Button.Colors.PRIMARY) : g && (M = E.default.Messages.INVITE_BUTTON_ADD_FRIEND, v = f.default.Button.Colors.PRIMARY);
-                let x = g ? E.default.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : E.default.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
+                C ? (M = _.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, v = f.default.Button.Colors.PRIMARY) : g && (M = _.default.Messages.INVITE_BUTTON_ADD_FRIEND, v = f.default.Button.Colors.PRIMARY);
+                let x = g ? _.default.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : _.default.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
                     O = null != n.inviter ? "".concat(n.inviter.username) : "",
                     L = null != n.inviter ? m.default.getUserTag(n.inviter) : "";
                 return (0, a.jsxs)(f.default, {
@@ -9917,7 +10136,7 @@
                         text: x
                     }), (0, a.jsxs)(f.default.Body, {
                         children: [(0, a.jsxs)("div", {
-                            className: _.headerLine,
+                            className: h.headerLine,
                             children: [(0, a.jsx)(f.default.Icon, {
                                 user: new o.default(n.inviter),
                                 onClick: C ? N : void 0
@@ -9941,7 +10160,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return h
                 }
             }), n("808653"), n("424973");
             var a = n("37983");
@@ -9956,18 +10175,18 @@
                 c = n("449008"),
                 f = n("793079"),
                 m = n("49111"),
-                h = n("782340"),
-                E = n("18978");
+                E = n("782340"),
+                _ = n("18978");
 
-            function _(e) {
+            function h(e) {
                 let t, {
                         invite: n,
                         author: s,
-                        currentUserId: _,
+                        currentUserId: h,
                         onTransitionToInviteChannel: p,
                         onAcceptInstantInvite: I
                     } = e,
-                    g = _ === s.id,
+                    g = h === s.id,
                     T = n.state === m.InviteStates.ACCEPTING,
                     C = (0, i.useStateFromStores)([o.default], () => null != n.channel ? o.default.getChannel(n.channel.id) : null, [n]);
                 l(null == C || C.isPrivate(), "must be a private channel");
@@ -9984,18 +10203,18 @@
                     S && null != e && t.push(e)
                 }
                 let A = C.name;
-                (null == A || "" === A) && (A = t.length > 0 ? t.filter(c.isNotNullish).map(e => e.username).join(", ") : h.default.Messages.UNNAMED);
+                (null == A || "" === A) && (A = t.length > 0 ? t.filter(c.isNotNullish).map(e => e.username).join(", ") : E.default.Messages.UNNAMED);
                 let N = S ? p : I,
-                    M = h.default.Messages.JOIN_GUILD,
+                    M = E.default.Messages.JOIN_GUILD,
                     v = d.default.Button.Colors.GREEN;
-                S && (M = h.default.Messages.JOINED_GUILD, v = d.default.Button.Colors.PRIMARY);
-                let x = h.default.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
-                return g && (x = h.default.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, a.jsxs)(d.default, {
+                S && (M = E.default.Messages.JOINED_GUILD, v = d.default.Button.Colors.PRIMARY);
+                let x = E.default.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+                return g && (x = E.default.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, a.jsxs)(d.default, {
                     children: [(0, a.jsx)(d.default.Header, {
                         text: x
                     }), (0, a.jsxs)(d.default.Body, {
                         children: [(0, a.jsxs)("div", {
-                            className: E.headerLine,
+                            className: _.headerLine,
                             children: [(0, a.jsx)(d.default.Icon, {
                                 channel: C,
                                 onClick: S ? N : void 0
@@ -10036,9 +10255,9 @@
                 c = n("427459"),
                 f = n("665618"),
                 m = n("605953"),
-                h = n("793079"),
-                E = n("49111"),
-                _ = n("782340"),
+                E = n("793079"),
+                _ = n("49111"),
+                h = n("782340"),
                 p = n("18978");
 
             function I(e) {
@@ -10057,16 +10276,16 @@
                         approximate_member_count: R,
                         approximate_presence_count: y
                     } = M,
-                    P = M.state === E.InviteStates.ACCEPTING,
+                    P = M.state === _.InviteStates.ACCEPTING,
                     D = null != L ? (0, r.createChannelRecordFromInvite)(L) : null,
                     j = null != N,
                     b = null != D,
                     U = null != D && D.isGuildVocal(),
                     B = null != D && D.isGuildStageVoice(),
                     G = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, s.GuildInviteFlags.IS_GUEST_INVITE),
-                    k = null !== (I = null == N ? void 0 : N.hasFeature(E.GuildFeatures.HUB)) && void 0 !== I && I;
+                    k = null !== (I = null == N ? void 0 : N.hasFeature(_.GuildFeatures.HUB)) && void 0 !== I && I;
                 if (null == N) {
-                    if (null == M.guild) return (0, a.jsx)(h.default, {});
+                    if (null == M.guild) return (0, a.jsx)(E.default, {});
                     N = f.fromInviteGuild(M.guild);
                     let e = (0, c.getGuildTierFromAppliedBoostCount)(M.guild.premium_subscription_count, M.guild.id);
                     N.premiumTier = e
@@ -10094,7 +10313,7 @@
                     })]
                 }), G && (C = (0, a.jsx)(l.TooltipContainer, {
                     className: p.tooltipContainer,
-                    text: _.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
+                    text: h.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
                     children: (0, a.jsx)(u.default, {
                         className: p.infoIcon
                     })
@@ -10102,7 +10321,7 @@
                     channel: D
                 }), g = (0, a.jsxs)("span", {
                     className: p.infoTitle,
-                    children: [_.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
+                    children: [h.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
                         guildName: N.name
                     }), (0, a.jsx)("span", {
                         className: p.infoBadge,
@@ -10137,15 +10356,15 @@
                             onClick: w,
                             submitting: P,
                             color: o.default.Button.Colors.GREEN,
-                            children: U ? B ? _.default.Messages.STAGE_CHANNEL_JOIN : _.default.Messages.INVITE_VOICE_CHANNEL_JOIN : j ? _.default.Messages.JOINED_GUILD : _.default.Messages.JOIN_GUILD
+                            children: U ? B ? h.default.Messages.STAGE_CHANNEL_JOIN : h.default.Messages.INVITE_VOICE_CHANNEL_JOIN : j ? h.default.Messages.JOINED_GUILD : h.default.Messages.JOIN_GUILD
                         })]
-                    }), N.hasFeature(E.GuildFeatures.HUB) && (0, a.jsxs)(a.Fragment, {
+                    }), N.hasFeature(_.GuildFeatures.HUB) && (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)("div", {
                             className: p.separator
                         }), (0, a.jsx)(l.Text, {
                             variant: "text-sm/normal",
                             color: "header-secondary",
-                            children: _.default.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
+                            children: h.default.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
                                 onClick: () => (0, l.openModalLazy)(async () => {
                                     let {
                                         default: e
@@ -10164,7 +10383,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return E
                 }
             });
             var a = n("37983");
@@ -10180,22 +10399,22 @@
                 f = n("782340"),
                 m = n("18978");
 
-            function h(e) {
-                let t, n, h, {
-                        author: E,
-                        banned: _
+            function E(e) {
+                let t, n, E, {
+                        author: _,
+                        banned: h
                     } = e,
                     p = (0, s.useStateFromStores)([i.default], () => i.default.getId()),
                     I = (0, s.useStateFromStores)([r.default], () => r.default.getChannelId()),
-                    g = d.default.useName(E),
-                    T = p === E.id;
-                return T ? (t = f.default.Messages.INVITE_BUTTON_INVALID_OWNER, h = f.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (h = f.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, _ ? t = f.default.Messages.INSTANT_INVITE_BANNED_INFO : null != g ? (t = f.default.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
+                    g = d.default.useName(_),
+                    T = p === _.id;
+                return T ? (t = f.default.Messages.INVITE_BUTTON_INVALID_OWNER, E = f.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (E = f.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, h ? t = f.default.Messages.INSTANT_INVITE_BANNED_INFO : null != g ? (t = f.default.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
                     username: g
                 }), n = (0, a.jsx)(o.default.Button, {
                     onClick: function() {
                         let {
                             id: e
-                        } = E, t = "@".concat(d.default.getUserTag(E, {
+                        } = _, t = "@".concat(d.default.getUserTag(_, {
                             decoration: "never"
                         }));
                         u.ComponentDispatch.dispatchToLastSubscribed(c.ComponentActions.INSERT_TEXT, {
@@ -10206,7 +10425,7 @@
                     children: f.default.Messages.MENTION
                 })) : t = f.default.Messages.INSTANT_INVITE_ASK_FOR_NEW_INVITE), (0, a.jsxs)(o.default, {
                     children: [(0, a.jsx)(o.default.Header, {
-                        text: h
+                        text: E
                     }), (0, a.jsxs)(o.default.Body, {
                         children: [(0, a.jsxs)("div", {
                             className: m.headerLine,
@@ -10292,9 +10511,9 @@
                 c = n("174622"),
                 f = n("793079"),
                 m = n("49111"),
-                h = n("91366"),
-                E = n("782340"),
-                _ = n("18978");
+                E = n("91366"),
+                _ = n("782340"),
+                h = n("18978");
 
             function p(e) {
                 let t, n, s, {
@@ -10308,14 +10527,14 @@
                     A = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
                     N = (0, i.useStateFromStores)([u.default], () => null != p && null != p.target_user ? u.default.getActiveStreamForUser(p.target_user.id, S) : null, [p, S]),
                     M = (0, i.useStateFromStores)([u.default], () => null != p && null != p.target_user ? u.default.getStreamForUser(p.target_user.id, S) : null, [p, S]),
-                    v = null != p && p.target_type === h.InviteTargetTypes.STREAM && null != p.target_user && null != N,
+                    v = null != p && p.target_type === E.InviteTargetTypes.STREAM && null != p.target_user && null != N,
                     x = null != p && null != M && null != p.channel && null != p.guild && M.channelId === p.channel.id && M.guildId === p.guild.id;
                 l(null != p, "Invite cannot be null");
                 let {
                     target_type: O,
                     target_user: L
                 } = p;
-                l(O === h.InviteTargetTypes.STREAM && null != L, "invalid streaming invite");
+                l(O === E.InviteTargetTypes.STREAM && null != L, "invalid streaming invite");
                 let R = I === L.id,
                     y = p.state === m.InviteStates.ACCEPTING,
                     P = null != g;
@@ -10325,22 +10544,22 @@
                 }
                 let D = null != p.channel ? (0, r.createChannelRecordFromInvite)(p.channel) : null,
                     j = v ? T : C;
-                P && !x ? s = R ? E.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : E.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
+                P && !x ? s = R ? _.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : _.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
                     name: L.username
-                }) : (t = E.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, v && (t = E.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), s = R ? E.default.Messages.INVITE_BUTTON_STREAMER : E.default.Messages.INVITE_BUTTON_STREAMING.format({
+                }) : (t = _.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, v && (t = _.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), s = R ? _.default.Messages.INVITE_BUTTON_STREAMER : _.default.Messages.INVITE_BUTTON_STREAMING.format({
                     name: L.username
                 }));
                 let b = A === g.id && null != D ? (0, a.jsx)(c.default.Channel, {
                     channel: D
-                }) : E.default.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
+                }) : _.default.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
                     guildName: g.name
                 });
                 return (0, a.jsxs)(c.default, {
                     children: [(0, a.jsx)(c.default.Header, {
-                        text: E.default.Messages.INVITE_BUTTON_TITLE_STREAMING
+                        text: _.default.Messages.INVITE_BUTTON_TITLE_STREAMING
                     }), (0, a.jsxs)(c.default.Body, {
                         children: [(0, a.jsxs)("div", {
-                            className: _.headerLine,
+                            className: h.headerLine,
                             children: [(0, a.jsx)(c.default.Icon, {
                                 guild: g,
                                 onClick: P && x ? j : void 0
@@ -10365,7 +10584,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return _
                 }
             });
             var a = n("37983"),
@@ -10379,42 +10598,42 @@
                 c = n("599110"),
                 f = n("49111"),
                 m = n("782340"),
-                h = n("18978");
+                E = n("18978");
 
-            function E(e) {
+            function _(e) {
                 var t;
                 let {
                     guild: n,
-                    channel: E,
-                    messageData: _
+                    channel: _,
+                    messageData: h
                 } = e, p = u.default.getGuildId(), I = o.default.getChannelId(p), g = s.useCallback(() => {
                     var e;
                     c.default.track(f.AnalyticEvents.CHANNEL_LINK_PREVIEW_JOINED, {
-                        author_id: null === (e = _.author) || void 0 === e ? void 0 : e.id,
+                        author_id: null === (e = h.author) || void 0 === e ? void 0 : e.id,
                         link_guild_id: n.id,
-                        link_channel_id: E.id,
-                        link_channel_type: E.type,
+                        link_channel_id: _.id,
+                        link_channel_type: _.type,
                         guild_id: p,
                         channel_id: I
-                    }), (0, i.transitionToChannel)(n.id, E.id), l.default.selectVoiceChannel(E.id)
-                }, [null === (t = _.author) || void 0 === t ? void 0 : t.id, n.id, E.id, E.type, p, I]), T = (0, a.jsx)(d.default.Channel, {
-                    channel: E
+                    }), (0, i.transitionToChannel)(n.id, _.id), l.default.selectVoiceChannel(_.id)
+                }, [null === (t = h.author) || void 0 === t ? void 0 : t.id, n.id, _.id, _.type, p, I]), T = (0, a.jsx)(d.default.Channel, {
+                    channel: _
                 });
                 return (0, a.jsx)(d.default, {
                     children: (0, a.jsxs)(d.default.Body, {
                         children: [(0, a.jsxs)("div", {
-                            className: h.headerLine,
+                            className: E.headerLine,
                             children: [(0, a.jsx)(d.default.Icon, {
                                 guild: n
                             }), (0, a.jsx)(d.default.Info, {
                                 title: T,
                                 onClick: g,
                                 children: (0, a.jsxs)("span", {
-                                    className: h.infoTitle,
+                                    className: E.infoTitle,
                                     children: [m.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
                                         guildName: n.name
                                     }), (0, a.jsx)("span", {
-                                        className: h.infoBadge,
+                                        className: E.infoBadge,
                                         children: (0, a.jsx)(r.default, {
                                             guild: n,
                                             isBannerVisible: !1
@@ -10425,7 +10644,7 @@
                         }), (0, a.jsx)(d.default.Button, {
                             onClick: g,
                             color: d.default.Button.Colors.GREEN,
-                            children: E.isGuildStageVoice() ? m.default.Messages.STAGE_CHANNEL_JOIN : m.default.Messages.JOIN_VOICE
+                            children: _.isGuildStageVoice() ? m.default.Messages.STAGE_CHANNEL_JOIN : m.default.Messages.JOIN_VOICE
                         })]
                     })
                 })
@@ -10460,14 +10679,14 @@
                     renderThreadAccessory: c,
                     renderComponentAccessory: f,
                     renderSuppressEmbeds: m,
-                    showClydeAiEmbeds: h,
-                    forceAddReactions: E,
-                    className: _
+                    showClydeAiEmbeds: E,
+                    forceAddReactions: _,
+                    className: h
                 } = e;
                 return d ? null : (0, a.jsx)(s.default, {
                     message: t,
                     children: (0, a.jsx)(l.default, {
-                        className: _,
+                        className: h,
                         isInteracting: u,
                         message: t,
                         channel: n,
@@ -10477,8 +10696,8 @@
                         renderThreadAccessory: c,
                         renderComponentAccessory: f,
                         renderSuppressEmbeds: m,
-                        showClydeAiEmbeds: h,
-                        forceAddReactions: E
+                        showClydeAiEmbeds: E,
+                        forceAddReactions: _
                     })
                 })
             }
@@ -10585,18 +10804,18 @@
                     channel: n,
                     referencedMessage: c,
                     compact: f = !1
-                } = e, m = c.state === i.ReferencedMessageState.LOADED ? c.message : void 0, h = s.useMemo(() => (null == m ? void 0 : m.content) != null && "" !== m.content ? (0, u.default)(m, {
+                } = e, m = c.state === i.ReferencedMessageState.LOADED ? c.message : void 0, E = s.useMemo(() => (null == m ? void 0 : m.content) != null && "" !== m.content ? (0, u.default)(m, {
                     formatInline: !0
-                }).content : null, [m]), E = (0, l.useStateFromStores)([r.default], () => null != m && r.default.isBlocked(m.author.id), [m]), _ = (0, d.useNullableMessageAuthor)(m), p = (0, d.useNullableMessageAuthor)(t);
+                }).content : null, [m]), _ = (0, l.useStateFromStores)([r.default], () => null != m && r.default.isBlocked(m.author.id), [m]), h = (0, d.useNullableMessageAuthor)(m), p = (0, d.useNullableMessageAuthor)(t);
                 return (0, a.jsx)(o.default, {
-                    repliedAuthor: _,
+                    repliedAuthor: h,
                     baseAuthor: p,
                     baseMessage: t,
                     channel: n,
                     referencedMessage: c,
-                    content: h,
+                    content: E,
                     compact: f,
-                    isReplyAuthorBlocked: E
+                    isReplyAuthorBlocked: _
                 })
             });
 
@@ -10613,7 +10832,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return _
                 }
             }), n("424973");
             var a = n("37983");
@@ -10628,7 +10847,7 @@
                 c = n("449008"),
                 f = n("49111"),
                 m = n("683168");
-            let h = (0, r.default)(e => {
+            let E = (0, r.default)(e => {
                 let {
                     member: t,
                     empty: n,
@@ -10672,7 +10891,7 @@
                     })
                 })
             });
-            var E = e => {
+            var _ = e => {
                 let {
                     partySize: t,
                     members: n,
@@ -10685,22 +10904,22 @@
                     knownSize: d
                 } = t;
                 if (u < s) return null;
-                let f = l(n).filter(c.isNotNullish).take(i).map(e => (0, a.jsx)(h, {
+                let f = l(n).filter(c.isNotNullish).take(i).map(e => (0, a.jsx)(E, {
                     member: e,
                     guildId: r
                 }, e.id)).value();
-                for (let e = 0; e < o && f.length < i; e++) f.push((0, a.jsx)(h, {
+                for (let e = 0; e < o && f.length < i; e++) f.push((0, a.jsx)(E, {
                     guildId: r
                 }, "unknown-member-".concat(e)));
-                let E = u - d - o;
-                for (let e = 0; e < E && f.length < i; e++) f.push((0, a.jsx)(h, {
+                let _ = u - d - o;
+                for (let e = 0; e < _ && f.length < i; e++) f.push((0, a.jsx)(E, {
                     empty: !0,
                     guildId: r
                 }, "empty-member-".concat(e)));
-                let _ = Math.max(Math.min(u - f.length, 99), 0);
-                if (1 === _) {
+                let h = Math.max(Math.min(u - f.length, 99), 0);
+                if (1 === h) {
                     let e = n[i];
-                    f.push((0, a.jsx)(h, {
+                    f.push((0, a.jsx)(E, {
                         member: e,
                         guildId: r
                     }, e.id))
@@ -10709,9 +10928,9 @@
                     className: m.wrapper,
                     children: (0, a.jsxs)("div", {
                         className: m.partyMembers,
-                        children: [f, _ > 1 ? (0, a.jsxs)("div", {
+                        children: [f, h > 1 ? (0, a.jsxs)("div", {
                             className: m.partyMemberOverflow,
-                            children: ["+", _]
+                            children: ["+", h]
                         }) : null]
                     })
                 })
@@ -10765,9 +10984,9 @@
                     onClose: c,
                     onComplete: f,
                     analyticsLocations: m,
-                    analyticsObject: h,
-                    contextKey: E
-                } = e, _ = !1, p = (0, s.v4)();
+                    analyticsObject: E,
+                    contextKey: _
+                } = e, h = !1, p = (0, s.v4)();
                 (0, l.openModalLazy)(async () => {
                     let {
                         default: e
@@ -10787,21 +11006,21 @@
                                 s(), null == c || c(e)
                             },
                             onComplete: e => {
-                                _ = !0, null == f || f(e)
+                                h = !0, null == f || f(e)
                             }
                         })
                     }
                 }, {
-                    contextKey: E,
+                    contextKey: _,
                     onCloseCallback: () => {
-                        !_ && o.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+                        !h && o.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
                             load_id: p,
                             payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
-                            location: h,
+                            location: E,
                             is_gift: !1,
                             application_id: t,
                             location_stack: m
-                        }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == c || c(_)
+                        }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == c || c(h)
                     },
                     onCloseRequest: u.NOOP
                 })
@@ -10956,9 +11175,9 @@
                 c = n("875978"),
                 f = n("815297"),
                 m = n("256572"),
-                h = n("271938"),
-                E = n("474643"),
-                _ = n("377253"),
+                E = n("271938"),
+                _ = n("474643"),
+                h = n("377253"),
                 p = n("585722"),
                 I = n("239013"),
                 g = n("914271"),
@@ -10971,7 +11190,7 @@
                 let {
                     channelId: t,
                     messageId: n
-                } = e, a = _.default.getMessage(t, n);
+                } = e, a = h.default.getMessage(t, n);
                 if (null != a) return {
                     message: a,
                     channelId: t,
@@ -11006,7 +11225,7 @@
                 let {
                     channelId: t,
                     messageId: n
-                } = e, a = _.default.getMessage(t, n);
+                } = e, a = h.default.getMessage(t, n);
                 return null == a ? [] : a.reactions.flatMap(e => !0 === e.me_vote ? e.emoji.name : [])
             }
             async function x(e) {
@@ -11021,7 +11240,7 @@
                     }),
                     o = i.difference(l, s),
                     u = i.difference(s, l),
-                    d = h.default.getId(),
+                    d = E.default.getId(),
                     f = [...o.map(e => ({
                         type: "MESSAGE_REACTION_REMOVE",
                         id: e
@@ -11147,7 +11366,7 @@
                         });
                         return
                     }
-                    let h = null === (t = c.poll) || void 0 === t ? void 0 : t.allow_multiselect;
+                    let E = null === (t = c.poll) || void 0 === t ? void 0 : t.allow_multiselect;
                     (0, C.updatePollState)(u, d, e => {
                         if (null == e) return {
                             channelId: u,
@@ -11161,7 +11380,7 @@
                             n = new Set(t.selectedAnswerIds);
                         if (t.selectedAnswerIds = n, n.has(i)) n.delete(i);
                         else {
-                            if (!h)
+                            if (!E)
                                 for (let e of n) n.delete(e);
                             n.add(i)
                         }
@@ -11180,7 +11399,7 @@
                         duration: l,
                         layout: i,
                         onClose: r
-                    } = e, o = p.default.getUploads(t.id, E.DraftType.Poll), c = a.map(e => {
+                    } = e, o = p.default.getUploads(t.id, _.DraftType.Poll), c = a.map(e => {
                         var t;
                         let n = null == o ? void 0 : o.findIndex(t => t.id === e.uploadId),
                             a = {
@@ -11208,8 +11427,8 @@
                     };
                     try {
                         if (null != o && o.length > 0) {
-                            var _;
-                            let e = null !== (_ = h.default.getToken()) && void 0 !== _ ? _ : "";
+                            var h;
+                            let e = null !== (h = E.default.getToken()) && void 0 !== h ? h : "";
                             await g.sendPollMessageWithAttachments({
                                 channel: t,
                                 items: o,
@@ -11366,7 +11585,7 @@
                     return f
                 },
                 default: function() {
-                    return h
+                    return E
                 }
             });
             var a = n("37983"),
@@ -11401,7 +11620,7 @@
                 })
             }
 
-            function h(e) {
+            function E(e) {
                 let {
                     message: t,
                     children: n
@@ -11506,9 +11725,9 @@
                 c = n("402671"),
                 f = n("773336"),
                 m = n("641126"),
-                h = n("214400"),
-                E = n("410328"),
-                _ = n("868586"),
+                E = n("214400"),
+                _ = n("410328"),
+                h = n("868586"),
                 p = n("973799"),
                 I = n("49111"),
                 g = n("782340");
@@ -11562,31 +11781,31 @@
                         submitting: c,
                         editing: f
                     } = null !== (n = null != t ? t : (0, m.getPollState)(e.getChannelId(), e.id)) && void 0 !== n ? n : T,
-                    h = e.reactions,
-                    E = !0;
+                    E = e.reactions,
+                    _ = !0;
                 if (!A(e)) {
                     let t = o.default.getMessage(e.channel_id, e.id);
-                    E = null != t, h = null !== (a = null == t ? void 0 : t.reactions) && void 0 !== a ? a : h
+                    _ = null != t, E = null !== (a = null == t ? void 0 : t.reactions) && void 0 !== a ? a : E
                 }
-                let _ = d.size > 0,
-                    g = h.some(e => !0 === e.me_vote),
+                let h = d.size > 0,
+                    g = E.some(e => !0 === e.me_vote),
                     C = !f && g,
-                    S = E && (C || u);
+                    S = _ && (C || u);
                 return {
                     poll: l,
                     canTapAnswers: i && (!g || f || S),
                     canEditVote: !c && C && i && !u,
                     canShowVoteCounts: S,
-                    canSubmitVote: !c && _ && !C && i,
+                    canSubmitVote: !c && h && !C && i,
                     expirationLabel: r,
-                    hasSelectedAnswer: _,
+                    hasSelectedAnswer: h,
                     hasVoted: C,
                     hasVoteRecorded: g,
                     isEditingVote: f,
                     isExpired: u,
-                    isInteractive: E,
+                    isInteractive: _,
                     isSent: i,
-                    reactions: h,
+                    reactions: E,
                     selectedAnswerIds: d,
                     submitting: c,
                     tapShouldOpenVotersModal: S
@@ -11606,7 +11825,7 @@
                 let v = u.default.getCurrentUser();
                 if (null == v) return;
                 let x = null === (m = r.default.getChannel(e.getChannelId())) || void 0 === m ? void 0 : null === (o = m.getGuildId) || void 0 === o ? void 0 : o.call(m),
-                    O = (0, E.getAvatarUrl)(v, x),
+                    O = (0, _.getAvatarUrl)(v, x),
                     L = M.answers,
                     R = M.layout_type,
                     y = N(e, n, {
@@ -11640,15 +11859,15 @@
                         u = C(F, o),
                         f = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
                         m = V.has(o),
-                        h = w ? f >= K && 0 !== f : void 0,
-                        E = G && null !== (r = null == u ? void 0 : u.me_vote) && void 0 !== r && r,
-                        _ = S({
-                            didSelfVote: E,
+                        E = w ? f >= K && 0 !== f : void 0,
+                        _ = G && null !== (r = null == u ? void 0 : u.me_vote) && void 0 !== r && r,
+                        h = S({
+                            didSelfVote: _,
                             hasVoted: G,
                             isExpired: w,
                             isInteractive: H,
                             isSelected: m,
-                            isVictor: h
+                            isVictor: E
                         });
                     return {
                         answerId: o,
@@ -11684,15 +11903,15 @@
                             attachmentIds: e.poll_media.attachment_ids
                         },
                         isSelected: m,
-                        isVictor: h,
-                        didSelfVote: E,
-                        style: _,
+                        isVictor: E,
+                        didSelfVote: _,
+                        style: h,
                         votesPercentage: Math.round(100 * (0 === W ? 0 : f / W)),
                         votes: (0, a.match)(R).with(s.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(f), ")")).otherwise(() => g.default.Messages.POLL_VOTES_COUNT.format({
                             count: String(f)
                         }))
                     }
-                }), Z = (0, a.match)({
+                }), J = (0, a.match)({
                     isExpired: w,
                     canSubmitVote: b,
                     hasVoted: G,
@@ -11722,7 +11941,7 @@
                     presentation: "button",
                     enabled: b,
                     type: "submit"
-                })), J = (0, a.match)({
+                })), Z = (0, a.match)({
                     isInteractive: H,
                     isEditingVote: k
                 }).with({
@@ -11754,13 +11973,13 @@
                         canSelectMultipleAnswers: q
                     }).with({
                         tapShouldOpenVotersModal: !0
-                    }, () => h.PollChatAnswerInteractionType.LIST).with({
+                    }, () => E.PollChatAnswerInteractionType.LIST).with({
                         canTapAnswers: !1
-                    }, () => h.PollChatAnswerInteractionType.LIST).with({
+                    }, () => E.PollChatAnswerInteractionType.LIST).with({
                         canSelectMultipleAnswers: !1
-                    }, () => h.PollChatAnswerInteractionType.RADIO_BUTTONS).with({
+                    }, () => E.PollChatAnswerInteractionType.RADIO_BUTTONS).with({
                         canSelectMultipleAnswers: !0
-                    }, () => h.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
+                    }, () => E.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
                     answerTapAccessibilityLabel: (0, a.match)({
                         tapShouldOpenVotersModal: Y,
                         platform: (0, f.getNativePlatform)()
@@ -11775,13 +11994,13 @@
                         platform: "web"
                     }, () => g.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID).otherwise(() => void 0),
                     layoutType: R,
-                    resources: (0, _.default)({
+                    resources: (0, h.default)({
                         theme: T,
                         layoutType: R
                     }),
                     containerStyle: X,
-                    primaryAction: Z,
-                    submitVoteLabel: null !== (p = null == Z ? void 0 : Z.label) && void 0 !== p ? p : "",
+                    primaryAction: J,
+                    submitVoteLabel: null !== (p = null == J ? void 0 : J.label) && void 0 !== p ? p : "",
                     canSubmitVote: b,
                     canTapAnswers: P,
                     canSelectMultipleAnswers: q,
@@ -11791,7 +12010,7 @@
                     expirationLabel: null != U ? U : g.default.Messages.POLL_EXPIRED,
                     isExpired: w,
                     myAvatarUrl: O,
-                    secondaryAction: J
+                    secondaryAction: Z
                 }
             }
         },
@@ -11851,16 +12070,16 @@
                 let c = (0, o.useInteractivePollMessage)(e),
                     f = (0, r.useChannelPollInteractions)(c.getChannelId()),
                     m = f[c.id],
-                    h = (0, d.default)(null === (n = c.poll) || void 0 === n ? void 0 : n.expiry),
-                    E = l.AnimateEmoji.useSetting(),
-                    _ = (0, i.useUserEligibleForPolls)("poll_message_data"),
+                    E = (0, d.default)(null === (n = c.poll) || void 0 === n ? void 0 : n.expiry),
+                    _ = l.AnimateEmoji.useSetting(),
+                    h = (0, i.useUserEligibleForPolls)("poll_message_data"),
                     p = (0, s.default)(),
                     I = null != t ? t : p;
-                return a.useMemo(() => (0, u.default)(c, _, m, {
-                    animateEmoji: E,
+                return a.useMemo(() => (0, u.default)(c, h, m, {
+                    animateEmoji: _,
                     theme: I,
-                    formattedExpirationLabel: h
-                }), [E, c, m, h, I, _])
+                    formattedExpirationLabel: E
+                }), [_, c, m, E, I, h])
             }
         },
         426490: function(e, t, n) {
@@ -11891,9 +12110,9 @@
                 c = n("77078"),
                 f = n("430568"),
                 m = n("449918"),
-                h = n("20606"),
-                E = n("385976"),
-                _ = n("845579"),
+                E = n("20606"),
+                _ = n("385976"),
+                h = n("845579"),
                 p = n("952368"),
                 I = n("476765"),
                 g = n("578706"),
@@ -12052,7 +12271,7 @@
                 } = e, {
                     channelId: f,
                     messageId: m
-                } = (0, A.useMessageIds)(), h = (0, A.useStyleClass)(n.style), E = !0 === n.isSelected, _ = i.useCallback(() => {
+                } = (0, A.useMessageIds)(), E = (0, A.useStyleClass)(n.style), _ = !0 === n.isSelected, h = i.useCallback(() => {
                     C.default.handlePollAnswerTapped({
                         channelId: f,
                         messageId: m,
@@ -12062,14 +12281,14 @@
                 switch (d) {
                     case 0:
                         return (0, l.jsx)("li", {
-                            className: o(t, h),
+                            className: o(t, E),
                             children: s
                         });
                     case 3:
                         return (0, l.jsxs)("li", {
                             children: [(0, l.jsx)(c.Clickable, {
-                                className: o(x.listItemButton, t, h),
-                                onClick: _,
+                                className: o(x.listItemButton, t, E),
+                                onClick: h,
                                 "aria-describedby": p,
                                 children: s
                             }), (0, l.jsx)(c.HiddenVisually, {
@@ -12079,18 +12298,18 @@
                         });
                     case 1:
                         return (0, l.jsx)(P, {
-                            className: o(t, h),
-                            onClick: _,
-                            isSelected: E,
+                            className: o(t, E),
+                            onClick: h,
+                            isSelected: _,
                             hasSelectedAnyAnswer: r,
                             isFirstAnswer: u,
                             children: s
                         });
                     case 2:
                         return (0, l.jsx)(y, {
-                            className: o(t, h),
-                            onClick: _,
-                            isSelected: E,
+                            className: o(t, E),
+                            onClick: h,
+                            isSelected: _,
                             isFirstAnswer: u,
                             children: s
                         })
@@ -12102,7 +12321,7 @@
                     attachment: t,
                     alt: n,
                     className: a
-                } = e, s = (0, T.useIsWindowFocused)(), i = _.GifAutoPlay.useSetting();
+                } = e, s = (0, T.useIsWindowFocused)(), i = h.GifAutoPlay.useSetting();
                 return (0, l.jsx)(p.default, {
                     className: a,
                     imageClassName: x.attachmentImage,
@@ -12122,9 +12341,9 @@
                     alt: t,
                     className: n,
                     emoji: a
-                } = e, s = (0, d.default)([E.default], () => {
+                } = e, s = (0, d.default)([_.default], () => {
                     var e, t, n;
-                    return null !== (n = null === (e = E.default.getCustomEmojiById(null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.animated) && void 0 !== n && n
+                    return null !== (n = null === (e = _.default.getCustomEmojiById(null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.animated) && void 0 !== n && n
                 }, [a.id]);
                 return (0, l.jsx)(f.default, {
                     className: n,
@@ -12197,14 +12416,14 @@
 
             function H(e) {
                 return (0, l.jsx)(k, {
-                    color: h.default.POLLS_VICTOR_BORDER,
+                    color: E.default.POLLS_VICTOR_BORDER,
                     ...e
                 })
             }
 
             function F(e) {
                 return (0, l.jsx)(k, {
-                    color: h.default.POLLS_VOTED_BORDER,
+                    color: E.default.POLLS_VOTED_BORDER,
                     ...e
                 })
             }(s = a || (a = {}))[s.LIST_ITEM = 0] = "LIST_ITEM", s[s.RADIO = 1] = "RADIO", s[s.CHECKBOX = 2] = "CHECKBOX", s[s.LIST_ITEM_BUTTON = 3] = "LIST_ITEM_BUTTON"
@@ -12385,10 +12604,10 @@
                 c = n("619544"),
                 f = n("74232"),
                 m = n("316350"),
-                h = n("909366"),
-                E = n("879958");
+                E = n("909366"),
+                _ = n("879958");
 
-            function _(e) {
+            function h(e) {
                 let {
                     media: t
                 } = e;
@@ -12418,7 +12637,7 @@
                 } = e;
                 return (0, a.jsx)(u.Button, {
                     onClick: n,
-                    className: i(s, E.textButton),
+                    className: i(s, _.textButton),
                     look: u.Button.Looks.BLANK,
                     size: u.Button.Sizes.NONE,
                     buttonRef: l,
@@ -12475,18 +12694,18 @@
                         hasVoted: t.hasVoted,
                         myAvatarUrl: t.myAvatarUrl
                     };
-                    return (0, r.match)(t.layoutType).with(o.PollLayoutTypes.DEFAULT, () => (0, a.jsx)(h.TextAndImageAnswers, {
+                    return (0, r.match)(t.layoutType).with(o.PollLayoutTypes.DEFAULT, () => (0, a.jsx)(E.TextAndImageAnswers, {
                         ...n
                     })).with(o.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => (0, a.jsx)(c.default, {
                         ...n
                     })).otherwise(() => null)
                 }(0, n);
                 return null == u ? null : (0, a.jsxs)("div", {
-                    className: i(E.container, l, s),
-                    children: [(0, a.jsx)(_, {
+                    className: i(_.container, l, s),
+                    children: [(0, a.jsx)(h, {
                         media: n.question
                     }), u, (0, a.jsxs)("div", {
-                        className: E.bottomBar,
+                        className: _.bottomBar,
                         children: [(0, a.jsx)(g, {
                             channelId: t.getChannelId(),
                             messageId: t.id,
@@ -12623,7 +12842,7 @@
                     isExpired: n,
                     hasVoted: d,
                     myAvatarUrl: c
-                } = e, f = d || n, m = !0 === t.isSelected, h = !0 === t.didSelfVote, E = !0 === t.isVictor;
+                } = e, f = d || n, m = !0 === t.isSelected, E = !0 === t.didSelfVote, _ = !0 === t.isVictor;
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)("div", {
                         className: o.answerInner,
@@ -12658,10 +12877,10 @@
                                 label: t.votes
                             })]
                         })]
-                    }), !n && h && (0, a.jsx)(i.PollAnswerVotedIcon, {
+                    }), !n && E && (0, a.jsx)(i.PollAnswerVotedIcon, {
                         size: 18,
                         className: o.pollAnswerIcon
-                    }), E && (0, a.jsx)(i.PollAnswerVictorIcon, {
+                    }), _ && (0, a.jsx)(i.PollAnswerVictorIcon, {
                         size: 18,
                         className: o.pollAnswerIcon
                     })]
@@ -12725,9 +12944,9 @@
                 c = n("77078"),
                 f = n("4919"),
                 m = n("812204"),
-                h = n("685665"),
-                E = n("649844"),
-                _ = n("697218"),
+                E = n("685665"),
+                _ = n("649844"),
+                h = n("697218"),
                 p = n("521012"),
                 I = n("888400"),
                 g = n("719923"),
@@ -12742,7 +12961,7 @@
                 renderTitle(e, t) {
                     let {
                         trialOffer: n
-                    } = this.props, a = _.default.getUser(n.user_id), s = null != a ? a.username : "???";
+                    } = this.props, a = h.default.getUser(n.user_id), s = null != a ? a.username : "???";
                     return e && void 0 === n.redeemed_at ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_HEADER.format({
                         username: s
                     }) : t ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_HEADER : M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_HEADER.format({
@@ -12752,7 +12971,7 @@
                 renderBody(e, t, n) {
                     let {
                         trialOffer: a
-                    } = this.props, s = _.default.getUser(a.referrer_id);
+                    } = this.props, s = h.default.getUser(a.referrer_id);
                     return (e || t) && n && void 0 === a.redeemed_at ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_BODY : e && !n && void 0 === a.redeemed_at ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_BODY : M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY.format({
                         username: null != s ? T.default.getName(s) : "???"
                     })
@@ -12775,7 +12994,7 @@
                                 ...r,
                                 size: c.Button.Sizes.SMALL,
                                 onClick: () => {
-                                    (0, E.default)({
+                                    (0, _.default)({
                                         initialPlanId: null,
                                         subscriptionTier: N.PremiumSubscriptionSKUs.TIER_2,
                                         analyticsLocations: i,
@@ -12856,7 +13075,7 @@
                 }
                 constructor(...e) {
                     super(...e), this.handleStartTrial = (e, t) => {
-                        (0, E.default)({
+                        (0, _.default)({
                             initialPlanId: null,
                             subscriptionTier: N.PremiumSubscriptionSKUs.TIER_2,
                             analyticsLocations: t,
@@ -12876,13 +13095,13 @@
                 } = (0, d.useStateFromStoresObject)([C.default], () => ({
                     trialOffer: n ? C.default.getRelevantUserTrialOffer(t) : null,
                     isResolving: !!n && C.default.isResolving(t)
-                }), [n, t]), i = _.default.getCurrentUser(), r = (0, d.useStateFromStores)([_.default], () => null != s && (0, g.isPremium)(void 0 !== i && s.user_id === i.id ? i : _.default.getUser(s.user_id))), o = (0, d.useStateFromStores)([p.default], () => {
+                }), [n, t]), i = h.default.getCurrentUser(), r = (0, d.useStateFromStores)([h.default], () => null != s && (0, g.isPremium)(void 0 !== i && s.user_id === i.id ? i : h.default.getUser(s.user_id))), o = (0, d.useStateFromStores)([p.default], () => {
                     var e;
                     return r ? null === (e = p.default.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null
                 }), {
                     analyticsLocations: c
-                } = (0, h.default)(m.default.SHARE_NITRO_EMBED), {
-                    enabled: E
+                } = (0, E.default)(m.default.SHARE_NITRO_EMBED), {
+                    enabled: _
                 } = S.default.useExperiment({
                     location: "f4ff1d_1"
                 }, {
@@ -12896,7 +13115,7 @@
                     recipientHasNitro: r,
                     trialEndsAt: o,
                     analyticsLocations: c,
-                    shouldShowBirthdayUX: E,
+                    shouldShowBirthdayUX: _,
                     ...e
                 }) : (0, a.jsx)("div", {
                     className: v.invalidWrapper,
@@ -13049,8 +13268,8 @@
                     processedCode: t,
                     channelContext: f,
                     customGiftMessage: m,
-                    giftInfo: h
-                } = e, E = !1, _ = null, p = l.default.getCurrentUser(), I = (0, o.isPremiumAtLeast)(null == p ? void 0 : p.premiumType, d.PremiumTypes.TIER_0);
+                    giftInfo: E
+                } = e, _ = !1, h = null, p = l.default.getCurrentUser(), I = (0, o.isPremiumAtLeast)(null == p ? void 0 : p.premiumType, d.PremiumTypes.TIER_0);
                 (0, s.openModalLazy)(async () => {
                     let {
                         default: e
@@ -13061,10 +13280,10 @@
                             code: t,
                             channelContext: f,
                             customGiftMessage: m,
-                            emojiName: null == h ? void 0 : null === (s = h.emoji) || void 0 === s ? void 0 : s.name,
-                            soundId: null == h ? void 0 : null === (l = h.sound) || void 0 === l ? void 0 : l.id,
+                            emojiName: null == E ? void 0 : null === (s = E.emoji) || void 0 === s ? void 0 : s.name,
+                            soundId: null == E ? void 0 : null === (l = E.sound) || void 0 === l ? void 0 : l.id,
                             onComplete: (e, t) => {
-                                _ = e, t && (E = t, e.isSubscription && null == i.default.getPremiumSubscription(!1) && (0, u.setCanPlayWowMoment)(!0))
+                                h = e, t && (_ = t, e.isSubscription && null == i.default.getPremiumSubscription(!1) && (0, u.setCanPlayWowMoment)(!0))
                             },
                             ...n
                         })
@@ -13072,7 +13291,7 @@
                 }, {
                     onCloseCallback: () => {
                         var e;
-                        E && null != _ && !I && _.isSubscription && (null == _ ? void 0 : null === (e = _.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === d.PremiumTypes.TIER_2 && r.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED)
+                        _ && null != h && !I && h.isSubscription && (null == h ? void 0 : null === (e = h.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === d.PremiumTypes.TIER_2 && r.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED)
                     }
                 })
             }
@@ -13127,9 +13346,9 @@
                 c = n("719923"),
                 f = n("540692"),
                 m = n("456015"),
-                h = n("982457"),
-                E = n("781084"),
-                _ = n("1607"),
+                E = n("982457"),
+                _ = n("781084"),
+                h = n("1607"),
                 p = n("646718");
             class I extends i.default {
                 _initialize() {
@@ -13189,18 +13408,18 @@
                         if (null != e && e.verified && !(0, c.isPremium)(e) && d.default.shouldFetchOffer()) {
                             let {
                                 enabled: e
-                            } = E.default.getCurrentConfig({
+                            } = _.default.getCurrentConfig({
                                 location: "PremiumManager"
                             }, {
                                 autoTrackExposure: !1
                             });
-                            e ? (0, m.fetchUserOffer)() : h.default.fetchUserTrialOffer()
+                            e ? (0, m.fetchUserOffer)() : E.default.fetchUserTrialOffer()
                         }
                     }, this._maybeFetchReferralsRemaining = () => {
                         let e = u.default.getCurrentUser(),
                             {
                                 enabled: t
-                            } = _.default.getCurrentConfig({
+                            } = h.default.getCurrentConfig({
                                 location: "16261f_1"
                             }, {
                                 autoTrackExposure: !1
@@ -13396,9 +13615,9 @@
                 c = n("697218"),
                 f = n("304198"),
                 m = n("315102"),
-                h = n("441823"),
-                E = n("140596"),
-                _ = n("950576"),
+                E = n("441823"),
+                _ = n("140596"),
+                h = n("950576"),
                 p = n("49111");
 
             function I(e) {
@@ -13410,8 +13629,8 @@
                             bot: t.bot,
                             botIconFirst: !0
                         }),
-                        _ = c.default.getUser(null === (o = t.bot) || void 0 === o ? void 0 : o.id),
-                        p = E.default.getIntegration(e.id, t.id),
+                        h = c.default.getUser(null === (o = t.bot) || void 0 === o ? void 0 : o.id),
+                        p = _.default.getIntegration(e.id, t.id),
                         I = e.isPrivate() && null != p ? t => {
                             (0, i.openContextMenuLazy)(t, async () => {
                                 let {
@@ -13423,7 +13642,7 @@
                                     integration: p
                                 })
                             })
-                        } : null != _ ? t => (0, h.openUserContextMenu)(t, _, e) : void 0,
+                        } : null != h ? t => (0, E.openUserContextMenu)(t, h, e) : void 0,
                         {
                             bot: g
                         } = t;
@@ -13458,7 +13677,7 @@
                     icon: n("127067"),
                     timestamp: t.timestamp,
                     compact: l,
-                    children: (0, _.getPrivateChannelIntegrationAddedSystemMessageContent)({
+                    children: (0, h.getPrivateChannelIntegrationAddedSystemMessageContent)({
                         application: u,
                         username: i.nick,
                         usernameHook: d(i),
@@ -13477,7 +13696,7 @@
                     icon: n("226315"),
                     timestamp: t.timestamp,
                     compact: l,
-                    children: (0, _.getPrivateChannelIntegrationRemovedSystemMessageContent)({
+                    children: (0, h.getPrivateChannelIntegrationRemovedSystemMessageContent)({
                         application: u,
                         username: i.nick,
                         usernameHook: d(i),
@@ -13574,16 +13793,16 @@
                     return o
                 },
                 SafetyHubLinks: function() {
-                    return h
+                    return E
                 },
                 SafetyHubPolicyNoticeKeys: function() {
-                    return E
+                    return _
                 },
                 SafetySystemNotificationCtaType: function() {
                     return u
                 },
                 SafetySystemNotificationEmbedKeys: function() {
-                    return _
+                    return h
                 },
                 SafetyHubAnalyticsActions: function() {
                     return d
@@ -13600,12 +13819,12 @@
             });
             var a, s, l, i, r, o, u, d, c, f, m = n("49111");
             (a = o || (o = {})).SETTINGS = "SETTINGS", a.ACCOUNT_STANDING = "ACCOUNT_STANDING";
-            class h {}
-            h.TOS_LINK = "https://discord.com/terms", h.COMMUNITY_GUIDELINES = "https://discord.com/guidelines", h.APPEALS_LINK = "https://support.discord.com/hc/requests/new", h.WARNING_SYSTEM_HELPCENTER_LINK = "https://support.discord.com/hc/articles/18210965981847";
             class E {}
-            E.CLASSIFICATION_ID = "classification_id", E.INCIDENT_TIMESTAMP = "incident_time", (s = u || (u = {})).POLICY_VIOLATION_DETAIL = "policy_violation_detail", s.LEARN_MORE_LINK = "learn_more_link";
+            E.TOS_LINK = "https://discord.com/terms", E.COMMUNITY_GUIDELINES = "https://discord.com/guidelines", E.APPEALS_LINK = "https://support.discord.com/hc/requests/new", E.WARNING_SYSTEM_HELPCENTER_LINK = "https://support.discord.com/hc/articles/18210965981847";
             class _ {}
-            _.ICON_TYPE = "icon_type", _.HEADER = "header", _.BODY = "body", _.CTAS = "ctas", _.TIMESTAMP = "timestamp", _.THEME = "theme", _.CLIENT_VERSION_MESSAGE = "client_version_message", _.LEARN_MORE_LINK = "learn_more_link", _.CLASSIFICATION_ID = "classification_id", (l = d || (d = {}))[l.ViewViolationDetail = 0] = "ViewViolationDetail", l[l.ViewViolationsDropdown = 1] = "ViewViolationsDropdown", l[l.ClickLetUsKnow = 2] = "ClickLetUsKnow", (i = c || (c = {}))[i.SystemDM = 0] = "SystemDM", i[i.StandingTab = 1] = "StandingTab", Object.freeze({
+            _.CLASSIFICATION_ID = "classification_id", _.INCIDENT_TIMESTAMP = "incident_time", (s = u || (u = {})).POLICY_VIOLATION_DETAIL = "policy_violation_detail", s.LEARN_MORE_LINK = "learn_more_link";
+            class h {}
+            h.ICON_TYPE = "icon_type", h.HEADER = "header", h.BODY = "body", h.CTAS = "ctas", h.TIMESTAMP = "timestamp", h.THEME = "theme", h.CLIENT_VERSION_MESSAGE = "client_version_message", h.LEARN_MORE_LINK = "learn_more_link", h.CLASSIFICATION_ID = "classification_id", (l = d || (d = {}))[l.ViewViolationDetail = 0] = "ViewViolationDetail", l[l.ViewViolationsDropdown = 1] = "ViewViolationsDropdown", l[l.ClickLetUsKnow = 2] = "ClickLetUsKnow", (i = c || (c = {}))[i.SystemDM = 0] = "SystemDM", i[i.StandingTab = 1] = "StandingTab", Object.freeze({
                 SPEED_BUMP: m.AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP,
                 COLLECT_SIGNAL: m.AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL,
                 CONFIRM_SUBMISSION: m.AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION,
@@ -13680,12 +13899,12 @@
             let f = e => l().diff(l.unix(e), "days");
 
             function m(e) {
-                var t, s, l, m, h;
+                var t, s, l, m, E;
                 if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
-                let E = e.message.embeds[0],
-                    _ = null !== (l = null === (t = E.fields) || void 0 === t ? void 0 : t.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.CLASSIFICATION_ID)) && void 0 !== l ? l : void 0,
-                    p = null !== (m = null == _ ? void 0 : _.rawValue) && void 0 !== m ? m : void 0,
-                    I = null !== (h = null === (s = E.fields) || void 0 === s ? void 0 : s.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.INCIDENT_TIMESTAMP)) && void 0 !== h ? h : void 0,
+                let _ = e.message.embeds[0],
+                    h = null !== (l = null === (t = _.fields) || void 0 === t ? void 0 : t.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.CLASSIFICATION_ID)) && void 0 !== l ? l : void 0,
+                    p = null !== (m = null == h ? void 0 : h.rawValue) && void 0 !== m ? m : void 0,
+                    I = null !== (E = null === (s = _.fields) || void 0 === s ? void 0 : s.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.INCIDENT_TIMESTAMP)) && void 0 !== E ? E : void 0,
                     g = null == I || null == I.rawValue ? void 0 : parseFloat(I.rawValue);
                 return null == p || null == g ? null : (0, a.jsxs)(o.Clickable, {
                     onClick: () => {
@@ -13760,9 +13979,9 @@
                 c = n("170213"),
                 f = n("782340"),
                 m = n("289487");
-            let h = e => l().diff(l.unix(e), "days");
+            let E = e => l().diff(l.unix(e), "days");
 
-            function E(e) {
+            function _(e) {
                 let {
                     classificationId: t
                 } = e;
@@ -13785,7 +14004,7 @@
                 })
             }
 
-            function _(e) {
+            function h(e) {
                 let {
                     learnMoreLink: t
                 } = e;
@@ -13805,12 +14024,12 @@
                 switch (t) {
                     case c.SafetySystemNotificationCtaType.POLICY_VIOLATION_DETAIL:
                         if (null == n) return null;
-                        return (0, a.jsx)(E, {
+                        return (0, a.jsx)(_, {
                             classificationId: n
                         });
                     case c.SafetySystemNotificationCtaType.LEARN_MORE_LINK:
                         if (null == s) return null;
-                        return (0, a.jsx)(_, {
+                        return (0, a.jsx)(h, {
                             learnMoreLink: s
                         });
                     default:
@@ -13870,7 +14089,7 @@
                             children: (0, a.jsx)(o.Text, {
                                 variant: "text-xs/medium",
                                 children: f.default.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
-                                    daysAgo: h(null !== (n = s.timestamp) && void 0 !== n ? n : 0)
+                                    daysAgo: E(null !== (n = s.timestamp) && void 0 !== n ? n : 0)
                                 })
                             })
                         }), (0, a.jsx)("div", {
@@ -13956,9 +14175,9 @@
                 c = n("437472"),
                 f = n("159885"),
                 m = n("256860"),
-                h = n("161585"),
-                E = n("41170"),
-                _ = n("139185"),
+                E = n("161585"),
+                _ = n("41170"),
+                h = n("139185"),
                 p = n("49111"),
                 I = n("646718"),
                 g = n("814809");
@@ -13968,8 +14187,8 @@
                         type: I.PremiumUpsellTypes.STICKER_IN_MESSAGE_HOVER,
                         expression_id: e.id,
                         expression_name: e.name,
-                        is_animated: (0, h.isAnimatedSticker)(e.format_type),
-                        is_custom: (0, h.isCustomSticker)(e.type)
+                        is_animated: (0, E.isAnimatedSticker)(e.format_type),
+                        is_custom: (0, E.isCustomSticker)(e.type)
                     })
                 };
             var S = e => {
@@ -13977,7 +14196,7 @@
                     renderableSticker: t,
                     channel: n,
                     isInteracting: l
-                } = e, [o, f] = s.useState(!0), [h, p] = s.useState(String(Date.now())), [I] = (0, m.useStickerForRenderableSticker)(t, l), {
+                } = e, [o, f] = s.useState(!0), [E, p] = s.useState(String(Date.now())), [I] = (0, m.useStickerForRenderableSticker)(t, l), {
                     AnalyticsLocationProvider: S
                 } = (0, u.default)(r.default.STICKER_MESSAGE), A = (0, a.jsxs)("span", {
                     className: g.stickerName,
@@ -13989,11 +14208,11 @@
                     children: (0, a.jsx)(i.Popout, {
                         align: "center",
                         animation: i.Popout.Animation.TRANSLATE,
-                        positionKey: h,
+                        positionKey: E,
                         onRequestClose: () => {
                             f(!0)
                         },
-                        renderPopout: e => (0, a.jsx)(_.default, {
+                        renderPopout: e => (0, a.jsx)(h.default, {
                             ...e,
                             renderableSticker: t,
                             channel: n,
@@ -14018,7 +14237,7 @@
                                         f(!o), n(e)
                                     },
                                     tag: "span",
-                                    children: (0, a.jsx)(E.default, {
+                                    children: (0, a.jsx)(_.default, {
                                         isInteracting: l,
                                         size: T,
                                         sticker: null != I ? I : t
@@ -14048,9 +14267,9 @@
                 c = n("446066"),
                 f = n("243375"),
                 m = n("459698"),
-                h = n("933629"),
-                E = n("626301"),
-                _ = n("716849"),
+                E = n("933629"),
+                _ = n("626301"),
+                h = n("716849"),
                 p = n("552917"),
                 I = n("635956"),
                 g = n("305961"),
@@ -14087,7 +14306,7 @@
                 N.default.track(y.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                     location_page: null != e.guild_id ? y.AnalyticsPages.GUILD_CHANNEL : y.AnalyticsPages.DM_CHANNEL,
                     location_section: y.AnalyticsSections.STICKER_POPOUT
-                }), (0, E.navigateToPremiumMarketingPage)()
+                }), (0, _.navigateToPremiumMarketingPage)()
             }
 
             function k(e) {
@@ -14128,8 +14347,8 @@
                         stickerPack: u
                     });
                     (0, v.useFetchStickerPack)(n.pack_id);
-                    let E = (0, v.useFilteredStickerPackCategories)(l);
-                    return ((0, _.useMaybeFetchPremiumLikelihood)(p.default), s.useEffect(() => {
+                    let _ = (0, v.useFilteredStickerPackCategories)(l);
+                    return ((0, h.useMaybeFetchPremiumLikelihood)(p.default), s.useEffect(() => {
                         i()
                     }, [c]), s.useEffect(() => {
                         N.default.track(y.AnalyticEvents.OPEN_POPOUT, {
@@ -14138,9 +14357,9 @@
                             sticker_pack_id: n.pack_id,
                             ...(0, d.collectChannelAnalyticsMetadata)(l)
                         })
-                    }, [n.pack_id]), c || null == u) ? (0, a.jsx)(h.PopoutLoadingAnimation, {
+                    }, [n.pack_id]), c || null == u) ? (0, a.jsx)(E.PopoutLoadingAnimation, {
                         className: j.popoutLoader
-                    }) : (0, a.jsxs)(h.MessagePopoutContent, {
+                    }) : (0, a.jsxs)(E.MessagePopoutContent, {
                         className: j.popoutContent,
                         children: [(0, a.jsx)(o.Heading, {
                             variant: "heading-md/semibold",
@@ -14163,7 +14382,7 @@
                                 onClick: () => {
                                     f && (0, R.navigateToOwnedStickerPack)({
                                         stickerPack: u,
-                                        stickerPickerCategories: E
+                                        stickerPickerCategories: _
                                     }), t()
                                 },
                                 children: D.default.Messages.STICKER_VIEW_MORE_STICKERS
@@ -14175,8 +14394,8 @@
                     let t, {
                             sticker: n,
                             channel: l,
-                            closePopout: E,
-                            refreshPositionKey: _
+                            closePopout: _,
+                            refreshPositionKey: h
                         } = e,
                         [p, S] = s.useState(null),
                         [v, x] = s.useState(!1),
@@ -14209,27 +14428,27 @@
                     }, [n.id, B]);
                     let K = n.guild_id === l.getGuildId(),
                         z = null != p,
-                        Z = !1,
-                        J = "Custom Sticker Popout";
-                    R ? t = B ? K ? D.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : D.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? D.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : D.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (K ? t = D.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = D.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, Z = !0, J = "Custom Sticker Popout (Upsell)") : z ? (t = D.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, Z = !0, J = "Custom Sticker Popout (Upsell)") : (t = D.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
+                        J = !1,
+                        Z = "Custom Sticker Popout";
+                    R ? t = B ? K ? D.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : D.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? D.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : D.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : B ? (K ? t = D.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = D.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, J = !0, Z = "Custom Sticker Popout (Upsell)") : z ? (t = D.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, J = !0, Z = "Custom Sticker Popout (Upsell)") : (t = D.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
                         openPremiumSettings: () => {
-                            G(l), E()
+                            G(l), _()
                         }
-                    }), J = "Custom Sticker Popout (Soft Upsell)");
-                    let X = !Z && !B && z && R;
+                    }), Z = "Custom Sticker Popout (Soft Upsell)");
+                    let X = !J && !B && z && R;
                     return (s.useEffect(() => {
-                        _()
+                        h()
                     }, [v, p]), s.useEffect(() => {
                         N.default.track(y.AnalyticEvents.OPEN_POPOUT, {
-                            type: J,
+                            type: Z,
                             ...W
                         })
-                    }, []), v) ? (0, a.jsxs)(h.MessagePopoutContent, {
+                    }, []), v) ? (0, a.jsxs)(E.MessagePopoutContent, {
                         className: b.popoutContent,
                         children: [(() => {
                             let e = async () => {
                                 if (null == p || B) return;
-                                E();
+                                _();
                                 let e = p.id;
                                 try {
                                     await u.default.joinGuild(e), u.default.transitionToGuildSync(e)
@@ -14240,13 +14459,13 @@
                                 children: [(0, a.jsx)(k, {
                                     description: t,
                                     sticker: n
-                                }), Z && (0, a.jsx)(I.default, {
+                                }), J && (0, a.jsx)(I.default, {
                                     className: b.ctaButton,
                                     subscriptionTier: P.PremiumSubscriptionSKUs.TIER_2,
                                     size: o.Button.Sizes.SMALL,
                                     fullWidth: !0,
                                     buttonText: D.default.Messages.EMOJI_POPOUT_PREMIUM_CTA,
-                                    onSubscribeModalClose: t => t ? e() : E(),
+                                    onSubscribeModalClose: t => t ? e() : _(),
                                     postSuccessGuild: B || null == p ? void 0 : p,
                                     premiumModalAnalyticsLocation: Y
                                 }), X && (0, a.jsx)(o.Button, {
@@ -14274,7 +14493,7 @@
                                 }), !B && (0, a.jsxs)(a.Fragment, {
                                     children: [(0, a.jsx)(o.Clickable, {
                                         onClick: () => {
-                                            _(), H(!w)
+                                            h(), H(!w)
                                         },
                                         className: b.showMoreEmojis,
                                         children: (0, a.jsxs)(C.default, {
@@ -14296,7 +14515,7 @@
                                         className: b.otherEmojisContainer,
                                         children: t.map(e => (0, a.jsx)(o.Tooltip, {
                                             text: e.name,
-                                            ...h.EXPRESSION_TOOLTIP_PROPS,
+                                            ...E.EXPRESSION_TOOLTIP_PROPS,
                                             children: t => {
                                                 let {
                                                     onMouseEnter: n,
@@ -14329,7 +14548,7 @@
                                 })]
                             })
                         })()]
-                    }) : (0, a.jsx)(h.PopoutLoadingAnimation, {
+                    }) : (0, a.jsx)(E.PopoutLoadingAnimation, {
                         className: j.popoutLoader
                     })
                 };
@@ -14340,7 +14559,7 @@
                     closePopout: n,
                     sticker: s
                 } = e;
-                return (0, a.jsx)(h.MessagePopoutContent, {
+                return (0, a.jsx)(E.MessagePopoutContent, {
                     className: j.popoutContent,
                     children: (0, a.jsx)(k, {
                         sticker: s,
@@ -14371,7 +14590,7 @@
                     closePopout: s,
                     refreshPositionKey: l
                 });
-                if (!r) return (0, a.jsx)(h.PopoutLoadingAnimation, {});
+                if (!r) return (0, a.jsx)(E.PopoutLoadingAnimation, {});
                 else if (r && null == i) return (0, a.jsx)(F, {
                     channel: n,
                     closePopout: s,
@@ -14422,9 +14641,9 @@
                 c = n("69890"),
                 f = n("610730"),
                 m = n("487269"),
-                h = n("292657"),
-                E = n("967241"),
-                _ = n("49111"),
+                E = n("292657"),
+                _ = n("967241"),
+                h = n("49111"),
                 p = n("782340"),
                 I = n("758179");
 
@@ -14458,7 +14677,7 @@
                             children: (0, m.getTimestampString)(l)
                         })]
                     }) : (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(h.default, {
+                        children: [(0, a.jsx)(E.default, {
                             message: n,
                             channel: e
                         }), (0, a.jsx)("span", {
@@ -14475,13 +14694,13 @@
                         })
                     }), (0, a.jsx)(r.Clickable, {
                         onClick: function(e) {
-                            e.stopPropagation(), (0, E.openThreadSidebarForViewing)(t, e.shiftKey)
+                            e.stopPropagation(), (0, _.openThreadSidebarForViewing)(t, e.shiftKey)
                         },
                         onKeyDown: function(e) {
                             e.stopPropagation();
                             let n = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
                                 a = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
-                            (e.which === _.KeyboardKeys.SPACE || e.which === _.KeyboardKeys.ENTER) && (e.preventDefault(), (n || a) && (0, E.openThreadSidebarForViewing)(t, a))
+                            (e.which === h.KeyboardKeys.SPACE || e.which === h.KeyboardKeys.ENTER) && (e.preventDefault(), (n || a) && (0, _.openThreadSidebarForViewing)(t, a))
                         },
                         onContextMenu: function(e) {
                             (0, o.openContextMenuLazy)(e, async () => {
@@ -14543,11 +14762,11 @@
                 let {
                     message: t,
                     channel: n
-                } = e, m = (0, l.useStateFromStores)([u.default], () => u.default.isBlocked(t.author.id)), h = s.useMemo(() => ({
+                } = e, m = (0, l.useStateFromStores)([u.default], () => u.default.isBlocked(t.author.id)), E = s.useMemo(() => ({
                     [n.guild_id]: [t.author.id]
                 }), [n.guild_id, t.author.id]);
-                (0, i.useSubscribeGuildMembers)(h);
-                let E = s.useMemo(() => null != t.content && "" !== t.content ? (0, r.default)(t, {
+                (0, i.useSubscribeGuildMembers)(E);
+                let _ = s.useMemo(() => null != t.content && "" !== t.content ? (0, r.default)(t, {
                     formatInline: !0
                 }).content : null, [t]);
                 return (0, a.jsxs)("div", {
@@ -14577,7 +14796,7 @@
                                     children: s
                                 }), i]
                             })
-                        }(t, E, m)
+                        }(t, _, m)
                     })]
                 })
             }
@@ -14677,17 +14896,17 @@
                 c = n("305961"),
                 f = n("957255"),
                 m = n("697218"),
-                h = n("718422"),
-                E = n("825150"),
-                _ = n("49111"),
+                E = n("718422"),
+                _ = n("825150"),
+                h = n("49111"),
                 p = n("782340"),
                 I = n("727171");
             let g = e => {
                     let {
                         channel: t,
                         message: n
-                    } = e, [l, u] = s.useState(!1), d = (0, E.pickWelcomeSticker)(n.id), c = s.useCallback(() => {
-                        (0, h.applyChatRestrictions)({
+                    } = e, [l, u] = s.useState(!1), d = (0, _.pickWelcomeSticker)(n.id), c = s.useCallback(() => {
+                        (0, E.applyChatRestrictions)({
                             type: r.ChatInputTypes.FORM,
                             content: "",
                             channel: t
@@ -14695,7 +14914,7 @@
                             let {
                                 valid: a
                             } = e;
-                            a && (0, E.handleWelcomeCtaClicked)(t, n, d.id)
+                            a && (0, _.handleWelcomeCtaClicked)(t, n, d.id)
                         })
                     }, [t, n, d]);
                     return (0, a.jsx)("div", {
@@ -14724,12 +14943,12 @@
                         var e;
                         let a = m.default.getCurrentUser(),
                             l = (0, u.computeIsReadOnlyThread)(n),
-                            i = f.default.can(_.Permissions.SEND_MESSAGES, n),
+                            i = f.default.can(h.Permissions.SEND_MESSAGES, n),
                             r = null != s && null != a && (null === (e = d.default.getMember(s, a.id)) || void 0 === e ? void 0 : e.isPending),
                             o = t.author.bot,
-                            h = c.default.getGuild(s),
-                            E = null != h && (h.systemChannelFlags & _.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-                        return i && !l && !r && !o && E
+                            E = c.default.getGuild(s),
+                            _ = null != E && (E.systemChannelFlags & h.SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+                        return i && !l && !r && !o && _
                     });
                     return null != s && i ? (0, a.jsx)(g, {
                         message: t,
@@ -14788,7 +15007,7 @@
                 return a[t]
             }
 
-            function h(e, t) {
+            function E(e, t) {
                 let n = m(e, t);
                 if (null == n) return;
                 let a = c[e];
@@ -14797,14 +15016,14 @@
                 null != l && (l.delete(e), 0 === l.size && delete f[n])
             }
 
-            function E(e, t, n, a) {
+            function _(e, t, n, a) {
                 let s = n.find(e => null != e.party && e.party.id),
                     l = null != s && null != s.party ? s.party.id : null,
                     i = m(t, e);
-                if (null == l || a === d.StatusTypes.OFFLINE) return null != i && (h(t, e), void 0);
+                if (null == l || a === d.StatusTypes.OFFLINE) return null != i && (E(t, e), void 0);
                 if (null != i) {
                     if (i === l) return !1;
-                    h(t, e)
+                    E(t, e)
                 }! function(e, t, n) {
                     var a;
                     let s = c[e];
@@ -14814,7 +15033,7 @@
                 }(t, e, l)
             }
 
-            function _(e) {
+            function h(e) {
                 let {
                     guild: t
                 } = e, n = !1;
@@ -14823,21 +15042,21 @@
                         status: a,
                         activities: s
                     }
-                    of t.presences) !1 !== E(t.id, e.id, s, a) && (n = !0);
+                    of t.presences) !1 !== _(t.id, e.id, s, a) && (n = !0);
                 return n
             }
 
             function p(e, t) {
                 let n = !1;
                 return t.forEach(t => {
-                    null != t && E(e, t.user.id, t.activities, t.status) && (n = !0)
+                    null != t && _(e, t.user.id, t.activities, t.status) && (n = !0)
                 }), n
             }
 
             function I() {
                 let e = r.default.getId(),
                     t = u.default.getActivities();
-                return E(d.ME, e, t)
+                return _(d.ME, e, t)
             }
             class g extends l.default.Store {
                 initialize() {
@@ -14865,8 +15084,8 @@
                             status: t,
                             activities: s
                         }
-                        of n) null != e && !1 !== E(d.ME, e.id, s, t) && (a = !0);
-                    for (let e of t) !1 !== _({
+                        of n) null != e && !1 !== _(d.ME, e.id, s, t) && (a = !0);
+                    for (let e of t) !1 !== h({
                         guild: e
                     }) && (a = !0);
                     return a
@@ -14880,7 +15099,7 @@
                         ...n
                     }, Object.keys(t).forEach(e => f[e] = new Set(t[e]))
                 },
-                GUILD_CREATE: _,
+                GUILD_CREATE: h,
                 PRESENCES_REPLACE: function(e) {
                     let {
                         presences: t
@@ -14889,7 +15108,7 @@
                             user: e,
                             activities: a
                         }
-                        of t) null != e && !1 !== E(d.ME, e.id, a) && (n = !0);
+                        of t) null != e && !1 !== _(d.ME, e.id, a) && (n = !0);
                     return n
                 },
                 PRESENCE_UPDATES: function(e) {
@@ -14903,7 +15122,7 @@
                             status: a,
                             activities: s
                         } = e;
-                        return E(null != t ? t : d.ME, n.id, s, a)
+                        return _(null != t ? t : d.ME, n.id, s, a)
                     }).some(e => e)
                 },
                 THREAD_MEMBER_LIST_UPDATE: function(e) {
@@ -14996,9 +15215,9 @@
                 c = n("429928"),
                 f = n("506885"),
                 m = n("766274"),
-                h = n("701909"),
-                E = n("474293"),
-                _ = n("158998"),
+                E = n("701909"),
+                _ = n("474293"),
+                h = n("158998"),
                 p = n("145131"),
                 I = n("963422"),
                 g = n("533403"),
@@ -15023,7 +15242,7 @@
                         children: s => {
                             var l;
                             return (0, a.jsx)(o.Tooltip, {
-                                text: e.unknownUser ? null : null !== (l = e.nick) && void 0 !== l ? l : _.default.getName(e.user),
+                                text: e.unknownUser ? null : null !== (l = e.nick) && void 0 !== l ? l : h.default.getName(e.user),
                                 children: l => (0, a.jsx)(o.Clickable, {
                                     className: e.unknownUser ? N.partyMember : N.partyMemberKnown,
                                     ...l,
@@ -15280,7 +15499,7 @@
                     })) : d = (0, a.jsx)("img", {
                         alt: "",
                         src: t,
-                        className: (0, E.getClass)(N, "artwork", this.getActionableMode())
+                        className: (0, _.getClass)(N, "artwork", this.getActionableMode())
                     });
                     let f = null != s && null != d && null != s.assets && null != s.assets.large_text && "" !== s.assets.large_text && !u && (0, c.default)(s) ? s.assets.large_text : null,
                         m = null != f ? (0, a.jsx)(o.Tooltip, {
@@ -15303,7 +15522,7 @@
                         children: [(0, a.jsx)("div", {
                             className: N.coverImageWrapper,
                             children: (0, a.jsx)("div", {
-                                className: i((0, E.getClass)(N, "coverImage", this.getActionableMode()), null != d ? N.blurred : null),
+                                className: i((0, _.getClass)(N, "coverImage", this.getActionableMode()), null != d ? N.blurred : null),
                                 style: {
                                     backgroundImage: null != t ? "url('".concat(t, "')") : void 0
                                 }
@@ -15335,7 +15554,7 @@
                                 })]
                             }), m]
                         }), (0, a.jsx)(o.Anchor, {
-                            href: h.default.getArticleURL(this.getHelpdeskArticleURL()),
+                            href: E.default.getArticleURL(this.getHelpdeskArticleURL()),
                             className: N.helpIcon,
                             children: (0, a.jsx)(T.default, {
                                 color: r.default.unsafe_rawColors.PRIMARY_300.css,
@@ -15670,9 +15889,9 @@
                 c = n("77078"),
                 f = n("265836"),
                 m = n("368121"),
-                h = n("570511"),
-                E = n("58608"),
-                _ = n("581361");
+                E = n("570511"),
+                _ = n("58608"),
+                h = n("581361");
             class p extends s.Component {
                 renderMedia() {
                     let {
@@ -15684,7 +15903,7 @@
                     } = this.state;
                     return (0, a.jsx)(r.default.img, {
                         className: i({
-                            [_.imageLoading]: s
+                            [h.imageLoading]: s
                         }, t),
                         src: e,
                         alt: n,
@@ -15703,15 +15922,15 @@
                         imageLoading: l
                     } = this.state;
                     return null == n || s ? (0, a.jsx)(r.default.div, {
-                        className: i(_.titleContainer, e),
+                        className: i(h.titleContainer, e),
                         style: this.getImageStyle(),
                         children: t
                     }) : (0, a.jsxs)(r.default.div, {
-                        className: i(l ? _.loadingContainer : null, e),
+                        className: i(l ? h.loadingContainer : null, e),
                         style: this.getImageStyle(),
                         children: [l ? (0, a.jsx)(c.Spinner, {
-                            className: _.spinner,
-                            itemClassName: _.spinnerItem,
+                            className: h.spinner,
+                            itemClassName: h.spinnerItem,
                             type: c.Spinner.Type.PULSING_ELLIPSIS,
                             animated: !0
                         }) : null, this.renderMedia()]
@@ -15774,13 +15993,13 @@
                         splashClassName: l
                     } = this.props;
                     return null == t ? (0, a.jsx)(p, {
-                        className: i(_.splash, l),
+                        className: i(h.splash, l),
                         src: n,
                         title: s
                     }, "image") : (0, a.jsx)(f.default, {
                         onInterval: this.nextItem,
                         interval: 2e3,
-                        className: _.slideshowWrapper,
+                        className: h.slideshowWrapper,
                         disable: !e,
                         children: (0, a.jsx)(d.default, {
                             children: this.renderSlideItem(t)
@@ -15801,7 +16020,7 @@
                     return n ? (0, a.jsx)("div", {
                         className: t
                     }) : (0, a.jsxs)("figure", {
-                        className: i(_.tileMedia, t),
+                        className: i(h.tileMedia, t),
                         children: [null == e || r ? this.renderTypeImage() : this.renderTypeVideo(), null != s && s(l && o)]
                     })
                 }
@@ -15836,10 +16055,10 @@
                             splashClassName: f,
                             splashPlaceholderClassName: I,
                             renderMediaOverlay: g
-                        } = this.props, T = u ? h.default : m.default;
+                        } = this.props, T = u ? E.default : m.default;
                         return (0, a.jsxs)(s.Fragment, {
-                            children: [o.isMobile ? null : (0, a.jsx)(E.default, {
-                                className: i(_.splash, f),
+                            children: [o.isMobile ? null : (0, a.jsx)(_.default, {
+                                className: i(h.splash, f),
                                 muted: u,
                                 loop: !0,
                                 preload: "none",
@@ -15852,18 +16071,18 @@
                                 })
                             }), (0, a.jsx)(d.default, {
                                 children: r && e ? null : (0, a.jsx)(p, {
-                                    className: i(_.splashPlaceholder, I),
+                                    className: i(h.splashPlaceholder, I),
                                     src: n,
                                     title: l
                                 }, 0)
                             }), (0, a.jsx)(c.Clickable, {
-                                className: i(_.muteContainer, {
-                                    [_.muteContainerPlaying]: r && e,
-                                    [_.muteContainerMediaOverlay]: null != g
+                                className: i(h.muteContainer, {
+                                    [h.muteContainerPlaying]: r && e,
+                                    [h.muteContainerMediaOverlay]: null != g
                                 }),
                                 onClick: this.handleToggleMute,
                                 children: r && e ? (0, a.jsx)(T, {
-                                    className: _.mute
+                                    className: h.mute
                                 }) : null
                             })]
                         })
@@ -15884,11 +16103,11 @@
                             currentIndex: r
                         } = this.state;
                         return s ? (0, a.jsx)(p, {
-                            className: i(_.splash, l),
+                            className: i(h.splash, l),
                             src: e[r],
                             title: n
                         }, r) : (0, a.jsx)(p, {
-                            className: i(_.splash, l),
+                            className: i(h.splash, l),
                             src: t,
                             title: n
                         }, "image")
@@ -16559,9 +16778,9 @@
                 c = n("300322"),
                 f = n("26989"),
                 m = n("957255"),
-                h = n("697218"),
-                E = n("599110"),
-                _ = n("718422"),
+                E = n("697218"),
+                _ = n("599110"),
+                h = n("718422"),
                 p = n("49111"),
                 I = n("33536");
 
@@ -16583,7 +16802,7 @@
                     stickers: c,
                     event: f,
                     eventProperties: m
-                } = e, [h, p] = s.useState(!1), T = s.useMemo(() => g({
+                } = e, [E, p] = s.useState(!1), T = s.useMemo(() => g({
                     assets: c,
                     currentUser: t,
                     message: l
@@ -16594,7 +16813,7 @@
                 }), [i, t, l]), S = s.useCallback(async () => {
                     let {
                         valid: e
-                    } = await (0, _.applyChatRestrictions)({
+                    } = await (0, h.applyChatRestrictions)({
                         type: u.ChatInputTypes.FORM,
                         content: "",
                         channel: n
@@ -16621,7 +16840,7 @@
                             event: n,
                             eventProperties: a
                         } = e;
-                        null != n && E.default.track(n, {
+                        null != n && _.default.track(n, {
                             ...a,
                             sticker_id: t.id
                         })
@@ -16640,7 +16859,7 @@
                     onClick: S,
                     children: [(0, a.jsx)(d.default, {
                         className: I.CTAMessageSticker,
-                        isInteracting: h,
+                        isInteracting: E,
                         sticker: T,
                         size: 28
                     }), C]
@@ -16655,7 +16874,7 @@
                     stickers: l,
                     event: r,
                     eventProperties: o
-                } = e, u = h.default.getCurrentUser(), d = function(e) {
+                } = e, u = E.default.getCurrentUser(), d = function(e) {
                     let {
                         channel: t,
                         message: n,
@@ -16715,18 +16934,18 @@
                     className: c,
                     compact: f,
                     popoutProps: m,
-                    hideTimestamp: h = !1,
-                    withFooter: E = !1,
-                    ..._
+                    hideTimestamp: E = !1,
+                    withFooter: _ = !1,
+                    ...h
                 } = e, p = (0, i.default)(t);
                 return (0, a.jsx)("div", {
                     className: l({
-                        [d.withFooter]: E
+                        [d.withFooter]: _
                     }, d.embedCard, {
                         [d.compact]: f
                     }, c),
                     children: (0, a.jsx)(r.default, {
-                        ..._,
+                        ...h,
                         className: l(d.messageContainer, {
                             [d.compact]: f
                         }),
@@ -16743,7 +16962,7 @@
                             author: p,
                             guildId: null == n ? void 0 : n.guild_id,
                             compact: f,
-                            hideTimestamp: h,
+                            hideTimestamp: E,
                             className: l(d.header, {
                                 [d.compact]: f
                             }),
@@ -16799,7 +17018,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return N
                 }
             });
             var a = n("37983"),
@@ -16813,16 +17032,17 @@
                 c = n("77078"),
                 f = n("574073"),
                 m = n("38600"),
-                h = n("981601"),
-                E = n("315102"),
-                _ = n("888400"),
+                E = n("981601"),
+                _ = n("315102"),
+                h = n("888400"),
                 p = n("927632"),
                 I = n("195483"),
                 g = n("49111"),
-                T = n("782340"),
-                C = n("741566");
+                T = n("406291"),
+                C = n("782340"),
+                S = n("741566");
 
-            function S(e) {
+            function A(e) {
                 let {
                     width: t = 6,
                     height: n = 10,
@@ -16845,160 +17065,161 @@
                 })
             }
 
-            function A(e) {
+            function N(e) {
                 var t;
+                let n;
                 let {
-                    message: n,
-                    channel: l
-                } = e, r = s.useMemo(() => (e, t) => (o(null != l && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, a.jsx)(h.default, {
+                    message: l,
+                    channel: r
+                } = e, u = s.useMemo(() => (e, t) => (o(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, a.jsx)(E.default, {
                     ...e,
-                    channelId: l.id,
-                    guildId: l.guild_id,
+                    channelId: r.id,
+                    guildId: r.guild_id,
                     userId: t.id
-                })), [l]), u = s.useMemo(() => e => (o(null != l, "ExecutedCommand: channel cannot be null"), (0, a.jsx)(p.default, {
+                })), [r]), N = s.useMemo(() => e => (o(null != r, "ExecutedCommand: channel cannot be null"), (0, a.jsx)(p.default, {
                     ...e,
-                    channel: l,
-                    messageId: n.id,
-                    interactionData: n.interactionData
-                })), [l, n.id, n.interactionData]), A = (0, f.useNullableUserAuthor)(null === (t = n.interaction) || void 0 === t ? void 0 : t.user, l), N = s.useMemo(() => e.compact ? (0, m.default)((0, _.dateFormat)(d(), "LT")) : null, [e.compact]);
-                if (null == n.interaction || null == A) return null;
-                let M = function(e, t) {
-                        let n, {
-                            message: s,
-                            compact: l,
-                            channel: r,
-                            isInteractionUserBlocked: o,
-                            showAvatarPopout: u,
-                            onClickAvatar: d,
-                            onUserContextMenu: m,
-                            onPopoutRequestClose: h
-                        } = e;
-                        if (l || o) return (0, a.jsx)("div", {
-                            className: C.replyBadge,
-                            children: (0, a.jsx)(S, {
-                                className: C.commandIcon
-                            })
-                        });
-                        if (null != s.interaction) {
-                            var _, p, I;
-                            let e = (0, f.getUserAuthor)(s.interaction.user, r);
-                            n = null !== (I = E.default.getGuildMemberAvatarURL({
-                                avatar: null !== (_ = e.guildMemberAvatar) && void 0 !== _ ? _ : void 0,
-                                userId: s.interaction.user.id,
-                                guildId: null !== (p = null == r ? void 0 : r.guild_id) && void 0 !== p ? p : ""
-                            })) && void 0 !== I ? I : void 0
-                        }
-                        let g = () => null != s.interaction && function(e) {
-                            let {
-                                user: t,
-                                guildId: n,
-                                guildAvatar: s,
-                                onClick: l,
-                                onContextMenu: r,
-                                onMouseDown: o
+                    channel: r,
+                    messageId: l.id,
+                    interactionData: l.interactionData
+                })), [r, l.id, l.interactionData]), M = (0, f.useNullableUserAuthor)(null === (t = l.interaction) || void 0 === t ? void 0 : t.user, r), v = s.useMemo(() => e.compact ? (0, m.default)((0, h.dateFormat)(d(), "LT")) : null, [e.compact]), x = l.interaction;
+                if (null == x || null == M) return null;
+                let O = () => {
+                    let t = function(e, t) {
+                            let n, {
+                                message: s,
+                                compact: l,
+                                channel: r,
+                                isInteractionUserBlocked: o,
+                                showAvatarPopout: u,
+                                onClickAvatar: d,
+                                onUserContextMenu: m,
+                                onPopoutRequestClose: E
                             } = e;
-                            return (0, a.jsx)("img", {
-                                alt: "",
-                                src: null != s ? s : t.getAvatarURL(n, 16),
-                                onClick: l,
-                                onContextMenu: r,
-                                onMouseDown: o,
-                                className: i({
-                                    [C.executedCommandAvatar]: !0,
-                                    [C.clickable]: null != l
+                            if (l || o) return (0, a.jsx)("div", {
+                                className: S.replyBadge,
+                                children: (0, a.jsx)(A, {
+                                    className: S.commandIcon
                                 })
-                            })
-                        }({
-                            user: s.interaction.user,
-                            guildId: r.guild_id,
-                            guildAvatar: n,
-                            onClick: d,
-                            onContextMenu: m
-                        });
-                        return null != t && null != u ? (0, a.jsx)(c.Popout, {
-                            renderPopout: t,
-                            shouldShow: u,
-                            position: "right",
-                            onRequestClose: h,
-                            children: g
-                        }) : g()
-                    }(e, e => {
-                        var t;
-                        return r(e, null === (t = n.interaction) || void 0 === t ? void 0 : t.user)
-                    }),
-                    v = function(e, t, n) {
-                        var s;
-                        let {
-                            message: l,
-                            channel: i,
-                            showUsernamePopout: r,
-                            onClickUsername: o,
-                            onUserContextMenu: u,
-                            onPopoutRequestClose: d
-                        } = e;
-                        return (0, a.jsx)(I.default, {
-                            compact: !0,
-                            author: t,
-                            message: l,
-                            channel: i,
-                            userOverride: null === (s = l.interaction) || void 0 === s ? void 0 : s.user,
-                            showPopout: r,
-                            renderPopout: n,
-                            onClick: o,
-                            onContextMenu: u,
-                            onPopoutRequestClose: d
-                        })
-                    }(e, A, e => {
-                        var t;
-                        return r(e, null === (t = n.interaction) || void 0 === t ? void 0 : t.user)
-                    }),
-                    x = function(e, t) {
-                        let {
-                            showDataPopout: n,
-                            message: s,
-                            onClickCommand: l,
-                            onPopoutRequestClose: r
-                        } = e;
-                        return (0, a.jsx)(c.Popout, {
-                            renderPopout: t,
-                            shouldShow: n,
-                            position: "top",
-                            align: "center",
-                            onRequestClose: r,
-                            animation: c.Popout.Animation.FADE,
-                            positionKey: null != s.interactionData ? "ready" : "loading",
-                            children: e => {
-                                let {
-                                    onClick: t,
-                                    ...n
-                                } = e;
-                                return s.type === g.MessageTypes.CHAT_INPUT_COMMAND || s.type === g.MessageTypes.INTERACTION_PREMIUM_UPSELL ? (0, a.jsx)(c.Clickable, {
-                                    ...n,
-                                    tag: "span",
-                                    onClick: l,
-                                    children: (0, a.jsx)("div", {
-                                        className: i(C.commandName, C.clickable),
-                                        children: "/" + s.interaction.displayName
-                                    })
-                                }) : (0, a.jsx)("div", {
-                                    className: C.commandName,
-                                    children: s.interaction.displayName
-                                })
+                            });
+                            if (null != s.interaction) {
+                                var h, p, I;
+                                let e = (0, f.getUserAuthor)(s.interaction.user, r);
+                                n = null !== (I = _.default.getGuildMemberAvatarURL({
+                                    avatar: null !== (h = e.guildMemberAvatar) && void 0 !== h ? h : void 0,
+                                    userId: s.interaction.user.id,
+                                    guildId: null !== (p = null == r ? void 0 : r.guild_id) && void 0 !== p ? p : ""
+                                })) && void 0 !== I ? I : void 0
                             }
-                        })
-                    }(e, u),
-                    O = T.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
-                        userHook: () => (0, a.jsxs)(s.Fragment, {
-                            children: [M, v]
-                        }, "user"),
-                        commandHook: () => (0, a.jsx)(s.Fragment, {
-                            children: x
+                            let g = () => null != s.interaction && function(e) {
+                                let {
+                                    user: t,
+                                    guildId: n,
+                                    guildAvatar: s,
+                                    onClick: l,
+                                    onContextMenu: r,
+                                    onMouseDown: o
+                                } = e;
+                                return (0, a.jsx)("img", {
+                                    alt: "",
+                                    src: null != s ? s : t.getAvatarURL(n, 16),
+                                    onClick: l,
+                                    onContextMenu: r,
+                                    onMouseDown: o,
+                                    className: i({
+                                        [S.executedCommandAvatar]: !0,
+                                        [S.clickable]: null != l
+                                    })
+                                })
+                            }({
+                                user: s.interaction.user,
+                                guildId: r.guild_id,
+                                guildAvatar: n,
+                                onClick: d,
+                                onContextMenu: m
+                            });
+                            return null != t && null != u ? (0, a.jsx)(c.Popout, {
+                                renderPopout: t,
+                                shouldShow: u,
+                                position: "right",
+                                onRequestClose: E,
+                                children: g
+                            }) : g()
+                        }(e, e => u(e, x.user)),
+                        n = function(e, t, n) {
+                            var s;
+                            let {
+                                message: l,
+                                channel: i,
+                                showUsernamePopout: r,
+                                onClickUsername: o,
+                                onUserContextMenu: u,
+                                onPopoutRequestClose: d
+                            } = e;
+                            return (0, a.jsx)(I.default, {
+                                compact: !0,
+                                author: t,
+                                message: l,
+                                channel: i,
+                                userOverride: null === (s = l.interaction) || void 0 === s ? void 0 : s.user,
+                                showPopout: r,
+                                renderPopout: n,
+                                onClick: o,
+                                onContextMenu: u,
+                                onPopoutRequestClose: d
+                            })
+                        }(e, M, e => u(e, x.user));
+                    return (0, a.jsxs)(s.Fragment, {
+                        children: [t, n]
+                    }, "user")
+                };
+                return n = (null == l ? void 0 : l.activityInstance) !== null ? C.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
+                    userHook: O
+                }) : C.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
+                    userHook: O,
+                    commandHook: () => {
+                        let t = function(e, t) {
+                            let {
+                                showDataPopout: n,
+                                message: s,
+                                onClickCommand: l,
+                                onPopoutRequestClose: r
+                            } = e, o = s.interaction.displayName;
+                            return (0, a.jsx)(c.Popout, {
+                                renderPopout: t,
+                                shouldShow: n,
+                                position: "top",
+                                align: "center",
+                                onRequestClose: r,
+                                animation: c.Popout.Animation.FADE,
+                                positionKey: null != s.interactionData ? "ready" : "loading",
+                                children: e => {
+                                    let {
+                                        onClick: t,
+                                        ...n
+                                    } = e;
+                                    return s.type === g.MessageTypes.CHAT_INPUT_COMMAND || s.type === g.MessageTypes.INTERACTION_PREMIUM_UPSELL ? (0, a.jsx)(c.Clickable, {
+                                        ...n,
+                                        tag: "span",
+                                        onClick: l,
+                                        children: (0, a.jsx)("div", {
+                                            className: i(S.commandName, S.clickable),
+                                            children: T.COMMAND_SENTINEL + o
+                                        })
+                                    }) : (0, a.jsx)("div", {
+                                        className: S.commandName,
+                                        children: o
+                                    })
+                                }
+                            })
+                        }(e, N);
+                        return (0, a.jsx)(s.Fragment, {
+                            children: t
                         }, "command")
-                    });
-                return (0, a.jsx)("div", {
-                    className: i(C.repliedMessage, C.executedCommand, N),
+                    }
+                }), (0, a.jsx)("div", {
+                    className: i(S.repliedMessage, S.executedCommand, v),
                     "aria-hidden": !e.compact,
-                    children: O
+                    children: n
                 })
             }
         },
@@ -17020,9 +17241,9 @@
                 c = n("274800"),
                 f = n("574073"),
                 m = n("401642"),
-                h = n("42203"),
-                E = n("305961"),
-                _ = n("697218"),
+                E = n("42203"),
+                _ = n("305961"),
+                h = n("697218"),
                 p = n("666897"),
                 I = n("49111"),
                 g = n("406291"),
@@ -17057,7 +17278,7 @@
                         onCopy: y,
                         copyRef: P
                     } = (0, d.default)(O, null == R ? void 0 : null === (t = R.application_command) || void 0 === t ? void 0 : t.id),
-                    D = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(O.guild_id), [O.guild_id]);
+                    D = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(O.guild_id), [O.guild_id]);
                 if (s.useEffect(() => {
                         (null == R || R.type === u.ApplicationCommandType.CHAT && void 0 === R.application_command) && c.fetchMessageInteractionData(O.id, L)
                     }, [O.id, L, R]), null == R) x = (0, a.jsx)(o.Spinner, {
@@ -17068,7 +17289,7 @@
                     let e = [],
                         t = Object.fromEntries((null !== (i = null === (n = R.application_command) || void 0 === n ? void 0 : n.options) && void 0 !== i ? i : []).map(e => [e.name, e]));
                     for (let n of null !== (M = R.options) && void 0 !== M ? M : []) e = e.concat(function e(t, n, l, i, r) {
-                        var d, c, E, C, M, v, x;
+                        var d, c, _, C, M, v, x;
                         let O;
                         let L = null != i ? i + " " + t.name : t.name;
                         if (t.type === u.ApplicationCommandOptionType.SUB_COMMAND || t.type === u.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
@@ -17078,7 +17299,7 @@
                                         children: null !== (c = null == r ? void 0 : r.name_localized) && void 0 !== c ? c : t.name
                                     })]
                                 }, L)],
-                                u = Object.fromEntries(null === (d = null !== (E = null == r ? void 0 : r.options) && void 0 !== E ? E : []) || void 0 === d ? void 0 : d.map(e => [e.name, e]));
+                                u = Object.fromEntries(null === (d = null !== (_ = null == r ? void 0 : r.options) && void 0 !== _ ? _ : []) || void 0 === d ? void 0 : d.map(e => [e.name, e]));
                             for (let a of null !== (C = t.options) && void 0 !== C ? C : []) i = i.concat(e(a, n, l, L, u[a.name]));
                             return i
                         }
@@ -17086,7 +17307,7 @@
                         if (null != t.value) switch (t.type) {
                             case u.ApplicationCommandOptionType.USER: {
                                 let e = t.value.toString(),
-                                    s = _.default.getUser(e);
+                                    s = h.default.getUser(e);
                                 if (null != s) {
                                     let e = (0, f.getUserAuthor)(s, n);
                                     O = (0, a.jsxs)(p.default, {
@@ -17105,7 +17326,7 @@
                             }
                             case u.ApplicationCommandOptionType.CHANNEL: {
                                 let e = t.value.toString(),
-                                    n = h.default.getChannel(e);
+                                    n = E.default.getChannel(e);
                                 null != n && (O = (0, a.jsxs)(p.default, {
                                     ...A,
                                     children: [g.CHANNEL_SENTINEL, n.name]
@@ -17128,7 +17349,7 @@
                                     children: [g.MENTION_SENTINEL, s.name]
                                 });
                                 else {
-                                    let t = _.default.getUser(e);
+                                    let t = h.default.getUser(e);
                                     if (null != t) {
                                         let e = (0, f.getUserAuthor)(t, n);
                                         O = (0, a.jsxs)(p.default, {
@@ -17258,7 +17479,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return Z
+                    return J
                 }
             });
             var a = n("37983"),
@@ -17272,9 +17493,9 @@
                 c = n("446674"),
                 f = n("77078"),
                 m = n("206230"),
-                h = n("228944"),
-                E = n("201131"),
-                _ = n("928098"),
+                E = n("228944"),
+                _ = n("201131"),
+                h = n("928098"),
                 p = n("702873"),
                 I = n("537325"),
                 g = n("95045"),
@@ -17329,21 +17550,21 @@
 
             function W(e, t) {
                 switch (e) {
-                    case h.AutomodAlertActionType.DELETE_USER_MESSAGE:
+                    case E.AutomodAlertActionType.DELETE_USER_MESSAGE:
                         return (0, a.jsx)(L.default, {
                             width: 16,
                             height: 16,
                             className: F.alertActionIcon,
                             ...t
                         });
-                    case h.AutomodAlertActionType.SET_COMPLETED:
+                    case E.AutomodAlertActionType.SET_COMPLETED:
                         return (0, a.jsx)(v.default, {
                             width: 16,
                             height: 16,
                             className: i(F.alertActionIcon, F.alertActionSetCompletedIcon),
                             ...t
                         });
-                    case h.AutomodAlertActionType.SUBMIT_FEEDBACK:
+                    case E.AutomodAlertActionType.SUBMIT_FEEDBACK:
                         return (0, a.jsx)(x.default, {
                             width: 16,
                             height: 16,
@@ -17371,17 +17592,17 @@
                         try {
                             let t = parseInt(e.actionType);
                             switch (t) {
-                                case h.AutomodAlertActionType.DELETE_USER_MESSAGE:
+                                case E.AutomodAlertActionType.DELETE_USER_MESSAGE:
                                     return H.default.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_DELETE_MESSAGE.format({
                                         userName: s,
                                         timestamp: l.fromNow()
                                     });
-                                case h.AutomodAlertActionType.SET_COMPLETED:
+                                case E.AutomodAlertActionType.SET_COMPLETED:
                                     return H.default.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SET_COMPLETED.format({
                                         userName: s,
                                         timestamp: l.fromNow()
                                     });
-                                case h.AutomodAlertActionType.SUBMIT_FEEDBACK:
+                                case E.AutomodAlertActionType.SUBMIT_FEEDBACK:
                                     return H.default.Messages.GUILD_AUTOMOD_ALERT_ACTION_ICON_TOOLTIP_SUBMIT_FEEDBACK.format({
                                         userName: s,
                                         timestamp: l.fromNow()
@@ -17416,7 +17637,7 @@
                 })
             }
 
-            function Z(e) {
+            function J(e) {
                 let {
                     id: t,
                     compact: n,
@@ -17435,8 +17656,8 @@
                     isFocused: j,
                     handleFocus: b,
                     handleBlur: W
-                } = (0, C.useFocusInside)(x), K = (0, c.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), Z = (0, c.useStateFromStores)([A.default], () => A.default.can(B.Permissions.MANAGE_MESSAGES, r), [r]), {
-                    ruleName: J,
+                } = (0, C.useFocusInside)(x), K = (0, c.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), J = (0, c.useStateFromStores)([A.default], () => A.default.can(B.Permissions.MANAGE_MESSAGES, r), [r]), {
+                    ruleName: Z,
                     embedChannel: X,
                     decisionId: q,
                     keywordMatchedContent: Q,
@@ -17447,7 +17668,7 @@
                     decisionReason: ea,
                     alertActionsExecution: es,
                     quarantineType: el
-                } = (0, E.default)(l), ei = s.useMemo(() => (0, g.renderAutomodMessageMarkup)(ee, Q, r.id), [ee, Q, r]), {
+                } = (0, _.default)(l), ei = s.useMemo(() => (0, g.renderAutomodMessageMarkup)(ee, Q, r.id), [ee, Q, r]), {
                     selected: er,
                     ...eo
                 } = function(e, t) {
@@ -17475,19 +17696,19 @@
                         showUsernamePopout: i
                     }
                 }(l, r), eu = s.useCallback(() => {
-                    (0, _.openSubmitFeedback)(l.id, ee, q, r)
+                    (0, h.openSubmitFeedback)(l.id, ee, q, r)
                 }, [l.id, ee, q, r]), ed = s.useCallback(e => {
                     null != et && null != X && (e.stopPropagation(), e.preventDefault(), (0, I.default)(B.Routes.CHANNEL(null == X ? void 0 : X.guild_id, null == X ? void 0 : X.id, et)))
                 }, [X, et]), ec = s.useCallback(() => {
-                    (0, p.executeAlertAction)(l.id, r, h.AutomodAlertActionType.DELETE_USER_MESSAGE)
-                }, [r, l.id]), ef = s.useMemo(() => (0, E.getActionHeaderText)(l, X, () => (0, a.jsx)("div", {
+                    (0, p.executeAlertAction)(l.id, r, E.AutomodAlertActionType.DELETE_USER_MESSAGE)
+                }, [r, l.id]), ef = s.useMemo(() => (0, _.getActionHeaderText)(l, X, () => (0, a.jsx)("div", {
                     className: F.channelNameContainer,
                     children: (0, a.jsx)(R.default, {
                         channel: X,
                         className: F.channelName,
                         openChatWithoutConnecting: !0
                     })
-                })), [l, X]), em = (0, k.getFriendlyDurationString)(Number(en)), eh = null != ea, eE = Z && null != et && (null == es || !es.actions.hasOwnProperty(h.AutomodAlertActionType.DELETE_USER_MESSAGE));
+                })), [l, X]), em = (0, k.getFriendlyDurationString)(Number(en)), eE = null != ea, e_ = J && null != et && (null == es || !es.actions.hasOwnProperty(E.AutomodAlertActionType.DELETE_USER_MESSAGE));
                 return (0, a.jsx)("div", {
                     onMouseEnter: N,
                     onMouseLeave: v,
@@ -17562,12 +17783,12 @@
                                                 }), (0, a.jsx)("div", {
                                                     className: i(F.dot, F.dotMargin)
                                                 })]
-                                            }), null != J && (0, a.jsx)(f.Text, {
+                                            }), null != Z && (0, a.jsx)(f.Text, {
                                                 variant: "text-xs/medium",
                                                 color: "text-muted",
                                                 tag: "span",
                                                 children: H.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_RULE_NAME.format({
-                                                    ruleName: J
+                                                    ruleName: Z
                                                 })
                                             }), null != em && (0, a.jsxs)(a.Fragment, {
                                                 children: [(0, a.jsx)("div", {
@@ -17590,11 +17811,11 @@
                                                     tag: "span",
                                                     className: F.titleCase,
                                                     children: H.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON.format({
-                                                        reason: (0, E.getQuarantineReasonString)(el)
+                                                        reason: (0, _.getQuarantineReasonString)(el)
                                                     })
                                                 })]
                                             })]
-                                        }), eh ? (0, a.jsx)(Y, {
+                                        }), eE ? (0, a.jsx)(Y, {
                                             children: (0, a.jsx)(f.Text, {
                                                 variant: "text-xs/medium",
                                                 color: "text-normal",
@@ -17653,7 +17874,7 @@
                                                 children: H.default.Messages.GUILD_AUTOMOD_REPORT_ISSUES
                                             })
                                         })
-                                    }), eE ? (0, a.jsxs)(a.Fragment, {
+                                    }), e_ ? (0, a.jsxs)(a.Fragment, {
                                         children: [(0, a.jsx)("div", {
                                             className: F.dot
                                         }), (0, a.jsx)(f.Button, {
@@ -17716,7 +17937,7 @@
                     return m
                 },
                 AutomodAvatar: function() {
-                    return h
+                    return E
                 }
             }), n("222007");
             var a = n("37983"),
@@ -17749,7 +17970,7 @@
                 }
             }
 
-            function h(e) {
+            function E(e) {
                 let {
                     src: t
                 } = e;
@@ -17781,9 +18002,9 @@
                 c = n("446674"),
                 f = n("669491"),
                 m = n("167338"),
-                h = n("582601"),
-                E = n("77078"),
-                _ = n("417796"),
+                E = n("582601"),
+                _ = n("77078"),
+                h = n("417796"),
                 p = n("398654"),
                 I = n("712125"),
                 g = n("311161"),
@@ -17849,13 +18070,13 @@
                             width: 16,
                             height: 16,
                             color: f.default.colors.HEADER_SECONDARY.css
-                        }), (0, a.jsx)(E.Text, {
+                        }), (0, a.jsx)(_.Text, {
                             variant: "text-md/semibold",
                             color: "header-secondary",
                             children: U.default.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_TITLE
                         })]
                     }),
-                    content: (0, a.jsx)(E.Text, {
+                    content: (0, a.jsx)(_.Text, {
                         variant: "text-md/normal",
                         color: "text-muted",
                         children: U.default.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_DESCRIPTION
@@ -17880,11 +18101,11 @@
                 return (0, a.jsx)(V, {
                     compact: l,
                     header: (0, a.jsxs)(s.Fragment, {
-                        children: [(0, a.jsx)(h.SettingsInfoIcon, {
+                        children: [(0, a.jsx)(E.SettingsInfoIcon, {
                             width: 16,
                             height: 16,
                             color: f.default.colors.TEXT_POSITIVE.css
-                        }), (0, a.jsx)(E.Text, {
+                        }), (0, a.jsx)(_.Text, {
                             variant: "text-md/semibold",
                             color: "text-positive",
                             children: U.default.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_TITLE
@@ -17895,11 +18116,11 @@
                         children: [(0, a.jsx)("div", {
                             className: B.alertsEnabledSubHeader,
                             children: null != u && null != i && (0, a.jsxs)(s.Fragment, {
-                                children: [(0, a.jsx)(E.Text, {
+                                children: [(0, a.jsx)(_.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-normal",
                                     children: U.default.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX
-                                }), (0, a.jsx)(E.Popout, {
+                                }), (0, a.jsx)(_.Popout, {
                                     renderPopout: function(e) {
                                         return null == i ? (0, a.jsx)(a.Fragment, {}) : (0, a.jsx)(A.default, {
                                             ...e,
@@ -17909,18 +18130,18 @@
                                             channelId: n.channel_id
                                         })
                                     },
-                                    children: e => (0, a.jsxs)(E.Clickable, {
+                                    children: e => (0, a.jsxs)(_.Clickable, {
                                         className: B.alertsEnabledSubHeaderAvatarUsername,
                                         ...e,
                                         children: [(0, a.jsx)("div", {
                                             ...m,
-                                            children: (0, a.jsx)(E.Avatar, {
+                                            children: (0, a.jsx)(_.Avatar, {
                                                 src: d,
                                                 avatarDecoration: c,
-                                                size: E.AvatarSizes.SIZE_16,
+                                                size: _.AvatarSizes.SIZE_16,
                                                 "aria-label": "TODO"
                                             })
-                                        }), (0, a.jsxs)(E.Text, {
+                                        }), (0, a.jsxs)(_.Text, {
                                             variant: "text-xs/medium",
                                             style: {
                                                 color: null != u.colorString ? u.colorString : f.default.colors.TEXT_NORMAL.css
@@ -17930,13 +18151,13 @@
                                     })
                                 })]
                             })
-                        }), (0, a.jsx)(G, {}), (0, a.jsx)(E.Text, {
+                        }), (0, a.jsx)(G, {}), (0, a.jsx)(_.Text, {
                             variant: "text-xs/medium",
                             color: "text-normal",
                             children: n.timestamp.fromNow()
                         })]
                     }),
-                    content: (0, a.jsx)(E.Text, {
+                    content: (0, a.jsx)(_.Text, {
                         variant: "text-md/normal",
                         color: "text-muted",
                         children: U.default.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_DESCRIPTION
@@ -17952,7 +18173,7 @@
                 } = e, {
                     joinAttempts: r,
                     raidDatetime: d,
-                    dmsSent: h,
+                    dmsSent: E,
                     raidType: A,
                     resolvedReason: N
                 } = (0, T.extractAutomodNotificationFields)(l), v = (0, c.useStateFromStores)([M.default], () => M.default.getChannel(l.channel_id), [l.channel_id]), x = null !== (t = null == v ? void 0 : v.guild_id) && void 0 !== t ? t : null, {
@@ -17961,7 +18182,7 @@
                 } = (0, p.useGuildIncidentsState)(x), D = (0, S.useContextMenuRaidAlert)(l.author.id, l.channel_id), j = s.useCallback(() => {
                     let e = null == v ? void 0 : v.guild_id;
                     null != e && (0, C.openRaidResolveModal)(l.id, e)
-                }, [l.id, v]), b = A === _.AutomodRaidAlertTypes.DM_RAID, k = b ? y.default : m.ChatAlertIcon;
+                }, [l.id, v]), b = A === h.AutomodRaidAlertTypes.DM_RAID, k = b ? y.default : m.ChatAlertIcon;
                 return (0, a.jsx)(V, {
                     compact: i,
                     header: (0, a.jsxs)(s.Fragment, {
@@ -17969,7 +18190,7 @@
                             width: 16,
                             height: 16,
                             color: f.default.colors.TEXT_DANGER.css
-                        }), (0, a.jsx)(E.Text, {
+                        }), (0, a.jsx)(_.Text, {
                             variant: "text-md/semibold",
                             color: "text-danger",
                             children: b ? U.default.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : U.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
@@ -17977,27 +18198,27 @@
                     }),
                     subheader: (0, a.jsxs)("div", {
                         className: B.dotSeparatedRow,
-                        children: [null != r && (0, a.jsx)(E.Text, {
+                        children: [null != r && (0, a.jsx)(_.Text, {
                             variant: "text-xs/medium",
                             color: "text-normal",
                             children: U.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_JOINS.format({
                                 joinCount: r
                             })
-                        }), null != h && (0, a.jsx)(E.Text, {
+                        }), null != E && (0, a.jsx)(_.Text, {
                             variant: "text-xs/medium",
                             color: "text-normal",
                             children: U.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_DMS.format({
-                                dmsSent: h
+                                dmsSent: E
                             })
                         }), null != d && (0, a.jsxs)(s.Fragment, {
-                            children: [(0, a.jsx)(G, {}), (0, a.jsx)(E.Text, {
+                            children: [(0, a.jsx)(G, {}), (0, a.jsx)(_.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-normal",
                                 children: o(d).fromNow()
                             })]
                         })]
                     }),
-                    content: null != d ? (0, a.jsx)(E.Text, {
+                    content: null != d ? (0, a.jsx)(_.Text, {
                         variant: "text-md/normal",
                         color: "text-muted",
                         children: U.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({
@@ -18006,7 +18227,7 @@
                     }) : null,
                     footerButtons: (0, a.jsxs)("div", {
                         className: B.dotSeparatedRow,
-                        children: [(0, a.jsx)(E.Button, {
+                        children: [(0, a.jsx)(_.Button, {
                             onClick: e => {
                                 if (null != x && P) {
                                     let e = {
@@ -18014,7 +18235,7 @@
                                         messageId: l.id,
                                         alertType: (0, g.getIncidentAlertType)(O)
                                     };
-                                    (0, E.openModalLazy)(async () => {
+                                    (0, _.openModalLazy)(async () => {
                                         let {
                                             default: t
                                         } = await n.el("186638").then(n.bind(n, "186638"));
@@ -18026,9 +18247,9 @@
                                     })
                                 } else D(e)
                             },
-                            color: E.Button.Colors.LINK,
-                            look: E.Button.Looks.LINK,
-                            size: E.Button.Sizes.SMALL,
+                            color: _.Button.Colors.LINK,
+                            look: _.Button.Looks.LINK,
+                            size: _.Button.Sizes.SMALL,
                             className: B.buttonStyle,
                             children: (0, a.jsx)("div", {
                                 className: B.footerAction,
@@ -18038,7 +18259,7 @@
                                         height: 16,
                                         color: u.default.BLUE_345,
                                         className: B.footerIcon
-                                    }), (0, a.jsx)(E.Text, {
+                                    }), (0, a.jsx)(_.Text, {
                                         variant: "text-xs/medium",
                                         color: "text-link",
                                         children: U.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION
@@ -18049,22 +18270,22 @@
                                         height: 16,
                                         color: u.default.BLUE_345,
                                         className: B.footerIcon
-                                    }), (0, a.jsx)(E.Text, {
+                                    }), (0, a.jsx)(_.Text, {
                                         variant: "text-xs/medium",
                                         color: "text-link",
                                         children: U.default.Messages.ACTIONS
                                     })]
                                 })
                             })
-                        }), (0, a.jsx)(E.Button, {
+                        }), (0, a.jsx)(_.Button, {
                             onClick: j,
-                            color: E.Button.Colors.LINK,
-                            look: E.Button.Looks.LINK,
-                            size: E.Button.Sizes.SMALL,
+                            color: _.Button.Colors.LINK,
+                            look: _.Button.Looks.LINK,
+                            size: _.Button.Sizes.SMALL,
                             className: B.buttonStyle,
                             children: (0, a.jsx)("div", {
                                 className: B.footerAction,
-                                children: (0, a.jsx)(E.Text, {
+                                children: (0, a.jsx)(_.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-link",
                                     children: (0, T.getRaidAlertResolveCTAText)(N)
@@ -18147,7 +18368,7 @@
                                 }),
                                 username: (0, a.jsxs)("div", {
                                     className: B.spanCorrection,
-                                    children: [(0, a.jsx)(E.Text, {
+                                    children: [(0, a.jsx)(_.Text, {
                                         variant: "text-md/normal",
                                         color: "text-brand",
                                         tag: "span",
@@ -18156,7 +18377,7 @@
                                     }), (0, a.jsx)(O.default, {
                                         type: b.BotTagTypes.SYSTEM_DM,
                                         className: B.systemTag
-                                    }), f && (0, a.jsx)(E.Text, {
+                                    }), f && (0, a.jsx)(_.Text, {
                                         variant: "text-md/normal",
                                         color: "header-primary",
                                         tag: "span",
@@ -18201,7 +18422,7 @@
                     joinable: u,
                     usernameHook: d,
                     onClickJoinCall: c
-                } = e, f = (0, s.default)(t), m = f.nick, h = d(f), E = function(e) {
+                } = e, f = (0, s.default)(t), m = f.nick, E = d(f), _ = function(e) {
                     let t = null != e.call ? e.call.duration : null;
                     return null != t ? t.humanize() : null
                 }(t);
@@ -18209,25 +18430,25 @@
                     icon: n("349745"),
                     timestamp: t.timestamp,
                     compact: r,
-                    children: null != E ? i.default.Messages.SYSTEM_MESSAGE_CALL_MISSED_WITH_DURATION_HOOK.format({
+                    children: null != _ ? i.default.Messages.SYSTEM_MESSAGE_CALL_MISSED_WITH_DURATION_HOOK.format({
                         username: m,
-                        usernameHook: h,
-                        callDuration: E
+                        usernameHook: E,
+                        callDuration: _
                     }) : i.default.Messages.SYSTEM_MESSAGE_CALL_MISSED_HOOK.format({
                         username: m,
-                        usernameHook: h
+                        usernameHook: E
                     })
                 }) : (0, a.jsxs)(l.default, {
                     icon: n("309541"),
                     timestamp: t.timestamp,
                     compact: r,
-                    children: [null != E ? i.default.Messages.SYSTEM_MESSAGE_CALL_STARTED_WITH_DURATION_HOOK.format({
+                    children: [null != _ ? i.default.Messages.SYSTEM_MESSAGE_CALL_STARTED_WITH_DURATION_HOOK.format({
                         username: m,
-                        usernameHook: h,
-                        callDuration: E
+                        usernameHook: E,
+                        callDuration: _
                     }) : i.default.Messages.SYSTEM_MESSAGE_CALL_STARTED_HOOK.format({
                         username: m,
-                        usernameHook: h
+                        usernameHook: E
                     }), u ? (0, a.jsx)(l.default.Action, {
                         onClick: c,
                         children: i.default.Messages.SYSTEM_MESSAGE_JOIN_CALL
@@ -18292,9 +18513,9 @@
                     content: d,
                     timestamp: c,
                     messageReference: f
-                } = s, m = (0, i.default)(s), h = t(m), E = o.default.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
+                } = s, m = (0, i.default)(s), E = t(m), _ = o.default.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
                     username: m.nick,
-                    usernameHook: h,
+                    usernameHook: E,
                     webhookName: d,
                     webhookNameHook: (e, t) => (0, a.jsx)(u, {
                         messageReference: f,
@@ -18305,7 +18526,7 @@
                     icon: n("127067"),
                     timestamp: c,
                     compact: l,
-                    children: E
+                    children: _
                 })
             }
         },
@@ -18395,7 +18616,7 @@
                     usernameHook: d,
                     onClickPins: c,
                     compact: f
-                } = e, m = (0, r.default)(t), h = m.nick, E = d(m), _ = () => {
+                } = e, m = (0, r.default)(t), E = m.nick, _ = d(m), h = () => {
                     if (null == t.messageReference) return;
                     let {
                         channel_id: e,
@@ -18420,20 +18641,20 @@
                     timestamp: t.timestamp,
                     compact: f,
                     children: null != t.messageReference ? null == c ? u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_WITH_MESSAGE_HOOK.format({
-                        usernameHook: E,
-                        username: h,
-                        messageOnClick: _
+                        usernameHook: _,
+                        username: E,
+                        messageOnClick: h
                     }) : u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_WITH_MESSAGE.format({
-                        usernameHook: E,
-                        username: h,
+                        usernameHook: _,
+                        username: E,
                         pinsActionOnClick: c,
-                        messageOnClick: _
+                        messageOnClick: h
                     }) : null == c ? u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_HOOK.format({
-                        usernameHook: E,
-                        username: h
+                        usernameHook: _,
+                        username: E
                     }) : u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE.format({
-                        usernameHook: E,
-                        username: h,
+                        usernameHook: _,
+                        username: E,
                         pinsActionOnClick: c
                     })
                 })
@@ -18443,7 +18664,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return h
                 }
             });
             var a = n("37983");
@@ -18458,21 +18679,21 @@
                 c = n("250375"),
                 f = n("49111"),
                 m = n("988268"),
-                h = n("782340"),
-                E = n("413362");
+                E = n("782340"),
+                _ = n("413362");
 
-            function _(e) {
+            function h(e) {
                 let {
                     message: t,
                     compact: n,
                     usernameHook: s
-                } = e, _ = (0, r.default)(t), p = s(_), {
+                } = e, h = (0, r.default)(t), p = s(h), {
                     avatarSrc: I,
                     eventHandlers: {
                         onMouseEnter: g,
                         onMouseLeave: T
                     }
-                } = (0, c.useAutomodAvatar)(!0), C = "" !== t.content ? new Date(t.content).toLocaleString(h.default.getLocale(), {
+                } = (0, c.useAutomodAvatar)(!0), C = "" !== t.content ? new Date(t.content).toLocaleString(E.default.getLocale(), {
                     hour: "numeric",
                     minute: "2-digit",
                     month: "2-digit",
@@ -18483,49 +18704,49 @@
                     onMouseEnter: g,
                     onMouseLeave: T,
                     children: (0, a.jsx)(d.default, {
-                        className: l(E.mainContainer, {
-                            [E.compact]: n
+                        className: l(_.mainContainer, {
+                            [_.compact]: n
                         }),
                         iconNode: n ? null : (0, a.jsx)(c.AutomodAvatar, {
                             src: I
                         }),
-                        iconContainerClassName: E.iconContainer,
+                        iconContainerClassName: _.iconContainer,
                         compact: n,
                         children: (0, a.jsxs)("div", {
-                            className: l(E.content, {
-                                [E.compact]: n
+                            className: l(_.content, {
+                                [_.compact]: n
                             }),
                             children: [(0, a.jsx)(u.BaseMessageHeader, {
                                 message: t,
-                                messageClassname: E.spanCorrection,
-                                className: l(E.usernameContainer, E.spanCorrection, {
-                                    [E.compact]: n
+                                messageClassname: _.spanCorrection,
+                                className: l(_.usernameContainer, _.spanCorrection, {
+                                    [_.compact]: n
                                 }),
                                 username: (0, a.jsxs)("div", {
-                                    className: E.spanCorrection,
+                                    className: _.spanCorrection,
                                     children: [(0, a.jsx)(i.Text, {
                                         variant: "text-md/normal",
                                         color: "text-brand",
                                         tag: "span",
-                                        className: E.username,
-                                        children: h.default.Messages.GUILD_AUTOMOD_USERNAME
+                                        className: _.username,
+                                        children: E.default.Messages.GUILD_AUTOMOD_USERNAME
                                     }), (0, a.jsx)(o.default, {
                                         type: m.BotTagTypes.SYSTEM_DM,
-                                        className: E.systemTag
+                                        className: _.systemTag
                                     })]
                                 }),
                                 compact: n,
                                 showTimestamp: !0
                             }), (0, a.jsx)("div", {
-                                className: l(E.messageContent, {
-                                    [E.compact]: n
+                                className: l(_.messageContent, {
+                                    [_.compact]: n
                                 }),
-                                children: t.type === f.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? h.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
-                                    username: _.nick,
+                                children: t.type === f.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? E.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
+                                    username: h.nick,
                                     usernameHook: p,
                                     time: C
-                                }) : h.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
-                                    username: _.nick,
+                                }) : E.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
+                                    username: h.nick,
                                     usernameHook: p
                                 })
                             })]
@@ -18624,7 +18845,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return _
                 }
             });
             var a = n("37983");
@@ -18639,14 +18860,14 @@
                 c = n("250375"),
                 f = n("988268"),
                 m = n("782340"),
-                h = n("413362");
+                E = n("413362");
 
-            function E(e) {
+            function _(e) {
                 let {
                     message: t,
                     compact: n,
                     usernameHook: s
-                } = e, E = (0, r.default)(t), _ = s(E), {
+                } = e, _ = (0, r.default)(t), h = s(_), {
                     avatarSrc: p,
                     eventHandlers: {
                         onMouseEnter: I,
@@ -18657,46 +18878,46 @@
                     onMouseEnter: I,
                     onMouseLeave: g,
                     children: (0, a.jsx)(d.default, {
-                        className: l(h.mainContainer, {
-                            [h.compact]: n
+                        className: l(E.mainContainer, {
+                            [E.compact]: n
                         }),
                         iconNode: n ? null : (0, a.jsx)(c.AutomodAvatar, {
                             src: p
                         }),
-                        iconContainerClassName: h.iconContainer,
+                        iconContainerClassName: E.iconContainer,
                         compact: n,
                         children: (0, a.jsxs)("div", {
-                            className: l(h.content, {
-                                [h.compact]: n
+                            className: l(E.content, {
+                                [E.compact]: n
                             }),
                             children: [(0, a.jsx)(u.BaseMessageHeader, {
                                 message: t,
-                                messageClassname: h.spanCorrection,
-                                className: l(h.usernameContainer, h.spanCorrection, {
-                                    [h.compact]: n
+                                messageClassname: E.spanCorrection,
+                                className: l(E.usernameContainer, E.spanCorrection, {
+                                    [E.compact]: n
                                 }),
                                 username: (0, a.jsxs)("div", {
-                                    className: h.spanCorrection,
+                                    className: E.spanCorrection,
                                     children: [(0, a.jsx)(i.Text, {
                                         variant: "text-md/normal",
                                         color: "text-brand",
                                         tag: "span",
-                                        className: h.username,
+                                        className: E.username,
                                         children: m.default.Messages.GUILD_AUTOMOD_USERNAME
                                     }), (0, a.jsx)(o.default, {
                                         type: f.BotTagTypes.SYSTEM_DM,
-                                        className: h.systemTag
+                                        className: E.systemTag
                                     })]
                                 }),
                                 compact: n,
                                 showTimestamp: !0
                             }), (0, a.jsx)("div", {
-                                className: l(h.messageContent, {
-                                    [h.compact]: n
+                                className: l(E.messageContent, {
+                                    [E.compact]: n
                                 }),
                                 children: m.default.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({
-                                    username: E.nick,
-                                    usernameHook: _
+                                    username: _.nick,
+                                    usernameHook: h
                                 })
                             })]
                         })
@@ -18723,9 +18944,9 @@
                 c = n("93332"),
                 f = n("304198"),
                 m = n("250375"),
-                h = n("988268"),
-                E = n("782340"),
-                _ = n("413362");
+                E = n("988268"),
+                _ = n("782340"),
+                h = n("413362");
 
             function p(e) {
                 var t;
@@ -18745,44 +18966,44 @@
                     onMouseEnter: A,
                     onMouseLeave: N,
                     children: (0, a.jsx)(f.default, {
-                        className: l(_.mainContainer, {
-                            [_.compact]: s
+                        className: l(h.mainContainer, {
+                            [h.compact]: s
                         }),
                         iconNode: s ? null : (0, a.jsx)(m.AutomodAvatar, {
                             src: S
                         }),
-                        iconContainerClassName: _.iconContainer,
+                        iconContainerClassName: h.iconContainer,
                         compact: s,
                         children: (0, a.jsxs)("div", {
-                            className: l(_.content, {
-                                [_.compact]: s
+                            className: l(h.content, {
+                                [h.compact]: s
                             }),
                             children: [(0, a.jsx)(c.BaseMessageHeader, {
                                 message: n,
-                                messageClassname: _.spanCorrection,
-                                className: l(_.usernameContainer, _.spanCorrection, {
-                                    [_.compact]: s
+                                messageClassname: h.spanCorrection,
+                                className: l(h.usernameContainer, h.spanCorrection, {
+                                    [h.compact]: s
                                 }),
                                 username: (0, a.jsxs)("div", {
-                                    className: _.spanCorrection,
+                                    className: h.spanCorrection,
                                     children: [(0, a.jsx)(r.Text, {
                                         variant: "text-md/normal",
                                         color: "text-brand",
                                         tag: "span",
-                                        className: _.username,
-                                        children: E.default.Messages.GUILD_AUTOMOD_USERNAME
+                                        className: h.username,
+                                        children: _.default.Messages.GUILD_AUTOMOD_USERNAME
                                     }), (0, a.jsx)(d.default, {
-                                        type: h.BotTagTypes.SYSTEM_DM,
-                                        className: _.systemTag
+                                        type: E.BotTagTypes.SYSTEM_DM,
+                                        className: h.systemTag
                                     })]
                                 }),
                                 compact: s,
                                 showTimestamp: !0
                             }), (0, a.jsx)("div", {
-                                className: l(_.messageContent, {
-                                    [_.compact]: s
+                                className: l(h.messageContent, {
+                                    [h.compact]: s
                                 }),
-                                children: E.default.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
+                                children: _.default.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
                                     username: T.nick,
                                     usernameHook: C,
                                     guildName: null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : ""
@@ -18817,19 +19038,19 @@
                     onJoinStream: c,
                     usernameHook: f,
                     compact: m
-                } = e, h = (0, s.default)(n), E = null === (t = n.call) || void 0 === t ? void 0 : t.duration, _ = f(h), p = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
-                    username: h.nick,
+                } = e, E = (0, s.default)(n), _ = null === (t = n.call) || void 0 === t ? void 0 : t.duration, h = f(E), p = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
+                    username: E.nick,
                     activityName: null != d ? d.name : "unknown",
                     onJoinStream: c,
-                    usernameHook: _
+                    usernameHook: h
                 });
-                return null != E && (p = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
-                    username: h.nick,
-                    duration: E.humanize(),
+                return null != _ && (p = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
+                    username: E.nick,
+                    duration: _.humanize(),
                     channelName: u.name,
-                    usernameHook: _
+                    usernameHook: h
                 })), (0, a.jsx)(i.default, {
-                    iconNode: null != E ? (0, a.jsx)(l.default, {
+                    iconNode: null != _ ? (0, a.jsx)(l.default, {
                         width: 20,
                         height: 20
                     }) : (0, a.jsx)(r.default, {
@@ -18864,7 +19085,7 @@
                         isOwner: f,
                         channel: m
                     } = e,
-                    h = () => {
+                    E = () => {
                         let e = i.default.getGuild(m.getGuildId());
                         null != e && ((0, s.openModalLazy)(async () => {
                             let {
@@ -18878,17 +19099,17 @@
                             })
                         }), (0, l.trackGuildInviteNotificationAction)())
                     },
-                    E = (e, t) => (0, a.jsx)(s.Anchor, {
+                    _ = (e, t) => (0, a.jsx)(s.Anchor, {
                         className: d.inviteLink,
-                        onClick: h,
+                        onClick: E,
                         children: e
                     }, t);
                 return t = c ? (0, a.jsx)("div", {
                     className: d.inviteContent,
                     children: f ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_OWNER_COMPACT.format({
-                        inviteHook: E
+                        inviteHook: _
                     }) : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_COMPACT.format({
-                        inviteHook: E
+                        inviteHook: _
                     })
                 }) : (0, a.jsxs)("div", {
                     className: d.content,
@@ -18899,7 +19120,7 @@
                         className: d.inviteContent,
                         children: f ? u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION_OWNER : u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_DESCRIPTION
                     }), (0, a.jsx)(s.Button, {
-                        onClick: h,
+                        onClick: E,
                         size: s.Button.Sizes.SMALL,
                         className: d.inviteButton,
                         children: u.default.Messages.SYSTEM_MESSAGE_INVITE_USERS_BUTTON
@@ -18940,7 +19161,7 @@
                     compact: d
                 } = e, {
                     nick: c
-                } = (0, s.default)(t), f = o(), m = u(), h = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD_HOOK.format({
+                } = (0, s.default)(t), f = o(), m = u(), E = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD_HOOK.format({
                     username: c,
                     usernameHook: f,
                     otherUsername: r,
@@ -18950,7 +19171,7 @@
                     icon: n("127067"),
                     timestamp: t.timestamp,
                     compact: d,
-                    children: h
+                    children: E
                 })
             }
         },
@@ -18977,20 +19198,20 @@
                         channel: f
                     } = e,
                     m = (0, s.default)(r),
-                    h = m.nick,
-                    E = o(m),
-                    _ = (0, s.useNullableUserAuthor)(u, f);
-                if (null != _ && null != d) {
-                    let e = d(_);
+                    E = m.nick,
+                    _ = o(m),
+                    h = (0, s.useNullableUserAuthor)(u, f);
+                if (null != h && null != d) {
+                    let e = d(h);
                     t = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
-                        username: h,
-                        usernameHook: E,
-                        otherUsername: _.nick,
+                        username: E,
+                        usernameHook: _,
+                        otherUsername: h.nick,
                         otherUsernameHook: e
                     })
                 } else t = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF_HOOK.format({
-                    username: h,
-                    usernameHook: E
+                    username: E,
+                    usernameHook: _
                 });
                 return (0, a.jsx)(l.default, {
                     icon: n("226315"),
@@ -19214,20 +19435,20 @@
                     compact: c,
                     usernameHook: f,
                     onClickThread: m,
-                    onClickViewThreads: h,
-                    onContextMenuThread: E
-                } = e, _ = (0, l.default)(n), p = f(_), I = (0, s.useStateFromStores)([i.default], () => {
+                    onClickViewThreads: E,
+                    onContextMenuThread: _
+                } = e, h = (0, l.default)(n), p = f(h), I = (0, s.useStateFromStores)([i.default], () => {
                     var e;
                     return i.default.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id)
                 }), g = u.default.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
-                    actorName: _.nick,
+                    actorName: h.nick,
                     actorHook: p,
                     threadName: null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : n.content,
                     threadOnClick: {
                         onClick: m,
-                        onContextMenu: E
+                        onContextMenu: _
                     },
-                    viewThreadsOnClick: h
+                    viewThreadsOnClick: E
                 });
                 return (0, a.jsx)(o.default, {
                     iconNode: (0, a.jsx)(r.default, {
@@ -19260,17 +19481,17 @@
                     actorUsernameHook: u,
                     targetUsernameHook: d,
                     compact: c
-                } = e, f = (0, s.default)(t), m = (0, s.useNullableUserAuthor)(o, r), h = u(f), E = d(null != m ? m : void 0), _ = i.default.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
+                } = e, f = (0, s.default)(t), m = (0, s.useNullableUserAuthor)(o, r), E = u(f), _ = d(null != m ? m : void 0), h = i.default.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
                     actorName: f.nick,
-                    actorHook: h,
+                    actorHook: E,
                     targetName: null == m ? void 0 : m.nick,
-                    targetHook: E
+                    targetHook: _
                 });
                 return (0, a.jsx)(l.default, {
                     icon: n("127067"),
                     timestamp: t.timestamp,
                     compact: c,
-                    children: _
+                    children: h
                 })
             }
         },
@@ -19295,17 +19516,17 @@
                     actorUsernameHook: u,
                     targetUsernameHook: d,
                     compact: c
-                } = e, f = (0, s.default)(t), m = (0, s.useNullableUserAuthor)(o, r), h = u(f), E = d(null != m ? m : void 0), _ = i.default.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_REMOVE.format({
+                } = e, f = (0, s.default)(t), m = (0, s.useNullableUserAuthor)(o, r), E = u(f), _ = d(null != m ? m : void 0), h = i.default.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_REMOVE.format({
                     actorName: f.nick,
-                    actorHook: h,
+                    actorHook: E,
                     targetName: null == m ? void 0 : m.nick,
-                    targetHook: E
+                    targetHook: _
                 });
                 return (0, a.jsx)(l.default, {
                     icon: n("226315"),
                     timestamp: t.timestamp,
                     compact: c,
-                    children: _
+                    children: h
                 })
             }
         },
@@ -19382,9 +19603,9 @@
                 c = n("516555"),
                 f = n("748820"),
                 m = n("617258"),
-                h = n("769846"),
-                E = n("77078"),
-                _ = n("79112"),
+                E = n("769846"),
+                _ = n("77078"),
+                h = n("79112"),
                 p = n("526887"),
                 I = n("574073"),
                 g = n("28007"),
@@ -19422,7 +19643,7 @@
             };
             (i = s || (s = {})).TOP_LEFT = "TOP_LEFT", i.TOP_RIGHT = "TOP_RIGHT", i.BOTTOM_LEFT = "BOTTOM_LEFT", i.BOTTOM_RIGHT = "BOTTOM_RIGHT";
             let R = ["TOP_LEFT", "TOP_RIGHT"],
-                y = (0, m.cssValueToNumber)(h.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
+                y = (0, m.cssValueToNumber)(E.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
                 P = {
                     leafPosition: {
                         x: 85,
@@ -19517,7 +19738,7 @@
                 }()), {
                     createMultipleConfettiAt: u,
                     confettiCanvas: m
-                } = o.useContext(p.ConfettiCannonContext), [h, E] = o.useState(null), _ = (0, c.useConfettiCannon)(m, h), I = function(e, t) {
+                } = o.useContext(p.ConfettiCannonContext), [E, _] = o.useState(null), h = (0, c.useConfettiCannon)(m, E), I = function(e, t) {
                     if (null == e) return "enter";
                     switch (e) {
                         case "enter":
@@ -19572,7 +19793,7 @@
                 }, [u, i, a]), o.useEffect(() => {
                     if (g && "leaf_fall" === a) {
                         let e = D[i].leafRotationDirection;
-                        _.createConfetti({
+                        h.createConfetti({
                             id: "".concat(j, "-").concat((0, f.v4)()),
                             position: {
                                 type: "static",
@@ -19620,9 +19841,9 @@
                             sprite: "TOP_LEFT" === i ? U : B
                         })
                     }
-                }, [g, _, i, a]), (0, r.jsxs)(r.Fragment, {
+                }, [g, h, i, a]), (0, r.jsxs)(r.Fragment, {
                     children: [(0, r.jsx)(c.SpriteCanvas, {
-                        ref: E,
+                        ref: _,
                         sprites: G,
                         colors: b,
                         spriteWidth: 45,
@@ -19670,11 +19891,11 @@
                         createMultipleConfettiAt: c,
                         addClickListener: f
                     } = o.useContext(p.ConfettiCannonContext),
-                    [m, h] = o.useState(!1),
+                    [m, E] = o.useState(!1),
                     C = o.useRef(null),
                     {
                         reducedMotion: L
-                    } = o.useContext(E.AccessibilityPreferencesContext),
+                    } = o.useContext(_.AccessibilityPreferencesContext),
                     R = (0, I.getMessageAuthor)(n),
                     y = R.nick,
                     P = l(R);
@@ -19703,22 +19924,22 @@
                                 var e;
                                 let t = null === (e = C.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
                                 if (null != t) c(t.left + t.width / 2, t.top + t.height / 2)
-                            } else h(!0)
+                            } else E(!0)
                         }
                     }, [c, L, m]),
                     b = o.useCallback(() => {
-                        h(!1)
+                        E(!1)
                     }, []),
                     U = o.useCallback((e, t) => {
                         (null == t ? void 0 : t.id.startsWith(j)) && ((0, g.updatePoggermodeSettings)({
                             settingsVisible: !0
-                        }), _.default.open(v.UserSettingsSections.POGGERMODE))
+                        }), h.default.open(v.UserSettingsSections.POGGERMODE))
                     }, []);
                 o.useEffect(() => {
                     let e = f(U);
                     return e
                 });
-                let B = (0, r.jsx)(E.Clickable, {
+                let B = (0, r.jsx)(_.Clickable, {
                     className: O.iconWrapper,
                     innerRef: C,
                     onClick: i,
@@ -19817,13 +20038,13 @@
                     className: t,
                     firing: n = !0,
                     wind: d = 2
-                } = e, [c, f] = s.useState(null), [m, h] = s.useState(null), E = (0, l.useConfettiCannon)(m, c), _ = s.useMemo(() => new l.Environment({
+                } = e, [c, f] = s.useState(null), [m, E] = s.useState(null), _ = (0, l.useConfettiCannon)(m, c), h = s.useMemo(() => new l.Environment({
                     wind: d
                 }), [d]), p = s.useCallback(() => {
                     let e = null == m ? void 0 : m.getCanvas();
                     if (null == e) return;
                     let t = e.getBoundingClientRect();
-                    E.createConfetti({
+                    _.createConfetti({
                         ...u,
                         position: {
                             type: "static-random",
@@ -19837,15 +20058,15 @@
                             }
                         }
                     })
-                }, [E, m]);
+                }, [_, m]);
                 return s.useEffect(() => {
                     let e = n ? setInterval(p, o) : null;
                     return () => clearInterval(e)
                 }, [n, p]), (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(l.ConfettiCanvas, {
-                        ref: h,
+                        ref: E,
                         className: t,
-                        environment: _
+                        environment: h
                     }), (0, a.jsx)(l.SpriteCanvas, {
                         ref: f,
                         colors: r,
@@ -19866,7 +20087,7 @@
                     return m
                 },
                 default: function() {
-                    return E
+                    return _
                 }
             });
             var a, s, l = n("37983");
@@ -19889,7 +20110,7 @@
                     [u.BadgeShapes.SQUARE]: ""
                 };
 
-            function h(e) {
+            function E(e) {
                 let {
                     className: t,
                     style: n,
@@ -19911,8 +20132,8 @@
                     style: n
                 })
             }
-            h.Looks = s, h.Sizes = f;
-            var E = h
+            E.Looks = s, E.Sizes = f;
+            var _ = E
         },
         883029: function(e, t, n) {
             "use strict";
@@ -19983,7 +20204,7 @@
                     return m
                 },
                 getReadablePreorderReleaseDate: function() {
-                    return E
+                    return _
                 }
             }), n("781738"), n("222007");
             var a = n("866227"),
@@ -20016,7 +20237,7 @@
                     n = c[e];
                 u[t] = n, d[n] = t
             });
-            let h = [
+            let E = [
                 ["YYYY-MM-DD", "MMMM DD, Y"],
                 ["YYYY-MM", "MMMM Y"],
                 ["MM-DD", "MMMM DD"],
@@ -20024,15 +20245,15 @@
                 ["YYYY", "Y"]
             ];
 
-            function E(e) {
+            function _(e) {
                 let {
                     preorderReleaseAt: t,
                     preorderApproximateReleaseDate: n
                 } = e;
                 if (null != t) return t.format("MMMM DD");
                 if (null == n) return null;
-                for (let e = 0; e < h.length; e++) {
-                    let [t, a] = h[e], l = s(n, t, !0);
+                for (let e = 0; e < E.length; e++) {
+                    let [t, a] = E[e], l = s(n, t, !0);
                     if (l.isValid()) return l.format(a)
                 }
                 return n
@@ -20107,9 +20328,9 @@
                 c = n("271938"),
                 f = n("42203"),
                 m = n("305961"),
-                h = n("697218"),
-                E = n("387111"),
-                _ = n("299039"),
+                E = n("697218"),
+                _ = n("387111"),
+                h = n("299039"),
                 p = n("49111"),
                 I = n("782340");
             let g = {
@@ -20122,7 +20343,7 @@
 
             function S(e) {
                 let t = C(),
-                    n = _.default.extractTimestamp(e) % t.length;
+                    n = h.default.extractTimestamp(e) % t.length;
                 return t[n]
             }
 
@@ -20144,18 +20365,18 @@
             }
             var M = {
                 stringify: function(e, t) {
-                    var n, _, g, T;
+                    var n, h, g, T;
                     let C = null === (n = e.mentions) || void 0 === n ? void 0 : n[0],
-                        M = null != C && "string" != typeof C ? h.default.getUser(C.id) : void 0,
+                        M = null != C && "string" != typeof C ? E.default.getUser(C.id) : void 0,
                         v = e.channel_id,
-                        x = E.default.getName(null, v, e.author);
+                        x = _.default.getName(null, v, e.author);
                     switch (e.type) {
                         case p.MessageTypes.RECIPIENT_ADD:
                             if (null == M) return;
                             return (0, a.astToString)(I.default.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD.astFormat({
                                 username: x,
                                 usernameOnClick: p.NOOP,
-                                otherUsername: E.default.getName(null, v, M),
+                                otherUsername: _.default.getName(null, v, M),
                                 otherUsernameOnClick: p.NOOP
                             }));
                         case p.MessageTypes.RECIPIENT_REMOVE:
@@ -20168,7 +20389,7 @@
                             return (0, a.astToString)(I.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE.astFormat({
                                 username: x,
                                 usernameOnClick: p.NOOP,
-                                otherUsername: E.default.getName(null, v, M),
+                                otherUsername: _.default.getName(null, v, M),
                                 otherUsernameOnClick: p.NOOP
                             }));
                         case p.MessageTypes.CALL:
@@ -20222,7 +20443,7 @@
                                 roleSubscriptionData: e.role_subscription_data
                             }));
                         case p.MessageTypes.PURCHASE_NOTIFICATION:
-                            if (e instanceof d.default || (null === (g = e.purchase_notification) || void 0 === g ? void 0 : null === (_ = g.guild_product_purchase) || void 0 === _ ? void 0 : _.product_name) == null) return null;
+                            if (e instanceof d.default || (null === (g = e.purchase_notification) || void 0 === g ? void 0 : null === (h = g.guild_product_purchase) || void 0 === h ? void 0 : h.product_name) == null) return null;
                             return (0, a.astToString)((0, l.getGuildProductPurchaseSystemMessageContentMobile)({
                                 username: x,
                                 productName: e.purchase_notification.guild_product_purchase.product_name
@@ -20291,7 +20512,7 @@
                 },
                 getSystemMessageUserJoin: function(e) {
                     let t = T(),
-                        n = _.default.extractTimestamp(e) % t.length;
+                        n = h.default.extractTimestamp(e) % t.length;
                     return t[n]
                 },
                 getSystemMessageUserJoinMobile: S,

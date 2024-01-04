@@ -2470,7 +2470,8 @@
                             i = {
                                 [c.ApplicationCommandType.CHAT]: t(),
                                 [c.ApplicationCommandType.MESSAGE]: t(),
-                                [c.ApplicationCommandType.USER]: t()
+                                [c.ApplicationCommandType.USER]: t(),
+                                [c.ApplicationCommandType.PRIMARY_ENTRY_POINT]: t()
                             };
                         n.set(e, i)
                     }
