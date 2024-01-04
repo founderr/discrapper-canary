@@ -3266,21 +3266,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 getSafetyHubData: function() {
-                    return o
+                    return s
                 },
                 getSafetyHubDataForClassification: function() {
-                    return s
+                    return u
                 }
             });
             var i = n("872717"),
                 r = n("913144"),
-                l = n("234998"),
-                a = n("49111");
-            async function o() {
+                l = n("651693"),
+                a = n("234998"),
+                o = n("49111");
+            async function s() {
                 r.default.dispatch({
                     type: "SAFETY_HUB_FETCH_START"
                 }), await i.default.get({
-                    url: a.Endpoints.SAFETY_HUB
+                    url: o.Endpoints.SAFETY_HUB
                 }).then(e => {
                     let {
                         body: t
@@ -3291,7 +3292,12 @@
                     n.forEach(e => {
                         if (null != e.flagged_content && e.flagged_content.length > 0) {
                             let t = e.flagged_content[0];
-                            t.attachments.forEach(e => (0, l.setMessageAttachmentDimensions)(e))
+                            t.attachments = t.attachments.filter(e => {
+                                let {
+                                    filename: t
+                                } = e;
+                                return (0, l.isImageFile)(t)
+                            }), t.attachments.forEach(e => (0, a.setMessageAttachmentDimensions)(e))
                         }
                     }), r.default.dispatch({
                         type: "SAFETY_HUB_FETCH_SUCCESS",
@@ -3306,30 +3312,35 @@
                     })
                 })
             }
-            async function s(e) {
+            async function u(e) {
                 r.default.dispatch({
                     type: "SAFETY_HUB_FETCH_CLASSIFICATION_START",
                     classificationId: e
                 }), await i.default.get({
-                    url: a.Endpoints.SAFETY_HUB
+                    url: o.Endpoints.SAFETY_HUB
                 }).then(t => {
                     let {
                         body: n
                     } = t, {
                         classifications: i,
-                        account_standing: a,
-                        is_dsa_eligible: o
-                    } = n, s = i.find(t => t.id === e);
-                    if (null != s) {
-                        if (null != s.flagged_content && s.flagged_content.length > 0) {
-                            let e = s.flagged_content[0];
-                            e.attachments.forEach(e => (0, l.setMessageAttachmentDimensions)(e))
+                        account_standing: o,
+                        is_dsa_eligible: s
+                    } = n, u = i.find(t => t.id === e);
+                    if (null != u) {
+                        if (null != u.flagged_content && u.flagged_content.length > 0) {
+                            let e = u.flagged_content[0];
+                            e.attachments = e.attachments.filter(e => {
+                                let {
+                                    filename: t
+                                } = e;
+                                return (0, l.isImageFile)(t)
+                            }), e.attachments.forEach(e => (0, a.setMessageAttachmentDimensions)(e))
                         }
                         r.default.dispatch({
                             type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
-                            classification: s,
-                            accountStanding: a,
-                            isDsaEligible: o
+                            classification: u,
+                            accountStanding: o,
+                            isDsaEligible: s
                         })
                     } else r.default.dispatch({
                         type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
@@ -3895,7 +3906,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 ClassificationEvidence: function() {
-                    return y
+                    return R
                 }
             });
             var i = n("37983");
@@ -3904,78 +3915,69 @@
                 l = n("249654"),
                 a = n("446674"),
                 o = n("77078"),
-                s = n("651693"),
-                u = n("692038"),
-                c = n("815297"),
-                d = n("933629"),
-                f = n("39331"),
-                E = n("596368"),
-                _ = n("227439"),
-                I = n("697218"),
-                p = n("170113"),
-                h = n("780571"),
-                S = n("377502"),
-                T = n("103603"),
-                C = n("736393"),
-                A = n("170213"),
-                N = n("49111"),
-                g = n("719347"),
-                m = n("782340"),
-                v = n("161730");
-            let L = e => {
-                    let t = e.attachments.filter(e => {
-                        let {
-                            filename: t
-                        } = e;
-                        return (0, s.isImageFile)(t) || (0, s.isVideoFile)(t)
-                    }).map(e => ({
+                s = n("692038"),
+                u = n("815297"),
+                c = n("933629"),
+                d = n("39331"),
+                f = n("596368"),
+                E = n("227439"),
+                _ = n("697218"),
+                I = n("170113"),
+                p = n("780571"),
+                h = n("377502"),
+                S = n("103603"),
+                T = n("736393"),
+                C = n("170213"),
+                A = n("49111"),
+                N = n("719347"),
+                g = n("782340"),
+                m = n("161730");
+            let v = e => {
+                    let t = e.attachments.map(e => ({
                         ...e,
-                        filename: (0, C.getAttachmentFilename)(e),
+                        filename: (0, T.getAttachmentFilename)(e),
                         size: 0,
                         width: e.width,
                         height: e.height,
                         proxy_url: e.url
                     }));
-                    return (0, u.createMessageRecord)({
-                        ...(0, c.default)({
+                    return (0, s.createMessageRecord)({
+                        ...(0, u.default)({
                             nonce: e.id,
                             content: e.content,
-                            type: N.MessageTypes.DEFAULT,
+                            type: A.MessageTypes.DEFAULT,
                             channelId: ""
                         }),
                         timestamp: new Date(l.default.extractTimestamp(e.id)).toISOString(),
                         attachments: t,
-                        state: N.MessageStates.SENT
+                        state: A.MessageStates.SENT
                     })
                 },
-                R = e => {
+                L = e => {
                     let {
                         message: t
-                    } = e, n = t.attachments.filter(e => {
-                        let {
-                            filename: t
-                        } = e;
-                        return (0, s.isImageFile)(t) || (0, s.isVideoFile)(t)
-                    });
+                    } = e, {
+                        attachments: n
+                    } = t;
                     if (0 === n.length) return null;
                     let l = (e, t, n) => {
-                            let l = A.DEFAULT_MEDIA_MAX_WIDTH,
-                                a = A.DEFAULT_MEDIA_MAX_HEIGHT;
+                            let l = C.DEFAULT_MEDIA_MAX_WIDTH,
+                                a = C.DEFAULT_MEDIA_MAX_HEIGHT;
                             if (null != t.width && null != t.height) {
-                                let e = (0, T.getRatio)({
+                                let e = (0, S.getRatio)({
                                     width: t.width,
                                     height: t.height,
-                                    maxWidth: A.DEFAULT_MEDIA_MAX_WIDTH,
-                                    maxHeight: A.DEFAULT_MEDIA_MAX_HEIGHT
+                                    maxWidth: C.DEFAULT_MEDIA_MAX_WIDTH,
+                                    maxHeight: C.DEFAULT_MEDIA_MAX_HEIGHT
                                 });
-                                l = (0, r.clamp)(Math.round(t.width * e), 0, A.DEFAULT_MEDIA_MAX_WIDTH), a = (0, r.clamp)(Math.round(t.height * e), 0, A.DEFAULT_MEDIA_MAX_HEIGHT)
+                                l = (0, r.clamp)(Math.round(t.width * e), 0, C.DEFAULT_MEDIA_MAX_WIDTH), a = (0, r.clamp)(Math.round(t.height * e), 0, C.DEFAULT_MEDIA_MAX_HEIGHT)
                             }
                             return (0, i.jsx)("div", {
                                 style: {
                                     width: n ? l : "100%",
                                     height: n ? a : "100%"
                                 },
-                                children: (0, i.jsx)(p.default, {
+                                children: (0, i.jsx)(I.default, {
                                     className: e.className,
                                     forceExternal: !1,
                                     src: t.url,
@@ -3985,12 +3987,12 @@
                                     volume: e.volume,
                                     autoPlay: !1,
                                     autoMute: !1,
-                                    type: p.default.Types.VIDEO,
+                                    type: I.default.Types.VIDEO,
                                     mediaLayoutType: e.mediaLayoutType,
                                     fileName: t.filename,
                                     fileSize: null == t.size ? void 0 : t.size.toString(),
                                     playable: !0,
-                                    renderLinkComponent: d.renderMaskedLinkComponent,
+                                    renderLinkComponent: c.renderMaskedLinkComponent,
                                     onClick: e.onClick,
                                     onPlay: e.onPlay,
                                     onEnded: e.onEnded,
@@ -4002,54 +4004,54 @@
                         },
                         a = 1 === n.length;
                     return (0, i.jsx)("div", {
-                        className: v.classificationEvidenceMessageAttachment,
-                        children: (0, i.jsx)(S.default, {
+                        className: m.classificationEvidenceMessageAttachment,
+                        children: (0, i.jsx)(h.default, {
                             attachments: n.map(e => ({
                                 attachment: e,
                                 spoiler: !0,
                                 message: t,
-                                mediaLayoutType: g.MediaLayoutType.MOSAIC,
+                                mediaLayoutType: N.MediaLayoutType.MOSAIC,
                                 autoPlayGif: !1,
                                 inlineMedia: !0,
                                 canRemoveAttachment: !1,
                                 isSingleMosaicItem: a,
                                 onRemoveAttachment: r.noop,
                                 renderVideoComponent: t => l(t, e, a),
-                                renderImageComponent: e => (0, d.renderImageComponent)({
+                                renderImageComponent: e => (0, c.renderImageComponent)({
                                     hiddenSpoilers: !0,
                                     shouldHideMediaOptions: !0,
                                     shouldLink: !1,
                                     ...e
                                 }),
-                                renderAudioComponent: d.renderAudioComponent,
-                                renderPlaintextFilePreview: d.renderPlaintextFilePreview,
+                                renderAudioComponent: c.renderAudioComponent,
+                                renderPlaintextFilePreview: c.renderPlaintextFilePreview,
                                 gifFavoriteButton: () => null
                             }))
                         })
                     })
                 },
-                y = e => {
+                R = e => {
                     var t;
                     let {
                         flaggedContent: n
-                    } = e, r = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), l = n[0], s = L(l), u = (0, f.default)(s, {
+                    } = e, r = (0, a.useStateFromStores)([_.default], () => _.default.getCurrentUser()), l = n[0], s = v(l), u = (0, d.default)(s, {
                         hideSimpleEmbedContent: !1,
                         allowList: !1,
                         allowHeading: !1,
                         allowLinks: !1,
                         previewLinkTarget: !1
                     });
-                    return (0, i.jsxs)("div", {
-                        className: v.classificationEvidenceContainer,
+                    return "" === s.content && 0 === s.attachments.length ? null : (0, i.jsxs)("div", {
+                        className: m.classificationEvidenceContainer,
                         children: [(0, i.jsx)(o.Text, {
                             variant: "eyebrow",
                             color: "text-muted",
-                            children: m.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
+                            children: g.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
                         }), (0, i.jsx)("div", {
-                            className: v.classificationEvidenceCard,
-                            children: (0, i.jsx)(h.default, {
+                            className: m.classificationEvidenceCard,
+                            children: (0, i.jsx)(p.default, {
                                 compact: !1,
-                                childrenHeader: (0, _.default)({
+                                childrenHeader: (0, E.default)({
                                     author: {
                                         ...r,
                                         colorString: "",
@@ -4064,10 +4066,10 @@
                                     roleIcon: void 0,
                                     hideTimestamp: !1
                                 }),
-                                childrenAccessories: (0, i.jsx)(R, {
+                                childrenAccessories: (0, i.jsx)(L, {
                                     message: s
                                 }),
-                                childrenMessageContent: (0, E.default)({
+                                childrenMessageContent: (0, f.default)({
                                     message: s
                                 }, u.content),
                                 hasThread: !1,

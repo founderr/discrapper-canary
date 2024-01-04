@@ -41,21 +41,22 @@
             "use strict";
             a.r(e), a.d(e, {
                 getSafetyHubData: function() {
-                    return r
+                    return c
                 },
                 getSafetyHubDataForClassification: function() {
-                    return c
+                    return u
                 }
             });
             var n = a("872717"),
                 s = a("913144"),
-                i = a("234998"),
-                l = a("49111");
-            async function r() {
+                i = a("651693"),
+                l = a("234998"),
+                r = a("49111");
+            async function c() {
                 s.default.dispatch({
                     type: "SAFETY_HUB_FETCH_START"
                 }), await n.default.get({
-                    url: l.Endpoints.SAFETY_HUB
+                    url: r.Endpoints.SAFETY_HUB
                 }).then(t => {
                     let {
                         body: e
@@ -66,7 +67,12 @@
                     a.forEach(t => {
                         if (null != t.flagged_content && t.flagged_content.length > 0) {
                             let e = t.flagged_content[0];
-                            e.attachments.forEach(t => (0, i.setMessageAttachmentDimensions)(t))
+                            e.attachments = e.attachments.filter(t => {
+                                let {
+                                    filename: e
+                                } = t;
+                                return (0, i.isImageFile)(e)
+                            }), e.attachments.forEach(t => (0, l.setMessageAttachmentDimensions)(t))
                         }
                     }), s.default.dispatch({
                         type: "SAFETY_HUB_FETCH_SUCCESS",
@@ -81,30 +87,35 @@
                     })
                 })
             }
-            async function c(t) {
+            async function u(t) {
                 s.default.dispatch({
                     type: "SAFETY_HUB_FETCH_CLASSIFICATION_START",
                     classificationId: t
                 }), await n.default.get({
-                    url: l.Endpoints.SAFETY_HUB
+                    url: r.Endpoints.SAFETY_HUB
                 }).then(e => {
                     let {
                         body: a
                     } = e, {
                         classifications: n,
-                        account_standing: l,
-                        is_dsa_eligible: r
-                    } = a, c = n.find(e => e.id === t);
-                    if (null != c) {
-                        if (null != c.flagged_content && c.flagged_content.length > 0) {
-                            let t = c.flagged_content[0];
-                            t.attachments.forEach(t => (0, i.setMessageAttachmentDimensions)(t))
+                        account_standing: r,
+                        is_dsa_eligible: c
+                    } = a, u = n.find(e => e.id === t);
+                    if (null != u) {
+                        if (null != u.flagged_content && u.flagged_content.length > 0) {
+                            let t = u.flagged_content[0];
+                            t.attachments = t.attachments.filter(t => {
+                                let {
+                                    filename: e
+                                } = t;
+                                return (0, i.isImageFile)(e)
+                            }), t.attachments.forEach(t => (0, l.setMessageAttachmentDimensions)(t))
                         }
                         s.default.dispatch({
                             type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
-                            classification: c,
-                            accountStanding: l,
-                            isDsaEligible: r
+                            classification: u,
+                            accountStanding: r,
+                            isDsaEligible: c
                         })
                     } else s.default.dispatch({
                         type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
@@ -531,8 +542,8 @@
                         }
                     },
                     {
-                        title: D,
-                        description: m,
+                        title: m,
+                        description: D,
                         color: h,
                         Icon: L
                     } = O[t.state],
@@ -553,7 +564,7 @@
                             children: [(0, n.jsx)(S.Heading, {
                                 color: "header-primary",
                                 variant: "heading-lg/normal",
-                                children: D.format({
+                                children: m.format({
                                     hook: t => (0, n.jsx)(S.Text, {
                                         style: {
                                             color: h.css
@@ -566,7 +577,7 @@
                             }), (0, n.jsx)(S.Text, {
                                 color: "text-normal",
                                 variant: "text-sm/normal",
-                                children: m
+                                children: D
                             })]
                         }), (0, n.jsxs)("div", {
                             className: f.health,
@@ -763,7 +774,7 @@
                         })]
                     })
                 },
-                D = () => (0, n.jsxs)("div", {
+                m = () => (0, n.jsxs)("div", {
                     className: g.emptyState,
                     children: [(0, n.jsxs)("div", {
                         className: g.iconContainer,
@@ -785,7 +796,7 @@
                         children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
                     })]
                 }),
-                m = () => (0, n.jsx)("div", {
+                D = () => (0, n.jsx)("div", {
                     className: g.emptyState,
                     children: (0, n.jsx)(c.Text, {
                         variant: "text-xs/normal",
@@ -901,7 +912,7 @@
                                         nextPageSize: _
                                     })
                                 })]
-                            }), 0 === S.length && "active" === e && (0, n.jsx)(D, {}), 0 === S.length && "expired" === e && (0, n.jsx)(m, {})]
+                            }), 0 === S.length && "active" === e && (0, n.jsx)(m, {}), 0 === S.length && "expired" === e && (0, n.jsx)(D, {})]
                         })]
                     })
                 },
