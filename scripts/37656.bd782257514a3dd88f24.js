@@ -1699,7 +1699,7 @@
                     }, {
                         autoTrackExposure: M
                     }), y = null;
-                    return v && (y = x ? E.SeasonalGiftStyles2023 : N), (0, s.jsxs)("div", {
+                    return v && (y = M && x ? E.SeasonalGiftStyles2023 : N), (0, s.jsxs)("div", {
                         children: [v && (0, s.jsxs)("div", {
                             className: p.giftMainAnimation,
                             children: [null != t ? (0, s.jsx)(f.default, {

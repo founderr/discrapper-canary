@@ -10195,7 +10195,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "b375f679e6325cb15feb6081737c614fd79a6573", e.substring(0, 7)),
+                    S = (e = "5a2812f84600f947448186f4fa84ce44403d07b5", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     m = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10208,7 +10208,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "257359", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "257369", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -16731,7 +16731,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return S
+                    return f
                 }
             });
             var a = s("37983");
@@ -16740,22 +16740,31 @@
                 l = s("901582"),
                 i = s("619935"),
                 r = s("245187"),
-                o = s("566126"),
-                d = s("832837"),
-                u = s("49111"),
-                c = s("188338");
+                o = s("374023"),
+                d = s("566126"),
+                u = s("832837"),
+                c = s("526995"),
+                S = s("49111"),
+                E = s("188338");
 
-            function S() {
-                let e = (0, i.useBlockedPaymentsConfig)();
-                return e ? (0, a.jsx)(r.BlockedPaymentsContentSettings, {}) : (0, a.jsxs)(a.Fragment, {
+            function f() {
+                let {
+                    enabled: e
+                } = o.default.useExperiment({
+                    location: "UserSettingsInventory"
+                }), t = (0, i.useBlockedPaymentsConfig)();
+                return t ? (0, a.jsx)(r.BlockedPaymentsContentSettings, {}) : (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(l.default, {
-                        section: u.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
-                        children: (0, a.jsx)(o.default, {})
-                    }), (0, a.jsx)(n.FormDivider, {
-                        className: c.divider
-                    }), (0, a.jsx)(l.default, {
-                        section: u.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
+                        section: S.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
                         children: (0, a.jsx)(d.default, {})
+                    }), e && (0, a.jsx)(l.default, {
+                        section: S.AnalyticsSections.QUESTS,
+                        children: (0, a.jsx)(c.default, {})
+                    }), (0, a.jsx)(n.FormDivider, {
+                        className: E.divider
+                    }), (0, a.jsx)(l.default, {
+                        section: S.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
+                        children: (0, a.jsx)(u.default, {})
                     })]
                 })
             }
@@ -24334,6 +24343,239 @@
                 })
             }
         },
+        400377: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                default: function() {
+                    return _
+                }
+            });
+            var a = s("37983");
+            s("884691");
+            var n = s("414456"),
+                l = s.n(n),
+                i = s("446674"),
+                r = s("77078"),
+                o = s("448881"),
+                d = s("2973"),
+                u = s("227231"),
+                c = s("782340"),
+                S = s("268479");
+            let E = (e, t, s) => s ? c.default.Messages.QUESTS_SHOW_CODE : e || t ? c.default.Messages.QUESTS_CLAIM_REWARD : c.default.Messages.QUESTS_ACCEPT,
+                f = (e, t) => e ? c.default.Messages.QUESTS_COMPLETE_TOOLTIP : t ? c.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : c.default.Messages.QUESTS_ACCEPT_TOOLTIP,
+                m = (e, t, s, a) => e || t || s ? () => {} : () => {
+                    (0, o.enrollInQuest)(a)
+                },
+                T = e => {
+                    let {
+                        streamProgress: t,
+                        streamDurationRequirement: s,
+                        isQuestComplete: n
+                    } = e, i = Math.min(Math.floor((void 0 !== t ? t / 60 : 0) / s * 100), 100);
+                    return (0, a.jsxs)("div", {
+                        className: S.progressBarPercentContainer,
+                        children: [(0, a.jsx)("div", {
+                            className: l(S.progressPercent, {
+                                [S.progressPercentInnerInProgress]: !n,
+                                [S.progressPercentInnerComplete]: n
+                            }),
+                            style: {
+                                left: "".concat(i - (0 === i ? 0 : 100 === i ? 6 : 5), "%")
+                            },
+                            children: "".concat(i, "%")
+                        }), (0, a.jsx)("div", {
+                            className: S.progressBarContainer,
+                            children: (0, a.jsx)("div", {
+                                className: S.progressBarOuter,
+                                children: (0, a.jsx)("div", {
+                                    className: l(S.progressBarInner, {
+                                        [S.progressBarInnerInProgress]: !n,
+                                        [S.progressBarInnerComplete]: n
+                                    }),
+                                    style: {
+                                        width: "".concat(i, "%")
+                                    }
+                                })
+                            })
+                        })]
+                    })
+                };
+            var _ = e => {
+                var t, s, n, l, o;
+                let {
+                    quest: _
+                } = e, g = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, h = (null === (s = _.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null, I = (null === (n = _.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, N = h && !I, p = h ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN, C = E(g, h, I), A = f(g, h), O = m(g, h, I, _.id), x = h && !g, M = (0, i.useStateFromStores)([d.default], () => d.default.isEnrolling(_.id));
+                return (0, a.jsxs)("div", {
+                    className: S.outerContainer,
+                    children: [(0, a.jsx)("div", {
+                        className: S.questRewardContainer,
+                        children: (0, a.jsx)("img", {
+                            src: (0, u.getRewardAssetUrl)(_.id),
+                            alt: "",
+                            className: S.questReward
+                        })
+                    }), (0, a.jsxs)("div", {
+                        className: S.innerContainer,
+                        children: [(0, a.jsxs)("div", {
+                            className: S.questCopyCta,
+                            children: [(0, a.jsxs)("div", {
+                                className: S.questCopy,
+                                children: [(0, a.jsx)(r.Text, {
+                                    variant: "text-lg/medium",
+                                    children: c.default.Messages.QUESTS_STREAM_TASK.format({
+                                        minutes: _.config.streamDurationRequirementMinutes
+                                    })
+                                }), (0, a.jsx)(r.Text, {
+                                    variant: "text-sm/medium",
+                                    children: c.default.Messages.QUEST_REWARD.format({
+                                        reward: _.config.messages.rewardNameWithArticle
+                                    })
+                                })]
+                            }), (0, a.jsx)(r.TooltipContainer, {
+                                text: A,
+                                className: S.questCta,
+                                tooltipContentClassName: S.ctaTooltipCopy,
+                                shouldShow: !I,
+                                children: (0, a.jsx)(r.Button, {
+                                    color: p,
+                                    disabled: x,
+                                    submitting: M,
+                                    onClick: O,
+                                    children: C
+                                })
+                            })]
+                        }), N && (0, a.jsx)(T, {
+                            streamProgress: null === (l = _.userStatus) || void 0 === l ? void 0 : l.streamProgressSeconds,
+                            streamDurationRequirement: _.config.streamDurationRequirementMinutes,
+                            isQuestComplete: (null === (o = _.userStatus) || void 0 === o ? void 0 : o.completedAt) != null
+                        })]
+                    })]
+                })
+            }
+        },
+        822107: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                default: function() {
+                    return c
+                }
+            });
+            var a = s("37983");
+            s("884691");
+            var n = s("446674"),
+                l = s("77078"),
+                i = s("227231"),
+                r = s("915639"),
+                o = s("161778"),
+                d = s("782340"),
+                u = s("779928"),
+                c = e => {
+                    let {
+                        quest: t
+                    } = e, s = (0, n.useStateFromStores)([r.default], () => r.default.locale), c = (0, n.useStateFromStores)([o.default], () => o.default.getState().theme), S = new Date(t.config.expiresAt).toLocaleDateString(s, {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric"
+                    });
+                    return (0, a.jsxs)("div", {
+                        className: u.questsCardHeader,
+                        children: [(0, a.jsx)("img", {
+                            src: (0, i.getHeroAssetUrl)(t.id),
+                            alt: "",
+                            className: u.questSplash
+                        }), (0, a.jsxs)("div", {
+                            className: u.headerContent,
+                            children: [(0, a.jsxs)("div", {
+                                className: u.iconLogotypeContainer,
+                                children: [(0, a.jsx)("img", {
+                                    src: (0, i.getGameTileAssetUrl)(t.id),
+                                    alt: "",
+                                    className: u.questIcon
+                                }), (0, a.jsx)("img", {
+                                    src: (0, i.getGameLogotypeAssetUrl)(t.id, c),
+                                    alt: "",
+                                    className: u.questLogotype
+                                })]
+                            }), (0, a.jsxs)("div", {
+                                className: u.questInfo,
+                                children: [(0, a.jsx)(l.Heading, {
+                                    variant: "heading-xxl/bold",
+                                    className: u.questTitle,
+                                    children: t.config.messages.questName
+                                }), (0, a.jsx)(l.Text, {
+                                    variant: "text-xs/medium",
+                                    className: u.questSubtitle,
+                                    children: d.default.Messages.QUESTS_AVAILABLE_THROUGH.format({
+                                        date: S
+                                    })
+                                })]
+                            })]
+                        })]
+                    })
+                }
+        },
+        526995: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                default: function() {
+                    return m
+                }
+            }), s("222007");
+            var a = s("37983"),
+                n = s("884691"),
+                l = s("446674"),
+                i = s("77078"),
+                r = s("448881"),
+                o = s("2973"),
+                d = s("249900"),
+                u = s("400377"),
+                c = s("822107"),
+                S = s("782340"),
+                E = s("632087");
+            let f = e => {
+                let {
+                    quest: t
+                } = e;
+                return (0, a.jsxs)("div", {
+                    className: E.questsCard,
+                    children: [(0, a.jsx)(c.default, {
+                        quest: t
+                    }), (0, a.jsx)(u.default, {
+                        quest: t
+                    })]
+                })
+            };
+            var m = () => {
+                let [e, t] = n.useState(!1), s = (0, l.useStateFromStoresArray)([o.default], () => [...o.default.quests.values()]), {
+                    isFetchingCurrentQuests: u,
+                    lastFetchedCurrentQuests: c
+                } = (0, l.useStateFromStoresObject)([o.default], () => ({
+                    isFetchingCurrentQuests: o.default.isFetchingCurrentQuests,
+                    lastFetchedCurrentQuests: o.default.lastFetchedCurrentQuests
+                }));
+                return (n.useEffect(() => {
+                    !e && 0 === c && !u && (t(!0), (0, r.fetchCurrentQuests)())
+                }, [u, c, e]), u) ? (0, a.jsx)(i.Spinner, {
+                    className: E.spinner
+                }) : 0 === s.length ? null : (0, a.jsx)(i.FormSection, {
+                    className: E.questsContainer,
+                    children: (0, a.jsxs)(i.HeadingLevel, {
+                        component: (0, a.jsxs)(i.Heading, {
+                            variant: "heading-md/semibold",
+                            className: E.questsHeading,
+                            children: [(0, a.jsx)(d.default, {
+                                className: E.questsIcon
+                            }), S.default.Messages.QUESTS]
+                        }),
+                        children: [(0, a.jsx)(i.FormDivider, {
+                            className: E.divider
+                        }), s.map(e => (0, a.jsx)(f, {
+                            quest: e
+                        }, e.id))]
+                    })
+                })
+            }
+        },
         886213: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -25424,6 +25666,34 @@
                 }, l.InstagramIcon, void 0, {
                     size: 16
                 })
+        },
+        249900: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                default: function() {
+                    return n
+                }
+            });
+            var a = s("37983");
+            s("884691");
+            var n = e => {
+                let {
+                    width: t = 24,
+                    height: s = 24,
+                    className: n
+                } = e;
+                return (0, a.jsx)("svg", {
+                    width: t,
+                    height: s,
+                    className: n,
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    children: (0, a.jsx)("path", {
+                        d: "M7.50072 21.7034C8.82348 20.9382 10.359 20.4999 12 20.4999C13.641 20.4999 15.1765 20.9382 16.4993 21.7034C16.9773 21.9799 17.5891 21.8165 17.8656 21.3385C18.1421 20.8604 17.9788 20.2487 17.5007 19.9722C16.8983 19.6236 16.2597 19.3306 15.5921 19.1001C16.1421 18.8061 16.6546 18.4467 17.1213 18.0323C17.6815 18.3308 18.321 18.5 19 18.5C20.5899 18.5 21.9631 17.5725 22.6081 16.229C22.7681 15.8955 22.6686 15.4975 22.3709 15.2781C21.7964 14.8546 21.1045 14.5811 20.353 14.5154C21.8963 13.9607 23 12.4843 23 10.75C23 10.6561 22.9968 10.5629 22.9904 10.4706C22.964 10.0882 22.6618 9.78601 22.2795 9.75963C22.1871 9.75326 22.0939 9.75002 22 9.75002C21.5351 9.75002 21.0888 9.82932 20.6737 9.97513C21.488 9.24291 22 8.18126 22 7.00001C22 6.11257 21.711 5.29262 21.222 4.62916C21.0025 4.33142 20.6045 4.23193 20.2711 4.392C19.5214 4.75187 18.9013 5.33848 18.4995 6.06295C18.4998 6.042 18.5 6.02102 18.5 6C18.5 3.79086 16.7091 2 14.5 2C14.1914 2 13.891 2.03494 13.6025 2.10108C13.2635 2.17879 13.0194 2.47236 13.004 2.8198C13.0013 2.87954 13 2.93961 13 3C13 5.10749 14.6299 6.83432 16.6979 6.98876C17.5896 8.28674 18 9.9366 18 11.5C18 15.1559 15.2498 18 12 18C8.75055 17.9995 6 15.1556 6 11.5C6 9.9366 6.41044 8.28674 7.30214 6.98876C9.37015 6.83431 11 5.10749 11 3C11 2.93961 10.9987 2.87954 10.996 2.8198C10.9806 2.47236 10.7365 2.17879 10.3975 2.10108C10.109 2.03494 9.80856 2 9.5 2C7.29086 2 5.5 3.79086 5.5 6C5.5 6.02102 5.50016 6.042 5.50049 6.06295C5.09872 5.33848 4.47858 4.75187 3.72894 4.392C3.39549 4.23193 2.99747 4.33142 2.77802 4.62916C2.289 5.29262 2 6.11257 2 7.00001C2 8.18126 2.51203 9.24291 3.32625 9.97513C2.91121 9.82932 2.46487 9.75002 2 9.75002C1.90605 9.75002 1.81286 9.75326 1.72054 9.75963C1.33822 9.78601 1.03599 10.0882 1.00961 10.4706C1.00324 10.5629 1 10.6561 1 10.75C1 12.4843 2.10367 13.9607 3.64696 14.5154C2.89551 14.5811 2.20362 14.8546 1.62909 15.2781C1.33135 15.4975 1.23187 15.8955 1.39194 16.229C2.0369 17.5725 3.41013 18.5 4.99999 18.5C5.67902 18.5 6.31853 18.3308 6.87867 18.0323C7.34537 18.4467 7.8579 18.8061 8.4079 19.1001C7.74034 19.3306 7.10174 19.6236 6.49927 19.9722C6.02121 20.2487 5.85785 20.8604 6.13439 21.3385C6.41094 21.8165 7.02266 21.9799 7.50072 21.7034Z",
+                        fill: "#DBDEE1"
+                    })
+                })
+            }
         },
         893596: function(e, t, s) {
             "use strict";
