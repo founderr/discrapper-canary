@@ -443,7 +443,9 @@
                     var a, i, s;
                     return null !== (s = null === (i = e.poll) || void 0 === i ? void 0 : null === (a = i.question) || void 0 === a ? void 0 : a.text) && void 0 !== s ? s : ""
                 }
-                return e.isPoll() ? "" : e.hasFlag(m.MessageFlags.SOURCE_MESSAGE_DELETED) ? f.default.Messages.SOURCE_MESSAGE_DELETED : t
+                if (e.isPoll()) return "";
+                if (e.type === m.MessageTypes.VOICE_HANGOUT_INVITE) return "";
+                return e.hasFlag(m.MessageFlags.SOURCE_MESSAGE_DELETED) ? f.default.Messages.SOURCE_MESSAGE_DELETED : t
             }
 
             function A(e, t) {
@@ -465,9 +467,9 @@
                     onUpdate: A,
                     contentRef: S,
                     asPartialPreview: h
-                } = e, I = s.isEdited(), T = s.state === m.MessageStates.SEND_FAILED, y = s.state === m.MessageStates.SENDING, M = s.isCommandType(), v = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), x = i.useRef(!1);
+                } = e, I = s.isEdited(), T = s.state === m.MessageStates.SEND_FAILED, y = s.state === m.MessageStates.SENDING, M = s.isCommandType(), v = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), _ = i.useRef(!1);
                 return i.useLayoutEffect(() => {
-                    x.current ? null != A && A() : x.current = !0
+                    _.current ? null != A && A() : _.current = !0
                 }, [A, s.content, u, v, l]), (0, a.jsxs)("div", {
                     id: (0, c.getMessageContentId)(s),
                     ref: S,
@@ -638,8 +640,8 @@
                         className: y,
                         onClick: M,
                         onContextMenu: v,
-                        onPopoutRequestClose: x,
-                        renderPopout: _,
+                        onPopoutRequestClose: _,
+                        renderPopout: x,
                         renderRemixTag: N = !1,
                         decorations: L
                     } = e,
@@ -661,7 +663,7 @@
                         onContextMenu: v,
                         children: (A ? "@" : "") + R
                     };
-                t = null != _ && null != T ? (0, s.jsx)(d.Popout, {
+                t = null != x && null != T ? (0, s.jsx)(d.Popout, {
                     preload: j ? void 0 : function() {
                         let e = null != i ? i : a.author;
                         return (0, E.default)(e.id, null != n.guildMemberAvatar && null != b ? (0, S.getGuildMemberAvatarURLSimple)({
@@ -674,10 +676,10 @@
                             channelId: a.channel_id
                         })
                     },
-                    renderPopout: _,
+                    renderPopout: x,
                     shouldShow: T,
                     position: u.isMobile ? "window_center" : "right",
-                    onRequestClose: x,
+                    onRequestClose: _,
                     children: e => {
                         let {
                             onClick: t,
