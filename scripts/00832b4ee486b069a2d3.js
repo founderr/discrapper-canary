@@ -1130,7 +1130,7 @@
                 C = t("65597"),
                 o = t("77078"),
                 d = t("691386"),
-                r = t("219115"),
+                r = t("804160"),
                 u = t("178406"),
                 c = t("645266"),
                 m = t("782340"),
@@ -1140,7 +1140,7 @@
                 let {
                     guildId: l,
                     onPageChange: t
-                } = e, [s, E] = n.useTransition(), h = (0, C.default)([u.default], () => u.default.getEstimatedMemberSearchCountByGuildId(l), [l]), M = (0, C.useStateFromStoresObject)([u.default], () => u.default.getPaginationStateByGuildId(l), [l]), T = (0, r.useIsMakingRequestV2)(l), x = n.useMemo(() => d.PAGINATION_PAGE_SIZE_OPTIONS.map(e => ({
+                } = e, [s, E] = n.useTransition(), h = (0, C.default)([u.default], () => u.default.getEstimatedMemberSearchCountByGuildId(l), [l]), M = (0, C.useStateFromStoresObject)([u.default], () => u.default.getPaginationStateByGuildId(l), [l]), T = (0, r.useIsMakingRequest)(l), x = n.useMemo(() => d.PAGINATION_PAGE_SIZE_OPTIONS.map(e => ({
                     value: e,
                     label: Number(e).toLocaleString()
                 })), []), H = new Intl.NumberFormat(m.default.getLocale()).format(h), N = m.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
