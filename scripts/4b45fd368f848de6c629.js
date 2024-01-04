@@ -1400,6 +1400,7 @@
 
             function O(e) {
                 var t;
+                if (null == e) return null;
                 let n = null == (t = e).recurrence_rule ? null : new Date(t.scheduled_start_time);
                 return null != n ? a.default.fromTimestamp(Math.floor(n.getTime() / d.default.Millis.SECOND) * d.default.Millis.SECOND) : null
             }
