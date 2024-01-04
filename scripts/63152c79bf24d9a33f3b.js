@@ -1923,72 +1923,86 @@
             "use strict";
             n.r(t), n.d(t, {
                 useAddToFavoritesItem: function() {
-                    return h
+                    return _
                 },
                 useRemoveFromFavoritesItem: function() {
-                    return E
+                    return p
                 }
-            });
+            }), n("222007");
             var i = n("37983");
             n("884691");
-            var l = n("446674"),
-                a = n("77078"),
-                r = n("923959"),
-                s = n("379881"),
-                o = n("200008"),
-                u = n("498139"),
-                d = n("49111"),
-                c = n("782340");
+            var l = n("917351"),
+                a = n.n(l),
+                r = n("446674"),
+                s = n("77078"),
+                o = n("923959"),
+                u = n("379881"),
+                d = n("200008"),
+                c = n("498139"),
+                f = n("49111"),
+                h = n("782340");
 
-            function f(e, t) {
-                return e.type === d.ChannelTypes.GROUP_DM ? t ? c.default.Messages.UNFAVORITE_GDM : c.default.Messages.FAVORITE_GDM : e.type === d.ChannelTypes.DM ? t ? c.default.Messages.UNFAVORITE_DM : c.default.Messages.FAVORITE_DM : t ? c.default.Messages.UNFAVORITE_CHANNEL : c.default.Messages.FAVORITE_CHANNEL
+            function E(e, t) {
+                return e.type === f.ChannelTypes.GROUP_DM ? t ? h.default.Messages.UNFAVORITE_GDM : h.default.Messages.FAVORITE_GDM : e.type === f.ChannelTypes.DM ? t ? h.default.Messages.UNFAVORITE_DM : h.default.Messages.FAVORITE_DM : t ? h.default.Messages.UNFAVORITE_CHANNEL : h.default.Messages.FAVORITE_CHANNEL
             }
 
-            function h(e) {
-                let t = (0, l.useStateFromStores)([r.default], () => r.default.getChannels(d.FAVORITES))[d.ChannelTypes.GUILD_CATEGORY].filter(e => "null" !== e.channel.id),
+            function _(e) {
+                let t = (0, r.useStateFromStores)([o.default], () => o.default.getChannels(f.FAVORITES))[f.ChannelTypes.GUILD_CATEGORY],
+                    [
+                        [n], l
+                    ] = a.partition(t, e => "null" === e.channel.id),
                     {
-                        favoritesEnabled: n
-                    } = (0, u.useFavoritesServerExperiment)("58e21a_1"),
-                    c = (0, l.useStateFromStores)([s.default], () => s.default.isFavorite(e.id));
-                if (__OVERLAY__ || c || !n) return null;
+                        favoritesEnabled: h,
+                        isFavoritesPerk: _
+                    } = (0, c.useFavoritesServerExperiment)("58e21a_1"),
+                    p = (0, r.useStateFromStores)([u.default], () => u.default.isFavorite(e.id));
+                if (__OVERLAY__ || p || !h) return null;
 
-                function h(t) {
-                    (0, o.addFavoriteChannel)(e.id, t)
+                function I(t) {
+                    (0, d.addFavoriteChannel)(e.id, t)
                 }
-                return 0 === t.length ? (0, i.jsx)(a.MenuItem, {
+                return 0 === l.length ? (0, i.jsx)(s.MenuItem, {
                     id: "favorite-channel",
-                    label: f(e, !1),
-                    action: () => h(null)
-                }) : (0, i.jsx)(a.MenuItem, {
+                    label: E(e, !1),
+                    action: () => I(null)
+                }) : (0, i.jsxs)(s.MenuItem, {
                     id: "favorite-channel",
-                    label: f(e, !1),
-                    action: () => h(null),
-                    children: t.map(e => (0, i.jsx)(a.MenuItem, {
-                        id: "favorite-".concat(e.channel.id),
-                        label: e.channel.name,
-                        action: () => h(e.channel.id)
-                    }, e.channel.id))
+                    label: E(e, !1),
+                    action: () => I(null),
+                    children: [_ && (0, i.jsx)(s.MenuGroup, {
+                        children: (0, i.jsx)(s.MenuItem, {
+                            id: "favorite-".concat(n.channel.id),
+                            label: n.channel.name,
+                            action: () => I("null" === n.channel.id ? null : n.channel.id)
+                        }, n.channel.id)
+                    }), (0, i.jsx)(s.MenuGroup, {
+                        children: l.map(e => (0, i.jsx)(s.MenuItem, {
+                            id: "favorite-".concat(e.channel.id),
+                            label: e.channel.name,
+                            action: () => I(e.channel.id)
+                        }, e.channel.id))
+                    })]
                 })
             }
 
-            function E(e) {
-                let t = (0, l.useStateFromStores)([s.default], () => s.default.isFavorite(e.id));
-                return __OVERLAY__ || !t ? null : (0, i.jsx)(a.MenuItem, {
+            function p(e) {
+                let t = (0, r.useStateFromStores)([u.default], () => u.default.isFavorite(e.id));
+                return __OVERLAY__ || !t ? null : (0, i.jsx)(s.MenuItem, {
                     id: "favorite-channel",
-                    label: f(e, !0),
+                    label: E(e, !0),
                     color: "danger",
-                    action: () => e.type === d.ChannelTypes.GUILD_CATEGORY ? (0, a.openModalLazy)(async () => {
+                    action: () => e.type === f.ChannelTypes.GUILD_CATEGORY ? (0, s.openModalLazy)(async () => {
                         let {
                             default: t
                         } = await n.el("338052").then(n.bind(n, "338052"));
                         return n => (0, i.jsx)(t, {
                             ...n,
                             onConfirm: () => {
-                                n.onClose(), (0, o.removeFavoriteChannel)(e.id)
+                                n.onClose(), (0, d.removeFavoriteChannel)(e.id)
                             },
                             channel: e
                         })
-                    }) : (0, o.removeFavoriteChannel)(e.id)
+                    }) : (0, d.removeFavoriteChannel)(e.id)
                 })
             }
         },
