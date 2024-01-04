@@ -265,12 +265,12 @@
                 x = n("15435"),
                 _ = n("58608"),
                 v = n("142367"),
-                k = n("49111"),
-                L = n("782340"),
+                L = n("49111"),
+                k = n("782340"),
                 E = n("722097"),
                 R = n("9461");
-            let A = d.default.reactParserFor(v.default.getDefaultRules(E)),
-                N = {};
+            let N = d.default.reactParserFor(v.default.getDefaultRules(E)),
+                A = {};
             class M extends a.PureComponent {
                 track(e, t, n) {
                     this.props.track(e, t, n)
@@ -279,26 +279,26 @@
                     return (0, l.jsxs)("div", {
                         className: E.footer,
                         children: [(0, l.jsx)(c.Anchor, {
-                            "aria-label": L.default.Messages.TWITTER,
+                            "aria-label": k.default.Messages.TWITTER,
                             className: E.socialLink,
-                            href: (0, u.default)(k.LocalizedLinks.TWITTER),
+                            href: (0, u.default)(L.LocalizedLinks.TWITTER),
                             target: "blank",
                             children: (0, l.jsx)(x.default, {})
                         }), (0, l.jsx)(c.Anchor, {
-                            "aria-label": L.default.Messages.FACEBOOK,
+                            "aria-label": k.default.Messages.FACEBOOK,
                             className: E.socialLink,
-                            href: k.SOCIAL_LINKS.FACEBOOK_URL,
+                            href: L.SOCIAL_LINKS.FACEBOOK_URL,
                             target: "blank",
                             children: (0, l.jsx)(C.default, {})
                         }), (0, l.jsx)(c.Anchor, {
-                            "aria-label": L.default.Messages.INSTAGRAM,
+                            "aria-label": k.default.Messages.INSTAGRAM,
                             className: E.socialLink,
-                            href: k.SOCIAL_LINKS.INSTAGRAM_URL,
+                            href: L.SOCIAL_LINKS.INSTAGRAM_URL,
                             target: "blank",
                             children: (0, l.jsx)(m.default, {})
                         }), (0, l.jsx)(c.Text, {
                             variant: "text-xs/normal",
-                            children: L.default.Messages.FOLLOW_US_FOR_MORE_UPDATES
+                            children: k.default.Messages.FOLLOW_US_FOR_MORE_UPDATES
                         })]
                     })
                 }
@@ -327,7 +327,7 @@
                         renderImageComponent: h.renderImageComponent,
                         renderLinkComponent: h.renderMaskedLinkComponent,
                         onPlay: () => {
-                            this.track(k.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
+                            this.track(L.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
                         }
                     });
                     if (null != a && "" !== a) {
@@ -342,7 +342,7 @@
                             autoPlay: !0,
                             className: E.video,
                             onPlay: () => {
-                                this.track(k.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
+                                this.track(L.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
                             }
                         })
                     }
@@ -381,10 +381,10 @@
                             children: (0, l.jsxs)("div", {
                                 tabIndex: 0,
                                 role: "region",
-                                "aria-label": L.default.Messages.CHANGELOG_CONTENT_LABEL,
-                                children: [this.renderVideo(), A(e.body, !1, {
+                                "aria-label": k.default.Messages.CHANGELOG_CONTENT_LABEL,
+                                children: [this.renderVideo(), N(e.body, !1, {
                                     changeLog: this,
-                                    interpolations: N,
+                                    interpolations: A,
                                     onLinkClick: this.trackLinkClick
                                 })]
                             })
@@ -404,7 +404,7 @@
                             null === (t = (n = this.props).onScroll) || void 0 === t || t.call(n, e)
                         }
                     }, this.trackLinkClick = e => {
-                        this.props.track(k.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+                        this.props.track(L.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: "inline_link",
                             target: e
                         }, !1)
@@ -417,11 +417,11 @@
                             shrink: 1,
                             children: [(0, l.jsx)(c.Heading, {
                                 variant: "heading-lg/semibold",
-                                children: L.default.Messages.WHATS_NEW
+                                children: k.default.Messages.WHATS_NEW
                             }), (0, l.jsx)(c.Text, {
                                 variant: "text-xs/normal",
                                 className: E.date,
-                                children: L.default.Messages.WHATS_NEW_DATE.format({
+                                children: k.default.Messages.WHATS_NEW_DATE.format({
                                     date: null != e.date && "" !== e.date ? i(e.date).toDate() : new Date
                                 })
                             })]
@@ -511,10 +511,10 @@
                 })
             }
         },
-        850830: function(e, t, n) {
+        409186: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                TwitterIcon: function() {
+                XNeutralIcon: function() {
                     return r
                 }
             });
@@ -539,7 +539,7 @@
                     viewBox: "0 0 24 24",
                     children: (0, l.jsx)("path", {
                         fill: "string" == typeof r ? r : r.css,
-                        d: "m20.75 7.51.01.59c0 5.96-4.54 12.84-12.84 12.84-2.45 0-4.86-.7-6.92-2.03a9.06 9.06 0 0 0 6.68-1.87 4.52 4.52 0 0 1-4.22-3.13c.68.13 1.38.1 2.04-.08A4.51 4.51 0 0 1 1.88 9.4v-.05c.63.35 1.33.54 2.05.56a4.52 4.52 0 0 1-1.4-6.02 12.81 12.81 0 0 0 9.3 4.71 4.52 4.52 0 0 1 7.7-4.12 9.06 9.06 0 0 0 2.86-1.1 4.53 4.53 0 0 1-1.98 2.5c.9-.1 1.77-.34 2.59-.7-.6.9-1.37 1.7-2.25 2.33Z",
+                        d: "M13.86 10.47 21.15 2h-1.73l-6.33 7.35L8.04 2H2.22l7.64 11.12L2.22 22h1.72l6.68-7.77L15.96 22h5.82l-7.92-11.53Zm-2.36 2.75-.78-1.11L4.57 3.3h2.65l4.97 7.11.77 1.1 6.46 9.25h-2.65l-5.27-7.54Z",
                         className: o
                     })
                 })
@@ -786,7 +786,7 @@
             var l = n("37983");
             n("884691");
             var a = n("469563"),
-                s = n("850830"),
+                s = n("409186"),
                 r = n("75196"),
                 o = (0, a.replaceIcon)(function(e) {
                     let {
@@ -816,8 +816,8 @@
                             })]
                         })
                     })
-                }, s.TwitterIcon, void 0, {
-                    size: 20
+                }, s.XNeutralIcon, void 0, {
+                    size: 16
                 })
         },
         142367: function(e, t, n) {
@@ -930,7 +930,7 @@
                     return v
                 },
                 customRules: function() {
-                    return k
+                    return L
                 }
             }), n("222007");
             var l = n("37983"),
@@ -964,7 +964,7 @@
                     }, s)
                 },
                 v = h.default.defaultRules,
-                k = {
+                L = {
                     link: {
                         parse(e, t, n) {
                             let l;

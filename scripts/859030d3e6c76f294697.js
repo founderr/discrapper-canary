@@ -1659,7 +1659,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "257328"
+                        buildNumber: "257344"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -6957,40 +6957,6 @@
                 })
             }
         },
-        850830: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                TwitterIcon: function() {
-                    return l
-                }
-            });
-            var a = n("37983");
-            n("884691");
-            var s = n("669491"),
-                i = n("75196");
-            let l = e => {
-                let {
-                    width: t = 24,
-                    height: n = 24,
-                    color: l = s.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: r = "",
-                    ...o
-                } = e;
-                return (0, a.jsx)("svg", {
-                    ...(0, i.default)(o),
-                    xmlns: "http://www.w3.org/2000/svg",
-                    width: t,
-                    height: n,
-                    fill: "none",
-                    viewBox: "0 0 24 24",
-                    children: (0, a.jsx)("path", {
-                        fill: "string" == typeof l ? l : l.css,
-                        d: "m20.75 7.51.01.59c0 5.96-4.54 12.84-12.84 12.84-2.45 0-4.86-.7-6.92-2.03a9.06 9.06 0 0 0 6.68-1.87 4.52 4.52 0 0 1-4.22-3.13c.68.13 1.38.1 2.04-.08A4.51 4.51 0 0 1 1.88 9.4v-.05c.63.35 1.33.54 2.05.56a4.52 4.52 0 0 1-1.4-6.02 12.81 12.81 0 0 0 9.3 4.71 4.52 4.52 0 0 1 7.7-4.12 9.06 9.06 0 0 0 2.86-1.1 4.53 4.53 0 0 1-1.98 2.5c.9-.1 1.77-.34 2.59-.7-.6.9-1.37 1.7-2.25 2.33Z",
-                        className: r
-                    })
-                })
-            }
-        },
         902515: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -7054,6 +7020,40 @@
                     children: (0, a.jsx)("path", {
                         fill: "string" == typeof l ? l : l.css,
                         d: "M22.7 2.7a1 1 0 0 0-1.4-1.4l-20 20a1 1 0 1 0 1.4 1.4l20-20ZM6.85 13.15a.5.5 0 0 1-.85-.36V3a1 1 0 0 1 2 0v8.8a.5.5 0 0 1-.15.35l-1 1ZM11 17.2v.8a1 1 0 1 0 2 0v-1.8a.5.5 0 0 0-.85-.35l-1 1a.5.5 0 0 0-.15.36ZM11 7.8V6a1 1 0 1 1 2 0v.8a.5.5 0 0 1-.15.35l-1 1a.5.5 0 0 1-.85-.36ZM17.15 10.85a.5.5 0 0 1 .85.36V19a1 1 0 1 1-2 0v-6.8a.5.5 0 0 1 .15-.35l1-1ZM2 7a1 1 0 0 0-1 1v8a1 1 0 1 0 2 0V8a1 1 0 0 0-1-1ZM21 9a1 1 0 1 1 2 0v6a1 1 0 1 1-2 0V9Z",
+                        className: r
+                    })
+                })
+            }
+        },
+        409186: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                XNeutralIcon: function() {
+                    return l
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var s = n("669491"),
+                i = n("75196");
+            let l = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: l = s.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: r = "",
+                    ...o
+                } = e;
+                return (0, a.jsx)("svg", {
+                    ...(0, i.default)(o),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, a.jsx)("path", {
+                        fill: "string" == typeof l ? l : l.css,
+                        d: "M13.86 10.47 21.15 2h-1.73l-6.33 7.35L8.04 2H2.22l7.64 11.12L2.22 22h1.72l6.68-7.77L15.96 22h5.82l-7.92-11.53Zm-2.36 2.75-.78-1.11L4.57 3.3h2.65l4.97 7.11.77 1.1 6.46 9.25h-2.65l-5.27-7.54Z",
                         className: r
                     })
                 })
@@ -44558,7 +44558,7 @@
             var a = n("37983");
             n("884691");
             var s = n("469563"),
-                i = n("850830"),
+                i = n("409186"),
                 l = n("75196"),
                 r = (0, s.replaceIcon)(function(e) {
                     let {
@@ -44588,8 +44588,8 @@
                             })]
                         })
                     })
-                }, i.TwitterIcon, void 0, {
-                    size: 20
+                }, i.XNeutralIcon, void 0, {
+                    size: 16
                 })
         },
         663449: function(e, t, n) {
