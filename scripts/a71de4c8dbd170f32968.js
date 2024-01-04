@@ -3943,21 +3943,23 @@
                     url: i.Endpoints.USER_OFFER_ACKNOWLEDGED,
                     body: {
                         user_trial_offer_id: r,
-                        user_discount_id: l
+                        user_discount_offer_id: l
                     },
                     oldFormErrors: !0
                 }).then(e => {
-                    var t, r;
+                    var t, r, a;
                     n.default.dispatch({
                         type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
                         userTrialOffer: null !== (t = e.body.user_trial_offer) && void 0 !== t ? t : null,
-                        userDiscount: null !== (r = e.body.user_discount) && void 0 !== r ? r : null
+                        userDiscount: null !== (r = e.body.user_discount) && void 0 !== r ? r : null,
+                        userDiscountOffer: null !== (a = e.body.user_discount_offer) && void 0 !== a ? a : null
                     })
                 }).catch(e => {
                     404 === e.status && n.default.dispatch({
                         type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
                         userTrialOffer: null,
-                        userDiscount: null
+                        userDiscount: null,
+                        userDiscountOffer: null
                     })
                 })
             }
