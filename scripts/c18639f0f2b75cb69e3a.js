@@ -11988,9 +11988,9 @@
                                 }),
                                 ref: eC.scrollerRef,
                                 onScroll: eC.handleScroll,
-                                children: [(0, l.jsx)(H.HomeButton, {}), (0, l.jsx)(F.default, {}), (0, l.jsx)(k.default, {
+                                children: [(0, l.jsx)(H.HomeButton, {}), e_ ? (0, l.jsx)(T.default, {}) : null, (0, l.jsx)(F.default, {}), (0, l.jsx)(k.default, {
                                     isOnHubVerificationRoute: eg
-                                }), (0, l.jsx)(P.default, {}), e_ ? (0, l.jsx)(T.default, {}) : null, E.map(e => (0, l.jsx)(X.default, {
+                                }), (0, l.jsx)(P.default, {}), E.map(e => (0, l.jsx)(X.default, {
                                     guildId: e
                                 }, e)), g ? (0, l.jsx)(z.default, {}) : null, !n && eI ? (0, l.jsx)(V.default, {
                                     ref: eC.guildDiscoveryRef,
