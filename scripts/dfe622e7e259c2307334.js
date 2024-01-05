@@ -7279,7 +7279,7 @@
                             author: X,
                             roleIcon: Q
                         }),
-                        childrenAccessories: (0, C.renderSimpleAccessories)(e, K),
+                        childrenAccessories: e.hideAccessories ? void 0 : (0, C.renderSimpleAccessories)(e, K),
                         childrenMessageContent: (0, S.default)({
                             ...e,
                             asPartialPreview: w
