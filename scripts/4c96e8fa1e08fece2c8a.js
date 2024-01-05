@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["92544"], {
+    ["38429"], {
         283383: function(e, t, n) {
             "use strict";
             e.exports = n.p + "a3ae1eb336230b986e2b.jpg"
@@ -1248,7 +1248,7 @@
                             },
                             oldFormErrors: !0
                         }).then(e => {
-                            if (null == e.body || "1f9ba49b242e36aa7f90d19ef0e94d0d1fa41094" === e.body.hash) return this._handleUpdateNotAvailable();
+                            if (null == e.body || "40999782219224c24bacc7cd049b079a498ab3c3" === e.body.hash) return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
                             if (Date.now() - f > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
@@ -2454,6 +2454,12 @@
                     } = e;
                     r = r.filter(e => e.invite_id !== t)
                 },
+                GAME_INVITE_DELETE_MANY: function(e) {
+                    let {
+                        inviteIds: t
+                    } = e;
+                    r = r.filter(e => !t.includes(e.invite_id))
+                },
                 GAME_INVITE_UPDATE_STATUS: function(e) {
                     o[e.inviteId] = {
                         installed: e.installed,
@@ -2494,60 +2500,77 @@
             "use strict";
             n.r(t), n.d(t, {
                 updateInviteStatus: function() {
-                    return r
-                },
-                launchInviteGame: function() {
                     return o
                 },
-                acceptInvite: function() {
+                launchInviteGame: function() {
                     return u
                 },
-                clearUnseenInvites: function() {
+                acceptInvite: function() {
                     return d
+                },
+                clearUnseenInvites: function() {
+                    return c
+                },
+                deleteInvite: function() {
+                    return f
+                },
+                deleteAllInvites: function() {
+                    return E
                 }
             }), n("70102");
-            var l = n("913144"),
-                a = n("760850"),
-                s = n("773336"),
-                i = n("49111");
-            async function r(e) {
-                if (e.platform_type === i.PlatformTypes.XBOX) {
+            var l = n("872717"),
+                a = n("913144"),
+                s = n("760850"),
+                i = n("773336"),
+                r = n("49111");
+            async function o(e) {
+                if (e.platform_type === r.PlatformTypes.XBOX) {
                     let t = e.parsed_launch_parameters.titleId,
                         n = e.parsed_launch_parameters.inviteToken;
-                    if (!(0, s.isWindows)() || null == t || null == n) return;
-                    let a = await c(t, !1),
-                        i = await E(n);
-                    l.default.dispatch({
+                    if (!(0, i.isWindows)() || null == t || null == n) return;
+                    let l = await _(t, !1),
+                        s = await S(n);
+                    a.default.dispatch({
                         type: "GAME_INVITE_UPDATE_STATUS",
                         inviteId: e.invite_id,
-                        installed: a,
-                        joinable: i
+                        installed: l,
+                        joinable: s
                     })
                 } else throw Error("Unsupported invite platform " + e.platform_type)
             }
-            async function o(e) {
-                if (e.platform_type === i.PlatformTypes.XBOX) {
+            async function u(e) {
+                if (e.platform_type === r.PlatformTypes.XBOX) {
                     let t = e.parsed_launch_parameters.titleId;
-                    return !!(0, s.isWindows)() && null != t && await f(t)
+                    return !!(0, i.isWindows)() && null != t && await h(t)
                 }
                 throw Error("Unsupported invite platform " + e.platform_type)
             }
-            async function u(e) {
-                if (e.platform_type === i.PlatformTypes.XBOX) {
+            async function d(e) {
+                if (e.platform_type === r.PlatformTypes.XBOX) {
                     let t = e.parsed_launch_parameters.inviteToken;
-                    return !!(0, s.isWindows)() && null != t && await _(t)
+                    return !!(0, i.isWindows)() && null != t && await T(t)
                 }
                 throw Error("Unsupported invite platform " + e.platform_type)
             }
 
-            function d() {
-                l.default.dispatch({
+            function c() {
+                a.default.dispatch({
                     type: "GAME_INVITE_CLEAR_UNSEEN"
                 })
             }
-            async function c(e, t) {
-                if (!(0, s.isWindows)()) return !1;
-                let n = await (0, a.default)();
+            async function f(e) {
+                await l.default.delete({
+                    url: r.Endpoints.GAME_INVITE(e.invite_id)
+                })
+            }
+            async function E() {
+                await l.default.delete({
+                    url: r.Endpoints.GAME_INVITES
+                })
+            }
+            async function _(e, t) {
+                if (!(0, i.isWindows)()) return !1;
+                let n = await (0, s.default)();
                 return new Promise((l, a) => {
                     if ((null == n ? void 0 : n.xboxIsApplicationInstalled) == null) {
                         a(Error("Game utils module not loaded"));
@@ -2558,9 +2581,9 @@
                     })
                 })
             }
-            async function f(e) {
-                if (!(0, s.isWindows)()) return !1;
-                let t = await (0, a.default)();
+            async function h(e) {
+                if (!(0, i.isWindows)()) return !1;
+                let t = await (0, s.default)();
                 return new Promise((n, l) => {
                     if ((null == t ? void 0 : t.xboxLaunchGame) == null) {
                         l(Error("Game utils module not loaded"));
@@ -2571,9 +2594,9 @@
                     })
                 })
             }
-            async function E(e) {
-                if (!(0, s.isWindows)()) return !1;
-                let t = await (0, a.default)();
+            async function S(e) {
+                if (!(0, i.isWindows)()) return !1;
+                let t = await (0, s.default)();
                 return new Promise((n, l) => {
                     if ((null == t ? void 0 : t.xboxIsInviteTokenValid) == null) {
                         l(Error("Game utils module not loaded"));
@@ -2584,9 +2607,9 @@
                     })
                 })
             }
-            async function _(e) {
-                if (!(0, s.isWindows)()) return !1;
-                let t = await (0, a.default)();
+            async function T(e) {
+                if (!(0, i.isWindows)()) return !1;
+                let t = await (0, s.default)();
                 return new Promise((n, l) => {
                     if ((null == t ? void 0 : t.xboxAcceptGameInvite) == null) {
                         l(Error("Game utils module not loaded"));
@@ -7271,7 +7294,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return N
+                    return I
                 }
             }), n("222007");
             var l = n("37983"),
@@ -7287,55 +7310,72 @@
                 E = n("362189"),
                 _ = n("697218"),
                 h = n("211248"),
-                S = n("888400"),
-                T = n("782340"),
-                p = n("72317");
+                S = n("228220"),
+                T = n("888400"),
+                p = n("782340"),
+                N = n("72317");
 
-            function N(e) {
+            function I(e) {
                 let {
                     invite: t,
                     expired: n
                 } = e, s = (0, u.useStateFromStores)([_.default], () => {
                     var e, n;
                     return null !== (n = null === (e = _.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : ""
-                }), c = (0, S.dateFormat)(i(t.created_at), "LT"), f = a.useRef(null), N = (0, d.default)(f);
+                }), c = (0, T.dateFormat)(i(t.created_at), "LT"), f = a.useRef(null), S = (0, d.default)(f);
                 return a.useEffect(() => {
                     !n && (0, E.updateInviteStatus)(t)
                 }, [t, n]), (0, l.jsxs)("div", {
-                    className: p.container,
+                    className: N.container,
                     ref: f,
                     children: [(0, l.jsxs)("div", {
-                        className: p.primaryRow,
+                        className: N.primaryRow,
                         children: [(0, l.jsx)("img", {
-                            className: p.inviteImage,
+                            className: N.inviteImage,
                             src: t.application_asset,
                             alt: "Game Invite"
                         }), (0, l.jsx)(o.Text, {
-                            className: p.title,
+                            className: N.title,
                             variant: "text-md/semibold",
                             color: "interactive-active",
-                            children: T.default.Messages.GAME_INVITES_SENT_YOU_AN_INVITE.format({
+                            children: p.default.Messages.GAME_INVITES_SENT_YOU_AN_INVITE.format({
                                 username: s
                             })
-                        }), N && !n && (0, l.jsx)(I, {
+                        }), S && !n && (0, l.jsx)(m, {
                             invite: t
-                        }), (0, l.jsx)(h.default, {
-                            className: p.secondaryButton,
-                            tooltip: T.default.Messages.NOTIFICATION_SETTINGS,
-                            color: h.CircleIconButtonColors.TERTIARY,
-                            icon: (0, l.jsx)(r.MoreHorizontalIcon, {
-                                width: 16,
-                                height: 16
+                        }), (0, l.jsx)(o.Popout, {
+                            renderPopout: e => (0, l.jsx)(A, {
+                                ...e,
+                                invite: t
                             }),
-                            onClick: () => {}
+                            position: "bottom",
+                            align: "right",
+                            animation: o.Popout.Animation.NONE,
+                            children: e => {
+                                let {
+                                    onClick: t
+                                } = e;
+                                return (0, l.jsx)(h.default, {
+                                    className: N.secondaryButton,
+                                    tooltip: p.default.Messages.MORE,
+                                    color: h.CircleIconButtonColors.TERTIARY,
+                                    icon: (0, l.jsx)(r.MoreHorizontalIcon, {
+                                        width: 16,
+                                        height: 16
+                                    }),
+                                    onClick: e => {
+                                        e.stopPropagation(), t(e)
+                                    }
+                                })
+                            }
                         })]
                     }), (0, l.jsx)("div", {
-                        className: p.divider
+                        className: N.divider
                     }), (0, l.jsx)("div", {
-                        className: p.secondaryRow,
+                        className: N.secondaryRow,
                         children: (0, l.jsxs)(o.Text, {
                             variant: "text-xs/medium",
-                            className: p.subtitle,
+                            className: N.subtitle,
                             color: "text-muted",
                             children: [t.application_name, " \xb7 ", c]
                         })
@@ -7343,7 +7383,7 @@
                 })
             }
 
-            function I(e) {
+            function m(e) {
                 let {
                     invite: t
                 } = e, n = (0, u.useStateFromStores)([f.default], () => f.default.isInviteGameInstalled(t)), s = (0, u.useStateFromStores)([f.default], () => f.default.isInviteJoinable(t)), [i, r] = a.useState(!1), d = a.useCallback(async () => {
@@ -7361,34 +7401,58 @@
                 }, [t]);
                 if (n) {
                     if (!s) return (0, l.jsx)(o.Button, {
-                        className: p.primaryButton,
+                        className: N.primaryButton,
                         disabled: i,
                         size: o.ButtonSizes.SMALL,
                         onClick: d,
-                        children: T.default.Messages.GAME_INVITES_LAUNCH_GAME
+                        children: p.default.Messages.GAME_INVITES_LAUNCH_GAME
                     });
                     else return (0, l.jsx)(o.Button, {
-                        className: p.primaryButton,
+                        className: N.primaryButton,
                         disabled: i,
                         size: o.ButtonSizes.SMALL,
                         onClick: _,
-                        children: T.default.Messages.GAME_INVITES_JOIN_GAME
+                        children: p.default.Messages.GAME_INVITES_JOIN_GAME
                     })
                 }
                 return null == t.fallback_url ? (0, l.jsx)("div", {
-                    className: p.infoBox,
+                    className: N.infoBox,
                     children: (0, l.jsx)(o.Text, {
                         variant: "text-xxs/medium",
                         color: "text-muted",
-                        children: T.default.Messages.GAME_INVITES_LAUNCH_GAME_OUTSIDE_OF_DISCORD
+                        children: p.default.Messages.GAME_INVITES_LAUNCH_GAME_OUTSIDE_OF_DISCORD
                     })
                 }) : (0, l.jsx)(o.Button, {
-                    className: p.primaryButton,
+                    className: N.primaryButton,
                     disabled: i,
                     size: o.ButtonSizes.SMALL,
                     color: o.ButtonColors.TRANSPARENT,
                     onClick: () => (0, c.default)(t.fallback_url),
-                    children: T.default.Messages.GAME_INVITES_INSTALL_GAME
+                    children: p.default.Messages.GAME_INVITES_INSTALL_GAME
+                })
+            }
+
+            function A(e) {
+                let {
+                    invite: t,
+                    closePopout: n
+                } = e;
+                return (0, l.jsx)(o.Menu, {
+                    navId: "game-invite-context-menu",
+                    onClose: n,
+                    onSelect: n,
+                    "aria-label": p.default.Messages.GAME_INVITE_ACTIONS_MENU_LABEL,
+                    children: (0, l.jsx)(o.MenuGroup, {
+                        children: (0, l.jsx)(o.MenuItem, {
+                            id: "invite-actions-delete",
+                            label: p.default.Messages.DELETE,
+                            action: async () => {
+                                await (0, E.deleteInvite)(t)
+                            },
+                            icon: S.default,
+                            showIconFirst: !0
+                        }, "invite-actions-delete")
+                    }, "invite-actions")
                 })
             }
         },
@@ -7396,7 +7460,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return p
                 }
             }), n("222007");
             var l = n("37983"),
@@ -7405,55 +7469,66 @@
                 i = n.n(s),
                 r = n("446674"),
                 o = n("151426"),
-                u = n("77078"),
-                d = n("954732"),
-                c = n("362189"),
-                f = n("64318"),
-                E = n("833150"),
-                _ = n("34549"),
-                h = n("782340"),
-                S = n("643000");
+                u = n("47693"),
+                d = n("77078"),
+                c = n("954732"),
+                f = n("362189"),
+                E = n("211248"),
+                _ = n("64318"),
+                h = n("833150"),
+                S = n("782340"),
+                T = n("643000");
 
-            function T(e) {
+            function p(e) {
                 let {
                     setTab: t,
                     badgeState: n,
                     closePopout: s
-                } = e, T = (0, r.useStateFromStores)([d.default], () => d.default.getInvites()), [p, N] = a.useMemo(() => i.partition(T, e => {
+                } = e, p = (0, r.useStateFromStores)([c.default], () => c.default.getInvites()), [I, m] = a.useState(!1), [A, g] = a.useMemo(() => i.partition(p, e => {
                     let t = (Date.now() - new Date(e.created_at).getTime()) / 1e3;
                     return t < e.ttl
-                }), [T]);
+                }), [p]);
                 a.useEffect(() => {
-                    (0, c.clearUnseenInvites)()
+                    (0, f.clearUnseenInvites)()
                 });
-                let I = a.useCallback(() => {}, []),
-                    m = a.useCallback(() => {}, []);
+                let C = a.useCallback(async () => {
+                    m(!0), await (0, f.deleteAllInvites)(), m(!1)
+                }, []);
                 return (0, l.jsxs)("div", {
-                    className: S.container,
-                    children: [(0, l.jsx)(f.default, {
+                    className: T.container,
+                    children: [(0, l.jsx)(_.default, {
                         tab: o.InboxTab.GAME_INVITES,
                         setTab: t,
                         badgeState: n,
-                        closePopout: s
-                    }), (0, l.jsx)(u.AdvancedScrollerThin, {
+                        closePopout: s,
+                        children: (0, l.jsx)(E.default, {
+                            className: T.deleteButton,
+                            tooltip: S.default.Messages.GAME_INVITES_DELETE_ALL,
+                            disabled: I,
+                            color: E.CircleIconButtonColors.TERTIARY,
+                            icon: (0, l.jsx)(u.TrashIcon, {
+                                width: 16,
+                                height: 16
+                            }),
+                            onClick: C
+                        })
+                    }), (0, l.jsx)(d.AdvancedScrollerThin, {
                         children: (0, l.jsxs)("div", {
-                            className: S.invitesContainer,
-                            children: [p.length > 0 && (0, l.jsxs)(l.Fragment, {
-                                children: [(0, l.jsx)(_.default, {
-                                    title: h.default.Messages.GAME_INVITES_RECENT_HEADER,
-                                    onDelete: I
+                            className: T.invitesContainer,
+                            children: [A.length > 0 && (0, l.jsxs)(l.Fragment, {
+                                children: [(0, l.jsx)(N, {
+                                    title: S.default.Messages.GAME_INVITES_RECENT_HEADER
                                 }), (0, l.jsx)(l.Fragment, {
-                                    children: p.map(e => (0, l.jsx)(E.default, {
+                                    children: A.map(e => (0, l.jsx)(h.default, {
                                         invite: e,
                                         expired: !1
                                     }, e.invite_id))
                                 })]
-                            }), N.length > 0 && (0, l.jsxs)(l.Fragment, {
-                                children: [(0, l.jsx)(_.default, {
-                                    title: h.default.Messages.GAME_INVITES_EXPIRED_HEADER,
-                                    onDelete: m
+                            }), g.length > 0 && (0, l.jsxs)(l.Fragment, {
+                                children: [(0, l.jsx)(N, {
+                                    title: S.default.Messages.GAME_INVITES_EXPIRED_HEADER
                                 }), (0, l.jsx)(l.Fragment, {
-                                    children: N.map(e => (0, l.jsx)(E.default, {
+                                    children: g.map(e => (0, l.jsx)(h.default, {
                                         invite: e,
                                         expired: !0
                                     }, e.invite_id))
@@ -7463,47 +7538,23 @@
                     })]
                 })
             }
-        },
-        34549: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return u
-                }
-            });
-            var l = n("37983");
-            n("884691");
-            var a = n("47693"),
-                s = n("77078"),
-                i = n("211248"),
-                r = n("782340"),
-                o = n("731616"),
-                u = e => {
-                    let {
-                        title: t,
-                        onDelete: n
-                    } = e;
-                    return (0, l.jsxs)("div", {
-                        className: o.container,
-                        children: [(0, l.jsx)(s.Text, {
-                            className: o.title,
-                            variant: "text-xs/semibold",
-                            color: "interactive-normal",
-                            children: t
-                        }), (0, l.jsx)("div", {
-                            className: o.divider
-                        }), (0, l.jsx)(i.default, {
-                            className: o.deleteButton,
-                            tooltip: r.default.Messages.GAME_INVITES_DELETE_ALL,
-                            color: i.CircleIconButtonColors.TERTIARY,
-                            icon: (0, l.jsx)(a.TrashIcon, {
-                                width: 16,
-                                height: 16
-                            }),
-                            onClick: n
-                        })]
-                    })
-                }
+
+            function N(e) {
+                let {
+                    title: t
+                } = e;
+                return (0, l.jsxs)("div", {
+                    className: T.headerContainer,
+                    children: [(0, l.jsx)(d.Text, {
+                        className: T.headerTitle,
+                        variant: "text-xs/semibold",
+                        color: "interactive-normal",
+                        children: t
+                    }), (0, l.jsx)("div", {
+                        className: T.headerDivider
+                    })]
+                })
+            }
         },
         470965: function(e, t, n) {
             "use strict";
@@ -8510,138 +8561,6 @@
                     ref: t
                 })
             })
-        },
-        208021: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return d
-                }
-            });
-            var l = n("913144"),
-                a = n("819689"),
-                s = n("115718"),
-                i = n("347895"),
-                r = n("341329"),
-                o = n("582713"),
-                u = n("724210"),
-                d = {
-                    openPrivateChannelAsSidebar(e) {
-                        let {
-                            channelId: t,
-                            messageId: n,
-                            baseChannelId: s,
-                            hasSingleMessageRequest: i
-                        } = e;
-                        l.default.dispatch({
-                            type: "SIDEBAR_VIEW_CHANNEL",
-                            sidebarType: o.SidebarType.VIEW_MESSAGE_REQUEST,
-                            baseChannelId: s,
-                            channelId: t,
-                            details: {
-                                type: o.SidebarOpenDetailsType.MESSAGE_REQUEST,
-                                hasSingleMessageRequest: i
-                            }
-                        }), null != n ? a.default.jumpToMessage({
-                            channelId: t,
-                            messageId: n,
-                            flash: !0
-                        }) : r.default.fetchMessages({
-                            channelId: t
-                        })
-                    },
-                    openChannelAsSidebar(e) {
-                        let {
-                            guildId: t,
-                            channelId: n,
-                            baseChannelId: i,
-                            flash: u = !0,
-                            details: d
-                        } = e;
-                        l.default.dispatch({
-                            type: "SIDEBAR_VIEW_CHANNEL",
-                            sidebarType: o.SidebarType.VIEW_CHANNEL,
-                            guildId: t,
-                            baseChannelId: i,
-                            channelId: n,
-                            details: d
-                        });
-                        let c = null == d ? void 0 : d.initialMessageId;
-                        null != c ? a.default.jumpToMessage({
-                            channelId: n,
-                            messageId: c,
-                            flash: u,
-                            jumpType: s.JumpTypes.INSTANT
-                        }) : r.default.fetchMessages({
-                            guildId: t,
-                            channelId: n
-                        })
-                    },
-                    openResourceChannelAsSidebar(e) {
-                        let {
-                            guildId: t,
-                            channelId: n
-                        } = e;
-                        null != t && ((0, i.selectHomeResourceChannel)(t, n, !1), l.default.dispatch({
-                            type: "SIDEBAR_VIEW_CHANNEL",
-                            sidebarType: o.SidebarType.VIEW_CHANNEL,
-                            guildId: t,
-                            baseChannelId: u.StaticChannelRoute.GUILD_HOME,
-                            channelId: n
-                        }))
-                    },
-                    openThreadAsSidebar(e) {
-                        let {
-                            guildId: t,
-                            baseChannelId: n,
-                            channelId: i,
-                            flash: u = !0,
-                            details: d
-                        } = e;
-                        l.default.dispatch({
-                            type: "SIDEBAR_VIEW_CHANNEL",
-                            sidebarType: o.SidebarType.VIEW_THREAD,
-                            baseChannelId: n,
-                            channelId: i,
-                            details: d
-                        }), (null == d ? void 0 : d.initialMessageId) != null ? a.default.jumpToMessage({
-                            channelId: i,
-                            messageId: d.initialMessageId,
-                            flash: u,
-                            jumpType: s.JumpTypes.INSTANT
-                        }) : r.default.fetchMessages({
-                            guildId: t,
-                            channelId: i
-                        })
-                    },
-                    closeChannelSidebar(e) {
-                        l.default.dispatch({
-                            type: "SIDEBAR_CLOSE",
-                            baseChannelId: e
-                        })
-                    },
-                    openGuildSidebar(e) {
-                        let {
-                            guildId: t,
-                            baseChannelId: n,
-                            sidebarType: a,
-                            details: s
-                        } = e;
-                        l.default.dispatch({
-                            type: "SIDEBAR_VIEW_GUILD",
-                            sidebarType: a,
-                            baseChannelId: n,
-                            guildId: t,
-                            details: s
-                        })
-                    },
-                    closeGuildSidebar(e) {
-                        l.default.dispatch({
-                            type: "SIDEBAR_CLOSE_GUILD",
-                            guildId: e
-                        })
-                    }
-                }
         },
         414833: function(e, t, n) {
             "use strict";
@@ -10237,53 +10156,6 @@
                         children: t
                     }) : null
                 }
-        },
-        822332: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return f
-                }
-            });
-            var l = n("37983"),
-                a = n("884691"),
-                s = n("414456"),
-                i = n.n(s),
-                r = n("77078"),
-                o = n("782340"),
-                u = n("440318");
-            let d = {
-                BLOCK: u.block,
-                INLINE: u.inline
-            };
-            class c extends a.PureComponent {
-                render() {
-                    let {
-                        children: e,
-                        className: t,
-                        textClassName: n,
-                        type: a = d.BLOCK,
-                        style: s
-                    } = this.props;
-                    return (0, l.jsxs)("div", {
-                        className: i(t, a),
-                        style: s,
-                        children: [(0, l.jsxs)(r.Text, {
-                            variant: "text-sm/bold",
-                            tag: "div",
-                            color: "text-positive",
-                            className: u.pro,
-                            children: [o.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
-                        }), (0, l.jsx)(r.Text, {
-                            className: i(u.tip, n),
-                            variant: "text-sm/normal",
-                            children: e
-                        })]
-                    })
-                }
-            }
-            c.Types = d;
-            var f = c
         },
         471654: function(e, t, n) {
             "use strict";

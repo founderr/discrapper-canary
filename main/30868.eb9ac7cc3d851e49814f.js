@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["10060"], {
+    ["30868"], {
         273215: function(e, t, n) {
             "use strict";
             e.exports = n.p + "63900a1ba1f23d305c53.png"
@@ -12919,6 +12919,12 @@
                         G({
                             type: "GAME_INVITE_DELETE",
                             inviteId: t.invite_id
+                        });
+                        break;
+                    case "GAME_INVITE_DELETE_MANY":
+                        G({
+                            type: "GAME_INVITE_DELETE_MANY",
+                            inviteIds: t.invite_ids
                         });
                         break;
                     case "PREMIUM_MARKETING_PREVIEW":
