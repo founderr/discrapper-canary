@@ -3458,7 +3458,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return S
                 }
             });
             var i = n("816494"),
@@ -3475,8 +3475,9 @@
                 f = !1,
                 E = null,
                 _ = null,
-                I = !1;
-            class p extends l.default.Store {
+                I = !1,
+                p = null;
+            class h extends l.default.Store {
                 isFetching() {
                     return d
                 }
@@ -3504,9 +3505,12 @@
                 getIsDsaEligible() {
                     return I
                 }
+                getAppealSignal() {
+                    return p
+                }
             }
-            p.displayName = "SafetyHubStore";
-            var h = new p(a.default, {
+            h.displayName = "SafetyHubStore";
+            var S = new h(a.default, {
                 SAFETY_HUB_FETCH_START: function(e) {
                     d = !0
                 },
@@ -3548,12 +3552,18 @@
                     _ = t
                 },
                 SAFETY_HUB_APPEAL_CLOSE: function() {
-                    _ = null
+                    _ = null, p = null
+                },
+                SAFETY_HUB_APPEAL_SIGNAL_SELECT: function(e) {
+                    let {
+                        signal: t
+                    } = e;
+                    p = t
                 },
                 LOGOUT: function() {
                     d = !1, s = {}, c = {
                         state: o.AccountStandingState.ALL_GOOD
-                    }, _ = null
+                    }, _ = null, p = null
                 }
             })
         },
@@ -3607,7 +3617,7 @@
                     classification: t,
                     classificationRequestState: n,
                     isDsaEligible: l,
-                    isAppealEligible: u && l && null == t.appeal_status
+                    isAppealEligible: u && l && null != t && null == t.appeal_status
                 }
             }
 
