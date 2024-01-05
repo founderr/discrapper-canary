@@ -14003,7 +14003,7 @@
                 },
                 r = function(e) {
                     let {
-                        autoTrackExposure: t = !1,
+                        autoTrackExposure: t = !0,
                         disable: n = !1,
                         location: i = "f03bed_9"
                     } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
