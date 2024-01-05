@@ -41,44 +41,35 @@
             "use strict";
             a.r(e), a.d(e, {
                 getSafetyHubData: function() {
-                    return c
+                    return u
                 },
                 getSafetyHubDataForClassification: function() {
-                    return u
+                    return o
                 }
             });
             var n = a("872717"),
                 s = a("913144"),
                 i = a("651693"),
                 l = a("234998"),
-                r = a("49111");
-            async function c() {
+                r = a("736393"),
+                c = a("49111");
+            async function u() {
                 s.default.dispatch({
                     type: "SAFETY_HUB_FETCH_START"
                 }), await n.default.get({
-                    url: r.Endpoints.SAFETY_HUB
+                    url: c.Endpoints.SAFETY_HUB
                 }).then(t => {
                     let {
                         body: e
                     } = t, {
                         classifications: a,
                         guild_classifications: n,
-                        account_standing: r
-                    } = e;
-                    a.forEach(t => {
-                        if (null != t.flagged_content && t.flagged_content.length > 0) {
-                            let e = t.flagged_content[0];
-                            e.attachments = e.attachments.filter(t => {
-                                let {
-                                    filename: e
-                                } = t;
-                                return (0, i.isImageFile)(e)
-                            }), e.attachments.forEach(t => (0, l.setMessageAttachmentDimensions)(t))
-                        }
-                    }), s.default.dispatch({
+                        account_standing: i
+                    } = e, l = a.map(t => (d(t), t));
+                    s.default.dispatch({
                         type: "SAFETY_HUB_FETCH_SUCCESS",
-                        classifications: a.concat(null != n ? n : []),
-                        accountStanding: r
+                        classifications: l.concat(null != n ? n : []),
+                        accountStanding: i
                     })
                 }).catch(t => {
                     var e, a;
@@ -88,37 +79,26 @@
                     })
                 })
             }
-            async function u(t) {
+            async function o(t) {
                 s.default.dispatch({
                     type: "SAFETY_HUB_FETCH_CLASSIFICATION_START",
                     classificationId: t
                 }), await n.default.get({
-                    url: r.Endpoints.SAFETY_HUB
+                    url: c.Endpoints.SAFETY_HUB
                 }).then(e => {
                     let {
                         body: a
                     } = e, {
                         classifications: n,
-                        account_standing: r,
-                        is_dsa_eligible: c
-                    } = a, u = n.find(e => e.id === t);
-                    if (null != u) {
-                        if (null != u.flagged_content && u.flagged_content.length > 0) {
-                            let t = u.flagged_content[0];
-                            t.attachments = t.attachments.filter(t => {
-                                let {
-                                    filename: e
-                                } = t;
-                                return (0, i.isImageFile)(e)
-                            }), t.attachments.forEach(t => (0, l.setMessageAttachmentDimensions)(t))
-                        }
-                        s.default.dispatch({
-                            type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
-                            classification: u,
-                            accountStanding: r,
-                            isDsaEligible: c
-                        })
-                    } else s.default.dispatch({
+                        account_standing: i,
+                        is_dsa_eligible: l
+                    } = a, r = n.find(e => e.id === t);
+                    null != r ? (d(r), s.default.dispatch({
+                        type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
+                        classification: r,
+                        accountStanding: i,
+                        isDsaEligible: l
+                    })) : s.default.dispatch({
                         type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
                         error: "Classification not found.",
                         classificationId: t
@@ -131,6 +111,18 @@
                         classificationId: t
                     })
                 })
+            }
+
+            function d(t) {
+                if (null != t.flagged_content && t.flagged_content.length > 0) {
+                    let e = t.flagged_content[0];
+                    e.attachments = e.attachments.filter(t => {
+                        let {
+                            filename: e
+                        } = t;
+                        return (0, i.isImageFile)(e)
+                    }), e.attachments.forEach(t => (0, l.setMessageAttachmentDimensions)(t)), t.flagged_content = (0, r.isFlaggedContentEmpty)(e) ? [] : [e]
+                }
             }
         },
         234998: function(t, e, a) {
@@ -217,23 +209,11 @@
                 }).enabled
             }
         },
-        908539: function(t, e, a) {
-            "use strict";
-            var n, s, i, l, r, c, u, o, S, E;
-            a.r(e), a.d(e, {
-                AccountStandingState: function() {
-                    return l
-                },
-                ClassificationRequestState: function() {
-                    return r
-                }
-            }), (c = n || (n = {}))[c.REVIEW_PENDING = 1] = "REVIEW_PENDING", c[c.CLASSIFICATION_UPHELD = 2] = "CLASSIFICATION_UPHELD", c[c.CLASSIFICATION_INVALIDATED = 3] = "CLASSIFICATION_INVALIDATED", (u = s || (s = {}))[u.UNSPECIFIED = 0] = "UNSPECIFIED", u[u.UNKNOWN = 1] = "UNKNOWN", u[u.UNSOLICITED_PORNOGRAPHY = 100] = "UNSOLICITED_PORNOGRAPHY", u[u.NONCONSENSUAL_PORNOGRAPHY = 200] = "NONCONSENSUAL_PORNOGRAPHY", u[u.GLORIFYING_VIOLENCE = 210] = "GLORIFYING_VIOLENCE", u[u.HATE_SPEECH = 220] = "HATE_SPEECH", u[u.CRACKED_ACCOUNTS = 230] = "CRACKED_ACCOUNTS", u[u.ILLICIT_GOODS = 240] = "ILLICIT_GOODS", u[u.SOCIAL_ENGINEERING = 250] = "SOCIAL_ENGINEERING", u[u.TEST_CLASSIFICATION = 9e3] = "TEST_CLASSIFICATION", u[u.TEST_CLASSIFICATION_LOW = 9001] = "TEST_CLASSIFICATION_LOW", u[u.TEST_CLASSIFICATION_SEVERE = 9002] = "TEST_CLASSIFICATION_SEVERE", (o = i || (i = {}))[o.BAN = 0] = "BAN", o[o.TEMP_BAN = 1] = "TEMP_BAN", o[o.GLOBAL_QUARANTINE = 2] = "GLOBAL_QUARANTINE", o[o.REQUIRE_VERIFICATION = 3] = "REQUIRE_VERIFICATION", o[o.USER_WARNING = 4] = "USER_WARNING", o[o.USER_SPAMMER = 5] = "USER_SPAMMER", o[o.CHANNEL_SPAM = 6] = "CHANNEL_SPAM", o[o.MESSAGE_SPAM = 7] = "MESSAGE_SPAM", o[o.DISABLE_SUSPICIOUS_ACTIVITY = 8] = "DISABLE_SUSPICIOUS_ACTIVITY", o[o.LIMITED_ACCESS = 9] = "LIMITED_ACCESS", o[o.CHANNEL_SCHEDULE_DELETE = 10] = "CHANNEL_SCHEDULE_DELETE", o[o.MESSAGE_CONTENT_REMOVAL = 11] = "MESSAGE_CONTENT_REMOVAL", o[o.GUILD_DISABLE_INVITE = 12] = "GUILD_DISABLE_INVITE", o[o.USER_CONTENT_REMOVAL = 13] = "USER_CONTENT_REMOVAL", o[o.USER_USERNAME_MANGLE = 14] = "USER_USERNAME_MANGLE", o[o.GUILD_LIMITED_ACCESS = 15] = "GUILD_LIMITED_ACCESS", o[o.USER_MESSAGE_REMOVAL = 16] = "USER_MESSAGE_REMOVAL", (S = l || (l = {}))[S.ALL_GOOD = 100] = "ALL_GOOD", S[S.LIMITED = 200] = "LIMITED", S[S.VERY_LIMITED = 300] = "VERY_LIMITED", S[S.AT_RISK = 400] = "AT_RISK", S[S.SUSPENDED = 500] = "SUSPENDED", (E = r || (r = {}))[E.PENDING = 0] = "PENDING", E[E.SUCCESS = 1] = "SUCCESS", E[E.FAILED = 2] = "FAILED"
-        },
         646356: function(t, e, a) {
             "use strict";
             a.r(e), a.d(e, {
                 default: function() {
-                    return f
+                    return I
                 }
             });
             var n = a("816494"),
@@ -246,15 +226,15 @@
                 o = {
                     state: r.AccountStandingState.ALL_GOOD
                 },
-                S = !1,
-                E = !1,
-                _ = null,
-                d = null,
-                A = !1,
-                I = null;
-            class T extends i.default.Store {
+                d = !1,
+                _ = !1,
+                S = null,
+                f = null,
+                T = !1,
+                A = null;
+            class E extends i.default.Store {
                 isFetching() {
-                    return S
+                    return d
                 }
                 getClassifications() {
                     return Object.values(c)
@@ -266,44 +246,44 @@
                     return o
                 }
                 getFetchError() {
-                    return _
+                    return S
                 }
                 isInitialized() {
-                    return E
+                    return _
                 }
                 getClassificationRequestState(t) {
                     return u[t]
                 }
                 getAppealClassificationId() {
-                    return d
+                    return f
                 }
                 getIsDsaEligible() {
-                    return A
+                    return T
                 }
                 getAppealSignal() {
-                    return I
+                    return A
                 }
             }
-            T.displayName = "SafetyHubStore";
-            var f = new T(l.default, {
+            E.displayName = "SafetyHubStore";
+            var I = new E(l.default, {
                 SAFETY_HUB_FETCH_START: function(t) {
-                    S = !0
+                    d = !0
                 },
                 SAFETY_HUB_FETCH_SUCCESS: function(t) {
                     let {
                         classifications: e,
                         accountStanding: a
                     } = t;
-                    c = s(e, "id"), o = a, S = !1, E = !0, _ = null
+                    c = s(e, "id"), o = a, d = !1, _ = !0, S = null
                 },
                 SAFETY_HUB_FETCH_FAILURE: function(t) {
                     let {
                         error: e
                     } = t;
-                    S = !1, E = !1, _ = e
+                    d = !1, _ = !1, S = e
                 },
                 SAFETY_HUB_FETCH_CLASSIFICATION_START: function(t) {
-                    u[t.classificationId] = r.ClassificationRequestState.PENDING, S = !0
+                    u[t.classificationId] = r.ClassificationRequestState.PENDING, d = !0
                 },
                 SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function(t) {
                     let {
@@ -311,34 +291,34 @@
                         accountStanding: a,
                         isDsaEligible: n
                     } = t;
-                    c[e.id] = e, u[e.id] = r.ClassificationRequestState.SUCCESS, o = a, S = !1, _ = null, A = n
+                    c[e.id] = e, u[e.id] = r.ClassificationRequestState.SUCCESS, o = a, d = !1, S = null, T = n
                 },
                 SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(t) {
                     let {
                         error: e,
                         classificationId: a
                     } = t;
-                    S = !1, _ = e, u[a] = r.ClassificationRequestState.FAILED
+                    d = !1, S = e, u[a] = r.ClassificationRequestState.FAILED
                 },
                 SAFETY_HUB_APPEAL_OPEN: function(t) {
                     let {
                         classificationId: e
                     } = t;
-                    d = e
+                    f = e
                 },
                 SAFETY_HUB_APPEAL_CLOSE: function() {
-                    d = null, I = null
+                    f = null, A = null
                 },
                 SAFETY_HUB_APPEAL_SIGNAL_SELECT: function(t) {
                     let {
                         signal: e
                     } = t;
-                    I = e
+                    A = e
                 },
                 LOGOUT: function() {
-                    S = !1, c = {}, o = {
+                    d = !1, c = {}, o = {
                         state: r.AccountStandingState.ALL_GOOD
-                    }, d = null, I = null
+                    }, f = null, A = null
                 }
             })
         },
@@ -376,10 +356,10 @@
                     return o
                 },
                 useActiveSafetyHubClassifications: function() {
-                    return S
+                    return d
                 },
                 useExpiredSafetyHubClassifications: function() {
-                    return E
+                    return _
                 }
             });
             var n = a("884691"),
@@ -409,13 +389,13 @@
                 }
             }
 
-            function S() {
+            function d() {
                 let t = u(),
                     e = new Date;
                 return t.filter(t => new Date(t.max_expiration_time) > e)
             }
 
-            function E() {
+            function _() {
                 let t = u(),
                     e = new Date;
                 return t.filter(t => new Date(t.max_expiration_time) <= e)
@@ -466,7 +446,7 @@
             "use strict";
             a.r(e), a.d(e, {
                 default: function() {
-                    return N
+                    return g
                 }
             }), a("222007");
             var n = a("37983"),
@@ -477,148 +457,148 @@
                 c = a("891128"),
                 u = a("165984"),
                 o = a("505088"),
-                S = a("77078"),
-                E = a("697218"),
-                _ = a("908539"),
-                d = a("132206"),
-                A = a("260883"),
-                I = a("170213"),
-                T = a("782340"),
-                f = a("122698");
+                d = a("77078"),
+                _ = a("697218"),
+                S = a("908539"),
+                f = a("132206"),
+                T = a("260883"),
+                A = a("170213"),
+                E = a("782340"),
+                I = a("122698");
 
-            function N() {
-                let t = (0, d.useSafetyHubAccountStanding)(),
-                    e = (0, l.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-                    [a, N] = s.useState(36),
-                    C = s.useRef({
-                        [_.AccountStandingState.ALL_GOOD]: null,
-                        [_.AccountStandingState.LIMITED]: null,
-                        [_.AccountStandingState.VERY_LIMITED]: null,
-                        [_.AccountStandingState.AT_RISK]: null,
-                        [_.AccountStandingState.SUSPENDED]: null
+            function g() {
+                let t = (0, f.useSafetyHubAccountStanding)(),
+                    e = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
+                    [a, g] = s.useState(36),
+                    N = s.useRef({
+                        [S.AccountStandingState.ALL_GOOD]: null,
+                        [S.AccountStandingState.LIMITED]: null,
+                        [S.AccountStandingState.VERY_LIMITED]: null,
+                        [S.AccountStandingState.AT_RISK]: null,
+                        [S.AccountStandingState.SUSPENDED]: null
                     }),
-                    g = s.useCallback(() => {
-                        let t = Math.max(...Object.values(C.current).map(t => {
+                    m = s.useCallback(() => {
+                        let t = Math.max(...Object.values(N.current).map(t => {
                             var e;
                             return null !== (e = null == t ? void 0 : t.getBoundingClientRect().height) && void 0 !== e ? e : 36
                         }));
-                        N(Math.max(t, 36))
+                        g(Math.max(t, 36))
                     }, []);
                 s.useEffect(() => {
-                    g();
-                    let t = (0, i.debounce)(g, 100);
+                    m();
+                    let t = (0, i.debounce)(m, 100);
                     window.addEventListener("resize", t)
-                }, [g]);
-                let O = {
-                        [_.AccountStandingState.ALL_GOOD]: {
-                            title: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
-                            description: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION.format({
-                                termsOfService: I.SafetyHubLinks.TOS_LINK,
-                                communityGuidelines: I.SafetyHubLinks.COMMUNITY_GUIDELINES
+                }, [m]);
+                let C = {
+                        [S.AccountStandingState.ALL_GOOD]: {
+                            title: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
+                            description: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION.format({
+                                termsOfService: A.SafetyHubLinks.TOS_LINK,
+                                communityGuidelines: A.SafetyHubLinks.COMMUNITY_GUIDELINES
                             }),
-                            status: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT,
+                            status: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT,
                             Icon: c.CircleCheckIcon,
                             color: r.default.colors.STATUS_POSITIVE
                         },
-                        [_.AccountStandingState.LIMITED]: {
-                            title: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_TITLE,
-                            description: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_DESCRIPTION,
-                            status: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_SHORT,
+                        [S.AccountStandingState.LIMITED]: {
+                            title: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_TITLE,
+                            description: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_DESCRIPTION,
+                            status: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_SHORT,
                             Icon: u.CircleExclamationPointIcon,
                             color: r.default.colors.STATUS_WARNING
                         },
-                        [_.AccountStandingState.VERY_LIMITED]: {
-                            title: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_TITLE,
-                            description: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_DESCRIPTION,
-                            status: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_SHORT,
+                        [S.AccountStandingState.VERY_LIMITED]: {
+                            title: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_TITLE,
+                            description: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_DESCRIPTION,
+                            status: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_SHORT,
                             Icon: u.CircleExclamationPointIcon,
                             color: r.default.unsafe_rawColors.ORANGE_345
                         },
-                        [_.AccountStandingState.AT_RISK]: {
-                            title: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_TITLE,
-                            description: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_DESCRIPTION,
-                            status: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_SHORT,
+                        [S.AccountStandingState.AT_RISK]: {
+                            title: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_TITLE,
+                            description: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_DESCRIPTION,
+                            status: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_SHORT,
                             Icon: u.CircleExclamationPointIcon,
                             color: r.default.colors.STATUS_DANGER
                         },
-                        [_.AccountStandingState.SUSPENDED]: {
-                            title: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE,
-                            description: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION.format({
-                                termsOfService: I.SafetyHubLinks.TOS_LINK,
-                                communityGuidelines: I.SafetyHubLinks.COMMUNITY_GUIDELINES
+                        [S.AccountStandingState.SUSPENDED]: {
+                            title: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE,
+                            description: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION.format({
+                                termsOfService: A.SafetyHubLinks.TOS_LINK,
+                                communityGuidelines: A.SafetyHubLinks.COMMUNITY_GUIDELINES
                             }),
-                            status: T.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_SHORT,
+                            status: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_SHORT,
                             Icon: o.CircleXIcon,
                             color: r.default.colors.ICON_MUTED
                         }
                     },
                     {
-                        title: m,
-                        description: D,
-                        color: h,
-                        Icon: L
-                    } = O[t.state],
-                    U = Object.keys(O).length;
-                return (0, n.jsxs)(S.Card, {
-                    className: f.container,
+                        title: h,
+                        description: x,
+                        color: H,
+                        Icon: p
+                    } = C[t.state],
+                    O = Object.keys(C).length;
+                return (0, n.jsxs)(d.Card, {
+                    className: I.container,
                     outline: !1,
                     children: [(0, n.jsx)("div", {
-                        className: f.profile,
-                        children: (0, n.jsx)(A.default, {
+                        className: I.profile,
+                        children: (0, n.jsx)(T.default, {
                             user: e,
-                            size: S.AvatarSizes.SIZE_80
+                            size: d.AvatarSizes.SIZE_80
                         })
                     }), (0, n.jsxs)("div", {
-                        className: f.status,
+                        className: I.status,
                         children: [(0, n.jsxs)("div", {
-                            className: f.title,
-                            children: [(0, n.jsx)(S.Heading, {
+                            className: I.title,
+                            children: [(0, n.jsx)(d.Heading, {
                                 color: "header-primary",
                                 variant: "heading-lg/normal",
-                                children: m.format({
-                                    hook: t => (0, n.jsx)(S.Text, {
+                                children: h.format({
+                                    hook: t => (0, n.jsx)(d.Text, {
                                         style: {
-                                            color: h.css
+                                            color: H.css
                                         },
                                         variant: "heading-lg/bold",
                                         tag: "span",
                                         children: t
                                     })
                                 })
-                            }), (0, n.jsx)(S.Text, {
+                            }), (0, n.jsx)(d.Text, {
                                 color: "text-normal",
                                 variant: "text-sm/normal",
-                                children: D
+                                children: x
                             })]
                         }), (0, n.jsxs)("div", {
-                            className: f.health,
+                            className: I.health,
                             style: {
                                 height: a
                             },
                             children: [(0, n.jsx)("div", {
-                                className: f.line
-                            }), Object.entries(O).map((e, a) => {
+                                className: I.line
+                            }), Object.entries(C).map((e, a) => {
                                 let [s, i] = e, l = parseInt(s) === t.state;
                                 return (0, n.jsxs)("div", {
-                                    className: f.statusOption,
-                                    ref: t => C.current[parseInt(s)] = t,
-                                    children: [l ? (0, n.jsx)(L, {
-                                        className: f.marker,
+                                    className: I.statusOption,
+                                    ref: t => N.current[parseInt(s)] = t,
+                                    children: [l ? (0, n.jsx)(p, {
+                                        className: I.marker,
                                         color: i.color
                                     }) : (0, n.jsx)("div", {
-                                        className: f.marker,
+                                        className: I.marker,
                                         style: {
                                             marginLeft: 0 === a ? -6 : 0,
-                                            marginRight: a === U - 1 ? -6 : 0
+                                            marginRight: a === O - 1 ? -6 : 0
                                         },
                                         children: (0, n.jsx)("div", {
-                                            className: f.empty
+                                            className: I.empty
                                         })
                                     }), i.status.format({
-                                        hook: t => (0, n.jsx)(S.Text, {
+                                        hook: t => (0, n.jsx)(d.Text, {
                                             color: "text-normal",
                                             variant: "text-sm/normal",
-                                            className: f.statusLabel,
+                                            className: I.statusLabel,
                                             children: t
                                         })
                                     })]
@@ -668,7 +648,7 @@
             "use strict";
             a.r(e), a.d(e, {
                 default: function() {
-                    return C
+                    return N
                 }
             });
             var n = a("37983"),
@@ -679,41 +659,41 @@
                 c = a("489622"),
                 u = a("599110"),
                 o = a("781324"),
-                S = a("132206"),
-                E = a("333781"),
-                _ = a("422671"),
-                d = a("792105"),
-                A = a("133479"),
-                I = a("966677"),
-                T = a("49111"),
-                f = a("782340"),
-                N = a("302713");
+                d = a("132206"),
+                _ = a("333781"),
+                S = a("422671"),
+                f = a("792105"),
+                T = a("133479"),
+                A = a("966677"),
+                E = a("49111"),
+                I = a("782340"),
+                g = a("302713");
 
-            function C() {
-                let t = (0, d.default)(),
-                    e = (0, _.useSafetyHubInitialized)(),
-                    a = (0, S.useSafetyHubAccountStanding)(),
-                    C = (0, E.useSafetyHubFetchError)();
+            function N() {
+                let t = (0, f.default)(),
+                    e = (0, S.useSafetyHubInitialized)(),
+                    a = (0, d.useSafetyHubAccountStanding)(),
+                    N = (0, _.useSafetyHubFetchError)();
                 return (s.useEffect(() => {
                     o.getSafetyHubData()
                 }, []), s.useEffect(() => {
-                    e && (u.default.track(T.AnalyticEvents.SAFETY_HUB_VIEWED, {
+                    e && (u.default.track(E.AnalyticEvents.SAFETY_HUB_VIEWED, {
                         account_standing: a.state
                     }), r.default.increment({
                         name: i.MetricEvents.SAFETY_HUB_VIEW
                     }))
                 }, [e]), t) ? (0, n.jsx)("div", {
                     children: (0, n.jsx)(l.Spinner, {})
-                }) : null != C ? (0, n.jsxs)(c.default, {
+                }) : null != N ? (0, n.jsxs)(c.default, {
                     color: c.NoticeColors.DANGER,
-                    className: N.nagbar,
-                    children: [f.default.Messages.SAFETY_HUB_ERROR_MESSAGE, (0, n.jsx)(c.NoticeButton, {
+                    className: g.nagbar,
+                    children: [I.default.Messages.SAFETY_HUB_ERROR_MESSAGE, (0, n.jsx)(c.NoticeButton, {
                         onClick: () => o.getSafetyHubData(),
-                        children: f.default.Messages.SAFETY_HUB_ERROR_ACTION_BUTTON
+                        children: I.default.Messages.SAFETY_HUB_ERROR_ACTION_BUTTON
                     })]
                 }) : (0, n.jsxs)("div", {
-                    className: N.container,
-                    children: [(0, n.jsx)(A.default, {}), (0, n.jsx)(I.ConnectedSafetyHubViolationsContainer, {})]
+                    className: g.container,
+                    children: [(0, n.jsx)(T.default, {}), (0, n.jsx)(A.ConnectedSafetyHubViolationsContainer, {})]
                 })
             }
         },
@@ -721,7 +701,7 @@
             "use strict";
             a.r(e), a.d(e, {
                 ConnectedSafetyHubViolationsContainer: function() {
-                    return R
+                    return U
                 }
             }), a("222007");
             var n = a("37983"),
@@ -732,18 +712,18 @@
                 c = a("77078"),
                 u = a("461380"),
                 o = a("543289"),
-                S = a("300113"),
-                E = a("599110"),
-                _ = a("299039"),
-                d = a("736393"),
-                A = a("310888"),
-                I = a("132206"),
-                T = a("698609"),
-                f = a("170213"),
-                N = a("49111"),
-                C = a("782340"),
-                g = a("231180");
-            let O = t => {
+                d = a("300113"),
+                _ = a("599110"),
+                S = a("299039"),
+                f = a("736393"),
+                T = a("310888"),
+                A = a("132206"),
+                E = a("698609"),
+                I = a("170213"),
+                g = a("49111"),
+                N = a("782340"),
+                m = a("231180");
+            let C = t => {
                     let {
                         status: e,
                         onClick: a,
@@ -751,32 +731,32 @@
                         count: i
                     } = t;
                     return (0, n.jsxs)(c.Clickable, {
-                        className: g.header,
+                        className: m.header,
                         onClick: a,
                         children: [(0, n.jsx)("div", {
-                            className: g.headerIconWrapper,
+                            className: m.headerIconWrapper,
                             children: (0, n.jsx)(r.WarningIcon, {
                                 color: "active" === e ? c.tokens.colors.INTERACTIVE_ACTIVE : c.tokens.colors.INTERACTIVE_MUTED,
                                 width: 24,
                                 height: 24
                             })
                         }), (0, n.jsxs)("div", {
-                            className: g.title,
+                            className: m.title,
                             children: [(0, n.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "text-normal",
-                                children: "active" === e ? C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE.format({
+                                children: "active" === e ? N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE.format({
                                     count: i.toString()
-                                }) : C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED.format({
+                                }) : N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED.format({
                                     count: i.toString()
                                 })
                             }), (0, n.jsx)(c.Heading, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: "active" === e ? C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE : C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED
+                                children: "active" === e ? N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE : N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED
                             })]
                         }), (0, n.jsx)("div", {
-                            className: g.caret,
+                            className: m.caret,
                             children: (0, n.jsx)(u.default, {
                                 width: 18,
                                 height: 18,
@@ -785,59 +765,59 @@
                         })]
                     })
                 },
-                m = () => (0, n.jsxs)("div", {
-                    className: g.emptyState,
+                h = () => (0, n.jsxs)("div", {
+                    className: m.emptyState,
                     children: [(0, n.jsxs)("div", {
-                        className: g.iconContainer,
+                        className: m.iconContainer,
                         children: [(0, n.jsx)("div", {
-                            className: g.iconBackground,
-                            children: (0, n.jsx)(S.default, {
-                                className: g.icon
+                            className: m.iconBackground,
+                            children: (0, n.jsx)(d.default, {
+                                className: m.icon
                             })
                         }), (0, n.jsx)(o.default, {
-                            className: g.stars
+                            className: m.stars
                         })]
                     }), (0, n.jsx)(c.Heading, {
                         variant: "heading-md/bold",
-                        className: g.emptyStateText,
-                        children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
+                        className: m.emptyStateText,
+                        children: N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
                     }), (0, n.jsx)(c.Text, {
                         variant: "text-xs/normal",
-                        className: g.emptyStateSubtext,
-                        children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
+                        className: m.emptyStateSubtext,
+                        children: N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
                     })]
                 }),
-                D = () => (0, n.jsx)("div", {
-                    className: g.emptyState,
+                x = () => (0, n.jsx)("div", {
+                    className: m.emptyState,
                     children: (0, n.jsx)(c.Text, {
                         variant: "text-xs/normal",
-                        className: g.emptyStateSubtext,
-                        children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
+                        className: m.emptyStateSubtext,
+                        children: N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
                     })
                 }),
-                h = t => {
+                H = t => {
                     let {
                         timestamp: e
                     } = t;
                     return (0, n.jsx)(c.Text, {
                         variant: "text-xs/normal",
-                        className: g.timestamp,
-                        children: (0, d.getClassificationRelativeIncidentTime)(e)
+                        className: m.timestamp,
+                        children: (0, f.getClassificationRelativeIncidentTime)(e)
                     })
                 },
-                L = () => (0, n.jsx)(c.Text, {
+                p = () => (0, n.jsx)(c.Text, {
                     variant: "text-xs/bold",
-                    className: g.newBadge,
-                    children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
+                    className: m.newBadge,
+                    children: N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
                 }),
-                U = t => {
+                O = t => {
                     let {
                         classification: e
                     } = t, {
                         id: s,
                         description: i,
                         max_expiration_time: r
-                    } = e, u = _.default.extractTimestamp(s), o = (0, A.useIsNewClassification)(e), S = new Date(r), E = S.toDateString();
+                    } = e, u = S.default.extractTimestamp(s), o = (0, T.useIsNewClassification)(e), d = new Date(r), _ = d.toDateString();
                     return (0, n.jsx)(c.Clickable, {
                         onClick: () => {
                             (0, c.openModalLazy)(async () => {
@@ -846,21 +826,21 @@
                                 } = await a.el("825138").then(a.bind(a, "825138"));
                                 return e => (0, n.jsx)(t, {
                                     classificationId: s,
-                                    source: f.SafetyHubAnalyticsActionSource.StandingTab,
+                                    source: I.SafetyHubAnalyticsActionSource.StandingTab,
                                     ...e
                                 })
                             })
                         },
-                        className: l(g.itemDetail, {
-                            [g.itemDetailNew]: o
+                        className: l(m.itemDetail, {
+                            [m.itemDetailNew]: o
                         }),
                         children: (0, n.jsxs)("div", {
-                            className: g.descriptionContainer,
-                            children: [o ? (0, n.jsx)(L, {}) : (0, n.jsx)(h, {
+                            className: m.descriptionContainer,
+                            children: [o ? (0, n.jsx)(p, {}) : (0, n.jsx)(H, {
                                 timestamp: u
                             }), (0, n.jsx)(c.Heading, {
                                 variant: "heading-lg/normal",
-                                children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format({
+                                children: N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format({
                                     description: i,
                                     descriptionHook: t => (0, n.jsx)(c.Text, {
                                         tag: "span",
@@ -870,71 +850,72 @@
                                 })
                             }), (0, n.jsx)(c.Text, {
                                 variant: "text-sm/normal",
-                                className: g.expirationDate,
-                                children: S > new Date ? C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
-                                    expirationDate: E
-                                }) : C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format({
-                                    expirationDate: E
+                                className: m.expirationDate,
+                                children: d > new Date ? N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
+                                    expirationDate: _
+                                }) : N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format({
+                                    expirationDate: _
                                 })
                             })]
                         })
                     }, s)
                 },
-                H = t => {
+                D = t => {
                     let {
                         status: e,
                         classifications: a
-                    } = t, [i, l] = s.useState(!1), [r, u] = s.useState(3), o = (0, I.useSafetyHubAccountStanding)(), S = s.useMemo(() => a.slice(0, r), [a, r]);
+                    } = t, [i, l] = s.useState(!1), [r, u] = s.useState(3), o = (0, A.useSafetyHubAccountStanding)(), d = s.useMemo(() => a.slice(0, r), [a, r]);
                     s.useEffect(() => {
-                        i && E.default.track(N.AnalyticEvents.SAFETY_HUB_ACTION, {
-                            action: f.SafetyHubAnalyticsActions.ViewViolationsDropdown,
+                        i && _.default.track(g.AnalyticEvents.SAFETY_HUB_ACTION, {
+                            action: I.SafetyHubAnalyticsActions.ViewViolationsDropdown,
                             account_standing: o.state,
-                            classification_ids: S.map(t => Number(t.id)),
-                            source: f.SafetyHubAnalyticsActionSource.StandingTab
+                            classification_ids: d.map(t => Number(t.id)),
+                            source: I.SafetyHubAnalyticsActionSource.StandingTab,
+                            is_violative_content_shown: !1
                         })
-                    }, [i, o.state, S]);
-                    let _ = a.length - S.length > 3 ? 3 : a.length - S.length;
+                    }, [i, o.state, d]);
+                    let S = a.length - d.length > 3 ? 3 : a.length - d.length;
                     return (0, n.jsxs)("div", {
-                        className: g.dropdown,
-                        children: [(0, n.jsx)(O, {
+                        className: m.dropdown,
+                        children: [(0, n.jsx)(C, {
                             status: e,
                             onClick: () => l(t => !t),
                             opened: i,
                             count: a.length
                         }), i && (0, n.jsxs)("div", {
-                            className: g.items,
+                            className: m.items,
                             children: [(0, n.jsx)(c.TabBar.Separator, {
                                 style: {
                                     height: "1px",
                                     width: "100%"
                                 }
-                            }), S.length > 0 && S.map(t => (0, n.jsx)(U, {
+                            }), d.length > 0 && d.map(t => (0, n.jsx)(O, {
                                 classification: t
-                            }, t.id)), S.length < a.length && (0, n.jsxs)(n.Fragment, {
+                            }, t.id)), d.length < a.length && (0, n.jsxs)(n.Fragment, {
                                 children: [(0, n.jsx)(c.TabBar.Separator, {
                                     style: {
                                         height: "1px",
                                         width: "100%"
                                     }
                                 }), (0, n.jsx)("button", {
-                                    className: g.paginationButton,
-                                    onClick: () => u(t => t + _),
-                                    children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({
-                                        nextPageSize: _
+                                    className: m.paginationButton,
+                                    onClick: () => u(t => t + S),
+                                    children: N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({
+                                        nextPageSize: S
                                     })
                                 })]
-                            }), 0 === S.length && "active" === e && (0, n.jsx)(m, {}), 0 === S.length && "expired" === e && (0, n.jsx)(D, {})]
+                            }), 0 === d.length && "active" === e && (0, n.jsx)(h, {}), 0 === d.length && "expired" === e && (0, n.jsx)(x, {})]
                         })]
                     })
                 },
-                R = () => {
-                    let t = (0, T.useActiveSafetyHubClassifications)(),
-                        e = (0, T.useExpiredSafetyHubClassifications)();
+                U = () => {
+                    let t = (0, E.useActiveSafetyHubClassifications)(),
+                        e = (0, E.useExpiredSafetyHubClassifications)();
                     return 0 === t.length && 0 === e.length ? null : (0, n.jsxs)("div", {
-                        children: [(0, n.jsx)(H, {
+                        children: [(0, n.jsx)(D, {
                             status: "active",
                             classifications: t
-                        }), (0, n.jsx)(H, {
+                        }), (0, n.jsx)(D, {
                             status: "expired",
                             classifications: e
                         })]
