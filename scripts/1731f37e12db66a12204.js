@@ -1659,7 +1659,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "257407"
+                        buildNumber: "257412"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -15564,20 +15564,6 @@
                 treatments: [{
                     id: 1,
                     label: "Enable Incentivized Invites",
-                    config: {
-                        enabled: !0
-                    }
-                }]
-            }), (0, a.createExperiment)({
-                kind: "user",
-                id: "2023-08_friend_finder_pymk",
-                label: "Friend Finder People You May Know",
-                defaultConfig: {
-                    enabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enable PYMK",
                     config: {
                         enabled: !0
                     }
