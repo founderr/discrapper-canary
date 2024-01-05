@@ -139,15 +139,15 @@
                         for (let i = 0; i < n; i++)
                             for (let l = i ? 0 : 1; l * n < t * (n - i); l++) u.push(((e[p + (I >> 1)] >> ((1 & I++) << 2) & 15) / 7.5 - 1) * r);
                         return u
-                    }, C = R(f, T, (a >> 18 & 31) / 31), N = R(3, 3, 1.25 * ((o >> 3 & 63) / 63)), P = R(3, 3, 1.25 * ((o >> 9 & 63) / 63)), O = _ && R(5, 5, A), U = r(e), h = l(U > 1 ? 32 : 32 * U), m = l(U > 1 ? 32 / U : 32), L = new Uint8Array(h * m * 4), M = [], D = [];
-                    for (let e = 0, r = 0; e < m; e++)
+                    }, C = R(f, T, (a >> 18 & 31) / 31), N = R(3, 3, 1.25 * ((o >> 3 & 63) / 63)), P = R(3, 3, 1.25 * ((o >> 9 & 63) / 63)), O = _ && R(5, 5, A), U = r(e), h = l(U > 1 ? 32 : 32 * U), L = l(U > 1 ? 32 / U : 32), m = new Uint8Array(h * L * 4), M = [], D = [];
+                    for (let e = 0, r = 0; e < L; e++)
                         for (let l = 0; l < h; l++, r += 4) {
                             let a = s,
                                 o = c,
                                 E = d,
                                 A = S;
                             for (let e = 0, n = u(f, _ ? 5 : 3); e < n; e++) M[e] = i(t / h * (l + .5) * e);
-                            for (let n = 0, r = u(T, _ ? 5 : 3); n < r; n++) D[n] = i(t / m * (e + .5) * n);
+                            for (let n = 0, r = u(T, _ ? 5 : 3); n < r; n++) D[n] = i(t / L * (e + .5) * n);
                             for (let e = 0, t = 0; e < T; e++)
                                 for (let n = e ? 0 : 1, r = 2 * D[e]; n * T < f * (T - e); n++, t++) a += C[t] * M[n] * r;
                             for (let e = 0, t = 0; e < 3; e++)
@@ -161,12 +161,12 @@
                             let p = a - 2 / 3 * o,
                                 I = (3 * a - p + E) / 2,
                                 R = I - E;
-                            L[r] = u(0, 255 * n(1, I)), L[r + 1] = u(0, 255 * n(1, R)), L[r + 2] = u(0, 255 * n(1, p)), L[r + 3] = u(0, 255 * n(1, A))
+                            m[r] = u(0, 255 * n(1, I)), m[r + 1] = u(0, 255 * n(1, R)), m[r + 2] = u(0, 255 * n(1, p)), m[r + 3] = u(0, 255 * n(1, A))
                         }
                     return {
                         w: h,
-                        h: m,
-                        rgba: L
+                        h: L,
+                        rgba: m
                     }
                 }(e);
                 return u(t.w, t.h, t.rgba)
@@ -408,10 +408,10 @@
                     return h
                 },
                 resetPendingAccountChanges: function() {
-                    return m
+                    return L
                 },
                 resetAllPending: function() {
-                    return L
+                    return m
                 },
                 resetAndCloseUserProfileForm: function() {
                     return M
@@ -592,13 +592,13 @@
                 })
             }
 
-            function m() {
+            function L() {
                 l.default.dispatch({
                     type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
                 })
             }
 
-            function L() {
+            function m() {
                 l.default.dispatch({
                     type: "USER_SETTINGS_RESET_ALL_PENDING"
                 })
@@ -784,36 +784,39 @@
             "use strict";
             n.r(t), n.d(t, {
                 getDecorationSizeForAvatarSize: function() {
-                    return l
+                    return o
                 },
                 openAvatarDecorationModal: function() {
-                    return a
+                    return s
                 }
             });
             var r = n("37983");
             n("884691");
-            var u = n("77078");
+            var u = n("77078"),
+                i = n("393414");
             n("103603");
-            var i = n("573135");
+            var l = n("573135"),
+                a = n("49111");
 
-            function l(e) {
-                return "number" != typeof e ? (0, u.getAvatarSize)(e) * i.DECORATION_TO_AVATAR_RATIO : e * i.DECORATION_TO_AVATAR_RATIO
+            function o(e) {
+                return "number" != typeof e ? (0, u.getAvatarSize)(e) * l.DECORATION_TO_AVATAR_RATIO : e * l.DECORATION_TO_AVATAR_RATIO
             }
-            let a = e => {
+            let s = e => {
                 let {
                     analyticsLocations: t,
-                    initialSelectedDecoration: i,
-                    isTryItOutFlow: l
+                    initialSelectedDecoration: l,
+                    isTryItOutFlow: o
                 } = e;
                 (0, u.openModalLazy)(async () => {
+                    (0, i.getHistory)().location.pathname === a.Routes.COLLECTIBLES_SHOP_FULLSCREEN && (0, i.transitionTo)(a.Routes.APP);
                     let {
                         default: e
                     } = await n.el("791050").then(n.bind(n, "791050"));
                     return n => (0, r.jsx)(e, {
                         ...n,
                         analyticsLocations: t,
-                        initialSelectedDecoration: i,
-                        isTryItOutFlow: l
+                        initialSelectedDecoration: l,
+                        isTryItOutFlow: o
                     })
                 }, {})
             }
@@ -990,8 +993,8 @@
                     giftMessage: O,
                     subscriptionTier: U,
                     trialId: h,
-                    postSuccessGuild: m,
-                    openInvoiceId: L,
+                    postSuccessGuild: L,
+                    openInvoiceId: m,
                     applicationId: M,
                     referralTrialOfferId: D,
                     giftRecipient: v,
@@ -1029,9 +1032,9 @@
                             analyticsLocation: C,
                             analyticsSourceLocation: N,
                             trialId: h,
-                            postSuccessGuild: m,
+                            postSuccessGuild: L,
                             planGroup: f.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                            openInvoiceId: L,
+                            openInvoiceId: m,
                             applicationId: M,
                             referralTrialOfferId: D,
                             returnRef: y,
@@ -1110,8 +1113,8 @@
                     footer: O,
                     isGift: U = !1,
                     giftMessage: h = I.default.Messages.PREMIUM_PAYMENT_IS_GIFT,
-                    hideBreadcrumbs: m = !1,
-                    isLoading: L = !1,
+                    hideBreadcrumbs: L = !1,
+                    isLoading: m = !1,
                     purchaseError: M,
                     purchaseErrorBlockRef: D,
                     planError: v,
@@ -1125,7 +1128,7 @@
                 let {
                     stripe: x
                 } = (0, E.usePaymentContext)();
-                L = L || null == x;
+                m = m || null == x;
                 let H = u.useRef(new o.Timeout);
                 u.useEffect(() => {
                     let e = H.current;
@@ -1148,7 +1151,7 @@
                             icon: S.default,
                             color: null == h ? c.default.Colors.PRIMARY : c.default.Colors.SECONDARY,
                             children: h
-                        }) : null, m ? null : (0, r.jsx)("div", {
+                        }) : null, L ? null : (0, r.jsx)("div", {
                             className: R.breadcrumbsWrapper,
                             children: (0, r.jsx)(T.default, {
                                 activeId: f.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(n) ? F : n,
@@ -1165,7 +1168,7 @@
                                     ref: D,
                                     children: b
                                 })
-                            }), L ? (0, r.jsx)(s.Spinner, {
+                            }), m ? (0, r.jsx)(s.Spinner, {
                                 className: R.loadingBlock
                             }) : (0, r.jsx)(s.Sequencer, {
                                 className: R.sequencer,
@@ -1348,8 +1351,8 @@
                 O = n("357957"),
                 U = n("326880"),
                 h = n("46829"),
-                m = n("595086"),
-                L = n("719923"),
+                L = n("595086"),
+                m = n("719923"),
                 M = n("153160"),
                 D = n("49111"),
                 v = n("646718"),
@@ -1361,7 +1364,7 @@
                 } = e;
                 return (0, r.jsxs)(r.Fragment, {
                     children: [(0, r.jsx)(N.default, {
-                        icon: m.default,
+                        icon: L.default,
                         iconClassName: g.iconColorPurple,
                         description: y.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_CUSTOM
                     }), (0, r.jsx)(N.default, {
@@ -1382,7 +1385,7 @@
             function B() {
                 return (0, r.jsxs)(r.Fragment, {
                     children: [(0, r.jsx)(N.default, {
-                        icon: m.default,
+                        icon: L.default,
                         iconClassName: g.iconColorPurple,
                         description: y.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_CUSTOM
                     }), (0, r.jsx)(N.default, {
@@ -1421,7 +1424,7 @@
                                 children: null == c ? (0, r.jsx)(o.Spinner, {
                                     type: o.Spinner.Type.PULSING_ELLIPSIS
                                 }) : i ? y.default.Messages.STICKER_PREMIUM_SUBSCRIPTION_UPSELL_ALERT_TITLE.format({
-                                    planName: (0, L.getTierDisplayName)(v.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+                                    planName: (0, m.getTierDisplayName)(v.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                                     monthlyPrice: (0, M.formatPrice)(c.amount, c.currency)
                                 }) : y.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_ALERT_TITLE.format({
                                     monthlyPrice: (0, M.formatPrice)(c.amount, c.currency)
@@ -1483,7 +1486,7 @@
                     })
                 }, []);
                 let h = U === v.PremiumTypes.TIER_0 && null == N,
-                    m = I ? L.default.getDefaultPrice(h ? v.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : v.SubscriptionPlans.PREMIUM_MONTH_TIER_2) : null;
+                    L = I ? m.default.getDefaultPrice(h ? v.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : v.SubscriptionPlans.PREMIUM_MONTH_TIER_2) : null;
                 return (0, r.jsx)(E.PaymentContextProvider, {
                     activeSubscription: null,
                     stepConfigs: [],
@@ -1498,7 +1501,7 @@
                                 discountOffer: N,
                                 isTier0Upsell: h,
                                 isLoading: !I || P,
-                                price: m,
+                                price: L,
                                 onClose: t
                             }),
                             footer: (0, r.jsx)(x, {

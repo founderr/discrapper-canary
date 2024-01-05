@@ -312,7 +312,7 @@
                         for (let o = 0; o < n; o++)
                             for (let l = o ? 0 : 1; l * n < t * (n - o); l++) i.push(((e[C + (h >> 1)] >> ((1 & h++) << 2) & 15) / 7.5 - 1) * r);
                         return i
-                    }, S = T(_, p, (s >> 18 & 31) / 31), R = T(3, 3, 1.25 * ((a >> 3 & 63) / 63)), N = T(3, 3, 1.25 * ((a >> 9 & 63) / 63)), m = f && T(5, 5, A), g = r(e), v = l(g > 1 ? 32 : 32 * g), O = l(g > 1 ? 32 / g : 32), P = new Uint8Array(v * O * 4), M = [], y = [];
+                    }, S = T(_, p, (s >> 18 & 31) / 31), R = T(3, 3, 1.25 * ((a >> 3 & 63) / 63)), N = T(3, 3, 1.25 * ((a >> 9 & 63) / 63)), m = f && T(5, 5, A), g = r(e), v = l(g > 1 ? 32 : 32 * g), O = l(g > 1 ? 32 / g : 32), P = new Uint8Array(v * O * 4), M = [], L = [];
                     for (let e = 0, r = 0; e < O; e++)
                         for (let l = 0; l < v; l++, r += 4) {
                             let s = u,
@@ -320,17 +320,17 @@
                                 E = d,
                                 A = I;
                             for (let e = 0, n = i(_, f ? 5 : 3); e < n; e++) M[e] = o(t / v * (l + .5) * e);
-                            for (let n = 0, r = i(p, f ? 5 : 3); n < r; n++) y[n] = o(t / O * (e + .5) * n);
+                            for (let n = 0, r = i(p, f ? 5 : 3); n < r; n++) L[n] = o(t / O * (e + .5) * n);
                             for (let e = 0, t = 0; e < p; e++)
-                                for (let n = e ? 0 : 1, r = 2 * y[e]; n * p < _ * (p - e); n++, t++) s += S[t] * M[n] * r;
+                                for (let n = e ? 0 : 1, r = 2 * L[e]; n * p < _ * (p - e); n++, t++) s += S[t] * M[n] * r;
                             for (let e = 0, t = 0; e < 3; e++)
-                                for (let n = e ? 0 : 1, r = 2 * y[e]; n < 3 - e; n++, t++) {
+                                for (let n = e ? 0 : 1, r = 2 * L[e]; n < 3 - e; n++, t++) {
                                     let e = M[n] * r;
                                     a += R[t] * e, E += N[t] * e
                                 }
                             if (f)
                                 for (let e = 0, t = 0; e < 5; e++)
-                                    for (let n = e ? 0 : 1, r = 2 * y[e]; n < 5 - e; n++, t++) A += m[t] * M[n] * r;
+                                    for (let n = e ? 0 : 1, r = 2 * L[e]; n < 5 - e; n++, t++) A += m[t] * M[n] * r;
                             let C = s - 2 / 3 * a,
                                 h = (3 * s - C + E) / 2,
                                 T = h - E;
@@ -503,7 +503,7 @@
                     return M
                 },
                 setDisableSubmit: function() {
-                    return y
+                    return L
                 }
             });
             var r = n("872717"),
@@ -696,7 +696,7 @@
                 })
             }
 
-            function y(e) {
+            function L(e) {
                 l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
                     disable: e
@@ -1265,36 +1265,39 @@
             "use strict";
             n.r(t), n.d(t, {
                 getDecorationSizeForAvatarSize: function() {
-                    return l
+                    return a
                 },
                 openAvatarDecorationModal: function() {
-                    return s
+                    return u
                 }
             });
             var r = n("37983");
             n("884691");
-            var i = n("77078");
+            var i = n("77078"),
+                o = n("393414");
             n("103603");
-            var o = n("573135");
+            var l = n("573135"),
+                s = n("49111");
 
-            function l(e) {
-                return "number" != typeof e ? (0, i.getAvatarSize)(e) * o.DECORATION_TO_AVATAR_RATIO : e * o.DECORATION_TO_AVATAR_RATIO
+            function a(e) {
+                return "number" != typeof e ? (0, i.getAvatarSize)(e) * l.DECORATION_TO_AVATAR_RATIO : e * l.DECORATION_TO_AVATAR_RATIO
             }
-            let s = e => {
+            let u = e => {
                 let {
                     analyticsLocations: t,
-                    initialSelectedDecoration: o,
-                    isTryItOutFlow: l
+                    initialSelectedDecoration: l,
+                    isTryItOutFlow: a
                 } = e;
                 (0, i.openModalLazy)(async () => {
+                    (0, o.getHistory)().location.pathname === s.Routes.COLLECTIBLES_SHOP_FULLSCREEN && (0, o.transitionTo)(s.Routes.APP);
                     let {
                         default: e
                     } = await n.el("791050").then(n.bind(n, "791050"));
                     return n => (0, r.jsx)(e, {
                         ...n,
                         analyticsLocations: t,
-                        initialSelectedDecoration: o,
-                        isTryItOutFlow: l
+                        initialSelectedDecoration: l,
+                        isTryItOutFlow: a
                     })
                 }, {})
             }
@@ -2774,8 +2777,8 @@
                     postSuccessGuild: O,
                     openInvoiceId: P,
                     applicationId: M,
-                    referralTrialOfferId: y,
-                    giftRecipient: L,
+                    referralTrialOfferId: L,
+                    giftRecipient: y,
                     returnRef: U,
                     subscription: D
                 } = null != e ? e : {}, b = !1, x = (0, i.v4)(), w = u.default.getCurrentUser(), G = (0, f.isPremiumExactly)(w, _.PremiumTypes.TIER_2);
@@ -2795,7 +2798,7 @@
                             skuId: g,
                             isGift: N,
                             giftMessage: m,
-                            giftRecipient: L,
+                            giftRecipient: y,
                             initialPlanId: t,
                             followupSKUInfo: p,
                             onClose: (e, t) => {
@@ -2814,7 +2817,7 @@
                             planGroup: _.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                             openInvoiceId: P,
                             applicationId: M,
-                            referralTrialOfferId: y,
+                            referralTrialOfferId: L,
                             returnRef: U,
                             subscription: D
                         })

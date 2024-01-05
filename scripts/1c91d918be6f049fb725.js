@@ -400,7 +400,7 @@
                                 return r.naturalOrder(e.count(), t.count())
                             });
 
-                        function U(e, n) {
+                        function L(e, n) {
                             for (var i, o = 1, u = 0; u < 1e3;) {
                                 if (!(i = e.pop()).count()) {
                                     e.push(i), u++;
@@ -455,12 +455,12 @@
                                 if (e.push(s), l && (e.push(l), o++), o >= n || u++ > 1e3) return
                             }
                         }
-                        O.push(v), U(O, .75 * a);
-                        for (var L = new n(function(e, t) {
+                        O.push(v), L(O, .75 * a);
+                        for (var U = new n(function(e, t) {
                                 return r.naturalOrder(e.count() * e.volume(), t.count() * t.volume())
-                            }); O.size();) L.push(O.pop());
-                        U(L, a - L.size());
-                        for (var y = new o; L.size();) y.push(L.pop());
+                            }); O.size();) U.push(O.pop());
+                        L(U, a - U.size());
+                        for (var y = new o; U.size();) y.push(U.pop());
                         return y
                     }
                 }
@@ -606,34 +606,34 @@
                         for (let o = 0; o < n; o++)
                             for (let u = o ? 0 : 1; u * n < t * (n - o); u++) i.push(((e[A + (T >> 1)] >> ((1 & T++) << 2) & 15) / 7.5 - 1) * r);
                         return i
-                    }, R = S(_, p, (a >> 18 & 31) / 31), g = S(3, 3, 1.25 * ((s >> 3 & 63) / 63)), N = S(3, 3, 1.25 * ((s >> 9 & 63) / 63)), C = f && S(5, 5, h), m = r(e), v = u(m > 1 ? 32 : 32 * m), O = u(m > 1 ? 32 / m : 32), U = new Uint8Array(v * O * 4), L = [], y = [];
+                    }, R = S(_, p, (a >> 18 & 31) / 31), g = S(3, 3, 1.25 * ((s >> 3 & 63) / 63)), N = S(3, 3, 1.25 * ((s >> 9 & 63) / 63)), C = f && S(5, 5, h), m = r(e), v = u(m > 1 ? 32 : 32 * m), O = u(m > 1 ? 32 / m : 32), L = new Uint8Array(v * O * 4), U = [], y = [];
                     for (let e = 0, r = 0; e < O; e++)
                         for (let u = 0; u < v; u++, r += 4) {
                             let a = l,
                                 s = c,
                                 E = d,
                                 h = I;
-                            for (let e = 0, n = i(_, f ? 5 : 3); e < n; e++) L[e] = o(t / v * (u + .5) * e);
+                            for (let e = 0, n = i(_, f ? 5 : 3); e < n; e++) U[e] = o(t / v * (u + .5) * e);
                             for (let n = 0, r = i(p, f ? 5 : 3); n < r; n++) y[n] = o(t / O * (e + .5) * n);
                             for (let e = 0, t = 0; e < p; e++)
-                                for (let n = e ? 0 : 1, r = 2 * y[e]; n * p < _ * (p - e); n++, t++) a += R[t] * L[n] * r;
+                                for (let n = e ? 0 : 1, r = 2 * y[e]; n * p < _ * (p - e); n++, t++) a += R[t] * U[n] * r;
                             for (let e = 0, t = 0; e < 3; e++)
                                 for (let n = e ? 0 : 1, r = 2 * y[e]; n < 3 - e; n++, t++) {
-                                    let e = L[n] * r;
+                                    let e = U[n] * r;
                                     s += g[t] * e, E += N[t] * e
                                 }
                             if (f)
                                 for (let e = 0, t = 0; e < 5; e++)
-                                    for (let n = e ? 0 : 1, r = 2 * y[e]; n < 5 - e; n++, t++) h += C[t] * L[n] * r;
+                                    for (let n = e ? 0 : 1, r = 2 * y[e]; n < 5 - e; n++, t++) h += C[t] * U[n] * r;
                             let A = a - 2 / 3 * s,
                                 T = (3 * a - A + E) / 2,
                                 S = T - E;
-                            U[r] = i(0, 255 * n(1, T)), U[r + 1] = i(0, 255 * n(1, S)), U[r + 2] = i(0, 255 * n(1, A)), U[r + 3] = i(0, 255 * n(1, h))
+                            L[r] = i(0, 255 * n(1, T)), L[r + 1] = i(0, 255 * n(1, S)), L[r + 2] = i(0, 255 * n(1, A)), L[r + 3] = i(0, 255 * n(1, h))
                         }
                     return {
                         w: v,
                         h: O,
-                        rgba: U
+                        rgba: L
                     }
                 }(e);
                 return i(t.w, t.h, t.rgba)
@@ -880,10 +880,10 @@
                     return O
                 },
                 resetAllPending: function() {
-                    return U
+                    return L
                 },
                 resetAndCloseUserProfileForm: function() {
-                    return L
+                    return U
                 },
                 setDisableSubmit: function() {
                     return y
@@ -1067,13 +1067,13 @@
                 })
             }
 
-            function U() {
+            function L() {
                 u.default.dispatch({
                     type: "USER_SETTINGS_RESET_ALL_PENDING"
                 })
             }
 
-            function L() {
+            function U() {
                 u.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
                 })
@@ -1681,36 +1681,39 @@
             "use strict";
             n.r(t), n.d(t, {
                 getDecorationSizeForAvatarSize: function() {
-                    return u
+                    return s
                 },
                 openAvatarDecorationModal: function() {
-                    return a
+                    return l
                 }
             });
             var r = n("37983");
             n("884691");
-            var i = n("77078");
+            var i = n("77078"),
+                o = n("393414");
             n("103603");
-            var o = n("573135");
+            var u = n("573135"),
+                a = n("49111");
 
-            function u(e) {
-                return "number" != typeof e ? (0, i.getAvatarSize)(e) * o.DECORATION_TO_AVATAR_RATIO : e * o.DECORATION_TO_AVATAR_RATIO
+            function s(e) {
+                return "number" != typeof e ? (0, i.getAvatarSize)(e) * u.DECORATION_TO_AVATAR_RATIO : e * u.DECORATION_TO_AVATAR_RATIO
             }
-            let a = e => {
+            let l = e => {
                 let {
                     analyticsLocations: t,
-                    initialSelectedDecoration: o,
-                    isTryItOutFlow: u
+                    initialSelectedDecoration: u,
+                    isTryItOutFlow: s
                 } = e;
                 (0, i.openModalLazy)(async () => {
+                    (0, o.getHistory)().location.pathname === a.Routes.COLLECTIBLES_SHOP_FULLSCREEN && (0, o.transitionTo)(a.Routes.APP);
                     let {
                         default: e
                     } = await n.el("791050").then(n.bind(n, "791050"));
                     return n => (0, r.jsx)(e, {
                         ...n,
                         analyticsLocations: t,
-                        initialSelectedDecoration: o,
-                        isTryItOutFlow: u
+                        initialSelectedDecoration: u,
+                        isTryItOutFlow: s
                     })
                 }, {})
             }
@@ -2886,8 +2889,8 @@
                     subscriptionTier: m,
                     trialId: v,
                     postSuccessGuild: O,
-                    openInvoiceId: U,
-                    applicationId: L,
+                    openInvoiceId: L,
+                    applicationId: U,
                     referralTrialOfferId: y,
                     giftRecipient: M,
                     returnRef: D,
@@ -2926,8 +2929,8 @@
                             trialId: v,
                             postSuccessGuild: O,
                             planGroup: _.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                            openInvoiceId: U,
-                            applicationId: L,
+                            openInvoiceId: L,
+                            applicationId: U,
                             referralTrialOfferId: y,
                             returnRef: D,
                             subscription: P
@@ -2944,7 +2947,7 @@
                             subscription_type: E.SubscriptionTypes.PREMIUM,
                             is_gift: N,
                             eligible_for_trial: null != v,
-                            application_id: L,
+                            application_id: U,
                             location_stack: T
                         }), (0, u.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == I || I(b), b && (null == A || A())
                     },
