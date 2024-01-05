@@ -1659,7 +1659,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "257505"
+                        buildNumber: "257515"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -2233,7 +2233,7 @@
                                         })
                                     },
                                     analyticsLocations: eT,
-                                    analyticsLocation: eD,
+                                    analyticsLocationObject: eD,
                                     context: __OVERLAY__ ? eo.AppContext.OVERLAY : eo.AppContext.APP
                                 }).then(() => E.dismiss(eM.id)),
                                 children: eE.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
@@ -38263,7 +38263,7 @@
                                         skuId: n,
                                         openPremiumPaymentModal: () => C(d, T),
                                         analyticsLocations: _,
-                                        analyticsLocation: T,
+                                        analyticsLocationObject: T,
                                         context: d
                                     });
                                     return r(), e

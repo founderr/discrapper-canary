@@ -2291,7 +2291,7 @@
                     initialPlanId: s,
                     openPremiumPaymentModal: i,
                     analyticsLocations: r,
-                    analyticsLocation: o,
+                    analyticsLocationObject: o,
                     context: d
                 } = e, c = M.default.get(n);
                 if (null == c) {
@@ -2309,31 +2309,32 @@
                 if (null != c && c.premium) {
                     if (v.default.canInstallPremiumApplications(R)) return O(c, d);
                     await u.openModal(d), await
-                    function(e, t, n, a) {
-                        let s = N.default.getPremiumSubscription(),
-                            l = {
+                    function(e, t, n, a, s) {
+                        let l = N.default.getPremiumSubscription(),
+                            i = {
                                 id: e.id,
                                 applicationId: e.applicationId
                             };
-                        if (null != s) {
-                            let e = v.default.getClosestUpgrade(s.planId);
+                        if (null != l) {
+                            let e = v.default.getClosestUpgrade(l.planId);
                             if (null == e) return Promise.reject(Error("Could not find premium upgrade."));
                             let t = {
                                 initialPlanId: e,
-                                followupSKUInfo: l,
-                                analyticsLocations: n
+                                followupSKUInfo: i,
+                                analyticsLocations: a,
+                                analyticsObject: n
                             };
-                            switch (a) {
+                            switch (s) {
                                 case x.AppContext.APP:
                                     return C.default.openPremiumPaymentModalInApp(t);
                                 case x.AppContext.OVERLAY:
                                     return C.default.openPremiumPaymentModalInOverlay(t);
                                 default:
-                                    throw Error("Unexpected app context: ".concat(a))
+                                    throw Error("Unexpected app context: ".concat(s))
                             }
                         }
                         return t()
-                    }(c, i, r, d), await O(c, d)
+                    }(c, i, o, r, d), await O(c, d)
                 } else if (null != c && c.type === x.SKUTypes.SUBSCRIPTION) await
                 function(e, t, n, s, l) {
                     return (0, p.openActivityApplicationPaymentModal)({
@@ -2352,6 +2353,7 @@
                     await (0, g.default)({
                         applicationId: t,
                         skuId: n,
+                        analyticsLocationObject: o,
                         analyticsLocations: r,
                         contextKey: A,
                         onComplete: t => {
@@ -10960,7 +10962,7 @@
                     onClose: c,
                     onComplete: f,
                     analyticsLocations: m,
-                    analyticsObject: E,
+                    analyticsLocationObject: E,
                     contextKey: _
                 } = e, h = !1, p = (0, s.v4)();
                 (0, l.openModalLazy)(async () => {
@@ -10978,6 +10980,7 @@
                             applicationId: t,
                             skuId: d,
                             analyticsLocations: m,
+                            analyticsLocationObject: E,
                             onClose: e => {
                                 s(), null == c || c(e)
                             },

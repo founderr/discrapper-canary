@@ -10195,7 +10195,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "8e6b5471d317d62d82b9a1db2c2cf3275eb17e55", e.substring(0, 7)),
+                    S = (e = "9cfd53581a31d6430f9219e4eb03455ed59dc51f", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     m = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10208,7 +10208,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "257505", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "257515", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -11445,7 +11445,7 @@
                                     skuId: V,
                                     openPremiumPaymentModal: () => !0,
                                     analyticsLocations: [],
-                                    analyticsLocation: {
+                                    analyticsLocationObject: {
                                         page: A.AnalyticsPages.IN_APP
                                     },
                                     context: A.AppContext.APP

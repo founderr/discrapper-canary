@@ -417,18 +417,20 @@
                     transitionState: i,
                     loadId: u,
                     applicationId: l,
-                    skuId: s
+                    analyticsLocationObject: s,
+                    skuId: f
                 } = t, {} = (0, a.usePaymentContext)(), {
-                    analyticsLocations: f
+                    analyticsLocations: d
                 } = (0, o.default)();
                 return (0, r.jsx)(c.PaymentModal, {
                     onClose: e,
                     onComplete: n,
                     loadId: u,
                     applicationId: l,
-                    skuId: s,
+                    skuId: f,
                     initialPlanId: null,
-                    analyticsLocations: f,
+                    analyticsObject: s,
+                    analyticsLocations: d,
                     transitionState: i
                 })
             }
