@@ -126,20 +126,20 @@
                 C = n("27618"),
                 h = n("18494"),
                 m = n("101125"),
-                g = n("697218"),
-                M = n("800762"),
+                M = n("697218"),
+                g = n("800762"),
                 O = n("953998"),
                 L = n("387111"),
                 b = n("550766"),
                 F = n("191225"),
-                G = n("706508"),
-                R = n("612696"),
+                R = n("706508"),
+                G = n("612696"),
                 x = n("871388"),
                 j = n("152311"),
                 V = n("407908"),
                 U = n("698372"),
-                P = n("141962"),
-                Y = n("954016"),
+                Y = n("141962"),
+                P = n("954016"),
                 D = n("49111"),
                 H = n("450484"),
                 J = n("782340");
@@ -147,7 +147,7 @@
             function w(e, t) {
                 let {
                     analyticsLocations: w
-                } = (0, o.default)(), X = (0, i.useStateFromStores)([g.default], () => g.default.getCurrentUser()), k = (0, i.useStateFromStores)([F.default], () => F.default.getSelfEmbeddedActivities()), z = (0, i.useStateFromStoresArray)([m.default], () => m.default.getActivities().filter(e => null != e.application_id && !(null == k ? void 0 : k.has(e.application_id)))), K = (0, i.useStateFromStoresArray)([N.default], () => null != t ? N.default.getActivities(t.id, null == e ? void 0 : e.getGuildId()) : [], [t, e]), B = (0, i.useStateFromStoresArray)([F.default], () => {
+                } = (0, o.default)(), k = (0, i.useStateFromStores)([M.default], () => M.default.getCurrentUser()), X = (0, i.useStateFromStores)([F.default], () => F.default.getSelfEmbeddedActivities()), z = (0, i.useStateFromStoresArray)([m.default], () => m.default.getActivities().filter(e => null != e.application_id && !(null == X ? void 0 : X.has(e.application_id)))), K = (0, i.useStateFromStoresArray)([N.default], () => null != t ? N.default.getActivities(t.id, null == e ? void 0 : e.getGuildId()) : [], [t, e]), B = (0, i.useStateFromStoresArray)([F.default], () => {
                     let n = (null == e ? void 0 : e.id) != null ? F.default.getEmbeddedActivitiesForChannel(e.id) : F.NO_ACTIVITIES;
                     return null != t ? n.filter(e => {
                         let {
@@ -155,35 +155,35 @@
                         } = e;
                         return n.has(t.id)
                     }) : n
-                }, [t, e]), W = (0, U.default)(), Q = (0, i.useStateFromStores)([y.default], () => null == e || e.isPrivate() || y.default.can(D.Permissions.SEND_MESSAGES, e), [e]), q = (0, i.useStateFromStoresArray)([O.default], () => [...K.map(e => null != e.application_id && O.default.getState(e.application_id, D.ActivityActionTypes.JOIN) === D.ActivityActionStates.LOADING), ...B.map(e => O.default.getState(e.application_id, D.ActivityActionTypes.JOIN) === D.ActivityActionStates.LOADING)], [K, B]), Z = (0, r.default)([...K.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...B.map(e => e.application_id)]), $ = null == e ? void 0 : e.id, ee = (0, i.useStateFromStoresArray)([T.default, v.default, S.default, C.default, h.default, M.default, y.default], () => [...K.map(e => (0, R.default)({
-                    user: null != t ? t : X,
+                }, [t, e]), W = (0, U.default)(), Q = (0, i.useStateFromStores)([y.default], () => null == e || e.isPrivate() || y.default.can(D.Permissions.SEND_MESSAGES, e), [e]), q = (0, i.useStateFromStoresArray)([O.default], () => [...K.map(e => null != e.application_id && O.default.getState(e.application_id, D.ActivityActionTypes.JOIN) === D.ActivityActionStates.LOADING), ...B.map(e => O.default.getState(e.application_id, D.ActivityActionTypes.JOIN) === D.ActivityActionStates.LOADING)], [K, B]), Z = (0, r.default)([...K.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...B.map(e => e.application_id)]), $ = null == e ? void 0 : e.id, ee = (0, i.useStateFromStoresArray)([T.default, v.default, S.default, C.default, h.default, g.default, y.default], () => [...K.map(e => (0, G.default)({
+                    user: null != t ? t : k,
                     activity: e,
                     application: Z.find(t => (null == t ? void 0 : t.id) === e.application_id),
                     channelId: $,
-                    currentUser: X,
+                    currentUser: k,
                     isEmbedded: (0, j.default)(e),
                     ChannelStore: T.default,
                     GuildStore: v.default,
                     GuildMemberCountStore: S.default,
                     RelationshipStore: C.default,
                     SelectedChannelStore: h.default,
-                    VoiceStateStore: M.default,
+                    VoiceStateStore: g.default,
                     PermissionStore: y.default
-                })), ...B.map(e => (0, R.default)({
-                    user: null != t ? t : X,
+                })), ...B.map(e => (0, G.default)({
+                    user: null != t ? t : k,
                     activity: e,
                     application: Z.find(t => (null == t ? void 0 : t.id) === e.application_id),
                     channelId: $,
-                    currentUser: X,
+                    currentUser: k,
                     isEmbedded: !0,
                     ChannelStore: T.default,
                     GuildStore: v.default,
                     GuildMemberCountStore: S.default,
                     RelationshipStore: C.default,
                     SelectedChannelStore: h.default,
-                    VoiceStateStore: M.default,
+                    VoiceStateStore: g.default,
                     PermissionStore: y.default
-                }))], [K, Z, $, X, B, t]), et = (0, i.useStateFromStoresArray)([c.default, E.default], () => K.map(e => e.type === D.ActivityTypes.LISTENING && null != t ? (0, _.default)(c.default, E.default, t, e) : void 0), [t, K]), en = (0, s.useAnalyticsContext)();
+                }))], [K, Z, $, k, B, t]), et = (0, i.useStateFromStoresArray)([c.default, E.default], () => K.map(e => e.type === D.ActivityTypes.LISTENING && null != t ? (0, _.default)(c.default, E.default, t, e) : void 0), [t, K]), en = (0, s.useAnalyticsContext)();
                 if (!Q) return null;
                 let ea = (n, a) => {
                         null != e ? u.default.sendActivityInvite({
@@ -239,7 +239,7 @@
                             applicationId: e.application_id,
                             channelId: h.default.getVoiceChannelId(),
                             messageId: null,
-                            intent: Y.ActivityIntent.PLAY,
+                            intent: P.ActivityIntent.PLAY,
                             embedded: (0, x.default)(e, D.ActivityFlags.EMBEDDED)
                         }), (0, V.default)({
                             type: D.AnalyticsGameOpenTypes.JOIN,
@@ -250,16 +250,16 @@
                             analyticsLocations: w
                         })
                     }, eu = async t => {
-                        await (0, G.default)({
+                        await (0, R.default)({
                             activity: t,
                             currentEmbeddedApplication: W,
                             activityChannelId: null == e ? void 0 : e.id,
                             locationObject: en.location,
-                            embeddedActivitiesManager: P.default,
+                            embeddedActivitiesManager: Y.default,
                             analyticsLocations: w
                         })
                     }, ed = [];
-                return null == k || k.forEach(n => {
+                return null == X || X.forEach(n => {
                     let i = (null == t ? void 0 : t.id) != null && n.connections.has(null == t ? void 0 : t.id),
                         u = y.default.can(D.Permissions.CREATE_INSTANT_INVITE, e);
                     null != n.activity_id && !i && u && ed.push((0, a.jsx)(l.MenuItem, {
@@ -329,7 +329,7 @@
                     }
                 }), B.forEach((e, t) => {
                     var n;
-                    let i = e.connections.has(null !== (n = null == X ? void 0 : X.id) && void 0 !== n ? n : ""),
+                    let i = e.connections.has(null !== (n = null == k ? void 0 : k.id) && void 0 !== n ? n : ""),
                         u = t + K.length,
                         d = q[u] || i,
                         s = J.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY;
@@ -713,7 +713,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return r
                 }
             });
             var a = n("37983");
@@ -721,14 +721,19 @@
             var i = n("446674"),
                 l = n("77078"),
                 u = n("162771"),
-                d = n("49111"),
-                s = n("782340");
+                d = n("498139"),
+                s = n("49111"),
+                o = n("782340");
 
-            function o(e) {
-                let t = (0, i.useStateFromStores)([u.default], () => u.default.getGuildId());
-                return __OVERLAY__ || t !== d.FAVORITES ? null : (0, a.jsx)(l.MenuItem, {
+            function r(e) {
+                let t = (0, i.useStateFromStores)([u.default], () => u.default.getGuildId()),
+                    r = e.type === s.ChannelTypes.GUILD_CATEGORY,
+                    {
+                        isFavoritesPerk: c
+                    } = (0, d.useFavoritesServerExperiment)("useChannelFavoriteSetNickname");
+                return __OVERLAY__ || t !== s.FAVORITES ? null : (0, a.jsx)(l.MenuItem, {
                     id: "set-channel-nickname",
-                    label: s.default.Messages.CHANGE_NICKNAME,
+                    label: c && r ? o.default.Messages.FAVORITES_RENAME_CATEGORY : o.default.Messages.CHANGE_NICKNAME,
                     action: function() {
                         (0, l.openModalLazy)(async () => {
                             let {
@@ -736,7 +741,10 @@
                             } = await n.el("353228").then(n.bind(n, "353228"));
                             return n => (0, a.jsx)(t, {
                                 ...n,
-                                channelId: e.id
+                                channelId: e.id,
+                                heading: c && r ? o.default.Messages.FAVORITES_RENAME_CATEGORY : o.default.Messages.CHANGE_NICKNAME,
+                                formTitle: c && r ? o.default.Messages.CATEGORY_NAME : o.default.Messages.NICKNAME,
+                                allowReset: !(c && r)
                             })
                         })
                     }
