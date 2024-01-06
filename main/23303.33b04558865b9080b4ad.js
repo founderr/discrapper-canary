@@ -7847,8 +7847,8 @@
                             restrictions: i,
                             restrictionsLoading: l
                         } = c(n),
-                        s = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_DISABLED),
-                        r = s || (l ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, o.isRestrictedFromShowingGuildPurchaseEntryPoints)(i));
+                        s = (null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)),
+                        r = !s || (l ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, o.isRestrictedFromShowingGuildPurchaseEntryPoints)(i));
                     return {
                         shouldHideGuildPurchaseEntryPoints: r,
                         restrictionsLoading: l
