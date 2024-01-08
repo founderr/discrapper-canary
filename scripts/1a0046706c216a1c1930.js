@@ -62,7 +62,6 @@
         },
         377114: function(e, t, n) {
             "use strict";
-            let a;
             n.r(t), n.d(t, {
                 showReportModalForDiscoverableGuild: function() {
                     return m
@@ -74,106 +73,107 @@
                     return _
                 },
                 showReportModalForStageChannel: function() {
-                    return E
+                    return h
                 },
                 showReportModalForGuildScheduledEvent: function() {
-                    return h
+                    return E
                 },
                 showReportModalForFirstDM: function() {
                     return v
                 },
                 submitHamReportForFirstDM: function() {
-                    return x
-                },
-                showReportModalForUser: function() {
                     return R
                 },
+                showReportModalForUser: function() {
+                    return x
+                },
                 showUnauthenticatedReportModalForUser: function() {
-                    return g
+                    return p
                 },
                 showUnauthenticatedReportModalForMessage: function() {
-                    return N
+                    return g
                 }
             });
-            var l = n("716241"),
-                r = n("834052"),
-                s = n("719926"),
-                i = n("766274"),
-                d = n("522874"),
-                u = n("143618"),
-                o = n("965153"),
+            var a = n("716241"),
+                l = n("834052"),
+                r = n("719926"),
+                s = n("766274"),
+                i = n("522874"),
+                d = n("143618"),
+                u = n("965153"),
+                o = n("123265"),
                 c = n("49111");
 
             function m(e, t) {
-                p(u.ReportNames.GUILD_DISCOVERY, {
+                N(d.ReportNames.GUILD_DISCOVERY, {
                     guild_id: e.id
-                }), a({
-                    name: u.ReportNames.GUILD_DISCOVERY,
+                }), (0, o.showReportModal)({
+                    name: d.ReportNames.GUILD_DISCOVERY,
                     record: e
                 }, {}, t)
             }
 
             function f(e, t) {
-                p(u.ReportNames.GUILD_DIRECTORY_ENTRY, {
+                N(d.ReportNames.GUILD_DIRECTORY_ENTRY, {
                     channel_id: e.channelId,
                     guild_id: e.guildId
-                }), a({
-                    name: u.ReportNames.GUILD_DIRECTORY_ENTRY,
+                }), (0, o.showReportModal)({
+                    name: d.ReportNames.GUILD_DIRECTORY_ENTRY,
                     record: e
                 }, {}, t)
             }
 
             function _(e, t) {
-                p(u.ReportNames.MESSAGE, {
+                N(d.ReportNames.MESSAGE, {
                     message_id: e.id,
                     channel_id: e.channel_id
                 });
-                let n = (0, d.shouldShowFraudMenuVariant)();
-                a({
-                    name: u.ReportNames.MESSAGE,
+                let n = (0, i.shouldShowFraudMenuVariant)();
+                (0, o.showReportModal)({
+                    name: d.ReportNames.MESSAGE,
                     record: e
                 }, {
                     variant: n ? "4" : void 0
                 }, t)
             }
 
-            function E(e, t) {
-                let n = r.default.getStageInstanceByChannel(e.id);
-                null != n && (p(u.ReportNames.STAGE_CHANNEL, {
+            function h(e, t) {
+                let n = l.default.getStageInstanceByChannel(e.id);
+                null != n && (N(d.ReportNames.STAGE_CHANNEL, {
                     stage_instance_id: n.id,
                     channel_id: n.channel_id,
                     guild_id: n.guild_id
-                }), a({
-                    name: u.ReportNames.STAGE_CHANNEL,
+                }), (0, o.showReportModal)({
+                    name: d.ReportNames.STAGE_CHANNEL,
                     record: n
                 }, {}, t))
             }
 
-            function h(e, t) {
+            function E(e, t) {
                 var n;
-                p(u.ReportNames.GUILD_SCHEDULED_EVENT, {
+                N(d.ReportNames.GUILD_SCHEDULED_EVENT, {
                     guild_scheduled_event_id: e.id,
                     guild_id: e.guild_id,
                     channel_id: null !== (n = e.channel_id) && void 0 !== n ? n : void 0
-                }), a({
-                    name: u.ReportNames.GUILD_SCHEDULED_EVENT,
+                }), (0, o.showReportModal)({
+                    name: d.ReportNames.GUILD_SCHEDULED_EVENT,
                     record: e
                 }, {}, t)
             }
 
             function v(e, t) {
-                p(u.ReportNames.FIRST_DM, {
+                N(d.ReportNames.FIRST_DM, {
                     message_id: e.id,
                     channel_id: e.channel_id
-                }), a({
-                    name: u.ReportNames.FIRST_DM,
+                }), (0, o.showReportModal)({
+                    name: d.ReportNames.FIRST_DM,
                     record: e
                 }, {}, t, void 0, !1)
             }
-            async function x(e, t) {
+            async function R(e, t) {
                 try {
-                    await (0, o.submitHeadlessReport)({
-                        name: u.ReportNames.FIRST_DM,
+                    await (0, u.submitHeadlessReport)({
+                        name: d.ReportNames.FIRST_DM,
                         record: e
                     }, {
                         variant: "_first_dm_ham_v1"
@@ -181,44 +181,43 @@
                 } catch {}
             }
 
-            function R(e, t, n) {
-                p(u.ReportNames.USER, {
+            function x(e, t, n) {
+                N(d.ReportNames.USER, {
                     reported_user_id: e.id
-                }), a({
-                    name: u.ReportNames.USER,
+                }), (0, o.showReportModal)({
+                    name: d.ReportNames.USER,
                     record: e,
                     contextualGuildId: t
                 }, {}, n, void 0, !1)
             }
 
-            function g(e, t) {
-                let n = new i.default({});
-                p(u.UnauthenticatedReportNames.USER, {
+            function p(e, t) {
+                let n = new s.default({});
+                N(d.UnauthenticatedReportNames.USER, {
                     reported_user_id: n.id
-                }), a({
-                    name: u.UnauthenticatedReportNames.USER,
+                }), (0, o.showReportModal)({
+                    name: d.UnauthenticatedReportNames.USER,
+                    record: n
+                }, {}, t, void 0, !1, !1, e)
+            }
+
+            function g(e, t) {
+                let n = new r.default({});
+                N(d.UnauthenticatedReportNames.MESSAGE, {
+                    message_id: void 0,
+                    channel_id: void 0
+                }), (0, o.showReportModal)({
+                    name: d.UnauthenticatedReportNames.MESSAGE,
                     record: n
                 }, {}, t, void 0, !1, !1, e)
             }
 
             function N(e, t) {
-                let n = new s.default({});
-                p(u.UnauthenticatedReportNames.MESSAGE, {
-                    message_id: void 0,
-                    channel_id: void 0
-                }), a({
-                    name: u.UnauthenticatedReportNames.MESSAGE,
-                    record: n
-                }, {}, t, void 0, !1, !1, e)
-            }
-
-            function p(e, t) {
-                l.default.trackWithMetadata(c.AnalyticEvents.IAR_MODAL_OPEN, {
+                a.default.trackWithMetadata(c.AnalyticEvents.IAR_MODAL_OPEN, {
                     report_type: e,
                     ...t
                 })
             }
-            a = n("878102").default
         },
         965153: function(e, t, n) {
             "use strict";
@@ -245,16 +244,16 @@
                     return _
                 },
                 submitReportSecondLook: function() {
-                    return E
+                    return h
                 },
                 trackCloseReportModalAnalytics: function() {
-                    return R
+                    return x
                 },
                 showInAppReportsFeedbackModal: function() {
-                    return g
+                    return p
                 },
                 areRequiredElementsUnfilled: function() {
-                    return N
+                    return g
                 }
             }), n("70102"), n("808653");
             var a = n("872717"),
@@ -276,7 +275,7 @@
             }
             async function u(e, t) {
                 var n;
-                let l = h(e),
+                let l = E(e),
                     r = await a.default.get({
                         url: i.Endpoints.GET_UNAUTHENTICATED_REPORT_MENU(l),
                         query: (null == t ? void 0 : t.variant) != null ? {
@@ -291,7 +290,7 @@
                     l = await d(e, t);
                 await a.default.post({
                     url: i.Endpoints.SUBMIT_REPORT_MENU(n),
-                    body: x(l, e, [{
+                    body: R(l, e, [{
                         nodeRef: l.root_node_id,
                         destination: ["", l.success_node_id]
                     }])
@@ -301,15 +300,15 @@
             function c(e, t, n) {
                 return a.default.post({
                     url: i.Endpoints.SUBMIT_REPORT_MENU(v(t)),
-                    body: x(e, t, n)
+                    body: R(e, t, n)
                 })
             }
 
             function m(e, t, n, l) {
-                let r = h(t);
+                let r = E(t);
                 return a.default.post({
                     url: i.Endpoints.SUBMIT_UNAUTHENTICATED_REPORT_MENU(r),
-                    body: x(e, t, n, l)
+                    body: R(e, t, n, l)
                 })
             }
 
@@ -333,7 +332,7 @@
                 });
                 return l.body
             }
-            async function E(e) {
+            async function h(e) {
                 let t = await a.default.post({
                     url: i.Endpoints.SUBMIT_REPORT_SECOND_LOOK,
                     body: {
@@ -343,7 +342,7 @@
                 return t.body
             }
 
-            function h(e) {
+            function E(e) {
                 let t = e.name;
                 if (!Object.values(s.UnauthenticatedReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
                 return t
@@ -354,7 +353,7 @@
                 if (!Object.values(s.ReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
                 return t
             }
-            let x = (e, t, n, a) => {
+            let R = (e, t, n, a) => {
                 let {
                     version: l,
                     variant: r,
@@ -473,7 +472,7 @@
                 return null
             };
 
-            function R(e, t, n) {
+            function x(e, t, n) {
                 r.default.trackWithMetadata(i.AnalyticEvents.IAR_MODAL_CLOSE, {
                     report_type: e.name,
                     report_id: n,
@@ -486,7 +485,7 @@
                 })
             }
 
-            function g(e, t) {
+            function p(e, t) {
                 l.default.dispatch({
                     type: "IN_APP_REPORTS_SHOW_FEEDBACK",
                     reportId: t,
@@ -494,8 +493,50 @@
                 })
             }
 
-            function N(e, t, n, a, l) {
+            function g(e, t, n, a, l) {
                 return e.some(e => !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name]) === "")) || t.some(e => !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name]) === "")) || (null == n ? void 0 : n.should_submit_data) === !0 && (null == l || 0 === Object.keys(l).length)
+            }
+        },
+        123265: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                showReportModal: function() {
+                    return i
+                }
+            }), n("424973");
+            var a = n("37983");
+            n("884691");
+            var l = n("77078"),
+                r = n("965153"),
+                s = n("399515");
+            async function i(e, t, n, i) {
+                let d = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
+                    u = !(arguments.length > 5) || void 0 === arguments[5] || arguments[5],
+                    o = arguments.length > 6 ? arguments[6] : void 0,
+                    c = (0, l.getInteractingModalContext)();
+                try {
+                    let m, f = u ? await (0, r.getReportMenu)(e, t) : await (0, r.getUnauthenticatedReportMenu)(e, t),
+                        _ = [];
+                    let h = e => {
+                            _.push(e)
+                        },
+                        E = e => {
+                            m = e, null == n || n()
+                        };
+                    (0, l.openModal)(t => (0, a.jsx)(s.default, {
+                        menu: f,
+                        reportType: e,
+                        modalProps: t,
+                        onNavigate: h,
+                        onSubmit: E,
+                        isAuthenticated: u,
+                        emailToken: o
+                    }), {
+                        onCloseCallback: () => {
+                            (0, r.trackCloseReportModalAnalytics)(e, _, m), null == i || i(), d && (0, r.showInAppReportsFeedbackModal)(e, null != m ? m : null)
+                        }
+                    }, c)
+                } catch {}
             }
         },
         399515: function(e, t, n) {
@@ -521,37 +562,37 @@
                         menu: n,
                         modalProps: f,
                         onSubmit: _,
-                        onNavigate: E,
-                        emailToken: h,
+                        onNavigate: h,
+                        emailToken: E,
                         isAuthenticated: v = !0
-                    } = e, x = (0, i.useUID)(), {
-                        nodes: R,
-                        root_node_id: g,
-                        success_node_id: N,
-                        fail_node_id: p
-                    } = n, [T, S] = l.useState(g), [I, M] = l.useState(void 0), [j, C] = l.useState(void 0), [b, y] = l.useState([]), [L, D] = l.useState(void 0), A = e => {
+                    } = e, R = (0, i.useUID)(), {
+                        nodes: x,
+                        root_node_id: p,
+                        success_node_id: g,
+                        fail_node_id: N
+                    } = n, [T, S] = l.useState(p), [I, M] = l.useState(void 0), [j, C] = l.useState(void 0), [b, y] = l.useState([]), [L, D] = l.useState(void 0), A = e => {
                         var n;
                         let {
                             destination: a
-                        } = e, [, l] = a, r = R[l];
+                        } = e, [, l] = a, r = x[l];
                         if (r.elements.some(e => "skip" === e.type) && (null === (n = r.button) || void 0 === n ? void 0 : n.type) === "next") return A({
                             ...e,
                             destination: ["", r.button.target]
                         });
-                        if (y([...b, e]), null != r.key && (null == E || E(r.key)), M(void 0), C(void 0), t.name === d.ReportNames.MESSAGE || t.name === d.ReportNames.FIRST_DM) {
+                        if (y([...b, e]), null != r.key && (null == h || h(r.key)), M(void 0), C(void 0), t.name === d.ReportNames.MESSAGE || t.name === d.ReportNames.FIRST_DM) {
                             let e = t.record.id;
                             s.default.trackWithMetadata(c.AnalyticEvents.IAR_NAVIGATE, {
                                 message_id: e,
                                 content_type: t.name,
                                 report_sub_type: r.report_type,
-                                current_node: R[T].id,
+                                current_node: x[T].id,
                                 next_node: r.id
                             })
                         }
                         S(l)
                     }, O = async e => {
                         var a;
-                        let l = v ? await (0, u.submitReport)(n, t, [...b, e]) : await (0, u.submitUnauthenticatedReport)(n, t, [...b, e], h),
+                        let l = v ? await (0, u.submitReport)(n, t, [...b, e]) : await (0, u.submitUnauthenticatedReport)(n, t, [...b, e], E),
                             r = null == l ? void 0 : null === (a = l.body) || void 0 === a ? void 0 : a.report_id;
                         null != r && D(r), null == _ || _(r)
                     }, U = () => {
@@ -559,37 +600,37 @@
                         if (b.length < 1) return;
                         let a = [...b],
                             l = a.pop(),
-                            r = null !== (n = null == l ? void 0 : l.nodeRef) && void 0 !== n ? n : g;
+                            r = null !== (n = null == l ? void 0 : l.nodeRef) && void 0 !== n ? n : p;
                         if (t.name === d.ReportNames.MESSAGE || t.name === d.ReportNames.FIRST_DM) {
                             let e = t.record.id;
                             s.default.trackWithMetadata(c.AnalyticEvents.IAR_NAVIGATE, {
                                 message_id: e,
                                 content_type: t.name,
-                                report_sub_type: R[r].report_type,
-                                current_node: R[T].id,
-                                next_node: R[r].id
+                                report_sub_type: x[r].report_type,
+                                current_node: x[T].id,
+                                next_node: x[r].id
                             })
                         }
-                        M(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), C(null == l ? void 0 : l.textInput), S(r), y(a), null == E || E("..")
+                        M(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), C(null == l ? void 0 : l.textInput), S(r), y(a), null == h || h("..")
                     }, k = [], B = [];
-                    for (let e in R) {
+                    for (let e in x) {
                         var G, P;
-                        let t = R[e];
-                        if (t.id !== N && t.id !== p && t.id !== g) {
+                        let t = x[e];
+                        if (t.id !== g && t.id !== N && t.id !== p) {
                             if (t.key.endsWith("_SUBMIT")) {
                                 B.push(t);
                                 continue
                             }
                             if (k.push(t), (null === (G = t.button) || void 0 === G ? void 0 : G.type) === "next") {
                                 let e = null === (P = t.button) || void 0 === P ? void 0 : P.target,
-                                    n = k.indexOf(R[e]); - 1 !== n && (k.splice(n, 1), k.push(R[e]))
+                                    n = k.indexOf(x[e]); - 1 !== n && (k.splice(n, 1), k.push(x[e]))
                             }
                         }
                     }
-                    let w = [R[g], ...k, ...B, R[N], R[p]];
+                    let w = [x[p], ...k, ...B, x[g], x[N]];
                     return (0, a.jsx)(r.ModalRoot, {
                         transitionState: f.transitionState,
-                        "aria-labelledby": x,
+                        "aria-labelledby": R,
                         children: (0, a.jsx)(r.Slides, {
                             width: 440,
                             activeSlide: T,
@@ -607,8 +648,8 @@
                                         onNavigateBack: U,
                                         multiSelect: I,
                                         textInput: j,
-                                        successNodeId: N,
-                                        failNodeId: p,
+                                        successNodeId: g,
+                                        failNodeId: N,
                                         onSubmit: O,
                                         reportId: L
                                     })
@@ -641,24 +682,24 @@
                             onBackClicked: f
                         } = e,
                         _ = l.useRef(null),
-                        E = null != n && "cancel" !== n.type,
-                        h = m && (null == n ? void 0 : n.type) !== "done",
-                        v = E || h;
+                        h = null != n && "cancel" !== n.type,
+                        E = m && (null == n ? void 0 : n.type) !== "done",
+                        v = h || E;
                     if (l.useEffect(() => {
                             if ((null == n ? void 0 : n.type) === "submit" || (null == n ? void 0 : n.type) === "done") {
                                 var e;
                                 null === (e = _.current) || void 0 === e || e.focus()
                             }
                         }, [null == n ? void 0 : n.type]), !v) return null;
-                    let x = i.default.Messages.DONE;
-                    return (null == n ? void 0 : n.type) === "submit" ? (x = i.default.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = r.Button.Colors.RED) : (null == n ? void 0 : n.type) === "next" ? x = i.default.Messages.NEXT : (null == n ? void 0 : n.type) === "cancel" && (x = i.default.Messages.CANCEL, t = r.Button.Colors.TRANSPARENT), (0, a.jsxs)(r.ModalFooter, {
+                    let R = i.default.Messages.DONE;
+                    return (null == n ? void 0 : n.type) === "submit" ? (R = i.default.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = r.Button.Colors.RED) : (null == n ? void 0 : n.type) === "next" ? R = i.default.Messages.NEXT : (null == n ? void 0 : n.type) === "cancel" && (R = i.default.Messages.CANCEL, t = r.Button.Colors.TRANSPARENT), (0, a.jsxs)(r.ModalFooter, {
                         direction: s.default.Direction.HORIZONTAL,
-                        children: [h && (0, a.jsx)(r.Button, {
+                        children: [E && (0, a.jsx)(r.Button, {
                             onClick: f,
                             color: r.Button.Colors.TRANSPARENT,
                             disabled: u,
                             children: i.default.Messages.BACK
-                        }), E && (0, a.jsx)(r.Button, {
+                        }), h && (0, a.jsx)(r.Button, {
                             onClick: () => {
                                 null != n && c(n)
                             },
@@ -666,7 +707,7 @@
                             className: d.actionButton,
                             disabled: u || o,
                             buttonRef: _,
-                            children: x
+                            children: R
                         })]
                     })
                 }
@@ -690,14 +731,14 @@
                 m = n("540227"),
                 f = n("755575"),
                 _ = n("552190"),
-                E = n("798016"),
-                h = n("918418"),
+                h = n("798016"),
+                E = n("918418"),
                 v = n("947319"),
-                x = n("420938"),
-                R = n("111181"),
-                g = n("677734"),
-                N = n("538418"),
-                p = n("584866"),
+                R = n("420938"),
+                x = n("111181"),
+                p = n("677734"),
+                g = n("538418"),
+                N = n("584866"),
                 T = n("41877"),
                 S = n("71514"),
                 I = n("265104"),
@@ -778,9 +819,9 @@
                         className: L.header,
                         children: [(0, a.jsx)(M.default, {
                             element: D(t, "success")
-                        }), (0, a.jsx)(g.default, {
+                        }), (0, a.jsx)(p.default, {
                             node: t
-                        }), (0, a.jsx)(N.default, {
+                        }), (0, a.jsx)(g.default, {
                             node: t
                         })]
                     }), (0, a.jsxs)(r.ModalContent, {
@@ -814,16 +855,16 @@
                         }), null != D(t, "delete_message") && "message" === n.name && (0, a.jsx)(m.default, {
                             message: n.record,
                             reportId: G
-                        }), null != D(t, "leave_guild") && "guild" === n.name && (0, a.jsx)(p.default, {
+                        }), null != D(t, "leave_guild") && "guild" === n.name && (0, a.jsx)(N.default, {
                             guildId: n.record.id,
                             reportId: G
                         }), null != D(t, "channel_preview") && "stage_channel" === n.name && (0, a.jsx)(I.default, {
                             stageInstance: n.record
-                        }), null != D(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, a.jsx)(R.default, {
+                        }), null != D(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, a.jsx)(x.default, {
                             event: n.record
                         }), null != D(t, "guild_directory_entry_preview") && "guild_directory_entry" === n.name && (0, a.jsx)(v.default, {
                             entry: n.record
-                        }), null != D(t, "guild_discovery_preview") && "guild_discovery" === n.name && (0, a.jsx)(x.default, {
+                        }), null != D(t, "guild_discovery_preview") && "guild_discovery" === n.name && (0, a.jsx)(R.default, {
                             entry: n.record
                         }), null != w && (0, a.jsx)(S.default, {
                             element: w,
@@ -838,14 +879,14 @@
                             elements: z,
                             onChange: et,
                             state: J
-                        }), ("user_urf" === n.name || "message_urf" === n.name) && null != V && V.length > 0 && (0, a.jsx)(h.default, {
+                        }), ("user_urf" === n.name || "message_urf" === n.name) && null != V && V.length > 0 && (0, a.jsx)(E.default, {
                             elements: V,
                             onChange: et,
                             state: J
                         }), (0, a.jsx)(c.default, {
                             node: t,
                             onSelectChild: en
-                        }), null != H && H.length > 0 ? (0, a.jsx)(E.default, {
+                        }), null != H && H.length > 0 ? (0, a.jsx)(h.default, {
                             elements: H
                         }) : null, (0, a.jsx)(_.default, {
                             hasError: K,
@@ -883,7 +924,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return h
                 }
             }), n("222007");
             var a = n("37983"),
@@ -898,16 +939,16 @@
                 m = n("49111"),
                 f = n("782340"),
                 _ = n("553898"),
-                E = e => {
+                h = e => {
                     let {
                         userId: t,
                         reportId: n,
-                        reportName: E
-                    } = e, [h, v] = l.useState(!1), x = (0, r.useStateFromStores)([o.default], () => o.default.getUser(t), [t]), R = (0, r.useStateFromStores)([u.default], () => u.default.getRelationshipType(t), [t]) === m.RelationshipTypes.BLOCKED;
+                        reportName: h
+                    } = e, [E, v] = l.useState(!1), R = (0, r.useStateFromStores)([o.default], () => o.default.getUser(t), [t]), x = (0, r.useStateFromStores)([u.default], () => u.default.getRelationshipType(t), [t]) === m.RelationshipTypes.BLOCKED;
                     l.useEffect(() => {
-                        v(R)
-                    }, [R]);
-                    let g = l.useCallback(() => {
+                        v(x)
+                    }, [x]);
+                    let p = l.useCallback(() => {
                         v(!0), d.default.trackWithMetadata(m.AnalyticEvents.IAR_BLOCK_USER_BUTTON_CLICKED, {
                             other_user_id: t,
                             report_id: n
@@ -919,35 +960,35 @@
                             type: m.RelationshipTypes.BLOCKED
                         })
                     }, [t, n]);
-                    return null == x ? null : (0, a.jsxs)("div", {
+                    return null == R ? null : (0, a.jsxs)("div", {
                         className: _.container,
                         children: [(0, a.jsx)(s.Text, {
                             className: _.description,
                             variant: "text-sm/normal",
-                            children: E === c.ReportNames.USER ? f.default.Messages.REPORTS_BLOCK_USER_ELEMENT_DESCRIPTION : f.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_DESCRIPTION
+                            children: h === c.ReportNames.USER ? f.default.Messages.REPORTS_BLOCK_USER_ELEMENT_DESCRIPTION : f.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_DESCRIPTION
                         }), (0, a.jsxs)("div", {
                             className: _.userContainer,
                             children: [(0, a.jsxs)("div", {
                                 className: _.userInfo,
                                 children: [(0, a.jsx)(s.Avatar, {
                                     size: s.AvatarSizes.SIZE_32,
-                                    src: x.getAvatarURL(void 0, 32),
+                                    src: R.getAvatarURL(void 0, 32),
                                     className: _.avatar,
-                                    "aria-label": x.username
+                                    "aria-label": R.username
                                 }), (0, a.jsx)(s.Text, {
                                     className: _.userName,
                                     variant: "text-sm/semibold",
-                                    children: x.username
-                                }), !x.isPomelo() && (0, a.jsxs)(s.Text, {
+                                    children: R.username
+                                }), !R.isPomelo() && (0, a.jsxs)(s.Text, {
                                     variant: "text-sm/normal",
-                                    children: ["#", x.discriminator]
+                                    children: ["#", R.discriminator]
                                 })]
                             }), (0, a.jsx)(s.Button, {
-                                onClick: () => g(),
-                                disabled: h,
+                                onClick: () => p(),
+                                disabled: E,
                                 size: s.Button.Sizes.SMALL,
                                 color: s.Button.Colors.RED,
-                                children: h ? f.default.Messages.BLOCKED : f.default.Messages.BLOCK
+                                children: E ? f.default.Messages.BLOCKED : f.default.Messages.BLOCK
                             })]
                         })]
                     })
@@ -1073,17 +1114,17 @@
                     let {
                         message: t,
                         reportId: n
-                    } = e, [f, _] = l.useState(!1), E = l.useCallback(() => {
+                    } = e, [f, _] = l.useState(!1), h = l.useCallback(() => {
                         _(!0), i.default.trackWithMetadata(o.AnalyticEvents.IAR_DELETE_MESSAGE_BUTTON_CLICKED, {
                             report_id: n
                         }), s.default.deleteMessage(t.getChannelId(), t.id)
-                    }, [t, n]), h = l.useMemo(() => {
+                    }, [t, n]), E = l.useMemo(() => {
                         let e = d.default.getChannel(t.getChannelId());
                         return null != e && e.type !== o.ChannelTypes.DM && e.type !== o.ChannelTypes.GROUP_DM && u.default.canWithPartialContext(o.Permissions.MANAGE_MESSAGES, {
                             channelId: e.id
                         })
                     }, [t]);
-                    return null != t && h ? (0, a.jsx)("div", {
+                    return null != t && E ? (0, a.jsx)("div", {
                         className: m.container,
                         children: (0, a.jsxs)("div", {
                             className: m.messageContainer,
@@ -1094,7 +1135,7 @@
                                     children: c.default.Messages.MOBILE_REPORTS_DELETE_MESSAGE_ELEMENT_DESCRIPTION
                                 })
                             }), (0, a.jsx)(r.Button, {
-                                onClick: () => E(),
+                                onClick: () => h(),
                                 disabled: f,
                                 size: r.Button.Sizes.SMALL,
                                 color: r.Button.Colors.RED,
@@ -1314,14 +1355,14 @@
                     },
                     onChange: f,
                     initialText: _,
-                    isRequired: E
-                } = e, [h, v] = l.useState(""), [x, R] = l.useState("");
+                    isRequired: h
+                } = e, [E, v] = l.useState(""), [R, x] = l.useState("");
                 l.useEffect(() => {
                     v(null != _ ? _ : "")
                 }, [_]);
-                let g = l.useCallback(e => {
+                let p = l.useCallback(e => {
                     let t = null != m ? new RegExp(m) : null;
-                    null != t && null == t.exec(e) ? (R(s.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), v(""), f("")) : null != e && (R(""), v(e), f(e))
+                    null != t && null == t.exec(e) ? (x(s.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), v(""), f("")) : null != e && (x(""), v(e), f(e))
                 }, [f, m]);
                 return (0, a.jsxs)("div", {
                     className: d.marginBottom8,
@@ -1329,16 +1370,16 @@
                         className: d.marginBottom8,
                         children: (0, a.jsxs)(r.Text, {
                             variant: "text-sm/bold",
-                            children: [t, E && (0, a.jsx)("span", {
+                            children: [t, h && (0, a.jsx)("span", {
                                 className: i.required,
                                 children: "*"
                             })]
                         })
                     }), (0, a.jsx)(r.TextArea, {
                         maxLength: c,
-                        onChange: g,
-                        value: h,
-                        error: x,
+                        onChange: p,
+                        value: E,
+                        error: R,
                         rows: o,
                         placeholder: u,
                         autoFocus: !0
@@ -1615,21 +1656,21 @@
                     let {
                         guildId: t,
                         reportId: n
-                    } = e, [f, _] = l.useState(!1), E = d.default.getGuild(t), h = null != E;
+                    } = e, [f, _] = l.useState(!1), h = d.default.getGuild(t), E = null != h;
                     l.useEffect(() => {
-                        _(!h)
-                    }, [h]);
+                        _(!E)
+                    }, [E]);
                     let v = l.useCallback(() => {
                         _(!0), s.default.trackWithMetadata(o.AnalyticEvents.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
                             guild_id: t,
                             report_id: n
                         }), i.default.leaveGuild(t)
                     }, [t, n]);
-                    if (null == E) return null;
-                    let x = () => {
+                    if (null == h) return null;
+                    let R = () => {
                         (0, r.openModal)(e => (0, a.jsx)(r.ConfirmModal, {
                             header: c.default.Messages.LEAVE_SERVER_TITLE.format({
-                                name: E.name
+                                name: h.name
                             }),
                             confirmText: c.default.Messages.LEAVE_SERVER,
                             cancelText: c.default.Messages.CANCEL,
@@ -1638,7 +1679,7 @@
                             children: (0, a.jsx)(r.Text, {
                                 variant: "text-md/normal",
                                 children: c.default.Messages.LEAVE_SERVER_BODY.format({
-                                    name: E.name
+                                    name: h.name
                                 })
                             })
                         }))
@@ -1654,20 +1695,20 @@
                             children: [(0, a.jsxs)("div", {
                                 className: m.guildInfo,
                                 children: [(0, a.jsx)(u.default, {
-                                    guild: E,
+                                    guild: h,
                                     showBadge: !1,
                                     animate: !1,
                                     size: u.default.Sizes.SMALL,
-                                    "aria-label": E.name,
+                                    "aria-label": h.name,
                                     className: m.icon,
                                     active: !0
                                 }), (0, a.jsx)(r.Text, {
                                     className: m.guildName,
                                     variant: "text-sm/semibold",
-                                    children: E.name
+                                    children: h.name
                                 })]
                             }), (0, a.jsx)(r.Button, {
-                                onClick: () => x(),
+                                onClick: () => R(),
                                 disabled: f,
                                 size: r.Button.Sizes.SMALL,
                                 color: r.Button.Colors.RED,
@@ -1704,7 +1745,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return E
                 }
             });
             var a = n("37983");
@@ -1720,23 +1761,23 @@
                 m = n("93427"),
                 f = n("719347"),
                 _ = n("782340"),
-                E = n("929710"),
-                h = e => {
+                h = n("929710"),
+                E = e => {
                     let {
                         message: t
-                    } = e, n = (0, s.default)(t), h = (0, l.useStateFromStores)([d.default], () => d.default.getChannel(t.channel_id)), {
+                    } = e, n = (0, s.default)(t), E = (0, l.useStateFromStores)([d.default], () => d.default.getChannel(t.channel_id)), {
                         content: v
                     } = (0, i.default)(t, {
                         hideSimpleEmbedContent: !1
                     });
-                    return null == h ? null : (0, a.jsxs)("div", {
-                        className: E.container,
+                    return null == E ? null : (0, a.jsxs)("div", {
+                        className: h.container,
                         children: [(0, a.jsx)(r.Heading, {
-                            className: E.header,
+                            className: h.header,
                             variant: "heading-sm/semibold",
                             children: _.default.Messages.MOBILE_REPORTS_MESSAGE_PREVIEW_TITLE
                         }), (0, a.jsx)(r.Scroller, {
-                            className: E.messagePreviewContainer,
+                            className: h.messagePreviewContainer,
                             children: (0, a.jsx)(u.default, {
                                 childrenMessageContent: (() => {
                                     let e = null == v || "" === v || Array.isArray(v) && 0 === v.length;
@@ -1744,7 +1785,7 @@
                                         let {
                                             icon: e
                                         } = (0, m.renderSingleLineMessage)(t, v, !1, "", {
-                                            iconClass: E.attachmentIcon,
+                                            iconClass: h.attachmentIcon,
                                             iconSize: f.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
                                         });
                                         return e
@@ -1756,9 +1797,9 @@
                                 })(),
                                 childrenHeader: (0, a.jsx)(c.default, {
                                     message: t,
-                                    channel: h,
+                                    channel: E,
                                     author: n,
-                                    guildId: h.guild_id
+                                    guildId: E.guild_id
                                 }),
                                 disableInteraction: !0
                             })
@@ -1920,7 +1961,7 @@
                             is_localized: m
                         }
                     }
-                } = e, [f, _] = l.useState(!1), E = l.useRef(d.default.reactParserFor(d.default.defaultRules));
+                } = e, [f, _] = l.useState(!1), h = l.useRef(d.default.reactParserFor(d.default.defaultRules));
                 return m ? (0, a.jsxs)("div", {
                     className: c.container,
                     children: [(0, a.jsx)(i.Heading, {
@@ -1931,7 +1972,7 @@
                     }), (0, a.jsx)(i.Text, {
                         variant: "text-sm/normal",
                         className: c.bodyText,
-                        children: E.current(n)
+                        children: h.current(n)
                     }), (0, a.jsx)("div", {
                         className: c.smsInfoContainer,
                         children: (0, a.jsxs)("div", {
@@ -2003,48 +2044,6 @@
                         })]
                     })
                 }
-        },
-        878102: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return i
-                }
-            }), n("424973");
-            var a = n("37983");
-            n("884691");
-            var l = n("77078"),
-                r = n("965153"),
-                s = n("399515");
-            async function i(e, t, n, i) {
-                let d = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
-                    u = !(arguments.length > 5) || void 0 === arguments[5] || arguments[5],
-                    o = arguments.length > 6 ? arguments[6] : void 0,
-                    c = (0, l.getInteractingModalContext)();
-                try {
-                    let m, f = u ? await (0, r.getReportMenu)(e, t) : await (0, r.getUnauthenticatedReportMenu)(e, t),
-                        _ = [];
-                    let E = e => {
-                            _.push(e)
-                        },
-                        h = e => {
-                            m = e, null == n || n()
-                        };
-                    (0, l.openModal)(t => (0, a.jsx)(s.default, {
-                        menu: f,
-                        reportType: e,
-                        modalProps: t,
-                        onNavigate: E,
-                        onSubmit: h,
-                        isAuthenticated: u,
-                        emailToken: o
-                    }), {
-                        onCloseCallback: () => {
-                            (0, r.trackCloseReportModalAnalytics)(e, _, m), null == i || i(), d && (0, r.showInAppReportsFeedbackModal)(e, null != m ? m : null)
-                        }
-                    }, c)
-                } catch {}
-            }
         }
     }
 ]);
