@@ -1,13 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["83449"], {
-        665718: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "5420f8fd9d89897c6448.svg"
-        },
-        897327: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "d8197d45ef3e7289594d.svg"
-        },
+    ["92544"], {
         283383: function(e, t, n) {
             "use strict";
             e.exports = n.p + "a3ae1eb336230b986e2b.jpg"
@@ -83,32 +75,6 @@
         710672: function(e, t, n) {
             "use strict";
             e.exports = n.p + "a1d7e3a6eaf0f8585fca.svg"
-        },
-        289867: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return a
-                }
-            });
-            var l = n("913144"),
-                a = {
-                    toggleMembersSection() {
-                        l.default.dispatch({
-                            type: "CHANNEL_TOGGLE_MEMBERS_SECTION"
-                        })
-                    },
-                    toggleProfilePanelSection() {
-                        l.default.dispatch({
-                            type: "PROFILE_PANEL_TOGGLE_SECTION"
-                        })
-                    },
-                    toggleSummariesSection() {
-                        l.default.dispatch({
-                            type: "CHANNEL_TOGGLE_SUMMARIES_SECTION"
-                        })
-                    }
-                }
         },
         789207: function(e, t, n) {
             "use strict";
@@ -1282,7 +1248,7 @@
                             },
                             oldFormErrors: !0
                         }).then(e => {
-                            if (null == e.body || "8257dc73631f44e255f27e0b56dea035027b5f40" === e.body.hash) return this._handleUpdateNotAvailable();
+                            if (null == e.body || "9e531abf0d839d85fb6f77f2d1112452a5549db0" === e.body.hash) return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
                             if (Date.now() - f > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
@@ -8818,70 +8784,6 @@
                 })
             }
         },
-        893980: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                trackProfilePanelViewed: function() {
-                    return o
-                },
-                trackProfilePanelToggled: function() {
-                    return u
-                }
-            });
-            var l = n("373469"),
-                a = n("824563"),
-                s = n("27618"),
-                i = n("599110"),
-                r = n("49111");
-            let o = e => {
-                    let {
-                        displayProfile: t,
-                        isMobile: n,
-                        loadDurationMs: l,
-                        activity: a,
-                        customStatusActivity: s,
-                        status: o
-                    } = e;
-                    i.default.track(r.AnalyticEvents.DM_PROFILE_VIEWED, {
-                        has_mobile_indicator: n,
-                        has_activity: null != a && (null == a ? void 0 : a.type) !== r.ActivityTypes.CUSTOM_STATUS,
-                        has_game_activity: (null == a ? void 0 : a.type) === r.ActivityTypes.PLAYING,
-                        load_duration_ms: l,
-                        profile_user_status: o,
-                        has_custom_status: null != s,
-                        has_profile_effect: null != t.profileEffectId,
-                        ...d(t)
-                    })
-                },
-                u = (e, t) => {
-                    i.default.track(r.AnalyticEvents.DM_PROFILE_TOGGLED, {
-                        is_profile_open: t,
-                        ...d(e)
-                    })
-                },
-                d = e => {
-                    var t;
-                    if (null == e) return {};
-                    let n = e.userId,
-                        i = null != l.default.getAnyStreamForUser(n),
-                        o = a.default.findActivity(n, e => {
-                            let {
-                                type: t
-                            } = e;
-                            return i ? t === r.ActivityTypes.PLAYING : t !== r.ActivityTypes.CUSTOM_STATUS
-                        }),
-                        u = null == o ? void 0 : o.assets,
-                        d = s.default.isFriend(n);
-                    return {
-                        has_images: !!(null !== (t = null == u ? void 0 : u.large_image) && void 0 !== t ? t : null == u ? void 0 : u.small_image),
-                        is_friend: d,
-                        viewed_profile_user_id: n,
-                        profile_has_nitro_customization: e.hasPremiumCustomization(),
-                        profile_has_theme_color_customized: e.hasThemeColors(),
-                        profile_has_theme_animation: null != e.popoutAnimationParticleType
-                    }
-                }
-        },
         250404: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -10391,68 +10293,6 @@
                         children: t
                     }) : null
                 }
-        },
-        440351: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return f
-                }
-            });
-            var l = n("37983"),
-                a = n("884691"),
-                s = n("414456"),
-                i = n.n(s),
-                r = n("77078"),
-                o = n("145131"),
-                u = n("296165"),
-                d = n("926622");
-            class c extends a.PureComponent {
-                render() {
-                    let {
-                        title: e,
-                        description: t,
-                        agreement: n,
-                        disagreement: a,
-                        onAgree: s,
-                        onDisagree: c,
-                        imageClassName: f
-                    } = this.props;
-                    return (0, l.jsxs)(o.default, {
-                        className: u.gatedContent,
-                        justify: o.default.Justify.CENTER,
-                        align: o.default.Align.CENTER,
-                        direction: o.default.Direction.VERTICAL,
-                        children: [(0, l.jsx)("div", {
-                            className: i(u.image, f)
-                        }), (0, l.jsx)("div", {
-                            className: i(u.title, d.marginBottom8),
-                            children: e
-                        }), (0, l.jsx)("div", {
-                            className: i(u.description, d.marginBottom20),
-                            children: t
-                        }), (0, l.jsxs)(o.default, {
-                            justify: o.default.Justify.CENTER,
-                            align: o.default.Align.CENTER,
-                            grow: 0,
-                            children: [null != a ? (0, l.jsx)(r.Button, {
-                                className: u.action,
-                                size: r.ButtonSizes.LARGE,
-                                color: r.ButtonColors.PRIMARY,
-                                onClick: c,
-                                children: a
-                            }) : null, null != n ? (0, l.jsx)(r.Button, {
-                                className: u.action,
-                                color: r.Button.Colors.RED,
-                                size: r.ButtonSizes.LARGE,
-                                onClick: s,
-                                children: n
-                            }) : null]
-                        })]
-                    })
-                }
-            }
-            var f = c
         },
         822332: function(e, t, n) {
             "use strict";
