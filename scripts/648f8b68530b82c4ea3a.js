@@ -114,8 +114,8 @@
                 c = n("662285"),
                 f = n("782911"),
                 I = n("629414"),
-                _ = n("53887"),
-                p = n("486150"),
+                p = n("53887"),
+                _ = n("486150"),
                 A = n("555759"),
                 E = n("271938"),
                 T = n("42203"),
@@ -184,7 +184,7 @@
                         VoiceStateStore: g.default,
                         PermissionStore: y.default
                     }) === j.EmbeddedActivityJoinability.CAN_JOIN
-                })], [W, ee, et, z, Q, t]), ea = (0, i.useStateFromStoresArray)([c.default, E.default], () => W.map(e => e.type === J.ActivityTypes.LISTENING && null != t ? (0, _.default)(c.default, E.default, t, e) : void 0), [t, W]), ei = (0, s.useAnalyticsContext)();
+                })], [W, ee, et, z, Q, t]), ea = (0, i.useStateFromStoresArray)([c.default, E.default], () => W.map(e => e.type === J.ActivityTypes.LISTENING && null != t ? (0, p.default)(c.default, E.default, t, e) : void 0), [t, W]), ei = (0, s.useAnalyticsContext)();
                 if (!Z) return null;
                 let el = (n, a) => {
                         null != e ? u.default.sendActivityInvite({
@@ -313,17 +313,17 @@
                                 syncingWithUser: r,
                                 syncingWithParty: c
                             } = u,
-                            _ = o || d || s,
+                            p = o || d || s,
                             E = o || r || c;
                         eo.push((0, a.jsx)(l.MenuItem, {
                             id: "spotify-play-".concat(n.session_id),
                             action: () => (0, A.default)(u, w.SpotifyActionTypes.USER_ACTIVITY_PLAY),
                             label: (0, f.default)(u, w.SpotifyActionTypes.USER_ACTIVITY_PLAY),
-                            subtext: _ ? (0, I.default)(u, w.SpotifyActionTypes.USER_ACTIVITY_PLAY, null != e ? L.default.getNickname(e.guild_id, e.id, t) : void 0) : void 0,
-                            disabled: _
+                            subtext: p ? (0, I.default)(u, w.SpotifyActionTypes.USER_ACTIVITY_PLAY, null != e ? L.default.getNickname(e.guild_id, e.id, t) : void 0) : void 0,
+                            disabled: p
                         }, "spotify-play-".concat(n.session_id)), (0, a.jsx)(l.MenuItem, {
                             id: "spotify-sync-".concat(n.session_id),
-                            action: () => (0, p.default)(u, w.SpotifyActionTypes.USER_ACTIVITY_SYNC),
+                            action: () => (0, _.default)(u, w.SpotifyActionTypes.USER_ACTIVITY_SYNC),
                             label: k.default.Messages.USER_ACTIVITY_LISTEN_ALONG,
                             subtext: E ? (0, I.default)(u, w.SpotifyActionTypes.USER_ACTIVITY_SYNC, null != e ? L.default.getNickname(e.guild_id, e.id, t) : void 0) : void 0,
                             disabled: E
@@ -493,7 +493,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return _
                 }
             }), n("222007");
             var a = n("37983");
@@ -508,9 +508,9 @@
                 c = n("245997"),
                 f = n("660478"),
                 I = n("49111"),
-                _ = n("782340");
+                p = n("782340");
 
-            function p(e) {
+            function _(e) {
                 let t = function(e) {
                     let t = (0, d.useUnreadThreadsCountForParent)(e.guild_id, e.id),
                         n = (0, i.useStateFromStores)([f.default, c.default, s.default, o.default], () => {
@@ -539,7 +539,7 @@
                 }(e);
                 return (0, a.jsx)(l.MenuItem, {
                     id: "mark-channel-read",
-                    label: _.default.Messages.MARK_AS_READ,
+                    label: p.default.Messages.MARK_AS_READ,
                     action: function() {
                         (0, u.ackChannel)(e)
                     },
@@ -568,7 +568,7 @@
             function f(e) {
                 let {
                     isFavoritesPerk: t
-                } = (0, u.useFavoritesServerExperiment)("useChannelOptInItems"), n = (0, s.useOptInEnabledForGuild)(e.guild_id), f = (0, i.useStateFromStores)([o.default], () => o.default.isChannelOptedIn(e.guild_id, e.id)), I = (0, i.useStateFromStores)([o.default], () => null != e.parent_id && o.default.isChannelOptedIn(e.guild_id, e.parent_id)), _ = (0, i.useStateFromStores)([o.default], () => o.default.isFavorite(e.guild_id, e.id)), p = () => {
+                } = (0, u.useFavoritesServerExperiment)("useChannelOptInItems"), n = (0, s.useOptInEnabledForGuild)(e.guild_id), f = (0, i.useStateFromStores)([o.default], () => o.default.isChannelOptedIn(e.guild_id, e.id)), I = (0, i.useStateFromStores)([o.default], () => null != e.parent_id && o.default.isChannelOptedIn(e.guild_id, e.parent_id)), p = (0, i.useStateFromStores)([o.default], () => o.default.isFavorite(e.guild_id, e.id)), _ = () => {
                     (0, d.setOptInChannel)(e.guild_id, e.id, !f, {
                         section: r.AnalyticsSections.CONTEXT_MENU
                     })
@@ -581,16 +581,16 @@
                 if (e.isCategory()) return (0, a.jsx)(l.MenuItem, {
                     id: "opt-into-category",
                     label: f ? c.default.Messages.CHANNEL_OPT_OUT : c.default.Messages.CHANNEL_OPT_IN,
-                    action: () => p()
+                    action: () => _()
                 });
-                let E = _ ? c.default.Messages.REMOVE_FAVORITE : c.default.Messages.ADD_FAVORITE,
-                    T = _ ? c.default.Messages.UNPIN_CHANNEL : c.default.Messages.PIN_CHANNEL_TO_TOP;
+                let E = p ? c.default.Messages.REMOVE_FAVORITE : c.default.Messages.ADD_FAVORITE,
+                    T = p ? c.default.Messages.UNPIN_CHANNEL : c.default.Messages.PIN_CHANNEL_TO_TOP;
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(l.MenuItem, {
                         id: "opt-in-favorite-channel",
                         label: t ? T : E,
                         action: () => {
-                            (0, d.setIsFavorite)(e.guild_id, e.id, !_, {
+                            (0, d.setIsFavorite)(e.guild_id, e.id, !p, {
                                 section: r.AnalyticsSections.CONTEXT_MENU
                             })
                         }
@@ -601,7 +601,7 @@
                     }) : (0, a.jsx)(l.MenuItem, {
                         id: "opt-into-channel",
                         label: f ? c.default.Messages.CHANNEL_OPT_OUT : c.default.Messages.CHANNEL_OPT_IN,
-                        action: () => p()
+                        action: () => _()
                     })]
                 })
             }
@@ -644,10 +644,10 @@
                 c = n("986373"),
                 f = n("498139"),
                 I = n("49111"),
-                _ = n("782340");
+                p = n("782340");
 
-            function p(e, t) {
-                return e.type === I.ChannelTypes.GROUP_DM ? t ? _.default.Messages.UNFAVORITE_GDM : _.default.Messages.FAVORITE_GDM : e.type === I.ChannelTypes.DM ? t ? _.default.Messages.UNFAVORITE_DM : _.default.Messages.FAVORITE_DM : t ? _.default.Messages.UNFAVORITE_CHANNEL : _.default.Messages.FAVORITE_CHANNEL
+            function _(e, t) {
+                return e.type === I.ChannelTypes.GROUP_DM ? t ? p.default.Messages.UNFAVORITE_GDM : p.default.Messages.FAVORITE_GDM : e.type === I.ChannelTypes.DM ? t ? p.default.Messages.UNFAVORITE_DM : p.default.Messages.FAVORITE_DM : t ? p.default.Messages.UNFAVORITE_CHANNEL : p.default.Messages.FAVORITE_CHANNEL
             }
 
             function A(e) {
@@ -661,7 +661,7 @@
                     o = (0, c.useCanFavoriteChannel)(e);
                 if (!o) return null;
                 let [
-                    [_], A
+                    [p], A
                 ] = l.partition(t, e => "null" === e.channel.id);
 
                 function E(t) {
@@ -669,18 +669,18 @@
                 }
                 return 0 === A.length ? (0, a.jsx)(d.MenuItem, {
                     id: "favorite-channel",
-                    label: p(e, !1),
+                    label: _(e, !1),
                     action: () => E(null)
                 }) : (0, a.jsxs)(d.MenuItem, {
                     id: "favorite-channel",
-                    label: p(e, !1),
+                    label: _(e, !1),
                     action: () => E(null),
                     children: [n && (0, a.jsx)(d.MenuGroup, {
                         children: (0, a.jsx)(d.MenuItem, {
-                            id: "favorite-".concat(_.channel.id),
-                            label: _.channel.name,
-                            action: () => E("null" === _.channel.id ? null : _.channel.id)
-                        }, _.channel.id)
+                            id: "favorite-".concat(p.channel.id),
+                            label: p.channel.name,
+                            action: () => E("null" === p.channel.id ? null : p.channel.id)
+                        }, p.channel.id)
                     }), (0, a.jsx)(d.MenuGroup, {
                         children: A.map(e => (0, a.jsx)(d.MenuItem, {
                             id: "favorite-".concat(e.channel.id),
@@ -695,7 +695,7 @@
                 let t = (0, u.useStateFromStores)([o.default], () => o.default.isFavorite(e.id));
                 return __OVERLAY__ || !t ? null : (0, a.jsx)(d.MenuItem, {
                     id: "favorite-channel",
-                    label: p(e, !0),
+                    label: _(e, !0),
                     color: "danger",
                     action: () => e.type === I.ChannelTypes.GUILD_CATEGORY ? (0, d.openModalLazy)(async () => {
                         let {
@@ -787,7 +787,7 @@
                 default: function() {
                     return o
                 }
-            });
+            }), n("424973"), n("222007");
             var a = n("37983");
             n("884691");
             var i = n("77078"),
@@ -804,24 +804,39 @@
                         isFavoritesPerk: r
                     } = (0, d.useFavoritesServerExperiment)("useChannelMoveToCategory");
                 if (__OVERLAY__ || !t || null == n || !r) return null;
-                let c = o.filter(e => e.id !== (null == n ? void 0 : n.parentId));
-                return (0, a.jsx)(i.MenuItem, {
+                let c = o.filter(e => e.id !== (null == n ? void 0 : n.parentId)),
+                    [f, I] = function(e) {
+                        let t = [],
+                            n = null;
+                        for (let a of e) null == a.id ? n = a : t.push(a);
+                        return [n, t]
+                    }(c);
+
+                function p(e) {
+                    null != n && (0, l.updateFavoriteChannelParent)(n.id, e)
+                }
+                return null == f && 0 === I.length ? null : (0, a.jsxs)(i.MenuItem, {
                     id: "move-to-category",
                     label: s.default.Messages.MOVE_TO,
-                    children: c.map(e => {
-                        let {
-                            id: t,
-                            name: u
-                        } = e;
-                        return (0, a.jsx)(i.MenuItem, {
-                            id: "favorite-".concat(t),
-                            label: u,
-                            action: () => {
-                                var e;
-                                return e = t, void(null != n && (0, l.updateFavoriteChannelParent)(n.id, e))
-                            }
-                        }, null != t ? t : "null")
-                    })
+                    children: [null != f && (0, a.jsx)(i.MenuGroup, {
+                        children: (0, a.jsx)(i.MenuItem, {
+                            id: "favorite-uncategorized",
+                            label: f.name,
+                            action: () => p(f.id)
+                        })
+                    }), I.length > 0 && (0, a.jsx)(i.MenuGroup, {
+                        children: I.map(e => {
+                            let {
+                                id: t,
+                                name: n
+                            } = e;
+                            return (0, a.jsx)(i.MenuItem, {
+                                id: "favorite-".concat(t),
+                                label: n,
+                                action: () => p(t)
+                            }, t)
+                        })
+                    })]
                 })
             }
         },
@@ -849,8 +864,8 @@
                     guild: n,
                     channel: a,
                     stageInstance: l
-                } = e, o = (0, i.useStateFromStores)([d.default], () => d.default.getDefaultChannel(n.id, !0, r.Permissions.CREATE_INSTANT_INVITE)), c = (0, i.useStateFromStores)([s.default], () => (0, u.canViewInviteModal)(s.default, n, a, l)), f = I(t, n, c && null != a ? a : o), p = _(t);
-                return null == a && t === r.InstantInviteSources.GUILD_CONTEXT_MENU ? null : c || null != o ? f : p
+                } = e, o = (0, i.useStateFromStores)([d.default], () => d.default.getDefaultChannel(n.id, !0, r.Permissions.CREATE_INSTANT_INVITE)), c = (0, i.useStateFromStores)([s.default], () => (0, u.canViewInviteModal)(s.default, n, a, l)), f = I(t, n, c && null != a ? a : o), _ = p(t);
+                return null == a && t === r.InstantInviteSources.GUILD_CONTEXT_MENU ? null : c || null != o ? f : _
             }
             let I = (e, t, i) => (0, a.jsx)(l.MenuItem, {
                     id: "invite-people",
@@ -869,7 +884,7 @@
                         })
                     })
                 }),
-                _ = e => (0, a.jsx)(l.MenuItem, {
+                p = e => (0, a.jsx)(l.MenuItem, {
                     id: "invite-people",
                     label: c.default.Messages.INVITE_PEOPLE,
                     color: "brand",

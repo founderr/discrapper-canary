@@ -5434,7 +5434,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return B
+                    return V
                 }
             }), n("424973");
             var a = n("37983"),
@@ -5446,51 +5446,50 @@
                 o = n("446674"),
                 d = n("77078"),
                 c = n("777274"),
-                f = n("56947"),
-                h = n("76813"),
-                p = n("992207"),
-                m = n("374014"),
-                E = n("336804"),
-                C = n("311197"),
-                S = n("830251"),
-                g = n("170643"),
-                _ = n("550410"),
-                I = n("124824"),
-                T = n("640553"),
-                v = n("104815"),
-                x = n("925674"),
-                N = n("331759"),
-                A = n("63260"),
-                M = n("422736"),
-                R = n("280168"),
-                j = n("664336"),
-                L = n("68148"),
-                O = n("980423"),
-                y = n("191145"),
-                b = n("598785"),
-                P = n("226735"),
-                D = n("340513"),
-                U = n("99795"),
-                w = n("49111"),
-                F = n("782340"),
-                k = n("767290");
+                f = n("76813"),
+                h = n("992207"),
+                p = n("374014"),
+                m = n("336804"),
+                E = n("311197"),
+                C = n("830251"),
+                S = n("170643"),
+                g = n("550410"),
+                _ = n("124824"),
+                I = n("640553"),
+                T = n("104815"),
+                v = n("925674"),
+                x = n("331759"),
+                N = n("63260"),
+                A = n("422736"),
+                M = n("280168"),
+                R = n("664336"),
+                j = n("68148"),
+                L = n("980423"),
+                O = n("191145"),
+                y = n("598785"),
+                b = n("226735"),
+                P = n("340513"),
+                D = n("99795"),
+                U = n("49111"),
+                w = n("782340"),
+                F = n("767290");
 
-            function V(e) {
+            function k(e) {
                 let {
                     channelId: t,
                     guildId: n
-                } = e, l = Date.now(), s = (0, o.useStateFromStores)([R.default, y.default], () => u(R.default.getSpeakers()).map(e => y.default.getParticipant(t, e)).filter(e => null != e && e.type === U.ParticipantTypes.USER && e.speaking && !(0, S.default)(e)).sortBy(e => -R.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
+                } = e, l = Date.now(), s = (0, o.useStateFromStores)([M.default, O.default], () => u(M.default.getSpeakers()).map(e => O.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, C.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
                 return 0 === s.length ? null : (0, a.jsx)(a.Fragment, {
                     children: s.map((e, t) => (0, a.jsx)(d.Tooltip, {
                         position: "bottom",
                         color: d.Tooltip.Colors.GREY,
-                        text: F.default.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({
+                        text: w.default.Messages.CHANNEL_CALL_CURRENT_SPEAKER.format({
                             username: e.user.username
                         }),
-                        children: l => (0, a.jsx)(L.default, {
+                        children: l => (0, a.jsx)(j.default, {
                             ...l,
-                            className: i(k.speaker, {
-                                [k.last]: t === s.length - 1
+                            className: i(F.speaker, {
+                                [F.last]: t === s.length - 1
                             }),
                             user: e.user,
                             speaking: !0,
@@ -5501,7 +5500,7 @@
                 })
             }
 
-            function B(e) {
+            function V(e) {
                 let {
                     inPopout: t,
                     channel: n,
@@ -5509,54 +5508,48 @@
                     inCall: i,
                     isChatOpen: r,
                     exitFullScreen: u
-                } = e, S = n.id, {
-                    voiceParticipantsHidden: R,
-                    selectedParticipant: L,
-                    userParticipantCount: F
-                } = (0, o.useStateFromStoresObject)([y.default], () => ({
-                    selectedParticipant: y.default.getSelectedParticipant(S),
-                    voiceParticipantsHidden: y.default.getVoiceParticipantsHidden(S),
-                    userParticipantCount: y.default.getUserParticipantCount(S)
-                }), [S]), B = (0, b.default)(n), {
-                    showClipsHeaderEntrypoint: H
-                } = f.ClipsExperiment.useExperiment({
-                    location: "ChannelCallHeaderToolbar"
-                }, {
-                    autoTrackExposure: !1
-                }), {
-                    preventIdle: G,
-                    allowIdle: W
-                } = (0, _.usePreventIdle)("popup"), Y = [];
-                if (B) {
-                    let e = (null == L ? void 0 : L.type) === U.ParticipantTypes.STREAM ? (0, m.decodeStreamKey)(L.id) : void 0,
-                        t = (null == L ? void 0 : L.type) === U.ParticipantTypes.ACTIVITY ? L.id : void 0;
-                    Y.push((0, a.jsx)(N.default, {
-                        className: k.button,
+                } = e, C = n.id, {
+                    voiceParticipantsHidden: M,
+                    selectedParticipant: j,
+                    userParticipantCount: w
+                } = (0, o.useStateFromStoresObject)([O.default], () => ({
+                    selectedParticipant: O.default.getSelectedParticipant(C),
+                    voiceParticipantsHidden: O.default.getVoiceParticipantsHidden(C),
+                    userParticipantCount: O.default.getUserParticipantCount(C)
+                }), [C]), V = (0, y.default)(n), {
+                    preventIdle: B,
+                    allowIdle: H
+                } = (0, g.usePreventIdle)("popup"), G = [];
+                if (V) {
+                    let e = (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM ? (0, p.decodeStreamKey)(j.id) : void 0,
+                        t = (null == j ? void 0 : j.type) === D.ParticipantTypes.ACTIVITY ? j.id : void 0;
+                    G.push((0, a.jsx)(x.default, {
+                        className: F.button,
                         channel: n,
                         applicationId: t,
                         stream: e,
                         exitFullScreen: u,
-                        analyticsLocation: n.type === w.ChannelTypes.GUILD_VOICE ? w.AnalyticsPages.GUILD_CHANNEL : w.AnalyticsPages.DM_CHANNEL
+                        analyticsLocation: n.type === U.ChannelTypes.GUILD_VOICE ? U.AnalyticsPages.GUILD_CHANNEL : U.AnalyticsPages.DM_CHANNEL
                     }, "invite-button"))
                 }
-                return R && Y.push((0, a.jsx)(V, {
-                    channelId: S,
+                return M && G.push((0, a.jsx)(k, {
+                    channelId: C,
                     guildId: n.guild_id
-                }, "current-speaker")), Y.push((0, a.jsx)(p.default, {
-                    className: k.button,
-                    channelId: S
-                }, "clips-enabled-indicator")), (null == L ? void 0 : L.type) === U.ParticipantTypes.STREAM && (Y.push((0, a.jsx)(g.default, {
-                    className: k.button,
-                    participant: L
-                }, "warning")), Y.push((0, a.jsx)(E.default, {
-                    size: O.default.Sizes.LARGE,
-                    className: k.button,
-                    participant: L,
+                }, "current-speaker")), G.push((0, a.jsx)(h.default, {
+                    className: F.button,
+                    channelId: C
+                }, "clips-enabled-indicator")), (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM && (G.push((0, a.jsx)(S.default, {
+                    className: F.button,
+                    participant: j
+                }, "warning")), G.push((0, a.jsx)(m.default, {
+                    size: L.default.Sizes.LARGE,
+                    className: F.button,
+                    participant: j,
                     showQuality: !0
-                }, "live-indicator"))), R && Y.push((0, a.jsx)(d.Popout, {
+                }, "live-indicator"))), M && G.push((0, a.jsx)(d.Popout, {
                     position: "bottom",
-                    renderPopout: () => (0, a.jsx)(I.default, {
-                        children: (0, a.jsx)(D.default, {
+                    renderPopout: () => (0, a.jsx)(_.default, {
+                        children: (0, a.jsx)(P.default, {
                             channel: n
                         })
                     }),
@@ -5564,38 +5557,38 @@
                         let {
                             isShown: n
                         } = t;
-                        return (0, l.createElement)(A.default, {
+                        return (0, l.createElement)(N.default, {
                             ...e,
                             isActive: n,
-                            count: F,
+                            count: w,
                             key: "call-members",
-                            className: k.button
+                            className: F.button
                         })
                     }
-                }, "call-members-popout")), i && Y.push(null != L ? (0, a.jsx)(x.default, {
-                    className: k.button,
-                    channelId: S
-                }, "deselect-participant") : (0, a.jsx)(M.default, {
-                    className: k.button,
-                    channelId: S,
+                }, "call-members-popout")), i && G.push(null != j ? (0, a.jsx)(v.default, {
+                    className: F.button,
+                    channelId: C
+                }, "deselect-participant") : (0, a.jsx)(A.default, {
+                    className: F.button,
+                    channelId: C,
                     isHorizontal: !0
-                }, "select-participant")), H && !t && Y.push((0, a.jsx)(h.default, {
-                    className: k.button
-                }, "clips")), Y.push((0, a.jsx)(C.default, {
-                    onOpen: G,
-                    onClose: W,
-                    className: k.button
-                }, "recents")), Y.push((0, a.jsx)(c.CallscopeChannelCallIssueMarker, {
-                    className: k.button
-                }, "callscope-marker")), Y.push((0, a.jsx)(d.Popout, {
+                }, "select-participant")), !t && G.push((0, a.jsx)(f.default, {
+                    className: F.button
+                }, "clips")), G.push((0, a.jsx)(E.default, {
+                    onOpen: B,
+                    onClose: H,
+                    className: F.button
+                }, "recents")), G.push((0, a.jsx)(c.CallscopeChannelCallIssueMarker, {
+                    className: F.button
+                }, "callscope-marker")), G.push((0, a.jsx)(d.Popout, {
                     position: "bottom",
                     renderPopout: e => {
                         let {
                             closePopout: t
                         } = e;
-                        return (0, a.jsx)(I.default, {
-                            children: (0, a.jsx)(P.default, {
-                                channelId: S,
+                        return (0, a.jsx)(_.default, {
+                            children: (0, a.jsx)(b.default, {
+                                channelId: C,
                                 onClose: t,
                                 appContext: s,
                                 exitFullScreen: u
@@ -5606,21 +5599,21 @@
                         let {
                             isShown: n
                         } = t;
-                        return (0, l.createElement)(v.default, {
+                        return (0, l.createElement)(T.default, {
                             ...e,
                             key: "more-options",
                             isActive: n,
-                            className: k.lastButton
+                            className: F.lastButton
                         })
                     }
-                }, "more-options-popout")), !r && (Y.push((0, a.jsx)(j.default.Divider, {
-                    className: k.divider
-                }, "divider")), Y.push((0, a.jsx)(T.ChatButton, {
+                }, "more-options-popout")), !r && (G.push((0, a.jsx)(R.default.Divider, {
+                    className: F.divider
+                }, "divider")), G.push((0, a.jsx)(I.ChatButton, {
                     channelId: n.id,
-                    className: k.chatButtonSpacer,
+                    className: F.chatButtonSpacer,
                     disabled: !0
                 }, "chat-spacer"))), (0, a.jsx)(a.Fragment, {
-                    children: Y
+                    children: G
                 })
             }
         },
@@ -21522,7 +21515,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return X
+                    return Z
                 }
             });
             var a = n("37983"),
@@ -21538,64 +21531,57 @@
                 h = n("191145"),
                 p = n("777274"),
                 m = n("679653"),
-                E = n("56947"),
-                C = n("76813"),
-                S = n("992207"),
-                g = n("95039"),
-                _ = n("539938"),
-                I = n("557809"),
-                T = n("311197"),
-                v = n("550410"),
-                x = n("124824"),
-                N = n("640553"),
-                A = n("104815"),
-                M = n("305961"),
-                R = n("957255"),
-                j = n("181114"),
-                L = n("849467"),
-                O = n("155207"),
-                y = n("228427"),
-                b = n("664336"),
-                P = n("599110"),
-                D = n("439932"),
-                U = n("567469"),
-                w = n("998716"),
-                F = n("619395"),
-                k = n("923510"),
-                V = n("834052"),
-                B = n("506466"),
-                H = n("199811"),
-                G = n("96151"),
-                W = n("49111"),
-                Y = n("646718"),
-                z = n("782340"),
-                K = n("76066");
+                E = n("76813"),
+                C = n("992207"),
+                S = n("95039"),
+                g = n("539938"),
+                _ = n("557809"),
+                I = n("311197"),
+                T = n("550410"),
+                v = n("124824"),
+                x = n("640553"),
+                N = n("104815"),
+                A = n("305961"),
+                M = n("957255"),
+                R = n("181114"),
+                j = n("849467"),
+                L = n("155207"),
+                O = n("228427"),
+                y = n("664336"),
+                b = n("599110"),
+                P = n("439932"),
+                D = n("567469"),
+                U = n("998716"),
+                w = n("619395"),
+                F = n("923510"),
+                k = n("834052"),
+                V = n("506466"),
+                B = n("199811"),
+                H = n("96151"),
+                G = n("49111"),
+                W = n("646718"),
+                Y = n("782340"),
+                z = n("76066");
 
-            function Z(e) {
+            function K(e) {
                 let {
                     inPopout: t,
                     channel: n,
                     toggleRequestToSpeakSidebar: s,
                     showRequestToSpeakSidebar: u
-                } = e, c = (0, f.useAppContext)(), m = (0, r.useStateFromStores)([h.default], () => h.default.getChatOpen(n.id)), g = (0, F.useCanModerateRequestToSpeak)(n.id), _ = (0, U.useStageParticipantsCount)(n.id, w.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
-                    preventIdle: I,
-                    allowIdle: M
-                } = (0, v.usePreventIdle)("popup"), {
-                    showClipsHeaderEntrypoint: R
-                } = E.ClipsExperiment.useExperiment({
-                    location: "StageChannelCallHeaderToolbar"
-                }, {
-                    autoTrackExposure: !1
-                });
+                } = e, c = (0, f.useAppContext)(), m = (0, r.useStateFromStores)([h.default], () => h.default.getChatOpen(n.id)), S = (0, w.useCanModerateRequestToSpeak)(n.id), g = (0, D.useStageParticipantsCount)(n.id, U.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
+                    preventIdle: _,
+                    allowIdle: A
+                } = (0, T.usePreventIdle)("popup");
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(S.default, {
+                    children: [(0, a.jsx)(C.default, {
                         channelId: n.id
                     }, "clips-enabled-indicator"), (0, a.jsx)(o.Popout, {
                         position: "bottom",
                         animation: o.Popout.Animation.NONE,
                         align: "right",
-                        renderPopout: e => (0, a.jsx)(x.default, {
-                            children: (0, a.jsx)(H.default, {
+                        renderPopout: e => (0, a.jsx)(v.default, {
+                            children: (0, a.jsx)(B.default, {
                                 ...e,
                                 channelId: n.id,
                                 appContext: c
@@ -21606,177 +21592,177 @@
                             let {
                                 isShown: n
                             } = t;
-                            return (0, l.createElement)(A.default, {
+                            return (0, l.createElement)(N.default, {
                                 ...e,
                                 key: "more-options",
                                 isActive: n,
-                                className: K.button,
-                                iconClassName: K.buttonIcon
+                                className: z.button,
+                                iconClassName: z.buttonIcon
                             })
                         }
-                    }, "more-options-popout"), R && !t && (0, a.jsx)(C.default, {
-                        className: K.button
-                    }, "clips"), (0, a.jsx)(T.default, {
-                        onOpen: I,
-                        onClose: M,
-                        className: K.button
-                    }, "recents"), !u && g ? (0, a.jsx)("div", {
-                        className: K.button,
-                        children: (0, a.jsx)(B.default, {
+                    }, "more-options-popout"), !t && (0, a.jsx)(E.default, {
+                        className: z.button
+                    }, "clips"), (0, a.jsx)(I.default, {
+                        onOpen: _,
+                        onClose: A,
+                        className: z.button
+                    }, "recents"), !u && S ? (0, a.jsx)("div", {
+                        className: z.button,
+                        children: (0, a.jsx)(V.default, {
                             toggleRequestToSpeakSidebar: () => {
                                 m && d.default.updateChatOpen(n.id, !1), s()
                             },
                             showRequestToSpeakSidebar: u,
-                            numRequestToSpeak: _
+                            numRequestToSpeak: g
                         })
                     }) : null, (0, a.jsx)(p.CallscopeChannelCallIssueMarker, {
-                        className: K.button
+                        className: z.button
                     }), !m && (0, a.jsx)("div", {
-                        className: i(K.button, {
-                            [K.sidebarOpen]: u
+                        className: i(z.button, {
+                            [z.sidebarOpen]: u
                         }),
-                        children: (0, a.jsx)(N.ChatButton, {
+                        children: (0, a.jsx)(x.ChatButton, {
                             channelId: n.id,
                             showRequestToSpeakSidebar: u,
                             toggleRequestToSpeakSidebar: s,
-                            iconClassName: K.buttonIcon
+                            iconClassName: z.buttonIcon
                         })
                     })]
                 })
             }
 
-            function X(e) {
+            function Z(e) {
                 var t, n;
                 let {
                     inPopout: s,
                     channel: f,
                     toggleRequestToSpeakSidebar: h,
                     showRequestToSpeakSidebar: p
-                } = e, E = (0, m.default)(f), C = (0, r.useStateFromStores)([V.default], () => V.default.getStageInstanceByChannel(f.id)), S = (0, U.useActualStageSpeakerCount)(f.id), T = (0, U.useStageParticipantsCount)(f.id, w.StageChannelParticipantNamedIndex.AUDIENCE), v = (0, r.useStateFromStores)([M.default], () => M.default.getGuild(f.guild_id), [f.guild_id]), x = null !== (t = null == v ? void 0 : v.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, N = (null == v ? void 0 : v.isCommunity()) ? x < W.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == v ? void 0 : v.premiumTier) !== W.BoostedGuildTiers.TIER_3 && x <= W.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, A = (0, G.default)(f), F = (0, r.useStateFromStores)([R.default], () => R.default.can(k.MODERATE_STAGE_CHANNEL_PERMISSIONS, f)), B = () => {
-                    d.default.updateStageVideoLimitBoostUpsellDismissed(f.id, !0), P.default.track(W.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
+                } = e, E = (0, m.default)(f), C = (0, r.useStateFromStores)([k.default], () => k.default.getStageInstanceByChannel(f.id)), I = (0, D.useActualStageSpeakerCount)(f.id), T = (0, D.useStageParticipantsCount)(f.id, U.StageChannelParticipantNamedIndex.AUDIENCE), v = (0, r.useStateFromStores)([A.default], () => A.default.getGuild(f.guild_id), [f.guild_id]), x = null !== (t = null == v ? void 0 : v.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, N = (null == v ? void 0 : v.isCommunity()) ? x < G.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == v ? void 0 : v.premiumTier) !== G.BoostedGuildTiers.TIER_3 && x <= G.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, w = (0, H.default)(f), V = (0, r.useStateFromStores)([M.default], () => M.default.can(F.MODERATE_STAGE_CHANNEL_PERMISSIONS, f)), B = () => {
+                    d.default.updateStageVideoLimitBoostUpsellDismissed(f.id, !0), b.default.track(G.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
                         guild_id: f.guild_id,
-                        type: Y.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
-                        is_moderator: F,
-                        action: Y.BoostingUpsellAction.DISMISS
+                        type: W.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
+                        is_moderator: V,
+                        action: W.BoostingUpsellAction.DISMISS
                     })
                 };
                 l.useEffect(() => {
-                    A && P.default.track(W.AnalyticEvents.BOOSTING_UPSELL_VIEWED, {
+                    w && b.default.track(G.AnalyticEvents.BOOSTING_UPSELL_VIEWED, {
                         guild_id: f.guild_id,
-                        type: Y.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
-                        is_moderator: F,
-                        listener_count: S + T
+                        type: W.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
+                        is_moderator: V,
+                        listener_count: I + T
                     })
-                }, [A]);
+                }, [w]);
                 let {
-                    enabled: H,
-                    left: X
+                    enabled: Z,
+                    left: J
                 } = c.ChannelEmojisExperiment.useExperiment({
                     location: "f2c6da_2"
                 }, {
                     autoTrackExposure: !1
-                }), q = H && (0, a.jsx)(I.ChannelEmoji, {
+                }), q = Z && (0, a.jsx)(_.ChannelEmoji, {
                     channel: f
-                }), Q = (0, a.jsxs)(b.default, {
-                    toolbar: (0, a.jsx)(Z, {
+                }), Q = (0, a.jsxs)(y.default, {
+                    toolbar: (0, a.jsx)(K, {
                         inPopout: s,
                         toggleRequestToSpeakSidebar: h,
                         showRequestToSpeakSidebar: p,
                         channel: f
                     }),
-                    onDoubleClick: _.handleDoubleClick,
+                    onDoubleClick: g.handleDoubleClick,
                     transparent: !0,
-                    className: i((0, D.getThemeClass)(W.ThemeTypes.DARK), K.participants),
-                    children: [X && q, (0, a.jsx)(b.default.Icon, {
-                        icon: y.default,
+                    className: i((0, P.getThemeClass)(G.ThemeTypes.DARK), z.participants),
+                    children: [J && q, (0, a.jsx)(y.default.Icon, {
+                        icon: O.default,
                         disabled: !0,
-                        "aria-label": z.default.Messages.STAGE_CHANNEL,
-                        className: K.icon,
+                        "aria-label": Y.default.Messages.STAGE_CHANNEL,
+                        className: z.icon,
                         color: null != C ? u.default.unsafe_rawColors.GREEN_360.css : void 0
-                    }), !X && q, (0, a.jsx)(b.default.Title, {
-                        className: K.channelName,
-                        wrapperClassName: K.channelNameWrapper,
+                    }), !J && q, (0, a.jsx)(y.default.Title, {
+                        className: z.channelName,
+                        wrapperClassName: z.channelNameWrapper,
                         children: null !== (n = null == C ? void 0 : C.topic) && void 0 !== n ? n : E
-                    }), (0, a.jsx)(b.default.Divider, {
-                        className: K.divider
-                    }), (0, a.jsxs)(b.default.Title, {
-                        children: [(0, a.jsx)(L.default, {
+                    }), (0, a.jsx)(y.default.Divider, {
+                        className: z.divider
+                    }), (0, a.jsxs)(y.default.Title, {
+                        children: [(0, a.jsx)(j.default, {
                             width: 16,
                             height: 16
                         }), (0, a.jsx)(o.Text, {
                             variant: "text-xs/medium",
                             color: "header-secondary",
-                            className: K.speakerCount,
-                            children: z.default.Messages.SPEAKING_COUNT.format({
-                                count: S
+                            className: z.speakerCount,
+                            children: Y.default.Messages.SPEAKING_COUNT.format({
+                                count: I
                             })
-                        }), (0, a.jsx)(O.default, {
+                        }), (0, a.jsx)(L.default, {
                             width: 16,
                             height: 16
                         }), (0, a.jsx)(o.Text, {
                             variant: "text-xs/medium",
                             color: "header-secondary",
-                            className: K.speakerCount,
-                            children: z.default.Messages.LISTENING_COUNT.format({
+                            className: z.speakerCount,
+                            children: Y.default.Messages.LISTENING_COUNT.format({
                                 count: T
                             })
                         })]
                     })]
                 });
-                return A ? (0, a.jsxs)("div", {
+                return w ? (0, a.jsxs)("div", {
                     children: [Q, (0, a.jsxs)("div", {
-                        className: K.boostUpsell,
-                        children: [(0, a.jsx)(J, {}), (0, a.jsxs)("div", {
-                            className: K.text,
+                        className: z.boostUpsell,
+                        children: [(0, a.jsx)(X, {}), (0, a.jsxs)("div", {
+                            className: z.text,
                             children: [(0, a.jsx)(o.Text, {
                                 variant: "text-md/medium",
                                 color: "header-primary",
-                                children: N ? z.default.Messages.STAGE_FULL_MODERATOR_TITLE : z.default.Messages.STAGE_FULL_MODERATOR_MAX_TITLE
+                                children: N ? Y.default.Messages.STAGE_FULL_MODERATOR_TITLE : Y.default.Messages.STAGE_FULL_MODERATOR_MAX_TITLE
                             }), (0, a.jsx)(o.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-normal",
-                                children: N ? z.default.Messages.STAGE_FULL_MODERATOR_BODY : z.default.Messages.STAGE_FULL_MAX_BODY
+                                children: N ? Y.default.Messages.STAGE_FULL_MODERATOR_BODY : Y.default.Messages.STAGE_FULL_MAX_BODY
                             })]
                         }), (0, a.jsx)("div", {
-                            className: K.buttons,
+                            className: z.buttons,
                             children: N ? (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(o.Button, {
-                                    className: K.notNowButton,
+                                    className: z.notNowButton,
                                     onClick: B,
                                     look: o.Button.Looks.BLANK,
                                     size: o.Button.Sizes.SMALL,
-                                    children: z.default.Messages.NOT_NOW
-                                }), (0, a.jsx)(j.default, {
+                                    children: Y.default.Messages.NOT_NOW
+                                }), (0, a.jsx)(R.default, {
                                     size: o.Button.Sizes.SMALL,
                                     onClick: () => {
-                                        (0, g.openGuildBoostingMarketingModal)({
+                                        (0, S.openGuildBoostingMarketingModal)({
                                             guildId: f.guild_id,
                                             location: {
-                                                section: W.AnalyticsSections.STAGE_VIDEO_LIMIT
+                                                section: G.AnalyticsSections.STAGE_VIDEO_LIMIT
                                             }
-                                        }), P.default.track(W.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
+                                        }), b.default.track(G.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
                                             guild_id: f.guild_id,
-                                            type: Y.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
-                                            is_moderator: F,
-                                            action: Y.BoostingUpsellAction.BOOST
+                                            type: W.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
+                                            is_moderator: V,
+                                            action: W.BoostingUpsellAction.BOOST
                                         })
                                     },
-                                    className: K.boostButton,
-                                    children: z.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
+                                    className: z.boostButton,
+                                    children: Y.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
                                 })]
                             }) : (0, a.jsx)(o.Button, {
-                                className: K.notNowButton,
+                                className: z.notNowButton,
                                 onClick: B,
                                 look: o.Button.Looks.BLANK,
                                 size: o.Button.Sizes.SMALL,
-                                children: z.default.Messages.DISMISS
+                                children: Y.default.Messages.DISMISS
                             })
                         })]
                     })]
                 }) : Q
             }
 
-            function J() {
+            function X() {
                 return (0, a.jsxs)("svg", {
                     width: "36",
                     height: "36",
