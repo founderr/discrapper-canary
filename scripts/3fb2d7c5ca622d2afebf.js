@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["46670"], {
+    ["64817"], {
         78349: function(e, t, n) {
             "use strict";
             n("424973"), e.exports.parse = function(e) {
@@ -335,8 +335,8 @@
                         retryPrompt: _,
                         retrySuccessMessage: h
                     } = this.props, {
-                        code: I,
-                        errorMessage: m,
+                        code: m,
+                        errorMessage: I,
                         retrySuccess: g
                     } = this.state, S = i.Children.count(l) > 0 ? (0, r.jsx)(a.Card, {
                         type: a.Card.Types.WARNING,
@@ -387,20 +387,20 @@
                                         onChange: this.handleCodeChange,
                                         placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
                                         maxLength: null != f ? f : 10,
-                                        value: I,
+                                        value: m,
                                         autoComplete: "one-time-code",
                                         autoFocus: !0
                                     }), this.errorPresent() ? (0, r.jsx)(a.Text, {
                                         color: "text-danger",
                                         variant: "text-xs/normal",
                                         className: u.error,
-                                        children: null != c ? c : m
+                                        children: null != c ? c : I
                                     }) : null, C]
                                 })]
                             }), (0, r.jsxs)(a.ModalFooter, {
                                 children: [(0, r.jsx)(a.Button, {
                                     type: "submit",
-                                    disabled: d || 0 === I.length,
+                                    disabled: d || 0 === m.length,
                                     children: null != n ? n : o.default.Messages.CONFIRM
                                 }), (0, r.jsx)(a.Button, {
                                     onClick: this.handleCancel,
@@ -947,7 +947,7 @@
                 E = n("423487"),
                 _ = n("782340"),
                 h = n("47274");
-            class I extends i.PureComponent {
+            class m extends i.PureComponent {
                 render() {
                     let {
                         onClose: e
@@ -965,7 +965,7 @@
                 }
             }
 
-            function m(e) {
+            function I(e) {
                 let {
                     imageClass: t,
                     children: n,
@@ -1017,7 +1017,7 @@
                     slotCount: o = 1,
                     canceledCount: d = 0
                 } = e;
-                return (0, r.jsxs)(m, {
+                return (0, r.jsxs)(I, {
                     imageClass: t,
                     error: s,
                     onDismissError: a,
@@ -1079,7 +1079,7 @@
                         canceledCount: _
                     } = this.props;
                     return (0, r.jsxs)(i.Fragment, {
-                        children: [(0, r.jsx)(I, {
+                        children: [(0, r.jsx)(m, {
                             text: t
                         }), (0, r.jsx)(u.ModalContent, {
                             children: (0, r.jsx)(S, {
@@ -1101,7 +1101,7 @@
                     })
                 }
             }
-            v.Header = I, v.ApplyBody = S, v.TransferBody = function(e) {
+            v.Header = m, v.ApplyBody = S, v.TransferBody = function(e) {
                 var t, n;
                 let {
                     imageClass: l,
@@ -1112,8 +1112,8 @@
                     onDismissError: f,
                     slotCount: p = 1,
                     canceledCount: E = 0
-                } = e, I = i.useRef(a), S = null === (t = I.current) || void 0 === t ? void 0 : t.length, C = null === (n = I.current) || void 0 === n ? void 0 : n.reduce((e, t) => (!e.hasOwnProperty(t.id) && (e[t.id] = []), e[t.id].push(t), e), {});
-                return (0, r.jsxs)(m, {
+                } = e, m = i.useRef(a), S = null === (t = m.current) || void 0 === t ? void 0 : t.length, C = null === (n = m.current) || void 0 === n ? void 0 : n.reduce((e, t) => (!e.hasOwnProperty(t.id) && (e[t.id] = []), e[t.id].push(t), e), {});
+                return (0, r.jsxs)(I, {
                     imageClass: l,
                     error: d,
                     onDismissError: f,
@@ -1172,8 +1172,8 @@
                 E = n("625634"),
                 _ = n("751433"),
                 h = n("599110"),
-                I = n("427459"),
-                m = n("903016"),
+                m = n("427459"),
+                I = n("903016"),
                 g = n("936992"),
                 S = n("658206"),
                 C = n("49111"),
@@ -1187,16 +1187,16 @@
                     selectedGuild: i,
                     locationSection: a,
                     transitionState: A,
-                    onClose: N
-                } = e, R = (0, I.getAvailableGuildBoostSlots)(E.default.boostSlots);
+                    onClose: R
+                } = e, N = (0, m.getAvailableGuildBoostSlots)(E.default.boostSlots);
                 o(null != r || null != i, "Must either provide slots or an initial selected guild"), o(!(null == r ? void 0 : r.some(e => e.isOnCooldown())), "If slots are provided, they must not be on cooldown");
                 let L = [null == r ? "UNUSED_QUANTITY_SELECT" : null, null == i ? "GUILD_SELECT" : null, "CONFIRM", "SUCCESS"].filter(e => null != e),
-                    [M, O] = (0, u.useStateFromStoresArray)([f.default], () => [f.default.isModifyingAppliedBoost, f.default.applyBoostError]),
-                    [x, y] = s.useState(""),
-                    [U, P] = s.useState(L[0]),
-                    [D, b] = s.useState(!1),
+                    [M, x] = (0, u.useStateFromStoresArray)([f.default], () => [f.default.isModifyingAppliedBoost, f.default.applyBoostError]),
+                    [y, O] = s.useState(""),
+                    [U, b] = s.useState(L[0]),
+                    [D, P] = s.useState(!1),
                     [w, B] = s.useState(i),
-                    [j, G] = s.useState(null != r ? r : R.slice(0, 1)),
+                    [j, G] = s.useState(null != r ? r : N.slice(0, 1)),
                     F = s.useMemo(() => null == j ? [] : j.map(e => {
                         let {
                             premiumGuildSubscription: t
@@ -1208,14 +1208,14 @@
                         return (null == j ? void 0 : null === (e = j[0]) || void 0 === e ? void 0 : e.premiumGuildSubscription) != null
                     }, [j]),
                     k = () => {
-                        N("SUCCESS" === U), h.default.track(C.AnalyticEvents.MODAL_DISMISSED, {
+                        R("SUCCESS" === U), h.default.track(C.AnalyticEvents.MODAL_DISMISSED, {
                             type: C.AnalyticsSections.PREMIUM_GUILD_SUBSCRIBE_MODAL,
                             location_section: a
                         })
                     },
                     H = {
                         UNUSED_QUANTITY_SELECT: {
-                            body: () => (o(!(null == r && 0 === R.length), "Cannot provide no slots if there are no other available slots"), (0, l.jsxs)("div", {
+                            body: () => (o(!(null == r && 0 === N.length), "Cannot provide no slots if there are no other available slots"), (0, l.jsxs)("div", {
                                 className: T.quantitySelectorBody,
                                 children: [(0, l.jsx)(c.Heading, {
                                     variant: "heading-md/semibold",
@@ -1229,9 +1229,9 @@
                                     className: T.quantitySelectorWrapper,
                                     children: [(0, l.jsx)(_.default, {
                                         value: j.length,
-                                        onChange: e => G(R.slice(0, e)),
+                                        onChange: e => G(N.slice(0, e)),
                                         minValue: 1,
-                                        maxValue: R.length
+                                        maxValue: N.length
                                     }), (0, l.jsx)(c.Text, {
                                         className: T.quantitySelectorLabel,
                                         variant: "text-md/normal",
@@ -1241,7 +1241,7 @@
                             })),
                             footer: () => (0, l.jsxs)(c.ModalFooter, {
                                 children: [(0, l.jsx)(c.Button, {
-                                    onClick: () => P("CONFIRM"),
+                                    onClick: () => b("CONFIRM"),
                                     children: v.default.Messages.PREMIUM_GUILD_SUBSCRIBE_UNUSED_SLOTS_NEXT
                                 }), (0, l.jsx)(c.Button, {
                                     look: c.Button.Looks.LINK,
@@ -1254,27 +1254,27 @@
                         GUILD_SELECT: {
                             header: () => (0, l.jsx)(g.GuildSelectModalHeader, {
                                 isTransfer: V,
-                                query: x,
-                                setQuery: y
+                                query: y,
+                                setQuery: O
                             }),
                             bodyClass: T.selectContent,
                             body: () => (0, l.jsx)(g.GuildSelectModalBody, {
                                 onClose: k,
                                 onSelectGuild: e => {
-                                    B(e), P("CONFIRM")
+                                    B(e), b("CONFIRM")
                                 },
                                 isTransfer: V,
                                 selectedSlotGuilds: F,
-                                query: x
+                                query: y
                             })
                         },
                         CONFIRM: {
                             body() {
                                 if (null == w) return null;
-                                let e = j.filter(e => (0, I.isGuildBoostSlotCanceled)(e)).length,
+                                let e = j.filter(e => (0, m.isGuildBoostSlotCanceled)(e)).length,
                                     t = j.length,
                                     n = F.length;
-                                return V ? (0, l.jsx)(m.default.TransferBody, {
+                                return V ? (0, l.jsx)(I.default.TransferBody, {
                                     fromGuilds: F,
                                     toGuild: w,
                                     blurb: v.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_TRANSFER_BLURB.format({
@@ -1282,11 +1282,11 @@
                                         guildCount: n
                                     }),
                                     imageClass: T.transferConfirmImage,
-                                    error: D ? O : null,
-                                    onDismissError: () => b(!1),
+                                    error: D ? x : null,
+                                    onDismissError: () => P(!1),
                                     slotCount: t,
                                     canceledCount: e
-                                }) : (0, l.jsx)(m.default.ApplyBody, {
+                                }) : (0, l.jsx)(I.default.ApplyBody, {
                                     guild: w,
                                     blurb: v.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_BLURB,
                                     warning: v.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_COOLDOWN_WARNING.format({
@@ -1294,15 +1294,15 @@
                                         slotCount: t
                                     }),
                                     imageClass: T.confirmImage,
-                                    error: D ? O : null,
-                                    onDismissError: () => b(!1),
+                                    error: D ? x : null,
+                                    onDismissError: () => P(!1),
                                     slotCount: t,
                                     canceledCount: e
                                 })
                             },
                             footer() {
                                 let e = j.length,
-                                    t = "CONFIRM" === L[0] ? k : () => P(L[L.indexOf(U) - 1]),
+                                    t = "CONFIRM" === L[0] ? k : () => b(L[L.indexOf(U) - 1]),
                                     n = async () => {
                                         if (null != w && (null == j ? void 0 : j.length) !== 0) {
                                             o(!j.some(e => e.isOnCooldown()), "Cannot use a premium guild subscription slot while on cooldown");
@@ -1317,13 +1317,13 @@
                                                         id: t
                                                     } = e;
                                                     return t
-                                                })), P("SUCCESS")
+                                                })), b("SUCCESS")
                                             } catch (e) {
-                                                b(!0)
+                                                P(!0)
                                             }
                                         }
                                     };
-                                return (0, l.jsx)(m.default.Footer, {
+                                return (0, l.jsx)(I.default.Footer, {
                                     confirmation: V ? v.default.Messages.PREMIUM_GUILD_SUBSCRIBE_TRANSFER_CONFIRM_CONFIRMATION.format({
                                         slotCount: e
                                     }) : v.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_CONFIRMATION.format({
@@ -1401,8 +1401,8 @@
                 E = n("476263"),
                 _ = n("810567"),
                 h = n("427459"),
-                I = n("49111"),
-                m = n("782340"),
+                m = n("49111"),
+                I = n("782340"),
                 g = n("109396");
 
             function S(e) {
@@ -1416,11 +1416,11 @@
                     children: [(0, r.jsx)(o.Heading, {
                         className: g.selectHeader,
                         variant: "heading-md/semibold",
-                        children: t ? m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
+                        children: t ? I.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : I.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
                     }), (0, r.jsx)(_.default, {
                         size: _.default.Sizes.MEDIUM,
-                        placeholder: m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
-                        "aria-label": m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
+                        placeholder: I.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
+                        "aria-label": I.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
                         className: g.selectSearch,
                         query: i,
                         onChange: n,
@@ -1448,20 +1448,20 @@
                 });
 
                 function T() {
-                    i(), (0, u.popLayer)(), (0, c.transitionTo)(I.Routes.GUILD_DISCOVERY)
+                    i(), (0, u.popLayer)(), (0, c.transitionTo)(m.Routes.GUILD_DISCOVERY)
                 }
                 return (0, r.jsxs)(r.Fragment, {
                     children: [0 === C.length && (0, r.jsx)("div", {
                         className: g.emptyStateWrapper,
                         children: (0, r.jsx)(o.Text, {
                             variant: "text-md/normal",
-                            children: 0 === S.length ? m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_NON_GUILD_MEMBER.format({
+                            children: 0 === S.length ? I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_NON_GUILD_MEMBER.format({
                                 publicGuildDirectoryHook: (e, t) => (0, r.jsx)(o.Clickable, {
                                     onClick: T,
                                     tag: "a",
                                     children: e
                                 }, t)
-                            }) : m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_GUILD_NOT_FOUND
+                            }) : I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_GUILD_NOT_FOUND
                         })
                     }), C.map(e => (0, r.jsxs)(o.Clickable, {
                         className: g.selectGuild,
@@ -1488,7 +1488,7 @@
                             className: g.selectGuildPseudoCta,
                             color: "always-white",
                             variant: "text-sm/medium",
-                            children: t ? m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE : m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
+                            children: t ? I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE : I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
                         })]
                     }, e.id))]
                 })
@@ -1525,7 +1525,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return m
                 }
             });
             var r = n("872717"),
@@ -1647,7 +1647,7 @@
                     throw e
                 }
             };
-            var I = {
+            var m = {
                 fetchVerificationForm: f,
                 updateVerificationForm: p,
                 updateVerificationFormDescription: E,
@@ -1695,7 +1695,7 @@
                     return h
                 },
                 IN_APP_MEMBER_VERIFICATION_MODAL_KEY: function() {
-                    return I
+                    return m
                 }
             }), n("222007");
             var r, i = n("567054");
@@ -1712,7 +1712,7 @@
                 E = 1e3,
                 _ = 300,
                 h = "Membership Gating",
-                I = "in-app-member-verification";
+                m = "in-app-member-verification";
             (r || (r = {})).VERIFICATION_INFO = "VERIFICATION_INFO"
         },
         233322: function(e, t, n) {
@@ -1828,7 +1828,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 startImpersonating: function() {
-                    return m
+                    return I
                 },
                 updateImpersonating: function() {
                     return g
@@ -1860,9 +1860,9 @@
                 E = n("38654"),
                 _ = n("507950"),
                 h = n("49111"),
-                I = n("724210");
+                m = n("724210");
 
-            function m(e, t) {
+            function I(e, t) {
                 p.default.track(h.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
                     num_roles: Object.keys(t.roles).length,
                     ...(0, i.collectGuildAnalyticsMetadata)(e),
@@ -1900,7 +1900,7 @@
             function C(e) {
                 let t = d.default.getChannelId(e),
                     n = s.default.getChannel(t),
-                    r = null != t && (0, I.isStaticChannelRoute)(t);
+                    r = null != t && (0, m.isStaticChannelRoute)(t);
                 if (!r && !c.default.can(h.Permissions.VIEW_CHANNEL, n)) {
                     let t = a.default.getDefaultChannel(e);
                     null != t && (0, l.transitionTo)(h.Routes.CHANNEL(e, t.id))
@@ -2443,7 +2443,7 @@
                     return h
                 },
                 getItemUnitPriceWithDiscount: function() {
-                    return I
+                    return m
                 }
             }), n("222007");
             var r = n("884691"),
@@ -2590,7 +2590,7 @@
                 return E(e, t)
             }
 
-            function I(e) {
+            function m(e) {
                 let t = e.subscriptionPlanPrice;
                 return e.discounts.forEach(n => {
                     let r = n.amount / e.quantity;
@@ -2800,7 +2800,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return I
                 }
             }), n("424973");
             var r = n("917351"),
@@ -2842,7 +2842,7 @@
                     recentUses: e.recentUses.map(Number).filter(e => e > 0)
                 })), f.pendingUsages)
             }
-            class I extends l.default.PersistedStore {
+            class m extends l.default.PersistedStore {
                 initialize(e) {
                     this.waitFor(u.default), null != e && (f = e), this.syncWith([u.default], _), this.syncWith([o.default], h)
                 }
@@ -2856,8 +2856,8 @@
                     return p
                 }
             }
-            I.displayName = "StickersPersistedStore", I.persistKey = "StickersPersistedStoreV2";
-            var m = new I(s.default, {
+            m.displayName = "StickersPersistedStore", m.persistKey = "StickersPersistedStoreV2";
+            var I = new m(s.default, {
                 STICKER_TRACK_USAGE: e => {
                     let {
                         stickerIds: t
@@ -2911,44 +2911,6 @@
                 }]
             });
             var l = i
-        },
-        917219: function(e, t, n) {
-            "use strict";
-            var r, i, l, s;
-            n.r(t), n.d(t, {
-                VideoFilterType: function() {
-                    return r
-                },
-                DefaultVideoBackground: function() {
-                    return i
-                },
-                ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: function() {
-                    return a
-                },
-                DEFAULT_VIDEO_BACKGROUND_SORT: function() {
-                    return o
-                },
-                BLUR_BACKGROUND_OPTION: function() {
-                    return u
-                },
-                BACKGROUND_REPLACEMENT_SIZE: function() {
-                    return c
-                },
-                MAX_BACKGROUND_IMAGE_UPLOAD_FILESIZE_BYTES: function() {
-                    return d
-                }
-            }), n("808653"), (l = r || (r = {}))[l.BACKGROUND = 0] = "BACKGROUND", (s = i || (i = {}))[s.OPTION_1 = 0] = "OPTION_1", s[s.OPTION_2 = 1] = "OPTION_2", s[s.OPTION_3 = 2] = "OPTION_3", s[s.OPTION_4 = 3] = "OPTION_4", s[s.OPTION_7 = 7] = "OPTION_7", s[s.OPTION_8 = 8] = "OPTION_8", s[s.OPTION_9 = 9] = "OPTION_9", s[s.OPTION_10 = 10] = "OPTION_10";
-            let a = [7, 8, 9, 10],
-                o = [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, t, n) => ({
-                    ...e,
-                    [t]: n
-                }), {}),
-                u = "blur",
-                c = {
-                    width: 1280,
-                    height: 720
-                },
-                d = 10485760
         },
         517763: function(e, t, n) {
             "use strict";
@@ -3430,7 +3392,7 @@
                 E = n("474293"),
                 _ = n("580357"),
                 h = n("491088");
-            let I = {
+            let m = {
                     SMOL: "Smol",
                     MINI: "Mini",
                     SMALLER: "Smaller",
@@ -3440,25 +3402,25 @@
                     LARGER: "Larger",
                     XLARGE: "XLarge"
                 },
-                m = {
-                    [I.SMOL]: 16,
-                    [I.MINI]: 20,
-                    [I.SMALLER]: 24,
-                    [I.SMALL]: 30,
-                    [I.MEDIUM]: 40,
-                    [I.LARGE]: 50,
-                    [I.LARGER]: 64,
-                    [I.XLARGE]: 100
+                I = {
+                    [m.SMOL]: 16,
+                    [m.MINI]: 20,
+                    [m.SMALLER]: 24,
+                    [m.SMALL]: 30,
+                    [m.MEDIUM]: 40,
+                    [m.LARGE]: 50,
+                    [m.LARGER]: 64,
+                    [m.XLARGE]: 100
                 },
                 g = {
-                    [I.SMOL]: [10, 10, 8, 6, 6, 4],
-                    [I.MINI]: [12, 12, 10, 10, 8, 6, 4],
-                    [I.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
-                    [I.SMALL]: [14, 14, 12, 12, 10, 8, 6],
-                    [I.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
-                    [I.LARGE]: [18, 18, 16, 16, 14, 12, 10],
-                    [I.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-                    [I.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
+                    [m.SMOL]: [10, 10, 8, 6, 6, 4],
+                    [m.MINI]: [12, 12, 10, 10, 8, 6, 4],
+                    [m.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
+                    [m.SMALL]: [14, 14, 12, 12, 10, 8, 6],
+                    [m.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
+                    [m.LARGE]: [18, 18, 16, 16, 14, 12, 10],
+                    [m.LARGER]: [19, 19, 17, 17, 15, 13, 11],
+                    [m.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
                 };
             class S extends i.PureComponent {
                 renderAcronym() {
@@ -3496,15 +3458,15 @@
                         showTooltip: f,
                         tooltipPosition: p,
                         onClick: _,
-                        to: I,
-                        badgeStrokeColor: m,
+                        to: m,
+                        badgeStrokeColor: I,
                         animate: S,
                         tabIndex: C,
                         iconSrc: v,
                         "aria-hidden": T,
                         ...A
-                    } = this.props, N = g[o], R = null != _ ? c.Clickable : "div";
-                    return (0, r.jsxs)(R, {
+                    } = this.props, R = g[o], N = null != _ ? c.Clickable : "div";
+                    return (0, r.jsxs)(N, {
                         className: s(h.icon, i, (0, E.getClass)(h, "iconSize", o), {
                             [null !== (e = (0, E.getClass)(h, "iconActive", o)) && void 0 !== e ? e : ""]: a,
                             [h.iconInactive]: !a,
@@ -3512,10 +3474,10 @@
                         }),
                         "aria-hidden": T,
                         style: null == n.icon ? {
-                            fontSize: (null !== (t = N[n.acronym.length]) && void 0 !== t ? t : N[N.length - 1]) * d,
+                            fontSize: (null !== (t = R[n.acronym.length]) && void 0 !== t ? t : R[R.length - 1]) * d,
                             ...u
                         } : u,
-                        onClick: null != I || null == _ ? void 0 : _,
+                        onClick: null != m || null == _ ? void 0 : _,
                         tabIndex: C,
                         ...A,
                         children: [this.renderAcronym(), this.renderBadge()]
@@ -3569,7 +3531,7 @@
                 return {
                     style: {
                         ...i,
-                        backgroundImage: (0, p.makeCssUrlString)(null != r ? r : t.getIconURL(m[l], n && f.default.isFocused()))
+                        backgroundImage: (0, p.makeCssUrlString)(null != r ? r : t.getIconURL(I[l], n && f.default.isFocused()))
                     }
                 }
             })((0, d.backgroundImagePreloader)(e => (0, r.jsx)(S, {
@@ -3582,8 +3544,8 @@
                     })
                 }
             }
-            v.Sizes = I, v.defaultProps = {
-                size: I.LARGE,
+            v.Sizes = m, v.defaultProps = {
+                size: m.LARGE,
                 textScale: 1,
                 showBadge: !1,
                 showTooltip: !1,
@@ -3604,7 +3566,7 @@
                     return v
                 },
                 PremiumPaymentAnimationTier2: function() {
-                    return R
+                    return N
                 },
                 PremiumPaymentGuildAnimation: function() {
                     return U
@@ -3616,8 +3578,8 @@
                 E = n.n(p),
                 _ = n("907002"),
                 h = n("458960"),
-                I = n("273108"),
-                m = n("635233");
+                m = n("273108"),
+                I = n("635233");
             (a = r || (r = {})).NORMAL = "normal", a.SPEED_START = "speed_start", a.SPEED_LOOP = "speed_loop", a.FINISH = "finish", a.IDLE = "idle";
             let g = {
                 normal: {
@@ -3670,8 +3632,8 @@
                         pause: i,
                         pauseWhileUnfocused: l
                     } = this.props;
-                    return (0, d.jsx)(I.default, {
-                        className: E(m.sequencedAnimation, e),
+                    return (0, d.jsx)(m.default, {
+                        className: E(I.sequencedAnimation, e),
                         importData: this.importDefault,
                         nextScene: i ? "idle" : t,
                         sceneSegments: g,
@@ -3734,8 +3696,8 @@
                         pause: i,
                         pauseWhileUnfocused: l
                     } = this.props;
-                    return (0, d.jsx)(I.default, {
-                        className: E(m.sequencedAnimation, e),
+                    return (0, d.jsx)(m.default, {
+                        className: E(I.sequencedAnimation, e),
                         importData: this.importDefault,
                         nextScene: i ? "idle" : t,
                         sceneSegments: C,
@@ -3802,7 +3764,7 @@
                         className: e
                     } = this.props;
                     return (0, d.jsxs)("div", {
-                        className: m.panningAnimation,
+                        className: I.panningAnimation,
                         children: [(0, d.jsx)(h.default.div, {
                             className: e,
                             style: this.getStyle(!1)
@@ -3813,7 +3775,7 @@
                     })
                 }
             }
-            let N = Object.freeze({
+            let R = Object.freeze({
                 IDLE_ENTRY: {
                     toValue: 1,
                     duration: 1500
@@ -3834,19 +3796,19 @@
                     delay: 1e3
                 }
             });
-            class R extends f.PureComponent {
+            class N extends f.PureComponent {
                 static getNextScene(e) {
                     switch (e) {
-                        case R.Scenes.IDLE_ENTRY:
-                            return R.Scenes.IDLE_LOOP;
-                        case R.Scenes.BOOST_START:
-                            return R.Scenes.BOOST_LOOP;
-                        case R.Scenes.BOOST_END:
-                            return R.Scenes.VICTORY;
-                        case R.Scenes.VICTORY:
-                            return R.Scenes.IDLE_ENTRY;
-                        case R.Scenes.ERROR:
-                            return R.Scenes.IDLE_LOOP;
+                        case N.Scenes.IDLE_ENTRY:
+                            return N.Scenes.IDLE_LOOP;
+                        case N.Scenes.BOOST_START:
+                            return N.Scenes.BOOST_LOOP;
+                        case N.Scenes.BOOST_END:
+                            return N.Scenes.VICTORY;
+                        case N.Scenes.VICTORY:
+                            return N.Scenes.IDLE_ENTRY;
+                        case N.Scenes.ERROR:
+                            return N.Scenes.IDLE_LOOP;
                         default:
                             return e
                     }
@@ -3874,23 +3836,23 @@
                     })]).start()
                 }
                 animateIdleEntry() {
-                    this.animateEntry(N.IDLE_ENTRY)
+                    this.animateEntry(R.IDLE_ENTRY)
                 }
                 animateError() {
-                    this.animateEntry(N.ERROR)
+                    this.animateEntry(R.ERROR)
                 }
                 animateIdleLoop() {
                     this.animateIdleLoopBackground(), this.animateIdleLoopForeground()
                 }
                 animateBoostStart() {
                     h.default.parallel([h.default.timing(this.foregroundAnimation.y, {
-                        toValue: N.BOOST_START.toValue,
-                        duration: N.BOOST_START.duration,
-                        delay: N.BOOST_START.delay
+                        toValue: R.BOOST_START.toValue,
+                        duration: R.BOOST_START.duration,
+                        delay: R.BOOST_START.delay
                     }), h.default.timing(this.backgroundAnimation.y, {
-                        toValue: N.BOOST_START.toValue,
-                        duration: 1.2 * N.BOOST_START.duration,
-                        delay: N.BOOST_START.delay
+                        toValue: R.BOOST_START.toValue,
+                        duration: 1.2 * R.BOOST_START.duration,
+                        delay: R.BOOST_START.delay
                     })]).start()
                 }
                 render() {
@@ -3901,26 +3863,26 @@
                         onSceneComplete: r
                     } = this.props;
                     return (0, d.jsxs)("div", {
-                        className: E(m.tier2Animation, e),
+                        className: E(I.tier2Animation, e),
                         children: [n ? (0, d.jsx)(d.Fragment, {
                             children: (0, d.jsxs)("div", {
-                                className: m.panningAnimation,
+                                className: I.panningAnimation,
                                 children: [(0, d.jsx)("div", {
-                                    className: m.tier2Background
+                                    className: I.tier2Background
                                 }), (0, d.jsx)("div", {
-                                    className: m.tier2Foreground
+                                    className: I.tier2Foreground
                                 })]
                             })
                         }) : (0, d.jsxs)(d.Fragment, {
                             children: [(0, d.jsx)(A, {
-                                className: m.tier2Background,
+                                className: I.tier2Background,
                                 animation: this.backgroundAnimation
                             }), (0, d.jsx)(A, {
-                                className: m.tier2Foreground,
+                                className: I.tier2Foreground,
                                 animation: this.foregroundAnimation
                             })]
-                        }), (0, d.jsx)(I.default, {
-                            className: m.sequencedAnimation,
+                        }), (0, d.jsx)(m.default, {
+                            className: I.sequencedAnimation,
                             importData: this.importData,
                             nextScene: n ? "idle_loop" : t,
                             sceneSegments: T,
@@ -3940,15 +3902,15 @@
                         y: 0
                     }), this.didUnmount = !1, this.animateIdleLoopBackground = () => {
                         !this.didUnmount && (this.backgroundAnimation.x.setValue(0), h.default.timing(this.backgroundAnimation.x, {
-                            toValue: N.IDLE_LOOP.toValue,
-                            duration: 1.2 * N.IDLE_LOOP.duration,
+                            toValue: R.IDLE_LOOP.toValue,
+                            duration: 1.2 * R.IDLE_LOOP.duration,
                             easing: h.default.Easing.linear
                         }).start(this.animateIdleLoopBackground))
                     }, this.animateIdleLoopForeground = () => {
                         !this.didUnmount && (this.foregroundAnimation.x.setValue(0), h.default.timing(this.foregroundAnimation.x, {
-                            toValue: N.IDLE_LOOP.toValue,
-                            duration: N.IDLE_LOOP.duration,
-                            easing: N.IDLE_LOOP.easing
+                            toValue: R.IDLE_LOOP.toValue,
+                            duration: R.IDLE_LOOP.duration,
+                            easing: R.IDLE_LOOP.easing
                         }).start(this.animateIdleLoopForeground))
                     }, this.handleScenePlay = e => {
                         switch (e) {
@@ -3968,7 +3930,7 @@
                     }
                 }
             }
-            R.Scenes = l, (c = s || (s = {})).ENTRY = "entry", c.IDLE = "idle", c.STARS = "stars", c.ERROR = "error", c.SUCCESS = "success";
+            N.Scenes = l, (c = s || (s = {})).ENTRY = "entry", c.IDLE = "idle", c.STARS = "stars", c.ERROR = "error", c.SUCCESS = "success";
             let L = {
                     entry: {
                         BEG: 0,
@@ -3997,7 +3959,7 @@
                     WHITE: "#ebf0f7",
                     PINK: "#fa6ef6"
                 }),
-                O = [{
+                x = [{
                     left: 29,
                     top: 100,
                     color: M.WHITE
@@ -4022,7 +3984,7 @@
                     top: 97,
                     color: M.PINK
                 }],
-                x = Object.freeze({
+                y = Object.freeze({
                     SCALE_INITIAL: 0,
                     SCALE_MIDDLE: 1,
                     SCALE_END: 0,
@@ -4040,16 +4002,16 @@
                     EASING_END: h.default.Easing.bezier(0, -.01, .99, 0)
                 });
 
-            function y(e) {
+            function O(e) {
                 let {
                     animate: t
-                } = e, [n, r] = f.useState(0), i = (0, _.useSprings)(O.length, O.map((e, i) => {
-                    let l = i > 0 ? x.DELAY_STAGGER * i + Math.random() * (x.DELAY_MAX - x.DELAY_MIN) + x.DELAY_MIN : 0,
-                        s = Math.random() * (x.SIZE_MAX - x.SIZE_MIN) + x.SIZE_MIN;
+                } = e, [n, r] = f.useState(0), i = (0, _.useSprings)(x.length, x.map((e, i) => {
+                    let l = i > 0 ? y.DELAY_STAGGER * i + Math.random() * (y.DELAY_MAX - y.DELAY_MIN) + y.DELAY_MIN : 0,
+                        s = Math.random() * (y.SIZE_MAX - y.SIZE_MIN) + y.SIZE_MIN;
                     return {
                         from: {
-                            scale: x.SCALE_INITIAL,
-                            rotate: x.ROTATE_INITIAL,
+                            scale: y.SCALE_INITIAL,
+                            rotate: y.ROTATE_INITIAL,
                             top: e.top,
                             left: e.left,
                             width: s,
@@ -4057,37 +4019,37 @@
                         },
                         to: async e => {
                             t ? (await e({
-                                scale: x.SCALE_MIDDLE,
-                                rotate: x.ROTATE_MIDDLE,
+                                scale: y.SCALE_MIDDLE,
+                                rotate: y.ROTATE_MIDDLE,
                                 delay: l,
                                 config: {
-                                    duration: x.DURATION_MIDDLE,
-                                    easing: x.EASING_MIDDLE
+                                    duration: y.DURATION_MIDDLE,
+                                    easing: y.EASING_MIDDLE
                                 }
                             }), await e({
-                                scale: x.SCALE_END,
-                                rotate: x.ROTATE_END,
+                                scale: y.SCALE_END,
+                                rotate: y.ROTATE_END,
                                 config: {
-                                    duration: x.DURATION_END,
-                                    easing: x.EASING_END
+                                    duration: y.DURATION_END,
+                                    easing: y.EASING_END
                                 }
                             }), await e({
-                                scale: x.SCALE_INITIAL,
-                                rotate: x.ROTATE_INITIAL,
+                                scale: y.SCALE_INITIAL,
+                                rotate: y.ROTATE_INITIAL,
                                 immediate: !0
-                            }), i === O.length - 1 && r(n + 1)) : await e({
-                                scale: x.SCALE_INITIAL,
-                                rotate: x.ROTATE_INITIAL
+                            }), i === x.length - 1 && r(n + 1)) : await e({
+                                scale: y.SCALE_INITIAL,
+                                rotate: y.ROTATE_INITIAL
                             })
                         }
                     }
                 }));
                 return (0, d.jsx)(d.Fragment, {
                     children: i.map((e, t) => {
-                        let n = O[t];
+                        let n = x[t];
                         return (0, d.jsx)(_.animated.svg, {
                             style: e,
-                            className: m.guildStar,
+                            className: I.guildStar,
                             xmlns: "http://www.w3.org/2000/svg",
                             viewBox: "0 0 12.14 12.24",
                             children: (0, d.jsx)("path", {
@@ -4127,9 +4089,9 @@
                         pauseWhileUnfocused: l
                     } = this.props;
                     return (0, d.jsxs)("div", {
-                        className: E(m.guildWrapper, e),
-                        children: [(0, d.jsx)(I.default, {
-                            className: m.guildBackground,
+                        className: E(I.guildWrapper, e),
+                        children: [(0, d.jsx)(m.default, {
+                            className: I.guildBackground,
                             importData: this.importData,
                             nextScene: n ? "idle" : t,
                             sceneSegments: L,
@@ -4137,7 +4099,7 @@
                             onSceneComplete: i,
                             pauseWhileUnfocused: l,
                             pause: n
-                        }), (0, d.jsx)(y, {
+                        }), (0, d.jsx)(O, {
                             animate: !n && "stars" === t
                         })]
                     })
@@ -4512,13 +4474,13 @@
                         color: E = "currentColor",
                         transition: _ = f.transition,
                         className: h,
-                        foreground: I,
-                        expanded: m,
+                        foreground: m,
+                        expanded: I,
                         ...g
                     } = e, {
                         enabled: S
                     } = (0, c.useRedesignIconContext)(), C = t;
-                    if (!0 === m ? C = p.DOWN : !1 === m && (C = p.RIGHT), S) {
+                    if (!0 === I ? C = p.DOWN : !1 === I && (C = p.RIGHT), S) {
                         let e = {
                             [p.UP]: u.ChevronSmallUpIcon,
                             [p.DOWN]: s.ChevronSmallDownIcon,
@@ -4531,7 +4493,7 @@
                             width: n,
                             height: i,
                             color: E,
-                            colorClass: I
+                            colorClass: m
                         })
                     }
                     return (0, r.jsx)("svg", {
@@ -4541,7 +4503,7 @@
                         viewBox: "0 0 24 24",
                         ...(0, d.default)(g),
                         children: (0, r.jsx)("path", {
-                            className: I,
+                            className: m,
                             fill: "none",
                             stroke: E,
                             strokeWidth: "2",

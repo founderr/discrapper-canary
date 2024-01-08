@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["59729"], {
+    ["25923"], {
         69448: function(e, t, n) {
             "use strict";
             e.exports = n.p + "f6da6e7ed1d57e445d0e.svg"
@@ -19784,20 +19784,6 @@
                         return null == e ? "" : e.split(".")[0]
                     }
                 }
-        },
-        360782: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return a
-                }
-            });
-            var l = n("860957");
-
-            function a() {
-                let e = l.default.getFocusedPID();
-                return null != e && (l.default.isReady(e) || l.default.isCrashed(e)) ? e : null
-            }
         }
     }
 ]);

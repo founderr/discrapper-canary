@@ -1659,7 +1659,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "257806"
+                        buildNumber: "257808"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -20605,7 +20605,9 @@
                     isPressed: !1
                 },
                 [g.GlobalKeybindActions.TOGGLE_MUTE]: {
-                    onTrigger: () => s.default.toggleSelfMute(),
+                    onTrigger: () => s.default.toggleSelfMute({
+                        usedKeybind: !0
+                    }),
                     keyEvents: {
                         keyup: !0,
                         keydown: !1
