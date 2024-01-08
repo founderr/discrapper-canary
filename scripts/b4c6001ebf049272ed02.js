@@ -157,10 +157,10 @@
             "use strict";
             l.r(t), l.d(t, {
                 GuildEventShareButton: function() {
-                    return N
+                    return v
                 },
                 GuildEventInterestedButton: function() {
-                    return v
+                    return N
                 },
                 GuildEventLurkerInterestedButton: function() {
                     return g
@@ -198,7 +198,7 @@
                 })
             }
 
-            function N(e) {
+            function v(e) {
                 let {
                     onInviteClick: t,
                     canInvite: l,
@@ -207,7 +207,7 @@
                 s.useEffect(() => () => {
                     d.stop()
                 }, []);
-                let N = e => {
+                let v = e => {
                     null != t && t(e), C(!0), d.start(1e3, () => C(!1))
                 };
                 return null == t ? null : (0, n.jsx)(i.Tooltip, {
@@ -234,7 +234,7 @@
                         size: i.Button.Sizes.SMALL,
                         disabled: E,
                         look: E ? i.Button.Looks.OUTLINED : i.Button.Looks.FILLED,
-                        onClick: N,
+                        onClick: v,
                         children: [E ? (0, n.jsx)(o.default, {
                             width: 16,
                             height: 16
@@ -246,7 +246,7 @@
                 })
             }
 
-            function v(e) {
+            function N(e) {
                 let {
                     isUserRsvped: t,
                     isUserLurking: l,
@@ -278,7 +278,7 @@
                     position: "top",
                     tooltipClassName: h.tooltips,
                     "aria-label": f.default.Messages.SHARE_LINK,
-                    children: t => (0, n.jsx)(v, {
+                    children: t => (0, n.jsx)(N, {
                         ...t,
                         ...e
                     })
@@ -319,7 +319,7 @@
                                 className: h.icon
                             })
                         })
-                    }) : null, (0, n.jsx)(N, {
+                    }) : null, (0, n.jsx)(v, {
                         onInviteClick: I,
                         canInvite: u,
                         isChannelPublic: a
@@ -341,7 +341,7 @@
                     }) : null, l && !t && (0, n.jsx)(g, {
                         isUserRsvped: s,
                         isUserLurking: l
-                    }), !l && !t && null != S && (0, n.jsx)(v, {
+                    }), !l && !t && null != S && (0, n.jsx)(N, {
                         isUserRsvped: s,
                         isUserLurking: l,
                         onRsvpClick: S
@@ -384,8 +384,8 @@
                 f = l("397680"),
                 h = l("393745"),
                 C = l("745049"),
-                N = l("782340"),
-                v = l("157624");
+                v = l("782340"),
+                N = l("157624");
 
             function g(e) {
                 let {
@@ -398,7 +398,7 @@
                 if (null == I) return null;
                 let {
                     is_canceled: T = !1
-                } = null != _ ? _ : {}, M = (null == _ ? void 0 : _.scheduled_start_time) != null ? new Date(null == _ ? void 0 : _.scheduled_start_time) : s, p = e => {
+                } = null != _ ? _ : {}, p = (null == _ ? void 0 : _.scheduled_start_time) != null ? new Date(null == _ ? void 0 : _.scheduled_start_time) : s, R = e => {
                     e.stopPropagation(), null != m && (0, o.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
@@ -414,40 +414,40 @@
                     })
                 };
                 return (0, n.jsxs)(a.ClickableContainer, {
-                    className: u(v.container, {
-                        [v.canceled]: T,
-                        [v.clickable]: null != S,
-                        [v.active]: L
+                    className: u(N.container, {
+                        [N.canceled]: T,
+                        [N.clickable]: null != S,
+                        [N.active]: L
                     }),
                     onClick: e => {
                         e.stopPropagation(), !T && (null == S || S(t))
                     },
-                    onContextMenu: p,
+                    onContextMenu: R,
                     "aria-label": "",
                     children: [(0, n.jsx)(h.GuildEventTimeStatus, {
-                        startTime: M.toISOString(),
+                        startTime: p.toISOString(),
                         status: T ? C.GuildScheduledEventStatus.CANCELED : C.GuildScheduledEventStatus.SCHEDULED,
                         eventType: I.entity_type,
                         guildEventId: I.id,
                         recurrenceId: t,
-                        className: v.timeStatus
+                        className: N.timeStatus
                     }), T && (0, n.jsx)(a.Text, {
                         variant: "text-sm/semibold",
                         color: "text-danger",
-                        className: v.canceledStatus,
-                        children: N.default.Messages.EVENT_CANCELED
+                        className: N.canceledStatus,
+                        children: v.default.Messages.EVENT_CANCELED
                     }), (0, n.jsx)(a.Tooltip, {
-                        text: N.default.Messages.MORE,
+                        text: v.default.Messages.MORE,
                         position: "top",
-                        "aria-label": N.default.Messages.EDIT,
+                        "aria-label": v.default.Messages.EDIT,
                         children: e => (0, n.jsx)(a.Clickable, {
                             ...e,
-                            onClick: p,
-                            className: v.iconButton,
+                            onClick: R,
+                            className: N.iconButton,
                             children: (0, n.jsx)(c.default, {
                                 width: 20,
                                 height: 20,
-                                className: v.icon
+                                className: N.icon
                             })
                         })
                     })]
@@ -458,7 +458,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return v
+                    return N
                 }
             }), l("222007");
             var n = l("37983"),
@@ -474,14 +474,14 @@
                 f = l("822516"),
                 h = l("123030"),
                 C = l("782340"),
-                N = l("849882");
+                v = l("849882");
 
-            function v(e) {
+            function N(e) {
                 let {
                     guildId: t,
                     recurrenceRule: l,
                     guildEventId: u,
-                    onRecurrenceClick: v,
+                    onRecurrenceClick: N,
                     hideScroller: g = !1,
                     activeRecurrenceId: S
                 } = e, L = (0, o.useStateFromStores)([E.default], () => E.default.getGuildScheduledEvent(u)), [I, _] = s.useState(null != l && null != L ? (0, f.generateNextRecurrences)(4, (0, f.getRRule)(l), new Date(L.scheduled_start_time)) : []);
@@ -500,22 +500,22 @@
                     return null != s && !(s > e) && !0
                 }, [l, I, null == L ? void 0 : L.scheduled_start_time]);
                 return (0, n.jsxs)("div", {
-                    className: N.recurrences,
+                    className: v.recurrences,
                     children: [(0, n.jsx)(r.Heading, {
                         variant: "heading-sm/medium",
-                        className: N.heading,
+                        className: v.heading,
                         children: C.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS
                     }), (0, n.jsxs)(r.Scroller, {
-                        className: i(N.scroller, {
-                            [N.showScroller]: !g
+                        className: i(v.scroller, {
+                            [v.showScroller]: !g
                         }),
                         children: [I.map(e => {
-                            let t = a.default.fromTimestamp(Math.floor(e.getTime() / d.default.Millis.SECOND) * d.default.Millis.SECOND);
+                            let t = a.default.fromTimestamp(e.getTime());
                             return (0, n.jsx)(h.default, {
                                 recurrenceId: t,
                                 originalScheduledStartTime: e,
                                 guildEventId: u,
-                                onClick: v,
+                                onClick: N,
                                 isActive: t === S
                             }, t)
                         }), m && (0, n.jsx)(r.Button, {
@@ -529,7 +529,7 @@
                             look: r.Button.Looks.LINK,
                             size: r.Button.Sizes.MIN,
                             color: r.Button.Colors.LINK,
-                            className: N.button,
+                            className: v.button,
                             children: C.default.Messages.GUILD_SCHEDULED_EVENT_VIEW_MORE_RECURRENCES
                         })]
                     })]
@@ -562,8 +562,8 @@
                     isDetailsView: f = !1,
                     isMember: h,
                     onJoinGuildClick: C,
-                    guildName: N,
-                    onInviteClick: v,
+                    guildName: v,
+                    onInviteClick: N,
                     canInvite: g,
                     isChannelPublic: S
                 } = e;
@@ -584,7 +584,7 @@
                             })
                         })
                     }) : null, h && (0, n.jsx)(i.GuildEventShareButton, {
-                        onInviteClick: v,
+                        onInviteClick: N,
                         canInvite: g,
                         isChannelPublic: S
                     }), l && !t && (0, n.jsx)(i.GuildEventLurkerInterestedButton, {
@@ -608,7 +608,7 @@
                         onClick: C,
                         color: s.Button.Colors.GREEN,
                         children: a.default.Messages.HUB_EVENTS_JOIN_GUILD.format({
-                            guildName: N
+                            guildName: v
                         })
                     })]
                 })
