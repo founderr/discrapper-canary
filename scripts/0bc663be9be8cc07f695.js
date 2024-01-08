@@ -3110,7 +3110,7 @@
                     })
                 }, [e]), (0, a.jsxs)("div", {
                     ref: s,
-                    className: i(N.container, (0, r.match)(l).with(_.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => N.shopForAllWinterBackground).otherwise(() => C ? N.shopForAllBackgroundImage : void 0)),
+                    className: i(N.container, (0, r.match)(l).with(_.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => N.shopForAllWinterBackground).with(_.CollectiblesShopMarketingVariants.MONSTER_DROP, () => N.shopForAllBackgroundImage).otherwise(() => C ? N.shopForAllBackgroundImage : void 0)),
                     children: [(0, a.jsx)(O, {
                         variation: l
                     }), (0, a.jsx)(d.Button, {
@@ -10201,7 +10201,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "b8baa1f030c08470a5725bfeab0d0f61823569f4", e.substring(0, 7)),
+                    S = (e = "bd281355e3d2df375cfa5abdff3508939e038fbd", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     m = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10214,7 +10214,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "257893", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "257908", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
