@@ -7,7 +7,7 @@
                     return A
                 },
                 default: function() {
-                    return S
+                    return T
                 }
             }), n("222007");
             var a = n("37983");
@@ -44,7 +44,7 @@
                     value: N.MuteUntilSeconds.ALWAYS,
                     label: _.default.Messages.MUTE_DURATION_ALWAYS
                 }],
-                T = e => {
+                S = e => {
                     let t = e > 0 ? r().add(e, "second").toISOString() : null;
                     return {
                         muted: !0,
@@ -55,10 +55,10 @@
                     }
                 };
 
-            function S(e, t) {
+            function T(e, t) {
                 let [n, i] = (0, u.useStateFromStoresArray)([f.default], () => [f.default.isChannelMuted(e.guild_id, e.id), f.default.getChannelMuteConfig(e.guild_id, e.id)]), r = (0, d.useMutedUntilText)(i), N = (0, c.default)(e, !0);
 
-                function S(t) {
+                function T(t) {
                     t && e.type === C.ChannelTypes.GUILD_CATEGORY && (0, l.categoryCollapse)(e.id), o.default.updateChannelOverrideSettings(e.guild_id, e.id, {
                         muted: t
                     }, E.NotificationLabel.muted(t))
@@ -86,11 +86,11 @@
                     id: "unmute-channel",
                     label: p,
                     subtext: r,
-                    action: () => S(!1)
+                    action: () => T(!1)
                 }) : (0, a.jsx)(s.MenuItem, {
                     id: "mute-channel",
                     label: v,
-                    action: () => S(!0),
+                    action: () => T(!0),
                     children: A().map(n => {
                         let {
                             value: i,
@@ -101,7 +101,7 @@
                             label: r,
                             action: () => (function(n) {
                                 e.type === C.ChannelTypes.GUILD_CATEGORY && (0, l.categoryCollapse)(e.id);
-                                let a = T(n);
+                                let a = S(n);
                                 o.default.updateChannelOverrideSettings(e.guild_id, e.id, a, E.NotificationLabels.Muted, t)
                             })(i)
                         }, i)
@@ -131,10 +131,10 @@
                     return A
                 },
                 updateFavoriteChannelParent: function() {
-                    return T
+                    return S
                 },
                 toggleFavoriteServerMuted: function() {
-                    return S
+                    return T
                 }
             }), n("222007");
             var a = n("249654"),
@@ -222,13 +222,13 @@
                 }, r.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
-            function T(e, t) {
+            function S(e, t) {
                 r.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
                     n.favoriteChannels[e].parentId = null != t ? t : "0"
                 }, r.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
-            function S() {
+            function T() {
                 r.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
                     e.muted = !e.muted
                 }, r.UserSettingsDelay.INFREQUENT_USER_ACTION)
@@ -237,17 +237,20 @@
         986373: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                useFavorite: function() {
-                    return E
-                },
-                useFavoritesCategories: function() {
+                useCanFavoriteChannel: function() {
                     return c
                 },
-                useFavoritesGuildSelected: function() {
+                useFavorite: function() {
                     return C
                 },
-                useFavoriteAdded: function() {
+                useFavoritesCategories: function() {
                     return N
+                },
+                useFavoritesGuildSelected: function() {
+                    return _
+                },
+                useFavoriteAdded: function() {
+                    return A
                 }
             }), n("424973"), n("222007");
             var a = n("884691"),
@@ -256,33 +259,42 @@
             n("42203");
             var u = n("923959"),
                 s = n("162771"),
-                l = n("379881"),
-                o = n("498139"),
-                d = n("136569"),
-                f = n("49111");
+                l = n("697218"),
+                o = n("379881"),
+                d = n("498139"),
+                f = n("136569"),
+                E = n("49111");
 
-            function E(e) {
-                let t = (0, r.useStateFromStores)([l.default], () => l.default.getFavorite(e));
+            function c(e) {
+                let {
+                    favoritesEnabled: t,
+                    isFavoritesPerk: n
+                } = (0, d.useFavoritesServerExperiment)("useCanFavoriteChannel"), a = (0, r.useStateFromStores)([o.default], () => o.default.isFavorite(e.id)), i = (0, r.useStateFromStores)([l.default], () => l.default.getCurrentUser()), u = e.isDM() || e.isThread(), s = !u || n && (null == i ? void 0 : i.isStaff()) === !0;
+                return t && !__OVERLAY__ && !a && s
+            }
+
+            function C(e) {
+                let t = (0, r.useStateFromStores)([o.default], () => o.default.getFavorite(e));
                 return t
             }
 
-            function c() {
-                let e = (0, r.useStateFromStores)([u.default], () => u.default.getChannels(f.FAVORITES))[i.ChannelTypes.GUILD_CATEGORY];
+            function N() {
+                let e = (0, r.useStateFromStores)([u.default], () => u.default.getChannels(E.FAVORITES))[i.ChannelTypes.GUILD_CATEGORY];
                 return e.map(e => ({
                     id: "null" === e.channel.id ? null : e.channel.id,
                     name: e.channel.name
                 }))
             }
 
-            function C() {
+            function _() {
                 let e = (0, r.useStateFromStores)([s.default], () => s.default.getGuildId());
-                return e === f.FAVORITES
+                return e === E.FAVORITES
             }
 
-            function N() {
+            function A() {
                 let {
                     isFavoritesPerk: e
-                } = (0, o.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, d.useFavoritesTooltipStore)(), n = a.useCallback(() => {
+                } = (0, d.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, f.useFavoritesTooltipStore)(), n = a.useCallback(() => {
                     e && t.notifyFavoriteAdded()
                 }, [t, e]), i = a.useCallback(() => {
                     e && t.clearFavoriteAdded()

@@ -125,8 +125,8 @@
                     availableTags: g,
                     defaultSortOrder: N,
                     defaultForumLayout: m,
-                    iconEmoji: A,
-                    themeColor: M
+                    iconEmoji: M,
+                    themeColor: A
                 } = e;
                 l.default.dispatch({
                     type: "CHANNEL_SETTINGS_UPDATE",
@@ -150,8 +150,8 @@
                     availableTags: g,
                     defaultSortOrder: N,
                     defaultForumLayout: m,
-                    iconEmoji: A,
-                    themeColor: M
+                    iconEmoji: M,
+                    themeColor: A
                 })
             }
             async function E(e, t) {
@@ -170,8 +170,8 @@
                     defaultAutoArchiveDuration: g,
                     template: N,
                     defaultReactionEmoji: m,
-                    rtcRegion: A,
-                    videoQualityMode: M,
+                    rtcRegion: M,
+                    videoQualityMode: A,
                     autoArchiveDuration: I,
                     locked: v,
                     invitable: p,
@@ -199,8 +199,8 @@
                         default_thread_rate_limit_per_user: C,
                         default_auto_archive_duration: g,
                         template: N,
-                        rtc_region: A,
-                        video_quality_mode: M,
+                        rtc_region: M,
+                        video_quality_mode: A,
                         auto_archive_duration: I,
                         locked: v,
                         invitable: p,
@@ -500,8 +500,8 @@
                 g = n("400501"),
                 N = n("542640"),
                 m = n("255228"),
-                A = n("772371"),
-                M = n("604656"),
+                M = n("772371"),
+                A = n("604656"),
                 I = n("782340"),
                 v = (0, u.default)(function(e) {
                     let {
@@ -510,7 +510,7 @@
                     } = e, u = (0, f.default)(t), r = (0, _.default)(t), v = (0, m.default)(t), p = (0, o.default)(t), O = (0, h.default)(t), U = (0, c.default)(t), F = (0, s.default)({
                         id: t.id,
                         label: I.default.Messages.COPY_ID_THREAD
-                    }), L = (0, T.default)(t, "Context Menu"), R = (0, C.default)(t), G = (0, A.default)(t), y = (0, g.default)(t), D = (0, N.default)(t.id), b = (0, S.default)(t), P = (0, M.default)(t), x = (0, E.default)(t, {
+                    }), L = (0, T.default)(t, "Context Menu"), R = (0, C.default)(t), G = (0, M.default)(t), y = (0, g.default)(t), D = (0, N.default)(t.id), b = (0, S.default)(t), P = (0, A.default)(t), x = (0, E.default)(t, {
                         hoist: !0
                     }), H = (0, d.useAddToFavoritesItem)(t), j = (0, d.useRemoveFromFavoritesItem)(t);
                     return (0, a.jsxs)(l.Menu, {
@@ -1444,17 +1444,20 @@
         986373: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                useFavorite: function() {
-                    return c
-                },
-                useFavoritesCategories: function() {
+                useCanFavoriteChannel: function() {
                     return _
                 },
-                useFavoritesGuildSelected: function() {
+                useFavorite: function() {
                     return E
                 },
-                useFavoriteAdded: function() {
+                useFavoritesCategories: function() {
                     return T
+                },
+                useFavoritesGuildSelected: function() {
+                    return S
+                },
+                useFavoriteAdded: function() {
+                    return h
                 }
             }), n("424973"), n("222007");
             var a = n("884691"),
@@ -1463,33 +1466,42 @@
             n("42203");
             var u = n("923959"),
                 r = n("162771"),
-                s = n("379881"),
-                d = n("498139"),
-                o = n("136569"),
-                f = n("49111");
+                s = n("697218"),
+                d = n("379881"),
+                o = n("498139"),
+                f = n("136569"),
+                c = n("49111");
 
-            function c(e) {
-                let t = (0, i.useStateFromStores)([s.default], () => s.default.getFavorite(e));
+            function _(e) {
+                let {
+                    favoritesEnabled: t,
+                    isFavoritesPerk: n
+                } = (0, o.useFavoritesServerExperiment)("useCanFavoriteChannel"), a = (0, i.useStateFromStores)([d.default], () => d.default.isFavorite(e.id)), l = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser()), u = e.isDM() || e.isThread(), r = !u || n && (null == l ? void 0 : l.isStaff()) === !0;
+                return t && !__OVERLAY__ && !a && r
+            }
+
+            function E(e) {
+                let t = (0, i.useStateFromStores)([d.default], () => d.default.getFavorite(e));
                 return t
             }
 
-            function _() {
-                let e = (0, i.useStateFromStores)([u.default], () => u.default.getChannels(f.FAVORITES))[l.ChannelTypes.GUILD_CATEGORY];
+            function T() {
+                let e = (0, i.useStateFromStores)([u.default], () => u.default.getChannels(c.FAVORITES))[l.ChannelTypes.GUILD_CATEGORY];
                 return e.map(e => ({
                     id: "null" === e.channel.id ? null : e.channel.id,
                     name: e.channel.name
                 }))
             }
 
-            function E() {
+            function S() {
                 let e = (0, i.useStateFromStores)([r.default], () => r.default.getGuildId());
-                return e === f.FAVORITES
+                return e === c.FAVORITES
             }
 
-            function T() {
+            function h() {
                 let {
                     isFavoritesPerk: e
-                } = (0, d.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, o.useFavoritesTooltipStore)(), n = a.useCallback(() => {
+                } = (0, o.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, f.useFavoritesTooltipStore)(), n = a.useCallback(() => {
                     e && t.notifyFavoriteAdded()
                 }, [t, e]), l = a.useCallback(() => {
                     e && t.clearFavoriteAdded()
@@ -1549,41 +1561,40 @@
 
             function S(e) {
                 let t = (0, u.useStateFromStores)([s.default], () => s.default.getChannels(_.FAVORITES))[_.ChannelTypes.GUILD_CATEGORY],
-                    [
-                        [n], l
-                    ] = i.partition(t, e => "null" === e.channel.id),
                     {
-                        favoritesEnabled: E,
-                        isFavoritesPerk: S
+                        isFavoritesPerk: n
                     } = (0, c.useFavoritesServerExperiment)("58e21a_1"),
                     {
-                        notifyFavoriteAdded: h
+                        notifyFavoriteAdded: l
                     } = (0, f.useFavoriteAdded)(),
-                    C = (0, u.useStateFromStores)([d.default], () => d.default.isFavorite(e.id));
-                if (__OVERLAY__ || C || !E) return null;
+                    d = (0, f.useCanFavoriteChannel)(e);
+                if (!d) return null;
+                let [
+                    [E], S
+                ] = i.partition(t, e => "null" === e.channel.id);
 
-                function g(t) {
-                    h(), (0, o.addFavoriteChannel)(e.id, t)
+                function h(t) {
+                    l(), (0, o.addFavoriteChannel)(e.id, t)
                 }
-                return 0 === l.length ? (0, a.jsx)(r.MenuItem, {
+                return 0 === S.length ? (0, a.jsx)(r.MenuItem, {
                     id: "favorite-channel",
                     label: T(e, !1),
-                    action: () => g(null)
+                    action: () => h(null)
                 }) : (0, a.jsxs)(r.MenuItem, {
                     id: "favorite-channel",
                     label: T(e, !1),
-                    action: () => g(null),
-                    children: [S && (0, a.jsx)(r.MenuGroup, {
+                    action: () => h(null),
+                    children: [n && (0, a.jsx)(r.MenuGroup, {
                         children: (0, a.jsx)(r.MenuItem, {
-                            id: "favorite-".concat(n.channel.id),
-                            label: n.channel.name,
-                            action: () => g("null" === n.channel.id ? null : n.channel.id)
-                        }, n.channel.id)
+                            id: "favorite-".concat(E.channel.id),
+                            label: E.channel.name,
+                            action: () => h("null" === E.channel.id ? null : E.channel.id)
+                        }, E.channel.id)
                     }), (0, a.jsx)(r.MenuGroup, {
-                        children: l.map(e => (0, a.jsx)(r.MenuItem, {
+                        children: S.map(e => (0, a.jsx)(r.MenuItem, {
                             id: "favorite-".concat(e.channel.id),
                             label: e.channel.name,
-                            action: () => g(e.channel.id)
+                            action: () => h(e.channel.id)
                         }, e.channel.id))
                     })]
                 })
@@ -1888,8 +1899,8 @@
                 g = n("766274"),
                 N = n("42203"),
                 m = n("49111");
-            let A = m.FormStates.CLOSED,
-                M = {},
+            let M = m.FormStates.CLOSED,
+                A = {},
                 I = {},
                 v = !1,
                 p = !1,
@@ -1899,7 +1910,7 @@
             function F(e) {
                 let t = N.default.getChannel(e.channelId);
                 if (null == t) return R();
-                A = m.FormStates.OPEN, u = i = t, O = "location" in e && null != e.location ? e.location : null, l = "subsection" in e ? e.subsection : null, null != u && (u = u.set("nsfw", u.isNSFW())), r = N.default.getChannel(u.parent_id), s = u.getGuildId(), M = {}, L({
+                M = m.FormStates.OPEN, u = i = t, O = "location" in e && null != e.location ? e.location : null, l = "subsection" in e ? e.subsection : null, null != u && (u = u.set("nsfw", u.isNSFW())), r = N.default.getChannel(u.parent_id), s = u.getGuildId(), A = {}, L({
                     type: "CHANNEL_SETTINGS_SET_SECTION",
                     section: null != a ? a : m.ChannelSettingsSections.OVERVIEW,
                     subsection: l
@@ -1919,7 +1930,7 @@
             }
 
             function R() {
-                p = !1, A = m.FormStates.CLOSED, a = null, u = i = null, r = null, I = {}
+                p = !1, M = m.FormStates.CLOSED, a = null, u = i = null, r = null, I = {}
             }
             let G = o.debounce(() => {
                 if (null == u || null == i) return !1;
@@ -1970,15 +1981,15 @@
                     return u
                 }
                 getFormState() {
-                    return A
+                    return M
                 }
                 getCategory() {
                     return r
                 }
                 getProps() {
                     return {
-                        submitting: A === m.FormStates.SUBMITTING,
-                        errors: M,
+                        submitting: M === m.FormStates.SUBMITTING,
+                        errors: A,
                         channel: u,
                         section: a,
                         subsection: l,
@@ -1996,14 +2007,14 @@
                     p = !0, F(e)
                 },
                 CHANNEL_SETTINGS_SUBMIT: function() {
-                    A = m.FormStates.SUBMITTING, M = {}
+                    M = m.FormStates.SUBMITTING, A = {}
                 },
                 CHANNEL_SETTINGS_SUBMIT_SUCCESS: function() {
-                    i = u, A = m.FormStates.OPEN
+                    i = u, M = m.FormStates.OPEN
                 },
                 CHANNEL_SETTINGS_SUBMIT_FAILURE: function(e) {
                     var t;
-                    A = m.FormStates.OPEN, M = Object.keys(null !== (t = e.errors) && void 0 !== t ? t : {}).reduce((t, n) => {
+                    M = m.FormStates.OPEN, A = Object.keys(null !== (t = e.errors) && void 0 !== t ? t : {}).reduce((t, n) => {
                         let a = e.errors[n];
                         return (0, d.isArray)(a) ? t[n] = a.join("\n") : t[n] = a, t
                     }, {})
@@ -2037,8 +2048,8 @@
                         availableTags: g,
                         defaultSortOrder: N,
                         defaultForumLayout: m,
-                        iconEmoji: A,
-                        themeColor: M
+                        iconEmoji: M,
+                        themeColor: A
                     } = e;
                     if (null == u) return !1;
                     null != t && (u = u.set("name", t)), null != a && (u = u.set("topic", a)), null != l && (u = u.set("bitrate", l)), null != i && (u = u.set("userLimit", i)), null != r && (u = u.set("nsfw", r)), null != s && (u = u.set("flags", s)), null != d && (u = u.set("rateLimitPerUser", d)), null != o && (u = u.set("defaultThreadRateLimitPerUser", o)), null != f && (u = u.set("threadMetadata", {
@@ -2050,7 +2061,7 @@
                     })), null != _ && (u = u.set("threadMetadata", {
                         ...u.threadMetadata,
                         invitable: _
-                    })), null != E && (u = u.set("defaultAutoArchiveDuration", E)), null != T && (u = u.set("template", T)), null != n && (u = u.set("type", n)), void 0 !== h && (u = u.set("rtcRegion", h)), null != C && (u = u.set("videoQualityMode", C)), void 0 !== S && (u = u.set("defaultReactionEmoji", S)), null != g && (u = u.set("availableTags", g)), null != N && (u = u.set("defaultSortOrder", N)), null != m && (u = u.set("defaultForumLayout", m)), void 0 !== A && (u = u.set("iconEmoji", A)), null != M && (u = u.set("themeColor", M)), G()
+                    })), null != E && (u = u.set("defaultAutoArchiveDuration", E)), null != T && (u = u.set("template", T)), null != n && (u = u.set("type", n)), void 0 !== h && (u = u.set("rtcRegion", h)), null != C && (u = u.set("videoQualityMode", C)), void 0 !== S && (u = u.set("defaultReactionEmoji", S)), null != g && (u = u.set("availableTags", g)), null != N && (u = u.set("defaultSortOrder", N)), null != m && (u = u.set("defaultForumLayout", m)), void 0 !== M && (u = u.set("iconEmoji", M)), null != A && (u = u.set("themeColor", A)), G()
                 },
                 CHANNEL_SETTINGS_SET_SECTION: L,
                 CHANNEL_SETTINGS_LOADED_INVITES: function(e) {
@@ -2086,7 +2097,7 @@
                         }
                     } = e;
                     if (null == u || u.id !== t) return !1;
-                    A = m.FormStates.CLOSED
+                    M = m.FormStates.CLOSED
                 },
                 INSTANT_INVITE_REVOKE_SUCCESS: function(e) {
                     I = {
