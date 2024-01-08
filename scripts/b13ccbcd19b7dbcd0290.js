@@ -37,9 +37,9 @@
                     n = e.length,
                     s = n - 1;
                 for (t = void 0 === t ? n : t; ++r < t;) {
-                    var i = a(r, s),
-                        u = e[i];
-                    e[i] = e[r], e[r] = u
+                    var u = a(r, s),
+                        i = e[u];
+                    e[u] = e[r], e[r] = i
                 }
                 return e.length = t, e
             }
@@ -88,20 +88,20 @@
                 let a = 4 * e + 1,
                     n = 6 + t * (5 + a),
                     s = [137, 80, 78, 71, 13, 10, 26, 10, 0, 0, 0, 13, 73, 72, 68, 82, 0, 0, e >> 8, 255 & e, 0, 0, t >> 8, 255 & t, 8, 6, 0, 0, 0, 0, 0, 0, 0, n >>> 24, n >> 16 & 255, n >> 8 & 255, 255 & n, 73, 68, 65, 84, 120, 1],
-                    i = [0, 498536548, 997073096, 651767980, 1994146192, 1802195444, 1303535960, 1342533948, -306674912, -267414716, -690576408, -882789492, -1687895376, -2032938284, -1609899400, -1111625188],
-                    u = 1,
+                    u = [0, 498536548, 997073096, 651767980, 1994146192, 1802195444, 1303535960, 1342533948, -306674912, -267414716, -690576408, -882789492, -1687895376, -2032938284, -1609899400, -1111625188],
+                    i = 1,
                     l = 0;
-                for (let e = 0, n = 0, i = a - 1; e < t; e++, i += a - 1)
-                    for (s.push(e + 1 < t ? 0 : 1, 255 & a, a >> 8, 255 & ~a, a >> 8 ^ 255, 0), l = (l + u) % 65521; n < i; n++) {
+                for (let e = 0, n = 0, u = a - 1; e < t; e++, u += a - 1)
+                    for (s.push(e + 1 < t ? 0 : 1, 255 & a, a >> 8, 255 & ~a, a >> 8 ^ 255, 0), l = (l + i) % 65521; n < u; n++) {
                         let e = 255 & r[n];
-                        s.push(e), l = (l + (u = (u + e) % 65521)) % 65521
+                        s.push(e), l = (l + (i = (i + e) % 65521)) % 65521
                     }
-                for (let [e, t] of(s.push(l >> 8, 255 & l, u >> 8, 255 & u, 0, 0, 0, 0, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130), [
+                for (let [e, t] of(s.push(l >> 8, 255 & l, i >> 8, 255 & i, 0, 0, 0, 0, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130), [
                         [12, 29],
                         [37, 41 + n]
                     ])) {
                     let r = -1;
-                    for (let a = e; a < t; a++) r ^= s[a], r = (r = r >>> 4 ^ i[15 & r]) >>> 4 ^ i[15 & r];
+                    for (let a = e; a < t; a++) r ^= s[a], r = (r = r >>> 4 ^ u[15 & r]) >>> 4 ^ u[15 & r];
                     r = ~r, s[t++] = r >>> 24, s[t++] = r >> 16 & 255, s[t++] = r >> 8 & 255, s[t++] = 255 & r
                 }
                 return "data:image/png;base64," + btoa(String.fromCharCode(...s))
@@ -114,23 +114,23 @@
                         min: r,
                         max: n,
                         cos: s,
-                        round: i
-                    } = Math, u = e[0] | e[1] << 8 | e[2] << 16, l = e[3] | e[4] << 8, o = (63 & u) / 63, c = (u >> 6 & 63) / 31.5 - 1, d = (u >> 12 & 63) / 31.5 - 1, E = u >> 23, _ = l >> 15, f = n(3, _ ? E ? 5 : 7 : 7 & l), C = n(3, _ ? 7 & l : E ? 5 : 7), I = E ? (15 & e[5]) / 15 : 1, A = (e[5] >> 4) / 15, S = E ? 6 : 5, p = 0, h = (t, r, a) => {
+                        round: u
+                    } = Math, i = e[0] | e[1] << 8 | e[2] << 16, l = e[3] | e[4] << 8, o = (63 & i) / 63, c = (i >> 6 & 63) / 31.5 - 1, d = (i >> 12 & 63) / 31.5 - 1, E = i >> 23, _ = l >> 15, f = n(3, _ ? E ? 5 : 7 : 7 & l), C = n(3, _ ? 7 & l : E ? 5 : 7), I = E ? (15 & e[5]) / 15 : 1, A = (e[5] >> 4) / 15, S = E ? 6 : 5, p = 0, h = (t, r, a) => {
                         let n = [];
                         for (let s = 0; s < r; s++)
-                            for (let i = s ? 0 : 1; i * r < t * (r - s); i++) n.push(((e[S + (p >> 1)] >> ((1 & p++) << 2) & 15) / 7.5 - 1) * a);
+                            for (let u = s ? 0 : 1; u * r < t * (r - s); u++) n.push(((e[S + (p >> 1)] >> ((1 & p++) << 2) & 15) / 7.5 - 1) * a);
                         return n
-                    }, m = h(f, C, (u >> 18 & 31) / 31), T = h(3, 3, 1.25 * ((l >> 3 & 63) / 63)), L = h(3, 3, 1.25 * ((l >> 9 & 63) / 63)), O = E && h(5, 5, A), v = a(e), R = i(v > 1 ? 32 : 32 * v), g = i(v > 1 ? 32 / v : 32), N = new Uint8Array(R * g * 4), D = [], P = [];
+                    }, m = h(f, C, (i >> 18 & 31) / 31), T = h(3, 3, 1.25 * ((l >> 3 & 63) / 63)), L = h(3, 3, 1.25 * ((l >> 9 & 63) / 63)), O = E && h(5, 5, A), v = a(e), R = u(v > 1 ? 32 : 32 * v), g = u(v > 1 ? 32 / v : 32), N = new Uint8Array(R * g * 4), D = [], P = [];
                     for (let e = 0, a = 0; e < g; e++)
-                        for (let i = 0; i < R; i++, a += 4) {
-                            let u = o,
+                        for (let u = 0; u < R; u++, a += 4) {
+                            let i = o,
                                 l = c,
                                 _ = d,
                                 A = I;
-                            for (let e = 0, r = n(f, E ? 5 : 3); e < r; e++) D[e] = s(t / R * (i + .5) * e);
+                            for (let e = 0, r = n(f, E ? 5 : 3); e < r; e++) D[e] = s(t / R * (u + .5) * e);
                             for (let r = 0, a = n(C, E ? 5 : 3); r < a; r++) P[r] = s(t / g * (e + .5) * r);
                             for (let e = 0, t = 0; e < C; e++)
-                                for (let r = e ? 0 : 1, a = 2 * P[e]; r * C < f * (C - e); r++, t++) u += m[t] * D[r] * a;
+                                for (let r = e ? 0 : 1, a = 2 * P[e]; r * C < f * (C - e); r++, t++) i += m[t] * D[r] * a;
                             for (let e = 0, t = 0; e < 3; e++)
                                 for (let r = e ? 0 : 1, a = 2 * P[e]; r < 3 - e; r++, t++) {
                                     let e = D[r] * a;
@@ -139,8 +139,8 @@
                             if (E)
                                 for (let e = 0, t = 0; e < 5; e++)
                                     for (let r = e ? 0 : 1, a = 2 * P[e]; r < 5 - e; r++, t++) A += O[t] * D[r] * a;
-                            let S = u - 2 / 3 * l,
-                                p = (3 * u - S + _) / 2,
+                            let S = i - 2 / 3 * l,
+                                p = (3 * i - S + _) / 2,
                                 h = p - _;
                             N[a] = n(0, 255 * r(1, p)), N[a + 1] = n(0, 255 * r(1, h)), N[a + 2] = n(0, 255 * r(1, S)), N[a + 3] = n(0, 255 * r(1, A))
                         }
@@ -199,8 +199,8 @@
             var a = r("37983"),
                 n = r("884691"),
                 s = r("265586"),
-                i = r("446674"),
-                u = r("77078"),
+                u = r("446674"),
+                i = r("77078"),
                 l = r("812204"),
                 o = r("685665"),
                 c = r("21526"),
@@ -226,7 +226,7 @@
                     user: t,
                     categories: r,
                     analyticsLocations: s,
-                    onClose: i,
+                    onClose: u,
                     initialSelectedDecoration: o,
                     isTryItOutFlow: _
                 } = e, {
@@ -246,26 +246,26 @@
                     product: N,
                     purchase: D
                 } = (0, E.default)(null == L ? void 0 : L.skuId), P = p.default.canUseCollectibles(t), M = n.useRef(null), y = (0, f.default)(s), H = (0, h.isEqualAvatarDecoration)(L, void 0 === A ? null == t ? void 0 : t.avatarDecoration : A), x = () => {
-                    S(L), i()
+                    S(L), u()
                 }, w = n.useCallback(() => {
-                    i(), (0, c.openCollectiblesShop)({
+                    u(), (0, c.openCollectiblesShop)({
                         analyticsLocations: s,
                         analyticsSource: l.default.EDIT_AVATAR_DECORATION_MODAL,
                         initialProductSkuId: null != L ? L.skuId : void 0
                     })
-                }, [s, i, L]);
+                }, [s, u, L]);
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsxs)(u.ModalHeader, {
+                    children: [(0, a.jsxs)(i.ModalHeader, {
                         separator: !1,
                         className: R.modalHeader,
-                        children: [(0, a.jsx)(u.Heading, {
+                        children: [(0, a.jsx)(i.Heading, {
                             variant: "heading-lg/semibold",
                             children: v.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
-                        }), (0, a.jsx)(u.ModalCloseButton, {
+                        }), (0, a.jsx)(i.ModalCloseButton, {
                             className: R.modalCloseButton,
-                            onClick: i
+                            onClick: u
                         })]
-                    }), (0, a.jsxs)(u.ModalContent, {
+                    }), (0, a.jsxs)(i.ModalContent, {
                         className: R.modalContent,
                         scrollbarType: "none",
                         children: [(0, a.jsx)(T.default, {
@@ -281,17 +281,17 @@
                             user: t,
                             avatarDecorationOverride: L
                         })]
-                    }), (0, a.jsxs)(u.ModalFooter, {
+                    }), (0, a.jsxs)(i.ModalFooter, {
                         className: R.modalFooter,
                         children: [(() => {
                             let e = null != D && (!(0, d.isPremiumCollectiblesPurchase)(D) || P);
-                            if (e || null === L) return (0, a.jsx)(u.Button, {
+                            if (e || null === L) return (0, a.jsx)(i.Button, {
                                 onClick: x,
                                 disabled: H,
                                 children: v.default.Messages.AVATAR_DECORATION_MODAL_APPLY
                             });
                             let r = P || !(0, d.isPremiumCollectiblesProduct)(N);
-                            return r ? (0, a.jsx)(u.Button, {
+                            return r ? (0, a.jsx)(i.Button, {
                                 className: R.modalFooterShopButton,
                                 onClick: w,
                                 children: v.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
@@ -299,10 +299,10 @@
                                 subscriptionTier: O.PremiumSubscriptionSKUs.TIER_2,
                                 buttonText: p.default.isPremium(t) ? v.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : v.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
                             })
-                        })(), (0, a.jsx)(u.Button, {
-                            look: u.Button.Looks.LINK,
-                            color: u.Button.Colors.PRIMARY,
-                            onClick: i,
+                        })(), (0, a.jsx)(i.Button, {
+                            look: i.Button.Looks.LINK,
+                            color: i.Button.Colors.PRIMARY,
+                            onClick: u,
                             children: v.default.Messages.CANCEL
                         })]
                     })]
@@ -316,7 +316,7 @@
                     onClose: d,
                     initialSelectedDecoration: E,
                     isTryItOutFlow: f
-                } = e, C = (0, i.useStateFromStores)([A.default], () => A.default.getCurrentUser()), {
+                } = e, C = (0, u.useStateFromStores)([A.default], () => A.default.getCurrentUser()), {
                     AnalyticsLocationProvider: I,
                     analyticsLocations: p
                 } = (0, o.default)(r, l.default.EDIT_AVATAR_DECORATION_MODAL), {
@@ -336,13 +336,13 @@
                         itemTypes: [s.CollectiblesItemType.AVATAR_DECORATION]
                     })
                 }, [h]), null == C ? null : (0, a.jsx)(I, {
-                    children: (0, a.jsx)(u.ModalRoot, {
+                    children: (0, a.jsx)(i.ModalRoot, {
                         transitionState: t,
                         className: R.modal,
-                        size: v ? u.ModalSize.DYNAMIC : u.ModalSize.MEDIUM,
-                        children: v ? (0, a.jsx)(u.Spinner, {
+                        size: v ? i.ModalSize.DYNAMIC : i.ModalSize.MEDIUM,
+                        children: v ? (0, a.jsx)(i.Spinner, {
                             className: R.spinner,
-                            type: u.Spinner.Type.SPINNING_CIRCLE
+                            type: i.Spinner.Type.SPINNING_CIRCLE
                         }) : (0, a.jsx)(g, {
                             user: C,
                             categories: h,
@@ -366,8 +366,8 @@
             r("884691");
             var n = r("414456"),
                 s = r.n(n),
-                i = r("506838"),
-                u = r("446674"),
+                u = r("506838"),
+                i = r("446674"),
                 l = r("77078"),
                 o = r("491232"),
                 c = r("984002"),
@@ -394,7 +394,7 @@
                 p = e => {
                     let {
                         purchase: t
-                    } = e, r = (0, u.useStateFromStores)([E.default], () => E.default.locale), n = (0, o.isPremiumCollectiblesPurchase)(t);
+                    } = e, r = (0, i.useStateFromStores)([E.default], () => E.default.locale), n = (0, o.isPremiumCollectiblesPurchase)(t);
                     return (0, a.jsxs)("div", {
                         className: A.purchaseInfo,
                         children: [(0, a.jsx)(l.Text, {
@@ -423,7 +423,7 @@
                     user: t,
                     avatarDecorationOverride: r,
                     className: n
-                } = e, E = (0, u.useStateFromStores)([_.default], () => _.default.getStatus(t.id)), {
+                } = e, E = (0, i.useStateFromStores)([_.default], () => _.default.getStatus(t.id)), {
                     category: h,
                     product: m,
                     purchase: T
@@ -444,7 +444,7 @@
                             children: m.name
                         }), (0, a.jsx)(l.Text, {
                             variant: "text-sm/normal",
-                            children: R ? I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([v, L]).with([!0, !0], () => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+                            children: R ? I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, u.match)([v, L]).with([!0, !0], () => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
                         })]
                     })]
                 }) : (0, a.jsxs)("div", {
@@ -493,14 +493,14 @@
             r("884691");
             var n = r("77078"),
                 s = r("106435"),
-                i = r("50885"),
-                u = r("782340");
-            let l = i.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
+                u = r("50885"),
+                i = r("782340");
+            let l = u.default.getEnableHardwareAcceleration() ? n.AnimatedAvatar : n.Avatar;
             var o = e => {
                 let {
                     user: t,
                     avatarDecorationOverride: r,
-                    status: i,
+                    status: u,
                     avatarSize: o = n.AvatarSizes.SIZE_120,
                     "aria-hidden": c = !1
                 } = e, {
@@ -517,8 +517,8 @@
                     avatarDecoration: d,
                     src: E,
                     size: o,
-                    status: i,
-                    "aria-label": c ? void 0 : u.default.Messages.USER_SETTINGS_AVATAR,
+                    status: u,
+                    "aria-label": c ? void 0 : i.default.Messages.USER_SETTINGS_AVATAR,
                     "aria-hidden": c,
                     ..._
                 })
@@ -534,8 +534,8 @@
             var a = r("37983"),
                 n = r("884691"),
                 s = r("414456"),
-                i = r.n(s),
-                u = r("506838"),
+                u = r.n(s),
+                i = r("506838"),
                 l = r("171210"),
                 o = r("65597"),
                 c = r("77078"),
@@ -560,11 +560,11 @@
                         className: r,
                         onSelect: n,
                         isSelected: s = !1,
-                        ...u
+                        ...i
                     } = e;
                     return (0, a.jsx)(c.Clickable, {
-                        className: i(O.decorationGridItem, s ? O.selected : void 0, r),
-                        ...u,
+                        className: u(O.decorationGridItem, s ? O.selected : void 0, r),
+                        ...i,
                         onClick: n,
                         children: t
                     })
@@ -574,16 +574,16 @@
                         user: t,
                         avatarDecoration: r,
                         innerRef: s,
-                        section: i,
-                        isSelected: u = !1,
+                        section: u,
+                        isSelected: i = !1,
                         ...c
                     } = e, C = (0, o.default)([E.default], () => {
                         let e = E.default.getProduct(r.skuId);
                         return (0, f.isPremiumCollectiblesProduct)(e)
-                    }), A = (0, o.default)([_.default], () => _.default.isItemViewed(r)), v = h.default.canUseCollectibles(t), g = i === m.Section.PREMIUM_PURCHASE && !v, [N, D] = n.useState(u);
+                    }), A = (0, o.default)([_.default], () => _.default.isItemViewed(r)), v = h.default.canUseCollectibles(t), g = u === m.Section.PREMIUM_PURCHASE && !v, [N, D] = n.useState(i);
                     n.useEffect(() => {
-                        u && D(!0)
-                    }, [u]);
+                        i && D(!0)
+                    }, [i]);
                     let P = n.useRef(null),
                         M = (0, d.default)(null != s ? s : P),
                         {
@@ -597,16 +597,16 @@
                     return (0, a.jsxs)(R, {
                         className: g ? O.decorationGridItemChurned : void 0,
                         innerRef: null != s ? s : P,
-                        isSelected: u,
+                        isSelected: i,
                         ...c,
                         children: [(0, a.jsx)("img", {
                             className: O.presetDecorationImg,
                             src: y,
                             alt: r.label
                         }), (() => {
-                            let e = i === m.Section.PURCHASE || i === m.Section.PREMIUM_PURCHASE && v;
+                            let e = u === m.Section.PURCHASE || u === m.Section.PREMIUM_PURCHASE && v;
                             if (e) return null;
-                            let t = !A && !u && !N;
+                            let t = !A && !i && !N;
                             return t ? (0, a.jsx)(p.PremiumBadge, {
                                 className: O.newBadge,
                                 text: (0, a.jsxs)("div", {
@@ -636,7 +636,7 @@
                     pendingAvatarDecoration: r,
                     selectedAvatarDecorationRef: n,
                     onSelect: s,
-                    onOpenShop: i
+                    onOpenShop: u
                 } = e, l = (0, m.default)();
                 return (0, a.jsx)(c.MasonryList, {
                     fade: !0,
@@ -658,7 +658,7 @@
                             section: _,
                             items: f
                         } = l[e];
-                        return (0, u.match)(f[o]).with(m.NONE_ITEM, () => (0, a.jsxs)(R, {
+                        return (0, i.match)(f[o]).with(m.NONE_ITEM, () => (0, a.jsxs)(R, {
                             style: {
                                 ...d
                             },
@@ -673,7 +673,7 @@
                             })]
                         }, E)).with(m.SHOP_ITEM, () => (0, a.jsxs)(R, {
                             style: d,
-                            onSelect: i,
+                            onSelect: u,
                             children: [(0, a.jsx)(C.default, {
                                 className: O.shopIcon
                             }), (0, a.jsx)(c.Text, {
@@ -682,7 +682,7 @@
                                 children: L.default.Messages.COLLECTIBLES_SHOP
                             })]
                         }, E)).otherwise(e => {
-                            let i = (null == r ? void 0 : r.id) === e.id;
+                            let u = (null == r ? void 0 : r.id) === e.id;
                             return (0, a.jsx)(g, {
                                 style: {
                                     ...d
@@ -690,8 +690,8 @@
                                 user: t,
                                 avatarDecoration: e,
                                 section: _,
-                                innerRef: i ? n : void 0,
-                                isSelected: i,
+                                innerRef: u ? n : void 0,
+                                isSelected: u,
                                 onSelect: () => s(e)
                             }, E)
                         })
@@ -735,8 +735,8 @@
                 }
             }), r("222007"), r("808653"), r("424973");
             var a, n, s = r("884691"),
-                i = r("917351"),
-                u = r("65597"),
+                u = r("917351"),
+                i = r("65597"),
                 l = r("853987"),
                 o = r("775416"),
                 c = r("491232"),
@@ -751,16 +751,16 @@
                     id: "Shop"
                 };
             var I = () => {
-                let e = (0, u.default)([d.default], () => d.default.getCurrentUser()),
+                let e = (0, i.default)([d.default], () => d.default.getCurrentUser()),
                     t = E.default.canUseCollectibles(e),
-                    r = (0, u.default)([o.default], () => o.default.purchases),
-                    [a, n] = (0, u.useStateFromStoresArray)([l.default], () => [l.default.categories, l.default.products]);
+                    r = (0, i.default)([o.default], () => o.default.purchases),
+                    [a, n] = (0, i.useStateFromStoresArray)([l.default], () => [l.default.categories, l.default.products]);
                 return (0, s.useMemo)(() => {
-                    let e = (0, i.uniqBy)([...(0, c.getAvatarDecorationsFromPurchases)(r), ...(0, c.getAvatarDecorationsFromCategories)(a)], "id"),
+                    let e = (0, u.uniqBy)([...(0, c.getAvatarDecorationsFromPurchases)(r), ...(0, c.getAvatarDecorationsFromCategories)(a)], "id"),
                         s = e.reduce((e, a) => {
                             let s = r.get(a.skuId),
-                                i = (0, c.isPremiumCollectiblesPurchase)(s);
-                            if (i && 0 === e.premium_purchase.length && (e.premium_purchase = e.premium_preview, e.premium_preview = []), i) return e.premium_purchase.push(a), e;
+                                u = (0, c.isPremiumCollectiblesPurchase)(s);
+                            if (u && 0 === e.premium_purchase.length && (e.premium_purchase = e.premium_preview, e.premium_preview = []), u) return e.premium_purchase.push(a), e;
                             if (null != s) return e.purchase.push(a), e;
                             if (!t && (0, c.isPremiumCollectiblesProduct)(n.get(a.skuId))) {
                                 let t = e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview;
@@ -831,8 +831,8 @@
             var a = r("872717"),
                 n = r("913144"),
                 s = r("54239"),
-                i = r("448993"),
-                u = r("514296"),
+                u = r("448993"),
+                i = r("514296"),
                 l = r("407788"),
                 o = r("489134"),
                 c = r("49111");
@@ -866,13 +866,13 @@
                         let e = await a.default.get(c.Endpoints.COLLECTIBLES_CATEGORIES);
                         n.default.dispatch({
                             type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-                            categories: e.body.map(u.default.fromServer)
+                            categories: e.body.map(i.default.fromServer)
                         })
                     } catch (e) {
                         throw n.default.dispatch({
                             type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
                             error: e
-                        }), new i.APIError(e)
+                        }), new u.APIError(e)
                     }
                 }, C = async () => {
                     n.default.dispatch({
@@ -888,7 +888,7 @@
                         throw n.default.dispatch({
                             type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
                             error: e
-                        }), new i.APIError(e)
+                        }), new u.APIError(e)
                     }
                 }, I = async e => {
                     n.default.dispatch({
@@ -904,7 +904,7 @@
                         throw n.default.dispatch({
                             type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
                             error: e
-                        }), new i.APIError(e)
+                        }), new u.APIError(e)
                     }
                 }, A = async e => {
                     n.default.dispatch({
@@ -929,7 +929,7 @@
                             type: "COLLECTIBLES_CLAIM_FAILURE",
                             skuId: e,
                             error: t
-                        }), new i.APIError(t)
+                        }), new u.APIError(t)
                     }
                 }, S = async (e, t) => {
                     try {
@@ -942,7 +942,7 @@
                         });
                         return r.body.valid
                     } catch (e) {
-                        throw new i.APIError(e)
+                        throw new u.APIError(e)
                     }
                 }, p = e => {
                     n.default.dispatch({
@@ -961,8 +961,8 @@
             var a = r("635058"),
                 n = r("265586"),
                 s = r("446674"),
-                i = r("913144"),
-                u = r("853987");
+                u = r("913144"),
+                i = r("853987");
             let l = new Date(2023, 8, 25),
                 o = new Date(2023, 9, 5),
                 c = () => ({
@@ -994,7 +994,7 @@
                 }
                 isItemViewed(e) {
                     var t, r;
-                    let a = null === (t = u.default.getProduct(e.skuId)) || void 0 === t ? void 0 : t.categorySkuId;
+                    let a = null === (t = i.default.getProduct(e.skuId)) || void 0 === t ? void 0 : t.categorySkuId;
                     return null != a && (null === (r = d.categoryItemViews[a]) || void 0 === r ? void 0 : r[e.type]) != null
                 }
                 reset() {
@@ -1002,7 +1002,7 @@
                 }
             }
             E.displayName = "CollectiblesPersistedStore", E.persistKey = "CollectiblesPersistedStoreV2";
-            var _ = new E(i.default, {
+            var _ = new E(u.default, {
                 COLLECTIBLES_CATEGORY_ITEMS_VIEWED: e => {
                     let {
                         categories: t,
@@ -1028,13 +1028,13 @@
                     return _
                 }
             }), r("222007");
-            var i = r("917351"),
-                u = r("446674"),
+            var u = r("917351"),
+                i = r("446674"),
                 l = r("913144");
             let o = new Map,
                 c = o,
                 d = !1;
-            class E extends u.default.Store {
+            class E extends i.default.Store {
                 get isFetching() {
                     return d
                 }
@@ -1060,7 +1060,7 @@
                     d = !0, n = void 0
                 },
                 COLLECTIBLES_PURCHASES_FETCH_SUCCESS: e => {
-                    0 === e.purchases.length ? c = o : !(0, i.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), d = !1, n = void 0
+                    0 === e.purchases.length ? c = o : !(0, u.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), d = !1, n = void 0
                 },
                 COLLECTIBLES_PURCHASES_FETCH_FAILURE: e => {
                     let {
@@ -1072,7 +1072,7 @@
                     a = e.skuId, s = void 0
                 },
                 COLLECTIBLES_CLAIM_SUCCESS: e => {
-                    null == e.purchases || 0 === e.purchases.length ? c = o : !(0, i.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), a = void 0, s = void 0
+                    null == e.purchases || 0 === e.purchases.length ? c = o : !(0, u.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), a = void 0, s = void 0
                 },
                 COLLECTIBLES_CLAIM_FAILURE: e => {
                     let {
@@ -1096,15 +1096,15 @@
             });
             var n = r("446674"),
                 s = r("913144");
-            let i = [],
-                u = i,
+            let u = [],
+                i = u,
                 l = null,
                 o = e => {
-                    u = i, l = null
+                    i = u, l = null
                 };
             class c extends n.default.Store {
                 get analyticsLocations() {
-                    return u
+                    return i
                 }
                 get analyticsSource() {
                     return l
@@ -1114,7 +1114,7 @@
                 }
                 getAnalytics() {
                     return {
-                        analyticsLocations: u,
+                        analyticsLocations: i,
                         analyticsSource: l
                     }
                 }
@@ -1123,7 +1123,7 @@
             var d = new c(s.default, {
                 COLLECTIBLES_SHOP_OPEN: e => {
                     var t, r;
-                    u = null !== (t = e.analyticsLocations) && void 0 !== t ? t : i, l = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, a = e.initialProductSkuId
+                    i = null !== (t = e.analyticsLocations) && void 0 !== t ? t : u, l = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, a = e.initialProductSkuId
                 },
                 COLLECTIBLES_SHOP_CLOSE: o,
                 COLLECTIBLES_PRODUCT_DETAILS_OPEN: e => {
@@ -1171,47 +1171,43 @@
             }), r("808653"), r("794252"), r("424973");
             var a, n = r("506838"),
                 s = r("265586"),
-                i = r("797647"),
-                u = r("730297"),
+                u = r("797647"),
+                i = r("730297"),
                 l = r("792382"),
                 o = r("806410");
             a = class e extends l.default {
                 static fromServer(t) {
                     var r;
                     let {
-                        currency: a,
-                        price: l,
+                        type: a,
+                        category_sku_id: l,
                         prices: c,
-                        type: d,
-                        category_sku_id: E,
-                        ..._
+                        ...d
                     } = t;
                     return new e({
-                        ...super.fromServer(_),
-                        currency: a,
-                        price: l,
+                        ...super.fromServer(d),
+                        type: a,
+                        categorySkuId: l,
                         prices: null == (r = c) ? {} : Object.keys(r).reduce((e, t) => {
                             if (null == r) return e;
                             let a = r[t];
                             return e[t] = {
                                 countryPrices: {
                                     countryCode: a.country_prices.country_code,
-                                    prices: a.country_prices.prices.map(e => (0, i.getPriceFromServer)(e, !0))
+                                    prices: a.country_prices.prices.map(e => (0, u.getPriceFromServer)(e, !0))
                                 },
                                 paymentSourcePrices: {}
                             }, e
                         }, {}),
-                        type: d,
-                        categorySkuId: E,
-                        items: _.items.reduce((e, t) => (0, n.match)(t).with({
+                        items: d.items.reduce((e, t) => (0, n.match)(t).with({
                             type: s.CollectiblesItemType.AVATAR_DECORATION
-                        }, t => (e.push(u.default.fromServer(t)), e)).with({
+                        }, t => (e.push(i.default.fromServer(t)), e)).with({
                             type: s.CollectiblesItemType.PROFILE_EFFECT
                         }, t => (e.push(o.default.fromServer(t)), e)).otherwise(() => e), [])
                     })
                 }
                 constructor(e) {
-                    super(e), this.currency = e.currency, this.price = e.price, this.prices = e.prices, this.summary = e.summary, this.type = e.type, this.items = e.items, this.categorySkuId = e.categorySkuId
+                    super(e), this.summary = e.summary, this.type = e.type, this.items = e.items, this.categorySkuId = e.categorySkuId, this.prices = e.prices
                 }
             }
         },
@@ -1256,12 +1252,12 @@
                         sku_id: a,
                         unpublished_at: n,
                         ...s
-                    } = t, i = null != n ? new Date(n) : null;
+                    } = t, u = null != n ? new Date(n) : null;
                     return new e({
                         ...s,
                         storeListingId: r,
                         skuId: a,
-                        unpublishedAt: i
+                        unpublishedAt: u
                     })
                 }
                 constructor(e) {
@@ -1280,8 +1276,8 @@
             r("884691");
             var n = r("414456"),
                 s = r.n(n),
-                i = r("65597"),
-                u = r("854588"),
+                u = r("65597"),
+                i = r("854588"),
                 l = r("206230"),
                 o = r("284679"),
                 c = r("491232"),
@@ -1294,7 +1290,7 @@
                         className: n,
                         style: _,
                         children: f
-                    } = e, C = (0, i.default)([l.default], () => l.default.saturation);
+                    } = e, C = (0, u.default)([l.default], () => l.default.saturation);
                     return (0, a.jsx)("div", {
                         className: s(E.banner, n),
                         style: (() => {
@@ -1308,7 +1304,7 @@
                                 backgroundImage: "url(".concat(e, ")"),
                                 backgroundSize: "cover"
                             };
-                            let a = (0, o.hexOpacityToRgba)(u.default.unsafe_rawColors.BLACK_500, 1 - C);
+                            let a = (0, o.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - C);
                             return {
                                 ..._,
                                 backgroundImage: "linear-gradient(".concat(a, ", ").concat(a, "), url(").concat(e, ")"),
@@ -1330,17 +1326,17 @@
                     return s
                 },
                 getLogoSize: function() {
-                    return i
+                    return u
                 },
                 getBackgroundGradient: function() {
-                    return u
+                    return i
                 }
             });
             var a = r("547630");
             let n = 1060,
                 s = e => e * (0, a.default)(),
-                i = e => 3.8 * e,
-                u = function(e) {
+                u = e => 3.8 * e,
+                i = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
                         {
                             primary: r,
@@ -1413,10 +1409,10 @@
                     return R
                 },
                 MessageTypes: function() {
-                    return i
+                    return u
                 }
             });
-            var a, n, s, i, u = r("917219");
+            var a, n, s, u, i = r("917219");
             (a = s || (s = {}))[a.AVATAR = 0] = "AVATAR", a[a.BANNER = 1] = "BANNER", a[a.GUILD_BANNER = 2] = "GUILD_BANNER", a[a.VIDEO_BACKGROUND = 3] = "VIDEO_BACKGROUND", a[a.SCHEDULED_EVENT_IMAGE = 4] = "SCHEDULED_EVENT_IMAGE", a[a.HOME_HEADER = 5] = "HOME_HEADER", a[a.AVATAR_DECORATION = 6] = "AVATAR_DECORATION";
             let l = 568,
                 o = 2400,
@@ -1435,9 +1431,9 @@
                 T = l / S,
                 L = l / p,
                 O = l / h,
-                v = u.BACKGROUND_REPLACEMENT_SIZE.width / u.BACKGROUND_REPLACEMENT_SIZE.height,
+                v = i.BACKGROUND_REPLACEMENT_SIZE.width / i.BACKGROUND_REPLACEMENT_SIZE.height,
                 R = l / v;
-            (n = i || (i = {}))[n.CROP_GIF_START = 0] = "CROP_GIF_START", n[n.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", n[n.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"
+            (n = u || (u = {}))[n.CROP_GIF_START = 0] = "CROP_GIF_START", n[n.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", n[n.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"
         },
         719347: function(e, t, r) {
             "use strict";
@@ -1447,10 +1443,10 @@
                     return s
                 },
                 MEDIA_MOSAIC_MAX_HEIGHT: function() {
-                    return i
+                    return u
                 },
                 MINIMUM_MEDIA_MOSAIC_DIM: function() {
-                    return u
+                    return i
                 },
                 MediaLayoutType: function() {
                     return a
@@ -1460,8 +1456,8 @@
                 }
             });
             let s = 550,
-                i = 350,
-                u = 40;
+                u = 350,
+                i = 40;
             (n = a || (a = {})).STATIC = "STATIC", n.RESPONSIVE = "RESPONSIVE", n.MOSAIC = "MOSAIC";
             let l = 20
         }
