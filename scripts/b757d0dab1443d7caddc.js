@@ -5412,7 +5412,7 @@
                 }
             }
         },
-        12013: function(e, t, s) {
+        998645: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
@@ -10201,7 +10201,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "ed2c442f059c0a83af254835f5b66e476b6afd11", e.substring(0, 7)),
+                    S = (e = "cc131715bb59615ef978e7ec396593797c9bd51a", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     m = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10214,7 +10214,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "258050", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "258052", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -16672,7 +16672,7 @@
                 o = s("77078"),
                 d = s("433426"),
                 u = s("240760"),
-                c = s("12013"),
+                c = s("998645"),
                 S = s("353802"),
                 E = s("697218"),
                 f = s("701909"),
