@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["74795"], {
+    ["19081"], {
         16873: function(e, t, n) {
             "use strict";
             e.exports = n.p + "86c8b17e10af5906ce4b.svg"
@@ -87,6 +87,14 @@
         606778: function(e, t, n) {
             "use strict";
             e.exports = n.p + "75081bdaad2d359c1469.svg"
+        },
+        665718: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "5420f8fd9d89897c6448.svg"
+        },
+        897327: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "d8197d45ef3e7289594d.svg"
         },
         678070: function(e, t, n) {
             "use strict";
@@ -30957,6 +30965,68 @@
                     delete u[e.guild.id]
                 }
             })
+        },
+        440351: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return f
+                }
+            });
+            var a = n("37983"),
+                l = n("884691"),
+                s = n("414456"),
+                i = n.n(s),
+                r = n("77078"),
+                o = n("145131"),
+                u = n("296165"),
+                d = n("926622");
+            class c extends l.PureComponent {
+                render() {
+                    let {
+                        title: e,
+                        description: t,
+                        agreement: n,
+                        disagreement: l,
+                        onAgree: s,
+                        onDisagree: c,
+                        imageClassName: f
+                    } = this.props;
+                    return (0, a.jsxs)(o.default, {
+                        className: u.gatedContent,
+                        justify: o.default.Justify.CENTER,
+                        align: o.default.Align.CENTER,
+                        direction: o.default.Direction.VERTICAL,
+                        children: [(0, a.jsx)("div", {
+                            className: i(u.image, f)
+                        }), (0, a.jsx)("div", {
+                            className: i(u.title, d.marginBottom8),
+                            children: e
+                        }), (0, a.jsx)("div", {
+                            className: i(u.description, d.marginBottom20),
+                            children: t
+                        }), (0, a.jsxs)(o.default, {
+                            justify: o.default.Justify.CENTER,
+                            align: o.default.Align.CENTER,
+                            grow: 0,
+                            children: [null != l ? (0, a.jsx)(r.Button, {
+                                className: u.action,
+                                size: r.ButtonSizes.LARGE,
+                                color: r.ButtonColors.PRIMARY,
+                                onClick: c,
+                                children: l
+                            }) : null, null != n ? (0, a.jsx)(r.Button, {
+                                className: u.action,
+                                color: r.Button.Colors.RED,
+                                size: r.ButtonSizes.LARGE,
+                                onClick: s,
+                                children: n
+                            }) : null]
+                        })]
+                    })
+                }
+            }
+            var f = c
         },
         646240: function(e, t, n) {
             "use strict";
