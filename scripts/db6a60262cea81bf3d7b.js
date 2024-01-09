@@ -210,7 +210,7 @@
                     return g
                 },
                 default: function() {
-                    return I
+                    return L
                 }
             }), n("222007");
             var l = n("37983"),
@@ -255,7 +255,7 @@
                     null != t && t(e), C(!0), d.start(1e3, () => C(!1))
                 };
                 return null == t ? null : (0, l.jsx)(i.Tooltip, {
-                    text: L(n, a),
+                    text: I(n, a),
                     position: "top",
                     tooltipClassName: h.tooltips,
                     "aria-label": E.default.Messages.SHARE_LINK,
@@ -329,9 +329,9 @@
                 })
             }
             let S = e => null == e || e,
-                L = (e, t) => S(e) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE : S(t) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_WITHOUT_PERMISSION : E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_PRIVATE_CHANNEL;
+                I = (e, t) => S(e) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE : S(t) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_WITHOUT_PERMISSION : E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_PRIVATE_CHANNEL;
 
-            function I(e) {
+            function L(e) {
                 let {
                     isActive: t,
                     isUserLurking: n,
@@ -342,8 +342,8 @@
                     onContextMenu: r,
                     onJoinClick: c,
                     onRsvpClick: S,
-                    onStartClick: L,
-                    onInviteClick: I,
+                    onStartClick: I,
+                    onInviteClick: L,
                     onEndClick: _,
                     isJoined: m = !1
                 } = e, x = void 0 !== c;
@@ -364,7 +364,7 @@
                             })
                         })
                     }) : null, (0, l.jsx)(v, {
-                        onInviteClick: I,
+                        onInviteClick: L,
                         canInvite: u,
                         isChannelPublic: a
                     }), t && o !== f.GuildScheduledEventEntityTypes.EXTERNAL ? (0, l.jsx)(C, {
@@ -389,11 +389,11 @@
                         isUserRsvped: s,
                         isUserLurking: n,
                         onRsvpClick: S
-                    }), t || null == L ? null : (0, l.jsx)(i.Button, {
+                    }), t || null == I ? null : (0, l.jsx)(i.Button, {
                         className: h.button,
                         innerClassName: h.innerButton,
                         size: i.Button.Sizes.SMALL,
-                        onClick: L,
+                        onClick: I,
                         color: i.Button.Colors.GREEN,
                         children: E.default.Messages.START
                     }), t && null != _ ? (0, l.jsx)(i.Button, {
@@ -411,7 +411,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             });
             var l = n("37983");
@@ -426,72 +426,75 @@
                 c = n("433487"),
                 f = n("398604"),
                 E = n("397680"),
-                h = n("393745"),
-                C = n("745049"),
-                v = n("782340"),
-                N = n("157624");
+                h = n("822516"),
+                C = n("393745"),
+                v = n("745049"),
+                N = n("782340"),
+                g = n("157624");
 
-            function g(e) {
+            function S(e) {
                 let {
                     recurrenceId: t,
                     originalScheduledStartTime: s,
-                    guildEventId: g,
-                    onClick: S,
+                    guildEventId: S,
+                    onClick: I,
                     isActive: L
-                } = e, I = (0, i.useStateFromStores)([f.default], () => f.default.getGuildScheduledEvent(g)), _ = (0, E.default)(t, null == I ? void 0 : I.id), m = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(null == I ? void 0 : I.guild_id)), x = (0, i.useStateFromStores)([r.default], () => r.default.getChannel(null == I ? void 0 : I.channel_id));
-                if (null == I) return null;
+                } = e, _ = (0, i.useStateFromStores)([f.default], () => f.default.getGuildScheduledEvent(S)), m = (0, E.default)(t, null == _ ? void 0 : _.id), x = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(null == _ ? void 0 : _.guild_id)), T = (0, i.useStateFromStores)([r.default], () => r.default.getChannel(null == _ ? void 0 : _.channel_id));
+                if (null == _) return null;
                 let {
-                    is_canceled: T = !1
-                } = null != _ ? _ : {}, p = (null == _ ? void 0 : _.scheduled_start_time) != null ? new Date(null == _ ? void 0 : _.scheduled_start_time) : s, R = e => {
-                    e.stopPropagation(), null != m && (0, o.openContextMenuLazy)(e, async () => {
+                    is_canceled: p = !1
+                } = null != m ? m : {}, R = (null == m ? void 0 : m.scheduled_start_time) != null ? new Date(null == m ? void 0 : m.scheduled_start_time) : s, M = (0, h.getNextRecurrenceIdInEvent)(_), B = p ? v.GuildScheduledEventStatus.CANCELED : v.GuildScheduledEventStatus.SCHEDULED;
+                M === t && (B = _.status);
+                let G = e => {
+                    e.stopPropagation(), null != x && (0, o.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
                         } = await n.el("110374").then(n.bind(n, "110374"));
                         return n => (0, l.jsx)(e, {
-                            guildEventId: I.id,
+                            guildEventId: _.id,
                             recurrenceId: t,
-                            channel: x,
-                            guild: m,
+                            channel: T,
+                            guild: x,
                             isRecurrenceItem: !0,
                             ...n
                         })
                     })
                 };
                 return (0, l.jsxs)(a.ClickableContainer, {
-                    className: u(N.container, {
-                        [N.canceled]: T,
-                        [N.clickable]: null != S,
-                        [N.active]: L
+                    className: u(g.container, {
+                        [g.canceled]: p,
+                        [g.clickable]: null != I,
+                        [g.active]: L
                     }),
                     onClick: e => {
-                        e.stopPropagation(), !T && (null == S || S(t))
+                        e.stopPropagation(), !p && (null == I || I(t))
                     },
-                    onContextMenu: R,
+                    onContextMenu: G,
                     "aria-label": "",
-                    children: [(0, l.jsx)(h.GuildEventTimeStatus, {
-                        startTime: p.toISOString(),
-                        status: T ? C.GuildScheduledEventStatus.CANCELED : C.GuildScheduledEventStatus.SCHEDULED,
-                        eventType: I.entity_type,
-                        guildEventId: I.id,
+                    children: [(0, l.jsx)(C.GuildEventTimeStatus, {
+                        startTime: R.toISOString(),
+                        status: B,
+                        eventType: _.entity_type,
+                        guildEventId: _.id,
                         recurrenceId: t,
-                        className: N.timeStatus
-                    }), T && (0, l.jsx)(a.Text, {
+                        className: g.timeStatus
+                    }), p && (0, l.jsx)(a.Text, {
                         variant: "text-sm/semibold",
                         color: "text-danger",
-                        className: N.canceledStatus,
-                        children: v.default.Messages.EVENT_CANCELED
+                        className: g.canceledStatus,
+                        children: N.default.Messages.EVENT_CANCELED
                     }), (0, l.jsx)(a.Tooltip, {
-                        text: v.default.Messages.MORE,
+                        text: N.default.Messages.MORE,
                         position: "top",
-                        "aria-label": v.default.Messages.EDIT,
+                        "aria-label": N.default.Messages.EDIT,
                         children: e => (0, l.jsx)(a.Clickable, {
                             ...e,
-                            onClick: R,
-                            className: N.iconButton,
+                            onClick: G,
+                            className: g.iconButton,
                             children: (0, l.jsx)(c.default, {
                                 width: 20,
                                 height: 20,
-                                className: N.icon
+                                className: g.icon
                             })
                         })
                     })]
