@@ -375,23 +375,21 @@
                 a = n("439141"),
                 u = n("533222"),
                 o = n("42887"),
-                d = n("227602"),
-                r = n("471671"),
-                l = n("599110"),
-                c = n("709681"),
-                p = n("12307"),
-                f = n("49111"),
-                _ = n("353927");
+                d = n("599110"),
+                r = n("709681"),
+                l = n("12307"),
+                c = n("49111"),
+                p = n("353927");
 
-            function m() {
-                (0, c.playSound)("mention3")
+            function f() {
+                (0, r.playSound)("mention3")
             }
 
-            function h(e, t, n, s, i) {
+            function _(e, t, n, s, i) {
                 if (t === n) return;
                 let a = e[t],
                     o = e[n];
-                l.default.track(f.AnalyticEvents.MEDIA_DEVICE_CHANGED, {
+                d.default.track(c.AnalyticEvents.MEDIA_DEVICE_CHANGED, {
                     device_from_name: u.default.getCertifiedDeviceName(t, null != a ? a.name : ""),
                     device_to_name: u.default.getCertifiedDeviceName(n, null != o ? o.name : ""),
                     device_type: s,
@@ -399,31 +397,27 @@
                     location: i
                 })
             }
-            let E = {
+            let m = {
                 isNotSupported: () => !1,
-                enable: e => Promise.resolve(!0)
+                enable: e => Promise.resolve(!0),
+                trackToggleSelfMute(e) {}
             };
-            E = n("412905");
+            m = n("412905");
             let {
-                enable: g,
-                isNotSupported: D
-            } = E;
+                enable: h,
+                isNotSupported: E,
+                trackToggleSelfMute: g
+            } = m;
             var S = {
-                enable: g,
+                enable: h,
                 toggleSelfMute() {
                     let {
-                        context: e = _.MediaEngineContextTypes.DEFAULT,
+                        context: e = p.MediaEngineContextTypes.DEFAULT,
                         syncRemote: t = !0,
                         usedKeybind: n = !1
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    if (D()) return Promise.resolve();
-                    let i = d.default.getKeybindForAction(f.GlobalKeybindActions.TOGGLE_MUTE, !1, !0);
-                    return (l.default.track(f.AnalyticEvents.INPUT_MUTE_TOGGLED, {
-                        enabled: !o.default.isSelfMute(),
-                        custom_keybind_assigned: null != i && i.id !== d.DEFAULT_MUTE_KEYBIND.id,
-                        used_keybind: n,
-                        app_in_focus: r.default.isFocused(),
-                        overlay_activated: __OVERLAY__
+                    return E() ? Promise.resolve() : (g({
+                        usedKeybind: n
                     }), o.default.isEnabled()) ? s.default.dispatch({
                         type: "AUDIO_TOGGLE_SELF_MUTE",
                         context: e,
@@ -431,32 +425,32 @@
                     }) : this.enable(!0)
                 },
                 setTemporarySelfMute(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_TEMPORARY_SELF_MUTE",
                         mute: e
                     })
                 },
                 toggleSelfDeaf() {
                     let {
-                        context: e = _.MediaEngineContextTypes.DEFAULT,
+                        context: e = p.MediaEngineContextTypes.DEFAULT,
                         syncRemote: t = !0
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_TOGGLE_SELF_DEAF",
                         context: e,
                         syncRemote: t
                     })
                 },
                 toggleLocalMute(e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.MediaEngineContextTypes.DEFAULT;
-                    !D() && s.default.dispatch({
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p.MediaEngineContextTypes.DEFAULT;
+                    !E() && s.default.dispatch({
                         type: "AUDIO_TOGGLE_LOCAL_MUTE",
                         context: t,
                         userId: e
                     })
                 },
                 toggleLocalSoundboardMute(e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.MediaEngineContextTypes.DEFAULT;
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p.MediaEngineContextTypes.DEFAULT;
                     s.default.dispatch({
                         type: "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE",
                         context: t,
@@ -464,10 +458,10 @@
                     })
                 },
                 setDisableLocalVideo(e, t) {
-                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.MediaEngineContextTypes.DEFAULT,
+                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.MediaEngineContextTypes.DEFAULT,
                         i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
                         a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
                         context: n,
                         userId: e,
@@ -477,7 +471,7 @@
                     })
                 },
                 setLocalVolume(e, t) {
-                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.MediaEngineContextTypes.DEFAULT;
+                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.MediaEngineContextTypes.DEFAULT;
                     s.default.dispatch({
                         type: "AUDIO_SET_LOCAL_VOLUME",
                         context: n,
@@ -486,7 +480,7 @@
                     })
                 },
                 setLocalPan(e, t, n) {
-                    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : _.MediaEngineContextTypes.DEFAULT;
+                    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : p.MediaEngineContextTypes.DEFAULT;
                     s.default.dispatch({
                         type: "AUDIO_SET_LOCAL_PAN",
                         context: i,
@@ -497,8 +491,8 @@
                 },
                 setMode(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.MediaEngineContextTypes.DEFAULT;
-                    !D() && s.default.dispatch({
+                        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.MediaEngineContextTypes.DEFAULT;
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_MODE",
                         context: n,
                         mode: e,
@@ -509,49 +503,49 @@
                     })
                 },
                 setInputVolume(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_INPUT_VOLUME",
                         volume: e
                     })
                 },
                 setOutputVolume(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_OUTPUT_VOLUME",
                         volume: e
                     })
                 },
                 setInputDevice(e, t) {
-                    if (!D()) {
+                    if (!E()) {
                         if (null != t) {
                             let n = o.default.getInputDevices(),
                                 s = o.default.getInputDeviceId();
-                            h(n, s, e, "Audio Input", t)
+                            _(n, s, e, "Audio Input", t)
                         }
                         s.default.dispatch({
                             type: "AUDIO_SET_INPUT_DEVICE",
                             id: e
-                        }), m()
+                        }), f()
                     }
                 },
                 setOutputDevice(e, t) {
-                    if (!D()) {
+                    if (!E()) {
                         if (null != t) {
                             let n = o.default.getOutputDevices(),
                                 s = o.default.getOutputDeviceId();
-                            h(n, s, e, "Audio Output", t)
+                            _(n, s, e, "Audio Output", t)
                         }
                         s.default.dispatch({
                             type: "AUDIO_SET_OUTPUT_DEVICE",
                             id: e
-                        }), m()
+                        }), f()
                     }
                 },
                 setVideoDevice(e, t) {
-                    if (!D()) {
+                    if (!E()) {
                         if (null != t) {
                             let n = o.default.getVideoDevices(),
                                 s = o.default.getVideoDeviceId();
-                            h(n, s, e, "Video", t)
+                            _(n, s, e, "Video", t)
                         }
                         s.default.dispatch({
                             type: "MEDIA_ENGINE_SET_VIDEO_DEVICE",
@@ -560,27 +554,27 @@
                     }
                 },
                 setEchoCancellation(e, t) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_ECHO_CANCELLATION",
                         enabled: e,
                         location: t
                     })
                 },
                 setLoopback(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_LOOPBACK",
                         enabled: e
                     })
                 },
                 setNoiseSuppression(e, t) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_NOISE_SUPPRESSION",
                         enabled: e,
                         location: t
                     })
                 },
                 setNoiseCancellation(e, t) {
-                    !D() && (s.default.dispatch({
+                    !E() && (s.default.dispatch({
                         type: "AUDIO_SET_NOISE_CANCELLATION",
                         enabled: e,
                         location: t
@@ -591,26 +585,26 @@
                     }))
                 },
                 setAutomaticGainControl(e, t) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_AUTOMATIC_GAIN_CONTROL",
                         enabled: e,
                         location: t
                     })
                 },
                 setExperimentalEncoders(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_EXPERIMENTAL_ENCODERS",
                         enabled: e
                     })
                 },
                 setHardwareH264(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_HARDWARE_H264",
                         enabled: e
                     })
                 },
                 setAttenuation(e, t, n) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_ATTENUATION",
                         attenuation: e,
                         attenuateWhileSpeakingSelf: t,
@@ -618,42 +612,42 @@
                     })
                 },
                 setQoS(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_QOS",
                         enabled: e
                     })
                 },
                 reset() {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_RESET"
                     })
                 },
                 setSilenceWarning(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_DISPLAY_SILENCE_WARNING",
                         enabled: e
                     })
                 },
                 setDebugLogging(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_DEBUG_LOGGING",
                         enabled: e
                     })
                 },
                 setVideoHook(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_VIDEO_HOOK",
                         enabled: e
                     })
                 },
                 setExperimentalSoundshare(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE",
                         enabled: e
                     })
                 },
                 setAudioSubsystem(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "AUDIO_SET_SUBSYSTEM",
                         subsystem: e
                     })
@@ -665,43 +659,43 @@
                     })
                 },
                 setGoLiveSource(e) {
-                    (null == e ? void 0 : e.qualityOptions) != null && (0, p.trackStreamSettingsUpdate)(e.qualityOptions.preset, e.qualityOptions.resolution, e.qualityOptions.frameRate), s.default.dispatch({
+                    (null == e ? void 0 : e.qualityOptions) != null && (0, l.trackStreamSettingsUpdate)(e.qualityOptions.preset, e.qualityOptions.resolution, e.qualityOptions.frameRate), s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE",
                         settings: e
                     })
                 },
                 setOpenH264(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_OPEN_H264",
                         enabled: e
                     })
                 },
                 setAV1Enabled(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_AV1",
                         enabled: e
                     })
                 },
                 setH265Enabled(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_H265",
                         enabled: e
                     })
                 },
                 setAecDump(e) {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "MEDIA_ENGINE_SET_AEC_DUMP",
                         enabled: e
                     })
                 },
                 interact() {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "MEDIA_ENGINE_INTERACTION_REQUIRED",
                         required: !1
                     })
                 },
                 enableSoundshare() {
-                    !D() && s.default.dispatch({
+                    !E() && s.default.dispatch({
                         type: "MEDIA_ENGINE_ENABLE_SOUNDSHARE"
                     })
                 }
@@ -711,10 +705,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 isNotSupported: function() {
-                    return _
+                    return E
                 },
                 enable: function() {
-                    return h
+                    return S
+                },
+                trackToggleSelfMute: function() {
+                    return D
                 }
             });
             var s = n("37983");
@@ -723,13 +720,16 @@
                 a = n("913144"),
                 u = n("605250"),
                 o = n("42887"),
-                d = n("599110"),
-                r = n("49111"),
-                l = n("180524"),
-                c = n("782340");
-            let p = new u.default("AudioActionCreators");
+                d = n("227602"),
+                r = n("471671"),
+                l = n("599110"),
+                c = n("360782"),
+                p = n("49111"),
+                f = n("180524"),
+                _ = n("782340");
+            let m = new u.default("AudioActionCreators");
 
-            function f() {
+            function h() {
                 (0, i.openModalLazy)(async () => {
                     let {
                         default: e
@@ -741,53 +741,66 @@
                 })
             }
 
-            function _() {
+            function E() {
                 return !o.default.isSupported() && ((0, i.openModal)(e => (0, s.jsx)(i.ConfirmModal, {
-                    header: c.default.Messages.UNSUPPORTED_BROWSER,
-                    confirmText: c.default.Messages.DOWNLOAD_APP,
-                    cancelText: c.default.Messages.CANCEL,
-                    onConfirm: f,
+                    header: _.default.Messages.UNSUPPORTED_BROWSER,
+                    confirmText: _.default.Messages.DOWNLOAD_APP,
+                    cancelText: _.default.Messages.CANCEL,
+                    onConfirm: h,
                     confirmButtonColor: i.Button.Colors.BRAND,
                     ...e,
                     children: (0, s.jsx)(i.Text, {
                         variant: "text-md/normal",
-                        children: c.default.Messages.UNSUPPORTED_BROWSER_DETAILS
+                        children: _.default.Messages.UNSUPPORTED_BROWSER_DETAILS
                     })
                 })), !0)
             }
 
-            function m(e) {
-                d.default.track(r.AnalyticEvents.PERMISSIONS_ACKED, {
+            function g(e) {
+                l.default.track(p.AnalyticEvents.PERMISSIONS_ACKED, {
                     type: "audio",
                     action: e
                 })
             }
 
-            function h() {
+            function S() {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                return _() ? Promise.resolve(!1) : (d.default.track(r.AnalyticEvents.PERMISSIONS_REQUESTED, {
+                return E() ? Promise.resolve(!1) : (l.default.track(p.AnalyticEvents.PERMISSIONS_REQUESTED, {
                     type: "audio"
                 }), o.default.getMediaEngine().enable().then(() => {
                     a.default.dispatch({
                         type: "MEDIA_ENGINE_SET_AUDIO_ENABLED",
                         enabled: !0,
                         unmute: e
-                    }), m(l.NativePermissionStates.ACCEPTED)
+                    }), g(f.NativePermissionStates.ACCEPTED)
                 }, e => {
                     switch (e) {
-                        case r.UserMediaErrors.NO_DEVICES_FOUND:
-                            m(l.NativePermissionStates.NO_DEVICES);
+                        case p.UserMediaErrors.NO_DEVICES_FOUND:
+                            g(f.NativePermissionStates.NO_DEVICES);
                             break;
-                        case r.UserMediaErrors.PERMISSION_DENIED:
-                            m(l.NativePermissionStates.DENIED);
+                        case p.UserMediaErrors.PERMISSION_DENIED:
+                            g(f.NativePermissionStates.DENIED);
                             break;
-                        case r.UserMediaErrors.PERMISSION_DISMISSED:
-                            m(l.NativePermissionStates.DISMISSED);
+                        case p.UserMediaErrors.PERMISSION_DISMISSED:
+                            g(f.NativePermissionStates.DISMISSED);
                             break;
                         default:
-                            m(l.NativePermissionStates.ERROR), p.warn("unknown getUserMedia error: ".concat(e))
+                            g(f.NativePermissionStates.ERROR), m.warn("unknown getUserMedia error: ".concat(e))
                     }
                 }).then(() => !0))
+            }
+
+            function D(e) {
+                let {
+                    usedKeybind: t = !1
+                } = e, n = d.default.getKeybindForAction(p.GlobalKeybindActions.TOGGLE_MUTE, !1, !0);
+                l.default.track(p.AnalyticEvents.INPUT_MUTE_TOGGLED, {
+                    enabled: !o.default.isSelfMute(),
+                    custom_keybind_assigned: null != n && n.id !== d.DEFAULT_MUTE_KEYBIND.id,
+                    used_keybind: t,
+                    app_in_focus: r.default.isFocused(),
+                    overlay_activated: null != (0, c.default)()
+                })
             }
         },
         278108: function(e, t, n) {
@@ -913,8 +926,8 @@
                 h = n("49111"),
                 E = n("353927"),
                 g = n("782340"),
-                D = n("686084"),
-                S = n("926622");
+                S = n("686084"),
+                D = n("926622");
             let T = (0, _.uid)(),
                 I = (0, _.uid)(),
                 O = (0, _.uid)();
@@ -928,7 +941,7 @@
                     } = this.props;
                     return (0, s.jsx)(_.UID, {
                         children: t => (0, s.jsxs)(f.default, {
-                            className: S.marginBottom4,
+                            className: D.marginBottom4,
                             children: [(0, s.jsx)(d.FormTitle, {
                                 tag: d.FormTitleTags.H3,
                                 children: (0, s.jsx)("label", {
@@ -958,7 +971,7 @@
                 render() {
                     return (0, s.jsxs)(d.FormItem, {
                         title: g.default.Messages.FORM_LABEL_INPUT_SENSITIVTY,
-                        className: S.marginBottom8,
+                        className: D.marginBottom8,
                         children: [this.renderAutomaticVADToggle(), this.renderSlider()]
                     })
                 }
@@ -1005,14 +1018,14 @@
                         vadAutoThreshold: f,
                         inputDevices: _,
                         inputDeviceId: E,
-                        inputVolume: D,
+                        inputVolume: S,
                         outputDeviceId: v,
                         outputDevices: b,
                         outputVolume: N,
-                        speaking: x = !1
+                        speaking: C = !1
                     } = e,
-                    C = u.first(_),
-                    M = null != C && C.disabled,
+                    x = u.first(_),
+                    M = null != x && x.disabled,
                     U = u.first(b),
                     R = null != U && U.disabled,
                     y = [{
@@ -1025,7 +1038,7 @@
                 return t = a === h.InputModes.PUSH_TO_TALK ? (0, s.jsxs)(i.Fragment, {
                     children: [(0, s.jsx)(d.FormItem, {
                         title: g.default.Messages.FORM_LABEL_SHORTCUT,
-                        className: S.marginBottom20,
+                        className: D.marginBottom20,
                         children: (0, s.jsx)(l.default, {
                             defaultValue: o,
                             onChange: e => r.default.setMode(a, {
@@ -1033,7 +1046,7 @@
                             }, n)
                         })
                     }), (0, s.jsxs)(d.FormItem, {
-                        className: S.marginBottom8,
+                        className: D.marginBottom8,
                         children: [(0, s.jsx)(d.FormTitle, {
                             id: T,
                             children: g.default.Messages.INPUT_MODE_PTT_RELEASE_DELAY
@@ -1048,7 +1061,7 @@
                         })]
                     })]
                 }) : (0, s.jsx)(A, {
-                    speaking: x,
+                    speaking: C,
                     inputMode: a,
                     threshold: p,
                     autoThreshold: f,
@@ -1059,7 +1072,7 @@
                 }), (0, s.jsxs)(i.Fragment, {
                     children: [(0, s.jsx)(d.FormItem, {
                         title: g.default.Messages.FORM_LABEL_INPUT_DEVICE,
-                        className: S.marginBottom20,
+                        className: D.marginBottom20,
                         children: (0, s.jsx)(d.SingleSelect, {
                             value: E,
                             onChange: e => r.default.setInputDevice(e, "Voice Settings"),
@@ -1076,18 +1089,18 @@
                             isDisabled: M
                         })
                     }), (0, s.jsxs)(d.FormItem, {
-                        className: S.marginBottom20,
+                        className: D.marginBottom20,
                         children: [(0, s.jsx)(d.FormTitle, {
                             id: I,
                             children: g.default.Messages.FORM_LABEL_INPUT_VOLUME
                         }), (0, s.jsx)(d.Slider, {
-                            initialValue: (0, m.amplitudeToPerceptual)(D),
+                            initialValue: (0, m.amplitudeToPerceptual)(S),
                             asValueChanges: e => r.default.setInputVolume((0, m.perceptualToAmplitude)(e)),
                             "aria-labelledby": I
                         })]
                     }), (0, s.jsx)(d.FormItem, {
                         title: g.default.Messages.FORM_LABEL_OUTPUT_DEVICE,
-                        className: S.marginBottom20,
+                        className: D.marginBottom20,
                         children: (0, s.jsx)(d.SingleSelect, {
                             value: v,
                             onChange: e => r.default.setOutputDevice(e, "Voice Settings"),
@@ -1104,7 +1117,7 @@
                             isDisabled: R
                         })
                     }), (0, s.jsxs)(d.FormItem, {
-                        className: S.marginBottom20,
+                        className: D.marginBottom20,
                         children: [(0, s.jsx)(d.FormTitle, {
                             id: O,
                             children: g.default.Messages.FORM_LABEL_OUTPUT_VOLUME
@@ -1116,7 +1129,7 @@
                         })]
                     }), (0, s.jsx)(d.FormItem, {
                         title: g.default.Messages.FORM_LABEL_INPUT_MODE,
-                        className: S.marginBottom20,
+                        className: D.marginBottom20,
                         children: (0, s.jsx)(d.RadioGroup, {
                             onChange: e => {
                                 let {
@@ -1142,11 +1155,11 @@
                         children: [(0, s.jsxs)(f.default.Child, {
                             children: [(0, s.jsx)(d.FormTitle, {
                                 tag: "h1",
-                                className: S.marginReset,
+                                className: D.marginReset,
                                 children: g.default.Messages.VOICE_SETTINGS
                             }), (0, s.jsx)(d.Text, {
                                 variant: "text-xs/normal",
-                                className: D.title,
+                                className: S.title,
                                 children: e.title
                             })]
                         }), (0, s.jsx)(f.default.Child, {
@@ -1420,7 +1433,7 @@
                     return s
                 },
                 default: function() {
-                    return S
+                    return D
                 }
             }), n("222007");
             var s, i, a = n("37983"),
@@ -1441,7 +1454,7 @@
                 DEFAULT: E.default,
                 RECORDING: E.recording
             };
-            class D extends u.PureComponent {
+            class S extends u.PureComponent {
                 componentWillUnmount() {
                     null != this._unregisterNativeRecorder && this._unregisterNativeRecorder()
                 }
@@ -1546,7 +1559,7 @@
                     }
                 }
             }
-            var S = D
+            var D = S
         },
         476765: function(e, t, n) {
             "use strict";
@@ -1705,6 +1718,20 @@
                 constructor(e, t, n) {
                     this.name = e, this._volume = n
                 }
+            }
+        },
+        360782: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return i
+                }
+            });
+            var s = n("860957");
+
+            function i() {
+                let e = s.default.getFocusedPID();
+                return null != e && (s.default.isReady(e) || s.default.isCrashed(e)) ? e : null
             }
         }
     }
