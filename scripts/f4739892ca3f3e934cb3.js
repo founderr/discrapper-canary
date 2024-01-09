@@ -1659,7 +1659,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "258063"
+                        buildNumber: "258076"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -15962,7 +15962,7 @@
                 i = n("773336");
             let l = {
                 [i.PlatformTypes.WINDOWS]: {
-                    nvidia: "<=537.58.0"
+                    nvidia: "<=537.58.0 || >=546.31"
                 }
             };
 

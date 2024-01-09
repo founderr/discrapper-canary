@@ -29,7 +29,7 @@
                 r = n("773336");
             let i = {
                 [r.PlatformTypes.WINDOWS]: {
-                    nvidia: "<=537.58.0"
+                    nvidia: "<=537.58.0 || >=546.31"
                 }
             };
 
