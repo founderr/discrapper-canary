@@ -733,15 +733,15 @@
                 T = r("172248"),
                 w = r("811199"),
                 N = r("175768"),
-                L = r("358344"),
-                E = r("34971"),
+                E = r("358344"),
+                L = r("34971"),
                 _ = r("134034"),
                 A = r("79953"),
                 R = r("388557"),
                 P = r("238161"),
                 O = r("20950"),
-                M = r("724209"),
-                I = r("782340"),
+                I = r("724209"),
+                M = r("782340"),
                 B = r("978482"),
                 D = r("694735");
 
@@ -763,7 +763,7 @@
                 })
             }
 
-            function F() {
+            function G() {
                 var e;
                 let t = n.useMemo(() => {
                         let e = [{
@@ -810,7 +810,7 @@
                         }), e.push({
                             id: "permissions",
                             name: "Permissions",
-                            render: () => (0, a.jsx)(E.default, {})
+                            render: () => (0, a.jsx)(L.default, {})
                         }), e.push({
                             id: "modals",
                             name: "Modals",
@@ -822,7 +822,7 @@
                         }), e.push({
                             id: "payments",
                             name: "Payments",
-                            render: () => (0, a.jsx)(L.default, {})
+                            render: () => (0, a.jsx)(E.default, {})
                         }), e.push({
                             id: "subscriptions",
                             name: "Subscriptions",
@@ -837,7 +837,7 @@
                         TabBar: r,
                         renderSelectedTab: i,
                         selectedTabId: l
-                    } = (0, M.default)({
+                    } = (0, I.default)({
                         tabs: t,
                         initialSelectedTabId: null !== (e = b.default.lastOpenTabId) && void 0 !== e ? e : void 0,
                         onChangeTab: e => {
@@ -857,7 +857,7 @@
                         className: D.headerBar,
                         toolbar: (0, a.jsx)(g.default.Icon, {
                             icon: f.default,
-                            tooltip: I.default.Messages.CLOSE,
+                            tooltip: M.default.Messages.CLOSE,
                             onClick: y.toggleDisplayDevTools
                         }),
                         children: [(0, a.jsx)(g.default.Icon, {
@@ -872,7 +872,7 @@
                 })
             }
 
-            function G() {
+            function F() {
                 let e = n.useRef(null),
                     t = (0, s.useStateFromStores)([b.default], () => b.default.sidebarWidth),
                     [r, i] = n.useState(null),
@@ -894,7 +894,7 @@
                         onResizeEnd: o
                     }), (0, a.jsx)("div", {
                         className: B.sidebarContent,
-                        children: (0, a.jsx)(F, {})
+                        children: (0, a.jsx)(G, {})
                     })]
                 })
             }
@@ -905,7 +905,7 @@
                     className: l(B.container, B.mobileContainerExpanded),
                     children: (0, a.jsx)("div", {
                         className: B.sidebarContent,
-                        children: (0, a.jsx)(F, {})
+                        children: (0, a.jsx)(G, {})
                     })
                 }) : (0, a.jsx)("div", {
                     className: B.container,
@@ -931,7 +931,7 @@
                 let {
                     mobile: t
                 } = e;
-                return t ? (0, a.jsx)(U, {}) : (0, a.jsx)(G, {})
+                return t ? (0, a.jsx)(U, {}) : (0, a.jsx)(F, {})
             }
         },
         444489: function(e, t, r) {
@@ -1000,7 +1000,7 @@
                 })
             }
 
-            function L(e) {
+            function E(e) {
                 let {
                     name: t,
                     children: r
@@ -1015,7 +1015,7 @@
                     })]
                 })
             }
-            let E = [{
+            let L = [{
                     id: "details",
                     name: "Details",
                     render: e => {
@@ -1059,7 +1059,7 @@
                             }), (0, a.jsx)(N, {
                                 children: Object.entries(r).map(e => {
                                     let [t, r] = e;
-                                    return (0, a.jsx)(L, {
+                                    return (0, a.jsx)(E, {
                                         name: "".concat(t, ":"),
                                         children: null != r ? (0, a.jsx)("code", {
                                             children: JSON.stringify(r)
@@ -1115,7 +1115,7 @@
                         TabBar: p,
                         renderSelectedTab: m
                     } = (0, C.default)({
-                        tabs: E
+                        tabs: L
                     }, []);
                 return (0, a.jsxs)("div", {
                     ref: e,
@@ -1238,9 +1238,9 @@
                     ...A(y.semanticColorTokens),
                     ...A(f.componentColorTokens)
                 },
-                L = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
+                E = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
 
-            function E(e) {
+            function L(e) {
                 var t;
                 let r = "string" == typeof e ? 1 : null !== (t = e.opacity) && void 0 !== t ? t : 1,
                     a = "string" == typeof e ? e : e.color;
@@ -1263,10 +1263,10 @@
                         return "name" in r ? e(r) : r
                     }(a);
                     t[r] = {
-                        light: E(a.light),
-                        dark: E(a.dark),
-                        darker: E(null != a.darker ? a.darker : a.dark),
-                        midnight: E(null != a.midnight ? a.midnight : a.dark)
+                        light: L(a.light),
+                        dark: L(a.dark),
+                        darker: L(null != a.darker ? a.darker : a.dark),
+                        midnight: L(null != a.midnight ? a.midnight : a.dark)
                     }
                 }), t
             }
@@ -1302,7 +1302,7 @@
                     }),
                     [f, m] = i.useState(""),
                     [y, w] = i.useState({}),
-                    [E, _] = i.useState({}),
+                    [L, _] = i.useState({}),
                     A = i.useMemo(() => {
                         let e = Object.keys(t);
                         return e.reduce((e, t) => [...e, {
@@ -1346,9 +1346,9 @@
                                 }(r), l = u.kebabCase(e);
                                 return ["--".concat(l, "-hsl: ").concat(a, " calc(var(--saturation-factor, 1) * ").concat(n, "%) ").concat(i, "% !important;"), "--".concat(l, ": hsl(var(--").concat(l, "-hsl)) !important;")]
                             });
-                        return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(y).filter(e => y[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(E).filter(e => E[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(n.join("\n"), "\n      }\n    ")
-                    }, [e, r, t, y, E]),
-                    M = i.useCallback(e => {
+                        return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(y).filter(e => y[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(L).filter(e => L[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(n.join("\n"), "\n      }\n    ")
+                    }, [e, r, t, y, L]),
+                    I = i.useCallback(e => {
                         let t = "",
                             r = "",
                             a = !1;
@@ -1374,12 +1374,12 @@
                             return "".concat(a ? "\n" : "").concat(u)
                         }).join(",\n"))
                     }, []),
-                    I = i.useCallback(e => c(T(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []),
+                    M = i.useCallback(e => c(T(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []),
                     B = i.useCallback(e => {
                         let t = {};
                         Object.keys(e).forEach(r => {
                             Object.keys(e[r]).map(a => {
-                                let n = [...L];
+                                let n = [...E];
                                 "primary" !== r && (n = n.filter(e => "645" !== e)), t["".concat(r, ".").concat(n[+a])] = {
                                     hex: e[r][a]
                                 }
@@ -1432,7 +1432,7 @@
                             }), (0, n.jsx)(b.Button, {
                                 size: b.Button.Sizes.MIN,
                                 onClick: () => {
-                                    navigator.clipboard.writeText(I(t))
+                                    navigator.clipboard.writeText(M(t))
                                 },
                                 children: "Export"
                             })]
@@ -1446,7 +1446,7 @@
                             }), (0, n.jsx)(b.Button, {
                                 size: b.Button.Sizes.MIN,
                                 onClick: () => {
-                                    navigator.clipboard.writeText(M(r))
+                                    navigator.clipboard.writeText(I(r))
                                 },
                                 children: "Export"
                             })]
@@ -1621,7 +1621,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return L
+                    return E
                 }
             }), r("222007");
             var a = r("37983"),
@@ -1806,7 +1806,7 @@
                 }
             }];
 
-            function L() {
+            function E() {
                 let e = n.useRef(null),
                     t = function(e) {
                         let [t, r] = n.useState([...e.logs]), a = n.useCallback(() => r([...e.logs]), [e]);
@@ -2910,7 +2910,7 @@
                         discount: []
                     }
                 }
-            }, L = async () => {
+            }, E = async () => {
                 try {
                     await o.default.delete({
                         url: x.Endpoints.USER_OFFERS
@@ -2920,17 +2920,17 @@
                 }
             };
 
-            function E(e) {
+            function L(e) {
                 var t, r, i, o;
                 let {
                     offer: s,
                     offerOptions: u,
                     forceRefetch: h
-                } = e, [b, x] = n.useState(!1), [v, S] = n.useState(!1), [j, N] = n.useState(!1), [L, E] = n.useState(!1);
+                } = e, [b, x] = n.useState(!1), [v, S] = n.useState(!1), [j, N] = n.useState(!1), [E, L] = n.useState(!1);
                 n.useEffect(() => {
-                    j && E(!0);
+                    j && L(!0);
                     let e = setTimeout(() => {
-                        E(!1)
+                        L(!1)
                     }, 500);
                     return () => {
                         clearTimeout(e)
@@ -2942,13 +2942,13 @@
                     redeemed_at: R,
                     trial_id: P,
                     subscription_trial: O
-                } = s, M = null !== (r = null === (t = u.find(e => {
+                } = s, I = null !== (r = null === (t = u.find(e => {
                     let {
                         value: t
                     } = e;
                     return t === P
-                })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", I = null != A, B = null != A && new Date(A).getTime() < Date.now(), D = (null == O ? void 0 : O.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, H = async () => {
-                    N(!0), I ? await w(_, "trial") : await (0, d.acknowledgeUserOffer)(s), h(), N(!1)
+                })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", M = null != A, B = null != A && new Date(A).getTime() < Date.now(), D = (null == O ? void 0 : O.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, H = async () => {
+                    N(!0), M ? await w(_, "trial") : await (0, d.acknowledgeUserOffer)(s), h(), N(!1)
                 };
                 n.useEffect(() => {
                     if (b) {
@@ -2968,15 +2968,15 @@
                         }
                     }
                 }, [b, v]);
-                let F = "Active";
-                return I && (F = "Acknowledged"), B && (F = "Expired"), (0, a.jsxs)("div", {
+                let G = "Active";
+                return M && (G = "Acknowledged"), B && (G = "Expired"), (0, a.jsxs)("div", {
                     className: l(C.card, D ? C.gradientWrapperTier0 : C.gradientWrapperTier2),
                     children: [(0, a.jsxs)("div", {
                         className: l(C.row, C.nameRow),
                         children: [(0, a.jsx)(c.Heading, {
                             variant: "heading-lg/semibold",
                             color: "always-white",
-                            children: M
+                            children: I
                         }), (0, a.jsx)(c.Clickable, {
                             onClick: async () => {
                                 N(!0), await T(_, "trial"), h(), N(!1)
@@ -3028,13 +3028,13 @@
                         children: [(0, a.jsx)(c.Clickable, {
                             onClick: H,
                             className: l(C.badge, C.clickable, {
-                                [C.acked]: I,
+                                [C.acked]: M,
                                 [C.expired]: B
                             }),
                             children: (0, a.jsx)(c.Text, {
                                 variant: "eyebrow",
-                                color: "Acknowledged" === F ? void 0 : "always-white",
-                                children: F
+                                color: "Acknowledged" === G ? void 0 : "always-white",
+                                children: G
                             })
                         }), null != R && (0, a.jsx)("div", {
                             className: l(C.badge, C.badgeBottom, C.redeemed),
@@ -3046,7 +3046,7 @@
                         })]
                     }), (0, a.jsx)("div", {
                         className: l(C.loadingContainer, {
-                            [C.isLoading]: j || L
+                            [C.isLoading]: j || E
                         }),
                         children: (0, a.jsx)(c.Spinner, {})
                     })]
@@ -3072,14 +3072,14 @@
                 let {
                     id: j,
                     expires_at: N,
-                    applied_at: L,
-                    discount_id: E,
+                    applied_at: E,
+                    discount_id: L,
                     discount: _
                 } = i, A = null !== (r = null === (t = o.find(e => {
                     let {
                         value: t
                     } = e;
-                    return t === E
+                    return t === L
                 })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", R = null != N, P = null != N && new Date(N).getTime() < Date.now(), O = async () => {
                     k(!0), R ? await w(j, "discount") : await (0, d.acknowledgeUserOffer)(void 0, i), s(), k(!1)
                 };
@@ -3101,8 +3101,8 @@
                         }
                     }
                 }, [u, y]);
-                let M = "Active";
-                return P && (M = "Expired"), R && (M = "Acknowledged"), (0, a.jsxs)("div", {
+                let I = "Active";
+                return P && (I = "Expired"), R && (I = "Acknowledged"), (0, a.jsxs)("div", {
                     className: l(C.card, C.discount),
                     children: [(0, a.jsxs)("div", {
                         className: l(C.row, C.nameRow),
@@ -3135,12 +3135,12 @@
                     }), (0, a.jsxs)(c.Clickable, {
                         className: l(C.row, C.idRow),
                         onClick: () => {
-                            (0, g.copy)(E), b(!0)
+                            (0, g.copy)(L), b(!0)
                         },
                         children: [(0, a.jsxs)(c.Text, {
                             variant: "eyebrow",
                             color: "text-normal",
-                            children: ["Discount: ", E]
+                            children: ["Discount: ", L]
                         }), y ? (0, a.jsx)(f.default, {
                             className: l(C.icon, C.noMargin)
                         }) : (0, a.jsx)(p.default, {
@@ -3162,10 +3162,10 @@
                             }),
                             children: (0, a.jsx)(c.Text, {
                                 variant: "eyebrow",
-                                color: "Acknowledged" === M ? void 0 : "always-white",
-                                children: M
+                                color: "Acknowledged" === I ? void 0 : "always-white",
+                                children: I
                             })
-                        }), null != L && (0, a.jsx)("div", {
+                        }), null != E && (0, a.jsx)("div", {
                             className: l(C.badge, C.badgeBottom, C.redeemed),
                             children: (0, a.jsx)(c.Text, {
                                 variant: "eyebrow",
@@ -3209,7 +3209,7 @@
                 }, R = async () => {
                     null != f && (await j(f, "discount"), w(!0))
                 }, P = async () => {
-                    await L(), w(!0)
+                    await E(), w(!0)
                 };
                 return (0, a.jsx)(c.ScrollerThin, {
                     className: l(v.panel),
@@ -3281,7 +3281,7 @@
                             children: [(0, a.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
                                 children: "Existing Trial Offers"
-                            }), g.map(t => (0, a.jsx)(E, {
+                            }), g.map(t => (0, a.jsx)(L, {
                                 offer: t,
                                 offerOptions: e,
                                 forceRefetch: () => w(!0)
@@ -3333,7 +3333,7 @@
                 T = r("782340"),
                 w = r("185187"),
                 N = r("694735");
-            let L = [{
+            let E = [{
                     key: "id",
                     cellClassName: w.eventColumn,
                     render(e) {
@@ -3361,7 +3361,7 @@
                         return t.toLocaleString()
                     }
                 }],
-                E = [{
+                L = [{
                     id: "details",
                     name: "Details",
                     render: e => {
@@ -3445,7 +3445,7 @@
                     TabBar: y,
                     renderSelectedTab: b
                 } = (0, j.default)({
-                    tabs: E
+                    tabs: L
                 }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), _ = n.useCallback(e => {
                     p.default.dispatch({
                         type: "SET_TRACK_TRIGGERS",
@@ -3486,7 +3486,7 @@
                     }), (0, a.jsx)(h.ScrollerThin, {
                         className: w.tableContainer,
                         children: (0, a.jsx)(S.default, {
-                            columns: L,
+                            columns: E,
                             data: o,
                             selectedRowKey: c,
                             onClickRow: d
@@ -3898,64 +3898,67 @@
             "use strict";
             r.r(t), r.d(t, {
                 fetchUserOffer: function() {
-                    return l
+                    return c
                 },
                 acknowledgeUserOffer: function() {
-                    return o
+                    return d
                 }
             });
             var a = r("872717"),
-                n = r("913144"),
-                i = r("49111");
-            async function l() {
-                n.default.dispatch({
+                n = r("151426"),
+                i = r("913144"),
+                l = r("10641"),
+                o = r("872173"),
+                s = r("49111");
+            async function c() {
+                i.default.dispatch({
                     type: "BILLING_USER_OFFER_FETCH_START"
                 });
                 try {
                     var e, t, r;
-                    let l = await a.default.post({
-                            url: i.Endpoints.USER_OFFER
+                    let c = await a.default.post({
+                            url: s.Endpoints.USER_OFFER
                         }),
-                        o = null !== (e = l.body.user_trial_offer) && void 0 !== e ? e : null,
-                        s = null !== (t = l.body.user_discount) && void 0 !== t ? t : null,
-                        c = null !== (r = l.body.user_discount_offer) && void 0 !== r ? r : null;
-                    return n.default.dispatch({
+                        d = null !== (e = c.body.user_trial_offer) && void 0 !== e ? e : null,
+                        u = null !== (t = c.body.user_discount) && void 0 !== t ? t : null,
+                        h = null !== (r = c.body.user_discount_offer) && void 0 !== r ? r : null;
+                    return null == d && (0, l.isDismissibleContentDismissed)(n.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, o.removeDismissedContent)(n.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING), i.default.dispatch({
                         type: "BILLING_USER_OFFER_FETCH_SUCCESS",
-                        userTrialOffer: o,
-                        userDiscount: s,
-                        userDiscountOffer: c
+                        userTrialOffer: d,
+                        userDiscount: u,
+                        userDiscountOffer: h
                     }), {
-                        userTrialOffer: o,
-                        userDiscount: s,
-                        userDiscountOffer: c
+                        userTrialOffer: d,
+                        userDiscount: u,
+                        userDiscountOffer: h
                     }
                 } catch (e) {
-                    n.default.dispatch({
+                    i.default.dispatch({
                         type: "BILLING_USER_OFFER_FETCH_FAIL"
                     })
                 }
             }
 
-            function o(e, t) {
+            function d(e, t) {
                 let r = null != e && null == e.expires_at ? e.id : void 0,
-                    l = null != t && null == t.expires_at ? t.id : void 0;
-                if (void 0 !== r || void 0 !== l) return a.default.post({
-                    url: i.Endpoints.USER_OFFER_ACKNOWLEDGED,
+                    n = null != t && null == t.expires_at ? t.id : void 0;
+                if (void 0 !== r || void 0 !== n) return a.default.post({
+                    url: s.Endpoints.USER_OFFER_ACKNOWLEDGED,
                     body: {
                         user_trial_offer_id: r,
-                        user_discount_offer_id: l
+                        user_discount_offer_id: n
                     },
                     oldFormErrors: !0
                 }).then(e => {
                     var t, r, a;
-                    n.default.dispatch({
+                    i.default.dispatch({
                         type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
                         userTrialOffer: null !== (t = e.body.user_trial_offer) && void 0 !== t ? t : null,
                         userDiscount: null !== (r = e.body.user_discount) && void 0 !== r ? r : null,
                         userDiscountOffer: null !== (a = e.body.user_discount_offer) && void 0 !== a ? a : null
                     })
                 }).catch(e => {
-                    404 === e.status && n.default.dispatch({
+                    404 === e.status && i.default.dispatch({
                         type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
                         userTrialOffer: null,
                         userDiscount: null,
@@ -4667,7 +4670,7 @@
                         "aria-checked": T,
                         "aria-expanded": w,
                         "aria-haspopup": N
-                    } = e, L = (0, a.jsx)(m, {
+                    } = e, E = (0, a.jsx)(m, {
                         x: 0,
                         y: 0,
                         width: 24,
@@ -4676,8 +4679,8 @@
                         foreground: null != u ? u : void 0,
                         background: null != h ? h : void 0,
                         color: d
-                    }), E = S;
-                    return null == E && "string" == typeof b && (E = b), (0, a.jsx)(c.Tooltip, {
+                    }), L = S;
+                    return null == L && "string" == typeof b && (L = b), (0, a.jsx)(c.Tooltip, {
                         text: b,
                         color: x,
                         position: k,
@@ -4720,7 +4723,7 @@
                                     [f.selected]: i
                                 }),
                                 role: C,
-                                "aria-label": E,
+                                "aria-label": L,
                                 "aria-hidden": j,
                                 "aria-checked": T,
                                 "aria-haspopup": N,
@@ -4728,8 +4731,8 @@
                                 tabIndex: o || null == g ? -1 : 0,
                                 children: [s ? (0, a.jsx)(p.default, {
                                     mask: p.default.Masks.HEADER_BAR_BADGE,
-                                    children: L
-                                }) : L, s ? (0, a.jsx)("span", {
+                                    children: E
+                                }) : E, s ? (0, a.jsx)("span", {
                                     className: f.iconBadge
                                 }) : null, n]
                             })
