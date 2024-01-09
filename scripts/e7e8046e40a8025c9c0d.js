@@ -226,7 +226,13 @@
                 },
                 treatments: [{
                     id: 1,
-                    label: "Enabled",
+                    label: "EU user",
+                    config: {
+                        enabled: !0
+                    }
+                }, {
+                    id: 2,
+                    label: "DSA E2E testing user",
                     config: {
                         enabled: !0
                     }
