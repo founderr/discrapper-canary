@@ -223,10 +223,10 @@
                     return L
                 },
                 resetPendingAccountChanges: function() {
-                    return y
+                    return R
                 },
                 resetAllPending: function() {
-                    return R
+                    return y
                 },
                 resetAndCloseUserProfileForm: function() {
                     return U
@@ -407,13 +407,13 @@
                 })
             }
 
-            function y() {
+            function R() {
                 a.default.dispatch({
                     type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
                 })
             }
 
-            function R() {
+            function y() {
                 a.default.dispatch({
                     type: "USER_SETTINGS_RESET_ALL_PENDING"
                 })
@@ -2824,8 +2824,8 @@
                     giftMessage: A,
                     subscriptionTier: N,
                     trialId: L,
-                    postSuccessGuild: y,
-                    openInvoiceId: R,
+                    postSuccessGuild: R,
+                    openInvoiceId: y,
                     applicationId: U,
                     referralTrialOfferId: M,
                     giftRecipient: P,
@@ -2863,9 +2863,9 @@
                             analyticsLocation: g,
                             analyticsSourceLocation: m,
                             trialId: L,
-                            postSuccessGuild: y,
+                            postSuccessGuild: R,
                             planGroup: _.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                            openInvoiceId: R,
+                            openInvoiceId: y,
                             applicationId: U,
                             referralTrialOfferId: M,
                             returnRef: O,
@@ -3475,7 +3475,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return C
                 }
             });
             var i = n("816494"),
@@ -3493,8 +3493,10 @@
                 E = null,
                 _ = null,
                 p = !1,
-                h = null;
-            class I extends l.default.Store {
+                h = null,
+                I = !1,
+                S = null;
+            class T extends l.default.Store {
                 isFetching() {
                     return d
                 }
@@ -3525,9 +3527,15 @@
                 getAppealSignal() {
                     return h
                 }
+                getIsSubmitting() {
+                    return I
+                }
+                getSubmitError() {
+                    return S
+                }
             }
-            I.displayName = "SafetyHubStore";
-            var S = new I(a.default, {
+            T.displayName = "SafetyHubStore";
+            var C = new T(a.default, {
                 SAFETY_HUB_FETCH_START: function(e) {
                     d = !0
                 },
@@ -3576,6 +3584,20 @@
                         signal: t
                     } = e;
                     h = t
+                },
+                SAFETY_HUB_REQUEST_REVIEW_START: function(e) {
+                    let {} = e;
+                    I = !0, S = null
+                },
+                SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function(e) {
+                    let {} = e;
+                    I = !1, S = null
+                },
+                SAFETY_HUB_REQUEST_REVIEW_FAILURE: function(e) {
+                    let {
+                        error: t
+                    } = e;
+                    I = !1, S = t
                 },
                 LOGOUT: function() {
                     d = !1, s = {}, c = {
@@ -3669,7 +3691,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return y
+                    return R
                 }
             });
             var i = n("37983"),
@@ -3830,7 +3852,7 @@
                         }), a]
                     })
                 };
-            var y = e => {
+            var R = e => {
                 var t, n;
                 let {
                     classificationId: l,
@@ -3941,7 +3963,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 ClassificationEvidence: function() {
-                    return y
+                    return R
                 }
             });
             var i = n("37983");
@@ -4065,7 +4087,7 @@
                         })
                     })
                 },
-                y = e => {
+                R = e => {
                     var t;
                     let {
                         flaggedContent: n
