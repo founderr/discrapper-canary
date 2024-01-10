@@ -1987,6 +1987,12 @@
                         config: {
                             enabled: !0
                         }
+                    }, {
+                        id: 2,
+                        label: "Control for AA test. Voice Activity Notifications are NOT enabled for user.",
+                        config: {
+                            enabled: !1
+                        }
                     }]
                 }),
                 u = (0, a.createExperiment)({
