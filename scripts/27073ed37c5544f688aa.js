@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["38768"], {
+    ["46961"], {
         50643: function(e, t, n) {
             "use strict";
             e.exports = n.p + "1766a563ac224f0a403d.svg"
@@ -402,6 +402,44 @@
                         d: "M12.7 3.3a1 1 0 0 0-1.4 0l-5 5a1 1 0 0 0 1.4 1.4L11 6.42V20a1 1 0 1 0 2 0V6.41l3.3 3.3a1 1 0 0 0 1.4-1.42l-5-5Z",
                         className: a
                     })
+                })
+            }
+        },
+        495137: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                EnvelopeIcon: function() {
+                    return l
+                }
+            });
+            var r = n("37983");
+            n("884691");
+            var i = n("669491"),
+                s = n("75196");
+            let l = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: l = i.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: a = "",
+                    ...o
+                } = e;
+                return (0, r.jsxs)("svg", {
+                    ...(0, s.default)(o),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: [(0, r.jsx)("path", {
+                        fill: "string" == typeof l ? l : l.css,
+                        d: "M1.16 5.02c-.1.28.04.58.29.74l10.27 6.85a.5.5 0 0 0 .56 0l10.27-6.85c.25-.16.38-.46.29-.74A3 3 0 0 0 20 3H4a3 3 0 0 0-2.84 2.02Z",
+                        className: a
+                    }), (0, r.jsx)("path", {
+                        fill: "string" == typeof l ? l : l.css,
+                        d: "M23 8.8a.5.5 0 0 0-.78-.41l-9.53 6.35c-.42.28-.96.28-1.38 0L1.78 8.39A.5.5 0 0 0 1 8.8V18a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V8.8Z",
+                        className: a
+                    })]
                 })
             }
         },
@@ -3303,7 +3341,7 @@
                     })
                 }, s.ArrowSmallUpIcon)
         },
-        745633: function(e, t, n) {
+        556081: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
@@ -3313,46 +3351,33 @@
             var r = n("37983");
             n("884691");
             var i = n("469563"),
-                s = n("586880"),
+                s = n("495137"),
                 l = n("75196"),
                 a = (0, i.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
                         color: i = "currentColor",
-                        ...s
+                        foreground: s,
+                        ...a
                     } = e;
                     return (0, r.jsxs)("svg", {
-                        ...(0, l.default)(s),
+                        ...(0, l.default)(a),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",
                         fill: "none",
                         children: [(0, r.jsx)("path", {
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M13.25 18L13.25 6L11.75 6L11.75 18L13.25 18Z",
-                            fill: i
+                            d: "M12.0002 10.823L20.9652 5.26C20.6772 5.1 20.3522 5 20.0002 5H4.00016C3.64816 5 3.32216 5.1 3.03516 5.26L12.0002 10.823Z",
+                            fill: i,
+                            className: s
                         }), (0, r.jsx)("path", {
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M7 12.75C6.30964 12.75 5.75 13.3096 5.75 14V18H4.25V14C4.25 12.4812 5.48122 11.25 7 11.25H18C19.5188 11.25 20.75 12.4812 20.75 14V18H19.25V14C19.25 13.3096 18.6904 12.75 18 12.75H7Z",
-                            fill: i
-                        }), (0, r.jsx)("path", {
-                            d: "M12.5 7C11.1193 7 10 5.88071 10 4.5C10 3.11929 11.1193 2 12.5 2C13.8807 2 15 3.11929 15 4.5C15 5.88071 13.8807 7 12.5 7Z",
-                            fill: i
-                        }), (0, r.jsx)("path", {
-                            d: "M20 22C18.6193 22 17.5 20.8807 17.5 19.5C17.5 18.1193 18.6193 17 20 17C21.3807 17 22.5 18.1193 22.5 19.5C22.5 20.8807 21.3807 22 20 22Z",
-                            fill: i
-                        }), (0, r.jsx)("path", {
-                            d: "M12.5 22C11.1193 22 10 20.8807 10 19.5C10 18.1193 11.1193 17 12.5 17C13.8807 17 15 18.1193 15 19.5C15 20.8807 13.8807 22 12.5 22Z",
-                            fill: i
-                        }), (0, r.jsx)("path", {
-                            d: "M5 22C3.61929 22 2.5 20.8807 2.5 19.5C2.5 18.1193 3.61929 17 5 17C6.38071 17 7.5 18.1193 7.5 19.5C7.5 20.8807 6.38071 22 5 22Z",
-                            fill: i
+                            d: "M12.527 12.8489C12.366 12.9489 12.183 12.9999 12 12.9999C11.817 12.9999 11.634 12.9489 11.473 12.8499L2.003 6.97292C2.003 6.98192 2 6.99092 2 6.99892V15.9989C2 17.1009 2.897 17.9989 4 17.9989H20C21.103 17.9989 22 17.1009 22 15.9989V6.99892C22 6.98992 21.997 6.98092 21.997 6.97192L12.527 12.8489Z",
+                            fill: i,
+                            className: s
                         })]
                     })
-                }, s.HubIcon, void 0, {
+                }, s.EnvelopeIcon, void 0, {
                     size: 24
                 })
         },
