@@ -1002,14 +1002,14 @@
                     if (delete n.favoriteChannels[e], t.type === a.FavoriteChannelType.CATEGORY)
                         for (let t in n.favoriteChannels) n.favoriteChannels[t].parentId === e && (n.favoriteChannels[t].parentId = "0");
                     f(n.favoriteChannels)
-                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+                }, s.UserSettingsDelay.INFREQUENT_USER_ACTION)
             }
 
             function S(e, t) {
                 let n = r.default.isFavorite(e);
                 n && s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
                     n.favoriteChannels[e].nickname = null != t ? t : ""
-                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+                }, s.UserSettingsDelay.INFREQUENT_USER_ACTION)
             }
 
             function g(e) {
