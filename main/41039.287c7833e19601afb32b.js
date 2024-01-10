@@ -24882,11 +24882,12 @@
             let r = (0, i.createExperiment)({
                     kind: "user",
                     id: "2021-09_favorites_server",
-                    label: "Enable fancy super-alpha favorites server.",
+                    label: "Favorites Server",
                     defaultConfig: {
                         favoritesEnabled: !1,
                         canShow: !0,
-                        isFavoritesPerk: !1
+                        isFavoritesPerk: !1,
+                        hasStaffPrivileges: !1
                     },
                     treatments: [{
                         id: 1,
@@ -24894,7 +24895,8 @@
                         config: {
                             favoritesEnabled: !0,
                             canShow: !0,
-                            isFavoritesPerk: !1
+                            isFavoritesPerk: !1,
+                            hasStaffPrivileges: !0
                         }
                     }, {
                         id: 2,
@@ -24902,7 +24904,8 @@
                         config: {
                             favoritesEnabled: !1,
                             canShow: !1,
-                            isFavoritesPerk: !1
+                            isFavoritesPerk: !1,
+                            hasStaffPrivileges: !0
                         }
                     }, {
                         id: 3,
@@ -24910,7 +24913,17 @@
                         config: {
                             favoritesEnabled: !0,
                             canShow: !0,
-                            isFavoritesPerk: !0
+                            isFavoritesPerk: !0,
+                            hasStaffPrivileges: !0
+                        }
+                    }, {
+                        id: 4,
+                        label: "Favorites v2 w/o Staff Privileges",
+                        config: {
+                            favoritesEnabled: !0,
+                            canShow: !0,
+                            isFavoritesPerk: !0,
+                            hasStaffPrivileges: !1
                         }
                     }]
                 }),
@@ -50180,7 +50193,7 @@
                         var i;
                         let d = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "258719"
+                                build_number: "258726"
                             },
                             f = l.default.getCurrentUser();
                         null != f && (d.user_id = f.id, d.user_name = f.tag, null != f.email && (d.email = f.email));

@@ -159,7 +159,7 @@
             function v(e) {
                 let {
                     favoritesEnabled: t,
-                    isFavoritesPerk: n
+                    hasStaffPrivileges: n
                 } = (0, d.useFavoritesServerExperiment)("useCanFavoriteChannel"), r = (0, i.useStateFromStores)([u.default], () => u.default.isFavorite(e.id)), a = (0, i.useStateFromStores)([s.default], () => s.default.getCurrentUser()), l = e.isDM() || e.isThread(), o = !l || n && (null == a ? void 0 : a.isStaff()) === !0;
                 return t && !__OVERLAY__ && !r && o
             }
