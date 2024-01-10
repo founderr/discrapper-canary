@@ -97,36 +97,52 @@
             "use strict";
             s.r(a), s.d(a, {
                 default: function() {
-                    return _
+                    return T
                 }
             });
             var n = s("759843"),
                 t = s("448993"),
-                l = s("840707"),
-                E = s("49111"),
-                _ = {
-                    createGuildFromTemplate: async function e(e, a, s, _, d) {
+                l = s("923959"),
+                E = s("305961"),
+                _ = s("599110"),
+                d = s("840707"),
+                i = s("49111"),
+                T = {
+                    createGuildFromTemplate: async function e(e, a, s, T, r) {
                         try {
-                            let t = await l.default.post({
-                                url: E.Endpoints.GUILDS,
-                                body: {
-                                    name: e,
-                                    icon: a,
-                                    channels: s.channels,
-                                    system_channel_id: s.system_channel_id,
-                                    roles: s.roles,
-                                    guild_template_code: s.code,
-                                    staff_only: !!d || void 0
-                                },
-                                trackedActionData: {
-                                    event: n.NetworkActionNames.GUILD_CREATE,
-                                    properties: {
-                                        template_name: s.id,
-                                        is_community_intent: _
+                            let t = await d.default.post({
+                                    url: i.Endpoints.GUILDS,
+                                    body: {
+                                        name: e,
+                                        icon: a,
+                                        channels: s.channels,
+                                        system_channel_id: s.system_channel_id,
+                                        roles: s.roles,
+                                        guild_template_code: s.code,
+                                        staff_only: !!r || void 0
+                                    },
+                                    trackedActionData: {
+                                        event: n.NetworkActionNames.GUILD_CREATE,
+                                        properties: {
+                                            template_name: s.id,
+                                            is_community_intent: T
+                                        }
                                     }
+                                }),
+                                u = t.body.id;
+                            return "2TffvPucqHkN" === s.code && E.default.addConditionalChangeListener(() => {
+                                let e = E.default.getGuild(u);
+                                if (null != e) {
+                                    let e = l.default.getVocalChannelIds(u).length > 0;
+                                    return _.default.track(i.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
+                                        skipped: !e,
+                                        reason: "guild_voice_channel",
+                                        rating: "0",
+                                        feedback: u
+                                    }), !1
                                 }
-                            });
-                            return t.body
+                                return !0
+                            }), t.body
                         } catch (e) {
                             throw new t.APIError(e)
                         }
@@ -620,32 +636,32 @@
                     hasFooter: s = !0,
                     onClose: o,
                     onChannelPromptCompleted: I,
-                    isSlideReady: A
-                } = e, [c, p] = t.useState(""), [N, G] = t.useState(null), [m, f] = t.useState(!1), U = (0, L.useUID)(), D = (0, l.useStateFromStores)([T.default], () => T.default.getGuild(a), [a]), O = t.useRef(null);
+                    isSlideReady: c
+                } = e, [A, p] = t.useState(""), [N, G] = t.useState(null), [f, m] = t.useState(!1), U = (0, L.useUID)(), D = (0, l.useStateFromStores)([T.default], () => T.default.getGuild(a), [a]), O = t.useRef(null);
                 t.useEffect(() => {
                     var e;
-                    A && (null === (e = O.current) || void 0 === e || e.focus())
-                }, [A]);
+                    c && (null === (e = O.current) || void 0 === e || e.focus())
+                }, [c]);
                 let h = t.useCallback(async e => {
                         if (e.preventDefault(), null == D) return;
-                        f(!0), G(null);
+                        m(!0), G(null);
                         let a = i.default.getDefaultChannel(D.id);
                         try {
                             let e = M.default.Messages.NUF_CHANNEL_PROMPT_CHANNEL_TOPIC_TEMPLATE.format({
-                                topic: c
+                                topic: A
                             });
-                            await _.default.createTextChannel(D.id, c, null == a ? void 0 : a.parent_id, e), I()
+                            await _.default.createTextChannel(D.id, A, null == a ? void 0 : a.parent_id, e), I()
                         } catch (e) {
                             G(new d.V6OrEarlierAPIError(e))
                         }
-                        f(!1)
-                    }, [D, c, I]),
+                        m(!1)
+                    }, [D, A, I]),
                     g = (0, n.jsxs)(n.Fragment, {
                         children: [(0, n.jsx)(E.Button, {
                             color: E.Button.Colors.BRAND,
                             onClick: h,
-                            disabled: 0 === c.length,
-                            submitting: m,
+                            disabled: 0 === A.length,
+                            submitting: f,
                             children: M.default.Messages.DONE
                         }), (0, n.jsx)(E.Button, {
                             className: C.skipButton,
@@ -691,7 +707,7 @@
                                     error: null == N ? void 0 : N.getFieldMessage("name"),
                                     children: (0, n.jsx)(E.TextInput, {
                                         type: "text",
-                                        value: c,
+                                        value: A,
                                         id: U,
                                         onChange: p,
                                         placeholder: M.default.Messages.NUF_CHANNEL_PROMPT_TOPIC_PLACEHOLDER,
@@ -761,13 +777,13 @@
                     })
                 });
 
-                function A(e) {
+                function c(e) {
                     d.default.track(T.AnalyticEvents.GUILD_CREATION_INTENT_SELECTED, {
                         skipped: null == e,
                         is_community: !!e
                     }), t(!!e)
                 }
-                let c = (0, n.jsxs)(n.Fragment, {
+                let A = (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsxs)(E.ModalHeader, {
                         direction: _.default.Direction.VERTICAL,
                         className: u.header,
@@ -791,28 +807,28 @@
                             children: [(0, n.jsx)(i.default, {
                                 icon: L,
                                 message: r.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
-                                onClick: () => A(!1)
+                                onClick: () => c(!1)
                             }), (0, n.jsx)(i.default, {
                                 icon: M,
                                 message: r.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
-                                onClick: () => A(!0)
+                                onClick: () => c(!0)
                             })]
                         }) : (0, n.jsxs)(n.Fragment, {
                             children: [(0, n.jsx)(i.default, {
                                 icon: M,
                                 message: r.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
-                                onClick: () => A(!0)
+                                onClick: () => c(!0)
                             }), (0, n.jsx)(i.default, {
                                 icon: L,
                                 message: r.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
-                                onClick: () => A(!1)
+                                onClick: () => c(!1)
                             })]
                         }), (0, n.jsx)(E.Text, {
                             className: u.skip,
                             color: "header-secondary",
                             variant: "text-sm/normal",
                             children: r.default.Messages.CREATION_INTENT_SKIP.format({
-                                onSkip: () => A(null)
+                                onSkip: () => c(null)
                             })
                         })]
                     }), o && (0, n.jsx)(E.ModalFooter, {
@@ -821,7 +837,7 @@
                     })]
                 });
                 return {
-                    content: c,
+                    content: A,
                     footer: I
                 }
             }
@@ -837,10 +853,10 @@
             "use strict";
             s.r(a), s.d(a, {
                 useCustomizeGuildSlide: function() {
-                    return A
+                    return c
                 },
                 default: function() {
-                    return c
+                    return A
                 }
             }), s("222007");
             var n = s("37983"),
@@ -859,18 +875,18 @@
                 o = s("782340"),
                 I = s("852243");
 
-            function A(e) {
+            function c(e) {
                 var a;
                 let {
                     guildTemplate: s,
                     onClose: l,
-                    onBack: A,
-                    onHubGuildInfoSet: c,
+                    onBack: c,
+                    onHubGuildInfoSet: A,
                     onGuildCreated: p,
                     isSlideReady: N,
                     hasFooter: G = !0,
-                    isCommunity: m = !1
-                } = e, [f, U] = t.useState(L.default.getGuildNameSuggestion()), [D, O] = t.useState(null), [h, g] = t.useState(!1), [y, R] = t.useState(null), x = !!(null === (a = T.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()), [P, S] = t.useState(x), j = (0, u.useUID)(), H = t.useRef(null);
+                    isCommunity: f = !1
+                } = e, [m, U] = t.useState(L.default.getGuildNameSuggestion()), [D, O] = t.useState(null), [h, g] = t.useState(!1), [y, R] = t.useState(null), x = !!(null === (a = T.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()), [P, S] = t.useState(x), j = (0, u.useUID)(), H = t.useRef(null);
                 t.useEffect(() => {
                     var e;
                     N && (null === (e = H.current) || void 0 === e || e.focus())
@@ -879,9 +895,9 @@
                         if (e.preventDefault(), null != s) {
                             g(!0), R(null);
                             try {
-                                if (null != c) c(f, D);
+                                if (null != A) A(m, D);
                                 else {
-                                    let e = await M.default.createGuildFromTemplate(f, D, s, m, P);
+                                    let e = await M.default.createGuildFromTemplate(m, D, s, f, P);
                                     d.default.transitionToGuildSync(e.id), null == p || p(e.id)
                                 }
                             } catch (e) {
@@ -889,19 +905,19 @@
                             }
                             g(!1)
                         }
-                    }, [s, D, f, p, c, m, P]),
+                    }, [s, D, m, p, A, f, P]),
                     F = (0, n.jsxs)(n.Fragment, {
                         children: [(0, n.jsx)(_.Button, {
                             color: _.Button.Colors.BRAND,
                             onClick: V,
-                            disabled: 0 === f.length,
+                            disabled: 0 === m.length,
                             submitting: h,
-                            children: null != c ? o.default.Messages.NEXT : o.default.Messages.CREATE
+                            children: null != A ? o.default.Messages.NEXT : o.default.Messages.CREATE
                         }), (0, n.jsx)(_.Button, {
                             className: I.backButton,
                             look: _.Button.Looks.BLANK,
                             size: _.Button.Sizes.MIN,
-                            onClick: A,
+                            onClick: c,
                             children: o.default.Messages.BACK
                         })]
                     }),
@@ -942,7 +958,7 @@
                                         children: o.default.Messages.FORM_LABEL_SERVER_NAME
                                     }), (0, n.jsx)(_.TextInput, {
                                         type: "text",
-                                        value: f,
+                                        value: m,
                                         maxLength: 100,
                                         onChange: U,
                                         inputRef: H,
@@ -982,10 +998,10 @@
                 }
             }
 
-            function c(e) {
+            function A(e) {
                 let {
                     content: a
-                } = A(e);
+                } = c(e);
                 return a
             }
         },
