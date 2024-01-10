@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["77806"], {
+    ["53582"], {
         839347: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -16052,12 +16052,6 @@
                 s = i && i.exports === o ? r.Buffer : void 0,
                 u = s ? s.isBuffer : void 0;
             e.exports = u || a
-        },
-        969176: function(e, t, n) {
-            var r = n("354069");
-            e.exports = function(e, t) {
-                return r(e, t)
-            }
         },
         381178: function(e, t, n) {
             var r = n("659382"),
