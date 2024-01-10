@@ -1,12 +1,12 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
     ["99860"], {
-        876087: function(e, t, s) {
+        876087: function(e, t, a) {
             "use strict";
-            e.exports = s.p + "0da9027583d375c510f3.svg"
+            e.exports = a.p + "0da9027583d375c510f3.svg"
         },
-        413524: function(e, t, s) {
+        413524: function(e, t, a) {
             "use strict";
-            s.r(t), s.d(t, {
+            a.r(t), a.d(t, {
                 STATUS_MAX_LENGTH: function() {
                     return l
                 },
@@ -14,57 +14,57 @@
                     return n
                 }
             });
-            let a = 36e5,
+            let s = 36e5,
                 l = 128,
                 n = Object.freeze({
                     MINUTES_30: 18e5,
-                    HOURS_1: 1 * a,
-                    HOURS_4: 4 * a,
+                    HOURS_1: 1 * s,
+                    HOURS_4: 4 * s,
                     TODAY: "TODAY"
                 })
         },
-        921917: function(e, t, s) {
+        921917: function(e, t, a) {
             "use strict";
-            s.r(t), s.d(t, {
+            a.r(t), a.d(t, {
                 default: function() {
                     return o
                 }
             });
-            var a = s("866227"),
-                l = s.n(a),
-                n = s("845579"),
-                u = s("599110"),
-                r = s("712246"),
-                i = s("49111");
+            var s = a("866227"),
+                l = a.n(s),
+                n = a("845579"),
+                u = a("599110"),
+                r = a("712246"),
+                i = a("49111");
 
-            function o(e, t, s, a) {
+            function o(e, t, a, s) {
                 let o = e.trim();
                 if (o.length > 0 || null != t) {
                     var S;
                     n.CustomStatusSetting.updateSetting({
                         text: o.length > 0 ? o : "",
-                        expiresAtMs: null != s ? String(l().add((0, r.default)(s), "ms").toDate().getTime()) : "0",
+                        expiresAtMs: null != a ? String(l().add((0, r.default)(a), "ms").toDate().getTime()) : "0",
                         emojiId: null != t && null != t.id ? t.id : "0",
                         emojiName: null != t ? t.name : ""
                     }), u.default.track(i.AnalyticEvents.CUSTOM_STATUS_UPDATED, {
-                        location: null != a ? a.location : null,
+                        location: null != s ? s.location : null,
                         emoji_type: null == (S = t) ? null : null != S.id ? "custom" : "unicode",
                         text_len: o.length,
-                        clear_after: null != s ? "".concat(s) : null
+                        clear_after: null != a ? "".concat(a) : null
                     })
                 } else n.CustomStatusSetting.updateSetting(void 0)
             }
         },
-        712246: function(e, t, s) {
+        712246: function(e, t, a) {
             "use strict";
-            s.r(t), s.d(t, {
+            a.r(t), a.d(t, {
                 default: function() {
                     return u
                 }
             });
-            var a = s("627445"),
-                l = s.n(a),
-                n = s("413524");
+            var s = a("627445"),
+                l = a.n(s),
+                n = a("413524");
 
             function u(e) {
                 if (e !== n.ClearAfterValues.TODAY) return l("number" == typeof e, "Invalid custom status clear timeout"), e;
@@ -75,44 +75,44 @@
                 }
             }
         },
-        711438: function(e, t, s) {
+        711438: function(e, t, a) {
             "use strict";
-            s.r(t), s.d(t, {
+            a.r(t), a.d(t, {
                 default: function() {
                     return E
                 }
-            }), s("222007");
-            var a = s("37983"),
-                l = s("884691"),
-                n = s("627445"),
-                u = s.n(n),
-                r = s("446674"),
-                i = s("77078"),
-                o = s("430568"),
-                S = s("901582"),
-                d = s("86678"),
-                c = s("845579"),
-                h = s("52028"),
-                m = s("697218"),
-                f = s("882641"),
-                T = s("381546"),
-                p = s("599110"),
-                A = s("158998"),
-                C = s("921917"),
-                g = s("413524"),
-                _ = s("49111"),
-                M = s("958706"),
-                N = s("782340"),
-                O = s("711103");
+            }), a("222007");
+            var s = a("37983"),
+                l = a("884691"),
+                n = a("627445"),
+                u = a.n(n),
+                r = a("446674"),
+                i = a("77078"),
+                o = a("430568"),
+                S = a("901582"),
+                d = a("86678"),
+                c = a("845579"),
+                h = a("52028"),
+                m = a("697218"),
+                f = a("882641"),
+                T = a("381546"),
+                p = a("599110"),
+                A = a("158998"),
+                C = a("921917"),
+                g = a("413524"),
+                _ = a("49111"),
+                M = a("958706"),
+                O = a("782340"),
+                N = a("711103");
             let j = Object.values(g.ClearAfterValues).filter(e => "number" == typeof e).sort((e, t) => e - t);
 
             function U(e) {
-                return (0, a.jsxs)("div", {
-                    className: O.statusOptionItem,
-                    children: [(0, a.jsx)(i.Status, {
+                return (0, s.jsxs)("div", {
+                    className: N.statusOptionItem,
+                    children: [(0, s.jsx)(i.Status, {
                         status: e.value,
                         size: 10,
-                        className: O.statusIcon
+                        className: N.statusIcon
                     }), e.label]
                 })
             }
@@ -148,29 +148,29 @@
                     return [{
                         key: 1,
                         value: g.ClearAfterValues.TODAY,
-                        label: N.default.Messages.CUSTOM_STATUS_TODAY
+                        label: O.default.Messages.CUSTOM_STATUS_TODAY
                     }, {
                         key: 2,
                         value: g.ClearAfterValues.HOURS_4,
-                        label: N.default.Messages.CUSTOM_STATUS_HOURS.format({
+                        label: O.default.Messages.CUSTOM_STATUS_HOURS.format({
                             hours: 4
                         })
                     }, {
                         key: 3,
                         value: g.ClearAfterValues.HOURS_1,
-                        label: N.default.Messages.CUSTOM_STATUS_HOURS.format({
+                        label: O.default.Messages.CUSTOM_STATUS_HOURS.format({
                             hours: 1
                         })
                     }, {
                         key: 4,
                         value: g.ClearAfterValues.MINUTES_30,
-                        label: N.default.Messages.CUSTOM_STATUS_MINUTES.format({
+                        label: O.default.Messages.CUSTOM_STATUS_MINUTES.format({
                             minutes: 30
                         })
                     }, {
                         key: 5,
                         value: null,
-                        label: N.default.Messages.CUSTOM_STATUS_DONT_CLEAR
+                        label: O.default.Messages.CUSTOM_STATUS_DONT_CLEAR
                     }]
                 }
                 get analyticsLocation() {
@@ -182,8 +182,8 @@
                     let {
                         emojiInfo: e
                     } = this.state;
-                    return null == e ? null : () => (0, a.jsx)(o.default, {
-                        className: O.emoji,
+                    return null == e ? null : () => (0, s.jsx)(o.default, {
+                        className: N.emoji,
                         emojiId: e.id,
                         emojiName: e.name,
                         animated: !!e.animated
@@ -194,44 +194,44 @@
                         user: e
                     } = this.props, {
                         text: t,
-                        emojiInfo: s
+                        emojiInfo: a
                     } = this.state;
-                    return (0, a.jsx)(i.FormSection, {
-                        className: O.formGroup,
-                        title: N.default.Messages.CUSTOM_STATUS_MODAL_BODY.format({
+                    return (0, s.jsx)(i.FormSection, {
+                        className: N.formGroup,
+                        title: O.default.Messages.CUSTOM_STATUS_MODAL_BODY.format({
                             username: e.username
                         }),
-                        children: (0, a.jsxs)("div", {
-                            className: O.inputContainer,
-                            children: [(0, a.jsx)("div", {
-                                className: O.emojiButtonContainer,
-                                children: (0, a.jsx)(i.Popout, {
+                        children: (0, s.jsxs)("div", {
+                            className: N.inputContainer,
+                            children: [(0, s.jsx)("div", {
+                                className: N.emojiButtonContainer,
+                                children: (0, s.jsx)(i.Popout, {
                                     renderPopout: this.renderEmojiPicker,
                                     position: "left",
                                     animation: i.Popout.Animation.NONE,
                                     align: "top",
                                     children: (e, t) => {
                                         let {
-                                            isShown: s
+                                            isShown: a
                                         } = t;
-                                        return (0, a.jsx)(f.default, {
+                                        return (0, s.jsx)(f.default, {
                                             ...e,
-                                            active: s,
-                                            className: O.emojiButton,
+                                            active: a,
+                                            className: N.emojiButton,
                                             tabIndex: 0,
                                             renderButtonContents: this.getEmojiButtonRenderer()
                                         })
                                     }
                                 })
-                            }), (0, a.jsx)(i.TextInput, {
+                            }), (0, s.jsx)(i.TextInput, {
                                 maxLength: g.STATUS_MAX_LENGTH,
                                 value: t,
-                                inputClassName: O.input,
-                                placeholder: N.default.Messages.CUSTOM_STATUS_MODAL_PLACEHOLDER,
+                                inputClassName: N.input,
+                                placeholder: O.default.Messages.CUSTOM_STATUS_MODAL_PLACEHOLDER,
                                 onChange: this.handleStatusChange,
                                 onKeyPress: this.handleKeyPress,
                                 autoFocus: !0
-                            }), t.length > 0 || null != s ? (0, a.jsx)(i.Button, {
+                            }), t.length > 0 || null != a ? (0, s.jsx)(i.Button, {
                                 focusProps: {
                                     offset: {
                                         top: 8,
@@ -240,12 +240,12 @@
                                         right: -2
                                     }
                                 },
-                                className: O.clearButton,
+                                className: N.clearButton,
                                 onClick: this.handleClearStatus,
                                 look: i.Button.Looks.BLANK,
                                 size: i.Button.Sizes.NONE,
-                                children: (0, a.jsx)(T.default, {
-                                    className: O.clearIcon
+                                children: (0, s.jsx)(T.default, {
+                                    className: N.clearIcon
                                 })
                             }) : null]
                         })
@@ -255,11 +255,11 @@
                     let {
                         clearAfter: e
                     } = this.state;
-                    return (0, a.jsx)(i.FormSection, {
-                        className: O.formGroup,
-                        title: N.default.Messages.CUSTOM_STATUS_CLEAR_AFTER,
-                        children: (0, a.jsx)(i.SingleSelect, {
-                            placeholder: N.default.Messages.CUSTOM_STATUS_CLEAR_AFTER,
+                    return (0, s.jsx)(i.FormSection, {
+                        className: N.formGroup,
+                        title: O.default.Messages.CUSTOM_STATUS_CLEAR_AFTER,
+                        children: (0, s.jsx)(i.SingleSelect, {
+                            placeholder: O.default.Messages.CUSTOM_STATUS_CLEAR_AFTER,
                             maxVisibleItems: 5,
                             value: e,
                             options: this.clearAfterOptions,
@@ -271,10 +271,10 @@
                     let {
                         status: e
                     } = this.state;
-                    return (0, a.jsx)(i.FormSection, {
-                        className: O.formGroup,
-                        title: N.default.Messages.CUSTOM_STATUS_STATUS_TITLE,
-                        children: (0, a.jsx)(i.SingleSelect, {
+                    return (0, s.jsx)(i.FormSection, {
+                        className: N.formGroup,
+                        title: O.default.Messages.CUSTOM_STATUS_STATUS_TITLE,
+                        children: (0, s.jsx)(i.SingleSelect, {
                             maxVisibleItems: 4,
                             value: e,
                             options: x,
@@ -288,40 +288,40 @@
                         transitionState: e,
                         onClose: t
                     } = this.props;
-                    return (0, a.jsx)(S.default, {
+                    return (0, s.jsx)(S.default, {
                         ...this.analyticsLocation,
-                        children: (0, a.jsxs)(i.ModalRoot, {
+                        children: (0, s.jsxs)(i.ModalRoot, {
                             transitionState: e,
-                            className: O.modalRoot,
-                            "aria-label": N.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
-                            children: [(0, a.jsxs)(i.ModalHeader, {
+                            className: N.modalRoot,
+                            "aria-label": O.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
+                            children: [(0, s.jsxs)(i.ModalHeader, {
                                 separator: !1,
-                                className: O.headerContainer,
-                                children: [(0, a.jsx)("div", {
-                                    className: O.art
-                                }), (0, a.jsx)("div", {
-                                    className: O.header,
-                                    children: (0, a.jsx)(i.H, {
-                                        className: O.headerText,
-                                        children: N.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
+                                className: N.headerContainer,
+                                children: [(0, s.jsx)("div", {
+                                    className: N.art
+                                }), (0, s.jsx)("div", {
+                                    className: N.header,
+                                    children: (0, s.jsx)(i.H, {
+                                        className: N.headerText,
+                                        children: O.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
                                     })
-                                }), (0, a.jsx)(i.ModalCloseButton, {
+                                }), (0, s.jsx)(i.ModalCloseButton, {
                                     onClick: t,
-                                    className: O.modalCloseButton
+                                    className: N.modalCloseButton
                                 })]
-                            }), (0, a.jsxs)(i.ModalContent, {
-                                children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, a.jsx)(i.FormDivider, {
-                                    className: O.formDivider
+                            }), (0, s.jsxs)(i.ModalContent, {
+                                children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, s.jsx)(i.FormDivider, {
+                                    className: N.formDivider
                                 }), this.renderStatusInput()]
-                            }), (0, a.jsxs)(i.ModalFooter, {
-                                children: [(0, a.jsx)(i.Button, {
+                            }), (0, s.jsxs)(i.ModalFooter, {
+                                children: [(0, s.jsx)(i.Button, {
                                     onClick: this.handleSubmit,
-                                    children: N.default.Messages.SAVE
-                                }), (0, a.jsx)(i.Button, {
+                                    children: O.default.Messages.SAVE
+                                }), (0, s.jsx)(i.Button, {
                                     onClick: t,
                                     look: i.Button.Looks.LINK,
-                                    color: O.cancelButton,
-                                    children: N.default.Messages.CANCEL
+                                    color: N.cancelButton,
+                                    children: O.default.Messages.CANCEL
                                 })]
                             })]
                         })
@@ -332,14 +332,16 @@
                         emojiInfo: null != this.props.customStatus ? this.props.customStatus.emoji : null,
                         text: null != this.props.customStatus && null != this.props.customStatus.state ? this.props.customStatus.state : "",
                         clearAfter: function() {
-                            var e;
-                            let t = c.CustomStatusSetting.getSetting();
-                            if (null == t || "" === t.expiresAtMs) return g.ClearAfterValues.TODAY;
-                            let s = Number(t.expiresAtMs);
-                            if (isNaN(s)) return g.ClearAfterValues.TODAY;
-                            if (0 === s) return null;
-                            let a = Number(s) - Date.now();
-                            return null !== (e = j.find(e => a <= e)) && void 0 !== e ? e : g.ClearAfterValues.TODAY
+                            var e, t, a;
+                            let s = c.CustomStatusSetting.getSetting();
+                            if (null == s || "" === s.expiresAtMs) return g.ClearAfterValues.TODAY;
+                            let l = Number(s.expiresAtMs);
+                            if (isNaN(l)) return g.ClearAfterValues.TODAY;
+                            let n = new Date,
+                                u = new Date(l);
+                            if (t = n, a = u, t.getFullYear() !== a.getFullYear() || t.getMonth() !== a.getMonth() || t.getDate() !== a.getDate()) return g.ClearAfterValues.TODAY;
+                            let r = Number(l) - Date.now();
+                            return null !== (e = j.find(e => r <= e)) && void 0 !== e ? e : g.ClearAfterValues.TODAY
                         }(),
                         status: function() {
                             let e = c.StatusSetting.getSetting();
@@ -383,27 +385,27 @@
                             sourceAnalyticsContext: e,
                             onClose: t
                         } = this.props, {
-                            emojiInfo: s,
-                            text: a,
+                            emojiInfo: a,
+                            text: s,
                             clearAfter: l,
                             status: n
                         } = this.state;
-                        c.StatusSetting.updateSetting(n), (0, C.default)(a, s, l, e), t()
+                        c.StatusSetting.updateSetting(n), (0, C.default)(s, a, l, e), t()
                     }, this.handleKeyPress = e => {
                         e.which === _.KeyboardKeys.ENTER && this.handleSaveStatus()
                     }, this.renderEmojiPicker = e => {
                         let {
                             closePopout: t
                         } = e, {
-                            onClose: s
+                            onClose: a
                         } = this.props;
-                        return (0, a.jsx)(d.default, {
+                        return (0, s.jsx)(d.default, {
                             closePopout: t,
-                            onSelectEmoji: (e, s) => {
-                                this.handleEmojiChange(e), s && t()
+                            onSelectEmoji: (e, a) => {
+                                this.handleEmojiChange(e), a && t()
                             },
                             pickerIntention: M.EmojiIntention.STATUS,
-                            onNavigateAway: s
+                            onNavigateAway: a
                         })
                     }
                 }
