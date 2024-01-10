@@ -4400,6 +4400,9 @@
             s.r(t), s.d(t, {
                 default: function() {
                     return _
+                },
+                GuildSelector: function() {
+                    return g
                 }
             }), s("843762");
             var a = s("37983"),
@@ -4421,49 +4424,64 @@
                 let {
                     guildId: t,
                     className: s,
-                    globalOption: l,
-                    hideDivider: _ = !1,
-                    onChange: g,
-                    renderOptionSuffix: h
-                } = e, I = (0, r.useStateFromStores)([c.default], () => c.default.getFlattenedGuildIds()), N = (0, r.useStateFromStores)([u.default], () => u.default.getGuilds()), p = (0, r.useStateFromStores)([f.default], () => f.default.showNotice()), C = n.useMemo(() => {
-                    let e = I.map(e => {
-                        let t = N[e];
+                    globalOption: n,
+                    hideDivider: l = !1,
+                    onChange: r,
+                    renderOptionSuffix: o
+                } = e;
+                return (0, a.jsx)(d.default, {
+                    className: i(T.section, s),
+                    title: m.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_TITLE,
+                    hideDivider: l,
+                    forcedDivider: !0,
+                    children: (0, a.jsx)(g, {
+                        guildId: t,
+                        onChange: r,
+                        renderOptionSuffix: o,
+                        globalOption: n
+                    })
+                })
+            }
+
+            function g(e) {
+                let {
+                    guildId: t,
+                    globalOption: s,
+                    onChange: l,
+                    renderOptionSuffix: i
+                } = e, d = (0, r.useStateFromStores)([f.default], () => f.default.showNotice()), _ = (0, r.useStateFromStores)([c.default], () => c.default.getFlattenedGuildIds()), g = (0, r.useStateFromStores)([u.default], () => u.default.getGuilds()), h = n.useMemo(() => {
+                    let e = _.map(e => {
+                        let t = g[e];
                         return null == t ? null : {
                             label: t.name,
                             value: t.id
                         }
                     }).filter(E.isNotNullish);
-                    return null != l && e.unshift(l), e
-                }, [I, N, l]), A = n.useCallback(e => {
-                    let t = (null == e ? void 0 : e.label) === (null == l ? void 0 : l.label) && (null == e ? void 0 : e.value) === (null == l ? void 0 : l.value);
+                    return null != s && e.unshift(s), e
+                }, [_, g, s]), I = n.useCallback(e => {
+                    let t = (null == e ? void 0 : e.label) === (null == s ? void 0 : s.label) && (null == e ? void 0 : e.value) === (null == s ? void 0 : s.value);
                     return null == e || "" === e.value || t ? null : (0, a.jsx)(S.default, {
                         className: T.guildSelectOptionIcon,
-                        guild: N[e.value],
+                        guild: g[e.value],
                         size: S.default.Sizes.SMOL,
                         active: !0
                     })
-                }, [N, l]);
-                return (0, a.jsx)(d.default, {
-                    className: i(T.section, s),
-                    title: m.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_TITLE,
-                    hideDivider: _,
-                    forcedDivider: !0,
-                    children: (0, a.jsx)(o.SearchableSelect, {
-                        isDisabled: p,
-                        onChange: e => {
-                            if ("" === e || e === (null == l ? void 0 : l.value)) {
-                                g(null);
-                                return
-                            }
-                            let t = N[e];
-                            null != t && g(t)
-                        },
-                        value: t,
-                        options: C,
-                        renderOptionPrefix: A,
-                        renderOptionSuffix: h,
-                        placeholder: m.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_PLACEHOLDER
-                    })
+                }, [g, s]);
+                return (0, a.jsx)(o.SearchableSelect, {
+                    isDisabled: d,
+                    onChange: e => {
+                        if ("" === e || e === (null == s ? void 0 : s.value)) {
+                            l(null);
+                            return
+                        }
+                        let t = g[e];
+                        null != t && l(t)
+                    },
+                    value: t,
+                    options: h,
+                    renderOptionPrefix: I,
+                    renderOptionSuffix: i,
+                    placeholder: m.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_PLACEHOLDER
                 })
             }
         },
@@ -10211,7 +10229,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "518502906ab75f858e8af1860f0ba9d19678e417", e.substring(0, 7)),
+                    S = (e = "6137a9364f59516352fdefacb1d23c718c08d6f3", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     m = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10224,7 +10242,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "258718", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "258719", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
