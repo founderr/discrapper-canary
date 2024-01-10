@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["25056"], {
+    ["47860"], {
         717837: function(e, t, n) {
             "use strict";
             e.exports = function(e) {
@@ -102,7 +102,7 @@
             "use strict";
             e.exports = function(e) {
                 var t, n;
-                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), b.test(e) ? e = e.substr(0, e.length - 2) : E.test(e) && (e = e.substr(0, e.length - 1)), (n = x.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = _.exec(e)) && d.test(n[1]) && (e = n[1], g.test(e) ? e += "e" : C.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = v.exec(e)) && d.test(n[1]) && (e = n[1] + "i"), (n = y.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = I.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = S.exec(e)) ? c.test(n[1]) && (e = n[1]) : (n = m.exec(e)) && c.test(n[1]) && (e = n[1]), (n = h.exec(e)) && (c.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && c.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
+                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), b.test(e) ? e = e.substr(0, e.length - 2) : x.test(e) && (e = e.substr(0, e.length - 1)), (n = E.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = _.exec(e)) && d.test(n[1]) && (e = n[1], g.test(e) ? e += "e" : C.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = v.exec(e)) && d.test(n[1]) && (e = n[1] + "i"), (n = y.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = I.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = S.exec(e)) ? c.test(n[1]) && (e = n[1]) : (n = m.exec(e)) && c.test(n[1]) && (e = n[1]), (n = h.exec(e)) && (c.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && c.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
             };
             var r = {
                     ational: "ate",
@@ -150,8 +150,8 @@
                 m = /^(.+?(s|t))(ion)$/,
                 _ = /^(.+?)(ed|ing)$/,
                 g = /(at|bl|iz)$/,
-                x = /^(.+?)eed$/,
-                E = /^.+?[^s]s$/,
+                E = /^(.+?)eed$/,
+                x = /^.+?[^s]s$/,
                 b = /^.+?(ss|i)es$/,
                 C = /([^aeiouylsz])\1$/,
                 y = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
@@ -999,53 +999,6 @@
             }
             var f = d
         },
-        822332: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return f
-                }
-            });
-            var r = n("37983"),
-                i = n("884691"),
-                s = n("414456"),
-                l = n.n(s),
-                a = n("77078"),
-                o = n("782340"),
-                u = n("440318");
-            let c = {
-                BLOCK: u.block,
-                INLINE: u.inline
-            };
-            class d extends i.PureComponent {
-                render() {
-                    let {
-                        children: e,
-                        className: t,
-                        textClassName: n,
-                        type: i = c.BLOCK,
-                        style: s
-                    } = this.props;
-                    return (0, r.jsxs)("div", {
-                        className: l(t, i),
-                        style: s,
-                        children: [(0, r.jsxs)(a.Text, {
-                            variant: "text-sm/bold",
-                            tag: "div",
-                            color: "text-positive",
-                            className: u.pro,
-                            children: [o.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
-                        }), (0, r.jsx)(a.Text, {
-                            className: l(u.tip, n),
-                            variant: "text-sm/normal",
-                            children: e
-                        })]
-                    })
-                }
-            }
-            d.Types = c;
-            var f = d
-        },
         83910: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -1218,15 +1171,15 @@
                         onClick: m,
                         onContextMenu: _,
                         tooltip: g = null,
-                        tooltipColor: x,
-                        tooltipPosition: E = "bottom",
+                        tooltipColor: E,
+                        tooltipPosition: x = "bottom",
                         hideOnClick: b = !0,
                         role: C,
                         "aria-label": y,
                         "aria-hidden": I,
                         "aria-checked": S,
-                        "aria-expanded": N,
-                        "aria-haspopup": A
+                        "aria-expanded": A,
+                        "aria-haspopup": N
                     } = e, j = (0, r.jsx)(v, {
                         x: 0,
                         y: 0,
@@ -1236,17 +1189,17 @@
                         foreground: null != d ? d : void 0,
                         background: null != f ? f : void 0,
                         color: c
-                    }), T = y;
-                    return null == T && "string" == typeof g && (T = g), (0, r.jsx)(u.Tooltip, {
+                    }), R = y;
+                    return null == R && "string" == typeof g && (R = g), (0, r.jsx)(u.Tooltip, {
                         text: g,
-                        color: x,
-                        position: E,
+                        color: E,
+                        position: x,
                         hideOnClick: b,
                         children: e => {
                             let {
                                 onMouseEnter: g,
-                                onMouseLeave: x,
-                                onFocus: E,
+                                onMouseLeave: E,
+                                onFocus: x,
                                 onBlur: b
                             } = e;
                             return null == m ? (0, r.jsx)("div", {
@@ -1262,8 +1215,8 @@
                                     color: c,
                                     "aria-hidden": I,
                                     onMouseEnter: g,
-                                    onMouseLeave: x,
-                                    onFocus: E,
+                                    onMouseLeave: E,
+                                    onFocus: x,
                                     onBlur: b
                                 })
                             }) : (0, r.jsxs)(u.Clickable, {
@@ -1271,8 +1224,8 @@
                                 onClick: a ? void 0 : m,
                                 onContextMenu: a ? void 0 : _,
                                 onMouseEnter: g,
-                                onMouseLeave: x,
-                                onFocus: E,
+                                onMouseLeave: E,
+                                onFocus: x,
                                 onBlur: b,
                                 className: l(t, {
                                     [h.iconWrapper]: !0,
@@ -1280,11 +1233,11 @@
                                     [h.selected]: s
                                 }),
                                 role: C,
-                                "aria-label": T,
+                                "aria-label": R,
                                 "aria-hidden": I,
                                 "aria-checked": S,
-                                "aria-haspopup": A,
-                                "aria-expanded": N,
+                                "aria-haspopup": N,
+                                "aria-expanded": A,
                                 tabIndex: a || null == m ? -1 : 0,
                                 children: [o ? (0, r.jsx)(p.default, {
                                     mask: p.default.Masks.HEADER_BAR_BADGE,
@@ -1316,20 +1269,20 @@
                         "aria-labelledby": m,
                         role: _,
                         scrollable: g,
-                        transparent: x = !1
-                    } = e, E = i.useRef(null), b = i.useContext(c.default);
+                        transparent: E = !1
+                    } = e, x = i.useRef(null), b = i.useContext(c.default);
                     return (0, r.jsx)("section", {
                         className: l(t, h.container, {
-                            [h.themed]: !x,
-                            [h.transparent]: x,
+                            [h.themed]: !E,
+                            [h.transparent]: E,
                             [h.themedMobile]: o.isMobile
                         }),
                         "aria-label": v,
                         "aria-labelledby": m,
                         role: _,
-                        ref: E,
+                        ref: x,
                         children: (0, r.jsxs)(u.FocusRingScope, {
-                            containerRef: E,
+                            containerRef: x,
                             children: [(0, r.jsxs)("div", {
                                 className: h.upperContainer,
                                 children: [(0, r.jsxs)("div", {
