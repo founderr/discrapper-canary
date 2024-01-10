@@ -1659,7 +1659,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "258549"
+                        buildNumber: "258551"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -33662,14 +33662,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return r
                 }
             }), n("222007");
             var a = n("913144"),
                 s = n("316272"),
-                i = n("189293"),
-                l = n("662286");
-            class r extends s.default {
+                i = n("189293");
+            class l extends s.default {
                 _initialize() {
                     a.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen)
                 }
@@ -33678,14 +33677,11 @@
                 }
                 constructor(...e) {
                     super(...e), this.handleConnectionOpen = () => {
-                        (0, l.canUseProfileEffects)({
-                            location: "ProfileEffectManager",
-                            autoTrackExposure: !1
-                        }) && (0, i.fetchUserProfileEffects)()
+                        (0, i.fetchUserProfileEffects)()
                     }
                 }
             }
-            var o = new r
+            var r = new l
         },
         226511: function(e, t, n) {
             "use strict";

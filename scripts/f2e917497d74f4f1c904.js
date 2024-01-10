@@ -2988,7 +2988,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return x
+                    return O
                 }
             }), s("794252");
             var a = s("37983"),
@@ -3000,129 +3000,121 @@
                 d = s("77078"),
                 u = s("812204"),
                 c = s("685665"),
-                S = s("662286"),
-                E = s("697218"),
-                f = s("599110"),
-                m = s("719923"),
-                T = s("21526"),
-                _ = s("411691"),
-                g = s("49111"),
-                h = s("646718"),
-                I = s("782340"),
-                N = s("439985");
-            let p = () => (0, a.jsxs)(a.Fragment, {
+                S = s("697218"),
+                E = s("599110"),
+                f = s("719923"),
+                m = s("21526"),
+                T = s("411691"),
+                _ = s("49111"),
+                g = s("646718"),
+                h = s("782340"),
+                I = s("439985");
+            let N = () => (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)("div", {
-                        className: N.artContainer,
+                        className: I.artContainer,
                         "aria-hidden": !0,
                         role: "presentation",
                         children: (0, a.jsx)("img", {
                             src: s("280414"),
-                            className: N.art,
+                            className: I.art,
                             alt: " "
                         })
                     }), (0, a.jsxs)("div", {
-                        className: N.mainColumn,
+                        className: I.mainColumn,
                         children: [(0, a.jsx)(d.Heading, {
                             variant: "heading-lg/bold",
                             color: "always-white",
-                            className: N.title,
-                            children: I.default.Messages.PROFILE_EFFECTS_HERO_BANNER_TITLE
+                            className: I.title,
+                            children: h.default.Messages.PROFILE_EFFECTS_HERO_BANNER_TITLE
                         }), (0, a.jsx)(d.Text, {
-                            className: N.textBody,
+                            className: I.textBody,
                             variant: "text-sm/normal",
                             color: "always-white",
-                            children: I.default.Messages.PROFILE_EFFECTS_HERO_BANNER_SUBTITLE
+                            children: h.default.Messages.PROFILE_EFFECTS_HERO_BANNER_SUBTITLE
+                        })]
+                    })]
+                }),
+                p = () => (0, a.jsxs)(a.Fragment, {
+                    children: [(0, a.jsx)("div", {
+                        className: I.artContainer,
+                        "aria-hidden": !0,
+                        role: "presentation",
+                        children: (0, a.jsx)("img", {
+                            src: s("872702"),
+                            className: i([I.art, I.artJan2024]),
+                            alt: " ",
+                            width: "143"
+                        })
+                    }), (0, a.jsxs)("div", {
+                        className: I.mainColumn,
+                        children: [(0, a.jsx)(d.Heading, {
+                            variant: "heading-lg/bold",
+                            color: "always-white",
+                            className: I.title,
+                            children: h.default.Messages.COLLECTIBLES_SFA_TITLE
+                        }), (0, a.jsx)(d.Text, {
+                            className: I.textBody,
+                            variant: "text-sm/normal",
+                            color: "always-white",
+                            children: h.default.Messages.COLLECTIBLES_SFA_BANNER_DESCRIPTION
                         })]
                     })]
                 }),
                 C = () => (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)("div", {
-                        className: N.artContainer,
-                        "aria-hidden": !0,
-                        role: "presentation",
-                        children: (0, a.jsx)("img", {
-                            src: s("872702"),
-                            className: i([N.art, N.artJan2024]),
-                            alt: " ",
-                            width: "143"
-                        })
-                    }), (0, a.jsxs)("div", {
-                        className: N.mainColumn,
-                        children: [(0, a.jsx)(d.Heading, {
-                            variant: "heading-lg/bold",
-                            color: "always-white",
-                            className: N.title,
-                            children: I.default.Messages.COLLECTIBLES_SFA_TITLE
-                        }), (0, a.jsx)(d.Text, {
-                            className: N.textBody,
-                            variant: "text-sm/normal",
-                            color: "always-white",
-                            children: I.default.Messages.COLLECTIBLES_SFA_BANNER_DESCRIPTION
-                        })]
-                    })]
-                }),
-                A = () => (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)("div", {
-                        className: N.artContainer,
+                        className: I.artContainer,
                         "aria-hidden": !0,
                         role: "presentation",
                         children: (0, a.jsx)("img", {
                             src: s("525109"),
-                            className: N.art,
+                            className: I.art,
                             alt: " "
                         })
                     }), (0, a.jsxs)("div", {
-                        className: N.mainColumn,
+                        className: I.mainColumn,
                         children: [(0, a.jsx)(d.Heading, {
                             variant: "heading-lg/extrabold",
                             color: "always-white",
-                            className: N.title,
-                            children: I.default.Messages.USER_PROFILE_SETTINGS_SHOP_FOR_ALL_BANNER_HEADER
+                            className: I.title,
+                            children: h.default.Messages.USER_PROFILE_SETTINGS_SHOP_FOR_ALL_BANNER_HEADER
                         }), (0, a.jsx)(d.Text, {
-                            className: N.textBody,
+                            className: I.textBody,
                             variant: "text-sm/normal",
                             color: "always-white",
-                            children: I.default.Messages.USER_PROFILE_SETTINGS_SHOP_FOR_ALL_BANNER_SUBHEADER
+                            children: h.default.Messages.USER_PROFILE_SETTINGS_SHOP_FOR_ALL_BANNER_SUBHEADER
                         })]
                     })]
                 }),
-                O = e => {
+                A = e => {
                     let {
                         variation: t
                     } = e;
-                    return (0, r.match)(t).with(_.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => (0, a.jsx)(A, {})).with(_.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(C, {})).otherwise(() => (0, a.jsx)(p, {}))
+                    return (0, r.match)(t).with(T.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => (0, a.jsx)(C, {})).with(T.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(p, {})).otherwise(() => (0, a.jsx)(N, {}))
                 };
-            var x = () => {
+            var O = () => {
                 let {
                     analyticsLocations: e
-                } = (0, c.default)(u.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL), t = "CollectiblesUpsellBanner";
-                (0, S.useCanUseProfileEffects)({
-                    location: t
-                });
-                let s = n.useRef(null),
-                    l = (0, _.default)(t),
-                    p = (0, o.default)([E.default], () => E.default.getCurrentUser()),
-                    C = !m.default.canUseCollectibles(p);
+                } = (0, c.default)(u.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL), t = n.useRef(null), s = (0, T.default)("CollectiblesUpsellBanner"), l = (0, o.default)([S.default], () => S.default.getCurrentUser()), N = !f.default.canUseCollectibles(l);
                 return n.useEffect(() => {
-                    f.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                        type: h.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
+                    E.default.track(_.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                        type: g.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                         location_stack: e
                     })
                 }, [e]), (0, a.jsxs)("div", {
-                    ref: s,
-                    className: i(N.container, (0, r.match)(l).with(_.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => N.shopForAllWinterBackground).with(_.CollectiblesShopMarketingVariants.MONSTER_DROP, () => N.shopForAllBackgroundImage).otherwise(() => C ? N.shopForAllBackgroundImage : void 0)),
-                    children: [(0, a.jsx)(O, {
-                        variation: l
+                    ref: t,
+                    className: i(I.container, (0, r.match)(s).with(T.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => I.shopForAllWinterBackground).with(T.CollectiblesShopMarketingVariants.MONSTER_DROP, () => I.shopForAllBackgroundImage).otherwise(() => N ? I.shopForAllBackgroundImage : void 0)),
+                    children: [(0, a.jsx)(A, {
+                        variation: s
                     }), (0, a.jsx)(d.Button, {
                         onClick: () => {
-                            (0, T.openCollectiblesShop)({
+                            (0, m.openCollectiblesShop)({
                                 analyticsLocations: e,
                                 analyticsSource: u.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
                             })
                         },
-                        className: N.ctaButton,
+                        className: I.ctaButton,
                         look: d.Button.Looks.INVERTED,
-                        children: (0, r.match)(l).with(_.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => I.default.Messages.CHECK_IT_OUT).otherwise(() => I.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
+                        children: (0, r.match)(s).with(T.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => h.default.Messages.CHECK_IT_OUT).otherwise(() => h.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
                     })]
                 })
             }
@@ -8507,7 +8499,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return A
+                    return C
                 }
             });
             var a = s("37983"),
@@ -8517,79 +8509,76 @@
                 r = s("65597"),
                 o = s("77078"),
                 d = s("685665"),
-                u = s("662286"),
-                c = s("493390"),
-                S = s("217513"),
-                E = s("790618"),
-                f = s("181114"),
-                m = s("599110"),
-                T = s("719923"),
-                _ = s("906932"),
-                g = s("570697"),
-                h = s("632892"),
-                I = s("49111"),
-                N = s("646718"),
-                p = s("782340"),
-                C = s("273072");
+                u = s("493390"),
+                c = s("217513"),
+                S = s("790618"),
+                E = s("181114"),
+                f = s("599110"),
+                m = s("719923"),
+                T = s("906932"),
+                _ = s("570697"),
+                g = s("632892"),
+                h = s("49111"),
+                I = s("646718"),
+                N = s("782340"),
+                p = s("273072");
 
-            function A(e) {
+            function C(e) {
                 let {
                     user: t,
                     guild: s,
                     className: l,
-                    forcedDivider: A = !1,
-                    withTutorial: O = !1,
-                    showBorder: x = !1,
-                    isTryItOutFlow: M = !1,
-                    initialSelectedEffectId: R
-                } = e, v = (0, S.default)(t.id, null == s ? void 0 : s.id), L = T.default.canUsePremiumProfileCustomization(t), {
-                    analyticsLocations: D
-                } = (0, d.default)(), P = (0, u.useCanUseProfileEffects)({
-                    location: "ProfileEffectSection"
-                }), {
-                    pendingProfileEffectId: j,
-                    errors: b
-                } = (0, r.useStateFromStoresObject)([E.default], () => ({
-                    pendingProfileEffectId: E.default.getPendingProfileEffectId(),
-                    errors: E.default.getErrors().profileEffect
-                })), U = n.useCallback(() => (0, c.openProfileEffectModal)({
-                    analyticsLocations: D,
-                    initialSelectedEffectId: R
-                }), [D, R]);
-                if (n.useEffect(() => {
-                        L && P && m.default.track(I.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                            type: N.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
-                            location_stack: D
-                        })
-                    }, [P, L, D]), !P) return null;
-                let y = M || void 0 !== j ? null != j : (null == v ? void 0 : v.profileEffectId) != null,
-                    B = O ? f.default : o.Button;
-                return (0, a.jsx)(g.default, {
-                    forcedDivider: A,
-                    borderType: h.FeatureBorderTypes.PREMIUM,
+                    forcedDivider: C = !1,
+                    withTutorial: A = !1,
+                    showBorder: O = !1,
+                    isTryItOutFlow: x = !1,
+                    initialSelectedEffectId: M
+                } = e, R = (0, c.default)(t.id, null == s ? void 0 : s.id), v = m.default.canUsePremiumProfileCustomization(t), {
+                    analyticsLocations: L
+                } = (0, d.default)(), {
+                    pendingProfileEffectId: D,
+                    errors: P
+                } = (0, r.useStateFromStoresObject)([S.default], () => ({
+                    pendingProfileEffectId: S.default.getPendingProfileEffectId(),
+                    errors: S.default.getErrors().profileEffect
+                })), j = n.useCallback(() => (0, u.openProfileEffectModal)({
+                    analyticsLocations: L,
+                    initialSelectedEffectId: M
+                }), [L, M]);
+                n.useEffect(() => {
+                    v && f.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                        type: I.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
+                        location_stack: L
+                    })
+                }, [v, L]);
+                let b = x || void 0 !== D ? null != D : (null == R ? void 0 : R.profileEffectId) != null,
+                    U = A ? E.default : o.Button;
+                return (0, a.jsx)(_.default, {
+                    forcedDivider: C,
+                    borderType: g.FeatureBorderTypes.PREMIUM,
                     hasBackground: !0,
-                    title: p.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
-                    showBorder: x,
-                    errors: b,
+                    title: N.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
+                    showBorder: O,
+                    errors: P,
                     className: l,
                     children: (0, a.jsxs)("div", {
-                        className: C.buttonsContainer,
-                        children: [(0, a.jsx)(B, {
+                        className: p.buttonsContainer,
+                        children: [(0, a.jsx)(U, {
                             size: o.Button.Sizes.SMALL,
-                            onClick: U,
+                            onClick: j,
                             className: i({
-                                [C.buttonHighlighted]: O
+                                [p.buttonHighlighted]: A
                             }),
-                            children: p.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
-                        }), y && (0, a.jsx)(o.Button, {
-                            className: C.removeButton,
+                            children: N.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
+                        }), b && (0, a.jsx)(o.Button, {
+                            className: p.removeButton,
                             color: o.Button.Colors.PRIMARY,
                             look: o.Button.Looks.LINK,
                             size: o.Button.Sizes.SMALL,
                             onClick: function() {
-                                (0, _.setNewPendingProfileEffectId)(null, null == v ? void 0 : v.profileEffectId)
+                                (0, T.setNewPendingProfileEffectId)(null, null == R ? void 0 : R.profileEffectId)
                             },
-                            children: p.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
+                            children: N.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
                         })]
                     })
                 })
@@ -10201,7 +10190,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "e38f97c82eb099585011256fe4ebd2051785ff87", e.substring(0, 7)),
+                    S = (e = "9fe2025895850cbd8d1d9866ec72d2b704a44772", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     m = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10214,7 +10203,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "258549", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "258551", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -22107,7 +22096,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return D
+                    return L
                 }
             });
             var a = s("37983");
@@ -22129,112 +22118,108 @@
                 g = s("741781"),
                 h = s("121370"),
                 I = s("370505"),
-                N = s("662286"),
-                p = s("783142"),
-                C = s("713135"),
-                A = s("217513"),
-                O = s("790618"),
-                x = s("697218"),
-                M = s("719923"),
-                R = s("49111"),
-                v = s("782340"),
-                L = s("361904");
+                N = s("783142"),
+                p = s("713135"),
+                C = s("217513"),
+                A = s("790618"),
+                O = s("697218"),
+                x = s("719923"),
+                M = s("49111"),
+                R = s("782340"),
+                v = s("361904");
 
-            function D() {
-                var e, t, s, n, D, P, j, b;
-                let U = (0, i.useStateFromStores)([x.default], () => {
-                        let e = x.default.getCurrentUser();
+            function L() {
+                var e, t, s, n, L, D, P, j;
+                let b = (0, i.useStateFromStores)([O.default], () => {
+                        let e = O.default.getCurrentUser();
                         return l(null != e, "DefaultCustomizationSections: user cannot be undefined"), e
                     }),
-                    y = (0, i.useStateFromStores)([C.default], () => C.default.getUserProfile(U.id)),
+                    U = (0, i.useStateFromStores)([p.default], () => p.default.getUserProfile(b.id)),
                     {
-                        pendingAvatar: B,
-                        pendingGlobalName: F,
-                        pendingBanner: G,
-                        pendingBio: k,
-                        pendingPronouns: w,
-                        pendingAccentColor: H,
-                        pendingThemeColors: V,
-                        errors: Y
-                    } = (0, i.useStateFromStoresObject)([O.default], () => {
-                        let e = O.default.getAllPending(),
-                            t = O.default.getErrors();
+                        pendingAvatar: y,
+                        pendingGlobalName: B,
+                        pendingBanner: F,
+                        pendingBio: G,
+                        pendingPronouns: k,
+                        pendingAccentColor: w,
+                        pendingThemeColors: H,
+                        errors: V
+                    } = (0, i.useStateFromStoresObject)([A.default], () => {
+                        let e = A.default.getAllPending(),
+                            t = A.default.getErrors();
                         return {
                             ...e,
                             errors: t
                         }
                     }),
-                    W = (0, d.useGuildAutomodProfileQuarantineErrors)(),
-                    K = M.default.canUsePremiumProfileCustomization(U),
-                    z = (0, u.showRemoveAvatar)(B, U.avatar),
-                    Q = (0, u.showRemoveBanner)(G, null == y ? void 0 : y.banner),
-                    q = "DefaultCustomizationSections";
+                    Y = (0, d.useGuildAutomodProfileQuarantineErrors)(),
+                    W = x.default.canUsePremiumProfileCustomization(b),
+                    K = (0, u.showRemoveAvatar)(y, b.avatar),
+                    z = (0, u.showRemoveBanner)(F, null == U ? void 0 : U.banner),
+                    Q = "DefaultCustomizationSections";
                 (0, o.useTriggerDebuggingAA)({
-                    location: q + " auto on",
+                    location: Q + " auto on",
                     autoTrackExposure: !0
                 }), (0, o.useTriggerDebuggingAA)({
-                    location: q + " auto off",
+                    location: Q + " auto off",
                     autoTrackExposure: !1
                 });
-                let Z = (0, N.useCanUseProfileEffects)({
-                        location: "DefaultCustomizationSections"
-                    }),
-                    X = (0, A.default)(U.id),
-                    J = null == X ? void 0 : X.getLegacyUsername(),
-                    $ = (null !== (s = null === (e = Y.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? Y.global_name : null !== (n = null == W ? void 0 : W.nick) && void 0 !== n ? n : [],
-                    ee = (null !== (D = null === (t = Y.bio) || void 0 === t ? void 0 : t.length) && void 0 !== D ? D : 0) > 0 ? Y.bio : null !== (P = null == W ? void 0 : W.bio) && void 0 !== P ? P : [];
+                let q = (0, C.default)(b.id),
+                    Z = null == q ? void 0 : q.getLegacyUsername(),
+                    X = (null !== (s = null === (e = V.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? V.global_name : null !== (n = null == Y ? void 0 : Y.nick) && void 0 !== n ? n : [],
+                    J = (null !== (L = null === (t = V.bio) || void 0 === t ? void 0 : t.length) && void 0 !== L ? L : 0) > 0 ? V.bio : null !== (D = null == Y ? void 0 : Y.bio) && void 0 !== D ? D : [];
                 return (0, a.jsxs)("div", {
-                    className: L.sectionsContainer,
+                    className: v.sectionsContainer,
                     children: [(0, a.jsx)(f.default, {
-                        placeholder: U.username,
-                        errors: $,
-                        currentGlobalName: U.globalName,
-                        pendingGlobalName: F,
+                        placeholder: b.username,
+                        errors: X,
+                        currentGlobalName: b.globalName,
+                        pendingGlobalName: B,
                         onGlobalNameChange: r.setPendingGlobalNameName
                     }), (0, a.jsx)(I.default, {
-                        sectionTitle: v.default.Messages.USER_SETTINGS_PRONOUNS,
-                        errors: Y.pronouns,
-                        onPronounsChange: p.setPendingPronouns,
-                        pendingPronouns: w,
-                        currentPronouns: null !== (j = null == y ? void 0 : y.pronouns) && void 0 !== j ? j : ""
+                        sectionTitle: R.default.Messages.USER_SETTINGS_PRONOUNS,
+                        errors: V.pronouns,
+                        onPronounsChange: N.setPendingPronouns,
+                        pendingPronouns: k,
+                        currentPronouns: null !== (P = null == U ? void 0 : U.pronouns) && void 0 !== P ? P : ""
                     }, "pronouns"), (0, a.jsx)(E.default, {
                         onAvatarChange: r.setPendingAvatar,
-                        showRemoveAvatarButton: z,
-                        errors: Y.avatar,
-                        sectionTitle: v.default.Messages.USER_SETTINGS_AVATAR,
+                        showRemoveAvatarButton: K,
+                        errors: V.avatar,
+                        sectionTitle: R.default.Messages.USER_SETTINGS_AVATAR,
                         forcedDivider: !0
                     }, "avatar"), (0, a.jsx)(S.default, {
-                        user: U
-                    }, "decoration"), Z && (0, a.jsx)(g.default, {
-                        user: U
-                    }, "effect"), K ? (0, a.jsxs)(a.Fragment, {
+                        user: b
+                    }, "decoration"), (0, a.jsx)(g.default, {
+                        user: b
+                    }, "effect"), W ? (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(T.default, {
-                            showRemoveBannerButton: Q,
-                            errors: Y.banner,
-                            onBannerChange: p.setPendingBanner,
+                            showRemoveBannerButton: z,
+                            errors: V.banner,
+                            onBannerChange: N.setPendingBanner,
                             forcedDivider: !0
                         }, "banner"), (0, a.jsx)(h.default, {
-                            user: U,
-                            pendingAvatar: B,
-                            pendingColors: V,
-                            onThemeColorsChange: p.setPendingThemeColors,
+                            user: b,
+                            pendingAvatar: y,
+                            pendingColors: H,
+                            onThemeColorsChange: N.setPendingThemeColors,
                             forcedDivider: !0
                         })]
                     }) : (0, a.jsx)(_.default, {
-                        user: U,
-                        savedUserColor: null == y ? void 0 : y.accentColor,
-                        pendingColor: H,
-                        setPendingAccentColor: p.setPendingAccentColor
+                        user: b,
+                        savedUserColor: null == U ? void 0 : U.accentColor,
+                        pendingColor: w,
+                        setPendingAccentColor: N.setPendingAccentColor
                     }, "color"), (0, a.jsx)(c.default, {
-                        sectionTitle: v.default.Messages.USER_SETTINGS_ABOUT_ME,
-                        errors: ee,
+                        sectionTitle: R.default.Messages.USER_SETTINGS_ABOUT_ME,
+                        errors: J,
                         onBioChange: e => {
-                            (0, u.setNewPendingUserBio)(e, null == y ? void 0 : y.bio), (0, r.setDisableSubmit)(null != e && e.length > R.BIO_MAX_LENGTH)
+                            (0, u.setNewPendingUserBio)(e, null == U ? void 0 : U.bio), (0, r.setDisableSubmit)(null != e && e.length > M.BIO_MAX_LENGTH)
                         },
-                        pendingBio: k,
-                        currentBio: null !== (b = null == y ? void 0 : y.bio) && void 0 !== b ? b : ""
-                    }, "bio"), null != J && (0, a.jsx)(m.default, {
-                        legacyUsername: J
+                        pendingBio: G,
+                        currentBio: null !== (j = null == U ? void 0 : U.bio) && void 0 !== j ? j : ""
+                    }, "bio"), null != Z && (0, a.jsx)(m.default, {
+                        legacyUsername: Z
                     }, "legacy_username")]
                 })
             }
