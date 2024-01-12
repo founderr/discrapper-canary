@@ -41,23 +41,22 @@
             "use strict";
             a.r(e), a.d(e, {
                 getSafetyHubData: function() {
-                    return c
+                    return u
                 },
                 getSafetyHubDataForClassification: function() {
-                    return o
+                    return c
                 }
             });
             var n = a("872717"),
                 i = a("913144"),
                 s = a("651693"),
-                l = a("234998"),
-                r = a("736393"),
-                u = a("49111");
-            async function c() {
+                l = a("736393"),
+                r = a("49111");
+            async function u() {
                 i.default.dispatch({
                     type: "SAFETY_HUB_FETCH_START"
                 }), await n.default.get({
-                    url: u.Endpoints.SAFETY_HUB
+                    url: r.Endpoints.SAFETY_HUB
                 }).then(t => {
                     let {
                         body: e
@@ -65,7 +64,7 @@
                         classifications: a,
                         guild_classifications: n,
                         account_standing: s
-                    } = e, l = a.map(t => (d(t), t));
+                    } = e, l = a.map(t => (o(t), t));
                     i.default.dispatch({
                         type: "SAFETY_HUB_FETCH_SUCCESS",
                         classifications: l.concat(null != n ? n : []),
@@ -79,12 +78,12 @@
                     })
                 })
             }
-            async function o(t) {
+            async function c(t) {
                 i.default.dispatch({
                     type: "SAFETY_HUB_FETCH_CLASSIFICATION_START",
                     classificationId: t
                 }), await n.default.get({
-                    url: u.Endpoints.SAFETY_HUB
+                    url: r.Endpoints.SAFETY_HUB
                 }).then(e => {
                     let {
                         body: a
@@ -93,7 +92,7 @@
                         account_standing: s,
                         is_dsa_eligible: l
                     } = a, r = n.find(e => e.id === t);
-                    null != r ? (d(r), i.default.dispatch({
+                    null != r ? (o(r), i.default.dispatch({
                         type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
                         classification: r,
                         accountStanding: s,
@@ -113,7 +112,7 @@
                 })
             }
 
-            function d(t) {
+            function o(t) {
                 if (null != t.flagged_content && t.flagged_content.length > 0) {
                     let e = t.flagged_content[0];
                     e.attachments = e.attachments.filter(t => {
@@ -121,7 +120,7 @@
                             filename: e
                         } = t;
                         return (0, s.isImageFile)(e)
-                    }), e.attachments.forEach(t => (0, l.setMessageAttachmentDimensions)(t)), t.flagged_content = (0, r.isFlaggedContentEmpty)(e) ? [] : [e]
+                    }), t.flagged_content = (0, l.isFlaggedContentEmpty)(e) ? [] : [e]
                 }
             }
         },
@@ -155,58 +154,6 @@
                 }, {
                     autoTrackExposure: !0
                 }).enabled
-            }
-        },
-        234998: function(t, e, a) {
-            "use strict";
-            a.r(e), a.d(e, {
-                setMessageAttachmentDimensions: function() {
-                    return s
-                }
-            });
-            var n = a("651693"),
-                i = a("170213");
-
-            function s(t) {
-                if ((0, n.isImageFile)(t.filename)) {
-                    let e = new Image;
-                    e.src = t.url, e.onload = () => {
-                        let a = e.naturalWidth,
-                            n = e.naturalHeight;
-                        Promise.resolve({
-                            width: a,
-                            height: n
-                        }).then(e => {
-                            let {
-                                width: a,
-                                height: n
-                            } = e;
-                            t.width = a, t.height = n
-                        }).catch(() => {
-                            t.width = i.DEFAULT_MEDIA_MAX_WIDTH, t.height = i.DEFAULT_MEDIA_MAX_HEIGHT
-                        })
-                    }, e.onerror = () => {
-                        t.width = i.DEFAULT_MEDIA_MAX_WIDTH, t.height = i.DEFAULT_MEDIA_MAX_HEIGHT
-                    }
-                } else if ((0, n.isVideoFile)(t.filename)) {
-                    let e = document.createElement("video");
-                    e.src = t.url, e.onloadedmetadata = () => {
-                        let a = e.videoWidth,
-                            n = e.videoHeight;
-                        Promise.resolve({
-                            width: a,
-                            height: n
-                        }).then(e => {
-                            let {
-                                width: a,
-                                height: n
-                            } = e;
-                            t.width = a, t.height = n
-                        }).catch(() => {
-                            t.width = i.DEFAULT_MEDIA_MAX_WIDTH, t.height = i.DEFAULT_MEDIA_MAX_HEIGHT
-                        })
-                    }
-                }
             }
         },
         647149: function(t, e, a) {
@@ -268,8 +215,8 @@
                 _ = !1,
                 S = null,
                 f = null,
-                E = !1,
-                T = null,
+                T = !1,
+                E = null,
                 A = !1,
                 I = null;
             class g extends s.default.Store {
@@ -298,10 +245,10 @@
                     return f
                 }
                 getIsDsaEligible() {
-                    return E
+                    return T
                 }
                 getAppealSignal() {
-                    return T
+                    return E
                 }
                 getIsSubmitting() {
                     return A
@@ -337,7 +284,7 @@
                         accountStanding: a,
                         isDsaEligible: n
                     } = t;
-                    u[e.id] = e, c[e.id] = r.ClassificationRequestState.SUCCESS, o = a, d = !1, S = null, E = n
+                    u[e.id] = e, c[e.id] = r.ClassificationRequestState.SUCCESS, o = a, d = !1, S = null, T = n
                 },
                 SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(t) {
                     let {
@@ -353,13 +300,13 @@
                     f = e
                 },
                 SAFETY_HUB_APPEAL_CLOSE: function() {
-                    f = null, T = null
+                    f = null, E = null
                 },
                 SAFETY_HUB_APPEAL_SIGNAL_SELECT: function(t) {
                     let {
                         signal: e
                     } = t;
-                    T = e
+                    E = e
                 },
                 SAFETY_HUB_REQUEST_REVIEW_START: function(t) {
                     let {} = t;
@@ -378,7 +325,7 @@
                 LOGOUT: function() {
                     d = !1, u = {}, o = {
                         state: r.AccountStandingState.ALL_GOOD
-                    }, f = null, T = null
+                    }, f = null, E = null
                 }
             })
         },
@@ -521,8 +468,8 @@
                 _ = a("697218"),
                 S = a("908539"),
                 f = a("132206"),
-                E = a("260883"),
-                T = a("170213"),
+                T = a("260883"),
+                E = a("170213"),
                 A = a("782340"),
                 I = a("122698");
 
@@ -537,7 +484,7 @@
                         [S.AccountStandingState.AT_RISK]: null,
                         [S.AccountStandingState.SUSPENDED]: null
                     }),
-                    m = i.useCallback(() => {
+                    C = i.useCallback(() => {
                         let t = Math.max(...Object.values(N.current).map(t => {
                             var e;
                             return null !== (e = null == t ? void 0 : t.getBoundingClientRect().height) && void 0 !== e ? e : 36
@@ -545,16 +492,16 @@
                         g(Math.max(t, 36))
                     }, []);
                 i.useEffect(() => {
-                    m();
-                    let t = (0, s.debounce)(m, 100);
+                    C();
+                    let t = (0, s.debounce)(C, 100);
                     window.addEventListener("resize", t)
-                }, [m]);
-                let C = {
+                }, [C]);
+                let m = {
                         [S.AccountStandingState.ALL_GOOD]: {
                             title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
                             description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION.format({
-                                termsOfService: T.SafetyHubLinks.TOS_LINK,
-                                communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
+                                termsOfService: E.SafetyHubLinks.TOS_LINK,
+                                communityGuidelines: E.SafetyHubLinks.COMMUNITY_GUIDELINES
                             }),
                             status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT,
                             Icon: u.CircleCheckIcon,
@@ -584,8 +531,8 @@
                         [S.AccountStandingState.SUSPENDED]: {
                             title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE,
                             description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION.format({
-                                termsOfService: T.SafetyHubLinks.TOS_LINK,
-                                communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
+                                termsOfService: E.SafetyHubLinks.TOS_LINK,
+                                communityGuidelines: E.SafetyHubLinks.COMMUNITY_GUIDELINES
                             }),
                             status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_SHORT,
                             Icon: o.CircleXIcon,
@@ -593,18 +540,18 @@
                         }
                     },
                     {
-                        title: h,
-                        description: x,
-                        color: H,
-                        Icon: p
-                    } = C[t.state],
-                    D = Object.keys(C).length;
+                        title: x,
+                        description: h,
+                        color: p,
+                        Icon: O
+                    } = m[t.state],
+                    H = Object.keys(m).length;
                 return (0, n.jsxs)(d.Card, {
                     className: I.container,
                     outline: !1,
                     children: [(0, n.jsx)("div", {
                         className: I.profile,
-                        children: (0, n.jsx)(E.default, {
+                        children: (0, n.jsx)(T.default, {
                             user: e,
                             size: d.AvatarSizes.SIZE_80
                         })
@@ -615,10 +562,10 @@
                             children: [(0, n.jsx)(d.Heading, {
                                 color: "header-primary",
                                 variant: "heading-lg/normal",
-                                children: h.format({
+                                children: x.format({
                                     hook: t => (0, n.jsx)(d.Text, {
                                         style: {
-                                            color: H.css
+                                            color: p.css
                                         },
                                         variant: "heading-lg/bold",
                                         tag: "span",
@@ -628,7 +575,7 @@
                             }), (0, n.jsx)(d.Text, {
                                 color: "text-normal",
                                 variant: "text-sm/normal",
-                                children: x
+                                children: h
                             })]
                         }), (0, n.jsxs)("div", {
                             className: I.health,
@@ -637,19 +584,19 @@
                             },
                             children: [(0, n.jsx)("div", {
                                 className: I.line
-                            }), Object.entries(C).map((e, a) => {
+                            }), Object.entries(m).map((e, a) => {
                                 let [i, s] = e, l = parseInt(i) === t.state;
                                 return (0, n.jsxs)("div", {
                                     className: I.statusOption,
                                     ref: t => N.current[parseInt(i)] = t,
-                                    children: [l ? (0, n.jsx)(p, {
+                                    children: [l ? (0, n.jsx)(O, {
                                         className: I.marker,
                                         color: s.color
                                     }) : (0, n.jsx)("div", {
                                         className: I.marker,
                                         style: {
                                             marginLeft: 0 === a ? -6 : 0,
-                                            marginRight: a === D - 1 ? -6 : 0
+                                            marginRight: a === H - 1 ? -6 : 0
                                         },
                                         children: (0, n.jsx)("div", {
                                             className: I.empty
@@ -723,8 +670,8 @@
                 _ = a("333781"),
                 S = a("422671"),
                 f = a("792105"),
-                E = a("133479"),
-                T = a("966677"),
+                T = a("133479"),
+                E = a("966677"),
                 A = a("49111"),
                 I = a("782340"),
                 g = a("302713");
@@ -753,7 +700,7 @@
                     })]
                 }) : (0, n.jsxs)("div", {
                     className: g.container,
-                    children: [(0, n.jsx)(E.default, {}), (0, n.jsx)(T.ConnectedSafetyHubViolationsContainer, {})]
+                    children: [(0, n.jsx)(T.default, {}), (0, n.jsx)(E.ConnectedSafetyHubViolationsContainer, {})]
                 })
             }
         },
@@ -761,7 +708,7 @@
             "use strict";
             a.r(e), a.d(e, {
                 ConnectedSafetyHubViolationsContainer: function() {
-                    return v
+                    return F
                 }
             }), a("222007");
             var n = a("37983"),
@@ -776,15 +723,15 @@
                 _ = a("599110"),
                 S = a("299039"),
                 f = a("667963"),
-                E = a("736393"),
-                T = a("310888"),
+                T = a("736393"),
+                E = a("310888"),
                 A = a("132206"),
                 I = a("698609"),
                 g = a("170213"),
                 N = a("49111"),
-                m = a("782340"),
-                C = a("231180");
-            let h = t => {
+                C = a("782340"),
+                m = a("231180");
+            let x = t => {
                     let {
                         status: e,
                         onClick: a,
@@ -792,32 +739,32 @@
                         count: s
                     } = t;
                     return (0, n.jsxs)(u.Clickable, {
-                        className: C.header,
+                        className: m.header,
                         onClick: a,
                         children: [(0, n.jsx)("div", {
-                            className: C.headerIconWrapper,
+                            className: m.headerIconWrapper,
                             children: (0, n.jsx)(r.WarningIcon, {
                                 color: "active" === e ? u.tokens.colors.INTERACTIVE_ACTIVE : u.tokens.colors.INTERACTIVE_MUTED,
                                 width: 24,
                                 height: 24
                             })
                         }), (0, n.jsxs)("div", {
-                            className: C.title,
+                            className: m.title,
                             children: [(0, n.jsx)(u.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "text-normal",
-                                children: "active" === e ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE.format({
+                                children: "active" === e ? C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE.format({
                                     count: s.toString()
-                                }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED.format({
+                                }) : C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED.format({
                                     count: s.toString()
                                 })
                             }), (0, n.jsx)(u.Heading, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: "active" === e ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED
+                                children: "active" === e ? C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE : C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED
                             })]
                         }), (0, n.jsx)("div", {
-                            className: C.caret,
+                            className: m.caret,
                             children: (0, n.jsx)(c.default, {
                                 width: 18,
                                 height: 18,
@@ -826,50 +773,50 @@
                         })]
                     })
                 },
-                x = () => (0, n.jsxs)("div", {
-                    className: C.emptyState,
+                h = () => (0, n.jsxs)("div", {
+                    className: m.emptyState,
                     children: [(0, n.jsxs)("div", {
-                        className: C.iconContainer,
+                        className: m.iconContainer,
                         children: [(0, n.jsx)("div", {
-                            className: C.iconBackground,
+                            className: m.iconBackground,
                             children: (0, n.jsx)(d.default, {
-                                className: C.icon
+                                className: m.icon
                             })
                         }), (0, n.jsx)(o.default, {
-                            className: C.stars
+                            className: m.stars
                         })]
                     }), (0, n.jsx)(u.Heading, {
                         variant: "heading-md/bold",
-                        className: C.emptyStateText,
-                        children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
+                        className: m.emptyStateText,
+                        children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
                     }), (0, n.jsx)(u.Text, {
                         variant: "text-xs/normal",
-                        className: C.emptyStateSubtext,
-                        children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
+                        className: m.emptyStateSubtext,
+                        children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
                     })]
                 }),
-                H = () => (0, n.jsx)("div", {
-                    className: C.emptyState,
+                p = () => (0, n.jsx)("div", {
+                    className: m.emptyState,
                     children: (0, n.jsx)(u.Text, {
                         variant: "text-xs/normal",
-                        className: C.emptyStateSubtext,
-                        children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
+                        className: m.emptyStateSubtext,
+                        children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
                     })
                 }),
-                p = t => {
+                O = t => {
                     let {
                         timestamp: e
                     } = t;
                     return (0, n.jsx)(u.Text, {
                         variant: "text-xs/normal",
-                        className: C.timestamp,
-                        children: (0, E.getClassificationRelativeIncidentTime)(e)
+                        className: m.timestamp,
+                        children: (0, T.getClassificationRelativeIncidentTime)(e)
                     })
                 },
-                D = () => (0, n.jsx)(u.Text, {
+                H = () => (0, n.jsx)(u.Text, {
                     variant: "text-xs/bold",
-                    className: C.newBadge,
-                    children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
+                    className: m.newBadge,
+                    children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
                 }),
                 U = t => {
                     var e;
@@ -879,7 +826,7 @@
                         id: s,
                         description: r,
                         max_expiration_time: c
-                    } = i, o = S.default.extractTimestamp(s), d = (0, T.useIsNewClassification)(i), _ = (0, f.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), E = new Date(c), A = E.toDateString();
+                    } = i, o = S.default.extractTimestamp(s), d = (0, E.useIsNewClassification)(i), _ = (0, f.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), T = new Date(c), A = T.toDateString();
                     return (0, n.jsx)(u.Clickable, {
                         onClick: () => {
                             (0, u.openModalLazy)(async () => {
@@ -893,16 +840,16 @@
                                 })
                             })
                         },
-                        className: l(C.itemDetail, {
-                            [C.itemDetailNew]: d
+                        className: l(m.itemDetail, {
+                            [m.itemDetailNew]: d
                         }),
                         children: (0, n.jsxs)("div", {
-                            className: C.descriptionContainer,
-                            children: [d ? (0, n.jsx)(D, {}) : (0, n.jsx)(p, {
+                            className: m.descriptionContainer,
+                            children: [d ? (0, n.jsx)(H, {}) : (0, n.jsx)(O, {
                                 timestamp: o
                             }), (0, n.jsx)(u.Heading, {
                                 variant: "heading-lg/normal",
-                                children: _ && null != i.guild_metadata ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
+                                children: _ && null != i.guild_metadata ? C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
                                     guildName: null == i ? void 0 : null === (e = i.guild_metadata) || void 0 === e ? void 0 : e.guild_name,
                                     description: r,
                                     descriptionHook: t => (0, n.jsx)(u.Text, {
@@ -910,7 +857,7 @@
                                         variant: "heading-lg/bold",
                                         children: t
                                     })
-                                }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format({
+                                }) : C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format({
                                     description: r,
                                     descriptionHook: t => (0, n.jsx)(u.Text, {
                                         tag: "span",
@@ -920,17 +867,17 @@
                                 })
                             }), (0, n.jsx)(u.Text, {
                                 variant: "text-sm/normal",
-                                className: C.expirationDate,
-                                children: E > new Date ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
+                                className: m.expirationDate,
+                                children: T > new Date ? C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
                                     expirationDate: A
-                                }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format({
+                                }) : C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format({
                                     expirationDate: A
                                 })
                             })]
                         })
                     }, s)
                 },
-                O = t => {
+                v = t => {
                     let {
                         status: e,
                         classifications: a
@@ -946,14 +893,14 @@
                     }, [s, o.state, d]);
                     let S = a.length - d.length > 3 ? 3 : a.length - d.length;
                     return (0, n.jsxs)("div", {
-                        className: C.dropdown,
-                        children: [(0, n.jsx)(h, {
+                        className: m.dropdown,
+                        children: [(0, n.jsx)(x, {
                             status: e,
                             onClick: () => l(t => !t),
                             opened: s,
                             count: a.length
                         }), s && (0, n.jsxs)("div", {
-                            className: C.items,
+                            className: m.items,
                             children: [(0, n.jsx)(u.TabBar.Separator, {
                                 style: {
                                     height: "1px",
@@ -968,24 +915,24 @@
                                         width: "100%"
                                     }
                                 }), (0, n.jsx)("button", {
-                                    className: C.paginationButton,
+                                    className: m.paginationButton,
                                     onClick: () => c(t => t + S),
-                                    children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({
+                                    children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({
                                         nextPageSize: S
                                     })
                                 })]
-                            }), 0 === d.length && "active" === e && (0, n.jsx)(x, {}), 0 === d.length && "expired" === e && (0, n.jsx)(H, {})]
+                            }), 0 === d.length && "active" === e && (0, n.jsx)(h, {}), 0 === d.length && "expired" === e && (0, n.jsx)(p, {})]
                         })]
                     })
                 },
-                v = () => {
+                F = () => {
                     let t = (0, I.useActiveSafetyHubClassifications)(),
                         e = (0, I.useExpiredSafetyHubClassifications)();
                     return 0 === t.length && 0 === e.length ? null : (0, n.jsxs)("div", {
-                        children: [(0, n.jsx)(O, {
+                        children: [(0, n.jsx)(v, {
                             status: "active",
                             classifications: t
-                        }), (0, n.jsx)(O, {
+                        }), (0, n.jsx)(v, {
                             status: "expired",
                             classifications: e
                         })]

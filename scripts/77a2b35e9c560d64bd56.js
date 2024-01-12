@@ -140,51 +140,52 @@
             "use strict";
             n.r(t), n.d(t, {
                 getClassificationRelativeIncidentTime: function() {
-                    return c
-                },
-                getAttachmentFilename: function() {
                     return s
                 },
-                parseMessageEmbedForProps: function() {
+                getAttachmentFilename: function() {
                     return l
                 },
-                isFlaggedContentEmpty: function() {
+                parseMessageEmbedForProps: function() {
                     return I
+                },
+                isFlaggedContentEmpty: function() {
+                    return S
                 }
             }), n("808653");
             var i = n("866227"),
                 E = n.n(i),
-                o = n("908539"),
-                r = n("170213"),
-                a = n("894488");
+                o = n("651693"),
+                r = n("908539"),
+                a = n("170213"),
+                c = n("894488");
 
-            function c(e) {
+            function s(e) {
                 return E().to(E(e))
             }
 
-            function s(e) {
+            function l(e) {
                 var t, n;
-                return null != e.width && e.width > 0 && null != e.height && e.height > 0 ? "".concat(a.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
+                return (0, o.isImageFile)(e.filename) ? "".concat(c.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
             }
 
-            function l(e) {
+            function I(e) {
                 var t, n, i, E;
                 if (null == e.fields) return;
                 let o = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});
                 return {
-                    header: null !== (t = o[r.SafetySystemNotificationEmbedKeys.HEADER]) && void 0 !== t ? t : "",
-                    icon: o[r.SafetySystemNotificationEmbedKeys.ICON_TYPE],
-                    body: null !== (n = o[r.SafetySystemNotificationEmbedKeys.BODY]) && void 0 !== n ? n : "",
-                    ctas: (null !== (i = o[r.SafetySystemNotificationEmbedKeys.CTAS]) && void 0 !== i ? i : "").split(",").filter(e => "" !== e),
-                    timestamp: parseFloat(null !== (E = o[r.SafetySystemNotificationEmbedKeys.TIMESTAMP]) && void 0 !== E ? E : 0),
-                    theme: o[r.SafetySystemNotificationEmbedKeys.THEME],
-                    learn_more_link: o[r.SafetySystemNotificationEmbedKeys.LEARN_MORE_LINK],
-                    classification_id: o[r.SafetySystemNotificationEmbedKeys.CLASSIFICATION_ID]
+                    header: null !== (t = o[a.SafetySystemNotificationEmbedKeys.HEADER]) && void 0 !== t ? t : "",
+                    icon: o[a.SafetySystemNotificationEmbedKeys.ICON_TYPE],
+                    body: null !== (n = o[a.SafetySystemNotificationEmbedKeys.BODY]) && void 0 !== n ? n : "",
+                    ctas: (null !== (i = o[a.SafetySystemNotificationEmbedKeys.CTAS]) && void 0 !== i ? i : "").split(",").filter(e => "" !== e),
+                    timestamp: parseFloat(null !== (E = o[a.SafetySystemNotificationEmbedKeys.TIMESTAMP]) && void 0 !== E ? E : 0),
+                    theme: o[a.SafetySystemNotificationEmbedKeys.THEME],
+                    learn_more_link: o[a.SafetySystemNotificationEmbedKeys.LEARN_MORE_LINK],
+                    classification_id: o[a.SafetySystemNotificationEmbedKeys.CLASSIFICATION_ID]
                 }
             }
 
-            function I(e) {
-                if (e.type === o.ContentIdType.MESSAGE) return "" === e.content && 0 === e.attachments.length;
+            function S(e) {
+                if (e.type === r.ContentIdType.MESSAGE) return "" === e.content && 0 === e.attachments.length;
                 return !0
             }
             n("782340")
