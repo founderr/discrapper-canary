@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["31529"], {
+    ["76894"], {
         606863: function(e, t, n) {
             "use strict";
             e.exports = n.p + "321a07cbc6f5919dbce9.svg"
@@ -700,10 +700,10 @@
                     shouldAnimate: c = !0,
                     defaultAnimationState: d,
                     idleAnimationState: f
-                } = e, h = (0, s.useStateFromStores)([l.default], () => l.default.useReducedMotion), [p, v] = u.useState(d), S = u.useRef((0, o.getGiftAnimationData)(t, p)), [E, m] = u.useState(null == f), [x, I] = u.useState(!1), [C, T] = u.useState(-1), g = () => {
-                    S.current = (0, o.getGiftAnimationData)(t, p), T(e => e + 1)
+                } = e, h = (0, s.useStateFromStores)([l.default], () => l.default.useReducedMotion), [p, v] = u.useState(d), S = u.useRef((0, o.getGiftAnimationData)(t, p)), [E, m] = u.useState(null == f), [x, I] = u.useState(!1), [C, g] = u.useState(-1), T = () => {
+                    S.current = (0, o.getGiftAnimationData)(t, p), g(e => e + 1)
                 }, N = () => {
-                    m(!1), I(!0), T(-1), v(d)
+                    m(!1), I(!0), g(-1), v(d)
                 };
                 u.useEffect(() => {
                     null == f && v(d)
@@ -712,11 +712,11 @@
                         N();
                         return
                     }
-                    g()
+                    T()
                 }, [t, f]), u.useEffect(() => {
-                    (!x || null == f) && g()
+                    (!x || null == f) && T()
                 }, [p]), u.useEffect(() => {
-                    x && (m(null == f), I(!1), g())
+                    x && (m(null == f), I(!1), T())
                 }, [x]);
                 if (!a.PremiumGiftStyles.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
                 return (0, r.jsx)(i.default, {
@@ -729,6 +729,24 @@
                     } : void 0,
                     loop: E
                 })
+            }
+        },
+        42507: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                useFrecencySettings: function() {
+                    return i
+                }
+            });
+            var r = n("884691"),
+                u = n("446674"),
+                s = n("872173"),
+                l = n("374363");
+
+            function i() {
+                return r.useEffect(() => {
+                    s.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, u.useStateFromStores)([l.default], () => l.default.frecencyWithoutFetchingLatest)
             }
         },
         83910: function(e, t, n) {
@@ -847,13 +865,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 FullScreenLayers: function() {
-                    return T
+                    return g
                 },
                 useFullScreenLayerStore: function() {
                     return m
                 },
                 openFullScreenLayer: function() {
-                    return g
+                    return T
                 },
                 closeFullScreenLayer: function() {
                     return N
@@ -931,7 +949,7 @@
                     exitDone: S.exitDoneReducedMotion
                 };
 
-            function T() {
+            function g() {
                 let {
                     reducedMotion: e
                 } = l.useContext(f.AccessibilityPreferencesContext), t = e.enabled, n = t ? C : I, r = m(e => e.fullScreenLayers);
@@ -955,7 +973,7 @@
                 })
             }
 
-            function g(e) {
+            function T(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
                     {
                         layerKey: n,

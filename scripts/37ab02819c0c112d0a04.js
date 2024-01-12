@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["52869"], {
+    ["14649"], {
         820542: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -385,7 +385,7 @@
                     guild: t,
                     source: C.InstantInviteSources.GUILD_CONTEXT_MENU,
                     channel: x
-                }), D = (0, v.default)(d), H = (0, O.default)(t), P = (0, L.default)(t), F = (0, U.default)(t), w = (0, I.default)({
+                }), D = (0, v.default)(d), H = (0, O.default)(t), F = (0, L.default)(t), P = (0, U.default)(t), w = (0, I.default)({
                     guildId: t.id,
                     userId: _.default.getId(),
                     analyticsLocation: {
@@ -446,9 +446,9 @@
                     }), (0, s.jsx)(u.MenuGroup, {
                         children: y
                     }), (0, s.jsxs)(u.MenuGroup, {
-                        children: [H, W || __OVERLAY__ ? null : P, W && !__OVERLAY__ ? z : null, D, Z]
+                        children: [H, W || __OVERLAY__ ? null : F, W && !__OVERLAY__ ? z : null, D, Z]
                     }), (0, s.jsxs)(u.MenuGroup, {
-                        children: [o ? null : F, __OVERLAY__ ? null : (0, s.jsx)(u.MenuItem, {
+                        children: [o ? null : P, __OVERLAY__ ? null : (0, s.jsx)(u.MenuItem, {
                             id: "privacy",
                             label: G.default.Messages.PRIVACY_SETTINGS,
                             action: () => (0, u.openModalLazy)(async () => {
@@ -1392,7 +1392,7 @@
 
             function g(e) {
                 let t = (0, s.useStateFromStores)([a.default], () => a.default.useNewNotifications);
-                return u.default.useExperiment({
+                return u.NotificationsExperiment.useExperiment({
                     location: e
                 }, {
                     autoTrackExposure: !1
@@ -1452,6 +1452,24 @@
                     message_notifications: r.UserNotificationSettings.NO_MESSAGES,
                     flags: (0, l.withGuildUnreadFlags)(n, o.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
                 }, a.NotificationLabels.PresetNothing)
+            }
+        },
+        42507: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                useFrecencySettings: function() {
+                    return u
+                }
+            });
+            var s = n("884691"),
+                i = n("446674"),
+                a = n("872173"),
+                l = n("374363");
+
+            function u() {
+                return s.useEffect(() => {
+                    a.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, i.useStateFromStores)([l.default], () => l.default.frecencyWithoutFetchingLatest)
             }
         },
         155207: function(e, t, n) {

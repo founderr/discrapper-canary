@@ -1294,7 +1294,7 @@
                             },
                             oldFormErrors: !0
                         }).then(e => {
-                            if (null == e.body || "5cc76afd451898cb854dbfb25312b15210b59026" === e.body.hash) return this._handleUpdateNotAvailable();
+                            if (null == e.body || "d143d9e38a6e5302ff9f37dcd4787a7baf2cb7e4" === e.body.hash) return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
                             if (Date.now() - f > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
@@ -2806,57 +2806,6 @@
                 }]
             });
             var s = a
-        },
-        542827: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return E
-                }
-            }), n("881410"), n("222007"), n("424973");
-            var l = n("917351"),
-                a = n.n(l),
-                s = n("267363"),
-                i = n("863636"),
-                r = n("401690"),
-                o = n("923959"),
-                u = n("660478"),
-                d = n("599110"),
-                c = n("49111"),
-                f = n("133335");
-
-            function E(e, t, n) {
-                let l = a.flatMap(e, e => {
-                    let t = o.default.getSelectableChannelIds(e),
-                        n = o.default.getVocalChannelIds(e),
-                        l = [...t, ...n],
-                        a = r.default.getActiveJoinedThreadsForGuild(e);
-                    for (let e of t) {
-                        var s;
-                        let t = null !== (s = a[e]) && void 0 !== s ? s : {};
-                        for (let e in t) l.push(e)
-                    }
-                    return l
-                }).map(e => ({
-                    channelId: e,
-                    readStateType: f.ReadStateTypes.CHANNEL,
-                    messageId: u.default.lastMessageId(e)
-                }));
-                return e.forEach(e => {
-                    l.push({
-                        channelId: e,
-                        readStateType: f.ReadStateTypes.GUILD_EVENT,
-                        messageId: u.default.lastMessageId(e, f.ReadStateTypes.GUILD_EVENT)
-                    }), l.push({
-                        channelId: e,
-                        readStateType: f.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
-                        messageId: i.default.ackIdForGuild(e)
-                    })
-                }), d.default.track(c.AnalyticEvents.MARK_AS_READ, {
-                    source: t,
-                    type: "guild"
-                }), (0, s.bulkAck)(l, n)
-            }
         },
         513472: function(e, t, n) {
             "use strict";

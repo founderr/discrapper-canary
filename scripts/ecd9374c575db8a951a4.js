@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["35196"], {
+    ["29537"], {
         437083: function(t, e, n) {
             var r = n("561449"),
                 i = n("877297");
@@ -93,15 +93,15 @@
                 c = n("385976"),
                 l = n("867805"),
                 d = n("619443"),
-                E = n("872173"),
-                f = n("341542"),
+                f = n("872173"),
+                E = n("341542"),
                 _ = n("404118"),
                 p = n("49111"),
                 S = n("397336"),
                 y = n("782340");
 
             function I(t) {
-                E.PreloadedUserSettingsActionCreators.updateAsync("textAndImages", e => {
+                f.PreloadedUserSettingsActionCreators.updateAsync("textAndImages", e => {
                     e.diversitySurrogate = u.StringValue.create(), e.diversitySurrogate.value = t
                 }, S.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
@@ -182,7 +182,7 @@
             }
 
             function v(t) {
-                return f.default.totalUnavailableGuilds > 0 || !d.default.isConnected() ? t : t.filter(t => {
+                return E.default.totalUnavailableGuilds > 0 || !d.default.isConnected() ? t : t.filter(t => {
                     var e;
                     let n = null !== (e = c.default.getCustomEmojiById(t)) && void 0 !== e ? e : l.default.getByName(t);
                     return null != n
@@ -192,7 +192,7 @@
             function A(t) {
                 var e;
                 (function(t) {
-                    null != t && E.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", e => (e.emojis = v(e.emojis), i.size(e.emojis) >= S.MAX_FAVORITES) ? (_.default.show({
+                    null != t && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", e => (e.emojis = v(e.emojis), i.size(e.emojis) >= S.MAX_FAVORITES) ? (_.default.show({
                         title: y.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
                         body: y.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
                             count: S.MAX_FAVORITES
@@ -204,7 +204,7 @@
             function h(t) {
                 var e;
                 (function(t) {
-                    null != t && E.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", e => {
+                    null != t && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", e => {
                         if (!e.emojis.includes(t)) return !1;
                         e.emojis = e.emojis.filter(e => t !== e), e.emojis = v(e.emojis)
                     }, S.UserSettingsDelay.INFREQUENT_USER_ACTION)
@@ -275,11 +275,11 @@
                 } = t, d = (0, i.useStateFromStores)([o.default], () => null !== n && null != o.default.getPackByPackId({
                     packId: n
                 })), {
-                    viewAndUseEnabled: E
+                    viewAndUseEnabled: f
                 } = (0, u.useInventoryGuildPacksUserExperiment)({
                     autoTrackExposure: !1
                 });
-                return E && d && (e === c.PickerContextMenuDataTypes.EMOJI || e === c.PickerContextMenuDataTypes.PACK_ICON) && null !== n ? (0, r.jsx)(a.MenuItem, {
+                return f && d && (e === c.PickerContextMenuDataTypes.EMOJI || e === c.PickerContextMenuDataTypes.PACK_ICON) && null !== n ? (0, r.jsx)(a.MenuItem, {
                     id: "uncollect",
                     action: function() {
                         null != n && (0, s.uncollectPack)({
@@ -306,10 +306,10 @@
                     return d
                 },
                 getPackMetadata: function() {
-                    return E
+                    return f
                 },
                 dismissPackAddedNotification: function() {
-                    return f
+                    return E
                 }
             });
             var r = n("872717"),
@@ -394,7 +394,7 @@
                     return
                 }
             }
-            async function E(t) {
+            async function f(t) {
                 let {
                     packId: e
                 } = t;
@@ -408,7 +408,7 @@
                 }
             }
 
-            function f() {
+            function E() {
                 i.default.dispatch({
                     type: "INVENTORY_DISMISS_PACK_ADDED_NOTIFICATION"
                 })
@@ -449,8 +449,8 @@
                 c = n("788506"),
                 l = n("385976"),
                 d = n("867805"),
-                E = n("246511"),
-                f = n("467094"),
+                f = n("246511"),
+                E = n("467094"),
                 _ = n("178207"),
                 p = n("256860"),
                 S = n("364685"),
@@ -473,8 +473,8 @@
                 } = (0, o.useAnalyticsContext)(), A = i.useMemo(() => ({
                     ...v,
                     section: k ? I.AnalyticsSections.EXPRESSION_PICKER : I.AnalyticsSections.CONTEXT_MENU
-                }), [v, k]), h = (0, p.useFavoriteStickerIds)(), R = (0, a.useStateFromStores)([S.default], () => e === E.PickerContextMenuDataTypes.STICKER && null != n ? S.default.getStickerById(n) : null), O = null != R && h.includes(R.id), M = (0, a.useStateFromStores)([l.default], () => {
-                    if (e === E.PickerContextMenuDataTypes.EMOJI) {
+                }), [v, k]), h = (0, p.useFavoriteStickerIds)(), R = (0, a.useStateFromStores)([S.default], () => e === f.PickerContextMenuDataTypes.STICKER && null != n ? S.default.getStickerById(n) : null), O = null != R && h.includes(R.id), M = (0, a.useStateFromStores)([l.default], () => {
+                    if (e === f.PickerContextMenuDataTypes.EMOJI) {
                         if (null != n) return l.default.getDisambiguatedEmojiContext().getById(n);
                         if (null != C) {
                             var t;
@@ -482,9 +482,9 @@
                         }
                     }
                 }), g = (0, c.useIsFavoriteEmoji)(null, M);
-                if (null != R && e === E.PickerContextMenuDataTypes.STICKER) return (0, y.isGuildSticker)(R) && !(0, y.isAvailableGuildSticker)(R) ? null : O ? (0, r.jsx)(u.MenuItem, {
+                if (null != R && e === f.PickerContextMenuDataTypes.STICKER) return (0, y.isGuildSticker)(R) && !(0, y.isAvailableGuildSticker)(R) ? null : O ? (0, r.jsx)(u.MenuItem, {
                     id: "unfavorite",
-                    action: () => (0, f.unfavoriteSticker)(R.id),
+                    action: () => (0, E.unfavoriteSticker)(R.id),
                     label: m.default.Messages.UNFAVORITE_ITEM
                 }) : (0, r.jsx)(u.MenuItem, {
                     id: "favorite",
@@ -495,11 +495,11 @@
                                 ...A,
                                 object: I.AnalyticsObjects.STICKER
                             }
-                        }), (0, f.favoriteSticker)(null == R ? void 0 : R.id)
+                        }), (0, E.favoriteSticker)(null == R ? void 0 : R.id)
                     },
                     label: m.default.Messages.FAVORITE_ITEM
                 });
-                if (null != M && e === E.PickerContextMenuDataTypes.EMOJI) return g ? (0, r.jsx)(u.MenuItem, {
+                if (null != M && e === f.PickerContextMenuDataTypes.EMOJI) return g ? (0, r.jsx)(u.MenuItem, {
                     id: "unfavorite",
                     action: () => (0, s.unfavoriteEmoji)(M),
                     label: m.default.Messages.UNFAVORITE_ITEM
@@ -531,10 +531,10 @@
                     return d
                 },
                 trackStickerSearchResultsViewed: function() {
-                    return E
+                    return f
                 },
                 trackStickerSearchSelect: function() {
-                    return f
+                    return E
                 },
                 trackStickerSelect: function() {
                     return _
@@ -593,7 +593,7 @@
                         search_type: u.SearchTypes.STICKER
                     })
                 },
-                E = (t, e, n) => {
+                f = (t, e, n) => {
                     r.default.trackWithMetadata(u.AnalyticEvents.SEARCH_RESULT_VIEWED, {
                         search_type: u.SearchTypes.STICKER,
                         total_results: e,
@@ -601,7 +601,7 @@
                         is_suggestion: n
                     })
                 },
-                f = (t, e, n) => {
+                E = (t, e, n) => {
                     let i;
                     let {
                         sticker: s
@@ -639,6 +639,24 @@
                         source_object: "Sticker Picker"
                     })
                 }
+        },
+        42507: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                useFrecencySettings: function() {
+                    return s
+                }
+            });
+            var r = n("884691"),
+                i = n("446674"),
+                a = n("872173"),
+                u = n("374363");
+
+            function s() {
+                return r.useEffect(() => {
+                    a.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, i.useStateFromStores)([u.default], () => u.default.frecencyWithoutFetchingLatest)
+            }
         }
     }
 ]);

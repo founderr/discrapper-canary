@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["73988"], {
+    ["51711"], {
         53708: function(e, t, n) {
             "use strict";
             e.exports = n.p + "f6c7b8245d3a54cf98b2.png"
@@ -2469,6 +2469,24 @@
                 if (null == s) return;
                 let a = new Image;
                 a.src = s
+            }
+        },
+        42507: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                useFrecencySettings: function() {
+                    return a
+                }
+            });
+            var r = n("884691"),
+                i = n("446674"),
+                l = n("872173"),
+                s = n("374363");
+
+            function a() {
+                return r.useEffect(() => {
+                    l.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, i.useStateFromStores)([s.default], () => s.default.frecencyWithoutFetchingLatest)
             }
         },
         476108: function(e, t, n) {

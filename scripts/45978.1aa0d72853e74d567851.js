@@ -4,10 +4,10 @@
             "use strict";
             r.r(t), r.d(t, {
                 fetchStickerPack: function() {
-                    return g
+                    return p
                 },
                 fetchStickerPacks: function() {
-                    return p
+                    return g
                 },
                 fetchSticker: function() {
                     return T
@@ -25,16 +25,16 @@
                     return m
                 },
                 addStickerPreview: function() {
-                    return F
+                    return A
                 },
                 clearStickerPreview: function() {
-                    return A
+                    return F
                 },
                 favoriteSticker: function() {
                     return P
                 },
                 unfavoriteSticker: function() {
-                    return U
+                    return G
                 }
             }), r("424973");
             var i = r("917351"),
@@ -43,8 +43,8 @@
                 s = r("913144"),
                 l = r("404118"),
                 a = r("619443"),
-                c = r("915639"),
-                d = r("872173"),
+                d = r("915639"),
+                c = r("872173"),
                 o = r("766274"),
                 S = r("341542"),
                 f = r("697218"),
@@ -53,7 +53,7 @@
                 y = r("49111"),
                 C = r("397336"),
                 I = r("782340");
-            let g = async (e, t) => {
+            let p = async (e, t) => {
                 let {
                     body: r
                 } = await (0, k.httpGetWithCountryCodeQuery)(y.Endpoints.STICKER_PACK(e));
@@ -63,9 +63,9 @@
                     pack: r,
                     ingestStickers: t
                 }), r
-            }, p = async function() {
+            }, g = async function() {
                 let {
-                    locale: e = c.default.locale
+                    locale: e = d.default.locale
                 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if (E.default.isFetchingStickerPacks || E.default.hasLoadedStickerPacks) return;
                 s.default.wait(() => {
@@ -136,7 +136,7 @@
                 return i.body
             };
 
-            function F(e, t, r) {
+            function A(e, t, r) {
                 s.default.dispatch({
                     type: "ADD_STICKER_PREVIEW",
                     channelId: e,
@@ -145,7 +145,7 @@
                 })
             }
 
-            function A(e, t) {
+            function F(e, t) {
                 s.default.dispatch({
                     type: "CLEAR_STICKER_PREVIEW",
                     channelId: e,
@@ -158,7 +158,7 @@
             }
 
             function P(e) {
-                d.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = v(t.stickerIds), u.size(t.stickerIds) >= C.MAX_FAVORITES) ? (l.default.show({
+                c.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = v(t.stickerIds), u.size(t.stickerIds) >= C.MAX_FAVORITES) ? (l.default.show({
                     title: I.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
                     body: I.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
                         count: C.MAX_FAVORITES
@@ -166,8 +166,8 @@
                 }), !1) : !t.stickerIds.includes(e) && void t.stickerIds.push(e), C.UserSettingsDelay.INFREQUENT_USER_ACTION)
             }
 
-            function U(e) {
-                d.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => {
+            function G(e) {
+                c.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => {
                     t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = v(t.stickerIds)
                 }, C.UserSettingsDelay.INFREQUENT_USER_ACTION)
             }
@@ -188,16 +188,16 @@
                     return m
                 },
                 useFetchStickerPacks: function() {
-                    return F
+                    return A
                 },
                 useFavoriteStickerIds: function() {
                     return P
                 },
                 useFavoriteStickers: function() {
-                    return U
+                    return G
                 },
                 useLatestFrecentStickers: function() {
-                    return G
+                    return U
                 },
                 useStickerForRenderableSticker: function() {
                     return K
@@ -212,8 +212,8 @@
                 s = r("845579"),
                 l = r("42507"),
                 a = r("305961"),
-                c = r("162771"),
-                d = r("677099"),
+                d = r("162771"),
+                c = r("677099"),
                 o = r("697218"),
                 S = r("427459"),
                 f = r("991170"),
@@ -222,11 +222,11 @@
                 y = r("865372"),
                 C = r("364685"),
                 I = r("161585"),
-                g = r("24373"),
-                p = r("49111"),
+                p = r("24373"),
+                g = r("49111"),
                 T = r("782340");
             let _ = e => {
-                    F();
+                    A();
                     let t = (0, u.useStateFromStores)([C.default], () => C.default.hasLoadedStickerPacks);
                     i.useEffect(() => {
                         t && null == C.default.getStickerPack(e) && (0, E.fetchStickerPack)(e)
@@ -234,7 +234,7 @@
                 },
                 h = e => {
                     let t = s.AnimateStickers.useSetting();
-                    return (0, g.shouldAnimateSticker)(t, e)
+                    return (0, p.shouldAnimateSticker)(t, e)
                 },
                 R = e => {
                     let {
@@ -243,27 +243,27 @@
                         listPaddingRight: u = 0,
                         listWidth: s = 0,
                         stickerNodeMargin: l = 0,
-                        stickerNodeWidth: d,
+                        stickerNodeWidth: c,
                         stickersCategories: o
                     } = e;
                     return i.useMemo(() => {
-                        let e = Math.floor((s - u + l) / (d + l)),
-                            i = Math.floor(Math.max(l, (s - u - d * e) / (e - 1))),
+                        let e = Math.floor((s - u + l) / (c + l)),
+                            i = Math.floor(Math.max(l, (s - u - c * e) / (e - 1))),
                             f = [],
                             k = [],
                             E = [],
                             y = 0,
                             C = 0,
-                            p = 0;
+                            g = 0;
                         if (0 !== s) {
                             let i = function(t, r) {
                                 let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                                    u = (0, g.isGuildSticker)(t[0]) ? a.default.getGuild(t[0].guild_id) : void 0,
+                                    u = (0, p.isGuildSticker)(t[0]) ? a.default.getGuild(t[0].guild_id) : void 0,
                                     {
                                         canCreateExpressions: s
                                     } = (0, n.getManageResourcePermissions)(u),
-                                    l = c.default.getGuildId(),
-                                    d = o.findIndex(e => e.type === I.StickerCategoryTypes.FAVORITE),
+                                    l = d.default.getGuildId(),
+                                    c = o.findIndex(e => e.type === I.StickerCategoryTypes.FAVORITE),
                                     _ = o.findIndex(e => e.type === I.StickerCategoryTypes.RECENT),
                                     h = t.length;
                                 null != u && l === u.id && s && t.length < (0, S.getTotalStickerCountForTier)(u.premiumTier) && h++;
@@ -275,22 +275,22 @@
                                         a = t.slice(s, l).map((e, t) => ({
                                             type: I.StickerGridItemTypes.STICKER,
                                             sticker: e,
-                                            packId: (0, g.isStandardSticker)(e) ? e.pack_id : "TODO - fix",
+                                            packId: (0, p.isStandardSticker)(e) ? e.pack_id : "TODO - fix",
                                             gridSectionIndex: C,
                                             rowIndex: y,
                                             columnIndex: t,
-                                            visibleRowIndex: p,
+                                            visibleRowIndex: g,
                                             category: r
                                         }));
-                                    C > _ && C > d && null != u && h > t.length && a.push({
+                                    C > _ && C > c && null != u && h > t.length && a.push({
                                         type: I.StickerGridItemTypes.CREATE_STICKER,
                                         guild_id: u.id,
                                         name: T.default.Messages.STICKER_PICKER_CREATE_STICKER_TITLE,
                                         gridSectionIndex: C,
                                         rowIndex: y,
                                         columnIndex: a.length,
-                                        visibleRowIndex: p
-                                    }), !i && (p++, E.push(a), f.push(a.length)), y++
+                                        visibleRowIndex: g
+                                    }), !i && (g++, E.push(a), f.push(a.length)), y++
                                 }
                                 C++
                             };
@@ -305,7 +305,7 @@
                             gutterWidth: i,
                             columnCounts: f
                         }
-                    }, [t, r, u, s, l, d, o])
+                    }, [t, r, u, s, l, c, o])
                 },
                 m = e => {
                     let t = (0, u.useStateFromStores)([o.default], () => o.default.getCurrentUser());
@@ -316,15 +316,15 @@
                         return !1
                     }, [t, e])
                 },
-                F = () => {
+                A = () => {
                     i.useEffect(() => {
                         (0, E.fetchStickerPacks)()
                     }, [])
                 },
-                A = e => {
+                F = e => {
                     let t = (0, u.useStateFromStores)([C.default], () => C.default.getAllGuildStickers()),
-                        r = (0, u.useStateFromStoresArray)([d.default, a.default], () => {
-                            let e = d.default.getFlattenedGuildIds(),
+                        r = (0, u.useStateFromStoresArray)([c.default, a.default], () => {
+                            let e = c.default.getFlattenedGuildIds(),
                                 t = [];
                             return e.forEach(e => {
                                 let r = a.default.getGuild(e);
@@ -359,7 +359,7 @@
                                 name: t.name,
                                 stickers: []
                             }), null != s && !f.default.can({
-                                permission: p.Permissions.USE_EXTERNAL_EMOJIS,
+                                permission: g.Permissions.USE_EXTERNAL_EMOJIS,
                                 user: s,
                                 context: e
                             }) && (i = i.filter(t => t.id === e.getGuildId()))
@@ -375,13 +375,13 @@
                 return null !== (t = null === (e = r.favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== t ? t : v
             }
 
-            function U() {
+            function G() {
                 let e = P(),
                     t = (0, u.useStateFromStoresArray)([C.default], () => e.map(e => C.default.getStickerById(e)).filter(e => void 0 !== e), [e]);
                 return t
             }
 
-            function G() {
+            function U() {
                 let e = function() {
                         var e, t;
                         let r = (0, l.useFrecencySettings)(),
@@ -392,7 +392,7 @@
                 return t
             }
             let L = e => {
-                    let t = U(),
+                    let t = G(),
                         {
                             packs: r,
                             frequentlyUsedStickers: n
@@ -401,29 +401,29 @@
                             frequentlyUsedStickers: y.default.stickerFrecencyWithoutFetchingLatest.frequently
                         }), []),
                         s = (0, u.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
-                        l = A(e);
+                        l = F(e);
                     return i.useMemo(() => {
                         var i;
-                        let u = r.map(g.createStickerPackCategory),
+                        let u = r.map(p.createStickerPackCategory),
                             a = {
                                 type: I.StickerCategoryTypes.FAVORITE,
                                 id: I.StickerCategoryTypes.FAVORITE,
                                 name: T.default.Messages.CATEGORY_FAVORITE,
                                 stickers: t
                             },
-                            c = {
+                            d = {
                                 type: I.StickerCategoryTypes.RECENT,
                                 id: I.StickerCategoryTypes.RECENT,
                                 name: T.default.Messages.STICKER_CATEGORY_RECENT,
                                 stickers: null !== (i = null == n ? void 0 : n.filter(t => {
-                                    if ((0, g.isGuildSticker)(t)) {
+                                    if ((0, p.isGuildSticker)(t)) {
                                         var i, u;
                                         return null !== (u = null === (i = C.default.getStickersByGuildId(t.guild_id)) || void 0 === i ? void 0 : i.some(e => e.id === t.id)) && void 0 !== u && u && (0, k.getStickerSendability)(t, s, e) !== k.StickerSendability.NONSENDABLE
                                     }
-                                    if ((0, g.isStandardSticker)(t)) return r.some(e => e.id === t.pack_id)
+                                    if ((0, p.isStandardSticker)(t)) return r.some(e => e.id === t.pack_id)
                                 })) && void 0 !== i ? i : []
                             };
-                        return [a, c, ...l, ...u]
+                        return [a, d, ...l, ...u]
                     }, [r, t, n, l, s, e])
                 },
                 K = function(e) {
@@ -431,10 +431,10 @@
                         r = (0, u.useStateFromStores)([C.default], () => C.default.getStickerById(e.id)),
                         [n, s] = i.useState(!0),
                         [l, a] = i.useState(!1),
-                        c = (0, g.isGuildSticker)(e) || (0, g.isStandardSticker)(e);
+                        d = (0, p.isGuildSticker)(e) || (0, p.isStandardSticker)(e);
                     return (i.useEffect(() => {
                         let i = async () => {
-                            if (t && !c && null == r && n && !l) {
+                            if (t && !d && null == r && n && !l) {
                                 s(!1);
                                 try {
                                     await (0, E.fetchSticker)(e.id)
@@ -443,30 +443,12 @@
                             }
                         };
                         i()
-                    }, [t]), c) ? [e, l] : [null != r ? r : null, l]
+                    }, [t]), d) ? [e, l] : [null != r ? r : null, l]
                 },
                 M = e => {
                     let t = L(e);
                     return i.useMemo(() => t.filter(e => e.type === I.StickerCategoryTypes.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t])
                 }
-        },
-        42507: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                useFrecencySettings: function() {
-                    return l
-                }
-            });
-            var i = r("884691"),
-                u = r("446674"),
-                n = r("872173"),
-                s = r("374363");
-
-            function l() {
-                return i.useEffect(() => {
-                    n.FrecencyUserSettingsActionCreators.loadIfNecessary()
-                }, []), (0, u.useStateFromStores)([s.default], () => s.default.frecencyWithoutFetchingLatest)
-            }
         }
     }
 ]);
