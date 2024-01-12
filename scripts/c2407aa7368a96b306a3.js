@@ -245,7 +245,7 @@
                 }), {
                     product: N,
                     purchase: D
-                } = (0, E.default)(null == L ? void 0 : L.skuId), P = p.default.canUseCollectibles(t), M = n.useRef(null), y = (0, f.default)(s), H = (0, h.isEqualAvatarDecoration)(L, void 0 === A ? null == t ? void 0 : t.avatarDecoration : A), x = () => {
+                } = (0, E.default)(null == L ? void 0 : L.skuId), P = p.default.canUseCollectibles(t), y = n.useRef(null), M = (0, f.default)(s), H = (0, h.isEqualAvatarDecoration)(L, void 0 === A ? null == t ? void 0 : t.avatarDecoration : A), x = () => {
                     S(L), u()
                 }, w = n.useCallback(() => {
                     u(), (0, c.openCollectiblesShop)({
@@ -271,9 +271,9 @@
                         children: [(0, a.jsx)(T.default, {
                             user: t,
                             pendingAvatarDecoration: L,
-                            selectedAvatarDecorationRef: M,
+                            selectedAvatarDecorationRef: y,
                             onSelect: e => {
-                                g(e), null != e && y(e)
+                                g(e), null != e && M(e)
                             },
                             onOpenShop: w
                         }), (0, a.jsx)(m.default, {
@@ -585,14 +585,14 @@
                         i && D(!0)
                     }, [i]);
                     let P = n.useRef(null),
-                        M = (0, d.default)(null != s ? s : P),
+                        y = (0, d.default)(null != s ? s : P),
                         {
-                            avatarDecorationSrc: y
+                            avatarDecorationSrc: M
                         } = (0, T.default)({
                             user: t,
                             avatarDecorationOverride: r,
                             size: 80,
-                            animateOnHover: !M
+                            animateOnHover: !y
                         });
                     return (0, a.jsxs)(R, {
                         className: g ? O.decorationGridItemChurned : void 0,
@@ -601,7 +601,7 @@
                         ...c,
                         children: [(0, a.jsx)("img", {
                             className: O.presetDecorationImg,
-                            src: y,
+                            src: M,
                             alt: r.label
                         }), (() => {
                             let e = u === m.Section.PURCHASE || u === m.Section.PREMIUM_PURCHASE && v;
@@ -858,15 +858,20 @@
                         item: e
                     })
                 },
-                f = async () => {
+                f = async e => {
                     n.default.dispatch({
                         type: "COLLECTIBLES_CATEGORIES_FETCH"
                     });
                     try {
-                        let e = await a.default.get(c.Endpoints.COLLECTIBLES_CATEGORIES);
+                        let t = await a.default.get({
+                            url: c.Endpoints.COLLECTIBLES_CATEGORIES,
+                            query: null != e ? {
+                                country_code: e
+                            } : {}
+                        });
                         n.default.dispatch({
                             type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-                            categories: e.body.map(i.default.fromServer)
+                            categories: t.body.map(i.default.fromServer)
                         })
                     } catch (e) {
                         throw n.default.dispatch({
@@ -890,15 +895,20 @@
                             error: e
                         }), new u.APIError(e)
                     }
-                }, I = async e => {
+                }, I = async (e, t) => {
                     n.default.dispatch({
                         type: "COLLECTIBLES_PRODUCT_FETCH"
                     });
                     try {
-                        let t = await a.default.get(c.Endpoints.COLLECTIBLES_PRODUCTS(e));
+                        let r = await a.default.get({
+                            url: c.Endpoints.COLLECTIBLES_PRODUCTS(e),
+                            query: null != t ? {
+                                country_code: t
+                            } : {}
+                        });
                         n.default.dispatch({
                             type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
-                            product: l.default.fromServer(t.body)
+                            product: l.default.fromServer(r.body)
                         })
                     } catch (e) {
                         throw n.default.dispatch({
