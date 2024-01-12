@@ -9,11 +9,17 @@
                 unsubscribeMembers: function() {
                     return l
                 },
-                subscribeChannel: function() {
+                subscribeToMemberUpdates: function() {
                     return o
                 },
-                subscribeChannelDimensions: function() {
+                unsubscribeFromMemberUpdates: function() {
                     return a
+                },
+                subscribeChannel: function() {
+                    return s
+                },
+                subscribeChannelDimensions: function() {
+                    return d
                 }
             }), n("424973");
             var i = n("913144"),
@@ -35,7 +41,21 @@
                 })
             }
 
-            function o(e, t, n) {
+            function o(e) {
+                i.default.dispatch({
+                    type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES",
+                    guildId: e
+                })
+            }
+
+            function a(e) {
+                i.default.dispatch({
+                    type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES",
+                    guildId: e
+                })
+            }
+
+            function s(e, t, n) {
                 i.default.dispatch({
                     type: "GUILD_SUBSCRIPTIONS_CHANNEL",
                     guildId: e,
@@ -44,7 +64,7 @@
                 })
             }
 
-            function a(e) {
+            function d(e) {
                 let {
                     guildId: t,
                     channelId: n,
@@ -53,21 +73,21 @@
                     rowHeight: l
                 } = e;
 
-                function a(e) {
+                function o(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
                     return Math.max(0, Math.ceil(Math.ceil(e / l)) + t)
                 }
-                let s = [];
+                let a = [];
 
                 function d(e) {
                     let t = e + (r.MINIMUM_RANGE - 1);
-                    return s.push([e, t]), t + 1
+                    return a.push([e, t]), t + 1
                 }
-                let c = a(.5 * u),
-                    E = a(i, -c),
-                    f = a(i + u, c);
+                let c = o(.5 * u),
+                    E = o(i, -c),
+                    f = o(i + u, c);
                 for (E > 0 && (E = Math.max(d(0), E)), E = Math.floor(E / r.MINIMUM_RANGE) * r.MINIMUM_RANGE; E <= f;) E = d(E);
-                o(t, n, s)
+                s(t, n, a)
             }
         },
         31745: function(e, t, n) {
@@ -466,10 +486,10 @@
                     return N
                 },
                 resetPendingProfileChanges: function() {
-                    return v
+                    return C
                 },
                 resetAllPending: function() {
-                    return C
+                    return v
                 },
                 clearErrors: function() {
                     return G
@@ -591,13 +611,13 @@
                 })
             }
 
-            function v() {
+            function C() {
                 r.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES"
                 })
             }
 
-            function C() {
+            function v() {
                 r.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING"
                 })
@@ -635,11 +655,11 @@
                 _ = I.FormStates.CLOSED, T = {}, s = null, d = void 0, c = []
             }
 
-            function v() {
-                C(), G(), T = {}, _ = I.FormStates.OPEN
+            function C() {
+                v(), G(), T = {}, _ = I.FormStates.OPEN
             }
 
-            function C() {
+            function v() {
                 i = void 0, o = void 0
             }
 
@@ -707,7 +727,7 @@
                 },
                 GUILD_IDENTITY_SETTINGS_CLOSE: N,
                 GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-                    v(), N()
+                    C(), N()
                 },
                 GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
                     s = e.guild, T = {}
@@ -759,10 +779,10 @@
                     } = e;
                     a = t
                 },
-                GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: C,
+                GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: v,
                 GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: G,
-                GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: v,
-                GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: v,
+                GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: C,
+                GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: C,
                 GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function() {
                     T = {}
                 },
@@ -855,8 +875,8 @@
                 T = n("599110"),
                 S = n("306160"),
                 N = n("322224"),
-                v = n("152475"),
-                C = n("397680"),
+                C = n("152475"),
+                v = n("397680"),
                 G = n("613767"),
                 L = n("822516"),
                 h = n("669195"),
@@ -880,9 +900,9 @@
                     guild_id: x
                 } = P, {
                     canManageGuildEvent: w
-                } = (0, d.useManageResourcePermissions)(null != R ? R : t), H = w(P), b = (0, v.default)(P), B = (0, G.useIsChannelPublic)(null == R ? void 0 : R.id, P.id), {
-                    withinStartWindow: Y
-                } = (0, L.getEventTimeData)(y), F = (0, r.useStateFromStores)([_.default], () => (null == R ? !void 0 : !R.isGuildVocal()) || _.default.can(p.Permissions.CONNECT, R), [R]), j = (0, s.useShowMemberVerificationGate)(x), k = (0, C.default)(m, O);
+                } = (0, d.useManageResourcePermissions)(null != R ? R : t), b = w(P), H = (0, C.default)(P), B = (0, G.useIsChannelPublic)(null == R ? void 0 : R.id, P.id), {
+                    withinStartWindow: F
+                } = (0, L.getEventTimeData)(y), Y = (0, r.useStateFromStores)([_.default], () => (null == R ? !void 0 : !R.isGuildVocal()) || _.default.can(p.Permissions.CONNECT, R), [R]), j = (0, s.useShowMemberVerificationGate)(x), k = (0, v.default)(m, O);
 
                 function Z(e) {
                     e.stopPropagation(), (0, D.default)(O, m, x)
@@ -900,8 +920,8 @@
                     (0, u.closeAllModals)(), (0, c.transitionToGuild)(x, null == t ? void 0 : t.id)
                 }
                 return {
-                    onDeleteClick: H ? function(e) {
-                        e.stopPropagation(), H && !A && (0, u.openModal)(e => (0, i.jsx)(u.ConfirmModal, {
+                    onDeleteClick: b ? function(e) {
+                        e.stopPropagation(), b && !A && (0, u.openModal)(e => (0, i.jsx)(u.ConfirmModal, {
                             ...e,
                             header: M.default.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
                             confirmText: M.default.Messages.DELETE,
@@ -927,14 +947,14 @@
                             })
                         })
                     },
-                    onJoinClick: F || j ? function(e) {
+                    onJoinClick: Y || j ? function(e) {
                         if (e.stopPropagation(), j) {
                             null == U || U(), (0, a.openMemberVerificationModal)(x);
                             return
                         }(null == R ? void 0 : R.isGuildStageVoice()) ? ((0, E.connectAndOpen)(R), null == U || U()) : (null == R ? void 0 : R.isGuildVoice()) && (N.default.joinVoiceEvent(R.guild_id, R.id), null == U || U())
                     } : void 0,
                     onRsvpClick: Z,
-                    onStartClick: H && Y && !(null == k ? void 0 : k.is_canceled) ? function(e) {
+                    onStartClick: b && F && !(null == k ? void 0 : k.is_canceled) ? function(e) {
                         e.stopPropagation(), (0, u.openModalLazy)(async () => {
                             let {
                                 default: e
@@ -948,7 +968,7 @@
                     } : void 0,
                     onInviteClick: function(e) {
                         if (e.stopPropagation(), null != t) {
-                            if (!b || !B) {
+                            if (!H || !B) {
                                 let e = (0, h.SHARE_EVENT_DETAILS_LINK)({
                                     guildId: x,
                                     guildEventId: O
@@ -972,8 +992,8 @@
                             })
                         }
                     },
-                    onEndClick: H && V === g.GuildScheduledEventEntityTypes.EXTERNAL && A ? function(e) {
-                        if (e.stopPropagation(), !H) return;
+                    onEndClick: b && V === g.GuildScheduledEventEntityTypes.EXTERNAL && A ? function(e) {
+                        if (e.stopPropagation(), !b) return;
                         let t = () => {
                             N.default.endEvent(O, x), (0, u.closeAllModals)()
                         };

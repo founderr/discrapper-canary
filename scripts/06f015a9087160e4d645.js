@@ -13,11 +13,17 @@
                 unsubscribeMembers: function() {
                     return o
                 },
-                subscribeChannel: function() {
+                subscribeToMemberUpdates: function() {
                     return a
                 },
-                subscribeChannelDimensions: function() {
+                unsubscribeFromMemberUpdates: function() {
                     return s
+                },
+                subscribeChannel: function() {
+                    return u
+                },
+                subscribeChannelDimensions: function() {
+                    return c
                 }
             }), n("424973");
             var i = n("913144"),
@@ -39,7 +45,21 @@
                 })
             }
 
-            function a(e, t, n) {
+            function a(e) {
+                i.default.dispatch({
+                    type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES",
+                    guildId: e
+                })
+            }
+
+            function s(e) {
+                i.default.dispatch({
+                    type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES",
+                    guildId: e
+                })
+            }
+
+            function u(e, t, n) {
                 i.default.dispatch({
                     type: "GUILD_SUBSCRIPTIONS_CHANNEL",
                     guildId: e,
@@ -48,7 +68,7 @@
                 })
             }
 
-            function s(e) {
+            function c(e) {
                 let {
                     guildId: t,
                     channelId: n,
@@ -57,21 +77,21 @@
                     rowHeight: o
                 } = e;
 
-                function s(e) {
+                function a(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
                     return Math.max(0, Math.ceil(Math.ceil(e / o)) + t)
                 }
-                let u = [];
+                let s = [];
 
                 function c(e) {
                     let t = e + (l.MINIMUM_RANGE - 1);
-                    return u.push([e, t]), t + 1
+                    return s.push([e, t]), t + 1
                 }
-                let d = s(.5 * r),
-                    f = s(i, -d),
-                    E = s(i + r, d);
+                let d = a(.5 * r),
+                    f = a(i, -d),
+                    E = a(i + r, d);
                 for (f > 0 && (f = Math.max(c(0), f)), f = Math.floor(f / l.MINIMUM_RANGE) * l.MINIMUM_RANGE; f <= E;) f = c(f);
-                a(t, n, u)
+                u(t, n, s)
             }
         },
         112679: function(e, t, n) {
@@ -159,10 +179,10 @@
                     return h
                 },
                 disableAccount: function() {
-                    return I
+                    return S
                 },
                 saveAccountRequest: function() {
-                    return S
+                    return I
                 },
                 saveAccountChanges: function() {
                     return T
@@ -226,7 +246,7 @@
                 })
             }
 
-            function I(e, t) {
+            function S(e, t) {
                 let n = t ? _.default.Messages.DELETE_ACCOUNT : _.default.Messages.DISABLE_ACCOUNT,
                     l = t ? f.Endpoints.DELETE_ACCOUNT : f.Endpoints.DISABLE_ACCOUNT;
                 return (0, c.default)(t => i.default.post({
@@ -245,7 +265,7 @@
                     d.default.logoutInternal(), (0, a.transitionTo)(f.Routes.DEFAULT_LOGGED_OUT)
                 })
             }
-            async function S(e) {
+            async function I(e) {
                 let t = await i.default.patch({
                         url: f.Endpoints.ME,
                         oldFormErrors: !0,
@@ -279,7 +299,7 @@
                     avatar: d,
                     avatarDecoration: p,
                     newPassword: h,
-                    globalName: I
+                    globalName: S
                 } = e;
                 return o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SUBMIT"
@@ -291,7 +311,7 @@
                         password: a,
                         avatar: d,
                         discriminator: n,
-                        global_name: I,
+                        global_name: S,
                         new_password: h,
                         ...e
                     };
@@ -300,7 +320,7 @@
                         u = (0, E.getDevicePushProvider)();
                     null != u && null != s && (o.push_provider = u, o.push_token = s);
                     let c = l.default.get(f.DEVICE_VOIP_TOKEN);
-                    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != c && (o.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = c), S(o)
+                    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != c && (o.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = c), I(o)
                 }, {
                     checkEnabled: !1,
                     modalProps: {
@@ -1272,10 +1292,10 @@
                     return h
                 },
                 setPendingThemeColors: function() {
-                    return I
+                    return S
                 },
                 resetPendingMemberChanges: function() {
-                    return S
+                    return I
                 },
                 resetPendingProfileChanges: function() {
                     return T
@@ -1390,14 +1410,14 @@
                 })
             }
 
-            function I(e) {
+            function S(e) {
                 l.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS",
                     themeColors: e
                 })
             }
 
-            function S() {
+            function I() {
                 l.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES"
                 })
@@ -1441,9 +1461,9 @@
                 _ = n("49111");
             let p = _.FormStates.CLOSED,
                 h = {},
-                I = !1;
+                S = !1;
 
-            function S() {
+            function I() {
                 p = _.FormStates.CLOSED, h = {}, u = null, c = void 0, d = []
             }
 
@@ -1509,7 +1529,7 @@
                     return d
                 }
                 getIsDisableSubmit() {
-                    return I
+                    return S
                 }
             }
             m.displayName = "GuildIdentitySettingsStore";
@@ -1517,9 +1537,9 @@
                 GUILD_IDENTITY_SETTINGS_INIT: function(e) {
                     u = e.guild, p = _.FormStates.OPEN, h = {}, c = e.source, d = e.analyticsLocations
                 },
-                GUILD_IDENTITY_SETTINGS_CLOSE: S,
+                GUILD_IDENTITY_SETTINGS_CLOSE: I,
                 GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-                    T(), S()
+                    T(), I()
                 },
                 GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
                     u = e.guild, h = {}
@@ -1582,7 +1602,7 @@
                     let {
                         disable: t
                     } = e;
-                    I = t
+                    S = t
                 }
             })
         },
@@ -2013,28 +2033,28 @@
                         stepProps: i
                     }
                 }(e), {
-                    step: I,
-                    stepConfigs: S,
+                    step: S,
+                    stepConfigs: I,
                     setBodyNode: T,
                     setFooterNode: C,
                     setModalOverlayNode: g,
                     setReadySlideId: m
-                } = (0, f.usePaymentContext)(), v = S.find(e => e.key === I);
+                } = (0, f.usePaymentContext)(), v = I.find(e => e.key === S);
                 l.useEffect(() => {
                     g(null)
-                }, [I, g]), s(null != v, "Unknown step for current payment flow.");
+                }, [S, g]), s(null != v, "Unknown step for current payment flow.");
                 let A = null !== (u = null == v ? void 0 : null === (t = v.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
                     N = null == v ? void 0 : null === (n = v.options) || void 0 === n ? void 0 : n.bodyClassName,
                     L = void 0 !== p && p ? E.sliderBodyLarge : null == v ? void 0 : null === (r = v.options) || void 0 === r ? void 0 : r.sliderBodyClassName;
                 return (0, i.jsxs)(i.Fragment, {
-                    children: [null === (c = null == v ? void 0 : null === (a = v.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === c || c ? _ : null, v.renderStep(h), null == I || A ? null : (0, i.jsxs)(i.Fragment, {
+                    children: [null === (c = null == v ? void 0 : null === (a = v.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === c || c ? _ : null, v.renderStep(h), null == S || A ? null : (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)(d.ModalContent, {
                             className: o(E.body, N),
                             children: (0, i.jsx)(d.Slides, {
-                                activeSlide: I,
+                                activeSlide: S,
                                 centered: !1,
                                 onSlideReady: e => m(e),
-                                children: S.filter(e => null != e.key).map(e => (0, i.jsx)(d.Slide, {
+                                children: I.filter(e => null != e.key).map(e => (0, i.jsx)(d.Slide, {
                                     id: e.key,
                                     children: (0, i.jsx)("form", {
                                         className: o(E.sliderBody, L),
@@ -2096,8 +2116,8 @@
                     initialPlanId: t,
                     followupSKUInfo: p,
                     onClose: h,
-                    onComplete: I,
-                    onSubscriptionConfirmation: S,
+                    onComplete: S,
+                    onSubscriptionConfirmation: I,
                     analyticsLocations: T,
                     analyticsObject: C,
                     analyticsLocation: g,
@@ -2134,12 +2154,12 @@
                             initialPlanId: t,
                             followupSKUInfo: p,
                             onClose: (e, t) => {
-                                l(), null == h || h(e), e && (null == S || S(), !v && null != t && t === _.PremiumSubscriptionSKUs.TIER_2 && !F && d.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
+                                l(), null == h || h(e), e && (null == I || I(), !v && null != t && t === _.PremiumSubscriptionSKUs.TIER_2 && !F && d.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
                             },
                             onComplete: () => {
-                                x = !0, null == I || I(), !v && (0, s.setCanPlayWowMoment)(!0)
+                                x = !0, null == S || S(), !v && (0, s.setCanPlayWowMoment)(!0)
                             },
-                            onSubscriptionConfirmation: S,
+                            onSubscriptionConfirmation: I,
                             analyticsLocations: T,
                             analyticsObject: C,
                             analyticsLocation: g,
@@ -2167,7 +2187,7 @@
                             eligible_for_trial: null != L,
                             application_id: R,
                             location_stack: T
-                        }), (0, o.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == h || h(x), x && (null == S || S())
+                        }), (0, o.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == h || h(x), x && (null == I || I())
                     }
                 })
             }
@@ -2258,7 +2278,7 @@
                     return h
                 },
                 useMaybeFetchPremiumLikelihood: function() {
-                    return I
+                    return S
                 }
             });
             var i = n("884691"),
@@ -2311,10 +2331,10 @@
                 }, {
                     autoTrackExposure: !1
                 }), i = d.default.shouldFetchPremiumLikelihood(), l = s.default.getCurrentUser();
-                S(l, i, t, n)
+                I(l, i, t, n)
             }
 
-            function I(e) {
+            function S(e) {
                 let {
                     enabled: t,
                     useExpectedValue: n
@@ -2324,11 +2344,11 @@
                     autoTrackExposure: !1
                 }), r = (0, l.default)([d.default], () => d.default.shouldFetchPremiumLikelihood()), o = (0, l.default)([s.default], () => s.default.getCurrentUser());
                 i.useEffect(() => {
-                    S(o, r, t, n)
+                    I(o, r, t, n)
                 }, [o, r, t, n])
             }
 
-            function S(e, t, n, i) {
+            function I(e, t, n, i) {
                 null != e && !(0, c.isPremium)(e) && n && (t && p(), i && (!u.default.isLoadedForSKU(f.PremiumSubscriptionSKUs.TIER_0) && !u.default.isFetchingForSKU(f.PremiumSubscriptionSKUs.TIER_0) && (0, a.fetchSubscriptionPlansForSKU)(f.PremiumSubscriptionSKUs.TIER_0), !u.default.isLoadedForSKU(f.PremiumSubscriptionSKUs.TIER_2) && !u.default.isFetchingForSKU(f.PremiumSubscriptionSKUs.TIER_2) && (0, a.fetchSubscriptionPlansForSKU)(f.PremiumSubscriptionSKUs.TIER_2)))
             }
         },
@@ -2723,8 +2743,8 @@
                 _ = null,
                 p = !1,
                 h = null,
-                I = !1,
-                S = null;
+                S = !1,
+                I = null;
             class T extends r.default.Store {
                 isFetching() {
                     return d
@@ -2757,10 +2777,10 @@
                     return h
                 }
                 getIsSubmitting() {
-                    return I
+                    return S
                 }
                 getSubmitError() {
-                    return S
+                    return I
                 }
             }
             T.displayName = "SafetyHubStore";
@@ -2816,17 +2836,17 @@
                 },
                 SAFETY_HUB_REQUEST_REVIEW_START: function(e) {
                     let {} = e;
-                    I = !0, S = null
+                    S = !0, I = null
                 },
                 SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function(e) {
                     let {} = e;
-                    I = !1, S = null
+                    S = !1, I = null
                 },
                 SAFETY_HUB_REQUEST_REVIEW_FAILURE: function(e) {
                     let {
                         error: t
                     } = e;
-                    I = !1, S = t
+                    S = !1, I = t
                 },
                 LOGOUT: function() {
                     d = !1, s = {}, c = {
@@ -2970,8 +2990,8 @@
                 _ = n("57242"),
                 p = n("380676"),
                 h = n("170213"),
-                I = n("49111"),
-                S = n("782340"),
+                S = n("49111"),
+                I = n("782340"),
                 T = n("383496");
             let C = e => {
                     let {
@@ -2982,13 +3002,13 @@
                         className: T.classificationHeader,
                         children: (0, i.jsx)(s.Heading, {
                             variant: "heading-xl/normal",
-                            children: l && null != n ? S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD.format({
+                            children: l && null != n ? I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD.format({
                                 guildName: n,
                                 classification_type: t,
                                 classificationHook: (e, t) => (0, i.jsx)("strong", {
                                     children: e
                                 }, t)
-                            }) : S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V2.format({
+                            }) : I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V2.format({
                                 classification_type: t,
                                 classificationHook: (e, t) => (0, i.jsx)("strong", {
                                     children: e
@@ -3006,7 +3026,7 @@
                         children: [(0, i.jsx)(s.Text, {
                             variant: "eyebrow",
                             color: "text-muted",
-                            children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER
+                            children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER
                         }), (0, i.jsx)("ul", {
                             className: T.classificationActionsTakenList,
                             children: t.map(e => (0, i.jsx)(m, {
@@ -3051,7 +3071,7 @@
                             className: T.classificationPolicyDescriptionContainer,
                             children: (0, i.jsx)(s.Text, {
                                 variant: "text-md/normal",
-                                children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER.format({
+                                children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER.format({
                                     classificationDescription: t
                                 })
                             })
@@ -3068,12 +3088,12 @@
                 A = () => (0, i.jsx)(s.Text, {
                     variant: "text-md/normal",
                     color: "text-muted",
-                    children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
+                    children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
                 }),
                 N = e => (0, i.jsx)(s.Text, {
                     variant: "text-md/normal",
                     color: "text-muted",
-                    children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
+                    children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
                         letUsKnowHook: (t, n) => (0, i.jsx)(s.Anchor, {
                             href: e.isAppealEligible ? void 0 : e.appealLink,
                             onClick: e.letUsKnowClick,
@@ -3102,11 +3122,11 @@
                         children: [(0, i.jsx)(s.Text, {
                             variant: "eyebrow",
                             color: "text-muted",
-                            children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_HEADER
+                            children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_HEADER
                         }), (0, i.jsx)(s.Text, {
                             className: T.guidelinesExplanation,
                             variant: "text-sm/normal",
-                            children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_DESCRIPTION.format({
+                            children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_DESCRIPTION.format({
                                 tosLink: t,
                                 communityGuidelinesLink: n
                             })
@@ -3125,10 +3145,10 @@
                 } = e, {
                     classification: s,
                     classificationRequestState: c,
-                    isAppealEligible: S
+                    isAppealEligible: I
                 } = (0, E.useSafetyHubClassification)(r), m = (0, f.useSafetyHubAccountStanding)(), v = null != s && null != s.flagged_content && s.flagged_content.length > 0;
                 return (l.useEffect(() => {
-                    u.default.track(I.AnalyticEvents.SAFETY_HUB_ACTION, {
+                    u.default.track(S.AnalyticEvents.SAFETY_HUB_ACTION, {
                         action: h.SafetyHubAnalyticsActions.ViewViolationDetail,
                         account_standing: m.state,
                         classification_ids: [Number(r)],
@@ -3152,15 +3172,15 @@
                         appealComponent: (0, i.jsx)(L, {
                             hasBeenAppealed: null != s.appeal_status,
                             onLetUsKnowClick: () => {
-                                u.default.track(I.AnalyticEvents.SAFETY_HUB_ACTION, {
+                                u.default.track(S.AnalyticEvents.SAFETY_HUB_ACTION, {
                                     action: h.SafetyHubAnalyticsActions.ClickLetUsKnow,
                                     account_standing: m.state,
                                     classification_ids: [Number(r)],
                                     source: o,
                                     is_violative_content_shown: v
-                                }), S && _.default.open(r)
+                                }), I && _.default.open(r)
                             },
-                            isAppealEligible: S
+                            isAppealEligible: I
                         })
                     })]
                 })
@@ -3247,8 +3267,8 @@
                 _ = n("697218"),
                 p = n("170113"),
                 h = n("780571"),
-                I = n("377502"),
-                S = n("103603"),
+                S = n("377502"),
+                I = n("103603"),
                 T = n("736393"),
                 C = n("170213"),
                 g = n("49111"),
@@ -3287,7 +3307,7 @@
                             let r = C.DEFAULT_MEDIA_MAX_WIDTH,
                                 o = C.DEFAULT_MEDIA_MAX_HEIGHT;
                             if (null != t.width && null != t.height) {
-                                let e = (0, S.getRatio)({
+                                let e = (0, I.getRatio)({
                                     width: t.width,
                                     height: t.height,
                                     maxWidth: C.DEFAULT_MEDIA_MAX_WIDTH,
@@ -3328,7 +3348,7 @@
                         o = 1 === n.length;
                     return (0, i.jsx)("div", {
                         className: A.classificationEvidenceMessageAttachment,
-                        children: (0, i.jsx)(I.default, {
+                        children: (0, i.jsx)(S.default, {
                             attachments: n.map(e => ({
                                 attachment: e,
                                 spoiler: !0,
@@ -3454,7 +3474,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return I
                 }
             }), n("424973");
             var i = n("917351"),
@@ -3496,7 +3516,7 @@
                     recentUses: e.recentUses.map(Number).filter(e => e > 0)
                 })), f.pendingUsages)
             }
-            class I extends r.default.PersistedStore {
+            class S extends r.default.PersistedStore {
                 initialize(e) {
                     this.waitFor(u.default), null != e && (f = e), this.syncWith([u.default], p), this.syncWith([s.default], h)
                 }
@@ -3510,8 +3530,8 @@
                     return E
                 }
             }
-            I.displayName = "StickersPersistedStore", I.persistKey = "StickersPersistedStoreV2";
-            var S = new I(o.default, {
+            S.displayName = "StickersPersistedStore", S.persistKey = "StickersPersistedStoreV2";
+            var I = new S(o.default, {
                 STICKER_TRACK_USAGE: e => {
                     let {
                         stickerIds: t
@@ -3551,10 +3571,10 @@
                     return h
                 },
                 setPendingBio: function() {
-                    return I
+                    return S
                 },
                 setPendingPronouns: function() {
-                    return S
+                    return I
                 },
                 setPendingAccentColor: function() {
                     return T
@@ -3652,14 +3672,14 @@
                 })
             }
 
-            function I(e) {
+            function S(e) {
                 l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO",
                     bio: e
                 })
             }
 
-            function S(e) {
+            function I(e) {
                 l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
                     pronouns: e
@@ -3896,7 +3916,7 @@
                     return h
                 },
                 default: function() {
-                    return S
+                    return I
                 }
             });
             var i, l, r = n("37983"),
@@ -3944,7 +3964,7 @@
             h.defaultProps = {
                 shineSize: "default"
             };
-            let I = e => {
+            let S = e => {
                 let {
                     children: t,
                     className: n,
@@ -3955,11 +3975,11 @@
                     shinePaused: f,
                     buttonShineClassName: _,
                     onlyShineOnHover: p,
-                    ...I
-                } = e, S = o.createRef(), T = (0, d.default)(S), C = !i && !l && !0 !== a && (!p || T);
+                    ...S
+                } = e, I = o.createRef(), T = (0, d.default)(I), C = !i && !l && !0 !== a && (!p || T);
                 return (0, r.jsxs)(c.Button, {
-                    buttonRef: S,
-                    ...I,
+                    buttonRef: I,
+                    ...S,
                     className: s(E.shinyButton, n),
                     disabled: i,
                     submitting: l,
@@ -3970,8 +3990,8 @@
                     }) : null]
                 })
             };
-            I.ShineSizes = l;
-            var S = I
+            S.ShineSizes = l;
+            var I = S
         },
         191814: function(e, t, n) {
             "use strict";
@@ -4713,7 +4733,7 @@
                     return m
                 },
                 useFullScreenLayerStore: function() {
-                    return S
+                    return I
                 },
                 openFullScreenLayer: function() {
                     return v
@@ -4734,9 +4754,9 @@
                 _ = n("159885"),
                 p = n("983782"),
                 h = n("275495");
-            let I = (0, _.cssValueToNumber)(d.default.FULL_SCREEN_LAYER_ANIMATION_DURATION);
+            let S = (0, _.cssValueToNumber)(d.default.FULL_SCREEN_LAYER_ANIMATION_DURATION);
             (l = i || (i = {}))[l.ENTERING = 1] = "ENTERING", l[l.ENTERED = 2] = "ENTERED", l[l.EXITING = 3] = "EXITING", l[l.EXITED = 4] = "EXITED";
-            let S = (0, c.default)(e => ({
+            let I = (0, c.default)(e => ({
                 fullScreenLayers: [],
                 addLayer: t => e(e => {
                     let {
@@ -4797,13 +4817,13 @@
             function m() {
                 let {
                     reducedMotion: e
-                } = o.useContext(f.AccessibilityPreferencesContext), t = e.enabled, n = t ? g : C, i = S(e => e.fullScreenLayers);
+                } = o.useContext(f.AccessibilityPreferencesContext), t = e.enabled, n = t ? g : C, i = I(e => e.fullScreenLayers);
                 return (0, r.jsx)(u.TransitionGroup, {
                     children: i.map(e => (0, r.jsx)(u.CSSTransition, {
                         classNames: n,
-                        timeout: I,
+                        timeout: S,
                         onEntered: () => {
-                            S.setState({
+                            I.setState({
                                 fullScreenLayers: i.map(t => t.key === e.key ? {
                                     ...t,
                                     transitionState: 2
@@ -4825,7 +4845,7 @@
                         Layer: i
                     } = t,
                     l = null != n ? n : s();
-                return S.setState(t => ({
+                return I.setState(t => ({
                     fullScreenLayers: [...t.fullScreenLayers, {
                         key: l,
                         transitionState: 1,
@@ -4836,7 +4856,7 @@
             }
 
             function A(e) {
-                S.setState(t => ({
+                I.setState(t => ({
                     fullScreenLayers: t.fullScreenLayers.filter(t => t.key !== e)
                 }))
             }
@@ -4866,7 +4886,7 @@
                     return h
                 },
                 readFileAsBase64: function() {
-                    return S
+                    return I
                 },
                 dataUriFileSize: function() {
                     return T
@@ -4962,8 +4982,8 @@
                     c = s(u, t);
                 return "boolean" == typeof c ? _ : c.palette()
             }
-            let h = e => "number" == typeof e ? null : I(e),
-                I = o.memoize(e => new Promise((t, n) => {
+            let h = e => "number" == typeof e ? null : S(e),
+                S = o.memoize(e => new Promise((t, n) => {
                     let i = new Image;
                     i.crossOrigin = "Anonymous", i.onerror = e => {
                         n(e), i.onerror = i.onload = null, i = null
@@ -4972,7 +4992,7 @@
                     }, i.src = e
                 }));
 
-            function S(e) {
+            function I(e) {
                 return new Promise((t, n) => {
                     let i = new FileReader;
                     i.readAsDataURL(e), i.onload = () => {

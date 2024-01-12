@@ -185,11 +185,17 @@
                 unsubscribeMembers: function() {
                     return a
                 },
-                subscribeChannel: function() {
+                subscribeToMemberUpdates: function() {
                     return o
                 },
-                subscribeChannelDimensions: function() {
+                unsubscribeFromMemberUpdates: function() {
                     return u
+                },
+                subscribeChannel: function() {
+                    return s
+                },
+                subscribeChannelDimensions: function() {
+                    return c
                 }
             }), n("424973");
             var r = n("913144"),
@@ -211,7 +217,21 @@
                 })
             }
 
-            function o(e, t, n) {
+            function o(e) {
+                r.default.dispatch({
+                    type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES",
+                    guildId: e
+                })
+            }
+
+            function u(e) {
+                r.default.dispatch({
+                    type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES",
+                    guildId: e
+                })
+            }
+
+            function s(e, t, n) {
                 r.default.dispatch({
                     type: "GUILD_SUBSCRIPTIONS_CHANNEL",
                     guildId: e,
@@ -220,7 +240,7 @@
                 })
             }
 
-            function u(e) {
+            function c(e) {
                 let {
                     guildId: t,
                     channelId: n,
@@ -229,21 +249,21 @@
                     rowHeight: a
                 } = e;
 
-                function u(e) {
+                function o(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
                     return Math.max(0, Math.ceil(Math.ceil(e / a)) + t)
                 }
-                let s = [];
+                let u = [];
 
                 function c(e) {
                     let t = e + (i.MINIMUM_RANGE - 1);
-                    return s.push([e, t]), t + 1
+                    return u.push([e, t]), t + 1
                 }
-                let d = u(.5 * l),
-                    f = u(r, -d),
-                    E = u(r + l, d);
+                let d = o(.5 * l),
+                    f = o(r, -d),
+                    E = o(r + l, d);
                 for (f > 0 && (f = Math.max(c(0), f)), f = Math.floor(f / i.MINIMUM_RANGE) * i.MINIMUM_RANGE; f <= E;) f = c(f);
-                o(t, n, s)
+                s(t, n, u)
             }
         },
         112679: function(e, t, n) {
