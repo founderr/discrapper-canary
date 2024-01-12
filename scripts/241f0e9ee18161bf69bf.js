@@ -259,24 +259,24 @@
                 O = n("18494"),
                 L = n("162771"),
                 D = n("144747"),
-                p = n("471671"),
-                R = n("659500"),
+                R = n("471671"),
+                p = n("659500"),
                 h = n("49111");
             let g = {
                 binds: ["esc", "shift+pagedown"],
                 comboKeysBindGlobal: !0,
                 action(e) {
-                    if (p.default.isElementFullScreen()) return !1;
-                    if (R.ComponentDispatch.hasSubscribers(h.ComponentActions.CALL_DECLINE)) return R.ComponentDispatch.dispatch(h.ComponentActions.CALL_DECLINE), !1;
+                    if (R.default.isElementFullScreen()) return !1;
+                    if (p.ComponentDispatch.hasSubscribers(h.ComponentActions.CALL_DECLINE)) return p.ComponentDispatch.dispatch(h.ComponentActions.CALL_DECLINE), !1;
                     if (D.default.close()) return !1;
-                    if (R.ComponentDispatch.hasSubscribers(h.ComponentActions.MEDIA_MODAL_CLOSE)) return R.ComponentDispatch.dispatch(h.ComponentActions.MEDIA_MODAL_CLOSE), !1;
+                    if (p.ComponentDispatch.hasSubscribers(h.ComponentActions.MEDIA_MODAL_CLOSE)) return p.ComponentDispatch.dispatch(h.ComponentActions.MEDIA_MODAL_CLOSE), !1;
                     if ((0, i.isElement)(e.target)) {
                         let t = (0, d.getWindowDispatchForElement)(e.target);
                         if (null == t ? void 0 : t.hasSubscribers(h.ComponentActions.POPOUT_CLOSE)) return t.dispatch(h.ComponentActions.POPOUT_CLOSE), !1
                     }
-                    if (R.ComponentDispatch.hasSubscribers(h.ComponentActions.CLOSE_GIF_PICKER)) return R.ComponentDispatch.dispatch(h.ComponentActions.CLOSE_GIF_PICKER), !1;
-                    if (R.ComponentDispatch.hasSubscribers(h.ComponentActions.MODAL_CLOSE)) return R.ComponentDispatch.dispatch(h.ComponentActions.MODAL_CLOSE), !1;
-                    if (R.ComponentDispatch.hasSubscribers(h.ComponentActions.SEARCH_RESULTS_CLOSE)) return R.ComponentDispatch.dispatch(h.ComponentActions.SEARCH_RESULTS_CLOSE), !1;
+                    if (p.ComponentDispatch.hasSubscribers(h.ComponentActions.CLOSE_GIF_PICKER)) return p.ComponentDispatch.dispatch(h.ComponentActions.CLOSE_GIF_PICKER), !1;
+                    if (p.ComponentDispatch.hasSubscribers(h.ComponentActions.MODAL_CLOSE)) return p.ComponentDispatch.dispatch(h.ComponentActions.MODAL_CLOSE), !1;
+                    if (p.ComponentDispatch.hasSubscribers(h.ComponentActions.SEARCH_RESULTS_CLOSE)) return p.ComponentDispatch.dispatch(h.ComponentActions.SEARCH_RESULTS_CLOSE), !1;
                     let t = L.default.getGuildId(),
                         n = O.default.getChannelId(t),
                         l = T.default.getChannel(n),
@@ -287,7 +287,7 @@
                     if (null != n && (null == s ? void 0 : s.type) === _.SidebarType.CREATE_THREAD) return r.default.closeChannelSidebar(n), !1;
                     let A = b(n),
                         c = b(E);
-                    return null == n || A || c || null == s ? null != n && !A && u.default.getChatOpen(n) ? (o.default.updateChatOpen(n, !1), !1) : (R.ComponentDispatch.dispatch(h.ComponentActions.SCROLLTO_PRESENT), !1) : (r.default.closeChannelSidebar(n), !1)
+                    return null == n || A || c || null == s ? null != n && !A && u.default.getChatOpen(n) ? (o.default.updateChatOpen(n, !1), !1) : (p.ComponentDispatch.dispatch(h.ComponentActions.SCROLLTO_PRESENT), !1) : (r.default.closeChannelSidebar(n), !1)
                 }
             };
 
@@ -914,8 +914,8 @@
                 O = n("709079"),
                 L = n("356410"),
                 D = n("271524"),
-                p = n("333949"),
-                R = n("945924"),
+                R = n("333949"),
+                p = n("945924"),
                 h = n("648900"),
                 g = n("838021"),
                 G = n("745991"),
@@ -978,8 +978,8 @@
                 [H.KeybindActions.MENTION_CHANNEL_PREV]: m.MENTION_PREV,
                 [H.KeybindActions.TOGGLE_PREVIOUS_GUILD]: a.TOGGLE_PREVIOUS_GUILD,
                 [H.KeybindActions.JUMP_TO_GUILD]: _.JUMP_TO_GUILD,
-                [H.KeybindActions.SUBMIT]: p.SUBMIT,
-                [H.KeybindActions.TEXTAREA_FOCUS]: R.TEXTAREA_FOCUS,
+                [H.KeybindActions.SUBMIT]: R.SUBMIT,
+                [H.KeybindActions.TEXTAREA_FOCUS]: p.TEXTAREA_FOCUS,
                 [H.KeybindActions.MARK_CHANNEL_READ]: A.MARK_CHANNEL_READ,
                 [H.KeybindActions.MARK_SERVER_READ]: c.MARK_SERVER_READ,
                 [H.KeybindActions.TOGGLE_CHANNEL_PINS]: G.TOGGLE_CHANNEL_PINS,
@@ -1339,10 +1339,10 @@
                         return t > 0 ? n.slice(i).concat(n.slice(0, i), e) : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)))
                     }(N, e),
                     D = e > 0 ? 0 : L.length - 1,
-                    p = S(N, f),
-                    R = p.indexOf(O) + e;
+                    R = S(N, f),
+                    p = R.indexOf(O) + e;
                 for (; null != N && "" !== N;) {
-                    if (d = p[R], T(N))
+                    if (d = R[p], T(N))
                         for (; null != d && "" !== d;) {
                             if ("string" == typeof d) {
                                 if (_(N, d)) return (0, c.transitionToChannel)(N, d, !1, f)
@@ -1355,10 +1355,10 @@
                                     guildId: N
                                 })
                             });
-                            R += e, d = p[R]
+                            p += e, d = R[p]
                         }
                     if (D += e, null == (N = L[D]) || "" === N) break;
-                    p = S(N, f), R = e < 0 ? p.length - 1 : 0
+                    R = S(N, f), p = e < 0 ? R.length - 1 : 0
                 }
                 A.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
                     duration: 200,
@@ -1496,11 +1496,11 @@
                 O = n("18494"),
                 L = n("282109"),
                 D = n("449008"),
-                p = n("319839"),
-                R = n("397336");
+                R = n("319839"),
+                p = n("397336");
             let h = null,
                 g = null,
-                G = new p.default;
+                G = new R.default;
 
             function b() {
                 let e = O.default.getChannelId(),
@@ -1793,7 +1793,7 @@
                     let {
                         settings: n
                     } = e;
-                    if (n.type !== R.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
+                    if (n.type !== p.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
                     let i = null === (t = n.proto.guilds) || void 0 === t ? void 0 : t.guilds,
                         o = !1;
                     return null != i && Object.keys(i).forEach(e => {
@@ -1818,7 +1818,8 @@
                         of t) null != o && !i.has(o) && (G.nonPositionalChannelIdUpdate(o) && (n = !0), i.add(o)), null != e && !i.has(e) && (G.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
                     return n
                 },
-                WINDOW_FOCUS: y
+                WINDOW_FOCUS: y,
+                TRY_ACK: m
             })
         },
         829072: function(e, t, n) {
@@ -1852,8 +1853,8 @@
                 O = n("282109"),
                 L = n("449008"),
                 D = n("319839"),
-                p = n("695838"),
-                R = n("843455");
+                R = n("695838"),
+                p = n("843455");
             let h = [d.default, u.default, E.default, r.default, _.default, c.default, C.default, S.default, I.default, f.default, N.default, O.default];
 
             function g() {
@@ -1866,7 +1867,7 @@
 
             function G() {
                 let e = u.default.getFavoriteChannels(),
-                    t = O.default.isGuildCollapsed(p.FAVORITES_RAW_GUILD_ID),
+                    t = O.default.isGuildCollapsed(R.FAVORITES_RAW_GUILD_ID),
                     n = N.default.getChannelId(),
                     i = C.default.getChannel(n),
                     o = N.default.getVoiceChannelId(),
@@ -1890,7 +1891,7 @@
                     } = a;
                     return l(n).map(n => {
                         var s;
-                        if (!n.isPrivate() && !I.default.can(R.Permissions.VIEW_CHANNEL, n)) return null;
+                        if (!n.isPrivate() && !I.default.can(p.Permissions.VIEW_CHANNEL, n)) return null;
                         let E = null != i && (i.id === n.id || o === n.id),
                             _ = null != i && i.isThread() && i.parent_id === n.id,
                             c = null !== (s = E || _ || !d ? r.default.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : r.default.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) && void 0 !== s ? s : {},
@@ -1936,7 +1937,7 @@
                         let {
                             id: n,
                             order: i
-                        } = e, o = u.default.getCategoryRecord(n), l = null !== (t = E[n]) && void 0 !== t ? t : [], a = O.default.isChannelMuted(p.FAVORITES_RAW_GUILD_ID, n), d = c.default.isCollapsed(n), s = null;
+                        } = e, o = u.default.getCategoryRecord(n), l = null !== (t = E[n]) && void 0 !== t ? t : [], a = O.default.isChannelMuted(R.FAVORITES_RAW_GUILD_ID, n), d = c.default.isCollapsed(n), s = null;
                         return {
                             isMuted: a,
                             isCollapsed: d,
@@ -1958,7 +1959,7 @@
                         getRow: () => null
                     },
                     b = {
-                        id: p.FAVORITES_RAW_GUILD_ID,
+                        id: R.FAVORITES_RAW_GUILD_ID,
                         hideMutedChannels: t,
                         favoritesSectionNumber: 1,
                         recentsSectionNumber: 2,
