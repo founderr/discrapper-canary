@@ -739,7 +739,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return P
+                    return U
                 },
                 useMessageMenu: function() {
                     return L
@@ -778,10 +778,10 @@
                 j = n("514705"),
                 D = n("321456"),
                 G = n("470254"),
-                F = n("678803"),
-                U = n("782340");
+                P = n("678803"),
+                F = n("782340");
 
-            function P(e) {
+            function U(e) {
                 var t, n;
                 let a, l, u, r, {
                         channel: d,
@@ -818,7 +818,7 @@
                     onSelect: M,
                     onClose: s.closeContextMenu,
                     navId: "message",
-                    ariaLabel: U.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
+                    ariaLabel: F.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
                     shouldHideMediaOptions: E
                 })
             }
@@ -829,7 +829,7 @@
                     channel: n,
                     attachment: i,
                     textSelection: s,
-                    favoriteableType: P,
+                    favoriteableType: U,
                     favoriteableId: L,
                     favoriteableName: k,
                     itemHref: w,
@@ -844,16 +844,16 @@
                     ariaLabel: W,
                     shouldHideMediaOptions: J = !1
                 } = e, q = (0, d.default)(s), $ = (0, f.default)(s), Q = (0, C.default)(t, n), ee = (0, g.default)(t, n), et = (0, v.default)(t, n), en = (0, T.default)(t, n), ea = (0, _.default)({
-                    type: P,
+                    type: U,
                     id: L,
                     name: k
                 }), ei = (0, j.default)(t, n), el = (0, h.default)(t, n), es = (0, R.default)(t), eu = (0, I.default)(t, n), er = (0, p.default)(t, n), ed = (0, x.default)(t, n), eo = (0, y.default)(t, n), ec = (0, A.default)(t, n), ef = (0, b.default)(t), eE = (0, D.default)(t, n), eM = (0, c.default)(null != w ? w : V, H, t, {
                     shouldHideMediaOptions: J
                 }), em = (0, o.default)(K, t, {
                     shouldHideMediaOptions: J
-                }), eg = (0, F.default)(t, i), eI = (0, r.default)({
+                }), eg = (0, P.default)(t, i), eI = (0, r.default)({
                     id: t.id,
-                    label: U.default.Messages.COPY_ID_MESSAGE,
+                    label: F.default.Messages.COPY_ID_MESSAGE,
                     shiftId: "".concat(t.channel_id, "-").concat(t.id)
                 }), ep = (0, N.default)(t, n), eS = (0, G.default)(t, n), eA = (0, m.default)(t, n, {
                     hoist: !0
@@ -1498,20 +1498,21 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return r
                 }
             });
             var a = n("37983");
             n("884691");
             var i = n("77078"),
-                l = n("259687"),
-                s = n("782340");
+                l = n("562228"),
+                s = n("259687"),
+                u = n("782340");
 
-            function u(e) {
-                return null == e.reactions || 0 === e.reactions.length ? null : (0, a.jsx)(i.MenuItem, {
+            function r(e) {
+                return null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, l.hasNonVoteReactions)(e) ? null : (0, a.jsx)(i.MenuItem, {
                     id: "reactions",
-                    label: s.default.Messages.VIEW_REACTIONS,
-                    icon: l.default,
+                    label: u.default.Messages.VIEW_REACTIONS,
+                    icon: s.default,
                     action: () => (0, i.openModalLazy)(async () => {
                         let {
                             default: t
@@ -1582,7 +1583,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return E
                 }
             });
             var a = n("37983");
@@ -1590,38 +1591,39 @@
             var i = n("446674"),
                 l = n("77078"),
                 s = n("404118"),
-                u = n("166257"),
-                r = n("300322"),
-                d = n("957255"),
-                o = n("49111"),
-                c = n("782340");
+                u = n("562228"),
+                r = n("166257"),
+                d = n("300322"),
+                o = n("957255"),
+                c = n("49111"),
+                f = n("782340");
 
-            function f(e, t) {
-                let n = (0, r.useIsActiveChannelOrUnarchivableThread)(t),
-                    f = (0, i.useStateFromStores)([d.default], () => d.default.can(o.Permissions.MANAGE_MESSAGES, t) && n, [t, n]);
-                return f && null != e.reactions && 0 !== e.reactions.length ? (0, a.jsx)(l.MenuItem, {
+            function E(e, t) {
+                let n = (0, d.useIsActiveChannelOrUnarchivableThread)(t),
+                    E = (0, i.useStateFromStores)([o.default], () => o.default.can(c.Permissions.MANAGE_MESSAGES, t) && n, [t, n]);
+                return !E || null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, u.hasNonVoteReactions)(e) ? null : (0, a.jsx)(l.MenuItem, {
                     id: "remove-reactions",
-                    label: c.default.Messages.REMOVE_ALL_REACTIONS,
+                    label: f.default.Messages.REMOVE_ALL_REACTIONS,
                     action: function(n) {
-                        n.shiftKey ? (0, u.removeAllReactions)(t.id, e.id) : s.default.show({
-                            title: c.default.Messages.REMOVE_ALL_REACTIONS_CONFIRM_TITLE,
-                            body: c.default.Messages.REMOVE_ALL_REACTIONS_CONFIRM_BODY,
-                            confirmText: c.default.Messages.YES_TEXT,
-                            cancelText: c.default.Messages.NO_TEXT,
+                        n.shiftKey ? (0, r.removeAllReactions)(t.id, e.id) : s.default.show({
+                            title: f.default.Messages.REMOVE_ALL_REACTIONS_CONFIRM_TITLE,
+                            body: f.default.Messages.REMOVE_ALL_REACTIONS_CONFIRM_BODY,
+                            confirmText: f.default.Messages.YES_TEXT,
+                            cancelText: f.default.Messages.NO_TEXT,
                             onConfirm: () => {
-                                (0, u.removeAllReactions)(t.id, e.id)
+                                (0, r.removeAllReactions)(t.id, e.id)
                             }
                         })
                     },
                     color: "danger"
-                }) : null
+                })
             }
         },
         604179: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return g
                 }
             }), n("808653"), n("222007");
             var a = n("37983"),
@@ -1629,56 +1631,57 @@
                 l = n("446674"),
                 s = n("77078"),
                 u = n("404118"),
-                r = n("166257"),
-                d = n("300322"),
-                o = n("957255"),
-                c = n("315102"),
-                f = n("402671"),
-                E = n("49111"),
-                M = n("782340");
+                r = n("562228"),
+                d = n("166257"),
+                o = n("300322"),
+                c = n("957255"),
+                f = n("315102"),
+                E = n("402671"),
+                M = n("49111"),
+                m = n("782340");
 
-            function m(e, t) {
+            function g(e, t) {
                 let {
                     reducedMotion: n
-                } = i.useContext(s.AccessibilityPreferencesContext), m = (0, d.useIsActiveChannelOrUnarchivableThread)(t), g = (0, l.useStateFromStores)([o.default], () => o.default.can(E.Permissions.MANAGE_MESSAGES, t) && m, [t, m]), I = e.reactions.reduce((e, t) => {
+                } = i.useContext(s.AccessibilityPreferencesContext), g = (0, o.useIsActiveChannelOrUnarchivableThread)(t), I = (0, l.useStateFromStores)([c.default], () => c.default.can(M.Permissions.MANAGE_MESSAGES, t) && g, [t, g]), p = e.reactions.reduce((e, t) => {
                     var n;
                     return (null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) != null || null != e.find(e => null != e.id && e.id === t.emoji.id || e.name === t.emoji.name) ? e : [...e, t.emoji]
-                }, []), p = (n, a) => {
-                    n.shiftKey ? (0, r.removeEmojiReactions)(t.id, e.id, a) : u.default.show({
-                        title: M.default.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_TITLE,
-                        body: M.default.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_BODY,
-                        confirmText: M.default.Messages.YES_TEXT,
-                        cancelText: M.default.Messages.NO_TEXT,
+                }, []), S = (n, a) => {
+                    n.shiftKey ? (0, d.removeEmojiReactions)(t.id, e.id, a) : u.default.show({
+                        title: m.default.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_TITLE,
+                        body: m.default.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_BODY,
+                        confirmText: m.default.Messages.YES_TEXT,
+                        cancelText: m.default.Messages.NO_TEXT,
                         onConfirm: () => {
-                            (0, r.removeEmojiReactions)(t.id, e.id, a)
+                            (0, d.removeEmojiReactions)(t.id, e.id, a)
                         }
                     })
                 };
-                return g && null != e.reactions && 0 !== e.reactions.length ? (0, a.jsx)(s.MenuItem, {
+                return !I || null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, r.hasNonVoteReactions)(e) ? null : (0, a.jsx)(s.MenuItem, {
                     id: "remove-emoji-reactions",
-                    label: M.default.Messages.REMOVE_EMOJI_REACTIONS,
+                    label: m.default.Messages.REMOVE_EMOJI_REACTIONS,
                     color: "danger",
-                    children: I.map(e => {
+                    children: p.map(e => {
                         var t, i;
                         return (0, a.jsx)(s.MenuItem, {
                             id: "remove-emoji-reactions-".concat(null !== (t = e.name) && void 0 !== t ? t : e.id),
                             label: null == e.id ? e.name : ":".concat(e.name, ":"),
-                            action: t => p(t, e),
+                            action: t => S(t, e),
                             imageUrl: t => {
                                 var a;
                                 let {
                                     isFocused: i
                                 } = t;
-                                return null != e.id ? c.default.getEmojiURL({
+                                return null != e.id ? f.default.getEmojiURL({
                                     id: e.id,
                                     animated: e.animated && (!n.enabled || i),
                                     size: 18
-                                }) : f.default.getURL(null !== (a = e.name) && void 0 !== a ? a : "")
+                                }) : E.default.getURL(null !== (a = e.name) && void 0 !== a ? a : "")
                             },
                             dontCloseOnActionIfHoldingShiftKey: !0
                         }, null !== (i = e.name) && void 0 !== i ? i : e.id)
                     })
-                }) : null
+                })
             }
         },
         167670: function(e, t, n) {
