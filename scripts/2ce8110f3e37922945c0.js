@@ -204,7 +204,7 @@
             "use strict";
             a.r(s), a.d(s, {
                 default: function() {
-                    return _
+                    return C
                 }
             }), a("222007");
             var t = a("37983"),
@@ -214,52 +214,56 @@
                 d = a("917351"),
                 c = a.n(d),
                 r = a("77078"),
-                h = a("446674"),
-                o = a("305961"),
-                x = a("677099"),
-                m = a("476263"),
-                u = a("660279"),
-                N = a("109264"),
-                I = a("578706"),
-                T = a("564875"),
-                v = a("380353"),
-                j = a("782340"),
-                f = a("327461");
+                o = a("446674"),
+                h = a("716241"),
+                x = a("305961"),
+                u = a("677099"),
+                m = a("282109"),
+                N = a("476263"),
+                I = a("660279"),
+                T = a("109264"),
+                v = a("578706"),
+                f = a("564875"),
+                j = a("599110"),
+                _ = a("380353"),
+                g = a("49111"),
+                O = a("782340"),
+                M = a("327461");
 
-            function _(e) {
+            function C(e) {
                 let {
                     guildPlans: s,
                     overrideGuild: a
-                } = e, i = (0, h.useStateFromStores)([x.default], () => x.default.getFlattenedGuildIds()), [n, d] = l.useMemo(() => c(s).values().sortBy(e => {
+                } = e, i = (0, o.useStateFromStores)([u.default], () => u.default.getFlattenedGuildIds()), [n, d] = l.useMemo(() => c(s).values().sortBy(e => {
                     let s = i.indexOf(e.guildId);
                     return -1 === s ? i.length : s
-                }).partition(e => e.mode === v.Mode.UseGreyDot).value(), [s, i]), o = l.useCallback(e => {
+                }).partition(e => e.mode === _.Mode.UseGreyDot).value(), [s, i]), h = l.useCallback(e => {
                     var t;
-                    return a(e, (null !== (t = s[e].overrideMode) && void 0 !== t ? t : s[e].mode) === v.Mode.UseGreyDot ? v.Mode.KeepAsIs : v.Mode.UseGreyDot)
+                    return a(e, (null !== (t = s[e].overrideMode) && void 0 !== t ? t : s[e].mode) === _.Mode.UseGreyDot ? _.Mode.KeepAsIs : _.Mode.UseGreyDot)
                 }, [a, s]);
                 return (0, t.jsx)("div", {
-                    className: f.container,
+                    className: M.container,
                     children: (0, t.jsxs)(r.Scroller, {
-                        className: f.scroller,
-                        children: [(0, t.jsx)(g, {
-                            header: j.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SECTION1_TITLE,
-                            subheader: j.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SECTION1_SUBTITLE,
+                        className: M.scroller,
+                        children: [(0, t.jsx)(R, {
+                            header: O.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SECTION1_TITLE,
+                            subheader: O.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SECTION1_SUBTITLE,
                             guildPlans: n,
-                            onClick: o
+                            onClick: h
                         }), d.length > 0 ? (0, t.jsxs)(t.Fragment, {
                             children: [(0, t.jsx)("div", {
-                                className: f.divider
-                            }), (0, t.jsx)(g, {
-                                header: j.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SECTION2_TITLE,
+                                className: M.divider
+                            }), (0, t.jsx)(R, {
+                                header: O.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SECTION2_TITLE,
                                 guildPlans: d,
-                                onClick: o
+                                onClick: h
                             })]
                         }) : null]
                     })
                 })
             }
 
-            function g(e) {
+            function R(e) {
                 let {
                     header: s,
                     subheader: a,
@@ -267,9 +271,9 @@
                     onClick: i
                 } = e;
                 return (0, t.jsxs)("div", {
-                    className: f.guildsContainer,
+                    className: M.guildsContainer,
                     children: [(0, t.jsxs)("div", {
-                        className: f.header,
+                        className: M.header,
                         children: [(0, t.jsx)(r.Text, {
                             variant: "text-sm/medium",
                             color: "header-primary",
@@ -280,8 +284,8 @@
                             children: a
                         })]
                     }), (0, t.jsx)("div", {
-                        className: f.guilds,
-                        children: l.map(e => (0, t.jsx)(O, {
+                        className: M.guilds,
+                        children: l.map(e => (0, t.jsx)(A, {
                             plan: e,
                             onClick: i
                         }, e.guildId))
@@ -289,72 +293,81 @@
                 })
             }
 
-            function O(e) {
+            function A(e) {
+                var s;
                 let {
-                    plan: s,
-                    onClick: a
-                } = e, l = (0, h.useStateFromStores)([o.default], () => o.default.getGuild(s.guildId));
-                return null == l ? null : (0, t.jsx)(r.Tooltip, {
+                    plan: a,
+                    onClick: l
+                } = e, i = (0, o.useStateFromStores)([x.default], () => x.default.getGuild(a.guildId));
+                if (null == i) return null;
+                let d = (null !== (s = a.overrideMode) && void 0 !== s ? s : a.mode) === _.Mode.UseGreyDot;
+
+                function c() {
+                    j.default.track(g.AnalyticEvents.NOTIFICATION_MIGRATION_GUILD_CHANGED, {
+                        ...(0, h.collectGuildAnalyticsMetadata)(a.guildId),
+                        is_selected: !d,
+                        is_muted: m.default.isMuted(a.guildId),
+                        notification_setting: m.default.getMessageNotifications(a.guildId)
+                    }), l(a.guildId)
+                }
+                return (0, t.jsx)(r.Tooltip, {
                     text: (0, t.jsxs)("div", {
                         children: [(0, t.jsx)(r.Text, {
                             variant: "text-md/semibold",
                             color: "header-primary",
-                            children: l.name
+                            children: i.name
                         }), (0, t.jsxs)("div", {
-                            className: f.tooltipRow,
-                            children: [(0, t.jsx)(N.default, {
-                                width: 12,
-                                height: 12
-                            }), (0, t.jsx)(r.Text, {
-                                variant: "text-xs/medium",
-                                color: "text-muted",
-                                children: s.messagePain ? j.default.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_BUSY : j.default.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_QUIET
-                            })]
-                        }), (0, t.jsxs)("div", {
-                            className: f.tooltipRow,
+                            className: M.tooltipRow,
                             children: [(0, t.jsx)(T.default, {
                                 width: 12,
                                 height: 12
                             }), (0, t.jsx)(r.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: s.visitsALot ? j.default.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_ALOT : j.default.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_ALITTLE
+                                children: a.messagePain ? O.default.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_BUSY : O.default.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_QUIET
                             })]
                         }), (0, t.jsxs)("div", {
-                            className: f.tooltipRow,
-                            children: [(0, t.jsx)(u.default, {
+                            className: M.tooltipRow,
+                            children: [(0, t.jsx)(f.default, {
                                 width: 12,
                                 height: 12
                             }), (0, t.jsx)(r.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                children: s.muted ? j.default.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_MUTED : j.default.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_NOT_MUTED
+                                children: a.visitsALot ? O.default.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_ALOT : O.default.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_ALITTLE
+                            })]
+                        }), (0, t.jsxs)("div", {
+                            className: M.tooltipRow,
+                            children: [(0, t.jsx)(I.default, {
+                                width: 12,
+                                height: 12
+                            }), (0, t.jsx)(r.Text, {
+                                variant: "text-xs/medium",
+                                color: "text-muted",
+                                children: a.muted ? O.default.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_MUTED : O.default.Messages.NOTIF_MIGRATION_GUILD_TOOLTIP_NOT_MUTED
                             })]
                         })]
                     }),
-                    "aria-label": s.debugReason,
-                    tooltipClassName: f.tooltip,
-                    children: e => {
-                        var i;
-                        return (0, t.jsxs)(r.Clickable, {
-                            ...e,
-                            className: n(f.guild, (null !== (i = s.overrideMode) && void 0 !== i ? i : s.mode) === v.Mode.UseGreyDot ? f.selected : void 0),
-                            onClick: () => a(s.guildId),
-                            children: [(0, t.jsx)(I.default, {
-                                className: f.checkmark,
-                                width: 16,
-                                height: 16,
-                                backgroundColor: "white"
-                            }), (0, t.jsx)(m.default, {
-                                "aria-hidden": !0,
-                                className: f.guildIcon,
-                                guild: l,
-                                size: m.default.Sizes.MEDIUM,
-                                active: !0,
-                                tabIndex: -1
-                            })]
-                        })
-                    }
+                    "aria-label": a.debugReason,
+                    tooltipClassName: M.tooltip,
+                    children: e => (0, t.jsxs)(r.Clickable, {
+                        ...e,
+                        className: n(M.guild, d ? M.selected : void 0),
+                        onClick: c,
+                        children: [(0, t.jsx)(v.default, {
+                            className: M.checkmark,
+                            width: 16,
+                            height: 16,
+                            backgroundColor: "white"
+                        }), (0, t.jsx)(N.default, {
+                            "aria-hidden": !0,
+                            className: M.guildIcon,
+                            guild: i,
+                            size: N.default.Sizes.MEDIUM,
+                            active: !0,
+                            tabIndex: -1
+                        })]
+                    })
                 })
             }
         },
@@ -362,7 +375,7 @@
             "use strict";
             a.r(s), a.d(s, {
                 default: function() {
-                    return m
+                    return u
                 }
             });
             var t = a("37983");
@@ -373,11 +386,11 @@
                 d = a("538137"),
                 c = a("660279"),
                 r = a("593195"),
-                h = a("782340"),
-                o = a("647181"),
+                o = a("782340"),
+                h = a("647181"),
                 x = a("650287");
 
-            function m() {
+            function u() {
                 return (0, t.jsxs)("div", {
                     className: x.content,
                     children: [(0, t.jsxs)("div", {
@@ -388,30 +401,30 @@
                         }), (0, t.jsx)(n.Heading, {
                             variant: "heading-xl/semibold",
                             color: "header-primary",
-                            children: h.default.Messages.NOTIF_MIGRATION_INTRO_TITLE
+                            children: o.default.Messages.NOTIF_MIGRATION_INTRO_TITLE
                         }), (0, t.jsx)(n.Text, {
                             className: x.subtitle,
                             variant: "text-md/normal",
                             color: "header-secondary",
-                            children: h.default.Messages.NOTIF_MIGRATION_INTRO_SUB_TITLE
+                            children: o.default.Messages.NOTIF_MIGRATION_INTRO_SUB_TITLE
                         })]
                     }), (0, t.jsxs)("div", {
-                        className: o.columns,
+                        className: h.columns,
                         children: [(0, t.jsxs)("div", {
-                            className: o.column,
+                            className: h.column,
                             children: [(0, t.jsxs)("div", {
-                                className: o.previewContainer,
+                                className: h.previewContainer,
                                 children: [(0, t.jsx)(n.Text, {
-                                    className: o.before,
+                                    className: h.before,
                                     variant: "text-sm/medium",
                                     color: "text-muted",
-                                    children: h.default.Messages.NOTIF_MIGRATION_INTRO_BEFORE
+                                    children: o.default.Messages.NOTIF_MIGRATION_INTRO_BEFORE
                                 }), (0, t.jsxs)("div", {
-                                    className: o.previewInner,
+                                    className: h.previewInner,
                                     children: [(0, t.jsxs)("div", {
-                                        className: o.guilds,
+                                        className: h.guilds,
                                         children: [(0, t.jsx)("div", {
-                                            className: o.unreadGuild,
+                                            className: h.unreadGuild,
                                             children: (0, t.jsx)("img", {
                                                 src: a("228034"),
                                                 width: 36,
@@ -430,103 +443,103 @@
                                             alt: "Example Guild Icon"
                                         })]
                                     }), (0, t.jsxs)("div", {
-                                        className: o.channels,
+                                        className: h.channels,
                                         children: [(0, t.jsxs)("div", {
-                                            className: i(o.channel, o.mention),
+                                            className: i(h.channel, h.mention),
                                             children: [(0, t.jsx)(r.default, {
-                                                className: o.channelIcon,
+                                                className: h.channelIcon,
                                                 width: 16,
                                                 height: 16
                                             }), (0, t.jsx)(n.Text, {
                                                 variant: "text-md/medium",
                                                 color: "interactive-active",
-                                                children: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
+                                                children: o.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
                                             })]
                                         }), (0, t.jsxs)("div", {
-                                            className: o.channel,
+                                            className: h.channel,
                                             children: [(0, t.jsx)(r.default, {
-                                                className: o.channelIcon,
+                                                className: h.channelIcon,
                                                 width: 16,
                                                 height: 16
                                             }), (0, t.jsx)(n.Text, {
                                                 variant: "text-md/medium",
                                                 color: "interactive-active",
-                                                children: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
+                                                children: o.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
                                             })]
                                         }), (0, t.jsxs)("div", {
-                                            className: o.channel,
+                                            className: h.channel,
                                             children: [(0, t.jsx)(r.default, {
-                                                className: o.channelIcon,
+                                                className: h.channelIcon,
                                                 width: 16,
                                                 height: 16
                                             }), (0, t.jsx)(n.Text, {
                                                 variant: "text-md/medium",
                                                 color: "interactive-active",
-                                                children: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
+                                                children: o.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
                                             })]
                                         }), (0, t.jsxs)("div", {
-                                            className: o.channel,
+                                            className: h.channel,
                                             children: [(0, t.jsx)(r.default, {
-                                                className: o.channelIcon,
+                                                className: h.channelIcon,
                                                 width: 16,
                                                 height: 16
                                             }), (0, t.jsx)(n.Text, {
                                                 variant: "text-md/medium",
                                                 color: "interactive-active",
-                                                children: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
+                                                children: o.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
                                             })]
                                         })]
                                     })]
                                 })]
                             }), (0, t.jsx)(n.Text, {
-                                className: o.beforeTitle,
+                                className: h.beforeTitle,
                                 variant: "text-md/medium",
                                 color: "header-primary",
-                                children: h.default.Messages.NOTIF_MIGRATION_INTRO_BEFORE_TITLE
+                                children: o.default.Messages.NOTIF_MIGRATION_INTRO_BEFORE_TITLE
                             }), (0, t.jsx)(n.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                children: h.default.Messages.NOTIF_MIGRATION_INTRO_BEFORE_SUBTITLE
+                                children: o.default.Messages.NOTIF_MIGRATION_INTRO_BEFORE_SUBTITLE
                             })]
                         }), (0, t.jsx)("div", {
-                            className: o.arrow,
+                            className: h.arrow,
                             children: (0, t.jsx)(d.default, {
                                 width: 40,
                                 height: 40
                             })
                         }), (0, t.jsxs)("div", {
-                            className: o.column,
+                            className: h.column,
                             children: [(0, t.jsxs)("div", {
-                                className: o.previewContainer,
+                                className: h.previewContainer,
                                 children: [(0, t.jsx)(n.Text, {
-                                    className: o.before,
+                                    className: h.before,
                                     variant: "text-sm/medium",
                                     color: "text-muted",
-                                    children: h.default.Messages.NOTIF_MIGRATION_INTRO_AFTER
+                                    children: o.default.Messages.NOTIF_MIGRATION_INTRO_AFTER
                                 }), (0, t.jsxs)("div", {
-                                    className: o.previewInner,
+                                    className: h.previewInner,
                                     children: [(0, t.jsxs)("div", {
-                                        className: o.guilds,
+                                        className: h.guilds,
                                         children: [(0, t.jsxs)("div", {
-                                            className: o.unreadGuild,
+                                            className: h.unreadGuild,
                                             children: [(0, t.jsx)("img", {
                                                 src: a("228034"),
                                                 width: 36,
                                                 height: 36,
                                                 alt: "Example Guild Icon"
                                             }), (0, t.jsx)("div", {
-                                                className: o.tip,
+                                                className: h.tip,
                                                 style: {
                                                     top: "50%",
                                                     left: -6
                                                 },
                                                 children: (0, t.jsx)(n.Tooltip, {
-                                                    text: h.default.Messages.NOTIF_MIGRATION_INTRO_TIP1,
+                                                    text: o.default.Messages.NOTIF_MIGRATION_INTRO_TIP1,
                                                     children: e => (0, t.jsx)("div", {
-                                                        className: o.dot,
+                                                        className: h.dot,
                                                         ...e,
                                                         children: (0, t.jsx)("div", {
-                                                            className: o.pulse
+                                                            className: h.pulse
                                                         })
                                                     })
                                                 })
@@ -543,79 +556,79 @@
                                             alt: "Example Guild Icon"
                                         })]
                                     }), (0, t.jsxs)("div", {
-                                        className: o.channels,
+                                        className: h.channels,
                                         children: [(0, t.jsxs)("div", {
-                                            className: i(o.channel, o.mention),
+                                            className: i(h.channel, h.mention),
                                             children: [(0, t.jsx)(r.default, {
-                                                className: o.channelIcon,
+                                                className: h.channelIcon,
                                                 width: 16,
                                                 height: 16
                                             }), (0, t.jsx)(n.Text, {
                                                 variant: "text-md/medium",
                                                 color: "interactive-active",
-                                                children: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
+                                                children: o.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
                                             })]
                                         }), (0, t.jsxs)("div", {
-                                            className: o.channel,
+                                            className: h.channel,
                                             children: [(0, t.jsx)(r.default, {
-                                                className: o.channelIcon,
+                                                className: h.channelIcon,
                                                 width: 16,
                                                 height: 16
                                             }), (0, t.jsx)(n.Text, {
                                                 variant: "text-md/medium",
                                                 color: "interactive-active",
-                                                children: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
+                                                children: o.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
                                             }), (0, t.jsx)("div", {
-                                                className: o.tip,
+                                                className: h.tip,
                                                 style: {
                                                     top: "50%",
                                                     right: 52
                                                 },
                                                 children: (0, t.jsx)(n.Tooltip, {
-                                                    text: h.default.Messages.NOTIF_MIGRATION_INTRO_TIP3,
+                                                    text: o.default.Messages.NOTIF_MIGRATION_INTRO_TIP3,
                                                     children: e => (0, t.jsx)("div", {
-                                                        className: o.dot,
+                                                        className: h.dot,
                                                         ...e,
                                                         children: (0, t.jsx)("div", {
-                                                            className: o.pulse
+                                                            className: h.pulse
                                                         })
                                                     })
                                                 })
                                             })]
                                         }), (0, t.jsxs)("div", {
-                                            className: i(o.channel, o.grey),
+                                            className: i(h.channel, h.grey),
                                             children: [(0, t.jsx)(r.default, {
-                                                className: o.channelIcon,
+                                                className: h.channelIcon,
                                                 width: 16,
                                                 height: 16
                                             }), (0, t.jsx)(n.Text, {
                                                 variant: "text-md/medium",
                                                 color: "text-muted",
-                                                children: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
+                                                children: o.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
                                             })]
                                         }), (0, t.jsxs)("div", {
-                                            className: i(o.channel, o.grey),
+                                            className: i(h.channel, h.grey),
                                             children: [(0, t.jsx)(r.default, {
-                                                className: o.channelIcon,
+                                                className: h.channelIcon,
                                                 width: 16,
                                                 height: 16
                                             }), (0, t.jsx)(n.Text, {
                                                 variant: "text-md/medium",
                                                 color: "text-muted",
-                                                children: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
+                                                children: o.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
                                             }), (0, t.jsx)("div", {
-                                                className: o.tip,
+                                                className: h.tip,
                                                 style: {
                                                     top: "50%",
                                                     left: 10
                                                 },
                                                 children: (0, t.jsx)(n.Tooltip, {
-                                                    text: h.default.Messages.NOTIF_MIGRATION_INTRO_TIP4,
+                                                    text: o.default.Messages.NOTIF_MIGRATION_INTRO_TIP4,
                                                     children: e => (0, t.jsx)("div", {
-                                                        className: o.dot,
+                                                        className: h.dot,
                                                         ...e,
                                                         children: (0, t.jsx)("div", {
-                                                            className: o.pulse
+                                                            className: h.pulse
                                                         })
                                                     })
                                                 })
@@ -624,14 +637,14 @@
                                     })]
                                 })]
                             }), (0, t.jsx)(n.Text, {
-                                className: o.beforeTitle,
+                                className: h.beforeTitle,
                                 variant: "text-md/medium",
                                 color: "header-primary",
-                                children: h.default.Messages.NOTIF_MIGRATION_INTRO_AFTER_TITLE
+                                children: o.default.Messages.NOTIF_MIGRATION_INTRO_AFTER_TITLE
                             }), (0, t.jsx)(n.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                children: h.default.Messages.NOTIF_MIGRATION_INTRO_AFTER_SUBTITLE
+                                children: o.default.Messages.NOTIF_MIGRATION_INTRO_AFTER_SUBTITLE
                             })]
                         })]
                     })]
@@ -651,106 +664,111 @@
                 n = a("531470"),
                 d = a("538137"),
                 c = a("36694"),
-                r = a("439932"),
+                r = a("599110"),
+                o = a("439932"),
                 h = a("699668"),
-                o = a("203657"),
-                x = a("397516"),
+                x = a("203657"),
+                u = a("397516"),
                 m = a("71941"),
-                u = a("276345"),
-                N = a("380353"),
-                I = a("49111"),
-                T = a("782340"),
-                v = a("650287");
+                N = a("276345"),
+                I = a("380353"),
+                T = a("49111"),
+                v = a("782340"),
+                f = a("650287");
 
             function j(e) {
                 let {
                     onClose: s,
                     transitionState: a,
-                    dismissable: o,
+                    dismissable: x,
                     guildPain: j,
-                    myUsage: _
-                } = e, [g, O] = l.useState(m.Tab.Intro), {
-                    submitted: M,
-                    submitting: C,
-                    saveSettings: R
+                    myUsage: g
+                } = e, [O, M] = l.useState(m.Tab.Intro), {
+                    submitted: C,
+                    submitting: R,
+                    saveSettings: A
                 } = (0, h.useSaveSettings)(s), {
                     guildPlans: p,
-                    overrideGuild: A,
+                    overrideGuild: E,
                     getDebug: w
-                } = (0, h.useGuildMigrationSteps)(j, _);
-                return (0, t.jsx)("div", {
-                    className: (0, r.getThemeClass)(I.ThemeTypes.DARK),
+                } = (0, h.useGuildMigrationSteps)(j, g);
+                return l.useEffect(() => {
+                    r.default.track(T.AnalyticEvents.OPEN_MODAL, {
+                        type: "notification_migration_modal"
+                    })
+                }, []), (0, t.jsx)("div", {
+                    className: (0, o.getThemeClass)(T.ThemeTypes.DARK),
                     children: (0, t.jsxs)(i.ModalRoot, {
-                        className: v.modal,
+                        className: f.modal,
                         transitionState: a,
-                        "aria-label": T.default.Messages.NOTIFICATIONS,
+                        "aria-label": v.default.Messages.NOTIFICATIONS,
                         size: i.ModalSize.DYNAMIC,
                         children: [(0, t.jsx)(m.default, {
-                            selectedTab: g,
-                            onClick: O,
-                            submitted: M
-                        }), g === m.Tab.Intro ? (0, t.jsx)(x.default, {}) : g === m.Tab.Customize ? (0, t.jsx)(f, {
+                            selectedTab: O,
+                            onClick: M,
+                            submitted: C
+                        }), O === m.Tab.Intro ? (0, t.jsx)(u.default, {}) : O === m.Tab.Customize ? (0, t.jsx)(_, {
                             guildPlans: p,
-                            overrideGuild: A,
+                            overrideGuild: E,
                             getDebug: w
-                        }) : (0, t.jsx)(u.default, {
+                        }) : (0, t.jsx)(N.default, {
                             count: Object.values(p).filter(e => {
                                 var s;
-                                return (null !== (s = e.overrideMode) && void 0 !== s ? s : e.mode) === N.Mode.UseGreyDot
+                                return (null !== (s = e.overrideMode) && void 0 !== s ? s : e.mode) === I.Mode.UseGreyDot
                             }).length
                         }), (0, t.jsxs)(i.ModalFooter, {
-                            className: v.buttons,
+                            className: f.buttons,
                             children: [(0, t.jsxs)("div", {
-                                className: v.left,
-                                children: [o && g === m.Tab.Intro ? (0, t.jsx)(i.Clickable, {
-                                    className: v.dismiss,
+                                className: f.left,
+                                children: [x && O === m.Tab.Intro ? (0, t.jsx)(i.Clickable, {
+                                    className: f.dismiss,
                                     onClick: s,
                                     children: (0, t.jsx)(i.Text, {
                                         variant: "text-sm/semibold",
                                         color: "interactive-normal",
-                                        children: T.default.Messages.DISMISS
+                                        children: v.default.Messages.DISMISS
                                     })
-                                }) : null, o && g === m.Tab.Customize ? (0, t.jsx)(i.Clickable, {
-                                    className: v.dismiss,
+                                }) : null, x && O === m.Tab.Customize ? (0, t.jsx)(i.Clickable, {
+                                    className: f.dismiss,
                                     onClick: s,
                                     children: (0, t.jsx)(i.Text, {
                                         variant: "text-sm/semibold",
                                         color: "interactive-normal",
-                                        children: T.default.Messages.CANCEL
+                                        children: v.default.Messages.CANCEL
                                     })
                                 }) : null]
                             }), (0, t.jsxs)("div", {
-                                className: v.right,
-                                children: [g === m.Tab.Customize ? (0, t.jsx)(i.Text, {
-                                    className: v.warning,
+                                className: f.right,
+                                children: [O === m.Tab.Customize ? (0, t.jsx)(i.Text, {
+                                    className: f.warning,
                                     variant: "text-xs/medium",
                                     color: "text-muted",
-                                    children: T.default.Messages.NOTIF_MIGRATION_BACKUP
-                                }) : null, g !== m.Tab.Customize || M ? null : (0, t.jsxs)(i.Button, {
-                                    onClick: () => O(m.Tab.Intro),
+                                    children: v.default.Messages.NOTIF_MIGRATION_BACKUP
+                                }) : null, O !== m.Tab.Customize || C ? null : (0, t.jsxs)(i.Button, {
+                                    onClick: () => M(m.Tab.Intro),
                                     color: i.Button.Colors.TRANSPARENT,
                                     children: [(0, t.jsx)(n.default, {
                                         width: 16,
                                         height: 16
-                                    }), " ", T.default.Messages.BACK]
-                                }), g === m.Tab.Intro ? (0, t.jsxs)(i.Button, {
-                                    onClick: () => O(m.Tab.Customize),
-                                    children: [T.default.Messages.TRY_IT_OUT, " ", (0, t.jsx)(d.default, {
+                                    }), " ", v.default.Messages.BACK]
+                                }), O === m.Tab.Intro ? (0, t.jsxs)(i.Button, {
+                                    onClick: () => M(m.Tab.Customize),
+                                    children: [v.default.Messages.TRY_IT_OUT, " ", (0, t.jsx)(d.default, {
                                         width: 16,
                                         height: 16
                                     })]
-                                }) : g === m.Tab.Customize ? (0, t.jsxs)(i.Button, {
+                                }) : O === m.Tab.Customize ? (0, t.jsxs)(i.Button, {
                                     onClick: () => {
-                                        O(m.Tab.Tips), R(p)
+                                        M(m.Tab.Tips), A(p)
                                     },
-                                    children: [T.default.Messages.APPLY, " ", (0, t.jsx)(c.default, {
+                                    children: [v.default.Messages.APPLY, " ", (0, t.jsx)(c.default, {
                                         width: 16,
                                         height: 16
                                     })]
                                 }) : (0, t.jsx)(i.Button, {
-                                    submitting: C,
+                                    submitting: R,
                                     onClick: s,
-                                    children: T.default.Messages.CLOSE
+                                    children: v.default.Messages.CLOSE
                                 })]
                             })]
                         })]
@@ -758,26 +776,26 @@
                 })
             }
 
-            function f(e) {
+            function _(e) {
                 let {
                     guildPlans: s,
                     overrideGuild: a
                 } = e;
                 return (0, t.jsxs)("div", {
-                    className: v.content,
+                    className: f.content,
                     children: [(0, t.jsxs)("div", {
-                        className: v.header,
+                        className: f.header,
                         children: [(0, t.jsx)(i.Heading, {
                             variant: "heading-xl/bold",
                             color: "header-primary",
-                            children: T.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
+                            children: v.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
                         }), (0, t.jsx)(i.Text, {
-                            className: v.subtitle,
+                            className: f.subtitle,
                             variant: "text-md/medium",
                             color: "header-secondary",
-                            children: T.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
+                            children: v.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
                         })]
-                    }), (0, t.jsx)(o.default, {
+                    }), (0, t.jsx)(x.default, {
                         guildPlans: s,
                         overrideGuild: a
                     })]
@@ -791,7 +809,7 @@
                     return l
                 },
                 default: function() {
-                    return o
+                    return h
                 }
             });
             var t, l, i = a("37983");
@@ -800,16 +818,16 @@
                 d = a.n(n),
                 c = a("77078"),
                 r = a("782340"),
-                h = a("805986");
+                o = a("805986");
 
-            function o(e) {
+            function h(e) {
                 let {
                     selectedTab: s,
                     onClick: a,
                     submitted: t
                 } = e;
                 return (0, i.jsxs)("div", {
-                    className: h.tabs,
+                    className: o.tabs,
                     children: [(0, i.jsx)(x, {
                         tab: 0,
                         selectedTab: s,
@@ -841,11 +859,11 @@
                     onClick: n
                 } = e;
                 return l ? (0, i.jsxs)("div", {
-                    className: d(h.tab, {
-                        [h.current]: a === s
+                    className: d(o.tab, {
+                        [o.current]: a === s
                     }),
                     children: [(0, i.jsx)("div", {
-                        className: h.progressBar
+                        className: o.progressBar
                     }), (0, i.jsx)(c.Text, {
                         variant: "text-xs/medium",
                         color: a === s ? "text-brand" : "text-muted",
@@ -853,11 +871,11 @@
                     })]
                 }) : (0, i.jsxs)(c.Clickable, {
                     onClick: () => n(s),
-                    className: d(h.tab, {
-                        [h.current]: a === s
+                    className: d(o.tab, {
+                        [o.current]: a === s
                     }),
                     children: [(0, i.jsx)("div", {
-                        className: h.progressBar
+                        className: o.progressBar
                     }), (0, i.jsx)(c.Text, {
                         variant: "text-xs/medium",
                         color: a === s ? "text-brand" : "text-muted",
@@ -881,17 +899,17 @@
                 d = a("446674"),
                 c = a("305961"),
                 r = a("677099"),
-                h = a("660279"),
-                o = a("70025"),
+                o = a("660279"),
+                h = a("70025"),
                 x = a("461380"),
-                m = a("593195"),
-                u = a("578706"),
+                u = a("593195"),
+                m = a("578706"),
                 N = a("945330"),
                 I = a("474571"),
                 T = a("76539"),
                 v = a("975743"),
-                j = a("904276"),
-                f = a("875436"),
+                f = a("904276"),
+                j = a("875436"),
                 _ = a("782340"),
                 g = a("650287"),
                 O = a("492489");
@@ -907,7 +925,7 @@
                     className: g.content,
                     children: [(0, t.jsxs)("div", {
                         className: i(g.header, O.header),
-                        children: [(0, t.jsx)(u.default, {
+                        children: [(0, t.jsx)(m.default, {
                             width: 40,
                             height: 40
                         }), (0, t.jsx)(n.Heading, {
@@ -963,7 +981,7 @@
                                                 variant: "text-sm/normal",
                                                 color: "always-white",
                                                 children: _.default.Messages.NOTIFICATION_SETTINGS
-                                            }), (0, t.jsx)(h.default, {
+                                            }), (0, t.jsx)(o.default, {
                                                 className: O.icon,
                                                 width: 18,
                                                 height: 18
@@ -996,7 +1014,7 @@
                                                 variant: "text-sm/normal",
                                                 color: "interactive-normal",
                                                 children: _.default.Messages.CREATE_EVENTS
-                                            }), (0, t.jsx)(o.default, {
+                                            }), (0, t.jsx)(h.default, {
                                                 className: O.icon,
                                                 width: 18,
                                                 height: 18
@@ -1021,7 +1039,7 @@
                                     className: i(O.previewInner, O.channelPreviewInner),
                                     children: [(0, t.jsxs)("div", {
                                         className: i(O.channel, O.active),
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -1032,7 +1050,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -1043,7 +1061,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -1054,7 +1072,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -1065,7 +1083,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -1076,7 +1094,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -1122,7 +1140,7 @@
                                             color: "interactive-normal",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_1
-                                        }), (0, t.jsx)(j.default, {
+                                        }), (0, t.jsx)(f.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -1134,7 +1152,7 @@
                                             color: "interactive-active",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_2
-                                        }), (0, t.jsx)(f.default, {
+                                        }), (0, t.jsx)(j.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -1146,7 +1164,7 @@
                                             color: "interactive-normal",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_3
-                                        }), (0, t.jsx)(j.default, {
+                                        }), (0, t.jsx)(f.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -1158,7 +1176,7 @@
                                             color: "interactive-normal",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_CUSTOM
-                                        }), (0, t.jsx)(j.default, {
+                                        }), (0, t.jsx)(f.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -1182,7 +1200,7 @@
                                     className: i(O.previewInner, O.channelPreviewInner),
                                     children: [(0, t.jsxs)("div", {
                                         className: i(O.channel, O.active),
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -1193,7 +1211,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -1204,7 +1222,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -1215,7 +1233,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -1226,7 +1244,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -1237,7 +1255,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -1283,7 +1301,7 @@
                                             color: "interactive-normal",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_1
-                                        }), (0, t.jsx)(j.default, {
+                                        }), (0, t.jsx)(f.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -1295,7 +1313,7 @@
                                             color: "interactive-normal",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_2
-                                        }), (0, t.jsx)(j.default, {
+                                        }), (0, t.jsx)(f.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -1307,7 +1325,7 @@
                                             color: "interactive-normal",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_3
-                                        }), (0, t.jsx)(j.default, {
+                                        }), (0, t.jsx)(f.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -1319,7 +1337,7 @@
                                             color: "interactive-active",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_CUSTOM
-                                        }), (0, t.jsx)(f.default, {
+                                        }), (0, t.jsx)(j.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
