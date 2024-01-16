@@ -15486,6 +15486,11 @@ html.decorate-links .lowSaturationUnderline__95e71 {
 
 @use postcss-pxtorem;
 
+.theme-dark.custom-theme-background .embedFull__8dc21 {
+    --__spoiler-background-color--hidden: var(--primary-760);
+    --__spoiler-background-color--hidden--hover: hsl(var(--primary-760-hsl) / 0.8)
+}
+
 .embed_d3cbe3 {
     position: relative;
     display: grid;
