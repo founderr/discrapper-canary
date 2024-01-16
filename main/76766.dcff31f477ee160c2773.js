@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["23303"], {
+    ["76766"], {
         952110: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
