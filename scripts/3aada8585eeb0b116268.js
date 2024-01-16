@@ -1,6 +1,6 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["5970"], {
-        677879: function(e, a, t) {
+    ["45966"], {
+        795262: function(e, a, t) {
             "use strict";
             t.r(a), t.d(a, {
                 TeamSetup: function() {
@@ -21,7 +21,7 @@
                 i = t("49111"),
                 O = t("810367"),
                 E = t("782340"),
-                T = t("910707");
+                T = t("928987");
 
             function N(e) {
                 let {
