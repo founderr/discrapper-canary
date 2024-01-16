@@ -14974,8 +14974,11 @@
                 SecondaryActionButton: function() {
                     return M
                 },
-                default: function() {
+                PreviewButton: function() {
                     return k
+                },
+                default: function() {
+                    return b
                 }
             });
             var l = n("37983"),
@@ -15011,10 +15014,12 @@
                     disabled: t = !1,
                     onClick: n,
                     text: i,
-                    children: r
+                    children: r,
+                    tooltipPosition: s = "top"
                 } = e;
                 return (0, l.jsx)(c.Tooltip, {
                     text: i,
+                    position: s,
                     children: e => (0, l.jsx)(c.Clickable, {
                         ...e,
                         "aria-label": i,
@@ -15026,8 +15031,31 @@
                     })
                 })
             }
-            var k = i.forwardRef(function(e, t) {
-                var n, r, k;
+
+            function k(e) {
+                let {
+                    sound: t,
+                    previewSound: n,
+                    disabled: i = !1,
+                    tooltipPosition: r = "top"
+                } = e;
+                return (0, l.jsx)(M, {
+                    tooltipPosition: r,
+                    disabled: i,
+                    onClick: function(e) {
+                        e.stopPropagation(), e.currentTarget.blur(), n()
+                    },
+                    text: R.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
+                        emojiName: t.emojiName,
+                        soundName: t.name
+                    }),
+                    children: (0, l.jsx)(T.default, {
+                        className: O.secondaryIcon
+                    })
+                })
+            }
+            var b = i.forwardRef(function(e, t) {
+                var n, r, T;
                 let {
                     sound: b,
                     channel: P,
@@ -15054,17 +15082,17 @@
                 } = (0, N.default)(b, null !== (n = null == P ? void 0 : P.id) && void 0 !== n ? n : null), {
                     createMultipleConfettiAt: ee
                 } = i.useContext(m.ConfettiCannonContext), et = i.useRef(null);
-                let en = (r = b.soundId, k = et.current, i.useMemo(() => {
-                        if (null == k || "1" !== r) return {
+                let en = (r = b.soundId, T = et.current, i.useMemo(() => {
+                        if (null == T || "1" !== r) return {
                             x: 0,
                             y: 0
                         };
-                        let e = k.getBoundingClientRect();
+                        let e = T.getBoundingClientRect();
                         return {
                             x: e.left + e.width / 2,
                             y: e.top + e.height / 2
                         }
-                    }, [k, r])),
+                    }, [T, r])),
                     el = (0, a.useStateFromStores)([p.default], () => p.default.useReducedMotion),
                     ei = i.useRef(.01),
                     er = i.useRef(new u.Interval),
@@ -15073,34 +15101,17 @@
                     ea = "sound-".concat(b.soundId),
                     eu = (0, s.useListItem)(ea),
                     ed = null != q || null != z,
-                    ec = !(0, I.canUseSoundboardSound)(Q, b, P);
+                    ec = !(0, I.canUseSoundboardSound)(Q, b, P),
+                    ef = j || w && !ec;
 
-                function ef(e) {
+                function ep(e) {
                     e.stopPropagation(), e.currentTarget.blur(), es ? (0, v.removeFavoriteSound)(W) : (0, v.addFavoriteSound)(W)
                 }
 
-                function ep(e) {
-                    e.stopPropagation(), e.currentTarget.blur(), J()
-                }
-                let em = j || w && !ec,
-                    eh = () => (0, l.jsxs)("div", {
-                        className: O.buttonOverlay,
-                        children: [(0, l.jsx)("div", {
-                            className: o({
-                                [O.buttonOverlayBackground]: !B
-                            })
-                        }), (0, l.jsxs)("div", {
-                            className: O.buttonOverlayActions,
-                            children: [eS(), !B && (0, l.jsx)(g.default, {
-                                className: O.playIcon
-                            }), eE()]
-                        })]
-                    });
-
-                function eE() {
-                    return em ? (0, l.jsx)(M, {
+                function em() {
+                    return (0, l.jsx)(M, {
                         disabled: !D && !j,
-                        onClick: ef,
+                        onClick: ep,
                         text: R.default.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
                             emojiName: b.emojiName,
                             soundName: b.name
@@ -15111,22 +15122,26 @@
                         }) : (0, l.jsx)(E.default, {
                             className: O.secondaryIcon
                         })
-                    }) : null
+                    })
                 }
-
-                function eS() {
-                    return em ? (0, l.jsx)(M, {
-                        disabled: !D && !j,
-                        onClick: ep,
-                        text: R.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
-                            emojiName: b.emojiName,
-                            soundName: b.name
-                        }),
-                        children: (0, l.jsx)(T.default, {
-                            className: O.secondaryIcon
-                        })
-                    }) : null
-                }
+                let eh = k({
+                        sound: b,
+                        previewSound: J,
+                        disabled: ec
+                    }),
+                    eE = () => (0, l.jsxs)("div", {
+                        className: O.buttonOverlay,
+                        children: [(0, l.jsx)("div", {
+                            className: o({
+                                [O.buttonOverlayBackground]: !B
+                            })
+                        }), (0, l.jsxs)("div", {
+                            className: O.buttonOverlayActions,
+                            children: [ef && eh, !B && !ec && (0, l.jsx)(g.default, {
+                                className: O.playIcon
+                            }), ef && em()]
+                        })]
+                    });
                 return i.useEffect(() => {
                     let e = er.current;
                     return eo && e.start(1e3, () => {
@@ -15191,7 +15206,7 @@
                                             className: O.buttonOverlayBackground
                                         }), (0, l.jsxs)("div", {
                                             className: O.buttonOverlayActions,
-                                            children: [eS(), (0, l.jsxs)("div", {
+                                            children: [eh, (0, l.jsxs)("div", {
                                                 className: O.addButton,
                                                 children: [(0, l.jsx)(C.default, {
                                                     className: O.plusSign
@@ -15200,12 +15215,12 @@
                                                     color: "header-primary",
                                                     children: R.default.Messages.GIFT_SELECT_SOUNDBOARD_ADD
                                                 })]
-                                            }), eE()]
+                                            }), ef && em()]
                                         })]
                                     });
                                 case x.SoundButtonOverlay.PLAY:
                                 default:
-                                    return eh()
+                                    return eE()
                             }
                         }()]
                     }), !b.available && (0, l.jsx)(c.Tooltip, {
@@ -15510,7 +15525,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return y
+                    return I
                 }
             }), n("222007");
             var l = n("37983"),
@@ -15527,79 +15542,96 @@
                 m = n("635956"),
                 h = n("599110"),
                 E = n("719923"),
-                S = n("49111"),
-                g = n("646718"),
-                C = n("782340"),
-                T = n("665946"),
-                v = n("350028");
+                S = n("23106"),
+                g = n("553372"),
+                C = n("49111"),
+                T = n("646718"),
+                v = n("782340"),
+                y = n("665946"),
+                x = n("350028");
 
-            function y(e) {
+            function I(e) {
+                var t;
                 let {
-                    onClose: t,
-                    closePopout: r
-                } = e, y = (0, d.default)(), [x, I] = i.useState(!1), {
-                    location: N
-                } = (0, u.useAnalyticsContext)(), _ = i.useMemo(() => ({
-                    ...N,
-                    section: S.AnalyticsSections.SOUNDBOARD_SOUND_PICKER
-                }), [N]), {
-                    analyticsLocations: A
-                } = (0, f.default)(c.default.PREMIUM_UPSELL), R = (0, s.isThemeLight)(y) ? n("602291") : n("609708");
+                    onClose: r,
+                    closePopout: I,
+                    sound: N,
+                    channel: _
+                } = e, A = (0, d.default)(), [R, O] = i.useState(!1), {
+                    location: M
+                } = (0, u.useAnalyticsContext)(), k = i.useMemo(() => ({
+                    ...M,
+                    section: C.AnalyticsSections.SOUNDBOARD_SOUND_PICKER
+                }), [M]), {
+                    analyticsLocations: b
+                } = (0, f.default)(c.default.PREMIUM_UPSELL), {
+                    previewSound: P
+                } = (0, S.default)(N, null !== (t = null == _ ? void 0 : _.id) && void 0 !== t ? t : null), L = (0, g.PreviewButton)({
+                    sound: N,
+                    previewSound: P,
+                    tooltipPosition: "left"
+                }), U = (0, s.isThemeLight)(A) ? n("602291") : n("609708");
                 i.useEffect(() => {
-                    h.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                        type: g.PremiumUpsellTypes.SOUND_PICKER_SOUND_CLICKED,
+                    h.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                        type: T.PremiumUpsellTypes.SOUND_PICKER_SOUND_CLICKED,
                         is_external: !0,
                         location: {
-                            ..._,
-                            object: S.AnalyticsObjects.SOUNDBOARD_SOUND
+                            ...k,
+                            object: C.AnalyticsObjects.SOUNDBOARD_SOUND
                         },
-                        location_stack: A,
-                        sku_id: E.default.getSkuIdForPremiumType(g.PremiumTypes.TIER_2)
+                        location_stack: b,
+                        sku_id: E.default.getSkuIdForPremiumType(T.PremiumTypes.TIER_2)
                     })
-                }, [A, _]);
-                let O = i.useCallback(() => {
-                    h.default.track(S.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
-                        location_section: S.AnalyticsSections.SOUNDBOARD_SOUND_PICKER_UPSELL
-                    }), (0, p.navigateToPremiumMarketingPage)(), r()
-                }, [r]);
+                }, [b, k]);
+                let j = i.useCallback(() => {
+                    h.default.track(C.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                        location_section: C.AnalyticsSections.SOUNDBOARD_SOUND_PICKER_UPSELL
+                    }), (0, p.navigateToPremiumMarketingPage)(), I()
+                }, [I]);
                 return (0, l.jsxs)("div", {
-                    className: o(v.premiumPromo, T.container),
+                    className: o(x.premiumPromo, y.container),
                     children: [(0, l.jsx)(a.Clickable, {
-                        className: v.premiumPromoClose,
-                        onClick: t,
-                        children: C.default.Messages.CLOSE
+                        className: x.premiumPromoClose,
+                        onClick: r,
+                        children: v.default.Messages.CLOSE
                     }), (0, l.jsx)("img", {
                         "aria-hidden": !0,
                         alt: "",
-                        className: o(v.premiumPromoImage, v.premiumPromoImageSmaller, T.image),
-                        src: R
+                        className: o(x.premiumPromoImage, x.premiumPromoImageSmaller, y.image),
+                        src: U
                     }), (0, l.jsx)(a.Heading, {
                         variant: "heading-lg/normal",
                         color: "header-primary",
-                        className: v.premiumPromoTitle,
-                        children: C.default.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
+                        className: x.premiumPromoTitle,
+                        children: v.default.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
                     }), (0, l.jsx)(a.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        className: v.premiumPromoDescription,
-                        children: C.default.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({
-                            onClick: O
+                        className: x.premiumPromoDescription,
+                        children: v.default.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({
+                            onClick: j
                         })
-                    }), (0, l.jsx)(m.default, {
-                        subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
-                        submitting: x,
-                        premiumModalAnalyticsLocation: {
-                            section: S.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
-                            object: S.AnalyticsObjects.BUTTON_CTA
-                        },
-                        size: a.Button.Sizes.SMALL,
-                        color: a.Button.Colors.GREEN,
-                        onClick: () => {
-                            I(!0)
-                        },
-                        onSubscribeModalClose: e => {
-                            I(!1), e && t()
-                        }
+                    }), (0, l.jsxs)("div", {
+                        className: y.buttonContainer,
+                        children: [(0, l.jsx)("div", {
+                            className: y.previewButtonContainer,
+                            children: L
+                        }), (0, l.jsx)(m.default, {
+                            subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
+                            submitting: R,
+                            premiumModalAnalyticsLocation: {
+                                section: C.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
+                                object: C.AnalyticsObjects.BUTTON_CTA
+                            },
+                            size: a.Button.Sizes.SMALL,
+                            color: a.Button.Colors.GREEN,
+                            onClick: () => {
+                                O(!0)
+                            },
+                            onSubscribeModalClose: e => {
+                                O(!1), e && r()
+                            }
+                        })]
                     })]
                 })
             }
@@ -15789,7 +15821,7 @@
                     defaultSoundsOnly: b = !1
                 } = e, {
                     analyticsLocations: P
-                } = (0, f.default)(), [W, Y] = i.useState(!1), q = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), z = (0, s.useStateFromStores)([C.default], () => {
+                } = (0, f.default)(), [W, Y] = i.useState(null), q = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), z = (0, s.useStateFromStores)([C.default], () => {
                     var e;
                     return C.default.getVoiceState(t, null !== (e = null == q ? void 0 : q.id) && void 0 !== e ? e : "")
                 }), Q = (null == z ? void 0 : z.selfDeaf) || (null == z ? void 0 : z.mute) || (null == z ? void 0 : z.suppress), X = (0, h.useExpressionPickerStore)(e => e.searchQuery), Z = (0, T.useUID)(), {
@@ -15803,7 +15835,7 @@
                         (0, O.playSound)(e, null !== (n = null == r ? void 0 : r.id) && void 0 !== n ? n : "", t)
                     } else {
                         if ((0, O.canUseSoundboardSound)(q, e, r)) return;
-                        v && Y(!0)
+                        v && Y(e)
                     }
                 }, [p, q, r, v]), ea = i.useCallback(e => {
                     switch (e.item.type) {
@@ -15868,9 +15900,11 @@
                     return null
                 }, [a]);
                 return (0, l.jsxs)(l.Fragment, {
-                    children: [W && (0, l.jsx)(j.default, {
-                        onClose: () => Y(!1),
-                        closePopout: a
+                    children: [null != W && (0, l.jsx)(j.default, {
+                        onClose: () => Y(null),
+                        closePopout: a,
+                        sound: W,
+                        channel: r
                     }), (0, l.jsx)(E.default, {
                         categories: et,
                         collapsedCategories: el,
