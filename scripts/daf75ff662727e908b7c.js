@@ -459,19 +459,21 @@
                 let {
                     location: n,
                     targetUserId: l,
-                    targets: i
-                } = t, r = a.useCallback(t => {
-                    let r = {
+                    targets: i,
+                    locations: r
+                } = t, s = a.useCallback(t => {
+                    let s = {
                         action_type: t,
                         mod_user_id: d.default.getId(),
                         guild_id: e,
                         location: n,
+                        locations: r,
                         target_user_id: null != l ? l : void 0,
                         targets: null != i ? i : void 0
                     };
-                    E(f.AnalyticEvents.MODERATION_ACTION, r)
-                }, [e, n, l, i]);
-                return r
+                    E(f.AnalyticEvents.MODERATION_ACTION, s)
+                }, [e, n, l, i, r]);
+                return s
             }
 
             function T(e, t) {
@@ -883,10 +885,10 @@
         553275: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                useContextMenuModerateRoles: function() {
+                openMemberProfile: function() {
                     return E
                 },
-                openMemberProfile: function() {
+                useContextMenuModerateRoles: function() {
                     return _
                 },
                 useContextMenuModerateUser: function() {
@@ -910,23 +912,7 @@
                 d = n("697218"),
                 c = n("441823"),
                 f = n("49111");
-
-            function E(e, t) {
-                let {
-                    analyticsLocations: n
-                } = (0, a.default)();
-                return r.useCallback(l => {
-                    if (null == e) return;
-                    let i = d.default.getUser(e.userId);
-                    null != i && (l.stopPropagation(), (0, c.openModerateRoleContextMenu)(l, {
-                        user: i,
-                        guildId: e.guildId,
-                        analyticsLocations: n,
-                        onCloseContextMenu: t
-                    }))
-                }, [e, n, t])
-            }
-            let _ = e => {
+            let E = e => {
                 let {
                     guildId: t,
                     userId: n
@@ -941,20 +927,36 @@
                 })
             };
 
-            function p(e, t) {
+            function _(e, t, n) {
                 let {
-                    analyticsLocations: n
+                    analyticsLocations: l
                 } = (0, a.default)();
-                return r.useCallback(l => {
+                return r.useCallback(i => {
                     if (null == e) return;
-                    let i = d.default.getUser(e.userId);
-                    null != i && (l.stopPropagation(), (0, c.openModerateUserContextMenu)(l, {
-                        user: i,
+                    let r = d.default.getUser(e.userId);
+                    null != r && (i.stopPropagation(), (0, c.openModerateRoleContextMenu)(i, {
+                        user: r,
                         guildId: e.guildId,
-                        analyticsLocations: n,
-                        onCloseContextMenu: t
+                        analyticsLocations: null != t ? [t] : l,
+                        onCloseContextMenu: n
                     }))
-                }, [e, t, n])
+                }, [e, l, n, t])
+            }
+
+            function p(e, t, n) {
+                let {
+                    analyticsLocations: l
+                } = (0, a.default)();
+                return r.useCallback(i => {
+                    if (null == e) return;
+                    let r = d.default.getUser(e.userId);
+                    null != r && (i.stopPropagation(), (0, c.openModerateUserContextMenu)(i, {
+                        user: r,
+                        guildId: e.guildId,
+                        analyticsLocations: null != t ? [t] : l,
+                        onCloseContextMenu: n
+                    }))
+                }, [e, n, l, t])
             }
 
             function h(e) {

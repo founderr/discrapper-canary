@@ -13,8 +13,8 @@
                 i = n("669491"),
                 u = n("77078"),
                 r = n("659500"),
-                d = n("49111"),
-                o = n("782340"),
+                o = n("49111"),
+                d = n("782340"),
                 c = n("317404"),
                 f = function(e) {
                     var t;
@@ -45,23 +45,23 @@
                                 delay: 1e3
                             })
                         }
-                        return r.ComponentDispatch.subscribe(d.ComponentActions.EMPHASIZE_NOTICE, e), () => {
-                            r.ComponentDispatch.unsubscribe(d.ComponentActions.EMPHASIZE_NOTICE, e)
+                        return r.ComponentDispatch.subscribe(o.ComponentActions.EMPHASIZE_NOTICE, e), () => {
+                            r.ComponentDispatch.unsubscribe(o.ComponentActions.EMPHASIZE_NOTICE, e)
                         }
                     }, [M]);
-                    let b = I.to({
+                    let A = I.to({
                             range: [0, 1],
                             output: [(0, u.useToken)(i.default.colors.TEXT_NORMAL).hex(), (0, u.useToken)(i.default.unsafe_rawColors.WHITE_500).hex()]
                         }),
-                        A = I.to({
+                        N = I.to({
                             range: [0, 1],
                             output: [(0, u.useToken)(i.default.colors.BACKGROUND_FLOATING).hex(), (0, u.useToken)(i.default.colors.STATUS_DANGER).hex()]
                         }),
-                        N = (0, u.useToken)(i.default.colors.TEXT_DANGER).hex();
+                        b = (0, u.useToken)(i.default.colors.TEXT_DANGER).hex();
                     return (0, l.jsx)(a.animated.div, {
                         className: c.container,
                         style: {
-                            backgroundColor: A
+                            backgroundColor: N
                         },
                         children: (0, l.jsx)("div", {
                             className: c.flexContainer,
@@ -73,9 +73,9 @@
                                     children: (0, l.jsx)(a.animated.div, {
                                         className: c.message,
                                         style: {
-                                            color: null != f ? N : b
+                                            color: null != f ? b : A
                                         },
-                                        children: null !== (t = null != f ? f : n) && void 0 !== t ? t : o.default.Messages.SETTINGS_NOTICE_MESSAGE
+                                        children: null !== (t = null != f ? f : n) && void 0 !== t ? t : d.default.Messages.SETTINGS_NOTICE_MESSAGE
                                     })
                                 }), (0, l.jsxs)("div", {
                                     className: c.actions,
@@ -87,9 +87,9 @@
                                         onClick: m,
                                         children: (0, l.jsx)(a.animated.span, {
                                             style: {
-                                                color: b
+                                                color: A
                                             },
-                                            children: null != x ? x : o.default.Messages.RESET
+                                            children: null != x ? x : d.default.Messages.RESET
                                         })
                                     }), null != S ? (0, l.jsx)(u.Tooltip, {
                                         text: C,
@@ -100,7 +100,7 @@
                                             disabled: T,
                                             onClick: S,
                                             ...e,
-                                            children: null != g ? g : o.default.Messages.SAVE_CHANGES
+                                            children: null != g ? g : d.default.Messages.SAVE_CHANGES
                                         })
                                     }) : null]
                                 })]
@@ -138,8 +138,8 @@
                 i = n("812204"),
                 u = n("685665"),
                 r = n("744568"),
-                d = n("208021"),
-                o = n("982108"),
+                o = n("208021"),
+                d = n("982108"),
                 c = n("305961"),
                 f = n("49111"),
                 h = n("973033");
@@ -149,8 +149,8 @@
                     guildId: t
                 } = e, n = (0, a.useStateFromStores)([c.default], () => c.default.getGuild(t)), {
                     AnalyticsLocationProvider: m
-                } = (0, u.default)(i.default.MEMBER_SAFETY_PAGE), S = (0, a.useStateFromStores)([o.default], () => o.default.getGuildSidebarState(t), [t]), g = s.useCallback(() => {
-                    d.default.closeGuildSidebar(t)
+                } = (0, u.default)(i.default.MEMBER_SAFETY_PAGE), S = (0, a.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(t), [t]), g = s.useCallback(() => {
+                    o.default.closeGuildSidebar(t)
                 }, [t]);
                 return null != n && null != S && null != S ? (0, l.jsx)(m, {
                     children: (0, l.jsx)("div", {
@@ -180,8 +180,8 @@
                 i = n.n(a),
                 u = n("446674"),
                 r = n("77078"),
-                d = n("812204"),
-                o = n("685665"),
+                o = n("812204"),
+                d = n("685665"),
                 c = n("69927"),
                 f = n("994906"),
                 h = n("459824"),
@@ -195,13 +195,13 @@
                 p = n("305961"),
                 I = n("18494"),
                 M = n("98292"),
-                b = n("155207"),
-                A = n("466818"),
-                N = n("485810"),
+                A = n("155207"),
+                N = n("466818"),
+                b = n("485810"),
                 j = n("914985"),
-                _ = n("714247"),
-                v = n("565556"),
-                R = n("891222"),
+                v = n("714247"),
+                R = n("565556"),
+                _ = n("891222"),
                 B = n("49111"),
                 k = n("724210"),
                 G = n("782340"),
@@ -252,7 +252,7 @@
                         })
                     }) : (0, l.jsx)("div", {}),
                     children: [(0, l.jsx)(S.default.Icon, {
-                        icon: b.default,
+                        icon: A.default,
                         "aria-hidden": !0
                     }), (0, l.jsx)(S.default.Title, {
                         children: i
@@ -265,8 +265,8 @@
                     guildId: t
                 } = e, n = (0, u.useStateFromStores)([p.default], () => p.default.getGuild(t)), {
                     AnalyticsLocationProvider: a
-                } = (0, o.default)(d.default.MEMBER_SAFETY_PAGE), c = (0, A.useCanAccessMemberSafetyPage)(t), m = (0, h.useCanAccessGuildMemberModView)(t), S = (0, u.useStateFromStores)([I.default], () => I.default.getLastSelectedChannelId(t)), M = (0, u.useStateFromStores)([T.default], () => T.default.getChannel(S)), b = s.useRef(null);
-                (0, N.useSubscribeToGuildMemberUpdates)(t), s.useEffect(() => {
+                } = (0, d.default)(o.default.MEMBER_SAFETY_PAGE), c = (0, N.useCanAccessMemberSafetyPage)(t), m = (0, h.useCanAccessGuildMemberModView)(t), S = (0, u.useStateFromStores)([I.default], () => I.default.getLastSelectedChannelId(t)), M = (0, u.useStateFromStores)([T.default], () => T.default.getChannel(S)), A = s.useRef(null);
+                (0, b.useSubscribeToGuildMemberUpdates)(t), s.useEffect(() => {
                     if (!c && null != n) {
                         var e;
                         let t = null === (e = C.default.getDefaultChannel(n.id)) || void 0 === e ? void 0 : e.id;
@@ -293,20 +293,21 @@
                             previousChannel: M
                         }), (0, l.jsx)(r.AdvancedScroller, {
                             className: i(L.scroller),
-                            ref: b,
+                            ref: A,
+                            orientation: "vertical",
                             children: (0, l.jsxs)("div", {
                                 className: i(F.content, L.container),
                                 children: [(0, l.jsx)(j.default, {
                                     guild: n
-                                }), (0, l.jsx)(R.default, {
+                                }), (0, l.jsx)(_.default, {
                                     guild: n,
                                     onMemberSelect: P
                                 })]
                             })
-                        }), (0, l.jsx)(v.default, {
+                        }), (0, l.jsx)(R.default, {
                             guildId: n.id
                         })]
-                    }), m && (0, l.jsx)(_.default, {
+                    }), m && (0, l.jsx)(v.default, {
                         guildId: n.id
                     })]
                 }) : null
@@ -316,7 +317,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return x
+                    return E
                 }
             });
             var l = n("37983"),
@@ -325,15 +326,16 @@
                 i = n.n(a),
                 u = n("907002"),
                 r = n("65597"),
+                o = n("77078"),
                 d = n("804160"),
-                o = n("178406"),
-                c = n("553275"),
-                f = n("691307"),
-                h = n("314143"),
-                m = n("721302"),
-                S = n("888940");
+                c = n("178406"),
+                f = n("553275"),
+                h = n("691307"),
+                m = n("314143"),
+                S = n("721302"),
+                g = n("888940");
 
-            function g(e) {
+            function x(e) {
                 let {
                     guild: t
                 } = e, n = (0, d.useIsMakingRequest)(t.id), s = (0, u.useSpring)({
@@ -341,42 +343,47 @@
                     config: u.config.stiff
                 });
                 return (0, l.jsx)("div", {
-                    className: S.loaderContainer,
+                    className: g.loaderContainer,
                     children: (0, l.jsx)(u.animated.div, {
-                        className: S.loaderBar,
+                        className: g.loaderBar,
                         style: s
                     })
                 })
             }
 
-            function x(e) {
+            function E(e) {
                 let {
                     guild: t,
                     className: n,
                     onPageChange: a,
                     onMemberSelect: u
-                } = e, x = (0, r.default)([o.default], () => o.default.getEstimatedMemberSearchCountByGuildId(t.id), [t.id]), E = (0, d.useIsMakingRequest)(t.id), T = (0, d.useIsStillIndexing)(t.id), C = s.useCallback(e => {
+                } = e, E = t.id, T = (0, r.default)([c.default], () => c.default.getEstimatedMemberSearchCountByGuildId(E), [E]), C = (0, d.useIsMakingRequest)(E), p = (0, d.useIsStillIndexing)(E), I = s.useCallback(e => {
                     null != e && (null == u || u(e))
-                }, [u]), p = (0, c.getSearchState)(T, E, x), I = s.useRef(null), M = s.useCallback(() => {
+                }, [u]), M = (0, f.getSearchState)(p, C, T), A = s.useRef(null), N = s.useRef(null), b = s.useCallback(() => {
                     var e;
-                    null === (e = I.current) || void 0 === e || e.resetSearchText()
+                    null === (e = A.current) || void 0 === e || e.resetSearchText()
                 }, []);
-                return (0, l.jsxs)("div", {
-                    className: i(S.mainTableContainer, n),
-                    children: [(0, l.jsx)(m.default, {
-                        guild: t,
-                        ref: I
-                    }), (0, l.jsx)(g, {
-                        guild: t
-                    }), (0, l.jsx)(f.default, {
-                        guild: t,
-                        onSelectRow: C,
-                        searchState: p,
-                        onResetForNewMembers: M
-                    }), p !== c.SearchState.SUCCESS_STILL_INDEXING && (0, l.jsx)(h.default, {
-                        guildId: t.id,
-                        onPageChange: a
-                    })]
+                return (0, l.jsx)("div", {
+                    className: i(g.mainTableContainer, n),
+                    children: (0, l.jsxs)(o.AdvancedScroller, {
+                        className: i(g.horizatonalScroller),
+                        ref: N,
+                        orientation: "horizontal",
+                        children: [(0, l.jsx)(S.default, {
+                            guild: t,
+                            ref: A
+                        }), (0, l.jsx)(x, {
+                            guild: t
+                        }), (0, l.jsx)(h.default, {
+                            guild: t,
+                            onSelectRow: I,
+                            searchState: M,
+                            onResetForNewMembers: b
+                        }), M !== f.SearchState.SUCCESS_STILL_INDEXING && (0, l.jsx)(m.default, {
+                            guildId: t.id,
+                            onPageChange: a
+                        })]
+                    })
                 })
             }
         },
@@ -393,8 +400,8 @@
                 i = n.n(a),
                 u = n("458960"),
                 r = n("77078"),
-                d = n("866893");
-            let o = {
+                o = n("866893");
+            let d = {
                 friction: 7,
                 tension: 60
             };
@@ -413,7 +420,7 @@
                 }
                 animateTo(e) {
                     return u.default.spring(this.animation, {
-                        ...o,
+                        ...d,
                         toValue: e
                     })
                 }
@@ -437,7 +444,7 @@
                         children: t
                     } = this.props;
                     return (0, l.jsx)(u.default.div, {
-                        className: i(e, d.slider),
+                        className: i(e, o.slider),
                         style: this.getAnimatedStyle(),
                         children: t
                     })

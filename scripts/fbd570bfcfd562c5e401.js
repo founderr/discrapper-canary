@@ -165,19 +165,21 @@
                 let {
                     location: l,
                     targetUserId: u,
-                    targets: a
-                } = t, n = d.useCallback(t => {
-                    let n = {
+                    targets: a,
+                    locations: n
+                } = t, r = d.useCallback(t => {
+                    let r = {
                         action_type: t,
                         mod_user_id: o.default.getId(),
                         guild_id: e,
                         location: l,
+                        locations: n,
                         target_user_id: null != u ? u : void 0,
                         targets: null != a ? a : void 0
                     };
-                    E(c.AnalyticEvents.MODERATION_ACTION, n)
-                }, [e, l, u, a]);
-                return n
+                    E(c.AnalyticEvents.MODERATION_ACTION, r)
+                }, [e, l, u, a, n]);
+                return r
             }
 
             function A(e, t) {
