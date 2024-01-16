@@ -8010,27 +8010,26 @@
                 }
                 renderEmbeds(e) {
                     let {
-                        renderEmbeds: t,
-                        showClydeAiEmbeds: n
+                        renderEmbeds: t
                     } = this.props;
                     return 0 !== e.embeds.length && t ? e.embeds.map(t => {
-                        if (eR.has(t.type) || !n && (0, ei.isClydeAiThoughtsEmbed)(t) || (0, ei.isServerShopArticleEmbed)(t)) return null;
-                        let s = {
+                        if (eR.has(t.type) || (0, ei.isServerShopArticleEmbed)(t)) return null;
+                        let n = {
                             renderImageComponent: eC.renderImageComponent,
                             renderVideoComponent: eC.renderVideoComponent,
                             renderLinkComponent: eC.renderMaskedLinkComponent
                         };
                         if (t.type === eN.MessageEmbedTypes.ARTICLE && null != t.url && /^https?:\/\/(?:canary|ptb|www)?\.discord(?:app)?\.com\/store\/skus\/(?:[0-9]+)/.test(t.url) && null != t.provider && "Discord" === t.provider.name) {
-                            let n = ed.default.safeParseWithQuery(t.url);
-                            if (null != n && null != n.pathname) {
-                                let l = n.pathname.split("/")[3];
+                            let s = ed.default.safeParseWithQuery(t.url);
+                            if (null != s && null != s.pathname) {
+                                let l = s.pathname.split("/")[3];
                                 if (null != l) return (0, a.jsx)(E.default, {
                                     skuId: l,
-                                    renderFallback: () => this.renderEmbed(t, s, e.id, e.channel_id)
+                                    renderFallback: () => this.renderEmbed(t, n, e.id, e.channel_id)
                                 }, t.id)
                             }
                         }
-                        return this.renderEmbed(t, s, e.id, e.channel_id)
+                        return this.renderEmbed(t, n, e.id, e.channel_id)
                     }) : null
                 }
                 renderComponentAccessories(e) {
@@ -8318,7 +8317,7 @@
                 } = (0, o.useStateFromStoresObject)([X.default], () => ({
                     canAddNewReactions: h && X.default.can(eN.Permissions.ADD_REACTIONS, l),
                     canManageMessages: X.default.can(eN.Permissions.MANAGE_MESSAGES, l)
-                }), [h, l]), [, A] = (0, v.useCurrentUserCommunicationDisabled)(l.guild_id), M = (0, Y.useIsActiveChannelOrUnarchivableThread)(l), x = (u === i.author.id || S) && i.author.id !== eN.LOCAL_BOT_ID && !i.author.isClyde() && !1 !== r && !(0, er.hasFlag)(i.flags, eN.MessageFlags.EPHEMERAL) && M, O = u === i.author.id && M, L = i.author.id === u, R = i.isFirstMessageInForumPost(l), y = (0, eE.default)({
+                }), [h, l]), [, A] = (0, v.useCurrentUserCommunicationDisabled)(l.guild_id), M = (0, Y.useIsActiveChannelOrUnarchivableThread)(l), x = (u === i.author.id || S) && i.author.id !== eN.LOCAL_BOT_ID && !1 !== r && !(0, er.hasFlag)(i.flags, eN.MessageFlags.EPHEMERAL) && M, O = u === i.author.id && M, L = i.author.id === u, R = i.isFirstMessageInForumPost(l), y = (0, eE.default)({
                     channel: l,
                     canChat: h,
                     renderReactions: E,
@@ -8347,7 +8346,6 @@
                     showListsAndHeaders: D.showListsAndHeaders || U.showListsAndHeaders,
                     showMaskedLinks: D.showMaskedLinks || U.showMaskedLinks,
                     shouldHideMediaOptions: G,
-                    showClydeAiEmbeds: !!(0, eo.isNotNullish)(e.showClydeAiEmbeds) && e.showClydeAiEmbeds,
                     shouldRedactExplicitContent: k
                 })
             }
@@ -8385,7 +8383,6 @@
                     showListsAndHeaders: p.showListsAndHeaders || T.showListsAndHeaders,
                     showMaskedLinks: p.showMaskedLinks || T.showMaskedLinks,
                     shouldHideMediaOptions: g,
-                    showClydeAiEmbeds: !1,
                     shouldRedactExplicitContent: C
                 })
             }
@@ -10660,14 +10657,13 @@
                     renderThreadAccessory: c,
                     renderComponentAccessory: f,
                     renderSuppressEmbeds: m,
-                    showClydeAiEmbeds: E,
-                    forceAddReactions: _,
-                    className: h
+                    forceAddReactions: E,
+                    className: _
                 } = e;
                 return d ? null : (0, a.jsx)(s.default, {
                     message: t,
                     children: (0, a.jsx)(l.default, {
-                        className: h,
+                        className: _,
                         isInteracting: u,
                         message: t,
                         channel: n,
@@ -10677,8 +10673,7 @@
                         renderThreadAccessory: c,
                         renderComponentAccessory: f,
                         renderSuppressEmbeds: m,
-                        showClydeAiEmbeds: E,
-                        forceAddReactions: _
+                        forceAddReactions: E
                     })
                 })
             }

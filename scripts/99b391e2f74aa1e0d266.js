@@ -224,14 +224,14 @@
                     p = e.codedLinks.length > 0,
                     E = e.hasFlag(s.MessageFlags.HAS_THREAD),
                     A = m || f || g || p || E || e.type === s.MessageTypes.THREAD_CREATED,
-                    S = m && e.content === e.embeds[0].url && e.embeds[0].type === s.MessageEmbedTypes.GIFV,
-                    h = e.type !== s.MessageTypes.DEFAULT || !S && "" !== e.content,
+                    h = m && e.content === e.embeds[0].url && e.embeds[0].type === s.MessageEmbedTypes.GIFV,
+                    S = e.type !== s.MessageTypes.DEFAULT || !h && "" !== e.content,
                     I = (0, i.default)(e),
                     T = !I && (null == n ? void 0 : n.hasTimestamp) !== !1,
                     y = o(e, t),
                     M = l(e),
                     v = I ? "" : "".concat(c ? M : y, " ").concat(a.MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID);
-                if (h) {
+                if (S) {
                     let t = r(e);
                     v += " ".concat(t)
                 }
@@ -418,7 +418,7 @@
                     return A
                 },
                 default: function() {
-                    return S
+                    return h
                 }
             });
             var a = n("37983"),
@@ -457,7 +457,7 @@
                 } = e;
                 return (0, u.default)(e, t, ["message"]) && i.content === s.content && i.state === s.state && (null === (n = i.editedTimestamp) || void 0 === n ? void 0 : n.toString()) === (null === (a = s.editedTimestamp) || void 0 === a ? void 0 : a.toString())
             }
-            var S = i.memo(function(e) {
+            var h = i.memo(function(e) {
                 var t;
                 let {
                     className: n,
@@ -465,14 +465,14 @@
                     children: l,
                     content: u,
                     onUpdate: A,
-                    contentRef: S,
-                    asPartialPreview: h
-                } = e, I = s.isEdited(), T = s.state === m.MessageStates.SEND_FAILED, y = s.state === m.MessageStates.SENDING, M = s.isCommandType(), v = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), _ = i.useRef(!1);
+                    contentRef: h,
+                    asPartialPreview: S
+                } = e, I = s.isEdited(), T = s.state === m.MessageStates.SEND_FAILED, y = s.state === m.MessageStates.SENDING, M = s.isCommandType(), v = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), x = i.useRef(!1);
                 return i.useLayoutEffect(() => {
-                    _.current ? null != A && A() : _.current = !0
+                    x.current ? null != A && A() : x.current = !0
                 }, [A, s.content, u, v, l]), (0, a.jsxs)("div", {
                     id: (0, c.getMessageContentId)(s),
-                    ref: S,
+                    ref: h,
                     className: r(n, g.markup, {
                         [p.messageContent]: !0,
                         [p.isSending]: y && !M,
@@ -480,7 +480,7 @@
                         [p.isFailed]: T
                     }),
                     children: [null != l ? l : E(s, u, {
-                        asPartialPreview: h
+                        asPartialPreview: S
                     }), I && null != s.editedTimestamp && (0, a.jsxs)(a.Fragment, {
                         children: [" ", (0, a.jsx)(d.default, {
                             timestamp: s.editedTimestamp,
@@ -522,11 +522,11 @@
                         isInline: g = !0,
                         id: p,
                         isEdited: E = !1
-                    } = e, A = (0, o.accessibilityLabelCalendarFormat)(d), S = i ? (0, o.dateFormat)(d, "LT") : (0, o.calendarFormat)(d), h = i ? (0, l.default)(S) : null, I = E ? u.default.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
+                    } = e, A = (0, o.accessibilityLabelCalendarFormat)(d), h = i ? (0, o.dateFormat)(d, "LT") : (0, o.calendarFormat)(d), S = i ? (0, l.default)(h) : null, I = E ? u.default.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
                         timeFormatted: A
                     }) : A;
                     return (0, a.jsx)("span", {
-                        className: s(n, h, {
+                        className: s(n, S, {
                             [c.timestamp]: !0,
                             [c.timestampVisibleOnHover]: m,
                             [c.timestampInline]: g,
@@ -546,7 +546,7 @@
                                         className: c.separator,
                                         "aria-hidden": !0,
                                         children: i ? "[" : " — "
-                                    }), S, i && (0, a.jsxs)("i", {
+                                    }), h, i && (0, a.jsxs)("i", {
                                         className: c.separator,
                                         "aria-hidden": !0,
                                         children: ["]", " "]
@@ -561,7 +561,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 renderSystemTag: function() {
-                    return u
+                    return o
                 }
             });
             var a = n("37983");
@@ -569,26 +569,25 @@
             var i = n("25116"),
                 s = n("730541"),
                 r = n("79798"),
-                l = n("680894"),
-                o = n("741566");
+                l = n("741566");
 
-            function u(e) {
+            function o(e) {
                 let t, {
                     message: n,
-                    channel: u,
-                    user: c,
-                    compact: d,
-                    isRepliedMessage: m,
-                    hideIcon: f = !1,
-                    children: g
+                    channel: o,
+                    user: u,
+                    compact: c,
+                    isRepliedMessage: d,
+                    hideIcon: m = !1,
+                    children: f
                 } = e;
-                return ((null == n ? void 0 : n.isSystemDM()) ? t = r.default.Types.SYSTEM_DM : null != n && (0, i.default)(n) ? t = (0, s.isPublicSystemMessage)(n) ? r.default.Types.OFFICIAL : r.default.Types.SERVER : (null == c ? void 0 : c.id) === l.CLYDE_AI_USER_ID ? t = r.default.Types.AI : (null == c ? void 0 : c.bot) ? t = r.default.Types.BOT : null != u && u.isForumPost() && u.ownerId === (null == c ? void 0 : c.id) && !m && (t = r.default.Types.ORIGINAL_POSTER), null == t) ? null : (0, a.jsx)(r.default, {
-                    className: d ? o.botTagCompact : o.botTagCozy,
+                return ((null == n ? void 0 : n.isSystemDM()) ? t = r.default.Types.SYSTEM_DM : null != n && (0, i.default)(n) ? t = (0, s.isPublicSystemMessage)(n) ? r.default.Types.OFFICIAL : r.default.Types.SERVER : (null == u ? void 0 : u.bot) ? t = r.default.Types.BOT : null != o && o.isForumPost() && o.ownerId === (null == u ? void 0 : u.id) && !d && (t = r.default.Types.ORIGINAL_POSTER), null == t) ? null : (0, a.jsx)(r.default, {
+                    className: c ? l.botTagCompact : l.botTagCozy,
                     type: t,
-                    verified: null == c ? void 0 : c.isVerifiedBot(),
-                    hideIcon: f,
+                    verified: null == u ? void 0 : u.isVerifiedBot(),
+                    hideIcon: m,
                     useRemSizes: !0,
-                    children: g
+                    children: f
                 })
             }
         },
@@ -615,15 +614,15 @@
                 p = n("238956"),
                 E = n("506885"),
                 A = n("79798"),
-                S = n("315102"),
-                h = n("741566");
+                h = n("315102"),
+                S = n("741566");
 
             function I(e) {
                 let {
                     compact: t
                 } = e;
                 return (0, s.jsx)(A.default, {
-                    className: t ? h.botTagCompact : h.botTagCozy,
+                    className: t ? S.botTagCompact : S.botTagCozy,
                     type: A.default.Types.REMIX,
                     useRemSizes: !0
                 })
@@ -640,8 +639,8 @@
                         className: y,
                         onClick: M,
                         onContextMenu: v,
-                        onPopoutRequestClose: _,
-                        renderPopout: x,
+                        onPopoutRequestClose: x,
+                        renderPopout: _,
                         renderRemixTag: N = !1,
                         decorations: L
                     } = e,
@@ -652,21 +651,21 @@
                         colorRoleName: k
                     } = n,
                     j = null != a.messageReference && null != a.webhookId,
-                    D = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
-                    w = (0, p.useCanSeeRemixBadge)(),
+                    w = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
+                    D = (0, p.useCanSeeRemixBadge)(),
                     P = {
-                        className: h.username,
-                        style: "username" === D && null != C ? {
+                        className: S.username,
+                        style: "username" === w && null != C ? {
                             color: C
                         } : void 0,
                         onClick: M,
                         onContextMenu: v,
                         children: (A ? "@" : "") + R
                     };
-                t = null != x && null != T ? (0, s.jsx)(d.Popout, {
+                t = null != _ && null != T ? (0, s.jsx)(d.Popout, {
                     preload: j ? void 0 : function() {
                         let e = null != i ? i : a.author;
-                        return (0, E.default)(e.id, null != n.guildMemberAvatar && null != b ? (0, S.getGuildMemberAvatarURLSimple)({
+                        return (0, E.default)(e.id, null != n.guildMemberAvatar && null != b ? (0, h.getGuildMemberAvatarURLSimple)({
                             guildId: b,
                             userId: e.id,
                             avatar: n.guildMemberAvatar,
@@ -676,10 +675,10 @@
                             channelId: a.channel_id
                         })
                     },
-                    renderPopout: x,
+                    renderPopout: _,
                     shouldShow: T,
                     position: u.isMobile ? "window_center" : "right",
-                    onRequestClose: _,
+                    onRequestClose: x,
                     children: e => {
                         let {
                             onClick: t,
@@ -689,7 +688,7 @@
                             tag: "span",
                             ...n,
                             ...P,
-                            className: o(P.className, h.clickable, y)
+                            className: o(P.className, S.clickable, y)
                         })
                     }
                 }) : (0, s.jsx)(d.Clickable, {
@@ -701,13 +700,13 @@
                 return (0, s.jsxs)(s.Fragment, {
                     children: [null != F && l ? (0, s.jsxs)(s.Fragment, {
                         children: [" ", F, " "]
-                    }) : null, "dot" === D ? (0, s.jsx)(d.RoleDot, {
+                    }) : null, "dot" === w ? (0, s.jsx)(d.RoleDot, {
                         color: C,
                         name: k,
-                        className: h.roleDot
+                        className: S.roleDot
                     }) : null, t, null != B ? (0, s.jsx)(s.Fragment, {
                         children: B
-                    }) : null, null == F || l ? null : F, null != a && (0, g.default)(a) && w && N ? (0, s.jsx)(I, {}) : null]
+                    }) : null, null == F || l ? null : F, null != a && (0, g.default)(a) && D && N ? (0, s.jsx)(I, {}) : null]
                 })
             }(a = i || (i = {}))[a.SYSTEM_TAG = 0] = "SYSTEM_TAG", a[a.BADGES = 1] = "BADGES"
         }
