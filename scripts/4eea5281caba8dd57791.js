@@ -18,8 +18,8 @@
                 i = a("446674"),
                 r = a("77078"),
                 o = a("442939"),
-                d = a("730859"),
-                u = a("697218"),
+                u = a("730859"),
+                d = a("697218"),
                 c = a("953109"),
                 m = a("449008"),
                 h = a("782340"),
@@ -31,26 +31,26 @@
                     } = e, {
                         application: l,
                         clip_participants: f,
-                        title: _
-                    } = t, A = (0, o.useGetOrFetchApplication)(null == l ? void 0 : l.id), x = (0, i.useStateFromStoresArray)([u.default], () => {
+                        title: A
+                    } = t, _ = (0, o.useGetOrFetchApplication)(null == l ? void 0 : l.id), x = (0, i.useStateFromStoresArray)([d.default], () => {
                         var e;
                         return null !== (e = null == f ? void 0 : f.map(e => {
                             let {
                                 id: t
                             } = e;
-                            return u.default.getUser(t)
+                            return d.default.getUser(t)
                         }).filter(m.isNotNullish)) && void 0 !== e ? e : []
-                    }), p = null == A ? void 0 : A.name, I = s(t.clip_created_at).fromNow();
+                    }), p = null == _ ? void 0 : _.name, I = s(t.clip_created_at).fromNow();
                     return null == t.clip_created_at ? null : (0, n.jsxs)("div", {
                         className: g.container,
                         children: [(0, n.jsx)(c.default, {
-                            game: A
+                            game: _
                         }), (0, n.jsxs)("div", {
                             className: g.textSection,
-                            children: [null != _ && "" !== _ ? (0, n.jsx)(r.Text, {
+                            children: [null != A && "" !== A ? (0, n.jsx)(r.Text, {
                                 variant: "text-md/semibold",
                                 color: "interactive-active",
-                                children: _
+                                children: A
                             }) : (0, n.jsx)(r.Text, {
                                 variant: "text-md/semibold",
                                 color: "text-muted",
@@ -65,7 +65,7 @@
                                 color: "text-muted",
                                 className: g.subtitle
                             })]
-                        }), null != f && f.length > 0 && (0, n.jsx)(d.default, {
+                        }), null != f && f.length > 0 && (0, n.jsx)(u.default, {
                             maxUsers: 4,
                             users: x,
                             className: g.facePile,
@@ -87,8 +87,8 @@
                 i = a.n(s),
                 r = a("917351"),
                 o = a.n(r),
-                d = a("77078"),
-                u = a("272030"),
+                u = a("77078"),
+                d = a("272030"),
                 c = a("427302"),
                 m = a("158998"),
                 h = a("393724");
@@ -100,18 +100,18 @@
                     users: r,
                     guildId: g,
                     onFocus: f
-                } = e, [_, A] = l.useState(!1);
+                } = e, [A, _] = l.useState(!1);
 
                 function x() {
-                    return (0, n.jsx)(d.Dialog, {
+                    return (0, n.jsx)(u.Dialog, {
                         className: h.popoutWrapper,
-                        children: (0, n.jsx)(d.Scroller, {
+                        children: (0, n.jsx)(u.Scroller, {
                             className: h.scroller,
                             children: r.map(e => (0, n.jsx)(c.default, {
                                 guildId: g,
                                 user: e,
                                 nick: m.default.getName(e),
-                                onContextMenu: t => (0, u.openContextMenuLazy)(t, async () => {
+                                onContextMenu: t => (0, d.openContextMenuLazy)(t, async () => {
                                     let {
                                         default: t
                                     } = await a.el("406784").then(a.bind(a, "406784"));
@@ -120,7 +120,7 @@
                                         user: e
                                     })
                                 }, {
-                                    onClose: () => A(!1)
+                                    onClose: () => _(!1)
                                 })
                             }, e.id))
                         })
@@ -131,28 +131,28 @@
                     children: function() {
                         let e = o(r).take(s).map(e => {
                                 let t = m.default.getName(e);
-                                return (0, n.jsx)(d.TooltipContainer, {
+                                return (0, n.jsx)(u.TooltipContainer, {
                                     text: t,
                                     className: h.avatar,
-                                    children: (0, n.jsx)(d.Avatar, {
+                                    children: (0, n.jsx)(u.Avatar, {
                                         src: e.getAvatarURL(g, 24),
                                         "aria-label": t,
-                                        size: d.AvatarSizes.SIZE_24
+                                        size: u.AvatarSizes.SIZE_24
                                     })
                                 }, e.id)
                             }).value(),
                             t = r.length - s;
-                        return t > 0 && (e[e.length - 1] = (0, n.jsx)(d.Popout, {
+                        return t > 0 && (e[e.length - 1] = (0, n.jsx)(u.Popout, {
                             renderPopout: x,
-                            shouldShow: _,
+                            shouldShow: A,
                             position: "bottom",
-                            onRequestClose: () => A(!1),
-                            children: () => (0, n.jsxs)(d.Button, {
+                            onRequestClose: () => _(!1),
+                            children: () => (0, n.jsxs)(u.Button, {
                                 className: i(h.avatar, h.overflow),
                                 onFocus: f,
-                                onClick: () => A(!0),
-                                look: d.Button.Looks.BLANK,
-                                size: d.Button.Sizes.NONE,
+                                onClick: () => _(!0),
+                                look: u.Button.Looks.BLANK,
+                                size: u.Button.Sizes.NONE,
                                 children: ["+", t + 1]
                             })
                         }, "overflow")), e
@@ -214,7 +214,7 @@
                     return o
                 },
                 logVoiceMessagePlaybackFailed: function() {
-                    return d
+                    return u
                 }
             });
             var n, l, s = a("599110"),
@@ -239,7 +239,7 @@
                 })
             }
 
-            function d(e, t) {
+            function u(e, t) {
                 s.default.track(i.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_FAILED, {
                     message_id: e,
                     error_message: t
@@ -265,15 +265,15 @@
                 i = a.n(s),
                 r = a("77078"),
                 o = a("963119"),
-                d = a("467475"),
-                u = a("651693"),
+                u = a("467475"),
+                d = a("651693"),
                 c = a("605160"),
                 m = a("903962"),
                 h = a("923873"),
                 g = a("165405"),
                 f = a("410889"),
-                _ = a("725962"),
-                A = a("505684"),
+                A = a("725962"),
+                _ = a("505684"),
                 x = a("328620"),
                 p = a("522049"),
                 I = a("945330"),
@@ -293,7 +293,7 @@
                     width: n,
                     height: l
                 } = e;
-                if (t && null != n && n > 0 && null != l && l > 0) return (0, u.isImageFile)(a) ? "IMAGE" : (0, u.isVideoFile)(a) && null != e.proxy_url ? "VIDEO" : "INVALID";
+                if (t && null != n && n > 0 && null != l && l > 0) return (0, d.isImageFile)(a) ? "IMAGE" : (0, d.isVideoFile)(a) && null != e.proxy_url ? "VIDEO" : "INVALID";
                 if (null != t && S.test(a) && null != e.url) return "AUDIO";
                 if (null != e.url && (0, m.isPlaintextPreviewableFile)(a)) return "PLAINTEXT_PREVIEW";
                 return "OTHER"
@@ -303,11 +303,11 @@
                         downloadURL: l,
                         downloadMimeType: s,
                         onRemoveAttachment: o,
-                        isAttachmentMediaType: d
+                        isAttachmentMediaType: u
                     } = e;
                     return (null != l && null != s && (t = (0, n.jsx)(r.Tooltip, {
                         text: T.default.Messages.DOWNLOAD,
-                        children: e => (0, n.jsx)(_.default, {
+                        children: e => (0, n.jsx)(A.default, {
                             ...e,
                             target: "_blank",
                             rel: "noreferrer noopener",
@@ -336,7 +336,7 @@
                         })
                     })), null == a && null == t) ? null : (0, n.jsxs)("div", {
                         className: i(y.hoverButtonGroup, {
-                            [y.nonMediaAttachment]: !d
+                            [y.nonMediaAttachment]: !u
                         }),
                         children: [t, a]
                     })
@@ -347,11 +347,11 @@
                         attachment: a,
                         inlineMedia: s,
                         autoPlayGif: o,
-                        canRemoveAttachment: u,
+                        canRemoveAttachment: d,
                         onRemoveAttachment: c,
                         onClick: m,
-                        onContextMenu: _,
-                        onPlay: A,
+                        onContextMenu: A,
+                        onPlay: _,
                         renderImageComponent: M,
                         renderVideoComponent: S,
                         renderAudioComponent: j,
@@ -372,7 +372,7 @@
                         height: U,
                         description: z,
                         spoiler: X
-                    } = a, Y = O(a, s), [q, J] = l.useState(!1), Q = (0, d.default)(t.getChannelId()), {
+                    } = a, Y = O(a, s), [q, J] = l.useState(!1), Q = (0, u.default)(t.getChannelId()), {
                         enabled: Z
                     } = h.default.useExperiment({
                         location: "MessageAttachment"
@@ -384,8 +384,8 @@
                         if (t.hasFlag(N.MessageFlags.IS_VOICE_MESSAGE)) {
                             var s;
                             (0, g.logVoiceMessagePlaybackStarted)(t.id, null !== (s = a.duration_secs) && void 0 !== s ? s : null, n, t.author.id)
-                        } else null == A || A(e, n, l)
-                    }, [t, a.duration_secs, A]), ea = l.useCallback((e, n) => {
+                        } else null == _ || _(e, n, l)
+                    }, [t, a.duration_secs, _]), ea = l.useCallback((e, n) => {
                         var l;
                         t.hasFlag(N.MessageFlags.IS_VOICE_MESSAGE) && (0, g.logVoiceMessagePlaybackEnded)(t.id, null !== (l = a.duration_secs) && void 0 !== l ? l : null, e, t.author.id, n)
                     }, [t, a.duration_secs]), en = l.useCallback(e => {
@@ -407,11 +407,11 @@
                             return !q && (0, n.jsx)(b, {
                                 downloadURL: e ? a.url : void 0,
                                 downloadMimeType: e ? $ : void 0,
-                                onRemoveAttachment: u ? ee : void 0,
+                                onRemoveAttachment: d ? ee : void 0,
                                 isAttachmentMediaType: K
                             })
                         }
-                        return u && (0, n.jsx)(r.Clickable, {
+                        return d && (0, n.jsx)(r.Clickable, {
                             className: X ? y.spoilerRemoveAttachmentButton : y.removeAttachmentButton,
                             focusProps: {
                                 offset: {
@@ -425,7 +425,7 @@
                                 height: 16
                             })
                         })
-                    }, [B, u, X, Y, K, q, a, $, ee, W, U, H, c, Q]), es = l.useCallback(() => {
+                    }, [B, d, X, Y, K, q, a, $, ee, W, U, H, c, Q]), es = l.useCallback(() => {
                         var e;
                         return (0, E.hasFlag)(null !== (e = a.flags) && void 0 !== e ? e : 0, N.MessageAttachmentFlags.IS_CLIP) ? (0, n.jsxs)(r.TooltipContainer, {
                             text: T.default.Messages.CLIPS_BETA_TAG_HOVER,
@@ -451,7 +451,7 @@
                                     height: U,
                                     autoPlay: o && !k,
                                     onClick: m,
-                                    onContextMenu: _,
+                                    onContextMenu: A,
                                     shouldHideMediaOptions: Q,
                                     renderAccessory: e,
                                     renderAdjacentContent: el,
@@ -480,7 +480,7 @@
                                 width: W,
                                 height: U,
                                 onClick: m,
-                                onContextMenu: _,
+                                onContextMenu: A,
                                 renderOverlayContent: es,
                                 renderAdjacentContent: el,
                                 naturalWidth: W,
@@ -495,7 +495,7 @@
                                 maxHeight: V,
                                 useFullWidth: H,
                                 mimeType: $,
-                                onPlay: A,
+                                onPlay: _,
                                 downloadable: !Q,
                                 mediaPlayerClassName: R ? y.noBorderBottomRadius : void 0
                             });
@@ -521,7 +521,7 @@
                                 attachment: a,
                                 className: D,
                                 onClick: m,
-                                onContextMenu: _,
+                                onContextMenu: A,
                                 renderAdjacentContent: el
                             });
                         case "OTHER":
@@ -530,7 +530,7 @@
                                 filename: a.filename,
                                 size: a.size,
                                 onClick: m,
-                                onContextMenu: _,
+                                onContextMenu: A,
                                 className: D,
                                 renderAdjacentContent: el
                             });
@@ -544,26 +544,26 @@
                     className: a,
                     attachment: s,
                     message: r,
-                    inlineMedia: d,
-                    useFullWidth: u,
+                    inlineMedia: u,
+                    useFullWidth: d,
                     mediaLayoutType: m,
                     canRemoveAttachment: h,
                     isSingleMosaicItem: g,
                     footer: f,
-                    ..._
+                    ...A
                 } = e, {
                     width: x,
                     height: p
-                } = s, I = (0, o.useShouldRedactExplicitContent)(r.channel_id, r.author.id), M = (0, c.getObscureReason)(s, I), [E, N] = l.useState(void 0 !== M), T = m === C.MediaLayoutType.MOSAIC, S = !T && (null != x && x < 200 || null != p && p < 50), b = O(s, d);
+                } = s, I = (0, o.useShouldRedactExplicitContent)(r.channel_id, r.author.id), M = (0, c.getObscureReason)(s, I), [E, N] = l.useState(void 0 !== M), T = m === C.MediaLayoutType.MOSAIC, S = !T && (null != x && x < 200 || null != p && p < 50), b = O(s, u);
                 let D = "IMAGE" === (t = b) || "VIDEO" === t,
-                    w = j(O(s, d)),
+                    w = j(O(s, u)),
                     F = function() {
                         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                         return (0, n.jsx)(L, {
-                            ..._,
+                            ...A,
                             attachment: s,
                             message: r,
-                            inlineMedia: d,
+                            inlineMedia: u,
                             hiddenSpoilers: e,
                             canRemoveAttachment: h,
                             className: i(a, y.attachmentContentItem, {
@@ -576,21 +576,21 @@
                             focusable: !e,
                             mediaLayoutType: m,
                             noBorderBottomRadius: null != f,
-                            useFullWidth: u,
+                            useFullWidth: d,
                             isAttachmentMediaType: w
                         })
                     };
-                return (0, n.jsxs)("div", {
-                    children: [(0, n.jsx)("div", {
+                return (0, n.jsx)(n.Fragment, {
+                    children: (0, n.jsxs)("div", {
                         className: i(y.messageAttachment, {
                             [y.messageAttachmentNoJustify]: D,
-                            [y.messageAttachmentFullWidth]: u,
+                            [y.messageAttachmentFullWidth]: d,
                             [y.messageAttachmentMediaMosaic]: T,
                             [y.hideOverflow]: T && w,
-                            [y.noBorderBottomRadius]: null != f
+                            [y.messageAttachmentWithFooter]: null != f
                         }),
-                        children: null != M ? (0, n.jsx)(A.default, {
-                            type: A.default.Types.ATTACHMENT,
+                        children: [null != M ? (0, n.jsx)(_.default, {
+                            type: _.default.Types.ATTACHMENT,
                             inline: S,
                             reason: M,
                             isSingleMosaicItem: g,
@@ -623,8 +623,8 @@
                             }),
                             onToggleObscurity: () => N(e => !e),
                             children: e => F(e)
-                        }) : F()
-                    }), f]
+                        }) : F(), f]
+                    })
                 })
             }
         },
@@ -641,21 +641,21 @@
                 i = a.n(s),
                 r = a("627445"),
                 o = a.n(r),
-                d = a("917351"),
-                u = a.n(d),
+                u = a("917351"),
+                d = a.n(u),
                 c = a("446674"),
                 m = a("411723"),
                 h = a("42203"),
                 g = a("328620"),
                 f = a("568734"),
-                _ = a("994402"),
-                A = a("719347"),
+                A = a("994402"),
+                _ = a("719347"),
                 x = a("49111"),
                 p = a("655793");
-            let I = Math.round((A.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
-                M = Math.round((A.MEDIA_MOSAIC_MAX_WIDTH - 4) / 2),
-                E = Math.round((A.MEDIA_MOSAIC_MAX_HEIGHT - 4) / 2),
-                v = Math.round(2 * (A.MEDIA_MOSAIC_MAX_WIDTH - 4) / 3),
+            let I = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
+                M = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 4) / 2),
+                E = Math.round((_.MEDIA_MOSAIC_MAX_HEIGHT - 4) / 2),
+                v = Math.round(2 * (_.MEDIA_MOSAIC_MAX_WIDTH - 4) / 3),
                 C = v / 2,
                 N = e => {
                     let {
@@ -813,16 +813,16 @@
                     let {
                         props: t,
                         attachmentKind: a,
-                        maxWidth: l = A.MEDIA_MOSAIC_MAX_WIDTH,
-                        maxHeight: s = A.MEDIA_MOSAIC_MAX_HEIGHT,
+                        maxWidth: l = _.MEDIA_MOSAIC_MAX_WIDTH,
+                        maxHeight: s = _.MEDIA_MOSAIC_MAX_HEIGHT,
                         useFullWidth: i = !0,
                         isSingleItem: r = !1,
                         footer: o
-                    } = e, d = {
+                    } = e, u = {
                         ...t,
                         ..."IMAGE" === a && b(t.className),
                         ..."VIDEO" === a && L(t.className),
-                        mediaLayoutType: A.MediaLayoutType.MOSAIC,
+                        mediaLayoutType: _.MediaLayoutType.MOSAIC,
                         maxWidth: l,
                         maxHeight: s,
                         useFullWidth: i,
@@ -830,8 +830,8 @@
                     };
                     return (0, n.jsx)(g.GIFAccessoryContext.Provider, {
                         value: t.gifFavoriteButton,
-                        children: (0, n.jsx)(_.default, {
-                            ...d,
+                        children: (0, n.jsx)(A.default, {
+                            ...u,
                             footer: o
                         })
                     })
@@ -842,13 +842,13 @@
                 } = e, a = t[0].message.channel_id, s = (0, c.useStateFromStores)([h.default], () => {
                     var e;
                     return null === (e = h.default.getBasicChannel(a)) || void 0 === e ? void 0 : e.guild_id
-                }), i = l.useMemo(() => new Map(t.map(e => [e.attachment.id, (0, _.getAttachmentKind)(e.attachment, e.inlineMedia)])), [t]), r = l.useCallback(e => {
+                }), i = l.useMemo(() => new Map(t.map(e => [e.attachment.id, (0, A.getAttachmentKind)(e.attachment, e.inlineMedia)])), [t]), r = l.useCallback(e => {
                     var t;
                     return null !== (t = i.get(e)) && void 0 !== t ? t : "INVALID"
-                }, [i]), [o, d] = l.useMemo(() => u.partition(t, e => {
+                }, [i]), [o, u] = l.useMemo(() => d.partition(t, e => {
                     var t;
                     return (0, f.hasFlag)(null !== (t = e.attachment.flags) && void 0 !== t ? t : 0, x.MessageAttachmentFlags.IS_CLIP)
-                }), [t]), [g, A] = l.useMemo(() => u.partition(d, e => (0, _.isMediaAttachment)(r(e.attachment.id))), [d, r]);
+                }), [t]), [g, _] = l.useMemo(() => d.partition(u, e => (0, A.isMediaAttachment)(r(e.attachment.id))), [u, r]);
                 return (0, n.jsxs)(n.Fragment, {
                     children: [g.length > 0 && (0, n.jsx)("div", {
                         className: p.mediaAttachmentsContainer,
@@ -856,9 +856,9 @@
                             mediaAttachments: g,
                             getAttachmentKind: r
                         })
-                    }), A.length > 0 && (0, n.jsx)("div", {
+                    }), _.length > 0 && (0, n.jsx)("div", {
                         className: p.nonMediaAttachmentsContainer,
-                        children: A.map(e => (0, n.jsx)("div", {
+                        children: _.map(e => (0, n.jsx)("div", {
                             className: p.nonMediaAttachmentItem,
                             children: (0, n.jsx)(D, {
                                 props: e,
