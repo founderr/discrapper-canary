@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["38429"], {
+    ["92544"], {
         283383: function(e, t, n) {
             "use strict";
             e.exports = n.p + "a3ae1eb336230b986e2b.jpg"
@@ -75,6 +75,52 @@
         710672: function(e, t, n) {
             "use strict";
             e.exports = n.p + "a1d7e3a6eaf0f8585fca.svg"
+        },
+        820542: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                categoryCollapse: function() {
+                    return a
+                },
+                categoryExpand: function() {
+                    return s
+                },
+                categoryCollapseAll: function() {
+                    return i
+                },
+                categoryExpandAll: function() {
+                    return r
+                }
+            });
+            var l = n("913144");
+
+            function a(e) {
+                l.default.dispatch({
+                    type: "CATEGORY_COLLAPSE",
+                    id: e
+                })
+            }
+
+            function s(e) {
+                l.default.dispatch({
+                    type: "CATEGORY_EXPAND",
+                    id: e
+                })
+            }
+
+            function i(e) {
+                l.default.dispatch({
+                    type: "CATEGORY_COLLAPSE_ALL",
+                    guildId: e
+                })
+            }
+
+            function r(e) {
+                l.default.dispatch({
+                    type: "CATEGORY_EXPAND_ALL",
+                    guildId: e
+                })
+            }
         },
         789207: function(e, t, n) {
             "use strict";
@@ -1248,7 +1294,7 @@
                             },
                             oldFormErrors: !0
                         }).then(e => {
-                            if (null == e.body || "fff3f3ad78b85e701ae4680f635cb3ff9433f03c" === e.body.hash) return this._handleUpdateNotAvailable();
+                            if (null == e.body || "f9f971a4ec0d506333ef6ad9b618b4fb4674c3de" === e.body.hash) return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
                             if (Date.now() - f > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
@@ -8678,6 +8724,138 @@
                 })
             })
         },
+        208021: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return d
+                }
+            });
+            var l = n("913144"),
+                a = n("819689"),
+                s = n("115718"),
+                i = n("347895"),
+                r = n("341329"),
+                o = n("582713"),
+                u = n("724210"),
+                d = {
+                    openPrivateChannelAsSidebar(e) {
+                        let {
+                            channelId: t,
+                            messageId: n,
+                            baseChannelId: s,
+                            hasSingleMessageRequest: i
+                        } = e;
+                        l.default.dispatch({
+                            type: "SIDEBAR_VIEW_CHANNEL",
+                            sidebarType: o.SidebarType.VIEW_MESSAGE_REQUEST,
+                            baseChannelId: s,
+                            channelId: t,
+                            details: {
+                                type: o.SidebarOpenDetailsType.MESSAGE_REQUEST,
+                                hasSingleMessageRequest: i
+                            }
+                        }), null != n ? a.default.jumpToMessage({
+                            channelId: t,
+                            messageId: n,
+                            flash: !0
+                        }) : r.default.fetchMessages({
+                            channelId: t
+                        })
+                    },
+                    openChannelAsSidebar(e) {
+                        let {
+                            guildId: t,
+                            channelId: n,
+                            baseChannelId: i,
+                            flash: u = !0,
+                            details: d
+                        } = e;
+                        l.default.dispatch({
+                            type: "SIDEBAR_VIEW_CHANNEL",
+                            sidebarType: o.SidebarType.VIEW_CHANNEL,
+                            guildId: t,
+                            baseChannelId: i,
+                            channelId: n,
+                            details: d
+                        });
+                        let c = null == d ? void 0 : d.initialMessageId;
+                        null != c ? a.default.jumpToMessage({
+                            channelId: n,
+                            messageId: c,
+                            flash: u,
+                            jumpType: s.JumpTypes.INSTANT
+                        }) : r.default.fetchMessages({
+                            guildId: t,
+                            channelId: n
+                        })
+                    },
+                    openResourceChannelAsSidebar(e) {
+                        let {
+                            guildId: t,
+                            channelId: n
+                        } = e;
+                        null != t && ((0, i.selectHomeResourceChannel)(t, n, !1), l.default.dispatch({
+                            type: "SIDEBAR_VIEW_CHANNEL",
+                            sidebarType: o.SidebarType.VIEW_CHANNEL,
+                            guildId: t,
+                            baseChannelId: u.StaticChannelRoute.GUILD_HOME,
+                            channelId: n
+                        }))
+                    },
+                    openThreadAsSidebar(e) {
+                        let {
+                            guildId: t,
+                            baseChannelId: n,
+                            channelId: i,
+                            flash: u = !0,
+                            details: d
+                        } = e;
+                        l.default.dispatch({
+                            type: "SIDEBAR_VIEW_CHANNEL",
+                            sidebarType: o.SidebarType.VIEW_THREAD,
+                            baseChannelId: n,
+                            channelId: i,
+                            details: d
+                        }), (null == d ? void 0 : d.initialMessageId) != null ? a.default.jumpToMessage({
+                            channelId: i,
+                            messageId: d.initialMessageId,
+                            flash: u,
+                            jumpType: s.JumpTypes.INSTANT
+                        }) : r.default.fetchMessages({
+                            guildId: t,
+                            channelId: i
+                        })
+                    },
+                    closeChannelSidebar(e) {
+                        l.default.dispatch({
+                            type: "SIDEBAR_CLOSE",
+                            baseChannelId: e
+                        })
+                    },
+                    openGuildSidebar(e) {
+                        let {
+                            guildId: t,
+                            baseChannelId: n,
+                            sidebarType: a,
+                            details: s
+                        } = e;
+                        l.default.dispatch({
+                            type: "SIDEBAR_VIEW_GUILD",
+                            sidebarType: a,
+                            baseChannelId: n,
+                            guildId: t,
+                            details: s
+                        })
+                    },
+                    closeGuildSidebar(e) {
+                        l.default.dispatch({
+                            type: "SIDEBAR_CLOSE_GUILD",
+                            guildId: e
+                        })
+                    }
+                }
+        },
         414833: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -10272,6 +10450,53 @@
                         children: t
                     }) : null
                 }
+        },
+        822332: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return f
+                }
+            });
+            var l = n("37983"),
+                a = n("884691"),
+                s = n("414456"),
+                i = n.n(s),
+                r = n("77078"),
+                o = n("782340"),
+                u = n("440318");
+            let d = {
+                BLOCK: u.block,
+                INLINE: u.inline
+            };
+            class c extends a.PureComponent {
+                render() {
+                    let {
+                        children: e,
+                        className: t,
+                        textClassName: n,
+                        type: a = d.BLOCK,
+                        style: s
+                    } = this.props;
+                    return (0, l.jsxs)("div", {
+                        className: i(t, a),
+                        style: s,
+                        children: [(0, l.jsxs)(r.Text, {
+                            variant: "text-sm/bold",
+                            tag: "div",
+                            color: "text-positive",
+                            className: u.pro,
+                            children: [o.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
+                        }), (0, l.jsx)(r.Text, {
+                            className: i(u.tip, n),
+                            variant: "text-sm/normal",
+                            children: e
+                        })]
+                    })
+                }
+            }
+            c.Types = d;
+            var f = c
         },
         471654: function(e, t, n) {
             "use strict";
