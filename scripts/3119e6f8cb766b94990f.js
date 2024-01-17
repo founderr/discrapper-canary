@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["12559"], {
+    ["96328"], {
         448105: function(e, t, n) {
             "use strict";
             e.exports = function(e, t) {
@@ -37,10 +37,10 @@
                     return I
                 },
                 requestHarvest: function() {
-                    return C
+                    return N
                 },
                 setPendingAvatar: function() {
-                    return N
+                    return C
                 },
                 setPendingGlobalNameName: function() {
                     return O
@@ -198,14 +198,14 @@
                 })
             }
 
-            function C() {
+            function N() {
                 return l.default.post({
                     url: f.Endpoints.USER_HARVEST,
                     oldFormErrors: !0
                 })
             }
 
-            function N(e) {
+            function C(e) {
                 u.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
                     avatar: e
@@ -647,6 +647,21 @@
                 }, f)
             }
         },
+        242757: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                canViewInviteModal: function() {
+                    return i
+                }
+            });
+            var l = n("49111");
+
+            function i(e, t, n, i) {
+                let a = null != n ? n : t,
+                    u = null != a && e.can(l.Permissions.CREATE_INSTANT_INVITE, a);
+                return u || null != t && null != t.vanityURLCode || (null == i ? void 0 : i.invite_code) != null
+            }
+        },
         252931: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -1018,10 +1033,10 @@
                     return I
                 },
                 moveSelfToAudience: function() {
-                    return C
+                    return N
                 },
                 setUserSuppress: function() {
-                    return N
+                    return C
                 },
                 moveUserToAudience: function() {
                     return O
@@ -1102,7 +1117,7 @@
                 })
             }
 
-            function C(e) {
+            function N(e) {
                 let t = null == e ? void 0 : e.getGuildId();
                 return i(null != t, "This channel cannot be guildless."), u.default.patch({
                     url: A.Endpoints.UPDATE_VOICE_STATE(t),
@@ -1115,7 +1130,7 @@
                 })
             }
 
-            function N(e, t, n) {
+            function C(e, t, n) {
                 let l = e.getGuildId();
                 return i(null != l, "This channel cannot be guildless."), u.default.patch({
                     url: A.Endpoints.UPDATE_VOICE_STATE(l, t),
@@ -1129,7 +1144,7 @@
             function O(e, t) {
                 if (null == t || null == e) return;
                 let n = t.getGuildId();
-                return i(null != n, "This channel cannot be guildless."), N(t, e.id, !0), u.default.patch({
+                return i(null != n, "This channel cannot be guildless."), C(t, e.id, !0), u.default.patch({
                     url: A.Endpoints.UPDATE_VOICE_STATE(n, e.id),
                     body: {
                         suppress: !0,
@@ -1343,13 +1358,13 @@
                     p = (0, i.useStateFromStores)([d.default], () => null != S ? d.default.getVoiceStateForChannel(S, e.id) : null, [S, e.id]),
                     g = (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.id,
                     I = (0, f.default)(),
-                    C = (0, i.useStateFromStores)([c.default], () => c.default.getPermissionsForUser(e.id, S), [S, e.id]),
-                    N = (0, s.useCanModerateRequestToSpeak)(S);
-                if (null == n || null == A || null == p || C.speaker) return null;
+                    N = (0, i.useStateFromStores)([c.default], () => c.default.getPermissionsForUser(e.id, S), [S, e.id]),
+                    C = (0, s.useCanModerateRequestToSpeak)(S);
+                if (null == n || null == A || null == p || N.speaker) return null;
                 let O = () => {
                     g ? (0, r.audienceAckRequestToSpeak)(n, !1) : (0, r.inviteUserToStage)(n, e.id)
                 };
-                return N ? (0, l.jsx)(a.MenuItem, {
+                return C ? (0, l.jsx)(a.MenuItem, {
                     id: "invite-speaker",
                     label: g ? _.default.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : _.default.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
                     action: O
@@ -1542,8 +1557,8 @@
                     g = (0, i.useStateFromStores)([d.default], () => d.default.isLocalSoundboardMuted(e)),
                     {
                         muted: I,
-                        deafened: C = !1,
-                        localVideoDisabled: N = !1,
+                        deafened: N = !1,
+                        localVideoDisabled: C = !1,
                         localVideoAutoDisabled: O = !1
                     } = (0, i.useStateFromStoresObject)([r.default], () => n ? {
                         muted: r.default.isSelfMute(t),
@@ -1567,10 +1582,10 @@
                                 });
                                 return
                             }
-                            let n = N ? S.VideoToggleState.MANUAL_ENABLED : S.VideoToggleState.DISABLED;
+                            let n = C ? S.VideoToggleState.MANUAL_ENABLED : S.VideoToggleState.DISABLED;
                             o.default.setDisableLocalVideo(e, n, t)
                         },
-                        checked: N,
+                        checked: C,
                         subtext: O ? (0, l.jsxs)("div", {
                             className: p.videoPaused,
                             children: [(0, l.jsx)(E.default, {
@@ -1607,7 +1622,7 @@
                     action: () => o.default.toggleSelfDeaf({
                         context: t
                     }),
-                    checked: C
+                    checked: N
                 }, "self-deafen"), m] : [(0, l.jsx)(a.MenuCheckboxItem, {
                     id: "mute",
                     label: A.default.Messages.SOUND_MUTE,
@@ -1683,10 +1698,10 @@
                     return I
                 },
                 setTryItOutAvatar: function() {
-                    return C
+                    return N
                 },
                 setTryItOutAvatarDecoration: function() {
-                    return N
+                    return C
                 },
                 setTryItOutBanner: function() {
                     return O
@@ -1800,14 +1815,14 @@
                 })
             }
 
-            function C(e) {
+            function N(e) {
                 i.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
                     avatar: e
                 }), f(c.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)
             }
 
-            function N(e) {
+            function C(e) {
                 i.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
                     avatarDecoration: e
