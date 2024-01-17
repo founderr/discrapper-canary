@@ -12603,7 +12603,7 @@
                 let {
                     media: t
                 } = e;
-                return (0, a.jsx)(u.Text, {
+                return (0, a.jsx)(u.Heading, {
                     variant: "text-md/medium",
                     children: t.text
                 })
@@ -12675,7 +12675,7 @@
                     message: t,
                     poll: n,
                     className: s
-                } = e, l = (0, f.useStyleClass)(n.containerStyle), u = function(e, t) {
+                } = e, l = (0, f.useStyleClass)(n.containerStyle), d = function(e, t) {
                     let n = {
                         answers: t.answers,
                         answersInteraction: t.answersInteraction,
@@ -12692,22 +12692,24 @@
                         ...n
                     })).otherwise(() => null)
                 }(0, n);
-                return null == u ? null : (0, a.jsxs)("div", {
+                return null == d ? null : (0, a.jsx)("div", {
                     className: i(_.container, l, s),
-                    children: [(0, a.jsx)(h, {
-                        media: n.question
-                    }), u, (0, a.jsxs)("div", {
-                        className: _.bottomBar,
-                        children: [(0, a.jsx)(T, {
-                            channelId: t.getChannelId(),
-                            messageId: t.id,
-                            action: n.secondaryAction
-                        }), (0, a.jsx)(T, {
-                            channelId: t.getChannelId(),
-                            messageId: t.id,
-                            action: n.primaryAction
+                    children: (0, a.jsxs)(u.HeadingLevel, {
+                        children: [(0, a.jsx)(h, {
+                            media: n.question
+                        }), d, (0, a.jsxs)("div", {
+                            className: _.bottomBar,
+                            children: [(0, a.jsx)(T, {
+                                channelId: t.getChannelId(),
+                                messageId: t.id,
+                                action: n.secondaryAction
+                            }), (0, a.jsx)(T, {
+                                channelId: t.getChannelId(),
+                                messageId: t.id,
+                                action: n.primaryAction
+                            })]
                         })]
-                    })]
+                    })
                 })
             }
 
