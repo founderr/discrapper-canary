@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["28028"], {
+    ["58963"], {
         991630: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -9,10 +9,10 @@
             }), n("222007");
             var a = n("37983"),
                 s = n("884691"),
-                r = n("414456"),
-                i = n.n(r),
-                l = n("587974"),
-                u = n("315102"),
+                i = n("414456"),
+                r = n.n(i),
+                u = n("587974"),
+                l = n("315102"),
                 d = n("524768"),
                 c = n("616674"),
                 o = n("363577");
@@ -21,7 +21,7 @@
                 let {
                     section: t,
                     isSelected: n,
-                    width: r,
+                    width: i,
                     height: m,
                     className: f,
                     selectable: _ = !1,
@@ -30,47 +30,47 @@
                     onMouseOver: S,
                     onMouseLeave: h,
                     ...p
-                } = e, [I, M] = s.useState(!1), v = s.useCallback(() => {
+                } = e, [I, M] = s.useState(!1), R = s.useCallback(() => {
                     M(!0), null == g || g()
-                }, [g]), R = s.useCallback(() => {
+                }, [g]), y = s.useCallback(() => {
                     M(!1), null == E || E()
-                }, [E]), y = s.useCallback(() => {
+                }, [E]), v = s.useCallback(() => {
                     M(!0), null == S || S()
                 }, [S]), A = s.useCallback(() => {
                     M(!1), null == h || h()
                 }, [h]), k = s.useMemo(() => {
                     if (t.type === d.ApplicationCommandSectionType.APPLICATION) {
                         var e;
-                        return u.default.getApplicationIconURL({
+                        return l.default.getApplicationIconURL({
                             id: t.id,
                             icon: t.icon,
                             bot: null === (e = t.application) || void 0 === e ? void 0 : e.bot,
                             botIconFirst: !0,
-                            size: r
+                            size: i
                         })
                     }
                     return o
-                }, [t, r]);
+                }, [t, i]);
                 return (0, a.jsx)("div", {
                     ...p,
-                    className: i(c.wrapper, f, {
+                    className: r(c.wrapper, f, {
                         [c.selectable]: _,
                         [c.selected]: _ && n
                     }),
-                    onFocus: v,
-                    onBlur: R,
-                    onMouseOver: y,
+                    onFocus: R,
+                    onBlur: y,
+                    onMouseOver: v,
                     onMouseLeave: A,
-                    children: (0, a.jsx)(l.default, {
+                    children: (0, a.jsx)(u.default, {
                         className: c.mask,
-                        mask: _ && (n || I) ? l.MaskIDs.SQUIRCLE : l.MaskIDs.AVATAR_DEFAULT,
-                        width: r,
+                        mask: _ && (n || I) ? u.MaskIDs.SQUIRCLE : u.MaskIDs.AVATAR_DEFAULT,
+                        width: i,
                         height: m,
                         children: (0, a.jsx)("img", {
                             alt: "",
                             className: c.icon,
                             style: {
-                                width: r,
+                                width: i,
                                 height: m
                             },
                             src: k
@@ -89,17 +89,17 @@
             var a = n("37983");
             n("884691");
             var s = n("414456"),
-                r = n.n(s),
-                i = n("83910"),
-                l = n("93393"),
-                u = n("317041"),
+                i = n.n(s),
+                r = n("83910"),
+                u = n("93393"),
+                l = n("317041"),
                 d = n("749296");
             let c = e => {
                 switch (e.id) {
-                    case u.BuiltInSectionId.BUILT_IN:
-                        return i.default;
-                    case u.BuiltInSectionId.FRECENCY:
-                        return l.default;
+                    case l.BuiltInSectionId.BUILT_IN:
+                        return r.default;
+                    case l.BuiltInSectionId.FRECENCY:
+                        return u.default;
                     default:
                         return
                 }
@@ -110,26 +110,26 @@
                     section: t,
                     className: n,
                     width: s,
-                    height: i,
-                    padding: l,
-                    isSelected: u,
+                    height: r,
+                    padding: u,
+                    isSelected: l,
                     selectable: o = !1,
                     ...m
                 } = e, f = c(t);
                 return (0, a.jsx)("div", {
-                    className: r(d.wrapper, n, {
+                    className: i(d.wrapper, n, {
                         [d.selectable]: o,
-                        [d.selected]: o && u
+                        [d.selected]: o && l
                     }),
                     style: {
                         width: s,
-                        height: i,
-                        padding: null != l ? l : 0
+                        height: r,
+                        padding: null != u ? u : 0
                     },
                     children: null != f ? (0, a.jsx)(f, {
                         className: d.icon,
                         width: s,
-                        height: i,
+                        height: r,
                         ...m
                     }) : null
                 })
@@ -139,10 +139,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 getIconComponent: function() {
-                    return l
+                    return u
                 },
                 pxToRem: function() {
-                    return u
+                    return l
                 },
                 getCommandQuery: function() {
                     return d
@@ -150,11 +150,11 @@
             });
             var a = n("524768"),
                 s = n("991630"),
-                r = n("943161"),
-                i = n("317041");
-            let l = e => e.type === a.ApplicationCommandSectionType.BUILT_IN ? r.default : s.default;
+                i = n("943161"),
+                r = n("317041");
+            let u = e => e.type === a.ApplicationCommandSectionType.BUILT_IN ? i.default : s.default;
 
-            function u(e) {
+            function l(e) {
                 return "".concat(e / 16, "rem")
             }
 
@@ -166,10 +166,10 @@
                     let e = t.lastIndexOf(" ", s);
                     e >= 0 ? (t = t.substring(0, e), a = !0) : t = t.substring(0, s)
                 } else t = t.substring(0, t.length);
-                let r = t.split(" ", i.MAX_SUBCOMMAND_LEVEL + 1);
-                return r.length > i.MAX_SUBCOMMAND_LEVEL && (a = !0, r.pop()), t = r.join(" "), (n.length > t.length || t.endsWith(" ")) && (a = !0, t = t.trimEnd()), {
+                let i = t.split(" ", r.MAX_SUBCOMMAND_LEVEL + 1);
+                return i.length > r.MAX_SUBCOMMAND_LEVEL && (a = !0, i.pop()), t = i.join(" "), (n.length > t.length || t.endsWith(" ")) && (a = !0, t = t.trimEnd()), {
                     text: t,
-                    parts: r,
+                    parts: i,
                     hasSpaceTerminator: a
                 }
             }
@@ -198,10 +198,10 @@
             });
             var a = n("872717"),
                 s = n("913144"),
-                r = n("679653"),
-                i = n("42203"),
-                l = n("305961"),
-                u = n("27618"),
+                i = n("679653"),
+                r = n("42203"),
+                u = n("305961"),
+                l = n("27618"),
                 d = n("697218"),
                 c = n("599110"),
                 o = n("520899"),
@@ -219,16 +219,16 @@
                     savedAt: new Date,
                     dueAt: t,
                     ... function(e) {
-                        let t = i.default.getChannel(e.channel_id);
+                        let t = r.default.getChannel(e.channel_id);
                         if (null == t) return null;
-                        let n = l.default.getGuild(t.guild_id),
+                        let n = u.default.getGuild(t.guild_id),
                             a = "",
-                            s = (0, r.computeChannelName)(t, d.default, u.default, !0);
+                            s = (0, i.computeChannelName)(t, d.default, l.default, !0);
                         if (t.isPrivate()) a = s;
                         else if (t.isThread()) {
-                            let e = i.default.getChannel(t.parent_id);
+                            let e = r.default.getChannel(t.parent_id);
                             if (null == e) return null;
-                            let n = (0, r.computeChannelName)(e, d.default, u.default, !0);
+                            let n = (0, i.computeChannelName)(e, d.default, l.default, !0);
                             a = "".concat(n, " > ").concat(s)
                         } else a = s;
                         let c = "".concat(e.content.length > 0 ? e.content : "".concat(e.attachments.length, " attachments"));
@@ -327,7 +327,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return i
                 }
             });
             var a = n("862205");
@@ -346,7 +346,7 @@
                     }
                 }]
             });
-            var r = s
+            var i = s
         },
         520899: function(e, t, n) {
             "use strict";
@@ -357,35 +357,35 @@
             }), n("222007");
             var a = n("446674"),
                 s = n("913144"),
-                r = n("718517");
-            let i = [],
-                l = new Set,
-                u = 0;
+                i = n("718517");
+            let r = [],
+                u = new Set,
+                l = 0;
             class d extends a.default.Store {
                 initialize() {
                     setInterval(() => {
                         this.emitChange()
-                    }, 1 * r.default.Millis.MINUTE)
+                    }, 1 * i.default.Millis.MINUTE)
                 }
                 getMessageReminders() {
-                    return i
+                    return r
                 }
                 isMessageReminder(e) {
-                    let t = i.find(t => t.messageId === e);
+                    let t = r.find(t => t.messageId === e);
                     return null != t && !t.complete
                 }
                 getOverdueMessageReminderCount() {
-                    return i.filter(e => null == e.dueAt || new Date > e.dueAt).length
+                    return r.filter(e => null == e.dueAt || new Date > e.dueAt).length
                 }
                 recentlyFetched() {
-                    return new Date().getTime() - u < 1 * r.default.Millis.MINUTE
+                    return new Date().getTime() - l < 1 * i.default.Millis.MINUTE
                 }
                 hasSentNotification(e) {
-                    return l.has(e)
+                    return u.has(e)
                 }
                 getState() {
                     return {
-                        messages: i
+                        messages: r
                     }
                 }
             }
@@ -395,21 +395,21 @@
                     let {
                         messages: t
                     } = e;
-                    u = new Date().getTime(), i = t.map(e => ({
+                    l = new Date().getTime(), r = t.map(e => ({
                         ...e,
                         complete: !1
                     })), t.forEach(e => {
-                        null != e.dueAt && e.dueAt > new Date && l.delete(e.messageId), null != e.dueAt && e.dueAt < new Date && l.add(e.messageId)
+                        null != e.dueAt && e.dueAt > new Date && u.delete(e.messageId), null != e.dueAt && e.dueAt < new Date && u.add(e.messageId)
                     })
                 },
                 MESSAGE_REMINDER_TOGGLE: function(e) {
                     let {
                         messageId: t,
                         complete: n
-                    } = e, a = i.findIndex(e => e.messageId === t);
+                    } = e, a = r.findIndex(e => e.messageId === t);
                     if (-1 === a) return !1;
-                    i[a] = {
-                        ...i[a],
+                    r[a] = {
+                        ...r[a],
                         complete: n
                     }
                 },
@@ -417,7 +417,7 @@
                     let {
                         messageId: t
                     } = e;
-                    l.add(t)
+                    u.add(t)
                 }
             })
         },
@@ -425,22 +425,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 savedMessageToServer: function() {
-                    return r
-                },
-                savedMessageToClient: function() {
                     return i
                 },
+                savedMessageToClient: function() {
+                    return r
+                },
                 savedMessageHasMetadata: function() {
-                    return l
+                    return u
                 },
                 MESSAGE_REMINDER_DURATION_ITEMS: function() {
-                    return u
+                    return l
                 }
             });
             var a = n("718517"),
                 s = n("782340");
 
-            function r(e) {
+            function i(e) {
                 var t;
                 return {
                     channel_id: e.channelId,
@@ -456,7 +456,7 @@
                 }
             }
 
-            function i(e) {
+            function r(e) {
                 return {
                     channelId: e.channel_id,
                     messageId: e.message_id,
@@ -471,10 +471,10 @@
                 }
             }
 
-            function l(e) {
+            function u(e) {
                 return null != e.authorSummary && e.authorSummary.length > 0 && null != e.channelSummary && e.channelSummary.length > 0 && null != e.messageSummary && e.messageSummary.length > 0 && null != e.authorId && e.authorId.length > 0
             }
-            let u = [{
+            let l = [{
                 duration: a.default.Millis.HOUR,
                 getLabel: () => s.default.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
             }, {
@@ -518,31 +518,31 @@
             });
             var a = n("716241"),
                 s = n("599110"),
-                r = n("161585"),
-                i = n("49111"),
-                l = n("13030"),
-                u = n("646718");
+                i = n("161585"),
+                r = n("49111"),
+                u = n("13030"),
+                l = n("646718");
             let d = e => {
                     let {
                         containerWidth: t,
                         favoriteStickers: n,
                         frequentlyUsedStickers: s,
-                        guildStickers: u,
+                        guildStickers: l,
                         stickersTotal: d
                     } = e;
-                    a.default.trackWithMetadata(i.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
+                    a.default.trackWithMetadata(r.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
                         width: t,
-                        tab: l.ExpressionPickerViewType.STICKER,
+                        tab: u.ExpressionPickerViewType.STICKER,
                         badged: !1,
                         num_expressions_favorites: n.length,
-                        num_animated_expressions_favorites: n.filter(e => (0, r.isAnimatedSticker)(e.format_type)).length,
-                        num_custom_expressions_favorites: n.filter(e => (0, r.isCustomSticker)(e.type)).length,
-                        num_standard_expressions_favorites: n.filter(e => !(0, r.isCustomSticker)(e.type)).length,
+                        num_animated_expressions_favorites: n.filter(e => (0, i.isAnimatedSticker)(e.format_type)).length,
+                        num_custom_expressions_favorites: n.filter(e => (0, i.isCustomSticker)(e.type)).length,
+                        num_standard_expressions_favorites: n.filter(e => !(0, i.isCustomSticker)(e.type)).length,
                         num_expressions_frecent: s.length,
-                        num_custom_expressions_frecent: s.filter(e => (0, r.isCustomSticker)(e.type)).length,
-                        num_animated_expressions_frecent: s.filter(e => (0, r.isAnimatedSticker)(e.format_type)).length,
-                        num_standard_expressions_frecent: s.filter(e => !(0, r.isCustomSticker)(e.type)).length,
-                        num_current_guild_expressions: u.length,
+                        num_custom_expressions_frecent: s.filter(e => (0, i.isCustomSticker)(e.type)).length,
+                        num_animated_expressions_frecent: s.filter(e => (0, i.isAnimatedSticker)(e.format_type)).length,
+                        num_standard_expressions_frecent: s.filter(e => !(0, i.isCustomSticker)(e.type)).length,
+                        num_current_guild_expressions: l.length,
                         num_custom_expressions_total: d
                     })
                 },
@@ -551,24 +551,24 @@
                         sticker: n,
                         location: s
                     } = e;
-                    n.type === r.MetaStickerType.GUILD && (t = n.guild_id), a.default.trackWithMetadata(i.AnalyticEvents.EXPRESSION_FAVORITED, {
+                    n.type === i.MetaStickerType.GUILD && (t = n.guild_id), a.default.trackWithMetadata(r.AnalyticEvents.EXPRESSION_FAVORITED, {
                         location: s,
-                        expression_type: l.ExpressionPickerViewType.STICKER,
+                        expression_type: u.ExpressionPickerViewType.STICKER,
                         expression_id: n.id,
                         expression_name: n.name,
                         expression_guild_id: t,
-                        is_animated: (0, r.isAnimatedSticker)(n.format_type),
-                        is_custom: (0, r.isCustomSticker)(n.type)
+                        is_animated: (0, i.isAnimatedSticker)(n.format_type),
+                        is_custom: (0, i.isCustomSticker)(n.type)
                     })
                 },
                 o = () => {
-                    s.default.track(i.AnalyticEvents.SEARCH_STARTED, {
-                        search_type: i.SearchTypes.STICKER
+                    s.default.track(r.AnalyticEvents.SEARCH_STARTED, {
+                        search_type: r.SearchTypes.STICKER
                     })
                 },
                 m = (e, t, n) => {
-                    a.default.trackWithMetadata(i.AnalyticEvents.SEARCH_RESULT_VIEWED, {
-                        search_type: i.SearchTypes.STICKER,
+                    a.default.trackWithMetadata(r.AnalyticEvents.SEARCH_RESULT_VIEWED, {
+                        search_type: r.SearchTypes.STICKER,
                         total_results: t,
                         query: e,
                         is_suggestion: n
@@ -577,15 +577,15 @@
                 f = (e, t, n) => {
                     let s;
                     let {
-                        sticker: l
+                        sticker: u
                     } = e;
-                    l.type === r.MetaStickerType.GUILD && (s = l.guild_id), a.default.trackWithMetadata(i.AnalyticEvents.SEARCH_RESULT_SELECTED, {
-                        load_id: l.id,
-                        search_type: i.SearchTypes.STICKER,
+                    u.type === i.MetaStickerType.GUILD && (s = u.guild_id), a.default.trackWithMetadata(r.AnalyticEvents.SEARCH_RESULT_SELECTED, {
+                        load_id: u.id,
+                        search_type: r.SearchTypes.STICKER,
                         source_object: "Sticker Picker",
                         total_results: n,
                         expression_guild_id: s,
-                        sticker_id: l.id,
+                        sticker_id: u.id,
                         query: t
                     })
                 },
@@ -595,20 +595,20 @@
                         sticker: n,
                         category: s
                     } = e;
-                    n.type === r.MetaStickerType.GUILD && (t = n.guild_id), a.default.trackWithMetadata(i.AnalyticEvents.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
-                        type: u.PremiumUpsellTypes.EMOJI_PICKER_STICKER_CLICKED,
+                    n.type === i.MetaStickerType.GUILD && (t = n.guild_id), a.default.trackWithMetadata(r.AnalyticEvents.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
+                        type: l.PremiumUpsellTypes.EMOJI_PICKER_STICKER_CLICKED,
                         expression_id: n.id,
                         expression_name: n.name,
                         expression_picker_section: s,
                         expression_guild_id: t,
-                        is_animated: (0, r.isAnimatedSticker)(n.format_type),
-                        is_custom: (0, r.isCustomSticker)(n.type)
+                        is_animated: (0, i.isAnimatedSticker)(n.format_type),
+                        is_custom: (0, i.isCustomSticker)(n.type)
                     })
                 },
                 g = e => {
-                    null != e && "" !== e && a.default.trackWithMetadata(i.AnalyticEvents.SEARCH_RESULT_EMPTY, {
+                    null != e && "" !== e && a.default.trackWithMetadata(r.AnalyticEvents.SEARCH_RESULT_EMPTY, {
                         query: e,
-                        search_type: i.SearchTypes.STICKER,
+                        search_type: r.SearchTypes.STICKER,
                         source_object: "Sticker Picker"
                     })
                 }
@@ -623,11 +623,11 @@
                     return _
                 }
             });
-            var a, s, r = n("37983");
+            var a, s, i = n("37983");
             n("884691");
-            var i = n("414456"),
-                l = n.n(i),
-                u = n("77078"),
+            var r = n("414456"),
+                u = n.n(r),
+                l = n("77078"),
                 d = n("36694"),
                 c = n("381546"),
                 o = n("68238"),
@@ -640,7 +640,7 @@
                     messageType: n,
                     className: a,
                     textColor: s = "text-normal",
-                    textVariant: i = "text-sm/medium"
+                    textVariant: r = "text-sm/medium"
                 } = e, _ = function(e) {
                     switch (e) {
                         case 0:
@@ -664,101 +664,54 @@
                             return f.positive
                     }
                 }(n);
-                return (0, r.jsxs)("div", {
-                    className: l(f.container, g, a),
-                    children: [(0, r.jsx)("div", {
+                return (0, i.jsxs)("div", {
+                    className: u(f.container, g, a),
+                    children: [(0, i.jsx)("div", {
                         className: f.iconDiv,
-                        children: (0, r.jsx)(_, {
+                        children: (0, i.jsx)(_, {
                             className: f.icon
                         })
-                    }), (0, r.jsx)(u.Text, {
+                    }), (0, i.jsx)(l.Text, {
                         className: f.text,
                         color: s,
-                        variant: i,
+                        variant: r,
                         children: t
                     })]
                 })
             }
         },
-        822332: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return m
-                }
-            });
-            var a = n("37983"),
-                s = n("884691"),
-                r = n("414456"),
-                i = n.n(r),
-                l = n("77078"),
-                u = n("782340"),
-                d = n("440318");
-            let c = {
-                BLOCK: d.block,
-                INLINE: d.inline
-            };
-            class o extends s.PureComponent {
-                render() {
-                    let {
-                        children: e,
-                        className: t,
-                        textClassName: n,
-                        type: s = c.BLOCK,
-                        style: r
-                    } = this.props;
-                    return (0, a.jsxs)("div", {
-                        className: i(t, s),
-                        style: r,
-                        children: [(0, a.jsxs)(l.Text, {
-                            variant: "text-sm/bold",
-                            tag: "div",
-                            color: "text-positive",
-                            className: d.pro,
-                            children: [u.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
-                        }), (0, a.jsx)(l.Text, {
-                            className: i(d.tip, n),
-                            variant: "text-sm/normal",
-                            children: e
-                        })]
-                    })
-                }
-            }
-            o.Types = c;
-            var m = o
-        },
         566998: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return u
                 }
             });
             var a = n("37983");
             n("884691");
             var s = n("469563"),
-                r = n("281862"),
-                i = n("75196"),
-                l = (0, s.replaceIcon)(function(e) {
+                i = n("281862"),
+                r = n("75196"),
+                u = (0, s.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
                         color: s = "currentColor",
-                        foreground: r,
-                        ...l
+                        foreground: i,
+                        ...u
                     } = e;
                     return (0, a.jsx)("svg", {
-                        ...(0, i.default)(l),
+                        ...(0, r.default)(u),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",
                         children: (0, a.jsx)("path", {
-                            className: r,
+                            className: i,
                             fill: s,
                             d: "M22 12L12.101 2.10101L10.686 3.51401L12.101 4.92901L7.15096 9.87801V9.88001L5.73596 8.46501L4.32196 9.88001L8.56496 14.122L2.90796 19.778L4.32196 21.192L9.97896 15.536L14.222 19.778L15.636 18.364L14.222 16.95L19.171 12H19.172L20.586 13.414L22 12Z"
                         })
                     })
-                }, r.PinIcon, void 0, {
+                }, i.PinIcon, void 0, {
                     size: 24
                 })
         }
