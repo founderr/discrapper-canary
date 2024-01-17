@@ -1424,7 +1424,7 @@
                     });
                     i.default.dispatch({
                         type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
-                        quests: e.body.map(r.questWithUserStatusFromServer)
+                        quests: e.body.quests.map(r.questWithUserStatusFromServer)
                     })
                 } catch (e) {
                     i.default.dispatch({
