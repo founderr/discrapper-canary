@@ -1661,7 +1661,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "259488"
+                        buildNumber: "259489"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -11071,7 +11071,7 @@
                     }, {
                         autoTrackExposure: !1
                     }),
-                    B = null != (0, E.useGuildUpcomingEventsNotice)(n);
+                    B = (0, E.useGuildUpcomingEventsNotice)(n);
                 if (i.useEffect(() => {
                         u.default.getGuildEventsForCurrentUser(n)
                     }, [n]), i.useEffect(() => {
