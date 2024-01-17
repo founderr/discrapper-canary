@@ -5238,6 +5238,25 @@
                 }
             })
         },
+        245768: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return n
+                }
+            });
+            var a = r("237436"),
+                n = (0, a.defineColorTokens)({
+                    "embed-title": {
+                        name: "header-primary",
+                        meta: {
+                            figma: {
+                                category: "embeds"
+                            }
+                        }
+                    }
+                })
+        },
         591434: function(e, t, r) {
             "use strict";
             r.r(t), r.d(t, {
@@ -5372,32 +5391,34 @@
             "use strict";
             r.r(t), r.d(t, {
                 componentColorTokens: function() {
-                    return f
+                    return m
                 }
             });
             var a = r("900731"),
-                n = r("591434"),
-                i = r("448072"),
-                l = r("868203"),
-                o = r("143474"),
-                s = r("602642"),
-                c = r("765926"),
-                d = r("846303"),
-                u = r("445077"),
-                h = r("5354"),
-                p = r("832609");
-            let f = {
+                n = r("245768"),
+                i = r("591434"),
+                l = r("448072"),
+                o = r("868203"),
+                s = r("143474"),
+                c = r("602642"),
+                d = r("765926"),
+                u = r("846303"),
+                h = r("445077"),
+                p = r("5354"),
+                f = r("832609");
+            let m = {
                 ...a.default,
-                ...i.default,
-                ...n.default,
                 ...l.default,
+                ...i.default,
                 ...o.default,
                 ...s.default,
                 ...c.default,
                 ...d.default,
                 ...u.default,
                 ...h.default,
-                ...p.default
+                ...p.default,
+                ...f.default,
+                ...n.default
             }
         },
         868203: function(e, t, r) {
