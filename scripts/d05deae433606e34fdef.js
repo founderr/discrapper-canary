@@ -4,7 +4,7 @@
             "use strict";
             e.exports = function(e) {
                 var t, n;
-                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), A.test(e) ? e = e.substr(0, e.length - 2) : M.test(e) && (e = e.substr(0, e.length - 1)), (n = x.exec(e)) ? u.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = p.exec(e)) && c.test(n[1]) && (e = n[1], E.test(e) ? e += "e" : S.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = _.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = T.exec(e)) && u.test(n[1]) && (e = n[1] + l[n[2]]), (n = v.exec(e)) && u.test(n[1]) && (e = n[1] + i[n[2]]), (n = C.exec(e)) ? d.test(n[1]) && (e = n[1]) : (n = h.exec(e)) && d.test(n[1]) && (e = n[1]), (n = g.exec(e)) && (d.test(n[1]) || o.test(n[1]) && !f.test(n[1])) && (e = n[1]), m.test(e) && d.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
+                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), A.test(e) ? e = e.substr(0, e.length - 2) : M.test(e) && (e = e.substr(0, e.length - 1)), (n = x.exec(e)) ? u.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = p.exec(e)) && c.test(n[1]) && (e = n[1], E.test(e) ? e += "e" : S.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = h.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = T.exec(e)) && u.test(n[1]) && (e = n[1] + l[n[2]]), (n = v.exec(e)) && u.test(n[1]) && (e = n[1] + i[n[2]]), (n = C.exec(e)) ? d.test(n[1]) && (e = n[1]) : (n = _.exec(e)) && d.test(n[1]) && (e = n[1]), (n = g.exec(e)) && (d.test(n[1]) || o.test(n[1]) && !f.test(n[1])) && (e = n[1]), m.test(e) && d.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
             };
             var l = {
                     ational: "ate",
@@ -48,8 +48,8 @@
                 f = RegExp("^" + s + a + "[^aeiouwxy]$"),
                 m = /ll$/,
                 g = /^(.+?)e$/,
-                _ = /^(.+?)y$/,
-                h = /^(.+?(s|t))(ion)$/,
+                h = /^(.+?)y$/,
+                _ = /^(.+?(s|t))(ion)$/,
                 p = /^(.+?)(ed|ing)$/,
                 E = /(at|bl|iz)$/,
                 x = /^(.+?)eed$/,
@@ -171,7 +171,7 @@
                     this._set = {}, this._defaultValueFunc = e
                 }
             }
-            let _ = new class e {
+            let h = new class e {
                     request(e, t) {
                         this.requested.get(e).add(t)
                     }
@@ -180,7 +180,7 @@
                     }
                     finishRequesting(e, t) {
                         let n = this.requested.get(e);
-                        t.forEach(e => n.delete(e)), _.compact(e)
+                        t.forEach(e => n.delete(e)), h.compact(e)
                     }
                     getRequested(e) {
                         return this.requested.get(e)
@@ -201,7 +201,7 @@
                         this.requested = new g(() => new Set)
                     }
                 },
-                h = null;
+                _ = null;
 
             function p(e, t) {
                 let n = (0, d.isForumActivityExperimentEnabled)(e);
@@ -251,8 +251,8 @@
                         loaded: a,
                         firstMessage: s
                     } = c.default.getMessage(t);
-                    if (l = a, i = s, !l && null == i || p(e.guild_id, t)) _.request(e.id, t), n = !0
-                }), n && null == h && (h = setTimeout(v, 0))
+                    if (l = a, i = s, !l && null == i || p(e.guild_id, t)) h.request(e.id, t), n = !0
+                }), n && null == _ && (_ = setTimeout(v, 0))
             }
 
             function S(e) {
@@ -260,21 +260,21 @@
             }
 
             function T(e, t) {
-                if (_.hasRequested(e.id, t)) return;
+                if (h.hasRequested(e.id, t)) return;
                 let n = (0, o.computeThreadIdsSnapshot)(e.id),
                     l = n.findIndex(e => e === t),
-                    i = n.slice(l, l + 5).filter(t => !_.hasRequested(e.id, t));
+                    i = n.slice(l, l + 5).filter(t => !h.hasRequested(e.id, t));
                 A(e, i)
             }
             async function v() {
                 try {
-                    for (; _.hasNext();) await C(_.next())
+                    for (; h.hasNext();) await C(h.next())
                 } finally {
-                    h = null
+                    _ = null
                 }
             }
             async function C(e) {
-                let t = _.getNextBatch(e, 10);
+                let t = h.getNextBatch(e, 10);
                 try {
                     var n;
                     if (0 === t.length) return;
@@ -296,7 +296,7 @@
                         threads: i
                     })
                 } catch (e) {} finally {
-                    _.finishRequesting(e, t)
+                    h.finishRequesting(e, t)
                 }
             }
         },
@@ -341,7 +341,7 @@
                 return null === (t = d[e]) || void 0 === t ? void 0 : t.message
             }
 
-            function _(e) {
+            function h(e) {
                 let {
                     threads: t,
                     mostRecentMessages: n
@@ -350,7 +350,7 @@
                     f(e.channel_id, e)
                 })
             }
-            class h extends l.default.Store {
+            class _ extends l.default.Store {
                 initialize() {
                     this.waitFor(s.default, r.default)
                 }
@@ -361,8 +361,8 @@
                     }), d[e]
                 }
             }
-            h.displayName = "ForumPostRecentMessageStore";
-            var p = new h(i.default, {
+            _.displayName = "ForumPostRecentMessageStore";
+            var p = new _(i.default, {
                 CONNECTION_OPEN: function() {
                     d = {}
                 },
@@ -395,8 +395,8 @@
                     } = e;
                     for (let e in t) f(e, t[e].most_recent_message)
                 },
-                LOAD_ARCHIVED_THREADS_SUCCESS: _,
-                LOAD_THREADS_SUCCESS: _
+                LOAD_ARCHIVED_THREADS_SUCCESS: h,
+                LOAD_THREADS_SUCCESS: h
             })
         },
         67994: function(e, t, n) {
@@ -410,7 +410,7 @@
                 i = n("884691"),
                 a = n("446674"),
                 s = n("77078"),
-                r = n("404118"),
+                r = n("819689"),
                 u = n("81594"),
                 o = n("681736"),
                 d = n("694187"),
@@ -418,8 +418,8 @@
                 f = n("474643"),
                 m = n("305961"),
                 g = n("377253"),
-                _ = n("476765"),
-                h = n("254490"),
+                h = n("476765"),
+                _ = n("254490"),
                 p = n("412861"),
                 E = n("834021"),
                 x = n("867965"),
@@ -435,14 +435,14 @@
                 let {
                     threadId: n,
                     attachments: O,
-                    sendMessage: I,
-                    transitionState: R,
-                    onClose: b
-                } = e, L = (0, _.useUID)(), y = (0, a.useStateFromStores)([c.default], () => c.default.getChannel(n), [n]), U = (0, a.useStateFromStores)([m.default], () => m.default.getGuild(null == y ? void 0 : y.getGuildId()), [y]), N = (0, a.useStateFromStores)([c.default], () => c.default.getChannel(null == y ? void 0 : y.parent_id), [y]), F = null === (t = O[0]) || void 0 === t ? void 0 : t.item, [P, D] = i.useState(null);
+                    sendMessage: R,
+                    transitionState: b,
+                    onClose: I
+                } = e, y = (0, h.useUID)(), L = (0, a.useStateFromStores)([c.default], () => c.default.getChannel(n), [n]), F = (0, a.useStateFromStores)([m.default], () => m.default.getGuild(null == L ? void 0 : L.getGuildId()), [L]), N = (0, a.useStateFromStores)([c.default], () => c.default.getChannel(null == L ? void 0 : L.parent_id), [L]), U = null === (t = O[0]) || void 0 === t ? void 0 : t.item, [P, D] = i.useState(null);
                 i.useEffect(() => {
-                    null != F && (0, d.processImage)(F.file, (e, t) => D(e), T.NOOP)
-                }, [F]);
-                let j = null != F && null != P ? {
+                    null != U && (0, d.processImage)(U.file, (e, t) => D(e), T.NOOP)
+                }, [U]);
+                let j = null != U && null != P ? {
                         src: P,
                         width: M.MAX_THUMBNAIL_WIDTH,
                         height: M.MAX_THUMBNAIL_HEIGHT,
@@ -453,10 +453,10 @@
                     G = i.useCallback(() => {
                         (0, x.trackForumAddMediaToOriginalPostClicked)({
                             added: !1
-                        }), I(), b()
-                    }, [I, b]),
+                        }), R(), I()
+                    }, [R, I]),
                     k = i.useCallback(() => {
-                        null != y && null != U && ((0, x.trackForumAddMediaToOriginalPostClicked)({
+                        null != L && null != F && ((0, x.trackForumAddMediaToOriginalPostClicked)({
                             added: !0
                         }), ! function(e) {
                             let {
@@ -469,15 +469,10 @@
                             s.on("start", () => {
                                 l(!0)
                             }), s.on("progress", e => {
-                                let r = (0, h.maxFileSize)(i.id);
+                                let r = (0, _.maxFileSize)(i.id);
                                 e.currentSize > r && (s.cancel(), l(!1), a(), (0, p.showUploadFileSizeExceededError)(t, (0, E.getWebUploadFiles)(n)))
-                            }), s.on("error", (e, t) => {
-                                l(!1), t === S.AbortCodes.EXPLICIT_CONTENT && (a(), r.default.show({
-                                    title: v.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-                                    body: v.default.Messages.BOT_GUILD_EXPLICIT_CONTENT.format({
-                                        name: i.toString()
-                                    })
-                                }))
+                            }), s.on("error", (e, n) => {
+                                l(!1), n === S.AbortCodes.EXPLICIT_CONTENT && (a(), r.default.sendClydeError(t.id, n), u.default.clearAll(t.id, f.DraftType.ChannelMessage))
                             }), s.on("complete", () => {
                                 l(!1), a(), u.default.clearAll(t.id, f.DraftType.ChannelMessage)
                             });
@@ -489,24 +484,24 @@
                                 addFilesTo: "attachments"
                             })
                         }({
-                            thread: y,
+                            thread: L,
                             attachments: O,
                             setIsUploading: w,
-                            guild: U,
-                            onClose: b
+                            guild: F,
+                            onClose: I
                         }))
-                    }, [y, O, w, U, b]);
+                    }, [L, O, w, F, I]);
                 return null == N ? null : (0, l.jsxs)(s.ModalRoot, {
-                    transitionState: R,
+                    transitionState: b,
                     size: s.ModalSize.SMALL,
                     className: C.modalRoot,
-                    "aria-labelledby": L,
+                    "aria-labelledby": y,
                     children: [(0, l.jsxs)(s.ModalContent, {
                         className: C.modal,
                         children: [(0, l.jsx)(s.Heading, {
                             variant: "heading-md/semibold",
                             className: C.header,
-                            id: L,
+                            id: y,
                             children: v.default.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_TITLE
                         }), (0, l.jsx)(s.Text, {
                             variant: "text-md/normal",
@@ -529,7 +524,7 @@
                             look: s.Button.Looks.BLANK,
                             className: C.cancelButton,
                             disabled: z,
-                            onClick: b,
+                            onClick: I,
                             children: v.default.Messages.CANCEL
                         }), (0, l.jsx)(s.Button, {
                             color: s.Button.Colors.PRIMARY,
@@ -575,8 +570,8 @@
                 f = n("430568"),
                 m = n("206230"),
                 g = n("385976"),
-                _ = n("945330"),
-                h = n("782340"),
+                h = n("945330"),
+                _ = n("782340"),
                 p = n("951779");
 
             function E(e) {
@@ -593,19 +588,19 @@
                     name: A,
                     emojiId: S,
                     emojiName: T
-                } = t, v = null != E, [C, O] = s.useState(!1), I = (0, d.useStateFromStores)([g.default], () => null != S ? g.default.getUsableCustomEmojiById(S) : null), R = v || null != r, b = (!v || !C) && (null != S || null != T), L = 0 === n, y = s.useRef(null), U = (0, d.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), N = (0, a.jsxs)(a.Fragment, {
-                    children: [b ? (0, a.jsx)(f.default, {
+                } = t, v = null != E, [C, O] = s.useState(!1), R = (0, d.useStateFromStores)([g.default], () => null != S ? g.default.getUsableCustomEmojiById(S) : null), b = v || null != r, I = (!v || !C) && (null != S || null != T), y = 0 === n, L = s.useRef(null), F = (0, d.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), N = (0, a.jsxs)(a.Fragment, {
+                    children: [I ? (0, a.jsx)(f.default, {
                         className: u(p.emoji, {
-                            [p.small]: L
+                            [p.small]: y
                         }),
                         emojiId: S,
                         emojiName: T,
-                        animated: !!(null == I ? void 0 : I.animated),
+                        animated: !!(null == R ? void 0 : R.animated),
                         size: "reaction",
                         alt: ""
                     }) : null, C && v && (0, a.jsx)("div", {
                         className: p.closeCircle,
-                        children: (0, a.jsx)(_.default, {
+                        children: (0, a.jsx)(h.default, {
                             className: p.close
                         })
                     }), (0, a.jsx)(c.Text, {
@@ -614,38 +609,38 @@
                         lineClamp: 1,
                         children: A
                     })]
-                }), F = {
+                }), U = {
                     key: t.id,
                     className: u(p.pill, p.increasedActivityPill, {
                         [p.disabled]: l,
-                        [p.clickable]: R,
-                        [p.increasedActivitySmall]: L,
+                        [p.clickable]: b,
+                        [p.increasedActivitySmall]: y,
                         [p.selected]: x
                     }, i),
                     onClick: e => {
-                        null == r || r(e), null == E || E(t), !U && null != y.current && y.current.blur()
+                        null == r || r(e), null == E || E(t), !F && null != L.current && L.current.blur()
                     },
                     onMouseEnter: () => v && O(!0),
                     onMouseLeave: () => v && O(!1)
                 }, P = (0, o.useListItem)("forum-tag-".concat(t.id));
-                return R ? (0, a.jsx)(c.Clickable, {
+                return b ? (0, a.jsx)(c.Clickable, {
                     ...P,
-                    innerRef: y,
+                    innerRef: L,
                     focusProps: {
-                        ringTarget: y
+                        ringTarget: L
                     },
-                    "aria-label": null != M ? M : h.default.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
+                    "aria-label": null != M ? M : _.default.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
                         tagName: A
                     }),
                     role: "button",
                     "aria-pressed": x,
-                    ...F,
+                    ...U,
                     children: N
                 }) : (0, a.jsx)("div", {
-                    "aria-label": null != M ? M : h.default.Messages.FORUM_TAG_A11Y_TAG_BY.format({
+                    "aria-label": null != M ? M : _.default.Messages.FORUM_TAG_A11Y_TAG_BY.format({
                         tagName: A
                     }),
-                    ...F,
+                    ...U,
                     children: N
                 })
             }
@@ -657,7 +652,7 @@
                     size: l = 1
                 } = e, i = 0 === l;
                 return (0, a.jsx)(c.Tooltip, {
-                    "aria-label": h.default.Messages.FORUM_TAGS,
+                    "aria-label": _.default.Messages.FORUM_TAGS,
                     text: (0, a.jsx)(a.Fragment, {
                         children: t.map(e => (0, a.jsx)(M, {
                             tag: e,
@@ -693,54 +688,54 @@
                     name: A,
                     emojiId: S,
                     emojiName: T
-                } = t, v = null != E, [C, O] = s.useState(!1), I = (0, d.useStateFromStores)([g.default], () => null != S ? g.default.getUsableCustomEmojiById(S) : null), R = v || null != r, b = (!v || !C) && (null != S || null != T), L = 0 === n, y = s.useRef(null), U = (0, d.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), N = (0, a.jsxs)(a.Fragment, {
-                    children: [b ? (0, a.jsx)(f.default, {
+                } = t, v = null != E, [C, O] = s.useState(!1), R = (0, d.useStateFromStores)([g.default], () => null != S ? g.default.getUsableCustomEmojiById(S) : null), b = v || null != r, I = (!v || !C) && (null != S || null != T), y = 0 === n, L = s.useRef(null), F = (0, d.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), N = (0, a.jsxs)(a.Fragment, {
+                    children: [I ? (0, a.jsx)(f.default, {
                         className: u(p.emoji, {
-                            [p.small]: L
+                            [p.small]: y
                         }),
                         emojiId: S,
                         emojiName: T,
-                        animated: !!(null == I ? void 0 : I.animated),
+                        animated: !!(null == R ? void 0 : R.animated),
                         size: "reaction"
                     }) : null, C && v && (0, a.jsx)("div", {
                         className: p.closeCircle,
-                        children: (0, a.jsx)(_.default, {
+                        children: (0, a.jsx)(h.default, {
                             className: p.close
                         })
                     }), (0, a.jsx)(c.Text, {
-                        variant: L ? "text-xs/semibold" : "text-sm/semibold",
+                        variant: y ? "text-xs/semibold" : "text-sm/semibold",
                         lineClamp: 1,
                         children: A
                     })]
-                }), F = {
+                }), U = {
                     key: t.id,
                     className: u(p.pill, {
                         [p.disabled]: l,
-                        [p.clickable]: R,
-                        [p.small]: L,
+                        [p.clickable]: b,
+                        [p.small]: y,
                         [p.selected]: x
                     }, i),
                     onClick: e => {
-                        null == r || r(e), null == E || E(t), !U && null != y.current && y.current.blur()
+                        null == r || r(e), null == E || E(t), !F && null != L.current && L.current.blur()
                     },
                     onMouseEnter: () => v && O(!0),
                     onMouseLeave: () => v && O(!1)
                 }, P = (0, o.useListItem)("forum-tag-".concat(t.id));
-                return R ? (0, a.jsx)(c.Clickable, {
+                return b ? (0, a.jsx)(c.Clickable, {
                     ...P,
-                    innerRef: y,
+                    innerRef: L,
                     focusProps: {
-                        ringTarget: y
+                        ringTarget: L
                     },
-                    "aria-label": null != M ? M : h.default.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
+                    "aria-label": null != M ? M : _.default.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
                         tagName: A
                     }),
                     role: "button",
                     "aria-pressed": x,
-                    ...F,
+                    ...U,
                     children: N
                 }) : (0, a.jsx)("div", {
-                    ...F,
+                    ...U,
                     children: N
                 })
             }
@@ -752,7 +747,7 @@
                     size: l = 1
                 } = e, i = 0 === l;
                 return (0, a.jsx)(c.Tooltip, {
-                    "aria-label": h.default.Messages.FORUM_TAGS,
+                    "aria-label": _.default.Messages.FORUM_TAGS,
                     text: (0, a.jsx)(a.Fragment, {
                         children: t.map(e => (0, a.jsx)(M, {
                             tag: e,
@@ -959,8 +954,8 @@
                 f = n("599110"),
                 m = n("254490"),
                 g = n("719923"),
-                _ = n("834021"),
-                h = n("49111"),
+                h = n("834021"),
+                _ = n("49111"),
                 p = n("894488"),
                 E = n("646718"),
                 x = n("782340");
@@ -976,7 +971,7 @@
                     f = [];
                 for (let e of t) d += 1, r += e.size, a.push(e.size), e.size > o && (o = e.size), null != e.type ? f.push(e.type) : f.push("unknown");
                 if (o > i) {
-                    (0, u.trackWithMetadata)(h.AnalyticEvents.FILE_SIZE_LIMIT_EXCEEDED, {
+                    (0, u.trackWithMetadata)(_.AnalyticEvents.FILE_SIZE_LIMIT_EXCEEDED, {
                         channel_id: e.id,
                         guild_id: l,
                         user_individual_file_size_limit: i,
@@ -987,7 +982,7 @@
                         attachment_mimetypes: f
                     }), (0, s.openUploadError)({
                         title: x.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-                        help: (0, _.getErrorHelp)(n, l),
+                        help: (0, h.getErrorHelp)(n, l),
                         showPremiumUpsell: !(0, g.isPremiumExactly)(n, E.PremiumTypes.TIER_2),
                         fileSize: o
                     });
@@ -1010,23 +1005,23 @@
                 if (e.length < 1) return;
                 if (null != u && u.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
                 let p = t.getGuildId();
-                if ((0, _.filesExceedUploadLimits)(e, p)) {
+                if ((0, h.filesExceedUploadLimits)(e, p)) {
                     M(t, e);
                     return
                 }
-                if (d.default.getUploadCount(t.id, n) + e.length > h.MAX_UPLOAD_COUNT) {
+                if (d.default.getUploadCount(t.id, n) + e.length > _.MAX_UPLOAD_COUNT) {
                     (0, s.openUploadError)({
                         title: x.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
                         help: x.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
-                            limit: h.MAX_UPLOAD_COUNT
+                            limit: _.MAX_UPLOAD_COUNT
                         })
-                    }), f.default.track(h.AnalyticEvents.UPLOAD_FILE_LIMIT_ERROR, {
+                    }), f.default.track(_.AnalyticEvents.UPLOAD_FILE_LIMIT_ERROR, {
                         existing_count: d.default.getUploadCount(t.id, n),
                         new_count: e.length
                     });
                     return
                 }
-                if ((t.type === h.ChannelTypes.GUILD_VOICE || t.type === h.ChannelTypes.GUILD_STAGE_VOICE) && !o.default.getChatOpen(t.id) && l.default.updateChatOpen(t.id, !0), c) {
+                if ((t.type === _.ChannelTypes.GUILD_VOICE || t.type === _.ChannelTypes.GUILD_STAGE_VOICE) && !o.default.getChatOpen(t.id) && l.default.updateChatOpen(t.id, !0), c) {
                     let l = Array.from(e).map((e, t) => ({
                         file: e,
                         platform: r.UploadPlatform.WEB,
