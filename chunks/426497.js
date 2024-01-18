@@ -7,30 +7,30 @@ r.r(t), r.d(t, {
 var u = r("635058"),
   l = r("265586"),
   n = r("446674"),
-  i = r("913144"),
-  s = r("853987");
-let a = new Date(2023, 8, 25),
-  c = new Date(2023, 9, 5),
-  o = () => ({
+  s = r("913144"),
+  i = r("853987");
+let o = new Date(2023, 8, 25),
+  a = new Date(2023, 9, 5),
+  c = () => ({
     categoryItemViews: {
       [u.CollectiblesCategorySkuId.FANTASY]: {
-        [l.CollectiblesItemType.AVATAR_DECORATION]: a,
-        [l.CollectiblesItemType.PROFILE_EFFECT]: c
+        [l.CollectiblesItemType.AVATAR_DECORATION]: o,
+        [l.CollectiblesItemType.PROFILE_EFFECT]: a
       },
       [u.CollectiblesCategorySkuId.ANIME]: {
-        [l.CollectiblesItemType.AVATAR_DECORATION]: a,
-        [l.CollectiblesItemType.PROFILE_EFFECT]: c
+        [l.CollectiblesItemType.AVATAR_DECORATION]: o,
+        [l.CollectiblesItemType.PROFILE_EFFECT]: a
       },
       [u.CollectiblesCategorySkuId.BREAKFAST]: {
-        [l.CollectiblesItemType.AVATAR_DECORATION]: a,
-        [l.CollectiblesItemType.PROFILE_EFFECT]: c
+        [l.CollectiblesItemType.AVATAR_DECORATION]: o,
+        [l.CollectiblesItemType.PROFILE_EFFECT]: a
       },
       [u.CollectiblesCategorySkuId.DISXCORE]: {
-        [l.CollectiblesItemType.AVATAR_DECORATION]: a
+        [l.CollectiblesItemType.AVATAR_DECORATION]: o
       }
     }
   }),
-  d = o();
+  d = c();
 class E extends n.default.PersistedStore {
   initialize(e) {
     null != e && (d = e)
@@ -40,15 +40,15 @@ class E extends n.default.PersistedStore {
   }
   isItemViewed(e) {
     var t, r;
-    let u = null === (t = s.default.getProduct(e.skuId)) || void 0 === t ? void 0 : t.categorySkuId;
+    let u = null === (t = i.default.getProduct(e.skuId)) || void 0 === t ? void 0 : t.categorySkuId;
     return null != u && (null === (r = d.categoryItemViews[u]) || void 0 === r ? void 0 : r[e.type]) != null
   }
   reset() {
-    d = o()
+    d = c()
   }
 }
 E.displayName = "CollectiblesPersistedStore", E.persistKey = "CollectiblesPersistedStoreV2";
-var C = new E(i.default, {
+var C = new E(s.default, {
   COLLECTIBLES_CATEGORY_ITEMS_VIEWED: e => {
     let {
       categories: t,

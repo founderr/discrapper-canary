@@ -20,8 +20,8 @@ let u = {},
   _ = null,
   p = null,
   I = !1,
-  h = !1,
-  S = null,
+  S = !1,
+  h = null,
   T = s.AppealIngestionSignal.DIDNT_VIOLATE_POLICY,
   C = "";
 class g extends r.default.Store {
@@ -59,10 +59,10 @@ class g extends r.default.Store {
     return C
   }
   getIsSubmitting() {
-    return h
+    return S
   }
   getSubmitError() {
-    return S
+    return h
   }
 }
 g.displayName = "SafetyHubStore";
@@ -124,17 +124,17 @@ var m = new g(a.default, {
   },
   SAFETY_HUB_REQUEST_REVIEW_START: function(e) {
     let {} = e;
-    h = !0, S = null
+    S = !0, h = null
   },
   SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function(e) {
     let {} = e;
-    h = !1, S = null
+    S = !1, h = null
   },
   SAFETY_HUB_REQUEST_REVIEW_FAILURE: function(e) {
     let {
       error: t
     } = e;
-    h = !1, S = t
+    S = !1, h = t
   },
   LOGOUT: function() {
     f = !1, u = {}, d = {

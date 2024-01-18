@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("272030"),
   m = n("819689"),
   p = n("843962"),
-  S = n("679653"),
-  g = n("931318"),
+  g = n("679653"),
+  S = n("931318"),
   N = n("520899"),
   _ = n("988864"),
   T = n("960808"),
@@ -53,7 +53,7 @@ function G(e) {
     closePopout: n
   } = e, s = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders());
   l.useEffect(() => () => {
-    (0, g.cleanupMessageReminders)()
+    (0, S.cleanupMessageReminders)()
   }, []);
   let [i, r] = l.useState(!1), o = l.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), u = i ? s : o, d = u.filter(e => !(0, _.savedMessageHasMetadata)(e));
   return (0, T.useMessageRemindersLoader)(d), (0, a.jsxs)("div", {
@@ -79,9 +79,9 @@ function G(e) {
           })
         })
       })]
-    }), 0 === u.length ? (0, a.jsx)(H, {}) : null, (0, a.jsx)(h.AdvancedScrollerThin, {
+    }), 0 === u.length ? (0, a.jsx)(B, {}) : null, (0, a.jsx)(h.AdvancedScrollerThin, {
       children: u.map(e => (function(e) {
-        return [(0, a.jsx)(B, {
+        return [(0, a.jsx)(H, {
           messageId: e.messageId
         }, e.messageId)]
       })(e))
@@ -89,7 +89,7 @@ function G(e) {
   })
 }
 
-function B(e) {
+function H(e) {
   let t, {
       messageId: l
     } = e,
@@ -102,14 +102,14 @@ function B(e) {
       channel: _
     } = (0, I.getSavedMessageAndChannel)(s),
     T = v.default.getChannel(_.id),
-    b = (0, S.default)(T, !0),
+    b = (0, g.default)(T, !0),
     j = null != b ? b : _.name,
     D = (0, c.useStateFromStores)([x.default], () => x.default.getGuild(null == _ ? void 0 : _.guild_id)),
     G = null != _ ? (0, p.getChannelIconURL)(_) : null,
-    B = null;
-  return null != s.dueAt && (s.dueAt > new Date ? (t = "text-muted", B = U.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
+    H = null;
+  return null != s.dueAt && (s.dueAt > new Date ? (t = "text-muted", H = U.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
     duration: d.duration(s.dueAt.getTime() - Date.now(), "millisecond").humanize()
-  })) : (t = "text-danger", B = U.default.Messages.MESSAGE_REMINDERS_OVERDUE.format({
+  })) : (t = "text-danger", H = U.default.Messages.MESSAGE_REMINDERS_OVERDUE.format({
     duration: d.duration(Date.now() - s.dueAt.getTime(), "millisecond").humanize()
   }))), (0, a.jsxs)("div", {
     className: P.container,
@@ -142,13 +142,13 @@ function B(e) {
             width: 12,
             height: 12
           }), s.notes]
-        }) : null, null != B ? (0, a.jsx)(h.Text, {
+        }) : null, null != H ? (0, a.jsx)(h.Text, {
           variant: "text-sm/medium",
           color: t,
           style: {
             marginTop: 4
           },
-          children: B
+          children: H
         }) : null]
       }), (0, a.jsxs)("div", {
         className: k.reminderActions,
@@ -171,7 +171,7 @@ function B(e) {
           type: h.Checkbox.Types.INVERTED,
           value: r,
           onChange: (e, t) => {
-            (0, g.toggleMessageReminders)(s.messageId, t)
+            (0, S.toggleMessageReminders)(s.messageId, t)
           }
         })]
       })]
@@ -225,7 +225,7 @@ function B(e) {
   })
 }
 
-function H() {
+function B() {
   let e = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders().length > 0);
   return e ? null : (0, a.jsx)(j.default, {
     Icon: b.default,

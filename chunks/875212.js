@@ -4,8 +4,8 @@ r.r(t), r.d(t, {
     return i
   }
 });
-var a = r("862205");
-let n = (0, a.createExperiment)({
+var n = r("862205");
+let a = (0, n.createExperiment)({
   kind: "user",
   id: "2023-09_trigger_debugging_aa",
   label: "trigger debugging aa mobile",
@@ -26,7 +26,7 @@ function i(e) {
     autoTrackExposure: t = !1,
     location: r
   } = e;
-  return n.useExperiment({
+  return a.useExperiment({
     location: r
   }, {
     autoTrackExposure: t

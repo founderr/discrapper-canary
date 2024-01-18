@@ -1,7 +1,7 @@
 "use strict";
 a.r(e), a.d(e, {
   ConnectedSafetyHubViolationsContainer: function() {
-    return v
+    return F
   }
 }), a("222007");
 var n = a("37983"),
@@ -15,16 +15,16 @@ var n = a("37983"),
   d = a("300113"),
   _ = a("599110"),
   S = a("299039"),
-  f = a("667963"),
-  T = a("736393"),
-  E = a("310888"),
+  E = a("667963"),
+  f = a("736393"),
+  T = a("310888"),
   A = a("132206"),
   I = a("698609"),
   g = a("170213"),
   N = a("49111"),
   C = a("782340"),
   m = a("231180");
-let x = t => {
+let p = t => {
     let {
       status: e,
       onClick: a,
@@ -66,7 +66,7 @@ let x = t => {
       })]
     })
   },
-  p = () => (0, n.jsxs)("div", {
+  x = () => (0, n.jsxs)("div", {
     className: m.emptyState,
     children: [(0, n.jsxs)("div", {
       className: m.iconContainer,
@@ -96,22 +96,22 @@ let x = t => {
       children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
     })
   }),
-  O = t => {
+  U = t => {
     let {
       timestamp: e
     } = t;
     return (0, n.jsx)(u.Text, {
       variant: "text-xs/normal",
       className: m.timestamp,
-      children: (0, T.getClassificationRelativeIncidentTime)(e)
+      children: (0, f.getClassificationRelativeIncidentTime)(e)
     })
   },
-  H = () => (0, n.jsx)(u.Text, {
+  O = () => (0, n.jsx)(u.Text, {
     variant: "text-xs/bold",
     className: m.newBadge,
     children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
   }),
-  U = t => {
+  H = t => {
     var e;
     let {
       classification: i
@@ -119,7 +119,7 @@ let x = t => {
       id: s,
       description: r,
       max_expiration_time: c
-    } = i, o = S.default.extractTimestamp(s), d = (0, E.useIsNewClassification)(i), _ = (0, f.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), T = new Date(c), A = T.toDateString();
+    } = i, o = S.default.extractTimestamp(s), d = (0, T.useIsNewClassification)(i), _ = (0, E.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), f = new Date(c), A = f.toDateString();
     return (0, n.jsx)(u.Clickable, {
       onClick: () => {
         (0, u.openModalLazy)(async () => {
@@ -138,7 +138,7 @@ let x = t => {
       }),
       children: (0, n.jsxs)("div", {
         className: m.descriptionContainer,
-        children: [d ? (0, n.jsx)(H, {}) : (0, n.jsx)(O, {
+        children: [d ? (0, n.jsx)(O, {}) : (0, n.jsx)(U, {
           timestamp: o
         }), (0, n.jsx)(u.Heading, {
           variant: "heading-lg/normal",
@@ -161,7 +161,7 @@ let x = t => {
         }), (0, n.jsx)(u.Text, {
           variant: "text-sm/normal",
           className: m.expirationDate,
-          children: T > new Date ? C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
+          children: f > new Date ? C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
             expirationDate: A
           }) : C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format({
             expirationDate: A
@@ -170,7 +170,7 @@ let x = t => {
       })
     }, s)
   },
-  D = t => {
+  v = t => {
     let {
       status: e,
       classifications: a
@@ -187,7 +187,7 @@ let x = t => {
     let S = a.length - d.length > 3 ? 3 : a.length - d.length;
     return (0, n.jsxs)("div", {
       className: m.dropdown,
-      children: [(0, n.jsx)(x, {
+      children: [(0, n.jsx)(p, {
         status: e,
         onClick: () => l(t => !t),
         opened: s,
@@ -199,7 +199,7 @@ let x = t => {
             height: "1px",
             width: "100%"
           }
-        }), d.length > 0 && d.map(t => (0, n.jsx)(U, {
+        }), d.length > 0 && d.map(t => (0, n.jsx)(H, {
           classification: t
         }, t.id)), d.length < a.length && (0, n.jsxs)(n.Fragment, {
           children: [(0, n.jsx)(u.TabBar.Separator, {
@@ -214,18 +214,18 @@ let x = t => {
               nextPageSize: S
             })
           })]
-        }), 0 === d.length && "active" === e && (0, n.jsx)(p, {}), 0 === d.length && "expired" === e && (0, n.jsx)(h, {})]
+        }), 0 === d.length && "active" === e && (0, n.jsx)(x, {}), 0 === d.length && "expired" === e && (0, n.jsx)(h, {})]
       })]
     })
   },
-  v = () => {
+  F = () => {
     let t = (0, I.useActiveSafetyHubClassifications)(),
       e = (0, I.useExpiredSafetyHubClassifications)();
     return 0 === t.length && 0 === e.length ? null : (0, n.jsxs)("div", {
-      children: [(0, n.jsx)(D, {
+      children: [(0, n.jsx)(v, {
         status: "active",
         classifications: t
-      }), (0, n.jsx)(D, {
+      }), (0, n.jsx)(v, {
         status: "expired",
         classifications: e
       })]

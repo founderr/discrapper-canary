@@ -7,38 +7,38 @@ r.r(t), r.d(t, {
 });
 var l = r("446674"),
   n = r("913144");
-let i = [],
-  s = i,
-  a = null,
-  c = e => {
-    s = i, a = null
+let s = [],
+  i = s,
+  o = null,
+  a = e => {
+    i = s, o = null
   };
-class o extends l.default.Store {
+class c extends l.default.Store {
   get analyticsLocations() {
-    return s
+    return i
   }
   get analyticsSource() {
-    return a
+    return o
   }
   get initialProductSkuId() {
     return u
   }
   getAnalytics() {
     return {
-      analyticsLocations: s,
-      analyticsSource: a
+      analyticsLocations: i,
+      analyticsSource: o
     }
   }
 }
-o.displayName = "CollectiblesShopStore";
-var d = new o(n.default, {
+c.displayName = "CollectiblesShopStore";
+var d = new c(n.default, {
   COLLECTIBLES_SHOP_OPEN: e => {
     var t, r;
-    s = null !== (t = e.analyticsLocations) && void 0 !== t ? t : i, a = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, u = e.initialProductSkuId
+    i = null !== (t = e.analyticsLocations) && void 0 !== t ? t : s, o = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, u = e.initialProductSkuId
   },
-  COLLECTIBLES_SHOP_CLOSE: c,
+  COLLECTIBLES_SHOP_CLOSE: a,
   COLLECTIBLES_PRODUCT_DETAILS_OPEN: e => {
     e.item.skuId === u && (u = void 0)
   },
-  LOGOUT: c
+  LOGOUT: a
 })

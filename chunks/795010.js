@@ -1,7 +1,7 @@
 "use strict";
 s.r(l), s.d(l, {
   default: function() {
-    return d
+    return o
   }
 });
 var a = s("37983");
@@ -10,7 +10,7 @@ var t = s("77078"),
   n = s("461380"),
   i = s("30679");
 
-function d(e) {
+function o(e) {
   let {
     url: l,
     text: s

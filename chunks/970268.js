@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return l
   },
   MAX_SHOWN_MESSAGES: function() {
-    return B
+    return H
   },
   default: function() {
-    return Q
+    return W
   }
 }), n("424973"), n("222007");
 var a, l, s, i, r = n("884691"),
@@ -23,8 +23,8 @@ var a, l, s, i, r = n("884691"),
   E = n("819689"),
   m = n("267363"),
   p = n("206230"),
-  S = n("379881"),
-  g = n("542827"),
+  g = n("379881"),
+  S = n("542827"),
   N = n("615387"),
   _ = n("401690"),
   T = n("689275"),
@@ -48,8 +48,8 @@ var a, l, s, i, r = n("884691"),
   w = n("49111"),
   G = n("648564");
 (s = a || (a = {}))[s.Favorite = 0] = "Favorite", s[s.PrivateChannel = 1] = "PrivateChannel", s[s.Mentioned = 2] = "Mentioned", s[s.AllMessagesNotifications = 3] = "AllMessagesNotifications", s[s.GuildChannel = 4] = "GuildChannel", s[s.OldChannel = 5] = "OldChannel", s[s.NoNotifications = 6] = "NoNotifications", s[s.ReallyOldChannel = 7] = "ReallyOldChannel", (i = l || (l = {})).Loading = "loading", i.Loaded = "loaded", i.Done = "done";
-let B = 25;
-class H extends o.EventEmitter {
+let H = 25;
+class B extends o.EventEmitter {
   loadMore() {
     let {
       loadState: e,
@@ -177,7 +177,7 @@ class H extends o.EventEmitter {
         }))
       }), p.default.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore()
     }, this.markGuildRead = e => {
-      h.default.wait(() => (0, g.default)([e], w.AnalyticsSections.INBOX)), this.setState({
+      h.default.wait(() => (0, S.default)([e], w.AnalyticsSections.INBOX)), this.setState({
         channels: this.state.channels.filter(t => t.guildId !== e)
       }), this.maybeLoadMore()
     }, this.deleteChannel = e => {
@@ -250,7 +250,7 @@ function V(e, t) {
   if (i && a) return e;
   let r = null != l.getAfter(e.oldestReadMessageId) || (null === (n = s[0]) || void 0 === n ? void 0 : n.id) === e.oldestUnreadMessageId,
     o = s[s.length - 1],
-    u = P.default.compare(null == o ? void 0 : o.id, e.newestUnreadMessageId) >= 0 || s.length >= B;
+    u = P.default.compare(null == o ? void 0 : o.id, e.newestUnreadMessageId) >= 0 || s.length >= H;
   return {
     ...e,
     messages: s,
@@ -336,12 +336,12 @@ function z(e, t, n, a) {
     mentionCount: u,
     sortOrder: function(e, t, n) {
       let a = x.default.getChannel(t);
-      if (S.default.isFavorite(t)) return 0;
+      if (g.default.isFavorite(t)) return 0;
       if (a.isPrivate()) return 1;
       if (j.default.getMentionCount(t) > 0) return 2;
       if (null != n) {
         let e = P.default.extractTimestamp(n);
-        if (Date.now() - e > W) return 7;
+        if (Date.now() - e > Q) return 7;
         if (Date.now() - e > K) return 5
       }
       if (a.isThread()) {
@@ -367,10 +367,10 @@ function z(e, t, n, a) {
   })
 }
 let K = 2 * U.default.Millis.DAY,
-  W = 10 * U.default.Millis.DAY;
+  Q = 10 * U.default.Millis.DAY;
 
-function Q(e) {
-  let [t, n] = r.useState(() => new H(Y(), e)), [a, l] = r.useState(!1), s = r.useRef(Date.now()), [i, o] = r.useState(() => Y());
+function W(e) {
+  let [t, n] = r.useState(() => new B(Y(), e)), [a, l] = r.useState(!1), s = r.useRef(Date.now()), [i, o] = r.useState(() => Y());
   return r.useEffect(() => {
     let e = e => o(e);
     return t.on("change", e), o(t.state), () => {
@@ -380,6 +380,6 @@ function Q(e) {
     if (null == i || i.channels.length > 0 || a) return;
     let t = Date.now(),
       r = Y();
-    0 === r.channels.length || t - s.current < 10 * U.default.Millis.SECOND ? l(!0) : (s.current = Date.now(), n(new H(r, e)))
+    0 === r.channels.length || t - s.current < 10 * U.default.Millis.SECOND ? l(!0) : (s.current = Date.now(), n(new B(r, e)))
   }, [i, a, e]), r.useLayoutEffect(t.maybeLoadMore, [null == i ? void 0 : i.channels, null == i ? void 0 : i.loadState]), r.useEffect(() => (b.default.addChangeListener(t.reloadMessages), () => b.default.removeChangeListener(t.reloadMessages)), [t.reloadMessages]), r.useEffect(() => (F.default.addChangeListener(t.handleUserGuildSettingsStoreChange), () => F.default.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]), r.useEffect(() => (I.default.addChangeListener(t.handleJoinedThreadsStoreChange), () => I.default.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]), r.useEffect(() => (T.default.addChangeListener(t.handleActiveThreadsStoreChange), () => T.default.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]), [i, t]
 }

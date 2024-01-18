@@ -5,13 +5,13 @@ r.r(t), r.d(t, {
     return C
   }
 }), r("222007");
-var i = r("917351"),
-  s = r("446674"),
-  a = r("913144");
-let c = new Map,
-  o = c,
+var s = r("917351"),
+  i = r("446674"),
+  o = r("913144");
+let a = new Map,
+  c = a,
   d = !1;
-class E extends s.default.Store {
+class E extends i.default.Store {
   get isFetching() {
     return d
   }
@@ -19,7 +19,7 @@ class E extends s.default.Store {
     return u
   }
   get purchases() {
-    return o
+    return c
   }
   get fetchError() {
     return l
@@ -28,28 +28,28 @@ class E extends s.default.Store {
     return n
   }
   getPurchase(e) {
-    return null != e ? o.get(e) : void 0
+    return null != e ? c.get(e) : void 0
   }
 }
 E.displayName = "CollectiblesPurchaseStore";
-var C = new E(a.default, {
+var C = new E(o.default, {
   COLLECTIBLES_PURCHASES_FETCH: e => {
     d = !0, l = void 0
   },
   COLLECTIBLES_PURCHASES_FETCH_SUCCESS: e => {
-    0 === e.purchases.length ? o = c : !(0, i.isEqual)([...o.values()], e.purchases) && (o = new Map(e.purchases.map(e => [e.skuId, e]))), d = !1, l = void 0
+    0 === e.purchases.length ? c = a : !(0, s.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), d = !1, l = void 0
   },
   COLLECTIBLES_PURCHASES_FETCH_FAILURE: e => {
     let {
       error: t
     } = e;
-    o = c, d = !1, l = t
+    c = a, d = !1, l = t
   },
   COLLECTIBLES_CLAIM: e => {
     u = e.skuId, n = void 0
   },
   COLLECTIBLES_CLAIM_SUCCESS: e => {
-    null == e.purchases || 0 === e.purchases.length ? o = c : !(0, i.isEqual)([...o.values()], e.purchases) && (o = new Map(e.purchases.map(e => [e.skuId, e]))), u = void 0, n = void 0
+    null == e.purchases || 0 === e.purchases.length ? c = a : !(0, s.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), u = void 0, n = void 0
   },
   COLLECTIBLES_CLAIM_FAILURE: e => {
     let {
@@ -59,6 +59,6 @@ var C = new E(a.default, {
     u = r, n = t
   },
   LOGOUT: e => {
-    o = c, d = !1, u = void 0, l = void 0, n = void 0
+    c = a, d = !1, u = void 0, l = void 0, n = void 0
   }
 })

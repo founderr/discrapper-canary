@@ -18,8 +18,8 @@ var a = n("917351"),
   E = n("271938"),
   m = n("42203"),
   p = n("377253"),
-  S = n("660478"),
-  g = n("27618"),
+  g = n("660478"),
+  S = n("27618"),
   N = n("162771"),
   _ = n("282109"),
   T = n("697218"),
@@ -54,7 +54,7 @@ function D(e) {
   if (null == a || a.type === I.ChannelTypes.DM || R.guildFilter === I.RecentMentionsFilters.THIS_SERVER && a.getGuildId() !== N.default.getGuildId()) return null;
   let l = null === (t = e.author) || void 0 === t ? void 0 : t.id,
     s = E.default.getId();
-  if (null != l && g.default.isBlocked(l) || l === s) return null;
+  if (null != l && S.default.isBlocked(l) || l === s) return null;
   e = j(e);
   let i = !R.everyoneFilter,
     r = !R.roleFilter;
@@ -63,7 +63,7 @@ function D(e) {
     userId: s,
     suppressEveryone: i,
     suppressRoles: r
-  }) ? (y && S.default.ackMessageId(a.id) !== e.id && (0, d.default)({
+  }) ? (y && g.default.ackMessageId(a.id) !== e.id && (0, d.default)({
     message: e,
     userId: s,
     suppressEveryone: _.default.isSuppressEveryoneEnabled(a.getGuildId()),
@@ -114,18 +114,18 @@ function w() {
 }
 
 function G() {
-  A = A.filter(e => !g.default.isBlocked(e.author.id))
+  A = A.filter(e => !S.default.isBlocked(e.author.id))
 }
 
-function B(e) {
+function H(e) {
   let {
     channel: t
   } = e;
   A = l.filter(A, e => e.channel_id !== t.id || (delete M[e.id], !1))
 }
-class H extends s.default.Store {
+class B extends s.default.Store {
   initialize() {
-    this.waitFor(T.default, m.default, p.default, S.default)
+    this.waitFor(T.default, m.default, p.default, g.default)
   }
   isOpen() {
     return b
@@ -161,8 +161,8 @@ class H extends s.default.Store {
     return y
   }
 }
-H.displayName = "RecentMentionsStore";
-var V = new H(o.default, {
+B.displayName = "RecentMentionsStore";
+var V = new B(o.default, {
   LOAD_RECENT_MENTIONS: function(e) {
     let {
       guildId: t
@@ -248,8 +248,8 @@ var V = new H(o.default, {
   },
   USER_SETTINGS_PROTO_UPDATE: w,
   I18N_LOAD_SUCCESS: w,
-  CHANNEL_DELETE: B,
-  THREAD_DELETE: B,
+  CHANNEL_DELETE: H,
+  THREAD_DELETE: H,
   RELATIONSHIP_ADD: G,
   RELATIONSHIP_REMOVE: G,
   MENTION_MODAL_OPEN: function() {
