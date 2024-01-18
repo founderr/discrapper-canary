@@ -56,7 +56,7 @@ function E(e) {
       name: l.MetricEvents.SAFETY_WARNING_VIEW
     })
   }, [t, E, g]);
-  let T = () => {
+  let M = () => {
       (0, i.openModalLazy)(async () => {
         let {
           default: e
@@ -73,13 +73,13 @@ function E(e) {
             warningId: E,
             senderId: g,
             handleBlock: () => {
-              M(c.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM, c.CtaEventTypes.USER_MODAL_BLOCK_CANCEL, T)
+              T(c.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM, c.CtaEventTypes.USER_MODAL_BLOCK_CANCEL, M)
             }
           })
         }
       })
     },
-    M = (e, a, l) => {
+    T = (e, a, l) => {
       (0, i.openModalLazy)(async () => {
         let {
           default: i
@@ -125,7 +125,7 @@ function E(e) {
         color: i.Button.Colors.BRAND,
         "aria-label": C.default.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
         onClick: () => {
-          T(), (0, c.trackCtaEvent)({
+          M(), (0, c.trackCtaEvent)({
             channelId: t,
             warningId: E,
             senderId: g,
@@ -137,7 +137,7 @@ function E(e) {
         size: i.Button.Sizes.SMALL,
         color: i.Button.Colors.RED,
         "aria-label": C.default.Messages.STRANGER_DANGER_BANNER_BLOCK,
-        onClick: () => M(c.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM, c.CtaEventTypes.USER_BANNER_BLOCK_CANCEL),
+        onClick: () => T(c.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM, c.CtaEventTypes.USER_BANNER_BLOCK_CANCEL),
         children: C.default.Messages.STRANGER_DANGER_BANNER_BLOCK
       })]
     }), (0, s.jsx)(i.Clickable, {

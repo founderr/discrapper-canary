@@ -23,10 +23,10 @@ var s = n("37983"),
   S = n("64096"),
   A = n("49111"),
   _ = n("186859"),
-  T = n("782340"),
-  M = n("648198");
+  M = n("782340"),
+  T = n("648198");
 
-function N(e, t, a, l) {
+function I(e, t, a, l) {
   (0, i.openModalLazy)(async () => {
     let {
       default: i
@@ -42,7 +42,7 @@ function N(e, t, a, l) {
     modalKey: r.activityInviteKey
   })
 }
-let I = /(.*)```(\w+)\n(.*)```(.*)/s;
+let N = /(.*)```(\w+)\n(.*)```(.*)/s;
 
 function v(e) {
   let {
@@ -98,7 +98,7 @@ function v(e) {
     let e = y,
       n = "txt",
       s = "",
-      a = y.match(I);
+      a = y.match(N);
     null != a && (s = a[1], n = a[2], e = a[3], s += a[4]), (0, E.promptToUpload)([(0, m.makeFile)(new Blob([e], {
       type: "text/plain"
     }), "message.".concat(n))], t, R), p.ComponentDispatch.dispatchToLastSubscribed(A.ComponentActions.CLEAR_TEXT), "" !== s && p.ComponentDispatch.dispatchToLastSubscribed(A.ComponentActions.INSERT_TEXT, {
@@ -109,19 +109,19 @@ function v(e) {
     onSelect: x,
     navId: "channel-attach",
     onClose: L,
-    "aria-label": T.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    className: M.menu,
+    "aria-label": M.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    className: T.menu,
     children: r.map(function(e) {
       var n;
       let a = (0, s.jsxs)("div", {
-        className: M.optionLabel,
+        className: T.optionLabel,
         children: [(0, s.jsx)(e.icon, {
-          className: M.optionIcon
+          className: T.optionIcon
         }), (0, s.jsx)("div", {
-          className: M.optionName,
+          className: T.optionName,
           children: e.display
         }), null != e.badgeVal && e.badgeVal > 0 && (0, s.jsx)(h.NumberBadge, {
-          className: M.badge,
+          className: T.badge,
           color: null !== (n = e.badgeColor) && void 0 !== n ? n : l.default.STATUS_DANGER,
           count: e.badgeVal
         })]
@@ -132,10 +132,10 @@ function v(e) {
             id: "upload-file",
             label: a,
             subtext: (0, s.jsx)("span", {
-              className: M.tipSubtext,
-              children: T.default.Messages.UPLOAD_FILE_SUBTEXT.format({
+              className: T.tipSubtext,
+              children: M.default.Messages.UPLOAD_FILE_SUBTEXT.format({
                 icon: (e, t) => (0, s.jsx)(f.default, {
-                  className: M.tipIcon,
+                  className: T.tipIcon,
                   width: 16,
                   height: 16
                 }, t)
@@ -172,7 +172,7 @@ function v(e) {
                 type: "Send Join Invite",
                 application_id: n.application_id,
                 location: A.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), N(n, t, A.ActivityActionTypes.JOIN, j))
+              }), I(n, t, A.ActivityActionTypes.JOIN, j))
             }
           }, "play");
         case S.AttachmentTypes.INVITE_TO_LISTEN:
@@ -184,7 +184,7 @@ function v(e) {
               return n = e.activity, void(C.default.track(A.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
                 location: A.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), N(n, t, A.ActivityActionTypes.LISTEN, j))
+              }), I(n, t, A.ActivityActionTypes.LISTEN, j))
             }
           }, "listen");
         case S.AttachmentTypes.INVITE_TO_WATCH:
@@ -196,7 +196,7 @@ function v(e) {
               return n = e.activity, void(C.default.track(A.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
                 location: A.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), N(n, t, A.ActivityActionTypes.WATCH, j))
+              }), I(n, t, A.ActivityActionTypes.WATCH, j))
             }
           }, "watch");
         case S.AttachmentTypes.CREATE_THREAD:

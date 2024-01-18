@@ -27,11 +27,11 @@ var s = n("37983"),
       className: t,
       style: n,
       channel: _,
-      draftType: T
-    } = e, [M, N] = a.useState(!0), I = (0, l.useStateFromStores)([c.default], () => c.default.hasLayers()), v = (0, l.useStateFromStores)([f.default], () => null != _ && f.default.can(S.Permissions.ATTACH_FILES, _), [_]), L = (0, l.useStateFromStores)([i.default], () => i.default.getActiveCommand(_.id)), x = null != L, R = _.getGuildId(), y = T === o.DraftType.FirstThreadMessage, O = (0, l.useStateFromStores)([C.default], () => {
+      draftType: M
+    } = e, [T, I] = a.useState(!0), N = (0, l.useStateFromStores)([c.default], () => c.default.hasLayers()), v = (0, l.useStateFromStores)([f.default], () => null != _ && f.default.can(S.Permissions.ATTACH_FILES, _), [_]), L = (0, l.useStateFromStores)([i.default], () => i.default.getActiveCommand(_.id)), x = null != L, R = _.getGuildId(), y = M === o.DraftType.FirstThreadMessage, O = (0, l.useStateFromStores)([C.default], () => {
       var e;
       return !0 == !(null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed)
-    }), D = (0, l.useStateFromStores)([u.default], () => u.default.didAgree(R)), j = D && !O, P = a.useMemo(() => !I && (_.isPrivate() && !_.isManaged() || null != R && (!_.isNSFW() || j) && v && d.default.canChatInGuild(R)), [v, j, _, R, I]), b = y ? S.ChannelTypesSets.GUILD_THREADS_ONLY.has(_.type) ? A.default.Messages.UPLOAD_TO_NEW_POST : A.default.Messages.UPLOAD_TO_NEW_THREAD : M ? A.default.Messages.UPLOAD_TO.format({
+    }), D = (0, l.useStateFromStores)([u.default], () => u.default.didAgree(R)), j = D && !O, P = a.useMemo(() => !N && (_.isPrivate() && !_.isManaged() || null != R && (!_.isNSFW() || j) && v && d.default.canChatInGuild(R)), [v, j, _, R, N]), b = y ? S.ChannelTypesSets.GUILD_THREADS_ONLY.has(_.type) ? A.default.Messages.UPLOAD_TO_NEW_POST : A.default.Messages.UPLOAD_TO_NEW_THREAD : T ? A.default.Messages.UPLOAD_TO.format({
       destination: (0, r.computeChannelName)(_, C.default, h.default, !0)
     }) : A.default.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
     return x || !P ? null : (0, s.jsx)(E.default, {
@@ -42,15 +42,15 @@ var s = n("37983"),
       icons: g.DEFAULT_FILE_UPLOAD_ICONS,
       onDrop: e => {
         if (x) return !1;
-        P && null != _ && ((0, m.promptToUpload)(e, _, T, {
-          requireConfirm: M,
+        P && null != _ && ((0, m.promptToUpload)(e, _, M, {
+          requireConfirm: T,
           showLargeMessageDialog: !1
         }), p.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.TEXTAREA_FOCUS))
       },
-      onDragClear: () => N(!0),
+      onDragClear: () => I(!0),
       onDragOver: e => {
         if (x) return !1;
-        !y && e.shiftKey === M && N(!e.shiftKey)
+        !y && e.shiftKey === T && I(!e.shiftKey)
       }
     })
   }

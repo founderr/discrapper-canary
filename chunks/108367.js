@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return C
   },
   getIcon: function() {
-    return M
+    return x
   },
   getIconByName: function() {
     return v
   },
   getMask: function() {
-    return x
+    return M
   },
   getBackground: function() {
     return R
@@ -30,9 +30,9 @@ var a, l, s, i, r = n("669491"),
   S = n("989306"),
   N = n("695449"),
   _ = n("816428"),
-  T = n("710672");
+  I = n("710672");
 (a = s || (s = {})).CHECKED = "CHECKED", a.FRIENDS = "FRIENDS", a.SHARE_SCREEN = "SHARE_SCREEN", a.NEW_MESSAGE = "NEW_MESSAGE";
-let I = {
+let T = {
   CHECKED: f,
   FRIENDS: E,
   SHARE_SCREEN: _,
@@ -45,7 +45,7 @@ let C = {
     SCHEDULED_GUILD_EVENT: h,
     TOP_MESSAGES: p,
     NOTIFICATION_CENTER: c,
-    UPDATE_PROFILE: T,
+    UPDATE_PROFILE: I,
     FIND_FRIENDS: d,
     ADD_FRIEND: d,
     FIRST_MESSAGE: N
@@ -64,7 +64,7 @@ let C = {
         return "NOTIFICATION_CENTER"
     }
   },
-  M = e => {
+  x = e => {
     switch (e.type) {
       case "lifecycle_item":
         return A(e);
@@ -84,29 +84,29 @@ let C = {
     if ("icHighlight" === e) return "TOP_MESSAGES";
     return "NOTIFICATION_CENTER"
   },
-  x = e => {
+  M = e => {
     switch (e) {
       case o.NotificationCenterItems.GO_LIVE_PUSH:
         return {
-          icon: I.SHARE_SCREEN, color: r.default.colors.BACKGROUND_ACCENT
+          icon: T.SHARE_SCREEN, color: r.default.colors.BACKGROUND_ACCENT
         };
       case o.NotificationCenterItems.FRIEND_REQUEST_ACCEPTED:
         return {
-          icon: I.CHECKED, color: r.default.colors.STATUS_POSITIVE_BACKGROUND
+          icon: T.CHECKED, color: r.default.colors.STATUS_POSITIVE_BACKGROUND
         };
       case o.NotificationCenterItems.FRIEND_REQUEST_PENDING:
       case o.NotificationCenterItems.FRIEND_SUGGESTION_CREATED:
         return {
-          icon: I.FRIENDS, color: r.default.colors.BACKGROUND_ACCENT
+          icon: T.FRIENDS, color: r.default.colors.BACKGROUND_ACCENT
         };
       case o.NotificationCenterItems.DM_FRIEND_NUDGE:
         return {
-          icon: I.NEW_MESSAGE, color: r.default.colors.BACKGROUND_ACCENT
+          icon: T.NEW_MESSAGE, color: r.default.colors.BACKGROUND_ACCENT
         };
       case o.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS:
       case o.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED:
         return {
-          icon: I.FRIENDS, color: r.default.colors.BACKGROUND_ACCENT
+          icon: T.FRIENDS, color: r.default.colors.BACKGROUND_ACCENT
         };
       default:
         return null

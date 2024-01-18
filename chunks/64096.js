@@ -31,10 +31,10 @@ function _(e) {
     useSlate: s,
     canUseApplicationCommands: a,
     hasClips: _,
-    channel: T,
-    activities: M,
-    newClipsCount: N,
-    canPostPolls: I,
+    channel: M,
+    activities: T,
+    newClipsCount: I,
+    canPostPolls: N,
     appContext: v
   } = e, L = [];
   return t && (L.push({
@@ -49,13 +49,13 @@ function _(e) {
     type: "CLIPS",
     icon: f.default,
     display: A.default.Messages.CLIPS_SHARE_A_CLIP,
-    badgeVal: N,
+    badgeVal: I,
     badgeColor: o.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
   }), n && L.push({
     type: "CREATE_THREAD",
     icon: E.default,
     display: A.default.Messages.CREATE_THREAD
-  }), I && L.push({
+  }), N && L.push({
     type: "POLL",
     icon: l.PollsIcon,
     display: A.default.Messages.CREATE_POLL
@@ -63,12 +63,12 @@ function _(e) {
     type: "SLASH_COMMAND",
     icon: c.default,
     display: A.default.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
-  }), M.forEach(e => {
+  }), T.forEach(e => {
     !(0, i.default)(e, S.ActivityFlags.EMBEDDED) && (e.type === S.ActivityTypes.PLAYING && (0, i.default)(e, S.ActivityFlags.JOIN) && L.push({
       type: "INVITE_TO_GAME",
       icon: C.default,
       display: A.default.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
-        channel: (0, r.computeChannelName)(T, d.default, u.default, !0),
+        channel: (0, r.computeChannelName)(M, d.default, u.default, !0),
         game: null != e ? e.name : ""
       }),
       activity: e
@@ -76,7 +76,7 @@ function _(e) {
       type: "INVITE_TO_LISTEN",
       icon: p.default,
       display: A.default.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
-        channel: (0, r.computeChannelName)(T, d.default, u.default, !0),
+        channel: (0, r.computeChannelName)(M, d.default, u.default, !0),
         name: null != e ? e.name : ""
       }),
       activity: e
@@ -84,7 +84,7 @@ function _(e) {
       type: "INVITE_TO_WATCH",
       icon: h.default,
       display: A.default.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({
-        channel: (0, r.computeChannelName)(T, d.default, u.default, !0),
+        channel: (0, r.computeChannelName)(M, d.default, u.default, !0),
         name: null != e ? e.name : ""
       }),
       activity: e

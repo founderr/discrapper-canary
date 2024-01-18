@@ -26,7 +26,7 @@ function d(e) {
     S = null != h ? i.default.extractTimestamp(h) : null,
     A = null;
   return f.forEach(e => {
-    var a, _, T, M, N, I, v, L;
+    var a, _, M, T, I, N, v, L;
     if (null != p && p.length > 0) {
       ;
       let t = i.default.extractTimestamp(e.id);
@@ -64,20 +64,20 @@ function d(e) {
     if (null !== D) {
       ;
       let t, n;
-      [y, R] = (_ = E, T = e, M = D, n = N = R, null == N || N.type !== M ? (t = {
-        type: M,
+      [y, R] = (_ = E, M = e, T = D, n = I = R, null == I || I.type !== T ? (t = {
+        type: T,
         content: [],
-        key: T.id
-      }, _.push(t)) : n = (t = N).content[t.content.length - 1], [t, n])
+        key: M.id
+      }, _.push(t)) : n = (t = I).content[t.content.length - 1], [t, n])
     }
     if (h === e.id && null != S) {
       if (null != R && R.type === u.ChannelStreamTypes.DIVIDER) R.unreadId = e.id, S = null;
       else if (null !== y) {
         ;
-        I = y, v = c, (L = e).isFirstMessageInForumPost(v) || I.content.push({
+        N = y, v = c, (L = e).isFirstMessageInForumPost(v) || N.content.push({
           type: u.ChannelStreamTypes.DIVIDER,
           unreadId: L.id
-        }), I.hasUnread = !0, S = null
+        }), N.hasUnread = !0, S = null
       } else !e.isFirstMessageInForumPost(c) && E.push({
         type: u.ChannelStreamTypes.DIVIDER,
         unreadId: e.id

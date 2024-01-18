@@ -22,13 +22,13 @@ var a = n("37983"),
   S = n("116320"),
   N = n("945330"),
   _ = n("138217"),
-  T = n("530686"),
-  I = n("998530"),
+  I = n("530686"),
+  T = n("998530"),
   C = n("814744"),
   A = n("805614"),
-  M = n("64318"),
+  x = n("64318"),
   v = n("49111"),
-  x = n("782340"),
+  M = n("782340"),
   R = n("228146");
 let L = {
   offset: {
@@ -55,7 +55,7 @@ function b(e) {
     messages: g,
     hasMore: S,
     loading: N,
-    guildFilter: T,
+    guildFilter: I,
     roleFilter: C,
     everyoneFilter: A
   } = (0, s.useStateFromStoresObject)([_.default], () => ({
@@ -65,13 +65,13 @@ function b(e) {
     guildFilter: _.default.guildFilter,
     roleFilter: _.default.roleFilter,
     everyoneFilter: _.default.everyoneFilter
-  })), L = (0, u.default)(T), b = (0, u.default)(C), y = (0, u.default)(A);
+  })), L = (0, u.default)(I), b = (0, u.default)(C), y = (0, u.default)(A);
   l.useEffect(() => {
     if (!_.default.hasLoadedEver) {
       O(m, !0);
       return
-    }(null != L && T !== L || null != b && C !== b || null != y && A !== y) && O(m, !0)
-  }, [L, T, b, C, y, A, m, !0]);
+    }(null != L && I !== L || null != b && C !== b || null != y && A !== y) && O(m, !0)
+  }, [L, I, b, C, y, A, m, !0]);
   l.useEffect(() => {
     d.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "mentions"
@@ -79,12 +79,12 @@ function b(e) {
   }, []), l.useEffect(() => () => {
     r.default.truncateMentions(v.MAX_MENTIONS_PER_FETCH)
   }, []);
-  let D = l.useCallback(() => (0, a.jsx)(M.default, {
+  let F = l.useCallback(() => (0, a.jsx)(x.default, {
     tab: i.InboxTab.MENTIONS,
     setTab: t,
     badgeState: f,
     closePopout: h,
-    children: (0, a.jsx)(I.default, {})
+    children: (0, a.jsx)(T.default, {})
   }), [!0, t, f, h]);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsx)(o.default, {
@@ -105,31 +105,31 @@ function b(e) {
         O(m, !0, e)
       },
       canCloseAllMessages: !0,
-      renderHeader: D,
-      renderEmptyState: F,
+      renderHeader: F,
+      renderEmptyState: D,
       renderMessage: j,
-      "aria-label": x.default.Messages.RECENT_MENTIONS,
+      "aria-label": M.default.Messages.RECENT_MENTIONS,
       listName: "recents"
     })
   })
 }
 
 function y(e, t) {
-  return [(0, a.jsx)(D, {
+  return [(0, a.jsx)(F, {
     message: e,
     gotoMessage: t
   }, e.id)]
 }
 
 function j(e, t) {
-  return [(0, a.jsx)(D, {
+  return [(0, a.jsx)(F, {
     message: e,
     gotoMessage: t,
     dismissible: !0
   }, e.id)]
 }
 
-function D(e) {
+function F(e) {
   let {
     message: t,
     gotoMessage: n,
@@ -147,7 +147,7 @@ function D(e) {
       gotoChannel: n,
       children: null != l ? (0, a.jsx)(g.default, {
         className: R.closeButton,
-        tooltip: x.default.Messages.CLOSE,
+        tooltip: M.default.Messages.CLOSE,
         color: g.CircleIconButtonColors.TERTIARY,
         icon: (0, a.jsx)(N.default, {
           width: 16,
@@ -157,7 +157,7 @@ function D(e) {
       }) : null
     }), (0, a.jsxs)("div", {
       className: R.messageContainer,
-      children: [(0, a.jsx)(T.default, {
+      children: [(0, a.jsx)(I.default, {
         className: R.jumpButton,
         onJump: n
       }), (0, a.jsx)(f.default, {
@@ -174,10 +174,10 @@ function D(e) {
   })
 }
 
-function F(e) {
+function D(e) {
   return (0, a.jsx)(A.default, {
     Icon: S.default,
-    header: x.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
-    tip: x.default.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
+    header: M.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
+    tip: M.default.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
   })
 }

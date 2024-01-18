@@ -86,7 +86,7 @@ function _(e, t) {
   }), R.emitChange()
 }
 
-function T(e, t, n) {
+function I(e, t, n) {
   let a, l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10;
   if (null == e || "" === e) return null;
   let i = h.default.getSearchType(n);
@@ -113,7 +113,7 @@ function T(e, t, n) {
   }
 }
 
-function I(e) {
+function T(e) {
   let t = (null != e ? e.getFullMatch() : "").trim(),
     n = function() {
       let e = (0, r.isInMainTabsExperiment)() && !1;
@@ -137,7 +137,7 @@ function I(e) {
 
 function C(e, t) {
   let n = [];
-  if (t.type === p.SearchPopoutModes.FILTER) n.push(T(t.filter, t.token, e, 10));
+  if (t.type === p.SearchPopoutModes.FILTER) n.push(I(t.filter, t.token, e, 10));
   else if (t.type === p.SearchPopoutModes.FILTER_ALL) n = function(e, t) {
     let n = (null != e ? e.getFullMatch() : "").trim(),
       a = [];
@@ -147,7 +147,7 @@ function C(e, t) {
       return !E.default.hidePersonalInformation && (n.push(p.SearchTokenTypes.FILTER_FROM), n.push(p.SearchTokenTypes.FILTER_MENTIONS)), t === p.SearchTypes.GUILD && n.push(p.SearchTokenTypes.FILTER_IN), n
     })(t).forEach(n => {
       if (null == n) return;
-      let l = T(n, e, t, 3);
+      let l = I(n, e, t, 3);
       null != l && a.push(l)
     }), a.push(function(e, t) {
       let n = (null != e ? e.getFullMatch() : "").trim();
@@ -163,10 +163,10 @@ function C(e, t) {
       }
     }(e, t)));
     let l = (0, d.getTotalResults)(a);
-    return l < 5 && a.push(I(e)), a
+    return l < 5 && a.push(T(e)), a
   }(t.token, e);
   else if (t.type === p.SearchPopoutModes.EMPTY) {
-    n.push(I(t.token));
+    n.push(T(t.token));
     let a = (0, r.isInMainTabsExperiment)() && !1;
     !a && n.push(function(e) {
       if (E.default.hidePersonalInformation) return null;
@@ -186,7 +186,7 @@ function A() {
   (0, d.clearTokenCache)()
 }
 
-function M(e) {
+function x(e) {
   let t = g[e];
   if (null == t) return;
   let {
@@ -224,7 +224,7 @@ function v() {
     autocompletes: C(e, n)
   })
 }
-class x extends a.default.Store {
+class M extends a.default.Store {
   initialize() {
     this.waitFor(f.default, E.default)
   }
@@ -235,8 +235,8 @@ class x extends a.default.Store {
     })
   }
 }
-x.displayName = "SearchAutocompleteStore";
-let R = new x(l.default, {
+M.displayName = "SearchAutocompleteStore";
+let R = new M(l.default, {
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function(e) {
     var t;
     let n, {
@@ -283,10 +283,10 @@ let R = new x(l.default, {
     let {
       searchId: t
     } = e;
-    null != t ? M(t) : Object.keys(g).forEach(M)
+    null != t ? x(t) : Object.keys(g).forEach(x)
   },
   LOGOUT: function() {
-    Object.keys(g).forEach(M)
+    Object.keys(g).forEach(x)
   }
 });
 var L = R
