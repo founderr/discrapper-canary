@@ -7,13 +7,13 @@ l.r(t), l.d(t, {
     return B
   },
   default: function() {
-    return Z
+    return w
   }
 }), l("222007");
-var a, n, s, i, o, d, C = l("37983"),
+var a, n, s, i, o, d, u = l("37983"),
   r = l("884691"),
-  u = l("414456"),
-  c = l.n(u),
+  C = l("414456"),
+  c = l.n(C),
   f = l("448105"),
   m = l.n(f),
   E = l("446674"),
@@ -21,18 +21,18 @@ var a, n, s, i, o, d, C = l("37983"),
   h = l("137223"),
   T = l("679653"),
   x = l("419830"),
-  H = l("405645"),
-  _ = l("19766"),
+  _ = l("405645"),
+  H = l("19766"),
   A = l("42203"),
-  L = l("305961"),
-  g = l("27618"),
-  N = l("697218"),
-  S = l("476765"),
-  p = l("483093"),
+  p = l("305961"),
+  S = l("27618"),
+  L = l("697218"),
+  g = l("476765"),
+  N = l("483093"),
   v = l("782340"),
-  R = l("159260");
-let I = (0, S.uid)(),
-  j = (0, S.uid)(),
+  I = l("159260");
+let R = (0, g.uid)(),
+  j = (0, g.uid)(),
   b = "text-sm/medium";
 
 function D(e) {
@@ -44,7 +44,7 @@ function O(e) {
 }
 
 function V(e) {
-  let t = "".concat(e.name.includes(_.EVERYONE_ID) ? "" : "@").concat(e.name);
+  let t = "".concat(e.name.includes(H.EVERYONE_ID) ? "" : "@").concat(e.name);
   return {
     tag: {
       type: h.RichTagTypes.ROLE,
@@ -60,7 +60,7 @@ function V(e) {
 }
 
 function B(e) {
-  let t = (0, T.computeChannelName)(e, N.default, g.default);
+  let t = (0, T.computeChannelName)(e, L.default, S.default);
   return {
     tag: {
       type: h.RichTagTypes.CHANNEL,
@@ -74,7 +74,7 @@ function B(e) {
     }
   }
 }(i = a || (a = {}))[i.CHANNEL = 0] = "CHANNEL", i[i.ROLE = 1] = "ROLE";
-let F = r.memo(function(e) {
+let y = r.memo(function(e) {
   var t;
   let {
     row: l,
@@ -83,67 +83,67 @@ let F = r.memo(function(e) {
   } = e, {
     id: s,
     name: i
-  } = l.record, o = (0, H.useRoleIcon)({
+  } = l.record, o = (0, _.useRoleIcon)({
     guildId: a,
     roleId: s,
     size: 16
-  }), d = (0, E.useStateFromStores)([L.default], () => {
-    let e = L.default.getGuild(a);
+  }), d = (0, E.useStateFromStores)([p.default], () => {
+    let e = p.default.getGuild(a);
     return null == e ? null : e.roles[s]
-  }, [s, a]), r = i.includes(_.EVERYONE_ID) ? "" : "@", u = (0, M.useToken)(M.tokens.unsafe_rawColors.PRIMARY_300).hsl(), f = null !== (t = null == d ? void 0 : d.colorString) && void 0 !== t ? t : u;
-  return (0, C.jsxs)("div", {
-    className: c(R.rowLabel, R.roleTagContainer, n),
-    children: [(0, C.jsx)(M.RoleDot, {
-      className: R.roleDot,
+  }, [s, a]), r = i.includes(H.EVERYONE_ID) ? "" : "@", C = (0, M.useToken)(M.tokens.unsafe_rawColors.PRIMARY_300).hsl(), f = null !== (t = null == d ? void 0 : d.colorString) && void 0 !== t ? t : C;
+  return (0, u.jsxs)("div", {
+    className: c(I.rowLabel, I.roleTagContainer, n),
+    children: [(0, u.jsx)(M.RoleDot, {
+      className: I.roleDot,
       color: f,
       background: !1,
       tooltip: !1
-    }), null != o ? (0, C.jsx)(p.default, {
-      className: R.roleTagIcon,
+    }), null != o ? (0, u.jsx)(N.default, {
+      className: I.roleTagIcon,
       ...o,
       enableTooltip: !1
-    }) : r, (0, C.jsx)(M.Text, {
+    }) : r, (0, u.jsx)(M.Text, {
       variant: b,
-      className: R.roleTagLabel,
+      className: I.roleTagLabel,
       children: i
     })]
   })
 });
 
-function U(e) {
+function F(e) {
   let {
     channel: t,
     row: l,
     className: a
   } = e, n = null != t.parent_id, s = (0, x.getChannelIconComponent)(t);
-  return (0, C.jsxs)("div", {
-    className: c(R.rowLabel, R.channelLabel, {
-      [R.hasParent]: n
+  return (0, u.jsxs)("div", {
+    className: c(I.rowLabel, I.channelLabel, {
+      [I.hasParent]: n
     }, a),
-    children: [null != s && (0, C.jsx)(s, {
+    children: [null != s && (0, u.jsx)(s, {
       width: 16,
       height: 16,
-      className: R.channelIcon
-    }), (0, C.jsx)(M.Text, {
+      className: I.channelIcon
+    }), (0, u.jsx)(M.Text, {
       variant: t.isCategory() ? "eyebrow" : b,
       children: l.display
     })]
   })
 }
 
-function w(e, t, l) {
-  return D(e) ? (0, C.jsx)(F, {
+function U(e, t, l) {
+  return D(e) ? (0, u.jsx)(y, {
     row: e,
     guildId: t,
     className: l
-  }, e.record.id) : O(e) ? (0, C.jsx)(U, {
+  }, e.record.id) : O(e) ? (0, u.jsx)(F, {
     row: e,
     channel: e.record,
     className: l
   }, e.record.id) : null
 }
 
-function Z(e) {
+function w(e) {
   let {
     guildId: t,
     roleRows: l = [],
@@ -153,10 +153,10 @@ function Z(e) {
     onChange: i,
     placeholder: o,
     helperText: d,
-    className: u
-  } = e, f = (0, E.useStateFromStores)([L.default], () => {
+    className: C
+  } = e, f = (0, E.useStateFromStores)([p.default], () => {
     var e, l;
-    return null !== (l = null === (e = L.default.getGuild(t)) || void 0 === e ? void 0 : e.roles) && void 0 !== l ? l : {}
+    return null !== (l = null === (e = p.default.getGuild(t)) || void 0 === e ? void 0 : e.roles) && void 0 !== l ? l : {}
   }, [t]), T = r.useMemo(() => (function(e, t, l) {
     if (null == e) return {};
     let a = {};
@@ -166,19 +166,19 @@ function Z(e) {
     }), t.forEach(e => {
       e in l && (a[e] = V(l[e]))
     }), a
-  })(n, s, f), [n, s, f]), x = r.useMemo(() => Object.keys(T), [T]), [H, _] = r.useState(""), [g, N] = r.useState(!1), [S, p] = r.useState(!1), [b, F] = r.useState(!1), U = r.useRef(null), {
-    sections: Z,
+  })(n, s, f), [n, s, f]), x = r.useMemo(() => Object.keys(T), [T]), [_, H] = r.useState(""), [S, L] = r.useState(!1), [g, N] = r.useState(!1), [b, y] = r.useState(!1), F = r.useRef(null), {
+    sections: w,
     sectionCounts: k
   } = r.useMemo(() => {
-    let e = "" !== H ? a.filter(e => m(H, e.display.toLocaleLowerCase())) : a,
-      t = "" !== H ? l.filter(e => m(H, e.display.toLocaleLowerCase())) : l,
+    let e = "" !== _ ? a.filter(e => m(_, e.display.toLocaleLowerCase())) : a,
+      t = "" !== _ ? l.filter(e => m(_, e.display.toLocaleLowerCase())) : l,
       n = [],
       s = [];
     return n[0] = e, s[0] = e.length, n[1] = t, s[1] = t.length, {
       sections: n,
       sectionCounts: s
     }
-  }, [H, a, l]), y = r.useCallback(e => {
+  }, [_, a, l]), Z = r.useCallback(e => {
     let t = Object.values(e),
       l = t.filter(e => {
         let {
@@ -194,94 +194,94 @@ function Z(e) {
       }).map(e => e.row.record.id);
     i(new Set(l), new Set(a))
   }, [i]), P = () => {
-    N(!1), p(!1)
+    L(!1), N(!1)
   };
   r.useEffect(() => {
     let e = setTimeout(() => {
-      F(g || S)
+      y(S || g)
     }, 32);
     return () => {
       clearTimeout(e)
     }
-  }, [g, S]);
+  }, [S, g]);
   let Y = (e, t, l) => {
-      l.stopPropagation(), l.preventDefault(), 2 === t ? N(e) : (1 === t || N(e), p(e))
+      l.stopPropagation(), l.preventDefault(), 2 === t ? L(e) : (1 === t || L(e), N(e))
     },
     G = r.useCallback(e => {
       let t = {
         ...T
       };
-      O(e) ? t[e.id] = B(e.record) : D(e) && (t[e.id] = V(e.record)), y(t), _(""), P(), setTimeout(() => {
+      O(e) ? t[e.id] = B(e.record) : D(e) && (t[e.id] = V(e.record)), Z(t), H(""), P(), setTimeout(() => {
         var e;
-        let t = null === (e = U.current) || void 0 === e ? void 0 : e.containerRef.current,
+        let t = null === (e = F.current) || void 0 === e ? void 0 : e.containerRef.current,
           l = null == t ? void 0 : t.firstChild;
         null != l && l.scrollTo({
           top: l.scrollHeight,
           behavior: "smooth"
         })
       }, 16)
-    }, [y, T]),
+    }, [Z, T]),
     q = r.useCallback(e => {
       let {
         section: l,
         row: a
-      } = e, n = Z[l][a];
-      return (0, C.jsx)(M.Clickable, {
-        className: c(R.selectableSearchRow, R.rowHeight),
+      } = e, n = w[l][a];
+      return (0, u.jsx)(M.Clickable, {
+        className: c(I.selectableSearchRow, I.rowHeight),
         onClick: e => {
           e.stopPropagation(), G(n)
         },
-        children: (0, C.jsx)("div", {
-          className: R.rowContainer,
-          children: w(n, t, R.searchRowLabel)
+        children: (0, u.jsx)("div", {
+          className: I.rowContainer,
+          children: U(n, t, I.searchRowLabel)
         })
       }, n.id)
-    }, [t, G, Z]),
-    K = r.useMemo(() => x.map(e => {
+    }, [t, G, w]),
+    J = r.useMemo(() => x.map(e => {
       var l, a;
       return l = T[e], a = t, {
         ...l.tag,
-        label: w(l.row, a, R.noIndent)
+        label: U(l.row, a, I.noIndent)
       }
     }), [T, x, t]);
-  return (0, C.jsxs)("div", {
-    className: c(R.searchContainer, u),
-    children: [(0, C.jsxs)("div", {
-      className: R.searchBox,
-      children: [(0, C.jsx)(h.default, {
-        tags: K,
+  return (0, u.jsxs)("div", {
+    className: c(I.searchContainer, C),
+    children: [(0, u.jsxs)("div", {
+      className: I.searchBox,
+      children: [(0, u.jsx)(h.default, {
+        tags: J,
         maxHeight: 98,
         size: h.default.Sizes.MEDIUM,
-        query: H,
-        ref: U,
+        query: _,
+        ref: F,
         onRemoveTag: e => {
           let t = x[e],
             {
               [t]: l,
               ...a
             } = T;
-          y(a), _(""), P()
+          Z(a), H(""), P()
         },
         onQueryChange: e => {
-          _(e.trim().toLocaleLowerCase())
+          H(e.trim().toLocaleLowerCase())
         },
         placeholder: null != o ? o : v.default.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_PLACEHOLDER,
         sections: [x.length],
         inputProps: {
-          "aria-labelledby": I,
+          "aria-labelledby": R,
           "aria-controls": j,
           "aria-expanded": b,
           onFocus: e => Y(!0, 2, e),
           onBlur: e => Y(!1, 2, e)
         }
-      }), b && (0, C.jsx)("div", {
-        className: R.resultsListParent,
+      }), b && (0, u.jsx)("div", {
+        className: I.resultsListParent,
         onFocus: e => Y(!0, 1, e),
         onBlur: e => Y(!1, 1, e),
         tabIndex: -1,
-        children: (0, C.jsx)(M.ListAuto, {
-          className: R.resultsListContainer,
-          innerClassName: R.resultsList,
+        children: (0, u.jsx)(M.ListAuto, {
+          className: I.resultsListContainer,
+          innerClassName: I.resultsList,
           sections: k,
           renderRow: q,
           rowHeight: 34,
@@ -289,13 +289,13 @@ function Z(e) {
             let {
               section: t
             } = e;
-            return 0 === t ? (0, C.jsx)(M.FormTitle, {
+            return 0 === t ? (0, u.jsx)(M.FormTitle, {
               tag: "h5",
-              className: c(R.sectionTitle, R.sectionHeight),
+              className: c(I.sectionTitle, I.sectionHeight),
               children: v.default.Messages.CHANNELS
-            }, v.default.Messages.CHANNELS) : 1 === t ? (0, C.jsx)(M.FormTitle, {
+            }, v.default.Messages.CHANNELS) : 1 === t ? (0, u.jsx)(M.FormTitle, {
               tag: "h5",
-              className: c(R.sectionTitle, R.sectionHeight),
+              className: c(I.sectionTitle, I.sectionHeight),
               children: v.default.Messages.ROLES
             }, v.default.Messages.ROLES) : null
           },
@@ -303,9 +303,9 @@ function Z(e) {
             let {
               section: t
             } = e;
-            if (0 === t) return 0 === k[1] && k[0] > 0 ? null : (0, C.jsx)("div", {
-              className: R.sectionFooter,
-              children: (0, C.jsx)(M.FormDivider, {})
+            if (0 === t) return 0 === k[1] && k[0] > 0 ? null : (0, u.jsx)("div", {
+              className: I.sectionFooter,
+              children: (0, u.jsx)(M.FormDivider, {})
             });
             return null
           },
@@ -320,10 +320,10 @@ function Z(e) {
           innerAriaOrientation: "vertical"
         })
       })]
-    }), null != d && (0, C.jsx)(M.Text, {
+    }), null != d && (0, u.jsx)(M.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
-      className: R.helperText,
+      className: I.helperText,
       children: d
     })]
   })

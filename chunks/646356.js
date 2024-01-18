@@ -19,8 +19,8 @@ let u = {},
   E = !1,
   _ = null,
   p = null,
-  I = !1,
   S = !1,
+  I = !1,
   h = null,
   T = s.AppealIngestionSignal.DIDNT_VIOLATE_POLICY,
   C = "";
@@ -50,7 +50,7 @@ class g extends r.default.Store {
     return p
   }
   getIsDsaEligible() {
-    return I
+    return S
   }
   getAppealSignal() {
     return T
@@ -59,7 +59,7 @@ class g extends r.default.Store {
     return C
   }
   getIsSubmitting() {
-    return S
+    return I
   }
   getSubmitError() {
     return h
@@ -92,7 +92,7 @@ var m = new g(a.default, {
       accountStanding: n,
       isDsaEligible: i
     } = e;
-    u[t.id] = t, c[t.id] = o.ClassificationRequestState.SUCCESS, d = n, f = !1, _ = null, I = i
+    u[t.id] = t, c[t.id] = o.ClassificationRequestState.SUCCESS, d = n, f = !1, _ = null, S = i
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(e) {
     let {
@@ -124,17 +124,17 @@ var m = new g(a.default, {
   },
   SAFETY_HUB_REQUEST_REVIEW_START: function(e) {
     let {} = e;
-    S = !0, h = null
+    I = !0, h = null
   },
   SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function(e) {
     let {} = e;
-    S = !1, h = null
+    I = !1, h = null
   },
   SAFETY_HUB_REQUEST_REVIEW_FAILURE: function(e) {
     let {
       error: t
     } = e;
-    S = !1, h = t
+    I = !1, h = t
   },
   LOGOUT: function() {
     f = !1, u = {}, d = {

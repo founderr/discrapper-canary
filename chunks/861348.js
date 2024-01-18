@@ -15,15 +15,15 @@ var n = a("37983"),
   d = a("132206"),
   _ = a("333781"),
   S = a("422671"),
-  E = a("792105"),
-  f = a("133479"),
+  f = a("792105"),
+  E = a("133479"),
   T = a("966677"),
   A = a("49111"),
   I = a("782340"),
   g = a("302713");
 
 function N() {
-  let t = (0, E.default)(),
+  let t = (0, f.default)(),
     e = (0, S.useSafetyHubInitialized)(),
     a = (0, d.useSafetyHubAccountStanding)(),
     N = (0, _.useSafetyHubFetchError)();
@@ -46,6 +46,6 @@ function N() {
     })]
   }) : (0, n.jsxs)("div", {
     className: g.container,
-    children: [(0, n.jsx)(f.default, {}), (0, n.jsx)(T.ConnectedSafetyHubViolationsContainer, {})]
+    children: [(0, n.jsx)(E.default, {}), (0, n.jsx)(T.ConnectedSafetyHubViolationsContainer, {})]
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return H
+    return _
   }
 });
 var a = l("37983"),
@@ -10,9 +10,9 @@ var a = l("37983"),
   i = l.n(s),
   o = l("866227"),
   d = l.n(o),
-  C = l("65597"),
+  u = l("65597"),
   r = l("77078"),
-  u = l("812204"),
+  C = l("812204"),
   c = l("781896"),
   f = l("493910"),
   m = l("466818"),
@@ -22,17 +22,17 @@ var a = l("37983"),
   T = l("236807"),
   x = l("821118");
 
-function H(e) {
+function _(e) {
   let {
     guild: t,
     onSubmit: s
-  } = e, o = (0, C.default)([E.default], () => E.default.getMembersCountByGuildId(t.id, f.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [t.id]), H = (0, C.default)([E.default], () => {
+  } = e, o = (0, u.default)([E.default], () => E.default.getMembersCountByGuildId(t.id, f.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [t.id]), _ = (0, u.default)([E.default], () => {
     let e = E.default.getNewMemberTimestamp(t.id);
     return d(e).format("h:mm A")
-  }, [t.id]), _ = (0, C.default)([E.default], () => E.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), A = n.useCallback(() => {
+  }, [t.id]), H = (0, u.default)([E.default], () => E.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), A = n.useCallback(() => {
     (0, M.refreshMemberSafetyTimestamp)(t.id), null == s || s()
-  }, [t.id, s]), L = n.useCallback(() => {
-    _ ? A() : (0, r.openModalLazy)(async () => {
+  }, [t.id, s]), p = n.useCallback(() => {
+    H ? A() : (0, r.openModalLazy)(async () => {
       let {
         default: e
       } = await l.el("756912").then(l.bind(l, "756912"));
@@ -41,22 +41,22 @@ function H(e) {
         onConfirm: A
       })
     })
-  }, [A, _]), g = new Intl.NumberFormat(h.default.getLocale()).format(o), N = (0, m.useCanAccessInviteCodeFeature)(t.id), S = (0, m.useCanAccessBulkBanningFeature)(t.id, u.default.MEMBER_SAFETY_PAGE), p = n.useMemo(() => 1 + (N ? 1 : 0) + (S ? 1 : 0), [N, S]);
+  }, [A, H]), S = new Intl.NumberFormat(h.default.getLocale()).format(o), L = (0, m.useCanAccessInviteCodeFeature)(t.id), g = (0, m.useCanAccessBulkBanningFeature)(t.id, C.default.MEMBER_SAFETY_PAGE), N = n.useMemo(() => 1 + (L ? 1 : 0) + (g ? 1 : 0), [L, g]);
   return 0 === o ? null : (0, a.jsxs)("tr", {
     className: i(x.newMembersNotice),
-    onClick: L,
+    onClick: p,
     children: [(0, a.jsx)("td", {
       colSpan: 3,
       children: (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "always-white",
         children: h.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
-          count: g,
-          date: H
+          count: S,
+          date: _
         })
       })
     }), (0, a.jsx)("td", {
-      colSpan: p
+      colSpan: N
     }), (0, a.jsx)("td", {
       colSpan: 2,
       children: (0, a.jsx)("div", {

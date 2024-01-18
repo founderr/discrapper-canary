@@ -15,8 +15,8 @@ var n = a("37983"),
   d = a("300113"),
   _ = a("599110"),
   S = a("299039"),
-  E = a("667963"),
-  f = a("736393"),
+  f = a("667963"),
+  E = a("736393"),
   T = a("310888"),
   A = a("132206"),
   I = a("698609"),
@@ -103,7 +103,7 @@ let p = t => {
     return (0, n.jsx)(u.Text, {
       variant: "text-xs/normal",
       className: m.timestamp,
-      children: (0, f.getClassificationRelativeIncidentTime)(e)
+      children: (0, E.getClassificationRelativeIncidentTime)(e)
     })
   },
   O = () => (0, n.jsx)(u.Text, {
@@ -119,7 +119,7 @@ let p = t => {
       id: s,
       description: r,
       max_expiration_time: c
-    } = i, o = S.default.extractTimestamp(s), d = (0, T.useIsNewClassification)(i), _ = (0, E.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), f = new Date(c), A = f.toDateString();
+    } = i, o = S.default.extractTimestamp(s), d = (0, T.useIsNewClassification)(i), _ = (0, f.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), E = new Date(c), A = E.toDateString();
     return (0, n.jsx)(u.Clickable, {
       onClick: () => {
         (0, u.openModalLazy)(async () => {
@@ -161,7 +161,7 @@ let p = t => {
         }), (0, n.jsx)(u.Text, {
           variant: "text-sm/normal",
           className: m.expirationDate,
-          children: f > new Date ? C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
+          children: E > new Date ? C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
             expirationDate: A
           }) : C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format({
             expirationDate: A

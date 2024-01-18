@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return y
   }
 });
 var i = n("37983"),
@@ -17,8 +17,8 @@ var i = n("37983"),
   E = n("698609"),
   _ = n("57242"),
   p = n("380676"),
-  I = n("170213"),
-  S = n("49111"),
+  S = n("170213"),
+  I = n("49111"),
   h = n("782340"),
   T = n("383496");
 let C = e => {
@@ -132,7 +132,7 @@ let C = e => {
   L = e => (0, i.jsx)("div", {
     className: T.classificationLetUsKnowContainer,
     children: e.hasBeenAppealed ? (0, i.jsx)(A, {}) : (0, i.jsx)(N, {
-      appealLink: I.SafetyHubLinks.APPEALS_LINK,
+      appealLink: S.SafetyHubLinks.APPEALS_LINK,
       letUsKnowClick: e.onLetUsKnowClick,
       isAppealEligible: e.isAppealEligible
     })
@@ -164,7 +164,7 @@ let C = e => {
       }), a]
     })
   };
-var R = e => {
+var y = e => {
   var t, n;
   let {
     classificationId: r,
@@ -176,8 +176,8 @@ var R = e => {
     isAppealEligible: h
   } = (0, E.useSafetyHubClassification)(r), m = (0, f.useSafetyHubAccountStanding)(), v = null != s && null != s.flagged_content && s.flagged_content.length > 0;
   return (l.useEffect(() => {
-    u.default.track(S.AnalyticEvents.SAFETY_HUB_ACTION, {
-      action: I.SafetyHubAnalyticsActions.ViewViolationDetail,
+    u.default.track(I.AnalyticEvents.SAFETY_HUB_ACTION, {
+      action: S.SafetyHubAnalyticsActions.ViewViolationDetail,
       account_standing: m.state,
       classification_ids: [Number(r)],
       source: a,
@@ -194,14 +194,14 @@ var R = e => {
       actions: s.actions
     }), (0, i.jsx)(U, {
       classificationTypeText: s.description,
-      tosLink: I.SafetyHubLinks.TOS_LINK,
-      communityGuidelinesLink: I.SafetyHubLinks.COMMUNITY_GUIDELINES,
+      tosLink: S.SafetyHubLinks.TOS_LINK,
+      communityGuidelinesLink: S.SafetyHubLinks.COMMUNITY_GUIDELINES,
       policyExplainerLink: s.explainer_link,
       appealComponent: (0, i.jsx)(L, {
         hasBeenAppealed: null != s.appeal_status,
         onLetUsKnowClick: () => {
-          u.default.track(S.AnalyticEvents.SAFETY_HUB_ACTION, {
-            action: I.SafetyHubAnalyticsActions.ClickLetUsKnow,
+          u.default.track(I.AnalyticEvents.SAFETY_HUB_ACTION, {
+            action: S.SafetyHubAnalyticsActions.ClickLetUsKnow,
             account_standing: m.state,
             classification_ids: [Number(r)],
             source: a,

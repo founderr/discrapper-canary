@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return H
+    return _
   }
 });
 var a = l("37983"),
@@ -10,9 +10,9 @@ var a = l("37983"),
   i = l.n(s),
   o = l("65597"),
   d = l("77078"),
-  C = l("4845"),
+  u = l("4845"),
   r = l("635731"),
-  u = l("491401"),
+  C = l("491401"),
   c = l("864982"),
   f = l("130037"),
   m = l("536999"),
@@ -22,31 +22,31 @@ var a = l("37983"),
   T = l("782340"),
   x = l("253665");
 
-function H(e) {
+function _(e) {
   let {
     guildId: t,
     onClose: l
-  } = e, s = (0, o.default)([E.default], () => E.default.getSearchStateByGuildId(t), [t], i), H = (0, f.useTrackMemberFilterSafetyFlagsUsed)(t), _ = (0, m.isInMembersTableSafetySignalsExperiment)(t), A = n.useCallback(() => {
-    !s.requireUnusualDmActivity && H(f.MemberSafetyFlagType.UNUSUAL_DM_ACTIVITY), (0, M.updateSearchState)(t, {
+  } = e, s = (0, o.default)([E.default], () => E.default.getSearchStateByGuildId(t), [t], i), _ = (0, f.useTrackMemberFilterSafetyFlagsUsed)(t), H = (0, m.isInMembersTableSafetySignalsExperiment)(t), A = n.useCallback(() => {
+    !s.requireUnusualDmActivity && _(f.MemberSafetyFlagType.UNUSUAL_DM_ACTIVITY), (0, M.updateSearchState)(t, {
       ...s,
       requireUnusualDmActivity: !s.requireUnusualDmActivity
     })
-  }, [t, s, H]), L = n.useCallback(() => {
-    !s.requireCommunicationDisabled && H(f.MemberSafetyFlagType.COMMUNICATION_DISABLED), (0, M.updateSearchState)(t, {
+  }, [t, s, _]), p = n.useCallback(() => {
+    !s.requireCommunicationDisabled && _(f.MemberSafetyFlagType.COMMUNICATION_DISABLED), (0, M.updateSearchState)(t, {
       ...s,
       requireCommunicationDisabled: !s.requireCommunicationDisabled
     })
-  }, [t, s, H]), g = n.useCallback(() => {
-    !s.requireUnusualAccountActivity && H(f.MemberSafetyFlagType.UNUSUAL_ACCOUNT_ACTIVITY), (0, M.updateSearchState)(t, {
+  }, [t, s, _]), S = n.useCallback(() => {
+    !s.requireUnusualAccountActivity && _(f.MemberSafetyFlagType.UNUSUAL_ACCOUNT_ACTIVITY), (0, M.updateSearchState)(t, {
       ...s,
       requireUnusualAccountActivity: !s.requireUnusualAccountActivity
     })
-  }, [t, s, H]), N = n.useCallback(() => {
-    !s.requireUsernameQuarantined && H(f.MemberSafetyFlagType.USERNAME_QUARANTINED), (0, M.updateSearchState)(t, {
+  }, [t, s, _]), L = n.useCallback(() => {
+    !s.requireUsernameQuarantined && _(f.MemberSafetyFlagType.USERNAME_QUARANTINED), (0, M.updateSearchState)(t, {
       ...s,
       requireUsernameQuarantined: !s.requireUsernameQuarantined
     })
-  }, [t, s, H]);
+  }, [t, s, _]);
   return (0, a.jsx)(d.Menu, {
     navId: "member-safety-flags",
     onClose: l,
@@ -57,7 +57,7 @@ function H(e) {
         id: "toggle-require-unusual-dm-activity",
         label: (0, a.jsxs)("div", {
           className: x.checkboxLabel,
-          children: [(0, a.jsx)(C.default, {
+          children: [(0, a.jsx)(u.default, {
             width: 16,
             height: 16,
             className: x.unusualDMLabelIcon
@@ -69,15 +69,15 @@ function H(e) {
         id: "toggle-require-communication-disabled",
         label: (0, a.jsxs)("div", {
           className: x.checkboxLabel,
-          children: [(0, a.jsx)(u.default, {
+          children: [(0, a.jsx)(C.default, {
             width: 16,
             height: 16,
             className: x.timeoutLabelIcon
           }), T.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED]
         }),
-        action: L,
+        action: p,
         checked: s.requireCommunicationDisabled
-      }), _ && (0, a.jsxs)(a.Fragment, {
+      }), H && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(d.MenuCheckboxItem, {
           id: "toggle-require-unusual-account-activity",
           label: (0, a.jsxs)("div", {
@@ -88,7 +88,7 @@ function H(e) {
               className: x.unusualAccountActivityLabelIcon
             }), T.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY]
           }),
-          action: g,
+          action: S,
           checked: s.requireUnusualAccountActivity
         }), (0, a.jsx)(d.MenuCheckboxItem, {
           id: "toggle-require-username-quarantined",
@@ -100,7 +100,7 @@ function H(e) {
               className: x.quarantinedLabelIcon
             }), T.default.Messages.MEMBER_SAFETY_USERNAME_QUARANTINED]
           }),
-          action: N,
+          action: L,
           checked: s.requireUsernameQuarantined
         })]
       })]

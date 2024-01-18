@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ClassificationEvidence: function() {
-    return y
+    return R
   }
 }), n("222007"), n("506083");
 var i = n("37983"),
@@ -17,8 +17,8 @@ var i = n("37983"),
   E = n("39331"),
   _ = n("596368"),
   p = n("227439"),
-  I = n("697218"),
-  S = n("170113"),
+  S = n("697218"),
+  I = n("170113"),
   h = n("780571"),
   T = n("377502"),
   C = n("103603"),
@@ -56,7 +56,7 @@ let U = (e, t) => {
       state: v.MessageStates.SENT
     })
   },
-  R = e => {
+  y = e => {
     let {
       message: t
     } = e, {
@@ -80,7 +80,7 @@ let U = (e, t) => {
             width: n ? l : "100%",
             height: n ? a : "100%"
           },
-          children: (0, i.jsx)(S.default, {
+          children: (0, i.jsx)(I.default, {
             className: e.className,
             forceExternal: !1,
             src: t.url,
@@ -90,7 +90,7 @@ let U = (e, t) => {
             volume: e.volume,
             autoPlay: !1,
             autoMute: !1,
-            type: S.default.Types.VIDEO,
+            type: I.default.Types.VIDEO,
             mediaLayoutType: e.mediaLayoutType,
             fileName: t.filename,
             fileSize: null == t.size ? void 0 : t.size.toString(),
@@ -133,11 +133,11 @@ let U = (e, t) => {
       })
     })
   },
-  y = e => {
+  R = e => {
     var t;
     let {
       flaggedContent: n
-    } = e, r = (0, o.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [a, u] = l.useState({}), [c, d] = l.useState(!0), f = n[0], S = U(f, a), T = (0, E.default)(S, {
+    } = e, r = (0, o.useStateFromStores)([S.default], () => S.default.getCurrentUser()), [a, u] = l.useState({}), [c, d] = l.useState(!0), f = n[0], I = U(f, a), T = (0, E.default)(I, {
       hideSimpleEmbedContent: !1,
       allowList: !1,
       allowHeading: !1,
@@ -159,7 +159,7 @@ let U = (e, t) => {
           [e.id]: t
         })))
       })).finally(() => d(!1))
-    }, [f.attachments]), "" === S.content && 0 === S.attachments.length) ? null : (0, i.jsxs)("div", {
+    }, [f.attachments]), "" === I.content && 0 === I.attachments.length) ? null : (0, i.jsxs)("div", {
       className: L.classificationEvidenceContainer,
       children: [(0, i.jsx)(s.Text, {
         variant: "eyebrow",
@@ -175,7 +175,7 @@ let U = (e, t) => {
               colorString: "",
               nick: null !== (t = null == r ? void 0 : r.username) && void 0 !== t ? t : ""
             },
-            message: S,
+            message: I,
             channel: void 0,
             guildId: void 0,
             compact: !1,
@@ -184,11 +184,11 @@ let U = (e, t) => {
             roleIcon: void 0,
             hideTimestamp: !1
           }),
-          childrenAccessories: (0, i.jsx)(R, {
-            message: S
+          childrenAccessories: (0, i.jsx)(y, {
+            message: I
           }),
           childrenMessageContent: (0, _.default)({
-            message: S
+            message: I
           }, T.content),
           hasThread: !1,
           hasReply: !1

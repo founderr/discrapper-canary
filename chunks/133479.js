@@ -15,14 +15,14 @@ var n = a("37983"),
   d = a("77078"),
   _ = a("697218"),
   S = a("908539"),
-  E = a("132206"),
-  f = a("260883"),
+  f = a("132206"),
+  E = a("260883"),
   T = a("170213"),
   A = a("782340"),
   I = a("122698");
 
 function g() {
-  let t = (0, E.useSafetyHubAccountStanding)(),
+  let t = (0, f.useSafetyHubAccountStanding)(),
     e = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
     [a, g] = i.useState(36),
     N = i.useRef({
@@ -99,7 +99,7 @@ function g() {
     outline: !1,
     children: [(0, n.jsx)("div", {
       className: I.profile,
-      children: (0, n.jsx)(f.default, {
+      children: (0, n.jsx)(E.default, {
         user: e,
         size: d.AvatarSizes.SIZE_80
       })

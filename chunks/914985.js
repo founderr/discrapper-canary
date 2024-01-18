@@ -17,11 +17,11 @@ function o(e) {
     shouldShowIncidentActions: l,
     incidentData: o,
     isUnderLockdown: d
-  } = (0, n.useGuildIncidentsState)(t.id), C = !1;
-  return (null != o && (C = (0, s.hasDetectedActivity)(o) && l), C || d) ? (0, a.jsx)(i.default, {
+  } = (0, n.useGuildIncidentsState)(t.id), u = !1;
+  return (null != o && (u = (0, s.hasDetectedActivity)(o) && l), u || d) ? (0, a.jsx)(i.default, {
     guild: t,
     incidentData: o,
     isUnderLockdown: d,
-    isRaidDetected: C
+    isRaidDetected: u
   }) : null
 }
