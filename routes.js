@@ -9239,7 +9239,9 @@
                             let _ = a(T);
                             return _.alpha(r).hex()
                         }
-                    }
+                    },
+                    adjustColorSaturation: (_, E, e) => (0, i.transformColorForReducedSaturation)(_, e, E),
+                    adjustColorContrast: (_, E, e, I) => (0, i.transformColorContrast)(_, e, I, E)
                 }
             };
             var l = C
