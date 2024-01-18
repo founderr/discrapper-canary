@@ -16515,5 +16515,10 @@ e.exports = Object.freeze({
   QUESTS_ACCEPT_TOOLTIP: "Accept the quest and complete the task to unlock the reward",
   QUESTS_IN_PROGRESS_TOOLTIP: "Complete the task to unlock the reward",
   QUESTS_STREAM_TASK: "Stream for {minutes} minutes",
-  QUEST_REWARD: "Win {reward}"
+  QUEST_REWARD: "Win {reward}",
+  FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE: "Prompt members to chat after this channel has been inactive for a while.",
+  PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",
+  PROMPT_CAMERA_ERROR: "There was an issue taking a photo, try again",
+  DEADCHAT_ACTION_CAMERA: "My View",
+  DEADCHAT_ACTION_STICKER: "Surprise Me"
 })
