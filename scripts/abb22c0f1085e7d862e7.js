@@ -8132,6 +8132,11 @@
                         light: "white.500",
                         meta: n
                     },
+                    brand: {
+                        dark: "brand.500",
+                        light: "brand.500",
+                        meta: n
+                    },
                     "card-gradient-bg": {
                         dark: {
                             color: "black.500",
