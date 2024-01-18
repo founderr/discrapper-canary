@@ -26871,8 +26871,8 @@ html .progress__4ef76 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -93479,6 +93479,14 @@ html .tabBadge__002b3 {
     padding-bottom: 8px;
     font-size: 14px;
     line-height: 20px
+}
+
+.keybindHint_f547ed {
+    color: var(--text-normal);
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 8px 0
 }
 
 .mainCheckboxContainer__777cd {
