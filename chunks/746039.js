@@ -65,6 +65,7 @@ function p(e) {
         children: m.default.Messages.GO_BACK
       }), (0, r.jsx)("div", {
         children: (0, r.jsx)(o.Checkbox, {
+          type: o.Checkbox.Types.INVERTED,
           value: v,
           onChange: (e, t) => h(t),
           children: (0, r.jsx)(o.Text, {
