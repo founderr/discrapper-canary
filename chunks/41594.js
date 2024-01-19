@@ -186,8 +186,8 @@ function x(B) {
       type: b
     },
     onMouseEnter: P,
-    onMouseLeave: k,
-    "aria-label": w,
+    onMouseLeave: w,
+    "aria-label": k,
     children: V,
     guild: J,
     channelTypeOverride: K,
@@ -251,7 +251,7 @@ function x(B) {
         },
         onClick: () => null == f ? void 0 : f(E),
         ...Be,
-        "aria-label": w,
+        "aria-label": k,
         focusProps: {
           enabled: !1
         },
@@ -292,7 +292,9 @@ function x(B) {
             children: V
           }) : null]
         }), H || null == G ? null : (0, C.jsx)("div", {
-          className: L.linkBottom,
+          className: t(L.linkBottom, {
+            [L.withGuildIcon]: X
+          }),
           children: (0, C.jsx)(a.Text, {
             color: null != x ? x : "text-muted",
             variant: "text-xs/medium",
@@ -351,7 +353,7 @@ function x(B) {
       onMouseDown: B => null == m ? void 0 : m(B, E),
       onContextMenu: B => null == S ? void 0 : S(B, E),
       onMouseEnter: P,
-      onMouseLeave: k,
+      onMouseLeave: w,
       children: [i || !s || u && !BF ? null : (0, C.jsx)("div", {
         className: t(L.unread, $ ? L.unreadImportant : void 0)
       }), null !== (e = null == y ? void 0 : y(BA)) && void 0 !== e ? e : BA]

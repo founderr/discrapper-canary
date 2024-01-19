@@ -40721,6 +40721,11 @@ html .progress__4ef76 {
     padding-bottom: 8px
 }
 
+.list__02208.withGuildIcon__8cc53 {
+    padding-left: 48px;
+    padding-bottom: 8px
+}
+
 .collapsed__66e36 {
     padding-right: 8px;
     padding-left: 48px
@@ -45707,6 +45712,10 @@ html .progress__4ef76 {
     display: flex;
     align-items: center;
     margin-left: 26px
+}
+
+.linkBottom_bac113.withGuildIcon_cd7a25 {
+    margin-left: 38px
 }
 
 .name__8d1ec {
