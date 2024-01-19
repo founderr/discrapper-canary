@@ -268,12 +268,10 @@ var Y = function(e) {
         }),
         children: [(0, l.jsx)("div", {
           className: n(U.cardBackground, ed ? U.darkCardBackground : U.lightCardBackground, (null == ee ? void 0 : ee.type) === d.CollectiblesItemType.PROFILE_EFFECT ? U.cardLowOpacity : null)
-        }), (0, l.jsx)("div", {
+        }), (0, l.jsx)(u.Text, {
+          variant: "text-lg/bold",
           className: U.productName,
-          children: N && (0, l.jsx)(u.Text, {
-            variant: "text-lg/bold",
-            children: t.name
-          })
+          children: t.name
         }), (0, l.jsxs)("div", {
           className: U.detailsWrapper,
           children: [(0, l.jsx)(u.Text, {

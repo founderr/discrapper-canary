@@ -271,13 +271,11 @@ var V = function(e) {
         className: n(w.cardText, {
           [w.cardTextProfileEffect]: (null == J ? void 0 : J.type) === c.CollectiblesItemType.PROFILE_EFFECT
         }),
-        children: [(0, l.jsx)("div", {
+        children: [(0, l.jsx)(o.Text, {
+          color: "always-white",
+          variant: "text-lg/bold",
           className: w.productName,
-          children: S && (0, l.jsx)(o.Text, {
-            color: "always-white",
-            variant: "text-lg/bold",
-            children: t.name
-          })
+          children: t.name
         }), (0, l.jsxs)("div", {
           className: w.detailsWrapper,
           children: [(0, l.jsxs)("div", {
