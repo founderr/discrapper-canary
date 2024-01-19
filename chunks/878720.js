@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   ChangePhoneReason: function() {
-    return r
+    return a
   },
   default: function() {
     return p
   }
 });
-var a, r, i = n("759843"),
+var r, a, i = n("759843"),
   l = n("872717"),
   o = n("913144"),
   u = n("271938"),
   s = n("840707"),
   d = n("482931"),
   c = n("49111");
-(a = r || (r = {})).USER_ACTION_REQUIRED = "user_action_required", a.USER_SETTINGS_UPDATE = "user_settings_update", a.GUILD_PHONE_REQUIRED = "guild_phone_required", a.MFA_PHONE_UPDATE = "mfa_phone_update", a.CONTACT_SYNC = "contact_sync";
+(r = a || (a = {})).USER_ACTION_REQUIRED = "user_action_required", r.USER_SETTINGS_UPDATE = "user_settings_update", r.GUILD_PHONE_REQUIRED = "guild_phone_required", r.MFA_PHONE_UPDATE = "mfa_phone_update", r.CONTACT_SYNC = "contact_sync";
 var p = {
   setCountryCode(e) {
     o.default.dispatch({
@@ -88,13 +88,13 @@ var p = {
   }),
   async verifyPhone(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-      a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-      r = {},
+      r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+      a = {},
       l = u.default.getFingerprint();
-    null != l && "" !== l && (r["X-Fingerprint"] = l), a && (r.authorization = "");
+    null != l && "" !== l && (a["X-Fingerprint"] = l), r && (a.authorization = "");
     let p = await s.default.post({
       url: c.Endpoints.VERIFY_PHONE,
-      headers: r,
+      headers: a,
       body: {
         phone: e,
         code: t

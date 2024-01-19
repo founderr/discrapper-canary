@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return l
   }
 }), n("70102"), n("222007");
-var a = n("884691");
-let r = (0, a.createContext)(null),
+var r = n("884691");
+let a = (0, r.createContext)(null),
   i = {
     didCatch: !1,
     error: null
   };
-class l extends a.Component {
+class l extends r.Component {
   static getDerivedStateFromError(e) {
     return {
       didCatch: !0,
@@ -22,31 +22,31 @@ class l extends a.Component {
       error: e
     } = this.state;
     if (null !== e) {
-      for (var t, n, a = arguments.length, r = Array(a), l = 0; l < a; l++) r[l] = arguments[l];
+      for (var t, n, r = arguments.length, a = Array(r), l = 0; l < r; l++) a[l] = arguments[l];
       null === (t = (n = this.props).onReset) || void 0 === t || t.call(n, {
-        args: r,
+        args: a,
         reason: "imperative-api"
       }), this.setState(i)
     }
   }
   componentDidCatch(e, t) {
-    var n, a;
-    null === (n = (a = this.props).onError) || void 0 === n || n.call(a, e, t)
+    var n, r;
+    null === (n = (r = this.props).onError) || void 0 === n || n.call(r, e, t)
   }
   componentDidUpdate(e, t) {
     let {
       didCatch: n
     } = this.state, {
-      resetKeys: a
+      resetKeys: r
     } = this.props;
     if (n && null !== t.error && function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
           t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
         return e.length !== t.length || e.some((e, n) => !Object.is(e, t[n]))
-      }(e.resetKeys, a)) {
-      var r, l;
-      null === (r = (l = this.props).onReset) || void 0 === r || r.call(l, {
-        next: a,
+      }(e.resetKeys, r)) {
+      var a, l;
+      null === (a = (l = this.props).onReset) || void 0 === a || a.call(l, {
+        next: r,
         prev: e.resetKeys,
         reason: "keys"
       }), this.setState(i)
@@ -67,12 +67,12 @@ class l extends a.Component {
         error: o,
         resetErrorBoundary: this.resetErrorBoundary
       };
-      if ((0, a.isValidElement)(i)) u = i;
+      if ((0, r.isValidElement)(i)) u = i;
       else if ("function" == typeof t) u = t(e);
-      else if (n) u = (0, a.createElement)(n, e);
+      else if (n) u = (0, r.createElement)(n, e);
       else throw o
     }
-    return (0, a.createElement)(r.Provider, {
+    return (0, r.createElement)(a.Provider, {
       value: {
         didCatch: l,
         error: o,

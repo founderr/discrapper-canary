@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return h
   }
 });
-var a = n("37983"),
-  r = n("884691"),
+var r = n("37983"),
+  a = n("884691"),
   i = n("77078"),
   l = n("390236"),
   o = n("292508"),
@@ -20,15 +20,15 @@ function f(e) {
     windowKey: t,
     channel: n
   } = e;
-  return (0, a.jsx)(o.default, {
+  return (0, r.jsx)(o.default, {
     withTitleBar: !0,
     windowKey: t,
     title: n.name,
     channelId: n.id,
     contentClassName: p.popoutContent,
-    children: (0, a.jsx)(l.default.Provider, {
+    children: (0, r.jsx)(l.default.Provider, {
       value: n.guild_id,
-      children: (0, a.jsx)(d.default, {
+      children: (0, r.jsx)(d.default, {
         providedChannel: n
       })
     })
@@ -37,8 +37,8 @@ function f(e) {
 
 function h(e, t) {
   let n = (0, s.useOpenInPopoutExperiment)(t),
-    l = r.useCallback(() => {
-      u.open("".concat(c.PopoutWindowKeys.CHANNEL_POPOUT, "-").concat(e.id), t => (0, a.jsx)(f, {
+    l = a.useCallback(() => {
+      u.open("".concat(c.PopoutWindowKeys.CHANNEL_POPOUT, "-").concat(e.id), t => (0, r.jsx)(f, {
         windowKey: t,
         channel: e
       }), {
@@ -46,7 +46,7 @@ function h(e, t) {
         defaultHeight: 480
       })
     }, [e]);
-  return n ? (0, a.jsx)(i.MenuItem, {
+  return n ? (0, r.jsx)(i.MenuItem, {
     id: "channel-pop-out",
     label: "Open in Popout",
     action: () => l()
