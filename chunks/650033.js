@@ -32,7 +32,8 @@ let s = {
     cozy_header: "Cozy header",
     enable_channel_emojis: "Enables channel emoji UI components",
     mobile_profile_effect_debug_controls: "mobile_profile_effect_debug_controls",
-    enable_new_search_filters: "Enables new search filters behavior"
+    enable_new_search_filters: "Enables new search filters behavior",
+    force_channel_list_v2: "Force channel list V2"
   },
   a = {};
 class o extends i.default.DeviceSettingsStore {
