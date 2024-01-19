@@ -53,7 +53,7 @@ function O(e) {
   }), {
     product: M,
     purchase: x
-  } = (0, f.default)(null == h ? void 0 : h.skuId), D = C.default.canUseCollectibles(t), P = a.useRef(null), H = (0, _.default)(i), b = (0, T.isEqualAvatarDecoration)(h, void 0 === m ? null == t ? void 0 : t.avatarDecoration : m), L = () => {
+  } = (0, f.default)(null == h ? void 0 : h.skuId), D = C.default.canUseCollectibles(t), b = a.useRef(null), P = (0, _.default)(i), H = (0, T.isEqualAvatarDecoration)(h, void 0 === m ? null == t ? void 0 : t.avatarDecoration : m), L = () => {
     I(h), s()
   }, U = a.useCallback(() => {
     s(), (0, c.openCollectiblesShop)({
@@ -79,9 +79,9 @@ function O(e) {
       children: [(0, n.jsx)(g.default, {
         user: t,
         pendingAvatarDecoration: h,
-        selectedAvatarDecorationRef: P,
+        selectedAvatarDecorationRef: b,
         onSelect: e => {
-          O(e), null != e && H(e)
+          O(e), null != e && P(e)
         },
         onOpenShop: U
       }), (0, n.jsx)(S.default, {
@@ -95,7 +95,7 @@ function O(e) {
         let e = null != x && (!(0, d.isPremiumCollectiblesPurchase)(x) || D);
         if (e || null === h) return (0, n.jsx)(u.Button, {
           onClick: L,
-          disabled: b,
+          disabled: H,
           children: R.default.Messages.AVATAR_DECORATION_MODAL_APPLY
         });
         let r = D || !(0, d.isPremiumCollectiblesProduct)(M);

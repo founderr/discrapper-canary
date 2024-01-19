@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return k
   },
   shouldAttachSticker: function() {
-    return R
+    return V
   },
   isGuildSticker: function() {
-    return V
+    return R
   },
   isStandardSticker: function() {
     return M
@@ -123,7 +123,7 @@ let {
   name: e.name,
   stickers: e.stickers,
   previewSticker: T(e)
-}), k = (e, t) => e === f.StickerAnimationSettings.ANIMATE_ON_INTERACTION ? t : e !== f.StickerAnimationSettings.NEVER_ANIMATE, R = (e, t, n, i) => {
+}), k = (e, t) => e === f.StickerAnimationSettings.ANIMATE_ON_INTERACTION ? t : e !== f.StickerAnimationSettings.NEVER_ANIMATE, V = (e, t, n, i) => {
   let r = a.default.getUploadCount(n, i);
   if (r > 0) return !0;
   let o = u.default.getStickerPreview(n, i),
@@ -138,7 +138,7 @@ let {
     default:
       return !1
   }
-}, V = e => e.type === l.MetaStickerType.GUILD, M = e => e.type === l.MetaStickerType.STANDARD, w = e => e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : [], L = e => {
+}, R = e => e.type === l.MetaStickerType.GUILD, M = e => e.type === l.MetaStickerType.STANDARD, w = e => e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : [], L = e => {
   if (null === e) return !1;
   let t = e.guild_id;
   return void 0 !== r.default.getGuild(t)

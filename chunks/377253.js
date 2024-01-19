@@ -35,7 +35,7 @@ var m = n("432173"),
 let P = new Set,
   k = new u.default("MessageStore");
 
-function R() {
+function V() {
   o.default.forEach(e => {
     o.default.commit(e.mutate({
       ready: !1,
@@ -44,7 +44,7 @@ function R() {
   }), P.clear()
 }
 
-function V() {
+function R() {
   o.default.forEach(e => {
     e.forAll(e => {
       e.timestamp.locale(h.default.locale)
@@ -174,8 +174,8 @@ var x = new F(a.default, {
       n.mergeDelta(t[e].new_messages, t[e].modified_messages, t[e].deleted_message_ids)
     }
   },
-  CONNECTION_OPEN: R,
-  OVERLAY_INITIALIZE: R,
+  CONNECTION_OPEN: V,
+  OVERLAY_INITIALIZE: V,
   CACHE_LOADED: function(e) {
     for (let [t, n] of Object.entries(e.messages)) {
       let e = o.default.getOrCreate(t).addCachedMessages(n, !0);
@@ -341,8 +341,8 @@ var x = new F(a.default, {
       revealedMessageId: n
     }))
   },
-  USER_SETTINGS_PROTO_UPDATE: V,
-  I18N_LOAD_SUCCESS: V,
+  USER_SETTINGS_PROTO_UPDATE: R,
+  I18N_LOAD_SUCCESS: R,
   THREAD_CREATE_LOCAL: function(e) {
     let {
       channelId: t

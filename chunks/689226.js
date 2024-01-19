@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return E
   },
   canGuildUseRoleIcons: function() {
-    return _
+    return p
   }
 }), n("781738");
 var i = n("867805"),
@@ -43,7 +43,7 @@ let o = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/
     return (null != t && (c = "size=" + (0, l.getBestMediaProxySize)(t * (0, l.getDevicePixelRatio)()), f = d ? "" : "&" + f), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(o, "/").concat(n, "/").concat(i, ".").concat(a, "?").concat(c).concat(f) : "".concat(u).concat(s.Endpoints.ROLE_ICON(n, i), "?").concat(c)
   },
   E = e => e.startsWith(o) || e.startsWith("".concat(u, "/roles")) && e.includes("/icons/"),
-  _ = (e, t) => {
+  p = (e, t) => {
     var n;
     let i = (null == t ? void 0 : null === (n = t.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null;
     return i || e.features.has(s.GuildFeatures.ROLE_ICONS)

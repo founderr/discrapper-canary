@@ -1,11 +1,11 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
 var n = l("862205");
-let a = (0, n.createExperiment)({
+let s = (0, n.createExperiment)({
   kind: "user",
   id: "2023-06_golive_capture_card",
   label: "GoLive Capture Card Support",
@@ -20,4 +20,4 @@ let a = (0, n.createExperiment)({
     }
   }]
 });
-var s = a
+var a = s

@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return u
   }
 }), n("222007");
-var i = n("748820"),
-  s = n("49671"),
-  r = n("599110"),
-  l = n("49111");
-let a = new class e {
+var s = n("748820"),
+  r = n("49671"),
+  a = n("599110"),
+  i = n("49111");
+let l = new class e {
   trackEvent(e, t) {
     let n = Date.now();
     requestIdleCallback(() => {
-      r.default.track(e, {
+      a.default.track(e, {
         ... function() {
           var e, t, n;
-          let i = "--campaign-id=",
-            r = null !== (n = null === s.default || void 0 === s.default ? void 0 : null === (t = s.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n ? n : [];
-          for (let e of r)
-            if (e.startsWith(i)) return {
-              referrer: e.substr(i.length)
+          let s = "--campaign-id=",
+            a = null !== (n = null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n ? n : [];
+          for (let e of a)
+            if (e.startsWith(s)) return {
+              referrer: e.substr(s.length)
             };
           return {}
         }(),
@@ -37,10 +37,10 @@ let a = new class e {
               css_transfer_byte_size: 0
             };
           return null != window.performance && null != window.performance.getEntries && window.performance.getEntries().forEach(n => {
-            let i = null != n.encodedBodySize ? n.encodedBodySize : n.decodedBodySize,
-              s = null != n.decodedBodySize ? n.decodedBodySize : n.encodedBodySize,
-              r = n.transferSize;
-            null != s && null != i && (e = !0, t.total_compressed_byte_size += i, t.total_uncompressed_byte_size += s, null != r && (t.total_uncompressed_byte_size += r), "resource" === n.entryType && ("script" === n.initiatorType && null != n.name && null != n.name.match(/\.js/) && (t.js_compressed_byte_size += i, t.js_uncompressed_byte_size += s, null != r && (t.js_uncompressed_byte_size += r)), "link" === n.initiatorType && null != n.name && null != n.name.match(/\.css/) && (t.css_compressed_byte_size += i, t.css_uncompressed_byte_size += s, null != r && (t.css_uncompressed_byte_size += r))))
+            let s = null != n.encodedBodySize ? n.encodedBodySize : n.decodedBodySize,
+              r = null != n.decodedBodySize ? n.decodedBodySize : n.encodedBodySize,
+              a = n.transferSize;
+            null != r && null != s && (e = !0, t.total_compressed_byte_size += s, t.total_uncompressed_byte_size += r, null != a && (t.total_uncompressed_byte_size += a), "resource" === n.entryType && ("script" === n.initiatorType && null != n.name && null != n.name.match(/\.js/) && (t.js_compressed_byte_size += s, t.js_uncompressed_byte_size += r, null != a && (t.js_uncompressed_byte_size += a)), "link" === n.initiatorType && null != n.name && null != n.name.match(/\.css/) && (t.css_compressed_byte_size += s, t.css_uncompressed_byte_size += r, null != a && (t.css_uncompressed_byte_size += a))))
           }), e ? t : {}
         }(),
         load_id: this.loadId,
@@ -50,13 +50,13 @@ let a = new class e {
     })
   }
   trackAppUIViewed(e) {
-    !this.appUIViewed && (this.trackEvent(l.AnalyticEvents.APP_UI_VIEWED, e), this.appUIViewed = !0)
+    !this.appUIViewed && (this.trackEvent(i.AnalyticEvents.APP_UI_VIEWED, e), this.appUIViewed = !0)
   }
   constructor() {
-    this.loadId = (0, i.v4)(), this.appUIViewed = !1
+    this.loadId = (0, s.v4)(), this.appUIViewed = !1
   }
 };
 
 function u(e) {
-  a.trackAppUIViewed(e)
+  l.trackAppUIViewed(e)
 }

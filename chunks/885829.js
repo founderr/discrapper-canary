@@ -27,18 +27,18 @@ async function T(e) {
     inputApplication: v,
     analyticsLocations: S,
     embeddedActivitiesManager: N
-  } = e, h = _.default.getEmbeddedActivitiesForChannel(i), p = h.find(e => e.applicationId === T && (null == C || e.instanceId === C)), y = v;
-  if (null == y) {
+  } = e, D = _.default.getEmbeddedActivitiesForChannel(i), h = D.find(e => e.applicationId === T && (null == C || e.instanceId === C)), p = v;
+  if (null == p) {
     let e = await l.default.fetchApplication(T);
-    y = r.default.createFromServer(e)
+    p = r.default.createFromServer(e)
   }
-  if (null == p || null == y) return;
-  let D = c.default.getCurrentUser(),
+  if (null == h || null == p) return;
+  let y = c.default.getCurrentUser(),
     O = (0, I.default)({
-      userId: null == D ? void 0 : D.id,
-      application: y,
+      userId: null == y ? void 0 : y.id,
+      application: p,
       channelId: i,
-      currentUser: D,
+      currentUser: y,
       isActivitiesEnabledForCurrentPlatform: !0,
       ChannelStore: d.default,
       VoiceStateStore: f.default,
@@ -94,8 +94,8 @@ async function T(e) {
   }({
     embeddedActivityJoinability: O,
     handleCanJoin: async function e() {
-      null != p && await (0, E.default)({
-        applicationId: p.applicationId,
+      null != h && await (0, E.default)({
+        applicationId: h.applicationId,
         currentEmbeddedApplication: m,
         activityChannelId: i,
         locationObject: {},

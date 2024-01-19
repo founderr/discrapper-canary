@@ -32,8 +32,8 @@ let D = !1,
   b = 0,
   P = [],
   k = !1,
-  R = !0,
-  V = Object.freeze([]),
+  V = !0,
+  R = Object.freeze([]),
   M = [];
 
 function w(e) {
@@ -60,15 +60,15 @@ function L(e) {
 
 function U() {
   var e;
-  b = null !== (e = y.default.getIdleSince()) && void 0 !== e ? e : 0, k = y.default.isAFK(), R ? (N = O, G()) : N = D ? A.StatusTypes.INVISIBLE : g.StatusSetting.getSetting(), N === A.StatusTypes.ONLINE && b > 0 && (N = A.StatusTypes.IDLE);
+  b = null !== (e = y.default.getIdleSince()) && void 0 !== e ? e : 0, k = y.default.isAFK(), V ? (N = O, G()) : N = D ? A.StatusTypes.INVISIBLE : g.StatusSetting.getSetting(), N === A.StatusTypes.ONLINE && b > 0 && (N = A.StatusTypes.IDLE);
   let t = !1,
-    n = R || N === A.StatusTypes.INVISIBLE ? [] : T.default.getActivities().filter(L);
+    n = V || N === A.StatusTypes.INVISIBLE ? [] : T.default.getActivities().filter(L);
   !a(P, n) && (P = n, t = !0);
   let s = I.default.getRemoteActivities();
-  if (V !== s && (V = s, t = !0), t) {
+  if (R !== s && (R = s, t = !0), t) {
     let e = P.find(e => e.type === A.ActivityTypes.CUSTOM_STATUS),
       t = P.filter(e => e.type !== A.ActivityTypes.CUSTOM_STATUS);
-    M = t.length > 0 ? P : null != e ? [e, ...d(V).filter(e => e.type !== A.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : d.uniqBy(V, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+    M = t.length > 0 ? P : null != e ? [e, ...d(R).filter(e => e.type !== A.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : d.uniqBy(R, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
   }
 }
 
@@ -77,7 +77,7 @@ function G() {
 }
 
 function F() {
-  R = !1, O = A.StatusTypes.UNKNOWN, U(), S.default.setCurrentUserOnConnectionOpen(N, M)
+  V = !1, O = A.StatusTypes.UNKNOWN, U(), S.default.setCurrentUserOnConnectionOpen(N, M)
 }
 class x extends u.default.Store {
   initialize() {
@@ -136,7 +136,7 @@ var B = new x(l.default, {
   LIBRARY_FETCH_SUCCESS: U,
   LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: U,
   LOGOUT: function() {
-    R = !0, O = N, U()
+    V = !0, O = N, U()
   },
   EMBEDDED_ACTIVITY_CLOSE: U,
   EMBEDDED_ACTIVITY_OPEN: U,

@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("272030"),
   m = n("819689"),
   p = n("843962"),
-  g = n("679653"),
-  S = n("931318"),
+  S = n("679653"),
+  g = n("931318"),
   N = n("520899"),
   _ = n("988864"),
   I = n("960808"),
@@ -53,7 +53,7 @@ function G(e) {
     closePopout: n
   } = e, s = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders());
   l.useEffect(() => () => {
-    (0, S.cleanupMessageReminders)()
+    (0, g.cleanupMessageReminders)()
   }, []);
   let [i, r] = l.useState(!1), o = l.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), u = i ? s : o, d = u.filter(e => !(0, _.savedMessageHasMetadata)(e));
   return (0, I.useMessageRemindersLoader)(d), (0, a.jsxs)("div", {
@@ -102,7 +102,7 @@ function B(e) {
       channel: _
     } = (0, T.getSavedMessageAndChannel)(s),
     I = v.default.getChannel(_.id),
-    b = (0, g.default)(I, !0),
+    b = (0, S.default)(I, !0),
     j = null != b ? b : _.name,
     F = (0, c.useStateFromStores)([M.default], () => M.default.getGuild(null == _ ? void 0 : _.guild_id)),
     G = null != _ ? (0, p.getChannelIconURL)(_) : null,
@@ -171,7 +171,7 @@ function B(e) {
           type: h.Checkbox.Types.INVERTED,
           value: r,
           onChange: (e, t) => {
-            (0, S.toggleMessageReminders)(s.messageId, t)
+            (0, g.toggleMessageReminders)(s.messageId, t)
           }
         })]
       })]

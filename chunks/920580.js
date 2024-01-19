@@ -27,7 +27,7 @@ function h(e) {
     className: a,
     disableTooltipPointerEvents: s,
     alwaysWhiteText: h = !0
-  } = e, T = (0, n.default)([u.default], () => u.default.getCurrentUser()), b = (0, n.default)([c.default], () => (0, i.isThemeDark)(c.default.theme)), x = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
+  } = e, b = (0, n.default)([u.default], () => u.default.getCurrentUser()), T = (0, n.default)([c.default], () => (0, i.isThemeDark)(c.default.theme)), x = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
   if (null == x) return null;
   if (x.amount <= 0) return (0, l.jsx)("div", {
     className: r(E.priceTagsContainer, a),
@@ -37,7 +37,7 @@ function h(e) {
     })
   });
   let L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
-    S = !f.default.canUseCollectibles(T);
+    S = !f.default.canUseCollectibles(b);
   return (0, l.jsxs)("div", {
     className: r(E.priceTagsContainer, a),
     children: [(0, l.jsx)(C.default, {
@@ -65,7 +65,7 @@ function h(e) {
             className: r(E.premiumIcon, {
               [E.fullPrice]: S
             }),
-            color: h || b ? "white" : "black"
+            color: h || T ? "white" : "black"
           })
         }
       })

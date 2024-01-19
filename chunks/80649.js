@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("42203"),
   m = n("247013"),
   p = n("18494"),
-  g = n("211248"),
-  S = n("116320"),
+  S = n("211248"),
+  g = n("116320"),
   N = n("945330"),
   _ = n("138217"),
   I = n("530686"),
@@ -52,8 +52,8 @@ function b(e) {
     badgeState: f,
     closePopout: h
   } = e, m = (0, s.useStateFromStores)([E.default, p.default], () => E.default.getChannel(p.default.getChannelId())), {
-    messages: g,
-    hasMore: S,
+    messages: S,
+    hasMore: g,
     loading: N,
     guildFilter: I,
     roleFilter: C,
@@ -75,7 +75,7 @@ function b(e) {
   l.useEffect(() => {
     d.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "mentions"
-    }).enabled && (null == g ? void 0 : g.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), O(m, !0))
+    }).enabled && (null == S ? void 0 : S.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), O(m, !0))
   }, []), l.useEffect(() => () => {
     r.default.truncateMentions(v.MAX_MENTIONS_PER_FETCH)
   }, []);
@@ -96,12 +96,12 @@ function b(e) {
         r.default.deleteRecentMention(e.id)
       },
       channel: m,
-      messages: g,
+      messages: S,
       loading: N,
-      hasMore: S,
+      hasMore: g,
       analyticsName: "Recent Mentions",
       loadMore: function() {
-        let e = null != g && g.length > 0 ? g[g.length - 1].id : null;
+        let e = null != S && S.length > 0 ? S[S.length - 1].id : null;
         O(m, !0, e)
       },
       canCloseAllMessages: !0,
@@ -145,10 +145,10 @@ function F(e) {
     children: [(0, a.jsx)(C.default, {
       channel: s,
       gotoChannel: n,
-      children: null != l ? (0, a.jsx)(g.default, {
+      children: null != l ? (0, a.jsx)(S.default, {
         className: R.closeButton,
         tooltip: M.default.Messages.CLOSE,
-        color: g.CircleIconButtonColors.TERTIARY,
+        color: S.CircleIconButtonColors.TERTIARY,
         icon: (0, a.jsx)(N.default, {
           width: 16,
           height: 16
@@ -176,7 +176,7 @@ function F(e) {
 
 function D(e) {
   return (0, a.jsx)(A.default, {
-    Icon: S.default,
+    Icon: g.default,
     header: M.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
     tip: M.default.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
   })

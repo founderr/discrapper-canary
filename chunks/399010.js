@@ -48,7 +48,7 @@ let P = new l.default("ConnectionStore"),
       });
     return e.channels.push(null != r ? r : s), e
   }, e => "CHANNEL_UPDATE" !== e),
-  R = new O.default(b.socket, (e, t) => ((e = null == e ? {
+  V = new O.default(b.socket, (e, t) => ((e = null == e ? {
     type: "SOUNDBOARD_SOUNDS_RECEIVED",
     updates: []
   } : e).updates.push({
@@ -64,7 +64,7 @@ let P = new l.default("ConnectionStore"),
       guildId: t.guild_id
     }))
   }), e), e => "SOUNDBOARD_SOUNDS" !== e),
-  V = new O.default(b.socket, (e, t) => ((e = null == e ? {
+  R = new O.default(b.socket, (e, t) => ((e = null == e ? {
     type: "PRESENCE_UPDATES",
     updates: []
   } : e).updates.push(t), e), e => "PRESENCE_UPDATE" !== e);
@@ -416,7 +416,7 @@ function M(e, t) {
       });
       break;
     case "SOUNDBOARD_SOUNDS":
-      R.add(t);
+      V.add(t);
       break;
     case "CHANNEL_RECIPIENT_ADD":
     case "CHANNEL_RECIPIENT_REMOVE":
@@ -610,17 +610,17 @@ function M(e, t) {
       });
       break;
     case "USER_SETTINGS_PROTO_UPDATE":
-      let V = (0, g.b64ToProtoWithType)(t.settings.type, t.settings.proto);
-      if (null == V) break;
-      if ("string" == typeof V) throw console.error("Invalid proto: |".concat(V, "| |").concat(t.settings.proto, "|")), console.error({
-        parsed: V,
+      let R = (0, g.b64ToProtoWithType)(t.settings.type, t.settings.proto);
+      if (null == R) break;
+      if ("string" == typeof R) throw console.error("Invalid proto: |".concat(R, "| |").concat(t.settings.proto, "|")), console.error({
+        parsed: R,
         wire: t.settings.proto,
         type: t.settings.type
       }), Error("UserSettingsProto must not be a string");
       w({
         type: "USER_SETTINGS_PROTO_UPDATE",
         settings: {
-          proto: V,
+          proto: R,
           type: t.settings.type
         },
         partial: t.partial
@@ -1680,7 +1680,7 @@ function x(e) {
     clientStatus: r,
     broadcast: a
   } = e;
-  V.add({
+  R.add({
     guildId: t,
     user: n,
     status: s,

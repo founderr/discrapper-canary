@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return E
+    return r
   }
 });
 var i = n("180748"),
@@ -35,7 +35,7 @@ let u = {
     comboKeysBindGlobal: !0,
     action: () => ((0, i.setZoom)(l.Accessibility.ZOOM_DEFAULT), !1)
   };
-var E = {
+var r = {
   ZOOM_IN: u,
   ZOOM_OUT: d,
   ZOOM_RESET: s

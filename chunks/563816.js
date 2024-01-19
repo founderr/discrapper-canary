@@ -14,10 +14,10 @@ var i = n("37983"),
   d = n("916565"),
   c = n("355263"),
   E = n("633043"),
-  _ = n("823026"),
-  I = n("305961"),
-  T = n("697218"),
-  f = n("317041"),
+  f = n("823026"),
+  _ = n("305961"),
+  I = n("697218"),
+  T = n("317041"),
   S = n("782340"),
   N = n("205735"),
   p = e => {
@@ -29,9 +29,9 @@ var i = n("37983"),
         onHeightUpdate: A,
         context: m
       } = e,
-      C = (0, s.useStateFromStores)([I.default], () => I.default.getGuild(null != h ? h : p.guild_id)),
-      g = (0, s.useStateFromStores)([T.default], () => T.default.getUser(l)),
-      G = (0, _.default)({
+      C = (0, s.useStateFromStores)([_.default], () => _.default.getGuild(null != h ? h : p.guild_id)),
+      g = (0, s.useStateFromStores)([I.default], () => I.default.getUser(l)),
+      M = (0, f.default)({
         user: g,
         guildId: null == C ? void 0 : C.id,
         channel: p,
@@ -39,28 +39,28 @@ var i = n("37983"),
       }),
       {
         commands: O,
-        sectionDescriptors: M,
+        sectionDescriptors: G,
         loading: D
       } = o.useDiscovery(p, {
         commandType: n
       }, {
-        limit: f.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
+        limit: T.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
       }),
       {
         sections: v
       } = a.useMemo(() => {
         let e = {};
-        return M.forEach(t => {
+        return G.forEach(t => {
           e[t.id] = t
         }), {
           sections: e
         }
-      }, [M]),
-      U = a.useRef(D.current);
+      }, [G]),
+      R = a.useRef(D.current);
     a.useEffect(() => {
-      D.current !== U.current && (U.current = D.current, null == A || A())
+      D.current !== R.current && (R.current = D.current, null == A || A())
     }, [D, A]);
-    let R = a.useCallback(e => {
+    let U = a.useCallback(e => {
       r(null != p, "menu item should not show if channel is null");
       let t = v[e.applicationId],
         n = null != t ? (0, c.getIconComponent)(t) : void 0;
@@ -96,8 +96,8 @@ var i = n("37983"),
       id: "menu-commands-empty",
       label: S.default.Messages.APPLICATION_COMMAND_NO_COMMANDS,
       disabled: !0
-    }, "menu-commands-empty") : O.map(R), null != G && (t = (0, i.jsxs)(i.Fragment, {
-      children: [t, (0, i.jsx)(u.MenuSeparator, {}, "separator"), G]
+    }, "menu-commands-empty") : O.map(U), null != M && (t = (0, i.jsxs)(i.Fragment, {
+      children: [t, (0, i.jsx)(u.MenuSeparator, {}, "separator"), M]
     }))), (0, i.jsx)(u.MenuItem, {
       id: "apps",
       label: S.default.Messages.APPS,

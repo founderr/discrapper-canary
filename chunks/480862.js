@@ -1,13 +1,13 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return C
+    return h
   }
 });
 var n = l("37983");
 l("884691");
-var a = l("414456"),
-  s = l.n(a),
+var s = l("414456"),
+  a = l.n(s),
   r = l("77078"),
   i = l("685665"),
   u = l("649844"),
@@ -18,37 +18,37 @@ var a = l("414456"),
   m = l("782340"),
   S = l("139191");
 
-function C(e) {
+function h(e) {
   let {
     message: t,
     onClose: l,
-    openStreamUpsellModal: a
-  } = e, C = d.default.useExperiment({
+    openStreamUpsellModal: s
+  } = e, h = d.default.useExperiment({
     location: "371fea_1"
   }, {
     autoTrackExposure: !1
   }), {
-    analyticsLocations: E
-  } = (0, i.default)(), h = {
+    analyticsLocations: C
+  } = (0, i.default)(), E = {
     section: c.AnalyticsSections.STREAM_SETTINGS,
     object: c.AnalyticsObjects.PREMIUM_UPSELL_BANNER,
     objectType: c.AnalyticsObjectTypes.BUY
-  }, _ = () => (d.default.trackExposure({
+  }, p = () => (d.default.trackExposure({
     location: "371fea_2"
-  }), C.enabled) ? (0, u.default)({
+  }), h.enabled) ? (0, u.default)({
     initialPlanId: null,
     subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: E,
-    analyticsObject: h
-  }) : a({
-    analyticsLocation: h,
+    analyticsLocations: C,
+    analyticsObject: E
+  }) : s({
+    analyticsLocation: E,
     onClose: l
   });
   return (0, n.jsxs)(r.Clickable, {
     onClick: () => {
-      _()
+      p()
     },
-    className: s(S.upsellBanner, S.gradientBackground),
+    className: a(S.upsellBanner, S.gradientBackground),
     children: [(0, n.jsxs)("div", {
       className: S.iconTextContainer,
       children: [(0, n.jsx)(o.default, {

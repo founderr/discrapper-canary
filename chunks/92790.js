@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("76385"),
   m = n("955513"),
   p = n("180748"),
-  g = n("206230"),
-  S = n("716241"),
+  S = n("206230"),
+  g = n("716241"),
   N = n("42203"),
   _ = n("923959"),
   I = n("744983"),
@@ -241,7 +241,7 @@ class F extends l.PureComponent {
       let {
         searchType: e
       } = this.props;
-      S.default.trackWithMetadata(L.AnalyticEvents.SEARCH_OPENED, {
+      g.default.trackWithMetadata(L.AnalyticEvents.SEARCH_OPENED, {
         search_type: e
       }), this.setState({
         focused: !0
@@ -354,13 +354,13 @@ class F extends l.PureComponent {
     }, v.clearTokenCache()
   }
 }
-var D = d.default.connectStores([g.default, I.default], () => {
+var D = d.default.connectStores([S.default, I.default], () => {
   var e;
   let t = I.default.getCurrentSearchId(),
     n = I.default.getSearchType(),
     a = null != t && I.default.isSearching(t),
     l = null != t && null !== (e = I.default.getEditorState(t)) && void 0 !== e ? e : x.createEmptyEditorState(M.generateDecorators(m.default)),
-    s = g.default.keyboardModeEnabled;
+    s = S.default.keyboardModeEnabled;
   return {
     searchId: t,
     searchType: n,

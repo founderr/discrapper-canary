@@ -6,8 +6,8 @@ l.r(t), l.d(t, {
 });
 var n = l("37983");
 l("884691");
-var a = l("414456"),
-  s = l.n(a),
+var s = l("414456"),
+  a = l.n(s),
   r = l("8684");
 
 function i(e) {
@@ -15,7 +15,7 @@ function i(e) {
     separator: t = !1
   } = e;
   return (0, n.jsx)("div", {
-    className: s(r.divider, {
+    className: a(r.divider, {
       [r.separator]: t
     })
   })

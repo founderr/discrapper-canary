@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return E
   },
   useFavoritesCategories: function() {
-    return _
+    return p
   },
   useFavoritesGuildSelected: function() {
-    return p
+    return _
   },
   useFavoriteAdded: function() {
     return I
@@ -41,7 +41,7 @@ function E(e) {
   return t
 }
 
-function _() {
+function p() {
   let e = (0, r.useStateFromStores)([a.default], () => a.default.getChannels(f.FAVORITES))[l.ChannelTypes.GUILD_CATEGORY];
   return e.map(e => ({
     id: "null" === e.channel.id ? null : e.channel.id,
@@ -49,7 +49,7 @@ function _() {
   }))
 }
 
-function p() {
+function _() {
   let e = (0, r.useStateFromStores)([s.default], () => s.default.getGuildId());
   return e === f.FAVORITES
 }

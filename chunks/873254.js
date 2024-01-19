@@ -7,26 +7,26 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var l = n("446674"),
-  s = n("77078"),
-  i = n("648911"),
-  r = n("271938"),
-  o = n("42887"),
-  u = n("782340"),
-  d = n("431024");
+  i = n("77078"),
+  u = n("648911"),
+  d = n("271938"),
+  s = n("42887"),
+  r = n("782340"),
+  o = n("431024");
 
 function c(e) {
-  let t = (0, s.useModalContext)(),
-    c = (0, l.useStateFromStores)([o.default], () => o.default.isVideoEnabled()),
-    f = (0, l.useStateFromStores)([r.default], () => r.default.getId() === e),
-    h = (0, i.default)();
-  return (!c || h) && f ? (0, a.jsx)(s.MenuItem, {
+  let t = (0, i.useModalContext)(),
+    c = (0, l.useStateFromStores)([s.default], () => s.default.isVideoEnabled()),
+    f = (0, l.useStateFromStores)([d.default], () => d.default.getId() === e),
+    _ = (0, u.default)();
+  return (!c || _) && f ? (0, a.jsx)(i.MenuItem, {
     id: "change-video-background",
     label: (0, a.jsx)("div", {
-      className: d.item,
-      children: c ? u.default.Messages.CAMERA_CHANGE_VIDEO_BACKGROUND_MENU_ITEM : u.default.Messages.CAMERA_PREVIEW_MENU_ITEM
+      className: o.item,
+      children: c ? r.default.Messages.CAMERA_CHANGE_VIDEO_BACKGROUND_MENU_ITEM : r.default.Messages.CAMERA_PREVIEW_MENU_ITEM
     }),
     action: function() {
-      (0, s.openModalLazy)(async () => {
+      (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("381736").then(n.bind(n, "381736"));

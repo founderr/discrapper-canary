@@ -1,28 +1,28 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return d
+    return c
   }
-}), n("222007");
-var i = n("446674"),
-  s = n("913144"),
-  r = n("27618");
+}), a("222007");
+var n = a("446674"),
+  i = a("913144"),
+  s = a("27618");
 let l = !1,
-  a = Object.freeze({
+  r = Object.freeze({
     userAffinities: [],
     affinityUserIds: new Set,
     lastFetched: 0
   }),
   u = {
-    ...a
+    ...r
   };
 
 function o() {
-  u.affinityUserIds = new Set(u.userAffinities.map(e => e.user_id).filter(e => !r.default.isBlocked(e)))
+  u.affinityUserIds = new Set(u.userAffinities.map(e => e.user_id).filter(e => !s.default.isBlocked(e)))
 }
-class c extends i.default.PersistedStore {
+class d extends n.default.PersistedStore {
   initialize(e) {
-    this.waitFor(r.default), null != e && (u.userAffinities = e.userAffinities, u.affinityUserIds = new Set(e.affinityUserIds), u.lastFetched = e.lastFetched), this.syncWith([r.default], o)
+    this.waitFor(s.default), null != e && (u.userAffinities = e.userAffinities, u.affinityUserIds = new Set(e.affinityUserIds), u.lastFetched = e.lastFetched), this.syncWith([s.default], o)
   }
   needsRefresh() {
     return Date.now() - u.lastFetched > 864e5
@@ -40,14 +40,14 @@ class c extends i.default.PersistedStore {
     return u.affinityUserIds
   }
 }
-c.displayName = "UserAffinitiesStore", c.persistKey = "UserAffinitiesStore", c.migrations = [e => null];
-var d = new c(s.default, {
+d.displayName = "UserAffinitiesStore", d.persistKey = "UserAffinitiesStore", d.migrations = [e => null];
+var c = new d(i.default, {
   LOAD_USER_AFFINITIES_SUCCESS: function(e) {
     var t;
     let {
-      affinities: n
+      affinities: a
     } = e;
-    u.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : [], u.lastFetched = Date.now(), o(), l = !1
+    u.userAffinities = null !== (t = a.user_affinities) && void 0 !== t ? t : [], u.lastFetched = Date.now(), o(), l = !1
   },
   LOAD_USER_AFFINITIES: function() {
     l = !0
@@ -57,7 +57,7 @@ var d = new c(s.default, {
   },
   LOGOUT: function() {
     u = {
-      ...a
+      ...r
     }
   }
 })

@@ -22,13 +22,13 @@ r.r(e), r.d(e, {
     return f
   },
   getAvatarDecorationsFromCategories: function() {
-    return v
+    return N
   },
   getCollectiblesAssetURL: function() {
     return O
   },
   getProfileEffectsFromPurchases: function() {
-    return N
+    return v
   },
   getProfileEffectsFromCategories: function() {
     return R
@@ -89,7 +89,7 @@ let E = t => (null == t ? void 0 : t.categorySkuId) === i.CollectiblesCategorySk
     }
   },
   f = t => I(t, o.CollectiblesItemType.AVATAR_DECORATION),
-  v = t => A(t, o.CollectiblesItemType.AVATAR_DECORATION),
+  N = t => A(t, o.CollectiblesItemType.AVATAR_DECORATION),
   O = (t, e) => {
     var r;
     let {
@@ -100,10 +100,10 @@ let E = t => (null == t ? void 0 : t.categorySkuId) === i.CollectiblesCategorySk
     let a = c.Endpoints.APPLICATION_ASSET(c.COLLECTIBLES_APPLICATION_ID, t, l);
     return "".concat(location.protocol).concat(i).concat(a, "?size=").concat(o)
   },
-  N = t => I(t, o.CollectiblesItemType.PROFILE_EFFECT),
+  v = t => I(t, o.CollectiblesItemType.PROFILE_EFFECT),
   R = t => A(t, o.CollectiblesItemType.PROFILE_EFFECT),
   P = (t, e) => {
-    let r = N(e),
+    let r = v(e),
       n = R(t).filter(t => {
         let {
           id: e

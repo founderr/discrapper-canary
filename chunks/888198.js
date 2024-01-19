@@ -34,7 +34,7 @@ let O = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
   P = /^ *>>> ?/,
   k = /^ *> ?/gm;
 
-function R(e) {
+function V(e) {
   let t = (0, E.punycodeLink)(e[1]);
   if (null == t) return {
     type: "text",
@@ -54,11 +54,11 @@ function R(e) {
     title: void 0
   }
 }
-let V = e => {
+let R = e => {
     let t = l.default.getChannel(e);
     return null == t ? void 0 : t.getGuildId()
   },
-  M = e => null != e.guildId ? f.default.getGuild(e.guildId) : null != e.channelId ? f.default.getGuild(V(e.channelId)) : null,
+  M = e => null != e.guildId ? f.default.getGuild(e.guildId) : null != e.channelId ? f.default.getGuild(R(e.channelId)) : null,
   w = {
     newline: a.defaultRules.newline,
     paragraph: a.defaultRules.paragraph,
@@ -100,7 +100,7 @@ let V = e => {
     link: E.default,
     autolink: {
       ...a.defaultRules.autolink,
-      parse: R
+      parse: V
     },
     url: {
       ...a.defaultRules.url,
@@ -123,7 +123,7 @@ let V = e => {
         }
         return n
       },
-      parse: R
+      parse: V
     },
     strong: a.defaultRules.strong,
     em: a.defaultRules.em,
@@ -342,7 +342,7 @@ let V = e => {
             content: s[e[1]]
           }],
           channelId: e[1],
-          guildId: V(n.channelId),
+          guildId: R(n.channelId),
           id: e[1]
         }
       }

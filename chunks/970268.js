@@ -23,8 +23,8 @@ var a, l, s, i, r = n("884691"),
   E = n("819689"),
   m = n("267363"),
   p = n("206230"),
-  g = n("379881"),
-  S = n("542827"),
+  S = n("379881"),
+  g = n("542827"),
   N = n("615387"),
   _ = n("401690"),
   I = n("689275"),
@@ -177,7 +177,7 @@ class H extends o.EventEmitter {
         }))
       }), p.default.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore()
     }, this.markGuildRead = e => {
-      h.default.wait(() => (0, S.default)([e], w.AnalyticsSections.INBOX)), this.setState({
+      h.default.wait(() => (0, g.default)([e], w.AnalyticsSections.INBOX)), this.setState({
         channels: this.state.channels.filter(t => t.guildId !== e)
       }), this.maybeLoadMore()
     }, this.deleteChannel = e => {
@@ -336,7 +336,7 @@ function z(e, t, n, a) {
     mentionCount: u,
     sortOrder: function(e, t, n) {
       let a = M.default.getChannel(t);
-      if (g.default.isFavorite(t)) return 0;
+      if (S.default.isFavorite(t)) return 0;
       if (a.isPrivate()) return 1;
       if (j.default.getMentionCount(t) > 0) return 2;
       if (null != n) {

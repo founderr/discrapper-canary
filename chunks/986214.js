@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return p
+    return h
   }
 });
 var n = i("645999"),
@@ -23,9 +23,9 @@ var n = i("645999"),
   v = i("578708"),
   S = i("702173"),
   N = i("954016"),
-  h = i("49111");
+  D = i("49111");
 
-function p(e) {
+function h(e) {
   let {
     activityItem: t,
     currentActivity: i,
@@ -34,15 +34,15 @@ function p(e) {
     guildId: c,
     embeddedActivitiesManager: A,
     analyticsLocations: T
-  } = e, C = a.default.getGuild(c), v = r.default.getCurrentUser(), N = f.default.getConnectedActivityChannelId(), p = l.default.getChannel(N);
+  } = e, C = a.default.getGuild(c), v = r.default.getCurrentUser(), N = f.default.getConnectedActivityChannelId(), h = l.default.getChannel(N);
   if (null == C && !(0, S.isPrivateChannelWithEnabledActivities)(s) || null == v || null == t) return Promise.resolve(!1);
   let {
-    application: D,
+    application: y,
     activity: O
   } = t;
-  if (null == D) return Promise.resolve(!1);
-  if (null == s) return d.ComponentDispatch.dispatch(h.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
-    applicationId: D.id
+  if (null == y) return Promise.resolve(!1);
+  if (null == s) return d.ComponentDispatch.dispatch(D.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
+    applicationId: y.id
   }), Promise.resolve(!1);
   let g = null != s ? (0, I.getEmbeddedActivityLaunchability)({
     channelId: s,
@@ -59,28 +59,28 @@ function p(e) {
     }, t = O.requires_age_gate && null == v.nsfwAllowed;
     return t ? new Promise(t => {
       (0, _.confirmActivityAgeGate)({
-        application: D,
-        onAgree: () => t(y({
+        application: y,
+        onAgree: () => t(p({
           channelId: s,
           guildId: null == C ? void 0 : C.id,
           locationObject: o,
-          application: D,
+          application: y,
           analyticsLocations: T,
           bypassChangeVcModal: e
         })),
         onDisagree: () => t(!1)
       })
-    }) : y({
+    }) : p({
       channelId: s,
       guildId: null == C ? void 0 : C.id,
       locationObject: o,
-      application: D,
+      application: y,
       analyticsLocations: T,
       bypassChangeVcModal: e
     })
   };
   return null != i ? new Promise(e => {
-    (0, E.default)(i, p, () => {
+    (0, E.default)(i, h, () => {
       A.leaveActivity({
         channelId: s,
         applicationId: i.id
@@ -90,7 +90,7 @@ function p(e) {
     }, () => e(!1))
   }) : L()
 }
-async function y(e) {
+async function p(e) {
   let {
     channelId: t,
     guildId: i,
@@ -110,7 +110,7 @@ async function y(e) {
     if (!e) return !1
   } else if (!(0, o.isActivitiesInTextEnabled)(_, "handleStartEmbeddedActivity") || !I) return !1;
   return c.startEmbeddedActivity(t, a.id, u), (0, v.default)(i, t), (0, C.default)({
-    type: h.AnalyticsGameOpenTypes.LAUNCH,
+    type: D.AnalyticsGameOpenTypes.LAUNCH,
     userId: f.id,
     applicationId: a.id,
     locationObject: n,

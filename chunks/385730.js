@@ -21,8 +21,8 @@ var a = n("37983"),
   E = n("206230"),
   m = n("510889"),
   p = n("826267"),
-  g = n("599110"),
-  S = n("659500"),
+  S = n("599110"),
+  g = n("659500"),
   N = n("150938"),
   _ = n("805614"),
   I = n("64318"),
@@ -77,12 +77,12 @@ function M(e) {
         let n = e.channels.find(e => !e.collapsed);
         null != n && t.markChannelRead(n)
       };
-      return S.ComponentDispatch.subscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n), () => {
-        S.ComponentDispatch.unsubscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
+      return g.ComponentDispatch.subscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n), () => {
+        g.ComponentDispatch.unsubscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
       }
     }, [t, e.channels])
   }(b, y), l.useEffect(() => {
-    g.default.track(A.AnalyticEvents.OPEN_POPOUT, {
+    S.default.track(A.AnalyticEvents.OPEN_POPOUT, {
       type: "Inbox"
     })
   }, []), l.useEffect(() => (h.default.subscribe("CONNECTION_OPEN", M), () => {

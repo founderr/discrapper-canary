@@ -27,11 +27,11 @@ async function E(e, t) {
   null == e || e === o.ME ? await i.default.patch({
     url: o.Endpoints.USER_GUILD_SETTINGS(o.ME),
     body: t
-  }) : await _(null != t ? {
+  }) : await p(null != t ? {
     [null != e ? e : o.ME]: t
   } : {})
 }
-async function _(e) {
+async function p(e) {
   clearTimeout(d);
   let t = 0 !== Object.keys(e).length,
     n = r.default.getCollapsedCategories(),
@@ -59,7 +59,7 @@ async function _(e) {
   })).body) : []
 }
 
-function p() {
+function _() {
   u = {
     ...r.default.getCollapsedCategories()
   }
@@ -72,8 +72,8 @@ class I extends l.default {
       CATEGORY_COLLAPSE_ALL: h,
       CATEGORY_EXPAND_ALL: h,
       POST_CONNECTION_OPEN: f,
-      USER_GUILD_SETTINGS_FULL_UPDATE: p
-    }, this.saveUserGuildSettings = E, this.saveUserGuildSettingsBulk = _
+      USER_GUILD_SETTINGS_FULL_UPDATE: _
+    }, this.saveUserGuildSettings = E, this.saveUserGuildSettingsBulk = p
   }
 }
 var C = new I

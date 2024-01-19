@@ -23,13 +23,13 @@ function S(e) {
   let n = (0, E.default)(),
     S = null == n ? void 0 : n.id,
     T = null == n ? void 0 : n.guild_id,
-    p = (0, i.useStateFromStores)([a.default], () => a.default.getGuild(T), [T]),
-    A = (0, i.useStateFromStores)([r.default], () => null != S ? r.default.getVoiceStateForChannel(S, e.id) : null, [S, e.id]),
+    A = (0, i.useStateFromStores)([a.default], () => a.default.getGuild(T), [T]),
+    p = (0, i.useStateFromStores)([r.default], () => null != S ? r.default.getVoiceStateForChannel(S, e.id) : null, [S, e.id]),
     g = (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.id,
     N = (0, f.default)(),
     C = (0, i.useStateFromStores)([c.default], () => c.default.getPermissionsForUser(e.id, S), [S, e.id]),
     I = (0, s.useCanModerateRequestToSpeak)(S);
-  if (null == n || null == p || null == A || C.speaker) return null;
+  if (null == n || null == A || null == p || C.speaker) return null;
   let O = () => {
     g ? (0, d.audienceAckRequestToSpeak)(n, !1) : (0, d.inviteUserToStage)(n, e.id)
   };
