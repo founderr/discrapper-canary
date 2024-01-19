@@ -42,7 +42,7 @@ let E = {
   b = new Map,
   P = new Map;
 let R = h.ActivityPanelModes.ACTION_BAR,
-  V = h.FocusedActivityLayouts.NO_CHAT;
+  V = h.FocusedActivityLayouts.RESIZABLE;
 
 function k(e) {
   return null != e ? e : "0"
