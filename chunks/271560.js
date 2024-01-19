@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return k
   },
   getNonSocialRecommendationReasons: function() {
-    return R
+    return V
   }
 }), n("424973"), n("462568"), n("222007"), n("70102"), n("702976");
 var s = n("917351"),
@@ -223,12 +223,12 @@ function k(e, t, n, s, r) {
   }
   return d
 }
-let V = [];
+let R = [];
 
-function R(e, t, n) {
+function V(e, t, n) {
   let s = t.get(e),
     i = n.getForSKU(e);
-  if (null == s || null == i) return V;
+  if (null == s || null == i) return R;
   let r = [];
   (0, v.hasFlag)(s.flags, y.SKUFlags.HAS_FREE_PREMIUM_CONTENT) && r.push({
     type: y.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT

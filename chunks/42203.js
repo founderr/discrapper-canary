@@ -31,8 +31,8 @@ let C = new h.default("ChannelStore"),
   O = null,
   D = {},
   y = {},
-  P = 0,
-  L = {},
+  L = 0,
+  P = {},
   b = {},
   M = new Set,
   U = {},
@@ -84,7 +84,7 @@ function H(e) {
 }
 
 function j(e) {
-  N[e.id] = e, e.type === I.ChannelTypes.DM && (y[e.getRecipientId()] = e.id), P += 1
+  N[e.id] = e, e.type === I.ChannelTypes.DM && (y[e.getRecipientId()] = e.id), L += 1
 }
 
 function Y(e) {
@@ -104,7 +104,7 @@ function W(e) {
     id: i,
     guild_id: r
   } = e;
-  A[i] = e, R[r] = null !== (t = R[r]) && void 0 !== t ? t : {}, R[r][i] = e, L[r] = (null !== (n = L[r]) && void 0 !== n ? n : 0) + 1
+  A[i] = e, R[r] = null !== (t = R[r]) && void 0 !== t ? t : {}, R[r][i] = e, P[r] = (null !== (n = P[r]) && void 0 !== n ? n : 0) + 1
 }
 
 function K(e) {
@@ -120,7 +120,7 @@ function K(e) {
 }
 
 function z() {
-  y = {}, A = {}, R = {}, L = {}, N = {}, U = {}, D = {}, M = new Set
+  y = {}, A = {}, R = {}, P = {}, N = {}, U = {}, D = {}, M = new Set
 }
 
 function q(e) {
@@ -155,10 +155,10 @@ function Z(e) {
   if (null == e) return;
   let t = e.guild_id;
   e.id in N && delete N[e.id], e.id in A && delete A[e.id], e.id in D && delete D[e.id], null != t && null != R[t] && e.id in R[t] && delete R[t][e.id], ! function(e) {
-    if (null == e.guild_id || S.THREAD_CHANNEL_TYPES.has(e.type))(0, S.isPrivate)(e.type) && (P += 1);
+    if (null == e.guild_id || S.THREAD_CHANNEL_TYPES.has(e.type))(0, S.isPrivate)(e.type) && (L += 1);
     else {
       var t;
-      L[e.guild_id] = (null !== (t = L[e.guild_id]) && void 0 !== t ? t : 0) + 1
+      P[e.guild_id] = (null !== (t = P[e.guild_id]) && void 0 !== t ? t : 0) + 1
     }
   }(e)
 }
@@ -239,11 +239,11 @@ class en extends o.default.Store {
     return Object.keys(y)
   }
   getPrivateChannelsVersion() {
-    return P
+    return L
   }
   getGuildChannelsVersion(e) {
     var t;
-    return null !== (t = L[e]) && void 0 !== t ? t : 0
+    return null !== (t = P[e]) && void 0 !== t ? t : 0
   }
   getAllThreadsForParent(e) {
     return r.values(D).filter(t => t.parent_id === e)
@@ -262,7 +262,7 @@ var ei = new en(l.default, {
     let {
       guilds: t
     } = e, n = R;
-    A = {}, R = {}, L = {}, t.forEach(e => {
+    A = {}, R = {}, P = {}, t.forEach(e => {
       if ("unavailable" === e.data_mode) r.forEach(n[e.id], W);
       else if ("partial" === e.data_mode) {
         var t, i;
@@ -309,7 +309,7 @@ var ei = new en(l.default, {
   },
   CONNECTION_OPEN: function(e) {
     let t = R;
-    for (let n of (y = {}, A = {}, R = {}, D = {}, L = {}, U = {}, M = new Set, O = e.initialPrivateChannels, e.initialPrivateChannels.forEach(j), e.guilds)) "partial" === n.dataMode && r.forEach(t[n.id], W), K(n);
+    for (let n of (y = {}, A = {}, R = {}, D = {}, P = {}, U = {}, M = new Set, O = e.initialPrivateChannels, e.initialPrivateChannels.forEach(j), e.guilds)) "partial" === n.dataMode && r.forEach(t[n.id], W), K(n);
     et()
   },
   GUILD_CREATE: function(e) {

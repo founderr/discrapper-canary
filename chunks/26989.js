@@ -39,14 +39,14 @@ let g = new c.default("GuildMemberStore"),
     removed: []
   };
 
-function P(e, t) {
-  if (null == t.communicationDisabledUntil || !(0, d.isMemberCommunicationDisabled)(t)) return L(e, t.userId);
+function L(e, t) {
+  if (null == t.communicationDisabledUntil || !(0, d.isMemberCommunicationDisabled)(t)) return P(e, t.userId);
   let n = U(e, t.userId),
     i = v[n];
   i !== t.communicationDisabledUntil && (0, d.isMemberCommunicationDisabled)(t) && (v[n] = t.communicationDisabledUntil, b(n))
 }
 
-function L(e, t) {
+function P(e, t) {
   if (null != t) {
     let n = U(e, t);
     null != v[n] && b(n), M(U(e, t))
@@ -199,7 +199,7 @@ function V(e) {
     unusualDMActivityUntil: d,
     fullProfileLoadedTimestamp: null === (t = E[i.id]) || void 0 === t ? void 0 : t.fullProfileLoadedTimestamp,
     flags: f
-  }), P(n, E[i.id])
+  }), L(n, E[i.id])
 }
 
 function B(e, t) {
@@ -223,7 +223,7 @@ function B(e, t) {
       flags: t.flags,
       fullProfileLoadedTimestamp: null == s ? void 0 : s.fullProfileLoadedTimestamp,
       unusualDMActivityUntil: null !== (r = t.unusual_dm_activity_until) && void 0 !== r ? r : null == s ? void 0 : s.unusualDMActivityUntil
-    }), P(e, n[t.user.id])
+    }), L(e, n[t.user.id])
   }), N++, !0)
 }
 
@@ -252,7 +252,7 @@ function H(e) {
         flags: s.flags,
         unusualDMActivityUntil: null !== (r = s.unusual_dm_activity_until) && void 0 !== r ? r : null == o ? void 0 : o.unusualDMActivityUntil
       });
-    i[a] = l, P(t, l)
+    i[a] = l, L(t, l)
   }
   return !0
 }
@@ -276,7 +276,7 @@ function j(e) {
       joinedAt: r.joinedAt,
       flags: r.flags,
       fullProfileLoadedTimestamp: null == r ? void 0 : r.fullProfileLoadedTimestamp
-    }), P(e.guildId, t[i]))
+    }), L(e.guildId, t[i]))
   }
 }
 
@@ -477,7 +477,7 @@ var q = new z(u.default, {
     let {
       guild: t
     } = e;
-    delete I[t.id], L(t.id)
+    delete I[t.id], P(t.id)
   },
   GUILD_MEMBER_ADD: V,
   GUILD_MEMBER_UPDATE: V,
@@ -520,7 +520,7 @@ var q = new z(u.default, {
       user: n
     } = e, i = I[t];
     if (null == i || null == i[n.id]) return !1;
-    delete i[n.id], L(t, n.id), N++
+    delete i[n.id], P(t, n.id), N++
   },
   THREAD_MEMBER_LIST_UPDATE: function(e) {
     let {
@@ -610,7 +610,7 @@ var q = new z(u.default, {
       unusualDMActivityUntil: t.unusual_dm_activity_until,
       flags: t.flags,
       fullProfileLoadedTimestamp: Date.now()
-    }), P(n, i[t.user.id])
+    }), L(n, i[t.user.id])
   },
   IMPERSONATE_UPDATE: Y,
   IMPERSONATE_STOP: Y,

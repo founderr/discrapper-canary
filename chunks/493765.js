@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i
   },
   getNameForKeybindGroup: function() {
-    return v
+    return V
   },
   getDescriptionForKeybindGroup: function() {
-    return V
+    return v
   },
   DEFAULT_LAYOUT: function() {
     return Y
@@ -24,36 +24,36 @@ var i, o, l = n("102457"),
   u = n("863536"),
   d = n("786720"),
   s = n("211314"),
-  r = n("218143"),
-  E = n("586819"),
+  E = n("218143"),
+  r = n("586819"),
   _ = n("953260"),
-  c = n("798232"),
-  A = n("278412"),
+  A = n("798232"),
+  c = n("278412"),
   C = n("222301"),
   T = n("903376"),
   S = n("242149"),
   I = n("714208"),
   f = n("24312"),
-  O = n("30269"),
-  N = n("709079"),
+  N = n("30269"),
+  O = n("709079"),
   L = n("356410"),
-  p = n("271524"),
-  D = n("333949"),
-  R = n("945924"),
+  D = n("271524"),
+  R = n("333949"),
+  p = n("945924"),
   h = n("648900"),
-  g = n("838021"),
+  b = n("838021"),
   G = n("745991"),
-  b = n("640968"),
+  g = n("640968"),
   M = n("347445"),
   P = n("992642"),
-  m = n("200431"),
-  U = n("493334"),
+  U = n("200431"),
+  m = n("493334"),
   y = n("809392"),
   K = n("202035"),
   H = n("49111"),
   B = n("782340");
 
-function v(e) {
+function V(e) {
   switch (e) {
     case "NAVIGATION":
       return B.default.Messages.USER_SETTINGS_KEYBINDS_NAVIGATION_SECTION_TITLE;
@@ -70,7 +70,7 @@ function v(e) {
   }
 }
 
-function V(e) {
+function v(e) {
   switch (e) {
     case "MESSAGE":
       return B.default.Messages.USER_SETTINGS_KEYBINDS_MESSAGE_DESCRIPTION;
@@ -90,36 +90,36 @@ function F() {
   })
 }(o = i || (i = {})).NAVIGATION = "NAVIGATION", o.CHAT = "CHAT", o.VOICE_AND_VIDEO = "VOICE_AND_VIDEO", o.MISCELLANEOUS = "MISCELLANEOUS", o.MESSAGE = "MESSAGE", o.DND = "DND";
 let Y = {
-  [H.KeybindActions.SERVER_NEXT]: p.SERVER_NEXT,
-  [H.KeybindActions.SERVER_PREV]: p.SERVER_PREV,
+  [H.KeybindActions.SERVER_NEXT]: D.SERVER_NEXT,
+  [H.KeybindActions.SERVER_PREV]: D.SERVER_PREV,
   [H.KeybindActions.CHANNEL_NEXT]: a.CHANNEL_NEXT,
   [H.KeybindActions.CHANNEL_PREV]: a.CHANNEL_PREV,
   [H.KeybindActions.NAVIGATE_BACK]: a.NAVIGATE_BACK,
   [H.KeybindActions.NAVIGATE_FORWARD]: a.NAVIGATE_FORWARD,
-  [H.KeybindActions.UNREAD_NEXT]: U.UNREAD_NEXT,
-  [H.KeybindActions.UNREAD_PREV]: U.UNREAD_PREV,
-  [H.KeybindActions.MENTION_CHANNEL_NEXT]: U.MENTION_NEXT,
-  [H.KeybindActions.MENTION_CHANNEL_PREV]: U.MENTION_PREV,
+  [H.KeybindActions.UNREAD_NEXT]: m.UNREAD_NEXT,
+  [H.KeybindActions.UNREAD_PREV]: m.UNREAD_PREV,
+  [H.KeybindActions.MENTION_CHANNEL_NEXT]: m.MENTION_NEXT,
+  [H.KeybindActions.MENTION_CHANNEL_PREV]: m.MENTION_PREV,
   [H.KeybindActions.TOGGLE_PREVIOUS_GUILD]: a.TOGGLE_PREVIOUS_GUILD,
   [H.KeybindActions.JUMP_TO_GUILD]: _.JUMP_TO_GUILD,
-  [H.KeybindActions.SUBMIT]: D.SUBMIT,
-  [H.KeybindActions.TEXTAREA_FOCUS]: R.TEXTAREA_FOCUS,
-  [H.KeybindActions.MARK_CHANNEL_READ]: c.MARK_CHANNEL_READ,
-  [H.KeybindActions.MARK_SERVER_READ]: A.MARK_SERVER_READ,
+  [H.KeybindActions.SUBMIT]: R.SUBMIT,
+  [H.KeybindActions.TEXTAREA_FOCUS]: p.TEXTAREA_FOCUS,
+  [H.KeybindActions.MARK_CHANNEL_READ]: A.MARK_CHANNEL_READ,
+  [H.KeybindActions.MARK_SERVER_READ]: c.MARK_SERVER_READ,
   [H.KeybindActions.TOGGLE_CHANNEL_PINS]: G.TOGGLE_CHANNEL_PINS,
   [H.KeybindActions.TOGGLE_INBOX_UNREADS_TAB]: P.TOGGLE_INBOX_UNREADS_TAB,
   [H.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ]: P.MARK_TOP_INBOX_CHANNEL_READ,
-  [H.KeybindActions.TOGGLE_USERS]: m.TOGGLE_USERS,
-  [H.KeybindActions.TOGGLE_HELP]: b.TOGGLE_HELP,
+  [H.KeybindActions.TOGGLE_USERS]: U.TOGGLE_USERS,
+  [H.KeybindActions.TOGGLE_HELP]: g.TOGGLE_HELP,
   [H.KeybindActions.TOGGLE_MUTE]: h.TOGGLE_MUTE,
   [H.KeybindActions.TOGGLE_DEAFEN]: h.TOGGLE_DEAFEN,
-  [H.KeybindActions.TOGGLE_CATEGORY_COLLAPSED]: g.TOGGLE_CATEGORY_COLLAPSED,
+  [H.KeybindActions.TOGGLE_CATEGORY_COLLAPSED]: b.TOGGLE_CATEGORY_COLLAPSED,
   [H.KeybindActions.SCROLL_UP]: f.SCROLL_UP,
   [H.KeybindActions.SCROLL_DOWN]: f.SCROLL_DOWN,
   [H.KeybindActions.QUICKSWITCHER_SHOW]: S.QUICKSWITCHER_SHOW,
   [H.KeybindActions.CREATE_DM_GROUP]: u.CREATE_DM_GROUP,
-  [H.KeybindActions.SEARCH_EMOJIS]: O.SEARCH_EMOJIS,
-  [H.KeybindActions.SEARCH_GIFS]: N.SEARCH_GIFS,
+  [H.KeybindActions.SEARCH_EMOJIS]: N.SEARCH_EMOJIS,
+  [H.KeybindActions.SEARCH_GIFS]: O.SEARCH_GIFS,
   [H.KeybindActions.SEARCH_STICKERS]: L.SEARCH_STICKERS,
   [H.KeybindActions.TOGGLE_HOTKEYS]: M.TOGGLE_HOTKEYS,
   [H.KeybindActions.JUMP_TO_FIRST_UNREAD]: C.JUMP_TO_FIRST_UNREAD,
@@ -128,8 +128,8 @@ let Y = {
   [H.KeybindActions.RETURN_TO_AUDIO_CHANNEL]: I.RETURN_TO_AUDIO_CHANNEL,
   [H.KeybindActions.CALL_ACCEPT]: l.CALL_ACCEPT,
   [H.KeybindActions.CALL_START]: l.CALL_START,
-  [H.KeybindActions.FOCUS_SEARCH]: r.FOCUS_SEARCH,
-  [H.KeybindActions.JUMP_TO_CURRENT_CALL]: E.JUMP_TO_CURRENT_CALL,
+  [H.KeybindActions.FOCUS_SEARCH]: E.FOCUS_SEARCH,
+  [H.KeybindActions.JUMP_TO_CURRENT_CALL]: r.JUMP_TO_CURRENT_CALL,
   [H.KeybindActions.ZOOM_IN]: K.ZOOM_IN,
   [H.KeybindActions.ZOOM_OUT]: K.ZOOM_OUT,
   [H.KeybindActions.ZOOM_RESET]: K.ZOOM_RESET,

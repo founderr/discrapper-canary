@@ -28,15 +28,15 @@ let C = [I.DispatchErrorCodes.AUTHENTICATION_FAILED, I.DispatchErrorCodes.NOT_EN
   O = null,
   D = null,
   y = !1,
-  P = new Map,
-  L = !1,
+  L = new Map,
+  P = !1,
   b = null;
 
 function M() {
   let e = {
     queue: A,
     paused: N,
-    userActions: Array.from(P)
+    userActions: Array.from(L)
   };
   c.default.set(v, e)
 }
@@ -56,7 +56,7 @@ function U() {
       let e = E.default.getToken(),
         t = E.default.getId();
       if (null == e) throw Error("missing user token");
-      L = !S.default.setCurrentTask(s, a, r, t, e)
+      P = !S.default.setCurrentTask(s, a, r, t, e)
     }
   }
 }
@@ -121,7 +121,7 @@ class H extends u.default.Store {
       comboId: e,
       action: "Patch"
     } : e);
-    null != t.paused && (N = t.paused), null != t.userActions && (P = new Map(Array.from(t.userActions))), this.waitFor(T.default, h.default), this.syncWith([h.default], B), this.waitFor(T.default)
+    null != t.paused && (N = t.paused), null != t.userActions && (L = new Map(Array.from(t.userActions))), this.waitFor(T.default, h.default), this.syncWith([h.default], B), this.waitFor(T.default)
   }
   get activeItems() {
     return A.map(e => {
@@ -141,7 +141,7 @@ class H extends u.default.Store {
     return G(e, t)
   }
   isCorruptInstallation() {
-    return L
+    return P
   }
 }
 H.displayName = "DispatchManagerStore";
@@ -151,7 +151,7 @@ var j = new H(d.default, {
       applicationId: t,
       branchId: n
     } = e;
-    P.set((0, _.getComboId)(t, n), "Install"), w(t, n, !1, "Patch")
+    L.set((0, _.getComboId)(t, n), "Install"), w(t, n, !1, "Patch")
   },
   DISPATCH_APPLICATION_UPDATE: function(e) {
     let {
@@ -170,7 +170,7 @@ var j = new H(d.default, {
       applicationId: t,
       branchId: n
     } = e;
-    P.set((0, _.getComboId)(t, n), "Repair"), w(t, n, !1, "Repair")
+    L.set((0, _.getComboId)(t, n), "Repair"), w(t, n, !1, "Repair")
   },
   DISPATCH_APPLICATION_MOVE_UP: function(e) {
     let {
@@ -197,8 +197,8 @@ var j = new H(d.default, {
         branchId: r
       } = (0, _.convertComboId)(t), s = T.default.getState(n, r), a = p.default.getTargetBuildId(n, r), o = p.default.getTargetManifests(n, r);
       if (null != s && s.type === g.LocalDispatchApplicationStates.UP_TO_DATE && s.buildId === s.targetBuildId && s.buildId === a && l.isEqual(s.manifestIds, s.targetManifestIds) && l.isEqual(s.manifestIds, o)) {
-        if (R.push(t), P.has(t)) {
-          let e = P.get(t);
+        if (R.push(t), L.has(t)) {
+          let e = L.get(t);
           switch (e) {
             case "Install":
               f.completeInstall(n, s);
@@ -206,7 +206,7 @@ var j = new H(d.default, {
             case "Repair":
               f.completeRepair(n, s)
           }
-          P.delete(t)
+          L.delete(t)
         }
         return i = !0, !1
       }

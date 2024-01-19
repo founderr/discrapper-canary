@@ -47,8 +47,8 @@ var s, i, r, a, o = n("37983"),
   b = n("991170"),
   P = n("253981"),
   k = n("872825"),
-  V = n("8222"),
-  R = n("164386"),
+  R = n("8222"),
+  V = n("164386"),
   M = n("978970"),
   w = n("29479"),
   L = n("357974"),
@@ -153,7 +153,7 @@ function J(e) {
     }),
     ev = eh.userAppsTreatment === T.UserAppsTreatment.ALLOWED;
   !ev && (ec = !1);
-  let [eE, ep] = d.useState(0), [ey, eC] = d.useState(null), [eT, eS] = d.useState(b.default.NONE), [eI, eA] = d.useState(1), [eD, eN] = d.useState(null), [eO] = d.useState(w.OrderedAccountScopes.filter(e => eg.includes(e))), [eb, eP] = d.useState(null != ee ? ee : null), [ek, eV] = d.useState(null != et ? et : null), [eR, eM] = d.useState(!1), ew = d.useMemo(() => {
+  let [eE, ep] = d.useState(0), [ey, eC] = d.useState(null), [eT, eS] = d.useState(b.default.NONE), [eI, eA] = d.useState(1), [eD, eN] = d.useState(null), [eO] = d.useState(w.OrderedAccountScopes.filter(e => eg.includes(e))), [eb, eP] = d.useState(null != ee ? ee : null), [ek, eR] = d.useState(null != et ? et : null), [eV, eM] = d.useState(!1), ew = d.useMemo(() => {
     var e;
     return null == ey ? void 0 : null === (e = ey.guilds) || void 0 === e ? void 0 : e.find(e => e.id === eb)
   }, [null == ey ? void 0 : ey.guilds, eb]), eL = (0, c.useStateFromStoresObject)([E.default, p.default], () => {
@@ -179,7 +179,7 @@ function J(e) {
     }
     try {
       eM(!0);
-      let t = await (0, V.authorize)({
+      let t = await (0, R.authorize)({
         authorize: e,
         clientId: I,
         scopes: eg,
@@ -217,13 +217,13 @@ function J(e) {
   }, [eo, ed, I, Z, J, eT, eu, en, Q, X, eg, eb, ek, $, el, null == ey ? void 0 : ey.application, ew, ec]), eF = d.useRef(!1), ex = d.useCallback(async () => {
     if (0 === eE) {
       if (ep(1), !N.default.isAuthenticated()) {
-        (0, V.logoutWithRedirect)(em);
+        (0, R.logoutWithRedirect)(em);
         return
       }
       if (!eF.current) {
         eF.current = !0;
         try {
-          let e = null != ea ? ea : await (0, V.fetchAuthorization)({
+          let e = null != ea ? ea : await (0, R.fetchAuthorization)({
             clientId: I,
             scopes: eg,
             responseType: X,
@@ -233,7 +233,7 @@ function J(e) {
             state: $,
             userInstall: ev && ec
           });
-          eC((0, R.convertOAuth2Authorization)(e)), es === L.OAuth2Prompts.NONE && e.authorized ? eG(!0) : ep(2), (0, y.trackWithMetadata)(j.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
+          eC((0, V.convertOAuth2Authorization)(e)), es === L.OAuth2Prompts.NONE && e.authorized ? eG(!0) : ep(2), (0, y.trackWithMetadata)(j.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
             application_id: e.application.id
           })
         } catch (n) {
@@ -242,7 +242,7 @@ function J(e) {
             body: t
           } = n;
           if (401 === e) {
-            (0, V.logoutWithRedirect)(em);
+            (0, R.logoutWithRedirect)(em);
             return
           }
           eN(Error(null != t.message ? t.message : "".concat(Object.keys(t)[0], ": ").concat(Object.values(t)[0]))), ep(2)
@@ -261,7 +261,7 @@ function J(e) {
   let eH = null != ek ? null == ey ? void 0 : null === (t = ey.channels) || void 0 === t ? void 0 : t.find(e => e.id === ek) : null,
     eY = null != eb ? null == ey ? void 0 : null === (n = ey.guilds) || void 0 === n ? void 0 : n.find(e => e.id === eb) : null;
   if (d.useEffect(() => {
-      null != ey && (null != eH ? eP(null) : null == eY && (eP(null), eV(null)))
+      null != ey && (null != eH ? eP(null) : null == eY && (eP(null), eR(null)))
     }, [ey, eY, eH]), eD instanceof Error) return {
     body: (0, o.jsx)(Y.OAuth2Error, {
       message: eD.message
@@ -296,7 +296,7 @@ function J(e) {
           error: (null !== (l = ez[j.OAuth2Scopes.WEBHOOK_INCOMING]) && void 0 !== l ? l : [])[0],
           selectedChannelId: ek,
           selectedGuildId: eb,
-          onChannelChange: e => eV(e)
+          onChannelChange: e => eR(e)
         }) : null]
       }), eg.includes(j.OAuth2Scopes.BOT) && !_.default.equals(en, b.default.NONE) && (S = 2);
       let eQ = null != eY && eg.includes(j.OAuth2Scopes.WEBHOOK_INCOMING) && null == ek;
@@ -338,7 +338,7 @@ function J(e) {
       }) : (0, o.jsx)(g.Button, {
         onClick: () => eG(!0),
         disabled: eW,
-        submitting: eR,
+        submitting: eV,
         children: W.default.Messages.AUTHORIZE
       })]
     }),

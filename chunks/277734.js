@@ -1,26 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   dismissChannelSafetyWarnings: function() {
-    return l
+    return r
   },
   setChannelSafetyWarningFeedback: function() {
-    return i
+    return s
   },
   clearChannelSafetyWarnings: function() {
-    return d
+    return o
   }
 });
-var a = n("872717"),
-  u = n("913144"),
-  s = n("49111");
+var i = n("872717"),
+  l = n("913144"),
+  a = n("49111");
 
-function l(e, t) {
-  return u.default.dispatch({
+function r(e, t) {
+  return l.default.dispatch({
     type: "DISMISS_CHANNEL_SAFETY_WARNINGS",
     channelId: e,
     warningIds: t
-  }), a.default.post({
-    url: s.Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(e),
+  }), i.default.post({
+    url: a.Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(e),
     body: {
       warning_ids: t
     },
@@ -28,8 +28,8 @@ function l(e, t) {
   })
 }
 
-function i(e, t, n) {
-  u.default.dispatch({
+function s(e, t, n) {
+  l.default.dispatch({
     type: "CHANNEL_SAFETY_WARNING_FEEDBACK",
     channelId: e,
     warningId: t,
@@ -37,8 +37,8 @@ function i(e, t, n) {
   })
 }
 
-function d(e) {
-  u.default.dispatch({
+function o(e) {
+  l.default.dispatch({
     type: "CLEAR_CHANNEL_SAFETY_WARNINGS",
     channelId: e
   })

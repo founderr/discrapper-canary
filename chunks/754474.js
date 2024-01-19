@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a.BotTagTypes
   },
   default: function() {
-    return o
+    return u
   }
 });
 var i = n("37983");
@@ -13,14 +13,14 @@ var s = n("414456"),
   l = n.n(s),
   r = n("79798"),
   a = n("988268"),
-  u = n("888770"),
-  o = e => {
+  o = n("888770"),
+  u = e => {
     let {
       name: t,
       discriminator: n,
       invertBotTagColor: s,
       nameColor: a,
-      className: o,
+      className: u,
       botType: d,
       usernameClass: c,
       discriminatorClass: h,
@@ -31,10 +31,10 @@ var s = n("414456"),
       usernameIcon: E
     } = e;
     return (0, i.jsxs)("div", {
-      className: l(o, u.nameTag),
+      className: l(u, o.nameTag),
       style: p,
       children: [(0, i.jsxs)("span", {
-        className: l(u.username, c),
+        className: l(o.username, c),
         style: null != a ? {
           color: a
         } : void 0,
@@ -45,7 +45,7 @@ var s = n("414456"),
       }) : null, null != d ? (0, i.jsx)(r.default, {
         type: d,
         invertColor: s,
-        className: l(f, u.bot),
+        className: l(f, o.bot),
         verified: m,
         useRemSizes: I
       }) : null]

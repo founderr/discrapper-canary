@@ -117,8 +117,8 @@ class m extends a.PureComponent {
       renderMarker: O,
       getAriaValueText: D,
       barClassName: y,
-      grabberClassName: P,
-      grabberStyles: L = {},
+      grabberClassName: L,
+      grabberStyles: P = {},
       markerPosition: b = 0,
       "aria-hidden": M,
       "aria-label": U,
@@ -199,9 +199,9 @@ class m extends a.PureComponent {
             forceOpen: n || i && h.default.keyboardModeEnabled,
             children: e => (0, s.jsx)("div", {
               ...e,
-              className: l(p.grabber, P),
+              className: l(p.grabber, L),
               style: {
-                ...L,
+                ...P,
                 left: x
               },
               onMouseDown: this.handleMouseDown,

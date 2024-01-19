@@ -37,8 +37,8 @@ let v = "SELECTABLE",
   O = {},
   D = {},
   y = null,
-  P = {},
-  L = {
+  L = {},
+  P = {
     comparator: -1,
     channel: (0, f.createChannelRecord)({
       id: "null",
@@ -55,7 +55,7 @@ function G(e) {
     id: e,
     [v]: [],
     [A]: [],
-    [I.ChannelTypes.GUILD_CATEGORY]: [L],
+    [I.ChannelTypes.GUILD_CATEGORY]: [P],
     count: 0
   }
 }
@@ -70,13 +70,13 @@ function w(e, t) {
 }
 
 function k() {
-  N = {}, P = {}, O = {}, D = {}, null != R && x(R)
+  N = {}, L = {}, O = {}, D = {}, null != R && x(R)
 }
 
 function x(e) {
   var t;
   let n = G(e);
-  return N[e] = n, P[e] = [], ! function(e) {
+  return N[e] = n, L[e] = [], ! function(e) {
       let {
         id: t
       } = e, n = function(e) {
@@ -108,7 +108,7 @@ function x(e) {
         let r = n.channel;
         if (e.count += 1, f.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(r.type) && !m.default.can(I.Permissions.VIEW_CHANNEL, r) && !l.default.isChannelGated(r.guild_id, r.id) && r.id !== y) return;
         let s = (i = r.type, (0, f.isGuildSelectableChannelType)(i) ? v : (0, f.isGuildVocalChannelType)(i) ? A : i);
-        r.type === I.ChannelTypes.GUILD_DIRECTORY && (null == P[t] && (P[t] = []), P[t].push(n)), null != e[s] && e[s].push(n)
+        r.type === I.ChannelTypes.GUILD_DIRECTORY && (null == L[t] && (L[t] = []), L[t].push(n)), null != e[s] && e[s].push(n)
       })
     }(n), (t = n)[v].sort(w), t[A].sort(w), t[I.ChannelTypes.GUILD_CATEGORY].sort(w),
     function(e) {
@@ -248,7 +248,7 @@ class W extends a.default.Store {
   }
   getDirectoryChannelIds(e) {
     var t, n;
-    return null !== (n = null === (t = P[e]) || void 0 === t ? void 0 : t.map(e => {
+    return null !== (n = null === (t = L[e]) || void 0 === t ? void 0 : t.map(e => {
       let {
         channel: t
       } = e;
@@ -293,7 +293,7 @@ var K = new W(o.default, {
         id: t
       }
     } = e;
-    return delete N[t], delete O[t], delete D[t], delete P[t], !0
+    return delete N[t], delete O[t], delete D[t], delete L[t], !0
   },
   GUILD_MEMBER_UPDATE: function(e) {
     let {

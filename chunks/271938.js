@@ -30,8 +30,8 @@ let R = n("551042").hasModalOpen,
   O = "fingerprint",
   D = "email_cache",
   y = "user_id_cache",
-  P = null,
   L = null,
+  P = null,
   b = null,
   M = null,
   U = null,
@@ -132,14 +132,14 @@ function eo(e) {
   ee("handleLogout called."), es(), ei(), !(null == e ? void 0 : e.isSwitchingAccount) && et(), u.default.PersistedStore.clearAll({
     omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore"],
     type: (null == e ? void 0 : e.isSwitchingAccount) ? "user-data-only" : "all"
-  }), C.default.clearAll(), h.clear(), g.default.clearUser(), d.default.remove(y), P = null, k = (null == e ? void 0 : e.isSwitchingAccount) ? v.LoginStates.LOGGING_IN : v.LoginStates.NONE, x = v.RegistrationStates.NONE, B = "", K = "", j = null, H = !1, z = !1, q = !1, X = {}, Q = {}
+  }), C.default.clearAll(), h.clear(), g.default.clearUser(), d.default.remove(y), L = null, k = (null == e ? void 0 : e.isSwitchingAccount) ? v.LoginStates.LOGGING_IN : v.LoginStates.NONE, x = v.RegistrationStates.NONE, B = "", K = "", j = null, H = !1, z = !1, q = !1, X = {}, Q = {}
 }
 class el extends u.default.Store {
   initialize() {
-    P = d.default.get(y), L = d.default.get(D), $ = d.default.get("login_cache"), null == o.default.getToken() && et()
+    L = d.default.get(y), P = d.default.get(D), $ = d.default.get("login_cache"), null == o.default.getToken() && et()
   }
   getEmail() {
-    return L
+    return P
   }
   getLogin() {
     return $
@@ -160,7 +160,7 @@ class el extends u.default.Store {
     return x
   }
   getId() {
-    return P
+    return L
   }
   getSessionId() {
     return b
@@ -252,7 +252,7 @@ var eu = new el(f.default, {
       analyticsToken: s,
       auth: a
     } = e;
-    ee("handleConnectionOpen called"), g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, S.default)(n)), b = i, M = r, w = s, P = n.id, L = n.email, void 0 !== a && (V = a.authenticator_types), d.default.set(D, n.email), d.default.set(y, n.id)
+    ee("handleConnectionOpen called"), g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, S.default)(n)), b = i, M = r, w = s, L = n.id, P = n.email, void 0 !== a && (V = a.authenticator_types), d.default.set(D, n.email), d.default.set(y, n.id)
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -262,7 +262,7 @@ var eu = new el(f.default, {
       analyticsToken: r,
       token: s
     } = e;
-    g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, S.default)(n)), b = i, w = r, er(s), ei(), P = n.id, d.default.set(y, n.id)
+    g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, S.default)(n)), b = i, w = r, er(s), ei(), L = n.id, d.default.set(y, n.id)
   },
   CONNECTION_CLOSED: function(e) {
     let {
@@ -450,7 +450,7 @@ var eu = new el(f.default, {
     let {
       user: t
     } = e;
-    P = t.id, L = t.email, void 0 !== t.authenticator_types && (V = t.authenticator_types), d.default.set(D, t.email), d.default.set(y, t.id)
+    L = t.id, P = t.email, void 0 !== t.authenticator_types && (V = t.authenticator_types), d.default.set(D, t.email), d.default.set(y, t.id)
   },
   AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: ea,
   CLEAR_AUTHENTICATION_ERRORS: function() {

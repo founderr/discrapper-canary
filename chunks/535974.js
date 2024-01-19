@@ -31,9 +31,9 @@ let I = {},
   O = [],
   D = [],
   y = [],
-  P = !1;
+  L = !1;
 
-function L(e) {
+function P(e) {
   return e.type === T.LocalDispatchApplicationStates.INSTALLING || e.type === T.LocalDispatchApplicationStates.UPDATING || e.type === T.LocalDispatchApplicationStates.REPAIRING ? e.networkProgress : null
 }
 
@@ -264,7 +264,7 @@ var F = new x(o.default, {
             }
             throw Error("Invalid Dispatch State. state=".concat(e.state.type))
           }(i[e][t]), null != I[c]) {
-          let e = k(n, c, L);
+          let e = k(n, c, P);
           e > 0 && U(A += e);
           let i = k(n, c, b);
           i > 0 && w(R += i);
@@ -281,7 +281,7 @@ var F = new x(o.default, {
             }
           }
         }
-        if (!P) {
+        if (!L) {
           let i = l.default.fileManager.dirname(n[c].installPath);
           m.default.getInstallationPath(e, t) !== i && o.default.wait(() => {
             o.default.dispatch({
@@ -299,6 +299,6 @@ var F = new x(o.default, {
             })
           })
         }
-      }!a && "dispatch_application_progress" === u.default.taskID && u.default.clearProgress("dispatch_application_progress"), I = n, P = !0
+      }!a && "dispatch_application_progress" === u.default.taskID && u.default.clearProgress("dispatch_application_progress"), I = n, L = !0
   }
 })

@@ -141,9 +141,9 @@ function y(e) {
   }
   return !1
 }
-let P = ["username", "avatar", "global_name", "discriminator", "bot"];
+let L = ["username", "avatar", "global_name", "discriminator", "bot"];
 
-function L(e) {
+function P(e) {
   return C(e.user)
 }
 
@@ -291,7 +291,7 @@ var x = new k(s.default, {
     return t.map(e => {
       let t = _[e.user.id];
       if (null == t) return !1;
-      let n = P.reduce((n, r) => {
+      let n = L.reduce((n, r) => {
         if (e.user.hasOwnProperty(r)) {
           let s = t.set((0, i.camelCase)(r), e.user[r]);
           n = n || s !== t, t = s
@@ -359,8 +359,8 @@ var x = new k(s.default, {
       null != l && T(l, t.id, o)
     })
   },
-  GUILD_BAN_ADD: L,
-  GUILD_BAN_REMOVE: L,
+  GUILD_BAN_ADD: P,
+  GUILD_BAN_REMOVE: P,
   CHANNEL_RECIPIENT_ADD: b,
   CHANNEL_RECIPIENT_REMOVE: b,
   GUILD_JOIN_REQUEST_CREATE: w,

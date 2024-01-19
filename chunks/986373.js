@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return E
   },
   useFavoritesCategories: function() {
-    return p
+    return _
   },
   useFavoritesGuildSelected: function() {
-    return _
+    return p
   },
   useFavoriteAdded: function() {
     return I
@@ -18,9 +18,9 @@ n.r(t), n.d(t, {
 }), n("424973"), n("222007");
 var i = n("884691"),
   l = n("298386"),
-  r = n("446674");
+  a = n("446674");
 n("42203");
-var a = n("923959"),
+var r = n("923959"),
   s = n("162771"),
   o = n("697218"),
   u = n("379881"),
@@ -32,25 +32,25 @@ function h(e) {
   let {
     favoritesEnabled: t,
     hasStaffPrivileges: n
-  } = (0, d.useFavoritesServerExperiment)("useCanFavoriteChannel"), i = (0, r.useStateFromStores)([u.default], () => u.default.isFavorite(e.id)), l = (0, r.useStateFromStores)([o.default], () => o.default.getCurrentUser()), a = e.isDM() || e.isThread(), s = !a || n && (null == l ? void 0 : l.isStaff()) === !0;
+  } = (0, d.useFavoritesServerExperiment)("useCanFavoriteChannel"), i = (0, a.useStateFromStores)([u.default], () => u.default.isFavorite(e.id)), l = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), r = e.isDM() || e.isThread(), s = !r || n && (null == l ? void 0 : l.isStaff()) === !0;
   return t && !__OVERLAY__ && !i && s
 }
 
 function E(e) {
-  let t = (0, r.useStateFromStores)([u.default], () => u.default.getFavorite(e));
+  let t = (0, a.useStateFromStores)([u.default], () => u.default.getFavorite(e));
   return t
 }
 
-function p() {
-  let e = (0, r.useStateFromStores)([a.default], () => a.default.getChannels(f.FAVORITES))[l.ChannelTypes.GUILD_CATEGORY];
+function _() {
+  let e = (0, a.useStateFromStores)([r.default], () => r.default.getChannels(f.FAVORITES))[l.ChannelTypes.GUILD_CATEGORY];
   return e.map(e => ({
     id: "null" === e.channel.id ? null : e.channel.id,
     name: e.channel.name
   }))
 }
 
-function _() {
-  let e = (0, r.useStateFromStores)([s.default], () => s.default.getGuildId());
+function p() {
+  let e = (0, a.useStateFromStores)([s.default], () => s.default.getGuildId());
   return e === f.FAVORITES
 }
 

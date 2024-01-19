@@ -23,10 +23,10 @@ var s = n("37983"),
   S = n("19846"),
   A = n("172554"),
   _ = n("172643"),
-  M = n("710357"),
-  T = n("931922"),
-  I = n("582724"),
-  N = n("834744"),
+  T = n("710357"),
+  M = n("931922"),
+  N = n("582724"),
+  I = n("834744"),
   v = n("372912"),
   L = n("952999"),
   x = n("49111"),
@@ -48,10 +48,10 @@ function O(e) {
   else if (i) return (0, s.jsx)(L.default, {
     channel: n
   });
-  else if (a) return (0, s.jsx)(T.default, {
+  else if (a) return (0, s.jsx)(M.default, {
     channel: n
   });
-  return (0, s.jsx)(N.default, {
+  return (0, s.jsx)(I.default, {
     channel: n
   })
 }
@@ -64,8 +64,8 @@ function D(e) {
   } = e, d = (0, o.default)(n), {
     type: C
   } = n, p = (0, l.useStateFromStores)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), _ = g.default.useUserTag(p), {
-    canManageRoles: T,
-    canReadMessageHistory: N
+    canManageRoles: M,
+    canReadMessageHistory: I
   } = (0, l.useStateFromStoresObject)([m.default], () => ({
     canManageRoles: m.default.can(x.Permissions.MANAGE_ROLES, n),
     canReadMessageHistory: m.default.can(x.Permissions.READ_MESSAGE_HISTORY, n)
@@ -80,13 +80,13 @@ function D(e) {
       C === x.ChannelTypes.DM && null == v && null != p && r.default.wait(() => (0, h.default)(n.getRecipientId(), p.getAvatarURL(null, 80), {
         withMutualGuilds: !0
       }))
-    }, [v, C, n, p]), n.isSystemDM()) return L ? (0, s.jsx)(I.default, {
+    }, [v, C, n, p]), n.isSystemDM()) return L ? (0, s.jsx)(N.default, {
     channel: n
-  }) : (0, s.jsx)(M.default, {
+  }) : (0, s.jsx)(T.default, {
     channel: n,
     children: R.default.Messages.SYSTEM_DM_EMPTY_MESSAGE
   });
-  if (C === x.ChannelTypes.DM) return (0, s.jsxs)(M.default, {
+  if (C === x.ChannelTypes.DM) return (0, s.jsxs)(T.default, {
     channel: n,
     user: p,
     children: [null != p && (0, s.jsx)(i.Heading, {
@@ -110,15 +110,15 @@ function D(e) {
     }), (0, s.jsx)(A.EmptyMessageBody, {
       children: R.default.Messages.BEGINNING_GROUP_DM_MANAGED
     })]
-  }) : (0, s.jsx)(M.default, {
+  }) : (0, s.jsx)(T.default, {
     channel: n,
     children: R.default.Messages.BEGINNING_GROUP_DM.format({
       name: d
     })
   });
-  return N ? (0, s.jsx)(O, {
+  return I ? (0, s.jsx)(O, {
     channel: n,
-    canManageRoles: T
+    canManageRoles: M
   }) : (0, s.jsx)(A.default, {
     channelId: n.id,
     children: (0, s.jsx)(A.EmptyMessageBody, {

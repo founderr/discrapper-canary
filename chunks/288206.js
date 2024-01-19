@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return V
   }
 }), n("222007");
 var s, i, r = n("446674"),
@@ -37,7 +37,7 @@ function P(e) {
 function k() {
   C = "0", T = 0, S = -1, D = "0", m.clear(), A = 0, N.clear()
 }
-class V extends r.default.Store {
+class R extends r.default.Store {
   initialize() {
     this.waitFor(f.default), this.syncWith([c.default], () => {
       if (!b) return !1;
@@ -82,8 +82,8 @@ class V extends r.default.Store {
     return p
   }
 }
-V.displayName = "ClientStateStore";
-var R = new V(o.default, {
+R.displayName = "ClientStateStore";
+var V = new R(o.default, {
   BACKGROUND_SYNC: function(e) {
     for (let t of e.guilds) "partial" === t.data_mode && t.unableToSyncDeletes && N.add(t.id);
     null != e.apiCodeVersion && (A = e.apiCodeVersion)

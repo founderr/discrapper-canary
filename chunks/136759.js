@@ -15,18 +15,18 @@ var i = Object.defineProperty,
     writable: !0,
     value: n
   }) : e[t] = n,
-  u = (e, t) => {
+  o = (e, t) => {
     for (var n in t || (t = {})) l.call(t, n) && a(e, n, t[n]);
     if (s)
       for (var n of s(t)) r.call(t, n) && a(e, n, t[n]);
     return e
   };
-let o = e => t => {
+let u = e => t => {
     try {
       let n = e(t);
       if (n instanceof Promise) return n;
       return {
-        then: e => o(e)(n),
+        then: e => u(e)(n),
         catch (e) {
           return this
         }
@@ -36,18 +36,18 @@ let o = e => t => {
         then(e) {
           return this
         },
-        catch: t => o(t)(e)
+        catch: t => u(t)(e)
       }
     }
   },
   d = (e, t) => (n, i, s) => {
-    let l, r, a = u({
+    let l, r, a = o({
       getStorage: () => localStorage,
       serialize: JSON.stringify,
       deserialize: JSON.parse,
       partialize: e => e,
       version: 0,
-      merge: (e, t) => u(u({}, t), e)
+      merge: (e, t) => o(o({}, t), e)
     }, t);
     (a.blacklist || a.whitelist) && console.warn("The ".concat(a.blacklist ? "blacklist" : "whitelist", " option is deprecated and will be removed in the next version. Please use the 'partialize' option instead."));
     let d = !1,
@@ -61,10 +61,10 @@ let o = e => t => {
       console.warn("[zustand persist middleware] Unable to update item '".concat(a.name, "', the given storage is currently unavailable.")), n(...t)
     }, i, s);
     !l.removeItem && console.warn("[zustand persist middleware] The given storage for item '".concat(a.name, "' does not contain a 'removeItem' method, which will be required in v4."));
-    let f = o(a.serialize),
+    let f = u(a.serialize),
       m = () => {
         let e;
-        let t = a.partialize(u({}, i()));
+        let t = a.partialize(o({}, i()));
         a.whitelist && Object.keys(t).forEach(e => {
           var n;
           (null == (n = a.whitelist) ? void 0 : n.includes(e)) || delete t[e]
@@ -91,7 +91,7 @@ let o = e => t => {
         if (!l) return;
         d = !1, c.forEach(e => e(i()));
         let t = (null == (e = a.onRehydrateStorage) ? void 0 : e.call(a, i())) || void 0;
-        return o(l.getItem.bind(l))(a.name).then(e => {
+        return u(l.getItem.bind(l))(a.name).then(e => {
           if (e) return a.deserialize(e)
         }).then(e => {
           if (e) {
@@ -110,7 +110,7 @@ let o = e => t => {
       };
     return s.persist = {
       setOptions: e => {
-        a = u(u({}, a), e), e.getStorage && (l = e.getStorage())
+        a = o(o({}, a), e), e.getStorage && (l = e.getStorage())
       },
       clearStorage: () => {
         var e;

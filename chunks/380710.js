@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return y
   },
   getSelectedRoleIds: function() {
-    return P
+    return L
   },
   getSelectedChannelIds: function() {
-    return L
+    return P
   }
 }), n("702976"), n("222007"), n("808653"), n("424973"), n("834022");
 var i = n("446674"),
@@ -213,10 +213,10 @@ function y(e, t) {
   return [o, n]
 }
 
-function P(e) {
+function L(e) {
   return new Set(e.map(e => e.roleIds).flat().filter(c.isNotNullish))
 }
 
-function L(e) {
+function P(e) {
   return new Set(e.map(e => e.channelIds).flat().filter(c.isNotNullish))
 }

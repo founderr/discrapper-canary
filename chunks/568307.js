@@ -38,8 +38,8 @@ var r, s, a = n("917351"),
   O = n("686470"),
   D = n("535974"),
   y = n("49111"),
-  P = n("6791");
-let L = new p.default("RunningGameStore"),
+  L = n("6791");
+let P = new p.default("RunningGameStore"),
   b = "RunningGameStore",
   M = [{
     executables: [{
@@ -160,7 +160,7 @@ function $() {
   for (let t of x) !(t.pid in X) && (X[t.pid] = t, e.push(t));
   let t = [];
   for (let e of Object.values(X)) !x.some(t => t.pid === e.pid) && (t.push(e), delete X[e.pid]);
-  L.info("games", {
+  P.info("games", {
     runningGames: x,
     added: e,
     removed: t,
@@ -187,7 +187,7 @@ function en(e) {
   if (e.isLauncher) return {
     source: "LAUNCHER",
     enabled: !1,
-    overlayMethod: P.OverlayMethod.Disabled
+    overlayMethod: L.OverlayMethod.Disabled
   };
   let t = N.default.getGameByName(e.name);
   if (null != t) {
@@ -195,18 +195,18 @@ function en(e) {
     if (null != e) return {
       source: "LIBRARY_APPLICATION",
       enabled: e.isOverlayEnabled(),
-      overlayMethod: P.OverlayMethod.Disabled
+      overlayMethod: L.OverlayMethod.Disabled
     }
   }
   let n = _.isOOPExperimentEnabled() && (0, R.supportsOutOfProcess)(),
     i = null == e.id ? null : W[e.id],
     r = n && null != i && i.supportsOutOfProcessOverlay,
-    s = r ? P.OverlayMethod.OutOfProcess : P.OverlayMethod.Hook,
+    s = r ? L.OverlayMethod.OutOfProcess : L.OverlayMethod.Hook,
     a = m.OverlayStoredSettings.methodOverride;
-  if (null != a && a !== P.OverlayMethod.Disabled) {
-    let t = P.OverlayMethod[s],
-      n = P.OverlayMethod[a];
-    L.info("getOverlayGameStatus: overlay method overriden ".concat(t, " -> ").concat(n, " (").concat(e.name, ")")), s = a
+  if (null != a && a !== L.OverlayMethod.Disabled) {
+    let t = L.OverlayMethod[s],
+      n = L.OverlayMethod[a];
+    P.info("getOverlayGameStatus: overlay method overriden ".concat(t, " -> ").concat(n, " (").concat(e.name, ")")), s = a
   }
   let o = j.enableOverlay[ee(e)];
   return null != o ? {
@@ -220,7 +220,7 @@ function en(e) {
   } : {
     source: "DEFAULT",
     enabled: !1,
-    overlayMethod: P.OverlayMethod.Hook
+    overlayMethod: L.OverlayMethod.Hook
   }
 }(s = r || (r = {})).LAUNCHER = "LAUNCHER", s.LIBRARY_APPLICATION = "LIBRARY_APPLICATION", s.USER_OVERRIDE = "USER_OVERRIDE", s.DATABASE = "DATABASE", s.DEFAULT = "DEFAULT";
 
@@ -459,7 +459,7 @@ class ec extends c.default.Store {
     return j.gameOverrides[ee(e)]
   }
   getGameOverlayStatus(e) {
-    if (e.hidden || e.isLauncher || e.elevated || e.sandboxed) return L.verbose("getGameOverlayStatus: Overlay not supported.", e), null;
+    if (e.hidden || e.isLauncher || e.elevated || e.sandboxed) return P.verbose("getGameOverlayStatus: Overlay not supported.", e), null;
     let t = en(e);
     return t.enabled ? t : null
   }

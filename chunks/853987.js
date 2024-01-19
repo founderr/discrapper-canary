@@ -14,16 +14,16 @@ let c = new Map,
   E = new Map,
   s = c,
   _ = E,
-  S = !1;
-let d = () => {
-  s = c, _ = E, i = void 0, S = !1, n = void 0
+  d = !1;
+let S = () => {
+  s = c, _ = E, i = void 0, d = !1, n = void 0
 };
 class C extends u.default.Store {
   initialize() {
-    this.syncWith([a.default], d)
+    this.syncWith([a.default], S)
   }
   get isFetching() {
-    return S
+    return d
   }
   get error() {
     return n
@@ -51,28 +51,28 @@ class C extends u.default.Store {
 C.displayName = "CollectiblesCategoryStore";
 var I = new C(l.default, {
   COLLECTIBLES_CATEGORIES_FETCH: t => {
-    S = !0, n = void 0
+    d = !0, n = void 0
   },
   COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: t => {
-    0 === t.categories.length ? (s = c, _ = E) : !(0, o.isEqual)([...s.values()], t.categories) && (s = new Map(t.categories.map(t => [t.skuId, t])), _ = new Map((0, T.getProductsFromCategories)(s).map(t => [t.skuId, t]))), i = Date.now(), S = !1, n = void 0
+    0 === t.categories.length ? (s = c, _ = E) : !(0, o.isEqual)([...s.values()], t.categories) && (s = new Map(t.categories.map(t => [t.skuId, t])), _ = new Map((0, T.getProductsFromCategories)(s).map(t => [t.skuId, t]))), i = Date.now(), d = !1, n = void 0
   },
   COLLECTIBLES_CATEGORIES_FETCH_FAILURE: t => {
     let {
       error: e
     } = t;
-    s = c, _ = E, S = !1, n = e
+    s = c, _ = E, d = !1, n = e
   },
   COLLECTIBLES_PRODUCT_FETCH: t => {
-    S = !0, n = void 0
+    d = !0, n = void 0
   },
   COLLECTIBLES_PRODUCT_FETCH_SUCCESS: t => {
-    _.set(t.product.skuId, t.product), S = !1, n = void 0
+    _.set(t.product.skuId, t.product), d = !1, n = void 0
   },
   COLLECTIBLES_PRODUCT_FETCH_FAILURE: t => {
     let {
       error: e
     } = t;
-    S = !1, n = e
+    d = !1, n = e
   },
-  LOGOUT: d
+  LOGOUT: S
 })

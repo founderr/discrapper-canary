@@ -80,13 +80,13 @@ function k(e) {
   }
 }
 
-function V(e, t) {
+function R(e, t) {
   let n = g.default.hasUnread(e, t);
   if (t === C.ReadStateTypes.GUILD_EVENT) return !(v.default.isMuted(e) || v.default.isMuteScheduledEventsEnabled(e)) && n;
   return n
 }
 
-function R(e, t) {
+function V(e, t) {
   let n = D(e);
   return n.mentionCounts = {
     ...t.mentionCounts
@@ -109,7 +109,7 @@ function L(e, t, n) {
 function U(e, t) {
   let n = k(e),
     s = N(n),
-    i = R(n, s),
+    i = V(n, s),
     r = !1;
   if (t.forEach(e => {
       let t = f.default.getChannel(e);
@@ -131,8 +131,8 @@ function U(e, t) {
 function G(e, t) {
   if (null == e) return;
   let n = N(e),
-    s = R(e, n);
-  return s.unreadByType[C.ReadStateTypes.GUILD_EVENT] = V(e, t), L(e, s, n)
+    s = V(e, n);
+  return s.unreadByType[C.ReadStateTypes.GUILD_EVENT] = R(e, t), L(e, s, n)
 }
 
 function F(e, t) {
@@ -177,7 +177,7 @@ function F(e, t) {
         !s.unreadByType[C.ReadStateTypes.CHANNEL] && g.default.hasUnread(n) && !o.default.isMuted(n) && !e && (s.unreadByType[C.ReadStateTypes.CHANNEL] = !0, s.unreadChannelId = n);
         let t = g.default.getMentionCount(n);
         t > 0 && (s.mentionCount += t, s.mentionCounts[n] = t)
-      }!s.unreadByType[C.ReadStateTypes.GUILD_EVENT] && V(n, C.ReadStateTypes.GUILD_EVENT) && (s.unreadByType[C.ReadStateTypes.GUILD_EVENT] = !0)
+      }!s.unreadByType[C.ReadStateTypes.GUILD_EVENT] && R(n, C.ReadStateTypes.GUILD_EVENT) && (s.unreadByType[C.ReadStateTypes.GUILD_EVENT] = !0)
   }
   M(s);
   let i = N(n);

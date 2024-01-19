@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return N
   }
 }), n("702976"), n("222007");
 var s = n("37983"),
@@ -37,7 +37,7 @@ function _(e) {
   })
 }
 
-function M(e) {
+function T(e) {
   let {
     channel: t,
     message: n
@@ -45,8 +45,8 @@ function M(e) {
     id: o
   } = t, {
     id: u
-  } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, M = null != m && m.hasFeature(S.GuildFeatures.NEWS), I = g && M, {
-    editingMessage: N,
+  } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, T = null != m && m.hasFeature(S.GuildFeatures.NEWS), N = g && T, {
+    editingMessage: I,
     editingTextValue: v,
     editingRichValue: L
   } = (0, l.useStateFromStoresObject)([c.default], () => ({
@@ -56,11 +56,11 @@ function M(e) {
   }), [o]), x = (0, l.useStateFromStores)([d.default], () => d.default.getId()), R = a.useCallback((e, n, s) => {
     let {
       content: a
-    } = s, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === x || l);
-    return u && null != N && (0, E.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, a) : i.default.editMessage(e, n, {
+    } = s, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != I && null != I.author ? I.author.id : null, u = N && (o === x || l);
+    return u && null != I && (0, E.hasFlag)(I.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, a) : i.default.editMessage(e, n, {
       content: a
     }), Promise.resolve()
-  }, [N, I, x, t]), y = a.useCallback(e => (0, a.createElement)(T, {
+  }, [I, N, x, t]), y = a.useCallback(e => (0, a.createElement)(M, {
     ...e,
     className: A.channelTextArea,
     key: u
@@ -80,7 +80,7 @@ function M(e) {
   }) : null
 }
 
-function T(e) {
+function M(e) {
   let {
     textValue: t,
     richValue: n,
@@ -112,12 +112,12 @@ function T(e) {
   }, l.id)
 }
 
-function I(e, t, n) {
+function N(e, t, n) {
   let {
     message: a,
     channel: l
   } = e;
-  return n ? (0, s.jsx)(M, {
+  return n ? (0, s.jsx)(T, {
     channel: l,
     message: a
   }) : (0, s.jsx)(C.default, {

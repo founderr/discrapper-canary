@@ -153,7 +153,7 @@ function A(e) {
       label: e,
       status: (0, E.humanizeStatus)(t, n)
     }) : e
-  }(g, C, v), P = O.size * _.DECORATION_TO_AVATAR_RATIO, L = function(e, t, n, i) {
+  }(g, C, v), L = O.size * _.DECORATION_TO_AVATAR_RATIO, P = function(e, t, n, i) {
     if (null == e) return null;
     if (i) switch (t) {
       case h.AvatarSizes.SIZE_16:
@@ -211,17 +211,17 @@ function A(e) {
     }
     return null
   }(C, n, v, A), b = null != R && (0, i.jsx)("svg", {
-    width: P + N,
-    height: P,
-    viewBox: "0 0 ".concat(P + N, " ").concat(P),
+    width: L + N,
+    height: L,
+    viewBox: "0 0 ".concat(L + N, " ").concat(L),
     className: m.avatarDecoration,
     "aria-hidden": !0,
     children: (0, i.jsx)("foreignObject", {
       x: 0,
       y: 0,
-      width: P,
-      height: P,
-      mask: null != L ? "url(#".concat(L, ")") : void 0,
+      width: L,
+      height: L,
+      mask: null != P ? "url(#".concat(P, ")") : void 0,
       children: (0, i.jsx)("div", {
         className: m.avatarStack,
         children: (0, i.jsx)("img", {
@@ -291,7 +291,7 @@ function N(e) {
     statusBackdropColor: g,
     "aria-hidden": v = !1,
     "aria-label": N
-  } = e, O = n !== p.StatusTypes.UNKNOWN ? n : null, D = (0, h.getAvatarSpecs)(r), y = null != O ? Math.ceil((D.status * h.TYPING_WIDTH_RATIO - D.status) / 2) : 0, P = D.size + y, L = (0, c.useStatusFillColor)(O, s);
+  } = e, O = n !== p.StatusTypes.UNKNOWN ? n : null, D = (0, h.getAvatarSpecs)(r), y = null != O ? Math.ceil((D.status * h.TYPING_WIDTH_RATIO - D.status) / 2) : 0, L = D.size + y, P = (0, c.useStatusFillColor)(O, s);
   return (0, i.jsx)(A, {
     ...e,
     ariaLabel: N,
@@ -300,9 +300,9 @@ function N(e) {
     specs: D,
     typingOffset: y,
     children: (0, i.jsxs)("svg", {
-      width: P,
-      height: P,
-      viewBox: "0 0 ".concat(P, " ").concat(P),
+      width: L,
+      height: L,
+      viewBox: "0 0 ".concat(L, " ").concat(L),
       className: a(m.mask, m.svg),
       "aria-hidden": !0,
       children: [(0, i.jsx)("foreignObject", {
@@ -387,7 +387,7 @@ function N(e) {
           children: [null != g && C(g, o, D, O), (0, i.jsx)("rect", {
             ...e,
             ...I(D, O, o, l),
-            fill: L,
+            fill: P,
             mask: "url(#".concat((0, c.getStatusMask)(O, o, l), ")"),
             className: m.pointerEvents
           }), l ? (0, i.jsx)(u.Dots, {
@@ -417,8 +417,8 @@ function O(e) {
     statusColor: O,
     statusTooltip: D = !1,
     statusBackdropColor: y,
-    "aria-hidden": P = !1,
-    "aria-label": L
+    "aria-hidden": L = !1,
+    "aria-label": P
   } = e, b = (0, c.useStatusFillColor)(N, O), M = r.useId(), U = r.useId(), [G] = r.useState(() => ({
     fill: s,
     ...v({
@@ -451,8 +451,8 @@ function O(e) {
   }), Y = (0, h.getAvatarSize)(S), W = (0, h.getAvatarSpecs)(S), K = W.status * h.TYPING_WIDTH_RATIO, z = W.status * h.MOBILE_HEIGHT_RATIO, q = null != N ? (W.status * h.TYPING_WIDTH_RATIO - W.status) / 2 : 0, X = W.size - W.status - q - W.offset, Q = W.size - z - W.offset, Z = W.size + Math.ceil(q);
   return (0, i.jsx)(A, {
     ...e,
-    ariaLabel: L,
-    ariaHidden: P,
+    ariaLabel: P,
+    ariaHidden: L,
     typingOffset: q,
     specs: W,
     children: (0, i.jsxs)("svg", {

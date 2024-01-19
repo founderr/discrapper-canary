@@ -30,8 +30,8 @@ var N = n("901946"),
   O = n("42203"),
   D = n("42887"),
   y = n("661919"),
-  P = n("590401"),
-  L = n("599110"),
+  L = n("590401"),
+  P = n("599110"),
   b = n("35468"),
   M = n("773336"),
   U = n("49671"),
@@ -237,7 +237,7 @@ r = class extends E.default {
   }
   _handleDisconnect(e, t, n, i) {
     var r, s, a, o, l;
-    this.logger.info("Disconnected from RTC server, clean: ".concat(t, ", code: ").concat(n, ", reason: ").concat(i, ", state: ").concat(this.state)), !t && this._connecting && !this._encountered_socket_failure && (L.default.track(W.AnalyticEvents.VOICE_CONNECTION_SOCKET_FAILURE, {
+    this.logger.info("Disconnected from RTC server, clean: ".concat(t, ", code: ").concat(n, ", reason: ").concat(i, ", state: ").concat(this.state)), !t && this._connecting && !this._encountered_socket_failure && (P.default.track(W.AnalyticEvents.VOICE_CONNECTION_SOCKET_FAILURE, {
       ...this._getAnalyticsProperties(),
       hostname: this.hostname,
       connect_count: this._connectCount,
@@ -257,13 +257,13 @@ r = class extends E.default {
           t.forEach(t => {
             var n;
             let r = null !== (n = t.num_frames) && void 0 !== n ? n : 0;
-            r > 0 && L.default.track(W.AnalyticEvents.VIDEO_STREAM_ENDED, {
+            r > 0 && P.default.track(W.AnalyticEvents.VIDEO_STREAM_ENDED, {
               ...this._getAnalyticsProperties(),
               media_session_id: this.getMediaSessionId(),
               sender_user_id: this.userId,
               reason: i,
               participant_type: "sender",
-              guild_region: P.default.getRegion(this.hostname),
+              guild_region: L.default.getRegion(this.hostname),
               hostname: this.hostname,
               ...t,
               ...e.getNetworkStats(),
@@ -278,13 +278,13 @@ r = class extends E.default {
           var n;
           let r = e.getInboundStats(t),
             s = null !== (n = null == r ? void 0 : r.num_frames) && void 0 !== n ? n : 0;
-          s > 0 && L.default.track(W.AnalyticEvents.VIDEO_STREAM_ENDED, {
+          s > 0 && P.default.track(W.AnalyticEvents.VIDEO_STREAM_ENDED, {
             ...this._getAnalyticsProperties(),
             media_session_id: this.getMediaSessionId(),
             sender_user_id: t,
             reason: i,
             participant_type: "receiver",
-            guild_region: P.default.getRegion(this.hostname),
+            guild_region: L.default.getRegion(this.hostname),
             hostname: this.hostname,
             ...r,
             ...e.getNetworkStats(),
@@ -292,10 +292,10 @@ r = class extends E.default {
           })
         })
       }
-      let t = P.default.shouldIncludePreferredRegion() ? P.default.getPreferredRegion() : null,
+      let t = L.default.shouldIncludePreferredRegion() ? L.default.getPreferredRegion() : null,
         n = D.default.getSettings(),
         r = O.default.getChannel(this.channelId);
-      L.default.track(W.AnalyticEvents.VOICE_DISCONNECT, {
+      P.default.track(W.AnalyticEvents.VOICE_DISCONNECT, {
         ...this._getAnalyticsProperties(),
         hostname: this.hostname,
         port: this.port,
@@ -341,7 +341,7 @@ r = class extends E.default {
       D.default.getMediaEngine().getCodecSurvey().then(e => {
         let t = JSON.parse(e);
         if (null == t || null == t.available_video_encoders || null == t.available_video_decoders) throw Error("codec survey is not available");
-        L.default.track(W.AnalyticEvents.VOICE_CODEC_DETECTED, {
+        P.default.track(W.AnalyticEvents.VOICE_CODEC_DETECTED, {
           ...t,
           rtc_connection_id: this.getRTCConnectionId(),
           media_session_id: s
@@ -454,8 +454,8 @@ r = class extends E.default {
       })
     }), c.on(h.BaseConnectionEvent.Error, t => {
       if (e !== this._socket) return;
-      let n = P.default.shouldIncludePreferredRegion() ? P.default.getPreferredRegion() : null;
-      this.logger.error("Error occurred while connecting to RTC server: ".concat(t)), L.default.track(W.AnalyticEvents.VOICE_CONNECTION_FAILURE, {
+      let n = L.default.shouldIncludePreferredRegion() ? L.default.getPreferredRegion() : null;
+      this.logger.error("Error occurred while connecting to RTC server: ".concat(t)), P.default.track(W.AnalyticEvents.VOICE_CONNECTION_FAILURE, {
         ...this._getAnalyticsProperties(),
         hostname: this.hostname,
         port: this.port,
@@ -488,8 +488,8 @@ r = class extends E.default {
       }
       if (n === W.RTCConnectionStates.RTC_CONNECTING && this.state === W.RTCConnectionStates.RTC_DISCONNECTED ? this.reconnect() : this.state === W.RTCConnectionStates.NO_ROUTE && this._backoff.fail(this.reconnect), this.state === W.RTCConnectionStates.RTC_CONNECTED) {
         var i;
-        let e = P.default.shouldIncludePreferredRegion() ? P.default.getPreferredRegion() : null;
-        this._connecting && L.default.track(W.AnalyticEvents.VOICE_CONNECTION_SUCCESS, {
+        let e = L.default.shouldIncludePreferredRegion() ? L.default.getPreferredRegion() : null;
+        this._connecting && P.default.track(W.AnalyticEvents.VOICE_CONNECTION_SUCCESS, {
           ...this._getAnalyticsProperties(),
           hostname: this.hostname,
           port: this.port,
@@ -573,7 +573,7 @@ r = class extends E.default {
   }
   _handleRemoteStreamsReady(e) {
     let t = (0, p.now)() - this._connectStartTime;
-    L.default.track(W.AnalyticEvents.VOICE_CONNECTION_REMOTE_STREAMS_CREATED, {
+    P.default.track(W.AnalyticEvents.VOICE_CONNECTION_REMOTE_STREAMS_CREATED, {
       ...this._getAnalyticsProperties(),
       number_of_users: e,
       duration_ms: t
@@ -648,13 +648,13 @@ r = class extends E.default {
     if (null != r && this.context === K.MediaEngineContextTypes.DEFAULT) {
       let t = r.getInboundStats(e),
         s = null !== (n = null == t ? void 0 : t.num_frames) && void 0 !== n ? n : 0;
-      null != t && s > 0 && (L.default.track(W.AnalyticEvents.VIDEO_STREAM_ENDED, {
+      null != t && s > 0 && (P.default.track(W.AnalyticEvents.VIDEO_STREAM_ENDED, {
         ...this._getAnalyticsProperties(),
         media_session_id: this.getMediaSessionId(),
         sender_user_id: e,
         reason: "User disconnected",
         participant_type: "receiver",
-        guild_region: P.default.getRegion(this.hostname),
+        guild_region: L.default.getRegion(this.hostname),
         hostname: this.hostname,
         ...t,
         ...r.getNetworkStats(),
@@ -675,7 +675,7 @@ r = class extends E.default {
   async _handleMediaSessionId(e) {
     this._mediaSessionId = e, this.logger.info("Setting media-session-id: ".concat(e, " for rtc-connection-id: ").concat(this.getRTCConnectionId()));
     let t = await (0, g.default)();
-    L.default.track(W.AnalyticEvents.MEDIA_SESSION_JOINED, {
+    P.default.track(W.AnalyticEvents.MEDIA_SESSION_JOINED, {
       ...this._getAnalyticsProperties(),
       media_session_id: this.getMediaSessionId(),
       parent_media_session_id: this.parentMediaSessionId,
@@ -710,7 +710,7 @@ r = class extends E.default {
     }
   }
   _trackSecureFrameTransition(e, t) {
-    L.default.track(W.AnalyticEvents.SECURE_FRAMES_TRANSITION, {
+    P.default.track(W.AnalyticEvents.SECURE_FRAMES_TRANSITION, {
       ...this._getAnalyticsProperties(),
       media_session_id: this.getMediaSessionId(),
       parent_media_session_id: this.parentMediaSessionId,
@@ -834,7 +834,7 @@ r = class extends E.default {
         if (null != this._voiceQuality) {
           let e = this._voiceQuality.getPeriodicStats();
           if (this.shouldReportPeriodicStats(e))
-            for (let t of e) L.default.track(W.AnalyticEvents.VOICE_QUALITY_PERIODIC_STATS, {
+            for (let t of e) P.default.track(W.AnalyticEvents.VOICE_QUALITY_PERIODIC_STATS, {
               ...this._getAnalyticsProperties(),
               media_session_id: this.getMediaSessionId(),
               sender_user_id: t.userId,
@@ -863,7 +863,7 @@ r = class extends E.default {
       }, this._trackVoiceConnectionConnecting = () => {
         let e = O.default.getChannel(this.channelId),
           t = null != e ? e.type : null;
-        L.default.track(W.AnalyticEvents.VOICE_CONNECTION_CONNECTING, {
+        P.default.track(W.AnalyticEvents.VOICE_CONNECTION_CONNECTING, {
           guild_id: this.guildId,
           channel_id: this.channelId,
           rtc_connection_id: this.getRTCConnectionId(),

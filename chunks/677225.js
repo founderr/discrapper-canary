@@ -43,7 +43,7 @@ function y() {
   o.default.wait(() => l.fetchBranches(t))
 }
 
-function P(e, t) {
+function L(e, t) {
   if (null != T[t] && h.default.shouldBeInstalled(e, t)) {
     let n = T[t],
       i = n.manifestIds,
@@ -55,7 +55,7 @@ function P(e, t) {
   }
 }
 
-function L() {
+function P() {
   O.stop()
 }
 class b extends s.default.Store {
@@ -93,7 +93,7 @@ var M = new b(o.default, {
         applicationId: t,
         branchId: n
       } = (0, _.convertComboId)(e), i = d.default.getApplication(t);
-      null != i && (C.delete(e), P(t, n))
+      null != i && (C.delete(e), L(t, n))
     }
   },
   APPLICATION_BUILD_FETCH_START: function(e) {
@@ -123,7 +123,7 @@ var M = new b(o.default, {
       branchId: n,
       locale: i,
       manifestIds: s
-    }, P(t, n)
+    }, L(t, n)
   },
   APPLICATION_BUILD_NOT_FOUND: function(e) {
     let {
@@ -174,8 +174,8 @@ var M = new b(o.default, {
   APPLICATION_BRANCHES_FETCH_FAIL: function() {
     D(N)
   },
-  CONNECTION_CLOSED: L,
-  LOGOUT: L,
+  CONNECTION_CLOSED: P,
+  LOGOUT: P,
   SKU_PURCHASE_SUCCESS: function(e) {
     let {
       entitlements: t

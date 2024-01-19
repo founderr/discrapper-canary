@@ -33,7 +33,7 @@ let u = r.memo(r.forwardRef((e, t) => {
     fade: R = !1,
     initialScrollTop: N = 0,
     role: O = "list"
-  } = e, [D, y] = r.useState(-1), [P, L] = r.useState(-1), b = r.useRef(null), M = r.useRef(0), U = r.useRef(-1);
+  } = e, [D, y] = r.useState(-1), [L, P] = r.useState(-1), b = r.useRef(null), M = r.useRef(0), U = r.useRef(-1);
   r.useLayoutEffect(() => {
     var e;
     let t = null === (e = b.current) || void 0 === e ? void 0 : e.getScrollerNode();
@@ -113,14 +113,14 @@ let u = r.memo(r.forwardRef((e, t) => {
       offsetHeight: i,
       scrollTop: r
     } = t;
-    L(i), y(r), null == s || s({
+    P(i), y(r), null == s || s({
       width: n,
       height: i
     })
   }, [s]);
   r.useLayoutEffect(() => {
-    -1 === P && W()
-  }, [P, W]), r.useEffect(() => {
+    -1 === L && W()
+  }, [L, W]), r.useEffect(() => {
     var e;
     let t = null === (e = b.current) || void 0 === e ? void 0 : e.getScrollerNode(),
       n = null == t ? void 0 : t.ownerDocument.defaultView;
@@ -165,7 +165,7 @@ let u = r.memo(r.forwardRef((e, t) => {
             top: o,
             bottom: l
           }
-        } = r, u = k(a), c = o - (C ? u : 0) - i <= M.current, d = l + i >= M.current + P;
+        } = r, u = k(a), c = o - (C ? u : 0) - i <= M.current, d = l + i >= M.current + L;
         if (c) {
           let r = M.current + u - o,
             s = C ? M.current - r : o;
@@ -174,7 +174,7 @@ let u = r.memo(r.forwardRef((e, t) => {
             animate: n
           })
         } else if (d) {
-          let e = l - (M.current + P);
+          let e = l - (M.current + L);
           null === (s = b.current) || void 0 === s || s.scrollTo({
             to: M.current + e + i,
             animate: n
@@ -198,7 +198,7 @@ let u = r.memo(r.forwardRef((e, t) => {
       })
     },
     getListDimensions: () => ({
-      height: P,
+      height: L,
       totalHeight: H
     }),
     getSectionDescriptors: () => V.current,
@@ -213,16 +213,16 @@ let u = r.memo(r.forwardRef((e, t) => {
         node: e
       })
     }
-  }), [k, C, H, P]);
+  }), [k, C, H, L]);
   let {
     visibleItems: z,
     listOffset: q
   } = r.useMemo(() => {
-    if (-1 === P || -1 === D) return {
+    if (-1 === L || -1 === D) return {
       visibleItems: null,
       listOffset: 0
     };
-    let e = D + P,
+    let e = D + L,
       t = 0,
       n = u[0],
       i = [],
@@ -272,7 +272,7 @@ let u = r.memo(r.forwardRef((e, t) => {
       visibleItems: i,
       listOffset: n
     }
-  }, [w, x, k, F, u, c, d, E, f, D, Y, C, h, G, P]), X = r.useMemo(() => {
+  }, [w, x, k, F, u, c, d, E, f, D, Y, C, h, G, L]), X = r.useMemo(() => {
     var e, t, n;
     return {
       top: q,

@@ -85,7 +85,7 @@ function y(e) {
   return f = s.default.has(f, m.Permissions.ADMINISTRATOR) ? g : D(i.id, n, f, r), (c.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (f = s.default.filter(f, u)), p.default.isCurrentUserGuest(i.id) && (f = s.default.filter(f, v)), O(f, i, t, o)
 }
 
-function P(e) {
+function L(e) {
   var t, n, i;
   let r, {
     user: s,
@@ -104,7 +104,7 @@ function P(e) {
       let e = h.default.getChannel(a.parent_id);
       if (null == e || e.isScheduledForDeletion()) return T;
       let t = m === (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && d.default.hasJoined(a.id);
-      return L(a, P({
+      return P(a, L({
         user: s,
         context: e,
         overwrites: o,
@@ -136,7 +136,7 @@ function P(e) {
   })
 }
 
-function L(e, t, n) {
+function P(e, t, n) {
   return e.type !== m.ChannelTypes.PRIVATE_THREAD || n || s.default.has(t, m.Permissions.MANAGE_THREADS) ? s.default.has(t, m.Permissions.SEND_MESSAGES_IN_THREADS) ? e.isLockedThread() && !s.default.has(t, m.Permissions.MANAGE_THREADS) ? s.default.remove(t, m.Permissions.SEND_MESSAGES) : s.default.combine(t, m.Permissions.SEND_MESSAGES) : s.default.remove(t, m.Permissions.SEND_MESSAGES) : T
 }
 
@@ -158,7 +158,7 @@ function M(e) {
     roles: a,
     excludeGuildPermissions: o
   } = e;
-  return s.default.has(P({
+  return s.default.has(L({
     user: n,
     context: i,
     overwrites: r,
@@ -190,7 +190,7 @@ var U = {
       if (r.isScheduledForDeletion()) return T;
       if (f.THREAD_CHANNEL_TYPES.has(r.type)) {
         let t = h.default.getChannel(r.parent_id);
-        return null == t ? T : L(r, e({
+        return null == t ? T : P(r, e({
           forceRoles: i,
           context: t,
           overwrites: s,
@@ -232,8 +232,8 @@ var U = {
       lurkerPermissionsMask: u
     })
   },
-  computePermissions: P,
-  applyThreadPermissions: L,
+  computePermissions: L,
+  applyThreadPermissions: P,
   getGuildVisualOwnerId: function(e) {
     var t;
     let n = r.some(e.roles, e => e.hoist && s.default.has(e.permissions, m.Permissions.ADMINISTRATOR));

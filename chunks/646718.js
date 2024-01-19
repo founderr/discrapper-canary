@@ -175,13 +175,13 @@ n.r(t), n.d(t, {
     return ey
   },
   SeasonalGiftStyles2023: function() {
-    return eP
+    return eL
   },
   AllSeasonalGiftStyles: function() {
-    return eL
+    return eP
   }
 }), n("222007");
-var i, r, s, a, o, l, u, c, d, f, E, h, p, _, S, m, T, g, I, C, v, A, R, N, O, D, y, P, L, b, M = n("866227"),
+var i, r, s, a, o, l, u, c, d, f, E, h, p, _, S, m, T, g, I, C, v, A, R, N, O, D, y, L, P, b, M = n("866227"),
   U = n.n(M),
   G = n("78345"),
   w = n("49111"),
@@ -539,8 +539,8 @@ let eO = Object.freeze({
     fileSize: 524288e3
   }
 });
-(y = h || (h = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", y.HELPER_COLLAPSED = "helper_collapsed", y.HELPER_UNCOLLAPSED = "helper_uncollapsed", y.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", y.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", y.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", y.HELPER_DISMISSED = "premium_feature_helper_dismissed", y.HELPER_RENDERED = "premium_feature_helper_rendered", (P = p || (p = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", P.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", P.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", P.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", P.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", P.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", P.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", P.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", P.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", P.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", P.BOOST_INTRO_VIEWED = "boost_intro_viewed", P.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (L = _ || (_ = {})).BOOST = "boost", L.DISMISS = "dismiss", (b = S || (S = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", b.BADGE_CLICKED = "share_nitro_badge_clicked", b.FLOW_STARTED = "share_nitro_flow_started", b.FLOW_COMPLETED = "share_nitro_flow_completed";
+(y = h || (h = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", y.HELPER_COLLAPSED = "helper_collapsed", y.HELPER_UNCOLLAPSED = "helper_uncollapsed", y.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", y.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", y.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", y.HELPER_DISMISSED = "premium_feature_helper_dismissed", y.HELPER_RENDERED = "premium_feature_helper_rendered", (L = p || (p = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", L.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", L.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", L.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", L.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", L.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", L.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", L.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", L.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", L.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", L.BOOST_INTRO_VIEWED = "boost_intro_viewed", L.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (P = _ || (_ = {})).BOOST = "boost", P.DISMISS = "dismiss", (b = S || (S = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", b.BADGE_CLICKED = "share_nitro_badge_clicked", b.FLOW_STARTED = "share_nitro_flow_started", b.FLOW_COMPLETED = "share_nitro_flow_completed";
 let eD = new Set(["PL", "TR"]),
   ey = [G.PremiumGiftStyles.SNOWGLOBE, G.PremiumGiftStyles.BOX, G.PremiumGiftStyles.CUP],
-  eP = [G.PremiumGiftStyles.SEASONAL_STANDARD_BOX, G.PremiumGiftStyles.SEASONAL_CAKE, G.PremiumGiftStyles.SEASONAL_COFFEE, G.PremiumGiftStyles.SEASONAL_CHEST],
-  eL = eP.concat(ey)
+  eL = [G.PremiumGiftStyles.SEASONAL_STANDARD_BOX, G.PremiumGiftStyles.SEASONAL_CAKE, G.PremiumGiftStyles.SEASONAL_COFFEE, G.PremiumGiftStyles.SEASONAL_CHEST],
+  eP = eL.concat(ey)

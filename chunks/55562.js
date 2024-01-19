@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   CHANNEL_NEXT: function() {
-    return E
+    return r
   },
   CHANNEL_PREV: function() {
     return _
   },
   TOGGLE_PREVIOUS_GUILD: function() {
-    return c
+    return A
   },
   NAVIGATE_BACK: function() {
-    return A
+    return c
   },
   NAVIGATE_FORWARD: function() {
     return C
@@ -23,8 +23,8 @@ var i = n("473532"),
   u = n("18494"),
   d = n("162771"),
   s = n("773336"),
-  r = n("49111");
-let E = {
+  E = n("49111");
+let r = {
     binds: ["alt+down"],
     comboKeysBindGlobal: !0,
     action: () => ((0, i.default)(), !1)
@@ -34,13 +34,13 @@ let E = {
     comboKeysBindGlobal: !0,
     action: () => ((0, i.default)(-1), !1)
   },
-  c = {
+  A = {
     binds: ["mod+alt+right"],
     comboKeysBindGlobal: !0,
     action() {
       let e;
       let t = d.default.getGuildId();
-      if (null != t) e = r.ME;
+      if (null != t) e = E.ME;
       else {
         let t = d.default.getLastSelectedGuildId();
         null != t && (e = t, (0, o.transitionToChannel)(t, u.default.getChannelId(t)))
@@ -48,7 +48,7 @@ let E = {
       return null != e && (0, a.transitionToGuild)(e), !1
     }
   },
-  A = {
+  c = {
     binds: (0, s.isMac)() ? ["mod+["] : ["alt+left"],
     comboKeysBindGlobal: !0,
     action: () => ((0, l.back)(), !1)

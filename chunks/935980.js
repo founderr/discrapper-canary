@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return D
   },
   Select: function() {
-    return L
+    return P
   },
   SingleSelect: function() {
     return M
@@ -136,11 +136,11 @@ function y(e) {
   return null == e ? void 0 : e.label
 }
 
-function P(e) {
+function L(e) {
   return e.map(e => y(e)).join(", ")
 }
 
-function L(e) {
+function P(e) {
   let {
     options: t,
     placeholder: n = I.default.Messages.SELECT,
@@ -154,9 +154,9 @@ function L(e) {
     onClose: A,
     onOpen: R,
     renderOptionLabel: N = y,
-    renderOptionValue: O = P,
+    renderOptionValue: O = L,
     popoutClassName: D,
-    popoutPosition: L = "bottom",
+    popoutPosition: P = "bottom",
     popoutLayerContext: M,
     optionClassName: U,
     closeOnSelect: G,
@@ -223,7 +223,7 @@ function L(e) {
         popoutPosition: r
       })
     },
-    position: L,
+    position: P,
     layerContext: M,
     children: (e, t) => {
       let {
@@ -323,7 +323,7 @@ function b(e) {
   let y = r.useCallback(e => {
       n(e), l && s()
     }, [s, n, l]),
-    P = f.map((e, t) => {
+    L = f.map((e, t) => {
       var n;
       return (0, i.jsx)(Option, {
         isSelected: c(e.value),
@@ -335,7 +335,7 @@ function b(e) {
         serialize: S
       }, null !== (n = e.key) && void 0 !== n ? n : t)
     }),
-    L = f.length <= h ? d.AdvancedScrollerNone : d.AdvancedScrollerThin;
+    P = f.length <= h ? d.AdvancedScrollerNone : d.AdvancedScrollerThin;
   return (0, i.jsx)(o.ListNavigatorProvider, {
     navigator: O,
     children: (0, i.jsx)(o.ListNavigatorContainer, {
@@ -345,7 +345,7 @@ function b(e) {
           ...r
         } = e;
         return (0, i.jsxs)(i.Fragment, {
-          children: [(0, i.jsx)(L, {
+          children: [(0, i.jsx)(P, {
             className: a(C.popout, t, {
               [C.popoutPositionTop]: "top" === I
             }),
@@ -360,12 +360,12 @@ function b(e) {
             },
             ...r,
             role: "listbox",
-            children: P
+            children: L
           }), (0, i.jsx)("div", {
             "aria-hidden": !0,
             ref: R,
             className: C.measurement,
-            children: P.slice(0, h)
+            children: L.slice(0, h)
           })]
         })
       }
@@ -411,7 +411,7 @@ function M(e) {
     value: t,
     onChange: n
   });
-  return (0, i.jsx)(L, {
+  return (0, i.jsx)(P, {
     ...r,
     ...s
   })

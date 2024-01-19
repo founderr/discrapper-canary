@@ -29,8 +29,8 @@ var a, o, d = n("917351"),
   b = n("613691"),
   P = n("450484"),
   k = n("49111");
-let V = h.default.get(k.PlatformTypes.SPOTIFY),
-  R = "hm://pusher/v1/connections/",
+let R = h.default.get(k.PlatformTypes.SPOTIFY),
+  V = "hm://pusher/v1/connections/",
   M = 30 * O.default.Millis.SECOND,
   w = 30 * O.default.Millis.SECOND,
   L = 5 * O.default.Millis.MINUTE,
@@ -127,7 +127,7 @@ class ei {
     } = JSON.parse(t);
     switch (n) {
       case B.MESSAGE:
-        if ("string" == typeof s && s.startsWith(R)) this.connectionId = decodeURIComponent(s.split(R)[1]), (0, b.subscribePlayerStateNotifications)(this.accountId, this.accessToken, this.connectionId);
+        if ("string" == typeof s && s.startsWith(V)) this.connectionId = decodeURIComponent(s.split(V)[1]), (0, b.subscribePlayerStateNotifications)(this.accountId, this.accessToken, this.connectionId);
         else if (Array.isArray(i)) {
           for (let {
               events: e
@@ -435,7 +435,7 @@ class em extends f.default.Store {
     null != a.image && null != m && (g.large_image = m), "single" !== a.type && (g.large_text = a.name), null != _ && (t = _.uri), n = null != i && null != i.partyId ? i.partyId : "".concat(P.SPOTIFY_PARTY_PREFIX).concat(p.default.getId());
     let h = o.length > 128 ? o.substring(0, 125) + "..." : o,
       v = {
-        name: V.name,
+        name: R.name,
         assets: g,
         details: h,
         state: e,
@@ -607,7 +607,7 @@ let eh = new em(g.default, {
       let {
         sourceId: e,
         sound: n
-      } = null == t ? void 0 : t.desktopSettings, s = null != e && S.default.getObservedAppNameForWindow(e) === V.name;
+      } = null == t ? void 0 : t.desktopSettings, s = null != e && S.default.getObservedAppNameForWindow(e) === R.name;
       s && n ? ($ = new c.Interval).start(w, ef) : $ = null
     }
   }

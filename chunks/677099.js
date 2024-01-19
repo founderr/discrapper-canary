@@ -147,13 +147,13 @@ function D(e) {
   return a !== s.joinedAt && null != a && C()
 }
 let y = (0, d.cachedFunction)((e, t) => e.sortedGuildNodes().map(e => e.id)),
-  P = (0, d.cachedFunction)((e, t) => e.getRoots().map(g));
-class L extends _.default {
+  L = (0, d.cachedFunction)((e, t) => e.getRoots().map(g));
+class P extends _.default {
   getGuildsTree() {
     return T
   }
   getGuildFolders() {
-    return P(T, T.version)
+    return L(T, T.version)
   }
   getGuildFolderById(e) {
     return this.getGuildFolders().find(t => t.folderId === e)
@@ -166,7 +166,7 @@ class L extends _.default {
   }
   takeSnapshot() {
     return {
-      version: L.LATEST_SNAPSHOT_VERSION,
+      version: P.LATEST_SNAPSHOT_VERSION,
       data: {
         tree: T.getSnapshot()
       }
@@ -174,7 +174,7 @@ class L extends _.default {
   }
   constructor() {
     super(), this.loadCache = () => {
-      let e = this.readSnapshot(L.LATEST_SNAPSHOT_VERSION),
+      let e = this.readSnapshot(P.LATEST_SNAPSHOT_VERSION),
         t = null == e ? void 0 : e.tree;
       null != t && (T = new l.GuildsTree).loadSnapshot(t)
     }, this.registerActionHandlers({
@@ -192,5 +192,5 @@ class L extends _.default {
     }), this.waitFor(p.default, S.default, c.default, E.default, u.default)
   }
 }
-L.displayName = "SortedGuildStore", L.LATEST_SNAPSHOT_VERSION = 1;
-var b = new L
+P.displayName = "SortedGuildStore", P.LATEST_SNAPSHOT_VERSION = 1;
+var b = new P

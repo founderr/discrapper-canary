@@ -137,7 +137,7 @@ function o(e) {
       onFocus: g.get(s),
       onMouseEnter: I.get(s)
     }
-  }, [t, N, g, I]), P = i.useMemo(() => ({
+  }, [t, N, g, I]), L = i.useMemo(() => ({
     dispatch: h,
     getContainerProps: O,
     getSubmenuProps: D,
@@ -145,5 +145,5 @@ function o(e) {
     isFocused: N,
     isUsingKeyboardNavigation: m
   }), [h, O, D, y, N, m]);
-  return P
+  return L
 }

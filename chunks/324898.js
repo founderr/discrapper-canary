@@ -23,10 +23,10 @@ var s = n("37983"),
   S = n("587904"),
   A = n("49111"),
   _ = n("782340"),
-  M = n("676831"),
-  T = n("632215"),
-  I = n("741566");
-let N = a.memo(function(e) {
+  T = n("676831"),
+  M = n("632215"),
+  N = n("741566");
+let I = a.memo(function(e) {
   let {
     message: t,
     notice: n,
@@ -35,18 +35,18 @@ let N = a.memo(function(e) {
   } = e;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)("div", {
-      className: i(M.blockedNoticeContainer, {
-        [M.compact]: a
+      className: i(T.blockedNoticeContainer, {
+        [T.compact]: a
       }),
       children: [(0, s.jsx)("div", {
-        className: M.blockedNoticeIcon,
+        className: T.blockedNoticeIcon,
         children: (0, s.jsx)(p.default, {
-          className: M.shieldIcon,
+          className: T.shieldIcon,
           width: 16,
           height: 16
         })
       }), (0, s.jsx)("div", {
-        className: M.blockedNotice,
+        className: T.blockedNotice,
         children: (0, s.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "interactive-normal",
@@ -54,8 +54,8 @@ let N = a.memo(function(e) {
         })
       })]
     }), (0, s.jsx)("div", {
-      className: i(M.ephemeralAccessories, {
-        [M.compact]: a
+      className: i(T.ephemeralAccessories, {
+        [T.compact]: a
       }),
       children: (0, s.jsx)(E.default, {
         message: t,
@@ -64,7 +64,7 @@ let N = a.memo(function(e) {
           variant: "text-xs/normal",
           color: "interactive-normal",
           tag: "span",
-          className: M.learnMore,
+          className: T.learnMore,
           children: _.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({
             helpUrl: m.default.getArticleURL(A.HelpdeskArticles.GUILD_AUTOMOD_BLOCKED_MESSAGE)
           })
@@ -89,11 +89,11 @@ var v = a.memo(function(e) {
     v.current ? null != E && E() : v.current = !0
   }, [E, d.content, m, A, p]), (0, s.jsxs)("div", {
     id: (0, C.getMessageContentId)(d),
-    className: i(l, T.markup, {
-      [I.messageContent]: !0,
-      [I.markupRtl]: "rtl" === o(d.content),
-      [M.blockedEdit]: null == L ? void 0 : L.isBlockedEdit,
-      [M.blockedSend]: !(null == L ? void 0 : L.isBlockedEdit)
+    className: i(l, M.markup, {
+      [N.messageContent]: !0,
+      [N.markupRtl]: "rtl" === o(d.content),
+      [T.blockedEdit]: null == L ? void 0 : L.isBlockedEdit,
+      [T.blockedSend]: !(null == L ? void 0 : L.isBlockedEdit)
     }),
     children: [null != p ? p : (0, g.getContent)(d, m), (null == L ? void 0 : L.isBlockedEdit) && null != d.timestamp && (0, s.jsxs)(s.Fragment, {
       children: [" ", (0, s.jsx)(S.default, {
@@ -101,11 +101,11 @@ var v = a.memo(function(e) {
         isEdited: !0,
         isInline: !1,
         children: (0, s.jsxs)("span", {
-          className: I.edited,
+          className: N.edited,
           children: ["(", _.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_POSTFIX, ")"]
         })
       })]
-    }), (0, s.jsx)(N, {
+    }), (0, s.jsx)(I, {
       notice: null !== (n = null == L ? void 0 : L.errorMessage) && void 0 !== n ? n : _.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
       message: d,
       compact: r,

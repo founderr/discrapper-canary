@@ -23,10 +23,10 @@ var s = n("37983"),
   S = n("219013"),
   A = n("625149"),
   _ = n("300322"),
-  M = n("845579"),
-  T = n("271938"),
-  I = n("836417"),
-  N = n("26989"),
+  T = n("845579"),
+  M = n("271938"),
+  N = n("836417"),
+  I = n("26989"),
   v = n("305961"),
   L = n("88093"),
   x = n("957255"),
@@ -50,8 +50,8 @@ var s = n("37983"),
   z = n("306160"),
   K = n("870190"),
   Y = n("61400"),
-  X = n("327054"),
-  q = n("583022"),
+  q = n("327054"),
+  X = n("583022"),
   J = n("363396"),
   Q = n("891405"),
   $ = n("261649"),
@@ -155,7 +155,7 @@ function er(e) {
     canReact: E,
     canConfigureJoin: g,
     canReply: S,
-    canStartThread: I,
+    canStartThread: N,
     canViewThread: R,
     isExpanded: w,
     showMoreUtilities: W,
@@ -177,22 +177,22 @@ function er(e) {
       isFocused: r
     } = e, {
       author: o
-    } = n, d = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(t.guild_id), [t.guild_id]), f = (0, u.useStateFromStores)([T.default], () => T.default.getId()), h = (0, _.useIsActiveChannelOrUnarchivableThread)(t), E = (0, _.useIsNonModInLockedThread)(t), g = M.RenderReactions.useSetting(), S = M.DeveloperMode.useSetting(), I = (0, u.useStateFromStores)([L.default], () => null == t.guild_id || L.default.canChatInGuild(t.guild_id), [t]), {
+    } = n, d = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(t.guild_id), [t.guild_id]), f = (0, u.useStateFromStores)([M.default], () => M.default.getId()), h = (0, _.useIsActiveChannelOrUnarchivableThread)(t), E = (0, _.useIsNonModInLockedThread)(t), g = T.RenderReactions.useSetting(), S = T.DeveloperMode.useSetting(), N = (0, u.useStateFromStores)([L.default], () => null == t.guild_id || L.default.canChatInGuild(t.guild_id), [t]), {
       canManageMessages: R,
       canAddNewReactions: y
     } = (0, u.useStateFromStoresObject)([x.default], () => ({
-      canAddNewReactions: I && x.default.can(et.Permissions.ADD_REACTIONS, t),
+      canAddNewReactions: N && x.default.can(et.Permissions.ADD_REACTIONS, t),
       canManageMessages: x.default.can(et.Permissions.MANAGE_MESSAGES, t)
-    }), [t, I]), O = (0, A.useCanReplyToMessage)(t, n), D = (0, _.useCanStartPublicThread)(t, n), j = (0, _.useCanViewThreadForMessage)(n), P = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (R || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
+    }), [t, N]), O = (0, A.useCanReplyToMessage)(t, n), D = (0, _.useCanStartPublicThread)(t, n), j = (0, _.useCanViewThreadForMessage)(n), P = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([I.default], () => null != t.guild_id && I.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (R || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
     n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && R);
     let U = (0, K.canReportMessage)(n),
-      k = (0, X.default)(n, t, R),
+      k = (0, q.default)(n, t, R),
       G = !t.isSystemDM() && (0, Y.default)(n, f) && h && !E,
       {
         disableReactionCreates: w
-      } = (0, q.default)({
+      } = (0, X.default)({
         channel: t,
-        canChat: I,
+        canChat: N,
         renderReactions: g,
         canAddNewReactions: y,
         isLurking: P,
@@ -324,14 +324,14 @@ function er(e) {
       label: en.default.Messages.EDIT,
       icon: U.default,
       onClick: J.editMessage
-    }) : null, I ? ei({
+    }) : null, N ? ei({
       key: "thread",
       channel: t,
       message: n,
       label: en.default.Messages.CREATE_THREAD,
       icon: B.default,
       onClick: J.createThread
-    }) : null, !I && R ? ei({
+    }) : null, !N && R ? ei({
       key: "view-thread",
       channel: t,
       message: n,
@@ -451,7 +451,7 @@ var ed = a.memo(function(e) {
     channel: t,
     message: n,
     isHeader: a
-  } = e, l = (0, u.useStateFromStores)([I.default], () => I.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
+  } = e, l = (0, u.useStateFromStores)([N.default], () => N.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
     let {
       channel: t,
       message: n

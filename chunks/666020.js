@@ -82,7 +82,7 @@ function d(e) {
   }
   let c = s(.5 * l),
     E = s(i, -c),
-    f = s(i + l, c);
-  for (E > 0 && (E = Math.max(d(0), E)), E = Math.floor(E / a.MINIMUM_RANGE) * a.MINIMUM_RANGE; E <= f;) E = d(E);
+    _ = s(i + l, c);
+  for (E > 0 && (E = Math.max(d(0), E)), E = Math.floor(E / a.MINIMUM_RANGE) * a.MINIMUM_RANGE; E <= _;) E = d(E);
   o(t, n, u)
 }

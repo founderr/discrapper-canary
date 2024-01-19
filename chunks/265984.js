@@ -77,8 +77,8 @@ function S(e) {
   });
   let {
     ref: y,
-    width: P = 0,
-    height: L = 0
+    width: L = 0,
+    height: P = 0
   } = (0, u.default)(C), b = {
     ...h,
     ...T.springConfig,
@@ -87,8 +87,8 @@ function S(e) {
     } : null
   }, M = (0, s.useSpring)({
     immediate: null == v,
-    width: null !== (t = T.width) && void 0 !== t ? t : P,
-    height: L,
+    width: null !== (t = T.width) && void 0 !== t ? t : L,
+    height: P,
     config: b
   }), U = (0, s.useTransition)(C, {
     immediate: null == v,

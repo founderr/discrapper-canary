@@ -31,8 +31,8 @@ r.r(t), r.d(t, {
 var u = r("872717"),
   l = r("913144"),
   n = r("54239"),
-  s = r("448993"),
-  i = r("514296"),
+  i = r("448993"),
+  s = r("514296"),
   o = r("407788"),
   a = r("489134"),
   c = r("49111");
@@ -71,13 +71,13 @@ let d = e => {
       });
       l.default.dispatch({
         type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-        categories: t.body.map(i.default.fromServer)
+        categories: t.body.map(s.default.fromServer)
       })
     } catch (e) {
       throw l.default.dispatch({
         type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
         error: e
-      }), new s.APIError(e)
+      }), new i.APIError(e)
     }
   }, I = async () => {
     l.default.dispatch({
@@ -93,7 +93,7 @@ let d = e => {
       throw l.default.dispatch({
         type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
         error: e
-      }), new s.APIError(e)
+      }), new i.APIError(e)
     }
   }, S = async (e, t) => {
     l.default.dispatch({
@@ -114,7 +114,7 @@ let d = e => {
       throw l.default.dispatch({
         type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
         error: e
-      }), new s.APIError(e)
+      }), new i.APIError(e)
     }
   }, L = async e => {
     l.default.dispatch({
@@ -139,7 +139,7 @@ let d = e => {
         type: "COLLECTIBLES_CLAIM_FAILURE",
         skuId: e,
         error: t
-      }), new s.APIError(t)
+      }), new i.APIError(t)
     }
   }, f = async (e, t) => {
     try {
@@ -152,7 +152,7 @@ let d = e => {
       });
       return r.body.valid
     } catch (e) {
-      throw new s.APIError(e)
+      throw new i.APIError(e)
     }
   }, y = e => {
     l.default.dispatch({

@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
 var u = r("635058"),
   l = r("265586"),
   n = r("446674"),
-  s = r("913144"),
-  i = r("853987");
+  i = r("913144"),
+  s = r("853987");
 let o = new Date(2023, 8, 25),
   a = new Date(2023, 9, 5),
   c = () => ({
@@ -40,7 +40,7 @@ class E extends n.default.PersistedStore {
   }
   isItemViewed(e) {
     var t, r;
-    let u = null === (t = i.default.getProduct(e.skuId)) || void 0 === t ? void 0 : t.categorySkuId;
+    let u = null === (t = s.default.getProduct(e.skuId)) || void 0 === t ? void 0 : t.categorySkuId;
     return null != u && (null === (r = d.categoryItemViews[u]) || void 0 === r ? void 0 : r[e.type]) != null
   }
   reset() {
@@ -48,7 +48,7 @@ class E extends n.default.PersistedStore {
   }
 }
 E.displayName = "CollectiblesPersistedStore", E.persistKey = "CollectiblesPersistedStoreV2";
-var C = new E(s.default, {
+var C = new E(i.default, {
   COLLECTIBLES_CATEGORY_ITEMS_VIEWED: e => {
     let {
       categories: t,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   activityInviteKey: function() {
-    return N
+    return I
   },
   default: function() {
     return L
@@ -26,10 +26,10 @@ var s = n("37983"),
   S = n("671071"),
   A = n("401848"),
   _ = n("718422"),
-  M = n("49111"),
-  T = n("782340"),
-  I = n("216220");
-let N = "ActivityInvite";
+  T = n("49111"),
+  M = n("782340"),
+  N = n("216220");
+let I = "ActivityInvite";
 class v extends a.PureComponent {
   componentDidMount() {
     this.fetchApplication()
@@ -52,12 +52,12 @@ class v extends a.PureComponent {
       activity: e
     } = this.props;
     switch (e.type) {
-      case M.ActivityTypes.LISTENING:
-        return T.default.Messages.INVITE_EMBED_LISTENING_INVITE;
-      case M.ActivityTypes.PLAYING:
-      case M.ActivityTypes.STREAMING:
+      case T.ActivityTypes.LISTENING:
+        return M.default.Messages.INVITE_EMBED_LISTENING_INVITE;
+      case T.ActivityTypes.PLAYING:
+      case T.ActivityTypes.STREAMING:
       default:
-        return T.default.Messages.INVITE_EMBED_GAME_INVITE
+        return M.default.Messages.INVITE_EMBED_GAME_INVITE
     }
   }
   render() {
@@ -75,7 +75,7 @@ class v extends a.PureComponent {
       application: C,
       transitionState: m,
       onClose: g
-    } = this.props, S = h > 0, A = S ? T.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
+    } = this.props, S = h > 0, A = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
       seconds: Math.round((h + 1e3) / 1e3)
     }) : null;
     return (0, s.jsxs)(o.ModalRoot, {
@@ -90,19 +90,19 @@ class v extends a.PureComponent {
         })
       }), (0, s.jsxs)(o.ModalContent, {
         children: [(0, s.jsx)("div", {
-          className: I.subHeader,
-          children: T.default.Messages.MESSAGE_PREVIEW
+          className: N.subHeader,
+          children: M.default.Messages.MESSAGE_PREVIEW
         }), (0, s.jsx)(d.default, {
           activityActionType: f,
           activity: l,
-          className: I.preview,
+          className: N.preview,
           application: C,
           partyId: null != l.party ? l.party.id : null,
           isPreview: !0,
           analyticsLocations: r
         }), (0, s.jsx)("div", {
-          className: I.subHeader,
-          children: T.default.Messages.ADD_A_COMMENT_OPTIONAL
+          className: N.subHeader,
+          children: M.default.Messages.ADD_A_COMMENT_OPTIONAL
         }), (0, s.jsx)(o.Popout, {
           position: "top",
           onRequestClose: () => {
@@ -122,7 +122,7 @@ class v extends a.PureComponent {
             })
           },
           children: () => (0, s.jsx)(E.default, {
-            className: I.textArea,
+            className: N.textArea,
             textValue: e,
             richValue: t,
             focused: n,
@@ -130,7 +130,7 @@ class v extends a.PureComponent {
             onChange: this.handleTextChange,
             onSubmit: this.handleShare,
             type: p.ChatInputTypes.FORM,
-            parentModalKey: N
+            parentModalKey: I
           })
         })]
       }), (0, s.jsxs)(o.ModalFooter, {
@@ -141,14 +141,14 @@ class v extends a.PureComponent {
             children: (0, s.jsx)(o.Button, {
               disabled: S,
               onClick: this.handleShare,
-              children: T.default.Messages.INVITE_EMBED_SEND_INVITE
+              children: M.default.Messages.INVITE_EMBED_SEND_INVITE
             })
           })
         }), (0, s.jsx)(o.Button, {
           look: o.Button.Looks.LINK,
           color: o.Button.Colors.PRIMARY,
           onClick: g,
-          children: T.default.Messages.CANCEL
+          children: M.default.Messages.CANCEL
         })]
       })]
     })
@@ -166,18 +166,18 @@ class v extends a.PureComponent {
           activityActionType: s
         } = this.props, a = "";
         switch (s) {
-          case M.ActivityActionTypes.JOIN:
+          case T.ActivityActionTypes.JOIN:
             a = "Invite to Join";
             break;
-          case M.ActivityActionTypes.LISTEN:
+          case T.ActivityActionTypes.LISTEN:
             a = "Invite to Listen";
             break;
-          case M.ActivityActionTypes.WATCH:
+          case T.ActivityActionTypes.WATCH:
             a = "Invite to Watch"
         }
-        return f.default.trackWithMetadata(M.AnalyticEvents.INVITE_SENT, {
+        return f.default.trackWithMetadata(T.AnalyticEvents.INVITE_SENT, {
           location: "Channel Text Area - ".concat(a),
-          invite_type: t.type === M.ActivityTypes.LISTENING ? M.LoggingInviteTypes.SPOTIFY : M.LoggingInviteTypes.APPLICATION,
+          invite_type: t.type === T.ActivityTypes.LISTENING ? T.LoggingInviteTypes.SPOTIFY : T.LoggingInviteTypes.APPLICATION,
           application_id: t.application_id,
           guild_id: n.getGuildId(),
           channel_id: n.id,

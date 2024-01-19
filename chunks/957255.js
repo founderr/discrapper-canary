@@ -32,7 +32,7 @@ let N = {},
   D = {},
   y = 0;
 
-function P(e) {
+function L(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     n = N[e];
   if (null != n) return n;
@@ -46,7 +46,7 @@ function P(e) {
   })
 }
 
-function L(e) {
+function P(e) {
   var t;
   let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     i = v.default.getCurrentUser();
@@ -55,7 +55,7 @@ function L(e) {
   if (null == s) return m.default.NONE;
   let a = s.getGuildId(),
     o = null != a && (c.default.isLurking(a) || (null === (t = I.default.getMember(a, i.id)) || void 0 === t ? void 0 : t.isPending));
-  return !s.isScheduledForDeletion() && !o && r.isEmpty(s.permissionOverwrites) && null != a ? P(a) : m.default.computePermissions({
+  return !s.isScheduledForDeletion() && !o && r.isEmpty(s.permissionOverwrites) && null != a ? L(a) : m.default.computePermissions({
     user: i,
     context: s,
     checkElevated: n
@@ -65,7 +65,7 @@ function L(e) {
 function b(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     n = O[e];
-  return null != n ? n : O[e] = L(e, t)
+  return null != n ? n : O[e] = P(e, t)
 }
 
 function M(e) {
@@ -145,7 +145,7 @@ function H(e, t, n, i) {
       return null == r ? m.default.NONE : m.default.applyThreadPermissions(e, H(r, t, n, i), f.default.hasJoined(e.id))
     }
     r = b(e.id)
-  } else e instanceof p.default && (r = P(e.id));
+  } else e instanceof p.default && (r = L(e.id));
   return void 0 !== t || void 0 !== n || void 0 !== i ? m.default.computePermissions({
     user: v.default.getCurrentUser(),
     context: e,
@@ -160,10 +160,10 @@ class j extends a.default.Store {
     this.waitFor(v.default, C.default, T.default, I.default, g.default, f.default, d.default, u.default)
   }
   getChannelPermissions(e) {
-    return h.THREAD_CHANNEL_TYPES.has(e.type) ? L(e.id) : b(e.id)
+    return h.THREAD_CHANNEL_TYPES.has(e.type) ? P(e.id) : b(e.id)
   }
   getGuildPermissions(e) {
-    return P(e.id)
+    return L(e.id)
   }
   getGuildPermissionProps(e) {
     let t = v.default.getCurrentUser();
@@ -186,10 +186,10 @@ class j extends a.default.Store {
     }
   }
   canAccessMemberSafetyPage(e) {
-    return s.default.hasAny(P(e.id), R.MemberSafetyPagePermissions)
+    return s.default.hasAny(L(e.id), R.MemberSafetyPagePermissions)
   }
   canAccessGuildSettings(e) {
-    return s.default.hasAny(P(e.id), m.default.VIEW_GUILD_SETTINGS)
+    return s.default.hasAny(L(e.id), m.default.VIEW_GUILD_SETTINGS)
   }
   canWithPartialContext(e, t) {
     return "channelId" in t && "string" == typeof t.channelId ? this.can(e, T.default.getChannel(t.channelId)) : "guildId" in t && "string" == typeof t.guildId && this.can(e, C.default.getGuild(t.guildId))

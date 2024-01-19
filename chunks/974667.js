@@ -64,13 +64,13 @@ function d(e) {
         t(e)
       }
     }, [_]),
-    P = i.useCallback(e => {
+    L = i.useCallback(e => {
       C.current = e;
       let n = (0, l.createSelector)(e),
         i = (0, l.getItemId)(e);
       D(n, i), (0, s.notifyFocusSubscribers)(t, i, S)
     }, [t, S, D]),
-    L = i.useMemo(() => (0, r.createFocusManager)({
+    P = i.useMemo(() => (0, r.createFocusManager)({
       getFocusableElements: () => c(t, A),
       getActiveElement() {
         var e;
@@ -123,13 +123,13 @@ function d(e) {
         }
       }
       let r = await (0, a.findFirstVisibleItem)(e, c(t, A));
-      null !== r && P(r)
+      null !== r && L(r)
     }
 
     function s() {
       v.current = !0
     }
-  }, [u, t, S, D, _, y, P]);
+  }, [u, t, S, D, _, y, L]);
   let G = i.useMemo(() => ({
       wrap: T,
       get from() {
@@ -144,15 +144,15 @@ function d(e) {
       }
     }), [m, T]),
     w = i.useCallback(async () => {
-      let e = await L.getNextFocusableElement(G),
+      let e = await P.getNextFocusableElement(G),
         t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
-      null != t ? P(t) : null == e && null != h && h()
-    }, [L, G, h, P]),
+      null != t ? L(t) : null == e && null != h && h()
+    }, [P, G, h, L]),
     k = i.useCallback(async () => {
-      let e = await L.getPreviousFocusableElement(G),
+      let e = await P.getPreviousFocusableElement(G),
         t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
-      null != t ? P(t) : null == e && null != E && E()
-    }, [L, G, E, P]),
+      null != t ? L(t) : null == e && null != E && E()
+    }, [P, G, E, L]),
     x = i.useCallback(e => {
       if (!R.current || !m && !U.current) return;
       let n = g === o.Orientations.HORIZONTAL ? o.Keys.RIGHT : o.Keys.DOWN,
@@ -169,7 +169,7 @@ function d(e) {
             var e;
             let n = c(t, A),
               i = null === (e = n[0]) || void 0 === e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
-            null != i && P(i)
+            null != i && L(i)
           });
           return;
         case o.Keys.END:
@@ -177,7 +177,7 @@ function d(e) {
             var e;
             let n = c(t, A),
               i = null === (e = n[n.length - 1]) || void 0 === e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
-            null != i && P(i)
+            null != i && L(i)
           });
           return;
         case o.Keys.SPACE:
@@ -194,7 +194,7 @@ function d(e) {
           }
         }
       }
-    }, [w, k, t, g, f, d, P, m]),
+    }, [w, k, t, g, f, d, L, m]),
     F = i.useCallback(e => {
       let n = null != e ? (0, l.createListItemId)(t, e) : null;
       C.current = n
@@ -211,12 +211,12 @@ function d(e) {
     async focusLastVisibleItem() {
       var e;
       let n = await (0, a.findLastVisibleItem)(null !== (e = A.current) && void 0 !== e ? e : document.body, c(t, A));
-      null !== n && P(n)
+      null !== n && L(n)
     },
     async focusFirstVisibleItem() {
       var e;
       let n = await (0, a.findFirstVisibleItem)(null !== (e = A.current) && void 0 !== e ? e : document.body, c(t, A));
-      null !== n && P(n)
+      null !== n && L(n)
     },
     focusPreviousItem: k,
     focusNextItem: w,
@@ -224,6 +224,6 @@ function d(e) {
       let e = C.current;
       return e ? (0, l.getItemId)(e) : null
     }
-  }), [t, x, g, b, S, F, k, w, P])
+  }), [t, x, g, b, S, F, k, w, L])
 }
 n.es(u, t)

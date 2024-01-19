@@ -74,7 +74,7 @@ function v(e) {
     maxVisibleItems: v = 5,
     itemToString: A = I,
     showScrollbar: R = !1
-  } = e, [N, O] = r.useState(""), [D] = r.useState(!0), [y, P] = r.useState(null), L = r.useId(), b = r.useRef(null);
+  } = e, [N, O] = r.useState(""), [D] = r.useState(!0), [y, L] = r.useState(null), P = r.useId(), b = r.useRef(null);
   r.useLayoutEffect(() => {
     let e = document.querySelector("[".concat(S, '="').concat(y, '"]')),
       t = b.current;
@@ -101,7 +101,7 @@ function v(e) {
       })
     }), []),
     x = r.useCallback((e, t) => {
-      P(t);
+      L(t);
       let n = document.querySelector(e),
         i = b.current;
       null != i && null != n && i.scrollIntoViewNode({
@@ -131,8 +131,8 @@ function v(e) {
           role: "combobox",
           "aria-label": m,
           "aria-expanded": D,
-          "aria-controls": D ? L : void 0,
-          "aria-owns": L,
+          "aria-controls": D ? P : void 0,
+          "aria-owns": P,
           "aria-haspopup": "listbox",
           className: a(_.combobox, u),
           children: [(0, i.jsx)(E.default, {
@@ -142,7 +142,7 @@ function v(e) {
             query: N,
             onChange: O,
             onKeyDown: r,
-            onBlur: () => P(null),
+            onBlur: () => L(null),
             onClear: () => O(""),
             className: a({
               [_.searchWithScrollbar]: R
@@ -175,7 +175,7 @@ function v(e) {
                   maxHeight: 46 * v
                 },
                 "aria-multiselectable": T,
-                id: L,
+                id: P,
                 ref: b,
                 className: a(_.list, h, {
                   [_.scroller]: R

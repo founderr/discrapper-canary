@@ -52,8 +52,8 @@ let g = {},
     }
   },
   y = {},
-  P = {},
-  L = new Set,
+  L = {},
+  P = new Set,
   b = {},
   M = {};
 
@@ -88,11 +88,11 @@ function U(e, t) {
     var t;
     return f.hasFlag(null !== (t = e.flags) && void 0 !== t ? t : 0, T.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
   });
-  P[e] = new Set(l.map(e => e.channel_id)),
+  L[e] = new Set(l.map(e => e.channel_id)),
     function(e) {
       var t;
       if (null == e) return;
-      let n = new Set(P[e]),
+      let n = new Set(L[e]),
         i = null !== (t = b[e]) && void 0 !== t ? t : {};
       for (let e in i) {
         let t = i[e];
@@ -192,7 +192,7 @@ class K extends s.default.PersistedStore {
   initialize(e) {
     if (this.waitFor(p.default, h.default, l.default, c.default), null != e) {
       var t;
-      I = e.collapsedGuilds, g = e.userGuildSettings, P = r.mapValues(null !== (t = e.optedInChannelsByGuild) && void 0 !== t ? t : {}, e => new Set(e)), null != e.useNewNotifications && (v = e.useNewNotifications), r.forEach(g, (e, t) => {
+      I = e.collapsedGuilds, g = e.userGuildSettings, L = r.mapValues(null !== (t = e.optedInChannelsByGuild) && void 0 !== t ? t : {}, e => new Set(e)), null != e.useNewNotifications && (v = e.useNewNotifications), r.forEach(g, (e, t) => {
         y[t] = j(e)
       })
     }
@@ -201,7 +201,7 @@ class K extends s.default.PersistedStore {
     return {
       collapsedGuilds: I,
       userGuildSettings: g,
-      optedInChannelsByGuild: P,
+      optedInChannelsByGuild: L,
       useNewNotifications: v
     }
   }
@@ -252,7 +252,7 @@ class K extends s.default.PersistedStore {
   }
   getMutedChannels(e) {
     var t;
-    return null !== (t = y[e]) && void 0 !== t ? t : L
+    return null !== (t = y[e]) && void 0 !== t ? t : P
   }
   isChannelMuted(e, t) {
     var n;
@@ -302,7 +302,7 @@ class K extends s.default.PersistedStore {
       userGuildSettings: g,
       mutedChannels: y,
       collapsedGuilds: I,
-      optedInChannelsByGuild: P
+      optedInChannelsByGuild: L
     }
   }
   getChannelIdFlags(e, t) {
@@ -341,7 +341,7 @@ class K extends s.default.PersistedStore {
   }
   getOptedInChannels(e) {
     var t, n;
-    return l.default.isFullServerPreview(e) ? null !== (t = l.default.getViewingChannels(e)) && void 0 !== t ? t : L : null !== (n = P[e]) && void 0 !== n ? n : L
+    return l.default.isFullServerPreview(e) ? null !== (t = l.default.getViewingChannels(e)) && void 0 !== t ? t : P : null !== (n = L[e]) && void 0 !== n ? n : P
   }
   getOptedInChannelsWithPendingUpdates(e) {
     return M[e]
@@ -376,7 +376,7 @@ class K extends s.default.PersistedStore {
   }
   getAddedToMessages() {
     var e;
-    return null !== (e = P.null) && void 0 !== e ? e : L
+    return null !== (e = L.null) && void 0 !== e ? e : P
   }
   get accountNotificationSettings() {
     return A
@@ -457,7 +457,7 @@ let z = new K(a.default, {
     return !(null == t || l.default.isFullServerPreview(t)) && (k(t, n), !0)
   },
   CONNECTION_OPEN: function(e) {
-    H(e.notificationSettings), !e.userGuildSettings.partial && (R.reset(), N.reset(), g = {}, y = {}, P = {}), !e.userGuildSettings.partial && (I = {}, e.userGuildSettings.entries.forEach(e => {
+    H(e.notificationSettings), !e.userGuildSettings.partial && (R.reset(), N.reset(), g = {}, y = {}, L = {}), !e.userGuildSettings.partial && (I = {}, e.userGuildSettings.entries.forEach(e => {
       null != e.guild_id && (I[e.guild_id] = !0 === e.hide_muted_channels)
     })), e.userGuildSettings.entries.forEach(e => {
       !("channel_overrides" in e) && (e.channel_overrides = {}), U(e.guild_id, e)
@@ -474,10 +474,10 @@ let z = new K(a.default, {
     } = t;
     g = {
       ...n
-    }, y = {}, P = {}, Object.keys(i).forEach(e => {
+    }, y = {}, L = {}, Object.keys(i).forEach(e => {
       y[e] = new Set(i[e])
     }), Object.keys(s).forEach(e => {
-      P[e] = new Set(s[e])
+      L[e] = new Set(s[e])
     }), I = {
       ...r
     }

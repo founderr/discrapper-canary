@@ -49,7 +49,7 @@ n.r(t), n.d(t, {
     return y
   },
   ACKED_RECENTLY_WINDOW_DAYS: function() {
-    return P
+    return L
   },
   UpcomingGuildEventNoticeTypes: function() {
     return l
@@ -77,5 +77,5 @@ let A = {
 let O = 100,
   D = 2 * S.default.Millis.DAY,
   y = 12 * S.default.Millis.HOUR,
-  P = 4;
+  L = 4;
 (p = l || (l = {})).NEW_EVENT = "Upcoming Event Notice", p.EVENT_STARTING_SOON = "Event Starting Soon Notice", (_ = u || (u = {}))[_.UNINTERESTED = 0] = "UNINTERESTED", _[_.INTERESTED = 1] = "INTERESTED"

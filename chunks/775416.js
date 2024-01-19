@@ -5,13 +5,13 @@ r.r(t), r.d(t, {
     return C
   }
 }), r("222007");
-var s = r("917351"),
-  i = r("446674"),
+var i = r("917351"),
+  s = r("446674"),
   o = r("913144");
 let a = new Map,
   c = a,
   d = !1;
-class E extends i.default.Store {
+class E extends s.default.Store {
   get isFetching() {
     return d
   }
@@ -37,7 +37,7 @@ var C = new E(o.default, {
     d = !0, l = void 0
   },
   COLLECTIBLES_PURCHASES_FETCH_SUCCESS: e => {
-    0 === e.purchases.length ? c = a : !(0, s.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), d = !1, l = void 0
+    0 === e.purchases.length ? c = a : !(0, i.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), d = !1, l = void 0
   },
   COLLECTIBLES_PURCHASES_FETCH_FAILURE: e => {
     let {
@@ -49,7 +49,7 @@ var C = new E(o.default, {
     u = e.skuId, n = void 0
   },
   COLLECTIBLES_CLAIM_SUCCESS: e => {
-    null == e.purchases || 0 === e.purchases.length ? c = a : !(0, s.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), u = void 0, n = void 0
+    null == e.purchases || 0 === e.purchases.length ? c = a : !(0, i.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), u = void 0, n = void 0
   },
   COLLECTIBLES_CLAIM_FAILURE: e => {
     let {

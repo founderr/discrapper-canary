@@ -43,8 +43,8 @@ function d(e, t, n) {
       sectionGutter: O,
       padding: D,
       paddingVertical: y,
-      paddingHorizontal: P,
-      fade: L = !1,
+      paddingHorizontal: L,
+      fade: P = !1,
       className: b,
       style: M,
       ...U
@@ -80,7 +80,7 @@ function d(e, t, n) {
       sectionGutter: O,
       padding: D,
       paddingVertical: y,
-      paddingHorizontal: P,
+      paddingHorizontal: L,
       getScrollerState: B,
       dir: p
     }), X = (0, r.useCallback)(function() {
@@ -110,7 +110,7 @@ function d(e, t, n) {
       onScroll: ee,
       className: o(b, {
         [e]: !0,
-        [t]: L,
+        [t]: P,
         [c.scrolling]: k
       }),
       style: (0, u.getMergedOrientationStyles)(M),

@@ -24,8 +24,8 @@ var o, l, u, c, d = n("627445"),
   O = n("808122"),
   D = n("733589"),
   y = n("933034"),
-  P = n("746800"),
-  L = n("584687"),
+  L = n("746800"),
+  P = n("584687"),
   b = n("705500"),
   M = n("238847"),
   U = n("981699"),
@@ -138,8 +138,8 @@ let eI = (0, m.initializeMediaEngine)((0, m.determineMediaEngine)()),
   ey = {
     [ep.DEFAULT_DEVICE_ID]: tr(e_.default.Messages.NO_VIDEO_DEVICES)
   },
-  eP = !1,
   eL = !1,
+  eP = !1,
   eb = !1,
   eM = !1,
   eU = !1,
@@ -198,7 +198,7 @@ function e3(e) {
 function e6(e) {
   let t = e2(e.context),
     n = !eA || t.mute || t.deaf;
-  e.context === ep.MediaEngineContextTypes.DEFAULT && (n = n || eP || eL || eb || !K.default.didHavePermission(eE.NativePermissionTypes.AUDIO)), e.setSelfMute(n), e.setSelfDeaf(t.deaf)
+  e.context === ep.MediaEngineContextTypes.DEFAULT && (n = n || eL || eP || eb || !K.default.didHavePermission(eE.NativePermissionTypes.AUDIO)), e.setSelfMute(n), e.setSelfDeaf(t.deaf)
 }
 
 function e5() {
@@ -541,7 +541,7 @@ class tS extends S.default.Store {
       }
       let {
         signalAV1Support: a
-      } = P.default.getCurrentConfig({
+      } = L.default.getCurrentConfig({
         location: "f627ab_10"
       }, {
         autoTrackExposure: !0
@@ -831,7 +831,7 @@ class tS extends S.default.Store {
     return eA
   }
   isMute() {
-    return this.isSelfMute() || eP
+    return this.isSelfMute() || eL
   }
   isDeaf() {
     return this.isSelfDeaf() || eM
@@ -841,7 +841,7 @@ class tS extends S.default.Store {
   }
   isSelfMutedTemporarily() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ep.MediaEngineContextTypes.DEFAULT;
-    return e === ep.MediaEngineContextTypes.DEFAULT && eL
+    return e === ep.MediaEngineContextTypes.DEFAULT && eP
   }
   isSelfMute() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ep.MediaEngineContextTypes.DEFAULT;
@@ -1134,7 +1134,7 @@ var tm = i = new tS(I.default, {
     } = e;
     return t.reduce((e, t) => {
       if (r === t.sessionId) {
-        eP = t.mute || t.suppress, eM = t.deaf, eI.eachConnection(e6);
+        eL = t.mute || t.suppress, eM = t.deaf, eI.eachConnection(e6);
         let e = null != t.guildId && null != t.channelId && null != eW && eW !== t.channelId,
           n = !e && eU;
         return e5(n), eW = t.channelId, !0
@@ -1143,7 +1143,7 @@ var tm = i = new tS(I.default, {
     }, !1)
   },
   CONNECTION_OPEN: function(e) {
-    r = e.sessionId, eP = !1, eM = !1, (0, z.shouldReadWriteAudioSettings)() && to()
+    r = e.sessionId, eL = !1, eM = !1, (0, z.shouldReadWriteAudioSettings)() && to()
   },
   CONNECTION_CLOSED: function() {
     r = null
@@ -1179,7 +1179,7 @@ var tm = i = new tS(I.default, {
     let {
       mute: t
     } = e;
-    eL = t, eI.eachConnection(e6)
+    eP = t, eI.eachConnection(e6)
   },
   AUDIO_TOGGLE_SELF_MUTE: function(e) {
     let {
@@ -1703,7 +1703,7 @@ var tm = i = new tS(I.default, {
       quality: r
     } = e, {
       enableDecoupledGameClipping: s
-    } = L.default.getCurrentConfig({
+    } = P.default.getCurrentConfig({
       location: "handleClipsInit"
     }, {
       autoTrackExposure: !0

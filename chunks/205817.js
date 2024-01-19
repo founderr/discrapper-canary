@@ -32,9 +32,9 @@ let D = {},
   b = {},
   P = I.StreamLayouts.THEATRE,
   k = {},
-  V = [];
+  R = [];
 
-function R() {
+function V() {
   d.forEach(k, (e, t) => {
     e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete k[t]
   })
@@ -76,7 +76,7 @@ class L extends u.default.Store {
       let n = v.default.getActiveStreamForUser(t, e);
       if (null == n || 0 === v.default.getViewerIds(n).length) return null
     }
-    return V.map(e => n ? function(e) {
+    return R.map(e => n ? function(e) {
       var t, n, s, i, r;
       let a = e.find(e => "video" === e.type);
       return null != a && "video" === a.type ? {
@@ -144,10 +144,10 @@ class L extends u.default.Store {
 L.displayName = "StreamRTCConnectionStore";
 var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
   CONNECTION_OPEN: function(e) {
-    s = e.sessionId, i = null, R()
+    s = e.sessionId, i = null, V()
   },
   CONNECTION_CLOSED: function() {
-    s = null, i = null, R()
+    s = null, i = null, V()
   },
   RTC_CONNECTION_STATE: w,
   RTC_CONNECTION_PING: w,
@@ -239,7 +239,7 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
         parentMediaSessionId: T.default.getMediaSessionId()
       }), k[t] = d
     }
-    V = [], y.default.getMediaEngine().on(l.MediaEngineEvent.ConnectionStats, M)
+    R = [], y.default.getMediaEngine().on(l.MediaEngineEvent.ConnectionStats, M)
   },
   STREAM_SERVER_UPDATE: function(e) {
     let t = k[e.streamKey];
@@ -267,7 +267,7 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
       stats: t
     } = e;
     if (null == t) return !1;
-    V.push(t), V.length > 30 && V.shift()
+    R.push(t), R.length > 30 && R.shift()
   },
   STREAM_LAYOUT_UPDATE: function(e) {
     let {

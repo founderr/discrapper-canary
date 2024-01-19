@@ -34,13 +34,13 @@ function m(e) {
       ...(0, o.collectChannelAnalyticsMetadata)(g)
     })
   }, [S, g]);
-  let M = a.useCallback(() => {
+  let T = a.useCallback(() => {
       null == m || m(), t()
     }, [m, t]),
-    T = a.useCallback(() => {
+    M = a.useCallback(() => {
       null == E || E(), t()
     }, [E, t]),
-    I = a.useRef(null);
+    N = a.useRef(null);
   return a.useEffect(() => {
     let e;
     let t = u.default.theme,
@@ -50,7 +50,7 @@ function m(e) {
         default: a
       }, l] = await Promise.all([n.el("245749").then(n.t.bind(n, "245749", 23)), (0, i.isThemeDark)(t) ? _.dark() : _.light()]);
       !s && (e = a.loadAnimation({
-        container: I.current,
+        container: N.current,
         renderer: "svg",
         loop: !0,
         autoplay: !0,
@@ -63,12 +63,12 @@ function m(e) {
     "aria-labelledby": "content-warning-popout-label",
     children: (0, s.jsxs)("form", {
       className: C.contentWarningPopout,
-      onSubmit: M,
+      onSubmit: T,
       children: [(0, s.jsxs)("div", {
         className: C.body,
         children: [null != _ && (0, s.jsx)("div", {
           className: C.animation,
-          ref: I
+          ref: N
         }), (0, s.jsxs)("div", {
           className: C.content,
           children: [(0, s.jsx)("div", {
@@ -86,7 +86,7 @@ function m(e) {
               children: [(0, s.jsx)(r.Button, {
                 className: C.button,
                 color: r.Button.Colors.PRIMARY,
-                onClick: T,
+                onClick: M,
                 children: h.default.Messages.EDIT_MESSAGE
               }), (0, s.jsx)(r.Text, {
                 variant: "text-xs/normal",
@@ -97,7 +97,7 @@ function m(e) {
               className: C.buttonContainer,
               children: [(0, s.jsx)(r.Button, {
                 className: C.button,
-                onClick: M,
+                onClick: T,
                 type: "submit",
                 autoFocus: !0,
                 children: h.default.Messages.EVERYONE_POPOUT_SEND_NOW

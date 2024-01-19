@@ -12,11 +12,11 @@ var o = n("917351"),
   u = n("6587"),
   d = n("393027"),
   s = n("923959"),
-  r = n("162771"),
-  E = n("677099"),
+  E = n("162771"),
+  r = n("677099"),
   _ = n("287850"),
-  c = n("659500"),
-  A = n("722525"),
+  A = n("659500"),
+  c = n("722525"),
   C = n("49111"),
   T = n("133335");
 
@@ -35,36 +35,36 @@ var I = l.throttle(function(e, t) {
       guildFeaturePredicate: I = (e, t) => !1,
       withVoiceChannels: f = !1
     } = t,
-    O = null !== (o = d.default.getState().guildId) && void 0 !== o ? o : C.ME,
-    N = d.default.getState().channelId,
+    N = null !== (o = d.default.getState().guildId) && void 0 !== o ? o : C.ME,
+    O = d.default.getState().channelId,
     L = function(e, t) {
-      let n = [C.ME, ...E.default.getFlattenedGuildIds()],
+      let n = [C.ME, ...r.default.getFlattenedGuildIds()],
         i = n.indexOf(e);
       return t > 0 ? n.slice(i).concat(n.slice(0, i), e) : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)))
-    }(O, e),
-    p = e > 0 ? 0 : L.length - 1,
-    D = S(O, f),
-    R = D.indexOf(N) + e;
-  for (; null != O && "" !== O;) {
-    if (u = D[R], T(O))
+    }(N, e),
+    D = e > 0 ? 0 : L.length - 1,
+    R = S(N, f),
+    p = R.indexOf(O) + e;
+  for (; null != N && "" !== N;) {
+    if (u = R[p], T(N))
       for (; null != u && "" !== u;) {
         if ("string" == typeof u) {
-          if (_(O, u)) return (0, A.transitionToChannel)(O, u, !1, f)
-        } else if ("object" == typeof u && I(u.resourceId, u.type)) return O !== r.default.getGuildId() && (0, A.transitionToChannel)(O, null === (l = s.default.getDefaultChannel(O)) || void 0 === l ? void 0 : l.id), (0, a.openModalLazy)(async () => {
+          if (_(N, u)) return (0, c.transitionToChannel)(N, u, !1, f)
+        } else if ("object" == typeof u && I(u.resourceId, u.type)) return N !== E.default.getGuildId() && (0, c.transitionToChannel)(N, null === (l = s.default.getDefaultChannel(N)) || void 0 === l ? void 0 : l.id), (0, a.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("659707").then(n.bind(n, "659707"));
           return t => (0, i.jsx)(e, {
             ...t,
-            guildId: O
+            guildId: N
           })
         });
-        R += e, u = D[R]
+        p += e, u = R[p]
       }
-    if (p += e, null == (O = L[p]) || "" === O) break;
-    D = S(O, f), R = e < 0 ? D.length - 1 : 0
+    if (D += e, null == (N = L[D]) || "" === N) break;
+    R = S(N, f), p = e < 0 ? R.length - 1 : 0
   }
-  c.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
+  A.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
     duration: 200,
     intensity: 2
   })

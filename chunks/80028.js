@@ -70,10 +70,10 @@ n.r(t), n.d(t, {
     return y
   },
   SEEK_DENOMINATOR: function() {
-    return P
+    return L
   },
   SEEK_SHIFT_MODIFIER: function() {
-    return L
+    return P
   }
 });
 var i, r, s, a, o = n("605250"),
@@ -100,5 +100,5 @@ let u = "alt+c",
   O = e => "Clip - ".concat(new Date(e).toLocaleString()),
   D = 15,
   y = 15e3,
-  P = 30,
-  L = 10
+  L = 30,
+  P = 10

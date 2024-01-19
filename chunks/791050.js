@@ -18,18 +18,18 @@ var n = r("37983"),
   _ = r("170313"),
   A = r("635956"),
   p = r("91653"),
-  m = r("697218"),
-  I = r("599110"),
+  I = r("697218"),
+  m = r("599110"),
   C = r("719923"),
   T = r("234251"),
   S = r("659117"),
   g = r("765221"),
-  h = r("49111"),
-  N = r("646718"),
-  R = r("782340"),
-  v = r("705057");
+  N = r("49111"),
+  R = r("646718"),
+  h = r("782340"),
+  O = r("705057");
 
-function O(e) {
+function v(e) {
   let {
     user: t,
     categories: r,
@@ -38,80 +38,80 @@ function O(e) {
     initialSelectedDecoration: l,
     isTryItOutFlow: E
   } = e, {
-    pendingAvatarDecoration: m,
-    setPendingAvatarDecoration: I
+    pendingAvatarDecoration: I,
+    setPendingAvatarDecoration: m
   } = (0, p.default)({
     analyticsLocations: i,
     isTryItOut: E
-  }), [h, O] = a.useState(() => {
+  }), [N, v] = a.useState(() => {
     var e;
     if (null != l) return l;
-    if (void 0 !== m) return m;
+    if (void 0 !== I) return I;
     if ((null == t ? void 0 : t.avatarDecoration) == null || 0 === r.size) return null;
     let n = (0, d.getAvatarDecorationsFromCategories)(r);
     return null !== (e = n.find(e => (0, T.isEqualAvatarDecoration)(e, t.avatarDecoration))) && void 0 !== e ? e : null
   }), {
     product: M,
     purchase: x
-  } = (0, f.default)(null == h ? void 0 : h.skuId), D = C.default.canUseCollectibles(t), b = a.useRef(null), P = (0, _.default)(i), H = (0, T.isEqualAvatarDecoration)(h, void 0 === m ? null == t ? void 0 : t.avatarDecoration : m), L = () => {
-    I(h), s()
+  } = (0, f.default)(null == N ? void 0 : N.skuId), D = C.default.canUseCollectibles(t), b = a.useRef(null), P = (0, _.default)(i), H = (0, T.isEqualAvatarDecoration)(N, void 0 === I ? null == t ? void 0 : t.avatarDecoration : I), L = () => {
+    m(N), s()
   }, U = a.useCallback(() => {
     s(), (0, c.openCollectiblesShop)({
       analyticsLocations: i,
       analyticsSource: o.default.EDIT_AVATAR_DECORATION_MODAL,
-      initialProductSkuId: null != h ? h.skuId : void 0
+      initialProductSkuId: null != N ? N.skuId : void 0
     })
-  }, [i, s, h]);
+  }, [i, s, N]);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(u.ModalHeader, {
       separator: !1,
-      className: v.modalHeader,
+      className: O.modalHeader,
       children: [(0, n.jsx)(u.Heading, {
         variant: "heading-lg/semibold",
-        children: R.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+        children: h.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), (0, n.jsx)(u.ModalCloseButton, {
-        className: v.modalCloseButton,
+        className: O.modalCloseButton,
         onClick: s
       })]
     }), (0, n.jsxs)(u.ModalContent, {
-      className: v.modalContent,
+      className: O.modalContent,
       scrollbarType: "none",
       children: [(0, n.jsx)(g.default, {
         user: t,
-        pendingAvatarDecoration: h,
+        pendingAvatarDecoration: N,
         selectedAvatarDecorationRef: b,
         onSelect: e => {
-          O(e), null != e && P(e)
+          v(e), null != e && P(e)
         },
         onOpenShop: U
       }), (0, n.jsx)(S.default, {
-        className: v.modalPreview,
+        className: O.modalPreview,
         user: t,
-        avatarDecorationOverride: h
+        avatarDecorationOverride: N
       })]
     }), (0, n.jsxs)(u.ModalFooter, {
-      className: v.modalFooter,
+      className: O.modalFooter,
       children: [(() => {
         let e = null != x && (!(0, d.isPremiumCollectiblesPurchase)(x) || D);
-        if (e || null === h) return (0, n.jsx)(u.Button, {
+        if (e || null === N) return (0, n.jsx)(u.Button, {
           onClick: L,
           disabled: H,
-          children: R.default.Messages.AVATAR_DECORATION_MODAL_APPLY
+          children: h.default.Messages.AVATAR_DECORATION_MODAL_APPLY
         });
         let r = D || !(0, d.isPremiumCollectiblesProduct)(M);
         return r ? (0, n.jsx)(u.Button, {
-          className: v.modalFooterShopButton,
+          className: O.modalFooterShopButton,
           onClick: U,
-          children: R.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+          children: h.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
         }) : (0, n.jsx)(A.default, {
-          subscriptionTier: N.PremiumSubscriptionSKUs.TIER_2,
-          buttonText: C.default.isPremium(t) ? R.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : R.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+          subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,
+          buttonText: C.default.isPremium(t) ? h.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : h.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
         })
       })(), (0, n.jsx)(u.Button, {
         look: u.Button.Looks.LINK,
         color: u.Button.Colors.PRIMARY,
         onClick: s,
-        children: R.default.Messages.CANCEL
+        children: h.default.Messages.CANCEL
       })]
     })]
   })
@@ -124,17 +124,17 @@ function M(e) {
     onClose: d,
     initialSelectedDecoration: f,
     isTryItOutFlow: _
-  } = e, A = (0, s.useStateFromStores)([m.default], () => m.default.getCurrentUser()), {
+  } = e, A = (0, s.useStateFromStores)([I.default], () => I.default.getCurrentUser()), {
     AnalyticsLocationProvider: p,
     analyticsLocations: C
   } = (0, l.default)(r, o.default.EDIT_AVATAR_DECORATION_MODAL), {
     categories: T,
     purchases: S,
     isFetchingCategories: g,
-    isFetchingPurchases: N
-  } = (0, E.default)(), R = g || N && 0 === S.size;
+    isFetchingPurchases: R
+  } = (0, E.default)(), h = g || R && 0 === S.size;
   return a.useEffect(() => {
-    I.default.track(h.AnalyticEvents.OPEN_MODAL, {
+    m.default.track(N.AnalyticEvents.OPEN_MODAL, {
       type: "Edit Avatar Decoration Modal",
       location_stack: C
     })
@@ -146,12 +146,12 @@ function M(e) {
   }, [T]), null == A ? null : (0, n.jsx)(p, {
     children: (0, n.jsx)(u.ModalRoot, {
       transitionState: t,
-      className: v.modal,
-      size: R ? u.ModalSize.DYNAMIC : u.ModalSize.MEDIUM,
-      children: R ? (0, n.jsx)(u.Spinner, {
-        className: v.spinner,
+      className: O.modal,
+      size: h ? u.ModalSize.DYNAMIC : u.ModalSize.MEDIUM,
+      children: h ? (0, n.jsx)(u.Spinner, {
+        className: O.spinner,
         type: u.Spinner.Type.SPINNING_CIRCLE
-      }) : (0, n.jsx)(O, {
+      }) : (0, n.jsx)(v, {
         user: A,
         categories: T,
         analyticsLocations: C,
