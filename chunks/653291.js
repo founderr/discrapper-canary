@@ -42,11 +42,11 @@ var a = n("37983"),
   P = n("782340"),
   w = n("813069");
 let G = f("2015-05-15").local(),
-  H = (0, h.makeLazy)({
+  B = (0, h.makeLazy)({
     createPromise: () => n.el("201959").then(n.bind(n, "201959")),
     webpackId: "201959"
   }),
-  B = (e, t, n) => {
+  H = (e, t, n) => {
     var l, s, i;
     let {
       user: r,
@@ -137,7 +137,7 @@ let G = f("2015-05-15").local(),
   z = e => (0, a.jsx)(Y, {
     ...e,
     className: w.user,
-    renderResult: B
+    renderResult: H
   }),
   K = {
     [k.SearchTokenTypes.FILTER_FROM]: {
@@ -399,7 +399,7 @@ class Q extends l.PureComponent {
       return e.type !== k.SearchPopoutModes.FILTER && e.type !== k.SearchPopoutModes.EMPTY && !F.showDatePicker(e.filter)
     }, this.renderDatePicker = () => (0, a.jsxs)("div", {
       className: w.datePicker,
-      children: [(0, a.jsx)(H, {
+      children: [(0, a.jsx)(B, {
         onSelect: this.handleDateChange,
         maxDate: f().local(),
         minDate: G

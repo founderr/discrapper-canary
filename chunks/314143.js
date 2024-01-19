@@ -10,8 +10,8 @@ var a = l("37983"),
   i = l.n(s),
   o = l("65597"),
   d = l("77078"),
-  u = l("691386"),
-  r = l("804160"),
+  r = l("691386"),
+  u = l("804160"),
   C = l("178406"),
   c = l("645266"),
   f = l("782340"),
@@ -21,12 +21,12 @@ function E(e) {
   let {
     guildId: t,
     onPageChange: l
-  } = e, [s, E] = n.useTransition(), M = (0, o.default)([C.default], () => C.default.getEstimatedMemberSearchCountByGuildId(t), [t]), h = (0, o.useStateFromStoresObject)([C.default], () => C.default.getPaginationStateByGuildId(t), [t]), T = (0, r.useIsMakingRequest)(t), x = n.useMemo(() => u.PAGINATION_PAGE_SIZE_OPTIONS.map(e => ({
+  } = e, [s, E] = n.useTransition(), M = (0, o.default)([C.default], () => C.default.getEstimatedMemberSearchCountByGuildId(t), [t]), h = (0, o.useStateFromStoresObject)([C.default], () => C.default.getPaginationStateByGuildId(t), [t]), T = (0, u.useIsMakingRequest)(t), x = n.useMemo(() => r.PAGINATION_PAGE_SIZE_OPTIONS.map(e => ({
     value: e,
     label: Number(e).toLocaleString()
   })), []), _ = new Intl.NumberFormat(f.default.getLocale()).format(M), H = f.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
     count: T ? "..." : _
-  }), A = M > h.pageSize || T, p = M > u.PAGINATION_PAGE_SIZE_OPTIONS[0];
+  }), A = M > h.pageSize || T, p = M > r.PAGINATION_PAGE_SIZE_OPTIONS[0];
   return (0, a.jsxs)("div", {
     className: i(m.paginationContainer),
     children: [(0, a.jsx)("div", {
@@ -88,7 +88,7 @@ function E(e) {
             })
           })
         },
-        maxVisiblePages: u.MAX_VISIBLE_PAGES
+        maxVisiblePages: r.MAX_VISIBLE_PAGES
       })
     })]
   })

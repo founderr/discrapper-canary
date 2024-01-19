@@ -10,8 +10,8 @@ var a = l("37983"),
   i = l.n(s),
   o = l("65597"),
   d = l("77078"),
-  u = l("4845"),
-  r = l("635731"),
+  r = l("4845"),
+  u = l("635731"),
   C = l("491401"),
   c = l("864982"),
   f = l("130037"),
@@ -57,7 +57,7 @@ function _(e) {
         id: "toggle-require-unusual-dm-activity",
         label: (0, a.jsxs)("div", {
           className: x.checkboxLabel,
-          children: [(0, a.jsx)(u.default, {
+          children: [(0, a.jsx)(r.default, {
             width: 16,
             height: 16,
             className: x.unusualDMLabelIcon
@@ -94,7 +94,7 @@ function _(e) {
           id: "toggle-require-username-quarantined",
           label: (0, a.jsxs)("div", {
             className: x.checkboxLabel,
-            children: [(0, a.jsx)(r.default, {
+            children: [(0, a.jsx)(u.default, {
               width: 16,
               height: 16,
               className: x.quarantinedLabelIcon

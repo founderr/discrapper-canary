@@ -117,13 +117,13 @@ function G() {
   A = A.filter(e => !S.default.isBlocked(e.author.id))
 }
 
-function H(e) {
+function B(e) {
   let {
     channel: t
   } = e;
   A = l.filter(A, e => e.channel_id !== t.id || (delete M[e.id], !1))
 }
-class B extends s.default.Store {
+class H extends s.default.Store {
   initialize() {
     this.waitFor(T.default, m.default, p.default, g.default)
   }
@@ -161,8 +161,8 @@ class B extends s.default.Store {
     return y
   }
 }
-B.displayName = "RecentMentionsStore";
-var V = new B(o.default, {
+H.displayName = "RecentMentionsStore";
+var V = new H(o.default, {
   LOAD_RECENT_MENTIONS: function(e) {
     let {
       guildId: t
@@ -248,8 +248,8 @@ var V = new B(o.default, {
   },
   USER_SETTINGS_PROTO_UPDATE: w,
   I18N_LOAD_SUCCESS: w,
-  CHANNEL_DELETE: H,
-  THREAD_DELETE: H,
+  CHANNEL_DELETE: B,
+  THREAD_DELETE: B,
   RELATIONSHIP_ADD: G,
   RELATIONSHIP_REMOVE: G,
   MENTION_MODAL_OPEN: function() {

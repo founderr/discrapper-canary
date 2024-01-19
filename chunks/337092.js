@@ -10,8 +10,8 @@ var a = l("37983"),
   i = l.n(s),
   o = l("917351"),
   d = l("969176"),
-  u = l.n(d),
-  r = l("249654"),
+  r = l.n(d),
+  u = l("249654"),
   C = l("65597"),
   c = l("669491"),
   f = l("77078"),
@@ -27,12 +27,12 @@ var a = l("37983"),
   p = l("697218"),
   S = l("91551"),
   L = l("4845"),
-  g = l("635731"),
-  N = l("491401"),
+  N = l("635731"),
+  g = l("491401"),
   v = l("663745"),
   I = l("781896"),
-  R = l("864982"),
-  j = l("151185"),
+  j = l("864982"),
+  R = l("151185"),
   b = l("387111"),
   D = l("158998"),
   O = l("536999"),
@@ -86,7 +86,7 @@ let q = n.memo(function(e) {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(N.default, {
+        return (0, a.jsx)(g.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
@@ -101,7 +101,7 @@ let q = n.memo(function(e) {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(R.default, {
+        return (0, a.jsx)(j.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
@@ -116,7 +116,7 @@ let q = n.memo(function(e) {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(g.default, {
+        return (0, a.jsx)(N.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
@@ -153,7 +153,7 @@ let K = n.memo(function(e) {
     let {
       member: t,
       highestRole: l
-    } = e, s = (0, C.default)([H.default], () => H.default.getGuild(t.guildId), [t.guildId]), [o, d] = n.useState(!1), u = t.roles.length - 1, r = n.useMemo(() => new Intl.NumberFormat(Y.default.getLocale()).format(u), [u]), c = (0, k.useContextMenuModerateRoles)(t), m = (0, C.default)([A.default], () => A.default.can(P.Permissions.MANAGE_ROLES, s), [s]), E = n.useCallback(e => () => {
+    } = e, s = (0, C.default)([H.default], () => H.default.getGuild(t.guildId), [t.guildId]), [o, d] = n.useState(!1), r = t.roles.length - 1, u = n.useMemo(() => new Intl.NumberFormat(Y.default.getLocale()).format(r), [r]), c = (0, k.useContextMenuModerateRoles)(t), m = (0, C.default)([A.default], () => A.default.can(P.Permissions.MANAGE_ROLES, s), [s]), E = n.useCallback(e => () => {
       d(!0), null == e || e()
     }, []), M = n.useCallback(e => () => {
       d(!1), null == e || e()
@@ -164,7 +164,7 @@ let K = n.memo(function(e) {
         className: i(G.roleTooltipItem, G.highestRole),
         role: l,
         guildId: t.guildId
-      }), u > 0 && (0, a.jsx)(f.Tooltip, {
+      }), r > 0 && (0, a.jsx)(f.Tooltip, {
         "aria-label": Y.default.Messages.MEMBER_SAFETY_MORE_ROLES_TOOLTIP,
         tooltipContentClassName: G.roleTooltip,
         allowOverflow: !0,
@@ -186,7 +186,7 @@ let K = n.memo(function(e) {
             children: (0, a.jsxs)(f.Text, {
               variant: "text-xs/medium",
               color: "header-primary",
-              children: ["+", r]
+              children: ["+", u]
             })
           })
         }
@@ -202,7 +202,7 @@ let K = n.memo(function(e) {
             onClick: c,
             onMouseEnter: t,
             onMouseLeave: l,
-            children: (0, a.jsx)(j.default, {
+            children: (0, a.jsx)(R.default, {
               className: i(G.addRoleIcon),
               width: 16,
               height: 16
@@ -293,7 +293,7 @@ let X = n.memo(function(e) {
       accountCreationDateShort: s,
       accountCreationDateLong: i
     } = n.useMemo(() => {
-      let e = r.default.extractTimestamp(t.userId),
+      let e = u.default.extractTimestamp(t.userId),
         l = (0, F.formatDateRelativeTime)(e, F.MembersTableDateFormats.ACCOUNT_AGE),
         a = new Date(e).toLocaleDateString(Y.default.getLocale(), F.ACCOUNT_AGE_DATE_TOOLTIP_CONFIG);
       return {
@@ -323,8 +323,8 @@ let X = n.memo(function(e) {
       user: s,
       highestRole: o,
       isHoldingAdvancedInfoKey: d,
-      onOpenModerationMenu: u,
-      onOpenProfileMenu: r,
+      onOpenModerationMenu: r,
+      onOpenProfileMenu: u,
       compact: c
     } = e, m = (0, C.default)([A.default, H.default], () => A.default.can(P.Permissions.MANAGE_GUILD, H.default.getGuild(l.guildId)), [l.guildId]), {
       selectedUserIds: E,
@@ -417,7 +417,7 @@ let X = n.memo(function(e) {
               return (0, a.jsx)(f.Clickable, {
                 onMouseEnter: t,
                 onMouseLeave: l,
-                onClick: r,
+                onClick: u,
                 className: i(G.button),
                 children: (0, a.jsx)(I.default, {
                   width: ee,
@@ -435,7 +435,7 @@ let X = n.memo(function(e) {
               return (0, a.jsx)(f.Clickable, {
                 onMouseEnter: t,
                 onMouseLeave: l,
-                onClick: u,
+                onClick: r,
                 className: i(G.button),
                 children: (0, a.jsx)(v.default, {
                   width: ee,
@@ -456,7 +456,7 @@ var el = n.memo(function(e) {
     guildId: l,
     style: s,
     onSelect: d,
-    rowSelected: r,
+    rowSelected: u,
     isHoldingAdvancedInfoKey: c = !1,
     compact: f = !1
   } = e, m = (0, C.default)([_.default], () => _.default.getGuildSidebarState(l), [l]), E = (null == m ? void 0 : m.details.userId) === t, M = (0, C.default)([B.default], () => B.default.getEnhancedMember(l, t), [l, t]), h = (0, k.useHighestRole)(M), T = (0, C.default)([p.default], () => p.default.getUser(t), [t]), x = (0, k.useContextMenuModerateUser)(null != M ? M : void 0), H = n.useCallback(e => {
@@ -465,12 +465,12 @@ var el = n.memo(function(e) {
     e.stopPropagation(), e.preventDefault(), null != M && (null == d || d(M))
   }, [d, M]), S = n.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), null != M && (0, k.openMemberProfile)(M)
-  }, [M]), L = n.useCallback((e, t) => u((0, o.omit)(e, et), (0, o.omit)(t, et)), []);
+  }, [M]), L = n.useCallback((e, t) => r((0, o.omit)(e, et), (0, o.omit)(t, et)), []);
   return null == M ? null : (0, a.jsx)(y.default, {
     role: "row",
     value: M,
     style: s,
-    className: i(G.roundedRow, G.memberRowContainer, r && G.selected, E && G.memberSelected),
+    className: i(G.roundedRow, G.memberRowContainer, u && G.selected, E && G.memberSelected),
     equalityFn: L,
     onClick: A,
     onContextMenu: H,

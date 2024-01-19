@@ -10,8 +10,8 @@ var a = l("37983"),
   i = l.n(s),
   o = l("866227"),
   d = l.n(o),
-  u = l("65597"),
-  r = l("77078"),
+  r = l("65597"),
+  u = l("77078"),
   C = l("812204"),
   c = l("781896"),
   f = l("493910"),
@@ -26,13 +26,13 @@ function _(e) {
   let {
     guild: t,
     onSubmit: s
-  } = e, o = (0, u.default)([E.default], () => E.default.getMembersCountByGuildId(t.id, f.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [t.id]), _ = (0, u.default)([E.default], () => {
+  } = e, o = (0, r.default)([E.default], () => E.default.getMembersCountByGuildId(t.id, f.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [t.id]), _ = (0, r.default)([E.default], () => {
     let e = E.default.getNewMemberTimestamp(t.id);
     return d(e).format("h:mm A")
-  }, [t.id]), H = (0, u.default)([E.default], () => E.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), A = n.useCallback(() => {
+  }, [t.id]), H = (0, r.default)([E.default], () => E.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), A = n.useCallback(() => {
     (0, M.refreshMemberSafetyTimestamp)(t.id), null == s || s()
   }, [t.id, s]), p = n.useCallback(() => {
-    H ? A() : (0, r.openModalLazy)(async () => {
+    H ? A() : (0, u.openModalLazy)(async () => {
       let {
         default: e
       } = await l.el("756912").then(l.bind(l, "756912"));
@@ -41,13 +41,13 @@ function _(e) {
         onConfirm: A
       })
     })
-  }, [A, H]), S = new Intl.NumberFormat(h.default.getLocale()).format(o), L = (0, m.useCanAccessInviteCodeFeature)(t.id), g = (0, m.useCanAccessBulkBanningFeature)(t.id, C.default.MEMBER_SAFETY_PAGE), N = n.useMemo(() => 1 + (L ? 1 : 0) + (g ? 1 : 0), [L, g]);
+  }, [A, H]), S = new Intl.NumberFormat(h.default.getLocale()).format(o), L = (0, m.useCanAccessInviteCodeFeature)(t.id), N = (0, m.useCanAccessBulkBanningFeature)(t.id, C.default.MEMBER_SAFETY_PAGE), g = n.useMemo(() => 1 + (L ? 1 : 0) + (N ? 1 : 0), [L, N]);
   return 0 === o ? null : (0, a.jsxs)("tr", {
     className: i(x.newMembersNotice),
     onClick: p,
     children: [(0, a.jsx)("td", {
       colSpan: 3,
-      children: (0, a.jsx)(r.Text, {
+      children: (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
         color: "always-white",
         children: h.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
@@ -56,17 +56,17 @@ function _(e) {
         })
       })
     }), (0, a.jsx)("td", {
-      colSpan: N
+      colSpan: g
     }), (0, a.jsx)("td", {
       colSpan: 2,
       children: (0, a.jsx)("div", {
         className: i(T.actionCell),
-        children: (0, a.jsx)(r.Button, {
-          size: r.Button.Sizes.SMALL,
-          color: r.Button.Colors.TRANSPARENT,
-          look: r.Button.Looks.LINK,
+        children: (0, a.jsx)(u.Button, {
+          size: u.Button.Sizes.SMALL,
+          color: u.Button.Colors.TRANSPARENT,
+          look: u.Button.Looks.LINK,
           className: i(x.memberNoticeActionButton),
-          children: (0, a.jsxs)(r.Text, {
+          children: (0, a.jsxs)(u.Text, {
             variant: "text-sm/normal",
             color: "always-white",
             className: i(x.memberNoticeAction),

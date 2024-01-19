@@ -35,7 +35,7 @@ __OVERLAY__ && (I = n("901165").default), (r = s || (s = {})).OVERLAY_UNLOCKED =
 let A = e => 0 === e.type,
   D = e => 1 === e.type,
   N = e => A(e) ? e.message.nonce : D(e) ? e.message.messageId : e.message.data.id,
-  O = [1 * E.default.Millis.SECOND, 5 * E.default.Millis.SECOND];
+  O = [1 * E.default.Millis.SECOND, 5 * E.default.Millis.MINUTE];
 class b extends y.default {
   isFull() {
     return this.queue.length >= this.maxSize

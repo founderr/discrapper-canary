@@ -8,8 +8,8 @@ var a, n, s = l("37983"),
   i = l("884691"),
   o = l("733724"),
   d = l("77078"),
-  u = l("812204"),
-  r = l("712125"),
+  r = l("812204"),
+  u = l("712125"),
   C = l("311161"),
   c = l("928098"),
   f = l("619259"),
@@ -216,8 +216,8 @@ function p(e) {
   } = e, m = i.useCallback(() => {
     (0, d.openModalLazy)(async () => {
       let e = {
-          source: r.GuildIncidentActionSources.MEMBER_SAFETY_PAGE,
-          location: u.default.MEMBER_SAFETY_PAGE,
+          source: u.GuildIncidentActionSources.MEMBER_SAFETY_PAGE,
+          location: r.default.MEMBER_SAFETY_PAGE,
           alertType: (0, C.getIncidentAlertType)(a)
         },
         {

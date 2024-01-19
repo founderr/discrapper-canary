@@ -27,8 +27,8 @@ function d(e) {
     onChange: n,
     placeholder: s,
     disableEveryoneRole: d,
-    helperText: u,
-    className: r
+    helperText: r,
+    className: u
   } = e, C = o(t, l, d);
   return (0, a.jsx)(i.default, {
     roleRows: C,
@@ -36,7 +36,7 @@ function d(e) {
     selectedRoleIds: l,
     onChange: (e, t) => n(t),
     placeholder: s,
-    helperText: u,
-    className: r
+    helperText: r,
+    className: u
   })
 }

@@ -1,11 +1,11 @@
 "use strict";
-let s, i, l;
+let i, s, r;
 n.r(t), n.d(t, {
   default: function() {
     return M
   }
 }), n("222007"), n("424973");
-var r, a, u = n("866227"),
+var l, a, u = n("866227"),
   o = n.n(u),
   c = n("446674"),
   d = n("407846"),
@@ -22,7 +22,7 @@ var r, a, u = n("866227"),
   S = n("697218"),
   A = n("299039"),
   g = n("724210");
-(a = r || (r = {})).DEFAULT = "DEFAULT", a.FAVORITE = "FAVORITE";
+(a = l || (l = {})).DEFAULT = "DEFAULT", a.FAVORITE = "FAVORITE";
 let R = new d.default(e => {
   let {
     isRequest: t,
@@ -39,14 +39,14 @@ let R = new d.default(e => {
 function N(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(e) {
     var t, n;
-    let s = null !== (n = null !== (t = T.default.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
-      i = e.isMessageRequestTimestamp;
-    if (null != i) {
-      let e = o(i).valueOf(),
+    let i = null !== (n = null !== (t = T.default.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
+      s = e.isMessageRequestTimestamp;
+    if (null != s) {
+      let e = o(s).valueOf(),
         t = A.default.fromTimestamp(e);
-      return A.default.compare(s, t) > 0 ? s : t
+      return A.default.compare(i, t) > 0 ? i : t
     }
-    return s
+    return i
   }(e);
   return {
     channelId: e.id,
@@ -65,31 +65,31 @@ function x() {
   })
 }
 
-function P() {
+function L() {
   let e = C.default.getMutablePrivateChannels();
   for (let t in e) R.set(t, N(e[t]))
 }
-let L = (s = [], i = [], l = [], () => {
+let P = (i = [], s = [], r = [], () => {
   let e = R.values("FAVORITE"),
     t = R.values("DEFAULT");
-  return (s !== e || i !== t) && (l = [], e.forEach(e => {
+  return (i !== e || s !== t) && (r = [], e.forEach(e => {
     let {
       channelId: t
     } = e;
-    return l.push(t)
-  }), s = e, t.forEach(e => {
+    return r.push(t)
+  }), i = e, t.forEach(e => {
     let {
       channelId: t
     } = e;
-    return l.push(t)
-  }), i = t), l
+    return r.push(t)
+  }), s = t), r
 });
 class y extends c.default.Store {
   initialize() {
     this.waitFor(C.default, _.default, S.default, I.default, m.default), this.syncWith([m.default, I.default], x)
   }
   getPrivateChannelIds() {
-    return L()
+    return P()
   }
   getSortedChannels() {
     return [R.values("FAVORITE"), R.values("DEFAULT")]
@@ -99,9 +99,9 @@ class y extends c.default.Store {
     return R.values().forEach(t => {
       let {
         channelId: n,
-        lastMessageId: s
+        lastMessageId: i
       } = t;
-      e[n] = s
+      e[n] = i
     }), e
   }
 }
@@ -110,8 +110,8 @@ var M = new y(f.default, {
   CONNECTION_OPEN: x,
   CONNECTION_OPEN_SUPPLEMENTAL: x,
   OVERLAY_INITIALIZE: x,
-  CACHE_LOADED: P,
-  CACHE_LOADED_LAZY: P,
+  CACHE_LOADED: L,
+  CACHE_LOADED_LAZY: L,
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
@@ -139,8 +139,8 @@ var M = new y(f.default, {
       message: n
     } = e;
     if (!R.has(t)) return !1;
-    let s = C.default.getChannel(t);
-    return null != s && R.set(t, N(s, n.id))
+    let i = C.default.getChannel(t);
+    return null != i && R.set(t, N(i, n.id))
   },
   GUILD_CREATE: function(e) {
     let t = e.guild.id;

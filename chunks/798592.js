@@ -21,12 +21,12 @@ function a() {
   }), []), a = i.useMemo(() => ({
     fire: (i, s, l) => {
       var r, a;
-      let o = (null == l ? void 0 : l.settings) != null ? {
+      let u = (null == l ? void 0 : l.settings) != null ? {
           ...t,
           ...l.settings
         } : t,
-        u = n(o);
-      e(i, s, u, (null !== (r = null == l ? void 0 : l.count) && void 0 !== r ? r : o.confettiCount) * (null !== (a = null == l ? void 0 : l.countMultiplier) && void 0 !== a ? a : 1), {
+        o = n(u);
+      e(i, s, o, (null !== (r = null == l ? void 0 : l.count) && void 0 !== r ? r : u.confettiCount) * (null !== (a = null == l ? void 0 : l.countMultiplier) && void 0 !== a ? a : 1), {
         sprite: null == l ? void 0 : l.sprite
       })
     }

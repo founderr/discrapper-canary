@@ -10,8 +10,8 @@ var a = l("37983"),
   i = l.n(s),
   o = l("77078"),
   d = l("230559"),
-  u = l("553275"),
-  r = l("948512"),
+  r = l("553275"),
+  u = l("948512"),
   C = l("782340"),
   c = l("386665");
 
@@ -19,16 +19,16 @@ function f(e) {
   let {
     searchState: t
   } = e, l = n.useMemo(() => ({
-    [u.SearchState.LOADING]: null,
-    [u.SearchState.SUCCESS_STILL_INDEXING]: {
+    [r.SearchState.LOADING]: null,
+    [r.SearchState.SUCCESS_STILL_INDEXING]: {
       icon: (0, a.jsx)(d.default, {}),
       message: C.default.Messages.SEARCH_GUILD_STILL_INDEXING
     },
-    [u.SearchState.SUCCESS_EMPTY]: {
-      icon: (0, a.jsx)(r.default, {}),
+    [r.SearchState.SUCCESS_EMPTY]: {
+      icon: (0, a.jsx)(u.default, {}),
       message: C.default.Messages.MEMBER_SAFETY_TABLE_NO_RESULTS
     },
-    [u.SearchState.SUCCESS_FULL]: null
+    [r.SearchState.SUCCESS_FULL]: null
   }), []), s = l[t];
   return null == s ? null : (0, a.jsxs)("div", {
     className: i(c.noResultsContainer),

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var i = n("37983");
@@ -11,15 +11,15 @@ var r = n("414456"),
   a = n("77078"),
   s = n("396671");
 
-function u(e) {
+function o(e) {
   let {
     children: t,
     className: n,
     size: r = a.Button.Sizes.SMALL,
-    ...u
+    ...o
   } = e;
   return (0, i.jsx)(a.Button, {
-    ...u,
+    ...o,
     size: r,
     className: l(s.button, n),
     children: t

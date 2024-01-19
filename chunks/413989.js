@@ -10,8 +10,8 @@ var a = l("37983"),
   i = l.n(s),
   o = l("448105"),
   d = l.n(o),
-  u = l("483366"),
-  r = l.n(u),
+  r = l("483366"),
+  u = l.n(r),
   C = l("969176"),
   c = l.n(C),
   f = l("65597"),
@@ -30,7 +30,7 @@ function S(e) {
   let {
     guildId: t,
     onClose: l
-  } = e, s = (0, M.useTrackMemberFilterRolesUsed)(t), o = (0, f.default)([h.default], () => h.default.getSearchStateByGuildId(t), [t], c), [u, C] = n.useState(o.selectedRoleIds), S = (0, E.useRoleRows)(t, p, !0), L = (e, l) => {
+  } = e, s = (0, M.useTrackMemberFilterRolesUsed)(t), o = (0, f.default)([h.default], () => h.default.getSearchStateByGuildId(t), [t], c), [r, C] = n.useState(o.selectedRoleIds), S = (0, E.useRoleRows)(t, p, !0), L = (e, l) => {
     let {
       record: n
     } = e;
@@ -59,23 +59,23 @@ function S(e) {
         })]
       })
     }, n.id)
-  }, g = (e, t) => S.reduce((l, a) => {
+  }, N = (e, t) => S.reduce((l, a) => {
     let {
       record: n
     } = a, s = e.has(n.id);
     return d(t.toLowerCase(), n.name.toLowerCase()) ? l.push(L(a, s)) : s && l.push(L(a, s)), l
-  }, []), N = n.useCallback(e => {
+  }, []), g = n.useCallback(e => {
     (0, T.updateSearchState)(t, {
       selectedRoleIds: e
     }), s(e)
-  }, [t, s]), v = n.useCallback(r(N, 300), [N]), I = n.useCallback(e => {
+  }, [t, s]), v = n.useCallback(u(g, 300), [g]), I = n.useCallback(e => {
     let t;
-    C(t = u.has(e) ? new Set([...u].filter(t => t !== e)) : new Set([...u, e])), v(t)
-  }, [u, v]);
+    C(t = r.has(e) ? new Set([...r].filter(t => t !== e)) : new Set([...r, e])), v(t)
+  }, [r, v]);
   return (0, a.jsx)(m.ComboboxPopout, {
     className: i(H.rolePopout),
     placeholder: _.default.Messages.MEMBERS_TABLE_ROLE_SELECTION_PLACEHOLDER,
-    value: u,
+    value: r,
     onChange: I,
     onClose: () => {
       l()
@@ -83,6 +83,6 @@ function S(e) {
     multiSelect: !0,
     showScrollbar: !0,
     autoFocus: !0,
-    children: e => g(u, e)
+    children: e => N(r, e)
   })
 }

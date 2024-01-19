@@ -10,8 +10,8 @@ var a = l("37983"),
   i = l.n(s),
   o = l("483366"),
   d = l.n(o),
-  u = l("969176"),
-  r = l.n(u),
+  r = l("969176"),
+  u = l.n(r),
   C = l("65597"),
   c = l("77078"),
   f = l("957255"),
@@ -25,8 +25,8 @@ var a = l("37983"),
 let H = n.forwardRef(function(e, t) {
   let {
     guild: s
-  } = e, o = (0, C.default)([M.default], () => M.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), u = (0, C.default)([f.default], () => f.default.can(T.Permissions.KICK_MEMBERS, s)), H = n.useCallback(() => {
-    null != s && u && (0, c.openModalLazy)(async () => {
+  } = e, o = (0, C.default)([M.default], () => M.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([f.default], () => f.default.can(T.Permissions.KICK_MEMBERS, s)), H = n.useCallback(() => {
+    null != s && r && (0, c.openModalLazy)(async () => {
       let {
         default: e
       } = await l.el("494440").then(l.bind(l, "494440"));
@@ -35,16 +35,16 @@ let H = n.forwardRef(function(e, t) {
         guild: s
       })
     })
-  }, [s, u]), A = (0, C.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], r), p = (0, E.useTrackMemberSearchUsed)(s.id), [S, L] = n.useState(A.query), g = n.useCallback(e => {
+  }, [s, r]), A = (0, C.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], u), p = (0, E.useTrackMemberSearchUsed)(s.id), [S, L] = n.useState(A.query), N = n.useCallback(e => {
     let t = e.trim();
     t.length > 0 && p(), (0, h.updateSearchState)(s.id, {
       query: t
     })
-  }, [s.id, p]), N = n.useCallback(d(g, 300), [g]), v = n.useCallback(e => {
-    L(e), N(e)
-  }, [N]), I = n.useCallback(() => {
-    L(""), g("")
-  }, [g]);
+  }, [s.id, p]), g = n.useCallback(d(N, 300), [N]), v = n.useCallback(e => {
+    L(e), g(e)
+  }, [g]), I = n.useCallback(() => {
+    L(""), N("")
+  }, [N]);
   return n.useImperativeHandle(t, () => ({
     resetSearchText() {
       L("")
@@ -80,7 +80,7 @@ let H = n.forwardRef(function(e, t) {
       })
     }), (0, a.jsx)("div", {
       className: i(_.tableOptions),
-      children: u && (0, a.jsx)(c.Button, {
+      children: r && (0, a.jsx)(c.Button, {
         className: i(_.pruneButton),
         onClick: H,
         "aria-label": x.default.Messages.PRUNE_MEMBERS,

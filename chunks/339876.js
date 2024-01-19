@@ -34,11 +34,11 @@ function c(e) {
     action: () => N()
   });
   let C = _ ? f.default.Messages.REMOVE_FAVORITE : f.default.Messages.ADD_FAVORITE,
-    M = _ ? f.default.Messages.UNPIN_CHANNEL : f.default.Messages.PIN_CHANNEL_TO_TOP;
+    A = _ ? f.default.Messages.UNPIN_CHANNEL : f.default.Messages.PIN_CHANNEL_TO_TOP;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(s.MenuItem, {
       id: "opt-in-favorite-channel",
-      label: t ? M : C,
+      label: t ? A : C,
       action: () => {
         (0, u.setIsFavorite)(e.guild_id, e.id, !_, {
           section: d.AnalyticsSections.CONTEXT_MENU
