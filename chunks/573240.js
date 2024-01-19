@@ -173,22 +173,24 @@ var y = e => {
   } = e, {
     classification: s,
     classificationRequestState: c,
-    isAppealEligible: h
-  } = (0, E.useSafetyHubClassification)(r), m = (0, f.useSafetyHubAccountStanding)(), v = null != s && null != s.flagged_content && s.flagged_content.length > 0;
+    isAppealEligible: h,
+    isDsaEligible: m
+  } = (0, E.useSafetyHubClassification)(r), v = (0, f.useSafetyHubAccountStanding)(), A = null != s && null != s.flagged_content && s.flagged_content.length > 0;
   return (l.useEffect(() => {
     u.default.track(I.AnalyticEvents.SAFETY_HUB_ACTION, {
       action: S.SafetyHubAnalyticsActions.ViewViolationDetail,
-      account_standing: m.state,
+      account_standing: v.state,
       classification_ids: [Number(r)],
       source: a,
-      is_violative_content_shown: v
+      is_violative_content_shown: A,
+      is_dsa_eligible: m
     })
   }, []), null == s && c === d.ClassificationRequestState.FAILED) ? (o(), null) : null == s ? null : (0, i.jsxs)("div", {
     className: T.classificationContainer,
     children: [(0, i.jsx)(C, {
       classificationTypeText: s.description,
       guildName: null == s ? void 0 : null === (t = s.guild_metadata) || void 0 === t ? void 0 : t.name
-    }), v && null == s.guild_metadata && (0, i.jsx)(p.ClassificationEvidence, {
+    }), A && null == s.guild_metadata && (0, i.jsx)(p.ClassificationEvidence, {
       flaggedContent: null !== (n = s.flagged_content) && void 0 !== n ? n : []
     }), (0, i.jsx)(g, {
       actions: s.actions
@@ -202,10 +204,11 @@ var y = e => {
         onLetUsKnowClick: () => {
           u.default.track(I.AnalyticEvents.SAFETY_HUB_ACTION, {
             action: S.SafetyHubAnalyticsActions.ClickLetUsKnow,
-            account_standing: m.state,
+            account_standing: v.state,
             classification_ids: [Number(r)],
             source: a,
-            is_violative_content_shown: v
+            is_violative_content_shown: A,
+            is_dsa_eligible: m
           }), h && _.default.open(r)
         },
         isAppealEligible: h

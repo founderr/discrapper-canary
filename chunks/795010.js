@@ -1,30 +1,32 @@
 "use strict";
-l.r(a), l.d(a, {
+a.r(t), a.d(t, {
   default: function() {
     return o
   }
 });
-var t = l("37983");
-l("884691");
-var s = l("77078"),
-  n = l("461380"),
-  i = l("30679");
+var l = a("37983");
+a("884691");
+var s = a("77078"),
+  n = a("461380"),
+  i = a("30679");
 
 function o(e) {
   let {
-    url: a,
-    text: l
+    url: t,
+    text: a,
+    onClick: o
   } = e;
-  return (0, t.jsx)(s.Anchor, {
-    href: a,
+  return (0, l.jsx)(s.Anchor, {
+    href: t,
+    onClick: o,
     className: i.externalLinkWrapper,
-    children: (0, t.jsxs)(s.Clickable, {
+    children: (0, l.jsxs)(s.Clickable, {
       className: i.childButton,
-      children: [(0, t.jsx)(s.Text, {
+      children: [(0, l.jsx)(s.Text, {
         className: i.childText,
         variant: "text-md/semibold",
-        children: l
-      }), (0, t.jsx)(n.default, {
+        children: a
+      }), (0, l.jsx)(n.default, {
         className: i.childIcon,
         direction: n.default.Directions.RIGHT
       })]
