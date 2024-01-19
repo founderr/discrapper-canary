@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return P
   },
   getCommandAttachmentDraftType: function() {
-    return V
+    return R
   },
   getCommandTriggerSection: function() {
-    return R
+    return V
   },
   getApplicationCommandSection: function() {
     return M
@@ -138,7 +138,8 @@ function T(e) {
     displayDescription: null !== (s = a.description_localized) && void 0 !== s ? s : a.description,
     nsfw: r.nsfw,
     contexts: r.contexts,
-    integration_types: r.integration_types
+    integration_types: r.integration_types,
+    global_popularity_rank: r.global_popularity_rank
   }
 }
 
@@ -288,7 +289,7 @@ function k(e, t, n) {
   return null != r ? r.permission : null
 }
 
-function V(e) {
+function R(e) {
   switch (e) {
     case h.CommandOrigin.CHAT:
       return g.DraftType.SlashCommand;
@@ -297,7 +298,7 @@ function V(e) {
   }
 }
 
-function R(e) {
+function V(e) {
   if (null != e) {
     if (e.id === p.BuiltInSectionId.BUILT_IN) return h.ApplicationCommandTriggerSections.BUILT_IN;
     else if (e.id === p.BuiltInSectionId.FRECENCY) return h.ApplicationCommandTriggerSections.FRECENCY;
