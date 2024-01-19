@@ -30,11 +30,12 @@ class T extends o.default {
           return !(null != E && Date.now() - E < 6048e5) && !0
         }()) {
         let e = a.UUOneClickExperiment.getCurrentConfig({
-          location: "uu_one_click"
-        }, {
-          autoTrackExposure: !1
-        }).enabled;
-        (0, i.openPomeloModal)(I.PomeloEntrypoints.APP_START, e), t.default.set(s, Date.now())
+            location: "uu_one_click"
+          }, {
+            autoTrackExposure: !1
+          }).enabled,
+          _ = (0, i.openPomeloModal)(I.PomeloEntrypoints.APP_START, e, !1);
+        _ && t.default.set(s, Date.now())
       }
     }
   }
