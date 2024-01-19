@@ -23,17 +23,17 @@ var a, n, s, i, o, d, r = l("37983"),
   x = l("419830"),
   _ = l("405645"),
   H = l("19766"),
-  A = l("42203"),
-  p = l("305961"),
-  S = l("27618"),
-  L = l("697218"),
-  N = l("476765"),
-  g = l("483093"),
-  v = l("782340"),
-  I = l("159260");
-let j = (0, N.uid)(),
-  R = (0, N.uid)(),
-  b = "text-sm/medium";
+  g = l("42203"),
+  A = l("305961"),
+  p = l("27618"),
+  S = l("697218"),
+  L = l("476765"),
+  N = l("483093"),
+  I = l("782340"),
+  v = l("159260");
+let b = (0, L.uid)(),
+  j = (0, L.uid)(),
+  R = "text-sm/medium";
 
 function D(e) {
   return 1 === e.type
@@ -60,7 +60,7 @@ function V(e) {
 }
 
 function B(e) {
-  let t = (0, T.computeChannelName)(e, L.default, S.default);
+  let t = (0, T.computeChannelName)(e, S.default, p.default);
   return {
     tag: {
       type: h.RichTagTypes.CHANNEL,
@@ -87,24 +87,24 @@ let y = u.memo(function(e) {
     guildId: a,
     roleId: s,
     size: 16
-  }), d = (0, E.useStateFromStores)([p.default], () => {
-    let e = p.default.getGuild(a);
+  }), d = (0, E.useStateFromStores)([A.default], () => {
+    let e = A.default.getGuild(a);
     return null == e ? null : e.roles[s]
   }, [s, a]), u = i.includes(H.EVERYONE_ID) ? "" : "@", C = (0, M.useToken)(M.tokens.unsafe_rawColors.PRIMARY_300).hsl(), f = null !== (t = null == d ? void 0 : d.colorString) && void 0 !== t ? t : C;
   return (0, r.jsxs)("div", {
-    className: c(I.rowLabel, I.roleTagContainer, n),
+    className: c(v.rowLabel, v.roleTagContainer, n),
     children: [(0, r.jsx)(M.RoleDot, {
-      className: I.roleDot,
+      className: v.roleDot,
       color: f,
       background: !1,
       tooltip: !1
-    }), null != o ? (0, r.jsx)(g.default, {
-      className: I.roleTagIcon,
+    }), null != o ? (0, r.jsx)(N.default, {
+      className: v.roleTagIcon,
       ...o,
       enableTooltip: !1
     }) : u, (0, r.jsx)(M.Text, {
-      variant: b,
-      className: I.roleTagLabel,
+      variant: R,
+      className: v.roleTagLabel,
       children: i
     })]
   })
@@ -117,15 +117,15 @@ function F(e) {
     className: a
   } = e, n = null != t.parent_id, s = (0, x.getChannelIconComponent)(t);
   return (0, r.jsxs)("div", {
-    className: c(I.rowLabel, I.channelLabel, {
-      [I.hasParent]: n
+    className: c(v.rowLabel, v.channelLabel, {
+      [v.hasParent]: n
     }, a),
     children: [null != s && (0, r.jsx)(s, {
       width: 16,
       height: 16,
-      className: I.channelIcon
+      className: v.channelIcon
     }), (0, r.jsx)(M.Text, {
-      variant: t.isCategory() ? "eyebrow" : b,
+      variant: t.isCategory() ? "eyebrow" : R,
       children: l.display
     })]
   })
@@ -154,19 +154,19 @@ function w(e) {
     placeholder: o,
     helperText: d,
     className: C
-  } = e, f = (0, E.useStateFromStores)([p.default], () => {
+  } = e, f = (0, E.useStateFromStores)([A.default], () => {
     var e, l;
-    return null !== (l = null === (e = p.default.getGuild(t)) || void 0 === e ? void 0 : e.roles) && void 0 !== l ? l : {}
+    return null !== (l = null === (e = A.default.getGuild(t)) || void 0 === e ? void 0 : e.roles) && void 0 !== l ? l : {}
   }, [t]), T = u.useMemo(() => (function(e, t, l) {
     if (null == e) return {};
     let a = {};
     return e.forEach(e => {
-      let t = A.default.getChannel(e);
+      let t = g.default.getChannel(e);
       null != t && (a[e] = B(t))
     }), t.forEach(e => {
       e in l && (a[e] = V(l[e]))
     }), a
-  })(n, s, f), [n, s, f]), x = u.useMemo(() => Object.keys(T), [T]), [_, H] = u.useState(""), [S, L] = u.useState(!1), [N, g] = u.useState(!1), [b, y] = u.useState(!1), F = u.useRef(null), {
+  })(n, s, f), [n, s, f]), x = u.useMemo(() => Object.keys(T), [T]), [_, H] = u.useState(""), [p, S] = u.useState(!1), [L, N] = u.useState(!1), [R, y] = u.useState(!1), F = u.useRef(null), {
     sections: w,
     sectionCounts: k
   } = u.useMemo(() => {
@@ -194,18 +194,18 @@ function w(e) {
       }).map(e => e.row.record.id);
     i(new Set(l), new Set(a))
   }, [i]), P = () => {
-    L(!1), g(!1)
+    S(!1), N(!1)
   };
   u.useEffect(() => {
     let e = setTimeout(() => {
-      y(S || N)
+      y(p || L)
     }, 32);
     return () => {
       clearTimeout(e)
     }
-  }, [S, N]);
+  }, [p, L]);
   let Y = (e, t, l) => {
-      l.stopPropagation(), l.preventDefault(), 2 === t ? L(e) : (1 === t || L(e), g(e))
+      l.stopPropagation(), l.preventDefault(), 2 === t ? S(e) : (1 === t || S(e), N(e))
     },
     G = u.useCallback(e => {
       let t = {
@@ -227,13 +227,13 @@ function w(e) {
         row: a
       } = e, n = w[l][a];
       return (0, r.jsx)(M.Clickable, {
-        className: c(I.selectableSearchRow, I.rowHeight),
+        className: c(v.selectableSearchRow, v.rowHeight),
         onClick: e => {
           e.stopPropagation(), G(n)
         },
         children: (0, r.jsx)("div", {
-          className: I.rowContainer,
-          children: U(n, t, I.searchRowLabel)
+          className: v.rowContainer,
+          children: U(n, t, v.searchRowLabel)
         })
       }, n.id)
     }, [t, G, w]),
@@ -241,13 +241,13 @@ function w(e) {
       var l, a;
       return l = T[e], a = t, {
         ...l.tag,
-        label: U(l.row, a, I.noIndent)
+        label: U(l.row, a, v.noIndent)
       }
     }), [T, x, t]);
   return (0, r.jsxs)("div", {
-    className: c(I.searchContainer, C),
+    className: c(v.searchContainer, C),
     children: [(0, r.jsxs)("div", {
-      className: I.searchBox,
+      className: v.searchBox,
       children: [(0, r.jsx)(h.default, {
         tags: J,
         maxHeight: 98,
@@ -265,23 +265,23 @@ function w(e) {
         onQueryChange: e => {
           H(e.trim().toLocaleLowerCase())
         },
-        placeholder: null != o ? o : v.default.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_PLACEHOLDER,
+        placeholder: null != o ? o : I.default.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_PLACEHOLDER,
         sections: [x.length],
         inputProps: {
-          "aria-labelledby": j,
-          "aria-controls": R,
-          "aria-expanded": b,
+          "aria-labelledby": b,
+          "aria-controls": j,
+          "aria-expanded": R,
           onFocus: e => Y(!0, 2, e),
           onBlur: e => Y(!1, 2, e)
         }
-      }), b && (0, r.jsx)("div", {
-        className: I.resultsListParent,
+      }), R && (0, r.jsx)("div", {
+        className: v.resultsListParent,
         onFocus: e => Y(!0, 1, e),
         onBlur: e => Y(!1, 1, e),
         tabIndex: -1,
         children: (0, r.jsx)(M.ListAuto, {
-          className: I.resultsListContainer,
-          innerClassName: I.resultsList,
+          className: v.resultsListContainer,
+          innerClassName: v.resultsList,
           sections: k,
           renderRow: q,
           rowHeight: 34,
@@ -291,20 +291,20 @@ function w(e) {
             } = e;
             return 0 === t ? (0, r.jsx)(M.FormTitle, {
               tag: "h5",
-              className: c(I.sectionTitle, I.sectionHeight),
-              children: v.default.Messages.CHANNELS
-            }, v.default.Messages.CHANNELS) : 1 === t ? (0, r.jsx)(M.FormTitle, {
+              className: c(v.sectionTitle, v.sectionHeight),
+              children: I.default.Messages.CHANNELS
+            }, I.default.Messages.CHANNELS) : 1 === t ? (0, r.jsx)(M.FormTitle, {
               tag: "h5",
-              className: c(I.sectionTitle, I.sectionHeight),
-              children: v.default.Messages.ROLES
-            }, v.default.Messages.ROLES) : null
+              className: c(v.sectionTitle, v.sectionHeight),
+              children: I.default.Messages.ROLES
+            }, I.default.Messages.ROLES) : null
           },
           renderFooter: e => {
             let {
               section: t
             } = e;
             if (0 === t) return 0 === k[1] && k[0] > 0 ? null : (0, r.jsx)("div", {
-              className: I.sectionFooter,
+              className: v.sectionFooter,
               children: (0, r.jsx)(M.FormDivider, {})
             });
             return null
@@ -316,14 +316,14 @@ function w(e) {
           },
           role: void 0,
           innerRole: "listbox",
-          innerId: R,
+          innerId: j,
           innerAriaOrientation: "vertical"
         })
       })]
     }), null != d && (0, r.jsx)(M.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
-      className: I.helperText,
+      className: v.helperText,
       children: d
     })]
   })

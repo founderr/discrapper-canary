@@ -41,9 +41,9 @@ function T(e) {
     onClose: x,
     onSelectDateOption: _,
     onToggleCustomDateRange: H,
-    onSelectStartDate: A,
-    onSelectEndDate: p
-  } = e, S = [{
+    onSelectStartDate: g,
+    onSelectEndDate: A
+  } = e, p = [{
     id: 0,
     option: null,
     label: f.default.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_ALL
@@ -89,23 +89,23 @@ function T(e) {
       unit: "M"
     },
     label: f.default.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_3_MONTHS
-  }], [L, N] = i.useState(!1), g = i.useCallback(() => {
-    N(!0), H()
-  }, [H]), v = i.useCallback(e => {
+  }], [S, L] = i.useState(!1), N = i.useCallback(() => {
+    L(!0), H()
+  }, [H]), I = i.useCallback(e => {
+    g(e)
+  }, [g]), v = i.useCallback(e => {
     A(e)
-  }, [A]), I = i.useCallback(e => {
-    p(e)
-  }, [p]);
+  }, [A]);
   return (0, s.jsx)(u.Menu, {
     navId: "member-safety-guild-member-".concat(T, "-menu"),
     onClose: x,
     "aria-label": f.default.Messages.MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE,
     onSelect: c.NOOP,
     children: (0, s.jsx)(u.MenuGroup, {
-      children: L ? (0, s.jsxs)(s.Fragment, {
+      children: S ? (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(u.MenuItem, {
           id: "back",
-          action: () => N(!1),
+          action: () => L(!1),
           render: e => (0, s.jsxs)("span", {
             ...e,
             className: m.nagivateBackContainer,
@@ -129,7 +129,7 @@ function T(e) {
               ...e,
               calendarClassName: m.calendar,
               value: r && null != a ? d(a) : void 0,
-              onSelect: v,
+              onSelect: I,
               maxDate: d().local(),
               minDate: M
             })
@@ -145,14 +145,14 @@ function T(e) {
               ...e,
               calendarClassName: m.calendar,
               value: r && null != n ? d(n) : void 0,
-              onSelect: I,
+              onSelect: v,
               maxDate: d().local(),
               minDate: r && null != a ? d(a) : M
             })
           })
         })]
       }) : (0, s.jsxs)(s.Fragment, {
-        children: [S.map(e => {
+        children: [p.map(e => {
           let {
             id: t,
             option: l,
@@ -170,7 +170,7 @@ function T(e) {
           id: "guild-member-".concat(T, "-custom-option}"),
           label: f.default.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_CUSTOM,
           subtext: E ? "".concat(t, " - ").concat(l) : void 0,
-          action: g,
+          action: N,
           checked: 7 === o
         }, "option-".concat(7))]
       })

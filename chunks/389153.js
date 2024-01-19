@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return P
   },
   getCommandAttachmentDraftType: function() {
-    return R
+    return V
   },
   getCommandTriggerSection: function() {
-    return V
+    return k
   },
   getApplicationCommandSection: function() {
     return M
@@ -269,14 +269,14 @@ function P(e) {
   if (n.ownerId === s.userId || t.can(C.Permissions.ADMINISTRATOR, n)) return !0;
   let o = n.id;
   if (null != r) {
-    let e = k(s, o, r);
+    let e = R(s, o, r);
     if ("boolean" == typeof e) return e
   }
-  let d = k(s, o, i);
+  let d = R(s, o, i);
   return ("boolean" != typeof d || !!d) && (null == a || !u.default.equals(a, b) && t.can(a, n))
 }
 
-function k(e, t, n) {
+function R(e, t, n) {
   let s = n[(0, _.toPermissionKey)(e.userId, h.ApplicationCommandPermissionType.USER)];
   if (null != s) return s.permission;
   let i = !1;
@@ -289,7 +289,7 @@ function k(e, t, n) {
   return null != r ? r.permission : null
 }
 
-function R(e) {
+function V(e) {
   switch (e) {
     case h.CommandOrigin.CHAT:
       return g.DraftType.SlashCommand;
@@ -298,7 +298,7 @@ function R(e) {
   }
 }
 
-function V(e) {
+function k(e) {
   if (null != e) {
     if (e.id === p.BuiltInSectionId.BUILT_IN) return h.ApplicationCommandTriggerSections.BUILT_IN;
     else if (e.id === p.BuiltInSectionId.FRECENCY) return h.ApplicationCommandTriggerSections.FRECENCY;

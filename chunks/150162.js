@@ -52,7 +52,7 @@ function m(e) {
       range: [0, 1],
       output: ["".concat(T, "00"), "".concat(x, "27")]
     }),
-    A = null != d ? {
+    g = null != d ? {
       ...d,
       backgroundColor: H
     } : {
@@ -60,7 +60,7 @@ function m(e) {
     };
   return (0, a.jsx)(o.animated.tr, {
     ...m,
-    style: A,
+    style: g,
     children: l
   })
 }

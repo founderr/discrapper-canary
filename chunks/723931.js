@@ -52,8 +52,8 @@ var s = n("37983"),
   H = n("315021"),
   V = n("24373"),
   Y = n("943508"),
-  K = n("300322"),
-  W = n("415829"),
+  W = n("300322"),
+  K = n("415829"),
   z = n("845579"),
   Z = n("271938"),
   J = n("26989"),
@@ -427,7 +427,7 @@ class eB extends l.Component {
     }, e.id))
   }
   renderThreadAccessories(e) {
-    if (e.hasFlag(eO.MessageFlags.HAS_THREAD) && !1 !== this.props.renderThreadAccessory) return (0, s.jsx)(W.default, {
+    if (e.hasFlag(eO.MessageFlags.HAS_THREAD) && !1 !== this.props.renderThreadAccessory) return (0, s.jsx)(K.default, {
       message: e,
       compact: this.props.compact
     })
@@ -666,7 +666,7 @@ function eF(e) {
   } = (0, o.useStateFromStoresObject)([X.default], () => ({
     canAddNewReactions: I && X.default.can(eO.Permissions.ADD_REACTIONS, a),
     canManageMessages: X.default.can(eO.Permissions.MANAGE_MESSAGES, a)
-  }), [I, a]), [, h] = (0, R.useCurrentUserCommunicationDisabled)(a.guild_id), O = (0, K.useIsActiveChannelOrUnarchivableThread)(a), L = (u === i.author.id || C) && i.author.id !== eO.LOCAL_BOT_ID && !1 !== r && !(0, eu.hasFlag)(i.flags, eO.MessageFlags.EPHEMERAL) && O, v = u === i.author.id && O, P = i.author.id === u, D = i.isFirstMessageInForumPost(a), x = (0, eI.default)({
+  }), [I, a]), [, h] = (0, R.useCurrentUserCommunicationDisabled)(a.guild_id), O = (0, W.useIsActiveChannelOrUnarchivableThread)(a), L = (u === i.author.id || C) && i.author.id !== eO.LOCAL_BOT_ID && !1 !== r && !(0, eu.hasFlag)(i.flags, eO.MessageFlags.EPHEMERAL) && O, v = u === i.author.id && O, P = i.author.id === u, D = i.isFirstMessageInForumPost(a), x = (0, eI.default)({
     channel: a,
     canChat: I,
     renderReactions: _,

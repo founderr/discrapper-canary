@@ -90,9 +90,9 @@ let C = h.default.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
   O = (e, t) => Array(t).fill(void 0).map(() => "[".concat("abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789", "]{").concat(e, "}")).join("-?"),
   b = O(4, 4),
   P = O(4, 6),
-  k = O(5, 3),
-  R = [b, P, k, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
-  V = new RegExp("^(".concat("WUMP-?", ")?(").concat(R, ")$")),
+  R = O(5, 3),
+  V = [b, P, R, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
+  k = new RegExp("^(".concat("WUMP-?", ")?(").concat(V, ")$")),
   M = e => null != e && !0;
 (i = s || (s = {}))[i.DEFAULT = 0] = "DEFAULT", i[i.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", i[i.CUSTOM_MESSAGE = 2] = "CUSTOM_MESSAGE", i[i.EMOJI_SOUNDBOARD = 3] = "EMOJI_SOUNDBOARD";
 let w = new Set([2, 3]),
@@ -323,7 +323,7 @@ function J(e, t, n) {
 
 function $(e) {
   let t = e.trim().split("/").pop(),
-    n = t.match(V);
+    n = t.match(k);
   if (null == n) return null;
   let [s, i, r] = n;
   return null == r ? null : r.replace(/-/g, "")

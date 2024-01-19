@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return C
   }
 });
 var i = n("37983"),
@@ -46,7 +46,7 @@ function L() {
   })
 }
 
-function d() {
+function C() {
   let e = (0, o.default)([l.default], () => l.default.hasLoadedExperiments),
     t = (0, I.useIsSuspendedUserPageEnabled)("standalone page");
   return (E.useEffect(() => {

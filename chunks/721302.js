@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return A
+    return g
   }
 }), l("222007");
 var a = l("37983"),
@@ -35,19 +35,19 @@ let H = n.forwardRef(function(e, t) {
         guild: s
       })
     })
-  }, [s, r]), A = (0, C.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], u), p = (0, E.useTrackMemberSearchUsed)(s.id), [S, L] = n.useState(A.query), N = n.useCallback(e => {
+  }, [s, r]), g = (0, C.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], u), A = (0, E.useTrackMemberSearchUsed)(s.id), [p, S] = n.useState(g.query), L = n.useCallback(e => {
     let t = e.trim();
-    t.length > 0 && p(), (0, h.updateSearchState)(s.id, {
+    t.length > 0 && A(), (0, h.updateSearchState)(s.id, {
       query: t
     })
-  }, [s.id, p]), g = n.useCallback(d(N, 300), [N]), v = n.useCallback(e => {
-    L(e), g(e)
-  }, [g]), I = n.useCallback(() => {
-    L(""), N("")
-  }, [N]);
+  }, [s.id, A]), N = n.useCallback(d(L, 300), [L]), I = n.useCallback(e => {
+    S(e), N(e)
+  }, [N]), v = n.useCallback(() => {
+    S(""), L("")
+  }, [L]);
   return n.useImperativeHandle(t, () => ({
     resetSearchText() {
-      L("")
+      S("")
     }
   })), (0, a.jsxs)("div", {
     className: i(_.searchHeaderContainer),
@@ -66,10 +66,10 @@ let H = n.forwardRef(function(e, t) {
         className: i(_.searchHeader),
         children: (0, a.jsx)(m.default, {
           className: _.searchBar,
-          query: S,
+          query: p,
           placeholder: x.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
-          onChange: v,
-          onClear: I,
+          onChange: I,
+          onClear: v,
           autoComplete: "off",
           inputProps: {
             autoCapitalize: "none",
@@ -92,4 +92,4 @@ let H = n.forwardRef(function(e, t) {
     })]
   })
 });
-var A = H
+var g = H

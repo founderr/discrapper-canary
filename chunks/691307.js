@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return b
+    return R
   }
 }), l("222007");
 var a = l("37983"),
@@ -23,29 +23,29 @@ var a = l("37983"),
   x = l("553275"),
   _ = l("151123"),
   H = l("337092"),
-  A = l("850646"),
-  p = l("894282"),
-  S = l("474507");
-let L = {
+  g = l("850646"),
+  A = l("894282"),
+  p = l("474507");
+let S = {
     transform: "translate3d(15%, 0, 0)",
     opacity: .3
   },
-  N = {
+  L = {
     transform: "translate3d(5%, 0, 0)",
     opacity: .5
   },
-  g = {
+  N = {
     transform: "translate3d(0, 0, 0)",
     opacity: 1
   },
-  v = {
+  I = {
     mass: 1.1,
     friction: 24,
     tension: 260
   },
-  I = e => e.shiftKey || e.key === p.KeyboardKeysUpdated.SHIFT,
-  j = e => e.metaKey || e.ctrlKey,
-  R = n.memo(function(e) {
+  v = e => e.shiftKey || e.key === A.KeyboardKeysUpdated.SHIFT,
+  b = e => e.metaKey || e.ctrlKey,
+  j = n.memo(function(e) {
     let {
       members: t,
       guild: l,
@@ -54,15 +54,15 @@ let L = {
       compact: d,
       onSelectRow: c,
       onResetForNewMembers: f
-    } = e, E = (0, u.default)([C.default], () => C.default.useReducedMotion), p = (0, m.useIsWindowFocused)(), [R, b] = n.useState(!1), [D, O] = n.useState(!1);
+    } = e, E = (0, u.default)([C.default], () => C.default.useReducedMotion), A = (0, m.useIsWindowFocused)(), [j, R] = n.useState(!1), [D, O] = n.useState(!1);
     n.useEffect(() => {
-      !p && (b(!1), O(!1))
-    }, [p]), n.useLayoutEffect(() => {
+      !A && (R(!1), O(!1))
+    }, [A]), n.useLayoutEffect(() => {
       let e = e => {
-          I(e) && b(!0), j(e) && O(!0)
+          v(e) && R(!0), b(e) && O(!0)
         },
         t = e => {
-          I(e) && b(!1), j(e) && O(!1)
+          v(e) && R(!1), b(e) && O(!1)
         };
       return window.addEventListener("keydown", e), window.addEventListener("keyup", t), () => {
         window.removeEventListener("keydown", e), window.removeEventListener("keyup", t)
@@ -79,19 +79,19 @@ let L = {
           let t = M.default.getEnhancedMember(l.id, e),
             a = M.default.getLastRefreshTimestamp(l.id),
             n = null != t && t.refreshTimestamp === a;
-          return null != t && 0 !== a && n ? V ? N : L : g
+          return null != t && 0 !== a && n ? V ? L : S : N
         },
-        enter: g,
-        config: v
+        enter: N,
+        config: I
       });
     return (0, a.jsxs)("table", {
-      className: i(S.table, s),
+      className: i(p.table, s),
       children: [(0, a.jsx)(_.default, {
         guildId: l.id,
         currentPagedMembers: t
       }), (0, a.jsx)("tbody", {
         children: o === x.SearchState.SUCCESS_FULL || o === x.SearchState.LOADING ? (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(A.default, {
+          children: [(0, a.jsx)(g.default, {
             guild: l,
             onSubmit: f
           }), B((e, t) => (0, a.jsx)(H.default, {
@@ -99,7 +99,7 @@ let L = {
             guildId: l.id,
             style: e,
             onSelect: c,
-            isHoldingAdvancedInfoKey: R && D,
+            isHoldingAdvancedInfoKey: j && D,
             compact: d
           }, t))]
         }) : (0, a.jsx)("td", {
@@ -117,7 +117,7 @@ let L = {
       s = e.compact === t.compact;
     return l && a && n && s
   });
-var b = function(e) {
+var R = function(e) {
   var t, l;
   let {
     guild: s,
@@ -137,7 +137,7 @@ var b = function(e) {
     H = null !== (l = null == _ ? void 0 : _[0]) && void 0 !== l ? l : null;
   return n.useEffect(() => {
     (0, E.trackMembersPageViewed)(s.id, H)
-  }, [s.id, H]), (0, a.jsx)(R, {
+  }, [s.id, H]), (0, a.jsx)(j, {
     members: x,
     guild: s,
     className: i,

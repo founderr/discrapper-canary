@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return b
   },
   getSocialRecommendationReasons: function() {
-    return k
+    return R
   },
   getNonSocialRecommendationReasons: function() {
-    return V
+    return k
   }
 }), n("424973"), n("462568"), n("222007"), n("70102"), n("702976");
 var s = n("917351"),
@@ -172,7 +172,7 @@ function b(e, t, n) {
 }
 let P = [];
 
-function k(e, t, n, s, r) {
+function R(e, t, n, s, r) {
   let a = t.get(e);
   if (null == a) return P;
   let o = a.applicationId,
@@ -224,12 +224,12 @@ function k(e, t, n, s, r) {
   }
   return d
 }
-let R = [];
+let V = [];
 
-function V(e, t, n) {
+function k(e, t, n) {
   let s = t.get(e),
     i = n.getForSKU(e);
-  if (null == s || null == i) return R;
+  if (null == s || null == i) return V;
   let r = [];
   (0, v.hasFlag)(s.flags, y.SKUFlags.HAS_FREE_PREMIUM_CONTENT) && r.push({
     type: y.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT

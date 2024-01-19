@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return V
+    return k
   }
 }), n("222007");
 var s, i, r = n("446674"),
@@ -34,10 +34,10 @@ function P(e) {
   null != e && 1 === g.default.compare(e, C) && (C = e)
 }
 
-function k() {
+function R() {
   C = "0", T = 0, S = -1, D = "0", m.clear(), A = 0, N.clear()
 }
-class R extends r.default.Store {
+class V extends r.default.Store {
   initialize() {
     this.waitFor(f.default), this.syncWith([c.default], () => {
       if (!b) return !1;
@@ -60,7 +60,7 @@ class R extends r.default.Store {
     }), a.default.remove("GuildIdsRequiringDeletedIdsSync")
   }
   clear() {
-    k()
+    R()
   }
   async getClientState() {
     let [e, t] = await Promise.all([y && (0, h.isCacheEnabled)() ? d.default.getCommittedVersionsAsync() : Promise.resolve({}), y && (0, h.isCacheEnabled)() ? u.default.getCommittedVersions() : Promise.resolve({})]);
@@ -82,8 +82,8 @@ class R extends r.default.Store {
     return p
   }
 }
-R.displayName = "ClientStateStore";
-var V = new R(o.default, {
+V.displayName = "ClientStateStore";
+var k = new V(o.default, {
   BACKGROUND_SYNC: function(e) {
     for (let t of e.guilds) "partial" === t.data_mode && t.unableToSyncDeletes && N.add(t.id);
     null != e.apiCodeVersion && (A = e.apiCodeVersion)
@@ -130,10 +130,10 @@ var V = new R(o.default, {
     } = e;
     !r.unavailable && (r.unableToSyncDeletes && N.add(r.id), null === (t = r.channels) || void 0 === t || t.forEach(e => P(e.lastMessageId)), null === (s = r.channelUpdates) || void 0 === s || null === (n = s.writes) || void 0 === n || n.forEach(e => P(e.lastMessageId)), null === (i = r.channelTimestampUpdates) || void 0 === i || i.forEach(e => P(e.last_message_id)), r.unableToSyncDeletes && N.add(r.id))
   },
-  CLEAR_GUILD_CACHE: k,
-  CLEAR_CACHES: k,
-  LOGOUT: k,
-  LOGIN: k,
+  CLEAR_GUILD_CACHE: R,
+  CLEAR_CACHES: R,
+  LOGOUT: R,
+  LOGIN: R,
   MESSAGE_ACK: function(e) {
     let {
       version: t,
