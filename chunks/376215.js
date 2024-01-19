@@ -98,7 +98,8 @@ function _(e) {
               channelId: t,
               draftType: n.drafts.type,
               upload: e,
-              keyboardModeEnabled: r
+              keyboardModeEnabled: r,
+              clip: e.clip
             }, e.id))
           })
         }
