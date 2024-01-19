@@ -10,6 +10,9 @@ class s {
   get prefix() {
     return this.table.prefix
   }
+  withoutLogging() {
+    return new s(this.originalPrefix, this.table.tableId, this.table.database, !1)
+  }
   get(e) {
     return this.table.get([e])
   }
@@ -33,20 +36,20 @@ class s {
   }
   put(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ConflictOptions.Replace;
-    return this.transaction(n => n.put(e, t))
+    return this.transaction(n => n.put(e, t), "".concat(this.prefix, " put"))
   }
   putAll(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ConflictOptions.Replace;
-    return this.transaction(n => n.putAll(e, t))
+    return this.transaction(n => n.putAll(e, t), "".concat(this.prefix, " putAll"))
   }
   replaceAll(e) {
-    return this.transaction(t => t.replaceAll(e))
+    return this.transaction(t => t.replaceAll(e), "".concat(this.prefix, " replaceAll"))
   }
   delete(e) {
-    return this.transaction(t => t.delete(e))
+    return this.transaction(t => t.delete(e), "".concat(this.prefix, " delete"))
   }
-  transaction(e) {
-    return this.table.transaction(t => e(new a(t)))
+  transaction(e, t) {
+    return this.table.transaction(t => e(new a(t)), t)
   }
   upgradeTransaction(e) {
     return new a(this.table.upgradeTransaction(e))
@@ -70,8 +73,8 @@ class s {
       generation: t
     }
   }
-  constructor(e, t, n) {
-    this.table = new r.Table([e], t, n)
+  constructor(e, t, n, i = !0) {
+    this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
   }
 }
 class a {

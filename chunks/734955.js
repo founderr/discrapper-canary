@@ -30,19 +30,20 @@ class o {
     }))
   }
   execute(e, t) {
-    var n;
     if (null == this.raw) throw Error("database is no longer open (database: ".concat(this));
-    return i.default.timeAsync("\uD83D\uDCBE", "db: ".concat(null != t ? t : e.type, " ").concat(null !== (n = e.table) && void 0 !== n ? n : ""), () => s.Runtime.executeAsync(null != t ? t : e.type, t => {
-      this.raw.execute(t, {
-        ...e,
-        handle: 0
-      })
-    }))
+    let n = "key" in e ? e.key[0] : e.table,
+      r = () => s.Runtime.executeAsync(null != t ? t : e.type, t => {
+        this.raw.execute(t, {
+          ...e,
+          handle: 0
+        })
+      });
+    return null === t ? r() : i.default.timeAsync("\uD83D\uDCBE", "".concat(null != t ? t : e.type, " ").concat(null != n ? n : ""), r)
   }
   executeSync(e) {
-    var t;
     if (null == this.raw) throw Error("database is no longer open (database: ".concat(this));
-    return i.default.time("\uD83D\uDCBE", "DB ".concat(e.type, " ").concat(null !== (t = e.table) && void 0 !== t ? t : "", " (sync)"), () => this.raw.execute(null, {
+    let t = "key" in e ? e.key[0] : e.table;
+    return i.default.time("\uD83D\uDCBE", "SYNC: ".concat(e.type, " ").concat(null != t ? t : ""), () => this.raw.execute(null, {
       ...e,
       handle: 0
     }, {
@@ -82,19 +83,13 @@ class o {
   state() {
     return this.lastState
   }
-  transaction(e) {
-    let t = new l(this),
-      n = e(t);
-    return Promise.resolve(n).then(() => {
-      if (!(t.operations.length > 0)) return Promise.resolve();
-      {
-        let e = "transaction (x".concat(t.operations.length, ")");
-        return this.execute({
-          type: "db.transaction",
-          operations: t.complete()
-        }, e)
-      }
-    })
+  transaction(e, t) {
+    let n = new l(this),
+      i = e(n);
+    return Promise.resolve(i).then(() => n.operations.length > 0 ? this.execute({
+      type: "db.transaction",
+      operations: n.complete()
+    }, t) : Promise.resolve())
   }
   toString() {
     return "[Database #".concat(this.handle, ": ").concat(this.name, "]")

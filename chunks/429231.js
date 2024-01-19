@@ -41,7 +41,7 @@ class o {
       key: (0, r.combineKeyPrefix)(this.prefix, e),
       ordering: null == t ? void 0 : t.ordering,
       limit: null == t ? void 0 : t.limit
-    })
+    }, this.defaultDebugTag)
   }
   getRange(e, t, n) {
     let i = (0, r.combineKey)(this.prefix, e),
@@ -52,7 +52,7 @@ class o {
       range: [i, s],
       ordering: null == n ? void 0 : n.ordering,
       limit: null == n ? void 0 : n.limit
-    })
+    }, this.defaultDebugTag)
   }
   getKvEntries() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
@@ -60,7 +60,7 @@ class o {
       type: "kv.get_kv_entries",
       table: this.tableId,
       key: (0, r.combineKeyPrefix)(this.prefix, e)
-    })
+    }, this.defaultDebugTag)
   }
   getMapEntries() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
@@ -68,7 +68,7 @@ class o {
       type: "kv.get_map_entries",
       table: this.tableId,
       key: (0, r.combineKeyPrefix)(this.prefix, e)
-    })
+    }, this.defaultDebugTag)
   }
   getChildIds() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
@@ -76,7 +76,7 @@ class o {
       type: "kv.get_child_ids",
       table: this.tableId,
       key: (0, r.combineKeyPrefix)(this.prefix, e)
-    })
+    }, this.defaultDebugTag)
   }
   getParentId() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
@@ -84,7 +84,7 @@ class o {
       type: "kv.get_parent_id",
       table: this.tableId,
       key: (0, r.combineKey)(this.prefix, e)
-    })
+    }, this.defaultDebugTag)
   }
   put(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ConflictOptions.Replace;
@@ -93,7 +93,7 @@ class o {
       table: this.tableId,
       cell: s(e, this.prefix),
       overwrite: t === i.ConflictOptions.Replace
-    })
+    }, this.defaultDebugTag)
   }
   putAll(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.ConflictOptions.Replace;
@@ -102,12 +102,12 @@ class o {
       table: this.tableId,
       cells: a(e, this.prefix),
       overwrite: t === i.ConflictOptions.Replace
-    })
+    }, this.defaultDebugTag)
   }
   replaceAll(e) {
     return this.transaction(t => {
       t.delete(), t.putAll(e)
-    })
+    }, this.defaultDebugTag)
   }
   delete() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
@@ -115,7 +115,7 @@ class o {
       type: "kv.delete_many",
       table: this.tableId,
       key: (0, r.combineKeyPrefix)(this.prefix, e)
-    })
+    }, this.defaultDebugTag)
   }
   deleteRange(e, t) {
     let n = (0, r.combineKey)(this.prefix, e),
@@ -124,7 +124,7 @@ class o {
       type: "kv.delete_range",
       table: this.tableId,
       range: [n, i]
-    })
+    }, this.defaultDebugTag)
   }
   deleteGeneration() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
@@ -136,10 +136,10 @@ class o {
       key: (0, r.combineKeyPrefix)(this.prefix, e),
       generation: n,
       comparer: t
-    })
+    }, this.defaultDebugTag)
   }
-  transaction(e) {
-    return this.database.transaction(t => e(new l(this.prefix, this.tableId, t)))
+  transaction(e, t) {
+    return this.database.transaction(t => e(new l(this.prefix, this.tableId, t)), t)
   }
   upgradeTransaction(e) {
     return new l(this.prefix, this.tableId, e)
@@ -177,14 +177,14 @@ class o {
       key: (0, r.combineKeyPrefix)(this.prefix, e)
     })
   }
-  constructor(e, t, n) {
+  constructor(e, t, n, i) {
     this.messages = {
       getLatest: e => this.database.execute({
         type: "messages.get_latest",
         table: this.tableId,
         guildId: e
-      })
-    }, this.prefix = e, this.tableId = t, this.database = n
+      }, this.defaultDebugTag)
+    }, this.prefix = e, this.tableId = t, this.database = n, this.defaultDebugTag = i ? void 0 : null
   }
 }
 class l {

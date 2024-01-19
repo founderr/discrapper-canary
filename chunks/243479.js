@@ -10,6 +10,9 @@ class s {
   get prefix() {
     return this.table.prefix
   }
+  withoutLogging() {
+    return new s(this.originalPrefix, this.table.tableId, this.table.database, !1)
+  }
   get(e, t) {
     return this.table.get([e, t])
   }
@@ -59,8 +62,8 @@ class s {
   deleteGeneration(e, t) {
     return this.table.deleteGeneration([], e, t)
   }
-  transaction(e) {
-    return this.table.transaction(t => e(new a(t)))
+  transaction(e, t) {
+    return this.table.transaction(t => e(new a(t)), t)
   }
   upgradeTransaction(e) {
     return new a(this.table.upgradeTransaction(e))
@@ -80,8 +83,8 @@ class s {
   getGuildIdsSyncUnsafe() {
     return this.table.getChildIdsSyncUnsafe([])
   }
-  constructor(e, t, n) {
-    this.table = new r.Table([e], t, n)
+  constructor(e, t, n, i = !0) {
+    this.originalPrefix = e, this.table = new r.Table([e], t, n, i)
   }
 }
 class a {
