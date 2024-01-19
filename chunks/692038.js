@@ -107,7 +107,7 @@ function T(e, t) {
     var s;
     n = n.set("reactions", D(null !== (s = e.reactions) && void 0 !== s ? s : t.reactions))
   }
-  return n
+  return null != t.poll && (n = n.set("poll", (0, a.default)(t.poll))), n
 }
 
 function S(e) {
