@@ -99,6 +99,6 @@ let u = "alt+c",
   N = 100,
   O = e => "Clip - ".concat(new Date(e).toLocaleString()),
   D = 15,
-  y = 15e3,
+  y = 3e4,
   L = 30,
   P = 10
