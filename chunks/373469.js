@@ -215,20 +215,18 @@ var U = new M(l.default, {
       guildId: n,
       channelId: s,
       pid: r,
-      sourceId: o,
-      sourceName: l
-    } = e, u = (0, d.encodeStreamKey)({
+      sourceName: o
+    } = e, l = (0, d.encodeStreamKey)({
       streamType: t,
       guildId: n,
       channelId: s,
       ownerId: _.default.getId()
-    }), c = null != r ? v.default.getGameForPID(r) : null;
-    a[u] = {
-      id: null == c ? void 0 : c.id,
+    }), u = null != r ? v.default.getGameForPID(r) : null;
+    a[l] = {
+      id: null == u ? void 0 : u.id,
       pid: r,
-      sourceId: o,
-      sourceName: l
-    }, i.delete(u), i.set(u, {
+      sourceName: o
+    }, i.delete(l), i.set(l, {
       streamType: t,
       guildId: n,
       channelId: s,
