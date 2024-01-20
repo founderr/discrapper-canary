@@ -4,62 +4,62 @@ n.r(t), n.d(t, {
     return X
   },
   useRangeCalendar: function() {
-    return J
+    return $
   },
   useCalendarGrid: function() {
-    return $
+    return J
   },
   useCalendarCell: function() {
     return Q
   }
 }), n("222007");
 var r = n("362561"),
-  o = n("290895"),
-  a = n("181551"),
-  i = n("884691"),
-  s = n("336468"),
+  i = n("290895"),
+  o = n("181551"),
+  s = n("884691"),
+  a = n("336468"),
   c = n("495912");
 
-function l(e) {
+function u(e) {
   return e && e.__esModule ? e.default : e
 }
-var u = {},
-  d = {},
-  p = {},
+var d = {},
+  l = {},
   f = {},
-  m = {},
+  p = {},
   h = {},
   g = {},
-  v = {},
-  y = {},
   b = {},
+  v = {},
+  m = {},
+  y = {},
   x = {},
-  S = {},
   w = {},
+  S = {},
+  k = {},
+  _ = {},
+  E = {},
+  M = {},
   D = {},
   C = {},
   P = {},
-  k = {},
-  E = {},
   T = {},
-  R = {},
-  M = {},
-  O = {},
-  I = {},
   A = {},
+  R = {},
+  I = {},
+  O = {},
+  j = {},
   N = {},
   L = {},
-  j = {},
   F = {},
-  K = {},
-  _ = {},
-  z = {},
-  V = {},
   B = {},
+  z = {},
+  K = {},
+  V = {},
   U = {},
-  H = {};
-u = {
-  "ar-AE": d = {
+  q = {};
+d = {
+  "ar-AE": l = {
     dateRange: e => "".concat(e.startDate, " إلى ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " المحدد"),
     finishRangeSelectionPrompt: "انقر لإنهاء عملية تحديد نطاق التاريخ",
@@ -73,7 +73,7 @@ u = {
     todayDate: e => "اليوم، ".concat(e.date),
     todayDateSelected: e => "اليوم، ".concat(e.date, " محدد")
   },
-  "bg-BG": p = {
+  "bg-BG": f = {
     dateRange: e => "".concat(e.startDate, " до ").concat(e.endDate),
     dateSelected: e => "Избрано е ".concat(e.date),
     finishRangeSelectionPrompt: "Натиснете, за да довършите избора на времеви интервал",
@@ -87,7 +87,7 @@ u = {
     todayDate: e => "Днес, ".concat(e.date),
     todayDateSelected: e => "Днес, ".concat(e.date, " са избрани")
   },
-  "cs-CZ": f = {
+  "cs-CZ": p = {
     dateRange: e => "".concat(e.startDate, " až ").concat(e.endDate),
     dateSelected: e => "Vybr\xe1no ".concat(e.date),
     finishRangeSelectionPrompt: "Kliknut\xedm dokonč\xedte v\xfdběr rozsahu dat",
@@ -101,7 +101,7 @@ u = {
     todayDate: e => "Dnes, ".concat(e.date),
     todayDateSelected: e => "Dnes, vybr\xe1no ".concat(e.date)
   },
-  "da-DK": m = {
+  "da-DK": h = {
     dateRange: e => "".concat(e.startDate, " til ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " valgt"),
     finishRangeSelectionPrompt: "Klik for at fuldf\xf8re valg af datoomr\xe5de",
@@ -115,7 +115,7 @@ u = {
     todayDate: e => "I dag, ".concat(e.date),
     todayDateSelected: e => "I dag, ".concat(e.date, " valgt")
   },
-  "de-DE": h = {
+  "de-DE": g = {
     dateRange: e => "".concat(e.startDate, " bis ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " ausgew\xe4hlt"),
     finishRangeSelectionPrompt: "Klicken, um die Auswahl des Datumsbereichs zu beenden",
@@ -129,7 +129,7 @@ u = {
     todayDate: e => "Heute, ".concat(e.date),
     todayDateSelected: e => "Heute, ".concat(e.date, " ausgew\xe4hlt")
   },
-  "el-GR": g = {
+  "el-GR": b = {
     dateRange: e => "".concat(e.startDate, " έως ").concat(e.endDate),
     dateSelected: e => "Επιλέχθηκε ".concat(e.date),
     finishRangeSelectionPrompt: "Κάντε κλικ για να ολοκληρώσετε την επιλογή εύρους ημερομηνιών",
@@ -157,7 +157,7 @@ u = {
     maximumDate: "Last available date",
     dateRange: e => "".concat(e.startDate, " to ").concat(e.endDate)
   },
-  "es-ES": y = {
+  "es-ES": m = {
     dateRange: e => "".concat(e.startDate, " a ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " seleccionado"),
     finishRangeSelectionPrompt: "Haga clic para terminar de seleccionar rango de fechas",
@@ -171,7 +171,7 @@ u = {
     todayDate: e => "Hoy, ".concat(e.date),
     todayDateSelected: e => "Hoy, ".concat(e.date, " seleccionado")
   },
-  "et-EE": b = {
+  "et-EE": y = {
     dateRange: e => "".concat(e.startDate, " kuni ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " valitud"),
     finishRangeSelectionPrompt: "Kl\xf5psake kuup\xe4evavahemiku valimise l\xf5petamiseks",
@@ -199,7 +199,7 @@ u = {
     todayDate: e => "T\xe4n\xe4\xe4n, ".concat(e.date),
     todayDateSelected: e => "T\xe4n\xe4\xe4n, ".concat(e.date, " valittu")
   },
-  "fr-FR": S = {
+  "fr-FR": w = {
     dateRange: e => "".concat(e.startDate, " \xe0 ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " s\xe9lectionn\xe9"),
     finishRangeSelectionPrompt: "Cliquer pour finir de s\xe9lectionner la plage de dates",
@@ -213,7 +213,7 @@ u = {
     todayDate: e => "Aujourd'hui, ".concat(e.date),
     todayDateSelected: e => "Aujourd’hui, ".concat(e.date, " s\xe9lectionn\xe9")
   },
-  "he-IL": w = {
+  "he-IL": S = {
     dateRange: e => "".concat(e.startDate, " עד ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " נבחר"),
     finishRangeSelectionPrompt: "חץ כדי לסיים את בחירת טווח התאריכים",
@@ -227,7 +227,7 @@ u = {
     todayDate: e => "היום, ".concat(e.date),
     todayDateSelected: e => "היום, ".concat(e.date, " נבחר")
   },
-  "hr-HR": D = {
+  "hr-HR": k = {
     dateRange: e => "".concat(e.startDate, " do ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " odabran"),
     finishRangeSelectionPrompt: "Kliknite da dovršite raspon odabranih datuma",
@@ -241,7 +241,7 @@ u = {
     todayDate: e => "Danas, ".concat(e.date),
     todayDateSelected: e => "Danas, odabran ".concat(e.date)
   },
-  "hu-HU": C = {
+  "hu-HU": _ = {
     dateRange: e => "".concat(e.startDate, "–").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " kiv\xe1lasztva"),
     finishRangeSelectionPrompt: "Kattintson a d\xe1tumtartom\xe1ny kijel\xf6l\xe9s\xe9nek befejez\xe9s\xe9hez",
@@ -255,7 +255,7 @@ u = {
     todayDate: e => "Ma, ".concat(e.date),
     todayDateSelected: e => "Ma, ".concat(e.date, " kijel\xf6lve")
   },
-  "it-IT": P = {
+  "it-IT": E = {
     dateRange: e => "Da ".concat(e.startDate, " a ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " selezionata"),
     finishRangeSelectionPrompt: "Fai clic per completare la selezione dell’intervallo di date",
@@ -269,7 +269,7 @@ u = {
     todayDate: e => "Oggi, ".concat(e.date),
     todayDateSelected: e => "Oggi, ".concat(e.date, " selezionata")
   },
-  "ja-JP": k = {
+  "ja-JP": M = {
     dateRange: e => "".concat(e.startDate, " から ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " を選択"),
     finishRangeSelectionPrompt: "クリックして日付範囲の選択を終了",
@@ -283,7 +283,7 @@ u = {
     todayDate: e => "本日、".concat(e.date),
     todayDateSelected: e => "本日、".concat(e.date, " を選択")
   },
-  "ko-KR": E = {
+  "ko-KR": D = {
     dateRange: e => "".concat(e.startDate, " ~ ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " 선택됨"),
     finishRangeSelectionPrompt: "날짜 범위 선택을 완료하려면 클릭하십시오.",
@@ -297,7 +297,7 @@ u = {
     todayDate: e => "오늘, ".concat(e.date),
     todayDateSelected: e => "오늘, ".concat(e.date, " 선택됨")
   },
-  "lt-LT": T = {
+  "lt-LT": C = {
     dateRange: e => "Nuo ".concat(e.startDate, " iki ").concat(e.endDate),
     dateSelected: e => "Pasirinkta ".concat(e.date),
     finishRangeSelectionPrompt: "Spustelėkite, kad baigtumėte pasirinkti datų intervalą",
@@ -311,7 +311,7 @@ u = {
     todayDate: e => "Šiandien, ".concat(e.date),
     todayDateSelected: e => "Šiandien, pasirinkta ".concat(e.date)
   },
-  "lv-LV": R = {
+  "lv-LV": P = {
     dateRange: e => "No ".concat(e.startDate, " līdz ").concat(e.endDate),
     dateSelected: e => "Atlasīts: ".concat(e.date),
     finishRangeSelectionPrompt: "Noklikšķiniet, lai pabeigtu datumu diapazona atlasi",
@@ -325,7 +325,7 @@ u = {
     todayDate: e => "Šodien, ".concat(e.date),
     todayDateSelected: e => "Atlasīta šodiena, ".concat(e.date)
   },
-  "nb-NO": M = {
+  "nb-NO": T = {
     dateRange: e => "".concat(e.startDate, " til ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " valgt"),
     finishRangeSelectionPrompt: "Klikk for \xe5 fullf\xf8re valg av datoomr\xe5de",
@@ -339,7 +339,7 @@ u = {
     todayDate: e => "I dag, ".concat(e.date),
     todayDateSelected: e => "I dag, ".concat(e.date, " valgt")
   },
-  "nl-NL": O = {
+  "nl-NL": A = {
     dateRange: e => "".concat(e.startDate, " tot ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " geselecteerd"),
     finishRangeSelectionPrompt: "Klik om de selectie van het datumbereik te voltooien",
@@ -353,7 +353,7 @@ u = {
     todayDate: e => "Vandaag, ".concat(e.date),
     todayDateSelected: e => "Vandaag, ".concat(e.date, " geselecteerd")
   },
-  "pl-PL": I = {
+  "pl-PL": R = {
     dateRange: e => "".concat(e.startDate, " do ").concat(e.endDate),
     dateSelected: e => "Wybrano ".concat(e.date),
     finishRangeSelectionPrompt: "Kliknij, aby zakończyć wyb\xf3r zakresu dat",
@@ -367,7 +367,7 @@ u = {
     todayDate: e => "Dzisiaj, ".concat(e.date),
     todayDateSelected: e => "Dzisiaj wybrano ".concat(e.date)
   },
-  "pt-BR": A = {
+  "pt-BR": I = {
     dateRange: e => "".concat(e.startDate, " a ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " selecionado"),
     finishRangeSelectionPrompt: "Clique para concluir a sele\xe7\xe3o do intervalo de datas",
@@ -381,7 +381,7 @@ u = {
     todayDate: e => "Hoje, ".concat(e.date),
     todayDateSelected: e => "Hoje, ".concat(e.date, " selecionado")
   },
-  "pt-PT": N = {
+  "pt-PT": O = {
     dateRange: e => "".concat(e.startDate, " a ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " selecionado"),
     finishRangeSelectionPrompt: "Clique para terminar de selecionar o intervalo de datas",
@@ -395,7 +395,7 @@ u = {
     todayDate: e => "Hoje, ".concat(e.date),
     todayDateSelected: e => "Hoje, ".concat(e.date, " selecionado")
   },
-  "ro-RO": L = {
+  "ro-RO": j = {
     dateRange: e => "De la ".concat(e.startDate, " p\xe2nă la ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " selectată"),
     finishRangeSelectionPrompt: "Apăsaţi pentru a finaliza selecţia razei pentru dată",
@@ -409,7 +409,7 @@ u = {
     todayDate: e => "Astăzi, ".concat(e.date),
     todayDateSelected: e => "Azi, ".concat(e.date, " selectată")
   },
-  "ru-RU": j = {
+  "ru-RU": N = {
     dateRange: e => "С ".concat(e.startDate, " по ").concat(e.endDate),
     dateSelected: e => "Выбрано ".concat(e.date),
     finishRangeSelectionPrompt: "Щелкните, чтобы завершить выбор диапазона дат",
@@ -423,7 +423,7 @@ u = {
     todayDate: e => "Сегодня, ".concat(e.date),
     todayDateSelected: e => "Сегодня, выбрано ".concat(e.date)
   },
-  "sk-SK": F = {
+  "sk-SK": L = {
     dateRange: e => "Od ".concat(e.startDate, " do ").concat(e.endDate),
     dateSelected: e => "Vybrat\xfd d\xe1tum ".concat(e.date),
     finishRangeSelectionPrompt: "Kliknut\xedm dokonč\xedte v\xfdber rozsahu d\xe1tumov",
@@ -437,7 +437,7 @@ u = {
     todayDate: e => "Dnes ".concat(e.date),
     todayDateSelected: e => "Vybrat\xfd dnešn\xfd d\xe1tum ".concat(e.date)
   },
-  "sl-SI": K = {
+  "sl-SI": F = {
     dateRange: e => "".concat(e.startDate, " do ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " izbrano"),
     finishRangeSelectionPrompt: "Kliknite za dokončanje izbire datumskega obsega",
@@ -451,7 +451,7 @@ u = {
     todayDate: e => "Danes, ".concat(e.date),
     todayDateSelected: e => "Danes, ".concat(e.date, " izbrano")
   },
-  "sr-SP": _ = {
+  "sr-SP": B = {
     dateRange: e => "".concat(e.startDate, " do ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " izabran"),
     finishRangeSelectionPrompt: "Kliknite da dovršite opseg izabranih datuma",
@@ -479,7 +479,7 @@ u = {
     todayDate: e => "Idag, ".concat(e.date),
     todayDateSelected: e => "Idag, ".concat(e.date, " har valts")
   },
-  "tr-TR": V = {
+  "tr-TR": K = {
     dateRange: e => "".concat(e.startDate, " - ").concat(e.endDate),
     dateSelected: e => "".concat(e.date, " se\xe7ildi"),
     finishRangeSelectionPrompt: "Tarih aralığı se\xe7imini tamamlamak i\xe7in tıklayın",
@@ -493,7 +493,7 @@ u = {
     todayDate: e => "Bug\xfcn, ".concat(e.date),
     todayDateSelected: e => "Bug\xfcn, ".concat(e.date, " se\xe7ildi")
   },
-  "uk-UA": B = {
+  "uk-UA": V = {
     dateRange: e => "".concat(e.startDate, " — ").concat(e.endDate),
     dateSelected: e => "Вибрано ".concat(e.date),
     finishRangeSelectionPrompt: "Натисніть, щоб завершити вибір діапазону дат",
@@ -521,7 +521,7 @@ u = {
     todayDate: e => "今天，即 ".concat(e.date),
     todayDateSelected: e => "已选择今天，即 ".concat(e.date)
   },
-  "zh-TW": H = {
+  "zh-TW": q = {
     dateRange: e => "".concat(e.startDate, " 至 ").concat(e.endDate),
     dateSelected: e => "已選取 ".concat(e.date),
     finishRangeSelectionPrompt: "按一下以完成選取日期範圍",
@@ -536,23 +536,23 @@ u = {
     todayDateSelected: e => "已選取今天，".concat(e.date)
   }
 };
-let G = new WeakMap;
+let H = new WeakMap;
 
-function W(e) {
+function G(e) {
   return (null == e ? void 0 : e.calendar.identifier) === "gregory" && "BC" === e.era ? "short" : void 0
 }
 
-function q(e, t, n, r) {
-  let o = (0, a.useLocalizedStringFormatter)(l(u)),
-    c = W(e) || W(t),
-    d = (0, a.useDateFormatter)({
+function W(e, t, n, r) {
+  let i = (0, o.useLocalizedStringFormatter)(u(d)),
+    c = G(e) || G(t),
+    l = (0, o.useDateFormatter)({
       month: "long",
       year: "numeric",
       era: c,
       calendar: e.calendar.identifier,
       timeZone: n
     }),
-    p = (0, a.useDateFormatter)({
+    f = (0, o.useDateFormatter)({
       month: "long",
       year: "numeric",
       day: "numeric",
@@ -560,102 +560,102 @@ function q(e, t, n, r) {
       calendar: e.calendar.identifier,
       timeZone: n
     });
-  return (0, i.useMemo)(() => {
-    if ((0, s.isSameDay)(e, (0, s.startOfMonth)(e))) {
-      if ((0, s.isSameDay)(t, (0, s.endOfMonth)(e))) return d.format(e.toDate(n));
-      if ((0, s.isSameDay)(t, (0, s.endOfMonth)(t))) return r ? Z(d, o, e, t, n) : d.formatRange(e.toDate(n), t.toDate(n))
+  return (0, s.useMemo)(() => {
+    if ((0, a.isSameDay)(e, (0, a.startOfMonth)(e))) {
+      if ((0, a.isSameDay)(t, (0, a.endOfMonth)(e))) return l.format(e.toDate(n));
+      if ((0, a.isSameDay)(t, (0, a.endOfMonth)(t))) return r ? Z(l, i, e, t, n) : l.formatRange(e.toDate(n), t.toDate(n))
     }
-    return r ? Z(p, o, e, t, n) : p.formatRange(e.toDate(n), t.toDate(n))
-  }, [e, t, d, p, o, n, r])
+    return r ? Z(f, i, e, t, n) : f.formatRange(e.toDate(n), t.toDate(n))
+  }, [e, t, l, f, i, n, r])
 }
 
-function Z(e, t, n, r, o) {
-  let a = e.formatRangeToParts(n.toDate(o), r.toDate(o)),
-    i = -1;
-  for (let e = 0; e < a.length; e++) {
-    let t = a[e];
-    if ("shared" === t.source && "literal" === t.type) i = e;
+function Z(e, t, n, r, i) {
+  let o = e.formatRangeToParts(n.toDate(i), r.toDate(i)),
+    s = -1;
+  for (let e = 0; e < o.length; e++) {
+    let t = o[e];
+    if ("shared" === t.source && "literal" === t.type) s = e;
     else if ("endRange" === t.source) break
   }
-  let s = "",
+  let a = "",
     c = "";
-  for (let e = 0; e < a.length; e++) e < i ? s += a[e].value : e > i && (c += a[e].value);
+  for (let e = 0; e < o.length; e++) e < s ? a += o[e].value : e > s && (c += o[e].value);
   return t.format("dateRange", {
-    startDate: s,
+    startDate: a,
     endDate: c
   })
 }
 
 function Y(e, t) {
   var n;
-  let c, d, p, f, m, h = (0, a.useLocalizedStringFormatter)(l(u)),
-    g = (0, o.filterDOMProps)(e),
-    v = q(t.visibleRange.start, t.visibleRange.end, t.timeZone, !1),
-    y = q(t.visibleRange.start, t.visibleRange.end, t.timeZone, !0);
-  (0, o.useUpdateEffect)(() => {
-    !t.isFocused && (0, r.announce)(y)
-  }, [y]);
-  let b = (n = t, p = (0, a.useLocalizedStringFormatter)(l(u)), "highlightedRange" in n ? {
+  let c, l, f, p, h, g = (0, o.useLocalizedStringFormatter)(u(d)),
+    b = (0, i.filterDOMProps)(e),
+    v = W(t.visibleRange.start, t.visibleRange.end, t.timeZone, !1),
+    m = W(t.visibleRange.start, t.visibleRange.end, t.timeZone, !0);
+  (0, i.useUpdateEffect)(() => {
+    !t.isFocused && (0, r.announce)(m)
+  }, [m]);
+  let y = (n = t, f = (0, o.useLocalizedStringFormatter)(u(d)), "highlightedRange" in n ? {
     start: c,
-    end: d
-  } = n.highlightedRange || {} : c = d = n.value, f = (0, a.useDateFormatter)({
+    end: l
+  } = n.highlightedRange || {} : c = l = n.value, p = (0, o.useDateFormatter)({
     weekday: "long",
     month: "long",
     year: "numeric",
     day: "numeric",
-    era: W(c) || W(d),
+    era: G(c) || G(l),
     timeZone: n.timeZone
-  }), m = "anchorDate" in n ? n.anchorDate : null, (0, i.useMemo)(() => {
-    if (!m && c && d) {
-      if ((0, s.isSameDay)(c, d)) {
-        let e = f.format(c.toDate(n.timeZone));
-        return p.format("selectedDateDescription", {
+  }), h = "anchorDate" in n ? n.anchorDate : null, (0, s.useMemo)(() => {
+    if (!h && c && l) {
+      if ((0, a.isSameDay)(c, l)) {
+        let e = p.format(c.toDate(n.timeZone));
+        return f.format("selectedDateDescription", {
           date: e
         })
       } {
-        let e = Z(f, p, c, d, n.timeZone);
-        return p.format("selectedRangeDescription", {
+        let e = Z(p, f, c, l, n.timeZone);
+        return f.format("selectedRangeDescription", {
           dateRange: e
         })
       }
     }
     return ""
-  }, [c, d, m, n.timeZone, p, f]));
-  (0, o.useUpdateEffect)(() => {
-    b && (0, r.announce)(b, "polite", 4e3)
-  }, [b]);
-  let x = (0, o.useSlotId)([!!e.errorMessage, e.isInvalid, e.validationState]);
-  G.set(t, {
+  }, [c, l, h, n.timeZone, f, p]));
+  (0, i.useUpdateEffect)(() => {
+    y && (0, r.announce)(y, "polite", 4e3)
+  }, [y]);
+  let x = (0, i.useSlotId)([!!e.errorMessage, e.isInvalid, e.validationState]);
+  H.set(t, {
     ariaLabel: e["aria-label"],
     ariaLabelledBy: e["aria-labelledby"],
     errorMessageId: x,
-    selectedDateDescription: b
+    selectedDateDescription: y
   });
-  let [S, w] = (0, i.useState)(!1), D = e.isDisabled || t.isNextVisibleRangeInvalid();
-  D && S && (w(!1), t.setFocused(!0));
-  let [C, P] = (0, i.useState)(!1), k = e.isDisabled || t.isPreviousVisibleRangeInvalid();
-  k && C && (P(!1), t.setFocused(!0));
-  let E = (0, o.useLabels)({
+  let [w, S] = (0, s.useState)(!1), k = e.isDisabled || t.isNextVisibleRangeInvalid();
+  k && w && (S(!1), t.setFocused(!0));
+  let [_, E] = (0, s.useState)(!1), M = e.isDisabled || t.isPreviousVisibleRangeInvalid();
+  M && _ && (E(!1), t.setFocused(!0));
+  let D = (0, i.useLabels)({
     id: e.id,
-    "aria-label": [e["aria-label"], y].filter(Boolean).join(", "),
+    "aria-label": [e["aria-label"], m].filter(Boolean).join(", "),
     "aria-labelledby": e["aria-labelledby"]
   });
   return {
-    calendarProps: (0, o.mergeProps)(g, E, {
+    calendarProps: (0, i.mergeProps)(b, D, {
       role: "application",
       "aria-describedby": e["aria-describedby"] || void 0
     }),
     nextButtonProps: {
       onPress: () => t.focusNextPage(),
-      "aria-label": h.format("next"),
-      isDisabled: D,
-      onFocusChange: w
+      "aria-label": g.format("next"),
+      isDisabled: k,
+      onFocusChange: S
     },
     prevButtonProps: {
       onPress: () => t.focusPreviousPage(),
-      "aria-label": h.format("previous"),
-      isDisabled: k,
-      onFocusChange: P
+      "aria-label": g.format("previous"),
+      isDisabled: M,
+      onFocusChange: E
     },
     errorMessageProps: {
       id: x
@@ -668,26 +668,26 @@ function X(e, t) {
   return Y(e, t)
 }
 
-function J(e, t, n) {
+function $(e, t, n) {
   let r = Y(e, t),
-    a = (0, i.useRef)(!1),
-    s = (0, i.useRef)("undefined" != typeof window ? window : null);
-  (0, o.useEvent)(s, "pointerdown", e => {
-    a.current = 0 === e.width && 0 === e.height
+    o = (0, s.useRef)(!1),
+    a = (0, s.useRef)("undefined" != typeof window ? window : null);
+  (0, i.useEvent)(a, "pointerdown", e => {
+    o.current = 0 === e.width && 0 === e.height
   });
   let c = e => {
-    if (a.current) {
-      a.current = !1;
+    if (o.current) {
+      o.current = !1;
       return
     }
     if (t.setDragging(!1), !t.anchorDate) return;
     let n = e.target,
-      o = document.getElementById(r.calendarProps.id);
-    o && o.contains(document.activeElement) && (!o.contains(n) || !n.closest('button, [role="button"]')) && t.selectFocusedDate()
+      i = document.getElementById(r.calendarProps.id);
+    i && i.contains(document.activeElement) && (!i.contains(n) || !n.closest('button, [role="button"]')) && t.selectFocusedDate()
   };
-  return (0, o.useEvent)(s, "pointerup", c), (0, o.useEvent)(s, "pointercancel", c), r.calendarProps.onBlur = e => {
+  return (0, i.useEvent)(a, "pointerup", c), (0, i.useEvent)(a, "pointercancel", c), r.calendarProps.onBlur = e => {
     (!e.relatedTarget || !n.current.contains(e.relatedTarget)) && t.anchorDate && t.selectFocusedDate()
-  }, (0, o.useEvent)(n, "touchmove", e => {
+  }, (0, i.useEvent)(n, "touchmove", e => {
     t.isDragging && e.preventDefault()
   }, {
     passive: !1,
@@ -695,34 +695,34 @@ function J(e, t, n) {
   }), r
 }
 
-function $(e, t) {
+function J(e, t) {
   let {
     startDate: n = t.visibleRange.start,
     endDate: r = t.visibleRange.end
   } = e, {
     direction: c
-  } = (0, a.useLocale)(), l = q(n, r, t.timeZone, !0), {
-    ariaLabel: u,
-    ariaLabelledBy: d
-  } = G.get(t), p = (0, o.useLabels)({
-    "aria-label": [u, l].filter(Boolean).join(", "),
-    "aria-labelledby": d
-  }), f = (0, a.useDateFormatter)({
+  } = (0, o.useLocale)(), u = W(n, r, t.timeZone, !0), {
+    ariaLabel: d,
+    ariaLabelledBy: l
+  } = H.get(t), f = (0, i.useLabels)({
+    "aria-label": [d, u].filter(Boolean).join(", "),
+    "aria-labelledby": l
+  }), p = (0, o.useDateFormatter)({
     weekday: e.weekdayStyle || "narrow",
     timeZone: t.timeZone
   }), {
-    locale: m
-  } = (0, a.useLocale)(), h = (0, i.useMemo)(() => {
-    let e = (0, s.startOfWeek)((0, s.today)(t.timeZone), m);
+    locale: h
+  } = (0, o.useLocale)(), g = (0, s.useMemo)(() => {
+    let e = (0, a.startOfWeek)((0, a.today)(t.timeZone), h);
     return [...Array(7).keys()].map(n => {
       let r = e.add({
         days: n
       }).toDate(t.timeZone);
-      return f.format(r)
+      return p.format(r)
     })
-  }, [m, t.timeZone, f]);
+  }, [h, t.timeZone, p]);
   return {
-    gridProps: (0, o.mergeProps)(p, {
+    gridProps: (0, i.mergeProps)(f, {
       role: "grid",
       "aria-readonly": t.isReadOnly || null,
       "aria-disabled": t.isDisabled || null,
@@ -767,53 +767,53 @@ function $(e, t) {
     headerProps: {
       "aria-hidden": !0
     },
-    weekDays: h
+    weekDays: g
   }
 }
 
 function Q(e, t, n) {
   let {
     date: r,
-    isDisabled: d
+    isDisabled: l
   } = e, {
-    errorMessageId: p,
-    selectedDateDescription: f
-  } = G.get(t), m = (0, a.useLocalizedStringFormatter)(l(u)), h = (0, a.useDateFormatter)({
+    errorMessageId: f,
+    selectedDateDescription: p
+  } = H.get(t), h = (0, o.useLocalizedStringFormatter)(u(d)), g = (0, o.useDateFormatter)({
     weekday: "long",
     day: "numeric",
     month: "long",
     year: "numeric",
-    era: W(r),
+    era: G(r),
     timeZone: t.timeZone
-  }), g = t.isSelected(r), v = t.isCellFocused(r);
-  d = d || t.isCellDisabled(r);
-  let y = t.isCellUnavailable(r),
-    b = !d && !y,
-    x = t.isValueInvalid && ("highlightedRange" in t ? !t.anchorDate && t.highlightedRange && r.compare(t.highlightedRange.start) >= 0 && 0 >= r.compare(t.highlightedRange.end) : t.value && (0, s.isSameDay)(t.value, r));
-  x && (g = !0), r = (0, o.useDeepMemo)(r, s.isEqualDay);
-  let S = (0, i.useMemo)(() => r.toDate(t.timeZone), [r, t.timeZone]),
-    w = (0, s.isToday)(r, t.timeZone),
-    D = (0, i.useMemo)(() => {
+  }), b = t.isSelected(r), v = t.isCellFocused(r);
+  l = l || t.isCellDisabled(r);
+  let m = t.isCellUnavailable(r),
+    y = !l && !m,
+    x = t.isValueInvalid && ("highlightedRange" in t ? !t.anchorDate && t.highlightedRange && r.compare(t.highlightedRange.start) >= 0 && 0 >= r.compare(t.highlightedRange.end) : t.value && (0, a.isSameDay)(t.value, r));
+  x && (b = !0), r = (0, i.useDeepMemo)(r, a.isEqualDay);
+  let w = (0, s.useMemo)(() => r.toDate(t.timeZone), [r, t.timeZone]),
+    S = (0, a.isToday)(r, t.timeZone),
+    k = (0, s.useMemo)(() => {
       let e = "";
-      return "highlightedRange" in t && t.value && !t.anchorDate && ((0, s.isSameDay)(r, t.value.start) || (0, s.isSameDay)(r, t.value.end)) && (e = f + ", "), e += h.format(S), w ? e = m.format(g ? "todayDateSelected" : "todayDate", {
+      return "highlightedRange" in t && t.value && !t.anchorDate && ((0, a.isSameDay)(r, t.value.start) || (0, a.isSameDay)(r, t.value.end)) && (e = p + ", "), e += g.format(w), S ? e = h.format(b ? "todayDateSelected" : "todayDate", {
         date: e
-      }) : g && (e = m.format("dateSelected", {
+      }) : b && (e = h.format("dateSelected", {
         date: e
-      })), t.minValue && (0, s.isSameDay)(r, t.minValue) ? e += ", " + m.format("minimumDate") : t.maxValue && (0, s.isSameDay)(r, t.maxValue) && (e += ", " + m.format("maximumDate")), e
-    }, [h, S, m, g, w, r, t, f]),
-    C = "";
-  "anchorDate" in t && v && !t.isReadOnly && b && (C = t.anchorDate ? m.format("finishRangeSelectionPrompt") : m.format("startRangeSelectionPrompt"));
-  let P = (0, o.useDescription)(C),
-    k = (0, i.useRef)(!1),
-    E = (0, i.useRef)(!1),
-    T = (0, i.useRef)(null),
+      })), t.minValue && (0, a.isSameDay)(r, t.minValue) ? e += ", " + h.format("minimumDate") : t.maxValue && (0, a.isSameDay)(r, t.maxValue) && (e += ", " + h.format("maximumDate")), e
+    }, [g, w, h, b, S, r, t, p]),
+    _ = "";
+  "anchorDate" in t && v && !t.isReadOnly && y && (_ = t.anchorDate ? h.format("finishRangeSelectionPrompt") : h.format("startRangeSelectionPrompt"));
+  let E = (0, i.useDescription)(_),
+    M = (0, s.useRef)(!1),
+    D = (0, s.useRef)(!1),
+    C = (0, s.useRef)(null),
     {
-      pressProps: R,
-      isPressed: M
+      pressProps: P,
+      isPressed: T
     } = (0, c.usePress)({
       shouldCancelOnPointerExit: "anchorDate" in t && !!t.anchorDate,
       preventFocusOnPress: !0,
-      isDisabled: !b || t.isReadOnly,
+      isDisabled: !y || t.isReadOnly,
       onPressStart(e) {
         if (t.isReadOnly) {
           t.setFocusedDate(r);
@@ -821,31 +821,31 @@ function Q(e, t, n) {
         }
         if ("highlightedRange" in t && !t.anchorDate && ("mouse" === e.pointerType || "touch" === e.pointerType)) {
           if (t.highlightedRange && !x) {
-            if ((0, s.isSameDay)(r, t.highlightedRange.start)) {
-              t.setAnchorDate(t.highlightedRange.end), t.setFocusedDate(r), t.setDragging(!0), E.current = !0;
+            if ((0, a.isSameDay)(r, t.highlightedRange.start)) {
+              t.setAnchorDate(t.highlightedRange.end), t.setFocusedDate(r), t.setDragging(!0), D.current = !0;
               return
             }
-            if ((0, s.isSameDay)(r, t.highlightedRange.end)) {
-              t.setAnchorDate(t.highlightedRange.start), t.setFocusedDate(r), t.setDragging(!0), E.current = !0;
+            if ((0, a.isSameDay)(r, t.highlightedRange.end)) {
+              t.setAnchorDate(t.highlightedRange.start), t.setFocusedDate(r), t.setDragging(!0), D.current = !0;
               return
             }
           }
           let n = () => {
-            t.setDragging(!0), T.current = null, t.selectDate(r), t.setFocusedDate(r), k.current = !0
+            t.setDragging(!0), C.current = null, t.selectDate(r), t.setFocusedDate(r), M.current = !0
           };
-          "touch" === e.pointerType ? T.current = setTimeout(n, 200) : n()
+          "touch" === e.pointerType ? C.current = setTimeout(n, 200) : n()
         }
       },
       onPressEnd() {
-        E.current = !1, k.current = !1, clearTimeout(T.current), T.current = null
+        D.current = !1, M.current = !1, clearTimeout(C.current), C.current = null
       },
       onPress() {
         !("anchorDate" in t) && !t.isReadOnly && (t.selectDate(r), t.setFocusedDate(r))
       },
       onPressUp(e) {
-        if (!t.isReadOnly && ("anchorDate" in t && T.current && (t.selectDate(r), t.setFocusedDate(r)), "anchorDate" in t)) {
-          if (E.current) t.setAnchorDate(r);
-          else if (t.anchorDate && !k.current) t.selectDate(r), t.setFocusedDate(r);
+        if (!t.isReadOnly && ("anchorDate" in t && C.current && (t.selectDate(r), t.setFocusedDate(r)), "anchorDate" in t)) {
+          if (D.current) t.setAnchorDate(r);
+          else if (t.anchorDate && !M.current) t.selectDate(r), t.setFocusedDate(r);
           else if ("keyboard" !== e.pointerType || t.anchorDate) "virtual" === e.pointerType && (t.selectDate(r), t.setFocusedDate(r));
           else {
             t.selectDate(r);
@@ -859,37 +859,37 @@ function Q(e, t, n) {
         }
       }
     }),
-    O = null;
-  !d && (O = (0, s.isSameDay)(r, t.focusedDate) ? 0 : -1), (0, i.useEffect)(() => {
-    v && n.current && ((0, o.focusWithoutScrolling)(n.current), "pointer" !== (0, c.getInteractionModality)() && document.activeElement === n.current && (0, o.scrollIntoViewport)(n.current, {
-      containingElement: (0, o.getScrollParent)(n.current)
+    A = null;
+  !l && (A = (0, a.isSameDay)(r, t.focusedDate) ? 0 : -1), (0, s.useEffect)(() => {
+    v && n.current && ((0, i.focusWithoutScrolling)(n.current), "pointer" !== (0, c.getInteractionModality)() && document.activeElement === n.current && (0, i.scrollIntoViewport)(n.current, {
+      containingElement: (0, i.getScrollParent)(n.current)
     }))
   }, [v, n]);
-  let I = (0, a.useDateFormatter)({
+  let R = (0, o.useDateFormatter)({
       day: "numeric",
       timeZone: t.timeZone,
       calendar: r.calendar.identifier
     }),
-    A = (0, i.useMemo)(() => I.formatToParts(S).find(e => "day" === e.type).value, [I, S]);
+    I = (0, s.useMemo)(() => R.formatToParts(w).find(e => "day" === e.type).value, [R, w]);
   return {
     cellProps: {
       role: "gridcell",
-      "aria-disabled": !b || null,
-      "aria-selected": g || null,
+      "aria-disabled": !y || null,
+      "aria-selected": b || null,
       "aria-invalid": x || null
     },
-    buttonProps: (0, o.mergeProps)(R, {
+    buttonProps: (0, i.mergeProps)(P, {
       onFocus() {
-        !d && t.setFocusedDate(r)
+        !l && t.setFocusedDate(r)
       },
-      tabIndex: O,
+      tabIndex: A,
       role: "button",
-      "aria-disabled": !b || null,
-      "aria-label": D,
+      "aria-disabled": !y || null,
+      "aria-label": k,
       "aria-invalid": x || null,
-      "aria-describedby": [x ? p : null, P["aria-describedby"]].filter(Boolean).join(" ") || void 0,
+      "aria-describedby": [x ? f : null, E["aria-describedby"]].filter(Boolean).join(" ") || void 0,
       onPointerEnter(e) {
-        "highlightDate" in t && ("touch" !== e.pointerType || t.isDragging) && b && t.highlightDate(r)
+        "highlightDate" in t && ("touch" !== e.pointerType || t.isDragging) && y && t.highlightDate(r)
       },
       onPointerDown(e) {
         "releasePointerCapture" in e.target && e.target.releasePointerCapture(e.pointerId)
@@ -898,13 +898,13 @@ function Q(e, t, n) {
         e.preventDefault()
       }
     }),
-    isPressed: M,
+    isPressed: T,
     isFocused: v,
-    isSelected: g,
-    isDisabled: d,
-    isUnavailable: y,
+    isSelected: b,
+    isDisabled: l,
+    isUnavailable: m,
     isOutsideVisibleRange: 0 > r.compare(t.visibleRange.start) || r.compare(t.visibleRange.end) > 0,
     isInvalid: x,
-    formattedDate: A
+    formattedDate: I
   }
 }

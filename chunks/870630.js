@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("70102"), n("222007");
-var i, r = n("595275"),
-  s = n("773364"),
+var i, s = n("595275"),
+  r = n("773364"),
   a = n("353927");
 
 function o(e) {
@@ -15,9 +15,9 @@ function o(e) {
 function l(e) {
   return null
 }
-i = class extends r.default {
+i = class extends s.default {
   destroy() {
-    this.emit(s.MediaEngineEvent.Destroy), this.removeAllListeners()
+    this.emit(r.MediaEngineEvent.Destroy), this.removeAllListeners()
   }
   interact() {}
   supported() {

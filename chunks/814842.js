@@ -1,59 +1,59 @@
 "use strict";
 n.r(t), n.d(t, {
   useToggle: function() {
-    return i
+    return s
   }
 });
 var r = n("290895"),
-  o = n("780095"),
-  a = n("495912");
+  i = n("780095"),
+  o = n("495912");
 
-function i(e, t, n) {
+function s(e, t, n) {
   let {
-    isDisabled: i = !1,
-    isRequired: s = !1,
+    isDisabled: s = !1,
+    isRequired: a = !1,
     isReadOnly: c = !1,
-    value: l,
-    name: u,
-    children: d,
-    "aria-label": p,
-    "aria-labelledby": f,
-    validationState: m = "valid",
-    isInvalid: h
+    value: u,
+    name: d,
+    children: l,
+    "aria-label": f,
+    "aria-labelledby": p,
+    validationState: h = "valid",
+    isInvalid: g
   } = e;
-  !(null != d) && !(null != p || null != f) && console.warn("If you do not provide children, you must specify an aria-label for accessibility");
+  !(null != l) && !(null != f || null != p) && console.warn("If you do not provide children, you must specify an aria-label for accessibility");
   let {
-    pressProps: g,
+    pressProps: b,
     isPressed: v
-  } = (0, a.usePress)({
-    isDisabled: i
+  } = (0, o.usePress)({
+    isDisabled: s
   }), {
-    focusableProps: y
-  } = (0, o.useFocusable)(e, n), b = (0, r.mergeProps)(g, y), x = (0, r.filterDOMProps)(e, {
+    focusableProps: m
+  } = (0, i.useFocusable)(e, n), y = (0, r.mergeProps)(b, m), x = (0, r.filterDOMProps)(e, {
     labelable: !0
   });
   return (0, r.useFormReset)(n, t.isSelected, t.setSelected), {
     inputProps: (0, r.mergeProps)(x, {
-      "aria-invalid": h || "invalid" === m || void 0,
+      "aria-invalid": g || "invalid" === h || void 0,
       "aria-errormessage": e["aria-errormessage"],
       "aria-controls": e["aria-controls"],
       "aria-readonly": c || void 0,
-      "aria-required": s || void 0,
+      "aria-required": a || void 0,
       onChange: e => {
         e.stopPropagation(), t.setSelected(e.target.checked)
       },
-      disabled: i,
-      ...null == l ? {} : {
-        value: l
+      disabled: s,
+      ...null == u ? {} : {
+        value: u
       },
-      name: u,
+      name: d,
       type: "checkbox",
-      ...b
+      ...y
     }),
     isSelected: t.isSelected,
     isPressed: v,
-    isDisabled: i,
+    isDisabled: s,
     isReadOnly: c,
-    isInvalid: h || "invalid" === m
+    isInvalid: g || "invalid" === h
   }
 }

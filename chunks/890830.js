@@ -1,45 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
   useProgressBar: function() {
-    return i
+    return s
   }
 });
 var r = n("290895"),
-  o = n("825167"),
-  a = n("181551");
+  i = n("825167"),
+  o = n("181551");
 
-function i(e) {
+function s(e) {
   let {
     value: t = 0,
     minValue: n = 0,
-    maxValue: i = 100,
-    valueLabel: s,
+    maxValue: s = 100,
+    valueLabel: a,
     isIndeterminate: c,
-    formatOptions: l = {
+    formatOptions: u = {
       style: "percent"
     }
-  } = e, u = (0, r.filterDOMProps)(e, {
+  } = e, d = (0, r.filterDOMProps)(e, {
     labelable: !0
   }), {
-    labelProps: d,
-    fieldProps: p
-  } = (0, o.useLabel)({
+    labelProps: l,
+    fieldProps: f
+  } = (0, i.useLabel)({
     ...e,
     labelElementType: "span"
-  }), f = ((t = (0, r.clamp)(t, n, i)) - n) / (i - n), m = (0, a.useNumberFormatter)(l);
-  if (!c && !s) {
-    let e = "percent" === l.style ? f : t;
-    s = m.format(e)
+  }), p = ((t = (0, r.clamp)(t, n, s)) - n) / (s - n), h = (0, o.useNumberFormatter)(u);
+  if (!c && !a) {
+    let e = "percent" === u.style ? p : t;
+    a = h.format(e)
   }
   return {
-    progressBarProps: (0, r.mergeProps)(u, {
-      ...p,
+    progressBarProps: (0, r.mergeProps)(d, {
+      ...f,
       "aria-valuenow": c ? void 0 : t,
       "aria-valuemin": n,
-      "aria-valuemax": i,
-      "aria-valuetext": c ? void 0 : s,
+      "aria-valuemax": s,
+      "aria-valuetext": c ? void 0 : a,
       role: "progressbar"
     }),
-    labelProps: d
+    labelProps: l
   }
 }

@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   isSameDay: function() {
-    return d
+    return c
   },
   isWithinInterval: function() {
     return f
   },
   dateFormat: function() {
-    return E
+    return _
   },
   calendarFormat: function() {
     return h
   },
   accessibilityLabelCalendarFormat: function() {
-    return p
+    return g
   },
   diffAsUnits: function() {
-    return S
+    return E
   },
   unitsAsStrings: function() {
-    return m
+    return p
   }
 });
 var i = n("866227"),
-  r = n.n(i),
-  s = n("432959"),
+  s = n.n(i),
+  r = n("432959"),
   a = n("915639");
 let o = 864e5,
   l = Object.create(null);
@@ -35,11 +35,11 @@ function u(e) {
   return !t && (n -= 6e4 * e.getTimezoneOffset()), Math.floor(n / o) * o
 }
 
-function c(e, t) {
+function d(e, t) {
   return Math.floor((u(e, !1) - u(t, !1)) / o)
 }
 
-function d(e, t) {
+function c(e, t) {
   let n = e.toDate(),
     i = t.toDate();
   return Math.abs(+n - +i) <= o && n.getDate() === i.getDate()
@@ -49,31 +49,31 @@ function f(e, t, n) {
   return Math.abs(e.valueOf() - t.valueOf()) < n
 }
 
-function E(e, t) {
+function _(e, t) {
   let n = "".concat(e.locale(), ":").concat(t),
     i = l[n];
-  return null == i && (i = l[n] = (0, s.default)(t)), i(e.toDate())
+  return null == i && (i = l[n] = (0, r.default)(t)), i(e.toDate())
 }
 
 function h(e) {
   let t;
-  let n = r.localeData(),
-    i = r(),
-    s = c(e.toDate(), i.toDate());
-  return s < -1 ? E(e, "L LT") : (t = s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse", E(e, n.calendar(t, e, i)))
+  let n = s.localeData(),
+    i = s(),
+    r = d(e.toDate(), i.toDate());
+  return r < -1 ? _(e, "L LT") : (t = r < 0 ? "lastDay" : r < 1 ? "sameDay" : r < 2 ? "nextDay" : "sameElse", _(e, n.calendar(t, e, i)))
 }
 
-function p(e) {
+function g(e) {
   let t;
-  let n = r.localeData(),
-    i = r(),
-    s = c(e.toDate(), i.toDate());
-  return "sameElse" == (t = s < -1 ? "sameElse" : s < 0 ? "lastDay" : s < 1 ? "sameDay" : s < 2 ? "nextDay" : "sameElse") ? E(e, "LLL") : E(e, n.calendar(t, e, i))
+  let n = s.localeData(),
+    i = s(),
+    r = d(e.toDate(), i.toDate());
+  return "sameElse" == (t = r < -1 ? "sameElse" : r < 0 ? "lastDay" : r < 1 ? "sameDay" : r < 2 ? "nextDay" : "sameElse") ? _(e, "LLL") : _(e, n.calendar(t, e, i))
 }
 a.default.addChangeListener(() => {
   l = Object.create(null)
 });
-let _ = [{
+let m = [{
   key: "days",
   millisecondsInUnit: 864e5
 }, {
@@ -87,7 +87,7 @@ let _ = [{
   millisecondsInUnit: 1e3
 }];
 
-function S(e, t) {
+function E(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = {
       days: 0,
@@ -96,17 +96,17 @@ function S(e, t) {
       seconds: n ? 1 : 0
     };
   if (e > t || n && Number(e) + 1200 > Number(t)) return i;
-  let r = Number(t) - Number(e);
-  return _.forEach(e => {
+  let s = Number(t) - Number(e);
+  return m.forEach(e => {
     let {
       key: t,
       millisecondsInUnit: n
     } = e;
-    i[t] = Math.floor(r / n), r -= i[t] * n
+    i[t] = Math.floor(s / n), s -= i[t] * n
   }), i
 }
 
-function m(e, t) {
+function p(e, t) {
   return e.days > 0 ? t.days.format({
     days: e.days,
     hours: e.hours

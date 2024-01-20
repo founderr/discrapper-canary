@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   guildInventorySettingsToServer: function() {
-    return r
+    return s
   }
 });
 let i = e => {
@@ -13,6 +13,6 @@ let i = e => {
       isEmojiPackCollectible: null === (t = e.is_emoji_pack_collectible) || void 0 === t || t
     }
   },
-  r = e => null == e ? e : {
+  s = e => null == e ? e : {
     is_emoji_pack_collectible: e.isEmojiPackCollectible
   }

@@ -66,18 +66,18 @@ function E(e) {
     })
   }, [E]), _ = (0, C.shouldChannelChatFloat)({
     maxWidth: n
-  }), T = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = _ ? T : T + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
+  }), M = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), T = _ ? M : M + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
   i.useEffect(() => {
-    null == s || s(T, _)
-  }, [T, s, _]);
-  let N = (0, l.jsxs)(l.Fragment, {
+    null == s || s(M, _)
+  }, [M, s, _]);
+  let I = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: o(p.chatTarget, {
         [p.floating]: _,
         [p.notFloating]: !_
       }),
       style: {
-        width: M
+        width: T
       }
     }), !_ && (0, l.jsx)(m, {
       maxWidth: n,
@@ -90,7 +90,7 @@ function E(e) {
         [p.floating]: _
       }),
       style: {
-        width: T
+        width: M
       },
       children: a
     })]
@@ -100,11 +100,11 @@ function E(e) {
     return (0, l.jsx)(e, {
       children: (0, l.jsx)("div", {
         className: p.chatLayerWrapper,
-        children: N
+        children: I
       })
     })
   }
   return (0, l.jsx)(l.Fragment, {
-    children: N
+    children: I
   })
 }

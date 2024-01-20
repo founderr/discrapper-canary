@@ -1,95 +1,95 @@
 "use strict";
 n.r(t), n.d(t, {
   getMediaPostEmbedCommonData: function() {
-    return _
+    return f
   },
   getMediaPostEmbedChannelPath: function() {
-    return c
+    return _
   },
   canUseMediaPostEmbed: function() {
-    return I
+    return h
   }
 }), n("702976");
-var r = n("312016"),
-  i = n("361572"),
-  l = n("305961"),
-  u = n("315102"),
-  a = n("387111"),
-  o = n("856220"),
-  d = n("49111"),
-  s = n("894488"),
-  E = n("782340");
+var i = n("312016"),
+  s = n("361572"),
+  r = n("305961"),
+  a = n("315102"),
+  o = n("387111"),
+  l = n("856220"),
+  u = n("49111"),
+  d = n("894488"),
+  c = n("782340");
 
-function _(e) {
-  var t, n, r, i, l;
+function f(e) {
+  var t, n, i, s, r;
   let {
-    mediaPostEmbedData: d,
-    guild: _,
-    parentChannel: c,
-    postThread: I,
-    user: S,
-    selectedGuildId: T,
-    canAccess: f = !1
+    mediaPostEmbedData: u,
+    guild: f,
+    parentChannel: _,
+    postThread: h,
+    user: g,
+    selectedGuildId: m,
+    canAccess: E = !1
   } = e;
-  if (null == d) return null;
-  let p = (0, o.getThumbnailImage)(d.thumbnail),
-    N = !f && d.has_media_attachment,
-    C = f ? E.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : E.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
-    A = null != S ? a.default.getName(d.guild_id, d.channel_id, S) : void 0,
-    R = null == S ? void 0 : S.getAvatarURL(null == _ ? void 0 : _.id, 40);
-  (null == R || T !== d.guild_id) && (R = u.default.getGuildIconURL({
-    id: d.guild_id,
-    icon: d.guild_icon,
+  if (null == u) return null;
+  let p = (0, l.getThumbnailImage)(u.thumbnail),
+    v = !E && u.has_media_attachment,
+    S = E ? c.default.Messages.MEDIA_POST_EMBED_SUBSCRIBED_CTA : c.default.Messages.MEDIA_POST_EMBED_SUBSCRIBE_CTA,
+    T = null != g ? o.default.getName(u.guild_id, u.channel_id, g) : void 0,
+    I = null == g ? void 0 : g.getAvatarURL(null == f ? void 0 : f.id, 40);
+  (null == I || m !== u.guild_id) && (I = a.default.getGuildIconURL({
+    id: u.guild_id,
+    icon: u.guild_icon,
     size: 40,
     canAnimate: !1
   }));
-  let h = function(e) {
+  let C = function(e) {
       if (null == e) return !1;
       let {
         height: t,
         width: n
       } = e;
       return null != t && null != n && t >= n
-    }(d.thumbnail) && !N,
-    O = (null === (t = d.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (r = d.thumbnail) || void 0 === r ? void 0 : null === (n = r.filename) || void 0 === n ? void 0 : n.startsWith(s.SPOILER_ATTACHMENT_PREFIX));
+    }(u.thumbnail) && !v,
+    A = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (i = u.thumbnail) || void 0 === i ? void 0 : null === (n = i.filename) || void 0 === n ? void 0 : n.startsWith(d.SPOILER_ATTACHMENT_PREFIX));
   return {
-    title: null !== (i = d.title) && void 0 !== i ? i : "",
-    subtitle: d.description,
-    ctaText: C,
+    title: null !== (s = u.title) && void 0 !== s ? s : "",
+    subtitle: u.description,
+    ctaText: S,
     coverImage: p,
-    coverImageOverlayText: N ? E.default.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
-    parentChannelId: d.parent_channel_id,
-    threadId: d.channel_id,
-    postThread: I,
-    messageId: d.message_id,
-    canAccess: f,
-    guildId: d.guild_id,
-    guildName: null !== (l = null == _ ? void 0 : _.name) && void 0 !== l ? l : d.guild_name,
-    authorId: null == d ? void 0 : d.author_id,
-    authorName: A,
-    channelName: null == c ? void 0 : c.name,
-    avatarUrl: R,
-    shouldShowBlurredThumbnailImage: N,
-    shouldContainMediaWithBackground: h,
-    shouldSpoiler: O,
+    coverImageOverlayText: v ? c.default.Messages.MEDIA_POST_EMBED_BLURRED_THUMBNAIL_TEXT : void 0,
+    parentChannelId: u.parent_channel_id,
+    threadId: u.channel_id,
+    postThread: h,
+    messageId: u.message_id,
+    canAccess: E,
+    guildId: u.guild_id,
+    guildName: null !== (r = null == f ? void 0 : f.name) && void 0 !== r ? r : u.guild_name,
+    authorId: null == u ? void 0 : u.author_id,
+    authorName: T,
+    channelName: null == _ ? void 0 : _.name,
+    avatarUrl: I,
+    shouldShowBlurredThumbnailImage: v,
+    shouldContainMediaWithBackground: C,
+    shouldSpoiler: A,
     obscureAwaitingScan: !1,
-    flags: d.flags,
-    contentScanVersion: d.content_scan_version
+    flags: u.flags,
+    contentScanVersion: u.content_scan_version
   }
 }
 
-function c(e) {
+function _(e) {
   if (null == e) return;
-  let t = (0, r.parseURLSafely)(e);
+  let t = (0, i.parseURLSafely)(e);
   if (null == t) return;
-  let n = (0, r.remainingPathFromDiscordHostMatch)(t);
-  if (null != n) return (0, i.tryParseChannelPath)(n)
+  let n = (0, i.remainingPathFromDiscordHostMatch)(t);
+  if (null != n) return (0, s.tryParseChannelPath)(n)
 }
 
-function I(e, t) {
-  let n = l.default.getGuild(e);
+function h(e, t) {
+  let n = r.default.getGuild(e);
   if (null == n || null == t) return !1;
-  let r = n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE) || n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL),
-    i = !0 === t.isMediaChannel();
-  return i && r
+  let i = n.hasFeature(u.GuildFeatures.CREATOR_MONETIZABLE) || n.hasFeature(u.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL),
+    s = !0 === t.isMediaChannel();
+  return s && i
 }

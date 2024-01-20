@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return y
   },
   ItemsPopout: function() {
-    return F
+    return D
   },
   default: function() {
     return U
@@ -31,13 +31,13 @@ var a = n("37983"),
   S = n("42203"),
   N = n("377253"),
   _ = n("957255"),
-  T = n("600133"),
-  I = n("471671"),
+  I = n("600133"),
+  T = n("471671"),
   C = n("822332"),
   A = n("945330"),
-  M = n("599110"),
+  x = n("599110"),
   v = n("659500"),
-  x = n("49111"),
+  M = n("49111"),
   R = n("782340"),
   L = n("466908");
 
@@ -137,16 +137,16 @@ class j extends l.PureComponent {
     }
   }
 }
-let D = d.default.connectStores([_.default], e => {
+let F = d.default.connectStores([_.default], e => {
   let {
     channel: t
   } = e;
   return {
-    canManageMessages: null != t && _.default.can(x.Permissions.MANAGE_MESSAGES, t)
+    canManageMessages: null != t && _.default.can(M.Permissions.MANAGE_MESSAGES, t)
   }
 })(j);
 
-function F(e) {
+function D(e) {
   let {
     analyticsName: t,
     items: n,
@@ -160,9 +160,9 @@ function F(e) {
     scrollerClassName: N,
     className: _,
     listName: A
-  } = e, b = l.useRef(null), y = (0, E.default)(A, b), j = (0, d.useStateFromStores)([T.default], () => T.default.hasNotice()), D = (0, d.useStateFromStores)([I.default], () => I.default.windowSize());
+  } = e, b = l.useRef(null), y = (0, E.default)(A, b), j = (0, d.useStateFromStores)([I.default], () => I.default.hasNotice()), F = (0, d.useStateFromStores)([T.default], () => T.default.windowSize());
   l.useEffect(() => {
-    M.default.track(x.AnalyticEvents.OPEN_POPOUT, {
+    x.default.track(M.AnalyticEvents.OPEN_POPOUT, {
       type: t
     })
   }, [t]), l.useEffect(() => {
@@ -179,11 +179,11 @@ function F(e) {
         animate: !0
       })
     }
-    return v.ComponentDispatch.subscribe(x.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.subscribe(x.ComponentActions.SCROLL_PAGE_UP, e), () => {
-      v.ComponentDispatch.unsubscribe(x.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.unsubscribe(x.ComponentActions.SCROLL_PAGE_UP, e)
+    return v.ComponentDispatch.subscribe(M.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.subscribe(M.ComponentActions.SCROLL_PAGE_UP, e), () => {
+      v.ComponentDispatch.unsubscribe(M.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.unsubscribe(M.ComponentActions.SCROLL_PAGE_UP, e)
     }
   }, []);
-  let F = l.useCallback(() => {
+  let D = l.useCallback(() => {
       var e;
       let t = null === (e = b.current) || void 0 === e ? void 0 : e.getScrollerState();
       null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && s && !r && (null == f || f())
@@ -227,7 +227,7 @@ function F(e) {
       })
     }) : null,
     B = {
-      maxHeight: D.height - 43 - 25
+      maxHeight: F.height - 43 - 25
     };
   j && (B.maxHeight -= 40);
   let H = null != f && s;
@@ -241,7 +241,7 @@ function F(e) {
       component: h(),
       children: [(0, a.jsxs)(c.AdvancedScroller, {
         className: i(L.messagesPopout, N),
-        onScroll: H ? F : void 0,
+        onScroll: H ? D : void 0,
         ref: b,
         children: [(0, a.jsx)(u.ListNavigatorProvider, {
           navigator: y,
@@ -277,11 +277,11 @@ function U(e) {
     canCloseAllMessages: E = !1,
     renderHeader: g,
     renderEmptyState: _,
-    renderMessage: T,
-    getProTip: I,
+    renderMessage: I,
+    getProTip: T,
     scrollerClassName: C,
     className: A,
-    onCloseMessage: M,
+    onCloseMessage: x,
     listName: v
   } = e, O = (0, d.useStateFromStores)([N.default], () => {
     let e = null != s ? N.default.getMessages(s.id) : null;
@@ -304,7 +304,7 @@ function U(e) {
     });
     else if (!O) {
       let e = S.default.getChannel(i);
-      null != e && (h.default.trackJump(i, a, t), (0, p.transitionTo)(x.Routes.CHANNEL(e.getGuildId(), i, a))), null == c || c(n)
+      null != e && (h.default.trackJump(i, a, t), (0, p.transitionTo)(M.Routes.CHANNEL(e.getGuildId(), i, a))), null == c || c(n)
     }
   }
   l.useEffect(() => {
@@ -314,7 +314,7 @@ function U(e) {
     message: e,
     channel: s
   })), [i, s]);
-  return (0, a.jsx)(F, {
+  return (0, a.jsx)(D, {
     className: A,
     scrollerClassName: C,
     items: y,
@@ -324,14 +324,14 @@ function U(e) {
     renderHeader: g,
     hasMore: r,
     loadMore: u,
-    getProTip: I,
+    getProTip: T,
     renderItem: function(e) {
       let {
         message: t,
         channel: n
       } = e;
       if (null == t) return [];
-      if (null != T) return T(t, e => b(t, e));
+      if (null != I) return I(t, e => b(t, e));
       let l = [];
       return null == n ? [] : (l.push((0, a.jsxs)("div", {
         className: L.messageGroupWrapper,
@@ -339,13 +339,13 @@ function U(e) {
           className: L.messageGroupCozy,
           message: t,
           channel: n
-        }), (0, a.jsx)(D, {
+        }), (0, a.jsx)(F, {
           channel: s,
           message: t,
           jumping: O,
           canCloseAllMessages: E,
           jumpTo: b,
-          onCloseMessage: M
+          onCloseMessage: x
         })]
       }, t.id)), l)
     },

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return T
   }
 }), n("222007");
 var s = n("37983"),
@@ -23,30 +23,30 @@ var s = n("37983"),
   S = n("49111"),
   A = n("782340"),
   _ = n("649755");
-let T = "749054660769218631";
+let M = "749054660769218631";
 
-function M(e) {
+function T(e) {
   var t;
   let {
     channel: n
-  } = e, [l, M] = a.useState("");
+  } = e, [l, T] = a.useState("");
   a.useEffect(() => {
     (0, d.fetchStickerPack)("847199849233514549", !0)
   }, []);
-  let N = (0, r.useStateFromStores)([C.default, h.default], () => !!i(C.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, g.default)(e))),
-    I = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-    v = null !== (t = E.default.useName(I)) && void 0 !== t ? t : A.default.Messages.WAVE_DEFAULT_RECIPIENT,
-    L = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(T)),
+  let I = (0, r.useStateFromStores)([C.default, h.default], () => !!i(C.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, g.default)(e))),
+    N = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
+    v = null !== (t = E.default.useName(N)) && void 0 !== t ? t : A.default.Messages.WAVE_DEFAULT_RECIPIENT,
+    L = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(M)),
     x = a.useCallback(async () => {
       if (null == l || "" === l) try {
-        await u.default.sendGreetMessage(n.id, T), m.default.track(S.AnalyticEvents.DM_EMPTY_ACTION, {
+        await u.default.sendGreetMessage(n.id, M), m.default.track(S.AnalyticEvents.DM_EMPTY_ACTION, {
           channel_id: n.id,
           channel_type: n.type,
           source: "Wave",
           type: "Send wave"
         })
       } catch (e) {
-        !e.ok && 429 === e.status && M(A.default.Messages.RATE_LIMITED)
+        !e.ok && 429 === e.status && T(A.default.Messages.RATE_LIMITED)
       }
     }, [n.id, n.type, l]),
     R = A.default.Messages.WAVE_TO.format({
@@ -58,7 +58,7 @@ function M(e) {
       variant: "text-sm/normal",
       children: l
     }) : null;
-  return N ? (0, s.jsxs)("div", {
+  return I ? (0, s.jsxs)("div", {
     className: _.containerCompact,
     children: [(0, s.jsxs)(o.Clickable, {
       className: null != l && "" !== l ? _.compactButtonDisabled : _.compactButton,

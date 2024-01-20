@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return C
   },
   default: function() {
-    return x
+    return M
   }
 });
 var a = n("37983");
@@ -26,8 +26,8 @@ var l = n("414456"),
   S = n("922953"),
   N = n("879035"),
   _ = n("49111"),
-  T = n("724210"),
-  I = n("122693");
+  I = n("724210"),
+  T = n("122693");
 async function C() {
   if ((0, m.isMac)() && m.isPlatformEmbedded) {
     var e, t, n;
@@ -47,11 +47,11 @@ function A(e) {
     toolbar: m,
     mobileToolbar: p,
     "aria-label": _,
-    "aria-labelledby": T,
+    "aria-labelledby": I,
     scrollable: A,
-    role: M,
+    role: x,
     hideSearch: v,
-    showDivider: x
+    showDivider: M
   } = e, R = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), L = (null == R ? void 0 : R.isStaff()) || (null == R ? void 0 : R.isStaffPersonal()) || !1;
   return (0, a.jsx)(E.default, {
     className: n,
@@ -61,8 +61,8 @@ function A(e) {
       let e = null != l && !v;
       return i.isMobile ? p : (0, a.jsxs)(a.Fragment, {
         children: [m, e ? (0, a.jsx)(f.default, {
-          className: I.search
-        }, null != s ? s : l) : null, x && (0, a.jsx)(E.default.Divider, {}), (0, a.jsx)(N.default, {}), (0, a.jsx)(d.default, {
+          className: T.search
+        }, null != s ? s : l) : null, M && (0, a.jsx)(E.default.Divider, {}), (0, a.jsx)(N.default, {}), (0, a.jsx)(d.default, {
           canShowReminder: !0
         }), (0, a.jsx)(c.default, {}), L ? (0, a.jsx)(S.default, {}) : (0, a.jsx)(g.default, {})]
       })
@@ -70,14 +70,14 @@ function A(e) {
     transparent: u,
     onDoubleClick: C,
     "aria-label": _,
-    "aria-labelledby": T,
-    role: M,
+    "aria-labelledby": I,
+    role: x,
     scrollable: A,
     children: t
   })
 }
 
-function M(e) {
+function x(e) {
   let {
     children: t,
     className: n,
@@ -102,17 +102,17 @@ function v(e) {
   } = e, {
     AnalyticsLocationProvider: l
   } = (0, u.default)(o.default.HEADER_BAR), i = s(n.className, {
-    [I.forumOrHome]: null != n.channelType && _.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === T.StaticChannelRoute.GUILD_HOME
+    [T.forumOrHome]: null != n.channelType && _.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === I.StaticChannelRoute.GUILD_HOME
   });
   return (0, a.jsx)(l, {
     children: t ? (0, a.jsx)(A, {
       ...n,
       className: i
-    }) : (0, a.jsx)(M, {
+    }) : (0, a.jsx)(x, {
       ...n,
       className: i
     })
   })
 }
 v.Title = E.default.Title, v.Icon = E.default.Icon, v.Divider = E.default.Divider, v.Caret = E.default.Caret;
-var x = v
+var M = v

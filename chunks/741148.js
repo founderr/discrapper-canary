@@ -4,42 +4,42 @@ n.r(t), n.d(t, {
     return o
   },
   hidden: function() {
-    return d
-  },
-  resized: function() {
     return l
   },
+  resized: function() {
+    return d
+  },
   fullscreenChange: function() {
-    return f
+    return c
   },
   init: function() {
-    return _
+    return f
   },
   unload: function() {
-    return c
+    return _
   }
 });
-var s = n("917351"),
-  i = n("913144"),
+var i = n("917351"),
+  s = n("913144"),
   r = n("563680"),
   a = n("816454");
 
 function o(e, t) {
-  i.default.dispatch({
+  s.default.dispatch({
     type: "WINDOW_FOCUS",
     windowId: (0, a.getWindowId)(e),
     focused: t
   })
 }
 
-function d(e) {
-  i.default.dispatch({
+function l(e) {
+  s.default.dispatch({
     type: "WINDOW_HIDDEN",
     windowId: (0, a.getWindowId)(e)
   })
 }
-let u = (0, s.memoize)(e => (0, s.debounce)((t, n) => {
-  i.default.dispatch({
+let u = (0, i.memoize)(e => (0, i.debounce)((t, n) => {
+  s.default.dispatch({
     type: "WINDOW_RESIZED",
     windowId: e,
     width: t,
@@ -47,25 +47,25 @@ let u = (0, s.memoize)(e => (0, s.debounce)((t, n) => {
   })
 }, 100));
 
-function l(e) {
+function d(e) {
   let t = (0, a.getWindowId)(e),
     n = u(t);
   n(e.innerWidth, e.innerHeight)
 }
 
-function f(e) {
+function c(e) {
   let t = (0, a.getWindowId)(e);
-  i.default.dispatch({
+  s.default.dispatch({
     type: "WINDOW_FULLSCREEN_CHANGE",
     windowId: t,
     isElementFullscreen: (0, r.isFullScreen)(null, e.document)
   })
 }
 
-function _(e) {
+function f(e) {
   let t = (0, a.getWindowId)(e),
     n = e.document;
-  i.default.dispatch({
+  s.default.dispatch({
     type: "WINDOW_INIT",
     windowId: t,
     isElementFullscreen: (0, r.isFullScreen)(null, n),
@@ -75,8 +75,8 @@ function _(e) {
   })
 }
 
-function c(e) {
-  i.default.dispatch({
+function _(e) {
+  s.default.dispatch({
     type: "WINDOW_UNLOAD",
     windowId: (0, a.getWindowId)(e)
   })

@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return _
   }
 }), n("424973"), n("808653"), n("702976");
-var s = n("866227"),
-  i = n.n(s),
+var i = n("866227"),
+  s = n.n(i),
   r = n("666038"),
   a = n("584375"),
   o = n("875978"),
-  d = n("432173"),
+  l = n("432173"),
   u = n("568734"),
-  l = n("773336"),
-  f = n("49111");
-class _ extends r.default {
+  d = n("773336"),
+  c = n("49111");
+class f extends r.default {
   isEdited() {
     return null != this.editedTimestamp
   }
@@ -21,25 +21,25 @@ class _ extends r.default {
     return this.channel_id
   }
   getReaction(e) {
-    return this.reactions.find(t => (0, d.emojiEquals)(t.emoji, e))
+    return this.reactions.find(t => (0, l.emojiEquals)(t.emoji, e))
   }
   userHasReactedWithEmoji(e, t) {
     return this.reactions.some(n => {
-      if ((0, d.emojiEquals)(n.emoji, e)) return t && n.me || !t && n.me_burst
+      if ((0, l.emojiEquals)(n.emoji, e)) return t && n.me || !t && n.me_burst
     })
   }
   addReaction(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-      s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-      i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : o.ReactionTypes.NORMAL,
+      i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+      s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : o.ReactionTypes.NORMAL,
       r = -1,
-      u = this.reactions.map((u, f) => {
-        if ((0, d.emojiEquals)(u.emoji, e)) {
-          if (r = f, s) {
+      u = this.reactions.map((u, c) => {
+        if ((0, l.emojiEquals)(u.emoji, e)) {
+          if (r = c, i) {
             if (t && u.me) return u;
             let e = t && u.me_burst ? u.burst_count : u.burst_count + 1,
-              s = null != u.burst_colors && u.burst_colors.length > 0 ? u.burst_colors : n;
+              i = null != u.burst_colors && u.burst_colors.length > 0 ? u.burst_colors : n;
             u = {
               ...u,
               me_burst: !!t || u.me_burst,
@@ -48,15 +48,15 @@ class _ extends r.default {
                 ...u.count_details,
                 burst: e
               },
-              burst_colors: s,
+              burst_colors: i,
               themedBurstColors: (0, a.buildPlatformedThemedEmojiColorPalette)({
-                colors: s,
-                shouldProcessMobileColors: (0, l.isIOS)()
+                colors: i,
+                shouldProcessMobileColors: (0, d.isIOS)()
               })
             }
-          } else if (i === o.ReactionTypes.VOTE) {
-            var _, c;
-            let e = null !== (c = null === (_ = u.count_details) || void 0 === _ ? void 0 : _.vote) && void 0 !== c ? c : 0,
+          } else if (s === o.ReactionTypes.VOTE) {
+            var f, _;
+            let e = null !== (_ = null === (f = u.count_details) || void 0 === f ? void 0 : f.vote) && void 0 !== _ ? _ : 0,
               n = t && u.me_vote ? e : e + 1;
             u = {
               ...u,
@@ -82,7 +82,7 @@ class _ extends r.default {
         }
         return u
       });
-    return -1 === r && (s ? u.push({
+    return -1 === r && (i ? u.push({
       emoji: e,
       me: !1,
       me_burst: t,
@@ -95,9 +95,9 @@ class _ extends r.default {
       burst_colors: n,
       themedBurstColors: (0, a.buildPlatformedThemedEmojiColorPalette)({
         colors: null != n ? n : [],
-        shouldProcessMobileColors: (0, l.isIOS)()
+        shouldProcessMobileColors: (0, d.isIOS)()
       })
-    }) : i === o.ReactionTypes.VOTE ? u.push({
+    }) : s === o.ReactionTypes.VOTE ? u.push({
       emoji: e,
       me: !1,
       me_burst: !1,
@@ -126,20 +126,20 @@ class _ extends r.default {
   addReactionBatch(e, t) {
     return e.reduce((e, n) => {
       let {
-        users: s,
-        emoji: i
+        users: i,
+        emoji: s
       } = n;
-      return s.reduce((e, n) => e.addReaction(i, n === t), e)
+      return i.reduce((e, n) => e.addReaction(s, n === t), e)
     }, this)
   }
   removeReaction(e) {
-    var t, n, s, i;
+    var t, n, i, s;
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.ReactionTypes.NORMAL,
-      l = -1,
-      f = this.reactions.map((t, n) => {
-        if ((0, d.emojiEquals)(t.emoji, e)) {
+      d = -1,
+      c = this.reactions.map((t, n) => {
+        if ((0, l.emojiEquals)(t.emoji, e)) {
           if (a) {
             let e = r && !t.me_burst ? t.burst_count : t.burst_count - 1;
             t = {
@@ -152,8 +152,8 @@ class _ extends r.default {
               }
             }
           } else if (u === o.ReactionTypes.VOTE) {
-            var s, i;
-            let e = null !== (i = null === (s = t.count_details) || void 0 === s ? void 0 : s.vote) && void 0 !== i ? i : 0,
+            var i, s;
+            let e = null !== (s = null === (i = t.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== s ? s : 0,
               n = r && !t.me_vote ? e : e - 1;
             t = {
               ...t,
@@ -175,22 +175,22 @@ class _ extends r.default {
               }
             }
           }
-          l = n
+          d = n
         }
         return t
       }),
       {
-        count: _,
-        burst_count: c,
-        count_details: g
-      } = null !== (t = f[l]) && void 0 !== t ? t : {},
-      m = null !== (n = null == g ? void 0 : g.normal) && void 0 !== n ? n : 0,
-      h = null !== (s = null == g ? void 0 : g.burst) && void 0 !== s ? s : 0,
-      v = null !== (i = null == g ? void 0 : g.vote) && void 0 !== i ? i : 0;
-    return -1 !== l && _ <= 0 && c <= 0 && m <= 0 && h <= 0 && v <= 0 && f.splice(l, 1), this.set("reactions", f)
+        count: f,
+        burst_count: _,
+        count_details: h
+      } = null !== (t = c[d]) && void 0 !== t ? t : {},
+      g = null !== (n = null == h ? void 0 : h.normal) && void 0 !== n ? n : 0,
+      m = null !== (i = null == h ? void 0 : h.burst) && void 0 !== i ? i : 0,
+      E = null !== (s = null == h ? void 0 : h.vote) && void 0 !== s ? s : 0;
+    return -1 !== d && f <= 0 && _ <= 0 && g <= 0 && m <= 0 && E <= 0 && c.splice(d, 1), this.set("reactions", c)
   }
   removeReactionsForEmoji(e) {
-    return this.set("reactions", this.reactions.filter(t => !(0, d.emojiEquals)(t.emoji, e)))
+    return this.set("reactions", this.reactions.filter(t => !(0, l.emojiEquals)(t.emoji, e)))
   }
   isSystemDM() {
     return this.author.isSystemUser()
@@ -199,7 +199,7 @@ class _ extends r.default {
     return (0, u.hasFlag)(this.flags, e)
   }
   isCommandType() {
-    return this.type === f.MessageTypes.CHAT_INPUT_COMMAND || this.type === f.MessageTypes.CONTEXT_MENU_COMMAND
+    return this.type === c.MessageTypes.CHAT_INPUT_COMMAND || this.type === c.MessageTypes.CONTEXT_MENU_COMMAND
   }
   isPoll() {
     return null != this.poll
@@ -216,8 +216,8 @@ class _ extends r.default {
     return this.id === this.channel_id && e.isForumPost()
   }
   constructor(e) {
-    var t, n, s;
-    super(), this.id = e.id, this.type = e.type || f.MessageTypes.DEFAULT, this.channel_id = e.channel_id, this.author = e.author, this.content = e.content || "", this.customRenderedContent = e.customRenderedContent, this.attachments = e.attachments || [], this.embeds = e.embeds || [], this.mentions = e.mentions || [], this.mentionRoles = e.mentionRoles || [], this.mentionChannels = e.mentionChannels || [], this.mentioned = e.mentioned || !1, this.pinned = e.pinned || !1, this.mentionEveryone = e.mentionEveryone || !1, this.tts = e.tts || !1, this.codedLinks = e.codedLinks || [], this.giftCodes = e.giftCodes || [], this.timestamp = e.timestamp || i(), this.editedTimestamp = e.editedTimestamp || null, this.state = e.state || f.MessageStates.SENT, this.nonce = e.nonce || null, this.blocked = e.blocked || !1, this.call = e.call || null, this.bot = e.bot || !1, this.webhookId = e.webhookId || null, this.reactions = e.reactions || [], this.applicationId = e.application_id || e.applicationId || null, this.application = e.application || null, this.activity = e.activity || null, this.activityInstance = e.activity_instance || e.activityInstance || null, this.messageReference = e.messageReference || null, this.flags = e.flags || 0, this.isSearchHit = e.hit || e.isSearchHit || !1, this.stickers = e.stickers || [], this.stickerItems = null !== (n = null !== (t = e.sticker_items) && void 0 !== t ? t : e.stickerItems) && void 0 !== n ? n : [], this.components = e.components, this.loggingName = e.loggingName || null, this.colorString = e.colorString, this.nick = e.nick, this.interaction = e.interaction || null, this.interactionData = e.interactionData || null, this.interactionError = e.interactionError || null, this.roleSubscriptionData = e.roleSubscriptionData, this.purchaseNotification = e.purchaseNotification, this.poll = e.poll, this.referralTrialOfferId = e.referralTrialOfferId || null, this.giftInfo = null !== (s = e.gift_info) && void 0 !== s ? s : e.giftInfo
+    var t, n, i;
+    super(), this.id = e.id, this.type = e.type || c.MessageTypes.DEFAULT, this.channel_id = e.channel_id, this.author = e.author, this.content = e.content || "", this.customRenderedContent = e.customRenderedContent, this.attachments = e.attachments || [], this.embeds = e.embeds || [], this.mentions = e.mentions || [], this.mentionRoles = e.mentionRoles || [], this.mentionChannels = e.mentionChannels || [], this.mentioned = e.mentioned || !1, this.pinned = e.pinned || !1, this.mentionEveryone = e.mentionEveryone || !1, this.tts = e.tts || !1, this.codedLinks = e.codedLinks || [], this.giftCodes = e.giftCodes || [], this.timestamp = e.timestamp || s(), this.editedTimestamp = e.editedTimestamp || null, this.state = e.state || c.MessageStates.SENT, this.nonce = e.nonce || null, this.blocked = e.blocked || !1, this.call = e.call || null, this.bot = e.bot || !1, this.webhookId = e.webhookId || null, this.reactions = e.reactions || [], this.applicationId = e.application_id || e.applicationId || null, this.application = e.application || null, this.activity = e.activity || null, this.activityInstance = e.activity_instance || e.activityInstance || null, this.messageReference = e.messageReference || null, this.flags = e.flags || 0, this.isSearchHit = e.hit || e.isSearchHit || !1, this.stickers = e.stickers || [], this.stickerItems = null !== (n = null !== (t = e.sticker_items) && void 0 !== t ? t : e.stickerItems) && void 0 !== n ? n : [], this.components = e.components, this.loggingName = e.loggingName || null, this.colorString = e.colorString, this.nick = e.nick, this.interaction = e.interaction || null, this.interactionData = e.interactionData || null, this.interactionError = e.interactionError || null, this.roleSubscriptionData = e.roleSubscriptionData, this.purchaseNotification = e.purchaseNotification, this.poll = e.poll, this.referralTrialOfferId = e.referralTrialOfferId || null, this.giftInfo = null !== (i = e.gift_info) && void 0 !== i ? i : e.giftInfo
   }
 }
-var c = _
+var _ = f

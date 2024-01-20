@@ -1,60 +1,60 @@
 "use strict";
 n.r(t), n.d(t, {
   useTab: function() {
-    return l
+    return u
   },
   useTabList: function() {
-    return d
+    return l
   }
 }), n("222007"), n("781738");
 var r = n("628364"),
-  o = n("290895"),
-  a = n("884691"),
-  i = n("181551");
-let s = new WeakMap;
+  i = n("290895"),
+  o = n("884691"),
+  s = n("181551");
+let a = new WeakMap;
 
 function c(e, t, n) {
   "string" == typeof t && (t = t.replace(/\s+/g, ""));
-  let r = s.get(e);
+  let r = a.get(e);
   return "".concat(r, "-").concat(n, "-").concat(t)
 }
 
-function l(e, t, n) {
+function u(e, t, n) {
   let {
-    key: o,
-    isDisabled: a,
-    shouldSelectOnPressUp: i
+    key: i,
+    isDisabled: o,
+    shouldSelectOnPressUp: s
   } = e, {
-    selectionManager: s,
-    selectedKey: l
-  } = t, u = o === l, d = a || t.isDisabled || t.disabledKeys.has(o), {
-    itemProps: p,
-    isPressed: f
+    selectionManager: a,
+    selectedKey: u
+  } = t, d = i === u, l = o || t.isDisabled || t.disabledKeys.has(i), {
+    itemProps: f,
+    isPressed: p
   } = (0, r.useSelectableItem)({
-    selectionManager: s,
-    key: o,
+    selectionManager: a,
+    key: i,
     ref: n,
-    isDisabled: d,
-    shouldSelectOnPressUp: i
-  }), m = c(t, o, "tab"), h = c(t, o, "tabpanel"), {
-    tabIndex: g
-  } = p;
+    isDisabled: l,
+    shouldSelectOnPressUp: s
+  }), h = c(t, i, "tab"), g = c(t, i, "tabpanel"), {
+    tabIndex: b
+  } = f;
   return {
     tabProps: {
-      ...p,
-      id: m,
-      "aria-selected": u,
-      "aria-disabled": d || void 0,
-      "aria-controls": u ? h : void 0,
-      tabIndex: d ? void 0 : g,
+      ...f,
+      id: h,
+      "aria-selected": d,
+      "aria-disabled": l || void 0,
+      "aria-controls": d ? g : void 0,
+      tabIndex: l ? void 0 : b,
       role: "tab"
     },
-    isSelected: u,
-    isDisabled: d,
-    isPressed: f
+    isSelected: d,
+    isDisabled: l,
+    isPressed: p
   }
 }
-class u {
+class d {
   getKeyLeftOf(e) {
     return this.flipDirection ? this.getNextKey(e) : this.getPreviousKey(e)
   }
@@ -88,34 +88,34 @@ class u {
   }
 }
 
-function d(e, t, n) {
+function l(e, t, n) {
   let {
     orientation: c = "horizontal",
-    keyboardActivation: l = "automatic"
+    keyboardActivation: u = "automatic"
   } = e, {
-    collection: d,
-    selectionManager: p,
-    disabledKeys: f
+    collection: l,
+    selectionManager: f,
+    disabledKeys: p
   } = t, {
-    direction: m
-  } = (0, i.useLocale)(), h = (0, a.useMemo)(() => new u(d, m, c, f), [d, f, c, m]), {
-    collectionProps: g
+    direction: h
+  } = (0, s.useLocale)(), g = (0, o.useMemo)(() => new d(l, h, c, p), [l, p, c, h]), {
+    collectionProps: b
   } = (0, r.useSelectableCollection)({
     ref: n,
-    selectionManager: p,
-    keyboardDelegate: h,
-    selectOnFocus: "automatic" === l,
+    selectionManager: f,
+    keyboardDelegate: g,
+    selectOnFocus: "automatic" === u,
     disallowEmptySelection: !0,
     scrollRef: n
-  }), v = (0, o.useId)();
-  s.set(t, v);
-  let y = (0, o.useLabels)({
+  }), v = (0, i.useId)();
+  a.set(t, v);
+  let m = (0, i.useLabels)({
     ...e,
     id: v
   });
   return {
     tabListProps: {
-      ...(0, o.mergeProps)(g, y),
+      ...(0, i.mergeProps)(b, m),
       role: "tablist",
       "aria-orientation": c,
       tabIndex: void 0

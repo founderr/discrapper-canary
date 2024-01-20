@@ -26,10 +26,10 @@ var s = n("37983"),
   S = n("305961"),
   A = n("697218"),
   _ = n("461380"),
-  T = n("36694"),
-  M = n("659500"),
-  N = n("701909"),
-  I = n("773336"),
+  M = n("36694"),
+  T = n("659500"),
+  I = n("701909"),
+  N = n("773336"),
   v = n("299039"),
   L = n("172554"),
   x = n("49111"),
@@ -63,7 +63,7 @@ function D(e) {
       className: i(O.cardTextContainer, O.cardHeader),
       variant: "text-sm/normal",
       children: r
-    }), o ? (0, s.jsx)(T.default, {
+    }), o ? (0, s.jsx)(M.default, {
       className: i(O.checkmark, {
         [O.animate]: d
       })
@@ -78,7 +78,7 @@ function j(e) {
   let {
     channel: t
   } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && v.default.extractTimestamp(l.id) < Date.now() - x.WELCOME_OLD_GUILD_AGE_THRESHOLD, _ = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
-    canInvite: T,
+    canInvite: M,
     canManageGuild: j,
     canMessage: P
   } = (0, p.usePermissions)(t, l), b = (0, u.useStateFromStores)([A.default], () => {
@@ -117,7 +117,7 @@ function j(e) {
         h.default.trackWithMetadata(x.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
           setup_type: R.AnalyticsSetupTypes.CHANNEL_WELCOME,
           action: R.AnalyticsActions.SEND_MESSAGE
-        }), M.ComponentDispatch.dispatch(x.ComponentActions.TEXTAREA_FOCUS, {
+        }), T.ComponentDispatch.dispatch(x.ComponentActions.TEXTAREA_FOCUS, {
           highlight: !0,
           channelId: ""
         })
@@ -215,11 +215,11 @@ function j(e) {
       var e;
       (0, E.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : "")
     }, [l]), null == l) return null;
-  let q = [];
-  !f && (T && q.push((0, s.jsx)(o.default.div, {
+  let X = [];
+  !f && (M && X.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("243826"),
@@ -227,10 +227,10 @@ function j(e) {
       completed: H,
       onClick: k
     })
-  }, "invite")), j && q.push((0, s.jsx)(o.default.div, {
+  }, "invite")), j && X.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("215036"),
@@ -238,10 +238,10 @@ function j(e) {
       completed: U,
       onClick: w
     })
-  }, "customize")), P && q.push((0, s.jsx)(o.default.div, {
+  }, "customize")), P && X.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("505873"),
@@ -249,10 +249,10 @@ function j(e) {
       completed: F,
       onClick: G
     })
-  }, "message")), (0, I.isWeb)() && q.push((0, s.jsx)(o.default.div, {
+  }, "message")), (0, N.isWeb)() && X.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("238032"),
@@ -260,10 +260,10 @@ function j(e) {
       completed: b,
       onClick: B
     })
-  }, "download")), q.push((0, s.jsx)(o.default.div, {
+  }, "download")), X.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("356451"),
@@ -272,9 +272,9 @@ function j(e) {
       onClick: V
     })
   }, "addapp")));
-  let X = _ ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
-  f && (X = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-  let J = "".concat(N.default.getArticleURL(x.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
+  let q = _ ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
+  f && (q = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
+  let J = "".concat(I.default.getArticleURL(x.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
   return (0, s.jsx)(L.default, {
     channelId: t.id,
     children: (0, s.jsx)("div", {
@@ -293,14 +293,14 @@ function j(e) {
             color: "header-secondary",
             className: i({
               [O.subtitle]: !0,
-              [O.noChildren]: 0 === q.length
+              [O.noChildren]: 0 === X.length
             }),
             variant: "text-sm/normal",
-            children: [X, " ", q.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
+            children: [q, " ", X.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
               guideURL: J
             }) : null]
           })]
-        }), q]
+        }), X]
       })
     })
   })

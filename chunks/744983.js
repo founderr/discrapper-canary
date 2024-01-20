@@ -1,28 +1,28 @@
 "use strict";
-let s;
+let i;
 n.r(t), n.d(t, {
   default: function() {
     return O
   }
 }), n("843762");
-var i = n("917351"),
-  r = n.n(i),
+var s = n("917351"),
+  r = n.n(s),
   a = n("446674"),
   o = n("95410"),
-  d = n("913144"),
+  l = n("913144"),
   u = n("390933"),
-  l = n("25932"),
-  f = n("42203"),
-  _ = n("305961"),
-  c = n("18494"),
-  g = n("49111");
-let m = {},
-  h = !1;
+  d = n("25932"),
+  c = n("42203"),
+  f = n("305961"),
+  _ = n("18494"),
+  h = n("49111");
+let g = {},
+  m = !1;
 
-function v(e) {
-  return null == m[e] && (m[e] = {
+function E(e) {
+  return null == g[e] && (g[e] = {
     searchId: e,
-    searchType: E(e),
+    searchType: p(e),
     isIndexing: !1,
     isHistoricalIndexing: !1,
     isSearching: !1,
@@ -38,135 +38,135 @@ function v(e) {
     resultsBlocked: 0,
     showBlockedResults: !1,
     showNoResultsAlt: !1
-  }), m[e]
+  }), g[e]
 }
 
-function E(e) {
-  return e === g.SearchTypes.DMS ? g.SearchTypes.DMS : null != _.default.getGuild(e) ? g.SearchTypes.GUILD : null != f.default.getChannel(e) ? g.SearchTypes.CHANNEL : null
+function p(e) {
+  return e === h.SearchTypes.DMS ? h.SearchTypes.DMS : null != f.default.getGuild(e) ? h.SearchTypes.GUILD : null != c.default.getChannel(e) ? h.SearchTypes.CHANNEL : null
 }
 
-function p(e, t) {
+function v(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
   if (null == e) return n;
-  let s = m[e];
-  return null == s ? n : t(s)
+  let i = g[e];
+  return null == i ? n : t(i)
 }
-let y = "SearchStore",
-  C = !1,
-  T = {},
-  S = null;
+let S = "SearchStore",
+  T = !1,
+  I = {},
+  C = null;
 
-function I(e) {
+function A(e) {
   var t;
   let {
     searchId: n,
-    query: s
+    query: i
   } = e;
-  if ("string" != typeof s || "" === (s = s.trim())) return;
-  let i = T[n] = null !== (t = T[n]) && void 0 !== t ? t : [],
-    r = i.indexOf(s); - 1 !== r ? (i.splice(r, 1), i.unshift(s)) : null != i[0] && "" !== i[0] && s.startsWith(i[0]) ? i[0] = s : r < 0 && i.unshift(s), i.length > 5 && i.splice(5, i.length), o.default.set(y, {
-    history: T
+  if ("string" != typeof i || "" === (i = i.trim())) return;
+  let s = I[n] = null !== (t = I[n]) && void 0 !== t ? t : [],
+    r = s.indexOf(i); - 1 !== r ? (s.splice(r, 1), s.unshift(i)) : null != s[0] && "" !== s[0] && i.startsWith(s[0]) ? s[0] = i : r < 0 && s.unshift(i), s.length > 5 && s.splice(5, s.length), o.default.set(S, {
+    history: I
   })
 }
 
-function A(e) {
+function y(e) {
   let {
     searchId: t
-  } = e, n = m[t];
+  } = e, n = g[t];
   if (null == n) return !1;
-  null != n.searchFetcher && n.searchFetcher.cancel(), delete m[t]
+  null != n.searchFetcher && n.searchFetcher.cancel(), delete g[t]
 }
 
-function D(e) {
-  if (e === S) return !1;
-  null != e && null == m[e] && v(e), S = e
+function N(e) {
+  if (e === C) return !1;
+  null != e && null == g[e] && E(e), C = e
 }
-class N extends a.default.Store {
+class R extends a.default.Store {
   initialize() {
-    this.waitFor(_.default, f.default);
-    let e = o.default.get(y);
+    this.waitFor(f.default, c.default);
+    let e = o.default.get(S);
     if ((null == e ? void 0 : e.history) != null) {
       var t;
       Object.keys(t = e.history).forEach(e => {
         Array.isArray(t[e]) && (t[e] = t[e].filter(e => "string" == typeof e && e.trim())), (!Array.isArray(t[e]) || 0 === t[e].length) && delete t[e]
-      }), T = t
+      }), I = t
     }
-    C = !!o.default.get("tokenized")
+    T = !!o.default.get("tokenized")
   }
   isOpen() {
-    return h
+    return m
   }
   getCurrentSearchModalType() {
-    return s
+    return i
   }
   getCurrentSearchId() {
-    return S
+    return C
   }
   isActive() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : C;
     return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e))
   }
   isTokenized() {
-    return C
+    return T
   }
   getSearchType(e) {
-    return p(null != e ? e : S, e => e.searchType)
+    return v(null != e ? e : C, e => e.searchType)
   }
   getRawResults(e) {
-    return p(e, e => e.rawResults)
+    return v(e, e => e.rawResults)
   }
   hasResults(e) {
-    return null != p(e, e => e.rawResults)
+    return null != v(e, e => e.rawResults)
   }
   isIndexing(e) {
-    return p(e, e => e.isIndexing) || !1
+    return v(e, e => e.isIndexing) || !1
   }
   isHistoricalIndexing(e) {
-    return p(e, e => e.isHistoricalIndexing) || !1
+    return v(e, e => e.isHistoricalIndexing) || !1
   }
   isSearching(e) {
-    return p(e, e => e.isSearching) || !1
+    return v(e, e => e.isSearching) || !1
   }
   getAnalyticsId(e) {
-    return p(e, e => e.analyticsId)
+    return v(e, e => e.analyticsId)
   }
   getResultsBlocked(e) {
-    return p(e, e => e.resultsBlocked)
+    return v(e, e => e.resultsBlocked)
   }
   getDocumentsIndexedCount(e) {
-    return p(e, e => e.documentsIndexed)
+    return v(e, e => e.documentsIndexed)
   }
   getSearchFetcher(e) {
-    return p(e, e => e.searchFetcher)
+    return v(e, e => e.searchFetcher)
   }
   getTotalResults(e) {
     var t;
-    return null !== (t = p(e, e => e.totalResults)) && void 0 !== t ? t : 0
+    return null !== (t = v(e, e => e.totalResults)) && void 0 !== t ? t : 0
   }
   getEditorState(e) {
-    return p(e, e => e.editorState)
+    return v(e, e => e.editorState)
   }
   getHistory(e) {
-    return T[e]
+    return I[e]
   }
   getOffset(e) {
     var t;
-    return null !== (t = p(e, e => e.offset)) && void 0 !== t ? t : 0
+    return null !== (t = v(e, e => e.offset)) && void 0 !== t ? t : 0
   }
   getQuery(e) {
-    return p(e, e => e.query)
+    return v(e, e => e.query)
   }
   hasError(e) {
     var t;
-    return null !== (t = p(e, e => e.hasError)) && void 0 !== t && t
+    return null !== (t = v(e, e => e.hasError)) && void 0 !== t && t
   }
   shouldShowBlockedResults(e) {
     var t;
-    return null !== (t = p(e, e => e.showBlockedResults, !1)) && void 0 !== t && t
+    return null !== (t = v(e, e => e.showBlockedResults, !1)) && void 0 !== t && t
   }
   shouldShowNoResultsAlt(e) {
     var t;
-    return null !== (t = p(e, e => e.showNoResultsAlt, !1)) && void 0 !== t && t
+    return null !== (t = v(e, e => e.showNoResultsAlt, !1)) && void 0 !== t && t
   }
   getResultsState(e) {
     return {
@@ -182,51 +182,51 @@ class N extends a.default.Store {
     }
   }
 }
-N.displayName = "SearchStore";
-var O = new N(d.default, {
+R.displayName = "SearchStore";
+var O = new R(l.default, {
   SEARCH_START: function(e) {
-    var t, n, s;
+    var t, n, i;
     let {
-      queryString: i,
+      queryString: s,
       searchId: a,
       query: o
-    } = e, _ = v(a);
-    null != _.searchFetcher && (_.searchFetcher.cancel(), _.searchFetcher = null);
-    let m = a,
-      h = _.searchType;
-    a === g.FAVORITES && (m = null !== (n = c.default.getChannelId()) && void 0 !== n ? n : a, h = g.SearchTypes.CHANNEL);
-    let E = new u.default(m, h, o);
-    _.searchFetcher = E, _.isSearching = !0, _.rawResults = null, _.analyticsId = null, _.query = r.omit(o, "type"), _.offset = null !== (s = o.offset) && void 0 !== s ? s : 0, _.showBlockedResults = !1, I({
+    } = e, f = E(a);
+    null != f.searchFetcher && (f.searchFetcher.cancel(), f.searchFetcher = null);
+    let g = a,
+      m = f.searchType;
+    a === h.FAVORITES && (g = null !== (n = _.default.getChannelId()) && void 0 !== n ? n : a, m = h.SearchTypes.CHANNEL);
+    let p = new u.default(g, m, o);
+    f.searchFetcher = p, f.isSearching = !0, f.rawResults = null, f.analyticsId = null, f.query = r.omit(o, "type"), f.offset = null !== (i = o.offset) && void 0 !== i ? i : 0, f.showBlockedResults = !1, A({
       type: "SEARCH_ADD_HISTORY",
       searchId: a,
-      query: i
+      query: s
     });
-    let p = a === g.FAVORITES ? null === (t = f.default.getChannel(m)) || void 0 === t ? void 0 : t.guild_id : h === g.SearchTypes.GUILD ? a : null;
-    E.fetch(e => {
+    let v = a === h.FAVORITES ? null === (t = c.default.getChannel(g)) || void 0 === t ? void 0 : t.guild_id : m === h.SearchTypes.GUILD ? a : null;
+    p.fetch(e => {
       var t, n;
-      d.default.dispatch({
+      l.default.dispatch({
         type: "SEARCH_FINISH",
         searchId: a,
-        guildId: p,
+        guildId: v,
         analyticsId: e.body.analytics_id,
         totalResults: e.body.total_results,
         messages: e.body.messages,
         threads: null !== (t = e.body.threads) && void 0 !== t ? t : [],
-        members: (null !== (n = e.body.members) && void 0 !== n ? n : []).map(e => (0, l.default)(e)),
+        members: (null !== (n = e.body.members) && void 0 !== n ? n : []).map(e => (0, d.default)(e)),
         hasError: !1,
         doingHistoricalIndex: e.body.doing_deep_historical_index,
         documentsIndexed: e.body.documents_indexed
       })
     }, () => {
-      d.default.dispatch({
+      l.default.dispatch({
         type: "SEARCH_INDEXING",
         searchId: a
       })
     }, () => {
-      d.default.dispatch({
+      l.default.dispatch({
         type: "SEARCH_FINISH",
         searchId: a,
-        guildId: p,
+        guildId: v,
         messages: [],
         threads: [],
         members: [],
@@ -241,62 +241,62 @@ var O = new N(d.default, {
   SEARCH_INDEXING: function(e) {
     let {
       searchId: t
-    } = e, n = v(t);
+    } = e, n = E(t);
     n.isIndexing = !0, n.isHistoricalIndexing = !0, n.isSearching = !1
   },
   SEARCH_FINISH: function(e) {
     let {
       searchId: t
-    } = e, n = v(t);
+    } = e, n = E(t);
     n.isSearching = !1, n.isIndexing = !1, n.isHistoricalIndexing = e.doingHistoricalIndex || !1, n.searchFetcher = null, n.totalResults = e.totalResults, n.hasError = e.hasError, n.analyticsId = e.analyticsId, n.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0, n.showNoResultsAlt = .05 > Math.random(), n.rawResults = e.messages;
-    let s = n.query;
-    null == s && (n.hasError = !0)
+    let i = n.query;
+    null == i && (n.hasError = !0)
   },
-  SEARCH_EDITOR_STATE_CLEAR: A,
+  SEARCH_EDITOR_STATE_CLEAR: y,
   SEARCH_ENSURE_SEARCH_STATE: function(e) {
     let {
       searchId: t
     } = e;
-    null != t && v(t)
+    null != t && E(t)
   },
   SEARCH_EDITOR_STATE_CHANGE: function(e) {
     let {
       searchId: t,
       editorState: n
     } = e;
-    v(t).editorState = n
+    E(t).editorState = n
   },
   SEARCH_SET_SHOW_BLOCKED_RESULTS: function(e) {
     let {
       searchId: t,
       showBlocked: n
-    } = e, s = v(t);
-    s.showBlockedResults = n
+    } = e, i = E(t);
+    i.showBlockedResults = n
   },
   SEARCH_SCREEN_OPEN: function(e) {
     let {
       searchId: t
     } = e;
-    D(t)
+    N(t)
   },
   CHANNEL_SELECT: function(e) {
     let {
       guildId: t,
       channelId: n
     } = e;
-    D(null != t ? t : n)
+    N(null != t ? t : n)
   },
   CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
-    return null != S && A({
-      searchId: S
+    return null != C && y({
+      searchId: C
     })
   },
   SEARCH_CLEAR_HISTORY: function(e) {
     let {
       searchId: t
     } = e;
-    null == t ? (o.default.remove(y), T = {}) : (delete T[t], o.default.set(y, {
-      history: T
+    null == t ? (o.default.remove(S), I = {}) : (delete I[t], o.default.set(S, {
+      history: I
     }))
   },
   SEARCH_REMOVE_HISTORY: function(e) {
@@ -304,17 +304,17 @@ var O = new N(d.default, {
       searchId: t,
       query: n
     } = e;
-    null != T[t] && (T[t] = T[t].filter(e => e !== n), o.default.set(y, {
-      history: T
+    null != I[t] && (I[t] = I[t].filter(e => e !== n), o.default.set(S, {
+      history: I
     }))
   },
-  SEARCH_ADD_HISTORY: I,
+  SEARCH_ADD_HISTORY: A,
   LOGOUT: function() {
-    o.default.remove(y), T = {}
+    o.default.remove(S), I = {}
   },
   CONNECTION_OPEN: function() {
-    Object.keys(m).forEach(e => {
-      null != m[e] && (m[e].searchType = E(e))
+    Object.keys(g).forEach(e => {
+      null != g[e] && (g[e].searchType = p(e))
     })
   },
   SEARCH_MODAL_OPEN: function(e) {
@@ -322,9 +322,9 @@ var O = new N(d.default, {
       searchId: t,
       searchType: n
     } = e;
-    null != t && (S = t), h = !0, s = n
+    null != t && (C = t), m = !0, i = n
   },
   SEARCH_MODAL_CLOSE: function() {
-    h = !1, s = void 0
+    m = !1, i = void 0
   }
 })

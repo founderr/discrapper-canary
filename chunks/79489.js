@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
-var r = n("888400"),
+var i = n("888400"),
   s = n("718517"),
-  a = n("333805"),
-  o = n("782340");
-class l extends a.default {
+  r = n("333805"),
+  a = n("782340");
+class o extends r.default {
   _getMessageFromRateLimit(e) {
     let t = e.body.retry_after,
-      n = (0, r.diffAsUnits)(0, t * s.default.Millis.SECOND);
-    return (0, r.unitsAsStrings)(n, {
-      days: o.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_DAYS,
-      hours: o.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_HOURS,
-      minutes: o.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_MINUTES
+      n = (0, i.diffAsUnits)(0, t * s.default.Millis.SECOND);
+    return (0, i.unitsAsStrings)(n, {
+      days: a.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_DAYS,
+      hours: a.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_HOURS,
+      minutes: a.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_MINUTES
     })
   }
   constructor(e, t) {
     super(e, t), 429 === this.status && (this.message = this._getMessageFromRateLimit(e))
   }
 }
-var i = l
+var l = o

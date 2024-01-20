@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return S
   }
 }), n("424973");
-var r = n("917351"),
-  i = n.n(r),
+var i = n("917351"),
+  r = n.n(i),
   l = n("446674"),
   o = n("913144"),
   s = n("80507"),
@@ -30,22 +30,22 @@ let E = new s.default({
   _ = () => {
     c.default.isLoaded && E.compute()
   },
-  p = () => {
+  I = () => {
     _()
   };
 
-function C() {
+function h() {
   var e;
   let t = null === (e = a.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
   if (null == t) return !1;
-  E.overwriteHistory(i.mapValues(t, e => ({
+  E.overwriteHistory(r.mapValues(t, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), f.pendingUsages)
 }
-class I extends l.default.PersistedStore {
+class p extends l.default.PersistedStore {
   initialize(e) {
-    this.waitFor(c.default), null != e && (f = e), this.syncWith([c.default], p), this.syncWith([a.default], C)
+    this.waitFor(c.default), null != e && (f = e), this.syncWith([c.default], I), this.syncWith([a.default], h)
   }
   getState() {
     return f
@@ -57,8 +57,8 @@ class I extends l.default.PersistedStore {
     return E
   }
 }
-I.displayName = "StickersPersistedStore", I.persistKey = "StickersPersistedStoreV2";
-var A = new I(o.default, {
+p.displayName = "StickersPersistedStore", p.persistKey = "StickersPersistedStoreV2";
+var S = new p(o.default, {
   STICKER_TRACK_USAGE: e => {
     let {
       stickerIds: t

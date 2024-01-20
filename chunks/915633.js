@@ -8,8 +8,8 @@ var t = E("789394"),
   o = E("689988"),
   n = E("305961"),
   r = E("702917"),
-  i = E("49111");
-class a extends o.default {
+  a = E("49111");
+class i extends o.default {
   handleChannelSelect(e) {
     let {
       guildId: _,
@@ -22,7 +22,7 @@ class a extends o.default {
           autoTrackExposure: !1
         }).enabled) return;
       let e = n.default.getGuild(_);
-      null != e && !e.hasFeature(i.GuildFeatures.CHANNEL_ICON_EMOJIS_GENERATED) && (0, r.populateChannelEmojis)(_)
+      null != e && !e.hasFeature(a.GuildFeatures.CHANNEL_ICON_EMOJIS_GENERATED) && (0, r.populateChannelEmojis)(_)
     }
   }
   constructor(...e) {
@@ -31,4 +31,4 @@ class a extends o.default {
     }
   }
 }
-var I = new a
+var I = new i

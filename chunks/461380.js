@@ -1,66 +1,66 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return _
   }
 });
-var r = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("414456"),
-  l = n.n(i),
-  o = n("384737"),
+var l = n("414456"),
+  r = n.n(l),
+  a = n("384737"),
   s = n("448052"),
-  a = n("748802"),
+  o = n("748802"),
   u = n("260792"),
-  c = n("77078"),
-  d = n("75196"),
+  d = n("77078"),
+  c = n("75196"),
   f = n("4177");
-let E = {
+let h = {
     UP: f.directionUp,
     RIGHT: f.directionRight,
     DOWN: f.directionDown,
     LEFT: f.directionLeft
   },
-  _ = e => {
+  E = e => {
     let {
-      direction: t = E.DOWN,
+      direction: t = h.DOWN,
       width: n = 24,
-      height: i = 24,
-      color: _ = "currentColor",
-      transition: p = f.transition,
-      className: C,
+      height: l = 24,
+      color: E = "currentColor",
+      transition: _ = f.transition,
+      className: p,
       foreground: I,
-      expanded: A,
+      expanded: C,
       ...T
     } = e, {
-      enabled: R
-    } = (0, c.useRedesignIconContext)(), h = t;
-    if (!0 === A ? h = E.DOWN : !1 === A && (h = E.RIGHT), R) {
+      enabled: S
+    } = (0, d.useRedesignIconContext)(), v = t;
+    if (!0 === C ? v = h.DOWN : !1 === C && (v = h.RIGHT), S) {
       let e = {
-        [E.UP]: u.ChevronSmallUpIcon,
-        [E.DOWN]: o.ChevronSmallDownIcon,
-        [E.LEFT]: s.ChevronSmallLeftIcon,
-        [E.RIGHT]: a.ChevronSmallRightIcon
-      } [h];
-      return (0, r.jsx)(e, {
+        [h.UP]: u.ChevronSmallUpIcon,
+        [h.DOWN]: a.ChevronSmallDownIcon,
+        [h.LEFT]: s.ChevronSmallLeftIcon,
+        [h.RIGHT]: o.ChevronSmallRightIcon
+      } [v];
+      return (0, i.jsx)(e, {
         ...T,
-        className: C,
+        className: p,
         width: n,
-        height: i,
-        color: _,
+        height: l,
+        color: E,
         colorClass: I
       })
     }
-    return (0, r.jsx)("svg", {
-      className: l(C, p, h),
+    return (0, i.jsx)("svg", {
+      className: r(p, _, v),
       width: n,
-      height: i,
+      height: l,
       viewBox: "0 0 24 24",
-      ...(0, d.default)(T),
-      children: (0, r.jsx)("path", {
+      ...(0, c.default)(T),
+      children: (0, i.jsx)("path", {
         className: I,
         fill: "none",
-        stroke: _,
+        stroke: E,
         strokeWidth: "2",
         strokeLinecap: "round",
         strokeLinejoin: "round",
@@ -69,5 +69,5 @@ let E = {
       })
     })
   };
-_.Directions = E;
-var p = _
+E.Directions = h;
+var _ = E

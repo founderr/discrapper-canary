@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("446674"),
-  r = n("913144");
-class s extends i.Store {
+  s = n("913144");
+class r extends i.Store {
   allGuildIds() {
     return this.guildIds
   }
@@ -26,13 +26,13 @@ class s extends i.Store {
     !0 !== e.guild.unavailable && this.guildIds.delete(e.guild.id)
   }
   constructor() {
-    super(r.default, {
+    super(s.default, {
       CACHE_LOADED_LAZY: e => this.handleCacheLoaded(e),
       CACHE_LOADED: e => this.handleCacheLoaded(e),
       CONNECTION_OPEN: e => this.handleConnectionOpen(e),
       GUILD_CREATE: e => this.handleGuildCreate(e),
       GUILD_DELETE: e => this.handleGuildDelete(e)
-    }, r.DispatchBand.Early), this.guildIds = new Set
+    }, s.DispatchBand.Early), this.guildIds = new Set
   }
 }
-var a = new s
+var a = new r

@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   OVERLAY_VERSION: function() {
-    return s
+    return r
   },
   OVERLAY_DEFAULT_RESOLUTION: function() {
     return a
@@ -17,24 +17,24 @@ n.r(t), n.d(t, {
     return u
   },
   getPID: function() {
-    return d
+    return c
   },
   getRPCAuthToken: function() {
     return f
   },
   validResolution: function() {
-    return E
+    return _
   },
   setOutOfProcessSupport: function() {
     return h
   },
   supportsOutOfProcess: function() {
-    return p
+    return g
   }
 }), n("313619"), n("654714"), n("287168"), n("956660"), n("222007"), n("121338");
-var r = n("773336");
+var s = n("773336");
 n("49111");
-let s = 2,
+let r = 2,
   a = {
     width: 3840,
     height: 2160
@@ -45,15 +45,15 @@ let s = 2,
   },
   l = "overlay_default",
   u = -2,
-  c = !1;
+  d = !1;
 
-function d() {
+function c() {
   var e;
   if (void 0 !== i) return i;
   let t = new URLSearchParams(window.location.search),
     n = null !== (e = t.get("pid")) && void 0 !== e ? e : "",
-    r = parseInt(n, 10);
-  return isNaN(r) && (r = -1), i = r
+    s = parseInt(n, 10);
+  return isNaN(s) && (s = -1), i = s
 }
 
 function f() {
@@ -61,14 +61,14 @@ function f() {
   return e.get("rpc_auth_token")
 }
 
-function E(e) {
-  return !r.isPlatformEmbedded || e.width >= o.width && e.height >= o.height
+function _(e) {
+  return !s.isPlatformEmbedded || e.width >= o.width && e.height >= o.height
 }
 
 function h(e) {
-  c = e
+  d = e
 }
 
-function p() {
-  return c
+function g() {
+  return d
 }

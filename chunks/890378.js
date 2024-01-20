@@ -1,34 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   useLocale: function() {
-    return g
-  },
-  useLocalizedStringFormatter: function() {
-    return y
-  },
-  useDateFormatter: function() {
     return b
   },
+  useLocalizedStringFormatter: function() {
+    return m
+  },
+  useDateFormatter: function() {
+    return y
+  },
   useNumberFormatter: function() {
-    return S
+    return w
   },
   useCollator: function() {
-    return D
+    return k
   },
   useFilter: function() {
-    return C
+    return _
   }
 }), n("222007");
 var r = n("884691"),
-  o = n("46397"),
-  a = n("647572"),
-  i = n("336468"),
-  s = n("290895"),
+  i = n("46397"),
+  o = n("647572"),
+  s = n("336468"),
+  a = n("290895"),
   c = n("676231");
-let l = new Set(["Arab", "Syrc", "Samr", "Mand", "Thaa", "Mend", "Nkoo", "Adlm", "Rohg", "Hebr"]),
-  u = new Set(["ae", "ar", "arc", "bcc", "bqi", "ckb", "dv", "fa", "glk", "he", "ku", "mzn", "nqo", "pnb", "ps", "sd", "ug", "ur", "yi"]);
+let u = new Set(["Arab", "Syrc", "Samr", "Mand", "Thaa", "Mend", "Nkoo", "Adlm", "Rohg", "Hebr"]),
+  d = new Set(["ae", "ar", "arc", "bcc", "bqi", "ckb", "dv", "fa", "glk", "he", "ku", "mzn", "nqo", "pnb", "ps", "sd", "ug", "ur", "yi"]);
 
-function d() {
+function l() {
   let e = "undefined" != typeof navigator && (navigator.language || navigator.userLanguage) || "en-US";
   try {
     Intl.DateTimeFormat.supportedLocalesOf([e])
@@ -40,53 +40,53 @@ function d() {
     direction: ! function(e) {
       if (Intl.Locale) {
         let t = new Intl.Locale(e).maximize().script;
-        return l.has(t)
+        return u.has(t)
       }
       let t = e.split("-")[0];
-      return u.has(t)
+      return d.has(t)
     }(e) ? "ltr" : "rtl"
   }
 }
-let p = d(),
-  f = new Set;
+let f = l(),
+  p = new Set;
 
-function m() {
-  for (let e of (p = d(), f)) e(p)
+function h() {
+  for (let e of (f = l(), p)) e(f)
 }
-let h = r.createContext(null);
+let g = r.createContext(null);
 
-function g() {
+function b() {
   let e = function() {
-    let e = (0, o.useIsSSR)(),
-      [t, n] = (0, r.useState)(p);
-    return ((0, r.useEffect)(() => (0 === f.size && window.addEventListener("languagechange", m), f.add(n), () => {
-      f.delete(n), 0 === f.size && window.removeEventListener("languagechange", m)
+    let e = (0, i.useIsSSR)(),
+      [t, n] = (0, r.useState)(f);
+    return ((0, r.useEffect)(() => (0 === p.size && window.addEventListener("languagechange", h), p.add(n), () => {
+      p.delete(n), 0 === p.size && window.removeEventListener("languagechange", h)
     }), []), e) ? {
       locale: "en-US",
       direction: "ltr"
     } : t
   }();
-  return (0, r.useContext)(h) || e
+  return (0, r.useContext)(g) || e
 }
 let v = new WeakMap;
 
-function y(e) {
+function m(e) {
   let {
     locale: t
-  } = g(), n = (0, r.useMemo)(() => {
+  } = b(), n = (0, r.useMemo)(() => {
     var t;
     let n;
-    return t = e, !(n = v.get(t)) && (n = new a.LocalizedStringDictionary(t), v.set(t, n)), n
+    return t = e, !(n = v.get(t)) && (n = new o.LocalizedStringDictionary(t), v.set(t, n)), n
   }, [e]);
-  return (0, r.useMemo)(() => new a.LocalizedStringFormatter(t, n), [t, n])
+  return (0, r.useMemo)(() => new o.LocalizedStringFormatter(t, n), [t, n])
 }
 
-function b(e) {
-  e = (0, s.useDeepMemo)(e, x);
+function y(e) {
+  e = (0, a.useDeepMemo)(e, x);
   let {
     locale: t
-  } = g();
-  return (0, r.useMemo)(() => new i.DateFormatter(t, e), [t, e])
+  } = b();
+  return (0, r.useMemo)(() => new s.DateFormatter(t, e), [t, e])
 }
 
 function x(e, t) {
@@ -99,45 +99,45 @@ function x(e, t) {
   return !0
 }
 
-function S() {
+function w() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     {
       locale: t
-    } = g();
+    } = b();
   return (0, r.useMemo)(() => new c.NumberFormatter(t, e), [t, e])
 }
-let w = new Map;
+let S = new Map;
 
-function D(e) {
+function k(e) {
   let {
     locale: t
-  } = g(), n = t + (e ? Object.entries(e).sort((e, t) => e[0] < t[0] ? -1 : 1).join() : "");
-  if (w.has(n)) return w.get(n);
+  } = b(), n = t + (e ? Object.entries(e).sort((e, t) => e[0] < t[0] ? -1 : 1).join() : "");
+  if (S.has(n)) return S.get(n);
   let r = new Intl.Collator(t, e);
-  return w.set(n, r), r
+  return S.set(n, r), r
 }
 
-function C(e) {
-  let t = D({
+function _(e) {
+  let t = k({
       usage: "search",
       ...e
     }),
     n = (0, r.useCallback)((e, n) => 0 === n.length || (e = e.normalize("NFC"), n = n.normalize("NFC"), 0 === t.compare(e.slice(0, n.length), n)), [t]),
-    o = (0, r.useCallback)((e, n) => 0 === n.length || (e = e.normalize("NFC"), n = n.normalize("NFC"), 0 === t.compare(e.slice(-n.length), n)), [t]),
-    a = (0, r.useCallback)((e, n) => {
+    i = (0, r.useCallback)((e, n) => 0 === n.length || (e = e.normalize("NFC"), n = n.normalize("NFC"), 0 === t.compare(e.slice(-n.length), n)), [t]),
+    o = (0, r.useCallback)((e, n) => {
       if (0 === n.length) return !0;
       e = e.normalize("NFC"), n = n.normalize("NFC");
       let r = 0,
-        o = n.length;
-      for (; r + o <= e.length; r++) {
-        let a = e.slice(r, r + o);
-        if (0 === t.compare(n, a)) return !0
+        i = n.length;
+      for (; r + i <= e.length; r++) {
+        let o = e.slice(r, r + i);
+        if (0 === t.compare(n, o)) return !0
       }
       return !1
     }, [t]);
   return (0, r.useMemo)(() => ({
     startsWith: n,
-    endsWith: o,
-    contains: a
-  }), [n, o, a])
+    endsWith: i,
+    contains: o
+  }), [n, i, o])
 }

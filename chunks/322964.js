@@ -22,13 +22,13 @@ var a = n("37983"),
   S = n("342176"),
   N = n("183030"),
   _ = n("899779"),
-  T = n("778597"),
-  I = n("960082"),
+  I = n("778597"),
+  T = n("960082"),
   C = n("49111"),
   A = n("782340"),
-  M = n("183419"),
+  x = n("183419"),
   v = n("786948"),
-  x = n("780810");
+  M = n("780810");
 
 function R(e) {
   var t, n, l;
@@ -41,12 +41,12 @@ function R(e) {
   let d = null !== (l = h.default.getUser(null === (n = s.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : new f.default(s.other_user),
     c = u.default.parse(o);
   return (0, a.jsxs)("div", {
-    className: M.messagePreviewContainer,
+    className: x.messagePreviewContainer,
     children: [(0, a.jsx)(r.default, {
       user: d,
       size: i.AvatarSizes.SIZE_24
     }), (0, a.jsx)(i.Text, {
-      className: M.messagePreviewText,
+      className: x.messagePreviewText,
       variant: "text-sm/normal",
       lineClamp: 2,
       children: c
@@ -63,7 +63,7 @@ function L(e) {
   if (null == t) return null;
   let n = u.default.parse(t);
   return (0, a.jsx)("div", {
-    className: M.calloutContainer,
+    className: x.calloutContainer,
     children: (0, a.jsx)(i.Text, {
       variant: "text-sm/normal",
       lineClamp: 2,
@@ -75,15 +75,15 @@ function L(e) {
 function O(e) {
   let {
     item: t
-  } = e, n = x, l = A.default.Messages.NOTIFICATION_CENTER_TODO;
+  } = e, n = M, l = A.default.Messages.NOTIFICATION_CENTER_TODO;
   return t.completed && (n = v, l = A.default.Messages.NOTIFICATION_CENTER_DONE), (0, a.jsxs)("div", {
-    className: M.lifecycleContainer,
+    className: x.lifecycleContainer,
     children: [(0, a.jsx)("img", {
-      className: M.checkbox,
+      className: x.checkbox,
       alt: "",
       src: n
     }), (0, a.jsx)(i.Text, {
-      className: M.lifecycleText,
+      className: x.lifecycleText,
       variant: "text-xs/bold",
       color: "header-secondary",
       children: l
@@ -131,25 +131,25 @@ let b = l.memo(function(e) {
         })
       }
     }, [r, f]), A = null;
-    r.type === g.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != r.other_user && (A = (0, a.jsx)(T.default, {
+    r.type === g.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != r.other_user && (A = (0, a.jsx)(I.default, {
       userId: r.other_user.id
     }));
     let v = null != r.local_id;
     return (0, a.jsxs)("div", {
-      className: M.row,
+      className: x.row,
       children: [(0, a.jsxs)(i.ClickableContainer, {
-        className: M.rowContent,
+        className: x.rowContent,
         focusProps: {
           offset: 4
         },
         "aria-label": r.body,
         onClick: h,
         children: [f ? null : (0, a.jsx)("div", {
-          className: M.unread
+          className: x.unread
         }), (0, a.jsx)(_.ForYouItemImage, {
           item: r
         }), (0, a.jsxs)("div", {
-          className: M.body,
+          className: x.body,
           children: ["lifecycle_item" === r.type && null != r.item_enum && (0, a.jsx)(O, {
             item: r
           }), (0, a.jsx)(i.Text, {
@@ -166,7 +166,7 @@ let b = l.memo(function(e) {
             children: (0, S.getRelativeTimestamp)(s.default.extractTimestamp(r.id))
           }), A]
         })]
-      }), v ? null : (0, a.jsx)(I.MoreButton, {
+      }), v ? null : (0, a.jsx)(T.MoreButton, {
         item: r
       })]
     })

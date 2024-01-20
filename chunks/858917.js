@@ -1,39 +1,39 @@
 "use strict";
 var r = n("859514"),
-  o = n("470984"),
-  a = n("80282"),
-  i = n("823493"),
-  s = n("539536"),
+  i = n("470984"),
+  o = n("80282"),
+  s = n("823493"),
+  a = n("539536"),
   c = n("148066"),
-  l = n("366483"),
-  u = n("16447"),
-  d = n("561051"),
-  p = n("571503"),
-  f = n("585034"),
-  m = n("391358"),
-  h = n("174669")("toStringTag"),
-  g = Error,
+  u = n("366483"),
+  d = n("16447"),
+  l = n("561051"),
+  f = n("571503"),
+  p = n("585034"),
+  h = n("391358"),
+  g = n("174669")("toStringTag"),
+  b = Error,
   v = [].push,
-  y = function(e, t) {
-    var n, r = o(b, this);
-    i ? n = i(g(), r ? a(this) : b) : l(n = r ? this : c(b), h, "Error"), void 0 !== t && l(n, "message", m(t)), p(n, y, n.stack, 1), arguments.length > 2 && d(n, arguments[2]);
-    var s = [];
-    return f(e, v, {
-      that: s
-    }), l(n, "errors", s), n
+  m = function(e, t) {
+    var n, r = i(y, this);
+    s ? n = s(b(), r ? o(this) : y) : u(n = r ? this : c(y), g, "Error"), void 0 !== t && u(n, "message", h(t)), f(n, m, n.stack, 1), arguments.length > 2 && l(n, arguments[2]);
+    var a = [];
+    return p(e, v, {
+      that: a
+    }), u(n, "errors", a), n
   };
-i ? i(y, g) : s(y, g, {
+s ? s(m, b) : a(m, b, {
   name: !0
 });
-var b = y.prototype = c(g.prototype, {
-  constructor: u(1, y),
-  message: u(1, ""),
-  name: u(1, "AggregateError")
+var y = m.prototype = c(b.prototype, {
+  constructor: d(1, m),
+  message: d(1, ""),
+  name: d(1, "AggregateError")
 });
 r({
   global: !0,
   constructor: !0,
   arity: 2
 }, {
-  AggregateError: y
+  AggregateError: m
 })

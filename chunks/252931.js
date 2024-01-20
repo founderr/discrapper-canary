@@ -10,12 +10,12 @@ n.r(t), n.d(t, {
     return E
   }
 });
-var r = n("65597"),
-  i = n("862205"),
+var i = n("65597"),
+  r = n("862205"),
   l = n("697218"),
   o = n("719923"),
   s = n("782340");
-let a = (0, i.createExperiment)({
+let a = (0, r.createExperiment)({
     kind: "user",
     id: "2023-05_inventory_guild_packs",
     label: "Inventory Guild Packs Experiment",
@@ -113,16 +113,16 @@ let a = (0, i.createExperiment)({
       user: t,
       config: n
     } = e, {
-      desktopViewAndUseAndCollectEnabled: r,
-      mobileViewAndUseEnabled: i,
+      desktopViewAndUseAndCollectEnabled: i,
+      mobileViewAndUseEnabled: r,
       mobileAndFreemiumCollectEnabled: l,
       autoUnfurlReactionTooltip: s,
       collectOffOverride: a
     } = n, u = o.default.isPremium(t);
     return {
-      viewAndUseEnabled: r,
+      viewAndUseEnabled: i,
       showTryPacksModalAndV2Copy: l,
-      collectEnabled: !a && (u ? r : l),
+      collectEnabled: !a && (u ? i : l),
       autoUnfurlReactionTooltip: s
     }
   },
@@ -153,7 +153,7 @@ let a = (0, i.createExperiment)({
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
       expressionSourceGuild: void 0,
       autoTrackExposure: !0
-    }, i = (0, r.default)([l.default], () => l.default.getCurrentUser()), o = a.useExperiment({
+    }, r = (0, i.default)([l.default], () => l.default.getCurrentUser()), o = a.useExperiment({
       location: "inventory_guild_setting_experiment"
     }, {
       autoTrackExposure: n
@@ -163,7 +163,7 @@ let a = (0, i.createExperiment)({
       collectEnabled: d,
       autoUnfurlReactionTooltip: f
     } = u({
-      user: i,
+      user: r,
       config: o
     }), E = s && d && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
     return {
@@ -173,7 +173,7 @@ let a = (0, i.createExperiment)({
       autoUnfurlReactionTooltip: f
     }
   },
-  f = (0, i.createExperiment)({
+  f = (0, r.createExperiment)({
     kind: "guild",
     id: "2023-06_inventory_guild_setting",
     label: "Inventory Guild Settings Experiment",

@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   }
 }), n("424973");
-var s, i, r, a, o, d = n("666038"),
+var i, s, r, a, o, l = n("666038"),
   u = n("858619"),
-  l = n("315102");
-(a = s || (s = {}))[a.GUILD = 0] = "GUILD", a[a.USER = 1] = "USER", (o = i || (i = {}))[o.DEFAULT = 48] = "DEFAULT", r = class e extends d.default {
+  d = n("315102");
+(a = i || (i = {}))[a.GUILD = 0] = "GUILD", a[a.USER = 1] = "USER", (o = s || (s = {}))[o.DEFAULT = 48] = "DEFAULT", r = class e extends l.default {
   static fromServer(t) {
     let n = {
       id: t.id,
@@ -23,13 +23,13 @@ var s, i, r, a, o, d = n("666038"),
       emojiById: {}
     };
     return t.content.emojis.forEach(e => {
-      let s = {
+      let i = {
         animated: e.animated,
         available: e.available,
         id: e.id,
         name: e.name,
         require_colons: e.require_colons,
-        url: l.default.getEmojiURL({
+        url: d.default.getEmojiURL({
           id: e.id,
           animated: e.animated,
           size: 48
@@ -38,7 +38,7 @@ var s, i, r, a, o, d = n("666038"),
         type: u.EmojiTypes.PACK,
         packId: t.id
       };
-      n.emojiById[e.id] = s, n.content.emojis.push(s)
+      n.emojiById[e.id] = i, n.content.emojis.push(i)
     }), new e(n)
   }
   constructor(e) {

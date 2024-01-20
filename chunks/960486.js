@@ -1,40 +1,40 @@
 "use strict";
 n.r(t), n.d(t, {
   useMultiSelect: function() {
-    return T
-  },
-  useSingleSelect: function() {
-    return g
-  },
-  Combobox: function() {
     return v
   },
+  useSingleSelect: function() {
+    return S
+  },
+  Combobox: function() {
+    return C
+  },
   ComboboxItem: function() {
-    return R
+    return y
   }
 }), n("222007");
 var i = n("37983"),
-  r = n("884691"),
-  s = n("414456"),
-  a = n.n(s),
+  s = n("884691"),
+  r = n("414456"),
+  a = n.n(r),
   o = n("974667"),
   l = n("685698"),
   u = n("227645"),
-  c = n("605451"),
-  d = n("433600"),
+  d = n("605451"),
+  c = n("433600"),
   f = n("577776"),
-  E = n("810567"),
+  _ = n("810567"),
   h = n("578706"),
-  p = n("782340"),
-  _ = n("640698");
-let S = "data-listbox-item-id",
-  m = Object.freeze({
-    STANDARD: _.selected,
-    BRAND: _.selectedBrand
+  g = n("782340"),
+  m = n("640698");
+let E = "data-listbox-item-id",
+  p = Object.freeze({
+    STANDARD: m.selected,
+    BRAND: m.selectedBrand
   });
 
-function T(e) {
-  let [t, n] = r.useState(() => new Set(e)), i = r.useCallback(e => {
+function v(e) {
+  let [t, n] = s.useState(() => new Set(e)), i = s.useCallback(e => {
     n(t => {
       let n = new Set(t);
       return n.has(e) ? n.delete(e) : n.add(e), n
@@ -43,142 +43,142 @@ function T(e) {
   return [t, i]
 }
 
-function g(e) {
-  let [t, n] = r.useState(() => new Set(null != e ? [e] : void 0)), i = r.useCallback(e => {
+function S(e) {
+  let [t, n] = s.useState(() => new Set(null != e ? [e] : void 0)), i = s.useCallback(e => {
     n(new Set([e]))
   }, []);
   return [t, i]
 }
 
-function I(e) {
+function T(e) {
   return String(e)
 }
-let C = r.createContext({
+let I = s.createContext({
   activeDescendant: null,
   selected: new Set,
   setSelected: () => null,
-  itemToString: I
+  itemToString: T
 });
 
-function v(e) {
+function C(e) {
   let {
     placeholder: t,
     children: n,
-    value: s,
+    value: r,
     onChange: l,
     className: u,
     listClassName: h,
-    "aria-label": m,
-    multiSelect: T = !1,
-    autoFocus: g = !1,
-    maxVisibleItems: v = 5,
-    itemToString: A = I,
-    showScrollbar: R = !1
-  } = e, [N, O] = r.useState(""), [D] = r.useState(!0), [y, L] = r.useState(null), P = r.useId(), b = r.useRef(null);
-  r.useLayoutEffect(() => {
-    let e = document.querySelector("[".concat(S, '="').concat(y, '"]')),
-      t = b.current;
+    "aria-label": p,
+    multiSelect: v = !1,
+    autoFocus: S = !1,
+    maxVisibleItems: C = 5,
+    itemToString: A = T,
+    showScrollbar: y = !1
+  } = e, [N, R] = s.useState(""), [O] = s.useState(!0), [D, P] = s.useState(null), b = s.useId(), L = s.useRef(null);
+  s.useLayoutEffect(() => {
+    let e = document.querySelector("[".concat(E, '="').concat(D, '"]')),
+      t = L.current;
     null != t && null != e && t.scrollIntoViewNode({
       node: e,
       padding: 12
     })
-  }, [y]);
+  }, [D]);
   let M = n(N),
     U = 0 === M.length,
-    G = r.useId(),
-    w = r.useCallback(() => new Promise(e => {
-      let t = b.current;
+    k = s.useId(),
+    w = s.useCallback(() => new Promise(e => {
+      let t = L.current;
       if (null == t) return e();
       t.scrollToTop({
         callback: () => requestAnimationFrame(() => e())
       })
     }), []),
-    k = r.useCallback(() => new Promise(e => {
-      let t = b.current;
+    V = s.useCallback(() => new Promise(e => {
+      let t = L.current;
       if (null == t) return e();
       t.scrollToTop({
         callback: () => requestAnimationFrame(() => e())
       })
     }), []),
-    x = r.useCallback((e, t) => {
-      L(t);
+    G = s.useCallback((e, t) => {
+      P(t);
       let n = document.querySelector(e),
-        i = b.current;
+        i = L.current;
       null != i && null != n && i.scrollIntoViewNode({
         node: n
       })
     }, []),
     F = (0, o.default)({
-      id: G,
+      id: k,
       isEnabled: !0,
       useVirtualFocus: !0,
       scrollToStart: w,
-      scrollToEnd: k,
-      setFocus: x
+      scrollToEnd: V,
+      setFocus: G
     }),
-    V = R ? d.ListThin : d.ListNone;
+    x = y ? c.ListThin : c.ListNone;
   return (0, i.jsx)(o.ListNavigatorProvider, {
     navigator: F,
     children: (0, i.jsx)(o.ListNavigatorContainer, {
       children: e => {
         let {
           ref: n,
-          onKeyDown: r,
+          onKeyDown: s,
           ...o
         } = e;
         return (0, i.jsxs)("div", {
           ref: n,
           role: "combobox",
-          "aria-label": m,
-          "aria-expanded": D,
-          "aria-controls": D ? P : void 0,
-          "aria-owns": P,
+          "aria-label": p,
+          "aria-expanded": O,
+          "aria-controls": O ? b : void 0,
+          "aria-owns": b,
           "aria-haspopup": "listbox",
-          className: a(_.combobox, u),
-          children: [(0, i.jsx)(E.default, {
-            autoFocus: g,
-            size: E.default.Sizes.MEDIUM,
+          className: a(m.combobox, u),
+          children: [(0, i.jsx)(_.default, {
+            autoFocus: S,
+            size: _.default.Sizes.MEDIUM,
             placeholder: t,
             query: N,
-            onChange: O,
-            onKeyDown: r,
-            onBlur: () => L(null),
-            onClear: () => O(""),
+            onChange: R,
+            onKeyDown: s,
+            onBlur: () => P(null),
+            onClear: () => R(""),
             className: a({
-              [_.searchWithScrollbar]: R
+              [m.searchWithScrollbar]: y
             }),
             inputProps: {
               "aria-multiline": !1,
-              "aria-activedescendant": null != y ? y : void 0
+              "aria-activedescendant": null != D ? D : void 0
             }
           }), (0, i.jsx)("div", {
-            children: D && (U ? (0, i.jsxs)("div", {
-              className: _.empty,
-              children: [(0, i.jsx)(c.Heading, {
+            children: O && (U ? (0, i.jsxs)("div", {
+              className: m.empty,
+              children: [(0, i.jsx)(d.Heading, {
                 variant: "heading-md/semibold",
-                children: p.default.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
+                children: g.default.Messages.AUTOCOMPLETE_NO_RESULTS_HEADER
               }), (0, i.jsx)(f.Text, {
                 color: "text-muted",
                 variant: "text-md/normal",
-                children: p.default.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
+                children: g.default.Messages.AUTOCOMPLETE_NO_RESULTS_BODY
               })]
-            }) : (0, i.jsx)(C.Provider, {
+            }) : (0, i.jsx)(I.Provider, {
               value: {
-                activeDescendant: y,
-                selected: s,
+                activeDescendant: D,
+                selected: r,
                 setSelected: l,
                 itemToString: A
               },
-              children: (0, i.jsx)(V, {
+              children: (0, i.jsx)(x, {
                 ...o,
                 style: {
-                  maxHeight: 46 * v
+                  maxHeight: 46 * C
                 },
-                "aria-multiselectable": T,
-                id: P,
-                ref: b,
-                className: a(_.list, h, {
-                  [_.scroller]: R
+                "aria-multiselectable": v,
+                id: b,
+                ref: L,
+                className: a(m.list, h, {
+                  [m.scroller]: y
                 }),
                 sections: [M.length],
                 sectionHeight: 0,
@@ -198,79 +198,79 @@ function v(e) {
     })
   })
 }
-let A = r.createContext(null);
+let A = s.createContext(null);
 
-function R(e) {
+function y(e) {
   var t;
   let {
     value: n,
-    children: s,
+    children: r,
     disabled: l = !1,
-    selectedColor: c = m.STANDARD,
-    ...d
+    selectedColor: d = p.STANDARD,
+    ...c
   } = e, {
     activeDescendant: f,
-    selected: E,
+    selected: _,
     setSelected: h,
-    itemToString: p
-  } = r.useContext(C), T = p(n), g = f === T, I = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : E.has(n), v = (0, o.useListItem)(T);
+    itemToString: g
+  } = s.useContext(I), v = g(n), S = f === v, T = null !== (t = null == c ? void 0 : c.selected) && void 0 !== t ? t : _.has(n), C = (0, o.useListItem)(v);
   return (0, i.jsx)(u.Clickable, {
     tag: "li",
-    id: T,
+    id: v,
     onClick: () => l ? null : h(n),
-    [S]: n,
-    className: a(_.item, {
-      [_.focused]: g,
-      [c]: I,
-      [_.disabled]: l
+    [E]: n,
+    className: a(m.item, {
+      [m.focused]: S,
+      [d]: T,
+      [m.disabled]: l
     }),
-    ...v,
+    ...C,
     role: "option",
-    "aria-selected": I,
+    "aria-selected": T,
     "aria-disabled": l,
     children: (0, i.jsx)(A.Provider, {
       value: n,
-      children: s
+      children: r
     })
   })
 }
-R.Colors = m, R.Label = function(e) {
+y.Colors = p, y.Label = function(e) {
   let {
     children: t
   } = e;
   return (0, i.jsx)("span", {
-    className: _.itemLabel,
+    className: m.itemLabel,
     children: t
   })
-}, R.Icon = function(e) {
+}, y.Icon = function(e) {
   let {
     children: t
   } = e;
   return (0, i.jsx)("span", {
-    className: _.itemCheckbox,
+    className: m.itemCheckbox,
     children: t
   })
-}, R.Checkbox = function(e) {
+}, y.Checkbox = function(e) {
   let {
     checked: t
   } = e, {
     selected: n
-  } = r.useContext(C), s = r.useContext(A);
+  } = s.useContext(I), r = s.useContext(A);
   return (0, i.jsx)("span", {
-    className: _.itemCheckbox,
+    className: m.itemCheckbox,
     children: (0, i.jsx)(l.Checkbox, {
       displayOnly: !0,
-      value: null != t ? t : null != s && n.has(s),
+      value: null != t ? t : null != r && n.has(r),
       type: l.Checkbox.Types.INVERTED,
       size: 20
     })
   })
-}, R.Checkmark = function() {
+}, y.Checkmark = function() {
   let {
     selected: e
-  } = r.useContext(C), t = r.useContext(A), n = e.has(t);
+  } = s.useContext(I), t = s.useContext(A), n = e.has(t);
   return n ? (0, i.jsx)("span", {
-    className: _.itemCheckbox,
+    className: m.itemCheckbox,
     children: (0, i.jsx)(h.default, {
       width: 20,
       height: 20

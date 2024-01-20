@@ -1,32 +1,32 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return l
   }
 });
-var s = n("605250"),
-  i = n("802493"),
+var i = n("605250"),
+  s = n("802493"),
   r = n("723939");
 let a = "version",
-  o = new s.default("KvCacheVersion");
-var d = new class e {
+  o = new i.default("KvCacheVersion");
+var l = new class e {
   async okAsync(e) {
-    let t = await i.default.cache(e).get(a);
+    let t = await s.default.cache(e).get(a);
     return null == t ? null : 3 === t
   }
   okSync(e) {
     try {
-      let t = i.default.cache(e).getSyncUnsafe(a);
+      let t = s.default.cache(e).getSyncUnsafe(a);
       return null == t ? null : 3 === t
     } catch (e) {
       return o.log("couldn't read version from database: ".concat(e.message)), !1
     }
   }
   handleClearGuildCache(e) {
-    i.default.cacheTransaction(e).delete(a), i.default.cacheTransaction(e).delete("CacheStore.Nonce"), r.default.replaceDisableAllDatabases("CLEAR_GUILD_CACHE (via KvCacheVersion)")
+    s.default.cacheTransaction(e).delete(a), s.default.cacheTransaction(e).delete("CacheStore.Nonce"), r.default.replaceDisableAllDatabases("CLEAR_GUILD_CACHE (via KvCacheVersion)")
   }
   handleWrite(e) {
-    i.default.cacheTransaction(e).put("hello", "\uD83D\uDC4B"), i.default.cacheTransaction(e).put(a, 3)
+    s.default.cacheTransaction(e).put("hello", "\uD83D\uDC4B"), s.default.cacheTransaction(e).put(a, 3)
   }
   handleReset() {}
   constructor() {

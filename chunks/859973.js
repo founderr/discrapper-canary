@@ -1,56 +1,56 @@
 "use strict";
 n.r(t), n.d(t, {
   convertToTimeOfADay: function() {
-    return E
+    return _
   },
   timeAtSpecificDay: function() {
-    return p
+    return g
   },
   TimeOptions: function() {
-    return S
+    return E
   }
 }), n("781738"), n("424973"), n("222007"), n("70102");
 var i = n("866227"),
-  r = n.n(i),
-  s = n("888400");
+  s = n.n(i),
+  r = n("888400");
 let a = /^[0]+/,
   o = /:00/,
   l = /(AM|ΠΜ|सुबह)/i,
   u = /(PM|ΜΜ|शाम)/i,
-  c = /\s+/,
-  d = e => e.replace(a, "").replace(o, "").replace(l, "").replace(c, ""),
-  f = e => e.replace(a, "").replace(u, "").replace(c, ""),
-  E = (e, t) => {
+  d = /\s+/,
+  c = e => e.replace(a, "").replace(o, "").replace(l, "").replace(d, ""),
+  f = e => e.replace(a, "").replace(u, "").replace(d, ""),
+  _ = (e, t) => {
     let n = t.toUpperCase().trim();
     if (n.length > 0) {
-      let t = r("".concat(null == e ? void 0 : e.format("YYYY-MM-DD"), " ").concat(n), "YYYY-MM-DD LT");
-      if (d(t.format("LT")) === d(n)) return t
+      let t = s("".concat(null == e ? void 0 : e.format("YYYY-MM-DD"), " ").concat(n), "YYYY-MM-DD LT");
+      if (c(t.format("LT")) === c(n)) return t
     }
   },
-  h = r("2021-04-12T00:00:00"),
-  p = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
-  _ = (e, t) => e.value.unix() - t.value.unix();
-class S {
+  h = s("2021-04-12T00:00:00"),
+  g = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
+  m = (e, t) => e.value.unix() - t.value.unix();
+class E {
   lookupByValue(e) {
     if (null == e) return;
-    let t = p(h, e);
+    let t = g(h, e);
     return this._index[t.unix()]
   }
   _createLabel(e) {
-    return (0, s.dateFormat)(e.locale(r.locale()), this.labelFormat)
+    return (0, r.dateFormat)(e.locale(s.locale()), this.labelFormat)
   }
   _generateTimeOptions() {
     this.options = [], this._index = {};
-    let e = r(h),
-      t = r(e).add(1, "day"),
-      n = r(e);
+    let e = s(h),
+      t = s(e).add(1, "day"),
+      n = s(e);
     for (; n < t;) {
       let e = this._createNewOption(n.clone());
       this.options.push(e), this._index[e.value.unix()] = e.value, n.add(this.intervalInMinutes, "minutes")
     }
   }
   _createNewOption(e) {
-    let t = p(h, e),
+    let t = g(h, e),
       n = this._createLabel(t);
     return {
       label: n,
@@ -58,17 +58,17 @@ class S {
     }
   }
   _addNewOption(e) {
-    let t = p(h, e),
+    let t = g(h, e),
       n = this._createLabel(t);
     return this._index[t.unix()] = t, this.options.push({
       label: n,
       value: t
-    }), this.options.sort(_), e
+    }), this.options.sort(m), e
   }
   _guessOptions(e) {
     let t = [];
     if (/[:\\.]/.test(e)) {
-      let n = E(h, e);
+      let n = _(h, e);
       if (null != n) {
         t.push(n.clone());
         let i = n.add({
@@ -88,7 +88,7 @@ class S {
       let e = [...this.options];
       return t.forEach(t => {
         null == this.lookupByValue(t) && e.push(this._createNewOption(t))
-      }), e.sort(_), e
+      }), e.sort(m), e
     }
   }
   selectValue(e) {

@@ -1,37 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return eg
+    return eh
   }
 }), n("222007"), n("702976"), n("808653");
-var s = n("917351"),
-  i = n.n(s);
+var i = n("917351"),
+  s = n.n(i);
 n("249654"), n("21121"), n("136511");
 var r = n("512395"),
   a = n("401690"),
   o = n("755624"),
-  d = n("526311"),
+  l = n("526311"),
   u = n("233069"),
-  l = n("271938"),
-  f = n("42203"),
-  _ = n("305961"),
-  c = n("957255"),
-  g = n("660478"),
-  m = n("18494"),
-  h = n("455079"),
-  v = n("282109"),
-  E = n("697218"),
-  p = n("49111"),
-  y = n("724210"),
-  C = n("133335");
-let T = "null",
-  S = {},
-  I = new Set,
-  A = 0;
+  d = n("271938"),
+  c = n("42203"),
+  f = n("305961"),
+  _ = n("957255"),
+  h = n("660478"),
+  g = n("18494"),
+  m = n("455079"),
+  E = n("282109"),
+  p = n("697218"),
+  v = n("49111"),
+  S = n("724210"),
+  T = n("133335");
+let I = "null",
+  C = {},
+  A = new Set,
+  y = 0;
 
-function D(e) {
+function N(e) {
   var t;
-  let n = S[null != e ? e : T];
+  let n = C[null != e ? e : I];
   return {
     unread: !1,
     unreadByType: {},
@@ -43,35 +43,35 @@ function D(e) {
   }
 }
 
-function N(e) {
+function R(e) {
   var t;
-  return S[null != e ? e : T] = null !== (t = S[null != e ? e : T]) && void 0 !== t ? t : D(e)
+  return C[null != e ? e : I] = null !== (t = C[null != e ? e : I]) && void 0 !== t ? t : N(e)
 }
 
 function O(e) {
-  let t = N(e);
-  t.sentinel++, A++
+  let t = R(e);
+  t.sentinel++, y++
 }
 
-function b(e, t, n) {
-  let s = e.guild_id;
-  return null != s && n && !((0, u.isThread)(e.type) || v.default.isChannelRecordOrParentOptedIn(e)) && 0 === t
+function D(e, t, n) {
+  let i = e.guild_id;
+  return null != i && n && !((0, u.isThread)(e.type) || E.default.isChannelRecordOrParentOptedIn(e)) && 0 === t
 }
 
 function P(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  if (null == e || e.isGuildVocal() && 0 === t || e.hasFlag(y.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) return !1;
+  if (null == e || e.isGuildVocal() && 0 === t || e.hasFlag(S.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) return !1;
   if (0 === t || n) {
-    let t = e.isThread() ? o.default.isMuted(e.id) || v.default.isGuildOrCategoryOrChannelMuted(e.guild_id, e.parent_id) : v.default.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id);
+    let t = e.isThread() ? o.default.isMuted(e.id) || E.default.isGuildOrCategoryOrChannelMuted(e.guild_id, e.parent_id) : E.default.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id);
     if (t) return !1
   }
-  return !(!e.isPrivate() && (b(e, t, (0, r.isOptInEnabledForGuild)(e.guild_id)) || !c.default.can(e.accessPermissions, e))) && (t > 0 || v.default.getChannelUnreadMode(e) === C.UnreadMode.IMPORTANT)
+  return !(!e.isPrivate() && (D(e, t, (0, r.isOptInEnabledForGuild)(e.guild_id)) || !_.default.can(e.accessPermissions, e))) && (t > 0 || E.default.getChannelUnreadMode(e) === T.UnreadMode.IMPORTANT)
 }
 
-function R(e) {
+function b(e) {
   switch (e) {
-    case T:
+    case I:
     case null:
     case void 0:
       return null;
@@ -80,14 +80,14 @@ function R(e) {
   }
 }
 
-function V(e, t) {
-  let n = g.default.hasUnread(e, t);
-  if (t === C.ReadStateTypes.GUILD_EVENT) return !(v.default.isMuted(e) || v.default.isMuteScheduledEventsEnabled(e)) && n;
+function L(e, t) {
+  let n = h.default.hasUnread(e, t);
+  if (t === T.ReadStateTypes.GUILD_EVENT) return !(E.default.isMuted(e) || E.default.isMuteScheduledEventsEnabled(e)) && n;
   return n
 }
 
-function k(e, t) {
-  let n = D(e);
+function M(e, t) {
+  let n = N(e);
   return n.mentionCounts = {
     ...t.mentionCounts
   }, n.unreadByType = {
@@ -95,93 +95,93 @@ function k(e, t) {
   }, n
 }
 
-function M(e) {
+function U(e) {
   return e.unread = Object.values(e.unreadByType).some(e => e), e
 }
 
-function w(e, t) {}
+function k(e, t) {}
 
-function L(e, t, n) {
-  if (M(t), t.mentionCount = i(t.mentionCounts).values().sum(), t.unread !== n.unread || t.mentionCount !== n.mentionCount) return S[null != e ? e : T] = t, null != e && (t.unread ? I.add(e) : I.delete(e)), A++, O(null != e ? e : T), !0;
+function w(e, t, n) {
+  if (U(t), t.mentionCount = s(t.mentionCounts).values().sum(), t.unread !== n.unread || t.mentionCount !== n.mentionCount) return C[null != e ? e : I] = t, null != e && (t.unread ? A.add(e) : A.delete(e)), y++, O(null != e ? e : I), !0;
   return !1
 }
 
-function U(e, t) {
-  let n = R(e),
-    s = N(n),
-    i = k(n, s),
+function V(e, t) {
+  let n = b(e),
+    i = R(n),
+    s = M(n, i),
     r = !1;
   if (t.forEach(e => {
-      let t = f.default.getChannel(e);
+      let t = c.default.getChannel(e);
       if (null == t) {
-        delete i.mentionCounts[e];
+        delete s.mentionCounts[e];
         return
       }
       if (t.getGuildId() !== n) return;
-      let s = g.default.getMentionCount(e);
-      null !== n && !r && g.default.hasUnread(t.id) && P(t, s, !0) && (r = !0, i.unreadChannelId = t.id), s > 0 && P(t, s) ? i.mentionCounts[t.id] = s : delete i.mentionCounts[t.id]
-    }), i.unreadByType[C.ReadStateTypes.CHANNEL] = r, i.unreadByType[C.ReadStateTypes.CHANNEL] !== s.unreadByType[C.ReadStateTypes.CHANNEL] && !i.unreadByType[C.ReadStateTypes.CHANNEL]) {
-    let e = f.default.getChannel(s.unreadChannelId);
-    if (!(null != e && !t.includes(e.id) && g.default.hasUnread(e.id) && P(e))) return F(n);
-    null != n && I.add(n), i.unreadByType[C.ReadStateTypes.CHANNEL] = !0
+      let i = h.default.getMentionCount(e);
+      null !== n && !r && h.default.hasUnread(t.id) && P(t, i, !0) && (r = !0, s.unreadChannelId = t.id), i > 0 && P(t, i) ? s.mentionCounts[t.id] = i : delete s.mentionCounts[t.id]
+    }), s.unreadByType[T.ReadStateTypes.CHANNEL] = r, s.unreadByType[T.ReadStateTypes.CHANNEL] !== i.unreadByType[T.ReadStateTypes.CHANNEL] && !s.unreadByType[T.ReadStateTypes.CHANNEL]) {
+    let e = c.default.getChannel(i.unreadChannelId);
+    if (!(null != e && !t.includes(e.id) && h.default.hasUnread(e.id) && P(e))) return F(n);
+    null != n && A.add(n), s.unreadByType[T.ReadStateTypes.CHANNEL] = !0
   }
-  return L(n, i, s)
+  return w(n, s, i)
 }
 
 function G(e, t) {
   if (null == e) return;
-  let n = N(e),
-    s = k(e, n);
-  return s.unreadByType[C.ReadStateTypes.GUILD_EVENT] = V(e, t), L(e, s, n)
+  let n = R(e),
+    i = M(e, n);
+  return i.unreadByType[T.ReadStateTypes.GUILD_EVENT] = L(e, t), w(e, i, n)
 }
 
 function F(e, t) {
-  let n = R(e),
-    s = D(n);
+  let n = b(e),
+    i = N(n);
   if (null == n) {
-    let e = f.default.getMutablePrivateChannels();
+    let e = c.default.getMutablePrivateChannels();
     for (let t in e) {
       let n = e[t],
-        i = g.default.getMentionCount(t);
-      i > 0 && P(n, i) && (s.mentionCount += i, s.mentionCounts[n.id] = i)
+        s = h.default.getMentionCount(t);
+      s > 0 && P(n, s) && (i.mentionCount += s, i.mentionCounts[n.id] = s)
     }
   } else {
-    let e = v.default.isMuted(n);
+    let e = E.default.isMuted(n);
     if (e && !1 === t) return !1;
-    let i = v.default.getMutedChannels(n),
-      d = v.default.getChannelOverrides(n),
-      l = (0, r.isOptInEnabledForGuild)(n),
-      _ = f.default.getMutableBasicGuildChannelsForGuild(n);
-    for (let t in _) {
-      let n = _[t],
-        r = e || i.has(t) || null != n.parent_id && i.has(n.parent_id),
-        a = s.unreadByType[C.ReadStateTypes.CHANNEL],
+    let s = E.default.getMutedChannels(n),
+      l = E.default.getChannelOverrides(n),
+      d = (0, r.isOptInEnabledForGuild)(n),
+      f = c.default.getMutableBasicGuildChannelsForGuild(n);
+    for (let t in f) {
+      let n = f[t],
+        r = e || s.has(t) || null != n.parent_id && s.has(n.parent_id),
+        a = i.unreadByType[T.ReadStateTypes.CHANNEL],
         {
           mentionCount: o,
-          unread: f
-        } = g.default.getGuildChannelUnreadState(n, l, d, r, a),
-        m = o > 0;
-      if (!m && r) continue;
-      let h = !a && (!r || m) && f;
-      if (h || m) {
+          unread: c
+        } = h.default.getGuildChannelUnreadState(n, d, l, r, a),
+        g = o > 0;
+      if (!g && r) continue;
+      let m = !a && (!r || g) && c;
+      if (m || g) {
         let e = function(e, t, n) {
-          if ((0, u.isGuildVocalChannelType)(e.type) && 0 === t || !c.default.canBasicChannel((0, u.getBasicAccessPermissions)(e.type), e) || b(e, t, n)) return !1;
-          return !("flags" in e && e.hasFlag(y.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && (t > 0 || v.default.getChannelUnreadMode(e) === C.UnreadMode.IMPORTANT)
-        }(n, o, l);
-        e && (h && (s.unreadByType[C.ReadStateTypes.CHANNEL] = !0, s.unreadChannelId = t), m && (s.mentionCount += o, s.mentionCounts[n.id] = o))
+          if ((0, u.isGuildVocalChannelType)(e.type) && 0 === t || !_.default.canBasicChannel((0, u.getBasicAccessPermissions)(e.type), e) || D(e, t, n)) return !1;
+          return !("flags" in e && e.hasFlag(S.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && (t > 0 || E.default.getChannelUnreadMode(e) === T.UnreadMode.IMPORTANT)
+        }(n, o, d);
+        e && (m && (i.unreadByType[T.ReadStateTypes.CHANNEL] = !0, i.unreadChannelId = t), g && (i.mentionCount += o, i.mentionCounts[n.id] = o))
       }
     }
-    let m = a.default.getActiveJoinedThreadsForGuild(n);
-    for (let t in m)
-      for (let n in m[t]) {
-        !s.unreadByType[C.ReadStateTypes.CHANNEL] && g.default.hasUnread(n) && !o.default.isMuted(n) && !e && (s.unreadByType[C.ReadStateTypes.CHANNEL] = !0, s.unreadChannelId = n);
-        let t = g.default.getMentionCount(n);
-        t > 0 && (s.mentionCount += t, s.mentionCounts[n] = t)
-      }!s.unreadByType[C.ReadStateTypes.GUILD_EVENT] && V(n, C.ReadStateTypes.GUILD_EVENT) && (s.unreadByType[C.ReadStateTypes.GUILD_EVENT] = !0)
+    let g = a.default.getActiveJoinedThreadsForGuild(n);
+    for (let t in g)
+      for (let n in g[t]) {
+        !i.unreadByType[T.ReadStateTypes.CHANNEL] && h.default.hasUnread(n) && !o.default.isMuted(n) && !e && (i.unreadByType[T.ReadStateTypes.CHANNEL] = !0, i.unreadChannelId = n);
+        let t = h.default.getMentionCount(n);
+        t > 0 && (i.mentionCount += t, i.mentionCounts[n] = t)
+      }!i.unreadByType[T.ReadStateTypes.GUILD_EVENT] && L(n, T.ReadStateTypes.GUILD_EVENT) && (i.unreadByType[T.ReadStateTypes.GUILD_EVENT] = !0)
   }
-  M(s);
-  let i = N(n);
-  if (s.unread !== i.unread || s.mentionCount !== i.mentionCount) return S[null != n ? n : T] = s, null != n && (s.unread ? I.add(n) : I.delete(n)), A++, O(null != n ? n : T), !0;
+  U(i);
+  let s = R(n);
+  if (i.unread !== s.unread || i.mentionCount !== s.mentionCount) return C[null != n ? n : I] = i, null != n && (i.unread ? A.add(n) : A.delete(n)), y++, O(null != n ? n : I), !0;
   return !1
 }
 
@@ -189,7 +189,7 @@ function x(e) {
   let {
     guilds: t
   } = e;
-  S = {}, A = 0, I = new Set, F(null);
+  C = {}, y = 0, A = new Set, F(null);
   let {
     length: n
   } = t;
@@ -204,22 +204,22 @@ function B(e) {
     guilds: t,
     readState: n
   } = e;
-  S = {}, A = 0, I = new Set;
-  let s = n.entries.length < 500,
-    i = new Set;
-  for (let e of (s && n.entries.forEach(e => {
+  C = {}, y = 0, A = new Set;
+  let i = n.entries.length < 500,
+    s = new Set;
+  for (let e of (i && n.entries.forEach(e => {
       if (null != e.mention_count && e.mention_count > 0) {
-        if (null == e.read_state_type || e.read_state_type === C.ReadStateTypes.CHANNEL) {
+        if (null == e.read_state_type || e.read_state_type === T.ReadStateTypes.CHANNEL) {
           var t;
-          i.add(null === (t = f.default.getChannel(e.id)) || void 0 === t ? void 0 : t.guild_id)
-        } else i.add(e.id)
+          s.add(null === (t = c.default.getChannel(e.id)) || void 0 === t ? void 0 : t.guild_id)
+        } else s.add(e.id)
       }
-    }), F(null), t)) F(e.id, s ? i.has(e.id) : void 0)
+    }), F(null), t)) F(e.id, i ? s.has(e.id) : void 0)
 }
 
 function H() {
-  S = {}, I = new Set, F(null);
-  let e = Object.values(_.default.getGuildIds());
+  C = {}, A = new Set, F(null);
+  let e = Object.values(f.default.getGuildIds());
   for (let t of e) F(t)
 }
 
@@ -234,22 +234,22 @@ function j(e) {
   let {
     guild: t
   } = e;
-  return null != S[t.id] && (delete S[t.id], I.delete(t.id), A++, !0)
+  return null != C[t.id] && (delete C[t.id], A.delete(t.id), y++, !0)
 }
 
-function K(e) {
+function W(e) {
   let {
     channel: {
       id: t,
       guild_id: n
     }
   } = e;
-  return U(n, [t])
+  return V(n, [t])
 }
 
-function W() {
-  let e = f.default.getChannel(m.default.getChannelId());
-  return null != e && U(e.getGuildId(), [e.id])
+function K() {
+  let e = c.default.getChannel(g.default.getChannelId());
+  return null != e && V(e.getGuildId(), [e.id])
 }
 
 function z(e) {
@@ -257,27 +257,27 @@ function z(e) {
     user: t,
     guildId: n
   } = e;
-  return t.id === l.default.getId() && F(n)
+  return t.id === d.default.getId() && F(n)
 }
 
 function q(e) {
   let {
     channelId: t
-  } = e, n = f.default.getChannel(t);
-  return null != n && U(n.getGuildId(), [n.id])
+  } = e, n = c.default.getChannel(t);
+  return null != n && V(n.getGuildId(), [n.id])
 }
 
 function X(e) {
   let {
     channelId: t
-  } = e, n = f.default.getChannel(t);
+  } = e, n = c.default.getChannel(t);
   if (null == n) return !1;
   if (null != n.guild_id) {
-    let e = N(n.guild_id),
-      s = n.isThread() ? !o.default.hasJoined(n.id) || o.default.isMuted(n.id) : v.default.isGuildOrCategoryOrChannelMuted(n.guild_id, n.id);
-    if ((s || e.unreadByType[C.ReadStateTypes.CHANNEL]) && 0 === g.default.getMentionCount(t)) return !1
+    let e = R(n.guild_id),
+      i = n.isThread() ? !o.default.hasJoined(n.id) || o.default.isMuted(n.id) : E.default.isGuildOrCategoryOrChannelMuted(n.guild_id, n.id);
+    if ((i || e.unreadByType[T.ReadStateTypes.CHANNEL]) && 0 === h.default.getMentionCount(t)) return !1
   }
-  return U(n.getGuildId(), [n.id])
+  return V(n.getGuildId(), [n.id])
 }
 
 function Q(e) {
@@ -285,60 +285,60 @@ function Q(e) {
     channelId: t,
     guildId: n
   } = e;
-  return n !== p.FAVORITES && null != t && U(n, [t])
+  return n !== v.FAVORITES && null != t && V(n, [t])
 }
 
 function Z(e) {
   let {
     channel: t
   } = e;
-  return U(t.getGuildId(), [t.id])
+  return V(t.getGuildId(), [t.id])
 }
 
 function J(e) {
   let {
     channels: t
   } = e;
-  return i(t).groupBy(e => e.getGuildId()).reduce((e, t, n) => U(n, t.map(e => e.id)) || e, !1)
+  return s(t).groupBy(e => e.getGuildId()).reduce((e, t, n) => V(n, t.map(e => e.id)) || e, !1)
 }
 
 function $(e) {
   let {
     channels: t
   } = e;
-  return i(t).map(e => {
+  return s(t).map(e => {
     let {
       channelId: t
     } = e;
     return t
-  }).filter(e => null != f.default.getChannel(e)).groupBy(e => {
+  }).filter(e => null != c.default.getChannel(e)).groupBy(e => {
     var t;
-    return null === (t = f.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
-  }).reduce((e, t, n) => U(n, t) || e, !1)
+    return null === (t = c.default.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId()
+  }).reduce((e, t, n) => V(n, t) || e, !1)
 }
 
 function ee(e) {
   let {
     channel: t
   } = e;
-  return U(t.getGuildId(), [t.id, t.parent_id])
+  return V(t.getGuildId(), [t.id, t.parent_id])
 }
 
 function et(e) {
   let {
     guildScheduledEvent: t
   } = e;
-  return G(t.guild_id, C.ReadStateTypes.GUILD_EVENT)
+  return G(t.guild_id, T.ReadStateTypes.GUILD_EVENT)
 }
 
 function en(e) {
   let {
     guildScheduledEvent: t
   } = e;
-  return G(t.guild_id, C.ReadStateTypes.GUILD_EVENT)
+  return G(t.guild_id, T.ReadStateTypes.GUILD_EVENT)
 }
 
-function es(e) {
+function ei(e) {
   let {
     id: t,
     ackType: n
@@ -346,16 +346,16 @@ function es(e) {
   return G(t, n)
 }
 
-function ei(e) {
+function es(e) {
   let {
     id: t,
     guildId: n
   } = e;
-  return U(n, [t])
+  return V(n, [t])
 }
 
 function er(e) {
-  return (0, d.doesThreadMembersActionAffectMe)(e) && U(e.guildId, [e.id])
+  return (0, l.doesThreadMembersActionAffectMe)(e) && V(e.guildId, [e.id])
 }
 
 function ea(e) {
@@ -363,14 +363,14 @@ function ea(e) {
     threads: t,
     guildId: n
   } = e;
-  return U(n, t.filter(e => o.default.hasJoined(e.id)).map(e => e.id))
+  return V(n, t.filter(e => o.default.hasJoined(e.id)).map(e => e.id))
 }
 
 function eo(e) {
-  return null != e.channels && U(e.guildId, e.channels.map(e => e.id))
+  return null != e.channels && V(e.guildId, e.channels.map(e => e.id))
 }
 
-function ed(e) {
+function el(e) {
   let {
     guildId: t
   } = e;
@@ -384,114 +384,114 @@ function eu(e) {
   return F(t)
 }
 
-function el(e) {
+function ed(e) {
   let {
     userGuildSettings: t
   } = e, n = new Set(t.map(e => {
     var t;
-    return null !== (t = e.guild_id) && void 0 !== t ? t : T
+    return null !== (t = e.guild_id) && void 0 !== t ? t : I
   }));
-  return Object.keys(S).reduce((e, t) => n.has(t) && F(t) || e, !1)
+  return Object.keys(C).reduce((e, t) => n.has(t) && F(t) || e, !1)
 }
 
-function ef() {
-  for (let e in S) {
-    let t = S[e];
+function ec() {
+  for (let e in C) {
+    let t = C[e];
     t.ncMentionCount = 0
   }
 }
 
-function e_(e) {
+function ef(e) {
   let {
     guildId: t
   } = e;
   return F(t)
 }
-class ec extends h.default {
+class e_ extends m.default {
   takeSnapshot() {
     return {
-      version: ec.LATEST_SNAPSHOT_VERSION,
+      version: e_.LATEST_SNAPSHOT_VERSION,
       data: {
-        guilds: S,
-        unreadGuilds: Array.from(I)
+        guilds: C,
+        unreadGuilds: Array.from(A)
       }
     }
   }
   hasAnyUnread() {
-    return I.size > 0
+    return A.size > 0
   }
   getStoreChangeSentinel() {
-    return A
+    return y
   }
   getMutableUnreadGuilds() {
-    return I
+    return A
   }
   getMutableGuildStates() {
-    return S
+    return C
   }
   hasUnread(e) {
-    return I.has(e)
+    return A.has(e)
   }
   getMentionCount(e) {
-    return N(e).mentionCount
+    return R(e).mentionCount
   }
   getMutableGuildReadState(e) {
-    return N(e)
+    return R(e)
   }
   getGuildHasUnreadIgnoreMuted(e) {
-    let t = f.default.getMutableGuildChannelsForGuild(e);
+    let t = c.default.getMutableGuildChannelsForGuild(e);
     for (let e in t) {
       let n = t[e];
       if (null != n) {
-        if ((!n.isGuildVocal() || 0 !== g.default.getMentionCount(e)) && c.default.can(n.accessPermissions, n) && g.default.hasUnread(e)) return !0
+        if ((!n.isGuildVocal() || 0 !== h.default.getMentionCount(e)) && _.default.can(n.accessPermissions, n) && h.default.hasUnread(e)) return !0
       }
     }
     let n = a.default.getActiveJoinedThreadsForGuild(e);
     for (let e in n) {
-      let t = f.default.getChannel(e);
+      let t = c.default.getChannel(e);
       if (null != t && P(t)) {
         for (let t in n[e])
-          if (g.default.hasUnread(t)) return !0
+          if (h.default.hasUnread(t)) return !0
       }
     }
-    return !!g.default.hasUnread(e, C.ReadStateTypes.GUILD_EVENT) || !1
+    return !!h.default.hasUnread(e, T.ReadStateTypes.GUILD_EVENT) || !1
   }
   getTotalMentionCount(e) {
     let t = 0;
-    for (let n in S) {
-      let s = S[n];
-      (!0 !== e || n !== T) && (t += s.mentionCount)
+    for (let n in C) {
+      let i = C[n];
+      (!0 !== e || n !== I) && (t += i.mentionCount)
     }
     return t
   }
   getTotalNotificationsMentionCount(e) {
     let t = 0;
-    for (let n in S) {
-      let s = S[n];
-      (!0 !== e || n !== T) && (t += s.ncMentionCount)
+    for (let n in C) {
+      let i = C[n];
+      (!0 !== e || n !== I) && (t += i.ncMentionCount)
     }
     return t
   }
   getPrivateChannelMentionCount() {
     var e;
-    let t = S[T];
+    let t = C[I];
     return null !== (e = null == t ? void 0 : t.mentionCount) && void 0 !== e ? e : 0
   }
   getMentionCountForChannels(e, t) {
     let n = 0,
-      s = S[e];
-    return null == s ? 0 : (t.forEach(e => {
-      let t = s.mentionCounts[e];
+      i = C[e];
+    return null == i ? 0 : (t.forEach(e => {
+      let t = i.mentionCounts[e];
       n += null != t ? t : 0
     }), n)
   }
   getGuildChangeSentinel(e) {
-    return N(e).sentinel
+    return R(e).sentinel
   }
   constructor() {
     super(), this.loadCache = () => {
-      let e = this.readSnapshot(ec.LATEST_SNAPSHOT_VERSION);
-      null != e && (S = e.guilds, I = new Set(e.unreadGuilds))
+      let e = this.readSnapshot(e_.LATEST_SNAPSHOT_VERSION);
+      null != e && (C = e.guilds, A = new Set(e.unreadGuilds))
     }, this.registerActionHandlers({
       CONNECTION_OPEN: B,
       OVERLAY_INITIALIZE: x,
@@ -503,9 +503,9 @@ class ec extends h.default {
       BULK_ACK: $,
       UPDATE_CHANNEL_DIMENSIONS: q,
       CHANNEL_SELECT: Q,
-      CHANNEL_DELETE: K,
-      WINDOW_FOCUS: W,
-      GUILD_ACK: ed,
+      CHANNEL_DELETE: W,
+      WINDOW_FOCUS: K,
+      GUILD_ACK: el,
       GUILD_ROLE_CREATE: eu,
       GUILD_ROLE_DELETE: eu,
       GUILD_ROLE_UPDATE: eu,
@@ -515,16 +515,16 @@ class ec extends h.default {
       THREAD_UPDATE: ee,
       THREAD_DELETE: ee,
       THREAD_LIST_SYNC: ea,
-      THREAD_MEMBER_UPDATE: ei,
+      THREAD_MEMBER_UPDATE: es,
       THREAD_MEMBERS_UPDATE: er,
       PASSIVE_UPDATE_V1: eo,
       GUILD_MEMBER_UPDATE: z,
-      USER_GUILD_SETTINGS_FULL_UPDATE: el,
-      USER_GUILD_SETTINGS_CHANNEL_UPDATE: e_,
-      USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: e_,
-      USER_GUILD_SETTINGS_GUILD_UPDATE: e_,
-      USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: e_,
-      GUILD_FEATURE_ACK: es,
+      USER_GUILD_SETTINGS_FULL_UPDATE: ed,
+      USER_GUILD_SETTINGS_CHANNEL_UPDATE: ef,
+      USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: ef,
+      USER_GUILD_SETTINGS_GUILD_UPDATE: ef,
+      USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: ef,
+      GUILD_FEATURE_ACK: ei,
       GUILD_SCHEDULED_EVENT_CREATE: et,
       GUILD_SCHEDULED_EVENT_UPDATE: et,
       GUILD_SCHEDULED_EVENT_DELETE: en,
@@ -537,10 +537,10 @@ class ec extends h.default {
       VOICE_CHANNEL_SELECT: q,
       ENABLE_AUTOMATIC_ACK: q,
       RESORT_THREADS: q,
-      NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: ef,
+      NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: ec,
       TRY_ACK: q
-    }), this.waitFor(f.default, m.default, g.default, c.default, l.default, E.default, v.default, a.default, o.default)
+    }), this.waitFor(c.default, g.default, h.default, _.default, d.default, p.default, E.default, a.default, o.default)
   }
 }
-ec.displayName = "GuildReadStateStore", ec.LATEST_SNAPSHOT_VERSION = 1;
-var eg = new ec
+e_.displayName = "GuildReadStateStore", e_.LATEST_SNAPSHOT_VERSION = 1;
+var eh = new e_

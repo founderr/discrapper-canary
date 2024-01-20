@@ -1,12 +1,12 @@
 "use strict";
 e.exports = function(e, t) {
   var n = t.length,
-    r = e.length;
-  if (r > n) return !1;
-  if (r === n) return e === t;
-  e: for (var i = 0, l = 0; i < r; i++) {
-    for (var o = e.charCodeAt(i); l < n;)
-      if (t.charCodeAt(l++) === o) continue e;
+    i = e.length;
+  if (i > n) return !1;
+  if (i === n) return e === t;
+  e: for (var s = 0, l = 0; s < i; s++) {
+    for (var r = e.charCodeAt(s); l < n;)
+      if (t.charCodeAt(l++) === r) continue e;
     return !1
   }
   return !0

@@ -50,7 +50,7 @@ function _(e) {
         })
       }), (0, a.jsxs)("div", {
         className: N.buttonContainer,
-        children: [(0, a.jsx)(T, {
+        children: [(0, a.jsx)(I, {
           expired: n,
           invite: t,
           isHoveringInvite: p
@@ -89,7 +89,7 @@ function _(e) {
   })
 }
 
-function T(e) {
+function I(e) {
   let {
     expired: t,
     invite: n,

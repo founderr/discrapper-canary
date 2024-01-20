@@ -1,48 +1,48 @@
 "use strict";
-let i, r;
+let i, s;
 n.r(t), n.d(t, {
   default: function() {
     return N
   }
 }), n("222007");
-var s = n("35092"),
+var r = n("35092"),
   a = n("151426"),
   o = n("913144"),
   l = n("10641"),
   u = n("737292"),
-  c = n("161778"),
-  d = n("233069"),
+  d = n("161778"),
+  c = n("233069"),
   f = n("42203"),
-  E = n("697218"),
+  _ = n("697218"),
   h = n("719923"),
-  p = n("158998"),
-  _ = n("253539"),
-  S = n("941719");
-let m = !1,
-  T = !0,
-  g = !1;
+  g = n("158998"),
+  m = n("253539"),
+  E = n("941719");
+let p = !1,
+  v = !0,
+  S = !1;
+
+function T() {
+  p = !0
+}
 
 function I() {
-  m = !0
+  v && (i = void 0), S = !1, p = !1
 }
-
-function C() {
-  T && (i = void 0), g = !1, m = !1
-}
-let v = () => {
-    T = !h.default.canUseClientThemes(E.default.getCurrentUser())
+let C = () => {
+    v = !h.default.canUseClientThemes(_.default.getCurrentUser())
   },
   A = () => {
     var e, t;
     let n = null === (t = u.default.getAppearanceSettings()) || void 0 === t ? void 0 : null === (e = t.clientThemeSettings) || void 0 === e ? void 0 : e.backgroundGradientPresetId;
-    null != n && (i = S.BACKGROUND_GRADIENT_PRESETS_MAP[n])
+    null != n && (i = E.BACKGROUND_GRADIENT_PRESETS_MAP[n])
   };
-class R extends s.default.PersistedStore {
+class y extends r.default.PersistedStore {
   initialize(e) {
-    null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? S.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(E.default, c.default, f.default, u.default), this.syncWith([E.default], v), this.syncWith([u.default], A)
+    null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? E.BACKGROUND_GRADIENT_PRESETS_MAP[e.gradientPresetId] : void 0), this.waitFor(_.default, d.default, f.default, u.default), this.syncWith([_.default], C), this.syncWith([u.default], A)
   }
   getState() {
-    return T ? {} : {
+    return v ? {} : {
       gradientPresetId: null == i ? void 0 : i.id
     }
   }
@@ -50,19 +50,19 @@ class R extends s.default.PersistedStore {
     return i
   }
   getLinearGradient() {
-    return null == this.gradientPreset ? null : (0, _.getLinearGradientForBackgroundGradient)(this.gradientPreset)
+    return null == this.gradientPreset ? null : (0, m.getLinearGradientForBackgroundGradient)(this.gradientPreset)
   }
   get isEditorOpen() {
-    return m
+    return p
   }
   get isPreview() {
-    return T
+    return v
   }
   get isCoachmark() {
-    return g
+    return S
   }
   get mobilePendingThemeIndex() {
-    return r
+    return s
   }
   constructor(...e) {
     super(...e), this.migrations = [e => {
@@ -73,8 +73,8 @@ class R extends s.default.PersistedStore {
     }]
   }
 }
-R.displayName = "ClientThemesBackgroundStore", R.persistKey = "ClientThemesBackgroundStore";
-var N = new R(o.default, {
+y.displayName = "ClientThemesBackgroundStore", y.persistKey = "ClientThemesBackgroundStore";
+var N = new y(o.default, {
   UPDATE_BACKGROUND_GRADIENT_PRESET: e => {
     let {
       presetId: t
@@ -83,25 +83,25 @@ var N = new R(o.default, {
       i = void 0;
       return
     }
-    i = S.BACKGROUND_GRADIENT_PRESETS_MAP[t]
+    i = E.BACKGROUND_GRADIENT_PRESETS_MAP[t]
   },
   UPDATE_MOBILE_PENDING_THEME_INDEX: e => {
     let {
       mobileThemesIndex: t
     } = e;
     if (null == t) {
-      r = void 0;
+      s = void 0;
       return
     }
-    r = t
+    s = t
   },
   CLIENT_THEMES_EDITOR_OPEN: e => {
     (function() {
-      m = !0
+      p = !0
     })()
   },
   CLIENT_THEMES_EDITOR_CLOSE: e => {
-    C()
+    I()
   },
   RESET_PREVIEW_CLIENT_THEME: e => {
     i = void 0
@@ -110,14 +110,14 @@ var N = new R(o.default, {
     let {
       channelId: t,
       guildId: n
-    } = e, i = E.default.getCurrentUser();
-    if (null == t || null == n || (0, l.isDismissibleContentDismissed)(a.DismissibleContent.CLIENT_THEMES_COACHMARK) || !(0, p.ageEligibleForPremiumUpsell)(i)) return;
-    let r = f.default.getChannel(t);
-    null != r && (0, d.isGuildTextChannelType)(r.type) && (g = !0, function() {
-      m = !0
+    } = e, i = _.default.getCurrentUser();
+    if (null == t || null == n || (0, l.isDismissibleContentDismissed)(a.DismissibleContent.CLIENT_THEMES_COACHMARK) || !(0, g.ageEligibleForPremiumUpsell)(i)) return;
+    let s = f.default.getChannel(t);
+    null != s && (0, c.isGuildTextChannelType)(s.type) && (S = !0, function() {
+      p = !0
     }())
   },
   LOGOUT: e => {
-    C()
+    I()
   }
 })

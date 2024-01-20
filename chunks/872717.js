@@ -15,8 +15,8 @@ var t = E("726581"),
   n = E("981980");
 E("704744");
 var r = E("644642"),
-  i = E("486196"),
-  a = E("614247"),
+  a = E("486196"),
+  i = E("614247"),
   I = E("446825").Buffer;
 let s = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
 
@@ -69,7 +69,7 @@ function T(e, _, E, t, r) {
     N(_, O);
     let A = !1,
       R = (o, n) => {
-        let i = {
+        let a = {
           ..._,
           headers: {
             ..._.headers,
@@ -77,7 +77,7 @@ function T(e, _, E, t, r) {
           },
           interceptResponse: n
         };
-        A = !0, T(e, i, E, t, r)
+        A = !0, T(e, a, E, t, r)
       },
       l = e => {
         !A && (t(e), null == r || r({
@@ -90,11 +90,11 @@ function T(e, _, E, t, r) {
       if ((null == D ? void 0 : null === (I = D.interceptResponse) || void 0 === I ? void 0 : I.call(D, o, R, l)) !== !0) {
         if (o.ok) E(O);
         else {
-          if (_.oldFormErrors && (null == O ? void 0 : null === (S = O.body) || void 0 === S ? void 0 : S.code) === i.INVALID_FORM_BODY_ERROR_CODE) {
+          if (_.oldFormErrors && (null == O ? void 0 : null === (S = O.body) || void 0 === S ? void 0 : S.code) === a.INVALID_FORM_BODY_ERROR_CODE) {
             let {
               errors: e
             } = O.body;
-            null != e && (O.body = (0, a.default)(e))
+            null != e && (O.body = (0, i.default)(e))
           }
           t(O)
         }
@@ -164,7 +164,7 @@ var C = {
   patch: L,
   delete: u,
   V6OrEarlierAPIError: r.default,
-  V8APIError: i.default,
+  V8APIError: a.default,
   getAPIBaseURL() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return "https:" + window.GLOBAL_ENV.API_ENDPOINT + (e ? "/v".concat(window.GLOBAL_ENV.API_VERSION) : "")

@@ -1,43 +1,43 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return o
   }
 });
-var r = n("446674"),
-  i = n("913144");
-let l = {
+var i = n("446674"),
+  l = n("913144");
+let r = {
     premiumLikelihood: void 0,
     isFetching: !1,
     fetched: !1
   },
-  o = l;
-class s extends r.default.Store {
+  a = r;
+class s extends i.default.Store {
   initialize() {
-    o = l
+    a = r
   }
   getState() {
-    return o
+    return a
   }
   shouldFetchPremiumLikelihood() {
-    return !o.isFetching && !o.fetched
+    return !a.isFetching && !a.fetched
   }
 }
 s.displayName = "UserPremiumLikelihoodStore";
-var a = new s(i.default, {
+var o = new s(l.default, {
   BILLING_USER_PREMIUM_LIKELIHOOD_FETCH: function() {
-    o.isFetching = !0
+    a.isFetching = !0
   },
   BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_SUCCESS: function(e) {
     let {
       premiumLikelihood: t
     } = e;
-    o.premiumLikelihood = t, o.fetched = !0, o.isFetching = !1
+    a.premiumLikelihood = t, a.fetched = !0, a.isFetching = !1
   },
   BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_ERROR: function() {
-    o.isFetching = !1
+    a.isFetching = !1
   },
   LOGOUT: function() {
-    o.premiumLikelihood = void 0
+    a.premiumLikelihood = void 0
   }
 })
