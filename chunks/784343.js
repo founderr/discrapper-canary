@@ -54,16 +54,15 @@ i = class e extends l.default {
           priority: 1,
           payloadType: 120
         }, ...(0, f.filterVideoCodecs)(e, n).map((e, t) => {
-          let n = 101 + 2 * t,
-            [i, [s, r]] = e;
+          let n = 101 + 2 * t;
           return {
             type: "video",
-            name: i,
+            name: e.name,
             priority: t + 1,
             payloadType: n,
             rtxPayloadType: n + 1,
-            encode: s,
-            decode: r
+            encode: e.encode,
+            decode: e.decode
           }
         })], i.setCodecs(p.Codecs.OPUS, p.Codecs.H264, t), i.conn.startReplay()
       })
@@ -103,16 +102,15 @@ i = class e extends l.default {
           priority: 1,
           payloadType: 120
         }, ...(0, f.filterVideoCodecs)(i, s).map((e, t) => {
-          let n = 101 + 2 * t,
-            [i, [s, r]] = e;
+          let n = 101 + 2 * t;
           return {
             type: "video",
-            name: i,
+            name: e.name,
             priority: t + 1,
             payloadType: n,
             rtxPayloadType: n + 1,
-            encode: s,
-            decode: r
+            encode: e.encode,
+            decode: e.decode
           }
         })], this.logger.info("Video codecs: ".concat(this.codecs.map(e => e.name))), t.getEncryptionModes(i => {
           var s, r, u, d, f, _, h, g, m;
