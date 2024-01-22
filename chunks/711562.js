@@ -9,7 +9,7 @@ var i = n("167726"),
 
 function r(e) {
   let t = s.default.getState();
-  return t.isEnabled && t.useActivityUrlOverride && null != t.activityUrlOverride && "" !== t.activityUrlOverride ? t.activityUrlOverride : i.default.inTestModeForEmbeddedApplication(e) ? i.default.testModeOriginURL : function(e) {
+  return t.useActivityUrlOverride && null != t.activityUrlOverride && "" !== t.activityUrlOverride ? t.activityUrlOverride : i.default.inTestModeForEmbeddedApplication(e) ? i.default.testModeOriginURL : function(e) {
     let t = window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;
     return null == t ? null : "https://".concat(e, ".").concat(t)
   }(e)
