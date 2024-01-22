@@ -1,12 +1,12 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
 var n = l("819068");
 
-function s(e, t) {
+function a(e, t) {
   if (__OVERLAY__) {
     let e = t.getGame(),
       l = (0, n.getPID)();

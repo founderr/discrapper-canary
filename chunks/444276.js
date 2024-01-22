@@ -6,8 +6,8 @@ l.r(t), l.d(t, {
 });
 var n = l("37983");
 l("884691");
-var s = l("414456"),
-  a = l.n(s),
+var a = l("414456"),
+  s = l.n(a),
   r = l("77078"),
   i = l("145131"),
   u = l("45122");
@@ -17,10 +17,10 @@ function o(e) {
     source: t,
     selectedSource: l
   } = e, {
-    id: s,
+    id: a,
     name: o,
     url: d
-  } = t, c = (null == l ? void 0 : l.id) === s;
+  } = t, c = (null == l ? void 0 : l.id) === a;
   return (0, n.jsx)(n.Fragment, {
     children: (0, n.jsxs)(i.default, {
       direction: i.default.Direction.VERTICAL,
@@ -33,12 +33,12 @@ function o(e) {
           style: {
             backgroundImage: "url(".concat(d, ")")
           },
-          className: a(u.sourceThumbnail, {
+          className: s(u.sourceThumbnail, {
             [u.selected]: c
           })
         })
       }), (0, n.jsx)(r.Text, {
-        className: a(u.sourceName, {
+        className: s(u.sourceName, {
           [u.selected]: c
         }),
         variant: "text-sm/normal",

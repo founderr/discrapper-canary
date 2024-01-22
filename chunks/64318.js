@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
 var a = n("37983");
@@ -24,24 +24,24 @@ var l = n("414456"),
   N = n("782340"),
   _ = n("804220");
 
-function I(e) {
+function T(e) {
   let t = (0, m.useInDesktopNotificationCenterExperiment)();
-  return t ? (0, a.jsx)(T, {
+  return t ? (0, a.jsx)(I, {
     ...e
   }) : (0, a.jsx)(C, {
     ...e
   })
 }
 
-function T(e) {
+function I(e) {
   let {
     tab: t,
     setTab: n,
     children: l,
     badgeState: m,
-    closePopout: I
+    closePopout: T
   } = e, {
-    showReminders: T
+    showReminders: I
   } = h.default.useExperiment({
     location: "RecentsHeader"
   }, {
@@ -50,7 +50,7 @@ function T(e) {
     enabled: C
   } = f.default.useExperiment({
     location: "RecentsHeader"
-  }), A = (0, i.default)([c.default], () => c.default.getUnseenInviteCount()), x = (0, i.default)([E.default], () => E.default.getMessageReminders()), v = x.length;
+  }), A = (0, i.default)([c.default], () => c.default.getUnseenInviteCount()), M = (0, i.default)([E.default], () => E.default.getMessageReminders()), v = M.length;
   return (0, a.jsxs)(u.Header, {
     className: s(_.header, _.expanded),
     children: [(0, a.jsxs)("div", {
@@ -62,7 +62,7 @@ function T(e) {
         variant: "text-lg/semibold",
         children: N.default.Messages.INBOX
       }), (0, a.jsx)(S.default, {
-        closePopout: I
+        closePopout: T
       })]
     }), (0, a.jsxs)("div", {
       className: s(_.expandedTabSection),
@@ -103,7 +103,7 @@ function T(e) {
             color: d.default.STATUS_DANGER,
             className: s(_.iconBadge)
           }) : null]
-        }) : null, T ? (0, a.jsxs)(o.TabBar.Item, {
+        }) : null, I ? (0, a.jsxs)(o.TabBar.Item, {
           "aria-label": "todos",
           id: r.InboxTab.TODOS,
           className: s(_.tab, _.expanded, {

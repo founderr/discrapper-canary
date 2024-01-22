@@ -4,10 +4,10 @@ l.r(t), l.d(t, {
     return p
   },
   generateTwitterMetadataItems: function() {
-    return E
+    return T
   },
   generateSteamMetadataItems: function() {
-    return T
+    return E
   },
   generatePaypalMetadataItems: function() {
     return _
@@ -55,7 +55,7 @@ function p(e) {
   }, c.MetadataFields.REDDIT_MOD)), a
 }
 
-function E(e) {
+function T(e) {
   var t, l;
   let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     s = [],
@@ -72,7 +72,7 @@ function E(e) {
   }, c.MetadataFields.TWITTER_FOLLOWERS_COUNT)), s
 }
 
-function T(e) {
+function E(e) {
   var t, a, s;
   let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     r = [],

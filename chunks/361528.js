@@ -27,26 +27,26 @@ var s = n("37983"),
       secondaryButtonText: S,
       onSecondaryButtonClick: A,
       children: _,
-      useReducedMotion: M = !1
-    } = e, T = (0, i.useStateFromStores)([o.default], () => o.default.getState().isMembersOpen);
-    if (l.isMobile && T) return null;
+      useReducedMotion: T = !1
+    } = e, M = (0, i.useStateFromStores)([o.default], () => o.default.getState().isMembersOpen);
+    if (l.isMobile && M) return null;
     if (null == t) return (0, s.jsx)(s.Fragment, {
       children: a.Children.only(_)
     });
-    let I = null;
-    return null != E ? I = (0, s.jsx)("img", {
+    let N = null;
+    return null != E ? N = (0, s.jsx)("img", {
       alt: "",
       src: E,
       className: c.image
-    }) : null != g && (I = (0, s.jsx)(d.default, {
+    }) : null != g && (N = (0, s.jsx)(d.default, {
       importData: g,
-      shouldAnimate: !M,
+      shouldAnimate: !T,
       className: c.animation
     })), (0, s.jsxs)("div", {
       className: c.wrapper,
       children: [(0, s.jsxs)("div", {
         className: c.content,
-        children: [I, (0, s.jsxs)("div", {
+        children: [N, (0, s.jsxs)("div", {
           className: c.text,
           children: [(0, s.jsx)(r.Heading, {
             variant: "heading-md/semibold",

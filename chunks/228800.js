@@ -23,10 +23,10 @@ var s = n("37983"),
   S = n("562228"),
   A = n("140596"),
   _ = n("300322"),
-  M = n("845579"),
-  T = n("982108"),
-  I = n("778588"),
-  N = n("957255"),
+  T = n("845579"),
+  M = n("982108"),
+  N = n("778588"),
+  I = n("957255"),
   v = n("101125"),
   L = n("351825"),
   x = n("738602"),
@@ -53,10 +53,10 @@ var s = n("37983"),
       z = (0, f.useAppContext)(),
       K = a.useRef(null),
       Y = (0, r.useStateFromStores)([v.default], () => v.default.getActivities()),
-      X = (0, r.useStateFromStores)([m.default], () => m.default.getSettings().clipsEnabled),
-      q = (0, r.useStateFromStores)([m.default], () => m.default.getLastClipsSession()),
+      q = (0, r.useStateFromStores)([m.default], () => m.default.getSettings().clipsEnabled),
+      X = (0, r.useStateFromStores)([m.default], () => m.default.getLastClipsSession()),
       J = (0, r.useStateFromStoresArray)([m.default], () => m.default.getNewClipIds()),
-      Q = (0, r.useStateFromStores)([T.default], () => null == T.default.getCurrentSidebarChannelId(w.id)),
+      Q = (0, r.useStateFromStores)([M.default], () => null == M.default.getCurrentSidebarChannelId(w.id)),
       {
         showClipsHeaderEntrypoint: $
       } = p.ClipsExperiment.useExperiment({
@@ -66,14 +66,14 @@ var s = n("37983"),
       }),
       ee = (0, r.useStateFromStores)([g.HotspotStore], () => g.HotspotStore.hasHotspot(g.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
       et = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, H.CLIPS_GALLERY_MODAL_KEY)),
-      en = (0, r.useStateFromStores)([I.default], () => I.default.hasLayers()),
+      en = (0, r.useStateFromStores)([N.default], () => N.default.hasLayers()),
       es = (0, r.useStateFromStores)([m.default], () => m.default.hasClips()),
       [ea, el] = a.useState(null),
-      ei = (0, p.useEnableClips)() && (X || es),
+      ei = (0, p.useEnableClips)() && (q || es),
       er = w.isPrivate(),
-      eo = (0, r.useStateFromStores)([N.default], () => er || N.default.can(b.Permissions.ATTACH_FILES, w) && N.default.can(b.Permissions.SEND_MESSAGES, w)),
-      eu = (0, c.default)(q);
-    (null == eu ? void 0 : eu.newClipIds.length) !== (null == q ? void 0 : q.newClipIds.length) && (null !== (t = null == q ? void 0 : q.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ea && ee && Q && !et && !$ && !en && el("recentClips");
+      eo = (0, r.useStateFromStores)([I.default], () => er || I.default.can(b.Permissions.ATTACH_FILES, w) && I.default.can(b.Permissions.SEND_MESSAGES, w)),
+      eu = (0, c.default)(X);
+    (null == eu ? void 0 : eu.newClipIds.length) !== (null == X ? void 0 : X.newClipIds.length) && (null !== (t = null == X ? void 0 : X.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ea && ee && Q && !et && !$ && !en && el("recentClips");
     let ed = (e, t, n) => {
       null != t && "ETOOLARGE" === t.code ? (0, D.showUploadFileSizeExceededError)(w, []) : (0, D.promptToUpload)(e, w, B, {
         requireConfirm: !0,
@@ -105,8 +105,8 @@ var s = n("37983"),
     });
     let ef = (0, _.useCanStartPublicThread)(w),
       eh = (0, _.useCanStartPrivateThread)(w),
-      eC = !M.UseLegacyChatInput.useSetting() && !(0, O.isAndroidWeb)() && null != window.ResizeObserver,
-      ep = (0, r.useStateFromStores)([N.default, A.default], () => (0, C.canUseApplicationCommands)(N.default, A.default, Z, w)),
+      eC = !T.UseLegacyChatInput.useSetting() && !(0, O.isAndroidWeb)() && null != window.ResizeObserver,
+      ep = (0, r.useStateFromStores)([I.default, A.default], () => (0, C.canUseApplicationCommands)(I.default, A.default, Z, w)),
       em = (0, S.useCanPostPollsInChannel)(null != w ? w : void 0),
       eE = (0, u.useRedesignIconContext)().enabled,
       eg = null !== (l = null == J ? void 0 : J.length) && void 0 !== l ? l : 0,
@@ -146,7 +146,7 @@ var s = n("37983"),
       width: 24,
       height: 24
     });
-    let eM = (0, s.jsx)(u.Popout, {
+    let eT = (0, s.jsx)(u.Popout, {
       shouldShow: null != ea,
       animation: u.Popout.Animation.NONE,
       align: "recentClips" === ea ? "center" : "left",
@@ -162,7 +162,7 @@ var s = n("37983"),
             return (0, s.jsx)(E.default, {
               ...e,
               onOpenClips: ec,
-              lastClipsSession: q
+              lastClipsSession: X
             });
           case "attachMenu":
             return (0, s.jsx)(j.default, {
@@ -211,7 +211,7 @@ var s = n("37983"),
         })
       }), (0, s.jsx)("div", {
         className: U.attachWrapper,
-        children: eM
+        children: eT
       })]
     })
   })

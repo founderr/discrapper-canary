@@ -25,7 +25,7 @@ function E(e) {
     onAcceptSuccess: n,
     onRejectSuccess: a,
     onError: E
-  } = e, g = (0, C.default)(), [S, A] = s.useState(!1), [_, M] = s.useState(!1), [T, I] = s.useState(!1), [N, v] = s.useState(!1), [L, x] = s.useState(!1), R = S || _ || T, y = s.useCallback(async e => {
+  } = e, g = (0, C.default)(), [S, A] = s.useState(!1), [_, T] = s.useState(!1), [M, N] = s.useState(!1), [I, v] = s.useState(!1), [L, x] = s.useState(!1), R = S || _ || M, y = s.useCallback(async e => {
     if (!R) {
       A(!0);
       try {
@@ -39,19 +39,19 @@ function E(e) {
     }
   }, [R, n, E]), O = s.useCallback(async e => {
     if (!R) {
-      M(!0);
+      T(!0);
       try {
         await (0, f.rejectMessageRequest)(e), x(!0), null == a || a()
       } catch (t) {
         let e = new i.APIError(t);
         null == E || E(e)
       } finally {
-        M(!1)
+        T(!1)
       }
     }
   }, [R, a, E]), D = s.useCallback(async e => {
     if (R) return;
-    M(!0);
+    T(!0);
     let t = l(e, p.BATCH_REJECT_LIMIT);
     try {
       for (let e of t) await (0, f.rejectMessageRequestBatch)(e);
@@ -60,19 +60,19 @@ function E(e) {
       let e = new i.APIError(t);
       null == E || E(e)
     } finally {
-      M(!1)
+      T(!1)
     }
   }, [R, a, E]), j = s.useCallback(async e => {
     if (R) return;
     if (null != t && null == o.default.getMutualGuilds(t.id)) {
-      I(!0);
+      N(!0);
       try {
         await (0, u.default)(t.id, t.getAvatarURL(void 0, 80), {
           withMutualGuilds: !0,
           withMutualFriendsCount: !0
         })
       } catch (e) {} finally {
-        I(!1)
+        N(!1)
       }
     }
     let n = async () => {
@@ -127,8 +127,8 @@ function E(e) {
     markAsNotSpam: P,
     isAcceptLoading: S,
     isRejectLoading: _,
-    isUserProfileLoading: T,
-    isOptimisticAccepted: N,
+    isUserProfileLoading: M,
+    isOptimisticAccepted: I,
     isOptimisticRejected: L
   }
 }

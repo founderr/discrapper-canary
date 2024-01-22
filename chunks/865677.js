@@ -16,8 +16,8 @@ var n = l("37983"),
   f = l("442939"),
   m = l("860285"),
   p = l("42203"),
-  E = l("86878"),
-  T = l("525065"),
+  T = l("86878"),
+  E = l("525065"),
   _ = l("305961"),
   S = l("686470"),
   h = l("957255"),
@@ -58,11 +58,11 @@ function G(e) {
     channelId: H,
     userId: V.id,
     activity: t
-  }), J = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), Q = (0, s.useStateFromStores)([S.default, m.default, N.default, E.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, O.isLaunchable)({
+  }), J = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), Q = (0, s.useStateFromStores)([S.default, m.default, N.default, T.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, O.isLaunchable)({
     LibraryApplicationStore: S.default,
     LaunchableGameStore: m.default,
     DispatchApplicationStore: N.default,
-    ConnectedAppsStore: E.default,
+    ConnectedAppsStore: T.default,
     applicationId: t.application_id
   })), q = (0, s.useStateFromStores)([M.default], () => Array.from(M.default.getSelfEmbeddedActivities().values()).some(e => {
     let {
@@ -70,7 +70,7 @@ function G(e) {
       channelId: n
     } = e;
     return l === (null == t ? void 0 : t.application_id) && n === X
-  })), $ = (0, s.useStateFromStores)([C.default], () => null != t && null != t.application_id && C.default.getState(t.application_id, F.ActivityActionTypes.JOIN) === F.ActivityActionStates.LOADING), [ee] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), et = (0, s.useStateFromStores)([p.default, _.default, T.default, I.default, A.default, v.default, h.default], () => (0, R.default)({
+  })), $ = (0, s.useStateFromStores)([C.default], () => null != t && null != t.application_id && C.default.getState(t.application_id, F.ActivityActionTypes.JOIN) === F.ActivityActionStates.LOADING), [ee] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), et = (0, s.useStateFromStores)([p.default, _.default, E.default, I.default, A.default, v.default, h.default], () => (0, R.default)({
     user: V,
     activity: t,
     application: ee,
@@ -79,7 +79,7 @@ function G(e) {
     isEmbedded: W,
     ChannelStore: p.default,
     GuildStore: _.default,
-    GuildMemberCountStore: T.default,
+    GuildMemberCountStore: E.default,
     RelationshipStore: I.default,
     SelectedChannelStore: A.default,
     VoiceStateStore: v.default,

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _
   },
   default: function() {
-    return M
+    return T
   }
 }), n("222007");
 var s = n("37983"),
@@ -115,14 +115,14 @@ class _ extends a.PureComponent {
           })
         })]
       })
-    }, M = e => {
+    }, T = e => {
       let t = n && !e;
       return {
         [A.animating]: t,
         [A.notAnimating]: !t,
         [A.highPriority]: d
       }
-    }, T = this.getTutorialPopoutText();
+    }, M = this.getTutorialPopoutText();
     return (0, s.jsx)(m.default, {
       position: C,
       renderMedia: r,
@@ -134,7 +134,7 @@ class _ extends a.PureComponent {
       arrowAlignment: h,
       onSkipAll: this.handleSkipTips,
       onComplete: this.handleDismiss,
-      ...T,
+      ...M,
       children: (e, t) => {
         let {
           isShown: n
@@ -144,11 +144,11 @@ class _ extends a.PureComponent {
           className: A.indicator,
           style: S,
           children: (0, s.jsxs)("div", {
-            className: i(A.animationContainer, M(n)),
+            className: i(A.animationContainer, T(n)),
             children: [_(n), (0, s.jsx)("div", {
-              className: i(A.innerCircle, M(n))
+              className: i(A.innerCircle, T(n))
             }), (0, s.jsx)("div", {
-              className: i(A.outerCircle, M(n))
+              className: i(A.outerCircle, T(n))
             })]
           })
         })
@@ -164,7 +164,7 @@ class _ extends a.PureComponent {
     }
   }
 }
-var M = function() {
+var T = function() {
   let {
     indicators: e,
     tutorialData: t,

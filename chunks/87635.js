@@ -23,24 +23,24 @@ var s = n("37983"),
   S = n("129092"),
   A = n("726274"),
   _ = n("290886"),
-  M = n("205454"),
-  T = n("782340"),
-  I = n("719832");
+  T = n("205454"),
+  M = n("782340"),
+  N = n("719832");
 
-function N(e) {
+function I(e) {
   let {
     action: t
   } = e, n = (0, o.default)([h.default], () => h.default.getChannel(t.channelId)), a = (0, c.default)(n, !0);
   return null == n ? (0, s.jsx)(u.Text, {
     variant: "text-xxs/normal",
     color: "header-secondary",
-    children: T.default.Messages.IN_CHANNEL.format({
-      channelName: T.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER
+    children: M.default.Messages.IN_CHANNEL.format({
+      channelName: M.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER
     })
   }) : (0, s.jsx)(u.Text, {
     variant: "text-xxs/normal",
     color: "header-secondary",
-    children: T.default.Messages.IN_CHANNEL.format({
+    children: M.default.Messages.IN_CHANNEL.format({
       channelName: a
     })
   })
@@ -55,12 +55,12 @@ function v(e) {
   } = e, i = (0, o.default)([h.default], () => h.default.getChannel(n));
   if (null == i) return null;
   let r = null !== (t = (0, f.getChannelIconComponent)(i)) && void 0 !== t ? t : m.default;
-  return (0, s.jsx)(M.default, {
+  return (0, s.jsx)(T.default, {
     emojiId: a,
     emojiName: l,
-    size: M.CTAEmojiSize.MEDIUM,
+    size: T.CTAEmojiSize.MEDIUM,
     defaultComponent: (0, s.jsx)(r, {
-      className: I.channelIcon
+      className: N.channelIcon
     })
   })
 }
@@ -74,7 +74,7 @@ function L(e) {
   } = e, {
     channelAction: m,
     completed: _
-  } = (0, A.useMemberActionsForChannel)(f, h), M = (0, A.useNextMemberAction)(f, null == m ? void 0 : m.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), x = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = a.useState(!1), [D] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
+  } = (0, A.useMemberActionsForChannel)(f, h), T = (0, A.useNextMemberAction)(f, null == m ? void 0 : m.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), x = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = a.useState(!1), [D] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
   a.useEffect(() => {
     _ ? r.default.timing(D, {
       toValue: 0,
@@ -96,11 +96,11 @@ function L(e) {
     }).start()
   }, [_, j, y, L]);
   let P = a.useCallback(() => {
-    null != M && (0, g.selectNewMemberActionChannel)(f, M.channelId)
-  }, [f, M]);
+    null != T && (0, g.selectNewMemberActionChannel)(f, T.channelId)
+  }, [f, T]);
   return null == m || x && !y ? null : (0, s.jsx)("div", {
-    className: i(I.container, C),
-    children: y && null != M ? (0, s.jsx)(r.default.div, {
+    className: i(N.container, C),
+    children: y && null != T ? (0, s.jsx)(r.default.div, {
       style: {
         marginBottom: j.interpolate({
           inputRange: [0, 1],
@@ -108,35 +108,35 @@ function L(e) {
         })
       },
       children: (0, s.jsxs)(u.Clickable, {
-        className: i(I.banner, I.clickable),
+        className: i(N.banner, N.clickable),
         onClick: P,
         children: [(0, s.jsx)(v, {
-          channelId: M.channelId,
-          emojiId: null === (t = M.emoji) || void 0 === t ? void 0 : t.id,
-          emojiName: null == M ? void 0 : null === (n = M.emoji) || void 0 === n ? void 0 : n.name
+          channelId: T.channelId,
+          emojiId: null === (t = T.emoji) || void 0 === t ? void 0 : t.id,
+          emojiName: null == T ? void 0 : null === (n = T.emoji) || void 0 === n ? void 0 : n.name
         }), (0, s.jsxs)("div", {
-          className: I.text,
+          className: N.text,
           children: [(0, s.jsx)(u.Text, {
             variant: "text-md/semibold",
             color: "header-primary",
-            children: T.default.Messages.MEMBER_ACTIONS_NEXT_STEP.format({
-              step: M.title
+            children: M.default.Messages.MEMBER_ACTIONS_NEXT_STEP.format({
+              step: T.title
             })
-          }), (0, s.jsx)(N, {
-            action: M
+          }), (0, s.jsx)(I, {
+            action: T
           })]
         }), (0, s.jsx)("div", {
-          className: I.iconCircle,
+          className: N.iconCircle,
           children: (0, s.jsx)(p.default, {
             width: 16,
             height: 16,
             color: R.hex(),
-            className: I.nextIcon
+            className: N.nextIcon
           })
         })]
       })
     }) : (0, s.jsxs)(r.default.div, {
-      className: I.banner,
+      className: N.banner,
       style: {
         marginBottom: D.interpolate({
           inputRange: [0, 1],
@@ -148,7 +148,7 @@ function L(e) {
         emojiId: null === (l = m.emoji) || void 0 === l ? void 0 : l.id,
         emojiName: null == m ? void 0 : null === (c = m.emoji) || void 0 === c ? void 0 : c.name
       }), (0, s.jsxs)("div", {
-        className: I.text,
+        className: N.text,
         children: [(0, s.jsx)(u.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
@@ -156,10 +156,10 @@ function L(e) {
         }), (0, s.jsx)(u.Text, {
           variant: "text-xxs/normal",
           color: "text-muted",
-          children: T.default.Messages.MEMBER_ACTION_CHAT
+          children: M.default.Messages.MEMBER_ACTION_CHAT
         })]
       }), _ ? (0, s.jsx)(E.default, {
-        className: I.completed,
+        className: N.completed,
         backgroundColor: R.hex(),
         width: 20,
         height: 20

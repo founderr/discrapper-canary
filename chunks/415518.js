@@ -1,61 +1,61 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   renderKeybindHint: function() {
-    return p
+    return S
   },
   renderSubtleHint: function() {
-    return N
+    return v
   },
   ColorSchemes: function() {
-    return s
+    return a
   },
   default: function() {
-    return g
+    return y
   }
 });
-var n, s, a = l("37983"),
-  r = l("884691"),
-  i = l("414456"),
-  u = l.n(i),
-  o = l("77078"),
-  d = l("942699"),
-  c = l("945330"),
-  f = l("782340"),
-  m = l("229804"),
-  S = l("926622");
-let h = e => e.stopPropagation(),
-  C = () => (0, a.jsx)("div", {
-    className: m.clickBlocker,
-    onClick: h,
-    onMouseEnter: h,
-    onMouseOver: h
+var i, a, l = n("37983"),
+  s = n("884691"),
+  o = n("414456"),
+  r = n.n(o),
+  d = n("77078"),
+  u = n("942699"),
+  c = n("945330"),
+  f = n("782340"),
+  h = n("229804"),
+  p = n("926622");
+let g = e => e.stopPropagation(),
+  m = () => (0, l.jsx)("div", {
+    className: h.clickBlocker,
+    onClick: g,
+    onMouseEnter: g,
+    onMouseOver: g
   }),
-  E = () => (0, a.jsx)("div", {
-    className: m.divider
+  E = () => (0, l.jsx)("div", {
+    className: h.divider
   }),
-  p = (e, t, l) => (0, a.jsx)("div", {
-    className: m.keybindMessage,
-    children: l.format({
+  S = (e, t, n) => (0, l.jsx)("div", {
+    className: h.keybindMessage,
+    children: n.format({
       keybind: t,
-      keybindHook: (e, l) => (0, a.jsx)(d.default, {
+      keybindHook: (e, n) => (0, l.jsx)(u.default, {
         keybind: t,
-        className: m.keybind
-      }, l)
+        className: h.keybind
+      }, n)
     })
   }),
-  N = (e, t) => (0, a.jsx)("div", {
-    className: m.hintSubtleText,
+  v = (e, t) => (0, l.jsx)("div", {
+    className: h.hintSubtleText,
     children: t
   });
-(n = s || (s = {})).PRIMARY = "PRIMARY", n.BRAND = "BRAND", n.DANGER = "DANGER";
-class Notification extends r.PureComponent {
+(i = a || (a = {})).PRIMARY = "PRIMARY", i.BRAND = "BRAND", i.DANGER = "DANGER";
+class Notification extends s.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
-      expand: l
+      expand: n
     } = e, {
-      expanded: n
+      expanded: i
     } = t;
-    return !n && l ? {
+    return !i && n ? {
       expanded: !0
     } : null
   }
@@ -72,16 +72,16 @@ class Notification extends r.PureComponent {
     null != t && null == e.onNotificationShow && t()
   }
   renderCloseButton() {
-    return (0, a.jsx)(o.Button, {
-      look: o.Button.Looks.BLANK,
-      size: o.Button.Sizes.NONE,
+    return (0, l.jsx)(d.Button, {
+      look: d.Button.Looks.BLANK,
+      size: d.Button.Sizes.NONE,
       onClick: this.handleDismiss,
-      className: m.dismissButton,
+      className: h.dismissButton,
       "aria-label": f.default.Messages.NOTIFICATION_DISMISS,
-      children: (0, a.jsx)(c.default, {
+      children: (0, l.jsx)(c.default, {
         width: 16,
         height: 16,
-        className: m.dismissIcon
+        className: h.dismissIcon
       })
     })
   }
@@ -92,19 +92,19 @@ class Notification extends r.PureComponent {
         colorScheme: t
       },
       state: {
-        expanded: l
+        expanded: n
       }
     } = this;
     if (null == e) return null;
     if ("function" == typeof e) {
-      let n = e(l, t);
-      return null != n ? (0, a.jsxs)(r.Fragment, {
-        children: [(0, a.jsx)(E, {}), n]
+      let i = e(n, t);
+      return null != i ? (0, l.jsxs)(s.Fragment, {
+        children: [(0, l.jsx)(E, {}), i]
       }, "hint-custom") : null
     }
-    return (0, a.jsxs)(r.Fragment, {
-      children: [(0, a.jsx)(E, {}), (0, a.jsx)("div", {
-        className: "string" == typeof e ? m.hintText : void 0,
+    return (0, l.jsxs)(s.Fragment, {
+      children: [(0, l.jsx)(E, {}), (0, l.jsx)("div", {
+        className: "string" == typeof e ? h.hintText : void 0,
         children: e
       }, "hint-text")]
     }, "hint-text")
@@ -114,50 +114,50 @@ class Notification extends r.PureComponent {
       props: {
         renderFooter: e,
         cancelText: t,
-        confirmText: l,
-        onConfirmClick: n,
-        onCancelClick: s,
-        hint: i,
-        colorScheme: u
+        confirmText: n,
+        onConfirmClick: i,
+        onCancelClick: a,
+        hint: o,
+        colorScheme: r
       },
       state: {
-        expanded: d
+        expanded: u
       }
     } = this;
-    if (!d) return null != i ? this.renderHint() : null;
+    if (!u) return null != o ? this.renderHint() : null;
     if (null != e) {
-      let t = e(d, u);
-      return null != t ? (0, a.jsxs)(r.Fragment, {
-        children: [(0, a.jsx)(E, {}), t]
+      let t = e(u, r);
+      return null != t ? (0, l.jsxs)(s.Fragment, {
+        children: [(0, l.jsx)(E, {}), t]
       }, "footer-custom-content") : null
     }
-    if (null != n || null != s) {
-      let e = o.Button.Colors.GREEN,
-        i = o.Button.Colors.PRIMARY,
-        d = o.Button.Looks.FILLED;
-      switch (u) {
+    if (null != i || null != a) {
+      let e = d.Button.Colors.GREEN,
+        o = d.Button.Colors.PRIMARY,
+        u = d.Button.Looks.FILLED;
+      switch (r) {
         case "DANGER":
         case "BRAND":
-          e = i = o.Button.Colors.WHITE, d = o.Button.Looks.OUTLINED
+          e = o = d.Button.Colors.WHITE, u = d.Button.Looks.OUTLINED
       }
-      return (0, a.jsxs)(r.Fragment, {
-        children: [(0, a.jsx)(E, {}), (0, a.jsxs)("div", {
-          className: m.buttonContainer,
-          children: [null != n ? (0, a.jsx)(o.Button, {
+      return (0, l.jsxs)(s.Fragment, {
+        children: [(0, l.jsx)(E, {}), (0, l.jsxs)("div", {
+          className: h.buttonContainer,
+          children: [null != i ? (0, l.jsx)(d.Button, {
             fullWidth: !0,
-            size: o.Button.Sizes.SMALL,
+            size: d.Button.Sizes.SMALL,
             color: e,
             onClick: this.handleConfirmClick,
-            className: m.button,
-            innerClassName: m.innerText,
-            children: null != l ? l : f.default.Messages.OKAY
-          }) : null, null != s ? (0, a.jsx)(o.Button, {
+            className: h.button,
+            innerClassName: h.innerText,
+            children: null != n ? n : f.default.Messages.OKAY
+          }) : null, null != a ? (0, l.jsx)(d.Button, {
             fullWidth: !0,
-            size: o.Button.Sizes.SMALL,
-            look: d,
-            color: i,
+            size: d.Button.Sizes.SMALL,
+            look: u,
+            color: o,
             onClick: this.handleCancelClick,
-            className: m.button,
+            className: h.button,
             children: null != t ? t : f.default.Messages.CANCEL
           }) : null]
         })]
@@ -169,13 +169,13 @@ class Notification extends r.PureComponent {
     let {
       icon: e
     } = this.props;
-    return null == e ? null : "string" == typeof e ? (0, a.jsx)(o.Avatar, {
+    return null == e ? null : "string" == typeof e ? (0, l.jsx)(d.Avatar, {
       src: e,
-      size: o.AvatarSizes.SIZE_40,
-      className: m.avatar,
+      size: d.AvatarSizes.SIZE_40,
+      className: h.avatar,
       "aria-hidden": !0
-    }) : (0, a.jsx)("div", {
-      className: m.avatar,
+    }) : (0, l.jsx)("div", {
+      className: h.avatar,
       children: e
     })
   }
@@ -183,20 +183,20 @@ class Notification extends r.PureComponent {
     let {
       body: e,
       title: t,
-      maxBodyLines: l
+      maxBodyLines: n
     } = this.props;
-    return (0, a.jsxs)("div", {
-      className: m.content,
-      children: [this.renderIcon(), (0, a.jsxs)("div", {
-        className: m.details,
-        children: [(0, a.jsx)("div", {
-          className: m.title,
+    return (0, l.jsxs)("div", {
+      className: h.content,
+      children: [this.renderIcon(), (0, l.jsxs)("div", {
+        className: h.details,
+        children: [(0, l.jsx)("div", {
+          className: h.title,
           children: t
-        }), null != e ? (0, a.jsx)("div", {
-          className: u(m.body, S.marginTop4),
+        }), null != e ? (0, l.jsx)("div", {
+          className: r(h.body, p.marginTop4),
           style: {
-            WebkitLineClamp: l,
-            lineClamp: l
+            WebkitLineClamp: n,
+            lineClamp: n
           },
           children: e
         }) : null]
@@ -208,23 +208,23 @@ class Notification extends r.PureComponent {
       props: {
         onNotificationClick: e,
         colorScheme: t,
-        disabled: l
+        disabled: n
       },
       state: {
-        expanded: n
+        expanded: i
       }
-    } = this, s = null != e ? o.Clickable : "div";
-    return (0, a.jsxs)(s, {
-      onMouseOver: n ? null : this.handleMouseEnter,
-      onFocus: n ? null : this.handleMouseEnter,
+    } = this, a = null != e ? d.Clickable : "div";
+    return (0, l.jsxs)(a, {
+      onMouseOver: i ? null : this.handleMouseEnter,
+      onFocus: i ? null : this.handleMouseEnter,
       onClick: e,
-      className: u(m.container, {
-        [m.themePrimary]: "PRIMARY" === t,
-        [m.themeBrand]: "BRAND" === t,
-        [m.themeDanger]: "DANGER" === t,
-        [m.clickable]: null != e && !l
+      className: r(h.container, {
+        [h.themePrimary]: "PRIMARY" === t,
+        [h.themeBrand]: "BRAND" === t,
+        [h.themeDanger]: "DANGER" === t,
+        [h.clickable]: null != e && !n
       }),
-      children: [this.renderCloseButton(), this.renderContent(), this.renderFooter(), l ? (0, a.jsx)(C, {}) : null]
+      children: [this.renderCloseButton(), this.renderContent(), this.renderFooter(), n ? (0, l.jsx)(m, {}) : null]
     })
   }
   constructor(e) {
@@ -259,10 +259,10 @@ class Notification extends r.PureComponent {
     }
   }
 }
-Notification.ColorSchemes = s, Notification.defaultProps = {
+Notification.ColorSchemes = a, Notification.defaultProps = {
   maxBodyLines: void 0,
   colorScheme: "PRIMARY",
   expand: !1,
   disabled: !1
 };
-var g = Notification
+var y = Notification

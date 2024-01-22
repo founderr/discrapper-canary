@@ -22,8 +22,8 @@ var n = l("884691"),
   f = l("629414"),
   m = l("53887"),
   p = l("486150"),
-  E = l("555759"),
-  T = l("450484");
+  T = l("555759"),
+  E = l("450484");
 let _ = 30 * o.default.Millis.SECOND;
 
 function S(e) {
@@ -65,11 +65,11 @@ function I(e, t, l) {
       clearLoading: d
     } = S(a),
     m = n.useCallback(() => {
-      u(), (0, E.default)(a, T.SpotifyActionTypes.USER_ACTIVITY_PLAY, l).catch(d)
+      u(), (0, T.default)(a, E.SpotifyActionTypes.USER_ACTIVITY_PLAY, l).catch(d)
     }, [a, l, u, d]);
   return {
-    label: (0, c.default)(a, T.SpotifyActionTypes.USER_ACTIVITY_PLAY),
-    tooltip: (0, f.default)(a, T.SpotifyActionTypes.USER_ACTIVITY_PLAY),
+    label: (0, c.default)(a, E.SpotifyActionTypes.USER_ACTIVITY_PLAY),
+    tooltip: (0, f.default)(a, E.SpotifyActionTypes.USER_ACTIVITY_PLAY),
     disabled: !o && (i || s || r),
     loading: o,
     onClick: m,
@@ -87,15 +87,15 @@ function A(e, t, l, a) {
     } = i,
     {
       loading: m,
-      startLoading: E,
+      startLoading: T,
       clearLoading: _
     } = S(i),
     I = n.useCallback(() => {
-      E(), (0, p.default)(i, T.SpotifyActionTypes.USER_ACTIVITY_SYNC, l).catch(_)
-    }, [i, l, E, _]);
+      T(), (0, p.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, l).catch(_)
+    }, [i, l, T, _]);
   return {
-    label: (0, c.default)(i, T.SpotifyActionTypes.USER_ACTIVITY_SYNC),
-    tooltip: (0, f.default)(i, T.SpotifyActionTypes.USER_ACTIVITY_SYNC, s),
+    label: (0, c.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC),
+    tooltip: (0, f.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, s),
     disabled: !m && (d || r || o),
     loading: m,
     onClick: I,
@@ -116,15 +116,15 @@ function g(e, t, l) {
       startLoading: d,
       clearLoading: m
     } = S(a),
-    E = n.useCallback(() => {
-      d(), (0, p.default)(a, T.SpotifyActionTypes.EMBED_SYNC, l).catch(m)
+    T = n.useCallback(() => {
+      d(), (0, p.default)(a, E.SpotifyActionTypes.EMBED_SYNC, l).catch(m)
     }, [a, l, d, m]);
   return {
-    label: (0, c.default)(a, T.SpotifyActionTypes.EMBED_SYNC),
-    tooltip: (0, f.default)(a, T.SpotifyActionTypes.EMBED_SYNC),
+    label: (0, c.default)(a, E.SpotifyActionTypes.EMBED_SYNC),
+    tooltip: (0, f.default)(a, E.SpotifyActionTypes.EMBED_SYNC),
     disabled: !u && (o || i || r || s),
     loading: u,
-    onClick: E,
+    onClick: T,
     spotifyData: a
   }
 }

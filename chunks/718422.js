@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   applyChatRestrictions: function() {
-    return E
+    return T
   }
 }), l("222007");
 var n = l("37983");
@@ -18,12 +18,12 @@ var a = l("77078"),
   m = l("49111"),
   p = l("782340");
 
-function E(e) {
+function T(e) {
   let {
     openWarningPopout: t,
     type: l,
-    content: E,
-    stickers: T,
+    content: T,
+    stickers: E,
     uploads: _,
     channel: S,
     restrictMentions: h = !0,
@@ -33,8 +33,8 @@ function E(e) {
     var t, l, u;
     let {
       openWarningPopout: f,
-      type: E,
-      content: T,
+      type: T,
+      content: E,
       stickers: _,
       uploads: S,
       channel: h,
@@ -43,7 +43,7 @@ function E(e) {
       userCanUsePremiumMessageLength: g,
       resolve: v
     } = e;
-    if (0 === T.length && !(null === (t = E.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == _ || 0 === _.length) && (null == S || 0 === S.length)) {
+    if (0 === E.length && !(null === (t = T.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == _ || 0 === _.length) && (null == S || 0 === S.length)) {
       v({
         valid: !1,
         failureReason: m.MessageRestrictionTypes.EMPTY_MESSAGE
@@ -51,10 +51,10 @@ function E(e) {
       return
     }
     let C = g ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
-    if (T.length > C) {
+    if (E.length > C) {
       if (g || null == h) {
         ;
-        l = T.length, u = C, (0, a.openModal)(e => (0, n.jsx)(i.default, {
+        l = E.length, u = C, (0, a.openModal)(e => (0, n.jsx)(i.default, {
           title: p.default.Messages.MESSAGE_TOO_LONG_HEADER,
           body: p.default.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
             currentLength: l,
@@ -69,7 +69,7 @@ function E(e) {
       } else s.default.dispatch({
         type: "MESSAGE_LENGTH_UPSELL",
         channel: h,
-        content: T
+        content: E
       });
       v({
         valid: !1,
@@ -92,7 +92,7 @@ function E(e) {
             animation: l
           }
           of c.RESTRICTIONS) {
-          let n = e(T, h, I);
+          let n = e(E, h, I);
           if (!1 !== n) {
             f({
               analyticsType: t,
@@ -131,8 +131,8 @@ function E(e) {
   })({
     openWarningPopout: t,
     type: l,
-    content: E,
-    stickers: T,
+    content: T,
+    stickers: E,
     uploads: _,
     channel: S,
     restrictMentions: h,

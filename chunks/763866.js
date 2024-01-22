@@ -16,8 +16,8 @@ var n = l("37983"),
   f = l("235767"),
   m = l("190045"),
   p = l("419806"),
-  E = l("373469"),
-  T = l("42203"),
+  T = l("373469"),
+  E = l("42203"),
   _ = l("26989"),
   S = l("957255"),
   h = l("102985"),
@@ -69,13 +69,13 @@ function X(e) {
   } = e, er = (0, r.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), eo = (0, r.useStateFromStores)([C.default], () => {
     var e;
     return null === (e = C.default.getUserProfile(Q.id)) || void 0 === e ? void 0 : e.application
-  }), eu = (0, r.useStateFromStores)([E.default], () => null != E.default.getAnyStreamForUser(Q.id)), ed = (0, V.useGetVoiceChannelInfoForVoiceActivitySection)(Q.id, null == $ ? void 0 : $.id), ec = !eu && null != ed, {
+  }), eu = (0, r.useStateFromStores)([T.default], () => null != T.default.getAnyStreamForUser(Q.id)), ed = (0, V.useGetVoiceChannelInfoForVoiceActivitySection)(Q.id, null == $ ? void 0 : $.id), ec = !eu && null != ed, {
     showVoiceActivityInProfile: ef
   } = N.VoiceActivityProfileExperiment.useExperiment({
     location: "user popout"
   }, {
     autoTrackExposure: ec
-  }), [em, ep] = a.useState(!1), [eE, eT] = a.useState(!1), e_ = (0, r.useStateFromStores)([T.default], () => T.default.getChannel(et)), eS = (0, r.useStateFromStores)([S.default], () => S.default.can(H.Permissions.USE_CLYDE_AI, e_)), {
+  }), [em, ep] = a.useState(!1), [eT, eE] = a.useState(!1), e_ = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(et)), eS = (0, r.useStateFromStores)([S.default], () => S.default.can(H.Permissions.USE_CLYDE_AI, e_)), {
     profileTheme: eh
   } = (0, y.default)(Q, q), eI = a.useRef(null), [eA, eg] = a.useState(!0), ev = a.useCallback(() => {
     let {
@@ -123,7 +123,7 @@ function X(e) {
         customStatusActivity: J
       }), (0, n.jsx)(O.default, {
         className: z.divider
-      }), Q.isClyde() && eC && null != $ ? !ey && eN ? eS && !eE ? (0, n.jsx)(o.Button, {
+      }), Q.isClyde() && eC && null != $ ? !ey && eN ? eS && !eT ? (0, n.jsx)(o.Button, {
         className: z.editClydeButton,
         innerClassName: z.editClydeButtonInner,
         submitting: em,
@@ -132,7 +132,7 @@ function X(e) {
           try {
             await (0, u.addClydeGuildMember)($.id), ep(!1)
           } catch (e) {
-            ep(!1), eT(!0)
+            ep(!1), eE(!0)
           }
         },
         children: W.default.Messages.CLYDE_ADD_CLYDE

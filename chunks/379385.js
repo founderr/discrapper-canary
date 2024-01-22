@@ -6,8 +6,8 @@ l.r(t), l.d(t, {
 });
 var n = l("37983");
 l("884691");
-var s = l("414456"),
-  a = l.n(s),
+var a = l("414456"),
+  s = l.n(a),
   r = l("77078"),
   i = l("679653"),
   u = l("619335"),
@@ -20,7 +20,7 @@ function m(e) {
   let {
     channel: t,
     users: l,
-    selected: s = !1
+    selected: a = !1
   } = e, m = (0, i.default)(t), S = null;
   null != l && l.length > 0 && (S = (0, n.jsx)(o.default, {
     guildId: t.guild_id,
@@ -29,11 +29,11 @@ function m(e) {
     renderUser: e => {
       if (null == e) return null;
       let l = d.default.getName(t.guild_id, t.id, e),
-        s = e.getAvatarURL(t.guild_id, 24);
+        a = e.getAvatarURL(t.guild_id, 24);
       return (0, n.jsx)(r.TooltipContainer, {
         text: l,
         children: (0, n.jsx)("img", {
-          src: null != s ? s : void 0,
+          src: null != a ? a : void 0,
           "aria-label": e.username,
           alt: "",
           className: f.avatar
@@ -41,8 +41,8 @@ function m(e) {
       })
     },
     renderMoreUsers: e => {
-      let s = l.slice(4),
-        a = function(e, t) {
+      let a = l.slice(4),
+        s = function(e, t) {
           let l = t.id,
             n = t.guild_id;
           return e.length <= 1 ? null : 2 === e.length ? c.default.Messages.GO_LIVE_MODAL_OVERFLOW_TWO_USERS.format({
@@ -57,10 +57,10 @@ function m(e) {
             nickname1: d.default.getName(n, l, e[1]),
             remainingCount: e.length - 2
           })
-        }(s, t);
+        }(a, t);
       return (0, n.jsx)("div", {
         children: (0, n.jsx)(r.TooltipContainer, {
-          text: a,
+          text: s,
           children: (0, n.jsx)("div", {
             className: f.userListOverflow,
             children: e
@@ -71,12 +71,12 @@ function m(e) {
     max: 5,
     showUserPopout: !1
   }));
-  let h = (0, u.default)(t);
+  let C = (0, u.default)(t);
   return (0, n.jsxs)("div", {
-    className: a(f.channelInfo, {
-      [f.selected]: s
+    className: s(f.channelInfo, {
+      [f.selected]: a
     }),
-    children: [(0, n.jsx)(h, {
+    children: [(0, n.jsx)(C, {
       className: f.channelIcon
     }), (0, n.jsx)("div", {
       className: f.channelName,

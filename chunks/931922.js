@@ -23,10 +23,10 @@ var s = n("37983"),
   S = n("305961"),
   A = n("957255"),
   _ = n("697218"),
-  M = n("987772"),
-  T = n("155207"),
-  I = n("917686"),
-  N = n("317134"),
+  T = n("987772"),
+  M = n("155207"),
+  N = n("917686"),
+  I = n("317134"),
   v = n("991170"),
   L = n("158998"),
   x = n("938244"),
@@ -93,14 +93,14 @@ function P(e) {
       children: [(0, s.jsx)(x.default, {
         label: D.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
         onClick: () => l(!0),
-        icon: (0, s.jsx)(T.default, {
+        icon: (0, s.jsx)(M.default, {
           width: 16,
           height: 16
         })
       }), (0, s.jsx)(x.default, {
         label: D.default.Messages.EDIT_CHANNEL,
         onClick: G,
-        icon: (0, s.jsx)(M.default, {
+        icon: (0, s.jsx)(T.default, {
           width: 16,
           height: 16
         })
@@ -138,7 +138,7 @@ function P(e) {
         var a, l;
         let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(O.DEFAULT_ROLE_COLOR),
           o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
-        return k ? (0, s.jsx)(I.default, {
+        return k ? (0, s.jsx)(N.default, {
           className: i(j.role, {
             [j.last]: n === F.length - 1
           }),
@@ -149,7 +149,7 @@ function P(e) {
           onClick: () => {
             E.default.open(t.guild_id, O.GuildSettingsSections.MEMBERS), E.default.selectRole(e.id)
           }
-        }, e.id) : (0, s.jsx)(N.default, {
+        }, e.id) : (0, s.jsx)(I.default, {
           className: i(j.role, {
             [j.last]: n === F.length - 1
           }),

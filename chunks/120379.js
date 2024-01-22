@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return M
   }
 }), n("222007"), n("424973");
 var s = n("884691"),
@@ -49,7 +49,7 @@ let _ = {
   scrollHeight: 0,
   offsetHeight: 0
 };
-class M {
+class T {
   isReady() {
     return this.props.messages.ready
   }
@@ -566,7 +566,7 @@ class M {
   }
 }
 
-function T(e) {
+function M(e) {
   let {
     messages: t,
     channel: n,
@@ -579,7 +579,7 @@ function T(e) {
     handleScrollFromBottom: c
   } = e, {
     windowId: f
-  } = s.useContext(d.default), [h] = s.useState(() => new M({
+  } = s.useContext(d.default), [h] = s.useState(() => new T({
     messages: t,
     channel: n,
     compact: a,

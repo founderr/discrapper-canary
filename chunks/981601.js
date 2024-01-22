@@ -16,8 +16,8 @@ var n = l("37983"),
   f = l("750560"),
   m = l("575365"),
   p = l("502651"),
-  E = l("812204"),
-  T = l("685665"),
+  T = l("812204"),
+  E = l("685665"),
   _ = l("299285"),
   S = l("442939"),
   h = l("373469"),
@@ -61,7 +61,7 @@ function B(e) {
     return null === (e = y.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
   }), {
     AnalyticsLocationProvider: Z
-  } = (0, T.default)(E.default.PROFILE_POPOUT), X = (0, r.useStateFromStores)([A.default], () => null != l ? A.default.getGuild(l) : null), J = (0, r.useStateFromStores)([I.default], () => null != l ? I.default.getMember(l, t.id) : null), Q = t.isNonUserBot(), {
+  } = (0, E.default)(T.default.PROFILE_POPOUT), X = (0, r.useStateFromStores)([A.default], () => null != l ? A.default.getGuild(l) : null), J = (0, r.useStateFromStores)([I.default], () => null != l ? I.default.getMember(l, t.id) : null), Q = t.isNonUserBot(), {
     activity: q,
     customStatusActivity: $,
     status: ee,

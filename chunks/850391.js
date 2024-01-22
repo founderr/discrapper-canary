@@ -277,7 +277,7 @@ let r = {
     hideAttachmentArea: !0,
     uploadLongMessages: !0
   },
-  E = {
+  T = {
     analyticsName: "create_poll",
     attachments: !0,
     drafts: {
@@ -297,7 +297,7 @@ let r = {
       disableEnterToSubmit: !0
     }
   },
-  T = {
+  E = {
     analyticsName: "profile_bio_input",
     drafts: {
       type: i.DraftType.ChannelMessage
@@ -372,10 +372,10 @@ let r = {
     FORM: c,
     VOICE_CHANNEL_STATUS: f,
     THREAD_CREATION: m,
-    PROFILE_BIO_INPUT: T,
+    PROFILE_BIO_INPUT: E,
     CUSTOM_GIFT: _,
     RULES_INPUT: S,
     CREATE_FORUM_POST: p,
-    CREATE_POLL: E,
+    CREATE_POLL: T,
     FORUM_CHANNEL_GUIDELINES: h
   }

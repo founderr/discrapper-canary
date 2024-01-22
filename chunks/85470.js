@@ -23,12 +23,12 @@ var s = n("884691"),
   S = n("773336"),
   A = n("61400"),
   _ = n("913491"),
-  M = n("583022"),
-  T = n("363396"),
-  I = n("49111");
+  T = n("583022"),
+  M = n("363396"),
+  N = n("49111");
 
-function N(e) {
-  return m.default.can(I.Permissions.MANAGE_MESSAGES, e)
+function I(e) {
+  return m.default.can(N.Permissions.MANAGE_MESSAGES, e)
 }
 var v = function(e, t, n) {
   let v = s.useRef(n);
@@ -47,7 +47,7 @@ var v = function(e, t, n) {
       k = H.author.id === U;
     switch (n.key.toLowerCase()) {
       case "backspace":
-        O && (N(F) || k) && (n.preventDefault(), (0, T.deleteMessage)(F, H, n));
+        O && (I(F) || k) && (n.preventDefault(), (0, M.deleteMessage)(F, H, n));
         break;
       case "c":
         ((0, S.isMac)() ? P : j) && E.SUPPORTS_COPY && (n.preventDefault(), (0, E.copy)(H.content));
@@ -55,13 +55,13 @@ var v = function(e, t, n) {
       case "e":
         if (O) {
           ;
-          if (s = U, L = F, x = H, !L.isSystemDM() && (0, A.default)(x, s)) n.preventDefault(), (0, T.editMessage)(F, H)
+          if (s = U, L = F, x = H, !L.isSystemDM() && (0, A.default)(x, s)) n.preventDefault(), (0, M.editMessage)(F, H)
         }
         break;
       case "p":
         if (O || b) {
           ;
-          if (R = F, y = H, !R.isSystemDM() && !(0, _.default)(y) && (N(R) || R.isPrivate())) n.preventDefault(), (0, T.pinMessage)(F, H, n)
+          if (R = F, y = H, !R.isSystemDM() && !(0, _.default)(y) && (I(R) || R.isPrivate())) n.preventDefault(), (0, M.pinMessage)(F, H, n)
         }
         break;
       case "+":
@@ -70,35 +70,35 @@ var v = function(e, t, n) {
             n = u.RenderReactions.getSetting(),
             {
               disableReactionCreates: s
-            } = (0, M.default)({
+            } = (0, T.default)({
               channel: e,
               canChat: t,
               renderReactions: n,
-              canAddNewReactions: t && m.default.can(I.Permissions.ADD_REACTIONS, e),
+              canAddNewReactions: t && m.default.can(N.Permissions.ADD_REACTIONS, e),
               isLurking: null != e.guild_id && l.default.isLurking(e.guild_id),
               isGuest: null != e.guild_id && h.default.isCurrentUserGuest(e.guild_id),
               isActiveChannelOrUnarchivableThread: (0, r.getIsActiveChannelOrUnarchivableThread)(e)
             });
           return !s && n
-        }(F) && (n.preventDefault(), g.ComponentDispatch.dispatchKeyed(I.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, H.id, {
+        }(F) && (n.preventDefault(), g.ComponentDispatch.dispatchKeyed(N.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, H.id, {
           emojiPicker: !0
         }));
         break;
       case "r":
-        (O || b) && (0, i.canReplyToMessage)(F, H) && (n.preventDefault(), (0, T.replyToMessage)(F, H, n));
+        (O || b) && (0, i.canReplyToMessage)(F, H) && (n.preventDefault(), (0, M.replyToMessage)(F, H, n));
         break;
       case "t":
         if (O && (0, r.computeCanStartPublicThread)(F, H)) n.preventDefault(), (0, o.openThreadSidebarForCreating)(F, H, "Message Shortcut");
-        else if (H.hasFlag(I.MessageFlags.HAS_THREAD)) {
+        else if (H.hasFlag(N.MessageFlags.HAS_THREAD)) {
           let e = c.default.getChannel(H.id);
           null != e && (O || b) && (n.preventDefault(), (0, o.openThreadSidebarForViewing)(e, b))
         }
         break;
       case "enter":
-        D && (n.preventDefault(), (0, T.markMessageUnread)(F, H));
+        D && (n.preventDefault(), (0, M.markMessageUnread)(F, H));
         break;
       case "escape":
-        f.default.isEditing(F.id, H.id) ? a.default.endEditMessage(F.id) : g.ComponentDispatch.dispatch(I.ComponentActions.TEXTAREA_FOCUS)
+        f.default.isEditing(F.id, H.id) ? a.default.endEditMessage(F.id) : g.ComponentDispatch.dispatch(N.ComponentActions.TEXTAREA_FOCUS)
     }
   }, [e, t])
 }

@@ -22,8 +22,8 @@ var n = l("37983"),
   f = l("716241"),
   m = l("572943"),
   p = l("535013"),
-  E = l("816499"),
-  T = l("526190"),
+  T = l("816499"),
+  E = l("526190"),
   _ = l("766274"),
   S = l("246053"),
   h = l("867544"),
@@ -51,25 +51,25 @@ function N(e) {
     D = v.default.Messages.CONNECTION_VERIFIED;
   if (x) switch (_.type) {
     case A.PlatformTypes.REDDIT:
-      a = (0, E.generateRedditMetadataItems)(L);
+      a = (0, T.generateRedditMetadataItems)(L);
       break;
     case A.PlatformTypes.STEAM:
-      a = (0, E.generateSteamMetadataItems)(L);
+      a = (0, T.generateSteamMetadataItems)(L);
       break;
     case A.PlatformTypes.TWITTER: {
-      a = (0, E.generateTwitterMetadataItems)(L);
+      a = (0, T.generateTwitterMetadataItems)(L);
       let e = "1" === L[g.MetadataFields.TWITTER_VERIFIED];
       e && (s = b, D = v.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
       break
     }
     case A.PlatformTypes.PAYPAL:
-      a = (0, E.generatePaypalMetadataItems)(L);
+      a = (0, T.generatePaypalMetadataItems)(L);
       break;
     case A.PlatformTypes.EBAY:
-      a = (0, E.generateEbayMetadataItems)(L);
+      a = (0, T.generateEbayMetadataItems)(L);
       break;
     case A.PlatformTypes.TIKTOK:
-      a = (0, E.generateTikTokMetadataItems)(L)
+      a = (0, T.generateTikTokMetadataItems)(L)
   }
   let j = c.default.get((0, m.useLegacyPlatformType)(_.type)),
     U = null == j ? void 0 : null === (t = j.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(j, _);
@@ -95,7 +95,7 @@ function N(e) {
   }));
   let F = (0, u.useToken)(r.default.colors.INTERACTIVE_MUTED).hex(),
     w = (0, u.useToken)(r.default.colors.INTERACTIVE_ACTIVE).hex(),
-    G = _.verified ? (0, n.jsx)(T.default, {
+    G = _.verified ? (0, n.jsx)(E.default, {
       className: C.connectedAccountVerifiedIcon,
       color: null != s ? s : F,
       forcedIconColor: w,
@@ -154,7 +154,7 @@ function y(e) {
     applicationRoleConnection: t,
     className: l,
     locale: a
-  } = e, s = (0, E.generateRoleConnectionMetadataItems)(t, void 0, a);
+  } = e, s = (0, T.generateRoleConnectionMetadataItems)(t, void 0, a);
   return (0, n.jsxs)("div", {
     className: i(C.connectedAccountContainer, null != s && s.length > 0 ? C.connectedAccountContainerWithMetadata : null, l),
     children: [(0, n.jsx)("div", {

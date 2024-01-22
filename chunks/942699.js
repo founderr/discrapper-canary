@@ -1,30 +1,30 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return d
   }
 });
-var n = l("37983"),
-  s = l("884691"),
-  a = l("414456"),
-  r = l.n(a),
-  i = l("202933");
-let u = e => {
+var i = n("37983"),
+  a = n("884691"),
+  l = n("414456"),
+  s = n.n(l),
+  o = n("202933");
+let r = e => {
   let {
     keybind: t,
-    separator: l,
-    className: a
+    separator: n,
+    className: l
   } = e;
-  return (0, n.jsx)(n.Fragment, {
-    children: t.map((e, u) => (0, n.jsxs)(s.Fragment, {
-      children: [(0, n.jsx)("span", {
-        className: r(i.key, a),
+  return (0, i.jsx)(i.Fragment, {
+    children: t.map((e, r) => (0, i.jsxs)(a.Fragment, {
+      children: [(0, i.jsx)("span", {
+        className: s(o.key, l),
         children: e
-      }), u === t.length - 1 ? void 0 : l]
-    }, u))
+      }), r === t.length - 1 ? void 0 : n]
+    }, r))
   })
 };
-u.defaultProps = {
+r.defaultProps = {
   separator: "+"
 };
-var o = u
+var d = r

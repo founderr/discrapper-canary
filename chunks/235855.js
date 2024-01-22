@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 }), n("222007"), n("70102");
 var i = n("884691"),
-  l = n("748820"),
-  r = n("157590");
-let a = (0, l.v4)(),
+  r = n("748820"),
+  l = n("157590");
+let o = (0, r.v4)(),
   s = new Map,
-  o = new Map;
+  a = new Map;
 class u extends i.Component {
   componentDidMount() {
     if (this.props.active) {
@@ -34,7 +34,7 @@ class u extends i.Component {
   }
   getVisibilityObserver() {
     let e = this.getVisibilityObserverId(),
-      t = o.get(e);
+      t = a.get(e);
     if (!t) throw Error("Visibility sensor with id ".concat(e, " not found."));
     return t
   }
@@ -48,9 +48,9 @@ class u extends i.Component {
       rootMargin: n,
       threshold: i
     } = e;
-    t ? s.has(t) ? this.elementId = s.get(t) || "" : s.set(t, (0, l.v4)()) : this.elementId = a;
+    t ? s.has(t) ? this.elementId = s.get(t) || "" : s.set(t, (0, r.v4)()) : this.elementId = o;
     let u = this.getVisibilityObserverId();
-    !o.has(u) && o.set(u, new r.default({
+    !a.has(u) && a.set(u, new l.default({
       root: t,
       rootMargin: n,
       threshold: i
@@ -64,4 +64,4 @@ u.defaultProps = {
   rootMargin: "0px 0px 0px 0px",
   threshold: [0, Number.MIN_VALUE]
 };
-var d = u
+var c = u

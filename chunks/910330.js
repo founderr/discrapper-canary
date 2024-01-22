@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return T
+    return E
   }
 }), l("222007");
 var n = l("37983"),
@@ -16,7 +16,7 @@ var n = l("37983"),
   f = l("49111"),
   m = l("782340"),
   p = l("98325");
-class E extends a.PureComponent {
+class T extends a.PureComponent {
   componentDidMount() {
     if (this.props.autoFocus && !this.props.hideNote) {
       let e = i.findDOMNode(this.noteRef.current);
@@ -63,15 +63,15 @@ class E extends a.PureComponent {
   }
 }
 
-function T(e) {
+function E(e) {
   let t = (0, r.useStateFromStores)([c.default], () => c.default.hidePersonalInformation),
     l = (0, d.default)(e.userId);
-  return (0, n.jsx)(E, {
+  return (0, n.jsx)(T, {
     ...e,
     ...l,
     hideNote: t
   })
 }
-E.defaultProps = {
+T.defaultProps = {
   autoFocus: !1
 }

@@ -19,8 +19,8 @@ var n = l("37983"),
   f = l("812204"),
   m = l("685665"),
   p = l("606292"),
-  E = l("688318"),
-  T = l("21526"),
+  T = l("688318"),
+  E = l("21526"),
   _ = l("853987"),
   S = l("491232"),
   h = l("845962"),
@@ -62,7 +62,7 @@ let x = 76,
       onClick: l
     } = e, {
       avatarDecorationSrc: a
-    } = (0, E.default)({
+    } = (0, T.default)({
       user: t,
       size: (0, p.getDecorationSizeForAvatarSize)(u.AvatarSizes.SIZE_48)
     });
@@ -84,7 +84,7 @@ var P = e => {
     user: l,
     displayProfile: s,
     onClose: p,
-    onDismiss: E,
+    onDismiss: T,
     isInSidebar: A = !1,
     canShowAvatarDecorationUpsell: O = !1,
     canShowProfileEffectUpsell: P = !1,
@@ -110,15 +110,15 @@ var P = e => {
     }),
     z = a.useCallback(() => {
       var e, t, n, a;
-      null == E || E(C.ContentDismissActionType.PRIMARY), null == p || p(), (0, T.openCollectiblesShop)({
+      null == T || T(C.ContentDismissActionType.PRIMARY), null == p || p(), (0, E.openCollectiblesShop)({
         analyticsLocations: D,
         analyticsSource: f.default.COLLECTIBLES_USER_POPOUT_UPSELL,
         initialProductSkuId: H ? null !== (n = null == V ? void 0 : V.skuId) && void 0 !== n ? n : null === (e = l.avatarDecoration) || void 0 === e ? void 0 : e.skuId : null !== (a = null === (t = l.avatarDecoration) || void 0 === t ? void 0 : t.skuId) && void 0 !== a ? a : null == V ? void 0 : V.skuId
       })
-    }, [E, p, D, null == V ? void 0 : V.skuId, null === (t = l.avatarDecoration) || void 0 === t ? void 0 : t.skuId, H]),
+    }, [T, p, D, null == V ? void 0 : V.skuId, null === (t = l.avatarDecoration) || void 0 === t ? void 0 : t.skuId, H]),
     K = a.useCallback(() => {
-      null == E || E(C.ContentDismissActionType.DISMISS)
-    }, [E]);
+      null == T || T(C.ContentDismissActionType.DISMISS)
+    }, [T]);
   if (!O && !P) return null;
   let Z = (0, r.match)([O, P]).with([!0, !0], () => H && W && k ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
     openShop: R

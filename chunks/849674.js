@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   useShouldShowUserPopoutCollectiblesUpsell: function() {
-    return T
+    return E
   }
 }), l("222007");
 var n = l("884691"),
@@ -16,24 +16,24 @@ var n = l("884691"),
   f = l("384997"),
   m = l("697218"),
   p = l("217513"),
-  E = l("627601");
-let T = e => {
+  T = l("627601");
+let E = e => {
   let {
     popoutUser: t,
     source: l,
     guildId: a
-  } = e, T = "useShouldShowUserPopoutCollectiblesUpsell";
+  } = e, E = "useShouldShowUserPopoutCollectiblesUpsell";
   (0, u.useTriggerDebuggingAA)({
-    location: T + "auto on",
+    location: E + "auto on",
     autoTrackExposure: !0
   }), (0, u.useTriggerDebuggingAA)({
-    location: T + "auto off",
+    location: E + "auto off",
     autoTrackExposure: !1
   });
-  let _ = (0, c.default)(T),
+  let _ = (0, c.default)(E),
     {
       upsellSource: S
-    } = (0, E.useUserPopoutCollectiblesUpsellStore)(),
+    } = (0, T.useUserPopoutCollectiblesUpsellStore)(),
     h = (0, i.default)([m.default], () => m.default.getCurrentUser());
   s(null != h, "currentUser should not be null");
   let I = (0, d.useBlockedPaymentsConfig)(),
