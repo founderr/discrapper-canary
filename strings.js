@@ -16532,5 +16532,9 @@ e.exports = Object.freeze({
   PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",
   PROMPT_CAMERA_ERROR: "There was an issue taking a photo, try again",
   DEADCHAT_ACTION_CAMERA: "My View",
-  DEADCHAT_ACTION_STICKER: "Surprise Me"
+  DEADCHAT_ACTION_STICKER: "Surprise Me",
+  LIST_SUMMARY_A11Y_LABEL_ONE: "!!{first}!!",
+  LIST_SUMMARY_A11Y_LABEL_TWO: "!!{first}!! and !!{second}!!",
+  LIST_SUMMARY_A11Y_LABEL_THREE: "!!{first}!!, !!{second}!!, and !!{third}!!",
+  LIST_SUMMARY_A11Y_LABEL_THREE_AND_OTHERS: "!!{first}!!, !!{second}!!, !!{third}!!, and {count, plural, one {1 other} other {{count} others}}"
 })
