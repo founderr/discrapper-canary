@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _.NotchBackground
   },
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -170,7 +170,7 @@ class S extends s.PureComponent {
     }
   }
 }
-var m = r.default.connectStores([E.default, f.default], () => {
+var p = r.default.connectStores([E.default, f.default], () => {
   let e = f.default.getInputDeviceId(),
     t = f.default.getInputDevices(),
     n = l.find(t, t => {

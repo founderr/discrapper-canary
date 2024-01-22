@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("577427"),
   T = n("946749"),
   S = n("145131"),
-  m = n("953109"),
-  p = n("280174"),
+  p = n("953109"),
+  m = n("280174"),
   A = n("158352"),
   g = n("867544"),
   N = n("216422"),
@@ -66,9 +66,9 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: y.nameBodyCell,
     render: e => (0, a.jsxs)(S.default, {
       align: S.default.Align.CENTER,
-      children: [(0, a.jsx)(m.default, {
+      children: [(0, a.jsx)(p.default, {
         game: e.application,
-        size: m.default.Sizes.SMALL,
+        size: p.default.Sizes.SMALL,
         className: y.gameIcon
       }), (0, a.jsxs)("div", {
         className: y.nameCellInfo,
@@ -105,9 +105,9 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: y.textCell,
     render(e) {
       let t;
-      return t = e.isRunning ? D.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? D.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, a.jsx)(p.default, {
+      return t = e.isRunning ? D.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? D.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, a.jsx)(m.default, {
         end: e.lastPlayed,
-        location: p.default.Locations.GAME_LIBRARY_LAST_PLAYED
+        location: m.default.Locations.GAME_LIBRARY_LAST_PLAYED
       }) : D.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, a.jsx)(S.default, {
         align: S.default.Align.CENTER,
         className: l({

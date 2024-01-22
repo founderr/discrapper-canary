@@ -28,7 +28,7 @@ function S(e) {
     channel: n,
     otherUser: E,
     active: S
-  } = e, m = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), p = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), A = (0, _.useMessageRequestRelativeTimestampText)(n), {
+  } = e, p = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), m = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), A = (0, _.useMessageRequestRelativeTimestampText)(n), {
     avatarDecorationSrc: g
   } = (0, u.default)({
     user: E,
@@ -38,7 +38,7 @@ function S(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(T, {
       className: I.avatar,
-      src: (0, d.getChannelIconURL)(n, 40, !m && S),
+      src: (0, d.getChannelIconURL)(n, 40, !p && S),
       avatarDecoration: g,
       size: i.AvatarSizes.SIZE_40,
       "aria-label": null !== (t = null == E ? void 0 : E.username) && void 0 !== t ? t : C.default.Messages.UNKNOWN_USER
@@ -47,7 +47,7 @@ function S(e) {
       children: [(0, a.jsxs)("div", {
         className: I.userContainerWithPreview,
         children: [(0, a.jsx)(l.default, {
-          nick: p,
+          nick: m,
           user: E,
           showAccountIdentifier: !0,
           className: I.tagContainer,

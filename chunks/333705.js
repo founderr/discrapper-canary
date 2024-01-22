@@ -28,8 +28,8 @@ function I(e) {
     voiceChannels: I,
     currentActivities: T,
     partiedMembers: S,
-    applicationStreams: m,
-    guildContext: p
+    applicationStreams: p,
+    guildContext: m
   } = t, A = [], g = e => {
     var t, n;
     let {
@@ -86,14 +86,14 @@ function I(e) {
         g(t);
         break
       }
-    } return m.length > 0 && m.forEach(e => {
+    } return p.length > 0 && p.forEach(e => {
     let {
       stream: t,
       streamUser: n,
       activity: l
     } = e;
     g((0, a.jsx)(_.default.ApplicationStreamingSection, {
-      guildId: null == p ? void 0 : p.id,
+      guildId: null == m ? void 0 : m.id,
       user: n,
       activity: l,
       applicationStream: t,
@@ -102,7 +102,7 @@ function I(e) {
       }
     }, "application-stream-".concat(t.ownerId)))
   }), T.forEach((e, t) => {
-    var n, s, i, c, E, m, A, N;
+    var n, s, i, c, E, p, A, N;
     let {
       activity: R,
       game: O,
@@ -137,7 +137,7 @@ function I(e) {
       let e = I.length > 0 && I[0].members.length > 1,
         n = L.length > 1;
       g((0, a.jsx)(_.default.TwitchSection, {
-        guildId: null == p ? void 0 : p.id,
+        guildId: null == m ? void 0 : m.id,
         activity: R,
         user: e || n ? v : null,
         getAssetImage: f.getAssetImage
@@ -152,7 +152,7 @@ function I(e) {
       },
       getAssetImage: f.getAssetImage,
       members: L
-    }, "spotify-".concat(null !== (m = R.session_id) && void 0 !== m ? m : t, "-").concat(v.id))) : (null != R.assets || (0, l.default)(R)) && R.type === C.ActivityTypes.LISTENING ? g((0, a.jsx)(_.default.RichPresenceSection, {
+    }, "spotify-".concat(null !== (p = R.session_id) && void 0 !== p ? p : t, "-").concat(v.id))) : (null != R.assets || (0, l.default)(R)) && R.type === C.ActivityTypes.LISTENING ? g((0, a.jsx)(_.default.RichPresenceSection, {
       activity: R,
       getAssetImage: f.getAssetImage
     }, "rich-presence-".concat(null !== (A = R.session_id) && void 0 !== A ? A : t, "-").concat(v.id))) : (0, u.default)(R) && g((0, a.jsx)(_.default.XboxSection, {

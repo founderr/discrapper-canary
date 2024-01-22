@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("762489"),
   T = n("329858"),
   S = n("49111"),
-  m = n("782340"),
-  p = n("234837");
+  p = n("782340"),
+  m = n("234837");
 let A = {
   HOST: 5,
   LISTENER: 4
@@ -38,11 +38,11 @@ class g extends s.PureComponent {
   renderTitle() {
     return (0, a.jsxs)("div", {
       children: [(0, a.jsx)(T.default, {
-        children: this.isHost() ? m.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
+        children: this.isHost() ? p.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
           count: this.props.party.length
-        }) : m.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
+        }) : p.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
       }), (0, a.jsx)(I.default, {
-        children: m.default.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
+        children: p.default.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
       })]
     })
   }
@@ -51,14 +51,14 @@ class g extends s.PureComponent {
       onStopListening: e
     } = this.props;
     return this.isHost() ? null : (0, a.jsx)(C.default, {
-      tooltipText: m.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
+      tooltipText: p.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
       onClick: e,
       icon: E.default
     })
   }
   renderHelpIcon() {
     return this.isHost() ? (0, a.jsx)(C.default, {
-      tooltipText: m.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
+      tooltipText: p.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
       onClick: () => {
         window.open(h.default.getArticleURL(S.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
       },
@@ -67,10 +67,10 @@ class g extends s.PureComponent {
   }
   render() {
     return (0, a.jsxs)("div", {
-      className: p.listeningAlong,
+      className: m.listeningAlong,
       children: [this.renderTitle(), (0, a.jsx)(c.default, {
         justify: c.default.Justify.END,
-        className: p.party,
+        className: m.party,
         children: (0, a.jsx)(f.default, {
           users: this.props.party,
           max: this.isHost() ? A.HOST : A.LISTENER,
@@ -78,7 +78,7 @@ class g extends s.PureComponent {
           renderMoreUsers: this.renderPartyMemberOverflow
         })
       }), (0, a.jsxs)("div", {
-        className: p.icons,
+        className: m.icons,
         children: [this.renderHelpIcon(), this.renderStopListeningButton()]
       })]
     })
@@ -92,7 +92,7 @@ class g extends s.PureComponent {
         renderUserPopout: r,
         onUserContextMenu: c
       } = this.props;
-      return n = (null == i ? void 0 : i.id) === e.id ? m.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : m.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, a.jsx)(u.Popout, {
+      return n = (null == i ? void 0 : i.id) === e.id ? p.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : p.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, a.jsx)(u.Popout, {
         preload: () => (0, d.default)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => (o(null != e, ""), r(t, e)),
         position: "top",
@@ -109,7 +109,7 @@ class g extends s.PureComponent {
               key: e.id,
               src: e.getAvatarURL(void 0, 24),
               size: u.AvatarSizes.SIZE_24,
-              className: l(p.avatar, t),
+              className: l(m.avatar, t),
               "aria-label": e.username,
               onMouseEnter: a,
               onMouseLeave: r,
@@ -125,9 +125,9 @@ class g extends s.PureComponent {
       return (0, a.jsx)(u.Popout, {
         renderPopout: s,
         children: n => (0, a.jsx)(u.Tooltip, {
-          text: m.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
+          text: p.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
           children: s => (0, a.jsx)("div", {
-            className: l(p.overflow, t),
+            className: l(m.overflow, t),
             ...s,
             ...n,
             children: e

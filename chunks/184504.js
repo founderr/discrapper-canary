@@ -16,50 +16,50 @@ var i = n("37983"),
   f = n("367376"),
   E = n("878720"),
   _ = n("601745"),
-  h = n("650893"),
-  p = n("697218"),
-  S = n("145131"),
-  I = n("583227"),
-  C = n("49111"),
-  T = n("482931"),
+  I = n("650893"),
+  h = n("697218"),
+  p = n("145131"),
+  S = n("583227"),
+  T = n("49111"),
+  C = n("482931"),
   N = n("782340"),
-  v = n("659248");
-let g = e => {
+  R = n("659248");
+let v = e => {
   let {
     label: t,
     text: n,
     children: r,
     ...o
   } = e;
-  return (0, i.jsxs)(S.default, {
-    direction: S.default.Direction.VERTICAL,
+  return (0, i.jsxs)(p.default, {
+    direction: p.default.Direction.VERTICAL,
     ...o,
     children: [(0, i.jsx)(a.FormTitle, {
       tag: "h2",
       children: t
     }), null != n ? (0, i.jsx)(a.Text, {
       variant: "text-md/normal",
-      className: v.sectionBody,
+      className: R.sectionBody,
       children: n
-    }) : null, (0, i.jsx)(S.default.Child, {
+    }) : null, (0, i.jsx)(p.default.Child, {
       wrap: !0,
       children: r
     })]
   })
 };
-class m extends r.PureComponent {
+class g extends r.PureComponent {
   renderSMSSection() {
     let {
       currentUser: e
-    } = this.props, t = null != this.props.currentUser.phone, n = e.hasFlag(C.UserFlags.MFA_SMS), r = e.hasFlag(C.UserFlags.PARTNER) || e.hasFlag(C.UserFlags.STAFF);
-    return t ? (0, i.jsxs)(g, {
+    } = this.props, t = null != this.props.currentUser.phone, n = e.hasFlag(T.UserFlags.MFA_SMS), r = e.hasFlag(T.UserFlags.PARTNER) || e.hasFlag(T.UserFlags.STAFF);
+    return t ? (0, i.jsxs)(v, {
       label: N.default.Messages.MFA_SMS_ENABLE,
       text: N.default.Messages.MFA_SMS_AUTH_SALES_PITCH,
       children: [(0, i.jsxs)(a.Text, {
         variant: "text-md/normal",
-        className: v.sectionBody,
+        className: R.sectionBody,
         children: [(0, i.jsx)("strong", {
-          className: v.phoneNumber,
+          className: R.phoneNumber,
           children: N.default.Messages.MFA_SMS_AUTH_CURRENT_PHONE.format({
             phoneNumber: e.phone
           })
@@ -67,7 +67,7 @@ class m extends r.PureComponent {
           look: a.Button.Looks.LINK,
           color: a.Button.Colors.LINK,
           size: a.Button.Sizes.MIN,
-          className: v.linkButton,
+          className: R.linkButton,
           onClick: this.handleChangePhoneNumber,
           children: N.default.Messages.CHANGE_PHONE_NUMBER
         })]
@@ -78,7 +78,7 @@ class m extends r.PureComponent {
         size: a.Button.Sizes.SMALL,
         children: r ? N.default.Messages.MFA_SMS_DISABLED_PARTNER : n ? N.default.Messages.MFA_SMS_ALREADY_ENABLED : N.default.Messages.MFA_SMS_ENABLE
       })]
-    }) : (0, i.jsx)(g, {
+    }) : (0, i.jsx)(v, {
       label: N.default.Messages.MFA_SMS_ENABLE,
       text: N.default.Messages.MFA_SMS_AUTH_SALES_PITCH,
       children: (0, i.jsx)(a.Button, {
@@ -91,7 +91,7 @@ class m extends r.PureComponent {
     })
   }
   renderBackupCodesSection() {
-    return (0, i.jsx)(g, {
+    return (0, i.jsx)(v, {
       label: N.default.Messages.TWO_FA_DOWNLOAD_CODES,
       text: N.default.Messages.TWO_FA_BACKUP_CODES_WARNING.format(),
       children: (0, i.jsx)(d.default, {
@@ -112,19 +112,19 @@ class m extends r.PureComponent {
   renderHeader(e) {
     return (0, i.jsxs)(a.ModalHeader, {
       separator: !1,
-      children: [(0, i.jsxs)(S.default.Child, {
+      children: [(0, i.jsxs)(p.default.Child, {
         grow: 1,
         shrink: 1,
         children: [(0, i.jsx)(a.Heading, {
           variant: "heading-lg/semibold",
-          className: v.header,
+          className: R.header,
           children: f.default.parse(N.default.Messages.TWO_FA_SUCCESS_HEADER)
         }), (0, i.jsx)(a.Text, {
           variant: "text-xs/normal",
-          className: v.subHeader,
+          className: R.subHeader,
           children: e
         })]
-      }), (0, i.jsx)(S.default.Child, {
+      }), (0, i.jsx)(p.default.Child, {
         grow: 0,
         children: (0, i.jsx)(a.ModalCloseButton, {
           onClick: this.handleCloseModal
@@ -170,11 +170,11 @@ class m extends r.PureComponent {
     } = this.state;
     return (0, i.jsxs)(a.ModalRoot, {
       transitionState: e,
-      className: v.modal,
+      className: R.modal,
       children: [this.renderHeader(N.default.Messages.MFA_SMS_ENABLE_SHOULD_DO.format()), (0, i.jsxs)(a.ModalContent, {
-        className: v.modalInner,
+        className: R.modalInner,
         children: [this.renderSMSSection(), (0, i.jsx)(a.FormDivider, {
-          className: v.divider
+          className: R.divider
         }), this.renderBackupCodesSection()]
       }), t && this.renderConfirmModal(N.default.Messages.TWO_FA_CONFIRM_BODY)]
     })
@@ -187,9 +187,9 @@ class m extends r.PureComponent {
     } = this.state;
     return (0, i.jsxs)(a.ModalRoot, {
       transitionState: e,
-      className: v.modal,
+      className: R.modal,
       children: [this.renderHeader(N.default.Messages.TWO_FA_WEBAUTHN_SHOULD_DO.format()), (0, i.jsx)(a.ModalContent, {
-        className: v.modalInner,
+        className: R.modalInner,
         children: this.renderBackupCodesSection()
       }), t && this.renderConfirmModal(N.default.Messages.TWO_FA_CONFIRM_WEBAUTHN_BODY)]
     })
@@ -201,7 +201,7 @@ class m extends r.PureComponent {
       ...t,
       ...e
     }), {
-      modalKey: T.PHONE_VERIFICATION_MODAL_KEY
+      modalKey: C.PHONE_VERIFICATION_MODAL_KEY
     })
   }
   constructor(...e) {
@@ -233,7 +233,7 @@ class m extends r.PureComponent {
       let {
         currentUser: e
       } = this.props, t = () => {
-        (0, a.openModal)(e => (0, i.jsx)(I.default, {
+        (0, a.openModal)(e => (0, i.jsx)(S.default, {
           ...e,
           handleSubmit: e => c.default.enableSMS(e),
           title: N.default.Messages.MFA_SMS_ENABLE
@@ -245,11 +245,11 @@ class m extends r.PureComponent {
     }
   }
 }
-var A = s.default.connectStores([p.default, h.default], () => {
-  let e = p.default.getCurrentUser();
+var A = s.default.connectStores([h.default, I.default], () => {
+  let e = h.default.getCurrentUser();
   return l(null != e, "MFAEnableSuccess: currentUser cannot be undefined"), {
     currentUser: e,
-    backupCodes: h.default.getBackupCodes(),
-    hasSeenBackupPrompt: h.default.hasSeenBackupPrompt
+    backupCodes: I.default.getBackupCodes(),
+    hasSeenBackupPrompt: I.default.hasSeenBackupPrompt
   }
-})(m)
+})(g)

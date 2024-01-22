@@ -27,15 +27,15 @@ let E = {},
     id: null,
     justChanged: !1
   },
-  m = {
+  p = {
     id: null,
     justChanged: !1
   },
-  p = /\(([^)]+)\)/;
+  m = /\(([^)]+)\)/;
 
 function A(e) {
   if ((0, u.getPlatform)() === u.PlatformTypes.WINDOWS) {
-    let t = e.name.match(p);
+    let t = e.name.match(m);
     if (null != t) return t[1]
   }
   return e.name
@@ -73,7 +73,7 @@ class N extends i.default.DeviceSettingsStore {
     return I
   }
   get lastOutputSystemDevice() {
-    return m
+    return p
   }
 }
 N.displayName = "ConnectedDeviceStore", N.persistKey = "ConnectedDeviceStore";
@@ -91,11 +91,11 @@ var R = new N(l.default, {
       }
     });
     let i = {};
-    if (m.justChanged = !1, n.forEach(e => {
+    if (p.justChanged = !1, n.forEach(e => {
         if (i[A(e)] = e.id, e.id === f.DEFAULT_DEVICE_ID) {
           var t;
           let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-          n !== m.id && (m.justChanged = !0), m.id = n
+          n !== p.id && (p.justChanged = !0), p.id = n
         }
       }), !h) {
       C = a, I = i, h = !0;

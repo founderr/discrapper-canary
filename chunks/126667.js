@@ -1,61 +1,61 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return I
+    return p
   }
-}), n("222007");
-var a = n("37983"),
-  s = n("884691"),
-  i = n("627445"),
-  l = n.n(i),
-  r = n("446674"),
-  o = n("437822"),
-  u = n("152584"),
-  d = n("648661"),
-  c = n("330387"),
-  f = n("790618"),
-  E = n("697218"),
-  _ = n("67211"),
-  h = n("892313"),
-  C = n("49111"),
-  I = e => {
+}), s("222007");
+var n = s("37983"),
+  a = s("884691"),
+  i = s("627445"),
+  l = s.n(i),
+  o = s("446674"),
+  r = s("437822"),
+  d = s("152584"),
+  h = s("648661"),
+  u = s("330387"),
+  m = s("790618"),
+  c = s("697218"),
+  f = s("67211"),
+  g = s("892313"),
+  E = s("49111"),
+  p = e => {
     let {
       transitionState: t,
-      onClose: n
-    } = e, i = (0, r.useStateFromStores)([f.default], () => f.default.getErrors()), I = (0, r.useStateFromStores)([f.default], () => f.default.getFormState()), T = (0, r.useStateFromStores)([E.default], () => {
-      let e = E.default.getCurrentUser();
+      onClose: s
+    } = e, i = (0, o.useStateFromStores)([m.default], () => m.default.getErrors()), p = (0, o.useStateFromStores)([m.default], () => m.default.getFormState()), C = (0, o.useStateFromStores)([c.default], () => {
+      let e = c.default.getCurrentUser();
       return l(null != e, "EmailVerificationModal: user cannot be undefined"), e
-    }), S = (0, r.useStateFromStores)([c.default], () => c.default.getAction()), m = !h.default.isEmailReverification(S), p = null != T.email, [A, g] = s.useState(!0), N = I === C.FormStates.SUBMITTING;
+    }), I = (0, o.useStateFromStores)([u.default], () => u.default.getAction()), _ = !g.default.isEmailReverification(I), R = null != C.email, [v, M] = a.useState(!0), S = p === E.FormStates.SUBMITTING;
 
-    function R(e) {
-      var t, n;
-      return null !== (n = null == i ? void 0 : null === (t = i[e]) || void 0 === t ? void 0 : t[0]) && void 0 !== n ? n : ""
+    function A(e) {
+      var t, s;
+      return null !== (s = null == i ? void 0 : null === (t = i[e]) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : ""
     }
-    let O = R("email"),
-      L = R("password");
-    return (0, a.jsx)(_.default, {
+    let N = A("email"),
+      B = A("password");
+    return (0, n.jsx)(f.default, {
       transitionState: t,
-      email: T.email,
-      emailError: O,
-      passwordError: L,
-      submitting: N,
-      canResend: A && !N && p && 0 === O.length && 0 === L.length,
-      canChange: m,
+      email: C.email,
+      emailError: N,
+      passwordError: B,
+      submitting: S,
+      canResend: v && !S && R && 0 === N.length && 0 === B.length,
+      canChange: _,
       onChangeEmailClick: function() {
-        g(!1)
+        M(!1)
       },
       onVerify: function(e, t) {
-        (0, u.saveAccountChanges)({
+        (0, d.saveAccountChanges)({
           email: e,
           password: t
         }).then(e => {
           var t;
-          !(null == e ? void 0 : e.ok) && (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.username) != null && (0, d.showInvalidUsernameToast)()
-        }), g(!0)
+          !(null == e ? void 0 : e.ok) && (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.username) != null && (0, h.showInvalidUsernameToast)()
+        }), M(!0)
       },
       onResend: function() {
-        o.default.verifyResend()
+        r.default.verifyResend()
       },
-      onClose: n
+      onClose: s
     })
   }

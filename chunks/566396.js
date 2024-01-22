@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -73,7 +73,7 @@ class S extends s.PureComponent {
     }
   }
 }
-var m = r.default.connectStores([c.default, h.default, _.default, E.default], () => {
+var p = r.default.connectStores([c.default, h.default, _.default, E.default], () => {
   let e, t;
   let n = c.default.getSyncingWith(),
     a = c.default.getActivity(),

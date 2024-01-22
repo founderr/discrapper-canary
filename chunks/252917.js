@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("987697"),
   T = n("464682"),
   S = n("73749"),
-  m = n("191145"),
-  p = n("533466"),
+  p = n("191145"),
+  m = n("533466"),
   A = n("837844"),
   g = n("171984"),
   N = n("551254"),
@@ -98,13 +98,13 @@ let eh = () => (0, a.jsx)("div", {
     name: "MemberSafetyPage",
     renderLoader: eh
   }),
-  em = (0, d.makeLazy)({
+  ep = (0, d.makeLazy)({
     createPromise: () => n.el("534702").then(n.bind(n, "534702")),
     webpackId: "534702",
     name: "ChannelsAndRolesPage",
     renderLoader: eh
   }),
-  ep = (0, d.makeLazy)({
+  em = (0, d.makeLazy)({
     createPromise: () => n.el("413896").then(n.bind(n, "413896")),
     webpackId: "413896",
     name: "GuildOnboardingPage",
@@ -155,16 +155,16 @@ let eh = () => (0, a.jsx)("div", {
           guildId: s
         });
       case ec.StaticChannelRoute.CHANNEL_BROWSER:
-        return (0, a.jsx)(em, {
+        return (0, a.jsx)(ep, {
           guildId: s,
           selectedSection: ef.GuildOnboardingTab.BROWSE
         });
       case ec.StaticChannelRoute.GUILD_ONBOARDING:
-        return (0, a.jsx)(ep, {
+        return (0, a.jsx)(em, {
           guildId: s
         });
       case ec.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-        return (0, a.jsx)(em, {
+        return (0, a.jsx)(ep, {
           guildId: s,
           selectedSection: ef.GuildOnboardingTab.CUSTOMIZE
         });
@@ -186,7 +186,7 @@ let eh = () => (0, a.jsx)("div", {
         inputSkuId: e
       }, n.id)
     }
-    return (0, a.jsx)(p.default, {})
+    return (0, a.jsx)(m.default, {})
   },
   eg = s.memo(function() {
     let {
@@ -313,7 +313,7 @@ function ew(e) {
   }), _.UserTriggerAAExperiment.trackExposure({
     location: i
   });
-  let r = (0, f.useStateFromStores)([m.default], () => m.default.isFullscreenInContext());
+  let r = (0, f.useStateFromStores)([p.default], () => p.default.isFullscreenInContext());
   return s ? null : (0, a.jsxs)("div", {
     className: l(e_.sidebar, (0, en.getThemeClass)(n), {
       [e_.hasNotice]: t,

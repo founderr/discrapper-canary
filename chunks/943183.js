@@ -69,11 +69,11 @@ async function S() {
   let o = u.default.getMemoryUsageElectronRendererUsedHeapSize();
   null != o && (i.client_heartbeat_renderer_memory_used_heap = o), r.default.track(c.AnalyticEvents.CLIENT_HEARTBEAT, i), s.default.set(f, Date.now().toString())
 }
-let m = null,
-  p = !0;
+let p = null,
+  m = !0;
 
 function A() {
-  if (p || null != m && m !== c.RTCConnectionStates.DISCONNECTED && m !== c.RTCConnectionStates.RTC_DISCONNECTED) try {
+  if (m || null != p && p !== c.RTCConnectionStates.DISCONNECTED && p !== c.RTCConnectionStates.RTC_DISCONNECTED) try {
     I()
   } catch (e) {
     d.default.captureException(e)
@@ -94,19 +94,19 @@ function N() {
 
 function R() {
   let e = l.default.getState();
-  m !== e && (m = e, A())
+  p !== e && (p = e, A())
 }
 
 function O(e) {
   let {
     focused: t
   } = e;
-  p = t, A()
+  m = t, A()
 }
 
 function L(e) {
   let {
     state: t
   } = e;
-  p = t === c.AppStates.ACTIVE, A()
+  m = t === c.AppStates.ACTIVE, A()
 }

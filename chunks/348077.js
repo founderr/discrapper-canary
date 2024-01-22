@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var i = s("37983"),
   l = s("884691"),
-  a = s("414456"),
-  n = s.n(a),
+  n = s("414456"),
+  a = s.n(n),
   r = s("77078"),
   d = s("660279"),
   o = s("149943"),
@@ -34,7 +34,7 @@ function S(e) {
     children: [null != e.title && (0, i.jsx)(g, {
       title: e.title
     }), (0, i.jsx)("div", {
-      className: n(f.sectionContent, {
+      className: a(f.sectionContent, {
         [f.sectionContentPadding]: !0 !== e.noPadding
       }),
       children: e.children

@@ -22,7 +22,7 @@ var a = n("37983"),
   T = n("782340"),
   S = n("352561");
 
-function m(e) {
+function p(e) {
   let {
     applicationViewItems: t,
     restoreApplication: n
@@ -59,7 +59,7 @@ function m(e) {
     }), s]
   })
 }
-class p extends s.PureComponent {
+class m extends s.PureComponent {
   handleToggleShortcutDesktop(e) {
     o.InstallShortcutDesktop.updateSetting(e)
   }
@@ -92,7 +92,7 @@ class p extends s.PureComponent {
           note: T.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
           children: T.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
         }), (0, a.jsx)(C.default, {})]
-      }) : null, (0, a.jsx)(m, {
+      }) : null, (0, a.jsx)(p, {
         restoreApplication: this.handleRestoreHiddenLibraryApplication,
         applicationViewItems: e
       })]
@@ -122,7 +122,7 @@ function A() {
     installShortcutStartMenu: o.InstallShortcutStartMenu.useSetting(),
     hiddenLibraryApplicationViewItems: (0, i.useStateFromStores)([u.default], () => u.default.hiddenLibraryApplicationViewItems)
   };
-  return (0, a.jsx)(p, {
+  return (0, a.jsx)(m, {
     ...e
   })
 }

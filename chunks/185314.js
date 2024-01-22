@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
 var a = n("37983"),
@@ -21,21 +21,21 @@ var a = n("37983"),
   I = n("646718"),
   T = n("782340"),
   S = n("150119"),
-  m = function(e) {
+  p = function(e) {
     let {
       markAsDismissed: t
     } = e, n = (0, _.useShouldSeeClipsPremiumEarlyAccessAnnouncementCoachmark)({
       autoTrackExposure: !0
-    }), m = (0, r.useAnalyticsContext)(), {
-      analyticsLocations: p
+    }), p = (0, r.useAnalyticsContext)(), {
+      analyticsLocations: m
     } = (0, o.default)(), A = c.default.getCurrentUser(), g = (0, E.isPremium)(A);
     return s.useEffect(() => {
       n && !g && f.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         type: I.PremiumUpsellTypes.CLIPS_GUILD_SIDEBAR_COACHMARK_PREMIUM_EARLY_ACCESS_UPSELL,
-        location: m.location,
-        location_stack: p
+        location: p.location,
+        location_stack: m
       })
-    }, [n, g, m.location, p]), n ? (0, a.jsx)(u.default, {
+    }, [n, g, p.location, m]), n ? (0, a.jsx)(u.default, {
       dismissibleContent: i.DismissibleContent.CLIPS_GUILD_PANEL_PREMIUM_EARLY_ACCESS_COACHMARK,
       contentClassName: S.container,
       isPremiumEarlyAccess: !0,
@@ -54,7 +54,7 @@ var a = n("37983"),
       onTryFeature: g ? void 0 : () => {
         (0, d.default)({
           subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2,
-          analyticsLocations: p
+          analyticsLocations: m
         })
       },
       onClose: () => t(C.ContentDismissActionType.UNKNOWN)

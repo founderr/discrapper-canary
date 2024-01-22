@@ -29,7 +29,7 @@ function S(e) {
   _.delete(e), (h = new Set(h)).delete(e)
 }
 
-function m(e) {
+function p(e) {
   let {
     channelId: t,
     ringing: n
@@ -56,12 +56,12 @@ function m(e) {
   }
 }();
 
-function p() {
+function m() {
   T = o.default.getStatus() === u.StatusTypes.DND
 }
 class A extends a.default.Store {
   initialize() {
-    this.waitFor(r.default, o.default), this.syncWith([o.default], p)
+    this.waitFor(r.default, o.default), this.syncWith([o.default], m)
   }
   getIncomingCalls() {
     return T ? E : Array.from(_.values())
@@ -78,8 +78,8 @@ class A extends a.default.Store {
 }
 A.displayName = "IncomingCallStore";
 var g = new A(i.default, {
-  CALL_CREATE: m,
-  CALL_UPDATE: m,
+  CALL_CREATE: p,
+  CALL_UPDATE: p,
   CALL_DELETE: function(e) {
     let {
       channelId: t

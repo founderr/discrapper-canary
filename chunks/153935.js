@@ -24,8 +24,8 @@ var a = n("37983"),
   I = n("155084"),
   T = n("970366"),
   S = n("161778"),
-  m = n("845579"),
-  p = n("697218"),
+  p = n("845579"),
+  m = n("697218"),
   A = n("476765"),
   g = n("155207"),
   N = n("956089"),
@@ -140,9 +140,9 @@ function K() {
       handleTabChange: C
     } = (0, M.default)(),
     S = (0, A.useUID)(),
-    m = p.default.getCurrentUser(),
+    p = m.default.getCurrentUser(),
     g = null != e,
-    N = i && null != m && !g;
+    N = i && null != p && !g;
   return (s.useEffect(() => {
     (0, T.trackAppUIViewed)("family-center"), L.default.initialPageLoad(), !n && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
       dismissAction: k.ContentDismissActionType.AUTO,
@@ -191,7 +191,7 @@ function z() {
       handleTabChange: N
     } = (0, M.default)(),
     O = (0, A.useUID)(),
-    x = p.default.getCurrentUser(),
+    x = m.default.getCurrentUser(),
     b = null != e,
     U = i && null != x && !b;
   if (s.useEffect(() => {
@@ -210,8 +210,8 @@ function z() {
         name: o.MetricEvents.FAMILY_CENTER_VIEW
       }))
     }, [i, b]), s.useEffect(() => {
-      let t = m.FamilyCenterEnabled.getSetting();
-      i && e && void 0 === t && m.FamilyCenterEnabled.updateSetting(!0)
+      let t = p.FamilyCenterEnabled.getSetting();
+      i && e && void 0 === t && p.FamilyCenterEnabled.updateSetting(!0)
     }, [i, e]), U) return (0, E.openAgeGateModal)(w.AgeGateSource.FAMILY_CENTER), null;
   let B = g !== G.FamilyCenterSubPages.SETTINGS ? g : G.FamilyCenterSubPages.ACTIVITY,
     Y = V[B];

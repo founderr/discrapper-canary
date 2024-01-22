@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007"), s("702976");
 var i = s("37983"),
   l = s("884691"),
-  a = s("414456"),
-  n = s.n(a),
+  n = s("414456"),
+  a = s.n(n),
   r = s("65597"),
   d = s("225389"),
   o = s("833222"),
@@ -20,36 +20,36 @@ var i = s("37983"),
   S = s("277796"),
   E = s("546770"),
   m = s("286844"),
-  _ = s("507313"),
-  T = s("49111"),
+  T = s("507313"),
+  _ = s("49111"),
   x = s("133335"),
   I = s("397336"),
   p = s("782340"),
   C = s("297697"),
   O = s("587621");
 let M = () => [{
-  value: _.Presets.ALL_MESSAGES,
+  value: T.Presets.ALL_MESSAGES,
   name: p.default.Messages.NOTIFICATION_PRESET_1
 }, {
-  value: _.Presets.MENTIONS,
+  value: T.Presets.MENTIONS,
   name: p.default.Messages.NOTIFICATION_PRESET_2
 }, {
-  value: _.Presets.NOTHING,
+  value: T.Presets.NOTHING,
   name: p.default.Messages.NOTIFICATION_PRESET_3
 }, {
-  value: _.Presets.CUSTOM,
+  value: T.Presets.CUSTOM,
   name: p.default.Messages.NOTIFICATION_PRESET_CUSTOM
 }];
 
 function v(e) {
   let {
     guildId: t
-  } = e, s = (0, r.default)([h.default], () => h.default.getGuildFlags(t)), a = (0, r.default)([h.default], () => {
+  } = e, s = (0, r.default)([h.default], () => h.default.getGuildFlags(t)), n = (0, r.default)([h.default], () => {
     let e = h.default.getGuildUnreadSetting(t),
       s = h.default.getMessageNotifications(t);
-    return e === x.UnreadSetting.UNSET ? s === T.UserNotificationSettings.ALL_MESSAGES ? x.UnreadSetting.ALL_MESSAGES : x.UnreadSetting.ONLY_MENTIONS : e
-  }), n = (0, r.default)([h.default], () => h.default.getMessageNotifications(t)), [N, f] = (0, l.useState)(!1), O = N ? _.Presets.CUSTOM : (0, _.presetFromSettings)(a, n), v = e => {
-    if (e === _.Presets.CUSTOM) {
+    return e === x.UnreadSetting.UNSET ? s === _.UserNotificationSettings.ALL_MESSAGES ? x.UnreadSetting.ALL_MESSAGES : x.UnreadSetting.ONLY_MENTIONS : e
+  }), a = (0, r.default)([h.default], () => h.default.getMessageNotifications(t)), [N, f] = (0, l.useState)(!1), O = N ? T.Presets.CUSTOM : (0, T.presetFromSettings)(n, a), v = e => {
+    if (e === T.Presets.CUSTOM) {
       f(!0);
       return
     }
@@ -77,9 +77,9 @@ function v(e) {
       children: [(0, i.jsxs)("div", {
         className: C.grid,
         children: [(0, i.jsx)(L, {
-          unreadSetting: a
+          unreadSetting: n
         }), (0, i.jsx)(A, {
-          notificationSetting: n
+          notificationSetting: a
         })]
       }), (0, i.jsxs)("div", {
         className: C.grid,
@@ -107,7 +107,7 @@ function v(e) {
       }), (0, i.jsxs)("div", {
         className: C.grid,
         children: [(0, i.jsx)(u.SingleSelect, {
-          value: a,
+          value: n,
           className: C.input,
           onChange: e => {
             f(!1), c.default.updateGuildNotificationSettings(t, {
@@ -115,10 +115,10 @@ function v(e) {
             }, g.NotificationLabel.unreads(e))
           },
           options: (0, m.getUnreadSelectOptions)({
-            notificationSetting: n
+            notificationSetting: a
           }),
           renderOptionLabel: e => {
-            let t = e.disabled && e.value === x.UnreadSetting.ONLY_MENTIONS && a !== x.UnreadSetting.ONLY_MENTIONS;
+            let t = e.disabled && e.value === x.UnreadSetting.ONLY_MENTIONS && n !== x.UnreadSetting.ONLY_MENTIONS;
             return (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsx)("div", {
                 children: (0, i.jsx)(u.Text, {
@@ -139,19 +139,19 @@ function v(e) {
           }
         }), (0, i.jsx)(u.SingleSelect, {
           className: C.input,
-          value: n,
+          value: a,
           onChange: e => {
             f(!1);
             let s = {
               message_notifications: e
             };
-            e === T.UserNotificationSettings.ALL_MESSAGES && a !== x.UnreadSetting.ALL_MESSAGES && (s.flags = (0, S.withGuildUnreadFlags)(h.default.getGuildFlags(t), I.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)), c.default.updateGuildNotificationSettings(t, s, g.NotificationLabel.notifications(e))
+            e === _.UserNotificationSettings.ALL_MESSAGES && n !== x.UnreadSetting.ALL_MESSAGES && (s.flags = (0, S.withGuildUnreadFlags)(h.default.getGuildFlags(t), I.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)), c.default.updateGuildNotificationSettings(t, s, g.NotificationLabel.notifications(e))
           },
           options: (0, m.getPushNotificationSelectOptions)({
-            notificationSetting: n
+            notificationSetting: a
           }),
           renderOptionLabel: e => {
-            let t = e.value === T.UserNotificationSettings.ALL_MESSAGES && a !== x.UnreadSetting.ALL_MESSAGES && n !== T.UserNotificationSettings.ALL_MESSAGES;
+            let t = e.value === _.UserNotificationSettings.ALL_MESSAGES && n !== x.UnreadSetting.ALL_MESSAGES && a !== _.UserNotificationSettings.ALL_MESSAGES;
             return (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsx)(u.Text, {
                 variant: "text-md/normal",
@@ -199,14 +199,14 @@ function L(e) {
       children: [(0, i.jsxs)("div", {
         className: C.channelListChannelName,
         children: [(0, i.jsx)("div", {
-          className: n(C.unread, {
+          className: a(C.unread, {
             [C.hidden]: !e.unread,
             [C.unreadMuted]: e.muted
           })
         }), (0, i.jsx)(N.default, {
           height: 12,
           width: 12,
-          className: n(C.channelListChannelIcon, {
+          className: a(C.channelListChannelIcon, {
             [C.muted]: e.muted
           })
         }), (0, i.jsx)(u.Text, {
@@ -215,7 +215,7 @@ function L(e) {
           children: e.name
         })]
       }), (0, i.jsx)("div", {
-        className: n(C.badge, {
+        className: a(C.badge, {
           [C.hidden]: !e.badged
         }),
         children: (0, i.jsx)(f.NumberBadge, {
@@ -229,7 +229,7 @@ function L(e) {
 function A(e) {
   return (0, i.jsxs)("div", {
     className: C.mockMessage,
-    children: [e.notificationSetting === T.UserNotificationSettings.NO_MESSAGES && (0, i.jsx)("div", {
+    children: [e.notificationSetting === _.UserNotificationSettings.NO_MESSAGES && (0, i.jsx)("div", {
       className: C.mockMessageDisabled
     }), (0, i.jsx)("div", {
       children: (0, i.jsx)("img", {
@@ -241,11 +241,11 @@ function A(e) {
       children: [(0, i.jsx)(u.Text, {
         variant: "text-xs/medium",
         children: p.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR
-      }), e.notificationSetting === T.UserNotificationSettings.ALL_MESSAGES && (0, i.jsx)(u.Text, {
+      }), e.notificationSetting === _.UserNotificationSettings.ALL_MESSAGES && (0, i.jsx)(u.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         children: p.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_MESSAGE
-      }), e.notificationSetting !== T.UserNotificationSettings.ALL_MESSAGES && (0, i.jsxs)(i.Fragment, {
+      }), e.notificationSetting !== _.UserNotificationSettings.ALL_MESSAGES && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsxs)(u.Text, {
           variant: "text-xs/normal",
           color: "text-link",

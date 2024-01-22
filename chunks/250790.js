@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return g
   }
 }), n("222007");
 var s = n("37983"),
@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("769846"),
   d = n("77078"),
   c = n("159885"),
-  f = n("99130");
-let E = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+  E = n("99130");
+let f = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
   h = {
     START: 0,
     END: 1
@@ -23,7 +23,7 @@ let E = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
     friction: 10,
     tension: 130
   };
-var m = function(e) {
+var g = function(e) {
   return class extends a.Component {
     componentDidMount() {
       !o.isMobile && (window.addEventListener("resize", this.handleResizeDebounced), this.handleResize())
@@ -66,7 +66,7 @@ var m = function(e) {
     }
     render() {
       return (0, s.jsx)("div", {
-        className: f.wrapper,
+        className: E.wrapper,
         children: (0, s.jsx)(d.AccessibilityPreferencesContext.Consumer, {
           children: t => {
             let {
@@ -86,7 +86,7 @@ var m = function(e) {
       super(...e), this.anim = new i.default.Value(h.START), this.state = {
         shouldAnimate: !o.isMobile
       }, this.handleResize = () => {
-        let e = window.innerWidth > E;
+        let e = window.innerWidth > f;
         !this.state.shouldAnimate && e && this.anim.setValue(h.END), this.setState({
           shouldAnimate: e
         })

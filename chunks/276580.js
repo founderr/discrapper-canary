@@ -34,8 +34,8 @@ var C = e => {
     guildsData: I,
     analyticsContext: T,
     theme: S,
-    onViewGuild: m,
-    fetchGuilds: p,
+    onViewGuild: p,
+    fetchGuilds: m,
     onGuildCardSeen: A,
     currentCategoryId: g,
     loadId: N,
@@ -43,7 +43,7 @@ var C = e => {
     showMoreCards: O = !1
   } = e;
   s.useEffect(() => {
-    l.default.wait(() => p())
+    l.default.wait(() => m())
   }, [g]);
   let L = (0, c.default)(O ? h : _),
     {
@@ -68,7 +68,7 @@ var C = e => {
     });
     else {
       let t = M.findIndex(t => t.id === e);
-      await m(e, t, T, N)
+      await p(e, t, T, N)
     }
   };
   if (P || null == M) {

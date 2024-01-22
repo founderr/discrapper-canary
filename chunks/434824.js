@@ -30,11 +30,11 @@ function d(e) {
     guildTemplate: n
   } = e, d = n.code, c = u[d];
   if (null != c) {
-    var f;
+    var E;
     let {
       header: e,
       description: u,
-      author: E
+      author: f
     } = (0, l.default)(d);
     return (0, s.jsxs)("div", {
       children: [(0, s.jsx)("img", {
@@ -49,8 +49,8 @@ function d(e) {
         children: u
       }), n.state === i.GuildTemplateStates.RESOLVED ? (0, s.jsx)(r.UsagePill, {
         className: o.usagePill,
-        count: null !== (f = n.usageCount) && void 0 !== f ? f : 0,
-        verifiedName: E
+        count: null !== (E = n.usageCount) && void 0 !== E ? E : 0,
+        verifiedName: f
       }) : null]
     })
   }

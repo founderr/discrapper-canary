@@ -7,8 +7,8 @@
     var d = t("147369"),
       s = t("803182"),
       n = t("619443"),
-      c = t("21121"),
-      i = t("693051"),
+      i = t("21121"),
+      c = t("693051"),
       r = t("607542"),
       o = t("153498"),
       f = t("934306"),
@@ -27,7 +27,7 @@
         convertRouteToNavigation(e, a) {
           let {
             pathname: t
-          } = e, d = (0, i.getRootNavigationRef)(), n = (0, c.isInMainTabsExperiment)();
+          } = e, d = (0, c.getRootNavigationRef)(), n = (0, i.isInMainTabsExperiment)();
           if (null != d && d.isReady()) {
             if (n && (0, f.isSplitMessagesTab)() && t === b.Routes.ME) {
               (0, o.navigateToRootTab)({
@@ -47,7 +47,7 @@
               let a = (0, s.matchPath)(t, {
                   path: b.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")
                 }),
-                c = (0, s.matchPath)(t, {
+                i = (0, s.matchPath)(t, {
                   path: "".concat(b.Routes.CHANNEL(":guildId", ":channelId?")).concat(b.Routes.VOICE_CHAT_CHANNEL_PARTIAL(":voiceGuildId", ":voiceChannelId", ":voiceMessageId?"))
                 });
               if (!n) {
@@ -56,12 +56,12 @@
                 (null == e ? void 0 : null === (p = e.routes) || void 0 === p ? void 0 : null === (u = p[0]) || void 0 === u ? void 0 : u.name) !== "panels" && (0, o.resetToPanelsUI)();
                 return
               }
-              if (null != c) {
+              if (null != i) {
                 let {
                   voiceGuildId: a,
                   voiceChannelId: t,
                   voiceMessageId: d
-                } = c.params;
+                } = i.params;
                 (0, l.isOldVoiceUIEnabled)() && (0, o.navigateToChannel)({
                   channelId: t,
                   guildId: a,

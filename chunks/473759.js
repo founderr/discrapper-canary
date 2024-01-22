@@ -17,12 +17,12 @@ var a = n("414456"),
   u = n("486952"),
   d = n("819220"),
   c = n("5487"),
-  f = n("579033"),
-  E = n("782340"),
+  E = n("579033"),
+  f = n("782340"),
   h = n("426601"),
   _ = n("926622");
 
-function m() {
+function g() {
   return (0, s.jsx)(i.default, {
     className: h.verifiedIcon,
     children: (0, s.jsx)("div", {
@@ -34,14 +34,14 @@ function m() {
   })
 }
 
-function g(e) {
+function m(e) {
   let {
     verified: t,
     text: n
   } = e;
   return t ? (0, s.jsxs)("div", {
     className: h.verifiedNameContainer,
-    children: [(0, s.jsx)(m, {}), n]
+    children: [(0, s.jsx)(g, {}), n]
   }) : (0, s.jsx)(s.Fragment, {
     children: n
   })
@@ -56,14 +56,14 @@ function p(e) {
   } = e;
   return (0, s.jsx)("div", {
     className: l(h.usagePill, t, h.userText),
-    children: null != a || null != r ? E.default.Messages.GUILD_TEMPLATE_USAGES_BY_CREATOR2.format({
+    children: null != a || null != r ? f.default.Messages.GUILD_TEMPLATE_USAGES_BY_CREATOR2.format({
       usageCount: n,
       creator: null != r ? r : a,
-      creatorHook: (e, t) => (0, s.jsx)(g, {
+      creatorHook: (e, t) => (0, s.jsx)(m, {
         text: e,
         verified: null != r
       }, t)
-    }) : E.default.Messages.GUILD_TEMPLATE_USAGES.format({
+    }) : f.default.Messages.GUILD_TEMPLATE_USAGES.format({
       usageCount: n
     })
   })
@@ -80,21 +80,21 @@ function A(e) {
   if (null != a && "" !== a) return (0, s.jsxs)("div", {
     className: h.container,
     children: [(0, s.jsx)(o.Title, {
-      children: E.default.Messages.INVITE_MODAL_ERROR_TITLE
+      children: f.default.Messages.INVITE_MODAL_ERROR_TITLE
     }), (0, s.jsx)(o.SubTitle, {
       children: a
     })]
   });
-  if (n.state === f.GuildTemplateStates.RESOLVING) return (0, s.jsx)("div", {
+  if (n.state === E.GuildTemplateStates.RESOLVING) return (0, s.jsx)("div", {
     className: h.container,
     children: (0, s.jsx)(r.Spinner, {})
   });
-  let m = (0, c.default)(n.code).header;
+  let g = (0, c.default)(n.code).header;
   if (!i) return (0, s.jsxs)("div", {
     className: h.container,
     children: [(0, s.jsx)(o.Title, {
       className: h.title,
-      children: m
+      children: g
     }), (0, s.jsx)(o.SubTitle, {
       className: l(h.subtitle, h.userText),
       children: n.name
@@ -104,10 +104,10 @@ function A(e) {
     className: h.container,
     children: [(0, s.jsx)(o.Title, {
       className: h.title,
-      children: m
+      children: g
     }), (0, s.jsx)(o.SubTitle, {
       className: l(h.subtitle, _.marginTop2),
-      children: E.default.Messages.GUILD_TEMPLATE_BASED_ON
+      children: f.default.Messages.GUILD_TEMPLATE_BASED_ON
     }), (0, s.jsx)(o.Title, {
       className: l(h.title, h.userText),
       children: n.name

@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("86621"),
   T = n("737960"),
   S = n("299285"),
-  m = n("449918"),
-  p = n("161778"),
+  p = n("449918"),
+  m = n("161778"),
   A = n("686470"),
   g = n("535974"),
   N = n("352326"),
@@ -274,8 +274,8 @@ class Q extends s.PureComponent {
       children: [(0, a.jsx)(f.Progress, {
         percent: t,
         size: f.Progress.Sizes.SMALL,
-        foregroundColor: (0, m.getColor)(n),
-        foregroundGradientColor: null != s ? [(0, m.getColor)(s[0]), (0, m.getColor)(s[1])] : void 0,
+        foregroundColor: (0, p.getColor)(n),
+        foregroundGradientColor: null != s ? [(0, p.getColor)(s[0]), (0, p.getColor)(s[1])] : void 0,
         animate: this.isFocused
       }), (0, a.jsx)("div", {
         className: F.progressCellText,
@@ -645,13 +645,13 @@ function en(e, t, n, a) {
     }), e
   }, [])
 }
-var ea = (0, T.default)(u.default.connectStores([S.default, g.default, N.default, p.default, R.default], () => {
+var ea = (0, T.default)(u.default.connectStores([S.default, g.default, N.default, m.default, R.default], () => {
   let e = en(N.default.activeItems, !1, S.default, g.default),
     t = en(N.default.finishedItems, !0, S.default, g.default);
   return {
     applications: [...e, ...t],
     paused: N.default.paused,
     isFocused: R.default.isFocused(),
-    theme: p.default.theme
+    theme: m.default.theme
   }
 })((0, I.default)(et)))

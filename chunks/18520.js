@@ -29,8 +29,8 @@ async function I(e, t, n) {
     scope: I,
     permissions: T,
     guild_id: S,
-    channel_id: m,
-    prompt: p,
+    channel_id: p,
+    prompt: m,
     disable_guild_select: A
   } = e;
   if (null == i) throw new E.default(_.RPCErrors.OAUTH2_ERROR, "No Client ID provided");
@@ -55,7 +55,7 @@ async function I(e, t, n) {
     } = t;
     throw new E.default(_.RPCErrors.OAUTH2_ERROR, "OAuth2 Authorization Error: ".concat(e.message || "Unknown Error"))
   }
-  if (p === d.OAuth2Prompts.NONE && null != a && a.authorized) try {
+  if (m === d.OAuth2Prompts.NONE && null != a && a.authorized) try {
     let e = await (0, u.authorize)({
       authorize: !0,
       clientId: i,
@@ -73,12 +73,12 @@ async function I(e, t, n) {
     } = t;
     throw new E.default(_.RPCErrors.OAUTH2_ERROR, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
-  null == n || n(a.application, m);
+  null == n || n(a.application, p);
   let R = f.default.NONE;
   try {
     R = s.default.deserialize(null != T ? T : 0)
   } catch (e) {}
-  return t(i, a, g, R, l, r, o, h, C, S, m, p, A)
+  return t(i, a, g, R, l, r, o, h, C, S, p, m, A)
 }
 
 function T(e, t) {

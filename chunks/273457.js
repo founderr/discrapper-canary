@@ -25,11 +25,11 @@ var a = n("37983"),
     s.useEffect(() => {
       null != n && l.default.resolveInvite(n, "Hub").finally(() => S(!1))
     }, [n]);
-    let m = (0, i.useStateFromStores)([u.default], () => null != n ? u.default.getInvite(n) : null),
-      p = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(t));
+    let p = (0, i.useStateFromStores)([u.default], () => null != n ? u.default.getInvite(n) : null),
+      m = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(t));
     s.useEffect(() => {
-      null != p && (0, r.transitionTo)(E.Routes.CHANNEL(t))
-    }, [p, t]);
+      null != m && (0, r.transitionTo)(E.Routes.CHANNEL(t))
+    }, [m, t]);
     let A = s.useCallback(e => {
         I(t => Math.max(t, e))
       }, []),
@@ -47,7 +47,7 @@ var a = n("37983"),
         }), (0, a.jsx)("div", {
           className: h.contentWrapper,
           children: !T && (0, a.jsx)(f.HubEmailConnectionModalView, {
-            invite: m
+            invite: p
           })
         })]
       })

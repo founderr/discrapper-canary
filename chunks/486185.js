@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -22,11 +22,11 @@ var a = n("37983"),
   T = n("994428"),
   S = n("782340");
 
-function m(e) {
+function p(e) {
   let {
     channel: t,
-    iconClassName: m,
-    className: p,
+    iconClassName: p,
+    className: m,
     innerClassName: A,
     ...g
   } = e, {
@@ -72,8 +72,8 @@ function m(e) {
       children: (0, a.jsx)(r.Button, {
         ...e,
         ...t,
-        className: p,
-        wrapperClassName: p,
+        className: m,
+        wrapperClassName: m,
         innerClassName: A,
         disabled: L,
         onClick: () => {
@@ -85,7 +85,7 @@ function m(e) {
         size: r.Button.Sizes.SMALL,
         ...g,
         children: (0, a.jsx)(_.default, {
-          className: m
+          className: p
         })
       })
     })

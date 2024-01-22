@@ -30,8 +30,8 @@ var n, r, i = l("37983"),
   w = l("688622"),
   T = l("323273"),
   S = l("49111"),
-  N = l("782340"),
-  j = l("632215"),
+  j = l("782340"),
+  N = l("632215"),
   A = l("590787");
 
 function _(e) {
@@ -54,13 +54,13 @@ function _(e) {
     volume: C,
     onPlay: M,
     onEnded: T,
-    onVolumeChange: N,
-    onMute: j,
+    onVolumeChange: j,
+    onMute: N,
     href: _,
     messageId: O,
-    channelId: L
-  } = e, [R, k] = s.useState(v), D = null != d && null == d.proxyURL, V = s.useCallback(() => k(!1), [k]), P = e => {
-    e.preventDefault(), e.stopPropagation(), null == M || M(!1), k(!0), D && (c.ComponentDispatch.dispatch(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED), c.ComponentDispatch.subscribeOnce(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, V))
+    channelId: R
+  } = e, [k, L] = s.useState(v), D = null != d && null == d.proxyURL, V = s.useCallback(() => L(!1), [L]), P = e => {
+    e.preventDefault(), e.stopPropagation(), null == M || M(!1), L(!0), D && (c.ComponentDispatch.dispatch(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED), c.ComponentDispatch.subscribeOnce(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, V))
   };
   s.useEffect(() => () => {
     D && c.ComponentDispatch.unsubscribe(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, V)
@@ -90,15 +90,15 @@ function _(e) {
       onEnded: T,
       naturalWidth: d.width,
       naturalHeight: d.height,
-      onVolumeChange: N,
+      onVolumeChange: j,
       playable: y,
       autoMute: I,
       volume: C,
       onPlay: M,
-      onMute: j
+      onMute: N
     })
   });
-  if (R && null != d) {
+  if (k && null != d) {
     let e;
     let s = !0 === I || "function" == typeof I && I(),
       a = {
@@ -172,7 +172,7 @@ function _(e) {
           externalURL: _,
           renderLinkComponent: x,
           messageId: O,
-          channelId: L
+          channelId: R
         }) : null
       })
     })]
@@ -423,7 +423,7 @@ function O(e) {
       isVisible: t = !0,
       image: l,
       isGalleryImage: n = !1,
-      alt: r = N.default.Messages.IMAGE,
+      alt: r = j.default.Messages.IMAGE,
       allImages: s = null
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, {
       renderImageComponent: a,
@@ -675,7 +675,7 @@ function O(e) {
       },
       className: A.embedSuppressButton,
       onClick: e,
-      "aria-label": N.default.Messages.SUPPRESS_ALL_EMBEDS,
+      "aria-label": j.default.Messages.SUPPRESS_ALL_EMBEDS,
       children: (0, i.jsx)(M.default, {
         width: 16,
         height: 16
@@ -805,7 +805,7 @@ function O(e) {
           footer: g
         } = t.renderAll();
       return (0, i.jsx)("article", {
-        className: o(l, A.embedFull, j.markup, {
+        className: o(l, A.embedFull, N.markup, {
           [A.isHidden]: e,
           [A.spoilerEmbed]: r === u.ObscureReason.SPOILER,
           [A.hiddenExplicitEmbed]: null != r && [u.ObscureReason.EXPLICIT_CONTENT, u.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(r),

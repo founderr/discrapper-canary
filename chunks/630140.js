@@ -31,13 +31,13 @@ class h extends r.default {
       uploadType: r,
       guildId: h,
       isTryItOutFlow: C
-    } = e, I = u.default.isEditingClydeProfile(), T = I ? o.setPendingAvatar : null != h ? d.setPendingAvatar : l.setPendingAvatar, S = I ? o.setPendingBanner : null != h ? d.setPendingBanner : c.setPendingBanner, m = f.default.getCurrentUser();
+    } = e, I = u.default.isEditingClydeProfile(), T = I ? o.setPendingAvatar : null != h ? d.setPendingAvatar : l.setPendingAvatar, S = I ? o.setPendingBanner : null != h ? d.setPendingBanner : c.setPendingBanner, p = f.default.getCurrentUser();
     if (r === _.UploadTypes.AVATAR) {
       if (C) {
         (0, c.setTryItOutAvatar)(t);
         return
       }
-      let e = E.default.canUseAnimatedAvatar(m);
+      let e = E.default.canUseAnimatedAvatar(p);
       if (e || "image/gif" !== i.type || I) {
         T(t);
         return
@@ -56,7 +56,7 @@ class h extends r.default {
         (0, c.setTryItOutBanner)(t);
         return
       }
-      let e = E.default.canUsePremiumProfileCustomization(m);
+      let e = E.default.canUsePremiumProfileCustomization(p);
       if (e || I) {
         S(t);
         return
