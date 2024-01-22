@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
-  mapError: function() {
+  getInvalidMFACodeError: function() {
     return o
   },
   openMFAModal: function() {
-    return u
+    return d
   }
 }), n("70102"), n("581081");
 var i = n("872717"),
@@ -23,7 +23,23 @@ function o(e) {
   }
   return t
 }
-async function l(e) {
+
+function l(e, t) {
+  if (null == t || null == t.code) return null;
+  switch (t.code) {
+    case r.AbortCodes.MFA_INVALID_CODE:
+      return o(e);
+    case r.AbortCodes.STAFF_REQUIRED:
+      return a.default.Messages.MFA_REQUIRED_FOR_STAFF;
+    case r.AbortCodes.MFA_REQUIRED:
+    case r.AbortCodes.MFA_REQUIRED_FOR_CREATOR_MONETIZATION:
+      var n;
+      return null !== (n = t.message) && void 0 !== n ? n : a.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR;
+    default:
+      return a.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR
+  }
+}
+async function u(e) {
   let {
     ticket: t,
     mfaType: n,
@@ -40,25 +56,24 @@ async function l(e) {
       retries: a
     });
     return e.body
-  } catch (e) {
-    var l;
-    if ((null === (l = e.body) || void 0 === l ? void 0 : l.code) === r.AbortCodes.MFA_INVALID_CODE) throw Error(o(n));
-    throw e
+  } catch (t) {
+    let e = l(n, t.body);
+    throw null != e ? Error(e) : t
   }
 }
 
-function u(e, t, i) {
-  let a = async e => {
-    let n = await l(e),
+function d(e, t, i) {
+  let r = async e => {
+    let n = await u(e),
       i = {
         "X-Discord-MFA-Authorization": n.token
       };
     return new Promise((n, s) => {
-      t(i, (t, i, a) => {
-        var l, u;
-        return (null === (l = t.body) || void 0 === l ? void 0 : l.code) === r.AbortCodes.MFA_INVALID_CODE || (null === (u = t.body) || void 0 === u ? void 0 : u.code) === r.AbortCodes.MFA_REQUIRED ? (s(Error(o(e.mfaType))), !0) : (n(), !1)
+      t(i, (t, i, r) => {
+        let a = l(e.mfaType, t.body);
+        return null != a ? (s(Error(a)), !0) : (n(), !1)
       })
     })
   };
-  e.methods = e.methods.filter(e => Object.hasOwn(s.SELECT_NAMES, e.type)), n("24287").openMFAModal(e, a, i)
+  e.methods = e.methods.filter(e => Object.hasOwn(s.SELECT_NAMES, e.type)), n("24287").openMFAModal(e, r, i)
 }

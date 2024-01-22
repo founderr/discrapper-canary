@@ -182,7 +182,7 @@ var R = {
       })
     }).catch(e => {
       var t;
-      if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === T.AbortCodes.MFA_INVALID_CODE) throw Error((0, g.mapError)(l));
+      if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === T.AbortCodes.MFA_INVALID_CODE) throw Error((0, g.getInvalidMFACodeError)(l));
       throw e
     })
   },

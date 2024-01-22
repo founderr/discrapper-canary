@@ -134,13 +134,21 @@ function I(e) {
     challenge: I
   } = t.methods.find(e => "webauthn" === e.type), C = async () => {
     _(!0), T(null);
-    let e = d.isPlatformEmbedded && f.default.supportsFeature(h.NativeFeatures.WEBAUTHN) ? f.default.webAuthnAuthenticate(I) : r.get(JSON.parse(I)).then(e => JSON.stringify(e));
+    let e = d.isPlatformEmbedded && f.default.supportsFeature(h.NativeFeatures.WEBAUTHN) ? f.default.webAuthnAuthenticate(I) : r.get(JSON.parse(I)).then(e => JSON.stringify(e)),
+      t = async e => {
+        try {
+          await n({
+            mfaType: "webauthn",
+            data: e
+          })
+        } catch (e) {
+          var t;
+          T(null !== (t = e.message) && void 0 !== t ? t : g.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR)
+        }
+      };
     try {
-      let t = await e;
-      await n({
-        mfaType: "webauthn",
-        data: t
-      })
+      let n = await e;
+      await t(n)
     } catch (e) {
       c.default.captureException(e), T(g.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR)
     } finally {
