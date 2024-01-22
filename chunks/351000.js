@@ -16157,7 +16157,7 @@ e.exports = {
   GUILD_SHOP_REMOVE_PREVIEW_PAGE_BUTTON: "Oldal elt\xe1vol\xedt\xe1sa",
   GUILD_SHOP_REMOVE_PREVIEW_TAB_BUTTON: "Lap elt\xe1vol\xedt\xe1sa",
   GUILD_SHOP_PREVIEW_CTA_BUTTON: "V\xe1gjunk bele",
-  USER_DISCONNECTED_SUBTEXT: "!!{username}!!, tov\xe1bbra is b\xe1rmikor csatlakozhatsz, am\xedg itt vagy!",
+  USER_DISCONNECTED_SUBTEXT: "!!{username}!!, tov\xe1bbra is b\xe1rmikor csatlakozhat, am\xedg itt vagy!",
   REPORTS_USER_BUTTON_TITLE: "Felhaszn\xe1l\xf3i profil jelent\xe9se",
   REPORTS_USER_PREVIEW_TITLE: "Kiv\xe1lasztott felhaszn\xe1l\xf3",
   REPORTS_FREE_TEXT_PLACEHOLDER: "(Nem k\xf6telező) Itt adhatsz meg tov\xe1bbi r\xe9szleteket a jelent\xe9sedről",
