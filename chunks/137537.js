@@ -15,5 +15,7 @@ e.exports = {
   open: "open__0960c",
   perksCards: "perksCards_e83187",
   perksDiscoverability: "perksDiscoverability__4242c",
+  seeAllPerksButton: "seeAllPerksButton_c90d04",
+  seeAllPerksButtonContent: "seeAllPerksButtonContent_f387e5",
   whatsNew: "whatsNew__2b2f9"
 }

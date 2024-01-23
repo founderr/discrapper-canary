@@ -45,33 +45,34 @@ var N = e => {
     className: t,
     variant: s = "perks_discoverability",
     noBackground: a = !1,
-    leftAlignHeaders: n = !1
-  } = e, i = r.useRef(null), o = (0, I.useShouldScrollToWhatsNew)(), _ = (0, c.default)("perks-discoverability");
+    leftAlignHeaders: n = !1,
+    showAllPerksButton: i
+  } = e, o = r.useRef(null), _ = (0, I.useShouldScrollToWhatsNew)(), E = (0, c.default)("perks-discoverability");
   (0, I.useClearNewBadge)();
-  let E = "whats_new" === s;
+  let S = "whats_new" === s;
   r.useEffect(() => {
-    let e = i.current;
-    if (null == e || !o || !E) return;
+    let e = o.current;
+    if (null == e || !_ || !S) return;
     let t = requestAnimationFrame(() => {
       e.scrollIntoView({
         behavior: "smooth"
       })
     });
     return () => cancelAnimationFrame(t)
-  }, [i, o, E]);
-  let S = (0, f.default)(),
-    R = p(E),
-    N = [];
+  }, [o, _, S]);
+  let R = (0, f.default)(),
+    N = p(S),
+    g = [];
   switch (s) {
     case "perks_discoverability":
-      N = [S.profiles, S.clientThemes, S.serverBoosts];
+      g = [R.profiles, R.clientThemes, R.serverBoosts];
       break;
     case "whats_new":
-      N = [S.earlyAccess, _ !== c.CollectiblesShopMarketingVariants.DEFAULT ? S.specialShopPerks : S.specialMemberPricing, S.unlimitedSuperReactions]
+      g = [R.earlyAccess, E !== c.CollectiblesShopMarketingVariants.DEFAULT ? R.specialShopPerks : R.specialMemberPricing, R.unlimitedSuperReactions]
   }
-  let g = N.some(e => null != e.pillText);
+  let A = g.some(e => null != e.pillText);
   return (0, l.jsxs)("div", {
-    ref: i,
+    ref: o,
     className: u(m.section, {
       [m.centerAlignSection]: !n,
       [m.leftAlignSection]: n
@@ -80,23 +81,26 @@ var N = e => {
       variant: "heading-xxl/extrabold",
       color: "header-primary",
       className: m.heading,
-      children: R.title
+      children: N.title
     }), (0, l.jsx)(d.Text, {
       variant: "text-lg/normal",
       color: "header-primary",
       className: u(m.subtitle, {
-        [m.fullWidth]: E || n,
-        [m.moreSubtitleMargin]: g,
+        [m.fullWidth]: S || n,
+        [m.moreSubtitleMargin]: A,
         [m.leftAlignSubtitle]: n,
         [m.centerAlignSubtitle]: !n
       }),
-      children: R.subtitle
-    }), (0, l.jsx)("div", {
+      children: N.subtitle
+    }), (0, l.jsxs)("div", {
       className: m.cardContainer,
-      children: N.map((e, t) => (0, l.jsx)(T.default, {
+      children: [g.map((e, t) => (0, l.jsx)(T.default, {
         ...e,
         forceShadow: a
-      }, "".concat(e.name, "_").concat(t)))
+      }, "".concat(e.name, "_").concat(t))), null != i && (0, l.jsx)("div", {
+        className: m.showAllPerksButton,
+        children: i
+      })]
     })]
   })
 }
