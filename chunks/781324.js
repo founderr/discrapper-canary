@@ -26,12 +26,14 @@ async function u() {
     } = t, {
       classifications: a,
       guild_classifications: n,
-      account_standing: s
-    } = e, l = a.map(t => (o(t), t));
+      account_standing: s,
+      is_dsa_eligible: l
+    } = e, r = a.map(t => (o(t), t));
     i.default.dispatch({
       type: "SAFETY_HUB_FETCH_SUCCESS",
-      classifications: l.concat(null != n ? n : []),
-      accountStanding: s
+      classifications: r.concat(null != n ? n : []),
+      accountStanding: s,
+      isDsaEligible: l
     })
   }).catch(t => {
     var e, a;

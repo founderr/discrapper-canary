@@ -73,9 +73,10 @@ var m = new C(l.default, {
   SAFETY_HUB_FETCH_SUCCESS: function(t) {
     let {
       classifications: e,
-      accountStanding: a
+      accountStanding: a,
+      isDsaEligible: n
     } = t;
-    c = i(e, "id"), d = a, _ = !1, S = !0, f = null
+    c = i(e, "id"), d = a, T = n, _ = !1, S = !0, f = null
   },
   SAFETY_HUB_FETCH_FAILURE: function(t) {
     let {
