@@ -132,7 +132,7 @@ var R = {
       })
     }, e => {
       var t, s, r;
-      if ((null === (t = e.body) || void 0 === t ? void 0 : t.suspended_user_token) != null) {
+      if (null != e.body && (null === (t = e.body) || void 0 === t ? void 0 : t.suspended_user_token) != null) {
         d.default.dispatch({
           type: "LOGIN_SUSPENDED_USER",
           suspendedUserToken: null === (r = e.body) || void 0 === r ? void 0 : r.suspended_user_token
@@ -189,7 +189,7 @@ var R = {
       })
     }).catch(e => {
       var t;
-      if (null != e.body.suspended_user_token) {
+      if (null != e.body && null != e.body.suspended_user_token) {
         d.default.dispatch({
           type: "LOGIN_SUSPENDED_USER",
           suspendedUserToken: e.body.suspended_user_token
