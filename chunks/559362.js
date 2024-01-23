@@ -42,7 +42,9 @@ function T(e) {
         }),
         showOpenDiscord: !1
       }) : (0, r.jsx)(u.BenefitsConfirmation, {
-        listing: n,
+        icon: n.image_asset,
+        storeListingBenefits: n.store_listing_benefits,
+        skuBenefits: n.sku_benefits.benefits,
         application: t,
         title: S.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_TITLE_V2.format({
           tier: n.name

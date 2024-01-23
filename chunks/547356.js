@@ -58,7 +58,7 @@ let u = e => {
 function o(e) {
   let {
     onConfirm: t,
-    listing: n,
+    tierName: n,
     subscription: u
   } = e;
   return (0, r.jsxs)("div", {
@@ -67,7 +67,7 @@ function o(e) {
       className: a.confirmationHeader,
       variant: "heading-lg/extrabold",
       children: s.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({
-        tier: n.name
+        tier: n
       })
     }), (0, r.jsx)(i.Text, {
       className: a.confirmationSubtitle,

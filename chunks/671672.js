@@ -69,7 +69,9 @@ function C(e) {
     onConfirm: x,
     confirmCta: m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
   }) : (t = (0, r.jsx)(d.BenefitsConfirmation, {
-    listing: h,
+    icon: h.image_asset,
+    storeListingBenefits: h.store_listing_benefits,
+    skuBenefits: h.sku_benefits.benefits,
     application: C,
     title: m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({
       tier: h.name
@@ -85,11 +87,11 @@ function C(e) {
     primaryCTA: S.CTAType.CONTINUE,
     primaryText: m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
   })) : t = M ? (0, r.jsx)(f.PurchaseConfirmationLite, {
-    listing: h,
+    tierName: h.name,
     onConfirm: x,
     subscription: g
   }) : (0, r.jsx)(d.PurchaseConfirmation, {
-    listing: h,
+    tierName: h.name,
     onConfirm: x,
     subscription: g
   }), i.useEffect(() => {
