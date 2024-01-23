@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   usePriceTiers: function() {
-    return s
+    return o
   },
   useMonetizationSettings: function() {
     return a
@@ -11,15 +11,15 @@ var i = n("884691"),
   r = n("446674"),
   l = n("837008"),
   u = n("763913"),
-  o = n("670535");
+  s = n("670535");
 
-function s(e, t) {
-  let n = (0, r.useStateFromStores)([o.default], () => o.default.getPriceTiersForGuildAndType(e, t)),
-    l = (0, r.useStateFromStores)([o.default], () => o.default.getPriceTiersFetchStateForGuildAndType(e, t));
+function o(e, t) {
+  let n = (0, r.useStateFromStores)([s.default], () => s.default.getPriceTiersForGuildAndType(e, t)),
+    l = (0, r.useStateFromStores)([s.default], () => s.default.getPriceTiersFetchStateForGuildAndType(e, t));
   return i.useEffect(() => {
-    l === o.FetchState.NOT_FETCHED && (0, u.fetchPriceTiers)(e, t)
+    l === s.FetchState.NOT_FETCHED && (0, u.fetchPriceTiers)(e, t)
   }, [e, l, t]), {
-    loading: l === o.FetchState.FETCHING,
+    loading: l === s.FetchState.FETCHING,
     priceTiers: n
   }
 }

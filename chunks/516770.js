@@ -12,8 +12,8 @@ n("884691");
 var r = n("77078"),
   l = n("449918"),
   u = n("20606"),
-  o = n("832132"),
-  s = n("952479"),
+  s = n("832132"),
+  o = n("952479"),
   a = n("49111"),
   d = n("782340"),
   c = n("495323");
@@ -23,7 +23,7 @@ function f(e) {
     label: t,
     backgroundColor: n = u.default.BUTTON_SECONDARY_BACKGROUND,
     icon: l,
-    iconColor: o
+    iconColor: s
   } = e;
   return (0, i.jsxs)("div", {
     className: c.badge,
@@ -37,7 +37,7 @@ function f(e) {
       children: t
     }), (0, i.jsx)(l, {
       className: c.badgeIcon,
-      color: null != o ? o : "currentColor",
+      color: null != s ? s : "currentColor",
       "aria-hidden": !0
     })]
   })
@@ -47,14 +47,14 @@ function S() {
   return (0, i.jsx)(f, {
     label: d.default.Messages.GUILD_PRODUCT_STATUS_BADGE_PUBLISHED,
     backgroundColor: "#207B8D",
-    icon: s.default
+    icon: o.default
   })
 }
 
 function E() {
   return (0, i.jsx)(f, {
     label: d.default.Messages.GUILD_PRODUCT_STATUS_BADGE_DRAFT,
-    icon: o.default,
+    icon: s.default,
     iconColor: (0, l.getColor)(a.Color.PRIMARY_330)
   })
 }

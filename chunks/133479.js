@@ -10,8 +10,8 @@ var n = a("37983"),
   l = a("446674"),
   r = a("669491"),
   u = a("891128"),
-  c = a("165984"),
-  o = a("505088"),
+  o = a("165984"),
+  c = a("505088"),
   d = a("77078"),
   _ = a("697218"),
   S = a("908539"),
@@ -59,21 +59,21 @@ function g() {
         title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_TITLE,
         description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_DESCRIPTION,
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_SHORT,
-        Icon: c.CircleExclamationPointIcon,
+        Icon: o.CircleExclamationPointIcon,
         color: r.default.colors.STATUS_WARNING
       },
       [S.AccountStandingState.VERY_LIMITED]: {
         title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_TITLE,
         description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_DESCRIPTION,
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_SHORT,
-        Icon: c.CircleExclamationPointIcon,
+        Icon: o.CircleExclamationPointIcon,
         color: r.default.unsafe_rawColors.ORANGE_345
       },
       [S.AccountStandingState.AT_RISK]: {
         title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_TITLE,
         description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_DESCRIPTION,
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_SHORT,
-        Icon: c.CircleExclamationPointIcon,
+        Icon: o.CircleExclamationPointIcon,
         color: r.default.colors.STATUS_DANGER
       },
       [S.AccountStandingState.SUSPENDED]: {
@@ -83,17 +83,17 @@ function g() {
           communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
         }),
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_SHORT,
-        Icon: o.CircleXIcon,
+        Icon: c.CircleXIcon,
         color: r.default.colors.ICON_MUTED
       }
     },
     {
       title: p,
       description: x,
-      color: h,
-      Icon: U
+      color: U,
+      Icon: h
     } = m[t.state],
-    O = Object.keys(m).length;
+    H = Object.keys(m).length;
   return (0, n.jsxs)(d.Card, {
     className: I.container,
     outline: !1,
@@ -113,7 +113,7 @@ function g() {
           children: p.format({
             hook: t => (0, n.jsx)(d.Text, {
               style: {
-                color: h.css
+                color: U.css
               },
               variant: "heading-lg/bold",
               tag: "span",
@@ -137,14 +137,14 @@ function g() {
           return (0, n.jsxs)("div", {
             className: I.statusOption,
             ref: t => N.current[parseInt(i)] = t,
-            children: [l ? (0, n.jsx)(U, {
+            children: [l ? (0, n.jsx)(h, {
               className: I.marker,
               color: s.color
             }) : (0, n.jsx)("div", {
               className: I.marker,
               style: {
                 marginLeft: 0 === a ? -6 : 0,
-                marginRight: a === O - 1 ? -6 : 0
+                marginRight: a === H - 1 ? -6 : 0
               },
               children: (0, n.jsx)("div", {
                 className: I.empty

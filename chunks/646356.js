@@ -10,8 +10,8 @@ var n = a("816494"),
   l = a("913144"),
   r = a("908539"),
   u = a("170213");
-let c = {},
-  o = {},
+let o = {},
+  c = {},
   d = {
     state: r.AccountStandingState.ALL_GOOD
   },
@@ -29,10 +29,10 @@ class C extends s.default.Store {
     return _
   }
   getClassifications() {
-    return Object.values(c)
+    return Object.values(o)
   }
   getClassification(t) {
-    return c[t]
+    return o[t]
   }
   getAccountStanding() {
     return d
@@ -44,7 +44,7 @@ class C extends s.default.Store {
     return S
   }
   getClassificationRequestState(t) {
-    return o[t]
+    return c[t]
   }
   getAppealClassificationId() {
     return E
@@ -76,7 +76,7 @@ var m = new C(l.default, {
       accountStanding: a,
       isDsaEligible: n
     } = t;
-    c = i(e, "id"), d = a, T = n, _ = !1, S = !0, f = null
+    o = i(e, "id"), d = a, T = n, _ = !1, S = !0, f = null
   },
   SAFETY_HUB_FETCH_FAILURE: function(t) {
     let {
@@ -85,7 +85,7 @@ var m = new C(l.default, {
     _ = !1, S = !1, f = e
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_START: function(t) {
-    o[t.classificationId] = r.ClassificationRequestState.PENDING, _ = !0
+    c[t.classificationId] = r.ClassificationRequestState.PENDING, _ = !0
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function(t) {
     let {
@@ -93,14 +93,14 @@ var m = new C(l.default, {
       accountStanding: a,
       isDsaEligible: n
     } = t;
-    c[e.id] = e, o[e.id] = r.ClassificationRequestState.SUCCESS, d = a, _ = !1, f = null, T = n
+    o[e.id] = e, c[e.id] = r.ClassificationRequestState.SUCCESS, d = a, _ = !1, f = null, T = n
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(t) {
     let {
       error: e,
       classificationId: a
     } = t;
-    _ = !1, f = e, o[a] = r.ClassificationRequestState.FAILED
+    _ = !1, f = e, c[a] = r.ClassificationRequestState.FAILED
   },
   SAFETY_HUB_APPEAL_OPEN: function(t) {
     let {
@@ -138,7 +138,7 @@ var m = new C(l.default, {
     A = !1, I = e
   },
   LOGOUT: function() {
-    _ = !1, c = {}, d = {
+    _ = !1, o = {}, d = {
       state: r.AccountStandingState.ALL_GOOD
     }, E = null, g = u.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, N = ""
   }

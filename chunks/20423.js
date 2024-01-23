@@ -18,8 +18,8 @@
       T = t("50885"),
       O = t("956966"),
       R = t("773336"),
-      w = t("393414"),
-      v = t("741148"),
+      v = t("393414"),
+      w = t("741148"),
       S = t("336921"),
       A = t("862337"),
       N = t("49671"),
@@ -64,11 +64,11 @@
         window.onbeforeunload = () => T.default.beforeUnload(), T.default.on("HELP_OPEN", () => window.open(g.default.getCommunityURL()));
         let e = new A.DelayedCall(k, () => T.default.purgeMemory());
         T.default.on("MAIN_WINDOW_BLUR", () => {
-          e.delay(), T.default.setFocused(!1), (0, v.focus)(window, !1)
+          e.delay(), T.default.setFocused(!1), (0, w.focus)(window, !1)
         }), T.default.on("MAIN_WINDOW_FOCUS", () => {
-          e.cancel(), T.default.setFocused(!0), (0, v.focus)(window, !0)
-        }), T.default.on("MAIN_WINDOW_PATH", (e, a) => (0, w.transitionTo)(a)), T.default.on("MAIN_WINDOW_HIDDEN", () => {
-          (0, v.hidden)(window)
+          e.cancel(), T.default.setFocused(!0), (0, w.focus)(window, !0)
+        }), T.default.on("MAIN_WINDOW_PATH", (e, a) => (0, v.transitionTo)(a)), T.default.on("MAIN_WINDOW_HIDDEN", () => {
+          (0, w.hidden)(window)
         })
       }
       h.default.initialize(), p.default.init(), _.default.init(), j.default.init(), P.default.init(), b.default.initialize(), I.default.initialize(), O.default.initialize(), m.initialize(), G(u.default.App)

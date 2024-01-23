@@ -8,8 +8,8 @@ var i = n("37983"),
   r = n("884691"),
   l = n("414456"),
   u = n.n(l),
-  o = n("77078"),
-  s = n("766274"),
+  s = n("77078"),
+  o = n("766274"),
   a = n("368121"),
   d = n("519657"),
   c = n("486425");
@@ -58,12 +58,12 @@ class f extends r.PureComponent {
         onClick: l,
         size: a,
         guildId: f
-      } = this.props, S = e instanceof s.default ? e : null != e ? e.user : null;
+      } = this.props, S = e instanceof o.default ? e : null != e ? e.user : null;
       return null == S ? (0, i.jsx)("div", {
         className: u(d.emptyUser, t)
-      }, n) : (0, i.jsx)(o.Avatar, {
+      }, n) : (0, i.jsx)(s.Avatar, {
         tabIndex: 0,
-        src: S.getAvatarURL(f, (0, o.getAvatarSize)(a)),
+        src: S.getAvatarURL(f, (0, s.getAvatarSize)(a)),
         size: a,
         "aria-label": S.username,
         className: u(t, c.cursorPointer, d.avatarSize),
@@ -80,6 +80,6 @@ f.defaultProps = {
       children: e
     }, n)
   },
-  size: o.AvatarSizes.SIZE_24
+  size: s.AvatarSizes.SIZE_24
 };
 var S = f

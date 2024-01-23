@@ -8,8 +8,8 @@ var i = n("759843"),
   r = n("627929"),
   l = n("913144"),
   u = n("81732"),
-  o = n("282109"),
-  s = n("34676"),
+  s = n("282109"),
+  o = n("34676"),
   a = n("840707"),
   d = n("519705"),
   c = n("49111"),
@@ -54,9 +54,9 @@ var i = n("759843"),
             })
           }
         }
-      }).then(e => (o.default.isOptInEnabled(t) && d.default.updateChannelOverrideSettings(t, e.body.id, {
+      }).then(e => (s.default.isOptInEnabled(t) && d.default.updateChannelOverrideSettings(t, e.body.id, {
         flags: f.ChannelNotificationSettingsFlags.OPT_IN_ENABLED
-      }, s.NotificationLabels.OptedIn), u.default.checkGuildTemplateDirty(t), e), e => {
+      }, o.NotificationLabels.OptedIn), u.default.checkGuildTemplateDirty(t), e), e => {
         throw l.default.dispatch({
           type: "CREATE_CHANNEL_MODAL_SUBMIT_FAILURE",
           errors: e.body

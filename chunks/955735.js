@@ -8,8 +8,8 @@ var i = n("37983"),
   r = n("884691"),
   l = n("414456"),
   u = n.n(l),
-  o = n("77078"),
-  s = n("511606");
+  s = n("77078"),
+  o = n("511606");
 
 function a(e) {
   let {
@@ -17,9 +17,9 @@ function a(e) {
     ...n
   } = e, [l, u] = r.useState(!0);
   return (0, i.jsxs)(i.Fragment, {
-    children: [l && (0, i.jsx)(o.Spinner, {
-      type: o.Spinner.Type.LOW_MOTION,
-      className: s.loader
+    children: [l && (0, i.jsx)(s.Spinner, {
+      type: s.Spinner.Type.LOW_MOTION,
+      className: o.loader
     }), (0, i.jsx)("img", {
       ...n,
       alt: t,
@@ -34,27 +34,27 @@ function d(e) {
     backgroundSrc: n,
     alt: r,
     aspectRatio: l,
-    className: o,
+    className: s,
     imageChildClassName: d,
     ...c
   } = e;
   return (0, i.jsxs)("div", {
-    className: u(s.container, o),
+    className: u(o.container, s),
     children: [(0, i.jsx)("img", {
       src: n,
       alt: r,
-      className: s.backgroundImage
+      className: o.backgroundImage
     }), (0, i.jsx)("div", {
-      className: s.backgroundImageFilter
+      className: o.backgroundImageFilter
     }), (0, i.jsx)("div", {
       style: {
         aspectRatio: l
       },
-      className: s.imageContainer,
+      className: o.imageContainer,
       children: (0, i.jsx)(a, {
         src: t,
         alt: r,
-        className: u(s.image, d),
+        className: u(o.image, d),
         ...c
       })
     })]

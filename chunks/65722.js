@@ -18,8 +18,8 @@ n.r(t), n.d(t, {
 });
 var i, r, l = n("446674"),
   u = n("7331"),
-  o = n("465869"),
-  s = n("957255"),
+  s = n("465869"),
+  o = n("957255"),
   a = n("697218"),
   d = n("808388"),
   c = n("49111");
@@ -35,9 +35,9 @@ function f(e) {
         isGuildEligibleForRoleSubscriptions: r,
         isExpeditedMonetizationOnboardingGuild: l,
         isUserInCreatorMonetizationEligibleCountry: u,
-        shouldRestrictUpdatingRoleSubscriptionSettings: o
+        shouldRestrictUpdatingRoleSubscriptionSettings: s
       } = e;
-      return !!t.hasFeature(c.GuildFeatures.COMMUNITY) && !!i && (!o || !!n) && (!!(t.hasFeature(c.GuildFeatures.CREATOR_MONETIZABLE) || t.hasFeature(c.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!r || !!l) && n && u)
+      return !!t.hasFeature(c.GuildFeatures.COMMUNITY) && !!i && (!s || !!n) && (!!(t.hasFeature(c.GuildFeatures.CREATOR_MONETIZABLE) || t.hasFeature(c.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) || (!!r || !!l) && n && u)
     }(e)) return 3;
   let {
     guild: t,
@@ -59,17 +59,17 @@ function E(e) {
     n = (0, u.useIsExpeditedOnboardingGuild)(e),
     i = (0, u.useIsMonetizationWaitlistEnabledForGuild)(null == e ? void 0 : e.id),
     r = h(e),
-    s = (0, l.useStateFromStores)([a.default], () => {
+    o = (0, l.useStateFromStores)([a.default], () => {
       let t = a.default.getCurrentUser();
       return null != t && (null == e ? void 0 : e.isOwner(t)) === !0
     }),
     c = (0, u.useIsUserInCreatorMonetizationEligibleCountry)(),
     {
       shouldRestrictUpdatingCreatorMonetizationSettings: S
-    } = (0, o.useShouldRestrictUpdatingCreatorMonetizationSettings)(null == e ? void 0 : e.id);
+    } = (0, s.useShouldRestrictUpdatingCreatorMonetizationSettings)(null == e ? void 0 : e.id);
   return null == e ? 0 : f({
     guild: e,
-    isOwner: s,
+    isOwner: o,
     canManageGuildRoleSubscriptions: r,
     isGuildEligibleForRoleSubscriptions: t,
     isMonetizationWaitlistEnabledForGuild: i,
@@ -80,10 +80,10 @@ function E(e) {
 }
 
 function h(e) {
-  let t = (0, l.useStateFromStores)([s.default], () => g(e), [e]);
+  let t = (0, l.useStateFromStores)([o.default], () => g(e), [e]);
   return t
 }
 
 function g(e) {
-  return null != e && s.default.can(c.Permissions.ADMINISTRATOR, e)
+  return null != e && o.default.can(c.Permissions.ADMINISTRATOR, e)
 }

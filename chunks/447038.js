@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return u
   },
   updateMemberSafetyTablePaginationV2: function() {
-    return o
+    return s
   },
   updateSearchStateV2: function() {
-    return s
+    return o
   },
   getMemberSupplementalV2: function() {
     return a
@@ -32,7 +32,7 @@ function u(e) {
   })
 }
 
-function o(e, t) {
+function s(e, t) {
   let {
     continuationToken: n,
     ...r
@@ -43,7 +43,7 @@ function o(e, t) {
     pagination: r
   })
 }
-async function s(e, t) {
+async function o(e, t) {
   await i.default.dispatch({
     type: "MEMBER_SAFETY_SEARCH_STATE_UPDATE",
     guildId: e,

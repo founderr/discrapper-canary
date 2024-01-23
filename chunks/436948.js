@@ -26,9 +26,9 @@
     let T = {},
       O = new u.Timeout,
       R = !1,
-      w = window.document.createElement("canvas");
-    w.width = 512, w.height = 288;
-    let v = w.getContext("2d");
+      v = window.document.createElement("canvas");
+    v.width = 512, v.height = 288;
+    let w = v.getContext("2d");
 
     function S() {
       O.stop(), null != d && (f.default.removeSink(d, T), d = null)
@@ -102,16 +102,16 @@
             d = Math.min(a, t),
             s = e.width * d,
             n = e.height * d;
-          w.width = s, w.height = n;
+          v.width = s, v.height = n;
           let c = window.document.createElement("canvas"),
             i = c.getContext("2d");
           c.width = e.width, c.height = e.height;
           let r = new ImageData(e.data, e.width, e.height);
           return null == i || i.putImageData(r, 0, 0), new Promise(a => {
-            null == v || v.drawImage(c, 0, 0, e.width, e.height, 0, 0, s, n), a()
+            null == w || w.drawImage(c, 0, 0, e.width, e.height, 0, 0, s, n), a()
           })
         }(t);
-        let s = w.toDataURL("image/jpeg");
+        let s = v.toDataURL("image/jpeg");
         if (p.default.dispatch({
             type: "STREAM_PREVIEW_FETCH_SUCCESS",
             streamKey: a,

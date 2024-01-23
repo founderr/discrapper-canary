@@ -27,8 +27,8 @@ var a = n("37983"),
   E = n("510889"),
   m = n("699473"),
   p = n("393414"),
-  g = n("161778"),
-  S = n("42203"),
+  S = n("161778"),
+  g = n("42203"),
   N = n("377253"),
   _ = n("957255"),
   T = n("600133"),
@@ -156,7 +156,7 @@ function F(e) {
     renderHeader: h,
     renderEmptyState: m,
     renderItem: p,
-    getProTip: S,
+    getProTip: g,
     scrollerClassName: N,
     className: _,
     listName: A
@@ -194,7 +194,7 @@ function F(e) {
     className: i(L.emptyPlaceholder, L.loadingPlaceholder),
     children: (0, a.jsx)(c.Spinner, {})
   }, "spinner")] : 0 === n.length ? U.push((0, a.jsx)(l.Fragment, {
-    children: m(g.default.theme)
+    children: m(S.default.theme)
   }, "empty-state")) : (k = !1, U = [], o.each(n, e => {
     U.push(...p(e))
   }));
@@ -213,9 +213,9 @@ function F(e) {
     })
   }) : (0, a.jsx)("div", {
     className: L.scrollingFooterWrap,
-    children: m(g.default.theme)
+    children: m(S.default.theme)
   }));
-  let w = null == S ? void 0 : S(),
+  let w = null == g ? void 0 : g(),
     G = k && null != w ? (0, a.jsx)("div", {
       className: L.footer,
       children: (0, a.jsx)(C.default, {
@@ -276,7 +276,7 @@ function U(e) {
     loadMore: u,
     onJump: c,
     canCloseAllMessages: E = !1,
-    renderHeader: g,
+    renderHeader: S,
     renderEmptyState: _,
     renderMessage: T,
     getProTip: I,
@@ -304,7 +304,7 @@ function U(e) {
       confirmText: R.default.Messages.OKAY
     });
     else if (!O) {
-      let e = S.default.getChannel(i);
+      let e = g.default.getChannel(i);
       null != e && (h.default.trackJump(i, a, t), (0, p.transitionTo)(x.Routes.CHANNEL(e.getGuildId(), i, a))), null == c || c(n)
     }
   }
@@ -322,7 +322,7 @@ function U(e) {
     loading: o,
     analyticsName: t,
     renderEmptyState: _,
-    renderHeader: g,
+    renderHeader: S,
     hasMore: r,
     loadMore: u,
     getProTip: I,

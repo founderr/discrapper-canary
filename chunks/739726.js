@@ -12,8 +12,8 @@ n("884691");
 var r = n("414456"),
   l = n.n(r),
   u = n("77078"),
-  o = n("272030"),
-  s = n("801765"),
+  s = n("272030"),
+  o = n("801765"),
   a = n("191814"),
   d = n("195812"),
   c = n("83900"),
@@ -31,8 +31,8 @@ function C(e) {
     showUnpublishProduct: n,
     showCopyLink: r,
     showTestDownload: l,
-    showDeleteProduct: o,
-    showReportProduct: s,
+    showDeleteProduct: s,
+    showReportProduct: o,
     onEditProduct: a,
     onUnpublishProduct: f,
     onDeleteProduct: S,
@@ -70,14 +70,14 @@ function C(e) {
           id: "guild-product-unpublish",
           label: p.default.Messages.GUILD_PRODUCT_UNPUBLISH,
           action: f
-        }), o && (0, i.jsx)(u.MenuItem, {
+        }), s && (0, i.jsx)(u.MenuItem, {
           id: "guild-product-delete",
           label: p.default.Messages.GUILD_PRODUCT_DELETE,
           color: "danger",
           action: S
         })]
       }), (0, i.jsx)(u.MenuGroup, {
-        children: s && (0, i.jsx)(u.MenuItem, {
+        children: o && (0, i.jsx)(u.MenuItem, {
           id: "guild-product-report",
           label: p.default.Messages.GUILD_PRODUCT_REPORT,
           color: "danger",
@@ -94,8 +94,8 @@ function m(e) {
     guildId: n,
     showEditProduct: r,
     showUnpublishProduct: l,
-    showTestDownload: o,
-    showCopyLink: s,
+    showTestDownload: s,
+    showCopyLink: o,
     showDeleteProduct: a,
     showReportProduct: d,
     onEditProduct: c,
@@ -120,8 +120,8 @@ function m(e) {
         productId: t.id,
         showEditProduct: r,
         showUnpublishProduct: l,
-        showCopyLink: s,
-        showTestDownload: o,
+        showCopyLink: o,
+        showTestDownload: s,
         showReportProduct: d,
         showDeleteProduct: a,
         onEditProduct: c,
@@ -163,7 +163,7 @@ function I(e) {
     onCopyProductLink: f,
     onTestDownload: I,
     disabled: T = !1
-  } = e, v = (0, s.useListingThumbnailUrl)(t, 600), N = null !== t.price_tier ? (0, S.formatPrice)(t.price_tier, g.CurrencyCodes.USD) : void 0, R = (0, E.useProductType)(t);
+  } = e, v = (0, o.useListingThumbnailUrl)(t, 600), R = null !== t.price_tier ? (0, S.formatPrice)(t.price_tier, g.CurrencyCodes.USD) : void 0, N = (0, E.useProductType)(t);
   return (0, i.jsxs)(u.ClickableContainer, {
     tag: "article",
     className: l(_.productCardClickable, _.productCard, {
@@ -171,9 +171,9 @@ function I(e) {
     }),
     onClick: T ? void 0 : r,
     onContextMenu: function(e) {
-      (0, o.openContextMenuLazy)(e, () => Promise.resolve(e => (0, i.jsx)(C, {
+      (0, s.openContextMenuLazy)(e, () => Promise.resolve(e => (0, i.jsx)(C, {
         ...e,
-        closePopout: o.closeContextMenu,
+        closePopout: s.closeContextMenu,
         guildId: n,
         productId: t.id,
         showEditProduct: !0,
@@ -213,14 +213,14 @@ function I(e) {
           children: [(0, i.jsx)(u.Text, {
             variant: "text-md/normal",
             color: "header-secondary",
-            children: N
-          }), null != R ? (0, i.jsxs)(i.Fragment, {
+            children: R
+          }), null != N ? (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)("div", {
               className: _.dotSeparator
             }), (0, i.jsx)(u.Text, {
               variant: "text-md/normal",
               color: "header-secondary",
-              children: R
+              children: N
             })]
           }) : null]
         }), (0, i.jsx)(a.default, {

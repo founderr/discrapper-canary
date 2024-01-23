@@ -9,8 +9,8 @@ n("884691");
 var r = n("414456"),
   l = n.n(r),
   u = n("446674"),
-  o = n("77078"),
-  s = n("51565"),
+  s = n("77078"),
+  o = n("51565"),
   a = n("95039"),
   d = n("863921"),
   c = n("26989"),
@@ -31,10 +31,10 @@ function C(e) {
     let e = f.default.getCurrentUser();
     return c.default.isMember(t.id, null == e ? void 0 : e.id)
   }), {
-    premiumTier: s,
+    premiumTier: o,
     premiumSubscriberCount: S
   } = t;
-  if (0 === S && s === g.BoostedGuildTiers.NONE) return null;
+  if (0 === S && o === g.BoostedGuildTiers.NONE) return null;
   let E = e => {
       e.stopPropagation(), e.preventDefault(), l && !r && (0, a.openGuildBoostingMarketingModal)({
         guildId: t.id,
@@ -44,7 +44,7 @@ function C(e) {
         }
       })
     },
-    C = s === g.BoostedGuildTiers.NONE ? p.default.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : h.getTierName(s),
+    C = o === g.BoostedGuildTiers.NONE ? p.default.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : h.getTierName(o),
     m = (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("div", {
         className: _.tierTooltipTitle,
@@ -57,18 +57,18 @@ function C(e) {
     });
   return (0, i.jsx)("div", {
     className: _.guildIconContainer,
-    children: (0, i.jsx)(o.Tooltip, {
+    children: (0, i.jsx)(s.Tooltip, {
       text: m,
       position: "bottom",
       "aria-label": null != C ? C : "",
-      children: e => (0, i.jsx)(o.Clickable, {
+      children: e => (0, i.jsx)(s.Clickable, {
         ...e,
         className: _.premiumGuildIcon,
         onClick: E,
         children: (0, i.jsx)(d.default, {
-          premiumTier: s,
+          premiumTier: o,
           iconBackgroundClassName: n ? _.boostedGuildTierIconBackgroundWithVisibleBanner : null,
-          iconClassName: n && s !== g.BoostedGuildTiers.TIER_3 ? _.boostedGuildTierMutedIconWithVisibleBanner : null
+          iconClassName: n && o !== g.BoostedGuildTiers.TIER_3 ? _.boostedGuildTierMutedIconWithVisibleBanner : null
         })
       })
     })
@@ -80,13 +80,13 @@ function m(e) {
     guild: t,
     disableColor: n,
     disableBoostClick: r
-  } = e, u = (0, s.default)(t);
+  } = e, u = (0, o.default)(t);
   return u ? (0, i.jsx)("div", {
     className: _.guildIconV2Container,
     children: (0, i.jsx)(E.default, {
       guild: t,
       tooltipPosition: "bottom",
-      tooltipColor: o.Tooltip.Colors.PRIMARY,
+      tooltipColor: s.Tooltip.Colors.PRIMARY,
       className: l(_.guildBadge, {
         [_.disableColor]: n
       }),
@@ -97,7 +97,7 @@ function m(e) {
     children: (0, i.jsx)(S.default, {
       guild: t,
       tooltipPosition: "bottom",
-      tooltipColor: o.Tooltip.Colors.PRIMARY,
+      tooltipColor: s.Tooltip.Colors.PRIMARY,
       className: l(_.guildBadge, {
         [_.disableColor]: n
       })
@@ -110,7 +110,7 @@ function I(e) {
     guild: t,
     isBannerVisible: n,
     disableBoostClick: r
-  } = e, l = (0, s.default)(t);
+  } = e, l = (0, o.default)(t);
   if (l) return (0, i.jsx)(m, {
     guild: t,
     disableColor: !1,

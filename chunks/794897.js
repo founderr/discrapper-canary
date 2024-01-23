@@ -20,9 +20,9 @@ let g = null,
   h = new u.ExtendedMemoryLru(750, 500),
   m = new o.Lru(15),
   S = !1;
-class p extends a.default.Store {
+class M extends a.default.Store {
   initialize() {
-    this.waitFor(s.default), this.waitFor(r.default), this.waitFor(i.default), this.syncWith([d.default], () => !0), this.syncWith([r.default], M)
+    this.waitFor(s.default), this.waitFor(r.default), this.waitFor(i.default), this.syncWith([d.default], () => !0), this.syncWith([r.default], p)
   }
   canEvictOrphans() {
     return S
@@ -79,54 +79,54 @@ class p extends a.default.Store {
   static dropUnreachableChannels() {
     for (let e of h.keys()) {
       let t = s.default.getBasicChannel(e);
-      !(0, f.isReadableChannel)(t) && p.deleteChannel(e)
+      !(0, f.isReadableChannel)(t) && M.deleteChannel(e)
     }
   }
   static deleteUnreadableGuildChannels(e) {
-    for (let t of h.values()) e === t.guildId && !(0, f.isReadableChannelId)(t.channelId) && p.deleteChannel(t.channelId)
+    for (let t of h.values()) e === t.guildId && !(0, f.isReadableChannelId)(t.channelId) && M.deleteChannel(t.channelId)
   }
   static replaceLru(e) {
     h = e
   }
 }
 
-function M() {
+function p() {
   let e = r.default.getChannelId();
-  null != e && p.recordChannel(e)
+  null != e && M.recordChannel(e)
 }
 
-function T(e) {
+function A(e) {
   let t = e.id,
     n = (0, f.isReadableChannel)(e),
     a = r.default.getChannelId();
-  n && t === a && p.recordChannel(t), !n && p.deleteChannel(t)
+  n && t === a && M.recordChannel(t), !n && M.deleteChannel(t)
 }
-var I = new p(l.default, {
+var I = new M(l.default, {
   CACHE_LOADED_LAZY_NO_CACHE: function(e) {
     S = !0
   },
   CACHE_LOADED_LAZY: function(e) {
-    S = !0, null != e.saveableChannels && p.mergeSnapshot(e.saveableChannels)
+    S = !0, null != e.saveableChannels && M.mergeSnapshot(e.saveableChannels)
   },
   CHANNEL_DELETE: function(e) {
-    p.deleteChannel(e.channel.id)
+    M.deleteChannel(e.channel.id)
   },
   CHANNEL_UPDATES: function(e) {
-    for (let t of e.channels) T(t)
+    for (let t of e.channels) A(t)
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function() {
-    p.dropUnreachableChannels(), p.replaceLru((0, _.withFallbacks)(h, 1250))
+    M.dropUnreachableChannels(), M.replaceLru((0, _.withFallbacks)(h, 1250))
   },
   GUILD_DELETE: function(e) {
-    return !e.guild.unavailable && (p.deleteGuild(e.guild.id), !0)
+    return !e.guild.unavailable && (M.deleteGuild(e.guild.id), !0)
   },
   LOGIN_SUCCESS: function(e) {
     h.clear(), m.clear(), S = !1
   },
   THREAD_DELETE: function(e) {
-    p.deleteChannel(e.channel.id)
+    M.deleteChannel(e.channel.id)
   },
   THREAD_UPDATE: function(e) {
-    T(e.channel)
+    A(e.channel)
   }
 })

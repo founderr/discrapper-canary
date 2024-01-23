@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return u
   },
   describeUploadProgressError: function() {
-    return o
+    return s
   },
   describeProductChangeValidation: function() {
-    return s
+    return o
   },
   computeProductChanges: function() {
     return a
@@ -22,7 +22,7 @@ var r = n("49111"),
   l = n("782340");
 let u = "_role";
 
-function o(e) {
+function s(e) {
   if (!(e >= 0)) switch (-e) {
     case r.AbortCodes.ENTITY_TOO_LARGE:
       return l.default.Messages.UPLOAD_ERROR_TOO_LARGE;
@@ -37,7 +37,7 @@ function o(e) {
   }
 }
 
-function s(e) {
+function o(e) {
   let {
     newRoleParams: t
   } = e;
@@ -68,12 +68,12 @@ function a(e) {
     priceTier: r,
     description: l,
     image: u,
-    imageName: o,
-    isImageChanged: s,
+    imageName: s,
+    isImageChanged: o,
     newRoleParams: a,
     hasUnsavedAttachmentChanges: d
   } = e, c = {};
-  (null == n ? void 0 : n.name) !== i && "" !== i.trim() && (c.name = i), (null !== (t = null == n ? void 0 : n.description) && void 0 !== t ? t : "") !== l && (c.description = l), (null == n ? void 0 : n.price_tier) !== r && null != r && (c.priceTier = r), null != a && "" !== a.name.trim() ? c.createNewRole = !0 : null === a && (c.unlinkRole = !0), u.startsWith("data:") && (s || null == n && (Object.keys(c).length > 0 || d)) && (c.image = u, c.imageName = o);
+  (null == n ? void 0 : n.name) !== i && "" !== i.trim() && (c.name = i), (null !== (t = null == n ? void 0 : n.description) && void 0 !== t ? t : "") !== l && (c.description = l), (null == n ? void 0 : n.price_tier) !== r && null != r && (c.priceTier = r), null != a && "" !== a.name.trim() ? c.createNewRole = !0 : null === a && (c.unlinkRole = !0), u.startsWith("data:") && (o || null == n && (Object.keys(c).length > 0 || d)) && (c.image = u, c.imageName = s);
   let f = Object.keys(c).length > 0 || d;
   return {
     changes: c,

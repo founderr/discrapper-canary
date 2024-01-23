@@ -10,8 +10,8 @@ var n = a("37983"),
   l = a("77078"),
   r = a("155084"),
   u = a("489622"),
-  c = a("599110"),
-  o = a("781324"),
+  o = a("599110"),
+  c = a("781324"),
   d = a("132206"),
   _ = a("333781"),
   S = a("422671"),
@@ -28,9 +28,9 @@ function N() {
     a = (0, d.useSafetyHubAccountStanding)(),
     N = (0, _.useSafetyHubFetchError)();
   return (i.useEffect(() => {
-    o.getSafetyHubData()
+    c.getSafetyHubData()
   }, []), i.useEffect(() => {
-    e && (c.default.track(A.AnalyticEvents.SAFETY_HUB_VIEWED, {
+    e && (o.default.track(A.AnalyticEvents.SAFETY_HUB_VIEWED, {
       account_standing: a.state
     }), r.default.increment({
       name: s.MetricEvents.SAFETY_HUB_VIEW
@@ -41,7 +41,7 @@ function N() {
     color: u.NoticeColors.DANGER,
     className: g.nagbar,
     children: [I.default.Messages.SAFETY_HUB_ERROR_MESSAGE, (0, n.jsx)(u.NoticeButton, {
-      onClick: () => o.getSafetyHubData(),
+      onClick: () => c.getSafetyHubData(),
       children: I.default.Messages.SAFETY_HUB_ERROR_ACTION_BUTTON
     })]
   }) : (0, n.jsxs)("div", {

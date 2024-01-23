@@ -7,14 +7,14 @@ n.r(t), n.d(t, {
     return u
   },
   STICKERS: function() {
-    return o
+    return s
   }
 });
 var i = n("161585"),
   r = n("782340");
 let l = () => [r.default.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL1, r.default.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL2],
   u = () => [r.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1, r.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2],
-  o = [{
+  s = [{
     id: "781323471249604648",
     format_type: i.StickerFormat.APNG,
     description: "Cheerful Choco jumps out of gift box",

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return S
   },
   default: function() {
-    return T
+    return A
   }
 }), n("222007");
 var a = n("446674"),
@@ -64,7 +64,7 @@ function S(e, t, n, a) {
   let l = null == n;
   return !(l || a.has(n)) && (a.add(n), !0)
 }
-class p extends a.default.Store {
+class M extends a.default.Store {
   initialize() {
     this.waitFor(r.default, d.default)
   }
@@ -100,8 +100,8 @@ class p extends a.default.Store {
     return null != l ? (0, c.getComboShakeIntensity)(l, a) * n : 0
   }
 }
-p.displayName = "PoggermodeStore";
-let M = new p(i.default, {
+M.displayName = "PoggermodeStore";
+let p = new M(i.default, {
   POGGERMODE_UPDATE_COMBO: function(e) {
     let {
       type: t,
@@ -129,11 +129,11 @@ let M = new p(i.default, {
               ...t,
               value: 0,
               multiplier: 1
-            }), M.emitChange())
+            }), p.emitChange())
           } else e({
             ...t,
             value: t.value - 1
-          }), M.emitChange()
+          }), p.emitChange()
         }
       }))
     }(n)
@@ -173,4 +173,4 @@ let M = new p(i.default, {
     return !1
   }
 });
-var T = M
+var A = p

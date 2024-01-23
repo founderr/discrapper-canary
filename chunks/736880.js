@@ -8,18 +8,18 @@ var i = n("446674"),
   r = n("913144"),
   l = n("233069"),
   u = n("42203");
-let o = {},
-  s = {};
+let s = {},
+  o = {};
 class a extends i.default.Store {
   getTemplates(e) {
-    return o[e]
+    return s[e]
   }
   getTemplateWithCategory(e, t) {
     var n;
-    return null === (n = o[e]) || void 0 === n ? void 0 : n.find(e => e.category === t)
+    return null === (n = s[e]) || void 0 === n ? void 0 : n.find(e => e.category === t)
   }
   getChannel(e) {
-    return s[e]
+    return o[e]
   }
 }
 a.displayName = "GuildRoleSubscriptionTierTemplatesStore";
@@ -33,9 +33,9 @@ var d = new a(r.default, {
       e.channels.forEach(e => {
         let t = i.find(t => t.name === e.name);
         if (void 0 !== t) e.id = t.id;
-        else if (!(e.id in s)) {
+        else if (!(e.id in o)) {
           let t = (0, l.createChannelRecord)(e);
-          s[e.id] = t
+          o[e.id] = t
         }
       })
     })
@@ -45,6 +45,6 @@ var d = new a(r.default, {
       templates: t,
       guildId: n
     } = e;
-    o[n] = t
+    s[n] = t
   }
 })
