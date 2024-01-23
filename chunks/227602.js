@@ -294,7 +294,10 @@ z.displayName = "KeybindsStore", z.persistKey = "keybinds", z.migrations = [func
     }
   }
   return t
-}];
+}, e => s.reduce(e, (e, t, n) => t.action === y.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING && t.managed ? e : {
+  ...e,
+  [n]: t
+}, {})];
 var Q = new z(c.default, {
   CONNECTION_OPEN: X,
   AUDIO_SET_MODE: X,
