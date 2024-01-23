@@ -11,8 +11,8 @@ var i, r, l = n("37983");
 n("884691");
 var a = n("414456"),
   s = n.n(a),
-  o = n("315102"),
-  u = n("271560"),
+  u = n("315102"),
+  o = n("271560"),
   c = n("969850");
 (i = r || (r = {}))[i.SMALL = 40] = "SMALL", i[i.MEDIUM = 66] = "MEDIUM";
 let d = {
@@ -26,7 +26,7 @@ var f = e => {
     asset: r,
     className: a
   } = e;
-  return t = null != r ? (0, u.getAssetURL)(n.id, r, i) : o.default.getApplicationIconURL({
+  return t = null != r ? (0, o.getAssetURL)(n.id, r, i) : u.default.getApplicationIconURL({
     id: n.id,
     icon: n.icon,
     size: i

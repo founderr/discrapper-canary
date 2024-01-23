@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return T
   },
   EmptyStateText: function() {
-    return S
+    return h
   },
   default: function() {
     return i
@@ -16,14 +16,14 @@ var l, i, a = n("37983"),
   d = n.n(r),
   o = n("819855"),
   s = n("77078"),
-  c = n("145131"),
-  E = n("49111"),
+  E = n("145131"),
+  c = n("49111"),
   C = n("430098"),
   f = n("926622");
 let {
   Provider: _,
   Consumer: A
-} = u.createContext(E.ThemeTypes.DARK);
+} = u.createContext(c.ThemeTypes.DARK);
 class T extends u.PureComponent {
   render() {
     let {
@@ -36,7 +36,7 @@ class T extends u.PureComponent {
       style: r
     } = this.props;
     return (0, a.jsx)(A, {
-      children: s => (0, a.jsx)(c.default.Child, {
+      children: s => (0, a.jsx)(E.default.Child, {
         grow: 0,
         className: d(C.image, f.marginBottom40),
         style: {
@@ -51,7 +51,7 @@ class T extends u.PureComponent {
     })
   }
 }
-let S = e => {
+let h = e => {
   let {
     children: t,
     className: n,
@@ -59,9 +59,9 @@ let S = e => {
     note: i,
     style: u
   } = e;
-  return (0, a.jsxs)(c.default.Child, {
+  return (0, a.jsxs)(E.default.Child, {
     grow: 0,
-    direction: c.default.Direction.VERTICAL,
+    direction: E.default.Direction.VERTICAL,
     style: u,
     children: [null != t && (0, a.jsx)(s.H, {
       className: d(n, C.title),
@@ -82,14 +82,14 @@ let S = e => {
     } = this.props;
     return (0, a.jsx)(_, {
       value: t,
-      children: (0, a.jsx)(c.default, {
-        direction: c.default.Direction.VERTICAL,
-        align: c.default.Align.CENTER,
-        justify: c.default.Justify.CENTER,
+      children: (0, a.jsx)(E.default, {
+        direction: E.default.Direction.VERTICAL,
+        align: E.default.Align.CENTER,
+        justify: E.default.Justify.CENTER,
         className: d(C.wrapper, n),
         style: l,
         children: e
       })
     })
   }
-}).Text = S, l.Image = T, i = l
+}).Text = h, l.Image = T, i = l

@@ -12,29 +12,29 @@ var i = n("37983"),
   l = n("210721"),
   a = n("78345"),
   s = n("53253"),
-  o = n("105097"),
-  u = n("659632"),
+  u = n("105097"),
+  o = n("659632"),
   c = n("642906"),
   d = n("782340");
 let f = a.PremiumGiftStyles.STANDARD_BOX,
   p = void 0,
-  [h, S, m] = (0, o.default)();
+  [h, S, m] = (0, u.default)();
 
 function _(e) {
   let {
     isGift: t = !1,
     giftRecipient: n,
-    giftMessage: o,
+    giftMessage: u,
     children: S
   } = e, {
     selectedSkuId: m
-  } = (0, c.usePaymentContext)(), [_, I] = r.useState(n), [E, T] = r.useState(), [C, g] = r.useState(!1), A = (0, u.shouldShowCustomGiftExperience)(_), N = (0, s.useIsSeasonalGiftingActive)(), {
-    enabled: b
+  } = (0, c.usePaymentContext)(), [_, I] = r.useState(n), [E, T] = r.useState(), [C, g] = r.useState(!1), A = (0, o.shouldShowCustomGiftExperience)(_), N = (0, s.useIsSeasonalGiftingActive)(), {
+    enabled: v
   } = s.default.useExperiment({
     location: "PaymentContextProvider"
   }, {
     autoTrackExposure: A && N
-  }), [v, L] = r.useState(A ? b && N ? a.PremiumGiftStyles.SEASONAL_STANDARD_BOX : f : p), [O, P] = r.useState(t && u.GIFT_EXPERIENCES_WITH_CUSTOM_MESSAGING.has((0, u.getGiftExperience)(_)) ? d.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : o), [x, F] = r.useState(void 0), [R, y] = r.useState(void 0), k = (0, u.useGetGiftCode)(m, t), [G, H] = r.useState(!1), [M, j] = r.useState(!1), [w, D] = r.useState(), U = r.useCallback(e => {
+  }), [b, L] = r.useState(A ? v && N ? a.PremiumGiftStyles.SEASONAL_STANDARD_BOX : f : p), [O, P] = r.useState(t && o.GIFT_EXPERIENCES_WITH_CUSTOM_MESSAGING.has((0, o.getGiftExperience)(_)) ? d.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : u), [x, F] = r.useState(void 0), [R, y] = r.useState(void 0), k = (0, o.useGetGiftCode)(m, t), [G, H] = r.useState(!1), [M, j] = r.useState(!1), [w, D] = r.useState(), U = r.useCallback(e => {
     let {
       onSubscriptionConfirmation: t
     } = e;
@@ -48,7 +48,7 @@ function _(e) {
     value: {
       isGift: t,
       giftCode: k,
-      giftMessage: o,
+      giftMessage: u,
       giftRecipient: _,
       setGiftRecipient: I,
       giftRecipientError: E,
@@ -61,7 +61,7 @@ function _(e) {
       setEmojiConfetti: y,
       customGiftMessage: O,
       setCustomGiftMessage: P,
-      selectedGiftStyle: v,
+      selectedGiftStyle: b,
       setSelectedGiftStyle: L,
       sendGiftMessage: U,
       hasSentMessage: G,

@@ -9,8 +9,8 @@ var i = n("37983"),
   l = n("627445"),
   a = n.n(l),
   s = n("446674"),
-  o = n("913144"),
-  u = n("775433"),
+  u = n("913144"),
+  o = n("775433"),
   c = n("685665"),
   d = n("598981"),
   f = n("846286"),
@@ -30,8 +30,8 @@ var i = n("37983"),
         groupListingId: g,
         analyticsLocation: A,
         showBenefitsFirst: N,
-        onComplete: b,
-        forcesTransitionToGuild: v
+        onComplete: v,
+        forcesTransitionToGuild: b
       } = e,
       L = null == l ? void 0 : l.subscription_plans[0],
       O = null == l ? void 0 : l.application_id,
@@ -63,8 +63,8 @@ var i = n("37983"),
     V ? W ? z && null != R && (n = T.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
       tierName: R.name
     })) : n = T.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = T.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, r.useEffect(() => {
-      x && null != F && D && o.default.wait(() => {
-        (0, u.fetchSubscriptionPlansForSKU)(F)
+      x && null != F && D && u.default.wait(() => {
+        (0, o.fetchSubscriptionPlansForSKU)(F)
       })
     }, [x, F, D]);
     let Q = r.useCallback(() => {
@@ -87,8 +87,8 @@ var i = n("37983"),
           listing: l,
           application: y,
           showBenefitsFirst: N,
-          onComplete: b,
-          forcesTransitionToGuild: v
+          onComplete: v,
+          forcesTransitionToGuild: b
         })
       };
       !W && U ? (0, I.confirmNoSharedServerSubscribeWarningModal)({
@@ -96,7 +96,7 @@ var i = n("37983"),
         onConfirm: e,
         onCancel: () => {}
       }) : e()
-    }, [x, l, L, G, y, C, W, U, H, A, M, N, w, b, v]);
+    }, [x, l, L, G, y, C, W, U, H, A, M, N, w, v, b]);
     return {
       openModal: Q,
       canOpenModal: Z,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return k
   }
 }), n("222007");
 var s = n("37983"),
@@ -234,7 +234,7 @@ class B extends l.PureComponent {
 B.defaultProps = {
   isPreview: !1
 };
-var F = a.default.connectStores([m.default, h.default, O.default, M.default, T.default, v.default, C.default, L.default, R.default, g.default], e => {
+var k = a.default.connectStores([m.default, h.default, O.default, M.default, T.default, v.default, C.default, L.default, R.default, g.default], e => {
   let {
     activity: t,
     analyticsLocations: n,

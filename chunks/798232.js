@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MARK_CHANNEL_READ: function() {
-    return G
+    return b
   }
 });
 var i = n("118810"),
@@ -28,7 +28,7 @@ var i = n("118810"),
   R = n("471671"),
   p = n("659500"),
   h = n("49111");
-let G = {
+let b = {
   binds: ["esc", "shift+pagedown"],
   comboKeysBindGlobal: !0,
   action(e) {
@@ -49,7 +49,7 @@ let G = {
       a = C.default.getSection(n, null == l ? void 0 : l.isDM()),
       s = a === h.ChannelSections.SIDEBAR_CHAT ? C.default.getSidebarState(n) : null,
       E = (null == s ? void 0 : s.type) === _.SidebarType.VIEW_THREAD || (null == s ? void 0 : s.type) === _.SidebarType.VIEW_CHANNEL ? s.channelId : null;
-    if (!1 === b(n) || !1 === b(E)) return !1;
+    if (!1 === G(n) || !1 === G(E)) return !1;
     if (null != n && (null == s ? void 0 : s.type) === _.SidebarType.CREATE_THREAD) return r.default.closeChannelSidebar(n), !1;
     let A = g(n),
       c = g(E);
@@ -57,7 +57,7 @@ let G = {
   }
 };
 
-function b(e) {
+function G(e) {
   if (null != e) {
     if (I.default.isEditingAny(e)) return l.default.endEditMessage(e), !1;
     if (null != E.default.getPendingReply(e)) return (0, s.deletePendingReply)(e), !1;

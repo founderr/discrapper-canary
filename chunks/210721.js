@@ -13,8 +13,8 @@ n.r(t), n.d(t, {
 var i, r, l = n("627445"),
   a = n.n(l),
   s = n("450911"),
-  o = n("819689"),
-  u = n("884351"),
+  u = n("819689"),
+  o = n("884351"),
   c = n("42203"),
   d = n("659632"),
   f = n("78345");
@@ -276,7 +276,7 @@ let p = (e, t) => {
         return t
       }),
       i = (0, d.getGiftCodeURL)(t);
-    return o.default.sendMessage(n.id, u.default.parse(n, i), void 0, {
+    return u.default.sendMessage(n.id, o.default.parse(n, i), void 0, {
       isGiftLinkSentOnBehalfOfUser: !0
     })
   }

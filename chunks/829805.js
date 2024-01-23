@@ -25,8 +25,8 @@ var r = n("414456"),
   l = n.n(r),
   a = n("77078"),
   s = n("850644"),
-  o = n("899604"),
-  u = n("114067");
+  u = n("899604"),
+  o = n("114067");
 let c = e => {
     let {
       application: t,
@@ -50,7 +50,7 @@ let c = e => {
       ...s
     } = e;
     return (0, i.jsx)(a.Heading, {
-      className: l(u.header, n),
+      className: l(o.header, n),
       variant: "heading-xl/extrabold",
       id: r,
       ...s,
@@ -60,7 +60,7 @@ let c = e => {
 
 function f() {
   return (0, i.jsx)("hr", {
-    className: u.divider
+    className: o.divider
   })
 }
 let p = e => {
@@ -93,13 +93,13 @@ let p = e => {
       ...s
     } = e;
     return (0, i.jsx)("div", {
-      className: l(u.benefitsContainer, a),
+      className: l(o.benefitsContainer, a),
       ...s,
-      children: (0, i.jsx)(o.SubscriptionListingBenefits, {
+      children: (0, i.jsx)(u.SubscriptionListingBenefits, {
         applicationId: t,
         storeListingBenefits: n,
         skuBenefits: r,
-        className: u.benefit
+        className: o.benefit
       })
     })
   },
@@ -110,7 +110,7 @@ let p = e => {
       ...r
     } = e;
     return (0, i.jsx)("div", {
-      className: l(u.container, n),
+      className: l(o.container, n),
       ...r,
       children: t
     })

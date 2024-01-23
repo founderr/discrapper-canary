@@ -13,8 +13,8 @@ var r = n("627445"),
   l = n.n(r),
   a = n("77078"),
   s = n("316718"),
-  o = n("55620"),
-  u = n("524503"),
+  u = n("55620"),
+  o = n("524503"),
   c = n("186211"),
   d = n("90592"),
   f = n("651057"),
@@ -28,8 +28,8 @@ function m(e) {
     activeSubscription: r,
     analyticsObject: l,
     analyticsLocation: s,
-    analyticsLocations: o,
-    analyticsSubscriptionType: u,
+    analyticsLocations: u,
+    analyticsSubscriptionType: o,
     renderHeader: c,
     planGroup: d,
     skuId: f,
@@ -64,10 +64,10 @@ function m(e) {
           ...n,
           initialPlanId: t,
           skuId: f,
-          analyticsLocations: o,
+          analyticsLocations: u,
           analyticsObject: l,
           analyticsLocation: s,
-          analyticsSubscriptionType: u,
+          analyticsSubscriptionType: o,
           renderHeader: c,
           planGroup: d,
           reviewWarningMessage: m,
@@ -91,9 +91,9 @@ let _ = async e => {
 }, I = async e => {
   let t = c.default.getSubscriptionGroupListingForApplication(e);
   if (null != t) return t;
-  let n = await (0, o.fetchAllStoreListingsForApplication)(e),
+  let n = await (0, u.fetchAllStoreListingsForApplication)(e),
     i = n.find(e => e.sku.type === S.SKUTypes.SUBSCRIPTION_GROUP);
-  l(null != i, "Failed to find subscription store listing"), await (0, u.fetchAllSubscriptionListingsDataForApplication)(e, null == i ? void 0 : i.id);
+  l(null != i, "Failed to find subscription store listing"), await (0, o.fetchAllSubscriptionListingsDataForApplication)(e, null == i ? void 0 : i.id);
   let r = c.default.getSubscriptionGroupListingForApplication(e);
   return l(null != r, "Failed to find subscription group listing"), r
 }, E = async (e, t) => {
@@ -109,7 +109,7 @@ async function T(e) {
     analyticsLocationObject: r,
     analyticsLocations: a,
     renderHeader: s
-  } = e, o = await _(t), u = await I(t), c = (0, d.getPayableSubscriptionListing)(u);
+  } = e, u = await _(t), o = await I(t), c = (0, d.getPayableSubscriptionListing)(o);
   l(null != c, "Failed to find subscription listing");
   let f = (0, d.isApplicationUserSubscription)(c.sku_flags);
   l(f, "Guild application subscriptions unsupported!"), l(c.published, "Subscription listing not published"), await E(t, n);
@@ -120,12 +120,12 @@ async function T(e) {
     analyticsLocationObject: r,
     analyticsSubscriptionType: S.SubscriptionTypes.APPLICATION,
     renderHeader: s,
-    planGroup: u.subscription_listings_ids,
+    planGroup: o.subscription_listings_ids,
     skuId: n,
     guildId: null,
     eligibleApplicationSubscriptionGuilds: [],
     showBenefitsFirst: !1,
-    application: o,
+    application: u,
     listing: c
   };
   m(p)

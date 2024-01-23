@@ -11,8 +11,8 @@ var i = n("249654"),
   r = n("582713"),
   d = n("374363"),
   h = n("271938"),
-  u = n("42203"),
-  o = n("923959"),
+  o = n("42203"),
+  u = n("923959"),
   c = n("26989"),
   C = n("305961"),
   g = n("660478"),
@@ -27,15 +27,15 @@ function y(e, t) {
   let n = S[e];
   if (null != n && null != t && n.has(t)) {
     var s;
-    f.default.isOptInEnabled(e) && !(null === (s = u.default.getChannel(t)) || void 0 === s ? void 0 : s.isThread()) && null == g.default.ackMessageId(t) && l.default.wait(() => (0, a.ack)(t, !0, !0, i.default.atPreviousMillisecond(t)))
+    f.default.isOptInEnabled(e) && !(null === (s = o.default.getChannel(t)) || void 0 === s ? void 0 : s.isThread()) && null == g.default.ackMessageId(t) && l.default.wait(() => (0, a.ack)(t, !0, !0, i.default.atPreviousMillisecond(t)))
   }
 }
 
 function m(e) {
   var t;
   if (null != S[e]) return;
-  let n = o.default.getChannels(e),
-    s = n[0, o.GUILD_SELECTABLE_CHANNELS_KEY].map(e => e.channel.id),
+  let n = u.default.getChannels(e),
+    s = n[0, u.GUILD_SELECTABLE_CHANNELS_KEY].map(e => e.channel.id),
     l = null === (t = c.default.getMember(e, h.default.getId())) || void 0 === t ? void 0 : t.joinedAt;
   if (null == l) return;
   S[e] = new Set;
@@ -54,7 +54,7 @@ function _() {
 }
 class w extends s.default.Store {
   initialize() {
-    this.waitFor(o.default, h.default, c.default, f.default, g.default, d.default), this.syncWith([f.default], _)
+    this.waitFor(u.default, h.default, c.default, f.default, g.default, d.default), this.syncWith([f.default], _)
   }
   getNewChannelIds(e) {
     var t;
