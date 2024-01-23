@@ -1,26 +1,36 @@
 "use strict";
 a.r(e), a.d(e, {
   getSafetyHubData: function() {
-    return u
+    return o
   },
   getSafetyHubDataForClassification: function() {
     return c
   },
   requestReview: function() {
-    return d
+    return _
   }
 });
 var n = a("872717"),
   i = a("913144"),
   s = a("651693"),
-  l = a("736393"),
-  r = a("49111");
-async function u() {
+  l = a("271938"),
+  r = a("736393"),
+  u = a("49111");
+async function o() {
   i.default.dispatch({
     type: "SAFETY_HUB_FETCH_START"
-  }), await n.default.get({
-    url: r.Endpoints.SAFETY_HUB
-  }).then(t => {
+  });
+  let t = l.default.getSuspendedUserToken(),
+    e = null != t ? u.Endpoints.SAFETY_HUB_SUSPENDED : u.Endpoints.SAFETY_HUB,
+    a = null != t ? n.default.post({
+      url: e,
+      body: {
+        token: t
+      }
+    }) : n.default.get({
+      url: e
+    });
+  await a.then(t => {
     let {
       body: e
     } = t, {
@@ -28,7 +38,7 @@ async function u() {
       guild_classifications: n,
       account_standing: s,
       is_dsa_eligible: l
-    } = e, r = a.map(t => (o(t), t));
+    } = e, r = a.map(t => (d(t), t));
     i.default.dispatch({
       type: "SAFETY_HUB_FETCH_SUCCESS",
       classifications: r.concat(null != n ? n : []),
@@ -47,9 +57,18 @@ async function c(t) {
   i.default.dispatch({
     type: "SAFETY_HUB_FETCH_CLASSIFICATION_START",
     classificationId: t
-  }), await n.default.get({
-    url: r.Endpoints.SAFETY_HUB
-  }).then(e => {
+  });
+  let e = l.default.getSuspendedUserToken(),
+    a = null != e ? u.Endpoints.SAFETY_HUB_SUSPENDED : u.Endpoints.SAFETY_HUB,
+    s = null != e ? n.default.post({
+      url: a,
+      body: {
+        token: e
+      }
+    }) : n.default.get({
+      url: a
+    });
+  await s.then(e => {
     let {
       body: a
     } = e, {
@@ -57,7 +76,7 @@ async function c(t) {
       account_standing: s,
       is_dsa_eligible: l
     } = a, r = n.find(e => e.id === t);
-    null != r ? (o(r), i.default.dispatch({
+    null != r ? (d(r), i.default.dispatch({
       type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
       classification: r,
       accountStanding: s,
@@ -77,7 +96,7 @@ async function c(t) {
   })
 }
 
-function o(t) {
+function d(t) {
   if (null != t.flagged_content && t.flagged_content.length > 0) {
     let e = t.flagged_content[0];
     e.attachments = e.attachments.filter(t => {
@@ -85,14 +104,14 @@ function o(t) {
         filename: e
       } = t;
       return (0, s.isImageFile)(e)
-    }), t.flagged_content = (0, l.isFlaggedContentEmpty)(e) ? [] : [e]
+    }), t.flagged_content = (0, r.isFlaggedContentEmpty)(e) ? [] : [e]
   }
 }
-async function d(t, e, a) {
+async function _(t, e, a) {
   i.default.dispatch({
     type: "SAFETY_HUB_REQUEST_REVIEW_START"
   }), await n.default.put({
-    url: r.Endpoints.SAFETY_HUB_REQUEST_REVIEW(t),
+    url: u.Endpoints.SAFETY_HUB_REQUEST_REVIEW(t),
     body: {
       signal: e,
       user_input: a
