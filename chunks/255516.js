@@ -82,8 +82,12 @@ class WebSocket extends C.default {
     this._socket.close(e, t)
   }
   constructor(e, t, n) {
-    if (super("ws", t, n), -1 === ["etf", "json"].indexOf(n)) throw new _.default(S.RPCCloseCodes.INVALID_ENCODING, "Invalid Encoding: ".concat(n));
-    if ("etf" === n && null == a) throw new _.default(S.RPCCloseCodes.INVALID_ENCODING, "Erlpack cannot be used on this client");
+    if (super("ws", t, n), -1 === ["etf", "json"].indexOf(n)) throw new _.default({
+      closeCode: S.RPCCloseCodes.INVALID_ENCODING
+    }, "Invalid Encoding: ".concat(n));
+    if ("etf" === n && null == a) throw new _.default({
+      closeCode: S.RPCCloseCodes.INVALID_ENCODING
+    }, "Erlpack cannot be used on this client");
     this._socket = e
   }
 }
@@ -95,7 +99,9 @@ class M extends C.default {
     this._closeCallback(t, e)
   }
   constructor(e, t, n, a) {
-    if (super("http", n, a), "json" !== a) throw new _.default(S.RPCCloseCodes.INVALID_ENCODING, "Invalid Encoding: ".concat(a));
+    if (super("http", n, a), "json" !== a) throw new _.default({
+      closeCode: S.RPCCloseCodes.INVALID_ENCODING
+    }, "Invalid Encoding: ".concat(a));
     this._sendCallback = e, this._closeCallback = t
   }
 }

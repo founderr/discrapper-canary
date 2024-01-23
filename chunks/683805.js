@@ -45,7 +45,9 @@ var R = {
       } = e, {
         invite: n
       } = await E.default.resolveInvite(t, "Desktop Modal");
-      if (null == n) throw new m.default(A.RPCErrors.INVALID_INVITE, "Invalid invite id: ".concat(t));
+      if (null == n) throw new m.default({
+        errorCode: g.RPCErrors.INVALID_INVITE
+      }, "Invalid invite id: ".concat(t));
       return C.default.isAuthenticated() ? o.default.dispatch({
         type: "INVITE_MODAL_OPEN",
         invite: n,
@@ -69,7 +71,9 @@ var R = {
       let {
         guildTemplate: a
       } = await _.default.resolveGuildTemplate(t);
-      if (null == a) throw new m.default(A.RPCErrors.INVALID_GUILD_TEMPLATE, "Invalid guild template id: ".concat(t));
+      if (null == a) throw new m.default({
+        errorCode: g.RPCErrors.INVALID_GUILD_TEMPLATE
+      }, "Invalid guild template id: ".concat(t));
       return p.default.focus(), (0, r.openModalLazy)(async () => {
         let {
           default: e
@@ -112,7 +116,9 @@ var R = {
             }), e({
               giftCode: s
             })
-          }).catch(() => a(new m.default(A.RPCErrors.INVALID_GIFT_CODE, "Invalid gift code: ".concat(t))))
+          }).catch(() => a(new m.default({
+            errorCode: g.RPCErrors.INVALID_GIFT_CODE
+          }, "Invalid gift code: ".concat(t))))
         })
       })
     }

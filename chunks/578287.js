@@ -262,8 +262,12 @@ function z(e, t, n) {
     if ("string" == typeof n) {
       if (e.transport === v.TransportTypes.POST_MESSAGE) {
         let e = (0, d.default)(t);
-        if (null == e || !j(n, [e])) throw new O.default(M.RPCCloseCodes.INVALID_ORIGIN, "Invalid Origin")
-      } else if (!j(n, s)) throw new O.default(M.RPCCloseCodes.INVALID_ORIGIN, "Invalid Origin")
+        if (null == e || !j(n, [e])) throw new O.default({
+          closeCode: M.RPCCloseCodes.INVALID_ORIGIN
+        }, "Invalid Origin")
+      } else if (!j(n, s)) throw new O.default({
+        closeCode: M.RPCCloseCodes.INVALID_ORIGIN
+      }, "Invalid Origin")
     }
     e.application = {
       id: i,
@@ -273,7 +277,9 @@ function z(e, t, n) {
       flags: u
     }
   }, () => {
-    throw new O.default(M.RPCCloseCodes.INVALID_CLIENTID, "Invalid Client ID")
+    throw new O.default({
+      closeCode: M.RPCCloseCodes.INVALID_CLIENTID
+    }, "Invalid Client ID")
   })
 }
 async function q(e, t) {
@@ -336,9 +342,13 @@ function X(e, t) {
 }
 
 function J(e) {
-  if (e !== v.TransportTypes.POST_MESSAGE) throw new O.default(v.RPCErrors.INVALID_COMMAND, 'command not available from "'.concat(e, " transport"))
+  if (e !== v.TransportTypes.POST_MESSAGE) throw new O.default({
+    errorCode: M.RPCErrors.INVALID_COMMAND
+  }, 'command not available from "'.concat(e, " transport"))
 }
 
 function $(e) {
-  if (null == e.id) throw new O.default(v.RPCErrors.INVALID_COMMAND, "Invalid application")
+  if (null == e.id) throw new O.default({
+    errorCode: M.RPCErrors.INVALID_COMMAND
+  }, "Invalid application")
 }

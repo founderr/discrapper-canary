@@ -34,10 +34,14 @@ var a = n("917351"),
           },
           socket: n
         } = e, a = u.default.getChannel(t);
-        if (null == a) throw new h.default(S.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(t));
+        if (null == a) throw new h.default({
+          errorCode: p.RPCErrors.INVALID_CHANNEL
+        }, "Invalid channel id: ".concat(t));
         if (a.isPrivate()) {
           let e = n.authorization.scopes;
-          if (!e.includes(p.OAuth2Scopes.RPC) && !e.includes(p.OAuth2Scopes.DM_CHANNELS_READ)) throw new h.default(S.RPCErrors.INVALID_PERMISSIONS, "Invalid scope")
+          if (!e.includes(p.OAuth2Scopes.RPC) && !e.includes(p.OAuth2Scopes.DM_CHANNELS_READ)) throw new h.default({
+            errorCode: p.RPCErrors.INVALID_PERMISSIONS
+          }, "Invalid scope")
         }
         return (0, C.transformChannel)(a, (0, C.hasMessageReadPermission)(a, n.application.id, n.authorization.scopes))
       }
@@ -52,7 +56,9 @@ var a = n("917351"),
         } = e, n = s.values(u.default.loadAllGuildAndPrivateChannelsFromDisk());
         if (t) {
           let e = d.default.getGuild(t);
-          if (null == e) throw new h.default(S.RPCErrors.INVALID_GUILD, "Invalid guild id: ".concat(t));
+          if (null == e) throw new h.default({
+            errorCode: p.RPCErrors.INVALID_GUILD
+          }, "Invalid guild id: ".concat(t));
           n = n.filter(t => {
             let {
               guild_id: n
@@ -80,7 +86,9 @@ var a = n("917351"),
       scope: p.OAuth2Scopes.GUILDS_MEMBERS_READ,
       handler(e) {
         let t = (0, T.default)();
-        if (null == t) throw new h.default(S.RPCErrors.INVALID_CHANNEL, "Invalid channel");
+        if (null == t) throw new h.default({
+          errorCode: p.RPCErrors.INVALID_CHANNEL
+        }, "Invalid channel");
         return {
           permissions: c.default.computePermissions(t)
         }
@@ -107,18 +115,30 @@ var a = n("917351"),
         } = e;
         if (!a) return l.default.selectVoiceChannel(null), null;
         let T = f.default.getVoiceChannelId();
-        if (null != T && T !== a && !1 === i) throw new h.default(S.RPCErrors.SELECT_VOICE_FORCE_REQUIRED, "User is already joined to a voice channel.");
+        if (null != T && T !== a && !1 === i) throw new h.default({
+          errorCode: p.RPCErrors.SELECT_VOICE_FORCE_REQUIRED
+        }, "User is already joined to a voice channel.");
         return t.storeWait(n, () => u.default.getChannel(a), s).catch(() => {
-          throw new h.default(S.RPCErrors.SELECT_CHANNEL_TIMED_OUT, "Request to select voice channel timed out.")
+          throw new h.default({
+            errorCode: p.RPCErrors.SELECT_CHANNEL_TIMED_OUT
+          }, "Request to select voice channel timed out.")
         }).then(e => {
-          if (null == e) throw new h.default(S.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(a));
-          if (!(0, o.isVoiceChannel)(e.type)) throw new h.default(S.RPCErrors.INVALID_CHANNEL, "Channel is not a voice channel");
+          if (null == e) throw new h.default({
+            errorCode: p.RPCErrors.INVALID_CHANNEL
+          }, "Invalid channel id: ".concat(a));
+          if (!(0, o.isVoiceChannel)(e.type)) throw new h.default({
+            errorCode: p.RPCErrors.INVALID_CHANNEL
+          }, "Channel is not a voice channel");
           return Promise.all([Promise.resolve(e), (0, C.transformChannel)(e, (0, C.hasMessageReadPermission)(e, n.application.id, n.authorization.scopes))])
         }).then(e => {
           let [t, n] = e;
           if (n.guild_id) {
-            if ((0, _.isChannelFull)(t, E.default, d.default)) throw new h.default(S.RPCErrors.INVALID_CHANNEL, "Channel is full");
-            if (!c.default.can(p.Permissions.CONNECT, t)) throw new h.default(S.RPCErrors.INVALID_PERMISSIONS, "Connect permission required to join channel")
+            if ((0, _.isChannelFull)(t, E.default, d.default)) throw new h.default({
+              errorCode: p.RPCErrors.INVALID_CHANNEL
+            }, "Channel is full");
+            if (!c.default.can(p.Permissions.CONNECT, t)) throw new h.default({
+              errorCode: p.RPCErrors.INVALID_PERMISSIONS
+            }, "Connect permission required to join channel")
           }
           return l.default.selectVoiceChannel(t.id), I && (0, r.replaceWith)(p.Routes.CHANNEL(t.guild_id, t.id)), n
         })
@@ -151,14 +171,22 @@ var a = n("917351"),
           }
         } = e;
         return a ? t.storeWait(n, () => u.default.getChannel(a), s).catch(() => {
-          throw new h.default(S.RPCErrors.SELECT_CHANNEL_TIMED_OUT, "Request to select text channel timed out.")
+          throw new h.default({
+            errorCode: p.RPCErrors.SELECT_CHANNEL_TIMED_OUT
+          }, "Request to select text channel timed out.")
         }).then(e => {
-          if (null == e) throw new h.default(S.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(a));
-          if (!(0, o.isTextChannel)(e.type)) throw new h.default(S.RPCErrors.INVALID_CHANNEL, "Channel is not a text channel");
+          if (null == e) throw new h.default({
+            errorCode: p.RPCErrors.INVALID_CHANNEL
+          }, "Invalid channel id: ".concat(a));
+          if (!(0, o.isTextChannel)(e.type)) throw new h.default({
+            errorCode: p.RPCErrors.INVALID_CHANNEL
+          }, "Channel is not a text channel");
           return Promise.all([Promise.resolve(e), (0, C.transformChannel)(e, (0, C.hasMessageReadPermission)(e, n.application.id, n.authorization.scopes))])
         }).then(e => {
           let [t, n] = e;
-          if (n.guild_id && !c.default.can(p.Permissions.VIEW_CHANNEL, t)) throw new h.default(S.RPCErrors.INVALID_CHANNEL, "No permission to see channel");
+          if (n.guild_id && !c.default.can(p.Permissions.VIEW_CHANNEL, t)) throw new h.default({
+            errorCode: p.RPCErrors.INVALID_CHANNEL
+          }, "No permission to see channel");
           return n.guild_id ? (0, r.replaceWith)(p.Routes.CHANNEL(n.guild_id, t.id)) : l.default.selectPrivateChannel(t.id), n
         }) : ((0, r.transitionTo)(p.Routes.ME), null)
       }
@@ -173,7 +201,9 @@ var a = n("917351"),
           }
         } = e;
         return i.default.createInvite(t, n, "RPC").catch(() => {
-          throw new h.default(S.RPCErrors.INVALID_PERMISSIONS, "Unable to generate an invite for ".concat(t, ". Does this user have permissions?"))
+          throw new h.default({
+            errorCode: p.RPCErrors.INVALID_PERMISSIONS
+          }, "Unable to generate an invite for ".concat(t, ". Does this user have permissions?"))
         })
       }
     }

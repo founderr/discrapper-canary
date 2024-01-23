@@ -10,9 +10,9 @@ var a = n("922932"),
   l = n("861309"),
   r = n("578287"),
   o = n("716724"),
-  u = n("492249"),
+  u = n("49111"),
   d = {
-    [n("49111").RPCCommands.OPEN_EXTERNAL_LINK]: {
+    [u.RPCCommands.OPEN_EXTERNAL_LINK]: {
       validation: e => (0, o.default)(e).required().keys({
         url: e.string().required()
       }),
@@ -30,7 +30,9 @@ var a = n("922932"),
             href: e.toString()
           })
         } catch (e) {
-          throw new l.default(u.RPCErrors.INVALID_COMMAND, "Invalid URL: ".concat(n))
+          throw new l.default({
+            errorCode: u.RPCErrors.INVALID_COMMAND
+          }, "Invalid URL: ".concat(n))
         }
       }
     }

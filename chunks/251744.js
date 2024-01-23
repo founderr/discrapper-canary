@@ -33,8 +33,12 @@ function g(e) {
     },
     socket: a
   } = e, s = o.default.getChannel(n);
-  if (null == s || !(0, I.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new C.default(m.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(n));
-  if (s.isNSFW() && (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new C.default(m.RPCErrors.INVALID_CHANNEL, "Invalid nsfw channel id: ".concat(s.id))
+  if (null == s || !(0, I.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new C.default({
+    errorCode: A.RPCErrors.INVALID_CHANNEL
+  }, "Invalid channel id: ".concat(n));
+  if (s.isNSFW() && (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new C.default({
+    errorCode: A.RPCErrors.INVALID_CHANNEL
+  }, "Invalid nsfw channel id: ".concat(s.id))
 }
 
 function N(e) {
@@ -46,11 +50,15 @@ function N(e) {
   } = e;
   if (null != n) {
     let e = o.default.getChannel(n);
-    if (null == e) throw new C.default(m.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(n))
+    if (null == e) throw new C.default({
+      errorCode: A.RPCErrors.INVALID_CHANNEL
+    }, "Invalid channel id: ".concat(n))
   }
   if (null != t) {
     let e = d.default.getLobby(t);
-    if (null == e) throw new C.default(m.RPCErrors.INVALID_LOBBY, "Invalid lobby id: ".concat(t))
+    if (null == e) throw new C.default({
+      errorCode: A.RPCErrors.INVALID_LOBBY
+    }, "Invalid lobby id: ".concat(t))
   }
 }
 let R = {
@@ -62,7 +70,9 @@ let R = {
           guild_id: t
         }
       } = e;
-      if (null == u.default.getGuild(t)) throw new C.default(m.RPCErrors.INVALID_GUILD, "Invalid guild id: ".concat(t));
+      if (null == u.default.getGuild(t)) throw new C.default({
+        errorCode: A.RPCErrors.INVALID_GUILD
+      }, "Invalid guild id: ".concat(t));
       return e => {
         var n;
         let {
@@ -92,7 +102,9 @@ let R = {
           channel_id: t
         }
       } = e;
-      if (null == o.default.getChannel(t)) throw new C.default(m.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(t));
+      if (null == o.default.getChannel(t)) throw new C.default({
+        errorCode: A.RPCErrors.INVALID_CHANNEL
+      }, "Invalid channel id: ".concat(t));
       return e => {
         let {
           prevState: n,
@@ -124,7 +136,9 @@ let R = {
           channel_id: t
         }
       } = e;
-      if (null == o.default.getChannel(t)) throw new C.default(m.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(t));
+      if (null == o.default.getChannel(t)) throw new C.default({
+        errorCode: A.RPCErrors.INVALID_CHANNEL
+      }, "Invalid channel id: ".concat(t));
       return e => {
         let {
           prevState: n,
@@ -153,7 +167,9 @@ let R = {
           channel_id: t
         }
       } = e;
-      if (null == o.default.getChannel(t)) throw new C.default(m.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(t));
+      if (null == o.default.getChannel(t)) throw new C.default({
+        errorCode: A.RPCErrors.INVALID_CHANNEL
+      }, "Invalid channel id: ".concat(t));
       return e => {
         let {
           prevState: n,
