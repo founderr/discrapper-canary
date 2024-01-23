@@ -44,11 +44,9 @@ var n = s("446674"),
           className: u.questInfo,
           children: [(0, a.jsx)(l.Heading, {
             variant: "heading-xxl/bold",
-            className: u.questTitle,
             children: t.config.messages.questName
           }), (0, a.jsx)(l.Text, {
-            variant: "text-xs/medium",
-            className: u.questSubtitle,
+            variant: "text-xs/normal",
             children: d.default.Messages.QUESTS_AVAILABLE_THROUGH.format({
               date: S
             })

@@ -68,7 +68,8 @@ function u(e) {
         questName: (n = t.messages).quest_name,
         rewardName: n.reward_name,
         rewardNameWithArticle: n.reward_name_with_article,
-        rewardRedemptionInstructions: n.reward_redemption_instructions
+        rewardRedemptionInstructions: n.reward_redemption_instructions,
+        gameTitle: n.game_title
       }
     },
     userStatus: null == e.user_status ? null : r(e.user_status)
