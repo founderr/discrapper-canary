@@ -32,10 +32,10 @@ function S(e, t) {
   } = (0, o.useAutomodEditingRuleState)(), [A, _] = i.useState(!1), [h, T] = (0, u.useSyncAutomodRules)(t), {
     rulesByTriggerType: C,
     updateRule: R
-  } = (0, u.useAutomodRulesList)(t), O = i.useMemo(() => {
+  } = (0, u.useAutomodRulesList)(t), x = i.useMemo(() => {
     var e;
     return null !== (e = C[I]) && void 0 !== e ? e : []
-  }, [C]), x = 0 === O.length, N = n > O.length && !x, y = i.useMemo(() => (0, d.canCurrentUserManageMessageFilters)(t), [t]);
+  }, [C]), O = 0 === x.length, N = n > x.length && !O, y = i.useMemo(() => (0, d.canCurrentUserManageMessageFilters)(t), [t]);
   if (!y || null == e || 0 === e.length || null == t) return null;
   let b = e.split(" ").length,
     j = () => {
@@ -61,20 +61,20 @@ function S(e, t) {
           keywordFilter: [...null !== (a = null === (n = t.triggerMetadata) || void 0 === n ? void 0 : n.keywordFilter) && void 0 !== a ? a : [], e]
         }
       };
-      await S(l, O), R(l)
-    }, G = (0, a.jsx)(a.Fragment, {
+      await S(l, x), R(l)
+    }, L = (0, a.jsx)(a.Fragment, {
       children: (0, a.jsx)(l.MenuItem, {
         id: "automod-rules-loading",
         label: g.default.Messages.LOADING
       })
     });
-  return !h && (G = (0, a.jsxs)(a.Fragment, {
-    children: [x && (0, a.jsx)(l.MenuItem, {
+  return !h && (L = (0, a.jsxs)(a.Fragment, {
+    children: [O && (0, a.jsx)(l.MenuItem, {
       id: "add-first-rule",
       label: g.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
       action: j,
       disabled: m
-    }), O.map(e => {
+    }), x.map(e => {
       let t = (0, r.getAvailableActionTypes)(I).reduce((t, n) => {
         let a = e.actions.find(e => {
           let {
@@ -116,6 +116,6 @@ function S(e, t) {
     onFocus: () => {
       !A && (_(!0), T())
     },
-    children: G
+    children: L
   })
 }

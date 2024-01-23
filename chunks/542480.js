@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983"),
   n = s("884691"),
-  l = s("77078"),
-  r = s("895530"),
+  r = s("77078"),
+  l = s("895530"),
   i = s("437825"),
   u = s("36694"),
   o = s("530311"),
@@ -16,8 +16,8 @@ var a = s("37983"),
   _ = s("155207"),
   E = s("781896"),
   I = s("430025"),
-  f = s("137783"),
-  T = s("439937"),
+  T = s("137783"),
+  f = s("439937"),
   S = s("31225"),
   R = s("49111"),
   m = s("782340"),
@@ -61,7 +61,7 @@ let N = [{
     feature: R.SKUFeatureTypes.RICH_PRESENCE,
     getText: () => m.default.Messages.APPLICATION_STORE_RICH_PRESENCE,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_RICH_PRESENCE_TOOLTIP,
-    IconComponent: f.default
+    IconComponent: T.default
   }, {
     feature: R.SKUFeatureTypes.DISCORD_GAME_INVITES,
     getText: () => m.default.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES,
@@ -86,9 +86,9 @@ let N = [{
     feature: R.SKUFeatureTypes.SECURE_NETWORKING,
     getText: () => m.default.Messages.APPLICATION_STORE_SECURE_NETWORKING,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_SECURE_NETWORKING_TOOLTIP,
-    IconComponent: T.default
+    IconComponent: f.default
   }],
-  g = e => {
+  A = e => {
     let {
       IconComponent: t,
       text: s,
@@ -96,7 +96,7 @@ let N = [{
     } = e;
     return (0, a.jsxs)("div", {
       className: p.row,
-      children: [(0, a.jsx)(l.Tooltip, {
+      children: [(0, a.jsx)(r.Tooltip, {
         text: n,
         children: e => (0, a.jsx)(t, {
           className: p.featureIcon,
@@ -110,7 +110,7 @@ let N = [{
       })]
     })
   };
-class A extends n.PureComponent {
+class g extends n.PureComponent {
   render() {
     let {
       sku: e
@@ -124,20 +124,20 @@ class A extends n.PureComponent {
         feature: t,
         IconComponent: s,
         getText: n,
-        getTooltip: l
+        getTooltip: r
       } = e;
-      return (0, a.jsx)(g, {
+      return (0, a.jsx)(A, {
         IconComponent: s,
         text: n(),
-        tooltip: l()
+        tooltip: r()
       }, t)
     });
     return 0 === t.length ? null : (0, a.jsxs)("div", {
       className: p.features,
-      children: [(0, a.jsx)(r.default, {
+      children: [(0, a.jsx)(l.default, {
         children: m.default.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES
       }), t]
     })
   }
 }
-var P = A
+var P = g

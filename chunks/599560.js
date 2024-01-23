@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("872717"),
   n = s("913144"),
-  l = s("333805"),
-  r = s("49111");
+  r = s("333805"),
+  l = s("49111");
 async function i(e) {
   n.default.dispatch({
     type: "APPLICATION_ACTIVITY_STATISTICS_FETCH_START",
@@ -15,7 +15,7 @@ async function i(e) {
   });
   try {
     let t = await a.default.get({
-        url: r.Endpoints.APPLICATION_ACTIVITY_STATISTICS(e),
+        url: l.Endpoints.APPLICATION_ACTIVITY_STATISTICS(e),
         oldFormErrors: !0
       }),
       s = t.body;
@@ -28,6 +28,6 @@ async function i(e) {
     throw n.default.dispatch({
       type: "APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL",
       applicationId: e
-    }), new l.default(t)
+    }), new r.default(t)
   }
 }

@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return eB
   },
   default: function() {
-    return ek
+    return eF
   },
   SimpleMessageAccessories: function() {
-    return eF
+    return ek
   }
 }), n("222007"), n("702976"), n("70102"), n("881410");
 var s = n("37983"),
@@ -46,8 +46,8 @@ var s = n("37983"),
   b = n("801177"),
   G = n("985883"),
   B = n("311830"),
-  k = n("626301"),
-  F = n("428786"),
+  F = n("626301"),
+  k = n("428786"),
   w = n("705423"),
   H = n("315021"),
   V = n("24373"),
@@ -105,7 +105,7 @@ function eD() {
       color: "text-muted",
       className: ev.nitroFileSizeUpsellText,
       children: eL.default.Messages.LARGE_FILE_UPLOAD_POWERED_BY_NITRO.format({
-        onClick: () => (0, k.navigateToPremiumMarketingPage)()
+        onClick: () => (0, F.navigateToPremiumMarketingPage)()
       })
     })]
   })
@@ -267,7 +267,7 @@ class eB extends l.Component {
     } = this.props;
     return n !== r.MessageTypes.PREMIUM_REFERRAL || null == t ? null : (0, s.jsx)("div", {
       className: ev.referralContainer,
-      children: (0, s.jsx)(F.default, {
+      children: (0, s.jsx)(k.default, {
         userTrialOfferId: t,
         canRenderReferralEmbed: null != l && l
       })
@@ -650,7 +650,7 @@ class eB extends l.Component {
   }
 }
 
-function ek(e) {
+function eF(e) {
   var t, n, l;
   let {
     channel: a,
@@ -675,7 +675,7 @@ function ek(e) {
     isGuest: p,
     communicationDisabled: h,
     isActiveChannelOrUnarchivableThread: O
-  }), U = (0, N.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), b = (0, N.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = a.guild_id) && void 0 !== n ? n : "", (null !== (l = i.editedTimestamp) && void 0 !== l ? l : i.timestamp).valueOf()), B = (0, j.default)(null == a ? void 0 : a.id), k = (0, G.default)(i), F = (0, g.useShouldRedactExplicitContent)(a.id, i.author.id), w = (0, M.useShouldRenderReportFalsePositiveButton)(i.id, ej);
+  }), U = (0, N.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), b = (0, N.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = a.guild_id) && void 0 !== n ? n : "", (null !== (l = i.editedTimestamp) && void 0 !== l ? l : i.timestamp).valueOf()), B = (0, j.default)(null == a ? void 0 : a.id), F = (0, G.default)(i), k = (0, g.useShouldRedactExplicitContent)(a.id, i.author.id), w = (0, M.useShouldRenderReportFalsePositiveButton)(i.id, ej);
   return (0, s.jsx)(eB, {
     canSuppressEmbeds: L,
     canDeleteAttachments: v,
@@ -691,11 +691,11 @@ function ek(e) {
     renderEmbeds: E,
     gifAutoPlay: T,
     canRenderReferralEmbed: a.isDM(),
-    poll: k,
+    poll: F,
     showListsAndHeaders: U.showListsAndHeaders || b.showListsAndHeaders,
     showMaskedLinks: U.showMaskedLinks || b.showMaskedLinks,
     shouldHideMediaOptions: B,
-    shouldRedactExplicitContent: F,
+    shouldRedactExplicitContent: k,
     shouldRenderCtaButton: w
   })
 }
@@ -703,7 +703,7 @@ eB.defaultProps = {
   renderEmbeds: !0,
   compact: !1
 };
-let eF = e => {
+let ek = e => {
   var t, n, l;
   let {
     message: a,

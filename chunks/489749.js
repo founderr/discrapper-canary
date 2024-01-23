@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   n = s("884691"),
-  l = s("55620"),
-  r = s("294135");
+  r = s("55620"),
+  l = s("294135");
 class i extends n.Component {
   componentDidMount() {
     this.fetchStoreListing()
@@ -18,17 +18,17 @@ class i extends n.Component {
       applicationId: t,
       slug: s,
       storeListingId: n,
-      pageSize: l,
+      pageSize: r,
       location: i
     } = this.props;
-    return (0, a.jsx)(r.default, {
+    return (0, a.jsx)(l.default, {
       inputSkuId: e,
       applicationId: t,
       fetchStoreListing: this.fetchStoreListing,
       slug: s,
       storeListingId: n,
       location: i,
-      pageSize: l
+      pageSize: r
     })
   }
   constructor(...e) {
@@ -38,9 +38,9 @@ class i extends n.Component {
         skuId: s,
         applicationId: a
       } = this.props, n = null != e ? e : s;
-      if (null != t) return (0, l.fetchStoreListingById)(t);
-      if (null != n) return (0, l.fetchStoreListingForSku)(n);
-      if (null != a) return (0, l.fetchStoreListingForApplication)(a)
+      if (null != t) return (0, r.fetchStoreListingById)(t);
+      if (null != n) return (0, r.fetchStoreListingForSku)(n);
+      if (null != a) return (0, r.fetchStoreListingForApplication)(a)
     }
   }
 }

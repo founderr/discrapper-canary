@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 }), s("70102");
-var a, n, l = s("37983");
+var a, n, r = s("37983");
 s("884691");
-var r = s("414456"),
-  i = s.n(r),
+var l = s("414456"),
+  i = s.n(l),
   u = s("446674"),
   o = s("77078"),
   d = s("87657"),
@@ -23,25 +23,25 @@ let I = u.default.connectStores([c.default], () => ({
       className: s,
       animate: a
     } = e;
-    return (0, l.jsxs)("div", {
+    return (0, r.jsxs)("div", {
       className: i(E.staffReviewHeader, s),
-      children: [(0, l.jsx)(d.default, {
+      children: [(0, r.jsx)(d.default, {
         size: o.AvatarSizes.SIZE_32,
         user: t,
         animate: a
-      }), (0, l.jsxs)("div", {
+      }), (0, r.jsxs)("div", {
         className: E.headerText,
-        children: [(0, l.jsx)("div", {
+        children: [(0, r.jsx)("div", {
           className: E.label,
           children: _.default.Messages.APPLICATION_STORE_STAFF_PICK
-        }), (0, l.jsx)("div", {
+        }), (0, r.jsx)("div", {
           className: E.username,
           children: t.username
         })]
       })]
     })
   }),
-  f = e => {
+  T = e => {
     let {
       data: t,
       className: s
@@ -52,12 +52,12 @@ let I = u.default.connectStores([c.default], () => ({
         user: e,
         content: a
       } = t.staffNotes;
-      return null == e ? null : (0, l.jsxs)("div", {
+      return null == e ? null : (0, r.jsxs)("div", {
         className: s,
-        children: [(0, l.jsx)(I, {
+        children: [(0, r.jsx)(I, {
           user: e,
           className: E.header
-        }), (0, l.jsx)("div", {
+        }), (0, r.jsx)("div", {
           className: E.notes,
           children: a
         })]
@@ -65,5 +65,5 @@ let I = u.default.connectStores([c.default], () => ({
     }
     throw Error("Unknown type")
   };
-f.Types = a;
-var T = f
+T.Types = a;
+var f = T

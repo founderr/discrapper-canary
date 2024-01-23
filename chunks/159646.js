@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 });
 var a = s("37983");
 s("884691");
 var n = s("414456"),
-  l = s.n(n),
-  r = s("77078"),
+  r = s.n(n),
+  l = s("77078"),
   i = s("79112"),
   u = s("423487"),
   o = s("701909"),
@@ -17,12 +17,12 @@ var n = s("414456"),
   _ = s("646718"),
   E = s("49111"),
   I = s("782340"),
-  f = s("507759"),
-  T = e => {
+  T = s("507759"),
+  f = e => {
     let t, {
         premiumSubscription: s,
         className: n,
-        isFullscreen: T = !1
+        isFullscreen: f = !1
       } = e,
       S = (0, c.useIsInPremiumOfferExperience)();
     if (null == s) return null;
@@ -31,21 +31,21 @@ var n = s("414456"),
     if (m ? t = I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != R && (t = d.default.getDisplayPremiumType(R.planId)), null == t) return null;
     let p = () => i.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
       N = null != R ? d.default.getSkuIdForPlan(R.planId) : null,
-      g = N === _.PremiumSubscriptionSKUs.TIER_1;
-    return (0, a.jsxs)(r.Card, {
-      className: l(f.container, n, {
-        [f.lightTextLink]: T,
-        [f.centerText]: S
+      A = N === _.PremiumSubscriptionSKUs.TIER_1;
+    return (0, a.jsxs)(l.Card, {
+      className: r(T.container, n, {
+        [T.lightTextLink]: f,
+        [T.centerText]: S
       }),
-      type: r.Card.Types.CUSTOM,
+      type: l.Card.Types.CUSTOM,
       children: [(0, a.jsx)(u.default, {
-        className: l(f.icon, {
-          [f.lightThemeColorOnly]: S || T
+        className: r(T.icon, {
+          [T.lightThemeColorOnly]: S || f
         })
-      }), (0, a.jsx)(r.Text, {
+      }), (0, a.jsx)(l.Text, {
         variant: "text-sm/medium",
-        color: S || T ? "always-white" : "text-normal",
-        children: g ? I.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
+        color: S || f ? "always-white" : "text-normal",
+        children: A ? I.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
           helpdeskArticle: o.default.getArticleURL(E.HelpdeskArticles.PREMIUM_DETAILS),
           onSubscriptionsClick: p
         }) : I.default.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({

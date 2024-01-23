@@ -43,8 +43,8 @@ var s = n("37983"),
   b = n("747554"),
   G = n("740316"),
   B = n("592407"),
-  k = n("977169"),
-  F = n("363691"),
+  F = n("977169"),
+  k = n("363691"),
   w = n("649844"),
   H = n("538620"),
   V = n("703537"),
@@ -136,7 +136,7 @@ let em = l.memo(function() {
   let eA = null === (e = g.metadata) || void 0 === e ? void 0 : e.premiumType;
   switch (g.type) {
     case eo.NoticeTypes.LURKING_GUILD:
-      return (0, s.jsx)(F.default, {});
+      return (0, s.jsx)(k.default, {});
     case eo.NoticeTypes.PENDING_MEMBER:
       return (0, s.jsx)(b.default, {});
     case eo.NoticeTypes.INVITED_TO_SPEAK:
@@ -593,7 +593,7 @@ let em = l.memo(function() {
         })]
       });
     case eo.NoticeTypes.VIEWING_ROLES:
-      return (0, s.jsx)(k.default, {});
+      return (0, s.jsx)(F.default, {});
     case eo.NoticeTypes.PREMIUM_UNCANCEL:
       return (0, s.jsxs)(en.default, {
         color: eA === eu.PremiumTypes.TIER_1 ? en.NoticeColors.PREMIUM_TIER_1 : eA === eu.PremiumTypes.TIER_0 ? en.NoticeColors.PREMIUM_TIER_0 : en.NoticeColors.PREMIUM_TIER_2,
@@ -767,7 +767,7 @@ let em = l.memo(function() {
       });
     case eo.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION:
       let {
-        dismissUntil: eB, decisionId: ek
+        dismissUntil: eB, decisionId: eF
       } = g.metadata;
       return (0, s.jsxs)(en.default, {
         color: en.NoticeColors.WARNING,
@@ -778,7 +778,7 @@ let em = l.memo(function() {
           }
         }), ef.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE, (0, s.jsx)(en.NoticeButton, {
           onClick: () => {
-            null != _ && (0, x.removeMentionRaidRestrictionWithFeedback)(_, ek, () => {
+            null != _ && (0, x.removeMentionRaidRestrictionWithFeedback)(_, eF, () => {
               eI(eB), (0, x.clearMentionRaidDetected)(_)
             })
           },

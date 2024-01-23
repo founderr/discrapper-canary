@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return A
   }
 });
 var a = s("37983");
 s("884691");
 var n = s("90915"),
-  l = s("446674"),
-  r = s("77078"),
+  r = s("446674"),
+  l = s("77078"),
   i = s("901582"),
   u = s("86621"),
   o = s("984376"),
@@ -17,20 +17,20 @@ var n = s("90915"),
   _ = s("539938"),
   E = s("595426"),
   I = s("697218"),
-  f = s("145131"),
-  T = s("216422"),
+  T = s("145131"),
+  f = s("216422"),
   S = s("49111"),
   R = s("646718"),
   m = s("782340"),
   p = s("309285");
-let N = l.default.connectStores([I.default], () => ({
+let N = r.default.connectStores([I.default], () => ({
   user: I.default.getCurrentUser()
 }))((0, o.default)((0, u.default)(e => {
   let {
     AnalyticsLocationProvider: t
   } = (0, c.default)(d.default.HOME_PAGE_PREMIUM_TAB), {
     isAuthenticated: s,
-    user: l
+    user: r
   } = e;
   return s ? (0, a.jsxs)("div", {
     className: p.homeWrapperNormal,
@@ -40,17 +40,17 @@ let N = l.default.connectStores([I.default], () => ({
         isAuthenticated: s,
         className: p.headerBar,
         children: [(0, a.jsx)(_.default.Icon, {
-          icon: T.default,
+          icon: f.default,
           "aria-hidden": !0
         }), (0, a.jsx)(_.default.Title, {
           children: m.default.Messages.PREMIUM
         })]
       })
     }), (0, a.jsx)(t, {
-      children: null == l ? (0, a.jsx)(f.default, {
-        align: f.default.Align.CENTER,
-        justify: f.default.Justify.CENTER,
-        children: (0, a.jsx)(r.Spinner, {
+      children: null == r ? (0, a.jsx)(T.default, {
+        align: T.default.Align.CENTER,
+        justify: T.default.Justify.CENTER,
+        children: (0, a.jsx)(l.Spinner, {
           className: p.spinner
         })
       }) : (0, a.jsx)(E.default, {
@@ -61,4 +61,4 @@ let N = l.default.connectStores([I.default], () => ({
     to: S.Routes.LOGIN
   })
 })));
-var g = N
+var A = N

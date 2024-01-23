@@ -9,8 +9,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   n = s("884691"),
-  l = s("446674"),
-  r = s("77078"),
+  r = s("446674"),
+  l = s("77078"),
   i = s("272030"),
   u = s("741130"),
   o = s("698041"),
@@ -28,14 +28,14 @@ class _ extends n.PureComponent {
       primaryStoreListing: t,
       skuId: s,
       onStoreListingSelect: n,
-      currentStoreListingId: l,
-      ...r
+      currentStoreListingId: r,
+      ...l
     } = this.props, i = null != t ? 1 : 0;
     return (i += e.length) < 2 ? null : (0, a.jsx)(u.default, {
       onClick: this.handleContextMenu,
       onDropdownClick: this.handleContextMenu,
       onContextMenu: this.handleContextMenu,
-      ...r,
+      ...l,
       children: d.default.Messages.APPLICATION_TEST_MODE_VIEW_OTHER_LISTINGS
     })
   }
@@ -46,26 +46,26 @@ class _ extends n.PureComponent {
         onStoreListingSelect: t,
         currentStoreListingId: s,
         onMenuSelect: n
-      } = this.props, l = e.map(e => e.id !== s ? (0, a.jsx)(r.MenuItem, {
+      } = this.props, r = e.map(e => e.id !== s ? (0, a.jsx)(l.MenuItem, {
         id: "".concat(e.id),
         label: e.id,
         action: () => {
           i.closeContextMenu(), null == t || t(e)
         }
       }) : null);
-      return (0, a.jsx)(r.Menu, {
+      return (0, a.jsx)(l.Menu, {
         onSelect: n,
         navId: "test-store-listing",
         "aria-label": d.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
         onClose: i.closeContextMenu,
-        children: l
+        children: r
       })
     }, this.handleContextMenu = e => {
       e.stopPropagation(), i.openContextMenu(e, this.renderContextMenu)
     }
   }
 }
-var E = l.default.connectStores([o.default], e => {
+var E = r.default.connectStores([o.default], e => {
   let {
     skuId: t
   } = e;

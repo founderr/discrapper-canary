@@ -91,14 +91,14 @@ function h(e) {
     }) : A.default.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
       guildName: L.name
     }),
-    k = x && O === S.StaticChannelRoute.MEMBER_SAFETY;
+    F = x && O === S.StaticChannelRoute.MEMBER_SAFETY;
   return (0, s.jsxs)(_.default, {
     className: C.notice,
     color: _.NoticeColors.WARNING,
     children: [(0, s.jsx)(_.NoticeCloseButton, {
       onClick: g,
       noticeType: p.NoticeTypes.GUILD_RAID_NOTIFICATION
-    }), j, B, !k && (0, s.jsx)(_.NoticeButton, {
+    }), j, B, !F && (0, s.jsx)(_.NoticeButton, {
       className: C.actionButton,
       onClick: () => U(!0),
       children: (0, s.jsx)("div", {

@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 });
 var a = s("37983");
 s("884691");
 var n = s("819855"),
-  l = s("77078"),
-  r = s("841098"),
+  r = s("77078"),
+  l = s("841098"),
   i = s("719923"),
   u = s("154889"),
   o = s("917247"),
@@ -22,47 +22,47 @@ let I = e => {
       subscriptionTier: s,
       shouldShowUpsells: a,
       trialDurationCopy: n,
-      isPersistentCTA: l,
-      subscriptionTrial: r
+      isPersistentCTA: r,
+      subscriptionTrial: l
     } = e;
-    if (t && (s === c.PremiumSubscriptionSKUs.TIER_2 || l)) return (0, i.formatTrialCtaIntervalDuration)({
-      intervalType: null == r ? void 0 : r.interval,
-      intervalCount: null == r ? void 0 : r.interval_count
+    if (t && (s === c.PremiumSubscriptionSKUs.TIER_2 || r)) return (0, i.formatTrialCtaIntervalDuration)({
+      intervalType: null == l ? void 0 : l.interval,
+      intervalCount: null == l ? void 0 : l.interval_count
     });
     if (t) return _.default.Messages.GET_FREE_TRIAL.format({
       freeTrialText: n
     });
     if (a && s === c.PremiumSubscriptionSKUs.TIER_2) return _.default.Messages.BOGO_CHANGE_LOG_REDEEM
   },
-  f = (e, t, s, a) => t || s ? _.default.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === c.PremiumSubscriptionSKUs.TIER_2 ? _.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+  T = (e, t, s, a) => t || s ? _.default.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === c.PremiumSubscriptionSKUs.TIER_2 ? _.default.Messages.PREMIUM_DISCOUNT_CTA.format({
     percent: a
   }) : void 0;
-var T = e => {
+var f = e => {
   var t;
   let {
     forceInverted: s,
     subscriptionTier: c,
-    isEligibleForBogoPromotion: T = !1,
+    isEligibleForBogoPromotion: f = !1,
     isPersistentCTA: S = !1,
     useShorterCTA: R = !1,
     ...m
-  } = e, p = (0, r.default)(), N = (0, n.isThemeDark)(p) || s, g = null === (t = (0, o.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, A = (0, i.formatTrialOfferIntervalDuration)({
-    intervalType: null == g ? void 0 : g.interval,
-    intervalCount: null == g ? void 0 : g.interval_count
-  }), P = (0, u.usePremiumDiscountOffer)(), C = null != g && c === g.sku_id, O = T ? _.default.Messages.BOGO_CLAIM_OFFER : null != P ? f(c, R, S, P.discount.amount) : I({
+  } = e, p = (0, l.default)(), N = (0, n.isThemeDark)(p) || s, A = null === (t = (0, o.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, i.formatTrialOfferIntervalDuration)({
+    intervalType: null == A ? void 0 : A.interval,
+    intervalCount: null == A ? void 0 : A.interval_count
+  }), P = (0, u.usePremiumDiscountOffer)(), C = null != A && c === A.sku_id, M = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != P ? T(c, R, S, P.discount.amount) : I({
     showTrialCTA: C,
     subscriptionTier: c,
     shouldShowUpsells: !1,
-    trialDurationCopy: A,
+    trialDurationCopy: g,
     isPersistentCTA: S,
-    subscriptionTrial: g
+    subscriptionTrial: A
   });
   return (0, a.jsx)(d.default, {
-    color: l.ButtonColors.BRAND,
-    look: N ? l.ButtonLooks.INVERTED : void 0,
+    color: r.ButtonColors.BRAND,
+    look: N ? r.ButtonLooks.INVERTED : void 0,
     buttonShineClassName: "buttonShineClassName" in m ? m.buttonShineClassName : N ? E.brandShine : void 0,
-    trialId: null == g ? void 0 : g.id,
-    buttonText: O,
+    trialId: null == A ? void 0 : A.id,
+    buttonText: M,
     buttonTextClassName: C ? E.freeTrialText : void 0,
     onlyShineOnHover: !0,
     subscriptionTier: c,

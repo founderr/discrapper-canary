@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983"),
   n = s("884691"),
-  l = s("456015"),
-  r = s("982457"),
+  r = s("456015"),
+  l = s("982457"),
   i = s("781084"),
   u = s("154889"),
   o = s("917247"),
@@ -26,7 +26,7 @@ var a = s("37983"),
         }, {
           autoTrackExposure: !1
         });
-        e ? (0, l.acknowledgeUserOffer)(s, _) : null != s && r.default.acknowledgeUserTrialOffer(s)
+        e ? (0, r.acknowledgeUserOffer)(s, _) : null != s && l.default.acknowledgeUserTrialOffer(s)
       }
     }, [s, _]), (0, a.jsx)(d.default, {
       isFullscreen: E

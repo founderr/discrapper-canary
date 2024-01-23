@@ -7,15 +7,15 @@ s.r(t), s.d(t, {
     return E
   }
 });
-var a, n, l = s("37983"),
-  r = s("884691"),
+var a, n, r = s("37983"),
+  l = s("884691"),
   i = s("446674"),
   u = s("913144"),
   o = s("465527"),
   d = s("622839"),
   c = s("782340");
 (a = n || (n = {})).SHORT = "SHORT", a.LONG = "LONG";
-class _ extends r.PureComponent {
+class _ extends l.PureComponent {
   getText(e, t) {
     if (429 === e.status) switch (t) {
       case "SHORT":
@@ -39,7 +39,7 @@ class _ extends r.PureComponent {
       purchaseError: t,
       messageStyle: s
     } = this.props;
-    return null == t ? null : (0, l.jsx)("div", {
+    return null == t ? null : (0, r.jsx)("div", {
       className: e,
       children: this.getText(t, s)
     })

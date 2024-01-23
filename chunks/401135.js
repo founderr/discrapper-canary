@@ -6,10 +6,10 @@ s.r(t), s.d(t, {
 });
 var a = s("446674"),
   n = s("10514"),
-  l = s("719923"),
-  r = s("646718");
+  r = s("719923"),
+  l = s("646718");
 
 function i() {
-  let e = (0, a.useStateFromStores)([n.default], () => n.default.getForSkuAndInterval(r.PremiumSubscriptionSKUs.TIER_0, r.SubscriptionIntervalTypes.MONTH));
-  return null != e ? (0, l.getFormattedPriceForPlan)(e) : "…"
+  let e = (0, a.useStateFromStores)([n.default], () => n.default.getForSkuAndInterval(l.PremiumSubscriptionSKUs.TIER_0, l.SubscriptionIntervalTypes.MONTH));
+  return null != e ? (0, r.getFormattedPriceForPlan)(e) : "…"
 }

@@ -4,10 +4,10 @@ s.r(t), s.d(t, {
     return n
   },
   useWhatsNewAvatarDecoRollout: function() {
-    return l
+    return r
   },
   WhatsNewProfileFXRollout: function() {
-    return r
+    return l
   },
   useWhatsNewProfileFXRollout: function() {
     return i
@@ -29,10 +29,10 @@ let n = (0, a.createExperiment)({
       }
     }]
   }),
-  l = () => n.useExperiment({
+  r = () => n.useExperiment({
     location: "experiment_hook"
   }),
-  r = (0, a.createExperiment)({
+  l = (0, a.createExperiment)({
     kind: "user",
     id: "2023-09_whats_new_drop_2_flip",
     label: "What's New Drop 2",
@@ -47,6 +47,6 @@ let n = (0, a.createExperiment)({
       }
     }]
   }),
-  i = () => r.useExperiment({
+  i = () => l.useExperiment({
     location: "experiment_hook"
   })

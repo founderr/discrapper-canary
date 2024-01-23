@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983"),
   n = s("884691"),
-  l = s("414456"),
-  r = s.n(l),
+  r = s("414456"),
+  l = s.n(r),
   i = s("446674"),
   u = s("77078"),
   o = s("106435"),
@@ -19,22 +19,22 @@ var a = s("37983"),
 function I(e) {
   let {
     smallerText: t
-  } = e, s = (0, i.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), l = s.map((e, t) => (0, a.jsx)(f, {
+  } = e, s = (0, i.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), r = s.map((e, t) => (0, a.jsx)(T, {
     affinity: e,
     applyMask: t !== s.length - 1
-  }, e.id)), r = e => null != e.globalName ? e.globalName : e.username, o = n.useMemo(() => 3 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
-    username: r(s[2])
+  }, e.id)), l = e => null != e.globalName ? e.globalName : e.username, o = n.useMemo(() => 3 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
+    username: l(s[2])
   }) : 2 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_2.format({
-    username: r(s[1]),
-    otherUsername: r(s[0])
+    username: l(s[1]),
+    otherUsername: l(s[0])
   }) : 1 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
-    username: r(s[0])
+    username: l(s[0])
   }) : "", [s]);
   return 0 === s.length ? null : (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)("div", {
       className: E.iconContainer,
-      children: l
+      children: r
     }), (0, a.jsx)("div", {
       className: E.textContainer,
       children: (0, a.jsx)(function() {
@@ -52,25 +52,25 @@ function I(e) {
   })
 }
 
-function f(e) {
+function T(e) {
   let {
     affinity: t,
     applyMask: s
   } = e, {
     avatarSrc: n,
-    eventHandlers: l
+    eventHandlers: r
   } = (0, o.default)({
     user: t,
     size: c.AvatarSizes.SIZE_32,
     animateOnHover: !0
   });
   return (0, a.jsx)(u.Avatar, {
-    className: r(E.icon, {
+    className: l(E.icon, {
       [E.mask]: s
     }),
     src: n,
     "aria-label": t.username,
     size: c.AvatarSizes.SIZE_32,
-    ...l
+    ...r
   })
 }

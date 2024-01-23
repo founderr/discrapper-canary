@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var n = s("414456"),
-  l = s.n(n),
-  r = s("49111"),
+  r = s.n(n),
+  l = s("49111"),
   i = s("462172");
 let u = {
     ESRB: {
@@ -28,7 +28,7 @@ let u = {
     }
   },
   o = {
-    [r.ContentRatingAgencies.ESRB]: {
+    [l.ContentRatingAgencies.ESRB]: {
       [u.ESRB.EVERYONE]: i.esrbEveryone,
       [u.ESRB.EVERYONE_TEN_PLUS]: i.esrbEveryoneTenPlus,
       [u.ESRB.TEEN]: i.esrbTeen,
@@ -36,7 +36,7 @@ let u = {
       [u.ESRB.ADULT]: i.esrbAdult,
       [u.ESRB.RATING_PENDING]: i.esrbRatingPending
     },
-    [r.ContentRatingAgencies.PEGI]: {
+    [l.ContentRatingAgencies.PEGI]: {
       [u.PEGI.THREE]: i.pegiThree,
       [u.PEGI.SEVEN]: i.pegiSeven,
       [u.PEGI.TWELVE]: i.pegiTwelve,
@@ -49,8 +49,8 @@ var d = e => {
     agency: t,
     rating: s,
     className: n
-  } = e, r = o[t][s];
-  return null == r ? null : (0, a.jsx)("div", {
-    className: l(i.contentRating, r, n)
+  } = e, l = o[t][s];
+  return null == l ? null : (0, a.jsx)("div", {
+    className: r(i.contentRating, l, n)
   })
 }

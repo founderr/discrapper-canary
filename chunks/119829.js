@@ -8,13 +8,13 @@ var a = s("884691"),
   n = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
       [t, s] = a.useState(!1),
-      [n, l] = a.useState(0),
-      [r, i] = a.useState(!1),
+      [n, r] = a.useState(0),
+      [l, i] = a.useState(!1),
       [u, o] = a.useState(0);
     return a.useEffect(() => {
       n >= e && (i(!0), o(Math.floor(n / e)));
       let t = setTimeout(() => {
-        l(0)
+        r(0)
       }, 1e3);
       return () => clearTimeout(t)
     }, [n, e]), a.useEffect(() => {
@@ -24,7 +24,7 @@ var a = s("884691"),
         }, 1e3);
         return () => clearTimeout(e)
       }
-      l(e => e + 1)
+      r(e => e + 1)
     }, [t]), {
       onHover: () => {
         s(!0)
@@ -32,7 +32,7 @@ var a = s("884691"),
       onUnhover: () => {
         s(!1)
       },
-      isEasterEggTriggered: r,
+      isEasterEggTriggered: l,
       easterEggLevel: u
     }
   }

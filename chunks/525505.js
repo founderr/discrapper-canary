@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("424973");
 var a = s("37983"),
   n = s("884691"),
-  l = s("414456"),
-  r = s.n(l),
+  r = s("414456"),
+  l = s.n(r),
   i = s("446674"),
   u = s("819855"),
   o = s("77078"),
@@ -16,27 +16,27 @@ var a = s("37983"),
   _ = s("812204"),
   E = s("685665"),
   I = s("308592"),
-  f = s("915639"),
-  T = s("697218"),
+  T = s("915639"),
+  f = s("697218"),
   S = s("521012"),
   R = s("36694"),
   m = s("945330"),
   p = s("719923"),
   N = s("153160"),
-  g = s("324878"),
-  A = s("917247"),
+  A = s("324878"),
+  g = s("917247"),
   P = s("641078"),
   C = s("400307"),
-  O = s("218435"),
-  M = s("881155"),
+  M = s("218435"),
+  O = s("881155"),
   h = s("646718"),
   L = s("49111"),
   x = s("782340"),
   v = s("992250"),
-  j = s("640754"),
+  U = s("640754"),
   b = s("510407"),
-  U = s("657890"),
-  D = s("823986");
+  D = s("657890"),
+  j = s("823986");
 let G = e => {
     let {
       isLightTheme: t
@@ -47,7 +47,7 @@ let G = e => {
       colorOptions: t ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
     })
   },
-  B = () => (0, a.jsx)("div", {
+  k = () => (0, a.jsx)("div", {
     className: v.mostPopularPill,
     children: (0, a.jsx)(o.Heading, {
       className: v.mostPopularText,
@@ -60,15 +60,15 @@ let G = e => {
         premiumType: s
       } = e,
       n = (0, c.default)();
-    t = s === h.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? j : b : (0, u.isThemeDark)(n) ? U : D;
-    let l = (0, p.getPremiumTypeDisplayName)(s);
+    t = s === h.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? U : b : (0, u.isThemeDark)(n) ? D : j;
+    let r = (0, p.getPremiumTypeDisplayName)(s);
     return (0, a.jsx)("img", {
       src: t,
       className: v.logo,
-      alt: l
+      alt: r
     })
   },
-  k = e => {
+  B = e => {
     let {
       text: t,
       badge: s
@@ -116,7 +116,7 @@ let G = e => {
       column2: n
     } = e;
     return (0, a.jsxs)("tr", {
-      className: r(v.headerRow, v.rowBottomBorder, v.topBorderRadius),
+      className: l(v.headerRow, v.rowBottomBorder, v.topBorderRadius),
       children: [(0, a.jsx)("th", {
         scope: "col",
         className: v.headerLabelCell,
@@ -127,7 +127,7 @@ let G = e => {
         children: s
       }), (0, a.jsx)("th", {
         scope: "col",
-        className: r(v.headerCell, v.topBorderRadius),
+        className: l(v.headerCell, v.topBorderRadius),
         children: n
       })]
     })
@@ -137,18 +137,18 @@ let G = e => {
       label: t,
       column1: s,
       column2: n,
-      withBottomBorder: l = !0,
+      withBottomBorder: r = !0,
       withTopBorderRadius: i = !1,
       withBottomBorderRadius: u = !1,
       buttonsRow: o = !1,
       shortRow: d = !1
     } = e;
     return (0, a.jsxs)("tr", {
-      className: r(v.row, {
+      className: l(v.row, {
         [v.wideRow]: o,
         [v.topBorderRadius]: i,
         [v.bottomBorderRadius]: u,
-        [v.rowBottomBorder]: l,
+        [v.rowBottomBorder]: r,
         [v.shortRow]: d
       }),
       children: [(0, a.jsx)("th", {
@@ -156,12 +156,12 @@ let G = e => {
         className: v.labelCell,
         children: t
       }), (0, a.jsx)("td", {
-        className: r(v.cell, {
+        className: l(v.cell, {
           [v.buttonsCell]: o
         }),
         children: s
       }), (0, a.jsx)("td", {
-        className: r(v.cell, {
+        className: l(v.cell, {
           [v.topBorderRadius]: i,
           [v.bottomBorderRadius]: u,
           [v.buttonsCell]: o
@@ -173,15 +173,15 @@ let G = e => {
 var w = e => {
   var t;
   let s, {
-      className: l,
+      className: r,
       hideCTAs: R = !1,
       headingOverride: m,
-      hidePill: j = !1,
+      hidePill: U = !1,
       selectedPlanColumnClassName: b,
-      selectedPlanTier: U = h.PremiumTypes.TIER_2
+      selectedPlanTier: D = h.PremiumTypes.TIER_2
     } = e,
     {
-      AnalyticsLocationProvider: D
+      AnalyticsLocationProvider: j
     } = (0, E.default)(_.default.PREMIUM_MARKETING_PLAN_COMPARISON),
     w = (0, i.useStateFromStores)([S.default], () => S.default.hasFetchedSubscriptions()),
     V = (0, I.useSubscriptionPlansLoaded)(),
@@ -195,11 +195,11 @@ var w = e => {
   });
   let z = (0, c.default)(),
     X = (0, u.isThemeLight)(z),
-    Q = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
-    Z = (0, p.isPremiumExactly)(Q, h.PremiumTypes.TIER_2),
-    J = (0, A.usePremiumTrialOffer)(),
-    q = null == J ? void 0 : null === (t = J.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-    $ = (0, g.useCurrentPremiumTrialTier)(),
+    Q = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()),
+    J = (0, p.isPremiumExactly)(Q, h.PremiumTypes.TIER_2),
+    Z = (0, g.usePremiumTrialOffer)(),
+    q = null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
+    $ = (0, A.useCurrentPremiumTrialTier)(),
     ee = (0, P.useIsEligibleForBogoPromotion)();
   if (!w || !V) return null;
   let et = p.default.getDefaultPrice(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
@@ -218,7 +218,7 @@ var w = e => {
       })
     },
     en = [{
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE
       }),
       column1: (0, a.jsx)(a.Fragment, {
@@ -232,7 +232,7 @@ var w = e => {
         })
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_EMOJI
       }),
       column1: (0, a.jsx)(H, {
@@ -242,7 +242,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STICKER
       }),
       column1: (0, a.jsx)(H, {
@@ -252,7 +252,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE
       }),
       column1: (0, a.jsx)(H, {
@@ -262,7 +262,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS
       }),
       column1: (0, a.jsx)(H, {
@@ -272,7 +272,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
       }),
       column1: (0, a.jsx)(K, {
@@ -282,7 +282,7 @@ var w = e => {
         text: (0, p.getMaxFileSizeForPremiumType)(h.PremiumTypes.TIER_2)
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING
       }),
       column1: (0, a.jsx)(H, {
@@ -292,10 +292,10 @@ var w = e => {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_STREAMING_DETAILS
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
           numBoosts: h.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-          percentageOff: (0, N.formatPercent)(f.default.locale, h.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+          percentageOff: (0, N.formatPercent)(T.default.locale, h.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
         })
       }),
       column1: (0, a.jsx)(H, {
@@ -305,7 +305,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PROFILE_THEMES
       }),
       column1: (0, a.jsx)(H, {
@@ -315,7 +315,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_PROFILE
       }),
       column1: (0, a.jsx)(H, {
@@ -325,7 +325,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS_GENERIC
       }),
       column1: (0, a.jsx)(H, {
@@ -335,7 +335,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_CLIENT_THEME
       }),
       column1: (0, a.jsx)(H, {
@@ -345,7 +345,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BADGE
       }),
       column1: (0, a.jsx)(H, {
@@ -355,7 +355,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_VIDEO_BACKGROUND
       }),
       column1: (0, a.jsx)(H, {
@@ -365,7 +365,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_SOUNDS_ANYWHERE
       }),
       column1: (0, a.jsx)(H, {
@@ -375,7 +375,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_ENTRY_SOUNDS
       }),
       column1: (0, a.jsx)(H, {
@@ -385,7 +385,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_LIMIT
       }),
       column1: (0, a.jsx)(H, {
@@ -395,7 +395,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(k, {
+      label: (0, a.jsx)(B, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_MESSAGE_LENGTH.format({
           maxChars: L.MAX_MESSAGE_LENGTH_PREMIUM
         })
@@ -418,36 +418,36 @@ var w = e => {
   }) : en.push({
     label: null,
     column1: (0, a.jsxs)(a.Fragment, {
-      children: [q === h.PremiumSubscriptionSKUs.TIER_2 || ee ? (0, a.jsx)(M.default, {
+      children: [q === h.PremiumSubscriptionSKUs.TIER_2 || ee ? (0, a.jsx)(O.default, {
         className: v.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1,
         look: o.ButtonLooks.OUTLINED,
         color: X ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
         buttonShineClassName: void 0
-      }) : (0, a.jsx)(M.default, {
+      }) : (0, a.jsx)(O.default, {
         className: v.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1
-      }), $ === h.PremiumTypes.TIER_2 || null != q ? null : (0, a.jsx)(O.default, {
+      }), $ === h.PremiumTypes.TIER_2 || null != q ? null : (0, a.jsx)(M.default, {
         className: v.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0
       })]
     }),
     column2: (0, a.jsxs)(a.Fragment, {
-      children: [q === h.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(M.default, {
+      children: [q === h.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(O.default, {
         className: v.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
         look: o.ButtonLooks.OUTLINED,
         color: X ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
         buttonShineClassName: void 0
-      }) : (0, a.jsx)(M.default, {
+      }) : (0, a.jsx)(O.default, {
         className: v.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
         isEligibleForBogoPromotion: ee
-      }), $ === h.PremiumTypes.TIER_0 || null != q ? null : (0, a.jsx)(O.default, {
+      }), $ === h.PremiumTypes.TIER_0 || null != q ? null : (0, a.jsx)(M.default, {
         className: v.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2
       })]
@@ -455,24 +455,24 @@ var w = e => {
     withBottomBorder: !1,
     withBottomBorderRadius: !0,
     buttonsRow: null == q
-  }), s = j ? null : null != q || null != $ ? (0, a.jsx)(C.PremiumPillWithSparkles, {
+  }), s = U ? null : null != q || null != $ ? (0, a.jsx)(C.PremiumPillWithSparkles, {
     text: null != q ? x.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
     className: v.freeTrialPillWithSparkles,
-    colorOptions: q === h.PremiumSubscriptionSKUs.TIER_0 ? X ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : X ? Z ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+    colorOptions: q === h.PremiumSubscriptionSKUs.TIER_0 ? X ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : X ? J ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
   }) : ee ? (0, a.jsx)(G, {
     isLightTheme: X
-  }) : (0, a.jsx)(B, {}), (0, a.jsx)(D, {
+  }) : (0, a.jsx)(k, {}), (0, a.jsx)(j, {
     children: (0, a.jsxs)("div", {
-      className: r(v.root, l),
+      className: l(v.root, r),
       "data-testid": "v2-marketing-page-comparison-table",
       children: [(0, a.jsx)(o.Heading, {
-        className: r(v.titleText, v.textColor),
+        className: l(v.titleText, v.textColor),
         variant: "heading-xxl/extrabold",
         children: null != m ? m : x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
       }), (0, a.jsxs)("div", {
         className: v.tableWrapper,
         children: [(0, a.jsx)("div", {
-          className: q === h.PremiumSubscriptionSKUs.TIER_0 || $ === h.PremiumTypes.TIER_0 || U === h.PremiumTypes.TIER_0 ? r(b, v.tier0ColumnOuter) : r(b, v.tier2ColumnOuter),
+          className: q === h.PremiumSubscriptionSKUs.TIER_0 || $ === h.PremiumTypes.TIER_0 || D === h.PremiumTypes.TIER_0 ? l(b, v.tier0ColumnOuter) : l(b, v.tier2ColumnOuter),
           children: s
         }), (0, a.jsxs)("table", {
           className: v.table,

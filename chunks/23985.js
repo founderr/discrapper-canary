@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983"),
   n = s("884691"),
-  l = s("414456"),
-  r = s.n(l),
+  r = s("414456"),
+  l = s.n(r),
   i = s("446674"),
   u = s("1017"),
   o = s("102985"),
@@ -16,8 +16,8 @@ var a = s("37983"),
   _ = s("552712"),
   E = s("698041"),
   I = s("764206"),
-  f = s("271560"),
-  T = s("760936"),
+  T = s("271560"),
+  f = s("760936"),
   S = s("697092"),
   R = s("782340"),
   m = s("825704");
@@ -29,7 +29,7 @@ class p extends n.Component {
         className: m.sectionContent,
         children: [e.map(e => (0, a.jsx)("div", {
           className: m.unit,
-          children: (0, a.jsx)(T.default, {
+          children: (0, a.jsx)(f.default, {
             reason: e,
             hidePersonalInformation: s
           })
@@ -57,12 +57,12 @@ class p extends n.Component {
       nonSocialReasons: t,
       storeListing: s,
       hidePersonalInformation: n,
-      className: l
+      className: r
     } = this.props;
     if (0 === e.length && 0 === t.length && null == s.staffNotes) return null;
     let i = this.getReviewToRender();
     return (0, a.jsxs)("div", {
-      className: r(m.root, l),
+      className: l(m.root, r),
       children: [(0, a.jsx)("div", {
         className: m.header,
         children: R.default.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
@@ -78,8 +78,8 @@ var N = i.default.connectStores([_.default, d.default, E.default, u.default, c.d
     sku: t
   } = e;
   return {
-    socialReasons: (0, f.getSocialRecommendationReasons)(t.id, _.default, d.default, u.default, c.default),
-    nonSocialReasons: (0, f.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
+    socialReasons: (0, T.getSocialRecommendationReasons)(t.id, _.default, d.default, u.default, c.default),
+    nonSocialReasons: (0, T.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
     hidePersonalInformation: o.default.hidePersonalInformation
   }
 })(p)

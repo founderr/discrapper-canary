@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return l
+    return r
   }
 });
 var a = s("862205");
@@ -20,7 +20,7 @@ let n = (0, a.createExperiment)({
     }
   }]
 });
-var l = function() {
+var r = function() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   return n.useExperiment({

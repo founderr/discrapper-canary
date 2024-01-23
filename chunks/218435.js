@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var n = s("414456"),
-  l = s.n(n),
-  r = s("819855"),
+  r = s.n(n),
+  l = s("819855"),
   i = s("77078"),
   u = s("841098"),
   o = s("635956"),
@@ -22,7 +22,7 @@ var n = s("414456"),
       giftMessage: n,
       subscriptionTier: E,
       ...I
-    } = e, f = (0, u.default)(), T = (0, r.isThemeDark)(f) || s, S = T ? i.ButtonColors.WHITE : i.ButtonColors.BRAND, R = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
+    } = e, T = (0, u.default)(), f = (0, l.isThemeDark)(T) || s, S = f ? i.ButtonColors.WHITE : i.ButtonColors.BRAND, R = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
     return (0, a.jsx)(o.default, {
       isGift: !0,
       color: S,
@@ -30,7 +30,7 @@ var n = s("414456"),
       hover: i.ButtonHovers.BRAND,
       buttonText: R,
       giftMessage: n,
-      className: l(t, T ? _.buttonWhite : _.buttonBrand),
+      className: r(t, f ? _.buttonWhite : _.buttonBrand),
       subscriptionTier: E,
       ...I
     })

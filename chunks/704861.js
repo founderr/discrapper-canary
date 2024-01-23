@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   n = s("884691"),
-  l = s("55620"),
-  r = s("440351"),
+  r = s("55620"),
+  l = s("440351"),
   i = s("782340"),
   u = s("76101");
 class o extends n.PureComponent {
@@ -19,7 +19,7 @@ class o extends n.PureComponent {
     } = this.props;
     return (0, a.jsx)("div", {
       className: u.matureListing,
-      children: (0, a.jsx)(r.default, {
+      children: (0, a.jsx)(l.default, {
         onAgree: this.handleAgree,
         onDisagree: this.handleDisagree,
         title: i.default.Messages.MATURE_LISTING_TITLE.format({
@@ -33,9 +33,9 @@ class o extends n.PureComponent {
   }
   constructor(...e) {
     super(...e), this.handleDisagree = () => {
-      (0, l.matureDisagree)()
+      (0, r.matureDisagree)()
     }, this.handleAgree = () => {
-      (0, l.matureAgree)()
+      (0, r.matureAgree)()
     }
   }
 }

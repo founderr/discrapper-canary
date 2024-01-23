@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   n = s("884691"),
-  l = s("907002"),
-  r = s("891722"),
+  r = s("907002"),
+  l = s("891722"),
   i = s("704426"),
   u = s("77078"),
   o = s("558566"),
@@ -18,12 +18,12 @@ var E = e => {
   let {
     cards: t,
     className: s
-  } = e, [E, I] = n.useState([0, 1, 2, 3, 4]), [f, T] = (0, l.useSprings)(t.length, (e, t) => ({
+  } = e, [E, I] = n.useState([0, 1, 2, 3, 4]), [T, f] = (0, r.useSprings)(t.length, (e, t) => ({
     ...t,
     x: c[e]
   }));
   return n.useEffect(() => {
-    T(e => {
+    f(e => {
       let t = E.indexOf(e),
         s = -1 === t ? 300 : c[t],
         a = t <= 0 || t === c.length - 1;
@@ -32,7 +32,7 @@ var E = e => {
         opacity: a ? 0 : 1
       }
     })
-  }, [T, E]), (0, a.jsx)("div", {
+  }, [f, E]), (0, a.jsx)("div", {
     className: s,
     children: (0, a.jsxs)("div", {
       className: d.cardContainer,
@@ -41,22 +41,22 @@ var E = e => {
           I(e => [(e[0] - 1 + t.length) % t.length, e[0], e[1], e[2], e[3]])
         },
         className: d.leftArrow,
-        children: (0, a.jsx)(r.ArrowSmallLeftIcon, {
+        children: (0, a.jsx)(l.ArrowSmallLeftIcon, {
           className: d.arrowIcon,
           width: 30,
           color: _
         })
       }), (0, a.jsx)("div", {
         className: d.cardInnerContainer,
-        children: f.map((e, s) => {
+        children: T.map((e, s) => {
           let {
             x: n,
-            opacity: r
+            opacity: l
           } = e;
-          return (0, a.jsx)(l.animated.div, {
+          return (0, a.jsx)(r.animated.div, {
             className: d.card,
             style: {
-              opacity: r,
+              opacity: l,
               transform: null == n ? void 0 : n.to(e => "translate3d(".concat(e, "%,0,0)"))
             },
             children: (0, a.jsx)(o.default, {
