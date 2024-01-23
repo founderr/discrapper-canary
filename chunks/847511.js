@@ -286,5 +286,18 @@ var D = {
       };
       throw t
     }
+  },
+  endPollEarly: async function e(e) {
+    let {
+      channelId: t,
+      messageId: n
+    } = e, s = await u.default.confirm({
+      title: g.default.Messages.POLL_END_EARLY_CONFIRMATION_TITLE,
+      body: g.default.Messages.POLL_END_EARLY_CONFIRMATION_TEXT
+    });
+    s && await A.endPollEarly({
+      channelId: t,
+      messageId: n
+    })
   }
 }
