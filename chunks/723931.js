@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return eB
   },
   default: function() {
-    return eF
+    return ek
   },
   SimpleMessageAccessories: function() {
-    return ek
+    return eF
   }
 }), n("222007"), n("702976"), n("70102"), n("881410");
 var s = n("37983"),
@@ -46,8 +46,8 @@ var s = n("37983"),
   b = n("801177"),
   G = n("985883"),
   B = n("311830"),
-  F = n("626301"),
-  k = n("428786"),
+  k = n("626301"),
+  F = n("428786"),
   w = n("705423"),
   H = n("315021"),
   V = n("24373"),
@@ -105,7 +105,7 @@ function eD() {
       color: "text-muted",
       className: ev.nitroFileSizeUpsellText,
       children: eL.default.Messages.LARGE_FILE_UPLOAD_POWERED_BY_NITRO.format({
-        onClick: () => (0, F.navigateToPremiumMarketingPage)()
+        onClick: () => (0, k.navigateToPremiumMarketingPage)()
       })
     })]
   })
@@ -267,7 +267,7 @@ class eB extends l.Component {
     } = this.props;
     return n !== r.MessageTypes.PREMIUM_REFERRAL || null == t ? null : (0, s.jsx)("div", {
       className: ev.referralContainer,
-      children: (0, s.jsx)(k.default, {
+      children: (0, s.jsx)(F.default, {
         userTrialOfferId: t,
         canRenderReferralEmbed: null != l && l
       })
@@ -514,7 +514,7 @@ class eB extends l.Component {
       guildId: this.props.channel.guild_id
     })
   }
-  renderEmbeddedApplicationStart(e) {
+  renderEmbeddedApplicationInstanceEmbed(e) {
     let {
       application: t,
       activityInstance: n,
@@ -576,7 +576,7 @@ class eB extends l.Component {
     } = this.props, {
       showSuppressModal: a,
       showRemoveAttachmentModal: r
-    } = this.state, o = this.renderCodedLinks(t), u = this.renderGiftCodes(t), d = this.renderReferralTrial(t), c = this.renderAttachments(t), f = this.renderCtaButton(), E = this.renderSocialProofingFileSizeNitroUpsell(t), _ = this.renderEmbeds(t), T = this.renderActivityInvite(t), I = this.renderReactions(t), m = this.renderPublishBump(t), N = this.renderEphemeralAccessories(t), p = this.renderStickersAccessories(t), S = this.renderThreadAccessories(t), A = this.renderComponentAccessories(t), C = this.renderThreadRoleMentionWarning(t), h = this.renderEmbeddedApplicationStart(t), g = this.renderInteractionPremiumUpsell(t), M = this.renderMediaPostEmbeds(t), O = this.renderSafetyPolicyNotice(t), R = this.renderSafetySystemNotification(t), L = this.renderVoiceChannelInvite(t, n), v = this.renderMediaObscureNotice(t), P = this.renderPoll(t, l);
+    } = this.state, o = this.renderCodedLinks(t), u = this.renderGiftCodes(t), d = this.renderReferralTrial(t), c = this.renderAttachments(t), f = this.renderCtaButton(), E = this.renderSocialProofingFileSizeNitroUpsell(t), _ = this.renderEmbeds(t), T = this.renderActivityInvite(t), I = this.renderReactions(t), m = this.renderPublishBump(t), N = this.renderEphemeralAccessories(t), p = this.renderStickersAccessories(t), S = this.renderThreadAccessories(t), A = this.renderComponentAccessories(t), C = this.renderThreadRoleMentionWarning(t), h = this.renderEmbeddedApplicationInstanceEmbed(t), g = this.renderInteractionPremiumUpsell(t), M = this.renderMediaPostEmbeds(t), O = this.renderSafetyPolicyNotice(t), R = this.renderSafetySystemNotification(t), L = this.renderVoiceChannelInvite(t, n), v = this.renderMediaObscureNotice(t), P = this.renderPoll(t, l);
     return null == o && null == c && null == _ && null == T && null == I && null == u && null == d && null == m && null == N && null == p && null == S && null == A && null == h && null == C && null == M && null == O && null != g && null == P && null == L ? null : (0, s.jsxs)("div", {
       id: (0, eA.getMessageAccessoriesId)(t),
       className: i(e, ev.container),
@@ -650,7 +650,7 @@ class eB extends l.Component {
   }
 }
 
-function eF(e) {
+function ek(e) {
   var t, n, l;
   let {
     channel: a,
@@ -675,7 +675,7 @@ function eF(e) {
     isGuest: p,
     communicationDisabled: h,
     isActiveChannelOrUnarchivableThread: O
-  }), U = (0, N.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), b = (0, N.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = a.guild_id) && void 0 !== n ? n : "", (null !== (l = i.editedTimestamp) && void 0 !== l ? l : i.timestamp).valueOf()), B = (0, j.default)(null == a ? void 0 : a.id), F = (0, G.default)(i), k = (0, g.useShouldRedactExplicitContent)(a.id, i.author.id), w = (0, M.useShouldRenderReportFalsePositiveButton)(i.id, ej);
+  }), U = (0, N.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), b = (0, N.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = a.guild_id) && void 0 !== n ? n : "", (null !== (l = i.editedTimestamp) && void 0 !== l ? l : i.timestamp).valueOf()), B = (0, j.default)(null == a ? void 0 : a.id), k = (0, G.default)(i), F = (0, g.useShouldRedactExplicitContent)(a.id, i.author.id), w = (0, M.useShouldRenderReportFalsePositiveButton)(i.id, ej);
   return (0, s.jsx)(eB, {
     canSuppressEmbeds: L,
     canDeleteAttachments: v,
@@ -691,11 +691,11 @@ function eF(e) {
     renderEmbeds: E,
     gifAutoPlay: T,
     canRenderReferralEmbed: a.isDM(),
-    poll: F,
+    poll: k,
     showListsAndHeaders: U.showListsAndHeaders || b.showListsAndHeaders,
     showMaskedLinks: U.showMaskedLinks || b.showMaskedLinks,
     shouldHideMediaOptions: B,
-    shouldRedactExplicitContent: k,
+    shouldRedactExplicitContent: F,
     shouldRenderCtaButton: w
   })
 }
@@ -703,7 +703,7 @@ eB.defaultProps = {
   renderEmbeds: !0,
   compact: !1
 };
-let ek = e => {
+let eF = e => {
   var t, n, l;
   let {
     message: a,
