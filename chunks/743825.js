@@ -102,7 +102,7 @@ l = class extends r.Component {
     this.setState({
       focused: !0,
       submitting: !1
-    }), null != t.drafts.commandType && h.default.saveDraft(e.id, "", t.drafts.commandType), h.default.saveDraft(e.id, "", t.drafts.type)
+    }), h.default.saveDraft(e.id, "", t.drafts.type)
   }
   getCurrentWord() {
     var e;
@@ -404,23 +404,19 @@ l = class extends r.Component {
           }
         }
       })), 0 !== s.length && (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), ((e, n) => {
-        var l, r;
-        let s = C.default.getActiveCommand(t.id);
-        if (null == s) return i(e, t, o.drafts.type, {
+        var l;
+        let r = C.default.getActiveCommand(t.id);
+        if (null == r) return i(e, t, o.drafts.type, {
           requireConfirm: !0,
           showLargeMessageDialog: void 0
         });
-        let a = null !== (l = o.drafts.commandType) && void 0 !== l ? l : o.drafts.type,
-          u = null,
-          d = C.default.getActiveOption(t.id);
-        null != (u = (null == d ? void 0 : d.type) === S.ApplicationCommandOptionType.ATTACHMENT ? d : null === (r = s.options) || void 0 === r ? void 0 : r.find(e => {
-          if (e.type === S.ApplicationCommandOptionType.ATTACHMENT) return null == v.default.getUpload(t.id, e.name, a)
-        })) && E.default.setFile({
+        let s = null === (l = r.options) || void 0 === l ? void 0 : l.find(e => e.type === S.ApplicationCommandOptionType.ATTACHMENT && null == v.default.getUpload(t.id, e.name, o.drafts.type));
+        null != s && E.default.setFile({
           channelId: t.id,
-          id: u.name,
-          draftType: a,
+          id: s.name,
+          draftType: o.drafts.type,
           file: {
-            id: u.name,
+            id: s.name,
             platform: g.UploadPlatform.WEB,
             file: e[0]
           }
