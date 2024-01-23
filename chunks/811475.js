@@ -130,7 +130,8 @@ class v extends a.PureComponent {
             onChange: this.handleTextChange,
             onSubmit: this.handleShare,
             type: p.ChatInputTypes.FORM,
-            parentModalKey: I
+            parentModalKey: I,
+            disableThemedBackground: !0
           })
         })]
       }), (0, s.jsxs)(o.ModalFooter, {
