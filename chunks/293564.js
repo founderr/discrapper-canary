@@ -42,8 +42,8 @@ var i = l("37983"),
   O = l("661825"),
   H = l("846175"),
   B = l("888181"),
-  w = l("924306"),
-  F = l("252262");
+  F = l("924306"),
+  w = l("252262");
 let k = (0, c.cssValueToNumber)(o.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
   Y = (0, c.cssValueToNumber)(o.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
   P = (0, c.cssValueToNumber)(o.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT),
@@ -137,7 +137,7 @@ function G(e) {
       });
       if (X) return es ? null : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("img", {
-          src: F,
+          src: w,
           alt: R.default.Messages.EMBEDDED_ACTIVITIES_STAYING_FREE_POSTER_ALT,
           className: b.poster
         }), (0, i.jsx)("div", {
@@ -161,7 +161,7 @@ function G(e) {
           children: (0, i.jsx)(x.default, {
             autoPlay: !0,
             src: B,
-            poster: w,
+            poster: F,
             className: b.poster,
             loop: !0,
             muted: !0

@@ -45,8 +45,8 @@ function R(e) {
     onActivityItemSelected: H
   } = e, {
     imageBackground: B,
-    videoUrl: w,
-    activityAction: F,
+    videoUrl: F,
+    activityAction: w,
     staffReleasePhase: k,
     onActivityItemSelected: Y,
     labelType: P
@@ -90,8 +90,8 @@ function R(e) {
     ea = a.useCallback(() => {
       U ? E.ComponentDispatch.dispatch(M.ComponentActions.SHOW_ACTIVITY_DETAILS, {
         applicationId: t.application.id
-      }) : F === g.ActivityAction.START && Y()
-    }, [F, t, U, Y]),
+      }) : w === g.ActivityAction.START && Y()
+    }, [w, t, U, Y]),
     en = D.ACTIVITIES_EXTRA_DETAILS[t.application.id],
     es = (null == en ? void 0 : en.playersSuggestionMin) != null && (null == en ? void 0 : en.playersSuggestionMax) != null ? "".concat(en.playersSuggestionMin, " - ").concat(en.playersSuggestionMax) : void 0;
   return (0, i.jsxs)(c.Clickable, {
@@ -123,20 +123,20 @@ function R(e) {
         applicationName: t.application.name,
         imageClassName: L.activityImage,
         imageNotFoundClassName: L.brokenImageIconWrapper
-      }), !Z && null != w && $ ? (0, i.jsx)("div", {
+      }), !Z && null != F && $ ? (0, i.jsx)("div", {
         className: s(L.video, {
           [L.videoFadeOut]: !J
         }),
         onAnimationEnd: () => J ? null : ee(!1),
         children: (0, i.jsx)(I.default, {
           className: L.video,
-          src: w,
+          src: F,
           loop: !0,
           autoPlay: !0,
           muted: !0
         })
-      }) : null, F !== g.ActivityAction.START ? (0, i.jsx)(A.ActivityActionOverlayButton, {
-        action: F,
+      }) : null, w !== g.ActivityAction.START ? (0, i.jsx)(A.ActivityActionOverlayButton, {
+        action: w,
         onClick: Y
       }) : null, G && null != es ? (0, i.jsx)("div", {
         className: L.minimalDetailsContainer,

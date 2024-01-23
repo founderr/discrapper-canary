@@ -33,8 +33,8 @@ var s = l("414456"),
       subscriptionTier: s,
       onClick: L,
       size: A,
-      className: U,
-      trialId: h,
+      className: h,
+      trialId: U,
       isTrialCTA: O,
       buttonText: y,
       buttonTextClassName: b,
@@ -48,14 +48,14 @@ var s = l("414456"),
       overrideDisabledButtonText: H,
       shinyButtonClassName: F,
       ...k
-    } = e, w = (0, i.useStateFromStores)([_.default], () => _.default.getCurrentUser()), V = (0, i.useStateFromStores)([p.default], () => p.default.isFocused()), Y = (0, i.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), {
-      analyticsLocations: z
+    } = e, w = (0, i.useStateFromStores)([_.default], () => _.default.getCurrentUser()), z = (0, i.useStateFromStores)([p.default], () => p.default.isFocused()), V = (0, i.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), {
+      analyticsLocations: Y
     } = (0, o.default)(), K = e => {
       if (e.preventDefault(), null == w) {
         (0, f.transitionTo)(M.Routes.LOGIN);
         return
       }
-      if (null == L || L(e), (null == Y ? void 0 : Y.status) === M.SubscriptionStatusTypes.ACCOUNT_HOLD) {
+      if (null == L || L(e), (null == V ? void 0 : V.status) === M.SubscriptionStatusTypes.ACCOUNT_HOLD) {
         (0, c.trackPremiumSettingsPaneOpened)(), r.default.open(M.UserSettingsSections.PREMIUM), null == x || x(!1);
         return
       }! function(e) {
@@ -130,10 +130,10 @@ var s = l("414456"),
         isVerified: w.verified,
         isGift: t,
         subscriptionTier: s,
-        trialId: h,
+        trialId: U,
         postSuccessGuild: v,
         onSubscribeModalClose: x,
-        analyticsLocations: z,
+        analyticsLocations: Y,
         premiumModalAnalyticsLocation: g,
         applicationId: D,
         giftMessage: G
@@ -141,7 +141,7 @@ var s = l("414456"),
     };
     if (O) return (0, n.jsxs)(u.Button, {
       size: A,
-      className: U,
+      className: h,
       innerClassName: N.premiumSubscribeButton,
       look: u.Button.Looks.INVERTED,
       onClick: K,
@@ -155,7 +155,7 @@ var s = l("414456"),
     });
     if (t) return (0, n.jsxs)(u.Button, {
       size: A,
-      className: U,
+      className: h,
       innerClassName: N.giftButton,
       color: u.Button.Colors.PRIMARY,
       onClick: K,
@@ -168,11 +168,11 @@ var s = l("414456"),
       })]
     });
     let W = R.default.Messages.APPLICATION_STORE_GET_PREMIUM,
-      Z = null != Y ? (0, P.getPremiumPlanItem)(Y) : null,
+      Z = null != V ? (0, P.getPremiumPlanItem)(V) : null,
       q = null != Z ? P.default.getPremiumType(Z.planId) : null == w ? void 0 : w.premiumType,
       J = s === C.PremiumSubscriptionSKUs.TIER_2 && null != q && [C.PremiumTypes.TIER_0, C.PremiumTypes.TIER_1].includes(q);
     J && (W = R.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
-    let Q = null != Y && Y.status !== M.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, T.isNoneSubscription)(Y.planId) && !J,
+    let Q = null != V && V.status !== M.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, T.isNoneSubscription)(V.planId) && !J,
       X = Q ? null != H ? H : function(e) {
         let {
           ctaSubscriptionSkuId: t,
@@ -203,8 +203,8 @@ var s = l("414456"),
         color: s === C.PremiumSubscriptionSKUs.TIER_1 ? u.Button.Colors.PRIMARY : u.Button.Colors.GREEN,
         size: A,
         className: F,
-        wrapperClassName: U,
-        pauseAnimation: !V || j,
+        wrapperClassName: h,
+        pauseAnimation: !z || j,
         ...k,
         ...e,
         children: [B && (0, n.jsx)(I.default, {

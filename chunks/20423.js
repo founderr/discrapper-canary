@@ -1,6 +1,6 @@
     "use strict";
     t.r(a), t("860677");
-    var d, s, n, i, c, r = t("37983");
+    var d, s, n, c, i, r = t("37983");
     t("320777"), t("884691");
     var o = t("288661"),
       f = t("627445"),
@@ -46,7 +46,7 @@
         })
       });
       let e = null === (s = (n = N.default.remoteApp).getVersion) || void 0 === s ? void 0 : s.call(n),
-        a = null === (i = (c = N.default.remoteApp).getBuildNumber) || void 0 === i ? void 0 : i.call(c),
+        a = null === (c = (i = N.default.remoteApp).getBuildNumber) || void 0 === c ? void 0 : c.call(i),
         t = {};
       null != N.default.remoteApp.getModuleVersions && (t = N.default.remoteApp.getModuleVersions()), E.default.setExtra({
         hostVersion: e,

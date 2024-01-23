@@ -39,11 +39,11 @@ var i = l("37983"),
   O = l("203509"),
   H = l("851815"),
   B = l("255293");
-let w = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
-  F = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
+let F = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
+  w = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
   k = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MIN_WIDTH),
   Y = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_WIDTH),
-  P = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + w + (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
+  P = (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + F + (0, A.cssValueToNumber)(d.default.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
 
 function U(e) {
   let {
@@ -64,7 +64,7 @@ function U(e) {
     autoTrackExposure: !0
   }), {
     width: W
-  } = (0, E.useScreenDimensions)(), z = a.useMemo(() => Z ? Math.max(k, Math.min(W - 2 * w, Y)) : F, [W, Z]), K = (0, c.useStateFromStores)([_.default], () => _.default.getIsEnabled(), []), {
+  } = (0, E.useScreenDimensions)(), z = a.useMemo(() => Z ? Math.max(k, Math.min(W - 2 * F, Y)) : w, [W, Z]), K = (0, c.useStateFromStores)([_.default], () => _.default.getIsEnabled(), []), {
     AnalyticsLocationProvider: X
   } = (0, m.default)(P), [q, J] = a.useState(p), Q = (0, u.default)(q), [$, ee] = a.useState(null), [et, el] = a.useState(f), [ei, ea] = a.useState(void 0), [en] = (0, I.default)(null == et ? [] : [et]), es = a.useRef(null), er = a.useMemo(() => ({
     application_id: et,

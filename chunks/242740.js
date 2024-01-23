@@ -30,9 +30,9 @@ var l = i("77078"),
       } = e;
       t.isThread() && (await o.default.unarchiveThreadIfNecessary(t.id), !d.default.hasJoined(t.id) && await o.default.joinThread(t, "Join Voice"));
       let N = u.default.getRemoteSessionId(),
-        D = f.default.getVoiceStateForSession(s.default.getId(), N),
-        h = (null == D ? void 0 : D.channelId) === t.id,
-        p = h || c.default.getChannelId() === f.default.getCurrentClientVoiceChannelId(t.guild_id);
+        h = f.default.getVoiceStateForSession(s.default.getId(), N),
+        D = (null == h ? void 0 : h.channelId) === t.id,
+        p = D || c.default.getChannelId() === f.default.getCurrentClientVoiceChannelId(t.guild_id);
       return !v && !T && (0, _.shouldShowVoiceChannelChangeConfirmation)(t) ? new Promise(e => {
         (0, l.openModalLazy)(async () => {
           let {

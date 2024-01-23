@@ -22,8 +22,8 @@ var n, l = i("913144"),
   v = i("289732"),
   S = i("550766"),
   N = i("191225"),
-  D = i("602718"),
-  h = i("885829"),
+  h = i("602718"),
+  D = i("885829"),
   p = i("986214"),
   y = i("126939"),
   O = i("837707"),
@@ -59,7 +59,7 @@ async function w(e) {
   let r = N.default.getShelfActivities(a),
     d = v.default.getState().shelfOrder,
     c = 0 === N.default.getEmbeddedActivitiesForChannel(t).filter(e => e.applicationId === i).length,
-    f = (0, D.default)({
+    f = (0, h.default)({
       applicationId: i,
       activityConfigs: r
     }),
@@ -69,7 +69,7 @@ async function w(e) {
       isFreePeriod: C,
       releasePhase: S
     } = Y(f),
-    h = await (0, s.default)();
+    D = await (0, s.default)();
   F[i] = e => {
     var t, a;
     R[i] = e, T.default.track(U.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
@@ -82,7 +82,7 @@ async function w(e) {
       user_premium_tier: u.premiumType,
       is_premium_activity: I,
       is_free_period: C,
-      raw_thermal_state: h,
+      raw_thermal_state: D,
       n_participants: o.default.getUserParticipantCount(l.id),
       is_activity_start: c,
       release_phase: S,
@@ -100,7 +100,7 @@ async function G(e) {
   } = e, a = R[l], u = _.default.getChannel(n), r = N.default.getEmbeddedActivityDurationMs(n, l), d = A.default.getCurrentUser(), o = null == u ? void 0 : u.getGuildId();
   if (null == a || null == u || null == d) return;
   let c = N.default.getShelfActivities(o),
-    f = (0, D.default)({
+    f = (0, h.default)({
       applicationId: l,
       activityConfigs: c
     }),
@@ -268,7 +268,7 @@ n = class extends u.default {
         } = await (0, S.fetchShelf)({
           guildId: C
         }),
-        g = (0, D.default)({
+        g = (0, h.default)({
           applicationId: u,
           activityConfigs: v,
           applications: O
@@ -278,7 +278,7 @@ n = class extends u.default {
           guildId: C,
           force: !0
         });
-        g = (0, D.default)({
+        g = (0, h.default)({
           applicationId: u,
           activityConfigs: e.activityConfigs,
           applications: e.applications
@@ -286,7 +286,7 @@ n = class extends u.default {
       }
       let L = N.default.getEmbeddedActivitiesForChannel(a).find(e => e.applicationId === u),
         m = null !== (n = null == L ? void 0 : L.userIds.size) && void 0 !== n ? n : 0;
-      m > 0 ? (0, h.maybeJoinEmbeddedActivity)({
+      m > 0 ? (0, D.maybeJoinEmbeddedActivity)({
         channelId: a,
         applicationId: u,
         instanceId: null == L ? void 0 : L.instanceId,

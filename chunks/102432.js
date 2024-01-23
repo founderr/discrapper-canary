@@ -13,8 +13,8 @@ n.r(t), n.d(t, {
 var i = n("627445"),
   l = n.n(i),
   s = n("718517"),
-  a = n("305122"),
-  r = n("108391");
+  r = n("305122"),
+  a = n("108391");
 let o = new AudioContext({
   sampleRate: Math.min(new AudioContext().sampleRate, 48e3)
 });
@@ -45,15 +45,15 @@ async function c(e) {
     name: i,
     volume: l,
     emojiId: s,
-    emojiName: r
+    emojiName: a
   } = e;
-  return (0, a.uploadSound)({
+  return (0, r.uploadSound)({
     guildId: n,
     name: i,
     sound: await t,
     volume: l,
     emojiId: s,
-    emojiName: r
+    emojiName: a
   })
 }
 async function f(e) {
@@ -85,7 +85,7 @@ async function f(e) {
       timestamp: 1e6 * e.duration,
       data: i
     }),
-    a = new AudioEncoder({
+    r = new AudioEncoder({
       output: function(n) {
         l(null != n.duration, "Chunk duration must not be null");
         let i = n.duration / 1e6 * e.sampleRate,
@@ -99,12 +99,12 @@ async function f(e) {
         throw Error("Audio encoding error: ".concat(e.message))
       }
     });
-  a.configure({
+  r.configure({
     codec: "opus",
     sampleRate: e.sampleRate,
     numberOfChannels: e.numberOfChannels
-  }), a.encode(s), await a.flush();
-  let o = (0, r.default)(t, {
+  }), r.encode(s), await r.flush();
+  let o = (0, a.default)(t, {
     channelCount: e.numberOfChannels,
     inputSampleRate: e.sampleRate,
     outputGain: 0,
@@ -122,14 +122,14 @@ async function m(e, t) {
         endMs: i
       } = t, {
         sampleRate: l,
-        numberOfChannels: a,
-        duration: r
-      } = e, u = r * s.default.Millis.SECOND, d = Math.min(i, u);
+        numberOfChannels: r,
+        duration: a
+      } = e, u = a * s.default.Millis.SECOND, d = Math.min(i, u);
       if (0 === n && d === u) return e;
       let c = Math.floor(n / u * e.length),
         f = Math.floor(d / u * e.length),
-        m = o.createBuffer(a, f - c, l);
-      for (let t = 0; t < a; t++) {
+        m = o.createBuffer(r, f - c, l);
+      for (let t = 0; t < r; t++) {
         let n = m.getChannelData(t),
           i = e.getChannelData(t),
           l = 0;

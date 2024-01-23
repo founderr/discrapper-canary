@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983"),
   l = n("884691"),
   s = n("414456"),
-  a = n.n(s),
-  r = n("917351"),
+  r = n.n(s),
+  a = n("917351"),
   o = n("819855"),
   u = n("77078"),
   d = n("841098"),
@@ -43,7 +43,7 @@ var i = n("37983"),
     }, []);
     return l.useEffect(() => {
       if (null != v.current) {
-        let e = new ResizeObserver((0, r.debounce)(w, 50));
+        let e = new ResizeObserver((0, a.debounce)(w, 50));
         return e.observe(v.current), () => {
           e.disconnect()
         }
@@ -63,13 +63,13 @@ var i = n("37983"),
         t.clearRect(0, 0, n, i), t.fillStyle = b.hex;
         for (let n = 0; n < C.length; n++) {
           let s = C[n] * i,
-            a = n * e + l,
-            r = i / 2 - s / 2;
-          t.fillRect(a, r, e - l, s)
+            r = n * e + l,
+            a = i / 2 - s / 2;
+          t.fillRect(r, a, e - l, s)
         }
       }
     }, [b, S, A, C]), (0, i.jsxs)("div", {
-      className: a(g.container, s),
+      className: r(g.container, s),
       children: [(0, i.jsx)("canvas", {
         className: g.waveformCanvas,
         ref: v,

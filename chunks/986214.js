@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return h
+    return D
   }
 });
 var n = i("645999"),
@@ -23,9 +23,9 @@ var n = i("645999"),
   v = i("578708"),
   S = i("702173"),
   N = i("954016"),
-  D = i("49111");
+  h = i("49111");
 
-function h(e) {
+function D(e) {
   let {
     activityItem: t,
     currentActivity: i,
@@ -34,14 +34,14 @@ function h(e) {
     guildId: c,
     embeddedActivitiesManager: A,
     analyticsLocations: T
-  } = e, C = a.default.getGuild(c), v = r.default.getCurrentUser(), N = f.default.getConnectedActivityChannelId(), h = l.default.getChannel(N);
+  } = e, C = a.default.getGuild(c), v = r.default.getCurrentUser(), N = f.default.getConnectedActivityChannelId(), D = l.default.getChannel(N);
   if (null == C && !(0, S.isPrivateChannelWithEnabledActivities)(s) || null == v || null == t) return Promise.resolve(!1);
   let {
     application: y,
     activity: O
   } = t;
   if (null == y) return Promise.resolve(!1);
-  if (null == s) return d.ComponentDispatch.dispatch(D.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
+  if (null == s) return d.ComponentDispatch.dispatch(h.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
     applicationId: y.id
   }), Promise.resolve(!1);
   let g = null != s ? (0, I.getEmbeddedActivityLaunchability)({
@@ -80,7 +80,7 @@ function h(e) {
     })
   };
   return null != i ? new Promise(e => {
-    (0, E.default)(i, h, () => {
+    (0, E.default)(i, D, () => {
       A.leaveActivity({
         channelId: s,
         applicationId: i.id
@@ -110,7 +110,7 @@ async function p(e) {
     if (!e) return !1
   } else if (!(0, o.isActivitiesInTextEnabled)(_, "handleStartEmbeddedActivity") || !I) return !1;
   return c.startEmbeddedActivity(t, a.id, u), (0, v.default)(i, t), (0, C.default)({
-    type: D.AnalyticsGameOpenTypes.LAUNCH,
+    type: h.AnalyticsGameOpenTypes.LAUNCH,
     userId: f.id,
     applicationId: a.id,
     locationObject: n,

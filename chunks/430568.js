@@ -9,8 +9,8 @@ var i = n("37983"),
   l = n("414456"),
   r = n.n(l),
   a = n("817736"),
-  u = n.n(a),
-  o = n("118810"),
+  o = n.n(a),
+  u = n("118810"),
   d = n("446674"),
   c = n("407063"),
   h = n("845579"),
@@ -35,17 +35,17 @@ class g extends s.PureComponent {
         shouldAnimate: l,
         isFocused: r,
         isInteracting: a,
-        size: u = "default"
+        size: o = "default"
       } = e,
       {
-        hover: o
+        hover: u
       } = this.state;
     if (null != t) return t;
     if (null != n) {
-      let e = v.EMOJI_SIZE_MAP[u];
+      let e = v.EMOJI_SIZE_MAP[o];
       return p.default.getEmojiURL({
         id: n,
-        animated: r && !0 === s && (!0 === l || o || !0 === a),
+        animated: r && !0 === s && (!0 === l || u || !0 === a),
         size: e
       })
     }
@@ -58,8 +58,8 @@ class g extends s.PureComponent {
       emojiName: n,
       animated: l,
       className: a,
-      size: u = "default",
-      alt: o,
+      size: o = "default",
+      alt: u,
       shouldAnimate: d,
       isFocused: c,
       emojiId: h,
@@ -77,11 +77,11 @@ class g extends s.PureComponent {
       ...p,
       key: this.key,
       src: I,
-      alt: null !== (e = null != o ? o : n) && void 0 !== e ? e : void 0,
+      alt: null !== (e = null != u ? u : n) && void 0 !== e ? e : void 0,
       draggable: !1,
       ...t,
       className: r("emoji", a, {
-        jumboable: "jumbo" === u
+        jumboable: "jumbo" === o
       }),
       onError: this.onError,
       "data-type": "emoji",
@@ -153,12 +153,12 @@ let _ = function(e) {
     });
 
   function r(e) {
-    let t = u.findDOMNode(e);
-    (0, o.isElement)(t) && (n.push([t, e]), l.observe(t))
+    let t = o.findDOMNode(e);
+    (0, u.isElement)(t) && (n.push([t, e]), l.observe(t))
   }
 
   function a(e) {
-    let i = u.findDOMNode(e);
+    let i = o.findDOMNode(e);
     l.unobserve(i);
     let s = n.findIndex(t => {
       let [n, i] = t;

@@ -102,7 +102,7 @@ var l = n("37983"),
           height: l
         }), O(i), w((0, E.calculateDragBoundaries)(n, l, i))
       }, [m, U]),
-      K = i.useCallback(e => {
+      z = i.useCallback(e => {
         let {
           x: t,
           y: n
@@ -112,7 +112,7 @@ var l = n("37983"),
           i = e.clientY - b.y;
         X(l, i, v)
       }, [v, D, b, X]),
-      z = () => {
+      K = () => {
         L(!1)
       },
       q = () => {
@@ -137,13 +137,13 @@ var l = n("37983"),
         } else e = (0, E.cropStaticImage)(n, S, j.current, l);
         await C(e, t), B(!1), g()
       };
-    return i.useEffect(() => (window.addEventListener("mouseup", z), window.addEventListener("resize", Y), () => {
-      window.removeEventListener("mouseup", z), window.removeEventListener("resize", Y)
+    return i.useEffect(() => (window.addEventListener("mouseup", K), window.addEventListener("resize", Y), () => {
+      window.removeEventListener("mouseup", K), window.removeEventListener("resize", Y)
     }), [Y]), i.useEffect(() => () => {
       null != F.current && F.current()
     }, []), i.useEffect(() => {
-      if (D) return window.addEventListener("mousemove", K), () => window.removeEventListener("mousemove", K)
-    }, [K, D]), (0, l.jsx)(V, {
+      if (D) return window.addEventListener("mousemove", z), () => window.removeEventListener("mousemove", z)
+    }, [z, D]), (0, l.jsx)(V, {
       children: (0, l.jsxs)(a.ModalRoot, {
         onAnimationEnd: Y,
         transitionState: I,

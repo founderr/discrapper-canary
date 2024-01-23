@@ -71,11 +71,11 @@ function R(e) {
       size: 1024,
       names: V
     }),
-    w = (0, n.useStateFromStores)([v.default], () => v.default.getGuild(o)),
-    F = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())),
+    F = (0, n.useStateFromStores)([v.default], () => v.default.getGuild(o)),
+    w = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())),
     k = L(null != o ? o : void 0);
-  if ((null == N ? void 0 : N.application) == null || null == w) return null;
-  let Y = (null == F ? void 0 : F.name) == null || (null == F ? void 0 : F.name) === "" ? M.default.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : "#".concat(F.name);
+  if ((null == N ? void 0 : N.application) == null || null == F) return null;
+  let Y = (null == w ? void 0 : w.name) == null || (null == w ? void 0 : w.name) === "" ? M.default.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : "#".concat(w.name);
   return (0, i.jsxs)(s.Scroller, {
     className: y.scroll,
     children: [null != H || null != B ? (0, i.jsx)(I.default, {

@@ -109,7 +109,7 @@ function V(e) {
     joinableEmbeddedApp: O,
     onActivityItemSelected: H,
     labelType: B,
-    staffReleasePhase: w
+    staffReleasePhase: F
   } = (0, T.default)({
     activityItem: l,
     channel: n,
@@ -118,7 +118,7 @@ function V(e) {
     onActivityItemVisible: I,
     onActivityItemSelected: E,
     embeddedActivitiesManager: _.default
-  }), F = (0, r.useStateFromStores)([p.default], () => p.default.isApplicationInDevShelf(l.application.id), [l.application.id]), {
+  }), w = (0, r.useStateFromStores)([p.default], () => p.default.inDevModeForApplication(l.application.id), [l.application.id]), {
     application: k
   } = l, Y = a.useCallback(e => e && (null == I ? void 0 : I({
     applicationId: l.application.id
@@ -181,7 +181,7 @@ function V(e) {
             labelType: B
           })
         })
-      }), F ? (0, i.jsx)(c.Tooltip, {
+      }), w ? (0, i.jsx)(c.Tooltip, {
         text: j.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
         children: e => (0, i.jsx)("div", {
           className: D.devShelfBadge,
@@ -207,11 +207,11 @@ function V(e) {
           variant: "heading-md/semibold",
           color: "interactive-active",
           children: k.name
-        }), null != w ? (0, i.jsx)(c.Tooltip, {
-          text: w,
+        }), null != F ? (0, i.jsx)(c.Tooltip, {
+          text: F,
           children: e => (0, i.jsx)("img", {
             className: D.staffBadge,
-            alt: w,
+            alt: F,
             src: M,
             ...e
           })

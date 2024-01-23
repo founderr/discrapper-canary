@@ -27,12 +27,12 @@ async function T(e) {
     inputApplication: v,
     analyticsLocations: S,
     embeddedActivitiesManager: N
-  } = e, D = _.default.getEmbeddedActivitiesForChannel(i), h = D.find(e => e.applicationId === T && (null == C || e.instanceId === C)), p = v;
+  } = e, h = _.default.getEmbeddedActivitiesForChannel(i), D = h.find(e => e.applicationId === T && (null == C || e.instanceId === C)), p = v;
   if (null == p) {
     let e = await l.default.fetchApplication(T);
     p = r.default.createFromServer(e)
   }
-  if (null == h || null == p) return;
+  if (null == D || null == p) return;
   let y = c.default.getCurrentUser(),
     O = (0, I.default)({
       userId: null == y ? void 0 : y.id,
@@ -94,8 +94,8 @@ async function T(e) {
   }({
     embeddedActivityJoinability: O,
     handleCanJoin: async function e() {
-      null != h && await (0, E.default)({
-        applicationId: h.applicationId,
+      null != D && await (0, E.default)({
+        applicationId: D.applicationId,
         currentEmbeddedApplication: m,
         activityChannelId: i,
         locationObject: {},

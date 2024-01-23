@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983"),
   l = n("884691"),
   s = n("414456"),
-  a = n.n(s),
-  r = n("77078"),
+  r = n.n(s),
+  a = n("77078"),
   o = n("132755"),
   u = n("78404"),
   d = n("718517"),
@@ -67,13 +67,13 @@ var v = l.memo(function(e) {
       null != _ && (_.currentTime = e)
     }, [_]);
   return (0, i.jsxs)("div", {
-    className: a(E.container, {
+    className: r(E.container, {
       [E.initialized]: w,
       [E.disabled]: !w || S
     }, n),
     children: [(0, i.jsxs)("div", {
       className: E.playButtonContainer,
-      children: [(0, i.jsx)(r.Clickable, {
+      children: [(0, i.jsx)(a.Clickable, {
         className: E.playButton,
         onClick: w ? T : void 0,
         children: N ? (0, i.jsx)(u.default, {
@@ -83,7 +83,7 @@ var v = l.memo(function(e) {
         })
       }), (0, i.jsx)("div", {
         className: E.durationContainer,
-        children: (0, i.jsx)(r.Text, {
+        children: (0, i.jsx)(a.Text, {
           className: E.duration,
           variant: "text-xs/normal",
           color: L ? "text-warning" : "text-positive",
