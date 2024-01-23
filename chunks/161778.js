@@ -35,7 +35,7 @@ function I() {
     let s = null === (e = _.default.getAppearanceSettings()) || void 0 === e ? void 0 : e.theme;
     if (null != s) return s;
     let a = null === (t = g.default.settings.appearance) || void 0 === t ? void 0 : t.theme;
-    return a === r.Theme.LIGHT ? E.ThemeTypes.LIGHT : E.ThemeTypes.DARK
+    return null == a ? v : a === r.Theme.LIGHT ? E.ThemeTypes.LIGHT : E.ThemeTypes.DARK
   }();
   return e
 }
