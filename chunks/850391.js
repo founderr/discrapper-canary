@@ -23,6 +23,7 @@ let r = {
     },
     drafts: {
       type: i.DraftType.ChannelMessage,
+      commandType: i.DraftType.SlashCommand,
       autoSave: !0
     },
     emojis: {
@@ -114,7 +115,8 @@ let r = {
     },
     disableAutoFocus: !0,
     drafts: {
-      type: i.DraftType.ChannelMessage
+      type: i.DraftType.ChannelMessage,
+      commandType: i.DraftType.SlashCommand
     },
     emojis: {
       button: !0
@@ -315,7 +317,7 @@ let r = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  _ = {
+  S = {
     analyticsName: "custom_gift_type",
     drafts: {
       type: i.DraftType.ChannelMessage
@@ -331,7 +333,7 @@ let r = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  S = {
+  _ = {
     analyticsName: "rules_input",
     drafts: {
       type: i.DraftType.ChannelMessage
@@ -373,8 +375,8 @@ let r = {
     VOICE_CHANNEL_STATUS: f,
     THREAD_CREATION: m,
     PROFILE_BIO_INPUT: E,
-    CUSTOM_GIFT: _,
-    RULES_INPUT: S,
+    CUSTOM_GIFT: S,
+    RULES_INPUT: _,
     CREATE_FORUM_POST: p,
     CREATE_POLL: T,
     FORUM_CHANNEL_GUIDELINES: h
