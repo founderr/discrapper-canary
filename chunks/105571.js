@@ -39,7 +39,7 @@ function A(e) {
       channelId: t.id,
       command: n,
       section: r,
-      location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_COMMAND_LIST
+      location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
     }), g.ComponentDispatch.dispatch(y.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: t.id
     })
