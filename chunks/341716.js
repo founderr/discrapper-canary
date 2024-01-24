@@ -78,7 +78,7 @@ function g(e) {
           onUserContextMenu: E,
           onPopoutRequestClose: _
         } = e;
-        if (a || o) return (0, s.jsx)("div", {
+        if (a && null == l.activityInstance || o) return (0, s.jsx)("div", {
           className: C.replyBadge,
           children: (0, s.jsx)(h, {
             className: C.commandIcon
