@@ -85,6 +85,7 @@ N.displayName = "ThemeStore", N.persistKey = "ThemeStore", N.migrations = [e => 
   }
 }];
 var R = new N(l.default, {
+  CACHE_LOADED: C,
   CONNECTION_OPEN: C,
   LOGOUT: function(e) {
     return !e.isSwitchingAccount && v !== E.ThemeTypes.DARK && (v = E.ThemeTypes.DARK, function() {

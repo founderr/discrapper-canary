@@ -26,6 +26,7 @@ class i extends O.default.Store {
 i.displayName = "LocaleStore";
 var n = new i(T.default, {
   OVERLAY_INITIALIZE: V,
+  CACHE_LOADED: V,
   CONNECTION_OPEN: V,
   USER_SETTINGS_PROTO_UPDATE: V,
   USER_SETTINGS_LOCALE_OVERRIDE: function(N) {
