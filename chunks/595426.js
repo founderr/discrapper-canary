@@ -29,10 +29,10 @@ var a = s("37983"),
   C = s("456015"),
   M = s("982457"),
   O = s("300962"),
-  h = s("781084"),
-  L = s("959905"),
-  x = s("154889"),
-  v = s("917247"),
+  h = s("959905"),
+  L = s("154889"),
+  x = s("917247"),
+  v = s("157829"),
   U = s("254893"),
   b = s("840326"),
   D = s("646718"),
@@ -46,7 +46,7 @@ var a = s("37983"),
       sourceAnalyticsLocations: k
     } = (0, T.default)(I.default.PREMIUM_MARKETING), {
       enabled: y
-    } = (0, O.default)(), B = (0, i.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), K = (0, i.useStateFromStores)([p.default], () => p.default.getCurrentUser()), H = (0, v.usePremiumTrialOffer)(), F = (0, x.usePremiumDiscountOffer)(), W = (0, S.useSubscriptionPlansLoaded)(), [w, V] = n.useState(!0), Y = n.useRef(0), z = (0, g.isPremiumExactly)(K, D.PremiumTypes.TIER_2), X = (0, L.useLocalizedPromoQuery)(), Q = null == X ? void 0 : X.countryCode, J = (0, i.useStateFromStores)([P.default], () => P.default.hasFetched);
+    } = (0, O.default)(), B = (0, i.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), K = (0, i.useStateFromStores)([p.default], () => p.default.getCurrentUser()), H = (0, x.usePremiumTrialOffer)(), F = (0, L.usePremiumDiscountOffer)(), W = (0, S.useSubscriptionPlansLoaded)(), [w, V] = n.useState(!0), Y = n.useRef(0), z = (0, g.isPremiumExactly)(K, D.PremiumTypes.TIER_2), X = (0, h.useLocalizedPromoQuery)(), Q = null == X ? void 0 : X.countryCode, J = (0, i.useStateFromStores)([P.default], () => P.default.hasFetched);
     n.useEffect(() => {
       !J && d.getNitroAffinity()
     }, [J]), n.useEffect(() => {
@@ -56,13 +56,7 @@ var a = s("37983"),
       })
     }, [Q]), n.useEffect(() => {
       if (s && (null != H || null != F)) {
-        let {
-          enabled: e
-        } = h.default.getCurrentConfig({
-          location: "PremiumMarketingPage"
-        }, {
-          autoTrackExposure: !1
-        });
+        let e = (0, v.shouldHitUserOfferEndPoints)("PremiumMarketingPage");
         e ? (0, C.acknowledgeUserOffer)(H, F) : null != H && null == H.expires_at && M.default.acknowledgeUserTrialOffer(H)
       }
     }, [s, H, F]), n.useEffect(() => {
