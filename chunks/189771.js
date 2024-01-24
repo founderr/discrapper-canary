@@ -66,6 +66,7 @@ function y(e, t) {
     let e = g.default.getChannelId(I.default.getGuildId());
     if (e === s.id || h.default.getCurrentSidebarChannelId(e) === s.id) return !1
   }
+  if (void 0 !== e.activity_instance && null != e.interaction && e.interaction.user.id === r.id) return !1;
   if (f.THREAD_CHANNEL_TYPES.has(s.type)) {
     if (d.default.isMuted(s.id)) return !1;
     let t = (0, c.computeThreadNotificationSetting)(s);
