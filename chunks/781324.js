@@ -108,15 +108,25 @@ function d(t) {
   }
 }
 async function _(t, e, a) {
+  let s = l.default.getSuspendedUserToken(),
+    r = null != s ? u.Endpoints.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(t) : u.Endpoints.SAFETY_HUB_REQUEST_REVIEW(t),
+    o = null != s ? n.default.put({
+      url: r,
+      body: {
+        signal: e,
+        user_input: a,
+        token: s
+      }
+    }) : n.default.put({
+      url: r,
+      body: {
+        signal: e,
+        user_input: a
+      }
+    });
   i.default.dispatch({
     type: "SAFETY_HUB_REQUEST_REVIEW_START"
-  }), await n.default.put({
-    url: u.Endpoints.SAFETY_HUB_REQUEST_REVIEW(t),
-    body: {
-      signal: e,
-      user_input: a
-    }
-  }).then(() => {
+  }), await o.then(() => {
     i.default.dispatch({
       type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS"
     })
