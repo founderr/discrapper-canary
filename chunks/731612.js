@@ -40,10 +40,10 @@ function T(e) {
     menuName: T,
     onClose: x,
     onSelectDateOption: _,
-    onToggleCustomDateRange: H,
-    onSelectStartDate: g,
-    onSelectEndDate: A
-  } = e, p = [{
+    onToggleCustomDateRange: g,
+    onSelectStartDate: p,
+    onSelectEndDate: H
+  } = e, A = [{
     id: 0,
     option: null,
     label: f.default.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_ALL
@@ -90,12 +90,12 @@ function T(e) {
     },
     label: f.default.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_3_MONTHS
   }], [S, L] = i.useState(!1), N = i.useCallback(() => {
-    L(!0), H()
-  }, [H]), I = i.useCallback(e => {
-    g(e)
-  }, [g]), v = i.useCallback(e => {
-    A(e)
-  }, [A]);
+    L(!0), g()
+  }, [g]), I = i.useCallback(e => {
+    p(e)
+  }, [p]), v = i.useCallback(e => {
+    H(e)
+  }, [H]);
   return (0, s.jsx)(u.Menu, {
     navId: "member-safety-guild-member-".concat(T, "-menu"),
     onClose: x,
@@ -152,7 +152,7 @@ function T(e) {
           })
         })]
       }) : (0, s.jsxs)(s.Fragment, {
-        children: [p.map(e => {
+        children: [A.map(e => {
           let {
             id: t,
             option: l,

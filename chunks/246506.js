@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return S
   }
 });
 var l = n("37983"),
@@ -18,17 +18,17 @@ var l = n("37983"),
   _ = n("439932"),
   h = n("49111"),
   p = n("782340"),
-  S = n("515476");
+  m = n("515476");
 
-function m(e) {
+function S(e) {
   var t;
   let {
     guildId: n,
     role: r,
-    theme: m,
+    theme: S,
     content: M = p.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
-    className: T
-  } = e, v = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser()), L = E.default.useName(n, null, v), C = (0, u.getRoleIconProps)(r), I = i.useMemo(() => (0, a.createMessageRecord)({
+    className: v
+  } = e, C = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser()), L = E.default.useName(n, null, C), T = (0, u.getRoleIconProps)(r), I = i.useMemo(() => (0, a.createMessageRecord)({
     ...(0, c.default)({
       channelId: "0",
       content: M,
@@ -36,20 +36,20 @@ function m(e) {
       type: void 0,
       messageReference: void 0,
       allowedMentions: void 0,
-      author: v
+      author: C
     }),
     state: h.MessageStates.SENT,
     id: "0"
-  }), [v, M]), A = {
+  }), [C, M]), g = {
     nick: L,
     colorString: null !== (t = r.colorString) && void 0 !== t ? t : void 0
   };
   return (0, l.jsx)("div", {
-    className: s((0, _.getThemeClass)(m), S.container, T),
+    className: s((0, _.getThemeClass)(S), m.container, v),
     children: (0, l.jsx)(d.default, {
       hideTimestamp: !0,
-      author: A,
-      roleIcon: C,
+      author: g,
+      roleIcon: T,
       message: I,
       isGroupStart: !0,
       disableInteraction: !0

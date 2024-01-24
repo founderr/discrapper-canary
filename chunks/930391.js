@@ -1,6 +1,6 @@
 "use strict";
 e.exports = {
-  container: "container__20de0 " + o("228146").recentMentionsPopout,
+  container: "container__20de0 " + n("228146").recentMentionsPopout,
   expandedMarkAllReadContainer: "expandedMarkAllReadContainer_bf2a1c",
   scroller: "scroller__1c703",
   spinner: "spinner__7f1c1",

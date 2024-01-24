@@ -22,8 +22,8 @@ var i = l("37983"),
   m = l("161778"),
   I = l("305961"),
   E = l("697218"),
-  x = l("58608"),
-  p = l("614175"),
+  p = l("58608"),
+  x = l("614175"),
   C = l("903178"),
   T = l("955153"),
   S = l("84460"),
@@ -66,7 +66,7 @@ function G(e) {
     location: "a48d9e_1"
   }), {
     enabled: q
-  } = p.ActivitiesGameNightExperiment.useExperiment({
+  } = x.ActivitiesGameNightExperiment.useExperiment({
     location: "a48d9e_2"
   }, {
     autoTrackExposure: !1
@@ -125,7 +125,7 @@ function G(e) {
     },
     eu = (() => {
       if (q) return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(x.default, {
+        children: [(0, i.jsx)(p.default, {
           autoPlay: !K,
           src: "https://cdn.discordapp.com/attachments/860252504826445825/1093286971708813382/game_night_desktop.mp4",
           poster: "https://cdn.discordapp.com/attachments/860252504826445825/1093287297950175272/game_night_desktop.jpg",
@@ -158,7 +158,7 @@ function G(e) {
         children: [(0, i.jsx)(r.Link, {
           to: V.Routes.ACTIVITIES,
           onClick: c,
-          children: (0, i.jsx)(x.default, {
+          children: (0, i.jsx)(p.default, {
             autoPlay: !0,
             src: B,
             poster: F,

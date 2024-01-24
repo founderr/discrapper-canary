@@ -1,75 +1,75 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return v
   }
 }), n("222007");
-var a = n("37983"),
-  i = n("884691"),
-  s = n("414456"),
-  l = n.n(s),
+var i = n("37983"),
+  a = n("884691"),
+  l = n("414456"),
+  s = n.n(l),
   r = n("917351"),
-  u = n.n(r),
-  o = n("77078"),
+  o = n.n(r),
+  u = n("77078"),
   d = n("164546"),
   c = n("513196"),
   f = n("42723"),
   m = n("605475"),
-  _ = n("49111"),
-  h = n("782340"),
-  g = n("279732");
-let S = () => [h.default.Messages.APP_ICON_PIRATE, h.default.Messages.APP_ICON_PIRATE_1, h.default.Messages.APP_ICON_PIRATE_2, h.default.Messages.APP_ICON_PIRATE_3, h.default.Messages.APP_ICON_PIRATE_4],
-  p = () => {
+  h = n("49111"),
+  g = n("782340"),
+  _ = n("279732");
+let p = () => [g.default.Messages.APP_ICON_PIRATE, g.default.Messages.APP_ICON_PIRATE_1, g.default.Messages.APP_ICON_PIRATE_2, g.default.Messages.APP_ICON_PIRATE_3, g.default.Messages.APP_ICON_PIRATE_4],
+  S = () => {
     var e;
-    return null !== (e = u.sample(S())) && void 0 !== e ? e : h.default.Messages.APP_ICON_PIRATE
+    return null !== (e = o.sample(p())) && void 0 !== e ? e : g.default.Messages.APP_ICON_PIRATE
   };
 
 function Selection(e) {
   let {
     id: t,
     className: n,
-    onSelect: s,
+    onSelect: l,
     isSelected: r = !1,
-    tabIndex: u,
+    tabIndex: o,
     children: f
-  } = e, [h, S] = i.useState(m.ICONS_BY_ID[t].name), E = t === c.PremiumAppIconIds.PIRATE, T = (0, o.useRadioItem)({
-    label: h,
+  } = e, [g, p] = a.useState(m.ICONS_BY_ID[t].name), v = t === c.PremiumAppIconIds.PIRATE, T = (0, u.useRadioItem)({
+    label: g,
     isSelected: r
   });
-  return (0, a.jsx)(o.Tooltip, {
-    text: h,
-    onTooltipShow: () => E && S(p()),
-    children: e => (0, a.jsxs)("div", {
-      className: g.appIconSelectionContainer,
-      children: [(0, a.jsx)(o.Clickable, {
+  return (0, i.jsx)(u.Tooltip, {
+    text: g,
+    onTooltipShow: () => v && p(S()),
+    children: e => (0, i.jsxs)("div", {
+      className: _.appIconSelectionContainer,
+      children: [(0, i.jsx)(u.Clickable, {
         ...e,
         ...T,
-        tabIndex: null != u ? u : T.tabIndex,
-        className: l(g.appIconSelection, {
-          [g.selected]: r
+        tabIndex: null != o ? o : T.tabIndex,
+        className: s(_.appIconSelection, {
+          [_.selected]: r
         }, n),
-        onClick: r ? _.NOOP : () => null == s ? void 0 : s(t),
+        onClick: r ? h.NOOP : () => null == l ? void 0 : l(t),
         children: f
-      }), r && (0, a.jsx)(d.SelectionCircle, {})]
+      }), r && (0, i.jsx)(d.SelectionCircle, {})]
     })
   })
 }
 
-function E(e) {
+function v(e) {
   let {
     icon: t,
     isSelected: n,
-    disabled: i,
-    tabIndex: s,
-    onSelect: l
+    disabled: a,
+    tabIndex: l,
+    onSelect: s
   } = e;
-  return (0, a.jsx)(Selection, {
-    onSelect: i ? void 0 : l,
+  return (0, i.jsx)(Selection, {
+    onSelect: a ? void 0 : s,
     isSelected: n,
     id: t.id,
-    className: i ? g.disabled : void 0,
-    tabIndex: s,
-    children: (0, a.jsx)(f.default, {
+    className: a ? _.disabled : void 0,
+    tabIndex: l,
+    children: (0, i.jsx)(f.default, {
       id: t.id,
       width: m.CUSTOM_BASE_SIZE
     })

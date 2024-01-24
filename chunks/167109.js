@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return j
   },
   usePriceTier: function() {
-    return R
+    return k
   },
   useDescription: function() {
-    return k
+    return R
   },
   useImage: function() {
     return O
@@ -19,13 +19,13 @@ n.r(t), n.d(t, {
     return D
   },
   useRoleColor: function() {
-    return B
+    return b
   },
   useChannelAccessFormat: function() {
-    return F
+    return B
   },
   useChannelBenefits: function() {
-    return b
+    return U
   },
   useIntangibleBenefits: function() {
     return H
@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return W
   },
   useTrialInterval: function() {
-    return Y
+    return V
   },
   useTrialLimit: function() {
-    return V
+    return Y
   },
   useHasChanges: function() {
     return z
@@ -72,19 +72,19 @@ var l = n("884691"),
   _ = n("577357"),
   h = n("371358"),
   p = n("837008"),
-  S = n("648825"),
-  m = n("866595"),
+  m = n("648825"),
+  S = n("866595"),
   M = n("432153"),
-  T = n("549590"),
-  v = n("59767"),
+  v = n("549590"),
+  C = n("59767"),
   L = n("679027"),
-  C = n("971150"),
+  T = n("971150"),
   I = n("677795"),
-  A = n("49111"),
-  g = n("646718");
+  g = n("49111"),
+  A = n("646718");
 
 function N(e, t, n) {
-  let i = (0, C.useEditStateStore)(e => e.setListing),
+  let i = (0, T.useEditStateStore)(e => e.setListing),
     r = l.useCallback(l => {
       i(e, e => {
         var i;
@@ -95,7 +95,7 @@ function N(e, t, n) {
         })
       })
     }, [i, e, t, n]),
-    s = (0, C.useEditStateStore)(n => {
+    s = (0, T.useEditStateStore)(n => {
       var l;
       return null === (l = n.listings[e]) || void 0 === l ? void 0 : l[t]
     }),
@@ -104,7 +104,7 @@ function N(e, t, n) {
 }
 
 function x(e, t) {
-  let n = (0, a.useStateFromStores)([S.default], () => S.default.getSubscriptionListing(e));
+  let n = (0, a.useStateFromStores)([m.default], () => m.default.getSubscriptionListing(e));
   return l.useMemo(() => t(n), [n])
 }
 
@@ -116,7 +116,7 @@ function j(e) {
   return N(e, "name", t)
 }
 
-function R(e) {
+function k(e) {
   let t = x(e, e => {
     var t;
     return null == e ? void 0 : null === (t = e.subscription_plans[0]) || void 0 === t ? void 0 : t.price
@@ -124,7 +124,7 @@ function R(e) {
   return N(e, "priceTier", t)
 }
 
-function k(e) {
+function R(e) {
   let t = x(e, e => {
     var t;
     return null !== (t = null == e ? void 0 : e.description) && void 0 !== t ? t : ""
@@ -140,7 +140,7 @@ function O(e, t) {
 }
 
 function y(e, t) {
-  let n = (0, T.default)(t, e),
+  let n = (0, v.default)(t, e),
     i = l.useMemo(() => {
       var e, t;
       return {
@@ -152,12 +152,12 @@ function y(e, t) {
 }
 
 function D(e, t) {
-  let n = (0, T.default)(t, e),
-    i = (0, C.useEditStateStore)(t => {
+  let n = (0, v.default)(t, e),
+    i = (0, T.useEditStateStore)(t => {
       var n;
       return null === (n = t.listings[e]) || void 0 === n ? void 0 : n.roleColor
     }),
-    r = (0, C.useEditStateStore)(t => {
+    r = (0, T.useEditStateStore)(t => {
       var n;
       return null === (n = t.listings[e]) || void 0 === n ? void 0 : n.roleIcon
     });
@@ -173,24 +173,24 @@ function D(e, t) {
   }, [n, r, i])
 }
 
-function B(e, t) {
-  let n = (0, T.default)(t, e),
+function b(e, t) {
+  let n = (0, v.default)(t, e),
     i = l.useMemo(() => {
       var e;
-      return null !== (e = null == n ? void 0 : n.color) && void 0 !== e ? e : A.DEFAULT_ROLE_COLOR
+      return null !== (e = null == n ? void 0 : n.color) && void 0 !== e ? e : g.DEFAULT_ROLE_COLOR
     }, [n]);
   return N(e, "roleColor", i)
 }
 
-function F(e, t) {
-  let n = (0, T.default)(t, e),
-    i = l.useMemo(() => null == n ? C.AllChannelAccessOptions.SOME_CHANNELS_ACCESS : (0, m.isAllChannelsRole)(n) ? C.AllChannelAccessOptions.ALL_CHANNELS_ACCESS : C.AllChannelAccessOptions.SOME_CHANNELS_ACCESS, [n]);
+function B(e, t) {
+  let n = (0, v.default)(t, e),
+    i = l.useMemo(() => null == n ? T.AllChannelAccessOptions.SOME_CHANNELS_ACCESS : (0, S.isAllChannelsRole)(n) ? T.AllChannelAccessOptions.ALL_CHANNELS_ACCESS : T.AllChannelAccessOptions.SOME_CHANNELS_ACCESS, [n]);
   return N(e, "channelAccessFormat", i)
 }
-let U = [];
+let F = [];
 
-function b(e) {
-  let t = x(e, e => null == e ? U : e.role_benefits.benefits.filter(_.isChannelBenefit));
+function U(e) {
+  let t = x(e, e => null == e ? F : e.role_benefits.benefits.filter(_.isChannelBenefit));
   return N(e, "channelBenefits", t)
 }
 let w = [];
@@ -213,33 +213,33 @@ function P(e, t) {
 }
 
 function W(e, t) {
-  let n = (0, T.default)(t, e),
+  let n = (0, v.default)(t, e),
     i = (0, a.useStateFromStoresArray)([f.default], () => f.default.getGuildEmoji(t), [t]),
     r = l.useMemo(() => null == n ? G : P(i, n.id), [i, n]);
   return N(e, "tierEmojiIds", r)
 }
 
-function Y(e) {
+function V(e) {
   var t;
   let n = (0, p.useSubscriptionTrial)(e),
     {
       selectedOption: l
-    } = (0, v.default)(null !== (t = null == n ? void 0 : n.active_trial) && void 0 !== t ? t : null);
+    } = (0, C.default)(null !== (t = null == n ? void 0 : n.active_trial) && void 0 !== t ? t : null);
   return N(e, "trialInterval", null != l ? l : null)
 }
 
-function V(e) {
+function Y(e) {
   var t;
   let n = (0, p.useSubscriptionTrial)(e);
   return N(e, "trialLimit", null !== (t = null == n ? void 0 : n.max_num_active_trial_users) && void 0 !== t ? t : null)
 }
 
 function z(e) {
-  return (0, C.useEditStateStore)(t => void 0 !== t.listings[e])
+  return (0, T.useEditStateStore)(t => void 0 !== t.listings[e])
 }
 
 function J(e) {
-  return (0, C.useEditStateStore)(t => {
+  return (0, T.useEditStateStore)(t => {
     for (let n of e)
       if (void 0 !== t.listings[n]) return !0;
     return !1
@@ -253,8 +253,8 @@ function Z(e) {
       var e, l, i, r, s;
       return {
         price: null !== (e = null != n ? n : null == t ? void 0 : t.price) && void 0 !== e ? e : 0,
-        currency: null !== (l = null == t ? void 0 : t.currency) && void 0 !== l ? l : A.CurrencyCodes.USD,
-        interval: null !== (i = null == t ? void 0 : t.interval) && void 0 !== i ? i : g.SubscriptionIntervalTypes.MONTH,
+        currency: null !== (l = null == t ? void 0 : t.currency) && void 0 !== l ? l : g.CurrencyCodes.USD,
+        interval: null !== (i = null == t ? void 0 : t.interval) && void 0 !== i ? i : A.SubscriptionIntervalTypes.MONTH,
         interval_count: null !== (r = null == t ? void 0 : t.interval_count) && void 0 !== r ? r : 1,
         id: null !== (s = null == t ? void 0 : t.id) && void 0 !== s ? s : ""
       }
@@ -264,7 +264,7 @@ function Z(e) {
 
 function K(e) {
   var t;
-  t = e, C.useEditStateStore.setState(e => ({
+  t = e, T.useEditStateStore.setState(e => ({
     listings: {
       ...e.listings,
       [t]: e.listings.nonexistantEditStateId
@@ -275,33 +275,33 @@ async function q(e) {
   let {
     guildId: t,
     editStateId: n
-  } = e, l = S.default.getSubscriptionListing(n);
+  } = e, l = m.default.getSubscriptionListing(n);
   r(null != l, "listing doesnt exist");
   let i = l.role_id,
     o = l.id,
-    u = C.useEditStateStore.getState().listings[n];
+    u = T.useEditStateStore.getState().listings[n];
   r(null != u, "edit state does not exist");
   let {
     roleColor: a,
     roleIcon: E,
     trialLimit: _,
     trialInterval: p,
-    tierEmojiIds: m
+    tierEmojiIds: S
   } = u;
   (void 0 !== a || void 0 !== E) && await d.default.updateRole(t, i, {
     color: a,
     icon: null == E ? void 0 : E.icon,
     unicodeEmoji: null == E ? void 0 : E.unicodeEmoji
   });
-  let M = S.default.getSubscriptionTrial(o);
+  let M = m.default.getSubscriptionTrial(o);
   if ((null != _ || null != p || null != M && null == p) && await h.updateSubscriptionTrial(t, o, {
       trial: p,
       max_num_active_trial_users: _
-    }), void 0 !== m) {
+    }), void 0 !== S) {
     let e = f.default.getGuildEmoji(t),
       n = P(e, i),
-      l = (0, s.difference)([...m], [...n]),
-      r = (0, s.difference)([...n], [...m]),
+      l = (0, s.difference)([...S], [...n]),
+      r = (0, s.difference)([...n], [...S]),
       o = l.map(e => f.default.getCustomEmojiById(e)).map(e => {
         if (null != e) return (0, c.updateEmoji)({
           guildId: t,
@@ -327,7 +327,7 @@ async function X(e) {
     editStateId: n,
     groupListingId: l,
     onBeforeDispatchNewListing: i
-  } = e, s = C.useEditStateStore.getState().listings[n];
+  } = e, s = T.useEditStateStore.getState().listings[n];
   r(null != s, "edit state does not exist");
   let {
     name: o,
@@ -339,15 +339,15 @@ async function X(e) {
     channelAccessFormat: E
   } = s;
   r(null != o, "no name provided"), r(null != u, "no description provided"), r(null != d, "no priceTier provided"), r(null != f, "no image provided");
-  let _ = E === C.AllChannelAccessOptions.ALL_CHANNELS_ACCESS,
+  let _ = E === T.AllChannelAccessOptions.ALL_CHANNELS_ACCESS,
     p = l;
   if (null == p) {
     let e = await h.createSubscriptionGroupListing(t, {});
     p = e.id
   }
   null != a && a.length > 0 && await (0, M.createChannelsFromTemplateTierBenefits)(t, a);
-  let S = [...null != a ? a : [], ...null != c ? c : []],
-    m = (0, M.getTemplateTierCreationAnalyticsContext)(n, t);
+  let m = [...null != a ? a : [], ...null != c ? c : []],
+    S = (0, M.getTemplateTierCreationAnalyticsContext)(n, t);
   return h.createSubscriptionListing({
     guildId: t,
     groupListingId: p,
@@ -356,10 +356,10 @@ async function X(e) {
       image: f,
       name: o,
       description: u,
-      benefits: S,
+      benefits: m,
       priceTier: d
     },
-    analyticsContext: m,
+    analyticsContext: S,
     onBeforeDispatchNewListing: i
   })
 }
@@ -372,7 +372,7 @@ function Q() {
       groupListingId: o,
       onBeforeDispatchNewListing: u,
       onAfterDispatchNewListing: a
-    } = e, c = l, d = S.default.getSubscriptionListing(c);
+    } = e, c = l, d = m.default.getSubscriptionListing(c);
     try {
       if (t(!0), i(void 0), null != d) r(null != o, "groupListingId is null"), await
 
@@ -382,9 +382,9 @@ function Q() {
           guildId: n,
           editStateId: l,
           groupListingId: i
-        } = e, o = S.default.getSubscriptionListing(l);
+        } = e, o = m.default.getSubscriptionListing(l);
         r(null != o, "listing doesnt exist");
-        let u = C.useEditStateStore.getState().listings[l];
+        let u = T.useEditStateStore.getState().listings[l];
         r(null != u, "edit state does not exist");
         let {
           name: a,
@@ -393,9 +393,9 @@ function Q() {
           intangibleBenefits: f,
           priceTier: E,
           image: p,
-          channelAccessFormat: m
+          channelAccessFormat: S
         } = u, M = {};
-        if (a !== o.name && (M.name = a), c !== o.description && (M.description = c), E !== (null === (t = o.subscription_plans[0]) || void 0 === t ? void 0 : t.price) && (M.priceTier = E), null != p && (M.image = p), null != m && (M.can_access_all_channels = m === C.AllChannelAccessOptions.ALL_CHANNELS_ACCESS), null != d || null != f) {
+        if (a !== o.name && (M.name = a), c !== o.description && (M.description = c), E !== (null === (t = o.subscription_plans[0]) || void 0 === t ? void 0 : t.price) && (M.priceTier = E), null != p && (M.image = p), null != S && (M.can_access_all_channels = S === T.AllChannelAccessOptions.ALL_CHANNELS_ACCESS), null != d || null != f) {
           let e = o.role_benefits.benefits.filter(_.isChannelBenefit),
             t = o.role_benefits.benefits.filter(_.isIntangibleBenefit),
             n = [...null != d ? d : e, ...null != f ? f : t];
@@ -420,7 +420,7 @@ function Q() {
           groupListingId: o,
           onBeforeDispatchNewListing: u
         });
-        c = e.id, f = l, E = c, C.useEditStateStore.setState(e => ({
+        c = e.id, f = l, E = c, T.useEditStateStore.setState(e => ({
           listings: {
             ...e.listings,
             [E]: e.listings[f],
@@ -451,9 +451,9 @@ function $(e, t) {
       includeSoftDeleted: !1
     },
     i = (0, p.useSubscriptionListingsForGroup)(e, n),
-    r = (0, C.useEditStateStore)(e => e.editStateIdsForGroup[t]),
-    s = (0, C.useEditStateStore)(e => e.setEditStateIdsForGroup),
-    u = (0, C.useEditStateStore)(e => e.setListing),
+    r = (0, T.useEditStateStore)(e => e.editStateIdsForGroup[t]),
+    s = (0, T.useEditStateStore)(e => e.setEditStateIdsForGroup),
+    u = (0, T.useEditStateStore)(e => e.setListing),
     a = l.useMemo(() => [...i.map(e => {
       let {
         id: t

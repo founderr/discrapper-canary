@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return N
   }
 }), n("222007");
 var a = n("37983"),
@@ -56,7 +56,7 @@ let x = l.throttle(() => {
 }, 100, {
   trailing: !1
 });
-class N extends r.PureComponent {
+class R extends r.PureComponent {
   componentDidCatch(e, t) {
     this.triggerSoftCrash(e, t)
   }
@@ -128,4 +128,4 @@ class N extends r.PureComponent {
     }, this.discordErrorsSet = !1
   }
 }
-var R = N
+var N = R

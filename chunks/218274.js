@@ -22,8 +22,8 @@ var i = l("37983"),
   m = l("18494"),
   I = l("944832"),
   E = l("58608"),
-  x = l("550766"),
-  p = l("191225"),
+  p = l("550766"),
+  x = l("191225"),
   C = l("986214"),
   T = l("161918"),
   S = l("248210"),
@@ -51,17 +51,17 @@ function R(e) {
     applicationId: d,
     guildId: o,
     selectedChannelId: h,
-    setSelectedChannelId: p,
+    setSelectedChannelId: x,
     enableSelectedTextChannelInvite: C
   } = e, A = (0, n.useStateFromStores)([c.default], () => c.default.useReducedMotion), N = (0, T.useActivityShelfItemData)(null != o ? o : null, null != d ? d : ""), [D, R] = a.useState(C && !u.default.disableInviteWithTextChannelActivityLaunch), b = (0, S.useSelectVoiceChannelOptions)(o);
   a.useEffect(() => {
     var e;
-    x.fetchShelf({
+    p.fetchShelf({
       guildId: o
-    }), p(null !== (e = (0, S.getActivityVoiceChannelSuggestion)({
+    }), x(null !== (e = (0, S.getActivityVoiceChannelSuggestion)({
       guildId: o
     })) && void 0 !== e ? e : void 0)
-  }, [o, p]);
+  }, [o, x]);
   let O = null == N ? void 0 : N.activity.activity_preview_video_asset_id,
     H = null != O ? (0, g.default)(null !== (t = null == N ? void 0 : N.application.id) && void 0 !== t ? t : "", O) : null,
     {
@@ -113,7 +113,7 @@ function R(e) {
         let {
           channel: t
         } = e;
-        return p(t.id)
+        return x(t.id)
       },
       serialize: e => {
         let {
@@ -175,7 +175,7 @@ function b(e) {
   } = e, {
     AnalyticsLocationProvider: I,
     analyticsLocations: E
-  } = (0, o.default)(d.default.ACTIVITY_CHANNEL_SELECTOR), S = (0, T.useActivityShelfItemData)(null != l ? l : null, null != t ? t : null), g = (0, A.default)(), _ = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())), j = (0, n.useStateFromStores)([u.default], () => h && !u.default.disableInviteWithTextChannelActivityLaunch), V = (0, n.useStateFromStores)([p.default], () => null != v && "" !== v && p.default.getEmbeddedActivitiesForChannel(v).some(e => e.applicationId === t)), R = L(l), b = async () => {
+  } = (0, o.default)(d.default.ACTIVITY_CHANNEL_SELECTOR), S = (0, T.useActivityShelfItemData)(null != l ? l : null, null != t ? t : null), g = (0, A.default)(), _ = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())), j = (0, n.useStateFromStores)([u.default], () => h && !u.default.disableInviteWithTextChannelActivityLaunch), V = (0, n.useStateFromStores)([x.default], () => null != v && "" !== v && x.default.getEmbeddedActivitiesForChannel(v).some(e => e.applicationId === t)), R = L(l), b = async () => {
     if (null == v || "" === v || null == S || null == l || "" === l) return;
     let e = await (0, C.default)({
       activityItem: S,
@@ -186,7 +186,7 @@ function b(e) {
       embeddedActivitiesManager: N.default,
       analyticsLocations: E
     });
-    e && (c(), null != _ && R && j && await x.sendEmbeddedActivityInvite({
+    e && (c(), null != _ && R && j && await p.sendEmbeddedActivityInvite({
       activityChannelId: v,
       invitedChannelId: _.id,
       applicationId: S.application.id,

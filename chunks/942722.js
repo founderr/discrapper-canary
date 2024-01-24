@@ -19,8 +19,8 @@ var a = n("37983"),
   m = n("191542"),
   E = n("697218"),
   C = n("79798"),
-  g = n("151185"),
-  S = n("11056"),
+  S = n("151185"),
+  g = n("11056"),
   _ = n("826684"),
   I = n("599110"),
   T = n("315102"),
@@ -45,7 +45,7 @@ function P(e) {
   } = (0, i.useStateFromStoresObject)([p.default, E.default, h.default], () => p.default.isFriend(t.id) || t === E.default.getCurrentUser() ? {
     status: h.default.getStatus(t.id),
     activities: h.default.getActivities(t.id)
-  } : {}), g = (0, i.useStateFromStores)([m.default], () => null != m.default.getTypingUsers(l.id)[t.id]), S = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()), _ = (0, i.useStateFromStores)([h.default], () => h.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([p.default], () => p.default.getNickname(t.id)), T = e => {
+  } : {}), S = (0, i.useStateFromStores)([m.default], () => null != m.default.getTypingUsers(l.id)[t.id]), g = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()), _ = (0, i.useStateFromStores)([h.default], () => h.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([p.default], () => p.default.getNickname(t.id)), T = e => {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -78,11 +78,11 @@ function P(e) {
     },
     children: e => (0, a.jsx)(M.default, {
       user: t,
-      currentUser: S,
+      currentUser: g,
       isOwner: t.id === l.ownerId,
       ownerTooltipText: j.default.Messages.GROUP_OWNER,
       shouldAnimateStatus: y,
-      isTyping: g,
+      isTyping: S,
       status: d,
       activities: C,
       channel: l,
@@ -125,7 +125,7 @@ function b(e) {
     }),
     position: s.isMobile ? "window_center" : "left",
     spacing: 16,
-    children: e => (0, a.jsx)(S.default, {
+    children: e => (0, a.jsx)(g.default, {
       onContextMenu: d,
       className: L.member,
       name: (0, a.jsx)("span", {
@@ -202,7 +202,7 @@ function D(e) {
         }), f.map(e => (0, a.jsx)(b, {
           integration: e,
           channel: t
-        }, e.application.id)), T.length > 0 && (0, a.jsx)(S.default, {
+        }, e.application.id)), T.length > 0 && (0, a.jsx)(g.default, {
           className: L.member,
           onClick: () => {
             (0, r.openModalLazy)(async () => {
@@ -217,7 +217,7 @@ function D(e) {
           },
           avatar: (0, a.jsx)("div", {
             className: O.appIconWrapper,
-            children: (0, a.jsx)(g.default, {
+            children: (0, a.jsx)(S.default, {
               width: 18,
               height: 18
             })

@@ -22,7 +22,7 @@ class g extends a.PureComponent {
   async componentDidMount() {
     let [e, {
       default: t
-    }] = await Promise.all([s.el("432201").then(s.t.bind(s, "432201", 19)), s.el("245749").then(s.t.bind(s, "245749", 23))]);
+    }] = await Promise.all([s.el("432201").then(s.t.bind(s, "432201", 19)), s.el("865981").then(s.t.bind(s, "865981", 23))]);
     this._animItem = t.loadAnimation({
       container: this._lottieRef,
       renderer: "svg",

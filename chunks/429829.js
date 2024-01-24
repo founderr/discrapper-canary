@@ -20,8 +20,8 @@ var l = n("446674"),
   m = n("719923"),
   E = n("49111"),
   C = n("994428"),
-  g = n("646718"),
-  S = n("397336"),
+  S = n("646718"),
+  g = n("397336"),
   _ = n("782340"),
   I = n("948197");
 
@@ -31,7 +31,7 @@ function T(e) {
     onClose: n,
     markAsDismissed: T
   } = e, v = (0, l.useStateFromStores)([f.default], () => f.default.getCurrentUser());
-  let x = (t = null == v ? void 0 : v.premiumType) === g.PremiumTypes.TIER_2 ? _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
+  let x = (t = null == v ? void 0 : v.premiumType) === S.PremiumTypes.TIER_2 ? _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : _.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
     N = m.default.canUseCustomCallSounds(v);
   return (0, a.jsxs)(c.default, {
     isShown: !0,
@@ -62,12 +62,12 @@ function T(e) {
       children: x
     }), N ? (0, a.jsx)(s.Button, {
       onClick: function() {
-        u.default.open(E.UserSettingsSections.VOICE, S.SOUNDBOARD_SUBSECTION), null == n || n(), null == T || T(C.ContentDismissActionType.PRIMARY)
+        u.default.open(E.UserSettingsSections.VOICE, g.SOUNDBOARD_SUBSECTION), null == n || n(), null == T || T(C.ContentDismissActionType.PRIMARY)
       },
       children: _.default.Messages.CHECK_IT_OUT
     }) : (0, a.jsx)(d.default, {
       buttonText: _.default.Messages.PREMIUM_UPSELL_GET_NITRO,
-      subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
+      subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
       premiumModalAnalyticsLocation: {
         section: E.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
         object: E.AnalyticsObjects.BUTTON_CTA

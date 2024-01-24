@@ -26,17 +26,17 @@ function _(e) {
   let {
     guildId: t,
     onClose: l
-  } = e, s = (0, o.default)([E.default], () => E.default.getSearchStateByGuildId(t), [t], i), _ = (0, f.useTrackMemberFilterSafetyFlagsUsed)(t), H = (0, m.isInMembersTableSafetySignalsExperiment)(t), g = n.useCallback(() => {
+  } = e, s = (0, o.default)([E.default], () => E.default.getSearchStateByGuildId(t), [t], i), _ = (0, f.useTrackMemberFilterSafetyFlagsUsed)(t), g = (0, m.isInMembersTableSafetySignalsExperiment)(t), p = n.useCallback(() => {
     !s.requireUnusualDmActivity && _(f.MemberSafetyFlagType.UNUSUAL_DM_ACTIVITY), (0, M.updateSearchState)(t, {
       ...s,
       requireUnusualDmActivity: !s.requireUnusualDmActivity
     })
-  }, [t, s, _]), A = n.useCallback(() => {
+  }, [t, s, _]), H = n.useCallback(() => {
     !s.requireCommunicationDisabled && _(f.MemberSafetyFlagType.COMMUNICATION_DISABLED), (0, M.updateSearchState)(t, {
       ...s,
       requireCommunicationDisabled: !s.requireCommunicationDisabled
     })
-  }, [t, s, _]), p = n.useCallback(() => {
+  }, [t, s, _]), A = n.useCallback(() => {
     !s.requireUnusualAccountActivity && _(f.MemberSafetyFlagType.UNUSUAL_ACCOUNT_ACTIVITY), (0, M.updateSearchState)(t, {
       ...s,
       requireUnusualAccountActivity: !s.requireUnusualAccountActivity
@@ -63,7 +63,7 @@ function _(e) {
             className: x.unusualDMLabelIcon
           }), T.default.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY]
         }),
-        action: g,
+        action: p,
         checked: s.requireUnusualDmActivity
       }), (0, a.jsx)(d.MenuCheckboxItem, {
         id: "toggle-require-communication-disabled",
@@ -75,9 +75,9 @@ function _(e) {
             className: x.timeoutLabelIcon
           }), T.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED]
         }),
-        action: A,
+        action: H,
         checked: s.requireCommunicationDisabled
-      }), H && (0, a.jsxs)(a.Fragment, {
+      }), g && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(d.MenuCheckboxItem, {
           id: "toggle-require-unusual-account-activity",
           label: (0, a.jsxs)("div", {
@@ -88,7 +88,7 @@ function _(e) {
               className: x.unusualAccountActivityLabelIcon
             }), T.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY]
           }),
-          action: p,
+          action: A,
           checked: s.requireUnusualAccountActivity
         }), (0, a.jsx)(d.MenuCheckboxItem, {
           id: "toggle-require-username-quarantined",

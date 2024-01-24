@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return s
+    return n
   }
 });
-var a = n("862205");
-let i = (0, a.createExperiment)({
+var t = E("862205");
+let o = (0, t.createExperiment)({
   id: "2023-12_quests",
   kind: "user",
   label: "Quests",
@@ -26,4 +26,4 @@ let i = (0, a.createExperiment)({
     }
   }]
 });
-var s = i
+var n = o

@@ -22,10 +22,10 @@ var a = l("37983"),
   T = l("624663"),
   x = l("463200"),
   _ = l("868967"),
-  H = l("512882"),
-  g = l("149777"),
-  A = l("413989"),
-  p = l("49111"),
+  g = l("512882"),
+  p = l("149777"),
+  H = l("413989"),
+  A = l("49111"),
   S = l("782340"),
   L = l("368715"),
   N = l("236807");
@@ -68,22 +68,22 @@ function b(e) {
   let {
     guildId: t,
     currentPagedMembers: l
-  } = e, s = (0, r.default)([h.default], () => h.default.getSearchStateByGuildId(t), [t], d), o = (0, r.default)([f.default, c.default], () => f.default.can(p.Permissions.MANAGE_GUILD, c.default.getGuild(t)), [t]), {
+  } = e, s = (0, r.default)([h.default], () => h.default.getSearchStateByGuildId(t), [t], d), o = (0, r.default)([f.default, c.default], () => f.default.can(A.Permissions.MANAGE_GUILD, c.default.getGuild(t)), [t]), {
     selectedUserIds: m,
     addUsers: b,
     clearSelection: j
-  } = (0, T.default)(t), R = s.requireUnusualDmActivity || s.requireCommunicationDisabled || s.requireUnusualAccountActivity || s.requireUsernameQuarantined, D = s.selectedRoleIds.size > 0, O = null != s.selectedJoinDateOption.afterDate, V = null != s.selectedAccountAgeOption.afterDate, B = null != s.selectedSourceInviteCode && "" !== s.selectedSourceInviteCode, y = null != s.selectedJoinSourceType, F = B || y, [U, w] = n.useState(null == u.default.get(v, null)), k = n.useCallback(() => {
-    u.default.set(v, Date.now()), w(!1)
-  }, []), Z = (0, M.useCanAccessBulkBanningFeature)(t), P = (0, E.isInMembersTablesAdditionalFilteringExperiment)(t), Y = n.useMemo(() => l.filter(e => (0, M.canBulkBanUser)(t, Z, e)), [Z, l, t]), G = Y.length > 0, q = Y.filter(e => !m.has(e)), J = 0 === q.length, K = n.useCallback(() => {
-    G && (J ? j() : b(Y))
-  }, [G, J, j, b, Y]);
+  } = (0, T.default)(t), R = s.requireUnusualDmActivity || s.requireCommunicationDisabled || s.requireUnusualAccountActivity || s.requireUsernameQuarantined, D = s.selectedRoleIds.size > 0, O = null != s.selectedJoinDateOption.afterDate, V = null != s.selectedAccountAgeOption.afterDate, B = null != s.selectedSourceInviteCode && "" !== s.selectedSourceInviteCode, y = null != s.selectedJoinSourceType, w = B || y, [F, U] = n.useState(null == u.default.get(v, null)), k = n.useCallback(() => {
+    u.default.set(v, Date.now()), U(!1)
+  }, []), Z = (0, M.useCanAccessBulkBanningFeature)(t), P = (0, E.isInMembersTablesAdditionalFilteringExperiment)(t), G = n.useMemo(() => l.filter(e => (0, M.canBulkBanUser)(t, Z, e)), [Z, l, t]), Y = G.length > 0, q = G.filter(e => !m.has(e)), J = 0 === q.length, K = n.useCallback(() => {
+    Y && (J ? j() : b(G))
+  }, [Y, J, j, b, G]);
   return (0, a.jsx)("thead", {
     children: (0, a.jsxs)("tr", {
       className: L.tableHeaderRow,
       children: [Z && (0, a.jsx)("th", {
         className: i(L.tableHeaderCellContainer, N.xsmallCol),
         children: (0, a.jsx)(C.Tooltip, {
-          shouldShow: !G,
+          shouldShow: !Y,
           text: S.default.Messages.MEMBER_SAFETY_CANNOT_SELECT_ALL,
           children: e => (0, a.jsx)(C.Clickable, {
             ...e,
@@ -92,7 +92,7 @@ function b(e) {
             children: (0, a.jsx)(C.Checkbox, {
               type: C.Checkbox.Types.INVERTED,
               value: J,
-              disabled: !G
+              disabled: !Y
             })
           })
         })
@@ -104,9 +104,9 @@ function b(e) {
           position: "bottom",
           spacing: 4,
           align: "left",
-          renderPopout: () => (0, a.jsx)(H.default, {
+          renderPopout: () => (0, a.jsx)(g.default, {
             guildId: t,
-            onClose: p.NOOP
+            onClose: A.NOOP
           }),
           children: e => {
             let {
@@ -128,7 +128,7 @@ function b(e) {
           align: "left",
           renderPopout: () => (0, a.jsx)(x.default, {
             guildId: t,
-            onClose: p.NOOP
+            onClose: A.NOOP
           }),
           children: e => {
             let {
@@ -157,9 +157,9 @@ function b(e) {
         position: "bottom",
         spacing: 4,
         align: "left",
-        renderPopout: () => (0, a.jsx)(g.default, {
+        renderPopout: () => (0, a.jsx)(p.default, {
           guildId: t,
-          onClose: p.NOOP
+          onClose: A.NOOP
         }),
         children: e => {
           let {
@@ -169,7 +169,7 @@ function b(e) {
           return (0, a.jsx)(I, {
             label: S.default.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
             onFilter: t,
-            selected: F,
+            selected: w,
             className: N.smallCol,
             ...l
           })
@@ -183,7 +183,7 @@ function b(e) {
           let {
             closePopout: l
           } = e;
-          return (0, a.jsx)(A.default, {
+          return (0, a.jsx)(H.default, {
             guildId: t,
             onClose: l
           })
@@ -205,7 +205,7 @@ function b(e) {
         text: S.default.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
         position: "top",
         align: "left",
-        forceOpen: U,
+        forceOpen: F,
         shouldShow: !0,
         color: C.Tooltip.Colors.BRAND,
         children: e => (0, a.jsx)(C.Popout, {

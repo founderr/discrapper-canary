@@ -48,7 +48,7 @@ function m(e) {
     return null != _ && (async () => {
       let [{
         default: a
-      }, l] = await Promise.all([n.el("245749").then(n.t.bind(n, "245749", 23)), (0, i.isThemeDark)(t) ? _.dark() : _.light()]);
+      }, l] = await Promise.all([n.el("865981").then(n.t.bind(n, "865981", 23)), (0, i.isThemeDark)(t) ? _.dark() : _.light()]);
       !s && (e = a.loadAnimation({
         container: N.current,
         renderer: "svg",

@@ -40,7 +40,7 @@ class l extends a.Component {
       null != this.animation && this.animation.destroy();
       let [o, {
         default: l
-      }] = await Promise.all([e(), n.el("245749").then(n.t.bind(n, "245749", 23))]);
+      }] = await Promise.all([e(), n.el("865981").then(n.t.bind(n, "865981", 23))]);
       null != this.animationRef.current && (this.animation = l.loadAnimation({
         container: this.animationRef.current,
         renderer: r,

@@ -31,7 +31,7 @@ let I = e => T.default.close(e),
   x = (e, t) => {
     (0, g.isMac)() && !t.altKey ? T.default.fullscreen(e) : T.default.maximize(e)
   },
-  N = e => {
+  R = e => {
     let {
       windowKey: t,
       themeOverride: n,
@@ -65,7 +65,7 @@ let I = e => T.default.close(e),
       })]
     })
   },
-  R = e => {
+  N = e => {
     let {
       focused: t,
       windowKey: n,
@@ -128,13 +128,13 @@ function L(e) {
   if (f) return null;
   switch (n) {
     case g.PlatformTypes.WINDOWS:
-      return (0, a.jsx)(N, {
+      return (0, a.jsx)(R, {
         windowKey: r,
         themeOverride: i,
         hasOpenLayer: h
       });
     case g.PlatformTypes.OSX:
-      return (0, a.jsx)(R, {
+      return (0, a.jsx)(N, {
         focused: t,
         windowKey: r,
         frame: s,

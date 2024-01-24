@@ -22,16 +22,16 @@ var l = n("37983"),
       compact: _,
       className: h,
       isGroupStart: p,
-      hideSimpleEmbedContent: S = !0,
-      disableInteraction: m
-    } = e, M = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), T = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (i = r.editedTimestamp) && void 0 !== i ? i : r.timestamp).valueOf()), {
-      content: v
+      hideSimpleEmbedContent: m = !0,
+      disableInteraction: S
+    } = e, M = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), v = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (i = r.editedTimestamp) && void 0 !== i ? i : r.timestamp).valueOf()), {
+      content: C
     } = (0, a.default)(r, {
-      hideSimpleEmbedContent: S,
-      allowList: M.showListsAndHeaders || T.showListsAndHeaders,
-      allowHeading: M.showListsAndHeaders || T.showListsAndHeaders,
-      allowLinks: M.showMaskedLinks || T.showMaskedLinks,
-      previewLinkTarget: M.showMaskedLinks || T.showMaskedLinks
+      hideSimpleEmbedContent: m,
+      allowList: M.showListsAndHeaders || v.showListsAndHeaders,
+      allowHeading: M.showListsAndHeaders || v.showListsAndHeaders,
+      allowLinks: M.showMaskedLinks || v.showMaskedLinks,
+      previewLinkTarget: M.showMaskedLinks || v.showMaskedLinks
     });
     return (0, l.jsx)(u.default, {
       compact: _,
@@ -45,7 +45,7 @@ var l = n("37983"),
         channel: E,
         guildId: void 0
       }),
-      childrenMessageContent: (0, c.default)(e, v),
-      disableInteraction: m
+      childrenMessageContent: (0, c.default)(e, C),
+      disableInteraction: S
     })
   })

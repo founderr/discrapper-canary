@@ -32,8 +32,8 @@ var t = E("37983"),
   m = E("714657"),
   G = E("262194"),
   p = E("36773"),
-  y = E("374036"),
-  g = E("384997"),
+  g = E("374036"),
+  y = E("384997"),
   B = E("234819"),
   f = E("182033"),
   H = E("928741"),
@@ -93,7 +93,7 @@ var eo = function(e) {
     autoTrackExposure: !0
   }), ea = (0, T.useStateFromStores)([b.default], () => b.default.getLayers().includes(Z.Layers.USER_SETTINGS)), ei = (0, T.useStateFromStores)([w.default], () => X.default.canUseClientThemes(w.default.getCurrentUser())), eI = $ && !ea, es = [];
   eI && eo && er && !ei && es.push(S.DismissibleContent.CLIENT_THEMES_COACHMARK);
-  let [eT, eS] = (0, g.useSelectedDismissibleContent)(es, ee.DismissibleContentGroupName.SIDEBAR, !0);
+  let [eT, eS] = (0, y.useSelectedDismissibleContent)(es, ee.DismissibleContentGroupName.SIDEBAR, !0);
   es.push(S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
   let eN = eT === S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
     eO = eT === S.DismissibleContent.CLIENT_THEMES_COACHMARK;
@@ -157,7 +157,7 @@ var eo = function(e) {
                     }) : null, !en || ea || eO ? null : (0, t.jsx)(h.default, {
                       isCoachmark: eN,
                       markAsDismissed: eS
-                    }), (0, t.jsx)(y.default, {
+                    }), (0, t.jsx)(g.default, {
                       mobile: u
                     })]
                   }), !1]

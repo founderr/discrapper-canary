@@ -7,7 +7,7 @@ e.exports = {
   errorBlock: "errorBlock__1ea32",
   headerContent: "headerContent__96267",
   headerHeader: "headerHeader__78d73",
-  modalSize: "modalSize_d9e04d " + o("258179").sizeSmall,
+  modalSize: "modalSize_d9e04d " + n("258179").sizeSmall,
   price: "price__9237d",
   priceSpinner: "priceSpinner_a3f5bc"
 }

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return g
+    return p
   }
 }), l("222007");
 var a = l("37983"),
@@ -22,10 +22,10 @@ var a = l("37983"),
   T = l("843455"),
   x = l("782340"),
   _ = l("863879");
-let H = n.forwardRef(function(e, t) {
+let g = n.forwardRef(function(e, t) {
   let {
     guild: s
-  } = e, o = (0, C.default)([M.default], () => M.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([f.default], () => f.default.can(T.Permissions.KICK_MEMBERS, s)), H = n.useCallback(() => {
+  } = e, o = (0, C.default)([M.default], () => M.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([f.default], () => f.default.can(T.Permissions.KICK_MEMBERS, s)), g = n.useCallback(() => {
     null != s && r && (0, c.openModalLazy)(async () => {
       let {
         default: e
@@ -35,12 +35,12 @@ let H = n.forwardRef(function(e, t) {
         guild: s
       })
     })
-  }, [s, r]), g = (0, C.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], u), A = (0, E.useTrackMemberSearchUsed)(s.id), [p, S] = n.useState(g.query), L = n.useCallback(e => {
+  }, [s, r]), p = (0, C.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], u), H = (0, E.useTrackMemberSearchUsed)(s.id), [A, S] = n.useState(p.query), L = n.useCallback(e => {
     let t = e.trim();
-    t.length > 0 && A(), (0, h.updateSearchState)(s.id, {
+    t.length > 0 && H(), (0, h.updateSearchState)(s.id, {
       query: t
     })
-  }, [s.id, A]), N = n.useCallback(d(L, 300), [L]), I = n.useCallback(e => {
+  }, [s.id, H]), N = n.useCallback(d(L, 300), [L]), I = n.useCallback(e => {
     S(e), N(e)
   }, [N]), v = n.useCallback(() => {
     S(""), L("")
@@ -66,7 +66,7 @@ let H = n.forwardRef(function(e, t) {
         className: i(_.searchHeader),
         children: (0, a.jsx)(m.default, {
           className: _.searchBar,
-          query: p,
+          query: A,
           placeholder: x.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
           onChange: I,
           onClear: v,
@@ -82,7 +82,7 @@ let H = n.forwardRef(function(e, t) {
       className: i(_.tableOptions),
       children: r && (0, a.jsx)(c.Button, {
         className: i(_.pruneButton),
-        onClick: H,
+        onClick: g,
         "aria-label": x.default.Messages.PRUNE_MEMBERS,
         color: c.Button.Colors.RED,
         look: c.Button.Looks.OUTLINED,
@@ -92,4 +92,4 @@ let H = n.forwardRef(function(e, t) {
     })]
   })
 });
-var g = H
+var p = g

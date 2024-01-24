@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return p
+    return A
   }
 }), l("222007"), l("808653"), l("424973");
 var a = l("37983"),
@@ -22,44 +22,44 @@ var a = l("37983"),
   T = l("645266"),
   x = l("412013"),
   _ = l("782340"),
-  H = l("554490"),
-  g = l("236807");
-let A = new Set;
+  g = l("554490"),
+  p = l("236807");
+let H = new Set;
 
-function p(e) {
+function A(e) {
   let {
     guildId: t,
     onClose: l
-  } = e, s = (0, M.useTrackMemberFilterRolesUsed)(t), o = (0, f.default)([h.default], () => h.default.getSearchStateByGuildId(t), [t], c), [r, C] = n.useState(o.selectedRoleIds), p = (0, E.useRoleRows)(t, A, !0), S = (e, l) => {
+  } = e, s = (0, M.useTrackMemberFilterRolesUsed)(t), o = (0, f.default)([h.default], () => h.default.getSearchStateByGuildId(t), [t], c), [r, C] = n.useState(o.selectedRoleIds), A = (0, E.useRoleRows)(t, H, !0), S = (e, l) => {
     let {
       record: n
     } = e;
     return (0, a.jsx)(m.ComboboxItem, {
       value: n.id,
       children: (0, a.jsxs)("div", {
-        className: i(H.roleNameContainer),
+        className: i(g.roleNameContainer),
         children: [(0, a.jsxs)("div", {
-          className: i(H.roleLabel),
+          className: i(g.roleLabel),
           children: [(0, a.jsx)("div", {
-            className: i(H.labelBackground, l && H.selected)
+            className: i(g.labelBackground, l && g.selected)
           }), (0, a.jsx)(m.ComboboxItem.Label, {
             children: (0, a.jsx)(x.default, {
-              className: i(g.roleTooltipItem),
+              className: i(p.roleTooltipItem),
               role: n,
               guildId: t
             }, n.id)
           })]
         }), (0, a.jsx)("div", {
-          className: H.spacer
+          className: g.spacer
         }), (0, a.jsx)("div", {
-          className: H.checkboxContainer,
+          className: g.checkboxContainer,
           children: (0, a.jsx)(m.ComboboxItem.Checkbox, {
             checked: l
           })
         })]
       })
     }, n.id)
-  }, L = (e, t) => p.reduce((l, a) => {
+  }, L = (e, t) => A.reduce((l, a) => {
     let {
       record: n
     } = a, s = e.has(n.id);
@@ -73,7 +73,7 @@ function p(e) {
     C(t = r.has(e) ? new Set([...r].filter(t => t !== e)) : new Set([...r, e])), I(t)
   }, [r, I]);
   return (0, a.jsx)(m.ComboboxPopout, {
-    className: i(H.rolePopout),
+    className: i(g.rolePopout),
     placeholder: _.default.Messages.MEMBERS_TABLE_ROLE_SELECTION_PLACEHOLDER,
     value: r,
     onChange: v,

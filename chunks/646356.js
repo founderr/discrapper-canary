@@ -17,8 +17,8 @@ let o = {},
   },
   _ = !1,
   S = !1,
-  f = null,
   E = null,
+  f = null,
   T = !1,
   A = !1,
   I = null,
@@ -38,7 +38,7 @@ class C extends s.default.Store {
     return d
   }
   getFetchError() {
-    return f
+    return E
   }
   isInitialized() {
     return S
@@ -47,7 +47,7 @@ class C extends s.default.Store {
     return c[t]
   }
   getAppealClassificationId() {
-    return E
+    return f
   }
   getIsDsaEligible() {
     return T
@@ -76,13 +76,13 @@ var m = new C(l.default, {
       accountStanding: a,
       isDsaEligible: n
     } = t;
-    o = i(e, "id"), d = a, T = n, _ = !1, S = !0, f = null
+    o = i(e, "id"), d = a, T = n, _ = !1, S = !0, E = null
   },
   SAFETY_HUB_FETCH_FAILURE: function(t) {
     let {
       error: e
     } = t;
-    _ = !1, S = !1, f = e
+    _ = !1, S = !1, E = e
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_START: function(t) {
     c[t.classificationId] = r.ClassificationRequestState.PENDING, _ = !0
@@ -93,23 +93,23 @@ var m = new C(l.default, {
       accountStanding: a,
       isDsaEligible: n
     } = t;
-    o[e.id] = e, c[e.id] = r.ClassificationRequestState.SUCCESS, d = a, _ = !1, f = null, T = n
+    o[e.id] = e, c[e.id] = r.ClassificationRequestState.SUCCESS, d = a, _ = !1, E = null, T = n
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(t) {
     let {
       error: e,
       classificationId: a
     } = t;
-    _ = !1, f = e, c[a] = r.ClassificationRequestState.FAILED
+    _ = !1, E = e, c[a] = r.ClassificationRequestState.FAILED
   },
   SAFETY_HUB_APPEAL_OPEN: function(t) {
     let {
       classificationId: e
     } = t;
-    E = e
+    f = e
   },
   SAFETY_HUB_APPEAL_CLOSE: function() {
-    E = null, g = u.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, N = ""
+    f = null, g = u.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, N = ""
   },
   SAFETY_HUB_APPEAL_SIGNAL_SELECT: function(t) {
     let {
@@ -140,6 +140,6 @@ var m = new C(l.default, {
   LOGOUT: function() {
     _ = !1, o = {}, d = {
       state: r.AccountStandingState.ALL_GOOD
-    }, E = null, g = u.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, N = ""
+    }, f = null, g = u.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, N = ""
   }
 })

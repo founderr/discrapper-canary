@@ -24,20 +24,20 @@ function E(e) {
   } = e, [s, E] = n.useTransition(), M = (0, o.default)([C.default], () => C.default.getEstimatedMemberSearchCountByGuildId(t), [t]), h = (0, o.useStateFromStoresObject)([C.default], () => C.default.getPaginationStateByGuildId(t), [t]), T = (0, u.useIsMakingRequest)(t), x = n.useMemo(() => r.PAGINATION_PAGE_SIZE_OPTIONS.map(e => ({
     value: e,
     label: Number(e).toLocaleString()
-  })), []), _ = new Intl.NumberFormat(f.default.getLocale()).format(M), H = f.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
+  })), []), _ = new Intl.NumberFormat(f.default.getLocale()).format(M), g = f.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
     count: T ? "..." : _
-  }), g = M > h.pageSize || T, A = M > r.PAGINATION_PAGE_SIZE_OPTIONS[0];
+  }), p = M > h.pageSize || T, H = M > r.PAGINATION_PAGE_SIZE_OPTIONS[0];
   return (0, a.jsxs)("div", {
     className: i(m.paginationContainer),
     children: [(0, a.jsx)("div", {
       className: i(m.pageSizeSelection),
-      children: A ? (0, a.jsxs)(a.Fragment, {
+      children: H ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(d.Text, {
           variant: "text-md/normal",
           color: "text-muted",
           children: f.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL
         }), (0, a.jsx)(d.Select, {
-          "aria-label": H,
+          "aria-label": g,
           className: m.pageSizeInput,
           options: x,
           isSelected: e => e === h.pageSize,
@@ -59,7 +59,7 @@ function E(e) {
             color: "text-muted",
             className: i(m.pageLabel),
             ...e,
-            children: H
+            children: g
           })
         })]
       }) : (0, a.jsx)(d.Text, {
@@ -71,7 +71,7 @@ function E(e) {
       })
     }), (0, a.jsx)("div", {
       className: i(m.pagination),
-      children: g && (0, a.jsx)(d.Paginator, {
+      children: p && (0, a.jsx)(d.Paginator, {
         className: i(m.paginationInput),
         totalCount: M,
         pageSize: h.pageSize,

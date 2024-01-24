@@ -15,14 +15,14 @@ var n = a("37983"),
   d = a("77078"),
   _ = a("697218"),
   S = a("908539"),
-  f = a("132206"),
-  E = a("260883"),
+  E = a("132206"),
+  f = a("260883"),
   T = a("170213"),
   A = a("782340"),
   I = a("122698");
 
 function g() {
-  let t = (0, f.useSafetyHubAccountStanding)(),
+  let t = (0, E.useSafetyHubAccountStanding)(),
     e = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
     [a, g] = i.useState(36),
     N = i.useRef({
@@ -89,8 +89,8 @@ function g() {
     },
     {
       title: p,
-      description: x,
-      color: U,
+      description: U,
+      color: x,
       Icon: h
     } = m[t.state],
     H = Object.keys(m).length;
@@ -99,7 +99,7 @@ function g() {
     outline: !1,
     children: [(0, n.jsx)("div", {
       className: I.profile,
-      children: (0, n.jsx)(E.default, {
+      children: (0, n.jsx)(f.default, {
         user: e,
         size: d.AvatarSizes.SIZE_80
       })
@@ -113,7 +113,7 @@ function g() {
           children: p.format({
             hook: t => (0, n.jsx)(d.Text, {
               style: {
-                color: U.css
+                color: x.css
               },
               variant: "heading-lg/bold",
               tag: "span",
@@ -123,7 +123,7 @@ function g() {
         }), (0, n.jsx)(d.Text, {
           color: "text-normal",
           variant: "text-sm/normal",
-          children: x
+          children: U
         })]
       }), (0, n.jsxs)("div", {
         className: I.health,

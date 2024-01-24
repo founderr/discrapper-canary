@@ -5,7 +5,7 @@ e.exports = {
   emojisContainer: "emojisContainer__68736",
   extraEmojiCount: "extraEmojiCount__86568",
   fullEmojisContainer: "fullEmojisContainer_e5d83d",
-  guildCard: "guildCard__81370 " + o("97743").card,
+  guildCard: "guildCard__81370 " + n("97743").card,
   guildCardHeader: "guildCardHeader_adf107",
   guildCardHeaderAvatar: "guildCardHeaderAvatar__47b9e",
   guildCardHeaderTitle: "guildCardHeaderTitle__2640c",

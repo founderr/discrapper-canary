@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return i
   },
   getSearchState: function() {
-    return S
+    return m
   }
 });
 var l, i, r = n("884691"),
@@ -83,6 +83,6 @@ function p(e) {
   }, [e])
 }
 
-function S(e, t, n) {
+function m(e, t, n) {
   return t ? 0 : e ? 1 : n <= 0 ? 2 : 3
 }(l = i || (i = {}))[l.LOADING = 0] = "LOADING", l[l.SUCCESS_STILL_INDEXING = 1] = "SUCCESS_STILL_INDEXING", l[l.SUCCESS_EMPTY = 2] = "SUCCESS_EMPTY", l[l.SUCCESS_FULL = 3] = "SUCCESS_FULL"

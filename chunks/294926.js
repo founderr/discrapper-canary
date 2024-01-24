@@ -19,8 +19,8 @@ var a = n("37983"),
   m = n("717018"),
   E = n("659500"),
   C = n("439932"),
-  g = n("550766"),
-  S = n("191225"),
+  S = n("550766"),
+  g = n("191225"),
   _ = n("698372"),
   I = n("401207"),
   T = n("320817"),
@@ -40,8 +40,8 @@ function j(e) {
     maxHeight: n,
     connectedChannelId: s
   } = e, j = (0, _.default)(), L = l.useCallback(() => {
-    (0, g.updateActivityPanelMode)(x.ActivityPanelModes.PIP)
-  }, []), O = l.useRef(null), y = (0, r.useStateFromStores)([S.default], () => S.default.getFocusedLayout()), P = y !== x.FocusedActivityLayouts.NO_CHAT, [b, D] = l.useState(null !== (t = c.default.activityPanelHeight) && void 0 !== t ? t : n), U = l.useCallback(e => {
+    (0, S.updateActivityPanelMode)(x.ActivityPanelModes.PIP)
+  }, []), O = l.useRef(null), y = (0, r.useStateFromStores)([g.default], () => g.default.getFocusedLayout()), P = y !== x.FocusedActivityLayouts.NO_CHAT, [b, D] = l.useState(null !== (t = c.default.activityPanelHeight) && void 0 !== t ? t : n), U = l.useCallback(e => {
     u.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })

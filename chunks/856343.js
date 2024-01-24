@@ -70,7 +70,7 @@ function S(e, t) {
   }, [t, I, T]);
   if (null == e) return null;
   let x = S === E.ApplicationStreamPresets.PRESET_DOCUMENTS ? E.ApplicationStreamFPS.FPS_30 : _,
-    N = E.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
+    R = E.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
       let {
         value: t,
         label: n
@@ -83,7 +83,7 @@ function S(e, t) {
         action: () => M(r, g, t, p.AnalyticsObjectTypes.RESOLUTION)
       }, "stream-settings-fps-".concat(t))
     }),
-    R = E.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
+    N = E.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
       let {
         value: t,
         label: n
@@ -99,10 +99,10 @@ function S(e, t) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(l.MenuGroup, {
       label: m.default.Messages.SCREENSHARE_FRAME_RATE,
-      children: N
+      children: R
     }), (0, a.jsx)(l.MenuGroup, {
       label: m.default.Messages.STREAM_RESOLUTION,
-      children: R
+      children: N
     })]
   })
 }

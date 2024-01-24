@@ -32,18 +32,18 @@ var t = E("37983"),
   m = E("49111"),
   G = E("994428"),
   p = E("646718"),
-  y = E("782340"),
-  g = E("286609");
+  g = E("782340"),
+  y = E("286609");
 let B = () => (0, t.jsx)("div", {
-    className: g.editorHeader,
+    className: y.editorHeader,
     children: (0, t.jsxs)("div", {
-      className: g.bannerUpsell,
+      className: y.bannerUpsell,
       children: [(0, t.jsx)(u.default, {
-        className: g.premiumIcon
+        className: y.premiumIcon
       }), (0, t.jsx)(s.Heading, {
         variant: "heading-md/bold",
         color: "always-white",
-        children: y.default.Messages.CLIENT_THEMES_EDITOR_UPSELL_HEADER
+        children: g.default.Messages.CLIENT_THEMES_EDITOR_UPSELL_HEADER
       })]
     })
   }),
@@ -52,18 +52,18 @@ let B = () => (0, t.jsx)("div", {
       markAsDismissed: _
     } = e, E = (0, h.useTrackClientThemePreviewEvent)();
     return (0, t.jsxs)("div", {
-      className: g.editorHeader,
+      className: y.editorHeader,
       children: [(0, t.jsx)(s.Clickable, {
-        className: g.closeCircleButton,
+        className: y.closeCircleButton,
         onClick: () => {
           null != _ && _(G.ContentDismissActionType.DISMISS), E(m.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, U.closeEditor)()
         },
         children: (0, t.jsx)(D.default, {
-          className: g.closeCircle
+          className: y.closeCircle
         })
       }), (0, t.jsx)(s.Heading, {
         variant: "heading-lg/extrabold",
-        children: y.default.Messages.CLIENT_THEMES_EDITOR_HEADER
+        children: g.default.Messages.CLIENT_THEMES_EDITOR_HEADER
       })]
     })
   },
@@ -80,7 +80,7 @@ let B = () => (0, t.jsx)("div", {
     });
     return (0, t.jsx)(L.default, {
       size: s.Button.Sizes.MEDIUM,
-      buttonText: N ? y.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == O ? void 0 : null === (o = O.subscription_trial) || void 0 === o ? void 0 : o.sku_id) === p.PremiumSubscriptionSKUs.TIER_2 ? u : y.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+      buttonText: N ? g.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == O ? void 0 : null === (o = O.subscription_trial) || void 0 === o ? void 0 : o.sku_id) === p.PremiumSubscriptionSKUs.TIER_2 ? u : g.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
       subscriptionTier: p.PremiumSubscriptionSKUs.TIER_2,
       onSubscribeModalClose: e => {
         if (!!e) null == n || n(), null != r && r(G.ContentDismissActionType.PRIMARY), null != S && ((0, P.trackClientThemeUpdated)({
@@ -111,18 +111,18 @@ let B = () => (0, t.jsx)("div", {
       isCoachmark: !0
     }, {
       forceShowCloseButton: !0
-    }, () => y.default.Messages.CLOSE).with({
+    }, () => g.default.Messages.CLOSE).with({
       isPreview: !0
-    }, () => y.default.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW).otherwise(() => y.default.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS);
+    }, () => g.default.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW).otherwise(() => g.default.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS);
     return (0, t.jsxs)("div", {
-      className: g.editorFooter,
+      className: y.editorFooter,
       children: [E && (0, t.jsx)(H, {
         onSubscribeSuccess: () => {
           I(!0)
         },
         markAsDismissed: _
       }), (0, t.jsx)(s.Button, {
-        className: g.footerButton,
+        className: y.footerButton,
         onClick: () => {
           null != _ && _(G.ContentDismissActionType.DISMISS), T(m.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, U.closeEditor)(), !n && S.default.open()
         },
@@ -163,18 +163,18 @@ function b(e) {
   }, [a, T, L]), (0, t.jsx)(n, {
     children: (0, t.jsx)("div", {
       ref: u,
-      className: r(g.themeEditor, S ? g.editorAnimate : null),
+      className: r(y.themeEditor, S ? y.editorAnimate : null),
       children: (0, t.jsxs)(s.HeadingLevel, {
         children: [I ? (0, t.jsx)(B, {}) : (0, t.jsx)(f, {
           markAsDismissed: _
         }), (0, t.jsx)(s.Scroller, {
-          className: g.editorBody,
+          className: y.editorBody,
           children: (0, t.jsxs)(P.default, {
             type: P.ThemeSelectionGroupType.EDITOR,
             children: [!a && (0, t.jsx)(P.default.Basic, {
-              className: g.selectionGroup
+              className: y.selectionGroup
             }), (0, t.jsx)(P.default.Gradient, {
-              className: g.selectionGroup
+              className: y.selectionGroup
             })]
           })
         }), (0, t.jsx)(v, {

@@ -23,7 +23,7 @@ class d extends a.PureComponent {
       useReducedMotion: l
     } = this.props, [s, {
       default: u
-    }] = await Promise.all([e(), n.el("245749").then(n.t.bind(n, "245749", 23))]);
+    }] = await Promise.all([e(), n.el("865981").then(n.t.bind(n, "865981", 23))]);
     null != this.animationRef && (this.animation = u.loadAnimation({
       container: this.animationRef,
       renderer: "svg",

@@ -1,87 +1,87 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   default: function() {
-    return f
+    return S
   }
-}), n("222007");
-var a = n("446674"),
-  i = n("913144");
-let s = !1,
-  l = new Map,
-  r = 0,
-  u = new Set;
+}), E("222007");
+var t = E("446674"),
+  o = E("913144");
+let n = !1,
+  r = new Map,
+  a = 0,
+  i = new Set;
 
-function o(e, t) {
-  l = new Map(l);
-  let n = l.get(e);
-  null != n && l.set(e, {
-    ...n,
-    ...t
+function I(e, _) {
+  r = new Map(r);
+  let E = r.get(e);
+  null != E && r.set(e, {
+    ...E,
+    ..._
   })
 }
 
-function d(e) {
-  let t = new Set(u);
-  t.delete(e), u = t
+function s(e) {
+  let _ = new Set(i);
+  _.delete(e), i = _
 }
-class c extends a.default.Store {
+class T extends t.default.Store {
   get quests() {
-    return l
-  }
-  get isFetchingCurrentQuests() {
-    return s
-  }
-  get lastFetchedCurrentQuests() {
     return r
   }
+  get isFetchingCurrentQuests() {
+    return n
+  }
+  get lastFetchedCurrentQuests() {
+    return a
+  }
   isEnrolling(e) {
-    return u.has(e)
+    return i.has(e)
   }
 }
-c.displayName = "QuestsStore";
-var f = new c(i.default, {
+T.displayName = "QuestsStore";
+var S = new T(o.default, {
   LOGOUT: function() {
-    s = !1, l = new Map, r = 0, u = new Set
+    n = !1, r = new Map, a = 0, i = new Set
   },
   QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
-    r = Date.now(), s = !0
+    a = Date.now(), n = !0
   },
   QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function(e) {
     let {
-      quests: t
+      quests: _
     } = e;
-    for (let e of (s = !1, l = new Map, t)) l.set(e.id, e)
+    for (let e of (n = !1, r = new Map, _)) r.set(e.id, e)
   },
   QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function() {
-    r = 0, s = !1
+    a = 0, n = !1
   },
   QUESTS_SEND_HEARTBEAT_SUCCESS: function(e) {
     let {
-      questId: t,
-      userStatus: n
+      questId: _,
+      userStatus: E
     } = e;
-    o(t, {
-      userStatus: n
+    I(_, {
+      userStatus: E
     })
   },
   QUESTS_ENROLL_BEGIN: function(e) {
     let {
-      questId: t
-    } = e, n = new Set(u);
-    n.add(t), u = n
+      questId: _
+    } = e, E = new Set(i);
+    E.add(_), i = E
   },
   QUESTS_ENROLL_SUCCESS: function(e) {
     let {
-      enrolledQuestUserStatus: t
+      enrolledQuestUserStatus: _
     } = e;
-    o(t.questId, {
-      userStatus: t
-    }), d(t.questId)
+    I(_.questId, {
+      userStatus: _
+    }), s(_.questId)
   },
   QUESTS_ENROLL_FAILURE: function(e) {
     let {
-      questId: t
+      questId: _
     } = e;
-    d(t)
+    s(_)
   }
 })

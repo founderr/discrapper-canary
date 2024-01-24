@@ -19,8 +19,8 @@ var a = n("37983"),
   m = n("567054"),
   E = n("982527"),
   C = n("157186"),
-  g = n("267567"),
-  S = n("666391"),
+  S = n("267567"),
+  g = n("666391"),
   _ = n("10514"),
   I = n("701909"),
   T = n("577357"),
@@ -35,7 +35,7 @@ var a = n("37983"),
   O = n("782340"),
   y = (e, t, n, s) => {
     let r;
-    let y = (0, u.useStateFromStores)([g.default], () => g.default.isLurking(t)),
+    let y = (0, u.useStateFromStores)([S.default], () => S.default.isLurking(t)),
       P = (0, C.useShowMemberVerificationGate)(t),
       b = (0, u.useStateFromStores)([E.default], () => null != t ? E.default.getRequest(t) : null),
       D = (null == b ? void 0 : b.applicationStatus) === m.GuildJoinRequestApplicationStatuses.SUBMITTED,
@@ -82,7 +82,7 @@ var a = n("37983"),
             var r;
             n = null == q ? void 0 : null === (r = q.active_trial) || void 0 === r ? void 0 : r.id
           } else l = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER
-        }(0, S.default)({
+        }(0, g.default)({
           activeSubscription: B,
           analyticsSubscriptionType: L.SubscriptionTypes.GUILD,
           trialId: n,

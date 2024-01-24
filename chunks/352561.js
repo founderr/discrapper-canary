@@ -3,7 +3,7 @@ e.exports = {
   applicationName: "applicationName__77e6b",
   applicationSubText: "applicationSubText_ea8d9c",
   body: "body_c5e2c8",
-  hiddenLibraryApplication: "hiddenLibraryApplication__37ace " + o("405879").card,
+  hiddenLibraryApplication: "hiddenLibraryApplication__37ace " + n("405879").card,
   hiddenLibraryApplicationContent: "hiddenLibraryApplicationContent_d93864",
   hiddenLibraryApplications: "hiddenLibraryApplications_c7fb66",
   hiddenLibraryApplicationsTitle: "hiddenLibraryApplicationsTitle__2fc56",

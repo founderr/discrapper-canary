@@ -7,26 +7,26 @@ n.r(t), n.d(t, {
     return m
   }
 }), n("222007");
-var a = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("95410"),
-  s = n("77078"),
-  l = n("872717"),
+var a = n("95410"),
+  l = n("77078"),
+  s = n("872717"),
   r = n("689988"),
-  u = n("282109"),
-  o = n("640497"),
+  o = n("282109"),
+  u = n("640497"),
   d = n("699668");
 class c extends r.default {
   async handlePostConnectionOpen() {
-    if (i.default.get("turnedOffNewNotifications") || !o.NotificationsExperiment.getCurrentConfig({
+    if (a.default.get("turnedOffNewNotifications") || !u.NotificationsExperiment.getCurrentConfig({
         location: "NotificationMigrationManager"
       }, {
         autoTrackExposure: !1
-      }).enabled || u.default.useNewNotifications) return;
+      }).enabled || o.default.useNewNotifications) return;
     let {
       logExposure: e,
       autoOpen: t
-    } = o.UnreadsEntryPointExperiment.getCurrentConfig({
+    } = u.UnreadsEntryPointExperiment.getCurrentConfig({
       location: "NotificationMigrationManager"
     }, {
       autoTrackExposure: !1
@@ -37,12 +37,12 @@ class c extends r.default {
         guild_noise: r,
         usage: c
       }
-    } = await l.default.get("/users/@me/notification-migration-data2"), f = (0, d.transformUsageData)(c), {
+    } = await s.default.get("/users/@me/notification-migration-data2"), f = (0, d.transformUsageData)(c), {
       default: m
     } = await n.el("923660").then(n.bind(n, "923660"));
-    if (!(0, s.hasAnyModalOpen)()) o.UnreadsEntryPointExperiment.trackExposure({
+    if (!(0, l.hasAnyModalOpen)()) u.UnreadsEntryPointExperiment.trackExposure({
       location: "NotificationMigrationManager"
-    }), t && ((0, d.hasGoodCandidateServers)(r, f) ? (0, s.openModal)(e => (0, a.jsx)(m, {
+    }), t && ((0, d.hasGoodCandidateServers)(r, f) ? (0, l.openModal)(e => (0, i.jsx)(m, {
       ...e,
       dismissable: !1,
       guildPain: r,
@@ -61,14 +61,14 @@ async function f(e) {
   let {
     body: {
       guild_noise: t,
-      usage: i
+      usage: a
     }
-  } = await l.default.get("/users/@me/notification-migration-data2"), r = (0, d.transformUsageData)(i);
-  (0, s.openModalLazy)(async () => {
+  } = await s.default.get("/users/@me/notification-migration-data2"), r = (0, d.transformUsageData)(a);
+  (0, l.openModalLazy)(async () => {
     let {
-      default: i
+      default: a
     } = await n.el("923660").then(n.bind(n, "923660"));
-    return n => (0, a.jsx)(i, {
+    return n => (0, i.jsx)(a, {
       ...n,
       dismissable: e,
       guildPain: t,

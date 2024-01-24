@@ -48,19 +48,19 @@ function m(e) {
   n.useEffect(() => {
     if (null != t && null != E) !s(t, E) && _()
   }, [_, t, E, s]);
-  let H = null == M ? void 0 : M.to({
+  let g = null == M ? void 0 : M.to({
       range: [0, 1],
       output: ["".concat(T, "00"), "".concat(x, "27")]
     }),
-    g = null != d ? {
+    p = null != d ? {
       ...d,
-      backgroundColor: H
+      backgroundColor: g
     } : {
-      backgroundColor: H
+      backgroundColor: g
     };
   return (0, a.jsx)(o.animated.tr, {
     ...m,
-    style: g,
+    style: p,
     children: l
   })
 }

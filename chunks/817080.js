@@ -27,7 +27,7 @@ function E(e) {
     id: E.application.id,
     icon: E.application.icon,
     size: 40
-  }), g = l.useCallback(e => {
+  }), S = l.useCallback(e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -38,9 +38,9 @@ function E(e) {
         integration: E
       })
     })
-  }, [E, s]), S = (0, a.jsxs)("div", {
+  }, [E, s]), g = (0, a.jsxs)("div", {
     className: p.listRow,
-    onContextMenu: g,
+    onContextMenu: S,
     children: [(0, a.jsx)("img", {
       className: i(p.listAvatar, m.icon),
       alt: "",
@@ -61,7 +61,7 @@ function E(e) {
     bot: _
   } = E.application;
   return null == _ ? (0, a.jsx)("li", {
-    children: S
+    children: g
   }) : (0, a.jsx)(o.Popout, {
     preload: () => (0, f.default)(_.id, C),
     renderPopout: e => (0, a.jsx)(h.default, {
@@ -72,7 +72,7 @@ function E(e) {
     position: r.isMobile ? "window_center" : "left",
     children: e => (0, a.jsx)("li", {
       ...e,
-      children: S
+      children: g
     })
   })
 }

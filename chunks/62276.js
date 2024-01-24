@@ -19,8 +19,8 @@ var i = l("37983"),
   m = l("811305"),
   I = l("58608"),
   E = l("659500"),
-  x = l("449008"),
-  p = l("387111"),
+  p = l("449008"),
+  x = l("387111"),
   C = l("159885"),
   T = l("191225"),
   S = l("686569"),
@@ -66,7 +66,7 @@ function R(e) {
   }), Z = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), W = (0, r.useStateFromStoresArray)([T.default, f.default], () => T.default.getUsersHavePlayedByApp(t.application.id).filter(e => {
     var t;
     return (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) !== e
-  }).map(e => f.default.getUser(e)).filter(x.isNotNullish), [t.application.id]), z = null != W[0] ? (0, C.truncateText)(p.default.getName(null, null, W[0]), 25) : null, K = null;
+  }).map(e => f.default.getUser(e)).filter(p.isNotNullish), [t.application.id]), z = null != W[0] ? (0, C.truncateText)(x.default.getName(null, null, W[0]), 25) : null, K = null;
   null != z && W.length > 1 ? K = y.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
     username1: z,
     extras: W.length - 1

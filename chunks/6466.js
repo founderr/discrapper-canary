@@ -97,20 +97,20 @@ function _(e) {
       onChange: i,
       selected: t
     }, e.key || e.value)
-  }), p = (0, c.useUID)(), S = (0, o.default)({
+  }), p = (0, c.useUID)(), m = (0, o.default)({
     id: p,
     isEnabled: !0,
     wrap: !0,
     async scrollToStart() {},
     async scrollToEnd() {}
   }), {
-    ref: m,
+    ref: S,
     ...M
-  } = S.containerProps;
-  return (0, u.useFocusLock)(m), (0, l.jsx)(o.ListNavigatorProvider, {
-    navigator: S,
+  } = m.containerProps;
+  return (0, u.useFocusLock)(S), (0, l.jsx)(o.ListNavigatorProvider, {
+    navigator: m,
     children: (0, l.jsx)("div", {
-      ref: m,
+      ref: S,
       className: _,
       ...M,
       role: "listbox",

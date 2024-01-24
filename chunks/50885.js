@@ -7,7 +7,7 @@ E.r(_), E.d(_, {
     return i
   },
   default: function() {
-    return y
+    return g
   }
 }), E("222007"), E("70102"), E("511434"), E("313619"), E("654714"), E("287168"), E("956660"), E("424973");
 var t, o, n, r, a, i, I, s, T = E("627445"),
@@ -64,7 +64,7 @@ function p(e) {
     fullscreenType: null !== (i = e.fullscreenType) && void 0 !== i ? i : R.RunningProcessFullscreenType.UNKNOWN
   }
 }(I = a || (a = {}))[I.Camera = 0] = "Camera", I[I.Microphone = 1] = "Microphone", I[I.Photo = 2] = "Photo", I[I.InputMonitoring = 3] = "InputMonitoring", I[I.ScreenRecording = 4] = "ScreenRecording", (s = i || (i = {})).VIDEO = "VIDEO", s.MUTE = "MUTE", s.DEAFEN = "DEAFEN", s.DISCONNECT = "DISCONNECT";
-var y = {
+var g = {
   requireModule: e => C.nativeModules.requireModule(e),
   ensureModule: e => l.isPlatformEmbedded ? __OVERLAY__ && h.has(e) ? Promise.resolve() : C.nativeModules.ensureModule(e) : Promise.reject(Error("not embedded")),
   get canBootstrapNewUpdater() {

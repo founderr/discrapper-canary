@@ -22,10 +22,10 @@ var a = l("37983"),
   T = l("913132"),
   x = l("553275"),
   _ = l("151123"),
-  H = l("337092"),
-  g = l("850646"),
-  A = l("894282"),
-  p = l("474507");
+  g = l("337092"),
+  p = l("850646"),
+  H = l("894282"),
+  A = l("474507");
 let S = {
     transform: "translate3d(15%, 0, 0)",
     opacity: .3
@@ -43,7 +43,7 @@ let S = {
     friction: 24,
     tension: 260
   },
-  v = e => e.shiftKey || e.key === A.KeyboardKeysUpdated.SHIFT,
+  v = e => e.shiftKey || e.key === H.KeyboardKeysUpdated.SHIFT,
   b = e => e.metaKey || e.ctrlKey,
   j = n.memo(function(e) {
     let {
@@ -54,10 +54,10 @@ let S = {
       compact: d,
       onSelectRow: c,
       onResetForNewMembers: f
-    } = e, E = (0, u.default)([C.default], () => C.default.useReducedMotion), A = (0, m.useIsWindowFocused)(), [j, R] = n.useState(!1), [D, O] = n.useState(!1);
+    } = e, E = (0, u.default)([C.default], () => C.default.useReducedMotion), H = (0, m.useIsWindowFocused)(), [j, R] = n.useState(!1), [D, O] = n.useState(!1);
     n.useEffect(() => {
-      !A && (R(!1), O(!1))
-    }, [A]), n.useLayoutEffect(() => {
+      !H && (R(!1), O(!1))
+    }, [H]), n.useLayoutEffect(() => {
       let e = e => {
           v(e) && R(!0), b(e) && O(!0)
         },
@@ -85,16 +85,16 @@ let S = {
         config: I
       });
     return (0, a.jsxs)("table", {
-      className: i(p.table, s),
+      className: i(A.table, s),
       children: [(0, a.jsx)(_.default, {
         guildId: l.id,
         currentPagedMembers: t
       }), (0, a.jsx)("tbody", {
         children: o === x.SearchState.SUCCESS_FULL || o === x.SearchState.LOADING ? (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(g.default, {
+          children: [(0, a.jsx)(p.default, {
             guild: l,
             onSubmit: f
-          }), B((e, t) => (0, a.jsx)(H.default, {
+          }), B((e, t) => (0, a.jsx)(g.default, {
             userId: t,
             guildId: l.id,
             style: e,
@@ -134,10 +134,10 @@ var R = function(e) {
     {
       analyticsLocations: _
     } = (0, c.default)(),
-    H = null !== (l = null == _ ? void 0 : _[0]) && void 0 !== l ? l : null;
+    g = null !== (l = null == _ ? void 0 : _[0]) && void 0 !== l ? l : null;
   return n.useEffect(() => {
-    (0, E.trackMembersPageViewed)(s.id, H)
-  }, [s.id, H]), (0, a.jsx)(j, {
+    (0, E.trackMembersPageViewed)(s.id, g)
+  }, [s.id, g]), (0, a.jsx)(j, {
     members: x,
     guild: s,
     className: i,

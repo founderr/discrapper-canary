@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return N
   }
 }), n("70102"), n("222007");
 var a = n("37983"),
@@ -102,9 +102,9 @@ function x(e) {
     })
   })
 }
-let N = [];
+let R = [];
 
-function R(e) {
+function N(e) {
   let {
     channelId: t,
     guildId: s,
@@ -113,14 +113,14 @@ function R(e) {
     compact: m = !1,
     disableInteraction: g = !1,
     maxVisibleUsers: v = 3
-  } = e, [I, R] = r.useState(!1), L = r.useRef(new d.DelayedCall(150, () => R(!1))), O = (0, o.useStateFromStoresArray)([p.default, E.default], () => {
+  } = e, [I, N] = r.useState(!1), L = r.useRef(new d.DelayedCall(150, () => N(!1))), O = (0, o.useStateFromStoresArray)([p.default, E.default], () => {
     if (i.type === _.ParticipantTypes.STREAM) {
       let e = p.default.getViewerIds(i.id);
-      return e.length > 0 ? e.map(e => E.default.getUser(e)).filter(S.isNotNullish) : N
+      return e.length > 0 ? e.map(e => E.default.getUser(e)).filter(S.isNotNullish) : R
     }
-    return i.type === _.ParticipantTypes.ACTIVITY ? i.participants.size > 0 ? Array.from(i.participants).map(e => E.default.getUser(e)).filter(S.isNotNullish) : N : N
+    return i.type === _.ParticipantTypes.ACTIVITY ? i.participants.size > 0 ? Array.from(i.participants).map(e => E.default.getUser(e)).filter(S.isNotNullish) : R : R
   }, [i]), y = r.useCallback(() => {
-    L.current.cancel(), R(!0)
+    L.current.cancel(), N(!0)
   }, []), P = r.useCallback(() => {
     L.current.delay()
   }, []), D = r.useCallback((e, t) => {
