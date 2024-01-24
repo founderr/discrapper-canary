@@ -20,9 +20,9 @@ var s = a("37983"),
     let {
       channelId: t,
       messageId: T,
-      transitionState: I,
-      onClose: C
-    } = e, R = (0, d.default)(), A = l.useCallback(e => {
+      transitionState: C,
+      onClose: R
+    } = e, A = (0, d.default)(), I = l.useCallback(e => {
       (0, c.trackMediaRedactionAction)({
         action: e,
         channelId: t,
@@ -36,7 +36,7 @@ var s = a("37983"),
         messageId: T
       })
     }, [t, T]), (0, s.jsxs)(i.ModalRoot, {
-      transitionState: I,
+      transitionState: C,
       "aria-label": E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_MODAL_LABEL,
       children: [(0, s.jsx)(i.ModalHeader, {
         separator: !1,
@@ -55,13 +55,13 @@ var s = a("37983"),
         }), (0, s.jsx)(i.Text, {
           variant: "text-md/normal",
           color: "header-secondary",
-          children: R ? E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_ADULT : E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_TEEN
+          children: A ? E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_ADULT : E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_TEEN
         }), (0, s.jsxs)("div", {
           className: _.buttonContainer,
-          children: [R ? (0, s.jsx)(i.Button, {
+          children: [A ? (0, s.jsx)(i.Button, {
             color: i.Button.Colors.BRAND,
             onClick: function() {
-              A(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), n.default.open(u.UserSettingsSections.PRIVACY_AND_SAFETY), C()
+              I(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), n.default.open(u.UserSettingsSections.PRIVACY_AND_SAFETY), R()
             },
             fullWidth: !0,
             children: E.default.Messages.OBSCURED_CONTENT_UPDATE_SETTINGS_CTA
@@ -75,7 +75,7 @@ var s = a("37983"),
           }), (0, s.jsx)(i.Button, {
             color: i.Button.Colors.PRIMARY,
             onClick: function() {
-              C(), A(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS)
+              R(), I(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS)
             },
             fullWidth: !0,
             children: E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DISMISS
@@ -84,7 +84,7 @@ var s = a("37983"),
             color: "header-secondary",
             children: E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE.format({
               handleFalsePositiveHook: () => {
-                C(), A(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE), (0, i.openModalLazy)(async () => {
+                R(), I(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE), (0, i.openModalLazy)(async () => {
                   let {
                     default: e
                   } = await a("723653");

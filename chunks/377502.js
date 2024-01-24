@@ -10,8 +10,8 @@ var n = a("37983"),
   i = a.n(s),
   r = a("627445"),
   o = a.n(r),
-  u = a("917351"),
-  d = a.n(u),
+  d = a("917351"),
+  u = a.n(d),
   c = a("446674"),
   m = a("411723"),
   h = a("42203"),
@@ -21,8 +21,8 @@ var n = a("37983"),
   _ = a("719347"),
   x = a("49111"),
   p = a("655793");
-let I = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
-  M = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 4) / 2),
+let M = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
+  I = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 4) / 2),
   E = Math.round((_.MEDIA_MOSAIC_MAX_HEIGHT - 4) / 2),
   v = Math.round(2 * (_.MEDIA_MOSAIC_MAX_WIDTH - 4) / 3),
   C = v / 2,
@@ -103,8 +103,8 @@ let I = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
         children: (0, n.jsx)(D, {
           props: e,
           attachmentKind: a(e.attachment.id),
-          maxWidth: M,
-          maxHeight: M
+          maxWidth: I,
+          maxHeight: I
         })
       }, e.attachment.id))
     })
@@ -150,7 +150,7 @@ let I = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
       children: t.map(e => (0, n.jsx)(D, {
         props: e,
         attachmentKind: a(e.attachment.id),
-        maxWidth: M,
+        maxWidth: I,
         maxHeight: E
       }, e.attachment.id))
     })
@@ -165,8 +165,8 @@ let I = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
       children: t.map(e => (0, n.jsx)(D, {
         props: e,
         attachmentKind: a(e.attachment.id),
-        maxWidth: I,
-        maxHeight: I
+        maxWidth: M,
+        maxHeight: M
       }, e.attachment.id))
     })
   },
@@ -187,7 +187,7 @@ let I = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
       useFullWidth: i = !0,
       isSingleItem: r = !1,
       footer: o
-    } = e, u = {
+    } = e, d = {
       ...t,
       ..."IMAGE" === a && b(t.className),
       ..."VIDEO" === a && L(t.className),
@@ -200,7 +200,7 @@ let I = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
     return (0, n.jsx)(g.GIFAccessoryContext.Provider, {
       value: t.gifFavoriteButton,
       children: (0, n.jsx)(A.default, {
-        ...u,
+        ...d,
         footer: o
       })
     })
@@ -214,10 +214,10 @@ var w = e => {
   }), i = l.useMemo(() => new Map(t.map(e => [e.attachment.id, (0, A.getAttachmentKind)(e.attachment, e.inlineMedia)])), [t]), r = l.useCallback(e => {
     var t;
     return null !== (t = i.get(e)) && void 0 !== t ? t : "INVALID"
-  }, [i]), [o, u] = l.useMemo(() => d.partition(t, e => {
+  }, [i]), [o, d] = l.useMemo(() => u.partition(t, e => {
     var t;
     return (0, f.hasFlag)(null !== (t = e.attachment.flags) && void 0 !== t ? t : 0, x.MessageAttachmentFlags.IS_CLIP)
-  }), [t]), [g, _] = l.useMemo(() => d.partition(u, e => (0, A.isMediaAttachment)(r(e.attachment.id))), [u, r]);
+  }), [t]), [g, _] = l.useMemo(() => u.partition(d, e => (0, A.isMediaAttachment)(r(e.attachment.id))), [d, r]);
   return (0, n.jsxs)(n.Fragment, {
     children: [g.length > 0 && (0, n.jsx)("div", {
       className: p.mediaAttachmentsContainer,

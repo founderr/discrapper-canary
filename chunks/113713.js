@@ -26,7 +26,7 @@ function m(e) {
       channelId: t.id,
       command: n,
       section: u,
-      location: s.ApplicationCommandTriggerLocations.APP_LAUNCHER_DOCK
+      location: s.ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME
     }), d.ComponentDispatch.dispatch(f.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: t.id
     })
