@@ -103,7 +103,7 @@ function d(t) {
       let {
         filename: e
       } = t;
-      return (0, s.isImageFile)(e)
+      return (0, s.isImageFile)(e) || (0, s.isVideoFile)(e)
     }), t.flagged_content = (0, r.isFlaggedContentEmpty)(e) ? [] : [e]
   }
 }
