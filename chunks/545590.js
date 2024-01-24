@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return S
+    return _
   }
 });
 var n = l("37983");
@@ -19,16 +19,16 @@ var a = l("446674"),
   p = l("777003"),
   T = l("49111"),
   E = l("782340"),
-  _ = l("431375");
+  S = l("431375");
 
-function S(e) {
+function _(e) {
   let {
     user: t,
     guildId: l
-  } = e, S = (0, a.useStateFromStores)([c.default], () => {
+  } = e, _ = (0, a.useStateFromStores)([c.default], () => {
     var e;
     return null === (e = c.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
-  }), h = null != S && (0, d.canInstallApplication)(S.id, S.customInstallUrl, S.installParams), {
+  }), h = null != _ && (0, d.canInstallApplication)(_.id, _.customInstallUrl, _.installParams), {
     botUpgradeable: I,
     subscriptionGroupListing: A
   } = (0, f.default)({
@@ -45,15 +45,15 @@ function S(e) {
   });
   return h || I ? (0, n.jsx)(p.default, {
     children: (0, n.jsxs)("div", {
-      className: _.buttonsContainer,
+      className: S.buttonsContainer,
       children: [(0, n.jsx)(m.default, {
-        application: S,
-        className: _.button
+        application: _,
+        className: S.button
       }), I && (0, n.jsx)(i.default, {
         onClick: v,
-        className: _.button,
+        className: S.button,
         children: (0, n.jsxs)("div", {
-          className: _.botUpgradeButtonContent,
+          className: S.botUpgradeButtonContent,
           children: [(0, n.jsx)(u.default, {
             width: 16,
             height: 16

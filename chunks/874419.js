@@ -18,10 +18,10 @@ var n = l("37983"),
   p = l("994428"),
   T = l("397336"),
   E = l("782340"),
-  _ = l("393036");
-let S = i.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
+  S = l("393036");
+let _ = i.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
   h = e => {
-    (0, u.markDismissibleContentAsDismissed)(S, {
+    (0, u.markDismissibleContentAsDismissed)(_, {
       dismissAction: e,
       forceTrack: !0
     })
@@ -36,9 +36,9 @@ var I = e => {
   return a.useEffect(() => u ? () => h(p.ContentDismissActionType.AUTO) : () => (0, c.handleProfileAccessibilityTooltipViewed)(), [u]), (0, n.jsx)(d.default, {
     markAsDismissed: h,
     header: E.default.Messages.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP_TITLE,
-    headerClassName: _.header,
+    headerClassName: S.header,
     content: (0, n.jsx)("div", {
-      className: _.content,
+      className: S.content,
       children: E.default.Messages.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP_DESCRIPTION
     }),
     buttonCTA: E.default.Messages.TAKE_ME_THERE,

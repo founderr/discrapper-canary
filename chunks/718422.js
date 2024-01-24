@@ -24,8 +24,8 @@ function T(e) {
     type: l,
     content: T,
     stickers: E,
-    uploads: _,
-    channel: S,
+    uploads: S,
+    channel: _,
     restrictMentions: h = !0,
     respectCooldown: I = !0
   } = e, A = f.default.canUseIncreasedMessageLength(u.default.getCurrentUser());
@@ -35,15 +35,15 @@ function T(e) {
       openWarningPopout: f,
       type: T,
       content: E,
-      stickers: _,
-      uploads: S,
+      stickers: S,
+      uploads: _,
       channel: h,
       restrictMentions: I,
       respectCooldown: A,
       userCanUsePremiumMessageLength: g,
       resolve: v
     } = e;
-    if (0 === E.length && !(null === (t = T.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == _ || 0 === _.length) && (null == S || 0 === S.length)) {
+    if (0 === E.length && !(null === (t = T.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == S || 0 === S.length) && (null == _ || 0 === _.length)) {
       v({
         valid: !1,
         failureReason: m.MessageRestrictionTypes.EMPTY_MESSAGE
@@ -133,8 +133,8 @@ function T(e) {
     type: l,
     content: T,
     stickers: E,
-    uploads: _,
-    channel: S,
+    uploads: S,
+    channel: _,
     restrictMentions: h,
     respectCooldown: I,
     userCanUsePremiumMessageLength: A,

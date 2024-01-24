@@ -24,9 +24,9 @@ var n = l("884691"),
   p = l("486150"),
   T = l("555759"),
   E = l("450484");
-let _ = 30 * o.default.Millis.SECOND;
+let S = 30 * o.default.Millis.SECOND;
 
-function S(e) {
+function _(e) {
   let {
     currentUserTrackId: t,
     syncingWithUser: l,
@@ -36,7 +36,7 @@ function S(e) {
     r && (t !== d || l || a) && (o(!1), u.stop())
   }, [t, d, l, a, r, u]);
   let c = n.useCallback(() => {
-      o(!0), u.start(_, () => o(!1))
+      o(!0), u.start(S, () => o(!1))
     }, [u]),
     f = n.useCallback(() => {
       o(!1), u.stop()
@@ -63,7 +63,7 @@ function I(e, t, l) {
       loading: o,
       startLoading: u,
       clearLoading: d
-    } = S(a),
+    } = _(a),
     m = n.useCallback(() => {
       u(), (0, T.default)(a, E.SpotifyActionTypes.USER_ACTIVITY_PLAY, l).catch(d)
     }, [a, l, u, d]);
@@ -88,11 +88,11 @@ function A(e, t, l, a) {
     {
       loading: m,
       startLoading: T,
-      clearLoading: _
-    } = S(i),
+      clearLoading: S
+    } = _(i),
     I = n.useCallback(() => {
-      T(), (0, p.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, l).catch(_)
-    }, [i, l, T, _]);
+      T(), (0, p.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, l).catch(S)
+    }, [i, l, T, S]);
   return {
     label: (0, c.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC),
     tooltip: (0, f.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, s),
@@ -115,7 +115,7 @@ function g(e, t, l) {
       loading: u,
       startLoading: d,
       clearLoading: m
-    } = S(a),
+    } = _(a),
     T = n.useCallback(() => {
       d(), (0, p.default)(a, E.SpotifyActionTypes.EMBED_SYNC, l).catch(m)
     }, [a, l, d, m]);

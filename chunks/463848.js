@@ -21,8 +21,8 @@ var n = l("37983"),
   p = l("42203"),
   T = l("305961"),
   E = l("957255"),
-  _ = l("800762"),
-  S = l("313873"),
+  S = l("800762"),
+  _ = l("313873"),
   h = l("599110"),
   I = l("474293"),
   A = l("49111"),
@@ -56,7 +56,7 @@ function v(e) {
     isEmbedded: m
   })
 }
-let C = S.default.Types;
+let C = _.default.Types;
 var N = function(e) {
   let {
     activity: t,
@@ -65,17 +65,17 @@ var N = function(e) {
     showActions: o = !0,
     hideHeader: u = !1,
     ...I
-  } = e, g = (0, s.useStateFromStores)([_.default, p.default], () => {
+  } = e, g = (0, s.useStateFromStores)([S.default, p.default], () => {
     var e;
-    return p.default.getChannel(null === (e = _.default.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId)
+    return p.default.getChannel(null === (e = S.default.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId)
   }), {
     enableHangStatus: C
   } = c.HangStatusExperiment.useExperiment({
     guildId: null == g ? void 0 : g.guild_id,
     location: "UserActivityContainer"
-  }), N = (0, s.useStateFromStores)([m.default], () => i ? m.default.getAnyStreamForUser(l.id) : null), y = C && E.default.can(A.Permissions.CONNECT, g), O = (null == t ? void 0 : t.type) === A.ActivityTypes.HANG_STATUS && y ? g : null, M = (0, s.useStateFromStores)([T.default, _.default, p.default], () => {
+  }), N = (0, s.useStateFromStores)([m.default], () => i ? m.default.getAnyStreamForUser(l.id) : null), y = C && E.default.can(A.Permissions.CONNECT, g), O = (null == t ? void 0 : t.type) === A.ActivityTypes.HANG_STATUS && y ? g : null, M = (0, s.useStateFromStores)([T.default, S.default, p.default], () => {
     var e, n;
-    return (0, r.default)(t, A.ActivityFlags.EMBEDDED) ? T.default.getGuild(null === (e = p.default.getChannel(null === (n = _.default.getVoiceStateForSession(l.id, null == t ? void 0 : t.session_id)) || void 0 === n ? void 0 : n.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != O ? T.default.getGuild(O.getGuildId()) : null
+    return (0, r.default)(t, A.ActivityFlags.EMBEDDED) ? T.default.getGuild(null === (e = p.default.getChannel(null === (n = S.default.getVoiceStateForSession(l.id, null == t ? void 0 : t.session_id)) || void 0 === n ? void 0 : n.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != O ? T.default.getGuild(O.getGuildId()) : null
   }), x = (0, s.useStateFromStores)([T.default], () => null != N ? T.default.getGuild(N.guildId) : null), R = (0, s.useStateFromStores)([d.default], () => {
     if (null != t) return null != t.application_id ? d.default.getApplication(t.application_id) : d.default.getApplicationByName(t.name);
     return null
@@ -86,7 +86,7 @@ var N = function(e) {
       guild_id: null == O ? void 0 : O.guild_id,
       channel_id: null == O ? void 0 : O.id
     })
-  }, [null == t ? void 0 : t.type, y, O]), (null == t ? void 0 : t.type) !== A.ActivityTypes.HANG_STATUS || y) ? (0, n.jsx)(S.default, {
+  }, [null == t ? void 0 : t.type, y, O]), (null == t ? void 0 : t.type) !== A.ActivityTypes.HANG_STATUS || y) ? (0, n.jsx)(_.default, {
     ...I,
     activity: t,
     user: l,

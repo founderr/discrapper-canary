@@ -19,8 +19,8 @@ var n, a, s = l("37983"),
   p = l("841098"),
   T = l("376556"),
   E = l("609030"),
-  _ = l("309570"),
-  S = l("985677"),
+  S = l("309570"),
+  _ = l("985677"),
   h = l("429928"),
   I = l("36539"),
   A = l("502651"),
@@ -278,7 +278,7 @@ class W extends i.PureComponent {
       application: n,
       activityGuild: a
     } = this.props;
-    return null != e.assets || (0, _.default)(e) || e.type !== F.ActivityTypes.PLAYING || "ActivityFeed" === l || t.bot ? null : null == n && null != a ? (0, s.jsx)("div", {
+    return null != e.assets || (0, S.default)(e) || e.type !== F.ActivityTypes.PLAYING || "ActivityFeed" === l || t.bot ? null : null == n && null != a ? (0, s.jsx)("div", {
       className: o(k.gameIcon, k.screenshareIcon)
     }) : (0, s.jsx)(P.default, {
       className: k.gameIcon,
@@ -297,7 +297,7 @@ class W extends i.PureComponent {
       type: i
     } = e;
     if (i === F.ActivityTypes.CUSTOM_STATUS) return null;
-    let r = (0, S.default)(e),
+    let r = (0, _.default)(e),
       o = e.name,
       u = o;
     return (i === F.ActivityTypes.HANG_STATUS ? u = (0, v.getHangStatusText)(e) : r && null != l ? u = (0, s.jsx)("span", {
@@ -328,7 +328,7 @@ class W extends i.PureComponent {
     }) : null, t = null != a ? () => {
       (0, N.transitionToGuild)(a.id)
     } : void 0;
-    else if (!(0, S.default)(e)) {
+    else if (!(0, _.default)(e)) {
       if (r = i = n, (0, h.default)(e) && null != n) i = G.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
         artists: r,
         artistsHook: (t, l) => (0, s.jsx)(j.default, {
@@ -360,11 +360,11 @@ class W extends i.PureComponent {
     let {
       activityGuild: t
     } = this.props;
-    if (!(0, S.default)(e) || (0, h.default)(e)) return null;
+    if (!(0, _.default)(e) || (0, h.default)(e)) return null;
     let {
       timestamps: l
     } = e;
-    return null == l ? null : (0, _.default)(e) ? (0, s.jsx)(V, {
+    return null == l ? null : (0, S.default)(e) ? (0, s.jsx)(V, {
       timestamps: l
     }) : (0, s.jsx)(D.default, {
       start: l.start,
@@ -398,7 +398,7 @@ class W extends i.PureComponent {
       party: r,
       assets: o
     } = e, u = i, d = u;
-    return (!(0, S.default)(e) && (d = u = null == o ? void 0 : o.large_text, (0, h.default)(e) && null != u && (u = G.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
+    return (!(0, _.default)(e) && (d = u = null == o ? void 0 : o.large_text, (0, h.default)(e) && null != u && (u = G.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
       album: d,
       albumHook: (t, l) => null != e.sync_id && null != d ? (0, s.jsx)(f.Anchor, {
         className: k.bodyLink,
@@ -443,18 +443,18 @@ class W extends i.PureComponent {
       p = this.renderDetails(i),
       T = this.renderState(i, a),
       E = this.renderTimePlayed(i),
-      _ = null != l ? l() : null,
-      S = this.renderTimeBar(i),
-      h = ![e, m, p, T, E, S, _].some(e => null != e);
+      S = null != l ? l() : null,
+      _ = this.renderTimeBar(i),
+      h = ![e, m, p, T, E, _, S].some(e => null != e);
     return (0, s.jsxs)("div", {
       className: o(this.getTypeClass("activity"), n),
       children: [this.renderHeader(h), (0, s.jsxs)("div", {
         className: f ? k.bodyAlignCenter : k.bodyNormal,
         children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, s.jsxs)(L.default.Child, {
           className: o((0, x.getClass)(k, "content", f ? "GameImage" : null != e ? "Images" : "NoImages", t)),
-          children: [m, p, T, E, r || c ? null : S, d ? _ : null]
-        }), u ? _ : null]
-      }), r ? S : null, r || c ? _ : null, (0, s.jsx)(H, {
+          children: [m, p, T, E, r || c ? null : _, d ? S : null]
+        }), u ? S : null]
+      }), r ? _ : null, r || c ? S : null, (0, s.jsx)(H, {
         activity: i
       })]
     })

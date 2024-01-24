@@ -18,8 +18,8 @@ var n = l("37983"),
   p = l("425190"),
   T = l("701909"),
   E = l("49111"),
-  _ = l("782340"),
-  S = l("474963"),
+  S = l("782340"),
+  _ = l("474963"),
   h = l("632215");
 
 function I(e) {
@@ -27,7 +27,7 @@ function I(e) {
     className: t,
     lineClamp: l = 6,
     isExpanded: s = !1
-  } = e, [I, A] = a.useState(s), g = a.useMemo(() => (0, d.parseBioReact)(_.default.Messages.MORE_INFO_CLYDE_LEGAL), []);
+  } = e, [I, A] = a.useState(s), g = a.useMemo(() => (0, d.parseBioReact)(S.default.Messages.MORE_INFO_CLYDE_LEGAL), []);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(o.Collapsible, {
       isExpanded: I,
@@ -45,7 +45,7 @@ function I(e) {
           })
         })
       }),
-      className: S.collapseable,
+      className: _.collapseable,
       children: e => {
         let {
           onClick: t
@@ -55,28 +55,28 @@ function I(e) {
             A(!I), t(e)
           },
           children: (0, n.jsxs)("div", {
-            className: S.header,
+            className: _.header,
             children: [(0, n.jsx)(o.Heading, {
               variant: "eyebrow",
-              className: S.userInfoSectionHeader,
-              children: _.default.Messages.MORE_INFO
+              className: _.userInfoSectionHeader,
+              children: S.default.Messages.MORE_INFO
             }), I ? (0, n.jsx)(p.default, {
-              className: S.arrow
+              className: _.arrow
             }) : (0, n.jsx)(m.default, {
-              className: S.arrow
+              className: _.arrow
             })]
           })
         })
       }
     }), (0, n.jsxs)(o.Text, {
-      className: S.helpCenterCta,
+      className: _.helpCenterCta,
       variant: "text-sm/medium",
       children: [(0, n.jsx)(r.LinkIcon, {
         color: "var(--text-link)",
-        className: S.linkIcon
+        className: _.linkIcon
       }), (0, n.jsx)(c.default, {
         onClick: () => (0, u.default)(T.default.getArticleURL(E.HelpdeskArticles.CLYDE_AI), !0),
-        children: _.default.Messages.MORE_INFO_HELP_CENTER
+        children: S.default.Messages.MORE_INFO_HELP_CENTER
       })]
     })]
   })

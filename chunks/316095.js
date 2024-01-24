@@ -18,8 +18,8 @@ var n = l("37983"),
   p = l("713135"),
   T = l("824140"),
   E = l("401642"),
-  _ = l("777003"),
-  S = l("590456"),
+  S = l("777003"),
+  _ = l("590456"),
   h = l("49111"),
   I = l("782340"),
   A = l("843482"),
@@ -75,7 +75,7 @@ function v(e) {
             userId: C,
             guildId: null == y ? void 0 : y.id,
             channelId: N,
-            section: S.UserProfileSections.USER_INFO_CONNECTIONS,
+            section: _.UserProfileSections.USER_INFO_CONNECTIONS,
             analyticsLocation: {
               section: h.AnalyticsSections.PROFILE_POPOUT
             }
@@ -105,7 +105,7 @@ function v(e) {
         locale: F
       }, e.application.id))
     })]
-  })), null == s && null == v) ? null : (0, n.jsxs)(_.default, {
+  })), null == s && null == v) ? null : (0, n.jsxs)(S.default, {
     children: [v, s]
   })
 }

@@ -1,31 +1,31 @@
 "use strict";
 s.r(t), s.d(t, {
   RecordModes: function() {
-    return n
+    return a
   },
   default: function() {
-    return T
+    return I
   }
 }), s("222007");
-var n, l, i = s("37983"),
-  a = s("884691"),
-  o = s("414456"),
-  r = s.n(o),
+var a, n, l = s("37983"),
+  i = s("884691"),
+  r = s("414456"),
+  o = s.n(r),
   d = s("800648"),
   u = s.n(d),
   c = s("917351"),
-  h = s.n(c),
-  m = s("77078"),
-  p = s("13798"),
-  f = s("145131"),
-  g = s("782340"),
-  E = s("523192");
-(l = n || (n = {})).DEFAULT = "DEFAULT", l.RECORDING = "RECORDING";
-let _ = {
-  DEFAULT: E.default,
-  RECORDING: E.recording
+  S = s.n(c),
+  E = s("77078"),
+  f = s("13798"),
+  T = s("145131"),
+  m = s("782340"),
+  _ = s("523192");
+(n = a || (a = {})).DEFAULT = "DEFAULT", n.RECORDING = "RECORDING";
+let g = {
+  DEFAULT: _.default,
+  RECORDING: _.recording
 };
-class R extends a.PureComponent {
+class h extends i.PureComponent {
   componentWillUnmount() {
     null != this._unregisterNativeRecorder && this._unregisterNativeRecorder()
   }
@@ -37,66 +37,66 @@ class R extends a.PureComponent {
     } = e;
     if (s === t) return;
     let {
-      _inputRef: n
+      _inputRef: a
     } = this;
-    if (null == n.current) return;
+    if (null == a.current) return;
     let {
-      activeElement: l
+      activeElement: n
     } = document;
-    "DEFAULT" === t && n.current === l && n.current.blur(), "RECORDING" === t && n.current !== l && n.current.focus()
+    "DEFAULT" === t && a.current === n && a.current.blur(), "RECORDING" === t && a.current !== n && a.current.focus()
   }
   render() {
     let e;
     let {
       mode: t,
       value: s,
-      disabled: n
-    } = this.props, l = (0, p.toString)(s, !0);
-    e = "RECORDING" === t ? g.default.Messages.SHORTCUT_RECORDER_BUTTON_RECORDING : 0 === s.length ? g.default.Messages.SHORTCUT_RECORDER_BUTTON : g.default.Messages.SHORTCUT_RECORDER_BUTTON_EDIT;
-    let a = "DEFAULT" === t && s.length > 0;
-    return (0, i.jsx)(m.FocusRing, {
+      disabled: a
+    } = this.props, n = (0, f.toString)(s, !0);
+    e = "RECORDING" === t ? m.default.Messages.SHORTCUT_RECORDER_BUTTON_RECORDING : 0 === s.length ? m.default.Messages.SHORTCUT_RECORDER_BUTTON : m.default.Messages.SHORTCUT_RECORDER_BUTTON_EDIT;
+    let i = "DEFAULT" === t && s.length > 0;
+    return (0, l.jsx)(E.FocusRing, {
       focusTarget: this._inputRef,
       ringTarget: this._containerRef,
-      children: (0, i.jsx)("div", {
+      children: (0, l.jsx)("div", {
         onClick: this.handleClick,
         onMouseDown: this.handleMouseDown,
         ref: this._containerRef,
-        className: r(E.container, _[t], {
-          [E.hasValue]: a,
-          [E.disabled]: n
+        className: o(_.container, g[t], {
+          [_.hasValue]: i,
+          [_.disabled]: a
         }),
-        children: (0, i.jsxs)(f.default, {
-          className: E.layout,
-          children: [(0, i.jsx)(f.default.Child, {
-            className: E.input,
-            children: (0, i.jsx)("input", {
+        children: (0, l.jsxs)(T.default, {
+          className: _.layout,
+          children: [(0, l.jsx)(T.default.Child, {
+            className: _.input,
+            children: (0, l.jsx)("input", {
               id: this._inputId,
-              placeholder: g.default.Messages.SHORTCUT_RECORDER_NO_BIND,
+              placeholder: m.default.Messages.SHORTCUT_RECORDER_NO_BIND,
               type: "text",
               ref: this.setInputRef,
               readOnly: !0,
-              value: l,
-              disabled: "RECORDING" !== this.props.mode || n
+              value: n,
+              disabled: "RECORDING" !== this.props.mode || a
             })
-          }), (0, i.jsx)(f.default, {
+          }), (0, l.jsx)(T.default, {
             shrink: 1,
             grow: 0,
             style: {
               margin: 0
             },
-            children: (0, i.jsxs)(m.Button, {
-              className: E.button,
-              disabled: n,
+            children: (0, l.jsxs)(E.Button, {
+              className: _.button,
+              disabled: a,
               onClick: e => {
                 e.stopPropagation(), e.preventDefault(), this.handleClick(e)
               },
-              size: m.Button.Sizes.MIN,
-              color: m.ButtonColors.PRIMARY,
-              children: [(0, i.jsx)("span", {
-                className: E.text,
+              size: E.Button.Sizes.MIN,
+              color: E.ButtonColors.PRIMARY,
+              children: [(0, l.jsx)("span", {
+                className: _.text,
                 children: e
-              }), (0, i.jsx)("span", {
-                className: E.editIcon
+              }), (0, l.jsx)("span", {
+                className: _.editIcon
               })]
             })
           })]
@@ -105,17 +105,17 @@ class R extends a.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), this._inputId = h.uniqueId("key-recorder-"), this._unregisterNativeRecorder = null, this._mousedownMode = null, this._inputRef = a.createRef(), this._containerRef = a.createRef(), this.setInputRef = e => {
+    super(...e), this._inputId = S.uniqueId("key-recorder-"), this._unregisterNativeRecorder = null, this._mousedownMode = null, this._inputRef = i.createRef(), this._containerRef = i.createRef(), this.setInputRef = e => {
       var t;
       let {
         registerNativeRecorder: s,
-        onChange: n
+        onChange: a
       } = this.props;
       if (this._inputRef.current = e, null === (t = this._unregisterNativeRecorder) || void 0 === t || t.call(this), null != e) {
-        if (null != s && null != n) this._unregisterNativeRecorder = s(e.id, n);
-        else if (null != n) {
+        if (null != s && null != a) this._unregisterNativeRecorder = s(e.id, a);
+        else if (null != a) {
           let t = new u(e);
-          t.handleKey = n
+          t.handleKey = a
         }
       }
     }, this.handleClick = e => {
@@ -130,4 +130,4 @@ class R extends a.PureComponent {
     }
   }
 }
-var T = R
+var I = h

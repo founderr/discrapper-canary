@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return eM
   },
   default: function() {
-    return ek
+    return eF
   }
 }), n("222007");
 var s = n("866227"),
@@ -43,8 +43,8 @@ var s = n("866227"),
   b = n("703537"),
   G = n("662285"),
   B = n("808422"),
-  F = n("374363"),
-  k = n("271938"),
+  k = n("374363"),
+  F = n("271938"),
   w = n("250404"),
   H = n("881719"),
   V = n("42203"),
@@ -649,9 +649,9 @@ function eG() {
 function eB() {
   return !es.default.enabled && delete eL[ep.NoticeTypes.STREAMER_MODE], eG()
 }
-class eF extends a.default.Store {
+class ek extends a.default.Store {
   initialize() {
-    this.syncWith([el.default, X.default, W.default, et.default, y.default, ec.default, w.default, Y.default, F.default, h.default], eG), this.waitFor(ei.default, en.default, z.default, K.default, q.default, Z.default, es.default, p.default, et.default, ea.default, G.default, $.default, X.default, eI.default, em.default, eE.default, J.default, ed.default, eN.default, W.default, eu.default, Q.default, y.default, ef.default, ec.default, Y.default, L.default, m.default, T.default, j.default)
+    this.syncWith([el.default, X.default, W.default, et.default, y.default, ec.default, w.default, Y.default, k.default, h.default], eG), this.waitFor(ei.default, en.default, z.default, K.default, q.default, Z.default, es.default, p.default, et.default, ea.default, G.default, $.default, X.default, eI.default, em.default, eE.default, J.default, ed.default, eN.default, W.default, eu.default, Q.default, y.default, ef.default, ec.default, Y.default, L.default, m.default, T.default, j.default)
   }
   hasNotice() {
     return null != eP && null != eP.type
@@ -663,8 +663,8 @@ class eF extends a.default.Store {
     return ey(e)
   }
 }
-eF.displayName = "NoticeStore";
-var ek = new eF(u.default, {
+ek.displayName = "NoticeStore";
+var eF = new ek(u.default, {
   CURRENT_USER_UPDATE: eG,
   MEDIA_ENGINE_SET_AUDIO_ENABLED: eG,
   CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: eG,
@@ -698,7 +698,7 @@ var ek = new eF(u.default, {
   IMPERSONATE_STOP: eG,
   IMPERSONATE_UPDATE: eG,
   GUILD_MEMBER_ADD: function(e) {
-    return e.user.id === k.default.getId() && eG()
+    return e.user.id === F.default.getId() && eG()
   },
   GUILD_MEMBER_UPDATE: eG,
   SURVEY_FETCHED: eG,
@@ -714,7 +714,7 @@ var ek = new eF(u.default, {
       let {
         userId: t
       } = e;
-      return t !== k.default.getId()
+      return t !== F.default.getId()
     }) && eG()
   },
   STREAMER_MODE_UPDATE: eB,

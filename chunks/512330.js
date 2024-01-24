@@ -52,11 +52,11 @@ let T = {
     unit: "YEARS",
     max: 1 / 0
   }],
-  _ = e => (t, l) => null == l ? "" : e().format({
+  S = e => (t, l) => null == l ? "" : e().format({
     time: t,
     ...l
   }),
-  S = {
+  _ = {
     ACTIVITY_FEED: {
       START: {
         SECONDS: () => p.default.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
@@ -94,10 +94,10 @@ let T = {
     },
     ACTIVITY_FEED_NEW: {
       START: {
-        SECONDS: _(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
-        MINUTES: _(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
-        HOURS: _(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
-        DAYS: _(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
+        SECONDS: S(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
+        MINUTES: S(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
+        HOURS: S(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
+        DAYS: S(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
       },
       END: {
         SECONDS: e => p.default.Messages.DURATION_SECONDS_AGO.format({
@@ -246,7 +246,7 @@ function A(e) {
     }
     getTimeUnit(e, t, l) {
       let n = h(e, e => (function(e, t, l) {
-        let n = S[l];
+        let n = _[l];
         if (null != n) {
           let l = n[t];
           if (null != l) return null != l[e]
@@ -281,7 +281,7 @@ function A(e) {
       } = this.state, i = this.getType();
       if (null == i) return null;
       let r = this.getTimeUnit(s, t, i),
-        o = S[t][i];
+        o = _[t][i];
       if (null == o) return null;
       let d = o[r],
         c = Math.floor(this.transformTime(r, s));

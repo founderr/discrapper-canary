@@ -18,8 +18,8 @@ var n = l("37983"),
   p = l("850391"),
   T = l("884351"),
   E = l("42203"),
-  _ = l("27618"),
-  S = l("158998"),
+  S = l("27618"),
+  _ = l("158998"),
   h = l("718422"),
   I = l("49111"),
   A = l("782340"),
@@ -32,7 +32,7 @@ function v(e) {
     onClose: s,
     className: r,
     inputClassName: v
-  } = e, C = a.useRef(null), N = (0, u.useStateFromStores)([_.default], () => _.default.isBlocked(t.id)), y = a.useCallback(e => {
+  } = e, C = a.useRef(null), N = (0, u.useStateFromStores)([S.default], () => S.default.isBlocked(t.id)), y = a.useCallback(e => {
     if ("Enter" === e.key) {
       e.preventDefault(), o(null != C.current, "Keypress on Input when not mounted");
       let l = C.current.value.trim();
@@ -52,7 +52,7 @@ function v(e) {
     }
     e.which === I.KeyboardKeys.SPACE && e.stopPropagation()
   }, [s, t]), O = N ? A.default.Messages.QUICK_DM_BLOCKED : A.default.Messages.QUICK_DM_USER.format({
-    name: S.default.getName(t)
+    name: _.default.getName(t)
   });
   return (0, n.jsx)(d.TextInput, {
     className: r,

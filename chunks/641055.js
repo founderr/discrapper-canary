@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return S
+    return _
   }
 }), l("222007");
 var n = l("37983"),
@@ -18,7 +18,7 @@ var n = l("37983"),
   p = l("430312"),
   T = l("590456"),
   E = l("393036");
-let _ = () => {
+let S = () => {
   let e = (0, f.useIsDismissibleContentDismissed)(i.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP),
     t = (0, s.useStateFromStores)([c.default], () => c.default.syncProfileThemeWithUserTheme),
     l = (0, u.default)(),
@@ -28,12 +28,12 @@ let _ = () => {
     o = (0, r.isThemeDark)(l) && (0, r.isThemeLight)(n);
   return !e && !t && o
 };
-var S = e => {
+var _ = e => {
   let {
     onTooltipClose: t
   } = e, {
     profileType: l
-  } = a.useContext(p.UserProfileContext), s = l === T.UserProfileTypes.POPOUT, i = _(), [r, u] = a.useState(!s && i);
+  } = a.useContext(p.UserProfileContext), s = l === T.UserProfileTypes.POPOUT, i = S(), [r, u] = a.useState(!s && i);
   return (0, d.default)(() => u(i), s ? 300 : null), (0, n.jsx)(o.Popout, {
     shouldShow: r,
     position: "left",

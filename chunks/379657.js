@@ -23,8 +23,8 @@ function E(e) {
     applicationId: t,
     commandIds: l,
     channel: E,
-    guildId: _,
-    onClick: S
+    guildId: S,
+    onClick: _
   } = e;
   (0, u.usePrivateChannelIntegrationState)({
     channelId: E.id
@@ -32,13 +32,13 @@ function E(e) {
   let {
     commands: h
   } = r.useCommandsForApplication(E, t, l), I = a.useMemo(() => null == h ? void 0 : h.filter(e => !0 !== e.nsfw), [h]), A = a.useCallback(e => {
-    null == S || S(), d.default.track(f.AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, {
+    null == _ || _(), d.default.track(f.AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, {
       application_id: t,
       command_id: e,
-      guild_id: _,
+      guild_id: S,
       ...(0, i.collectChannelAnalyticsMetadataFromId)(E.id)
     })
-  }, [t, E.id, _, S]);
+  }, [t, E.id, S, _]);
   return null == I || 0 === I.length ? null : (0, n.jsxs)(c.default, {
     children: [(0, n.jsx)(s.Heading, {
       variant: "eyebrow",
@@ -52,7 +52,7 @@ function E(e) {
           commandName: e.displayName,
           commandDescription: e.displayDescription,
           onClick: A,
-          guildId: _,
+          guildId: S,
           channelId: E.id
         })
       }, e.id))
