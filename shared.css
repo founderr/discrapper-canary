@@ -12042,6 +12042,11 @@ html.decorate-links .lowSaturationUnderline__95e71 {
     color: var(--__current--spoiler-warning-text-color)
 }
 
+.constrainedObscureContent__2b3c7 {
+    min-width: 146px;
+    min-height: 212px
+}
+
 .explicitContentWarning__3f1a4 {
     text-align: center;
     width: 100%
