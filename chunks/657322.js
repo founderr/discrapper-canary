@@ -25,13 +25,21 @@ var a = n("599110"),
         if (!(0, l.default)(n.authorization.scopes, c.scope)) throw new i.default({
           errorCode: o.RPCErrors.INVALID_PERMISSIONS
         }, "Not authenticated or invalid scope");
-        s.ExperimentRPCServerAnalyticsKillswitch.getCurrentConfig({
-          location: "RPCServer"
-        }).enabled && a.default.track(o.AnalyticEvents.RPC_SUBSCRIPTION_REQUESTED, {
-          event: u,
-          scope: "object" == typeof c.scope ? JSON.stringify(c.scope) : c.scope,
-          application_id: n.application.id
-        });
+        if (s.ExperimentRPCServerAnalyticsKillswitch.getCurrentConfig({
+            location: "RPCServer"
+          }).enabled && a.default.track(o.AnalyticEvents.RPC_SUBSCRIPTION_REQUESTED, {
+            event: u,
+            scope: "object" == typeof c.scope ? JSON.stringify(c.scope) : c.scope,
+            application_id: n.application.id
+          }), null != c.validation) {
+          let e = await t.getJoi(),
+            n = e.validate(d, c.validation(e), {
+              convert: !1
+            });
+          if (null != n.error) throw new i.default({
+            errorCode: o.RPCErrors.INVALID_PAYLOAD
+          }, "Invalid subscription parameters provided")
+        }
         let f = c.handler({
             args: d,
             socket: n
