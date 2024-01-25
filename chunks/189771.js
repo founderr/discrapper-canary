@@ -170,6 +170,8 @@ function U(e, t, n) {
     stickerName: m[0].name
   }) : t.type === x.MessageTypes.PREMIUM_REFERRAL ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY_SHORT.format({
     username: v.default.getName(n)
+  }) : null != t.poll ? M.default.Messages.POLL_SENT_NOTIFICATION.format({
+    question: t.poll.question.text
   }) : r.default.unparse(h, e.id, !0);
   0 === i.length && (i = function(e) {
     var t;

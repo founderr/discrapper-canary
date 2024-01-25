@@ -16520,6 +16520,7 @@ e.exports = Object.freeze({
   POLL_END_EARLY: "End Poll Now",
   POLL_END_EARLY_CONFIRMATION_TITLE: "End Poll Now?",
   POLL_END_EARLY_CONFIRMATION_TEXT: "This will close the poll immediately and reveal the results.",
+  POLL_SENT_NOTIFICATION: "[poll] !!{question}!!",
   SUMMONED: "Summoned!",
   WAVED_AT_USER: "\uD83D\uDC4B You waved at !!{username}!!",
   WAVED_AT_YOU: "\uD83D\uDC4B !!{username}!! waved at you",
