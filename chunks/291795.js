@@ -14751,7 +14751,7 @@ e.exports = {
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "\xbfTe gusta este efecto de perfil? $[Obtenlo con tu suscripci\xf3n Nitro](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "\xbfTe gusta esta personalizaci\xf3n de perfil? $[Consigue la tuya en la tienda](openShop).",
   COLLECTIBLES_BANNER_TITLE_2024: "Dale un aspecto renovado a tu perfil",
-  COLLECTIBLES_BANNER_DESCRIPTION_2024: "Echa un vistazo a las \xfaltimas decoraciones de avatar y efectos de perfil, y hazte con tus estilos favoritos.",
+  COLLECTIBLES_BANNER_DESCRIPTION_2024: "Echa un vistazo a las m\xe1s recientes decoraciones de avatares y efectos de perfil, y consigue tus estilos preferidos.",
   INVENTORY_ADD_PACK: "A\xf1adir paquete",
   INVENTORY_VIEW_PACK: "Ver paquete",
   INVENTORY_REMOVE_PACK: "Eliminar paquete",
