@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
   }
 });
 var a = n("748820"),
-  o = n("446674"),
-  u = n("913144"),
+  u = n("446674"),
+  o = n("913144"),
   d = n("724210"),
   c = n("515631");
 let h = {};
@@ -22,7 +22,7 @@ function f(e) {
 function m(e) {
   null != l && l.guildId === e ? (s = l, l = void 0) : s = f(e)
 }
-class p extends o.default.Store {
+class p extends u.default.Store {
   getSavedScrollPosition(e) {
     return h[e]
   }
@@ -34,7 +34,7 @@ class p extends o.default.Store {
   }
 }
 p.displayName = "GuildHomeStore";
-var I = new p(u.default, {
+var I = new p(o.default, {
   CONNECTION_OPEN: function() {
     h = {}
   },

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return x
   }
 }), n("222007");
 var a = n("37983"),
@@ -18,17 +18,17 @@ var a = n("37983"),
   E = n("393414"),
   m = n("42203"),
   p = n("211248"),
-  g = n("461380"),
-  S = n("36694"),
-  N = n("11539"),
-  _ = n("815978"),
+  S = n("461380"),
+  g = n("36694"),
+  _ = n("11539"),
+  N = n("815978"),
   T = n("814744"),
   I = n("879165"),
   C = n("609023"),
   A = n("49111"),
   M = n("782340"),
   v = n("951244");
-let x = l.memo(function(e) {
+let R = l.memo(function(e) {
   let {
     channel: t,
     deleteChannel: n
@@ -70,7 +70,7 @@ let x = l.memo(function(e) {
     })
   })
 });
-var R = x;
+var x = R;
 let L = l.memo(function(e) {
   let {
     channel: t,
@@ -100,7 +100,7 @@ let L = l.memo(function(e) {
         mentionCount: t.mentionCount,
         toggleCollapsed: i,
         channelState: t,
-        children: [(0, a.jsx)(_.default, {
+        children: [(0, a.jsx)(N.default, {
           channel: r
         }), (0, a.jsx)(O, {
           ...e
@@ -132,10 +132,10 @@ function O(e) {
     className: v.markReadButton,
     tooltip: r ? M.default.Messages.MARK_GUILD_AS_READ : M.default.Messages.MARK_AS_READ,
     color: p.CircleIconButtonColors.TERTIARY,
-    icon: r ? (0, a.jsx)(N.default, {
+    icon: r ? (0, a.jsx)(_.default, {
       width: 16,
       height: 16
-    }) : (0, a.jsx)(S.default, {
+    }) : (0, a.jsx)(g.default, {
       width: 16,
       height: 16
     }),
@@ -173,7 +173,7 @@ function b(e) {
         [v.collapsed]: t.collapsed
       }),
       onClick: s,
-      children: (0, a.jsx)(g.default, {
+      children: (0, a.jsx)(S.default, {
         width: 16,
         height: 16
       })

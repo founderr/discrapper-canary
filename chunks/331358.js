@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   usePerkCards: function() {
-    return y
+    return B
   }
 });
 var a = s("65597"),
@@ -25,10 +25,10 @@ var a = s("65597"),
   N = s("982784"),
   p = s("19530"),
   g = s("215541"),
-  P = s("663411"),
-  C = s("126304"),
-  M = s("674065"),
-  O = s("771116"),
+  C = s("663411"),
+  P = s("126304"),
+  O = s("674065"),
+  M = s("771116"),
   h = s("309920"),
   L = s("578770"),
   x = s("761708"),
@@ -39,13 +39,13 @@ var a = s("65597"),
   j = s("443817"),
   G = s("759308");
 let k = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
-  y = e => {
+  B = e => {
     let {
       styles: t
     } = e, s = (0, i.default)(), r = (0, a.default)([l.default], () => {
       let e = l.default.getCurrentUser();
       return u.default.canUsePremiumProfileCustomization(e)
-    }), y = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, B = {
+    }), B = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, y = {
       badge: {
         title: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_DESCRIPTION,
@@ -153,15 +153,15 @@ let k = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
       superReactions: {
         title: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION,
-        imageSource: k(s, P, C),
+        imageSource: k(s, C, P),
         imageClassName: t.superReactionsImage
       },
       upload: {
         title: c.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({
-          premiumMaxSize: y
+          premiumMaxSize: B
         }),
         description: c.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({
-          premiumMaxSize: y
+          premiumMaxSize: B
         }),
         imageSource: G,
         imageClassName: t.uploadImage
@@ -169,9 +169,9 @@ let k = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
       videoBackground: {
         title: c.default.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-        imageSource: k(s, M, O),
+        imageSource: k(s, O, M),
         imageClassName: t.videoBackgroundImage
       }
     };
-    return B
+    return y
   }

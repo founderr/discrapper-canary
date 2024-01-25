@@ -20,24 +20,24 @@ var a = n("37983"),
   p = n("180748"),
   S = n("206230"),
   g = n("716241"),
-  N = n("42203"),
-  _ = n("923959"),
+  _ = n("42203"),
+  N = n("923959"),
   T = n("744983"),
   I = n("18494"),
   C = n("476765"),
   A = n("659500"),
   M = n("202752"),
   v = n("751520"),
-  x = n("313483"),
-  R = n("200745"),
+  R = n("313483"),
+  x = n("200745"),
   L = n("653291"),
   O = n("49111"),
   b = n("782340"),
   y = n("84691");
 n("525840");
 let j = (0, C.uid)(),
-  F = u(f.search, 500);
-class D extends l.PureComponent {
+  D = u(f.search, 500);
+class F extends l.PureComponent {
   componentDidMount() {
     var e, t;
     A.ComponentDispatch.subscribe(O.ComponentActions.PERFORM_SEARCH, this.search), A.ComponentDispatch.subscribe(O.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), A.ComponentDispatch.subscribe(O.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch), null === (t = this._editorRef) || void 0 === t || null === (e = t.editor) || void 0 === e || e.setAttribute("aria-haspopup", "listbox")
@@ -49,7 +49,7 @@ class D extends l.PureComponent {
     } = this.props;
     if (t !== e.editorState) {
       let e = v.tokenizeQuery(M.getFirstTextBlock(t)),
-        a = x.getSelectionScope(e, t);
+        a = R.getSelectionScope(e, t);
       f.updateAutocompleteQuery(n, e, a), null != this._editorRef && M.scrollCursorIntoView(this._editorRef.editor)
     }
   }
@@ -196,7 +196,7 @@ class D extends l.PureComponent {
           n = v.getSearchQueryFromTokens(e);
         for (let t = 0; t < e.length; t++) !v.filterHasAnswer(e[t], e[t + 1]) && (a = a.substring(0, e[t].start) + a.substring(e[t].end));
         if (0 === e.length || 0 === Object.keys(n).length) return !1;
-        F(t, n, a, !!l), this.onBlur()
+        D(t, n, a, !!l), this.onBlur()
       }
       return !0
     }, this.handleClearSearch = e => {
@@ -221,12 +221,12 @@ class D extends l.PureComponent {
         return
       }
       let n = I.default.getChannelId(),
-        a = N.default.getChannel(n);
-      if ((null == a ? void 0 : a.isThread()) && (a = N.default.getChannel(null == a ? void 0 : a.parent_id)), null == a || a.isPrivate()) {
+        a = _.default.getChannel(n);
+      if ((null == a ? void 0 : a.isThread()) && (a = _.default.getChannel(null == a ? void 0 : a.parent_id)), null == a || a.isPrivate()) {
         this.focusEditor();
         return
       }
-      let l = _.default.getTextChannelNameDisambiguations(a.getGuildId()),
+      let l = N.default.getTextChannelNameDisambiguations(a.getGuildId()),
         s = l[a.id],
         i = null != s ? s.name : a.name;
       this.handleSetSearchQuery({
@@ -266,7 +266,7 @@ class D extends l.PureComponent {
       let {
         current: n
       } = this._searchPopoutRef, a = null != n && n.selectOption();
-      return !a && ((0, R.isFavoriteSearchEnabled)() && t ? this.search({
+      return !a && ((0, x.isFavoriteSearchEnabled)() && t ? this.search({
         searchEverywhere: !0
       }) : this.search()), !0
     }, this.handleBeforeInput = e => {
@@ -370,7 +370,7 @@ var U = d.default.connectStores([S.default, T.default], () => {
   let t = T.default.getCurrentSearchId(),
     n = T.default.getSearchType(),
     a = null != t && T.default.isSearching(t),
-    l = null != t && null !== (e = T.default.getEditorState(t)) && void 0 !== e ? e : M.createEmptyEditorState(x.generateDecorators(m.default)),
+    l = null != t && null !== (e = T.default.getEditorState(t)) && void 0 !== e ? e : M.createEmptyEditorState(R.generateDecorators(m.default)),
     s = S.default.keyboardModeEnabled;
   return {
     searchId: t,
@@ -380,4 +380,4 @@ var U = d.default.connectStores([S.default, T.default], () => {
     hasResults: T.default.hasResults(t),
     keyboardModeEnabled: s
   }
-})(D)
+})(F)

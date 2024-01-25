@@ -19,10 +19,10 @@ var l = n("414456"),
   E = n("42203"),
   m = n("305961"),
   p = n("824563"),
-  g = n("697218"),
-  S = n("220677"),
-  N = n("476263"),
-  _ = n("476765"),
+  S = n("697218"),
+  g = n("220677"),
+  _ = n("476263"),
+  N = n("476765"),
   T = n("782340"),
   I = n("636431");
 let C = {
@@ -40,7 +40,7 @@ function A(e) {
     mentionCount: s,
     channelState: r,
     toggleCollapsed: u
-  } = e, d = (0, i.useListItem)("recents-header-".concat(t.id, "-").concat((0, _.useUID)()));
+  } = e, d = (0, i.useListItem)("recents-header-".concat(t.id, "-").concat((0, N.useUID)()));
   return (0, a.jsx)(o.FocusRing, {
     offset: C,
     children: (0, a.jsxs)("div", {
@@ -54,7 +54,7 @@ function A(e) {
       children: [(0, a.jsx)(M, {
         channel: t,
         gotoChannel: l
-      }), (0, a.jsx)(R, {
+      }), (0, a.jsx)(x, {
         channel: t,
         gotoChannel: l,
         mentionCount: s
@@ -71,7 +71,7 @@ function M(e) {
   return t.isPrivate() ? (0, a.jsx)(v, {
     channel: t,
     gotoChannel: n
-  }) : (0, a.jsx)(x, {
+  }) : (0, a.jsx)(R, {
     channel: t,
     gotoChannel: n
   })
@@ -81,7 +81,7 @@ function v(e) {
   let {
     channel: t,
     gotoChannel: n
-  } = e, l = (0, r.useStateFromStores)([g.default], () => t.isDM() ? g.default.getUser(t.getRecipientId()) : null), s = null == l ? (0, d.getChannelIconURL)(t) : l.getAvatarURL(void 0, 40);
+  } = e, l = (0, r.useStateFromStores)([S.default], () => t.isDM() ? S.default.getUser(t.getRecipientId()) : null), s = null == l ? (0, d.getChannelIconURL)(t) : l.getAvatarURL(void 0, 40);
   return (0, a.jsx)(o.Clickable, {
     onClick: n,
     tabIndex: -1,
@@ -94,28 +94,28 @@ function v(e) {
   })
 }
 
-function x(e) {
+function R(e) {
   let {
     channel: t,
     gotoChannel: n
   } = e, l = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id));
-  return null == l ? null : (0, a.jsx)(N.default, {
+  return null == l ? null : (0, a.jsx)(_.default, {
     "aria-hidden": !0,
     className: I.guildIcon,
     guild: l,
-    size: N.default.Sizes.MEDIUM,
+    size: _.default.Sizes.MEDIUM,
     active: !0,
     onClick: n,
     tabIndex: -1
   })
 }
 
-function R(e) {
+function x(e) {
   let {
     channel: t,
     gotoChannel: n,
     mentionCount: l
-  } = e, i = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id)), u = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(t.parent_id)), d = (0, f.getChannelIconComponent)(t, i), h = (0, c.default)(t, !1), p = null == u ? null == i ? void 0 : i.name : "".concat(null == i ? void 0 : i.name, " › ").concat(u.name), g = t.isMultiUserDM() ? T.default.Messages.MEMBERS_HEADER.format({
+  } = e, i = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id)), u = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(t.parent_id)), d = (0, f.getChannelIconComponent)(t, i), h = (0, c.default)(t, !1), p = null == u ? null == i ? void 0 : i.name : "".concat(null == i ? void 0 : i.name, " › ").concat(u.name), S = t.isMultiUserDM() ? T.default.Messages.MEMBERS_HEADER.format({
     members: t.recipients.length + 1
   }) : t.isPrivate() ? (0, a.jsx)(L, {
     channel: t
@@ -139,7 +139,7 @@ function R(e) {
         }), (0, a.jsx)("span", {
           className: I.channelNameSpan,
           children: h
-        }), null != l && l > 0 ? (0, a.jsx)(S.default, {
+        }), null != l && l > 0 ? (0, a.jsx)(g.default, {
           value: l,
           className: I.badge
         }) : null]
@@ -148,7 +148,7 @@ function R(e) {
       color: "header-secondary",
       variant: "text-xs/normal",
       className: I.subtextContainer,
-      children: g
+      children: S
     })]
   })
 }
@@ -160,8 +160,8 @@ function L(e) {
     user: n,
     activities: l,
     applicationStream: s
-  } = (0, r.useStateFromStoresObject)([g.default, p.default, h.default], () => {
-    let e = g.default.getUser(t.getRecipientId());
+  } = (0, r.useStateFromStoresObject)([S.default, p.default, h.default], () => {
+    let e = S.default.getUser(t.getRecipientId());
     return {
       user: e,
       activities: null != e ? p.default.getActivities(e.id) : null,

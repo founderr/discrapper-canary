@@ -25,10 +25,10 @@ var a = s("37983"),
   N = s("153160"),
   p = s("324878"),
   g = s("917247"),
-  P = s("641078"),
-  C = s("400307"),
-  M = s("218435"),
-  O = s("881155"),
+  C = s("641078"),
+  P = s("400307"),
+  O = s("218435"),
+  M = s("881155"),
   h = s("646718"),
   L = s("49111"),
   x = s("782340"),
@@ -40,11 +40,11 @@ var a = s("37983"),
 let G = e => {
     let {
       isLightTheme: t
-    } = e, s = (0, P.getBOGOPillCopy)();
-    return (0, a.jsx)(C.PremiumPillWithSparkles, {
+    } = e, s = (0, C.getBOGOPillCopy)();
+    return (0, a.jsx)(P.PremiumPillWithSparkles, {
       text: s,
       className: v.bogoPillWithSparkles,
-      colorOptions: t ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+      colorOptions: t ? P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
     })
   },
   k = () => (0, a.jsx)("div", {
@@ -55,7 +55,7 @@ let G = e => {
       children: x.default.Messages.MOST_POPULAR
     })
   }),
-  y = e => {
+  B = e => {
     let t, {
         premiumType: s
       } = e,
@@ -68,7 +68,7 @@ let G = e => {
       alt: n
     })
   },
-  B = e => {
+  y = e => {
     let {
       text: t,
       badge: s
@@ -200,7 +200,7 @@ var w = e => {
     Z = (0, g.usePremiumTrialOffer)(),
     q = null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
     $ = (0, p.useCurrentPremiumTrialTier)(),
-    ee = (0, P.useIsEligibleForBogoPromotion)();
+    ee = (0, C.useIsEligibleForBogoPromotion)();
   if (!w || !V) return null;
   let et = A.default.getDefaultPrice(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
     es = A.default.getDefaultPrice(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
@@ -210,15 +210,15 @@ var w = e => {
         variant: "heading-lg/extrabold",
         children: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
       }),
-      column1: (0, a.jsx)(y, {
+      column1: (0, a.jsx)(B, {
         premiumType: h.PremiumTypes.TIER_0
       }),
-      column2: (0, a.jsx)(y, {
+      column2: (0, a.jsx)(B, {
         premiumType: h.PremiumTypes.TIER_2
       })
     },
     er = [{
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE
       }),
       column1: (0, a.jsx)(a.Fragment, {
@@ -232,7 +232,7 @@ var w = e => {
         })
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_EMOJI
       }),
       column1: (0, a.jsx)(K, {
@@ -242,7 +242,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STICKER
       }),
       column1: (0, a.jsx)(K, {
@@ -252,7 +252,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE
       }),
       column1: (0, a.jsx)(K, {
@@ -262,7 +262,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS
       }),
       column1: (0, a.jsx)(K, {
@@ -272,7 +272,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
       }),
       column1: (0, a.jsx)(H, {
@@ -282,7 +282,7 @@ var w = e => {
         text: (0, A.getMaxFileSizeForPremiumType)(h.PremiumTypes.TIER_2)
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING
       }),
       column1: (0, a.jsx)(K, {
@@ -292,7 +292,7 @@ var w = e => {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_STREAMING_DETAILS
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
           numBoosts: h.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
           percentageOff: (0, N.formatPercent)(T.default.locale, h.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
@@ -305,7 +305,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PROFILE_THEMES
       }),
       column1: (0, a.jsx)(K, {
@@ -315,7 +315,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_PROFILE
       }),
       column1: (0, a.jsx)(K, {
@@ -325,7 +325,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS_GENERIC
       }),
       column1: (0, a.jsx)(K, {
@@ -335,7 +335,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_CLIENT_THEME
       }),
       column1: (0, a.jsx)(K, {
@@ -345,7 +345,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BADGE
       }),
       column1: (0, a.jsx)(K, {
@@ -355,7 +355,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_VIDEO_BACKGROUND
       }),
       column1: (0, a.jsx)(K, {
@@ -365,7 +365,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_SOUNDS_ANYWHERE
       }),
       column1: (0, a.jsx)(K, {
@@ -375,7 +375,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_ENTRY_SOUNDS
       }),
       column1: (0, a.jsx)(K, {
@@ -385,7 +385,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_LIMIT
       }),
       column1: (0, a.jsx)(K, {
@@ -395,7 +395,7 @@ var w = e => {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(B, {
+      label: (0, a.jsx)(y, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_MESSAGE_LENGTH.format({
           maxChars: L.MAX_MESSAGE_LENGTH_PREMIUM
         })
@@ -418,36 +418,36 @@ var w = e => {
   }) : er.push({
     label: null,
     column1: (0, a.jsxs)(a.Fragment, {
-      children: [q === h.PremiumSubscriptionSKUs.TIER_2 || ee ? (0, a.jsx)(O.default, {
+      children: [q === h.PremiumSubscriptionSKUs.TIER_2 || ee ? (0, a.jsx)(M.default, {
         className: v.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1,
         look: o.ButtonLooks.OUTLINED,
         color: Q ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
         buttonShineClassName: void 0
-      }) : (0, a.jsx)(O.default, {
+      }) : (0, a.jsx)(M.default, {
         className: v.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1
-      }), $ === h.PremiumTypes.TIER_2 || null != q ? null : (0, a.jsx)(M.default, {
+      }), $ === h.PremiumTypes.TIER_2 || null != q ? null : (0, a.jsx)(O.default, {
         className: v.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0
       })]
     }),
     column2: (0, a.jsxs)(a.Fragment, {
-      children: [q === h.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(O.default, {
+      children: [q === h.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(M.default, {
         className: v.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
         look: o.ButtonLooks.OUTLINED,
         color: Q ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
         buttonShineClassName: void 0
-      }) : (0, a.jsx)(O.default, {
+      }) : (0, a.jsx)(M.default, {
         className: v.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
         isEligibleForBogoPromotion: ee
-      }), $ === h.PremiumTypes.TIER_0 || null != q ? null : (0, a.jsx)(M.default, {
+      }), $ === h.PremiumTypes.TIER_0 || null != q ? null : (0, a.jsx)(O.default, {
         className: v.button,
         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2
       })]
@@ -455,10 +455,10 @@ var w = e => {
     withBottomBorder: !1,
     withBottomBorderRadius: !0,
     buttonsRow: null == q
-  }), s = D ? null : null != q || null != $ ? (0, a.jsx)(C.PremiumPillWithSparkles, {
+  }), s = D ? null : null != q || null != $ ? (0, a.jsx)(P.PremiumPillWithSparkles, {
     text: null != q ? x.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
     className: v.freeTrialPillWithSparkles,
-    colorOptions: q === h.PremiumSubscriptionSKUs.TIER_0 ? Q ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : Q ? J ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+    colorOptions: q === h.PremiumSubscriptionSKUs.TIER_0 ? Q ? P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : Q ? J ? P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
   }) : ee ? (0, a.jsx)(G, {
     isLightTheme: Q
   }) : (0, a.jsx)(k, {}), (0, a.jsx)(j, {

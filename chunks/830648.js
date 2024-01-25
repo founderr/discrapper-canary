@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return P
+    return C
   }
 }), s("222007");
 var a = s("37983"),
@@ -79,7 +79,7 @@ let p = e => {
       })
     })
   };
-var P = e => {
+var C = e => {
   let {
     className: t,
     isSubscriberNitroHome: s = !1
@@ -87,7 +87,7 @@ var P = e => {
     styles: N
   }), E = (0, l.default)([o.default], () => o.default.useReducedMotion), {
     analyticsLocations: T
-  } = (0, c.default)(), f = (0, I.useIsRemixANitroPerk)(), P = [_.emoji, _.streaming, _.upload, _.customAppIcons, _.soundboard, f ? _.remix : _.videoBackground, _.superReactions, _.stickersPerkDiscoverability, _.badgeAlt];
+  } = (0, c.default)(), f = (0, I.useIsRemixANitroPerk)(), C = [_.emoji, _.streaming, _.upload, _.customAppIcons, _.soundboard, f ? _.remix : _.videoBackground, _.superReactions, _.stickersPerkDiscoverability, _.badgeAlt];
   return (0, a.jsxs)("div", {
     className: i(N.perksContainer, t, {
       [N.partiallyHidden]: s && !n,
@@ -102,7 +102,7 @@ var P = e => {
       className: i(N.perkCardContainer, {
         [N.perkCardContainerExpanded]: n
       }),
-      children: P.map(e => null != e && (0, a.jsx)(g, {
+      children: C.map(e => null != e && (0, a.jsx)(g, {
         ...e
       }, e.title))
     }), s && (0, a.jsxs)(a.Fragment, {

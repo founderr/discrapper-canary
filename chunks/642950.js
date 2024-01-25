@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 }), n("222007");
 var r = n("37983"),
   i = n("884691"),
   s = n("414456"),
-  l = n.n(s),
-  a = n("77078"),
+  a = n.n(s),
+  l = n("77078"),
   o = n("54239"),
   u = n("79112"),
   c = n("49111"),
@@ -20,8 +20,8 @@ class p extends i.Component {
       className: f.streamerModeEnabled,
       children: [(0, r.jsx)("div", {
         className: f.streamerModeEnabledImage
-      }), (0, r.jsx)(a.Clickable, {
-        className: l(f.streamerModeEnabledBtn, {
+      }), (0, r.jsx)(l.Clickable, {
+        className: a(f.streamerModeEnabledBtn, {
           [f.disabled]: this.props.disableButton
         }),
         onClick: this.handleClick,
@@ -38,4 +38,4 @@ class p extends i.Component {
 p.defaultProps = {
   disableButton: !1
 };
-var h = p
+var _ = p

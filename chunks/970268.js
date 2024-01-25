@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return B
   },
   default: function() {
-    return W
+    return Q
   }
 }), n("424973"), n("222007");
 var a, l, s, i, r = n("884691"),
@@ -23,18 +23,18 @@ var a, l, s, i, r = n("884691"),
   E = n("819689"),
   m = n("267363"),
   p = n("206230"),
-  g = n("379881"),
-  S = n("542827"),
-  N = n("615387"),
-  _ = n("401690"),
+  S = n("379881"),
+  g = n("542827"),
+  _ = n("615387"),
+  N = n("401690"),
   T = n("689275"),
   I = n("755624"),
   C = n("414833"),
   A = n("872173"),
   M = n("374363"),
   v = n("233069"),
-  x = n("42203"),
-  R = n("923959"),
+  R = n("42203"),
+  x = n("923959"),
   L = n("247013"),
   O = n("305961"),
   b = n("377253"),
@@ -177,7 +177,7 @@ class H extends o.EventEmitter {
         }))
       }), p.default.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore()
     }, this.markGuildRead = e => {
-      h.default.wait(() => (0, S.default)([e], w.AnalyticsSections.INBOX)), this.setState({
+      h.default.wait(() => (0, g.default)([e], w.AnalyticsSections.INBOX)), this.setState({
         channels: this.state.channels.filter(t => t.guildId !== e)
       }), this.maybeLoadMore()
     }, this.deleteChannel = e => {
@@ -267,19 +267,19 @@ function Y() {
         a = null !== (t = null === (e = M.default.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
       for (let e in a)
         for (let t in a[e].channels) {
-          let l = x.default.getChannel(t);
+          let l = R.default.getChannel(t);
           (!(t in n) || (null == l ? void 0 : l.guild_id) === e) && (n[t] = a[e].channels[t].collapsedInInbox)
         }
       return n
     }(),
     t = function(e) {
       let t = [];
-      x.default.getSortedPrivateChannels().forEach(n => z(e, t, null, n.id));
+      R.default.getSortedPrivateChannels().forEach(n => z(e, t, null, n.id));
       let n = D.default.getFlattenedGuildIds();
       return n.forEach(n => {
         if (null == n) return;
-        let a = R.default.getSelectableChannelIds(n),
-          l = _.default.getActiveJoinedUnreadThreadsForGuild(n);
+        let a = x.default.getSelectableChannelIds(n),
+          l = N.default.getActiveJoinedUnreadThreadsForGuild(n);
         a.forEach(a => {
           var s;
           z(e, t, n, a);
@@ -302,13 +302,13 @@ function Y() {
 
 function z(e, t, n, a) {
   if (null == a) return;
-  let l = x.default.getChannel(a);
+  let l = R.default.getChannel(a);
   if (null == l) return;
   let s = v.THREAD_CHANNEL_TYPES.has(l.type);
   if (!s && F.default.isGuildOrCategoryOrChannelMuted(n, l.id)) return;
   if (l.isPrivate()) {
     if (0 === j.default.getMentionCount(a)) return
-  } else if (!(0, N.getHasImportantUnread)(l) && 0 === j.default.getMentionCount(a)) return;
+  } else if (!(0, _.getHasImportantUnread)(l) && 0 === j.default.getMentionCount(a)) return;
   if (!l.isPrivate() && !y.default.can(w.Permissions.READ_MESSAGE_HISTORY, l)) return;
   let i = j.default.ackMessageId(a);
   if (null == i) {
@@ -335,13 +335,13 @@ function z(e, t, n, a) {
     hasMentionsOrUnreads: d,
     mentionCount: u,
     sortOrder: function(e, t, n) {
-      let a = x.default.getChannel(t);
-      if (g.default.isFavorite(t)) return 0;
+      let a = R.default.getChannel(t);
+      if (S.default.isFavorite(t)) return 0;
       if (a.isPrivate()) return 1;
       if (j.default.getMentionCount(t) > 0) return 2;
       if (null != n) {
         let e = P.default.extractTimestamp(n);
-        if (Date.now() - e > Q) return 7;
+        if (Date.now() - e > W) return 7;
         if (Date.now() - e > K) return 5
       }
       if (a.isThread()) {
@@ -367,9 +367,9 @@ function z(e, t, n, a) {
   })
 }
 let K = 2 * U.default.Millis.DAY,
-  Q = 10 * U.default.Millis.DAY;
+  W = 10 * U.default.Millis.DAY;
 
-function W(e) {
+function Q(e) {
   let [t, n] = r.useState(() => new H(Y(), e)), [a, l] = r.useState(!1), s = r.useRef(Date.now()), [i, o] = r.useState(() => Y());
   return r.useEffect(() => {
     let e = e => o(e);

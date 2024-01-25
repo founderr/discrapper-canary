@@ -18,18 +18,18 @@ var a = n("37983"),
   E = n("272030"),
   m = n("819689"),
   p = n("843962"),
-  g = n("679653"),
-  S = n("931318"),
-  N = n("520899"),
-  _ = n("988864"),
+  S = n("679653"),
+  g = n("931318"),
+  _ = n("520899"),
+  N = n("988864"),
   T = n("960808"),
   I = n("45835"),
   C = n("699473"),
   A = n("393414"),
   M = n("845579"),
   v = n("42203"),
-  x = n("305961"),
-  R = n("377253"),
+  R = n("305961"),
+  x = n("377253"),
   L = n("476263"),
   O = n("93393"),
   b = n("11539"),
@@ -51,11 +51,11 @@ function G(e) {
   let {
     setTab: t,
     closePopout: n
-  } = e, s = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders());
+  } = e, s = (0, c.useStateFromStores)([_.default], () => _.default.getMessageReminders());
   l.useEffect(() => () => {
-    (0, S.cleanupMessageReminders)()
+    (0, g.cleanupMessageReminders)()
   }, []);
-  let [i, r] = l.useState(!1), o = l.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), u = i ? s : o, d = u.filter(e => !(0, _.savedMessageHasMetadata)(e));
+  let [i, r] = l.useState(!1), o = l.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), u = i ? s : o, d = u.filter(e => !(0, N.savedMessageHasMetadata)(e));
   return (0, T.useMessageRemindersLoader)(d), (0, a.jsxs)("div", {
     className: k.container,
     children: [(0, a.jsx)(D.default, {
@@ -93,19 +93,19 @@ function B(e) {
   let t, {
       messageId: l
     } = e,
-    s = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders().find(e => e.messageId === l));
+    s = (0, c.useStateFromStores)([_.default], () => _.default.getMessageReminders().find(e => e.messageId === l));
   o(null != s, "should not be rendering a to-do message without a to-do message");
   let r = s.complete,
-    u = (0, c.useStateFromStores)([R.default], () => R.default.getMessage(s.channelId, s.messageId)),
+    u = (0, c.useStateFromStores)([x.default], () => x.default.getMessage(s.channelId, s.messageId)),
     {
       message: f,
-      channel: _
+      channel: N
     } = (0, I.getSavedMessageAndChannel)(s),
-    T = v.default.getChannel(_.id),
-    b = (0, g.default)(T, !0),
-    j = null != b ? b : _.name,
-    D = (0, c.useStateFromStores)([x.default], () => x.default.getGuild(null == _ ? void 0 : _.guild_id)),
-    G = null != _ ? (0, p.getChannelIconURL)(_) : null,
+    T = v.default.getChannel(N.id),
+    b = (0, S.default)(T, !0),
+    j = null != b ? b : N.name,
+    D = (0, c.useStateFromStores)([R.default], () => R.default.getGuild(null == N ? void 0 : N.guild_id)),
+    G = null != N ? (0, p.getChannelIconURL)(N) : null,
     B = null;
   return null != s.dueAt && (s.dueAt > new Date ? (t = "text-muted", B = U.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
     duration: d.duration(s.dueAt.getTime() - Date.now(), "millisecond").humanize()
@@ -171,7 +171,7 @@ function B(e) {
           type: h.Checkbox.Types.INVERTED,
           value: r,
           onChange: (e, t) => {
-            (0, S.toggleMessageReminders)(s.messageId, t)
+            (0, g.toggleMessageReminders)(s.messageId, t)
           }
         })]
       })]
@@ -181,7 +181,7 @@ function B(e) {
       }),
       children: [(0, a.jsx)(C.default, {
         message: f,
-        channel: _,
+        channel: N,
         className: P.message,
         compact: M.MessageDisplayCompact.getSetting(),
         animateAvatar: !1,
@@ -210,7 +210,7 @@ function B(e) {
           })
         }) : null, (0, a.jsx)(h.Button, {
           onClick: () => {
-            (0, A.transitionTo)(F.Routes.CHANNEL(null == _ ? void 0 : _.getGuildId(), s.channelId, s.messageId))
+            (0, A.transitionTo)(F.Routes.CHANNEL(null == N ? void 0 : N.getGuildId(), s.channelId, s.messageId))
           },
           size: h.Button.Sizes.MIN,
           color: h.Button.Colors.TRANSPARENT,
@@ -226,7 +226,7 @@ function B(e) {
 }
 
 function H() {
-  let e = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders().length > 0);
+  let e = (0, c.useStateFromStores)([_.default], () => _.default.getMessageReminders().length > 0);
   return e ? null : (0, a.jsx)(j.default, {
     Icon: b.default,
     header: U.default.Messages.MESSAGE_REMINDERS_EMPTY,

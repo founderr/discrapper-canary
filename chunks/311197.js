@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return _
   }
 });
 var a = n("37983"),
@@ -18,15 +18,15 @@ var a = n("37983"),
   E = n("263362"),
   m = n("470965"),
   p = n("133335"),
-  g = n("782340"),
-  S = n("759956");
+  S = n("782340"),
+  g = n("759956");
 
-function N(e) {
+function _(e) {
   let {
     onOpen: t,
     onClose: n,
-    className: N
-  } = e, _ = (0, o.useInDesktopNotificationCenterExperiment)(), T = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), I = l.useRef(null), C = (0, s.useStateFromStores)([u.default], () => !!_ && (null == T ? void 0 : T.id) != null && u.default.getMentionCount(T.id, p.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
+    className: _
+  } = e, N = (0, o.useInDesktopNotificationCenterExperiment)(), T = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), I = l.useRef(null), C = (0, s.useStateFromStores)([u.default], () => !!N && (null == T ? void 0 : T.id) != null && u.default.getMentionCount(T.id, p.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
     enabled: A
   } = r.default.useExperiment({
     location: "RecentsButton"
@@ -43,21 +43,21 @@ function N(e) {
     popoutAlign: "right",
     children: (e, t, n) => (0, a.jsxs)("div", {
       ref: I,
-      className: S.recentsIcon,
+      className: g.recentsIcon,
       children: [A && (0, a.jsx)(m.default, {
         inboxIconRef: I,
         recentsPopoutShown: t
       }), (0, a.jsx)(f.Icon, {
         ...n,
-        className: N,
+        className: _,
         onClick: e,
         icon: c.default,
-        "aria-label": g.default.Messages.INBOX,
-        tooltip: t ? null : g.default.Messages.INBOX,
+        "aria-label": S.default.Messages.INBOX,
+        tooltip: t ? null : S.default.Messages.INBOX,
         selected: t,
         showBadge: C || M,
         children: (0, a.jsx)(h.default, {
-          className: S.todoBadge
+          className: g.todoBadge
         })
       })]
     })

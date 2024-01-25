@@ -25,10 +25,10 @@ var a = s("37983"),
   N = s("521012"),
   p = s("599110"),
   g = s("764364"),
-  P = s("446488"),
-  C = s("456015"),
-  M = s("982457"),
-  O = s("300962"),
+  C = s("446488"),
+  P = s("456015"),
+  O = s("982457"),
+  M = s("300962"),
   h = s("959905"),
   L = s("154889"),
   x = s("917247"),
@@ -45,8 +45,8 @@ var a = s("37983"),
       AnalyticsLocationProvider: n,
       sourceAnalyticsLocations: k
     } = (0, T.default)(I.default.PREMIUM_MARKETING), {
-      enabled: y
-    } = (0, O.default)(), B = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), H = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), K = (0, x.usePremiumTrialOffer)(), W = (0, L.usePremiumDiscountOffer)(), F = (0, S.useSubscriptionPlansLoaded)(), [w, V] = r.useState(!0), Y = r.useRef(0), z = (0, g.isPremiumExactly)(H, b.PremiumTypes.TIER_2), Q = (0, h.useLocalizedPromoQuery)(), X = null == Q ? void 0 : Q.countryCode, J = (0, l.useStateFromStores)([P.default], () => P.default.hasFetched);
+      enabled: B
+    } = (0, M.default)(), y = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), H = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), K = (0, x.usePremiumTrialOffer)(), W = (0, L.usePremiumDiscountOffer)(), F = (0, S.useSubscriptionPlansLoaded)(), [w, V] = r.useState(!0), Y = r.useRef(0), z = (0, g.isPremiumExactly)(H, b.PremiumTypes.TIER_2), Q = (0, h.useLocalizedPromoQuery)(), X = null == Q ? void 0 : Q.countryCode, J = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
     r.useEffect(() => {
       !J && d.getNitroAffinity()
     }, [J]), r.useEffect(() => {
@@ -57,7 +57,7 @@ var a = s("37983"),
     }, [X]), r.useEffect(() => {
       if (s && (null != K || null != W)) {
         let e = (0, v.shouldHitUserOfferEndPoints)("PremiumMarketingPage");
-        e ? (0, C.acknowledgeUserOffer)(K, W) : null != K && null == K.expires_at && M.default.acknowledgeUserTrialOffer(K)
+        e ? (0, P.acknowledgeUserOffer)(K, W) : null != K && null == K.expires_at && O.default.acknowledgeUserTrialOffer(K)
       }
     }, [s, K, W]), r.useEffect(() => {
       !w && p.default.track(j.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
@@ -69,9 +69,9 @@ var a = s("37983"),
     if (Z) return (0, a.jsx)(E.default, {});
     if (s) return (0, a.jsx)(R.BlockedPaymentsContentSettings, {});
     let q = t === b.PremiumMarketingEntrypoints.ApplicationStoreHome;
-    return q && z && !y ? (0, a.jsx)(n, {
+    return q && z && !B ? (0, a.jsx)(n, {
       children: (0, a.jsx)(U.default, {})
-    }) : B && F && !w ? (0, a.jsx)(n, {
+    }) : y && F && !w ? (0, a.jsx)(n, {
       children: (0, a.jsx)(D.default, {
         entrypoint: t
       })

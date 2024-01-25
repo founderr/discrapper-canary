@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   getPageSize: function() {
-    return O
+    return M
   },
   default: function() {
     return L
@@ -28,14 +28,14 @@ var a = s("37983"),
   N = s("489749"),
   p = s("75576"),
   g = s("49111"),
-  P = s("782340"),
-  C = s("128403");
-let M = (0, f.makeLazy)({
+  C = s("782340"),
+  P = s("128403");
+let O = (0, f.makeLazy)({
   createPromise: () => s.el("972119").then(s.bind(s, "972119")),
   webpackId: "972119"
 });
 
-function O(e) {
+function M(e) {
   return e < p.PAGE_WIDTH_THRESHOLD ? p.PageSizes.SMALL : p.PageSizes.LARGE
 }
 l.default.initialize();
@@ -51,9 +51,9 @@ class h extends r.PureComponent {
   renderCustomErrorMessage() {
     return (0, a.jsxs)("div", {
       children: [(0, a.jsx)("p", {
-        children: P.default.Messages.ERRORS_STORE_CRASH
+        children: C.default.Messages.ERRORS_STORE_CRASH
       }), (0, a.jsx)("p", {
-        children: P.default.Messages.ERRORS_ACTION_TO_TAKE
+        children: C.default.Messages.ERRORS_ACTION_TO_TAKE
       })]
     })
   }
@@ -62,10 +62,10 @@ class h extends r.PureComponent {
       isAuthenticated: e,
       location: t
     } = this.props, s = e ? (0, a.jsx)("div", {
-      className: C.applicationStore,
+      className: P.applicationStore,
       children: this.renderContent()
-    }) : (0, a.jsx)(M, {
-      className: C.applicationStore,
+    }) : (0, a.jsx)(O, {
+      className: P.applicationStore,
       location: t,
       render: this.renderContent
     });
@@ -97,7 +97,7 @@ class h extends r.PureComponent {
           slug: r,
           location: i,
           storeListingId: u.store_listing_id,
-          pageSize: O(l)
+          pageSize: M(l)
         })
       })
     }, this.renderContent = () => (0, a.jsxs)(i.Switch, {

@@ -25,10 +25,10 @@ var a = s("37983"),
   N = s("299285"),
   p = s("69927"),
   g = s("791160"),
-  P = s("661579"),
-  C = s("539938"),
-  M = s("393414"),
-  O = s("915639"),
+  C = s("661579"),
+  P = s("539938"),
+  O = s("393414"),
+  M = s("915639"),
   h = s("161778"),
   L = s("305961"),
   x = s("957255"),
@@ -39,8 +39,8 @@ var a = s("37983"),
   j = s("698041"),
   G = s("167726"),
   k = s("471671"),
-  y = s("895530"),
-  B = s("145131"),
+  B = s("895530"),
+  y = s("145131"),
   H = s("519311"),
   K = s("83900"),
   W = s("216422"),
@@ -132,10 +132,10 @@ class eE extends r.PureComponent {
       applicationId: r,
       slug: n
     } = this.props;
-    null == s && (null != a && null != e && n !== e.slug && (0, M.replaceWith)({
+    null == s && (null != a && null != e && n !== e.slug && (0, O.replaceWith)({
       pathname: eo.Routes.APPLICATION_STORE_LISTING_SKU(e.id, e.slug),
       search: location.search
-    }), null != r && null != t && null != t.slug && n !== t.slug && (0, M.replaceWith)({
+    }), null != r && null != t && null != t.slug && n !== t.slug && (0, O.replaceWith)({
       pathname: eo.Routes.APPLICATION_STORE_LISTING_APPLICATION(t.id, t.slug),
       search: location.search
     }))
@@ -169,28 +169,28 @@ class eE extends r.PureComponent {
       channel: s,
       isAuthenticated: n
     } = this.props;
-    return (0, a.jsx)(C.default, {
+    return (0, a.jsx)(P.default, {
       isAuthenticated: n,
       toolbar: this.renderHeaderToolbar(e, t),
       children: null != s ? (0, a.jsxs)(r.Fragment, {
-        children: [(0, a.jsx)(C.default.Icon, {
+        children: [(0, a.jsx)(P.default.Icon, {
           icon: F.default,
           "aria-label": ec.default.Messages.STORE_CHANNEL
-        }), (0, a.jsx)(C.default.Title, {
+        }), (0, a.jsx)(P.default.Title, {
           children: s.name
         })]
       }) : null != t && t.premium ? (0, a.jsxs)(r.Fragment, {
-        children: [(0, a.jsx)(C.default.Icon, {
+        children: [(0, a.jsx)(P.default.Icon, {
           icon: W.default,
           "aria-label": ec.default.Messages.PREMIUM
         }), (0, a.jsx)(er.default, {
           sku: t
         })]
       }) : null != t ? (0, a.jsxs)(r.Fragment, {
-        children: [(0, a.jsx)(C.default.Icon, {
+        children: [(0, a.jsx)(P.default.Icon, {
           icon: F.default,
           "aria-label": ec.default.Messages.STORE_CHANNEL
-        }), (0, a.jsx)(C.default.Title, {
+        }), (0, a.jsx)(P.default.Title, {
           children: t.name
         })]
       }) : null
@@ -288,7 +288,7 @@ class eE extends r.PureComponent {
     } = t;
     if (null == n) throw Error("Rendering ApplicationStoreListing without description");
     return (0, a.jsxs)(r.Fragment, {
-      children: [(0, a.jsx)(y.default, {
+      children: [(0, a.jsx)(B.default, {
         tag: "h1",
         children: ec.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
           name: s.name
@@ -383,9 +383,9 @@ class eE extends r.PureComponent {
       isAuthenticated: i
     } = this.props;
     if (null == e || null == t || null == s || s.isSlimDirectoryVersion()) return (0, a.jsxs)(r.Fragment, {
-      children: [this.renderHeader(e, t), (0, a.jsx)(B.default, {
-        align: B.default.Align.CENTER,
-        justify: B.default.Justify.CENTER,
+      children: [this.renderHeader(e, t), (0, a.jsx)(y.default, {
+        align: y.default.Align.CENTER,
+        justify: y.default.Justify.CENTER,
         children: (0, a.jsx)(d.Spinner, {
           className: e_.spinner
         })
@@ -548,7 +548,7 @@ class eE extends r.PureComponent {
             className: i(e_.headerPurchase, {
               [e_.active]: o
             }),
-            children: [null != t ? (0, P.default)(t) : null, null != e && null != t ? (0, a.jsx)(f.default, {
+            children: [null != t ? (0, C.default)(t) : null, null != e && null != t ? (0, a.jsx)(f.default, {
               wrapperClassName: e_.headerActionButton,
               applicationId: e.id,
               skuId: t.id,
@@ -588,15 +588,15 @@ class eE extends r.PureComponent {
         sku: s,
         pageSize: r
       } = this.props;
-      return null == e || null == s || null == t || t.isSlimDirectoryVersion() ? (0, a.jsx)(B.default, {
-        align: B.default.Align.CENTER,
-        justify: B.default.Justify.CENTER,
+      return null == e || null == s || null == t || t.isSlimDirectoryVersion() ? (0, a.jsx)(y.default, {
+        align: y.default.Align.CENTER,
+        justify: y.default.Justify.CENTER,
         children: (0, a.jsx)(d.Spinner, {})
       }) : r === eu.PageSizes.SMALL ? this.renderSmall(e, t, s) : this.renderLarge(e, t, s)
     }
   }
 }
-var eI = (0, R.default)((0, m.default)(l.default.connectStores([D.default, h.default, O.default, k.default, j.default, b.default, G.default, A.default, N.default, v.default, L.default, U.default], e => {
+var eI = (0, R.default)((0, m.default)(l.default.connectStores([D.default, h.default, M.default, k.default, j.default, b.default, G.default, A.default, N.default, v.default, L.default, U.default], e => {
   let t, s, a, {
     inputSkuId: r,
     applicationId: n,
@@ -629,7 +629,7 @@ var eI = (0, R.default)((0, m.default)(l.default.connectStores([D.default, h.def
     isInTestMode: null != n && o,
     matureAgree: D.default.didMatureAgree,
     theme: h.default.theme,
-    locale: O.default.locale,
+    locale: M.default.locale,
     guild: null != u ? L.default.getGuild(u.getGuildId()) : null
   }
 })(eE)))
