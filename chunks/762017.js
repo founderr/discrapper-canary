@@ -27,6 +27,11 @@ let o = {
     inlineRequire: () => E("728966").default,
     hasStoreChangeListeners: !0
   },
+  ChannelSafetyWarningsManager: {
+    actions: ["CHANNEL_SELECT", "CHANNEL_UPDATES"],
+    inlineRequire: () => E("578165").default,
+    neverLoadBeforeConnectionOpen: !0
+  },
   ClydeAuthorizeManager: {
     actions: ["MESSAGE_FAILED_CLYDE_CONSENT"],
     inlineRequire: () => E("887418").default
