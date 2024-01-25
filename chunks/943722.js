@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return O
   }
 }), n("222007");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
@@ -34,20 +34,20 @@ function M(e) {
   let {
     emoji: t,
     className: n,
-    animate: l = !0,
+    animate: a = !0,
     hideTooltip: s
   } = e, r = _.AnimateEmoji.useSetting(), c = null != t.id ? ":".concat(t.name, ":") : f.default.translateSurrogatesToInlineEmoji(t.name), d = {
     className: i(I.emoji, n),
     emojiId: t.id,
     emojiName: t.name,
     autoplay: !0,
-    animated: !!(t.animated && r && l)
+    animated: !!(t.animated && r && a)
   };
-  return s ? (0, a.jsx)(o.default, {
+  return s ? (0, l.jsx)(o.default, {
     ...d
-  }) : (0, a.jsx)(u.Tooltip, {
+  }) : (0, l.jsx)(u.Tooltip, {
     text: c,
-    children: e => (0, a.jsx)(o.default, {
+    children: e => (0, l.jsx)(o.default, {
       ...e,
       ...d
     })
@@ -57,8 +57,8 @@ let h = e => {
   let {
     className: t,
     text: n
-  } = e, s = l.useRef(null), r = l.useRef(null), [o, c] = l.useState(!1);
-  return l.useLayoutEffect(() => {
+  } = e, s = a.useRef(null), r = a.useRef(null), [o, c] = a.useState(!1);
+  return a.useLayoutEffect(() => {
     let {
       current: e
     } = s, {
@@ -67,17 +67,17 @@ let h = e => {
     if (null == e || null == t) return;
     let n = e.clientWidth < t.clientWidth && e.clientHeight <= t.clientHeight;
     c(!n)
-  }, [n]), (0, a.jsx)(u.Tooltip, {
+  }, [n]), (0, l.jsx)(u.Tooltip, {
     text: o || null == n || "" === n ? null : n,
     delay: 150,
     "aria-label": !1,
-    children: e => (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)("div", {
+    children: e => (0, l.jsxs)(l.Fragment, {
+      children: [(0, l.jsx)("div", {
         ...e,
         className: t,
         ref: s,
         children: n
-      }), (0, a.jsx)("div", {
+      }), (0, l.jsx)("div", {
         className: i(I.textRuler, t),
         ref: r,
         "aria-hidden": !0,
@@ -90,7 +90,7 @@ var O = e => {
   var t;
   let {
     activities: n,
-    applicationStream: l,
+    applicationStream: a,
     className: s,
     textClassName: i,
     emojiClassName: u,
@@ -107,10 +107,10 @@ var O = e => {
     guildId: null == y ? void 0 : y.guild_id,
     location: "ActivityStatus"
   }), P = null, H = j && null != R && C.default.can(p.Permissions.CONNECT, y);
-  H ? P = (0, a.jsx)(A.default, {
+  H ? P = (0, l.jsx)(A.default, {
     className: u,
     hangStatusActivity: R
-  }) : null != U && null != U.emoji && !_ && (P = (0, a.jsx)(M, {
+  }) : null != U && null != U.emoji && !_ && (P = (0, l.jsx)(M, {
     emoji: U.emoji,
     animate: o,
     hideTooltip: f,
@@ -118,14 +118,14 @@ var O = e => {
   }));
   let L = (0, r.useStateFromStores)([N.default], () => null != O ? N.default.getStatus(O.id) : null),
     G = null !== L && [p.StatusTypes.OFFLINE, p.StatusTypes.INVISIBLE].includes(L),
-    D = null === (t = (0, d.default)(n, l, void 0, H)) || void 0 === t ? void 0 : t.activityText,
+    D = null === (t = (0, d.default)(n, a, void 0, H)) || void 0 === t ? void 0 : t.activityText,
     b = null != D && D.length > 0;
-  return G || null == P && !b ? null : (0, a.jsxs)("div", {
+  return G || null == P && !b ? null : (0, l.jsxs)("div", {
     className: s,
-    children: [P, (0, a.jsx)(h, {
+    children: [P, (0, l.jsx)(h, {
       text: D,
       className: i
-    }), null != n && n.some(c.default) ? (0, a.jsx)(v.default, {
+    }), null != n && n.some(c.default) ? (0, l.jsx)(v.default, {
       width: 16,
       height: 16,
       className: I.icon

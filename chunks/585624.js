@@ -6,10 +6,10 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983");
 s("884691");
-var n = s("140944"),
-  r = s("521313"),
-  l = s("869816"),
-  i = s("300598"),
+var r = s("140944"),
+  n = s("521313"),
+  i = s("869816"),
+  l = s("300598"),
   u = s("515723"),
   o = s("368510"),
   d = s("536316"),
@@ -22,9 +22,9 @@ var n = s("140944"),
   S = s("886676"),
   R = s("972956"),
   m = s("521507"),
-  p = s("175949"),
+  A = s("175949"),
   N = s("837861"),
-  A = s("664803"),
+  p = s("664803"),
   g = s("854299"),
   P = s("700684"),
   C = s("479997"),
@@ -34,10 +34,10 @@ var n = s("140944"),
   L = s("930767"),
   x = s("398683"),
   v = s("816571"),
-  U = s("114244"),
-  b = s("991119");
-let D = new Map([
-  ["BG", l],
+  D = s("114244"),
+  U = s("991119");
+let b = new Map([
+  ["BG", i],
   ["CZ", o],
   ["HU", S],
   ["RO", x],
@@ -48,22 +48,22 @@ let D = new Map([
   ["IE", R],
   ["LV", P],
   ["LI", N],
-  ["LT", A],
+  ["LT", p],
   ["LU", g],
   ["MT", C],
-  ["SK", b],
-  ["SI", U],
+  ["SK", U],
+  ["SI", D],
   ["GR", T],
   ["FI", E],
   ["PT", L],
   ["NO", O],
-  ["BE", r],
-  ["AT", n],
-  ["CH", i],
+  ["BE", n],
+  ["AT", r],
+  ["CH", l],
   ["FR", I],
   ["DE", d],
   ["ES", _],
-  ["IT", p],
+  ["IT", A],
   ["NL", M],
   ["PL", h],
   ["HR", f]
@@ -74,12 +74,12 @@ function j(e) {
     className: t,
     countryCode: s
   } = e;
-  if (null == s || !D.has(s)) return null;
-  let n = D.get(s);
+  if (null == s || !b.has(s)) return null;
+  let r = b.get(s);
   return (0, a.jsx)("img", {
     className: t,
     "aria-hidden": !0,
     alt: "Wumpus holding a country-specific flag",
-    src: n
+    src: r
   })
 }

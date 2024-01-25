@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return b
   }
 }), n("794252");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("506838"),
@@ -47,23 +47,23 @@ function L(e) {
   let {
     user: t,
     guildId: n,
-    isTryItOutFlow: l,
+    isTryItOutFlow: a,
     forProfileEffectModal: s
   } = e, i = (0, u.useStateFromStores)([g.default], () => g.default.getUserProfile(t.id), [t]), r = (0, u.useStateFromStores)([A.default], () => A.default.getGuild(n), [n]), d = (0, f.useClydeProfilesEnabled)(r);
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(null == i ? void 0 : i.profileFetchFailed) && (!t.isClyde() || d) && (0, a.jsx)(c.Tooltip, {
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(null == i ? void 0 : i.profileFetchFailed) && (!t.isClyde() || d) && (0, l.jsx)(c.Tooltip, {
       text: y.default.Messages.USER_PROFILE_LOAD_ERROR,
       spacing: 16,
-      children: e => (0, a.jsx)(_.default, {
+      children: e => (0, l.jsx)(_.default, {
         ...e,
         className: j.warningCircleIcon,
         color: o.default.unsafe_rawColors.YELLOW_300.css
       })
-    }), (0, a.jsx)(M.default, {
+    }), (0, l.jsx)(M.default, {
       className: s ? j.profileBadgesCompactNoTouch : j.profileBadges,
       user: t,
       guildId: n,
-      isTryItOutFlow: l,
+      isTryItOutFlow: a,
       size: M.BadgeSizes.SIZE_22
     })]
   })
@@ -87,7 +87,7 @@ function D(e) {
     hasProfileEffect: p
   } = e, {
     profileTheme: M
-  } = l.useContext(h.UserProfileContext), L = l.useContext(m.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), b = C.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, R.PremiumTypes.TIER_2), B = l.useMemo(() => (0, T.shouldDisableUserPresenceInChannel)(t, E), [t, E]), F = _ || t.isClyde(), {
+  } = a.useContext(h.UserProfileContext), L = a.useContext(m.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), b = C.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, R.PremiumTypes.TIER_2), B = a.useMemo(() => (0, T.shouldDisableUserPresenceInChannel)(t, E), [t, E]), F = _ || t.isClyde(), {
     avatarDecorationSrc: k,
     avatarSrc: w,
     eventHandlers: V
@@ -96,10 +96,10 @@ function D(e) {
     guildId: f,
     size: P,
     animateOnHover: g
-  }), W = (0, a.jsx)("div", {
+  }), W = (0, l.jsx)("div", {
     className: j.avatarHoverTarget,
     ...V,
-    children: (0, a.jsx)(G, {
+    children: (0, l.jsx)(G, {
       src: null != s ? s : w,
       avatarDecoration: k,
       size: P,
@@ -121,8 +121,8 @@ function D(e) {
       hasProfileEffect: p
     })
   }).with(U.UserProfileTypes.POMELO_POPOUT, () => j.avatarPositionPomelo).with(U.UserProfileTypes.PANEL, () => j.avatarPositionPanel).exhaustive();
-  return (0, a.jsx)(a.Fragment, {
-    children: (0, a.jsxs)(c.Clickable, {
+  return (0, l.jsx)(l.Fragment, {
+    children: (0, l.jsxs)(c.Clickable, {
       className: i({
         [j.clickable]: !F,
         [j.avatarWrapperNonUserBot]: D,
@@ -139,7 +139,7 @@ function D(e) {
       children: [W, !F && function() {
         let e = null != k,
           t = e ? H : (0, c.getAvatarSize)(P);
-        return (0, a.jsx)(S.default, {
+        return (0, l.jsx)(S.default, {
           mask: null == o || o === x.StatusTypes.UNKNOWN || B ? S.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, d]).with([!0, !0], () => S.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => S.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => S.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => S.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
           className: e ? j.avatarDecorationHint : j.avatarHint,
           style: e ? {
@@ -147,7 +147,7 @@ function D(e) {
           } : void 0,
           width: t,
           height: t,
-          children: (0, a.jsx)("div", {
+          children: (0, l.jsx)("div", {
             className: j.avatarHintInner,
             children: y.default.Messages.VIEW_PROFILE
           })
@@ -161,7 +161,7 @@ function b(e) {
   let {
     user: t,
     displayProfile: n,
-    guildId: l,
+    guildId: a,
     channelId: s,
     onClose: i,
     isMobile: r,
@@ -172,35 +172,35 @@ function b(e) {
     showPremiumBadgeUpsell: f = !0,
     upsell: T
   } = e;
-  return (0, a.jsxs)(a.Fragment, {
-    children: [T, (0, a.jsx)(p.default, {
+  return (0, l.jsxs)(l.Fragment, {
+    children: [T, (0, l.jsx)(p.default, {
       user: t,
       displayProfile: n,
       onClose: i,
-      guildId: l,
+      guildId: a,
       profileType: U.UserProfileTypes.POPOUT,
       showPremiumBadgeUpsell: f,
       isHovering: d,
       hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null
-    }), (null == n ? void 0 : n.profileEffectId) != null && (0, a.jsx)(E.default, {
+    }), (null == n ? void 0 : n.profileEffectId) != null && (0, l.jsx)(E.default, {
       profileEffectId: null == n ? void 0 : n.profileEffectId,
       bannerAdjustment: 0,
       isHovering: d
-    }), (0, a.jsx)(D, {
+    }), (0, l.jsx)(D, {
       user: t,
       displayProfile: n,
       status: u ? x.StatusTypes.STREAMING : o,
       isMobile: r,
-      guildId: l,
+      guildId: a,
       channelId: s,
       onClose: i,
       disableUserProfileLink: c,
       hasBanner: (null == n ? void 0 : n.banner) != null,
       hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
       profileType: U.UserProfileTypes.POPOUT
-    }), (0, a.jsx)(L, {
+    }), (0, l.jsx)(L, {
       user: t,
-      guildId: l
+      guildId: a
     })]
   })
 }

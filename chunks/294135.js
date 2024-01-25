@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 }), s("70102"), s("808653"), s("424973"), s("843762"), s("222007"), s("702976");
 var a = s("37983"),
-  n = s("884691"),
-  r = s("414456"),
-  l = s.n(r),
-  i = s("446674"),
+  r = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
+  l = s("446674"),
   u = s("862337"),
   o = s("819855"),
   d = s("77078"),
@@ -21,9 +21,9 @@ var a = s("37983"),
   S = s("151540"),
   R = s("86621"),
   m = s("984376"),
-  p = s("84460"),
+  A = s("84460"),
   N = s("299285"),
-  A = s("69927"),
+  p = s("69927"),
   g = s("791160"),
   P = s("661579"),
   C = s("539938"),
@@ -33,24 +33,24 @@ var a = s("37983"),
   L = s("305961"),
   x = s("957255"),
   v = s("71010"),
-  U = s("290877"),
-  b = s("437712"),
-  D = s("552712"),
+  D = s("290877"),
+  U = s("437712"),
+  b = s("552712"),
   j = s("698041"),
   G = s("167726"),
   k = s("471671"),
   y = s("895530"),
   B = s("145131"),
-  K = s("519311"),
-  H = s("83900"),
-  F = s("216422"),
-  W = s("547896"),
+  H = s("519311"),
+  K = s("83900"),
+  W = s("216422"),
+  F = s("547896"),
   w = s("599110"),
   V = s("306160"),
   Y = s("568734"),
   z = s("153160"),
-  X = s("271560"),
-  Q = s("778043"),
+  Q = s("271560"),
+  X = s("778043"),
   J = s("128430"),
   Z = s("824021"),
   q = s("542480"),
@@ -59,16 +59,16 @@ var a = s("37983"),
   et = s("704861"),
   es = s("503278"),
   ea = s("23985"),
-  en = s("572158"),
-  er = s("374266"),
-  el = s("951765"),
-  ei = s("729199"),
+  er = s("572158"),
+  en = s("374266"),
+  ei = s("951765"),
+  el = s("729199"),
   eu = s("75576"),
   eo = s("49111"),
   ed = s("492249"),
   ec = s("782340"),
   e_ = s("772734");
-class eE extends n.PureComponent {
+class eE extends r.PureComponent {
   get isChannelType() {
     return null != this.props.channel
   }
@@ -78,37 +78,37 @@ class eE extends n.PureComponent {
       storeListing: t,
       isFetchingEntitlements: s,
       shouldFetchStatistics: a,
-      didFetchEntitlements: n,
-      location: r,
-      fetchStoreListing: l
+      didFetchEntitlements: r,
+      location: n,
+      fetchStoreListing: i
     } = this.props;
-    if (null != r.state) {
+    if (null != n.state) {
       let {
         analyticsSource: e,
         analyticsProperties: t
-      } = r.state;
+      } = n.state;
       this._analyticsSource = e, this._extraAnalyticsProperties = t
     } else this._analyticsSource = eo.DIRECT_ANALYTICS_LOCATION;
-    (null == t || t.isSlimDirectoryVersion()) && l(), null != e && (!s && !n && (0, E.fetchUserEntitlementsForApplication)(e.applicationId), a && c.default.wait(() => (0, _.fetchStatisticsForApplication)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug()
+    (null == t || t.isSlimDirectoryVersion()) && i(), null != e && (!s && !r && (0, E.fetchUserEntitlementsForApplication)(e.applicationId), a && c.default.wait(() => (0, _.fetchStatisticsForApplication)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug()
   }
   componentDidUpdate(e) {
     let {
       locale: t,
       sku: s,
       shouldFetchStatistics: a,
-      skuId: n,
-      storeListingId: r,
-      slug: l,
-      storeListing: i,
+      skuId: r,
+      storeListingId: n,
+      slug: i,
+      storeListing: l,
       fetchStoreListing: u
     } = this.props;
-    if (i !== e.storeListing && null != i && (0, Q.deepLinkRouteIfLandedAndNotAuthed)(ed.RPCDeepLinks.STORE_LISTING, {
-        skuId: n,
-        slug: l
-      }), (t !== e.locale || n !== e.skuId) && u(), a && !e.shouldFetchStatistics) {
+    if (l !== e.storeListing && null != l && (0, X.deepLinkRouteIfLandedAndNotAuthed)(ed.RPCDeepLinks.STORE_LISTING, {
+        skuId: r,
+        slug: i
+      }), (t !== e.locale || r !== e.skuId) && u(), a && !e.shouldFetchStatistics) {
       if (null == s) throw Error("Unexpected missing sku");
       c.default.wait(() => (0, _.fetchStatisticsForApplication)(s.applicationId))
-    }(n !== e.skuId || r !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug()
+    }(r !== e.skuId || n !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug()
   }
   componentWillUnmount() {
     this.showCopyLinkTextTimeout.stop();
@@ -129,13 +129,13 @@ class eE extends n.PureComponent {
       application: t,
       channel: s,
       skuId: a,
-      applicationId: n,
-      slug: r
+      applicationId: r,
+      slug: n
     } = this.props;
-    null == s && (null != a && null != e && r !== e.slug && (0, M.replaceWith)({
+    null == s && (null != a && null != e && n !== e.slug && (0, M.replaceWith)({
       pathname: eo.Routes.APPLICATION_STORE_LISTING_SKU(e.id, e.slug),
       search: location.search
-    }), null != n && null != t && null != t.slug && r !== t.slug && (0, M.replaceWith)({
+    }), null != r && null != t && null != t.slug && n !== t.slug && (0, M.replaceWith)({
       pathname: eo.Routes.APPLICATION_STORE_LISTING_APPLICATION(t.id, t.slug),
       search: location.search
     }))
@@ -148,7 +148,7 @@ class eE extends n.PureComponent {
       analyticsContext: a
     } = this.props;
     if (this._trackedViewed || null == e || null == t || null == t.description || !(this.isChannelType || s)) return;
-    let n = t.carouselItems.reduce((e, t) => (null != t.assetId ? e.images++ : e.videos++, e), {
+    let r = t.carouselItems.reduce((e, t) => (null != t.assetId ? e.images++ : e.videos++, e), {
       images: 0,
       videos: 0
     });
@@ -157,8 +157,8 @@ class eE extends n.PureComponent {
       load_id: a.loadId,
       has_description: null != t.description && t.description.length > 0,
       has_staff_review: null != t.staffNotes,
-      carousel_image_count: n.images,
-      carousel_video_count: n.videos,
+      carousel_image_count: r.images,
+      carousel_video_count: r.videos,
       location: a.location.page,
       source: this._analyticsSource,
       ...(0, g.default)(e, !0)
@@ -167,28 +167,28 @@ class eE extends n.PureComponent {
   renderHeader(e, t) {
     let {
       channel: s,
-      isAuthenticated: r
+      isAuthenticated: n
     } = this.props;
     return (0, a.jsx)(C.default, {
-      isAuthenticated: r,
+      isAuthenticated: n,
       toolbar: this.renderHeaderToolbar(e, t),
-      children: null != s ? (0, a.jsxs)(n.Fragment, {
+      children: null != s ? (0, a.jsxs)(r.Fragment, {
         children: [(0, a.jsx)(C.default.Icon, {
-          icon: W.default,
+          icon: F.default,
           "aria-label": ec.default.Messages.STORE_CHANNEL
         }), (0, a.jsx)(C.default.Title, {
           children: s.name
         })]
-      }) : null != t && t.premium ? (0, a.jsxs)(n.Fragment, {
-        children: [(0, a.jsx)(C.default.Icon, {
-          icon: F.default,
-          "aria-label": ec.default.Messages.PREMIUM
-        }), (0, a.jsx)(en.default, {
-          sku: t
-        })]
-      }) : null != t ? (0, a.jsxs)(n.Fragment, {
+      }) : null != t && t.premium ? (0, a.jsxs)(r.Fragment, {
         children: [(0, a.jsx)(C.default.Icon, {
           icon: W.default,
+          "aria-label": ec.default.Messages.PREMIUM
+        }), (0, a.jsx)(er.default, {
+          sku: t
+        })]
+      }) : null != t ? (0, a.jsxs)(r.Fragment, {
+        children: [(0, a.jsx)(C.default.Icon, {
+          icon: F.default,
           "aria-label": ec.default.Messages.STORE_CHANNEL
         }), (0, a.jsx)(C.default.Title, {
           children: t.name
@@ -199,7 +199,7 @@ class eE extends n.PureComponent {
   parseMediaItems(e, t, s) {
     let {
       assetId: a,
-      youtubeVideoId: n
+      youtubeVideoId: r
     } = t;
     if (null != a) {
       let t = s.find(e => e.id === a);
@@ -211,40 +211,40 @@ class eE extends n.PureComponent {
         if (null == s || null == a) throw Error("ApplicationStoreListing.parseMediaItems: Video and Image assets must have a width and height defined");
         return t.mimeType.startsWith("video/") ? {
           type: eo.CarouselMediaTypes.VIDEO,
-          thumbnailSrc: (0, X.getAssetURL)(e.id, t, 1024, "webp"),
-          src: (0, X.getAssetURL)(e.id, t),
+          thumbnailSrc: (0, Q.getAssetURL)(e.id, t, 1024, "webp"),
+          src: (0, Q.getAssetURL)(e.id, t),
           height: a,
           width: s
         } : {
           type: eo.CarouselMediaTypes.IMG,
-          src: (0, X.getAssetURL)(e.id, t, 1024),
+          src: (0, Q.getAssetURL)(e.id, t, 1024),
           height: a,
           width: s
         }
       }
     }
-    if (null != n) return {
+    if (null != r) return {
       type: eo.CarouselMediaTypes.YOUTUBE_VIDEO,
-      youtubeVideoId: n
+      youtubeVideoId: r
     };
     throw Error("Store carousel item must have one of assetId or youtubeVideoId")
   }
   renderHeaderAssets(e, t, s) {
     let {
-      theme: n
-    } = this.props, r = t.headerBackground, l = (0, o.isThemeLight)(n) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
-    return null == r || null == l ? (0, a.jsx)("div", {
+      theme: r
+    } = this.props, n = t.headerBackground, i = (0, o.isThemeLight)(r) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
+    return null == n || null == i ? (0, a.jsx)("div", {
       className: e_.noHeaderSpacer
     }) : (0, a.jsxs)("div", {
       className: e_.headerAssets,
       children: [(0, a.jsx)("div", {
         className: e_.headerBackground,
         style: {
-          backgroundImage: "url(".concat((0, X.getAssetURL)(e.id, r, 1024, "png"), ")")
+          backgroundImage: "url(".concat((0, Q.getAssetURL)(e.id, n, 1024, "png"), ")")
         }
       }), (0, a.jsx)("img", {
         className: e_.headerLogo,
-        src: (0, X.getAssetURL)(e.id, l, 1024, "png"),
+        src: (0, Q.getAssetURL)(e.id, i, 1024, "png"),
         alt: s.name
       })]
     })
@@ -260,14 +260,14 @@ class eE extends n.PureComponent {
     if (null == e.guild) return null;
     let {
       channel: s,
-      pageSize: n
+      pageSize: r
     } = this.props;
-    return (0, a.jsx)(ei.default, {
+    return (0, a.jsx)(el.default, {
       skuId: t.id,
       guild: e.guild,
       className: e_.guildInvite,
       inChannel: null != s,
-      pageSize: n
+      pageSize: r
     })
   }
   renderFeatures(e) {
@@ -276,7 +276,7 @@ class eE extends n.PureComponent {
     })
   }
   renderSystemRequirements(e) {
-    return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length ? null : (0, a.jsx)(er.default, {
+    return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length ? null : (0, a.jsx)(en.default, {
       className: e_.systemRequirements,
       systemRequirements: e.systemRequirements,
       pageSize: this.props.pageSize
@@ -284,10 +284,10 @@ class eE extends n.PureComponent {
   }
   renderDescription(e, t, s) {
     let {
-      description: r
+      description: n
     } = t;
-    if (null == r) throw Error("Rendering ApplicationStoreListing without description");
-    return (0, a.jsxs)(n.Fragment, {
+    if (null == n) throw Error("Rendering ApplicationStoreListing without description");
+    return (0, a.jsxs)(r.Fragment, {
       children: [(0, a.jsx)(y.default, {
         tag: "h1",
         children: ec.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
@@ -296,7 +296,7 @@ class eE extends n.PureComponent {
       }), (0, a.jsx)(S.default, {}), (0, a.jsx)(Z.default, {
         applicationId: e.id,
         blurb: t.summary,
-        description: r,
+        description: n,
         className: e_.description,
         assets: t.assets
       })]
@@ -321,38 +321,38 @@ class eE extends n.PureComponent {
       application: s
     } = this.props;
     if (null == e || null == t || null == s) return null;
-    let n = [],
-      r = s.getSplashURL(1024);
-    null != r && n.push(r), null != t.headerLogoLightTheme && n.unshift((0, X.getAssetURL)(s.id, t.headerLogoLightTheme, 1024, "jpg"));
-    let l = K.default.Product({
+    let r = [],
+      n = s.getSplashURL(1024);
+    null != n && r.push(n), null != t.headerLogoLightTheme && r.unshift((0, Q.getAssetURL)(s.id, t.headerLogoLightTheme, 1024, "jpg"));
+    let i = H.default.Product({
         name: e.name,
         description: null != e.summary && "" !== e.summary ? e.summary : t.tagline,
-        image: K.default.Product.Image(n),
+        image: H.default.Product.Image(r),
         sku: e.id
       }),
-      i = e.getPrice();
-    if (null != i) {
+      l = e.getPrice();
+    if (null != l) {
       let {
         amount: e,
         currency: t
-      } = i;
-      l.offers = K.default.Offer({
+      } = l;
+      i.offers = H.default.Offer({
         priceCurrency: t.toUpperCase(),
         price: (0, z.formatPrice)(e, t, {
           style: "decimal"
         })
       })
     }
-    let u = K.default.ItemPage({
-      mainEntity: l
+    let u = H.default.ItemPage({
+      mainEntity: i
     });
-    return (0, a.jsx)(K.default, {
+    return (0, a.jsx)(H.default, {
       data: u
     })
   }
   renderSmall(e, t, s) {
     return (0, a.jsxs)("div", {
-      className: l(e_.listing, e_.listingSmall),
+      className: i(e_.listing, e_.listingSmall),
       children: [this.renderHeaderAssets(e, t, s), this.renderCarousel(e, t), this.renderWhyYouMightLikeThis(s, t), this.renderDescription(e, t, s), this.renderVerifiedGuildInvite(t, s), this.renderFeatures(s), this.renderSystemRequirements(s), this.renderApplicationContentRating(s), this.renderApplicationLegalInfo(s)]
     })
   }
@@ -379,10 +379,10 @@ class eE extends n.PureComponent {
       application: e,
       sku: t,
       storeListing: s,
-      matureAgree: r,
-      isAuthenticated: l
+      matureAgree: n,
+      isAuthenticated: i
     } = this.props;
-    if (null == e || null == t || null == s || s.isSlimDirectoryVersion()) return (0, a.jsxs)(n.Fragment, {
+    if (null == e || null == t || null == s || s.isSlimDirectoryVersion()) return (0, a.jsxs)(r.Fragment, {
       children: [this.renderHeader(e, t), (0, a.jsx)(B.default, {
         align: B.default.Align.CENTER,
         justify: B.default.Justify.CENTER,
@@ -391,22 +391,22 @@ class eE extends n.PureComponent {
         })
       })]
     });
-    if (!r && t.showAgeGate) {
-      let s = l ? null : (0, a.jsx)("div", {
+    if (!n && t.showAgeGate) {
+      let s = i ? null : (0, a.jsx)("div", {
         className: e_.gatedListing,
         children: this.renderListing()
       });
-      return (0, a.jsxs)(n.Fragment, {
-        children: [(0, a.jsx)(A.AppPageTitle, {
+      return (0, a.jsxs)(r.Fragment, {
+        children: [(0, a.jsx)(p.AppPageTitle, {
           location: e.name
         }), this.renderJsonLD(), this.renderHeader(e, t), (0, a.jsx)(et.default, {
           game: e
         }), s]
       })
     }
-    return l ? (0, a.jsxs)("div", {
+    return i ? (0, a.jsxs)("div", {
       className: e_.listingWrapper,
-      children: [(0, a.jsx)(A.AppPageTitle, {
+      children: [(0, a.jsx)(p.AppPageTitle, {
         location: e.name
       }), this.renderJsonLD(), (0, a.jsx)(T.default, {
         section: eo.AnalyticsSections.NAVIGATION,
@@ -416,7 +416,7 @@ class eE extends n.PureComponent {
         children: this.renderListing()
       })]
     }) : (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(A.AppPageTitle, {
+      children: [(0, a.jsx)(p.AppPageTitle, {
         location: e.name
       }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
     })
@@ -455,9 +455,9 @@ class eE extends n.PureComponent {
       } = this.props;
       null != e && null != t && (0, d.openModalLazy)(async () => {
         let {
-          default: n
+          default: r
         } = await s.el("310688").then(s.bind(s, "310688"));
-        return s => (0, a.jsx)(n, {
+        return s => (0, a.jsx)(r, {
           ...s,
           guild: t,
           channel: e,
@@ -475,7 +475,7 @@ class eE extends n.PureComponent {
         size: d.Button.Sizes.NONE,
         onClick: this.handleCreateInstantInvite,
         className: e_.link,
-        children: (0, a.jsx)(H.default, {
+        children: (0, a.jsx)(K.default, {
           className: e_.linkIcon
         })
       }) : null
@@ -490,7 +490,7 @@ class eE extends n.PureComponent {
         children: t => {
           let {
             onMouseEnter: s,
-            onMouseLeave: n
+            onMouseLeave: r
           } = t;
           return (0, a.jsx)(d.Button, {
             "aria-label": e ? ec.default.Messages.APPLICATION_STORE_LINK_COPIED : ec.default.Messages.COPY_LINK,
@@ -498,9 +498,9 @@ class eE extends n.PureComponent {
             size: d.Button.Sizes.NONE,
             onClick: this.copyCurrentUrl,
             onMouseEnter: s,
-            onMouseLeave: n,
+            onMouseLeave: r,
             className: e_.link,
-            children: (0, a.jsx)(H.default, {
+            children: (0, a.jsx)(K.default, {
               className: e_.linkIcon
             })
           })
@@ -509,9 +509,9 @@ class eE extends n.PureComponent {
     }, this.renderHeaderToolbar = (e, t) => {
       let {
         isInTestMode: s,
-        slug: n,
-        storeListing: r,
-        channel: i,
+        slug: r,
+        storeListing: n,
+        channel: l,
         analyticsContext: {
           location: u
         }
@@ -522,17 +522,17 @@ class eE extends n.PureComponent {
         className: e_.headerBarListing,
         children: [(0, a.jsx)("div", {
           className: e_.headerSection,
-          children: s && null != t ? (0, a.jsx)(el.default, {
-            size: el.TestModeStoreListingButtonEnums.Sizes.MIN,
-            dropdownSize: el.TestModeStoreListingButtonEnums.DropdownSizes.MEDIUM,
-            look: el.TestModeStoreListingButtonEnums.Looks.OUTLINED,
-            color: el.TestModeStoreListingButtonEnums.Colors.YELLOW,
+          children: s && null != t ? (0, a.jsx)(ei.default, {
+            size: ei.TestModeStoreListingButtonEnums.Sizes.MIN,
+            dropdownSize: ei.TestModeStoreListingButtonEnums.DropdownSizes.MEDIUM,
+            look: ei.TestModeStoreListingButtonEnums.Looks.OUTLINED,
+            color: ei.TestModeStoreListingButtonEnums.Colors.YELLOW,
             skuId: t.id,
             className: e_.testModeSelectButton,
-            currentStoreListingId: null != r ? r.id : null,
+            currentStoreListingId: null != n ? n.id : null,
             onStoreListingSelect: e => {
               null != t && (0, I.goToSKUStoreListing)(t.id, {
-                slug: n,
+                slug: r,
                 analyticsSource: {
                   page: u.page,
                   section: eo.AnalyticsSections.NAVIGATION,
@@ -545,7 +545,7 @@ class eE extends n.PureComponent {
         }), (0, a.jsx)("div", {
           className: e_.headerSection,
           children: (0, a.jsxs)("div", {
-            className: l(e_.headerPurchase, {
+            className: i(e_.headerPurchase, {
               [e_.active]: o
             }),
             children: [null != t ? (0, P.default)(t) : null, null != e && null != t ? (0, a.jsx)(f.default, {
@@ -555,8 +555,8 @@ class eE extends n.PureComponent {
               color: d.Button.Colors.GREEN,
               size: d.Button.Sizes.SMALL,
               tooltipPosition: "bottom",
-              entitlementBranchId: null != r ? r.entitlementBranchId : null,
-              channelId: null != i ? i.id : null,
+              entitlementBranchId: null != n ? n.entitlementBranchId : null,
+              channelId: null != l ? l.id : null,
               onStoreListing: !0
             }) : null, (0, a.jsx)(es.default, {
               messageStyle: es.MessageStyles.SHORT,
@@ -569,7 +569,7 @@ class eE extends n.PureComponent {
       if (0 === t.carouselItems.length) return null;
       let {
         pageSize: s,
-        isFocused: n
+        isFocused: r
       } = this.props;
       return (0, a.jsx)(T.default, {
         section: eo.AnalyticsSections.HERO,
@@ -577,7 +577,7 @@ class eE extends n.PureComponent {
           pageSize: s,
           items: t.carouselItems.map(s => this.parseMediaItems(e, s, t.assets)),
           autoplayInterval: 8e3,
-          paused: !n,
+          paused: !r,
           onIntentionalChange: this.trackCarouselScroll
         })
       })
@@ -586,48 +586,48 @@ class eE extends n.PureComponent {
         application: e,
         storeListing: t,
         sku: s,
-        pageSize: n
+        pageSize: r
       } = this.props;
       return null == e || null == s || null == t || t.isSlimDirectoryVersion() ? (0, a.jsx)(B.default, {
         align: B.default.Align.CENTER,
         justify: B.default.Justify.CENTER,
         children: (0, a.jsx)(d.Spinner, {})
-      }) : n === eu.PageSizes.SMALL ? this.renderSmall(e, t, s) : this.renderLarge(e, t, s)
+      }) : r === eu.PageSizes.SMALL ? this.renderSmall(e, t, s) : this.renderLarge(e, t, s)
     }
   }
 }
-var eI = (0, R.default)((0, m.default)(i.default.connectStores([U.default, h.default, O.default, k.default, j.default, D.default, G.default, p.default, N.default, v.default, L.default, b.default], e => {
+var eI = (0, R.default)((0, m.default)(l.default.connectStores([D.default, h.default, O.default, k.default, j.default, b.default, G.default, A.default, N.default, v.default, L.default, U.default], e => {
   let t, s, a, {
-    inputSkuId: n,
-    applicationId: r,
-    storeListingId: l,
-    isAuthenticated: i,
+    inputSkuId: r,
+    applicationId: n,
+    storeListingId: i,
+    isAuthenticated: l,
     channel: u
   } = e;
-  if (null == r) {
-    if (null == n) throw Error("Needs applicationId or skuId");
-    t = n, null != (r = null != (s = D.default.get(n)) ? s.applicationId : null) && (a = N.default.getApplication(r))
-  } else if (null == n) {
+  if (null == n) {
     if (null == r) throw Error("Needs applicationId or skuId");
-    null != (a = N.default.getApplication(r)) && (t = a.destinationSkuId), s = null != t ? D.default.get(t) : null
+    t = r, null != (n = null != (s = b.default.get(r)) ? s.applicationId : null) && (a = N.default.getApplication(n))
+  } else if (null == r) {
+    if (null == n) throw Error("Needs applicationId or skuId");
+    null != (a = N.default.getApplication(n)) && (t = a.destinationSkuId), s = null != t ? b.default.get(t) : null
   }(null == s ? void 0 : s.flags) != null && (0, Y.hasFlag)(s.flags, eo.SKUFlags.STICKER_PACK) && (s = null);
-  let o = null != r && (G.default.inTestModeForApplication(r) || p.default.inDevModeForApplication(r));
+  let o = null != n && (G.default.inTestModeForApplication(n) || A.default.inDevModeForApplication(n));
   return {
     skuId: t,
-    application: null != r ? N.default.getApplication(r) : null,
-    isFetchingEntitlements: null != r && b.default.applicationIdsFetching.has(r),
-    didFetchEntitlements: null != r && b.default.applicationIdsFetched.has(r),
-    shouldFetchStatistics: i && null != r && v.default.shouldFetchStatisticsForApplication(r),
+    application: null != n ? N.default.getApplication(n) : null,
+    isFetchingEntitlements: null != n && U.default.applicationIdsFetching.has(n),
+    didFetchEntitlements: null != n && U.default.applicationIdsFetched.has(n),
+    shouldFetchStatistics: l && null != n && v.default.shouldFetchStatisticsForApplication(n),
     sku: s,
     isFocused: k.default.isFocused(),
     storeListing: j.default.getStoreListing({
-      storeListingId: l,
+      storeListingId: i,
       skuId: t,
       channelId: null != u ? u.id : null,
       isTestMode: o
     }),
-    isInTestMode: null != r && o,
-    matureAgree: U.default.didMatureAgree,
+    isInTestMode: null != n && o,
+    matureAgree: D.default.didMatureAgree,
     theme: h.default.theme,
     locale: O.default.locale,
     guild: null != u ? L.default.getGuild(u.getGuildId()) : null

@@ -4,21 +4,21 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  s = n.n(l),
+var a = n("414456"),
+  s = n.n(a),
   i = n("383957");
 
 function r(e) {
   let {
     children: t,
     lastSection: n = !1,
-    className: l,
+    className: a,
     ...r
   } = e;
-  return (0, a.jsx)("div", {
-    className: s(i.section, l, {
+  return (0, l.jsx)("div", {
+    className: s(i.section, a, {
       [i.lastSection]: n
     }),
     ...r,

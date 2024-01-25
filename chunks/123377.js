@@ -1,5 +1,5 @@
 "use strict";
-let a, l;
+let l, a;
 n.r(t), n.d(t, {
   CopiableField: function() {
     return S
@@ -28,8 +28,8 @@ function S(e) {
     disableCopy: C,
     showCopyIcon: N
   } = e, [g, v] = i.useState(0), [p, I] = i.useState(!1), [M, h] = i.useState(!1);
-  if (i.useEffect(() => (a = new o.Timeout, l = new o.Timeout, function() {
-      a.stop(), l.stop()
+  if (i.useEffect(() => (l = new o.Timeout, a = new o.Timeout, function() {
+      l.stop(), a.stop()
     }), []), !T.SUPPORTS_COPY || C) return (0, s.jsx)(s.Fragment, {
     children: m
   });
@@ -40,12 +40,12 @@ function S(e) {
     y = R ? c.TooltipColors.RED : c.TooltipColors.GREEN,
     j = p ? y : c.TooltipColors.PRIMARY,
     P = () => {
-      a.stop(), h(!1)
+      l.stop(), h(!1)
     },
     H = e => {
       (0, T.copy)(r), f.default.track(E.AnalyticEvents.TEXT_COPIED, {
         type: S
-      }), "function" == typeof e && e(), !M && v(g + 1), h(!0), I(!0), a.start(1e3, () => h(!1)), l.start(2e3, () => v(0))
+      }), "function" == typeof e && e(), !M && v(g + 1), h(!0), I(!0), l.start(1e3, () => h(!1)), a.start(2e3, () => v(0))
     };
   return (0, s.jsx)(c.Tooltip, {
     delay: 500,
@@ -62,14 +62,14 @@ function S(e) {
     children: e => {
       let {
         onClick: t,
-        onMouseEnter: a,
-        ...l
+        onMouseEnter: l,
+        ...a
       } = e;
       return (0, s.jsx)(c.Clickable, {
-        ...l,
+        ...a,
         className: _.clickTarget,
         onMouseEnter: () => {
-          p ? P() : "function" == typeof a && a()
+          p ? P() : "function" == typeof l && l()
         },
         onClick: () => {
           H(t)

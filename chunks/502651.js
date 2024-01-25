@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("954016"),
-  l = n("49111");
+var l = n("954016"),
+  a = n("49111");
 
 function s(e) {
-  return e.type === l.ActivityTypes.STREAMING && null != e.url && a.validStreamURL.test(e.url)
+  return e.type === a.ActivityTypes.STREAMING && null != e.url && l.validStreamURL.test(e.url)
 }
 
 function i(e) {

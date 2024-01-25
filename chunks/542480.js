@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  r = s("77078"),
-  l = s("895530"),
-  i = s("437825"),
+  r = s("884691"),
+  n = s("77078"),
+  i = s("895530"),
+  l = s("437825"),
   u = s("36694"),
   o = s("530311"),
   d = s("824326"),
@@ -21,7 +21,7 @@ var a = s("37983"),
   S = s("31225"),
   R = s("49111"),
   m = s("782340"),
-  p = s("786832");
+  A = s("786832");
 let N = [{
     feature: R.SKUFeatureTypes.SINGLE_PLAYER,
     getText: () => m.default.Messages.APPLICATION_STORE_SINGLE_PLAYER,
@@ -71,7 +71,7 @@ let N = [{
     feature: R.SKUFeatureTypes.SPECTATOR_MODE,
     getText: () => m.default.Messages.APPLICATION_STORE_SPECTATOR_MODE,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_SPECTATOR_MODE_TOOLTIP,
-    IconComponent: i.default
+    IconComponent: l.default
   }, {
     feature: R.SKUFeatureTypes.CONTROLLER_SUPPORT,
     getText: () => m.default.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT,
@@ -88,29 +88,29 @@ let N = [{
     getTooltip: () => m.default.Messages.APPLICATION_STORE_SECURE_NETWORKING_TOOLTIP,
     IconComponent: f.default
   }],
-  A = e => {
+  p = e => {
     let {
       IconComponent: t,
       text: s,
-      tooltip: n
+      tooltip: r
     } = e;
     return (0, a.jsxs)("div", {
-      className: p.row,
-      children: [(0, a.jsx)(r.Tooltip, {
-        text: n,
+      className: A.row,
+      children: [(0, a.jsx)(n.Tooltip, {
+        text: r,
         children: e => (0, a.jsx)(t, {
-          className: p.featureIcon,
+          className: A.featureIcon,
           ...e
         })
       }), (0, a.jsx)("span", {
-        className: p.featureText,
+        className: A.featureText,
         children: s
       }), (0, a.jsx)(u.default, {
-        className: p.checkmarkIcon
+        className: A.checkmarkIcon
       })]
     })
   };
-class g extends n.PureComponent {
+class g extends r.PureComponent {
   render() {
     let {
       sku: e
@@ -123,18 +123,18 @@ class g extends n.PureComponent {
       let {
         feature: t,
         IconComponent: s,
-        getText: n,
-        getTooltip: r
+        getText: r,
+        getTooltip: n
       } = e;
-      return (0, a.jsx)(A, {
+      return (0, a.jsx)(p, {
         IconComponent: s,
-        text: n(),
-        tooltip: r()
+        text: r(),
+        tooltip: n()
       }, t)
     });
     return 0 === t.length ? null : (0, a.jsxs)("div", {
-      className: p.features,
-      children: [(0, a.jsx)(l.default, {
+      className: A.features,
+      children: [(0, a.jsx)(i.default, {
         children: m.default.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES
       }), t]
     })

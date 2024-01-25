@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return N
   }
 });
-var a = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("414456"),
-  s = n.n(l),
+var a = n("414456"),
+  s = n.n(a),
   i = n("446674"),
   r = n("77078"),
   u = n("997289"),
@@ -26,9 +26,9 @@ function C(e) {
   let {
     guildName: t
   } = e;
-  return (0, a.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: S.guildMemberProfileTooltip,
-    children: [(0, a.jsx)(d.default, {
+    children: [(0, l.jsx)(d.default, {
       className: S.guildMemberProfileTooltipNitroWheel
     }), _.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
       guildName: t
@@ -39,7 +39,7 @@ function C(e) {
 function N(e) {
   let {
     guild: t,
-    bio: l,
+    bio: a,
     hidePersonalInformation: d,
     isUsingGuildBio: N,
     lastSection: g = !1,
@@ -49,21 +49,21 @@ function N(e) {
   } = e, {
     location: M
   } = (0, u.useAnalyticsContext)(), h = (0, i.useStateFromStores)([o.default], () => o.default.getCurrentUser()), O = f.default.canUsePremiumGuildMemberProfile(h);
-  return d || null == l || "" === l ? null : (0, a.jsxs)(E.default, {
+  return d || null == a || "" === a ? null : (0, l.jsxs)(E.default, {
     lastSection: g,
-    children: [(0, a.jsxs)(r.Heading, {
+    children: [(0, l.jsxs)(r.Heading, {
       variant: "eyebrow",
       className: m.title,
-      children: [_.default.Messages.USER_POPOUT_ABOUT_ME, null != t && N && (0, a.jsx)(r.Tooltip, {
+      children: [_.default.Messages.USER_POPOUT_ABOUT_ME, null != t && N && (0, l.jsx)(r.Tooltip, {
         color: r.Tooltip.Colors.CUSTOM,
         tooltipClassName: S.aboutMeGuildIconTooltip,
         "aria-label": _.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
           guildName: t.name
         }),
-        text: (0, a.jsx)(C, {
+        text: (0, l.jsx)(C, {
           guildName: t.name
         }),
-        children: e => (0, a.jsx)(c.default, {
+        children: e => (0, l.jsx)(c.default, {
           ...e,
           onClick: () => {
             var t;
@@ -71,7 +71,7 @@ function N(e) {
               let {
                 default: e
               } = await n.el("414242").then(n.bind(n, "414242"));
-              return t => (0, a.jsx)(e, {
+              return t => (0, l.jsx)(e, {
                 ...t,
                 source: {
                   ...M,
@@ -87,8 +87,8 @@ function N(e) {
           })
         })
       })]
-    }), (0, a.jsx)(T.default, {
-      userBio: l,
+    }), (0, l.jsx)(T.default, {
+      userBio: a,
       animateOnHover: v,
       isHovering: p,
       lineClamp: I
