@@ -132,9 +132,9 @@ async function _(t, e, a) {
     })
   }).catch(t => {
     var e, a;
-    i.default.dispatch({
+    throw i.default.dispatch({
       type: "SAFETY_HUB_REQUEST_REVIEW_FAILURE",
       error: null !== (a = null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.message) && void 0 !== a ? a : "Unknown error"
-    })
+    }), t
   })
 }

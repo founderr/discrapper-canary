@@ -28,8 +28,12 @@ function x(e) {
     onBack: x
   } = e, f = (0, o.useStateFromStores)([E.default], () => E.default.getAppealClassificationId()), {
     classification: T
-  } = (0, _.useSafetyHubClassification)(null != f ? f : ""), g = (0, A.capitalizeText)(null == T ? void 0 : T.description), p = (0, o.useStateFromStores)([E.default], () => E.default.getIsSubmitting()), C = (0, o.useStateFromStores)([E.default], () => E.default.getAppealSignal()), m = (0, o.useStateFromStores)([E.default], () => E.default.getFreeTextAppealReason()), [h, L] = s.useState(m), [M, j] = s.useState(!1), O = s.useCallback(async () => {
-    null !== f && (await u.requestReview(f, C, m), null == n || n())
+  } = (0, _.useSafetyHubClassification)(null != f ? f : ""), g = (0, A.capitalizeText)(null == T ? void 0 : T.description), p = (0, o.useStateFromStores)([E.default], () => E.default.getIsSubmitting()), C = (0, o.useStateFromStores)([E.default], () => E.default.getAppealSignal()), m = (0, o.useStateFromStores)([E.default], () => E.default.getFreeTextAppealReason()), [h, L] = s.useState(m), [M, O] = s.useState(!1), [j, P] = s.useState(!1), v = s.useCallback(async () => {
+    if (null !== f) try {
+      P(!1), await u.requestReview(f, C, m), null == n || n()
+    } catch (e) {
+      P(!0)
+    }
   }, [f, C, m, n]);
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(d.ModalHeader, {
@@ -65,7 +69,7 @@ function x(e) {
       }), (0, l.jsx)("div", {
         className: N.anchorContainer,
         children: (0, l.jsx)(d.Anchor, {
-          onClick: () => j(e => !e),
+          onClick: () => O(e => !e),
           children: (0, l.jsx)(d.Heading, {
             variant: "heading-md/normal",
             color: "text-link",
@@ -88,7 +92,7 @@ function x(e) {
             r.default.dispatch({
               type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
               userInput: h
-            }), j(!1)
+            }), O(!1)
           },
           color: d.Button.Colors.BRAND,
           submitting: p,
@@ -97,17 +101,26 @@ function x(e) {
         })]
       })]
     }), (0, l.jsxs)(d.ModalFooter, {
-      children: [(0, l.jsx)(d.Button, {
-        onClick: O,
-        color: d.Button.Colors.RED,
-        submitting: p,
-        children: S.default.Messages.SUBMIT
-      }), (0, l.jsx)(d.Button, {
-        look: d.Button.Looks.LINK,
-        color: d.Button.Colors.PRIMARY,
-        onClick: x,
-        disabled: p,
-        children: S.default.Messages.BACK
+      direction: c.default.Direction.VERTICAL,
+      children: [j && (0, l.jsx)(d.Text, {
+        className: N.errorText,
+        variant: "text-lg/normal",
+        color: "text-danger",
+        children: S.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR
+      }), (0, l.jsxs)("div", {
+        className: N.buttonContainer,
+        children: [(0, l.jsx)(d.Button, {
+          look: d.Button.Looks.LINK,
+          color: d.Button.Colors.PRIMARY,
+          onClick: x,
+          disabled: p,
+          children: S.default.Messages.BACK
+        }), (0, l.jsx)(d.Button, {
+          onClick: v,
+          color: d.Button.Colors.RED,
+          submitting: p,
+          children: S.default.Messages.SUBMIT
+        })]
       })]
     })]
   })

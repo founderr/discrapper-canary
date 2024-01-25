@@ -116683,6 +116683,21 @@ html .invoiceCancelRow_c1bfe7 {
     margin-bottom: 16px
 }
 
+.errorText_f6e59e {
+    color: var(--status-danger-text);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-bottom: 12px
+}
+
+.buttonContainer__6c70d {
+    display: flex;
+    justify-content: flex-end
+}
+
 .iconContainer_f97625 {
     align-self: center;
     background-color: var(--text-positive);
