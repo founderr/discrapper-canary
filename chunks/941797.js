@@ -18,18 +18,30 @@ var _ = e => {
     cards: t,
     className: s,
     cardType: _
-  } = e, [E, I] = r.useState(0), T = t.length, f = T - 2, S = r.useCallback(e => ({
-    x: (e - E) * 100
-  }), [E]), [R, m] = (0, n.useSprings)(t.length, S);
+  } = e, E = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [I, T] = r.useState(0), [f, S] = r.useState(E()), R = t.length;
+  r.useEffect(() => {
+    let e = () => {
+      S(E())
+    };
+    return window.addEventListener("resize", e), () => {
+      window.removeEventListener("resize", e)
+    }
+  }, []), r.useEffect(() => {
+    R > f && I > R - f ? T(R - f) : R <= f && T(0)
+  }, [R, f]);
+  let m = r.useCallback(e => ({
+      x: (e - I) * 100
+    }), [I]),
+    [A, N] = (0, n.useSprings)(t.length, m);
   return r.useEffect(() => {
-    m(S)
-  }, [m, S]), (0, a.jsx)("div", {
+    N(m)
+  }, [N, m]), (0, a.jsx)("div", {
     className: s,
     children: (0, a.jsxs)("div", {
       className: d.cardContainer,
-      children: [f > 1 && (0, a.jsx)(u.Clickable, {
+      children: [R > f && (0, a.jsx)(u.Clickable, {
         onClick: () => {
-          I(e => 0 === e ? T - 3 : e - 1)
+          T(e => 0 === e ? R - f : e - 1)
         },
         className: d.leftArrow,
         children: (0, a.jsx)(i.ArrowSmallLeftIcon, {
@@ -39,7 +51,7 @@ var _ = e => {
         })
       }), (0, a.jsx)("div", {
         className: d.cardInnerContainer,
-        children: R.map((e, s) => {
+        children: A.map((e, s) => {
           let {
             x: r
           } = e;
@@ -54,9 +66,9 @@ var _ = e => {
             }, "".concat(t[s].name, "_").concat(s, "_perks_card"))
           }, "".concat(t[s].name, "_").concat(s, "_animated_div"))
         })
-      }), f > 1 && (0, a.jsx)(u.Clickable, {
+      }), R > f && (0, a.jsx)(u.Clickable, {
         onClick: () => {
-          I(e => e >= T - 3 ? 0 : e + 1)
+          T(e => e >= R - f ? 0 : e + 1)
         },
         className: d.rightArrow,
         children: (0, a.jsx)(l.ArrowSmallRightIcon, {
@@ -64,11 +76,11 @@ var _ = e => {
           width: 24,
           color: c
         })
-      }), f > 1 && (0, a.jsx)("div", {
+      }), R > f && (0, a.jsx)("div", {
         className: d.cardProgressBar,
         children: t.map((e, t) => {
-          if (!(t >= T - 2)) return (0, a.jsx)("div", {
-            className: t === E ? d.selectedDot : d.dot
+          if (!(t > R - f)) return (0, a.jsx)("div", {
+            className: t === I ? d.selectedDot : d.dot
           }, "progress_bar_dot_".concat(t))
         })
       })]
