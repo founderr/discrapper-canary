@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return f
   }
 }), s("70102");
-var a, n, r = s("37983");
+var a, r, n = s("37983");
 s("884691");
 var i = s("414456"),
   l = s.n(i),
@@ -14,7 +14,7 @@ var i = s("414456"),
   c = s("471671"),
   _ = s("782340"),
   E = s("898555");
-(n = a || (a = {}))[n.STAFF_NOTES = 1] = "STAFF_NOTES";
+(r = a || (a = {}))[r.STAFF_NOTES = 1] = "STAFF_NOTES";
 let I = u.default.connectStores([c.default], () => ({
     animate: c.default.isFocused()
   }))(e => {
@@ -23,18 +23,18 @@ let I = u.default.connectStores([c.default], () => ({
       className: s,
       animate: a
     } = e;
-    return (0, r.jsxs)("div", {
+    return (0, n.jsxs)("div", {
       className: l(E.staffReviewHeader, s),
-      children: [(0, r.jsx)(d.default, {
+      children: [(0, n.jsx)(d.default, {
         size: o.AvatarSizes.SIZE_32,
         user: t,
         animate: a
-      }), (0, r.jsxs)("div", {
+      }), (0, n.jsxs)("div", {
         className: E.headerText,
-        children: [(0, r.jsx)("div", {
+        children: [(0, n.jsx)("div", {
           className: E.label,
           children: _.default.Messages.APPLICATION_STORE_STAFF_PICK
-        }), (0, r.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: E.username,
           children: t.username
         })]
@@ -52,12 +52,12 @@ let I = u.default.connectStores([c.default], () => ({
         user: e,
         content: a
       } = t.staffNotes;
-      return null == e ? null : (0, r.jsxs)("div", {
+      return null == e ? null : (0, n.jsxs)("div", {
         className: s,
-        children: [(0, r.jsx)(I, {
+        children: [(0, n.jsx)(I, {
           user: e,
           className: E.header
-        }), (0, r.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: E.notes,
           children: a
         })]

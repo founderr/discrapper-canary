@@ -11,8 +11,8 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("884691"),
-  n = s("65597"),
-  r = s("151426"),
+  r = s("65597"),
+  n = s("151426"),
   i = s("619935"),
   l = s("10641"),
   u = s("235145"),
@@ -20,16 +20,16 @@ var a = s("884691"),
   d = s("184684"),
   c = s("397336");
 let _ = [
-    [r.DismissibleContent.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, d.WhatsNewAvatarDecoRollout, r.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP],
-    [r.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, d.WhatsNewProfileFXRollout, r.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP]
+    [n.DismissibleContent.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, d.WhatsNewAvatarDecoRollout, n.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP],
+    [n.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, d.WhatsNewProfileFXRollout, n.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP]
   ],
   E = () => _.some(e => {
     let [t, s, a] = e, {
-      flipped: n
+      flipped: r
     } = s.getCurrentConfig({
       location: "useShouldShowNewBadge"
     });
-    return !!n && !(0, l.isDismissibleContentDismissed)(t)
+    return !!r && !(0, l.isDismissibleContentDismissed)(t)
   }),
   I = () => {
     let e = (0, i.useBlockedPaymentsConfig)(),
@@ -47,23 +47,23 @@ let _ = [
   };
 var T = () => {
   let e = (0, i.useBlockedPaymentsConfig)(),
-    t = (0, n.default)([o.default], () => o.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
+    t = (0, r.default)([o.default], () => o.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
     s = _.map(e => {
       let [t, s, a] = e, {
-        flipped: n
+        flipped: r
       } = s.getCurrentConfig({
         location: "useShouldShowNewBadge"
-      }), r = null != a && (0, l.isDismissibleContentDismissed)(a);
-      return n && !r ? t : null
+      }), n = null != a && (0, l.isDismissibleContentDismissed)(a);
+      return r && !n ? t : null
     }).filter(e => null != e);
   a.useEffect(() => {
     t && _.forEach(e => {
       let [t, s, a] = e;
       if (null == a) return;
-      let n = (0, l.isDismissibleContentDismissed)(a);
-      n && (0, l.markDismissibleContentAsDismissed)(t)
+      let r = (0, l.isDismissibleContentDismissed)(a);
+      r && (0, l.markDismissibleContentAsDismissed)(t)
     })
   }, [s, t]);
-  let [r] = (0, u.useGetDismissibleContent)(e ? [] : s), d = null != r && s.includes(r);
+  let [n] = (0, u.useGetDismissibleContent)(e ? [] : s), d = null != n && s.includes(n);
   return d && !e
 }

@@ -19,8 +19,8 @@ n.r(t), n.d(t, {
 var a = n("872717"),
   r = n("913144"),
   s = n("374014"),
-  l = n("766274"),
-  i = n("271938"),
+  i = n("766274"),
+  l = n("271938"),
   u = n("42203"),
   o = n("546463"),
   d = n("568307"),
@@ -46,17 +46,17 @@ function E(e, t) {
   if (!n) return;
   let a = (0, s.decodeStreamKey)(e),
     {
-      ownerId: l,
+      ownerId: i,
       channelId: f
     } = a;
-  if (null == l || null == f) return;
-  let h = i.default.getId();
-  if (l !== h) return;
-  let E = i.default.getSessionId();
+  if (null == i || null == f) return;
+  let h = l.default.getId();
+  if (i !== h) return;
+  let E = l.default.getSessionId();
   if (null == E) return;
   let C = u.default.getChannel(f),
     m = null != C && C.isBroadcastChannel();
-  if (null == C || l !== C.ownerId || !m) return;
+  if (null == C || i !== C.ownerId || !m) return;
   let S = function(e) {
     var t;
     let n = d.default.getGameForPID(e),
@@ -65,8 +65,8 @@ function E(e, t) {
     return null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : "0"
   }(t);
   null != S && ! function(e) {
-    let t = i.default.getId(),
-      n = i.default.getSessionId();
+    let t = l.default.getId(),
+      n = l.default.getSessionId();
     null != t && null != n && r.default.dispatch({
       type: "BROADCAST_START",
       broadcast: e
@@ -135,7 +135,7 @@ async function g() {
         var t;
         let a = f.default.getBroadcastByChannel(e.id).userId,
           r = null !== (t = e.recipients) && void 0 !== t ? t : [];
-        n[a] = r.map(e => new l.default(e)).filter(e => e.id !== a)
+        n[a] = r.map(e => new i.default(e)).filter(e => e.id !== a)
       }), r.default.dispatch({
         type: "BROADCAST_VIEWERS_UPDATE",
         viewers: n

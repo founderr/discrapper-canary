@@ -38,7 +38,7 @@ function T(e) {
     listPadding: R,
     renderHeader: O,
     defaultSoundsOnly: M
-  } = e, k = (0, a.useStateFromStores)([S.default], () => S.default.isFetchingSounds() || S.default.isFetchingDefaultSounds()), b = (0, a.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
+  } = e, b = (0, a.useStateFromStores)([S.default], () => S.default.isFetchingSounds() || S.default.isFetchingDefaultSounds()), k = (0, a.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
     AnalyticsLocationProvider: P
   } = (0, c.default)(d.default.SOUNDBOARD_POPOUT);
   return (0, f.default)({
@@ -47,17 +47,17 @@ function T(e) {
     properties: {
       source: y,
       guild_id: t,
-      media_session_id: b
+      media_session_id: k
     }
   }), i.useEffect(() => {
     E.maybeFetchSoundboardSounds(), m.FrecencyUserSettingsActionCreators.loadIfNecessary(), (0, p.setSearchQuery)("")
   }, []), (0, l.jsx)(P, {
     children: (0, l.jsx)("div", {
       className: o(C.picker, {
-        [C.fetching]: k,
+        [C.fetching]: b,
         [C.autoWidth]: _
       }),
-      children: k ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsx)(g.default, {
+      children: b ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsx)(g.default, {
         guildId: t,
         channel: n,
         onClose: T,

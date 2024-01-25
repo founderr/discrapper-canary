@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("862205"),
-  n = s("697218"),
-  r = s("764364");
+  r = s("697218"),
+  n = s("764364");
 let i = (0, a.createExperiment)({
   kind: "user",
   id: "2023-11_nitro_tab_holdout",
@@ -25,8 +25,8 @@ let i = (0, a.createExperiment)({
 var l = function() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    s = n.default.getCurrentUser(),
-    a = (0, r.isPremium)(s);
+    s = r.default.getCurrentUser(),
+    a = (0, n.isPremium)(s);
   return i.useExperiment({
     location: "experiment_hook"
   }, {

@@ -8,8 +8,8 @@ var a = n("37983");
 n("884691");
 var r = n("446674"),
   s = n("77078"),
-  l = n("374014"),
-  i = n("582415"),
+  i = n("374014"),
+  l = n("582415"),
   u = n("271938"),
   o = n("824563"),
   d = n("205817"),
@@ -17,9 +17,9 @@ var r = n("446674"),
 
 function f(e, t, f) {
   var h;
-  let p = (0, r.useStateFromStores)([o.default], () => (0, i.getStreamerApplication)(e, o.default), [e]),
+  let p = (0, r.useStateFromStores)([o.default], () => (0, l.getStreamerApplication)(e, o.default), [e]),
     E = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
-    C = null != e ? (0, l.encodeStreamKey)(e) : d.default.getActiveStreamKey(),
+    C = null != e ? (0, i.encodeStreamKey)(e) : d.default.getActiveStreamKey(),
     m = null !== (h = d.default.getVideoStats(C)) && void 0 !== h ? h : {},
     S = {
       media_session_id: d.default.getMediaSessionId(C),

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983"),
   r = n("884691"),
   s = n("446674"),
-  l = n("77078"),
-  i = n("629109"),
+  i = n("77078"),
+  l = n("629109"),
   u = n("997289"),
   o = n("773356"),
   d = n("268491"),
@@ -47,7 +47,7 @@ function S(e, t) {
         } : null != T.cameraSource && (e.cameraSettings = {
           videoDeviceGuid: T.cameraSource.videoDeviceGuid,
           audioDeviceGuid: T.cameraSource.audioDeviceGuid
-        }), i.default.setGoLiveSource(e)
+        }), l.default.setGoLiveSource(e)
       }
     } else {
       var o, d;
@@ -55,7 +55,7 @@ function S(e, t) {
         ...I,
         object: p.AnalyticsObjects.RADIO_ITEM,
         objectType: u
-      }, (0, l.openModalLazy)(async () => {
+      }, (0, i.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("754534").then(n.bind(n, "754534"));
@@ -64,7 +64,7 @@ function S(e, t) {
           analyticsSource: d
         })
       }, {
-        contextKey: o === p.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT
+        contextKey: o === p.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
       })
     }
   }, [t, I, T]);
@@ -75,7 +75,7 @@ function S(e, t) {
         value: t,
         label: n
       } = e, r = (0, o.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, g, t, v, A);
-      return (0, a.jsx)(l.MenuRadioItem, {
+      return (0, a.jsx)(i.MenuRadioItem, {
         group: "stream-settings-fps",
         id: "stream-settings-fps-".concat(t),
         label: n,
@@ -88,7 +88,7 @@ function S(e, t) {
         value: t,
         label: n
       } = e, r = (0, o.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, t, x, v, A);
-      return (0, a.jsx)(l.MenuRadioItem, {
+      return (0, a.jsx)(i.MenuRadioItem, {
         group: "stream-settings-resolution",
         id: "stream-settings-resolution-".concat(t),
         label: n,
@@ -97,10 +97,10 @@ function S(e, t) {
       }, "stream-settings-resolution-".concat(t))
     });
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(l.MenuGroup, {
+    children: [(0, a.jsx)(i.MenuGroup, {
       label: m.default.Messages.SCREENSHARE_FRAME_RATE,
       children: R
-    }), (0, a.jsx)(l.MenuGroup, {
+    }), (0, a.jsx)(i.MenuGroup, {
       label: m.default.Messages.STREAM_RESOLUTION,
       children: N
     })]

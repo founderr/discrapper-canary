@@ -11,8 +11,8 @@ var a = n("37983");
 n("884691");
 var r = n("446674"),
   s = n("77078"),
-  l = n("901582"),
-  i = n("191145"),
+  i = n("901582"),
+  l = n("191145"),
   u = n("976074"),
   o = n("856343"),
   d = n("16916"),
@@ -29,16 +29,16 @@ var r = n("446674"),
   T = n("782340");
 
 function v(e, t, n) {
-  let a = (0, r.useStateFromStores)([i.default], () => i.default.getSelectedParticipantId(e.id)),
+  let a = (0, r.useStateFromStores)([l.default], () => l.default.getSelectedParticipantId(e.id)),
     s = (0, r.useStateFromStores)([c.default], () => null != a ? c.default.getActiveStreamForStreamKey(a) : null, [a]),
-    l = (0, r.useStateFromStoresArray)([h.default], () => {
+    i = (0, r.useStateFromStoresArray)([h.default], () => {
       let a = n.filter(e => e.ownerId !== (null == t ? void 0 : t.id)).map(t => ({
         stream: t,
         username: m.default.getName(e.getGuildId(), e.id, h.default.getUser(t.ownerId))
       }));
       return 1 === a.length && a[0].stream.ownerId === (null == s ? void 0 : s.ownerId) ? [] : a
     }, [e, s, n, t]);
-  return l
+  return i
 }
 
 function A(e) {
@@ -46,14 +46,14 @@ function A(e) {
   let {
     channel: n,
     currentUser: r,
-    activeStreams: i,
+    activeStreams: l,
     hideSelfOptions: c = !1,
     showReportOption: h = !1,
     handleGoLive: m,
     onClose: A,
     onSelect: I,
     appContext: M = g.AppContext.APP
-  } = e, x = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS), R = null !== (t = i.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, N = v(n, r, i), L = (0, o.default)(R, M), O = (0, u.default)(R, M, g.NOOP_NULL), y = null == R ? (0, a.jsx)(s.MenuItem, {
+  } = e, x = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS), R = null !== (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, N = v(n, r, l), L = (0, o.default)(R, M), O = (0, u.default)(R, M, g.NOOP_NULL), y = null == R ? (0, a.jsx)(s.MenuItem, {
     id: "share-your-screen",
     label: T.default.Messages.SHARE_YOUR_SCREEN,
     icon: p.default,
@@ -75,7 +75,7 @@ function A(e) {
       action: () => (0, d.default)(R)
     })]
   });
-  return (0, a.jsx)(l.default, {
+  return (0, a.jsx)(i.default, {
     section: g.AnalyticsSections.CONTEXT_MENU,
     children: (0, a.jsxs)(s.Menu, {
       onSelect: I,

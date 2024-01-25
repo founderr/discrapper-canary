@@ -11,8 +11,8 @@ var a = n("37983");
 n("884691");
 var r = n("77078"),
   s = n("913144"),
-  l = n("697218"),
-  i = n("599110"),
+  i = n("697218"),
+  l = n("599110"),
   u = n("773336"),
   o = n("180748"),
   d = n("206230"),
@@ -34,18 +34,18 @@ var _ = {
   },
   init() {
     this.initBasic(), s.default.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
-      i.default.track(c.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
+      l.default.track(c.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
         colorblind_enabled: d.default.colorblindMode
       })
     }), s.default.subscribe("ACCESSIBILITY_SET_SATURATION", e => {
-      i.default.track(c.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
+      l.default.track(c.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
         saturation_level: e.saturation
       })
     })
   },
   maybeShowKeyboardNavigationExplainerModal() {
     S = Math.max(S - 1, 0), ! function() {
-      let e = l.default.getCurrentUser();
+      let e = i.default.getCurrentUser();
       return null == e || Date.now() - +e.createdAt < 864e5
     }() && !d.default.keyboardNavigationExplainerModalSeen && 0 === S && (0, r.openModalLazy)(async () => {
       let {

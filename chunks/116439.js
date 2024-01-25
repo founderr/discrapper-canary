@@ -11,15 +11,15 @@ var a = n("37983");
 n("884691");
 var r = n("414456"),
   s = n.n(r),
-  l = n("244201"),
-  i = n("289656"),
+  i = n("244201"),
+  l = n("289656"),
   u = n("437825"),
   o = n("142303"),
   d = n("981913"),
   c = n("911360");
 
 function f(e) {
-  let t = (0, i.getVideoButtonLabel)(e),
+  let t = (0, l.getVideoButtonLabel)(e),
     {
       enabled: n,
       cameraUnavailable: r,
@@ -30,7 +30,7 @@ function f(e) {
       channelLimitReached: h = !1,
       join: p
     } = e,
-    E = (0, l.useAppContext)(),
+    E = (0, i.useAppContext)(),
     C = r ? () => d() : () => s(!e.enabled, E);
   return (0, a.jsx)(a.Fragment, {
     children: f({
@@ -49,8 +49,8 @@ function h(e) {
     enabled: t,
     join: n,
     channel: r,
-    onChange: l,
-    onCameraUnavailable: i,
+    onChange: i,
+    onCameraUnavailable: l,
     cameraUnavailable: u,
     hasPermission: o,
     className: h,
@@ -64,8 +64,8 @@ function h(e) {
     enabled: t,
     join: n,
     channel: r,
-    onChange: l,
-    onCameraUnavailable: i,
+    onChange: i,
+    onCameraUnavailable: l,
     cameraUnavailable: u,
     hasPermission: o,
     channelLimitReached: p,

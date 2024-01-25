@@ -24,7 +24,7 @@ let h = u.OverlayWidgetTypes.DEFAULT,
     opacity: p
   }),
   m = a.createContext(void 0),
-  S = e => {
+  E = e => {
     let {
       children: t,
       className: n,
@@ -46,7 +46,7 @@ let h = u.OverlayWidgetTypes.DEFAULT,
       }
     })
   };
-class E extends a.PureComponent {
+class S extends a.PureComponent {
   render() {
     let {
       disableScroll: e,
@@ -71,7 +71,7 @@ class E extends a.PureComponent {
     })
   }
 }
-E.defaultProps = {
+S.defaultProps = {
   disableScroll: !1
 };
 let v = e => {
@@ -122,7 +122,7 @@ v.Background = e => {
     opacityOverride: n
   } = e;
   if (null == t) return null;
-  let l = [S, E, y];
+  let l = [E, S, y];
   return (0, i.jsx)(g.Consumer, {
     children: e => {
       let {
@@ -143,7 +143,7 @@ v.Background = e => {
       }
     }
   })
-}, v.Body = E, v.Content = y, v.Icon = e => {
+}, v.Body = S, v.Content = y, v.Icon = e => {
   let {
     icon: t,
     label: n,
@@ -186,5 +186,5 @@ v.Background = e => {
       })
     }
   })
-}, v.Bar = S;
+}, v.Bar = E;
 var C = v

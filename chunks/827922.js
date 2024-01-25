@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   },
   default: function() {
-    return S
+    return E
   }
 }), n("222007");
 var i = n("37983");
@@ -36,7 +36,7 @@ function m() {
   }
 }
 
-function S(e) {
+function E(e) {
   let {
     markAsDismissed: t
   } = e, {

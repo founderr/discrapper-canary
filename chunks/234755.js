@@ -8,8 +8,8 @@ var a = n("37983");
 n("884691");
 var r = n("446674"),
   s = n("77078"),
-  l = n("244201"),
-  i = n("856343"),
+  i = n("244201"),
+  l = n("856343"),
   u = n("373469"),
   o = n("474571"),
   d = n("773336"),
@@ -20,7 +20,7 @@ var r = n("446674"),
 function p(e) {
   let {
     onClose: t
-  } = e, n = (0, l.useAppContext)(), p = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUserActiveStream()), E = (0, i.default)(p, n);
+  } = e, n = (0, i.useAppContext)(), p = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUserActiveStream()), E = (0, l.default)(p, n);
   return (0, a.jsxs)(s.Menu, {
     onSelect: f.NOOP_NULL,
     navId: "manage-broadcast",

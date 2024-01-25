@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  r = s.n(n),
+var r = s("414456"),
+  n = s.n(r),
   i = s("722440"),
   l = e => {
     let {
@@ -20,7 +20,7 @@ var n = s("414456"),
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
       preserveAspectRatio: "none",
-      className: r(i.root, {
+      className: n(i.root, {
         [i.lifted]: t
       }),
       children: [(0, a.jsx)("path", {

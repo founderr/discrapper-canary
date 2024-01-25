@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  r = s("77078"),
+  r = s("884691"),
+  n = s("77078"),
   i = s("895530"),
   l = s("437825"),
   u = s("36694"),
@@ -20,97 +20,97 @@ var a = s("37983"),
   f = s("439937"),
   S = s("31225"),
   R = s("49111"),
-  A = s("782340"),
-  m = s("786832");
+  m = s("782340"),
+  A = s("786832");
 let N = [{
     feature: R.SKUFeatureTypes.SINGLE_PLAYER,
-    getText: () => A.default.Messages.APPLICATION_STORE_SINGLE_PLAYER,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_SINGLE_PLAYER_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_SINGLE_PLAYER,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_SINGLE_PLAYER_TOOLTIP,
     IconComponent: E.default
   }, {
     feature: R.SKUFeatureTypes.LOCAL_MULTIPLAYER,
-    getText: () => A.default.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER_TOOLTIP,
     IconComponent: _.default
   }, {
     feature: R.SKUFeatureTypes.ONLINE_MULTIPLAYER,
-    getText: () => A.default.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER_TOOLTIP,
     IconComponent: _.default
   }, {
     feature: R.SKUFeatureTypes.PVP,
-    getText: () => A.default.Messages.APPLICATION_STORE_PVP,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_PVP_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_PVP,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_PVP_TOOLTIP,
     IconComponent: c.default
   }, {
     feature: R.SKUFeatureTypes.LOCAL_COOP,
-    getText: () => A.default.Messages.APPLICATION_STORE_LOCAL_COOP,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_LOCAL_COOP_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_LOCAL_COOP,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_LOCAL_COOP_TOOLTIP,
     IconComponent: _.default
   }, {
     feature: R.SKUFeatureTypes.ONLINE_COOP,
-    getText: () => A.default.Messages.APPLICATION_STORE_ONLINE_COOP,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_ONLINE_COOP_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_ONLINE_COOP,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_ONLINE_COOP_TOOLTIP,
     IconComponent: _.default
   }, {
     feature: R.SKUFeatureTypes.CROSS_PLATFORM,
-    getText: () => A.default.Messages.APPLICATION_STORE_CROSS_PLATFORM,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_CROSS_PLATFORM_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_CROSS_PLATFORM,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_CROSS_PLATFORM_TOOLTIP,
     IconComponent: S.default
   }, {
     feature: R.SKUFeatureTypes.RICH_PRESENCE,
-    getText: () => A.default.Messages.APPLICATION_STORE_RICH_PRESENCE,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_RICH_PRESENCE_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_RICH_PRESENCE,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_RICH_PRESENCE_TOOLTIP,
     IconComponent: T.default
   }, {
     feature: R.SKUFeatureTypes.DISCORD_GAME_INVITES,
-    getText: () => A.default.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES_TOOLTIP,
     IconComponent: I.default
   }, {
     feature: R.SKUFeatureTypes.SPECTATOR_MODE,
-    getText: () => A.default.Messages.APPLICATION_STORE_SPECTATOR_MODE,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_SPECTATOR_MODE_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_SPECTATOR_MODE,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_SPECTATOR_MODE_TOOLTIP,
     IconComponent: l.default
   }, {
     feature: R.SKUFeatureTypes.CONTROLLER_SUPPORT,
-    getText: () => A.default.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT_TOOLTIP,
     IconComponent: d.default
   }, {
     feature: R.SKUFeatureTypes.CLOUD_SAVES,
-    getText: () => A.default.Messages.APPLICATION_STORE_CLOUD_SAVES,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_CLOUD_SAVES_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_CLOUD_SAVES,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_CLOUD_SAVES_TOOLTIP,
     IconComponent: o.default
   }, {
     feature: R.SKUFeatureTypes.SECURE_NETWORKING,
-    getText: () => A.default.Messages.APPLICATION_STORE_SECURE_NETWORKING,
-    getTooltip: () => A.default.Messages.APPLICATION_STORE_SECURE_NETWORKING_TOOLTIP,
+    getText: () => m.default.Messages.APPLICATION_STORE_SECURE_NETWORKING,
+    getTooltip: () => m.default.Messages.APPLICATION_STORE_SECURE_NETWORKING_TOOLTIP,
     IconComponent: f.default
   }],
   p = e => {
     let {
       IconComponent: t,
       text: s,
-      tooltip: n
+      tooltip: r
     } = e;
     return (0, a.jsxs)("div", {
-      className: m.row,
-      children: [(0, a.jsx)(r.Tooltip, {
-        text: n,
+      className: A.row,
+      children: [(0, a.jsx)(n.Tooltip, {
+        text: r,
         children: e => (0, a.jsx)(t, {
-          className: m.featureIcon,
+          className: A.featureIcon,
           ...e
         })
       }), (0, a.jsx)("span", {
-        className: m.featureText,
+        className: A.featureText,
         children: s
       }), (0, a.jsx)(u.default, {
-        className: m.checkmarkIcon
+        className: A.checkmarkIcon
       })]
     })
   };
-class g extends n.PureComponent {
+class g extends r.PureComponent {
   render() {
     let {
       sku: e
@@ -123,19 +123,19 @@ class g extends n.PureComponent {
       let {
         feature: t,
         IconComponent: s,
-        getText: n,
-        getTooltip: r
+        getText: r,
+        getTooltip: n
       } = e;
       return (0, a.jsx)(p, {
         IconComponent: s,
-        text: n(),
-        tooltip: r()
+        text: r(),
+        tooltip: n()
       }, t)
     });
     return 0 === t.length ? null : (0, a.jsxs)("div", {
-      className: m.features,
+      className: A.features,
       children: [(0, a.jsx)(i.default, {
-        children: A.default.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES
+        children: m.default.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES
       }), t]
     })
   }

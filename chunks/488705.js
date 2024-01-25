@@ -108,25 +108,25 @@ function O(e) {
   } = e, [u, c] = i.useState(!1), [S, N] = i.useState(!1), O = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
     analyticsLocations: M
   } = (0, p.default)(f.default.REFERRAL_TRIALS_POPOUT), {
-    enabled: k
+    enabled: b
   } = g.default.useExperiment({
     location: "200c24_1"
   }, {
     autoTrackExposure: !0
-  }), b = new Date("2023-06-15T08:00:00-08:00");
+  }), k = new Date("2023-06-15T08:00:00-08:00");
   return null == O ? null : u ? (0, l.jsx)(R, {
     onClose: r,
     referralsRemaining: t,
     recipient: O,
     analyticsLocations: M,
-    shouldShowBirthdayUX: k
+    shouldShowBirthdayUX: b
   }) : (0, l.jsxs)("div", {
     className: y.generalContainer,
     children: [(0, l.jsxs)("div", {
       className: y.generalBodyContainer,
       children: [(0, l.jsx)("img", {
         alt: "",
-        src: k ? I : _,
+        src: b ? I : _,
         className: y.generalBodyImage
       }), (0, l.jsxs)("div", {
         className: y.innerContent,
@@ -153,11 +153,11 @@ function O(e) {
             children: v.default.Messages.SHARE_NITRO_RESEND_TRIAL_BODY_2
           }) : (0, l.jsx)("div", {
             children: v.default.Messages.SHARE_NITRO_MODAL_BODY_SHARE_THEM_BY.format({
-              date: (0, h.dateFormat)(a(b), "LL")
+              date: (0, h.dateFormat)(a(k), "LL")
             })
           })]
         })]
-      }), k && (0, l.jsx)("img", {
+      }), b && (0, l.jsx)("img", {
         alt: "",
         src: x,
         className: y.birthdayBackgroundImage

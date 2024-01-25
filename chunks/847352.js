@@ -35,7 +35,7 @@ var l = n("37983"),
       windowDispatch: A
     } = i.useContext(f.default), R = null != x, O = (0, u.useIsModalAtTop)(null != x ? x : ""), M = () => {
       E.dismissAppLauncherPopup()
-    }, k = i.useCallback(e => {
+    }, b = i.useCallback(e => {
       var t;
       if (!R && (0, u.hasAnyModalOpen)() || R && !(O && r)) return;
       let {
@@ -50,12 +50,12 @@ var l = n("37983"),
       M();
       let l = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
       (null == l || "BODY" === l.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.TEXTAREA_FOCUS)
-    }, [r, O, R]), b = i.useCallback(() => {
+    }, [r, O, R]), k = i.useCallback(() => {
       M()
     }, []);
-    i.useLayoutEffect(() => (_.addEventListener("mousedown", k), _.addEventListener("contextmenu", k), A.subscribe(T.ComponentActions.POPOUT_CLOSE, b), () => {
-      _.removeEventListener("mousedown", k), _.removeEventListener("contextmenu", k), A.unsubscribe(T.ComponentActions.POPOUT_CLOSE, b)
-    }), [b, k, _, A]), (0, d.useFocusLock)(I), i.useEffect(() => {
+    i.useLayoutEffect(() => (_.addEventListener("mousedown", b), _.addEventListener("contextmenu", b), A.subscribe(T.ComponentActions.POPOUT_CLOSE, k), () => {
+      _.removeEventListener("mousedown", b), _.removeEventListener("contextmenu", b), A.unsubscribe(T.ComponentActions.POPOUT_CLOSE, k)
+    }), [k, b, _, A]), (0, d.useFocusLock)(I), i.useEffect(() => {
       (!R && (0, u.hasAnyModalOpen)() || R && !O) && M()
     }, [O, R]);
     let P = (0, a.useStateFromStores)([S.default], () => S.default.getCurrentAppDetail());

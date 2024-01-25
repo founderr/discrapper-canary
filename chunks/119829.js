@@ -1,30 +1,30 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return n
+    return r
   }
 }), s("222007");
 var a = s("884691"),
-  n = function() {
+  r = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
       [t, s] = a.useState(!1),
-      [n, r] = a.useState(0),
+      [r, n] = a.useState(0),
       [i, l] = a.useState(!1),
       [u, o] = a.useState(0);
     return a.useEffect(() => {
-      n >= e && (l(!0), o(Math.floor(n / e)));
+      r >= e && (l(!0), o(Math.floor(r / e)));
       let t = setTimeout(() => {
-        r(0)
+        n(0)
       }, 1e3);
       return () => clearTimeout(t)
-    }, [n, e]), a.useEffect(() => {
+    }, [r, e]), a.useEffect(() => {
       if (!t) {
         let e = setTimeout(() => {
           l(!1), o(0)
         }, 1e3);
         return () => clearTimeout(e)
       }
-      r(e => e + 1)
+      n(e => e + 1)
     }, [t]), {
       onHover: () => {
         s(!0)

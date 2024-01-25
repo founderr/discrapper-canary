@@ -42,9 +42,9 @@ function x(e) {
     badgeState: L
   } = e, O = l.useRef(null), [b, y] = (0, C.default)(O), {
     loadState: j,
-    channels: F
+    channels: D
   } = b, {
-    maybeLoadMore: D,
+    maybeLoadMore: F,
     markAllRead: U
   } = y;
   (function(e, t, n) {
@@ -90,7 +90,7 @@ function x(e) {
   }), [x]);
   let k = (0, d.useStateFromStores)([E.default], () => E.default.messageGroupSpacing),
     P = (0, m.default)("unreads", O);
-  if (0 === F.length) {
+  if (0 === D.length) {
     var w;
     return (0, a.jsxs)("div", {
       className: v.container,
@@ -132,11 +132,11 @@ function x(e) {
               O.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             ...l,
-            onScroll: j === C.LoadState.Done ? void 0 : D,
+            onScroll: j === C.LoadState.Done ? void 0 : F,
             className: v.scroller,
             children: [s ? (0, a.jsx)(R, {
               setSeenTutorial: r
-            }) : null, (0, I.default)(F, y, n), j === C.LoadState.Done ? null : (0, a.jsx)(f.Spinner, {
+            }) : null, (0, I.default)(D, y, n), j === C.LoadState.Done ? null : (0, a.jsx)(f.Spinner, {
               className: v.spinner
             })]
           })

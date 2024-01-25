@@ -102,7 +102,7 @@ function v(e) {
     }, []);
     let e = (0, r.useStateFromStores)([p.default], () => p.default.frecentlyPlayedSounds);
     return e
-  }(), k = (0, r.useStateFromStoresArray)([p.default], () => p.default.recentlyHeardSoundIds);
+  }(), b = (0, r.useStateFromStoresArray)([p.default], () => p.default.recentlyHeardSoundIds);
   return l.useMemo(() => {
     let e = [];
     return n ? (T(e, S), {
@@ -119,7 +119,7 @@ function v(e) {
       sections: e,
       guildIds: x,
       allSounds: S,
-      potentialSoundIdsForSection: k,
+      potentialSoundIdsForSection: b,
       sectionType: h.SoundboardSoundGridSectionType.RECENTLY_HEARD,
       sortById: !1
     }), O && C({
@@ -167,7 +167,7 @@ function v(e) {
       categories: e,
       isFetching: y
     })
-  }, [x, S, v, k, M, O, R, _, A, t, N, I, n, y])
+  }, [x, S, v, b, M, O, R, _, A, t, N, I, n, y])
 }
 
 function y(e, t, n) {

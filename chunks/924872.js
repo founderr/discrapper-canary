@@ -13,8 +13,8 @@ n.r(t), n.d(t, {
 var a = n("446674"),
   r = n("689988"),
   s = n("42203"),
-  l = n("42887"),
-  i = n("18494"),
+  i = n("42887"),
+  l = n("18494"),
   u = n("800762"),
   o = n("709681"),
   d = n("488464"),
@@ -24,10 +24,10 @@ var a = n("446674"),
   p = n("274438");
 let E = e => e / 400,
   C = !1,
-  m = (0, o.createSound)("stage_waiting", "stage_waiting", E(l.default.getOutputVolume()));
+  m = (0, o.createSound)("stage_waiting", "stage_waiting", E(i.default.getOutputVolume()));
 
 function S() {
-  let e = i.default.getVoiceChannelId();
+  let e = l.default.getVoiceChannelId();
   if (null == e) {
     m.stop(), C = !1;
     return
@@ -37,14 +37,14 @@ function S() {
     m.stop(), C = !1;
     return
   }
-  let n = l.default.isSelfDeaf();
+  let n = i.default.isSelfDeaf();
   if (n) {
     m.stop(), C = !1;
     return
   }
   let a = p.default.shouldPlay();
   if (a) {
-    m.volume = E(l.default.getOutputVolume()), m.loop(), C = !0;
+    m.volume = E(i.default.getOutputVolume()), m.loop(), C = !0;
     return
   }
   let r = h.default.isLive(e);
@@ -58,11 +58,11 @@ function S() {
     return
   }
   let d = null != Object.values(u.default.getVoiceStatesForChannel(e)).find(e => !e.suppress && !e.isVoiceMuted());
-  d || C ? d && (m.pause(), C = !1) : (m.volume = E(l.default.getOutputVolume()), m.loop(), C = !0)
+  d || C ? d && (m.pause(), C = !1) : (m.volume = E(i.default.getOutputVolume()), m.loop(), C = !0)
 }
 
 function g(e) {
-  let t = (0, a.useStateFromStores)([i.default], () => i.default.getVoiceChannelId() === e),
+  let t = (0, a.useStateFromStores)([l.default], () => l.default.getVoiceChannelId() === e),
     n = (0, c.useStageParticipants)(e, f.StageChannelParticipantNamedIndex.SPEAKER),
     r = null != n.find(e => !e.voiceState.isVoiceMuted()),
     s = (0, a.useStateFromStores)([h.default], () => h.default.getStageInstanceByChannel(e));
@@ -70,7 +70,7 @@ function g(e) {
 }
 
 function _(e) {
-  let t = i.default.getVoiceChannelId() === e,
+  let t = l.default.getVoiceChannelId() === e,
     n = d.default.getMutableParticipants(e, f.StageChannelParticipantNamedIndex.SPEAKER),
     a = null != n.find(e => !e.voiceState.isVoiceMuted()),
     r = h.default.getStageInstanceByChannel(e);

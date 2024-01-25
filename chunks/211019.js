@@ -8,8 +8,8 @@ var a = n("37983");
 n("884691");
 var r = n("414456"),
   s = n.n(r),
-  l = n("446674"),
-  i = n("77078"),
+  i = n("446674"),
+  l = n("77078"),
   u = n("990766"),
   o = n("373469"),
   d = n("271938"),
@@ -26,7 +26,7 @@ function m(e) {
     width: n,
     noArt: r = !1,
     selected: m = !1
-  } = e, S = n < 195, g = (0, l.useStateFromStores)([o.default, d.default], () => o.default.getAllActiveStreams().some(e => {
+  } = e, S = n < 195, g = (0, i.useStateFromStores)([o.default, d.default], () => o.default.getAllActiveStreams().some(e => {
     let {
       ownerId: t
     } = e;
@@ -49,7 +49,7 @@ function m(e) {
         }),
         children: [(0, a.jsx)(f.CallTileCTA, {
           isSmall: S,
-          children: (0, a.jsx)(i.Text, {
+          children: (0, a.jsx)(l.Text, {
             variant: S ? "text-sm/semibold" : "text-md/semibold",
             color: "none",
             children: n < 175 ? p.default.Messages.WATCH : p.default.Messages.WATCH_STREAM

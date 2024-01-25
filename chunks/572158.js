@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 }), s("424973"), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  r = s("446674"),
+  r = s("884691"),
+  n = s("446674"),
   i = s("465527"),
   l = s("86621"),
   u = s("299285"),
@@ -16,7 +16,7 @@ var a = s("37983"),
   _ = s("454589"),
   E = s("49111"),
   I = s("870103");
-class T extends n.PureComponent {
+class T extends r.PureComponent {
   componentDidMount() {
     let {
       sku: e,
@@ -29,10 +29,10 @@ class T extends n.PureComponent {
     let {
       sku: e,
       primarySku: t
-    } = this.props, s = [], n = null;
+    } = this.props, s = [], r = null;
     if (null != e) {
       let a = E.Routes.APPLICATION_STORE_LISTING_SKU(e.id, e.slug);
-      n = a, null != t && s.push({
+      r = a, null != t && s.push({
         id: E.Routes.APPLICATION_STORE_LISTING_SKU(t.id, t.slug),
         label: t.name
       }), s.push({
@@ -44,7 +44,7 @@ class T extends n.PureComponent {
       renderCustomBreadcrumb: this.renderCustomBreadcrumb,
       onBreadcrumbClick: this.handleClick,
       breadcrumbs: s,
-      activeId: n
+      activeId: r
     })
   }
   constructor(...e) {
@@ -68,7 +68,7 @@ class T extends n.PureComponent {
     })
   }
 }
-var f = (0, l.default)(r.default.connectStores([u.default, c.default], e => {
+var f = (0, l.default)(n.default.connectStores([u.default, c.default], e => {
   let {
     sku: t
   } = e, s = null != t ? u.default.getApplication(t.applicationId) : null, a = null != s && null != s.primarySkuId && s.primarySkuId !== t.id ? s.primarySkuId : null;

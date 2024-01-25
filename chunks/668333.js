@@ -32,8 +32,8 @@ var l = n("37983"),
   R = n("866353"),
   O = n("364685"),
   M = n("161585"),
-  k = n("24373"),
-  b = n("41170"),
+  b = n("24373"),
+  k = n("41170"),
   P = n("801396"),
   L = n("355494"),
   U = n("77162"),
@@ -115,7 +115,7 @@ let G = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           stickerPack: e,
           analyticsLocations: o
         }));
-        let t = (0, k.isGuildSticker)(a),
+        let t = (0, b.isGuildSticker)(a),
           r = (0, R.getStickerSendability)(a, l, n);
         r === R.StickerSendability.SENDABLE_WITH_PREMIUM && (0, A.setShowPremiumUpsell)(!0), t && R.StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
         return
@@ -262,10 +262,10 @@ let G = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             "aria-label": B.default.Messages.STICKER_CATEGORY_A11Y_LABEL.format({
               categoryName: e.name
             }),
-            icon: (0, l.jsx)(b.default, {
+            icon: (0, l.jsx)(k.default, {
               disableAnimation: !0,
               size: 12,
-              sticker: (0, k.getStickerPackPreviewSticker)(e)
+              sticker: (0, b.getStickerPackPreviewSticker)(e)
             }),
             isCollapsed: t.has(e.id),
             onClick: () => $(e.id),
@@ -324,8 +324,8 @@ let G = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       stickersGrid: I,
       channel: N
     } = e, _ = i.useRef(!1), A = i.useRef(null), [R, M] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], r.default), {
-      AnalyticsLocationProvider: k
-    } = (0, f.default)(c.default.STICKER_PICKER), b = (0, h.useExpressionPickerStore)(e => e.searchQuery), P = (0, o.useStateFromStores)([O.default], () => O.default.getPremiumPacks()), U = i.useMemo(() => new Set(P.map(e => e.id)), [P]), {
+      AnalyticsLocationProvider: b
+    } = (0, f.default)(c.default.STICKER_PICKER), k = (0, h.useExpressionPickerStore)(e => e.searchQuery), P = (0, o.useStateFromStores)([O.default], () => O.default.getPremiumPacks()), U = i.useMemo(() => new Set(P.map(e => e.id)), [P]), {
       renderRow: j,
       renderSection: D,
       renderSectionFooter: w,
@@ -353,10 +353,10 @@ let G = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       listRef: A,
       onActiveCategoryIndexChange: m.StickerPickerStore.setActiveCategoryIndex,
       scrollOffset: 20,
-      searchQuery: b
+      searchQuery: k
     });
     return (0, S.useSynchronizedScrollPositionForActiveCategoryIndex)({
-      searchQuery: b,
+      searchQuery: k,
       activeCategoryIndex: R,
       listRef: A
     }), i.useImperativeHandle(t, () => ({
@@ -395,7 +395,7 @@ let G = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
           totalHeight: -1
         }
       }
-    }), []), (0, l.jsx)(k, {
+    }), []), (0, l.jsx)(b, {
       children: (0, l.jsxs)("div", {
         className: H.wrapper,
         children: [null != a && 0 === a.sendable.length && 0 === a.sendableWithPremium.length ? (0, l.jsx)(u.default, {

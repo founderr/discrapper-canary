@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  r = s.n(n),
+var r = s("414456"),
+  n = s.n(r),
   i = s("446674"),
   l = s("77078"),
   u = s("915639"),
@@ -23,36 +23,36 @@ var n = s("414456"),
     let {
       localizedPricingPromo: t,
       smallGap: s
-    } = e, n = t.countryCode, S = (0, i.useStateFromStores)([u.default], () => u.default.locale);
-    (0, c.useTrackLocalizedPricingPromoImpression)(T.AnalyticsSections.SETTINGS_PREMIUM_BANNER, n);
+    } = e, r = t.countryCode, S = (0, i.useStateFromStores)([u.default], () => u.default.locale);
+    (0, c.useTrackLocalizedPricingPromoImpression)(T.AnalyticsSections.SETTINGS_PREMIUM_BANNER, r);
     let R = (0, i.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()),
       {
-        localizedPricingBannerHeader: A,
-        localizedPricingBannerBody: m
+        localizedPricingBannerHeader: m,
+        localizedPricingBannerBody: A
       } = (0, d.getLocalizedPricingBannerStrings)({
         localizedPricingPromo: t,
         subscription: R,
         userLocale: S
       }),
-      N = n.toLowerCase() + "Banner";
+      N = r.toLowerCase() + "Banner";
     return (0, a.jsxs)("div", {
-      className: r(f.bannerContainer, {
+      className: n(f.bannerContainer, {
         [f.smallGap]: s,
         [f.bigGap]: !s
       }),
       children: [(0, a.jsx)("div", {
-        className: r(f[N], f.bannerImageContainer)
+        className: n(f[N], f.bannerImageContainer)
       }), (0, a.jsx)(l.Heading, {
         className: f.bannerHeading,
         variant: "heading-xl/semibold",
-        children: A
+        children: m
       }), (0, a.jsx)("div", {
         className: f.textContainer,
         children: (0, a.jsx)(l.Text, {
           color: "none",
           variant: "text-md/normal",
           className: f.bannerBody,
-          children: m
+          children: A
         })
       }), (0, a.jsxs)("div", {
         className: f.ctaButtonContainer,

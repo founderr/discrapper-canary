@@ -1,20 +1,20 @@
 "use strict";
 s.r(t), s.d(t, {
   MessageStyles: function() {
-    return n
+    return r
   },
   default: function() {
     return E
   }
 });
-var a, n, r = s("37983"),
+var a, r, n = s("37983"),
   i = s("884691"),
   l = s("446674"),
   u = s("913144"),
   o = s("465527"),
   d = s("622839"),
   c = s("782340");
-(a = n || (n = {})).SHORT = "SHORT", a.LONG = "LONG";
+(a = r || (r = {})).SHORT = "SHORT", a.LONG = "LONG";
 class _ extends i.PureComponent {
   getText(e, t) {
     if (429 === e.status) switch (t) {
@@ -39,7 +39,7 @@ class _ extends i.PureComponent {
       purchaseError: t,
       messageStyle: s
     } = this.props;
-    return null == t ? null : (0, r.jsx)("div", {
+    return null == t ? null : (0, n.jsx)("div", {
       className: e,
       children: this.getText(t, s)
     })

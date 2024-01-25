@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  r = s.n(n),
+var r = s("414456"),
+  n = s.n(r),
   i = s("77078"),
   l = s("812204"),
   u = s("685665"),
@@ -22,10 +22,10 @@ var n = s("414456"),
       className: t
     } = e, {
       AnalyticsLocationProvider: s
-    } = (0, u.default)(l.default.PREMIUM_MARKETING_HERO_CTA), n = (0, o.useHasActiveTrial)();
+    } = (0, u.default)(l.default.PREMIUM_MARKETING_HERO_CTA), r = (0, o.useHasActiveTrial)();
     return (0, a.jsx)(s, {
       children: (0, a.jsxs)("div", {
-        className: r(E.container, t),
+        className: n(E.container, t),
         "data-testid": "subscriber-nitro-home-hero-header",
         children: [(0, a.jsx)("img", {
           src: I,
@@ -35,8 +35,8 @@ var n = s("414456"),
           className: E.content,
           children: [(0, a.jsx)(c.PremiumPillWithSparkles, {
             text: _.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
-            className: r(E.trialPill, {
-              [E.hidden]: !n
+            className: n(E.trialPill, {
+              [E.hidden]: !r
             }),
             colorOptions: c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
           }), (0, a.jsx)(i.Heading, {

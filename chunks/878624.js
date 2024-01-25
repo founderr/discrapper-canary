@@ -18,8 +18,8 @@ var i = n("884691"),
   p = n("18494"),
   g = n("162771"),
   m = n("697218"),
-  S = n("901165"),
-  E = n("819068"),
+  E = n("901165"),
+  S = n("819068"),
   v = n("49111");
 class y extends i.Component {
   componentDidUpdate(e) {
@@ -51,7 +51,7 @@ class y extends i.Component {
     return null
   }
 }
-var C = l.default.connectStores([g.default, p.default, d.default, f.default, m.default, S.default, c.default, u.default, h.default], () => {
+var C = l.default.connectStores([g.default, p.default, d.default, f.default, m.default, E.default, c.default, u.default, h.default], () => {
   var e, t, n;
   let i = g.default.getGuildId(),
     l = p.default.getChannelId(i),
@@ -65,14 +65,14 @@ var C = l.default.connectStores([g.default, p.default, d.default, f.default, m.d
       } = e;
       return h.default.can(a.default.combine(v.Permissions.SEND_MESSAGES, v.Permissions.VIEW_CHANNEL), t)
     }).length : 0,
-    I = null != r && null != i && null !== (n = null === (e = c.default.getMember(i, r.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== n && n;
+    N = null != r && null != i && null !== (n = null === (e = c.default.getMember(i, r.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== n && n;
   return {
     selectedGuild: i,
     selectedChannel: l,
     isNSFWChannel: null == s ? void 0 : s.nsfw,
-    locked: S.default.isUILocked((0, E.getPID)()),
+    locked: E.default.isUILocked((0, S.getPID)()),
     hasPreviewEnabled: null == o ? void 0 : o.features.has(v.GuildFeatures.PREVIEW_ENABLED),
-    isMemberPending: I,
+    isMemberPending: N,
     postableChannelCount: C
   }
 })(y)

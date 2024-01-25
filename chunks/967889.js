@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983"),
   r = n("884691"),
   s = n("917351"),
-  l = n.n(s),
-  i = n("88807"),
+  i = n.n(s),
+  l = n("88807"),
   u = n("721998"),
   o = n("432710"),
   d = n("446674"),
@@ -48,10 +48,10 @@ function M() {
     children: A.default.Messages.CLEAR_BUILD_OVERRIDE
   })
 }
-let x = l.throttle(() => {
+let x = i.throttle(() => {
   C.default.increment({
     name: o.MetricEvents.APP_CRASHED,
-    tags: ["reason:".concat(i.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
+    tags: ["reason:".concat(l.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
   }, !0)
 }, 100, {
   trailing: !1

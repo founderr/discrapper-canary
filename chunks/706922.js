@@ -1,11 +1,11 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return r
+    return n
   }
 });
 var a = s("862205");
-let n = (0, a.createExperiment)({
+let r = (0, a.createExperiment)({
   kind: "user",
   id: "2024-01_all_perks",
   label: "All Perks",
@@ -20,10 +20,10 @@ let n = (0, a.createExperiment)({
     }
   }]
 });
-var r = function() {
+var n = function() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return n.useExperiment({
+  return r.useExperiment({
     location: "experiment_hook"
   }, {
     autoTrackExposure: e,

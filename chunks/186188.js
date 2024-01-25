@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return M
   },
   SoundboardMention: function() {
-    return k
+    return b
   },
   StaticRouteMention: function() {
-    return b
+    return k
   },
   CommandMention: function() {
     return P
@@ -180,7 +180,7 @@ function M(e) {
   })
 }
 
-function k(e) {
+function b(e) {
   var t;
   let {
     id: n
@@ -190,7 +190,7 @@ function k(e) {
   })
 }
 
-function b(e) {
+function k(e) {
   let {
     id: t
   } = e, n = {

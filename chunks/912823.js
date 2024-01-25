@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return k
+    return b
   }
 }), n("222007"), n("424973");
 var l = n("37983"),
@@ -57,8 +57,8 @@ function M(e) {
     channel: n
   })
 }
-var k = i.memo(function(e) {
-  var t, n, i, p, y, I, k, b, P;
+var b = i.memo(function(e) {
+  var t, n, i, p, y, I, b, k, P;
   let {
     type: L,
     disabled: U,
@@ -111,10 +111,10 @@ var k = i.memo(function(e) {
     disabled: U,
     channel: j,
     type: L
-  }, "activity")), (null === (k = L.gifts) || void 0 === k ? void 0 : k.button) != null && null == K && !W && Y.push((0, l.jsx)(M, {
+  }, "activity")), (null === (b = L.gifts) || void 0 === b ? void 0 : b.button) != null && null == K && !W && Y.push((0, l.jsx)(M, {
     disabled: U,
     channel: j
-  }, "gift")), (null === (b = L.gifs) || void 0 === b ? void 0 : b.button) != null && null == K && Y.push((0, l.jsx)(v.default, {
+  }, "gift")), (null === (k = L.gifs) || void 0 === k ? void 0 : k.button) != null && null == K && Y.push((0, l.jsx)(v.default, {
     disabled: U,
     type: L
   }, "gif")), (null === (P = L.stickers) || void 0 === P ? void 0 : P.button) != null && null == K && Y.push((0, l.jsx)(_.default, {

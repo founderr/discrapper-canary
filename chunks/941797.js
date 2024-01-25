@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  r = s("907002"),
+  r = s("884691"),
+  n = s("907002"),
   i = s("891722"),
   l = s("704426"),
   u = s("77078"),
@@ -18,12 +18,12 @@ var _ = e => {
     cards: t,
     className: s,
     cardType: _
-  } = e, [E, I] = n.useState(0), T = t.length, f = T - 2, S = n.useCallback(e => ({
+  } = e, [E, I] = r.useState(0), T = t.length, f = T - 2, S = r.useCallback(e => ({
     x: (e - E) * 100
-  }), [E]), [R, A] = (0, r.useSprings)(t.length, S);
-  return n.useEffect(() => {
-    A(S)
-  }, [A, S]), (0, a.jsx)("div", {
+  }), [E]), [R, m] = (0, n.useSprings)(t.length, S);
+  return r.useEffect(() => {
+    m(S)
+  }, [m, S]), (0, a.jsx)("div", {
     className: s,
     children: (0, a.jsxs)("div", {
       className: d.cardContainer,
@@ -41,12 +41,12 @@ var _ = e => {
         className: d.cardInnerContainer,
         children: R.map((e, s) => {
           let {
-            x: n
+            x: r
           } = e;
-          return (0, a.jsx)(r.animated.div, {
+          return (0, a.jsx)(n.animated.div, {
             className: d.card,
             style: {
-              transform: null == n ? void 0 : n.to(e => "translate3d(".concat(e, "%,0,0)"))
+              transform: null == r ? void 0 : r.to(e => "translate3d(".concat(e, "%,0,0)"))
             },
             children: (0, a.jsx)(o.default, {
               ...t[s],

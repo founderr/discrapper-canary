@@ -8,8 +8,8 @@ var a = n("37983");
 n("884691");
 var r = n("77078"),
   s = n("990766"),
-  l = n("773356"),
-  i = n("349171"),
+  i = n("773356"),
+  l = n("349171"),
   u = n("292687"),
   o = n("305961"),
   d = n("42887"),
@@ -20,7 +20,7 @@ var r = n("77078"),
 
 function E(e, t, E) {
   let C = u.default.getWindowOpen(h.PopoutWindowKeys.CHANNEL_CALL_POPOUT) ? h.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
-  if ((0, i.default)(C), f.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
+  if ((0, l.default)(C), f.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
     let {
       default: t
     } = await n.el("451863").then(n.bind(n, "451863"));
@@ -32,7 +32,7 @@ function E(e, t, E) {
   });
   else {
     var m;
-    let n = (0, l.default)(p.ApplicationStreamPresets.PRESET_CUSTOM, p.ApplicationStreamResolutions.RESOLUTION_1080, p.ApplicationStreamFPS.FPS_30, c.default.getCurrentUser(), null === (m = o.default.getGuild(e)) || void 0 === m ? void 0 : m.premiumTier) ? {
+    let n = (0, i.default)(p.ApplicationStreamPresets.PRESET_CUSTOM, p.ApplicationStreamResolutions.RESOLUTION_1080, p.ApplicationStreamFPS.FPS_30, c.default.getCurrentUser(), null === (m = o.default.getGuild(e)) || void 0 === m ? void 0 : m.premiumTier) ? {
       width: 1920,
       height: 1080
     } : {

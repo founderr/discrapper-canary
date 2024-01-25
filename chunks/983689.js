@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("884691"),
   r = n("446674"),
   s = n("551042"),
-  l = n("77078"),
-  i = n("485328"),
+  i = n("77078"),
+  l = n("485328"),
   u = n("180748"),
   o = n("206230"),
   d = n("951212"),
@@ -28,7 +28,7 @@ function m() {
 }
 var S = function(e, t) {
   let n = (0, r.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled);
-  (0, l.useFocusJumpSectionManager)(n);
+  (0, i.useFocusJumpSectionManager)(n);
   let s = (0, a.useCallback)(e => {
     ! function(e, t) {
       var n, a;
@@ -36,7 +36,7 @@ var S = function(e, t) {
       if (r && e.key !== E.KeyboardEventKey.Tab) return;
       let s = e.ctrlKey || e.altKey || e.metaKey || e.key !== E.KeyboardEventKey.Tab && e.shiftKey;
       if (s) return;
-      let l = function(e) {
+      let i = function(e) {
         let t = h.keyToCode("shift"),
           n = h.keyToCode("tab");
         if (e.key === E.KeyboardEventKey.Tab && e.shiftKey && null != t && null != n) return [
@@ -52,7 +52,7 @@ var S = function(e, t) {
         }
         return null
       }(e);
-      null != l && !c.default.hasExactKeybind(l) && !i.default.hasBind(null !== (a = h.codeToKey(l[0])) && void 0 !== a ? a : "") && ((0, u.enableKeyboardMode)(), r && !t && e.preventDefault())
+      null != i && !c.default.hasExactKeybind(i) && !l.default.hasBind(null !== (a = h.codeToKey(i[0])) && void 0 !== a ? a : "") && ((0, u.enableKeyboardMode)(), r && !t && e.preventDefault())
     }(e, t)
   }, [t]);
   return (0, a.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", m), e.addEventListener("keydown", C)) : e.addEventListener("keydown", s), () => {

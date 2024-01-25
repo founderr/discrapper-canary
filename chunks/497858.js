@@ -26,13 +26,13 @@ function C(e, t, n) {
   let {
     channel: _,
     type: A
-  } = e, [R, O] = l.useState(() => (0, m.createInitialState)()), M = (0, i.useForceUpdate)(), k = (0, r.useStateFromStores)([d.default], () => {
+  } = e, [R, O] = l.useState(() => (0, m.createInitialState)()), M = (0, i.useForceUpdate)(), b = (0, r.useStateFromStores)([d.default], () => {
     if (null != e.guild) {
       var t;
       return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, S.CLYDE_AI_USER_ID)
     }
     return !1
-  }), b = (0, u.useClydeEnabled)(e.guild, e.channel) && !k && !(0, u.canUseCustomClydeProfiles)(e.guild), P = (0, r.useStateFromStores)([d.default, p.default], () => {
+  }), k = (0, u.useClydeEnabled)(e.guild, e.channel) && !b && !(0, u.canUseCustomClydeProfiles)(e.guild), P = (0, r.useStateFromStores)([d.default, p.default], () => {
     var e, t;
     let n = p.default.getCurrentUser();
     return null !== (t = null != _.guild_id && null != n ? null === (e = d.default.getMember(_.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
@@ -63,7 +63,7 @@ function C(e, t, n) {
     activeCommandOption: D,
     canMentionUsers: null !== (x = null === (T = A.users) || void 0 === T ? void 0 : T.allowMentioning) && void 0 !== x && x,
     canMentionEveryone: L,
-    canMentionClyde: b,
+    canMentionClyde: k,
     hidePersonalInformation: U,
     hideMentionDescription: A === a.ChatInputTypes.RULES_INPUT,
     emojiIntention: A === a.ChatInputTypes.RULES_INPUT ? g.EmojiIntention.COMMUNITY_CONTENT : g.EmojiIntention.CHAT,

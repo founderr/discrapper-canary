@@ -37,8 +37,8 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
       isScrolling: R,
       isUsingKeyboardNavigation: O,
       onInspect: M,
-      onSelect: k,
-      rowIndex: b,
+      onSelect: b,
+      rowIndex: k,
       stickerClassName: P,
       stickerDescriptors: L,
       stickerPadding: U = I,
@@ -63,7 +63,7 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
     return (0, l.jsx)("div", {
       className: y.row,
       style: V,
-      ...null == N ? void 0 : N(b),
+      ...null == N ? void 0 : N(k),
       children: L.map(e => {
         var c;
         let x = e.visibleRowIndex === (null == A ? void 0 : A.rowIndex) && e.columnIndex === (null == A ? void 0 : A.columnIndex),
@@ -76,7 +76,7 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
             tabIndex: L,
             onFocus: U,
             ...K
-          } = null !== (c = null == a ? void 0 : a(e.columnIndex, b)) && void 0 !== c ? c : {};
+          } = null !== (c = null == a ? void 0 : a(e.columnIndex, k)) && void 0 !== c ? c : {};
         switch (e.type) {
           case E.StickerGridItemTypes.CREATE_STICKER:
             return (0, l.jsx)("div", {
@@ -133,7 +133,7 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
               onFocus: null != U ? U : N,
               onMouseMove: N,
               onClick: t => {
-                (null == R ? void 0 : R.current) !== !0 && (null == O ? void 0 : O.current) !== !0 && (null == k || k(e, t))
+                (null == R ? void 0 : R.current) !== !0 && (null == O ? void 0 : O.current) !== !0 && (null == b || b(e, t))
               },
               onContextMenu: e => {
                 (0, d.openContextMenuLazy)(e, async () => {

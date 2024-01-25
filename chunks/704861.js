@@ -5,12 +5,12 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  r = s("55620"),
+  r = s("884691"),
+  n = s("55620"),
   i = s("440351"),
   l = s("782340"),
   u = s("76101");
-class o extends n.PureComponent {
+class o extends r.PureComponent {
   render() {
     let {
       game: {
@@ -33,9 +33,9 @@ class o extends n.PureComponent {
   }
   constructor(...e) {
     super(...e), this.handleDisagree = () => {
-      (0, r.matureDisagree)()
+      (0, n.matureDisagree)()
     }, this.handleAgree = () => {
-      (0, r.matureAgree)()
+      (0, n.matureAgree)()
     }
   }
 }
