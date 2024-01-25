@@ -245,10 +245,11 @@ class U extends l.PureComponent {
         channel: N,
         hangStatusActivity: A,
         showHangStatus: M,
-        isSelf: j
+        isSelf: j,
+        application: O
       } = this.props, {
-        userPopoutOpen: O
-      } = this.state, b = L.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), D = {
+        userPopoutOpen: b
+      } = this.state, D = L.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), U = {
         user: f,
         speaking: c,
         mute: r,
@@ -271,20 +272,21 @@ class U extends l.PureComponent {
         avatarContainerClass: i({
           [P.userAvatar]: !0
         }),
-        disabled: t && !b,
-        selected: O,
-        onClick: b ? void 0 : this.handleClickUser,
+        disabled: t && !D,
+        selected: b,
+        onClick: D ? void 0 : this.handleClickUser,
         onDoubleClick: this.handleWatchStream,
         onContextMenu: this.handleUserContextMenu,
         guildId: N.guild_id,
         hangStatusActivity: A,
         showHangStatus: M,
-        isSelf: j
+        isSelf: j,
+        application: O
       };
       if (t) {
-        var U;
+        var w;
         return (0, a.jsx)(o.Tooltip, {
-          text: null !== (U = (0, m.default)(n)) && void 0 !== U ? U : y.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+          text: null !== (w = (0, m.default)(n)) && void 0 !== w ? w : y.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
           children: e => {
             let {
               onClick: t,
@@ -292,7 +294,7 @@ class U extends l.PureComponent {
               ...l
             } = e;
             return (0, a.jsx)(R.default, {
-              ...D,
+              ...U,
               ...l
             })
           }
@@ -301,11 +303,11 @@ class U extends l.PureComponent {
       return (0, a.jsx)(o.Popout, {
         position: "right",
         renderPopout: C ? this.renderStreamPopout : this.renderHangStatusPopout,
-        shouldShow: s && !O,
+        shouldShow: s && !b,
         onRequestClose: this.handleHidePreview,
         spacing: 0,
         children: () => (0, a.jsx)(R.default, {
-          ...D,
+          ...U,
           onMouseDown: e.onMouseDown,
           onKeyDown: e.onKeyDown
         })

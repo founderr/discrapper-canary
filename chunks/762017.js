@@ -324,6 +324,11 @@ let o = {
     actions: ["POST_CONNECTION_OPEN", "QUESTS_SEND_HEARTBEAT_SUCCESS", "QUESTS_ENROLL_SUCCESS", "RUNNING_GAMES_CHANGE", "STREAM_START", "STREAM_CLOSE"],
     inlineRequire: () => E("319405").default,
     neverLoadBeforeConnectionOpen: !0
+  },
+  VoiceChannelGameActivityManager: {
+    actions: ["PRESENCE_UPDATES", "POST_CONNECTION_OPEN", "VOICE_STATE_UPDATES"],
+    inlineRequire: () => E("282655").default,
+    neverLoadBeforeConnectionOpen: !0
   }
 };
 (0, t.initialize)(o)
