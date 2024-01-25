@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 }), s("222007"), s("808653");
 var a = s("37983"),
-  n = s("884691"),
-  r = s("414456"),
-  l = s.n(r),
-  i = s("748802"),
+  r = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
+  l = s("748802"),
   u = s("77078"),
   o = s("290381"),
   d = s("812204"),
@@ -21,9 +21,9 @@ var a = s("37983"),
   S = s("322507"),
   R = s("941797"),
   m = s("830648"),
-  p = s("627474"),
+  A = s("627474"),
   N = s("835618"),
-  A = s("554083"),
+  p = s("554083"),
   g = s("628550"),
   P = s("598739"),
   C = s("49111"),
@@ -31,24 +31,24 @@ var a = s("37983"),
   O = s("137537"),
   h = s("679324"),
   L = () => {
-    let e, t = n.useRef(null),
-      s = n.useRef(null),
-      r = (0, _.default)("perks-discoverability"),
-      [L, x] = n.useState(!1),
+    let e, t = r.useRef(null),
+      s = r.useRef(null),
+      n = (0, _.default)("perks-discoverability"),
+      [L, x] = r.useState(!1),
       v = (0, g.default)(),
-      U = Object.entries(v).reduce((e, t) => {
+      D = Object.entries(v).reduce((e, t) => {
         let [s, a] = t;
         return !1 !== a.canReveal && "upcomingDropUntimed" !== a.name && (e[s] = a), e
       }, {}),
       {
-        enabled: b
+        enabled: U
       } = (0, f.default)(),
       {
-        AnalyticsLocationProvider: D,
+        AnalyticsLocationProvider: b,
         analyticsLocations: j
       } = (0, c.default)(d.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
-      [G, k] = n.useState(!1);
-    return b && (e = (0, a.jsx)(I.default, {
+      [G, k] = r.useState(!1);
+    return U && (e = (0, a.jsx)(I.default, {
       color: u.ButtonColors.PRIMARY,
       onlyShineOnHover: !0,
       shineSize: I.ShineSizes.SMALL,
@@ -56,7 +56,7 @@ var a = s("37983"),
       onClick: () => x(!0),
       children: (0, a.jsxs)("div", {
         className: O.seeAllPerksButtonContent,
-        children: [M.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, (0, a.jsx)(i.ChevronSmallRightIcon, {
+        children: [M.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, (0, a.jsx)(l.ChevronSmallRightIcon, {
           color: "currentColor"
         })]
       })
@@ -66,20 +66,20 @@ var a = s("37983"),
         ref: t,
         children: (0, a.jsx)("div", {
           className: O.container,
-          children: (0, a.jsxs)(D, {
-            children: [(0, a.jsx)(A.default, {
+          children: (0, a.jsxs)(b, {
+            children: [(0, a.jsx)(p.default, {
               className: O.heroHeading
-            }), (0, a.jsx)(p.default, {
+            }), (0, a.jsx)(A.default, {
               variant: P.PerksDiscoverabilityVariants.WHATS_NEW,
               className: O.whatsNew,
               noBackground: !0,
               leftAlignHeaders: !0
-            }), (0, a.jsx)(p.default, {
+            }), (0, a.jsx)(A.default, {
               className: O.perksDiscoverability,
               noBackground: !0,
               leftAlignHeaders: !0,
               showAllPerksButton: e
-            }), !b && (0, a.jsx)(m.default, {
+            }), !U && (0, a.jsx)(m.default, {
               className: O.perksCards,
               isSubscriberNitroHome: !0
             }), (0, a.jsx)(N.default, {
@@ -104,14 +104,14 @@ var a = s("37983"),
             })]
           })
         })
-      }), b ? (0, a.jsx)(u.AdvancedScrollerAuto, {
-        className: l(O.allPerksScroller, {
+      }), U ? (0, a.jsx)(u.AdvancedScrollerAuto, {
+        className: i(O.allPerksScroller, {
           [O.open]: L
         }),
         ref: s,
         children: (0, a.jsx)("div", {
           className: O.container,
-          children: (0, a.jsxs)(D, {
+          children: (0, a.jsxs)(b, {
             children: [(0, a.jsx)(S.default, {
               className: O.heroHeading,
               onBackClick: () => x(!1)
@@ -124,7 +124,8 @@ var a = s("37983"),
                 children: M.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE
               }), (0, a.jsx)(R.default, {
                 className: O.cardCarousel,
-                cards: (0, P.getFilteredPerksDiscoverabilityCards)(U, P.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW, r)
+                cards: (0, P.getFilteredPerksDiscoverabilityCards)(D, P.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW, n),
+                cardType: P.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW
               }), (0, a.jsx)(u.Heading, {
                 variant: "heading-xxl/extrabold",
                 color: "header-primary",
@@ -132,12 +133,17 @@ var a = s("37983"),
                 children: M.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD
               }), (0, a.jsx)(R.default, {
                 className: O.cardCarousel,
-                cards: (0, P.getFilteredPerksDiscoverabilityCards)(U, P.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW, r)
+                cards: (0, P.getFilteredPerksDiscoverabilityCards)(D, P.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW, n),
+                cardType: P.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW
               }), (0, a.jsx)(u.Heading, {
                 variant: "heading-xxl/extrabold",
                 color: "header-primary",
                 className: O.heading,
                 children: M.default.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
+              }), (0, a.jsx)(R.default, {
+                className: O.cardCarousel,
+                cards: (0, P.getFilteredPerksDiscoverabilityCards)(D, P.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW, n),
+                cardType: P.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW
               })]
             }), (0, a.jsx)("div", {
               className: O.footerSpacing

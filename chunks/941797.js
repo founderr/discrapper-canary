@@ -1,84 +1,76 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return E
+    return _
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  r = s("907002"),
-  l = s("891722"),
-  i = s("704426"),
+  r = s("884691"),
+  n = s("907002"),
+  i = s("891722"),
+  l = s("704426"),
   u = s("77078"),
   o = s("558566"),
   d = s("821265");
-let c = [-100, 0, 100, 200, 300],
-  _ = u.tokens.colors.INTERACTIVE_NORMAL;
-var E = e => {
+let c = u.tokens.colors.INTERACTIVE_NORMAL;
+var _ = e => {
   let {
     cards: t,
-    className: s
-  } = e, [E, I] = n.useState([0, 1, 2, 3, 4]), [T, f] = (0, r.useSprings)(t.length, (e, t) => ({
-    ...t,
-    x: c[e]
-  }));
-  return n.useEffect(() => {
-    f(e => {
-      let t = E.indexOf(e),
-        s = -1 === t ? 300 : c[t],
-        a = t <= 0 || t === c.length - 1;
-      return {
-        x: s - 100,
-        opacity: a ? 0 : 1
-      }
-    })
-  }, [f, E]), (0, a.jsx)("div", {
+    className: s,
+    cardType: _
+  } = e, [E, I] = r.useState(0), T = t.length, f = T - 2, S = r.useCallback(e => ({
+    x: (e - E) * 100
+  }), [E]), [R, m] = (0, n.useSprings)(t.length, S);
+  return r.useEffect(() => {
+    m(S)
+  }, [m, S]), (0, a.jsx)("div", {
     className: s,
     children: (0, a.jsxs)("div", {
       className: d.cardContainer,
-      children: [(0, a.jsx)(u.Clickable, {
+      children: [f > 1 && (0, a.jsx)(u.Clickable, {
         onClick: () => {
-          I(e => [(e[0] - 1 + t.length) % t.length, e[0], e[1], e[2], e[3]])
+          I(e => 0 === e ? T - 3 : e - 1)
         },
         className: d.leftArrow,
-        children: (0, a.jsx)(l.ArrowSmallLeftIcon, {
+        children: (0, a.jsx)(i.ArrowSmallLeftIcon, {
           className: d.arrowIcon,
-          width: 30,
-          color: _
+          width: 24,
+          color: c
         })
       }), (0, a.jsx)("div", {
         className: d.cardInnerContainer,
-        children: T.map((e, s) => {
+        children: R.map((e, s) => {
           let {
-            x: n,
-            opacity: l
+            x: r
           } = e;
-          return (0, a.jsx)(r.animated.div, {
+          return (0, a.jsx)(n.animated.div, {
             className: d.card,
             style: {
-              opacity: l,
-              transform: null == n ? void 0 : n.to(e => "translate3d(".concat(e, "%,0,0)"))
+              transform: null == r ? void 0 : r.to(e => "translate3d(".concat(e, "%,0,0)"))
             },
             children: (0, a.jsx)(o.default, {
-              ...t[s]
+              ...t[s],
+              cardType: _
             }, "".concat(t[s].name, "_").concat(s, "_perks_card"))
           }, "".concat(t[s].name, "_").concat(s, "_animated_div"))
         })
-      }), (0, a.jsx)(u.Clickable, {
+      }), f > 1 && (0, a.jsx)(u.Clickable, {
         onClick: () => {
-          I(e => [e[1], e[2], e[3], (e[3] + 1) % t.length, (e[3] + 2) % t.length])
+          I(e => e >= T - 3 ? 0 : e + 1)
         },
         className: d.rightArrow,
-        children: (0, a.jsx)(i.ArrowSmallRightIcon, {
+        children: (0, a.jsx)(l.ArrowSmallRightIcon, {
           className: d.arrowIcon,
-          width: 30,
-          color: _
+          width: 24,
+          color: c
         })
-      }), (0, a.jsx)("div", {
+      }), f > 1 && (0, a.jsx)("div", {
         className: d.cardProgressBar,
-        children: t.map((e, t) => (0, a.jsx)("div", {
-          className: t === E[0] ? d.selectedDot : d.dot
-        }, "progress_bar_dot_".concat(t)))
+        children: t.map((e, t) => {
+          if (!(t >= T - 2)) return (0, a.jsx)("div", {
+            className: t === E ? d.selectedDot : d.dot
+          }, "progress_bar_dot_".concat(t))
+        })
       })]
     })
   })
