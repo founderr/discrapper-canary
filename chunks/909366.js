@@ -55,8 +55,7 @@ function d(e) {
           attachmentClassName: o.attachment,
           containerClassName: o.mediaContainer,
           media: t.pollMedia,
-          fallback: null,
-          alt: ""
+          fallback: null
         }), (0, s.jsx)(a.Text, {
           className: o.label,
           variant: "text-sm/semibold",

@@ -52,7 +52,8 @@ function f(e) {
       media: t.pollMedia,
       fallback: (0, s.jsx)("div", {
         className: a(d.attachment, d.mediaMissing)
-      })
+      }),
+      alt: t.pollMedia.text
     }), u && (0, s.jsx)(o.PollAnswerSelectedIcon, {
       size: 40,
       className: d.selectedIcon
