@@ -26,7 +26,7 @@ function M(e) {
   i.reset(t)
 }
 
-function g() {
+function f() {
   return !1
 }
 
@@ -37,7 +37,7 @@ function b(e) {
   return i.rebuildAllMembers()
 }
 
-function f(e) {
+function g(e) {
   let {
     guildId: t,
     userId: i
@@ -105,10 +105,6 @@ class p extends r.default.Store {
   getElasticSearchPaginationByGuildId(e) {
     let t = _(e);
     return t.getElasticSearchPagination()
-  }
-  calculateNewContinuationToken(e, t) {
-    let i = _(e);
-    return i.calculateNewContinuationToken(t)
   }
   getEnhancedMember(e, t) {
     let i = _(e);
@@ -194,8 +190,8 @@ let I = new p(n.default, {
     } = e, r = _(t);
     return r.updateServerMembers(i)
   },
-  GUILD_MEMBER_ADD: g,
-  GUILD_MEMBER_UPDATE: g,
+  GUILD_MEMBER_ADD: f,
+  GUILD_MEMBER_UPDATE: f,
   GUILD_MEMBER_UPDATE_LOCAL: function(e) {
     let {
       guildId: t
@@ -218,8 +214,8 @@ let I = new p(n.default, {
     } = e, r = _(t);
     return r.updateMembersByMemberIds([i.user.id])
   },
-  GUILD_ROLE_MEMBER_REMOVE: f,
-  GUILD_ROLE_MEMBER_ADD: f,
+  GUILD_ROLE_MEMBER_REMOVE: g,
+  GUILD_ROLE_MEMBER_ADD: g,
   THREAD_MEMBER_LIST_UPDATE: function(e) {
     let {
       guildId: t,

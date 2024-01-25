@@ -237,9 +237,6 @@ class o {
   getPaginatedMembers() {
     return null != this._pagination && this._initialized ? [this._pagination.paginatedMembers, this._pagination.version] : [{}, 0]
   }
-  calculateNewContinuationToken(e) {
-    return null != this._pagination && this._initialized ? this._pagination.calculateNewContinuationToken(e) : null
-  }
   updatePaginationToken(e) {
     return null != this._pagination && !!this._initialized && this._pagination.updatePaginationToken(e)
   }
