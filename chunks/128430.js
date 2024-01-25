@@ -5,14 +5,14 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  r = s("884691"),
-  n = s("895530"),
+  n = s("884691"),
+  r = s("895530"),
   i = s("18987"),
   l = s("145131"),
   u = s("49111"),
   o = s("782340"),
   d = s("654698");
-class c extends r.PureComponent {
+class c extends n.PureComponent {
   renderContentRatingImage() {
     let {
       contentRating: e,
@@ -33,7 +33,7 @@ class c extends r.PureComponent {
       className: s
     } = this.props;
     if (null == e || null == t) return null;
-    let r = {
+    let n = {
         [u.ContentRatingAgencies.ESRB]: {
           1: o.default.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ALCOHOL_REFERENCE,
           2: o.default.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ANIMATED_BLOOD,
@@ -89,10 +89,10 @@ class c extends r.PureComponent {
           7: o.default.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_DISCRIMINATION
         }
       },
-      i = e.descriptors.map(e => r[t][e]).join(", ");
+      i = e.descriptors.map(e => n[t][e]).join(", ");
     return (0, a.jsxs)("div", {
       className: s,
-      children: [(0, a.jsx)(n.default, {
+      children: [(0, a.jsx)(r.default, {
         children: o.default.Messages.APPLICATION_STORE_SECTION_TITLE_RATINGS
       }), (0, a.jsxs)(l.default, {
         className: d.content,

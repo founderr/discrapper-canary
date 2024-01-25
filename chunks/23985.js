@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  r = s("884691"),
-  n = s("414456"),
-  i = s.n(n),
+  n = s("884691"),
+  r = s("414456"),
+  i = s.n(r),
   l = s("446674"),
   u = s("1017"),
   o = s("102985"),
@@ -20,21 +20,21 @@ var a = s("37983"),
   f = s("760936"),
   S = s("697092"),
   R = s("782340"),
-  m = s("825704");
-class A extends r.Component {
+  A = s("825704");
+class m extends n.Component {
   renderReasons(e, t, s) {
     return 0 === e.length && 0 === t.length ? null : (0, a.jsx)("div", {
-      className: m.section,
+      className: A.section,
       children: (0, a.jsxs)("div", {
-        className: m.sectionContent,
+        className: A.sectionContent,
         children: [e.map(e => (0, a.jsx)("div", {
-          className: m.unit,
+          className: A.unit,
           children: (0, a.jsx)(f.default, {
             reason: e,
             hidePersonalInformation: s
           })
         }, e.type)), t.map(e => (0, a.jsx)("div", {
-          className: m.unit,
+          className: A.unit,
           children: (0, a.jsx)(I.default, {
             reason: e
           })
@@ -56,19 +56,19 @@ class A extends r.Component {
       socialReasons: e,
       nonSocialReasons: t,
       storeListing: s,
-      hidePersonalInformation: r,
-      className: n
+      hidePersonalInformation: n,
+      className: r
     } = this.props;
     if (0 === e.length && 0 === t.length && null == s.staffNotes) return null;
     let l = this.getReviewToRender();
     return (0, a.jsxs)("div", {
-      className: i(m.root, n),
+      className: i(A.root, r),
       children: [(0, a.jsx)("div", {
-        className: m.header,
+        className: A.header,
         children: R.default.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
-      }), this.renderReasons(e, t, r), null != l ? (0, a.jsx)(S.default, {
+      }), this.renderReasons(e, t, n), null != l ? (0, a.jsx)(S.default, {
         data: l,
-        className: m.review
+        className: A.review
       }) : null]
     })
   }
@@ -82,4 +82,4 @@ var N = l.default.connectStores([_.default, d.default, E.default, u.default, c.d
     nonSocialReasons: (0, T.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
     hidePersonalInformation: o.default.hidePersonalInformation
   }
-})(A)
+})(m)

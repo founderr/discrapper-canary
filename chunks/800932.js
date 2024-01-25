@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return R
   }
 }), n("222007");
 var s = n("37983"),
@@ -19,8 +19,8 @@ var s = n("37983"),
   _ = n("697218"),
   p = n("461380"),
   h = n("593195"),
-  m = n("368121"),
-  T = n("767517"),
+  T = n("368121"),
+  m = n("767517"),
   N = n("5487"),
   g = n("932180"),
   A = n("473759"),
@@ -28,7 +28,7 @@ var s = n("37983"),
   C = n("782340"),
   v = n("953066");
 
-function x(e) {
+function R(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     [n, l] = a.useState(""),
     [i, r] = a.useState(null),
@@ -76,13 +76,13 @@ function x(e) {
       })]
     }),
     h = e.serializedSourceGuild.roles.filter(e => "@everyone" !== e.name),
-    m = (0, s.jsxs)(s.Fragment, {
+    T = (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {
         className: v.divider
       }), (0, s.jsxs)(c.FormItem, {
         className: v.previewSection,
         title: C.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_HEADER,
-        children: [(0, s.jsx)(R, {
+        children: [(0, s.jsx)(L, {
           channels: e.serializedSourceGuild.channels
         }), (0, s.jsxs)(c.Text, {
           variant: "text-xs/normal",
@@ -97,7 +97,7 @@ function x(e) {
         children: (0, s.jsx)(c.FormItem, {
           className: v.previewSection,
           title: C.default.Messages.GUILD_TEMPLATE_MODAL_ROLES_HEADER2,
-          children: (0, s.jsx)(L, {
+          children: (0, s.jsx)(O, {
             roles: h
           })
         })
@@ -105,12 +105,12 @@ function x(e) {
     });
   return {
     form: p,
-    preview: m,
-    handleSubmit: () => T.default.acceptGuildTemplate(e.code, n, i).catch(e => o(e))
+    preview: T,
+    handleSubmit: () => m.default.acceptGuildTemplate(e.code, n, i).catch(e => o(e))
   }
 }
 
-function R(e) {
+function L(e) {
   let {
     channels: t
   } = e, n = u(t).sortBy(e => null == e.parent_id ? 1e4 * Number(e.id) : 1e4 * Number(e.parent_id) + e.id).map(e => {
@@ -118,7 +118,7 @@ function R(e) {
       let {
         type: t
       } = e;
-      return t === S.ChannelTypes.GUILD_VOICE ? m.default : t === S.ChannelTypes.GUILD_CATEGORY ? p.default : h.default
+      return t === S.ChannelTypes.GUILD_VOICE ? T.default : t === S.ChannelTypes.GUILD_CATEGORY ? p.default : h.default
     }(e);
     return (0, s.jsxs)("div", {
       className: i(v.channel, {
@@ -140,10 +140,10 @@ function R(e) {
 }
 n("721247");
 
-function L(e) {
+function O(e) {
   let {
     roles: t
-  } = e, n = t.slice().reverse().map(e => (0, s.jsx)(O, {
+  } = e, n = t.slice().reverse().map(e => (0, s.jsx)(x, {
     role: e
   }, e.id));
   return (0, s.jsx)("ul", {
@@ -152,7 +152,7 @@ function L(e) {
   })
 }
 
-function O(e) {
+function x(e) {
   var t;
   let {
     role: n

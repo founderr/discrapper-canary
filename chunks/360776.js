@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var r = s("414456"),
-  n = s.n(r),
+var n = s("414456"),
+  r = s.n(n),
   i = s("907002"),
   l = s("65597"),
   u = s("206230"),
@@ -21,12 +21,12 @@ var r = s("414456"),
   f = function(e) {
     var t, s;
     let {
-      isVisible: r,
+      isVisible: n,
       isFullscreen: f,
       subscriptionTier: S
-    } = e, R = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, m = (0, o.usePremiumDiscountOffer)(), A = (0, o.discountOfferHasTier)(m, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, l.default)([u.default], () => u.default.useReducedMotion), p = (0, i.useSpring)({
-      transform: r ? "translateY(-100%)" : "translateY(0%)",
-      opacity: r ? 1 : 0,
+    } = e, R = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, A = (0, o.usePremiumDiscountOffer)(), m = (0, o.discountOfferHasTier)(A, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, N = (0, l.default)([u.default], () => u.default.useReducedMotion), p = (0, i.useSpring)({
+      transform: n ? "translateY(-100%)" : "translateY(0%)",
+      opacity: n ? 1 : 0,
       config: {
         tension: 120,
         friction: 12
@@ -36,9 +36,9 @@ var r = s("414456"),
       section: I.AnalyticsSections.MARKETING_FLOATING_CTA
     };
     return (0, a.jsx)(i.animated.div, {
-      className: n(T.wrapper, {
+      className: r(T.wrapper, {
         [T.fullscreenWrapper]: f,
-        [T.invisible]: !r
+        [T.invisible]: !n
       }),
       style: p,
       children: (0, a.jsxs)("div", {
@@ -46,7 +46,7 @@ var r = s("414456"),
         children: [(0, a.jsx)(_.default, {
           className: T.button,
           shinyButtonClassName: T.shinyButton,
-          subscriptionTier: null !== (s = null != S ? S : null == R ? void 0 : R.sku_id) && void 0 !== s ? s : A,
+          subscriptionTier: null !== (s = null != S ? S : null == R ? void 0 : R.sku_id) && void 0 !== s ? s : m,
           premiumModalAnalyticsLocation: g,
           isPersistentCTA: !0
         }), (0, a.jsx)(c.default, {

@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  r = s("884691"),
-  n = s("414456"),
-  i = s.n(n),
+  n = s("884691"),
+  r = s("414456"),
+  i = s.n(r),
   l = s("77078"),
   u = s("895530"),
   o = s("145131"),
@@ -23,30 +23,30 @@ let S = {
   [I.OperatingSystems.MACOS]: _.PlatformTypes.OSX,
   [I.OperatingSystems.LINUX]: _.PlatformTypes.LINUX
 };
-class R extends r.PureComponent {
+class R extends n.PureComponent {
   render() {
     let {
       active: e,
       children: t,
       pageSize: s,
-      onClick: r
-    } = this.props, n = s === E.PageSizes.LARGE;
+      onClick: n
+    } = this.props, r = s === E.PageSizes.LARGE;
     return (0, a.jsx)(l.Button, {
-      size: n ? l.Button.Sizes.MIN : l.Button.Sizes.LARGE,
-      fullWidth: !n,
+      size: r ? l.Button.Sizes.MIN : l.Button.Sizes.LARGE,
+      fullWidth: !r,
       color: e ? f.tabSelectedColor : f.tabNotSelectedColor,
       className: i({
-        [f.tabPageLarge]: n,
-        [f.tabPageSmall]: !n,
+        [f.tabPageLarge]: r,
+        [f.tabPageSmall]: !r,
         [f.tabSelected]: e,
         [f.tabNotSelected]: !e
       }),
-      onClick: r,
+      onClick: n,
       children: t
     })
   }
 }
-let m = e => [{
+let A = e => [{
   key: T.default.Messages.APPLICATION_STORE_SPECS_OS,
   value: e.operating_system_version
 }, {
@@ -77,15 +77,15 @@ let m = e => [{
   key: T.default.Messages.APPLICATION_STORE_SPECS_NOTES,
   value: e.notes
 }];
-class A extends r.PureComponent {
+class m extends n.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
       systemRequirements: s
     } = e, {
       selectedOperatingSystem: a
-    } = t, r = Object.keys(s);
-    return r.includes(a) ? null : {
-      selectedOperatingSystem: r[0]
+    } = t, n = Object.keys(s);
+    return n.includes(a) ? null : {
+      selectedOperatingSystem: n[0]
     }
   }
   renderTabs() {
@@ -94,12 +94,12 @@ class A extends r.PureComponent {
       systemRequirements: t
     } = this.props, {
       selectedOperatingSystem: s
-    } = this.state, r = Object.keys(t);
-    return 1 === r.length ? null : (0, a.jsxs)(o.default, {
+    } = this.state, n = Object.keys(t);
+    return 1 === n.length ? null : (0, a.jsxs)(o.default, {
       className: f.tabs,
       children: [(0, a.jsx)("div", {
         className: f.separator
-      }), r.map(t => (0, a.jsx)(R, {
+      }), n.map(t => (0, a.jsx)(R, {
         active: t === s,
         onClick: () => this.handleSelectOperatingSystem(t),
         pageSize: e,
@@ -118,8 +118,8 @@ class A extends r.PureComponent {
   }
   renderRequirementsSection(e, t) {
     if (null == e) return null;
-    let s = m(e),
-      r = s.map((e, t) => {
+    let s = A(e),
+      n = s.map((e, t) => {
         let s = null != e.value ? e.value.trim() : null;
         return null == s || 0 === s.length ? null : (0, a.jsxs)("div", {
           className: f.requirement,
@@ -134,7 +134,7 @@ class A extends r.PureComponent {
       children: [(0, a.jsx)(u.default, {
         tag: "h4",
         children: t
-      }), r]
+      }), n]
     })
   }
   renderBody() {
@@ -170,4 +170,4 @@ class A extends r.PureComponent {
     }
   }
 }
-var N = A
+var N = m

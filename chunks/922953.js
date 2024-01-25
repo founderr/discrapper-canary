@@ -22,14 +22,14 @@ function p() {
   let e = (0, s.useStateFromStores)([u.default], () => u.default.devToolsEnabled),
     [t, p] = l.useState(!1),
     [S, g] = l.useState(0),
-    _ = e => {
+    N = e => {
       clearTimeout(S), g(setTimeout(() => {
         p(e)
       }, 100))
     };
   return (0, a.jsx)("div", {
-    onMouseEnter: () => _(!0),
-    onMouseLeave: () => _(!1),
+    onMouseEnter: () => N(!0),
+    onMouseLeave: () => N(!1),
     children: (0, a.jsx)(i.Popout, {
       shouldShow: t,
       animation: i.Popout.Animation.NONE,

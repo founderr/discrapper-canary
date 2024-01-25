@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var r = s("414456"),
-  n = s.n(r),
+var n = s("414456"),
+  r = s.n(n),
   i = s("77078"),
   l = s("446674"),
   u = s("812204"),
@@ -21,8 +21,8 @@ var r = s("414456"),
   f = s("871948"),
   S = s("401135"),
   R = s("218435"),
-  m = s("881155"),
-  A = s("782340"),
+  A = s("881155"),
+  m = s("782340"),
   N = s("30126");
 
 function p(e) {
@@ -33,7 +33,7 @@ function p(e) {
     variant: t,
     color: "always-white",
     className: N.description,
-    children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
+    children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
       cheapestMonthlyPrice: s
     })
   })
@@ -42,7 +42,7 @@ var g = e => {
   let {
     isFullscreen: t,
     className: s,
-    subscriptionTier: r
+    subscriptionTier: n
   } = e, {
     AnalyticsLocationProvider: S
   } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), C = (0, E.useIsInPremiumOfferExperience)(), P = (0, T.useIsEligibleForBogoPromotion)(), {
@@ -58,7 +58,7 @@ var g = e => {
   let h = O && M.length > 0;
   return (0, a.jsx)(S, {
     children: (0, a.jsxs)("div", {
-      className: n(N.container, s, {
+      className: r(N.container, s, {
         [N.settingsContainer]: !t,
         [N.affinityHeight]: !t && h
       }),
@@ -68,7 +68,7 @@ var g = e => {
         children: [(0, a.jsx)(i.Heading, {
           variant: t ? "display-lg" : "display-md",
           color: "always-white",
-          children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
+          children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
         }), h ? (0, a.jsx)("div", {
           className: N.affinityDescription,
           children: (0, a.jsx)(f.default, {
@@ -83,10 +83,10 @@ var g = e => {
         }) : (0, a.jsxs)(a.Fragment, {
           children: [C ? null : (0, a.jsxs)("div", {
             className: N.buttonContainer,
-            children: [(0, a.jsx)(m.default, {
+            children: [(0, a.jsx)(A.default, {
               forceInverted: !0,
               className: N.button,
-              subscriptionTier: r
+              subscriptionTier: n
             }), (0, a.jsx)(R.default, {
               className: N.button,
               forceWhite: !0

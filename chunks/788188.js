@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var r = s("90915"),
-  n = s("446674"),
+var n = s("90915"),
+  r = s("446674"),
   i = s("77078"),
   l = s("901582"),
   u = s("86621"),
@@ -21,43 +21,43 @@ var r = s("90915"),
   f = s("216422"),
   S = s("49111"),
   R = s("646718"),
-  m = s("782340"),
-  A = s("309285");
-let N = n.default.connectStores([I.default], () => ({
+  A = s("782340"),
+  m = s("309285");
+let N = r.default.connectStores([I.default], () => ({
   user: I.default.getCurrentUser()
 }))((0, o.default)((0, u.default)(e => {
   let {
     AnalyticsLocationProvider: t
   } = (0, c.default)(d.default.HOME_PAGE_PREMIUM_TAB), {
     isAuthenticated: s,
-    user: n
+    user: r
   } = e;
   return s ? (0, a.jsxs)("div", {
-    className: A.homeWrapperNormal,
+    className: m.homeWrapperNormal,
     children: [(0, a.jsx)(l.default, {
       section: S.AnalyticsSections.NAVIGATION,
       children: (0, a.jsxs)(_.default, {
         isAuthenticated: s,
-        className: A.headerBar,
+        className: m.headerBar,
         children: [(0, a.jsx)(_.default.Icon, {
           icon: f.default,
           "aria-hidden": !0
         }), (0, a.jsx)(_.default.Title, {
-          children: m.default.Messages.PREMIUM
+          children: A.default.Messages.PREMIUM
         })]
       })
     }), (0, a.jsx)(t, {
-      children: null == n ? (0, a.jsx)(T.default, {
+      children: null == r ? (0, a.jsx)(T.default, {
         align: T.default.Align.CENTER,
         justify: T.default.Justify.CENTER,
         children: (0, a.jsx)(i.Spinner, {
-          className: A.spinner
+          className: m.spinner
         })
       }) : (0, a.jsx)(E.default, {
         entrypoint: R.PremiumMarketingEntrypoints.ApplicationStoreHome
       })
     })]
-  }) : (0, a.jsx)(r.Redirect, {
+  }) : (0, a.jsx)(n.Redirect, {
     to: S.Routes.LOGIN
   })
 })));

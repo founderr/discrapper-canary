@@ -11,8 +11,8 @@ var r = n("414456"),
   l = n("627445"),
   i = n.n(l),
   u = n("446674"),
-  c = n("669491"),
-  o = n("77078"),
+  o = n("669491"),
+  c = n("77078"),
   d = n("635357"),
   f = n("915639"),
   m = n("10514"),
@@ -45,7 +45,7 @@ function T(e) {
     b = (0, E.isPrepaidPaymentSource)(T.paymentSourceId),
     j = null != L && !P,
     G = h.interval === p.SubscriptionIntervalTypes.YEAR ? N.default.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL : N.default.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL,
-    D = () => null != L && (0, s.jsx)(o.Text, {
+    D = () => null != L && (0, s.jsx)(c.Text, {
       tag: "span",
       variant: "eyebrow",
       color: "always-white",
@@ -58,7 +58,7 @@ function T(e) {
       className: S.planOptionMonthsFree,
       children: ["(", N.default.Messages.BILLING_SWITCH_PLAN_YEARLY_FREE_MONTHS, ")"]
     }) : j && !v ? D() : void 0 : null;
-  return (0, s.jsxs)(o.Clickable, {
+  return (0, s.jsxs)(c.Clickable, {
     role: M ? "menuitem" : "radio",
     "aria-checked": l,
     tabIndex: l ? 0 : -1,
@@ -81,13 +81,13 @@ function T(e) {
       }),
       children: [(0, s.jsxs)("div", {
         className: S.planOptionClickable,
-        children: [!M && (0, s.jsx)(o.Checkbox, {
+        children: [!M && (0, s.jsx)(c.Checkbox, {
           readOnly: !0,
           displayOnly: !0,
           value: l,
-          shape: o.Checkbox.Shapes.ROUND,
-          color: c.default.unsafe_rawColors.BRAND_500.css,
-          type: o.Checkbox.Types.INVERTED,
+          shape: c.Checkbox.Shapes.ROUND,
+          color: o.default.unsafe_rawColors.BRAND_500.css,
+          type: c.Checkbox.Types.INVERTED,
           className: S.planOptionCheckbox
         }), (0, s.jsxs)("div", {
           children: [(0, s.jsxs)("div", {
@@ -126,7 +126,7 @@ function T(e) {
       })]
     }), P && (0, s.jsx)("div", {
       className: S.planOptionSubtextContainer,
-      children: (0, s.jsx)(o.Text, {
+      children: (0, s.jsx)(c.Text, {
         variant: "text-md/normal",
         color: l ? "text-normal" : "interactive-normal",
         className: a(S.planOptionSubtext, {

@@ -19,9 +19,9 @@ var s = n("37983"),
   _ = n("49111"),
   p = n("579033"),
   h = n("782340"),
-  m = n("926622");
+  T = n("926622");
 
-function T(e, t, n) {
+function m(e, t, n) {
   e.preventDefault(), E.default.track(_.AnalyticEvents.GUILD_TEMPLATE_APP_OPENED, {
     guild_template_code: t,
     guild_template_name: n.name,
@@ -46,14 +46,14 @@ function N(e) {
       guildTemplate: n,
       tall: !0
     }), (0, s.jsx)(f.Button, {
-      onClick: e => T(e, t, n),
-      className: m.marginTop20,
+      onClick: e => m(e, t, n),
+      className: T.marginTop20,
       children: h.default.Messages.GUILD_TEMPLATE_OPEN
     })]
   }) : (0, s.jsx)(I.default, {
     text: h.default.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
     buttonCta: h.default.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
-    onClick: e => T(e, t, n)
+    onClick: e => m(e, t, n)
   })
 }
 l.default.initialize()

@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+r.r(t), r.d(t, {
   getMemberSupplementalByGuildId: function() {
     return s
   },
@@ -7,7 +7,7 @@ i.r(t), i.d(t, {
     return u
   }
 });
-var r = i("835257");
+var i = r("835257");
 let n = {};
 
 function s(e) {
@@ -16,12 +16,12 @@ function s(e) {
 
 function u(e, t) {
   if (0 === t.length) return !1;
-  let i = s(e);
+  let r = s(e);
   return t.forEach(e => {
     var t, n, s, u, a, l, h, d;
-    let o = i[e.userId],
+    let o = r[e.userId],
       m = null !== (n = null !== (t = e.joinSourceType) && void 0 !== t ? t : null == o ? void 0 : o.joinSourceType) && void 0 !== n ? n : null;
-    (null == m || m === r.JoinSourceType.UNSPECIFIED) && null != e.sourceInviteCode && (m = r.JoinSourceType.INVITE), i[e.userId] = {
+    (null == m || m === i.JoinSourceType.UNSPECIFIED) && null != e.sourceInviteCode && (m = i.JoinSourceType.INVITE), r[e.userId] = {
       userId: e.userId,
       sourceInviteCode: null !== (u = null !== (s = e.sourceInviteCode) && void 0 !== s ? s : null == o ? void 0 : o.sourceInviteCode) && void 0 !== u ? u : null,
       joinSourceType: m,

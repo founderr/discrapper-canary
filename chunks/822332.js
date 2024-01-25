@@ -5,34 +5,34 @@ n.r(t), n.d(t, {
   }
 });
 var a = n("37983"),
-  l = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
+  s = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   r = n("77078"),
-  o = n("782340"),
+  d = n("782340"),
   u = n("440318");
-let d = {
+let o = {
   BLOCK: u.block,
   INLINE: u.inline
 };
-class c extends l.PureComponent {
+class c extends s.PureComponent {
   render() {
     let {
       children: e,
       className: t,
       textClassName: n,
-      type: l = d.BLOCK,
-      style: s
+      type: s = o.BLOCK,
+      style: l
     } = this.props;
     return (0, a.jsxs)("div", {
-      className: i(t, l),
-      style: s,
+      className: i(t, s),
+      style: l,
       children: [(0, a.jsxs)(r.Text, {
         variant: "text-sm/bold",
         tag: "div",
         color: "text-positive",
         className: u.pro,
-        children: [o.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
+        children: [d.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
       }), (0, a.jsx)(r.Text, {
         className: i(u.tip, n),
         variant: "text-sm/normal",
@@ -41,5 +41,5 @@ class c extends l.PureComponent {
     })
   }
 }
-c.Types = d;
+c.Types = o;
 var f = c

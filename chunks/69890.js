@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   formatMessageCountLabel: function() {
-    return o
+    return u
   }
 });
 var i = n("299039"),
@@ -18,10 +18,10 @@ let r = e => i.default.compare("992549565104128000", e) > -1,
       return (null == t || n) && e >= s.MAX_THREAD_MESSAGE_COUNT_OLD ? "50+" : e >= s.MAX_THREAD_MESSAGE_COUNT ? "100k+" : "".concat(e)
     }
   },
-  u = (e, t, n) => {
+  o = (e, t, n) => {
     let i = a(e, n);
     return "0" === i ? l.default.Messages.SEE_THREAD : t.format({
       count: i
     })
   },
-  o = (e, t) => u(e, l.default.Messages.THREAD_MESSAGE_COUNT, t)
+  u = (e, t) => o(e, l.default.Messages.THREAD_MESSAGE_COUNT, t)

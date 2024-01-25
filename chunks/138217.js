@@ -20,16 +20,16 @@ var a = n("917351"),
   p = n("377253"),
   S = n("660478"),
   g = n("27618"),
-  _ = n("162771"),
-  N = n("282109"),
+  N = n("162771"),
+  _ = n("282109"),
   T = n("697218"),
   I = n("49111");
 let C = "recentMentionFilterSettings",
   A = [],
   M = {},
   v = !1,
-  R = !0,
-  x = i.default.get(C, {
+  x = !0,
+  R = i.default.get(C, {
     guildFilter: I.RecentMentionsFilters.ALL_SERVERS,
     everyoneFilter: !0,
     roleFilter: !0
@@ -45,19 +45,19 @@ function j(e) {
   return null != t ? t : (0, u.createMessageRecord)(e)
 }
 
-function D(e) {
+function F(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
   if ((0, c.default)(e)) return null;
   null == n && (n = e.channel_id);
   let a = m.default.getChannel(n);
-  if (null == a || a.type === I.ChannelTypes.DM || x.guildFilter === I.RecentMentionsFilters.THIS_SERVER && a.getGuildId() !== _.default.getGuildId()) return null;
+  if (null == a || a.type === I.ChannelTypes.DM || R.guildFilter === I.RecentMentionsFilters.THIS_SERVER && a.getGuildId() !== N.default.getGuildId()) return null;
   let l = null === (t = e.author) || void 0 === t ? void 0 : t.id,
     s = E.default.getId();
   if (null != l && g.default.isBlocked(l) || l === s) return null;
   e = j(e);
-  let i = !x.everyoneFilter,
-    r = !x.roleFilter;
+  let i = !R.everyoneFilter,
+    r = !R.roleFilter;
   return (0, d.default)({
     message: e,
     userId: s,
@@ -66,12 +66,12 @@ function D(e) {
   }) ? (y && S.default.ackMessageId(a.id) !== e.id && (0, d.default)({
     message: e,
     userId: s,
-    suppressEveryone: N.default.isSuppressEveryoneEnabled(a.getGuildId()),
-    suppressRoles: N.default.isSuppressRolesEnabled(a.getGuildId())
+    suppressEveryone: _.default.isSuppressEveryoneEnabled(a.getGuildId()),
+    suppressRoles: _.default.isSuppressRolesEnabled(a.getGuildId())
   }) && (y = !1), e) : null
 }
 
-function F(e) {
+function D(e) {
   if (null == M[e]) return !1;
   delete M[e], A = l.filter(A, t => {
     let {
@@ -85,20 +85,20 @@ function U(e) {
   let {
     id: t
   } = e;
-  return F(t)
+  return D(t)
 }
 
 function k(e) {
   let t = {
-    ...x
+    ...R
   };
-  x = l.defaults(l.pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), x), i.default.set(C, x);
-  let n = (e, n) => t[e] !== x[e] && x[e] === n,
+  R = l.defaults(l.pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), R), i.default.set(C, R);
+  let n = (e, n) => t[e] !== R[e] && R[e] === n,
     a = n("guildFilter", I.RecentMentionsFilters.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
   M = {};
   let s = [];
   a && A.forEach(e => {
-    let t = D(e);
+    let t = F(e);
     null != t && (s.push(t), M[t.id] = !0)
   }), 0 === (A = s).length && (L = !1)
 }
@@ -146,16 +146,16 @@ class H extends s.default.Store {
     return v
   }
   get hasMore() {
-    return R
+    return x
   }
   get guildFilter() {
-    return x.guildFilter
+    return R.guildFilter
   }
   get everyoneFilter() {
-    return x.everyoneFilter
+    return R.everyoneFilter
   }
   get roleFilter() {
-    return x.roleFilter
+    return R.roleFilter
   }
   get mentionsAreStale() {
     return y
@@ -167,7 +167,7 @@ var V = new H(o.default, {
     let {
       guildId: t
     } = e;
-    v = !0, null == t && x.guildFilter === I.RecentMentionsFilters.THIS_SERVER && k({
+    v = !0, null == t && R.guildFilter === I.RecentMentionsFilters.THIS_SERVER && k({
       guildFilter: I.RecentMentionsFilters.ALL_SERVERS
     })
   },
@@ -179,7 +179,7 @@ var V = new H(o.default, {
     } = e, s = l.map(n, j);
     a ? A = A.concat(s) : (A = s, M = {}), l.forEach(s, e => {
       M[e.id] = !0
-    }), v = !1, R = t, O = (0, r.now)(), L = !0
+    }), v = !1, x = t, O = (0, r.now)(), L = !0
   },
   LOAD_RECENT_MENTIONS_FAILURE: function() {
     v = !1
@@ -194,10 +194,10 @@ var V = new H(o.default, {
     } = e;
     for (let e = t; e < A.length; ++e) delete M[A[e].id];
     let n = A.length;
-    n > (A = A.slice(0, t)).length && (R = !0)
+    n > (A = A.slice(0, t)).length && (x = !0)
   },
   CHANNEL_SELECT: function() {
-    if (x.guildFilter !== I.RecentMentionsFilters.THIS_SERVER) return !1;
+    if (R.guildFilter !== I.RecentMentionsFilters.THIS_SERVER) return !1;
     L = !1
   },
   CONNECTION_OPEN: P,
@@ -221,7 +221,7 @@ var V = new H(o.default, {
         suppressRoles: !1,
         suppressEveryone: !1
       })) return !1;
-    let l = D(n, t);
+    let l = F(n, t);
     if (null == l) return !1;
     (A = A.slice()).unshift(l), M[l.id] = !0
   },
@@ -244,7 +244,7 @@ var V = new H(o.default, {
     let {
       ids: t
     } = e;
-    l.forEach(t, F)
+    l.forEach(t, D)
   },
   USER_SETTINGS_PROTO_UPDATE: w,
   I18N_LOAD_SUCCESS: w,

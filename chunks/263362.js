@@ -20,8 +20,8 @@ var a = n("37983"),
   p = n("519540"),
   S = n("80649"),
   g = n("385730"),
-  _ = n("788072"),
-  N = n("49111"),
+  N = n("788072"),
+  _ = n("49111"),
   T = n("782340");
 
 function I(e) {
@@ -32,7 +32,7 @@ function I(e) {
     badgeState: C,
     popoutPosition: A,
     popoutAlign: M
-  } = e, [v, R] = l.useState(!1), [x, L] = function() {
+  } = e, [v, x] = l.useState(!1), [R, L] = function() {
     let e = (0, i.useStateFromStores)([h.default], () => {
         var e, t;
         return null !== (t = null === (e = h.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
@@ -62,16 +62,16 @@ function I(e) {
       showTutorial: a,
       setSeenTutorial: n
     }
-  }(x), y = l.useCallback(() => {
-    R(!1), v && (null == n || n())
+  }(R), y = l.useCallback(() => {
+    x(!1), v && (null == n || n())
   }, [n, v]), j = l.useCallback(() => {
-    R(!v), v ? null == n || n() : null == t || t()
-  }, [n, t, v]), D = l.useCallback(() => {
+    x(!v), v ? null == n || n() : null == t || t()
+  }, [n, t, v]), F = l.useCallback(() => {
     j(), L(r.InboxTab.UNREADS)
   }, [L, j]);
-  l.useEffect(() => (E.ComponentDispatch.subscribe(N.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, D), () => void E.ComponentDispatch.unsubscribe(N.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, D)), [D]);
+  l.useEffect(() => (E.ComponentDispatch.subscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, F), () => void E.ComponentDispatch.unsubscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, F)), [F]);
   let {
-    showReminders: F
+    showReminders: D
   } = d.default.useExperiment({
     location: "RecentsPopout"
   }, {
@@ -82,7 +82,7 @@ function I(e) {
     location: "RecentsPopout"
   });
   l.useEffect(() => {
-    !F && x === r.InboxTab.TODOS && L(r.InboxTab.MENTIONS)
+    !D && R === r.InboxTab.TODOS && L(r.InboxTab.MENTIONS)
   });
   let P = l.useCallback(e => {
     !e.shiftKey && y()
@@ -97,20 +97,20 @@ function I(e) {
     renderPopout: function() {
       return (0, a.jsx)(o.Dialog, {
         "aria-label": T.default.Messages.INBOX,
-        children: x === r.InboxTab.FOR_YOU && U ? (0, a.jsx)(m.default, {
+        children: R === r.InboxTab.FOR_YOU && U ? (0, a.jsx)(m.default, {
           setTab: L,
           badgeState: C,
           closePopout: y
-        }) : x === r.InboxTab.MENTIONS ? (0, a.jsx)(S.default, {
+        }) : R === r.InboxTab.MENTIONS ? (0, a.jsx)(S.default, {
           setTab: L,
           onJump: P,
           badgeState: C,
           closePopout: y
-        }) : k && x === r.InboxTab.GAME_INVITES ? (0, a.jsx)(_.default, {
+        }) : k && R === r.InboxTab.GAME_INVITES ? (0, a.jsx)(N.default, {
           setTab: L,
           badgeState: C,
           closePopout: y
-        }) : F && x === r.InboxTab.TODOS ? (0, a.jsx)(p.default, {
+        }) : D && R === r.InboxTab.TODOS ? (0, a.jsx)(p.default, {
           setTab: L,
           onJump: P,
           closePopout: y

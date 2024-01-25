@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return T
   }
 }), n("222007");
 var s = n("37983"),
@@ -20,17 +20,17 @@ var s = n("37983"),
   p = n("782340"),
   h = n("926622");
 l.default.initialize();
-var m = e => {
+var T = e => {
   let {
     location: t
-  } = e, n = (0, l.useStateFromStores)([E.default], () => E.default.isAuthenticated()), m = (0, l.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments), T = (0, c.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [N, g] = a.useState(!1), [A, S] = a.useState(p.default.Messages.AUTHORIZING), [C, v] = a.useState(!0);
+  } = e, n = (0, l.useStateFromStores)([E.default], () => E.default.isAuthenticated()), T = (0, l.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments), m = (0, c.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [N, g] = a.useState(!1), [A, S] = a.useState(p.default.Messages.AUTHORIZING), [C, v] = a.useState(!0);
   return a.useEffect(() => {
     n ? (v(!0), u.fetchCurrentUser({
       withAnalyticsToken: !0
     }).then(() => v(!1)).catch(() => v(!1))) : v(!1)
   }, [n]), a.useEffect(() => {
-    !m && !T && r.default.getExperiments()
-  }, [m, T]), a.useEffect(() => {
+    !T && !m && r.default.getExperiments()
+  }, [T, m]), a.useEffect(() => {
     let e = async e => {
       try {
         let t = null != e ? await (0, d.submitReportSecondLook)(e) : void 0;
@@ -44,7 +44,7 @@ var m = e => {
     g(!0);
     let n = (0, o.default)(t);
     e(n), (0, f.trackAppUIViewed)("report_second_look")
-  }, [t]), T && !C && (0, s.jsxs)(_.default, {
+  }, [t]), m && !C && (0, s.jsxs)(_.default, {
     children: [(0, s.jsx)(_.Title, {
       className: h.marginBottom8,
       children: A

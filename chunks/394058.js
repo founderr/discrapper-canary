@@ -6,12 +6,12 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var r = s("174727"),
-  n = s("915639"),
+var n = s("174727"),
+  r = s("915639"),
   i = s("782340");
 
 function l(e) {
-  return e.toLocaleString(n.default.locale, {
+  return e.toLocaleString(r.default.locale, {
     minimumIntegerDigits: 2,
     useGrouping: !1
   })
@@ -19,7 +19,7 @@ function l(e) {
 var u = function(e) {
   let {
     endDate: t
-  } = e, s = (0, r.default)(t, 1e3);
+  } = e, s = (0, n.default)(t, 1e3);
   return (0, a.jsx)(a.Fragment, {
     children: s.days > 0 ? i.default.Messages.BOGO_UNTIL_OFFER_ENDS_DAYS.format({
       days: s.days

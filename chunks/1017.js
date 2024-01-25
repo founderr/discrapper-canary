@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("446674"),
-  r = s("913144"),
-  n = s("177589"),
+  n = s("913144"),
+  r = s("177589"),
   i = s("824563"),
   l = s("843823"),
   u = s("697218"),
@@ -34,7 +34,7 @@ function I(e) {
 }
 
 function T(e) {
-  var t, s, a, r;
+  var t, s, a, n;
   let {
     user: i,
     activities: u
@@ -42,7 +42,7 @@ function T(e) {
   if (null == i || !l.default.getUserAffinitiesUserIds().has(i.id)) return !1;
   let d = u.find(e => e.type !== o.ActivityTypes.CUSTOM_STATUS);
   if (null == d) return I(i.id);
-  let E = (0, n.default)(d);
+  let E = (0, r.default)(d);
   if (null == E) return I(i.id);
   let T = _[i.id];
   null != T && T.gameId !== E && I(i.id);
@@ -52,17 +52,17 @@ function T(e) {
       activity: d,
       startedPlaying: f
     };
-  return a = E, r = S, c = {
+  return a = E, n = S, c = {
     ...c,
     [a]: {
       ...c[a],
-      [r.userId]: r
+      [n.userId]: n
     }
   }, _ = {
     ..._,
-    [r.userId]: {
+    [n.userId]: {
       gameId: a,
-      startedPlaying: r.startedPlaying
+      startedPlaying: n.startedPlaying
     }
   }, !0
 }
@@ -102,7 +102,7 @@ class S extends a.default.Store {
   }
 }
 S.displayName = "NowPlayingStore";
-var R = new S(r.default, {
+var R = new S(n.default, {
   CONNECTION_OPEN: function() {
     c = {}, _ = {}
   },

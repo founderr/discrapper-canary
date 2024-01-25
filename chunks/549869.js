@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return eT
+    return em
   }
 }), n("222007");
 var s = n("37983"),
@@ -19,31 +19,31 @@ var s = n("37983"),
   _ = n("106885"),
   p = n("178116"),
   h = n("759315"),
-  m = n("569808"),
-  T = n("913645"),
+  T = n("569808"),
+  m = n("913645"),
   N = n("777858"),
   g = n("9294"),
   A = n("701662"),
   S = n("271938"),
   C = n("760190"),
   v = n("55411"),
-  x = n("337543"),
-  R = n("599110"),
-  L = n("550368"),
-  O = n("831588"),
+  R = n("337543"),
+  L = n("599110"),
+  O = n("550368"),
+  x = n("831588"),
   M = n("315102"),
   D = n("834030"),
   P = n("315733"),
   j = n("250790"),
   U = n("746040"),
   G = n("504568"),
-  b = n("345308"),
-  B = n("713177"),
+  B = n("345308"),
+  b = n("713177"),
   y = n("773852"),
   F = n("679030"),
   V = n("926593"),
-  w = n("683068"),
-  k = n("43772"),
+  k = n("683068"),
+  w = n("43772"),
   H = n("291850"),
   Y = n("275744"),
   W = n("104110"),
@@ -57,24 +57,24 @@ var s = n("37983"),
 n("527441"), u.default.initialize();
 let $ = (0, j.default)(H.default),
   ee = (0, j.default)(Y.default),
-  et = (0, j.default)(k.default),
+  et = (0, j.default)(w.default),
   en = (0, j.default)(V.default),
   es = (0, j.default)(F.default),
   ea = (0, j.default)(A.default),
   el = (0, j.default)(K.default),
   ei = (0, j.default)(G.default),
-  er = (0, j.default)(b.default),
+  er = (0, j.default)(B.default),
   eu = (0, j.default)(J.default),
   eo = (0, j.default)(h.default),
   ed = (0, j.default)(Z.default),
   ec = (0, j.default)(y.default),
   ef = (0, j.default)(p.default),
   eE = (0, j.default)(N.default),
-  eI = (0, j.default)(B.default),
+  eI = (0, j.default)(b.default),
   e_ = (0, j.default)(W.default),
   ep = (0, j.default)(X.default),
   eh = (0, j.default)(z.default);
-class em extends a.PureComponent {
+class eT extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     var n;
     let {
@@ -85,13 +85,13 @@ class em extends a.PureComponent {
     } = t, r = (0, l.parse)(a.search), u = null !== (n = r.redirect_to) && void 0 !== n ? n : null;
     (null == u || "" === u || !(0, P.isSafeRedirect)(u) || u.startsWith(q.Routes.ME)) && (u = null);
     let o = null;
-    if (null == s) o = (0, O.getArtForPath)(u);
+    if (null == s) o = (0, x.getArtForPath)(u);
     else if ((null == s ? void 0 : s.state) === q.InviteStates.RESOLVED) {
       let {
         guild: e,
         target_application: t
       } = s;
-      null != t ? null != i && (o = (0, L.getAssetImage)(t.id, i, 1024)) : null != e && "string" == typeof e.splash && (o = M.default.getGuildSplashURL({
+      null != t ? null != i && (o = (0, O.getAssetImage)(t.id, i, 1024)) : null != e && "string" == typeof e.splash && (o = M.default.getGuildSplashURL({
         id: e.id,
         splash: e.splash
       }))
@@ -107,7 +107,7 @@ class em extends a.PureComponent {
       hasLoadedExperiments: t,
       isAuthenticated: n
     } = this.props;
-    null != e && (!t && n && d.default.getExperiments(!0), R.default.track(q.AnalyticEvents.INVITE_OPENED, {
+    null != e && (!t && n && d.default.getExperiments(!0), L.default.track(q.AnalyticEvents.INVITE_OPENED, {
       invite_code: (0, g.parseInviteCodeFromInviteKey)(e),
       load_time: D.default.getTimeSinceNavigationStart()
     }, {
@@ -129,7 +129,7 @@ class em extends a.PureComponent {
       let {
         target_application: t
       } = e;
-      null != t && (0, L.fetchAssetIds)(t.id, ["embedded_splash"]).then(e => {
+      null != t && (0, O.fetchAssetIds)(t.id, ["embedded_splash"]).then(e => {
         let [t] = e;
         return this.setState({
           backgroundId: t
@@ -154,12 +154,12 @@ class em extends a.PureComponent {
     let {
       guildTemplateCode: e
     } = this.props;
-    null != e && (R.default.track(q.AnalyticEvents.GUILD_TEMPLATE_OPENED, {
+    null != e && (L.default.track(q.AnalyticEvents.GUILD_TEMPLATE_OPENED, {
       guild_template_code: e,
       load_time: D.default.getTimeSinceNavigationStart()
     }, {
       flush: !0
-    }), T.default.resolveGuildTemplate(e), T.default.openNativeAppModal(e))
+    }), m.default.resolveGuildTemplate(e), m.default.openNativeAppModal(e))
   }
   resolveGiftCode() {
     let {
@@ -249,7 +249,7 @@ class em extends a.PureComponent {
             location: a,
             transitionTo: l
           } = e;
-          return r.isMobile || r.isTablet ? (0, s.jsx)(w.default, {
+          return r.isMobile || r.isTablet ? (0, s.jsx)(k.default, {
             code: t
           }, t) : (0, s.jsx)(en, {
             code: t,
@@ -342,7 +342,7 @@ class em extends a.PureComponent {
     }
   }
 }
-var eT = u.default.connectStores([S.default, x.default, v.default, C.default, m.default], e => {
+var em = u.default.connectStores([S.default, R.default, v.default, C.default, T.default], e => {
   var t, n, s;
   let {
     match: a,
@@ -354,8 +354,8 @@ var eT = u.default.connectStores([S.default, x.default, v.default, C.default, m.
     giftCode: o,
     guildTemplateCode: d,
     gift: null != o ? v.default.get(o) : null,
-    invite: null != u ? x.default.getInvite(u) : null,
-    guildTemplate: null != d ? m.default.getGuildTemplate(d) : null,
+    invite: null != u ? R.default.getInvite(u) : null,
+    guildTemplate: null != d ? T.default.getGuildTemplate(d) : null,
     hasLoadedExperiments: C.default.hasLoadedExperiments
   }
-})(em)
+})(eT)

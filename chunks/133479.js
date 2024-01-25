@@ -90,8 +90,8 @@ function g() {
     {
       title: p,
       description: U,
-      color: x,
-      Icon: h
+      color: h,
+      Icon: x
     } = m[t.state],
     H = Object.keys(m).length;
   return (0, n.jsxs)(d.Card, {
@@ -113,7 +113,7 @@ function g() {
           children: p.format({
             hook: t => (0, n.jsx)(d.Text, {
               style: {
-                color: x.css
+                color: h.css
               },
               variant: "heading-lg/bold",
               tag: "span",
@@ -137,7 +137,7 @@ function g() {
           return (0, n.jsxs)("div", {
             className: I.statusOption,
             ref: t => N.current[parseInt(i)] = t,
-            children: [l ? (0, n.jsx)(h, {
+            children: [l ? (0, n.jsx)(x, {
               className: I.marker,
               color: s.color
             }) : (0, n.jsx)("div", {

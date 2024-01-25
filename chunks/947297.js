@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   XBOX_APPLICATION_ID_PREFIX: function() {
     return i
   },
   default: function() {
-    return l
+    return a
   }
 });
-var l, a = n("376556"),
-  s = n("653047");
+var a, n = s("376556"),
+  r = s("653047");
 let i = "xbox:";
-l = class extends s.default {
+a = class extends r.default {
   getIconURL() {
-    return a.default.get("xbox").icon.lightPNG
+    return n.default.get("xbox").icon.lightPNG
   }
   constructor(e) {
     super(e), this.id = "".concat(i).concat(e.name), this.name = e.name

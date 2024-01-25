@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return y
   },
   ItemsPopout: function() {
-    return F
+    return D
   },
   default: function() {
     return U
@@ -29,16 +29,16 @@ var a = n("37983"),
   p = n("393414"),
   S = n("161778"),
   g = n("42203"),
-  _ = n("377253"),
-  N = n("957255"),
+  N = n("377253"),
+  _ = n("957255"),
   T = n("600133"),
   I = n("471671"),
   C = n("822332"),
   A = n("945330"),
   M = n("599110"),
   v = n("659500"),
-  R = n("49111"),
-  x = n("782340"),
+  x = n("49111"),
+  R = n("782340"),
   L = n("466908");
 
 function O(e) {
@@ -88,7 +88,7 @@ class j extends l.PureComponent {
         className: i(L.text, {
           hidden: e
         }),
-        children: x.default.Messages.JUMP
+        children: R.default.Messages.JUMP
       }), (0, a.jsx)(c.Spinner, {
         type: c.Spinner.Type.PULSING_ELLIPSIS,
         className: i(L.loading, {
@@ -137,16 +137,16 @@ class j extends l.PureComponent {
     }
   }
 }
-let D = d.default.connectStores([N.default], e => {
+let F = d.default.connectStores([_.default], e => {
   let {
     channel: t
   } = e;
   return {
-    canManageMessages: null != t && N.default.can(R.Permissions.MANAGE_MESSAGES, t)
+    canManageMessages: null != t && _.default.can(x.Permissions.MANAGE_MESSAGES, t)
   }
 })(j);
 
-function F(e) {
+function D(e) {
   let {
     analyticsName: t,
     items: n,
@@ -157,12 +157,12 @@ function F(e) {
     renderEmptyState: m,
     renderItem: p,
     getProTip: g,
-    scrollerClassName: _,
-    className: N,
+    scrollerClassName: N,
+    className: _,
     listName: A
-  } = e, b = l.useRef(null), y = (0, E.default)(A, b), j = (0, d.useStateFromStores)([T.default], () => T.default.hasNotice()), D = (0, d.useStateFromStores)([I.default], () => I.default.windowSize());
+  } = e, b = l.useRef(null), y = (0, E.default)(A, b), j = (0, d.useStateFromStores)([T.default], () => T.default.hasNotice()), F = (0, d.useStateFromStores)([I.default], () => I.default.windowSize());
   l.useEffect(() => {
-    M.default.track(R.AnalyticEvents.OPEN_POPOUT, {
+    M.default.track(x.AnalyticEvents.OPEN_POPOUT, {
       type: t
     })
   }, [t]), l.useEffect(() => {
@@ -179,11 +179,11 @@ function F(e) {
         animate: !0
       })
     }
-    return v.ComponentDispatch.subscribe(R.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.subscribe(R.ComponentActions.SCROLL_PAGE_UP, e), () => {
-      v.ComponentDispatch.unsubscribe(R.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.unsubscribe(R.ComponentActions.SCROLL_PAGE_UP, e)
+    return v.ComponentDispatch.subscribe(x.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.subscribe(x.ComponentActions.SCROLL_PAGE_UP, e), () => {
+      v.ComponentDispatch.unsubscribe(x.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.unsubscribe(x.ComponentActions.SCROLL_PAGE_UP, e)
     }
   }, []);
-  let F = l.useCallback(() => {
+  let D = l.useCallback(() => {
       var e;
       let t = null === (e = b.current) || void 0 === e ? void 0 : e.getScrollerState();
       null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && s && !r && (null == f || f())
@@ -209,7 +209,7 @@ function F(e) {
       color: c.Button.Colors.PRIMARY,
       size: c.Button.Sizes.MAX,
       onClick: f,
-      children: x.default.Messages.LOAD_MORE_MESSAGES
+      children: R.default.Messages.LOAD_MORE_MESSAGES
     })
   }) : (0, a.jsx)("div", {
     className: L.scrollingFooterWrap,
@@ -228,12 +228,12 @@ function F(e) {
       })
     }) : null,
     B = {
-      maxHeight: D.height - 43 - 25
+      maxHeight: F.height - 43 - 25
     };
   j && (B.maxHeight -= 40);
   let H = null != f && s;
   return (0, a.jsx)("div", {
-    className: i(N, L.messagesPopoutWrap),
+    className: i(_, L.messagesPopoutWrap),
     style: B,
     onClick: O,
     onDoubleClick: O,
@@ -241,8 +241,8 @@ function F(e) {
     children: (0, a.jsxs)(c.HeadingLevel, {
       component: h(),
       children: [(0, a.jsxs)(c.AdvancedScroller, {
-        className: i(L.messagesPopout, _),
-        onScroll: H ? F : void 0,
+        className: i(L.messagesPopout, N),
+        onScroll: H ? D : void 0,
         ref: b,
         children: [(0, a.jsx)(u.ListNavigatorProvider, {
           navigator: y,
@@ -277,15 +277,15 @@ function U(e) {
     onJump: c,
     canCloseAllMessages: E = !1,
     renderHeader: S,
-    renderEmptyState: N,
+    renderEmptyState: _,
     renderMessage: T,
     getProTip: I,
     scrollerClassName: C,
     className: A,
     onCloseMessage: M,
     listName: v
-  } = e, O = (0, d.useStateFromStores)([_.default], () => {
-    let e = null != s ? _.default.getMessages(s.id) : null;
+  } = e, O = (0, d.useStateFromStores)([N.default], () => {
+    let e = null != s ? N.default.getMessages(s.id) : null;
     return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId)
   });
 
@@ -297,15 +297,15 @@ function U(e) {
       channel_id: i
     } = e;
     if (l) f.default.show({
-      title: x.default.Messages.UNBLOCK_TO_JUMP_TITLE,
-      body: x.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
+      title: R.default.Messages.UNBLOCK_TO_JUMP_TITLE,
+      body: R.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
         name: s.username
       }),
-      confirmText: x.default.Messages.OKAY
+      confirmText: R.default.Messages.OKAY
     });
     else if (!O) {
       let e = g.default.getChannel(i);
-      null != e && (h.default.trackJump(i, a, t), (0, p.transitionTo)(R.Routes.CHANNEL(e.getGuildId(), i, a))), null == c || c(n)
+      null != e && (h.default.trackJump(i, a, t), (0, p.transitionTo)(x.Routes.CHANNEL(e.getGuildId(), i, a))), null == c || c(n)
     }
   }
   l.useEffect(() => {
@@ -315,13 +315,13 @@ function U(e) {
     message: e,
     channel: s
   })), [i, s]);
-  return (0, a.jsx)(F, {
+  return (0, a.jsx)(D, {
     className: A,
     scrollerClassName: C,
     items: y,
     loading: o,
     analyticsName: t,
-    renderEmptyState: N,
+    renderEmptyState: _,
     renderHeader: S,
     hasMore: r,
     loadMore: u,
@@ -340,7 +340,7 @@ function U(e) {
           className: L.messageGroupCozy,
           message: t,
           channel: n
-        }), (0, a.jsx)(D, {
+        }), (0, a.jsx)(F, {
           channel: s,
           message: t,
           jumping: O,

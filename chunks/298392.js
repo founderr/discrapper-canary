@@ -29,13 +29,13 @@ var a = n("627445"),
   C = n("153160"),
   b = n("635357"),
   _ = n("642906"),
-  N = n("286350"),
-  g = n("628135"),
+  g = n("286350"),
+  N = n("628135"),
   L = n("49111"),
   A = n("782340"),
   j = n("135878");
 
-function R(e) {
+function M(e) {
   let {
     sku: t,
     skuPricePreview: n
@@ -67,7 +67,7 @@ function R(e) {
   })
 }
 
-function M(e) {
+function R(e) {
   let {
     application: t,
     sku: n,
@@ -115,7 +115,7 @@ function w(e) {
   let Q = (0, s.default)([m.default, E.default], () => E.default.inTestModeForApplication(y.id) || m.default.inDevModeForApplication(y.id), [y.id]),
     J = (0, s.default)([P.default], () => P.default.enabled),
     X = l.CountryCodesSets.EEA_COUNTRIES.has(I.default.ipCountryCodeWithFallback),
-    q = C === N.PurchaseState.PURCHASING || C === N.PurchaseState.COMPLETED,
+    q = C === g.PurchaseState.PURCHASING || C === g.PurchaseState.COMPLETED,
     $ = null != F ? w[F].type : null;
   return (0, i.jsxs)("div", {
     className: j.stepBody,
@@ -125,11 +125,11 @@ function w(e) {
       color: c.default.Colors.WARNING,
       className: j.errorBlock,
       children: A.default.Messages.APPLICATION_STORE_PURCHASE_TEST_MODE
-    }, "TEST_MODE"), (0, i.jsx)(M, {
+    }, "TEST_MODE"), (0, i.jsx)(R, {
       application: y,
       sku: z,
       isEmbeddedIAP: B
-    }), V && (0, i.jsx)(g.default, {
+    }), V && (0, i.jsx)(N.default, {
       sku: z
     }), null != H ? (0, i.jsx)(h.SendGiftToUser, {
       giftRecipient: H
@@ -139,7 +139,7 @@ function w(e) {
     }), null == K ? (0, i.jsx)(u.Spinner, {
       type: u.Spinner.Type.WANDERING_CUBES,
       className: j.invoiceSpinner
-    }) : (0, i.jsx)(R, {
+    }) : (0, i.jsx)(M, {
       sku: z,
       skuPricePreview: K
     }), (0, i.jsxs)("div", {

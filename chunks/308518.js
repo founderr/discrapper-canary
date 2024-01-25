@@ -5,11 +5,11 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  r = s("884691"),
-  n = s("895530"),
+  n = s("884691"),
+  r = s("895530"),
   i = s("782340"),
   l = s("473911");
-class u extends r.PureComponent {
+class u extends n.PureComponent {
   render() {
     let {
       className: e,
@@ -17,7 +17,7 @@ class u extends r.PureComponent {
     } = this.props;
     return null == t.legalNotice ? null : (0, a.jsxs)("div", {
       className: e,
-      children: [(0, a.jsx)(n.default, {
+      children: [(0, a.jsx)(r.default, {
         children: i.default.Messages.APPLICATION_STORE_SECTION_TITLE_COPYRIGHT
       }), (0, a.jsx)("div", {
         className: l.content,

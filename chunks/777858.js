@@ -22,8 +22,8 @@ function p(e) {
   let {
     location: t
   } = e, [p, h] = a.useState(!1), {
-    verifySuccess: m,
-    verifyErrors: T,
+    verifySuccess: T,
+    verifyErrors: m,
     redirectGuildId: N
   } = (0, l.useStateFromStores)([c.default], () => c.default.getState());
   a.useEffect(() => {
@@ -45,7 +45,7 @@ function p(e) {
       onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(N)),
       children: I.default.Messages.CONTINUE_TO_WEBAPP
     })]
-  }) : m ? (0, s.jsxs)(d.default, {
+  }) : T ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
       className: _.image,
       src: n("176872")
@@ -56,7 +56,7 @@ function p(e) {
       onClick: g,
       children: I.default.Messages.VERIFICATION_OPEN_DISCORD
     })]
-  }) : null != T ? (0, s.jsxs)(d.default, {
+  }) : null != m ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
       className: _.image,
       src: n("768025")

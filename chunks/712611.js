@@ -21,7 +21,7 @@ var a = n("446674"),
 let S = {},
   g = {};
 
-function _(e) {
+function N(e) {
   let {
     searchId: t,
     query: n,
@@ -32,7 +32,7 @@ function _(e) {
   } = e, o = g[t];
   return null == o && (o = {
     results: [],
-    context: i.default.getSearchContext(N.bind(null, t))
+    context: i.default.getSearchContext(_.bind(null, t))
   }, g[t] = o), {
     query: null != n ? n : "",
     mode: null != a ? a : {
@@ -46,7 +46,7 @@ function _(e) {
   }
 }
 
-function N(e, t) {
+function _(e, t) {
   let {
     results: n
   } = t, a = g[e], l = S[e];
@@ -76,14 +76,14 @@ function N(e, t) {
   } = l, {
     autocompletes: h
   } = l;
-  h = C(e, u), S[e] = _({
+  h = C(e, u), S[e] = N({
     searchId: e,
     query: o,
     mode: u,
     tokens: d,
     cursorScope: f,
     autocompletes: h
-  }), x.emitChange()
+  }), R.emitChange()
 }
 
 function T(e, t, n) {
@@ -196,7 +196,7 @@ function M(e) {
     cursorScope: s,
     autocompletes: i
   } = t;
-  S[e] = _({
+  S[e] = N({
     searchId: e,
     query: n,
     mode: a,
@@ -215,7 +215,7 @@ function v() {
     tokens: a,
     cursorScope: l
   } = S[e];
-  S[e] = _({
+  S[e] = N({
     searchId: e,
     query: t,
     mode: n,
@@ -224,19 +224,19 @@ function v() {
     autocompletes: C(e, n)
   })
 }
-class R extends a.default.Store {
+class x extends a.default.Store {
   initialize() {
     this.waitFor(f.default, E.default)
   }
   getState(e) {
     var t;
-    return null !== (t = S[e]) && void 0 !== t ? t : _({
+    return null !== (t = S[e]) && void 0 !== t ? t : N({
       searchId: e
     })
   }
 }
-R.displayName = "SearchAutocompleteStore";
-let x = new R(l.default, {
+x.displayName = "SearchAutocompleteStore";
+let R = new x(l.default, {
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function(e) {
     var t;
     let n, {
@@ -259,7 +259,7 @@ let x = new R(l.default, {
         guild: a
       }), n = o.autocompletes, f = !1) : (c.context.clearQuery(), n = C(a, r))
     }
-    return S[a] = _({
+    return S[a] = N({
       searchId: a,
       query: i,
       mode: r,
@@ -289,4 +289,4 @@ let x = new R(l.default, {
     Object.keys(S).forEach(M)
   }
 });
-var L = x
+var L = R

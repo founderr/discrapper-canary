@@ -47,7 +47,7 @@ function f(e) {
     return e
   }(u(), e), {
     trackView: m,
-    trackClick: E
+    trackClick: S
   } = (0, o.makeAnalyticsTrackers)(g, {
     notif_type: g
   });
@@ -68,10 +68,10 @@ function f(e) {
       m()
     },
     onNotificationClick: (e, n) => {
-      E("unlock"), t === r.OverlayNudgeTypes.NEWS && a.default.updateNotificationStatus(n), l.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
+      S("unlock"), t === r.OverlayNudgeTypes.NEWS && a.default.updateNotificationStatus(n), l.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
     },
     onDismissClick: () => {
-      E("dismiss")
+      S("dismiss")
     }
   }
 }

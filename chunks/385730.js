@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return x
   },
   UnreadsCrashed: function() {
     return L
@@ -23,8 +23,8 @@ var a = n("37983"),
   p = n("826267"),
   S = n("599110"),
   g = n("659500"),
-  _ = n("150938"),
-  N = n("805614"),
+  N = n("150938"),
+  _ = n("805614"),
   T = n("64318"),
   I = n("474282"),
   C = n("970268"),
@@ -32,19 +32,19 @@ var a = n("37983"),
   M = n("782340"),
   v = n("930391");
 
-function R(e) {
+function x(e) {
   let {
     setTab: t,
     onJump: n,
     showTutorial: s,
     setSeenTutorial: r,
-    closePopout: R,
+    closePopout: x,
     badgeState: L
   } = e, O = l.useRef(null), [b, y] = (0, C.default)(O), {
     loadState: j,
-    channels: D
+    channels: F
   } = b, {
-    maybeLoadMore: F,
+    maybeLoadMore: D,
     markAllRead: U
   } = y;
   (function(e, t, n) {
@@ -85,12 +85,12 @@ function R(e) {
     S.default.track(A.AnalyticEvents.OPEN_POPOUT, {
       type: "Inbox"
     })
-  }, []), l.useEffect(() => (h.default.subscribe("CONNECTION_OPEN", R), () => {
-    h.default.unsubscribe("CONNECTION_OPEN", R)
-  }), [R]);
+  }, []), l.useEffect(() => (h.default.subscribe("CONNECTION_OPEN", x), () => {
+    h.default.unsubscribe("CONNECTION_OPEN", x)
+  }), [x]);
   let k = (0, d.useStateFromStores)([E.default], () => E.default.messageGroupSpacing),
     P = (0, m.default)("unreads", O);
-  if (0 === D.length) {
+  if (0 === F.length) {
     var w;
     return (0, a.jsxs)("div", {
       className: v.container,
@@ -98,8 +98,8 @@ function R(e) {
         tab: c.InboxTab.UNREADS,
         setTab: t,
         badgeState: L,
-        closePopout: R
-      }), (0, a.jsx)(N.default, {
+        closePopout: x
+      }), (0, a.jsx)(_.default, {
         Icon: p.default,
         header: M.default.Messages.UNREADS_EMPTY_STATE_HEADER,
         tip: (null === (w = o.os) || void 0 === w ? void 0 : w.family) === "OS X" ? M.default.Messages.UNREADS_EMPTY_STATE_TIP_MAC : M.default.Messages.UNREADS_EMPTY_STATE_TIP
@@ -113,8 +113,8 @@ function R(e) {
       tab: c.InboxTab.UNREADS,
       setTab: t,
       badgeState: L,
-      closePopout: R,
-      children: (0, a.jsx)(_.default, {
+      closePopout: x,
+      children: (0, a.jsx)(N.default, {
         type: "top-header",
         onClick: U
       })
@@ -132,11 +132,11 @@ function R(e) {
               O.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             ...l,
-            onScroll: j === C.LoadState.Done ? void 0 : F,
+            onScroll: j === C.LoadState.Done ? void 0 : D,
             className: v.scroller,
-            children: [s ? (0, a.jsx)(x, {
+            children: [s ? (0, a.jsx)(R, {
               setSeenTutorial: r
-            }) : null, (0, I.default)(D, y, n), j === C.LoadState.Done ? null : (0, a.jsx)(f.Spinner, {
+            }) : null, (0, I.default)(F, y, n), j === C.LoadState.Done ? null : (0, a.jsx)(f.Spinner, {
               className: v.spinner
             })]
           })
@@ -146,7 +146,7 @@ function R(e) {
   })
 }
 
-function x(e) {
+function R(e) {
   let {
     setSeenTutorial: t
   } = e;
@@ -190,7 +190,7 @@ function L(e) {
       setTab: t,
       badgeState: n,
       closePopout: l
-    }), (0, a.jsx)(N.default, {
+    }), (0, a.jsx)(_.default, {
       Icon: p.default,
       disableStars: !0,
       header: M.default.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,

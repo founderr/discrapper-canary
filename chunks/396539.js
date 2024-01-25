@@ -21,8 +21,8 @@ let f = e => {
       withMentions: h = !1,
       initialPageSize: E
     } = e, m = (0, l.useStateFromStores)([d.default], () => d.default.shouldReload()), p = a.useRef(!1), [S, g] = a.useState(!1), {
-      initialized: _,
-      loading: N,
+      initialized: N,
+      loading: _,
       items: T,
       hasMore: I,
       cursor: C,
@@ -42,22 +42,22 @@ let f = e => {
       roleFilter: r.default.roleFilter
     }));
     a.useEffect(() => ((0, o.setNotificationCenterActive)(!0), () => (0, o.setNotificationCenterActive)(!1)), []), a.useEffect(() => {
-      _ && t && (0, s.ackUserFeature)(c.ReadStateTypes.NOTIFICATION_CENTER)
-    }, [t, _]);
-    let R = (0, i.default)();
+      N && t && (0, s.ackUserFeature)(c.ReadStateTypes.NOTIFICATION_CENTER)
+    }, [t, N]);
+    let x = (0, i.default)();
     a.useEffect(() => () => {
-      f ? !R() && (A || T.length > 100) && (0, o.resetNotificationCenter)() : n && T.length > 100 && (0, o.resetNotificationCenter)()
-    }, [n, T, f, R, A]), a.useEffect(() => {
+      f ? !x() && (A || T.length > 100) && (0, o.resetNotificationCenter)() : n && T.length > 100 && (0, o.resetNotificationCenter)()
+    }, [n, T, f, x, A]), a.useEffect(() => {
       let e = m && t;
-      (!_ || e) && (0, o.fetchNotificationCenterItems)({
+      (!N || e) && (0, o.fetchNotificationCenterItems)({
         limit: null != E ? E : h ? 8 : 20,
         with_mentions: h,
         roles_filter: M,
         everyone_filter: v
       })
-    }, [_, m, t, h, M, v, E]);
-    let x = a.useCallback(async e => {
-      !p.current && _ && I && null != C && (e || !A) && (p.current = !0, g(!0), await (0, o.fetchNotificationCenterItems)({
+    }, [N, m, t, h, M, v, E]);
+    let R = a.useCallback(async e => {
+      !p.current && N && I && null != C && (e || !A) && (p.current = !0, g(!0), await (0, o.fetchNotificationCenterItems)({
         after: C,
         with_mentions: h,
         roles_filter: M,
@@ -66,13 +66,13 @@ let f = e => {
       }, () => {
         p.current = !1
       }), g(!1))
-    }, [_, I, C, A, h, M, v]);
+    }, [N, I, C, A, h, M, v]);
     return {
-      initialized: _,
-      loading: N,
+      initialized: N,
+      loading: _,
       items: T,
       hasMore: I,
-      loadMore: x,
+      loadMore: R,
       loadingMore: S,
       setReadNotifItemToAcked: e => {
         !e.acked && (e.acked = !0)

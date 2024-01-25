@@ -26,8 +26,8 @@ var a = n("506838"),
   I = n("52393"),
   T = n("143291"),
   C = n("379534"),
-  D = n("40566"),
-  L = n("994918"),
+  L = n("40566"),
+  D = n("994918"),
   O = n("815297"),
   v = n("168730"),
   y = n("129953"),
@@ -47,8 +47,8 @@ var U = n("256572"),
 n("836417");
 var H = n("337543"),
   K = n("377253"),
-  W = n("957255"),
-  Y = n("824563"),
+  Y = n("957255"),
+  W = n("824563"),
   j = n("660478"),
   J = n("18494"),
   z = n("162771"),
@@ -99,7 +99,7 @@ function ef(e) {
       let a = F.default.getLastActiveStream();
       if (null != a && a.channelId === t.id) {
         e = es.LoggingInviteTypes.STREAM, n.destination_user_id = a.ownerId;
-        let t = (0, S.getStreamerApplication)(a, Y.default);
+        let t = (0, S.getStreamerApplication)(a, W.default);
         n.application_id = null != t ? t.id : null
       }
     }
@@ -516,7 +516,7 @@ let e_ = {
       return (l = {
         ...l,
         nonce: d
-      }, D.default.recordMessageSendAttempt(e, d), K.default.isReady(e)) ? r() : a && e !== ei.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ? (eo.info("Waiting for channel ".concat(e, " to be ready before sending.")), new Promise((t, n) => {
+      }, L.default.recordMessageSendAttempt(e, d), K.default.isReady(e)) ? r() : a && e !== ei.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ? (eo.info("Waiting for channel ".concat(e, " to be ready before sending.")), new Promise((t, n) => {
         K.default.whenReady(e, () => {
           eo.info("Channel ".concat(e, " is ready for sending now.")), r().then(t, n)
         })
@@ -594,7 +594,7 @@ let e_ = {
           message_reference: a
         },
         oldFormErrors: !0
-      }).then(n => (L.default.donateSentMessage(n.body.content, e), eg.receiveMessage(e, n.body), r.default.dispatch({
+      }).then(n => (D.default.donateSentMessage(n.body.content, e), eg.receiveMessage(e, n.body), r.default.dispatch({
         type: "STICKER_TRACK_USAGE",
         stickerIds: [t]
       }), n), t => {
@@ -661,7 +661,7 @@ let e_ = {
         let t, n;
         ec = !0;
         let a = q.default.getCurrentUser();
-        c.some(e => e.animated) && !en.default.canUseAnimatedEmojis(a) ? (t = ed.default.Messages.INVALID_ANIMATED_EMOJI_BODY_UPGRADE, n = "INVALID_ANIMATED_EMOJI_BODY") : W.default.canWithPartialContext(es.Permissions.USE_EXTERNAL_EMOJIS, {
+        c.some(e => e.animated) && !en.default.canUseAnimatedEmojis(a) ? (t = ed.default.Messages.INVALID_ANIMATED_EMOJI_BODY_UPGRADE, n = "INVALID_ANIMATED_EMOJI_BODY") : Y.default.canWithPartialContext(es.Permissions.USE_EXTERNAL_EMOJIS, {
           channelId: e
         }) ? (t = ed.default.Messages.INVALID_EXTERNAL_EMOJI_BODY_UPGRADE, n = "INVALID_EXTERNAL_EMOJI_BODY_UPGRADE") : (t = ed.default.Messages.INVALID_EXTERNAL_EMOJI_BODY, n = "INVALID_EXTERNAL_EMOJI_BODY"), eg.sendBotMessage(e, t, n)
       }
@@ -696,13 +696,13 @@ let e_ = {
           c = Math.floor(1e4 * Math.random());
         eo.info("Queueing message to be sent LogId:".concat(c)), u.default.enqueue(H, u => {
           let c = Date.now() - s;
-          if (u.ok) L.default.donateSentMessage(d, e), eg.receiveMessage(e, u.body, !0, {
+          if (u.ok) D.default.donateSentMessage(d, e), eg.receiveMessage(e, u.body, !0, {
             sendAnalytics: {
               duration: c,
               queueSize: i
             },
             poll: C
-          }), D.default.recordMessageSendApiResponse(F), r.default.dispatch({
+          }), L.default.recordMessageSendApiResponse(F), r.default.dispatch({
             type: "SLOWMODE_RESET_COOLDOWN",
             slowmodeType: X.SlowmodeType.SendMessage,
             channelId: e

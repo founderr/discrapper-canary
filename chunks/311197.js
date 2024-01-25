@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return N
   }
 });
 var a = n("37983"),
@@ -21,12 +21,12 @@ var a = n("37983"),
   S = n("782340"),
   g = n("759956");
 
-function _(e) {
+function N(e) {
   let {
     onOpen: t,
     onClose: n,
-    className: _
-  } = e, N = (0, o.useInDesktopNotificationCenterExperiment)(), T = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), I = l.useRef(null), C = (0, s.useStateFromStores)([u.default], () => !!N && (null == T ? void 0 : T.id) != null && u.default.getMentionCount(T.id, p.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
+    className: N
+  } = e, _ = (0, o.useInDesktopNotificationCenterExperiment)(), T = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), I = l.useRef(null), C = (0, s.useStateFromStores)([u.default], () => !!_ && (null == T ? void 0 : T.id) != null && u.default.getMentionCount(T.id, p.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
     enabled: A
   } = r.default.useExperiment({
     location: "RecentsButton"
@@ -49,7 +49,7 @@ function _(e) {
         recentsPopoutShown: t
       }), (0, a.jsx)(f.Icon, {
         ...n,
-        className: _,
+        className: N,
         onClick: e,
         icon: c.default,
         "aria-label": S.default.Messages.INBOX,

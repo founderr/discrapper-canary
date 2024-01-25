@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return T
   }
 }), n("222007");
 var s = n("37983"),
@@ -19,22 +19,22 @@ var s = n("37983"),
   _ = n("782340"),
   p = n("173791"),
   h = n("926622"),
-  m = () => {
-    let [e, t] = a.useState(""), [l, m] = a.useState(""), [T, N] = a.useState(!1), [g, A] = a.useState(!1), [S, C] = a.useState(null), [v, x] = a.useState(null), R = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), L = R.code.split(" ")[0], O = async () => {
+  T = () => {
+    let [e, t] = a.useState(""), [l, T] = a.useState(""), [m, N] = a.useState(!1), [g, A] = a.useState(!1), [S, C] = a.useState(null), [v, R] = a.useState(null), L = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), O = L.code.split(" ")[0], x = async () => {
       try {
         await u.default.resendCode(e)
       } catch (e) {
-        x(e.body.message)
+        R(e.body.message)
       }
     }, M = async () => {
       N(!0);
       try {
         let {
           token: t
-        } = await u.default.verifyPhone(L + e, l);
-        C(null), x(null), A(!0), u.default.validatePhoneForSupport(t)
+        } = await u.default.verifyPhone(O + e, l);
+        C(null), R(null), A(!0), u.default.validatePhoneForSupport(t)
       } catch (e) {
-        e.body.message ? (C(null), x(e.body.message)) : (C(e.body.phone), x(e.body.code))
+        e.body.message ? (C(null), R(e.body.message)) : (C(e.body.phone), R(e.body.code))
       } finally {
         N(!1)
       }
@@ -58,8 +58,8 @@ var s = n("37983"),
         className: h.marginTop20,
         children: [(0, s.jsx)(c.default, {
           label: _.default.Messages.FORM_LABEL_PHONE_NUMBER,
-          alpha2: R.alpha2,
-          countryCode: L,
+          alpha2: L.alpha2,
+          countryCode: O,
           value: e,
           autoComplete: "off",
           spellCheck: "false",
@@ -70,18 +70,18 @@ var s = n("37983"),
           className: h.marginTop20,
           label: _.default.Messages.CONFIRMATION_CODE,
           value: l,
-          onChange: m,
+          onChange: T,
           maxLength: I.PHONE_VERIFICATION_CODE_NUM_DIGITS,
           error: v
         }), (0, s.jsx)(f.Button, {
           size: f.Button.Sizes.SMALL,
           look: f.Button.Looks.LINK,
-          onClick: O,
+          onClick: x,
           children: _.default.Messages.RESEND_CODE
         }), (0, s.jsx)(f.Button, {
           className: h.marginTop20,
           onClick: M,
-          submitting: T,
+          submitting: m,
           children: _.default.Messages.DONE
         })]
       })]

@@ -1,5 +1,5 @@
 "use strict";
-let a, r, n;
+let a, n, r;
 s.r(t), s.d(t, {
   default: function() {
     return d
@@ -9,7 +9,7 @@ var i = s("446674"),
   l = s("913144");
 
 function u() {
-  r = {}, a = {}, n = new Set
+  n = {}, a = {}, r = new Set
 }
 u();
 class o extends i.default.Store {
@@ -17,8 +17,8 @@ class o extends i.default.Store {
     return a[e]
   }
   shouldFetchStatisticsForApplication(e) {
-    let t = r[e];
-    return !n.has(e) && (null == t || Date.now() - t > 36e5)
+    let t = n[e];
+    return !r.has(e) && (null == t || Date.now() - t > 36e5)
   }
 }
 o.displayName = "ApplicationStatisticsStore";
@@ -27,20 +27,20 @@ var d = new o(l.default, {
     let {
       applicationId: t
     } = e;
-    n.add(t)
+    r.add(t)
   },
   APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL: function(e) {
     let {
       applicationId: t
     } = e;
-    n.delete(t)
+    r.delete(t)
   },
   APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS: function(e) {
     let {
       statistics: t,
       applicationId: s
     } = e;
-    r[s] = Date.now(), n.delete(s), a[s] = t
+    n[s] = Date.now(), r.delete(s), a[s] = t
   },
   LOGOUT: u
 })

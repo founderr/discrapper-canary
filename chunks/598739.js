@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   PerksDiscoverabilityVariants: function() {
-    return r
+    return n
   },
   getThemedImage: function() {
     return _
@@ -13,15 +13,15 @@ s.r(t), s.d(t, {
     return I
   }
 });
-var a, r, n = s("819855"),
+var a, n, r = s("819855"),
   i = s("446674"),
   l = s("411691"),
   u = s("521012"),
   o = s("719923"),
   d = s("646718"),
   c = s("782340");
-(a = r || (r = {})).PERKS_DISCOVERABILITY = "perks_discoverability", a.WHATS_NEW = "whats_new", a.CARD_CAROUSEL_FIRST_ROW = "card_carousel_first_row", a.CARD_CAROUSEL_SECOND_ROW = "card_carousel_second_row", a.CARD_CAROUSEL_THIRD_ROW = "card_carousel_final_row";
-let _ = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
+(a = n || (n = {})).PERKS_DISCOVERABILITY = "perks_discoverability", a.WHATS_NEW = "whats_new", a.CARD_CAROUSEL_FIRST_ROW = "card_carousel_first_row", a.CARD_CAROUSEL_SECOND_ROW = "card_carousel_second_row", a.CARD_CAROUSEL_THIRD_ROW = "card_carousel_final_row";
+let _ = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
   E = (e, t, s) => {
     let a = [];
     switch (t) {
@@ -46,8 +46,8 @@ let _ = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
     let t = (0, i.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()),
       s = null != t ? o.default.getPremiumPlanItem(t) : null,
       a = null != s ? o.default.getSkuIdForPlan(s.planId) : null,
-      r = a === d.PremiumSubscriptionSKUs.TIER_2;
-    if (e) return r ? {
+      n = a === d.PremiumSubscriptionSKUs.TIER_2;
+    if (e) return n ? {
       title: c.default.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
       subtitle: c.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
     } : {

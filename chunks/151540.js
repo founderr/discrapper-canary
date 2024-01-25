@@ -1,15 +1,15 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return n
+    return r
   }
 });
 var a = s("37983");
 s("884691");
-var r = s("662034");
+var n = s("662034");
 
-function n() {
+function r() {
   return (0, a.jsx)("div", {
-    className: r.divider
+    className: n.divider
   })
 }

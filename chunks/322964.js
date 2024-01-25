@@ -20,17 +20,17 @@ var a = n("37983"),
   p = n("352273"),
   S = n("360191"),
   g = n("342176"),
-  _ = n("183030"),
-  N = n("899779"),
+  N = n("183030"),
+  _ = n("899779"),
   T = n("778597"),
   I = n("960082"),
   C = n("49111"),
   A = n("782340"),
   M = n("183419"),
   v = n("786948"),
-  R = n("780810");
+  x = n("780810");
 
-function x(e) {
+function R(e) {
   var t, n, l;
   let {
     item: s
@@ -75,7 +75,7 @@ function L(e) {
 function O(e) {
   let {
     item: t
-  } = e, n = R, l = A.default.Messages.NOTIFICATION_CENTER_TODO;
+  } = e, n = x, l = A.default.Messages.NOTIFICATION_CENTER_TODO;
   return t.completed && (n = v, l = A.default.Messages.NOTIFICATION_CENTER_DONE), (0, a.jsxs)("div", {
     className: M.lifecycleContainer,
     children: [(0, a.jsx)("img", {
@@ -95,7 +95,7 @@ let b = l.memo(function(e) {
     let {
       item: r,
       ackedBeforeId: c
-    } = e, f = (0, _.useNotificationCenterItemAcked)(r, c), h = l.useCallback(async () => {
+    } = e, f = (0, N.useNotificationCenterItemAcked)(r, c), h = l.useCallback(async () => {
       if (!f && (0, p.markNotificationCenterItemAcked)(r), null != r.item_enum && r.item_enum === S.ItemEnum.FIND_FRIENDS) {
         (0, i.openModalLazy)(async () => {
           let {
@@ -146,7 +146,7 @@ let b = l.memo(function(e) {
         onClick: h,
         children: [f ? null : (0, a.jsx)("div", {
           className: M.unread
-        }), (0, a.jsx)(N.ForYouItemImage, {
+        }), (0, a.jsx)(_.ForYouItemImage, {
           item: r
         }), (0, a.jsxs)("div", {
           className: M.body,
@@ -156,7 +156,7 @@ let b = l.memo(function(e) {
             variant: "text-md/normal",
             color: f ? "text-muted" : "text-normal",
             children: u.default.parse(r.body)
-          }), (null === (t = r.message) || void 0 === t ? void 0 : t.content) != null ? (0, a.jsx)(x, {
+          }), (null === (t = r.message) || void 0 === t ? void 0 : t.content) != null ? (0, a.jsx)(R, {
             item: r
           }) : null, null != r.callout ? (0, a.jsx)(L, {
             item: r

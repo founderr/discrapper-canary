@@ -1,20 +1,20 @@
 "use strict";
-i.r(t), i.d(t, {
+r.r(t), r.d(t, {
   getDefaultSearchState: function() {
     return o
   },
   GuildMemberSafetySearch: function() {
     return _
   }
-}), i("222007");
-var r = i("448105"),
-  n = i.n(r),
-  s = i("969176"),
-  u = i.n(s),
-  a = i("249654"),
-  l = i("681937"),
-  h = i("509"),
-  d = i("770115");
+}), r("222007");
+var i = r("448105"),
+  n = r.n(i),
+  s = r("969176"),
+  u = r.n(s),
+  a = r("249654"),
+  l = r("681937"),
+  h = r("509"),
+  d = r("770115");
 
 function o() {
   return {
@@ -65,8 +65,8 @@ class _ {
   isMemberIncludedInSearchResults(e) {
     let {
       query: t,
-      requireUnusualDmActivity: i,
-      requireCommunicationDisabled: r,
+      requireUnusualDmActivity: r,
+      requireCommunicationDisabled: i,
       requireUnusualAccountActivity: n,
       requireUsernameQuarantined: s,
       selectedRoleIds: u,
@@ -77,19 +77,19 @@ class _ {
     } = this._searchState;
     if (t.length > 0 && ! function(e, t) {
         if ("" === t.trim()) return !1;
-        let [i, r] = (0, d.splitQuery)(t);
-        for (let t of r)
-          if (e.userId === t) return !0;
+        let [r, i] = (0, d.splitQuery)(t);
         for (let t of i)
+          if (e.userId === t) return !0;
+        for (let t of r)
           if (c(e.nick, t)) return !0;
         if (null == e.user) return !1;
         let {
           globalName: n,
           username: s
         } = e.user;
-        for (let e of i)
+        for (let e of r)
           if (c(s, e)) return !0;
-        for (let e of i)
+        for (let e of r)
           if (c(n, e)) return !0;
         return !1
       }(e, t)) return !1;
@@ -98,7 +98,7 @@ class _ {
       if (f = e, !(0 !== (b = u).size && Array.from(b).every(e => f.roles.includes(e)))) return !1
     }
     if (null != o.afterDate && e.joinedAtTimestamp < o.afterDate || null != o.beforeDate && e.joinedAtTimestamp > o.beforeDate || null != m.afterDate && a.default.extractTimestamp(e.userId) < m.afterDate || null != m.beforeDate && a.default.extractTimestamp(e.userId) > m.beforeDate || null != _ && e.sourceInviteCode !== _ || null != M && e.joinSourceType !== M) return !1;
-    if (i || r || n || s) return !!(i && e.hasUnusualDmActivity || r && (0, h.isMemberCommunicationDisabled)(e) || n && e.hasUnusualAccountActivity || s && (0, l.hasAutomodQuarantinedProfile)(e)) || !1;
+    if (r || i || n || s) return !!(r && e.hasUnusualDmActivity || i && (0, h.isMemberCommunicationDisabled)(e) || n && e.hasUnusualAccountActivity || s && (0, l.hasAutomodQuarantinedProfile)(e)) || !1;
     return !0
   }
   constructor(e) {

@@ -14,27 +14,27 @@ var i, a, l, s, o = n("627445"),
   p = n("387129"),
   g = n("981253"),
   m = n("931237"),
-  E = n("37359"),
-  S = n("364864"),
+  S = n("37359"),
+  E = n("364864"),
   v = n("523505"),
   y = n("47271"),
   C = n("386045"),
-  N = n("969416"),
-  O = n("827922"),
+  I = n("969416"),
+  N = n("827922"),
   T = n("271938"),
-  I = n("42203"),
+  O = n("42203"),
   _ = n("385649"),
   A = n("824563"),
   x = n("18494"),
   R = n("101125"),
-  M = n("102985"),
-  L = n("697218"),
+  L = n("102985"),
+  M = n("697218"),
   D = n("189857"),
   j = n("901165"),
   w = n("718517"),
-  k = n("189771"),
-  b = n("686069"),
-  P = n("703370"),
+  P = n("189771"),
+  k = n("686069"),
+  b = n("703370"),
   V = n("49111"),
   U = n("6791"),
   B = n("782340");
@@ -106,7 +106,7 @@ function Q(e) {
   } = e, i = X(t), a = n.includes(T.default.getId());
   if (!a) return K(i);
   if (null != i) return !1;
-  let l = I.default.getChannel(t);
+  let l = O.default.getChannel(t);
   if (null == l || !l.isPrivate() || R.default.getStatus() === V.StatusTypes.DND) return !1;
   let s = Y.find(e => 1 === e.type && e.channelId === t && e.messageType === V.MessageTypes.CALL);
   null != s && K(s.id), J((0, m.default)(l), {
@@ -118,7 +118,7 @@ function Q(e) {
 }
 class q extends u.default.Store {
   initialize() {
-    this.waitFor(I.default, L.default)
+    this.waitFor(O.default, M.default)
   }
   getNotifications() {
     return Y
@@ -144,7 +144,7 @@ var $ = new q(c.default, __OVERLAY__ ? {
         case U.OverlayNudgeTypes.GO_LIVE_NON_VOICE:
           return (0, g.default)(e);
         case U.OverlayNudgeTypes.KEYBIND_INDICATORS:
-          return (0, O.default)(e);
+          return (0, N.default)(e);
         case U.OverlayNudgeTypes.NEWS:
         default:
           return (0, v.default)(e)
@@ -170,14 +170,14 @@ var $ = new q(c.default, __OVERLAY__ ? {
     let {
       channelId: a,
       message: l
-    } = e, s = I.default.getChannel(a), o = L.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
+    } = e, s = O.default.getChannel(a), o = M.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
     if (null == s || null == o) return !1;
     if ((null === (n = l.activity) || void 0 === n ? void 0 : n.type) === V.ActivityActionTypes.JOIN || (null === (i = l.activity) || void 0 === i ? void 0 : i.type) === V.ActivityActionTypes.JOIN_REQUEST) {
-      if (!(0, k.shouldNotify)(l, a, !0, !0)) return !1;
+      if (!(0, P.shouldNotify)(l, a, !0, !0)) return !1;
       let e = function(e, t, n) {
         let i, a;
         if (r(null != t.activity, "received null message activity"), n.id === T.default.getId()) return !1;
-        let l = P.default.getGame();
+        let l = b.default.getGame();
         if (null == l) return !1;
         switch (t.activity.type) {
           case V.ActivityActionTypes.JOIN:
@@ -186,7 +186,7 @@ var $ = new q(c.default, __OVERLAY__ ? {
             break;
           case V.ActivityActionTypes.JOIN_REQUEST:
             if (null == (i = R.default.getApplicationActivity(l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-            a = (0, E.default)(e, n, l, i)
+            a = (0, S.default)(e, n, l, i)
         }
         if (null == a) return !1;
         let s = J(a, {
@@ -198,9 +198,9 @@ var $ = new q(c.default, __OVERLAY__ ? {
       }(s, l, o);
       if (!1 !== e) return e
     }
-    if ((!j.default.isInstanceUILocked() || j.default.isPinned(V.OverlayWidgets.TEXT)) && a === x.default.getChannelId() || j.default.getTextChatNotificationMode() === V.OverlayNotificationTextChatTypes.DISABLED || M.default.disableNotifications || !(0, k.shouldNotify)(l, a)) return !1;
+    if ((!j.default.isInstanceUILocked() || j.default.isPinned(V.OverlayWidgets.TEXT)) && a === x.default.getChannelId() || j.default.getTextChatNotificationMode() === V.OverlayNotificationTextChatTypes.DISABLED || L.default.disableNotifications || !(0, P.shouldNotify)(l, a)) return !1;
     let d = !_.default.isSoundDisabled(D.MESSAGE_SOUND);
-    J((0, S.default)(s, l, o, d), {
+    J((0, E.default)(s, l, o, d), {
       type: 1,
       channelId: s.id,
       messageType: l.type
@@ -232,7 +232,7 @@ var $ = new q(c.default, __OVERLAY__ ? {
         user: i,
         applicationId: a
       } = e,
-      l = P.default.getGame();
+      l = b.default.getGame();
     if (null == l || l.id !== a) return !1;
     if (n === V.ActivityActionTypes.JOIN) t = (0, p.default)(i, l);
     if (null == t) return !1;
@@ -242,18 +242,18 @@ var $ = new q(c.default, __OVERLAY__ ? {
     })
   },
   CLIPS_SAVE_CLIP_START: function() {
-    J((0, N.createClipsNotification)(B.default.Messages.CLIPS_SAVE_START_NOTIFICATION_TITLE))
+    J((0, I.createClipsNotification)(B.default.Messages.CLIPS_SAVE_START_NOTIFICATION_TITLE))
   },
   CLIPS_SAVE_CLIP: function() {
-    J((0, N.createClipsNotification)(B.default.Messages.CLIPS_NOTIFICATION_TITLE.format({
-      duration: (0, b.getSecondsSliderLabel)(C.default.getSettings().clipsLength / 1e3, !0)
+    J((0, I.createClipsNotification)(B.default.Messages.CLIPS_NOTIFICATION_TITLE.format({
+      duration: (0, k.getSecondsSliderLabel)(C.default.getSettings().clipsLength / 1e3, !0)
     })))
   },
   CLIPS_SAVE_CLIP_ERROR: function() {
-    J((0, N.createClipsNotification)(B.default.Messages.CLIPS_SAVE_ERROR_NOTIFICATION_TITLE))
+    J((0, I.createClipsNotification)(B.default.Messages.CLIPS_SAVE_ERROR_NOTIFICATION_TITLE))
   },
   STREAM_START: function(e) {
-    let t = (0, N.createClipsReminderNotification)();
+    let t = (0, I.createClipsReminderNotification)();
     null != t && J(t)
   }
 } : {})

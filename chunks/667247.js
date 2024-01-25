@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("73579"),
-  r = s("493765"),
-  n = s("49111");
+  n = s("493765"),
+  r = s("49111");
 let i = {
-  ...r.DEFAULT_LAYOUT,
-  [n.KeybindActions.CAROUSEL_NEXT]: a.CAROUSEL_NEXT,
-  [n.KeybindActions.CAROUSEL_PREV]: a.CAROUSEL_PREV
+  ...n.DEFAULT_LAYOUT,
+  [r.KeybindActions.CAROUSEL_NEXT]: a.CAROUSEL_NEXT,
+  [r.KeybindActions.CAROUSEL_PREV]: a.CAROUSEL_PREV
 }

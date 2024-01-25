@@ -13,8 +13,8 @@ var s = n("37983"),
   l = n.n(a),
   i = n("77078"),
   u = n("850391"),
-  c = n("149022"),
-  o = n("681060"),
+  o = n("149022"),
+  c = n("681060"),
   d = n("570697"),
   f = n("233069"),
   m = n("49111"),
@@ -38,12 +38,12 @@ function N(e) {
     innerClassName: T,
     disabled: P = !1,
     disableThemedBackground: C = !1
-  } = e, [A, O] = r.useState(null != f ? f : N), [h, R] = r.useState((0, c.toRichValue)(A)), g = r.useRef(!1);
+  } = e, [A, O] = r.useState(null != f ? f : N), [h, R] = r.useState((0, o.toRichValue)(A)), g = r.useRef(!1);
   return r.useEffect(() => {
     g.current = !0
   }, []), r.useEffect(() => {
     if (void 0 === f) {
-      let e = (0, c.toRichValue)(N);
+      let e = (0, o.toRichValue)(N);
       O(N), R(e)
     }
   }, [f, N]), (0, s.jsx)("div", {
@@ -52,7 +52,7 @@ function N(e) {
       title: t,
       errors: n,
       disabled: P,
-      children: [(0, s.jsx)(o.default, {
+      children: [(0, s.jsx)(c.default, {
         innerClassName: l(E.textArea, T),
         editorClassName: E.editorTextArea,
         maxCharacterCount: I,

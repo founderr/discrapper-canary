@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  r = s("884691"),
-  n = s("414456"),
-  i = s.n(n),
+  n = s("884691"),
+  r = s("414456"),
+  i = s.n(r),
   l = s("77078"),
   u = s("411691"),
   o = s("367226"),
@@ -19,25 +19,25 @@ var a = s("37983"),
     let {
       className: t,
       variant: s = c.PerksDiscoverabilityVariants.PERKS_DISCOVERABILITY,
-      noBackground: n = !1,
+      noBackground: r = !1,
       leftAlignHeaders: I = !1,
       showAllPerksButton: T
-    } = e, f = r.useRef(null), S = (0, o.useShouldScrollToWhatsNew)(), R = (0, u.default)("perks-discoverability");
+    } = e, f = n.useRef(null), S = (0, o.useShouldScrollToWhatsNew)(), R = (0, u.default)("perks-discoverability");
     (0, o.useClearNewBadge)();
-    let m = s === c.PerksDiscoverabilityVariants.WHATS_NEW;
-    r.useEffect(() => {
+    let A = s === c.PerksDiscoverabilityVariants.WHATS_NEW;
+    n.useEffect(() => {
       let e = f.current;
-      if (null == e || !S || !m) return;
+      if (null == e || !S || !A) return;
       let t = requestAnimationFrame(() => {
         e.scrollIntoView({
           behavior: "smooth"
         })
       });
       return () => cancelAnimationFrame(t)
-    }, [f, S, m]);
-    let A = (0, d.default)(),
-      N = (0, c.usePerksDiscoverabilityStrings)(m),
-      p = (0, c.getFilteredPerksDiscoverabilityCards)(A, s, R),
+    }, [f, S, A]);
+    let m = (0, d.default)(),
+      N = (0, c.usePerksDiscoverabilityStrings)(A),
+      p = (0, c.getFilteredPerksDiscoverabilityCards)(m, s, R),
       g = p.some(e => null != e.pillText);
     return (0, a.jsxs)("div", {
       ref: f,
@@ -54,7 +54,7 @@ var a = s("37983"),
         variant: "text-lg/normal",
         color: "header-primary",
         className: i(E.subtitle, {
-          [E.fullWidth]: m || I,
+          [E.fullWidth]: A || I,
           [E.moreSubtitleMargin]: g,
           [E.leftAlignSubtitle]: I,
           [E.centerAlignSubtitle]: !I
@@ -64,7 +64,7 @@ var a = s("37983"),
         className: E.cardContainer,
         children: [p.map((e, t) => (0, a.jsx)(_.default, {
           ...e,
-          forceShadow: n
+          forceShadow: r
         }, "".concat(e.name, "_").concat(t))), null != T && (0, a.jsx)("div", {
           className: E.showAllPerksButton,
           children: T

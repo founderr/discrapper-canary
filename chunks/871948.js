@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  r = s("884691"),
-  n = s("414456"),
-  i = s.n(n),
+  n = s("884691"),
+  r = s("414456"),
+  i = s.n(r),
   l = s("446674"),
   u = s("77078"),
   o = s("106435"),
@@ -19,10 +19,10 @@ var a = s("37983"),
 function I(e) {
   let {
     smallerText: t
-  } = e, s = (0, l.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), n = s.map((e, t) => (0, a.jsx)(T, {
+  } = e, s = (0, l.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), r = s.map((e, t) => (0, a.jsx)(T, {
     affinity: e,
     applyMask: t !== s.length - 1
-  }, e.id)), i = e => null != e.globalName ? e.globalName : e.username, o = r.useMemo(() => 3 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
+  }, e.id)), i = e => null != e.globalName ? e.globalName : e.username, o = n.useMemo(() => 3 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
     username: i(s[2])
   }) : 2 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_2.format({
     username: i(s[1]),
@@ -34,7 +34,7 @@ function I(e) {
     className: E.container,
     children: [(0, a.jsx)("div", {
       className: E.iconContainer,
-      children: n
+      children: r
     }), (0, a.jsx)("div", {
       className: E.textContainer,
       children: (0, a.jsx)(function() {
@@ -57,8 +57,8 @@ function T(e) {
     affinity: t,
     applyMask: s
   } = e, {
-    avatarSrc: r,
-    eventHandlers: n
+    avatarSrc: n,
+    eventHandlers: r
   } = (0, o.default)({
     user: t,
     size: c.AvatarSizes.SIZE_32,
@@ -68,9 +68,9 @@ function T(e) {
     className: i(E.icon, {
       [E.mask]: s
     }),
-    src: r,
+    src: n,
     "aria-label": t.username,
     size: c.AvatarSizes.SIZE_32,
-    ...n
+    ...r
   })
 }

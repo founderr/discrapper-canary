@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return v
   },
   getMask: function() {
-    return R
+    return x
   },
   getBackground: function() {
-    return x
+    return R
   }
 });
 var a, l, s, i, r = n("669491"),
@@ -28,14 +28,14 @@ var a, l, s, i, r = n("669491"),
   p = n("371031"),
   S = n("674517"),
   g = n("989306"),
-  _ = n("695449"),
-  N = n("816428"),
+  N = n("695449"),
+  _ = n("816428"),
   T = n("710672");
 (a = s || (s = {})).CHECKED = "CHECKED", a.FRIENDS = "FRIENDS", a.SHARE_SCREEN = "SHARE_SCREEN", a.NEW_MESSAGE = "NEW_MESSAGE";
 let I = {
   CHECKED: f,
   FRIENDS: E,
-  SHARE_SCREEN: N,
+  SHARE_SCREEN: _,
   NEW_MESSAGE: g
 };
 (l = i || (i = {})).MISSED_MESSAGES = "MISSED_MESSAGES", l.FRIEND_REQUEST_REMINDER = "FRIEND_REQUEST_REMINDER", l.SCHEDULED_GUILD_EVENT = "SCHEDULED_GUILD_EVENT", l.TOP_MESSAGES = "TOP_MESSAGES", l.NOTIFICATION_CENTER = "NOTIFICATION_CENTER", l.UPDATE_PROFILE = "UPDATE_PROFILE", l.FIND_FRIENDS = "FIND_FRIENDS", l.ADD_FRIEND = "ADD_FRIEND", l.FIRST_MESSAGE = "FIRST_MESSAGE";
@@ -48,7 +48,7 @@ let C = {
     UPDATE_PROFILE: T,
     FIND_FRIENDS: d,
     ADD_FRIEND: d,
-    FIRST_MESSAGE: _
+    FIRST_MESSAGE: N
   },
   A = e => {
     switch (e.item_enum) {
@@ -84,7 +84,7 @@ let C = {
     if ("icHighlight" === e) return "TOP_MESSAGES";
     return "NOTIFICATION_CENTER"
   },
-  R = e => {
+  x = e => {
     switch (e) {
       case o.NotificationCenterItems.GO_LIVE_PUSH:
         return {
@@ -112,7 +112,7 @@ let C = {
         return null
     }
   },
-  x = e => {
+  R = e => {
     switch (e.item_enum) {
       case o.ItemEnum.UPDATE_PROFILE:
         return u.PROFILE_BACKGROUND;

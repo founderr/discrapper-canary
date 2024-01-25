@@ -21,8 +21,8 @@ var l = n("414456"),
   p = n("824563"),
   S = n("697218"),
   g = n("220677"),
-  _ = n("476263"),
-  N = n("476765"),
+  N = n("476263"),
+  _ = n("476765"),
   T = n("782340"),
   I = n("636431");
 let C = {
@@ -40,7 +40,7 @@ function A(e) {
     mentionCount: s,
     channelState: r,
     toggleCollapsed: u
-  } = e, d = (0, i.useListItem)("recents-header-".concat(t.id, "-").concat((0, N.useUID)()));
+  } = e, d = (0, i.useListItem)("recents-header-".concat(t.id, "-").concat((0, _.useUID)()));
   return (0, a.jsx)(o.FocusRing, {
     offset: C,
     children: (0, a.jsxs)("div", {
@@ -54,7 +54,7 @@ function A(e) {
       children: [(0, a.jsx)(M, {
         channel: t,
         gotoChannel: l
-      }), (0, a.jsx)(x, {
+      }), (0, a.jsx)(R, {
         channel: t,
         gotoChannel: l,
         mentionCount: s
@@ -71,7 +71,7 @@ function M(e) {
   return t.isPrivate() ? (0, a.jsx)(v, {
     channel: t,
     gotoChannel: n
-  }) : (0, a.jsx)(R, {
+  }) : (0, a.jsx)(x, {
     channel: t,
     gotoChannel: n
   })
@@ -94,23 +94,23 @@ function v(e) {
   })
 }
 
-function R(e) {
+function x(e) {
   let {
     channel: t,
     gotoChannel: n
   } = e, l = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t.guild_id));
-  return null == l ? null : (0, a.jsx)(_.default, {
+  return null == l ? null : (0, a.jsx)(N.default, {
     "aria-hidden": !0,
     className: I.guildIcon,
     guild: l,
-    size: _.default.Sizes.MEDIUM,
+    size: N.default.Sizes.MEDIUM,
     active: !0,
     onClick: n,
     tabIndex: -1
   })
 }
 
-function x(e) {
+function R(e) {
   let {
     channel: t,
     gotoChannel: n,

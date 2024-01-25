@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return _
   }
 }), n("222007");
 var a = n("37983"),
@@ -20,13 +20,13 @@ var a = n("37983"),
   p = n("64318"),
   S = n("833150"),
   g = n("782340"),
-  _ = n("643000");
+  N = n("643000");
 
-function N(e) {
+function _(e) {
   let {
     setTab: t,
     badgeState: s,
-    closePopout: N
+    closePopout: _
   } = e, I = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), C = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [A, M] = l.useMemo(() => i.partition(I, e => {
     var t;
     if ((null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) === !1) return !1;
@@ -36,14 +36,14 @@ function N(e) {
   return (l.useEffect(() => {
     (0, h.clearUnseenInvites)()
   }), 0 === I.length) ? (0, a.jsxs)("div", {
-    className: _.container,
+    className: N.container,
     children: [(0, a.jsx)(p.default, {
       tab: o.InboxTab.GAME_INVITES,
       setTab: t,
       badgeState: s,
-      closePopout: N
+      closePopout: _
     }), (0, a.jsx)("div", {
-      className: _.emptyStateContainer,
+      className: N.emptyStateContainer,
       children: (0, a.jsx)(m.default, {
         Icon: u.GameControllerIcon,
         header: g.default.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
@@ -51,14 +51,14 @@ function N(e) {
       })
     })]
   }) : (0, a.jsxs)("div", {
-    className: _.container,
+    className: N.container,
     children: [(0, a.jsx)(p.default, {
       tab: o.InboxTab.GAME_INVITES,
       setTab: t,
       badgeState: s,
-      closePopout: N,
+      closePopout: _,
       children: (0, a.jsx)(E.default, {
-        className: _.deleteButton,
+        className: N.deleteButton,
         tooltip: g.default.Messages.GAME_INVITES_DELETE_ALL,
         color: E.CircleIconButtonColors.SECONDARY,
         icon: (0, a.jsx)(d.TrashIcon, {
@@ -81,7 +81,7 @@ function N(e) {
       })
     }), (0, a.jsx)(c.AdvancedScrollerThin, {
       children: (0, a.jsxs)("div", {
-        className: _.invitesContainer,
+        className: N.invitesContainer,
         children: [A.length > 0 && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(T, {
             title: g.default.Messages.GAME_INVITES_RECENT_HEADER
@@ -111,14 +111,14 @@ function T(e) {
     title: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: _.headerContainer,
+    className: N.headerContainer,
     children: [(0, a.jsx)(c.Text, {
-      className: _.headerTitle,
+      className: N.headerTitle,
       variant: "text-xs/semibold",
       color: "interactive-normal",
       children: t
     }), (0, a.jsx)("div", {
-      className: _.headerDivider
+      className: N.headerDivider
     })]
   })
 }

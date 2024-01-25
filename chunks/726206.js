@@ -19,9 +19,9 @@ var s = n("37983"),
   _ = n("49111"),
   p = n("782340"),
   h = n("956874"),
-  m = n("926622");
+  T = n("926622");
 r.default.initialize();
-class T extends a.PureComponent {
+class m extends a.PureComponent {
   componentDidMount() {
     this.handleVerify(), (0, c.trackAppUIViewed)("verify_email")
   }
@@ -29,12 +29,12 @@ class T extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("768025"),
-        className: i(h.image, m.marginBottom20)
+        className: i(h.image, T.marginBottom20)
       }), (0, s.jsx)(E.Title, {
-        className: m.marginBottom8,
+        className: T.marginBottom8,
         children: p.default.Messages.VERFICATION_EXPIRED
       }), (0, s.jsx)(E.SubTitle, {
-        className: m.marginBottom40,
+        className: T.marginBottom40,
         children: p.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
       }), (0, s.jsx)(E.Button, {
         onClick: this.handleLogin,
@@ -46,9 +46,9 @@ class T extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("176872"),
-        className: i(h.image, m.marginBottom20)
+        className: i(h.image, T.marginBottom20)
       }), (0, s.jsx)(E.Title, {
-        className: m.marginBottom40,
+        className: T.marginBottom40,
         children: p.default.Messages.VERIFICATION_VERIFIED
       }), (0, s.jsx)(E.Button, {
         onClick: this.handleOpenApp,
@@ -60,12 +60,12 @@ class T extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("951536"),
-        className: i(h.image, m.marginBottom20)
+        className: i(h.image, T.marginBottom20)
       }), (0, s.jsx)(E.Title, {
-        className: m.marginBottom8,
+        className: T.marginBottom8,
         children: p.default.Messages.VERIFICATION_VERIFYING
       }), (0, s.jsx)(E.SubTitle, {
-        className: m.marginBottom40,
+        className: T.marginBottom40,
         children: p.default.Messages.ACTION_MAY_TAKE_A_MOMENT
       }), (0, s.jsx)(E.Button, {
         submitting: !0,
@@ -99,7 +99,7 @@ class T extends a.PureComponent {
     }
   }
 }
-T.defaultProps = {
+m.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
 var N = r.default.connectStores([f.default], () => ({
@@ -108,4 +108,4 @@ var N = r.default.connectStores([f.default], () => ({
   verifySucceeded: f.default.didVerifySucceed(),
   fingerprint: f.default.getFingerprint(),
   verifyingUserId: f.default.getVerifyingUserId()
-}))(T)
+}))(m)
