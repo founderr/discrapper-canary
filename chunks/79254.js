@@ -26,7 +26,7 @@ var s = n("37983"),
   T = n("782340"),
   M = n("648198");
 
-function N(e, t, a, l) {
+function I(e, t, a, l) {
   (0, i.openModalLazy)(async () => {
     let {
       default: i
@@ -42,7 +42,7 @@ function N(e, t, a, l) {
     modalKey: r.activityInviteKey
   })
 }
-let I = /(.*)```(\w+)\n(.*)```(.*)/s;
+let N = /(.*)```(\w+)\n(.*)```(.*)/s;
 
 function v(e) {
   let {
@@ -53,8 +53,8 @@ function v(e) {
     onSelect: x,
     draftType: R,
     editorTextContent: y,
-    setValue: O,
-    openClips: D
+    setValue: D,
+    openClips: O
   } = e;
   (0, u.useMaybeFetchPremiumLikelihood)(d.default);
   let {
@@ -73,11 +73,11 @@ function v(e) {
   }
 
   function b() {
-    C.default.track(A.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), O("/", (0, g.toRichValue)("/"))
+    C.default.track(A.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, g.toRichValue)("/"))
   }
 
   function H() {
-    D()
+    O()
   }
 
   function F() {
@@ -98,7 +98,7 @@ function v(e) {
     let e = y,
       n = "txt",
       s = "",
-      a = y.match(I);
+      a = y.match(N);
     null != a && (s = a[1], n = a[2], e = a[3], s += a[4]), (0, E.promptToUpload)([(0, m.makeFile)(new Blob([e], {
       type: "text/plain"
     }), "message.".concat(n))], t, R), p.ComponentDispatch.dispatchToLastSubscribed(A.ComponentActions.CLEAR_TEXT), "" !== s && p.ComponentDispatch.dispatchToLastSubscribed(A.ComponentActions.INSERT_TEXT, {
@@ -172,7 +172,7 @@ function v(e) {
                 type: "Send Join Invite",
                 application_id: n.application_id,
                 location: A.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), N(n, t, A.ActivityActionTypes.JOIN, j))
+              }), I(n, t, A.ActivityActionTypes.JOIN, j))
             }
           }, "play");
         case S.AttachmentTypes.INVITE_TO_LISTEN:
@@ -184,7 +184,7 @@ function v(e) {
               return n = e.activity, void(C.default.track(A.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
                 location: A.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), N(n, t, A.ActivityActionTypes.LISTEN, j))
+              }), I(n, t, A.ActivityActionTypes.LISTEN, j))
             }
           }, "listen");
         case S.AttachmentTypes.INVITE_TO_WATCH:
@@ -196,7 +196,7 @@ function v(e) {
               return n = e.activity, void(C.default.track(A.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
                 location: A.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), N(n, t, A.ActivityActionTypes.WATCH, j))
+              }), I(n, t, A.ActivityActionTypes.WATCH, j))
             }
           }, "watch");
         case S.AttachmentTypes.CREATE_THREAD:

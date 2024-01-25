@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return u
   },
   createWidget: function() {
-    return s
+    return c
   },
   createWidgets: function() {
-    return _
+    return s
   }
 });
 var a = n("913144"),
@@ -75,11 +75,11 @@ function u(e) {
   })
 }
 
-function s(e) {
-  _([e])
+function c(e) {
+  s([e])
 }
 
-function _(e) {
+function s(e) {
   a.default.dispatch({
     type: "LAYOUT_CREATE_WIDGETS",
     widgetConfigs: e

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   WelcomeMessageCTA: function() {
-    return D
+    return O
   },
   default: function() {
     return j
@@ -28,16 +28,16 @@ var s = n("37983"),
   _ = n("461380"),
   T = n("36694"),
   M = n("659500"),
-  N = n("701909"),
-  I = n("773336"),
+  I = n("701909"),
+  N = n("773336"),
   v = n("299039"),
   L = n("172554"),
   x = n("49111"),
   R = n("188631"),
   y = n("782340"),
-  O = n("508328");
+  D = n("508328");
 
-function D(e) {
+function O(e) {
   let {
     className: t,
     iconUrl: n,
@@ -49,26 +49,26 @@ function D(e) {
   return a.useEffect(() => {
     null != C && o !== C && (h(!0), setTimeout(() => h(!1), 1e3))
   }, [o, C]), (0, s.jsxs)(c.Clickable, {
-    className: i(t, O.card, {
-      [O.completed]: o
+    className: i(t, D.card, {
+      [D.completed]: o
     }),
     onClick: u,
     children: [null != l ? l : (0, s.jsx)("div", {
-      className: O.icon,
+      className: D.icon,
       style: {
         backgroundImage: "url('".concat(n, "')")
       }
     }), (0, s.jsx)(c.Text, {
       color: "header-primary",
-      className: i(O.cardTextContainer, O.cardHeader),
+      className: i(D.cardTextContainer, D.cardHeader),
       variant: "text-sm/normal",
       children: r
     }), o ? (0, s.jsx)(T.default, {
-      className: i(O.checkmark, {
-        [O.animate]: d
+      className: i(D.checkmark, {
+        [D.animate]: d
       })
     }) : (0, s.jsx)(_.default, {
-      className: O.arrow,
+      className: D.arrow,
       direction: _.default.Directions.RIGHT
     })]
   })
@@ -217,55 +217,55 @@ function j(e) {
     }, [l]), null == l) return null;
   let q = [];
   !f && (T && q.push((0, s.jsx)(o.default.div, {
-    className: O.cardWrapper,
+    className: D.cardWrapper,
     style: W ? {
       opacity: z[q.length]
     } : {},
-    children: (0, s.jsx)(D, {
+    children: (0, s.jsx)(O, {
       iconUrl: n("243826"),
       header: y.default.Messages.WELCOME_CTA_INVITE_TITLE,
       completed: H,
       onClick: k
     })
   }, "invite")), j && q.push((0, s.jsx)(o.default.div, {
-    className: O.cardWrapper,
+    className: D.cardWrapper,
     style: W ? {
       opacity: z[q.length]
     } : {},
-    children: (0, s.jsx)(D, {
+    children: (0, s.jsx)(O, {
       iconUrl: n("215036"),
       header: y.default.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
       completed: U,
       onClick: w
     })
   }, "customize")), P && q.push((0, s.jsx)(o.default.div, {
-    className: O.cardWrapper,
+    className: D.cardWrapper,
     style: W ? {
       opacity: z[q.length]
     } : {},
-    children: (0, s.jsx)(D, {
+    children: (0, s.jsx)(O, {
       iconUrl: n("505873"),
       header: y.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
       completed: F,
       onClick: G
     })
-  }, "message")), (0, I.isWeb)() && q.push((0, s.jsx)(o.default.div, {
-    className: O.cardWrapper,
+  }, "message")), (0, N.isWeb)() && q.push((0, s.jsx)(o.default.div, {
+    className: D.cardWrapper,
     style: W ? {
       opacity: z[q.length]
     } : {},
-    children: (0, s.jsx)(D, {
+    children: (0, s.jsx)(O, {
       iconUrl: n("238032"),
       header: y.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
       completed: b,
       onClick: B
     })
   }, "download")), q.push((0, s.jsx)(o.default.div, {
-    className: O.cardWrapper,
+    className: D.cardWrapper,
     style: W ? {
       opacity: z[q.length]
     } : {},
-    children: (0, s.jsx)(D, {
+    children: (0, s.jsx)(O, {
       iconUrl: n("356451"),
       header: y.default.Messages.WELCOME_CTA_APPS_RECOMMENDATION_TITLE,
       completed: Y,
@@ -274,17 +274,17 @@ function j(e) {
   }, "addapp")));
   let X = _ ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
   f && (X = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-  let J = "".concat(N.default.getArticleURL(x.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
+  let J = "".concat(I.default.getArticleURL(x.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
   return (0, s.jsx)(L.default, {
     channelId: t.id,
     children: (0, s.jsx)("div", {
-      className: O.container,
+      className: D.container,
       children: (0, s.jsxs)("div", {
-        className: O.inner,
+        className: D.inner,
         children: [(0, s.jsxs)(o.default.div, {
           style: Z,
           children: [(0, s.jsx)(c.Heading, {
-            className: O.titleName,
+            className: D.titleName,
             variant: "heading-xxl/semibold",
             children: y.default.Messages.WELCOME_CTA_TITLE.format({
               guildName: l.name
@@ -292,8 +292,8 @@ function j(e) {
           }), (0, s.jsxs)(c.Text, {
             color: "header-secondary",
             className: i({
-              [O.subtitle]: !0,
-              [O.noChildren]: 0 === q.length
+              [D.subtitle]: !0,
+              [D.noChildren]: 0 === q.length
             }),
             variant: "text-sm/normal",
             children: [X, " ", q.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({

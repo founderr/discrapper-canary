@@ -59,12 +59,12 @@ async function _(e) {
   })).body) : []
 }
 
-function p() {
+function I() {
   u = {
     ...a.default.getCollapsedCategories()
   }
 }
-class I extends l.default {
+class p extends l.default {
   constructor(...e) {
     super(...e), this.actions = {
       CATEGORY_COLLAPSE: h,
@@ -72,8 +72,8 @@ class I extends l.default {
       CATEGORY_COLLAPSE_ALL: h,
       CATEGORY_EXPAND_ALL: h,
       POST_CONNECTION_OPEN: f,
-      USER_GUILD_SETTINGS_FULL_UPDATE: p
+      USER_GUILD_SETTINGS_FULL_UPDATE: I
     }, this.saveUserGuildSettings = E, this.saveUserGuildSettingsBulk = _
   }
 }
-var C = new I
+var C = new p

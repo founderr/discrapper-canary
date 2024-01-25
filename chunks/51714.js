@@ -26,7 +26,7 @@ function d(e) {
     S = null != h ? i.default.extractTimestamp(h) : null,
     A = null;
   return f.forEach(e => {
-    var a, _, T, M, N, I, v, L;
+    var a, _, T, M, I, N, v, L;
     if (null != p && p.length > 0) {
       ;
       let t = i.default.extractTimestamp(e.id);
@@ -53,31 +53,31 @@ function d(e) {
     }), t = x);
     let R = E[E.length - 1],
       y = null,
-      O = (0, o.isSpam)(e);
-    g = g || O;
-    let D = function(e, t, n) {
+      D = (0, o.isSpam)(e);
+    g = g || D;
+    let O = function(e, t, n) {
       if (s.MessageTypesSets.NON_COLLAPSIBLE.has(t.type));
       else if (t.blocked) return u.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED;
       else if ((0, o.isSpamSupported)(e) && n) return u.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER;
       return null
-    }(c, e, O && C);
-    if (null !== D) {
+    }(c, e, D && C);
+    if (null !== O) {
       ;
       let t, n;
-      [y, R] = (_ = E, T = e, M = D, n = N = R, null == N || N.type !== M ? (t = {
+      [y, R] = (_ = E, T = e, M = O, n = I = R, null == I || I.type !== M ? (t = {
         type: M,
         content: [],
         key: T.id
-      }, _.push(t)) : n = (t = N).content[t.content.length - 1], [t, n])
+      }, _.push(t)) : n = (t = I).content[t.content.length - 1], [t, n])
     }
     if (h === e.id && null != S) {
       if (null != R && R.type === u.ChannelStreamTypes.DIVIDER) R.unreadId = e.id, S = null;
       else if (null !== y) {
         ;
-        I = y, v = c, (L = e).isFirstMessageInForumPost(v) || I.content.push({
+        N = y, v = c, (L = e).isFirstMessageInForumPost(v) || N.content.push({
           type: u.ChannelStreamTypes.DIVIDER,
           unreadId: L.id
-        }), I.hasUnread = !0, S = null
+        }), N.hasUnread = !0, S = null
       } else !e.isFirstMessageInForumPost(c) && E.push({
         type: u.ChannelStreamTypes.DIVIDER,
         unreadId: e.id

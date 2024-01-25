@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return E
   }
 });
 var a = n("374014"),
@@ -16,7 +16,7 @@ var a = n("374014"),
   f = n("49111"),
   g = n("782340");
 
-function p(e) {
+function E(e) {
   let {
     sourceName: t,
     sourceApplicationId: n
@@ -41,13 +41,13 @@ function p(e) {
       sourceName: null !== (t = null == u ? void 0 : u.sourceName) && void 0 !== t ? t : null == o ? void 0 : o.name,
       sourceApplicationId: null !== (n = null == u ? void 0 : u.id) && void 0 !== n ? n : null == o ? void 0 : o.id
     }
-  }(e), p = u.default.getChannelId(), _ = [l.default.getId()];
-  return null != p && (_ = Object.keys(r.default.getVoiceStatesForChannel(p))), {
+  }(e), E = u.default.getChannelId(), p = [l.default.getId()];
+  return null != E && (p = Object.keys(r.default.getVoiceStatesForChannel(E))), {
     id: o.default.fromTimestamp(Date.now()),
     version: c.CURRENT_CLIP_METADATA_VERSION,
     applicationName: null != t ? t : g.default.Messages.CLIPS_UNKNOWN_SOURCE,
     applicationId: n,
-    users: _,
+    users: p,
     clipMethod: "manual",
     length: 0,
     thumbnail: ""

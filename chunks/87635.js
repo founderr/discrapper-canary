@@ -25,9 +25,9 @@ var s = n("37983"),
   _ = n("290886"),
   T = n("205454"),
   M = n("782340"),
-  N = n("719832");
+  I = n("719832");
 
-function I(e) {
+function N(e) {
   let {
     action: t
   } = e, n = (0, o.default)([h.default], () => h.default.getChannel(t.channelId)), a = (0, c.default)(n, !0);
@@ -60,7 +60,7 @@ function v(e) {
     emojiName: l,
     size: T.CTAEmojiSize.MEDIUM,
     defaultComponent: (0, s.jsx)(r, {
-      className: N.channelIcon
+      className: I.channelIcon
     })
   })
 }
@@ -74,20 +74,20 @@ function L(e) {
   } = e, {
     channelAction: m,
     completed: _
-  } = (0, A.useMemberActionsForChannel)(f, h), T = (0, A.useNextMemberAction)(f, null == m ? void 0 : m.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), x = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = a.useState(!1), [D] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
+  } = (0, A.useMemberActionsForChannel)(f, h), T = (0, A.useNextMemberAction)(f, null == m ? void 0 : m.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), x = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [y, D] = a.useState(!1), [O] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
   a.useEffect(() => {
-    _ ? r.default.timing(D, {
+    _ ? r.default.timing(O, {
       toValue: 0,
       duration: L ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: x ? 0 : 500
-    }).start(() => O(!0)) : r.default.timing(D, {
+    }).start(() => D(!0)) : r.default.timing(O, {
       toValue: 1,
       duration: L ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: 400
     }).start()
-  }, [_, D, x, L]), a.useEffect(() => {
+  }, [_, O, x, L]), a.useEffect(() => {
     _ && y && r.default.timing(j, {
       toValue: 1,
       duration: L ? 0 : 350,
@@ -99,7 +99,7 @@ function L(e) {
     null != T && (0, g.selectNewMemberActionChannel)(f, T.channelId)
   }, [f, T]);
   return null == m || x && !y ? null : (0, s.jsx)("div", {
-    className: i(N.container, C),
+    className: i(I.container, C),
     children: y && null != T ? (0, s.jsx)(r.default.div, {
       style: {
         marginBottom: j.interpolate({
@@ -108,37 +108,37 @@ function L(e) {
         })
       },
       children: (0, s.jsxs)(u.Clickable, {
-        className: i(N.banner, N.clickable),
+        className: i(I.banner, I.clickable),
         onClick: P,
         children: [(0, s.jsx)(v, {
           channelId: T.channelId,
           emojiId: null === (t = T.emoji) || void 0 === t ? void 0 : t.id,
           emojiName: null == T ? void 0 : null === (n = T.emoji) || void 0 === n ? void 0 : n.name
         }), (0, s.jsxs)("div", {
-          className: N.text,
+          className: I.text,
           children: [(0, s.jsx)(u.Text, {
             variant: "text-md/semibold",
             color: "header-primary",
             children: M.default.Messages.MEMBER_ACTIONS_NEXT_STEP.format({
               step: T.title
             })
-          }), (0, s.jsx)(I, {
+          }), (0, s.jsx)(N, {
             action: T
           })]
         }), (0, s.jsx)("div", {
-          className: N.iconCircle,
+          className: I.iconCircle,
           children: (0, s.jsx)(p.default, {
             width: 16,
             height: 16,
             color: R.hex(),
-            className: N.nextIcon
+            className: I.nextIcon
           })
         })]
       })
     }) : (0, s.jsxs)(r.default.div, {
-      className: N.banner,
+      className: I.banner,
       style: {
-        marginBottom: D.interpolate({
+        marginBottom: O.interpolate({
           inputRange: [0, 1],
           outputRange: [-60, 0]
         })
@@ -148,7 +148,7 @@ function L(e) {
         emojiId: null === (l = m.emoji) || void 0 === l ? void 0 : l.id,
         emojiName: null == m ? void 0 : null === (c = m.emoji) || void 0 === c ? void 0 : c.name
       }), (0, s.jsxs)("div", {
-        className: N.text,
+        className: I.text,
         children: [(0, s.jsx)(u.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
@@ -159,7 +159,7 @@ function L(e) {
           children: M.default.Messages.MEMBER_ACTION_CHAT
         })]
       }), _ ? (0, s.jsx)(E.default, {
-        className: N.completed,
+        className: I.completed,
         backgroundColor: R.hex(),
         width: 20,
         height: 20

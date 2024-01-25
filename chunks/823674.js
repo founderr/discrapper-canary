@@ -25,15 +25,15 @@ var s = n("37983"),
   _ = n("300322"),
   T = n("845579"),
   M = n("271938"),
-  N = n("836417"),
-  I = n("26989"),
+  I = n("836417"),
+  N = n("26989"),
   v = n("305961"),
   L = n("88093"),
   x = n("957255"),
   R = n("886074"),
   y = n("36562"),
-  O = n("662255"),
-  D = n("85175"),
+  D = n("662255"),
+  O = n("85175"),
   j = n("83900"),
   P = n("993477"),
   b = n("733160"),
@@ -155,7 +155,7 @@ function er(e) {
     canReact: E,
     canConfigureJoin: g,
     canReply: S,
-    canStartThread: N,
+    canStartThread: I,
     canViewThread: R,
     isExpanded: w,
     showMoreUtilities: W,
@@ -177,13 +177,13 @@ function er(e) {
       isFocused: r
     } = e, {
       author: o
-    } = n, d = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(t.guild_id), [t.guild_id]), f = (0, u.useStateFromStores)([M.default], () => M.default.getId()), h = (0, _.useIsActiveChannelOrUnarchivableThread)(t), E = (0, _.useIsNonModInLockedThread)(t), g = T.RenderReactions.useSetting(), S = T.DeveloperMode.useSetting(), N = (0, u.useStateFromStores)([L.default], () => null == t.guild_id || L.default.canChatInGuild(t.guild_id), [t]), {
+    } = n, d = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(t.guild_id), [t.guild_id]), f = (0, u.useStateFromStores)([M.default], () => M.default.getId()), h = (0, _.useIsActiveChannelOrUnarchivableThread)(t), E = (0, _.useIsNonModInLockedThread)(t), g = T.RenderReactions.useSetting(), S = T.DeveloperMode.useSetting(), I = (0, u.useStateFromStores)([L.default], () => null == t.guild_id || L.default.canChatInGuild(t.guild_id), [t]), {
       canManageMessages: R,
       canAddNewReactions: y
     } = (0, u.useStateFromStoresObject)([x.default], () => ({
-      canAddNewReactions: N && x.default.can(et.Permissions.ADD_REACTIONS, t),
+      canAddNewReactions: I && x.default.can(et.Permissions.ADD_REACTIONS, t),
       canManageMessages: x.default.can(et.Permissions.MANAGE_MESSAGES, t)
-    }), [t, N]), O = (0, A.useCanReplyToMessage)(t, n), D = (0, _.useCanStartPublicThread)(t, n), j = (0, _.useCanViewThreadForMessage)(n), P = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([I.default], () => null != t.guild_id && I.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (R || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
+    }), [t, I]), D = (0, A.useCanReplyToMessage)(t, n), O = (0, _.useCanStartPublicThread)(t, n), j = (0, _.useCanViewThreadForMessage)(n), P = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (R || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
     n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && R);
     let U = (0, K.canReportMessage)(n),
       k = (0, q.default)(n, t, R),
@@ -192,7 +192,7 @@ function er(e) {
         disableReactionCreates: w
       } = (0, X.default)({
         channel: t,
-        canChat: N,
+        canChat: I,
         renderReactions: g,
         canAddNewReactions: y,
         isLurking: P,
@@ -221,8 +221,8 @@ function er(e) {
       canEdit: G,
       canDelete: F,
       canReport: U,
-      canReply: O,
-      canStartThread: D,
+      canReply: D,
+      canStartThread: O,
       canViewThread: j,
       canCopy: z.SUPPORTS_COPY,
       hasDeveloperMode: S,
@@ -258,7 +258,7 @@ function er(e) {
         channel: t,
         message: n,
         label: en.default.Messages.COPY_ID_MESSAGE,
-        icon: O.default,
+        icon: D.default,
         onClick: J.copyId
       }) : null, l && !ed ? ei({
         key: "copy-link",
@@ -272,7 +272,7 @@ function er(e) {
         channel: t,
         message: n,
         label: en.default.Messages.CONFIGURE,
-        icon: D.default,
+        icon: O.default,
         onClick: J.configureJoin
       }) : null, es ? ei({
         key: "mark-reminder",
@@ -324,14 +324,14 @@ function er(e) {
       label: en.default.Messages.EDIT,
       icon: U.default,
       onClick: J.editMessage
-    }) : null, N ? ei({
+    }) : null, I ? ei({
       key: "thread",
       channel: t,
       message: n,
       label: en.default.Messages.CREATE_THREAD,
       icon: B.default,
       onClick: J.createThread
-    }) : null, !N && R ? ei({
+    }) : null, !I && R ? ei({
       key: "view-thread",
       channel: t,
       message: n,
@@ -451,7 +451,7 @@ var ed = a.memo(function(e) {
     channel: t,
     message: n,
     isHeader: a
-  } = e, l = (0, u.useStateFromStores)([N.default], () => N.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
+  } = e, l = (0, u.useStateFromStores)([I.default], () => I.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
     let {
       channel: t,
       message: n

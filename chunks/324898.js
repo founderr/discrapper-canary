@@ -25,8 +25,8 @@ var s = n("37983"),
   _ = n("782340"),
   T = n("676831"),
   M = n("632215"),
-  N = n("741566");
-let I = a.memo(function(e) {
+  I = n("741566");
+let N = a.memo(function(e) {
   let {
     message: t,
     notice: n,
@@ -90,8 +90,8 @@ var v = a.memo(function(e) {
   }, [E, d.content, m, A, p]), (0, s.jsxs)("div", {
     id: (0, C.getMessageContentId)(d),
     className: i(l, M.markup, {
-      [N.messageContent]: !0,
-      [N.markupRtl]: "rtl" === o(d.content),
+      [I.messageContent]: !0,
+      [I.markupRtl]: "rtl" === o(d.content),
       [T.blockedEdit]: null == L ? void 0 : L.isBlockedEdit,
       [T.blockedSend]: !(null == L ? void 0 : L.isBlockedEdit)
     }),
@@ -101,11 +101,11 @@ var v = a.memo(function(e) {
         isEdited: !0,
         isInline: !1,
         children: (0, s.jsxs)("span", {
-          className: N.edited,
+          className: I.edited,
           children: ["(", _.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_POSTFIX, ")"]
         })
       })]
-    }), (0, s.jsx)(I, {
+    }), (0, s.jsx)(N, {
       notice: null !== (n = null == L ? void 0 : L.errorMessage) && void 0 !== n ? n : _.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
       message: d,
       compact: r,

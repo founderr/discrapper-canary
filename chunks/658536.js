@@ -24,7 +24,7 @@ let s = null,
     let f = l.default.getMember(e, t),
       g = d.default.getUser(t);
     if (null == f || null == g || (0, u.isMemberCommunicationDisabled)(f)) return;
-    let p = {
+    let E = {
       ...f,
       guildId: e,
       nick: null !== (n = f.nick) && void 0 !== n ? n : g.username,
@@ -40,7 +40,7 @@ let s = null,
     };
     a.default.dispatch({
       type: "GUILD_MEMBER_UPDATE",
-      ...p
+      ...E
     })
   };
 class c extends i.default {

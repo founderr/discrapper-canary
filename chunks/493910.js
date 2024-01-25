@@ -27,12 +27,12 @@ function M(e) {
   return -e.joinedAtTimestamp
 }
 
-function g() {
+function f() {
   return new a.default(_, M)
 }(n = r || (r = {})).NEW_GUILD_MEMBER = "NEW_GUILD_MEMBER", n.CURRENT_GUILD_MEMBER = "CURRENT_GUILD_MEMBER", n.INCLUDED_IN_SEARCH_RESULTS = "INCLUDED_IN_SEARCH_RESULTS";
 class b {
   reset() {
-    this._membersMap.clear(), this._membersMap = g(), this.resetNewMemberTimestamp()
+    this._membersMap.clear(), this._membersMap = f(), this.resetNewMemberTimestamp()
   }
   resetNewMemberTimestamp() {
     this.newMemberTimestamp = Date.now()
@@ -149,6 +149,6 @@ class b {
     return this._membersMap.version
   }
   constructor(e) {
-    this.newMemberTimestamp = Date.now(), this.guildId = e, this._membersMap = g()
+    this.newMemberTimestamp = Date.now(), this.guildId = e, this._membersMap = f()
   }
 }

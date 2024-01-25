@@ -25,15 +25,15 @@ var s = n("37983"),
   _ = n("339670"),
   T = n("21763"),
   M = n("719926"),
-  N = n("957255"),
-  I = n("660478"),
+  I = n("957255"),
+  N = n("660478"),
   v = n("18494"),
   L = n("697218"),
   x = n("410889"),
   R = n("888400"),
   y = n("718517"),
-  O = n("299039"),
-  D = n("154864"),
+  D = n("299039"),
+  O = n("154864"),
   j = n("383667"),
   P = n("459776"),
   b = n("921450"),
@@ -154,7 +154,7 @@ function Q(e) {
         }, e.key)
       }
       if (null != ea && ea > e.content.timestamp.unix() * y.default.Millis.SECOND) return;
-      let l = N.default.can(K.Permissions.CREATE_INSTANT_INVITE, u);
+      let l = I.default.can(K.Permissions.CREATE_INSTANT_INVITE, u);
       if ((0, j.default)(e.content, l)) return;
       e.type === K.ChannelStreamTypes.MESSAGE && null == em && (em = e);
       let i = e.groupId === (null == em ? void 0 : em.groupId) ? em.content.id : e.groupId,
@@ -165,7 +165,7 @@ function Q(e) {
         message: e.content,
         groupId: i,
         flashKey: e.flashKey,
-        id: (0, D.getMessageDOMId)(u.id, e.content.id),
+        id: (0, O.getMessageDOMId)(u.id, e.content.id),
         isLastItem: t >= ee.length - 1,
         renderContentOnly: ep
       }, e.content.id)
@@ -208,12 +208,12 @@ function Q(e) {
       channel: u
     })), F > 0 && Q && er()) {
     let e, t;
-    let n = I.default.getOldestUnreadTimestamp(u.id),
-      l = 0 !== n ? n : O.default.extractTimestamp(u.id),
+    let n = N.default.getOldestUnreadTimestamp(u.id),
+      l = 0 !== n ? n : D.default.extractTimestamp(u.id),
       r = (0, R.isSameDay)(i(), i(new Date(l)));
-    if (I.default.isEstimated(u.id) ? (e = r ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), ed && (0, d.channelEligibleForSummaries)(u) && eh.includes(Z.ChatOverlays.SUMMARIES)) {
-      let n = I.default.ackMessageId(u.id),
-        i = (0, _.getUnreadTopicsCount)(u.id, I.default.getOldestUnreadMessageId(u.id));
+    if (N.default.isEstimated(u.id) ? (e = r ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), ed && (0, d.channelEligibleForSummaries)(u) && eh.includes(Z.ChatOverlays.SUMMARIES)) {
+      let n = N.default.ackMessageId(u.id),
+        i = (0, _.getUnreadTopicsCount)(u.id, N.default.getOldestUnreadMessageId(u.id));
       if ((0, f.trackWithMetadata)(K.AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED, {
           num_unread_summaries: i,
           num_unread_messages: F,

@@ -15,9 +15,9 @@ var l = n("800648"),
   d = n("714617"),
   E = n.n(d),
   u = n("917351"),
-  s = n.n(u),
-  _ = n("446674"),
-  c = n("913144"),
+  c = n.n(u),
+  s = n("446674"),
+  _ = n("913144"),
   O = n("485328"),
   T = n("605250"),
   A = n("999819"),
@@ -53,7 +53,7 @@ function Y() {
     showKeybindIndicators: e
   } = A.default.getCurrentConfig({
     location: "KeybindsStore"
-  }), t = s.find(P, e => R.action === e.action && e.enabled && e.shortcut.length > 0);
+  }), t = c.find(P, e => R.action === e.action && e.enabled && e.shortcut.length > 0);
   null == t && !__OVERLAY__ && !U && b && e && (K(R), U = !0)
 }
 
@@ -156,7 +156,7 @@ function F(e) {
 
 function x(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    a = s.find(P, t => t.action === e && (!n || t.managed === n));
+    a = c.find(P, t => t.action === e && (!n || t.managed === n));
   return null == a && (K(k({
     action: e,
     enabled: !0,
@@ -167,10 +167,10 @@ function x(e, t) {
 }
 let B = [function() {
   let e = I.default.getShortcuts();
-  return s.each(P, t => {
+  return c.each(P, t => {
     t.action === y.GlobalKeybindActions.PUSH_TO_TALK && !0 === t.managed && (null == t.context || null == e[t.context]) && W(t)
-  }), s.reduce(I.default.getShortcuts(), (e, t, n) => {
-    let a = s.find(P, e => e.action === y.GlobalKeybindActions.PUSH_TO_TALK && !0 === e.managed && e.context === n);
+  }), c.reduce(I.default.getShortcuts(), (e, t, n) => {
+    let a = c.find(P, e => e.action === y.GlobalKeybindActions.PUSH_TO_TALK && !0 === e.managed && e.context === n);
     if (null == a) K(k({
       action: y.GlobalKeybindActions.PUSH_TO_TALK,
       enabled: !0,
@@ -214,7 +214,7 @@ O.default.setGetKeybindList(() => {
   });
   return t && e.push((0, L.toString)(R.shortcut)), e
 });
-class z extends _.default.DeviceSettingsStore {
+class z extends s.default.DeviceSettingsStore {
   initialize(e) {
     !__OVERLAY__ && this.waitFor(I.default, C.default), P = null != e ? e : {}
   }
@@ -230,7 +230,7 @@ class z extends _.default.DeviceSettingsStore {
   hasExactKeybind(e) {
     for (let t in P) {
       let n = P[t];
-      if (s.isEqual(n.shortcut, e)) return !0
+      if (c.isEqual(n.shortcut, e)) return !0
     }
     return !1
   }
@@ -242,7 +242,7 @@ class z extends _.default.DeviceSettingsStore {
       } = A.default.getCurrentConfig({
         location: "KeybindsStore"
       }),
-      l = s.find(P, a => a.action === e && (!t || a.managed) && (!n || a.shortcut.length > 0 && a.enabled));
+      l = c.find(P, a => a.action === e && (!t || a.managed) && (!n || a.shortcut.length > 0 && a.enabled));
     return null != l ? l : a && e === y.GlobalKeybindActions.TOGGLE_MUTE ? R : null
   }
   getOverlayKeybind() {
@@ -258,7 +258,7 @@ z.displayName = "KeybindsStore", z.persistKey = "keybinds", z.migrations = [func
       v: t,
       keybinds: n = e
     } = e;
-  return s.reduce(n, (e, n, a) => {
+  return c.reduce(n, (e, n, a) => {
     let l = parseInt(n.id, 10);
     return isNaN(l) || n.id !== a ? e : ((null == t || t < 2) && ("string" == typeof n.shortcut ? (n.shortcut = n.shortcut.replace("escape", "esc").replace("capslock", "caps lock").replace("numlock", "num lock").replace("pageup", "page up").replace("pagedown", "page down"), n.shortcut = (0, L.toCombo)(n.shortcut)) : n.shortcut = n.shortcut.map(e => e.length < 3 ? [...e, (0, L.getEnv)()] : e)), e[a] = n, e)
   }, {})
@@ -266,7 +266,7 @@ z.displayName = "KeybindsStore", z.persistKey = "keybinds", z.migrations = [func
   let {
     keybinds: t = e
   } = e;
-  return s.reduce(t, (e, t, n) => {
+  return c.reduce(t, (e, t, n) => {
     if ((0, f.isLinux)() && t.action === y.GlobalKeybindActions.SOUNDBOARD_HOLD) {
       let n = t.shortcut.map(e => e[1]),
         a = (0, L.toCombo)("`").map(e => e[1]);
@@ -294,11 +294,11 @@ z.displayName = "KeybindsStore", z.persistKey = "keybinds", z.migrations = [func
     }
   }
   return t
-}, e => s.reduce(e, (e, t, n) => t.action === y.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING && t.managed ? e : {
+}, e => c.reduce(e, (e, t, n) => t.action === y.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING && t.managed ? e : {
   ...e,
   [n]: t
 }, {})];
-var Q = new z(c.default, {
+var Q = new z(_.default, {
   CONNECTION_OPEN: X,
   AUDIO_SET_MODE: X,
   OVERLAY_SET_ENABLED: X,
@@ -325,7 +325,7 @@ var Q = new z(c.default, {
     let {
       enable: t
     } = e;
-    b = t, t ? (O.default.enable(), s.forEach(P, K), Y()) : (O.default.disable(), s.forEach(P, e => V(e.id)), w())
+    b = t, t ? (O.default.enable(), c.forEach(P, K), Y()) : (O.default.disable(), c.forEach(P, e => V(e.id)), w())
   },
   KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: function(e) {
     let {
@@ -333,7 +333,7 @@ var Q = new z(c.default, {
     } = e;
     m = t, g = {}, G = 0;
     let n = Object.values(P).filter(e => M.includes(e.action) && e.managed);
-    n.length !== M.length && X(), s.forEach(P, e => {
+    n.length !== M.length && X(), c.forEach(P, e => {
       G = Math.max(parseInt(e.id, 10), G) + 1;
       try {
         K(e)

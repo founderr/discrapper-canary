@@ -94,8 +94,8 @@ class _ {
         return !1
       }(e, t)) return !1;
     if (u.size > 0) {
-      var g, b;
-      if (g = e, !(0 !== (b = u).size && Array.from(b).every(e => g.roles.includes(e)))) return !1
+      var f, b;
+      if (f = e, !(0 !== (b = u).size && Array.from(b).every(e => f.roles.includes(e)))) return !1
     }
     if (null != o.afterDate && e.joinedAtTimestamp < o.afterDate || null != o.beforeDate && e.joinedAtTimestamp > o.beforeDate || null != m.afterDate && a.default.extractTimestamp(e.userId) < m.afterDate || null != m.beforeDate && a.default.extractTimestamp(e.userId) > m.beforeDate || null != _ && e.sourceInviteCode !== _ || null != M && e.joinSourceType !== M) return !1;
     if (i || r || n || s) return !!(i && e.hasUnusualDmActivity || r && (0, h.isMemberCommunicationDisabled)(e) || n && e.hasUnusualAccountActivity || s && (0, l.hasAutomodQuarantinedProfile)(e)) || !1;

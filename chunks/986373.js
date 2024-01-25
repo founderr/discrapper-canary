@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return _
   },
   useFavoritesGuildSelected: function() {
-    return p
+    return I
   },
   useFavoriteAdded: function() {
-    return I
+    return p
   }
 }), n("424973"), n("222007");
 var i = n("884691"),
@@ -49,12 +49,12 @@ function _() {
   }))
 }
 
-function p() {
+function I() {
   let e = (0, a.useStateFromStores)([s.default], () => s.default.getGuildId());
   return e === f.FAVORITES
 }
 
-function I() {
+function p() {
   let {
     isFavoritesPerk: e
   } = (0, d.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, c.useFavoritesTooltipStore)(), n = i.useCallback(() => {

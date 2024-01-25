@@ -25,15 +25,15 @@ var s = n("37983"),
   _ = n("697218"),
   T = n("987772"),
   M = n("155207"),
-  N = n("917686"),
-  I = n("317134"),
+  I = n("917686"),
+  N = n("317134"),
   v = n("991170"),
   L = n("158998"),
   x = n("938244"),
   R = n("172554"),
   y = n("730859"),
-  O = n("49111"),
-  D = n("782340"),
+  D = n("49111"),
+  O = n("782340"),
   j = n("935107");
 
 function P(e) {
@@ -47,7 +47,7 @@ function P(e) {
       },
       context: t
     });
-    return u.default.has(n, O.Permissions.ADMINISTRATOR) || u.default.has(n, O.Permissions.VIEW_CHANNEL)
+    return u.default.has(n, D.Permissions.ADMINISTRATOR) || u.default.has(n, D.Permissions.VIEW_CHANNEL)
   }).value(), [t, P, H]), U = (0, c.useStateFromStoresArray)([_.default], () => {
     let e = {};
     for (let n of (null != b && (e[b.id] = b), Object.values(t.permissionOverwrites))) {
@@ -58,15 +58,15 @@ function P(e) {
     return o(e).filter(e => {
       var n;
       let s = v.default.can({
-          permission: O.Permissions.ADMINISTRATOR,
+          permission: D.Permissions.ADMINISTRATOR,
           user: e,
           context: t
         }),
         a = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : v.default.NONE,
-        l = u.default.has(a.allow, O.Permissions.VIEW_CHANNEL);
+        l = u.default.has(a.allow, D.Permissions.VIEW_CHANNEL);
       return s || l
     }).value()
-  }, [t, b]), k = A.default.can(O.Permissions.MANAGE_CHANNELS, t) || A.default.can(O.Permissions.MANAGE_ROLES, t);
+  }, [t, b]), k = A.default.can(D.Permissions.MANAGE_CHANNELS, t) || A.default.can(D.Permissions.MANAGE_ROLES, t);
 
   function G() {
     h.default.open(t.id)
@@ -78,11 +78,11 @@ function P(e) {
       locked: !0,
       channelType: t.type
     }), (0, s.jsx)(R.EmptyMessageHeader, {
-      children: D.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
+      children: O.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: r
       })
     }), (0, s.jsx)(R.EmptyMessageBody, {
-      children: D.default.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
+      children: O.default.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
         channelName: r,
         topicHook: () => g.default.parseTopic(t.topic, !0, {
           channelId: t.id
@@ -91,14 +91,14 @@ function P(e) {
     }), k ? (0, s.jsxs)("div", {
       className: j.channelSettingButtons,
       children: [(0, s.jsx)(x.default, {
-        label: D.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
+        label: O.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
         onClick: () => l(!0),
         icon: (0, s.jsx)(M.default, {
           width: 16,
           height: 16
         })
       }), (0, s.jsx)(x.default, {
-        label: D.default.Messages.EDIT_CHANNEL,
+        label: O.default.Messages.EDIT_CHANNEL,
         onClick: G,
         icon: (0, s.jsx)(T.default, {
           width: 16,
@@ -131,14 +131,14 @@ function P(e) {
             tag: "span",
             variant: "text-md/normal",
             color: "text-muted",
-            children: D.default.Messages.ROLE_REQUIRED_SINGLE_USER_MESSAGE
+            children: O.default.Messages.ROLE_REQUIRED_SINGLE_USER_MESSAGE
           })]
         })
       }(), F.map((e, n) => {
         var a, l;
-        let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(O.DEFAULT_ROLE_COLOR),
+        let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(D.DEFAULT_ROLE_COLOR),
           o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
-        return k ? (0, s.jsx)(N.default, {
+        return k ? (0, s.jsx)(I.default, {
           className: i(j.role, {
             [j.last]: n === F.length - 1
           }),
@@ -147,9 +147,9 @@ function P(e) {
           disabled: !k,
           verified: o,
           onClick: () => {
-            E.default.open(t.guild_id, O.GuildSettingsSections.MEMBERS), E.default.selectRole(e.id)
+            E.default.open(t.guild_id, D.GuildSettingsSections.MEMBERS), E.default.selectRole(e.id)
           }
-        }, e.id) : (0, s.jsx)(I.default, {
+        }, e.id) : (0, s.jsx)(N.default, {
           className: i(j.role, {
             [j.last]: n === F.length - 1
           }),

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return N
   }
 }), n("222007"), n("860677");
 var s = n("37983"),
@@ -59,7 +59,7 @@ let M = a.memo(function(e) {
       })
     })
   }),
-  N = a.memo(function(e) {
+  I = a.memo(function(e) {
     let {
       value: t,
       multiplier: n
@@ -121,13 +121,13 @@ let M = a.memo(function(e) {
       })]
     })
   });
-var I = a.memo(function(e) {
+var N = a.memo(function(e) {
   let {
     channelId: t
   } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getId()), l = (0, o.useStateFromStores)([C.default], () => C.default.isTyping(t, n), [t, n]), i = (0, o.useStateFromStores)([E.default], () => E.default.isEnabled()), u = (0, o.useStateFromStores)([g.default], () => g.default.isComboing(n, t), [t, n]), {
     ref: f,
     width: p = 0
-  } = (0, d.default)(), m = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, _] = a.useState(!1), I = (0, A.default)(t), v = i && u && l;
+  } = (0, d.default)(), m = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, _] = a.useState(!1), N = (0, A.default)(t), v = i && u && l;
   a.useEffect(() => {
     v && _(!0);
     let e = setTimeout(() => _(v), 1e3);
@@ -140,17 +140,17 @@ var I = a.memo(function(e) {
       config: r.config.stiff,
       immediate: m
     }),
-    x = a.useMemo(() => null != I ? I : {
+    x = a.useMemo(() => null != N ? N : {
       value: 0,
       multiplier: 1
-    }, [I]),
+    }, [N]),
     R = a.useRef(x);
   a.useEffect(() => {
     (x.multiplier > 1 || x.value > 0) && (R.current = x)
   }, [x]);
   let {
     multiplier: y,
-    value: O
+    value: D
   } = a.useMemo(() => ({
     value: v ? x.value : R.current.value,
     multiplier: v ? x.multiplier : R.current.multiplier
@@ -163,8 +163,8 @@ var I = a.memo(function(e) {
       ref: f,
       className: T.combo,
       style: L,
-      children: (0, s.jsx)(N, {
-        value: O,
+      children: (0, s.jsx)(I, {
+        value: D,
         multiplier: y
       })
     })]

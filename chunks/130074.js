@@ -18,8 +18,8 @@ var l = n("77078"),
   h = n("873254"),
   E = n("44141"),
   _ = n("531674"),
-  p = n("861370"),
-  I = n("972701"),
+  I = n("861370"),
+  p = n("972701"),
   C = n("390008"),
   T = n("936947"),
   S = n("976127"),
@@ -35,8 +35,8 @@ var l = n("77078"),
   y = n("502533"),
   U = n("314838"),
   G = n("151200"),
-  D = n("692986"),
-  P = n("806179"),
+  P = n("692986"),
+  D = n("806179"),
   x = n("816106"),
   b = n("623879"),
   F = n("49111"),
@@ -54,13 +54,13 @@ var l = n("77078"),
       context: V,
       onSelect: B,
       onHeightUpdate: k
-    } = e, Y = (0, P.default)(t.id, null), Z = (0, L.default)(t, V), W = (0, A.default)({
+    } = e, Y = (0, D.default)(t.id, null), Z = (0, L.default)(t, V), W = (0, A.default)({
       user: t,
       context: V
-    }), K = (0, m.default)(t), z = (0, b.default)(t.id), q = (0, O.default)(n.id, r), X = (0, U.default)(t), Q = (0, u.default)(null, t), J = (0, x.default)(t.id), $ = (0, G.default)(t.id, n.id), ee = (0, g.default)(t), et = (0, D.default)(t.id), en = (0, y.default)(t.id, n.id), ei = (0, R.default)(t), el = (0, _.default)(n), ea = (0, p.default)({
+    }), K = (0, m.default)(t), z = (0, b.default)(t.id), q = (0, O.default)(n.id, r), X = (0, U.default)(t), Q = (0, u.default)(null, t), J = (0, x.default)(t.id), $ = (0, G.default)(t.id, n.id), ee = (0, g.default)(t), et = (0, P.default)(t.id), en = (0, y.default)(t.id, n.id), ei = (0, R.default)(t), el = (0, _.default)(n), ea = (0, I.default)({
       id: t.id,
       label: w.default.Messages.COPY_ID_USER
-    }), er = (0, p.default)({
+    }), er = (0, I.default)({
       id: n.id,
       label: w.default.Messages.COPY_ID_CHANNEL
     }), es = (0, E.default)(n), eo = (0, f.default)(t.id), eu = (0, c.default)(n.id), ed = (0, v.default)(t), ec = (0, h.default)(t.id), ef = (0, M.default)({
@@ -69,7 +69,7 @@ var l = n("77078"),
       channel: n,
       guildId: void 0,
       onHeightUpdate: k
-    }), eh = (0, I.useAddToFavoritesItem)(n), eE = (0, I.useRemoveFromFavoritesItem)(n), e_ = (0, C.default)(n), ep = (0, T.default)(n), eI = (0, S.useMessageRequestItem)(n), eC = (0, N.useSafetyWarningsItem)(n), eT = n.isManaged(), eS = t.isNonUserBot();
+    }), eh = (0, p.useAddToFavoritesItem)(n), eE = (0, p.useRemoveFromFavoritesItem)(n), e_ = (0, C.default)(n), eI = (0, T.default)(n), ep = (0, S.useMessageRequestItem)(n), eC = (0, N.useSafetyWarningsItem)(n), eT = n.isManaged(), eS = t.isNonUserBot();
     return (0, i.jsxs)(l.Menu, {
       navId: "user-context",
       onClose: a.closeContextMenu,
@@ -78,11 +78,11 @@ var l = n("77078"),
       children: [(0, i.jsx)(l.MenuGroup, {
         children: !eS && es
       }), (0, i.jsx)(l.MenuGroup, {
-        children: eI
+        children: ep
       }), (0, i.jsx)(l.MenuGroup, {
         children: eC
       }), (0, i.jsxs)(l.MenuGroup, {
-        children: [eh, e_, ep]
+        children: [eh, e_, eI]
       }), (0, i.jsx)(l.MenuGroup, {
         children: !eS && ed
       }), (0, i.jsxs)(l.MenuGroup, {
