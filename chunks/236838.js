@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return m
   }
 });
 var s = n("37983");
 n("884691");
 var a = n("907002"),
-  l = n("65597"),
-  r = n("77078"),
+  r = n("65597"),
+  l = n("77078"),
   i = n("206230"),
   u = n("812204"),
   o = n("685665"),
@@ -18,13 +18,13 @@ var a = n("907002"),
   f = n("782340"),
   I = n("526380"),
   E = n("34125"),
-  S = e => {
+  m = e => {
     let {
       onClose: t
     } = e, {
       analyticsLocations: n
-    } = (0, o.default)(), S = (0, l.default)([i.default], () => i.default.useReducedMotion), m = (0, a.useSpring)({
-      immediate: S,
+    } = (0, o.default)(), m = (0, r.default)([i.default], () => i.default.useReducedMotion), S = (0, a.useSpring)({
+      immediate: m,
       delay: 800,
       from: {
         transform: "translate(0, -100%)"
@@ -40,17 +40,17 @@ var a = n("907002"),
       })
     };
     return (0, s.jsxs)(a.animated.div, {
-      style: m,
+      style: S,
       className: I.container,
       children: [(0, s.jsx)("img", {
         className: I.image,
         src: E,
         alt: ""
-      }), (0, s.jsx)(r.Text, {
+      }), (0, s.jsx)(l.Text, {
         variant: "text-sm/normal",
         color: "header-primary",
         children: f.default.Messages.COLLECTIBLES_GIFT_CODE_MODAL_UPSELL.format({
-          checkItOut: e => (0, s.jsx)(r.Clickable, {
+          checkItOut: e => (0, s.jsx)(l.Clickable, {
             className: I.link,
             onClick: P,
             children: e

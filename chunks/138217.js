@@ -45,7 +45,7 @@ function j(e) {
   return null != t ? t : (0, u.createMessageRecord)(e)
 }
 
-function D(e) {
+function F(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
   if ((0, c.default)(e)) return null;
@@ -71,7 +71,7 @@ function D(e) {
   }) && (y = !1), e) : null
 }
 
-function F(e) {
+function D(e) {
   if (null == M[e]) return !1;
   delete M[e], A = l.filter(A, t => {
     let {
@@ -85,7 +85,7 @@ function U(e) {
   let {
     id: t
   } = e;
-  return F(t)
+  return D(t)
 }
 
 function k(e) {
@@ -98,7 +98,7 @@ function k(e) {
   M = {};
   let s = [];
   a && A.forEach(e => {
-    let t = D(e);
+    let t = F(e);
     null != t && (s.push(t), M[t.id] = !0)
   }), 0 === (A = s).length && (L = !1)
 }
@@ -117,13 +117,13 @@ function G() {
   A = A.filter(e => !g.default.isBlocked(e.author.id))
 }
 
-function B(e) {
+function H(e) {
   let {
     channel: t
   } = e;
   A = l.filter(A, e => e.channel_id !== t.id || (delete M[e.id], !1))
 }
-class H extends s.default.Store {
+class B extends s.default.Store {
   initialize() {
     this.waitFor(T.default, m.default, p.default, S.default)
   }
@@ -161,8 +161,8 @@ class H extends s.default.Store {
     return y
   }
 }
-H.displayName = "RecentMentionsStore";
-var V = new H(o.default, {
+B.displayName = "RecentMentionsStore";
+var V = new B(o.default, {
   LOAD_RECENT_MENTIONS: function(e) {
     let {
       guildId: t
@@ -221,7 +221,7 @@ var V = new H(o.default, {
         suppressRoles: !1,
         suppressEveryone: !1
       })) return !1;
-    let l = D(n, t);
+    let l = F(n, t);
     if (null == l) return !1;
     (A = A.slice()).unshift(l), M[l.id] = !0
   },
@@ -244,12 +244,12 @@ var V = new H(o.default, {
     let {
       ids: t
     } = e;
-    l.forEach(t, F)
+    l.forEach(t, D)
   },
   USER_SETTINGS_PROTO_UPDATE: w,
   I18N_LOAD_SUCCESS: w,
-  CHANNEL_DELETE: B,
-  THREAD_DELETE: B,
+  CHANNEL_DELETE: H,
+  THREAD_DELETE: H,
   RELATIONSHIP_ADD: G,
   RELATIONSHIP_REMOVE: G,
   MENTION_MODAL_OPEN: function() {

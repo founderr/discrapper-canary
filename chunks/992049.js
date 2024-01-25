@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   PremiumPaymentConfirmStep: function() {
-    return m
+    return S
   }
 });
 var s = n("37983"),
   a = n("884691"),
-  l = n("627445"),
-  r = n.n(l),
+  r = n("627445"),
+  l = n.n(r),
   i = n("837148"),
   u = n("491523"),
   o = n("775155"),
@@ -17,12 +17,12 @@ var s = n("37983"),
   f = n("642906"),
   I = n("236838"),
   E = n("650484"),
-  S = n("367767");
+  m = n("367767");
 
-function m(e) {
+function S(e) {
   var t, n;
-  let l, {
-      handleClose: m,
+  let r, {
+      handleClose: S,
       planGroup: P,
       onSubscriptionConfirmation: p,
       renderPurchaseConfirmation: T,
@@ -47,14 +47,14 @@ function m(e) {
       isSendingMessage: j,
       sendGiftMessage: v
     } = (0, _.useGiftContext)();
-  r(null != A, "Expected plan to selected"), r(null != g, "Expected selectedSkuId"), r(null != O, "Step should be set");
+  l(null != A, "Expected plan to selected"), l(null != g, "Expected selectedSkuId"), l(null != O, "Step should be set");
   let {
     successUpsellEnabled: D
   } = (0, i.default)({
     location: "PremiumPaymentConfirmStep"
   }), G = a.useCallback(() => {
-    m(), null == p || p()
-  }, [m, p]);
+    S(), null == p || p()
+  }, [S, p]);
   return a.useEffect(() => {
     if (!y || null == b || null == U || k || j || (0, d.shouldShowCustomGiftExperience)(b, !0, "PremiumPaymentConfirmStep")) return;
     let e = u.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
@@ -63,7 +63,7 @@ function m(e) {
     e && v({
       onSubscriptionConfirmation: p
     })
-  }, [v, y, b, U, k, j, p]), l = null != T ? T(A, G, x) : y ? (0, s.jsx)(o.PremiumSubscriptionGiftPurchaseConfirmation, {
+  }, [v, y, b, U, k, j, p]), r = null != T ? T(A, G, x) : y ? (0, s.jsx)(o.PremiumSubscriptionGiftPurchaseConfirmation, {
     planId: A.id,
     onClose: G
   }) : h.current === A.id ? (0, s.jsx)(o.default, {
@@ -80,7 +80,7 @@ function m(e) {
     paymentSourceType: null === (n = L[null != R ? R : ""]) || void 0 === n ? void 0 : n.type
   }), (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)(E.PaymentPortalBody, {
-      children: [(0, s.jsx)(S.default, {}), l]
+      children: [(0, s.jsx)(m.default, {}), r]
     }), D && y && (0, s.jsx)(I.default, {
       onClose: G
     })]

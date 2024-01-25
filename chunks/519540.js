@@ -35,8 +35,8 @@ var a = n("37983"),
   b = n("11539"),
   y = n("672571"),
   j = n("805614"),
-  D = n("64318"),
-  F = n("49111"),
+  F = n("64318"),
+  D = n("49111"),
   U = n("782340"),
   k = n("533370"),
   P = n("228146");
@@ -58,7 +58,7 @@ function G(e) {
   let [i, r] = l.useState(!1), o = l.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), u = i ? s : o, d = u.filter(e => !(0, _.savedMessageHasMetadata)(e));
   return (0, T.useMessageRemindersLoader)(d), (0, a.jsxs)("div", {
     className: k.container,
-    children: [(0, a.jsx)(D.default, {
+    children: [(0, a.jsx)(F.default, {
       tab: f.InboxTab.TODOS,
       setTab: t,
       closePopout: n
@@ -79,9 +79,9 @@ function G(e) {
           })
         })
       })]
-    }), 0 === u.length ? (0, a.jsx)(H, {}) : null, (0, a.jsx)(h.AdvancedScrollerThin, {
+    }), 0 === u.length ? (0, a.jsx)(B, {}) : null, (0, a.jsx)(h.AdvancedScrollerThin, {
       children: u.map(e => (function(e) {
-        return [(0, a.jsx)(B, {
+        return [(0, a.jsx)(H, {
           messageId: e.messageId
         }, e.messageId)]
       })(e))
@@ -89,7 +89,7 @@ function G(e) {
   })
 }
 
-function B(e) {
+function H(e) {
   let t, {
       messageId: l
     } = e,
@@ -104,12 +104,12 @@ function B(e) {
     T = v.default.getChannel(_.id),
     b = (0, S.default)(T, !0),
     j = null != b ? b : _.name,
-    D = (0, c.useStateFromStores)([x.default], () => x.default.getGuild(null == _ ? void 0 : _.guild_id)),
+    F = (0, c.useStateFromStores)([x.default], () => x.default.getGuild(null == _ ? void 0 : _.guild_id)),
     G = null != _ ? (0, p.getChannelIconURL)(_) : null,
-    B = null;
-  return null != s.dueAt && (s.dueAt > new Date ? (t = "text-muted", B = U.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
+    H = null;
+  return null != s.dueAt && (s.dueAt > new Date ? (t = "text-muted", H = U.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
     duration: d.duration(s.dueAt.getTime() - Date.now(), "millisecond").humanize()
-  })) : (t = "text-danger", B = U.default.Messages.MESSAGE_REMINDERS_OVERDUE.format({
+  })) : (t = "text-danger", H = U.default.Messages.MESSAGE_REMINDERS_OVERDUE.format({
     duration: d.duration(Date.now() - s.dueAt.getTime(), "millisecond").humanize()
   }))), (0, a.jsxs)("div", {
     className: P.container,
@@ -118,9 +118,9 @@ function B(e) {
       children: [(0, a.jsxs)("div", {
         children: [(0, a.jsxs)("div", {
           className: k.messageInfo,
-          children: [null != D ? (0, a.jsx)(L.default, {
+          children: [null != F ? (0, a.jsx)(L.default, {
             className: k.guildIcon,
-            guild: D,
+            guild: F,
             size: L.default.Sizes.SMALL,
             active: !0
           }) : (0, a.jsx)(h.Avatar, {
@@ -142,13 +142,13 @@ function B(e) {
             width: 12,
             height: 12
           }), s.notes]
-        }) : null, null != B ? (0, a.jsx)(h.Text, {
+        }) : null, null != H ? (0, a.jsx)(h.Text, {
           variant: "text-sm/medium",
           color: t,
           style: {
             marginTop: 4
           },
-          children: B
+          children: H
         }) : null]
       }), (0, a.jsxs)("div", {
         className: k.reminderActions,
@@ -210,7 +210,7 @@ function B(e) {
           })
         }) : null, (0, a.jsx)(h.Button, {
           onClick: () => {
-            (0, A.transitionTo)(F.Routes.CHANNEL(null == _ ? void 0 : _.getGuildId(), s.channelId, s.messageId))
+            (0, A.transitionTo)(D.Routes.CHANNEL(null == _ ? void 0 : _.getGuildId(), s.channelId, s.messageId))
           },
           size: h.Button.Sizes.MIN,
           color: h.Button.Colors.TRANSPARENT,
@@ -225,7 +225,7 @@ function B(e) {
   })
 }
 
-function H() {
+function B() {
   let e = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders().length > 0);
   return e ? null : (0, a.jsx)(j.default, {
     Icon: b.default,

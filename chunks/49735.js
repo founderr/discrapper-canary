@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983");
 n("884691");
 var a = n("77078"),
-  l = n("400307"),
-  r = n("646718"),
+  r = n("400307"),
+  l = n("646718"),
   i = n("414539");
 
 function u(e) {
@@ -21,7 +21,7 @@ function u(e) {
     style: {
       cursor: "pointer"
     },
-    children: (0, s.jsx)(l.Tier2Card, {
+    children: (0, s.jsx)(r.Tier2Card, {
       className: i.tier2MarketingCard,
       ctaButton: null,
       showWumpus: !0,
@@ -42,7 +42,7 @@ function o(e) {
     style: {
       cursor: "pointer"
     },
-    children: (0, s.jsx)(l.Tier0Card, {
+    children: (0, s.jsx)(r.Tier0Card, {
       className: i.tier0MarketingCard,
       ctaButton: null,
       showWumpus: !0,
@@ -58,10 +58,10 @@ var d = function(e) {
   } = e;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(u, {
-      onClick: () => t(r.PremiumSubscriptionSKUs.TIER_2),
+      onClick: () => t(l.PremiumSubscriptionSKUs.TIER_2),
       isGift: n
     }), (0, s.jsx)(o, {
-      onClick: () => t(r.PremiumSubscriptionSKUs.TIER_0),
+      onClick: () => t(l.PremiumSubscriptionSKUs.TIER_0),
       isGift: n
     })]
   })

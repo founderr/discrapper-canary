@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return r
   }
 });
 var s = n("862205");
@@ -20,4 +20,4 @@ let a = (0, s.createExperiment)({
     }
   }]
 });
-var l = a
+var r = a
