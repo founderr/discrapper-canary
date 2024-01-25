@@ -15,8 +15,8 @@ var s = a("414456"),
   c = a("795010"),
   u = a("170213"),
   E = a("782340"),
-  A = a("669223"),
-  _ = a("434848");
+  _ = a("669223"),
+  A = a("434848");
 
 function S(e) {
   let {
@@ -27,34 +27,34 @@ function S(e) {
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(o.ModalHeader, {
       direction: d.default.Direction.VERTICAL,
-      className: _.header,
+      className: A.header,
       separator: !1,
       children: [(0, l.jsx)("div", {
-        className: A.iconContainer,
+        className: _.iconContainer,
         children: (0, l.jsx)(i.CheckmarkLargeIcon, {
           color: o.tokens.colors.INTERACTIVE_ACTIVE,
-          className: A.icon
+          className: _.icon
         })
       }), (0, l.jsx)(o.Heading, {
-        className: _.title,
+        className: A.title,
         variant: "heading-xl/semibold",
         children: E.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_HEADER
       }), (0, l.jsx)(o.Heading, {
-        className: _.subtitle,
+        className: A.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
         children: E.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_SUBHEADER
       }), null != s && (0, l.jsx)(o.ModalCloseButton, {
-        className: _.closeButton,
+        className: A.closeButton,
         onClick: s
       })]
     }), (0, l.jsxs)(o.ModalContent, {
-      className: n(_.templatesList, A.modalContent, t),
+      className: n(_.modalContent, t),
       paddingFix: !1,
       children: [(0, l.jsx)(o.Heading, {
         variant: "heading-md/bold",
         color: "header-primary",
-        className: A.actionsHeader,
+        className: _.actionsHeader,
         children: E.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_ACTIONS_HEADER
       }), (0, l.jsx)(c.default, {
         text: E.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_GUIDELINES_LINK,
