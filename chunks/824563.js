@@ -195,6 +195,9 @@ class P extends o.default.Store {
     let t = p[e];
     return null != t && t[_.ClientTypes.MOBILE] === _.StatusTypes.ONLINE && t[_.ClientTypes.DESKTOP] !== _.StatusTypes.ONLINE
   }
+  getClientStatus(e) {
+    return p[e]
+  }
   getState() {
     return {
       presencesForGuilds: g,
