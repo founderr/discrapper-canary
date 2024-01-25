@@ -234,7 +234,8 @@ i = class e extends l.default {
   }
   setClipsKeyFrameInterval(e) {
     this.context === p.MediaEngineContextTypes.STREAM && (this.clipsKeyFrameInterval = e, this.conn.setTransportOptions({
-      keyframeInterval: this.getKeyFrameInterval()
+      keyframeInterval: this.getKeyFrameInterval(),
+      alwaysSendVideo: this.keyframeInterval > 0
     }))
   }
   setViewerSideClip(e) {
@@ -369,7 +370,8 @@ i = class e extends l.default {
   }
   setKeyframeInterval(e) {
     this.keyframeInterval = e, this.conn.setTransportOptions({
-      keyframeInterval: this.getKeyFrameInterval()
+      keyframeInterval: this.getKeyFrameInterval(),
+      alwaysSendVideo: this.keyframeInterval > 0
     })
   }
   setVideoQualityMeasurement(e) {
