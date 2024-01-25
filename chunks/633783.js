@@ -14698,6 +14698,8 @@ i.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "Ti piace questa decorazione avatar? $[Riscattala con l'abbonamento a Nitro](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "Ti piace questo effetto del profilo? $[Riscattalo con l'abbonamento a Nitro](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "Ti piace questa personalizzazione del profilo? $[Acquistala nel negozio](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "NOVIT\xc0 nel negozio! Cyberpunk",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "Il futuro \xe8 arrivato e promette bene.",
   COLLECTIBLES_BANNER_TITLE_2024: "Rinnova lo stile del tuo profilo",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "Dai un'occhiata agli ultimi effetti del profilo e decorazioni avatar e colleziona i tuoi stili preferiti.",
   INVENTORY_ADD_PACK: "Aggiungi pacchetto",

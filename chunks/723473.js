@@ -14748,6 +14748,8 @@ _.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "이 아바타 장식이 마음에 드시나요? $[Nitro 구독으로 수집하세요.](openShop)",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "이 프로필 효과가 마음에 드시나요? $[Nitro 구독으로 수집하세요.](openShop)",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "이 프로필 맞춤 설정이 마음에 드시나요? $[상점에서 구입하세요.](openShop)",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "신규 사이버펑크 상품이 상점에 입고됐어요",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "멋진 미래가 이미 우리 눈앞에.",
   COLLECTIBLES_BANNER_TITLE_2024: "프로필을 산뜻하게 꾸며보세요",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "최신 아바타 장식과 프로필 효과를 확인하고 최애 스타일을 수집하세요.",
   INVENTORY_ADD_PACK: "팩 추가",

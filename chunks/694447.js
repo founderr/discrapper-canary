@@ -14748,6 +14748,8 @@ a.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "Bu avatar dekorasyonu hoşuna mı gitti? $[Nitro aboneliğinle al](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "Bu profil efekti hoşuna mı gitti? $[Nitro aboneliğinle al](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "Bu profil \xf6zelleştirmesi hoşuna mı gitti? $[Hemen mağazadan al](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "Mağazaya YENİ geldi! Cyberpunk",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "Gelecek artık burada ve olduk\xe7a g\xfczel g\xf6r\xfcn\xfcyor.",
   COLLECTIBLES_BANNER_TITLE_2024: "Profiline taze bir g\xf6r\xfcn\xfcm ver",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "Son \xe7ıkan avatar dekorasyonlarına ve profil efektlerine g\xf6z at, en sevdiğin tarzları topla.",
   INVENTORY_ADD_PACK: "Paketi Ekle",

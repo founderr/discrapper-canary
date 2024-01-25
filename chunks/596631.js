@@ -14748,6 +14748,8 @@ _.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "Понравилось украшение аватара? $[Забирайте! Нужна лишь подписка Nitro](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "Нравится этот эффект профиля? $[Забирайте себе такой же с подпиской Nitro](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "Понравилась персонализация профиля? $[Заходите в магазин и забирайте себе такую же](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "Новинка магазина: \xabКиберпанк\xbb!",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "Будущее уже наступило, и оно выглядит прекрасно.",
   COLLECTIBLES_BANNER_TITLE_2024: "Смените образ вашего профиля",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "Оцените новые украшения для аватара и эффекты профиля и выберите полюбившийся вам стиль!",
   INVENTORY_ADD_PACK: "Добавить набор",

@@ -14745,6 +14745,8 @@ _.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "L\xedb\xed se ti tento vzhled avataru? $[Z\xedskej ho se sv\xfdm předplatn\xfdm Nitro](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "L\xedb\xed se ti tento efekt profilu? $[Z\xedskej ho se sv\xfdm předplatn\xfdm Nitro](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "L\xedb\xed se ti toto přizpůsoben\xed profilu? $[Pořiď si sv\xe9 vlastn\xed v\xa0obchodě](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "NOVINKA v našem Obchodu! Cyberpunk",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "Budoucnost přich\xe1z\xed a vypad\xe1 fakt dobře.",
   COLLECTIBLES_BANNER_TITLE_2024: "Dopřej sv\xe9mu profilu trochu svěžesti",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "Omrkni nejnovějš\xed vzhledy avataru a\xa0efekty profilu a\xa0pořiď si sv\xe9 obl\xedben\xe9 styly.",
   INVENTORY_ADD_PACK: "Přidat bal\xedček",

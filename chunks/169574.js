@@ -14748,6 +14748,8 @@ e.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "\xceți place această decorațiune pentru avatar? $[Revendic-o pe baza abonamentului Nitro](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "\xceți place acest efect pentru profil? $[\xcel poți revendica cu abonamentul Nitro](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "\xceți place această personalizare a profilului? $[O poți cumpăra din Magazin](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "NOU \xeen magazin! Cyberpunk",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "Viitorul a sosit și arată excelent.",
   COLLECTIBLES_BANNER_TITLE_2024: "Dă-i o nouă \xeenfățișare profilului tău",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "Descoperă ultimele decorațiuni pentru avatar și efecte pentru profil și colecționează-ți stilurile favorite.",
   INVENTORY_ADD_PACK: "Adaugă pachet",

@@ -14744,6 +14744,8 @@ e.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "Kan du lide denne avatar-dekoration? $[F\xe5 din egen med dit Nitro-abonnement](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "Kan du lide denne profileffekt? $[Hent den med dit Nitro-abonnement](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "Kan du lide denne profiltilpasning? $[F\xe5 din egen i butikken](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "NYHED i shoppen! Cyberpunk",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "Fremtiden er her, og den ser lovende ud.",
   COLLECTIBLES_BANNER_TITLE_2024: "Giv din profil et frisk look",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "Se de seneste avatar-dekorationer og profileffekter, og hent din favoritstil.",
   INVENTORY_ADD_PACK: "Tilf\xf8j pakke",

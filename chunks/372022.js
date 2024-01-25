@@ -14748,6 +14748,8 @@ i.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "Patinka šis pseudoportreto papuošimas? $[Gauk su savo Nitro prenumerata](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "Patinka šis profilio efektas? $[Gauk su savo Nitro prenumerata](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "Patinka šis profilio tinkinimo būdas? $[Čiupk tokį sau parduotuvėje](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "NAUJIENA parduotuvėje! Cyberpunk",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "Ateitis jau čia. Ir atrodo puikiai.",
   COLLECTIBLES_BANNER_TITLE_2024: "Atšviežink savo profilio išvaizdą",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "Peržvelk naujausius pseudoportreto papuošimus ir profilio efektus, ir susirink savo mėgstamiausius stilius.",
   INVENTORY_ADD_PACK: "Pridėti paketą",

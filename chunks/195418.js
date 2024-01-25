@@ -14745,6 +14745,8 @@ _.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "Σου αρέσει αυτή η διακόσμηση άβαταρ; $[Απόκτησέ την με τη Nitro συνδρομή σου](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "Σου αρέσει αυτό το εφέ προφίλ; $[Απόκτησέ το με τη Nitro συνδρομή σου](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "Σου αρέσει αυτή η προσαρμογή προφίλ; $[Απόκτησε τη δική σου από το Κατάστημα](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "ΝΕΟ στο Κατάστημα! Cyberpunk",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "Το μέλλον είναι εδώ, και φαίνεται καλό.",
   COLLECTIBLES_BANNER_TITLE_2024: "Δώσε στο προφίλ σου νέο λουκ",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "Δες τις τελευταίες διακοσμήσεις άβαταρ και τα τελευταία εφέ προφίλ και απόκτησε τα αγαπημένα σου στυλ.",
   INVENTORY_ADD_PACK: "Προσθήκη πακέτου",

@@ -14747,6 +14747,8 @@ _.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "Th\xedch trang tr\xed ảnh đại diện n\xe0y? $[H\xe3y nhận c\xf9ng với g\xf3i đăng k\xfd Nitro của bạn nh\xe9](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "Th\xedch hiệu ứng hồ sơ n\xe0y? $[H\xe3y nhận c\xf9ng với g\xf3i đăng k\xfd Nitro của bạn nh\xe9](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "Th\xedch t\xf9y chỉnh hồ sơ n\xe0y? $[H\xe3y chọn một vật phẩm cho ch\xednh m\xecnh từ Cửa h\xe0ng](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "MỚI trong Cửa H\xe0ng! Cyberpunk",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "Kh\xe1m ph\xe1 tương lai, tr\xf4ng thật tuyệt",
   COLLECTIBLES_BANNER_TITLE_2024: "Đem tới diện mạo tươi mới cho hồ sơ của bạn",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "H\xe3y tới xem những trang tr\xed ảnh đại diện v\xe0 hiệu ứng hồ sơ mới nhất v\xe0 thu thập phong c\xe1ch y\xeau th\xedch của bạn.",
   INVENTORY_ADD_PACK: "Th\xeam G\xf3i",

@@ -14748,6 +14748,8 @@ _.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "喜欢这款头像装饰吗？$[订阅 Nitro 即可领取](openShop)。",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "喜欢这款个人资料特效吗？$[用您的 Nitro 订阅去领取吧](openShop)。",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "喜欢这种个性化个人资料吗？$[去商店给自己买一份吧](openShop)。",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "商店上新！Cyberpunk",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "未来就在眼前，而且看起来超棒。",
   COLLECTIBLES_BANNER_TITLE_2024: "为您的个人资料增添新风采",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "查看最新的头像装饰和个人资料特效，并收集您最喜欢的风格。",
   INVENTORY_ADD_PACK: "添加表情包",

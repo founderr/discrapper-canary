@@ -14748,6 +14748,8 @@ t.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "Pid\xe4tk\xf6 t\xe4st\xe4 avatar-koristeesta? $[Lunasta se Nitro-tilauksella](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "Pid\xe4tk\xf6 t\xe4st\xe4 profiilitehosteesta? $[Lunasta se Nitro-tilauksella](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "Pid\xe4tk\xf6 t\xe4st\xe4 profiilimukautuksesta? $[Hanki se itsellesi kaupasta](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "UUTTA kaupassa! – Cyberpunk",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "Tulevaisuus on t\xe4\xe4ll\xe4 ja se n\xe4ytt\xe4\xe4 hyv\xe4lt\xe4.",
   COLLECTIBLES_BANNER_TITLE_2024: "Anna profiilillesi tuore ulkoasu",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "Tutustu uusimpiin avatar-koristeisiin ja profiilitehosteisiin, ja ker\xe4\xe4 suosikkityylisi talteen.",
   INVENTORY_ADD_PACK: "Lis\xe4\xe4 pakkaus",

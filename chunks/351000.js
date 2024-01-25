@@ -14748,6 +14748,8 @@ e.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "Tetszik ez a profilk\xe9p-dekor\xe1ci\xf3? $[Nitro-előfizet\xe9ssel lecsaphatsz r\xe1](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "Tetszik ez a profileffektus? $[A Nitro-előfizet\xe9seddel a ti\xe9d lehet](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "Tetszene ez a szem\xe9lyre szab\xe1si lehetős\xe9g a profilodhoz? $[Beszerezheted a saj\xe1todat a Boltb\xf3l](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "\xdaJDONS\xc1G a Boltban! Cyberpunk",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "A j\xf6vő k\xfcsz\xf6b\xe9n \xe1llunk, \xe9s remek\xfcl fest.",
   COLLECTIBLES_BANNER_TITLE_2024: "Friss megjelen\xe9st k\xf6lcs\xf6n\xf6zhetsz a profilodnak",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "Vedd szem\xfcgyre a leg\xfajabb profilk\xe9p-dekor\xe1ci\xf3kat \xe9s -effektusokat, \xe9s gyűjtsd be a kedvenc st\xedlusaidat!",
   INVENTORY_ADD_PACK: "Csomag hozz\xe1ad\xe1sa",

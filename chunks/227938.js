@@ -14748,6 +14748,8 @@ _.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "このアバターデコレーションが気に入った？$[Nitroサブスクリプションで獲得できるぞ](openShop)！",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "このプロフィールエフェクトが気に入った？$[Nitroサブスクリプションで獲得できるぞ](openShop)！",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "このプロフィールカスタマイズが気に入った？$[さっそくショップでゲットだ](openShop)！",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "ショップに「サイバーパンク」が新登場!",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "未来の世界が到来。超クール！",
   COLLECTIBLES_BANNER_TITLE_2024: "プロフィールを斬新な外観によう",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "最新のアバターの装飾やプロフィール効果をチェックして、お気に入りのスタイルを集めよう。",
   INVENTORY_ADD_PACK: "パックを追加",

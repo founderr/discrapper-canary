@@ -14748,6 +14748,8 @@ a.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "Sviđa ti se ovaj ukras avatara? $[Uzmi ga uz svoju pretplatu na Nitro](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "Sviđa ti se ovaj efekt profila? $[Uzmi ga uz pretplatu na Nitro](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "Sviđa ti se ova prilagodba profila? $[Nabavi svoj primjerak u trgovini](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "NOVO u trgovini! Cyberpunk",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "Budućnost je stigla i možemo vam reći da je zgodna.",
   COLLECTIBLES_BANNER_TITLE_2024: "Osvježi si profil",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "Pogledaj što je najnovije od ponude dekoracija i efekata za avatare, odnosno profile, i sakupljaj svoje omiljene stilove.",
   INVENTORY_ADD_PACK: "Dodaj paket",

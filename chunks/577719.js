@@ -14748,6 +14748,8 @@ _.exports = {
   STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO: "क्या आपको ये अवतार डेकोरेशन पसंद है? $[अपने Nitro सब्सक्रिप्शन के साथ इसे क्लेम करें](openShop).",
   STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO: "क्या आपको ये प्रोफ़ाइल इफ़ेक्ट पसंद है? $[अपने Nitro सब्सक्रिप्शन के साथ इसे क्लेम करें](openShop).",
   COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO: "क्या आपको ये प्रोफ़ाइल कस्टमाइज़ेशन पसंद है? $[शॉप से अपना पाएं](openShop).",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "शॉप में कुछ नया है! साइबरपंक",
+  COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION: "फ़्यूचर यहीं है, और ये अच्छा दिख रहा है.",
   COLLECTIBLES_BANNER_TITLE_2024: "अपनी प्रोफ़ाइल को एक नया लुक दें",
   COLLECTIBLES_BANNER_DESCRIPTION_2024: "नए अवतार डेकोरेशन और प्रोफ़ाइल इफ़ेक्टस देखें और अपने पसंदीदा स्टाइल इकट्ठा करें.",
   INVENTORY_ADD_PACK: "पैक ऐड करें",
