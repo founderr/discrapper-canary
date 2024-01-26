@@ -201,7 +201,7 @@ async function $(e, t, n) {
           },
           userSettings: y
         })
-      }), a.default.time("\uD83D\uDCBE", "socket.processFirstQueuedDispatch()", () => c.processFirstQueuedDispatch(new Set(["INITIAL_GUILD"])))
+      }), a.default.time("\uD83D\uDCBE", "socket.processFirstQueuedDispatch()", () => c.dispatcher.processFirstQueuedDispatch(new Set(["INITIAL_GUILD"])))
     }), G.verbose("early_cache_summary: (\n        ok: true\n        meta:\n          auth_user_id: ".concat(t, "\n          selected_guild: ").concat(f, "\n          selected_channel: ").concat(h, "\n          navigation_state: ").concat(JSON.stringify(n), "\n          database: ").concat(null != e, "\n            name: ").concat(null == e ? void 0 : e.name, "\n        data:\n          database:\n            private_channels: ").concat("private-channels" === n.page ? D.length : "skipped", "\n            channel_history:\n              guild: ").concat(M.guildId, "\n              channel: ").concat(M.channelId, "\n              messages: ").concat(M.messages.length, "\n                members: ").concat(M.members.length, "\n                users: ").concat(M.users.length, "\n            initial_guild:\n              id: ").concat(null == E ? void 0 : E.id, "\n              channels: ").concat(null === (o = P.channels) || void 0 === o ? void 0 : o.length, "\n            user_settings: ").concat(Object.keys(y).length, "\n          legacy:\n            guilds: ").concat(L.guilds.length, " (").concat(L.guilds.map(e => e.id).join(", "), ")\n            channels: ").concat(L.channels.length, " (").concat(L.channels.map(e => e.id).join(", "), ")\n            users: ").concat(L.users.length, "\n            read_states: ").concat(L.readStates.length, "\n      )")), G.verbose("finished dispatching CACHE_LOADED"), [!0, l && null !== (d = null == E ? void 0 : E.id) && void 0 !== d ? d : null, D.length]
   }
 }
@@ -326,12 +326,12 @@ function en(e) {
     n = !1;
   i.default.Emitter.batched(() => {
     try {
-      if (e(), !t.hasQueuedDispatches()) {
-        G.verbose("Processing Dispatch Queue"), t.processDispatchQueue();
+      if (e(), t.dispatcher.isEmpty()) {
+        G.verbose("Processing Dispatch Queue"), t.dispatcher.unpauseDispatchQueue();
         return
       }
-      n = !0, S.default.loadLazyCache.recordEnd(), G.verbose("Processing First Queued Dispatch"), t.processFirstQueuedDispatch(new Set(["READY", "INITIAL_GUILD"])), setTimeout(() => {
-        G.verbose("Processing Dispatch Queue"), t.processDispatchQueue()
+      n = !0, S.default.loadLazyCache.recordEnd(), G.verbose("Processing First Queued Dispatch"), t.dispatcher.processFirstQueuedDispatch(new Set(["READY", "INITIAL_GUILD"])), setTimeout(() => {
+        G.verbose("Processing Dispatch Queue"), t.dispatcher.unpauseDispatchQueue()
       }, 100)
     } catch (e) {
       var a;
@@ -346,7 +346,7 @@ class ea extends i.default.Store {
   initialize() {
     if (!j) {
       let e = T.default.getSocket();
-      e.processDispatchQueue()
+      e.dispatcher.unpauseDispatchQueue()
     }
   }
   hasCache() {
@@ -359,8 +359,8 @@ class ea extends i.default.Store {
     let n = (0, D.callOnce)(t);
     if ("initializing" !== F) {
       (0, b.default)("cache:lazy_cache_not_initializing"), n(), setTimeout(() => {
-        var e;
-        return null === (e = T.default.getSocket()) || void 0 === e ? void 0 : e.processDispatchQueue()
+        var e, t;
+        return null === (t = T.default.getSocket()) || void 0 === t ? void 0 : null === (e = t.dispatcher) || void 0 === e ? void 0 : e.unpauseDispatchQueue()
       }, 0);
       return
     }
