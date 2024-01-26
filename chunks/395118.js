@@ -11,8 +11,8 @@ n.r(t), n.d(t, {
   }
 }), n("424973"), n("222007");
 var i, s, l, r, a = n("627445"),
-  o = n.n(a),
-  u = n("913144");
+  u = n.n(a),
+  o = n("913144");
 (l = i || (i = {})).GUILD_HOME = "guild_home", l.FORUM_CHANNEL = "forum_channel", (r = s || (s = {}))[r.IMMEDIATE = 0] = "IMMEDIATE", r[r.IMMEDIATE_WITH_COOLDOWN = 1] = "IMMEDIATE_WITH_COOLDOWN", r[r.IMMEDIATE_WITH_DELAY = 2] = "IMMEDIATE_WITH_DELAY";
 class d {
   maybeMarkSeen(e) {
@@ -46,7 +46,7 @@ class d {
       }
       n.push(i)
     }
-    return o(n.length < 2, "there should only be a single left over data"), this.seenIntervals = n, Math.round(t)
+    return u(n.length < 2, "there should only be a single left over data"), this.seenIntervals = n, Math.round(t)
   }
   constructor() {
     this.seenIntervals = []
@@ -71,10 +71,10 @@ class c {
   }) {
     this.initialize = () => {
       var e;
-      u.default.subscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen), u.default.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen), u.default.subscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush), u.default.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate), u.default.subscribe("DRAWER_OPEN", this.handleDrawerOpen), u.default.subscribe("DRAWER_CLOSE", this.handleDrawerClose), u.default.subscribe("WINDOW_FOCUS", this.handleWindowFocus), null === (e = this.onInitialize) || void 0 === e || e.call(this)
+      o.default.subscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen), o.default.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen), o.default.subscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush), o.default.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate), o.default.subscribe("DRAWER_OPEN", this.handleDrawerOpen), o.default.subscribe("DRAWER_CLOSE", this.handleDrawerClose), o.default.subscribe("WINDOW_FOCUS", this.handleWindowFocus), null === (e = this.onInitialize) || void 0 === e || e.call(this)
     }, this.terminate = () => {
       var e;
-      u.default.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen), u.default.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen), u.default.unsubscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush), u.default.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate), u.default.unsubscribe("DRAWER_OPEN", this.handleDrawerOpen), u.default.unsubscribe("DRAWER_CLOSE", this.handleDrawerClose), u.default.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus), null === (e = this.onTerminate) || void 0 === e || e.call(this), this.maybeFlushSeenItems(0)
+      o.default.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen), o.default.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen), o.default.unsubscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush), o.default.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate), o.default.unsubscribe("DRAWER_OPEN", this.handleDrawerOpen), o.default.unsubscribe("DRAWER_CLOSE", this.handleDrawerClose), o.default.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus), null === (e = this.onTerminate) || void 0 === e || e.call(this), this.maybeFlushSeenItems(0)
     }, this.handleFeedItemFlush = e => {
       let {
         id: t,
