@@ -1,12 +1,12 @@
 "use strict";
 a.r(e), a.d(e, {
   default: function() {
-    return m
+    return p
   }
 });
 var n = a("816494"),
-  i = a.n(n),
-  s = a("446674"),
+  s = a.n(n),
+  i = a("446674"),
   l = a("913144"),
   r = a("908539"),
   u = a("170213");
@@ -24,7 +24,7 @@ let o = {},
   I = null,
   g = u.AppealIngestionSignal.DIDNT_VIOLATE_POLICY,
   N = "";
-class C extends s.default.Store {
+class C extends i.default.Store {
   isFetching() {
     return _
   }
@@ -66,7 +66,7 @@ class C extends s.default.Store {
   }
 }
 C.displayName = "SafetyHubStore";
-var m = new C(l.default, {
+var p = new C(l.default, {
   SAFETY_HUB_FETCH_START: function(t) {
     _ = !0
   },
@@ -76,7 +76,7 @@ var m = new C(l.default, {
       accountStanding: a,
       isDsaEligible: n
     } = t;
-    o = i(e, "id"), d = a, T = n, _ = !1, S = !0, E = null
+    o = s(e, "id"), d = a, T = n, _ = !1, S = !0, E = null
   },
   SAFETY_HUB_FETCH_FAILURE: function(t) {
     let {
@@ -128,8 +128,12 @@ var m = new C(l.default, {
     A = !0, I = null
   },
   SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function(t) {
-    let {} = t;
-    A = !1, I = null
+    let {
+      classificationId: e
+    } = t;
+    A = !1, I = null, o[e].appeal_status = {
+      status: r.AppealStatusType.REVIEW_PENDING
+    }
   },
   SAFETY_HUB_REQUEST_REVIEW_FAILURE: function(t) {
     let {
