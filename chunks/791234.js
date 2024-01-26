@@ -32,8 +32,8 @@ var l, a, s = n("884691"),
   u = n("42203"),
   d = n("377253"),
   c = n("697218"),
-  m = n("568734"),
-  f = n("449008"),
+  f = n("568734"),
+  m = n("449008"),
   h = n("49111");
 
 function p(e, t) {
@@ -82,7 +82,7 @@ function C(e) {
       } = e;
       if (null == r || null == o) return null;
       let c = (0, i.isVideoFile)(u),
-        f = null != e.flags && (0, m.hasFlag)(e.flags, h.MessageAttachmentFlags.IS_THUMBNAIL),
+        m = null != e.flags && (0, f.hasFlag)(e.flags, h.MessageAttachmentFlags.IS_THUMBNAIL),
         p = null != t ? t : n;
       if (c) {
         let e = new URL(t);
@@ -97,10 +97,10 @@ function C(e) {
         contentScanVersion: d,
         alt: l,
         isVideo: c,
-        isThumbnail: f,
+        isThumbnail: m,
         type: "attachment"
       }
-    }).filter(f.isNotNullish)
+    }).filter(m.isNotNullish)
   }(e, t)
 }
 
@@ -130,7 +130,7 @@ function I(e, t) {
         type: "embed"
       }
     }
-  }).filter(f.isNotNullish) : []
+  }).filter(m.isNotNullish) : []
 }
 
 function x(e, t) {

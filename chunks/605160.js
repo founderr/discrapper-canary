@@ -26,8 +26,8 @@ var l, a, s = n("506838"),
   u = n("963119"),
   d = n("791234"),
   c = n("845579"),
-  m = n("377253"),
-  f = n("957255"),
+  f = n("377253"),
+  m = n("957255"),
   h = n("568734"),
   p = n("70845"),
   g = n("49111"),
@@ -45,7 +45,7 @@ let v = (e, t) => {
     let {
       flags: s = 0,
       contentScanVersion: i
-    } = e, u = m.default.getMessage(t, n);
+    } = e, u = f.default.getMessage(t, n);
     return null == u ? null : a && (0, o.isPendingScan)(i) ? "potential_explicit_content" : a && ((0, h.hasFlag)(s, g.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA) || r.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : l ? "spoiler" : null
   };
 
@@ -72,7 +72,7 @@ function x(e) {
   let {
     channel: t,
     media: n
-  } = e, l = (0, i.default)([f.default], () => null != t && f.default.can(g.Permissions.MANAGE_MESSAGES, t)), a = c.RenderSpoilers.useSetting(), s = (0, u.useShouldRedactExplicitContentForForum)();
+  } = e, l = (0, i.default)([m.default], () => null != t && m.default.can(g.Permissions.MANAGE_MESSAGES, t)), a = c.RenderSpoilers.useSetting(), s = (0, u.useShouldRedactExplicitContentForForum)();
   return I(n, !(0, p.default)(a, l), s)
 }
 let _ = e => (0, s.match)(e).with("explicit_content", () => E.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => E.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)

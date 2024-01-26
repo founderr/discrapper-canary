@@ -25,8 +25,8 @@ var a = s("37983"),
   N = s("646718"),
   p = s("49111"),
   g = s("994428"),
-  C = s("782340"),
-  P = s("651187");
+  P = s("782340"),
+  C = s("651187");
 let O = e => {
     let {
       name: t,
@@ -53,81 +53,81 @@ let O = e => {
         card_type: t
       }), null != n && L(g.ContentDismissActionType.TAKE_ACTION))
     }, [I, T, n, t, L]), s) ? t === R.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
-      className: i(P.flipCardContainer, {
-        [P.forceShadow]: E
+      className: i(C.flipCardContainer, {
+        [C.forceShadow]: E
       }),
       onMouseEnter: D,
       onFocus: D,
       onMouseLeave: U,
       onBlur: U,
       children: (0, a.jsxs)("div", {
-        className: i(P.flipCard, {
-          [P.partialFlipCard]: !v,
-          [P.ultraFlipCard]: v,
-          [P.rotateCard]: v && 3 === x,
-          [P.reducedMotion]: I
+        className: i(C.flipCard, {
+          [C.partialFlipCard]: !v,
+          [C.ultraFlipCard]: v,
+          [C.rotateCard]: v && 3 === x,
+          [C.reducedMotion]: I
         }),
         children: [(0, a.jsx)("div", {
-          className: P.flipCardFront,
+          className: C.flipCardFront,
           children: (0, a.jsx)(M, {
             ...e,
-            className: P.topCover
+            className: C.topCover
           })
         }), (0, a.jsx)("div", {
-          className: P.flipCardBack,
+          className: C.flipCardBack,
           children: (0, a.jsx)(M, {
             ...e,
-            className: P.topCover
+            className: C.topCover
           })
         })]
       })
     }) : j ? (0, a.jsx)("div", {
-      className: i(P.noFlipCardContainer, {
-        [P.forceShadow]: E,
-        [P.reducedMotion]: I
+      className: i(C.noFlipCardContainer, {
+        [C.forceShadow]: E,
+        [C.reducedMotion]: I
       }),
       children: (0, a.jsx)(M, {
         ...e
       })
     }) : (0, a.jsx)("div", {
-      className: i(P.flipCardContainer, {
-        [P.forceShadow]: E
+      className: i(C.flipCardContainer, {
+        [C.forceShadow]: E
       }),
       children: (0, a.jsxs)(o.Clickable, {
         onClick: () => f(!0),
-        className: i(P.flipCard, P.clickable, {
-          [P.flipped]: T,
-          [P.partialFlipCard]: !m && !T,
-          [P.reducedMotion]: I
+        className: i(C.flipCard, C.clickable, {
+          [C.flipped]: T,
+          [C.partialFlipCard]: !m && !T,
+          [C.reducedMotion]: I
         }),
         onTransitionEnd: e => {
-          T && "transform" === e.propertyName && e.target.classList.contains(P.flipCard) && (A(!0), _.default.track(p.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+          T && "transform" === e.propertyName && e.target.classList.contains(C.flipCard) && (A(!0), _.default.track(p.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
             card_type: t
           }), null != n && L(g.ContentDismissActionType.TAKE_ACTION))
         },
         children: [(0, a.jsx)("div", {
-          className: P.flipCardHidden,
+          className: C.flipCardHidden,
           "aria-hidden": !0,
           children: (0, a.jsx)(M, {
             ...e
           })
         }), (0, a.jsx)("div", {
-          className: P.flipCardFront,
+          className: C.flipCardFront,
           children: (0, a.jsx)(M, {
             ...N.upcomingDropUntimed,
             pillText: ""
           })
         }), (0, a.jsx)("div", {
-          className: P.flipCardBack,
+          className: C.flipCardBack,
           children: (0, a.jsx)(M, {
             ...e,
             description: ""
           })
         }), (0, a.jsx)("div", {
-          className: P.flipCardButtonContainer,
+          className: C.flipCardButtonContainer,
           children: (0, a.jsx)(o.Button, {
             onClick: () => f(!0),
-            children: C.default.Messages.REVEAL
+            children: P.default.Messages.REVEAL
           })
         })]
       })
@@ -156,17 +156,17 @@ let O = e => {
       intervalType: null == h ? void 0 : h.interval,
       intervalCount: null == h ? void 0 : h.interval_count
     }), v = (0, I.useResponseOnUserState)({
-      defaultResponse: C.default.Messages.PREMIUM_SETTINGS_GET,
-      onNonTier2Subscriber: C.default.Messages.BILLING_SWITCH_PLAN_UPGRADE,
+      defaultResponse: P.default.Messages.PREMIUM_SETTINGS_GET,
+      onNonTier2Subscriber: P.default.Messages.BILLING_SWITCH_PLAN_UPGRADE,
       onTier2TrialOffer: x,
       onTier0TrialOffer: x,
-      onDiscountOffer: C.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+      onDiscountOffer: P.default.Messages.PREMIUM_DISCOUNT_CTA.format({
         percent: null == L ? void 0 : L.discount.amount
       })
     }), D = c === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW || c === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW || c === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW;
     return (0, a.jsxs)(o.Clickable, {
-      className: i(P.card, O, {
-        [P.clickable]: null != R
+      className: i(C.card, O, {
+        [C.clickable]: null != R
       }),
       onMouseEnter: g,
       style: {
@@ -175,34 +175,34 @@ let O = e => {
       onClick: R,
       children: [null != S ? (0, a.jsx)(o.Text, {
         variant: "text-xs/semibold",
-        className: P.pill,
+        className: C.pill,
         children: S
       }) : null, (0, a.jsx)("div", {
-        className: i(P.cover, P.below)
+        className: i(C.cover, C.below)
       }), (0, a.jsx)(o.Heading, {
         variant: "heading-xl/extrabold",
-        className: i(P.cardHeading, s),
+        className: i(C.cardHeading, s),
         children: t
       }), 0 !== r.length ? (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
-        className: P.cardSubtitle,
+        className: C.cardSubtitle,
         children: r
       }) : null, null != d ? (0, a.jsx)("img", {
         src: d,
         alt: "",
         className: i({
-          [P.cardImage]: !D,
-          [P.carouselCardImage]: D
+          [C.cardImage]: !D,
+          [C.carouselCardImage]: D
         })
       }) : null, 0 !== n.length ? (0, a.jsxs)("div", {
-        className: P.cardDescription,
+        className: C.cardDescription,
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-xl/extrabold",
-          className: i(P.cardHeading, s),
+          className: i(C.cardHeading, s),
           children: t
         }), 0 !== r.length ? (0, a.jsxs)(o.Text, {
           variant: "text-sm/normal",
-          className: P.cardDescriptionText,
+          className: C.cardDescriptionText,
           children: [r, (0, a.jsx)("br", {}), " ", (0, a.jsx)("br", {}), n]
         }) : null, u ? (0, a.jsx)(A.default, {
           subscriptionTier: N.PremiumSubscriptionSKUs.TIER_2,
@@ -214,7 +214,7 @@ let O = e => {
           children: l
         }) : null]
       }) : null, (0, a.jsx)("div", {
-        className: i(P.cover, P.above)
+        className: i(C.cover, C.above)
       })]
     })
   };

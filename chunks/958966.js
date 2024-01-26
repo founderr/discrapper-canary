@@ -45,7 +45,7 @@ var g = e => {
     subscriptionTier: r
   } = e, {
     AnalyticsLocationProvider: S
-  } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), C = (0, E.useIsInPremiumOfferExperience)(), P = (0, T.useIsEligibleForBogoPromotion)(), {
+  } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), P = (0, E.useIsInPremiumOfferExperience)(), C = (0, T.useIsEligibleForBogoPromotion)(), {
     marketingEnabled: O
   } = c.default.useExperiment({
     location: "HeroHeading"
@@ -74,14 +74,14 @@ var g = e => {
           children: (0, a.jsx)(f.default, {
             smallerText: !t
           })
-        }) : (0, a.jsx)(p, {}), P ? (0, a.jsx)("div", {
+        }) : (0, a.jsx)(p, {}), C ? (0, a.jsx)("div", {
           className: N.buttonContainer,
           children: (0, a.jsx)(R.default, {
             className: N.button,
             forceWhite: !0
           })
         }) : (0, a.jsxs)(a.Fragment, {
-          children: [C ? null : (0, a.jsxs)("div", {
+          children: [P ? null : (0, a.jsxs)("div", {
             className: N.buttonContainer,
             children: [(0, a.jsx)(m.default, {
               forceInverted: !0,
@@ -101,7 +101,7 @@ var g = e => {
         }), h && (0, a.jsx)(p, {
           variant: "text-md/normal"
         })]
-      }), C ? null : (0, a.jsxs)(a.Fragment, {
+      }), P ? null : (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(d.StretchedSparkleStar, {
           className: t ? N.fullscreenSparkleStar1 : N.settingsSparkleStar1
         }), (0, a.jsx)(d.StretchedSparkleStar, {

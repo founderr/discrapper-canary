@@ -49,8 +49,8 @@ var f = e => {
   } = e, A = (0, i.default)(), N = (0, r.isThemeDark)(A) || s, p = null === (t = (0, o.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, l.formatTrialOfferIntervalDuration)({
     intervalType: null == p ? void 0 : p.interval,
     intervalCount: null == p ? void 0 : p.interval_count
-  }), C = (0, u.usePremiumDiscountOffer)(), P = null != p && c === p.sku_id, O = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != C ? T(c, R, S, C.discount.amount) : I({
-    showTrialCTA: P,
+  }), P = (0, u.usePremiumDiscountOffer)(), C = null != p && c === p.sku_id, O = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != P ? T(c, R, S, P.discount.amount) : I({
+    showTrialCTA: C,
     subscriptionTier: c,
     shouldShowUpsells: !1,
     trialDurationCopy: g,
@@ -63,7 +63,7 @@ var f = e => {
     buttonShineClassName: "buttonShineClassName" in m ? m.buttonShineClassName : N ? E.brandShine : void 0,
     trialId: null == p ? void 0 : p.id,
     buttonText: O,
-    buttonTextClassName: P ? E.freeTrialText : void 0,
+    buttonTextClassName: C ? E.freeTrialText : void 0,
     onlyShineOnHover: !0,
     subscriptionTier: c,
     ...m

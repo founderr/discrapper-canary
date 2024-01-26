@@ -34,8 +34,8 @@ var l = n("884691"),
   u = n("913144"),
   d = n("448993"),
   c = n("734575"),
-  m = n("104589"),
-  f = n("116460"),
+  f = n("104589"),
+  m = n("116460"),
   h = n("42203"),
   p = n("718517"),
   g = n("347738");
@@ -263,7 +263,7 @@ let b = {
           } catch (e) {}
           try {
             var e, n;
-            (null === (e = f.default.getProps().results) || void 0 === e ? void 0 : e.length) === 0 && (0, m.search)(null !== (n = f.default.getProps().query) && void 0 !== n ? n : "")
+            (null === (e = m.default.getProps().results) || void 0 === e ? void 0 : e.length) === 0 && (0, f.search)(null !== (n = m.default.getProps().query) && void 0 !== n ? n : "")
           } catch (e) {}
           await L(t.split(","))
         })()

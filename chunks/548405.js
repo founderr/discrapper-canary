@@ -22,15 +22,15 @@ function E(e) {
   let {
     isEmptyBecauseQuery: t,
     closePopout: l
-  } = e, i = (0, r.default)([u.default], () => u.default.getKeybindForAction(p.GlobalKeybindActions.SAVE_CLIP)), E = (0, r.default)([f.default], () => f.default.getSettings().clipsEnabled), v = t ? h.noSearchResultsImage : h.noClipsImage, _ = n.useCallback(() => {
+  } = e, i = (0, r.default)([u.default], () => u.default.getKeybindForAction(p.GlobalKeybindActions.SAVE_CLIP)), E = (0, r.default)([f.default], () => f.default.getSettings().clipsEnabled), v = t ? h.noSearchResultsImage : h.noClipsImage, C = n.useCallback(() => {
     l(), d.default.open(p.UserSettingsSections.CLIPS)
-  }, [l]), C = (() => {
+  }, [l]), _ = (() => {
     if (!E) return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_CLIPS_NOT_ENABLED.format({
-      onClick: _
+      onClick: C
     });
     if (t) return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_MATCH_QUERY;
     if (null == i) return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_NO_KEYBIND_SET.format({
-      onClick: _
+      onClick: C
     });
     {
       let e = c.toString(i.shortcut, !0);
@@ -57,7 +57,7 @@ function E(e) {
         className: s(h.noClipsText, {
           [h.noSearchResultsText]: t
         }),
-        children: C
+        children: _
       })]
     })
   })

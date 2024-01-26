@@ -14,8 +14,8 @@ var a = n("77078"),
   u = n("537325"),
   d = n("233069"),
   c = n("42203"),
-  m = n("305961"),
-  f = n("666897"),
+  f = n("305961"),
+  m = n("666897"),
   h = n("848825"),
   p = n("794818"),
   g = n("844659"),
@@ -27,7 +27,7 @@ async function v(e, t, n) {
       channelId: t,
       messageId: n
     }), null != e) {
-    let n = m.default.getGuild(e);
+    let n = f.default.getGuild(e);
     if ((null == n ? void 0 : n.joinedAt) == null) try {
       await p.startLurking(e, {}, {
         channelId: t
@@ -66,7 +66,7 @@ function C(e) {
             }
           })
         };
-      return (0, l.jsxs)(f.default, {
+      return (0, l.jsxs)(m.default, {
         role: "link",
         onClick: u,
         onContextMenu: d,

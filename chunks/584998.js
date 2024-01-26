@@ -13,8 +13,8 @@ var l = n("37983"),
   u = n("487269"),
   d = n("957255"),
   c = n("660478"),
-  m = n("109264"),
-  f = n("251144"),
+  f = n("109264"),
+  m = n("251144"),
   h = n("20662"),
   p = n("15738"),
   g = n("299039"),
@@ -75,7 +75,7 @@ function N(e) {
           width: 4,
           "aria-hidden": "true",
           className: S.dot
-        }), (0, l.jsx)(m.default, {
+        }), (0, l.jsx)(f.default, {
           height: 12,
           width: 12,
           className: S.icon
@@ -112,7 +112,7 @@ function N(e) {
         })
       }), (0, l.jsx)(i.Clickable, {
         onClick: e => L(e, _.FeedbackRating.BAD),
-        children: (0, l.jsx)(f.default, {
+        children: (0, l.jsx)(m.default, {
           className: S.thumbIcon,
           width: 12,
           height: 12

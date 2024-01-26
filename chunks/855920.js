@@ -16,8 +16,8 @@ var l = n("37983"),
   u = n("913144"),
   d = n("430568"),
   c = n("716241"),
-  m = n("599110"),
-  f = n("459698"),
+  f = n("599110"),
+  m = n("459698"),
   h = n("933629"),
   p = n("49111"),
   g = n("958706"),
@@ -36,7 +36,7 @@ let C = e => {
       src: n.src,
       alt: r,
       animated: !1
-    }), m = e => (0, l.jsx)(o.Tooltip, {
+    }), f = e => (0, l.jsx)(o.Tooltip, {
       text: (0, h.renderClickableTooltipNode)(n.name, s),
       "aria-label": u,
       ...h.EXPRESSION_TOOLTIP_PROPS,
@@ -62,12 +62,12 @@ let C = e => {
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
       position: "right",
-      renderPopout: e => (0, l.jsx)(f.MessageStandardEmojiPopout, {
+      renderPopout: e => (0, l.jsx)(m.MessageStandardEmojiPopout, {
         ...e,
         node: n
       }),
-      children: m
-    }) : m()
+      children: f
+    }) : f()
   },
   I = e => {
     let {
@@ -111,7 +111,7 @@ let C = e => {
           _(!1), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
-          I && (m.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
+          I && (f.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
             nonce: N
           }), _(!1))
         },
@@ -126,14 +126,14 @@ let C = e => {
       animation: o.Popout.Animation.FADE,
       align: "center",
       onRequestClose: () => {
-        m.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
+        f.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
           nonce: N
         }), _(!1)
       },
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
       position: "right",
-      renderPopout: e => (0, l.jsx)(f.MessageCustomEmojiPopout, {
+      renderPopout: e => (0, l.jsx)(m.MessageCustomEmojiPopout, {
         ...e,
         node: t,
         refreshPositionKey: () => C(String(Date.now())),

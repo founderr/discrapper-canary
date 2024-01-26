@@ -20,8 +20,8 @@ l = class extends s.Component {
       mediaPlayerClassName: l,
       poster: s,
       fileName: c,
-      naturalWidth: m,
-      naturalHeight: f,
+      naturalWidth: f,
+      naturalHeight: m,
       playable: h,
       downloadable: p = !0,
       volume: g,
@@ -58,7 +58,7 @@ l = class extends s.Component {
             width: r,
             height: d
           }
-        } = n, y = !(m <= u.MAX_VIDEO_WIDTH && f <= u.MAX_VIDEO_HEIGHT || m <= u.MAX_VIDEO_HEIGHT && f <= u.MAX_VIDEO_WIDTH);
+        } = n, y = !(f <= u.MAX_VIDEO_WIDTH && m <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && m <= u.MAX_VIDEO_WIDTH);
         return (0, a.jsx)(o.default, {
           className: l,
           forceExternal: y,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return m
   },
   CenterControlButton: function() {
     return p
@@ -17,9 +17,9 @@ var a = n("414456"),
   u = n("550410"),
   d = n("641568"),
   c = n("782340"),
-  m = n("397651");
+  f = n("397651");
 
-function f(e) {
+function m(e) {
   let {
     label: t,
     onClick: n,
@@ -28,7 +28,7 @@ function f(e) {
     onMouseLeave: o,
     onContextMenu: d,
     className: c,
-    wrapperClassName: f,
+    wrapperClassName: m,
     iconClassName: h,
     iconComponent: p,
     themeable: g = !1,
@@ -81,19 +81,19 @@ function f(e) {
             null == I || I(), null == o || o(e)
           },
           disabled: E,
-          innerClassName: m.lineHeightReset,
+          innerClassName: f.lineHeightReset,
           className: s({
-            [m.active]: v
+            [f.active]: v
           }, c),
-          wrapperClassName: f,
+          wrapperClassName: m,
           buttonRef: _,
           grow: S,
           "aria-label": N,
           ...x,
           children: (0, l.jsx)(p, {
-            className: s(m.controlIcon, h, {
-              [m.themeable]: g,
-              [m.active]: v
+            className: s(f.controlIcon, h, {
+              [f.themeable]: g,
+              [f.active]: v
             })
           })
         })
@@ -102,13 +102,13 @@ function f(e) {
   })
 }
 let h = {
-  red: m.red,
-  white: m.white,
-  green: m.green,
-  yellow: m.yellow,
-  primaryDark: m.primaryDark,
-  primaryLight: m.primaryLight,
-  activeLight: m.activeLight
+  red: f.red,
+  white: f.white,
+  green: f.green,
+  yellow: f.yellow,
+  primaryDark: f.primaryDark,
+  primaryLight: f.primaryLight,
+  activeLight: f.activeLight
 };
 
 function p(e) {
@@ -120,15 +120,15 @@ function p(e) {
     onPopoutClick: g,
     popoutOpen: E = !1,
     ...v
-  } = e, C = (0, d.default)(t, n), I = (0, l.jsx)(f, {
+  } = e, C = (0, d.default)(t, n), I = (0, l.jsx)(m, {
     ...v,
     grow: !1,
     onContextMenu: g,
-    iconClassName: s(p, m.centerIcon),
-    className: s(null == g ? a : m.staticButton, m.centerButton, h[C])
+    iconClassName: s(p, f.centerIcon),
+    className: s(null == g ? a : f.staticButton, f.centerButton, h[C])
   }), x = null;
   return null != g && (x = (0, l.jsxs)("div", {
-    className: s(a, m.contextMenuContainer),
+    className: s(a, f.contextMenuContainer),
     children: [(0, l.jsx)(o.default, {
       mask: o.MaskIDs.CHANNEL_CALL_CONTROL_BUTTON,
       width: 56,
@@ -139,12 +139,12 @@ function p(e) {
         "aria-label": c.default.Messages.MORE_OPTIONS,
         onClick: g,
         onContextMenu: g,
-        className: s(m.contextMenuNub, h[C], {
-          [m.active]: E
+        className: s(f.contextMenuNub, h[C], {
+          [f.active]: E
         }),
         children: (0, l.jsx)(r.default, {
-          className: s(m.contextMenuCaret, {
-            [m.open]: E
+          className: s(f.contextMenuCaret, {
+            [f.open]: E
           })
         })
       })
@@ -152,7 +152,7 @@ function p(e) {
   })), (0, l.jsxs)(l.Fragment, {
     children: [x, (0, l.jsx)("div", {
       className: s({
-        [m.unmasked]: null != g
+        [f.unmasked]: null != g
       }, null != g ? a : null),
       children: I
     })]

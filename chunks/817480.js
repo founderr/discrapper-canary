@@ -13,8 +13,8 @@ var l = n("37983"),
   u = n("924444"),
   d = n("103603"),
   c = n("866190"),
-  m = n("782340"),
-  f = n("842992");
+  f = n("782340"),
+  m = n("842992");
 let h = "Zoomed Lazy Image Modal";
 class p extends a.PureComponent {
   render() {
@@ -72,13 +72,13 @@ class p extends a.PureComponent {
         } : void 0
       };
       (0, s.isElement)(e.currentTarget) && e.currentTarget.blur(), (0, i.openModal)(e => (0, l.jsx)(i.ModalRoot, {
-        className: f.modal,
+        className: m.modal,
         ...e,
         size: i.ModalSize.DYNAMIC,
-        "aria-label": m.default.Messages.IMAGE,
+        "aria-label": f.default.Messages.IMAGE,
         children: (0, l.jsx)(u.ImageModal, {
           ...I,
-          className: f.image,
+          className: m.image,
           shouldAnimate: v,
           onClose: this.onCloseImage,
           shouldHideMediaOptions: C

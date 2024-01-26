@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useTrackOpenPopout: function() {
-    return m
+    return f
   }
 });
 var l = n("884691"),
@@ -13,12 +13,12 @@ var l = n("884691"),
   u = n("599110"),
   d = n("958706"),
   c = n("49111");
-let m = e => {
+let f = e => {
   let {
     emojiId: t,
     currentGuildId: n,
-    popoutData: m,
-    emojiSourceGuildId: f,
+    popoutData: f,
+    emojiSourceGuildId: m,
     nonce: h,
     demoMode: p
   } = e, {
@@ -27,15 +27,15 @@ let m = e => {
     guild_id: n,
     emoji_id: t,
     ...(0, s.collectChannelAnalyticsMetadata)(r.default.getChannel(o.default.getChannelId(n)))
-  }), E = null != m && [i.EmojiPopoutType.ADD_PACK, i.EmojiPopoutType.REMOVE_PACK, i.EmojiPopoutType.GET_PREMIUM_INVENTORY_ENABLED].includes(m.type);
+  }), E = null != f && [i.EmojiPopoutType.ADD_PACK, i.EmojiPopoutType.REMOVE_PACK, i.EmojiPopoutType.GET_PREMIUM_INVENTORY_ENABLED].includes(f.type);
   return l.useEffect(() => {
     var e;
     a.default.dispatch({
       type: "EMOJI_INTERACTION_INITIATED",
       interaction: d.EmojiInteractionPoint.TrackOpenPopoutUsed
     }), !p && u.default.track(c.AnalyticEvents.OPEN_POPOUT, {
-      type: null !== (e = null == m ? void 0 : m.analyticsType) && void 0 !== e ? e : "Standard Emoji Popout",
-      inventory_pack_id: E ? f : void 0,
+      type: null !== (e = null == f ? void 0 : f.analyticsType) && void 0 !== e ? e : "Standard Emoji Popout",
+      inventory_pack_id: E ? m : void 0,
       nonce: h,
       ...g
     })

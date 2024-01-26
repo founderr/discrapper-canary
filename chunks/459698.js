@@ -25,8 +25,8 @@ var l = n("37983"),
   u = n("130969"),
   d = n("77078"),
   c = n("851387"),
-  m = n("430568"),
-  f = n("812204"),
+  f = n("430568"),
+  m = n("812204"),
   h = n("685665"),
   p = n("428958"),
   g = n("736271"),
@@ -81,7 +81,7 @@ let J = () => {
       children: (0, l.jsx)(W.MessagePopoutContent, {
         children: (0, l.jsxs)(L.default, {
           className: X.emojiSection,
-          children: [(0, l.jsx)(m.default, {
+          children: [(0, l.jsx)(f.default, {
             emojiName: t.name,
             className: X.primaryEmoji,
             src: t.src,
@@ -123,10 +123,10 @@ let J = () => {
     });
     n = null == n || n;
     let c = n || t.isDiscoverable(),
-      m = () => {
+      f = () => {
         t.isDiscoverable() ? (0, B.startLurking)(s, {}) : n && (0, A.transitionTo)(z.Routes.CHANNEL(s, j.default.getChannelId(s)))
       },
-      f = t.isDiscoverable() && null != t.presenceCount,
+      m = t.isDiscoverable() && null != t.presenceCount,
       h = () => {
         let e = !a && !n;
         return (0, l.jsxs)(l.Fragment, {
@@ -140,7 +140,7 @@ let J = () => {
             className: X.dotSeparator
           }), e ? (0, l.jsx)(d.Clickable, {
             className: X.joinGuildLink,
-            onClick: m,
+            onClick: f,
             children: (0, l.jsx)(d.Text, {
               variant: "text-xs/normal",
               color: "text-link",
@@ -164,7 +164,7 @@ let J = () => {
           let e = null != u && c;
           return e ? (0, l.jsxs)(d.Clickable, {
             "aria-label": o,
-            onClick: m,
+            onClick: f,
             children: [(0, l.jsx)("img", {
               src: u,
               alt: "",
@@ -185,7 +185,7 @@ let J = () => {
             guild: t,
             className: X.guildBadge
           }), c ? (0, l.jsx)(d.Clickable, {
-            onClick: m,
+            onClick: f,
             className: X.truncatingText,
             children: (0, l.jsx)(d.Heading, {
               className: X.guildName,
@@ -202,7 +202,7 @@ let J = () => {
           })]
         }), (0, l.jsx)(L.default, {
           align: L.default.Align.CENTER,
-          children: f ? h() : (0, l.jsx)(d.Text, {
+          children: m ? h() : (0, l.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
             children: K.default.Messages.EMOJI_POPOUT_PRIVATE_SERVER
@@ -270,7 +270,7 @@ let J = () => {
       es = !!el && (0, g.shouldHideGuildPurchaseEntryPoints)(null == O ? void 0 : O.guildId),
       {
         analyticsLocations: ei
-      } = (0, h.default)(f.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
+      } = (0, h.default)(m.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
     (0, p.default)({
       type: r.ImpressionTypes.MODAL,
       name: r.ImpressionNames.ROLE_SUBSCRIPTION_EMOJI_UPSELL,
@@ -305,8 +305,8 @@ let J = () => {
         packCollectionData: eo
       }),
       ec = q && el && !es && (F && en || !F),
-      em = ed.emojiDescription,
-      ef = (0, E.useTrackOpenPopout)({
+      ef = ed.emojiDescription,
+      em = (0, E.useTrackOpenPopout)({
         emojiId: u.emojiId,
         currentGuildId: er,
         popoutData: ed,
@@ -332,7 +332,7 @@ let J = () => {
         return (0, l.jsxs)("div", {
           className: X.emojiSection,
           children: [(0, l.jsxs)(L.default, {
-            children: [(0, l.jsx)(m.default, {
+            children: [(0, l.jsx)(f.default, {
               className: X.primaryEmoji,
               emojiId: u.emojiId,
               emojiName: u.name,
@@ -347,9 +347,9 @@ let J = () => {
                 children: (0, l.jsx)(P.default, {
                   children: u.name
                 })
-              }), null != em && (0, l.jsx)(d.Text, {
+              }), null != ef && (0, l.jsx)(d.Text, {
                 variant: "text-sm/normal",
-                children: em
+                children: ef
               })]
             })]
           }), ep ? (0, l.jsx)(T.default, {
@@ -373,7 +373,7 @@ let J = () => {
             size: d.Button.Sizes.SMALL,
             fullWidth: !0,
             onClick: () => {
-              A(), (null == S ? void 0 : S.id) != null && c.default.transitionToGuildSync(S.id, void 0, Y.StaticChannelRoute.ROLE_SUBSCRIPTIONS, [f.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL])
+              A(), (null == S ? void 0 : S.id) != null && c.default.transitionToGuildSync(S.id, void 0, Y.StaticChannelRoute.ROLE_SUBSCRIPTIONS, [m.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL])
             },
             children: ea ? K.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_BUTTON : K.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_BUTTON
           })]
@@ -382,7 +382,7 @@ let J = () => {
         let e = q || null != eo.collectedPack,
           t = null != v && !q && ($ || eu),
           n = () => {
-            t && (null == j || j(), !eg && !b && V.default.track(z.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef), eE(!eg))
+            t && (null == j || j(), !eg && !b && V.default.track(z.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, em), eE(!eg))
           };
         return (0, l.jsxs)("div", {
           className: X.guildSection,
@@ -439,7 +439,7 @@ let J = () => {
       onClose: o,
       isDisplayingButtonInTopSection: u,
       nonce: c
-    } = e, f = r.isPremium, h = (null !== (t = null == a ? void 0 : a.emojis) && void 0 !== t ? t : []).slice(0, 13).filter(e => e.id !== n).slice(0, 12), {
+    } = e, m = r.isPremium, h = (null !== (t = null == a ? void 0 : a.emojis) && void 0 !== t ? t : []).slice(0, 13).filter(e => e.id !== n).slice(0, 12), {
       type: p,
       description: g
     } = i;
@@ -451,7 +451,7 @@ let J = () => {
       children: [s ? null : h.map(e => (0, l.jsx)(d.Tooltip, {
         text: e.require_colons ? ":".concat(e.name, ":") : e.name,
         ...W.EXPRESSION_TOOLTIP_PROPS,
-        children: t => (0, l.jsx)(m.default, {
+        children: t => (0, l.jsx)(f.default, {
           className: X.otherEmoji,
           emojiId: e.id,
           animated: e.animated,
@@ -468,7 +468,7 @@ let J = () => {
               nonce: c,
               expressionName: null == t ? void 0 : t.name
             }),
-            u = f && r.showTryPacksModalAndV2Copy;
+            u = m && r.showTryPacksModalAndV2Copy;
           return (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)(v.default, {
               className: X.betaTag,

@@ -20,8 +20,8 @@ l = class extends s.PureComponent {
       renderLinkComponent: u,
       onVolumeChange: d,
       onVolumeShow: c,
-      onVolumeHide: m,
-      autoMute: f,
+      onVolumeHide: f,
+      autoMute: m,
       onMute: h,
       mimeType: p,
       onPlay: g
@@ -35,10 +35,10 @@ l = class extends s.PureComponent {
       playable: s,
       volume: o,
       onMute: h,
-      autoMute: f,
+      autoMute: m,
       onVolumeChange: d,
       onVolumeShow: c,
-      onVolumeHide: m,
+      onVolumeHide: f,
       renderLinkComponent: u,
       mimeType: p,
       onPlay: g

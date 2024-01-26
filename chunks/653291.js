@@ -42,8 +42,8 @@ var a = n("37983"),
   P = n("49111"),
   w = n("782340"),
   G = n("813069");
-let H = f("2015-05-15").local(),
-  B = (0, h.makeLazy)({
+let B = f("2015-05-15").local(),
+  H = (0, h.makeLazy)({
     createPromise: () => n.el("201959").then(n.bind(n, "201959")),
     webpackId: "201959"
   }),
@@ -405,10 +405,10 @@ class W extends l.PureComponent {
       return e.type !== P.SearchPopoutModes.FILTER && e.type !== P.SearchPopoutModes.EMPTY && !D.showDatePicker(e.filter)
     }, this.renderDatePicker = () => (0, a.jsxs)("div", {
       className: G.datePicker,
-      children: [(0, a.jsx)(B, {
+      children: [(0, a.jsx)(H, {
         onSelect: this.handleDateChange,
         maxDate: f().local(),
-        minDate: H
+        minDate: B
       }), (0, a.jsxs)("div", {
         className: G.datePickerHint,
         children: [(0, a.jsxs)("span", {

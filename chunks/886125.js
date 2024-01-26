@@ -14,8 +14,8 @@ var a = n("414456"),
   u = n("545158"),
   d = n("765089"),
   c = n("787336"),
-  m = n("666897"),
-  f = n("844659"),
+  f = n("666897"),
+  m = n("844659"),
   h = n("49111"),
   p = n("909266"),
   g = n("671934");
@@ -38,7 +38,7 @@ function E(e) {
           })
         })
       };
-      return (0, l.jsxs)(m.default, {
+      return (0, l.jsxs)(f.default, {
         role: "link",
         href: t.attachmentUrl,
         onClick: v,
@@ -49,7 +49,7 @@ function E(e) {
           color: r.tokens.colors.MENTION_FOREGROUND,
           width: 16,
           height: 16
-        }), (0, f.smartOutput)(t, a, E)]
+        }), (0, m.smartOutput)(t, a, E)]
       }, E.key)
     }
   }

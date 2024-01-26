@@ -23,9 +23,9 @@ async function m(e, t) {
     analyticsLocations: E
   } = t, v = i.default.getChannel(m);
   if (null != v) try {
-    var _;
+    var C;
     let t = await (0, c.exportClip)(e, h),
-      l = null !== (_ = e.name) && void 0 !== _ ? _ : (0, f.CLIP_NAME_TEMPLATE)(o.default.extractTimestamp(e.id)),
+      l = null !== (C = e.name) && void 0 !== C ? C : (0, f.CLIP_NAME_TEMPLATE)(o.default.extractTimestamp(e.id)),
       a = (0, u.default)(l);
     (0, d.promptToUpload)([new File([t], "".concat("" !== a ? a : "clip", ".mp4"), {
       type: "video/mp4"

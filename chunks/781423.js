@@ -16,8 +16,8 @@ var l = n("37983"),
   u = n("524768"),
   d = n("300322"),
   c = n("845579"),
-  m = n("42203"),
-  f = n("474643"),
+  f = n("42203"),
+  m = n("474643"),
   h = n("957255"),
   p = n("18494"),
   g = n("666897"),
@@ -31,7 +31,7 @@ var l = n("37983"),
 function S(e, t, n, a) {
   if (null == e) return;
   let s = () => {
-    let l = m.default.getChannel(e);
+    let l = f.default.getChannel(e);
     if (null == l) return;
     let {
       command: s,
@@ -61,7 +61,7 @@ function S(e, t, n, a) {
       })
     }
   };
-  "" !== f.default.getDraft(e, f.DraftType.ChannelMessage) ? (0, i.openModal)(t => (0, l.jsx)(i.ConfirmModal, {
+  "" !== m.default.getDraft(e, m.DraftType.ChannelMessage) ? (0, i.openModal)(t => (0, l.jsx)(i.ConfirmModal, {
     header: x.default.Messages.APPLICATION_COMMAND_MENTION_CONFIRM_HEADER,
     confirmText: x.default.Messages.CLEAR,
     cancelText: x.default.Messages.CANCEL,
@@ -85,10 +85,10 @@ function N(e) {
   let {
     node: n,
     output: r,
-    state: f
-  } = e, E = (0, s.useStateFromStores)([m.default, p.default], () => {
+    state: m
+  } = e, E = (0, s.useStateFromStores)([f.default, p.default], () => {
     var e;
-    return m.default.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : p.default.getChannelId())
+    return f.default.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : p.default.getChannelId())
   }, [n.channelId]), {
     hasSendMessagePerm: x,
     hasUseAppCommandsPerm: _
@@ -124,11 +124,11 @@ function N(e) {
         onClick: A,
         onMouseEnter: t,
         onMouseLeave: a,
-        children: [I.COMMAND_SENTINEL, r(n.content, f)]
-      }, f.key)
+        children: [I.COMMAND_SENTINEL, r(n.content, m)]
+      }, m.key)
     }
-  }, f.key) : (0, l.jsxs)("span", {
-    children: [I.COMMAND_SENTINEL, r(n.content, f)]
+  }, m.key) : (0, l.jsxs)("span", {
+    children: [I.COMMAND_SENTINEL, r(n.content, m)]
   })
 }
 

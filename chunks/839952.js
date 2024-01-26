@@ -13,8 +13,8 @@ var l = n("37983"),
   u = n("903962"),
   d = n("993105"),
   c = n("410889"),
-  m = n("461380"),
-  f = n("195812"),
+  f = n("461380"),
+  m = n("195812"),
   h = n("967685"),
   p = n("204591"),
   g = n("782340"),
@@ -67,8 +67,8 @@ function I(e) {
       onClick: () => {
         n(!t)
       },
-      children: [(0, l.jsx)(m.default, {
-        direction: t ? m.default.Directions.UP : m.default.Directions.DOWN
+      children: [(0, l.jsx)(f.default, {
+        direction: t ? f.default.Directions.UP : f.default.Directions.DOWN
       }), t ? g.default.Messages.COLLAPSE : g.default.Messages.EXPAND]
     })
   })
@@ -101,7 +101,7 @@ function x(e) {
         href: t.url,
         target: "_blank",
         rel: "noreferrer noopener",
-        children: (0, l.jsx)(f.default, {
+        children: (0, l.jsx)(m.default, {
           className: E.downloadButton,
           width: 24,
           height: 24
@@ -181,18 +181,18 @@ function N(e) {
     setExpanded: r,
     language: u,
     setLanguage: c,
-    bytesLeft: m,
-    className: f
-  } = e, h = null == a ? void 0 : a.split("\n"), p = null !== (t = null == h ? void 0 : h.length) && void 0 !== t ? t : 0, v = s ? 100 : 6, N = 0 === m, M = "";
+    bytesLeft: f,
+    className: m
+  } = e, h = null == a ? void 0 : a.split("\n"), p = null !== (t = null == h ? void 0 : h.length) && void 0 !== t ? t : 0, v = s ? 100 : 6, N = 0 === f, M = "";
   N && s && p > v ? M = "\n..." : !N && (M = "..."), "" !== M && (N ? M += " " + g.default.Messages.PREVIEW_LINES_LEFT.format({
     lines: p - v
   }) : M += " " + g.default.Messages.PREVIEW_BYTES_LEFT.format({
-    formattedBytes: (0, d.formatKbSize)(m)
+    formattedBytes: (0, d.formatKbSize)(f)
   }));
   let T = (null == h ? void 0 : h.slice(0, v).join("\n")) + M,
     A = s || v < p;
   return (0, l.jsxs)("div", {
-    className: i(f, E.container),
+    className: i(m, E.container),
     children: [(0, l.jsx)("div", {
       className: i(E.textContainer, {
         [E.expanded]: s
@@ -216,7 +216,7 @@ function N(e) {
         }), (0, l.jsx)(S, {
           language: u,
           fileContents: a,
-          bytesLeft: m,
+          bytesLeft: f,
           attachment: n
         })]
       }) : null, (0, l.jsx)("div", {
@@ -238,8 +238,8 @@ function M(e) {
     fileContents: s,
     bytesLeft: i,
     attachment: r
-  } = e, [u, c] = a.useState(n), m = null != s ? s : "";
-  return 0 !== i && (m += "... ".concat(g.default.Messages.PREVIEW_BYTES_LEFT.format({
+  } = e, [u, c] = a.useState(n), f = null != s ? s : "";
+  return 0 !== i && (f += "... ".concat(g.default.Messages.PREVIEW_BYTES_LEFT.format({
     formattedBytes: (0, d.formatKbSize)(i)
   }))), (0, l.jsx)(o.ModalRoot, {
     transitionState: t,
@@ -253,7 +253,7 @@ function M(e) {
         children: null == s ? (0, l.jsx)(o.Spinner, {
           className: E.spinner
         }) : (0, l.jsx)(C, {
-          text: m,
+          text: f,
           language: u
         })
       }), (0, l.jsxs)(o.Text, {
@@ -278,8 +278,8 @@ var T = a.memo(function(e) {
     className: n,
     onClick: s,
     onContextMenu: r
-  } = e, [o, u] = a.useState(!1), [d, m] = a.useState(t.filename.split(".").slice(-1)[0]), {
-    fileContents: f,
+  } = e, [o, u] = a.useState(!1), [d, f] = a.useState(t.filename.split(".").slice(-1)[0]), {
+    fileContents: m,
     bytesLeft: h,
     hadError: p
   } = function(e, t) {
@@ -308,9 +308,9 @@ var T = a.memo(function(e) {
             u = r.decode(await s.arrayBuffer()),
             d = null !== (n = s.headers.get("content-range")) && void 0 !== n ? n : "0",
             c = null !== (a = s.headers.get("content-length")) && void 0 !== a ? a : "1",
-            m = parseInt(d.split("/")[1]),
-            f = m - parseInt(c);
-          i(0 === f ? u : u.slice(0, -1)), o(f), l(!1)
+            f = parseInt(d.split("/")[1]),
+            m = f - parseInt(c);
+          i(0 === m ? u : u.slice(0, -1)), o(m), l(!1)
         } catch (e) {
           o(0), l(!0)
         }
@@ -330,12 +330,12 @@ var T = a.memo(function(e) {
     className: n
   }) : (0, l.jsx)(N, {
     attachment: t,
-    fileContents: f,
+    fileContents: m,
     bytesLeft: h,
     expanded: o,
     setExpanded: u,
     language: d,
-    setLanguage: m,
+    setLanguage: f,
     className: i(E.newMosaicStyle, n)
   })
 }, (e, t) => e.attachment.id === t.attachment.id && e.className === t.className)

@@ -16,8 +16,8 @@ var l = n("37983"),
   u = n("458960"),
   d = n("77078"),
   c = n("95032"),
-  m = n("718517"),
-  f = n("829536"),
+  f = n("718517"),
+  m = n("829536"),
   h = n("563680"),
   p = n("725962"),
   g = n("672724"),
@@ -162,8 +162,8 @@ class P extends a.Component {
       onDragStart: o,
       onToggleMuted: d,
       onVolumeShow: c,
-      onVolumeHide: m,
-      width: f,
+      onVolumeHide: f,
+      width: m,
       volume: h,
       type: p
     } = this.props;
@@ -172,7 +172,7 @@ class P extends a.Component {
       onClick: e => e.stopPropagation(),
       onDoubleClick: e => e.stopPropagation(),
       style: this.getAnimatedStyle(),
-      children: [this.renderPlayIcon(), "string" == typeof f || f > 250 ? (0, l.jsx)(D, {
+      children: [this.renderPlayIcon(), "string" == typeof m || m > 250 ? (0, l.jsx)(D, {
         current: n,
         duration: a
       }) : null, (0, l.jsx)(g.default, {
@@ -195,7 +195,7 @@ class P extends a.Component {
           onValueChange: e => i(e, g.default.Types.VOLUME),
           onToggleMute: d,
           onVolumeShow: c,
-          onVolumeHide: m,
+          onVolumeHide: f,
           iconClassName: A.controlIcon,
           sliderWrapperClassName: A.volumeSliderWrapper
         })
@@ -346,8 +346,8 @@ class k extends a.PureComponent {
     } = this.playPausePopRef;
     if (null == d) return;
     s && !t.playing ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == c || c.pop(s))) : !s && t.playing && (d.pause(), null == c || c.pop(s), null == n || n());
-    let m = (0, h.getFullScreenNode)(d.parentNode, d);
-    i && !t.fullscreen && null != m ? ((0, h.requestFullScreen)(m), m.addEventListener(h.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit)) : !i && t.fullscreen && null != m && (m.removeEventListener(h.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit), (0, h.exitFullScreen)(m)), o === g.default.Types.DURATION && t.dragging !== g.default.Types.DURATION && s ? d.pause() : o !== g.default.Types.DURATION && t.dragging === g.default.Types.DURATION && s && d.play(), r !== t.muted && (d.muted = r, null == a || a(r)), u !== t.volume && (d.volume = u, null == l || l(u))
+    let f = (0, h.getFullScreenNode)(d.parentNode, d);
+    i && !t.fullscreen && null != f ? ((0, h.requestFullScreen)(f), f.addEventListener(h.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit)) : !i && t.fullscreen && null != f && (f.removeEventListener(h.FULLSCREEN_CHANGE_EVENT, this.handleFullScreenExit), (0, h.exitFullScreen)(f)), o === g.default.Types.DURATION && t.dragging !== g.default.Types.DURATION && s ? d.pause() : o !== g.default.Types.DURATION && t.dragging === g.default.Types.DURATION && s && d.play(), r !== t.muted && (d.muted = r, null == a || a(r)), u !== t.volume && (d.volume = u, null == l || l(u))
   }
   componentWillUnmount() {
     this._unmounted = !0;
@@ -378,7 +378,7 @@ class k extends a.PureComponent {
         let e = l();
         e !== this.state.muted && (a.muted = e, s.muted = e)
       }
-      this.setState(s), a.play(), null == t || t(e, a.currentTime * m.default.Millis.SECOND, a.duration * m.default.Millis.SECOND)
+      this.setState(s), a.play(), null == t || t(e, a.currentTime * f.default.Millis.SECOND, a.duration * f.default.Millis.SECOND)
     }
   }
   getWidth() {
@@ -490,7 +490,7 @@ class k extends a.PureComponent {
         currentTime: o,
         duration: u,
         hasClickedPlay: d,
-        hideControls: m,
+        hideControls: f,
         muted: p,
         playing: g,
         fullscreen: v,
@@ -502,8 +502,8 @@ class k extends a.PureComponent {
       buffers: r,
       currentTime: o,
       duration: u,
-      volume: (0, f.amplitudeToPerceptual)(C, 1),
-      hide: t === L.VIDEO && m,
+      volume: (0, m.amplitudeToPerceptual)(C, 1),
+      hide: t === L.VIDEO && f,
       muted: p,
       autoPlay: n,
       onDrag: this.handleDrag,
@@ -584,10 +584,10 @@ class k extends a.PureComponent {
       renderOverlayContent: d
     } = this.props, {
       fullscreen: c,
-      hideControls: m,
-      playing: f
+      hideControls: f,
+      playing: m
     } = this.state, h = A.wrapperPaused;
-    if (t === L.AUDIO ? h = A.wrapperAudio : m ? h = A.wrapperControlsHidden : f && (h = A.wrapperPlaying), a && t === L.VIDEO) {
+    if (t === L.AUDIO ? h = A.wrapperAudio : f ? h = A.wrapperControlsHidden : m && (h = A.wrapperPlaying), a && t === L.VIDEO) {
       let t = this.getWidth();
       return (0, l.jsxs)("div", {
         className: i(h, {
@@ -614,12 +614,12 @@ class k extends a.PureComponent {
       "data-fullscreen": c,
       onMouseEnter: this.handleMouseEnter,
       onMouseLeave: this.handleMouseLeave,
-      onMouseMove: f ? this.handleMouseMove : void 0,
+      onMouseMove: m ? this.handleMouseMove : void 0,
       onKeyDown: this.handleKeyDown,
       style: this.getMediaStyle(),
       children: [this.renderMetadata(), t === L.AUDIO ? this.renderAudio() : this.renderVideo(), this.renderControls(), t === L.VIDEO ? this.renderPlayPausePop() : null, null != d ? (0, l.jsx)("div", {
         className: i({
-          [A.overlayContentHidden]: f || c
+          [A.overlayContentHidden]: m || c
         }),
         children: d()
       }) : null]
@@ -665,7 +665,7 @@ class k extends a.PureComponent {
       } = this.mediaRef;
       if (t === g.default.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
       else if (t === g.default.Types.VOLUME) {
-        let t = (0, f.perceptualToAmplitude)(e, 1);
+        let t = (0, m.perceptualToAmplitude)(e, 1);
         0 === t ? this.setState({
           muted: !0,
           volume: t

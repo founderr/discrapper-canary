@@ -13,8 +13,8 @@ var l = n("37983"),
   u = n("206230"),
   d = n("806135"),
   c = n("170113"),
-  m = n("316680"),
-  f = n("830837"),
+  f = n("316680"),
+  m = n("830837"),
   h = n("132755"),
   p = n("659500"),
   g = n("718517"),
@@ -100,7 +100,7 @@ var N = a.memo(function(e) {
     ec = a.useCallback(() => {
       K(!1), V === B && es()
     }, [V, B, es]),
-    em = a.useCallback(e => {
+    ef = a.useCallback(e => {
       let t = k.current;
       if (null == B || null == t) return;
       let n = e * B;
@@ -109,16 +109,16 @@ var N = a.memo(function(e) {
   a.useEffect(() => {
     !X && z && J(!0)
   }, [z, X]);
-  let ef = a.useRef(null);
+  let em = a.useRef(null);
   a.useEffect(() => {
     if (X || z) {
       if (z) {
         var e, t;
-        ef.current = performance.now(), null == P || P(!1, V, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * g.default.Millis.SECOND)
+        em.current = performance.now(), null == P || P(!1, V, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * g.default.Millis.SECOND)
       } else {
         let e = performance.now(),
-          t = ef.current;
-        null == w || w(V, null != t ? (e - t) / 1e3 : 0), ef.current = null
+          t = em.current;
+        null == w || w(V, null != t ? (e - t) / 1e3 : 0), em.current = null
       }
     }
   }, [z]), t = k, n = z, s = F, a.useEffect(() => {
@@ -143,7 +143,7 @@ var N = a.memo(function(e) {
       c !== t && M(!1)
     }
   }, [c, N, M]);
-  let eh = z ? f.default : h.default,
+  let eh = z ? m.default : h.default,
     ep = z ? I.default.Messages.PAUSE : I.default.Messages.PLAY;
   T = "Safari" === platform.name ? (0, l.jsx)(a.Suspense, {
     children: (0, l.jsx)(_, {
@@ -207,14 +207,14 @@ var N = a.memo(function(e) {
       duration: null != B ? B : 1,
       playing: z,
       played: X,
-      onDrag: em,
+      onDrag: ef,
       onDragStart: ed,
       onDragEnd: ec
     }), (0, l.jsx)(S, {
       played: X,
       currentTime: V,
       duration: B
-    }), (0, l.jsx)(m.default, {
+    }), (0, l.jsx)(f.default, {
       className: x.volumeButton,
       iconClassName: x.volumeButtonIcon,
       sliderWrapperClassName: x.volumeSlider,

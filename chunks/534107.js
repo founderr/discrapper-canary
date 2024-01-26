@@ -13,8 +13,8 @@ var l = n("37983"),
   u = n("731898"),
   d = n("554743"),
   c = n("284679"),
-  m = n("293246"),
-  f = n("247883"),
+  f = n("293246"),
+  m = n("247883"),
   h = n("525864"),
   p = n("899090");
 let g = h.VOICE_RECORDING_MIN_DURATION_MILLIS / 1e3,
@@ -41,8 +41,8 @@ function x(e) {
     segmentValue: u,
     segmentIndex: d,
     constrainMin: c
-  } = e, m = c ? (24 - v) * u + v : 24 * u;
-  if (0 !== m) t = i, n = 6 * d * r, l = (o / 2 - m / 2) * r, a = m * r, s = 1 * r, t.moveTo(n, l + s), t.lineTo(n, l + a - s), t.arc(n + s, l + a - s, s, Math.PI, 0, !0), t.lineTo(n + 2 * s, l + s), t.arc(n + s, l + s, s, 0, Math.PI, !0), t.closePath()
+  } = e, f = c ? (24 - v) * u + v : 24 * u;
+  if (0 !== f) t = i, n = 6 * d * r, l = (o / 2 - f / 2) * r, a = f * r, s = 1 * r, t.moveTo(n, l + s), t.lineTo(n, l + a - s), t.arc(n + s, l + a - s, s, Math.PI, 0, !0), t.lineTo(n + 2 * s, l + s), t.arc(n + s, l + s, s, 0, Math.PI, !0), t.closePath()
 }
 
 function _(e, t, n) {
@@ -102,7 +102,7 @@ function N(e) {
               let n = t - e.length;
               return e.concat(Array(n).fill(0))
             }
-            return (0, m.default)(e, t)
+            return (0, f.default)(e, t)
           }
         }(null != n ? n : [], l)) && void 0 !== e ? e : C
       }, [n, l]);
@@ -122,14 +122,14 @@ function N(e) {
       i = (0, o.useToken)(r.default.unsafe_rawColors.WHITE_500).hex(),
       u = t ? s : n,
       [d, c] = _(u, t, e),
-      m = t ? i : e ? a : l,
-      [f, h] = _(m, t, e),
+      f = t ? i : e ? a : l,
+      [m, h] = _(f, t, e),
       p = e ? u : l,
       [g, E] = _(p, t, e);
     return {
       lastBackgroundFillColor: d,
       backgroundFillColor: c,
-      lastActiveFillColor: f,
+      lastActiveFillColor: m,
       activeFillColor: h,
       lastInactiveFillColor: g,
       inactiveFillColor: E
@@ -142,7 +142,7 @@ function N(e) {
       duration: c,
       numSegments: O.length
     });
-    L.current = O.map((t, n) => new f.default(n < e ? t : 0))
+    L.current = O.map((t, n) => new m.default(n < e ? t : 0))
   }, [O]), a.useEffect(() => {
     let e = L.current;
     if (null == e) return;
@@ -184,12 +184,12 @@ function N(e) {
       a.fill();
       let [d, c] = S(B, H, n, P.current);
       i = i || c;
-      let [m, f] = S(V, F, n, P.current);
-      i = i || f;
+      let [f, m] = S(V, F, n, P.current);
+      i = i || m;
       for (let e = 0; e < s.length; e++) {
         let t = s[e],
           n = Math.max(t.getCurrentValue(), O[e] - .1);
-        a.beginPath(), a.fillStyle = t.isReset ? d : m, x({
+        a.beginPath(), a.fillStyle = t.isReset ? d : f, x({
           context: a,
           devicePixelRatio: w,
           canvasHeight: r,

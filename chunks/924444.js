@@ -16,8 +16,8 @@ var l = n("37983"),
   u = n("304580"),
   d = n("605160"),
   c = n("659500"),
-  m = n("103603"),
-  f = n("874276"),
+  f = n("103603"),
+  m = n("874276"),
   h = n("952368"),
   p = n("888673"),
   g = n("505684"),
@@ -89,7 +89,7 @@ function _(e) {
     height: o,
     animated: u,
     children: d,
-    responsive: f,
+    responsive: m,
     renderLinkComponent: p,
     maxWidth: g,
     maxHeight: _,
@@ -101,7 +101,7 @@ function _(e) {
   } = e, {
     width: j,
     height: y
-  } = (0, m.zoomFit)(i, o), R = r.isMobile && null != N;
+  } = (0, f.zoomFit)(i, o), R = r.isMobile && null != N;
   a.useEffect(() => {
     if (null != N) return c.ComponentDispatch.subscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, N), () => {
       c.ComponentDispatch.unsubscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, N)
@@ -128,7 +128,7 @@ function _(e) {
         children: d,
         animated: !e && u,
         autoPlay: !e,
-        responsive: f,
+        responsive: m,
         onContextMenu: L,
         ...A
       }, t)
@@ -155,7 +155,7 @@ function S(e) {
   } = e, {
     width: h,
     height: g
-  } = (0, m.zoomFit)(n, a), E = r.isMobile && null != s, _ = u ? e => {
+  } = (0, f.zoomFit)(n, a), E = r.isMobile && null != s, _ = u ? e => {
     e.stopPropagation(), e.preventDefault()
   } : c.onContextMenu;
   return (0, l.jsxs)("div", {
@@ -173,10 +173,10 @@ function S(e) {
         maxWidth: h,
         maxHeight: g,
         renderLinkComponent: o,
-        volume: f.getVolume,
-        autoMute: f.getMuted,
-        onVolumeChange: f.setVolume,
-        onMute: f.setMuted,
+        volume: m.getVolume,
+        autoMute: m.getMuted,
+        onVolumeChange: m.setVolume,
+        onMute: m.setMuted,
         autoPlay: !e,
         onContextMenu: _,
         ...c

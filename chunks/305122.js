@@ -43,8 +43,8 @@ var l = n("917351"),
   u = n("872173"),
   d = n("235004"),
   c = n("389480"),
-  m = n("24156"),
-  f = n("846325"),
+  f = n("24156"),
+  m = n("846325"),
   h = n("49111"),
   p = n("397336"),
   g = n("782340");
@@ -56,7 +56,7 @@ let E = async e => {
           guild_ids: e
         }
       }),
-      n = t.body.map(e => (0, c.soundboardSoundFromAPI)(e, f.DEFAULT_SOUND_GUILD_ID));
+      n = t.body.map(e => (0, c.soundboardSoundFromAPI)(e, m.DEFAULT_SOUND_GUILD_ID));
     i.default.dispatch({
       type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS",
       soundboardSounds: n
@@ -79,7 +79,7 @@ let E = async e => {
   let t = v("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
   return E(e), t
 }, I = () => {
-  let e = (0, m.getGuildIdsToFetchSoundsFor)();
+  let e = (0, f.getGuildIdsToFetchSoundsFor)();
   if (0 === e.length) return Promise.resolve();
   let t = v("SOUNDBOARD_SOUNDS_RECEIVED");
   return i.default.dispatch({

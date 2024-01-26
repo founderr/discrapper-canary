@@ -227,14 +227,14 @@ function D(e) {
         children: w
       })
     }) : null,
-    H = {
+    B = {
       maxHeight: F.height - 43 - 25
     };
-  j && (H.maxHeight -= 40);
-  let B = null != f && s;
+  j && (B.maxHeight -= 40);
+  let H = null != f && s;
   return (0, a.jsx)("div", {
     className: i(_, L.messagesPopoutWrap),
-    style: H,
+    style: B,
     onClick: O,
     onDoubleClick: O,
     "aria-label": e["aria-label"],
@@ -242,7 +242,7 @@ function D(e) {
       component: h(),
       children: [(0, a.jsxs)(c.AdvancedScroller, {
         className: i(L.messagesPopout, N),
-        onScroll: B ? D : void 0,
+        onScroll: H ? D : void 0,
         ref: b,
         children: [(0, a.jsx)(u.ListNavigatorProvider, {
           navigator: y,

@@ -13,8 +13,8 @@ var l = n("37983"),
   u = n("340616"),
   d = n("269936"),
   c = n("385976"),
-  m = n("855920"),
-  f = n("393414"),
+  f = n("855920"),
+  m = n("393414"),
   h = n("305961"),
   p = n("666897"),
   g = n("505684"),
@@ -171,7 +171,7 @@ let U = {
               channelId: a
             });
             return
-          }(0, f.transitionTo)(L.Routes.CHANNEL(e, a))
+          }(0, m.transitionTo)(L.Routes.CHANNEL(e, a))
         }(e.guildId, e.channelId)
       };
       if (!(0, M.isStaticRouteIconType)(e.channelId)) return null;
@@ -279,7 +279,7 @@ function k(e) {
           let {
             key: i
           } = s;
-          return e.src ? (0, l.jsx)(m.MessageStandardEmoji, {
+          return e.src ? (0, l.jsx)(f.MessageStandardEmoji, {
             node: e,
             tooltipPosition: t,
             enableClick: n
@@ -308,7 +308,7 @@ function k(e) {
               name: t ? ":".concat(u.name, ":") : u.name
             }
           }
-          return (0, l.jsx)(m.MessageCustomEmoji, {
+          return (0, l.jsx)(f.MessageCustomEmoji, {
             isInteracting: o,
             node: e,
             tooltipPosition: t,

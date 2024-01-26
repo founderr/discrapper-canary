@@ -14,8 +14,8 @@ var a = n("414456"),
   u = n("991497"),
   d = n("660074"),
   c = n("45029"),
-  m = n("990745"),
-  f = n("620193"),
+  f = n("990745"),
+  m = n("620193"),
   h = n("368121"),
   p = n("228427"),
   g = n("959097"),
@@ -78,7 +78,7 @@ var a = n("414456"),
         break;
       case "home":
       case "guide":
-        a = (0, l.jsx)(f.default, {
+        a = (0, l.jsx)(m.default, {
           className: C.icon,
           "aria-label": v.default.Messages.SERVER_GUIDE
         });
@@ -103,7 +103,7 @@ var a = n("414456"),
         });
         break;
       case "media":
-        a = (0, l.jsx)(m.default, {
+        a = (0, l.jsx)(f.default, {
           className: C.icon,
           "aria-label": v.default.Messages.MEDIA_CHANNEL
         })
