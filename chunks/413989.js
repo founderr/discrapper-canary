@@ -50,8 +50,6 @@ function A(e) {
             }, n.id)
           })]
         }), (0, a.jsx)("div", {
-          className: g.spacer
-        }), (0, a.jsx)("div", {
           className: g.checkboxContainer,
           children: (0, a.jsx)(m.ComboboxItem.Checkbox, {
             checked: l
