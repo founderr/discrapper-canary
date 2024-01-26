@@ -62,7 +62,7 @@ let b = l.memo(e => {
   } = h.HangStatusExperiment.useExperiment({
     guildId: i.guild_id,
     location: "VoiceUsers"
-  }), $ = (0, r.useStateFromStores)([p.default], () => P ? p.default.getHangStatusActivity() : null, [P]), ee = (0, r.useStateFromStores)([T.default], () => T.default.findActivity(M, e => e.type === O.ActivityTypes.HANG_STATUS), [M]);
+  }), $ = (0, r.useStateFromStores)([T.default, p.default], () => Q ? P ? p.default.getHangStatusActivity() : T.default.findActivity(s.id, e => e.type === O.ActivityTypes.HANG_STATUS) : null);
   return (0, a.jsx)(m.default, {
     shakeLocation: y.ShakeLocation.VOICE_USER,
     isShaking: F,
@@ -82,8 +82,8 @@ let b = l.memo(e => {
       isStreaming: null != K && K.channelId === i.id,
       isWatching: null != Z && Z.state !== O.ApplicationStreamStates.ENDED,
       isGuest: k,
-      showHangStatus: Q && (C.default.getId() === s.id || null != ee),
-      hangStatusActivity: P ? $ : ee,
+      showHangStatus: Q && (C.default.getId() === s.id || null != $),
+      hangStatusActivity: $,
       isSelf: C.default.getId() === s.id,
       application: H ? z : void 0
     })
