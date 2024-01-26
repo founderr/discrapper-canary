@@ -281,7 +281,8 @@ class U extends l.PureComponent {
         hangStatusActivity: A,
         showHangStatus: M,
         isSelf: j,
-        application: O
+        application: O,
+        channelId: N.id
       };
       if (t) {
         var w;
