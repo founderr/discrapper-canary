@@ -1,5 +1,5 @@
 "use strict";
-t.r(x), t.d(x, {
+x.r(t), x.d(t, {
   createPendingReply: function() {
     return a
   },
@@ -10,31 +10,31 @@ t.r(x), t.d(x, {
     return y
   }
 });
-var s = t("913144");
+var s = x("913144");
 
 function a(i) {
   let {
-    message: x,
-    channel: t,
+    message: t,
+    channel: x,
     shouldMention: a,
     showMentionToggle: o,
     source: y
   } = i;
   s.default.dispatch({
     type: "CREATE_PENDING_REPLY",
-    message: x,
-    channel: t,
+    message: t,
+    channel: x,
     shouldMention: a,
     showMentionToggle: o,
     source: y
   })
 }
 
-function o(i, x) {
+function o(i, t) {
   s.default.dispatch({
     type: "SET_PENDING_REPLY_SHOULD_MENTION",
     channelId: i,
-    shouldMention: x
+    shouldMention: t
   })
 }
 

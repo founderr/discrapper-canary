@@ -35,15 +35,15 @@ var a = n("37983"),
   b = n("689476"),
   y = n("228220"),
   j = n("659500"),
-  F = n("701909"),
-  D = n("751520"),
+  D = n("701909"),
+  F = n("751520"),
   U = n("158998"),
   k = n("200745"),
   P = n("49111"),
   w = n("782340"),
   G = n("813069");
-let H = f("2015-05-15").local(),
-  B = (0, h.makeLazy)({
+let B = f("2015-05-15").local(),
+  H = (0, h.makeLazy)({
     createPromise: () => n.el("201959").then(n.bind(n, "201959")),
     webpackId: "201959"
   }),
@@ -140,7 +140,7 @@ let H = f("2015-05-15").local(),
     className: G.user,
     renderResult: V
   }),
-  Q = {
+  W = {
     [P.SearchTokenTypes.FILTER_FROM]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_FROM,
       component: K
@@ -202,7 +202,7 @@ let H = f("2015-05-15").local(),
           group: d,
           ...c
         } = e, f = "", h = l.useMemo(() => (function(e) {
-          let t = D.tokenizeQuery(e).map((e, t, n) => D.filterHasAnswer(e, n[t + 1]) ? e : new g.Token(e.getFullMatch(), g.NON_TOKEN_TYPE));
+          let t = F.tokenizeQuery(e).map((e, t, n) => F.filterHasAnswer(e, n[t + 1]) ? e : new g.Token(e.getFullMatch(), g.NON_TOKEN_TYPE));
           return t
         })(s.text), [s.text]), E = h.map(e => {
           let t = e.getFullMatch();
@@ -241,7 +241,7 @@ let H = f("2015-05-15").local(),
           className: G.searchLearnMore,
           ...e,
           children: (0, a.jsx)(m.Anchor, {
-            href: F.default.getArticleURL(P.HelpdeskArticles.USING_SEARCH),
+            href: D.default.getArticleURL(P.HelpdeskArticles.USING_SEARCH),
             title: w.default.Messages.LEARN_MORE,
             children: (0, a.jsx)(O.default, {})
           })
@@ -256,7 +256,7 @@ let H = f("2015-05-15").local(),
           showFilter: r,
           searchId: o,
           ...u
-        } = e, d = D.getSearchOptionAnswer(null !== (t = n.token) && void 0 !== t ? t : "");
+        } = e, d = F.getSearchOptionAnswer(null !== (t = n.token) && void 0 !== t ? t : "");
         return (0, a.jsxs)(m.Clickable, {
           className: i(G.option, G.searchOption),
           onClick: l,
@@ -277,7 +277,7 @@ let H = f("2015-05-15").local(),
       }
     }
   };
-class W extends l.PureComponent {
+class Q extends l.PureComponent {
   componentDidUpdate(e, t) {
     let {
       resultsState: n,
@@ -341,9 +341,9 @@ class W extends l.PureComponent {
       } = e;
       if (s.type !== r.mode.type) this.setSelectedIndex(-1);
       else if (t.selectedIndex >= 0 && (t.selectedIndex === n || r.autocompletes.length !== i.length)) {
-        let e = D.getFlattenedStringArray(r.autocompletes, r.mode.type),
+        let e = F.getFlattenedStringArray(r.autocompletes, r.mode.type),
           n = e[t.selectedIndex - 1],
-          a = D.getFlattenedStringArray(i, s.type),
+          a = F.getFlattenedStringArray(i, s.type),
           o = a.indexOf(n); - 1 !== o ? this.setSelectedIndex(o) : t.selectedIndex >= l && this.setSelectedIndex(l - 1)
       }
     }, this.focusNextOption = () => {
@@ -356,14 +356,14 @@ class W extends l.PureComponent {
       } = this.state, {
         resultsState: n
       } = this.props;
-      !D.showDatePicker(n.mode.filter) && this.focusOption(t + e)
+      !F.showDatePicker(n.mode.filter) && this.focusOption(t + e)
     }, this.focusOption = e => {
       let t = e,
         {
           autocompletes: n
         } = this.props.resultsState,
         a = this.shouldShowSearchQuery();
-      t < -1 || !a && t < 0 ? t = D.getTotalResults(n) - 1 : a && t >= D.getTotalResults(n) ? t = -1 : !a && t >= D.getTotalResults(n) && (t = 0), this.setSelectedIndex(t)
+      t < -1 || !a && t < 0 ? t = F.getTotalResults(n) - 1 : a && t >= F.getTotalResults(n) ? t = -1 : !a && t >= F.getTotalResults(n) && (t = 0), this.setSelectedIndex(t)
     }, this.selectOption = e => {
       let t = e;
       if (null == t && (t = this.state.selectedIndex), t < 0) return !1;
@@ -371,8 +371,8 @@ class W extends l.PureComponent {
         autocompletes: n,
         mode: a
       } = this.props.resultsState;
-      if (D.showDatePicker(a.filter)) return;
-      let l = D.getFlattenedStringArray(n, a.type);
+      if (F.showDatePicker(a.filter)) return;
+      let l = F.getFlattenedStringArray(n, a.type);
       if (t >= l.length) return !1;
       let s = l[t],
         i = function(e) {
@@ -402,13 +402,13 @@ class W extends l.PureComponent {
       let {
         mode: e
       } = this.props.resultsState;
-      return e.type !== P.SearchPopoutModes.FILTER && e.type !== P.SearchPopoutModes.EMPTY && !D.showDatePicker(e.filter)
+      return e.type !== P.SearchPopoutModes.FILTER && e.type !== P.SearchPopoutModes.EMPTY && !F.showDatePicker(e.filter)
     }, this.renderDatePicker = () => (0, a.jsxs)("div", {
       className: G.datePicker,
-      children: [(0, a.jsx)(B, {
+      children: [(0, a.jsx)(H, {
         onSelect: this.handleDateChange,
         maxDate: f().local(),
-        minDate: H
+        minDate: B
       }), (0, a.jsxs)("div", {
         className: G.datePickerHint,
         children: [(0, a.jsxs)("span", {
@@ -435,13 +435,13 @@ class W extends l.PureComponent {
         autocompletes: l,
         mode: s
       } = this.props.resultsState;
-      if (D.showDatePicker(s.filter)) return this.renderDatePicker();
+      if (F.showDatePicker(s.filter)) return this.renderDatePicker();
       let i = -1;
       return l.map(l => {
         var r, o, u;
         let d, c;
         if (null == l || 0 === l.results.length) return null;
-        let f = null !== (r = Q[l.group]) && void 0 !== r ? r : {};
+        let f = null !== (r = W[l.group]) && void 0 !== r ? r : {};
         null != f.titleText && (c = "".concat(l.group, "-header"), d = (0, a.jsx)("div", {
           id: c,
           className: G.header,
@@ -484,10 +484,10 @@ var X = l.forwardRef((e, t) => {
       n = null != e ? e : t;
     o(null != n, "SearchPopout.getStateFromStores - invalid searchId");
     let a = M.default.getState(n),
-      l = D.getTotalResults(a.autocompletes);
+      l = F.getTotalResults(a.autocompletes);
     return [n, a, l]
   });
-  return (0, a.jsx)(W, {
+  return (0, a.jsx)(Q, {
     ...e,
     searchId: n,
     resultsState: l,

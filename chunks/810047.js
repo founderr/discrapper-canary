@@ -1,98 +1,98 @@
 "use strict";
-l.r(e), l.d(e, {
+x.r(t), x.d(t, {
   FetchState: function() {
-    return i
+    return a
   },
   default: function() {
-    return s
+    return c
   }
 });
-var a, i, n = l("917351"),
-  I = l.n(n),
-  c = l("446674"),
-  u = l("913144");
-(a = i || (i = {}))[a.FETCHING = 0] = "FETCHING", a[a.FETCHED = 1] = "FETCHED", a[a.ERROR = 2] = "ERROR";
-let o = {},
-  d = {},
-  T = {};
+var s, a, o = x("917351"),
+  y = x.n(o),
+  d = x("446674"),
+  k = x("913144");
+(s = a || (a = {}))[s.FETCHING = 0] = "FETCHING", s[s.FETCHED = 1] = "FETCHED", s[s.ERROR = 2] = "ERROR";
+let p = {},
+  r = {},
+  e = {};
 
-function C(t) {
+function n(i) {
   let {
-    includesInactive: e
-  } = t;
-  return "includes_inactive:".concat(e)
+    includesInactive: t
+  } = i;
+  return "includes_inactive:".concat(t)
 }
-class r extends c.default.Store {
-  getLastFetchTimeMs(t) {
+class m extends d.default.Store {
+  getLastFetchTimeMs(i) {
     let {
-      includesInactive: e
-    } = t;
-    return T[C({
-      includesInactive: e
+      includesInactive: t
+    } = i;
+    return e[n({
+      includesInactive: t
     })]
   }
-  getFetchState(t) {
+  getFetchState(i) {
     let {
-      includesInactive: e
-    } = t;
-    return d[C({
-      includesInactive: e
+      includesInactive: t
+    } = i;
+    return r[n({
+      includesInactive: t
     })]
   }
-  getCollections(t) {
+  getCollections(i) {
     let {
-      includesInactive: e
-    } = t;
-    return o[C({
-      includesInactive: e
+      includesInactive: t
+    } = i;
+    return p[n({
+      includesInactive: t
     })]
   }
 }
-var s = new r(u.default, {
-  APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function(t) {
+var c = new m(k.default, {
+  APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function(i) {
     let {
-      includesInactive: e
-    } = t;
-    d = {
-      ...d,
-      [C({
-        includesInactive: e
+      includesInactive: t
+    } = i;
+    r = {
+      ...r,
+      [n({
+        includesInactive: t
       })]: 0
     }
   },
-  APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: function(t) {
-    var e;
+  APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: function(i) {
+    var t;
     let {
-      collections: l,
-      includesInactive: a
-    } = t, i = C({
-      includesInactive: a
+      collections: x,
+      includesInactive: s
+    } = i, a = n({
+      includesInactive: s
     });
-    let n = (e = l.map(t => {
-      var e;
-      return t.application_directory_collection_items = (e = t.application_directory_collection_items, I.sortBy(e, ["position", "id"])), t
-    }), I.sortBy(e, ["position", "id"]));
-    o = {
-      ...o,
-      [i]: n
-    }, d = {
-      ...d,
-      [i]: 1
+    let o = (t = x.map(i => {
+      var t;
+      return i.application_directory_collection_items = (t = i.application_directory_collection_items, y.sortBy(t, ["position", "id"])), i
+    }), y.sortBy(t, ["position", "id"]));
+    p = {
+      ...p,
+      [a]: o
+    }, r = {
+      ...r,
+      [a]: 1
     };
-    let c = Date.now();
-    T = {
-      ...T,
-      [i]: c
+    let d = Date.now();
+    e = {
+      ...e,
+      [a]: d
     }
   },
-  APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: function(t) {
+  APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: function(i) {
     let {
-      includesInactive: e
-    } = t;
-    d = {
-      ...d,
-      [C({
-        includesInactive: e
+      includesInactive: t
+    } = i;
+    r = {
+      ...r,
+      [n({
+        includesInactive: t
       })]: 2
     }
   }

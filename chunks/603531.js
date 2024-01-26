@@ -35,43 +35,43 @@ var a = n("37983"),
   b = n("554372"),
   y = n("49111"),
   j = n("782340"),
-  F = n("555821"),
-  D = n("877671"),
+  D = n("555821"),
+  F = n("877671"),
   U = l.memo(function e(t) {
     var n, l, s;
     let p;
     let {
       channel: g,
-      message: F,
+      message: D,
       compact: U = !1,
       className: P,
       onContextMenu: w,
       onClick: G,
-      disableInteraction: H = !1,
-      hasThread: B,
+      disableInteraction: B = !1,
+      hasThread: H,
       treatSpam: V
-    } = t, Y = y.MessageTypesWithLazyLoadedReferences.has(F.type) ? F.messageReference : void 0, z = (0, r.useStateFromStores)([f.default], () => f.default.getMessageByReference(Y)), K = (0, r.useStateFromStores)([E.default], () => F.type === y.MessageTypes.THREAD_STARTER_MESSAGE && z.state === f.ReferencedMessageState.LOADED ? E.default.getChannel(z.message.channel_id) : null), Q = h.InlineAttachmentMedia.useSetting(), W = h.InlineEmbedMedia.useSetting(), X = h.RenderEmbeds.useSetting(), q = h.GifAutoPlay.useSetting(), Z = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (n = F.editedTimestamp) && void 0 !== n ? n : F.timestamp).valueOf()), J = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (l = null == g ? void 0 : g.guild_id) && void 0 !== l ? l : "", (null !== (s = F.editedTimestamp) && void 0 !== s ? s : F.timestamp).valueOf()), $ = (0, c.default)(null == g ? void 0 : g.id), {
+    } = t, Y = y.MessageTypesWithLazyLoadedReferences.has(D.type) ? D.messageReference : void 0, z = (0, r.useStateFromStores)([f.default], () => f.default.getMessageByReference(Y)), K = (0, r.useStateFromStores)([E.default], () => D.type === y.MessageTypes.THREAD_STARTER_MESSAGE && z.state === f.ReferencedMessageState.LOADED ? E.default.getChannel(z.message.channel_id) : null), W = h.InlineAttachmentMedia.useSetting(), Q = h.InlineEmbedMedia.useSetting(), X = h.RenderEmbeds.useSetting(), q = h.GifAutoPlay.useSetting(), Z = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (n = D.editedTimestamp) && void 0 !== n ? n : D.timestamp).valueOf()), J = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (l = null == g ? void 0 : g.guild_id) && void 0 !== l ? l : "", (null !== (s = D.editedTimestamp) && void 0 !== s ? s : D.timestamp).valueOf()), $ = (0, c.default)(null == g ? void 0 : g.id), {
       disableReactionCreates: ee
     } = (0, C.default)(g), {
       content: et,
       hasSpoilerEmbeds: en
-    } = (0, M.default)(F, {
-      hideSimpleEmbedContent: W && X,
+    } = (0, M.default)(D, {
+      hideSimpleEmbedContent: Q && X,
       allowList: Z.showListsAndHeaders || J.showListsAndHeaders,
       allowHeading: Z.showListsAndHeaders || J.showListsAndHeaders,
       allowLinks: Z.showMaskedLinks || J.showMaskedLinks,
       previewLinkTarget: Z.showMaskedLinks || J.showMaskedLinks
-    }), ea = (0, I.default)(F), el = (0, r.useStateFromStores)([E.default], () => F.hasFlag(y.MessageFlags.HAS_THREAD) && E.default.getChannel(F.id)), es = F.type === y.MessageTypes.THREAD_STARTER_MESSAGE && z.state === f.ReferencedMessageState.LOADED && null != K, ei = !es && void 0 === p, er = (0, v.default)({
-      message: F,
+    }), ea = (0, I.default)(D), el = (0, r.useStateFromStores)([E.default], () => D.hasFlag(y.MessageFlags.HAS_THREAD) && E.default.getChannel(D.id)), es = D.type === y.MessageTypes.THREAD_STARTER_MESSAGE && z.state === f.ReferencedMessageState.LOADED && null != K, ei = !es && void 0 === p, er = (0, v.default)({
+      message: D,
       channel: g,
       enabled: ei
-    }), eo = (0, u.useShouldRedactExplicitContent)(g.id, F.author.id), eu = (0, d.useShouldRenderReportFalsePositiveButton)(F.id, "inbox_message");
+    }), eo = (0, u.useShouldRedactExplicitContent)(g.id, D.author.id), eu = (0, d.useShouldRenderReportFalsePositiveButton)(D.id, "inbox_message");
     return es ? (0, a.jsx)(e, {
       ...t,
       message: z.message,
       channel: K,
       hasThread: !1
-    }) : (m.default.isBlocked(F.author.id) ? p = j.default.Messages.BLOCKED_MESSAGE_COUNT : (0, _.isSpam)(F) && V && (p = j.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== p) ? (0, a.jsx)(k, {
+    }) : (m.default.isBlocked(D.author.id) ? p = j.default.Messages.BLOCKED_MESSAGE_COUNT : (0, _.isSpam)(D) && V && (p = j.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== p) ? (0, a.jsx)(k, {
       className: P,
       compact: U,
       count: 1,
@@ -79,11 +79,11 @@ var a = n("37983"),
     }) : (0, a.jsx)(S.default, {
       compact: U,
       className: i(P, {
-        [D.ephemeral]: (0, N.hasFlag)(F.flags, y.MessageFlags.EPHEMERAL),
-        [D.disableInteraction]: H,
-        [D.groupStart]: t.isGroupStart
+        [F.ephemeral]: (0, N.hasFlag)(D.flags, y.MessageFlags.EPHEMERAL),
+        [F.disableInteraction]: B,
+        [F.groupStart]: t.isGroupStart
       }),
-      childrenRepliedMessage: (0, b.default)(F, g, Y, z, U),
+      childrenRepliedMessage: (0, b.default)(D, g, Y, z, U),
       childrenHeader: (0, R.default)({
         ...t,
         author: ea,
@@ -91,7 +91,7 @@ var a = n("37983"),
       }),
       childrenAccessories: (0, a.jsx)(A.MessageAccessories, {
         channel: g,
-        message: F,
+        message: D,
         hasSpoilerEmbeds: en,
         compact: U,
         canSuppressEmbeds: !1,
@@ -99,10 +99,10 @@ var a = n("37983"),
         disableReactionReads: !1,
         disableReactionCreates: ee,
         disableReactionUpdates: !1,
-        renderThreadAccessory: B,
+        renderThreadAccessory: H,
         renderComponentAccessory: !1,
-        inlineAttachmentMedia: Q,
-        inlineEmbedMedia: W,
+        inlineAttachmentMedia: W,
+        inlineEmbedMedia: Q,
         renderEmbeds: X,
         gifAutoPlay: q,
         showListsAndHeaders: Z.showListsAndHeaders || J.showListsAndHeaders,
@@ -111,14 +111,14 @@ var a = n("37983"),
         shouldRedactExplicitContent: eo,
         shouldRenderCtaButton: eu
       }),
-      childrenExecutedCommand: (0, O.default)(F, g, U),
+      childrenExecutedCommand: (0, O.default)(D, g, U),
       childrenMessageContent: (0, x.default)(t, et),
       childrenSystemMessage: (0, L.default)(t),
       onContextMenu: w,
       onClick: G,
-      hasThread: !1 !== B && null != el && F.hasFlag(y.MessageFlags.HAS_THREAD),
-      hasReply: F.type === y.MessageTypes.REPLY,
-      isSystemMessage: (0, T.default)(F),
+      hasThread: !1 !== H && null != el && D.hasFlag(y.MessageFlags.HAS_THREAD),
+      hasReply: D.type === y.MessageTypes.REPLY,
+      isSystemMessage: (0, T.default)(D),
       messageRef: er
     })
   });
@@ -136,12 +136,12 @@ function k(e) {
     role: "group",
     childrenMessageContent: (0, a.jsx)(g.default, {
       compact: l,
-      className: F.blockedSystemMessage,
+      className: D.blockedSystemMessage,
       iconNode: (0, a.jsx)(p.default, {
-        className: F.blockedIcon
+        className: D.blockedIcon
       }),
       children: (0, a.jsx)("div", {
-        className: F.blockedMessageText,
+        className: D.blockedMessageText,
         children: s.format({
           count: n
         })

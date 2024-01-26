@@ -41,8 +41,8 @@ var i = s("37983"),
   D = s("895737"),
   k = s("210721"),
   U = s("845149"),
-  H = s("65324"),
-  w = s("646718"),
+  w = s("65324"),
+  H = s("646718"),
   B = s("49111"),
   z = s("782340"),
   V = s("139194"),
@@ -130,7 +130,7 @@ class K extends l.Component {
           sender: e
         }) : z.default.Messages.GIFT_SUBSCRIPTION_INFO.format({
           sender: e,
-          timeInterval: (null == l ? void 0 : l.interval) === w.SubscriptionIntervalTypes.MONTH ? z.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH : z.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
+          timeInterval: (null == l ? void 0 : l.interval) === H.SubscriptionIntervalTypes.MONTH ? z.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH : z.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
         })
       }
     }
@@ -250,7 +250,7 @@ class K extends l.Component {
         size: d.ModalSize.SMALL,
         className: V.modal,
         "aria-labelledby": a,
-        children: [null != l.giftStyle && !C && !S && (0, i.jsx)(H.default, {
+        children: [null != l.giftStyle && !C && !S && (0, i.jsx)(w.default, {
           defaultAnimationState: this.getDefaultAnimationStatus(),
           idleAnimationState: this.getIdleAnimationStatus(),
           giftStyle: l.giftStyle,
@@ -291,7 +291,7 @@ class K extends l.Component {
             className: V.body,
             variant: "text-sm/normal",
             children: this.bodyText
-          }), C && !S && null != l.giftStyle && !g && (0, i.jsx)(H.default, {
+          }), C && !S && null != l.giftStyle && !g && (0, i.jsx)(w.default, {
             defaultAnimationState: this.getDefaultAnimationStatus(),
             idleAnimationState: this.getIdleAnimationStatus(),
             className: V.giftAnimation,

@@ -40,7 +40,7 @@ r.r(t), r.d(t, {
     return L
   },
   doneEditingClydeProfile: function() {
-    return D
+    return h
   }
 });
 var n = r("872717"),
@@ -236,7 +236,7 @@ function L() {
   })
 }
 
-function D() {
+function h() {
   i.default.dispatch({
     type: "CLYDE_PROFILE_EDITING_END"
   })

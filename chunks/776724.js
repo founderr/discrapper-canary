@@ -4,8 +4,8 @@ a.r(t), a.d(t, {
     return N
   }
 }), a("222007");
-var l = a("37983"),
-  s = a("884691"),
+var s = a("37983"),
+  l = a("884691"),
   n = a("446674"),
   i = a("77078"),
   o = a("913144"),
@@ -26,64 +26,64 @@ function N(e) {
     onBack: I
   } = e, x = (0, n.useStateFromStores)([c.default], () => c.default.getAppealClassificationId()), {
     classification: f
-  } = (0, E.useSafetyHubClassification)(null != x ? x : ""), T = (0, u.capitalizeText)(null == f ? void 0 : f.description), g = (0, n.useStateFromStores)([c.default], () => c.default.getIsSubmitting()), m = (0, n.useStateFromStores)([c.default], () => c.default.getAppealSignal()), C = (0, n.useStateFromStores)([c.default], () => c.default.getFreeTextAppealReason()), [p, L] = s.useState(C), [h, M] = s.useState(!1), [O, j] = s.useState(!1), P = s.useCallback(async () => {
+  } = (0, E.useSafetyHubClassification)(null != x ? x : ""), T = (0, u.capitalizeText)(null == f ? void 0 : f.description), g = (0, n.useStateFromStores)([c.default], () => c.default.getIsSubmitting()), m = (0, n.useStateFromStores)([c.default], () => c.default.getAppealSignal()), p = (0, n.useStateFromStores)([c.default], () => c.default.getFreeTextAppealReason()), [C, L] = l.useState(p), [h, M] = l.useState(!1), [O, j] = l.useState(!1), P = l.useCallback(async () => {
     if (null !== x) try {
-      j(!1), await r.requestReview(x, m, C), null == N || N()
+      j(!1), await r.requestReview(x, m, p), null == N || N()
     } catch (e) {
       j(!0)
     }
-  }, [x, m, C, N]);
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)(i.ModalHeader, {
+  }, [x, m, p, N]);
+  return (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsxs)(i.ModalHeader, {
       direction: d.default.Direction.VERTICAL,
       className: S.header,
       separator: !1,
-      children: [(0, l.jsx)(i.Heading, {
+      children: [(0, s.jsx)(i.Heading, {
         className: S.title,
         variant: "heading-xl/semibold",
         children: _.default.Messages.APPEAL_INGESTION_MODAL_HEADER
-      }), (0, l.jsx)(i.Text, {
+      }), (0, s.jsx)(i.Text, {
         className: S.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
         children: _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_SUBHEADER
-      }), null != a && (0, l.jsx)(i.ModalCloseButton, {
+      }), null != a && (0, s.jsx)(i.ModalCloseButton, {
         className: S.closeButton,
         onClick: a
       })]
-    }), (0, l.jsxs)(i.ModalContent, {
+    }), (0, s.jsxs)(i.ModalContent, {
       className: t,
       paddingFix: !1,
-      children: [(0, l.jsx)("ul", {
+      children: [(0, s.jsx)("ul", {
         className: A.listContainer,
-        children: [(0, u.getAppealSignalDisplayText)(m), C].filter(e => e.length > 0).map((e, t) => (0, l.jsx)("li", {
+        children: [(0, u.getAppealSignalDisplayText)(m), p].filter(e => e.length > 0).map((e, t) => (0, s.jsx)("li", {
           className: A.listItem,
-          children: (0, l.jsx)(i.Text, {
+          children: (0, s.jsx)(i.Text, {
             tag: "span",
             variant: "text-md/normal",
             children: e
           })
         }, t))
-      }), (0, l.jsx)("div", {
+      }), (0, s.jsx)("div", {
         className: A.anchorContainer,
-        children: (0, l.jsx)(i.Anchor, {
+        children: (0, s.jsx)(i.Anchor, {
           onClick: () => M(e => !e),
-          children: (0, l.jsx)(i.Heading, {
+          children: (0, s.jsx)(i.Heading, {
             variant: "heading-md/normal",
             color: "text-link",
-            children: C.length > 0 ? _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
+            children: p.length > 0 ? _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
           })
         })
-      }), h && (0, l.jsxs)("div", {
+      }), h && (0, s.jsxs)("div", {
         className: A.inputContainer,
-        children: [(0, l.jsx)(i.TextArea, {
-          value: p,
+        children: [(0, s.jsx)(i.TextArea, {
+          value: C,
           onChange: e => L(e)
-        }), (0, l.jsx)(i.Button, {
+        }), (0, s.jsx)(i.Button, {
           onClick: () => {
             o.default.dispatch({
               type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
-              userInput: p
+              userInput: C
             }), M(!1)
           },
           color: i.Button.Colors.BRAND,
@@ -91,34 +91,34 @@ function N(e) {
           className: A.saveButton,
           children: _.default.Messages.SAVE
         })]
-      }), (0, l.jsx)("div", {
+      }), (0, s.jsx)("div", {
         className: S.policyContainer,
-        children: (0, l.jsx)(i.Text, {
+        children: (0, s.jsx)(i.Text, {
           variant: "text-md/semibold",
           children: T
         })
-      }), (0, l.jsx)(i.Text, {
+      }), (0, s.jsx)(i.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
         className: A.footerText,
         children: _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_FOOTER
       })]
-    }), (0, l.jsxs)(i.ModalFooter, {
+    }), (0, s.jsxs)(i.ModalFooter, {
       direction: d.default.Direction.VERTICAL,
-      children: [O && (0, l.jsx)(i.Text, {
+      children: [O && (0, s.jsx)(i.Text, {
         className: A.errorText,
         variant: "text-lg/normal",
         color: "text-danger",
         children: _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR
-      }), (0, l.jsxs)("div", {
+      }), (0, s.jsxs)("div", {
         className: A.buttonContainer,
-        children: [(0, l.jsx)(i.Button, {
+        children: [(0, s.jsx)(i.Button, {
           look: i.Button.Looks.LINK,
           color: i.Button.Colors.PRIMARY,
           onClick: I,
           disabled: g,
           children: _.default.Messages.BACK
-        }), (0, l.jsx)(i.Button, {
+        }), (0, s.jsx)(i.Button, {
           onClick: P,
           color: i.Button.Colors.RED,
           submitting: g,

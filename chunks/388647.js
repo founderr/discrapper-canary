@@ -1,113 +1,113 @@
 "use strict";
-l.r(e), l.d(e, {
+x.r(t), x.d(t, {
   FetchState: function() {
-    return i
+    return a
   },
   default: function() {
-    return r
+    return m
   }
 });
-var a, i, n = l("693566"),
-  I = l.n(n),
-  c = l("446674"),
-  u = l("913144");
+var s, a, o = x("693566"),
+  y = x.n(o),
+  d = x("446674"),
+  k = x("913144");
 
-function o(t) {
+function p(i) {
   let {
-    applicationId: e,
-    guildId: l,
-    page: a
-  } = t;
-  return "applicationId:".concat(e, " guildId:").concat(l, " page:").concat(a)
-}(a = i || (i = {}))[a.NOT_FETCHED = 0] = "NOT_FETCHED", a[a.FETCHING = 1] = "FETCHING", a[a.FETCHED = 2] = "FETCHED", a[a.ERROR = 3] = "ERROR";
-let d = new I({
+    applicationId: t,
+    guildId: x,
+    page: s
+  } = i;
+  return "applicationId:".concat(t, " guildId:").concat(x, " page:").concat(s)
+}(s = a || (a = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED", s[s.ERROR = 3] = "ERROR";
+let r = new y({
     max: 20
   }),
-  T = {};
-class C extends c.default.Store {
-  getSimilarApplications(t) {
+  e = {};
+class n extends d.default.Store {
+  getSimilarApplications(i) {
     let {
-      applicationId: e,
-      guildId: l,
-      page: a
-    } = t;
-    if (null == e) return;
-    let i = o({
-      applicationId: e,
-      guildId: l,
-      page: a
+      applicationId: t,
+      guildId: x,
+      page: s
+    } = i;
+    if (null == t) return;
+    let a = p({
+      applicationId: t,
+      guildId: x,
+      page: s
     });
-    return d.get(i)
+    return r.get(a)
   }
-  getFetchState(t) {
+  getFetchState(i) {
     let {
-      applicationId: e,
-      guildId: l,
-      page: a
-    } = t;
-    if (null == e) return;
-    let i = o({
-      applicationId: e,
-      guildId: l,
-      page: a
+      applicationId: t,
+      guildId: x,
+      page: s
+    } = i;
+    if (null == t) return;
+    let a = p({
+      applicationId: t,
+      guildId: x,
+      page: s
     });
-    return T[i]
+    return e[a]
   }
 }
-C.displayName = "ApplicationDirectorySimilarApplicationsStore";
-var r = new C(u.default, {
-  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: function(t) {
+n.displayName = "ApplicationDirectorySimilarApplicationsStore";
+var m = new n(k.default, {
+  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: function(i) {
     let {
-      applicationId: e,
-      guildId: l,
-      page: a
-    } = t, i = o({
-      applicationId: e,
-      guildId: l,
-      page: a
+      applicationId: t,
+      guildId: x,
+      page: s
+    } = i, a = p({
+      applicationId: t,
+      guildId: x,
+      page: s
     });
-    T = {
-      ...T,
-      [i]: 1
+    e = {
+      ...e,
+      [a]: 1
     }
   },
-  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: function(t) {
+  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: function(i) {
     let {
-      applicationId: e,
-      guildId: l,
-      similarApplications: a,
-      loadId: i,
-      page: n,
-      totalPages: I
-    } = t, c = o({
-      applicationId: e,
-      guildId: l,
-      page: n
+      applicationId: t,
+      guildId: x,
+      similarApplications: s,
+      loadId: a,
+      page: o,
+      totalPages: y
+    } = i, d = p({
+      applicationId: t,
+      guildId: x,
+      page: o
     });
-    d.set(c, {
+    r.set(d, {
       lastFetchTimeMs: Date.now(),
-      applications: a,
-      loadId: i,
-      page: n,
-      totalPages: I
-    }), T = {
-      ...T,
-      [c]: 2
+      applications: s,
+      loadId: a,
+      page: o,
+      totalPages: y
+    }), e = {
+      ...e,
+      [d]: 2
     }
   },
-  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: function(t) {
+  APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: function(i) {
     let {
-      applicationId: e,
-      guildId: l,
-      page: a
-    } = t, i = o({
-      applicationId: e,
-      guildId: l,
-      page: a
+      applicationId: t,
+      guildId: x,
+      page: s
+    } = i, a = p({
+      applicationId: t,
+      guildId: x,
+      page: s
     });
-    T = {
-      ...T,
-      [i]: 3
+    e = {
+      ...e,
+      [a]: 3
     }
   }
 })

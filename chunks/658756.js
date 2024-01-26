@@ -29,8 +29,8 @@ var r = n("37983"),
   x = n("697218"),
   I = n("923702"),
   S = n("716120"),
-  O = n("408381"),
-  h = n("177586"),
+  h = n("408381"),
+  O = n("177586"),
   N = n("782340"),
   _ = n("99242"),
   A = n("53708");
@@ -45,11 +45,11 @@ let L = e => {
     confettiColors: L,
     backgroundColors: M,
     buttonColors: k
-  } = (0, h.default)(t.styles), R = null != k ? {
-    background: (0, O.getBackgroundGradient)(k, 90),
+  } = (0, O.default)(t.styles), R = null != k ? {
+    background: (0, h.getBackgroundGradient)(k, 90),
     color: k.text.toHslString()
   } : void 0, F = null != M ? {
-    background: (0, O.getBackgroundGradient)(M, 135)
+    background: (0, h.getBackgroundGradient)(M, 135)
   } : {
     backgroundColor: "var(--modal-background)"
   }, j = (0, u.default)([x.default], () => {
@@ -78,7 +78,7 @@ let L = e => {
         }),
         children: [(0, r.jsx)(S.default, {
           asset: t.banner,
-          size: (0, O.getAssetSizeByHeight)(440),
+          size: (0, h.getAssetSizeByHeight)(440),
           className: _.decorationBanner
         }), (null == w ? void 0 : w.type) === f.CollectiblesItemType.AVATAR_DECORATION && (0, r.jsx)(d.Avatar, {
           size: d.AvatarSizes.SIZE_120,
@@ -134,7 +134,7 @@ let L = e => {
     }), !B && (0, r.jsx)(I.default, {
       confettiTarget: null != a ? a : D.current,
       confettiCanvas: i,
-      sprites: (0, O.getConfettiSprites)(t.categorySkuId),
+      sprites: (0, h.getConfettiSprites)(t.categorySkuId),
       colors: null == L ? void 0 : L.map(e => e.toHexString())
     })]
   })
