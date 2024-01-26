@@ -1,11 +1,11 @@
 "use strict";
 a.r(e), a.d(e, {
   useIsInappAppealIngestionEnabled: function() {
-    return s
+    return i
   }
 });
 var n = a("862205");
-let i = (0, n.createExperiment)({
+let s = (0, n.createExperiment)({
   kind: "user",
   id: "2023-11_safety_hub_inapp_appeal_ingestion",
   label: "In-app Appeal Ingestion",
@@ -27,8 +27,8 @@ let i = (0, n.createExperiment)({
   }]
 });
 
-function s() {
-  return !!i.useExperiment({
+function i() {
+  return !!s.useExperiment({
     location: "appeal-ingestion-link"
   }, {
     autoTrackExposure: !0

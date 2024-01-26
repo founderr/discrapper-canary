@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983"),
   E = n("884691"),
   o = n("77078"),
-  l = n("446674"),
-  r = n("437822"),
+  r = n("446674"),
+  l = n("437822"),
   s = n("393414"),
   c = n("271938"),
   a = n("489622"),
@@ -46,9 +46,9 @@ function T() {
 }
 
 function L() {
-  let e = (0, l.useStateFromStores)([c.default], () => c.default.getSuspendedUserToken());
+  let e = (0, r.useStateFromStores)([c.default], () => c.default.getSuspendedUserToken());
   return null == e && (0, s.transitionTo)(A.Routes.LOGIN), E.useEffect(() => {
-    r.default.getExperiments()
+    l.default.getExperiments()
   }, []), (0, i.jsxs)("div", {
     className: N.container,
     children: [(0, i.jsx)(u, {}), (0, i.jsx)(T, {})]

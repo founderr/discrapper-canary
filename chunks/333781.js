@@ -1,9 +1,9 @@
 "use strict";
 a.r(e), a.d(e, {
   useSafetyHubFetchError: function() {
-    return s
+    return i
   }
 });
 var n = a("446674"),
-  i = a("646356");
-let s = () => (0, n.useStateFromStores)([i.default], () => i.default.getFetchError())
+  s = a("646356");
+let i = () => (0, n.useStateFromStores)([s.default], () => s.default.getFetchError())

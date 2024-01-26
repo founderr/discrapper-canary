@@ -5,8 +5,8 @@ a.r(e), a.d(e, {
   }
 }), a("222007");
 var n = a("37983"),
-  i = a("884691"),
-  s = a("917351"),
+  s = a("884691"),
+  i = a("917351"),
   l = a("446674"),
   r = a("669491"),
   u = a("891128"),
@@ -24,27 +24,27 @@ var n = a("37983"),
 function g() {
   let t = (0, E.useSafetyHubAccountStanding)(),
     e = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
-    [a, g] = i.useState(36),
-    N = i.useRef({
+    [a, g] = s.useState(36),
+    N = s.useRef({
       [S.AccountStandingState.ALL_GOOD]: null,
       [S.AccountStandingState.LIMITED]: null,
       [S.AccountStandingState.VERY_LIMITED]: null,
       [S.AccountStandingState.AT_RISK]: null,
       [S.AccountStandingState.SUSPENDED]: null
     }),
-    C = i.useCallback(() => {
+    C = s.useCallback(() => {
       let t = Math.max(...Object.values(N.current).map(t => {
         var e;
         return null !== (e = null == t ? void 0 : t.getBoundingClientRect().height) && void 0 !== e ? e : 36
       }));
       g(Math.max(t, 36))
     }, []);
-  i.useEffect(() => {
+  s.useEffect(() => {
     C();
-    let t = (0, s.debounce)(C, 100);
+    let t = (0, i.debounce)(C, 100);
     window.addEventListener("resize", t)
   }, [C]);
-  let m = {
+  let p = {
       [S.AccountStandingState.ALL_GOOD]: {
         title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
         description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION.format({
@@ -88,12 +88,12 @@ function g() {
       }
     },
     {
-      title: p,
+      title: m,
       description: U,
       color: h,
       Icon: x
-    } = m[t.state],
-    H = Object.keys(m).length;
+    } = p[t.state],
+    H = Object.keys(p).length;
   return (0, n.jsxs)(d.Card, {
     className: I.container,
     outline: !1,
@@ -110,7 +110,7 @@ function g() {
         children: [(0, n.jsx)(d.Heading, {
           color: "header-primary",
           variant: "heading-lg/normal",
-          children: p.format({
+          children: m.format({
             hook: t => (0, n.jsx)(d.Text, {
               style: {
                 color: h.css
@@ -132,14 +132,14 @@ function g() {
         },
         children: [(0, n.jsx)("div", {
           className: I.line
-        }), Object.entries(m).map((e, a) => {
-          let [i, s] = e, l = parseInt(i) === t.state;
+        }), Object.entries(p).map((e, a) => {
+          let [s, i] = e, l = parseInt(s) === t.state;
           return (0, n.jsxs)("div", {
             className: I.statusOption,
-            ref: t => N.current[parseInt(i)] = t,
+            ref: t => N.current[parseInt(s)] = t,
             children: [l ? (0, n.jsx)(x, {
               className: I.marker,
-              color: s.color
+              color: i.color
             }) : (0, n.jsx)("div", {
               className: I.marker,
               style: {
@@ -149,7 +149,7 @@ function g() {
               children: (0, n.jsx)("div", {
                 className: I.empty
               })
-            }), s.status.format({
+            }), i.status.format({
               hook: t => (0, n.jsx)(d.Text, {
                 color: "text-normal",
                 variant: "text-sm/normal",

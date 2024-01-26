@@ -5,8 +5,8 @@ a.r(e), a.d(e, {
   }
 });
 var n = a("37983"),
-  i = a("884691"),
-  s = a("432710"),
+  s = a("884691"),
+  i = a("432710"),
   l = a("77078"),
   r = a("155084"),
   u = a("489622"),
@@ -27,13 +27,13 @@ function N() {
     e = (0, S.useSafetyHubInitialized)(),
     a = (0, d.useSafetyHubAccountStanding)(),
     N = (0, _.useSafetyHubFetchError)();
-  return (i.useEffect(() => {
+  return (s.useEffect(() => {
     c.getSafetyHubData()
-  }, []), i.useEffect(() => {
+  }, []), s.useEffect(() => {
     e && (o.default.track(A.AnalyticEvents.SAFETY_HUB_VIEWED, {
       account_standing: a.state
     }), r.default.increment({
-      name: s.MetricEvents.SAFETY_HUB_VIEW
+      name: i.MetricEvents.SAFETY_HUB_VIEW
     }))
   }, [e]), t) ? (0, n.jsx)("div", {
     children: (0, n.jsx)(l.Spinner, {})

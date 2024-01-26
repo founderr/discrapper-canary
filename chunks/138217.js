@@ -45,7 +45,7 @@ function j(e) {
   return null != t ? t : (0, u.createMessageRecord)(e)
 }
 
-function F(e) {
+function D(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
   if ((0, c.default)(e)) return null;
@@ -71,7 +71,7 @@ function F(e) {
   }) && (y = !1), e) : null
 }
 
-function D(e) {
+function F(e) {
   if (null == M[e]) return !1;
   delete M[e], A = l.filter(A, t => {
     let {
@@ -85,7 +85,7 @@ function U(e) {
   let {
     id: t
   } = e;
-  return D(t)
+  return F(t)
 }
 
 function k(e) {
@@ -98,7 +98,7 @@ function k(e) {
   M = {};
   let s = [];
   a && A.forEach(e => {
-    let t = F(e);
+    let t = D(e);
     null != t && (s.push(t), M[t.id] = !0)
   }), 0 === (A = s).length && (L = !1)
 }
@@ -221,7 +221,7 @@ var V = new H(o.default, {
         suppressRoles: !1,
         suppressEveryone: !1
       })) return !1;
-    let l = F(n, t);
+    let l = D(n, t);
     if (null == l) return !1;
     (A = A.slice()).unshift(l), M[l.id] = !0
   },
@@ -244,7 +244,7 @@ var V = new H(o.default, {
     let {
       ids: t
     } = e;
-    l.forEach(t, D)
+    l.forEach(t, F)
   },
   USER_SETTINGS_PROTO_UPDATE: w,
   I18N_LOAD_SUCCESS: w,

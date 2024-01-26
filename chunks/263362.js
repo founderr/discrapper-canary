@@ -66,12 +66,12 @@ function I(e) {
     x(!1), v && (null == n || n())
   }, [n, v]), j = l.useCallback(() => {
     x(!v), v ? null == n || n() : null == t || t()
-  }, [n, t, v]), F = l.useCallback(() => {
+  }, [n, t, v]), D = l.useCallback(() => {
     j(), L(r.InboxTab.UNREADS)
   }, [L, j]);
-  l.useEffect(() => (E.ComponentDispatch.subscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, F), () => void E.ComponentDispatch.unsubscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, F)), [F]);
+  l.useEffect(() => (E.ComponentDispatch.subscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, D), () => void E.ComponentDispatch.unsubscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, D)), [D]);
   let {
-    showReminders: D
+    showReminders: F
   } = d.default.useExperiment({
     location: "RecentsPopout"
   }, {
@@ -82,7 +82,7 @@ function I(e) {
     location: "RecentsPopout"
   });
   l.useEffect(() => {
-    !D && R === r.InboxTab.TODOS && L(r.InboxTab.MENTIONS)
+    !F && R === r.InboxTab.TODOS && L(r.InboxTab.MENTIONS)
   });
   let P = l.useCallback(e => {
     !e.shiftKey && y()
@@ -110,7 +110,7 @@ function I(e) {
           setTab: L,
           badgeState: C,
           closePopout: y
-        }) : D && R === r.InboxTab.TODOS ? (0, a.jsx)(p.default, {
+        }) : F && R === r.InboxTab.TODOS ? (0, a.jsx)(p.default, {
           setTab: L,
           onJump: P,
           closePopout: y

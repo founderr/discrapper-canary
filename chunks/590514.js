@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return y
   },
   ItemsPopout: function() {
-    return D
+    return F
   },
   default: function() {
     return U
@@ -137,7 +137,7 @@ class j extends l.PureComponent {
     }
   }
 }
-let F = d.default.connectStores([_.default], e => {
+let D = d.default.connectStores([_.default], e => {
   let {
     channel: t
   } = e;
@@ -146,7 +146,7 @@ let F = d.default.connectStores([_.default], e => {
   }
 })(j);
 
-function D(e) {
+function F(e) {
   let {
     analyticsName: t,
     items: n,
@@ -160,7 +160,7 @@ function D(e) {
     scrollerClassName: N,
     className: _,
     listName: A
-  } = e, b = l.useRef(null), y = (0, E.default)(A, b), j = (0, d.useStateFromStores)([T.default], () => T.default.hasNotice()), F = (0, d.useStateFromStores)([I.default], () => I.default.windowSize());
+  } = e, b = l.useRef(null), y = (0, E.default)(A, b), j = (0, d.useStateFromStores)([T.default], () => T.default.hasNotice()), D = (0, d.useStateFromStores)([I.default], () => I.default.windowSize());
   l.useEffect(() => {
     M.default.track(x.AnalyticEvents.OPEN_POPOUT, {
       type: t
@@ -183,7 +183,7 @@ function D(e) {
       v.ComponentDispatch.unsubscribe(x.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.unsubscribe(x.ComponentActions.SCROLL_PAGE_UP, e)
     }
   }, []);
-  let D = l.useCallback(() => {
+  let F = l.useCallback(() => {
       var e;
       let t = null === (e = b.current) || void 0 === e ? void 0 : e.getScrollerState();
       null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && s && !r && (null == f || f())
@@ -228,7 +228,7 @@ function D(e) {
       })
     }) : null,
     B = {
-      maxHeight: F.height - 43 - 25
+      maxHeight: D.height - 43 - 25
     };
   j && (B.maxHeight -= 40);
   let H = null != f && s;
@@ -242,7 +242,7 @@ function D(e) {
       component: h(),
       children: [(0, a.jsxs)(c.AdvancedScroller, {
         className: i(L.messagesPopout, N),
-        onScroll: H ? D : void 0,
+        onScroll: H ? F : void 0,
         ref: b,
         children: [(0, a.jsx)(u.ListNavigatorProvider, {
           navigator: y,
@@ -315,7 +315,7 @@ function U(e) {
     message: e,
     channel: s
   })), [i, s]);
-  return (0, a.jsx)(D, {
+  return (0, a.jsx)(F, {
     className: A,
     scrollerClassName: C,
     items: y,
@@ -340,7 +340,7 @@ function U(e) {
           className: L.messageGroupCozy,
           message: t,
           channel: n
-        }), (0, a.jsx)(F, {
+        }), (0, a.jsx)(D, {
           channel: s,
           message: t,
           jumping: O,

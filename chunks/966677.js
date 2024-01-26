@@ -5,9 +5,9 @@ a.r(e), a.d(e, {
   }
 }), a("222007");
 var n = a("37983"),
-  i = a("884691"),
-  s = a("414456"),
-  l = a.n(s),
+  s = a("884691"),
+  i = a("414456"),
+  l = a.n(i),
   r = a("446674"),
   u = a("779807"),
   o = a("77078"),
@@ -23,15 +23,15 @@ var n = a("37983"),
   g = a("132206"),
   N = a("698609"),
   C = a("170213"),
-  m = a("49111"),
-  p = a("782340"),
+  p = a("49111"),
+  m = a("782340"),
   U = a("231180");
 let h = t => {
     let {
       status: e,
       onClick: a,
-      opened: i,
-      count: s
+      opened: s,
+      count: i
     } = t;
     return (0, n.jsxs)(o.Clickable, {
       className: U.header,
@@ -48,22 +48,22 @@ let h = t => {
         children: [(0, n.jsx)(o.Heading, {
           variant: "heading-md/semibold",
           color: "text-normal",
-          children: "active" === e ? p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE.format({
-            count: s.toString()
-          }) : p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED.format({
-            count: s.toString()
+          children: "active" === e ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE.format({
+            count: i.toString()
+          }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED.format({
+            count: i.toString()
           })
         }), (0, n.jsx)(o.Heading, {
           variant: "text-sm/normal",
           color: "text-muted",
-          children: "active" === e ? p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE : p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED
+          children: "active" === e ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED
         })]
       }), (0, n.jsx)("div", {
         className: U.caret,
         children: (0, n.jsx)(c.default, {
           width: 18,
           height: 18,
-          direction: i ? c.default.Directions.UP : c.default.Directions.DOWN
+          direction: s ? c.default.Directions.UP : c.default.Directions.DOWN
         })
       })]
     })
@@ -83,11 +83,11 @@ let h = t => {
     }), (0, n.jsx)(o.Heading, {
       variant: "heading-md/bold",
       className: U.emptyStateText,
-      children: p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
+      children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
     }), (0, n.jsx)(o.Text, {
       variant: "text-xs/normal",
       className: U.emptyStateSubtext,
-      children: p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
+      children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
     })]
   }),
   H = () => (0, n.jsx)("div", {
@@ -95,7 +95,7 @@ let h = t => {
     children: (0, n.jsx)(o.Text, {
       variant: "text-xs/normal",
       className: U.emptyStateSubtext,
-      children: p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
+      children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
     })
   }),
   O = t => {
@@ -111,17 +111,17 @@ let h = t => {
   D = () => (0, n.jsx)(o.Text, {
     variant: "text-xs/bold",
     className: U.newBadge,
-    children: p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
+    children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
   }),
   F = t => {
     var e;
     let {
-      classification: i
+      classification: s
     } = t, {
-      id: s,
+      id: i,
       description: r,
       max_expiration_time: u
-    } = i, c = E.default.extractTimestamp(s), d = (0, I.useIsNewClassification)(i), _ = (0, f.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), S = new Date(u), T = S.toDateString();
+    } = s, c = E.default.extractTimestamp(i), d = (0, I.useIsNewClassification)(s), _ = (0, f.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), S = new Date(u), T = S.toDateString();
     return (0, n.jsx)(o.Clickable, {
       onClick: () => {
         (0, o.openModalLazy)(async () => {
@@ -129,7 +129,7 @@ let h = t => {
             default: t
           } = await a.el("825138").then(a.bind(a, "825138"));
           return e => (0, n.jsx)(t, {
-            classificationId: s,
+            classificationId: i,
             source: C.SafetyHubAnalyticsActionSource.StandingTab,
             ...e
           })
@@ -144,15 +144,15 @@ let h = t => {
           timestamp: c
         }), (0, n.jsx)(o.Heading, {
           variant: "heading-lg/normal",
-          children: _ && null != i.guild_metadata ? p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
-            guildName: null == i ? void 0 : null === (e = i.guild_metadata) || void 0 === e ? void 0 : e.name,
+          children: _ && null != s.guild_metadata ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
+            guildName: null == s ? void 0 : null === (e = s.guild_metadata) || void 0 === e ? void 0 : e.name,
             description: r,
             descriptionHook: t => (0, n.jsx)(o.Text, {
               tag: "span",
               variant: "heading-lg/bold",
               children: t
             })
-          }) : p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format({
+          }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format({
             description: r,
             descriptionHook: t => (0, n.jsx)(o.Text, {
               tag: "span",
@@ -163,22 +163,22 @@ let h = t => {
         }), (0, n.jsx)(o.Text, {
           variant: "text-sm/normal",
           className: U.expirationDate,
-          children: S > new Date ? p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
+          children: S > new Date ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
             expirationDate: T
-          }) : p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format({
+          }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format({
             expirationDate: T
           })
         })]
       })
-    }, s)
+    }, i)
   },
   v = t => {
     let {
       status: e,
       classifications: a
-    } = t, [s, l] = i.useState(!1), [u, c] = i.useState(3), d = (0, g.useSafetyHubAccountStanding)(), _ = (0, r.useStateFromStores)([T.default], () => T.default.getIsDsaEligible()), E = i.useMemo(() => a.slice(0, u), [a, u]);
-    i.useEffect(() => {
-      s && S.default.track(m.AnalyticEvents.SAFETY_HUB_ACTION, {
+    } = t, [i, l] = s.useState(!1), [u, c] = s.useState(3), d = (0, g.useSafetyHubAccountStanding)(), _ = (0, r.useStateFromStores)([T.default], () => T.default.getIsDsaEligible()), E = s.useMemo(() => a.slice(0, u), [a, u]);
+    s.useEffect(() => {
+      i && S.default.track(p.AnalyticEvents.SAFETY_HUB_ACTION, {
         action: C.SafetyHubAnalyticsActions.ViewViolationsDropdown,
         account_standing: d.state,
         classification_ids: E.map(t => Number(t.id)),
@@ -186,16 +186,16 @@ let h = t => {
         is_violative_content_shown: !1,
         is_dsa_eligible: _
       })
-    }, [s, d.state, E, _]);
+    }, [i, d.state, E, _]);
     let f = a.length - E.length > 3 ? 3 : a.length - E.length;
     return (0, n.jsxs)("div", {
       className: U.dropdown,
       children: [(0, n.jsx)(h, {
         status: e,
         onClick: () => l(t => !t),
-        opened: s,
+        opened: i,
         count: a.length
-      }), s && (0, n.jsxs)("div", {
+      }), i && (0, n.jsxs)("div", {
         className: U.items,
         children: [(0, n.jsx)(o.TabBar.Separator, {
           style: {
@@ -213,7 +213,7 @@ let h = t => {
           }), (0, n.jsx)("button", {
             className: U.paginationButton,
             onClick: () => c(t => t + f),
-            children: p.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({
+            children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({
               nextPageSize: f
             })
           })]
