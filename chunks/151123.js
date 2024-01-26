@@ -23,8 +23,8 @@ var a = l("37983"),
   x = l("463200"),
   _ = l("868967"),
   g = l("512882"),
-  p = l("149777"),
-  H = l("413989"),
+  H = l("149777"),
+  p = l("413989"),
   A = l("49111"),
   S = l("782340"),
   L = l("368715"),
@@ -72,27 +72,27 @@ function b(e) {
     selectedUserIds: m,
     addUsers: b,
     clearSelection: j
-  } = (0, T.default)(t), R = s.requireUnusualDmActivity || s.requireCommunicationDisabled || s.requireUnusualAccountActivity || s.requireUsernameQuarantined, D = s.selectedRoleIds.size > 0, O = null != s.selectedJoinDateOption.afterDate, V = null != s.selectedAccountAgeOption.afterDate, B = null != s.selectedSourceInviteCode && "" !== s.selectedSourceInviteCode, y = null != s.selectedJoinSourceType, w = B || y, [F, U] = n.useState(null == u.default.get(v, null)), k = n.useCallback(() => {
+  } = (0, T.default)(t), R = s.requireUnusualDmActivity || s.requireCommunicationDisabled || s.requireUnusualAccountActivity || s.requireUsernameQuarantined, D = s.selectedRoleIds.size > 0, O = null != s.selectedJoinDateOption.afterDate, V = null != s.selectedAccountAgeOption.afterDate, B = null != s.selectedSourceInviteCode && "" !== s.selectedSourceInviteCode, y = null != s.selectedJoinSourceType, F = B || y, [w, U] = n.useState(null == u.default.get(v, null)), k = n.useCallback(() => {
     u.default.set(v, Date.now()), U(!1)
-  }, []), Z = (0, M.useCanAccessBulkBanningFeature)(t), P = (0, E.isInMembersTablesAdditionalFilteringExperiment)(t), G = n.useMemo(() => l.filter(e => (0, M.canBulkBanUser)(t, Z, e)), [Z, l, t]), Y = G.length > 0, q = G.filter(e => !m.has(e)), J = 0 === q.length, K = n.useCallback(() => {
-    Y && (J ? j() : b(G))
-  }, [Y, J, j, b, G]);
+  }, []), Z = (0, M.useCanAccessBulkBanningFeature)(t), P = (0, E.isInMembersTablesAdditionalFilteringExperiment)(t), Y = o && P, G = n.useMemo(() => l.filter(e => (0, M.canBulkBanUser)(t, Z, e)), [Z, l, t]), q = G.length > 0, J = G.filter(e => !m.has(e)), K = 0 === J.length, z = n.useCallback(() => {
+    q && (K ? j() : b(G))
+  }, [q, K, j, b, G]);
   return (0, a.jsx)("thead", {
     children: (0, a.jsxs)("tr", {
       className: L.tableHeaderRow,
       children: [Z && (0, a.jsx)("th", {
         className: i(L.tableHeaderCellContainer, N.xsmallCol),
         children: (0, a.jsx)(C.Tooltip, {
-          shouldShow: !Y,
+          shouldShow: !q,
           text: S.default.Messages.MEMBER_SAFETY_CANNOT_SELECT_ALL,
           children: e => (0, a.jsx)(C.Clickable, {
             ...e,
-            onClick: K,
+            onClick: z,
             className: L.tableHeaderCell,
             children: (0, a.jsx)(C.Checkbox, {
               type: C.Checkbox.Types.INVERTED,
-              value: J,
-              disabled: !Y
+              value: K,
+              disabled: !q
             })
           })
         })
@@ -152,12 +152,12 @@ function b(e) {
           label: S.default.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
           className: N.smallCol
         })]
-      }), o && P ? (0, a.jsx)(C.Popout, {
+      }), Y ? (0, a.jsx)(C.Popout, {
         animation: C.Popout.Animation.FADE,
         position: "bottom",
         spacing: 4,
         align: "left",
-        renderPopout: () => (0, a.jsx)(p.default, {
+        renderPopout: () => (0, a.jsx)(H.default, {
           guildId: t,
           onClose: A.NOOP
         }),
@@ -169,12 +169,15 @@ function b(e) {
           return (0, a.jsx)(I, {
             label: S.default.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
             onFilter: t,
-            selected: w,
+            selected: F,
             className: N.smallCol,
             ...l
           })
         }
-      }) : null, (0, a.jsx)(C.Popout, {
+      }) : o && (0, a.jsx)(I, {
+        label: S.default.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
+        className: N.smallCol
+      }), (0, a.jsx)(C.Popout, {
         animation: C.Popout.Animation.FADE,
         position: "bottom",
         spacing: 4,
@@ -183,7 +186,7 @@ function b(e) {
           let {
             closePopout: l
           } = e;
-          return (0, a.jsx)(H.default, {
+          return (0, a.jsx)(p.default, {
             guildId: t,
             onClose: l
           })
@@ -205,7 +208,7 @@ function b(e) {
         text: S.default.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
         position: "top",
         align: "left",
-        forceOpen: F,
+        forceOpen: w,
         shouldShow: !0,
         color: C.Tooltip.Colors.BRAND,
         children: e => (0, a.jsx)(C.Popout, {
