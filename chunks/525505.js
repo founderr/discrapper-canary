@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return w
+    return Y
   }
 }), s("424973");
 var a = s("37983"),
@@ -24,51 +24,53 @@ var a = s("37983"),
   A = s("719923"),
   N = s("153160"),
   p = s("324878"),
-  g = s("917247"),
-  C = s("641078"),
-  P = s("400307"),
-  O = s("218435"),
-  M = s("881155"),
-  h = s("646718"),
-  L = s("49111"),
-  x = s("782340"),
-  v = s("992250"),
-  D = s("640754"),
-  U = s("510407"),
-  b = s("657890"),
-  j = s("823986");
-let G = e => {
+  g = s("154889"),
+  C = s("917247"),
+  P = s("478968"),
+  O = s("641078"),
+  M = s("400307"),
+  h = s("218435"),
+  L = s("881155"),
+  x = s("646718"),
+  v = s("49111"),
+  D = s("782340"),
+  U = s("992250"),
+  b = s("640754"),
+  j = s("510407"),
+  G = s("657890"),
+  k = s("823986");
+let B = e => {
     let {
       isLightTheme: t
-    } = e, s = (0, C.getBOGOPillCopy)();
-    return (0, a.jsx)(P.PremiumPillWithSparkles, {
+    } = e, s = (0, O.getBOGOPillCopy)();
+    return (0, a.jsx)(M.PremiumPillWithSparkles, {
       text: s,
-      className: v.bogoPillWithSparkles,
-      colorOptions: t ? P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+      className: U.bogoPillWithSparkles,
+      colorOptions: t ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
     })
   },
-  k = () => (0, a.jsx)("div", {
-    className: v.mostPopularPill,
+  y = () => (0, a.jsx)("div", {
+    className: U.mostPopularPill,
     children: (0, a.jsx)(o.Heading, {
-      className: v.mostPopularText,
+      className: U.mostPopularText,
       variant: "heading-deprecated-12/extrabold",
-      children: x.default.Messages.MOST_POPULAR
+      children: D.default.Messages.MOST_POPULAR
     })
   }),
-  B = e => {
+  H = e => {
     let t, {
         premiumType: s
       } = e,
       r = (0, c.default)();
-    t = s === h.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(r) ? D : U : (0, u.isThemeDark)(r) ? b : j;
+    t = s === x.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(r) ? b : j : (0, u.isThemeDark)(r) ? G : k;
     let n = (0, A.getPremiumTypeDisplayName)(s);
     return (0, a.jsx)("img", {
       src: t,
-      className: v.logo,
+      className: U.logo,
       alt: n
     })
   },
-  y = e => {
+  K = e => {
     let {
       text: t,
       badge: s
@@ -79,7 +81,7 @@ let G = e => {
       children: [t, " ", s]
     })
   },
-  H = e => {
+  W = e => {
     let {
       text: t
     } = e;
@@ -89,50 +91,50 @@ let G = e => {
       children: t
     })
   },
-  K = e => {
+  F = e => {
     let {
       includes: t
     } = e;
     return t ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(R.default, {
-        className: v.checkmarkIcon,
+        className: U.checkmarkIcon,
         "aria-hidden": !0
       }), (0, a.jsx)(o.HiddenVisually, {
-        children: x.default.Messages.INCLUDED
+        children: D.default.Messages.INCLUDED
       })]
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(m.default, {
-        className: v.closeIcon,
+        className: U.closeIcon,
         "aria-hidden": !0
       }), (0, a.jsx)(o.HiddenVisually, {
-        children: x.default.Messages.NOT_INCLUDED
+        children: D.default.Messages.NOT_INCLUDED
       })]
     })
   },
-  W = e => {
+  w = e => {
     let {
       label: t,
       column1: s,
       column2: r
     } = e;
     return (0, a.jsxs)("tr", {
-      className: i(v.headerRow, v.rowBottomBorder, v.topBorderRadius),
+      className: i(U.headerRow, U.rowBottomBorder, U.topBorderRadius),
       children: [(0, a.jsx)("th", {
         scope: "col",
-        className: v.headerLabelCell,
+        className: U.headerLabelCell,
         children: t
       }), (0, a.jsx)("th", {
         scope: "col",
-        className: v.headerCell,
+        className: U.headerCell,
         children: s
       }), (0, a.jsx)("th", {
         scope: "col",
-        className: i(v.headerCell, v.topBorderRadius),
+        className: i(U.headerCell, U.topBorderRadius),
         children: r
       })]
     })
   },
-  F = e => {
+  V = e => {
     let {
       label: t,
       column1: s,
@@ -144,270 +146,274 @@ let G = e => {
       shortRow: d = !1
     } = e;
     return (0, a.jsxs)("tr", {
-      className: i(v.row, {
-        [v.wideRow]: o,
-        [v.topBorderRadius]: l,
-        [v.bottomBorderRadius]: u,
-        [v.rowBottomBorder]: n,
-        [v.shortRow]: d
+      className: i(U.row, {
+        [U.wideRow]: o,
+        [U.topBorderRadius]: l,
+        [U.bottomBorderRadius]: u,
+        [U.rowBottomBorder]: n,
+        [U.shortRow]: d
       }),
       children: [(0, a.jsx)("th", {
         scope: "row",
-        className: v.labelCell,
+        className: U.labelCell,
         children: t
       }), (0, a.jsx)("td", {
-        className: i(v.cell, {
-          [v.buttonsCell]: o
+        className: i(U.cell, {
+          [U.buttonsCell]: o
         }),
         children: s
       }), (0, a.jsx)("td", {
-        className: i(v.cell, {
-          [v.topBorderRadius]: l,
-          [v.bottomBorderRadius]: u,
-          [v.buttonsCell]: o
+        className: i(U.cell, {
+          [U.topBorderRadius]: l,
+          [U.bottomBorderRadius]: u,
+          [U.buttonsCell]: o
         }),
         children: r
       })]
     })
   };
-var w = e => {
+var Y = e => {
   var t;
   let s, {
       className: n,
       hideCTAs: R = !1,
       headingOverride: m,
-      hidePill: D = !1,
-      selectedPlanColumnClassName: U,
-      selectedPlanTier: b = h.PremiumTypes.TIER_2
+      hidePill: b = !1,
+      selectedPlanColumnClassName: j,
+      selectedPlanTier: G = x.PremiumTypes.TIER_2
     } = e,
     {
-      AnalyticsLocationProvider: j
+      AnalyticsLocationProvider: k
     } = (0, E.default)(_.default.PREMIUM_MARKETING_PLAN_COMPARISON),
-    w = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedSubscriptions()),
-    V = (0, I.useSubscriptionPlansLoaded)(),
-    Y = "PlanComparisonTable";
+    Y = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedSubscriptions()),
+    z = (0, I.useSubscriptionPlansLoaded)(),
+    Q = "PlanComparisonTable";
   (0, d.useTriggerDebuggingAA)({
-    location: Y + " auto on",
+    location: Q + " auto on",
     autoTrackExposure: !0
   }), (0, d.useTriggerDebuggingAA)({
-    location: Y + " auto off",
+    location: Q + " auto off",
     autoTrackExposure: !1
   });
-  let z = (0, c.default)(),
-    Q = (0, u.isThemeLight)(z),
-    X = (0, l.useStateFromStores)([f.default], () => f.default.getCurrentUser()),
-    J = (0, A.isPremiumExactly)(X, h.PremiumTypes.TIER_2),
-    Z = (0, g.usePremiumTrialOffer)(),
-    q = null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-    $ = (0, p.useCurrentPremiumTrialTier)(),
-    ee = (0, C.useIsEligibleForBogoPromotion)();
-  if (!w || !V) return null;
-  let et = A.default.getDefaultPrice(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-    es = A.default.getDefaultPrice(h.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-    ea = {
+  let X = (0, c.default)(),
+    J = (0, u.isThemeLight)(X),
+    Z = (0, l.useStateFromStores)([f.default], () => f.default.getCurrentUser()),
+    q = (0, A.isPremiumExactly)(Z, x.PremiumTypes.TIER_2),
+    $ = (0, C.usePremiumTrialOffer)(),
+    ee = null == $ ? void 0 : null === (t = $.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
+    et = (0, p.useCurrentPremiumTrialTier)(),
+    es = (0, g.usePremiumDiscountOffer)(),
+    ea = null != es && (0, g.discountOfferHasTier)(es, x.PremiumSubscriptionSKUs.TIER_2),
+    er = (0, P.useDiscountedPrice)(x.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+    en = "".concat(er, "/").concat((0, A.getIntervalStringAsNoun)(x.SubscriptionIntervalTypes.MONTH)),
+    ei = (0, O.useIsEligibleForBogoPromotion)();
+  if (!Y || !z) return null;
+  let el = A.default.getDefaultPrice(x.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+    eu = A.default.getDefaultPrice(x.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+    eo = {
       label: (0, a.jsx)(o.Heading, {
-        className: v.textColor,
+        className: U.textColor,
         variant: "heading-lg/extrabold",
-        children: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
+        children: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
       }),
-      column1: (0, a.jsx)(B, {
-        premiumType: h.PremiumTypes.TIER_0
+      column1: (0, a.jsx)(H, {
+        premiumType: x.PremiumTypes.TIER_0
       }),
-      column2: (0, a.jsx)(B, {
-        premiumType: h.PremiumTypes.TIER_2
+      column2: (0, a.jsx)(H, {
+        premiumType: x.PremiumTypes.TIER_2
       })
     },
-    er = [{
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE
+    ed = [{
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE
       }),
       column1: (0, a.jsx)(a.Fragment, {
-        children: (0, a.jsx)(H, {
-          text: A.default.formatPriceString(et, h.SubscriptionIntervalTypes.MONTH)
+        children: (0, a.jsx)(W, {
+          text: A.default.formatPriceString(el, x.SubscriptionIntervalTypes.MONTH)
         })
       }),
       column2: (0, a.jsx)(a.Fragment, {
-        children: (0, a.jsx)(H, {
-          text: A.default.formatPriceString(es, h.SubscriptionIntervalTypes.MONTH)
+        children: (0, a.jsx)(W, {
+          text: ea ? en : A.default.formatPriceString(eu, x.SubscriptionIntervalTypes.MONTH)
         })
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_EMOJI
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_EMOJI
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
         includes: !0
       }),
-      column2: (0, a.jsx)(K, {
-        includes: !0
-      })
-    }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STICKER
-      }),
-      column1: (0, a.jsx)(K, {
-        includes: !0
-      }),
-      column2: (0, a.jsx)(K, {
+      column2: (0, a.jsx)(F, {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STICKER
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
         includes: !0
       }),
-      column2: (0, a.jsx)(K, {
-        includes: !0
-      })
-    }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS
-      }),
-      column1: (0, a.jsx)(K, {
-        includes: !0
-      }),
-      column2: (0, a.jsx)(K, {
+      column2: (0, a.jsx)(F, {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE
       }),
-      column1: (0, a.jsx)(H, {
-        text: (0, A.getMaxFileSizeForPremiumType)(h.PremiumTypes.TIER_0)
+      column1: (0, a.jsx)(F, {
+        includes: !0
       }),
-      column2: (0, a.jsx)(H, {
-        text: (0, A.getMaxFileSizeForPremiumType)(h.PremiumTypes.TIER_2)
+      column2: (0, a.jsx)(F, {
+        includes: !0
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
+        includes: !0
+      }),
+      column2: (0, a.jsx)(F, {
+        includes: !0
+      })
+    }, {
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
+      }),
+      column1: (0, a.jsx)(W, {
+        text: (0, A.getMaxFileSizeForPremiumType)(x.PremiumTypes.TIER_0)
+      }),
+      column2: (0, a.jsx)(W, {
+        text: (0, A.getMaxFileSizeForPremiumType)(x.PremiumTypes.TIER_2)
+      })
+    }, {
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING
+      }),
+      column1: (0, a.jsx)(F, {
         includes: !1
       }),
-      column2: (0, a.jsx)(H, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_STREAMING_DETAILS
+      column2: (0, a.jsx)(W, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_STREAMING_DETAILS
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
-          numBoosts: h.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-          percentageOff: (0, N.formatPercent)(T.default.locale, h.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
+          numBoosts: x.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
+          percentageOff: (0, N.formatPercent)(T.default.locale, x.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
         })
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
         includes: !1
       }),
-      column2: (0, a.jsx)(K, {
+      column2: (0, a.jsx)(F, {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PROFILE_THEMES
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PROFILE_THEMES
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
         includes: !1
       }),
-      column2: (0, a.jsx)(K, {
+      column2: (0, a.jsx)(F, {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_PROFILE
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_PROFILE
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
         includes: !1
       }),
-      column2: (0, a.jsx)(K, {
+      column2: (0, a.jsx)(F, {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS_GENERIC
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS_GENERIC
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
         includes: !1
       }),
-      column2: (0, a.jsx)(K, {
+      column2: (0, a.jsx)(F, {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_CLIENT_THEME
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_CLIENT_THEME
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
         includes: !1
       }),
-      column2: (0, a.jsx)(K, {
+      column2: (0, a.jsx)(F, {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BADGE
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BADGE
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
         includes: !0
       }),
-      column2: (0, a.jsx)(K, {
-        includes: !0
-      })
-    }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_VIDEO_BACKGROUND
-      }),
-      column1: (0, a.jsx)(K, {
-        includes: !0
-      }),
-      column2: (0, a.jsx)(K, {
+      column2: (0, a.jsx)(F, {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_SOUNDS_ANYWHERE
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_VIDEO_BACKGROUND
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
+        includes: !0
+      }),
+      column2: (0, a.jsx)(F, {
+        includes: !0
+      })
+    }, {
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_SOUNDS_ANYWHERE
+      }),
+      column1: (0, a.jsx)(F, {
         includes: !1
       }),
-      column2: (0, a.jsx)(K, {
+      column2: (0, a.jsx)(F, {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_ENTRY_SOUNDS
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.SOUNDBOARD_MARKETING_CUSTOM_ENTRY_SOUNDS
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
         includes: !1
       }),
-      column2: (0, a.jsx)(K, {
+      column2: (0, a.jsx)(F, {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_LIMIT
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_LIMIT
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
         includes: !1
       }),
-      column2: (0, a.jsx)(K, {
+      column2: (0, a.jsx)(F, {
         includes: !0
       })
     }, {
-      label: (0, a.jsx)(y, {
-        text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_MESSAGE_LENGTH.format({
-          maxChars: L.MAX_MESSAGE_LENGTH_PREMIUM
+      label: (0, a.jsx)(K, {
+        text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_MESSAGE_LENGTH.format({
+          maxChars: v.MAX_MESSAGE_LENGTH_PREMIUM
         })
       }),
-      column1: (0, a.jsx)(K, {
+      column1: (0, a.jsx)(F, {
         includes: !1
       }),
-      column2: (0, a.jsx)(K, {
+      column2: (0, a.jsx)(F, {
         includes: !0
       })
     }];
-  return R ? er.push({
+  return R ? ed.push({
     label: null,
     column1: null,
     column2: null,
@@ -415,73 +421,73 @@ var w = e => {
     withBottomBorderRadius: !0,
     buttonsRow: !1,
     shortRow: !0
-  }) : er.push({
+  }) : ed.push({
     label: null,
     column1: (0, a.jsxs)(a.Fragment, {
-      children: [q === h.PremiumSubscriptionSKUs.TIER_2 || ee ? (0, a.jsx)(M.default, {
-        className: v.button,
-        subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
+      children: [ee === x.PremiumSubscriptionSKUs.TIER_2 || ei ? (0, a.jsx)(L.default, {
+        className: U.button,
+        subscriptionTier: x.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1,
         look: o.ButtonLooks.OUTLINED,
-        color: Q ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
+        color: J ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
         buttonShineClassName: void 0
-      }) : (0, a.jsx)(M.default, {
-        className: v.button,
-        subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
+      }) : (0, a.jsx)(L.default, {
+        className: U.button,
+        subscriptionTier: x.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1
-      }), $ === h.PremiumTypes.TIER_2 || null != q ? null : (0, a.jsx)(O.default, {
-        className: v.button,
-        subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0
+      }), et === x.PremiumTypes.TIER_2 || null != ee ? null : (0, a.jsx)(h.default, {
+        className: U.button,
+        subscriptionTier: x.PremiumSubscriptionSKUs.TIER_0
       })]
     }),
     column2: (0, a.jsxs)(a.Fragment, {
-      children: [q === h.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(M.default, {
-        className: v.button,
-        subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
+      children: [ee === x.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(L.default, {
+        className: U.button,
+        subscriptionTier: x.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
         look: o.ButtonLooks.OUTLINED,
-        color: Q ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
+        color: J ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
         buttonShineClassName: void 0
-      }) : (0, a.jsx)(M.default, {
-        className: v.button,
-        subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
+      }) : (0, a.jsx)(L.default, {
+        className: U.button,
+        subscriptionTier: x.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
-        isEligibleForBogoPromotion: ee
-      }), $ === h.PremiumTypes.TIER_0 || null != q ? null : (0, a.jsx)(O.default, {
-        className: v.button,
-        subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2
+        isEligibleForBogoPromotion: ei
+      }), et === x.PremiumTypes.TIER_0 || null != ee ? null : (0, a.jsx)(h.default, {
+        className: U.button,
+        subscriptionTier: x.PremiumSubscriptionSKUs.TIER_2
       })]
     }),
     withBottomBorder: !1,
     withBottomBorderRadius: !0,
-    buttonsRow: null == q
-  }), s = D ? null : null != q || null != $ ? (0, a.jsx)(P.PremiumPillWithSparkles, {
-    text: null != q ? x.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
-    className: v.freeTrialPillWithSparkles,
-    colorOptions: q === h.PremiumSubscriptionSKUs.TIER_0 ? Q ? P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : Q ? J ? P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : P.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
-  }) : ee ? (0, a.jsx)(G, {
-    isLightTheme: Q
-  }) : (0, a.jsx)(k, {}), (0, a.jsx)(j, {
+    buttonsRow: null == ee
+  }), s = b ? null : null != ee || null != et ? (0, a.jsx)(M.PremiumPillWithSparkles, {
+    text: null != ee ? D.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
+    className: U.freeTrialPillWithSparkles,
+    colorOptions: ee === x.PremiumSubscriptionSKUs.TIER_0 ? J ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : J ? q ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+  }) : ei ? (0, a.jsx)(B, {
+    isLightTheme: J
+  }) : (0, a.jsx)(y, {}), (0, a.jsx)(k, {
     children: (0, a.jsxs)("div", {
-      className: i(v.root, n),
+      className: i(U.root, n),
       "data-testid": "v2-marketing-page-comparison-table",
       children: [(0, a.jsx)(o.Heading, {
-        className: i(v.titleText, v.textColor),
+        className: i(U.titleText, U.textColor),
         variant: "heading-xxl/extrabold",
-        children: null != m ? m : x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
+        children: null != m ? m : D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
       }), (0, a.jsxs)("div", {
-        className: v.tableWrapper,
+        className: U.tableWrapper,
         children: [(0, a.jsx)("div", {
-          className: q === h.PremiumSubscriptionSKUs.TIER_0 || $ === h.PremiumTypes.TIER_0 || b === h.PremiumTypes.TIER_0 ? i(U, v.tier0ColumnOuter) : i(U, v.tier2ColumnOuter),
+          className: ee === x.PremiumSubscriptionSKUs.TIER_0 || et === x.PremiumTypes.TIER_0 || G === x.PremiumTypes.TIER_0 ? i(j, U.tier0ColumnOuter) : i(j, U.tier2ColumnOuter),
           children: s
         }), (0, a.jsxs)("table", {
-          className: v.table,
+          className: U.table,
           children: [(0, a.jsx)("thead", {
-            children: (0, a.jsx)(W, {
-              ...ea
+            children: (0, a.jsx)(w, {
+              ...eo
             })
           }), (0, a.jsx)("tbody", {
-            children: er.map((e, t) => (0, r.createElement)(F, {
+            children: ed.map((e, t) => (0, r.createElement)(V, {
               ...e,
               key: t
             }))
