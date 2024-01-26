@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return H
+    return p
   }
 }), l("222007");
 var a = l("37983"),
@@ -23,12 +23,12 @@ var a = l("37983"),
   x = l("624663"),
   _ = l("49111"),
   g = l("782340"),
-  p = l("275699");
+  H = l("275699");
 
-function H(e) {
+function p(e) {
   let {
     guildId: t
-  } = e, H = (0, T.useCanAccessBulkBanningFeature)(t), {
+  } = e, p = (0, T.useCanAccessBulkBanningFeature)(t), {
     selectedUserIds: A,
     clearSelection: S
   } = (0, x.default)(t), L = A.size > 0, N = async (e, t, l, a) => {
@@ -49,7 +49,7 @@ function H(e) {
   }, I = n.useCallback(() => {
     S()
   }, [S]), v = (0, a.jsxs)("span", {
-    className: p.messageContainer,
+    className: H.messageContainer,
     children: [(0, a.jsx)(E.default, {
       width: 24,
       height: 24,
@@ -64,11 +64,11 @@ function H(e) {
       color: d.Button.Colors.LINK,
       look: d.Button.Looks.LINK,
       onClick: I,
-      className: p.clearButton,
+      className: H.clearButton,
       children: g.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_CLEAR_SELECTION
     })]
   }), b = (0, a.jsxs)("span", {
-    className: p.buttonContainer,
+    className: H.buttonContainer,
     children: [(0, a.jsx)(m.default, {
       width: 20,
       height: 20
@@ -77,9 +77,9 @@ function H(e) {
       children: g.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION
     })]
   });
-  return H ? (0, a.jsx)(i.default, {
+  return p ? (0, a.jsx)(i.default, {
     component: "div",
-    className: p.saveNoticeContainer,
+    className: H.saveNoticeContainer,
     children: L && (0, a.jsx)(f.default, {
       children: (0, a.jsx)(u.default, {
         onSave: () => {
@@ -96,7 +96,7 @@ function H(e) {
             return l => (0, a.jsx)(e, {
               ...l,
               guildId: t,
-              canBulkBan: H,
+              canBulkBan: p,
               userIds: A,
               onBanMultiple: N
             })

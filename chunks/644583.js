@@ -23,8 +23,8 @@ var a, n, s, i, o, d, r = l("37983"),
   x = l("419830"),
   _ = l("405645"),
   g = l("19766"),
-  p = l("42203"),
-  H = l("305961"),
+  H = l("42203"),
+  p = l("305961"),
   A = l("27618"),
   S = l("697218"),
   L = l("476765"),
@@ -87,8 +87,8 @@ let y = u.memo(function(e) {
     guildId: a,
     roleId: s,
     size: 16
-  }), d = (0, E.useStateFromStores)([H.default], () => {
-    let e = H.default.getGuild(a);
+  }), d = (0, E.useStateFromStores)([p.default], () => {
+    let e = p.default.getGuild(a);
     return null == e ? null : e.roles[s]
   }, [s, a]), u = i.includes(g.EVERYONE_ID) ? "" : "@", C = (0, M.useToken)(M.tokens.unsafe_rawColors.PRIMARY_300).hsl(), f = null !== (t = null == d ? void 0 : d.colorString) && void 0 !== t ? t : C;
   return (0, r.jsxs)("div", {
@@ -110,7 +110,7 @@ let y = u.memo(function(e) {
   })
 });
 
-function w(e) {
+function F(e) {
   let {
     channel: t,
     row: l,
@@ -131,12 +131,12 @@ function w(e) {
   })
 }
 
-function F(e, t, l) {
+function w(e, t, l) {
   return D(e) ? (0, r.jsx)(y, {
     row: e,
     guildId: t,
     className: l
-  }, e.record.id) : O(e) ? (0, r.jsx)(w, {
+  }, e.record.id) : O(e) ? (0, r.jsx)(F, {
     row: e,
     channel: e.record,
     className: l
@@ -154,19 +154,19 @@ function U(e) {
     placeholder: o,
     helperText: d,
     className: C
-  } = e, f = (0, E.useStateFromStores)([H.default], () => {
+  } = e, f = (0, E.useStateFromStores)([p.default], () => {
     var e, l;
-    return null !== (l = null === (e = H.default.getGuild(t)) || void 0 === e ? void 0 : e.roles) && void 0 !== l ? l : {}
+    return null !== (l = null === (e = p.default.getGuild(t)) || void 0 === e ? void 0 : e.roles) && void 0 !== l ? l : {}
   }, [t]), T = u.useMemo(() => (function(e, t, l) {
     if (null == e) return {};
     let a = {};
     return e.forEach(e => {
-      let t = p.default.getChannel(e);
+      let t = H.default.getChannel(e);
       null != t && (a[e] = B(t))
     }), t.forEach(e => {
       e in l && (a[e] = V(l[e]))
     }), a
-  })(n, s, f), [n, s, f]), x = u.useMemo(() => Object.keys(T), [T]), [_, g] = u.useState(""), [A, S] = u.useState(!1), [L, N] = u.useState(!1), [R, y] = u.useState(!1), w = u.useRef(null), {
+  })(n, s, f), [n, s, f]), x = u.useMemo(() => Object.keys(T), [T]), [_, g] = u.useState(""), [A, S] = u.useState(!1), [L, N] = u.useState(!1), [R, y] = u.useState(!1), F = u.useRef(null), {
     sections: U,
     sectionCounts: k
   } = u.useMemo(() => {
@@ -204,16 +204,16 @@ function U(e) {
       clearTimeout(e)
     }
   }, [A, L]);
-  let G = (e, t, l) => {
+  let Y = (e, t, l) => {
       l.stopPropagation(), l.preventDefault(), 2 === t ? S(e) : (1 === t || S(e), N(e))
     },
-    Y = u.useCallback(e => {
+    G = u.useCallback(e => {
       let t = {
         ...T
       };
       O(e) ? t[e.id] = B(e.record) : D(e) && (t[e.id] = V(e.record)), Z(t), g(""), P(), setTimeout(() => {
         var e;
-        let t = null === (e = w.current) || void 0 === e ? void 0 : e.containerRef.current,
+        let t = null === (e = F.current) || void 0 === e ? void 0 : e.containerRef.current,
           l = null == t ? void 0 : t.firstChild;
         null != l && l.scrollTo({
           top: l.scrollHeight,
@@ -229,19 +229,19 @@ function U(e) {
       return (0, r.jsx)(M.Clickable, {
         className: c(v.selectableSearchRow, v.rowHeight),
         onClick: e => {
-          e.stopPropagation(), Y(n)
+          e.stopPropagation(), G(n)
         },
         children: (0, r.jsx)("div", {
           className: v.rowContainer,
-          children: F(n, t, v.searchRowLabel)
+          children: w(n, t, v.searchRowLabel)
         })
       }, n.id)
-    }, [t, Y, U]),
+    }, [t, G, U]),
     J = u.useMemo(() => x.map(e => {
       var l, a;
       return l = T[e], a = t, {
         ...l.tag,
-        label: F(l.row, a, v.noIndent)
+        label: w(l.row, a, v.noIndent)
       }
     }), [T, x, t]);
   return (0, r.jsxs)("div", {
@@ -253,7 +253,7 @@ function U(e) {
         maxHeight: 98,
         size: h.default.Sizes.MEDIUM,
         query: _,
-        ref: w,
+        ref: F,
         onRemoveTag: e => {
           let t = x[e],
             {
@@ -271,13 +271,13 @@ function U(e) {
           "aria-labelledby": b,
           "aria-controls": j,
           "aria-expanded": R,
-          onFocus: e => G(!0, 2, e),
-          onBlur: e => G(!1, 2, e)
+          onFocus: e => Y(!0, 2, e),
+          onBlur: e => Y(!1, 2, e)
         }
       }), R && (0, r.jsx)("div", {
         className: v.resultsListParent,
-        onFocus: e => G(!0, 1, e),
-        onBlur: e => G(!1, 1, e),
+        onFocus: e => Y(!0, 1, e),
+        onBlur: e => Y(!1, 1, e),
         tabIndex: -1,
         children: (0, r.jsx)(M.ListAuto, {
           className: v.resultsListContainer,

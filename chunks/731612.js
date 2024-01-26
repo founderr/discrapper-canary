@@ -41,8 +41,8 @@ function T(e) {
     onClose: x,
     onSelectDateOption: _,
     onToggleCustomDateRange: g,
-    onSelectStartDate: p,
-    onSelectEndDate: H
+    onSelectStartDate: H,
+    onSelectEndDate: p
   } = e, A = [{
     id: 0,
     option: null,
@@ -92,10 +92,10 @@ function T(e) {
   }], [S, L] = i.useState(!1), N = i.useCallback(() => {
     L(!0), g()
   }, [g]), I = i.useCallback(e => {
-    p(e)
-  }, [p]), v = i.useCallback(e => {
     H(e)
-  }, [H]);
+  }, [H]), v = i.useCallback(e => {
+    p(e)
+  }, [p]);
   return (0, s.jsx)(u.Menu, {
     navId: "member-safety-guild-member-".concat(T, "-menu"),
     onClose: x,

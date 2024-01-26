@@ -30,7 +30,7 @@ function x(e) {
     return d(e).format("h:mm A")
   }, [t.id]), _ = (0, r.default)([m.default], () => m.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), g = n.useCallback(() => {
     (0, E.refreshMemberSafetyTimestamp)(t.id), null == s || s()
-  }, [t.id, s]), p = n.useCallback(() => {
+  }, [t.id, s]), H = n.useCallback(() => {
     _ ? g() : (0, u.openModalLazy)(async () => {
       let {
         default: e
@@ -40,17 +40,17 @@ function x(e) {
         onConfirm: g
       })
     })
-  }, [g, _]), H = new Intl.NumberFormat(M.default.getLocale()).format(o), A = (0, f.useCanAccessInviteCodeFeature)(t.id), S = (0, f.useCanAccessBulkBanningFeature)(t.id), L = n.useMemo(() => 1 + (A ? 1 : 0) + (S ? 1 : 0), [A, S]);
+  }, [g, _]), p = new Intl.NumberFormat(M.default.getLocale()).format(o), A = (0, f.useCanAccessInviteCodeFeature)(t.id), S = (0, f.useCanAccessBulkBanningFeature)(t.id), L = n.useMemo(() => 1 + (A ? 1 : 0) + (S ? 1 : 0), [A, S]);
   return 0 === o ? null : (0, a.jsxs)("tr", {
     className: i(T.newMembersNotice),
-    onClick: p,
+    onClick: H,
     children: [(0, a.jsx)("td", {
       colSpan: 3,
       children: (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
         color: "always-white",
         children: M.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
-          count: H,
+          count: p,
           date: x
         })
       })

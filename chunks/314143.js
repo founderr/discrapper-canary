@@ -26,12 +26,12 @@ function E(e) {
     label: Number(e).toLocaleString()
   })), []), _ = new Intl.NumberFormat(f.default.getLocale()).format(M), g = f.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
     count: T ? "..." : _
-  }), p = M > h.pageSize || T, H = M > r.PAGINATION_PAGE_SIZE_OPTIONS[0];
+  }), H = M > h.pageSize || T, p = M > r.PAGINATION_PAGE_SIZE_OPTIONS[0];
   return (0, a.jsxs)("div", {
     className: i(m.paginationContainer),
     children: [(0, a.jsx)("div", {
       className: i(m.pageSizeSelection),
-      children: H ? (0, a.jsxs)(a.Fragment, {
+      children: p ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(d.Text, {
           variant: "text-md/normal",
           color: "text-muted",
@@ -71,7 +71,7 @@ function E(e) {
       })
     }), (0, a.jsx)("div", {
       className: i(m.pagination),
-      children: p && (0, a.jsx)(d.Paginator, {
+      children: H && (0, a.jsx)(d.Paginator, {
         className: i(m.paginationInput),
         totalCount: M,
         pageSize: h.pageSize,

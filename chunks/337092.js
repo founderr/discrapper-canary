@@ -23,8 +23,8 @@ var a = l("37983"),
   x = l("654017"),
   _ = l("982108"),
   g = l("305961"),
-  p = l("957255"),
-  H = l("697218"),
+  H = l("957255"),
+  p = l("697218"),
   A = l("91551"),
   S = l("4845"),
   L = l("635731"),
@@ -39,14 +39,14 @@ var a = l("37983"),
   V = l("536999"),
   B = l("466818"),
   y = l("178406"),
-  w = l("150162"),
-  F = l("998940"),
+  F = l("150162"),
+  w = l("998940"),
   U = l("290491"),
   k = l("624663"),
   Z = l("553275"),
   P = l("412013"),
-  G = l("49111"),
-  Y = l("782340"),
+  Y = l("49111"),
+  G = l("782340"),
   q = l("236807");
 let J = n.memo(function(e) {
   let {
@@ -55,7 +55,7 @@ let J = n.memo(function(e) {
   return (0, a.jsxs)("div", {
     className: i(q.flagContainer),
     children: [t.hasUnusualDmActivity && (0, a.jsx)(f.Tooltip, {
-      text: Y.default.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY_TOOLTIP,
+      text: G.default.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY_TOOLTIP,
       children: e => {
         let {
           onMouseEnter: t,
@@ -70,12 +70,12 @@ let J = n.memo(function(e) {
         })
       }
     }), l && (0, a.jsx)(f.Tooltip, {
-      "aria-label": Y.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP,
+      "aria-label": G.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP,
       allowOverflow: !0,
       text: (0, a.jsxs)("div", {
         className: q.communicationDisabledTooltip,
         children: [(0, a.jsx)("div", {
-          children: Y.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP
+          children: G.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP
         }), (0, a.jsx)(A.default, {
           deadline: s,
           showUnits: !0,
@@ -96,7 +96,7 @@ let J = n.memo(function(e) {
         })
       }
     }), o && (0, x.isSpammer)(t.userId) && (0, a.jsx)(f.Tooltip, {
-      text: Y.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY_TOOLTIP,
+      text: G.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY_TOOLTIP,
       children: e => {
         let {
           onMouseEnter: t,
@@ -111,7 +111,7 @@ let J = n.memo(function(e) {
         })
       }
     }), o && (0, M.hasAutomodQuarantinedProfile)(t) && (0, a.jsx)(f.Tooltip, {
-      text: Y.default.Messages.MEMBER_SAFETY_QUARANTINED_USER_TOOLTIP,
+      text: G.default.Messages.MEMBER_SAFETY_QUARANTINED_USER_TOOLTIP,
       children: e => {
         let {
           onMouseEnter: t,
@@ -154,7 +154,7 @@ let z = n.memo(function(e) {
     let {
       member: t,
       highestRole: l
-    } = e, s = (0, C.default)([g.default], () => g.default.getGuild(t.guildId), [t.guildId]), [o, d] = n.useState(!1), r = t.roles.length - 1, u = n.useMemo(() => new Intl.NumberFormat(Y.default.getLocale()).format(r), [r]), c = (0, Z.useContextMenuModerateRoles)(t), m = (0, C.default)([p.default], () => p.default.can(G.Permissions.MANAGE_ROLES, s), [s]), E = n.useCallback(e => () => {
+    } = e, s = (0, C.default)([g.default], () => g.default.getGuild(t.guildId), [t.guildId]), [o, d] = n.useState(!1), r = t.roles.length - 1, u = n.useMemo(() => new Intl.NumberFormat(G.default.getLocale()).format(r), [r]), c = (0, Z.useContextMenuModerateRoles)(t), m = (0, C.default)([H.default], () => H.default.can(Y.Permissions.MANAGE_ROLES, s), [s]), E = n.useCallback(e => () => {
       d(!0), null == e || e()
     }, []), M = n.useCallback(e => () => {
       d(!1), null == e || e()
@@ -166,14 +166,14 @@ let z = n.memo(function(e) {
         role: l,
         guildId: t.guildId
       }), r > 0 && (0, a.jsx)(f.Tooltip, {
-        "aria-label": Y.default.Messages.MEMBER_SAFETY_MORE_ROLES_TOOLTIP,
+        "aria-label": G.default.Messages.MEMBER_SAFETY_MORE_ROLES_TOOLTIP,
         tooltipContentClassName: q.roleTooltip,
         allowOverflow: !0,
         text: (0, a.jsx)("div", {
           className: q.roleTooltipSafetyContainer,
           children: o ? (0, a.jsx)(K, {
             member: t
-          }) : Y.default.Messages.MEMBER_SAFETY_MORE_ROLES_TOOLTIP
+          }) : G.default.Messages.MEMBER_SAFETY_MORE_ROLES_TOOLTIP
         }),
         children: e => {
           let {
@@ -192,7 +192,7 @@ let z = n.memo(function(e) {
           })
         }
       }), m && (0, a.jsx)(f.Tooltip, {
-        text: Y.default.Messages.MEMBER_SAFETY_TABLE_ADD_ROLES_TOOLTIP,
+        text: G.default.Messages.MEMBER_SAFETY_TABLE_ADD_ROLES_TOOLTIP,
         children: e => {
           let {
             onMouseEnter: t,
@@ -248,8 +248,8 @@ let z = n.memo(function(e) {
   });
 
 function Q(e) {
-  let t = null == e ? null : (0, F.formatDateRelativeTime)(e, F.MembersTableDateFormats.JOINED_AT),
-    l = new Date(null != e ? e : 0).toLocaleDateString(Y.default.getLocale(), F.MEMBER_JOIN_DATE_TOOLTIP_CONFIG);
+  let t = null == e ? null : (0, w.formatDateRelativeTime)(e, w.MembersTableDateFormats.JOINED_AT),
+    l = new Date(null != e ? e : 0).toLocaleDateString(G.default.getLocale(), w.MEMBER_JOIN_DATE_TOOLTIP_CONFIG);
   return {
     short: t,
     long: l
@@ -295,8 +295,8 @@ let $ = n.memo(function(e) {
       accountCreationDateLong: i
     } = n.useMemo(() => {
       let e = u.default.extractTimestamp(t.userId),
-        l = (0, F.formatDateRelativeTime)(e, F.MembersTableDateFormats.ACCOUNT_AGE),
-        a = new Date(e).toLocaleDateString(Y.default.getLocale(), F.ACCOUNT_AGE_DATE_TOOLTIP_CONFIG);
+        l = (0, w.formatDateRelativeTime)(e, w.MembersTableDateFormats.ACCOUNT_AGE),
+        a = new Date(e).toLocaleDateString(G.default.getLocale(), w.ACCOUNT_AGE_DATE_TOOLTIP_CONFIG);
       return {
         accountCreationDateShort: l,
         accountCreationDateLong: a
@@ -326,24 +326,24 @@ let $ = n.memo(function(e) {
       onOpenModerationMenu: d,
       onOpenProfileMenu: r,
       compact: u
-    } = e, c = (0, C.default)([p.default, g.default], () => p.default.can(G.Permissions.MANAGE_GUILD, g.default.getGuild(t.guildId)), [t.guildId]), {
+    } = e, c = (0, C.default)([H.default, g.default], () => H.default.can(Y.Permissions.MANAGE_GUILD, g.default.getGuild(t.guildId)), [t.guildId]), {
       selectedUserIds: m,
       addUsers: E,
       removeUser: M
-    } = (0, k.default)(t.guildId), h = (0, B.useCanAccessBulkBanningFeature)(t.guildId), x = (0, B.useCanBulkBanUser)(t.guildId, h, t.userId), _ = (0, T.useCanAccessGuildMemberModView)(t.guildId), H = n.useCallback(e => {
+    } = (0, k.default)(t.guildId), h = (0, B.useCanAccessBulkBanningFeature)(t.guildId), x = (0, B.useCanBulkBanUser)(t.guildId, h, t.userId), _ = (0, T.useCanAccessGuildMemberModView)(t.guildId), p = n.useCallback(e => {
       e.stopPropagation(), e.preventDefault(), null != t && x && (m.has(t.userId) ? M(t.userId) : E([t.userId]))
     }, [E, x, t, M, m]);
     return (0, a.jsxs)(a.Fragment, {
       children: [h && (0, a.jsx)(f.Tooltip, {
         tooltipClassName: q.disabledActionTooltip,
         shouldShow: !x,
-        text: Y.default.Messages.MEMBER_SAFETY_ACTION_PERMISSIONS_MISSING,
+        text: G.default.Messages.MEMBER_SAFETY_ACTION_PERMISSIONS_MISSING,
         children: e => (0, a.jsx)("td", {
           ...e,
           children: (0, a.jsx)("div", {
             className: i(q.checkbox, q.xsmallCol),
             children: (0, a.jsx)(f.Clickable, {
-              onClick: H,
+              onClick: p,
               children: (0, a.jsx)(f.Checkbox, {
                 type: f.Checkbox.Types.INVERTED,
                 value: m.has(t.userId),
@@ -406,7 +406,7 @@ let $ = n.memo(function(e) {
         children: (0, a.jsxs)("div", {
           className: i(q.actionCell),
           children: [(0, a.jsx)(f.Tooltip, {
-            text: _ ? Y.default.Messages.MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP : Y.default.Messages.MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP,
+            text: _ ? G.default.Messages.MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP : G.default.Messages.MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP,
             children: e => {
               let {
                 onMouseEnter: t,
@@ -427,7 +427,7 @@ let $ = n.memo(function(e) {
               })
             }
           }), (0, a.jsx)(f.Tooltip, {
-            text: Y.default.Messages.MEMBER_SAFETY_TABLE_OVERFLOW_TOOLTIP,
+            text: G.default.Messages.MEMBER_SAFETY_TABLE_OVERFLOW_TOOLTIP,
             children: e => {
               let {
                 onMouseEnter: t,
@@ -460,20 +460,20 @@ var ea = n.memo(function(e) {
     rowSelected: u,
     isHoldingAdvancedInfoKey: c = !1,
     compact: f = !1
-  } = e, m = (0, C.default)([_.default], () => _.default.getGuildSidebarState(l), [l]), E = (null == m ? void 0 : m.details.userId) === t, M = (0, C.default)([y.default], () => y.default.getEnhancedMember(l, t), [l, t]), h = (0, Z.useHighestRole)(M), T = (0, C.default)([H.default], () => H.default.getUser(t), [t]), x = (0, Z.useContextMenuModerateUser)(null != M ? M : void 0), g = n.useCallback(e => {
+  } = e, m = (0, C.default)([_.default], () => _.default.getGuildSidebarState(l), [l]), E = (null == m ? void 0 : m.details.userId) === t, M = (0, C.default)([y.default], () => y.default.getEnhancedMember(l, t), [l, t]), h = (0, Z.useHighestRole)(M), T = (0, C.default)([p.default], () => p.default.getUser(t), [t]), x = (0, Z.useContextMenuModerateUser)(null != M ? M : void 0), g = n.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), x(e)
-  }, [x]), p = n.useCallback(e => {
+  }, [x]), H = n.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), null != M && (null == d || d(M))
   }, [d, M]), A = n.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), null != M && (0, Z.openMemberProfile)(M)
   }, [M]), S = n.useCallback((e, t) => r((0, o.omit)(e, el), (0, o.omit)(t, el)), []);
-  return null == M ? null : (0, a.jsx)(w.default, {
+  return null == M ? null : (0, a.jsx)(F.default, {
     role: "row",
     value: M,
     style: s,
     className: i(q.roundedRow, q.memberRowContainer, u && q.selected, E && q.memberSelected),
     equalityFn: S,
-    onClick: p,
+    onClick: H,
     onContextMenu: g,
     children: (0, a.jsx)(ee, {
       member: M,

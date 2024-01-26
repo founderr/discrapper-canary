@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return H
+    return p
   }
 });
 var a, n, s = l("37983"),
@@ -147,7 +147,7 @@ function g(e) {
   })
 }
 
-function p(e) {
+function H(e) {
   let {
     onHandleEnableLockdown: t,
     onHandleReportFalseAlarm: l,
@@ -207,7 +207,7 @@ function p(e) {
   })
 }
 
-function H(e) {
+function p(e) {
   let {
     guild: t,
     incidentData: a,
@@ -259,7 +259,7 @@ function H(e) {
         guildName: t.name
       });
     case 3:
-      return (0, s.jsx)(p, {
+      return (0, s.jsx)(H, {
         onHandleEnableLockdown: m,
         onHandleReportFalseAlarm: E,
         incidentData: a,

@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return y
   },
   ItemsPopout: function() {
-    return F
+    return D
   },
   default: function() {
     return U
@@ -137,7 +137,7 @@ class j extends l.PureComponent {
     }
   }
 }
-let D = d.default.connectStores([_.default], e => {
+let F = d.default.connectStores([_.default], e => {
   let {
     channel: t
   } = e;
@@ -146,7 +146,7 @@ let D = d.default.connectStores([_.default], e => {
   }
 })(j);
 
-function F(e) {
+function D(e) {
   let {
     analyticsName: t,
     items: n,
@@ -160,7 +160,7 @@ function F(e) {
     scrollerClassName: N,
     className: _,
     listName: A
-  } = e, b = l.useRef(null), y = (0, E.default)(A, b), j = (0, d.useStateFromStores)([T.default], () => T.default.hasNotice()), D = (0, d.useStateFromStores)([I.default], () => I.default.windowSize());
+  } = e, b = l.useRef(null), y = (0, E.default)(A, b), j = (0, d.useStateFromStores)([T.default], () => T.default.hasNotice()), F = (0, d.useStateFromStores)([I.default], () => I.default.windowSize());
   l.useEffect(() => {
     M.default.track(x.AnalyticEvents.OPEN_POPOUT, {
       type: t
@@ -183,7 +183,7 @@ function F(e) {
       v.ComponentDispatch.unsubscribe(x.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.unsubscribe(x.ComponentActions.SCROLL_PAGE_UP, e)
     }
   }, []);
-  let F = l.useCallback(() => {
+  let D = l.useCallback(() => {
       var e;
       let t = null === (e = b.current) || void 0 === e ? void 0 : e.getScrollerState();
       null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && s && !r && (null == f || f())
@@ -227,14 +227,14 @@ function F(e) {
         children: w
       })
     }) : null,
-    B = {
-      maxHeight: D.height - 43 - 25
+    H = {
+      maxHeight: F.height - 43 - 25
     };
-  j && (B.maxHeight -= 40);
-  let H = null != f && s;
+  j && (H.maxHeight -= 40);
+  let B = null != f && s;
   return (0, a.jsx)("div", {
     className: i(_, L.messagesPopoutWrap),
-    style: B,
+    style: H,
     onClick: O,
     onDoubleClick: O,
     "aria-label": e["aria-label"],
@@ -242,7 +242,7 @@ function F(e) {
       component: h(),
       children: [(0, a.jsxs)(c.AdvancedScroller, {
         className: i(L.messagesPopout, N),
-        onScroll: H ? F : void 0,
+        onScroll: B ? D : void 0,
         ref: b,
         children: [(0, a.jsx)(u.ListNavigatorProvider, {
           navigator: y,
@@ -315,7 +315,7 @@ function U(e) {
     message: e,
     channel: s
   })), [i, s]);
-  return (0, a.jsx)(F, {
+  return (0, a.jsx)(D, {
     className: A,
     scrollerClassName: C,
     items: y,
@@ -340,7 +340,7 @@ function U(e) {
           className: L.messageGroupCozy,
           message: t,
           channel: n
-        }), (0, a.jsx)(D, {
+        }), (0, a.jsx)(F, {
           channel: s,
           message: t,
           jumping: O,

@@ -23,8 +23,8 @@ var a = l("37983"),
   x = l("553275"),
   _ = l("151123"),
   g = l("337092"),
-  p = l("850646"),
-  H = l("894282"),
+  H = l("850646"),
+  p = l("894282"),
   A = l("474507");
 let S = {
     transform: "translate3d(15%, 0, 0)",
@@ -43,7 +43,7 @@ let S = {
     friction: 24,
     tension: 260
   },
-  v = e => e.shiftKey || e.key === H.KeyboardKeysUpdated.SHIFT,
+  v = e => e.shiftKey || e.key === p.KeyboardKeysUpdated.SHIFT,
   b = e => e.metaKey || e.ctrlKey,
   j = n.memo(function(e) {
     let {
@@ -54,10 +54,10 @@ let S = {
       compact: d,
       onSelectRow: c,
       onResetForNewMembers: f
-    } = e, E = (0, u.default)([C.default], () => C.default.useReducedMotion), H = (0, m.useIsWindowFocused)(), [j, R] = n.useState(!1), [D, O] = n.useState(!1);
+    } = e, E = (0, u.default)([C.default], () => C.default.useReducedMotion), p = (0, m.useIsWindowFocused)(), [j, R] = n.useState(!1), [D, O] = n.useState(!1);
     n.useEffect(() => {
-      !H && (R(!1), O(!1))
-    }, [H]), n.useLayoutEffect(() => {
+      !p && (R(!1), O(!1))
+    }, [p]), n.useLayoutEffect(() => {
       let e = e => {
           v(e) && R(!0), b(e) && O(!0)
         },
@@ -91,7 +91,7 @@ let S = {
         currentPagedMembers: t
       }), (0, a.jsx)("tbody", {
         children: o === x.SearchState.SUCCESS_FULL || o === x.SearchState.LOADING ? (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(p.default, {
+          children: [(0, a.jsx)(H.default, {
             guild: l,
             onSubmit: f
           }), B((e, t) => (0, a.jsx)(g.default, {

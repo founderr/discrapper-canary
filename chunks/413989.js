@@ -23,14 +23,14 @@ var a = l("37983"),
   x = l("412013"),
   _ = l("782340"),
   g = l("554490"),
-  p = l("236807");
-let H = new Set;
+  H = l("236807");
+let p = new Set;
 
 function A(e) {
   let {
     guildId: t,
     onClose: l
-  } = e, s = (0, M.useTrackMemberFilterRolesUsed)(t), o = (0, f.default)([h.default], () => h.default.getSearchStateByGuildId(t), [t], c), [r, C] = n.useState(o.selectedRoleIds), A = (0, E.useRoleRows)(t, H, !0), S = (e, l) => {
+  } = e, s = (0, M.useTrackMemberFilterRolesUsed)(t), o = (0, f.default)([h.default], () => h.default.getSearchStateByGuildId(t), [t], c), [r, C] = n.useState(o.selectedRoleIds), A = (0, E.useRoleRows)(t, p, !0), S = (e, l) => {
     let {
       record: n
     } = e;
@@ -44,7 +44,7 @@ function A(e) {
             className: i(g.labelBackground, l && g.selected)
           }), (0, a.jsx)(m.ComboboxItem.Label, {
             children: (0, a.jsx)(x.default, {
-              className: i(p.roleTooltipItem),
+              className: i(H.roleTooltipItem),
               role: n,
               guildId: t
             }, n.id)

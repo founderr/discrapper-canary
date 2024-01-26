@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return p
+    return H
   }
 }), l("222007");
 var a = l("37983"),
@@ -35,12 +35,12 @@ let g = n.forwardRef(function(e, t) {
         guild: s
       })
     })
-  }, [s, r]), p = (0, C.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], u), H = (0, E.useTrackMemberSearchUsed)(s.id), [A, S] = n.useState(p.query), L = n.useCallback(e => {
+  }, [s, r]), H = (0, C.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], u), p = (0, E.useTrackMemberSearchUsed)(s.id), [A, S] = n.useState(H.query), L = n.useCallback(e => {
     let t = e.trim();
-    t.length > 0 && H(), (0, h.updateSearchState)(s.id, {
+    t.length > 0 && p(), (0, h.updateSearchState)(s.id, {
       query: t
     })
-  }, [s.id, H]), N = n.useCallback(d(L, 300), [L]), I = n.useCallback(e => {
+  }, [s.id, p]), N = n.useCallback(d(L, 300), [L]), I = n.useCallback(e => {
     S(e), N(e)
   }, [N]), v = n.useCallback(() => {
     S(""), L("")
@@ -92,4 +92,4 @@ let g = n.forwardRef(function(e, t) {
     })]
   })
 });
-var p = g
+var H = g
