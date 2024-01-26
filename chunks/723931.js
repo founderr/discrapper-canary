@@ -714,7 +714,7 @@ let eF = e => {
     disableReactionCreates: d = !0,
     disableReactionUpdates: c = !0,
     ...f
-  } = e, E = z.InlineAttachmentMedia.useSetting(), _ = z.InlineEmbedMedia.useSetting(), T = z.RenderEmbeds.useSetting() && !a.author.isClyde(), I = z.GifAutoPlay.useSetting(), m = (0, N.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = a.editedTimestamp) && void 0 !== t ? t : a.timestamp).valueOf()), p = (0, N.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = i.guild_id) && void 0 !== n ? n : "", (null !== (l = a.editedTimestamp) && void 0 !== l ? l : a.timestamp).valueOf()), S = (0, j.default)(null == i ? void 0 : i.id), A = (0, g.useShouldRedactExplicitContent)(i.id, a.author.id), C = (0, M.useShouldRenderReportFalsePositiveButton)(a.id, ej);
+  } = e, E = z.InlineAttachmentMedia.useSetting(), _ = z.InlineEmbedMedia.useSetting(), T = z.RenderEmbeds.useSetting() && !a.author.isClyde(), I = z.GifAutoPlay.useSetting(), m = (0, N.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = a.editedTimestamp) && void 0 !== t ? t : a.timestamp).valueOf()), p = (0, N.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = i.guild_id) && void 0 !== n ? n : "", (null !== (l = a.editedTimestamp) && void 0 !== l ? l : a.timestamp).valueOf()), S = (0, j.default)(null == i ? void 0 : i.id), A = (0, g.useShouldRedactExplicitContent)(i.id, a.author.id), C = (0, M.useShouldRenderReportFalsePositiveButton)(a.id, ej), h = (0, G.default)(a);
   return (0, s.jsx)(eB, {
     ...f,
     message: a,
@@ -730,6 +730,7 @@ let eF = e => {
     inlineEmbedMedia: _,
     renderEmbeds: T,
     gifAutoPlay: I,
+    poll: h,
     showListsAndHeaders: m.showListsAndHeaders || p.showListsAndHeaders,
     showMaskedLinks: m.showMaskedLinks || p.showMaskedLinks,
     shouldHideMediaOptions: S,
