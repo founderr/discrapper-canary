@@ -60,7 +60,7 @@ function G(e, t) {
       let i = {};
       for (let a of u) i[a.id] = function(e, t, n, i, a) {
         var l;
-        let [s, r, o] = _.default.hasConsented(R.Consents.PERSONALIZATION) ? (0, A.guessGuildModeWithRemoteData)(e, t, n, i) : (0, A.guessGuildModeWithLocalData)(e, n), u = null !== (l = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== l ? l : {}, d = (0, M.default)(e, null != a ? a : s, u, i, t);
+        let [s, r, o] = _.default.hasConsented(R.Consents.PERSONALIZATION) ? (0, A.guessGuildModeWithRemoteData)(e, t, n, i, !0) : (0, A.guessGuildModeWithLocalData)(e, n), u = null !== (l = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== l ? l : {}, d = (0, M.default)(e, null != a ? a : s, u, i, t);
         return {
           guildId: e.id,
           mode: s,
@@ -124,7 +124,7 @@ function G(e, t) {
 
 function L(e, t) {
   return Object.values(v.default.getGuilds()).some(n => {
-    let [i] = _.default.hasConsented(R.Consents.PERSONALIZATION) ? (0, A.guessGuildModeWithRemoteData)(n, P.defaultThresholds, e, t) : (0, A.guessGuildModeWithLocalData)(n, e);
+    let [i] = _.default.hasConsented(R.Consents.PERSONALIZATION) ? (0, A.guessGuildModeWithRemoteData)(n, P.defaultThresholds, e, t, !1) : (0, A.guessGuildModeWithLocalData)(n, e);
     return i === P.Mode.UseGreyDot
   })
 }
