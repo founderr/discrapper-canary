@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return P
   }
 }), s("808653"), s("222007");
 var a = s("37983"),
@@ -9,86 +9,89 @@ var a = s("37983"),
   n = s("414456"),
   i = s.n(n),
   l = s("77078"),
-  u = s("290381"),
-  o = s("812204"),
-  d = s("685665"),
-  c = s("411691"),
-  _ = s("594098"),
-  E = s("599110"),
-  I = s("322507"),
-  T = s("941797"),
-  f = s("628550"),
-  S = s("598739"),
-  R = s("49111"),
-  m = s("782340"),
-  A = s("137537"),
-  N = s("679324"),
-  p = e => {
+  u = s("446674"),
+  o = s("290381"),
+  d = s("206230"),
+  c = s("812204"),
+  _ = s("685665"),
+  E = s("411691"),
+  I = s("594098"),
+  T = s("599110"),
+  f = s("322507"),
+  S = s("941797"),
+  R = s("628550"),
+  m = s("598739"),
+  A = s("49111"),
+  N = s("782340"),
+  p = s("137537"),
+  g = s("679324"),
+  P = e => {
     let {
       isAllPerksVisible: t,
       setIsAllPerksVisible: s
-    } = e, n = r.useRef(null), p = (0, f.default)(), g = Object.entries(p).reduce((e, t) => {
+    } = e, n = r.useRef(null), P = (0, R.default)(), C = Object.entries(P).reduce((e, t) => {
       let [s, a] = t;
       return !1 !== a.canReveal && "upcomingDropUntimed" !== a.name && (e[s] = a), e
     }, {}), {
-      AnalyticsLocationProvider: P,
-      analyticsLocations: C
-    } = (0, d.default)(o.default.PREMIUM_SUBSCRIBER_NITRO_HOME), [O, M] = r.useState(!1), h = (0, c.default)("perks-discoverability");
+      AnalyticsLocationProvider: O,
+      analyticsLocations: M
+    } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME), [h, L] = r.useState(!1), x = (0, E.default)("perks-discoverability"), v = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion);
     return (0, a.jsx)(l.AdvancedScrollerAuto, {
-      className: i(A.allPerksScroller, {
-        [A.open]: t
+      className: i(p.allPerksScroller, {
+        [p.open]: t,
+        [p.openCloseReduceMotion]: v
       }),
       ref: n,
       children: (0, a.jsx)("div", {
-        className: A.container,
-        children: (0, a.jsxs)(P, {
-          children: [(0, a.jsx)(I.default, {
-            className: A.heroHeading,
+        className: p.container,
+        children: (0, a.jsxs)(O, {
+          children: [(0, a.jsx)(f.default, {
+            className: p.heroHeading,
             onBackClick: () => s(!1)
           }), (0, a.jsxs)("div", {
-            className: A.column,
+            className: p.column,
             children: [(0, a.jsx)(l.Heading, {
               variant: "heading-xxl/extrabold",
               color: "header-primary",
-              className: A.heading,
-              children: m.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE
-            }), (0, a.jsx)(T.default, {
-              className: A.cardCarousel,
-              cards: (0, S.getFilteredPerksDiscoverabilityCards)(g, S.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW, h),
-              cardType: S.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW
+              className: p.heading,
+              children: N.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE
+            }), (0, a.jsx)(S.default, {
+              className: p.cardCarousel,
+              cards: (0, m.getFilteredPerksDiscoverabilityCards)(C, m.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW, x),
+              cardType: m.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW
             }), (0, a.jsx)(l.Heading, {
               variant: "heading-xxl/extrabold",
               color: "header-primary",
-              className: A.heading,
-              children: m.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD
-            }), (0, a.jsx)(T.default, {
-              className: A.cardCarousel,
-              cards: (0, S.getFilteredPerksDiscoverabilityCards)(g, S.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW, h),
-              cardType: S.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW
+              className: p.heading,
+              children: N.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD
+            }), (0, a.jsx)(S.default, {
+              className: p.cardCarousel,
+              cards: (0, m.getFilteredPerksDiscoverabilityCards)(C, m.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW, x),
+              cardType: m.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW
             }), (0, a.jsx)(l.Heading, {
               variant: "heading-xxl/extrabold",
               color: "header-primary",
-              className: A.heading,
-              children: m.default.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
-            }), (0, a.jsx)(T.default, {
-              className: A.cardCarousel,
-              cards: (0, S.getFilteredPerksDiscoverabilityCards)(g, S.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW, h),
-              cardType: S.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW
+              className: p.heading,
+              children: N.default.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
+            }), (0, a.jsx)(S.default, {
+              className: p.cardCarousel,
+              cards: (0, m.getFilteredPerksDiscoverabilityCards)(C, m.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW, x),
+              cardType: m.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW
             })]
           }), (0, a.jsx)("div", {
-            className: A.footerSpacing
-          }), (0, a.jsx)(u.VisibilitySensor, {
+            className: p.footerSpacing
+          }), (0, a.jsx)(o.VisibilitySensor, {
             onChange: e => {
-              e && !O && (E.default.track(R.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                location_stack: C
-              }), M(!0))
+              e && !h && (T.default.track(A.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                location_stack: M
+              }), L(!0))
             },
             children: (0, a.jsx)("div", {
-              className: A.bottomOfPageVisibilitySensor
+              className: p.bottomOfPageVisibilitySensor
             })
-          }), (0, a.jsx)(_.default, {
-            src: N,
-            className: A.bottomIllustration,
+          }), (0, a.jsx)(I.default, {
+            src: g,
+            className: p.bottomIllustration,
             width: 112,
             height: 85,
             zoomable: !1
