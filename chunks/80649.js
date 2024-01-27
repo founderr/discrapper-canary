@@ -79,7 +79,7 @@ function b(e) {
   }, []), l.useEffect(() => () => {
     r.default.truncateMentions(v.MAX_MENTIONS_PER_FETCH)
   }, []);
-  let D = l.useCallback(() => (0, a.jsx)(M.default, {
+  let F = l.useCallback(() => (0, a.jsx)(M.default, {
     tab: i.InboxTab.MENTIONS,
     setTab: t,
     badgeState: f,
@@ -105,8 +105,8 @@ function b(e) {
         O(m, !0, e)
       },
       canCloseAllMessages: !0,
-      renderHeader: D,
-      renderEmptyState: F,
+      renderHeader: F,
+      renderEmptyState: D,
       renderMessage: j,
       "aria-label": x.default.Messages.RECENT_MENTIONS,
       listName: "recents"
@@ -115,21 +115,21 @@ function b(e) {
 }
 
 function y(e, t) {
-  return [(0, a.jsx)(D, {
+  return [(0, a.jsx)(F, {
     message: e,
     gotoMessage: t
   }, e.id)]
 }
 
 function j(e, t) {
-  return [(0, a.jsx)(D, {
+  return [(0, a.jsx)(F, {
     message: e,
     gotoMessage: t,
     dismissible: !0
   }, e.id)]
 }
 
-function D(e) {
+function F(e) {
   let {
     message: t,
     gotoMessage: n,
@@ -174,7 +174,7 @@ function D(e) {
   })
 }
 
-function F(e) {
+function D(e) {
   return (0, a.jsx)(A.default, {
     Icon: g.default,
     header: x.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,

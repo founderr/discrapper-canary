@@ -36,8 +36,8 @@ var a = n("37983"),
   y = n("84691");
 n("525840");
 let j = (0, C.uid)(),
-  D = u(f.search, 500);
-class F extends l.PureComponent {
+  F = u(f.search, 500);
+class D extends l.PureComponent {
   componentDidMount() {
     var e, t;
     A.ComponentDispatch.subscribe(O.ComponentActions.PERFORM_SEARCH, this.search), A.ComponentDispatch.subscribe(O.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), A.ComponentDispatch.subscribe(O.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch), null === (t = this._editorRef) || void 0 === t || null === (e = t.editor) || void 0 === e || e.setAttribute("aria-haspopup", "listbox")
@@ -196,7 +196,7 @@ class F extends l.PureComponent {
           n = v.getSearchQueryFromTokens(e);
         for (let t = 0; t < e.length; t++) !v.filterHasAnswer(e[t], e[t + 1]) && (a = a.substring(0, e[t].start) + a.substring(e[t].end));
         if (0 === e.length || 0 === Object.keys(n).length) return !1;
-        D(t, n, a, !!l), this.onBlur()
+        F(t, n, a, !!l), this.onBlur()
       }
       return !0
     }, this.handleClearSearch = e => {
@@ -380,4 +380,4 @@ var U = d.default.connectStores([S.default, T.default], () => {
     hasResults: T.default.hasResults(t),
     keyboardModeEnabled: s
   }
-})(F)
+})(D)
