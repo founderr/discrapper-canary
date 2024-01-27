@@ -16,8 +16,8 @@ var n = a("37983"),
   i = a.n(s),
   r = a("77078"),
   o = a("447435"),
-  d = a("963119"),
-  u = a("467475"),
+  u = a("963119"),
+  d = a("467475"),
   c = a("651693"),
   m = a("605160"),
   h = a("903962"),
@@ -55,7 +55,7 @@ let L = e => {
       downloadURL: l,
       downloadMimeType: s,
       onRemoveAttachment: o,
-      isAttachmentMediaType: d
+      isAttachmentMediaType: u
     } = e;
     return (null != l && null != s && (t = (0, n.jsx)(r.Tooltip, {
       text: y.default.Messages.DOWNLOAD,
@@ -88,7 +88,7 @@ let L = e => {
       })
     })), null == a && null == t) ? null : (0, n.jsxs)("div", {
       className: i(S.hoverButtonGroup, {
-        [S.nonMediaAttachment]: !d
+        [S.nonMediaAttachment]: !u
       }),
       children: [t, a]
     })
@@ -99,7 +99,7 @@ let L = e => {
       attachment: a,
       inlineMedia: s,
       autoPlayGif: o,
-      canRemoveAttachment: d,
+      canRemoveAttachment: u,
       onRemoveAttachment: c,
       onClick: m,
       onContextMenu: h,
@@ -124,7 +124,7 @@ let L = e => {
       height: U,
       description: z,
       spoiler: X
-    } = a, Y = b(a, s), [q, J] = l.useState(!1), Q = (0, u.default)(t.getChannelId()), {
+    } = a, Y = b(a, s), [q, J] = l.useState(!1), Q = (0, d.default)(t.getChannelId()), {
       enabled: Z
     } = g.default.useExperiment({
       location: "MessageAttachment"
@@ -159,11 +159,11 @@ let L = e => {
         return !q && (0, n.jsx)(L, {
           downloadURL: e ? a.url : void 0,
           downloadMimeType: e ? $ : void 0,
-          onRemoveAttachment: d ? ee : void 0,
+          onRemoveAttachment: u ? ee : void 0,
           isAttachmentMediaType: K
         })
       }
-      return d && (0, n.jsx)(r.Clickable, {
+      return u && (0, n.jsx)(r.Clickable, {
         className: X ? S.spoilerRemoveAttachmentButton : S.removeAttachmentButton,
         focusProps: {
           offset: {
@@ -177,7 +177,7 @@ let L = e => {
           height: 16
         })
       })
-    }, [B, d, X, Y, K, q, a, $, ee, W, U, H, c, Q]), es = l.useCallback(() => {
+    }, [B, u, X, Y, K, q, a, $, ee, W, U, H, c, Q]), es = l.useCallback(() => {
       var e;
       return (0, v.hasFlag)(null !== (e = a.flags) && void 0 !== e ? e : 0, T.MessageAttachmentFlags.IS_CLIP) ? (0, n.jsxs)(r.TooltipContainer, {
         text: y.default.Messages.CLIPS_BETA_TAG_HOVER,
@@ -296,7 +296,7 @@ var w = e => {
     className: a,
     attachment: s,
     message: r,
-    inlineMedia: u,
+    inlineMedia: d,
     useFullWidth: c,
     mediaLayoutType: h,
     canRemoveAttachment: g,
@@ -306,17 +306,17 @@ var w = e => {
   } = e, {
     width: p,
     height: M
-  } = s, I = (0, d.useShouldRedactExplicitContent)(r.channel_id, r.author.id), E = (0, m.getObscureReason)(s, I), [v, T] = l.useState(void 0 !== E), y = h === N.MediaLayoutType.MOSAIC, j = !y && (null != p && p < 200 || null != M && M < 50), L = b(s, u);
+  } = s, I = (0, u.useShouldRedactExplicitContent)(r.channel_id, r.author.id), E = (0, m.getObscureReason)(s, I), [v, T] = l.useState(null != E), y = h === N.MediaLayoutType.MOSAIC, j = !y && (null != p && p < 200 || null != M && M < 50), L = b(s, d);
   let w = "IMAGE" === (t = L) || "VIDEO" === t,
-    F = O(b(s, u)),
-    P = f && void 0 !== E && (0, o.isExplicitMediaBelowConstraints)(p, M),
+    F = O(b(s, d)),
+    P = f && null != E && (0, o.isExplicitMediaBelowConstraints)(p, M),
     k = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
       return (0, n.jsx)(D, {
         ..._,
         attachment: s,
         message: r,
-        inlineMedia: u,
+        inlineMedia: d,
         hiddenSpoilers: e,
         canRemoveAttachment: g,
         className: i(a, S.attachmentContentItem, {
