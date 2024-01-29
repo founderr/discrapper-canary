@@ -16581,5 +16581,7 @@ e.exports = Object.freeze({
   LIST_SUMMARY_LABEL_ONE: "!!{first}!!",
   LIST_SUMMARY_LABEL_TWO: "!!{first}!! and !!{second}!!",
   LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!!, and !!{third}!!",
-  LIST_SUMMARY_LABEL_THREE_AND_OTHERS: "!!{first}!!, !!{second}!!, !!{third}!!, and {count, plural, one {1 other} other {{count} others}}"
+  LIST_SUMMARY_LABEL_THREE_AND_OTHERS: "!!{first}!!, !!{second}!!, !!{third}!!, and {count, plural, one {1 other} other {{count} others}}",
+  STOREFRONT: "App Store",
+  STOREFRONT_TITLE: "{appName} App Store"
 })
