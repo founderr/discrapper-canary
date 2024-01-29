@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return k
+    return F
   }
 }), n("424973"), n("222007"), n("881410");
 var s = n("37983"),
@@ -122,7 +122,7 @@ function B(e) {
   }) : null
 }
 
-function k(e) {
+function F(e) {
   var t, n;
   let a, r, {
       invite: d,
@@ -131,10 +131,10 @@ function k(e) {
     {
       approximate_member_count: O,
       approximate_presence_count: L,
-      target_type: k,
-      target_application: F
+      target_type: F,
+      target_application: k
     } = d;
-  o(k === D.InviteTargetTypes.EMBEDDED_APPLICATION && null != F, "invalid application invite");
+  o(F === D.InviteTargetTypes.EMBEDDED_APPLICATION && null != k, "invalid application invite");
   let w = l.useRef(null),
     [H, V] = l.useState(!1),
     [Y, W] = l.useState(!1);
@@ -150,10 +150,10 @@ function k(e) {
     }
   }, [w, V, W]);
   let K = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
-    z = (0, N.default)([F.id])[0],
+    z = (0, N.default)([k.id])[0],
     Z = (0, u.useStateFromStores)([E.default], () => {
       var e;
-      return (null == d ? void 0 : d.channel) != null && (null === (e = E.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === F.id
+      return (null == d ? void 0 : d.channel) != null && (null === (e = E.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === k.id
     }),
     J = (0, u.useStateFromStores)([E.default], () => {
       var e;
@@ -162,7 +162,7 @@ function k(e) {
         let {
           applicationId: t
         } = e;
-        return F.id === t
+        return k.id === t
       })
     }),
     Q = A.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
@@ -171,10 +171,10 @@ function k(e) {
       analyticsLocations: q
     } = (0, m.default)(I.default.INVITE_EMBED),
     $ = (0, _.default)({
-      applicationId: F.id,
+      applicationId: k.id,
       size: U
     }),
-    ee = (0, u.useStateFromStoresArray)([E.default], () => null != Q ? E.default.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === F.id).flatMap(e => Array.from(e.userIds)) : [], [Q, F.id]),
+    ee = (0, u.useStateFromStoresArray)([E.default], () => null != Q ? E.default.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [Q, k.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
     en = d.state === P.InviteStates.ACCEPTING,
     es = null != K;

@@ -10,8 +10,8 @@ var n = a("37983"),
   i = a.n(s),
   r = a("627445"),
   o = a.n(r),
-  d = a("917351"),
-  u = a.n(d),
+  u = a("917351"),
+  d = a.n(u),
   c = a("446674"),
   m = a("411723"),
   h = a("42203"),
@@ -187,7 +187,7 @@ let M = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
       useFullWidth: i = !0,
       isSingleItem: r = !1,
       footer: o
-    } = e, d = {
+    } = e, u = {
       ...t,
       ..."IMAGE" === a && b(t.className),
       ..."VIDEO" === a && L(t.className),
@@ -200,7 +200,7 @@ let M = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
     return (0, n.jsx)(g.GIFAccessoryContext.Provider, {
       value: t.gifFavoriteButton,
       children: (0, n.jsx)(A.default, {
-        ...d,
+        ...u,
         footer: o
       })
     })
@@ -214,10 +214,10 @@ var w = e => {
   }), i = l.useMemo(() => new Map(t.map(e => [e.attachment.id, (0, A.getAttachmentKind)(e.attachment, e.inlineMedia)])), [t]), r = l.useCallback(e => {
     var t;
     return null !== (t = i.get(e)) && void 0 !== t ? t : "INVALID"
-  }, [i]), [o, d] = l.useMemo(() => u.partition(t, e => {
+  }, [i]), [o, u] = l.useMemo(() => d.partition(t, e => {
     var t;
     return (0, f.hasFlag)(null !== (t = e.attachment.flags) && void 0 !== t ? t : 0, x.MessageAttachmentFlags.IS_CLIP)
-  }), [t]), [g, _] = l.useMemo(() => u.partition(d, e => (0, A.isMediaAttachment)(r(e.attachment.id))), [d, r]);
+  }), [t]), [g, _] = l.useMemo(() => d.partition(u, e => (0, A.isMediaAttachment)(r(e.attachment.id))), [u, r]);
   return (0, n.jsxs)(n.Fragment, {
     children: [g.length > 0 && (0, n.jsx)("div", {
       className: p.mediaAttachmentsContainer,
