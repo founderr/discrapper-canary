@@ -13,16 +13,16 @@ var s = n("37983"),
   u = n("997289"),
   d = n("550766"),
   c = n("191225"),
-  E = n("602718"),
-  f = n("706508"),
+  f = n("602718"),
+  E = n("706508"),
   _ = n("986214"),
   T = n("501260"),
   I = n("698372"),
   m = n("969380"),
   N = n("817039"),
   p = n("141962"),
-  S = n("685665"),
-  A = n("653047"),
+  A = n("685665"),
+  S = n("653047"),
   C = n("271938"),
   h = n("824563"),
   g = n("697218"),
@@ -46,7 +46,7 @@ function x(e) {
     guildId: x
   } = e, [y, U] = l.useState(!1), {
     analyticsLocations: j
-  } = (0, S.default)(), b = (0, u.useAnalyticsContext)(), {
+  } = (0, A.default)(), b = (0, u.useAnalyticsContext)(), {
     containerRef: G,
     layout: B
   } = function() {
@@ -78,37 +78,26 @@ function x(e) {
     let n = null == H ? void 0 : H.userIds.values().next().value;
     return null == n ? null : null === (e = h.default.findActivity(n.user_id, e => e.application_id === t.id)) || void 0 === e ? void 0 : e.details
   }), K = l.useMemo(() => {
-    let e = new A.default(t);
+    let e = new S.default(t);
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = L.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
   }, [t]), W = (0, T.useEmbeddedActivityJoinability)({
     userId: w,
     channelId: a,
     application: K
-  }), z = (0, R.useEmbeddedApplicationEmbedState)({
-    embeddedActivity: H
-  }), Z = (0, R.useJoinOrStartButtonState)({
-    embedState: z,
+  }), z = null == H, Z = (0, R.useJoinOrStartButtonState)({
     embeddedActivity: H,
     currentUserId: w,
     joinability: W
   }), J = async () => {
     U(!0);
     try {
-      if (null != H) await (0, f.default)({
-        applicationId: H.applicationId,
-        currentEmbeddedApplication: k,
-        activityChannelId: a,
-        locationObject: b.location,
-        embeddedActivitiesManager: p.default,
-        analyticsLocations: j
-      });
-      else {
+      if (z) {
         let {
           activityConfigs: e,
           applications: n
         } = await (0, d.fetchShelf)({
           guildId: x
-        }), s = (0, E.default)({
+        }), s = (0, f.default)({
           applicationId: t.id,
           activityConfigs: e,
           applications: n
@@ -122,7 +111,14 @@ function x(e) {
           embeddedActivitiesManager: p.default,
           analyticsLocations: j
         })
-      }
+      } else await (0, E.default)({
+        applicationId: H.applicationId,
+        currentEmbeddedApplication: k,
+        activityChannelId: a,
+        locationObject: b.location,
+        embeddedActivitiesManager: p.default,
+        analyticsLocations: j
+      })
     } finally {
       U(!1)
     }
@@ -137,26 +133,26 @@ function x(e) {
         imageNotFoundClassName: P.imgBroken
       })
     }), (0, s.jsxs)("div", {
-      className: P.content,
+      className: P.contentContainer,
       children: [(0, s.jsxs)("div", {
-        className: P.info,
+        className: P.headerContainer,
         children: [(0, s.jsx)(r.Heading, {
           variant: "heading-lg/bold",
           children: null == t ? void 0 : t.name
-        }), z === R.EmbedStates.ACTIVE && (0, s.jsx)(r.Text, {
+        }), !z && (0, s.jsx)(r.Text, {
           variant: "text-md/medium",
           lineClamp: 1,
           children: null != Y ? Y : v.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
         })]
       }), (0, s.jsxs)("div", {
-        className: P.cta,
-        children: [z === R.EmbedStates.ENDED ? (0, s.jsxs)("div", {
+        className: P.footerContainer,
+        children: [z ? (0, s.jsxs)("div", {
           className: P.endedNote,
           children: [(0, s.jsx)(r.Text, {
-            variant: "text-xs/medium",
+            variant: "text-md/medium",
             children: v.default.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED
           }), (0, s.jsx)(r.Text, {
-            variant: "text-xs/medium",
+            variant: "text-md/medium",
             children: v.default.Messages.EMBEDDED_ACTIVITIES_EMBED_START
           })]
         }) : (0, s.jsx)(M.default, {
@@ -172,11 +168,11 @@ function x(e) {
             } = e;
             return (0, l.createElement)(r.Button, {
               ...n,
-              key: "".concat(Z.usePrimaryColor),
+              key: "".concat(Z.isJoinAction),
               onClick: () => {
                 J(), null == t || t()
               },
-              color: Z.usePrimaryColor ? r.ButtonColors.PRIMARY : r.ButtonColors.GREEN,
+              color: Z.isJoinAction ? r.ButtonColors.PRIMARY : r.ButtonColors.GREEN,
               submitting: y,
               disabled: Z.disabled
             }, Z.text)
