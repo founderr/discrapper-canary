@@ -24261,17 +24261,9 @@ strong {
     color: var(--status-danger)
 }
 
-.selfHangStatus__30cc4 {
-    border-radius: 8px;
-    border: 1px solid var(--background-modifier-hover);
-    background: var(--background-modifier-hover);
-    padding: 4px 11px;
-    margin-right: -4px
-}
-
 .hangStatusIcon__10ffc {
-    height: 18px;
-    width: 18px
+    height: 16px;
+    width: 16px
 }
 
 .voiceUser__0470a:hover .selfHangStatus__30cc4 {
