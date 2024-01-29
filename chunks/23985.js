@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   r = s("884691"),
   n = s("414456"),
-  i = s.n(n),
-  l = s("446674"),
+  l = s.n(n),
+  i = s("446674"),
   u = s("1017"),
   o = s("102985"),
   d = s("697218"),
@@ -60,20 +60,20 @@ class A extends r.Component {
       className: n
     } = this.props;
     if (0 === e.length && 0 === t.length && null == s.staffNotes) return null;
-    let l = this.getReviewToRender();
+    let i = this.getReviewToRender();
     return (0, a.jsxs)("div", {
-      className: i(m.root, n),
+      className: l(m.root, n),
       children: [(0, a.jsx)("div", {
         className: m.header,
         children: R.default.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
-      }), this.renderReasons(e, t, r), null != l ? (0, a.jsx)(S.default, {
-        data: l,
+      }), this.renderReasons(e, t, r), null != i ? (0, a.jsx)(S.default, {
+        data: i,
         className: m.review
       }) : null]
     })
   }
 }
-var N = l.default.connectStores([_.default, d.default, E.default, u.default, c.default, o.default], e => {
+var N = i.default.connectStores([_.default, d.default, E.default, u.default, c.default, o.default], e => {
   let {
     sku: t
   } = e;

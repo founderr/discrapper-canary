@@ -8,8 +8,8 @@ var a = s("37983");
 s("884691");
 var r = s("90915"),
   n = s("446674"),
-  i = s("77078"),
-  l = s("901582"),
+  l = s("77078"),
+  i = s("901582"),
   u = s("86621"),
   o = s("984376"),
   d = s("812204"),
@@ -34,7 +34,7 @@ let N = n.default.connectStores([I.default], () => ({
   } = e;
   return s ? (0, a.jsxs)("div", {
     className: A.homeWrapperNormal,
-    children: [(0, a.jsx)(l.default, {
+    children: [(0, a.jsx)(i.default, {
       section: S.AnalyticsSections.NAVIGATION,
       children: (0, a.jsxs)(_.default, {
         isAuthenticated: s,
@@ -50,7 +50,7 @@ let N = n.default.connectStores([I.default], () => ({
       children: null == n ? (0, a.jsx)(T.default, {
         align: T.default.Align.CENTER,
         justify: T.default.Justify.CENTER,
-        children: (0, a.jsx)(i.Spinner, {
+        children: (0, a.jsx)(l.Spinner, {
           className: A.spinner
         })
       }) : (0, a.jsx)(E.default, {

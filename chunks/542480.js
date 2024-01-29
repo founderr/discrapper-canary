@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return P
+    return C
   }
 });
 var a = s("37983"),
   r = s("884691"),
   n = s("77078"),
-  i = s("895530"),
-  l = s("437825"),
+  l = s("895530"),
+  i = s("437825"),
   u = s("36694"),
   o = s("530311"),
   d = s("824326"),
@@ -71,7 +71,7 @@ let N = [{
     feature: R.SKUFeatureTypes.SPECTATOR_MODE,
     getText: () => m.default.Messages.APPLICATION_STORE_SPECTATOR_MODE,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_SPECTATOR_MODE_TOOLTIP,
-    IconComponent: l.default
+    IconComponent: i.default
   }, {
     feature: R.SKUFeatureTypes.CONTROLLER_SUPPORT,
     getText: () => m.default.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT,
@@ -134,10 +134,10 @@ class g extends r.PureComponent {
     });
     return 0 === t.length ? null : (0, a.jsxs)("div", {
       className: A.features,
-      children: [(0, a.jsx)(i.default, {
+      children: [(0, a.jsx)(l.default, {
         children: m.default.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES
       }), t]
     })
   }
 }
-var P = g
+var C = g

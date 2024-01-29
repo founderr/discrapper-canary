@@ -8,8 +8,8 @@ var a = s("37983");
 s("884691");
 var r = s("414456"),
   n = s.n(r),
-  i = s("446674"),
-  l = s("77078"),
+  l = s("446674"),
+  i = s("77078"),
   u = s("915639"),
   o = s("521012"),
   d = s("909469"),
@@ -23,9 +23,9 @@ var r = s("414456"),
     let {
       localizedPricingPromo: t,
       smallGap: s
-    } = e, r = t.countryCode, S = (0, i.useStateFromStores)([u.default], () => u.default.locale);
+    } = e, r = t.countryCode, S = (0, l.useStateFromStores)([u.default], () => u.default.locale);
     (0, c.useTrackLocalizedPricingPromoImpression)(T.AnalyticsSections.SETTINGS_PREMIUM_BANNER, r);
-    let R = (0, i.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()),
+    let R = (0, l.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()),
       {
         localizedPricingBannerHeader: m,
         localizedPricingBannerBody: A
@@ -42,13 +42,13 @@ var r = s("414456"),
       }),
       children: [(0, a.jsx)("div", {
         className: n(f[N], f.bannerImageContainer)
-      }), (0, a.jsx)(l.Heading, {
+      }), (0, a.jsx)(i.Heading, {
         className: f.bannerHeading,
         variant: "heading-xl/semibold",
         children: m
       }), (0, a.jsx)("div", {
         className: f.textContainer,
-        children: (0, a.jsx)(l.Text, {
+        children: (0, a.jsx)(i.Text, {
           color: "none",
           variant: "text-md/normal",
           className: f.bannerBody,

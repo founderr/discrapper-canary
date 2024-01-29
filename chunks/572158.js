@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   r = s("884691"),
   n = s("446674"),
-  i = s("465527"),
-  l = s("86621"),
+  l = s("465527"),
+  i = s("86621"),
   u = s("299285"),
   o = s("539938"),
   d = s("393414"),
@@ -23,7 +23,7 @@ class T extends r.PureComponent {
       primarySkuId: t,
       isFetchingPrimarySku: s
     } = this.props;
-    null != t && !s && null != e && (0, i.fetchSKU)(e.applicationId, t)
+    null != t && !s && null != e && (0, l.fetchSKU)(e.applicationId, t)
   }
   render() {
     let {
@@ -68,7 +68,7 @@ class T extends r.PureComponent {
     })
   }
 }
-var f = (0, l.default)(n.default.connectStores([u.default, c.default], e => {
+var f = (0, i.default)(n.default.connectStores([u.default, c.default], e => {
   let {
     sku: t
   } = e, s = null != t ? u.default.getApplication(t.applicationId) : null, a = null != s && null != s.primarySkuId && s.primarySkuId !== t.id ? s.primarySkuId : null;

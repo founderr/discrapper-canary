@@ -49,8 +49,8 @@ var s = n("37983"),
       asPartialPreview: k = !0,
       ...w
     } = e, H = l.isFirstMessageInForumPost(U), V = (0, u.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = l.editedTimestamp) && void 0 !== t ? t : l.timestamp).valueOf()), Y = (0, u.useShowImprovedMarkdownGuildExperimentConfig)(U.guild_id, (null !== (n = l.editedTimestamp) && void 0 !== n ? n : l.timestamp).valueOf()), {
-      content: W,
-      hasSpoilerEmbeds: K
+      content: K,
+      hasSpoilerEmbeds: W
     } = (0, p.default)(l, {
       hideSimpleEmbedContent: y,
       allowList: H || V.showListsAndHeaders || Y.showListsAndHeaders,
@@ -83,11 +83,11 @@ var s = n("37983"),
         author: Q,
         roleIcon: q
       }),
-      childrenAccessories: e.hideAccessories ? void 0 : (0, A.renderSimpleAccessories)(e, K),
+      childrenAccessories: e.hideAccessories ? void 0 : (0, A.renderSimpleAccessories)(e, W),
       childrenMessageContent: (0, C.default)({
         ...e,
         asPartialPreview: k
-      }, W),
+      }, K),
       childrenSystemMessage: (0, g.default)(e),
       onContextMenu: P,
       onClick: D,

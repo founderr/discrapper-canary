@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return i
+    return l
   }
 }), s("222007");
 var a = s("37983"),
   r = s("884691"),
   n = s("271938");
 
-function i(e) {
+function l(e) {
   return class extends r.Component {
     componentDidMount() {
       n.default.addChangeListener(this.onStoreChange)

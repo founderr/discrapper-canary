@@ -8,8 +8,8 @@ var a = s("37983");
 s("884691");
 var r = s("414456"),
   n = s.n(r),
-  i = s("77078"),
-  l = s("812204"),
+  l = s("77078"),
+  i = s("812204"),
   u = s("685665"),
   o = s("324878"),
   d = s("635956"),
@@ -22,7 +22,7 @@ var r = s("414456"),
       className: t
     } = e, {
       AnalyticsLocationProvider: s
-    } = (0, u.default)(l.default.PREMIUM_MARKETING_HERO_CTA), r = (0, o.useHasActiveTrial)();
+    } = (0, u.default)(i.default.PREMIUM_MARKETING_HERO_CTA), r = (0, o.useHasActiveTrial)();
     return (0, a.jsx)(s, {
       children: (0, a.jsxs)("div", {
         className: n(E.container, t),
@@ -39,14 +39,14 @@ var r = s("414456"),
               [E.hidden]: !r
             }),
             colorOptions: c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
-          }), (0, a.jsx)(i.Heading, {
+          }), (0, a.jsx)(l.Heading, {
             variant: "display-lg",
             color: "always-white",
             children: _.default.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE
           }), (0, a.jsx)("div", {
             className: E.buttonContainer,
             children: (0, a.jsx)(d.default, {
-              color: i.ButtonColors.BRAND,
+              color: l.ButtonColors.BRAND,
               buttonText: _.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
               className: E.button,
               isGift: !0

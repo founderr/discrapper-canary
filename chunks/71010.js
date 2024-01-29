@@ -5,14 +5,14 @@ s.r(t), s.d(t, {
     return d
   }
 }), s("222007");
-var i = s("446674"),
-  l = s("913144");
+var l = s("446674"),
+  i = s("913144");
 
 function u() {
   r = {}, a = {}, n = new Set
 }
 u();
-class o extends i.default.Store {
+class o extends l.default.Store {
   getStatisticsForApplication(e) {
     return a[e]
   }
@@ -22,7 +22,7 @@ class o extends i.default.Store {
   }
 }
 o.displayName = "ApplicationStatisticsStore";
-var d = new o(l.default, {
+var d = new o(i.default, {
   APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function(e) {
     let {
       applicationId: t

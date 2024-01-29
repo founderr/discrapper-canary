@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   r = s("884691"),
   n = s("77078"),
-  i = s("290381"),
-  l = s("812204"),
+  l = s("290381"),
+  i = s("812204"),
   u = s("685665"),
   o = s("594098"),
   d = s("599110"),
@@ -31,9 +31,9 @@ var a = s("37983"),
       } = (0, c.default)(),
       {
         AnalyticsLocationProvider: g,
-        analyticsLocations: P
-      } = (0, u.default)(l.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
-      [C, O] = r.useState(!1);
+        analyticsLocations: C
+      } = (0, u.default)(i.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
+      [P, O] = r.useState(!1);
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(n.AdvancedScrollerAuto, {
         className: A.mainPageScroller,
@@ -62,10 +62,10 @@ var a = s("37983"),
               className: A.giftNitro
             }), (0, a.jsx)("div", {
               className: A.footerSpacing
-            }), (0, a.jsx)(i.VisibilitySensor, {
+            }), (0, a.jsx)(l.VisibilitySensor, {
               onChange: e => {
-                e && !C && (d.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                  location_stack: P
+                e && !P && (d.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                  location_stack: C
                 }), O(!0))
               },
               children: (0, a.jsx)("div", {

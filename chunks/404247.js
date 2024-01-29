@@ -10,8 +10,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   r = s("884691"),
   n = s("730290"),
-  i = s("90915"),
-  l = s("446674"),
+  l = s("90915"),
+  i = s("446674"),
   u = s("971178"),
   o = s("850068"),
   d = s("901582"),
@@ -28,8 +28,8 @@ var a = s("37983"),
   N = s("489749"),
   p = s("75576"),
   g = s("49111"),
-  P = s("782340"),
-  C = s("128403");
+  C = s("782340"),
+  P = s("128403");
 let O = (0, f.makeLazy)({
   createPromise: () => s.el("972119").then(s.bind(s, "972119")),
   webpackId: "972119"
@@ -38,7 +38,7 @@ let O = (0, f.makeLazy)({
 function M(e) {
   return e < p.PAGE_WIDTH_THRESHOLD ? p.PageSizes.SMALL : p.PageSizes.LARGE
 }
-l.default.initialize();
+i.default.initialize();
 class h extends r.PureComponent {
   componentDidMount() {
     (0, u.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
@@ -51,9 +51,9 @@ class h extends r.PureComponent {
   renderCustomErrorMessage() {
     return (0, a.jsxs)("div", {
       children: [(0, a.jsx)("p", {
-        children: P.default.Messages.ERRORS_STORE_CRASH
+        children: C.default.Messages.ERRORS_STORE_CRASH
       }), (0, a.jsx)("p", {
-        children: P.default.Messages.ERRORS_ACTION_TO_TAKE
+        children: C.default.Messages.ERRORS_ACTION_TO_TAKE
       })]
     })
   }
@@ -62,10 +62,10 @@ class h extends r.PureComponent {
       isAuthenticated: e,
       location: t
     } = this.props, s = e ? (0, a.jsx)("div", {
-      className: C.applicationStore,
+      className: P.applicationStore,
       children: this.renderContent()
     }) : (0, a.jsx)(O, {
-      className: C.applicationStore,
+      className: P.applicationStore,
       location: t,
       render: this.renderContent
     });
@@ -84,10 +84,10 @@ class h extends r.PureComponent {
             slug: r
           }
         },
-        location: i
+        location: l
       } = e, {
-        width: l
-      } = this.props, u = (0, n.parse)(i.search);
+        width: i
+      } = this.props, u = (0, n.parse)(l.search);
       return (0, a.jsx)(d.default, {
         page: g.AnalyticsPages.STORE_LISTING,
         root: !0,
@@ -95,13 +95,13 @@ class h extends r.PureComponent {
           skuId: t,
           applicationId: s,
           slug: r,
-          location: i,
+          location: l,
           storeListingId: u.store_listing_id,
-          pageSize: M(l)
+          pageSize: M(i)
         })
       })
-    }, this.renderContent = () => (0, a.jsxs)(i.Switch, {
-      children: [(0, a.jsx)(i.Route, {
+    }, this.renderContent = () => (0, a.jsxs)(l.Switch, {
+      children: [(0, a.jsx)(l.Route, {
         path: g.Routes.APPLICATION_STORE,
         exact: !0,
         render: () => (0, a.jsx)(d.default, {
@@ -109,22 +109,22 @@ class h extends r.PureComponent {
           root: !0,
           children: (0, a.jsx)(A.default, {})
         })
-      }), (0, a.jsx)(i.Route, {
+      }), (0, a.jsx)(l.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(i.Route, {
+      }), (0, a.jsx)(l.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(i.Route, {
+      }), (0, a.jsx)(l.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(i.Route, {
+      }), (0, a.jsx)(l.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_SKU(":skuId"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(i.Redirect, {
+      }), (0, a.jsx)(l.Redirect, {
         to: g.Routes.APP
       })]
     })
   }
 }
-var L = (0, i.withRouter)((0, c.default)((0, _.default)(h)))
+var L = (0, l.withRouter)((0, c.default)((0, _.default)(h)))

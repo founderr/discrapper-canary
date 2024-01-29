@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a, r = s("37983"),
   n = s("884691"),
-  i = s("414456"),
-  l = s.n(i),
+  l = s("414456"),
+  i = s.n(l),
   u = s("888400"),
   o = s("943232"),
   d = s("36694"),
@@ -22,7 +22,7 @@ let f = e => {
       className: s
     } = e;
     return (0, r.jsx)("div", {
-      className: l(T.iconCircle, s),
+      className: i(T.iconCircle, s),
       children: (0, r.jsx)(t, {
         className: T.icon
       })
@@ -36,7 +36,7 @@ let f = e => {
       className: n
     } = e;
     return (0, r.jsxs)("div", {
-      className: l(T.recommendationReason, n),
+      className: i(T.recommendationReason, n),
       children: [t, (0, r.jsxs)("div", {
         className: T.description,
         children: [null != s ? (0, r.jsx)("div", {

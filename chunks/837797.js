@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("446674"),
   r = s("521012"),
   n = s("719923"),
-  i = s("154889"),
-  l = s("917247"),
+  l = s("154889"),
+  i = s("917247"),
   u = s("646718");
 
 function o(e) {
@@ -23,7 +23,7 @@ function o(e) {
     onNonTier2Subscriber: I,
     onTier2Subscriber: T,
     onCustomCriteria: f
-  } = e, S = (0, l.usePremiumTrialOffer)(), R = (0, i.usePremiumDiscountOffer)(), m = (0, a.useStateFromStores)([r.default], () => r.default.getPremiumTypeSubscription()), A = n.default.getPremiumTypeFromSubscription(m);
+  } = e, S = (0, i.usePremiumTrialOffer)(), R = (0, l.usePremiumDiscountOffer)(), m = (0, a.useStateFromStores)([r.default], () => r.default.getPremiumTypeSubscription()), A = n.default.getPremiumTypeFromSubscription(m);
   if (null != f) {
     let e = f();
     if (null != e) return e

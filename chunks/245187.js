@@ -14,8 +14,8 @@ var a = s("37983");
 s("884691");
 var r = s("414456"),
   n = s.n(r),
-  i = s("669491"),
-  l = s("819855"),
+  l = s("669491"),
+  i = s("819855"),
   u = s("77078"),
   o = s("841098"),
   d = s("145131"),
@@ -31,7 +31,7 @@ var r = s("414456"),
 function m(e) {
   let {
     className: t
-  } = e, s = (0, o.default)(), r = (0, l.isThemeDark)(s) ? S : R;
+  } = e, s = (0, o.default)(), r = (0, i.isThemeDark)(s) ? S : R;
   return (0, a.jsxs)("div", {
     className: n(f.container, t),
     children: [(0, a.jsx)(u.Heading, {
@@ -92,7 +92,7 @@ function p(e) {
     type: u.Card.Types.CUSTOM,
     children: [(0, a.jsx)(c.default, {
       className: f.blockedPaymentsWarningIcon,
-      color: i.default.unsafe_rawColors.YELLOW_300.css
+      color: l.default.unsafe_rawColors.YELLOW_300.css
     }), (0, a.jsx)(u.Text, {
       variant: "text-sm/normal",
       children: T.default.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({

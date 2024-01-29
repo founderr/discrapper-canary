@@ -14,8 +14,8 @@ s.r(t), s.d(t, {
   }
 });
 var a, r, n = s("819855"),
-  i = s("446674"),
-  l = s("411691"),
+  l = s("446674"),
+  i = s("411691"),
   u = s("521012"),
   o = s("719923"),
   d = s("646718"),
@@ -29,7 +29,7 @@ let _ = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
         a = [e.profiles, e.clientThemes, e.serverBoosts];
         break;
       case "whats_new":
-        a = [e.earlyAccess, s !== l.CollectiblesShopMarketingVariants.DEFAULT ? e.specialShopPerks : e.specialMemberPricing, e.unlimitedSuperReactions];
+        a = [e.earlyAccess, s !== i.CollectiblesShopMarketingVariants.DEFAULT ? e.specialShopPerks : e.specialMemberPricing, e.unlimitedSuperReactions];
         break;
       case "card_carousel_first_row":
         a = [e.customAppIcons, e.moreEmojiPower, e.customSoundsEverywhere, e.specialStickerAccess];
@@ -43,7 +43,7 @@ let _ = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
     return a
   },
   I = e => {
-    let t = (0, i.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()),
+    let t = (0, l.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()),
       s = null != t ? o.default.getPremiumPlanItem(t) : null,
       a = null != s ? o.default.getSkuIdForPlan(s.planId) : null,
       r = a === d.PremiumSubscriptionSKUs.TIER_2;

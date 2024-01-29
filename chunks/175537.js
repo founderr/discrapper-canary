@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return h
   }
 });
 var a = n("37983"),
@@ -20,22 +20,22 @@ var a = n("37983"),
   g = n("659500"),
   p = n("402671"),
   I = n("49111"),
-  S = n("958706"),
-  v = n("782340");
+  v = n("958706"),
+  S = n("782340");
 
-function A(e, t) {
+function h(e, t) {
   let {
     reducedMotion: n
-  } = i.useContext(s.AccessibilityPreferencesContext), A = (0, c.useIsActiveChannelOrUnarchivableThread)(t), h = (0, l.useStateFromStores)([E.default], () => (t.isPrivate() || E.default.can(I.Permissions.ADD_REACTIONS, t)) && A, [t, A]), _ = (0, u.useEmojiInPriorityOrder)(t.getGuildId()), {
+  } = i.useContext(s.AccessibilityPreferencesContext), h = (0, c.useIsActiveChannelOrUnarchivableThread)(t), A = (0, l.useStateFromStores)([E.default], () => (t.isPrivate() || E.default.can(I.Permissions.ADD_REACTIONS, t)) && h, [t, h]), _ = (0, u.useEmojiInPriorityOrder)(t.getGuildId()), {
     viewAndUseEnabled: T
   } = (0, r.useInventoryGuildPacksUserExperiment)({
     autoTrackExposure: !1
   });
-  if (!f.RenderReactions.getSetting() || !h || e.type === I.MessageTypes.GUILD_INVITE_REMINDER) return null;
+  if (!f.RenderReactions.getSetting() || !A || e.type === I.MessageTypes.GUILD_INVITE_REMINDER) return null;
   let C = _.filter(e => !p.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
-    intention: S.EmojiIntention.REACTION,
+    intention: v.EmojiIntention.REACTION,
     canViewAndUsePackEmoji: T
   })).slice(0, 12).map((i, l) => {
     var u, r, c;
@@ -62,7 +62,7 @@ function A(e, t) {
   });
   return (0, a.jsx)(s.MenuItem, {
     id: "add-reaction",
-    label: v.default.Messages.ADD_REACTION,
+    label: S.default.Messages.ADD_REACTION,
     action: () => {
       g.ComponentDispatch.dispatchKeyed(I.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {
         emojiPicker: !0
@@ -73,7 +73,7 @@ function A(e, t) {
       children: [C, (0, a.jsx)(s.MenuSeparator, {}), (0, a.jsx)(s.MenuItem, {
         color: "default",
         id: "other-reactions",
-        label: v.default.Messages.VIEW_MORE,
+        label: S.default.Messages.VIEW_MORE,
         icon: m.default,
         action: () => {
           g.ComponentDispatch.dispatchKeyed(I.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {

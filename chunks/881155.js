@@ -8,8 +8,8 @@ var a = s("37983");
 s("884691");
 var r = s("819855"),
   n = s("77078"),
-  i = s("841098"),
-  l = s("719923"),
+  l = s("841098"),
+  i = s("719923"),
   u = s("154889"),
   o = s("917247"),
   d = s("635956"),
@@ -23,11 +23,11 @@ let I = e => {
       shouldShowUpsells: a,
       trialDurationCopy: r,
       isPersistentCTA: n,
-      subscriptionTrial: i
+      subscriptionTrial: l
     } = e;
-    if (t && (s === c.PremiumSubscriptionSKUs.TIER_2 || n)) return (0, l.formatTrialCtaIntervalDuration)({
-      intervalType: null == i ? void 0 : i.interval,
-      intervalCount: null == i ? void 0 : i.interval_count
+    if (t && (s === c.PremiumSubscriptionSKUs.TIER_2 || n)) return (0, i.formatTrialCtaIntervalDuration)({
+      intervalType: null == l ? void 0 : l.interval,
+      intervalCount: null == l ? void 0 : l.interval_count
     });
     if (t) return _.default.Messages.GET_FREE_TRIAL.format({
       freeTrialText: r
@@ -46,11 +46,11 @@ var f = e => {
     isPersistentCTA: S = !1,
     useShorterCTA: R = !1,
     ...m
-  } = e, A = (0, i.default)(), N = (0, r.isThemeDark)(A) || s, p = null === (t = (0, o.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, l.formatTrialOfferIntervalDuration)({
+  } = e, A = (0, l.default)(), N = (0, r.isThemeDark)(A) || s, p = null === (t = (0, o.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, i.formatTrialOfferIntervalDuration)({
     intervalType: null == p ? void 0 : p.interval,
     intervalCount: null == p ? void 0 : p.interval_count
-  }), P = (0, u.usePremiumDiscountOffer)(), C = null != p && c === p.sku_id, O = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != P ? T(c, R, S, P.discount.amount) : I({
-    showTrialCTA: C,
+  }), C = (0, u.usePremiumDiscountOffer)(), P = null != p && c === p.sku_id, O = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != C ? T(c, R, S, C.discount.amount) : I({
+    showTrialCTA: P,
     subscriptionTier: c,
     shouldShowUpsells: !1,
     trialDurationCopy: g,
@@ -63,7 +63,7 @@ var f = e => {
     buttonShineClassName: "buttonShineClassName" in m ? m.buttonShineClassName : N ? E.brandShine : void 0,
     trialId: null == p ? void 0 : p.id,
     buttonText: O,
-    buttonTextClassName: C ? E.freeTrialText : void 0,
+    buttonTextClassName: P ? E.freeTrialText : void 0,
     onlyShineOnHover: !0,
     subscriptionTier: c,
     ...m

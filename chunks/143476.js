@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   r = s("884691"),
   n = s("414456"),
-  i = s.n(n),
-  l = s("446674"),
+  l = s.n(n),
+  i = s("446674"),
   u = s("290381"),
   o = s("77078"),
   d = s("875212"),
@@ -25,8 +25,8 @@ var a = s("37983"),
   N = s("154889"),
   p = s("917247"),
   g = s("460680"),
-  P = s("411205"),
-  C = s("934570"),
+  C = s("411205"),
+  P = s("934570"),
   O = s("641078"),
   M = s("400307"),
   h = s("159646"),
@@ -51,9 +51,9 @@ var a = s("37983"),
     var t;
     let {
       isFullscreen: s
-    } = e, n = r.useRef(null), [Y, z] = r.useState(!1), [Q, X] = r.useState(!1), [J, Z] = r.useState(!1), [q, $] = r.useState(!1), ee = (0, l.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), {
+    } = e, n = r.useRef(null), [Y, z] = r.useState(!1), [Q, X] = r.useState(!1), [J, Z] = r.useState(!1), [q, $] = r.useState(!1), ee = (0, i.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), {
       enabled: et
-    } = (0, R.default)(), es = null != ee ? (0, f.getPremiumPlanItem)(ee) : null, ea = null != es ? f.default.getSkuIdForPlan(es.planId) : null, er = null !== ea && ea !== H.PremiumSubscriptionSKUs.TIER_2 ? H.PremiumSubscriptionSKUs.TIER_2 : null, en = (0, A.useLocalizedPromoQuery)(), ei = null != en, [el, eu] = r.useState(!1), eo = (0, N.usePremiumDiscountOffer)(), ed = (0, p.usePremiumTrialOffer)(), ec = null == ed ? void 0 : null === (t = ed.subscription_trial) || void 0 === t ? void 0 : t.sku_id, e_ = (0, S.useIsInPremiumOfferExperience)(), eE = (0, O.useIsEligibleForBogoPromotion)(), {
+    } = (0, R.default)(), es = null != ee ? (0, f.getPremiumPlanItem)(ee) : null, ea = null != es ? f.default.getSkuIdForPlan(es.planId) : null, er = null !== ea && ea !== H.PremiumSubscriptionSKUs.TIER_2 ? H.PremiumSubscriptionSKUs.TIER_2 : null, en = (0, A.useLocalizedPromoQuery)(), el = null != en, [ei, eu] = r.useState(!1), eo = (0, N.usePremiumDiscountOffer)(), ed = (0, p.usePremiumTrialOffer)(), ec = null == ed ? void 0 : null === (t = ed.subscription_trial) || void 0 === t ? void 0 : t.sku_id, e_ = (0, S.useIsInPremiumOfferExperience)(), eE = (0, O.useIsEligibleForBogoPromotion)(), {
       enabled: eI
     } = (0, m.default)(), {
       analyticsLocations: eT
@@ -68,19 +68,19 @@ var a = s("37983"),
       $(!0)
     }, []);
     let eS = (0, a.jsxs)("div", {
-      className: i(W.container, {
+      className: l(W.container, {
         [W.settingsContainer]: !s
       }),
       "data-cy": "tier-0-marketing-page",
       children: [(0, a.jsx)(h.default, {
         premiumSubscription: ee,
-        className: i(s ? W.fullscreenExistingSubscriberSpacing : W.existingSubscriberSpacing, {
+        className: l(s ? W.fullscreenExistingSubscriberSpacing : W.existingSubscriberSpacing, {
           [W.zIndex1]: e_
         }),
         isFullscreen: s
       }), s || e_ ? (0, a.jsx)(L.default, {
         lifted: !s && e_
-      }) : null, !s && ei ? (0, a.jsx)(C.default, {
+      }) : null, !s && el ? (0, a.jsx)(P.default, {
         localizedPricingPromo: en,
         smallGap: !0
       }) : (0, a.jsx)(u.VisibilitySensor, {
@@ -90,7 +90,7 @@ var a = s("37983"),
         children: (0, a.jsx)(x.default, {
           subscriptionTier: er,
           isFullscreen: s || e_,
-          className: i({
+          className: l({
             [W.fullscreenHero]: s,
             [W.settingsHeroNoBackground]: !s && e_,
             [W.trialMarketingMargin]: e_,
@@ -103,7 +103,7 @@ var a = s("37983"),
         className: s ? W.premiumTierCardsContainerFullscreen : W.premiumTierCardsContainerSettings,
         children: [(0, a.jsx)(g.default, {
           isFullscreen: s
-        }), s && ei && (0, a.jsx)(P.default, {
+        }), s && el && (0, a.jsx)(C.default, {
           localizedPricingPromo: en
         }), (0, a.jsx)(u.VisibilitySensor, {
           onChange: e => X(e),
@@ -208,7 +208,7 @@ var a = s("37983"),
         ref: n,
         children: eS
       }), et ? (0, a.jsx)(B.default, {
-        isAllPerksVisible: el,
+        isAllPerksVisible: ei,
         setIsAllPerksVisible: eu
       }) : null]
     }) : eS

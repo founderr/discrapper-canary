@@ -1,15 +1,15 @@
 "use strict";
 s.r(t), s.d(t, {
   useCheapestMonthlyPrice: function() {
-    return l
+    return i
   }
 });
 var a = s("446674"),
   r = s("10514"),
   n = s("719923"),
-  i = s("646718");
+  l = s("646718");
 
-function l() {
-  let e = (0, a.useStateFromStores)([r.default], () => r.default.getForSkuAndInterval(i.PremiumSubscriptionSKUs.TIER_0, i.SubscriptionIntervalTypes.MONTH));
+function i() {
+  let e = (0, a.useStateFromStores)([r.default], () => r.default.getForSkuAndInterval(l.PremiumSubscriptionSKUs.TIER_0, l.SubscriptionIntervalTypes.MONTH));
   return null != e ? (0, n.getFormattedPriceForPlan)(e) : "…"
 }

@@ -52,8 +52,8 @@ var s = n("37983"),
   H = n("626301"),
   V = n("428786"),
   Y = n("705423"),
-  W = n("315021"),
-  K = n("24373"),
+  K = n("315021"),
+  W = n("24373"),
   z = n("943508"),
   Z = n("300322"),
   J = n("415829"),
@@ -425,7 +425,7 @@ class ew extends l.Component {
     }) : null
   }
   renderStickersAccessories(e) {
-    let t = (0, K.getMessageStickers)(e),
+    let t = (0, W.getMessageStickers)(e),
       {
         channel: n,
         isInteracting: l
@@ -550,7 +550,7 @@ class ew extends l.Component {
     }) : null
   }
   renderSafetySystemNotification(e) {
-    return 1 === e.embeds.length && e.embeds[0].type === ev.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION ? (0, s.jsx)(W.SafetySystemNotification, {
+    return 1 === e.embeds.length && e.embeds[0].type === ev.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION ? (0, s.jsx)(K.SafetySystemNotification, {
       embed: e.embeds[0]
     }) : null
   }

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   r = s("884691"),
   n = s("414456"),
-  i = s.n(n),
-  l = s("77078"),
+  l = s.n(n),
+  i = s("77078"),
   u = s("895530"),
   o = s("145131"),
   d = s("993105"),
@@ -31,11 +31,11 @@ class R extends r.PureComponent {
       pageSize: s,
       onClick: r
     } = this.props, n = s === E.PageSizes.LARGE;
-    return (0, a.jsx)(l.Button, {
-      size: n ? l.Button.Sizes.MIN : l.Button.Sizes.LARGE,
+    return (0, a.jsx)(i.Button, {
+      size: n ? i.Button.Sizes.MIN : i.Button.Sizes.LARGE,
       fullWidth: !n,
       color: e ? f.tabSelectedColor : f.tabNotSelectedColor,
-      className: i({
+      className: l({
         [f.tabPageLarge]: n,
         [f.tabPageSmall]: !n,
         [f.tabSelected]: e,

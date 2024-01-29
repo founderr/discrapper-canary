@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("65597"),
   r = s("819855"),
   n = s("79112"),
-  i = s("841098"),
-  l = s("697218"),
+  l = s("841098"),
+  i = s("697218"),
   u = s("719923"),
   o = s("49111"),
   d = s("397336"),
@@ -25,8 +25,8 @@ var a = s("65597"),
   N = s("982784"),
   p = s("19530"),
   g = s("215541"),
-  P = s("663411"),
-  C = s("126304"),
+  C = s("663411"),
+  P = s("126304"),
   O = s("674065"),
   M = s("771116"),
   h = s("309920"),
@@ -42,8 +42,8 @@ let k = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
   B = e => {
     let {
       styles: t
-    } = e, s = (0, i.default)(), r = (0, a.default)([l.default], () => {
-      let e = l.default.getCurrentUser();
+    } = e, s = (0, l.default)(), r = (0, a.default)([i.default], () => {
+      let e = i.default.getCurrentUser();
       return u.default.canUsePremiumProfileCustomization(e)
     }), B = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, y = {
       badge: {
@@ -153,7 +153,7 @@ let k = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
       superReactions: {
         title: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION,
-        imageSource: k(s, P, C),
+        imageSource: k(s, C, P),
         imageClassName: t.superReactionsImage
       },
       upload: {

@@ -8,14 +8,14 @@ s.r(t), s.d(t, {
   }
 });
 var a, r, n = s("37983"),
-  i = s("884691"),
-  l = s("446674"),
+  l = s("884691"),
+  i = s("446674"),
   u = s("913144"),
   o = s("465527"),
   d = s("622839"),
   c = s("782340");
 (a = r || (r = {})).SHORT = "SHORT", a.LONG = "LONG";
-class _ extends i.PureComponent {
+class _ extends l.PureComponent {
   getText(e, t) {
     if (429 === e.status) switch (t) {
       case "SHORT":
@@ -48,6 +48,6 @@ class _ extends i.PureComponent {
 _.defaultProps = {
   messageStyle: "LONG"
 };
-var E = l.default.connectStores([d.default], () => ({
+var E = i.default.connectStores([d.default], () => ({
   purchaseError: d.default.error
 }))(_)

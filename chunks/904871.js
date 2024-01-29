@@ -9,8 +9,8 @@ s.r(t), s.d(t, {
 });
 var a, r, n = s("37983");
 s("884691");
-var i = s("819855"),
-  l = s("841098");
+var l = s("819855"),
+  i = s("841098");
 (a = r || (r = {}))[a.TOP = 0] = "TOP", a[a.BOTTOM = 1] = "BOTTOM";
 let u = "premium_tier_2_gradient",
   o = "premium_tier_2_fill",
@@ -145,7 +145,7 @@ var S = e => {
   let {
     className: t,
     variant: s
-  } = e, a = (0, l.default)(), r = (0, i.isThemeDark)(a) ? d : u, c = (0, i.isThemeDark)(a) ? "#F2F3F5" : "url(#".concat(o, ")");
+  } = e, a = (0, i.default)(), r = (0, l.isThemeDark)(a) ? d : u, c = (0, l.isThemeDark)(a) ? "#F2F3F5" : "url(#".concat(o, ")");
   switch (s) {
     case 0:
       return (0, n.jsx)(f, {

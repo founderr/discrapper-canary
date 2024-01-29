@@ -77,20 +77,20 @@ function x(e) {
     var e;
     let n = null == H ? void 0 : H.userIds.values().next().value;
     return null == n ? null : null === (e = h.default.findActivity(n.user_id, e => e.application_id === t.id)) || void 0 === e ? void 0 : e.details
-  }), W = l.useMemo(() => {
+  }), K = l.useMemo(() => {
     let e = new A.default(t);
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = L.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
-  }, [t]), K = (0, T.useEmbeddedActivityJoinability)({
+  }, [t]), W = (0, T.useEmbeddedActivityJoinability)({
     userId: w,
     channelId: a,
-    application: W
+    application: K
   }), z = (0, R.useEmbeddedApplicationEmbedState)({
     embeddedActivity: H
   }), Z = (0, R.useJoinOrStartButtonState)({
     embedState: z,
     embeddedActivity: H,
     currentUserId: w,
-    joinability: K
+    joinability: W
   }), J = async () => {
     U(!0);
     try {

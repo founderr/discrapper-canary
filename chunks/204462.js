@@ -21,11 +21,11 @@ var i = n("414456"),
   g = n("402671"),
   p = n("49111"),
   I = n("958706"),
-  S = n("782340"),
-  v = n("791507");
-let A = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
+  v = n("782340"),
+  S = n("791507");
+let h = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 
-function h(e) {
+function A(e) {
   var t;
   let {
     emoji: n,
@@ -45,19 +45,19 @@ function h(e) {
     spacing: 16,
     forceOpen: i,
     children: e => (0, a.jsx)("div", {
-      "aria-label": S.default.Messages.ADD_REACTION_NAMED.format({
+      "aria-label": v.default.Messages.ADD_REACTION_NAMED.format({
         emojiName: n.name
       }),
-      className: l(v.button, {
-        [v.focused]: i
+      className: l(S.button, {
+        [S.focused]: i
       }),
       ...e,
       children: null == r || "" === r.trim() ? (0, a.jsx)("span", {
-        className: l("emoji", "emoji-text", v.icon),
+        className: l("emoji", "emoji-text", S.icon),
         ...e,
         children: d
       }) : (0, a.jsx)("img", {
-        className: v.icon,
+        className: S.icon,
         src: r,
         alt: ""
       })
@@ -74,7 +74,7 @@ function _(e, t) {
     }),
     l = n.filter(e => {
       var n;
-      return !(e.useSpriteSheet && A.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : "") >= 0) && !g.default.isEmojiPremiumLocked({
+      return !(e.useSpriteSheet && h.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : "") >= 0) && !g.default.isEmojiPremiumLocked({
         emoji: e,
         channel: t,
         intention: I.EmojiIntention.REACTION,
@@ -83,13 +83,13 @@ function _(e, t) {
     });
   l.length > 4 && (l.length = 4);
   let M = E.RenderReactions.useSetting(),
-    S = (0, f.useIsActiveChannelOrUnarchivableThread)(t),
-    _ = (0, s.useStateFromStores)([m.default], () => M && S && (t.isPrivate() || m.default.can(p.Permissions.ADD_REACTIONS, t)), [t, S, M]),
+    v = (0, f.useIsActiveChannelOrUnarchivableThread)(t),
+    _ = (0, s.useStateFromStores)([m.default], () => M && v && (t.isPrivate() || m.default.can(p.Permissions.ADD_REACTIONS, t)), [t, v, M]),
     T = n => {
       (0, o.addReaction)(t.id, e.id, (0, c.toReactionEmoji)(n), void 0)
     };
   return _ && l.length > 0 ? (0, a.jsx)(u.MenuGroup, {
-    className: v.wrapper,
+    className: S.wrapper,
     children: l.map((e, t) => {
       var n;
       return (0, a.jsx)(u.MenuItem, {
@@ -98,7 +98,7 @@ function _(e, t) {
           let {
             isFocused: n
           } = t;
-          return (0, a.jsx)(h, {
+          return (0, a.jsx)(A, {
             emoji: e,
             isFocused: n
           })

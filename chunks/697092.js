@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("70102");
 var a, r, n = s("37983");
 s("884691");
-var i = s("414456"),
-  l = s.n(i),
+var l = s("414456"),
+  i = s.n(l),
   u = s("446674"),
   o = s("77078"),
   d = s("87657"),
@@ -24,7 +24,7 @@ let I = u.default.connectStores([c.default], () => ({
       animate: a
     } = e;
     return (0, n.jsxs)("div", {
-      className: l(E.staffReviewHeader, s),
+      className: i(E.staffReviewHeader, s),
       children: [(0, n.jsx)(d.default, {
         size: o.AvatarSizes.SIZE_32,
         user: t,

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("446674"),
   r = s("913144"),
   n = s("177589"),
-  i = s("824563"),
-  l = s("843823"),
+  l = s("824563"),
+  i = s("843823"),
   u = s("697218"),
   o = s("49111");
 let d = !1,
@@ -36,19 +36,19 @@ function I(e) {
 function T(e) {
   var t, s, a, r;
   let {
-    user: i,
+    user: l,
     activities: u
   } = e;
-  if (null == i || !l.default.getUserAffinitiesUserIds().has(i.id)) return !1;
+  if (null == l || !i.default.getUserAffinitiesUserIds().has(l.id)) return !1;
   let d = u.find(e => e.type !== o.ActivityTypes.CUSTOM_STATUS);
-  if (null == d) return I(i.id);
+  if (null == d) return I(l.id);
   let E = (0, n.default)(d);
-  if (null == E) return I(i.id);
-  let T = _[i.id];
-  null != T && T.gameId !== E && I(i.id);
+  if (null == E) return I(l.id);
+  let T = _[l.id];
+  null != T && T.gameId !== E && I(l.id);
   let f = null !== (s = null === (t = d.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== s ? s : Date.now(),
     S = {
-      userId: i.id,
+      userId: l.id,
       activity: d,
       startedPlaying: f
     };
@@ -69,21 +69,21 @@ function T(e) {
 
 function f() {
   let e = !1;
-  if (!l.default.needsRefresh() && !d) {
+  if (!i.default.needsRefresh() && !d) {
     let t;
-    c = {}, _ = {}, t = !1, i.default.getUserIds().forEach(e => {
+    c = {}, _ = {}, t = !1, l.default.getUserIds().forEach(e => {
       let s = u.default.getUser(e);
       null != s && (t = T({
         user: s,
-        activities: i.default.getActivities(e)
+        activities: l.default.getActivities(e)
       }) || t)
     }), e = t
   }
-  return d = !l.default.needsRefresh(), e
+  return d = !i.default.needsRefresh(), e
 }
 class S extends a.default.Store {
   initialize() {
-    this.waitFor(l.default), this.syncWith([l.default], f)
+    this.waitFor(i.default), this.syncWith([i.default], f)
   }
   get games() {
     return c

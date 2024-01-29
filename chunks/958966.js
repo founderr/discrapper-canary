@@ -8,8 +8,8 @@ var a = s("37983");
 s("884691");
 var r = s("414456"),
   n = s.n(r),
-  i = s("77078"),
-  l = s("446674"),
+  l = s("77078"),
+  i = s("446674"),
   u = s("812204"),
   o = s("685665"),
   d = s("441413"),
@@ -29,7 +29,7 @@ function p(e) {
   let {
     variant: t = "text-lg/normal"
   } = e, s = (0, S.useCheapestMonthlyPrice)();
-  return (0, a.jsx)(i.Text, {
+  return (0, a.jsx)(l.Text, {
     variant: t,
     color: "always-white",
     className: N.description,
@@ -45,13 +45,13 @@ var g = e => {
     subscriptionTier: r
   } = e, {
     AnalyticsLocationProvider: S
-  } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), P = (0, E.useIsInPremiumOfferExperience)(), C = (0, T.useIsEligibleForBogoPromotion)(), {
+  } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), C = (0, E.useIsInPremiumOfferExperience)(), P = (0, T.useIsEligibleForBogoPromotion)(), {
     marketingEnabled: O
   } = c.default.useExperiment({
     location: "HeroHeading"
   }, {
     autoTrackExposure: !1
-  }), M = (0, l.useStateFromStores)([_.default], () => _.default.affinities);
+  }), M = (0, i.useStateFromStores)([_.default], () => _.default.affinities);
   M.length > 0 && c.default.trackExposure({
     location: "HeroHeading"
   });
@@ -65,7 +65,7 @@ var g = e => {
       "data-testid": "v2-marketing-page-hero-header",
       children: [(0, a.jsxs)("div", {
         className: t ? N.fullscreenTextContainer : N.settingsTextContainer,
-        children: [(0, a.jsx)(i.Heading, {
+        children: [(0, a.jsx)(l.Heading, {
           variant: t ? "display-lg" : "display-md",
           color: "always-white",
           children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
@@ -74,14 +74,14 @@ var g = e => {
           children: (0, a.jsx)(f.default, {
             smallerText: !t
           })
-        }) : (0, a.jsx)(p, {}), C ? (0, a.jsx)("div", {
+        }) : (0, a.jsx)(p, {}), P ? (0, a.jsx)("div", {
           className: N.buttonContainer,
           children: (0, a.jsx)(R.default, {
             className: N.button,
             forceWhite: !0
           })
         }) : (0, a.jsxs)(a.Fragment, {
-          children: [P ? null : (0, a.jsxs)("div", {
+          children: [C ? null : (0, a.jsxs)("div", {
             className: N.buttonContainer,
             children: [(0, a.jsx)(m.default, {
               forceInverted: !0,
@@ -101,7 +101,7 @@ var g = e => {
         }), h && (0, a.jsx)(p, {
           variant: "text-md/normal"
         })]
-      }), P ? null : (0, a.jsxs)(a.Fragment, {
+      }), C ? null : (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(d.StretchedSparkleStar, {
           className: t ? N.fullscreenSparkleStar1 : N.settingsSparkleStar1
         }), (0, a.jsx)(d.StretchedSparkleStar, {

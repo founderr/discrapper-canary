@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   r = s("884691"),
   n = s("414456"),
-  i = s.n(n),
-  l = s("77078"),
+  l = s.n(n),
+  i = s("77078"),
   u = s("506885"),
   o = s("981601"),
   d = s("280174"),
@@ -70,7 +70,7 @@ class S extends r.PureComponent {
     return 1 === t.length ? s.single(t[0].user, e => this.renderActivityDiscordTag(e)) : 2 === t.length ? s.double(t[0].user, t[1].user, e => this.renderActivityDiscordTag(e)) : s.other(t.length)
   }
   renderActivityDiscordTag(e) {
-    return (0, a.jsx)(l.Popout, {
+    return (0, a.jsx)(i.Popout, {
       preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
       renderPopout: t => this.renderUserPopout(e, t),
       position: "right",
@@ -90,7 +90,7 @@ class S extends r.PureComponent {
       userInfo: r
     } = e;
     return 0 === r.length ? null : (0, a.jsxs)("div", {
-      className: i(T.recommendationActivity, t),
+      className: l(T.recommendationActivity, t),
       children: [(0, a.jsx)(c.default, {
         className: T.players,
         users: r.map(e => {
@@ -125,22 +125,22 @@ class S extends r.PureComponent {
     }), this.renderPlayer = (e, t, s, r) => {
       if (null == e) return null;
       let n = this.props.reason.userInfo.find(t => t.user === e);
-      return null == n ? null : (0, a.jsx)(l.Popout, {
+      return null == n ? null : (0, a.jsx)(i.Popout, {
         preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => this.renderUserPopout(e, t),
         position: "right",
-        children: t => (0, a.jsx)(l.Tooltip, {
+        children: t => (0, a.jsx)(i.Tooltip, {
           text: this.renderUserTooltip(e, n.startTime, n.endTime),
           "aria-label": (0, _.getUserTag)(e, {
             decoration: "never"
           }),
-          children: s => (0, a.jsx)(l.Avatar, {
-            className: i(T.playerAvatar, {
+          children: s => (0, a.jsx)(i.Avatar, {
+            className: l(T.playerAvatar, {
               [T.avatarMasked]: !r
             }),
             src: e.getAvatarURL(void 0, 32),
             "aria-label": e.username,
-            size: l.AvatarSizes.SIZE_32,
+            size: i.AvatarSizes.SIZE_32,
             ...s,
             ...t
           })

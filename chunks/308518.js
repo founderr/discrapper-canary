@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   r = s("884691"),
   n = s("895530"),
-  i = s("782340"),
-  l = s("473911");
+  l = s("782340"),
+  i = s("473911");
 class u extends r.PureComponent {
   render() {
     let {
@@ -18,9 +18,9 @@ class u extends r.PureComponent {
     return null == t.legalNotice ? null : (0, a.jsxs)("div", {
       className: e,
       children: [(0, a.jsx)(n.default, {
-        children: i.default.Messages.APPLICATION_STORE_SECTION_TITLE_COPYRIGHT
+        children: l.default.Messages.APPLICATION_STORE_SECTION_TITLE_COPYRIGHT
       }), (0, a.jsx)("div", {
-        className: l.content,
+        className: i.content,
         children: t.legalNotice
       })]
     })
