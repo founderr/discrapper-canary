@@ -572,4 +572,10 @@ let eS = (0, l.wrapSettingWithSelectiveSyncing)((0, l.defineProtoSetting)("appea
       explicitContentFriendDm: null != n ? n : void 0,
       explicitContentNonFriendDm: null != i ? i : void 0
     }
-  })
+  });
+(0, l.defineProtoSetting)("appearance", "searchResultExactCountEnabled", e => {
+  var t;
+  return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
+}, e => o.BoolValue.create({
+  value: e
+}))

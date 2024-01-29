@@ -1892,6 +1892,9 @@ class eA extends M.MessageType {
         case 7:
           o.messagePreviews = h.StringValue.internalBinaryRead(e, e.uint32(), E, o.messagePreviews);
           break;
+        case 8:
+          o.searchResultExactCountEnabled = h.BoolValue.internalBinaryRead(e, e.uint32(), E, o.searchResultExactCountEnabled);
+          break;
         default:
           let n = E.readUnknownField;
           if ("throw" === n) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
@@ -1902,7 +1905,7 @@ class eA extends M.MessageType {
     return o
   }
   internalBinaryWrite(e, _, E) {
-    0 !== e.theme && _.tag(1, M.WireType.Varint).int32(e.theme), !1 !== e.developerMode && _.tag(2, M.WireType.Varint).bool(e.developerMode), e.clientThemeSettings && eL.internalBinaryWrite(e.clientThemeSettings, _.tag(3, M.WireType.LengthDelimited).fork(), E).join(), !1 !== e.mobileRedesignDisabled && _.tag(4, M.WireType.Varint).bool(e.mobileRedesignDisabled), e.channelListLayout && h.StringValue.internalBinaryWrite(e.channelListLayout, _.tag(6, M.WireType.LengthDelimited).fork(), E).join(), e.messagePreviews && h.StringValue.internalBinaryWrite(e.messagePreviews, _.tag(7, M.WireType.LengthDelimited).fork(), E).join();
+    0 !== e.theme && _.tag(1, M.WireType.Varint).int32(e.theme), !1 !== e.developerMode && _.tag(2, M.WireType.Varint).bool(e.developerMode), e.clientThemeSettings && eL.internalBinaryWrite(e.clientThemeSettings, _.tag(3, M.WireType.LengthDelimited).fork(), E).join(), !1 !== e.mobileRedesignDisabled && _.tag(4, M.WireType.Varint).bool(e.mobileRedesignDisabled), e.channelListLayout && h.StringValue.internalBinaryWrite(e.channelListLayout, _.tag(6, M.WireType.LengthDelimited).fork(), E).join(), e.messagePreviews && h.StringValue.internalBinaryWrite(e.messagePreviews, _.tag(7, M.WireType.LengthDelimited).fork(), E).join(), e.searchResultExactCountEnabled && h.BoolValue.internalBinaryWrite(e.searchResultExactCountEnabled, _.tag(8, M.WireType.LengthDelimited).fork(), E).join();
     let t = E.writeUnknownFields;
     return !1 !== t && (!0 == t ? M.UnknownFieldHandler.onWrite : t)(this.typeName, e, _), _
   }
@@ -1937,6 +1940,11 @@ class eA extends M.MessageType {
       name: "message_previews",
       kind: "message",
       T: () => h.StringValue
+    }, {
+      no: 8,
+      name: "search_result_exact_count_enabled",
+      kind: "message",
+      T: () => h.BoolValue
     }])
   }
 }
