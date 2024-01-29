@@ -120,7 +120,7 @@ let j = [13, 11, 10, 10, 10, 10, 10],
       hasActiveThreads: F
     });
     if (null == A) return null;
-    let c = (0, s.getChannelIconTooltipText)(l, o, n, F),
+    let c = d ? null == o ? void 0 : o.name : (0, s.getChannelIconTooltipText)(l, o, n, F),
       N = d && null != o ? "".concat(o.name, " - ").concat(c, " icon") : "".concat(c, " icon"),
       _ = (0, i.getAcronym)(null !== (e = null == o ? void 0 : o.toString()) && void 0 !== e ? e : null),
       T = l.type === S.ChannelTypes.DM || l.type === S.ChannelTypes.GROUP_DM;
