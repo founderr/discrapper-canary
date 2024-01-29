@@ -1,49 +1,49 @@
 "use strict";
-l.r(r), l.d(r, {
+t.r(r), t.d(r, {
   default: function() {
     return d
   }
 });
-var t = l("37983");
-l("884691");
-var o = l("77078"),
-  i = l("38766"),
-  n = l("49111"),
-  a = l("782340"),
-  s = l("364547");
+var l = t("37983");
+t("884691");
+var n = t("77078"),
+  i = t("38766"),
+  o = t("49111"),
+  a = t("782340"),
+  s = t("364547");
 let u = {
-    page: n.AnalyticsPages.GUILD_CHANNEL,
-    section: n.AnalyticsSections.PROFILE_POPOUT,
-    object: n.AnalyticsObjects.EDIT_PER_SERVER_IDENTITY
+    page: o.AnalyticsPages.GUILD_CHANNEL,
+    section: o.AnalyticsSections.PROFILE_POPOUT,
+    object: o.AnalyticsObjects.EDIT_PER_SERVER_IDENTITY
   },
   f = {
-    page: n.AnalyticsPages.USER_POPOUT,
-    section: n.AnalyticsSections.PROFILE_POPOUT
+    page: o.AnalyticsPages.USER_POPOUT,
+    section: o.AnalyticsSections.PROFILE_POPOUT
   };
 
 function d(e) {
   let {
     onSelect: r,
-    onClose: l,
-    guild: n
+    onClose: t,
+    guild: o
   } = e, d = (0, i.default)({
-    guild: n,
+    guild: o,
     analyticsLocation: u
   }), c = (0, i.default)({
     analyticsLocation: f
   });
-  return (0, t.jsxs)(o.Menu, {
+  return (0, l.jsxs)(n.Menu, {
     className: s.popoutMenu,
     onSelect: r,
     navId: "edit-profile-popout",
-    onClose: l,
+    onClose: t,
     "aria-label": a.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
-    children: [(0, t.jsx)(o.MenuItem, {
+    children: [(0, l.jsx)(n.MenuItem, {
       id: "edit-server-profile",
       label: a.default.Messages.CHANGE_IDENTITY,
       subtext: a.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
       action: () => d()
-    }), (0, t.jsx)(o.MenuItem, {
+    }), (0, l.jsx)(n.MenuItem, {
       id: "edit-default-profile",
       label: a.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
       subtext: a.default.Messages.USER_PROFILE_MENU_HELP,

@@ -1,10 +1,10 @@
 "use strict";
-E.r(e), E.d(e, {
+t.r(e), t.d(e, {
   default: function() {
-    return n
+    return l
   }
 });
-let C = Object.freeze({
+let E = Object.freeze({
   "\uD83D\uDE00": "#E67E22",
   "\uD83D\uDE03": "#E67E22",
   "\uD83D\uDE04": "#E67E22",
@@ -1855,4 +1855,4 @@ let C = Object.freeze({
   "\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC73\uDB40\uDC63\uDB40\uDC74\uDB40\uDC7F": "#206694",
   "\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC77\uDB40\uDC6C\uDB40\uDC73\uDB40\uDC7F": "#11806A"
 });
-var n = C
+var l = E

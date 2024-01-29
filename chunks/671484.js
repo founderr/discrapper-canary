@@ -1,21 +1,21 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
-}), l("702976");
-var i, s = l("866227"),
-  n = l.n(s),
-  a = l("666038"),
-  r = l("568734"),
-  u = l("797647"),
-  d = l("646718");
-let o = Object.freeze({
+}), n("702976");
+var s, r = n("866227"),
+  i = n.n(r),
+  l = n("666038"),
+  a = n("568734"),
+  u = n("797647"),
+  o = n("646718");
+let d = Object.freeze({
   PAYMENT_SOURCE_REQUIRED: 1,
   EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
   NOT_SELF_REDEEMABLE: 4
 });
-i = class e extends a.default {
+s = class e extends l.default {
   static createFromServer(t) {
     return new e({
       userId: null != t.user ? t.user.id : null,
@@ -25,7 +25,7 @@ i = class e extends a.default {
       uses: t.uses,
       maxUses: t.max_uses,
       storeListingId: null != t.store_listing ? t.store_listing.id : null,
-      expiresAt: null != t.expires_at ? n(t.expires_at) : null,
+      expiresAt: null != t.expires_at ? i(t.expires_at) : null,
       redeemed: t.redeemed,
       subscriptionPlanId: null != t.subscription_plan ? t.subscription_plan.id : t.subscription_plan_id,
       subscriptionPlan: null != t.subscription_plan ? u.default.createFromServer(t.subscription_plan) : null,
@@ -51,7 +51,7 @@ i = class e extends a.default {
   }
   isExpired() {
     let e = this.expiresAt;
-    return null != e && n().isAfter(e)
+    return null != e && i().isAfter(e)
   }
   get hasMultipleCopies() {
     return this.maxUses > 1
@@ -66,13 +66,13 @@ i = class e extends a.default {
     return null != this.subscriptionPlanId
   }
   get premiumSubscriptionType() {
-    return this.isSubscription && d.PremiumSubscriptionSKUToPremiumType[this.skuId] || null
+    return this.isSubscription && o.PremiumSubscriptionSKUToPremiumType[this.skuId] || null
   }
   get isSelfRedeemable() {
-    return !(0, r.hasFlag)(this.flags, o.NOT_SELF_REDEEMABLE)
+    return !(0, a.hasFlag)(this.flags, d.NOT_SELF_REDEEMABLE)
   }
   get isExistingPremiumSubscriptionDisallowed() {
-    return (0, r.hasFlag)(this.flags, o.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED)
+    return (0, a.hasFlag)(this.flags, d.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED)
   }
   get analyticsData() {
     return {

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983"),
   r = n("884691"),
   l = n("414456"),
-  u = n.n(l),
-  s = n("77078"),
+  s = n.n(l),
+  u = n("77078"),
   o = n("766274"),
   a = n("368121"),
   d = n("519657"),
@@ -20,13 +20,13 @@ class f extends r.PureComponent {
       max: t,
       renderUser: n = this.defaultRenderUser,
       renderMoreUsers: i
-    } = this.props, r = [], l = e.length === t ? e.length : t - 1, u = 0;
-    for (; u < l && u < e.length;) {
-      let t = u === e.length - 1;
-      r.push(n(e[u] || null, t ? null : d.avatarMasked, "user-".concat(u), t)), u++
+    } = this.props, r = [], l = e.length === t ? e.length : t - 1, s = 0;
+    for (; s < l && s < e.length;) {
+      let t = s === e.length - 1;
+      r.push(n(e[s] || null, t ? null : d.avatarMasked, "user-".concat(s), t)), s++
     }
-    if (u < e.length) {
-      let t = Math.min(e.length - u, 99);
+    if (s < e.length) {
+      let t = Math.min(e.length - s, 99);
       r.push(i("+".concat(t), d.moreUsers, "more-users", t))
     }
     return r
@@ -47,7 +47,7 @@ class f extends r.PureComponent {
       className: e
     } = this.props;
     return (0, i.jsxs)("div", {
-      className: u(e, d.container),
+      className: s(e, d.container),
       ref: e => this._ref = e,
       children: [this.renderIcon(), this.renderUsers()]
     })
@@ -60,13 +60,13 @@ class f extends r.PureComponent {
         guildId: f
       } = this.props, S = e instanceof o.default ? e : null != e ? e.user : null;
       return null == S ? (0, i.jsx)("div", {
-        className: u(d.emptyUser, t)
-      }, n) : (0, i.jsx)(s.Avatar, {
+        className: s(d.emptyUser, t)
+      }, n) : (0, i.jsx)(u.Avatar, {
         tabIndex: 0,
-        src: S.getAvatarURL(f, (0, s.getAvatarSize)(a)),
+        src: S.getAvatarURL(f, (0, u.getAvatarSize)(a)),
         size: a,
         "aria-label": S.username,
-        className: u(t, c.cursorPointer, d.avatarSize),
+        className: s(t, c.cursorPointer, d.avatarSize),
         onClick: e => null != l ? l(e, S, this._ref) : null
       }, S.id)
     }
@@ -80,6 +80,6 @@ f.defaultProps = {
       children: e
     }, n)
   },
-  size: s.AvatarSizes.SIZE_24
+  size: u.AvatarSizes.SIZE_24
 };
 var S = f

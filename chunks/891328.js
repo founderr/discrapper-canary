@@ -8,8 +8,8 @@ var r = n("37983");
 n("884691");
 var u = n("414456"),
   s = n.n(u),
-  l = n("77078"),
-  i = n("750482"),
+  i = n("77078"),
+  l = n("750482"),
   o = n("945330"),
   a = n("516864");
 
@@ -18,7 +18,7 @@ function c(e) {
     className: t,
     onClose: n
   } = e;
-  return (0, r.jsx)(l.Clickable, {
+  return (0, r.jsx)(i.Clickable, {
     className: s(a.closeButtonContainer, t),
     onClick: n,
     children: (0, r.jsx)(o.default, {
@@ -35,10 +35,10 @@ function d(e) {
     onClose: n,
     className: u
   } = e;
-  return (0, r.jsxs)(l.ModalHeader, {
+  return (0, r.jsxs)(i.ModalHeader, {
     className: s(a.header, u),
     separator: !1,
-    children: [(0, r.jsx)(i.default, {
+    children: [(0, r.jsx)(l.default, {
       className: a.headerImage,
       listing: t,
       imageSize: 500,

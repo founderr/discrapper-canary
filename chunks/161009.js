@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return o
   }
 }), n("222007");
-var l = n("884691"),
-  i = n("446674"),
-  r = n("189293"),
+var r = n("884691"),
+  l = n("446674"),
+  i = n("189293"),
   s = n("845962"),
   a = n("235898");
 
@@ -16,12 +16,12 @@ function o() {
     error: t,
     categories: n,
     purchases: o
-  } = (0, a.default)(), [c, u, d] = (0, i.useStateFromStoresArray)([s.default], () => [s.default.isFetching, s.default.fetchError, s.default.profileEffects]);
-  return (0, l.useEffect)(() => {
-    (0, r.fetchUserProfileEffects)()
+  } = (0, a.default)(), [u, c, d] = (0, l.useStateFromStoresArray)([s.default], () => [s.default.isFetching, s.default.fetchError, s.default.profileEffects]);
+  return (0, r.useEffect)(() => {
+    (0, i.fetchUserProfileEffects)()
   }, []), {
-    isFetching: e || c,
-    error: null != t ? t : u,
+    isFetching: e || u,
+    error: null != t ? t : c,
     profileEffects: d,
     categories: n,
     purchases: o

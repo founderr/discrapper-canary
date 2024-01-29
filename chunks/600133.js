@@ -16,8 +16,8 @@ var s = n("866227"),
   u = n("913144"),
   d = n("363996"),
   c = n("49671"),
-  f = n("376556"),
-  E = n("299285"),
+  E = n("376556"),
+  f = n("299285"),
   _ = n("7331"),
   T = n("889293"),
   I = n("10641"),
@@ -70,8 +70,8 @@ var s = n("866227"),
   eu = n("357957"),
   ed = n("521012"),
   ec = n("340412"),
-  ef = n("437712"),
-  eE = n("167726"),
+  eE = n("437712"),
+  ef = n("167726"),
   e_ = n("773336"),
   eT = n("719923"),
   eI = n("189459"),
@@ -372,7 +372,7 @@ let eU = [ep.NoticeTypes.QUARANTINED, ep.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [ep.NoticeTypes.CONNECT_SPOTIFY]: {
-      predicate: () => !G.default.hasConnectedAccount() && $.default.isObservedAppRunning(f.default.get(ep.PlatformTypes.SPOTIFY).name) && !ey(ep.NoticeTypes.CONNECT_SPOTIFY)
+      predicate: () => !G.default.hasConnectedAccount() && $.default.isObservedAppRunning(E.default.get(ep.PlatformTypes.SPOTIFY).name) && !ey(ep.NoticeTypes.CONNECT_SPOTIFY)
     },
     [ep.NoticeTypes.WIN32_DEPRECATED_MESSAGE]: {
       predicate: () => {
@@ -430,14 +430,14 @@ let eU = [ep.NoticeTypes.QUARANTINED, ep.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           premiumSubscription: t,
           currentUser: n
-        } = e, s = null != t ? l(t.currentPeriodEnd).diff(l().startOf("day"), "days") : 0, a = null != t ? l(t.currentPeriodEnd).diff(l(t.currentPeriodStart).startOf("day"), "days") : 0, i = null != t && l(t.currentPeriodEnd).isBefore(l()), r = ef.default.applicationIdsFetched.has(eC.PREMIUM_SUBSCRIPTION_APPLICATION), o = ef.default.getForApplication(eC.PREMIUM_SUBSCRIPTION_APPLICATION), u = null != t ? (0, eT.getPremiumPlanItem)(t) : null, d = null != u ? eT.default.getSkuIdForPlan(u.planId) : null, c = null != o && null != u && Array.from(o).filter(e => {
+        } = e, s = null != t ? l(t.currentPeriodEnd).diff(l().startOf("day"), "days") : 0, a = null != t ? l(t.currentPeriodEnd).diff(l(t.currentPeriodStart).startOf("day"), "days") : 0, i = null != t && l(t.currentPeriodEnd).isBefore(l()), r = eE.default.applicationIdsFetched.has(eC.PREMIUM_SUBSCRIPTION_APPLICATION), o = eE.default.getForApplication(eC.PREMIUM_SUBSCRIPTION_APPLICATION), u = null != t ? (0, eT.getPremiumPlanItem)(t) : null, d = null != u ? eT.default.getSkuIdForPlan(u.planId) : null, c = null != o && null != u && Array.from(o).filter(e => {
           let {
             skuId: t,
             consumed: n
           } = e;
           return !n && t === d
-        }).length > 0, f = null != t && s <= (a > 14 ? 7 : 2) && s >= 0 && t.status !== ep.SubscriptionStatusTypes.PAST_DUE && !i && r && !c && null === t.paymentSourceId && !n.hasFreePremium() && !t.isPurchasedExternally;
-        return !ey(ep.NoticeTypes.PREMIUM_MISSING_PAYMENT) && f
+        }).length > 0, E = null != t && s <= (a > 14 ? 7 : 2) && s >= 0 && t.status !== ep.SubscriptionStatusTypes.PAST_DUE && !i && r && !c && null === t.paymentSourceId && !n.hasFreePremium() && !t.isPurchasedExternally;
+        return !ey(ep.NoticeTypes.PREMIUM_MISSING_PAYMENT) && E
       },
       metadata: e => {
         var t;
@@ -494,11 +494,11 @@ let eU = [ep.NoticeTypes.QUARANTINED, ep.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [ep.NoticeTypes.APPLICATION_TEST_MODE]: {
-      predicate: () => null != eE.default.testModeApplicationId,
+      predicate: () => null != ef.default.testModeApplicationId,
       metadata: () => {
-        if (null == eE.default.testModeApplicationId) return {};
-        let e = eE.default.testModeApplicationId,
-          t = E.default.getApplication(e),
+        if (null == ef.default.testModeApplicationId) return {};
+        let e = ef.default.testModeApplicationId,
+          t = f.default.getApplication(e),
           n = null != t ? t.name : e;
         return {
           applicationName: n,
@@ -651,7 +651,7 @@ function eB() {
 }
 class eF extends a.default.Store {
   initialize() {
-    this.syncWith([el.default, X.default, K.default, et.default, y.default, ec.default, w.default, Y.default, F.default, h.default], eG), this.waitFor(ei.default, en.default, z.default, W.default, q.default, Z.default, es.default, p.default, et.default, ea.default, G.default, $.default, X.default, eI.default, em.default, eE.default, J.default, ed.default, eN.default, K.default, eu.default, Q.default, y.default, ef.default, ec.default, Y.default, L.default, m.default, T.default, j.default)
+    this.syncWith([el.default, X.default, K.default, et.default, y.default, ec.default, w.default, Y.default, F.default, h.default], eG), this.waitFor(ei.default, en.default, z.default, W.default, q.default, Z.default, es.default, p.default, et.default, ea.default, G.default, $.default, X.default, eI.default, em.default, ef.default, J.default, ed.default, eN.default, K.default, eu.default, Q.default, y.default, eE.default, ec.default, Y.default, L.default, m.default, T.default, j.default)
   }
   hasNotice() {
     return null != eP && null != eP.type

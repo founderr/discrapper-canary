@@ -27,8 +27,8 @@ var a = n("37983"),
   C = n("26989"),
   A = n("27618"),
   M = n("712611"),
-  v = n("18494"),
-  x = n("162771"),
+  x = n("18494"),
+  v = n("162771"),
   R = n("102985"),
   L = n("697218"),
   O = n("834179"),
@@ -42,8 +42,8 @@ var a = n("37983"),
   P = n("49111"),
   w = n("782340"),
   G = n("813069");
-let H = f("2015-05-15").local(),
-  B = (0, h.makeLazy)({
+let B = f("2015-05-15").local(),
+  H = (0, h.makeLazy)({
     createPromise: () => n.el("201959").then(n.bind(n, "201959")),
     webpackId: "201959"
   }),
@@ -97,7 +97,7 @@ let H = f("2015-05-15").local(),
       }) : null]
     })
   },
-  z = e => {
+  K = e => {
     let t, n, {
       id: l,
       searchId: s,
@@ -135,7 +135,7 @@ let H = f("2015-05-15").local(),
       })]
     })
   },
-  K = e => (0, a.jsx)(z, {
+  z = e => (0, a.jsx)(K, {
     ...e,
     className: G.user,
     renderResult: V
@@ -143,11 +143,11 @@ let H = f("2015-05-15").local(),
   Q = {
     [P.SearchTokenTypes.FILTER_FROM]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_FROM,
-      component: K
+      component: z
     },
     [P.SearchTokenTypes.FILTER_MENTIONS]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_MENTIONS,
-      component: K
+      component: z
     },
     [P.SearchTokenTypes.FILTER_HAS]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_HAS
@@ -157,7 +157,7 @@ let H = f("2015-05-15").local(),
     },
     [P.SearchTokenTypes.FILTER_IN]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_CHANNELS,
-      component: e => (0, a.jsx)(z, {
+      component: e => (0, a.jsx)(K, {
         ...e,
         renderResult: Y
       })
@@ -405,10 +405,10 @@ class W extends l.PureComponent {
       return e.type !== P.SearchPopoutModes.FILTER && e.type !== P.SearchPopoutModes.EMPTY && !D.showDatePicker(e.filter)
     }, this.renderDatePicker = () => (0, a.jsxs)("div", {
       className: G.datePicker,
-      children: [(0, a.jsx)(B, {
+      children: [(0, a.jsx)(H, {
         onSelect: this.handleDateChange,
         maxDate: f().local(),
-        minDate: H
+        minDate: B
       }), (0, a.jsxs)("div", {
         className: G.datePickerHint,
         children: [(0, a.jsxs)("span", {
@@ -451,7 +451,7 @@ class W extends l.PureComponent {
           E = null != h ? (0, a.jsx)(h, {
             searchId: n
           }) : null,
-          m = null !== (u = f.component) && void 0 !== u ? u : z,
+          m = null !== (u = f.component) && void 0 !== u ? u : K,
           p = s.type === P.SearchPopoutModes.FILTER_ALL;
         return (0, a.jsxs)("ul", {
           role: "group",
@@ -478,9 +478,9 @@ class W extends l.PureComponent {
   }
 }
 var X = l.forwardRef((e, t) => {
-  let [n, l, s] = (0, E.useStateFromStoresArray)([x.default, v.default, M.default], () => {
-    let e = x.default.getGuildId(),
-      t = v.default.getChannelId(),
+  let [n, l, s] = (0, E.useStateFromStoresArray)([v.default, x.default, M.default], () => {
+    let e = v.default.getGuildId(),
+      t = x.default.getChannelId(),
       n = null != e ? e : t;
     o(null != n, "SearchPopout.getStateFromStores - invalid searchId");
     let a = M.default.getState(n),

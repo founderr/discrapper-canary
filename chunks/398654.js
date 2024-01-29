@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var i = n("316693"),
   r = n("65597"),
   l = n("374363"),
-  u = n("305961"),
-  s = n("957255"),
+  s = n("305961"),
+  u = n("957255"),
   o = n("162771"),
   a = n("697218"),
   d = n("991170"),
@@ -24,10 +24,10 @@ n("49111");
 function h(e) {
   let {
     showAlertMode: t
-  } = (0, c.useGuildAlertModeEnabled)(null != e ? e : "0"), n = (0, r.default)([u.default, s.default], () => {
-    let t = u.default.getGuild(e);
+  } = (0, c.useGuildAlertModeEnabled)(null != e ? e : "0"), n = (0, r.default)([s.default, u.default], () => {
+    let t = s.default.getGuild(e);
     if (null == t) return !1;
-    let n = s.default.getGuildPermissions(t);
+    let n = u.default.getGuildPermissions(t);
     return null != n && i.default.hasAny(n, E.IncidentAlertModeratorPermissions)
   }), l = (0, r.default)([S.default], () => null != e ? S.default.getGuildIncident(e) : null), o = null != l && (0, f.isUnderLockdown)(l);
   return {
@@ -43,25 +43,25 @@ function g() {
     n = function(e) {
       let t = a.default.getCurrentUser(),
         n = S.default.getIncidentsByGuild(),
-        r = Object.keys(n).map(e => u.default.getGuild(e));
+        r = Object.keys(n).map(e => s.default.getGuild(e));
       for (let l of r) {
         if (null == l) continue;
         let r = n[l.id];
         if (null == r || !(0, f.hasDetectedActivity)(r) && !(0, f.isUnderLockdown)(r) || (0, f.isUnderLockdown)(r) && l.id !== e) continue;
-        let u = i.default.hasAny(d.default.computePermissions({
+        let s = i.default.hasAny(d.default.computePermissions({
           user: t,
           context: l,
           checkElevated: !1
         }), E.IncidentAlertModeratorPermissions);
-        if (u) return l.id
+        if (s) return l.id
       }
       return null
     }(t),
     {
       showAlertMode: r
     } = (0, c.getGuildAlertModeEnabled)(null != n ? n : "0"),
-    s = null !== (e = l.default.getGuildsProto()) && void 0 !== e ? e : {},
-    h = null != n ? s[n] : null,
+    u = null !== (e = l.default.getGuildsProto()) && void 0 !== e ? e : {},
+    h = null != n ? u[n] : null,
     g = null != h && h.disableRaidAlertNag;
   return {
     show: null != n && r && !g,

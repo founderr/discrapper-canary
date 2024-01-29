@@ -24,7 +24,7 @@ function c(e) {
     label: f,
     tooltip: m,
     loading: p,
-    disabled: T,
+    disabled: h,
     onClick: E
   } = (0, u.useSpotifyPlayAction)(t, l, a);
   return (0, n.jsx)(i.Tooltip, {
@@ -39,7 +39,7 @@ function c(e) {
         onClick: E,
         onMouseEnter: t,
         onMouseLeave: l,
-        disabled: T,
+        disabled: h,
         submitting: p,
         children: (0, n.jsxs)(r.default, {
           align: r.default.Align.CENTER,

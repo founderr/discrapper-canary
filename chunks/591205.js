@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return u
   },
   INVITE_OPTIONS_25_TIMES: function() {
-    return o
+    return d
   },
   INVITE_OPTIONS_50_TIMES: function() {
-    return d
+    return o
   },
   INVITE_OPTIONS_100_TIMES: function() {
     return c
@@ -74,16 +74,16 @@ let s = a(0, () => l.default.Messages.MAX_USES.format({
   u = a(10, () => l.default.Messages.MAX_USES.format({
     maxUses: 10
   })),
-  o = a(25, () => l.default.Messages.MAX_USES.format({
+  d = a(25, () => l.default.Messages.MAX_USES.format({
     maxUses: 25
   })),
-  d = a(50, () => l.default.Messages.MAX_USES.format({
+  o = a(50, () => l.default.Messages.MAX_USES.format({
     maxUses: 50
   })),
   c = a(100, () => l.default.Messages.MAX_USES.format({
     maxUses: 100
   })),
-  E = [s, i, r, u, o, d, c],
+  E = [s, i, r, u, d, o, c],
   f = a(1800, () => l.default.Messages.DURATION_MINUTES.format({
     minutes: 30
   })),

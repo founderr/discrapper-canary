@@ -36,8 +36,8 @@ var a = n("37983"),
   C = n("822332"),
   A = n("945330"),
   M = n("599110"),
-  v = n("659500"),
-  x = n("49111"),
+  x = n("659500"),
+  v = n("49111"),
   R = n("782340"),
   L = n("466908");
 
@@ -142,7 +142,7 @@ let F = d.default.connectStores([_.default], e => {
     channel: t
   } = e;
   return {
-    canManageMessages: null != t && _.default.can(x.Permissions.MANAGE_MESSAGES, t)
+    canManageMessages: null != t && _.default.can(v.Permissions.MANAGE_MESSAGES, t)
   }
 })(j);
 
@@ -162,7 +162,7 @@ function D(e) {
     listName: A
   } = e, b = l.useRef(null), y = (0, E.default)(A, b), j = (0, d.useStateFromStores)([T.default], () => T.default.hasNotice()), F = (0, d.useStateFromStores)([I.default], () => I.default.windowSize());
   l.useEffect(() => {
-    M.default.track(x.AnalyticEvents.OPEN_POPOUT, {
+    M.default.track(v.AnalyticEvents.OPEN_POPOUT, {
       type: t
     })
   }, [t]), l.useEffect(() => {
@@ -179,8 +179,8 @@ function D(e) {
         animate: !0
       })
     }
-    return v.ComponentDispatch.subscribe(x.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.subscribe(x.ComponentActions.SCROLL_PAGE_UP, e), () => {
-      v.ComponentDispatch.unsubscribe(x.ComponentActions.SCROLL_PAGE_DOWN, t), v.ComponentDispatch.unsubscribe(x.ComponentActions.SCROLL_PAGE_UP, e)
+    return x.ComponentDispatch.subscribe(v.ComponentActions.SCROLL_PAGE_DOWN, t), x.ComponentDispatch.subscribe(v.ComponentActions.SCROLL_PAGE_UP, e), () => {
+      x.ComponentDispatch.unsubscribe(v.ComponentActions.SCROLL_PAGE_DOWN, t), x.ComponentDispatch.unsubscribe(v.ComponentActions.SCROLL_PAGE_UP, e)
     }
   }, []);
   let D = l.useCallback(() => {
@@ -227,14 +227,14 @@ function D(e) {
         children: w
       })
     }) : null,
-    H = {
+    B = {
       maxHeight: F.height - 43 - 25
     };
-  j && (H.maxHeight -= 40);
-  let B = null != f && s;
+  j && (B.maxHeight -= 40);
+  let H = null != f && s;
   return (0, a.jsx)("div", {
     className: i(_, L.messagesPopoutWrap),
-    style: H,
+    style: B,
     onClick: O,
     onDoubleClick: O,
     "aria-label": e["aria-label"],
@@ -242,7 +242,7 @@ function D(e) {
       component: h(),
       children: [(0, a.jsxs)(c.AdvancedScroller, {
         className: i(L.messagesPopout, N),
-        onScroll: B ? D : void 0,
+        onScroll: H ? D : void 0,
         ref: b,
         children: [(0, a.jsx)(u.ListNavigatorProvider, {
           navigator: y,
@@ -283,7 +283,7 @@ function U(e) {
     scrollerClassName: C,
     className: A,
     onCloseMessage: M,
-    listName: v
+    listName: x
   } = e, O = (0, d.useStateFromStores)([N.default], () => {
     let e = null != s ? N.default.getMessages(s.id) : null;
     return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId)
@@ -305,7 +305,7 @@ function U(e) {
     });
     else if (!O) {
       let e = g.default.getChannel(i);
-      null != e && (h.default.trackJump(i, a, t), (0, p.transitionTo)(x.Routes.CHANNEL(e.getGuildId(), i, a))), null == c || c(n)
+      null != e && (h.default.trackJump(i, a, t), (0, p.transitionTo)(v.Routes.CHANNEL(e.getGuildId(), i, a))), null == c || c(n)
     }
   }
   l.useEffect(() => {
@@ -350,7 +350,7 @@ function U(e) {
         })]
       }, t.id)), l)
     },
-    listName: v,
+    listName: x,
     "aria-label": e["aria-label"]
   })
 }

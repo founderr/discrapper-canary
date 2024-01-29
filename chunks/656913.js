@@ -11,8 +11,8 @@ var a = n("414456"),
   i = n("819855"),
   r = n("841098"),
   u = n("449918"),
-  o = n("832132"),
-  d = n("818643"),
+  d = n("832132"),
+  o = n("818643"),
   c = n("608684"),
   E = n("49111"),
   f = n("575282");
@@ -38,9 +38,9 @@ function h(e) {
     imageClassName: s(n, f.avatarUploaderInnerSquare, {
       [f.avatarUploaderInnerSquareDisabled]: !t
     }),
-    icon: null != E.image && "" !== E.image ? (0, l.jsx)(o.default, {
+    icon: null != E.image && "" !== E.image ? (0, l.jsx)(d.default, {
       ...N
-    }) : (0, l.jsx)(d.default, {
+    }) : (0, l.jsx)(o.default, {
       ...N
     }),
     iconClassName: s(f.avatarUploadIcon, f.hideDefaultIcon),

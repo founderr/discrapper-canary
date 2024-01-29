@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return d
   },
   clearAnalyticsLog: function() {
-    return u
+    return s
   }
 });
 var a = n("913144"),
@@ -26,7 +26,7 @@ function d() {
   })
 }
 
-function u() {
+function s() {
   a.default.dispatch({
     type: "ANALYTICS_LOG_CLEAR"
   })

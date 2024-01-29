@@ -50,7 +50,7 @@ function I(e) {
     enabled: C
   } = f.default.useExperiment({
     location: "RecentsHeader"
-  }), A = (0, i.default)([c.default], () => c.default.getUnseenInviteCount()), M = (0, i.default)([E.default], () => E.default.getMessageReminders()), v = M.length;
+  }), A = (0, i.default)([c.default], () => c.default.getUnseenInviteCount()), M = (0, i.default)([E.default], () => E.default.getMessageReminders()), x = M.length;
   return (0, a.jsxs)(u.Header, {
     className: s(_.header, _.expanded),
     children: [(0, a.jsxs)("div", {
@@ -109,7 +109,7 @@ function I(e) {
           className: s(_.tab, _.expanded, {
             [_.active]: t === r.InboxTab.TODOS
           }),
-          children: [N.default.Messages.MESSAGE_REMINDERS_HEADER, v > 0 ? (0, a.jsx)(S.CircleBadge, {
+          children: [N.default.Messages.MESSAGE_REMINDERS_HEADER, x > 0 ? (0, a.jsx)(S.CircleBadge, {
             color: d.default.STATUS_DANGER,
             className: s(_.iconBadge)
           }) : null]

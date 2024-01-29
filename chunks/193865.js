@@ -4,25 +4,25 @@ n.r(t), n.d(t, {
     return l
   },
   useShowImprovedMarkdownGuildExperimentConfig: function() {
-    return u
+    return s
   }
 });
 var i = n("299039"),
   r = n("488197");
 
 function l(e) {
-  return s(e, r.ImprovedMarkdownUserExperiment.useExperiment({
+  return u(e, r.ImprovedMarkdownUserExperiment.useExperiment({
     location: "590063_2"
   }))
 }
 
-function u(e, t) {
-  return s(t, r.ImprovedMarkdownGuildExperiment.useExperiment({
+function s(e, t) {
+  return u(t, r.ImprovedMarkdownGuildExperiment.useExperiment({
     guildId: e,
     location: "590063_4"
   }))
 }
 
-function s(e, t) {
+function u(e, t) {
   return e < i.default.extractTimestamp("1088216706570268682") ? r.ImprovedMarkdownUserExperiment.definition.defaultConfig : t
 }

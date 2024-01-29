@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("798609"),
   d = n("175528"),
   c = n("274800"),
-  f = n("574073"),
-  E = n("401642"),
+  E = n("574073"),
+  f = n("401642"),
   _ = n("42203"),
   T = n("305961"),
   I = n("697218"),
@@ -83,10 +83,10 @@ var M = l.memo(function(e) {
           let e = t.value.toString(),
             l = I.default.getUser(e);
           if (null != l) {
-            let e = (0, f.getUserAuthor)(l, n);
+            let e = (0, E.getUserAuthor)(l, n);
             L = (0, s.jsxs)(m.default, {
               ...h,
-              onClick: () => (0, E.openUserProfileModal)({
+              onClick: () => (0, f.openUserProfileModal)({
                 userId: l.id,
                 guildId: n.guild_id,
                 analyticsLocation: {
@@ -125,10 +125,10 @@ var M = l.memo(function(e) {
           else {
             let t = I.default.getUser(e);
             if (null != t) {
-              let e = (0, f.getUserAuthor)(t, n);
+              let e = (0, E.getUserAuthor)(t, n);
               L = (0, s.jsxs)(m.default, {
                 ...h,
-                onClick: () => (0, E.openUserProfileModal)({
+                onClick: () => (0, f.openUserProfileModal)({
                   userId: t.id,
                   guildId: n.guild_id,
                   analyticsLocation: {

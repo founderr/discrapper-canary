@@ -31,32 +31,32 @@ function T(e) {
     loadId: x,
     skuId: g,
     isGift: v = !1,
-    giftRecipient: A,
-    giftMessage: N,
-    analyticsLocations: P,
+    giftRecipient: P,
+    giftMessage: A,
+    analyticsLocations: N,
     returnRef: O
   } = e, {
-    analyticsLocations: L,
-    AnalyticsLocationProvider: M
-  } = (0, a.default)([...P, l.default.COLLECTIBLES_PAYMENT_MODAL]), R = r.useRef(new i.Environment), [j, y] = r.useState(null), F = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, h.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, E.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
+    analyticsLocations: M,
+    AnalyticsLocationProvider: R
+  } = (0, a.default)([...N, l.default.COLLECTIBLES_PAYMENT_MODAL]), L = r.useRef(new i.Environment), [y, j] = r.useState(null), b = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, h.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, E.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
     key: d.Step.CONFIRM,
     renderStep: e => (0, s.jsx)(S.CollectiblesPaymentModalConfirmStep, {
       ...e,
-      confettiCanvas: j,
-      analyticsLocations: L
+      confettiCanvas: y,
+      analyticsLocations: M
     }),
     options: {
       bodyClassName: C.modalOverrideBody,
       sliderBodyClassName: C.modalOverrideSliderBody
     }
   }];
-  return (0, s.jsxs)(M, {
+  return (0, s.jsxs)(R, {
     children: [(0, s.jsx)(i.ConfettiCanvas, {
-      ref: y,
+      ref: j,
       className: C.confettiCanvas,
-      environment: R.current
+      environment: L.current
     }), (0, s.jsx)(o.PaymentContextProvider, {
-      stepConfigs: F,
+      stepConfigs: b,
       applicationId: I.COLLECTIBLES_APPLICATION_ID,
       skuIDs: [g],
       isGift: v,
@@ -64,8 +64,8 @@ function T(e) {
       purchaseType: _.PurchaseTypes.ONE_TIME,
       children: (0, s.jsx)(u.GiftContextProvider, {
         isGift: v,
-        giftRecipient: A,
-        giftMessage: N,
+        giftRecipient: P,
+        giftMessage: A,
         children: (0, s.jsx)(c.PaymentModal, {
           onClose: t,
           onComplete: n,
@@ -73,7 +73,7 @@ function T(e) {
           applicationId: I.COLLECTIBLES_APPLICATION_ID,
           skuId: g,
           initialPlanId: null,
-          analyticsLocations: L,
+          analyticsLocations: M,
           transitionState: T,
           renderHeader: (e, t, n) => v ? (0, s.jsx)(p.default, {
             step: n,

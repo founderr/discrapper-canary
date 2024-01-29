@@ -18,8 +18,8 @@ var i = n("37983"),
   m = n("62843"),
   p = n("315102"),
   I = n("402671"),
-  E = n("866190"),
-  v = n("115279");
+  v = n("866190"),
+  E = n("115279");
 class g extends s.PureComponent {
   componentWillUnmount() {
     var e;
@@ -42,7 +42,7 @@ class g extends s.PureComponent {
       } = this.state;
     if (null != t) return t;
     if (null != n) {
-      let e = v.EMOJI_SIZE_MAP[o];
+      let e = E.EMOJI_SIZE_MAP[o];
       return p.default.getEmojiURL({
         id: n,
         animated: r && !0 === s && (!0 === l || u || !0 === a),
@@ -204,7 +204,7 @@ function S(e) {
       autoplay: null == e.autoplay ? t : e.autoplay,
       allowAnimatedEmoji: t
     },
-    s = __OVERLAY__ ? (0, d.useStateFromStores)([f.default], () => f.default.isInstanceFocused()) : (0, E.useIsWindowFocused)();
+    s = __OVERLAY__ ? (0, d.useStateFromStores)([f.default], () => f.default.isInstanceFocused()) : (0, v.useIsWindowFocused)();
   return (0, i.jsx)(_, {
     ...e,
     ...n,

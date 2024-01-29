@@ -1,37 +1,37 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return C
   }
-}), r("808653");
-var u = r("635058"),
-  l = r("265586"),
-  n = r("446674"),
-  i = r("913144"),
-  s = r("853987");
+}), n("808653");
+var r = n("635058"),
+  l = n("265586"),
+  i = n("446674"),
+  s = n("913144"),
+  a = n("853987");
 let o = new Date(2023, 8, 25),
-  a = new Date(2023, 9, 5),
+  u = new Date(2023, 9, 5),
   c = () => ({
     categoryItemViews: {
-      [u.CollectiblesCategorySkuId.FANTASY]: {
+      [r.CollectiblesCategorySkuId.FANTASY]: {
         [l.CollectiblesItemType.AVATAR_DECORATION]: o,
-        [l.CollectiblesItemType.PROFILE_EFFECT]: a
+        [l.CollectiblesItemType.PROFILE_EFFECT]: u
       },
-      [u.CollectiblesCategorySkuId.ANIME]: {
+      [r.CollectiblesCategorySkuId.ANIME]: {
         [l.CollectiblesItemType.AVATAR_DECORATION]: o,
-        [l.CollectiblesItemType.PROFILE_EFFECT]: a
+        [l.CollectiblesItemType.PROFILE_EFFECT]: u
       },
-      [u.CollectiblesCategorySkuId.BREAKFAST]: {
+      [r.CollectiblesCategorySkuId.BREAKFAST]: {
         [l.CollectiblesItemType.AVATAR_DECORATION]: o,
-        [l.CollectiblesItemType.PROFILE_EFFECT]: a
+        [l.CollectiblesItemType.PROFILE_EFFECT]: u
       },
-      [u.CollectiblesCategorySkuId.DISXCORE]: {
+      [r.CollectiblesCategorySkuId.DISXCORE]: {
         [l.CollectiblesItemType.AVATAR_DECORATION]: o
       }
     }
   }),
   d = c();
-class E extends n.default.PersistedStore {
+class f extends i.default.PersistedStore {
   initialize(e) {
     null != e && (d = e)
   }
@@ -39,29 +39,29 @@ class E extends n.default.PersistedStore {
     return d
   }
   isItemViewed(e) {
-    var t, r;
-    let u = null === (t = s.default.getProduct(e.skuId)) || void 0 === t ? void 0 : t.categorySkuId;
-    return null != u && (null === (r = d.categoryItemViews[u]) || void 0 === r ? void 0 : r[e.type]) != null
+    var t, n;
+    let r = null === (t = a.default.getProduct(e.skuId)) || void 0 === t ? void 0 : t.categorySkuId;
+    return null != r && (null === (n = d.categoryItemViews[r]) || void 0 === n ? void 0 : n[e.type]) != null
   }
   reset() {
     d = c()
   }
 }
-E.displayName = "CollectiblesPersistedStore", E.persistKey = "CollectiblesPersistedStoreV2";
-var C = new E(i.default, {
+f.displayName = "CollectiblesPersistedStore", f.persistKey = "CollectiblesPersistedStoreV2";
+var C = new f(s.default, {
   COLLECTIBLES_CATEGORY_ITEMS_VIEWED: e => {
     let {
       categories: t,
-      itemTypes: r
-    } = e, u = new Date;
+      itemTypes: n
+    } = e, r = new Date;
     return t.reduce((e, t) => {
       let {
         skuId: l
-      } = t, n = r.reduce((e, t) => {
-        var r;
-        return (null === (r = d.categoryItemViews[l]) || void 0 === r ? void 0 : r[t]) != null ? e : (null == d.categoryItemViews[l] && (d.categoryItemViews[l] = {}), d.categoryItemViews[l][t] = u, !0)
+      } = t, i = n.reduce((e, t) => {
+        var n;
+        return (null === (n = d.categoryItemViews[l]) || void 0 === n ? void 0 : n[t]) != null ? e : (null == d.categoryItemViews[l] && (d.categoryItemViews[l] = {}), d.categoryItemViews[l][t] = r, !0)
       }, !1);
-      return e || n
+      return e || i
     }, !1)
   }
 })

@@ -1,10 +1,10 @@
 "use strict";
 l.r(t), l.d(t, {
   useGetVoiceChannelInfoForVoiceActivitySection: function() {
-    return h
+    return _
   },
   default: function() {
-    return I
+    return g
   }
 });
 var n = l("37983");
@@ -20,27 +20,27 @@ var a = l("446674"),
   f = l("476263"),
   m = l("368121"),
   p = l("777003"),
-  T = l("49111"),
+  h = l("49111"),
   E = l("782340"),
-  S = l("814076"),
-  _ = l("293773");
+  T = l("814076"),
+  S = l("293773");
 
-function h(e, t) {
+function _(e, t) {
   let l = (0, a.useStateFromStores)([c.default], () => {
       var l;
       return null !== (l = c.default.getVoiceState(t, e)) && void 0 !== l ? l : c.default.getVoiceStateForUser(e)
     }, [t, e]),
     n = (0, a.useStateFromStores)([r.default], () => null != l && null != l.channelId ? r.default.getChannel(l.channelId) : null, [l]),
     s = (0, a.useStateFromStores)([o.default], () => null != n ? o.default.getGuild(n.guild_id) : null, [n]),
-    i = (0, a.useStateFromStores)([u.default], () => null != n && u.default.can(T.Permissions.VIEW_CHANNEL, n), [n]),
-    d = (0, a.useStateFromStores)([u.default], () => null != n && u.default.can(T.Permissions.CONNECT, n), [n]);
+    i = (0, a.useStateFromStores)([u.default], () => null != n && u.default.can(h.Permissions.VIEW_CHANNEL, n), [n]),
+    d = (0, a.useStateFromStores)([u.default], () => null != n && u.default.can(h.Permissions.CONNECT, n), [n]);
   return i && d && null != n && null != s ? {
     voiceGuild: s,
     voiceChannel: n
   } : null
 }
 
-function I(e) {
+function g(e) {
   let {
     voiceGuild: t,
     voiceChannel: l,
@@ -50,24 +50,24 @@ function I(e) {
   return (0, n.jsxs)(p.default, {
     children: [(0, n.jsx)(s.Heading, {
       variant: "eyebrow",
-      className: S.title,
+      className: T.title,
       children: E.default.Messages.PROFILE_IN_VOICE_CALL
     }), (0, n.jsxs)("div", {
-      className: _.voiceDisplayContainer,
+      className: S.voiceDisplayContainer,
       children: [(0, n.jsxs)("div", {
-        className: _.iconContainer,
+        className: S.iconContainer,
         children: [(0, n.jsx)(f.default, {
           size: f.default.Sizes.SMALL,
           active: !0,
           guild: t
         }), (0, n.jsx)("div", {
-          className: _.speakerIconContainer,
+          className: S.speakerIconContainer,
           children: (0, n.jsx)(m.default, {
-            className: _.speakerIcon
+            className: S.speakerIcon
           })
         })]
       }), (0, n.jsxs)("div", {
-        className: _.voiceChannelInfo,
+        className: S.voiceChannelInfo,
         children: [(0, n.jsx)(s.Text, {
           variant: "text-sm/semibold",
           children: l.name

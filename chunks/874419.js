@@ -4,24 +4,24 @@ l.r(t), l.d(t, {
     return I
   }
 });
-var n = l("37983"),
-  a = l("884691"),
-  s = l("446674"),
-  i = l("151426"),
-  r = l("79112"),
+var s = l("37983"),
+  i = l("884691"),
+  n = l("446674"),
+  u = l("151426"),
+  a = l("79112"),
   o = l("685665"),
-  u = l("10641"),
+  r = l("10641"),
   d = l("5667"),
   c = l("783142"),
   f = l("713135"),
-  m = l("49111"),
-  p = l("994428"),
+  _ = l("49111"),
+  S = l("994428"),
   T = l("397336"),
   E = l("782340"),
-  S = l("393036");
-let _ = i.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
-  h = e => {
-    (0, u.markDismissibleContentAsDismissed)(_, {
+  C = l("393036");
+let p = u.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
+  m = e => {
+    (0, r.markDismissibleContentAsDismissed)(p, {
       dismissAction: e,
       forceTrack: !0
     })
@@ -31,21 +31,21 @@ var I = e => {
     position: t,
     onClose: l
   } = e, {
-    analyticsLocations: i
-  } = (0, o.default)(), u = (0, s.useStateFromStores)([f.default], () => f.default.getIsAccessibilityTooltipViewed());
-  return a.useEffect(() => u ? () => h(p.ContentDismissActionType.AUTO) : () => (0, c.handleProfileAccessibilityTooltipViewed)(), [u]), (0, n.jsx)(d.default, {
-    markAsDismissed: h,
+    analyticsLocations: u
+  } = (0, o.default)(), r = (0, n.useStateFromStores)([f.default], () => f.default.getIsAccessibilityTooltipViewed());
+  return i.useEffect(() => r ? () => m(S.ContentDismissActionType.AUTO) : () => (0, c.handleProfileAccessibilityTooltipViewed)(), [r]), (0, s.jsx)(d.default, {
+    markAsDismissed: m,
     header: E.default.Messages.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP_TITLE,
-    headerClassName: S.header,
-    content: (0, n.jsx)("div", {
-      className: S.content,
+    headerClassName: C.header,
+    content: (0, s.jsx)("div", {
+      className: C.content,
       children: E.default.Messages.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP_DESCRIPTION
     }),
     buttonCTA: E.default.Messages.TAKE_ME_THERE,
     onClick: () => {
-      null == l || l(), r.default.open(m.UserSettingsSections.ACCESSIBILITY, null, {
+      null == l || l(), a.default.open(_.UserSettingsSections.ACCESSIBILITY, null, {
         scrollPosition: T.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME,
-        analyticsLocations: i
+        analyticsLocations: u
       })
     },
     secondaryButtonCTA: E.default.Messages.DISMISS,

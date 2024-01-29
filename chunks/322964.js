@@ -27,8 +27,8 @@ var a = n("37983"),
   C = n("49111"),
   A = n("782340"),
   M = n("183419"),
-  v = n("786948"),
-  x = n("780810");
+  x = n("786948"),
+  v = n("780810");
 
 function R(e) {
   var t, n, l;
@@ -75,8 +75,8 @@ function L(e) {
 function O(e) {
   let {
     item: t
-  } = e, n = x, l = A.default.Messages.NOTIFICATION_CENTER_TODO;
-  return t.completed && (n = v, l = A.default.Messages.NOTIFICATION_CENTER_DONE), (0, a.jsxs)("div", {
+  } = e, n = v, l = A.default.Messages.NOTIFICATION_CENTER_TODO;
+  return t.completed && (n = x, l = A.default.Messages.NOTIFICATION_CENTER_DONE), (0, a.jsxs)("div", {
     className: M.lifecycleContainer,
     children: [(0, a.jsx)("img", {
       className: M.checkbox,
@@ -134,7 +134,7 @@ let b = l.memo(function(e) {
     r.type === S.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != r.other_user && (A = (0, a.jsx)(T.default, {
       userId: r.other_user.id
     }));
-    let v = null != r.local_id;
+    let x = null != r.local_id;
     return (0, a.jsxs)("div", {
       className: M.row,
       children: [(0, a.jsxs)(i.ClickableContainer, {
@@ -166,7 +166,7 @@ let b = l.memo(function(e) {
             children: (0, g.getRelativeTimestamp)(s.default.extractTimestamp(r.id))
           }), A]
         })]
-      }), v ? null : (0, a.jsx)(I.MoreButton, {
+      }), x ? null : (0, a.jsx)(I.MoreButton, {
         item: r
       })]
     })

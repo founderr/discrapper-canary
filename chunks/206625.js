@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var i = n("884691");
+var s = n("884691");
 
 function r(e, t) {
-  let n = i.useRef(e);
-  return i.useEffect(() => {
+  let n = s.useRef(e);
+  return s.useEffect(() => {
     function e(e) {
       null != n.current && !n.current.contains(e.target) && t()
     }

@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   getInventoryGuildPacksUserExperimentConfig: function() {
-    return s
+    return d
   },
   useInventoryGuildPacksUserExperiment: function() {
     return c
   },
   useInventoryGuildSettingsExperiment: function() {
-    return E
+    return p
   }
 });
 var l = n("65597"),
   i = n("862205"),
-  a = n("697218"),
-  u = n("719923"),
+  s = n("697218"),
+  r = n("719923"),
   o = n("782340");
-let d = (0, i.createExperiment)({
+let a = (0, i.createExperiment)({
     kind: "user",
     id: "2023-05_inventory_guild_packs",
     label: "Inventory Guild Packs Experiment",
@@ -108,25 +108,25 @@ let d = (0, i.createExperiment)({
       }
     }]
   }),
-  r = e => {
+  u = e => {
     let {
       user: t,
       config: n
     } = e, {
       desktopViewAndUseAndCollectEnabled: l,
       mobileViewAndUseEnabled: i,
-      mobileAndFreemiumCollectEnabled: a,
+      mobileAndFreemiumCollectEnabled: s,
       autoUnfurlReactionTooltip: o,
-      collectOffOverride: d
-    } = n, r = u.default.isPremium(t);
+      collectOffOverride: a
+    } = n, u = r.default.isPremium(t);
     return {
       viewAndUseEnabled: l,
-      showTryPacksModalAndV2Copy: a,
-      collectEnabled: !d && (r ? l : a),
+      showTryPacksModalAndV2Copy: s,
+      collectEnabled: !a && (u ? l : s),
       autoUnfurlReactionTooltip: o
     }
   },
-  s = e => {
+  d = e => {
     let {
       user: t,
       autoTrackExposure: n = !0
@@ -136,9 +136,9 @@ let d = (0, i.createExperiment)({
       showTryPacksModalAndV2Copy: !1,
       collectEnabled: !1,
       autoUnfurlReactionTooltip: !1
-    } : r({
+    } : u({
       user: t,
-      config: d.getCurrentConfig({
+      config: a.getCurrentConfig({
         location: "inventory_guild_packs_experiment"
       }, {
         autoTrackExposure: n
@@ -153,23 +153,23 @@ let d = (0, i.createExperiment)({
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
       expressionSourceGuild: void 0,
       autoTrackExposure: !0
-    }, i = (0, l.default)([a.default], () => a.default.getCurrentUser()), u = d.useExperiment({
+    }, i = (0, l.default)([s.default], () => s.default.getCurrentUser()), r = a.useExperiment({
       location: "inventory_guild_setting_experiment"
     }, {
       autoTrackExposure: n
     }), {
       viewAndUseEnabled: o,
-      showTryPacksModalAndV2Copy: s,
+      showTryPacksModalAndV2Copy: d,
       collectEnabled: c,
       autoUnfurlReactionTooltip: f
-    } = r({
+    } = u({
       user: i,
-      config: u
-    }), E = o && c && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
+      config: r
+    }), p = o && c && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
     return {
       viewAndUseEnabled: o,
-      collectEnabled: E,
-      showTryPacksModalAndV2Copy: s,
+      collectEnabled: p,
+      showTryPacksModalAndV2Copy: d,
       autoUnfurlReactionTooltip: f
     }
   },
@@ -221,7 +221,7 @@ let d = (0, i.createExperiment)({
       }
     }]
   }),
-  E = function() {
+  p = function() {
     let {
       guildId: e,
       autoTrackExposure: t = !0

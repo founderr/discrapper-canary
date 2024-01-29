@@ -66,7 +66,7 @@ function T(e) {
   } = (0, p.useGiftContext)(), {
     selectedSkuId: g,
     selectedSkuPricePreview: v
-  } = (0, E.usePaymentContext)(), A = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser());
+  } = (0, E.usePaymentContext)(), P = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser());
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(h.PaymentPortalBody, {
       children: (0, s.jsxs)("div", {
@@ -101,7 +101,7 @@ function T(e) {
         children: (0, s.jsx)(C, {
           onStepChange: t,
           onBackClick: n,
-          disabled: null != _ || null == x || x.id === (null == A ? void 0 : A.id) || d.length > u.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
+          disabled: null != _ || null == x || x.id === (null == P ? void 0 : P.id) || d.length > u.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
           loading: T
         })
       })

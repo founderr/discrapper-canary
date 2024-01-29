@@ -4,21 +4,21 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var r = n("77078"),
-  i = n("570697"),
+var l = n("77078"),
+  r = n("570697"),
   s = n("49111"),
   a = n("782340");
 
 function o(e) {
   var t, n;
-  return (0, l.jsx)(i.default, {
+  return (0, i.jsx)(r.default, {
     errors: e.errors,
     disabled: e.disabled,
     title: a.default.Messages.DISPLAY_NAME,
-    children: (0, l.jsx)("div", {
-      children: (0, l.jsx)(r.TextInput, {
+    children: (0, i.jsx)("div", {
+      children: (0, i.jsx)(l.TextInput, {
         placeholder: e.placeholder,
         maxLength: s.DISPLAY_NAME_MAX_LENGTH,
         onChange: e.onGlobalNameChange,

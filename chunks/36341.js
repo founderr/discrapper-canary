@@ -16,14 +16,14 @@ var n = l("37983"),
   f = l("54239"),
   m = l("819689"),
   p = l("850391"),
-  T = l("884351"),
+  h = l("884351"),
   E = l("42203"),
-  S = l("27618"),
-  _ = l("158998"),
-  h = l("718422"),
-  I = l("49111"),
+  T = l("27618"),
+  S = l("158998"),
+  _ = l("718422"),
+  g = l("49111"),
   A = l("782340"),
-  g = l("22531");
+  I = l("22531");
 
 function v(e) {
   let {
@@ -32,11 +32,11 @@ function v(e) {
     onClose: s,
     className: r,
     inputClassName: v
-  } = e, C = a.useRef(null), N = (0, u.useStateFromStores)([S.default], () => S.default.isBlocked(t.id)), y = a.useCallback(e => {
+  } = e, N = a.useRef(null), C = (0, u.useStateFromStores)([T.default], () => T.default.isBlocked(t.id)), y = a.useCallback(e => {
     if ("Enter" === e.key) {
-      e.preventDefault(), o(null != C.current, "Keypress on Input when not mounted");
-      let l = C.current.value.trim();
-      return (0, h.applyChatRestrictions)({
+      e.preventDefault(), o(null != N.current, "Keypress on Input when not mounted");
+      let l = N.current.value.trim();
+      return (0, _.applyChatRestrictions)({
         type: p.ChatInputTypes.NORMAL,
         content: l,
         channel: null
@@ -46,22 +46,22 @@ function v(e) {
         } = e;
         n && (c.default.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
           let t = E.default.getChannel(e);
-          o(null != t, "Newly created PrivateChannel is null"), m.default.sendMessage(t.id, T.default.parse(t, l)), (0, f.popLayer)()
+          o(null != t, "Newly created PrivateChannel is null"), m.default.sendMessage(t.id, h.default.parse(t, l)), (0, f.popLayer)()
         }), null == s || s())
       }), !0
     }
-    e.which === I.KeyboardKeys.SPACE && e.stopPropagation()
-  }, [s, t]), O = N ? A.default.Messages.QUICK_DM_BLOCKED : A.default.Messages.QUICK_DM_USER.format({
-    name: _.default.getName(t)
+    e.which === g.KeyboardKeys.SPACE && e.stopPropagation()
+  }, [s, t]), M = C ? A.default.Messages.QUICK_DM_BLOCKED : A.default.Messages.QUICK_DM_USER.format({
+    name: S.default.getName(t)
   });
   return (0, n.jsx)(d.TextInput, {
     className: r,
-    inputClassName: i(v, g.input),
-    inputRef: C,
+    inputClassName: i(v, I.input),
+    inputRef: N,
     autoFocus: l,
-    placeholder: O,
-    "aria-label": O,
+    placeholder: M,
+    "aria-label": M,
     onKeyPress: y,
-    disabled: N
+    disabled: C
   })
 }

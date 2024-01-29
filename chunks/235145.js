@@ -1,50 +1,50 @@
 "use strict";
 l.r(t), l.d(t, {
   useGetDismissibleContent: function() {
-    return m
+    return _
   }
 });
-var n = l("884691"),
-  a = l("446674"),
-  s = l("374363"),
-  i = l("162771"),
-  r = l("674268"),
+var s = l("884691"),
+  i = l("446674"),
+  n = l("374363"),
+  u = l("162771"),
+  a = l("674268"),
   o = l("989691"),
-  u = l("862853"),
+  r = l("862853"),
   d = l("10641"),
   c = l("846614"),
   f = l("397336");
 
-function m(e, t, l) {
-  let m = (0, a.useStateFromStores)([s.default], () => {
+function _(e, t, l) {
+  let _ = (0, i.useStateFromStores)([n.default], () => {
       var e;
-      return null === (e = s.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
+      return null === (e = n.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
     }),
-    p = (0, a.useStateFromStores)([i.default], () => i.default.getGuildId()),
+    S = (0, i.useStateFromStores)([u.default], () => u.default.getGuildId()),
     T = (0, c.useNewUserDismissibleContent)(e),
     E = null;
-  s.default.hasLoaded(f.UserSettingsTypes.PRELOADED_USER_SETTINGS) ? E = T.find(e => null == m || !(0, r.hasBit)(m, e)) : null != m && (E = T.find(e => !(0, r.hasBit)(m, e)));
-  let S = (0, u.default)(e => null != E && e.currentlyShown.has(E)),
-    _ = (0, a.useStateFromStores)([o.default], () => null != E && o.default.hasUserHitDCCap(E));
-  n.useEffect(() => {
+  n.default.hasLoaded(f.UserSettingsTypes.PRELOADED_USER_SETTINGS) ? E = T.find(e => null == _ || !(0, a.hasBit)(_, e)) : null != _ && (E = T.find(e => !(0, a.hasBit)(_, e)));
+  let C = (0, r.default)(e => null != E && e.currentlyShown.has(E)),
+    p = (0, i.useStateFromStores)([o.default], () => null != E && o.default.hasUserHitDCCap(E));
+  s.useEffect(() => {
     if (null != E) return (0, d.requestMarkDismissibleContentAsShown)(E, {
       groupName: t,
-      guildId: p
+      guildId: S
     }, l), () => {
       if (null == E) return;
       let e = !o.default.hasUserHitDCCap();
-      (0, u.removeCandidateContent)({
+      (0, r.removeCandidateContent)({
         content: E,
         groupName: t
       }, e)
     }
-  }, [E, t, p, _, l]);
-  let h = n.useCallback(e => {
+  }, [E, t, S, p, l]);
+  let m = s.useCallback(e => {
     null != E && (0, d.markDismissibleContentAsDismissed)(E, {
       dismissAction: e,
       groupName: t,
-      guildId: p
+      guildId: S
     })
-  }, [E, t, p]);
-  return [S && null != E ? E : null, h]
+  }, [E, t, S]);
+  return [C && null != E ? E : null, m]
 }

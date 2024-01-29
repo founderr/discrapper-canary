@@ -13,8 +13,8 @@ var s = n("933805"),
   u = n("950576"),
   d = n("719926"),
   c = n("271938"),
-  f = n("42203"),
-  E = n("305961"),
+  E = n("42203"),
+  f = n("305961"),
   _ = n("697218"),
   T = n("387111"),
   I = n("299039"),
@@ -42,9 +42,9 @@ function h(e) {
 }
 
 function g(e, t) {
-  let n = f.default.getChannel(t);
+  let n = E.default.getChannel(t);
   if (null == n) return h(e);
-  let l = E.default.getGuild(n.getGuildId());
+  let l = f.default.getGuild(n.getGuildId());
   return null == l ? h(e) : (0, s.astToString)(N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED.astFormat({
     username: e,
     usernameOnClick: m.NOOP
@@ -161,9 +161,9 @@ var M = {
             } = e;
             return t === m.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION
           })) return function(e) {
-          let t = f.default.getChannel(e);
+          let t = E.default.getChannel(e);
           if (null == t) return null;
-          let n = E.default.getGuild(t.getGuildId());
+          let n = f.default.getGuild(t.getGuildId());
           return null == n ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_RAID_ALERT_NOTIFICATION.astFormat({
             guildName: n.name
           }))
@@ -171,9 +171,9 @@ var M = {
         return e.content;
       case m.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED:
         return function(e, t, n) {
-          let l = f.default.getChannel(t);
+          let l = E.default.getChannel(t);
           if (null == l) return null;
-          let a = E.default.getGuild(l.getGuildId());
+          let a = f.default.getGuild(l.getGuildId());
           return null == a ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_NOTIFICATION.astFormat({
             username: e,
             guildName: a.name,
@@ -185,9 +185,9 @@ var M = {
         }(R, O, e.content);
       case m.MessageTypes.GUILD_INCIDENT_ALERT_MODE_DISABLED:
         return function(e, t) {
-          let n = f.default.getChannel(t);
+          let n = E.default.getChannel(t);
           if (null == n) return null;
-          let l = E.default.getGuild(n.getGuildId());
+          let l = f.default.getGuild(n.getGuildId());
           return null == l ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_NOTIFICATION.astFormat({
             username: e,
             guildName: l.name

@@ -9,7 +9,7 @@ var l = {
     propTypes: !0,
     type: !0
   },
-  a = {
+  i = {
     name: !0,
     length: !0,
     prototype: !0,
@@ -17,14 +17,14 @@ var l = {
     arguments: !0,
     arity: !0
   },
-  r = "function" == typeof Object.getOwnPropertySymbols;
+  s = "function" == typeof Object.getOwnPropertySymbols;
 e.exports = function(e, t, n) {
   if ("string" != typeof t) {
-    var s = Object.getOwnPropertyNames(t);
-    r && (s = s.concat(Object.getOwnPropertySymbols(t)));
-    for (var i = 0; i < s.length; ++i)
-      if (!l[s[i]] && !a[s[i]] && (!n || !n[s[i]])) try {
-        e[s[i]] = t[s[i]]
+    var r = Object.getOwnPropertyNames(t);
+    s && (r = r.concat(Object.getOwnPropertySymbols(t)));
+    for (var o = 0; o < r.length; ++o)
+      if (!l[r[o]] && !i[r[o]] && (!n || !n[r[o]])) try {
+        e[r[o]] = t[r[o]]
       } catch (e) {}
   }
   return e

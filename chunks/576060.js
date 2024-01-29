@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("18494"),
   d = n("79798"),
   c = n("174622"),
-  f = n("335189"),
-  E = n("473591"),
+  E = n("335189"),
+  f = n("473591"),
   _ = n("371348"),
   T = n("857697"),
   I = n("988268"),
@@ -27,12 +27,12 @@ function p(e) {
   } = e, {
     clydeProfile: n,
     isFetching: p
-  } = (0, i.useStateFromStoresObject)([E.default], () => ({
-    clydeProfile: E.default.getProfile(t),
-    isFetching: E.default.isFetchingProfile(t)
+  } = (0, i.useStateFromStoresObject)([f.default], () => ({
+    clydeProfile: f.default.getProfile(t),
+    isFetching: f.default.isFetchingProfile(t)
   })), S = (0, i.default)([u.default], u.default.getCurrentlySelectedChannelId);
   if (l.useEffect(() => {
-      (0, f.fetchClydeProfile)(t)
+      (0, E.fetchClydeProfile)(t)
     }, [t]), (0, o.default)({
       type: a.ImpressionTypes.VIEW,
       name: a.ImpressionNames.CLYDE_AI_PROFILE_EMBED_VIEWED,

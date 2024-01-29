@@ -55,17 +55,17 @@ function p(e) {
   s.useEffect(() => {
     T && l.fetchSubscriptions()
   }, [T]);
-  let m = null == _ ? void 0 : _.id,
-    S = null == _ ? void 0 : null === (t = _.subscription_listings) || void 0 === t ? void 0 : t.filter(e => e.published);
-  return E && (null == n || C) ? null == m || null == S || 0 === S.length ? null : (0, i.jsx)("div", {
+  let A = null == _ ? void 0 : _.id,
+    m = null == _ ? void 0 : null === (t = _.subscription_listings) || void 0 === t ? void 0 : t.filter(e => e.published);
+  return E && (null == n || C) ? null == A || null == m || 0 === m.length ? null : (0, i.jsx)("div", {
     className: f.container,
-    children: S.map(e => (0, i.jsxs)("div", {
+    children: m.map(e => (0, i.jsxs)("div", {
       children: [(0, i.jsx)(h, {
         listing: e
       }, e.id), (0, i.jsx)(c.default, {
         listing: e,
         guildId: n,
-        groupListingId: m,
+        groupListingId: A,
         analyticsLocation: p,
         onComplete: I,
         forcesTransitionToGuild: v

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   LARGE_SERVER_MEMBER_THRESHOLD: function() {
-    return m
+    return N
   },
   isGroupInvite: function() {
     return A
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return S
   },
   isEnhancedCommunityInvite: function() {
-    return R
+    return L
   },
   InviteDestinationIcon: function() {
     return O
@@ -41,8 +41,8 @@ var s = n("37983"),
   p = n("238055"),
   h = n("782340"),
   T = n("692089");
-let m = 100,
-  N = e => {
+let N = 100,
+  m = e => {
     var t, n;
     let s = {
       onlineCount: null !== (t = e.approximate_presence_count) && void 0 !== t ? t : 0,
@@ -58,17 +58,17 @@ let m = 100,
   S = e => null == e.channel && null == e.guild && null != e.inviter,
   C = e => {
     var t;
-    let n = N(e);
-    return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > m
+    let n = m(e);
+    return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > N
   },
   v = e => e.state === _.InviteStates.ACCEPTED,
-  R = e => {
+  L = e => {
     let {
       guild_scheduled_event: t
     } = e;
     return null != t || !1
   },
-  L = e => !R(e) && (!!S(e) || null != e.inviter && !v(e) && !C(e)),
+  R = e => !L(e) && (!!S(e) || null != e.inviter && !v(e) && !C(e)),
   O = e => {
     let {
       guild: t,
@@ -100,8 +100,8 @@ function x(e) {
     invite: n,
     textClassName: a,
     className: l
-  } = e, r = N(n);
-  return null == r || L(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, s.jsx)(d.ActivityCount, {
+  } = e, r = m(n);
+  return null == r || R(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, s.jsx)(d.ActivityCount, {
     className: i(T.activityCount, l),
     online: r.onlineCount,
     total: r.memberCount,
@@ -114,7 +114,7 @@ function M(e) {
   let {
     invite: t,
     showBigUserIcon: n
-  } = e, l = a.useMemo(() => n ? null : g(t) && null != t.target_user ? f.default.getUserAvatarURL(t.target_user) : L(t) && null != t.inviter ? f.default.getUserAvatarURL(t.inviter) : null, [t, n]), i = h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN;
+  } = e, l = a.useMemo(() => n ? null : g(t) && null != t.target_user ? f.default.getUserAvatarURL(t.target_user) : R(t) && null != t.inviter ? f.default.getUserAvatarURL(t.inviter) : null, [t, n]), i = h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN;
   if (A(t)) {
     var u, o;
     i = (null === (u = t.channel) || void 0 === u ? void 0 : u.name) != null && (null === (o = t.inviter) || void 0 === o ? void 0 : o.username) != null ? h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM_BY_USER.format({
@@ -122,7 +122,7 @@ function M(e) {
     }) : h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM
   } else g(t) && null != t.target_user ? i = h.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
     username: t.target_user.username
-  }) : v(t) ? i = h.default.Messages.INSTANT_INVITE_YOU_ARE_ALREADY_A_MEMBER_OF : L(t) && null != t.inviter && (i = h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_BY_USER.format({
+  }) : v(t) ? i = h.default.Messages.INSTANT_INVITE_YOU_ARE_ALREADY_A_MEMBER_OF : R(t) && null != t.inviter && (i = h.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_BY_USER.format({
     username: E.default.getFormattedName(t.inviter)
   }));
   return (0, s.jsxs)("div", {

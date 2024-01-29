@@ -1,57 +1,57 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var r = n("414456"),
-  i = n.n(r),
+var l = n("414456"),
+  r = n.n(l),
   s = n("77078"),
   a = n("181114"),
   o = n("771325"),
   u = n("570697"),
-  c = n("75015"),
-  d = n("782340"),
+  d = n("75015"),
+  c = n("782340"),
   f = n("650130");
 
-function h(e) {
+function E(e) {
   let {
     showRemoveBannerButton: t,
     errors: n,
-    onBannerChange: r,
-    guildId: h,
-    className: E,
-    disabled: p = !1,
+    onBannerChange: l,
+    guildId: E,
+    className: h,
+    disabled: _ = !1,
     showPremiumIcon: C = !0,
-    isTryItOutFlow: _ = !1,
-    forcedDivider: m,
-    withHighlight: v = !1
-  } = e, I = v ? a.default : s.Button;
-  return (0, l.jsx)(u.default, {
-    className: E,
-    title: d.default.Messages.USER_SETTINGS_PROFILE_BANNER,
+    isTryItOutFlow: p = !1,
+    forcedDivider: S,
+    withHighlight: I = !1
+  } = e, R = I ? a.default : s.Button;
+  return (0, i.jsx)(u.default, {
+    className: h,
+    title: c.default.Messages.USER_SETTINGS_PROFILE_BANNER,
     showPremiumIcon: C,
     errors: n,
-    disabled: p,
-    forcedDivider: m,
-    children: (0, l.jsxs)("div", {
+    disabled: _,
+    forcedDivider: S,
+    children: (0, i.jsxs)("div", {
       className: f.buttonsContainer,
-      children: [(0, l.jsx)(I, {
-        className: i({
-          [f.buttonHighlighted]: v
+      children: [(0, i.jsx)(R, {
+        className: r({
+          [f.buttonHighlighted]: I
         }),
         size: s.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(c.UploadTypes.BANNER, h, _, void 0),
-        children: d.default.Messages.CHANGE_BANNER
-      }), t && (0, l.jsx)(s.Button, {
+        onClick: () => (0, o.handleOpenSelectImageModal)(d.UploadTypes.BANNER, E, p, void 0),
+        children: c.default.Messages.CHANGE_BANNER
+      }), t && (0, i.jsx)(s.Button, {
         className: f.removeButton,
         color: s.Button.Colors.PRIMARY,
         look: s.Button.Looks.LINK,
         size: s.Button.Sizes.SMALL,
-        onClick: () => r(null),
-        children: null != h ? d.default.Messages.USER_SETTINGS_RESET_BANNER : d.default.Messages.USER_SETTINGS_REMOVE_BANNER
+        onClick: () => l(null),
+        children: null != E ? c.default.Messages.USER_SETTINGS_RESET_BANNER : c.default.Messages.USER_SETTINGS_REMOVE_BANNER
       })]
     })
   })

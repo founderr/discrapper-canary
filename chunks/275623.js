@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var l = n("37983");
+var r = n("37983");
 n("884691");
-var i = n("414456"),
-  r = n.n(i),
+var l = n("414456"),
+  i = n.n(l),
   s = n("164538");
 
 function a(e) {
@@ -15,8 +15,8 @@ function a(e) {
     className: t,
     ...n
   } = e;
-  return (0, l.jsx)("div", {
-    className: r(s.gifTag, t),
+  return (0, r.jsx)("div", {
+    className: i(s.gifTag, t),
     ...n
   })
 }

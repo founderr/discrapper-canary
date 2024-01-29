@@ -2,7 +2,7 @@
 let i, s, r;
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return O
   }
 }), n("222007"), n("424973");
 var l, a, u = n("866227"),
@@ -18,9 +18,9 @@ var l, a, u = n("866227"),
   C = n("42203"),
   _ = n("305961"),
   T = n("660478"),
-  m = n("282109"),
-  S = n("697218"),
-  A = n("299039"),
+  A = n("282109"),
+  m = n("697218"),
+  S = n("299039"),
   g = n("724210");
 (a = l || (l = {})).DEFAULT = "DEFAULT", a.FAVORITE = "FAVORITE";
 let R = new d.default(e => {
@@ -43,29 +43,29 @@ function N(e) {
       s = e.isMessageRequestTimestamp;
     if (null != s) {
       let e = o(s).valueOf(),
-        t = A.default.fromTimestamp(e);
-      return A.default.compare(i, t) > 0 ? i : t
+        t = S.default.fromTimestamp(e);
+      return S.default.compare(i, t) > 0 ? i : t
     }
     return i
   }(e);
   return {
     channelId: e.id,
     lastMessageId: t,
-    isFavorite: m.default.isMessagesFavorite(e.id) && (0, h.isInMainTabsExperiment)(),
+    isFavorite: A.default.isMessagesFavorite(e.id) && (0, h.isInMainTabsExperiment)(),
     isRequest: I.default.isMessageRequest(e.id) || v.default.isSpam(e.id)
   }
 }
 
-function x() {
+function L() {
   R.clear(), Object.values(C.default.getMutablePrivateChannels()).forEach(e => {
     R.set(e.id, N(e))
-  }), (0, h.isInMainTabsExperiment)() && (0, p.isSplitMessagesTab)() && m.default.getAddedToMessages().forEach(e => {
+  }), (0, h.isInMainTabsExperiment)() && (0, p.isSplitMessagesTab)() && A.default.getAddedToMessages().forEach(e => {
     let t = C.default.getChannel(e);
     null != t && (0, E.isGuildTextChannelType)(t.type) && R.set(t.id, N(t))
   })
 }
 
-function L() {
+function x() {
   let e = C.default.getMutablePrivateChannels();
   for (let t in e) R.set(t, N(e[t]))
 }
@@ -86,7 +86,7 @@ let P = (i = [], s = [], r = [], () => {
 });
 class y extends c.default.Store {
   initialize() {
-    this.waitFor(C.default, _.default, S.default, I.default, m.default), this.syncWith([m.default, I.default], x)
+    this.waitFor(C.default, _.default, m.default, I.default, A.default), this.syncWith([A.default, I.default], L)
   }
   getPrivateChannelIds() {
     return P()
@@ -106,12 +106,12 @@ class y extends c.default.Store {
   }
 }
 y.displayName = "PrivateChannelSortStore";
-var M = new y(f.default, {
-  CONNECTION_OPEN: x,
-  CONNECTION_OPEN_SUPPLEMENTAL: x,
-  OVERLAY_INITIALIZE: x,
-  CACHE_LOADED: L,
-  CACHE_LOADED_LAZY: L,
+var O = new y(f.default, {
+  CONNECTION_OPEN: L,
+  CONNECTION_OPEN_SUPPLEMENTAL: L,
+  OVERLAY_INITIALIZE: L,
+  CACHE_LOADED: x,
+  CACHE_LOADED_LAZY: x,
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t

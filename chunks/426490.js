@@ -23,8 +23,8 @@ var s, l, a = n("37983"),
   u = n("506838"),
   d = n("65597"),
   c = n("77078"),
-  f = n("430568"),
-  E = n("449918"),
+  E = n("430568"),
+  f = n("449918"),
   _ = n("20606"),
   T = n("385976"),
   I = n("845579"),
@@ -135,8 +135,8 @@ function y(e) {
     answerClassName: d,
     renderAnswerContent: c
   } = e, {
-    ContainerComponent: f,
-    answerElementType: E
+    ContainerComponent: E,
+    answerElementType: f
   } = (0, u.match)({
     isInteractive: l,
     answersInteraction: n
@@ -160,13 +160,13 @@ function y(e) {
     ContainerComponent: L,
     answerElementType: 0
   }));
-  return (0, a.jsx)(f, {
+  return (0, a.jsx)(E, {
     className: r,
     children: t.map((e, t) => (0, a.jsx)(U, {
       className: o(R.answer, d),
       answer: e,
       isFirstAnswer: 0 === t,
-      elementType: E,
+      elementType: f,
       answerTapAccessibilityLabel: s,
       hasSelectedAnyAnswer: i,
       children: c(e)
@@ -184,15 +184,15 @@ function U(e) {
     isFirstAnswer: u,
     elementType: d
   } = e, {
-    channelId: f,
-    messageId: E
+    channelId: E,
+    messageId: f
   } = (0, h.useMessageIds)(), _ = (0, h.useStyleClass)(n.style), T = !0 === n.isSelected, I = i.useCallback(() => {
     S.default.handlePollAnswerTapped({
-      channelId: f,
-      messageId: E,
+      channelId: E,
+      messageId: f,
       answerId: n.answerId
     })
-  }, [f, E, n.answerId]);
+  }, [E, f, n.answerId]);
   switch (d) {
     case 0:
       return (0, a.jsx)("li", {
@@ -259,7 +259,7 @@ function b(e) {
     var e;
     return T.default.getCustomEmojiById(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : "")
   }, [l.id]), r = (null == l ? void 0 : l.name) !== "" ? l.name : null == i ? void 0 : i.name;
-  return (0, a.jsx)(f.default, {
+  return (0, a.jsx)(E.default, {
     className: s,
     emojiId: null == l ? void 0 : l.id,
     emojiName: null == l ? void 0 : l.name,
@@ -322,7 +322,7 @@ function F(e) {
 
 function k(e) {
   return (0, a.jsx)(F, {
-    color: (0, E.getColor)(M.Color.BRAND_500),
+    color: (0, f.getColor)(M.Color.BRAND_500),
     ...e
   })
 }

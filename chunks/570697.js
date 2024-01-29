@@ -4,25 +4,25 @@ n.r(t), n.d(t, {
     return f
   }
 }), n("781738");
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var r = n("414456"),
-  i = n.n(r),
+var l = n("414456"),
+  r = n.n(l),
   s = n("77078"),
   a = n("254490"),
   o = n("891653"),
   u = n("632892"),
-  c = n("326908");
+  d = n("326908");
 
-function d(e) {
+function c(e) {
   let {
     errors: t
   } = e;
-  return (0, l.jsx)(l.Fragment, {
-    children: t.map((e, t) => (0, l.jsx)(s.Text, {
+  return (0, i.jsx)(i.Fragment, {
+    children: t.map((e, t) => (0, i.jsx)(s.Text, {
       variant: "text-xs/normal",
       color: "text-danger",
-      className: c.errorMessage,
+      className: d.errorMessage,
       children: e.replace(/[0-9.,]+ ?kb/g, e => {
         let t = 1024 * parseInt(e, 10);
         return isNaN(t) ? e : (0, a.sizeString)(t)
@@ -35,42 +35,42 @@ function f(e) {
   let {
     title: t,
     titleIcon: n,
-    titleId: r,
+    titleId: l,
     description: a,
     children: f,
-    className: h,
-    errors: E,
-    disabled: p = !1,
+    className: E,
+    errors: h,
+    disabled: _ = !1,
     hideDivider: C = !1,
-    showBorder: _ = !1,
-    borderType: m,
-    hasBackground: v = !1,
-    forcedDivider: I = !1,
-    showPremiumIcon: g = !1
+    showBorder: p = !1,
+    borderType: S,
+    hasBackground: I = !1,
+    forcedDivider: R = !1,
+    showPremiumIcon: m = !1
   } = e;
-  return (0, l.jsx)("div", {
-    className: i(c.customizationSection, h, {
-      [c.disabled]: p,
-      [c.hideDivider]: C,
-      [c.showBorder]: _,
-      [c.withDivider]: I
+  return (0, i.jsx)("div", {
+    className: r(d.customizationSection, E, {
+      [d.disabled]: _,
+      [d.hideDivider]: C,
+      [d.showBorder]: p,
+      [d.withDivider]: R
     }),
-    children: (0, l.jsxs)(u.default, {
-      className: c.customizationSectionBorder,
-      backgroundClassName: c.customizationSectionBackground,
-      isShown: _,
-      type: m,
-      hasBackground: v,
-      children: [(0, l.jsxs)(s.FormTitle, {
-        className: c.title,
-        id: r,
-        children: [t, g && (0, l.jsx)(o.default, {}), n]
-      }), null != a ? (0, l.jsx)(s.FormText, {
+    children: (0, i.jsxs)(u.default, {
+      className: d.customizationSectionBorder,
+      backgroundClassName: d.customizationSectionBackground,
+      isShown: p,
+      type: S,
+      hasBackground: I,
+      children: [(0, i.jsxs)(s.FormTitle, {
+        className: d.title,
+        id: l,
+        children: [t, m && (0, i.jsx)(o.default, {}), n]
+      }), null != a ? (0, i.jsx)(s.FormText, {
         type: s.FormText.Types.DESCRIPTION,
-        className: c.sectionDescription,
+        className: d.sectionDescription,
         children: a
-      }) : null, f, null != E && (0, l.jsx)(d, {
-        errors: E
+      }) : null, f, null != h && (0, i.jsx)(c, {
+        errors: h
       })]
     })
   })

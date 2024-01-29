@@ -1,68 +1,68 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   default: function() {
-    return h
+    return T
   }
-}), A("222007");
-var a = A("37983"),
-  l = A("884691"),
-  n = A("414456"),
-  r = A.n(n),
-  s = A("77078"),
-  o = A("694187"),
-  i = A("818643"),
-  u = A("987772"),
-  d = A("228220"),
-  c = A("782340"),
-  f = A("610828");
+}), t("222007");
+var a = t("37983"),
+  l = t("884691"),
+  n = t("414456"),
+  r = t.n(n),
+  s = t("77078"),
+  o = t("694187"),
+  i = t("818643"),
+  d = t("987772"),
+  u = t("228220"),
+  c = t("782340"),
+  f = t("610828");
 let C = "custom-image",
-  g = l.forwardRef(function(e, t) {
+  g = l.forwardRef(function(e, A) {
     let {
-      selectedImageName: A,
+      selectedImageName: t,
       onChange: l,
       disabled: n = !1,
       name: o,
       alt: i,
-      data: u
-    } = e, d = o === A, c = (0, s.useRadioItem)({
-      isSelected: d,
+      data: d
+    } = e, u = o === t, c = (0, s.useRadioItem)({
+      isSelected: u,
       label: i
     }), C = n ? void 0 : () => {
-      l(u, o)
+      l(d, o)
     };
     return (0, a.jsx)(s.Clickable, {
-      ref: t,
+      ref: A,
       className: r(f.radioOption, {
-        [f.selected]: d,
+        [f.selected]: u,
         [f.disabled]: n
       }),
       onClick: C,
       "aria-disabled": n,
       ...c,
       children: (0, a.jsx)("img", {
-        src: u,
+        src: d,
         alt: i,
         className: f.radioOptionImage
       })
     })
   });
 
-function h(e) {
+function T(e) {
   let {
-    presetImages: t,
-    image: A,
+    presetImages: A,
+    image: t,
     imageName: n,
-    savedImageName: h,
-    onChange: T,
+    savedImageName: T,
+    onChange: h,
     uploadButtonLabel: m = c.default.Messages.UPLOAD_IMAGE,
-    radioGroupAriaLabel: p = c.default.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
+    radioGroupAriaLabel: U = c.default.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
     disabled: I = !1
-  } = e, U = n === C, [v, E] = l.useState(U ? A : null), [x, N] = l.useState(null), q = l.useRef(null), O = l.useRef(null);
+  } = e, p = n === C, [v, E] = l.useState(p ? t : null), [q, N] = l.useState(null), O = l.useRef(null), x = l.useRef(null);
   l.useEffect(() => {
-    h !== C && (E(null), N(null))
-  }, [h]);
-  let R = null != x ? c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({
-      filename: x
+    T !== C && (E(null), N(null))
+  }, [T]);
+  let R = null != q ? c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({
+      filename: q
     }) : c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE,
     L = (0, s.useRadioGroup)({
       orientation: "horizontal",
@@ -70,17 +70,17 @@ function h(e) {
     }),
     D = () => {
       var e;
-      return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+      return null === (e = O.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
     },
     P = () => {
-      n === C && T(t[0].data, t[0].name), E(null), N(null)
+      n === C && h(A[0].data, A[0].name), E(null), N(null)
     };
   return l.useEffect(() => {
-    if (U && null != x) {
-      var e, t;
-      null === (t = O.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()
+    if (p && null != q) {
+      var e, A;
+      null === (A = x.current) || void 0 === A || null === (e = A.ref) || void 0 === e || e.focus()
     }
-  }, [U, x]), (0, a.jsxs)("div", {
+  }, [p, q]), (0, a.jsxs)("div", {
     className: f.imageSelectionContainer,
     children: [(0, a.jsx)(s.FocusRing, {
       within: !0,
@@ -101,10 +101,10 @@ function h(e) {
           "aria-hidden": !0,
           children: m
         }), (0, a.jsx)(o.default, {
-          ref: q,
+          ref: O,
           tabIndex: 0,
-          onChange: (e, t) => {
-            null != t && (N(t.name), E(e), T(e, C))
+          onChange: (e, A) => {
+            null != A && (N(A.name), E(e), h(e, C))
           },
           "aria-label": m
         })]
@@ -119,9 +119,9 @@ function h(e) {
           className: f.customImageAction,
           onClick: D,
           "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_CUSTOM_IMAGE_ARIA_LABEL.format({
-            filename: x
+            filename: q
           }),
-          children: (0, a.jsx)(u.default, {
+          children: (0, a.jsx)(d.default, {
             className: f.editIcon
           })
         })
@@ -133,28 +133,28 @@ function h(e) {
           className: f.customImageAction,
           onClick: P,
           "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({
-            filename: x
+            filename: q
           }),
-          children: (0, a.jsx)(d.default, {
+          children: (0, a.jsx)(u.default, {
             className: f.deleteIcon
           })
         })
       })]
     }), (0, a.jsxs)("div", {
-      "aria-label": p,
+      "aria-label": U,
       ...L,
       className: f.radioGroup,
       children: [null != v && (0, a.jsx)(g, {
-        ref: O,
+        ref: x,
         selectedImageName: n,
-        onChange: T,
+        onChange: h,
         disabled: I,
         name: C,
         alt: R,
         data: v
-      }), t.map(e => (0, a.jsx)(g, {
+      }), A.map(e => (0, a.jsx)(g, {
         selectedImageName: n,
-        onChange: T,
+        onChange: h,
         disabled: I,
         ...e
       }, e.name))]

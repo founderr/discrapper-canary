@@ -1,13 +1,13 @@
 "use strict";
 l.r(t), l.d(t, {
   usePlatformAllowed: function() {
-    return S
+    return T
   },
   usePlatforms: function() {
-    return _
+    return S
   },
   useLegacyPlatformType: function() {
-    return h
+    return _
   }
 }), l("222007");
 var n = l("884691"),
@@ -24,12 +24,12 @@ var n = l("884691"),
 let p = {
     [f.PlatformTypes.INSTAGRAM]: ["1036753656588017764"]
   },
-  T = new Map([
+  h = new Map([
     [f.PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()]
   ]),
   E = 30 * c.default.Millis.DAY;
 
-function S(e) {
+function T(e) {
   let {
     forUserProfile: t
   } = e, l = (0, i.useStateFromStores)([d.default], () => d.default.getCurrentUser()), n = o.PlayStationVoiceExperiment.useExperiment({
@@ -43,9 +43,9 @@ function S(e) {
   }
 }
 
-function _() {
+function S() {
   let e = (0, i.useStateFromStores)([u.default], () => u.default.getAccounts()),
-    t = S({
+    t = T({
       forUserProfile: !1
     }),
     l = n.useMemo(() => {
@@ -54,11 +54,11 @@ function _() {
     }, [e]);
   return s.sortBy(r.default.filter(t), [e => {
     var t;
-    return !(T.has(e.type) && Date.now() < (null !== (t = T.get(e.type)) && void 0 !== t ? t : 0) + E)
+    return !(h.has(e.type) && Date.now() < (null !== (t = h.get(e.type)) && void 0 !== t ? t : 0) + E)
   }, e => l.has(e.type), e => e.hasMetadata, e => !f.ACTIVITY_PLATFORM_TYPES.has(e.type), e => e.name])
 }
 
-function h(e) {
+function _(e) {
   let [t, l] = n.useState(!1);
 
   function a(e) {

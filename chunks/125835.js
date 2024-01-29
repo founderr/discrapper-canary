@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return u
   }
 });
 var r = n("37983");
@@ -11,18 +11,18 @@ var i = n("414456"),
   o = n("642032"),
   s = n("767964");
 
-function a(e) {
+function u(e) {
   let {
     className: t,
     children: n,
     forceUseColor: i = !1,
-    hideStars: a
+    hideStars: u
   } = e;
   return (0, r.jsxs)("span", {
     className: l(s.container, t, {
       [s.containerColored]: i
     }),
-    children: [n, a ? null : (0, r.jsxs)(r.Fragment, {
+    children: [n, u ? null : (0, r.jsxs)(r.Fragment, {
       children: [(0, r.jsx)(o.default, {
         foreground: s.sparkleStarTopRight
       }), (0, r.jsx)(o.default, {

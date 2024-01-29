@@ -1,167 +1,167 @@
 "use strict";
 l.r(t), l.d(t, {
   DEFAULT_COLLECTIBLES_UPSELL_HEIGHT: function() {
-    return x
+    return b
   },
   default: function() {
-    return P
+    return y
   }
 }), l("222007"), l("794252");
-var n = l("37983"),
-  a = l("884691"),
-  s = l("414456"),
-  i = l.n(s),
-  r = l("506838"),
+var s = l("37983"),
+  i = l("884691"),
+  n = l("414456"),
+  u = l.n(n),
+  a = l("506838"),
   o = l("65597"),
-  u = l("77078"),
+  r = l("77078"),
   d = l("731898"),
   c = l("206230"),
   f = l("812204"),
-  m = l("685665"),
-  p = l("606292"),
+  _ = l("685665"),
+  S = l("606292"),
   T = l("688318"),
   E = l("21526"),
-  S = l("853987"),
-  _ = l("491232"),
-  h = l("845962"),
+  C = l("853987"),
+  p = l("491232"),
+  m = l("845962"),
   I = l("697218"),
-  A = l("945330"),
-  g = l("719923"),
+  L = l("945330"),
+  P = l("719923"),
   v = l("627601"),
-  C = l("994428"),
-  N = l("782340"),
-  y = l("304118"),
-  O = l("604689");
+  O = l("994428"),
+  h = l("782340"),
+  A = l("304118"),
+  g = l("604689");
 
-function M(e) {
+function U(e) {
   let {
     onClick: t
   } = e;
-  return (0, n.jsx)(u.Clickable, {
-    className: y.closeButton,
+  return (0, s.jsx)(r.Clickable, {
+    className: A.closeButton,
     onClick: t,
-    "aria-label": N.default.Messages.DISMISS,
-    children: (0, n.jsx)(A.default, {
-      className: y.closeIcon,
+    "aria-label": h.default.Messages.DISMISS,
+    children: (0, s.jsx)(L.default, {
+      className: A.closeIcon,
       width: 18,
       height: 18
     })
   })
 }
-let x = 76,
-  R = e => (0, n.jsx)(u.Text, {
+let b = 76,
+  R = e => (0, s.jsx)(r.Text, {
     variant: "text-sm/normal",
     color: "text-normal",
     tag: "span",
-    className: y.ctaLink,
+    className: A.ctaLink,
     children: e
   }),
-  L = e => {
+  D = e => {
     let {
       user: t,
       onClick: l
     } = e, {
-      avatarDecorationSrc: a
+      avatarDecorationSrc: i
     } = (0, T.default)({
       user: t,
-      size: (0, p.getDecorationSizeForAvatarSize)(u.AvatarSizes.SIZE_48)
+      size: (0, S.getDecorationSizeForAvatarSize)(r.AvatarSizes.SIZE_48)
     });
-    return (0, n.jsx)(u.Clickable, {
-      className: y.avatarButton,
+    return (0, s.jsx)(r.Clickable, {
+      className: A.avatarButton,
       onClick: l,
-      "aria-label": N.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
-      children: (0, n.jsx)(u.Avatar, {
-        src: O,
-        avatarDecoration: a,
-        size: u.AvatarSizes.SIZE_48,
+      "aria-label": h.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
+      children: (0, s.jsx)(r.Avatar, {
+        src: g,
+        avatarDecoration: i,
+        size: r.AvatarSizes.SIZE_48,
         "aria-hidden": !0
       })
     })
   };
-var P = e => {
+var y = e => {
   var t;
   let {
     user: l,
-    displayProfile: s,
-    onClose: p,
+    displayProfile: n,
+    onClose: S,
     onDismiss: T,
-    isInSidebar: A = !1,
-    canShowAvatarDecorationUpsell: O = !1,
-    canShowProfileEffectUpsell: P = !1,
-    upsellSource: b
+    isInSidebar: L = !1,
+    canShowAvatarDecorationUpsell: g = !1,
+    canShowProfileEffectUpsell: y = !1,
+    upsellSource: N
   } = e, {
-    analyticsLocations: D
-  } = (0, m.default)(f.default.COLLECTIBLES_USER_POPOUT_UPSELL), j = (0, o.default)([c.default], () => c.default.useReducedMotion), {
-    ref: U,
+    analyticsLocations: M
+  } = (0, _.default)(f.default.COLLECTIBLES_USER_POPOUT_UPSELL), x = (0, o.default)([c.default], () => c.default.useReducedMotion), {
+    ref: k,
     height: F
-  } = (0, d.default)(), w = a.useMemo(() => ({
-    top: "-".concat((null != F ? F : x) + 6, "px")
-  }), [F]), G = (0, o.default)([I.default], () => I.default.getCurrentUser()), k = g.default.canUseCollectibles(G), {
-    setUpsellSource: B,
-    reset: Y
+  } = (0, d.default)(), B = i.useMemo(() => ({
+    top: "-".concat((null != F ? F : b) + 6, "px")
+  }), [F]), j = (0, o.default)([I.default], () => I.default.getCurrentUser()), w = P.default.canUseCollectibles(j), {
+    setUpsellSource: H,
+    reset: G
   } = (0, v.useUserPopoutCollectiblesUpsellStore)();
-  a.useEffect(() => (B(b), () => {
-    Y()
-  }), [B, b, Y]);
-  let V = (0, o.default)([h.default], () => h.default.getProfileEffectById(null == s ? void 0 : s.profileEffectId)),
-    [H, W] = (0, o.useStateFromStoresArray)([S.default], () => {
+  i.useEffect(() => (H(N), () => {
+    G()
+  }), [H, N, G]);
+  let Y = (0, o.default)([m.default], () => m.default.getProfileEffectById(null == n ? void 0 : n.profileEffectId)),
+    [z, V] = (0, o.useStateFromStoresArray)([C.default], () => {
       var e;
-      return [(0, _.isPremiumCollectiblesProduct)(S.default.getProduct(null === (e = l.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, _.isPremiumCollectiblesProduct)(S.default.getProduct(null == V ? void 0 : V.skuId))]
+      return [(0, p.isPremiumCollectiblesProduct)(C.default.getProduct(null === (e = l.avatarDecoration) || void 0 === e ? void 0 : e.skuId)), (0, p.isPremiumCollectiblesProduct)(C.default.getProduct(null == Y ? void 0 : Y.skuId))]
     }),
-    z = a.useCallback(() => {
-      var e, t, n, a;
-      null == T || T(C.ContentDismissActionType.PRIMARY), null == p || p(), (0, E.openCollectiblesShop)({
-        analyticsLocations: D,
+    W = i.useCallback(() => {
+      var e, t, s, i;
+      null == T || T(O.ContentDismissActionType.PRIMARY), null == S || S(), (0, E.openCollectiblesShop)({
+        analyticsLocations: M,
         analyticsSource: f.default.COLLECTIBLES_USER_POPOUT_UPSELL,
-        initialProductSkuId: H ? null !== (n = null == V ? void 0 : V.skuId) && void 0 !== n ? n : null === (e = l.avatarDecoration) || void 0 === e ? void 0 : e.skuId : null !== (a = null === (t = l.avatarDecoration) || void 0 === t ? void 0 : t.skuId) && void 0 !== a ? a : null == V ? void 0 : V.skuId
+        initialProductSkuId: z ? null !== (s = null == Y ? void 0 : Y.skuId) && void 0 !== s ? s : null === (e = l.avatarDecoration) || void 0 === e ? void 0 : e.skuId : null !== (i = null === (t = l.avatarDecoration) || void 0 === t ? void 0 : t.skuId) && void 0 !== i ? i : null == Y ? void 0 : Y.skuId
       })
-    }, [T, p, D, null == V ? void 0 : V.skuId, null === (t = l.avatarDecoration) || void 0 === t ? void 0 : t.skuId, H]),
-    K = a.useCallback(() => {
-      null == T || T(C.ContentDismissActionType.DISMISS)
+    }, [T, S, M, null == Y ? void 0 : Y.skuId, null === (t = l.avatarDecoration) || void 0 === t ? void 0 : t.skuId, z]),
+    K = i.useCallback(() => {
+      null == T || T(O.ContentDismissActionType.DISMISS)
     }, [T]);
-  if (!O && !P) return null;
-  let Z = (0, r.match)([O, P]).with([!0, !0], () => H && W && k ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+  if (!g && !y) return null;
+  let J = (0, a.match)([g, y]).with([!0, !0], () => z && V && w ? h.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
     openShop: R
-  }) : H && W ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
+  }) : z && V ? h.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
     openShop: R
-  }) : N.default.Messages.COMBINED_COLLECTIBLES_SOCIAL_UPSELL.format({
+  }) : h.default.Messages.COMBINED_COLLECTIBLES_SOCIAL_UPSELL.format({
     openShop: R
-  })).with([!0, !1], () => H && k ? N.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
+  })).with([!0, !1], () => z && w ? h.default.Messages.STARTER_AVATAR_DECORATIONS_SOCIAL_UPSELL_NITRO.format({
     openShop: R
-  }) : N.default.Messages.AVATAR_DECORATIONS_SOCIAL_UPSELL.format({
+  }) : h.default.Messages.AVATAR_DECORATIONS_SOCIAL_UPSELL.format({
     openShop: R
-  })).with([!1, !0], () => W && k ? N.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
+  })).with([!1, !0], () => V && w ? h.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NITRO.format({
     openShop: R
-  }) : (W && N.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NON_NITRO.format({
+  }) : (V && h.default.Messages.STARTER_PROFILE_EFFECTS_SOCIAL_UPSELL_NON_NITRO.format({
     openShop: R
-  }), N.default.Messages.PROFILE_EFFECTS_SOCIAL_UPSELL.format({
+  }), h.default.Messages.PROFILE_EFFECTS_SOCIAL_UPSELL.format({
     openShop: R
   }))).otherwise(() => null);
-  return (0, n.jsx)("div", {
-    style: w,
-    className: i(y.containerWrapper, {
-      [y.animation]: !j,
-      [y.inSidebar]: A
+  return (0, s.jsx)("div", {
+    style: B,
+    className: u(A.containerWrapper, {
+      [A.animation]: !x,
+      [A.inSidebar]: L
     }),
-    ref: U,
-    children: (0, n.jsxs)("div", {
-      className: y.container,
-      children: [O && (0, n.jsx)(L, {
+    ref: k,
+    children: (0, s.jsxs)("div", {
+      className: A.container,
+      children: [g && (0, s.jsx)(D, {
         user: l,
-        onClick: z
-      }), (0, n.jsx)(u.Clickable, {
-        className: O ? y.contentWithAvatar : y.content,
-        onClick: z,
-        "aria-label": N.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
-        children: (0, n.jsx)(u.Text, {
+        onClick: W
+      }), (0, s.jsx)(r.Clickable, {
+        className: g ? A.contentWithAvatar : A.content,
+        onClick: W,
+        "aria-label": h.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
+        children: (0, s.jsx)(r.Text, {
           variant: "text-sm/normal",
           color: "text-normal",
           tag: "span",
-          children: Z
+          children: J
         })
-      }), (0, n.jsx)("div", {
-        className: y.buttons,
-        children: (0, n.jsx)(M, {
+      }), (0, s.jsx)("div", {
+        className: A.buttons,
+        children: (0, s.jsx)(U, {
           onClick: K
         })
       })]

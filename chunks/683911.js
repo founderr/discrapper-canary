@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return d
   }
 });
 var l = n("37983");
@@ -12,7 +12,7 @@ var a = n("414456"),
   r = n("258078"),
   u = n("549043");
 
-function o(e) {
+function d(e) {
   let {
     steps: t,
     stepIndex: n,
@@ -21,16 +21,16 @@ function o(e) {
   return (0, l.jsx)("div", {
     className: u.container,
     children: t.map((e, t) => {
-      let o = n === t;
+      let d = n === t;
       return (0, l.jsxs)(i.Clickable, {
         onClick: () => a(t),
         className: u.stepContainer,
         children: [(0, l.jsx)("div", {
           className: s(u.progressBar, {
-            [u.selectedProgressBar]: o
+            [u.selectedProgressBar]: d
           })
         }), (0, l.jsx)(r.default, {
-          color: o ? r.default.Colors.BRAND : r.default.Colors.MUTED,
+          color: d ? r.default.Colors.BRAND : r.default.Colors.MUTED,
           size: r.default.Sizes.SIZE_12,
           children: e
         })]

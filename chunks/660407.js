@@ -27,8 +27,8 @@ var a = n("37983"),
   C = n("609023"),
   A = n("49111"),
   M = n("782340"),
-  v = n("951244");
-let x = l.memo(function(e) {
+  x = n("951244");
+let v = l.memo(function(e) {
   let {
     channel: t,
     deleteChannel: n
@@ -70,7 +70,7 @@ let x = l.memo(function(e) {
     })
   })
 });
-var R = x;
+var R = v;
 let L = l.memo(function(e) {
   let {
     channel: t,
@@ -92,7 +92,7 @@ let L = l.memo(function(e) {
     (0, E.transitionTo)(A.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : l)), n(e)
   };
   return (0, a.jsx)("div", {
-    className: v.channel,
+    className: x.channel,
     children: (0, a.jsx)(u.HeadingLevel, {
       component: (0, a.jsxs)(T.default, {
         channel: r,
@@ -129,7 +129,7 @@ function O(e) {
     getNumUnreadChannels: s
   } = e, i = (0, h.default)(), r = i && null != t.guildId;
   return (0, a.jsx)(p.default, {
-    className: v.markReadButton,
+    className: x.markReadButton,
     tooltip: r ? M.default.Messages.MARK_GUILD_AS_READ : M.default.Messages.MARK_AS_READ,
     color: p.CircleIconButtonColors.TERTIARY,
     icon: r ? (0, a.jsx)(N.default, {
@@ -169,8 +169,8 @@ function b(e) {
     text: M.default.Messages.COLLAPSE,
     children: e => (0, a.jsx)(u.Clickable, {
       ...e,
-      className: i(v.collapseButton, {
-        [v.collapsed]: t.collapsed
+      className: i(x.collapseButton, {
+        [x.collapsed]: t.collapsed
       }),
       onClick: s,
       children: (0, a.jsx)(S.default, {

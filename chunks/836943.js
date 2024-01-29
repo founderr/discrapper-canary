@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("130969"),
   d = n("77078"),
   c = n("913144"),
-  f = n("62587"),
-  E = n("85589"),
+  E = n("62587"),
+  f = n("85589"),
   _ = n("166257"),
   T = n("432173"),
   I = n("219013"),
@@ -42,10 +42,10 @@ class v extends l.Component {
       isReactionPickerActive: r
     } = this.state, o = t.state === h.MessageStates.SENDING, u = e === C.ReactionTypes.BURST;
     if (o || (0, S.hasFlag)(t.flags, h.MessageFlags.EPHEMERAL)) return null;
-    let E = m.default.getCurrentUser(),
-      _ = (0, A.isPremium)(E),
+    let f = m.default.getCurrentUser(),
+      _ = (0, A.isPremium)(f),
       T = u ? O.default.Messages.ADD_BURST_REACTION : O.default.Messages.ADD_REACTION;
-    !_ && u && (T = (0, s.jsx)(f.NitroTooltipLabel, {
+    !_ && u && (T = (0, s.jsx)(E.NitroTooltipLabel, {
       tooltipText: O.default.Messages.ADD_BURST_REACTION
     }));
     let I = a ? L : R;
@@ -121,7 +121,7 @@ class v extends l.Component {
       } = this.props;
       e.stopPropagation();
       let s = m.default.getCurrentUser();
-      t === C.ReactionTypes.BURST && !(0, A.isPremium)(s) && (0, E.openBurstReactionsUpsellModal)({
+      t === C.ReactionTypes.BURST && !(0, A.isPremium)(s) && (0, f.openBurstReactionsUpsellModal)({
         analytics: {
           type: M.PremiumUpsellTypes.BURST_REACTION_UPSELL,
           page: null != n.getGuildId() ? h.AnalyticsPages.GUILD_CHANNEL : h.AnalyticsPages.DM_CHANNEL,

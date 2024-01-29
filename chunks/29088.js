@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return d
   }
-}), n("222007");
-var l = n("808742"),
-  a = n("204947"),
-  s = n("152311"),
-  i = n("502651"),
-  r = n("49111"),
-  u = n("782340");
+}), l("222007");
+var a = l("808742"),
+  n = l("204947"),
+  s = l("152311"),
+  i = l("502651"),
+  r = l("49111"),
+  u = l("782340");
 
 function o(e) {
   return {
@@ -21,27 +21,27 @@ function o(e) {
 }
 
 function c(e, t) {
-  let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+  let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     c = arguments.length > 3 ? arguments[3] : void 0;
   if (null != e && e.type === r.ActivityTypes.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
-  if (null != t) return null == e || e.type !== r.ActivityTypes.PLAYING ? u.default.Messages.SHARING_SCREEN : o(n)[r.ActivityTypes.STREAMING].format({
+  if (null != t) return null == e || e.type !== r.ActivityTypes.PLAYING ? u.default.Messages.SHARING_SCREEN : o(l)[r.ActivityTypes.STREAMING].format({
     name: e.name
   });
-  if (c && null != e && e.type === r.ActivityTypes.HANG_STATUS) return (0, l.getHangStatusText)(e);
+  if (c && null != e && e.type === r.ActivityTypes.HANG_STATUS) return (0, a.getHangStatusText)(e);
   if (null == e || null == e.name) return null;
   if ((0, i.default)(e)) {
     let t = null != e.details && "" !== e.details ? e.details : e.name;
-    return o(n)[r.ActivityTypes.STREAMING].format({
+    return o(l)[r.ActivityTypes.STREAMING].format({
       name: t
     })
   }
-  return (0, s.default)(e) ? (0, a.default)(e.name) : function(e, t, n) {
-    let l = o(n);
+  return (0, s.default)(e) ? (0, n.default)(e.name) : function(e, t, l) {
+    let a = o(l);
     switch (e) {
       case r.ActivityTypes.LISTENING:
       case r.ActivityTypes.WATCHING:
       case r.ActivityTypes.COMPETING:
-        return l[e].format({
+        return a[e].format({
           name: t
         });
       case r.ActivityTypes.CUSTOM_STATUS:
@@ -49,27 +49,27 @@ function c(e, t) {
         return null;
       case r.ActivityTypes.PLAYING:
       default:
-        return n ? u.default.Messages.UNFORMATTED_PLAYING_GAME.format({
+        return l ? u.default.Messages.UNFORMATTED_PLAYING_GAME.format({
           game: t
         }) : u.default.Messages.PLAYING_GAME.format({
           game: t
         })
     }
-  }(e.type, e.name, n)
+  }(e.type, e.name, l)
 }
 
 function d(e, t) {
-  let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    l = arguments.length > 3 ? arguments[3] : void 0;
+  let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    a = arguments.length > 3 ? arguments[3] : void 0;
   if (Array.isArray(e)) {
-    let a = e;
-    null != t && (a = [...a, null]);
+    let n = e;
+    null != t && (n = [...n, null]);
     let s = null;
-    for (let e of a) {
-      let a = c(e, t, n, l);
-      if (null != a) return {
+    for (let e of n) {
+      let n = c(e, t, l, a);
+      if (null != n) return {
         activity: e,
-        activityText: a
+        activityText: n
       };
       (null == e ? void 0 : e.type) === r.ActivityTypes.CUSTOM_STATUS && null != e.emoji && (s = e)
     }
@@ -78,5 +78,5 @@ function d(e, t) {
       activityText: null
     } : null
   }
-  return c(e, t, n, l)
+  return c(e, t, l, a)
 }

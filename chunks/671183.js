@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var r = n("884691"),
   u = n("627445"),
   s = n.n(u),
-  l = n("642906"),
-  i = n("134666"),
+  i = n("642906"),
+  l = n("134666"),
   o = n("273093");
 
 function a(e) {
@@ -19,9 +19,9 @@ function a(e) {
     guildId: u
   } = (0, o.useGuildProductPurchaseContext)(), {
     selectedSkuPricePreview: a
-  } = (0, l.usePaymentContext)();
+  } = (0, i.usePaymentContext)();
   return r.useEffect(() => {
-    s(null != a, "selectedSkuPricePreview cannot be null"), (0, i.openGuildProductPurchaseConfirmationModal)({
+    s(null != a, "selectedSkuPricePreview cannot be null"), (0, l.openGuildProductPurchaseConfirmationModal)({
       guildId: u,
       guildProductListingId: n.id,
       skuPricePreview: a

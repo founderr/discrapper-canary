@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return v
   },
   UnreadsCrashed: function() {
     return L
@@ -30,15 +30,15 @@ var a = n("37983"),
   C = n("970268"),
   A = n("49111"),
   M = n("782340"),
-  v = n("930391");
+  x = n("930391");
 
-function x(e) {
+function v(e) {
   let {
     setTab: t,
     onJump: n,
     showTutorial: s,
     setSeenTutorial: r,
-    closePopout: x,
+    closePopout: v,
     badgeState: L
   } = e, O = l.useRef(null), [b, y] = (0, C.default)(O), {
     loadState: j,
@@ -85,20 +85,20 @@ function x(e) {
     S.default.track(A.AnalyticEvents.OPEN_POPOUT, {
       type: "Inbox"
     })
-  }, []), l.useEffect(() => (h.default.subscribe("CONNECTION_OPEN", x), () => {
-    h.default.unsubscribe("CONNECTION_OPEN", x)
-  }), [x]);
+  }, []), l.useEffect(() => (h.default.subscribe("CONNECTION_OPEN", v), () => {
+    h.default.unsubscribe("CONNECTION_OPEN", v)
+  }), [v]);
   let k = (0, d.useStateFromStores)([E.default], () => E.default.messageGroupSpacing),
     P = (0, m.default)("unreads", O);
   if (0 === F.length) {
     var w;
     return (0, a.jsxs)("div", {
-      className: v.container,
+      className: x.container,
       children: [(0, a.jsx)(T.default, {
         tab: c.InboxTab.UNREADS,
         setTab: t,
         badgeState: L,
-        closePopout: x
+        closePopout: v
       }), (0, a.jsx)(_.default, {
         Icon: p.default,
         header: M.default.Messages.UNREADS_EMPTY_STATE_HEADER,
@@ -107,13 +107,13 @@ function x(e) {
     })
   }
   return (0, a.jsxs)("div", {
-    className: i(v.container, "group-spacing-".concat(k)),
+    className: i(x.container, "group-spacing-".concat(k)),
     "aria-label": M.default.Messages.UNREADS_TAB_LABEL,
     children: [(0, a.jsx)(T.default, {
       tab: c.InboxTab.UNREADS,
       setTab: t,
       badgeState: L,
-      closePopout: x,
+      closePopout: v,
       children: (0, a.jsx)(N.default, {
         type: "top-header",
         onClick: U
@@ -133,11 +133,11 @@ function x(e) {
             },
             ...l,
             onScroll: j === C.LoadState.Done ? void 0 : D,
-            className: v.scroller,
+            className: x.scroller,
             children: [s ? (0, a.jsx)(R, {
               setSeenTutorial: r
             }) : null, (0, I.default)(F, y, n), j === C.LoadState.Done ? null : (0, a.jsx)(f.Spinner, {
-              className: v.spinner
+              className: x.spinner
             })]
           })
         }
@@ -151,16 +151,16 @@ function R(e) {
     setSeenTutorial: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: v.tutorial,
+    className: x.tutorial,
     children: [(0, a.jsx)("div", {
-      className: v.tutorialIcon,
+      className: x.tutorialIcon,
       children: (0, a.jsx)(p.default, {
         width: 24,
         height: 24
       })
     }), (0, a.jsxs)("div", {
       children: [(0, a.jsx)(f.Heading, {
-        className: v.tutorialHeader,
+        className: x.tutorialHeader,
         variant: "heading-md/semibold",
         children: M.default.Messages.UNREADS_TUTORIAL_HEADER
       }), (0, a.jsx)(f.Text, {
@@ -168,7 +168,7 @@ function R(e) {
         variant: "text-sm/normal",
         children: M.default.Messages.UNREADS_TUTORIAL_BODY
       }), (0, a.jsx)(f.Button, {
-        className: v.tutorialButton,
+        className: x.tutorialButton,
         onClick: t,
         size: f.Button.Sizes.SMALL,
         children: M.default.Messages.TUTORIAL_CLOSE
@@ -184,7 +184,7 @@ function L(e) {
     closePopout: l
   } = e;
   return (0, a.jsxs)("div", {
-    className: v.container,
+    className: x.container,
     children: [(0, a.jsx)(T.default, {
       tab: c.InboxTab.UNREADS,
       setTab: t,

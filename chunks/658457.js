@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var s = n("37983");
@@ -15,12 +15,12 @@ var l = n("446674"),
   d = n("159467"),
   c = n("827825");
 
-function f(e) {
+function E(e) {
   let {
     application: t,
     fullWidth: n = !1,
-    size: f = a.Button.Sizes.LARGE,
-    color: E,
+    size: E = a.Button.Sizes.LARGE,
+    color: f,
     customDisabledColor: _,
     hideNotLaunchable: T,
     tooltipPosition: I,
@@ -33,8 +33,8 @@ function f(e) {
     innerClassName: h
   } = e, g = {
     fullWidth: n,
-    size: f,
-    color: E,
+    size: E,
+    color: f,
     customDisabledColor: _,
     tooltipPosition: I,
     onClick: m,

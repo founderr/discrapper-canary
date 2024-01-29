@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   HotspotStore: function() {
-    return l.default
+    return i.default
   }
 });
-var i = n("533613");
-n.es(i, t);
+var s = n("533613");
+n.es(s, t);
 var r = n("597517");
 n.es(r, t);
-var l = n("269596")
+var i = n("269596")

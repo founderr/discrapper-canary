@@ -1,33 +1,33 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   default: function() {
-    return h
+    return T
   }
 });
-var a = A("37983");
-A("884691");
-var l = A("627445"),
-  n = A.n(l),
-  r = A("509043"),
-  s = A("77078"),
-  o = A("973262"),
-  i = A("191814"),
-  u = A("476765"),
-  d = A("422403"),
-  c = A("49111"),
-  f = A("782340"),
-  C = A("513706");
-let g = (0, u.uid)();
+var a = t("37983");
+t("884691");
+var l = t("627445"),
+  n = t.n(l),
+  r = t("509043"),
+  s = t("77078"),
+  o = t("973262"),
+  i = t("191814"),
+  d = t("476765"),
+  u = t("422403"),
+  c = t("49111"),
+  f = t("782340"),
+  C = t("513706");
+let g = (0, d.uid)();
 
-function h(e) {
+function T(e) {
   let {
-    newRoleParams: t,
-    setNewRoleParams: A
+    newRoleParams: A,
+    setNewRoleParams: t
   } = e, {
     name: l,
-    color: u
-  } = t, h = e => A(t => (n(null != t, "newRoleParams should be defined"), {
-    ...t,
+    color: d
+  } = A, T = e => t(A => (n(null != A, "newRoleParams should be defined"), {
+    ...A,
     color: e
   }));
   return (0, a.jsxs)("div", {
@@ -35,8 +35,8 @@ function h(e) {
     children: [(0, a.jsx)(s.TextInput, {
       autoFocus: !0,
       value: l,
-      onChange: e => A(t => (n(null != t, "newRoleParams should be defined"), {
-        ...t,
+      onChange: e => t(A => (n(null != A, "newRoleParams should be defined"), {
+        ...A,
         name: e
       })),
       id: g,
@@ -47,12 +47,12 @@ function h(e) {
       className: C.roleColorContainer,
       children: [(0, a.jsx)(s.HiddenVisually, {
         children: f.default.Messages.GUILD_PRODUCT_SETTINGS_SELECT_ROLE_COLOR_ARIA.format({
-          color: (0, r.int2hex)(u)
+          color: (0, r.int2hex)(d)
         })
       }), (0, a.jsx)("div", {
         className: C.roleColorPreview,
         style: {
-          backgroundColor: (0, r.int2hex)(u)
+          backgroundColor: (0, r.int2hex)(d)
         }
       }), (0, a.jsx)(i.default, {
         size: 8,
@@ -60,15 +60,15 @@ function h(e) {
       }), (0, a.jsx)(s.Popout, {
         renderPopout: e => (0, a.jsx)(o.CustomColorPicker, {
           ...e,
-          value: u,
-          onChange: h
+          value: d,
+          onChange: T
         }),
         children: e => (0, a.jsx)(s.Clickable, {
           ...e,
           tag: "span",
           "aria-label": f.default.Messages.GUILD_PRODUCT_SETTINGS_CREATE_ROLE_SELECT_COLOR_ARIA,
           className: C.dropperIconContainer,
-          children: (0, a.jsx)(d.default, {
+          children: (0, a.jsx)(u.default, {
             width: 16,
             height: 16,
             className: C.dropperIcon

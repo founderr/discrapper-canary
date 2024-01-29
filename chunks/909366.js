@@ -14,8 +14,8 @@ var l = n("414456"),
   u = n("77078"),
   d = n("206230"),
   c = n("426490"),
-  f = n("782340"),
-  E = n("139583");
+  E = n("782340"),
+  f = n("139583");
 
 function _(e) {
   let {
@@ -23,14 +23,14 @@ function _(e) {
     label: n
   } = e;
   return (0, s.jsxs)("div", {
-    className: E.votesData,
+    className: f.votesData,
     children: [(0, s.jsxs)(u.Text, {
-      className: E.voteDataLine,
+      className: f.voteDataLine,
       variant: "text-md/semibold",
       color: "none",
       children: [t, "%"]
     }), (0, s.jsx)(u.Text, {
-      className: E.voteDataLine,
+      className: f.voteDataLine,
       variant: "text-xs/semibold",
       color: "none",
       children: n
@@ -52,7 +52,7 @@ function T(e) {
     config: 100 !== t && 0 !== t ? r.config.wobbly : r.config.default
   });
   return (0, s.jsx)(r.animated.span, {
-    className: E.votePercentageBar,
+    className: f.votePercentageBar,
     style: l,
     "aria-hidden": !0
   })
@@ -67,30 +67,30 @@ function I(e) {
   } = e, o = l || n, d = !0 === t.isSelected, I = !0 === t.didSelfVote, m = !0 === t.isVictor;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)("div", {
-      className: a(E.answerInner, {
-        [E.currentlyVoting]: !l && !n
+      className: a(f.answerInner, {
+        [f.currentlyVoting]: !l && !n
       }),
       children: [o ? (0, s.jsx)(T, {
         percentage: t.votesPercentage
       }) : null, (0, s.jsxs)("div", {
-        className: E.answerContent,
+        className: f.answerContent,
         children: [(0, s.jsx)(c.PollMediaView, {
-          attachmentClassName: E.attachment,
-          containerClassName: E.mediaContainer,
+          attachmentClassName: f.attachment,
+          containerClassName: f.mediaContainer,
           media: t.pollMedia,
           fallback: null
         }), (0, s.jsx)(u.Text, {
-          className: E.label,
+          className: f.label,
           variant: "text-sm/semibold",
           color: "none",
           children: t.pollMedia.text
         }), (d || t.didSelfVote) && (0, s.jsx)(u.Avatar, {
-          className: E.avatarForSelected,
+          className: f.avatarForSelected,
           size: u.AvatarSizes.SIZE_20,
           src: r,
           "aria-hidden": !0
         }), t.didSelfVote && (0, s.jsx)(i.VisuallyHidden, {
-          children: f.default.Messages.POLL_ANSWER_VOTED_ARIA
+          children: E.default.Messages.POLL_ANSWER_VOTED_ARIA
         }), o && (0, s.jsx)(_, {
           percentage: t.votesPercentage,
           label: t.votes
@@ -98,10 +98,10 @@ function I(e) {
       })]
     }), !n && I && (0, s.jsx)(c.PollAnswerVotedIcon, {
       size: 18,
-      className: E.pollAnswerIcon
+      className: f.pollAnswerIcon
     }), m && (0, s.jsx)(c.PollAnswerVictorIcon, {
       size: 18,
-      className: E.pollAnswerIcon
+      className: f.pollAnswerIcon
     })]
   })
 }
@@ -114,8 +114,8 @@ function m(e) {
     ...a
   } = e;
   return (0, s.jsx)(c.PollAnswers, {
-    className: E.answersContainer,
-    answerClassName: E.answer,
+    className: f.answersContainer,
+    answerClassName: f.answer,
     myAvatarUrl: l,
     renderAnswerContent: e => (0, s.jsx)(I, {
       answer: e,

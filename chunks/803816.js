@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("968194"),
   d = n("658457"),
   c = n("286509"),
-  f = n("676223"),
-  E = n("407908"),
+  E = n("676223"),
+  f = n("407908"),
   _ = n("649486"),
   T = n("860285"),
   I = n("769791"),
@@ -50,7 +50,7 @@ class B extends l.PureComponent {
       isPreview: s,
       message: l
     } = this.props;
-    if (null != n && (s || null != l && (0, f.default)(e, l, n.id))) {
+    if (null != n && (s || null != l && (0, E.default)(e, l, n.id))) {
       let t = (0, c.default)(e, n.id);
       if (null != t) return t
     }
@@ -101,7 +101,7 @@ class B extends l.PureComponent {
           applicationId: e.application_id,
           channelId: l,
           messageId: s.id
-        }), (0, E.default)({
+        }), (0, f.default)({
           type: j.AnalyticsGameOpenTypes.JOIN,
           source: j.AnalyticsLocations.MESSAGE_EMBED,
           userId: n,
@@ -185,8 +185,8 @@ class B extends l.PureComponent {
         isSender: u,
         activityActionType: d,
         className: c,
-        channelId: f,
-        message: E,
+        channelId: E,
+        message: f,
         hideParty: _,
         isSyncable: T,
         isLaunchable: I,
@@ -213,9 +213,9 @@ class B extends l.PureComponent {
         isInBrowser: !x.isPlatformEmbedded,
         isSyncable: T,
         isSender: u,
-        channelId: f,
+        channelId: E,
         guildId: null != m ? m : void 0,
-        message: E,
+        message: f,
         hideParty: _,
         onJoin: this.handleJoin,
         onInvite: this.handleInvite,
@@ -259,16 +259,16 @@ var F = a.default.connectStores([m.default, h.default, O.default, M.default, T.d
         nick: n
       }
     }),
-    f = null != t && m.default.canPlay(t),
-    E = m.default.getSyncingWith(),
-    _ = null != E && null != a && E.userId === a;
+    E = null != t && m.default.canPlay(t),
+    f = m.default.getSyncingWith(),
+    _ = null != f && null != a && f.userId === a;
   return {
     analyticsLocations: n,
     partyMembers: c,
     connectedApplication: null != r ? C.default.getApplication(r) : null,
     myPartyId: null != u && null != u.party ? u.party.id : null,
     isLaunching: d,
-    isSyncable: f && !_,
+    isSyncable: E && !_,
     isLaunchable: null != r && (0, y.isLaunchable)({
       LibraryApplicationStore: M.default,
       LaunchableGameStore: T.default,

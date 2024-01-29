@@ -1,61 +1,61 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var r = n("414456"),
-  i = n.n(r),
+var l = n("414456"),
+  r = n.n(l),
   s = n("77078"),
   a = n("181114"),
   o = n("771325"),
   u = n("570697"),
-  c = n("75015"),
-  d = n("782340"),
+  d = n("75015"),
+  c = n("782340"),
   f = n("359223");
-let h = [{
+let E = [{
   name: "gif",
   extensions: ["gif"]
 }];
 
-function E(e) {
+function h(e) {
   let {
     showRemoveAvatarButton: t,
     errors: n,
-    onAvatarChange: r,
-    sectionTitle: E,
-    changeAvatarButtonText: p,
+    onAvatarChange: l,
+    sectionTitle: h,
+    changeAvatarButtonText: _,
     guildId: C,
-    className: _,
-    disabled: m = !1,
-    isTryItOutFlow: v = !1,
-    forcedDivider: I,
-    withHighlight: g = !1
-  } = e, S = g ? a.default : s.Button;
-  return (0, l.jsx)(u.default, {
-    className: _,
-    title: E,
+    className: p,
+    disabled: S = !1,
+    isTryItOutFlow: I = !1,
+    forcedDivider: R,
+    withHighlight: m = !1
+  } = e, g = m ? a.default : s.Button;
+  return (0, i.jsx)(u.default, {
+    className: p,
+    title: h,
     errors: n,
-    disabled: m,
-    forcedDivider: I,
-    children: (0, l.jsxs)("div", {
+    disabled: S,
+    forcedDivider: R,
+    children: (0, i.jsxs)("div", {
       className: f.buttonsContainer,
-      children: [(0, l.jsx)(S, {
-        className: i({
-          [f.buttonHighlighted]: g
+      children: [(0, i.jsx)(g, {
+        className: r({
+          [f.buttonHighlighted]: m
         }),
         size: s.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(c.UploadTypes.AVATAR, C, v, v ? h : void 0),
-        children: null != p ? p : d.default.Messages.USER_SETTINGS_CHANGE_AVATAR
-      }), t && (0, l.jsx)(s.Button, {
+        onClick: () => (0, o.handleOpenSelectImageModal)(d.UploadTypes.AVATAR, C, I, I ? E : void 0),
+        children: null != _ ? _ : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
+      }), t && (0, i.jsx)(s.Button, {
         className: f.removeButton,
         color: s.Button.Colors.PRIMARY,
         look: s.Button.Looks.LINK,
         size: s.Button.Sizes.SMALL,
-        onClick: () => r(null),
-        children: null != C ? d.default.Messages.USER_SETTINGS_RESET_AVATAR : d.default.Messages.USER_SETTINGS_REMOVE_AVATAR
+        onClick: () => l(null),
+        children: null != C ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
       })]
     })
   })

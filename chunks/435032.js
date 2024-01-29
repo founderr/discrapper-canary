@@ -1,30 +1,30 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   default: function() {
-    return U
+    return p
   }
-}), A("222007");
-var a = A("37983"),
-  l = A("884691"),
-  n = A("414456"),
-  r = A.n(n),
-  s = A("748820"),
-  o = A("77078"),
-  i = A("149022"),
-  u = A("681060"),
-  d = A("233069"),
-  c = A("474643"),
-  f = A("49111"),
-  C = A("782340"),
-  g = A("68233"),
-  h = A("253469");
-let T = (0, s.v4)(),
-  m = (0, d.createChannelRecord)({
+}), t("222007");
+var a = t("37983"),
+  l = t("884691"),
+  n = t("414456"),
+  r = t.n(n),
+  s = t("748820"),
+  o = t("77078"),
+  i = t("149022"),
+  d = t("681060"),
+  u = t("233069"),
+  c = t("474643"),
+  f = t("49111"),
+  C = t("782340"),
+  g = t("68233"),
+  T = t("253469");
+let h = (0, s.v4)(),
+  m = (0, u.createChannelRecord)({
     id: "1",
     type: f.ChannelTypes.DM
   });
 
-function p() {
+function U() {
   return new Promise(e => {
     e({
       shouldClear: !1,
@@ -34,44 +34,44 @@ function p() {
 }
 
 function I(e) {
-  var t;
+  var A;
   let {
-    hasError: A,
+    hasError: t,
     maxLength: l,
     text: n
   } = e;
   return (0, a.jsxs)("div", {
-    className: r(h.maxLength, {
-      [h.errorOverflow]: A
+    className: r(T.maxLength, {
+      [T.errorOverflow]: t
     }),
     "aria-hidden": "true",
-    children: [null !== (t = null == n ? void 0 : n.length) && void 0 !== t ? t : 0, " ", null != l && "/ ".concat(l)]
+    children: [null !== (A = null == n ? void 0 : n.length) && void 0 !== A ? A : 0, " ", null != l && "/ ".concat(l)]
   })
 }
 
-function U(e) {
-  var t;
+function p(e) {
+  var A;
   let {
-    "aria-labelledby": A,
+    "aria-labelledby": t,
     className: n,
     id: s,
-    autoFocus: d,
+    autoFocus: u,
     maxLength: f,
-    onChange: h,
-    onSubmit: U,
+    onChange: T,
+    onSubmit: p,
     showCharacterCount: v = !1,
     placeholder: E,
-    required: x,
+    required: q,
     value: N,
-    enableThemedBackground: q = !1,
-    parentModalKey: O
-  } = e, R = (0, o.useFormContext)(), [L, D] = l.useState(() => (0, i.toRichValue)(N)), P = l.useRef(!0 === d), V = null != A ? A : null == R ? void 0 : R.titleId, j = null !== (t = null == R ? void 0 : R.errorId) && void 0 !== t ? t : T, b = l.useMemo(() => ({
+    enableThemedBackground: O = !1,
+    parentModalKey: x
+  } = e, R = (0, o.useFormContext)(), [L, D] = l.useState(() => (0, i.toRichValue)(N)), P = l.useRef(!0 === u), V = null != t ? t : null == R ? void 0 : R.titleId, j = null !== (A = null == R ? void 0 : R.errorId) && void 0 !== A ? A : h, M = l.useMemo(() => ({
     analyticsName: "simple",
     autocomplete: {
       alwaysUseLayer: !0,
       small: !0
     },
-    disableAutoFocus: !0 !== d,
+    disableAutoFocus: !0 !== u,
     drafts: {
       type: c.DraftType.ChannelMessage
     },
@@ -85,22 +85,22 @@ function U(e) {
       useDisabledStylesOnSubmit: !0,
       disableEnterToSubmit: !0
     }
-  }), [d]);
-  return (0, a.jsxs)(u.default, {
+  }), [u]);
+  return (0, a.jsxs)(d.default, {
     "aria-describedby": j,
     "aria-labelledby": V,
     innerClassName: r(n, g.textArea),
     id: s,
     maxCharacterCount: f,
-    onChange: function(e, t, A) {
-      h(t), D(A)
+    onChange: function(e, A, t) {
+      T(A), D(t)
     },
     placeholder: E,
-    required: x,
+    required: q,
     channel: m,
     textValue: N,
     richValue: L,
-    type: b,
+    type: M,
     onBlur: () => {
       P.current = !1
     },
@@ -108,16 +108,16 @@ function U(e) {
       P.current = !0
     },
     focused: P.current,
-    onSubmit: null != U ? U : p,
-    disableThemedBackground: !q,
-    parentModalKey: O,
+    onSubmit: null != p ? p : U,
+    disableThemedBackground: !O,
+    parentModalKey: x,
     emojiPickerCloseOnModalOuterClick: !0,
     children: [!0 === v && (0, a.jsx)(I, {
       hasError: null != R.error || null != f && N.length > f,
       text: N,
       maxLength: f
     }), null != f && (0, a.jsx)(o.HiddenVisually, {
-      id: T,
+      id: h,
       children: C.default.Messages.MAXIMUM_LENGTH.format({
         maxLength: f
       })

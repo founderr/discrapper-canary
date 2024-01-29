@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return I
+    return g
   }
 }), l("222007");
 var n = l("37983"),
@@ -16,23 +16,23 @@ var n = l("37983"),
   f = l("62843"),
   m = l("837899"),
   p = l("425190"),
-  T = l("701909"),
+  h = l("701909"),
   E = l("49111"),
-  S = l("782340"),
-  _ = l("474963"),
-  h = l("632215");
+  T = l("782340"),
+  S = l("474963"),
+  _ = l("632215");
 
-function I(e) {
+function g(e) {
   let {
     className: t,
     lineClamp: l = 6,
     isExpanded: s = !1
-  } = e, [I, A] = a.useState(s), g = a.useMemo(() => (0, d.parseBioReact)(S.default.Messages.MORE_INFO_CLYDE_LEGAL), []);
+  } = e, [g, A] = a.useState(s), I = a.useMemo(() => (0, d.parseBioReact)(T.default.Messages.MORE_INFO_CLYDE_LEGAL), []);
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(o.Collapsible, {
-      isExpanded: I,
+      isExpanded: g,
       collapsibleContent: (0, n.jsx)("div", {
-        className: i(t, h.markup),
+        className: i(t, _.markup),
         children: (0, n.jsx)(o.Text, {
           variant: "text-sm/normal",
           lineClamp: l,
@@ -41,42 +41,42 @@ function I(e) {
               disableAnimations: !0,
               disableInteractions: !1
             },
-            children: g
+            children: I
           })
         })
       }),
-      className: _.collapseable,
+      className: S.collapseable,
       children: e => {
         let {
           onClick: t
         } = e;
         return (0, n.jsx)(o.Clickable, {
           onClick: e => {
-            A(!I), t(e)
+            A(!g), t(e)
           },
           children: (0, n.jsxs)("div", {
-            className: _.header,
+            className: S.header,
             children: [(0, n.jsx)(o.Heading, {
               variant: "eyebrow",
-              className: _.userInfoSectionHeader,
-              children: S.default.Messages.MORE_INFO
-            }), I ? (0, n.jsx)(p.default, {
-              className: _.arrow
+              className: S.userInfoSectionHeader,
+              children: T.default.Messages.MORE_INFO
+            }), g ? (0, n.jsx)(p.default, {
+              className: S.arrow
             }) : (0, n.jsx)(m.default, {
-              className: _.arrow
+              className: S.arrow
             })]
           })
         })
       }
     }), (0, n.jsxs)(o.Text, {
-      className: _.helpCenterCta,
+      className: S.helpCenterCta,
       variant: "text-sm/medium",
       children: [(0, n.jsx)(r.LinkIcon, {
         color: "var(--text-link)",
-        className: _.linkIcon
+        className: S.linkIcon
       }), (0, n.jsx)(c.default, {
-        onClick: () => (0, u.default)(T.default.getArticleURL(E.HelpdeskArticles.CLYDE_AI), !0),
-        children: S.default.Messages.MORE_INFO_HELP_CENTER
+        onClick: () => (0, u.default)(h.default.getArticleURL(E.HelpdeskArticles.CLYDE_AI), !0),
+        children: T.default.Messages.MORE_INFO_HELP_CENTER
       })]
     })]
   })

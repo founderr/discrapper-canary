@@ -32,7 +32,7 @@ function I(e) {
     badgeState: C,
     popoutPosition: A,
     popoutAlign: M
-  } = e, [v, x] = l.useState(!1), [R, L] = function() {
+  } = e, [x, v] = l.useState(!1), [R, L] = function() {
     let e = (0, i.useStateFromStores)([h.default], () => {
         var e, t;
         return null !== (t = null === (e = h.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
@@ -63,10 +63,10 @@ function I(e) {
       setSeenTutorial: n
     }
   }(R), y = l.useCallback(() => {
-    x(!1), v && (null == n || n())
-  }, [n, v]), j = l.useCallback(() => {
-    x(!v), v ? null == n || n() : null == t || t()
-  }, [n, t, v]), F = l.useCallback(() => {
+    v(!1), x && (null == n || n())
+  }, [n, x]), j = l.useCallback(() => {
+    v(!x), x ? null == n || n() : null == t || t()
+  }, [n, t, x]), F = l.useCallback(() => {
     j(), L(r.InboxTab.UNREADS)
   }, [L, j]);
   l.useEffect(() => (E.ComponentDispatch.subscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, F), () => void E.ComponentDispatch.unsubscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, F)), [F]);
@@ -92,7 +92,7 @@ function I(e) {
     position: A,
     align: M,
     autoInvert: !1,
-    shouldShow: v,
+    shouldShow: x,
     onRequestClose: y,
     renderPopout: function() {
       return (0, a.jsx)(o.Dialog, {

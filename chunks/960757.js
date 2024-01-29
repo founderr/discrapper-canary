@@ -10,16 +10,16 @@ var l = n("884691"),
   i = n("42203"),
   r = n("501030"),
   u = n("730647"),
-  o = n("49111");
-let d = {
+  d = n("49111");
+let o = {
   can_broadcast: !1
 };
 
 function c(e, t, n) {
-  let [c, E] = l.useState(d), [f, _] = l.useState(!1), I = l.useRef(!1), h = null == e ? void 0 : e.id, T = null == e ? void 0 : e.hasFeature(o.GuildFeatures.HAS_DIRECTORY_ENTRY);
+  let [c, E] = l.useState(o), [f, _] = l.useState(!1), I = l.useRef(!1), h = null == e ? void 0 : e.id, T = null == e ? void 0 : e.hasFeature(d.GuildFeatures.HAS_DIRECTORY_ENTRY);
   l.useEffect(() => {
     if (!T) {
-      E(d);
+      E(o);
       return
     }
     if (I.current || null == h) return;
@@ -29,7 +29,7 @@ function c(e, t, n) {
         let e = await (0, r.getDirectoryEntryBroadcastInfo)(h, u.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT, t);
         E(e)
       } catch (e) {
-        E(d)
+        E(o)
       }
       I.current = !1
     };

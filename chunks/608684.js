@@ -13,8 +13,8 @@ var l = n("37983"),
   i = n.n(s),
   r = n("627445"),
   u = n.n(r),
-  o = n("77078"),
-  d = n("159885"),
+  d = n("77078"),
+  o = n("159885"),
   c = n("694187"),
   E = n("49111"),
   f = n("782340"),
@@ -50,8 +50,8 @@ class h extends a.PureComponent {
       imageClassName: C,
       iconClassName: p,
       iconWrapperClassName: x,
-      icon: R,
-      hideSize: A,
+      icon: A,
+      hideSize: R,
       imageStyle: O,
       showRemoveButton: L,
       maxFileSizeBytes: M,
@@ -61,7 +61,7 @@ class h extends a.PureComponent {
     } = this.props;
     if (null != (t = null != r && /^data:/.test(r) ? r : T(r)) ? n = 'url("'.concat(t, '")') : null != h && (a = (0, l.jsx)("div", {
         className: _.imageUploaderAcronym,
-        children: (0, d.getAcronym)(h)
+        children: (0, o.getAcronym)(h)
       })), N) return (0, l.jsx)("div", {
       className: i(_.imageUploader, _.disabled, g),
       children: (0, l.jsxs)("div", {
@@ -72,24 +72,24 @@ class h extends a.PureComponent {
         },
         children: [a, S && (0, l.jsx)("div", {
           className: i(_.imageUploaderIcon, _.imageUploaderIconDisabled, p),
-          children: R
+          children: A
         })]
       })
     });
-    null != r ? s = (0, l.jsx)(o.Anchor, {
+    null != r ? s = (0, l.jsx)(d.Anchor, {
       className: _.removeButton,
       onClick: this.handleRemove,
       children: f.default.Messages.REMOVE
-    }) : !A && (s = (0, l.jsx)("small", {
+    }) : !R && (s = (0, l.jsx)("small", {
       className: _.sizeInfo,
       children: f.default.Messages.MINIMUM_SIZE.format({
         size: E.AVATAR_SIZE
       })
     }));
-    let j = null !== (e = null != U ? U : u) && void 0 !== e ? e : f.default.Messages.CHANGE_AVATAR;
+    let V = null !== (e = null != U ? U : u) && void 0 !== e ? e : f.default.Messages.CHANGE_AVATAR;
     return (0, l.jsxs)("div", {
       className: i(_.imageUploader, g),
-      children: [(0, l.jsx)(o.FocusRing, {
+      children: [(0, l.jsx)(d.FocusRing, {
         within: !0,
         children: (0, l.jsxs)("div", {
           className: m ? i(_.imageUploaderIconWrapper, x) : void 0,
@@ -102,15 +102,15 @@ class h extends a.PureComponent {
             children: [(0, l.jsx)("span", {
               "aria-hidden": !0,
               children: a
-            }), null != y ? (0, l.jsx)(o.Clickable, {
+            }), null != y ? (0, l.jsx)(d.Clickable, {
               className: _.imageUploaderFileInput,
-              "aria-label": j,
+              "aria-label": V,
               onClick: y
             }) : (0, l.jsx)(c.default, {
               ref: this.inputRef,
               onChange: v,
               className: _.imageUploaderFileInput,
-              "aria-label": j,
+              "aria-label": V,
               tabIndex: 0,
               maxFileSizeBytes: M,
               onFileSizeError: D
@@ -121,7 +121,7 @@ class h extends a.PureComponent {
             children: u
           }), m && (0, l.jsx)(I, {
             className: p,
-            icon: R
+            icon: A
           })]
         })
       }), L ? s : null]

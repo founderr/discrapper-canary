@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DEVTOOLS_SIDEBAR_MIN_WIDTH: function() {
-    return u
+    return s
   },
   default: function() {
     return o
@@ -11,10 +11,10 @@ var a = n("446674"),
   i = n("95410"),
   l = n("913144"),
   d = n("9503");
-let u = 360,
-  s = {
+let s = 360,
+  r = {
     devToolsEnabled: !1,
-    sidebarWidth: u,
+    sidebarWidth: s,
     lastOpenTabId: null,
     displayTools: !1,
     showDevWidget: !1,
@@ -23,38 +23,38 @@ let u = 360,
       y: 0
     }
   };
-class r extends a.default.DeviceSettingsStore {
+class u extends a.default.DeviceSettingsStore {
   initialize(e) {
-    s = null != e ? e : s, l.default.actionLogger.persist = this.devToolsEnabled
+    r = null != e ? e : r, l.default.actionLogger.persist = this.devToolsEnabled
   }
   getUserAgnosticState() {
-    return s
+    return r
   }
   get devToolsEnabled() {
-    return s.devToolsEnabled
+    return r.devToolsEnabled
   }
   get sidebarWidth() {
-    return this.displayTools ? s.sidebarWidth : 0
+    return this.displayTools ? r.sidebarWidth : 0
   }
   get lastOpenTabId() {
     var e;
-    return null !== (e = s.lastOpenTabId) && void 0 !== e ? e : null
+    return null !== (e = r.lastOpenTabId) && void 0 !== e ? e : null
   }
   get displayTools() {
-    return this.devToolsEnabled && s.displayTools
+    return this.devToolsEnabled && r.displayTools
   }
   get showDevWidget() {
-    return this.devToolsEnabled && s.showDevWidget
+    return this.devToolsEnabled && r.showDevWidget
   }
   get devWidgetPosition() {
-    return s.devWidgetPosition
+    return r.devWidgetPosition
   }
 }
-r.displayName = "DevToolsSettingsStore", r.persistKey = "DevToolsSettingsStore";
-var o = new r(l.default, {
+u.displayName = "DevToolsSettingsStore", u.persistKey = "DevToolsSettingsStore";
+var o = new u(l.default, {
   DEV_TOOLS_SETTINGS_UPDATE: function(e) {
-    (s.devToolsEnabled || e.settings.devToolsEnabled) && (null != e.settings.devToolsEnabled && (l.default.actionLogger.persist = e.settings.devToolsEnabled, i.default.set(d.STORAGE_KEY_LOG_DISPATCHES, e.settings.devToolsEnabled)), s = {
-      ...s,
+    (r.devToolsEnabled || e.settings.devToolsEnabled) && (null != e.settings.devToolsEnabled && (l.default.actionLogger.persist = e.settings.devToolsEnabled, i.default.set(d.STORAGE_KEY_LOG_DISPATCHES, e.settings.devToolsEnabled)), r = {
+      ...r,
       ...e.settings
     })
   }

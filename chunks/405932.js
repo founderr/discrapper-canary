@@ -1,26 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return o
   }
 });
-var r = n("37983");
+var l = n("37983");
 n("884691");
 var i = n("225389"),
-  l = n("77078"),
-  o = n("135898"),
-  s = function(e) {
+  s = n("77078"),
+  r = n("135898"),
+  o = function(e) {
     let {
       message: t
     } = e;
-    return (0, r.jsxs)("div", {
-      className: o.container,
-      children: [(0, r.jsx)(i.CircleInformationIcon, {
-        className: o.icon,
+    return (0, l.jsxs)("div", {
+      className: r.container,
+      children: [(0, l.jsx)(i.CircleInformationIcon, {
+        className: r.icon,
         width: 20,
         height: 20,
-        color: l.tokens.colors.TEXT_WARNING
-      }), (0, r.jsx)(l.Text, {
+        color: s.tokens.colors.TEXT_WARNING
+      }), (0, l.jsx)(s.Text, {
         variant: "text-sm/normal",
         color: "header-muted",
         children: t

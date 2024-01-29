@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return L
   }
 }), n("222007");
 var s = n("37983"),
@@ -20,20 +20,20 @@ var s = n("37983"),
   p = n("461380"),
   h = n("593195"),
   T = n("368121"),
-  m = n("767517"),
-  N = n("5487"),
+  N = n("767517"),
+  m = n("5487"),
   g = n("932180"),
   A = n("473759"),
   S = n("49111"),
   C = n("782340"),
   v = n("953066");
 
-function R(e) {
+function L(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     [n, l] = a.useState(""),
     [i, r] = a.useState(null),
     [u, o] = a.useState(null),
-    d = (0, N.default)(e.code);
+    d = (0, m.default)(e.code);
   a.useEffect(() => {
     (async function e() {
       let e = _.default.getCurrentUser();
@@ -82,7 +82,7 @@ function R(e) {
       }), (0, s.jsxs)(c.FormItem, {
         className: v.previewSection,
         title: C.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_HEADER,
-        children: [(0, s.jsx)(L, {
+        children: [(0, s.jsx)(R, {
           channels: e.serializedSourceGuild.channels
         }), (0, s.jsxs)(c.Text, {
           variant: "text-xs/normal",
@@ -106,11 +106,11 @@ function R(e) {
   return {
     form: p,
     preview: T,
-    handleSubmit: () => m.default.acceptGuildTemplate(e.code, n, i).catch(e => o(e))
+    handleSubmit: () => N.default.acceptGuildTemplate(e.code, n, i).catch(e => o(e))
   }
 }
 
-function L(e) {
+function R(e) {
   let {
     channels: t
   } = e, n = u(t).sortBy(e => null == e.parent_id ? 1e4 * Number(e.id) : 1e4 * Number(e.parent_id) + e.id).map(e => {

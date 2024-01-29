@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return l
   },
   openModerateUserContextMenu: function() {
-    return u
+    return s
   },
   openModerateRoleContextMenu: function() {
-    return s
+    return u
   },
   openModerationRaidContextMenu: function() {
     return o
@@ -59,17 +59,17 @@ function l(e, t, l) {
   })
 }
 
-function u(e, t) {
+function s(e, t) {
   let {
     user: l,
-    channel: u,
-    moderationAlertId: s,
+    channel: s,
+    moderationAlertId: u,
     guildId: o,
     analyticsLocations: a,
     onCloseContextMenu: d
   } = t;
-  if ((null == u ? void 0 : u.isGroupDM()) || (null == u ? void 0 : u.isDM())) throw Error("Cannot moderate user in DM or group DM");
-  let c = null != o ? o : null == u ? void 0 : u.getGuildId();
+  if ((null == s ? void 0 : s.isGroupDM()) || (null == s ? void 0 : s.isDM())) throw Error("Cannot moderate user in DM or group DM");
+  let c = null != o ? o : null == s ? void 0 : s.getGuildId();
   null != c && (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
@@ -77,20 +77,20 @@ function u(e, t) {
     return t => (0, i.jsx)(e, {
       ...t,
       user: l,
-      channelId: null == u ? void 0 : u.id,
+      channelId: null == s ? void 0 : s.id,
       guildId: c,
-      moderationAlertId: s,
+      moderationAlertId: u,
       analyticsLocations: a,
       onCloseContextMenu: d
     })
   })
 }
 
-function s(e, t) {
+function u(e, t) {
   let {
     user: l,
-    guildId: u,
-    analyticsLocations: s,
+    guildId: s,
+    analyticsLocations: u,
     onCloseContextMenu: o
   } = t;
   (0, r.openContextMenuLazy)(e, async () => {
@@ -100,8 +100,8 @@ function s(e, t) {
     return t => (0, i.jsx)(e, {
       ...t,
       user: l,
-      guildId: u,
-      analyticsLocations: s,
+      guildId: s,
+      analyticsLocations: u,
       onCloseContextMenu: o
     })
   })

@@ -4,7 +4,7 @@ l.r(t), l.d(t, {
     return a
   },
   ChatInputTypes: function() {
-    return I
+    return g
   }
 });
 var n, a, s = l("394846"),
@@ -279,7 +279,7 @@ let r = {
     hideAttachmentArea: !0,
     uploadLongMessages: !0
   },
-  T = {
+  h = {
     analyticsName: "create_poll",
     attachments: !0,
     drafts: {
@@ -317,7 +317,7 @@ let r = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  S = {
+  T = {
     analyticsName: "custom_gift_type",
     drafts: {
       type: i.DraftType.ChannelMessage
@@ -333,7 +333,7 @@ let r = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  _ = {
+  S = {
     analyticsName: "rules_input",
     drafts: {
       type: i.DraftType.ChannelMessage
@@ -347,7 +347,7 @@ let r = {
     },
     showCharacterCount: !0
   },
-  h = {
+  _ = {
     analyticsName: "forum_channel_guidelines",
     drafts: {
       type: i.DraftType.ChannelMessage
@@ -366,7 +366,7 @@ let r = {
     showCharacterCount: !0,
     toolbarType: 1
   },
-  I = {
+  g = {
     NORMAL: r,
     OVERLAY: o,
     SIDEBAR: u,
@@ -375,9 +375,9 @@ let r = {
     VOICE_CHANNEL_STATUS: f,
     THREAD_CREATION: m,
     PROFILE_BIO_INPUT: E,
-    CUSTOM_GIFT: S,
-    RULES_INPUT: _,
+    CUSTOM_GIFT: T,
+    RULES_INPUT: S,
     CREATE_FORUM_POST: p,
-    CREATE_POLL: T,
-    FORUM_CHANNEL_GUIDELINES: h
+    CREATE_POLL: h,
+    FORUM_CHANNEL_GUIDELINES: _
   }

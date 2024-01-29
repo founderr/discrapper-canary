@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("748820"),
   d = n("171210"),
   c = n("65597"),
-  f = n("77078"),
-  E = n("206230"),
+  E = n("77078"),
+  f = n("206230"),
   _ = n("716241"),
   T = n("606292"),
   I = n("955735"),
@@ -48,7 +48,7 @@ function B(e) {
     channel: F
   } = e, k = (0, x.useMediaPostEmbedData)(r, B), {
     setPopout: w
-  } = (0, S.default)(B.id, U.DEFAULT_POPOUTS), H = (0, p.useContextMenuMessage)(B, F, w, !0), V = h.GifAutoPlay.useSetting(), Y = (0, P.useIsWindowFocused)(), [K, W] = l.useState(!1), [z, Z] = l.useState((null == k ? void 0 : k.coverImage) == null), J = (0, c.default)([E.default], () => E.default.useReducedMotion), Q = (0, c.default)([g.default, M.default], () => {
+  } = (0, S.default)(B.id, U.DEFAULT_POPOUTS), H = (0, p.useContextMenuMessage)(B, F, w, !0), V = h.GifAutoPlay.useSetting(), Y = (0, P.useIsWindowFocused)(), [K, W] = l.useState(!1), [z, Z] = l.useState((null == k ? void 0 : k.coverImage) == null), J = (0, c.default)([f.default], () => f.default.useReducedMotion), Q = (0, c.default)([g.default, M.default], () => {
     var e;
     return g.default.isMember(null == k ? void 0 : k.guildId, null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
   }, [k]), X = (0, c.default)([g.default], () => {
@@ -56,7 +56,7 @@ function B(e) {
     return (null == k ? void 0 : k.authorId) == null ? "inherit" : null !== (t = null === (e = g.default.getMember(k.guildId, k.authorId)) || void 0 === e ? void 0 : e.colorString) && void 0 !== t ? t : "inherit"
   }), {
     reducedMotion: q
-  } = l.useContext(f.AccessibilityPreferencesContext), [$, ee] = l.useState(!1), et = l.useCallback(() => {
+  } = l.useContext(E.AccessibilityPreferencesContext), [$, ee] = l.useState(!1), et = l.useCallback(() => {
     W(!0)
   }, [W]), en = l.useCallback(() => {
     W(!1)
@@ -82,7 +82,7 @@ function B(e) {
     })),
     ei = (0, L.getAvatarDecorationURL)({
       avatarDecoration: null === (t = k.user) || void 0 === t ? void 0 : t.avatarDecoration,
-      size: (0, T.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_40),
+      size: (0, T.getDecorationSizeForAvatarSize)(E.AvatarSizes.SIZE_40),
       canAnimate: $
     }),
     er = null === (n = k.user) || void 0 === n ? void 0 : n.getAvatarURL(k.guildId, 40, $),
@@ -116,7 +116,7 @@ function B(e) {
         imageChildClassName: b.thumbnailImage,
         onContextMenu: H,
         onError: () => Z(!0)
-      })), null != k.coverImageOverlayText && (0, s.jsx)(f.Clickable, {
+      })), null != k.coverImageOverlayText && (0, s.jsx)(E.Clickable, {
         onClick: es,
         children: (0, s.jsx)("div", {
           className: b.thumbnailOverlay,
@@ -124,7 +124,7 @@ function B(e) {
             className: b.thumbnailOverlayCta,
             children: [(0, s.jsx)(D.default, {
               color: d.default.WHITE
-            }), (0, s.jsx)(f.Text, {
+            }), (0, s.jsx)(E.Text, {
               variant: "text-sm/semibold",
               color: "always-white",
               children: k.coverImageOverlayText
@@ -136,12 +136,12 @@ function B(e) {
       className: b.descriptionContainer,
       children: [(0, s.jsxs)("div", {
         className: b.descriptionHeader,
-        children: [(0, s.jsx)(f.Text, {
+        children: [(0, s.jsx)(E.Text, {
           variant: "text-md/semibold",
           color: "text-normal",
           className: b.descriptionHeaderText,
           children: k.title
-        }), (0, s.jsx)(f.Text, {
+        }), (0, s.jsx)(E.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: i(b.descriptionHeaderText, b.descriptionSubtitle),
@@ -149,7 +149,7 @@ function B(e) {
         })]
       }), (0, s.jsxs)("div", {
         className: b.descriptionFooter,
-        children: [null != er && (0, s.jsx)(f.Popout, {
+        children: [null != er && (0, s.jsx)(E.Popout, {
           renderPopout: ea,
           position: "right",
           spacing: 12,
@@ -157,9 +157,9 @@ function B(e) {
           children: e => (0, s.jsx)("div", {
             onMouseEnter: eo,
             onMouseLeave: eo,
-            children: (0, s.jsx)(f.Avatar, {
+            children: (0, s.jsx)(E.Avatar, {
               ...e,
-              size: f.AvatarSizes.SIZE_40,
+              size: E.AvatarSizes.SIZE_40,
               src: er,
               "aria-label": j.default.Messages.MEDIA_POST_EMBED_AUTHOR_AVATAR_ALT,
               avatarDecoration: ei
@@ -171,26 +171,26 @@ function B(e) {
             className: b.descriptionFooterChannelName,
             children: [null != k.channelName && (0, s.jsx)(R.default, {
               className: b.mediaChannelIcon
-            }), (0, s.jsx)(f.Clickable, {
+            }), (0, s.jsx)(E.Clickable, {
               onClick: es,
               className: b.channelName,
-              children: (0, s.jsx)(f.Heading, {
+              children: (0, s.jsx)(E.Heading, {
                 variant: "heading-md/semibold",
                 color: "header-primary",
                 children: null !== (a = k.channelName) && void 0 !== a ? a : k.guildName
               })
             })]
-          }), null != k.authorName && (0, s.jsx)(f.Text, {
+          }), null != k.authorName && (0, s.jsx)(E.Text, {
             variant: "text-sm/medium",
             color: "text-muted",
             className: b.descriptionFooterAuthorContainer,
             children: j.default.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
               authorName: k.authorName,
-              authorNameHook: () => (0, s.jsx)(f.Popout, {
+              authorNameHook: () => (0, s.jsx)(E.Popout, {
                 renderPopout: ea,
                 position: "right",
                 preload: null == k.authorId ? void 0 : el,
-                children: e => (0, s.jsx)(f.NameWithRoleAnchor, {
+                children: e => (0, s.jsx)(E.NameWithRoleAnchor, {
                   ...e,
                   name: k.authorName,
                   color: X,
@@ -199,10 +199,10 @@ function B(e) {
               }, (0, u.v4)())
             })
           })]
-        }), k.canAccess ? (0, s.jsx)(f.Button, {
-          color: f.ButtonColors.BRAND,
+        }), k.canAccess ? (0, s.jsx)(E.Button, {
+          color: E.ButtonColors.BRAND,
           onClick: es,
-          children: (0, s.jsx)(f.Text, {
+          children: (0, s.jsx)(E.Text, {
             variant: "text-sm/medium",
             color: "always-white",
             children: k.ctaText
@@ -211,8 +211,8 @@ function B(e) {
           pauseAnimation: J,
           onClick: es,
           className: i(b.ctaButtonContent, b.subscribeButton),
-          color: f.Button.Colors.CUSTOM,
-          children: (0, s.jsx)(f.Text, {
+          color: E.Button.Colors.CUSTOM,
+          children: (0, s.jsx)(E.Text, {
             variant: "text-sm/medium",
             color: "always-white",
             children: k.ctaText

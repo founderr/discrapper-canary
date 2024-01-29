@@ -40,9 +40,9 @@ var i = n("118810"),
   j = n("913274"),
   G = n("514705"),
   D = n("321456"),
-  L = n("470254"),
-  P = n("678803"),
-  F = n("782340");
+  P = n("470254"),
+  F = n("678803"),
+  L = n("782340");
 
 function U(e) {
   var t, n;
@@ -81,7 +81,7 @@ function U(e) {
     onSelect: m,
     onClose: s.closeContextMenu,
     navId: "message",
-    ariaLabel: F.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
+    ariaLabel: L.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
     shouldHideMediaOptions: E
   })
 }
@@ -114,11 +114,11 @@ function w(e) {
     shouldHideMediaOptions: q
   }), eg = (0, o.default)(H, t, {
     shouldHideMediaOptions: q
-  }), ep = (0, P.default)(t, i), eI = (0, r.default)({
+  }), ep = (0, F.default)(t, i), eI = (0, r.default)({
     id: t.id,
-    label: F.default.Messages.COPY_ID_MESSAGE,
+    label: L.default.Messages.COPY_ID_MESSAGE,
     shiftId: "".concat(t.channel_id, "-").concat(t.id)
-  }), ev = (0, b.default)(t, n), eS = (0, L.default)(t, n), eh = (0, g.default)(t, n, {
+  }), ev = (0, b.default)(t, n), eS = (0, P.default)(t, n), eh = (0, g.default)(t, n, {
     hoist: !0
   }), eA = (0, M.default)(s, n.getGuildId()), e_ = (0, O.default)(t), eT = (0, S.default)(t), eC = (0, m.default)({
     commandType: u.ApplicationCommandType.MESSAGE,

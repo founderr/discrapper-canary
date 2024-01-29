@@ -27,8 +27,8 @@ var a = n("917351"),
 let C = "recentMentionFilterSettings",
   A = [],
   M = {},
-  v = !1,
-  x = !0,
+  x = !1,
+  v = !0,
   R = i.default.get(C, {
     guildFilter: I.RecentMentionsFilters.ALL_SERVERS,
     everyoneFilter: !0,
@@ -117,13 +117,13 @@ function G() {
   A = A.filter(e => !g.default.isBlocked(e.author.id))
 }
 
-function H(e) {
+function B(e) {
   let {
     channel: t
   } = e;
   A = l.filter(A, e => e.channel_id !== t.id || (delete M[e.id], !1))
 }
-class B extends s.default.Store {
+class H extends s.default.Store {
   initialize() {
     this.waitFor(T.default, m.default, p.default, S.default)
   }
@@ -143,10 +143,10 @@ class B extends s.default.Store {
     return M[e]
   }
   get loading() {
-    return v
+    return x
   }
   get hasMore() {
-    return x
+    return v
   }
   get guildFilter() {
     return R.guildFilter
@@ -161,13 +161,13 @@ class B extends s.default.Store {
     return y
   }
 }
-B.displayName = "RecentMentionsStore";
-var V = new B(o.default, {
+H.displayName = "RecentMentionsStore";
+var V = new H(o.default, {
   LOAD_RECENT_MENTIONS: function(e) {
     let {
       guildId: t
     } = e;
-    v = !0, null == t && R.guildFilter === I.RecentMentionsFilters.THIS_SERVER && k({
+    x = !0, null == t && R.guildFilter === I.RecentMentionsFilters.THIS_SERVER && k({
       guildFilter: I.RecentMentionsFilters.ALL_SERVERS
     })
   },
@@ -179,10 +179,10 @@ var V = new B(o.default, {
     } = e, s = l.map(n, j);
     a ? A = A.concat(s) : (A = s, M = {}), l.forEach(s, e => {
       M[e.id] = !0
-    }), v = !1, x = t, O = (0, r.now)(), L = !0
+    }), x = !1, v = t, O = (0, r.now)(), L = !0
   },
   LOAD_RECENT_MENTIONS_FAILURE: function() {
-    v = !1
+    x = !1
   },
   SET_RECENT_MENTIONS_FILTER: k,
   CLEAR_MENTIONS: function(e) {
@@ -194,7 +194,7 @@ var V = new B(o.default, {
     } = e;
     for (let e = t; e < A.length; ++e) delete M[A[e].id];
     let n = A.length;
-    n > (A = A.slice(0, t)).length && (x = !0)
+    n > (A = A.slice(0, t)).length && (v = !0)
   },
   CHANNEL_SELECT: function() {
     if (R.guildFilter !== I.RecentMentionsFilters.THIS_SERVER) return !1;
@@ -248,8 +248,8 @@ var V = new B(o.default, {
   },
   USER_SETTINGS_PROTO_UPDATE: w,
   I18N_LOAD_SUCCESS: w,
-  CHANNEL_DELETE: H,
-  THREAD_DELETE: H,
+  CHANNEL_DELETE: B,
+  THREAD_DELETE: B,
   RELATIONSHIP_ADD: G,
   RELATIONSHIP_REMOVE: G,
   MENTION_MODAL_OPEN: function() {

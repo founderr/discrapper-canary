@@ -1,58 +1,58 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return _
+    return p
   }
 }), l("222007");
-var n = l("37983"),
-  a = l("884691"),
-  s = l("446674"),
-  i = l("151426"),
-  r = l("819855"),
+var s = l("37983"),
+  i = l("884691"),
+  n = l("446674"),
+  u = l("151426"),
+  a = l("819855"),
   o = l("77078"),
-  u = l("841098"),
+  r = l("841098"),
   d = l("340066"),
   c = l("206230"),
   f = l("10641"),
-  m = l("874419"),
-  p = l("430312"),
+  _ = l("874419"),
+  S = l("430312"),
   T = l("590456"),
   E = l("393036");
-let S = () => {
-  let e = (0, f.useIsDismissibleContentDismissed)(i.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP),
-    t = (0, s.useStateFromStores)([c.default], () => c.default.syncProfileThemeWithUserTheme),
-    l = (0, u.default)(),
+let C = () => {
+  let e = (0, f.useIsDismissibleContentDismissed)(u.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP),
+    t = (0, n.useStateFromStores)([c.default], () => c.default.syncProfileThemeWithUserTheme),
+    l = (0, r.default)(),
     {
-      profileTheme: n
-    } = a.useContext(p.UserProfileContext),
-    o = (0, r.isThemeDark)(l) && (0, r.isThemeLight)(n);
+      profileTheme: s
+    } = i.useContext(S.UserProfileContext),
+    o = (0, a.isThemeDark)(l) && (0, a.isThemeLight)(s);
   return !e && !t && o
 };
-var _ = e => {
+var p = e => {
   let {
     onTooltipClose: t
   } = e, {
     profileType: l
-  } = a.useContext(p.UserProfileContext), s = l === T.UserProfileTypes.POPOUT, i = S(), [r, u] = a.useState(!s && i);
-  return (0, d.default)(() => u(i), s ? 300 : null), (0, n.jsx)(o.Popout, {
-    shouldShow: r,
+  } = i.useContext(S.UserProfileContext), n = l === T.UserProfileTypes.POPOUT, u = C(), [a, r] = i.useState(!n && u);
+  return (0, d.default)(() => r(u), n ? 300 : null), (0, s.jsx)(o.Popout, {
+    shouldShow: a,
     position: "left",
     align: "center",
     spacing: 32,
     ignoreModalClicks: !0,
     onRequestClose: () => {
-      !s && u(!1)
+      !n && r(!1)
     },
     renderPopout: e => {
       let {
         position: l
       } = e;
-      return (0, n.jsx)(m.default, {
+      return (0, s.jsx)(_.default, {
         position: null != l ? l : "left",
         onClose: t
       })
     },
-    children: () => (0, n.jsx)("span", {
+    children: () => (0, s.jsx)("span", {
       className: E.hidden
     })
   })

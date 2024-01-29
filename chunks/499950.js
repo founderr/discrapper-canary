@@ -11,8 +11,8 @@ var a = n("446674"),
   i = n("9294"),
   r = n("512027"),
   u = n("52393"),
-  o = n("652453"),
-  d = n("119184"),
+  d = n("652453"),
+  o = n("119184"),
   c = n("923959"),
   E = n("305961"),
   f = n("330154"),
@@ -33,9 +33,9 @@ let {
 function x(e) {
   var t, n, x;
   let {
-    onClose: R,
-    event: A
-  } = e, O = null == A ? void 0 : A.guild_id, L = (0, a.useStateFromStores)([c.default], () => {
+    onClose: A,
+    event: R
+  } = e, O = null == R ? void 0 : R.guild_id, L = (0, a.useStateFromStores)([c.default], () => {
     var e;
     return null != O ? null === (e = c.default.getDefaultChannel(O)) || void 0 === e ? void 0 : e.id : null
   }, [O]), M = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(O), [O]), D = (null == M ? void 0 : M.vanityURLCode) != null && (null == M ? void 0 : M.vanityURLCode.length) > 0, {
@@ -47,29 +47,29 @@ function x(e) {
     autoTrackExposure: D
   }), {
     channel_id: U,
-    id: j
-  } = null != A ? A : {}, V = (0, a.useStateFromStores)([f.default], () => {
+    id: V
+  } = null != R ? R : {}, j = (0, a.useStateFromStores)([f.default], () => {
     let e = null != U ? U : L;
     return null == e ? null : f.default.getInvite(e)
   }, [U, L]);
-  if (null == A) return R(), null;
-  let P = y && null !== (t = null == M ? void 0 : M.vanityURLCode) && void 0 !== t ? t : null == V ? void 0 : V.code,
+  if (null == R) return A(), null;
+  let P = y && null !== (t = null == M ? void 0 : M.vanityURLCode) && void 0 !== t ? t : null == j ? void 0 : j.code,
     G = null != P ? (0, i.generateInviteKeyFromExtraData)({
       baseCode: P,
-      guildScheduledEventId: j
+      guildScheduledEventId: V
     }) : null,
-    b = null == G || null == V,
-    H = (0, u.default)(null != G ? G : ""),
-    B = null !== (n = null == V ? void 0 : V.maxAge) && void 0 !== n ? n : C.value,
-    F = null !== (x = null == V ? void 0 : V.maxUses) && void 0 !== x ? x : p.value;
+    H = null == G || null == j,
+    b = (0, u.default)(null != G ? G : ""),
+    F = null !== (n = null == j ? void 0 : j.maxAge) && void 0 !== n ? n : C.value,
+    B = null !== (x = null == j ? void 0 : j.maxUses) && void 0 !== x ? x : p.value;
   return (0, l.jsxs)("div", {
     className: g.container,
     children: [(0, l.jsx)(s.Clickable, {
-      onClick: R,
+      onClick: A,
       className: g.close,
       "aria-label": S.default.Messages.CLOSE,
       children: (0, l.jsx)(I.default, {})
-    }), (0, l.jsx)(d.default, {
+    }), (0, l.jsx)(o.default, {
       children: (0, l.jsx)("div", {
         className: g.iconContainer,
         children: (0, l.jsx)(_.default, {
@@ -89,27 +89,27 @@ function x(e) {
       children: S.default.Messages.GUILD_EVENT_CREATED_MODAL_BODY
     }), (0, l.jsxs)("div", {
       className: g.invite,
-      children: [(0, l.jsx)(o.RawInviteCopyInputConnected, {
-        value: H,
+      children: [(0, l.jsx)(d.RawInviteCopyInputConnected, {
+        value: b,
         autoFocus: !1,
         onCopy: e => {
-          if (b) return;
+          if (H) return;
           (0, T.copy)(e);
-          let t = (0, v.getChannelTypeFromEntity)(A.entity_type);
+          let t = (0, v.getChannelTypeFromEntity)(R.entity_type);
           h.default.track(m.AnalyticEvents.COPY_INSTANT_INVITE, {
-            server: A.guild_id,
+            server: R.guild_id,
             channel: U,
             channel_type: t,
             location: m.InstantInviteSources.GUILD_EVENTS,
-            code: V.code,
-            guild_scheduled_event_id: null == A ? void 0 : A.id
+            code: j.code,
+            guild_scheduled_event_id: null == R ? void 0 : R.id
           })
         }
       }), (null == M ? void 0 : M.vanityURLCode) == null && (0, l.jsx)(s.Text, {
         variant: "text-xs/normal",
         color: "header-secondary",
         className: g.inviteDetail,
-        children: (0, N.maxAgeString)(B, F)
+        children: (0, N.maxAgeString)(F, B)
       })]
     })]
   })

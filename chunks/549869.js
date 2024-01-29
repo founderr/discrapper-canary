@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return em
+    return eN
   }
 }), n("222007");
 var s = n("37983"),
@@ -20,15 +20,15 @@ var s = n("37983"),
   p = n("178116"),
   h = n("759315"),
   T = n("569808"),
-  m = n("913645"),
-  N = n("777858"),
+  N = n("913645"),
+  m = n("777858"),
   g = n("9294"),
   A = n("701662"),
   S = n("271938"),
   C = n("760190"),
   v = n("55411"),
-  R = n("337543"),
-  L = n("599110"),
+  L = n("337543"),
+  R = n("599110"),
   O = n("550368"),
   x = n("831588"),
   M = n("315102"),
@@ -38,13 +38,13 @@ var s = n("37983"),
   U = n("746040"),
   G = n("504568"),
   B = n("345308"),
-  b = n("713177"),
-  y = n("773852"),
+  y = n("713177"),
+  b = n("773852"),
   F = n("679030"),
   V = n("926593"),
   k = n("683068"),
-  w = n("43772"),
-  H = n("291850"),
+  H = n("43772"),
+  w = n("291850"),
   Y = n("275744"),
   W = n("104110"),
   K = n("860959"),
@@ -55,9 +55,9 @@ var s = n("37983"),
   q = n("49111"),
   Q = n("492397");
 n("527441"), u.default.initialize();
-let $ = (0, j.default)(H.default),
+let $ = (0, j.default)(w.default),
   ee = (0, j.default)(Y.default),
-  et = (0, j.default)(w.default),
+  et = (0, j.default)(H.default),
   en = (0, j.default)(V.default),
   es = (0, j.default)(F.default),
   ea = (0, j.default)(A.default),
@@ -67,10 +67,10 @@ let $ = (0, j.default)(H.default),
   eu = (0, j.default)(J.default),
   eo = (0, j.default)(h.default),
   ed = (0, j.default)(Z.default),
-  ec = (0, j.default)(y.default),
+  ec = (0, j.default)(b.default),
   ef = (0, j.default)(p.default),
-  eE = (0, j.default)(N.default),
-  eI = (0, j.default)(b.default),
+  eE = (0, j.default)(m.default),
+  eI = (0, j.default)(y.default),
   e_ = (0, j.default)(W.default),
   ep = (0, j.default)(X.default),
   eh = (0, j.default)(z.default);
@@ -107,7 +107,7 @@ class eT extends a.PureComponent {
       hasLoadedExperiments: t,
       isAuthenticated: n
     } = this.props;
-    null != e && (!t && n && d.default.getExperiments(!0), L.default.track(q.AnalyticEvents.INVITE_OPENED, {
+    null != e && (!t && n && d.default.getExperiments(!0), R.default.track(q.AnalyticEvents.INVITE_OPENED, {
       invite_code: (0, g.parseInviteCodeFromInviteKey)(e),
       load_time: D.default.getTimeSinceNavigationStart()
     }, {
@@ -154,12 +154,12 @@ class eT extends a.PureComponent {
     let {
       guildTemplateCode: e
     } = this.props;
-    null != e && (L.default.track(q.AnalyticEvents.GUILD_TEMPLATE_OPENED, {
+    null != e && (R.default.track(q.AnalyticEvents.GUILD_TEMPLATE_OPENED, {
       guild_template_code: e,
       load_time: D.default.getTimeSinceNavigationStart()
     }, {
       flush: !0
-    }), m.default.resolveGuildTemplate(e), m.default.openNativeAppModal(e))
+    }), N.default.resolveGuildTemplate(e), N.default.openNativeAppModal(e))
   }
   resolveGiftCode() {
     let {
@@ -342,7 +342,7 @@ class eT extends a.PureComponent {
     }
   }
 }
-var em = u.default.connectStores([S.default, R.default, v.default, C.default, T.default], e => {
+var eN = u.default.connectStores([S.default, L.default, v.default, C.default, T.default], e => {
   var t, n, s;
   let {
     match: a,
@@ -354,7 +354,7 @@ var em = u.default.connectStores([S.default, R.default, v.default, C.default, T.
     giftCode: o,
     guildTemplateCode: d,
     gift: null != o ? v.default.get(o) : null,
-    invite: null != u ? R.default.getInvite(u) : null,
+    invite: null != u ? L.default.getInvite(u) : null,
     guildTemplate: null != d ? T.default.getGuildTemplate(d) : null,
     hasLoadedExperiments: C.default.hasLoadedExperiments
   }

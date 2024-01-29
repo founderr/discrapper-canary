@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("850391"),
   d = n("41170"),
   c = n("300322"),
-  f = n("26989"),
-  E = n("957255"),
+  E = n("26989"),
+  f = n("957255"),
   _ = n("697218"),
   T = n("599110"),
   I = n("718422"),
@@ -37,8 +37,8 @@ function S(e) {
     message: a,
     buttonLabels: i,
     stickers: c,
-    event: f,
-    eventProperties: E
+    event: E,
+    eventProperties: f
   } = e, [_, m] = l.useState(!1), S = l.useMemo(() => p({
     assets: c,
     currentUser: t,
@@ -83,10 +83,10 @@ function S(e) {
       })
     }({
       sticker: S,
-      event: f,
-      eventProperties: E
+      event: E,
+      eventProperties: f
     }))
-  }, [n, a, S, f, E]);
+  }, [n, a, S, E, f]);
   return (0, s.jsxs)(r.Button, {
     className: N.CTAMessageButtonOuter,
     innerClassName: N.CTAMessageButton,
@@ -117,13 +117,13 @@ function A(e) {
       message: n,
       currentUser: s
     } = e;
-    return (0, i.useStateFromStores)([E.default, f.default], () => {
+    return (0, i.useStateFromStores)([f.default, E.default], () => {
       var e;
       let l = t.guild_id;
       if (null == s || null == l) return !1;
       let a = (0, c.computeIsReadOnlyThread)(t),
-        i = E.default.can(m.Permissions.SEND_MESSAGES, t),
-        r = null === (e = f.default.getMember(l, s.id)) || void 0 === e ? void 0 : e.isPending,
+        i = f.default.can(m.Permissions.SEND_MESSAGES, t),
+        r = null === (e = E.default.getMember(l, s.id)) || void 0 === e ? void 0 : e.isPending,
         o = n.author.bot;
       return i && !a && !r && !o
     })

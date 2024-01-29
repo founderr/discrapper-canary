@@ -8,23 +8,23 @@ var r = n("37983");
 n("884691");
 var u = n("812204"),
   s = n("685665"),
-  l = n("635357"),
-  i = n("642906"),
+  i = n("635357"),
+  l = n("642906"),
   o = n("85336"),
   a = n("385179"),
   c = n("262683"),
   d = n("946359"),
   f = n("724269"),
-  h = n("99836"),
-  p = n("217796"),
-  v = n("357957"),
-  S = n("671183"),
+  p = n("99836"),
+  h = n("217796"),
+  S = n("357957"),
+  v = n("671183"),
   E = n("273093"),
   m = n("880531"),
   x = n("843455");
 let I = [{
   key: null,
-  renderStep: e => (0, r.jsx)(p.OneTimePaymentPredicateStep, {
+  renderStep: e => (0, r.jsx)(h.OneTimePaymentPredicateStep, {
     ...e
   })
 }, {
@@ -32,7 +32,7 @@ let I = [{
   renderStep: e => (0, r.jsx)(c.PaymentModalAddPaymentStep, {
     ...e,
     onReturn: () => {
-      let t = v.default.paymentSources;
+      let t = S.default.paymentSources;
       0 === Object.keys(t).length ? e.handleClose() : e.handleStepChange(o.Step.REVIEW, {
         trackedFromStep: o.Step.ADD_PAYMENT_STEPS
       })
@@ -46,12 +46,12 @@ let I = [{
   renderStep: () => (0, r.jsx)(d.default, {})
 }, {
   key: o.Step.REVIEW,
-  renderStep: e => (0, r.jsx)(h.PaymentModalReviewStep, {
+  renderStep: e => (0, r.jsx)(p.PaymentModalReviewStep, {
     ...e
   })
 }, {
   key: o.Step.CONFIRM,
-  renderStep: e => (0, r.jsx)(S.default, {
+  renderStep: e => (0, r.jsx)(v.default, {
     ...e
   })
 }];
@@ -69,13 +69,13 @@ function C(e) {
   return (0, r.jsx)(E.GuildProductPurchaseContextProvider, {
     ...t,
     children: (0, r.jsx)(d, {
-      children: (0, r.jsx)(i.PaymentContextProvider, {
+      children: (0, r.jsx)(l.PaymentContextProvider, {
         stepConfigs: I,
         applicationId: o,
         skuIDs: [c.skuId],
         activeSubscription: null,
         purchaseType: x.PurchaseTypes.ONE_TIME,
-        children: (0, r.jsx)(l.GiftContextProvider, {
+        children: (0, r.jsx)(i.GiftContextProvider, {
           children: (0, r.jsx)(a.PaymentModal, {
             initialPlanId: null,
             analyticsLocations: f,

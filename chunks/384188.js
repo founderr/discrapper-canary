@@ -1,5 +1,5 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   default: function() {
     return a
   }

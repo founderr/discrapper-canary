@@ -28,10 +28,10 @@ function o(e) {
     activeSubscriptionListing: c,
     activeEntitlement: f,
     subscriptionGroupListing: m
-  } = (0, a.useActiveSubscriptionListingForApplication)(null == u ? void 0 : u.id, o), p = null !== (t = null == m ? void 0 : m.sku_flags) && void 0 !== t ? t : 0, T = (0, s.isApplicationUserSubscription)(p) || null != o && o !== r.ME && (0, s.isApplicationGuildSubscription)(p), E = null != f;
+  } = (0, a.useActiveSubscriptionListingForApplication)(null == u ? void 0 : u.id, o), p = null !== (t = null == m ? void 0 : m.sku_flags) && void 0 !== t ? t : 0, h = (0, s.isApplicationUserSubscription)(p) || null != o && o !== r.ME && (0, s.isApplicationGuildSubscription)(p), E = null != f;
   return d ? {
     botUpgraded: E,
-    botUpgradeable: !E && d && T,
+    botUpgradeable: !E && d && h,
     activeSubscriptionListing: c,
     subscriptionGroupListing: m
   } : {

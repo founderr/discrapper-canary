@@ -1,76 +1,76 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return R
   }
 }), n("222007");
-var l = n("37983"),
-  i = n("884691"),
-  r = n("265586"),
+var r = n("37983"),
+  l = n("884691"),
+  i = n("265586"),
   s = n("446674"),
   a = n("77078"),
   o = n("812204"),
-  c = n("685665"),
-  u = n("21526"),
+  u = n("685665"),
+  c = n("21526"),
   d = n("491232"),
   f = n("984002"),
-  h = n("161009"),
-  C = n("635956"),
-  E = n("906932"),
+  C = n("161009"),
+  E = n("635956"),
+  h = n("906932"),
   p = n("217513"),
-  v = n("790618"),
-  I = n("697218"),
-  g = n("599110"),
+  I = n("790618"),
+  L = n("697218"),
+  v = n("599110"),
   _ = n("719923"),
-  m = n("717262"),
-  L = n("598854"),
-  N = n("49111"),
-  S = n("646718"),
+  S = n("717262"),
+  g = n("598854"),
+  T = n("49111"),
+  m = n("646718"),
   A = n("782340"),
-  T = n("811855");
+  O = n("811855");
 
-function x(e) {
+function N(e) {
   let {
     user: t,
     product: n,
-    purchase: r,
+    purchase: i,
     onApply: s,
-    onClose: c,
+    onClose: u,
     disableApplyButton: f,
-    canUseCollectibles: h,
-    selectedProfileEffectId: E,
+    canUseCollectibles: C,
+    selectedProfileEffectId: h,
     selectedProfileEffectItem: p,
-    analyticsLocations: v
-  } = e, I = i.useCallback(() => {
-    c(), (0, u.openCollectiblesShop)({
-      analyticsLocations: v,
+    analyticsLocations: I
+  } = e, L = l.useCallback(() => {
+    u(), (0, c.openCollectiblesShop)({
+      analyticsLocations: I,
       analyticsSource: o.default.EDIT_PROFILE_EFFECT_MODAL,
       initialProductSkuId: null != p ? p.skuId : void 0
     })
-  }, [c, v, p]);
-  return (0, l.jsx)(a.ModalFooter, {
-    className: T.modalFooter,
-    children: (0, l.jsxs)("div", {
-      className: T.buttonsRight,
-      children: [(0, l.jsx)(a.Button, {
+  }, [u, I, p]);
+  return (0, r.jsx)(a.ModalFooter, {
+    className: O.modalFooter,
+    children: (0, r.jsxs)("div", {
+      className: O.buttonsRight,
+      children: [(0, r.jsx)(a.Button, {
         look: a.Button.Looks.LINK,
         color: a.Button.Colors.PRIMARY,
-        onClick: c,
+        onClick: u,
         children: A.default.Messages.CANCEL
       }), (() => {
-        let e = null != r && (!(0, d.isPremiumCollectiblesPurchase)(r) || h);
-        if (e || null === E) return (0, l.jsx)(a.Button, {
+        let e = null != i && (!(0, d.isPremiumCollectiblesPurchase)(i) || C);
+        if (e || null === h) return (0, r.jsx)(a.Button, {
           onClick: s,
           disabled: f,
           children: A.default.Messages.AVATAR_DECORATION_MODAL_APPLY
         });
-        let i = h || !(0, d.isPremiumCollectiblesProduct)(n);
-        return i ? (0, l.jsx)(a.Button, {
-          className: T.modalFooterShopButton,
-          onClick: I,
+        let l = C || !(0, d.isPremiumCollectiblesProduct)(n);
+        return l ? (0, r.jsx)(a.Button, {
+          className: O.modalFooterShopButton,
+          onClick: L,
           children: A.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
-        }) : (0, l.jsx)(C.default, {
-          subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
+        }) : (0, r.jsx)(E.default, {
+          subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
           buttonText: _.default.isPremium(t) ? A.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : A.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
         })
       })()]
@@ -82,110 +82,110 @@ function P(e) {
   let {
     user: t,
     categories: n,
-    purchases: r,
+    purchases: i,
     onClose: o,
-    initialSelectedProfileEffectId: c,
-    currentSavedEffectId: u,
-    analyticsLocations: h
-  } = e, C = (0, s.useStateFromStores)([v.default], () => v.default.getPendingProfileEffectId()), [p, I] = i.useMemo(() => {
-    let e = (0, d.groupProfileEffects)(n, r);
+    initialSelectedProfileEffectId: u,
+    currentSavedEffectId: c,
+    analyticsLocations: C
+  } = e, E = (0, s.useStateFromStores)([I.default], () => I.default.getPendingProfileEffectId()), [p, L] = l.useMemo(() => {
+    let e = (0, d.groupProfileEffects)(n, i);
     return [e.purchased, e.shopPreviews]
-  }, [n, r]), [g, N] = i.useState(() => null != c ? c : void 0 !== C ? C : null == u ? null : null != u ? u : null), [S, P] = i.useMemo(() => {
+  }, [n, i]), [v, T] = l.useState(() => null != u ? u : void 0 !== E ? E : null == c ? null : null != c ? c : null), [m, P] = l.useMemo(() => {
     var e;
-    let t = p.find(e => (null == e ? void 0 : e.id) === g),
-      n = null != t || null === g,
-      l = null !== (e = null != t ? t : I.find(e => (null == e ? void 0 : e.id) === g)) && void 0 !== e ? e : null;
-    return [l, n]
-  }, [g, p, I]), {
-    product: O,
-    purchase: R
-  } = (0, f.default)(null == S ? void 0 : S.skuId), M = i.useRef(null), F = _.default.canUseCollectibles(t), w = g === (void 0 === C ? null != u ? u : null : C), H = i.useCallback(e => {
-    N(e)
-  }, [N]);
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)(a.ModalHeader, {
+    let t = p.find(e => (null == e ? void 0 : e.id) === v),
+      n = null != t || null === v,
+      r = null !== (e = null != t ? t : L.find(e => (null == e ? void 0 : e.id) === v)) && void 0 !== e ? e : null;
+    return [r, n]
+  }, [v, p, L]), {
+    product: R,
+    purchase: y
+  } = (0, f.default)(null == m ? void 0 : m.skuId), x = l.useRef(null), F = _.default.canUseCollectibles(t), w = v === (void 0 === E ? null != c ? c : null : E), M = l.useCallback(e => {
+    T(e)
+  }, [T]);
+  return (0, r.jsxs)(r.Fragment, {
+    children: [(0, r.jsxs)(a.ModalHeader, {
       separator: !1,
-      className: T.modalHeader,
-      children: [(0, l.jsx)(a.Heading, {
+      className: O.modalHeader,
+      children: [(0, r.jsx)(a.Heading, {
         variant: "heading-lg/semibold",
         children: A.default.Messages.PROFILE_EFFECT_MODAL_HEADER
-      }), (0, l.jsx)(a.ModalCloseButton, {
-        className: T.modalCloseButton,
+      }), (0, r.jsx)(a.ModalCloseButton, {
+        className: O.modalCloseButton,
         onClick: o
       })]
-    }), (0, l.jsxs)(a.ModalContent, {
-      className: T.modalContent,
-      children: [(0, l.jsx)(L.default, {
+    }), (0, r.jsxs)(a.ModalContent, {
+      className: O.modalContent,
+      children: [(0, r.jsx)(g.default, {
         user: t,
-        pendingProfileEffect: g,
-        selectedProfileEffectRef: M,
-        onSelect: H,
+        pendingProfileEffect: v,
+        selectedProfileEffectRef: x,
+        onSelect: M,
         onClose: o
-      }), (0, l.jsx)(m.default, {
+      }), (0, r.jsx)(S.default, {
         user: t,
         canApplySelectedChange: P,
-        pendingProfileEffectRecord: S,
-        product: O,
-        purchase: R
+        pendingProfileEffectRecord: m,
+        product: R,
+        purchase: y
       })]
-    }), (0, l.jsx)(x, {
+    }), (0, r.jsx)(N, {
       user: t,
       onApply: () => {
-        (0, E.setNewPendingProfileEffectId)(g, u), o()
+        (0, h.setNewPendingProfileEffectId)(v, c), o()
       },
       onClose: o,
-      product: O,
-      purchase: R,
+      product: R,
+      purchase: y,
       canUseCollectibles: F,
-      selectedProfileEffectId: g,
-      selectedProfileEffectItem: S,
+      selectedProfileEffectId: v,
+      selectedProfileEffectItem: m,
       disableApplyButton: w,
-      analyticsLocations: h
+      analyticsLocations: C
     })]
   })
 }
 
-function O(e) {
+function R(e) {
   var t;
   let {
     transitionState: n,
     analyticsLocations: d,
     initialSelectedEffectId: f,
-    onClose: C
+    onClose: E
   } = e, {
-    isFetching: E,
-    categories: v,
+    isFetching: h,
+    categories: I,
     purchases: _
-  } = (0, h.default)(), m = (0, s.useStateFromStores)([I.default], () => I.default.getCurrentUser()), {
-    AnalyticsLocationProvider: L,
-    analyticsLocations: S
-  } = (0, c.default)(d, o.default.EDIT_PROFILE_EFFECT_MODAL), A = (0, p.default)(null !== (t = null == m ? void 0 : m.id) && void 0 !== t ? t : ""), x = null == A ? void 0 : A.profileEffectId;
-  return i.useEffect(() => {
-    g.default.track(N.AnalyticEvents.OPEN_MODAL, {
-      type: N.AnalyticsSections.PROFILE_EFFECT_CUSTOMIZATION,
-      location_stack: S
+  } = (0, C.default)(), S = (0, s.useStateFromStores)([L.default], () => L.default.getCurrentUser()), {
+    AnalyticsLocationProvider: g,
+    analyticsLocations: m
+  } = (0, u.default)(d, o.default.EDIT_PROFILE_EFFECT_MODAL), A = (0, p.default)(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : ""), N = null == A ? void 0 : A.profileEffectId;
+  return l.useEffect(() => {
+    v.default.track(T.AnalyticEvents.OPEN_MODAL, {
+      type: T.AnalyticsSections.PROFILE_EFFECT_CUSTOMIZATION,
+      location_stack: m
     })
-  }, [S]), i.useEffect(() => () => {
-    (0, u.setCollectiblesCategoryItemsViewed)({
-      categories: [...v.values()],
-      itemTypes: [r.CollectiblesItemType.PROFILE_EFFECT]
+  }, [m]), l.useEffect(() => () => {
+    (0, c.setCollectiblesCategoryItemsViewed)({
+      categories: [...I.values()],
+      itemTypes: [i.CollectiblesItemType.PROFILE_EFFECT]
     })
-  }, [v]), null == m ? null : (0, l.jsx)(L, {
-    children: (0, l.jsx)(a.ModalRoot, {
+  }, [I]), null == S ? null : (0, r.jsx)(g, {
+    children: (0, r.jsx)(a.ModalRoot, {
       transitionState: n,
       size: a.ModalSize.DYNAMIC,
-      className: T.modal,
-      children: E ? (0, l.jsx)(a.Spinner, {
-        className: T.spinner,
+      className: O.modal,
+      children: h ? (0, r.jsx)(a.Spinner, {
+        className: O.spinner,
         type: a.Spinner.Type.SPINNING_CIRCLE
-      }) : (0, l.jsx)(P, {
-        user: m,
-        categories: v,
+      }) : (0, r.jsx)(P, {
+        user: S,
+        categories: I,
         purchases: _,
         initialSelectedProfileEffectId: f,
-        currentSavedEffectId: x,
-        onClose: C,
-        analyticsLocations: S
+        currentSavedEffectId: N,
+        onClose: E,
+        analyticsLocations: m
       })
     })
   })

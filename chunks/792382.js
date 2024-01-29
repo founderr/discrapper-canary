@@ -1,33 +1,33 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return u
+    return r
   }
 });
-var u, l = r("656280"),
-  n = r.n(l),
-  i = r("509043"),
-  s = r("666038");
+var r, l = n("656280"),
+  i = n.n(l),
+  s = n("509043"),
+  a = n("666038");
 let o = e => null == e ? e : {
-  backgroundColors: e.background_colors.map(e => n((0, i.int2hex)(e))),
-  buttonColors: e.button_colors.map(e => n((0, i.int2hex)(e))),
-  confettiColors: e.confetti_colors.map(e => n((0, i.int2hex)(e)))
+  backgroundColors: e.background_colors.map(e => i((0, s.int2hex)(e))),
+  buttonColors: e.button_colors.map(e => i((0, s.int2hex)(e))),
+  confettiColors: e.confetti_colors.map(e => i((0, s.int2hex)(e)))
 };
-u = class e extends s.default {
+r = class e extends a.default {
   static fromServer(t) {
     let {
-      store_listing_id: r,
-      sku_id: u,
+      store_listing_id: n,
+      sku_id: r,
       unpublished_at: l,
-      styles: n,
-      ...i
-    } = t, s = null != l ? new Date(l) : null;
+      styles: i,
+      ...s
+    } = t, a = null != l ? new Date(l) : null;
     return new e({
-      ...i,
-      storeListingId: r,
-      skuId: u,
-      unpublishedAt: s,
-      styles: o(n)
+      ...s,
+      storeListingId: n,
+      skuId: r,
+      unpublishedAt: a,
+      styles: o(i)
     })
   }
   constructor(e) {

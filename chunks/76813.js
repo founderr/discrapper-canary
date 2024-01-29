@@ -39,9 +39,9 @@ function p(e) {
     hasNewClips: f.default.getNewClipIds().length > 0,
     lastClipsSession: f.default.getLastClipsSession(),
     remindersEnabled: f.default.getSettings().remindersEnabled
-  })), C = null != T && T.newClipIds.length > 0, [A, M] = l.useState(null), v = (0, s.useStateFromStores)([r.default], () => r.default.hasLayers());
+  })), C = null != T && T.newClipIds.length > 0, [A, M] = l.useState(null), x = (0, s.useStateFromStores)([r.default], () => r.default.hasLayers());
 
-  function x() {
+  function v() {
     (0, i.openModalLazy)(async () => {
       let {
         default: e
@@ -54,10 +54,10 @@ function p(e) {
     })
   }
   return S && ((0, d.isWindows)() || g) && N ? (0, a.jsxs)(a.Fragment, {
-    children: [null != A && t && I && C && !(0, i.hasAnyModalOpen)() && !v && (0, a.jsx)(h.default, {
+    children: [null != A && t && I && C && !(0, i.hasAnyModalOpen)() && !x && (0, a.jsx)(h.default, {
       clipIconRef: A,
       lastClipsSession: T,
-      onOpenClipsGallery: x
+      onOpenClipsGallery: v
     }), (0, a.jsx)("div", {
       ref: M,
       children: (0, a.jsx)(u.Icon, {
@@ -65,7 +65,7 @@ function p(e) {
         icon: o.default,
         showBadge: _,
         tooltip: m.default.Messages.CLIPS_GALLERY_TOOLTIP,
-        onClick: x
+        onClick: v
       })
     })]
   }) : null

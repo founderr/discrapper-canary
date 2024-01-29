@@ -16,7 +16,7 @@ var n = l("37983"),
   f = l("49111"),
   m = l("782340"),
   p = l("98325");
-class T extends a.PureComponent {
+class h extends a.PureComponent {
   componentDidMount() {
     if (this.props.autoFocus && !this.props.hideNote) {
       let e = i.findDOMNode(this.noteRef.current);
@@ -66,12 +66,12 @@ class T extends a.PureComponent {
 function E(e) {
   let t = (0, r.useStateFromStores)([c.default], () => c.default.hidePersonalInformation),
     l = (0, d.default)(e.userId);
-  return (0, n.jsx)(T, {
+  return (0, n.jsx)(h, {
     ...e,
     ...l,
     hideNote: t
   })
 }
-T.defaultProps = {
+h.defaultProps = {
   autoFocus: !1
 }

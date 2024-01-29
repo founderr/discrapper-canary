@@ -11,8 +11,8 @@ var i = n("37983");
 n("884691");
 var r = n("414456"),
   l = n.n(r),
-  u = n("446674"),
-  s = n("669491"),
+  s = n("446674"),
+  u = n("669491"),
   o = n("77078"),
   a = n("921031"),
   d = n("471706"),
@@ -22,11 +22,11 @@ var r = n("414456"),
   E = n("393414"),
   h = n("18494"),
   g = n("162771"),
-  p = n("246053"),
-  _ = n("461380"),
+  _ = n("246053"),
+  p = n("461380"),
   C = n("423487"),
-  m = n("489622"),
-  I = n("773336"),
+  I = n("489622"),
+  m = n("773336"),
   T = n("479756"),
   v = n("38654"),
   R = n("593916"),
@@ -65,14 +65,14 @@ function P(e) {
 }
 
 function w() {
-  let e = (0, u.useStateFromStores)([g.default], () => g.default.getGuildId()),
-    t = (0, u.useStateFromStores)([h.default], () => h.default.getChannelId(e)),
+  let e = (0, s.useStateFromStores)([g.default], () => g.default.getGuildId()),
+    t = (0, s.useStateFromStores)([h.default], () => h.default.getChannelId(e)),
     {
       viewingRoles: n,
       backNavigationSection: r,
       isFullServerPreview: l,
-      isServerShopPreview: I
-    } = (0, u.useStateFromStoresObject)([v.default], () => ({
+      isServerShopPreview: m
+    } = (0, s.useStateFromStoresObject)([v.default], () => ({
       viewingRoles: null != e ? v.default.getViewingRoles(e) : null,
       backNavigationSection: v.default.getBackNavigationSection(e),
       isFullServerPreview: null != e && v.default.isFullServerPreview(e),
@@ -99,18 +99,18 @@ function w() {
       } = t;
       null != e && (v.default.isFullServerPreview(e) && (0, E.transitionTo)(N.Routes.CHANNEL(e)), d.default.shouldShowOnboarding(e) && (a.default.finishOnboarding(e), (0, c.discardOnboardingPromise)(e)), (0, T.stopImpersonating)(e), n && S.default.open(e, r), r === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, f.announceDeleteTemplateChannels)(e))
     };
-  return (0, i.jsxs)(m.default, {
-    color: m.NoticeColors.BRAND,
+  return (0, i.jsxs)(I.default, {
+    color: I.NoticeColors.BRAND,
     className: b.notice,
     children: [(0, i.jsxs)(x, {
       onClick: () => U({
         backToSettings: !0
       }),
       className: b.backButton,
-      children: [(0, i.jsx)(p.default, {
+      children: [(0, i.jsx)(_.default, {
         width: 16,
         height: 16,
-        direction: p.default.Directions.LEFT,
+        direction: _.default.Directions.LEFT,
         className: b.backArrow
       }), w]
     }), D && l ? (0, i.jsx)("div", {
@@ -139,10 +139,10 @@ function w() {
           } = e;
           return (0, i.jsxs)(x, {
             onClick: t,
-            children: [G, (0, i.jsx)(_.default, {
+            children: [G, (0, i.jsx)(p.default, {
               width: 16,
               height: 16,
-              direction: _.default.Directions.DOWN,
+              direction: p.default.Directions.DOWN,
               className: b.selectCaret
             })]
           })
@@ -153,9 +153,9 @@ function w() {
         children: (0, i.jsx)(C.default, {
           width: 16,
           height: 16,
-          color: s.default.unsafe_rawColors.YELLOW_300.css
+          color: u.default.unsafe_rawColors.YELLOW_300.css
         })
-      }), I && (0, i.jsx)(o.TooltipContainer, {
+      }), m && (0, i.jsx)(o.TooltipContainer, {
         className: b.previewWarning,
         text: O.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
           maxTiers: A.MAX_SUBSCRIPTION_TIERS,
@@ -164,7 +164,7 @@ function w() {
         children: (0, i.jsx)(C.default, {
           width: 16,
           height: 16,
-          color: s.default.unsafe_rawColors.YELLOW_300.css
+          color: u.default.unsafe_rawColors.YELLOW_300.css
         })
       })]
     }), l || r === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? null : (0, i.jsx)(P, {
@@ -178,11 +178,11 @@ function w() {
 function G(e) {
   let {
     guildId: t
-  } = e, n = (0, u.useStateFromStores)([v.default], () => v.default.isViewingRoles(t));
+  } = e, n = (0, s.useStateFromStores)([v.default], () => v.default.isViewingRoles(t));
   return n ? (0, i.jsx)("div", {
     className: l(b.settingsWrapper, {
-      [b.windows]: (0, I.isWindows)(),
-      [b.osx]: (0, I.isMac)()
+      [b.windows]: (0, m.isWindows)(),
+      [b.osx]: (0, m.isMac)()
     }),
     children: (0, i.jsx)(w, {})
   }) : null

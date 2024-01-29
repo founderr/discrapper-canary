@@ -1,11 +1,11 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   useTriggerDebuggingAA: function() {
-    return i
+    return r
   }
 });
-var n = r("862205");
-let a = (0, n.createExperiment)({
+var i = n("862205");
+let l = (0, i.createExperiment)({
   kind: "user",
   id: "2023-09_trigger_debugging_aa",
   label: "trigger debugging aa mobile",
@@ -21,13 +21,13 @@ let a = (0, n.createExperiment)({
   }]
 });
 
-function i(e) {
+function r(e) {
   let {
     autoTrackExposure: t = !1,
-    location: r
+    location: n
   } = e;
-  return a.useExperiment({
-    location: r
+  return l.useExperiment({
+    location: n
   }, {
     autoTrackExposure: t
   })

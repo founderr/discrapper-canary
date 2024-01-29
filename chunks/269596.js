@@ -1,33 +1,33 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 }), n("222007");
-var l = n("446674"),
-  a = n("913144"),
-  r = n("197881"),
-  s = n("492397");
-let i = new Set,
+var s = n("446674"),
+  r = n("913144"),
+  i = n("197881"),
+  l = n("492397");
+let a = new Set,
   u = {};
-class o extends l.default.PersistedStore {
+class o extends s.default.PersistedStore {
   initialize(e) {
-    null != e && (Array.isArray(e.hiddenHotspots) && (i = new Set(e.hiddenHotspots)), null != e.hotspotOverrides && (u = e.hotspotOverrides))
+    null != e && (Array.isArray(e.hiddenHotspots) && (a = new Set(e.hiddenHotspots)), null != e.hotspotOverrides && (u = e.hotspotOverrides))
   }
   hasHotspot(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = !t && u[e];
-    return !(s.CONFERENCE_MODE_ENABLED || r.ProcessArgs.isDisallowPopupsSet()) && (n || !i.has(e))
+    return !(l.CONFERENCE_MODE_ENABLED || i.ProcessArgs.isDisallowPopupsSet()) && (n || !a.has(e))
   }
   hasHiddenHotspot(e) {
-    return i.has(e)
+    return a.has(e)
   }
   getHotspotOverride(e) {
     return u[e]
   }
   getState() {
     return {
-      hiddenHotspots: i,
+      hiddenHotspots: a,
       hotspotOverrides: u
     }
   }
@@ -36,19 +36,19 @@ o.displayName = "HotspotStore", o.persistKey = "hotspots", o.migrations = [e => 
   hiddenHotspots: null != e ? e : [],
   hotspotOverrides: {}
 })];
-var c = new o(a.default, {
+var d = new o(r.default, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       hiddenHotspots: t
     } = e;
-    i = new Set(t)
+    a = new Set(t)
   },
   HOTSPOT_HIDE: function(e) {
     let {
       location: t
     } = e;
-    if (i.has(t)) return !1;
-    i.add(t)
+    if (a.has(t)) return !1;
+    a.add(t)
   },
   HOTSPOT_OVERRIDE_SET: function(e) {
     let {

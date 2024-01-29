@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return I
+    return g
   }
 }), l("222007");
 var n = l("37983");
@@ -17,20 +17,20 @@ var a = l("446674"),
   f = l("42203"),
   m = l("30672"),
   p = l("619911"),
-  T = l("659500"),
+  h = l("659500"),
   E = l("295999"),
-  S = l("49111"),
-  _ = l("782340"),
-  h = l("317468");
+  T = l("49111"),
+  S = l("782340"),
+  _ = l("317468");
 
-function I(e) {
+function g(e) {
   let {
     isCurrentUser: t,
     color: l,
-    look: I,
+    look: g,
     applicationStream: A
   } = e, {
-    activeStream: g,
+    activeStream: I,
     watchingOtherStream: v
   } = (0, a.useStateFromStoresObject)([c.default], () => ({
     activeStream: c.default.getActiveStreamForApplicationStream(A),
@@ -40,40 +40,40 @@ function I(e) {
       } = e;
       return t !== A.ownerId
     }).length > 0
-  })), C = (0, a.useStateFromStores)([f.default], () => f.default.getChannel(null == A ? void 0 : A.channelId)), [N, y] = (0, d.useCanWatchStream)(C), O = (0, u.useWindowDispatch)(), M = null != g && null != A && g.state !== S.ApplicationStreamStates.ENDED && g.ownerId === A.ownerId, x = e => {
-    null != A && (r.default.selectVoiceChannel(A.channelId), !M && (0, o.watchStreamAndTransitionToStream)(A, {
+  })), N = (0, a.useStateFromStores)([f.default], () => f.default.getChannel(null == A ? void 0 : A.channelId)), [C, y] = (0, d.useCanWatchStream)(N), M = (0, u.useWindowDispatch)(), x = null != I && null != A && I.state !== T.ApplicationStreamStates.ENDED && I.ownerId === A.ownerId, O = e => {
+    null != A && (r.default.selectVoiceChannel(A.channelId), !x && (0, o.watchStreamAndTransitionToStream)(A, {
       forceMultiple: e
-    }), O.dispatch(S.ComponentActions.POPOUT_CLOSE), T.ComponentDispatch.dispatch(S.ComponentActions.MODAL_CLOSE), i.default.popAll())
+    }), M.dispatch(T.ComponentActions.POPOUT_CLOSE), h.ComponentDispatch.dispatch(T.ComponentActions.MODAL_CLOSE), i.default.popAll())
   };
   if (null == A) return null;
   let R = (0, d.getStreamCTAString)(y);
-  t ? R = _.default.Messages.WATCH_STREAM_STREAMING : M && (R = _.default.Messages.WATCH_STREAM_WATCHING);
+  t ? R = S.default.Messages.WATCH_STREAM_STREAMING : x && (R = S.default.Messages.WATCH_STREAM_WATCHING);
   let L = {
     color: l,
-    look: I
+    look: g
   };
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(E.default, {
-      disabled: t || M || !N,
-      onClick: () => x(!1),
+      disabled: t || x || !C,
+      onClick: () => O(!1),
       ...L,
       fullWidth: !0,
       children: [(0, n.jsx)(p.default, {
-        className: h.streamIcon
+        className: _.streamIcon
       }), R]
-    }, "play"), v && !M ? (0, n.jsx)(s.Tooltip, {
-      text: _.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
+    }, "play"), v && !x ? (0, n.jsx)(s.Tooltip, {
+      text: S.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
       children: e => (0, n.jsx)(E.default, {
         ...e,
         onClick: () => {
           var t;
-          null === (t = e.onClick) || void 0 === t || t.call(e), x(!0)
+          null === (t = e.onClick) || void 0 === t || t.call(e), O(!0)
         },
         ...L,
-        className: h.iconButton,
-        size: h.iconButtonSize,
+        className: _.iconButton,
+        size: _.iconButtonSize,
         children: (0, n.jsx)(m.default, {
-          className: h.iconSize
+          className: _.iconSize
         })
       })
     }) : null]

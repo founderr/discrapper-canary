@@ -20,23 +20,23 @@ var s = n("37983"),
   p = n("173791"),
   h = n("926622"),
   T = () => {
-    let [e, t] = a.useState(""), [l, T] = a.useState(""), [m, N] = a.useState(!1), [g, A] = a.useState(!1), [S, C] = a.useState(null), [v, R] = a.useState(null), L = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), O = L.code.split(" ")[0], x = async () => {
+    let [e, t] = a.useState(""), [l, T] = a.useState(""), [N, m] = a.useState(!1), [g, A] = a.useState(!1), [S, C] = a.useState(null), [v, L] = a.useState(null), R = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), O = R.code.split(" ")[0], x = async () => {
       try {
         await u.default.resendCode(e)
       } catch (e) {
-        R(e.body.message)
+        L(e.body.message)
       }
     }, M = async () => {
-      N(!0);
+      m(!0);
       try {
         let {
           token: t
         } = await u.default.verifyPhone(O + e, l);
-        C(null), R(null), A(!0), u.default.validatePhoneForSupport(t)
+        C(null), L(null), A(!0), u.default.validatePhoneForSupport(t)
       } catch (e) {
-        e.body.message ? (C(null), R(e.body.message)) : (C(e.body.phone), R(e.body.code))
+        e.body.message ? (C(null), L(e.body.message)) : (C(e.body.phone), L(e.body.code))
       } finally {
-        N(!1)
+        m(!1)
       }
     }, D = (0, s.jsxs)(f.default, {
       children: [(0, s.jsx)(f.Image, {
@@ -58,7 +58,7 @@ var s = n("37983"),
         className: h.marginTop20,
         children: [(0, s.jsx)(c.default, {
           label: _.default.Messages.FORM_LABEL_PHONE_NUMBER,
-          alpha2: L.alpha2,
+          alpha2: R.alpha2,
           countryCode: O,
           value: e,
           autoComplete: "off",
@@ -81,7 +81,7 @@ var s = n("37983"),
         }), (0, s.jsx)(f.Button, {
           className: h.marginTop20,
           onClick: M,
-          submitting: m,
+          submitting: N,
           children: _.default.Messages.DONE
         })]
       })]

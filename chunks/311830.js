@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("77078"),
   d = n("847511"),
   c = n("619544"),
-  f = n("74232"),
-  E = n("316350"),
+  E = n("74232"),
+  f = n("316350"),
   _ = n("909366"),
   T = n("879958");
 
@@ -68,7 +68,7 @@ function p(e) {
   } = e, {
     actionButtonRef: i,
     manageFocusOnAction: r
-  } = (0, E.usePollFocusManager)(), o = l.useCallback(async () => {
+  } = (0, f.usePollFocusManager)(), o = l.useCallback(async () => {
     (null == t ? void 0 : t.type) != null && (await d.default.handlePollActionTapped({
       channelId: n,
       messageId: a,
@@ -94,7 +94,7 @@ function S(e) {
     message: t,
     poll: n,
     className: l
-  } = e, a = (0, f.useStyleClass)(n.containerStyle), d = function(e, t) {
+  } = e, a = (0, E.useStyleClass)(n.containerStyle), d = function(e, t) {
     let n = {
       answers: t.answers,
       answersInteraction: t.answersInteraction,
@@ -138,10 +138,10 @@ function A(e) {
     poll: n,
     className: l
   } = e;
-  return (0, s.jsx)(f.PollContextProvider, {
+  return (0, s.jsx)(E.PollContextProvider, {
     message: t,
     poll: n,
-    children: (0, s.jsx)(E.PollFocusManager, {
+    children: (0, s.jsx)(f.PollFocusManager, {
       children: (0, s.jsx)(S, {
         message: t,
         poll: n,

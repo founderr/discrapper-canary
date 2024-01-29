@@ -16,32 +16,32 @@ var n = l("37983"),
   f = l("102985"),
   m = l("461380"),
   p = l("713135"),
-  T = l("824140"),
+  h = l("824140"),
   E = l("401642"),
-  S = l("777003"),
-  _ = l("590456"),
-  h = l("49111"),
-  I = l("782340"),
+  T = l("777003"),
+  S = l("590456"),
+  _ = l("49111"),
+  g = l("782340"),
   A = l("843482"),
-  g = l("814076");
+  I = l("814076");
 
 function v(e) {
   var t, l;
   let s, v, {
-      userId: C,
-      channelId: N,
+      userId: N,
+      channelId: C,
       guild: y,
-      theme: O,
-      onClose: M,
-      className: x
+      theme: M,
+      onClose: x,
+      className: O
     } = e,
-    R = (0, d.default)(y, C, N),
+    R = (0, d.default)(y, N, C),
     [L, P] = a.useState(new Set),
-    b = (0, r.useStateFromStores)([p.default], () => p.default.getUserProfile(C)),
-    D = null !== (t = null == b ? void 0 : b.connectedAccounts) && void 0 !== t ? t : [],
-    j = null !== (l = null == b ? void 0 : b.applicationRoleConnections) && void 0 !== l ? l : [],
+    j = (0, r.useStateFromStores)([p.default], () => p.default.getUserProfile(N)),
+    b = null !== (t = null == j ? void 0 : j.connectedAccounts) && void 0 !== t ? t : [],
+    D = null !== (l = null == j ? void 0 : j.applicationRoleConnections) && void 0 !== l ? l : [],
     U = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation),
-    F = (0, r.useStateFromStores)([c.default], () => c.default.locale);
+    w = (0, r.useStateFromStores)([c.default], () => c.default.locale);
   if (a.useEffect(() => {
       (null == y ? void 0 : y.id) != null && (null == R ? void 0 : R.id) != null && u.default.fetchGuildRoleConnectionsEligibility(y.id, R.id).then(e => {
         let t = new Set;
@@ -53,59 +53,59 @@ function v(e) {
         P(t)
       })
     }, [null == y ? void 0 : y.id, null == R ? void 0 : R.id]), U || null == R) return null;
-  let w = Array.from(L).map(e => {
-    let t = D.find(t => t.type === e);
-    return null == t ? null : (0, n.jsx)(T.ConnectedUserAccount, {
+  let F = Array.from(L).map(e => {
+    let t = b.find(t => t.type === e);
+    return null == t ? null : (0, n.jsx)(h.ConnectedUserAccount, {
       connectedAccount: t,
-      theme: O,
-      locale: F,
-      userId: C
+      theme: M,
+      locale: w,
+      userId: N
     }, "".concat(t.type, ":").concat(t.id))
   }).filter(e => null != e);
-  return (w.length > 0 && (s = (0, n.jsxs)(n.Fragment, {
+  return (F.length > 0 && (s = (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(o.Heading, {
       variant: "eyebrow",
-      className: g.title,
-      children: I.default.Messages.CONNECTIONS
+      className: I.title,
+      children: g.default.Messages.CONNECTIONS
     }), (0, n.jsxs)("div", {
-      className: i(A.connectionsContainer, x),
-      children: [w, (0, n.jsxs)(o.Clickable, {
+      className: i(A.connectionsContainer, O),
+      children: [F, (0, n.jsxs)(o.Clickable, {
         onClick: function() {
           (0, E.openUserProfileModal)({
-            userId: C,
+            userId: N,
             guildId: null == y ? void 0 : y.id,
-            channelId: N,
-            section: _.UserProfileSections.USER_INFO_CONNECTIONS,
+            channelId: C,
+            section: S.UserProfileSections.USER_INFO_CONNECTIONS,
             analyticsLocation: {
-              section: h.AnalyticsSections.PROFILE_POPOUT
+              section: _.AnalyticsSections.PROFILE_POPOUT
             }
-          }), null == M || M()
+          }), null == x || x()
         },
         className: A.connections,
         children: [(0, n.jsx)(o.Text, {
           variant: "text-md/semibold",
           color: "interactive-active",
           className: A.connectionsText,
-          children: I.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_ALL
+          children: g.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_ALL
         }), (0, n.jsx)(m.default, {
           direction: m.default.Directions.RIGHT,
           className: A.connectionsCaret
         })]
       })]
     })]
-  })), j.length > 0 && (v = (0, n.jsxs)(n.Fragment, {
+  })), D.length > 0 && (v = (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(o.Heading, {
       variant: "eyebrow",
-      className: g.title,
-      children: I.default.Messages.APPS
+      className: I.title,
+      children: g.default.Messages.APPS
     }), (0, n.jsx)("div", {
-      className: i(A.connectionsContainer, x),
-      children: j.map(e => (0, n.jsx)(T.ConnectedApplicationUserRoleAccount, {
+      className: i(A.connectionsContainer, O),
+      children: D.map(e => (0, n.jsx)(h.ConnectedApplicationUserRoleAccount, {
         applicationRoleConnection: e,
-        locale: F
+        locale: w
       }, e.application.id))
     })]
-  })), null == s && null == v) ? null : (0, n.jsxs)(S.default, {
+  })), null == s && null == v) ? null : (0, n.jsxs)(T.default, {
     children: [v, s]
   })
 }

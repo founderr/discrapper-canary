@@ -21,14 +21,14 @@ function f(e) {
       size: f,
       forcedIconColor: m,
       className: p,
-      iconClassName: T,
+      iconClassName: h,
       tooltipText: E
     } = e,
-    [S, _] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.desaturateUserColors, o.default.saturation]),
-    h = (0, r.useToken)(i.default.unsafe_rawColors.PRIMARY_300).hex(),
-    I = (0, a.hex2int)(null != l ? l : h),
-    A = (0, a.int2hsl)(I, !1, S ? _ : null);
-  return t = null != m ? m : .3 > (0, a.getDarkness)(I) ? i.default.unsafe_rawColors.PRIMARY_630.css : i.default.unsafe_rawColors.WHITE_500.css, (0, n.jsx)(r.Tooltip, {
+    [T, S] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.desaturateUserColors, o.default.saturation]),
+    _ = (0, r.useToken)(i.default.unsafe_rawColors.PRIMARY_300).hex(),
+    g = (0, a.hex2int)(null != l ? l : _),
+    A = (0, a.int2hsl)(g, !1, T ? S : null);
+  return t = null != m ? m : .3 > (0, a.getDarkness)(g) ? i.default.unsafe_rawColors.PRIMARY_630.css : i.default.unsafe_rawColors.WHITE_500.css, (0, n.jsx)(r.Tooltip, {
     text: null != E ? E : c.default.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
     children: e => (0, n.jsx)(u.default, {
       ...e,
@@ -39,7 +39,7 @@ function f(e) {
         color: t,
         height: f,
         width: f,
-        className: T
+        className: h
       })
     })
   })

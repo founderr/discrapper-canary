@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("862337"),
   d = n("266491"),
   c = n("77078"),
-  f = n("265836"),
-  E = n("368121"),
+  E = n("265836"),
+  f = n("368121"),
   _ = n("570511"),
   T = n("58608"),
   I = n("581361");
@@ -122,7 +122,7 @@ class N extends l.Component {
       className: i(I.splash, a),
       src: n,
       title: l
-    }, "image") : (0, s.jsx)(f.default, {
+    }, "image") : (0, s.jsx)(E.default, {
       onInterval: this.nextItem,
       interval: 2e3,
       className: I.slideshowWrapper,
@@ -178,13 +178,13 @@ class N extends l.Component {
         title: a,
         playing: r,
         muted: u,
-        splashClassName: f,
+        splashClassName: E,
         splashPlaceholderClassName: N,
         renderMediaOverlay: p
-      } = this.props, S = u ? _.default : E.default;
+      } = this.props, S = u ? _.default : f.default;
       return (0, s.jsxs)(l.Fragment, {
         children: [o.isMobile ? null : (0, s.jsx)(T.default, {
-          className: i(I.splash, f),
+          className: i(I.splash, E),
           muted: u,
           loop: !0,
           preload: "none",

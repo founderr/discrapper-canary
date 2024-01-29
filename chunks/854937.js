@@ -23,12 +23,12 @@ function c(e) {
     source: f,
     size: m,
     className: p,
-    ...T
+    ...h
   } = e, {
     tooltip: E,
-    loading: S,
-    disabled: _,
-    onClick: h
+    loading: T,
+    disabled: S,
+    onClick: _
   } = (0, u.useSpotifySyncAction)(t, l, f, o.default.getNickname(c, a, l));
   return (0, n.jsx)(i.Tooltip, {
     text: E,
@@ -38,14 +38,14 @@ function c(e) {
         onMouseLeave: a
       } = e;
       return (0, n.jsx)(i.Button, {
-        ...T,
+        ...h,
         size: s(m, d.iconButtonSize),
         className: s(p, d.iconButton),
-        onClick: h,
+        onClick: _,
         onMouseEnter: l,
         onMouseLeave: a,
-        disabled: _,
-        submitting: S,
+        disabled: S,
+        submitting: T,
         "aria-label": null != E ? E : t.name,
         children: (0, n.jsx)(r.default, {
           className: d.listenAlongIcon

@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return T
   },
   fetchSticker: function() {
-    return m
+    return A
   },
   fetchGuildStickers: function() {
-    return S
+    return m
   },
   deleteGuildSticker: function() {
-    return A
+    return S
   },
   createGuildSticker: function() {
     return g
@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return N
   },
   clearStickerPreview: function() {
-    return x
+    return L
   },
   favoriteSticker: function() {
     return P
@@ -84,7 +84,7 @@ let _ = async (e, t) => {
     type: "STICKER_PACKS_FETCH_SUCCESS",
     packs: t
   })
-}, m = async e => {
+}, A = async e => {
   let {
     body: t
   } = await r.default.get({
@@ -94,7 +94,7 @@ let _ = async (e, t) => {
     type: "STICKER_FETCH_SUCCESS",
     sticker: t
   })
-}, S = async e => {
+}, m = async e => {
   let {
     body: t
   } = await r.default.get({
@@ -108,7 +108,7 @@ let _ = async (e, t) => {
       user: new d.default(e.user)
     } : e)
   })
-}, A = async e => {
+}, S = async e => {
   await r.default.delete({
     url: v.Endpoints.GUILD_STICKER(e.guild_id, e.id)
   })
@@ -142,7 +142,7 @@ function N(e, t, n) {
   })
 }
 
-function x(e, t) {
+function L(e, t) {
   l.default.dispatch({
     type: "CLEAR_STICKER_PREVIEW",
     channelId: e,
@@ -150,12 +150,12 @@ function x(e, t) {
   })
 }
 
-function L(e) {
+function x(e) {
   return f.default.totalUnavailableGuilds > 0 || !u.default.isConnected() ? e : e.filter(e => null != I.default.getStickerById(e))
 }
 
 function P(e) {
-  c.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = L(t.stickerIds), s.size(t.stickerIds) >= E.MAX_FAVORITES) ? (a.default.show({
+  c.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = x(t.stickerIds), s.size(t.stickerIds) >= E.MAX_FAVORITES) ? (a.default.show({
     title: C.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
     body: C.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
       count: E.MAX_FAVORITES
@@ -165,6 +165,6 @@ function P(e) {
 
 function y(e) {
   c.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => {
-    t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = L(t.stickerIds)
+    t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = x(t.stickerIds)
   }, E.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }

@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("851387"),
   d = n("716241"),
   c = n("446066"),
-  f = n("243375"),
-  E = n("459698"),
+  E = n("243375"),
+  f = n("459698"),
   _ = n("933629"),
   T = n("626301"),
   I = n("716849"),
@@ -90,7 +90,7 @@ let k = e => {
       sticker: n,
       channel: a,
       refreshPositionKey: i
-    } = e, [u, c, f] = (0, r.useStateFromStoresArray)([R.default], () => [R.default.getStickerPack(n.pack_id), !R.default.hasLoadedStickerPacks, R.default.isPremiumPack(n.pack_id)], [n]), E = G({
+    } = e, [u, c, E] = (0, r.useStateFromStoresArray)([R.default], () => [R.default.getStickerPack(n.pack_id), !R.default.hasLoadedStickerPacks, R.default.isPremiumPack(n.pack_id)], [n]), f = G({
       sticker: n,
       stickerPack: u
     });
@@ -114,21 +114,21 @@ let k = e => {
         children: n.name
       }), (0, s.jsx)(o.Text, {
         variant: "text-sm/normal",
-        children: b(u, f)
+        children: b(u, E)
       }), (0, s.jsx)("ul", {
         className: U.stickersList,
-        children: E.map(e => (0, s.jsx)(v.default, {
+        children: f.map(e => (0, s.jsx)(v.default, {
           isInteracting: !0,
           size: 80,
           sticker: e
         }, e.id))
-      }), f && (0, s.jsx)("div", {
+      }), E && (0, s.jsx)("div", {
         className: U.packActions,
         children: (0, s.jsx)(o.Button, {
           color: o.Button.Colors.PRIMARY,
           size: o.Button.Sizes.SMALL,
           onClick: () => {
-            f && (0, P.navigateToOwnedStickerPack)({
+            E && (0, P.navigateToOwnedStickerPack)({
               stickerPack: u,
               stickerPickerCategories: T
             }), t()
@@ -167,7 +167,7 @@ let k = e => {
       let e = async () => {
         let e = null == b || b.hasFeature(D.GuildFeatures.DISCOVERABLE);
         if (e) {
-          let e = await (0, f.default)(n.id);
+          let e = await (0, E.default)(n.id);
           C(e)
         }
         R(!0)
@@ -234,7 +234,7 @@ let k = e => {
           children: [(0, s.jsx)(o.FormTitle, {
             className: j.guildTitle,
             children: G ? y.default.Messages.STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : y.default.Messages.STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
-          }), (0, s.jsx)(E.GuildDetails, {
+          }), (0, s.jsx)(f.GuildDetails, {
             expressionSourceGuild: l,
             hasJoinedExpressionSourceGuild: G,
             isDisplayingJoinGuildButtonInPopout: Q

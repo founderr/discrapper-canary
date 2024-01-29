@@ -8,8 +8,8 @@ var i = n("37983");
 n("884691");
 var r = n("414456"),
   l = n.n(r),
-  u = n("931138"),
-  s = n("206453"),
+  s = n("931138"),
+  u = n("206453"),
   o = n("49111"),
   a = n("323755");
 let d = {
@@ -32,10 +32,10 @@ function f(e) {
     iconClassName: r,
     size: o
   } = e;
-  return (0, i.jsx)(u.default, {
+  return (0, i.jsx)(s.default, {
     className: l(n, d[t]),
     size: o,
-    children: (0, i.jsx)(s.default, {
+    children: (0, i.jsx)(u.default, {
       tier: t,
       className: l(r, a.boostedGuildIconGem, c[t])
     })

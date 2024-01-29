@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return g
+    return I
   }
 });
 var n = l("37983");
@@ -17,27 +17,27 @@ var a = l("414456"),
   f = l("18494"),
   m = l("191814"),
   p = l("758710"),
-  T = l("351825"),
+  h = l("351825"),
   E = l("306160"),
-  S = l("253981"),
-  _ = l("613676"),
-  h = l("49111"),
-  I = l("782340"),
+  T = l("253981"),
+  S = l("613676"),
+  _ = l("49111"),
+  g = l("782340"),
   A = l("834680");
 
-function g(e) {
+function I(e) {
   var t;
   let {
     application: l,
     className: a
-  } = e, g = c.default.getChannel(f.default.getChannelId()), {
+  } = e, I = c.default.getChannel(f.default.getChannelId()), {
     appsInGDMEnabled: v,
-    availableApplications: C
+    availableApplications: N
   } = (0, d.usePrivateChannelIntegrationState)({
-    channelId: null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : ""
+    channelId: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : ""
   });
-  if (null == l || !(0, _.canInstallApplication)(l.id, l.customInstallUrl, l.installParams)) return null;
-  let N = v && null != C.find(e => e.id === (null == l ? void 0 : l.id));
+  if (null == l || !(0, S.canInstallApplication)(l.id, l.customInstallUrl, l.installParams)) return null;
+  let C = v && null != N.find(e => e.id === (null == l ? void 0 : l.id));
   return (0, n.jsx)(i.Button, {
     color: i.Button.Colors.PRIMARY,
     look: i.Button.Looks.FILLED,
@@ -52,25 +52,25 @@ function g(e) {
       (0, r.openContextMenu)(e, e => (0, n.jsx)(i.Menu, {
         navId: "component-button",
         onClose: r.closeContextMenu,
-        "aria-label": I.default.Messages.APPLICATION_ADD_TO_SERVER_ACTIONS,
+        "aria-label": g.default.Messages.APPLICATION_ADD_TO_SERVER_ACTIONS,
         onSelect: void 0,
         ...e,
         children: (0, n.jsx)(i.MenuGroup, {
           children: (0, n.jsx)(i.MenuItem, {
             id: "copy",
-            label: I.default.Messages.APPLICATION_ADD_TO_SERVER_ACTIONS_COPY,
+            label: g.default.Messages.APPLICATION_ADD_TO_SERVER_ACTIONS_COPY,
             action: () => (0, E.copy)(s)
           })
         })
       }))
     } : void 0,
     onClick: () => {
-      N ? (0, u.openOAuth2Modal)({
+      C ? (0, u.openOAuth2Modal)({
         clientId: l.id,
-        scopes: [h.OAuth2Scopes.APPLICATIONS_COMMANDS],
-        channelId: g.id,
+        scopes: [_.OAuth2Scopes.APPLICATIONS_COMMANDS],
+        channelId: I.id,
         disableGuildSelect: !0
-      }) : (0, _.installApplication)({
+      }) : (0, S.installApplication)({
         applicationId: l.id,
         customInstallUrl: l.customInstallUrl,
         installParams: l.installParams
@@ -79,7 +79,7 @@ function g(e) {
     className: s(A.applicationInstallButton, a),
     children: (0, n.jsxs)("div", {
       className: A.applicationInstallButtonContent,
-      children: [(0, n.jsx)(T.default, {
+      children: [(0, n.jsx)(h.default, {
         width: 16,
         height: 16
       }), (0, n.jsx)(m.default, {
@@ -87,8 +87,8 @@ function g(e) {
         horizontal: !0
       }), (0, n.jsx)("span", {
         className: A.applicationInstallButtonText,
-        children: N ? I.default.Messages.ADD : I.default.Messages.APPLICATION_ADD_BUTTON
-      }), null == l.customInstallUrl || S.default.isDiscordUrl(l.customInstallUrl) ? null : (0, n.jsx)(p.default, {
+        children: C ? g.default.Messages.ADD : g.default.Messages.APPLICATION_ADD_BUTTON
+      }), null == l.customInstallUrl || T.default.isDiscordUrl(l.customInstallUrl) ? null : (0, n.jsx)(p.default, {
         className: A.launchIcon,
         width: 16,
         height: 16

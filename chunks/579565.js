@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getDropsExperiment: function() {
-    return f
+    return E
   },
   getDropsExperimentForDrop: function() {
-    return E
+    return f
   },
   doesGameTitleMatchList: function() {
     return _
@@ -50,12 +50,12 @@ var s = n("866227"),
   d = n("411511"),
   c = n("782340");
 
-function f(e) {
+function E(e) {
   let t = C(e);
-  return null == t ? null : E(t)
+  return null == t ? null : f(t)
 }
 
-function E(e) {
+function f(e) {
   if (e.dropsQuestId === d.FORTNITE_QUEST_ID) return u.DropsForGoLiveFortniteExperiment;
   return null
 }
@@ -101,7 +101,7 @@ function N(e, t) {
 function p(e) {
   var t;
   let n = C(e);
-  if (null == n || !(null === (t = f(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
+  if (null == n || !(null === (t = E(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
       location: "1"
     }, {
       autoTrackExposure: !1
@@ -114,7 +114,7 @@ function p(e) {
 function S(e) {
   var t, n;
   let s = C(e);
-  if (null == s || !(null === (n = f(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
+  if (null == s || !(null === (n = E(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
       location: "2"
     }, {
       autoTrackExposure: !1

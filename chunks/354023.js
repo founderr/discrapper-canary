@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
     return a
   },
   generateRowsForQuery: function() {
-    return R
+    return A
   },
   getMostRecentDMedUser: function() {
-    return A
+    return R
   },
   getUsersAlreadyJoined: function() {
     return O
@@ -23,8 +23,8 @@ n.r(t), n.d(t, {
 var a, s, i = n("191225"),
   r = n("42203"),
   u = n("26989"),
-  o = n("660478"),
-  d = n("27618"),
+  d = n("660478"),
+  o = n("27618"),
   c = n("697218"),
   E = n("287850"),
   f = n("25292"),
@@ -82,10 +82,10 @@ let T = (e, t) => null != e && u.default.isMember(e, t),
       rows: s,
       counts: i,
       includeGroupDms: u,
-      limit: d
+      limit: o
     } = e, f = 0;
     for (let e of E.default.getPrivateChannelIds()) {
-      if (null != n && n > 0 && s.length >= n || null != d && f >= d) break;
+      if (null != n && n > 0 && s.length >= n || null != o && f >= o) break;
       let E = r.default.getChannel(e);
       if (null == E || !E.isPrivate()) continue;
       if (u && E.type === _.ChannelTypes.GROUP_DM) {
@@ -96,7 +96,7 @@ let T = (e, t) => null != e && u.default.isMember(e, t),
         }), i.numGroupDms++, f++;
         continue
       }
-      let I = o.default.lastMessageId(E.id);
+      let I = d.default.lastMessageId(E.id);
       if (null == I) continue;
       let h = E.getRecipientId();
       if (null != h && !t.has(h) && !a.has(h)) {
@@ -119,7 +119,7 @@ let T = (e, t) => null != e && u.default.isMember(e, t),
       rows: s,
       counts: i
     } = e;
-    for (let e of d.default.getFriendIDs()) {
+    for (let e of o.default.getFriendIDs()) {
       if (null != n && n > 0 && s.length >= n) break;
       if (t.has(e) || a.has(e)) continue;
       let r = c.default.getUser(e);
@@ -170,7 +170,7 @@ let T = (e, t) => null != e && u.default.isMember(e, t),
       if (n.has(t.id)) return;
       let i = r.default.getDMFromUserId(t.id);
       if (null == i) return;
-      let u = o.default.lastMessageId(i);
+      let u = d.default.lastMessageId(i);
       null != u && (l.add(t.id), a.push({
         type: "DM",
         item: t,
@@ -223,7 +223,7 @@ let T = (e, t) => null != e && u.default.isMember(e, t),
     })
   };
 
-function R(e) {
+function A(e) {
   let {
     query: t,
     inviteTargetType: n,
@@ -232,7 +232,7 @@ function R(e) {
     suggestedChannelIds: s,
     maxRowsWithoutQuery: i,
     omitGuildId: r
-  } = e, u = new Set, o = [], d = {
+  } = e, u = new Set, d = [], o = {
     numFriends: 0,
     numDms: 0,
     numGroupDms: 0,
@@ -245,8 +245,8 @@ function R(e) {
       maxRowsWithoutQuery: i,
       omitGuildId: r,
       shownUserIds: u,
-      rows: o,
-      counts: d
+      rows: d,
+      counts: o
     };
     n === I.InviteTargetTypes.EMBEDDED_APPLICATION && (m({
       ...e,
@@ -265,8 +265,8 @@ function R(e) {
   } else {
     let e = {
       query: t,
-      rows: o,
-      counts: d
+      rows: d,
+      counts: o
     };
     n === I.InviteTargetTypes.EMBEDDED_APPLICATION && g({
       ...e,
@@ -282,15 +282,15 @@ function R(e) {
     })
   }
   return {
-    rows: o,
-    counts: d
+    rows: d,
+    counts: o
   }
 }
 
-function A(e, t) {
+function R(e, t) {
   for (let n of E.default.getPrivateChannelIds()) {
     let l = r.default.getChannel(n);
-    if (null == l || !l.isDM() || null == o.default.lastMessageId(l.id)) continue;
+    if (null == l || !l.isDM() || null == d.default.lastMessageId(l.id)) continue;
     let a = l.getRecipientId();
     if (null != a && !e.has(a)) {
       let e = c.default.getUser(a);

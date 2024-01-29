@@ -13,8 +13,8 @@ var s = n("627445"),
   u = n("404118"),
   d = n("819689"),
   c = n("448993"),
-  f = n("875978"),
-  E = n("815297"),
+  E = n("875978"),
+  f = n("815297"),
   _ = n("256572"),
   T = n("271938"),
   I = n("474643"),
@@ -83,7 +83,7 @@ async function L(e) {
   })), ...u.map(e => ({
     type: "MESSAGE_REACTION_ADD",
     id: e
-  }))], E = r.default.Emitter.batched(() => {
+  }))], f = r.default.Emitter.batched(() => {
     let e;
     for (let {
         id: s,
@@ -99,11 +99,11 @@ async function L(e) {
       },
       userId: d,
       optimistic: !0,
-      reactionType: f.ReactionTypes.VOTE
+      reactionType: E.ReactionTypes.VOTE
     });
     return e
   });
-  null != E && await E
+  null != f && await f
 }
 async function v(e) {
   let {
@@ -190,11 +190,11 @@ var D = {
       messageId: d,
       message: c
     } = M(r), {
-      tapShouldOpenVotersModal: f,
-      reactions: E
+      tapShouldOpenVotersModal: E,
+      reactions: f
     } = null !== (n = (0, h.computeBasicPollChatData)(c)) && void 0 !== n ? n : {};
-    if (!0 === f) {
-      let e = null !== (a = null === (l = (0, h.reactionForId)(null != E ? E : [], i)) || void 0 === l ? void 0 : null === (s = l.count_details) || void 0 === s ? void 0 : s.vote) && void 0 !== a ? a : 0;
+    if (!0 === E) {
+      let e = null !== (a = null === (l = (0, h.reactionForId)(null != f ? f : [], i)) || void 0 === l ? void 0 : null === (s = l.count_details) || void 0 === s ? void 0 : s.vote) && void 0 !== a ? a : 0;
       0 === e ? u.default.show({
         title: g.default.Messages.POLL_NO_VOTES_FOR_ANSWER_TITLE,
         body: g.default.Messages.POLL_NO_VOTES_FOR_ANSWER_BODY
@@ -254,7 +254,7 @@ var D = {
       })), {
         poll_media: s
       }
-    }), f = {
+    }), E = {
       question: {
         text: n,
         attachment_ids: []
@@ -272,11 +272,11 @@ var D = {
           channel: t,
           items: o,
           token: e,
-          poll: f,
-          nonce: (0, E.createNonce)(),
+          poll: E,
+          nonce: (0, f.createNonce)(),
           maxSizeCallback: () => {}
         })
-      } else await d.default.sendPollMessage(t.id, f);
+      } else await d.default.sendPollMessage(t.id, E);
       null == r || r()
     } catch (t) {
       let e = t instanceof c.APIError ? t : new c.APIError(t);

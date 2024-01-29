@@ -11,8 +11,8 @@ var i = n("37983");
 n("884691");
 var r = n("77078"),
   l = n("449918"),
-  u = n("20606"),
-  s = n("832132"),
+  s = n("20606"),
+  u = n("832132"),
   o = n("952479"),
   a = n("49111"),
   d = n("782340"),
@@ -21,9 +21,9 @@ var r = n("77078"),
 function f(e) {
   let {
     label: t,
-    backgroundColor: n = u.default.BUTTON_SECONDARY_BACKGROUND,
+    backgroundColor: n = s.default.BUTTON_SECONDARY_BACKGROUND,
     icon: l,
-    iconColor: s
+    iconColor: u
   } = e;
   return (0, i.jsxs)("div", {
     className: c.badge,
@@ -37,7 +37,7 @@ function f(e) {
       children: t
     }), (0, i.jsx)(l, {
       className: c.badgeIcon,
-      color: null != s ? s : "currentColor",
+      color: null != u ? u : "currentColor",
       "aria-hidden": !0
     })]
   })
@@ -54,7 +54,7 @@ function S() {
 function E() {
   return (0, i.jsx)(f, {
     label: d.default.Messages.GUILD_PRODUCT_STATUS_BADGE_DRAFT,
-    icon: s.default,
+    icon: u.default,
     iconColor: (0, l.getColor)(a.Color.PRIMARY_330)
   })
 }

@@ -4,22 +4,22 @@ l.r(t), l.d(t, {
     return p
   },
   generateTwitterMetadataItems: function() {
-    return T
+    return h
   },
   generateSteamMetadataItems: function() {
     return E
   },
   generatePaypalMetadataItems: function() {
-    return S
+    return T
   },
   generateEbayMetadataItems: function() {
-    return _
+    return S
   },
   generateTikTokMetadataItems: function() {
-    return h
+    return _
   },
   generateRoleConnectionMetadataItems: function() {
-    return I
+    return g
   }
 }), l("424973"), l("222007");
 var n = l("37983");
@@ -46,16 +46,16 @@ function p(e) {
     className: l,
     count: s,
     label: f.default.Messages.CONNECTIONS_PROFILE_REDDIT_KARMA
-  }, c.MetadataFields.REDDIT_TOTAL_KARMA)), i && a.push((0, n.jsx)(C, {
+  }, c.MetadataFields.REDDIT_TOTAL_KARMA)), i && a.push((0, n.jsx)(N, {
     className: l,
     label: f.default.Messages.CONNECTIONS_REDDIT_GOLD
-  }, c.MetadataFields.REDDIT_GOLD)), r && a.push((0, n.jsx)(C, {
+  }, c.MetadataFields.REDDIT_GOLD)), r && a.push((0, n.jsx)(N, {
     className: l,
     label: f.default.Messages.CONNECTIONS_REDDIT_MOD
   }, c.MetadataFields.REDDIT_MOD)), a
 }
 
-function T(e) {
+function h(e) {
   var t, l;
   let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     s = [],
@@ -100,17 +100,17 @@ function E(e) {
   }, c.MetadataFields.STEAM_ITEM_COUNT_TF2)), r
 }
 
-function S(e) {
+function T(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     l = [],
     a = "1" === e[c.MetadataFields.PAYPAL_VERIFIED];
-  return a && l.push((0, n.jsx)(C, {
+  return a && l.push((0, n.jsx)(N, {
     className: s(t, m.paypalVerifiedTag),
     label: f.default.Messages.CONNECTIONS_PAYPAL_VERIFIED
   }, c.MetadataFields.PAYPAL_VERIFIED)), l
 }
 
-function _(e) {
+function S(e) {
   var t;
   let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     a = [],
@@ -121,13 +121,13 @@ function _(e) {
     count: s,
     label: f.default.Messages.CONNECTIONS_PROFILE_EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
     percent: !0
-  }, c.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE)), i && a.push((0, n.jsx)(C, {
+  }, c.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE)), i && a.push((0, n.jsx)(N, {
     className: l,
     label: f.default.Messages.CONNECTIONS_EBAY_TOP_RATED_SELLER
   }, c.MetadataFields.EBAY_TOP_RATED_SELLER)), a
 }
 
-function h(e) {
+function _(e) {
   var t, l, a;
   let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     i = [],
@@ -147,13 +147,13 @@ function h(e) {
     className: s,
     count: d,
     label: f.default.Messages.CONNECTIONS_PROFILE_TIKTOK_LIKES
-  }, c.MetadataFields.TIKTOK_LIKES_COUNT)), r && i.push((0, n.jsx)(C, {
+  }, c.MetadataFields.TIKTOK_LIKES_COUNT)), r && i.push((0, n.jsx)(N, {
     className: s,
     label: f.default.Messages.CONNECTIONS_TIKTOK_VERIFIED
   }, c.MetadataFields.TIKTOK_VERIFIED)), i
 }
 
-function I(e) {
+function g(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
     a = [],
@@ -172,7 +172,7 @@ function I(e) {
         case c.MetadataItemTypes.BOOLEAN_EQUAL:
         case c.MetadataItemTypes.BOOLEAN_NOT_EQUAL: {
           let e = i.type === c.MetadataItemTypes.BOOLEAN_EQUAL && "1" === r || i.type === c.MetadataItemTypes.BOOLEAN_NOT_EQUAL && "1" !== r;
-          e && a.push((0, n.jsx)(C, {
+          e && a.push((0, n.jsx)(N, {
             className: t,
             label: i.name
           }, i.key))
@@ -180,7 +180,7 @@ function I(e) {
         break;
         case c.MetadataItemTypes.DATETIME_GREATER_THAN_EQUAL:
         case c.MetadataItemTypes.DATETIME_LESS_THAN_EQUAL:
-          a.push((0, n.jsx)(g, {
+          a.push((0, n.jsx)(I, {
             className: t,
             date: r,
             locale: l,
@@ -223,7 +223,7 @@ function A(e) {
   })
 }
 
-function g(e) {
+function I(e) {
   let {
     date: t,
     locale: l,
@@ -266,7 +266,7 @@ function v(e) {
   })
 }
 
-function C(e) {
+function N(e) {
   let {
     label: t,
     className: l

@@ -12,8 +12,8 @@ var r = n("913144"),
   u = n("525065"),
   d = n("305961"),
   c = n("957255"),
-  f = n("162771"),
-  E = n("697218"),
+  E = n("162771"),
+  f = n("697218"),
   _ = n("49111");
 let T = {
     hiddenSurveys: {},
@@ -59,12 +59,12 @@ function S(e) {
       } catch (e) {}
       if (!e) continue
     }
-    let r = E.default.getCurrentUser(),
+    let r = f.default.getCurrentUser(),
       d = (null == r ? void 0 : r.id) === o.ownerId,
       T = c.default.can(_.Permissions.ADMINISTRATOR, o);
     if (t.includes("is_owner") && !d || t.includes("is_admin") && !T) continue;
     null == (m = null != m ? m : {})[e.key] && (m[e.key] = e);
-    let I = f.default.getGuildId(),
+    let I = E.default.getGuildId(),
       N = null != I && I === o.id;
     if ((!t.includes("is_viewing") || N) && !l) return !0
   }
@@ -99,7 +99,7 @@ function C() {
 }
 class h extends i.default.PersistedStore {
   initialize(e) {
-    I = null != e ? e : T, this.syncWith([f.default], C)
+    I = null != e ? e : T, this.syncWith([E.default], C)
   }
   getState() {
     return I

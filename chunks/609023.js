@@ -27,12 +27,12 @@ var a = n("37983"),
   C = n("49111"),
   A = n("782340"),
   M = n("145568");
-let v = {
+let x = {
   left: 4,
   right: -12
 };
 
-function x(e) {
+function v(e) {
   var t;
   let {
     channel: n,
@@ -48,7 +48,7 @@ function x(e) {
     }
   }, [n.id]);
   return (0, a.jsx)(u.FocusRing, {
-    offset: v,
+    offset: x,
     children: (0, a.jsxs)("div", {
       className: M.messageContainer,
       onKeyDown: h,
@@ -83,13 +83,13 @@ function R(e) {
     location: "20e3b0_1"
   }, {
     autoTrackExposure: !1
-  }), T = m.MessageDisplayCompact.useSetting(), v = (0, o.useStateFromStores)([S.default], () => S.default.can(C.Permissions.CREATE_INSTANT_INVITE, s)), R = (0, h.isSpamSupported)(s), L = !1, O = 0 === l.messages.length || l.messages[0].timestamp.isSame(i(), "day"), b = null !== (n = null === (t = g.default.getUser(p.default.getId())) || void 0 === t ? void 0 : t.hasFlag(C.UserFlags.SPAMMER)) && void 0 !== n && n, y = [];
+  }), T = m.MessageDisplayCompact.useSetting(), x = (0, o.useStateFromStores)([S.default], () => S.default.can(C.Permissions.CREATE_INSTANT_INVITE, s)), R = (0, h.isSpamSupported)(s), L = !1, O = 0 === l.messages.length || l.messages[0].timestamp.isSame(i(), "day"), b = null !== (n = null === (t = g.default.getUser(p.default.getId())) || void 0 === t ? void 0 : t.hasFlag(C.UserFlags.SPAMMER)) && void 0 !== n && n, y = [];
   if (!l.collapsed) {
     let e = null,
       t = null,
       n = l.messages.slice(0, I.MAX_SHOWN_MESSAGES);
     n.forEach(n => {
-      if (!(0, c.default)(n, v)) {
+      if (!(0, c.default)(n, x)) {
         if (!O && (null == e || !e.isSame(n.timestamp, "day"))) {
           let t = (0, _.dateFormat)(n.timestamp, "LL");
           y.push((0, a.jsx)(N.default, {
@@ -98,7 +98,7 @@ function R(e) {
           }, t)), e = n.timestamp
         }
         let l = null == t || (0, f.default)(s, t, n);
-        t = n, L = L || (0, h.isSpam)(n), y.push((0, a.jsx)(x, {
+        t = n, L = L || (0, h.isSpam)(n), y.push((0, a.jsx)(v, {
           channel: s,
           message: n,
           compact: T,

@@ -8,8 +8,8 @@ var i = n("917351"),
   o = n.n(i),
   l = n("446674"),
   a = n("913144"),
-  u = n("191225"),
-  d = n("203288"),
+  d = n("191225"),
+  u = n("203288"),
   s = n("398604"),
   E = n("401690"),
   r = n("755624"),
@@ -21,8 +21,8 @@ var i = n("917351"),
   S = n("546463"),
   I = n("957255"),
   f = n("660478"),
-  O = n("18494"),
-  N = n("282109"),
+  N = n("18494"),
+  O = n("282109"),
   L = n("449008"),
   D = n("319839"),
   R = n("397336");
@@ -31,8 +31,8 @@ let p = null,
   b = new D.default;
 
 function G() {
-  let e = O.default.getChannelId(),
-    t = O.default.getVoiceChannelId();
+  let e = N.default.getChannelId(),
+    t = N.default.getVoiceChannelId();
   return p = e, h = t, b.clear()
 }
 
@@ -87,8 +87,8 @@ function K(e) {
 }
 
 function H() {
-  let e = O.default.getChannelId(),
-    t = O.default.getVoiceChannelId(),
+  let e = N.default.getChannelId(),
+    t = N.default.getVoiceChannelId(),
     n = p !== e || h !== t;
   return !!n && (o([p, h, e, t]).uniq().forEach(e => {
     null != e && b.nonPositionalChannelIdUpdate(e) && (n = !0)
@@ -109,11 +109,11 @@ function V(e) {
   return b.clearGuildId(t)
 }
 
-function v() {
+function F() {
   return b.updateSubtitles()
 }
 
-function F(e) {
+function v(e) {
   let {
     guildScheduledEvent: t
   } = e;
@@ -121,7 +121,7 @@ function F(e) {
 }
 class Y extends l.default.Store {
   initialize() {
-    this.waitFor(E.default, A.default, c.default, C.default, T.default, u.default, S.default, d.default, s.default, r.default, I.default, f.default, O.default, N.default, _.default)
+    this.waitFor(E.default, A.default, c.default, C.default, T.default, d.default, S.default, u.default, s.default, r.default, I.default, f.default, N.default, O.default, _.default)
   }
   getGuild(e, t) {
     let n = b.getGuild(e, t);
@@ -146,12 +146,12 @@ class Y extends l.default.Store {
 }
 Y.displayName = "ChannelListStore";
 var w = new Y(a.default, {
-  APPLICATION_FETCH_FAIL: v,
-  APPLICATION_FETCH_SUCCESS: v,
-  APPLICATION_FETCH: v,
-  APPLICATIONS_FETCH_FAIL: v,
-  APPLICATIONS_FETCH_SUCCESS: v,
-  APPLICATIONS_FETCH: v,
+  APPLICATION_FETCH_FAIL: F,
+  APPLICATION_FETCH_SUCCESS: F,
+  APPLICATION_FETCH: F,
+  APPLICATIONS_FETCH_FAIL: F,
+  APPLICATIONS_FETCH_SUCCESS: F,
+  APPLICATIONS_FETCH: F,
   BACKGROUND_SYNC: G,
   BULK_ACK: function(e) {
     let {
@@ -194,7 +194,7 @@ var w = new Y(a.default, {
       b.clearGuildId(e) && (n = !0)
     }), n
   },
-  CONNECTION_OPEN_SUPPLEMENTAL: v,
+  CONNECTION_OPEN_SUPPLEMENTAL: F,
   CONNECTION_OPEN: G,
   CURRENT_USER_UPDATE: G,
   DECAY_READ_STATES: G,
@@ -216,9 +216,9 @@ var w = new Y(a.default, {
     return b.updateSubtitles(t, n)
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function(e) {
-    v()
+    F()
   },
-  EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: v,
+  EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: F,
   ENABLE_AUTOMATIC_ACK: U,
   FETCH_GUILD_EVENTS_FOR_GUILD: function(e) {
     let {
@@ -226,13 +226,13 @@ var w = new Y(a.default, {
     } = e;
     return b.updateSubtitles(t)
   },
-  GAMES_DATABASE_FETCH_FAIL: v,
-  GAMES_DATABASE_FETCH: v,
-  GAMES_DATABASE_UPDATE: v,
-  GUILD_APPLICATIONS_FETCH_SUCCESS: v,
+  GAMES_DATABASE_FETCH_FAIL: F,
+  GAMES_DATABASE_FETCH: F,
+  GAMES_DATABASE_UPDATE: F,
+  GUILD_APPLICATIONS_FETCH_SUCCESS: F,
   GUILD_CREATE: g,
   GUILD_DELETE: g,
-  GUILD_FEED_FETCH_SUCCESS: v,
+  GUILD_FEED_FETCH_SUCCESS: F,
   GUILD_MEMBER_UPDATE: function(e) {
     let {
       guildId: t,
@@ -245,9 +245,9 @@ var w = new Y(a.default, {
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: P,
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: P,
   GUILD_ROLE_UPDATE: P,
-  GUILD_SCHEDULED_EVENT_CREATE: F,
-  GUILD_SCHEDULED_EVENT_DELETE: F,
-  GUILD_SCHEDULED_EVENT_UPDATE: F,
+  GUILD_SCHEDULED_EVENT_CREATE: v,
+  GUILD_SCHEDULED_EVENT_DELETE: v,
+  GUILD_SCHEDULED_EVENT_UPDATE: v,
   GUILD_TOGGLE_COLLAPSE_MUTED: P,
   GUILD_UPDATE: g,
   IMPERSONATE_STOP: P,

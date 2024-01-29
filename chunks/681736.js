@@ -1,23 +1,23 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   default: function() {
     return a
   }
-}), A("424973");
-var a, l = A("872717"),
-  n = A("448993"),
-  r = A("981112"),
-  s = A("966724"),
-  o = A("980134"),
-  i = A("782340");
+}), t("424973");
+var a, l = t("872717"),
+  n = t("448993"),
+  r = t("981112"),
+  s = t("966724"),
+  o = t("980134"),
+  i = t("782340");
 a = class extends r.default {
-  async uploadFiles(e, t) {
+  async uploadFiles(e, A) {
     let {
-      addFilesTo: A
+      addFilesTo: t
     } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     super.upload({
       name: i.default.Messages.ATTACHMENT_PROCESSING
-    }, t, e);
+    }, A, e);
     let a = new AbortController;
     try {
       if (this.files = e, this._aborted) return;
@@ -27,22 +27,22 @@ a = class extends r.default {
       this._handleException(e)
     }
     try {
-      return await this._createMessage(a.signal, t, A)
+      return await this._createMessage(a.signal, A, t)
     } catch (e) {
       if (this._raiseEndpointErrors) throw e;
       this._handleException(e)
     }
   }
-  async _createMessage(e, t, A) {
+  async _createMessage(e, A, t) {
     let a;
     let r = [];
-    this.files.forEach((e, t) => {
-      let A = (0, o.getAttachmentPayload)(e, t);
+    this.files.forEach((e, A) => {
+      let t = (0, o.getAttachmentPayload)(e, A);
       e.item.platform === s.UploadPlatform.WEB && r.push({
-        ...A
+        ...t
       })
-    }), a = null != A && null != t ? this._addAttachmentsToPayload(t, A, r) : {
-      ...t,
+    }), a = null != t && null != A ? this._addAttachmentsToPayload(A, t, r) : {
+      ...A,
       attachments: r
     };
     let i = {
@@ -50,20 +50,20 @@ a = class extends r.default {
         body: a,
         signal: e
       },
-      u = "POST" === this._method ? l.default.post : l.default.patch;
+      d = "POST" === this._method ? l.default.post : l.default.patch;
     try {
-      let e = await u(i);
+      let e = await d(i);
       return this._handleComplete(e.body), e.body
     } catch (e) {
-      var d;
+      var u;
       if (this._raiseEndpointErrors) throw new n.APIError(e);
       this._handleError({
-        code: null == e ? void 0 : null === (d = e.body) || void 0 === d ? void 0 : d.code,
+        code: null == e ? void 0 : null === (u = e.body) || void 0 === u ? void 0 : u.code,
         body: null == e ? void 0 : e.body
       })
     }
   }
-  constructor(e, t = "POST", A) {
-    super(e, t, A)
+  constructor(e, A = "POST", t) {
+    super(e, A, t)
   }
 }

@@ -1,63 +1,63 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   AttachmentsUploadComponent: function() {
     return N
   }
-}), A("222007");
-var a = A("37983"),
-  l = A("884691"),
-  n = A("414456"),
-  r = A.n(n),
-  s = A("77078"),
-  o = A("160864"),
-  i = A("966724"),
-  u = A("20606"),
-  d = A("191814"),
-  c = A("476765"),
-  f = A("857171"),
-  C = A("945330"),
-  g = A("903635"),
-  h = A("696104"),
-  T = A("949435"),
-  m = A("757515"),
-  p = A("527382"),
-  I = A("500307"),
-  U = A("782340"),
-  v = A("245793");
+}), t("222007");
+var a = t("37983"),
+  l = t("884691"),
+  n = t("414456"),
+  r = t.n(n),
+  s = t("77078"),
+  o = t("160864"),
+  i = t("966724"),
+  d = t("20606"),
+  u = t("191814"),
+  c = t("476765"),
+  f = t("857171"),
+  C = t("945330"),
+  g = t("903635"),
+  T = t("696104"),
+  h = t("949435"),
+  m = t("757515"),
+  U = t("527382"),
+  I = t("500307"),
+  p = t("782340"),
+  v = t("245793");
 let E = (0, c.uid)();
 
-function x(e) {
-  var t;
+function q(e) {
+  var A;
   let {
-    upload: A,
+    upload: t,
     progress: n = 0,
     onDeleteAttachment: o
   } = e, i = l.useCallback(() => {
-    null == o || o(A.id)
-  }, [o, A.id]), c = n >= 1, f = n < 0, h = c || f, T = null !== (t = A.filename) && void 0 !== t ? t : A.id, p = (0, m.describeUploadProgressError)(n);
+    null == o || o(t.id)
+  }, [o, t.id]), c = n >= 1, f = n < 0, T = c || f, h = null !== (A = t.filename) && void 0 !== A ? A : t.id, U = (0, m.describeUploadProgressError)(n);
   return (0, a.jsx)(s.TooltipContainer, {
-    text: p,
+    text: U,
     children: (0, a.jsxs)("div", {
       className: r(v.attachedFileCard, {
         [v.attachedFileCardError]: f,
-        [v.attachedFileCardUploading]: !h
+        [v.attachedFileCardUploading]: !T
       }),
       children: [(0, a.jsx)(g.default, {
         width: 16,
         height: 16,
-        color: u.default.INTERACTIVE_MUTED
-      }), (0, a.jsx)(d.default, {
+        color: d.default.INTERACTIVE_MUTED
+      }), (0, a.jsx)(u.default, {
         size: 10,
         horizontal: !0
       }), (0, a.jsx)(s.Text, {
         variant: "text-sm/normal",
-        children: T
-      }), !h && (0, a.jsx)(s.Spinner, {
+        children: h
+      }), !T && (0, a.jsx)(s.Spinner, {
         className: v.attachedFileCardSpinner,
         type: s.Spinner.Type.SPINNING_CIRCLE
-      }), h && null != o && (0, a.jsx)(s.Button, {
-        "aria-label": U.default.Messages.GUILD_PRODUCT_DELETE_ATTACHMENT.format({
-          attachment: T
+      }), T && null != o && (0, a.jsx)(s.Button, {
+        "aria-label": p.default.Messages.GUILD_PRODUCT_DELETE_ATTACHMENT.format({
+          attachment: h
         }),
         className: v.deleteButton,
         innerClassName: v.deleteButtonInner,
@@ -76,47 +76,47 @@ function x(e) {
 
 function N(e) {
   let {
-    onFileAdded: t
+    onFileAdded: A
   } = e, {
-    uploads: A,
+    uploads: t,
     canAttachFiles: n,
     canAttachArchives: r,
-    addAttachment: u,
+    addAttachment: d,
     deleteAttachment: c,
     fileUploadProgresses: C
-  } = (0, T.useGuildProductAttachmentManagerContext)(), g = l.useRef(!1);
+  } = (0, h.useGuildProductAttachmentManagerContext)(), g = l.useRef(!1);
 
   function m(e) {
     try {
-      for (let t of e) u({
+      for (let A of e) d({
         platform: i.UploadPlatform.WEB,
-        file: t
+        file: A
       });
       g.current = !0
     } catch {}
   }
   return l.useEffect(() => {
-    g.current && (t(), g.current = !1)
-  }, [t]), (0, a.jsxs)("div", {
+    g.current && (A(), g.current = !1)
+  }, [A]), (0, a.jsxs)("div", {
     className: v.container,
     children: [(0, a.jsx)(o.default, {
       className: v.uploadArea,
-      title: U.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_TITLE,
-      description: U.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
-      icons: p.DEFAULT_FILE_UPLOAD_ICONS,
+      title: p.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_TITLE,
+      description: p.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
+      icons: U.DEFAULT_FILE_UPLOAD_ICONS,
       onDrop: m
     }), (0, a.jsxs)(f.default, {
       className: v.addFileButtonLook,
       innerClassName: v.addFileButton,
       color: s.Button.Colors.CUSTOM,
       disabled: !n,
-      "aria-label": U.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON,
+      "aria-label": p.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON,
       "aria-describedby": E,
       multiple: !0,
       onChange: function(e) {
         null != e.currentTarget.files && m(e.currentTarget.files)
       },
-      children: [(0, a.jsx)(h.default, {
+      children: [(0, a.jsx)(T.default, {
         color: "currentColor",
         width: 16,
         height: 16,
@@ -125,27 +125,27 @@ function N(e) {
       }), (0, a.jsx)(s.Text, {
         variant: "text-sm/medium",
         color: "always-white",
-        children: U.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON
+        children: p.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON
       })]
-    }), (0, a.jsx)(d.default, {
+    }), (0, a.jsx)(u.default, {
       size: 12
     }), (0, a.jsx)(s.Text, {
       id: E,
       color: "text-muted",
       variant: "text-xs/normal",
-      children: r ? U.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS_ARCHIVES_ALLOWED.format({
+      children: r ? p.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS_ARCHIVES_ALLOWED.format({
         fileUploadLimit: I.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
-      }) : U.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS.format({
+      }) : p.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS.format({
         fileUploadLimit: I.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
       })
-    }), A.length > 0 && (0, a.jsxs)(a.Fragment, {
+    }), t.length > 0 && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
         className: v.separator
       }), (0, a.jsx)("ul", {
         className: v.attachedFilesContainer,
-        "aria-label": U.default.Messages.GUILD_PRODUCT_ATTACHED_FILES_SECTION_LABEL,
-        children: A.map(e => (0, a.jsx)("li", {
-          children: (0, a.jsx)(x, {
+        "aria-label": p.default.Messages.GUILD_PRODUCT_ATTACHED_FILES_SECTION_LABEL,
+        children: t.map(e => (0, a.jsx)("li", {
+          children: (0, a.jsx)(q, {
             upload: e,
             onDeleteAttachment: c,
             progress: C[e.id]

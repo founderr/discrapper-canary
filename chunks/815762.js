@@ -23,14 +23,14 @@ l.default.initialize();
 var T = e => {
   let {
     location: t
-  } = e, n = (0, l.useStateFromStores)([E.default], () => E.default.isAuthenticated()), T = (0, l.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments), m = (0, c.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [N, g] = a.useState(!1), [A, S] = a.useState(p.default.Messages.AUTHORIZING), [C, v] = a.useState(!0);
+  } = e, n = (0, l.useStateFromStores)([E.default], () => E.default.isAuthenticated()), T = (0, l.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments), N = (0, c.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [m, g] = a.useState(!1), [A, S] = a.useState(p.default.Messages.AUTHORIZING), [C, v] = a.useState(!0);
   return a.useEffect(() => {
     n ? (v(!0), u.fetchCurrentUser({
       withAnalyticsToken: !0
     }).then(() => v(!1)).catch(() => v(!1))) : v(!1)
   }, [n]), a.useEffect(() => {
-    !T && !m && r.default.getExperiments()
-  }, [T, m]), a.useEffect(() => {
+    !T && !N && r.default.getExperiments()
+  }, [T, N]), a.useEffect(() => {
     let e = async e => {
       try {
         let t = null != e ? await (0, d.submitReportSecondLook)(e) : void 0;
@@ -44,10 +44,10 @@ var T = e => {
     g(!0);
     let n = (0, o.default)(t);
     e(n), (0, f.trackAppUIViewed)("report_second_look")
-  }, [t]), m && !C && (0, s.jsxs)(_.default, {
+  }, [t]), N && !C && (0, s.jsxs)(_.default, {
     children: [(0, s.jsx)(_.Title, {
       className: h.marginBottom8,
       children: A
-    }), N && (0, s.jsx)(i.Spinner, {})]
+    }), m && (0, s.jsx)(i.Spinner, {})]
   })
 }

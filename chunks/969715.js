@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return I
   },
   FeatureForumPostConfirmationModal: function() {
-    return E
+    return v
   }
 }), n("222007");
 var i = n("37983"),
@@ -65,21 +65,21 @@ function p(e) {
     children: a,
     options: d,
     ...m
-  } = e, [p, I] = s.useState(null), [E, v] = s.useState(!1);
+  } = e, [p, I] = s.useState(null), [v, E] = s.useState(!1);
   return (0, i.jsxs)(o.ConfirmModal, {
     header: l,
     confirmText: h.default.Messages.GUILD_FEED_FEATURE_BUTTON_TEXT,
     cancelText: h.default.Messages.CANCEL,
     confirmButtonColor: o.Button.Colors.BRAND,
-    loading: E,
+    loading: v,
     onConfirm: async () => {
       try {
         let e = r().add(n, "second").toDate();
-        v(!0), await (0, c.featureGuildFeedItem)(t, e, d)
+        E(!0), await (0, c.featureGuildFeedItem)(t, e, d)
       } catch (e) {
         throw I(new u.default(e)), e
       } finally {
-        v(!1)
+        E(!1)
       }
     },
     ...m,
@@ -129,7 +129,7 @@ function I(e) {
   })
 }
 
-function E(e) {
+function v(e) {
   let {
     thread: t,
     guildId: n,

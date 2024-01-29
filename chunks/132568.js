@@ -1,19 +1,19 @@
 "use strict";
-E.r(e), E.d(e, {
+t.r(e), t.d(e, {
   DEFAULT_CHANNEL_EMOJI: function() {
-    return C
+    return E
   },
   CHANNEL_EMOJI_BACKGROUND_OPACITY_LIGHT: function() {
-    return n
-  },
-  CHANNEL_EMOJI_BACKGROUND_OPACITY_DARK: function() {
     return l
   },
+  CHANNEL_EMOJI_BACKGROUND_OPACITY_DARK: function() {
+    return n
+  },
   DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR: function() {
-    return t
+    return C
   }
 });
-let C = "\uD83D\uDCAC",
-  n = .16,
-  l = .2,
-  t = "#607D8B"
+let E = "\uD83D\uDCAC",
+  l = .16,
+  n = .2,
+  C = "#607D8B"

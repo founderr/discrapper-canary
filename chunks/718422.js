@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   applyChatRestrictions: function() {
-    return T
+    return h
   }
 }), l("222007");
 var n = l("37983");
@@ -18,43 +18,43 @@ var a = l("77078"),
   m = l("49111"),
   p = l("782340");
 
-function T(e) {
+function h(e) {
   let {
     openWarningPopout: t,
     type: l,
-    content: T,
+    content: h,
     stickers: E,
-    uploads: S,
-    channel: _,
-    restrictMentions: h = !0,
-    respectCooldown: I = !0
+    uploads: T,
+    channel: S,
+    restrictMentions: _ = !0,
+    respectCooldown: g = !0
   } = e, A = f.default.canUseIncreasedMessageLength(u.default.getCurrentUser());
   return new Promise(e => (function(e) {
     var t, l, u;
     let {
       openWarningPopout: f,
-      type: T,
+      type: h,
       content: E,
-      stickers: S,
-      uploads: _,
-      channel: h,
-      restrictMentions: I,
+      stickers: T,
+      uploads: S,
+      channel: _,
+      restrictMentions: g,
       respectCooldown: A,
-      userCanUsePremiumMessageLength: g,
+      userCanUsePremiumMessageLength: I,
       resolve: v
     } = e;
-    if (0 === E.length && !(null === (t = T.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == S || 0 === S.length) && (null == _ || 0 === _.length)) {
+    if (0 === E.length && !(null === (t = h.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == T || 0 === T.length) && (null == S || 0 === S.length)) {
       v({
         valid: !1,
         failureReason: m.MessageRestrictionTypes.EMPTY_MESSAGE
       });
       return
     }
-    let C = g ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
-    if (E.length > C) {
-      if (g || null == h) {
+    let N = I ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
+    if (E.length > N) {
+      if (I || null == _) {
         ;
-        l = E.length, u = C, (0, a.openModal)(e => (0, n.jsx)(i.default, {
+        l = E.length, u = N, (0, a.openModal)(e => (0, n.jsx)(i.default, {
           title: p.default.Messages.MESSAGE_TOO_LONG_HEADER,
           body: p.default.Messages.MESSAGE_TOO_LONG_BODY_TEXT.format({
             currentLength: l,
@@ -68,7 +68,7 @@ function T(e) {
         })
       } else s.default.dispatch({
         type: "MESSAGE_LENGTH_UPSELL",
-        channel: h,
+        channel: _,
         content: E
       });
       v({
@@ -77,8 +77,8 @@ function T(e) {
       });
       return
     }
-    if (null != h) {
-      if (null != h.getGuildId() && A && o.default.getSlowmodeCooldownGuess(h.id) > 0) {
+    if (null != _) {
+      if (null != _.getGuildId() && A && o.default.getSlowmodeCooldownGuess(_.id) > 0) {
         v({
           valid: !1,
           failureReason: m.MessageRestrictionTypes.SLOWMODE_COOLDOWN
@@ -92,11 +92,11 @@ function T(e) {
             animation: l
           }
           of c.RESTRICTIONS) {
-          let n = e(E, h, I);
+          let n = e(E, _, g);
           if (!1 !== n) {
             f({
               analyticsType: t,
-              channel: h,
+              channel: _,
               onCancel: () => v({
                 valid: !1,
                 failureReason: m.MessageRestrictionTypes.SHOUTING_CANCELLED
@@ -131,12 +131,12 @@ function T(e) {
   })({
     openWarningPopout: t,
     type: l,
-    content: T,
+    content: h,
     stickers: E,
-    uploads: S,
-    channel: _,
-    restrictMentions: h,
-    respectCooldown: I,
+    uploads: T,
+    channel: S,
+    restrictMentions: _,
+    respectCooldown: g,
     userCanUsePremiumMessageLength: A,
     resolve: e
   }))

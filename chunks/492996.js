@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var s = n("37983");
@@ -14,13 +14,13 @@ var l = n("65597"),
   u = n("817892"),
   d = n("908480"),
   c = n("786214"),
-  f = n("782340");
+  E = n("782340");
 
-function E(e) {
+function f(e) {
   let {
     channelId: t,
     messageId: n,
-    transitionState: E,
+    transitionState: f,
     onClose: _
   } = e, T = (0, o.useIsEligibleForExplicitMediaSenderFalsePositive)("fp_action_sheet"), I = (0, l.default)([u.default], () => u.default.getFpMessageInfo(n)), m = I.attachments.map(e => e.id), N = I.attachments.map(e => e.filename), {
     reportFalsePositive: p,
@@ -30,7 +30,7 @@ function E(e) {
       (0, c.handleSuccess)(_), i.default.disableFalsePositiveButton(t, n)
     },
     onError: () => {
-      (0, a.showToast)((0, a.createToast)(f.default.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE))
+      (0, a.showToast)((0, a.createToast)(E.default.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE))
     },
     report: () => {
       (0, r.reportFailedSendFalsePositive)(t, n, m, N)
@@ -41,7 +41,7 @@ function E(e) {
     channelId: t,
     isReportFalsePositiveLoading: S,
     onConfirmPress: p,
-    transitionState: E,
+    transitionState: f,
     onClose: _
   })
 }

@@ -11,8 +11,8 @@ var s, l, a = n("37983"),
   u = n("77078"),
   d = n("438931"),
   c = n("997289"),
-  f = n("605250"),
-  E = n("393414"),
+  E = n("605250"),
+  f = n("393414"),
   _ = n("677225"),
   T = n("9377"),
   I = n("148813"),
@@ -195,9 +195,9 @@ class v extends i.Component {
         let {
           libraryApplication: e
         } = this.props;
-        await d.updateFlags(e.id, e.branchId, e.getFlags() & ~g.LibraryApplicationFlags.HIDDEN), (0, E.transitionTo)(g.Routes.APPLICATION_LIBRARY)
+        await d.updateFlags(e.id, e.branchId, e.getFlags() & ~g.LibraryApplicationFlags.HIDDEN), (0, f.transitionTo)(g.Routes.APPLICATION_LIBRARY)
       } catch (e) {
-        new(0, f.default)("LibraryApplicationButton").error(e)
+        new(0, E.default)("LibraryApplicationButton").error(e)
       }
     }, this.handleInstall = () => {
       let {

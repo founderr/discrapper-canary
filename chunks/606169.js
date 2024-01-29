@@ -1,17 +1,17 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   ImageFileUpIcon: function() {
     return r
   }
 });
-var a = A("37983");
-A("884691");
-var l = A("669491"),
-  n = A("75196");
+var a = t("37983");
+t("884691");
+var l = t("669491"),
+  n = t("75196");
 let r = e => {
   let {
-    width: t = 24,
-    height: A = 24,
+    width: A = 24,
+    height: t = 24,
     color: r = l.default.colors.INTERACTIVE_NORMAL,
     colorClass: s = "",
     ...o
@@ -19,8 +19,8 @@ let r = e => {
   return (0, a.jsxs)("svg", {
     ...(0, n.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
-    width: t,
-    height: A,
+    width: A,
+    height: t,
     fill: "none",
     viewBox: "0 0 24 24",
     children: [(0, a.jsx)("path", {

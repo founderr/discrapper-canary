@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("851387"),
   d = n("393414"),
   c = n("305961"),
-  f = n("162771"),
-  E = n("531470"),
+  E = n("162771"),
+  f = n("531470"),
   _ = n("794818"),
   T = n("267567"),
   I = n("49111"),
@@ -22,7 +22,7 @@ var s = n("37983"),
   N = n("600323"),
   p = n("105029"),
   S = () => {
-    let e = (0, r.useStateFromStores)([f.default], () => f.default.getGuildId(), []),
+    let e = (0, r.useStateFromStores)([E.default], () => E.default.getGuildId(), []),
       t = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(e), [e]),
       n = (0, r.useStateFromStores)([T.default], () => T.default.getHistorySnapshot(), []),
       [a, S] = l.useState(!1);
@@ -51,7 +51,7 @@ var s = n("37983"),
             ...n.location
           }) : e.goBack()
         },
-        children: [(0, s.jsx)(E.default, {
+        children: [(0, s.jsx)(f.default, {
           width: 16,
           height: 16,
           className: N.arrow

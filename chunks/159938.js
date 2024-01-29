@@ -13,8 +13,8 @@ var s = n("884691"),
   u = n("26989"),
   d = n("305961"),
   c = n("162771"),
-  f = n("697218"),
-  E = n("639440"),
+  E = n("697218"),
+  f = n("639440"),
   _ = n("690563"),
   T = n("921387"),
   I = n("711326"),
@@ -36,12 +36,12 @@ function N(e, t) {
       user: M,
       selectedGuildId: O,
       canAccess: R
-    } = (0, l.useStateFromStoresObject)([T.default, d.default, o.default, f.default, c.default], () => {
+    } = (0, l.useStateFromStoresObject)([T.default, d.default, o.default, E.default, c.default], () => {
       var e;
       let t = null === (e = T.default.getMediaPostEmbed(null == N ? void 0 : N.threadId)) || void 0 === e ? void 0 : e.media,
         n = d.default.getGuild(null == N ? void 0 : N.guildId),
         s = o.default.getChannel(null == N ? void 0 : N.channelId),
-        l = f.default.getUser(null == t ? void 0 : t.author_id),
+        l = E.default.getUser(null == t ? void 0 : t.author_id),
         a = c.default.getGuildId(),
         r = null != s && (0, i.canViewChannel)(s);
       return {
@@ -70,7 +70,7 @@ function N(e, t) {
   return s.useEffect(() => {
     if ((null == N ? void 0 : N.threadId) != null) {
       let e = T.default.getEmbedFetchState(N.threadId);
-      !0 === n && e === T.FetchState.NOT_FETCHED && (!p || !1 !== S) && (p || !A) && (0, E.fetchMediaPostEmbed)(null == N ? void 0 : N.threadId)
+      !0 === n && e === T.FetchState.NOT_FETCHED && (!p || !1 !== S) && (p || !A) && (0, f.fetchMediaPostEmbed)(null == N ? void 0 : N.threadId)
     }
   }, [N, n, p, S, A]), L
 }

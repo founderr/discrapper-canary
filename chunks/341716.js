@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("866227"),
   d = n.n(u),
   c = n("77078"),
-  f = n("574073"),
-  E = n("38600"),
+  E = n("574073"),
+  f = n("38600"),
   _ = n("981601"),
   T = n("315102"),
   I = n("888400"),
@@ -64,7 +64,7 @@ function g(e) {
     channel: r,
     messageId: a.id,
     interactionData: a.interactionData
-  })), [r, a.id, a.interactionData]), M = (0, f.useNullableUserAuthor)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, r), O = l.useMemo(() => e.compact ? (0, E.default)((0, I.dateFormat)(d(), "LT")) : null, [e.compact]), R = a.interaction;
+  })), [r, a.id, a.interactionData]), M = (0, E.useNullableUserAuthor)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, r), O = l.useMemo(() => e.compact ? (0, f.default)((0, I.dateFormat)(d(), "LT")) : null, [e.compact]), R = a.interaction;
   if (null == R || null == M) return null;
   let L = () => {
     let t = function(e, t) {
@@ -75,7 +75,7 @@ function g(e) {
           isInteractionUserBlocked: o,
           showAvatarPopout: u,
           onClickAvatar: d,
-          onUserContextMenu: E,
+          onUserContextMenu: f,
           onPopoutRequestClose: _
         } = e;
         if (a && null == l.activityInstance || o) return (0, s.jsx)("div", {
@@ -86,7 +86,7 @@ function g(e) {
         });
         if (null != l.interaction) {
           var I, m, N;
-          let e = (0, f.getUserAuthor)(l.interaction.user, r);
+          let e = (0, E.getUserAuthor)(l.interaction.user, r);
           n = null !== (N = T.default.getGuildMemberAvatarURL({
             avatar: null !== (I = e.guildMemberAvatar) && void 0 !== I ? I : void 0,
             userId: l.interaction.user.id,
@@ -118,7 +118,7 @@ function g(e) {
           guildId: r.guild_id,
           guildAvatar: n,
           onClick: d,
-          onContextMenu: E
+          onContextMenu: f
         });
         return null != t && null != u ? (0, s.jsx)(c.Popout, {
           renderPopout: t,

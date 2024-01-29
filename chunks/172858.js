@@ -1,5 +1,5 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   DUCK_CONFETTI_SPRITE: function() {
     return n
   },
@@ -16,15 +16,15 @@ A.r(t), A.d(t, {
     return i
   },
   COMMON_CONFETTI_ENVIRONMENT: function() {
-    return u
+    return d
   }
 });
-var a = A("516555"),
-  l = A("839491");
+var a = t("516555"),
+  l = t("839491");
 let n = l,
   r = ["#FF73FA", "#FFC0FF", "#FFD836", "#FF9A15", "#A5F7DE", "#51BC9D", "#AEC7FF", "#3E70DD"],
-  s = [A("606863"), n, A("164654"), A("540346"), A("526094"), A("367469"), A("23933"), {
-    src: A("283397"),
+  s = [t("606863"), n, t("164654"), t("540346"), t("526094"), t("367469"), t("23933"), {
+    src: t("283397"),
     colorize: !1
   }],
   o = 28,
@@ -53,4 +53,4 @@ let n = l,
       maxValue: o
     }
   },
-  u = new a.Environment
+  d = new a.Environment

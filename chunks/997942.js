@@ -32,7 +32,7 @@ let i = [e => {
 async function d(e) {
   var t;
   let d = (await n.el("990599").then(n.t.bind(n, "990599", 23))).default;
-  let u = (t = d, null != l ? l : l = t.object({
+  let s = (t = d, null != l ? l : l = t.object({
     id: t.string().required(),
     version: t.number().positive().integer().min(0).max(a.CURRENT_CLIP_METADATA_VERSION).optional(),
     name: t.string().when("version", {
@@ -63,7 +63,7 @@ async function d(e) {
     clipMethod: t.string().allow("auto", "manual").required()
   }).required());
   try {
-    d.assert(e, u);
+    d.assert(e, s);
     return null == e.version && (e.version = 0), i.slice(e.version).reduce((e, t) => t(e), e)
   } catch (e) {
     return null

@@ -11,8 +11,8 @@ var r, i, l = n("37983");
 n("884691");
 var o = n("77078"),
   s = n("145131"),
-  a = n("181114"),
-  u = n("376641"),
+  u = n("181114"),
+  a = n("376641"),
   c = n("782340"),
   d = n("198699");
 (r = i || (i = {}))[r.CONTINUE = 0] = "CONTINUE", r[r.UPGRADE = 1] = "UPGRADE", r[r.PURCHASE = 2] = "PURCHASE";
@@ -25,9 +25,9 @@ let f = e => {
     primaryType: f,
     primaryText: E,
     primaryTooltip: _,
-    primaryDisabled: C,
-    primarySubmitting: I,
-    onPrimary: p,
+    primaryDisabled: p,
+    primarySubmitting: C,
+    onPrimary: I,
     secondaryText: A,
     onSecondary: T
   } = e;
@@ -36,14 +36,14 @@ let f = e => {
     align: s.default.Align.CENTER,
     children: [(() => {
       if (null == i || null == E) return null;
-      let e = 2 === i ? a.default : o.Button,
+      let e = 2 === i ? u.default : o.Button,
         t = {
           innerClassName: d.button,
           type: f,
-          disabled: C,
-          submitting: I,
+          disabled: p,
+          submitting: C,
           color: 0 === i ? o.Button.Colors.BRAND : o.Button.Colors.GREEN,
-          onClick: p
+          onClick: I
         };
       return null != _ ? (0, l.jsx)(o.Tooltip, {
         text: _,
@@ -65,7 +65,7 @@ let f = e => {
       look: o.Button.Looks.LINK,
       onClick: T,
       children: A
-    }), (0, l.jsx)(u.default, {}), null == t ? null : (0, l.jsx)(o.Button, {
+    }), (0, l.jsx)(a.default, {}), null == t ? null : (0, l.jsx)(o.Button, {
       className: d.back,
       color: o.Button.Colors.PRIMARY,
       look: o.Button.Looks.LINK,

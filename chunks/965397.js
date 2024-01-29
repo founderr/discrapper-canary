@@ -1,21 +1,21 @@
 "use strict";
-A.r(t), A.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return c
+    return f
   }
-}), A("222007");
-var a = A("37983"),
-  l = A("884691"),
-  n = A("414456"),
-  r = A.n(n),
-  s = A("458960"),
-  o = A("77078"),
-  i = A("866893");
-let u = {
+}), n("222007");
+var l = n("37983"),
+  i = n("884691"),
+  s = n("414456"),
+  r = n.n(s),
+  o = n("458960"),
+  a = n("77078"),
+  u = n("866893");
+let d = {
   friction: 7,
   tension: 60
 };
-class d extends l.Component {
+class c extends i.Component {
   componentWillAppear(e) {
     this.animateTo(1).start(e)
   }
@@ -26,11 +26,11 @@ class d extends l.Component {
     let {
       reducedMotion: t
     } = this.context;
-    t.enabled ? this.animateTo(0).start(e) : s.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
+    t.enabled ? this.animateTo(0).start(e) : o.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
   }
   animateTo(e) {
-    return s.default.spring(this.animation, {
-      ...u,
+    return o.default.spring(this.animation, {
+      ...d,
       toValue: e
     })
   }
@@ -38,7 +38,7 @@ class d extends l.Component {
     let {
       reducedMotion: e
     } = this.context;
-    return s.default.accelerate({
+    return o.default.accelerate({
       opacity: this.animation,
       transform: e.enabled ? void 0 : [{
         translateY: this.animation.interpolate({
@@ -53,15 +53,15 @@ class d extends l.Component {
       className: e,
       children: t
     } = this.props;
-    return (0, a.jsx)(s.default.div, {
-      className: r(e, i.slider),
+    return (0, l.jsx)(o.default.div, {
+      className: r(e, u.slider),
       style: this.getAnimatedStyle(),
       children: t
     })
   }
   constructor(...e) {
-    super(...e), this.animation = new s.default.Value(0)
+    super(...e), this.animation = new o.default.Value(0)
   }
 }
-d.contextType = o.AccessibilityPreferencesContext;
-var c = d
+c.contextType = a.AccessibilityPreferencesContext;
+var f = c

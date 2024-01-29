@@ -4,13 +4,13 @@
         return i
       }
     });
-    var d = t("862337"),
-      s = t("913144"),
+    var s = t("862337"),
+      d = t("913144"),
       n = t("845579");
-    let c = new d.Timeout;
+    let c = new s.Timeout;
     var i = {
       init() {
-        s.default.subscribe("USER_SETTINGS_PROTO_UPDATE", () => {
+        d.default.subscribe("USER_SETTINGS_PROTO_UPDATE", () => {
           let e = n.CustomStatusSetting.getSetting();
           if (null == e) c.stop();
           else if (null != e.expiresAtMs && "0" !== e.expiresAtMs) {

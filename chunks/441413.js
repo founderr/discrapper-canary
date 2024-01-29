@@ -13,8 +13,8 @@ var i = n("414456"),
   l = n.n(i),
   o = n("75196"),
   s = n("956089"),
-  a = n("125835"),
-  u = n("782340"),
+  u = n("125835"),
+  a = n("782340"),
   c = n("159163");
 
 function d(e) {
@@ -41,7 +41,7 @@ function f(e) {
     shouldInheritTextColor: i = !1,
     shouldInheritBackgroundColor: o = !1
   } = e;
-  return (0, r.jsx)(a.default, {
+  return (0, r.jsx)(u.default, {
     className: t,
     forceUseColor: n,
     children: (0, r.jsx)(s.TextBadge, {
@@ -50,7 +50,7 @@ function f(e) {
         [c.inheritTextColor]: i,
         [c.inheritBackgroundColor]: o
       }),
-      text: u.default.Messages.NEW
+      text: a.default.Messages.NEW
     })
   })
 }

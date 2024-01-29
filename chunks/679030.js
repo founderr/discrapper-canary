@@ -18,15 +18,15 @@ var s, a, l = n("37983"),
   p = n("970366"),
   h = n("271938"),
   T = n("476108"),
-  m = n("55411"),
-  N = n("686470"),
+  N = n("55411"),
+  m = n("686470"),
   g = n("552712"),
   A = n("124969"),
   S = n("659632"),
   C = n("701909"),
   v = n("158998"),
-  R = n("404432"),
-  L = n("291850"),
+  L = n("404432"),
+  R = n("291850"),
   O = n("860959"),
   x = n("49111"),
   M = n("782340"),
@@ -163,7 +163,7 @@ class P extends i.PureComponent {
   renderAuthenticated(e, t) {
     let n = this.getErrorMessage(e);
     return (0, l.jsxs)(A.default, {
-      children: [(0, l.jsx)(R.default, {
+      children: [(0, l.jsx)(L.default, {
         giftCode: e
       }), (0, l.jsx)(A.Button, {
         disabled: null != n,
@@ -205,7 +205,7 @@ class P extends i.PureComponent {
         let e = this.state.currentUser;
         return o || null == e ? this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e)
       }
-      return "login" === this.getMode() ? (0, l.jsx)(L.default, {
+      return "login" === this.getMode() ? (0, l.jsx)(R.default, {
         giftCodeSKU: t,
         giftCode: s,
         transitionTo: r,
@@ -272,19 +272,19 @@ class P extends i.PureComponent {
     }
   }
 }
-var j = o.default.connectStores([m.default, N.default, h.default, g.default, T.default, _.default], e => {
+var j = o.default.connectStores([N.default, m.default, h.default, g.default, T.default, _.default], e => {
   let t = e.match.params.giftCode,
-    n = m.default.get(t),
+    n = N.default.get(t),
     s = null != n ? g.default.get(n.skuId) : null;
   return {
     giftCode: n,
     sku: s,
-    libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, N.default) : null,
+    libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, m.default) : null,
     authenticated: h.default.isAuthenticated(),
     defaultRoute: T.default.defaultRoute,
-    isResolved: m.default.getIsResolved(t),
-    isAccepting: m.default.getIsAccepting(t),
-    libraryApplicationsFetched: N.default.fetched,
+    isResolved: N.default.getIsResolved(t),
+    isAccepting: N.default.getIsAccepting(t),
+    libraryApplicationsFetched: m.default.fetched,
     nativeAppState: _.default.getState(t)
   }
 })(P)

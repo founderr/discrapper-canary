@@ -1,101 +1,101 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return L
   }
 }), n("222007");
-var l = n("637612"),
-  r = n("446674"),
-  i = n("913144"),
+var i = n("637612"),
+  l = n("446674"),
+  r = n("913144"),
   s = n("697218"),
   a = n("179935"),
   o = n("49111");
 let u = null,
-  c = {},
-  d = [],
+  d = {},
+  c = [],
   f = new Set,
-  h = !1,
-  E = new Set,
-  p = new Set,
+  E = !1,
+  h = new Set,
+  _ = new Set,
   C = {},
-  _ = 0,
-  m = null,
-  v = () => !0;
+  p = 0,
+  S = null,
+  I = () => !0;
 
-function I(e) {
-  E.add(e)
+function R(e) {
+  h.add(e)
 }
 
-function g(e) {
+function m(e) {
   let {
     messages: t
   } = e;
-  t.forEach(e => S(e))
+  t.forEach(e => g(e))
 }
 
-function S(e) {
-  let t = e.type === l.MessageTypes.PREMIUM_REFERRAL ? e.content : null;
+function g(e) {
+  let t = e.type === i.MessageTypes.PREMIUM_REFERRAL ? e.content : null;
   if (null == t) return !1;
-  if (!p.has(t) && !E.has(t)) {
+  if (!_.has(t) && !h.has(t)) {
     var n;
-    n = t, E.add(n), i.default.wait(() => (0, a.resolveReferralTrialOffer)(t).catch(o.NOOP_NULL))
+    n = t, h.add(n), r.default.wait(() => (0, a.resolveReferralTrialOffer)(t).catch(o.NOOP_NULL))
   }
 }
-class R extends r.default.Store {
+class v extends l.default.Store {
   initialize() {
-    this.waitFor(s.default), this.syncWith([s.default], v)
+    this.waitFor(s.default), this.syncWith([s.default], I)
   }
   checkAndFetchReferralsRemaining() {
-    null == u && !h && _ < 5 && (null == m || m < Date.now()) && (0, a.fetchReferralsRemaining)()
+    null == u && !E && p < 5 && (null == S || S < Date.now()) && (0, a.fetchReferralsRemaining)()
   }
   getReferralsRemaining() {
     return this.checkAndFetchReferralsRemaining(), u
   }
   getSentUserIds() {
-    return this.checkAndFetchReferralsRemaining(), null == d ? [] : d
+    return this.checkAndFetchReferralsRemaining(), null == c ? [] : c
   }
   isFetchingReferralsRemaining() {
-    return h
+    return E
   }
   isFetchingRecipientEligibility(e) {
     return f.has(e)
   }
   getRecipientEligibility(e) {
-    return void 0 === c[e] && !f.has(e) && (0, a.checkRecipientEligibility)(e), c[e]
+    return void 0 === d[e] && !f.has(e) && (0, a.checkRecipientEligibility)(e), d[e]
   }
   getRelevantUserTrialOffer(e) {
     return C[e]
   }
   isResolving(e) {
-    return E.has(e)
+    return h.has(e)
   }
 }
-R.displayName = "ReferralTrialStore";
-var N = new R(i.default, {
+v.displayName = "ReferralTrialStore";
+var L = new v(r.default, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function(e) {
     let {
       userTrialOfferId: t,
       recipientId: n
     } = e;
-    if (!h && (0, a.fetchReferralsRemaining)(), !f.has(n) && (0, a.checkRecipientEligibility)(n), !E.has(t)) {
-      var l;
-      l = t, E.add(l), i.default.wait(() => (0, a.resolveReferralTrialOffer)(t).catch(o.NOOP_NULL))
+    if (!E && (0, a.fetchReferralsRemaining)(), !f.has(n) && (0, a.checkRecipientEligibility)(n), !h.has(t)) {
+      var i;
+      i = t, h.add(i), r.default.wait(() => (0, a.resolveReferralTrialOffer)(t).catch(o.NOOP_NULL))
     }
   },
   BILLING_REFERRALS_REMAINING_FETCH_START: function(e) {
     let {} = e;
-    h = !0
+    E = !0
   },
   BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function(e) {
     let {
       referrals_remaining: t,
       sent_user_ids: n
     } = e;
-    h = !1, u = t, d = n
+    E = !1, u = t, c = n
   },
   BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
     let {} = e;
-    h = !1, _ += 1, m = Date.now() + 1e3 * Math.pow(2, _)
+    E = !1, p += 1, S = Date.now() + 1e3 * Math.pow(2, p)
   },
   BILLING_CREATE_REFERRAL_PREVIEW_START: function(e) {
     let {
@@ -108,41 +108,41 @@ var N = new R(i.default, {
       recipientId: t,
       is_eligible: n
     } = e;
-    c[t] = n, f.delete(t)
+    d[t] = n, f.delete(t)
   },
   BILLING_CREATE_REFERRAL_PREVIEW_FAIL: function(e) {
     let {
       recipientId: t
     } = e;
-    c[t] = !1, f.delete(t)
+    d[t] = !1, f.delete(t)
   },
   BILLING_CREATE_REFERRAL_SUCCESS: function(e) {
     let {
       userTrialOffer: t
     } = e;
-    (0, a.fetchReferralsRemaining)(), C[t.id] = t, d = [...d, t.user_id]
+    (0, a.fetchReferralsRemaining)(), C[t.id] = t, c = [...c, t.user_id]
   },
   BILLING_REFERRAL_RESOLVE_SUCCESS: function(e) {
     let {
       userTrialOffer: t
     } = e;
-    null != t && (E.delete(t.id), p.add(t.id), C[t.id] = t)
+    null != t && (h.delete(t.id), _.add(t.id), C[t.id] = t)
   },
   BILLING_REFERRAL_RESOLVE_FAIL: function(e) {
     let {
       userTrialOfferId: t
     } = e;
-    E.delete(t), p.add(t)
+    h.delete(t), _.add(t)
   },
-  LOAD_MESSAGES_SUCCESS: g,
+  LOAD_MESSAGES_SUCCESS: m,
   MESSAGE_CREATE: function(e) {
     let {
       message: t
     } = e;
-    S(t)
+    g(t)
   },
-  LOAD_MESSAGES_AROUND_SUCCESS: g,
+  LOAD_MESSAGES_AROUND_SUCCESS: m,
   LOGOUT: function() {
-    u = null, c = {}, d = [], f = new Set, h = !1, E = new Set, p = new Set, C = {}, _ = 0, m = null
+    u = null, d = {}, c = [], f = new Set, E = !1, h = new Set, _ = new Set, C = {}, p = 0, S = null
   }
 })

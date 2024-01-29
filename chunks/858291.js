@@ -14,8 +14,8 @@ var l = n("65597"),
   u = n("306160"),
   d = n("442379"),
   c = n("757515"),
-  f = n("727411"),
-  E = n("492724"),
+  E = n("727411"),
+  f = n("492724"),
   _ = n("928576"),
   T = n("739726"),
   I = n("358404"),
@@ -54,7 +54,7 @@ function N(e) {
       showDeleteProduct: !1,
       showReportProduct: !0,
       onEditProduct: x ? () => {
-        f.openModal(L.id, n.id)
+        E.openModal(L.id, n.id)
       } : () => {},
       onUnpublishProduct: () => {},
       onDeleteProduct: () => {},
@@ -68,7 +68,7 @@ function N(e) {
       },
       onTestDownload: () => {}
     });
-  return (0, s.jsx)(E.default, {
+  return (0, s.jsx)(f.default, {
     imageUrl: P,
     name: n.name,
     description: n.description,

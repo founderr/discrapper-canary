@@ -16,35 +16,35 @@ var n = l("37983"),
   f = l("235767"),
   m = l("190045"),
   p = l("419806"),
-  T = l("373469"),
+  h = l("373469"),
   E = l("42203"),
-  S = l("26989"),
-  _ = l("957255"),
-  h = l("102985"),
-  I = l("987772"),
+  T = l("26989"),
+  S = l("957255"),
+  _ = l("102985"),
+  g = l("987772"),
   A = l("164424"),
-  g = l("387111"),
+  I = l("387111"),
   v = l("158998"),
-  C = l("713135"),
-  N = l("765698"),
+  N = l("713135"),
+  C = l("765698"),
   y = l("906889"),
-  O = l("10532"),
-  M = l("648149"),
-  x = l("915712"),
+  M = l("10532"),
+  x = l("648149"),
+  O = l("915712"),
   R = l("261523"),
   L = l("369869"),
   P = l("545590"),
-  b = l("972595"),
-  D = l("316095"),
-  j = l("802279"),
+  j = l("972595"),
+  b = l("316095"),
+  D = l("802279"),
   U = l("577172"),
-  F = l("465215"),
-  w = l("301998"),
+  w = l("465215"),
+  F = l("301998"),
   G = l("379657"),
-  k = l("853780"),
-  B = l("574191"),
-  Y = l("491250"),
-  V = l("453649"),
+  Y = l("853780"),
+  k = l("574191"),
+  V = l("491250"),
+  B = l("453649"),
   H = l("49111"),
   W = l("782340"),
   z = l("956330"),
@@ -66,49 +66,49 @@ function X(e) {
     canDM: ea,
     hideNote: es = !1,
     showCopiableUsername: ei = !1
-  } = e, er = (0, r.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), eo = (0, r.useStateFromStores)([C.default], () => {
+  } = e, er = (0, r.useStateFromStores)([_.default], () => _.default.hidePersonalInformation), eo = (0, r.useStateFromStores)([N.default], () => {
     var e;
-    return null === (e = C.default.getUserProfile(Q.id)) || void 0 === e ? void 0 : e.application
-  }), eu = (0, r.useStateFromStores)([T.default], () => null != T.default.getAnyStreamForUser(Q.id)), ed = (0, V.useGetVoiceChannelInfoForVoiceActivitySection)(Q.id, null == $ ? void 0 : $.id), ec = !eu && null != ed, {
+    return null === (e = N.default.getUserProfile(Q.id)) || void 0 === e ? void 0 : e.application
+  }), eu = (0, r.useStateFromStores)([h.default], () => null != h.default.getAnyStreamForUser(Q.id)), ed = (0, B.useGetVoiceChannelInfoForVoiceActivitySection)(Q.id, null == $ ? void 0 : $.id), ec = !eu && null != ed, {
     showVoiceActivityInProfile: ef
-  } = N.VoiceActivityProfileExperiment.useExperiment({
+  } = C.VoiceActivityProfileExperiment.useExperiment({
     location: "user popout"
   }, {
     autoTrackExposure: ec
-  }), [em, ep] = a.useState(!1), [eT, eE] = a.useState(!1), eS = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(et)), e_ = (0, r.useStateFromStores)([_.default], () => _.default.can(H.Permissions.USE_CLYDE_AI, eS)), {
-    profileTheme: eh
-  } = (0, y.default)(Q, q), eI = a.useRef(null), [eA, eg] = a.useState(!0), ev = a.useCallback(() => {
+  }), [em, ep] = a.useState(!1), [eh, eE] = a.useState(!1), eT = (0, r.useStateFromStores)([E.default], () => E.default.getChannel(et)), eS = (0, r.useStateFromStores)([S.default], () => S.default.can(H.Permissions.USE_CLYDE_AI, eT)), {
+    profileTheme: e_
+  } = (0, y.default)(Q, q), eg = a.useRef(null), [eA, eI] = a.useState(!0), ev = a.useCallback(() => {
     let {
       current: e
-    } = eI;
-    null != e && eg(0 === e.getScrollerState().scrollTop)
-  }, []), eC = (0, d.canEditClydeAIProfile)($), eN = (0, c.canUseCustomClydeProfiles)($), ey = (0, r.useStateFromStores)([S.default], () => S.default.isMember(null == $ ? void 0 : $.id, Q.id));
+    } = eg;
+    null != e && eI(0 === e.getScrollerState().scrollTop)
+  }, []), eN = (0, d.canEditClydeAIProfile)($), eC = (0, c.canUseCustomClydeProfiles)($), ey = (0, r.useStateFromStores)([T.default], () => T.default.isMember(null == $ ? void 0 : $.id, Q.id));
   if (a.useLayoutEffect(() => {
       var e;
       let {
         current: t
-      } = eI;
+      } = eg;
       null != t && (null === (e = t.getScrollerNode()) || void 0 === e || e.scrollTo({
         top: 0
       }))
     }, []), Q.isSystemUser()) return null;
-  if (Q.isNonUserBot() && !Q.isClyde()) return (0, n.jsx)(Y.default, {
+  if (Q.isNonUserBot() && !Q.isClyde()) return (0, n.jsx)(V.default, {
     user: Q,
     nickname: null,
     pronouns: null,
     className: z.usernameSection,
     lastSection: !0
   });
-  let eO = null !== (t = g.default.getNickname(null == $ ? void 0 : $.id, et, Q)) && void 0 !== t ? t : v.default.getName(Q);
+  let eM = null !== (t = I.default.getNickname(null == $ ? void 0 : $.id, et, Q)) && void 0 !== t ? t : v.default.getName(Q);
   return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)(Y.default, {
+    children: [(0, n.jsx)(V.default, {
       className: z.usernameSection,
       user: Q,
-      nickname: eO,
+      nickname: eM,
       pronouns: null == q ? void 0 : q.pronouns,
-      usernameIcon: Q.hasAvatarForGuild(null == $ ? void 0 : $.id) && (0, n.jsx)(M.default, {
+      usernameIcon: Q.hasAvatarForGuild(null == $ ? void 0 : $.id) && (0, n.jsx)(x.default, {
         user: Q,
-        nickname: eO
+        nickname: eM
       }),
       shouldCopyOnClick: ei
     }), Q.isClyde() ? (0, n.jsx)("div", {
@@ -118,12 +118,12 @@ function X(e) {
         guildId: null == $ ? void 0 : $.id
       })
     }) : null, (0, n.jsxs)(o.HeadingLevel, {
-      children: [(0, n.jsx)(j.default, {
+      children: [(0, n.jsx)(D.default, {
         className: z.customStatusSection,
         customStatusActivity: J
-      }), (0, n.jsx)(O.default, {
+      }), (0, n.jsx)(M.default, {
         className: z.divider
-      }), Q.isClyde() && eC && null != $ ? !ey && eN ? e_ && !eT ? (0, n.jsx)(o.Button, {
+      }), Q.isClyde() && eN && null != $ ? !ey && eC ? eS && !eh ? (0, n.jsx)(o.Button, {
         className: z.editClydeButton,
         innerClassName: z.editClydeButtonInner,
         submitting: em,
@@ -152,10 +152,10 @@ function X(e) {
           onClick: () => {
             null == el || el(), (0, m.default)($.id)
           },
-          children: [(0, n.jsx)(I.default, {
+          children: [(0, n.jsx)(g.default, {
             className: z.pencilIcon
           }), " ", W.default.Messages.EDIT_CLYDE]
-        }), eN ? (0, n.jsxs)(o.Button, {
+        }), eC ? (0, n.jsxs)(o.Button, {
           className: z.editClydeButton,
           innerClassName: z.editClydeButtonInner,
           color: o.ButtonColors.WHITE,
@@ -171,7 +171,7 @@ function X(e) {
           [z.scrollerSeparator]: !eA
         }),
         onScroll: ev,
-        ref: eI,
+        ref: eg,
         children: [(0, n.jsx)(P.default, {
           user: Q,
           guildId: null == $ ? void 0 : $.id
@@ -180,46 +180,46 @@ function X(e) {
           bio: null == q ? void 0 : q.bio,
           guild: $,
           hidePersonalInformation: er
-        }), Q.isClyde() ? (0, n.jsx)(b.default, {}) : (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(F.default, {
+        }), Q.isClyde() ? (0, n.jsx)(j.default, {}) : (0, n.jsxs)(n.Fragment, {
+          children: [(0, n.jsx)(w.default, {
             userId: Q.id,
             guild: $,
             guildMember: ee
-          }), ef && ec && (0, n.jsx)(V.default, {
+          }), ef && ec && (0, n.jsx)(B.default, {
             voiceChannel: ed.voiceChannel,
             voiceGuild: ed.voiceGuild,
             onClose: el,
             color: K.buttonColor
-          }), (0, n.jsx)(x.default, {
+          }), (0, n.jsx)(O.default, {
             activity: X,
             user: Q,
             guild: $,
             channelId: et,
             onClose: el
-          }), (null == eo ? void 0 : eo.popularApplicationCommandIds) != null && null != eS ? (0, n.jsx)(G.default, {
+          }), (null == eo ? void 0 : eo.popularApplicationCommandIds) != null && null != eT ? (0, n.jsx)(G.default, {
             applicationId: eo.id,
             commandIds: eo.popularApplicationCommandIds,
-            channel: eS,
+            channel: eT,
             guildId: null == $ ? void 0 : $.id,
             onClick: el
           }) : null, (0, n.jsx)(R.default, {
             user: Q,
             guildId: null == $ ? void 0 : $.id
-          }), (0, n.jsx)(B.default, {
+          }), (0, n.jsx)(k.default, {
             user: Q,
             guild: $,
             guildMember: ee,
             showBorder: null !== (s = null == q ? void 0 : q.canEditThemes) && void 0 !== s && s
-          }), (0, n.jsx)(D.default, {
+          }), (0, n.jsx)(b.default, {
             userId: Q.id,
             channelId: et,
             guild: $,
             onClose: el,
-            theme: eh
-          }), null != eo && void 0 !== et && (0, n.jsx)(k.default, {
+            theme: e_
+          }), null != eo && void 0 !== et && (0, n.jsx)(Y.default, {
             channelId: et,
             applicationId: eo.id
-          }), (0, n.jsx)(w.default, {
+          }), (0, n.jsx)(F.default, {
             user: Q,
             setNote: en,
             autoFocus: !ea,
@@ -231,7 +231,7 @@ function X(e) {
           setNote: en,
           canDM: ea,
           onClose: el,
-          inClydeProfilesExperiment: eN
+          inClydeProfilesExperiment: eC
         })]
       })]
     })]

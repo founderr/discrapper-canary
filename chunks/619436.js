@@ -78,8 +78,8 @@ function _(e) {
     S = (0, i.useStateFromStores)([d.default], () => d.default.getChannelOverrides(t)[n], [t, n]),
     N = null == S ? r.UserNotificationSettings.NULL : S.message_notifications,
     g = (0, s.useVoiceActivityNotificationSettingsExperiment)(e),
-    M = f(e, g);
-  return null == M ? null : (0, a.jsxs)(a.Fragment, {
+    T = f(e, g);
+  return null == T ? null : (0, a.jsxs)(a.Fragment, {
     children: [e.isForumLikeChannel() ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(l.MenuCheckboxItem, {
         id: "new-forum-threads-created",
@@ -87,7 +87,7 @@ function _(e) {
         checked: E,
         action: () => u.default.setForumThreadsCreated(e, !E)
       }), (0, a.jsx)(l.MenuSeparator, {})]
-    }) : null, M.map(i => {
+    }) : null, T.map(i => {
       let {
         setting: s,
         label: d

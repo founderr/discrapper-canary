@@ -28,11 +28,11 @@ async function l(e, t) {
   let i = a.CLIPS_THUMBNAIL_MAX_WIDTH / n.videoWidth,
     l = a.CLIPS_THUMBNAIL_MAX_HEIGHT / n.videoHeight,
     d = Math.min(i, l),
-    u = n.videoWidth * d,
-    s = n.videoHeight * d,
-    r = document.createElement("canvas");
-  r.width = u, r.height = s;
-  let o = r.getContext("2d");
+    s = n.videoWidth * d,
+    r = n.videoHeight * d,
+    u = document.createElement("canvas");
+  u.width = s, u.height = r;
+  let o = u.getContext("2d");
   if (null == o) throw Error("Could not create canvas context");
-  return o.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, u, s), r.toDataURL("image/jpeg", .9)
+  return o.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, s, r), u.toDataURL("image/jpeg", .9)
 }

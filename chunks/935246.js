@@ -14,8 +14,8 @@ var l = n("446674"),
   u = n("376556"),
   d = n("926994"),
   c = n("889293"),
-  f = n("757557"),
-  E = n("994750"),
+  E = n("757557"),
+  f = n("994750"),
   _ = n("966003"),
   T = n("363861"),
   I = n("695827"),
@@ -177,14 +177,14 @@ let P = e => {
           });
         case a.DismissibleContent.QUEST_1_GO_LIVE_BANNER:
           let x = null == D ? void 0 : null === (t = D.metadata) || void 0 === t ? void 0 : t.partnerGame;
-          return (0, s.jsx)(E.default, {
+          return (0, s.jsx)(f.default, {
             noticeType: P,
             markAsDismissed: () => h(g.ContentDismissActionType.UNKNOWN),
             partnerGame: x
           });
         case a.DismissibleContent.QUEST_1_ENDED_INCOMPLETE:
           let y = null == D ? void 0 : null === (l = D.metadata) || void 0 === l ? void 0 : l.partnerGame;
-          return (0, s.jsx)(f.default, {
+          return (0, s.jsx)(E.default, {
             noticeType: P,
             markAsDismissed: () => h(g.ContentDismissActionType.UNKNOWN),
             partnerGame: y

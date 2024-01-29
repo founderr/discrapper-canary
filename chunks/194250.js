@@ -10,8 +10,8 @@ var l = n("37983"),
   i = n.n(s),
   r = n("77078"),
   u = n("656913"),
-  o = n("694187"),
-  d = n("151642"),
+  d = n("694187"),
+  o = n("151642"),
   c = n("29846"),
   E = n("398604"),
   f = n("189443"),
@@ -74,8 +74,8 @@ function C(e) {
     guildId: C,
     editBroadcastInfoData: p,
     error: x,
-    validationErrorMessage: R,
-    onChange: A,
+    validationErrorMessage: A,
+    onChange: R,
     canSetFocus: O = !1
   } = e, {
     entityType: L,
@@ -83,15 +83,15 @@ function C(e) {
     description: D,
     name: y,
     image: U,
-    scheduledEndTime: j,
-    scheduledStartTime: V,
+    scheduledEndTime: V,
+    scheduledStartTime: j,
     recurrenceRule: P
-  } = t, G = (0, d.useStageBlockedUsersCount)(M), b = null != t && (0, E.isGuildScheduledEventActive)(t), H = a.useMemo(() => {
+  } = t, G = (0, o.useStageBlockedUsersCount)(M), H = null != t && (0, E.isGuildScheduledEventActive)(t), b = a.useMemo(() => {
     let e = (0, _.getScheduleFromEventData)(t);
     return null != e ? e : {
-      startDate: i(V)
+      startDate: i(j)
     }
-  }, [t, V]), [B, F] = a.useState(null), w = a.useRef(null);
+  }, [t, j]), [F, B] = a.useState(null), w = a.useRef(null);
   a.useEffect(() => {
     if (O) {
       var e;
@@ -99,7 +99,7 @@ function C(e) {
     }
   }, [O]);
   let k = e => {
-      A({
+      R({
         image: e
       })
     },
@@ -124,7 +124,7 @@ function C(e) {
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: S.blockedUsersContainer,
-      children: null != M && !b && G > 0 && (0, l.jsx)(c.BlockedUsersNotice, {
+      children: null != M && !H && G > 0 && (0, l.jsx)(c.BlockedUsersNotice, {
         channelId: M
       })
     }), (0, l.jsxs)("div", {
@@ -136,7 +136,7 @@ function C(e) {
         children: [(0, l.jsx)(r.TextInput, {
           className: S.textInput,
           onChange: e => {
-            A({
+            R({
               name: e
             })
           },
@@ -161,27 +161,27 @@ function C(e) {
             scheduledStartTime: null == t ? void 0 : t.toISOString(),
             scheduledEndTime: null == n ? void 0 : n.toISOString()
           };
-          null != t && null != j && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, "hour").toISOString()), null != t && null != B && (l.recurrenceRule = (0, _.recurrenceOptionToRecurrenceRule)(B, t)), A(l)
+          null != t && null != V && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, "hour").toISOString()), null != t && null != F && (l.recurrenceRule = (0, _.recurrenceOptionToRecurrenceRule)(F, t)), R(l)
         },
         onRecurrenceChange: e => {
-          let t = H.startDate;
+          let t = b.startDate;
           if (null == t) return;
           let n = (0, _.recurrenceOptionToRecurrenceRule)(e, t);
-          A({
+          R({
             recurrenceRule: n
-          }), F(e)
+          }), B(e)
         },
-        schedule: H,
+        schedule: b,
         recurrenceRule: P,
         showEndDate: L === T.GuildScheduledEventEntityTypes.EXTERNAL,
         requireEndDate: L === T.GuildScheduledEventEntityTypes.EXTERNAL,
-        disableStartDateTime: b,
+        disableStartDateTime: H,
         guildId: C
-      }), null != R ? (0, l.jsx)(r.Text, {
+      }), null != A ? (0, l.jsx)(r.Text, {
         color: "text-danger",
         variant: "text-xs/normal",
         className: S.warning,
-        children: R
+        children: A
       }) : null, (0, l.jsx)(r.FormItem, {
         title: m.default.Messages.CREATE_STAGE_INSTANCE_DESCRIPTION_INPUT_LABEL,
         className: S.formItem,
@@ -190,7 +190,7 @@ function C(e) {
           placeholder: m.default.Messages.GUILD_EVENT_CREATE_DESCRIPTION_PLACEHOLDER,
           value: D,
           onChange: e => {
-            A({
+            R({
               description: e
             })
           },
@@ -228,7 +228,7 @@ function C(e) {
           })]
         }) : (0, l.jsxs)(r.Button, {
           size: r.Button.Sizes.SMALL,
-          children: [m.default.Messages.GUILD_EVENT_ADD_IMAGE, (0, l.jsx)(o.default, {
+          children: [m.default.Messages.GUILD_EVENT_ADD_IMAGE, (0, l.jsx)(d.default, {
             onChange: Y
           })]
         })]

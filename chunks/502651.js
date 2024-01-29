@@ -1,14 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return i
   }
 });
-var l = n("954016"),
-  a = n("49111");
+var a = l("954016"),
+  n = l("49111");
 
 function s(e) {
-  return e.type === a.ActivityTypes.STREAMING && null != e.url && l.validStreamURL.test(e.url)
+  return e.type === n.ActivityTypes.STREAMING && null != e.url && a.validStreamURL.test(e.url)
 }
 
 function i(e) {

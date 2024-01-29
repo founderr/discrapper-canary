@@ -22,8 +22,8 @@ var s = n("506838"),
   u = n("697218"),
   d = n("315102"),
   c = n("402671"),
-  f = n("773336"),
-  E = n("641126"),
+  E = n("773336"),
+  f = n("641126"),
   _ = n("214400"),
   T = n("410328"),
   I = n("868586"),
@@ -78,8 +78,8 @@ function g(e, t) {
     {
       selectedAnswerIds: d,
       submitting: c,
-      editing: f
-    } = null !== (n = null != t ? t : (0, E.getPollState)(e.getChannelId(), e.id)) && void 0 !== n ? n : S,
+      editing: E
+    } = null !== (n = null != t ? t : (0, f.getPollState)(e.getChannelId(), e.id)) && void 0 !== n ? n : S,
     _ = e.reactions,
     T = !0;
   if (!h(e)) {
@@ -88,11 +88,11 @@ function g(e, t) {
   }
   let I = d.size > 0,
     p = _.some(e => !0 === e.me_vote),
-    A = !f && p,
+    A = !E && p,
     C = T && (A || u);
   return {
     poll: a,
-    canTapAnswers: i && (!p || f || C),
+    canTapAnswers: i && (!p || E || C),
     canEditVote: !c && A && i && !u,
     canShowVoteCounts: C,
     canSubmitVote: !c && I && !A && i,
@@ -100,7 +100,7 @@ function g(e, t) {
     hasSelectedAnswer: I,
     hasVoted: A,
     hasVoteRecorded: p,
-    isEditingVote: f,
+    isEditingVote: E,
     isExpired: u,
     isInteractive: T,
     isSent: i,
@@ -112,7 +112,7 @@ function g(e, t) {
 }
 
 function M(e, t, n) {
-  var o, E, m;
+  var o, f, m;
   let {
     animateEmoji: N = !1,
     theme: S = "dark",
@@ -123,7 +123,7 @@ function M(e, t, n) {
   if (null == M || !t) return;
   let O = u.default.getCurrentUser();
   if (null == O) return;
-  let R = null === (E = r.default.getChannel(e.getChannelId())) || void 0 === E ? void 0 : null === (o = E.getGuildId) || void 0 === o ? void 0 : o.call(E),
+  let R = null === (f = r.default.getChannel(e.getChannelId())) || void 0 === f ? void 0 : null === (o = f.getGuildId) || void 0 === o ? void 0 : o.call(f),
     L = (0, T.getAvatarUrl)(O, R),
     v = M.answers,
     P = M.layout_type,
@@ -157,16 +157,16 @@ function M(e, t, n) {
     var t, n, r;
     let o = "".concat(e.answer_id),
       u = A(H, o),
-      f = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
-      E = V.has(o),
-      _ = k ? f >= z && 0 !== f : void 0,
+      E = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
+      f = V.has(o),
+      _ = k ? E >= z && 0 !== E : void 0,
       T = B && null !== (r = null == u ? void 0 : u.me_vote) && void 0 !== r && r,
       I = C({
         didSelfVote: T,
         hasVoted: B,
         isExpired: k,
         isInteractive: w,
-        isSelected: E,
+        isSelected: f,
         isVictor: _
       });
     return {
@@ -202,14 +202,14 @@ function M(e, t, n) {
         stickerId: e.poll_media.sticker_id,
         attachmentIds: e.poll_media.attachment_ids
       },
-      isSelected: E,
+      isSelected: f,
       isVictor: _,
       didSelfVote: T,
       style: I,
       shouldAnimateTransition: Y,
-      votesPercentage: Math.round(100 * (0 === W ? 0 : f / W)),
-      votes: (0, s.match)(P).with(l.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(f), ")")).otherwise(() => p.default.Messages.POLL_VOTES_COUNT.format({
-        count: String(f)
+      votesPercentage: Math.round(100 * (0 === W ? 0 : E / W)),
+      votes: (0, s.match)(P).with(l.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(E), ")")).otherwise(() => p.default.Messages.POLL_VOTES_COUNT.format({
+        count: String(E)
       }))
     }
   }), J = (0, s.match)({
@@ -283,7 +283,7 @@ function M(e, t, n) {
     }, () => _.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
     answerTapAccessibilityLabel: (0, s.match)({
       tapShouldOpenVotersModal: K,
-      platform: (0, f.getNativePlatform)()
+      platform: (0, E.getNativePlatform)()
     }).with({
       tapShouldOpenVotersModal: !0,
       platform: "android"

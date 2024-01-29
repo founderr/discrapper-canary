@@ -16,8 +16,8 @@ var s = n("37983"),
   u = n("772017"),
   d = n("651693"),
   c = n("476765"),
-  f = n("58608"),
-  E = n("447435"),
+  E = n("58608"),
+  f = n("447435"),
   _ = n("612920"),
   T = n("782340"),
   I = n("471387");
@@ -51,7 +51,7 @@ let m = e => {
     } = e, l = (0, d.isVideoUrl)(t);
     return (0, s.jsx)("div", {
       className: I.mediaContainer,
-      children: l ? (0, s.jsx)(f.default, {
+      children: l ? (0, s.jsx)(E.default, {
         className: i(I.video, I.media),
         controls: !0,
         src: t
@@ -76,17 +76,17 @@ function A(e) {
     embedPreview: r,
     onConfirmPress: u,
     transitionState: d,
-    onClose: f
+    onClose: E
   } = e, _ = (0, c.useUID)(), p = () => {
-    (0, E.trackMediaRedactionAction)({
-      action: E.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
+    (0, f.trackMediaRedactionAction)({
+      action: f.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
       channelId: t,
       messageId: n
-    }), f()
+    }), E()
   };
   return l.useEffect(() => {
-    (0, E.trackMediaRedactionAction)({
-      action: E.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
+    (0, f.trackMediaRedactionAction)({
+      action: f.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
       channelId: t,
       messageId: n
     })
@@ -122,8 +122,8 @@ function A(e) {
         size: o.Button.Sizes.MEDIUM,
         color: o.Button.Colors.BRAND,
         onClick: () => {
-          null == u || u(), (0, E.trackMediaRedactionAction)({
-            action: E.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
+          null == u || u(), (0, f.trackMediaRedactionAction)({
+            action: f.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
             channelId: t,
             messageId: n
           })

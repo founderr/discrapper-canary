@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return N
+    return C
   }
 }), l("222007");
 var n = l("37983"),
@@ -16,30 +16,30 @@ var n = l("37983"),
   f = l("158998"),
   m = l("777003"),
   p = l("782340"),
-  T = l("242379"),
+  h = l("242379"),
   E = l("107680"),
-  S = l("379539"),
-  _ = l("714073"),
-  h = l("980923"),
-  I = l("779585"),
+  T = l("379539"),
+  S = l("714073"),
+  _ = l("980923"),
+  g = l("779585"),
   A = l("900143"),
-  g = l("923337");
-let v = [g, E, h, _, I, S, A];
+  I = l("923337");
+let v = [I, E, _, S, g, T, A];
 
-function C(e) {
+function N(e) {
   let {
     userId: t
   } = e, [l, s] = a.useState(!1);
   return a.useLayoutEffect(() => {
     !l && s(!0)
   }, [l]), (0, n.jsx)("div", {
-    className: T.wumpusWrapper,
+    className: h.wumpusWrapper,
     children: (0, n.jsxs)("div", {
-      className: i(T.wumpus, {
-        [T.wumpusShown]: l
+      className: i(h.wumpus, {
+        [h.wumpusShown]: l
       }),
       children: [(0, n.jsx)("img", {
-        className: T.wumpusImage,
+        className: h.wumpusImage,
         alt: p.default.Messages.IMG_ALT_ICON.format({
           name: p.default.Messages.WUMPUS
         }),
@@ -48,14 +48,14 @@ function C(e) {
           return v[e % v.length]
         }()
       }), (0, n.jsx)("span", {
-        className: T.wumpusTooltip,
+        className: h.wumpusTooltip,
         children: p.default.Messages.USER_POPOUT_WUMPUS_TOOLTIP
       })]
     })
   })
 }
 
-function N(e) {
+function C(e) {
   let {
     user: t,
     setNote: l,
@@ -66,13 +66,13 @@ function N(e) {
   if (t.isNonUserBot() && !t.isClyde() || t.isClyde() && i || !a) return null;
   let E = a && (0, f.isNewUser)(t) && !t.bot;
   return (0, n.jsxs)(m.default, {
-    className: T.section,
+    className: h.section,
     lastSection: !0,
-    children: [E && a ? (0, n.jsx)(C, {
+    children: [E && a ? (0, n.jsx)(N, {
       userId: t.id
     }) : null, a && t.isClyde() ? (0, n.jsxs)(o.Button, {
-      className: T.messageClydeButton,
-      innerClassName: T.messageClydeButtonInner,
+      className: h.messageClydeButton,
+      innerClassName: h.messageClydeButtonInner,
       onClick: () => {
         u.default.openPrivateChannel(t.id)
       },
@@ -81,11 +81,11 @@ function N(e) {
       children: [(0, n.jsx)(c.default, {
         width: 16,
         height: 16,
-        className: T.messageClydeButtonIcon
+        className: h.messageClydeButtonIcon
       }), p.default.Messages.CLYDE_SEND_MESSAGE]
     }) : null, a && !t.isClyde() ? (0, n.jsx)(d.default, {
-      className: T.messageInputContainer,
-      inputClassName: T.messageInput,
+      className: h.messageInputContainer,
+      inputClassName: h.messageInput,
       user: t,
       onClose: () => null == s ? void 0 : s(),
       autoFocus: !r.isMobile && !l

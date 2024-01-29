@@ -14,8 +14,8 @@ var l = n("414456"),
   u = n("987317"),
   d = n("884351"),
   c = n("574073"),
-  f = n("356070"),
-  E = n("393414"),
+  E = n("356070"),
+  f = n("393414"),
   _ = n("42203"),
   T = n("305961"),
   I = n("697218"),
@@ -75,7 +75,7 @@ function g(e) {
         children: Q
       }), V.length > 0 ? (0, s.jsx)("div", {
         className: h.participants,
-        children: (0, s.jsx)(f.default, {
+        children: (0, s.jsx)(E.default, {
           guildId: y,
           partySize: {
             knownSize: V.length,
@@ -87,7 +87,7 @@ function g(e) {
         })
       }) : (0, s.jsx)("div", {
         className: a(h.participants, h.disabled),
-        children: (0, s.jsx)(f.default, {
+        children: (0, s.jsx)(E.default, {
           guildId: y,
           partySize: {
             knownSize: z.length,
@@ -103,7 +103,7 @@ function g(e) {
       children: [(0, s.jsxs)(r.Button, {
         color: r.Button.Colors.BRAND,
         onClick: () => {
-          null != U && null != y && ((0, E.transitionTo)(A.Routes.CHANNEL(y, U)), u.default.selectVoiceChannel(U))
+          null != U && null != y && ((0, f.transitionTo)(A.Routes.CHANNEL(y, U)), u.default.selectVoiceChannel(U))
         },
         className: h.button,
         innerClassName: h.buttonInner,

@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("446674"),
   d = n("77078"),
   c = n("79112"),
-  f = n("4919"),
-  E = n("86621"),
+  E = n("4919"),
+  f = n("86621"),
   _ = n("737960"),
   T = n("206230"),
   I = n("491232"),
@@ -63,13 +63,13 @@ class H extends l.PureComponent {
     let {
       width: e
     } = this.props;
-    return e >= f.HORIZONTAL_EMBED_BREAKPOINT
+    return e >= E.HORIZONTAL_EMBED_BREAKPOINT
   }
   handleViewInventory() {
     c.default.open(G.UserSettingsSections.INVENTORY)
   }
   render() {
-    return (0, s.jsx)(f.ResponsiveEmbedTile, {
+    return (0, s.jsx)(E.ResponsiveEmbedTile, {
       isHorizontal: this.isHorizontal,
       renderTitle: this.renderTitle,
       renderTagline: this.renderTagline,
@@ -277,8 +277,8 @@ class V extends l.Component {
     if (null == e || e.revoked) return t ? (0, s.jsx)(H, {
       isSelfGift: l,
       width: n
-    }) : (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
-      isHorizontal: n >= f.HORIZONTAL_EMBED_BREAKPOINT
+    }) : (0, s.jsx)(E.ResponsiveLoadingEmbedTile, {
+      isHorizontal: n >= E.HORIZONTAL_EMBED_BREAKPOINT
     });
     return (0, I.isCollectiblesGiftCode)(e) ? (0, s.jsx)("div", {
       className: k.collectiblesEmbedWrapper,
@@ -338,13 +338,13 @@ class V extends l.Component {
       let l = B.LegacySeasonalGiftStyles.includes(e.giftStyle),
         a = i(k.customGiftEmbedWrapper, {
           [k.legacySeasonalGiftEmbedWrapper]: l,
-          [k.giftEmbedWrapperHorizontal]: n >= f.HORIZONTAL_EMBED_BREAKPOINT
+          [k.giftEmbedWrapperHorizontal]: n >= E.HORIZONTAL_EMBED_BREAKPOINT
         }),
         r = i({
           [k.legacySeasonalGiftEmbedBox]: l,
-          [k.legacySeasonalGiftEmbedBoxHorizontal]: l && n >= f.HORIZONTAL_EMBED_BREAKPOINT,
+          [k.legacySeasonalGiftEmbedBoxHorizontal]: l && n >= E.HORIZONTAL_EMBED_BREAKPOINT,
           [k.customGiftEmbedBox]: !l,
-          [k.customGiftEmbedBoxHorizontal]: !l && n >= f.HORIZONTAL_EMBED_BREAKPOINT
+          [k.customGiftEmbedBoxHorizontal]: !l && n >= E.HORIZONTAL_EMBED_BREAKPOINT
         });
       return (0, s.jsxs)("div", {
         className: a,
@@ -362,7 +362,7 @@ class V extends l.Component {
     }
   }
 }
-let Y = (0, _.default)((0, E.default)(V));
+let Y = (0, _.default)((0, f.default)(V));
 var K = u.default.connectStores([C.default, O.default, g.default, h.default, M.default, A.default, T.default], e => {
   let {
     code: t,

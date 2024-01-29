@@ -8,8 +8,8 @@ var r = n("37983"),
   s = n("884691"),
   i = n("414456"),
   a = n.n(i),
-  l = n("77078"),
-  o = n("716849"),
+  o = n("77078"),
+  l = n("716849"),
   c = n("552917"),
   u = n("109036"),
   d = n("336522"),
@@ -114,9 +114,9 @@ class g extends s.Component {
       let s = e.dataTransfer;
       if (null == s) return;
       s.dropEffect = "copy";
-      let i = (0, l.hasModalOpen)(d.UPLOAD_ERROR_MODAL_KEY);
-      if (i && (0, l.closeModal)(d.UPLOAD_ERROR_MODAL_KEY), e.stopPropagation(), e.preventDefault(), null === (t = (n = this.props).onDragOver) || void 0 === t || t.call(n, e), !this.state.isDragging) {
-        (0, o.maybeFetchPremiumLikelihood)(c.default);
+      let i = (0, o.hasModalOpen)(d.UPLOAD_ERROR_MODAL_KEY);
+      if (i && (0, o.closeModal)(d.UPLOAD_ERROR_MODAL_KEY), e.stopPropagation(), e.preventDefault(), null === (t = (n = this.props).onDragOver) || void 0 === t || t.call(n, e), !this.state.isDragging) {
+        (0, l.maybeFetchPremiumLikelihood)(c.default);
         let e = null === (r = this.elementDOMRef.current) || void 0 === r ? void 0 : r.ownerDocument.defaultView,
           t = null != e && s.types instanceof e.DOMStringList && s.types.contains("application/x-moz-file");
         (t || -1 !== s.types.indexOf("Files")) && this.setState(e => e.isDragging ? {} : {

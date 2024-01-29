@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return N
   }
 }), n("222007");
 var s = n("37983"),
@@ -150,6 +150,6 @@ class T extends a.PureComponent {
 T.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var m = i.default.connectStores([f.default], () => ({
+var N = i.default.connectStores([f.default], () => ({
   defaultRoute: f.default.defaultRoute
 }))(T)

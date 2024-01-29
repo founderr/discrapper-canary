@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return c
   },
   parseMessageEmbedForProps: function() {
-    return f
+    return E
   },
   isFlaggedContentEmpty: function() {
-    return E
+    return f
   },
   getAppealSignalDisplayText: function() {
     return _
@@ -36,7 +36,7 @@ function c(e) {
   return (0, a.isImageFile)(e.filename) ? "".concat(o.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
 }
 
-function f(e) {
+function E(e) {
   var t, n, s, l;
   if (null == e.fields) return;
   let a = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});
@@ -52,7 +52,7 @@ function f(e) {
   }
 }
 
-function E(e) {
+function f(e) {
   if (e.type === i.ContentIdType.MESSAGE) return "" === e.content && 0 === e.attachments.length;
   return !0
 }

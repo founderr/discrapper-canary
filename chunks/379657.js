@@ -16,43 +16,43 @@ var n = l("37983"),
   f = l("49111"),
   m = l("782340"),
   p = l("640329"),
-  T = l("814076");
+  h = l("814076");
 
 function E(e) {
   let {
     applicationId: t,
     commandIds: l,
     channel: E,
-    guildId: S,
-    onClick: _
+    guildId: T,
+    onClick: S
   } = e;
   (0, u.usePrivateChannelIntegrationState)({
     channelId: E.id
   });
   let {
-    commands: h
-  } = r.useCommandsForApplication(E, t, l), I = a.useMemo(() => null == h ? void 0 : h.filter(e => !0 !== e.nsfw), [h]), A = a.useCallback(e => {
-    null == _ || _(), d.default.track(f.AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, {
+    commands: _
+  } = r.useCommandsForApplication(E, t, l), g = a.useMemo(() => null == _ ? void 0 : _.filter(e => !0 !== e.nsfw), [_]), A = a.useCallback(e => {
+    null == S || S(), d.default.track(f.AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, {
       application_id: t,
       command_id: e,
-      guild_id: S,
+      guild_id: T,
       ...(0, i.collectChannelAnalyticsMetadataFromId)(E.id)
     })
-  }, [t, E.id, S, _]);
-  return null == I || 0 === I.length ? null : (0, n.jsxs)(c.default, {
+  }, [t, E.id, T, S]);
+  return null == g || 0 === g.length ? null : (0, n.jsxs)(c.default, {
     children: [(0, n.jsx)(s.Heading, {
       variant: "eyebrow",
-      className: T.title,
+      className: h.title,
       children: m.default.Messages.BOT_PROFILE_SLASH_COMMANDS
     }), (0, n.jsx)("ul", {
       className: p.popularApplicationCommandsList,
-      children: I.map(e => (0, n.jsx)("li", {
+      children: g.map(e => (0, n.jsx)("li", {
         children: (0, n.jsx)(o.CommandClickable, {
           commandId: e.id,
           commandName: e.displayName,
           commandDescription: e.displayDescription,
           onClick: A,
-          guildId: S,
+          guildId: T,
           channelId: E.id
         })
       }, e.id))

@@ -1,22 +1,22 @@
 "use strict";
-let u, l, n;
-r.r(t), r.d(t, {
+let r, l, i;
+n.r(t), n.d(t, {
   default: function() {
     return C
   }
-}), r("222007");
-var i = r("917351"),
-  s = r("446674"),
-  o = r("913144");
-let a = new Map,
-  c = a,
+}), n("222007");
+var s = n("917351"),
+  a = n("446674"),
+  o = n("913144");
+let u = new Map,
+  c = u,
   d = !1;
-class E extends s.default.Store {
+class f extends a.default.Store {
   get isFetching() {
     return d
   }
   get isClaiming() {
-    return u
+    return r
   }
   get purchases() {
     return c
@@ -25,40 +25,40 @@ class E extends s.default.Store {
     return l
   }
   get claimError() {
-    return n
+    return i
   }
   getPurchase(e) {
     return null != e ? c.get(e) : void 0
   }
 }
-E.displayName = "CollectiblesPurchaseStore";
-var C = new E(o.default, {
+f.displayName = "CollectiblesPurchaseStore";
+var C = new f(o.default, {
   COLLECTIBLES_PURCHASES_FETCH: e => {
     d = !0, l = void 0
   },
   COLLECTIBLES_PURCHASES_FETCH_SUCCESS: e => {
-    0 === e.purchases.length ? c = a : !(0, i.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), d = !1, l = void 0
+    0 === e.purchases.length ? c = u : !(0, s.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), d = !1, l = void 0
   },
   COLLECTIBLES_PURCHASES_FETCH_FAILURE: e => {
     let {
       error: t
     } = e;
-    c = a, d = !1, l = t
+    c = u, d = !1, l = t
   },
   COLLECTIBLES_CLAIM: e => {
-    u = e.skuId, n = void 0
+    r = e.skuId, i = void 0
   },
   COLLECTIBLES_CLAIM_SUCCESS: e => {
-    null == e.purchases || 0 === e.purchases.length ? c = a : !(0, i.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), u = void 0, n = void 0
+    null == e.purchases || 0 === e.purchases.length ? c = u : !(0, s.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), r = void 0, i = void 0
   },
   COLLECTIBLES_CLAIM_FAILURE: e => {
     let {
       error: t,
-      skuId: r
+      skuId: n
     } = e;
-    u = r, n = t
+    r = n, i = t
   },
   LOGOUT: e => {
-    c = a, d = !1, u = void 0, l = void 0, n = void 0
+    c = u, d = !1, r = void 0, l = void 0, i = void 0
   }
 })

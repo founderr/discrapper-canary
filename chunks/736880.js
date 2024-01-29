@@ -7,16 +7,16 @@ n.r(t), n.d(t, {
 var i = n("446674"),
   r = n("913144"),
   l = n("233069"),
-  u = n("42203");
-let s = {},
+  s = n("42203");
+let u = {},
   o = {};
 class a extends i.default.Store {
   getTemplates(e) {
-    return s[e]
+    return u[e]
   }
   getTemplateWithCategory(e, t) {
     var n;
-    return null === (n = s[e]) || void 0 === n ? void 0 : n.find(e => e.category === t)
+    return null === (n = u[e]) || void 0 === n ? void 0 : n.find(e => e.category === t)
   }
   getChannel(e) {
     return o[e]
@@ -28,7 +28,7 @@ var d = new a(r.default, {
     let {
       selectedTemplate: t,
       guildId: n
-    } = e, i = Object.values(u.default.getMutableGuildChannelsForGuild(n));
+    } = e, i = Object.values(s.default.getMutableGuildChannelsForGuild(n));
     t.listings.forEach(e => {
       e.channels.forEach(e => {
         let t = i.find(t => t.name === e.name);
@@ -45,6 +45,6 @@ var d = new a(r.default, {
       templates: t,
       guildId: n
     } = e;
-    s[n] = t
+    u[n] = t
   }
 })

@@ -74,7 +74,7 @@ var v = e => {
     giftRecipientError: p
   } = (0, c.useGiftContext)(), T = (0, a.useStateFromStores)([S.default], () => S.default.getCurrentUser());
   if (null == o || null == n) return null;
-  let [v] = o.items, A = null != d && d.id !== (null == T ? void 0 : T.id);
+  let [v] = o.items, P = null != d && d.id !== (null == T ? void 0 : T.id);
   return (0, s.jsxs)("div", {
     className: r,
     children: [(0, s.jsxs)("div", {
@@ -82,7 +82,7 @@ var v = e => {
       children: [(0, s.jsx)(l.FormTitle, {
         className: C.previewTitle,
         children: _.default.Messages.COLLECTIBLES_GIFT_LABEL
-      }), A && (0, s.jsx)(l.Popout, {
+      }), P && (0, s.jsx)(l.Popout, {
         preload: () => (0, E.default)(d.id, d.getAvatarURL(null, 80)),
         renderPopout: e => (0, s.jsx)(f.default, {
           ...e,

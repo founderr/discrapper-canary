@@ -1,57 +1,57 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   IconVariant: function() {
     return a
   },
   default: function() {
     return c
   }
-}), A("222007");
-var a, l, n = A("37983"),
-  r = A("884691"),
-  s = A("77078"),
-  o = A("191814"),
-  i = A("423487"),
-  u = A("782340"),
-  d = A("55472");
+}), t("222007");
+var a, l, n = t("37983"),
+  r = t("884691"),
+  s = t("77078"),
+  o = t("191814"),
+  i = t("423487"),
+  d = t("782340"),
+  u = t("55472");
 (l = a || (a = {})).DANGER = "danger", l.WARNING = "warning";
 
 function c(e) {
   let {
-    transitionState: t,
-    onClose: A,
+    transitionState: A,
+    onClose: t,
     title: a,
     body: l,
     cta: c,
     closeLabel: f,
     onConfirm: C,
     iconVariant: g = "warning"
-  } = e, [h, T] = r.useState(!1), m = async () => {
-    T(!0);
+  } = e, [T, h] = r.useState(!1), m = async () => {
+    h(!0);
     try {
-      await C(), A()
+      await C(), t()
     } finally {
-      T(!1)
+      h(!1)
     }
-  }, p = null != a ? a : u.default.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
+  }, U = null != a ? a : d.default.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
   return (0, n.jsxs)(s.ModalRoot, {
-    className: d.container,
+    className: u.container,
     size: s.ModalSize.DYNAMIC,
-    transitionState: t,
-    "aria-label": p,
+    transitionState: A,
+    "aria-label": U,
     children: [(0, n.jsxs)(s.ModalContent, {
-      className: d.content,
+      className: u.content,
       children: [(0, n.jsxs)("div", {
-        className: d.header,
+        className: u.header,
         children: [(0, n.jsx)(i.default, {
           width: 20,
           height: 20,
           className: function(e) {
             switch (e) {
               case "danger":
-                return d.dangerIcon;
+                return u.dangerIcon;
               case "warning":
-                return d.warningIcon
+                return u.warningIcon
             }
           }(g)
         }), (0, n.jsx)(o.default, {
@@ -60,21 +60,21 @@ function c(e) {
         }), (0, n.jsx)(s.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
-          children: p
+          children: U
         })]
       }), (0, n.jsx)(o.default, {
         size: 12
       }), (0, n.jsx)(s.Text, {
         variant: "text-md/normal",
         color: "text-muted",
-        className: d.body,
+        className: u.body,
         children: l
       })]
     }), (0, n.jsxs)(s.ModalFooter, {
       children: [(0, n.jsx)(s.Button, {
         color: s.Button.Colors.BRAND,
         onClick: m,
-        submitting: h,
+        submitting: T,
         children: c
       }), (0, n.jsx)(o.default, {
         size: 12,
@@ -82,7 +82,7 @@ function c(e) {
       }), null != f && (0, n.jsx)(s.Button, {
         color: s.Button.Colors.PRIMARY,
         look: s.Button.Looks.OUTLINED,
-        onClick: A,
+        onClick: t,
         children: f
       })]
     })]

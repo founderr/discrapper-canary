@@ -9,8 +9,8 @@ var s, l, a, i, r = n("37983"),
   u = n("414456"),
   d = n.n(u),
   c = n("516555"),
-  f = n("748820"),
-  E = n("617258"),
+  E = n("748820"),
+  f = n("617258"),
   _ = n("769846"),
   T = n("77078"),
   I = n("79112"),
@@ -51,7 +51,7 @@ let v = {
 };
 (i = l || (l = {})).TOP_LEFT = "TOP_LEFT", i.TOP_RIGHT = "TOP_RIGHT", i.BOTTOM_LEFT = "BOTTOM_LEFT", i.BOTTOM_RIGHT = "BOTTOM_RIGHT";
 let P = ["TOP_LEFT", "TOP_RIGHT"],
-  D = (0, E.cssValueToNumber)(_.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
+  D = (0, f.cssValueToNumber)(_.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
   x = {
     leafPosition: {
       x: 85,
@@ -145,8 +145,8 @@ function k(e) {
     }
   }()), {
     createMultipleConfettiAt: u,
-    confettiCanvas: E
-  } = o.useContext(m.ConfettiCannonContext), [_, T] = o.useState(null), I = (0, c.useConfettiCannon)(E, _), N = function(e, t) {
+    confettiCanvas: f
+  } = o.useContext(m.ConfettiCannonContext), [_, T] = o.useState(null), I = (0, c.useConfettiCannon)(f, _), N = function(e, t) {
     if (null == e) return "enter";
     switch (e) {
       case "enter":
@@ -202,7 +202,7 @@ function k(e) {
     if (p && "leaf_fall" === s) {
       let e = y[i].leafRotationDirection;
       I.createConfetti({
-        id: "".concat(U, "-").concat((0, f.v4)()),
+        id: "".concat(U, "-").concat((0, E.v4)()),
         position: {
           type: "static",
           value: function(e, t) {
@@ -297,9 +297,9 @@ function w(e) {
     d = (0, S.default)(n),
     {
       createMultipleConfettiAt: c,
-      addClickListener: f
+      addClickListener: E
     } = o.useContext(m.ConfettiCannonContext),
-    [E, _] = o.useState(!1),
+    [f, _] = o.useState(!1),
     A = o.useRef(null),
     {
       reducedMotion: v
@@ -328,13 +328,13 @@ function w(e) {
   });
   let y = o.useCallback(() => {
       if (!v.enabled) {
-        if (E || 0 !== Math.floor(50 * Math.random())) {
+        if (f || 0 !== Math.floor(50 * Math.random())) {
           var e;
           let t = null === (e = A.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
           if (null != t) c(t.left + t.width / 2, t.top + t.height / 2)
         } else _(!0)
       }
-    }, [c, v, E]),
+    }, [c, v, f]),
     j = o.useCallback(() => {
       _(!1)
     }, []),
@@ -344,7 +344,7 @@ function w(e) {
       }), I.default.open(O.UserSettingsSections.POGGERMODE))
     }, []);
   o.useEffect(() => {
-    let e = f(b);
+    let e = E(b);
     return e
   });
   let G = (0, r.jsx)(T.Clickable, {
@@ -364,7 +364,7 @@ function w(e) {
       onClick: i,
       className: L.message,
       children: t
-    }), E ? (0, r.jsx)(h.default, {
+    }), f ? (0, r.jsx)(h.default, {
       children: (0, r.jsx)("div", {
         className: L.cannonWrapper,
         children: (0, r.jsx)(k, {

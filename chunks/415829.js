@@ -14,8 +14,8 @@ var l = n("414456"),
   u = n("913491"),
   d = n("42203"),
   c = n("69890"),
-  f = n("610730"),
-  E = n("487269"),
+  E = n("610730"),
+  f = n("487269"),
   _ = n("292657"),
   T = n("967241"),
   I = n("49111"),
@@ -39,17 +39,17 @@ function S(e) {
     channel: t,
     compact: l,
     isSystemMessage: u
-  } = e, d = (0, i.useStateFromStores)([f.default], () => f.default.getCount(t.id)), p = function(e) {
+  } = e, d = (0, i.useStateFromStores)([E.default], () => E.default.getCount(t.id)), p = function(e) {
     var t;
-    let n = (0, i.useStateFromStores)([f.default], () => f.default.getMostRecentMessage(e.id)),
-      l = (0, i.useStateFromStores)([f.default], () => f.default.getCount(e.id)),
-      a = (0, E.useLastMessageTimestamp)(e);
+    let n = (0, i.useStateFromStores)([E.default], () => E.default.getMostRecentMessage(e.id)),
+      l = (0, i.useStateFromStores)([E.default], () => E.default.getCount(e.id)),
+      a = (0, f.useLastMessageTimestamp)(e);
     return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) ? m.default.Messages.NO_RECENT_THREAD_MESSAGES : null == l || 0 === l ? m.default.Messages.NO_THREAD_MESSAGES : null == n ? (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("span", {
         children: m.default.Messages.NO_RECENT_THREAD_MESSAGES
       }), (0, s.jsx)("span", {
         className: N.timestamp,
-        children: (0, E.getTimestampString)(a)
+        children: (0, f.getTimestampString)(a)
       })]
     }) : (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(_.default, {
@@ -57,7 +57,7 @@ function S(e) {
         channel: e
       }), (0, s.jsx)("span", {
         className: N.timestamp,
-        children: (0, E.getTimestampString)(a)
+        children: (0, f.getTimestampString)(a)
       })]
     })
   }(t), S = null != d && d > 0;

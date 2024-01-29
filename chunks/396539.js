@@ -36,7 +36,7 @@ let f = e => {
       errored: u.default.errored
     })), {
       roleFilter: M,
-      everyoneFilter: v
+      everyoneFilter: x
     } = (0, l.useStateFromStoresObject)([r.default], () => ({
       everyoneFilter: r.default.everyoneFilter,
       roleFilter: r.default.roleFilter
@@ -44,29 +44,29 @@ let f = e => {
     a.useEffect(() => ((0, o.setNotificationCenterActive)(!0), () => (0, o.setNotificationCenterActive)(!1)), []), a.useEffect(() => {
       N && t && (0, s.ackUserFeature)(c.ReadStateTypes.NOTIFICATION_CENTER)
     }, [t, N]);
-    let x = (0, i.default)();
+    let v = (0, i.default)();
     a.useEffect(() => () => {
-      f ? !x() && (A || T.length > 100) && (0, o.resetNotificationCenter)() : n && T.length > 100 && (0, o.resetNotificationCenter)()
-    }, [n, T, f, x, A]), a.useEffect(() => {
+      f ? !v() && (A || T.length > 100) && (0, o.resetNotificationCenter)() : n && T.length > 100 && (0, o.resetNotificationCenter)()
+    }, [n, T, f, v, A]), a.useEffect(() => {
       let e = m && t;
       (!N || e) && (0, o.fetchNotificationCenterItems)({
         limit: null != E ? E : h ? 8 : 20,
         with_mentions: h,
         roles_filter: M,
-        everyone_filter: v
+        everyone_filter: x
       })
-    }, [N, m, t, h, M, v, E]);
+    }, [N, m, t, h, M, x, E]);
     let R = a.useCallback(async e => {
       !p.current && N && I && null != C && (e || !A) && (p.current = !0, g(!0), await (0, o.fetchNotificationCenterItems)({
         after: C,
         with_mentions: h,
         roles_filter: M,
-        everyone_filter: v,
+        everyone_filter: x,
         limit: h ? 8 : 20
       }, () => {
         p.current = !1
       }), g(!1))
-    }, [N, I, C, A, h, M, v]);
+    }, [N, I, C, A, h, M, x]);
     return {
       initialized: N,
       loading: _,

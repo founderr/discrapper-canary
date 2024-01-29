@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("305961"),
   d = n("18494"),
   c = n("162771"),
-  f = n("476263"),
-  E = n("45029"),
+  E = n("476263"),
+  f = n("45029"),
   _ = n("489622"),
   T = n("599110"),
   I = n("398654"),
@@ -57,10 +57,10 @@ function h(e) {
         })
       })
     },
-    j = (0, s.jsx)(f.default, {
+    j = (0, s.jsx)(E.default, {
       className: C.guildIcon,
       guild: L,
-      size: f.default.Sizes.MINI
+      size: E.default.Sizes.MINI
     }),
     b = (0, N.getSecurityActionDetailsString)(P, L.name),
     G = null !== (h = P.dmsDisabledUntil) && void 0 !== h ? h : P.invitesDisabledUntil;
@@ -75,7 +75,7 @@ function h(e) {
       onClick: () => U(!1),
       children: (0, s.jsxs)("div", {
         className: C.actionButtonInner,
-        children: [(0, s.jsx)(E.default, {
+        children: [(0, s.jsx)(f.default, {
           width: 16,
           height: 16
         }), (0, s.jsx)("span", {

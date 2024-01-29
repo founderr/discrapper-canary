@@ -1,21 +1,21 @@
 "use strict";
-A.r(t), A.d(t, {
+t.r(A), t.d(A, {
   default: function() {
     return c
   }
 });
-var a = A("917351"),
-  l = A.n(a),
-  n = A("270926"),
-  r = A("888198"),
-  s = A("367376");
+var a = t("917351"),
+  l = t.n(a),
+  n = t("270926"),
+  r = t("888198"),
+  s = t("367376");
 let o = l.omit(r.default.RULES, ["codeBlock", "heading"]),
   i = {
     ...n.default,
-    parse: function(e, t, A) {
+    parse: function(e, A, t) {
       var a;
-      let l = n.default.parse(e, t, A),
-        r = null !== (a = A.initialHeaderLevel) && void 0 !== a ? a : 3,
+      let l = n.default.parse(e, A, t),
+        r = null !== (a = t.initialHeaderLevel) && void 0 !== a ? a : 3,
         s = Math.min(6, r + l.level);
       return {
         ...l,
@@ -23,8 +23,8 @@ let o = l.omit(r.default.RULES, ["codeBlock", "heading"]),
       }
     }
   },
-  u = s.default.combineAndInjectMentionRule(o, [s.default.createReactRules(s.default.defaultReactRuleOptions), {
+  d = s.default.combineAndInjectMentionRule(o, [s.default.createReactRules(s.default.defaultReactRuleOptions), {
     header: i
   }]),
-  d = s.default.reactParserFor(u);
-var c = d
+  u = s.default.reactParserFor(d);
+var c = u

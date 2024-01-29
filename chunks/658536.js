@@ -1,49 +1,49 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return f
   }
-}), n("222007");
-var a = n("913144"),
-  i = n("689988"),
-  l = n("26989"),
-  d = n("697218"),
-  u = n("509");
+}), l("222007");
+var n = l("913144"),
+  a = l("689988"),
+  i = l("26989"),
+  u = l("697218"),
+  d = l("509");
 let s = null,
   r = () => {
-    let e = l.default.getCommunicationDisabledUserMap();
+    let e = i.default.getCommunicationDisabledUserMap();
     Object.keys(e).forEach(t => {
-      let n = (0, l.getGuildIdFromCommunicationDisabledUserKey)(t),
-        a = (0, l.getUserIdFromCommunicationDisabledUserKey)(t),
-        i = e[t];
-      !(0, u.isCommunicationDisabled)(i) && o(n, a)
+      let l = (0, i.getGuildIdFromCommunicationDisabledUserKey)(t),
+        n = (0, i.getUserIdFromCommunicationDisabledUserKey)(t),
+        a = e[t];
+      !(0, d.isCommunicationDisabled)(a) && o(l, n)
     })
   },
   o = (e, t) => {
-    var n, i, s, r, o, c;
-    let f = l.default.getMember(e, t),
-      g = d.default.getUser(t);
-    if (null == f || null == g || (0, u.isMemberCommunicationDisabled)(f)) return;
-    let E = {
+    var l, a, s, r, o, c;
+    let f = i.default.getMember(e, t),
+      E = u.default.getUser(t);
+    if (null == f || null == E || (0, d.isMemberCommunicationDisabled)(f)) return;
+    let C = {
       ...f,
       guildId: e,
-      nick: null !== (n = f.nick) && void 0 !== n ? n : g.username,
-      avatar: null !== (i = f.avatar) && void 0 !== i ? i : void 0,
+      nick: null !== (l = f.nick) && void 0 !== l ? l : E.username,
+      avatar: null !== (a = f.avatar) && void 0 !== a ? a : void 0,
       premiumSince: null !== (s = f.premiumSince) && void 0 !== s ? s : void 0,
       isPending: null !== (r = f.isPending) && void 0 !== r && r,
       user: {
-        ...g,
-        email: null !== (o = g.email) && void 0 !== o ? o : void 0,
-        phone: null !== (c = g.phone) && void 0 !== c ? c : void 0
+        ...E,
+        email: null !== (o = E.email) && void 0 !== o ? o : void 0,
+        phone: null !== (c = E.phone) && void 0 !== c ? c : void 0
       },
       communicationDisabledUntil: null
     };
-    a.default.dispatch({
+    n.default.dispatch({
       type: "GUILD_MEMBER_UPDATE",
-      ...E
+      ...C
     })
   };
-class c extends i.default {
+class c extends a.default {
   _initialize() {
     s = setInterval(() => r(), 1e4)
   }

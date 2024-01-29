@@ -10,7 +10,7 @@ r.r(t), r.d(t, {
     return A
   },
   default: function() {
-    return p
+    return I
   }
 }), r("222007"), r("808653"), r("424973");
 var n, a, i = r("884691"),
@@ -29,7 +29,7 @@ let _ = {
   A = {
     id: "Shop"
   };
-var p = () => {
+var I = () => {
   let e = (0, u.default)([d.default], () => d.default.getCurrentUser()),
     t = f.default.canUseCollectibles(e),
     r = (0, u.default)([l.default], () => l.default.purchases),

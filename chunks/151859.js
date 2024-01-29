@@ -10,8 +10,8 @@ var l = n("37983"),
   i = n("77078"),
   r = n("419830"),
   u = n("267567"),
-  o = n("42203"),
-  d = n("305961"),
+  d = n("42203"),
+  o = n("305961"),
   c = n("697218"),
   E = n("718550"),
   f = n("189443"),
@@ -30,11 +30,11 @@ function m(e) {
     guildEventId: C,
     error: p
   } = e, x = a.useMemo(() => (0, f.convertToFakeGuildEvent)(g, S), [g, S]), {
-    channel_id: R,
-    name: A,
+    channel_id: A,
+    name: R,
     image: O,
     description: L
-  } = x, M = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(R), [R]), D = (0, s.useStateFromStores)([d.default], () => d.default.getGuild(S), [S]), y = (0, _.getLocationFromEvent)(x), U = (0, s.useStateFromStores)([c.default], () => null != g.creatorId ? c.default.getUser(g.creatorId) : c.default.getCurrentUser(), [g.creatorId]), j = (0, s.useStateFromStores)([u.default], () => u.default.isLurking(S), [S]), V = (0, r.getChannelIconComponent)(M, D);
+  } = x, M = (0, s.useStateFromStores)([d.default], () => d.default.getChannel(A), [A]), D = (0, s.useStateFromStores)([o.default], () => o.default.getGuild(S), [S]), y = (0, _.getLocationFromEvent)(x), U = (0, s.useStateFromStores)([c.default], () => null != g.creatorId ? c.default.getUser(g.creatorId) : c.default.getCurrentUser(), [g.creatorId]), V = (0, s.useStateFromStores)([u.default], () => u.default.isLurking(S), [S]), j = (0, r.getChannelIconComponent)(M, D);
   return (0, l.jsxs)("div", {
     className: v.content,
     children: [(0, l.jsx)(h.default, {
@@ -43,11 +43,11 @@ function m(e) {
       channel: M,
       location: null != y ? y : void 0,
       creator: U,
-      name: A,
+      name: R,
       description: L,
       imageSource: (n = (0, f.convertToFakeGuildEvent)(g, S, C), null == (m = O) && null == n.image ? null : null != m && /^data:/.test(m) ? m : (0, I.default)(n)),
       isActive: !1,
-      isUserLurking: j,
+      isUserLurking: V,
       speakers: [],
       speakerCount: 0,
       rsvped: !0,
@@ -68,7 +68,7 @@ function m(e) {
             var e;
             return (0, l.jsxs)("div", {
               className: v.channelName,
-              children: [null != V ? (0, l.jsx)(V, {
+              children: [null != j ? (0, l.jsx)(j, {
                 width: 20,
                 height: 20,
                 className: v.icon

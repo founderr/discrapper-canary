@@ -17,8 +17,8 @@ var l = n("627445"),
   u = n("427495"),
   d = n("73961"),
   c = n("465527"),
-  f = n("55620"),
-  E = n("775433"),
+  E = n("55620"),
+  f = n("775433"),
   _ = n("524503"),
   T = n("333955"),
   I = n("308592"),
@@ -65,10 +65,10 @@ async function P(e) {
     context: d
   } = e, c = M.default.get(n);
   if (null == c) {
-    let e = await (0, f.fetchAllStoreListingsForApplication)(t),
+    let e = await (0, E.fetchAllStoreListingsForApplication)(t),
       s = e.find(e => e.sku.id === n);
     a(null != s, "Could not find store listing for sku"), s.sku.type === R.SKUTypes.SUBSCRIPTION_GROUP && await (0, _.fetchAllSubscriptionListingsDataForApplication)(t, s.id)
-  }(null == (c = null != c ? c : M.default.get(n)) ? void 0 : c.type) === R.SKUTypes.SUBSCRIPTION && !(0, I.getSubscriptionPlansLoaded)([c.id]) && await (0, E.fetchSubscriptionPlansForSKU)(c.id);
+  }(null == (c = null != c ? c : M.default.get(n)) ? void 0 : c.type) === R.SKUTypes.SUBSCRIPTION && !(0, I.getSubscriptionPlansLoaded)([c.id]) && await (0, f.fetchSubscriptionPlansForSKU)(c.id);
   let {
     enabled: S
   } = N.default.getCurrentConfig({
@@ -156,8 +156,8 @@ function x(e, t, l) {
   let {
     isIAP: d,
     context: c,
-    promotionId: f,
-    isGift: E
+    promotionId: E,
+    isGift: f
   } = {
     ...D,
     ...a
@@ -168,9 +168,9 @@ function x(e, t, l) {
       applicationId: e,
       skuId: t,
       isIAP: d,
-      isGift: E,
+      isGift: f,
       analyticsLocation: l,
-      promotionId: f,
+      promotionId: E,
       context: c,
       resolve: a,
       reject: o

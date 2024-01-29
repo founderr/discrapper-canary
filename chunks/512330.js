@@ -4,7 +4,7 @@ l.r(t), l.d(t, {
     return a
   },
   getTimeAndUnit: function() {
-    return I
+    return g
   },
   default: function() {
     return A
@@ -17,7 +17,7 @@ var n, a, s, i, r, o, u = l("37983"),
   m = l("862337"),
   p = l("782340");
 (i = n || (n = {})).ACTIVITY_FEED = "ACTIVITY_FEED", i.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW", i.USER_ACTIVITY = "USER_ACTIVITY", i.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED", i.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED", (r = a || (a = {})).NONE = "NONE", r.SECONDS = "SECONDS", r.MINUTES = "MINUTES", r.HOURS = "HOURS", r.DAYS = "DAYS", r.WEEKS = "WEEKS", r.MONTHS = "MONTHS", r.YEARS = "YEARS", (o = s || (s = {})).START = "START", o.END = "END", o.TIME = "TIME";
-let T = {
+let h = {
     NONE: e => 0,
     SECONDS: e => 60 * e,
     MINUTES: e => e,
@@ -52,11 +52,11 @@ let T = {
     unit: "YEARS",
     max: 1 / 0
   }],
-  S = e => (t, l) => null == l ? "" : e().format({
+  T = e => (t, l) => null == l ? "" : e().format({
     time: t,
     ...l
   }),
-  _ = {
+  S = {
     ACTIVITY_FEED: {
       START: {
         SECONDS: () => p.default.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
@@ -94,10 +94,10 @@ let T = {
     },
     ACTIVITY_FEED_NEW: {
       START: {
-        SECONDS: S(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
-        MINUTES: S(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
-        HOURS: S(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
-        DAYS: S(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
+        SECONDS: T(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
+        MINUTES: T(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
+        HOURS: T(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
+        DAYS: T(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
       },
       END: {
         SECONDS: e => p.default.Messages.DURATION_SECONDS_AGO.format({
@@ -183,7 +183,7 @@ let T = {
     }
   };
 
-function h(e, t) {
+function _(e, t) {
   let l = E.findIndex(t => {
       let {
         max: l,
@@ -207,9 +207,9 @@ function h(e, t) {
   return null != a ? a.unit : null
 }
 
-function I(e, t) {
-  let l = null != e ? h(e, e => t.includes(e)) : "NONE",
-    n = null != l ? T[l] : null;
+function g(e, t) {
+  let l = null != e ? _(e, e => t.includes(e)) : "NONE",
+    n = null != l ? h[l] : null;
   return {
     unit: l,
     time: null != e && null != n ? Math.floor(n(e)) : null
@@ -245,8 +245,8 @@ function A(e) {
       return null != e ? a = n - e : null != t && (a = n - t), Math.abs(a) / 1e3 / 60
     }
     getTimeUnit(e, t, l) {
-      let n = h(e, e => (function(e, t, l) {
-        let n = _[l];
+      let n = _(e, e => (function(e, t, l) {
+        let n = S[l];
         if (null != n) {
           let l = n[t];
           if (null != l) return null != l[e]
@@ -268,7 +268,7 @@ function A(e) {
       return null
     }
     transformTime(e, t) {
-      return T[e](t)
+      return h[e](t)
     }
     render() {
       let {
@@ -281,7 +281,7 @@ function A(e) {
       } = this.state, i = this.getType();
       if (null == i) return null;
       let r = this.getTimeUnit(s, t, i),
-        o = _[t][i];
+        o = S[t][i];
       if (null == o) return null;
       let d = o[r],
         c = Math.floor(this.transformTime(r, s));

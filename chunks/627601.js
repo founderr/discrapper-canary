@@ -1,25 +1,25 @@
 "use strict";
 l.r(t), l.d(t, {
   UserPopoutUpsellSource: function() {
-    return a
+    return i
   },
   useUserPopoutCollectiblesUpsellStore: function() {
-    return r
+    return a
   }
 });
-var n, a, s = l("308503");
-(n = a || (a = {})).PROFILE_PANEL = "profile panel", n.USER_POPOUT = "user popout";
-let i = {
+var s, i, n = l("308503");
+(s = i || (i = {})).PROFILE_PANEL = "profile panel", s.USER_POPOUT = "user popout";
+let u = {
     upsellSource: null
   },
-  r = (0, s.default)(e => ({
-    ...i,
+  a = (0, n.default)(e => ({
+    ...u,
     setUpsellSource: t => e({
       upsellSource: t
     }),
     reset: () => {
       e({
-        ...i
+        ...u
       })
     }
   }))
