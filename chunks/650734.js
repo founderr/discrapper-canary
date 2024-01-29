@@ -14,5 +14,7 @@ e.exports = {
   sectionHeader: "sectionHeader_f39b8d",
   sectionHeaderSeeAll: "sectionHeaderSeeAll_d4277d",
   showAllPerksButton: "showAllPerksButton__15f8d",
-  subtitle: "subtitle_c3170a"
+  showAllPerksButtonCenter: "showAllPerksButtonCenter__68bbc",
+  subtitle: "subtitle_c3170a",
+  subtitleWithButton: "subtitleWithButton_f2b3db"
 }

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   r = s("884691"),
   n = s("414456"),
-  i = s.n(n),
-  l = s("77078"),
+  l = s.n(n),
+  i = s("77078"),
   u = s("411691"),
   o = s("367226"),
   d = s("628550"),
@@ -41,12 +41,12 @@ var a = s("37983"),
       g = p.some(e => null != e.pillText);
     return (0, a.jsxs)("div", {
       ref: f,
-      className: i(E.section, {
+      className: l(E.section, {
         [E.centerAlignSection]: !I,
         [E.leftAlignSection]: I
       }, t),
       children: [(() => {
-        let e = (0, a.jsx)(l.Heading, {
+        let e = (0, a.jsx)(i.Heading, {
           variant: "heading-xxl/extrabold",
           color: "header-primary",
           className: E.heading,
@@ -64,20 +64,25 @@ var a = s("37983"),
             className: E.sectionHeaderSeeAll,
             children: e
           }), (0, a.jsx)("div", {
-            className: i(E.showAllPerksButton),
+            className: l(E.showAllPerksButton),
             children: T
           })]
         })
-      })(), (0, a.jsx)(l.Text, {
+      })(), (0, a.jsx)(i.Text, {
         variant: "text-lg/normal",
         color: "header-primary",
-        className: i(E.subtitle, {
+        className: l(E.subtitle, {
+          [E.subtitle]: null == T || I,
+          [E.subtitleWithButton]: null != T && !I,
           [E.fullWidth]: m || I,
           [E.moreSubtitleMargin]: g,
           [E.leftAlignSubtitle]: I,
           [E.centerAlignSubtitle]: !I
         }),
         children: A.subtitle
+      }), !I && null != T && (0, a.jsx)("div", {
+        className: l(E.showAllPerksButtonCenter),
+        children: T
       }), (0, a.jsx)("div", {
         className: E.cardContainer,
         children: p.map((e, t) => (0, a.jsx)(_.default, {

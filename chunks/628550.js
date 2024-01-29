@@ -8,8 +8,8 @@ s.r(t), s.d(t, {
   }
 });
 var a, r, n = s("65597"),
-  i = s("151426"),
-  l = s("79112"),
+  l = s("151426"),
+  i = s("79112"),
   u = s("841098"),
   o = s("812204"),
   d = s("685665"),
@@ -26,8 +26,8 @@ var a, r, n = s("65597"),
   N = s("49111"),
   p = s("397336"),
   g = s("782340"),
-  P = s("574211"),
-  C = s("982784"),
+  C = s("574211"),
+  P = s("982784"),
   O = s("19530"),
   M = s("215541"),
   h = s("571685"),
@@ -63,7 +63,7 @@ var X = () => {
     scrollPosition: p.ProfileCustomizationScrollPositions.TRY_IT_OUT,
     analyticsLocations: e
   }), et = () => {
-    l.default.open(N.UserSettingsSections.VOICE, p.SOUNDBOARD_SUBSECTION, {
+    i.default.open(N.UserSettingsSections.VOICE, p.SOUNDBOARD_SUBSECTION, {
       openWithoutBackstack: !0,
       analyticsLocations: e
     })
@@ -83,7 +83,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: v,
       canReveal: Z,
-      dismissibleContentType: i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
+      dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     } : {
       name: "avatarDecorations",
       title: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
@@ -92,7 +92,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: v,
       canReveal: Z,
-      dismissibleContentType: i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
+      dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     },
     clientThemes: {
       name: "clientThemes",
@@ -101,7 +101,7 @@ var X = () => {
       description: g.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_DESCRIPTION,
       descriptionCta: g.default.Messages.TAKE_ME_THERE,
       onCtaClick: () => {
-        l.default.open(N.UserSettingsSections.APPEARANCE, null, {
+        i.default.open(N.UserSettingsSections.APPEARANCE, null, {
           openWithoutBackstack: !0,
           analyticsLocations: e
         })
@@ -116,7 +116,7 @@ var X = () => {
       descriptionCta: $ ? g.default.Messages.TAKE_ME_THERE : g.default.Messages.LEARN_MORE,
       pillText: g.default.Messages.EARLY_ACCESS,
       onCtaClick: $ ? () => {
-        l.default.open(N.UserSettingsSections.CLIPS, null, {
+        i.default.open(N.UserSettingsSections.CLIPS, null, {
           openWithoutBackstack: !0,
           analyticsLocations: e
         })
@@ -184,7 +184,7 @@ var X = () => {
       onCtaClick: et,
       perkImage: B
     } : {
-      name: "entranceSounds",
+      name: "entranceSoundsSeeAllVariation",
       title: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
       subtitle: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
       description: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
@@ -200,7 +200,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: H,
       canReveal: q,
-      dismissibleContentType: i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
+      dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
     } : {
       name: "profileEffects",
       title: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
@@ -209,7 +209,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: H,
       canReveal: q,
-      dismissibleContentType: i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
+      dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
     },
     profiles: {
       name: "profiles",
@@ -242,7 +242,7 @@ var X = () => {
       description: g.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_DESCRIPTION,
       descriptionCta: g.default.Messages.TAKE_ME_THERE,
       onCtaClick: () => {
-        l.default.open(N.UserSettingsSections.GUILD_BOOSTING, null, {
+        i.default.open(N.UserSettingsSections.GUILD_BOOSTING, null, {
           openWithoutBackstack: !0,
           analyticsLocations: e
         })
@@ -329,7 +329,7 @@ var X = () => {
       name: "badge",
       title: g.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE,
       subtitle: g.default.Messages.NITRO_HOME_GET_THIS_SUBSCRIBER_BADGE,
-      perkImage: P,
+      perkImage: C,
       description: g.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS
     },
     customAppIcons: {
@@ -350,7 +350,7 @@ var X = () => {
       name: "customSoundsEverywhere",
       title: g.default.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
       subtitle: g.default.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-      perkImage: (0, m.getThemedImage)(t, C, O),
+      perkImage: (0, m.getThemedImage)(t, P, O),
       description: g.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
     },
     specialStickerAccess: {
