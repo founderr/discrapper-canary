@@ -309,7 +309,7 @@ class U extends l.PureComponent {
       }
       return (0, a.jsx)(o.Popout, {
         position: "right",
-        renderPopout: j && D || !C ? this.renderHangStatusPopout : this.renderStreamPopout,
+        renderPopout: M && j && D || !C ? this.renderHangStatusPopout : this.renderStreamPopout,
         shouldShow: s && !b,
         onRequestClose: this.handleHidePreview,
         spacing: 0,

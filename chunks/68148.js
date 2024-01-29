@@ -67,9 +67,7 @@ let b = e => {
       text: (0, E.getHangStatusText)(t),
       children: (0, a.jsx)(C.default, {
         hangStatusActivity: t,
-        className: i(P.hangStatusIcon, n, {
-          [P.selfHangStatus]: l
-        })
+        className: i(P.hangStatusIcon, n)
       })
     }, "hang-status")
   };
@@ -169,7 +167,7 @@ class U extends l.Component {
         deaf: s,
         serverDeaf: r
       });
-    return (u && (n ? B.push((0, a.jsx)(f.TooltipContainer, {
+    u && (n ? B.push((0, a.jsx)(f.TooltipContainer, {
       className: P.iconSpacing,
       text: y.default.Messages.LOCAL_VIDEO_DISABLED,
       children: (0, a.jsx)(_.default, {
@@ -188,13 +186,7 @@ class U extends l.Component {
       children: (0, a.jsx)(A.default, {
         className: i(P.icon, m)
       })
-    }, "activity")), null != j && B.push((0, a.jsx)(F, {
-      application: j,
-      iconClassName: m,
-      guildId: b,
-      channelId: U,
-      userId: w.id
-    }, "".concat(w.id, "-game"))), C === O.GameConsoleTypes.XBOX || S === L.VoicePlatforms.XBOX ? B.push((0, a.jsx)("div", {
+    }, "activity")), C === O.GameConsoleTypes.XBOX || S === L.VoicePlatforms.XBOX ? B.push((0, a.jsx)("div", {
       className: i(P.iconSpacing),
       children: (0, a.jsx)(N.default, {
         className: i(P.icon, m)
@@ -215,21 +207,29 @@ class U extends l.Component {
       children: (0, a.jsx)(I.default, {
         className: i(P.icon, m)
       })
-    }, "watch")), 0 !== B.length || null != H || v) ? (0, a.jsxs)("div", {
+    }, "watch"));
+    let G = null == T && null != j;
+    return 0 !== B.length || null != H || v || G ? (0, a.jsxs)("div", {
       className: P.icons,
       children: [(0, a.jsxs)("div", {
         className: P.iconGroup,
         onMouseEnter: () => null == V ? void 0 : V(!1),
         children: [H, B]
-      }), v && (0, a.jsx)("div", {
+      }), v || G ? (0, a.jsx)("div", {
         className: P.iconGroup,
         onMouseEnter: () => null == V ? void 0 : V(!0),
-        children: (0, a.jsx)(D, {
+        children: G ? (0, a.jsx)(F, {
+          application: j,
+          iconClassName: m,
+          guildId: b,
+          channelId: U,
+          userId: w.id
+        }, "".concat(w.id, "-game")) : (0, a.jsx)(D, {
           hangStatusActivity: T,
           iconClassName: m,
           isSelf: R
         })
-      })]
+      }) : null]
     }) : null
   }
   render() {
