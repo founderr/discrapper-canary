@@ -56,7 +56,7 @@ var x = function(e) {
     })
   }, [i, n]), s.useEffect(() => {
     f.setHomeLink(v.Routes.FRIENDS), (0, S.trackAppUIViewed)("friends")
-  }), s.useEffect(() => {
+  }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
   }, [t]);
   let I = (0, u.useStateFromStores)([p.default], () => p.default.theme),
