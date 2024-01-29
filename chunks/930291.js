@@ -67,6 +67,7 @@ var a = n("37983"),
             }), (0, a.jsx)(o.Text, {
               variant: "text-sm/semibold",
               color: "text-normal",
+              className: v.statusText,
               children: (0, S.getHangStatusText)(t)
             })]
           }), (0, a.jsxs)("div", {

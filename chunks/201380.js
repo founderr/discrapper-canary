@@ -117,7 +117,8 @@ class U extends l.PureComponent {
   }
   constructor(...e) {
     super(...e), this.domElementRef = l.createRef(), this.state = {
-      userPopoutOpen: !1
+      userPopoutOpen: !1,
+      isHoveringOwnHangStatus: !1
     }, this.handleClickUser = () => {
       this.setState({
         userPopoutOpen: !this.state.userPopoutOpen
@@ -142,6 +143,10 @@ class U extends l.PureComponent {
         showHangStatus: a
       } = this.props;
       (n || a) && (null == t || t(e.id))
+    }, this.handleHoverOwnHangStatus = e => {
+      this.setState({
+        isHoveringOwnHangStatus: e
+      })
     }, this.handleWatchStream = () => {
       let {
         user: e,
@@ -248,8 +253,9 @@ class U extends l.PureComponent {
         isSelf: j,
         application: O
       } = this.props, {
-        userPopoutOpen: b
-      } = this.state, D = L.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), U = {
+        userPopoutOpen: b,
+        isHoveringOwnHangStatus: D
+      } = this.state, U = L.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), w = {
         user: f,
         speaking: c,
         mute: r,
@@ -272,9 +278,9 @@ class U extends l.PureComponent {
         avatarContainerClass: i({
           [P.userAvatar]: !0
         }),
-        disabled: t && !D,
+        disabled: t && !U,
         selected: b,
-        onClick: D ? void 0 : this.handleClickUser,
+        onClick: U ? void 0 : this.handleClickUser,
         onDoubleClick: this.handleWatchStream,
         onContextMenu: this.handleUserContextMenu,
         guildId: N.guild_id,
@@ -285,9 +291,9 @@ class U extends l.PureComponent {
         channelId: N.id
       };
       if (t) {
-        var w;
+        var F;
         return (0, a.jsx)(o.Tooltip, {
-          text: null !== (w = (0, m.default)(n)) && void 0 !== w ? w : y.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+          text: null !== (F = (0, m.default)(n)) && void 0 !== F ? F : y.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
           children: e => {
             let {
               onClick: t,
@@ -295,7 +301,7 @@ class U extends l.PureComponent {
               ...l
             } = e;
             return (0, a.jsx)(R.default, {
-              ...U,
+              ...w,
               ...l
             })
           }
@@ -303,14 +309,15 @@ class U extends l.PureComponent {
       }
       return (0, a.jsx)(o.Popout, {
         position: "right",
-        renderPopout: C ? this.renderStreamPopout : this.renderHangStatusPopout,
+        renderPopout: j && D || !C ? this.renderHangStatusPopout : this.renderStreamPopout,
         shouldShow: s && !b,
         onRequestClose: this.handleHidePreview,
         spacing: 0,
         children: () => (0, a.jsx)(R.default, {
-          ...U,
+          ...w,
           onMouseDown: e.onMouseDown,
-          onKeyDown: e.onKeyDown
+          onKeyDown: e.onKeyDown,
+          handleHoverOwnHangStatus: this.handleHoverOwnHangStatus
         })
       })
     }
