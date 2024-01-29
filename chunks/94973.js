@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return x
   }
 }), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
 var i = n("37983"),
@@ -53,7 +53,7 @@ let S = (0, r.cssValueToNumber)(a.default.APPLICATION_SUBSCRIPTION_CARD_LISTING_
     })
   };
 
-function L(e) {
+function x(e) {
   let {
     listing: t,
     groupListingId: n,
@@ -61,8 +61,8 @@ function L(e) {
     analyticsLocation: a,
     onComplete: I,
     forcesTransitionToGuild: S
-  } = e, L = (0, l.useStateFromStores)([h.default], () => h.default.isSyncing), {
-    activeSubscription: x,
+  } = e, x = (0, l.useStateFromStores)([h.default], () => h.default.isSyncing), {
+    activeSubscription: L,
     activeSubscriptionListing: P
   } = (0, v.useActiveSubscriptionListingForApplication)(t.application_id, r), {
     openModal: y,
@@ -76,7 +76,7 @@ function L(e) {
     analyticsLocation: a,
     onComplete: I,
     forcesTransitionToGuild: S
-  }), w = t.subscription_plans[0], j = 0 === w.price, U = (null == P ? void 0 : P.id) === t.id, b = (0, o.default)(), D = b && !O || L, V = () => {
+  }), w = t.subscription_plans[0], j = 0 === w.price, U = (null == P ? void 0 : P.id) === t.id, b = (0, o.default)(), D = b && !O || x, V = () => {
     b ? y() : (0, c.redirectToLogin)({
       [g]: "true"
     })
@@ -88,7 +88,7 @@ function L(e) {
       let t = e.pathname + e.search;
       (0, f.replaceWith)(t), y()
     }
-  }, [b, y, t, D]), (0, i.jsxs)("div", {
+  }, [b, y, D]), (0, i.jsxs)("div", {
     className: m.container,
     children: [(0, i.jsxs)("div", {
       className: m.cardHeader,
@@ -110,7 +110,7 @@ function L(e) {
         }), (() => {
           var e;
           if (U) return (0, i.jsx)(N, {
-            children: (null == x ? void 0 : x.status) === T.SubscriptionStatusTypes.CANCELED ? A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
+            children: (null == L ? void 0 : L.status) === T.SubscriptionStatusTypes.CANCELED ? A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
           });
           if (j) return null == P ? (0, i.jsx)(N, {
             children: A.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
@@ -129,10 +129,14 @@ function L(e) {
           })
         })()]
       })]
-    }), (0, i.jsx)(C.SubscriptionListingBenefits, {
-      applicationId: t.application_id,
-      storeListingBenefits: t.store_listing_benefits,
-      skuBenefits: t.sku_benefits.benefits
+    }), (0, i.jsx)("div", {
+      className: m.benefitsContainer,
+      children: (0, i.jsx)(C.SubscriptionListingBenefits, {
+        applicationId: t.application_id,
+        storeListingBenefits: t.store_listing_benefits,
+        skuBenefits: t.sku_benefits.benefits,
+        className: m.benefit
+      })
     })]
   })
 }
