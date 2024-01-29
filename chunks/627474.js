@@ -35,9 +35,9 @@ var a = s("37983"),
       });
       return () => cancelAnimationFrame(t)
     }, [f, S, m]);
-    let A = (0, d.default)(),
-      N = (0, c.usePerksDiscoverabilityStrings)(m),
-      p = (0, c.getFilteredPerksDiscoverabilityCards)(A, s, R),
+    let A = (0, c.usePerksDiscoverabilityStrings)(m),
+      N = (0, d.default)(),
+      p = (0, c.getFilteredPerksDiscoverabilityCards)(N, s, R),
       g = p.some(e => null != e.pillText);
     return (0, a.jsxs)("div", {
       ref: f,
@@ -45,12 +45,30 @@ var a = s("37983"),
         [E.centerAlignSection]: !I,
         [E.leftAlignSection]: I
       }, t),
-      children: [(0, a.jsx)(l.Heading, {
-        variant: "heading-xxl/extrabold",
-        color: "header-primary",
-        className: E.heading,
-        children: N.title
-      }), (0, a.jsx)(l.Text, {
+      children: [(() => {
+        let e = (0, a.jsx)(l.Heading, {
+          variant: "heading-xxl/extrabold",
+          color: "header-primary",
+          className: E.heading,
+          children: A.title
+        });
+        return null == T ? e : I ? (0, a.jsxs)("div", {
+          className: E.sectionHeader,
+          children: [e, null != T && (0, a.jsx)("div", {
+            className: E.showAllPerksButton,
+            children: T
+          })]
+        }) : (0, a.jsxs)("div", {
+          className: E.container,
+          children: [(0, a.jsx)("div", {
+            className: E.sectionHeaderSeeAll,
+            children: e
+          }), (0, a.jsx)("div", {
+            className: i(E.showAllPerksButton),
+            children: T
+          })]
+        })
+      })(), (0, a.jsx)(l.Text, {
         variant: "text-lg/normal",
         color: "header-primary",
         className: i(E.subtitle, {
@@ -59,16 +77,13 @@ var a = s("37983"),
           [E.leftAlignSubtitle]: I,
           [E.centerAlignSubtitle]: !I
         }),
-        children: N.subtitle
-      }), (0, a.jsxs)("div", {
+        children: A.subtitle
+      }), (0, a.jsx)("div", {
         className: E.cardContainer,
-        children: [p.map((e, t) => (0, a.jsx)(_.default, {
+        children: p.map((e, t) => (0, a.jsx)(_.default, {
           ...e,
           forceShadow: n
-        }, "".concat(e.name, "_").concat(t))), null != T && (0, a.jsx)("div", {
-          className: E.showAllPerksButton,
-          children: T
-        })]
+        }, "".concat(e.name, "_").concat(t)))
       })]
     })
   }

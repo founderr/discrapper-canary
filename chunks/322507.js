@@ -25,22 +25,31 @@ var r = s("414456"),
         src: d,
         alt: "",
         className: o.headerArt
-      }), (0, a.jsxs)("div", {
+      }), (0, a.jsx)("div", {
         className: o.containerInner,
-        children: [(0, a.jsxs)(l.Clickable, {
-          onClick: s,
-          className: o.backButton,
-          children: [(0, a.jsx)(i.ChevronSmallLeftIcon, {
-            color: "currentColor"
-          }), u.default.Messages.BACK]
-        }), (0, a.jsx)("div", {
-          className: o.content,
-          children: (0, a.jsx)(l.Heading, {
-            variant: "display-lg",
-            color: "always-white",
-            children: u.default.Messages.NITRO_HOME_ALL_YOUR_NITRO_PERKS
-          })
-        })]
+        children: (0, a.jsxs)("div", {
+          className: o.containerInner,
+          children: [(0, a.jsx)("div", {
+            className: o.backButtonContainer,
+            children: (0, a.jsxs)(l.Clickable, {
+              onClick: s,
+              className: o.backButton,
+              children: [(0, a.jsx)(i.ChevronSmallLeftIcon, {
+                color: "currentColor"
+              }), u.default.Messages.BACK]
+            })
+          }), (0, a.jsx)("div", {
+            className: o.contentContainer,
+            children: (0, a.jsx)("div", {
+              className: o.content,
+              children: (0, a.jsx)(l.Heading, {
+                variant: "display-lg",
+                color: "always-white",
+                children: u.default.Messages.NITRO_HOME_ALL_YOUR_NITRO_PERKS
+              })
+            })
+          })]
+        })
       })]
     })
   }

@@ -16,7 +16,7 @@ var r = s("748802"),
       setIsAllPerksVisible: t
     } = e;
     return (0, a.jsx)(i.default, {
-      color: n.ButtonColors.PRIMARY,
+      color: n.ButtonColors.CUSTOM,
       onlyShineOnHover: !0,
       shineSize: i.ShineSizes.SMALL,
       className: u.seeAllPerksButton,
