@@ -1,159 +1,186 @@
 "use strict";
-a.r(t), a.d(t, {
+a.r(e), a.d(e, {
   default: function() {
-    return E
+    return b
   }
 }), a("222007");
 var s = a("37983"),
-  l = a("884691"),
-  n = a("627445"),
-  u = a.n(n),
+  n = a("884691"),
+  l = a("627445"),
+  u = a.n(l),
   r = a("446674"),
   i = a("77078"),
   o = a("430568"),
   S = a("901582"),
   d = a("86678"),
-  c = a("845579"),
-  h = a("52028"),
-  m = a("697218"),
-  f = a("882641"),
-  T = a("381546"),
-  p = a("599110"),
-  A = a("158998"),
-  C = a("921917"),
-  g = a("413524"),
-  _ = a("49111"),
-  M = a("958706"),
-  O = a("782340"),
-  N = a("711103");
-let j = Object.values(g.ClearAfterValues).filter(e => "number" == typeof e).sort((e, t) => e - t);
+  c = a("583232"),
+  h = a("91639"),
+  m = a("845579"),
+  T = a("52028"),
+  f = a("697218"),
+  p = a("882641"),
+  g = a("381546"),
+  A = a("599110"),
+  C = a("158998"),
+  _ = a("921917"),
+  O = a("712246"),
+  x = a("413524"),
+  M = a("49111"),
+  N = a("958706"),
+  E = a("782340"),
+  U = a("711103");
+let j = Object.values(x.ClearAfterValues).filter(t => "number" == typeof t).sort((t, e) => t - e);
 
-function U(e) {
+function v(t) {
   return (0, s.jsxs)("div", {
-    className: N.statusOptionItem,
+    className: U.statusOptionItem,
     children: [(0, s.jsx)(i.Status, {
-      status: e.value,
+      status: t.value,
       size: 10,
-      className: N.statusIcon
-    }), e.label]
+      className: U.statusIcon
+    }), t.label]
   })
 }
-let x = [{
+let D = [{
   key: 1,
   value: i.StatusTypes.ONLINE,
-  label: (0, A.humanizeStatus)(i.StatusTypes.ONLINE)
+  label: (0, C.humanizeStatus)(i.StatusTypes.ONLINE)
 }, {
   key: 2,
   value: i.StatusTypes.IDLE,
-  label: (0, A.humanizeStatus)(i.StatusTypes.IDLE)
+  label: (0, C.humanizeStatus)(i.StatusTypes.IDLE)
 }, {
   key: 3,
   value: i.StatusTypes.DND,
-  label: (0, A.humanizeStatus)(i.StatusTypes.DND)
+  label: (0, C.humanizeStatus)(i.StatusTypes.DND)
 }, {
   key: 4,
   value: i.StatusTypes.INVISIBLE,
-  label: (0, A.humanizeStatus)(i.StatusTypes.INVISIBLE)
+  label: (0, C.humanizeStatus)(i.StatusTypes.INVISIBLE)
 }];
-class v extends l.PureComponent {
+
+function y(t, e, a) {
+  return t === i.StatusTypes.ONLINE && e !== i.StatusTypes.ONLINE && null != a
+}
+
+function I(t) {
+  let {
+    status: e,
+    clearAfter: a,
+    clearStatusToo: n,
+    onChange: l
+  } = t, u = m.StatusSetting.useSetting(), r = y(u, e, a), o = h.ExpiringStatusExperiment.useExperiment({
+    location: "custom status modal"
+  }, {
+    disable: !r,
+    autoTrackExposure: !0
+  }).expiringStatus;
+  return o ? (0, s.jsx)(i.FormSwitch, {
+    className: U.formGroup,
+    value: n,
+    onChange: l,
+    children: E.default.Messages.CUSTOM_STATUS_ALSO_CLEAR_STATUS
+  }) : null
+}
+class L extends n.PureComponent {
   componentDidMount() {
     let {
-      sourceAnalyticsContext: e
+      sourceAnalyticsContext: t
     } = this.props;
-    p.default.track(_.AnalyticEvents.OPEN_MODAL, {
-      source: e.location,
-      type: _.AnalyticsSections.CUSTOM_STATUS_MODAL,
-      load_id: e.loadId
+    A.default.track(M.AnalyticEvents.OPEN_MODAL, {
+      source: t.location,
+      type: M.AnalyticsSections.CUSTOM_STATUS_MODAL,
+      load_id: t.loadId
     })
   }
   get clearAfterOptions() {
     return [{
       key: 1,
-      value: g.ClearAfterValues.TODAY,
-      label: O.default.Messages.CUSTOM_STATUS_TODAY
+      value: x.ClearAfterValues.TODAY,
+      label: E.default.Messages.CUSTOM_STATUS_TODAY
     }, {
       key: 2,
-      value: g.ClearAfterValues.HOURS_4,
-      label: O.default.Messages.CUSTOM_STATUS_HOURS.format({
+      value: x.ClearAfterValues.HOURS_4,
+      label: E.default.Messages.CUSTOM_STATUS_HOURS.format({
         hours: 4
       })
     }, {
       key: 3,
-      value: g.ClearAfterValues.HOURS_1,
-      label: O.default.Messages.CUSTOM_STATUS_HOURS.format({
+      value: x.ClearAfterValues.HOURS_1,
+      label: E.default.Messages.CUSTOM_STATUS_HOURS.format({
         hours: 1
       })
     }, {
       key: 4,
-      value: g.ClearAfterValues.MINUTES_30,
-      label: O.default.Messages.CUSTOM_STATUS_MINUTES.format({
+      value: x.ClearAfterValues.MINUTES_30,
+      label: E.default.Messages.CUSTOM_STATUS_MINUTES.format({
         minutes: 30
       })
     }, {
       key: 5,
       value: null,
-      label: O.default.Messages.CUSTOM_STATUS_DONT_CLEAR
+      label: E.default.Messages.CUSTOM_STATUS_DONT_CLEAR
     }]
   }
   get analyticsLocation() {
     return {
-      page: _.AnalyticsPages.CUSTOM_STATUS_MODAL
+      page: M.AnalyticsPages.CUSTOM_STATUS_MODAL
     }
   }
   getEmojiButtonRenderer() {
     let {
-      emojiInfo: e
+      emojiInfo: t
     } = this.state;
-    return null == e ? null : () => (0, s.jsx)(o.default, {
-      className: N.emoji,
-      emojiId: e.id,
-      emojiName: e.name,
-      animated: !!e.animated
+    return null == t ? null : () => (0, s.jsx)(o.default, {
+      className: U.emoji,
+      emojiId: t.id,
+      emojiName: t.name,
+      animated: !!t.animated
     })
   }
   renderCustomStatusInput() {
     let {
-      user: e
+      user: t
     } = this.props, {
-      text: t,
+      text: e,
       emojiInfo: a
     } = this.state;
     return (0, s.jsx)(i.FormSection, {
-      className: N.formGroup,
-      title: O.default.Messages.CUSTOM_STATUS_MODAL_BODY.format({
-        username: e.username
+      className: U.formGroup,
+      title: E.default.Messages.CUSTOM_STATUS_MODAL_BODY.format({
+        username: t.username
       }),
       children: (0, s.jsxs)("div", {
-        className: N.inputContainer,
+        className: U.inputContainer,
         children: [(0, s.jsx)("div", {
-          className: N.emojiButtonContainer,
+          className: U.emojiButtonContainer,
           children: (0, s.jsx)(i.Popout, {
             renderPopout: this.renderEmojiPicker,
             position: "left",
             animation: i.Popout.Animation.NONE,
             align: "top",
-            children: (e, t) => {
+            children: (t, e) => {
               let {
                 isShown: a
-              } = t;
-              return (0, s.jsx)(f.default, {
-                ...e,
+              } = e;
+              return (0, s.jsx)(p.default, {
+                ...t,
                 active: a,
-                className: N.emojiButton,
+                className: U.emojiButton,
                 tabIndex: 0,
                 renderButtonContents: this.getEmojiButtonRenderer()
               })
             }
           })
         }), (0, s.jsx)(i.TextInput, {
-          maxLength: g.STATUS_MAX_LENGTH,
-          value: t,
-          inputClassName: N.input,
-          placeholder: O.default.Messages.CUSTOM_STATUS_MODAL_PLACEHOLDER,
+          maxLength: x.STATUS_MAX_LENGTH,
+          value: e,
+          inputClassName: U.input,
+          placeholder: E.default.Messages.CUSTOM_STATUS_MODAL_PLACEHOLDER,
           onChange: this.handleStatusChange,
           onKeyPress: this.handleKeyPress,
           autoFocus: !0
-        }), t.length > 0 || null != a ? (0, s.jsx)(i.Button, {
+        }), e.length > 0 || null != a ? (0, s.jsx)(i.Button, {
           focusProps: {
             offset: {
               top: 8,
@@ -162,12 +189,12 @@ class v extends l.PureComponent {
               right: -2
             }
           },
-          className: N.clearButton,
+          className: U.clearButton,
           onClick: this.handleClearStatus,
           look: i.Button.Looks.BLANK,
           size: i.Button.Sizes.NONE,
-          children: (0, s.jsx)(T.default, {
-            className: N.clearIcon
+          children: (0, s.jsx)(g.default, {
+            className: U.clearIcon
           })
         }) : null]
       })
@@ -175,15 +202,15 @@ class v extends l.PureComponent {
   }
   renderClearAfter() {
     let {
-      clearAfter: e
+      clearAfter: t
     } = this.state;
     return (0, s.jsx)(i.FormSection, {
-      className: N.formGroup,
-      title: O.default.Messages.CUSTOM_STATUS_CLEAR_AFTER,
+      className: U.formGroup,
+      title: E.default.Messages.CUSTOM_STATUS_CLEAR_AFTER,
       children: (0, s.jsx)(i.SingleSelect, {
-        placeholder: O.default.Messages.CUSTOM_STATUS_CLEAR_AFTER,
+        placeholder: E.default.Messages.CUSTOM_STATUS_CLEAR_AFTER,
         maxVisibleItems: 5,
-        value: e,
+        value: t,
         options: this.clearAfterOptions,
         onChange: this.handleChangeClearAfter
       })
@@ -191,153 +218,175 @@ class v extends l.PureComponent {
   }
   renderStatusInput() {
     let {
-      status: e
+      status: t
     } = this.state;
     return (0, s.jsx)(i.FormSection, {
-      className: N.formGroup,
-      title: O.default.Messages.CUSTOM_STATUS_STATUS_TITLE,
+      className: U.formGroup,
+      title: E.default.Messages.CUSTOM_STATUS_STATUS_TITLE,
       children: (0, s.jsx)(i.SingleSelect, {
         maxVisibleItems: 4,
-        value: e,
-        options: x,
+        value: t,
+        options: D,
         onChange: this.handleChangeStatus,
-        renderOptionLabel: U
+        renderOptionLabel: v
+      })
+    })
+  }
+  renderExpiringStatusOption() {
+    let {
+      status: t,
+      clearAfter: e,
+      clearStatusToo: a
+    } = this.state;
+    return (0, s.jsx)(I, {
+      status: t,
+      clearAfter: e,
+      clearStatusToo: a,
+      onChange: t => this.setState({
+        clearStatusToo: t
       })
     })
   }
   render() {
     let {
-      transitionState: e,
-      onClose: t
+      transitionState: t,
+      onClose: e
     } = this.props;
     return (0, s.jsx)(S.default, {
       ...this.analyticsLocation,
       children: (0, s.jsxs)(i.ModalRoot, {
-        transitionState: e,
-        className: N.modalRoot,
-        "aria-label": O.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
+        transitionState: t,
+        className: U.modalRoot,
+        "aria-label": E.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
         children: [(0, s.jsxs)(i.ModalHeader, {
           separator: !1,
-          className: N.headerContainer,
+          className: U.headerContainer,
           children: [(0, s.jsx)("div", {
-            className: N.art
+            className: U.art
           }), (0, s.jsx)("div", {
-            className: N.header,
+            className: U.header,
             children: (0, s.jsx)(i.H, {
-              className: N.headerText,
-              children: O.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
+              className: U.headerText,
+              children: E.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
             })
           }), (0, s.jsx)(i.ModalCloseButton, {
-            onClick: t,
-            className: N.modalCloseButton
+            onClick: e,
+            className: U.modalCloseButton
           })]
         }), (0, s.jsxs)(i.ModalContent, {
           children: [this.renderCustomStatusInput(), this.renderClearAfter(), (0, s.jsx)(i.FormDivider, {
-            className: N.formDivider
-          }), this.renderStatusInput()]
+            className: U.formDivider
+          }), this.renderStatusInput(), this.renderExpiringStatusOption()]
         }), (0, s.jsxs)(i.ModalFooter, {
           children: [(0, s.jsx)(i.Button, {
             onClick: this.handleSubmit,
-            children: O.default.Messages.SAVE
+            children: E.default.Messages.SAVE
           }), (0, s.jsx)(i.Button, {
-            onClick: t,
+            onClick: e,
             look: i.Button.Looks.LINK,
-            color: N.cancelButton,
-            children: O.default.Messages.CANCEL
+            color: U.cancelButton,
+            children: E.default.Messages.CANCEL
           })]
         })]
       })
     })
   }
-  constructor(...e) {
-    super(...e), this.state = {
+  constructor(...t) {
+    super(...t), this.state = {
       emojiInfo: null != this.props.customStatus ? this.props.customStatus.emoji : null,
       text: null != this.props.customStatus && null != this.props.customStatus.state ? this.props.customStatus.state : "",
       clearAfter: function() {
-        var e, t, a;
-        let s = c.CustomStatusSetting.getSetting();
-        if (null == s || "" === s.expiresAtMs) return g.ClearAfterValues.TODAY;
-        let l = Number(s.expiresAtMs);
-        if (isNaN(l)) return g.ClearAfterValues.TODAY;
-        let n = new Date,
-          u = new Date(l);
-        if (t = n, a = u, t.getFullYear() !== a.getFullYear() || t.getMonth() !== a.getMonth() || t.getDate() !== a.getDate()) return g.ClearAfterValues.TODAY;
-        let r = Number(l) - Date.now();
-        return null !== (e = j.find(e => r <= e)) && void 0 !== e ? e : g.ClearAfterValues.TODAY
+        var t, e, a;
+        let s = m.CustomStatusSetting.getSetting();
+        if (null == s || "" === s.expiresAtMs) return x.ClearAfterValues.TODAY;
+        let n = Number(s.expiresAtMs);
+        if (isNaN(n)) return x.ClearAfterValues.TODAY;
+        let l = new Date,
+          u = new Date(n);
+        if (e = l, a = u, e.getFullYear() !== a.getFullYear() || e.getMonth() !== a.getMonth() || e.getDate() !== a.getDate()) return x.ClearAfterValues.TODAY;
+        let r = Number(n) - Date.now();
+        return null !== (t = j.find(t => r <= t)) && void 0 !== t ? t : x.ClearAfterValues.TODAY
       }(),
       status: function() {
-        let e = c.StatusSetting.getSetting();
-        return x.some(t => t.value === e) ? e : i.StatusTypes.ONLINE
-      }()
+        let t = m.StatusSetting.getSetting();
+        return D.some(e => e.value === t) ? t : i.StatusTypes.ONLINE
+      }(),
+      clearStatusToo: !0
     }, this.handleClearStatus = () => {
       this.setState({
         emojiInfo: null,
         text: ""
       })
-    }, this.handleSubmit = e => {
-      e.preventDefault(), this.handleSaveStatus()
-    }, this.handleStatusChange = e => {
+    }, this.handleSubmit = t => {
+      t.preventDefault(), this.handleSaveStatus()
+    }, this.handleStatusChange = t => {
       this.setState({
-        text: e
+        text: t
       })
-    }, this.handleEmojiChange = e => {
-      if (null == e) return;
-      let t = null != e.id ? {
-        id: e.id,
-        name: e.name,
-        animated: e.animated
+    }, this.handleEmojiChange = t => {
+      if (null == t) return;
+      let e = null != t.id ? {
+        id: t.id,
+        name: t.name,
+        animated: t.animated
       } : {
         id: null,
-        name: e.optionallyDiverseSequence,
+        name: t.optionallyDiverseSequence,
         animated: !1
       };
       this.setState({
-        emojiInfo: t
+        emojiInfo: e
       })
-    }, this.handleChangeClearAfter = e => {
+    }, this.handleChangeClearAfter = t => {
       this.setState({
-        clearAfter: e
+        clearAfter: t
       })
-    }, this.handleChangeStatus = e => {
+    }, this.handleChangeStatus = t => {
       this.setState({
-        status: e
+        status: t
       })
     }, this.handleSaveStatus = () => {
       let {
-        sourceAnalyticsContext: e,
-        onClose: t
+        sourceAnalyticsContext: t,
+        onClose: e
       } = this.props, {
         emojiInfo: a,
         text: s,
-        clearAfter: l,
-        status: n
-      } = this.state;
-      c.StatusSetting.updateSetting(n), (0, C.default)(s, a, l, e), t()
-    }, this.handleKeyPress = e => {
-      e.which === _.KeyboardKeys.ENTER && this.handleSaveStatus()
-    }, this.renderEmojiPicker = e => {
+        clearAfter: n,
+        status: l,
+        clearStatusToo: u
+      } = this.state, r = m.StatusSetting.getSetting(), i = y(r, l, n), o = h.ExpiringStatusExperiment.getCurrentConfig({
+        location: "custom status modal (set status)"
+      }, {
+        disable: !i,
+        autoTrackExposure: !0
+      }).expiringStatus;
+      (0, c.default)(l, void 0, t, o && null != n && u ? (0, O.default)(n) : void 0), (0, _.default)(s, a, n, t), e()
+    }, this.handleKeyPress = t => {
+      t.which === M.KeyboardKeys.ENTER && this.handleSaveStatus()
+    }, this.renderEmojiPicker = t => {
       let {
-        closePopout: t
-      } = e, {
+        closePopout: e
+      } = t, {
         onClose: a
       } = this.props;
       return (0, s.jsx)(d.default, {
-        closePopout: t,
-        onSelectEmoji: (e, a) => {
-          this.handleEmojiChange(e), a && t()
+        closePopout: e,
+        onSelectEmoji: (t, a) => {
+          this.handleEmojiChange(t), a && e()
         },
-        pickerIntention: M.EmojiIntention.STATUS,
+        pickerIntention: N.EmojiIntention.STATUS,
         onNavigateAway: a
       })
     }
   }
 }
-var E = r.default.connectStores([h.default, m.default], () => {
-  let e = m.default.getCurrentUser();
-  return u(null != e, "CustomStatusModal: user cannot be null"), {
-    customStatus: h.default.getCustomStatusActivity(),
-    user: e
+var b = r.default.connectStores([T.default, f.default], () => {
+  let t = f.default.getCurrentUser();
+  return u(null != t, "CustomStatusModal: user cannot be null"), {
+    customStatus: T.default.getCustomStatusActivity(),
+    user: t
   }
 }, {
   forwardRef: !0
-})(v)
+})(L)

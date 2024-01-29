@@ -825,6 +825,20 @@ let em = l.memo(function() {
           children: eE.default.Messages.ESLATAM_LANGUAGE_LAUNCH_NOTICE_CTA
         })]
       });
+    case eo.NoticeTypes.HABITUAL_DND:
+      return (0, s.jsxs)(en.default, {
+        color: en.NoticeColors.BRAND,
+        children: [(0, s.jsx)(en.NoticeCloseButton, {
+          noticeType: eo.NoticeTypes.HABITUAL_DND,
+          onClick: () => eI()
+        }), eE.default.Messages.QUIET_MODE_HABITUAL_DND_NOTICE, (0, s.jsx)(en.PrimaryCTANoticeButton, {
+          noticeType: eo.NoticeTypes.HABITUAL_DND,
+          onClick: () => {
+            C.default.open(eo.UserSettingsSections.NOTIFICATIONS), eI()
+          },
+          children: eE.default.Messages.CHECK_IT_OUT
+        })]
+      });
     default:
       return null
   }

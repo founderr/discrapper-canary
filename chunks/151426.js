@@ -1264,6 +1264,9 @@ class Z extends M.MessageType {
         case 4:
           o.enableBurstReactionNotifications = h.BoolValue.internalBinaryRead(e, e.uint32(), E, o.enableBurstReactionNotifications);
           break;
+        case 5:
+          o.quietMode = h.BoolValue.internalBinaryRead(e, e.uint32(), E, o.quietMode);
+          break;
         default:
           let n = E.readUnknownField;
           if ("throw" === n) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
@@ -1274,7 +1277,7 @@ class Z extends M.MessageType {
     return o
   }
   internalBinaryWrite(e, _, E) {
-    e.showInAppNotifications && h.BoolValue.internalBinaryWrite(e.showInAppNotifications, _.tag(1, M.WireType.LengthDelimited).fork(), E).join(), e.notifyFriendsOnGoLive && h.BoolValue.internalBinaryWrite(e.notifyFriendsOnGoLive, _.tag(2, M.WireType.LengthDelimited).fork(), E).join(), "0" !== e.notificationCenterAckedBeforeId && _.tag(3, M.WireType.Bit64).fixed64(e.notificationCenterAckedBeforeId), e.enableBurstReactionNotifications && h.BoolValue.internalBinaryWrite(e.enableBurstReactionNotifications, _.tag(4, M.WireType.LengthDelimited).fork(), E).join();
+    e.showInAppNotifications && h.BoolValue.internalBinaryWrite(e.showInAppNotifications, _.tag(1, M.WireType.LengthDelimited).fork(), E).join(), e.notifyFriendsOnGoLive && h.BoolValue.internalBinaryWrite(e.notifyFriendsOnGoLive, _.tag(2, M.WireType.LengthDelimited).fork(), E).join(), "0" !== e.notificationCenterAckedBeforeId && _.tag(3, M.WireType.Bit64).fixed64(e.notificationCenterAckedBeforeId), e.enableBurstReactionNotifications && h.BoolValue.internalBinaryWrite(e.enableBurstReactionNotifications, _.tag(4, M.WireType.LengthDelimited).fork(), E).join(), e.quietMode && h.BoolValue.internalBinaryWrite(e.quietMode, _.tag(5, M.WireType.LengthDelimited).fork(), E).join();
     let t = E.writeUnknownFields;
     return !1 !== t && (!0 == t ? M.UnknownFieldHandler.onWrite : t)(this.typeName, e, _), _
   }
@@ -1297,6 +1300,11 @@ class Z extends M.MessageType {
     }, {
       no: 4,
       name: "enable_burst_reaction_notifications",
+      kind: "message",
+      T: () => h.BoolValue
+    }, {
+      no: 5,
+      name: "quiet_mode",
       kind: "message",
       T: () => h.BoolValue
     }])
@@ -1633,7 +1641,9 @@ class en extends M.MessageType {
 let er = new en;
 class ea extends M.MessageType {
   create(e) {
-    let _ = {};
+    let _ = {
+      statusExpiresAtMs: "0"
+    };
     return globalThis.Object.defineProperty(_, M.MESSAGE_TYPE, {
       enumerable: !1,
       value: this
@@ -1654,6 +1664,9 @@ class ea extends M.MessageType {
         case 3:
           o.showCurrentGame = h.BoolValue.internalBinaryRead(e, e.uint32(), E, o.showCurrentGame);
           break;
+        case 4:
+          o.statusExpiresAtMs = e.fixed64().toString();
+          break;
         default:
           let n = E.readUnknownField;
           if ("throw" === n) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(t, ") for ").concat(this.typeName));
@@ -1664,7 +1677,7 @@ class ea extends M.MessageType {
     return o
   }
   internalBinaryWrite(e, _, E) {
-    e.status && h.StringValue.internalBinaryWrite(e.status, _.tag(1, M.WireType.LengthDelimited).fork(), E).join(), e.customStatus && es.internalBinaryWrite(e.customStatus, _.tag(2, M.WireType.LengthDelimited).fork(), E).join(), e.showCurrentGame && h.BoolValue.internalBinaryWrite(e.showCurrentGame, _.tag(3, M.WireType.LengthDelimited).fork(), E).join();
+    e.status && h.StringValue.internalBinaryWrite(e.status, _.tag(1, M.WireType.LengthDelimited).fork(), E).join(), e.customStatus && es.internalBinaryWrite(e.customStatus, _.tag(2, M.WireType.LengthDelimited).fork(), E).join(), e.showCurrentGame && h.BoolValue.internalBinaryWrite(e.showCurrentGame, _.tag(3, M.WireType.LengthDelimited).fork(), E).join(), "0" !== e.statusExpiresAtMs && _.tag(4, M.WireType.Bit64).fixed64(e.statusExpiresAtMs);
     let t = E.writeUnknownFields;
     return !1 !== t && (!0 == t ? M.UnknownFieldHandler.onWrite : t)(this.typeName, e, _), _
   }
@@ -1684,6 +1697,11 @@ class ea extends M.MessageType {
       name: "show_current_game",
       kind: "message",
       T: () => h.BoolValue
+    }, {
+      no: 4,
+      name: "status_expires_at_ms",
+      kind: "scalar",
+      T: 6
     }])
   }
 }
