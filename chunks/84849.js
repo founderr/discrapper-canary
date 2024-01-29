@@ -16,22 +16,31 @@ var s = n("37983"),
 function c(e) {
   let {
     messageId: t,
-    channelId: n
-  } = e, c = (0, a.useStateFromStores)([u.default], () => u.default.canSubmitFpReport(t)), f = l.useCallback(() => {
-    if (!c) {
+    channelId: c
+  } = e, f = (0, a.useStateFromStores)([u.default], () => u.default.canSubmitFpReport(t)), E = l.useCallback(() => {
+    if (!f) {
       r.default.show({
         title: d.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_HEADER,
         body: d.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY,
         confirmText: d.default.Messages.OKAY
-      }), o.default.disableFalsePositiveButton(n, t);
+      }), o.default.disableFalsePositiveButton(c, t);
       return
-    }
-  }, [n, t, c]);
+    }(0, i.openModalLazy)(async () => {
+      let {
+        default: e
+      } = await n("492996");
+      return n => (0, s.jsx)(e, {
+        channelId: c,
+        messageId: t,
+        ...n
+      })
+    })
+  }, [c, t, f]);
   return (0, s.jsx)(i.Button, {
     size: i.Button.Sizes.MEDIUM,
     color: i.Button.Colors.PRIMARY,
-    onClick: f,
-    disabled: !c,
+    onClick: E,
+    disabled: !f,
     children: d.default.Messages.SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE
   })
 }
