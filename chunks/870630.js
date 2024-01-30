@@ -65,6 +65,9 @@ i = class extends s.default {
   }
   setGoLiveSource(e, t) {}
   setClipsSource(e) {}
+  setClipsQualitySettings(e, t, n) {
+    return !1
+  }
   setDesktopSource(e) {
     arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.MediaEngineContextTypes.DEFAULT
   }

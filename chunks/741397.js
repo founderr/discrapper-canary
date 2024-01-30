@@ -246,6 +246,10 @@ function p(e) {
       soundshareId: null != s ? s : 0
     })
   }
+  setClipsQualitySettings(e, t, n) {
+    let i = (0, h.getVoiceEngine)();
+    return null != i.applyClipsQualitySettings && (i.applyClipsQualitySettings(e, t, n), !0)
+  }
   setSoundshareSource(e, t, n) {
     this.eachConnection(i => {
       (n !== E.MediaEngineContextTypes.STREAM || i.streamUserId === i.ids.userId) && i.setSoundshareSource(e, t)
