@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return p
+    return g
   }
 }), l("222007");
 var a = l("37983"),
@@ -19,37 +19,37 @@ var a = l("37983"),
   E = l("781896"),
   M = l("599110"),
   h = l("130037"),
-  T = l("466818"),
-  x = l("624663"),
-  _ = l("49111"),
-  g = l("782340"),
-  H = l("275699");
+  _ = l("466818"),
+  T = l("624663"),
+  x = l("49111"),
+  S = l("782340"),
+  A = l("275699");
 
-function p(e) {
+function g(e) {
   let {
     guildId: t
-  } = e, p = (0, T.useCanAccessBulkBanningFeature)(t), {
-    selectedUserIds: A,
-    clearSelection: S
-  } = (0, x.default)(t), L = A.size > 0, N = async (e, t, l, a) => {
+  } = e, g = (0, _.useCanAccessBulkBanningFeature)(t), {
+    selectedUserIds: p,
+    clearSelection: H
+  } = (0, T.default)(t), N = p.size > 0, L = async (e, t, l, a) => {
     try {
       let n = await r.default.banMultipleUsers(e, t, l, a);
-      (0, d.showToast)((0, d.createToast)(g.default.Messages.BAN_MULTIPLE_SUCCESS_TOAST, d.ToastType.SUCCESS)), M.default.track(_.AnalyticEvents.BULK_MODERATION_ACTION_COMPLETED, {
+      (0, d.showToast)((0, d.createToast)(S.default.Messages.BAN_MULTIPLE_SUCCESS_TOAST, d.ToastType.SUCCESS)), M.default.track(x.AnalyticEvents.BULK_MODERATION_ACTION_COMPLETED, {
         ...(0, C.collectGuildAnalyticsMetadata)(e),
         action_type: h.ModerationActionType.BAN,
-        target_user_ids: [...A],
+        target_user_ids: [...p],
         mod_user_id: c.default.getId(),
         successful_user_ids: n.body.banned_users,
         location
       })
     } catch (e) {
-      (0, d.showToast)((0, d.createToast)(g.default.Messages.BAN_MULTIPLE_FAILED_TOAST, d.ToastType.FAILURE))
+      (0, d.showToast)((0, d.createToast)(S.default.Messages.BAN_MULTIPLE_FAILED_TOAST, d.ToastType.FAILURE))
     }
-    S()
+    H()
   }, I = n.useCallback(() => {
-    S()
-  }, [S]), v = (0, a.jsxs)("span", {
-    className: H.messageContainer,
+    H()
+  }, [H]), R = (0, a.jsxs)("span", {
+    className: A.messageContainer,
     children: [(0, a.jsx)(E.default, {
       width: 24,
       height: 24,
@@ -57,36 +57,36 @@ function p(e) {
     }), (0, a.jsx)(d.Text, {
       variant: "heading-md/bold",
       color: "text-normal",
-      children: g.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_SELECTED_MEMBERS_MESSAGE.format({
-        count: A.size
+      children: S.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_SELECTED_MEMBERS_MESSAGE.format({
+        count: p.size
       })
     }), (0, a.jsx)(d.Button, {
       color: d.Button.Colors.LINK,
       look: d.Button.Looks.LINK,
       onClick: I,
-      className: H.clearButton,
-      children: g.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_CLEAR_SELECTION
+      className: A.clearButton,
+      children: S.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_CLEAR_SELECTION
     })]
-  }), b = (0, a.jsxs)("span", {
-    className: H.buttonContainer,
+  }), v = (0, a.jsxs)("span", {
+    className: A.buttonContainer,
     children: [(0, a.jsx)(m.default, {
       width: 20,
       height: 20
     }), (0, a.jsx)(d.Text, {
       variant: "text-sm/semibold",
-      children: g.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION
+      children: S.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION
     })]
   });
-  return p ? (0, a.jsx)(i.default, {
+  return g ? (0, a.jsx)(i.default, {
     component: "div",
-    className: H.saveNoticeContainer,
-    children: L && (0, a.jsx)(f.default, {
+    className: A.saveNoticeContainer,
+    children: N && (0, a.jsx)(f.default, {
       children: (0, a.jsx)(u.default, {
         onSave: () => {
-          M.default.track(_.AnalyticEvents.BULK_MODERATION_ACTION_STARTED, {
+          M.default.track(x.AnalyticEvents.BULK_MODERATION_ACTION_STARTED, {
             ...(0, C.collectGuildAnalyticsMetadata)(t),
             action_type: h.ModerationActionType.BAN,
-            target_user_ids: [...A],
+            target_user_ids: [...p],
             mod_user_id: c.default.getId(),
             location
           }), (0, d.openModalLazy)(async () => {
@@ -96,15 +96,15 @@ function p(e) {
             return l => (0, a.jsx)(e, {
               ...l,
               guildId: t,
-              canBulkBan: p,
-              userIds: A,
-              onBanMultiple: N
+              canBulkBan: g,
+              userIds: p,
+              onBanMultiple: L
             })
           })
         },
-        onSaveText: b,
+        onSaveText: v,
         onSaveButtonColor: d.ButtonColors.RED,
-        message: v
+        message: R
       })
     })
   }) : null

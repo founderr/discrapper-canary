@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   EmptyStateImage: function() {
-    return m
+    return v
   },
   EmptyStateText: function() {
-    return S
+    return m
   },
   default: function() {
     return i
@@ -19,12 +19,12 @@ var l, i, r = n("37983"),
   d = n("145131"),
   f = n("49111"),
   E = n("430098"),
-  _ = n("926622");
+  h = n("926622");
 let {
-  Provider: h,
-  Consumer: p
+  Provider: p,
+  Consumer: _
 } = s.createContext(f.ThemeTypes.DARK);
-class m extends s.PureComponent {
+class v extends s.PureComponent {
   render() {
     let {
       lightSrc: e,
@@ -35,10 +35,10 @@ class m extends s.PureComponent {
       offsetY: s,
       style: o
     } = this.props;
-    return (0, r.jsx)(p, {
+    return (0, r.jsx)(_, {
       children: c => (0, r.jsx)(d.default.Child, {
         grow: 0,
-        className: u(E.image, _.marginBottom40),
+        className: u(E.image, h.marginBottom40),
         style: {
           ...o,
           width: n,
@@ -51,7 +51,7 @@ class m extends s.PureComponent {
     })
   }
 }
-let S = e => {
+let m = e => {
   let {
     children: t,
     className: n,
@@ -67,7 +67,7 @@ let S = e => {
       className: u(n, E.title),
       children: t
     }), null != i ? (0, r.jsx)("div", {
-      className: u(l, E.text, _.marginTop8),
+      className: u(l, E.text, h.marginTop8),
       children: i
     }) : null]
   })
@@ -80,7 +80,7 @@ let S = e => {
       className: n,
       style: l
     } = this.props;
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(p, {
       value: t,
       children: (0, r.jsx)(d.default, {
         direction: d.default.Direction.VERTICAL,
@@ -92,4 +92,4 @@ let S = e => {
       })
     })
   }
-}).Text = S, l.Image = m, i = l
+}).Text = m, l.Image = v, i = l

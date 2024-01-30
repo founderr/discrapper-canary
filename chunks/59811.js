@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   default: function() {
-    return _
+    return h
   }
 });
 var l = n("446674"),
@@ -51,7 +51,7 @@ class E extends l.default.Store {
   }
 }
 E.displayName = "WelcomeScreenStore";
-var _ = new E(i.default, {
+var h = new E(i.default, {
   INVITE_RESOLVE_SUCCESS: d,
   INVITE_ACCEPT_SUCCESS: d,
   WELCOME_SCREEN_SUBMIT_SUCCESS: f,

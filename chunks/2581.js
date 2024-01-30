@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("693566"),
   a = n.n(i),
-  s = n("446674"),
-  r = n("913144"),
+  r = n("446674"),
+  s = n("913144"),
   o = n("718517");
 let u = {
     taken: null,
@@ -38,7 +38,7 @@ let u = {
       }
     }
   };
-class d extends s.default.Store {
+class d extends r.default.Store {
   isRateLimited() {
     return null != l.retryAfterTime && Date.now() < l.retryAfterTime
   }
@@ -66,7 +66,7 @@ class d extends s.default.Store {
   }
 }
 d.displayName = "PomeloStore";
-var g = new d(r.default, {
+var g = new d(s.default, {
   POMELO_ATTEMPT_SUCCESS: function(e) {
     let {
       username: t,

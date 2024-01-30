@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return _
+    return x
   }
 });
 var a = l("37983"),
@@ -19,88 +19,88 @@ var a = l("37983"),
   E = l("178406"),
   M = l("645266"),
   h = l("49111"),
-  T = l("782340"),
-  x = l("253665");
+  _ = l("782340"),
+  T = l("253665");
 
-function _(e) {
+function x(e) {
   let {
     guildId: t,
     onClose: l
-  } = e, s = (0, o.default)([E.default], () => E.default.getSearchStateByGuildId(t), [t], i), _ = (0, f.useTrackMemberFilterSafetyFlagsUsed)(t), g = (0, m.isInMembersTableSafetySignalsExperiment)(t), H = n.useCallback(() => {
-    !s.requireUnusualDmActivity && _(f.MemberSafetyFlagType.UNUSUAL_DM_ACTIVITY), (0, M.updateSearchState)(t, {
+  } = e, s = (0, o.default)([E.default], () => E.default.getSearchStateByGuildId(t), [t], i), x = (0, f.useTrackMemberFilterSafetyFlagsUsed)(t), S = (0, m.isInMembersTableSafetySignalsExperiment)(t), A = n.useCallback(() => {
+    !s.requireUnusualDmActivity && x(f.MemberSafetyFlagType.UNUSUAL_DM_ACTIVITY), (0, M.updateSearchState)(t, {
       ...s,
       requireUnusualDmActivity: !s.requireUnusualDmActivity
     })
-  }, [t, s, _]), p = n.useCallback(() => {
-    !s.requireCommunicationDisabled && _(f.MemberSafetyFlagType.COMMUNICATION_DISABLED), (0, M.updateSearchState)(t, {
+  }, [t, s, x]), g = n.useCallback(() => {
+    !s.requireCommunicationDisabled && x(f.MemberSafetyFlagType.COMMUNICATION_DISABLED), (0, M.updateSearchState)(t, {
       ...s,
       requireCommunicationDisabled: !s.requireCommunicationDisabled
     })
-  }, [t, s, _]), A = n.useCallback(() => {
-    !s.requireUnusualAccountActivity && _(f.MemberSafetyFlagType.UNUSUAL_ACCOUNT_ACTIVITY), (0, M.updateSearchState)(t, {
+  }, [t, s, x]), p = n.useCallback(() => {
+    !s.requireUnusualAccountActivity && x(f.MemberSafetyFlagType.UNUSUAL_ACCOUNT_ACTIVITY), (0, M.updateSearchState)(t, {
       ...s,
       requireUnusualAccountActivity: !s.requireUnusualAccountActivity
     })
-  }, [t, s, _]), S = n.useCallback(() => {
-    !s.requireUsernameQuarantined && _(f.MemberSafetyFlagType.USERNAME_QUARANTINED), (0, M.updateSearchState)(t, {
+  }, [t, s, x]), H = n.useCallback(() => {
+    !s.requireUsernameQuarantined && x(f.MemberSafetyFlagType.USERNAME_QUARANTINED), (0, M.updateSearchState)(t, {
       ...s,
       requireUsernameQuarantined: !s.requireUsernameQuarantined
     })
-  }, [t, s, _]);
+  }, [t, s, x]);
   return (0, a.jsx)(d.Menu, {
     navId: "member-safety-flags",
     onClose: l,
-    "aria-label": T.default.Messages.MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE,
+    "aria-label": _.default.Messages.MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE,
     onSelect: h.NOOP,
     children: (0, a.jsxs)(d.MenuGroup, {
       children: [(0, a.jsx)(d.MenuCheckboxItem, {
         id: "toggle-require-unusual-dm-activity",
         label: (0, a.jsxs)("div", {
-          className: x.checkboxLabel,
+          className: T.checkboxLabel,
           children: [(0, a.jsx)(r.default, {
             width: 16,
             height: 16,
-            className: x.unusualDMLabelIcon
-          }), T.default.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY]
+            className: T.unusualDMLabelIcon
+          }), _.default.Messages.MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY]
         }),
-        action: H,
+        action: A,
         checked: s.requireUnusualDmActivity
       }), (0, a.jsx)(d.MenuCheckboxItem, {
         id: "toggle-require-communication-disabled",
         label: (0, a.jsxs)("div", {
-          className: x.checkboxLabel,
+          className: T.checkboxLabel,
           children: [(0, a.jsx)(C.default, {
             width: 16,
             height: 16,
-            className: x.timeoutLabelIcon
-          }), T.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED]
+            className: T.timeoutLabelIcon
+          }), _.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED]
         }),
-        action: p,
+        action: g,
         checked: s.requireCommunicationDisabled
-      }), g && (0, a.jsxs)(a.Fragment, {
+      }), S && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(d.MenuCheckboxItem, {
           id: "toggle-require-unusual-account-activity",
           label: (0, a.jsxs)("div", {
-            className: x.checkboxLabel,
+            className: T.checkboxLabel,
             children: [(0, a.jsx)(c.default, {
               width: 16,
               height: 16,
-              className: x.unusualAccountActivityLabelIcon
-            }), T.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY]
+              className: T.unusualAccountActivityLabelIcon
+            }), _.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY]
           }),
-          action: A,
+          action: p,
           checked: s.requireUnusualAccountActivity
         }), (0, a.jsx)(d.MenuCheckboxItem, {
           id: "toggle-require-username-quarantined",
           label: (0, a.jsxs)("div", {
-            className: x.checkboxLabel,
+            className: T.checkboxLabel,
             children: [(0, a.jsx)(u.default, {
               width: 16,
               height: 16,
-              className: x.quarantinedLabelIcon
-            }), T.default.Messages.MEMBER_SAFETY_USERNAME_QUARANTINED]
+              className: T.quarantinedLabelIcon
+            }), _.default.Messages.MEMBER_SAFETY_USERNAME_QUARANTINED]
           }),
-          action: S,
+          action: H,
           checked: s.requireUsernameQuarantined
         })]
       })]

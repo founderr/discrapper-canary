@@ -43,10 +43,10 @@ function v(e) {
   } = (0, d.useStateFromStoresObject)([_.default], () => ({
     impersonateType: _.default.getImpersonateType(t),
     viewingRoles: _.default.getViewingRoles(t)
-  })), R = u === p.ImpersonateType.SERVER_SHOP, N = (0, d.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [M, L] = (0, c.useMultiSelect)(null == v ? [] : Object.keys(v)), A = r.useRef(l);
+  })), R = u === p.ImpersonateType.SERVER_SHOP, N = (0, d.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [M, A] = (0, c.useMultiSelect)(null == v ? [] : Object.keys(v)), L = r.useRef(l);
   r.useEffect(() => {
     let e = {},
-      t = A.current;
+      t = L.current;
     if (null != t && null != u) {
       for (let n of M) {
         let i = t.getRole(n);
@@ -77,7 +77,7 @@ function v(e) {
     children: (0, i.jsx)(c.Combobox, {
       placeholder: I.default.Messages.SEARCH_ROLES,
       value: M,
-      onChange: L,
+      onChange: A,
       autoFocus: !0,
       children: e => {
         let t = b.reduce((t, n) => (s(e.toLowerCase(), n.name.toLowerCase()) && t.push((0, i.jsxs)(c.ComboboxItem, {

@@ -41,12 +41,12 @@ let L = n.forwardRef(function(e, t) {
         guild: s
       })
     })
-  }, [s, I]), b = (0, C.default)([S.default], () => S.default.getSearchStateByGuildId(s.id), [s.id], u), v = (0, _.useTrackMemberSearchUsed)(s.id), [j, D] = n.useState(b.query), O = null != b.selectedSort && b.selectedSort !== T.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC && b.selectedSort !== T.OrderBy.ORDER_BY_UNSPECIFIED, V = n.useCallback(e => {
+  }, [s, I]), v = (0, C.default)([S.default], () => S.default.getSearchStateByGuildId(s.id), [s.id], u), b = (0, _.useTrackMemberSearchUsed)(s.id), [j, D] = n.useState(v.query), O = null != v.selectedSort && v.selectedSort !== T.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC && v.selectedSort !== T.OrderBy.ORDER_BY_UNSPECIFIED, V = n.useCallback(e => {
     let t = e.trim();
-    t.length > 0 && v(), (0, A.updateSearchState)(s.id, {
+    t.length > 0 && b(), (0, A.updateSearchState)(s.id, {
       query: t
     })
-  }, [s.id, v]), B = n.useCallback(d(V, 300), [V]), y = n.useCallback(e => {
+  }, [s.id, b]), B = n.useCallback(d(V, 300), [V]), y = n.useCallback(e => {
     D(e), B(e)
   }, [B]), U = n.useCallback(() => {
     D(""), V("")

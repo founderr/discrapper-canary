@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 });
 var l = n("37983");
@@ -39,7 +39,7 @@ function E(e) {
   })
 }
 
-function _(e) {
+function h(e) {
   switch (e.ref_type) {
     case c.GuildRoleSubscriptionBenefitTypes.CHANNEL:
       return (0, l.jsx)(E, {

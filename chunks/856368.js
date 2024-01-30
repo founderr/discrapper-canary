@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   isInPomeloSuggestionsExperiment: function() {
-    return s
+    return r
   }
 });
 var i = n("862205");
@@ -20,7 +20,7 @@ let a = (0, i.createExperiment)({
       }
     }]
   }),
-  s = () => a.getCurrentConfig({
+  r = () => a.getCurrentConfig({
     location: "1907ae_1"
   }, {
     autoTrackExposure: !1

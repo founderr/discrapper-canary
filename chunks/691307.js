@@ -44,8 +44,8 @@ let H = {
     tension: 260
   },
   R = e => e.shiftKey || e.key === g.KeyboardKeysUpdated.SHIFT,
-  b = e => e.metaKey || e.ctrlKey,
-  v = n.memo(function(e) {
+  v = e => e.metaKey || e.ctrlKey,
+  b = n.memo(function(e) {
     let {
       members: t,
       guild: l,
@@ -54,15 +54,15 @@ let H = {
       compact: d,
       onSelectRow: c,
       onResetForNewMembers: f
-    } = e, E = (0, u.default)([C.default], () => C.default.useReducedMotion), g = (0, m.useIsWindowFocused)(), [v, j] = n.useState(!1), [D, O] = n.useState(!1);
+    } = e, E = (0, u.default)([C.default], () => C.default.useReducedMotion), g = (0, m.useIsWindowFocused)(), [b, j] = n.useState(!1), [D, O] = n.useState(!1);
     n.useEffect(() => {
       !g && (j(!1), O(!1))
     }, [g]), n.useLayoutEffect(() => {
       let e = e => {
-          R(e) && j(!0), b(e) && O(!0)
+          R(e) && j(!0), v(e) && O(!0)
         },
         t = e => {
-          R(e) && j(!1), b(e) && O(!1)
+          R(e) && j(!1), v(e) && O(!1)
         };
       return window.addEventListener("keydown", e), window.addEventListener("keyup", t), () => {
         window.removeEventListener("keydown", e), window.removeEventListener("keyup", t)
@@ -99,7 +99,7 @@ let H = {
             guildId: l.id,
             style: e,
             onSelect: c,
-            isHoldingAdvancedInfoKey: v && D,
+            isHoldingAdvancedInfoKey: b && D,
             compact: d,
             isLoading: o === T.SearchState.LOADING
           }, t))]
@@ -138,7 +138,7 @@ var j = function(e) {
     S = null !== (l = null == x ? void 0 : x[0]) && void 0 !== l ? l : null;
   return n.useEffect(() => {
     (0, E.trackMembersPageViewed)(s.id, S)
-  }, [s.id, S]), (0, a.jsx)(v, {
+  }, [s.id, S]), (0, a.jsx)(b, {
     members: T,
     guild: s,
     className: i,

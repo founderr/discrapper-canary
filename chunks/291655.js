@@ -19,33 +19,33 @@ var l = n("37983"),
     let {
       message: r,
       channel: E,
-      compact: _,
-      className: h,
-      isGroupStart: p,
-      hideSimpleEmbedContent: m = !0,
-      disableInteraction: S
-    } = e, M = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), v = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (i = r.editedTimestamp) && void 0 !== i ? i : r.timestamp).valueOf()), {
-      content: C
+      compact: h,
+      className: p,
+      isGroupStart: _,
+      hideSimpleEmbedContent: v = !0,
+      disableInteraction: m
+    } = e, C = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), S = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (i = r.editedTimestamp) && void 0 !== i ? i : r.timestamp).valueOf()), {
+      content: L
     } = (0, a.default)(r, {
-      hideSimpleEmbedContent: m,
-      allowList: M.showListsAndHeaders || v.showListsAndHeaders,
-      allowHeading: M.showListsAndHeaders || v.showListsAndHeaders,
-      allowLinks: M.showMaskedLinks || v.showMaskedLinks,
-      previewLinkTarget: M.showMaskedLinks || v.showMaskedLinks
+      hideSimpleEmbedContent: v,
+      allowList: C.showListsAndHeaders || S.showListsAndHeaders,
+      allowHeading: C.showListsAndHeaders || S.showListsAndHeaders,
+      allowLinks: C.showMaskedLinks || S.showMaskedLinks,
+      previewLinkTarget: C.showMaskedLinks || S.showMaskedLinks
     });
     return (0, l.jsx)(u.default, {
-      compact: _,
-      className: s(h, {
+      compact: h,
+      className: s(p, {
         [f.message]: !0,
-        [f.cozyMessage]: !_,
-        [f.groupStart]: p
+        [f.cozyMessage]: !h,
+        [f.groupStart]: _
       }),
       childrenHeader: (0, d.default)({
         ...e,
         channel: E,
         guildId: void 0
       }),
-      childrenMessageContent: (0, c.default)(e, C),
-      disableInteraction: S
+      childrenMessageContent: (0, c.default)(e, L),
+      disableInteraction: m
     })
   })

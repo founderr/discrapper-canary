@@ -35,7 +35,7 @@ function m(e) {
     spring: M
   }, h] = (0, o.useSpring)(() => ({
     spring: 0
-  })), T = (0, u.useToken)(r.default.colors.BACKGROUND_PRIMARY).hex(), x = (0, u.useToken)(r.default.colors.CONTROL_BRAND_FOREGROUND).hex(), _ = n.useCallback(() => {
+  })), _ = (0, u.useToken)(r.default.colors.BACKGROUND_PRIMARY).hex(), T = (0, u.useToken)(r.default.colors.CONTROL_BRAND_FOREGROUND).hex(), x = n.useCallback(() => {
     h({
       spring: 1,
       config: c
@@ -46,21 +46,21 @@ function m(e) {
     })
   }, [h]);
   n.useEffect(() => {
-    if (null != t && null != E) !s(t, E) && _()
-  }, [_, t, E, s]);
-  let g = null == M ? void 0 : M.to({
+    if (null != t && null != E) !s(t, E) && x()
+  }, [x, t, E, s]);
+  let S = null == M ? void 0 : M.to({
       range: [0, 1],
-      output: ["".concat(T, "00"), "".concat(x, "27")]
+      output: ["".concat(_, "00"), "".concat(T, "27")]
     }),
-    H = null != d ? {
+    A = null != d ? {
       ...d,
-      backgroundColor: g
+      backgroundColor: S
     } : {
-      backgroundColor: g
+      backgroundColor: S
     };
   return (0, a.jsx)(o.animated.tr, {
     ...m,
-    style: H,
+    style: A,
     children: l
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   usePomeloDebounceDelay: function() {
-    return s
+    return r
   }
 });
 var i = n("862205");
@@ -44,7 +44,7 @@ let a = (0, i.createExperiment)({
       }
     }]
   }),
-  s = () => a.useExperiment({
+  r = () => a.useExperiment({
     location: "52560d_1"
   }, {
     autoTrackExposure: !1

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   RawInviteCopyInputConnected: function() {
-    return N
+    return v
   },
   InviteCopyInput: function() {
-    return y
+    return N
   }
 }), n("222007");
 var l = n("37983"),
@@ -18,18 +18,18 @@ var l = n("37983"),
   c = n("162771"),
   p = n("102985"),
   f = n("599110"),
-  I = n("306160"),
-  h = n("568734"),
+  h = n("306160"),
+  I = n("568734"),
   E = n("354023"),
   m = n("865699"),
   _ = n("91366"),
-  g = n("49111"),
-  C = n("782340"),
+  C = n("49111"),
+  g = n("782340"),
   S = n("435808"),
-  A = n("905518"),
-  T = n("173791"),
-  v = n("926622");
-let N = r.default.connectStores([p.default], () => ({
+  T = n("905518"),
+  y = n("173791"),
+  A = n("926622");
+let v = r.default.connectStores([p.default], () => ({
     hideValue: p.default.hideInstantInvites
   }))(e => {
     let {
@@ -38,18 +38,18 @@ let N = r.default.connectStores([p.default], () => ({
       hideValue: s,
       onCopy: i,
       disabled: r
-    } = e, [c, p] = a.useState(!1), [f, h] = a.useState(!1), E = a.useMemo(() => new u.DelayedCall(1e3, () => h(!1)), [h]);
+    } = e, [c, p] = a.useState(!1), [f, I] = a.useState(!1), E = a.useMemo(() => new u.DelayedCall(1e3, () => I(!1)), [I]);
     return a.useEffect(() => () => {
       E.cancel()
     }, [E]), (0, l.jsxs)("div", {
-      className: o(A.input, T.flexJustifyBetween, T.flexCenter, {
-        [A.success]: f,
-        [A.focused]: c
+      className: o(T.input, y.flexJustifyBetween, y.flexCenter, {
+        [T.success]: f,
+        [T.focused]: c
       }),
       children: [(0, l.jsx)(d.TextInput, {
         className: S.copyInput,
         name: "invite",
-        value: s ? C.default.Messages.INSTANT_INVITE_HIDDEN : t,
+        value: s ? g.default.Messages.INSTANT_INVITE_HIDDEN : t,
         editable: !1,
         inputClassName: S.noBorder,
         autoFocus: n,
@@ -57,21 +57,21 @@ let N = r.default.connectStores([p.default], () => ({
         onBlur: () => n ? p(!1) : null,
         spellCheck: "false",
         onClick: e => e.currentTarget.select(),
-        "aria-label": C.default.Messages.FORM_LABEL_INVITE_LINK,
+        "aria-label": g.default.Messages.FORM_LABEL_INVITE_LINK,
         disabled: r
-      }), I.SUPPORTS_COPY ? (0, l.jsx)(d.Button, {
+      }), h.SUPPORTS_COPY ? (0, l.jsx)(d.Button, {
         size: d.Button.Sizes.SMALL,
         color: f ? d.Button.Colors.GREEN : d.Button.Colors.BRAND,
         className: S.copyButton,
         onClick: () => {
-          h(!0), E.delay(), i(t)
+          I(!0), E.delay(), i(t)
         },
         disabled: r,
-        children: f ? C.default.Messages.INVITE_COPIED : C.default.Messages.COPY
+        children: f ? g.default.Messages.INVITE_COPIED : g.default.Messages.COPY
       }) : null]
     })
   }),
-  y = e => {
+  N = e => {
     let {
       guild: t,
       noInvitesAvailable: n,
@@ -79,9 +79,9 @@ let N = r.default.connectStores([p.default], () => ({
       onClose: r,
       modalState: u,
       isGuestInviteCreationToggleEnabled: p,
-      inviteFlags: A,
-      setInviteFlags: T,
-      showGuestInviteToggleForCurrentVoiceChannel: y,
+      inviteFlags: T,
+      setInviteFlags: y,
+      showGuestInviteToggleForCurrentVoiceChannel: N,
       copyValue: x,
       changePage: b,
       inviteChannel: P,
@@ -90,12 +90,12 @@ let N = r.default.connectStores([p.default], () => ({
       guildScheduledEvent: L,
       disabled: F
     } = e, {
-      maxAge: U,
-      maxUses: R,
-      networkError: j,
+      maxAge: R,
+      maxUses: j,
+      networkError: U,
       showVanityURL: k
     } = u, w = a.useCallback(() => {
-      (0, I.copy)(x), f.default.track(g.AnalyticEvents.COPY_INSTANT_INVITE, {
+      (0, h.copy)(x), f.default.track(C.AnalyticEvents.COPY_INSTANT_INVITE, {
         server: c.default.getGuildId(),
         channel: null == P ? void 0 : P.id,
         channel_type: null == P ? void 0 : P.type,
@@ -105,7 +105,7 @@ let N = r.default.connectStores([p.default], () => ({
       })
     }, [x, P, M, O, L]);
     return (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(N, {
+      children: [(0, l.jsx)(v, {
         value: x,
         autoFocus: s,
         onCopy: w,
@@ -114,30 +114,30 @@ let N = r.default.connectStores([p.default], () => ({
         className: S.temporaryMembershipContainerBackground,
         children: (0, l.jsx)(d.FormSwitch, {
           className: S.temporaryMembershipContainer,
-          value: (0, h.hasFlag)(A, i.GuildInviteFlags.IS_GUEST_INVITE),
-          onChange: e => T((0, h.setFlag)(A, i.GuildInviteFlags.IS_GUEST_INVITE, e)),
-          note: C.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
+          value: (0, I.hasFlag)(T, i.GuildInviteFlags.IS_GUEST_INVITE),
+          onChange: e => y((0, I.setFlag)(T, i.GuildInviteFlags.IS_GUEST_INVITE, e)),
+          note: g.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
           disabled: F,
           hideBorder: !0,
-          children: y ? C.default.Messages.GRANT_GUEST_MEMBERSHIP_VOICE_ONLY : C.default.Messages.GRANT_GUEST_MEMBERSHIP
+          children: N ? g.default.Messages.GRANT_GUEST_MEMBERSHIP_VOICE_ONLY : g.default.Messages.GRANT_GUEST_MEMBERSHIP
         })
       }) : null, n || k ? null : (0, l.jsxs)(d.Text, {
         variant: "text-xs/normal",
-        className: o(v.marginTop8, S.footerText),
-        children: [(0, E.maxAgeString)(U, R), " ", s ? (0, l.jsx)(d.Anchor, {
+        className: o(A.marginTop8, S.footerText),
+        children: [(0, E.maxAgeString)(R, j), " ", s ? (0, l.jsx)(d.Anchor, {
           onClick: () => b(_.InstantInviteModalPages.SETTINGS),
-          children: C.default.Messages.INVITE_EDIT_LINK
+          children: g.default.Messages.INVITE_EDIT_LINK
         }) : null]
       }), !n && s && k ? (0, l.jsxs)(d.Text, {
         variant: "text-xs/normal",
-        className: o(v.marginTop8, S.footerText),
-        children: [C.default.Messages.INVITE_VANITY_USED, " ", (0, l.jsx)(d.Anchor, {
+        className: o(A.marginTop8, S.footerText),
+        children: [g.default.Messages.INVITE_VANITY_USED, " ", (0, l.jsx)(d.Anchor, {
           onClick: () => b(_.InstantInviteModalPages.SETTINGS),
-          children: C.default.Messages.INVITE_EDIT_LINK
+          children: g.default.Messages.INVITE_EDIT_LINK
         })]
-      }) : null, null != j ? (0, l.jsx)(m.InviteErrorMessage, {
+      }) : null, null != U ? (0, l.jsx)(m.InviteErrorMessage, {
         guild: t,
-        error: j,
+        error: U,
         onClose: r
       }) : null]
     })

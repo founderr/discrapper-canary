@@ -21,8 +21,8 @@ function d(e) {
     emojiId: i,
     emojiName: d,
     className: f
-  } = e, E = (0, u.default)(n, i), _ = null != E || null != d;
-  return _ ? (0, l.jsx)(s.default, {
+  } = e, E = (0, u.default)(n, i), h = null != E || null != d;
+  return h ? (0, l.jsx)(s.default, {
     emojiId: null == E ? void 0 : E.id,
     emojiName: null != d ? d : null == E ? void 0 : E.name,
     animated: null !== (t = null == E ? void 0 : E.animated) && void 0 !== t && t,

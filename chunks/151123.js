@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return v
+    return b
   }
 }), l("222007");
 var a = l("37983"),
@@ -64,21 +64,21 @@ function R(e) {
     })
   })
 }
-let b = "member-safety-force-show-signals-tooltip";
+let v = "member-safety-force-show-signals-tooltip";
 
-function v(e) {
+function b(e) {
   let {
     guildId: t,
     currentPagedMembers: l
   } = e, s = (0, r.default)([_.default], () => _.default.getSearchStateByGuildId(t), [t], d), o = (0, r.default)([f.default, c.default], () => f.default.can(H.Permissions.MANAGE_GUILD, c.default.getGuild(t)), [t]), {
     selectedUserIds: m,
-    addUsers: v,
+    addUsers: b,
     clearSelection: j
-  } = (0, T.default)(t), D = s.requireUnusualDmActivity || s.requireCommunicationDisabled || s.requireUnusualAccountActivity || s.requireUsernameQuarantined, O = s.selectedRoleIds.size > 0, V = null != s.selectedJoinDateOption.afterDate, B = s.selectedSort === E.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, y = null != s.selectedAccountAgeOption.afterDate, U = s.selectedSort === E.OrderBy.ORDER_BY_USER_ID_ASC || s.selectedSort === E.OrderBy.ORDER_BY_USER_ID_DESC, F = null != s.selectedSourceInviteCode && "" !== s.selectedSourceInviteCode, w = null != s.selectedJoinSourceType, k = F || w, [Z, P] = n.useState(null == u.default.get(b, null)), Y = n.useCallback(() => {
-    u.default.set(b, Date.now()), P(!1)
+  } = (0, T.default)(t), D = s.requireUnusualDmActivity || s.requireCommunicationDisabled || s.requireUnusualAccountActivity || s.requireUsernameQuarantined, O = s.selectedRoleIds.size > 0, V = null != s.selectedJoinDateOption.afterDate, B = s.selectedSort === E.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, y = null != s.selectedAccountAgeOption.afterDate, U = s.selectedSort === E.OrderBy.ORDER_BY_USER_ID_ASC || s.selectedSort === E.OrderBy.ORDER_BY_USER_ID_DESC, F = null != s.selectedSourceInviteCode && "" !== s.selectedSourceInviteCode, w = null != s.selectedJoinSourceType, k = F || w, [Z, P] = n.useState(null == u.default.get(v, null)), Y = n.useCallback(() => {
+    u.default.set(v, Date.now()), P(!1)
   }, []), G = (0, h.useCanAccessBulkBanningFeature)(t), J = (0, M.isInMembersTablesAdditionalFilteringExperiment)(t), q = o && J, z = n.useMemo(() => l.filter(e => (0, h.canBulkBanUser)(t, G, e)), [G, l, t]), K = z.length > 0, W = z.filter(e => !m.has(e)), Q = 0 === W.length, X = n.useCallback(() => {
-    K && (Q ? j() : v(z))
-  }, [K, Q, j, v, z]);
+    K && (Q ? j() : b(z))
+  }, [K, Q, j, b, z]);
   return (0, a.jsx)("thead", {
     children: (0, a.jsxs)("tr", {
       className: L.tableHeaderRow,

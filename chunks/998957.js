@@ -25,10 +25,10 @@ function _(e) {
     oneClickFlow: _ = !1,
     ...I
   } = e, {
-    user: h,
-    editState: N,
+    user: N,
+    editState: h,
     onClose: M
-  } = I, T = (0, o.default)(h.id), g = function(e, t, a) {
+  } = I, T = (0, o.default)(N.id), g = function(e, t, a) {
     switch (e) {
       case E.EditState.EDIT_USERNAME:
         return {
@@ -59,7 +59,7 @@ function _(e) {
           header: m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE, subtitle: m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
         }
     }
-  }(N, u.default.getName(h), M), [O, L] = (0, i.useSpring)(() => ({
+  }(h, u.default.getName(N), M), [O, L] = (0, i.useSpring)(() => ({
     opacity: 0,
     y: 10
   }));
@@ -72,7 +72,7 @@ function _(e) {
         opacity: 0
       }
     })
-  }, [L, N]), (0, s.jsxs)("div", {
+  }, [L, h]), (0, s.jsxs)("div", {
     className: S.displayNameContainer,
     children: [(0, s.jsxs)(i.animated.div, {
       style: {

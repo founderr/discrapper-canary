@@ -32,8 +32,8 @@ var r = n("414456"),
   R = n("593916"),
   N = n("49111"),
   M = n("724210"),
-  L = n("307785"),
-  A = n("677795"),
+  A = n("307785"),
+  L = n("677795"),
   O = n("782340"),
   b = n("494449");
 
@@ -158,8 +158,8 @@ function w() {
       }), m && (0, i.jsx)(o.TooltipContainer, {
         className: b.previewWarning,
         text: O.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
-          maxTiers: A.MAX_SUBSCRIPTION_TIERS,
-          maxProducts: L.MAX_PUBLISHED_GUILD_PRODUCT_LISTINGS
+          maxTiers: L.MAX_SUBSCRIPTION_TIERS,
+          maxProducts: A.MAX_PUBLISHED_GUILD_PRODUCT_LISTINGS
         }),
         children: (0, i.jsx)(C.default, {
           width: 16,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return m
   }
 });
 var l = n("37983"),
@@ -15,41 +15,41 @@ var l = n("37983"),
   d = n("291655"),
   f = n("697218"),
   E = n("387111"),
-  _ = n("439932"),
-  h = n("49111"),
-  p = n("782340"),
-  m = n("515476");
+  h = n("439932"),
+  p = n("49111"),
+  _ = n("782340"),
+  v = n("515476");
 
-function S(e) {
+function m(e) {
   var t;
   let {
     guildId: n,
     role: r,
-    theme: S,
-    content: M = p.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
-    className: v
-  } = e, C = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser()), L = E.default.useName(n, null, C), T = (0, u.getRoleIconProps)(r), I = i.useMemo(() => (0, a.createMessageRecord)({
+    theme: m,
+    content: C = _.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
+    className: S
+  } = e, L = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser()), M = E.default.useName(n, null, L), g = (0, u.getRoleIconProps)(r), I = i.useMemo(() => (0, a.createMessageRecord)({
     ...(0, c.default)({
       channelId: "0",
-      content: M,
+      content: C,
       tts: void 0,
       type: void 0,
       messageReference: void 0,
       allowedMentions: void 0,
-      author: C
+      author: L
     }),
-    state: h.MessageStates.SENT,
+    state: p.MessageStates.SENT,
     id: "0"
-  }), [C, M]), g = {
-    nick: L,
+  }), [L, C]), T = {
+    nick: M,
     colorString: null !== (t = r.colorString) && void 0 !== t ? t : void 0
   };
   return (0, l.jsx)("div", {
-    className: s((0, _.getThemeClass)(S), m.container, v),
+    className: s((0, h.getThemeClass)(m), v.container, S),
     children: (0, l.jsx)(d.default, {
       hideTimestamp: !0,
-      author: g,
-      roleIcon: T,
+      author: T,
+      roleIcon: g,
       message: I,
       isGroupStart: !0,
       disableInteraction: !0

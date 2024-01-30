@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("759843"),
   a = n("872717"),
-  s = n("913144"),
-  r = n("448993"),
+  r = n("913144"),
+  s = n("448993"),
   o = n("599110"),
   u = n("840707"),
   l = n("210898"),
@@ -17,13 +17,13 @@ var i = n("759843"),
   m = n("782340");
 n("2581");
 var E = {
-  resetSuggestions: () => s.default.dispatch({
+  resetSuggestions: () => r.default.dispatch({
     type: "POMELO_SUGGESTIONS_RESET"
   }),
   async fetchSuggestionsRegistration(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1500;
     if ((0, g.hasRegistrationUsernameSuggestions)()) {
-      s.default.dispatch({
+      r.default.dispatch({
         type: "POMELO_SUGGESTIONS_RESET"
       });
       try {
@@ -35,7 +35,7 @@ var E = {
           },
           timeout: t
         });
-        if (i.ok && (null === (n = i.body) || void 0 === n ? void 0 : n.username) != null) return s.default.dispatch({
+        if (i.ok && (null === (n = i.body) || void 0 === n ? void 0 : n.username) != null) return r.default.dispatch({
           type: "POMELO_REGISTRATION_SUGGESTIONS_SUCCESS",
           suggestion: i.body,
           source: e
@@ -48,7 +48,7 @@ var E = {
   async fetchSuggestions(e) {
     if ((0, d.isInPomeloSuggestionsExperiment)()) try {
       var t;
-      s.default.dispatch({
+      r.default.dispatch({
         type: "POMELO_SUGGESTIONS_FETCH",
         usernameSuggestionLoading: !0
       });
@@ -56,7 +56,7 @@ var E = {
         url: c.Endpoints.POMELO_SUGGESTIONS,
         timeout: e
       });
-      if (n.ok && (null === (t = n.body) || void 0 === t ? void 0 : t.username) != null) return s.default.dispatch({
+      if (n.ok && (null === (t = n.body) || void 0 === t ? void 0 : t.username) != null) return r.default.dispatch({
         type: "POMELO_SUGGESTIONS_SUCCESS",
         suggestion: n.body
       })
@@ -78,7 +78,7 @@ var E = {
       username_error: !0,
       location: a,
       one_click_flow: g
-    }), s.default.dispatch({
+    }), r.default.dispatch({
       type: "POMELO_ATTEMPT_FAILURE",
       username: e,
       error: E
@@ -101,21 +101,21 @@ var E = {
         username_error: !0,
         location: a,
         one_click_flow: g
-      }), s.default.dispatch({
+      }), r.default.dispatch({
         type: "POMELO_ATTEMPT_SUCCESS",
         username: e,
         taken: t.body.taken
       })
     } catch (u) {
       ;
-      let t = new r.APIError(u),
+      let t = new s.APIError(u),
         i = null !== (n = t.getAnyErrorMessage()) && void 0 !== n ? n : void 0;
       o.default.track(c.AnalyticEvents.POMELO_ERRORS, {
         reason: i,
         username_error: !0,
         location: a,
         one_click_flow: g
-      }), s.default.dispatch({
+      }), r.default.dispatch({
         username: e,
         type: "POMELO_ATTEMPT_FAILURE",
         error: null != t.status && t.status < 500 && 401 !== t.status ? i : void 0,
@@ -136,7 +136,7 @@ var E = {
           }
         }
       });
-    return s.default.dispatch({
+    return r.default.dispatch({
       type: "CURRENT_USER_UPDATE",
       user: n.body
     }), n.body

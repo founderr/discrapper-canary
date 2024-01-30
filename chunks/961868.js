@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return p
+    return g
   }
 });
 var a, n, s = l("37983"),
@@ -17,9 +17,9 @@ var a, n, s = l("37983"),
   E = l("45029"),
   M = l("561359"),
   h = l("782340"),
-  T = l("258015");
+  _ = l("258015");
 
-function x(e) {
+function T(e) {
   var t;
   let l = null !== (t = e.dmsDisabledUntil) && void 0 !== t ? t : e.invitesDisabledUntil;
   if (null == l) return "";
@@ -37,7 +37,7 @@ function x(e) {
   }
 }
 
-function _(e) {
+function x(e) {
   var t;
   let {
     onHandleEnableLockdown: l,
@@ -45,23 +45,23 @@ function _(e) {
     incidentData: n
   } = e, i = null !== (t = n.raidDetectedAt) && void 0 !== t ? t : n.dmSpamDetectedAt;
   return (0, s.jsxs)("div", {
-    className: T.subheaderContainer,
+    className: _.subheaderContainer,
     children: [(0, s.jsxs)("div", {
-      className: T.subHeaderTextContainer,
+      className: _.subHeaderTextContainer,
       children: [(0, s.jsx)(M.default, {
-        className: T.shieldIcon,
+        className: _.shieldIcon,
         color: o.default.RED_345,
         width: 24,
         height: 24
       }), (0, s.jsxs)("div", {
-        className: T.subHeaderText,
+        className: _.subHeaderText,
         children: [(0, s.jsx)(d.Heading, {
-          className: T.heading,
+          className: _.heading,
           variant: "heading-lg/semibold",
           color: "text-danger",
           children: (0, C.hasDetectedDMRaid)(n) ? h.default.Messages.MEMBER_SAFETY_DM_RAID_ALERT_HEADER : h.default.Messages.MEMBER_SAFETY_JOIN_RAID_ALERT_HEADER
         }), (0, s.jsx)(d.Text, {
-          className: T.tagLine,
+          className: _.tagLine,
           variant: "text-sm/medium",
           children: h.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({
             dateTime: new Date(null != i ? i : "").toLocaleString(h.default.getLocale(), C.DATE_CONFIG)
@@ -69,9 +69,9 @@ function _(e) {
         })]
       })]
     }), (0, s.jsxs)("div", {
-      className: T.buttonContainer,
+      className: _.buttonContainer,
       children: [(0, s.jsx)(d.Button, {
-        className: T.reportButton,
+        className: _.reportButton,
         color: d.Button.Colors.TRANSPARENT,
         onClick: a,
         children: (0, s.jsx)(d.Text, {
@@ -79,17 +79,17 @@ function _(e) {
           children: h.default.Messages.MEMBER_SAFETY_RESOLVE_RAID_ALERT_BUTTON
         })
       }), (0, s.jsx)(m.default, {
-        className: T.lockdownButton,
+        className: _.lockdownButton,
         color: d.Button.Colors.RED,
         onClick: l,
         children: (0, s.jsxs)("div", {
-          className: T.lockdownButtonInnerRaidDetected,
+          className: _.lockdownButtonInnerRaidDetected,
           children: [(0, s.jsx)(E.default, {
-            className: T.lockIcon,
+            className: _.lockIcon,
             width: 16,
             height: 16
           }), (0, s.jsx)(d.Text, {
-            className: T.lockdownButtonText,
+            className: _.lockdownButtonText,
             variant: "text-sm/semibold",
             children: h.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION
           })]
@@ -99,46 +99,46 @@ function _(e) {
   })
 }
 
-function g(e) {
+function S(e) {
   let {
     onHandleEnableLockdown: t,
     incidentData: l,
     guildName: a
   } = e;
   return (0, s.jsxs)("div", {
-    className: T.subheaderContainer,
+    className: _.subheaderContainer,
     children: [(0, s.jsxs)("div", {
-      className: T.subHeaderTextContainer,
+      className: _.subHeaderTextContainer,
       children: [(0, s.jsx)(M.default, {
-        className: T.shieldIcon,
+        className: _.shieldIcon,
         color: o.default.BRAND_360,
         width: 24,
         height: 24
       }), (0, s.jsxs)("div", {
-        className: T.subHeaderText,
+        className: _.subHeaderText,
         children: [(0, s.jsx)(d.Heading, {
-          className: T.heading,
+          className: _.heading,
           variant: "heading-lg/semibold",
           color: "text-brand",
-          children: x(l)
+          children: T(l)
         }), (0, s.jsx)(d.Text, {
-          className: T.tagLine,
+          className: _.tagLine,
           variant: "text-sm/medium",
           children: (0, C.getSecurityActionDetailsString)(l, a)
         })]
       })]
     }), (0, s.jsx)(d.Button, {
-      className: T.lockdownNoticeButton,
+      className: _.lockdownNoticeButton,
       color: d.Button.Colors.BRAND,
       onClick: t,
       children: (0, s.jsxs)("div", {
-        className: T.lockdownButtonInner,
+        className: _.lockdownButtonInner,
         children: [(0, s.jsx)(E.default, {
-          className: T.lockIcon,
+          className: _.lockIcon,
           width: 16,
           height: 16
         }), (0, s.jsx)(d.Text, {
-          className: T.lockdownButtonText,
+          className: _.lockdownButtonText,
           variant: "text-sm/semibold",
           children: h.default.Messages.GUILD_ANTIRAID_NAGBAR_EDIT_ACTION
         })]
@@ -147,7 +147,7 @@ function g(e) {
   })
 }
 
-function H(e) {
+function A(e) {
   let {
     onHandleEnableLockdown: t,
     onHandleReportFalseAlarm: l,
@@ -155,31 +155,31 @@ function H(e) {
     guildName: n
   } = e;
   return (0, s.jsxs)("div", {
-    className: T.subheaderContainer,
+    className: _.subheaderContainer,
     children: [(0, s.jsxs)("div", {
-      className: T.subHeaderTextContainer,
+      className: _.subHeaderTextContainer,
       children: [(0, s.jsx)(M.default, {
-        className: T.shieldIcon,
+        className: _.shieldIcon,
         color: o.default.BRAND_360,
         width: 24,
         height: 24
       }), (0, s.jsxs)("div", {
-        className: T.subHeaderText,
+        className: _.subHeaderText,
         children: [(0, s.jsx)(d.Heading, {
-          className: T.heading,
+          className: _.heading,
           variant: "heading-lg/semibold",
           color: "text-brand",
-          children: x(a)
+          children: T(a)
         }), (0, s.jsx)(d.Text, {
-          className: T.tagLine,
+          className: _.tagLine,
           variant: "text-sm/medium",
           children: (0, C.getSecurityActionDetailsString)(a, n)
         })]
       })]
     }), (0, s.jsxs)("div", {
-      className: T.buttonContainer,
+      className: _.buttonContainer,
       children: [(0, s.jsx)(d.Button, {
-        className: T.reportButton,
+        className: _.reportButton,
         color: d.Button.Colors.TRANSPARENT,
         onClick: l,
         children: (0, s.jsx)(d.Text, {
@@ -187,17 +187,17 @@ function H(e) {
           children: h.default.Messages.MEMBER_SAFETY_RESOLVE_RAID_ALERT_BUTTON
         })
       }), (0, s.jsx)(d.Button, {
-        className: T.lockdownButton,
+        className: _.lockdownButton,
         color: d.Button.Colors.BRAND,
         onClick: t,
         children: (0, s.jsxs)("div", {
-          className: T.lockdownButtonInnerRaidDetected,
+          className: _.lockdownButtonInnerRaidDetected,
           children: [(0, s.jsx)(E.default, {
-            className: T.lockIcon,
+            className: _.lockIcon,
             width: 16,
             height: 16
           }), (0, s.jsx)(d.Text, {
-            className: T.lockdownButtonText,
+            className: _.lockdownButtonText,
             variant: "text-sm/semibold",
             children: h.default.Messages.GUILD_ANTIRAID_NAGBAR_EDIT_ACTION
           })]
@@ -207,7 +207,7 @@ function H(e) {
   })
 }
 
-function p(e) {
+function g(e) {
   let {
     guild: t,
     incidentData: a,
@@ -247,19 +247,19 @@ function p(e) {
   if (null == t || null == a) return null;
   switch (M) {
     case 1:
-      return (0, s.jsx)(_, {
+      return (0, s.jsx)(x, {
         onHandleEnableLockdown: m,
         onHandleReportFalseAlarm: E,
         incidentData: a
       });
     case 2:
-      return (0, s.jsx)(g, {
+      return (0, s.jsx)(S, {
         onHandleEnableLockdown: m,
         incidentData: a,
         guildName: t.name
       });
     case 3:
-      return (0, s.jsx)(H, {
+      return (0, s.jsx)(A, {
         onHandleEnableLockdown: m,
         onHandleReportFalseAlarm: E,
         incidentData: a,
