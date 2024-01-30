@@ -31,8 +31,8 @@ var a = l("37983"),
   L = l("491401"),
   I = l("663745"),
   R = l("781896"),
-  b = l("864982"),
-  v = l("151185"),
+  v = l("864982"),
+  b = l("151185"),
   j = l("339123"),
   D = l("387111"),
   O = l("158998"),
@@ -102,7 +102,7 @@ let q = n.memo(function(e) {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(b.default, {
+        return (0, a.jsx)(v.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
@@ -203,7 +203,7 @@ let K = n.memo(function(e) {
             onClick: c,
             onMouseEnter: t,
             onMouseLeave: l,
-            children: (0, a.jsx)(v.default, {
+            children: (0, a.jsx)(b.default, {
               className: i(J.addRoleIcon),
               width: 16,
               height: 16
@@ -466,8 +466,8 @@ var ea = n.memo(function(e) {
   }, [S]), p = n.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), null != h && (null == d || d(h))
   }, [d, h]), H = n.useCallback(e => {
-    e.stopPropagation(), e.preventDefault(), null != h && (0, Z.openMemberProfile)(h)
-  }, [h]), N = n.useCallback((e, t) => r((0, o.omit)(e, el), (0, o.omit)(t, el)), []);
+    e.stopPropagation(), e.preventDefault(), null != h && (null == d || d(h))
+  }, [h, d]), N = n.useCallback((e, t) => r((0, o.omit)(e, el), (0, o.omit)(t, el)), []);
   return null == h ? null : (0, a.jsx)(F.default, {
     role: "row",
     value: h,
