@@ -41,7 +41,7 @@ let p = {
   O = new Map,
   D = new Map,
   P = new Map;
-let b = m.ActivityPanelModes.ACTION_BAR,
+let b = m.ActivityPanelModes.DISCONNECTED,
   L = m.FocusedActivityLayouts.RESIZABLE;
 
 function M(e) {
