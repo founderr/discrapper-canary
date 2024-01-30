@@ -35,7 +35,8 @@ let c = new Set([u.CurrencyCodes.ARS, u.CurrencyCodes.CLP, u.CurrencyCodes.COP])
     [s.PaymentSourceTypes.BANCONTACT]: () => a.default.Messages.PAYMENT_SOURCE_BANCONTACT,
     [s.PaymentSourceTypes.EPS]: () => a.default.Messages.PAYMENT_SOURCE_EPS,
     [s.PaymentSourceTypes.IDEAL]: () => a.default.Messages.PAYMENT_SOURCE_IDEAL,
-    [s.PaymentSourceTypes.CASH_APP]: () => a.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY
+    [s.PaymentSourceTypes.CASH_APP]: () => a.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY,
+    [s.PaymentSourceTypes.APPLE]: () => a.default.Messages.PAYMENT_SOURCE_APPLE
   },
   E = [s.PaymentSourceTypes.EPS, s.PaymentSourceTypes.BANCONTACT, s.PaymentSourceTypes.IDEAL, s.PaymentSourceTypes.SOFORT, s.PaymentSourceTypes.GIROPAY, s.PaymentSourceTypes.SEPA_DEBIT, s.PaymentSourceTypes.PAYSAFE_CARD],
   _ = (e, t, n, r) => {

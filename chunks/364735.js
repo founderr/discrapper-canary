@@ -38,6 +38,7 @@ var a, n, i = r("37983"),
     else if (e instanceof u.EPSSourceRecord) return p.default.Types.EPS;
     else if (e instanceof u.IdealSourceRecord) return p.default.Types.IDEAL;
     else if (e instanceof u.CashAppSourceRecord) return p.default.Types.CASH_APP;
+    else if (e instanceof u.AppleSourceRecord) return p.default.Types.APPLE;
     return p.default.Types.UNKNOWN
   }
   getLabel(e) {
@@ -48,7 +49,7 @@ var a, n, i = r("37983"),
       bank: (0, d.getIdealBankDisplayNameFromBankName)(e.bank)
     }) : e instanceof u.EPSSourceRecord ? g.default.Messages.PAYMENT_SOURCE_EPS_WITH_BANK.format({
       bank: (0, d.getEPSBankDisplayNameFromBankName)(e.bank)
-    }) : e instanceof u.CashAppSourceRecord ? g.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY : g.default.Messages.PAYMENT_SOURCE_UNKNOWN
+    }) : e instanceof u.CashAppSourceRecord ? g.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY : e instanceof u.AppleSourceRecord ? g.default.Messages.PAYMENT_SOURCE_APPLE : g.default.Messages.PAYMENT_SOURCE_UNKNOWN
   }
   renderDescription() {
     let {

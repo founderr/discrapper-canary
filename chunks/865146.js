@@ -48,6 +48,9 @@ n.r(t), n.d(t, {
   CashAppSourceRecord: function() {
     return A
   },
+  AppleSourceRecord: function() {
+    return y
+  },
   default: function() {
     return i
   }
@@ -309,5 +312,10 @@ class A extends i {
   constructor(e) {
     if (super(e), e.type !== l.PaymentSourceTypes.CASH_APP) throw Error("Cannot instantiate Cashapp with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.CASH_APP));
     this.username = e.username || ""
+  }
+}
+class y extends i {
+  constructor(e) {
+    if (e.id = "", e.paymentGateway = l.PaymentGateways.APPLE_PARTNER, e.type = l.PaymentSourceTypes.APPLE, e.billingAddress = {}, e.country = "", e.invalid = !1, e.isDefault = !1, e.flags = 0, super(e), e.type !== l.PaymentSourceTypes.APPLE) throw Error("Cannot instantiate AppleSourceRecord with type: ".concat(e.type, ", must be ").concat(l.PaymentSourceTypes.APPLE))
   }
 }
