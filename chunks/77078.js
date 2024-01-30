@@ -181,16 +181,16 @@ n.r(t), n.d(t, {
     return U.FormLabel
   },
   FormNoticeTypes: function() {
-    return k.FormNoticeTypes
+    return w.FormNoticeTypes
   },
   FormNoticeImagePositions: function() {
-    return k.FormNoticeImagePositions
+    return w.FormNoticeImagePositions
   },
   FormNotice: function() {
-    return k.FormNotice
+    return w.FormNotice
   },
   FormSection: function() {
-    return w.FormSection
+    return k.FormSection
   },
   FormSwitch: function() {
     return V.FormSwitch
@@ -556,13 +556,13 @@ n.r(t), n.d(t, {
     return eU.Shaker
   },
   Shakeable: function() {
-    return ek.Shakeable
+    return ew.Shakeable
   },
   Slide: function() {
-    return ew.Slide
+    return ek.Slide
   },
   Slides: function() {
-    return ew.Slides
+    return ek.Slides
   },
   Slider: function() {
     return eV.Slider
@@ -741,8 +741,8 @@ var i = n("539826"),
   L = n("16256"),
   M = n("298742"),
   U = n("603616"),
-  k = n("135411"),
-  w = n("603716"),
+  w = n("135411"),
+  k = n("603716"),
   V = n("266079"),
   G = n("329272"),
   F = n("818810"),
@@ -795,8 +795,8 @@ var i = n("539826"),
   eL = n("178814"),
   eM = n("981579"),
   eU = n("68643"),
-  ek = n("292842"),
-  ew = n("265984"),
+  ew = n("292842"),
+  ek = n("265984"),
   eV = n("837443"),
   eG = n("242670"),
   eF = n("391010"),

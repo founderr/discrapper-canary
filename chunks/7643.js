@@ -37,7 +37,7 @@ function E(e) {
         A(!1)
       }
     }
-  }, [R, n, E]), D = s.useCallback(async e => {
+  }, [R, n, E]), O = s.useCallback(async e => {
     if (!R) {
       T(!0);
       try {
@@ -49,7 +49,7 @@ function E(e) {
         T(!1)
       }
     }
-  }, [R, a, E]), O = s.useCallback(async e => {
+  }, [R, a, E]), D = s.useCallback(async e => {
     if (R) return;
     T(!0);
     let t = l(e, p.BATCH_REJECT_LIMIT);
@@ -99,7 +99,7 @@ function E(e) {
         })
       }
     })
-  }, [y, R, t]), P = s.useCallback((e, t, n) => {
+  }, [y, R, t]), b = s.useCallback((e, t, n) => {
     let s = (s, a) => {
         a && d.NonSpamRetrainingOptIn.updateSetting(s), s && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
           action: p.MessageRequestAnalyticsAction.ACCEPT_HAM_CONFIRMATION_PROMPT,
@@ -122,9 +122,9 @@ function E(e) {
   }, [y]);
   return {
     acceptMessageRequest: g ? j : y,
-    rejectMessageRequest: D,
-    rejectAll: O,
-    markAsNotSpam: P,
+    rejectMessageRequest: O,
+    rejectAll: D,
+    markAsNotSpam: b,
     isAcceptLoading: S,
     isRejectLoading: _,
     isUserProfileLoading: M,

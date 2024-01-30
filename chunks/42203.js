@@ -36,8 +36,8 @@ let I = new h.default("ChannelStore"),
   L = {},
   M = new Set,
   U = {},
-  k = 0,
-  w = 0;
+  w = 0,
+  k = 0;
 
 function V(e, t, n) {
   if (null == e || !M.has(e) || 0 === t && f.default.hasGuild(e)) return;
@@ -49,8 +49,8 @@ function V(e, t, n) {
     return
   }
   let [a, o] = s;
-  for (let n of ((0, _.default)(a), 0 !== t && (w += 1), M.delete(e), f.default.restored(e), r.default.mark("❗", "loaded guild channels (guild: ".concat(e, ")"), o), a)) !Object.hasOwn(A, n.id) && W((0, E.castChannelRecord)(n));
-  I.verbose("hydration complete (guild: ".concat(e, ", channels: ").concat(a.length, ", guilds_loaded: ").concat(w, ")"))
+  for (let n of ((0, _.default)(a), 0 !== t && (k += 1), M.delete(e), f.default.restored(e), r.default.mark("❗", "loaded guild channels (guild: ".concat(e, ")"), o), a)) !Object.hasOwn(A, n.id) && W((0, E.castChannelRecord)(n));
+  I.verbose("hydration complete (guild: ".concat(e, ", channels: ").concat(a.length, ", guilds_loaded: ").concat(k, ")"))
 }
 
 function G(e, t, n) {

@@ -61,13 +61,13 @@ function U() {
   })
 }
 
-function k() {
+function w() {
   o.default.forEach(e => {
     o.default.commit(e.reset(e.map(e => e.set("blocked", y.default.isBlocked(e.author.id)))))
   })
 }
 
-function w(e) {}
+function k(e) {}
 
 function V(e) {
   let {
@@ -356,10 +356,10 @@ var x = new F(a.default, {
   CHANNEL_DELETE: U,
   THREAD_DELETE: U,
   GUILD_DELETE: U,
-  RELATIONSHIP_ADD: k,
-  RELATIONSHIP_REMOVE: k,
-  GUILD_MEMBERS_CHUNK: w,
-  THREAD_MEMBER_LIST_UPDATE: w,
+  RELATIONSHIP_ADD: w,
+  RELATIONSHIP_REMOVE: w,
+  GUILD_MEMBERS_CHUNK: k,
+  THREAD_MEMBER_LIST_UPDATE: k,
   MESSAGE_REACTION_ADD: V,
   MESSAGE_REACTION_ADD_MANY: function(e) {
     let {

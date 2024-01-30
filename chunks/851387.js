@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   waitForGuild: function() {
-    return w
+    return k
   },
   default: function() {
     return V
@@ -58,7 +58,7 @@ let L = e => {
       body: b.default.Messages.PLEASE_TRY_AGAIN_LATER
     })
   };
-async function k(e) {
+async function w(e) {
   var t, i, s, o, l;
   let u = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     {
@@ -127,18 +127,18 @@ async function k(e) {
   }
 }
 
-function w(e) {
+function k(e) {
   return new Promise(t => T.default.addConditionalChangeListener(() => {
     let n = T.default.getGuild(e);
     return null == n || (t(n), !1)
   }))
 }
 var V = {
-  joinGuild: k,
-  waitForGuild: w,
+  joinGuild: w,
+  waitForGuild: k,
   async transitionToGuildSync(e, t, n, i) {
     var s, r;
-    let a = await w(e);
+    let a = await k(e);
     let o = (s = a.id, null != (r = n) ? r : !(0, d.isInMainTabsExperiment)() || (0, _.isOnNewPanels)() ? (0, m.getChannelIdForGuildTransition)(s) : void 0),
       l = t;
     (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) && null == t.welcomeModalChannelId && (l = {

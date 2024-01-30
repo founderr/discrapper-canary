@@ -44,17 +44,17 @@ function S(e) {
     reactions: R,
     interactionData: O
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, D = null !== (o = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== o ? o : [], P = null !== (h = e.mention_roles) && void 0 !== h ? h : [], b = null !== (E = e.mention_channels) && void 0 !== E ? E : [], L = e.message_reference, M = s(new Date(e.timestamp)), U = e.type === p.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
-  let k = null == (T = e).author ? v : null != T.webhook_id ? new d.default(T.author) : null !== (I = _.default.getUser(T.author.id)) && void 0 !== I ? I : new d.default(T.author),
-    w = null == e ? void 0 : e.gift_info,
+  let w = null == (T = e).author ? v : null != T.webhook_id ? new d.default(T.author) : null !== (I = _.default.getUser(T.author.id)) && void 0 !== I ? I : new d.default(T.author),
+    k = null == e ? void 0 : e.gift_info,
     V = null != e.interaction ? l.default.createFromServer(e.interaction) : null,
     G = e.type === p.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
     F = e.type === p.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
     x = e.content;
   return e.type === p.MessageTypes.PREMIUM_REFERRAL && (x = ""), new u.default({
     ...e,
-    author: k,
+    author: w,
     webhookId: e.webhook_id,
-    blocked: f.default.isBlocked(k.id) || null != G && f.default.isBlocked(G),
+    blocked: f.default.isBlocked(w.id) || null != G && f.default.isBlocked(G),
     timestamp: M,
     editedTimestamp: null != e.edited_timestamp ? s(new Date(e.edited_timestamp)) : null,
     mentionEveryone: e.mention_everyone,
@@ -82,7 +82,7 @@ function S(e) {
     roleSubscriptionData: e.role_subscription_data,
     purchaseNotification: e.purchase_notification,
     poll: null == e.poll ? void 0 : (0, a.default)(e.poll),
-    giftInfo: null == w ? void 0 : w
+    giftInfo: null == k ? void 0 : k
   })
 }
 

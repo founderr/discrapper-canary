@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return U
   },
   closeStream: function() {
-    return k
+    return w
   },
   fetchStreamPreview: function() {
-    return w
+    return k
   },
   notifyStreamStart: function() {
     return V
@@ -140,14 +140,14 @@ function M(e, t) {
 
 function U(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  k(e, t), o.default.dispatch({
+  w(e, t), o.default.dispatch({
     type: "STREAM_STOP",
     streamKey: e,
     appContext: __OVERLAY__ ? N.AppContext.OVERLAY : N.AppContext.APP
   })
 }
 
-function k(e) {
+function w(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   o.default.dispatch({
     type: "STREAM_CLOSE",
@@ -155,7 +155,7 @@ function k(e) {
     canShowFeedback: t
   })
 }
-async function w(e, t, n) {
+async function k(e, t, n) {
   let i = (0, u.encodeStreamKey)({
     streamType: null != e ? R.StreamTypes.GUILD : R.StreamTypes.CALL,
     guildId: e,

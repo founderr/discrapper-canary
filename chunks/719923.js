@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return A.isPremiumExactly
   },
   getPremiumPlanItem: function() {
-    return k
+    return w
   },
   getPrice: function() {
     return V
@@ -181,11 +181,11 @@ let b = {
     ALL: [O.SubscriptionPlans.NONE_MONTH, O.SubscriptionPlans.NONE_YEAR, O.SubscriptionPlans.PREMIUM_YEAR_TIER_2, O.SubscriptionPlans.PREMIUM_MONTH_TIER_2, O.SubscriptionPlans.PREMIUM_YEAR_TIER_1, O.SubscriptionPlans.PREMIUM_MONTH_TIER_1, O.SubscriptionPlans.PREMIUM_YEAR_TIER_0, O.SubscriptionPlans.PREMIUM_MONTH_TIER_0]
   };
 
-function k(e) {
+function w(e) {
   return e.items.find(e => O.PREMIUM_PLANS.has(e.planId))
 }
 
-function w(e) {
+function k(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -776,7 +776,7 @@ function eo(e) {
 
 function el(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    s = null != t ? V(e.id, !1, i, t) : w(e.id, !1, i),
+    s = null != t ? V(e.id, !1, i, t) : k(e.id, !1, i),
     r = (0, y.formatPrice)(s.amount, s.currency);
   return e.currency !== D.CurrencyCodes.USD && !0 === n && (r = r.concat("*")), r
 }
@@ -1082,7 +1082,7 @@ function eR(e) {
 }
 
 function eO(e) {
-  let t = null != e ? k(e) : null,
+  let t = null != e ? w(e) : null,
     n = null != t ? Z(t.planId) : null;
   return n
 }
@@ -1092,7 +1092,7 @@ var eD = Object.freeze({
   isPremium: A.isPremium,
   isPremiumExactly: A.isPremiumExactly,
   getPrice: V,
-  getDefaultPrice: w,
+  getDefaultPrice: k,
   getInterval: function(e) {
     let t = O.SubscriptionPlanInfo[e];
     if (null != t) return {
@@ -1240,21 +1240,21 @@ var eD = Object.freeze({
   },
   getBillingReviewSubheader: e_,
   getIntervalForInvoice: eh,
-  getPremiumPlanItem: k,
+  getPremiumPlanItem: w,
   getGuildBoostPlanItem: eR,
   isBoostOnlySubscription: function(e) {
-    return null != e && null == k(e) && null != eR(e)
+    return null != e && null == w(e) && null != eR(e)
   },
   getPremiumSkuIdForSubscription: eO,
   getPremiumTypeFromSubscription: function(e) {
     if (null != e) {
-      let t = k(e);
+      let t = w(e);
       if (null != t) return B(t.planId)
     }
   },
   getPremiumTypeFromSubscriptionRenewalMutations: function(e) {
     if (null != e && null != e.renewalMutations) {
-      let t = k(e.renewalMutations);
+      let t = w(e.renewalMutations);
       if (null != t) return B(t.planId)
     }
   },

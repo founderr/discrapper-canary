@@ -32,17 +32,17 @@ var s = n("37983"),
   x = n("410889"),
   R = n("888400"),
   y = n("718517"),
-  D = n("299039"),
-  O = n("154864"),
+  O = n("299039"),
+  D = n("154864"),
   j = n("383667"),
-  P = n("459776"),
-  b = n("921450"),
+  b = n("459776"),
+  P = n("921450"),
   H = n("366757"),
   F = n("699473"),
   U = n("556118"),
   k = n("342009"),
-  G = n("97810"),
-  w = n("933629"),
+  w = n("97810"),
+  G = n("933629"),
   B = n("88243"),
   V = n("753089"),
   W = n("210062"),
@@ -108,7 +108,7 @@ function Q(e) {
     ed = (0, d.useChannelSummariesExperiment)(u),
     ec = (0, r.useStateFromStores)([A.default], () => A.default.shouldShowTopicsBar()),
     ef = (0, g.useStrangerDangerWarning)(u.id, Y.LOCATION_CONTEXT_WEB),
-    eh = (0, b.default)();
+    eh = (0, P.default)();
   u.isDM() && null != ef && (n = (0, s.jsx)(S.StrangerDangerWarningBanner, {
     channelId: u.id,
     warningId: ef.id,
@@ -130,7 +130,7 @@ function Q(e) {
           item: e,
           channel: u,
           isBeforeGroup: null == e.content && X(ee[t + 1])
-        }) : (0, s.jsx)(G.default, {
+        }) : (0, s.jsx)(w.default, {
           isUnread: l,
           isBeforeGroup: null == e.content && X(ee[t + 1]),
           id: l ? z.NEW_MESSAGE_BAR_ID : void 0,
@@ -165,7 +165,7 @@ function Q(e) {
         message: e.content,
         groupId: i,
         flashKey: e.flashKey,
-        id: (0, O.getMessageDOMId)(u.id, e.content.id),
+        id: (0, D.getMessageDOMId)(u.id, e.content.id),
         isLastItem: t >= ee.length - 1,
         renderContentOnly: ep
       }, e.content.id)
@@ -173,7 +173,7 @@ function Q(e) {
   eE.push(...eg);
   let eS = ee[ee.length - 1];
   if (null != ei && et.forEach((e, t) => {
-      let n = 0 === t && (0, P.isNewGroupItem)(u, eS, new M.default({
+      let n = 0 === t && (0, b.isNewGroupItem)(u, eS, new M.default({
         type: K.MessageTypes.DEFAULT,
         author: ei
       }));
@@ -209,7 +209,7 @@ function Q(e) {
     })), F > 0 && Q && er()) {
     let e, t;
     let n = N.default.getOldestUnreadTimestamp(u.id),
-      l = 0 !== n ? n : D.default.extractTimestamp(u.id),
+      l = 0 !== n ? n : O.default.extractTimestamp(u.id),
       r = (0, R.isSameDay)(i(), i(new Date(l)));
     if (N.default.isEstimated(u.id) ? (e = r ? q.default.Messages.NEW_MESSAGES_ESTIMATED : q.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? q.default.Messages.NEW_MESSAGES : q.default.Messages.NEW_MESSAGES_WITH_DATE, t = q.default.Messages.NEW_MESSAGES_SUMMARIES), ed && (0, d.channelEligibleForSummaries)(u) && eh.includes(Z.ChatOverlays.SUMMARIES)) {
       let n = N.default.ackMessageId(u.id),
@@ -258,7 +258,7 @@ function Q(e) {
             },
             children: n
           });
-          a = (0, s.jsx)(w.NewTopicsBar, {
+          a = (0, s.jsx)(G.NewTopicsBar, {
             scrollManager: en,
             content: e,
             channel: u
@@ -287,13 +287,13 @@ function Q(e) {
               children: n
             })
           });
-          a = (0, s.jsx)(w.NewMessagesBar, {
+          a = (0, s.jsx)(G.NewMessagesBar, {
             content: e,
             channelId: u.id
           })
         }
       }
-    } else eh.includes(Z.ChatOverlays.NEW_MESSAGES) && (a = (0, s.jsx)(w.NewMessagesBar, {
+    } else eh.includes(Z.ChatOverlays.NEW_MESSAGES) && (a = (0, s.jsx)(G.NewMessagesBar, {
       content: e.format({
         count: F,
         timestamp: l
@@ -301,10 +301,10 @@ function Q(e) {
       channelId: u.id
     }))
   }
-  if (null == a && (0, d.canSeeChannelSummaries)(u) && ec && eh.includes(Z.ChatOverlays.SUMMARIES) && (a = (0, s.jsx)(w.TopicsPill, {
+  if (null == a && (0, d.canSeeChannelSummaries)(u) && ec && eh.includes(Z.ChatOverlays.SUMMARIES) && (a = (0, s.jsx)(G.TopicsPill, {
       channel: u,
       scrollManager: en
-    })), x.error) l = (0, s.jsx)(w.ErrorLoadingBar, {
+    })), x.error) l = (0, s.jsx)(G.ErrorLoadingBar, {
     loading: x.loadingMore,
     onClick: () => {
       var e;
@@ -319,8 +319,8 @@ function Q(e) {
     let {
       jumpReturnTargetId: e
     } = x;
-    l = x.loadingMore && x.jumpedToPresent ? (0, s.jsx)(w.JumpToPresentBar, {}) : null != e ? (0, s.jsx)(w.JumpToPresentBar, {
-      type: w.JumpBarType.REPLY,
+    l = x.loadingMore && x.jumpedToPresent ? (0, s.jsx)(G.JumpToPresentBar, {}) : null != e ? (0, s.jsx)(G.JumpToPresentBar, {
+      type: G.JumpBarType.REPLY,
       onClick: () => {
         var t, n;
         return t = u, n = e, void o.default.jumpToMessage({
@@ -329,7 +329,7 @@ function Q(e) {
           flash: !0
         })
       }
-    }) : (0, s.jsx)(w.JumpToPresentBar, {
+    }) : (0, s.jsx)(G.JumpToPresentBar, {
       onClick: () => (function(e) {
         o.default.jumpToPresent(e.id, K.MAX_MESSAGES_PER_CHANNEL);
         let t = v.default.getChannelId();

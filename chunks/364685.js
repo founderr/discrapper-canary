@@ -120,10 +120,10 @@ let p = 2,
     })
   };
 
-function k(e) {
+function w(e) {
   null != e.stickers && (e.stickers.forEach(t => b(t, !0, e)), N(e.id, e.stickers))
 }
-class w extends s.default.Store {
+class k extends s.default.Store {
   initialize() {
     this.waitFor(a.default, f.default, _.default)
   }
@@ -167,8 +167,8 @@ class w extends s.default.Store {
     return O(), y.get(e)
   }
 }
-w.displayName = "StickersStore";
-var V = new w(r.default, {
+k.displayName = "StickersStore";
+var V = new k(r.default, {
   BACKGROUND_SYNC: () => {
     T = null, S = new Map, y = new Map, p = 0
   },
@@ -176,13 +176,13 @@ var V = new w(r.default, {
     let {
       guilds: t
     } = e;
-    T = null, S = new Map, y = new Map, t.forEach(k), p = t.every(e => null != e.stickers) ? 1 : 0
+    T = null, S = new Map, y = new Map, t.forEach(w), p = t.every(e => null != e.stickers) ? 1 : 0
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    !d.default.isLurking(t.id) && (k(t), 1 === p && null == t.stickers && null != t.stickerUpdates && (p = 0))
+    !d.default.isLurking(t.id) && (w(t), 1 === p && null == t.stickers && null != t.stickerUpdates && (p = 0))
   },
   GUILD_DELETE: function(e) {
     var t;

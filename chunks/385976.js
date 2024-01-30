@@ -36,13 +36,13 @@ var i = n("917351"),
   L = n("968027"),
   M = n("299039"),
   U = n("858619"),
-  k = n("867805"),
-  w = n("802461"),
+  w = n("867805"),
+  k = n("802461"),
   V = n("26430"),
   G = n("958706"),
   F = n("115279"),
   x = n("397336");
-let B = [F.EmojiCategories.TOP_GUILD_EMOJI.toString(), F.EmojiCategories.FAVORITES.toString(), F.EmojiCategories.RECENT.toString(), F.EmojiCategories.CUSTOM.toString()].concat(k.default.getCategories()),
+let B = [F.EmojiCategories.TOP_GUILD_EMOJI.toString(), F.EmojiCategories.FAVORITES.toString(), F.EmojiCategories.RECENT.toString(), F.EmojiCategories.CUSTOM.toString()].concat(w.default.getCategories()),
   H = {
     pendingUsages: []
   };
@@ -182,7 +182,7 @@ class ei {
     return null == this.escapedEmoticonNames && this._buildDisambiguatedCustomEmoji(), null == this.emoticonRegex && null != this.escapedEmoticonNames && "" !== this.escapedEmoticonNames && (this.emoticonRegex = new RegExp("^\\b(".concat(this.escapedEmoticonNames, ")\\b"))), this.emoticonRegex
   }
   getFrequentlyUsedEmojisWithoutFetchingLatest() {
-    return this.ensureDisambiguated(), null == this.frequentlyUsed && (this.frequentlyUsed = es.frequently.map(e => null != e.id ? this.getById(e.id) : null != e.name ? k.default.getByName(e.name) : void 0).filter(P.isNotNullish)), this.frequentlyUsed
+    return this.ensureDisambiguated(), null == this.frequentlyUsed && (this.frequentlyUsed = es.frequently.map(e => null != e.id ? this.getById(e.id) : null != e.name ? w.default.getByName(e.name) : void 0).filter(P.isNotNullish)), this.frequentlyUsed
   }
   rebuildFavoriteEmojisWithoutFetchingLatest() {
     if (this.ensureDisambiguated(), null == this.favorites || null == this.favoriteNamesAndIds) {
@@ -191,7 +191,7 @@ class ei {
         var t;
         null === (t = this.favoriteNamesAndIds) || void 0 === t || t.add(e);
         let n = this.getById(e);
-        return null == n && (n = k.default.getByName(e)), n
+        return null == n && (n = w.default.getByName(e)), n
       }).filter(P.isNotNullish)
     }
     return [this.favorites, this.favoriteNamesAndIds]
@@ -212,7 +212,7 @@ class ei {
       let s = null !== (t = null == n ? void 0 : n.emojiIds) && void 0 !== t ? t : i,
         r = s.map(e => {
           var t;
-          return null !== (t = this.getById(e)) && void 0 !== t ? t : k.default.getByName(k.default.convertSurrogateToName(e, !1))
+          return null !== (t = this.getById(e)) && void 0 !== t ? t : w.default.getByName(w.default.convertSurrogateToName(e, !1))
         }),
         a = [];
       r.forEach(e => {
@@ -237,7 +237,7 @@ class ei {
         id: n,
         names: i,
         name: r
-      } = t, a = null != i && s.some(i, e), o = null != r && e(r), l = null != r && s.some(h.default.getTermsForEmoji(r), e), u = null != n && s.some(w.default.getCaptionsForEmojiById({
+      } = t, a = null != i && s.some(i, e), o = null != r && e(r), l = null != r && s.some(h.default.getTermsForEmoji(r), e), u = null != n && s.some(k.default.getCaptionsForEmojiById({
         emojiId: n
       }), e);
       return a || o || l || u
@@ -276,7 +276,7 @@ class ei {
       i = e => {
         !Object.prototype.hasOwnProperty.call(this.emoticonsByName, e.name) && (t.push(b.default.escape(e.name)), this.emoticonsByName[e.name] = e)
       };
-    k.default.forEach(n);
+    w.default.forEach(n);
     let r = e => {
       let t = q[null == e ? "null" : e];
       null != t && (s.each(t.usableEmojis, n), s.each(t.emoticons, i))
@@ -307,7 +307,7 @@ let es = new d.default({
   },
   lookupKey: e => {
     var t;
-    return null !== (t = k.default.getByName(e)) && void 0 !== t ? t : $(e)
+    return null !== (t = w.default.getByName(e)) && void 0 !== t ? t : $(e)
   },
   afterCompute: () => {
     ei.resetFrequentlyUsed(), z = B.slice(0), !s.some(q, e => e.usableEmojis.length > 0) && z.splice(B.indexOf(F.EmojiCategories.CUSTOM), 1)
@@ -340,7 +340,7 @@ function eu() {
   var e, t, n, i;
   let r = T.default.settings,
     a = null === (t = r.textAndImages) || void 0 === t ? void 0 : null === (e = t.diversitySurrogate) || void 0 === e ? void 0 : e.value;
-  null != a && k.default.setDefaultDiversitySurrogate(a), ei.reset();
+  null != a && w.default.setDefaultDiversitySurrogate(a), ei.reset();
   let o = T.default.frecencyWithoutFetchingLatest,
     l = null !== (i = null === (n = o.emojiFrecency) || void 0 === n ? void 0 : n.emojis) && void 0 !== i ? i : {};
   es.overwriteHistory(s.mapValues(l, e => ({
@@ -395,7 +395,7 @@ class e_ extends l.default.PersistedStore {
   }
   get diversitySurrogate() {
     var e;
-    return null !== (e = k.default.getDefaultDiversitySurrogate()) && void 0 !== e ? e : ""
+    return null !== (e = w.default.getDefaultDiversitySurrogate()) && void 0 !== e ? e : ""
   }
   get emojiFrecencyWithoutFetchingLatest() {
     return es
@@ -567,7 +567,7 @@ var eh = new e_(u.default, {
   },
   MESSAGE_REACTION_ADD: function(e) {
     if (!e.optimistic) return !1;
-    let t = null != e.emoji.id && "0" !== e.emoji.id ? e.emoji : k.default.getByName(k.default.convertSurrogateToName(e.emoji.name, !1));
+    let t = null != e.emoji.id && "0" !== e.emoji.id ? e.emoji : w.default.getByName(w.default.convertSurrogateToName(e.emoji.name, !1));
     if (null == t) return !1;
     ed([t])
   },

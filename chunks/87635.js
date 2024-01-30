@@ -74,20 +74,20 @@ function L(e) {
   } = e, {
     channelAction: m,
     completed: _
-  } = (0, A.useMemberActionsForChannel)(f, h), T = (0, A.useNextMemberAction)(f, null == m ? void 0 : m.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), x = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [y, D] = a.useState(!1), [O] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
+  } = (0, A.useMemberActionsForChannel)(f, h), T = (0, A.useNextMemberAction)(f, null == m ? void 0 : m.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), x = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = a.useState(!1), [D] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
   a.useEffect(() => {
-    _ ? r.default.timing(O, {
+    _ ? r.default.timing(D, {
       toValue: 0,
       duration: L ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: x ? 0 : 500
-    }).start(() => D(!0)) : r.default.timing(O, {
+    }).start(() => O(!0)) : r.default.timing(D, {
       toValue: 1,
       duration: L ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: 400
     }).start()
-  }, [_, O, x, L]), a.useEffect(() => {
+  }, [_, D, x, L]), a.useEffect(() => {
     _ && y && r.default.timing(j, {
       toValue: 1,
       duration: L ? 0 : 350,
@@ -95,7 +95,7 @@ function L(e) {
       delay: 400
     }).start()
   }, [_, j, y, L]);
-  let P = a.useCallback(() => {
+  let b = a.useCallback(() => {
     null != T && (0, g.selectNewMemberActionChannel)(f, T.channelId)
   }, [f, T]);
   return null == m || x && !y ? null : (0, s.jsx)("div", {
@@ -109,7 +109,7 @@ function L(e) {
       },
       children: (0, s.jsxs)(u.Clickable, {
         className: i(I.banner, I.clickable),
-        onClick: P,
+        onClick: b,
         children: [(0, s.jsx)(v, {
           channelId: T.channelId,
           emojiId: null === (t = T.emoji) || void 0 === t ? void 0 : t.id,
@@ -138,7 +138,7 @@ function L(e) {
     }) : (0, s.jsxs)(r.default.div, {
       className: I.banner,
       style: {
-        marginBottom: O.interpolate({
+        marginBottom: D.interpolate({
           inputRange: [0, 1],
           outputRange: [-60, 0]
         })

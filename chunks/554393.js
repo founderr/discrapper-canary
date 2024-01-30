@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return b
+    return P
   }
 }), n("222007");
 var s = n("37983"),
@@ -32,21 +32,21 @@ var s = n("37983"),
   x = n("612278"),
   R = n("867965"),
   y = n("688169"),
-  D = n("49111"),
-  O = n("782340"),
+  O = n("49111"),
+  D = n("782340"),
   j = n("827152"),
-  P = n("550244");
+  b = n("550244");
 
-function b(e) {
+function P(e) {
   let {
     postId: t,
     isFirstMessage: n,
     isLastItem: l = !1,
-    parentChannelId: b
+    parentChannelId: P
   } = e, {
     ref: H,
     width: F
-  } = (0, d.default)(), [U, k] = a.useState(3), [G, w] = a.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
+  } = (0, d.default)(), [U, k] = a.useState(3), [w, G] = a.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
     firstMessage: Z
   } = (0, x.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([A.default], () => A.default.hasJoined(t)), {
     disableReactionUpdates: K,
@@ -54,13 +54,13 @@ function b(e) {
     isLurking: q,
     isGuest: X,
     isPendingMember: J
-  } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(b)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = a.useCallback(e => {
+  } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(P)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = a.useCallback(e => {
     let t = e[0];
     if (null != t && n) {
       let e = t.intersectionRect,
         n = t.boundingClientRect,
         s = (e.bottom - e.top) / (n.bottom - n.top);
-      w(s < 1)
+      G(s < 1)
     }
   }, [n]);
   a.useLayoutEffect(() => {
@@ -85,7 +85,7 @@ function b(e) {
       (0, R.trackForumPostLinkCopied)({
         postId: W.id,
         location: {
-          section: D.AnalyticsSections.CHANNEL_HEADER
+          section: O.AnalyticsSections.CHANNEL_HEADER
         }
       }), (0, r.copy)((0, v.getChannelLinkToCopy)(W, $)), V(!0)
     },
@@ -93,7 +93,7 @@ function b(e) {
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)("div", {
       className: i(j.container, {
-        [j.header]: G
+        [j.header]: w
       }),
       ref: H,
       children: [(0, s.jsxs)("div", {
@@ -101,7 +101,7 @@ function b(e) {
           [j.loading]: es
         }),
         children: [!el && !Y && null != ee && (0, s.jsx)("div", {
-          className: P.reactions,
+          className: b.reactions,
           children: (0, s.jsx)(S.Reaction, {
             message: Z,
             readOnly: !1,
@@ -137,12 +137,12 @@ function b(e) {
           useChatFontScaling: !1,
           className: j.addReactButton,
           isForumToolbar: !0,
-          children: !el && O.default.Messages.FORUM_REACT_TO_POST
+          children: !el && D.default.Messages.FORUM_REACT_TO_POST
         })]
       }), (0, s.jsxs)("div", {
         className: j.buttons,
         children: [(0, s.jsx)(u.Tooltip, {
-          text: O.default.Messages.FORUM_FOLLOW_TOOLTIP,
+          text: D.default.Messages.FORUM_FOLLOW_TOOLTIP,
           children: e => (0, s.jsxs)(u.Button, {
             ...e,
             look: u.Button.Looks.BLANK,
@@ -155,10 +155,10 @@ function b(e) {
             children: [(0, s.jsx)(eo, {
               width: 16,
               height: 16
-            }), z ? O.default.Messages.FORUM_FOLLOWING_POST : O.default.Messages.FOLLOW]
+            }), z ? D.default.Messages.FORUM_FOLLOWING_POST : D.default.Messages.FOLLOW]
           })
         }), (0, s.jsx)(u.Tooltip, {
-          text: O.default.Messages.COPY_LINK,
+          text: D.default.Messages.COPY_LINK,
           children: e => (0, s.jsxs)(u.Button, {
             ...e,
             look: u.Button.Looks.BLANK,
@@ -172,7 +172,7 @@ function b(e) {
             }) : (0, s.jsx)(N.default, {
               width: 16,
               height: 16
-            }), B ? O.default.Messages.COPIED : null]
+            }), B ? D.default.Messages.COPIED : null]
           })
         })]
       })]

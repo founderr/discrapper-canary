@@ -290,7 +290,7 @@ function Z(e) {
                   children: u.isMobile ? void 0 : J
                 }, "status-picker"), en, es ? (0, a.jsx)(f.MenuItem, {
                   id: "quiet-mode",
-                  "aria-label": "quiet mode",
+                  "aria-label": "focus mode",
                   focusedClassName: K.menuItemFocused,
                   showIconFirst: !0,
                   label: ei ? W.default.Messages.QUIET_MODE_ENABLED : el ? W.default.Messages.QUIET_MODE_DND : W.default.Messages.QUIET_MODE_DISABLED,

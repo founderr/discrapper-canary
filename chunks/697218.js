@@ -171,11 +171,11 @@ function U(e) {
   })
 }
 
-function k(e) {
+function w(e) {
   return I(e.member.user)
 }
 
-function w(e) {
+function k(e) {
   let {
     request: t
   } = e, {
@@ -363,8 +363,8 @@ var G = new V(r.default, {
   GUILD_BAN_REMOVE: b,
   CHANNEL_RECIPIENT_ADD: L,
   CHANNEL_RECIPIENT_REMOVE: L,
-  GUILD_JOIN_REQUEST_CREATE: w,
-  GUILD_JOIN_REQUEST_UPDATE: w,
+  GUILD_JOIN_REQUEST_CREATE: k,
+  GUILD_JOIN_REQUEST_UPDATE: k,
   GUILD_MEMBER_ADD: M,
   GUILD_MEMBER_UPDATE: M,
   GUILD_MEMBERS_CHUNK: function(e) {
@@ -442,8 +442,8 @@ var G = new V(r.default, {
     } = e;
     return t.members.reduce((e, t) => I(t.user) || e, !1)
   },
-  LOBBY_MEMBER_CONNECT: k,
-  LOBBY_MEMBER_UPDATE: k,
+  LOBBY_MEMBER_CONNECT: w,
+  LOBBY_MEMBER_UPDATE: w,
   GIFT_CODE_RESOLVE_SUCCESS: function(e) {
     let {
       giftCode: t

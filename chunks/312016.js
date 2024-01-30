@@ -32,17 +32,17 @@ let E = /^\/([a-zA-Z0-9-]+)$/,
   C = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
   A = /^\/channels\/([0-9]+)\/shop$/,
   y = /^\/clyde-profiles\/([0-9-]+)\/?$/,
-  N = k(window.GLOBAL_ENV.INVITE_HOST),
-  R = k(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-  O = k(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(m.PRIMARY_DOMAIN)),
-  D = k("//canary.".concat(m.PRIMARY_DOMAIN)),
-  P = k("//ptb.".concat(m.PRIMARY_DOMAIN)),
-  b = k("discordapp.com"),
-  L = k("discord.com"),
+  N = w(window.GLOBAL_ENV.INVITE_HOST),
+  R = w(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
+  O = w(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(m.PRIMARY_DOMAIN)),
+  D = w("//canary.".concat(m.PRIMARY_DOMAIN)),
+  P = w("//ptb.".concat(m.PRIMARY_DOMAIN)),
+  b = w("discordapp.com"),
+  L = w("discord.com"),
   M = [_.default.escape(null !== (s = N.host) && void 0 !== s ? s : ""), _.default.escape(null !== (r = R.host) && void 0 !== r ? r : ""), _.default.escape(null !== (a = O.host) && void 0 !== a ? a : ""), _.default.escape(null !== (o = b.host) && void 0 !== o ? o : ""), _.default.escape(null !== (l = L.host) && void 0 !== l ? l : "")].filter(Boolean),
   U = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(M.join("|"), ")"), "g");
 
-function k(e) {
+function w(e) {
   if (null == e) return {
     host: null,
     pathPrefix: null
@@ -60,7 +60,7 @@ function k(e) {
   }
 }
 
-function w(e, t) {
+function k(e, t) {
   var n, i, s;
   if ((null === (n = t.host) || void 0 === n ? void 0 : n.replace(/^www[.]/i, "")) !== e.host) return null;
   let r = null !== (i = t.pathname) && void 0 !== i ? i : "",
@@ -72,7 +72,7 @@ function w(e, t) {
 
 function V(e) {
   var t, n, i, s;
-  return null !== (s = null !== (i = null !== (n = null !== (t = w(O, e)) && void 0 !== t ? t : w(D, e)) && void 0 !== n ? n : w(P, e)) && void 0 !== i ? i : w(b, e)) && void 0 !== s ? s : w(L, e)
+  return null !== (s = null !== (i = null !== (n = null !== (t = k(O, e)) && void 0 !== t ? t : k(D, e)) && void 0 !== n ? n : k(P, e)) && void 0 !== i ? i : k(b, e)) && void 0 !== s ? s : k(L, e)
 }
 
 function G(e) {
@@ -87,9 +87,9 @@ function G(e) {
     if (n.length >= 10) break;
     let i = F(e);
     if (null == i || null == i.pathname) continue;
-    let l = w(N, i),
-      u = w(R, i),
-      _ = null !== (o = null !== (a = null !== (r = null !== (s = w(O, i)) && void 0 !== s ? s : w(D, i)) && void 0 !== r ? r : w(P, i)) && void 0 !== a ? a : w(b, i)) && void 0 !== o ? o : w(L, i),
+    let l = k(N, i),
+      u = k(R, i),
+      _ = null !== (o = null !== (a = null !== (r = null !== (s = k(O, i)) && void 0 !== s ? s : k(D, i)) && void 0 !== r ? r : k(P, i)) && void 0 !== a ? a : k(b, i)) && void 0 !== o ? o : k(L, i),
       h = (e, i) => {
         !t.has(i) && (t.add(i), n.push({
           type: e,
@@ -123,9 +123,9 @@ function G(e) {
       let e = U[1];
       h(g.CodedLinkType.APP_DIRECTORY_PROFILE, e)
     }
-    let k = null == _ ? void 0 : _.match(y);
-    if (null != k) {
-      let e = k[1];
+    let w = null == _ ? void 0 : _.match(y);
+    if (null != w) {
+      let e = w[1];
       h(g.CodedLinkType.CLYDE_PROFILE, e)
     }
     let V = null == _ ? void 0 : _.match(I),

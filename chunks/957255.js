@@ -80,11 +80,11 @@ function U() {
   D += 1
 }
 
-function k() {
+function w() {
   U()
 }
 
-function w() {
+function k() {
   U()
 }
 
@@ -245,17 +245,17 @@ function j() {
 }
 Y.displayName = "PermissionStore";
 var W = new Y(o.default, {
-  BACKGROUND_SYNC: k,
-  CONNECTION_OPEN: k,
-  OVERLAY_INITIALIZE: k,
-  CACHE_LOADED: k,
-  CACHE_LOADED_LAZY: k,
+  BACKGROUND_SYNC: w,
+  CONNECTION_OPEN: w,
+  OVERLAY_INITIALIZE: w,
+  CACHE_LOADED: w,
+  CACHE_LOADED_LAZY: w,
   CONNECTION_CLOSED: function() {
     j()
   },
-  GUILD_CREATE: w,
-  GUILD_UPDATE: w,
-  GUILD_DELETE: w,
+  GUILD_CREATE: k,
+  GUILD_UPDATE: k,
+  GUILD_DELETE: k,
   GUILD_MEMBER_ADD: V,
   GUILD_MEMBER_UPDATE: V,
   CURRENT_USER_UPDATE: V,

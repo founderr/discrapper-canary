@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return U
   },
   getChannelLinkToCopy: function() {
-    return k
+    return w
   }
 }), n("70102"), n("424973"), n("222007");
 var i = n("316693"),
@@ -215,7 +215,7 @@ function U(e, t, n, i) {
   return "".concat(location.protocol, "//").concat(location.host).concat(m.Routes.CHANNEL(e, t, n)).concat(null == i ? "" : "?summaryId=".concat(i))
 }
 
-function k(e, t, n, i) {
+function w(e, t, n, i) {
   let s;
   let r = e.getGuildId(),
     a = (0, o.canUseMediaPostEmbed)(r, t);

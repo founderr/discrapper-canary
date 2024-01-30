@@ -109,7 +109,7 @@ function P(e, t) {
               {
                 attachmentIds: n,
                 embedIds: i
-              } = w(t);
+              } = k(t);
             (0, v.trackScanningTimedOut)({
               channelId: e.channel_id,
               messageId: e.id,
@@ -142,7 +142,7 @@ function M(e) {
   let {
     attachmentIds: t,
     embedIds: n
-  } = w(e);
+  } = k(e);
   return t.length > 0 || n.length > 0
 }
 
@@ -164,11 +164,11 @@ function U(e) {
   return t
 }
 
-function k(e) {
+function w(e) {
   return null != e && (null != e.attachments && e.attachments.length > 0 || null != e.embeds && e.embeds.length > 0)
 }
 
-function w(e) {
+function k(e) {
   var t, n, i, s, r, a, o, l;
   let u = null !== (r = null == e ? void 0 : null === (t = e.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== r ? r : 0,
     d = null !== (a = null == e ? void 0 : null === (n = e.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0;
@@ -189,9 +189,9 @@ function V(e, t) {
     messagesPendingScan: n,
     attributesByChannelId: i
   } = function(e) {
-    let t = e.filter(e => k(e) && (0, v.shouldRedactExplicitContent)(e)),
+    let t = e.filter(e => w(e) && (0, v.shouldRedactExplicitContent)(e)),
       n = e.map(e => {
-        if (null != e && "referenced_message" in e && null != e.referenced_message && k(e.referenced_message)) return e.referenced_message
+        if (null != e && "referenced_message" in e && null != e.referenced_message && w(e.referenced_message)) return e.referenced_message
       }).filter(function(e) {
         return null != e
       });
@@ -334,11 +334,11 @@ function z(e) {
       messagesPendingScan: t,
       attributesByChannelId: n
     } = function(e) {
-      let t = e.filter(e => k(e) && (0, v.shouldRedactExplicitContent)(e)),
+      let t = e.filter(e => w(e) && (0, v.shouldRedactExplicitContent)(e)),
         n = e.map(e => {
           if (T.MessageTypesWithLazyLoadedReferences.has(e.type) && null != e.messageReference) {
             let t = d.default.getMessageByReference(e.messageReference);
-            if (t.state === d.ReferencedMessageState.LOADED && null != t.message && k(t.message)) return t.message
+            if (t.state === d.ReferencedMessageState.LOADED && null != t.message && w(t.message)) return t.message
           }
         }).filter(function(e) {
           return null != e

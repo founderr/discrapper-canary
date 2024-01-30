@@ -7,29 +7,29 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("872717"),
-  l = n("913144"),
+var l = n("872717"),
+  i = n("913144"),
   s = n("448993"),
   r = n("745279"),
-  a = n("49111");
-let u = Object.freeze({});
+  u = n("49111");
+let a = Object.freeze({});
 async function d(e) {
   let {
     code: t,
-    options: n = u,
+    options: n = a,
     onRedeemed: d,
     onError: o
   } = e, {
     channelId: c = null,
     paymentSource: E = null
   } = n;
-  l.default.dispatch({
+  i.default.dispatch({
     type: "GIFT_CODE_REDEEM",
     code: t
   });
   try {
-    let e = await i.default.post({
-      url: a.Endpoints.GIFT_CODE_REDEEM(t),
+    let e = await l.default.post({
+      url: u.Endpoints.GIFT_CODE_REDEEM(t),
       body: {
         channel_id: c,
         payment_source_id: null == E ? void 0 : E.id,
@@ -37,7 +37,7 @@ async function d(e) {
       },
       oldFormErrors: !0
     });
-    return l.default.dispatch({
+    return i.default.dispatch({
       type: "GIFT_CODE_REDEEM_SUCCESS",
       code: t,
       entitlement: e.body
@@ -47,7 +47,7 @@ async function d(e) {
     }
   } catch (n) {
     let e = new s.BillingError(n);
-    throw l.default.dispatch({
+    throw i.default.dispatch({
       type: "GIFT_CODE_REDEEM_FAILURE",
       code: t,
       error: e

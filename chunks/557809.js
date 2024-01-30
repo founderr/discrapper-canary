@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return y
   },
   renderTopic: function() {
-    return O
+    return D
   },
   HeaderGuildBreadcrumb: function() {
-    return P
+    return b
   },
   ChannelEmoji: function() {
-    return b
+    return P
   }
 });
 var s = n("37983"),
@@ -96,7 +96,7 @@ function y(e) {
     children: [null != T ? (0, s.jsxs)(o.HiddenVisually, {
       children: [T, ":"]
     }) : null, " ", n]
-  }), D = (0, s.jsx)(b, {
+  }), O = (0, s.jsx)(P, {
     channel: t
   });
   switch (t.type) {
@@ -128,7 +128,7 @@ function y(e) {
     case L.ChannelTypes.GUILD_FORUM:
     case L.ChannelTypes.GUILD_MEDIA:
       return (0, s.jsxs)(a.Fragment, {
-        children: [A && D, j(_, t.type === L.ChannelTypes.GUILD_ANNOUNCEMENT ? x.default.Messages.NEWS_CHANNEL : x.default.Messages.TEXT_CHANNEL), !A && D, (0, s.jsx)(N.default.Title, {
+        children: [A && O, j(_, t.type === L.ChannelTypes.GUILD_ANNOUNCEMENT ? x.default.Messages.NEWS_CHANNEL : x.default.Messages.TEXT_CHANNEL), !A && O, (0, s.jsx)(N.default.Title, {
           level: I,
           onContextMenu: C,
           onClick: d,
@@ -137,7 +137,7 @@ function y(e) {
       });
     case L.ChannelTypes.GUILD_VOICE:
       return (0, s.jsxs)(a.Fragment, {
-        children: [A && D, j(_, x.default.Messages.VOICE_CHANNEL), !A && D, (0, s.jsx)(N.default.Title, {
+        children: [A && O, j(_, x.default.Messages.VOICE_CHANNEL), !A && O, (0, s.jsx)(N.default.Title, {
           level: I,
           onContextMenu: C,
           onClick: d,
@@ -146,7 +146,7 @@ function y(e) {
       });
     case L.ChannelTypes.GUILD_STAGE_VOICE:
       return (0, s.jsxs)(a.Fragment, {
-        children: [A && D, j(_, x.default.Messages.STAGE_CHANNEL), !A && D, (0, s.jsx)(N.default.Title, {
+        children: [A && O, j(_, x.default.Messages.STAGE_CHANNEL), !A && O, (0, s.jsx)(N.default.Title, {
           level: I,
           onContextMenu: C,
           onClick: d,
@@ -156,10 +156,10 @@ function y(e) {
     case L.ChannelTypes.ANNOUNCEMENT_THREAD:
     case L.ChannelTypes.PUBLIC_THREAD:
     case L.ChannelTypes.PRIVATE_THREAD:
-      let O = null;
+      let D = null;
       if (!u && null != l) {
         let e = (0, h.default)(l, r);
-        O = (0, s.jsxs)(a.Fragment, {
+        D = (0, s.jsxs)(a.Fragment, {
           children: [j(e, x.default.Messages.TEXT_CHANNEL), (0, s.jsx)(N.default.Title, {
             level: I,
             onContextMenu: m,
@@ -169,15 +169,15 @@ function y(e) {
           }), (0, s.jsx)(N.default.Caret, {})]
         })
       }
-      let P = (null == l ? void 0 : l.type) != null && L.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
+      let b = (null == l ? void 0 : l.type) != null && L.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
       return (0, s.jsxs)(a.Fragment, {
-        children: [O, j(P ? null : _, x.default.Messages.THREAD), (0, s.jsx)(N.default.Title, {
+        children: [D, j(b ? null : _, x.default.Messages.THREAD), (0, s.jsx)(N.default.Title, {
           level: I,
           onContextMenu: C,
           onClick: d,
           className: i({
             [R.cursorPointer]: u,
-            [R.forumPostTitle]: P
+            [R.forumPostTitle]: b
           }),
           children: y
         })]
@@ -204,7 +204,7 @@ function y(e) {
       return null
   }
 }
-let D = e => {
+let O = e => {
   let {
     channel: t
   } = e, n = (0, r.useStateFromStores)([S.default], () => S.default.getCurrentUser()), l = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t.getRecipientId()));
@@ -219,11 +219,11 @@ let D = e => {
   }) : null
 };
 
-function O(e, t) {
+function D(e, t) {
   switch (e.type) {
     case L.ChannelTypes.DM:
       return (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(D, {
+        children: [(0, s.jsx)(O, {
           channel: e
         }), (0, s.jsx)(T.default, {
           channel: e
@@ -255,7 +255,7 @@ function j(e, t) {
   })
 }
 
-function P(e) {
+function b(e) {
   let {
     guild: t,
     channel: n,
@@ -281,7 +281,7 @@ function P(e) {
     })]
   })
 }
-let b = a.memo(function(e) {
+let P = a.memo(function(e) {
   let {
     channel: t
   } = e, {

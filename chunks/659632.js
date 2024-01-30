@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return i
   },
   GIFT_EXPERIENCES_WITH_CUSTOM_MESSAGING: function() {
-    return k
+    return w
   },
   GIFT_EXPERIENCES_WITH_CUSTOM_EMOJI_SOUNDBOARD: function() {
-    return w
+    return k
   },
   getGiftExperience: function() {
     return V
@@ -95,8 +95,8 @@ let T = m.default.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
   M = new RegExp("^(".concat("WUMP-?", ")?(").concat(L, ")$")),
   U = e => null != e && !0;
 (s = i || (i = {}))[s.DEFAULT = 0] = "DEFAULT", s[s.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", s[s.CUSTOM_MESSAGE = 2] = "CUSTOM_MESSAGE", s[s.EMOJI_SOUNDBOARD = 3] = "EMOJI_SOUNDBOARD";
-let k = new Set([2, 3]),
-  w = new Set([3]),
+let w = new Set([2, 3]),
+  k = new Set([3]),
   V = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "getGiftExperience";

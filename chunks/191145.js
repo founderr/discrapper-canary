@@ -36,8 +36,8 @@ let y = new d.default("ChannelRTCStore"),
   L = {},
   M = {},
   U = {},
-  k = {},
   w = {},
+  k = {},
   V = {};
 
 function G(e) {
@@ -181,7 +181,7 @@ function J(e) {
       id: t
     }
   } = e;
-  return delete k[t], delete w[t], K(t)
+  return delete w[t], delete k[t], K(t)
 }
 
 function $(e) {
@@ -273,14 +273,14 @@ class et extends o.default.Store {
   }
   getChatOpen(e) {
     var t;
-    return null !== (t = k[e]) && void 0 !== t && t
+    return null !== (t = w[e]) && void 0 !== t && t
   }
   isFullscreenInContext() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : A.AppContext.APP;
     return Object.values(L).some(t => t[e] === A.ChannelLayouts.FULL_SCREEN)
   }
   getStageStreamSize(e) {
-    return w[e]
+    return k[e]
   }
   getStageVideoLimitBoostUpsellDismissed(e) {
     return V[e]
@@ -297,14 +297,14 @@ var en = new et(l.default, {
       channelId: t,
       currentVoiceChannelId: n
     } = e;
-    return null != t ? delete P[t] : null != n && (delete k[n], delete w[n], Y(n)), z()
+    return null != t ? delete P[t] : null != n && (delete w[n], delete k[n], Y(n)), z()
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t,
       messageId: n
     } = e, i = z(), s = m.default.getChannel(t);
-    return null == t || null == n || (null == s ? void 0 : s.type) !== A.ChannelTypes.GUILD_VOICE && (null == s ? void 0 : s.type) !== A.ChannelTypes.GUILD_STAGE_VOICE || k[t] ? i : (k[t] = !0, !0)
+    return null == t || null == n || (null == s ? void 0 : s.type) !== A.ChannelTypes.GUILD_VOICE && (null == s ? void 0 : s.type) !== A.ChannelTypes.GUILD_STAGE_VOICE || w[t] ? i : (w[t] = !0, !0)
   },
   CHANNEL_RTC_ACTIVE_CHANNELS: z,
   VOICE_STATE_UPDATES: function(e) {
@@ -398,7 +398,7 @@ var en = new et(l.default, {
       channelId: t,
       large: n
     } = e;
-    w[t] = n
+    k[t] = n
   },
   CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED: function(e) {
     let {
@@ -423,7 +423,7 @@ var en = new et(l.default, {
       channelId: t,
       chatOpen: n
     } = e;
-    k[t] = n
+    w[t] = n
   },
   RTC_CONNECTION_VIDEO: function(e) {
     let {

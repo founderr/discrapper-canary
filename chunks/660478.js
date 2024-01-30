@@ -37,8 +37,8 @@ var s, r, a = n("627445"),
   L = n("374363"),
   M = n("233069"),
   U = n("845078"),
-  k = n("718517"),
-  w = n("568734"),
+  w = n("718517"),
+  k = n("568734"),
   V = n("449008"),
   G = n("35468"),
   F = n("299039"),
@@ -73,7 +73,7 @@ let eo = et.BasicPermissions.VIEW_CHANNEL | et.BasicPermissions.READ_MESSAGE_HIS
   e_ = !1,
   eh = null,
   eg = {},
-  em = 30 * k.default.Millis.DAY;
+  em = 30 * w.default.Millis.DAY;
 
 function eE() {
   return F.default.fromTimestamp(Date.now() - em)
@@ -83,11 +83,11 @@ let ep = 0,
   eS = null;
 
 function eT() {
-  ep = Date.now() - 7 * k.default.Millis.DAY, ev = Date.now() - 3 * k.default.Millis.DAY, clearTimeout(eS), eS = setTimeout(() => {
+  ep = Date.now() - 7 * w.default.Millis.DAY, ev = Date.now() - 3 * w.default.Millis.DAY, clearTimeout(eS), eS = setTimeout(() => {
     h.default.dispatch({
       type: "DECAY_READ_STATES"
     })
-  }, 1 * k.default.Millis.HOUR)
+  }, 1 * w.default.Millis.HOUR)
 }
 
 function eI(e) {
@@ -639,7 +639,7 @@ class eO {
     return (this._isActiveThread !== n || this._isJoinedThread !== i) && (this._isActiveThread = n, this._isJoinedThread = i, !0)
   }
   recordLastViewedTime() {
-    let e = Math.ceil((Date.now() - F.DISCORD_EPOCH) / k.default.Millis.DAY);
+    let e = Math.ceil((Date.now() - F.DISCORD_EPOCH) / w.default.Millis.DAY);
     e !== this.lastViewed && (this.lastViewed = e, this.canTrackUnreads() && !this.hasUnread() && this.ack({
       force: !0,
       trackAnalytics: !1
@@ -664,7 +664,7 @@ function eP(e) {
     if ((0, M.isReadableType)(e.type)) {
       var t;
       let n = eO.get(e.id);
-      n.lastMessageId = e.last_message_id, n.lastPinTimestamp = eI(e.last_pin_timestamp), n._isResourceChannel = (0, w.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, ei.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL), M.THREAD_CHANNEL_TYPES.has(e.type) && n.syncThreadSettings()
+      n.lastMessageId = e.last_message_id, n.lastPinTimestamp = eI(e.last_pin_timestamp), n._isResourceChannel = (0, k.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, ei.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL), M.THREAD_CHANNEL_TYPES.has(e.type) && n.syncThreadSettings()
     }
   })
 }
@@ -728,7 +728,7 @@ function eU(e, t) {
   return !!(e.mentionCount > 0) || !(F.default.compare(e.channelId, t) > 0 || null != e._ackMessageId && F.default.compare(e._ackMessageId, t) > 0 || null != e._lastMessageId && F.default.compare(e._lastMessageId, t) > 0) && !0
 }
 
-function ek(e) {
+function ew(e) {
   if (null != e) {
     let t = eO.get(e);
     if (eR(t)) return t.ack({})
@@ -736,7 +736,7 @@ function ek(e) {
   return !1
 }
 
-function ew() {
+function ek() {
   null != eh && clearTimeout(eh)
 }
 
@@ -781,7 +781,7 @@ function eB(e) {
 function eH() {
   let e = B.default.getCurrentSidebarChannelId(el),
     t = !1;
-  return eu !== e ? (t = ej(eu), eu = e) : t = ek(e) || t, t
+  return eu !== e ? (t = ej(eu), eu = e) : t = ew(e) || t, t
 }
 
 function eY(e) {
@@ -992,7 +992,7 @@ let eX = new eq(h.default, {
           i < t && (n.mentionCount++, n.lastMessageId = F.default.fromTimestamp(t))
         })
       }(s), eD(r), i)) eD(null !== (n = e.channels) && void 0 !== n ? n : []), eV(e), eb(e);
-    ew(), eh = setTimeout(() => (function(e) {
+    ek(), eh = setTimeout(() => (function(e) {
       let t = eE();
       for (let i of e) {
         var n;
@@ -1000,7 +1000,7 @@ let eX = new eq(h.default, {
           s = eO.get(i.id, e);
         s.shouldDeleteReadState(t) && s.delete()
       }
-    })(a.entries), 10 * k.default.Millis.SECOND)
+    })(a.entries), 10 * w.default.Millis.SECOND)
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
@@ -1008,7 +1008,7 @@ let eX = new eq(h.default, {
     } = e;
     eD(t)
   },
-  LOGOUT: ew,
+  LOGOUT: ek,
   OVERLAY_INITIALIZE: function(e) {
     let {
       readStates: t,
@@ -1145,7 +1145,7 @@ let eX = new eq(h.default, {
     }
     eY(el), eY(eu);
     let r = !1;
-    return el !== t && (r = ej(el) || r, r = ej(eu) || r), (el === t || (null == i ? void 0 : i.type) != null && et.ChannelTypesSets.GUILD_THREADS_ONLY.has(i.type)) && (r = ek(t) || r), el === t && (r = ek(n) || r), el = t, eu = n, r
+    return el !== t && (r = ej(el) || r, r = ej(eu) || r), (el === t || (null == i ? void 0 : i.type) != null && et.ChannelTypesSets.GUILD_THREADS_ONLY.has(i.type)) && (r = ew(t) || r), el === t && (r = ew(n) || r), el = t, eu = n, r
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
@@ -1239,7 +1239,7 @@ let eX = new eq(h.default, {
     for (let [n, i] of Object.entries(eg)) i === e.windowId && (t = function(e, t) {
       if (null == e) return !1;
       let n = eO.get(e);
-      return !t && !n.hasUnread() && (n.oldestUnreadMessageIdStale = !0), ek(e)
+      return !t && !n.hasUnread() && (n.oldestUnreadMessageIdStale = !0), ew(e)
     }(n, e.focused) || t);
     return t
   },
@@ -1247,7 +1247,7 @@ let eX = new eq(h.default, {
     let {
       channelId: t
     } = e;
-    return ek(t)
+    return ew(t)
   },
   CURRENT_USER_UPDATE: function() {
     ed = null
@@ -1260,7 +1260,7 @@ let eX = new eq(h.default, {
     return !1
   },
   DRAWER_CLOSE: function() {
-    return ek(el)
+    return ew(el)
   },
   BULK_ACK: function(e) {
     var t, n, i;
@@ -1293,7 +1293,7 @@ let eX = new eq(h.default, {
       channelId: t,
       windowId: n
     } = e;
-    return eg[t] !== n && (o(void 0 === eg[t], "handleEnableAutomaticAck: channel already visible in another window"), eg[t] = n, ek(t))
+    return eg[t] !== n && (o(void 0 === eg[t], "handleEnableAutomaticAck: channel already visible in another window"), eg[t] = n, ew(t))
   },
   DISABLE_AUTOMATIC_ACK: function(e) {
     let {
@@ -1351,7 +1351,7 @@ let eX = new eq(h.default, {
     let {
       channelId: t
     } = e;
-    return ek(t)
+    return ew(t)
   },
   CHANNEL_RTC_UPDATE_CHAT_OPEN: function(e) {
     let {
@@ -1436,7 +1436,7 @@ let eX = new eq(h.default, {
     let {
       channelId: t
     } = e;
-    return ek(t)
+    return ew(t)
   }
 });
 var eQ = eX
