@@ -81221,6 +81221,16 @@ html .tabBadge__002b3 {
     height: 100vh
 }
 
+.wrapper__2f460 {
+    padding: 16px 0
+}
+
+.tabs__88df8 {
+    display: flex;
+    flex-direction: row;
+    gap: 16px
+}
+
 .modalCloseButton_b4dfd7 {
     margin-left: auto
 }
