@@ -14,9 +14,9 @@ var n = s("77078"),
   d = s("388817"),
   u = s("835618"),
   c = s("374023"),
-  S = s("566126"),
-  E = s("832837"),
-  f = s("526995"),
+  S = s("49470"),
+  E = s("566126"),
+  f = s("832837"),
   T = s("49111"),
   m = s("188338");
 
@@ -47,15 +47,15 @@ function _() {
       }
     }), (0, a.jsx)(l.default, {
       section: T.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
-      children: (0, a.jsx)(S.default, {})
+      children: (0, a.jsx)(E.default, {})
     }), e && (0, a.jsx)(l.default, {
       section: T.AnalyticsSections.QUESTS,
-      children: (0, a.jsx)(f.default, {})
+      children: (0, a.jsx)(S.default, {})
     }), (0, a.jsx)(n.FormDivider, {
       className: m.divider
     }), (0, a.jsx)(l.default, {
       section: T.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
-      children: (0, a.jsx)(E.default, {})
+      children: (0, a.jsx)(f.default, {})
     })]
   })
 }

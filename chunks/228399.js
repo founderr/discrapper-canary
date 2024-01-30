@@ -28,9 +28,9 @@ var a = n("37983"),
         color: "always-white",
         variant: "text-xs/normal",
         className: f.questRewardTileDetailsLearnMore,
-        children: c.default.Messages.QUESTS_LEARN_MORE.format()
+        children: c.default.Messages.QUESTS_LEARN_MORE_STACKED.format()
       }), (0, a.jsx)("img", {
-        alt: "",
+        alt: n.config.messages.rewardName,
         className: f.questRewardTileAsset,
         src: (0, u.getRewardAssetUrl)(n.id)
       })]

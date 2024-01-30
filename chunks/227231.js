@@ -35,6 +35,9 @@ E.r(_), E.d(_, {
   },
   getPlatformString: function() {
     return L
+  },
+  calculatePercentComplete: function() {
+    return u
   }
 }), E("222007");
 var t = E("2973"),
@@ -133,4 +136,17 @@ let L = e => {
     default:
       return ""
   }
+};
+
+function u(e) {
+  if (null == e.userStatus) return 0;
+  let {
+    streamProgressSeconds: _,
+    completedAt: E
+  } = e.userStatus;
+  if (null != E) return 1;
+  let {
+    streamDurationRequirementMinutes: t
+  } = e.config;
+  return Math.min(_ / 60 / t, 1)
 }

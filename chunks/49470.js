@@ -8,13 +8,13 @@ var a = s("37983"),
   n = s("884691"),
   l = s("446674"),
   i = s("77078"),
-  r = s("448881"),
-  o = s("2973"),
-  d = s("249900"),
-  u = s("400377"),
-  c = s("822107"),
+  r = s("249900"),
+  o = s("448881"),
+  d = s("2973"),
+  u = s("514002"),
+  c = s("859893"),
   S = s("782340"),
-  E = s("632087");
+  E = s("804642");
 let f = e => {
   let {
     quest: t
@@ -29,15 +29,15 @@ let f = e => {
   })
 };
 var T = () => {
-  let [e, t] = n.useState(!1), s = (0, l.useStateFromStoresArray)([o.default], () => [...o.default.quests.values()]), {
+  let [e, t] = n.useState(!1), s = (0, l.useStateFromStoresArray)([d.default], () => [...d.default.quests.values()]), {
     isFetchingCurrentQuests: u,
     lastFetchedCurrentQuests: c
-  } = (0, l.useStateFromStoresObject)([o.default], () => ({
-    isFetchingCurrentQuests: o.default.isFetchingCurrentQuests,
-    lastFetchedCurrentQuests: o.default.lastFetchedCurrentQuests
+  } = (0, l.useStateFromStoresObject)([d.default], () => ({
+    isFetchingCurrentQuests: d.default.isFetchingCurrentQuests,
+    lastFetchedCurrentQuests: d.default.lastFetchedCurrentQuests
   }));
   return (n.useEffect(() => {
-    !e && 0 === c && !u && (t(!0), (0, r.fetchCurrentQuests)())
+    !e && 0 === c && !u && (t(!0), (0, o.fetchCurrentQuests)())
   }, [u, c, e]), u) ? (0, a.jsx)(i.Spinner, {
     className: E.spinner
   }) : 0 === s.length ? null : (0, a.jsx)(i.FormSection, {
@@ -46,7 +46,7 @@ var T = () => {
       component: (0, a.jsxs)(i.Heading, {
         variant: "heading-md/semibold",
         className: E.questsHeading,
-        children: [(0, a.jsx)(d.default, {
+        children: [(0, a.jsx)(r.default, {
           className: E.questsIcon
         }), S.default.Messages.QUESTS]
       }),

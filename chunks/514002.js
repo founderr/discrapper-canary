@@ -1,0 +1,84 @@
+"use strict";
+s.r(t), s.d(t, {
+  default: function() {
+    return T
+  }
+});
+var a = s("37983");
+s("884691");
+var n = s("446674"),
+  l = s("77078"),
+  i = s("448881"),
+  r = s("2973"),
+  o = s("227231"),
+  d = s("315130"),
+  u = s("782340"),
+  c = s("643958");
+let S = (e, t, s) => s ? u.default.Messages.QUESTS_SHOW_CODE : e || t ? u.default.Messages.QUESTS_CLAIM_REWARD : u.default.Messages.QUESTS_ACCEPT,
+  E = (e, t) => e ? u.default.Messages.QUESTS_COMPLETE_TOOLTIP : t ? u.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : u.default.Messages.QUESTS_ACCEPT_TOOLTIP,
+  f = e => {
+    var t, n, r;
+    return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null || (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null || (null === (r = e.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null ? () => {
+      (0, l.openModalLazy)(async () => {
+        let {
+          default: t
+        } = await s.el("36170").then(s.bind(s, "36170"));
+        return s => (0, a.jsx)(t, {
+          ...s,
+          quest: e
+        })
+      })
+    } : () => {
+      (0, i.enrollInQuest)(e.id)
+    }
+  };
+var T = e => {
+  var t, s, i;
+  let {
+    quest: T
+  } = e, m = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, _ = (null === (s = T.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null, g = (null === (i = T.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, h = _ && !g, I = _ ? l.ButtonColors.BRAND_NEW : l.ButtonColors.GREEN, N = S(m, _, g), p = E(m, _), C = f(T), A = _ && !m, O = (0, n.useStateFromStores)([r.default], () => r.default.isEnrolling(T.id));
+  return (0, a.jsxs)("div", {
+    className: c.outerContainer,
+    children: [(0, a.jsx)("img", {
+      src: (0, o.getRewardAssetUrl)(T.id),
+      alt: "",
+      className: c.questReward
+    }), (0, a.jsxs)("div", {
+      className: c.innerContainer,
+      children: [(0, a.jsxs)("div", {
+        className: c.questCopyCta,
+        children: [(0, a.jsxs)("div", {
+          children: [(0, a.jsx)(l.Text, {
+            variant: "text-lg/medium",
+            className: c.taskInstructions,
+            children: u.default.Messages.QUESTS_STREAM_TASK.format({
+              minutes: T.config.streamDurationRequirementMinutes,
+              gameTitle: T.config.messages.gameTitle
+            })
+          }), (0, a.jsx)(l.Text, {
+            variant: "text-sm/medium",
+            color: "text-muted",
+            children: u.default.Messages.QUEST_REWARD.format({
+              reward: T.config.messages.rewardNameWithArticle
+            })
+          })]
+        }), (0, a.jsx)(l.TooltipContainer, {
+          text: p,
+          className: c.questCta,
+          tooltipContentClassName: c.ctaTooltipCopy,
+          shouldShow: !g,
+          children: (0, a.jsx)(l.Button, {
+            color: I,
+            disabled: A,
+            submitting: O,
+            onClick: C,
+            children: N
+          })
+        })]
+      }), h && (0, a.jsx)(d.default, {
+        color: m ? l.tokens.colors.TEXT_POSITIVE.css : l.tokens.colors.BRAND.css,
+        quest: T
+      })]
+    })]
+  })
+}
