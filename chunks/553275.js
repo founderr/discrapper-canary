@@ -4,19 +4,19 @@ n.r(t), n.d(t, {
     return E
   },
   useContextMenuModerateRoles: function() {
-    return _
-  },
-  useContextMenuModerateUser: function() {
     return h
   },
-  useHighestRole: function() {
+  useContextMenuModerateUser: function() {
     return p
+  },
+  useHighestRole: function() {
+    return _
   },
   SearchState: function() {
     return i
   },
   getSearchState: function() {
-    return m
+    return v
   }
 });
 var l, i, r = n("884691"),
@@ -42,7 +42,7 @@ let E = e => {
   })
 };
 
-function _(e, t, n) {
+function h(e, t, n) {
   let {
     analyticsLocations: l
   } = (0, o.default)();
@@ -58,7 +58,7 @@ function _(e, t, n) {
   }, [e, l, n, t])
 }
 
-function h(e, t, n) {
+function p(e, t, n) {
   let {
     analyticsLocations: l
   } = (0, o.default)();
@@ -69,12 +69,13 @@ function h(e, t, n) {
       user: r,
       guildId: e.guildId,
       analyticsLocations: null != t ? [t] : l,
-      onCloseContextMenu: n
+      onCloseContextMenu: n,
+      showTransferOwnershipItem: !0
     }))
   }, [e, n, l, t])
 }
 
-function p(e) {
+function _(e) {
   return (0, s.default)([a.default], () => {
     var t;
     if (null == e) return null;
@@ -83,6 +84,6 @@ function p(e) {
   }, [e])
 }
 
-function m(e, t, n) {
+function v(e, t, n) {
   return t ? 0 : e ? 1 : n <= 0 ? 2 : 3
 }(l = i || (i = {}))[l.LOADING = 0] = "LOADING", l[l.SUCCESS_STILL_INDEXING = 1] = "SUCCESS_STILL_INDEXING", l[l.SUCCESS_EMPTY = 2] = "SUCCESS_EMPTY", l[l.SUCCESS_FULL = 3] = "SUCCESS_FULL"

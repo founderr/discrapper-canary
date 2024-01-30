@@ -65,12 +65,11 @@ function s(e, t) {
     channel: s,
     moderationAlertId: u,
     guildId: o,
-    analyticsLocations: a,
-    onCloseContextMenu: d
+    ...a
   } = t;
   if ((null == s ? void 0 : s.isGroupDM()) || (null == s ? void 0 : s.isDM())) throw Error("Cannot moderate user in DM or group DM");
-  let c = null != o ? o : null == s ? void 0 : s.getGuildId();
-  null != c && (0, r.openContextMenuLazy)(e, async () => {
+  let d = null != o ? o : null == s ? void 0 : s.getGuildId();
+  null != d && (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
     } = await n.el("467940").then(n.bind(n, "467940"));
@@ -78,10 +77,9 @@ function s(e, t) {
       ...t,
       user: l,
       channelId: null == s ? void 0 : s.id,
-      guildId: c,
+      guildId: d,
       moderationAlertId: u,
-      analyticsLocations: a,
-      onCloseContextMenu: d
+      ...a
     })
   })
 }
