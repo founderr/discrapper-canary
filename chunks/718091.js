@@ -410,7 +410,7 @@ class eo extends l.PureComponent {
           name: "invite",
           value: n ? $.default.Messages.INSTANT_INVITE_HIDDEN : r,
           editable: !1,
-          inputClassName: ee.noBorder,
+          inputClassName: ee.input,
           spellCheck: "false",
           onClick: e => e.currentTarget.select()
         }) : (0, a.jsx)(p.TextInput, {
@@ -419,7 +419,7 @@ class eo extends l.PureComponent {
           value: r,
           placeholder: (0, j.default)($.default.Messages.GROUP_DM_INVITE_LINK_EXAMPLE),
           editable: !1,
-          inputClassName: ee.noBorder,
+          inputClassName: ee.input,
           spellCheck: "false",
           onClick: () => this.createInvite()
         }), z.SUPPORTS_COPY && r.length > 0 ? (0, a.jsx)(p.Button, {
