@@ -1,48 +1,48 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return z
+    return Q
   }
 }), n("781738"), n("424973"), n("222007");
-var i = n("917351"),
-  s = n.n(i),
-  r = n("132710"),
-  a = n.n(r),
-  o = n("980215"),
-  l = n("867805"),
-  u = n("235004"),
-  d = n("42203"),
-  c = n("305961"),
+var l = n("917351"),
+  r = n.n(l),
+  a = n("74892"),
+  i = n.n(a),
+  u = n("980215"),
+  o = n("867805"),
+  s = n("235004"),
+  c = n("42203"),
+  d = n("305961"),
   f = n("697218"),
-  _ = n("387111"),
+  p = n("387111"),
   h = n("158998"),
-  g = n("946897"),
-  m = n("632886"),
+  m = n("946897"),
+  g = n("632886"),
   E = n("270926"),
-  p = n("647374"),
-  v = n("693078"),
-  S = n("290689"),
-  T = n("839462"),
-  I = n("646630"),
-  C = n("788554"),
-  A = n("49111"),
-  y = n("317041"),
+  C = n("647374"),
+  y = n("693078"),
+  L = n("290689"),
+  A = n("839462"),
+  S = n("646630"),
+  _ = n("788554"),
+  T = n("49111"),
+  I = n("317041"),
   N = n("680894"),
-  R = n("782340");
-let O = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
-  D = /^$|\n *$/,
-  P = /^ *>>> ?/,
-  b = /^ *> ?/gm;
+  v = n("782340");
+let R = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
+  b = /^$|\n *$/,
+  M = /^ *>>> ?/,
+  x = /^ *> ?/gm;
 
-function L(e) {
-  let t = (0, p.punycodeLink)(e[1]);
+function U(e) {
+  let t = (0, C.punycodeLink)(e[1]);
   if (null == t) return {
     type: "text",
     content: e[1]
   };
   let {
     displayTarget: n,
-    target: i
+    target: l
   } = t;
   return {
     type: "link",
@@ -50,60 +50,60 @@ function L(e) {
       type: "text",
       content: n
     }],
-    target: i,
+    target: l,
     title: void 0
   }
 }
-let M = e => {
-    let t = d.default.getChannel(e);
+let O = e => {
+    let t = c.default.getChannel(e);
     return null == t ? void 0 : t.getGuildId()
   },
-  U = e => null != e.guildId ? c.default.getGuild(e.guildId) : null != e.channelId ? c.default.getGuild(M(e.channelId)) : null,
-  k = {
-    newline: a.defaultRules.newline,
-    paragraph: a.defaultRules.paragraph,
+  D = e => null != e.guildId ? d.default.getGuild(e.guildId) : null != e.channelId ? d.default.getGuild(O(e.channelId)) : null,
+  G = {
+    newline: i.defaultRules.newline,
+    paragraph: i.defaultRules.paragraph,
     escape: {
-      ...a.defaultRules.escape,
-      match: (e, t, n) => !1 === t.allowEscape ? null : a.defaultRules.escape.match(e, t, n)
+      ...i.defaultRules.escape,
+      match: (e, t, n) => !1 === t.allowEscape ? null : i.defaultRules.escape.match(e, t, n)
     },
     blockQuote: {
-      ...a.defaultRules.blockQuote,
+      ...i.defaultRules.blockQuote,
       requiredFirstCharacters: [" ", ">"],
       match(e, t) {
         let {
           prevCapture: n,
-          inQuote: i,
-          nested: s
+          inQuote: l,
+          nested: r
         } = t;
-        if (i || s) return null;
-        if (null == n) return O.exec(e);
-        let r = n[0];
-        return D.test(r) ? O.exec(e) : null
+        if (l || r) return null;
+        if (null == n) return R.exec(e);
+        let a = n[0];
+        return b.test(a) ? R.exec(e) : null
       },
       parse(e, t, n) {
-        let i = e[0],
-          s = !!P.exec(i),
-          r = i.replace(s ? P : b, ""),
-          a = n.inQuote || !1,
-          o = n.inline || !1;
-        n.inQuote = !0, !s && (n.inline = !0);
-        let l = t(r, n);
-        return n.inQuote = a, n.inline = o, 0 === l.length && l.push({
+        let l = e[0],
+          r = !!M.exec(l),
+          a = l.replace(r ? M : x, ""),
+          i = n.inQuote || !1,
+          u = n.inline || !1;
+        n.inQuote = !0, !r && (n.inline = !0);
+        let o = t(a, n);
+        return n.inQuote = i, n.inline = u, 0 === o.length && o.push({
           type: "text",
           content: " "
         }), {
-          content: l,
+          content: o,
           type: "blockQuote"
         }
       }
     },
-    link: p.default,
+    link: C.default,
     autolink: {
-      ...a.defaultRules.autolink,
-      parse: L
+      ...i.defaultRules.autolink,
+      parse: U
     },
     url: {
-      ...a.defaultRules.url,
+      ...i.defaultRules.url,
       requiredFirstCharacters: ["h", "s"],
       match(e, t) {
         if (!t.inline) return null;
@@ -123,25 +123,25 @@ let M = e => {
         }
         return n
       },
-      parse: L
+      parse: U
     },
-    strong: a.defaultRules.strong,
-    em: a.defaultRules.em,
-    u: a.defaultRules.u,
-    br: a.defaultRules.br,
-    text: S.default,
+    strong: i.defaultRules.strong,
+    em: i.defaultRules.em,
+    u: i.defaultRules.u,
+    br: i.defaultRules.br,
+    text: L.default,
     inlineCode: {
-      ...a.defaultRules.inlineCode,
+      ...i.defaultRules.inlineCode,
       parse(e, t, n) {
-        let i = a.defaultRules.inlineCode.parse(e, t, n);
+        let l = i.defaultRules.inlineCode.parse(e, t, n);
         return !0 === n.parseInlineCodeChildContent ? {
-          ...i,
-          validationChildContent: t(i.content, n)
-        } : i
+          ...l,
+          validationChildContent: t(l.content, n)
+        } : l
       }
     },
     emoticon: {
-      order: S.default.order,
+      order: L.default.order,
       requiredFirstCharacters: ["\xaf"],
       match: e => /^(¯\\_\(ツ\)_\/¯)/.exec(e),
       parse: e => ({
@@ -150,57 +150,57 @@ let M = e => {
       })
     },
     codeBlock: {
-      order: a.defaultRules.codeBlock.order,
+      order: i.defaultRules.codeBlock.order,
       requiredFirstCharacters: ["`"],
       match: e => /^```(?:([a-z0-9_+\-.#]+?)\n)?\n*([^\n][^]*?)\n*```/i.exec(e),
       parse(e, t, n) {
-        var i, s;
+        var l, r;
         return {
-          lang: null !== (i = e[1]) && void 0 !== i ? i : "",
-          content: null !== (s = e[2]) && void 0 !== s ? s : "",
+          lang: null !== (l = e[1]) && void 0 !== l ? l : "",
+          content: null !== (r = e[2]) && void 0 !== r ? r : "",
           inQuote: n.inQuote || !1
         }
       }
     },
     roleMention: {
-      order: S.default.order,
+      order: L.default.order,
       requiredFirstCharacters: ["<"],
       match: e => /^<@&(\d+)>/.exec(e),
       parse(e, t, n) {
-        let [i, s] = e;
+        let [l, r] = e;
         if (n.returnMentionIds) return {
           type: "roleMention",
-          id: s
+          id: r
         };
-        let r = U(n),
-          a = null != r ? r.roles[s] : null;
-        return null == a ? {
+        let a = D(n),
+          i = null != a ? a.roles[r] : null;
+        return null == i ? {
           type: "text",
-          content: "@".concat(R.default.Messages.DELETED_ROLE_PLACEHOLDER)
+          content: "@".concat(v.default.Messages.DELETED_ROLE_PLACEHOLDER)
         } : {
           type: "mention",
           channelId: n.channelId,
-          guildId: null != r ? r.id : null,
-          roleId: s,
-          roleColor: a.color,
-          color: a.color,
-          colorString: a.colorString,
+          guildId: null != a ? a.id : null,
+          roleId: r,
+          roleColor: i.color,
+          color: i.color,
+          colorString: i.colorString,
           content: [{
             type: "text",
-            content: "@".concat(a.name)
+            content: "@".concat(i.name)
           }]
         }
       }
     },
     mention: {
-      order: S.default.order,
+      order: L.default.order,
       requiredFirstCharacters: ["<", "@"],
       match(e, t) {
         let n = /^<@!?(\d+)>|^(@(?:everyone|here|Clyde))/.exec(e);
-        return null != n && ("@Clyde" !== n[0] || (0, o.getClydeEnabled)(U(t), d.default.getChannel(t.channelId))) ? n : null
+        return null != n && ("@Clyde" !== n[0] || (0, u.getClydeEnabled)(D(t), c.default.getChannel(t.channelId))) ? n : null
       },
       parse(e, t, n) {
-        let i, s;
+        let l, r;
         if (n.returnMentionIds) return null == e[1] ? {
           type: "mention",
           text: e[0]
@@ -208,34 +208,34 @@ let M = e => {
           type: "mention",
           id: e[1]
         };
-        let r = f.default.getUser(e[1]),
-          a = d.default.getChannel(n.channelId);
-        if (null != r && (s = r.id, i = r.toString(), null != a)) {
-          var l;
-          i = null !== (l = _.default.getNickname(a.getGuildId(), n.channelId, r)) && void 0 !== l ? l : h.default.getName(r)
+        let a = f.default.getUser(e[1]),
+          i = c.default.getChannel(n.channelId);
+        if (null != a && (r = a.id, l = a.toString(), null != i)) {
+          var o;
+          l = null !== (o = p.default.getNickname(i.getGuildId(), n.channelId, a)) && void 0 !== o ? o : h.default.getName(a)
         }
-        null == r && "@Clyde" === e[0] && (0, o.getClydeEnabled)(U(n), a) && (s = N.CLYDE_AI_USER_ID);
-        let u = e[1],
-          c = null != u && A.ID_REGEX.test(u.trim()),
-          g = c && n.unknownUserMentionPlaceholder ? "@".concat(R.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
+        null == a && "@Clyde" === e[0] && (0, u.getClydeEnabled)(D(n), i) && (r = N.CLYDE_AI_USER_ID);
+        let s = e[1],
+          d = null != s && T.ID_REGEX.test(s.trim()),
+          m = d && n.unknownUserMentionPlaceholder ? "@".concat(v.default.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
         return {
-          userId: s,
+          userId: r,
           channelId: n.channelId,
-          guildId: null == a ? void 0 : a.getGuildId(),
+          guildId: null == i ? void 0 : i.getGuildId(),
           roleName: e[2],
           content: [{
             type: "text",
-            content: null != i ? "@".concat(i) : g
+            content: null != l ? "@".concat(l) : m
           }]
         }
       }
     },
-    channelMention: m.default.channelMention,
-    channelOrMessageUrl: m.default.channelOrMessageUrl,
-    mediaPostLink: m.default.mediaPostLink,
-    attachmentLink: g.default.attachmentLink,
+    channelMention: g.default.channelMention,
+    channelOrMessageUrl: g.default.channelOrMessageUrl,
+    mediaPostLink: g.default.mediaPostLink,
+    attachmentLink: m.default.attachmentLink,
     commandMention: {
-      order: a.defaultRules.text.order,
+      order: i.defaultRules.text.order,
       requiredFirstCharacters: ["<"],
       match: e => /^<\/((?:[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?):(\d+)>/u.exec(e),
       parse(e, t, n) {
@@ -243,12 +243,12 @@ let M = e => {
           type: "commandMention",
           id: e[2]
         };
-        let [, ...i] = e[1].split(" "), s = "".concat(e[2]).concat([...i].map(e => "".concat(y.SUB_COMMAND_KEY_SEPARATOR).concat(e)).join(""));
+        let [, ...l] = e[1].split(" "), r = "".concat(e[2]).concat([...l].map(e => "".concat(I.SUB_COMMAND_KEY_SEPARATOR).concat(e)).join(""));
         return {
           channelId: n.channelId,
           commandId: e[2],
           commandName: e[1],
-          commandKey: s,
+          commandKey: r,
           content: [{
             type: "text",
             content: "".concat(e[1])
@@ -257,14 +257,14 @@ let M = e => {
       }
     },
     emoji: {
-      order: S.default.order,
+      order: L.default.order,
       requiredFirstCharacters: [":"],
       match(e) {
-        let t = l.default.EMOJI_NAME_RE.exec(e);
-        return null != t && "" !== l.default.convertNameToSurrogate(t[1]) ? t : null
+        let t = o.default.EMOJI_NAME_RE.exec(e);
+        return null != t && "" !== o.default.convertNameToSurrogate(t[1]) ? t : null
       },
       parse(e) {
-        let t = l.default.convertNameToSurrogate(e[1]);
+        let t = o.default.convertNameToSurrogate(e[1]);
         return {
           type: "text",
           content: null == t || "" === t ? ":".concat(e[1], ":") : t
@@ -272,25 +272,25 @@ let M = e => {
       }
     },
     soundboard: {
-      order: S.default.order,
+      order: L.default.order,
       requiredFirstCharacters: ["<"],
       match: e => /^<sound:(\d+)>/.exec(e),
       parse(e, t, n) {
-        var i;
-        let s = e[1],
-          r = u.default.getSoundById(s),
-          a = null !== (i = null == r ? void 0 : r.name) && void 0 !== i ? i : s;
+        var l;
+        let r = e[1],
+          a = s.default.getSoundById(r),
+          i = null !== (l = null == a ? void 0 : a.name) && void 0 !== l ? l : r;
         return {
           type: "soundboard",
-          id: s,
-          soundId: s,
+          id: r,
+          soundId: r,
           channelId: n.channelId,
-          content: a
+          content: i
         }
       }
     },
     customEmoji: {
-      order: S.default.order,
+      order: L.default.order,
       requiredFirstCharacters: ["<"],
       match: e => /^<a?:(\w+):(\d+)>/.exec(e),
       parse: e => ({
@@ -299,123 +299,123 @@ let M = e => {
       })
     },
     timestamp: {
-      order: S.default.order - 1,
+      order: L.default.order - 1,
       requiredFirstCharacters: ["<"],
-      match: e => I.TIMESTAMP_REGEX.exec(e),
+      match: e => S.TIMESTAMP_REGEX.exec(e),
       parse(e) {
-        let [t, n, i] = e, s = (0, I.parseTimestamp)(n, i);
-        return null == s ? {
+        let [t, n, l] = e, r = (0, S.parseTimestamp)(n, l);
+        return null == r ? {
           type: "text",
           content: t
-        } : s
+        } : r
       }
     },
     s: {
-      order: a.defaultRules.u.order,
+      order: i.defaultRules.u.order,
       requiredFirstCharacters: ["~"],
-      match: a.inlineRegex(/^~~([\s\S]+?)~~(?!_)/),
-      parse: a.defaultRules.u.parse
+      match: i.inlineRegex(/^~~([\s\S]+?)~~(?!_)/),
+      parse: i.defaultRules.u.parse
     },
     spoiler: {
-      order: S.default.order,
+      order: L.default.order,
       requiredFirstCharacters: ["|"],
-      match: e => A.MARKDOWN_SPOILER_REGEXP.exec(e),
+      match: e => T.MARKDOWN_SPOILER_REGEXP.exec(e),
       parse: (e, t, n) => ({
         content: t(e[1], n),
         channelId: n.channelId
       })
     },
     staticRouteLink: {
-      order: S.default.order,
+      order: L.default.order,
       requiredFirstCharacters: ["<"],
-      match: e => A.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e),
+      match: e => T.MARKDOWN_STATIC_ROUTE_NAME_REGEXP.exec(e),
       parse(e, t, n) {
-        let i = {
-          home: R.default.Messages.SERVER_GUIDE,
-          guide: R.default.Messages.SERVER_GUIDE,
-          browse: R.default.Messages.CHANNEL_BROWSER_TITLE,
-          customize: R.default.Messages.CHANNELS_AND_ROLES
+        let l = {
+          home: v.default.Messages.SERVER_GUIDE,
+          guide: v.default.Messages.SERVER_GUIDE,
+          browse: v.default.Messages.CHANNEL_BROWSER_TITLE,
+          customize: v.default.Messages.CHANNELS_AND_ROLES
         };
         return {
           content: [{
             type: "text",
-            content: i[e[1]]
+            content: l[e[1]]
           }],
           channelId: e[1],
-          guildId: M(n.channelId),
+          guildId: O(n.channelId),
           id: e[1]
         }
       }
     },
     heading: E.default,
-    list: v.default
+    list: y.default
   },
-  w = (0, C.default)([k, T.default]),
-  V = s.omit(w, ["inlineCode", "codeBlock", "br", "blockQuote"]),
-  G = s.omit(w, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink"]),
-  F = s.omit(w, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink"]),
-  x = s.omit((0, C.default)([w, {
+  P = (0, _.default)([G, A.default]),
+  w = r.omit(P, ["inlineCode", "codeBlock", "br", "blockQuote"]),
+  k = r.omit(P, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink"]),
+  F = r.omit(P, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink"]),
+  q = r.omit((0, _.default)([P, {
     inlineCode: {
       match(e, t, n) {
-        let i = w.codeBlock.match(e, t, n);
-        if (null != i) return i;
-        let s = w.inlineCode.match(e, t, n);
-        if (null != s) return s
+        let l = P.codeBlock.match(e, t, n);
+        if (null != l) return l;
+        let r = P.inlineCode.match(e, t, n);
+        if (null != r) return r
       }
     }
   }]), ["blockQuote", "codeBlock", "br"]),
-  B = s.omit(w, ["codeBlock", "br", "blockQuote"]),
-  H = s.omit(w, ["codeBlock", "br", "attachmentLink", "mention", "roleMention", "channel", "paragraph", "newline"]),
-  Y = s.omit(w, ["codeBlock", "blockQuote", "br"]),
-  j = s.omit(w, ["codeBlock", "br", "inlineCode"]);
+  B = r.omit(P, ["codeBlock", "br", "blockQuote"]),
+  H = r.omit(P, ["codeBlock", "br", "attachmentLink", "mention", "roleMention", "channel", "paragraph", "newline"]),
+  V = r.omit(P, ["codeBlock", "blockQuote", "br"]),
+  K = r.omit(P, ["codeBlock", "br", "inlineCode"]);
 
-function W(e, t) {
+function j(e, t) {
   return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim()
 }
-let K = (0, C.default)([{
+let Y = (0, _.default)([{
   highlightWord: {
     order: -1,
     match(e, t) {
       if (null == t.highlightWord || 0 === t.highlightWord.length) return null;
       let n = e.indexOf(t.highlightWord);
       if (-1 === n) return null;
-      let i = !W(e, n);
-      if (i)
-        do n = e.indexOf(t.highlightWord, n + 1), i = !W(e, n); while (i && -1 !== n);
+      let l = !j(e, n);
+      if (l)
+        do n = e.indexOf(t.highlightWord, n + 1), l = !j(e, n); while (l && -1 !== n);
       if (-1 === n) return null;
-      let s = e.substring(0, n),
-        r = e.substring(n + t.highlightWord.length);
-      return [e, t.highlightWord, s, r]
+      let r = e.substring(0, n),
+        a = e.substring(n + t.highlightWord.length);
+      return [e, t.highlightWord, r, a]
     },
     parse(e, t, n) {
-      let i = t(e[2], n),
-        s = t(e[3], n);
-      return [...i, {
+      let l = t(e[2], n),
+        r = t(e[3], n);
+      return [...l, {
         type: "highlight",
         content: e[1]
-      }, ...s]
+      }, ...r]
     }
   }
-}, s.omit(w, ["url"])]);
-s.omit((0, C.default)([w, {
+}, r.omit(P, ["url"])]);
+r.omit((0, _.default)([P, {
   mention: {
     match(e, t, n) {
-      let i = w.codeBlock.match(e, t, n);
-      if (null != i) return i;
-      let s = w.inlineCode.match(e, t, n);
-      if (null != s) return s
+      let l = P.codeBlock.match(e, t, n);
+      if (null != l) return l;
+      let r = P.inlineCode.match(e, t, n);
+      if (null != r) return r
     }
   }
 }]), ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink"]);
-var z = {
-  RULES: w,
-  CHANNEL_TOPIC_RULES: V,
-  VOICE_CHANNEL_STATUS_RULES: G,
+var Q = {
+  RULES: P,
+  CHANNEL_TOPIC_RULES: w,
+  VOICE_CHANNEL_STATUS_RULES: k,
   EMBED_TITLE_RULES: F,
-  INLINE_REPLY_RULES: x,
+  INLINE_REPLY_RULES: q,
   GUILD_VERIFICATION_FORM_RULES: B,
-  GUILD_EVENT_RULES: Y,
+  GUILD_EVENT_RULES: V,
   PROFILE_BIO_RULES: H,
-  AUTO_MODERATION_SYSTEM_MESSAGE_RULES: K,
-  NATIVE_SEARCH_RESULT_LINK_RULES: j
+  AUTO_MODERATION_SYSTEM_MESSAGE_RULES: Y,
+  NATIVE_SEARCH_RESULT_LINK_RULES: K
 }

@@ -12,7 +12,7 @@ var i = n("917351"),
   r = n("693566"),
   a = n.n(r);
 n("125601");
-var o = n("132710"),
+var o = n("74892"),
   l = n.n(o),
   u = n("312016"),
   d = n("449008"),
@@ -74,30 +74,30 @@ function I(e) {
 var C = {
   ...l.defaultRules.link,
   match: (e, t, n) => t.allowLinks ? l.defaultRules.link.match(e, t, n) : null,
-  parse(e, t, i) {
-    let [r, a, o, f] = e, _ = () => ({
+  parse(e, t, n) {
+    let [i, r, a, o] = e, f = () => ({
       type: c.AST_KEY.TEXT,
-      content: r
-    }), g = h(o), C = h(a), A = h(null != f ? f : ""), y = g.whitespaceSanitized, N = C.fullySanitized, R = A.fullySanitized, O = N.trim(), D = y.trim();
-    if (0 === D.length || 0 === O.length) return _();
-    let P = l.unescapeUrl(o),
-      b = I(P),
-      L = (0, u.default)(a).length > 0 || (0, u.default)(f).length > 0;
-    if (null == b || L) return _();
-    let M = {
-        ...i,
+      content: i
+    }), _ = h(a), g = h(r), C = h(null != o ? o : ""), A = _.whitespaceSanitized, y = g.fullySanitized, N = C.fullySanitized, R = y.trim(), O = A.trim();
+    if (0 === O.length || 0 === R.length) return f();
+    let D = l.unescapeUrl(a),
+      P = I(D),
+      b = (0, u.default)(r).length > 0 || (0, u.default)(o).length > 0;
+    if (null == P || b) return f();
+    let L = {
+        ...n,
         allowEscape: !1,
         parseInlineCodeChildContent: !0
       },
-      U = i.allowEmojiLinks ? E : m,
-      k = [...U, ...p],
-      w = [...v, ...S],
-      V = t(N, M),
-      G = T(V, k, [c.AST_KEY.EMOJI]),
-      F = t(R, M),
-      x = T(F, w);
-    if (null == G || null == x) return _();
-    let B = function e(t) {
+      M = n.allowEmojiLinks ? E : m,
+      U = [...M, ...p],
+      k = [...v, ...S],
+      w = t(y, L),
+      V = T(w, U, [c.AST_KEY.EMOJI]),
+      G = t(N, L),
+      F = T(G, k);
+    if (null == V || null == F) return f();
+    let x = function e(t) {
         let n = "";
         for (let i of t) switch (i.type) {
           case c.AST_KEY.TEXT:
@@ -132,20 +132,20 @@ var C = {
             (0, d.assertNever)(i.type)
         }
         return n
-      }(G),
-      H = 0 === B.trim().length;
-    if (H) return _();
-    let {
-      default: {
-        RULES: Y
-      }
-    } = n("888198"), j = l.parserFor(s.pick(Y, U)), W = j(C.whitespaceSanitized, M), K = A.whitespaceSanitized, {
-      target: z
-    } = b;
+      }(V),
+      B = 0 === x.trim().length;
+    if (B) return f();
+    let H = s.pick(t.rules, M),
+      Y = l.parserFor(H),
+      j = Y(g.whitespaceSanitized, L),
+      W = C.whitespaceSanitized,
+      {
+        target: K
+      } = P;
     return {
-      content: W,
-      target: z,
-      title: K
+      content: j,
+      target: K,
+      title: W
     }
   }
 }

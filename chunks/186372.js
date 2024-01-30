@@ -6,7 +6,7 @@ E.r(_), E.d(_, {
 });
 var t = E("37983");
 E("884691");
-var o = E("132710");
+var o = E("74892");
 
 function n(e) {
   return e.heading = o.defaultRules.heading, e.lheading = o.defaultRules.lheading, e.list = o.defaultRules.list, e.paragraph = {
