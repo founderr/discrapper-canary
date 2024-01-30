@@ -35,8 +35,8 @@ function N(e) {
     placeholder: m,
     currentText: N,
     className: S,
-    innerClassName: T,
-    disabled: P = !1,
+    innerClassName: P,
+    disabled: T = !1,
     disableThemedBackground: C = !1
   } = e, [A, O] = r.useState(null != f ? f : N), [h, R] = r.useState((0, o.toRichValue)(A)), g = r.useRef(!1);
   return r.useEffect(() => {
@@ -51,9 +51,9 @@ function N(e) {
     children: (0, s.jsxs)(d.default, {
       title: t,
       errors: n,
-      disabled: P,
+      disabled: T,
       children: [(0, s.jsx)(c.default, {
-        innerClassName: l(E.textArea, T),
+        innerClassName: l(E.textArea, P),
         editorClassName: E.editorTextArea,
         maxCharacterCount: I,
         onChange: function(e, t, n) {

@@ -21,8 +21,8 @@ var s = n("37983"),
   p = n("622839"),
   N = n("145131"),
   S = n("599110"),
-  T = n("719923"),
-  P = n("635357"),
+  P = n("719923"),
+  T = n("635357"),
   C = n("642906"),
   A = n("605886"),
   O = n("286350"),
@@ -73,11 +73,11 @@ function v(e) {
     emojiConfetti: ei,
     soundEffect: eu,
     giftRecipient: eo
-  } = (0, P.useGiftContext)(), ec = null == K ? void 0 : K.id, ed = (0, h.checkNoPaymentTrialEnabled)(U, V.paymentSourceId, ec), ef = (0, i.useStateFromStores)([E.default], () => E.default.popupCallbackCalled), {
+  } = (0, T.useGiftContext)(), ec = null == K ? void 0 : K.id, ed = (0, h.checkNoPaymentTrialEnabled)(U, V.paymentSourceId, ec), ef = (0, i.useStateFromStores)([E.default], () => E.default.popupCallbackCalled), {
     analyticsLocations: em
   } = (0, c.default)(), e_ = null != q ? Q[q] : null, [eE, eI] = r.useState(ed), [ep, eN] = r.useState(!1), {
     hasEntitlements: eS
-  } = (0, m.useSubscriptionEntitlements)(ec, er), eT = (0, T.isPrepaidPaymentSource)(V.paymentSourceId), eP = eS || ed, eC = (0, d.useIsPrepaidPaymentPastDue)(), eA = null, eO = null;
+  } = (0, m.useSubscriptionEntitlements)(ec, er), eP = (0, P.isPrepaidPaymentSource)(V.paymentSourceId), eT = eS || ed, eC = (0, d.useIsPrepaidPaymentPastDue)(), eA = null, eO = null;
   if (J === g.PurchaseTypes.ONE_TIME) {
     var eh;
     l(null != $, "SKU must be selected for one-time purchases"), l(null != (eA = null !== (eh = ee[$]) && void 0 !== eh ? eh : null), "SKU must exist and be fetched.");
@@ -154,10 +154,10 @@ function v(e) {
       premiumSubscription: t,
       isGift: er,
       planGroup: B,
-      isPrepaid: eT,
+      isPrepaid: eP,
       isTrial: Z,
       makePurchase: eR,
-      needsPaymentSource: null == e_ && !eP
+      needsPaymentSource: null == e_ && !eT
     }), (0, s.jsx)(R.default, {}), Y && !eg ? (0, s.jsx)("div", {
       className: M.back,
       children: (0, s.jsx)(f.default, {

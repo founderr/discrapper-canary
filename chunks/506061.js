@@ -4,7 +4,7 @@ x.r(t), x.d(t, {
     return s
   },
   default: function() {
-    return e
+    return r
   }
 }), x("222007");
 var s, a, o = x("446674"),
@@ -25,7 +25,7 @@ function p(i) {
   } = i;
   null == k.applicationIdToGuildIds[t] && (k.applicationIdToGuildIds[t] = new Set), k.applicationIdToGuildIds[t].add(x), k.applicationIdToGuildIds[t] = new Set(k.applicationIdToGuildIds[t])
 }
-class r extends o.default.PersistedStore {
+class e extends o.default.PersistedStore {
   initialize(i) {
     if (null != i)
       for (let t in k.lastFetchTimeMs = i.lastFetchTimeMs, k.nextFetchRetryTimeMs = i.nextFetchRetryTimeMs, k.fetchState = i.fetchState, i.applicationIdToGuildIds) k.applicationIdToGuildIds[t] = new Set(i.applicationIdToGuildIds[t])
@@ -46,8 +46,8 @@ class r extends o.default.PersistedStore {
     return k.fetchState
   }
 }
-r.displayName = "MyGuildApplicationsStore", r.persistKey = "MyGuildApplicationsStore";
-var e = new r(y.default, {
+e.displayName = "MyGuildApplicationsStore", e.persistKey = "MyGuildApplicationsStore";
+var r = new e(y.default, {
   LOGOUT: function() {
     k.applicationIdToGuildIds = {}, k.lastFetchTimeMs = null, k.nextFetchRetryTimeMs = null, k.fetchState = 0
   },

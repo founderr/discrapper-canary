@@ -33,7 +33,7 @@ class c extends s.default.PersistedStore {
 c.displayName = "HabitualDNDStore", c.persistKey = "habitualDND";
 var f = new c(l.default, {
   POST_CONNECTION_OPEN: function() {
-    i.default.getStatus() === o.StatusTypes.DND ? (u.push(Date.now()), (u = u.filter(e => e > Date.now() - 7 * r.default.Millis.DAY)).length >= 5 && u.some(e => e < Date.now() - 2 * r.default.Millis.DAY) && setTimeout(() => {
+    i.default.getStatus() === o.StatusTypes.DND ? (u.push(Date.now()), (u = u.filter(e => e > Date.now() - 5 * r.default.Millis.DAY)).length >= 3 && u.some(e => e < Date.now() - 2 * r.default.Millis.DAY) && setTimeout(() => {
       d = !0, u = [], l.default.dispatch({
         type: "HABITUAL_DND_CLEAR"
       })

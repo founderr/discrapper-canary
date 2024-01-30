@@ -26,8 +26,8 @@ async function S(e) {
     setHasAcceptedTerms: n,
     setIsSubmitting: s,
     setPurchaseError: S,
-    hasRedirectURL: T,
-    setHasRedirectURL: P,
+    hasRedirectURL: P,
+    setHasRedirectURL: T,
     isGift: C,
     giftStyle: A,
     baseAnalyticsData: O,
@@ -60,7 +60,7 @@ async function S(e) {
     if (d.default.track(I.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
         ...O,
         duration_ms: Date.now() - g
-      }), T) return;
+      }), P) return;
     let a = (0, m.getGiftExperience)(Y),
       i = m.GIFT_EXPERIENCES_WITH_CUSTOM_MESSAGING.has(a),
       S = m.GIFT_EXPERIENCES_WITH_CUSTOM_EMOJI_SOUNDBOARD.has(a);
@@ -119,7 +119,7 @@ async function S(e) {
       loadId: H
     });
     if (e.redirectConfirmation) {
-      P(null != e.redirectURL);
+      T(null != e.redirectURL);
       return
     }
     let z = {
@@ -137,6 +137,6 @@ async function S(e) {
       duration_ms: Date.now() - g
     })
   } finally {
-    !T && s(!1)
+    !P && s(!1)
   }
 }

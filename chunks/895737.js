@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   playGiftSound: function() {
-    return p
+    return d
   },
   WebAudioSound: function() {
     return f
@@ -10,30 +10,30 @@ n.r(t), n.d(t, {
 var s = n("917351"),
   u = n.n(s),
   o = n("520497"),
-  r = n("812809"),
-  i = n("42887"),
+  i = n("812809"),
+  r = n("42887"),
   a = n("773336");
 let c = "default",
-  d = c;
+  p = c;
 
-function p(e, t) {
+function d(e, t) {
   let n = new Audio((0, o.default)(e));
-  n.volume = (0, r.default)(t), n.play()
+  n.volume = (0, i.default)(t), n.play()
 }
 
 function l() {
   null != window.navigator.mediaDevices && window.navigator.mediaDevices.enumerateDevices().then(e => {
-    let t = i.default.getOutputDevices(),
-      n = u(t).sortBy(e => e.index).findIndex(e => e.id === i.default.getOutputDeviceId()),
-      s = t[i.default.getOutputDeviceId()],
+    let t = r.default.getOutputDevices(),
+      n = u(t).sortBy(e => e.index).findIndex(e => e.id === r.default.getOutputDeviceId()),
+      s = t[r.default.getOutputDeviceId()],
       o = e.filter(e => "audiooutput" === e.kind && "communications" !== e.deviceId),
-      r = o[n];
-    null != s && (null == r || r.label !== s.name) && (r = o.find(e => e.label === s.name)), d = null != r ? r.deviceId : c
+      i = o[n];
+    null != s && (null == i || i.label !== s.name) && (i = o.find(e => e.label === s.name)), p = null != i ? i.deviceId : c
   }).catch(() => {
-    d = c
+    p = c
   })
 }
-a.isPlatformEmbedded && (i.default.addChangeListener(l), l());
+a.isPlatformEmbedded && (r.default.addChangeListener(l), l());
 class f {
   get volume() {
     return this._volume
@@ -76,7 +76,7 @@ class f {
     return this._audio = null !== (e = this._audio) && void 0 !== e ? e : new Promise((e, t) => {
       let s = new Audio;
       s.src = n("89400")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), s.onloadeddata = () => {
-        s.volume = Math.min(i.default.getOutputVolume() / 100 * this._volume, 1), a.isPlatformEmbedded && s.setSinkId(d), e(s)
+        s.volume = Math.min(r.default.getOutputVolume() / 100 * this._volume, 1), a.isPlatformEmbedded && s.setSinkId(p), e(s)
       }, s.onerror = () => t(Error("could not play audio")), s.onended = () => this._destroyAudio(), s.load()
     }), this._audio
   }

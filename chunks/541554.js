@@ -38,7 +38,7 @@ let L = new f.default("SubscriptionHeader.tsx"),
     object: C.AnalyticsObjects.CARD
   };
 
-function g(e) {
+function y(e) {
   let {
     wordMark: t,
     subscriptionInfo: s,
@@ -64,7 +64,7 @@ function g(e) {
   })
 }
 
-function y() {
+function g() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(_.default, {
       className: h.discordWordmark,
@@ -79,8 +79,8 @@ function x() {
   let {
     analyticsLocations: e
   } = (0, c.default)(d.default.ACCOUNT_CREDIT_BANNER);
-  return (0, a.jsx)(g, {
-    wordMark: (0, a.jsx)(y, {}),
+  return (0, a.jsx)(y, {
+    wordMark: (0, a.jsx)(g, {}),
     subscriptionInfo: (0, a.jsx)("div", {
       className: h.planInfo,
       children: A.default.Messages.PREMIUM_TIER_1_ACCOUNT_CREDIT_BANNER_DESCRIPTION
@@ -169,7 +169,7 @@ var D = function(e) {
       });
       break;
     case T.PremiumTypes.TIER_1:
-      k = (0, a.jsx)(y, {});
+      k = (0, a.jsx)(g, {});
       break;
     case T.PremiumTypes.TIER_2:
       k = (0, a.jsx)(m.default, {
@@ -177,7 +177,7 @@ var D = function(e) {
         "aria-label": A.default.Messages.PREMIUM_TITLE
       })
   }
-  return (0, a.jsx)(g, {
+  return (0, a.jsx)(y, {
     wordMark: k,
     subscriptionInfo: (t = j, l(null != r, "Expected renewalInvoicePreview"), (0, a.jsx)("div", {
       className: h.planInfo,

@@ -105,13 +105,13 @@ function L(e) {
     redeemed_at: R,
     trial_id: P,
     subscription_trial: O
-  } = s, I = null !== (r = null === (t = u.find(e => {
+  } = s, M = null !== (r = null === (t = u.find(e => {
     let {
       value: t
     } = e;
     return t === P
-  })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", M = null != A, B = null != A && new Date(A).getTime() < Date.now(), D = (null == O ? void 0 : O.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, H = async () => {
-    N(!0), M ? await w(_, "trial") : await (0, d.acknowledgeUserOffer)(s), h(), N(!1)
+  })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", I = null != A, B = null != A && new Date(A).getTime() < Date.now(), D = (null == O ? void 0 : O.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, H = async () => {
+    N(!0), I ? await w(_, "trial") : await (0, d.acknowledgeUserOffer)(s), h(), N(!1)
   };
   n.useEffect(() => {
     if (b) {
@@ -132,14 +132,14 @@ function L(e) {
     }
   }, [b, v]);
   let G = "Active";
-  return M && (G = "Acknowledged"), B && (G = "Expired"), (0, a.jsxs)("div", {
+  return I && (G = "Acknowledged"), B && (G = "Expired"), (0, a.jsxs)("div", {
     className: l(C.card, D ? C.gradientWrapperTier0 : C.gradientWrapperTier2),
     children: [(0, a.jsxs)("div", {
       className: l(C.row, C.nameRow),
       children: [(0, a.jsx)(c.Heading, {
         variant: "heading-lg/semibold",
         color: "always-white",
-        children: I
+        children: M
       }), (0, a.jsx)(c.Clickable, {
         onClick: async () => {
           N(!0), await T(_, "trial"), h(), N(!1)
@@ -191,7 +191,7 @@ function L(e) {
       children: [(0, a.jsx)(c.Clickable, {
         onClick: H,
         className: l(C.badge, C.clickable, {
-          [C.acked]: M,
+          [C.acked]: I,
           [C.expired]: B
         }),
         children: (0, a.jsx)(c.Text, {
@@ -264,8 +264,8 @@ function _(e) {
       }
     }
   }, [u, y]);
-  let I = "Active";
-  return P && (I = "Expired"), R && (I = "Acknowledged"), (0, a.jsxs)("div", {
+  let M = "Active";
+  return P && (M = "Expired"), R && (M = "Acknowledged"), (0, a.jsxs)("div", {
     className: l(C.card, C.discount),
     children: [(0, a.jsxs)("div", {
       className: l(C.row, C.nameRow),
@@ -325,8 +325,8 @@ function _(e) {
         }),
         children: (0, a.jsx)(c.Text, {
           variant: "eyebrow",
-          color: "Acknowledged" === I ? void 0 : "always-white",
-          children: I
+          color: "Acknowledged" === M ? void 0 : "always-white",
+          children: M
         })
       }), null != E && (0, a.jsx)("div", {
         className: l(C.badge, C.badgeBottom, C.redeemed),

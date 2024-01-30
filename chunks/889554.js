@@ -27,8 +27,8 @@ let N = [c.PremiumGiftStyles.STANDARD_BOX, c.PremiumGiftStyles.CAKE, c.PremiumGi
       setSelectedGiftStyle: n,
       emojiConfetti: c,
       soundEffect: S,
-      setEmojiConfetti: T,
-      setSoundEffect: P
+      setEmojiConfetti: P,
+      setSoundEffect: T
     } = (0, l.useGiftContext)(), [C, A] = r.useState(!1), O = r.useRef(null), h = (0, a.useRadioGroup)({
       orientation: "horizontal"
     }), R = (0, u.getGiftExperience)(e, !0, "premiumGiftSelect_GiftAnimationOptions"), g = u.GIFT_EXPERIENCES_WITH_CUSTOM_EMOJI_SOUNDBOARD.has(R), M = R !== u.GiftExperience.DEFAULT, v = (0, d.useIsSeasonalGiftingActive)(), {
@@ -56,13 +56,13 @@ let N = [c.PremiumGiftStyles.STANDARD_BOX, c.PremiumGiftStyles.CAKE, c.PremiumGi
             children: (0, s.jsx)(i.default, {
               sound: S,
               onSelect: e => {
-                null != P && P(null == e ? void 0 : e)
+                null != T && T(null == e ? void 0 : e)
               }
             })
           }), (0, s.jsx)("div", {
             className: p.emoji,
             children: (0, s.jsx)(m.default, {
-              setEmojiConfetti: T,
+              setEmojiConfetti: P,
               emojiConfetti: null == c ? void 0 : c
             })
           })]

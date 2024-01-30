@@ -37,8 +37,8 @@ var k = r("224249"),
   R = r("388557"),
   P = r("238161"),
   O = r("20950"),
-  I = r("724209"),
-  M = r("782340"),
+  M = r("724209"),
+  I = r("782340"),
   B = r("978482"),
   D = r("694735");
 
@@ -134,7 +134,7 @@ function G() {
       TabBar: r,
       renderSelectedTab: i,
       selectedTabId: l
-    } = (0, I.default)({
+    } = (0, M.default)({
       tabs: t,
       initialSelectedTabId: null !== (e = b.default.lastOpenTabId) && void 0 !== e ? e : void 0,
       onChangeTab: e => {
@@ -154,7 +154,7 @@ function G() {
       className: D.headerBar,
       toolbar: (0, a.jsx)(g.default.Icon, {
         icon: f.default,
-        tooltip: M.default.Messages.CLOSE,
+        tooltip: I.default.Messages.CLOSE,
         onClick: y.toggleDisplayDevTools
       }),
       children: [(0, a.jsx)(g.default.Icon, {

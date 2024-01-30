@@ -29,8 +29,8 @@ var s = x("981980"),
   d = x("349503"),
   k = x("831109"),
   p = x("810047"),
-  r = x("856894"),
-  e = x("388647"),
+  e = x("856894"),
+  r = x("388647"),
   n = x("506061"),
   m = x("49111");
 let c = new Map;
@@ -125,16 +125,16 @@ async function I(i) {
     options: d
   } = i, {
     page: k
-  } = null != d ? d : {}, p = Date.now(), r = e.default.getFetchState({
+  } = null != d ? d : {}, p = Date.now(), e = r.default.getFetchState({
     applicationId: x,
     guildId: s
   }), {
     lastFetchTimeMs: n
-  } = null !== (t = e.default.getSimilarApplications({
+  } = null !== (t = r.default.getSimilarApplications({
     applicationId: x,
     guildId: s
   })) && void 0 !== t ? t : {};
-  if (r !== e.FetchState.FETCHING) {
+  if (e !== r.FetchState.FETCHING) {
     if (null == n || !(n + 6e5 > p)) {
       o.default.dispatch({
         type: "APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS",
@@ -180,28 +180,28 @@ async function u(i) {
     onSuccessCallback: k
   } = i, {
     page: p,
-    categoryId: e
-  } = null != d ? d : {}, n = Date.now(), c = r.default.getFetchState({
+    categoryId: r
+  } = null != d ? d : {}, n = Date.now(), c = e.default.getFetchState({
     query: x,
     guildId: s,
     page: p,
-    categoryId: e
+    categoryId: r
   }), {
     lastFetchTimeMs: l
-  } = null !== (t = r.default.getSearchResults({
+  } = null !== (t = e.default.getSearchResults({
     query: x,
     guildId: s,
     page: p,
-    categoryId: e
+    categoryId: r
   })) && void 0 !== t ? t : {};
-  if (c !== r.FetchState.FETCHING) {
+  if (c !== e.FetchState.FETCHING) {
     if (null == l || !(l + 6e5 > n)) {
       o.default.dispatch({
         type: "APPLICATION_DIRECTORY_FETCH_SEARCH",
         query: x,
         guildId: s,
         page: p,
-        categoryId: e
+        categoryId: r
       });
       try {
         let i = await a.default.get({
@@ -210,7 +210,7 @@ async function u(i) {
             query: x,
             guild_id: s,
             page: p,
-            category_id: e,
+            category_id: r,
             locale: y.default.locale
           }
         });
@@ -219,7 +219,7 @@ async function u(i) {
           query: x,
           guildId: s,
           page: p,
-          categoryId: e,
+          categoryId: r,
           result: {
             results: i.body.results,
             countsByCategory: i.body.counts_by_category,
@@ -235,7 +235,7 @@ async function u(i) {
           query: x,
           guildId: s,
           page: p,
-          categoryId: e
+          categoryId: r
         })
       }
     }

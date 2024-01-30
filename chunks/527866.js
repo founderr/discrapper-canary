@@ -21,8 +21,8 @@ var s = n("37983"),
   p = n("642906"),
   N = n("286350"),
   S = n("102492"),
-  T = n("176108"),
-  P = n("102985"),
+  P = n("176108"),
+  T = n("102985"),
   C = n("160299"),
   A = n("10514"),
   O = n("68238"),
@@ -82,9 +82,9 @@ function Y(e) {
       giftRecipient: eN,
       selectedGiftStyle: eS
     } = (0, I.useGiftContext)(),
-    eT = (0, x.usePremiumDiscountOffer)(),
-    eP = null == eT ? void 0 : null === (t = eT.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => B.SubscriptionPlanInfo[e].skuId === em),
-    eC = !ep && null != eT && null != em && eP,
+    eP = (0, x.usePremiumDiscountOffer)(),
+    eT = null == eP ? void 0 : null === (t = eP.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => B.SubscriptionPlanInfo[e].skuId === em),
+    eC = !ep && null != eP && null != em && eT,
     eA = (0, u.useStateFromStores)([A.default], () => A.default.get(Z));
   l(null != eA, "Missing plan");
   let eO = [{
@@ -126,7 +126,7 @@ function Y(e) {
     }),
     eb = ep && (0, h.shouldShowCustomGiftExperience)(eN, !0, "PremiumSubscriptionReview"),
     ej = null !== (a = null != eM ? eM : ex) && void 0 !== a ? a : ey,
-    eG = (0, u.useStateFromStores)([P.default], () => P.default.enabled),
+    eG = (0, u.useStateFromStores)([T.default], () => T.default.enabled),
     eD = V.paymentSourceId,
     {
       hasEntitlements: eU,
@@ -134,7 +134,7 @@ function Y(e) {
     } = (0, D.useSubscriptionEntitlements)(eA.id, ep),
     eF = (0, R.isPrepaidPaymentSource)(V.paymentSourceId),
     ek = (0, S.checkNoPaymentTrialEnabled)(et, eD, Z),
-    ew = (0, T.inOneStepSubscriptionCheckout)({
+    ew = (0, P.inOneStepSubscriptionCheckout)({
       isTrial: eu,
       isGift: ep,
       selectedSkuId: em,
@@ -154,7 +154,7 @@ function Y(e) {
       defaultPlanId: e_,
       defaultToMonthlyPlan: !1
     }), [em, ef, ep, e_, eE, eu]),
-    eZ = (0, T.planSwitchLoadingShowSpinner)(ew, eg, eA);
+    eZ = (0, P.planSwitchLoadingShowSpinner)(ew, eg, eA);
   if (null != ej) {
     let e = ej.message;
     return ej.code === E.ErrorCodes.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (e = w.default.Messages.BILLING_ERROR_UNSUPPORTED_CURRENCY), (0, s.jsx)(c.FormErrorBlock, {

@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+a.r(t), a.d(t, {
   ChatLayerContainer: function() {
     return l
   },
@@ -10,10 +10,10 @@ i.r(t), i.d(t, {
     return d
   }
 });
-var a = i("228256");
+var i = a("228256");
 let {
   Layer: s,
   LayerContainer: r,
   LayerProvider: n
-} = (0, a.createLayer)("Chat"), l = r, o = n;
+} = (0, i.createLayer)("Chat"), l = r, o = n;
 var d = s

@@ -1,49 +1,49 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
-}), l("222007");
-var n = l("446674"),
-  a = l("913144");
-let r = new Set,
+}), n("222007");
+var l = n("446674"),
+  r = n("913144");
+let a = new Set,
   i = {};
 
 function u(e) {
   let {
     applicationId: t
   } = e;
-  r.add(t)
+  a.add(t)
 }
 
 function o(e) {
   let {
     applicationId: t
   } = e;
-  r.delete(t)
+  a.delete(t)
 }
-class s extends n.default.Store {
+class s extends l.default.Store {
   get launchingGames() {
-    return r
+    return a
   }
   get launchableGames() {
     return i
   }
   isLaunchable(e) {
-    return null != i[e] ? i[e] : (i[e] = !1, a.default.dispatch({
+    return null != i[e] ? i[e] : (i[e] = !1, r.default.dispatch({
       type: "CHECK_LAUNCHABLE_GAME",
       gameId: e
     }), !1)
   }
 }
 s.displayName = "LaunchableGameStore";
-var c = new s(a.default, {
+var c = new s(r.default, {
   GAME_LAUNCHABLE_UPDATE: function(e) {
     let {
       gameId: t,
-      isLaunchable: l
+      isLaunchable: n
     } = e;
-    i[t] = l
+    i[t] = n
   },
   GAME_CLOUD_SYNC_START: u,
   GAME_LAUNCH_START: u,

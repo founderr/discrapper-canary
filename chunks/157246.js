@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return u
   },
   getSoundpackOptionsAprilFools2023: function() {
-    return r
+    return i
   }
 });
 var s, u, o = n("782340");
 
-function r() {
+function i() {
   return [{
     value: "classic",
     label: o.default.Messages.SOUNDPACK_CLASSIC_LABEL

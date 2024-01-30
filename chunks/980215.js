@@ -1,98 +1,98 @@
 "use strict";
 n.r(t), n.d(t, {
   useClydeProfilesEnabled: function() {
-    return d
-  },
-  useClydeEnabled: function() {
     return c
   },
+  useClydeEnabled: function() {
+    return d
+  },
   getClydeEnabled: function() {
-    return _
+    return p
   },
   getClydeExperimentEnabled: function() {
     return h
   },
   canUseCustomClydeProfiles: function() {
-    return g
+    return m
   }
 }), n("884691"), n("446674");
-var i = n("305961"),
-  s = n("957255"),
-  r = n("772051"),
-  a = n("254927"),
-  o = n("49111"),
-  l = n("724210");
+var l = n("305961"),
+  r = n("957255"),
+  a = n("772051"),
+  i = n("254927"),
+  u = n("49111"),
+  o = n("724210");
 
-function u(e) {
+function s(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "1e9ccc_1",
-    s = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
-    a = r.default.useExperiment({
-      guildId: s,
-      location: i
+    l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "1e9ccc_1",
+    r = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
+    i = a.default.useExperiment({
+      guildId: r,
+      location: l
     }, {
       autoTrackExposure: n
     }).experimentState;
-  return a
+  return i
 }
 
-function d(e) {
+function c(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 ? arguments[2] : void 0,
-    i = u(e, t, n);
-  return i === r.ClydeExperimentState.ClydeProfiles
+    l = s(e, t, n);
+  return l === a.ClydeExperimentState.ClydeProfiles
 }
 
-function c(e, t) {
+function d(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    i = u(e, n);
-  return f(i, e, t)
+    l = s(e, n);
+  return f(l, e, t)
 }
 
 function f(e, t, n) {
   if (null == t) {
     if (null != n && n.isPrivate()) {
-      if (n.hasFlag(l.ChannelFlags.CLYDE_AI)) return !0;
-      let e = (0, a.isClydeEnabledinGdms)();
+      if (n.hasFlag(o.ChannelFlags.CLYDE_AI)) return !0;
+      let e = (0, i.isClydeEnabledinGdms)();
       if (!e) return !1;
-      let t = i.default.getGuildIds().some(e => h(i.default.getGuild(e)));
+      let t = l.default.getGuildIds().some(e => h(l.default.getGuild(e)));
       return t
     }
     return !1
   }
-  return null != e && e !== r.ClydeExperimentState.None && s.default.can(o.Permissions.USE_CLYDE_AI, n)
+  return null != e && e !== a.ClydeExperimentState.None && r.default.can(u.Permissions.USE_CLYDE_AI, n)
 }
 
-function _(e, t) {
+function p(e, t) {
   var n;
-  let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    s = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : "",
-    a = r.default.getCurrentConfig({
-      guildId: s,
+  let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    r = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : "",
+    i = a.default.getCurrentConfig({
+      guildId: r,
       location: "1e9ccc_2"
     }, {
-      autoTrackExposure: i
+      autoTrackExposure: l
     }).experimentState;
-  return f(a, e, t)
+  return f(i, e, t)
 }
 
 function h(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    n = m(e, t);
-  return n !== r.ClydeExperimentState.None
-}
-
-function g(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return m(e, t) === r.ClydeExperimentState.ClydeProfiles
+    n = g(e, t);
+  return n !== a.ClydeExperimentState.None
 }
 
 function m(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  return g(e, t) === a.ClydeExperimentState.ClydeProfiles
+}
+
+function g(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   if (null == e) return !1;
   let n = e.id;
-  return r.default.getCurrentConfig({
+  return a.default.getCurrentConfig({
     guildId: n,
     location: "1e9ccc_4"
   }, {

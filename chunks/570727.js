@@ -24,8 +24,8 @@ var s = n("37983"),
   p = n("10514"),
   N = n("521012"),
   S = n("659632"),
-  T = n("701909"),
-  P = n("773336"),
+  P = n("701909"),
+  T = n("773336"),
   C = n("719923"),
   A = n("153160"),
   O = n("916187"),
@@ -51,7 +51,7 @@ var s = n("37983"),
 function Y(e) {
   var t, n, a, E, I, N;
   let {
-    premiumSubscription: P,
+    premiumSubscription: T,
     skuId: h,
     selectedPlanId: j,
     setSelectedPlanId: G,
@@ -80,14 +80,14 @@ function Y(e) {
   } = (0, d.default)({
     location: "PremiumSwitchPlanSelectBody"
   });
-  h = null != h ? h : $, l(void 0 !== (P = null != P ? P : q), "should not be undefined");
-  let [ec, ed] = (0, i.useStateFromStoresArray)([p.default], () => [null != P ? p.default.get(P.planId) : null, null != j ? p.default.get(j) : null]), ef = (0, M.usePremiumTrialOffer)(K), em = null == ef ? void 0 : ef.subscription_trial, e_ = (0, g.usePremiumDiscountOffer)(), eE = null == e_ ? void 0 : null === (t = e_.discount) || void 0 === t ? void 0 : t.plan_ids, eI = null != ed ? ed : ee, ep = r.useCallback(e => {
+  h = null != h ? h : $, l(void 0 !== (T = null != T ? T : q), "should not be undefined");
+  let [ec, ed] = (0, i.useStateFromStoresArray)([p.default], () => [null != T ? p.default.get(T.planId) : null, null != j ? p.default.get(j) : null]), ef = (0, M.usePremiumTrialOffer)(K), em = null == ef ? void 0 : ef.subscription_trial, e_ = (0, g.usePremiumDiscountOffer)(), eE = null == e_ ? void 0 : null === (t = e_.discount) || void 0 === t ? void 0 : t.plan_ids, eI = null != ed ? ed : ee, ep = r.useCallback(e => {
     null != G ? G(e) : Q(e)
   }, [G, Q]), eN = null != Y ? Y : et;
   l(null != eN, "Price option has to be set");
   let eS = null != ef && (0, B.SubscriptionTrials)[ef.trial_id].skus.includes(h),
-    eT = null != e_ && W.some(e => null == eE ? void 0 : eE.includes(e)),
-    eP = (0, C.getPrice)(B.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, en, eN);
+    eP = null != e_ && W.some(e => null == eE ? void 0 : eE.includes(e)),
+    eT = (0, C.getPrice)(B.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, en, eN);
   r.useEffect(() => {
     Z && O.default.trackExposure({
       location: "5f89bb_1"
@@ -103,7 +103,7 @@ function Y(e) {
       }
     }
   }, [eC, en, W, ec, ep]);
-  let eA = !eu && (en || !eS && !eT) && eC && z,
+  let eA = !eu && (en || !eS && !eP) && eC && z,
     eO = (0, u.useRadioGroup)(),
     eh = (null == eI ? void 0 : eI.id) != null ? (0, C.getPrice)(eI.id, !1, en, eN) : void 0,
     {
@@ -112,7 +112,7 @@ function Y(e) {
     eg = "HR" === eR && null != eh && eh.currency === k.CurrencyCodes.EUR,
     eM = (0, C.isPrepaidPaymentSource)(eN.paymentSourceId),
     ev = (null == em ? void 0 : em.interval) === B.SubscriptionIntervalTypes.DAY ? w.default.Messages.BILLING_TRIAL_2_WEEK_PERIOD : w.default.Messages.BILLING_TRIAL_30_DAY_PERIOD,
-    ex = !en && (eT || null != em && eS && null != V),
+    ex = !en && (eP || null != em && eS && null != V),
     eL = null == X ? void 0 : null === (E = X.find(e => e.subscriptionPlanId === B.SubscriptionPlans.PREMIUM_MONTH_TIER_2)) || void 0 === E ? void 0 : null === (a = E.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === c.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount;
   return (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)("div", {
@@ -184,7 +184,7 @@ function Y(e) {
                 return r
             }
           }(ec, h)
-        }), (I = eS, N = eT, eu ? (0, s.jsx)(u.FormTitle, {
+        }), (I = eS, N = eP, eu ? (0, s.jsx)(u.FormTitle, {
           children: w.default.Messages.GIFT_SUBSCRIPTION_SELECTION
         }) : ex ? I ? (0, s.jsxs)("div", {
           children: [(0, s.jsx)(u.Text, {
@@ -197,13 +197,13 @@ function Y(e) {
           }), (0, s.jsx)("hr", {
             className: H.planSelectSeparator
           })]
-        }) : N && null != eL && null != eP ? (0, s.jsxs)("div", {
+        }) : N && null != eL && null != eT ? (0, s.jsxs)("div", {
           children: [(0, s.jsx)(u.Text, {
             variant: "text-sm/normal",
             className: H.trialPlanSelectHeader,
             children: w.default.Messages.BILLING_DISCOUNT_PAYMENT_MODAL_INFO.format({
-              discountedPrice: (0, A.formatPrice)(eP.amount - eL, eP.currency),
-              regularPrice: (0, A.formatPrice)(eP.amount, eP.currency)
+              discountedPrice: (0, A.formatPrice)(eT.amount - eL, eT.currency),
+              regularPrice: (0, A.formatPrice)(eT.amount, eT.currency)
             })
           }), (0, s.jsx)("hr", {
             className: H.planSelectSeparator
@@ -215,12 +215,12 @@ function Y(e) {
           ...eO,
           children: W.map(e => (0, s.jsx)(D.default, {
             planId: e,
-            premiumSubscription: en ? null : null != P ? P : null,
+            premiumSubscription: en ? null : null != T ? T : null,
             selectPlan: ep,
             selected: (null == eI ? void 0 : eI.id) === e,
             priceOptions: eN,
             shouldShowUpdatedPaymentModal: ex,
-            isEligibleForDiscount: eT,
+            isEligibleForDiscount: eP,
             discountAmountOff: eL
           }, e))
         }), (0, s.jsx)("div", {
@@ -245,7 +245,7 @@ function Y(e) {
           })
         }), !en && !ex && z && (0, s.jsx)(o.default, {
           message: w.default.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({
-            documentationLink: T.default.getArticleURL(F.HelpdeskArticles.LOCALIZED_PRICING)
+            documentationLink: P.default.getArticleURL(F.HelpdeskArticles.LOCALIZED_PRICING)
           })
         }), eo && en && (0, s.jsx)(f.default, {
           onClose: J
@@ -301,7 +301,7 @@ function Z(e) {
   } = (0, G.useSubscriptionEntitlements)(n, r), f = null != c && null != c.paymentSourceId || Object.keys(a).length > 0 || d && !o;
   var m = l ? w.default.Messages.NEXT : w.default.Messages.SELECT,
     _ = E.Step.ADD_PAYMENT_STEPS;
-  return f ? _ = E.Step.REVIEW : (0, P.isDesktop)() && function() {
+  return f ? _ = E.Step.REVIEW : (0, T.isDesktop)() && function() {
     let {
       experiment: e
     } = h.default.getCurrentConfig({

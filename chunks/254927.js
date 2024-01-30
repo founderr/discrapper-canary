@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   isClydeEnabledinGdms: function() {
-    return r
+    return a
   }
 });
-var i = n("862205");
-let s = (0, i.createExperiment)({
+var l = n("862205");
+let r = (0, l.createExperiment)({
   kind: "user",
   id: "2023-06_clyde_ai_gdm",
   label: "Clyde in DMs/GDMs",
@@ -21,10 +21,10 @@ let s = (0, i.createExperiment)({
   }]
 });
 
-function r() {
+function a() {
   let {
     isClydeEnabledinGdms: e
-  } = s.getCurrentConfig({
+  } = r.getCurrentConfig({
     location: "38acdb_1"
   }, {
     autoTrackExposure: !1

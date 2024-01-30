@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   isChannelTypeMentionable: function() {
-    return s
+    return r
   }
 });
-var i = n("233069");
+var l = n("233069");
 
-function s(e) {
-  return (0, i.isGuildSelectableChannelType)(e) || (0, i.isGuildVocalChannelType)(e)
+function r(e) {
+  return (0, l.isGuildSelectableChannelType)(e) || (0, l.isGuildVocalChannelType)(e)
 }

@@ -13,7 +13,7 @@ x.r(t), x.d(t, {
     return H
   },
   getEffectUrl: function() {
-    return G
+    return U
   },
   getEffectAnnouncement: function() {
     return Y
@@ -26,8 +26,8 @@ var s = x("917351"),
   d = x("504936"),
   k = x("988078"),
   p = x("939118"),
-  r = x("101559"),
-  e = x("326209"),
+  e = x("101559"),
+  r = x("326209"),
   n = x("610237"),
   m = x("733261"),
   c = x("596926"),
@@ -56,7 +56,7 @@ let P = {
   },
   v = {
     BASIC: [o],
-    PREMIUM: [y, d, k, p, r, e, n, m, c, l, _, f, I, u, h, w, b, E, T, C, A]
+    PREMIUM: [y, d, k, p, e, r, n, m, c, l, _, f, I, u, h, w, b, E, T, C, A]
   },
   D = {
     [L.VoiceChannelEffectAnimationType.BASIC]: v.BASIC,
@@ -83,7 +83,7 @@ let P = {
     return Math.floor(Math.random() * x.length)
   };
 
-function G(i) {
+function U(i) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L.EMOJI_SIZE;
   if (null != i.id) {
     var x;
@@ -98,7 +98,7 @@ function G(i) {
   return null != a ? S.default.getURL(a.surrogates) : ""
 }
 
-function U(i, t) {
+function G(i, t) {
   return a(i).map(i => {
     var x;
     return null !== (x = i[t]) && void 0 !== x ? x : null
@@ -108,8 +108,8 @@ function U(i, t) {
 function Y(i) {
   var t, x, s, a, o, y;
   if (i.length < 1) return "";
-  let d = U(i, "userId"),
-    k = U(i, "emojiName"),
+  let d = G(i, "userId"),
+    k = G(i, "emojiName"),
     p = k.length < 2 ? null !== (t = null == k ? void 0 : k[0]) && void 0 !== t ? t : "" : k.join(", ");
   if (d.length < 1) return "";
   if (1 === d.length) return N.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format({

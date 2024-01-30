@@ -20,10 +20,10 @@ function p(i) {
   } = i;
   return "applicationId:".concat(t, " guildId:").concat(x, " page:").concat(s)
 }(s = a || (a = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED", s[s.ERROR = 3] = "ERROR";
-let r = new y({
+let e = new y({
     max: 20
   }),
-  e = {};
+  r = {};
 class n extends d.default.Store {
   getSimilarApplications(i) {
     let {
@@ -37,7 +37,7 @@ class n extends d.default.Store {
       guildId: x,
       page: s
     });
-    return r.get(a)
+    return e.get(a)
   }
   getFetchState(i) {
     let {
@@ -51,7 +51,7 @@ class n extends d.default.Store {
       guildId: x,
       page: s
     });
-    return e[a]
+    return r[a]
   }
 }
 n.displayName = "ApplicationDirectorySimilarApplicationsStore";
@@ -66,8 +66,8 @@ var m = new n(k.default, {
       guildId: x,
       page: s
     });
-    e = {
-      ...e,
+    r = {
+      ...r,
       [a]: 1
     }
   },
@@ -84,14 +84,14 @@ var m = new n(k.default, {
       guildId: x,
       page: o
     });
-    r.set(d, {
+    e.set(d, {
       lastFetchTimeMs: Date.now(),
       applications: s,
       loadId: a,
       page: o,
       totalPages: y
-    }), e = {
-      ...e,
+    }), r = {
+      ...r,
       [d]: 2
     }
   },
@@ -105,8 +105,8 @@ var m = new n(k.default, {
       guildId: x,
       page: s
     });
-    e = {
-      ...e,
+    r = {
+      ...r,
       [a]: 3
     }
   }

@@ -22,10 +22,10 @@ var i = n("37983"),
   T = n("780571"),
   h = n("377502"),
   C = n("103603"),
-  g = n("736393"),
-  A = n("170213"),
-  v = n("49111"),
-  m = n("719347"),
+  v = n("736393"),
+  g = n("170213"),
+  m = n("49111"),
+  A = n("719347"),
   N = n("782340"),
   L = n("161730");
 let U = (e, t) => {
@@ -33,27 +33,27 @@ let U = (e, t) => {
       var n, i, l, r;
       let a = {
         ...e,
-        filename: (0, g.getAttachmentFilename)(e),
+        filename: (0, v.getAttachmentFilename)(e),
         size: 0,
         proxy_url: e.url
       };
       if (!((0, u.isImageFile)(e.filename) || (0, u.isVideoFile)(e.filename))) return a;
       return {
         ...a,
-        width: null !== (l = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== l ? l : A.DEFAULT_MEDIA_MAX_WIDTH,
-        height: null !== (r = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== r ? r : A.DEFAULT_MEDIA_MAX_HEIGHT
+        width: null !== (l = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== l ? l : g.DEFAULT_MEDIA_MAX_WIDTH,
+        height: null !== (r = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== r ? r : g.DEFAULT_MEDIA_MAX_HEIGHT
       }
     });
     return (0, c.createMessageRecord)({
       ...(0, d.default)({
         nonce: e.id,
         content: e.content,
-        type: v.MessageTypes.DEFAULT,
+        type: m.MessageTypes.DEFAULT,
         channelId: ""
       }),
       timestamp: new Date(a.default.extractTimestamp(e.id)).toISOString(),
       attachments: n,
-      state: v.MessageStates.SENT
+      state: m.MessageStates.SENT
     })
   },
   R = e => {
@@ -64,16 +64,16 @@ let U = (e, t) => {
     } = t;
     if (0 === n.length) return null;
     let l = (e, t, n) => {
-        let l = A.DEFAULT_MEDIA_MAX_WIDTH,
-          a = A.DEFAULT_MEDIA_MAX_HEIGHT;
+        let l = g.DEFAULT_MEDIA_MAX_WIDTH,
+          a = g.DEFAULT_MEDIA_MAX_HEIGHT;
         if (null != t.width && null != t.height) {
           let e = (0, C.getRatio)({
             width: t.width,
             height: t.height,
-            maxWidth: A.DEFAULT_MEDIA_MAX_WIDTH,
-            maxHeight: A.DEFAULT_MEDIA_MAX_HEIGHT
+            maxWidth: g.DEFAULT_MEDIA_MAX_WIDTH,
+            maxHeight: g.DEFAULT_MEDIA_MAX_HEIGHT
           });
-          l = (0, r.clamp)(Math.round(t.width * e), 0, A.DEFAULT_MEDIA_MAX_WIDTH), a = (0, r.clamp)(Math.round(t.height * e), 0, A.DEFAULT_MEDIA_MAX_HEIGHT)
+          l = (0, r.clamp)(Math.round(t.width * e), 0, g.DEFAULT_MEDIA_MAX_WIDTH), a = (0, r.clamp)(Math.round(t.height * e), 0, g.DEFAULT_MEDIA_MAX_HEIGHT)
         }
         return (0, i.jsx)("div", {
           style: {
@@ -113,7 +113,7 @@ let U = (e, t) => {
           attachment: e,
           spoiler: !0,
           message: t,
-          mediaLayoutType: m.MediaLayoutType.MOSAIC,
+          mediaLayoutType: A.MediaLayoutType.MOSAIC,
           autoPlayGif: !1,
           inlineMedia: !0,
           canRemoveAttachment: !1,
