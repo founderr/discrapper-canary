@@ -1,79 +1,87 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("65597"),
-  l = n("77078"),
-  r = n("327037"),
-  o = n("330387"),
-  u = n("476765"),
-  d = n("49111"),
-  c = n("782340"),
-  f = n("305502");
+  i = n("759843"),
+  l = n("65597"),
+  r = n("77078"),
+  o = n("327037"),
+  u = n("428958"),
+  d = n("330387"),
+  c = n("476765"),
+  f = n("49111"),
+  E = n("782340"),
+  _ = n("305502");
 
-function E(e) {
+function h(e) {
   let {
     transitionState: t
-  } = e, E = (0, i.default)([o.default], () => o.default.getAction()), [_, h] = s.useState(!1), C = (0, u.useUID)();
-  async function I() {
-    if (h(!0), E === d.UserRequiredActions.AGREEMENTS) {
-      let e = await (0, r.acceptAgreements)();
-      h(e)
+  } = e, h = (0, l.default)([d.default], () => d.default.getAction()), [C, I] = s.useState(!1), T = (0, c.useUID)();
+  async function S() {
+    if (I(!0), h === f.UserRequiredActions.AGREEMENTS) {
+      let e = await (0, o.acceptAgreements)();
+      I(e)
     }
     return null
   }
-  return (0, a.jsxs)(l.ModalRoot, {
-    "aria-labelledby": C,
+  return (0, u.default)({
+    type: i.ImpressionTypes.VIEW,
+    name: i.ImpressionNames.USER_AGREEMENTS,
+    properties: {
+      required_action: h
+    }
+  }, {}, []), (0, a.jsxs)(r.ModalRoot, {
+    "aria-labelledby": T,
     transitionState: t,
     children: [(0, a.jsx)("div", {
-      id: C
-    }), (0, a.jsx)(l.ModalHeader, {
+      id: T
+    }), (0, a.jsx)(r.ModalHeader, {
       separator: !1,
-      children: (0, a.jsx)(l.Heading, {
+      children: (0, a.jsx)(r.Heading, {
         variant: "heading-lg/semibold",
-        children: c.default.Messages.NEW_TERMS_TITLE
+        children: E.default.Messages.NEW_TERMS_TITLE
       })
-    }), (0, a.jsxs)(l.ModalContent, {
-      children: [(0, a.jsx)(l.Text, {
+    }), (0, a.jsxs)(r.ModalContent, {
+      children: [(0, a.jsx)(r.Text, {
         variant: "text-md/normal",
-        children: E === d.UserRequiredActions.AGREEMENTS ? c.default.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
+        children: h === f.UserRequiredActions.AGREEMENTS ? E.default.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
       }), (0, a.jsxs)("div", {
-        className: f.container,
+        className: _.container,
         children: [(0, a.jsxs)("ul", {
-          className: f.links,
+          className: _.links,
           children: [(0, a.jsx)("li", {
-            children: c.default.Messages.TERMS_OF_SERVICE.format({
-              url: d.MarketingURLs.TERMS
+            children: E.default.Messages.TERMS_OF_SERVICE.format({
+              url: f.MarketingURLs.TERMS
             })
           }), (0, a.jsx)("li", {
-            children: c.default.Messages.PAID_SERVICES_TERMS.format({
-              url: d.MarketingURLs.PAID_TERMS
+            children: E.default.Messages.PAID_SERVICES_TERMS.format({
+              url: f.MarketingURLs.PAID_TERMS
             })
           }), (0, a.jsx)("li", {
-            children: c.default.Messages.PRIVACY_POLICY.format({
-              url: d.MarketingURLs.PRIVACY
+            children: E.default.Messages.PRIVACY_POLICY.format({
+              url: f.MarketingURLs.PRIVACY
             })
           }), (0, a.jsx)("li", {
-            children: c.default.Messages.COMMUNITY_GUIDELINES.format({
-              url: d.MarketingURLs.GUIDELINES
+            children: E.default.Messages.COMMUNITY_GUIDELINES.format({
+              url: f.MarketingURLs.GUIDELINES
             })
           })]
         }), (0, a.jsx)("img", {
-          className: f.image,
+          className: _.image,
           alt: "",
           src: n("275974")
         })]
       })]
-    }), (0, a.jsx)(l.ModalFooter, {
-      children: (0, a.jsx)(l.Button, {
-        submitting: _,
-        onClick: I,
-        color: l.Button.Colors.GREEN,
-        children: c.default.Messages.AGREE
+    }), (0, a.jsx)(r.ModalFooter, {
+      children: (0, a.jsx)(r.Button, {
+        submitting: C,
+        onClick: S,
+        color: r.Button.Colors.GREEN,
+        children: E.default.Messages.AGREE
       })
     })]
   })
