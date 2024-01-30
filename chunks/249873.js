@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var l = n("884691"),
   a = n("627445"),
   r = n.n(a),
-  s = n("837979"),
-  i = n("745049");
+  i = n("837979"),
+  s = n("745049");
 
 function u(e) {
   let {
@@ -16,20 +16,20 @@ function u(e) {
     defaultStep: n,
     error: a,
     onSave: u
-  } = e, [o, c] = l.useState(n), [d, f] = l.useState(), [E, h] = l.useState(null);
+  } = e, [o, c] = l.useState(n), [d, f] = l.useState(), [h, E] = l.useState(null);
   return l.useEffect(() => {
-    null != a && c(s.StartStageSteps.STAGE_CHANNEL_SETTINGS)
+    null != a && c(i.StartStageSteps.STAGE_CHANNEL_SETTINGS)
   }, [a]), {
     modalStep: o,
     setModalStep: c,
-    readySlide: E,
+    readySlide: h,
     handleSlideReady: function(e) {
-      return h(e)
+      return E(e)
     },
     savedOptions: d,
     handleSettingsSave: function(e) {
-      if (f(e), e.privacyLevel === i.GuildScheduledEventPrivacyLevel.PUBLIC && (null == t ? void 0 : t.privacy_level) !== i.GuildScheduledEventPrivacyLevel.PUBLIC) {
-        c(s.StartStageSteps.PUBLIC_STAGE_PREVIEW);
+      if (f(e), e.privacyLevel === s.GuildScheduledEventPrivacyLevel.PUBLIC && (null == t ? void 0 : t.privacy_level) !== s.GuildScheduledEventPrivacyLevel.PUBLIC) {
+        c(i.StartStageSteps.PUBLIC_STAGE_PREVIEW);
         return
       }
       u(e)

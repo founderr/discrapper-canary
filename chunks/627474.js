@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  r = s("884691"),
-  n = s("414456"),
-  l = s.n(n),
-  i = s("77078"),
+  n = s("884691"),
+  r = s("414456"),
+  i = s.n(r),
+  l = s("77078"),
   u = s("411691"),
   o = s("367226"),
   d = s("628550"),
@@ -19,13 +19,13 @@ var a = s("37983"),
     let {
       className: t,
       variant: s = c.PerksDiscoverabilityVariants.PERKS_DISCOVERABILITY,
-      noBackground: n = !1,
+      noBackground: r = !1,
       leftAlignHeaders: I = !1,
       showAllPerksButton: T
-    } = e, f = r.useRef(null), S = (0, o.useShouldScrollToWhatsNew)(), R = (0, u.default)("perks-discoverability");
+    } = e, f = n.useRef(null), S = (0, o.useShouldScrollToWhatsNew)(), R = (0, u.default)("perks-discoverability");
     (0, o.useClearNewBadge)();
     let m = s === c.PerksDiscoverabilityVariants.WHATS_NEW;
-    r.useEffect(() => {
+    n.useEffect(() => {
       let e = f.current;
       if (null == e || !S || !m) return;
       let t = requestAnimationFrame(() => {
@@ -41,12 +41,12 @@ var a = s("37983"),
       g = p.some(e => null != e.pillText);
     return (0, a.jsxs)("div", {
       ref: f,
-      className: l(E.section, {
+      className: i(E.section, {
         [E.centerAlignSection]: !I,
         [E.leftAlignSection]: I
       }, t),
       children: [(() => {
-        let e = (0, a.jsx)(i.Heading, {
+        let e = (0, a.jsx)(l.Heading, {
           variant: "heading-xxl/extrabold",
           color: "header-primary",
           className: E.heading,
@@ -64,14 +64,14 @@ var a = s("37983"),
             className: E.sectionHeaderSeeAll,
             children: e
           }), (0, a.jsx)("div", {
-            className: l(E.showAllPerksButton),
+            className: i(E.showAllPerksButton),
             children: T
           })]
         })
-      })(), (0, a.jsx)(i.Text, {
+      })(), (0, a.jsx)(l.Text, {
         variant: "text-lg/normal",
         color: "header-primary",
-        className: l(E.subtitle, {
+        className: i(E.subtitle, {
           [E.subtitle]: null == T || I,
           [E.subtitleWithButton]: null != T && !I,
           [E.fullWidth]: m || I,
@@ -81,13 +81,13 @@ var a = s("37983"),
         }),
         children: A.subtitle
       }), !I && null != T && (0, a.jsx)("div", {
-        className: l(E.showAllPerksButtonCenter),
+        className: i(E.showAllPerksButtonCenter),
         children: T
       }), (0, a.jsx)("div", {
         className: E.cardContainer,
         children: p.map((e, t) => (0, a.jsx)(_.default, {
           ...e,
-          forceShadow: n
+          forceShadow: r
         }, "".concat(e.name, "_").concat(t)))
       })]
     })

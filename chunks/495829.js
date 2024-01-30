@@ -12,8 +12,8 @@ var l = n("627445"),
   a = n("437140"),
   s = n("738983"),
   r = n("233069"),
-  d = n("42203"),
-  u = n("305961"),
+  u = n("42203"),
+  d = n("305961"),
   o = n("322224"),
   c = n("745049"),
   f = n("49111");
@@ -41,9 +41,9 @@ async function h(e, t) {
       let {
         guild_id: n,
         channel_id: l
-      } = e, i = u.default.getGuild(n);
+      } = e, i = d.default.getGuild(n);
       if (null == i) return Promise.resolve(null);
-      let a = d.default.getChannel(l);
+      let a = u.default.getChannel(l);
       return null == a ? E(i, e.name, t) : Promise.resolve(a)
     }(e, t);
     i(null != n, "could not find or create channel")
@@ -56,16 +56,16 @@ async function _(e) {
       entity_type: l,
       name: a,
       id: r,
-      guild_id: d
+      guild_id: u
     } = e;
   switch (l) {
     case c.GuildScheduledEventEntityTypes.STAGE_INSTANCE:
       i(null != n, "channel_id is required"), await (0, s.startStageInstance)(n, a, c.GuildScheduledEventPrivacyLevel.GUILD_ONLY, t, r);
       break;
     case c.GuildScheduledEventEntityTypes.VOICE:
-      i(null != n, "channel_id is required"), await o.default.startEvent(r, d);
+      i(null != n, "channel_id is required"), await o.default.startEvent(r, u);
       break;
     case c.GuildScheduledEventEntityTypes.EXTERNAL:
-      await o.default.startEvent(r, d)
+      await o.default.startEvent(r, u)
   }
 }

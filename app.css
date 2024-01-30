@@ -94599,6 +94599,39 @@ html .invoiceCancelRow_a8669b {
     margin-bottom: -2px
 }
 
+.otherDatesContainer__8c5ee {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 2px 0;
+    padding: 6px 8px;
+    border-radius: 2px;
+    cursor: pointer
+}
+
+.otherDatesContainer__8c5ee.focused__9a051 {
+    background-color: var(--brand-experiment-600)
+}
+
+.leftContainer__0199d {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.otherDateLabel__7a492 {
+    color: var(--interactive-normal)
+}
+
+.otherDateLabel__7a492.focused__9a051 {
+    color: var(--white-500)
+}
+
+.radioSelection__0d9ba {
+    color: var(--control-brand-foreground)
+}
+
 .checkboxLabel__5cd49 {
     display: flex;
     flex-direction: row;
@@ -125229,6 +125262,9 @@ div.nagbar_c731ff {
     --redesign-button-secondary-pressed-background: var(--primary-500);
     --redesign-button-secondary-pressed-border: hsl(var(--transparent-hsl) / 0);
     --redesign-button-secondary-text: var(--primary-230);
+    --redesign-button-selected-background: hsl(var(--brand-500-hsl) / 0.24);
+    --redesign-button-selected-pressed-background: hsl(var(--brand-500-hsl) / 0.28);
+    --redesign-button-selected-text: var(--brand-500);
     --redesign-channel-category-name-text: var(--primary-330);
     --redesign-channel-message-preview-text: var(--primary-360);
     --redesign-channel-name-muted-text: var(--primary-360);
@@ -125537,6 +125573,9 @@ div.nagbar_c731ff {
     --redesign-button-secondary-pressed-background: var(--primary-130);
     --redesign-button-secondary-pressed-border: hsl(var(--black-500-hsl) / 0.04);
     --redesign-button-secondary-text: var(--primary-600);
+    --redesign-button-selected-background: hsl(var(--brand-500-hsl) / 0.16);
+    --redesign-button-selected-pressed-background: hsl(var(--brand-500-hsl) / 0.24);
+    --redesign-button-selected-text: var(--brand-500);
     --redesign-channel-category-name-text: var(--primary-500);
     --redesign-channel-message-preview-text: var(--primary-460);
     --redesign-channel-name-muted-text: var(--primary-460);
@@ -125845,6 +125884,9 @@ div.nagbar_c731ff {
     --redesign-button-secondary-pressed-background: var(--plum-15);
     --redesign-button-secondary-pressed-border: hsl(var(--plum-11-hsl) / 0.06);
     --redesign-button-secondary-text: var(--plum-4);
+    --redesign-button-selected-background: hsl(var(--brand-500-hsl) / 0.24);
+    --redesign-button-selected-pressed-background: hsl(var(--brand-500-hsl) / 0.28);
+    --redesign-button-selected-text: var(--brand-500);
     --redesign-channel-category-name-text: var(--plum-8);
     --redesign-channel-message-preview-text: var(--plum-10);
     --redesign-channel-name-muted-text: var(--plum-10);
@@ -126153,6 +126195,9 @@ div.nagbar_c731ff {
     --redesign-button-secondary-pressed-background: var(--plum-13);
     --redesign-button-secondary-pressed-border: hsl(var(--plum-11-hsl) / 0.06);
     --redesign-button-secondary-text: var(--plum-6);
+    --redesign-button-selected-background: hsl(var(--brand-500-hsl) / 0.24);
+    --redesign-button-selected-pressed-background: hsl(var(--brand-500-hsl) / 0.28);
+    --redesign-button-selected-text: var(--brand-500);
     --redesign-channel-category-name-text: var(--plum-9);
     --redesign-channel-message-preview-text: var(--plum-10);
     --redesign-channel-name-muted-text: var(--plum-10);

@@ -1,53 +1,53 @@
 "use strict";
 n.r(t), n.d(t, {
   BotTypes: function() {
-    return a.BotTagTypes
+    return r.BotTagTypes
   },
   default: function() {
-    return u
+    return d
   }
 });
-var i = n("37983");
+var l = n("37983");
 n("884691");
-var s = n("414456"),
-  l = n.n(s),
-  r = n("79798"),
-  a = n("988268"),
-  o = n("888770"),
-  u = e => {
+var a = n("414456"),
+  i = n.n(a),
+  s = n("79798"),
+  r = n("988268"),
+  u = n("888770"),
+  d = e => {
     let {
       name: t,
       discriminator: n,
-      invertBotTagColor: s,
-      nameColor: a,
-      className: u,
-      botType: d,
+      invertBotTagColor: a,
+      nameColor: r,
+      className: d,
+      botType: o,
       usernameClass: c,
-      discriminatorClass: h,
-      botClass: f,
-      botVerified: m = !1,
-      style: p,
-      useRemSizes: I = !1,
-      usernameIcon: v
+      discriminatorClass: f,
+      botClass: E,
+      botVerified: I = !1,
+      style: _,
+      useRemSizes: h = !1,
+      usernameIcon: T
     } = e;
-    return (0, i.jsxs)("div", {
-      className: l(u, o.nameTag),
-      style: p,
-      children: [(0, i.jsxs)("span", {
-        className: l(o.username, c),
-        style: null != a ? {
-          color: a
+    return (0, l.jsxs)("div", {
+      className: i(d, u.nameTag),
+      style: _,
+      children: [(0, l.jsxs)("span", {
+        className: i(u.username, c),
+        style: null != r ? {
+          color: r
         } : void 0,
-        children: [v, t]
-      }), null != n ? (0, i.jsxs)("span", {
-        className: null != h ? h : void 0,
+        children: [T, t]
+      }), null != n ? (0, l.jsxs)("span", {
+        className: null != f ? f : void 0,
         children: ["#", n]
-      }) : null, null != d ? (0, i.jsx)(r.default, {
-        type: d,
-        invertColor: s,
-        className: l(f, o.bot),
-        verified: m,
-        useRemSizes: I
+      }) : null, null != o ? (0, l.jsx)(s.default, {
+        type: o,
+        invertColor: a,
+        className: i(E, u.bot),
+        verified: I,
+        useRemSizes: h
       }) : null]
     })
   }

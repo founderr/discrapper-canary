@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return S
   }
 }), n("222007");
 var l = n("917351"),
@@ -22,7 +22,7 @@ let o = !1,
     authorId: e.author_id,
     createdAt: e.created_at
   });
-class S extends a.default.Store {
+class T extends a.default.Store {
   isFetching() {
     return o
   }
@@ -38,8 +38,8 @@ class S extends a.default.Store {
     return null !== (t = E[e]) && void 0 !== t ? t : void 0
   }
 }
-S.displayName = "EventDirectoryStore";
-var T = new S(d.default, {
+T.displayName = "EventDirectoryStore";
+var S = new T(d.default, {
   EVENT_DIRECTORY_FETCH_START: function() {
     o = !0
   },

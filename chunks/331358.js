@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("65597"),
-  r = s("819855"),
-  n = s("79112"),
-  l = s("841098"),
-  i = s("697218"),
+  n = s("819855"),
+  r = s("79112"),
+  i = s("841098"),
+  l = s("697218"),
   u = s("719923"),
   o = s("49111"),
   d = s("397336"),
@@ -38,12 +38,12 @@ var a = s("65597"),
   b = s("14528"),
   j = s("443817"),
   G = s("759308");
-let k = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
+let k = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
   B = e => {
     let {
       styles: t
-    } = e, s = (0, l.default)(), r = (0, a.default)([i.default], () => {
-      let e = i.default.getCurrentUser();
+    } = e, s = (0, i.default)(), n = (0, a.default)([l.default], () => {
+      let e = l.default.getCurrentUser();
       return u.default.canUsePremiumProfileCustomization(e)
     }), B = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, y = {
       badge: {
@@ -81,12 +81,12 @@ let k = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
         title: c.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
         description: e => {
           let t = () => {
-            n.default.open(o.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
+            r.default.open(o.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
               scrollPosition: d.ProfileCustomizationScrollPositions.TRY_IT_OUT,
               analyticsLocations: e
             })
           };
-          return r ? c.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_CHECK_IT_OUT.format({
+          return n ? c.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_CHECK_IT_OUT.format({
             onCheckItOutClick: t
           }) : c.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILE_THEMES_PERK_DESCRIPTION_TRY_IT_OUT.format({
             onTryItOutClick: t

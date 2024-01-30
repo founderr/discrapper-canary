@@ -1,64 +1,64 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return C
   }
-}), l("222007");
-var n = l("37983"),
-  a = l("884691"),
-  s = l("866227"),
-  r = l.n(s),
-  i = l("77078"),
-  u = l("656913"),
-  d = l("694187"),
-  o = l("151642"),
-  c = l("29846"),
-  E = l("398604"),
-  f = l("189443"),
-  I = l("822516"),
-  _ = l("93550"),
-  T = l("953143"),
-  h = l("745049"),
-  N = l("75015"),
-  v = l("837979"),
-  m = l("782340"),
-  S = l("505376");
+}), n("222007");
+var l = n("37983"),
+  a = n("884691"),
+  i = n("866227"),
+  s = n.n(i),
+  r = n("77078"),
+  u = n("656913"),
+  d = n("694187"),
+  o = n("151642"),
+  c = n("29846"),
+  f = n("398604"),
+  E = n("189443"),
+  I = n("822516"),
+  _ = n("93550"),
+  h = n("953143"),
+  T = n("745049"),
+  v = n("75015"),
+  N = n("837979"),
+  m = n("782340"),
+  S = n("505376");
 
 function g(e) {
   let {
     editBroadcastInfoData: t
   } = e, {
-    broadcastInfo: l,
+    broadcastInfo: n,
     broadcastToDirectoryChannels: a,
-    setBroadcastToDirectoryChannels: s,
-    canEveryoneRoleViewEvent: r
+    setBroadcastToDirectoryChannels: i,
+    canEveryoneRoleViewEvent: s
   } = t;
-  return l.can_broadcast ? (0, n.jsxs)(i.FormItem, {
+  return n.can_broadcast ? (0, l.jsxs)(r.FormItem, {
     title: m.default.Messages.CREATE_EVENT_PRIVACY_LABEL,
     className: S.formItem,
-    children: [(0, n.jsx)(i.Tooltip, {
-      text: (0, n.jsx)(i.Text, {
+    children: [(0, l.jsx)(r.Tooltip, {
+      text: (0, l.jsx)(r.Text, {
         className: S.broadcastInfoTooltip,
         variant: "text-sm/normal",
         children: m.default.Messages.HUB_EVENTS_SHARE_CHANNEL_EVERYONE_VIEWABLE_WARNING
       }),
       "aria-label": m.default.Messages.HUB_EVENTS_SHARE_CHANNEL_EVERYONE_VIEWABLE_WARNING,
-      shouldShow: !r,
-      children: e => (0, n.jsx)("div", {
+      shouldShow: !s,
+      children: e => (0, l.jsx)("div", {
         ...e,
-        children: (0, n.jsx)(i.Checkbox, {
-          type: i.Checkbox.Types.INVERTED,
-          disabled: !r,
+        children: (0, l.jsx)(r.Checkbox, {
+          type: r.Checkbox.Types.INVERTED,
+          disabled: !s,
           value: a,
-          onChange: (e, t) => s(t),
-          children: (0, n.jsx)(i.Text, {
+          onChange: (e, t) => i(t),
+          children: (0, l.jsx)(r.Text, {
             variant: "text-md/normal",
             color: "interactive-active",
             children: m.default.Messages.HUB_EVENTS_SHARE_TITLE
           })
         })
       })
-    }), (0, n.jsx)(i.Text, {
+    }), (0, l.jsx)(r.Text, {
       className: S.broadcastInfoDescription,
       variant: "text-xs/normal",
       color: "header-secondary",
@@ -70,70 +70,70 @@ function g(e) {
 function C(e) {
   let {
     guildEvent: t,
-    guildEventId: s,
+    guildEventId: i,
     guildId: C,
-    editBroadcastInfoData: x,
-    error: p,
-    validationErrorMessage: A,
+    editBroadcastInfoData: p,
+    error: x,
+    validationErrorMessage: L,
     onChange: O,
-    canSetFocus: R = !1
+    canSetFocus: A = !1
   } = e, {
-    entityType: L,
+    entityType: R,
     channelId: M,
-    description: D,
-    name: y,
-    image: j,
+    description: y,
+    name: D,
+    image: U,
     scheduledEndTime: V,
-    scheduledStartTime: U,
-    recurrenceRule: P
-  } = t, G = (0, o.useStageBlockedUsersCount)(M), H = null != t && (0, E.isGuildScheduledEventActive)(t), b = a.useMemo(() => {
+    scheduledStartTime: P,
+    recurrenceRule: j
+  } = t, G = (0, o.useStageBlockedUsersCount)(M), F = null != t && (0, f.isGuildScheduledEventActive)(t), b = a.useMemo(() => {
     let e = (0, I.getScheduleFromEventData)(t);
     return null != e ? e : {
-      startDate: r(U)
+      startDate: s(P)
     }
-  }, [t, U]), [B, F] = a.useState(null), w = a.useRef(null);
+  }, [t, P]), [H, B] = a.useState(null), w = a.useRef(null);
   a.useEffect(() => {
-    if (R) {
+    if (A) {
       var e;
       null === (e = w.current) || void 0 === e || e.focus()
     }
-  }, [R]);
+  }, [A]);
   let k = e => {
       O({
         image: e
       })
     },
-    Y = (e, t) => {
+    z = (e, t) => {
       if (null == e || void 0 === t) {
         k(null);
         return
-      }(0, i.openModalLazy)(async () => {
+      }(0, r.openModalLazy)(async () => {
         let {
           default: a
-        } = await l.el("57015").then(l.bind(l, "57015"));
-        return l => (0, n.jsx)(a, {
+        } = await n.el("57015").then(n.bind(n, "57015"));
+        return n => (0, l.jsx)(a, {
           imgURI: e,
           file: t,
           onCrop: k,
-          uploadType: N.UploadTypes.SCHEDULED_EVENT_IMAGE,
+          uploadType: v.UploadTypes.SCHEDULED_EVENT_IMAGE,
           allowSkip: !0,
-          ...l
+          ...n
         })
       })
     };
-  return (0, n.jsxs)(n.Fragment, {
-    children: [(0, n.jsx)("div", {
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsx)("div", {
       className: S.blockedUsersContainer,
-      children: null != M && !H && G > 0 && (0, n.jsx)(c.BlockedUsersNotice, {
+      children: null != M && !F && G > 0 && (0, l.jsx)(c.BlockedUsersNotice, {
         channelId: M
       })
-    }), (0, n.jsxs)("div", {
+    }), (0, l.jsxs)("div", {
       className: S.form,
-      children: [(0, n.jsxs)(i.FormItem, {
+      children: [(0, l.jsxs)(r.FormItem, {
         title: m.default.Messages.GUILD_EVENT_CREATE_TOPIC_LABEL,
         className: S.topicFormItem,
         required: !0,
-        children: [(0, n.jsx)(i.TextInput, {
+        children: [(0, l.jsx)(r.TextInput, {
           className: S.textInput,
           onChange: e => {
             O({
@@ -141,99 +141,99 @@ function C(e) {
             })
           },
           placeholder: m.default.Messages.GUILD_EVENT_CREATE_TOPIC_PLACEHOLDER,
-          maxLength: v.MAX_STAGE_TOPIC_LENGTH,
-          value: y,
+          maxLength: N.MAX_STAGE_TOPIC_LENGTH,
+          value: D,
           autoComplete: "off",
           inputRef: w
-        }), null != p ? (0, n.jsx)(i.Text, {
+        }), null != x ? (0, l.jsx)(r.Text, {
           color: "text-danger",
           variant: "text-xs/normal",
           className: S.warning,
-          children: p.getAnyErrorMessage()
+          children: x.getAnyErrorMessage()
         }) : null]
-      }), (0, n.jsx)(T.default, {
+      }), (0, l.jsx)(h.default, {
         className: S.formItem,
         onScheduleChange: e => {
           let {
             startDate: t,
-            endDate: l
-          } = e, n = {
+            endDate: n
+          } = e, l = {
             scheduledStartTime: null == t ? void 0 : t.toISOString(),
-            scheduledEndTime: null == l ? void 0 : l.toISOString()
+            scheduledEndTime: null == n ? void 0 : n.toISOString()
           };
-          null != t && null != V && (null == l ? void 0 : l.isBefore(t)) && (n.scheduledEndTime = t.add(1, "hour").toISOString()), null != t && null != B && (n.recurrenceRule = (0, I.recurrenceOptionToRecurrenceRule)(B, t)), O(n)
+          null != t && null != V && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, "hour").toISOString()), null != t && null != H && (l.recurrenceRule = (0, I.recurrenceOptionToRecurrenceRule)(H, t)), O(l)
         },
         onRecurrenceChange: e => {
           let t = b.startDate;
           if (null == t) return;
-          let l = (0, I.recurrenceOptionToRecurrenceRule)(e, t);
+          let n = (0, I.recurrenceOptionToRecurrenceRule)(e, t);
           O({
-            recurrenceRule: l
-          }), F(e)
+            recurrenceRule: n
+          }), B(e)
         },
         schedule: b,
-        recurrenceRule: P,
-        showEndDate: L === h.GuildScheduledEventEntityTypes.EXTERNAL,
-        requireEndDate: L === h.GuildScheduledEventEntityTypes.EXTERNAL,
-        disableStartDateTime: H,
+        recurrenceRule: j,
+        showEndDate: R === T.GuildScheduledEventEntityTypes.EXTERNAL,
+        requireEndDate: R === T.GuildScheduledEventEntityTypes.EXTERNAL,
+        disableStartDateTime: F,
         guildId: C
-      }), null != A ? (0, n.jsx)(i.Text, {
+      }), null != L ? (0, l.jsx)(r.Text, {
         color: "text-danger",
         variant: "text-xs/normal",
         className: S.warning,
-        children: A
-      }) : null, (0, n.jsx)(i.FormItem, {
+        children: L
+      }) : null, (0, l.jsx)(r.FormItem, {
         title: m.default.Messages.CREATE_STAGE_INSTANCE_DESCRIPTION_INPUT_LABEL,
         className: S.formItem,
-        children: (0, n.jsx)(i.TextArea, {
+        children: (0, l.jsx)(r.TextArea, {
           className: S.descriptionInput,
           placeholder: m.default.Messages.GUILD_EVENT_CREATE_DESCRIPTION_PLACEHOLDER,
-          value: D,
+          value: y,
           onChange: e => {
             O({
               description: e
             })
           },
-          maxLength: h.GUILD_EVENT_MAX_DESCRIPTION_LENGTH,
+          maxLength: T.GUILD_EVENT_MAX_DESCRIPTION_LENGTH,
           autosize: !0
         })
-      }), (0, n.jsxs)(i.FormItem, {
+      }), (0, l.jsxs)(r.FormItem, {
         title: m.default.Messages.GUILD_EVENT_IMAGE,
         className: S.formItem,
-        children: [(0, n.jsx)(i.Text, {
+        children: [(0, l.jsx)(r.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
           className: S.addImageHint,
           children: m.default.Messages.GUILD_EVENT_ADD_IMAGE_SUGGESTION
-        }), null != j ? (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(u.default, {
+        }), null != U ? (0, l.jsxs)(l.Fragment, {
+          children: [(0, l.jsx)(u.default, {
             className: S.imagePreview,
             iconWrapperClassName: S.imagePreviewInner,
-            image: j,
+            image: U,
             makeURL: e => {
               if (null == e) return null;
               if (null != C) {
-                var l;
-                return null !== (l = (0, _.default)((0, f.convertToFakeGuildEvent)(t, C, s))) && void 0 !== l ? l : null
+                var n;
+                return null !== (n = (0, _.default)((0, E.convertToFakeGuildEvent)(t, C, i))) && void 0 !== n ? n : null
               }
             },
-            onChange: Y,
+            onChange: z,
             hint: m.default.Messages.GUILD_EVENT_CHANGE_IMAGE,
             showRemoveButton: !1,
             enabled: !0
-          }), (0, n.jsx)(i.Button, {
-            size: i.Button.Sizes.SMALL,
+          }), (0, l.jsx)(r.Button, {
+            size: r.Button.Sizes.SMALL,
             onClick: () => k(null),
             children: m.default.Messages.GUILD_EVENT_REMOVE_IMAGE
           })]
-        }) : (0, n.jsxs)(i.Button, {
-          size: i.Button.Sizes.SMALL,
-          children: [m.default.Messages.GUILD_EVENT_ADD_IMAGE, (0, n.jsx)(d.default, {
-            onChange: Y
+        }) : (0, l.jsxs)(r.Button, {
+          size: r.Button.Sizes.SMALL,
+          children: [m.default.Messages.GUILD_EVENT_ADD_IMAGE, (0, l.jsx)(d.default, {
+            onChange: z
           })]
         })]
-      }), (0, n.jsx)(g, {
-        editBroadcastInfoData: x
+      }), (0, l.jsx)(g, {
+        editBroadcastInfoData: p
       })]
     })]
   })

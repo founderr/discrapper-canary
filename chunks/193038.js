@@ -8,8 +8,8 @@ var l = n("37983");
 n("884691");
 var a = n("414456"),
   r = n.n(a),
-  s = n("77078"),
-  i = n("272339"),
+  i = n("77078"),
+  s = n("272339"),
   u = n("333352"),
   o = function(e) {
     let {
@@ -18,11 +18,11 @@ var a = n("414456"),
     } = e;
     return (0, l.jsxs)("div", {
       className: r(u.container, n),
-      children: [(0, l.jsx)(i.default, {
+      children: [(0, l.jsx)(s.default, {
         width: 12,
         height: 12,
         className: u.icon
-      }), (0, l.jsx)(s.Text, {
+      }), (0, l.jsx)(i.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
         children: null != t ? t : 0

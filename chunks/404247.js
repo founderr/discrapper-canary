@@ -8,10 +8,10 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  r = s("884691"),
-  n = s("730290"),
-  l = s("90915"),
-  i = s("446674"),
+  n = s("884691"),
+  r = s("730290"),
+  i = s("90915"),
+  l = s("446674"),
   u = s("971178"),
   o = s("850068"),
   d = s("901582"),
@@ -38,8 +38,8 @@ let O = (0, f.makeLazy)({
 function M(e) {
   return e < p.PAGE_WIDTH_THRESHOLD ? p.PageSizes.SMALL : p.PageSizes.LARGE
 }
-i.default.initialize();
-class h extends r.PureComponent {
+l.default.initialize();
+class h extends n.PureComponent {
   componentDidMount() {
     (0, u.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
       e.pathname.startsWith(g.Routes.APPLICATION_STORE) && (0, u.updateLocation)(e)
@@ -81,27 +81,27 @@ class h extends r.PureComponent {
           params: {
             skuId: t,
             applicationId: s,
-            slug: r
+            slug: n
           }
         },
-        location: l
+        location: i
       } = e, {
-        width: i
-      } = this.props, u = (0, n.parse)(l.search);
+        width: l
+      } = this.props, u = (0, r.parse)(i.search);
       return (0, a.jsx)(d.default, {
         page: g.AnalyticsPages.STORE_LISTING,
         root: !0,
         children: (0, a.jsx)(N.default, {
           skuId: t,
           applicationId: s,
-          slug: r,
-          location: l,
+          slug: n,
+          location: i,
           storeListingId: u.store_listing_id,
-          pageSize: M(i)
+          pageSize: M(l)
         })
       })
-    }, this.renderContent = () => (0, a.jsxs)(l.Switch, {
-      children: [(0, a.jsx)(l.Route, {
+    }, this.renderContent = () => (0, a.jsxs)(i.Switch, {
+      children: [(0, a.jsx)(i.Route, {
         path: g.Routes.APPLICATION_STORE,
         exact: !0,
         render: () => (0, a.jsx)(d.default, {
@@ -109,22 +109,22 @@ class h extends r.PureComponent {
           root: !0,
           children: (0, a.jsx)(A.default, {})
         })
-      }), (0, a.jsx)(l.Route, {
+      }), (0, a.jsx)(i.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(l.Route, {
+      }), (0, a.jsx)(i.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(l.Route, {
+      }), (0, a.jsx)(i.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(l.Route, {
+      }), (0, a.jsx)(i.Route, {
         path: g.Routes.APPLICATION_STORE_LISTING_SKU(":skuId"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(l.Redirect, {
+      }), (0, a.jsx)(i.Redirect, {
         to: g.Routes.APP
       })]
     })
   }
 }
-var L = (0, l.withRouter)((0, c.default)((0, _.default)(h)))
+var L = (0, i.withRouter)((0, c.default)((0, _.default)(h)))

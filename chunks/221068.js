@@ -35,8 +35,8 @@ var s = n("37983"),
   O = n("299039"),
   D = n("154864"),
   j = n("383667"),
-  b = n("459776"),
-  P = n("921450"),
+  P = n("459776"),
+  b = n("921450"),
   H = n("366757"),
   F = n("699473"),
   U = n("556118"),
@@ -108,7 +108,7 @@ function Q(e) {
     ed = (0, d.useChannelSummariesExperiment)(u),
     ec = (0, r.useStateFromStores)([A.default], () => A.default.shouldShowTopicsBar()),
     ef = (0, g.useStrangerDangerWarning)(u.id, Y.LOCATION_CONTEXT_WEB),
-    eh = (0, P.default)();
+    eh = (0, b.default)();
   u.isDM() && null != ef && (n = (0, s.jsx)(S.StrangerDangerWarningBanner, {
     channelId: u.id,
     warningId: ef.id,
@@ -173,7 +173,7 @@ function Q(e) {
   eE.push(...eg);
   let eS = ee[ee.length - 1];
   if (null != ei && et.forEach((e, t) => {
-      let n = 0 === t && (0, b.isNewGroupItem)(u, eS, new M.default({
+      let n = 0 === t && (0, P.isNewGroupItem)(u, eS, new M.default({
         type: K.MessageTypes.DEFAULT,
         author: ei
       }));

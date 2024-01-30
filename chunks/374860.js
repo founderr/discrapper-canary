@@ -12,8 +12,8 @@ var l = n("627445"),
   a = n("987317"),
   s = n("244480"),
   r = n("716214"),
-  d = n("42203"),
-  u = n("945956"),
+  u = n("42203"),
+  d = n("945956"),
   o = n("745049");
 async function c(e, t) {
   let {
@@ -21,14 +21,14 @@ async function c(e, t) {
   } = e;
   switch (n) {
     case o.GuildScheduledEventEntityTypes.STAGE_INSTANCE: {
-      let t = u.default.getChannelId(),
-        n = d.default.getChannel(e.channel_id);
+      let t = d.default.getChannelId(),
+        n = u.default.getChannel(e.channel_id);
       i(null != n, "could not find channel"), t !== n.id && (await r.connectToStage(n, !0), await r.navigateToStage(n, null, !1)), await (0, s.audienceAckRequestToSpeak)(n, !1, !0);
       break
     }
     case o.GuildScheduledEventEntityTypes.VOICE: {
-      let t = u.default.getChannelId(),
-        n = d.default.getChannel(e.channel_id);
+      let t = d.default.getChannelId(),
+        n = u.default.getChannel(e.channel_id);
       i(null != n, "could not find channel"), t !== n.id && a.default.selectVoiceChannel(n.id)
     }
   }

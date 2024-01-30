@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  r = s("884691"),
-  n = s("77078"),
-  l = s("895530"),
-  i = s("437825"),
+  n = s("884691"),
+  r = s("77078"),
+  i = s("895530"),
+  l = s("437825"),
   u = s("36694"),
   o = s("530311"),
   d = s("824326"),
@@ -71,7 +71,7 @@ let N = [{
     feature: R.SKUFeatureTypes.SPECTATOR_MODE,
     getText: () => m.default.Messages.APPLICATION_STORE_SPECTATOR_MODE,
     getTooltip: () => m.default.Messages.APPLICATION_STORE_SPECTATOR_MODE_TOOLTIP,
-    IconComponent: i.default
+    IconComponent: l.default
   }, {
     feature: R.SKUFeatureTypes.CONTROLLER_SUPPORT,
     getText: () => m.default.Messages.APPLICATION_STORE_CONTROLLER_SUPPORT,
@@ -92,12 +92,12 @@ let N = [{
     let {
       IconComponent: t,
       text: s,
-      tooltip: r
+      tooltip: n
     } = e;
     return (0, a.jsxs)("div", {
       className: A.row,
-      children: [(0, a.jsx)(n.Tooltip, {
-        text: r,
+      children: [(0, a.jsx)(r.Tooltip, {
+        text: n,
         children: e => (0, a.jsx)(t, {
           className: A.featureIcon,
           ...e
@@ -110,7 +110,7 @@ let N = [{
       })]
     })
   };
-class g extends r.PureComponent {
+class g extends n.PureComponent {
   render() {
     let {
       sku: e
@@ -123,18 +123,18 @@ class g extends r.PureComponent {
       let {
         feature: t,
         IconComponent: s,
-        getText: r,
-        getTooltip: n
+        getText: n,
+        getTooltip: r
       } = e;
       return (0, a.jsx)(p, {
         IconComponent: s,
-        text: r(),
-        tooltip: n()
+        text: n(),
+        tooltip: r()
       }, t)
     });
     return 0 === t.length ? null : (0, a.jsxs)("div", {
       className: A.features,
-      children: [(0, a.jsx)(l.default, {
+      children: [(0, a.jsx)(i.default, {
         children: m.default.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES
       }), t]
     })

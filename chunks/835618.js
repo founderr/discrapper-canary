@@ -6,10 +6,10 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var r = s("414456"),
-  n = s.n(r),
-  l = s("77078"),
-  i = s("812204"),
+var n = s("414456"),
+  r = s.n(n),
+  i = s("77078"),
+  l = s("812204"),
   u = s("685665"),
   o = s("53253"),
   d = s("635956"),
@@ -22,35 +22,35 @@ var r = s("414456"),
       className: t
     } = e, {
       AnalyticsLocationProvider: s
-    } = (0, u.default)(i.default.PREMIUM_MARKETING_GIFT_SECTION), r = (0, o.useIsSeasonalGiftingActive)(), {
+    } = (0, u.default)(l.default.PREMIUM_MARKETING_GIFT_SECTION), n = (0, o.useIsSeasonalGiftingActive)(), {
       enabled: T
     } = o.SeasonalGiftingMarketingExperiment.useExperiment({
       location: "GiftNitro"
     }, {
-      autoTrackExposure: r
-    }), f = T && r;
+      autoTrackExposure: n
+    }), f = T && n;
     return (0, a.jsx)(s, {
       children: (0, a.jsx)("div", {
-        className: n(_.container, t),
+        className: r(_.container, t),
         style: {
           backgroundImage: "url(".concat(f ? I : E, ")")
         },
         children: (0, a.jsxs)("div", {
           className: _.textContainer,
-          children: [(0, a.jsx)(l.Heading, {
+          children: [(0, a.jsx)(i.Heading, {
             variant: "heading-lg/extrabold",
             className: _.heading,
             children: f ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : c.default.Messages.GIFT_NITRO
-          }), (0, a.jsx)(l.Text, {
+          }), (0, a.jsx)(i.Text, {
             variant: "text-sm/medium",
             children: f ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
           }), (0, a.jsx)(d.default, {
             isGift: !0,
             className: _.giftCardButton,
-            look: l.Button.Looks.OUTLINED,
+            look: i.Button.Looks.OUTLINED,
             buttonText: c.default.Messages.GIFT_NITRO,
             buttonTextClassName: _.giftButtonCTA,
-            color: l.Button.Colors.CUSTOM
+            color: i.Button.Colors.CUSTOM
           })]
         })
       })

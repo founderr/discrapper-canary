@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 });
 var l = n("37983");
@@ -18,24 +18,24 @@ var u = n("446674"),
   E = n("782340"),
   v = n("909199");
 
-function S(e) {
+function g(e) {
   let {
     guildId: t,
     onClose: n
   } = e, {
-    showHubEventsList: S
+    showHubEventsList: g
   } = r.default.useExperiment({
     guildId: t,
     location: "6597ca_1"
   }, {
     autoTrackExposure: !1
-  }), g = (0, u.useStateFromStores)([d.default, o.default], () => {
+  }), S = (0, u.useStateFromStores)([d.default, o.default], () => {
     let e = d.default.getGuild(t);
     return o.default.can(f.Permissions.MANAGE_ROLES, e)
-  }, [t]), N = (0, u.useStateFromStores)([d.default], () => {
+  }, [t]), h = (0, u.useStateFromStores)([d.default], () => {
     let e = d.default.getGuild(t);
-    return S && (null == e ? void 0 : e.hasFeature(f.GuildFeatures.HUB))
-  }, [t, S]);
+    return g && (null == e ? void 0 : e.hasFeature(f.GuildFeatures.HUB))
+  }, [t, g]);
   return (0, l.jsxs)("div", {
     className: v.container,
     children: [(0, l.jsx)(s.default, {
@@ -51,13 +51,13 @@ function S(e) {
       color: "header-primary",
       variant: "heading-xl/semibold",
       className: v.title,
-      children: N ? E.default.Messages.HUB_EVENTS_HEADER_TITLE : E.default.Messages.GUILD_EVENT_MODAL_EMPTY_TITLE
+      children: h ? E.default.Messages.HUB_EVENTS_HEADER_TITLE : E.default.Messages.GUILD_EVENT_MODAL_EMPTY_TITLE
     }), (0, l.jsx)(i.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
       className: v.subtitle,
-      children: N ? E.default.Messages.HUB_EVENTS_HEADER_DESCRIPTION : E.default.Messages.GUILD_EVENT_MODAL_EMPTY_SUBTITLE
-    }), g && (0, l.jsx)(i.Text, {
+      children: h ? E.default.Messages.HUB_EVENTS_HEADER_DESCRIPTION : E.default.Messages.GUILD_EVENT_MODAL_EMPTY_SUBTITLE
+    }), S && (0, l.jsx)(i.Text, {
       color: "header-secondary",
       variant: "text-sm/normal",
       className: v.roleTip,

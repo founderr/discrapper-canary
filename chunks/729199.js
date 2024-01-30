@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  r = s("884691"),
-  n = s("414456"),
-  l = s.n(n),
-  i = s("730290"),
+  n = s("884691"),
+  r = s("414456"),
+  i = s.n(r),
+  l = s("730290"),
   u = s("446674"),
   o = s("77078"),
   d = s("851387"),
@@ -27,7 +27,7 @@ var a = s("37983"),
   g = s("49111"),
   C = s("782340"),
   P = s("214197");
-class O extends r.PureComponent {
+class O extends n.PureComponent {
   renderMemberInfo() {
     let {
       approximateMemberCount: e,
@@ -58,9 +58,9 @@ class O extends r.PureComponent {
       guild: e,
       inChannel: t,
       isInGuild: s,
-      isLurking: r,
-      isAuthenticated: n,
-      className: i,
+      isLurking: n,
+      isAuthenticated: r,
+      className: l,
       pageSize: u
     } = this.props;
     if (t && s) return null;
@@ -69,15 +69,15 @@ class O extends r.PureComponent {
       _ = this.handleJoinOrView,
       E = o.Button.Looks.FILLED,
       I = o.Button.Colors.PRIMARY;
-    return n ? s ? (E = o.Button.Looks.OUTLINED, I = P.buttonColorInGuild, c = (0, a.jsxs)(m.default, {
+    return r ? s ? (E = o.Button.Looks.OUTLINED, I = P.buttonColorInGuild, c = (0, a.jsxs)(m.default, {
       align: m.default.Align.CENTER,
       children: [(0, a.jsx)("div", {
         children: C.default.Messages.JOINED_GUILD
       }), (0, a.jsx)(N.default, {
         className: P.joinedCheckmark
       })]
-    })) : r && t && (c = C.default.Messages.JOIN_GUILD) : (c = C.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
-      className: l(i, u === p.PageSizes.SMALL ? P.inviteSmall : P.inviteLarge),
+    })) : n && t && (c = C.default.Messages.JOIN_GUILD) : (c = C.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
+      className: i(l, u === p.PageSizes.SMALL ? P.inviteSmall : P.inviteLarge),
       children: [(0, a.jsx)(R.default, {
         children: C.default.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
       }), (0, a.jsxs)("div", {
@@ -115,21 +115,21 @@ class O extends r.PureComponent {
         skuId: t,
         isInGuild: s,
         isLurking: a
-      } = this.props, r = () => (0, T.transitionToGuild)(e.id);
-      if (a)(0, c.joinPublishedStoreListingSkuGuild)(t).then(r);
-      else if (s) r();
+      } = this.props, n = () => (0, T.transitionToGuild)(e.id);
+      if (a)(0, c.joinPublishedStoreListingSkuGuild)(t).then(n);
+      else if (s) n();
       else try {
         await d.default.joinGuild(e.id, {
           lurker: !0,
           source: g.JoinGuildSources.APPLICATION_STORE
-        }), r()
+        }), n()
       } catch {}
     }, this.handleLogin = () => {
       let e = {
         redirect_to: g.Routes.APPLICATION_STORE_LISTING_SKU(this.props.skuId)
       };
       (0, I.transitionTo)(g.Routes.LOGIN, {
-        search: (0, i.stringify)(e)
+        search: (0, l.stringify)(e)
       })
     }
   }

@@ -9,20 +9,20 @@ var l = n("37983"),
   a = n("414456"),
   s = n.n(a),
   r = n("446674"),
-  d = n("77078"),
-  u = n("267567"),
+  u = n("77078"),
+  d = n("267567"),
   o = n("817963"),
   c = n("534471"),
   f = n("42203"),
   E = n("305961"),
   h = n("476765"),
   _ = n("794352"),
-  C = n("883310"),
-  v = n("93550"),
-  g = n("617347"),
+  v = n("883310"),
+  g = n("93550"),
+  C = n("617347"),
   S = n("745049"),
-  T = n("782340"),
-  p = n("823020");
+  p = n("782340"),
+  T = n("823020");
 
 function N(e) {
   var t;
@@ -36,33 +36,33 @@ function N(e) {
     privacy_level: y
   } = a, R = (0, r.useStateFromStores)([f.default], () => f.default.getChannel(a.channel_id), [a]), O = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(m), [m]), {
     canManageGuildEvent: L
-  } = (0, o.useManageResourcePermissions)(null != R ? R : O), x = L(a), G = (0, r.useStateFromStores)([u.default], () => u.default.isLurking(m), [m]), M = a.entity_type === S.GuildScheduledEventEntityTypes.STAGE_INSTANCE, [U, w] = i.useState(M), [k, {
+  } = (0, o.useManageResourcePermissions)(null != R ? R : O), x = L(a), G = (0, r.useStateFromStores)([d.default], () => d.default.isLurking(m), [m]), M = a.entity_type === S.GuildScheduledEventEntityTypes.STAGE_INSTANCE, [w, U] = i.useState(M), [k, {
     loading: D,
-    error: P
-  }] = (0, C.default)();
+    error: b
+  }] = (0, v.default)();
   if (!x) return null;
-  let b = y === S.GuildScheduledEventPrivacyLevel.PUBLIC ? T.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL : T.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
+  let P = y === S.GuildScheduledEventPrivacyLevel.PUBLIC ? p.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL : p.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
     j = () => {
       null == N || N(), A(), (0, c.setIsOnStartStageScreen)(!1)
     },
     V = async () => {
-      await k(a, U, {
+      await k(a, w, {
         onSuccess: j
       })
     };
-  return (0, l.jsx)(d.ModalRoot, {
+  return (0, l.jsx)(u.ModalRoot, {
     transitionState: n,
     "aria-labelledby": I,
-    children: (0, l.jsxs)(d.ModalContent, {
-      className: p.content,
+    children: (0, l.jsxs)(u.ModalContent, {
+      className: T.content,
       children: [(0, l.jsx)("div", {
-        className: p.previewCard,
-        children: (0, l.jsx)(g.default, {
+        className: T.previewCard,
+        children: (0, l.jsx)(C.default, {
           guild: O,
           channel: R,
           name: a.name,
           description: null !== (t = a.description) && void 0 !== t ? t : void 0,
-          imageSource: (0, v.default)(a),
+          imageSource: (0, g.default)(a),
           isActive: !1,
           isUserLurking: G,
           speakers: [],
@@ -70,63 +70,63 @@ function N(e) {
           rsvped: !0,
           guildEventId: a.id
         })
-      }), (0, l.jsx)(d.Text, {
+      }), (0, l.jsx)(u.Text, {
         color: "header-secondary",
-        className: p.privacyLevel,
+        className: T.privacyLevel,
         variant: "text-sm/normal",
-        children: T.default.Messages.START_EVENT_CONFIRMATION.format({
-          privacyLevel: b,
+        children: p.default.Messages.START_EVENT_CONFIRMATION.format({
+          privacyLevel: P,
           privacyLevelHook: (e, t) => y !== S.GuildScheduledEventPrivacyLevel.PUBLIC ? null : (0, l.jsxs)("div", {
-            className: p.privacyLevel,
+            className: T.privacyLevel,
             children: [(0, l.jsx)(_.default, {
               width: 16,
               height: 16,
-              className: p.publicIcon
-            }), (0, l.jsx)(d.Text, {
+              className: T.publicIcon
+            }), (0, l.jsx)(u.Text, {
               variant: "text-sm/normal",
               children: e
             })]
           }, t)
         })
-      }), (0, l.jsx)(d.Heading, {
+      }), (0, l.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: p.header,
+        className: T.header,
         children: a.name
-      }), M && (0, l.jsx)(d.Checkbox, {
-        className: p.verticalSpacing,
-        type: d.Checkbox.Types.INVERTED,
-        value: U,
+      }), M && (0, l.jsx)(u.Checkbox, {
+        className: T.verticalSpacing,
+        type: u.Checkbox.Types.INVERTED,
+        value: w,
         onChange: e => {
           let {
             currentTarget: t
           } = e;
-          return w(t.checked)
+          return U(t.checked)
         },
-        children: (0, l.jsx)(d.Text, {
+        children: (0, l.jsx)(u.Text, {
           variant: "text-sm/normal",
-          children: T.default.Messages.GUILD_NOTIFY_MEMBERS_DESKTOP
+          children: p.default.Messages.GUILD_NOTIFY_MEMBERS_DESKTOP
         })
       }), (0, l.jsxs)("div", {
-        className: s(p.inline, p.buttons, p.verticalSpacing),
-        children: [(0, l.jsx)(d.Button, {
-          color: d.Button.Colors.PRIMARY,
+        className: s(T.inline, T.buttons, T.verticalSpacing),
+        children: [(0, l.jsx)(u.Button, {
+          color: u.Button.Colors.PRIMARY,
           onClick: () => {
             A()
           },
-          className: s(p.button, p.spacing),
-          children: T.default.Messages.STAGE_BLOCKED_USERS_CANCEL
-        }), (0, l.jsx)(d.Button, {
-          color: d.Button.Colors.GREEN,
+          className: s(T.button, T.spacing),
+          children: p.default.Messages.STAGE_BLOCKED_USERS_CANCEL
+        }), (0, l.jsx)(u.Button, {
+          color: u.Button.Colors.GREEN,
           onClick: V,
           submitting: D,
-          className: p.button,
-          children: T.default.Messages.START_EVENT
+          className: T.button,
+          children: p.default.Messages.START_EVENT
         })]
-      }), null != P && null != P.getAnyErrorMessage() ? (0, l.jsx)(d.Text, {
+      }), null != b && null != b.getAnyErrorMessage() ? (0, l.jsx)(u.Text, {
         color: "text-danger",
         variant: "text-sm/normal",
-        className: p.errorMessage,
-        children: P.getAnyErrorMessage()
+        className: T.errorMessage,
+        children: b.getAnyErrorMessage()
       }) : null]
     })
   })

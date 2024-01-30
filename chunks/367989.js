@@ -22,8 +22,8 @@ function c(e) {
     channel: E
   } = e, f = null != n, {
     canManageGuildEvent: _
-  } = (0, d.useManageResourcePermissions)(null != E ? E : c), [S, T] = (0, u.useStateFromStoresArray)([i.default], () => [i.default.isActive(t), i.default.getGuildScheduledEvent(t)]), v = (0, s.default)(n, null == T ? void 0 : T.id), I = null != T && _(T), N = f && (null == v ? void 0 : v.is_canceled) && I;
-  return N && (!S || f) ? (0, l.jsx)(a.MenuItem, {
+  } = (0, d.useManageResourcePermissions)(null != E ? E : c), [T, S] = (0, u.useStateFromStoresArray)([i.default], () => [i.default.isActive(t), i.default.getGuildScheduledEvent(t)]), v = (0, s.default)(n, null == S ? void 0 : S.id), g = null != S && _(S), I = f && (null == v ? void 0 : v.is_canceled) && g;
+  return I && (!T || f) ? (0, l.jsx)(a.MenuItem, {
     id: o.default.Messages.RESTORE_EVENT,
     label: o.default.Messages.RESTORE_EVENT,
     action: () => {

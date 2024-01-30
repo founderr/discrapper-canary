@@ -6,10 +6,10 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var r = s("414456"),
-  n = s.n(r),
-  l = s("77078"),
-  i = s("446674"),
+var n = s("414456"),
+  r = s.n(n),
+  i = s("77078"),
+  l = s("446674"),
   u = s("812204"),
   o = s("685665"),
   d = s("441413"),
@@ -29,7 +29,7 @@ function p(e) {
   let {
     variant: t = "text-lg/normal"
   } = e, s = (0, S.useCheapestMonthlyPrice)();
-  return (0, a.jsx)(l.Text, {
+  return (0, a.jsx)(i.Text, {
     variant: t,
     color: "always-white",
     className: N.description,
@@ -42,7 +42,7 @@ var g = e => {
   let {
     isFullscreen: t,
     className: s,
-    subscriptionTier: r
+    subscriptionTier: n
   } = e, {
     AnalyticsLocationProvider: S
   } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), C = (0, E.useIsInPremiumOfferExperience)(), P = (0, T.useIsEligibleForBogoPromotion)(), {
@@ -51,21 +51,21 @@ var g = e => {
     location: "HeroHeading"
   }, {
     autoTrackExposure: !1
-  }), M = (0, i.useStateFromStores)([_.default], () => _.default.affinities);
+  }), M = (0, l.useStateFromStores)([_.default], () => _.default.affinities);
   M.length > 0 && c.default.trackExposure({
     location: "HeroHeading"
   });
   let h = O && M.length > 0;
   return (0, a.jsx)(S, {
     children: (0, a.jsxs)("div", {
-      className: n(N.container, s, {
+      className: r(N.container, s, {
         [N.settingsContainer]: !t,
         [N.affinityHeight]: !t && h
       }),
       "data-testid": "v2-marketing-page-hero-header",
       children: [(0, a.jsxs)("div", {
         className: t ? N.fullscreenTextContainer : N.settingsTextContainer,
-        children: [(0, a.jsx)(l.Heading, {
+        children: [(0, a.jsx)(i.Heading, {
           variant: t ? "display-lg" : "display-md",
           color: "always-white",
           children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
@@ -86,7 +86,7 @@ var g = e => {
             children: [(0, a.jsx)(m.default, {
               forceInverted: !0,
               className: N.button,
-              subscriptionTier: r
+              subscriptionTier: n
             }), (0, a.jsx)(R.default, {
               className: N.button,
               forceWhite: !0

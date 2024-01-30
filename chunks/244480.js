@@ -1,31 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   toggleRequestToSpeak: function() {
-    return I
+    return g
   },
   inviteUserToStage: function() {
-    return N
+    return I
   },
   audienceAckRequestToSpeak: function() {
-    return g
+    return N
   },
   moveSelfToAudience: function() {
     return m
   },
   setUserSuppress: function() {
-    return R
+    return h
   },
   moveUserToAudience: function() {
-    return h
+    return M
   },
   setEveryoneRolePermissionAllowed: function() {
     return p
   },
   startStage: function() {
-    return M
+    return C
   },
   editStage: function() {
-    return C
+    return R
   },
   endStage: function() {
     return D
@@ -44,11 +44,11 @@ var r = n("798609"),
   E = n("991170"),
   f = n("716214"),
   _ = n("230324"),
-  S = n("738983"),
-  T = n("808422"),
+  T = n("738983"),
+  S = n("808422"),
   v = n("49111");
 
-function I(e, t) {
+function g(e, t) {
   let n = e.getGuildId();
   return u(null != n, "This channel cannot be guildless."), t && (0, s.trackWithMetadata)(v.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED, {
     ...(0, _.getStageChannelMetadata)(e)
@@ -61,7 +61,7 @@ function I(e, t) {
   })
 }
 
-function N(e, t) {
+function I(e, t) {
   let n = e.getGuildId();
   return u(null != n, "This channel cannot be guildless."), d.default.patch({
     url: v.Endpoints.UPDATE_VOICE_STATE(n, t),
@@ -73,13 +73,13 @@ function N(e, t) {
   })
 }
 
-function g(e, t) {
+function N(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     l = null == e ? void 0 : e.getGuildId();
   u(null != l, "This channel cannot be guildless.");
   let a = c.default.getVoiceStateForChannel(e.id),
-    i = (0, T.getAudienceRequestToSpeakState)(a);
-  return i === T.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !t && (0, s.trackWithMetadata)(v.AnalyticEvents.PROMOTED_TO_SPEAKER, {
+    i = (0, S.getAudienceRequestToSpeakState)(a);
+  return i === S.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !t && (0, s.trackWithMetadata)(v.AnalyticEvents.PROMOTED_TO_SPEAKER, {
     ...(0, _.getStageChannelMetadata)(e)
   }), d.default.patch({
     url: v.Endpoints.UPDATE_VOICE_STATE(l),
@@ -107,7 +107,7 @@ function m(e) {
   })
 }
 
-function R(e, t, n) {
+function h(e, t, n) {
   let l = e.getGuildId();
   return u(null != l, "This channel cannot be guildless."), d.default.patch({
     url: v.Endpoints.UPDATE_VOICE_STATE(l, t),
@@ -118,10 +118,10 @@ function R(e, t, n) {
   })
 }
 
-function h(e, t) {
+function M(e, t) {
   if (null == t || null == e) return;
   let n = t.getGuildId();
-  return u(null != n, "This channel cannot be guildless."), R(t, e.id, !0), d.default.patch({
+  return u(null != n, "This channel cannot be guildless."), h(t, e.id, !0), d.default.patch({
     url: v.Endpoints.UPDATE_VOICE_STATE(n, e.id),
     body: {
       suppress: !0,
@@ -145,18 +145,18 @@ function p(e, t, n) {
     };
   n ? (s.allow = a.default.add(s.allow, t), s.deny = a.default.remove(s.deny, t)) : (s.allow = a.default.remove(s.allow, t), s.deny = a.default.add(s.deny, t)), i.default.updatePermissionOverwrite(e.id, s)
 }
-async function M(e, t, n, l) {
+async function C(e, t, n, l) {
   if ("" === t) return;
   let u = o.default.getVoiceChannelId() === e.id;
   !u && (0, f.connectToStage)(e);
-  let a = await (0, S.startStageInstance)(e.id, t, n, l);
-  return g(e, !1, !0), a
+  let a = await (0, T.startStageInstance)(e.id, t, n, l);
+  return N(e, !1, !0), a
 }
-async function C(e, t, n) {
+async function R(e, t, n) {
   if ("" === t) return;
-  let l = await (0, S.updateStageInstance)(e.id, t, n);
+  let l = await (0, T.updateStageInstance)(e.id, t, n);
   return l
 }
 async function D(e) {
-  await (0, S.endStageInstance)(e.id)
+  await (0, T.endStageInstance)(e.id)
 }

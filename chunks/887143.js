@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useCanSendStageStartNotification: function() {
-    return i
+    return s
   },
   useDefaultSendStartStageNotificationToggle: function() {
     return u
@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
 var l = n("446674"),
   a = n("525065"),
   r = n("957255"),
-  s = n("843455");
+  i = n("843455");
 
-function i(e) {
-  let t = (0, l.useStateFromStores)([r.default], () => null != e && r.default.can(s.Permissions.MENTION_EVERYONE, e), [e]);
+function s(e) {
+  let t = (0, l.useStateFromStores)([r.default], () => null != e && r.default.can(i.Permissions.MENTION_EVERYONE, e), [e]);
   return t
 }
 

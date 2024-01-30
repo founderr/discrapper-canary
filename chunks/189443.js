@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return c
   },
   recurrenceRuleToServer: function() {
-    return o
+    return E
   },
   recurrenceRuleFromServer: function() {
-    return E
+    return o
   },
   convertToFakeGuildEvent: function() {
     return s
@@ -25,7 +25,7 @@ function c(e) {
   return !!(null == e ? void 0 : e.id)
 }
 
-function o(e) {
+function E(e) {
   var t, n;
   return null == e ? null : {
     start: e.start,
@@ -41,7 +41,7 @@ function o(e) {
   }
 }
 
-function E(e) {
+function o(e) {
   return null == e ? null : {
     start: new Date(e.start).toISOString(),
     end: null != e.end ? new Date(e.end).toISOString() : null,
@@ -63,12 +63,12 @@ function s(e, t, n) {
     privacyLevel: d,
     channelId: i,
     scheduledStartTime: c,
-    scheduledEndTime: E,
+    scheduledEndTime: o,
     entityType: s,
     entityMetadata: _,
     image: y,
     recurrenceRule: R,
-    eventExceptions: h
+    eventExceptions: v
   } = e;
   return {
     id: null != n ? n : a.FAKE_EVENT_ID,
@@ -76,7 +76,7 @@ function s(e, t, n) {
     description: null != l ? l : null,
     privacy_level: d,
     scheduled_start_time: c,
-    scheduled_end_time: E,
+    scheduled_end_time: o,
     entity_type: s,
     entity_metadata: null != _ ? _ : null,
     image: null != y ? y : void 0,
@@ -84,8 +84,8 @@ function s(e, t, n) {
     guild_id: t,
     creator_id: r.default.getId(),
     status: a.GuildScheduledEventStatus.SCHEDULED,
-    recurrence_rule: o(R),
-    guild_scheduled_event_exceptions: h.map(e => ({
+    recurrence_rule: E(R),
+    guild_scheduled_event_exceptions: v.map(e => ({
       event_exception_id: e.eventExceptionId,
       event_id: e.eventId,
       guild_id: e.guildId,
@@ -97,19 +97,19 @@ function s(e, t, n) {
 }
 
 function _(e, t) {
-  var n, u, l, r, c, o, s, _;
+  var n, u, l, r, c, E, s, _;
   let y = {
     name: null !== (n = null == e ? void 0 : e.name) && void 0 !== n ? n : "",
     privacyLevel: null !== (u = null == e ? void 0 : e.privacy_level) && void 0 !== u ? u : a.GuildScheduledEventPrivacyLevel.GUILD_ONLY,
     description: null !== (l = null == e ? void 0 : e.description) && void 0 !== l ? l : "",
     scheduledStartTime: null !== (r = null == e ? void 0 : e.scheduled_start_time) && void 0 !== r ? r : (0, i.getInitialEventStartDate)().toISOString(),
     entityType: null !== (c = null == e ? void 0 : e.entity_type) && void 0 !== c ? c : a.GuildScheduledEventEntityTypes.NONE,
-    entityMetadata: null !== (o = null == e ? void 0 : e.entity_metadata) && void 0 !== o ? o : void 0,
+    entityMetadata: null !== (E = null == e ? void 0 : e.entity_metadata) && void 0 !== E ? E : void 0,
     channelId: null == e ? void 0 : e.channel_id,
     creatorId: null == e ? void 0 : e.creator_id,
     image: null == e ? void 0 : e.image,
     scheduledEndTime: null == e ? void 0 : e.scheduled_end_time,
-    recurrenceRule: E(null == e ? void 0 : e.recurrence_rule),
+    recurrenceRule: o(null == e ? void 0 : e.recurrence_rule),
     eventExceptions: (null !== (s = null == e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== s ? s : []).map(e => ({
       eventExceptionId: e.event_exception_id,
       eventId: e.event_id,

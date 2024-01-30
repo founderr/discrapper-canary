@@ -18,9 +18,9 @@ var u = n("446674"),
 function E(e, t, n) {
   let {
     canManageGuildEvent: E
-  } = (0, d.useManageResourcePermissions)(null != n ? n : t), f = (0, u.useStateFromStores)([r.default], () => r.default.isActive(e)), _ = (0, u.useStateFromStores)([r.default], () => r.default.getGuildScheduledEvent(e), [e]), S = E(_);
-  if (null == e || !S || !f || (null == _ ? void 0 : _.entity_type) === o.GuildScheduledEventEntityTypes.EXTERNAL) return null;
-  let T = () => {
+  } = (0, d.useManageResourcePermissions)(null != n ? n : t), f = (0, u.useStateFromStores)([r.default], () => r.default.isActive(e)), _ = (0, u.useStateFromStores)([r.default], () => r.default.getGuildScheduledEvent(e), [e]), T = E(_);
+  if (null == e || !T || !f || (null == _ ? void 0 : _.entity_type) === o.GuildScheduledEventEntityTypes.EXTERNAL) return null;
+  let S = () => {
     if (null == n ? void 0 : n.isGuildStageVoice()) {
       (0, i.endStage)(n);
       return
@@ -36,7 +36,7 @@ function E(e, t, n) {
         header: c.default.Messages.END_EVENT,
         confirmText: c.default.Messages.GUILD_EVENT_END_PROMPT_CONFIRM,
         cancelText: c.default.Messages.CANCEL,
-        onConfirm: T,
+        onConfirm: S,
         children: (0, l.jsx)(a.Text, {
           variant: "text-md/normal",
           children: c.default.Messages.GUILD_EVENT_EXTERNAL_END_PROMPT_TITLE

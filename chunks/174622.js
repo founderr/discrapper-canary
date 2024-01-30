@@ -1,253 +1,253 @@
 "use strict";
-n.r(l), n.d(l, {
+t.r(n), t.d(n, {
   default: function() {
-    return G
+    return k
   }
-}), n("424973"), n("222007");
-var t = n("37983"),
-  s = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
-  u = n("77078"),
-  r = n("843962"),
-  d = n("679653"),
-  o = n("419830"),
-  c = n("407063"),
-  E = n("845579"),
-  m = n("315102"),
-  v = n("474293"),
-  N = n("145131"),
-  h = n("953109"),
-  C = n("476263"),
-  p = n("782340"),
-  I = n("312679");
-let f = e => {
+}), t("424973"), t("222007");
+var l = t("37983"),
+  s = t("884691"),
+  i = t("414456"),
+  a = t.n(i),
+  u = t("77078"),
+  r = t("843962"),
+  d = t("679653"),
+  o = t("419830"),
+  c = t("407063"),
+  v = t("845579"),
+  m = t("315102"),
+  E = t("474293"),
+  h = t("145131"),
+  p = t("953109"),
+  f = t("476263"),
+  N = t("782340"),
+  g = t("312679");
+let C = e => {
     let {
-      text: l,
-      extra: n
+      text: n,
+      extra: t
     } = e;
-    return (0, t.jsxs)(u.FormTitle, {
-      className: I.header,
-      children: [l, n]
+    return (0, l.jsxs)(u.FormTitle, {
+      className: g.header,
+      children: [n, t]
     })
   },
-  g = e => {
+  I = e => {
     let {
-      resolving: l,
-      children: n
+      resolving: n,
+      children: t
     } = e;
-    return (0, t.jsx)("div", {
-      className: I.content,
-      children: l ? (0, t.jsxs)("div", {
-        className: I.resolvingWrapper,
-        children: [(0, t.jsx)("div", {
-          className: I.resolving,
-          children: (0, t.jsx)("div", {
-            className: I.resolvingBackground
+    return (0, l.jsx)("div", {
+      className: g.content,
+      children: n ? (0, l.jsxs)("div", {
+        className: g.resolvingWrapper,
+        children: [(0, l.jsx)("div", {
+          className: g.resolving,
+          children: (0, l.jsx)("div", {
+            className: g.resolvingBackground
           })
-        }), (0, t.jsx)("div", {
-          className: I.resolvingFakeButton,
-          children: (0, t.jsx)("div", {
-            className: I.resolvingBackground
+        }), (0, l.jsx)("div", {
+          className: g.resolvingFakeButton,
+          children: (0, l.jsx)("div", {
+            className: g.resolvingBackground
           })
         })]
-      }) : n
+      }) : t
     })
   },
   x = e => {
-    var l;
+    var n;
     let {
-      application: n,
+      application: t,
       guild: s,
-      channel: a,
+      channel: i,
       onClick: o,
       expired: c = !1,
       user: m,
-      className: N
-    } = e, p = null !== (l = (0, d.default)(a)) && void 0 !== l ? l : "", f = E.GifAutoPlay.useSetting();
-    if (c) return (0, t.jsx)("div", {
-      className: I.guildIconExpired
+      className: h
+    } = e, N = null !== (n = (0, d.default)(i)) && void 0 !== n ? n : "", C = v.GifAutoPlay.useSetting();
+    if (c) return (0, l.jsx)("div", {
+      className: g.guildIconExpired
     });
-    let g = null == s || null != s.icon,
-      x = i((0, v.getClass)(I, "guildIcon", g ? "Image" : "", null != o ? "Joined" : ""), N);
-    if (null != n) return (0, t.jsx)(h.default, {
-      game: n,
+    let I = null == s || null != s.icon,
+      x = a((0, E.getClass)(g, "guildIcon", I ? "Image" : "", null != o ? "Joined" : ""), h);
+    if (null != t) return (0, l.jsx)(p.default, {
+      game: t,
       onClick: o,
-      size: I.applicationIcon,
+      size: g.applicationIcon,
       className: x
     });
-    if (null != s) return (0, t.jsx)(C.default, {
+    if (null != s) return (0, l.jsx)(f.default, {
       onClick: o,
       active: !0,
       guild: s,
       className: x,
-      animate: f
+      animate: C
     });
-    if (null != a) return (0, t.jsx)(u.Avatar, {
+    if (null != i) return (0, l.jsx)(u.Avatar, {
       onClick: o,
-      src: (0, r.getChannelIconURL)(a),
+      src: (0, r.getChannelIconURL)(i),
       size: u.AvatarSizes.SIZE_56,
       className: x,
-      "aria-label": p
+      "aria-label": N
     });
-    else if (null != m) return (0, t.jsx)(u.Avatar, {
+    else if (null != m) return (0, l.jsx)(u.Avatar, {
       onClick: o,
       src: m.getAvatarURL(null, 56),
       size: u.AvatarSizes.SIZE_56,
       className: x,
-      "aria-label": p
+      "aria-label": N
     });
     return null
   },
   S = e => {
     let {
-      title: l,
-      onClick: n,
+      title: n,
+      onClick: t,
       expired: s,
-      children: a
-    } = e, i = (0, t.jsx)(u.Heading, {
+      children: i
+    } = e, a = (0, l.jsx)(u.Heading, {
       variant: "heading-md/semibold",
-      className: (0, v.getClass)(I, "inviteDestination", s ? "Expired" : null != n ? "Joined" : ""),
-      children: l
+      className: (0, E.getClass)(g, "inviteDestination", s ? "Expired" : null != t ? "Joined" : ""),
+      children: n
     });
-    return (0, t.jsxs)(N.default, {
-      className: I.guildInfo,
-      direction: N.default.Direction.VERTICAL,
-      justify: N.default.Justify.CENTER,
-      children: [null == n ? i : (0, t.jsx)(u.Clickable, {
-        onClick: n,
-        children: i
-      }), (0, t.jsx)(u.Text, {
-        tag: "strong",
-        className: I.guildDetail,
-        variant: "text-sm/normal",
+    return (0, l.jsxs)(h.default, {
+      className: g.guildInfo,
+      direction: h.default.Direction.VERTICAL,
+      justify: h.default.Justify.CENTER,
+      children: [null == t ? a : (0, l.jsx)(u.Clickable, {
+        onClick: t,
         children: a
+      }), (0, l.jsx)(u.Text, {
+        tag: "strong",
+        className: g.guildDetail,
+        variant: "text-sm/normal",
+        children: i
       })]
     })
   },
-  R = e => {
+  _ = e => {
     let {
-      membersOnline: l,
-      members: n
+      membersOnline: n,
+      members: t
     } = e, s = [];
-    return null != l && l > 0 && s.push((0, t.jsxs)("div", {
-      className: I.statusWrapper,
-      children: [(0, t.jsx)("i", {
-        className: I.statusOnline
-      }), (0, t.jsx)("span", {
-        className: I.count,
-        children: p.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
-          membersOnline: l
+    return null != n && n > 0 && s.push((0, l.jsxs)("div", {
+      className: g.statusWrapper,
+      children: [(0, l.jsx)("i", {
+        className: g.statusOnline
+      }), (0, l.jsx)("span", {
+        className: g.count,
+        children: N.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+          membersOnline: n
         })
       })]
-    }, "onlineCount")), null != n && s.push((0, t.jsxs)("div", {
-      className: I.statusWrapper,
-      children: [(0, t.jsx)("i", {
-        className: I.statusOffline
-      }), (0, t.jsx)("span", {
-        className: I.count,
-        children: p.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-          count: n
+    }, "onlineCount")), null != t && s.push((0, l.jsxs)("div", {
+      className: g.statusWrapper,
+      children: [(0, l.jsx)("i", {
+        className: g.statusOffline
+      }), (0, l.jsx)("span", {
+        className: g.count,
+        children: N.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+          count: t
         })
       })]
-    }, "memberCount")), (0, t.jsx)("div", {
-      className: I.statusCounts,
+    }, "memberCount")), (0, l.jsx)("div", {
+      className: g.statusCounts,
       children: s
     })
   },
-  T = e => {
+  j = e => {
     let {
-      channel: l,
-      guild: n
-    } = e, s = (0, o.getChannelIconComponent)(l, n);
-    return null == l || null == s ? null : (0, t.jsxs)("div", {
-      className: I.channel,
-      children: [(0, t.jsx)(s, {
-        className: I.channelIcon,
+      channel: n,
+      guild: t
+    } = e, s = (0, o.getChannelIconComponent)(n, t);
+    return null == n || null == s ? null : (0, l.jsxs)("div", {
+      className: g.channel,
+      children: [(0, l.jsx)(s, {
+        className: g.channelIcon,
         width: 20,
         height: 20
-      }), (0, t.jsx)("span", {
-        className: I.channelName,
-        children: l.name
+      }), (0, l.jsx)("span", {
+        className: g.channelName,
+        children: n.name
       })]
     })
   },
   L = e => {
     let {
-      children: l,
-      onClick: n,
+      children: n,
+      onClick: t,
       className: s,
-      isDisabled: a,
+      isDisabled: i,
       ...r
     } = e;
-    return (0, t.jsx)(u.Button, {
+    return (0, l.jsx)(u.Button, {
       ...r,
-      disabled: a,
-      onClick: n,
-      size: I.buttonSize,
-      className: i(I.button, s),
-      children: l
+      disabled: i,
+      onClick: t,
+      size: g.buttonSize,
+      className: a(g.button, s),
+      children: n
     })
   };
 L.Colors = u.Button.Colors, L.Looks = u.Button.Looks, L.defaultProps = {
   className: null,
   isDisabled: !1
 };
-let j = e => {
+let T = e => {
     let {
-      children: l,
-      className: n,
+      children: n,
+      className: t,
       containerRef: s
     } = e;
-    return (0, t.jsx)("div", {
+    return (0, l.jsx)("div", {
       ref: s,
-      className: i(I.wrapper, n),
-      children: l
+      className: a(g.wrapper, t),
+      children: n
     })
   },
-  _ = e => {
+  R = e => {
     let {
-      guild: l
-    } = e, [n, a] = s.useState(!1), u = m.default.getGuildSplashURL({
-      id: l.id,
-      splash: l.splash,
+      guild: n
+    } = e, [t, i] = s.useState(!1), u = m.default.getGuildSplashURL({
+      id: n.id,
+      splash: n.splash,
       size: 400 * (0, c.getDevicePixelRatio)()
     });
-    return null == u ? null : (0, t.jsx)("div", {
-      className: I.inviteSplash,
-      children: (0, t.jsx)("img", {
+    return null == u ? null : (0, l.jsx)("div", {
+      className: g.inviteSplash,
+      children: (0, l.jsx)("img", {
         src: u,
         alt: "",
-        className: i(I.inviteSplashImage, {
-          [I.inviteSplashImageLoaded]: n
+        className: a(g.inviteSplashImage, {
+          [g.inviteSplashImageLoaded]: t
         }),
-        onLoad: () => a(!0)
-      })
-    })
-  },
-  D = e => {
-    let {
-      guild: l
-    } = e;
-    return (0, t.jsx)("div", {
-      className: I.guildNameWrapper,
-      children: (0, t.jsx)("span", {
-        className: I.guildName,
-        children: l.name
+        onLoad: () => i(!0)
       })
     })
   },
   B = e => {
     let {
-      guildTemplate: l
+      guild: n
     } = e;
-    return (0, t.jsx)("div", {
-      className: I.guildNameWrapper,
-      children: (0, t.jsx)("span", {
-        className: I.guildName,
-        children: l.serializedSourceGuild.name
+    return (0, l.jsx)("div", {
+      className: g.guildNameWrapper,
+      children: (0, l.jsx)("span", {
+        className: g.guildName,
+        children: n.name
+      })
+    })
+  },
+  D = e => {
+    let {
+      guildTemplate: n
+    } = e;
+    return (0, l.jsx)("div", {
+      className: g.guildNameWrapper,
+      children: (0, l.jsx)("span", {
+        className: g.guildName,
+        children: n.serializedSourceGuild.name
       })
     })
   };
-j.Header = f, j.Body = g, j.Icon = x, j.Info = S, j.Data = R, j.Channel = T, j.Button = L, j.GuildSplash = _, j.GuildName = D, j.GuildTemplateName = B, f.displayName = "InviteButton.Header", g.displayName = "InviteButton.Body", x.displayName = "InviteButton.Icon", S.displayName = "InviteButton.Info", R.displayName = "InviteButton.Data", T.displayName = "InviteButton.Channel", L.displayName = "InviteButton.Button", _.displayName = "InviteButton.GuildSplash", D.displayName = "InviteButton.GuildName", B.displayName = "InviteButton.GuildTemplateName";
-var G = j
+T.Header = C, T.Body = I, T.Icon = x, T.Info = S, T.Data = _, T.Channel = j, T.Button = L, T.GuildSplash = R, T.GuildName = B, T.GuildTemplateName = D, C.displayName = "InviteButton.Header", I.displayName = "InviteButton.Body", x.displayName = "InviteButton.Icon", S.displayName = "InviteButton.Info", _.displayName = "InviteButton.Data", j.displayName = "InviteButton.Channel", L.displayName = "InviteButton.Button", R.displayName = "InviteButton.GuildSplash", B.displayName = "InviteButton.GuildName", D.displayName = "InviteButton.GuildTemplateName";
+var k = T

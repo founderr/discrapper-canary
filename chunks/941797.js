@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  r = s("884691"),
-  n = s("907002"),
-  l = s("891722"),
-  i = s("704426"),
+  n = s("884691"),
+  r = s("907002"),
+  i = s("891722"),
+  l = s("704426"),
   u = s("77078"),
   o = s("558566"),
   d = s("821265"),
@@ -17,22 +17,22 @@ var a = s("37983"),
       cards: t,
       className: s,
       cardType: c
-    } = e, _ = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [E, I] = r.useState(0), [T, f] = r.useState(_()), [S, R] = r.useState(!1), m = t.length;
-    r.useEffect(() => {
+    } = e, _ = () => window.innerWidth < 890 ? 1 : window.innerWidth < 1080 ? 2 : 3, [E, I] = n.useState(0), [T, f] = n.useState(_()), [S, R] = n.useState(!1), m = t.length;
+    n.useEffect(() => {
       let e = () => {
         f(_())
       };
       return window.addEventListener("resize", e), () => {
         window.removeEventListener("resize", e)
       }
-    }, []), r.useEffect(() => {
+    }, []), n.useEffect(() => {
       m > T && E > m - T ? I(m - T) : m <= T && I(0)
     }, [m, T]);
-    let A = r.useCallback(e => ({
+    let A = n.useCallback(e => ({
         x: (e - E) * 100
       }), [E]),
-      [N, p] = (0, n.useSprings)(t.length, A);
-    return r.useEffect(() => {
+      [N, p] = (0, r.useSprings)(t.length, A);
+    return n.useEffect(() => {
       p(A)
     }, [p, A]), (0, a.jsx)("div", {
       className: s,
@@ -43,7 +43,7 @@ var a = s("37983"),
             I(e => 0 === e ? m - T : e - 1)
           } : void 0,
           className: d.leftArrow,
-          children: (0, a.jsx)(l.ArrowSmallLeftIcon, {
+          children: (0, a.jsx)(i.ArrowSmallLeftIcon, {
             className: d.arrowIcon,
             colorClass: d.arrowIcon
           })
@@ -51,12 +51,12 @@ var a = s("37983"),
           className: d.cardInnerContainer,
           children: N.map((e, s) => {
             let {
-              x: r
+              x: n
             } = e;
-            return (0, a.jsx)(n.animated.div, {
+            return (0, a.jsx)(r.animated.div, {
               className: d.card,
               style: {
-                transform: null == r ? void 0 : r.to(e => "translate3d(".concat(e, "%,0,0)"))
+                transform: null == n ? void 0 : n.to(e => "translate3d(".concat(e, "%,0,0)"))
               },
               children: (0, a.jsx)(o.default, {
                 ...t[s],
@@ -69,7 +69,7 @@ var a = s("37983"),
             I(e => (R(!0), e >= m - T) ? 0 : e + 1)
           },
           className: d.rightArrow,
-          children: (0, a.jsx)(i.ArrowSmallRightIcon, {
+          children: (0, a.jsx)(l.ArrowSmallRightIcon, {
             className: d.arrowIcon,
             colorClass: d.arrowIcon
           })

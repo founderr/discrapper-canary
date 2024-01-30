@@ -1,53 +1,53 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return T
+    return h
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("414456"),
-  s = l.n(a),
-  r = l("819855"),
-  i = l("841098"),
-  u = l("449918"),
-  d = l("832132"),
-  o = l("818643"),
-  c = l("608684"),
-  E = l("49111"),
-  f = l("575282");
-let I = E.Color.PRIMARY_400,
-  _ = E.Color.PRIMARY_500;
+var l = n("37983");
+n("884691");
+var a = n("414456"),
+  i = n.n(a),
+  s = n("819855"),
+  r = n("841098"),
+  u = n("449918"),
+  d = n("832132"),
+  o = n("818643"),
+  c = n("608684"),
+  f = n("49111"),
+  E = n("575282");
+let I = f.Color.PRIMARY_400,
+  _ = f.Color.PRIMARY_500;
 
-function T(e) {
+function h(e) {
   let {
     enabled: t,
-    imageClassName: l,
+    imageClassName: n,
     iconWrapperClassName: a,
-    ...E
-  } = e, T = (0, i.default)(), h = (0, r.isThemeDark)(T) ? I : _, N = {
+    ...f
+  } = e, h = (0, r.default)(), T = (0, s.isThemeDark)(h) ? I : _, v = {
     height: 18,
     width: 18,
-    color: (0, u.getColor)(h)
+    color: (0, u.getColor)(T)
   };
-  return (0, n.jsx)(c.default, {
-    className: s({
-      [f.avatarUploader]: t,
-      [f.avatarUploaderDisabled]: !t
+  return (0, l.jsx)(c.default, {
+    className: i({
+      [E.avatarUploader]: t,
+      [E.avatarUploaderDisabled]: !t
     }),
-    imageClassName: s(l, f.avatarUploaderInnerSquare, {
-      [f.avatarUploaderInnerSquareDisabled]: !t
+    imageClassName: i(n, E.avatarUploaderInnerSquare, {
+      [E.avatarUploaderInnerSquareDisabled]: !t
     }),
-    icon: null != E.image && "" !== E.image ? (0, n.jsx)(d.default, {
-      ...N
-    }) : (0, n.jsx)(o.default, {
-      ...N
+    icon: null != f.image && "" !== f.image ? (0, l.jsx)(d.default, {
+      ...v
+    }) : (0, l.jsx)(o.default, {
+      ...v
     }),
-    iconClassName: s(f.avatarUploadIcon, f.hideDefaultIcon),
+    iconClassName: i(E.avatarUploadIcon, E.hideDefaultIcon),
     iconWrapperClassName: a,
     showIcon: !0,
     showIconDisabled: !0,
     hideSize: !0,
-    ...E
+    ...f
   })
 }

@@ -36,7 +36,7 @@ var _ = function(e) {
       case 3:
         return s.default
     }
-  }(n), S = function(e) {
+  }(n), T = function(e) {
     switch (e) {
       case 0:
         return f.warning;
@@ -49,7 +49,7 @@ var _ = function(e) {
     }
   }(n);
   return (0, a.jsxs)("div", {
-    className: i(f.container, S, l),
+    className: i(f.container, T, l),
     children: [(0, a.jsx)("div", {
       className: f.iconDiv,
       children: (0, a.jsx)(_, {

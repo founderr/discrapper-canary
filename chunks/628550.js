@@ -1,15 +1,15 @@
 "use strict";
 s.r(t), s.d(t, {
   PerksDiscoverabilityCardTypes: function() {
-    return r
+    return n
   },
   default: function() {
     return X
   }
 });
-var a, r, n = s("65597"),
-  l = s("151426"),
-  i = s("79112"),
+var a, n, r = s("65597"),
+  i = s("151426"),
+  l = s("79112"),
   u = s("841098"),
   o = s("812204"),
   d = s("685665"),
@@ -51,11 +51,11 @@ var a, r, n = s("65597"),
   Y = s("832085"),
   z = s("443646"),
   Q = s("759308");
-(a = r || (r = {})).AVATAR_DECORATIONS = "avatarDecorations", a.CLIENT_THEMES = "clientThemes", a.CLIPS = "clips", a.EARLY_ACCESS = "earlyAccess", a.ENTRANCE_SOUNDS = "entranceSounds", a.PROFILE_EFFECTS = "profileEffects", a.PROFILES = "profiles", a.REMIXING = "remixing", a.SERVER_BOOSTS = "serverBoosts", a.SPECIAL_MEMBER_PRICING = "specialMemberPricing", a.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = "specialMemberPricingSeeAllVariant", a.SPECIAL_SHOP_PERKS = "specialShopPerks", a.UNLIMITED_SUPER_REACTIONS = "unlimitedSuperReactions", a.SUPER_REACTIONS = "superReactions", a.UPCOMING_DROP_UNTIMED = "upcomingDropUntimed", a.CUSTOM_APP_ICONS = "customAppIcons", a.MORE_EMOJI_POWER = "moreEmojiPower", a.CUSTOM_SOUNDS_EVERYWHERE = "customSoundsEverywhere", a.SPECIAL_STICKER_ACCESS = "specialStickerAccess", a.LARGE_UPLOADS = "largeUploads", a.HD_VIDEO = "hdVideo", a.BADGE = "badge", a.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = "entranceSoundsSeeAllVariation", a.EARLY_ACCESS_SEE_ALL_VARIATION = "earlyAccessSeeAllVariant";
+(a = n || (n = {})).AVATAR_DECORATIONS = "avatarDecorations", a.CLIENT_THEMES = "clientThemes", a.CLIPS = "clips", a.EARLY_ACCESS = "earlyAccess", a.ENTRANCE_SOUNDS = "entranceSounds", a.PROFILE_EFFECTS = "profileEffects", a.PROFILES = "profiles", a.REMIXING = "remixing", a.SERVER_BOOSTS = "serverBoosts", a.SPECIAL_MEMBER_PRICING = "specialMemberPricing", a.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = "specialMemberPricingSeeAllVariant", a.SPECIAL_SHOP_PERKS = "specialShopPerks", a.UNLIMITED_SUPER_REACTIONS = "unlimitedSuperReactions", a.SUPER_REACTIONS = "superReactions", a.UPCOMING_DROP_UNTIMED = "upcomingDropUntimed", a.CUSTOM_APP_ICONS = "customAppIcons", a.MORE_EMOJI_POWER = "moreEmojiPower", a.CUSTOM_SOUNDS_EVERYWHERE = "customSoundsEverywhere", a.SPECIAL_STICKER_ACCESS = "specialStickerAccess", a.LARGE_UPLOADS = "largeUploads", a.HD_VIDEO = "hdVideo", a.BADGE = "badge", a.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = "entranceSoundsSeeAllVariation", a.EARLY_ACCESS_SEE_ALL_VARIATION = "earlyAccessSeeAllVariant";
 var X = () => {
   let {
     analyticsLocations: e
-  } = (0, d.default)(o.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = g.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.default)([T.default], () => T.default.getPremiumTypeSubscription()), r = null != a ? S.default.getPremiumPlanItem(a) : null, X = null != r ? S.default.getSkuIdForPlan(r.planId) : null, J = X === A.PremiumSubscriptionSKUs.TIER_2, {
+  } = (0, d.default)(o.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = g.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, r.default)([T.default], () => T.default.getPremiumTypeSubscription()), n = null != a ? S.default.getPremiumPlanItem(a) : null, X = null != n ? S.default.getSkuIdForPlan(n.planId) : null, J = X === A.PremiumSubscriptionSKUs.TIER_2, {
     flipped: Z
   } = (0, R.useWhatsNewAvatarDecoRollout)(), {
     flipped: q
@@ -63,7 +63,7 @@ var X = () => {
     scrollPosition: p.ProfileCustomizationScrollPositions.TRY_IT_OUT,
     analyticsLocations: e
   }), et = () => {
-    i.default.open(N.UserSettingsSections.VOICE, p.SOUNDBOARD_SUBSECTION, {
+    l.default.open(N.UserSettingsSections.VOICE, p.SOUNDBOARD_SUBSECTION, {
       openWithoutBackstack: !0,
       analyticsLocations: e
     })
@@ -83,7 +83,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: v,
       canReveal: Z,
-      dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
+      dismissibleContentType: i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     } : {
       name: "avatarDecorations",
       title: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
@@ -92,7 +92,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: v,
       canReveal: Z,
-      dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
+      dismissibleContentType: i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     },
     clientThemes: {
       name: "clientThemes",
@@ -101,7 +101,7 @@ var X = () => {
       description: g.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_DESCRIPTION,
       descriptionCta: g.default.Messages.TAKE_ME_THERE,
       onCtaClick: () => {
-        i.default.open(N.UserSettingsSections.APPEARANCE, null, {
+        l.default.open(N.UserSettingsSections.APPEARANCE, null, {
           openWithoutBackstack: !0,
           analyticsLocations: e
         })
@@ -116,7 +116,7 @@ var X = () => {
       descriptionCta: $ ? g.default.Messages.TAKE_ME_THERE : g.default.Messages.LEARN_MORE,
       pillText: g.default.Messages.EARLY_ACCESS,
       onCtaClick: $ ? () => {
-        i.default.open(N.UserSettingsSections.CLIPS, null, {
+        l.default.open(N.UserSettingsSections.CLIPS, null, {
           openWithoutBackstack: !0,
           analyticsLocations: e
         })
@@ -200,7 +200,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: H,
       canReveal: q,
-      dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
+      dismissibleContentType: i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
     } : {
       name: "profileEffects",
       title: g.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
@@ -209,7 +209,7 @@ var X = () => {
       pillText: g.default.Messages.EARLY_ACCESS,
       perkImage: H,
       canReveal: q,
-      dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
+      dismissibleContentType: i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
     },
     profiles: {
       name: "profiles",
@@ -242,7 +242,7 @@ var X = () => {
       description: g.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_DESCRIPTION,
       descriptionCta: g.default.Messages.TAKE_ME_THERE,
       onCtaClick: () => {
-        i.default.open(N.UserSettingsSections.GUILD_BOOSTING, null, {
+        l.default.open(N.UserSettingsSections.GUILD_BOOSTING, null, {
           openWithoutBackstack: !0,
           analyticsLocations: e
         })
