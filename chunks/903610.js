@@ -1,5 +1,6 @@
 "use strict";
 e.exports = {
+  bannerImage: "bannerImage__3f204",
   container: "container__662c9",
   giftButtonCTA: "giftButtonCTA__14013",
   giftCardButton: "giftCardButton__6b1bb",

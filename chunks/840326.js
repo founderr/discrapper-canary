@@ -60,7 +60,12 @@ var a = s("37983"),
               className: A.perksCards,
               isSubscriberNitroHome: !0
             }), (0, a.jsx)(I.default, {
-              className: A.giftNitro
+              className: A.giftNitro,
+              location: l.default.PREMIUM_MARKETING_GIFT_SECTION,
+              analyticsLocation: {
+                page: m.AnalyticsPages.NITRO_HOME,
+                section: m.AnalyticsSections.GIFT_BANNER
+              }
             }), (0, a.jsx)("div", {
               className: A.footerSpacing
             }), (0, a.jsx)(i.VisibilitySensor, {
