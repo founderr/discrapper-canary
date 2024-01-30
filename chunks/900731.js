@@ -398,5 +398,44 @@ var a = (0, r("237436").defineColorTokens)({
   },
   "redesign-button-overlay-alpha-text": {
     name: "white"
+  },
+  "redesign-button-selected-background": {
+    dark: {
+      color: "brand.500",
+      opacity: .24
+    },
+    darker: {
+      color: "brand.500",
+      opacity: .24
+    },
+    midnight: {
+      color: "brand.500",
+      opacity: .24
+    },
+    light: {
+      color: "brand.500",
+      opacity: .16
+    }
+  },
+  "redesign-button-selected-pressed-background": {
+    dark: {
+      color: "brand.500",
+      opacity: .28
+    },
+    darker: {
+      color: "brand.500",
+      opacity: .28
+    },
+    midnight: {
+      color: "brand.500",
+      opacity: .28
+    },
+    light: {
+      color: "brand.500",
+      opacity: .24
+    }
+  },
+  "redesign-button-selected-text": {
+    name: "brand"
   }
 })
