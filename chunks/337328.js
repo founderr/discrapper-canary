@@ -157,10 +157,30 @@ function Z(e) {
     return "string" != typeof n ? [void 0, void 0, V.StatusTypes.UNKNOWN, !1] : [null !== (e = x.default.findActivity(n, e => e.type !== V.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, x.default.findActivity(t.id, e => e.type === V.ActivityTypes.CUSTOM_STATUS), x.default.getStatus(n), x.default.isMobileOnline(n)]
   }), J = function(e, t) {
     let n = g.ExpiringStatusExperiment.useExperiment({
-      location: "account popout"
-    }).expiringStatus;
+        location: "account popout"
+      }).expiringStatus,
+      s = P.StatusExpiresAtSetting.useSetting(),
+      i = t => {
+        let n = null != s && "0" !== s ? W.default.Messages.STATUS_UNTIL.format({
+          endTime: new Date(Number(s)).toLocaleString(W.default.getLocale(), {
+            month: "numeric",
+            day: "numeric",
+            hour: "numeric",
+            minute: "2-digit"
+          })
+        }) : void 0;
+        if (e === t && null != n) return n;
+        switch (t) {
+          case V.StatusTypes.DND:
+            return W.default.Messages.STATUS_DND_HELP;
+          case V.StatusTypes.INVISIBLE:
+            return W.default.Messages.STATUS_INVISIBLE_HELPER;
+          default:
+            return
+        }
+      };
     return (0, a.jsxs)(a.Fragment, {
-      children: [Q(V.StatusTypes.ONLINE, e, t), (0, a.jsx)(f.MenuSeparator, {}, "menu-separator-statuses"), n ? q(V.StatusTypes.IDLE, e, t) : Q(V.StatusTypes.IDLE, e, t), n ? q(V.StatusTypes.DND, e, t, W.default.Messages.STATUS_DND_HELP) : Q(V.StatusTypes.DND, e, t, W.default.Messages.STATUS_DND_HELP), n ? q(V.StatusTypes.INVISIBLE, e, t, W.default.Messages.STATUS_INVISIBLE_HELPER) : Q(V.StatusTypes.INVISIBLE, e, t, W.default.Messages.STATUS_INVISIBLE_HELPER)]
+      children: [Q(V.StatusTypes.ONLINE, e, t), (0, a.jsx)(f.MenuSeparator, {}, "menu-separator-statuses"), n ? q(V.StatusTypes.IDLE, e, t, i(V.StatusTypes.IDLE)) : Q(V.StatusTypes.IDLE, e, t, i(V.StatusTypes.IDLE)), n ? q(V.StatusTypes.DND, e, t, i(V.StatusTypes.DND)) : Q(V.StatusTypes.DND, e, t, i(V.StatusTypes.DND)), n ? q(V.StatusTypes.INVISIBLE, e, t, i(V.StatusTypes.INVISIBLE)) : Q(V.StatusTypes.INVISIBLE, e, t, i(V.StatusTypes.INVISIBLE))]
     })
   }(Z, y), {
     ref: $
