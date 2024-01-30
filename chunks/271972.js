@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return s
   },
   default: function() {
-    return v
+    return x
   }
 });
 var l, s, n = a("37983"),
@@ -19,43 +19,43 @@ var l, s, n = a("37983"),
   p = a("645406"),
   f = a("49111"),
   g = a("782340"),
-  E = a("864147");
+  v = a("864147");
 
 function M(e) {
   e.stopPropagation()
-}(l = s || (s = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM";
-var v = i.forwardRef(function(e, t) {
+}(l = s || (s = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM", l[l.CLIP = 2] = "CLIP";
+var x = i.forwardRef(function(e, t) {
   let {
     id: a,
     channelId: l,
     className: s,
     children: i,
     actions: r,
-    handleEditModal: v,
-    keyboardModeEnabled: x,
-    onKeyDown: T,
+    handleEditModal: x,
+    keyboardModeEnabled: E,
+    onKeyDown: I,
     draftType: L,
-    size: j = 1
+    size: A = 1
   } = e, {
-    onFocus: A,
-    ...I
+    onFocus: S,
+    ...T
   } = (0, d.useListItem)(a), {
-    handleFocus: S,
-    handleBlur: N
-  } = (0, p.useFocusInside)(A), C = 0 === j, _ = null != r;
+    handleFocus: j,
+    handleBlur: C
+  } = (0, p.useFocusInside)(S), N = 0 === A, _ = null != r;
   return (0, n.jsx)(u.FocusRing, {
     children: (0, n.jsx)("li", {
-      ...I,
-      onFocus: S,
-      onBlur: N,
+      ...T,
+      onFocus: j,
+      onBlur: C,
       onKeyDown: e => {
-        if (x) {
+        if (E) {
           switch (e.which) {
             case f.KeyboardKeys.D:
               e.preventDefault(), c.default.remove(l, a, L);
               return;
             case f.KeyboardKeys.E:
-              null != v && (e.preventDefault(), v(e));
+              null != x && (e.preventDefault(), x(e));
               return;
             case f.KeyboardKeys.BACKSPACE:
               e.ctrlKey ? (e.preventDefault(), c.default.clearAll(l, L)) : (e.preventDefault(), c.default.remove(l, a, L));
@@ -67,24 +67,26 @@ var v = i.forwardRef(function(e, t) {
                 atEnd: !0
               })
           }
-          null == T || T(e)
+          null == I || I(e)
         }
       },
-      className: o(E.upload, s),
+      className: o(v.upload, s, {
+        [v.sizeClip]: 2 === A
+      }),
       ref: t,
       children: (0, n.jsxs)("div", {
-        className: E.uploadContainer,
+        className: v.uploadContainer,
         children: [i, _ ? (0, n.jsx)("div", {
-          className: E.actionBarContainer,
+          className: v.actionBarContainer,
           children: (0, n.jsx)("div", {
-            className: o(E.actionBar, {
-              [E.smallActionBar]: C
+            className: o(v.actionBar, {
+              [v.smallActionBar]: N
             }),
             onContextMenu: M,
             "aria-label": g.default.Messages.ATTACHMENT_UTILITIES,
             children: (0, n.jsx)(m.default, {
               className: o({
-                [E.miniPopover]: C
+                [v.miniPopover]: N
               }),
               children: r
             })

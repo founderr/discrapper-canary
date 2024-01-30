@@ -1,68 +1,65 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return f
+    return I
   }
 });
-var n = a("37983");
-a("884691");
-var l = a("866227"),
-  s = a.n(l),
-  i = a("446674"),
-  r = a("77078"),
-  o = a("442939"),
-  u = a("730859"),
-  d = a("697218"),
-  c = a("953109"),
-  m = a("449008"),
-  h = a("782340"),
-  g = a("127789"),
-  f = function(e) {
+var i = n("37983");
+n("884691");
+var l = n("414456"),
+  r = n.n(l),
+  a = n("866227"),
+  o = n.n(a),
+  s = n("446674"),
+  u = n("77078"),
+  c = n("442939"),
+  d = n("730859"),
+  f = n("697218"),
+  E = n("953109"),
+  _ = n("449008"),
+  p = n("782340"),
+  S = n("127789"),
+  I = function(e) {
     let {
-      attachment: t,
-      guildId: a
-    } = e, {
-      application: l,
-      clip_participants: f,
-      title: A
-    } = t, _ = (0, o.useGetOrFetchApplication)(null == l ? void 0 : l.id), x = (0, i.useStateFromStoresArray)([d.default], () => {
+      createdAt: t,
+      participantIds: n,
+      applicationId: l,
+      title: a,
+      guildId: I,
+      className: T
+    } = e, h = (0, c.useGetOrFetchApplication)(l), C = (0, s.useStateFromStoresArray)([f.default], () => {
       var e;
-      return null !== (e = null == f ? void 0 : f.map(e => {
-        let {
-          id: t
-        } = e;
-        return d.default.getUser(t)
-      }).filter(m.isNotNullish)) && void 0 !== e ? e : []
-    }), p = null == _ ? void 0 : _.name, M = s(t.clip_created_at).fromNow();
-    return null == t.clip_created_at ? null : (0, n.jsxs)("div", {
-      className: g.container,
-      children: [(0, n.jsx)(c.default, {
-        game: _
-      }), (0, n.jsxs)("div", {
-        className: g.textSection,
-        children: [null != A && "" !== A ? (0, n.jsx)(r.Text, {
+      return null !== (e = n.map(e => f.default.getUser(e)).filter(_.isNotNullish)) && void 0 !== e ? e : []
+    }), v = null == h ? void 0 : h.name, g = o(t).fromNow();
+    return null == t ? null : (0, i.jsxs)("div", {
+      className: r(T, S.container),
+      children: [(0, i.jsx)(E.default, {
+        game: h
+      }), (0, i.jsxs)("div", {
+        className: S.textSection,
+        children: [null != a && "" !== a ? (0, i.jsx)(u.Text, {
           variant: "text-md/semibold",
           color: "interactive-active",
-          children: A
-        }) : (0, n.jsx)(r.Text, {
+          children: a
+        }) : (0, i.jsx)(u.Text, {
           variant: "text-md/semibold",
           color: "text-muted",
-          children: h.default.Messages.CLIPS_UNTITLED
-        }), (0, n.jsxs)(r.Text, {
+          children: p.default.Messages.CLIPS_UNTITLED
+        }), (0, i.jsxs)(u.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          className: g.subtitle,
-          children: [null != p ? "".concat(p, " • ") : null, M]
-        }), (0, n.jsx)(r.Text, {
+          className: S.subtitle,
+          children: [null != v ? "".concat(v, " • ") : null, g]
+        }), (0, i.jsx)(u.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
-          className: g.subtitle
+          className: S.subtitle
         })]
-      }), null != f && f.length > 0 && (0, n.jsx)(u.default, {
+      }), null != C && C.length > 0 && (0, i.jsx)(d.default, {
         maxUsers: 4,
-        users: x,
-        className: g.facePile,
-        guildId: a
+        users: C,
+        className: S.facePile,
+        guildId: I
       })]
     })
   }
