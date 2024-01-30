@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 }), s("808653"), s("222007");
 var a = s("37983"),
-  r = s("884691"),
-  n = s("414456"),
-  l = s.n(n),
-  i = s("77078"),
+  n = s("884691"),
+  r = s("414456"),
+  i = s.n(r),
+  l = s("77078"),
   u = s("446674"),
   o = s("290381"),
   d = s("206230"),
@@ -28,63 +28,70 @@ var a = s("37983"),
   C = e => {
     let {
       isAllPerksVisible: t,
-      setIsAllPerksVisible: s
-    } = e, n = r.useRef(null), C = (0, R.default)(), P = Object.entries(C).reduce((e, t) => {
+      setIsAllPerksVisible: s,
+      previousComponent: r
+    } = e, C = n.useRef(null), P = (0, R.default)(), O = Object.entries(P).reduce((e, t) => {
       let [s, a] = t;
       return !1 !== a.canReveal && "upcomingDropUntimed" !== a.name && (e[s] = a), e
     }, {}), {
-      AnalyticsLocationProvider: O,
-      analyticsLocations: M
-    } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME), [h, L] = r.useState(!1), x = (0, E.default)("perks-discoverability"), v = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion);
-    return (0, a.jsx)(i.AdvancedScrollerAuto, {
-      className: l(p.allPerksScroller, {
+      AnalyticsLocationProvider: M,
+      analyticsLocations: h
+    } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME), [L, x] = n.useState(!1), v = (0, E.default)("perks-discoverability"), D = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion);
+    return (0, a.jsx)(l.AdvancedScrollerAuto, {
+      className: i(p.allPerksScroller, {
         [p.open]: t,
-        [p.openCloseReduceMotion]: v
+        [p.openCloseReduceMotion]: D
       }),
-      ref: n,
+      ref: C,
       children: (0, a.jsx)("div", {
         className: p.container,
-        children: (0, a.jsxs)(O, {
+        children: (0, a.jsxs)(M, {
           children: [(0, a.jsx)(f.default, {
             className: p.heroHeading,
-            onBackClick: () => s(!1)
+            onBackClick: () => {
+              s(!1), T.default.track(A.AnalyticEvents.NITRO_HOME_NAVIGATION, {
+                current_component: m.NitroLandingPages.SEE_ALL,
+                next_component: r,
+                interaction_component: "Back Button"
+              })
+            }
           }), (0, a.jsxs)("div", {
             className: p.column,
-            children: [(0, a.jsx)(i.Heading, {
+            children: [(0, a.jsx)(l.Heading, {
               variant: "heading-xxl/extrabold",
               color: "header-primary",
               className: p.heading,
               children: N.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE
             }), (0, a.jsx)(S.default, {
               className: p.cardCarousel,
-              cards: (0, m.getFilteredPerksDiscoverabilityCards)(P, m.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW, x),
+              cards: (0, m.getFilteredPerksDiscoverabilityCards)(O, m.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW, v),
               cardType: m.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW
-            }), (0, a.jsx)(i.Heading, {
+            }), (0, a.jsx)(l.Heading, {
               variant: "heading-xxl/extrabold",
               color: "header-primary",
               className: p.heading,
               children: N.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD
             }), (0, a.jsx)(S.default, {
               className: p.cardCarousel,
-              cards: (0, m.getFilteredPerksDiscoverabilityCards)(P, m.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW, x),
+              cards: (0, m.getFilteredPerksDiscoverabilityCards)(O, m.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW, v),
               cardType: m.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW
-            }), (0, a.jsx)(i.Heading, {
+            }), (0, a.jsx)(l.Heading, {
               variant: "heading-xxl/extrabold",
               color: "header-primary",
               className: p.heading,
               children: N.default.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
             }), (0, a.jsx)(S.default, {
               className: p.cardCarousel,
-              cards: (0, m.getFilteredPerksDiscoverabilityCards)(P, m.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW, x),
+              cards: (0, m.getFilteredPerksDiscoverabilityCards)(O, m.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW, v),
               cardType: m.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW
             })]
           }), (0, a.jsx)("div", {
             className: p.footerSpacing
           }), (0, a.jsx)(o.VisibilitySensor, {
             onChange: e => {
-              e && !h && (T.default.track(A.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                location_stack: M
-              }), L(!0))
+              e && !L && (T.default.track(A.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                location_stack: h
+              }), x(!0))
             },
             children: (0, a.jsx)("div", {
               className: p.bottomOfPageVisibilitySensor

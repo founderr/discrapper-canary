@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  r = s("884691"),
-  n = s("77078"),
-  l = s("290381"),
-  i = s("812204"),
+  n = s("884691"),
+  r = s("77078"),
+  i = s("290381"),
+  l = s("812204"),
   u = s("685665"),
   o = s("594098"),
   d = s("599110"),
@@ -24,18 +24,18 @@ var a = s("37983"),
   A = s("137537"),
   N = s("679324"),
   p = () => {
-    let e = r.useRef(null),
-      [t, s] = r.useState(!1),
+    let e = n.useRef(null),
+      [t, s] = n.useState(!1),
       {
         enabled: p
       } = (0, c.default)(),
       {
         AnalyticsLocationProvider: g,
         analyticsLocations: C
-      } = (0, u.default)(i.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
-      [P, O] = r.useState(!1);
+      } = (0, u.default)(l.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
+      [P, O] = n.useState(!1);
     return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(n.AdvancedScrollerAuto, {
+      children: [(0, a.jsx)(r.AdvancedScrollerAuto, {
         className: A.mainPageScroller,
         ref: e,
         children: (0, a.jsx)("div", {
@@ -53,7 +53,8 @@ var a = s("37983"),
               noBackground: !0,
               leftAlignHeaders: !0,
               showAllPerksButton: p ? (0, a.jsx)(R.default, {
-                setIsAllPerksVisible: s
+                setIsAllPerksVisible: s,
+                previousComponent: f.NitroLandingPages.HOME
               }) : void 0
             }), !p && (0, a.jsx)(_.default, {
               className: A.perksCards,
@@ -62,7 +63,7 @@ var a = s("37983"),
               className: A.giftNitro
             }), (0, a.jsx)("div", {
               className: A.footerSpacing
-            }), (0, a.jsx)(l.VisibilitySensor, {
+            }), (0, a.jsx)(i.VisibilitySensor, {
               onChange: e => {
                 e && !P && (d.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                   location_stack: C
@@ -82,7 +83,8 @@ var a = s("37983"),
         })
       }), p ? (0, a.jsx)(S.default, {
         isAllPerksVisible: t,
-        setIsAllPerksVisible: s
+        setIsAllPerksVisible: s,
+        previousComponent: f.NitroLandingPages.HOME
       }) : null]
     })
   }
