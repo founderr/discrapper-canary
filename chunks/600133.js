@@ -613,7 +613,7 @@ let eG = [eC.NoticeTypes.QUARANTINED, eC.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }).enabled && !eb(eC.NoticeTypes.ESLATAM_LANGUAGE_LAUNCH)
     },
     [eC.NoticeTypes.HABITUAL_DND]: {
-      predicate: () => v.default.showNagBar() && !w.QuietMode.getSetting() && P.QuietModeExperiment.getCurrentConfig({
+      predicate: () => v.default.showNagBar() && !w.QuietMode.getSetting() && w.StatusSetting.getSetting() === eO.StatusTypes.DND && P.QuietModeExperiment.getCurrentConfig({
         location: "notice_store"
       }).allowQuietMode
     }
