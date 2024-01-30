@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return k
+    return w
   }
 }), n("222007"), n("70102");
 var s = n("37983"),
@@ -14,170 +14,173 @@ var s = n("37983"),
   d = n("371642"),
   c = n("84339"),
   f = n("244201"),
-  h = n("871388"),
-  C = n("389153"),
-  p = n("56947"),
-  m = n("386045"),
-  E = n("734217"),
-  g = n("139321"),
-  S = n("562228"),
-  A = n("140596"),
-  _ = n("300322"),
-  T = n("845579"),
-  M = n("982108"),
-  I = n("778588"),
-  N = n("957255"),
-  v = n("101125"),
-  L = n("351825"),
-  x = n("738602"),
-  R = n("430025"),
-  y = n("659500"),
+  h = n("427953"),
+  C = n("871388"),
+  p = n("389153"),
+  m = n("56947"),
+  E = n("386045"),
+  g = n("734217"),
+  S = n("139321"),
+  A = n("562228"),
+  _ = n("140596"),
+  T = n("300322"),
+  M = n("845579"),
+  I = n("982108"),
+  N = n("778588"),
+  v = n("957255"),
+  L = n("101125"),
+  x = n("351825"),
+  R = n("738602"),
+  y = n("430025"),
+  O = n("659500"),
   D = n("773336"),
-  O = n("412861"),
-  j = n("79254"),
+  j = n("412861"),
+  b = n("79254"),
   P = n("64096"),
-  b = n("49111"),
-  H = n("80028"),
-  F = n("782340"),
-  U = n("381769"),
-  k = a.memo(function(e) {
-    var t, l;
-    let k, {
-        className: G,
-        channel: w,
-        draftType: B,
-        editorTextContent: V,
-        setValue: W,
-        canOnlyUseTextCommands: Z
+  H = n("49111"),
+  F = n("80028"),
+  U = n("782340"),
+  k = n("381769"),
+  w = a.memo(function(e) {
+    var t, l, w;
+    let G, {
+        className: B,
+        channel: V,
+        draftType: W,
+        editorTextContent: Z,
+        setValue: z,
+        canOnlyUseTextCommands: K
       } = e,
-      z = (0, f.useAppContext)(),
-      K = a.useRef(null),
-      Y = (0, r.useStateFromStores)([v.default], () => v.default.getActivities()),
-      q = (0, r.useStateFromStores)([m.default], () => m.default.getSettings().clipsEnabled),
-      X = (0, r.useStateFromStores)([m.default], () => m.default.getLastClipsSession()),
-      J = (0, r.useStateFromStoresArray)([m.default], () => m.default.getNewClipIds()),
-      Q = (0, r.useStateFromStores)([M.default], () => null == M.default.getCurrentSidebarChannelId(w.id)),
+      Y = (0, f.useAppContext)(),
+      q = a.useRef(null),
+      X = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
+      J = (0, r.useStateFromStores)([E.default], () => E.default.getSettings().clipsEnabled),
+      Q = (0, r.useStateFromStores)([E.default], () => E.default.getLastClipsSession()),
+      $ = (0, r.useStateFromStoresArray)([E.default], () => E.default.getNewClipIds()),
+      ee = (0, r.useStateFromStores)([I.default], () => null == I.default.getCurrentSidebarChannelId(V.id)),
       {
-        showClipsHeaderEntrypoint: $
-      } = p.ClipsExperiment.useExperiment({
+        showClipsHeaderEntrypoint: et
+      } = m.ClipsExperiment.useExperiment({
         location: "ChannelAttachButton"
       }, {
         autoTrackExposure: !1
       }),
-      ee = (0, r.useStateFromStores)([g.HotspotStore], () => g.HotspotStore.hasHotspot(g.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
-      et = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, H.CLIPS_GALLERY_MODAL_KEY)),
-      en = (0, r.useStateFromStores)([I.default], () => I.default.hasLayers()),
-      es = (0, r.useStateFromStores)([m.default], () => m.default.hasClips()),
-      [ea, el] = a.useState(null),
-      ei = (0, p.useEnableClips)() && (q || es),
-      er = w.isPrivate(),
-      eo = (0, r.useStateFromStores)([N.default], () => er || N.default.can(b.Permissions.ATTACH_FILES, w) && N.default.can(b.Permissions.SEND_MESSAGES, w)),
-      eu = (0, c.default)(X);
-    (null == eu ? void 0 : eu.newClipIds.length) !== (null == X ? void 0 : X.newClipIds.length) && (null !== (t = null == X ? void 0 : X.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ea && ee && Q && !et && !$ && !en && el("recentClips");
-    let ed = (e, t, n) => {
-      null != t && "ETOOLARGE" === t.code ? (0, O.showUploadFileSizeExceededError)(w, []) : (0, O.promptToUpload)(e, w, B, {
+      en = (0, r.useStateFromStores)([S.HotspotStore], () => S.HotspotStore.hasHotspot(S.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
+      es = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, F.CLIPS_GALLERY_MODAL_KEY)),
+      ea = (0, r.useStateFromStores)([N.default], () => N.default.hasLayers()),
+      el = (0, r.useStateFromStores)([E.default], () => E.default.hasClips()),
+      [ei, er] = a.useState(null),
+      eo = (0, m.useEnableClips)() && (J || el),
+      eu = V.isPrivate(),
+      ed = (0, r.useStateFromStores)([v.default], () => eu || v.default.can(H.Permissions.ATTACH_FILES, V) && v.default.can(H.Permissions.SEND_MESSAGES, V)),
+      ec = (0, c.default)(Q);
+    (null == ec ? void 0 : ec.newClipIds.length) !== (null == Q ? void 0 : Q.newClipIds.length) && (null !== (t = null == Q ? void 0 : Q.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ei && en && ee && !es && !et && !ea && er("recentClips");
+    let ef = (e, t, n) => {
+      null != t && "ETOOLARGE" === t.code ? (0, j.showUploadFileSizeExceededError)(V, []) : (0, j.promptToUpload)(e, V, W, {
         requireConfirm: !0,
         showLargeMessageDialog: n
-      }), y.ComponentDispatch.dispatchToLastSubscribed(b.ComponentActions.TEXTAREA_FOCUS)
+      }), O.ComponentDispatch.dispatchToLastSubscribed(H.ComponentActions.TEXTAREA_FOCUS)
     };
 
-    function ec() {
+    function eh() {
       (0, u.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("167573").then(n.bind(n, "167573"));
         return t => (0, s.jsx)(e, {
           ...t,
-          channelId: w.id
+          channelId: V.id
         })
       }, {
-        modalKey: H.CLIPS_GALLERY_MODAL_KEY
-      }), el(null)
+        modalKey: F.CLIPS_GALLERY_MODAL_KEY
+      }), er(null)
     }
     a.useEffect(() => {
       let e = () => {
         var e;
-        return null === (e = K.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+        return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
       };
-      return y.ComponentDispatch.subscribe(b.ComponentActions.UPLOAD_FILE, e), () => {
-        y.ComponentDispatch.unsubscribe(b.ComponentActions.UPLOAD_FILE, e)
+      return O.ComponentDispatch.subscribe(H.ComponentActions.UPLOAD_FILE, e), () => {
+        O.ComponentDispatch.unsubscribe(H.ComponentActions.UPLOAD_FILE, e)
       }
     });
-    let ef = (0, _.useCanStartPublicThread)(w),
-      eh = (0, _.useCanStartPrivateThread)(w),
-      eC = !T.UseLegacyChatInput.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
-      ep = (0, r.useStateFromStores)([N.default, A.default], () => (0, C.canUseApplicationCommands)(N.default, A.default, Z, w)),
-      em = (0, S.useCanPostPollsInChannel)(null != w ? w : void 0),
-      eE = (0, u.useRedesignIconContext)().enabled,
-      eg = null !== (l = null == J ? void 0 : J.length) && void 0 !== l ? l : 0,
-      eS = (0, P.default)({
-        canAttachFiles: eo,
-        canStartThreads: ef || eh,
-        useSlate: eC,
-        hasClips: ei,
-        canUseApplicationCommands: ep,
-        channel: w,
-        activities: Y,
-        newClipsCount: eg,
-        canPostPolls: em,
-        appContext: z
+    let eC = (0, T.useCanStartPublicThread)(V),
+      ep = (0, T.useCanStartPrivateThread)(V),
+      em = !M.UseLegacyChatInput.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
+      eE = (0, r.useStateFromStores)([v.default, _.default], () => (0, p.canUseApplicationCommands)(v.default, _.default, K, V)),
+      eg = (0, A.useCanPostPollsInChannel)(null != V ? V : void 0),
+      eS = (0, u.useRedesignIconContext)().enabled,
+      eA = (0, h.useActivitiesInTextButtonVisibility)(V.id, "ChannelAttachButton"),
+      e_ = null !== (l = null == $ ? void 0 : $.length) && void 0 !== l ? l : 0,
+      eT = (0, P.default)({
+        canAttachFiles: ed,
+        canStartThreads: eC || ep,
+        useSlate: em,
+        hasClips: eo,
+        canUseApplicationCommands: eE,
+        channel: V,
+        activities: X,
+        newClipsCount: e_,
+        canPostPolls: eg,
+        canLaunchActivities: null !== (w = null == eA ? void 0 : eA.showInOmniButtonMenu) && void 0 !== w && w,
+        appContext: Y
       });
-    if (0 === eS.length) return null;
-    let eA = Y.some(e => (0, h.default)(e, b.ActivityFlags.SYNC)),
-      e_ = Y.some(e => (0, h.default)(e, b.ActivityFlags.JOIN) && !(0, h.default)(e, b.ActivityFlags.EMBEDDED)) || eA;
-    k = eE ? (0, s.jsx)(o.CirclePlusIcon, {
-      className: U.attachButtonIcon,
-      colorClass: U.attachButtonPlus
-    }) : e_ ? (0, s.jsx)(R.default, {
-      className: U.attachButtonIcon,
-      foreground: U.attachButtonPlay,
-      background: U.attachButtonPlus,
+    if (0 === eT.length) return null;
+    let eM = X.some(e => (0, C.default)(e, H.ActivityFlags.SYNC)),
+      eI = X.some(e => (0, C.default)(e, H.ActivityFlags.JOIN) && !(0, C.default)(e, H.ActivityFlags.EMBEDDED)) || eM;
+    G = eS ? (0, s.jsx)(o.CirclePlusIcon, {
+      className: k.attachButtonIcon,
+      colorClass: k.attachButtonPlus
+    }) : eI ? (0, s.jsx)(y.default, {
+      className: k.attachButtonIcon,
+      foreground: k.attachButtonPlay,
+      background: k.attachButtonPlus,
       width: 24,
       height: 24
-    }) : eg > 0 ? (0, s.jsx)(x.default, {
-      className: U.attachButtonIcon,
-      foreground: U.attachButtonClip,
-      background: U.attachButtonPlus,
+    }) : e_ > 0 ? (0, s.jsx)(R.default, {
+      className: k.attachButtonIcon,
+      foreground: k.attachButtonClip,
+      background: k.attachButtonPlus,
       width: 24,
       height: 24
-    }) : (0, s.jsx)(L.default, {
-      className: U.attachButtonIcon,
-      foreground: U.attachButtonPlus,
+    }) : (0, s.jsx)(x.default, {
+      className: k.attachButtonIcon,
+      foreground: k.attachButtonPlus,
       width: 24,
       height: 24
     });
-    let eT = (0, s.jsx)(u.Popout, {
-      shouldShow: null != ea,
+    let eN = (0, s.jsx)(u.Popout, {
+      shouldShow: null != ei,
       animation: u.Popout.Animation.NONE,
-      align: "recentClips" === ea ? "center" : "left",
+      align: "recentClips" === ei ? "center" : "left",
       position: "top",
-      positionKey: null != ea ? ea : "null",
-      onRequestOpen: () => el("attachMenu"),
+      positionKey: null != ei ? ei : "null",
+      onRequestOpen: () => er("attachMenu"),
       onRequestClose: () => {
-        !(0, u.hasAnyModalOpen)() && el(null)
+        !(0, u.hasAnyModalOpen)() && er(null)
       },
       renderPopout: e => {
-        switch (ea) {
+        switch (ei) {
           case "recentClips":
-            return (0, s.jsx)(E.default, {
+            return (0, s.jsx)(g.default, {
               ...e,
-              onOpenClips: ec,
-              lastClipsSession: X
+              onOpenClips: eh,
+              lastClipsSession: Q
             });
           case "attachMenu":
-            return (0, s.jsx)(j.default, {
+            return (0, s.jsx)(b.default, {
               ...e,
-              onClose: () => el(null),
-              options: eS,
-              channel: w,
+              onClose: () => er(null),
+              options: eT,
+              channel: V,
               onFileUpload: () => {
                 var e;
-                return null === (e = K.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+                return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
               },
-              draftType: B,
-              editorTextContent: V,
-              setValue: W,
-              openClips: ec
+              draftType: W,
+              editorTextContent: Z,
+              setValue: z,
+              openClips: eh
             });
           default:
             throw Error("Invalid popout type provided")
@@ -186,32 +189,32 @@ var s = n("37983"),
       children: e => (0, s.jsx)(u.Button, {
         look: u.Button.Looks.BLANK,
         size: u.Button.Sizes.NONE,
-        className: i(U.attachButton, G),
-        innerClassName: U.attachButtonInner,
-        "aria-label": F.default.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
-        onDoubleClick: eo ? () => {
+        className: i(k.attachButton, B),
+        innerClassName: k.attachButtonInner,
+        "aria-label": U.default.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
+        onDoubleClick: ed ? () => {
           var e;
-          return null === (e = K.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+          return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
         } : void 0,
         ...e,
-        children: k
+        children: G
       })
     });
     return (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {
-        className: U.uploadInput,
+        className: k.uploadInput,
         children: (0, s.jsx)(d.default, {
-          ref: K,
+          ref: q,
           onChange: e => {
-            ed(e.currentTarget.files, e.currentTarget.err), e.currentTarget.value = ""
+            ef(e.currentTarget.files, e.currentTarget.err), e.currentTarget.value = ""
           },
-          multiple: w.rateLimitPerUser <= 0,
+          multiple: V.rateLimitPerUser <= 0,
           tabIndex: -1,
           "aria-hidden": !0
         })
       }), (0, s.jsx)("div", {
-        className: U.attachWrapper,
-        children: eT
+        className: k.attachWrapper,
+        children: eN
       })]
     })
   })

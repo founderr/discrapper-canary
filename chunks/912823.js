@@ -99,7 +99,7 @@ var b = i.memo(function(e) {
     let i = X || Q > 0,
       r = f.default.getRecipientEligibility(t);
     return [q && i && r, r]
-  }), $ = (0, u.useIsActivitiesInTextEnabled)(j.id, "ChannelTextAreaButtons");
+  }), $ = (0, u.useActivitiesInTextButtonVisibility)(j.id, "ChannelTextAreaButtons");
   return (!r.isMobile && (j.isDM() && (null === (y = L.gifts) || void 0 === y ? void 0 : y.button) != null && null == K && (g.default.isPremiumExactly(z, R.PremiumTypes.TIER_2) && J && m.default.trackExposure({
     location: "dc120b_5"
   }), Z && Y.push((0, l.jsx)(x.default, {
@@ -107,7 +107,7 @@ var b = i.memo(function(e) {
     referralsRemaining: Q,
     channel: j,
     isResending: X
-  }, "referral"))), $ && A.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(j.type) && null == K && (null === (I = L.commands) || void 0 === I ? void 0 : I.enabled) && Y.push((0, l.jsx)(C.default, {
+  }, "referral"))), (null == $ ? void 0 : $.showChatInputButton) && A.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(j.type) && null == K && (null === (I = L.commands) || void 0 === I ? void 0 : I.enabled) && Y.push((0, l.jsx)(C.default, {
     disabled: U,
     channel: j,
     type: L
