@@ -75,7 +75,7 @@ async function w(e) {
     R[i] = e, T.default.track(U.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
       channel_id: l.id,
       guild_id: l.getGuildId(),
-      media_session_id: e.mediaSessionId,
+      media_session_id: null == e ? void 0 : e.mediaSessionId,
       activity_session_id: e.activitySessionId,
       application_id: i,
       location_stack: n,
@@ -140,9 +140,10 @@ function B(e) {
     {
       application_id: I
     } = l,
-    A = (0, O.default)(l);
-  null != I && null != A && null != c && (null === (t = F[I]) || void 0 === t || t.call(F, {
-    mediaSessionId: c,
+    A = (0, O.default)(l),
+    T = null == c && (null == s ? void 0 : s.isVocal()) === !0;
+  null != I && null != A && !T && (null === (t = F[I]) || void 0 === t || t.call(F, {
+    mediaSessionId: null != c ? c : null,
     activitySessionId: A
   }), delete F[I])
 }
