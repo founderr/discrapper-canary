@@ -324,7 +324,7 @@ class Q extends n.PureComponent {
       title: w.default.Messages.NOTIFICATIONS,
       children: [(0, a.jsx)(X, {}), (0, a.jsx)(u.FormSwitch, {
         className: Y.marginBottom20,
-        value: e !== k.DesktopNotificationTypes.NEVER,
+        value: e !== k.DesktopNotificationTypes.NEVER && !c,
         onChange: this.handleDesktopChange,
         note: w.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
         disabled: c,
