@@ -1,22 +1,31 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return r
   }
 });
-var l = n("862205");
-let a = (0, l.createExperiment)({
+var n = s("862205");
+let a = (0, n.createExperiment)({
   kind: "guild",
   id: "2023-09_recurring_events",
   label: "Allows guild to create recurring events",
   defaultConfig: {
-    enabled: !1
+    showRecurringEventsDesktop: !1,
+    showRecurringEventsMobile: !1
   },
   treatments: [{
     id: 1,
-    label: "Recurring Events are enabled",
+    label: "Recurring Events are enabled (Desktop Only)",
     config: {
-      enabled: !0
+      showRecurringEventsDesktop: !0,
+      showRecurringEventsMobile: !1
+    }
+  }, {
+    id: 2,
+    label: "Recurring Events are enabled on Mobile + Desktop",
+    config: {
+      showRecurringEventsDesktop: !0,
+      showRecurringEventsMobile: !0
     }
   }]
 });

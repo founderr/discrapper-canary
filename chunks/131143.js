@@ -58,7 +58,7 @@ function f(e) {
 function h(e) {
   let t = (0, r.default)(e),
     {
-      enabled: n
+      showRecurringEventsDesktop: n
     } = i.default.useExperiment({
       guildId: e,
       location: "guild_sidebar"
