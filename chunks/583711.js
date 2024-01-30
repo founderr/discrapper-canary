@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   openGiftCodeAcceptModal: function() {
-    return E
+    return f
   }
 });
 var s = n("37983");
@@ -15,11 +15,11 @@ var l = n("77078"),
   d = n("646718"),
   c = n("49111");
 
-function E(e) {
+function f(e) {
   let {
     processedCode: t,
-    channelContext: E,
-    customGiftMessage: f,
+    channelContext: f,
+    customGiftMessage: E,
     giftInfo: _
   } = e, T = !1, I = null, m = a.default.getCurrentUser(), N = (0, o.isPremiumAtLeast)(null == m ? void 0 : m.premiumType, d.PremiumTypes.TIER_0);
   (0, l.openModalLazy)(async () => {
@@ -30,8 +30,8 @@ function E(e) {
       var l, a;
       return (0, s.jsx)(e, {
         code: t,
-        channelContext: E,
-        customGiftMessage: f,
+        channelContext: f,
+        customGiftMessage: E,
         emojiName: null == _ ? void 0 : null === (l = _.emoji) || void 0 === l ? void 0 : l.name,
         soundId: null == _ ? void 0 : null === (a = _.sound) || void 0 === a ? void 0 : a.id,
         onComplete: (e, t) => {

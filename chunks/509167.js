@@ -18,8 +18,8 @@ function d(e) {
     applicationId: t,
     skuId: d,
     onClose: c,
-    onComplete: E,
-    analyticsLocations: f,
+    onComplete: f,
+    analyticsLocations: E,
     analyticsLocationObject: _,
     contextKey: T
   } = e, I = !1, m = (0, l.v4)();
@@ -37,13 +37,13 @@ function d(e) {
         loadId: m,
         applicationId: t,
         skuId: d,
-        analyticsLocations: f,
+        analyticsLocations: E,
         analyticsLocationObject: _,
         onClose: e => {
           l(), null == c || c(e)
         },
         onComplete: e => {
-          I = !0, null == E || E(e)
+          I = !0, null == f || f(e)
         }
       })
     }
@@ -56,7 +56,7 @@ function d(e) {
         location: _,
         is_gift: !1,
         application_id: t,
-        location_stack: f
+        location_stack: E
       }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == c || c(I)
     },
     onCloseRequest: u.NOOP

@@ -13,16 +13,16 @@ var s = n("37983"),
   u = n("272030"),
   d = n("997289"),
   c = n("860285"),
-  E = n("86878"),
-  f = n("568307"),
+  f = n("86878"),
+  E = n("568307"),
   _ = n("535974"),
   T = n("181114"),
   I = n("837899"),
   m = n("773336"),
   N = n("780009"),
   p = n("49111"),
-  S = n("782340"),
-  A = n("743317");
+  A = n("782340"),
+  S = n("743317");
 class C extends l.PureComponent {
   get analyticsLocation() {
     return {
@@ -35,13 +35,13 @@ class C extends l.PureComponent {
       dispatchState: e
     } = this.props, t = null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1;
     return t ? (0, s.jsxs)(o.Clickable, {
-      "aria-label": S.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
-      className: A.dropdownArrowHitbox,
+      "aria-label": A.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
+      className: S.dropdownArrowHitbox,
       onClick: this.handleDropdownClick,
       children: [(0, s.jsx)("div", {
-        className: A.arrowSeparator
+        className: S.arrowSeparator
       }), (0, s.jsx)(I.default, {
-        className: A.dropdownArrow
+        className: S.dropdownArrow
       })]
     }) : null
   }
@@ -54,19 +54,19 @@ class C extends l.PureComponent {
       tooltipPosition: r
     } = this.props;
     return (0, s.jsxs)("div", {
-      className: A.disabledButtonWrapper,
+      className: S.disabledButtonWrapper,
       children: [(0, s.jsx)(o.Button, {
         className: n,
         fullWidth: l,
         size: a,
-        color: null != i ? i : A.disabledButtonColor,
+        color: null != i ? i : S.disabledButtonColor,
         disabled: !0,
         children: e
       }), (0, s.jsx)(o.Tooltip, {
         text: t,
         position: r,
         children: e => (0, s.jsx)("div", {
-          className: A.disabledButtonOverlay,
+          className: S.disabledButtonOverlay,
           ...e
         })
       })]
@@ -84,12 +84,12 @@ class C extends l.PureComponent {
       isShiny: d,
       hideNotLaunchable: c
     } = this.props;
-    if (!a) return c ? null : this.renderDisabledButton(S.default.Messages.GAME_ACTION_BUTTON_PLAY, m.isPlatformEmbedded ? S.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : S.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
-    if (u) return this.renderDisabledButton(S.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
-    let E = d ? T.default : o.Button;
-    return (0, s.jsxs)(E, {
-      className: i(A.playButton, e),
-      innerClassName: A.playButtonContents,
+    if (!a) return c ? null : this.renderDisabledButton(A.default.Messages.GAME_ACTION_BUTTON_PLAY, m.isPlatformEmbedded ? A.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : A.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
+    if (u) return this.renderDisabledButton(A.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
+    let f = d ? T.default : o.Button;
+    return (0, s.jsxs)(f, {
+      className: i(S.playButton, e),
+      innerClassName: S.playButtonContents,
       fullWidth: t,
       size: n,
       color: null != l ? l : o.Button.Colors.GREEN,
@@ -97,8 +97,8 @@ class C extends l.PureComponent {
       submitting: r,
       onClick: this.handleClick,
       children: [(0, s.jsx)("div", {
-        className: A.buttonText,
-        children: S.default.Messages.GAME_ACTION_BUTTON_PLAY
+        className: S.buttonText,
+        children: A.default.Messages.GAME_ACTION_BUTTON_PLAY
       }), this.renderDropdown()]
     })
   }
@@ -145,7 +145,7 @@ function h(e) {
   let {
     applicationId: t,
     libraryApplication: n
-  } = e, l = (0, d.useAnalyticsContext)(), [a, i] = (0, r.useStateFromStoresArray)([E.default, c.default, _.default], () => [E.default.isConnected(t) || c.default.isLaunchable(t) || null != n && _.default.isLaunchable(n.id, n.branchId), c.default.launchingGames.has(t)], [t, n]), o = (0, r.useStateFromStores)([f.default], () => new Set(f.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, r.useStateFromStores)([_.default], () => null != n ? _.default.getState(n.id, n.branchId) : null, [n]);
+  } = e, l = (0, d.useAnalyticsContext)(), [a, i] = (0, r.useStateFromStoresArray)([f.default, c.default, _.default], () => [f.default.isConnected(t) || c.default.isLaunchable(t) || null != n && _.default.isLaunchable(n.id, n.branchId), c.default.launchingGames.has(t)], [t, n]), o = (0, r.useStateFromStores)([E.default], () => new Set(E.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, r.useStateFromStores)([_.default], () => null != n ? _.default.getState(n.id, n.branchId) : null, [n]);
   return (0, s.jsx)(C, {
     ...e,
     analyticsContext: l,

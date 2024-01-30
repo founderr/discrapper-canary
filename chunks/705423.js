@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SafetyPolicyNotice: function() {
-    return f
+    return E
   }
 });
 var s = n("37983");
@@ -14,14 +14,14 @@ var l = n("866227"),
   u = n("170213"),
   d = n("782340"),
   c = n("234995");
-let E = e => a().diff(a.unix(e), "days");
+let f = e => a().diff(a.unix(e), "days");
 
-function f(e) {
-  var t, l, a, f, _;
+function E(e) {
+  var t, l, a, E, _;
   if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
   let T = e.message.embeds[0],
     I = null !== (a = null === (t = T.fields) || void 0 === t ? void 0 : t.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.CLASSIFICATION_ID)) && void 0 !== a ? a : void 0,
-    m = null !== (f = null == I ? void 0 : I.rawValue) && void 0 !== f ? f : void 0,
+    m = null !== (E = null == I ? void 0 : I.rawValue) && void 0 !== E ? E : void 0,
     N = null !== (_ = null === (l = T.fields) || void 0 === l ? void 0 : l.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.INCIDENT_TIMESTAMP)) && void 0 !== _ ? _ : void 0,
     p = null == N || null == N.rawValue ? void 0 : parseFloat(N.rawValue);
   return null == m || null == p ? null : (0, s.jsxs)(o.Clickable, {
@@ -55,7 +55,7 @@ function f(e) {
         children: (0, s.jsx)(o.Text, {
           variant: "text-xs/medium",
           children: d.default.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
-            daysAgo: E(p)
+            daysAgo: f(p)
           })
         })
       }), (0, s.jsx)("div", {

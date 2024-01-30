@@ -13,16 +13,16 @@ var s = n("37983"),
   u = n("974667"),
   d = n("733724"),
   c = n("446674"),
-  E = n("77078"),
-  f = n("206230"),
+  f = n("77078"),
+  E = n("206230"),
   _ = n("228944"),
   T = n("201131"),
   I = n("928098"),
   m = n("702873"),
   N = n("537325"),
   p = n("95045"),
-  S = n("909917"),
-  A = n("380986"),
+  A = n("909917"),
+  S = n("380986"),
   C = n("969706"),
   h = n("957255"),
   g = n("697218"),
@@ -136,7 +136,7 @@ function W(e) {
         return i
       }
     }(t, l, n);
-    return (0, s.jsx)(E.Tooltip, {
+    return (0, s.jsx)(f.Tooltip, {
       text: a,
       children: t => K(e, t)
     })
@@ -178,7 +178,7 @@ function Z(e) {
     isFocused: U,
     handleFocus: j,
     handleBlur: K
-  } = (0, A.useFocusInside)(R), W = (0, c.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), Z = (0, c.useStateFromStores)([h.default], () => h.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
+  } = (0, S.useFocusInside)(R), W = (0, c.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), Z = (0, c.useStateFromStores)([h.default], () => h.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
     ruleName: J,
     embedChannel: Q,
     decisionId: X,
@@ -201,7 +201,7 @@ function Z(e) {
     } = (0, C.default)(e.id, k.DEFAULT_POPOUTS), {
       usernameProfile: i,
       avatarProfile: r
-    } = n, o = (0, A.useContextMenuUser)(e.author.id, t.id), u = (0, A.useContextMenuModerateUser)(e.author.id, t.id, e.id), d = (0, A.useClickMessageAuthorUsername)(e, t, i, a), c = (0, A.useClickMessageAuthorAvatar)(r, a), E = l.useCallback(() => a({
+    } = n, o = (0, S.useContextMenuUser)(e.author.id, t.id), u = (0, S.useContextMenuModerateUser)(e.author.id, t.id, e.id), d = (0, S.useClickMessageAuthorUsername)(e, t, i, a), c = (0, S.useClickMessageAuthorAvatar)(r, a), f = l.useCallback(() => a({
       usernameProfile: !1,
       avatarProfile: !1,
       referencedUsernameProfile: !1
@@ -212,8 +212,8 @@ function Z(e) {
       onContextMenuModerateUser: u,
       onClickUsername: d,
       onClickAvatar: c,
-      onPopoutRequestClose: E,
-      renderPopout: S.default,
+      onPopoutRequestClose: f,
+      renderPopout: A.default,
       showAvatarPopout: r,
       showUsernamePopout: i
     }
@@ -223,14 +223,14 @@ function Z(e) {
     null != et && null != Q && (e.stopPropagation(), e.preventDefault(), (0, N.default)(G.Routes.CHANNEL(null == Q ? void 0 : Q.guild_id, null == Q ? void 0 : Q.id, et)))
   }, [Q, et]), ec = l.useCallback(() => {
     (0, m.executeAlertAction)(a.id, r, _.AutomodAlertActionType.DELETE_USER_MESSAGE)
-  }, [r, a.id]), eE = l.useMemo(() => (0, T.getActionHeaderText)(a, Q, () => (0, s.jsx)("div", {
+  }, [r, a.id]), ef = l.useMemo(() => (0, T.getActionHeaderText)(a, Q, () => (0, s.jsx)("div", {
     className: H.channelNameContainer,
     children: (0, s.jsx)(P.default, {
       channel: Q,
       className: H.channelName,
       openChatWithoutConnecting: !0
     })
-  })), [a, Q]), ef = (0, F.getFriendlyDurationString)(Number(en)), e_ = null != es, eT = Z && null != et && (null == el || !el.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
+  })), [a, Q]), eE = (0, F.getFriendlyDurationString)(Number(en)), e_ = null != es, eT = Z && null != et && (null == el || !el.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
   return (0, s.jsx)("div", {
     onMouseEnter: g,
     onMouseLeave: O,
@@ -255,7 +255,7 @@ function Z(e) {
           }),
           username: (0, s.jsxs)("div", {
             className: H.spanCorrection,
-            children: [(0, s.jsx)(E.Text, {
+            children: [(0, s.jsx)(f.Text, {
               variant: "text-md/normal",
               color: "text-brand",
               tag: "span",
@@ -264,12 +264,12 @@ function Z(e) {
             }), (0, s.jsx)(M.default, {
               type: B.BotTagTypes.SYSTEM_DM,
               className: H.systemTag
-            }), (0, s.jsx)(E.Text, {
+            }), (0, s.jsx)(f.Text, {
               variant: "text-md/normal",
               color: "header-primary",
               tag: "span",
               className: H.spanCorrection,
-              children: eE
+              children: ef
             })]
           }),
           compact: n,
@@ -295,7 +295,7 @@ function Z(e) {
               children: [(0, s.jsxs)("div", {
                 className: H.centeredRowContainer,
                 children: [null != $ && (0, s.jsxs)(s.Fragment, {
-                  children: [(0, s.jsx)(E.Text, {
+                  children: [(0, s.jsx)(f.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
                     tag: "span",
@@ -305,29 +305,29 @@ function Z(e) {
                   }), (0, s.jsx)("div", {
                     className: i(H.dot, H.dotMargin)
                   })]
-                }), null != J && (0, s.jsx)(E.Text, {
+                }), null != J && (0, s.jsx)(f.Text, {
                   variant: "text-xs/medium",
                   color: "text-muted",
                   tag: "span",
                   children: w.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_RULE_NAME.format({
                     ruleName: J
                   })
-                }), null != ef && (0, s.jsxs)(s.Fragment, {
+                }), null != eE && (0, s.jsxs)(s.Fragment, {
                   children: [(0, s.jsx)("div", {
                     className: i(H.dot, H.dotMargin)
-                  }), (0, s.jsx)(E.Text, {
+                  }), (0, s.jsx)(f.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
                     tag: "span",
                     className: H.footerText,
                     children: w.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_TIMEOUT_DURATION.format({
-                      duration: ef
+                      duration: eE
                     })
                   })]
                 }), null != ea && (0, s.jsxs)(s.Fragment, {
                   children: [(0, s.jsx)("div", {
                     className: i(H.dot, H.dotMargin)
-                  }), (0, s.jsx)(E.Text, {
+                  }), (0, s.jsx)(f.Text, {
                     variant: "text-xs/medium",
                     color: "text-muted",
                     tag: "span",
@@ -338,7 +338,7 @@ function Z(e) {
                   })]
                 })]
               }), e_ ? (0, s.jsx)(Y, {
-                children: (0, s.jsx)(E.Text, {
+                children: (0, s.jsx)(f.Text, {
                   variant: "text-xs/medium",
                   color: "text-normal",
                   tag: "span",
@@ -358,14 +358,14 @@ function Z(e) {
             className: i(H.centeredRowContainer, H.buttonContainer, {
               [H.compact]: n
             }),
-            children: [(0, s.jsx)(E.Button, {
+            children: [(0, s.jsx)(f.Button, {
               onClick: e => {
                 var t;
                 null === (t = eo.onContextMenuModerateUser) || void 0 === t || t.call(eo, e)
               },
-              color: E.Button.Colors.LINK,
-              look: E.Button.Looks.LINK,
-              size: E.Button.Sizes.SMALL,
+              color: f.Button.Colors.LINK,
+              look: f.Button.Looks.LINK,
+              size: f.Button.Sizes.SMALL,
               className: H.buttonStyle,
               children: (0, s.jsxs)("div", {
                 className: H.footerAction,
@@ -374,7 +374,7 @@ function Z(e) {
                   height: 16,
                   color: d.default.BLUE_345,
                   className: H.footerIcon
-                }), (0, s.jsx)(E.Text, {
+                }), (0, s.jsx)(f.Text, {
                   variant: "text-xs/normal",
                   color: "text-link",
                   children: w.default.Messages.ACTIONS
@@ -382,15 +382,15 @@ function Z(e) {
               })
             }), (0, s.jsx)("div", {
               className: H.dot
-            }), (0, s.jsx)(E.Button, {
+            }), (0, s.jsx)(f.Button, {
               onClick: eu,
-              color: E.Button.Colors.LINK,
-              look: E.Button.Looks.LINK,
-              size: E.Button.Sizes.SMALL,
+              color: f.Button.Colors.LINK,
+              look: f.Button.Looks.LINK,
+              size: f.Button.Sizes.SMALL,
               className: H.buttonStyle,
               children: (0, s.jsx)("div", {
                 className: H.footerAction,
-                children: (0, s.jsx)(E.Text, {
+                children: (0, s.jsx)(f.Text, {
                   variant: "text-xs/normal",
                   color: "text-link",
                   children: w.default.Messages.GUILD_AUTOMOD_REPORT_ISSUES
@@ -399,15 +399,15 @@ function Z(e) {
             }), eT ? (0, s.jsxs)(s.Fragment, {
               children: [(0, s.jsx)("div", {
                 className: H.dot
-              }), (0, s.jsx)(E.Button, {
+              }), (0, s.jsx)(f.Button, {
                 onClick: ec,
-                color: E.Button.Colors.LINK,
-                look: E.Button.Looks.LINK,
-                size: E.Button.Sizes.SMALL,
+                color: f.Button.Colors.LINK,
+                look: f.Button.Looks.LINK,
+                size: f.Button.Sizes.SMALL,
                 className: H.buttonStyle,
                 children: (0, s.jsx)("div", {
                   className: H.footerAction,
-                  children: (0, s.jsx)(E.Text, {
+                  children: (0, s.jsx)(f.Text, {
                     variant: "text-xs/normal",
                     color: "text-link",
                     children: w.default.Messages.GUILD_AUTOMOD_ALERT_DELETE_MEMBERS_MESSAGE

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return S
   }
 }), n("222007");
 var s = n("37983"),
@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("850391"),
   d = n("41170"),
   c = n("300322"),
-  E = n("26989"),
-  f = n("957255"),
+  f = n("26989"),
+  E = n("957255"),
   _ = n("697218"),
   T = n("599110"),
   I = n("718422"),
@@ -30,20 +30,20 @@ function p(e) {
   return t[l]
 }
 
-function S(e) {
+function A(e) {
   let {
     currentUser: t,
     channel: n,
     message: a,
     buttonLabels: i,
     stickers: c,
-    event: E,
-    eventProperties: f
-  } = e, [_, m] = l.useState(!1), S = l.useMemo(() => p({
+    event: f,
+    eventProperties: E
+  } = e, [_, m] = l.useState(!1), A = l.useMemo(() => p({
     assets: c,
     currentUser: t,
     message: a
-  }), [c, t, a]), A = l.useMemo(() => p({
+  }), [c, t, a]), S = l.useMemo(() => p({
     assets: i,
     currentUser: t,
     message: a
@@ -70,7 +70,7 @@ function S(e) {
     }({
       channel: n,
       message: a,
-      sticker: S
+      sticker: A
     }), ! function(e) {
       let {
         sticker: t,
@@ -82,11 +82,11 @@ function S(e) {
         sticker_id: t.id
       })
     }({
-      sticker: S,
-      event: E,
-      eventProperties: f
+      sticker: A,
+      event: f,
+      eventProperties: E
     }))
-  }, [n, a, S, E, f]);
+  }, [n, a, A, f, E]);
   return (0, s.jsxs)(r.Button, {
     className: N.CTAMessageButtonOuter,
     innerClassName: N.CTAMessageButton,
@@ -97,13 +97,13 @@ function S(e) {
     children: [(0, s.jsx)(d.default, {
       className: N.CTAMessageSticker,
       isInteracting: _,
-      sticker: S,
+      sticker: A,
       size: 28
-    }), A]
+    }), S]
   })
 }
 
-function A(e) {
+function S(e) {
   let {
     channel: t,
     message: n,
@@ -117,13 +117,13 @@ function A(e) {
       message: n,
       currentUser: s
     } = e;
-    return (0, i.useStateFromStores)([f.default, E.default], () => {
+    return (0, i.useStateFromStores)([E.default, f.default], () => {
       var e;
       let l = t.guild_id;
       if (null == s || null == l) return !1;
       let a = (0, c.computeIsReadOnlyThread)(t),
-        i = f.default.can(m.Permissions.SEND_MESSAGES, t),
-        r = null === (e = E.default.getMember(l, s.id)) || void 0 === e ? void 0 : e.isPending,
+        i = E.default.can(m.Permissions.SEND_MESSAGES, t),
+        r = null === (e = f.default.getMember(l, s.id)) || void 0 === e ? void 0 : e.isPending,
         o = n.author.bot;
       return i && !a && !r && !o
     })
@@ -134,7 +134,7 @@ function A(e) {
   });
   return null != u && d ? (0, s.jsx)("div", {
     className: N.CTAMessage,
-    children: (0, s.jsx)(S, {
+    children: (0, s.jsx)(A, {
       currentUser: u,
       channel: t,
       message: n,

@@ -14,8 +14,8 @@ var l = n("414456"),
   u = n("93332"),
   d = n("304198"),
   c = n("250375"),
-  E = n("49111"),
-  f = n("988268"),
+  f = n("49111"),
+  E = n("988268"),
   _ = n("782340"),
   T = n("413362");
 
@@ -28,9 +28,9 @@ function I(e) {
     avatarSrc: N,
     eventHandlers: {
       onMouseEnter: p,
-      onMouseLeave: S
+      onMouseLeave: A
     }
-  } = (0, c.useAutomodAvatar)(!0), A = "" !== t.content ? new Date(t.content).toLocaleString(_.default.getLocale(), {
+  } = (0, c.useAutomodAvatar)(!0), S = "" !== t.content ? new Date(t.content).toLocaleString(_.default.getLocale(), {
     hour: "numeric",
     minute: "2-digit",
     month: "2-digit",
@@ -39,7 +39,7 @@ function I(e) {
   }) : "";
   return (0, s.jsx)("div", {
     onMouseEnter: p,
-    onMouseLeave: S,
+    onMouseLeave: A,
     children: (0, s.jsx)(d.default, {
       className: a(T.mainContainer, {
         [T.compact]: n
@@ -68,7 +68,7 @@ function I(e) {
               className: T.username,
               children: _.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(o.default, {
-              type: f.BotTagTypes.SYSTEM_DM,
+              type: E.BotTagTypes.SYSTEM_DM,
               className: T.systemTag
             })]
           }),
@@ -78,10 +78,10 @@ function I(e) {
           className: a(T.messageContent, {
             [T.compact]: n
           }),
-          children: t.type === E.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? _.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
+          children: t.type === f.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? _.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
             username: I.nick,
             usernameHook: m,
-            time: A
+            time: S
           }) : _.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_SYSTEM_MESSAGE.format({
             username: I.nick,
             usernameHook: m

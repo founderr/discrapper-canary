@@ -9,16 +9,16 @@ var s, l, a, i, r = n("37983"),
   u = n("414456"),
   d = n.n(u),
   c = n("516555"),
-  E = n("748820"),
-  f = n("617258"),
+  f = n("748820"),
+  E = n("617258"),
   _ = n("769846"),
   T = n("77078"),
   I = n("79112"),
   m = n("526887"),
   N = n("574073"),
   p = n("28007"),
-  S = n("367594"),
-  A = n("273108"),
+  A = n("367594"),
+  S = n("273108"),
   C = n("118503"),
   h = n("659186"),
   g = n("304198"),
@@ -51,7 +51,7 @@ let v = {
 };
 (i = l || (l = {})).TOP_LEFT = "TOP_LEFT", i.TOP_RIGHT = "TOP_RIGHT", i.BOTTOM_LEFT = "BOTTOM_LEFT", i.BOTTOM_RIGHT = "BOTTOM_RIGHT";
 let P = ["TOP_LEFT", "TOP_RIGHT"],
-  D = (0, f.cssValueToNumber)(_.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
+  D = (0, E.cssValueToNumber)(_.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
   x = {
     leafPosition: {
       x: 85,
@@ -145,8 +145,8 @@ function k(e) {
     }
   }()), {
     createMultipleConfettiAt: u,
-    confettiCanvas: f
-  } = o.useContext(m.ConfettiCannonContext), [_, T] = o.useState(null), I = (0, c.useConfettiCannon)(f, _), N = function(e, t) {
+    confettiCanvas: E
+  } = o.useContext(m.ConfettiCannonContext), [_, T] = o.useState(null), I = (0, c.useConfettiCannon)(E, _), N = function(e, t) {
     if (null == e) return "enter";
     switch (e) {
       case "enter":
@@ -161,7 +161,7 @@ function k(e) {
       case "exit":
         return "enter"
     }
-  }(s, i), p = P.includes(i), S = p && "exit" === s, C = o.useCallback(e => {
+  }(s, i), p = P.includes(i), A = p && "exit" === s, C = o.useCallback(e => {
     a(e)
   }, []), h = o.useCallback(() => {
     "exit" === s && t()
@@ -202,7 +202,7 @@ function k(e) {
     if (p && "leaf_fall" === s) {
       let e = y[i].leafRotationDirection;
       I.createConfetti({
-        id: "".concat(U, "-").concat((0, E.v4)()),
+        id: "".concat(U, "-").concat((0, f.v4)()),
         position: {
           type: "static",
           value: function(e, t) {
@@ -256,14 +256,14 @@ function k(e) {
       colors: j,
       spriteWidth: 45,
       spriteHeight: 45
-    }), (0, r.jsx)(A.default, {
+    }), (0, r.jsx)(S.default, {
       animationRef: g,
       className: d(L.easterEggAnimation, {
         [L.easterEggAnimationTopLeft]: "TOP_LEFT" === i,
         [L.easterEggAnimationTopRight]: "TOP_RIGHT" === i,
         [L.easterEggAnimationBottomLeft]: "BOTTOM_LEFT" === i,
         [L.easterEggAnimationBottomRight]: "BOTTOM_RIGHT" === i,
-        [L.easterEggAnimationHideLeaf]: S
+        [L.easterEggAnimationHideLeaf]: A
       }),
       nextScene: N,
       sceneSegments: v,
@@ -294,13 +294,13 @@ function w(e) {
       }
       return null
     }(n),
-    d = (0, S.default)(n),
+    d = (0, A.default)(n),
     {
       createMultipleConfettiAt: c,
-      addClickListener: E
+      addClickListener: f
     } = o.useContext(m.ConfettiCannonContext),
-    [f, _] = o.useState(!1),
-    A = o.useRef(null),
+    [E, _] = o.useState(!1),
+    S = o.useRef(null),
     {
       reducedMotion: v
     } = o.useContext(T.AccessibilityPreferencesContext),
@@ -328,13 +328,13 @@ function w(e) {
   });
   let y = o.useCallback(() => {
       if (!v.enabled) {
-        if (f || 0 !== Math.floor(50 * Math.random())) {
+        if (E || 0 !== Math.floor(50 * Math.random())) {
           var e;
-          let t = null === (e = A.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+          let t = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
           if (null != t) c(t.left + t.width / 2, t.top + t.height / 2)
         } else _(!0)
       }
-    }, [c, v, f]),
+    }, [c, v, E]),
     j = o.useCallback(() => {
       _(!1)
     }, []),
@@ -344,12 +344,12 @@ function w(e) {
       }), I.default.open(O.UserSettingsSections.POGGERMODE))
     }, []);
   o.useEffect(() => {
-    let e = E(b);
+    let e = f(b);
     return e
   });
   let G = (0, r.jsx)(T.Clickable, {
     className: L.iconWrapper,
-    innerRef: A,
+    innerRef: S,
     onClick: i,
     children: (0, r.jsx)(C.default, {
       className: L.icon,
@@ -364,7 +364,7 @@ function w(e) {
       onClick: i,
       className: L.message,
       children: t
-    }), f ? (0, r.jsx)(h.default, {
+    }), E ? (0, r.jsx)(h.default, {
       children: (0, r.jsx)("div", {
         className: L.cannonWrapper,
         children: (0, r.jsx)(k, {

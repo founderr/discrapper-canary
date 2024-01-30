@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("811425"),
   d = n("102873"),
   c = n("738107"),
-  E = n("875978"),
-  f = n("350134"),
+  f = n("875978"),
+  E = n("350134"),
   _ = n("550244"),
   T = n("314934");
 let I = l.memo(function(e) {
@@ -26,20 +26,20 @@ let I = l.memo(function(e) {
         count: m,
         me: N,
         me_burst: p,
-        burst_count: S,
-        burst_colors: A,
+        burst_count: A,
+        burst_colors: S,
         readOnly: C,
         isLurking: h,
         isGuest: g,
         isPendingMember: M,
         type: O
       } = e,
-      R = O === E.ReactionTypes.BURST,
-      L = (0, f.isMeReaction)(N, p, O),
-      v = (0, d.useEmojiColorPalette)(R && null != A ? A : []),
+      R = O === f.ReactionTypes.BURST,
+      L = (0, E.isMeReaction)(N, p, O),
+      v = (0, d.useEmojiColorPalette)(R && null != S ? S : []),
       P = l ? T : _,
-      D = R ? S : m,
-      x = (0, c.getMinCounterWidth)(D, f.REACTION_MIN_WIDTH_DIGITS),
+      D = R ? A : m,
+      x = (0, c.getMinCounterWidth)(D, E.REACTION_MIN_WIDTH_DIGITS),
       y = {};
     if (R && null != v) {
       var U;
@@ -85,7 +85,7 @@ let I = l.memo(function(e) {
       e && !i && !o && d(() => {
         r(!0)
       })
-    }, [i, o]), _ = (0, u.useIsVisible)(c), T = (!i || o) && !t, m = T ? I : f.Reaction;
+    }, [i, o]), _ = (0, u.useIsVisible)(c), T = (!i || o) && !t, m = T ? I : E.Reaction;
     return (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {
         ref: _
@@ -94,7 +94,7 @@ let I = l.memo(function(e) {
         return (0, s.jsx)(m, {
           ...a,
           ...e
-        }, (t = e, "".concat(t.type === E.ReactionTypes.BURST ? "burst:" : "").concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ":").concat(t.emoji.name)))
+        }, (t = e, "".concat(t.type === f.ReactionTypes.BURST ? "burst:" : "").concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ":").concat(t.emoji.name)))
       })]
     })
   })

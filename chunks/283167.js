@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return h
   },
   addGuildCategory: function() {
-    return T
+    return C
   },
   deleteGuildCategory: function() {
-    return C
+    return T
   }
 });
 var r = n("872717"),
@@ -212,8 +212,8 @@ async function h(e) {
         keywords: E,
         emoji_discoverability_enabled: I,
         partner_actioned_timestamp: h,
-        partner_application_timestamp: T,
-        is_published: C,
+        partner_application_timestamp: C,
+        is_published: T,
         reasons_to_join: g,
         social_links: S,
         about: A
@@ -227,8 +227,8 @@ async function h(e) {
         keywords: E,
         emojiDiscoverabilityEnabled: I,
         partnerActionedTimestamp: h,
-        partnerApplicationTimestamp: T,
-        isPublished: C,
+        partnerApplicationTimestamp: C,
+        isPublished: T,
         reasonsToJoin: g,
         socialLinks: S,
         about: A
@@ -243,7 +243,7 @@ async function h(e) {
   }
 }
 
-function T(e, t) {
+function C(e, t) {
   r.default.put({
     url: l.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
     oldFormErrors: !0
@@ -262,7 +262,7 @@ function T(e, t) {
   })
 }
 
-function C(e, t) {
+function T(e, t) {
   r.default.delete({
     url: l.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
     oldFormErrors: !0

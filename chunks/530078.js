@@ -14,8 +14,8 @@ var l = n("498574"),
   u = n("266926"),
   d = n("568734"),
   c = n("427459"),
-  E = n("665618"),
-  f = n("605953"),
+  f = n("665618"),
+  E = n("605953"),
   _ = n("793079"),
   T = n("49111"),
   I = n("782340"),
@@ -23,7 +23,7 @@ var l = n("498574"),
 
 function N(e) {
   var t, N;
-  let p, S, A, {
+  let p, A, S, {
       onTransitionToInviteChannel: C,
       onAcceptInstantInvite: h,
       guild: g,
@@ -47,12 +47,12 @@ function N(e) {
     F = null !== (N = null == g ? void 0 : g.hasFeature(T.GuildFeatures.HUB)) && void 0 !== N && N;
   if (null == g) {
     if (null == M.guild) return (0, s.jsx)(_.default, {});
-    g = E.fromInviteGuild(M.guild);
+    g = f.fromInviteGuild(M.guild);
     let e = (0, c.getGuildTierFromAppliedBoostCount)(M.guild.premium_subscription_count, M.guild.id);
     g.premiumTier = e
   }
   let k = U ? C : h,
-    w = (0, f.getHeaderTextForInvite)({
+    w = (0, E.getHeaderTextForInvite)({
       isVoiceChannel: b,
       isOwnInvite: L,
       isGuest: B,
@@ -60,7 +60,7 @@ function N(e) {
       isStage: G,
       isStream: !1
     });
-  return S = (0, s.jsxs)("span", {
+  return A = (0, s.jsxs)("span", {
     className: m.infoTitle,
     children: [(0, s.jsx)(o.default.GuildName, {
       guild: g
@@ -72,13 +72,13 @@ function N(e) {
         disableBoostClick: !0
       })
     })]
-  }), B && (A = (0, s.jsx)(a.TooltipContainer, {
+  }), B && (S = (0, s.jsx)(a.TooltipContainer, {
     className: m.tooltipContainer,
     text: I.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
     children: (0, s.jsx)(u.default, {
       className: m.infoIcon
     })
-  })), b ? (S = (0, s.jsx)(o.default.Channel, {
+  })), b ? (A = (0, s.jsx)(o.default.Channel, {
     channel: y
   }), p = (0, s.jsxs)("span", {
     className: m.infoTitle,
@@ -102,14 +102,14 @@ function N(e) {
       guild: g
     }), (0, s.jsx)(o.default.Header, {
       text: w,
-      extra: A
+      extra: S
     }), (0, s.jsxs)(o.default.Body, {
       children: [(0, s.jsxs)("div", {
         className: m.headerLine,
         children: [(0, s.jsx)(o.default.Icon, {
           guild: g
         }), (0, s.jsx)(o.default.Info, {
-          title: S,
+          title: A,
           onClick: U ? k : null,
           children: p
         })]

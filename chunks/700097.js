@@ -13,8 +13,8 @@ var s = n("933805"),
   u = n("950576"),
   d = n("719926"),
   c = n("271938"),
-  E = n("42203"),
-  f = n("305961"),
+  f = n("42203"),
+  E = n("305961"),
   _ = n("697218"),
   T = n("387111"),
   I = n("299039"),
@@ -25,11 +25,11 @@ let p = {
     "365975655608745985": "https://www.pokecord.com/getting-started",
     "512412940897484800": "http://jameslantz.net/smilebot"
   },
-  S = () => [N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013_HOOK],
-  A = () => [N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013];
+  A = () => [N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012_HOOK, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013_HOOK],
+  S = () => [N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012, N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013];
 
 function C(e) {
-  let t = A(),
+  let t = S(),
     n = I.default.extractTimestamp(e) % t.length;
   return t[n]
 }
@@ -42,9 +42,9 @@ function h(e) {
 }
 
 function g(e, t) {
-  let n = E.default.getChannel(t);
+  let n = f.default.getChannel(t);
   if (null == n) return h(e);
-  let l = f.default.getGuild(n.getGuildId());
+  let l = E.default.getGuild(n.getGuildId());
   return null == l ? h(e) : (0, s.astToString)(N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED.astFormat({
     username: e,
     usernameOnClick: m.NOOP
@@ -52,9 +52,9 @@ function g(e, t) {
 }
 var M = {
   stringify: function(e, t) {
-    var n, I, p, S;
-    let A = null === (n = e.mentions) || void 0 === n ? void 0 : n[0],
-      M = null != A && "string" != typeof A ? _.default.getUser(A.id) : void 0,
+    var n, I, p, A;
+    let S = null === (n = e.mentions) || void 0 === n ? void 0 : n[0],
+      M = null != S && "string" != typeof S ? _.default.getUser(S.id) : void 0,
       O = e.channel_id,
       R = T.default.getName(null, O, e.author);
     switch (e.type) {
@@ -155,15 +155,15 @@ var M = {
           username: (0, o.getMessageAuthor)((0, r.createMessageRecord)(e)).nick
         }));
       case m.MessageTypes.AUTO_MODERATION_ACTION:
-        if (null === (S = e.embeds) || void 0 === S ? void 0 : S.some(e => {
+        if (null === (A = e.embeds) || void 0 === A ? void 0 : A.some(e => {
             let {
               type: t
             } = e;
             return t === m.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION
           })) return function(e) {
-          let t = E.default.getChannel(e);
+          let t = f.default.getChannel(e);
           if (null == t) return null;
-          let n = f.default.getGuild(t.getGuildId());
+          let n = E.default.getGuild(t.getGuildId());
           return null == n ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_RAID_ALERT_NOTIFICATION.astFormat({
             guildName: n.name
           }))
@@ -171,9 +171,9 @@ var M = {
         return e.content;
       case m.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED:
         return function(e, t, n) {
-          let l = E.default.getChannel(t);
+          let l = f.default.getChannel(t);
           if (null == l) return null;
-          let a = f.default.getGuild(l.getGuildId());
+          let a = E.default.getGuild(l.getGuildId());
           return null == a ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_NOTIFICATION.astFormat({
             username: e,
             guildName: a.name,
@@ -185,9 +185,9 @@ var M = {
         }(R, O, e.content);
       case m.MessageTypes.GUILD_INCIDENT_ALERT_MODE_DISABLED:
         return function(e, t) {
-          let n = E.default.getChannel(t);
+          let n = f.default.getChannel(t);
           if (null == n) return null;
-          let l = f.default.getGuild(n.getGuildId());
+          let l = E.default.getGuild(n.getGuildId());
           return null == l ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_NOTIFICATION.astFormat({
             username: e,
             guildName: l.name
@@ -198,7 +198,7 @@ var M = {
     }
   },
   getSystemMessageUserJoin: function(e) {
-    let t = S(),
+    let t = A(),
       n = I.default.extractTimestamp(e) % t.length;
     return t[n]
   },

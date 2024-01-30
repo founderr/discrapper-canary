@@ -12,8 +12,8 @@ var r = n("913144"),
   u = n("525065"),
   d = n("305961"),
   c = n("957255"),
-  E = n("162771"),
-  f = n("697218"),
+  f = n("162771"),
+  E = n("697218"),
   _ = n("49111");
 let T = {
     hiddenSurveys: {},
@@ -26,7 +26,7 @@ let T = {
 (l = s || (s = {})).IS_OWNER = "is_owner", l.IS_ADMIN = "is_admin", l.IS_COMMUNITY = "is_community", l.GUILD_SIZE = "guild_size", l.IS_HUB = "is_hub", l.IS_VIEWING = "is_viewing", l.GUILD_PERMISSIONS = "guild_permissions", l.GUILD_SIZE_ALL = "guild_size_all";
 let p = new Set(Object.values(s));
 
-function S(e) {
+function A(e) {
   let {
     guild_requirements: t = [],
     guild_size: n = [null, null],
@@ -59,35 +59,35 @@ function S(e) {
       } catch (e) {}
       if (!e) continue
     }
-    let r = f.default.getCurrentUser(),
+    let r = E.default.getCurrentUser(),
       d = (null == r ? void 0 : r.id) === o.ownerId,
       T = c.default.can(_.Permissions.ADMINISTRATOR, o);
     if (t.includes("is_owner") && !d || t.includes("is_admin") && !T) continue;
     null == (m = null != m ? m : {})[e.key] && (m[e.key] = e);
-    let I = E.default.getGuildId(),
+    let I = f.default.getGuildId(),
       N = null != I && I === o.id;
     if ((!t.includes("is_viewing") || N) && !l) return !0
   }
   return !!l && !!i || !1
 }
 
-function A(e) {
+function S(e) {
   let {
     survey: t
   } = e;
   if (I.lastFetched = Date.now(), null != t && null == I.hiddenSurveys[t.key]) {
-    if (!S(t)) return;
+    if (!A(t)) return;
     N = t
   }
 }
 
 function C() {
-  if (null != N && (S(N) || (N = null, 0))) return !1;
+  if (null != N && (A(N) || (N = null, 0))) return !1;
   ! function() {
     m = null != m ? m : {};
     let e = Object.values(m)[0];
-    if (null != e && S(e)) {
-      A({
+    if (null != e && A(e)) {
+      S({
         type: "SURVEY_FETCHED",
         survey: e
       });
@@ -99,7 +99,7 @@ function C() {
 }
 class h extends i.default.PersistedStore {
   initialize(e) {
-    I = null != e ? e : T, this.syncWith([E.default], C)
+    I = null != e ? e : T, this.syncWith([f.default], C)
   }
   getState() {
     return I
@@ -122,7 +122,7 @@ var g = new h(r.default, {
     var e;
     if (!(null != I.lastFetched && Date.now() - (null !== (e = I.lastFetched) && void 0 !== e ? e : 0) < 864e5) || null != I.surveyOverride)(0, o.surveyFetch)(I.surveyOverride)
   },
-  SURVEY_FETCHED: A,
+  SURVEY_FETCHED: S,
   SURVEY_HIDE: function(e) {
     let {
       key: t

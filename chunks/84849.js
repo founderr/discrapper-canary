@@ -17,8 +17,8 @@ function c(e) {
   let {
     messageId: t,
     channelId: c
-  } = e, E = (0, a.useStateFromStores)([u.default], () => u.default.canSubmitFpReport(t)), f = l.useCallback(() => {
-    if (!E) {
+  } = e, f = (0, a.useStateFromStores)([u.default], () => u.default.canSubmitFpReport(t)), E = l.useCallback(() => {
+    if (!f) {
       r.default.show({
         title: d.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_HEADER,
         body: d.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY,
@@ -35,12 +35,12 @@ function c(e) {
         ...n
       })
     })
-  }, [c, t, E]);
+  }, [c, t, f]);
   return (0, s.jsx)(i.Button, {
     size: i.Button.Sizes.MEDIUM,
     color: i.Button.Colors.PRIMARY,
-    onClick: f,
-    disabled: !E,
+    onClick: E,
+    disabled: !f,
     children: d.default.Messages.SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE
   })
 }

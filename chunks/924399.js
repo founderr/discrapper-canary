@@ -14,8 +14,8 @@ var l = n("414456"),
   u = n("305961"),
   d = n("79798"),
   c = n("93332"),
-  E = n("304198"),
-  f = n("250375"),
+  f = n("304198"),
+  E = n("250375"),
   _ = n("988268"),
   T = n("782340"),
   I = n("413362");
@@ -27,21 +27,21 @@ function m(e) {
     compact: l,
     usernameHook: m,
     channel: N
-  } = e, p = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(N.guild_id)), S = (0, o.default)(n), A = m(S), {
+  } = e, p = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(N.guild_id)), A = (0, o.default)(n), S = m(A), {
     avatarSrc: C,
     eventHandlers: {
       onMouseEnter: h,
       onMouseLeave: g
     }
-  } = (0, f.useAutomodAvatar)(!0);
+  } = (0, E.useAutomodAvatar)(!0);
   return (0, s.jsx)("div", {
     onMouseEnter: h,
     onMouseLeave: g,
-    children: (0, s.jsx)(E.default, {
+    children: (0, s.jsx)(f.default, {
       className: a(I.mainContainer, {
         [I.compact]: l
       }),
-      iconNode: l ? null : (0, s.jsx)(f.AutomodAvatar, {
+      iconNode: l ? null : (0, s.jsx)(E.AutomodAvatar, {
         src: C
       }),
       iconContainerClassName: I.iconContainer,
@@ -76,8 +76,8 @@ function m(e) {
             [I.compact]: l
           }),
           children: T.default.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
-            username: S.nick,
-            usernameHook: A,
+            username: A.nick,
+            usernameHook: S,
             guildName: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : ""
           })
         })]

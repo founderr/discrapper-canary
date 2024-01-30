@@ -14,8 +14,8 @@ var l = n("65597"),
   u = n("306160"),
   d = n("442379"),
   c = n("757515"),
-  E = n("727411"),
-  f = n("492724"),
+  f = n("727411"),
+  E = n("492724"),
   _ = n("928576"),
   T = n("739726"),
   I = n("358404"),
@@ -27,8 +27,8 @@ function N(e) {
     guildProductListing: n,
     guildId: N,
     location: p,
-    shouldShowFullDescriptionButton: S = !0,
-    hideRoleTag: A = !1,
+    shouldShowFullDescriptionButton: A = !0,
+    hideRoleTag: S = !1,
     lineClamp: C = 1,
     cardWidth: h,
     cardHeight: g,
@@ -54,7 +54,7 @@ function N(e) {
       showDeleteProduct: !1,
       showReportProduct: !0,
       onEditProduct: x ? () => {
-        E.openModal(L.id, n.id)
+        f.openModal(L.id, n.id)
       } : () => {},
       onUnpublishProduct: () => {},
       onDeleteProduct: () => {},
@@ -68,7 +68,7 @@ function N(e) {
       },
       onTestDownload: () => {}
     });
-  return (0, s.jsx)(f.default, {
+  return (0, s.jsx)(E.default, {
     imageUrl: P,
     name: n.name,
     description: n.description,
@@ -80,12 +80,12 @@ function N(e) {
       sourceAnalyticsLocations: p
     }),
     productType: D,
-    shouldShowFullDescriptionButton: S,
+    shouldShowFullDescriptionButton: A,
     onShowFullDescription: j,
     onTapCard: j,
     actionMenu: b,
     showOpaqueBackground: R,
-    hideRoleTag: A,
+    hideRoleTag: S,
     lineClamp: C,
     cardWidth: h,
     cardHeight: g,

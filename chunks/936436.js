@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   WelcomeCTAContainer: function() {
-    return S
+    return A
   }
 }), n("222007");
 var s = n("37983"),
@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("300322"),
   d = n("26989"),
   c = n("305961"),
-  E = n("957255"),
-  f = n("697218"),
+  f = n("957255"),
+  E = n("697218"),
   _ = n("718422"),
   T = n("825150"),
   I = n("49111"),
@@ -54,15 +54,15 @@ let p = e => {
       })
     })
   },
-  S = e => {
+  A = e => {
     let {
       message: t,
       channel: n
-    } = e, l = n.getGuildId(), i = (0, a.useStateFromStores)([f.default, E.default, c.default, d.default], () => {
+    } = e, l = n.getGuildId(), i = (0, a.useStateFromStores)([E.default, f.default, c.default, d.default], () => {
       var e;
-      let s = f.default.getCurrentUser(),
+      let s = E.default.getCurrentUser(),
         a = (0, u.computeIsReadOnlyThread)(n),
-        i = E.default.can(I.Permissions.SEND_MESSAGES, n),
+        i = f.default.can(I.Permissions.SEND_MESSAGES, n),
         r = null != l && null != s && (null === (e = d.default.getMember(l, s.id)) || void 0 === e ? void 0 : e.isPending),
         o = t.author.bot,
         _ = c.default.getGuild(l),

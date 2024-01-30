@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var s = n("37983");
@@ -15,7 +15,7 @@ var l = n("627445"),
   d = n("42203"),
   c = n("25116");
 
-function E(e, t) {
+function f(e, t) {
   if ((0, r.isPublicSystemMessage)(t)) return (0, s.jsx)(o.default, {});
   if ((0, c.default)(t)) {
     let {

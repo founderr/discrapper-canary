@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return S
   }
 }), n("794252");
 var s = n("37983"),
@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("77078"),
   d = n("847511"),
   c = n("619544"),
-  E = n("74232"),
-  f = n("316350"),
+  f = n("74232"),
+  E = n("316350"),
   _ = n("909366"),
   T = n("879958");
 
@@ -68,7 +68,7 @@ function p(e) {
   } = e, {
     actionButtonRef: i,
     manageFocusOnAction: r
-  } = (0, f.usePollFocusManager)(), o = l.useCallback(async () => {
+  } = (0, E.usePollFocusManager)(), o = l.useCallback(async () => {
     (null == t ? void 0 : t.type) != null && (await d.default.handlePollActionTapped({
       channelId: n,
       messageId: a,
@@ -89,12 +89,12 @@ function p(e) {
   })
 }
 
-function S(e) {
+function A(e) {
   let {
     message: t,
     poll: n,
     className: l
-  } = e, a = (0, E.useStyleClass)(n.containerStyle), d = function(e, t) {
+  } = e, a = (0, f.useStyleClass)(n.containerStyle), d = function(e, t) {
     let n = {
       answers: t.answers,
       answersInteraction: t.answersInteraction,
@@ -132,17 +132,17 @@ function S(e) {
   })
 }
 
-function A(e) {
+function S(e) {
   let {
     message: t,
     poll: n,
     className: l
   } = e;
-  return (0, s.jsx)(E.PollContextProvider, {
+  return (0, s.jsx)(f.PollContextProvider, {
     message: t,
     poll: n,
-    children: (0, s.jsx)(f.PollFocusManager, {
-      children: (0, s.jsx)(S, {
+    children: (0, s.jsx)(E.PollFocusManager, {
+      children: (0, s.jsx)(A, {
         message: t,
         poll: n,
         className: l

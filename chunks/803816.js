@@ -13,16 +13,16 @@ var s = n("37983"),
   u = n("968194"),
   d = n("658457"),
   c = n("286509"),
-  E = n("676223"),
-  f = n("407908"),
+  f = n("676223"),
+  E = n("407908"),
   _ = n("649486"),
   T = n("860285"),
   I = n("769791"),
   m = n("662285"),
   N = n("866253"),
   p = n("981601"),
-  S = n("671071"),
-  A = n("766274"),
+  A = n("671071"),
+  S = n("766274"),
   C = n("86878"),
   h = n("925758"),
   g = n("26989"),
@@ -50,11 +50,11 @@ class B extends l.PureComponent {
       isPreview: s,
       message: l
     } = this.props;
-    if (null != n && (s || null != l && (0, E.default)(e, l, n.id))) {
+    if (null != n && (s || null != l && (0, f.default)(e, l, n.id))) {
       let t = (0, c.default)(e, n.id);
       if (null != t) return t
     }
-    return null == n || n instanceof S.default ? null : D.default.getApplicationIconURL({
+    return null == n || n instanceof A.default ? null : D.default.getApplicationIconURL({
       id: n.id,
       icon: null != t ? t.coverImage : n.coverImage,
       size: b.ACTIVITY_INVITE_COVER_IMAGE_SIZE
@@ -101,7 +101,7 @@ class B extends l.PureComponent {
           applicationId: e.application_id,
           channelId: l,
           messageId: s.id
-        }), (0, f.default)({
+        }), (0, E.default)({
           type: j.AnalyticsGameOpenTypes.JOIN,
           source: j.AnalyticsLocations.MESSAGE_EMBED,
           userId: n,
@@ -185,8 +185,8 @@ class B extends l.PureComponent {
         isSender: u,
         activityActionType: d,
         className: c,
-        channelId: E,
-        message: f,
+        channelId: f,
+        message: E,
         hideParty: _,
         isSyncable: T,
         isLaunchable: I,
@@ -213,9 +213,9 @@ class B extends l.PureComponent {
         isInBrowser: !x.isPlatformEmbedded,
         isSyncable: T,
         isSender: u,
-        channelId: E,
+        channelId: f,
         guildId: null != m ? m : void 0,
-        message: f,
+        message: E,
         hideParty: _,
         onJoin: this.handleJoin,
         onInvite: this.handleInvite,
@@ -251,7 +251,7 @@ var F = a.default.connectStores([m.default, h.default, O.default, M.default, T.d
         n = null != t ? t.nick : null,
         s = R.default.getUser(e),
         l = null == s;
-      return null == s && (s = new A.default({
+      return null == s && (s = new S.default({
         discriminator: "0005"
       })), {
         user: s,
@@ -259,16 +259,16 @@ var F = a.default.connectStores([m.default, h.default, O.default, M.default, T.d
         nick: n
       }
     }),
-    E = null != t && m.default.canPlay(t),
-    f = m.default.getSyncingWith(),
-    _ = null != f && null != a && f.userId === a;
+    f = null != t && m.default.canPlay(t),
+    E = m.default.getSyncingWith(),
+    _ = null != E && null != a && E.userId === a;
   return {
     analyticsLocations: n,
     partyMembers: c,
     connectedApplication: null != r ? C.default.getApplication(r) : null,
     myPartyId: null != u && null != u.party ? u.party.id : null,
     isLaunching: d,
-    isSyncable: E && !_,
+    isSyncable: f && !_,
     isLaunchable: null != r && (0, y.isLaunchable)({
       LibraryApplicationStore: M.default,
       LaunchableGameStore: T.default,

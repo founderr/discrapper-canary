@@ -17,16 +17,16 @@ var l = n("627445"),
   u = n("427495"),
   d = n("73961"),
   c = n("465527"),
-  E = n("55620"),
-  f = n("775433"),
+  f = n("55620"),
+  E = n("775433"),
   _ = n("524503"),
   T = n("333955"),
   I = n("308592"),
   m = n("846286"),
   N = n("509167"),
   p = n("292687"),
-  S = n("929479"),
-  A = n("697218"),
+  A = n("929479"),
+  S = n("697218"),
   C = n("357957"),
   h = n("521012"),
   g = n("552712"),
@@ -64,12 +64,12 @@ async function v(e) {
     context: d
   } = e, c = g.default.get(n);
   if (null == c) {
-    let e = await (0, E.fetchAllStoreListingsForApplication)(t),
+    let e = await (0, f.fetchAllStoreListingsForApplication)(t),
       s = e.find(e => e.sku.id === n);
     a(null != s, "Could not find store listing for sku"), s.sku.type === O.SKUTypes.SUBSCRIPTION_GROUP && await (0, _.fetchAllSubscriptionListingsDataForApplication)(t, s.id)
-  }(null == (c = null != c ? c : g.default.get(n)) ? void 0 : c.type) === O.SKUTypes.SUBSCRIPTION && !(0, I.getSubscriptionPlansLoaded)([c.id]) && await (0, f.fetchSubscriptionPlansForSKU)(c.id);
+  }(null == (c = null != c ? c : g.default.get(n)) ? void 0 : c.type) === O.SKUTypes.SUBSCRIPTION && !(0, I.getSubscriptionPlansLoaded)([c.id]) && await (0, E.fetchSubscriptionPlansForSKU)(c.id);
   let p = L(),
-    C = A.default.getCurrentUser();
+    C = S.default.getCurrentUser();
   if (null != c && c.premium) {
     if (M.default.canInstallPremiumApplications(C)) return R(c, d);
     await u.openModal(d), await
@@ -91,9 +91,9 @@ async function v(e) {
         };
         switch (l) {
           case O.AppContext.APP:
-            return S.default.openPremiumPaymentModalInApp(t);
+            return A.default.openPremiumPaymentModalInApp(t);
           case O.AppContext.OVERLAY:
-            return S.default.openPremiumPaymentModalInOverlay(t);
+            return A.default.openPremiumPaymentModalInOverlay(t);
           default:
             throw Error("Unexpected app context: ".concat(l))
         }
@@ -148,8 +148,8 @@ function D(e, t, l) {
   let {
     isIAP: d,
     context: c,
-    promotionId: E,
-    isGift: f
+    promotionId: f,
+    isGift: E
   } = {
     ...P,
     ...a
@@ -160,9 +160,9 @@ function D(e, t, l) {
       applicationId: e,
       skuId: t,
       isIAP: d,
-      isGift: f,
+      isGift: E,
       analyticsLocation: l,
-      promotionId: E,
+      promotionId: f,
       context: c,
       resolve: a,
       reject: o

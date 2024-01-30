@@ -13,16 +13,16 @@ var s = n("37983"),
   u = n("851387"),
   d = n("716241"),
   c = n("446066"),
-  E = n("243375"),
-  f = n("459698"),
+  f = n("243375"),
+  E = n("459698"),
   _ = n("933629"),
   T = n("626301"),
   I = n("716849"),
   m = n("552917"),
   N = n("635956"),
   p = n("305961"),
-  S = n("697218"),
-  A = n("145131"),
+  A = n("697218"),
+  S = n("145131"),
   C = n("98292"),
   h = n("256170"),
   g = n("599110"),
@@ -62,14 +62,14 @@ function F(e) {
     sticker: t,
     description: n
   } = e;
-  return (0, s.jsxs)(A.default, {
+  return (0, s.jsxs)(S.default, {
     children: [(0, s.jsx)(v.default, {
       sticker: t,
       size: 48,
       isInteracting: !0
-    }), (0, s.jsxs)(A.default, {
-      direction: A.default.Direction.VERTICAL,
-      justify: A.default.Justify.CENTER,
+    }), (0, s.jsxs)(S.default, {
+      direction: S.default.Direction.VERTICAL,
+      justify: S.default.Justify.CENTER,
       className: j.truncatingText,
       children: [(0, s.jsx)(o.Text, {
         className: j.emojiName,
@@ -90,7 +90,7 @@ let k = e => {
       sticker: n,
       channel: a,
       refreshPositionKey: i
-    } = e, [u, c, E] = (0, r.useStateFromStoresArray)([R.default], () => [R.default.getStickerPack(n.pack_id), !R.default.hasLoadedStickerPacks, R.default.isPremiumPack(n.pack_id)], [n]), f = G({
+    } = e, [u, c, f] = (0, r.useStateFromStoresArray)([R.default], () => [R.default.getStickerPack(n.pack_id), !R.default.hasLoadedStickerPacks, R.default.isPremiumPack(n.pack_id)], [n]), E = G({
       sticker: n,
       stickerPack: u
     });
@@ -114,21 +114,21 @@ let k = e => {
         children: n.name
       }), (0, s.jsx)(o.Text, {
         variant: "text-sm/normal",
-        children: b(u, E)
+        children: b(u, f)
       }), (0, s.jsx)("ul", {
         className: U.stickersList,
-        children: f.map(e => (0, s.jsx)(v.default, {
+        children: E.map(e => (0, s.jsx)(v.default, {
           isInteracting: !0,
           size: 80,
           sticker: e
         }, e.id))
-      }), E && (0, s.jsx)("div", {
+      }), f && (0, s.jsx)("div", {
         className: U.packActions,
         children: (0, s.jsx)(o.Button, {
           color: o.Button.Colors.PRIMARY,
           size: o.Button.Sizes.SMALL,
           onClick: () => {
-            E && (0, P.navigateToOwnedStickerPack)({
+            f && (0, P.navigateToOwnedStickerPack)({
               stickerPack: u,
               stickerPickerCategories: T
             }), t()
@@ -147,7 +147,7 @@ let k = e => {
       } = e,
       [m, C] = l.useState(null),
       [O, R] = l.useState(!1),
-      L = S.default.getCurrentUser(),
+      L = A.default.getCurrentUser(),
       P = M.default.canUseCustomStickersEverywhere(L),
       b = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(n.guild_id)),
       G = null != b,
@@ -167,7 +167,7 @@ let k = e => {
       let e = async () => {
         let e = null == b || b.hasFeature(D.GuildFeatures.DISCOVERABLE);
         if (e) {
-          let e = await (0, E.default)(n.id);
+          let e = await (0, f.default)(n.id);
           C(e)
         }
         R(!0)
@@ -234,7 +234,7 @@ let k = e => {
           children: [(0, s.jsx)(o.FormTitle, {
             className: j.guildTitle,
             children: G ? y.default.Messages.STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : y.default.Messages.STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
-          }), (0, s.jsx)(f.GuildDetails, {
+          }), (0, s.jsx)(E.GuildDetails, {
             expressionSourceGuild: l,
             hasJoinedExpressionSourceGuild: G,
             isDisplayingJoinGuildButtonInPopout: Q
@@ -244,7 +244,7 @@ let k = e => {
                 I(), w(!k)
               },
               className: j.showMoreEmojis,
-              children: (0, s.jsxs)(A.default, {
+              children: (0, s.jsxs)(S.default, {
                 children: [(0, s.jsx)(o.Text, {
                   className: j.showMoreEmojisLabel,
                   variant: "text-xs/normal",
@@ -256,10 +256,10 @@ let k = e => {
                   })
                 })]
               })
-            }), k && (0, s.jsx)(A.default, {
-              wrap: A.default.Wrap.WRAP,
-              align: A.default.Align.START,
-              justify: A.default.Justify.START,
+            }), k && (0, s.jsx)(S.default, {
+              wrap: S.default.Wrap.WRAP,
+              align: S.default.Align.START,
+              justify: S.default.Justify.START,
               className: j.otherEmojisContainer,
               children: t.map(e => (0, s.jsx)(o.Tooltip, {
                 text: e.name,

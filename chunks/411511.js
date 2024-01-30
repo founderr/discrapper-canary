@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return c
   },
   DROPS_GAMES: function() {
-    return E
+    return f
   }
 });
 var s = n("782340");
@@ -46,7 +46,7 @@ let l = ["XBOX", "PLAYSTATION", "SWITCH", "PC"],
   },
   d = "YYYY-MM-DD HH:mm",
   c = "1022633972510752774",
-  E = {
+  f = {
     [r.FORTNITE]: {
       title: "Fortnite",
       gameSearchTerm: u[r.FORTNITE],

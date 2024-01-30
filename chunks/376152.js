@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return c
   },
   fetchEnrolledUser: function() {
-    return E
+    return f
   },
   enrollDropsUser: function() {
-    return f
+    return E
   },
   sendHeartbeat: function() {
     return _
@@ -107,7 +107,7 @@ let r = async e => {
     type: "DROPS_UNENROLL_USER",
     dropsQuestId: e
   }), await d()
-}, E = async e => {
+}, f = async e => {
   let t = await s.default.get({
     url: i.Endpoints.DROPS_ENROLL_USER,
     query: {
@@ -120,7 +120,7 @@ let r = async e => {
     isEnrolled: t.body.enrolled,
     dropsQuestId: e
   })
-}, f = async e => {
+}, E = async e => {
   await s.default.post({
     url: i.Endpoints.DROPS_ENROLL_USER,
     query: {

@@ -14,8 +14,8 @@ var l = n("414456"),
   u = n("328275"),
   d = n("489622"),
   c = n("244480"),
-  E = n("130563"),
-  f = n("151642"),
+  f = n("130563"),
+  E = n("151642"),
   _ = n("782340"),
   T = n("779007");
 
@@ -28,8 +28,8 @@ function I(e) {
 
 function m() {
   var e;
-  let t = (0, E.default)(),
-    n = null !== (e = (0, f.useStageBlockedUsersCount)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;
+  let t = (0, f.default)(),
+    n = null !== (e = (0, E.useStageBlockedUsersCount)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;
   return null == t ? null : (0, s.jsxs)(d.default, {
     className: T.container,
     color: d.NoticeColors.DEFAULT,

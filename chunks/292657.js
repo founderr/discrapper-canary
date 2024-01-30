@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var s = n("37983"),
@@ -13,13 +13,13 @@ var s = n("37983"),
   u = n("27618"),
   d = n("93427"),
   c = n("719347"),
-  E = n("741566");
+  f = n("741566");
 
-function f(e) {
+function E(e) {
   let {
     message: t,
     channel: n
-  } = e, f = (0, a.useStateFromStores)([u.default], () => u.default.isBlocked(t.author.id)), _ = l.useMemo(() => ({
+  } = e, E = (0, a.useStateFromStores)([u.default], () => u.default.isBlocked(t.author.id)), _ = l.useMemo(() => ({
     [n.guild_id]: [t.author.id]
   }), [n.guild_id, t.author.id]);
   (0, i.useSubscribeGuildMembers)(_);
@@ -27,33 +27,33 @@ function f(e) {
     formatInline: !0
   }).content : null, [t]);
   return (0, s.jsxs)("div", {
-    className: E.threadMessageAccessory,
+    className: f.threadMessageAccessory,
     children: [(0, s.jsx)("img", {
       alt: "",
       src: t.author.getAvatarURL(n.guild_id, 16),
-      className: E.threadMessageAccessoryAvatar
+      className: f.threadMessageAccessoryAvatar
     }), (0, s.jsx)(o.default, {
       message: t,
       channel: n,
       compact: !0
     }), (0, s.jsx)("div", {
-      className: E.threadMessageAccessoryPreview,
+      className: f.threadMessageAccessoryPreview,
       children: function(e, t, n) {
         let {
           contentPlaceholder: l,
           renderedContent: a,
           icon: i
-        } = (0, d.renderSingleLineMessage)(e, t, n, E.threadMessageAccessoryContent, {
-          iconClass: E.threadMessageAccessoryContentIcon,
+        } = (0, d.renderSingleLineMessage)(e, t, n, f.threadMessageAccessoryContent, {
+          iconClass: f.threadMessageAccessoryContentIcon,
           iconSize: c.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
         });
         return (0, s.jsxs)(s.Fragment, {
           children: [null != a ? a : (0, s.jsx)("span", {
-            className: E.threadMessageAccessoryPlaceholder,
+            className: f.threadMessageAccessoryPlaceholder,
             children: l
           }), i]
         })
-      }(t, T, f)
+      }(t, T, E)
     })]
   })
 }

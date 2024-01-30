@@ -54,7 +54,7 @@ function I(e) {
     intervalType: null == s ? void 0 : s.interval,
     intervalCount: null == s ? void 0 : s.interval_count
   });
-  return (0, r.jsx)(T, {
+  return (0, r.jsx)(C, {
     isTabSelected: n,
     badgeCopy: a,
     offerExpiresAt: i.expires_at,
@@ -70,7 +70,7 @@ function h(e) {
   } = e, s = _.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
     percent: n.discount.amount
   });
-  return (0, r.jsx)(T, {
+  return (0, r.jsx)(C, {
     isTabSelected: t,
     badgeCopy: i ? s : _.default.Messages.PREMIUM_DISCOUNT_BADGE,
     offerExpiresAt: n.expires_at,
@@ -78,7 +78,7 @@ function h(e) {
   })
 }
 
-function T(e) {
+function C(e) {
   let {
     isTabSelected: t,
     badgeCopy: n,

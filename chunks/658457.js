@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var s = n("37983");
@@ -15,26 +15,26 @@ var l = n("446674"),
   d = n("159467"),
   c = n("827825");
 
-function E(e) {
+function f(e) {
   let {
     application: t,
     fullWidth: n = !1,
-    size: E = a.Button.Sizes.LARGE,
-    color: f,
+    size: f = a.Button.Sizes.LARGE,
+    color: E,
     customDisabledColor: _,
     hideNotLaunchable: T,
     tooltipPosition: I,
     onClick: m,
     className: N,
     source: p,
-    storeListingAnalyticsProperties: S,
-    pauseAnimation: A,
+    storeListingAnalyticsProperties: A,
+    pauseAnimation: S,
     hover: C,
     innerClassName: h
   } = e, g = {
     fullWidth: n,
-    size: E,
-    color: f,
+    size: f,
+    color: E,
     customDisabledColor: _,
     tooltipPosition: I,
     onClick: m,
@@ -50,8 +50,8 @@ function E(e) {
     ...g,
     skuId: null != M ? M.sku.id : null,
     applicationId: t.id,
-    pauseAnimation: A,
-    storeListingAnalyticsProperties: S
+    pauseAnimation: S,
+    storeListingAnalyticsProperties: A
   }) : (0, s.jsx)(d.default, {
     ...g,
     hideNotLaunchable: T,

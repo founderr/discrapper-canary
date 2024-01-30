@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return A
   }
 }), n("222007");
 var s = n("37983"),
@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("359606"),
   d = n("206100"),
   c = n("85871"),
-  E = n("231561"),
-  f = n("347374"),
+  f = n("231561"),
+  E = n("347374"),
   _ = n("271560"),
   T = n("4919"),
   I = n("458331"),
@@ -81,7 +81,7 @@ class p extends l.PureComponent {
         storeListing: u
       } = this.props;
       return (0, s.jsxs)(l.Fragment, {
-        children: [(0, s.jsx)(f.default, {
+        children: [(0, s.jsx)(E.default, {
           className: i(N.splashContainer, {
             [N.splashContainerHorizontal]: o
           }),
@@ -98,7 +98,7 @@ class p extends l.PureComponent {
           className: i(N.exclusiveRegular, {
             [N.exclusivePlaying]: e
           })
-        }) : r.isTheGameAwardsWinner ? (0, s.jsx)(E.default, {
+        }) : r.isTheGameAwardsWinner ? (0, s.jsx)(f.default, {
           className: i(N.exclusiveRegular, {
             [N.exclusivePlaying]: e
           })
@@ -114,4 +114,4 @@ p.defaultProps = {
   isHorizontal: !1,
   isEmbed: !1
 };
-var S = p
+var A = p

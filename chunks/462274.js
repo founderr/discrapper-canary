@@ -7,10 +7,10 @@ l.r(i), l.d(i, {
     return f
   },
   default: function() {
-    return p
+    return _
   },
   useAvatarColors: function() {
-    return _
+    return p
   }
 }), l("222007");
 var t = l("884691"),
@@ -60,13 +60,13 @@ async function m(e) {
   }
 }
 
-function p(e, i) {
+function _(e, i) {
   let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    [t] = _(e, i, l);
+    [t] = p(e, i, l);
   return t
 }
 
-function _(e, i) {
+function p(e, i) {
   let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
     n = c(i => null == e ? void 0 : i.palette[e]),
     u = (0, o.useStateFromStores)([d.default], () => l && d.default.desaturateUserColors ? d.default.saturation : 1);

@@ -13,16 +13,16 @@ var s = n("37983"),
   u = n("446674"),
   d = n("77078"),
   c = n("79112"),
-  E = n("4919"),
-  f = n("86621"),
+  f = n("4919"),
+  E = n("86621"),
   _ = n("737960"),
   T = n("206230"),
   I = n("491232"),
   m = n("210721"),
   N = n("583711"),
   p = n("65324"),
-  S = n("393414"),
-  A = n("271938"),
+  A = n("393414"),
+  S = n("271938"),
   C = n("55411"),
   h = n("686470"),
   g = n("697218"),
@@ -63,13 +63,13 @@ class H extends l.PureComponent {
     let {
       width: e
     } = this.props;
-    return e >= E.HORIZONTAL_EMBED_BREAKPOINT
+    return e >= f.HORIZONTAL_EMBED_BREAKPOINT
   }
   handleViewInventory() {
     c.default.open(G.UserSettingsSections.INVENTORY)
   }
   render() {
-    return (0, s.jsx)(E.ResponsiveEmbedTile, {
+    return (0, s.jsx)(f.ResponsiveEmbedTile, {
       isHorizontal: this.isHorizontal,
       renderTitle: this.renderTitle,
       renderTagline: this.renderTagline,
@@ -277,8 +277,8 @@ class V extends l.Component {
     if (null == e || e.revoked) return t ? (0, s.jsx)(H, {
       isSelfGift: l,
       width: n
-    }) : (0, s.jsx)(E.ResponsiveLoadingEmbedTile, {
-      isHorizontal: n >= E.HORIZONTAL_EMBED_BREAKPOINT
+    }) : (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
+      isHorizontal: n >= f.HORIZONTAL_EMBED_BREAKPOINT
     });
     return (0, I.isCollectiblesGiftCode)(e) ? (0, s.jsx)("div", {
       className: k.collectiblesEmbedWrapper,
@@ -290,7 +290,7 @@ class V extends l.Component {
       let {
         libraryApplication: t
       } = this.props;
-      e.preventDefault(), null != t && t.isHidden() ? (0, S.transitionTo)(G.Routes.APPLICATION_LIBRARY_SETTINGS) : (0, S.transitionTo)(G.Routes.APPLICATION_LIBRARY, {
+      e.preventDefault(), null != t && t.isHidden() ? (0, A.transitionTo)(G.Routes.APPLICATION_LIBRARY_SETTINGS) : (0, A.transitionTo)(G.Routes.APPLICATION_LIBRARY, {
         state: {
           applicationId: null != t ? t.id : null
         }
@@ -338,13 +338,13 @@ class V extends l.Component {
       let l = B.LegacySeasonalGiftStyles.includes(e.giftStyle),
         a = i(k.customGiftEmbedWrapper, {
           [k.legacySeasonalGiftEmbedWrapper]: l,
-          [k.giftEmbedWrapperHorizontal]: n >= E.HORIZONTAL_EMBED_BREAKPOINT
+          [k.giftEmbedWrapperHorizontal]: n >= f.HORIZONTAL_EMBED_BREAKPOINT
         }),
         r = i({
           [k.legacySeasonalGiftEmbedBox]: l,
-          [k.legacySeasonalGiftEmbedBoxHorizontal]: l && n >= E.HORIZONTAL_EMBED_BREAKPOINT,
+          [k.legacySeasonalGiftEmbedBoxHorizontal]: l && n >= f.HORIZONTAL_EMBED_BREAKPOINT,
           [k.customGiftEmbedBox]: !l,
-          [k.customGiftEmbedBoxHorizontal]: !l && n >= E.HORIZONTAL_EMBED_BREAKPOINT
+          [k.customGiftEmbedBoxHorizontal]: !l && n >= f.HORIZONTAL_EMBED_BREAKPOINT
         });
       return (0, s.jsxs)("div", {
         className: a,
@@ -362,8 +362,8 @@ class V extends l.Component {
     }
   }
 }
-let Y = (0, _.default)((0, f.default)(V));
-var K = u.default.connectStores([C.default, O.default, g.default, h.default, M.default, A.default, T.default], e => {
+let Y = (0, _.default)((0, E.default)(V));
+var K = u.default.connectStores([C.default, O.default, g.default, h.default, M.default, S.default, T.default], e => {
   let {
     code: t,
     author: n,
@@ -375,7 +375,7 @@ var K = u.default.connectStores([C.default, O.default, g.default, h.default, M.d
     gifter: i,
     currentUser: s,
     subscriptionPlan: null != l && null != l.subscriptionPlanId ? (0, U.getOrFetchSubscriptionPlan)(l.subscriptionPlanId) : null,
-    isSelfGift: null != l ? A.default.getId() === l.userId : A.default.getId() === n.id,
+    isSelfGift: null != l ? S.default.getId() === l.userId : S.default.getId() === n.id,
     resolved: C.default.getIsResolved(t),
     libraryApplication: null != a && (null == l ? void 0 : l.entitlementBranches) != null ? x.firstLibraryApplicationForGiftCode(l.entitlementBranches, a, h.default) : null,
     useReducedMotion: r

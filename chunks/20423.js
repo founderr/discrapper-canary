@@ -1,6 +1,6 @@
     "use strict";
     t.r(a), t("860677");
-    var d, s, n, c, i, r = t("37983");
+    var s, d, n, c, i, r = t("37983");
     t("320777"), t("884691");
     var o = t("288661"),
       f = t("627445"),
@@ -17,35 +17,35 @@
       I = t("518684"),
       T = t("50885"),
       O = t("956966"),
-      R = t("773336"),
-      v = t("393414"),
-      w = t("741148"),
-      S = t("336921"),
-      A = t("862337"),
+      S = t("773336"),
+      R = t("393414"),
+      A = t("741148"),
+      v = t("336921"),
+      w = t("862337"),
       N = t("49671"),
       C = t("60608"),
       D = t("928741");
     t("525036");
     var L = t("466295"),
-      P = t("117041"),
-      M = t("605250"),
-      y = t("718517");
-    let k = 5 * y.default.Millis.MINUTE,
-      x = document.getElementById("app-mount");
-    l(null != x, "Could not find app-mount"), x.className = __OVERLAY__ ? "" : L.appMount;
-    let U = (0, o.createRoot)(x),
+      y = t("117041"),
+      P = t("605250"),
+      M = t("718517");
+    let x = 5 * M.default.Millis.MINUTE,
+      k = document.getElementById("app-mount");
+    l(null != k, "Could not find app-mount"), k.className = __OVERLAY__ ? "" : L.appMount;
+    let U = (0, o.createRoot)(k),
       G = e => U.render((0, r.jsx)(D.default, {
         children: (0, r.jsx)(C.default, {
           children: (0, r.jsx)(e, {})
         })
       }));
     if (null != N.default) {
-      null === (d = N.default.setUncaughtExceptionHandler) || void 0 === d || d.call(N.default, (e, a) => {
+      null === (s = N.default.setUncaughtExceptionHandler) || void 0 === s || s.call(N.default, (e, a) => {
         setImmediate(() => {
           throw E.default.captureCrash(e), e
         })
       });
-      let e = null === (s = (n = N.default.remoteApp).getVersion) || void 0 === s ? void 0 : s.call(n),
+      let e = null === (d = (n = N.default.remoteApp).getVersion) || void 0 === d ? void 0 : d.call(n),
         a = null === (c = (i = N.default.remoteApp).getBuildNumber) || void 0 === c ? void 0 : c.call(i),
         t = {};
       null != N.default.remoteApp.getModuleVersions && (t = N.default.remoteApp.getModuleVersions()), E.default.setExtra({
@@ -55,21 +55,21 @@
         nativeBuildNumber: null == a ? void 0 : a.toString()
       });
       let r = Object.keys(t).filter(e => null != t[e]).map(e => "".concat(e, ": ").concat(t[e])).join(", ");
-      new(0, M.default)().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(r, ", build: ").concat(a)), T.default.setBackgroundThrottling(!1), T.default.initializeExitHook()
+      new(0, P.default)().log("[NATIVE INFO] host ".concat(e, ", modules: ").concat(r, ", build: ").concat(a)), T.default.setBackgroundThrottling(!1), T.default.initializeExitHook()
     }
-    if ((0, S.setupWindow)(window), __OVERLAY__) G(u.default.Overlay);
+    if ((0, v.setupWindow)(window), __OVERLAY__) G(u.default.Overlay);
     else if (null != window.require && null == window.DiscordNative) G(u.default.OutdatedClient);
     else {
-      if (document.addEventListener("scroll", e => e.preventDefault()), R.isPlatformEmbedded) {
+      if (document.addEventListener("scroll", e => e.preventDefault()), S.isPlatformEmbedded) {
         window.onbeforeunload = () => T.default.beforeUnload(), T.default.on("HELP_OPEN", () => window.open(g.default.getCommunityURL()));
-        let e = new A.DelayedCall(k, () => T.default.purgeMemory());
+        let e = new w.DelayedCall(x, () => T.default.purgeMemory());
         T.default.on("MAIN_WINDOW_BLUR", () => {
-          e.delay(), T.default.setFocused(!1), (0, w.focus)(window, !1)
+          e.delay(), T.default.setFocused(!1), (0, A.focus)(window, !1)
         }), T.default.on("MAIN_WINDOW_FOCUS", () => {
-          e.cancel(), T.default.setFocused(!0), (0, w.focus)(window, !0)
-        }), T.default.on("MAIN_WINDOW_PATH", (e, a) => (0, v.transitionTo)(a)), T.default.on("MAIN_WINDOW_HIDDEN", () => {
-          (0, w.hidden)(window)
+          e.cancel(), T.default.setFocused(!0), (0, A.focus)(window, !0)
+        }), T.default.on("MAIN_WINDOW_PATH", (e, a) => (0, R.transitionTo)(a)), T.default.on("MAIN_WINDOW_HIDDEN", () => {
+          (0, A.hidden)(window)
         })
       }
-      h.default.initialize(), p.default.init(), _.default.init(), j.default.init(), P.default.init(), b.default.initialize(), I.default.initialize(), O.default.initialize(), m.initialize(), G(u.default.App)
+      h.default.initialize(), p.default.init(), _.default.init(), j.default.init(), y.default.init(), b.default.initialize(), I.default.initialize(), O.default.initialize(), m.initialize(), G(u.default.App)
     }

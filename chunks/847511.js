@@ -13,16 +13,16 @@ var s = n("627445"),
   u = n("404118"),
   d = n("819689"),
   c = n("448993"),
-  E = n("875978"),
-  f = n("815297"),
+  f = n("875978"),
+  E = n("815297"),
   _ = n("256572"),
   T = n("271938"),
   I = n("474643"),
   m = n("377253"),
   N = n("585722"),
   p = n("239013"),
-  S = n("914271"),
-  A = n("690714"),
+  A = n("914271"),
+  S = n("690714"),
   C = n("641126"),
   h = n("905206"),
   g = n("782340");
@@ -83,7 +83,7 @@ async function L(e) {
   })), ...u.map(e => ({
     type: "MESSAGE_REACTION_ADD",
     id: e
-  }))], f = r.default.Emitter.batched(() => {
+  }))], E = r.default.Emitter.batched(() => {
     let e;
     for (let {
         id: s,
@@ -99,11 +99,11 @@ async function L(e) {
       },
       userId: d,
       optimistic: !0,
-      reactionType: E.ReactionTypes.VOTE
+      reactionType: f.ReactionTypes.VOTE
     });
     return e
   });
-  null != f && await f
+  null != E && await E
 }
 async function v(e) {
   let {
@@ -125,7 +125,7 @@ async function v(e) {
       ...e,
       submitting: !0,
       editing: !1
-    })), await A.submitPollVote({
+    })), await S.submitPollVote({
       channelId: t,
       messageId: n,
       answerIds: e
@@ -190,11 +190,11 @@ var D = {
       messageId: d,
       message: c
     } = M(r), {
-      tapShouldOpenVotersModal: E,
-      reactions: f
+      tapShouldOpenVotersModal: f,
+      reactions: E
     } = null !== (n = (0, h.computeBasicPollChatData)(c)) && void 0 !== n ? n : {};
-    if (!0 === E) {
-      let e = null !== (a = null === (l = (0, h.reactionForId)(null != f ? f : [], i)) || void 0 === l ? void 0 : null === (s = l.count_details) || void 0 === s ? void 0 : s.vote) && void 0 !== a ? a : 0;
+    if (!0 === f) {
+      let e = null !== (a = null === (l = (0, h.reactionForId)(null != E ? E : [], i)) || void 0 === l ? void 0 : null === (s = l.count_details) || void 0 === s ? void 0 : s.vote) && void 0 !== a ? a : 0;
       0 === e ? u.default.show({
         title: g.default.Messages.POLL_NO_VOTES_FOR_ANSWER_TITLE,
         body: g.default.Messages.POLL_NO_VOTES_FOR_ANSWER_BODY
@@ -254,7 +254,7 @@ var D = {
       })), {
         poll_media: s
       }
-    }), E = {
+    }), f = {
       question: {
         text: n,
         attachment_ids: []
@@ -268,15 +268,15 @@ var D = {
       if (null != o && o.length > 0) {
         var _;
         let e = null !== (_ = T.default.getToken()) && void 0 !== _ ? _ : "";
-        await S.sendPollMessageWithAttachments({
+        await A.sendPollMessageWithAttachments({
           channel: t,
           items: o,
           token: e,
-          poll: E,
-          nonce: (0, f.createNonce)(),
+          poll: f,
+          nonce: (0, E.createNonce)(),
           maxSizeCallback: () => {}
         })
-      } else await d.default.sendPollMessage(t.id, E);
+      } else await d.default.sendPollMessage(t.id, f);
       null == r || r()
     } catch (t) {
       let e = t instanceof c.APIError ? t : new c.APIError(t);
@@ -295,7 +295,7 @@ var D = {
       title: g.default.Messages.POLL_END_EARLY_CONFIRMATION_TITLE,
       body: g.default.Messages.POLL_END_EARLY_CONFIRMATION_TEXT
     });
-    s && await A.endPollEarly({
+    s && await S.endPollEarly({
       channelId: t,
       messageId: n
     })

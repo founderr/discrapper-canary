@@ -14,8 +14,8 @@ var l = n("627445"),
   u = n("246053"),
   d = n("195812"),
   c = n("565559"),
-  E = n("35018"),
-  f = n("898998"),
+  f = n("35018"),
+  E = n("898998"),
   _ = n("782340"),
   T = n("418530");
 
@@ -24,10 +24,10 @@ function I(e) {
   let {
     guildId: m,
     productId: N
-  } = e, p = (0, i.default)([c.default], () => c.default.getGuildProduct(N)), S = (null !== (I = null == p ? void 0 : null === (t = p.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0) > 1, A = null == p ? void 0 : null === (l = p.attachments) || void 0 === l ? void 0 : null === (n = l[0]) || void 0 === n ? void 0 : n.id;
-  return S ? (0, s.jsxs)(r.Button, {
+  } = e, p = (0, i.default)([c.default], () => c.default.getGuildProduct(N)), A = (null !== (I = null == p ? void 0 : null === (t = p.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0) > 1, S = null == p ? void 0 : null === (l = p.attachments) || void 0 === l ? void 0 : null === (n = l[0]) || void 0 === n ? void 0 : n.id;
+  return A ? (0, s.jsxs)(r.Button, {
     onClick: function() {
-      E.default.open({
+      f.default.open({
         guildId: m,
         productId: N
       })
@@ -43,10 +43,10 @@ function I(e) {
       height: 16,
       direction: u.default.Directions.RIGHT
     })]
-  }) : (a(null != A, "No attachment"), (0, s.jsxs)(f.default, {
+  }) : (a(null != S, "No attachment"), (0, s.jsxs)(E.default, {
     guildId: m,
     productId: N,
-    attachmentId: A,
+    attachmentId: S,
     innerClassName: T.textWithIcon,
     children: [(0, s.jsx)("div", {
       children: _.default.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_SINGLE_FILE

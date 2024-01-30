@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return N
   },
   clearStickerPreview: function() {
-    return L
+    return x
   },
   favoriteSticker: function() {
     return P
@@ -142,7 +142,7 @@ function N(e, t, n) {
   })
 }
 
-function L(e, t) {
+function x(e, t) {
   l.default.dispatch({
     type: "CLEAR_STICKER_PREVIEW",
     channelId: e,
@@ -150,12 +150,12 @@ function L(e, t) {
   })
 }
 
-function x(e) {
+function L(e) {
   return f.default.totalUnavailableGuilds > 0 || !u.default.isConnected() ? e : e.filter(e => null != I.default.getStickerById(e))
 }
 
 function P(e) {
-  c.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = x(t.stickerIds), s.size(t.stickerIds) >= E.MAX_FAVORITES) ? (a.default.show({
+  c.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = L(t.stickerIds), s.size(t.stickerIds) >= E.MAX_FAVORITES) ? (a.default.show({
     title: C.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
     body: C.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
       count: E.MAX_FAVORITES
@@ -165,6 +165,6 @@ function P(e) {
 
 function y(e) {
   c.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => {
-    t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = x(t.stickerIds)
+    t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = L(t.stickerIds)
   }, E.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }

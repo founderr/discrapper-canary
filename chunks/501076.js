@@ -16,16 +16,16 @@ var s = n("37983"),
   u = n("901582"),
   d = n("658457"),
   c = n("359606"),
-  E = n("883610"),
-  f = n("4919"),
+  f = n("883610"),
+  E = n("4919"),
   _ = n("86621"),
   T = n("737960"),
   I = n("299285"),
   m = n("686470"),
   N = n("290877"),
   p = n("552712"),
-  S = n("698041"),
-  A = n("271560"),
+  A = n("698041"),
+  S = n("271560"),
   C = n("49111"),
   h = n("782340"),
   g = n("640492");
@@ -67,8 +67,8 @@ class M extends l.Component {
       width: n,
       fetchFailed: l,
       renderFallback: i
-    } = this.props, r = n > f.HORIZONTAL_EMBED_BREAKPOINT;
-    if (null == e || null == t) return l ? i() : (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
+    } = this.props, r = n > E.HORIZONTAL_EMBED_BREAKPOINT;
+    if (null == e || null == t) return l ? i() : (0, s.jsx)(E.ResponsiveLoadingEmbedTile, {
       isHorizontal: r
     });
     return e.productLine === C.SKUProductLines.COLLECTIBLES ? (0, s.jsx)(u.default, {
@@ -106,7 +106,7 @@ class M extends l.Component {
         sku: e
       } = this.props;
       if (null == e) throw Error("Should not be link to ApplicationStoreListing without SKU");
-      return (0, A.getStoreListingLocation)(e.id, {
+      return (0, S.getStoreListingLocation)(e.id, {
         slug: e.slug,
         analyticsSource: this.analyticsLocation
       })
@@ -125,8 +125,8 @@ class M extends l.Component {
       } = this.props, {
         playing: o,
         muted: u
-      } = this.state, d = l > f.HORIZONTAL_EMBED_BREAKPOINT;
-      return (0, s.jsx)(E.default, {
+      } = this.state, d = l > E.HORIZONTAL_EMBED_BREAKPOINT;
+      return (0, s.jsx)(f.default, {
         sku: e,
         storeListing: t,
         playing: o,
@@ -176,7 +176,7 @@ class M extends l.Component {
 M.defaultProps = {
   renderFallback: C.NOOP
 };
-let O = [p.default, N.default, m.default, S.default];
+let O = [p.default, N.default, m.default, A.default];
 
 function R(e) {
   let {
@@ -187,7 +187,7 @@ function R(e) {
     application: s,
     fetchFailed: p.default.didFetchingSkuFail(t),
     inLibrary: null != n && m.default.hasApplication(n.applicationId, n.applicationId, !0),
-    storeListing: null != n ? S.default.getForSKU(n.id) : null,
+    storeListing: null != n ? A.default.getForSKU(n.id) : null,
     libraryApplication: null != n ? m.default.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   }
 }

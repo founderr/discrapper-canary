@@ -16,16 +16,16 @@ var s = n("37983"),
   u = n("834897"),
   d = n("183137"),
   c = n("132349"),
-  E = n("845579"),
-  f = n("26989"),
+  f = n("845579"),
+  E = n("26989"),
   _ = n("697218"),
   T = n("476263"),
   I = n("191814"),
   m = n("246053"),
   N = n("58608"),
   p = n("158998"),
-  S = n("866190"),
-  A = n("662960"),
+  A = n("866190"),
+  S = n("662960"),
   C = n("634388"),
   h = n("893399"),
   g = n("744917"),
@@ -57,7 +57,7 @@ function L(e) {
   let {
     coverImageAsset: t,
     isPreview: n = !1
-  } = e, l = E.GifAutoPlay.useSetting(), a = (0, S.useIsWindowFocused)(), i = a && l, [r, o] = (0, c.default)(t, i), u = i ? (0, s.jsx)(N.default, {
+  } = e, l = f.GifAutoPlay.useSetting(), a = (0, A.useIsWindowFocused)(), i = a && l, [r, o] = (0, c.default)(t, i), u = i ? (0, s.jsx)(N.default, {
     autoPlay: !0,
     loop: !0,
     className: O.coverImage,
@@ -84,16 +84,16 @@ function v(e) {
   var t, n, a;
   let {
     guild: c,
-    subscriptionsSettings: E
+    subscriptionsSettings: f
   } = e, m = c.id;
   let {
     nickname: N,
-    nickcolor: S
-  } = (a = m, (0, r.useStateFromStoresObject)([f.default, _.default], () => {
+    nickcolor: A
+  } = (a = m, (0, r.useStateFromStoresObject)([E.default, _.default], () => {
     var e, t;
     let n = _.default.getCurrentUser();
     i(null != n, "user cannot be null");
-    let s = f.default.getMember(a, n.id);
+    let s = E.default.getMember(a, n.id);
     return {
       nickname: null !== (e = null == s ? void 0 : s.nick) && void 0 !== e ? e : p.default.getName(n),
       nickcolor: null !== (t = null == s ? void 0 : s.colorString) && void 0 !== t ? t : void 0
@@ -101,7 +101,7 @@ function v(e) {
   }, [a])), {
     isTruncated: v,
     ExpandableTextContainer: P
-  } = (0, A.useExpandableTextContainer)(), D = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [x, y] = l.useState(1), U = (0, u.default)("(max-width: ".concat(O.twoColumnWidth, ")")), {
+  } = (0, S.useExpandableTextContainer)(), D = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [x, y] = l.useState(1), U = (0, u.default)("(max-width: ".concat(O.twoColumnWidth, ")")), {
     selectedTab: j,
     isPhantomPreview: b
   } = (0, C.useGuildShopDisplayContext)(), G = j === h.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, B = D ? (0, s.jsxs)(s.Fragment, {
@@ -110,7 +110,7 @@ function v(e) {
       children: (0, s.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-normal",
-        children: null == E ? void 0 : E.description
+        children: null == f ? void 0 : f.description
       })
     }), v && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(I.default, {
@@ -163,7 +163,7 @@ function v(e) {
               usernameHook: function(e, t) {
                 return (0, s.jsx)("span", {
                   style: {
-                    color: S
+                    color: A
                   },
                   children: e
                 }, t)
@@ -175,7 +175,7 @@ function v(e) {
         })]
       })]
     }), (0, s.jsx)(L, {
-      coverImageAsset: null == E ? void 0 : E.cover_image_asset,
+      coverImageAsset: null == f ? void 0 : f.cover_image_asset,
       isPreview: b
     })]
   })

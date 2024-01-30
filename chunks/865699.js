@@ -20,7 +20,7 @@ function c(e) {
     onClose: c
   } = e, p = t.id, f = a.useCallback(() => {
     c(), o.default.open(p, r.GuildSettingsSections.INSTANT_INVITES)
-  }, [p, c]), h = a.useCallback(e => (0, l.jsx)(s.Clickable, {
+  }, [p, c]), I = a.useCallback(e => (0, l.jsx)(s.Clickable, {
     className: d.errorLink,
     onClick: f,
     children: (0, l.jsx)(s.Text, {
@@ -29,7 +29,7 @@ function c(e) {
       tag: "span",
       children: e
     })
-  }), [f]), I = a.useCallback(e => (0, l.jsx)(s.Anchor, {
+  }), [f]), h = a.useCallback(e => (0, l.jsx)(s.Anchor, {
     href: r.MarketingURLs.INVITES_HELP,
     target: "_blank",
     children: (0, l.jsx)(s.Text, {
@@ -39,8 +39,8 @@ function c(e) {
       children: e
     })
   }), []), E = n.code !== r.AbortCodes.TOO_MANY_INVITES ? n.getAnyErrorMessage() : i.default.can(r.Permissions.MANAGE_GUILD, t) ? u.default.Messages.TOO_MANY_INVITES_ERROR.format({
-    inviteListHook: h,
-    inviteHelpHook: I
+    inviteListHook: I,
+    inviteHelpHook: h
   }) : u.default.Messages.TOO_MANY_INVITES_ERROR_MEMBER;
   return (0, l.jsx)(s.Text, {
     className: d.errorMessage,

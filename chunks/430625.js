@@ -13,16 +13,16 @@ var s = n("37983"),
   u = n("446674"),
   d = n("769846"),
   c = n("77078"),
-  E = n("970728"),
-  f = n("191225"),
+  f = n("970728"),
+  E = n("191225"),
   _ = n("969380"),
   T = n("817039"),
   I = n("812204"),
   m = n("685665"),
   N = n("442939"),
   p = n("419830"),
-  S = n("813006"),
-  A = n("42203"),
+  A = n("813006"),
+  S = n("42203"),
   C = n("305961"),
   h = n("957255"),
   g = n("697218"),
@@ -151,13 +151,13 @@ function F(e) {
   }, [w, V, K]);
   let W = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
     z = (0, N.default)([k.id])[0],
-    Z = (0, u.useStateFromStores)([f.default], () => {
+    Z = (0, u.useStateFromStores)([E.default], () => {
       var e;
-      return (null == d ? void 0 : d.channel) != null && (null === (e = f.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === k.id
+      return (null == d ? void 0 : d.channel) != null && (null === (e = E.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === k.id
     }),
-    J = (0, u.useStateFromStores)([f.default], () => {
+    J = (0, u.useStateFromStores)([E.default], () => {
       var e;
-      let t = (null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? f.default.getEmbeddedActivitiesForChannel(d.channel.id) : [];
+      let t = (null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? E.default.getEmbeddedActivitiesForChannel(d.channel.id) : [];
       return t.some(e => {
         let {
           applicationId: t
@@ -165,7 +165,7 @@ function F(e) {
         return k.id === t
       })
     }),
-    Q = A.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
+    Q = S.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
     X = (0, u.useStateFromStores)([h.default], () => null != Q && h.default.can(P.Permissions.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
     {
       analyticsLocations: q
@@ -174,17 +174,17 @@ function F(e) {
       applicationId: k.id,
       size: U
     }),
-    ee = (0, u.useStateFromStoresArray)([f.default], () => null != Q ? f.default.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [Q, k.id]),
+    ee = (0, u.useStateFromStoresArray)([E.default], () => null != Q ? E.default.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [Q, k.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
     en = d.state === P.InviteStates.ACCEPTING,
     es = null != W;
   if (null == W) {
     if (null == d.guild) return (0, s.jsx)(v.default, {});
-    W = new S.default(d.guild)
+    W = new A.default(d.guild)
   }
   let el = es && !X || es && Z,
     ea = () => {
-      E.default.acceptInviteAndTransitionToInviteChannel({
+      f.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: d.code,
         context: p("Invite Button Embed"),
         analyticsLocations: q

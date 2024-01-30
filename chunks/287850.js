@@ -56,7 +56,7 @@ function N(e) {
   }
 }
 
-function L() {
+function x() {
   R.clear(), Object.values(C.default.getMutablePrivateChannels()).forEach(e => {
     R.set(e.id, N(e))
   }), (0, h.isInMainTabsExperiment)() && (0, p.isSplitMessagesTab)() && A.default.getAddedToMessages().forEach(e => {
@@ -65,7 +65,7 @@ function L() {
   })
 }
 
-function x() {
+function L() {
   let e = C.default.getMutablePrivateChannels();
   for (let t in e) R.set(t, N(e[t]))
 }
@@ -86,7 +86,7 @@ let P = (i = [], s = [], r = [], () => {
 });
 class y extends c.default.Store {
   initialize() {
-    this.waitFor(C.default, _.default, m.default, I.default, A.default), this.syncWith([A.default, I.default], L)
+    this.waitFor(C.default, _.default, m.default, I.default, A.default), this.syncWith([A.default, I.default], x)
   }
   getPrivateChannelIds() {
     return P()
@@ -107,11 +107,11 @@ class y extends c.default.Store {
 }
 y.displayName = "PrivateChannelSortStore";
 var O = new y(f.default, {
-  CONNECTION_OPEN: L,
-  CONNECTION_OPEN_SUPPLEMENTAL: L,
-  OVERLAY_INITIALIZE: L,
-  CACHE_LOADED: x,
-  CACHE_LOADED_LAZY: x,
+  CONNECTION_OPEN: x,
+  CONNECTION_OPEN_SUPPLEMENTAL: x,
+  OVERLAY_INITIALIZE: x,
+  CACHE_LOADED: L,
+  CACHE_LOADED_LAZY: L,
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t

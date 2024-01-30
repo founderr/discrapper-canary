@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var s, l, a = n("37983");
@@ -46,4 +46,4 @@ let d = {
     })
   };
 c.DropdownSizes = l, c.Sizes = i.Button.Sizes, c.Colors = i.Button.Colors, c.Looks = i.Button.Looks;
-var E = c
+var f = c

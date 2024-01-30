@@ -13,16 +13,16 @@ var s = n("37983"),
   u = n("398604"),
   d = n("914169"),
   c = n("42793"),
-  E = n("141254"),
-  f = n("116616"),
+  f = n("141254"),
+  E = n("116616"),
   _ = n("271938"),
   T = n("305961"),
   I = n("337543"),
   m = n("430625"),
   N = n("740589"),
   p = n("472315"),
-  S = n("783940"),
-  A = n("530078"),
+  A = n("783940"),
+  S = n("530078"),
   C = n("649112"),
   h = n("793079"),
   g = n("135666"),
@@ -61,7 +61,7 @@ function R(e) {
       null != P.channel && i.default.transitionToInviteSync(P)
     },
     b = () => {
-      (0, E.isAtGuildCapAndNonPremium)() ? (0, f.default)({
+      (0, f.isAtGuildCapAndNonPremium)() ? (0, E.default)({
         analyticsSource: {
           page: O.AnalyticsPages.INVITE_EMBED
         },
@@ -75,7 +75,7 @@ function R(e) {
         context: R("Invite Button Embed")
       })
     },
-    G = (0, s.jsx)(A.default, {
+    G = (0, s.jsx)(S.default, {
       onTransitionToInviteChannel: j,
       onAcceptInstantInvite: b,
       currentUserId: y,
@@ -103,7 +103,7 @@ function R(e) {
     default:
       switch ((0, c.getInviteType)(P)) {
         case c.InviteTypes.GROUP_DM:
-          G = (0, s.jsx)(S.default, {
+          G = (0, s.jsx)(A.default, {
             onTransitionToInviteChannel: j,
             onAcceptInstantInvite: b,
             currentUserId: y,

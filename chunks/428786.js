@@ -13,16 +13,16 @@ var s = n("37983"),
   u = n("394846"),
   d = n("446674"),
   c = n("77078"),
-  E = n("4919"),
-  f = n("812204"),
+  f = n("4919"),
+  E = n("812204"),
   _ = n("685665"),
   T = n("649844"),
   I = n("697218"),
   m = n("521012"),
   N = n("888400"),
   p = n("719923"),
-  S = n("158998"),
-  A = n("540692"),
+  A = n("158998"),
+  S = n("540692"),
   C = n("166960"),
   h = n("833516"),
   g = n("646718"),
@@ -44,7 +44,7 @@ class R extends l.Component {
       trialOffer: s
     } = this.props, l = I.default.getUser(s.referrer_id);
     return (e || t) && n && void 0 === s.redeemed_at ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_EXPIRED_BODY : e && !n && void 0 === s.redeemed_at ? M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_DISABLED_BODY : M.default.Messages.SHARE_NITRO_EMBEDDED_MESSAGE_BODY.format({
-      username: null != l ? S.default.getName(l) : "???"
+      username: null != l ? A.default.getName(l) : "???"
     })
   }
   renderActions(e, t, n) {
@@ -163,22 +163,22 @@ function L(e) {
   } = e, {
     trialOffer: l,
     isResolving: a
-  } = (0, d.useStateFromStoresObject)([A.default], () => ({
-    trialOffer: n ? A.default.getRelevantUserTrialOffer(t) : null,
-    isResolving: !!n && A.default.isResolving(t)
+  } = (0, d.useStateFromStoresObject)([S.default], () => ({
+    trialOffer: n ? S.default.getRelevantUserTrialOffer(t) : null,
+    isResolving: !!n && S.default.isResolving(t)
   }), [n, t]), i = I.default.getCurrentUser(), r = (0, d.useStateFromStores)([I.default], () => null != l && (0, p.isPremium)(void 0 !== i && l.user_id === i.id ? i : I.default.getUser(l.user_id))), o = (0, d.useStateFromStores)([m.default], () => {
     var e;
     return r ? null === (e = m.default.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null
   }), {
     analyticsLocations: c
-  } = (0, _.default)(f.default.SHARE_NITRO_EMBED), {
+  } = (0, _.default)(E.default.SHARE_NITRO_EMBED), {
     enabled: T
   } = C.default.useExperiment({
     location: "f4ff1d_1"
   }, {
     autoTrackExposure: !0
   });
-  return a ? (0, s.jsx)(E.ResponsiveLoadingEmbedTile, {
+  return a ? (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
     isHorizontal: !u.isMobile
   }) : n && null != l && void 0 !== i ? (0, s.jsx)(R, {
     trialOffer: l,

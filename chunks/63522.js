@@ -18,7 +18,7 @@ function d(e) {
     message: t,
     channel: n,
     compact: d
-  } = e, c = (0, l.default)(t), E = t.application, f = (0, a.useUsernameHook)(t.author, n.id, n.guild_id);
+  } = e, c = (0, l.default)(t), f = t.application, E = (0, a.useUsernameHook)(t.author, n.id, n.guild_id);
   return (0, s.jsx)(r.default, {
     iconNode: (0, s.jsx)(i.default, {
       className: u.ticketIcon
@@ -26,9 +26,9 @@ function d(e) {
     timestamp: t.timestamp,
     compact: d,
     children: (0, o.getApplicationSubscriptionSystemMessageContent)({
-      application: E,
+      application: f,
       username: c.nick,
-      usernameHook: f(c)
+      usernameHook: E(c)
     })
   })
 }

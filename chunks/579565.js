@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getDropsExperiment: function() {
-    return E
+    return f
   },
   getDropsExperimentForDrop: function() {
-    return f
+    return E
   },
   doesGameTitleMatchList: function() {
     return _
@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return p
   },
   getShowDropsEndedIncompleteBanner: function() {
-    return S
+    return A
   },
   getDropExpired: function() {
-    return A
+    return S
   },
   getDrop: function() {
     return C
@@ -50,12 +50,12 @@ var s = n("866227"),
   d = n("411511"),
   c = n("782340");
 
-function E(e) {
+function f(e) {
   let t = C(e);
-  return null == t ? null : f(t)
+  return null == t ? null : E(t)
 }
 
-function f(e) {
+function E(e) {
   if (e.dropsQuestId === d.FORTNITE_QUEST_ID) return u.DropsForGoLiveFortniteExperiment;
   return null
 }
@@ -101,7 +101,7 @@ function N(e, t) {
 function p(e) {
   var t;
   let n = C(e);
-  if (null == n || !(null === (t = E(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
+  if (null == n || !(null === (t = f(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
       location: "1"
     }, {
       autoTrackExposure: !1
@@ -111,20 +111,20 @@ function p(e) {
   return !s && l
 }
 
-function S(e) {
+function A(e) {
   var t, n;
   let s = C(e);
-  if (null == s || !(null === (n = E(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
+  if (null == s || !(null === (n = f(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
       location: "2"
     }, {
       autoTrackExposure: !1
     })) || void 0 === t ? void 0 : t.dropsEnabled)) return !1;
   let l = a.DropsOptedOut.getSetting(),
     i = N(s, !1);
-  return A(s) && !l && i
+  return S(s) && !l && i
 }
 
-function A(e) {
+function S(e) {
   let {
     endDate: t
   } = e, n = l(t, "YYYY-MM-DD HH:mm"), s = l();

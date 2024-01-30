@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useInteractivePollMessage: function() {
-    return E
+    return f
   },
   default: function() {
     return _
@@ -17,13 +17,13 @@ var s = n("37983"),
   d = n("905206");
 let c = l.createContext(void 0);
 
-function E(e) {
+function f(e) {
   var t;
   let n = null !== (t = l.useContext(c)) && void 0 !== t ? t : e;
   return i(null != n, "Using PollReferenceMessageContext without a provider (or a fallback)"), n
 }
 
-function f(e) {
+function E(e) {
   let {
     message: t,
     children: n
@@ -46,7 +46,7 @@ function _(e) {
   } = e;
   return (0, d.isPollMessageDirectlyInteractive)(t) ? (0, s.jsx)(s.Fragment, {
     children: n
-  }) : (0, s.jsx)(f, {
+  }) : (0, s.jsx)(E, {
     message: t,
     children: n
   })

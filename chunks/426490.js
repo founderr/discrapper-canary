@@ -23,16 +23,16 @@ var s, l, a = n("37983"),
   u = n("506838"),
   d = n("65597"),
   c = n("77078"),
-  E = n("430568"),
-  f = n("449918"),
+  f = n("430568"),
+  E = n("449918"),
   _ = n("20606"),
   T = n("385976"),
   I = n("845579"),
   m = n("952368"),
   N = n("578706"),
   p = n("866190"),
-  S = n("847511"),
-  A = n("562228"),
+  A = n("847511"),
+  S = n("562228"),
   C = n("214400"),
   h = n("74232"),
   g = n("316350"),
@@ -135,8 +135,8 @@ function y(e) {
     answerClassName: d,
     renderAnswerContent: c
   } = e, {
-    ContainerComponent: E,
-    answerElementType: f
+    ContainerComponent: f,
+    answerElementType: E
   } = (0, u.match)({
     isInteractive: l,
     answersInteraction: n
@@ -160,13 +160,13 @@ function y(e) {
     ContainerComponent: L,
     answerElementType: 0
   }));
-  return (0, a.jsx)(E, {
+  return (0, a.jsx)(f, {
     className: r,
     children: t.map((e, t) => (0, a.jsx)(U, {
       className: o(R.answer, d),
       answer: e,
       isFirstAnswer: 0 === t,
-      elementType: f,
+      elementType: E,
       answerTapAccessibilityLabel: s,
       hasSelectedAnyAnswer: i,
       children: c(e)
@@ -184,15 +184,15 @@ function U(e) {
     isFirstAnswer: u,
     elementType: d
   } = e, {
-    channelId: E,
-    messageId: f
+    channelId: f,
+    messageId: E
   } = (0, h.useMessageIds)(), _ = (0, h.useStyleClass)(n.style), T = !0 === n.isSelected, I = i.useCallback(() => {
-    S.default.handlePollAnswerTapped({
-      channelId: E,
-      messageId: f,
+    A.default.handlePollAnswerTapped({
+      channelId: f,
+      messageId: E,
       answerId: n.answerId
     })
-  }, [E, f, n.answerId]);
+  }, [f, E, n.answerId]);
   switch (d) {
     case 0:
       return (0, a.jsx)("li", {
@@ -239,7 +239,7 @@ function j(e) {
     className: s,
     imageClassName: R.attachmentImage,
     src: null != t.proxy_url && "" !== t.proxy_url ? t.proxy_url : t.url,
-    alt: null != n ? n : (0, A.filterOutUUID)(t.filename),
+    alt: null != n ? n : (0, S.filterOutUUID)(t.filename),
     responsive: !0,
     width: 212,
     height: 212,
@@ -259,7 +259,7 @@ function b(e) {
     var e;
     return T.default.getCustomEmojiById(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : "")
   }, [l.id]), r = (null == l ? void 0 : l.name) !== "" ? l.name : null == i ? void 0 : i.name;
-  return (0, a.jsx)(E.default, {
+  return (0, a.jsx)(f.default, {
     className: s,
     emojiId: null == l ? void 0 : l.id,
     emojiName: null == l ? void 0 : l.name,
@@ -322,7 +322,7 @@ function F(e) {
 
 function k(e) {
   return (0, a.jsx)(F, {
-    color: (0, f.getColor)(M.Color.BRAND_500),
+    color: (0, E.getColor)(M.Color.BRAND_500),
     ...e
   })
 }

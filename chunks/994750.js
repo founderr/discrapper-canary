@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var s = n("37983");
@@ -21,7 +21,7 @@ let c = (e, t) => ({
   }),
   articleUrl: e.articleUrl
 });
-var E = e => {
+var f = e => {
   let {
     noticeType: t,
     markAsDismissed: n,
@@ -29,13 +29,13 @@ var E = e => {
   } = e, a = (0, r.useDropsExperiment)(l);
   if (null == a) return null;
   let {
-    bodyText: E,
-    articleUrl: f
+    bodyText: f,
+    articleUrl: E
   } = c(a.drop, a.config.streamLengthRequirement);
   return (0, s.jsxs)(i.default, {
     className: d.colorGuildBlue,
-    children: [E, (0, s.jsx)(i.NoticeButtonAnchor, {
-      href: f,
+    children: [f, (0, s.jsx)(i.NoticeButtonAnchor, {
+      href: E,
       target: "_blank",
       onClick: () => {
         n(o.ContentDismissActionType.PRIMARY)

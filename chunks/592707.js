@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return N
   },
   default: function() {
-    return A
+    return S
   }
 }), n("222007"), n("424973");
 var s = n("37983"),
@@ -16,8 +16,8 @@ var s = n("37983"),
   u = n("875978"),
   d = n("836943"),
   c = n("865343"),
-  E = n("621698"),
-  f = n("350134"),
+  f = n("621698"),
+  E = n("350134"),
   _ = n("782340"),
   T = n("550244"),
   I = n("314934");
@@ -28,7 +28,7 @@ let m = (e, t) => null == e && null == t || e === t,
     let n = N(e, t);
     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)]
   };
-class S extends l.PureComponent {
+class A extends l.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let n = e.message.reactions.length;
     return 0 === t.reactionsCount && n > 0 ? {
@@ -48,8 +48,8 @@ class S extends l.PureComponent {
       isPendingMember: m,
       isForumToolbar: N,
       channel: p,
-      className: S,
-      forceAddReactions: A,
+      className: A,
+      forceAddReactions: S,
       reactionClassName: C,
       useChatFontScaling: h,
       forceHideReactionCreates: g,
@@ -59,9 +59,9 @@ class S extends l.PureComponent {
     } = this.props, {
       disableTransitionAppear: L
     } = this.state, v = h ? I : T, P = R > 0;
-    return P || A ? (0, s.jsxs)(r.default, {
+    return P || S ? (0, s.jsxs)(r.default, {
       component: "div",
-      className: i(v.reactions, S),
+      className: i(v.reactions, A),
       transitionAppear: !L,
       role: "group",
       transitionLeave: !1,
@@ -72,7 +72,7 @@ class S extends l.PureComponent {
       onMouseLeave: () => this.setState({
         isHovered: !1
       }),
-      children: [(0, s.jsx)(E.MessageReactionsGroupWrapper, {
+      children: [(0, s.jsx)(f.MessageReactionsGroupWrapper, {
         reactions: O,
         message: e,
         readOnly: n,
@@ -84,7 +84,7 @@ class S extends l.PureComponent {
         className: C
       }), M > 0 && (0, s.jsx)(o.Clickable, {
         onClick: t => {
-          t.stopPropagation(), (0, f.showReactionsModal)(p, e)
+          t.stopPropagation(), (0, E.showReactionsModal)(p, e)
         },
         className: i(v.reaction, C, v.remainingReactions),
         "aria-label": _.default.Messages.ADD_REACTION,
@@ -100,8 +100,8 @@ class S extends l.PureComponent {
         useChatFontScaling: h,
         isHovered: this.state.isHovered,
         className: i({
-          [v.forceShow]: A && !P,
-          [v.forceShowLook]: A
+          [v.forceShow]: S && !P,
+          [v.forceShowLook]: S
         })
       })]
     }) : null
@@ -114,7 +114,7 @@ class S extends l.PureComponent {
     }
   }
 }
-var A = e => {
+var S = e => {
   let {
     message: t,
     maxReactions: n,
@@ -144,7 +144,7 @@ var A = e => {
       remainingReactions: r
     }
   }, [a, n, t.reactions]);
-  return (0, s.jsx)(S, {
+  return (0, s.jsx)(A, {
     ...e,
     visibleReactionsCount: o,
     combinedReactions: i,

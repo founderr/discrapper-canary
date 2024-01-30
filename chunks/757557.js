@@ -18,12 +18,12 @@ var l = n("446674"),
     let {
       noticeType: n,
       markAsDismissed: c,
-      partnerGame: E
-    } = e, f = (0, l.useStateFromStores)([a.default], () => a.default.getCurrentUser());
-    if (null == E) return null;
-    let _ = (0, r.getDrop)(E);
+      partnerGame: f
+    } = e, E = (0, l.useStateFromStores)([a.default], () => a.default.getCurrentUser());
+    if (null == f) return null;
+    let _ = (0, r.getDrop)(f);
     if (null == _) return null;
-    let T = "https://survey.alchemer.com/s3/7043057/Drops-NPS?user_id=".concat(null !== (t = null == f ? void 0 : f.id) && void 0 !== t ? t : "");
+    let T = "https://survey.alchemer.com/s3/7043057/Drops-NPS?user_id=".concat(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : "");
     return (0, s.jsxs)(i.default, {
       className: d.colorGuildBlue,
       children: [u.default.Messages.DROPS_BANNER_ENDED_INCOMPLETE.format({

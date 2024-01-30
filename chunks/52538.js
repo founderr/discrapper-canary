@@ -19,11 +19,11 @@ function r(e) {
     compact: d
   } = e, {
     nick: c
-  } = (0, l.default)(t), E = o(), f = u(), _ = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD_HOOK.format({
+  } = (0, l.default)(t), f = o(), E = u(), _ = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD_HOOK.format({
     username: c,
-    usernameHook: E,
+    usernameHook: f,
     otherUsername: r,
-    otherUsernameHook: f
+    otherUsernameHook: E
   });
   return (0, s.jsx)(a.default, {
     icon: n("127067"),

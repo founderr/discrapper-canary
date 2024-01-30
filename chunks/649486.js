@@ -11,16 +11,16 @@ var s, l, a = n("37983"),
   u = n("597755"),
   d = n.n(u),
   c = n("394846"),
-  E = n("171718"),
-  f = n("446674"),
+  f = n("171718"),
+  E = n("446674"),
   _ = n("77078"),
   T = n("774146"),
   I = n("161778"),
   m = n("271938"),
   N = n("697218"),
   p = n("476765"),
-  S = n("599110"),
-  A = n("98013"),
+  A = n("599110"),
+  S = n("98013"),
   C = n("49111"),
   h = n("782340"),
   g = n("777016");
@@ -28,21 +28,21 @@ var s, l, a = n("37983"),
 let M = [{
     getOs: () => h.default.Messages.PLATFORM_MACOS,
     icon: g.apple,
-    url: () => (0, A.makeDesktopDownloadURL)("osx", !1),
+    url: () => (0, S.makeDesktopDownloadURL)("osx", !1),
     platformKey: 0
   }, {
     getOs: () => h.default.Messages.PLATFORM_WINDOWS,
     icon: g.windows,
-    url: () => (0, A.makeDesktopDownloadURL)("win", !1),
+    url: () => (0, S.makeDesktopDownloadURL)("win", !1),
     platformKey: 1
   }, {
     getOs: () => h.default.Messages.PLATFORM_LINUX,
     icon: g.linux,
     url: [{
-      url: () => (0, A.makeDesktopDownloadURL)("linux", !1, "deb"),
+      url: () => (0, S.makeDesktopDownloadURL)("linux", !1, "deb"),
       getText: () => h.default.Messages.DEB
     }, {
-      url: () => (0, A.makeDesktopDownloadURL)("linux", !1, "tar.gz"),
+      url: () => (0, S.makeDesktopDownloadURL)("linux", !1, "tar.gz"),
       getText: () => h.default.Messages.TAR_GZ
     }],
     platformKey: 2
@@ -84,12 +84,12 @@ let M = [{
       {
         getOs: d,
         icon: c,
-        url: E,
-        platformKey: f
+        url: f,
+        platformKey: E
       } = n,
       T = d(),
       I = o(g.icon, c, u);
-    if (Array.isArray(E)) t = E.map((e, t) => {
+    if (Array.isArray(f)) t = f.map((e, t) => {
       let n = r ? e.url() : "";
       return (0, a.jsx)(R, {
         url: n,
@@ -98,7 +98,7 @@ let M = [{
       }, "".concat(n, "-").concat(t))
     });
     else {
-      let e = r ? E() : void 0;
+      let e = r ? f() : void 0;
       t = (0, a.jsx)(R, {
         url: e,
         onClick: () => s(T),
@@ -109,7 +109,7 @@ let M = [{
       className: o(g.platform, {
         [g.active]: i
       }),
-      onMouseEnter: () => l(f),
+      onMouseEnter: () => l(E),
       children: (0, a.jsxs)("div", {
         className: g.contentWrapper,
         children: [(0, a.jsxs)("div", {
@@ -140,7 +140,7 @@ function v(e) {
     source: t,
     onClose: n,
     transitionState: s
-  } = e, l = (0, f.useStateFromStores)([N.default], () => N.default.getCurrentUser()), r = (0, f.useStateFromStores)([I.default], () => I.default.theme), o = (0, f.useStateFromStores)([m.default], () => m.default.getFingerprint()), u = null == l || l.isClaimed(), [A, R] = i.useState(function() {
+  } = e, l = (0, E.useStateFromStores)([N.default], () => N.default.getCurrentUser()), r = (0, E.useStateFromStores)([I.default], () => I.default.theme), o = (0, E.useStateFromStores)([m.default], () => m.default.getFingerprint()), u = null == l || l.isClaimed(), [S, R] = i.useState(function() {
     var e;
     switch (null === (e = d.os) || void 0 === e ? void 0 : e.family) {
       case "OS X":
@@ -164,7 +164,7 @@ function v(e) {
   }());
 
   function v(e) {
-    (null != E.default.getToken() || null != o) && S.default.track(C.AnalyticEvents.DOWNLOAD_APP, {
+    (null != f.default.getToken() || null != o) && A.default.track(C.AnalyticEvents.DOWNLOAD_APP, {
       platform: e,
       ptb: !1,
       released: !0,
@@ -178,7 +178,7 @@ function v(e) {
     R(e)
   }
   i.useEffect(() => {
-    S.default.track(C.AnalyticEvents.OPEN_MODAL, {
+    A.default.track(C.AnalyticEvents.OPEN_MODAL, {
       type: "Download App",
       source: {
         location: t
@@ -214,7 +214,7 @@ function v(e) {
               className: g.platforms,
               children: M.map(e => (0, a.jsx)(L, {
                 theme: r,
-                isActive: A === e.platformKey,
+                isActive: S === e.platformKey,
                 platform: e,
                 onClick: v,
                 onMouseEnter: P,
@@ -236,7 +236,7 @@ function v(e) {
               className: g.platforms,
               children: O.map(e => (0, a.jsx)(L, {
                 theme: r,
-                isActive: A === e.platformKey,
+                isActive: S === e.platformKey,
                 platform: e,
                 onClick: v,
                 onMouseEnter: P,

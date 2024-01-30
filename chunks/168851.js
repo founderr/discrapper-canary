@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var s = n("446674"),
@@ -24,7 +24,7 @@ class c extends s.default.Store {
   }
 }
 c.displayName = "MaintenanceStore";
-var E = new c(a.default, {
+var f = new c(a.default, {
   CONNECTION_OPEN: function() {
     o = null, i.default.checkScheduledMaintenances()
   },

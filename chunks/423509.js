@@ -19,11 +19,11 @@ function c(e) {
   let {
     message: n,
     compact: c,
-    usernameHook: E,
-    onClickThread: f,
+    usernameHook: f,
+    onClickThread: E,
     onClickViewThreads: _,
     onContextMenuThread: T
-  } = e, I = (0, a.default)(n), m = E(I), N = (0, l.useStateFromStores)([i.default], () => {
+  } = e, I = (0, a.default)(n), m = f(I), N = (0, l.useStateFromStores)([i.default], () => {
     var e;
     return i.default.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id)
   }), p = u.default.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
@@ -31,7 +31,7 @@ function c(e) {
     actorHook: m,
     threadName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : n.content,
     threadOnClick: {
-      onClick: f,
+      onClick: E,
       onContextMenu: T
     },
     viewThreadsOnClick: _

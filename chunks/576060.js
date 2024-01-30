@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("18494"),
   d = n("79798"),
   c = n("174622"),
-  E = n("335189"),
-  f = n("473591"),
+  f = n("335189"),
+  E = n("473591"),
   _ = n("371348"),
   T = n("857697"),
   I = n("988268"),
@@ -27,21 +27,21 @@ function p(e) {
   } = e, {
     clydeProfile: n,
     isFetching: p
-  } = (0, i.useStateFromStoresObject)([f.default], () => ({
-    clydeProfile: f.default.getProfile(t),
-    isFetching: f.default.isFetchingProfile(t)
-  })), S = (0, i.default)([u.default], u.default.getCurrentlySelectedChannelId);
+  } = (0, i.useStateFromStoresObject)([E.default], () => ({
+    clydeProfile: E.default.getProfile(t),
+    isFetching: E.default.isFetchingProfile(t)
+  })), A = (0, i.default)([u.default], u.default.getCurrentlySelectedChannelId);
   if (l.useEffect(() => {
-      (0, E.fetchClydeProfile)(t)
+      (0, f.fetchClydeProfile)(t)
     }, [t]), (0, o.default)({
       type: a.ImpressionTypes.VIEW,
       name: a.ImpressionNames.CLYDE_AI_PROFILE_EMBED_VIEWED,
       properties: {
         clyde_profile_id: null == n ? void 0 : n.clyde_profile_id,
-        channel_id: S
+        channel_id: A
       }
     }, {
-      disableTrack: null == n || null == S
+      disableTrack: null == n || null == A
     }), p) return (0, s.jsxs)(c.default, {
     children: [(0, s.jsx)(c.default.Header, {
       text: m.default.Messages.CLYDE_PROFILE_EMBED_RESOLVING_HEADER
@@ -65,7 +65,7 @@ function p(e) {
       })
     })]
   });
-  let A = (0, _.default)(n, !1, 56);
+  let S = (0, _.default)(n, !1, 56);
   return (0, s.jsxs)(c.default, {
     children: [(0, s.jsx)(c.default.Header, {
       text: m.default.Messages.CLYDE_PROFILE_EMBED_HEADER
@@ -74,7 +74,7 @@ function p(e) {
         className: N.profileInfoContainer,
         onClick: () => (0, T.default)(n),
         children: [(0, s.jsx)(r.Avatar, {
-          src: A,
+          src: S,
           size: r.AvatarSizes.SIZE_56,
           "aria-hidden": !0
         }), (0, s.jsxs)("div", {

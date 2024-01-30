@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return c
   },
   sendPollMessageWithAttachments: function() {
-    return E
+    return f
   }
 });
 var s = n("81594"),
@@ -50,7 +50,7 @@ async function d(e, t, n) {
 async function c(e) {
   s.default.clearAll(e, i.DraftType.Poll)
 }
-async function E(e) {
+async function f(e) {
   let {
     channel: t,
     items: n,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return A
   }
 }), n("222007");
 var s = n("37983"),
@@ -13,28 +13,28 @@ var s = n("37983"),
   u = n("851387"),
   d = n("393414"),
   c = n("305961"),
-  E = n("162771"),
-  f = n("531470"),
+  f = n("162771"),
+  E = n("531470"),
   _ = n("794818"),
   T = n("267567"),
   I = n("49111"),
   m = n("782340"),
   N = n("600323"),
   p = n("105029"),
-  S = () => {
-    let e = (0, r.useStateFromStores)([E.default], () => E.default.getGuildId(), []),
+  A = () => {
+    let e = (0, r.useStateFromStores)([f.default], () => f.default.getGuildId(), []),
       t = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(e), [e]),
       n = (0, r.useStateFromStores)([T.default], () => T.default.getHistorySnapshot(), []),
-      [a, S] = l.useState(!1);
+      [a, A] = l.useState(!1);
     if (null == t) return null;
-    let A = async () => {
-      S(!0);
+    let S = async () => {
+      A(!0);
       try {
         _.trackGuildJoinClicked(t.id), await u.default.joinGuild(t.id, {
           source: I.JoinGuildSources.NOTICE_BAR
         })
       } catch {
-        S(!1)
+        A(!1)
       }
     };
     return (0, s.jsxs)("div", {
@@ -51,7 +51,7 @@ var s = n("37983"),
             ...n.location
           }) : e.goBack()
         },
-        children: [(0, s.jsx)(f.default, {
+        children: [(0, s.jsx)(E.default, {
           width: 16,
           height: 16,
           className: N.arrow
@@ -66,7 +66,7 @@ var s = n("37983"),
         color: o.Button.Colors.WHITE,
         size: o.Button.Sizes.NONE,
         submitting: a,
-        onClick: A,
+        onClick: S,
         children: m.default.Messages.LURKER_MODE_NAG_BAR_BUTTON.format({
           guild: t.name
         })

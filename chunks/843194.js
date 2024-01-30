@@ -20,8 +20,8 @@ function c(e) {
     channel: n,
     content: l,
     className: c,
-    compact: E,
-    popoutProps: f,
+    compact: f,
+    popoutProps: E,
     hideTimestamp: _ = !1,
     withFooter: T = !1,
     ...I
@@ -30,16 +30,16 @@ function c(e) {
     className: a({
       [d.withFooter]: T
     }, d.embedCard, {
-      [d.compact]: E
+      [d.compact]: f
     }, c),
     children: (0, s.jsx)(r.default, {
       ...I,
       className: a(d.messageContainer, {
-        [d.compact]: E
+        [d.compact]: f
       }),
       childrenMessageContent: (0, s.jsx)(o.default, {
         className: a(d.messageContent, {
-          [d.compact]: E
+          [d.compact]: f
         }),
         message: t,
         content: l
@@ -49,14 +49,14 @@ function c(e) {
         channel: n,
         author: m,
         guildId: null == n ? void 0 : n.guild_id,
-        compact: E,
+        compact: f,
         hideTimestamp: _,
         className: a(d.header, {
-          [d.compact]: E
+          [d.compact]: f
         }),
-        ...null != f ? f : {}
+        ...null != E ? E : {}
       }),
-      compact: E
+      compact: f
     })
   })
 }

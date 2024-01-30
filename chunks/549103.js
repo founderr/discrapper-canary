@@ -32,12 +32,12 @@ let o = async e => {
         }
       }),
       a = e.body.total,
-      E = null !== (c = e.body.guild_join_requests) && void 0 !== c ? c : [],
-      f = E.map(i.joinRequestFromServer);
+      f = null !== (c = e.body.guild_join_requests) && void 0 !== c ? c : [],
+      E = f.map(i.joinRequestFromServer);
     return l.default.dispatch({
       type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
       status: n,
-      requests: f,
+      requests: E,
       total: a,
       limit: d,
       guildId: t
@@ -89,7 +89,7 @@ let o = async e => {
     status: o.body.application_status,
     request: o.body
   })
-}, E = async (e, t) => {
+}, f = async (e, t) => {
   let n = await s.default.patch({
     url: r.Endpoints.GUILD_JOIN_REQUESTS(e),
     body: {
@@ -101,7 +101,7 @@ let o = async e => {
     guildId: e,
     action: t
   }), n.body
-}, f = async e => {
+}, E = async e => {
   try {
     let t = await s.default.post({
         url: r.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e)
@@ -131,8 +131,8 @@ var T = {
   ackUserGuildJoinRequest: d,
   removeGuildJoinRequest: u,
   updateGuildJoinRequest: c,
-  actionAllPendingJoinRequests: E,
-  resetGuildJoinRequest: f,
+  actionAllPendingJoinRequests: f,
+  resetGuildJoinRequest: E,
   fetchRequestToJoinGuilds: _,
   setSelectedApplicationStatus: (e, t) => {
     l.default.dispatch({

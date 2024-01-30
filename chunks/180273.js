@@ -13,16 +13,16 @@ var s = n("866227"),
   u = n("271938"),
   d = n("568307"),
   c = n("718517"),
-  E = n("376152"),
-  f = n("579565"),
+  f = n("376152"),
+  E = n("579565"),
   _ = n("411511");
 let T = null,
   I = null,
   m = {},
   N = {},
   p = _.TooltipActions.LOADING_INITIAL_PROGRESS,
-  S = new i.Timeout,
-  A = {
+  A = new i.Timeout,
+  S = {
     completed: !1,
     initialProgressFetched: !1,
     interrupted: !1,
@@ -35,16 +35,16 @@ let T = null,
       game: s,
       completed: l,
       gameTitle: a
-    } = A;
-    !(null == t || null == a || l || null == s || null == n || S.isStarted()) && (e ? (0, E.sendHeartbeat)(t, n, s.pid) : S.start(1 * c.default.Millis.MINUTE, () => {
-      (0, E.sendHeartbeat)(t, n, s.pid)
+    } = S;
+    !(null == t || null == a || l || null == s || null == n || A.isStarted()) && (e ? (0, f.sendHeartbeat)(t, n, s.pid) : A.start(1 * c.default.Millis.MINUTE, () => {
+      (0, f.sendHeartbeat)(t, n, s.pid)
     }))
   },
   h = e => {
-    A.retries = 0, A.completed = e.completed, A.initialProgressFetched = !0, A.progress = e.progress, A.lastCheckedAt = l.now(), p = A.completed ? _.TooltipActions.QUEST_COMPLETION : _.TooltipActions.TRACK_PROGRESS
+    S.retries = 0, S.completed = e.completed, S.initialProgressFetched = !0, S.progress = e.progress, S.lastCheckedAt = l.now(), p = S.completed ? _.TooltipActions.QUEST_COMPLETION : _.TooltipActions.TRACK_PROGRESS
   },
   g = (e, t, n) => {
-    (!A.completed || e.dropsQuestId !== A.dropsQuestId) && (A.game = t, A.dropsQuestId = e.dropsQuestId, A.gameTitle = e.title, A.completed = !1, A.interrupted = !1, A.streamKey = n, A.retries = 0, A.lastCheckedAt = l.now(), S.start(5e3, () => C(!0)))
+    (!S.completed || e.dropsQuestId !== S.dropsQuestId) && (S.game = t, S.dropsQuestId = e.dropsQuestId, S.gameTitle = e.title, S.completed = !1, S.interrupted = !1, S.streamKey = n, S.retries = 0, S.lastCheckedAt = l.now(), A.start(5e3, () => C(!0)))
   };
 class M extends a.default.Store {
   initialize() {
@@ -55,10 +55,10 @@ class M extends a.default.Store {
   }
   getIsPartnerGameQuestComplete(e) {
     var t;
-    let n = (0, f.getDrop)(e);
+    let n = (0, E.getDrop)(e);
     if (null == n || null == I) return !1;
     let s = !!(null === (t = I[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at),
-      l = A.completed && A.gameTitle === n.title || s;
+      l = S.completed && S.gameTitle === n.title || s;
     return l
   }
   get serverEligibleByQuestIds() {
@@ -77,19 +77,19 @@ class M extends a.default.Store {
     return N
   }
   get hasInitialProgressFetched() {
-    return A.initialProgressFetched
+    return S.initialProgressFetched
   }
   get isCurrentQuestCompleted() {
-    return A.completed
+    return S.completed
   }
   get isCurrentQuestInterrupted() {
-    return A.interrupted
+    return S.interrupted
   }
   get currentDropQuestGameTitle() {
-    return A.gameTitle
+    return S.gameTitle
   }
   get currentDropQuestStreamProgress() {
-    let e = A.progress;
+    let e = S.progress;
     if (null == e || null == e.steps || 0 === e.steps.length) return 0;
     let t = e.steps.find(e => "stream_length" === e.name);
     return null == t ? 0 : t.percent
@@ -118,7 +118,7 @@ var O = new M(r.default, {
   },
   DROPS_FETCH_PROGRESS_SUCCESS: h,
   DROPS_FETCH_PROGRESS_FAILURE: e => {
-    !A.initialProgressFetched && (A.initialProgressFetched = !0, p = _.TooltipActions.STREAM_CTA)
+    !S.initialProgressFetched && (S.initialProgressFetched = !0, p = _.TooltipActions.STREAM_CTA)
   },
   DROPS_HEARTBEAT_SUCCESS: e => {
     h(e), m[e.dropsQuestId] = !0, C()
@@ -128,18 +128,18 @@ var O = new M(r.default, {
       dropsQuestId: t,
       statusCode: n
     } = e;
-    if (A.completed = !1, A.initialProgressFetched = !0, A.lastCheckedAt = l.now(), 429 === n && 0 === A.retries) {
-      A.retries = A.retries + 1, C();
+    if (S.completed = !1, S.initialProgressFetched = !0, S.lastCheckedAt = l.now(), 429 === n && 0 === S.retries) {
+      S.retries = S.retries + 1, C();
       return
     }
-    p = _.TooltipActions.STREAM_CTA, 403 === n ? m[t] = !1 : A.interrupted = !0
+    p = _.TooltipActions.STREAM_CTA, 403 === n ? m[t] = !1 : S.interrupted = !0
   },
   DROPS_UNENROLL_USER: e => {
     I = null, m = {
       ...m
     }, delete m[e.dropsQuestId], N = {
       ...N
-    }, delete N[e.dropsQuestId], A.dropsQuestId === e.dropsQuestId && (A = {
+    }, delete N[e.dropsQuestId], S.dropsQuestId === e.dropsQuestId && (S = {
       completed: !1,
       initialProgressFetched: !1,
       interrupted: !1,
@@ -147,7 +147,7 @@ var O = new M(r.default, {
     })
   },
   STREAM_CLOSE: () => {
-    A.completed && (p = _.TooltipActions.QUEST_COMPLETION), A.interrupted = !1, A.retries = 0, S.stop()
+    S.completed && (p = _.TooltipActions.QUEST_COMPLETION), S.interrupted = !1, S.retries = 0, A.stop()
   },
   STREAM_START: function(e) {
     var t;
@@ -169,8 +169,8 @@ var O = new M(r.default, {
       var t;
       return e.toLowerCase() === (null === (t = c.name) || void 0 === t ? void 0 : t.toLowerCase())
     }));
-    if (null == T || (0, f.getDropExpired)(T)) return;
-    let I = null === (t = (0, f.getDropsExperimentForDrop)(T)) || void 0 === t ? void 0 : t.getCurrentConfig({
+    if (null == T || (0, E.getDropExpired)(T)) return;
+    let I = null === (t = (0, E.getDropsExperimentForDrop)(T)) || void 0 === t ? void 0 : t.getCurrentConfig({
       location: "1"
     }, {
       autoTrackExposure: !1
@@ -179,10 +179,10 @@ var O = new M(r.default, {
     let m = I.autoEnrollment;
     null != N[T.dropsQuestId] && N[T.dropsQuestId].isEnrolled || m ? g(T, c, i) : r.default.wait(async () => {
       var e;
-      await (0, E.fetchEnrolledUser)(T.dropsQuestId), (null === (e = N[T.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && g(T, c, i)
+      await (0, f.fetchEnrolledUser)(T.dropsQuestId), (null === (e = N[T.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && g(T, c, i)
     })
   },
   LOGOUT: function() {
-    m = {}, N = {}, I = {}, S.stop()
+    m = {}, N = {}, I = {}, A.stop()
   }
 })

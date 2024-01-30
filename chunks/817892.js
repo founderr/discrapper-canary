@@ -14,10 +14,10 @@ let o = 14 * i.default.Millis.DAY,
   d = {},
   c = {};
 
-function E() {
+function f() {
   d = {}, c = {}
 }
-class f extends l.default.Store {
+class E extends l.default.Store {
   getFpMessageInfo(e) {
     return d[e]
   }
@@ -32,8 +32,8 @@ class f extends l.default.Store {
     return !t.reportSubmit && s.default.age(t.messageId) < (null != n ? n : o)
   }
 }
-f.displayName = "FalsePositiveStore";
-var _ = new f(a.default, {
+E.displayName = "FalsePositiveStore";
+var _ = new E(a.default, {
   LOGOUT: function() {
     (function() {
       d = {}, c = {}

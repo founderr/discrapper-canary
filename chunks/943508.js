@@ -13,16 +13,16 @@ var s = n("37983"),
   u = n("685665"),
   d = n("933629"),
   c = n("437472"),
-  E = n("159885"),
-  f = n("256860"),
+  f = n("159885"),
+  E = n("256860"),
   _ = n("161585"),
   T = n("41170"),
   I = n("139185"),
   m = n("49111"),
   N = n("646718"),
   p = n("814809");
-let S = (0, E.cssValueToNumber)(a.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
-  A = e => {
+let A = (0, f.cssValueToNumber)(a.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
+  S = e => {
     null != e && o.default.trackWithMetadata(m.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
       type: N.PremiumUpsellTypes.STICKER_IN_MESSAGE_HOVER,
       expression_id: e.id,
@@ -36,7 +36,7 @@ var C = e => {
     renderableSticker: t,
     channel: n,
     isInteracting: a
-  } = e, [o, E] = l.useState(!0), [_, m] = l.useState(String(Date.now())), [N] = (0, f.useStickerForRenderableSticker)(t, a), {
+  } = e, [o, f] = l.useState(!0), [_, m] = l.useState(String(Date.now())), [N] = (0, E.useStickerForRenderableSticker)(t, a), {
     AnalyticsLocationProvider: C
   } = (0, u.default)(r.default.STICKER_MESSAGE), h = (0, s.jsxs)("span", {
     className: p.stickerName,
@@ -50,7 +50,7 @@ var C = e => {
       animation: i.Popout.Animation.TRANSLATE,
       positionKey: _,
       onRequestClose: () => {
-        E(!0)
+        f(!0)
       },
       renderPopout: e => (0, s.jsx)(I.default, {
         ...e,
@@ -68,18 +68,18 @@ var C = e => {
           text: (0, d.renderClickableTooltipNode)(h),
           "aria-label": !1,
           onTooltipShow: () => {
-            A(N)
+            S(N)
           },
           children: e => (0, s.jsx)(i.Clickable, {
             ...e,
             className: p.clickableSticker,
             onClick: e => {
-              E(!o), n(e)
+              f(!o), n(e)
             },
             tag: "span",
             children: (0, s.jsx)(T.default, {
               isInteracting: a,
-              size: S,
+              size: A,
               sticker: null != N ? N : t
             })
           })

@@ -26964,8 +26964,8 @@ html .progress__4ef76 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -95425,6 +95425,12 @@ html .invoiceCancelRow_a8669b {
     font-size: .75rem
 }
 
+@keyframes shimmer__21c79 {
+    to {
+        background-position-x: 0%
+    }
+}
+
 .flagContainer__5347a,
 .roleContainer__7cd51 {
     display: flex;
@@ -95453,7 +95459,19 @@ html .invoiceCancelRow_a8669b {
 }
 
 .memberRowContainer_f0d0e5 {
-    cursor: pointer
+    cursor: pointer;
+    transition: box-shadow.6s ease-in-out, filter.6s ease-in-out;
+    filter: blur(0);
+    animation: none
+}
+
+.memberRowContainer_f0d0e5.loading_b476df {
+    filter: blur(4px);
+    background: linear-gradient(315deg, transparent, rgba(255, 255, 255, 5%), transparent);
+    animation: shimmer__21c79.5s infinite linear;
+    transition: filter.1s ease-out;
+    background-size: 300%;
+    background-position-x: 100%
 }
 
 .memberRowContainer_f0d0e5:hover td {
@@ -96593,6 +96611,16 @@ html .invoiceCancelRow_a8669b {
 
 .tableOptions_e6ae44 .button__00a9a:active {
     background-color: var(--background-modifier-active)
+}
+
+.sortButton_d8b97a {
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+.sortText__7eae6 {
+    margin-left: 4px
 }
 
 .settingsColumn__23153 {
@@ -114208,6 +114236,11 @@ html .invoiceCancelRow_a8669b {
     text-align: center;
     margin-bottom: 24px;
     margin-top: 66px
+}
+
+.finishTitlePadding__855e9 {
+    padding-left: 35px;
+    padding-right: 35px
 }
 
 .button_d0990e {

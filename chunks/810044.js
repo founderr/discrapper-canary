@@ -13,16 +13,16 @@ var s = n("37983"),
   u = n("446674"),
   d = n("77078"),
   c = n("716241"),
-  E = n("428958"),
-  f = n("442379"),
+  f = n("428958"),
+  E = n("442379"),
   _ = n("537325"),
   T = n("305961"),
   I = n("476263"),
   m = n("191814"),
   N = n("898260"),
   p = n("599110"),
-  S = n("741515"),
-  A = n("3081"),
+  A = n("741515"),
+  S = n("3081"),
   C = n("907038"),
   h = n("49111"),
   g = n("782340"),
@@ -35,16 +35,16 @@ function O(e) {
   } = e, a = (0, u.useStateFromStores)([T.default], () => T.default.getGuild(n)), {
     loading: O,
     subscriptionsSettings: R
-  } = (0, S.useMonetizationSettings)(n), {
+  } = (0, A.useMonetizationSettings)(n), {
     listingsLoaded: L
-  } = (0, f.useFetchGuildProductListingsForGuild)(n), v = (0, f.useGuildProductsForGuild)(n, {
+  } = (0, E.useFetchGuildProductListingsForGuild)(n), v = (0, E.useGuildProductsForGuild)(n, {
     publishedOnly: !0
   }), P = l.useCallback(async () => {
     p.default.track(h.AnalyticEvents.GUILD_SHOP_EMBED_CLICKED, {
       ...(0, c.collectGuildAnalyticsMetadata)(n)
     }), await (0, _.default)(h.Routes.SERVER_SHOP(n))
   }, [n]);
-  (0, E.default)({
+  (0, f.default)({
     type: r.ImpressionTypes.VIEW,
     name: r.ImpressionNames.GUILD_SHOP_EMBED
   }, {
@@ -56,7 +56,7 @@ function O(e) {
     children: (0, s.jsx)(d.Spinner, {})
   }) : null == a || null == R ? null : (0, s.jsxs)("div", {
     className: M.guildShopEmbed,
-    children: [(0, s.jsx)(A.HeroImage, {
+    children: [(0, s.jsx)(S.HeroImage, {
       coverImageAsset: null !== (t = R.cover_image_asset) && void 0 !== t ? t : null
     }), (0, s.jsx)(m.default, {
       size: 16

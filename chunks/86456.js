@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return p
   },
   PrivateChannelIntegrationRemovedSystemMessage: function() {
-    return S
+    return A
   }
 });
 var s = n("37983"),
@@ -16,8 +16,8 @@ var s = n("37983"),
   u = n("506885"),
   d = n("981601"),
   c = n("697218"),
-  E = n("304198"),
-  f = n("315102"),
+  f = n("304198"),
+  E = n("315102"),
   _ = n("441823"),
   T = n("140596"),
   I = n("950576"),
@@ -26,7 +26,7 @@ var s = n("37983"),
 function N(e) {
   return l.useCallback(t => (l, r) => {
     var o;
-    let E = f.default.getApplicationIconURL({
+    let f = E.default.getApplicationIconURL({
         id: t.id,
         icon: t.icon,
         bot: t.bot,
@@ -51,7 +51,7 @@ function N(e) {
       } = t;
     return null == p ? l : (0, s.jsx)(a.Popout, {
       position: "right",
-      preload: () => (0, u.default)(p.id, E, {
+      preload: () => (0, u.default)(p.id, f, {
         guildId: e.guild_id,
         channelId: e.id
       }),
@@ -76,7 +76,7 @@ function p(e) {
     channel: l,
     compact: a
   } = e, i = (0, r.default)(t), u = t.application, d = (0, o.useUsernameHook)(t.author, l.id, l.guild_id), c = N(l);
-  return (0, s.jsx)(E.default, {
+  return (0, s.jsx)(f.default, {
     icon: n("127067"),
     timestamp: t.timestamp,
     compact: a,
@@ -89,13 +89,13 @@ function p(e) {
   })
 }
 
-function S(e) {
+function A(e) {
   let {
     message: t,
     channel: l,
     compact: a
   } = e, i = (0, r.default)(t), u = t.application, d = (0, o.useUsernameHook)(t.author, l.id, l.guild_id), c = N(l);
-  return (0, s.jsx)(E.default, {
+  return (0, s.jsx)(f.default, {
     icon: n("226315"),
     timestamp: t.timestamp,
     compact: a,

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   ack: function() {
-    return _
+    return r
   },
   ackChannel: function() {
-    return f
+    return c
   },
   bulkAck: function() {
-    return c
+    return f
   },
   localAck: function() {
     return g
@@ -32,9 +32,9 @@ var i = n("249654"),
   o = n("42203"),
   d = n("245997"),
   a = n("697218"),
-  r = n("49111");
+  _ = n("49111");
 
-function _(e) {
+function r(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = arguments.length > 3 ? arguments[3] : void 0,
@@ -45,12 +45,12 @@ function _(e) {
     messageId: i,
     immediate: t,
     force: n,
-    context: r.CURRENT_APP_CONTEXT,
+    context: _.CURRENT_APP_CONTEXT,
     location: u
   })
 }
 
-function f(e) {
+function c(e) {
   e.isCategory() ? ! function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -69,19 +69,19 @@ function f(e) {
         } = e;
         return t.id
       }),
-      r = [...a];
+      _ = [...a];
     for (let e of (a.forEach(e => {
         let t = u.default.getActiveJoinedThreadsForParent(i.guild_id, e);
-        for (let e in t) r.push(e)
-      }), r)) _(e, t, n)
-  }(e.id, !0, !0) : e.isForumLikeChannel() ? _(e.id, !0, !0, i.default.fromTimestamp(Date.now())) : _(e.id, !0, !0)
+        for (let e in t) _.push(e)
+      }), _)) r(e, t, n)
+  }(e.id, !0, !0) : e.isForumLikeChannel() ? r(e.id, !0, !0, i.default.fromTimestamp(Date.now())) : r(e.id, !0, !0)
 }
 
-function c(e, t) {
+function f(e, t) {
   l.default.dispatch({
     type: "BULK_ACK",
     channels: e,
-    context: r.CURRENT_APP_CONTEXT,
+    context: _.CURRENT_APP_CONTEXT,
     onFinished: t
   })
 }

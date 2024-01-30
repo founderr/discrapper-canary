@@ -14,8 +14,8 @@ var l = n("627445"),
   u = n("373469"),
   d = n("162771"),
   c = n("174622"),
-  E = n("793079"),
-  f = n("49111"),
+  f = n("793079"),
+  E = n("49111"),
   _ = n("91366"),
   T = n("782340"),
   I = n("18978");
@@ -25,8 +25,8 @@ function m(e) {
       invite: m,
       currentUserId: N,
       guild: p,
-      onTransitionToInviteChannel: S,
-      onAcceptInstantInvite: A
+      onTransitionToInviteChannel: A,
+      onAcceptInstantInvite: S
     } = e,
     C = null == p ? void 0 : p.id,
     h = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
@@ -41,14 +41,14 @@ function m(e) {
   } = m;
   a(L === _.InviteTargetTypes.STREAM && null != v, "invalid streaming invite");
   let P = N === v.id,
-    D = m.state === f.InviteStates.ACCEPTING,
+    D = m.state === E.InviteStates.ACCEPTING,
     x = null != p;
   if (null == p) {
-    if (null == m.guild) return (0, s.jsx)(E.default, {});
+    if (null == m.guild) return (0, s.jsx)(f.default, {});
     p = new o.default(m.guild)
   }
   let y = null != m.channel ? (0, r.createChannelRecordFromInvite)(m.channel) : null,
-    U = O ? S : A;
+    U = O ? A : S;
   x && !R ? l = P ? T.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : T.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
     name: v.username
   }) : (t = T.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, O && (t = T.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), l = P ? T.default.Messages.INVITE_BUTTON_STREAMER : T.default.Messages.INVITE_BUTTON_STREAMING.format({
