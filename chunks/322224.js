@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return R
   }
 });
 var u = n("872717"),
@@ -11,29 +11,30 @@ var u = n("872717"),
   i = n("271938"),
   a = n("299039"),
   c = n("271560"),
-  o = n("398604"),
-  E = n("189443"),
-  s = n("745049"),
-  _ = n("49111"),
-  y = {
+  E = n("398604"),
+  o = n("189443"),
+  s = n("832588"),
+  _ = n("745049"),
+  y = n("49111"),
+  R = {
     startEvent: (e, t) => u.default.patch({
-      url: _.Endpoints.GUILD_EVENT(t, e),
+      url: y.Endpoints.GUILD_EVENT(t, e),
       body: {
-        status: s.GuildScheduledEventStatus.ACTIVE
+        status: _.GuildScheduledEventStatus.ACTIVE
       }
     }),
     endEvent: (e, t) => u.default.patch({
-      url: _.Endpoints.GUILD_EVENT(t, e),
+      url: y.Endpoints.GUILD_EVENT(t, e),
       body: {
-        status: s.GuildScheduledEventStatus.COMPLETED
+        status: _.GuildScheduledEventStatus.COMPLETED
       }
     }),
     joinVoiceEvent(e, t) {
-      r.default.selectVoiceChannel(t), (0, d.transitionTo)(_.Routes.CHANNEL(e, t))
+      r.default.selectVoiceChannel(t), (0, d.transitionTo)(y.Routes.CHANNEL(e, t))
     },
     saveEvent(e, t, n, l) {
-      let r = s.ENTITY_TYPES_REQUIRED_CHANNEL_ID.has(t.entityType) ? t.channelId : null,
-        d = s.ENTITY_TYPES_REQUIRED_ENTITY_METADATA.has(t.entityType) ? t.entityMetadata : null,
+      let r = _.ENTITY_TYPES_REQUIRED_CHANNEL_ID.has(t.entityType) ? t.channelId : null,
+        d = _.ENTITY_TYPES_REQUIRED_ENTITY_METADATA.has(t.entityType) ? t.entityMetadata : null,
         i = null != t.image && !1 === /^data:/.test(t.image) ? void 0 : t.image,
         a = {
           name: t.name,
@@ -46,10 +47,10 @@ var u = n("872717"),
           channel_id: r,
           entity_metadata: d,
           broadcast_to_directory_channels: l.broadcastToDirectoryChannels,
-          recurrence_rule: (0, E.recurrenceRuleToServer)(t.recurrenceRule)
+          recurrence_rule: (0, o.recurrenceRuleToServer)(t.recurrenceRule)
         };
       return u.default.patch({
-        url: _.Endpoints.GUILD_EVENT(n, e),
+        url: y.Endpoints.GUILD_EVENT(n, e),
         body: a
       })
     },
@@ -65,17 +66,17 @@ var u = n("872717"),
         channel_id: e.channelId,
         entity_metadata: e.entityMetadata,
         broadcast_to_directory_channels: n.broadcastToDirectoryChannels,
-        recurrence_rule: (0, E.recurrenceRuleToServer)(e.recurrenceRule)
+        recurrence_rule: (0, o.recurrenceRuleToServer)(e.recurrenceRule)
       };
       return u.default.post({
-        url: _.Endpoints.GUILD_EVENTS_FOR_GUILD(t),
+        url: y.Endpoints.GUILD_EVENTS_FOR_GUILD(t),
         body: l
       })
     },
     async fetchGuildEvent(e, t) {
       let {
         body: n
-      } = await (0, c.httpGetWithCountryCodeQuery)(_.Endpoints.GUILD_EVENT(e, t));
+      } = await (0, c.httpGetWithCountryCodeQuery)(y.Endpoints.GUILD_EVENT(e, t));
       return l.default.dispatch({
         type: "FETCH_GUILD_EVENT",
         guildScheduledEvent: n
@@ -83,7 +84,7 @@ var u = n("872717"),
     },
     async fetchGuildEventsForGuild(e) {
       let t = {
-          url: _.Endpoints.GUILD_EVENTS_FOR_GUILD(e)
+          url: y.Endpoints.GUILD_EVENTS_FOR_GUILD(e)
         },
         {
           body: n
@@ -96,7 +97,7 @@ var u = n("872717"),
     },
     async fetchGuildEventUserCounts(e, t, n) {
       let r = {
-          url: _.Endpoints.GUILD_EVENT_USER_COUNTS(e, t),
+          url: y.Endpoints.GUILD_EVENT_USER_COUNTS(e, t),
           query: {
             guild_scheduled_event_exception_ids: n
           }
@@ -119,19 +120,19 @@ var u = n("872717"),
       }), a
     },
     cancelGuildEvent: (e, t) => u.default.patch({
-      url: _.Endpoints.GUILD_EVENT(t, e),
+      url: y.Endpoints.GUILD_EVENT(t, e),
       body: {
-        status: s.GuildScheduledEventStatus.CANCELED
+        status: _.GuildScheduledEventStatus.CANCELED
       }
     }),
     deleteGuildEvent: (e, t) => u.default.delete({
-      url: _.Endpoints.GUILD_EVENT(t, e)
+      url: y.Endpoints.GUILD_EVENT(t, e)
     }),
     async getGuildEventsForCurrentUser(e) {
       let {
         body: t
       } = await u.default.get({
-        url: _.Endpoints.USER_GUILD_EVENTS,
+        url: y.Endpoints.USER_GUILD_EVENTS,
         query: {
           guild_ids: [e]
         }
@@ -153,7 +154,7 @@ var u = n("872717"),
           guildEventExceptionId: t,
           response: r
         }), await u.default.put({
-          url: _.Endpoints.USER_GUILD_EVENT(n, e, t),
+          url: y.Endpoints.USER_GUILD_EVENT(n, e, t),
           body: {
             response: r
           }
@@ -171,7 +172,7 @@ var u = n("872717"),
     },
     async deleteRsvpForGuildEvent(e, t, n) {
       let r = i.default.getId(),
-        d = o.default.getRsvp(e, t, r);
+        d = E.default.getRsvp(e, t, r);
       if (null != d) try {
         return l.default.dispatch({
           type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
@@ -181,7 +182,7 @@ var u = n("872717"),
           guildEventExceptionId: t,
           response: d.response
         }), await u.default.delete({
-          url: _.Endpoints.USER_GUILD_EVENT(n, e, t)
+          url: y.Endpoints.USER_GUILD_EVENT(n, e, t)
         })
       } catch (u) {
         throw l.default.dispatch({
@@ -194,11 +195,23 @@ var u = n("872717"),
         }), u
       }
     },
+    async updateRsvp(e, t, n, u, l) {
+      let r = (0, s.getExistingRsvp)(e, t);
+      if (null != r) try {
+        await this.deleteRsvpForGuildEvent(e, t, n), null != r && null != t && (null == l || l())
+      } catch (e) {
+        null != r && null != t && (null == l || l(e))
+      } else try {
+        await this.createRsvpForGuildEvent(e, t, n, u), u === _.GuildScheduledEventUserResponses.INTERESTED && (null == l || l())
+      } catch (e) {
+        u === _.GuildScheduledEventUserResponses.INTERESTED && (null == l || l(e))
+      }
+    },
     async fetchUsersForGuildEvent(e, t, n) {
-      let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.MAX_RSVP_USER_DISPLAY_COUNT;
+      let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : _.MAX_RSVP_USER_DISPLAY_COUNT;
       if (null == e || null == n) return [];
       let d = await u.default.get({
-        url: _.Endpoints.GUILD_EVENT_USERS(n, e, t),
+        url: y.Endpoints.GUILD_EVENT_USERS(n, e, t),
         query: {
           limit: r,
           with_member: !0,
@@ -221,7 +234,7 @@ var u = n("872717"),
         is_canceled: i
       } = e;
       return u.default.post({
-        url: _.Endpoints.GUILD_EVENT_EXCEPTIONS(t, n),
+        url: y.Endpoints.GUILD_EVENT_EXCEPTIONS(t, n),
         body: {
           original_scheduled_start_time: l,
           scheduled_start_time: r,
@@ -237,7 +250,7 @@ var u = n("872717"),
         is_canceled: i
       } = e;
       return u.default.patch({
-        url: _.Endpoints.GUILD_EVENT_EXCEPTION(t, n, l),
+        url: y.Endpoints.GUILD_EVENT_EXCEPTION(t, n, l),
         body: {
           scheduled_start_time: r,
           scheduled_end_time: d,
@@ -246,7 +259,7 @@ var u = n("872717"),
       })
     },
     deleteGuildEventException: (e, t, n) => u.default.delete({
-      url: _.Endpoints.GUILD_EVENT_EXCEPTION(e, t, n)
+      url: y.Endpoints.GUILD_EVENT_EXCEPTION(e, t, n)
     }),
     deleteRecurrence(e, t, n, u) {
       if (null != u) this.updateGuildEventException({
