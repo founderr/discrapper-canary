@@ -7976,6 +7976,7 @@ e.exports = Object.freeze({
   COUNTRY_CODES: "Country Codes",
   COUNTRY_NO_RESULTS: "No countries found.",
   EMAIL: "Email",
+  YOUR_EMAIL: "Your Email",
   USE_EMAIL: "Use Email",
   PHONE: "Phone",
   USE_PHONE: "Use Phone",
