@@ -44,7 +44,7 @@ let H = {
     tension: 260
   },
   R = e => e.shiftKey || e.key === g.KeyboardKeysUpdated.SHIFT,
-  v = e => e.metaKey || e.ctrlKey,
+  v = e => e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key),
   b = n.memo(function(e) {
     let {
       members: t,
