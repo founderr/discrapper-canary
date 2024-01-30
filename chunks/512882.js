@@ -26,7 +26,7 @@ function f(e) {
     afterDate: f,
     beforeDate: m,
     optionId: E
-  } = i, M = E === C.DATE_OPTION.CUSTOM, h = M && null != f ? o(f).format(C.MENU_DATE_FORMAT) : c.default.Messages.NONE, _ = M && null != m ? o(m).format(C.MENU_DATE_FORMAT) : c.default.Messages.NONE, T = M && null != f && null != m;
+  } = i, M = E === C.DATE_OPTION.CUSTOM, h = M && null != f ? o(f).format(C.MENU_DATE_FORMAT) : null, _ = M && null != m ? o(m).format(C.MENU_DATE_FORMAT) : null;
   return (0, a.jsx)(C.default, {
     startDateLabel: h,
     endDateLabel: _,
@@ -34,7 +34,6 @@ function f(e) {
     beforeDate: m,
     selectedOption: E,
     isCustomDateRange: M,
-    shouldShowCustomDateSubtext: T,
     menuName: "joined-date",
     accessibilityLabel: c.default.Messages.MEMBER_SAFETY_JOINED_DATE_LABEL,
     onClose: l,
