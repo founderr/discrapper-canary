@@ -1,7 +1,10 @@
 "use strict";
-var a, s, i, l;
-n.r(t), n.d(t, {
+var t, o, n, r;
+E.r(_), E.d(_, {
+  QuestRewardCodePlatforms: function() {
+    return t
+  },
   QuestContent: function() {
-    return s
+    return o
   }
-}), (i = a || (a = {}))[i.NO_PLATFORM = 0] = "NO_PLATFORM", i[i.XBOX = 1] = "XBOX", i[i.PLAYSTATION = 2] = "PLAYSTATION", i[i.SWITCH = 3] = "SWITCH", i[i.PC = 4] = "PC", (l = s || (s = {}))[l.GIFT_INVENTORY_SETTINGS_BADGE = 0] = "GIFT_INVENTORY_SETTINGS_BADGE", l[l.QUEST_BAR = 1] = "QUEST_BAR"
+}), (n = t || (t = {}))[n.NO_PLATFORM = 0] = "NO_PLATFORM", n[n.XBOX = 1] = "XBOX", n[n.PLAYSTATION = 2] = "PLAYSTATION", n[n.SWITCH = 3] = "SWITCH", n[n.PC = 4] = "PC", (r = o || (o = {}))[r.GIFT_INVENTORY_SETTINGS_BADGE = 0] = "GIFT_INVENTORY_SETTINGS_BADGE", r[r.QUEST_BAR = 1] = "QUEST_BAR"

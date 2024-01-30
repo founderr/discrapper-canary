@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return S
+    return R
   }
 }), E("222007");
 var t = E("446674"),
@@ -9,9 +9,12 @@ var t = E("446674"),
 let n = !1,
   r = new Map,
   a = 0,
-  i = new Set;
+  i = new Set,
+  I = new Set,
+  s = new Set,
+  T = new Map;
 
-function I(e, _) {
+function S(e, _) {
   r = new Map(r);
   let E = r.get(e);
   null != E && r.set(e, {
@@ -20,11 +23,27 @@ function I(e, _) {
   })
 }
 
-function s(e) {
+function N(e, _) {
+  let E = new Map(T);
+  E.set(e, _), T = E;
+  let t = r.get(e),
+    o = null == t ? void 0 : t.userStatus;
+  if (null != o && null == o.claimedAt) {
+    let E = {
+      userStatus: {
+        ...o,
+        claimedAt: _.claimedAt
+      }
+    };
+    S(e, E)
+  }
+}
+
+function O(e) {
   let _ = new Set(i);
   _.delete(e), i = _
 }
-class T extends t.default.Store {
+class A extends t.default.Store {
   get quests() {
     return r
   }
@@ -37,9 +56,18 @@ class T extends t.default.Store {
   isEnrolling(e) {
     return i.has(e)
   }
+  isClaimingRewardCode(e) {
+    return I.has(e)
+  }
+  isFetchingRewardCode(e) {
+    return s.has(e)
+  }
+  getRewardCode(e) {
+    return T.get(e)
+  }
 }
-T.displayName = "QuestsStore";
-var S = new T(o.default, {
+A.displayName = "QuestsStore";
+var R = new A(o.default, {
   LOGOUT: function() {
     n = !1, r = new Map, a = 0, i = new Set
   },
@@ -60,7 +88,7 @@ var S = new T(o.default, {
       questId: _,
       userStatus: E
     } = e;
-    I(_, {
+    S(_, {
       userStatus: E
     })
   },
@@ -74,14 +102,52 @@ var S = new T(o.default, {
     let {
       enrolledQuestUserStatus: _
     } = e;
-    I(_.questId, {
+    S(_.questId, {
       userStatus: _
-    }), s(_.questId)
+    }), O(_.questId)
   },
   QUESTS_ENROLL_FAILURE: function(e) {
     let {
       questId: _
     } = e;
-    s(_)
+    O(_)
+  },
+  QUESTS_FETCH_REWARD_CODE_BEGIN: function(e) {
+    let {
+      questId: _
+    } = e, E = new Set(s);
+    E.add(_), s = E
+  },
+  QUESTS_FETCH_REWARD_CODE_SUCCESS: function(e) {
+    let {
+      questId: _,
+      rewardCode: E
+    } = e, t = new Set(s);
+    t.delete(_), s = t, N(_, E)
+  },
+  QUESTS_FETCH_REWARD_CODE_FAILURE: function(e) {
+    let {
+      questId: _
+    } = e, E = new Set(s);
+    E.delete(_), s = E
+  },
+  QUESTS_CLAIM_REWARD_CODE_BEGIN: function(e) {
+    let {
+      questId: _
+    } = e, E = new Set(I);
+    E.add(_), I = E
+  },
+  QUESTS_CLAIM_REWARD_CODE_SUCCESS: function(e) {
+    let {
+      questId: _,
+      rewardCode: E
+    } = e, t = new Set(I);
+    t.delete(_), I = t, N(_, E)
+  },
+  QUESTS_CLAIM_REWARD_CODE_FAILURE: function(e) {
+    let {
+      questId: _
+    } = e, E = new Set(I);
+    E.delete(_), I = E
   }
 })

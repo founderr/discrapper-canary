@@ -8,6 +8,12 @@ E.r(_), E.d(_, {
   },
   enrollInQuest: function() {
     return T
+  },
+  claimQuestRewardCode: function() {
+    return S
+  },
+  fetchQuestRewardCode: function() {
+    return N
   }
 });
 var t = E("872717"),
@@ -22,11 +28,16 @@ async function I() {
   });
   try {
     let e = await t.default.get({
-      url: i.Endpoints.QUESTS_CURRENT_QUESTS
-    });
+        url: i.Endpoints.QUESTS_CURRENT_QUESTS
+      }),
+      _ = e.body.quests.map(e => (0, a.questWithUserStatusFromServer)(e)),
+      E = _.filter(e => {
+        var _;
+        return (null === (_ = e.userStatus) || void 0 === _ ? void 0 : _.claimedAt) != null || e.config.rewardCodePlatforms.length > 0
+      });
     o.default.dispatch({
       type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
-      quests: e.body.quests.map(a.questWithUserStatusFromServer)
+      quests: E
     })
   } catch (e) {
     o.default.dispatch({
@@ -85,6 +96,59 @@ async function T(e) {
         type: "QUESTS_ENROLL_FAILURE",
         questId: e
       })
+    }
+  }
+}
+async function S(e, _) {
+  let E = r.default.isClaimingRewardCode(e);
+  if (!E) {
+    o.default.dispatch({
+      type: "QUESTS_CLAIM_REWARD_CODE_BEGIN",
+      questId: e
+    });
+    try {
+      let E = await t.default.post({
+        url: i.Endpoints.QUESTS_REWARD_CODE(e),
+        body: {
+          platform: _
+        }
+      });
+      o.default.dispatch({
+        type: "QUESTS_CLAIM_REWARD_CODE_SUCCESS",
+        questId: e,
+        rewardCode: (0, a.questsRewardCodeFromServer)(E.body)
+      })
+    } catch (_) {
+      throw o.default.dispatch({
+        type: "QUESTS_CLAIM_REWARD_CODE_FAILURE",
+        error: new n.default(_),
+        questId: e
+      }), _
+    }
+  }
+}
+async function N(e) {
+  let _ = r.default.isFetchingRewardCode(e);
+  if (!_) {
+    o.default.dispatch({
+      type: "QUESTS_FETCH_REWARD_CODE_BEGIN",
+      questId: e
+    });
+    try {
+      let _ = await t.default.get({
+        url: i.Endpoints.QUESTS_REWARD_CODE(e)
+      });
+      o.default.dispatch({
+        type: "QUESTS_FETCH_REWARD_CODE_SUCCESS",
+        questId: e,
+        rewardCode: (0, a.questsRewardCodeFromServer)(_.body)
+      })
+    } catch (_) {
+      throw o.default.dispatch({
+        type: "QUESTS_FETCH_REWARD_CODE_FAILURE",
+        error: new n.default(_),
+        questId: e
+      }), _
     }
   }
 }
