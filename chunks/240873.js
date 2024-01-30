@@ -43,13 +43,17 @@ function E(e) {
     url: t,
     proxy_url: n,
     width: i,
-    height: s
+    height: s,
+    placeholder: r,
+    placeholder_version: a
   } = e;
   return {
     url: t,
     proxyURL: n,
     width: i,
-    height: s
+    height: s,
+    placeholder: r,
+    placeholderVersion: a
   }
 }
 
