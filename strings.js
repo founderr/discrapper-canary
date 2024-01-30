@@ -9466,7 +9466,6 @@ e.exports = Object.freeze({
   CUSTOM_STATUS_CLEARS_IN_HOURS: "Clears in {hours} hours",
   CUSTOM_STATUS_PLACEHOLDER: "What're you up to?",
   CUSTOM_STATUS_DURATION: "Status Duration",
-  CUSTOM_STATUS_ALSO_CLEAR_STATUS: "Also clear status?",
   SYSTEM_DM_CHANNEL_DESCRIPTION: "This thread is reserved for official Discord notifications.",
   SYSTEM_DM_CHANNEL_DESCRIPTION_SUBTEXT: "Discord will never ask you for your password or account token.",
   SYSTEM_DM_EMPTY_MESSAGE: "This is an official message from Team Discord. Please be advised that Discord will never ask you for your password or account token.",
