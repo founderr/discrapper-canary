@@ -14,6 +14,7 @@ var s = l("414456"),
   u = l("646718"),
   o = l("257920");
 let d = {
+    XXSMALL: o.xxsmall,
     XSMALL: o.xsmall,
     SMALL: o.small,
     MEDIUM: o.medium,
@@ -47,6 +48,8 @@ let d = {
         }
       }(p)), null != s && null == t && (t = s.getIconURL(function(e) {
         switch (e) {
+          case d.XXSMALL:
+            return 16;
           case d.XSMALL:
             return 24;
           case d.SMALL:
