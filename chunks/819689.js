@@ -26,8 +26,8 @@ var a = n("506838"),
   I = n("52393"),
   T = n("143291"),
   C = n("379534"),
-  L = n("40566"),
-  D = n("994918"),
+  D = n("40566"),
+  L = n("994918"),
   O = n("815297"),
   v = n("168730"),
   y = n("129953"),
@@ -516,7 +516,7 @@ let e_ = {
       return (l = {
         ...l,
         nonce: d
-      }, L.default.recordMessageSendAttempt(e, d), K.default.isReady(e)) ? r() : a && e !== ei.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ? (eo.info("Waiting for channel ".concat(e, " to be ready before sending.")), new Promise((t, n) => {
+      }, D.default.recordMessageSendAttempt(e, d), K.default.isReady(e)) ? r() : a && e !== ei.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ? (eo.info("Waiting for channel ".concat(e, " to be ready before sending.")), new Promise((t, n) => {
         K.default.whenReady(e, () => {
           eo.info("Channel ".concat(e, " is ready for sending now.")), r().then(t, n)
         })
@@ -594,7 +594,7 @@ let e_ = {
           message_reference: a
         },
         oldFormErrors: !0
-      }).then(n => (D.default.donateSentMessage(n.body.content, e), eg.receiveMessage(e, n.body), r.default.dispatch({
+      }).then(n => (L.default.donateSentMessage(n.body.content, e), eg.receiveMessage(e, n.body), r.default.dispatch({
         type: "STICKER_TRACK_USAGE",
         stickerIds: [t]
       }), n), t => {
@@ -696,13 +696,13 @@ let e_ = {
           c = Math.floor(1e4 * Math.random());
         eo.info("Queueing message to be sent LogId:".concat(c)), u.default.enqueue(H, u => {
           let c = Date.now() - s;
-          if (u.ok) D.default.donateSentMessage(d, e), eg.receiveMessage(e, u.body, !0, {
+          if (u.ok) L.default.donateSentMessage(d, e), eg.receiveMessage(e, u.body, !0, {
             sendAnalytics: {
               duration: c,
               queueSize: i
             },
             poll: C
-          }), L.default.recordMessageSendApiResponse(F), r.default.dispatch({
+          }), D.default.recordMessageSendApiResponse(F), r.default.dispatch({
             type: "SLOWMODE_RESET_COOLDOWN",
             slowmodeType: X.SlowmodeType.SendMessage,
             channelId: e
