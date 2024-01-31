@@ -20,6 +20,7 @@ e.exports = {
   flipped: "flipped_edbf92",
   forceShadow: "forceShadow__205ef",
   noFlipCardContainer: "noFlipCardContainer_e2d2c1",
+  noFlipCardContainerCarousel: "noFlipCardContainerCarousel__11750",
   partialFlipCard: "partialFlipCard__89bb1",
   pill: "pill__54751",
   pinkGradient: "pinkGradient__251b4",

@@ -32,40 +32,41 @@ let O = e => {
       name: t,
       canReveal: s = !0,
       dismissibleContentType: r,
-      forceShadow: E
-    } = e, I = (0, u.default)([d.default], () => d.default.useReducedMotion), [T, f] = n.useState(!1), [m, A] = n.useState(!1), N = (0, R.default)(), [h, L] = (0, c.useGetDismissibleContent)(null != r && s ? [r] : []), {
-      easterEggLevel: x,
-      isEasterEggTriggered: v,
-      onHover: D,
-      onUnhover: U
-    } = (0, S.default)(5), b = (0, l.debounce)(() => {
+      forceShadow: E,
+      cardType: I
+    } = e, T = (0, u.default)([d.default], () => d.default.useReducedMotion), [f, A] = n.useState(!1), [N, h] = n.useState(!1), L = I === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_FIRST_ROW || I === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_SECOND_ROW || I === m.PerksDiscoverabilityVariants.CARD_CAROUSEL_THIRD_ROW, x = (0, R.default)(), [v, D] = (0, c.useGetDismissibleContent)(null != r && s ? [r] : []), {
+      easterEggLevel: U,
+      isEasterEggTriggered: b,
+      onHover: j,
+      onUnhover: G
+    } = (0, S.default)(5), k = (0, l.debounce)(() => {
       _.default.track(p.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
         card_type: (0, l.snakeCase)(t)
       })
     }, 800);
     e = {
-      onMouseEnter: b,
+      onMouseEnter: k,
       ...e
     };
-    let j = h !== r || null == r || m;
+    let B = v !== r || null == r || N;
     return (n.useEffect(() => {
-      I && T && (A(!0), _.default.track(p.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+      T && f && (h(!0), _.default.track(p.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
         card_type: t
-      }), null != r && L(g.ContentDismissActionType.TAKE_ACTION))
-    }, [I, T, r, t, L]), s) ? t === R.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
+      }), null != r && D(g.ContentDismissActionType.TAKE_ACTION))
+    }, [T, f, r, t, D]), s) ? t === R.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
       className: i(P.flipCardContainer, {
         [P.forceShadow]: E
       }),
-      onMouseEnter: D,
-      onFocus: D,
-      onMouseLeave: U,
-      onBlur: U,
+      onMouseEnter: j,
+      onFocus: j,
+      onMouseLeave: G,
+      onBlur: G,
       children: (0, a.jsxs)("div", {
         className: i(P.flipCard, {
-          [P.partialFlipCard]: !v,
-          [P.ultraFlipCard]: v,
-          [P.rotateCard]: v && 3 === x,
-          [P.reducedMotion]: I
+          [P.partialFlipCard]: !b,
+          [P.ultraFlipCard]: b,
+          [P.rotateCard]: b && 3 === U,
+          [P.reducedMotion]: T
         }),
         children: [(0, a.jsx)("div", {
           className: P.flipCardFront,
@@ -81,10 +82,12 @@ let O = e => {
           })
         })]
       })
-    }) : j ? (0, a.jsx)("div", {
-      className: i(P.noFlipCardContainer, {
+    }) : B ? (0, a.jsx)("div", {
+      className: i({
+        [P.noFlipCardContainer]: !L,
+        [P.noFlipCardContainerCarousel]: L,
         [P.forceShadow]: E,
-        [P.reducedMotion]: I
+        [P.reducedMotion]: T
       }),
       children: (0, a.jsx)(M, {
         ...e
@@ -94,16 +97,16 @@ let O = e => {
         [P.forceShadow]: E
       }),
       children: (0, a.jsxs)(o.Clickable, {
-        onClick: () => f(!0),
+        onClick: () => A(!0),
         className: i(P.flipCard, P.clickable, {
-          [P.flipped]: T,
-          [P.partialFlipCard]: !m && !T,
-          [P.reducedMotion]: I
+          [P.flipped]: f,
+          [P.partialFlipCard]: !N && !f,
+          [P.reducedMotion]: T
         }),
         onTransitionEnd: e => {
-          T && "transform" === e.propertyName && e.target.classList.contains(P.flipCard) && (A(!0), _.default.track(p.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+          f && "transform" === e.propertyName && e.target.classList.contains(P.flipCard) && (h(!0), _.default.track(p.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
             card_type: t
-          }), null != r && L(g.ContentDismissActionType.TAKE_ACTION))
+          }), null != r && D(g.ContentDismissActionType.TAKE_ACTION))
         },
         children: [(0, a.jsx)("div", {
           className: P.flipCardHidden,
@@ -114,7 +117,7 @@ let O = e => {
         }), (0, a.jsx)("div", {
           className: P.flipCardFront,
           children: (0, a.jsx)(M, {
-            ...N.upcomingDropUntimed,
+            ...x.upcomingDropUntimed,
             pillText: ""
           })
         }), (0, a.jsx)("div", {
@@ -126,13 +129,13 @@ let O = e => {
         }), (0, a.jsx)("div", {
           className: P.flipCardButtonContainer,
           children: (0, a.jsx)(o.Button, {
-            onClick: () => f(!0),
+            onClick: () => A(!0),
             children: C.default.Messages.REVEAL
           })
         })]
       })
     }) : (0, a.jsx)(O, {
-      ...N.upcomingDropUntimed,
+      ...x.upcomingDropUntimed,
       forceShadow: E
     })
   },

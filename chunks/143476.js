@@ -158,7 +158,7 @@ var a = s("37983"),
           className: W.pdSparklesBottom,
           variant: U.SparkleVariants.BOTTOM
         }) : null]
-      }) : null, (0, a.jsx)(v.default, {
+      }) : null, !(et && s) && (0, a.jsx)(v.default, {
         className: s ? W.perkCardsContainerSpacingFullscreen : W.perkCardsContainerSpacingSettings
       }), (0, a.jsxs)("div", {
         className: W.planComparisonTableContainer,

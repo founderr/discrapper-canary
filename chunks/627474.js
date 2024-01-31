@@ -58,15 +58,12 @@ var a = s("37983"),
             className: E.showAllPerksButton,
             children: T
           })]
-        }) : (0, a.jsxs)("div", {
+        }) : (0, a.jsx)("div", {
           className: E.container,
-          children: [(0, a.jsx)("div", {
+          children: (0, a.jsx)("div", {
             className: E.sectionHeaderSeeAll,
             children: e
-          }), (0, a.jsx)("div", {
-            className: i(E.showAllPerksButton),
-            children: T
-          })]
+          })
         })
       })(), (0, a.jsx)(l.Text, {
         variant: "text-lg/normal",
