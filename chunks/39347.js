@@ -44,7 +44,7 @@ function R(e) {
     needSubscriptionToAccess: j,
     isNewChannel: G,
     muted: U,
-    unreadMode: P
+    resolvedUnreadSetting: P
   } = e, w = (0, a.useStateFromStores)([C.default], () => C.default.getMentionCount(n.id)), F = (0, r.default)(n), B = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([p.default], () => p.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, S.default)({
     channel: n,
     locked: B,
@@ -65,7 +65,7 @@ function R(e) {
     color: s.default.unsafe_rawColors.BRAND_260.css,
     className: x.newChannel
   });
-  if (!U && P === L.UnreadMode.IMPORTANT && n.isForumLikeChannel() && null != Y && Y > 0) return (0, l.jsx)(i.Text, {
+  if (!U && P === L.UnreadSetting.ALL_MESSAGES && n.isForumLikeChannel() && null != Y && Y > 0) return (0, l.jsx)(i.Text, {
     variant: "text-xs/semibold",
     color: "text-brand",
     children: v.default.Messages.CHANNEL_NEW_POSTS_LABEL.format({

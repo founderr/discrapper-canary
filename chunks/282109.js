@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return X
+    return q
   }
 }), n("222007"), n("702976");
 var i = n("917351"),
@@ -75,14 +75,14 @@ function w(e, t) {
   N.clearTimer(e), !0 === o.muted && N.setTimer(e, o.mute_config, () => {
     k(e, {
       muted: !1
-    }), q.emitChange()
+    }), z.emitChange()
   }), s.forEach(r, e => {
     R.clearTimer(e.channel_id)
   }), s.forEach(a, t => {
     !0 === t.muted && R.setTimer(t.channel_id, t.mute_config, () => {
       V(e, t.channel_id, {
         muted: !1
-      }), q.emitChange()
+      }), z.emitChange()
     })
   }), S[e] = o, P[e] = j(S[e]);
   let l = s.filter(o.channel_overrides, e => {
@@ -181,15 +181,7 @@ function j(e) {
 function W() {
   return !0
 }
-
-function K() {
-  return C && u.NotificationsExperiment.getCurrentConfig({
-    location: "UserGuildSettingsStore"
-  }, {
-    autoTrackExposure: !1
-  }).enabled
-}
-class z extends r.default.PersistedStore {
+class K extends r.default.PersistedStore {
   initialize(e) {
     if (this.waitFor(g.default, h.default, l.default, d.default), null != e) {
       var t;
@@ -394,10 +386,11 @@ class z extends r.default.PersistedStore {
   }
   resolveGuildUnreadSetting(e) {
     let t = this.getGuildFlags(e.id);
-    return !K() || f.hasFlag(t, v.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? p.UnreadSetting.ALL_MESSAGES : f.hasFlag(t, v.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? p.UnreadSetting.ONLY_MENTIONS : e.defaultMessageNotifications === m.UserNotificationSettings.ALL_MESSAGES ? p.UnreadSetting.ALL_MESSAGES : p.UnreadSetting.ONLY_MENTIONS
-  }
-  getGuildUnreadMode(e) {
-    return this.isMuted(e.id) ? p.UnreadMode.NONE : this.resolveGuildUnreadSetting(e) === p.UnreadSetting.ALL_MESSAGES ? p.UnreadMode.IMPORTANT : p.UnreadMode.LESS_IMPORTANT
+    return !(C && u.NotificationsExperiment.getCurrentConfig({
+      location: "UserGuildSettingsStore"
+    }, {
+      autoTrackExposure: !1
+    }).enabled) || f.hasFlag(t, v.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? p.UnreadSetting.ALL_MESSAGES : f.hasFlag(t, v.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? p.UnreadSetting.ONLY_MENTIONS : e.defaultMessageNotifications === m.UserNotificationSettings.ALL_MESSAGES ? p.UnreadSetting.ALL_MESSAGES : p.UnreadSetting.ONLY_MENTIONS
   }
   getChannelRecordUnreadSetting(e) {
     return this.getChannelUnreadSetting(e.guild_id, e.id)
@@ -406,15 +399,12 @@ class z extends r.default.PersistedStore {
     let n = this.getChannelIdFlags(e, t);
     return f.hasFlag(n, v.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? p.UnreadSetting.ALL_MESSAGES : f.hasFlag(n, v.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? p.UnreadSetting.ONLY_MENTIONS : p.UnreadSetting.UNSET
   }
-  getChannelUnreadMode(e) {
-    return c.THREAD_CHANNEL_TYPES.has(e.type) ? d.default.isMuted(e.id) ? p.UnreadMode.NONE : p.UnreadMode.IMPORTANT : this.getMutedChannels(e.guild_id).has(e.id) ? p.UnreadMode.NONE : (0, c.isPrivate)(e.type) || !K() ? p.UnreadMode.IMPORTANT : this.resolveUnreadSetting(e) === p.UnreadSetting.ALL_MESSAGES ? p.UnreadMode.IMPORTANT : p.UnreadMode.LESS_IMPORTANT
-  }
 }
-z.displayName = "UserGuildSettingsStore", z.persistKey = "collapsedGuilds", z.migrations = [e => ({
+K.displayName = "UserGuildSettingsStore", K.persistKey = "collapsedGuilds", K.migrations = [e => ({
   collapsedGuilds: e,
   userGuildSettings: {}
 })];
-let q = new z(a.default, {
+let z = new K(a.default, {
   USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
     let {
       userGuildSettings: t
@@ -520,4 +510,4 @@ let q = new z(a.default, {
     Y(t)
   }
 });
-var X = q
+var q = z
