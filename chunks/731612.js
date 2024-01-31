@@ -108,7 +108,9 @@ function A(e) {
     p(e)
   }, [p]), j = i.useCallback(e => {
     L(e)
-  }, [L]);
+  }, [L]), D = i.useCallback(() => {
+    null == n && null == a && A(0, null), I(!1)
+  }, [a, n, A]);
   return (0, s.jsx)(c.Menu, {
     navId: "member-safety-guild-member-".concat(C, "-menu"),
     onClose: T,
@@ -118,7 +120,7 @@ function A(e) {
       children: N ? (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(c.MenuItem, {
           id: "back",
-          action: () => I(!1),
+          action: D,
           render: e => (0, s.jsxs)("span", {
             ...e,
             className: _.nagivateBackContainer,
