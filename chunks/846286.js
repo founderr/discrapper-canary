@@ -98,7 +98,7 @@ let _ = async e => {
   return l(null != r, "Failed to find subscription group listing"), r
 }, E = async (e, t) => {
   let n = await (0, s.fetchUserEntitlementsForApplication)(e),
-    i = n.find(e => e.sku_id === t);
+    i = n.filter(e => null == e.ends_at || new Date(e.ends_at) < new Date).find(e => e.sku_id === t);
   l(null == i, "User already has an active subscription to this SKU")
 };
 async function T(e) {
