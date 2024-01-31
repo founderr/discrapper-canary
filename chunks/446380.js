@@ -53,7 +53,7 @@ class N extends m.default {
         "aria-label": (0, c.default)({
           channel: e
         }),
-        resolvedUnreadSetting: I.UnreadSetting.ONLY_MENTIONS,
+        unreadMode: I.UnreadMode.NONE,
         children: [this.renderInviteButton(), this.renderEditButton()]
       })
     });

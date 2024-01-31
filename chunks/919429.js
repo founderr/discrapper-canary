@@ -69,7 +69,7 @@ class D extends L.default {
       subtitle: I,
       forceTopLevelThread: S,
       embeddedApps: _,
-      resolvedUnreadSetting: N,
+      unreadMode: N,
       withGuildIcon: T,
       enableActivities: A
     } = this.props, L = A && null != _ && _.length > 0, v = (0, C.getChannelSubtitle)(I), R = (0, l.jsx)("li", {
@@ -102,7 +102,7 @@ class D extends L.default {
           connectDragPreview: m ? p : null,
           isFavoriteSuggestion: g,
           channelTypeOverride: S ? M.ChannelTypes.GUILD_TEXT : void 0,
-          resolvedUnreadSetting: N,
+          unreadMode: N,
           withGuildIcon: T,
           "aria-label": (0, h.default)({
             channel: e,
@@ -230,7 +230,7 @@ function j(e) {
     unread: _.default.hasUnread(t.id),
     ackMessageId: _.default.ackMessageId(t.id),
     mentionCount: _.default.getMentionCount(t.id)
-  })), C = (0, i.useStateFromStores)([N.default], () => N.default.resolveUnreadSetting(t)), I = (0, i.useStateFromStoresObject)([g.default, S.default], () => {
+  })), C = (0, i.useStateFromStores)([N.default], () => N.default.getChannelUnreadMode(t)), I = (0, i.useStateFromStoresObject)([g.default, S.default], () => {
     let e = g.default.getChannel(t.parent_id);
     return {
       canManageChannel: S.default.can(M.Permissions.MANAGE_CHANNELS, t),
@@ -251,7 +251,7 @@ function j(e) {
     isNewChannel: A,
     muted: r,
     enableActivities: D,
-    resolvedUnreadSetting: C
+    unreadMode: C
   }), G = (0, f.default)(t);
   return (0, l.jsx)(b, {
     ...h,
@@ -266,7 +266,7 @@ function j(e) {
     canShowThreadPreviewForUser: y,
     channelInfo: j,
     embeddedApps: G,
-    resolvedUnreadSetting: C,
+    unreadMode: C,
     hasChannelInfo: null != j,
     enableActivities: D
   })
