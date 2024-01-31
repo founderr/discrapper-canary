@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var l = n("74892"),
+var l = n("404828"),
   r = n.n(l),
   a = n("862205");
 let i = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
