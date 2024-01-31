@@ -17,7 +17,7 @@ var t = E("823411"),
   N = E("162771"),
   O = E("101125"),
   A = E("800762"),
-  R = E("785814"),
+  R = E("774539"),
   l = E("49111");
 
 function L(e) {
@@ -27,19 +27,18 @@ async function u(e) {
   await r.default.fetchApplications(e, !1)
 }
 async function C(e) {
-  var _;
   if (null == e) return;
-  let E = I.default.getChannel(e);
-  if (null == E || !(0, R.isVoiceChannelGameActivityEnabled)(null !== (_ = E.guild_id) && void 0 !== _ ? _ : "", "running_games_change", !1)) return;
-  let t = O.default.getActivities();
-  if (0 === t.length) return;
-  let o = L([...t]);
-  await u([...o]);
-  let r = a.default.getApplication(o[0]);
-  null != r && n.default.trackWithMetadata(l.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
+  let _ = I.default.getChannel(e);
+  if (null == _ || !(0, R.isVoiceUserGameActivityEnabled)("running_games_change", !1)) return;
+  let E = O.default.getActivities();
+  if (0 === E.length) return;
+  let t = L([...E]);
+  await u([...t]);
+  let o = a.default.getApplication(t[0]);
+  null != o && n.default.trackWithMetadata(l.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
     channel_id: e,
-    guild_id: E.guild_id,
-    game_name: r.name,
+    guild_id: _.guild_id,
+    game_name: o.name,
     user_id: i.default.getId()
   })
 }
@@ -53,14 +52,13 @@ class D extends o.default {
       updates: _
     } = e, E = new Set;
     _.forEach(e => {
-      var _, t;
       let {
-        user: o,
-        activities: n
-      } = e, r = A.default.getVoiceStateForUser(o.id);
-      if (null == r || !(0, R.isVoiceChannelGameActivityEnabled)(null !== (t = null === (_ = I.default.getChannel(r.channelId)) || void 0 === _ ? void 0 : _.guild_id) && void 0 !== t ? t : "", "presence_update", !1)) return;
-      let a = L([...n]);
-      E = new Set([...E, ...a])
+        user: _,
+        activities: t
+      } = e, o = A.default.getVoiceStateForUser(_.id);
+      if (null == o || !(0, R.isVoiceUserGameActivityEnabled)("presence_update", !1)) return;
+      let n = L([...t]);
+      E = new Set([...E, ...n])
     }), u([...E])
   }
   handleVoiceStateUpdates(e) {
@@ -72,7 +70,7 @@ class D extends o.default {
         userId: _,
         guildId: t
       } = e;
-      if (!(0, R.isVoiceChannelGameActivityEnabled)(null != t ? t : "", "voice_state_update", !1)) return;
+      if (!(0, R.isVoiceUserGameActivityEnabled)("voice_state_update", !1)) return;
       let o = T.default.getActivities(_, t),
         n = L([...o]);
       E = new Set([...E, ...n])

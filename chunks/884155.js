@@ -30,7 +30,7 @@ var a = n("37983"),
   A = n("800762"),
   M = n("68148"),
   R = n("158998"),
-  j = n("785814"),
+  j = n("774539"),
   L = n("201380"),
   O = n("49111"),
   y = n("39141"),
@@ -52,9 +52,8 @@ let b = l.memo(e => {
       userIds: t
     } = e;
     return t.has(M)
-  }), [M, i.id]), B = (0, f.default)(null != V ? [V.applicationId] : []), H = (0, j.useIsVoiceChannelGameActivityEnabled)(i.guild_id, "voice_users_eligibility_check", !1), G = (0, r.useStateFromStores)([T.default, v.default], () => P ? v.default.getActivities() : T.default.getActivities(M, i.guild_id)), W = G.find(e => null != e.application_id && e.type === O.ActivityTypes.PLAYING), Y = (0, r.useStateFromStores)([S.default], () => (null == W ? void 0 : W.application_id) != null ? S.default.getDetectableGame(W.application_id) : null), z = (0, r.useStateFromStores)([c.default], () => null != Y && (null == W ? void 0 : W.application_id) != null ? c.default.getApplication(null == W ? void 0 : W.application_id) : void 0);
+  }), [M, i.id]), B = (0, f.default)(null != V ? [V.applicationId] : []), H = (0, j.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), G = (0, r.useStateFromStores)([T.default, v.default], () => P ? v.default.getActivities() : T.default.getActivities(M, i.guild_id)), W = G.find(e => null != e.application_id && e.type === O.ActivityTypes.PLAYING), Y = (0, r.useStateFromStores)([S.default], () => (null == W ? void 0 : W.application_id) != null ? S.default.getDetectableGame(W.application_id) : null), z = (0, r.useStateFromStores)([c.default], () => null != Y && (null == W ? void 0 : W.application_id) != null ? c.default.getApplication(null == W ? void 0 : W.application_id) : void 0);
   null != Y && j.default.trackExposure({
-    guildId: i.guild_id,
     location: "voice_users"
   });
   let [K, Z] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.getStreamForUser(M, i.getGuildId()), E.default.getActiveStreamForUser(M, i.getGuildId())], [i, M]), X = (0, r.useStateFromStores)([x.default], () => x.default.getSessionById(o)), J = R.default.useName(s), q = (0, r.useStateFromStores)([A.default], () => A.default.getVoicePlatformForChannel(i.id, M), [i.id, M]), {

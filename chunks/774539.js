@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n.d(t, {
-  useIsVoiceChannelGameActivityEnabled: function() {
+  useIsVoiceUserGameActivityEnabled: function() {
     return s
   },
-  isVoiceChannelGameActivityEnabled: function() {
+  isVoiceUserGameActivityEnabled: function() {
     return i
   },
   default: function() {
@@ -12,9 +12,9 @@ n.r(t), n.d(t, {
 });
 var a = n("862205");
 let r = (0, a.createExperiment)({
-  kind: "guild",
-  id: "2024-01_voice_channel_game_activity",
-  label: "Voice Channel Game Activity",
+  kind: "user",
+  id: "2024-01_voice_user_game_activity",
+  label: "Voice User Game Activity",
   defaultConfig: {
     showGameIcon: !1
   },
@@ -27,27 +27,25 @@ let r = (0, a.createExperiment)({
   }]
 });
 
-function s(e, t, n) {
+function s(e, t) {
   let {
-    showGameIcon: a
+    showGameIcon: n
   } = r.useExperiment({
-    guildId: e,
-    location: t
+    location: e
   }, {
-    autoTrackExposure: n
+    autoTrackExposure: t
   });
-  return a
+  return n
 }
 
-function i(e, t, n) {
+function i(e, t) {
   let {
-    showGameIcon: a
+    showGameIcon: n
   } = r.getCurrentConfig({
-    guildId: e,
-    location: t
+    location: e
   }, {
-    autoTrackExposure: n
+    autoTrackExposure: t
   });
-  return a
+  return n
 }
 var l = r
