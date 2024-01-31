@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return E
   },
   validateURL: function() {
-    return S
+    return I
   }
 }), n("101997"), n("222007");
 var i = n("160679"),
@@ -48,6 +48,22 @@ function f() {
 }
 
 function _(e) {
+  if (v(e)) return Promise.resolve(function(e) {
+    let t = e.match(p);
+    if (null == t || 3 !== t.length) return null;
+    let n = t[1],
+      i = t[2];
+    return {
+      targetBuildOverride: {
+        ["discord_".concat(n)]: {
+          type: "branch",
+          id: i
+        }
+      },
+      validForUserIds: [],
+      expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT"
+    }
+  }(e));
   let t = o.default.safeParseWithQuery(e);
   return null == t ? Promise.resolve(null) : (t.search = null, t.query.meta = "true", d && (t.query.version = d), t.host = window.location.host, r.default.get({
     url: s.format(t),
@@ -75,12 +91,21 @@ let m = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__devel
 function E(e) {
   return null != e && m.test(e)
 }
-let p = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
-  v = new Set(["/__development/link", "/__development/link/"]);
+let p = RegExp("^dev://bo/(ios|android|web)/([\\w-./]+)$", "i");
 
-function S(e) {
+function v(e) {
+  return null != e && p.test(e)
+}
+let S = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
+  T = new Set(["/__development/link", "/__development/link/"]);
+
+function I(e) {
+  if (v(e)) return {
+    payload: null,
+    url: e
+  };
   let t = o.default.safeParseWithQuery(e);
-  if (null == t || !p.has(t.hostname) || !("s" in t.query) || !v.has(t.pathname)) return null;
+  if (null == t || !S.has(t.hostname) || !("s" in t.query) || !T.has(t.pathname)) return null;
   for (let e in t.query) "s" !== e && delete t.query[e];
   return {
     payload: t.query.s,

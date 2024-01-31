@@ -25,7 +25,7 @@ function s(e) {
     } = e;
     if (_ === a.CodedLinkType.INVITE);
     else if (_ === a.CodedLinkType.TEMPLATE) null == r.default.getGuildTemplate(E) && n.default.resolveGuildTemplate(E);
-    else if (_ === a.CodedLinkType.BUILD_OVERRIDE);
+    else if (_ === a.CodedLinkType.BUILD_OVERRIDE || _ === a.CodedLinkType.MANUAL_BUILD_OVERRIDE);
     else if (_ === a.CodedLinkType.EVENT);
     else if (_ === a.CodedLinkType.CHANNEL_LINK);
     else if (_ === a.CodedLinkType.APP_DIRECTORY_PROFILE);

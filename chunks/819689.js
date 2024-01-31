@@ -744,6 +744,7 @@ let e_ = {
                   guild_template_guild_id: e.sourceGuildId
                 })
               } else if (t === _.CodedLinkType.BUILD_OVERRIDE);
+              else if (t === _.CodedLinkType.MANUAL_BUILD_OVERRIDE);
               else if (t === _.CodedLinkType.EVENT);
               else if (t === _.CodedLinkType.CHANNEL_LINK);
               else if (t === _.CodedLinkType.APP_DIRECTORY_PROFILE) Q.default.track(es.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_SENT, {
