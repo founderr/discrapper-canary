@@ -4103,6 +4103,7 @@ e.exports = Object.freeze({
   SELECT: "Select",
   SELECT_ALL: "Select All",
   START: "Start",
+  LAUNCH: "Launch",
   ADD: "Add",
   ADDED: "Added",
   REMAINING_PARTICIPANTS: "Add Members (!!{current}!!/!!{max}!!)",

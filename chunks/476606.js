@@ -11,12 +11,12 @@ var l = n("884691"),
 
 function s(e) {
   let {
-    section: t,
+    sectionId: t,
     commandsByActiveSection: n
   } = e, [s, a] = l.useState(o.CommandListSortOrder.ALPHABETICAL), u = l.useMemo(() => {
     var e, l;
-    return null !== (l = null === (e = n.find(e => e.section.id === t.id)) || void 0 === e ? void 0 : e.data) && void 0 !== l ? l : []
-  }, [n, t.id]), {
+    return null !== (l = null === (e = n.find(e => e.section.id === t)) || void 0 === e ? void 0 : e.data) && void 0 !== l ? l : []
+  }, [n, t]), {
     popularSortedCommands: d,
     canSort: c
   } = function(e) {
@@ -58,11 +58,10 @@ function s(e) {
     alphabeticalSortedCommands: u
   });
   l.useEffect(() => {
-    let e = t.id;
-    i.getApplication(e, {
+    i.getApplication(t, {
       dontRefetchMs: r.default.Millis.DAY
     })
-  }, [t.id]), l.useEffect(() => {
+  }, [t]), l.useEffect(() => {
     c && a(o.CommandListSortOrder.POPULAR)
   }, [c]);
   let f = u;

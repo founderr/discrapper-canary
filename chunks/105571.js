@@ -75,7 +75,7 @@ function R(e) {
   }), {
     commands: y
   } = (0, T.default)({
-    section: u,
+    sectionId: u.id,
     commandsByActiveSection: g
   });
   i.useEffect(() => {
