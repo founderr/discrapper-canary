@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("84339"),
   S = s("510889"),
   N = s("287103"),
-  g = s("900938"),
-  f = s("161778"),
+  f = s("900938"),
+  g = s("161778"),
   A = s("305961"),
   L = s("102985"),
   m = s("941886"),
@@ -94,8 +94,8 @@ function U() {
     rawLogs: j,
     theme: P,
     hide: y
-  } = (0, c.useStateFromStoresObject)([g.default, A.default, N.default, L.default, f.default], () => {
-    let e = g.default.getGuildId(),
+  } = (0, c.useStateFromStoresObject)([f.default, A.default, N.default, L.default, g.default], () => {
+    let e = f.default.getGuildId(),
       t = A.default.getGuild(e),
       s = N.default.logs;
     return {
@@ -108,18 +108,18 @@ function U() {
       hasError: N.default.hasError,
       hasOlderLogs: N.default.hasOlderLogs,
       rawLogs: null != s && null != t ? s : [],
-      theme: f.default.theme,
+      theme: g.default.theme,
       hide: L.default.enabled
     }
   }), [b, B] = n.useState({
     expandedId: null,
     lastExpandedId: null,
     actionFilterQuery: ""
-  }), F = C.transformLogs(j, l), H = !1, V = n.useRef(null), k = (0, I.default)(b), w = (0, I.default)(F), Y = () => {
+  }), F = C.transformLogs(j, l), H = !1, V = n.useRef(null), w = (0, I.default)(b), k = (0, I.default)(F), Y = () => {
     var e;
     return (null === (e = V.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1
   };
-  O || (null == F ? void 0 : F.length) === (null == w ? void 0 : w.length) || null == V || Y();
+  O || (null == F ? void 0 : F.length) === (null == k ? void 0 : k.length) || null == V || Y();
   let K = () => {
       let s = {
         expanded: null,
@@ -147,9 +147,9 @@ function U() {
       })), W = K())
     });
   n.useEffect(() => {
-    b.expandedId !== (null == k ? void 0 : k.expandedId) && X()
+    b.expandedId !== (null == w ? void 0 : w.expandedId) && Z()
   }, []);
-  let X = () => {
+  let Z = () => {
       let e = V.current;
       if (null == e) return;
       let t = K(),
@@ -162,7 +162,7 @@ function U() {
         to: l
       })
     },
-    Z = s => {
+    X = s => {
       let {
         expandedId: a
       } = b;
@@ -250,7 +250,7 @@ function U() {
               lastExpandedId: t,
               setExpandedRef: q,
               setLastExpandedRef: $,
-              onHeaderClick: Z,
+              onHeaderClick: X,
               onContentClick: J,
               scroller: V.current
             })

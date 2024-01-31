@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("133403"),
   g = s("913801"),
   h = s("485328"),
-  I = s("960460"),
-  N = s("355025"),
+  N = s("960460"),
+  I = s("355025"),
   p = s("809310"),
   C = s("34966"),
   A = s("269936"),
@@ -60,7 +60,7 @@ let z = ["discord_web", "discord_marketing", "discord_developers", "discord_ios"
 function q(e) {
   return "discord_ios" in e || "discord_android" in e
 }
-class Z extends n.Component {
+class X extends n.Component {
   render() {
     let {
       project: e,
@@ -136,12 +136,12 @@ class Z extends n.Component {
     }
   }
 }
-class X extends n.Component {
+class Z extends n.Component {
   async refreshBuildOverrides() {
     this.setState({
       loading: !0
     });
-    let e = await (0, N.getBuildOverride)();
+    let e = await (0, I.getBuildOverride)();
     this.setState({
       loading: !1,
       buildOverrides: e,
@@ -187,7 +187,7 @@ class X extends n.Component {
       saving: t,
       errors: s
     } = this.state;
-    return null == e ? null : o.map(e, (e, n) => (0, a.jsx)(Z, {
+    return null == e ? null : o.map(e, (e, n) => (0, a.jsx)(X, {
       project: n,
       overrideType: e.type,
       overrideId: e.id,
@@ -391,7 +391,7 @@ class X extends n.Component {
       this.setState({
         saving: !0
       });
-      let t = await (0, I.applyStaffBuildOverride)(e);
+      let t = await (0, N.applyStaffBuildOverride)(e);
       if (200 === t.status) {
         let e = t.body;
         this.setState({
@@ -742,7 +742,7 @@ class J extends n.Component {
       }
       this.setStatusMessage(null);
       let e = this.generatePayload(),
-        t = await (0, I.getPublicBuildOverrideLink)(e);
+        t = await (0, N.getPublicBuildOverrideLink)(e);
       !1 !== t.error ? this.setStatusMessage(JSON.stringify(t.error), B.default.Colors.STATUS_RED) : (this.setState({
         publicLink: t.url.toString()
       }), 0 === e.meta.user_ids.length && this.setStatusMessage("Warning! No users added to the whitelist! This link could be used by anyone to override their build.", B.default.Colors.STATUS_YELLOW))
@@ -1044,7 +1044,7 @@ function en() {
 class el extends n.PureComponent {
   render() {
     return (0, a.jsxs)(n.Fragment, {
-      children: [(0, a.jsx)(et, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(es, {}), (0, a.jsx)(ea, {}), (0, a.jsx)(en, {}), (0, a.jsx)(X, {})]
+      children: [(0, a.jsx)(et, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(es, {}), (0, a.jsx)(ea, {}), (0, a.jsx)(en, {}), (0, a.jsx)(Z, {})]
     })
   }
 }

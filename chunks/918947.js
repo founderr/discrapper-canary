@@ -69,7 +69,7 @@ function N(e) {
     children: [(0, a.jsx)(c.default, {
       role: s,
       onClick: d
-    }), (0, a.jsx)(g, {
+    }), (0, a.jsx)(f, {
       guild: t,
       query: l,
       setQuery: o
@@ -104,7 +104,7 @@ function N(e) {
   })
 }
 
-function g(e) {
+function f(e) {
   let {
     guild: t,
     query: s,

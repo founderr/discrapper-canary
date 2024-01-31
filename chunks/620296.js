@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 }), s("222007");
 var a = s("37983"),
@@ -73,7 +73,7 @@ function N(e) {
   })
 }
 
-function g() {
+function f() {
   let e = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     t = n.useMemo(() => [{
       backgroundClass: I.bannerClubs,
@@ -169,7 +169,7 @@ function g() {
   })
 }
 
-function f(e) {
+function g(e) {
   let {
     guild: t,
     everyoneRole: s,
@@ -186,7 +186,7 @@ function f(e) {
       tag: o.FormTitleTags.H2,
       children: [(0, a.jsxs)("div", {
         className: I.container,
-        children: [(0, a.jsx)(g, {}), (0, a.jsx)(o.Heading, {
+        children: [(0, a.jsx)(f, {}), (0, a.jsx)(o.Heading, {
           variant: "heading-xl/semibold",
           children: T.default.Messages.ROLE_OVERVIEW_EMPTY_SUBHEADER
         }), (0, a.jsx)(o.Text, {

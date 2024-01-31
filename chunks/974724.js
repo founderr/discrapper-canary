@@ -25,10 +25,10 @@ function I(e) {
     I = s.mfaLevel,
     S = (0, l.useStateFromStores)([o.default], () => null != s && o.default.can(E.Permissions.MANAGE_GUILD, s), [s]),
     N = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
-    g = s.isOwner(N),
-    f = null == N ? void 0 : N.mfaEnabled,
+    f = s.isOwner(N),
+    g = null == N ? void 0 : N.mfaEnabled,
     A = I === E.MFALevels.ELEVATED,
-    L = g && f,
+    L = f && g,
     m = (0, n.throttle)(async e => {
       L && await u.default.updateMFALevel({
         guildId: s.id,
@@ -37,7 +37,7 @@ function I(e) {
       })
     }, 1e3);
   if (!S) return null;
-  !L && (t = g ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_DETAIL.format({
+  !L && (t = f ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_DETAIL.format({
     settingsHook: () => r.default.open(E.UserSettingsSections.ACCOUNT)
   }) : _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_DETAIL);
   let C = s.hasFeature(E.GuildFeatures.DISCOVERABLE);
@@ -55,7 +55,7 @@ function I(e) {
         children: [_.default.Messages.GUILD_SETTINGS_SAFETY_MFA_BODY, " ", t]
       })]
     }), !L || A && C ? (0, a.jsx)(i.Tooltip, {
-      text: C ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_DISCOVERABLE_DISABLED_TOOLTIP : g ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_TOOLTIP : _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_TOOLTIP,
+      text: C ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_DISCOVERABLE_DISABLED_TOOLTIP : f ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_TOOLTIP : _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_TOOLTIP,
       children: e => (0, a.jsx)(c.default, {
         checked: A,
         disabled: !0,

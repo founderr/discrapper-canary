@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return f
   }
 });
 var a = s("37983");
@@ -21,7 +21,7 @@ var n = s("414456"),
   S = s("782340"),
   N = s("873536");
 
-function g(e) {
+function f(e) {
   let {
     guild: t,
     scrollToQuestions: s
@@ -36,14 +36,14 @@ function g(e) {
       })
     }), (0, a.jsxs)("div", {
       className: N.channelList,
-      children: [(0, a.jsx)(L, {}), 0 === r.length && (0, a.jsx)(f, {}), (0, a.jsx)(A, {
+      children: [(0, a.jsx)(L, {}), 0 === r.length && (0, a.jsx)(g, {}), (0, a.jsx)(A, {
         channels: r
       })]
     })]
   })
 }
 
-function f() {
+function g() {
   return (0, a.jsxs)("div", {
     className: N.emptyState,
     children: [(0, a.jsx)("div", {

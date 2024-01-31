@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("27618"),
   S = s("102985"),
   N = s("697218"),
-  g = s("592407"),
-  f = s("900938"),
+  f = s("592407"),
+  g = s("900938"),
   A = s("49111"),
   L = s("782340"),
   m = s("686184");
@@ -150,22 +150,22 @@ class h extends n.PureComponent {
       } = this.props;
       null != t && (this.setState({
         internalEnabled: e
-      }), g.default.updateEmbed(t.id, e, s))
+      }), f.default.updateEmbed(t.id, e, s))
     }, this.handleChannelSelect = e => {
       let {
         guild: t,
         widgetEnabled: s
       } = this.props;
-      null != t && g.default.updateEmbed(t.id, s, e !== C ? e : null)
+      null != t && f.default.updateEmbed(t.id, s, e !== C ? e : null)
     }
   }
 }
-var R = o.default.connectStores([f.default, S.default], () => {
+var R = o.default.connectStores([g.default, S.default], () => {
   let {
     guild: e,
     embedChannelId: t,
     embedEnabled: s
-  } = f.default.getProps();
+  } = g.default.getProps();
   return {
     guild: e,
     widgetChannelId: t,

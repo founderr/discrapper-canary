@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("427459"),
   S = s("467094"),
   N = s("364685"),
-  g = s("566171"),
-  f = s("417385"),
+  f = s("566171"),
+  g = s("417385"),
   A = s("910687"),
   L = s("49111"),
   m = s("782340"),
@@ -159,7 +159,7 @@ var G = e => {
         children: m.default.Messages.PREMIUM_GUILD_TIER_3
       })
     }];
-  return (0, a.jsx)(g.default, {
+  return (0, a.jsx)(f.default, {
     tiers: U,
     renderTier: e => {
       let n, {
@@ -173,8 +173,8 @@ var G = e => {
           canCreateExpressions: S,
           canManageGuildExpression: N
         } = (0, _.getManageResourcePermissions)(t),
-        g = u[E - 1],
-        h = null != g ? (0, I.getTotalStickerCountForTier)(g.tier) : 0,
+        f = u[E - 1],
+        h = null != f ? (0, I.getTotalStickerCountForTier)(f.tier) : 0,
         R = (0, I.getTotalStickerCountForTier)(d.tier),
         U = (0, I.getIncrementalStickerCountForTier)(d.tier),
         v = T.slice(h, R),
@@ -186,9 +186,9 @@ var G = e => {
         F = R - h,
         H = s("89734"),
         V = U - v.length,
-        k = b ? Math.min(5 - (v.length + 0) % 5, V) : 0,
-        w = [];
-      for (let e = 0; e < k; e++) w.push((0, a.jsx)(D, {}, "placeholder-".concat(e)));
+        w = b ? Math.min(5 - (v.length + 0) % 5, V) : 0,
+        k = [];
+      for (let e = 0; e < w; e++) k.push((0, a.jsx)(D, {}, "placeholder-".concat(e)));
       let Y = y === E + 1 && y > G,
         K = b || Y || E > G;
       return Y ? n = (0, a.jsx)(c.default, {
@@ -205,7 +205,7 @@ var G = e => {
         }
       }) : b && (n = (0, a.jsx)(M, {
         guild: t
-      })), (0, a.jsxs)(f.default, {
+      })), (0, a.jsxs)(g.default, {
         subscriptionCount: x,
         tier: d,
         onSetRef: r,
@@ -221,7 +221,7 @@ var G = e => {
             isDisabled: P,
             sticker: e,
             canManageSticker: N(e)
-          }, e.id)), w]
+          }, e.id)), k]
         }), !P && !b && 0 === v.length && (0, a.jsx)("div", {
           className: i(C.emptyTierWrapper, C.unusedTierWrapper),
           children: (0, a.jsx)(o.Text, {

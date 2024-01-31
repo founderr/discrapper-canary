@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("694187"),
   S = s("608684"),
   N = s("957255"),
-  g = s("93581"),
-  f = s("414943"),
+  f = s("93581"),
+  g = s("414943"),
   A = s("578706"),
   L = s("381546"),
   m = s("315102"),
@@ -83,7 +83,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       canManageGuild: j
     } = (0, l.useStateFromStoresObject)([N.default], () => ({
       canManageGuild: N.default.can(M.Permissions.MANAGE_GUILD, s)
-    })), P = (0, l.useStateFromStores)([h.default], () => h.default.isGuildMetadataLoaded()), y = (0, l.useStateFromStores)([h.default], () => null != s ? h.default.getMetadata() : null), b = (0, l.useStateFromStores)([h.default], () => null != s && (null == y ? void 0 : y.isPublished) ? h.default.getSlug() : null), [B, F] = n.useState([!0]), [H, V] = n.useState(!0), [k, w] = n.useState([!1]), [Y, K] = n.useState([""]), W = e => {
+    })), P = (0, l.useStateFromStores)([h.default], () => h.default.isGuildMetadataLoaded()), y = (0, l.useStateFromStores)([h.default], () => null != s ? h.default.getMetadata() : null), b = (0, l.useStateFromStores)([h.default], () => null != s && (null == y ? void 0 : y.isPublished) ? h.default.getSlug() : null), [B, F] = n.useState([!0]), [H, V] = n.useState(!0), [w, k] = n.useState([!1]), [Y, K] = n.useState([""]), W = e => {
       let t = Object.entries(G.ALLOWED_SOCIAL_LINKS_DOMAINS).filter(e => !Y.includes(e[1].presentation)).map(e => ({
         label: e[1].presentation,
         value: e[0]
@@ -116,8 +116,8 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
         }), K(t), F(e), V(e.every(e => !0 === e))
       }
     }, [y]);
-    let X = (0, l.useStateFromStores)([h.default], () => null != s ? h.default.getErrors() : null),
-      Z = (0, l.useStateFromStores)([E.default], () => E.default.getPrimaryCategories(), [], E.areDiscoveryCategoriesEqual);
+    let Z = (0, l.useStateFromStores)([h.default], () => null != s ? h.default.getErrors() : null),
+      X = (0, l.useStateFromStores)([E.default], () => E.default.getPrimaryCategories(), [], E.areDiscoveryCategoriesEqual);
     if (null == s || null == y) return null;
     let J = e => {
         O.default.updateGuild({
@@ -188,8 +188,8 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
         a[t] = l, c.updateGuildDiscoveryMetadataSocialLinks(s.id, a)
       },
       en = e => {
-        let t = [...k];
-        t.splice(e, 1), w(t);
+        let t = [...w];
+        t.splice(e, 1), k(t);
         let a = [...B];
         a.splice(e, 1), F(a);
         let n = [...Y];
@@ -227,13 +227,13 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
           completed: null !== y.reasonsToJoin && y.reasonsToJoin.every(e => ei(e) || el(e)) && y.reasonsToJoin.filter(el).length >= 2
         }]
       }],
-      eo = Z.map(e => ({
+      eo = X.map(e => ({
         label: e.name,
         value: e.categoryId
       })),
       ed = (e, t) => {
-        let s = [...k];
-        s[e] = t, w(s)
+        let s = [...w];
+        s[e] = t, k(s)
       };
     return (0, a.jsx)("div", {
       className: p.settingsColumn,
@@ -298,7 +298,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           className: p.description,
                           children: x.default.Messages.DISCOVERY_LANDING_PAGE_CATEGORY_DESCRIPTION
                         })]
-                      }), (0, a.jsx)(f.default, {
+                      }), (0, a.jsx)(g.default, {
                         value: y.primaryCategoryId === G.DEFAULT_DISCOVERY_CATEGORY_ID ? null : null == y ? void 0 : y.primaryCategoryId,
                         placeholder: x.default.Messages.SELECT,
                         options: eo,
@@ -316,11 +316,11 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           guildMetadata: y,
                           disabled: !j
                         })]
-                      }), (null == X ? void 0 : X.category) != null ? (0, a.jsx)(r.Text, {
+                      }), (null == Z ? void 0 : Z.category) != null ? (0, a.jsx)(r.Text, {
                         color: "text-danger",
                         className: p.error,
                         variant: "text-sm/normal",
-                        children: X.category
+                        children: Z.category
                       }) : null]
                     })
                   })(), (0, a.jsx)(r.FormDivider, {
@@ -359,10 +359,10 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           imageClassName: p.imageUploaderInnerSquare,
                           hideSize: !0
                         })]
-                      }), (null == X ? void 0 : X.discovery_splash) != null ? (0, a.jsx)(r.Text, {
+                      }), (null == Z ? void 0 : Z.discovery_splash) != null ? (0, a.jsx)(r.Text, {
                         color: "text-danger",
                         variant: "text-sm/normal",
-                        children: X.discovery_splash
+                        children: Z.discovery_splash
                       }) : null]
                     })
                   })(), (0, a.jsx)(r.FormDivider, {
@@ -406,10 +406,10 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           guildId: s.id,
                           reasons: e
                         })
-                      }), (null == X ? void 0 : X.reasons_to_join) != null ? (0, a.jsx)(r.Text, {
+                      }), (null == Z ? void 0 : Z.reasons_to_join) != null ? (0, a.jsx)(r.Text, {
                         color: "text-danger",
                         variant: "text-sm/normal",
-                        children: X.reasons_to_join
+                        children: Z.reasons_to_join
                       }) : null]
                     })
                   })(), (0, a.jsx)(r.FormDivider, {
@@ -434,10 +434,10 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                         disabled: !j,
                         defaultDirty: (null === (e = y.about) || void 0 === e ? void 0 : e.length) > 0
                       }, "text-area-".concat(P))]
-                    }), (null == X ? void 0 : X.about) != null ? (0, a.jsx)(r.Text, {
+                    }), (null == Z ? void 0 : Z.about) != null ? (0, a.jsx)(r.Text, {
                       color: "text-danger",
                       variant: "text-sm/normal",
-                      children: X.about
+                      children: Z.about
                     }) : null]
                   }), (0, a.jsx)(r.FormDivider, {
                     className: p.divider
@@ -481,13 +481,13 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           width: 20,
                           height: 20
                         }, "validation-failed-" + t), j && (0, a.jsx)(o.default, {
-                          className: k[t] ? y.isPublished ? p.deleteButtonMax : p.deleteButtonMin : y.isPublished ? p.deleteButtonHiddenMax : p.deleteButtonHiddenMin,
+                          className: w[t] ? y.isPublished ? p.deleteButtonMax : p.deleteButtonMin : y.isPublished ? p.deleteButtonHiddenMax : p.deleteButtonHiddenMin,
                           onClick: () => en(t)
                         }, "delete-button-" + t)]
-                      }, "social-container-" + t)), (null == X ? void 0 : X.social_links) != null ? (0, a.jsx)(r.Text, {
+                      }, "social-container-" + t)), (null == Z ? void 0 : Z.social_links) != null ? (0, a.jsx)(r.Text, {
                         color: "text-danger",
                         variant: "text-sm/normal",
-                        children: X.social_links
+                        children: Z.social_links
                       }) : null, (0, a.jsx)(r.Button, {
                         size: r.Button.Sizes.SMALL,
                         color: r.Button.Colors.PRIMARY,
@@ -517,14 +517,14 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                         children: x.default.Messages.DISCOVERY_LANDING_PAGE_DISABLE_BUTTON
                       })]
                     })]
-                  }), (null == X ? void 0 : X.is_published) != null ? (0, a.jsx)(r.Text, {
+                  }), (null == Z ? void 0 : Z.is_published) != null ? (0, a.jsx)(r.Text, {
                     color: "text-danger",
                     variant: "text-sm/normal",
-                    children: X.is_published
+                    children: Z.is_published
                   }) : null]
                 }), !y.isPublished && (0, a.jsx)("div", {
                   className: p.checklist,
-                  children: (0, a.jsx)(g.default, {
+                  children: (0, a.jsx)(f.default, {
                     title: x.default.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_TITLE,
                     children: er,
                     buttonLabel: x.default.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_PUBLISH,

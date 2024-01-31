@@ -1,14 +1,14 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   getBillingAddressLayout: function() {
-    return l
+    return i
   },
   getOverrideBillingAddressLayout: function() {
-    return d
+    return r
   }
 });
-var o = a("394846"),
-  n = a("18502"),
-  s = a("49111");
-let l = e => [s.PaymentSourceTypes.CARD, s.PaymentSourceTypes.VENMO].includes(e.type) && "US" === e.country ? o.isMobile ? n.default.Layouts.SETTINGS_US_MOBILE : n.default.Layouts.SETTINGS_US : e.type === s.PaymentSourceTypes.CARD && "US" !== e.country ? o.isMobile ? n.default.Layouts.SETTINGS_INTL_MOBILE : n.default.Layouts.SETTINGS_INTL : o.isMobile ? n.default.Layouts.SETTINGS_INTL_NO_NAME_MOBILE : n.default.Layouts.SETTINGS_INTL_NO_NAME,
-  d = o.isMobile ? n.default.Layouts.SETTINGS_US_MOBILE : n.default.Layouts.SETTINGS_US
+var a = s("394846"),
+  n = s("18502"),
+  l = s("49111");
+let i = e => [l.PaymentSourceTypes.CARD, l.PaymentSourceTypes.VENMO].includes(e.type) && "US" === e.country ? a.isMobile ? n.default.Layouts.SETTINGS_US_MOBILE : n.default.Layouts.SETTINGS_US : e.type === l.PaymentSourceTypes.CARD && "US" !== e.country ? a.isMobile ? n.default.Layouts.SETTINGS_INTL_MOBILE : n.default.Layouts.SETTINGS_INTL : a.isMobile ? n.default.Layouts.SETTINGS_INTL_NO_NAME_MOBILE : n.default.Layouts.SETTINGS_INTL_NO_NAME,
+  r = a.isMobile ? n.default.Layouts.SETTINGS_US_MOBILE : n.default.Layouts.SETTINGS_US

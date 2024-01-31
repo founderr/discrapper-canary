@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var l = n("37983");
 n("884691");
-var i = n("414456"),
-  s = n.n(i),
+var s = n("414456"),
+  i = n.n(s),
   r = n("384737"),
   o = n("448052"),
   a = n("748802"),
@@ -25,7 +25,7 @@ let p = {
     let {
       direction: t = p.DOWN,
       width: n = 24,
-      height: i = 24,
+      height: s = 24,
       color: h = "currentColor",
       transition: m = f.transition,
       className: E,
@@ -46,15 +46,15 @@ let p = {
         ...g,
         className: E,
         width: n,
-        height: i,
+        height: s,
         color: h,
         colorClass: I
       })
     }
     return (0, l.jsx)("svg", {
-      className: s(E, m, C),
+      className: i(E, m, C),
       width: n,
-      height: i,
+      height: s,
       viewBox: "0 0 24 24",
       ...(0, c.default)(g),
       children: (0, l.jsx)("path", {

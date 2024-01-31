@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("726527"),
   S = s("405645"),
   N = s("915675"),
-  g = s("957255"),
-  f = s("211248"),
+  f = s("957255"),
+  g = s("211248"),
   A = s("673220"),
   L = s("462579"),
   m = s("433487"),
@@ -52,7 +52,7 @@ function H(e) {
     renderHeader: o,
     headerHeight: u,
     query: c
-  } = e, _ = (0, d.useStateFromStores)([x.default], () => x.default.getRoleMemberCount(s.id), [s.id]), T = (0, d.useStateFromStores)([g.default], () => g.default.getHighestRole(s), [s]), I = c.trim();
+  } = e, _ = (0, d.useStateFromStores)([x.default], () => x.default.getRoleMemberCount(s.id), [s.id]), T = (0, d.useStateFromStores)([f.default], () => f.default.getHighestRole(s), [s]), I = c.trim();
   n.useEffect(() => {
     (0, G.fetchMemberCounts)(s.id)
   }, [s.id]);
@@ -63,13 +63,13 @@ function H(e) {
     }), S.current = !0)
   }, [c]);
   let N = n.useMemo(() => i.filter(e => (0, p.filterRole)(e, I)), [i, I]),
-    f = n.useMemo(() => [...i, l], [i, l]),
+    g = n.useMemo(() => [...i, l], [i, l]),
     {
       draggingId: A,
       handleDragStart: L,
       handleDragReset: m,
       handleDragComplete: C
-    } = (0, v.default)(f),
+    } = (0, v.default)(g),
     O = n.useCallback(e => {
       var n;
       let {
@@ -77,7 +77,7 @@ function H(e) {
       } = e;
       if (0 === N.length) return (0, a.jsx)(V, {}, "empty-role");
       let o = N[l];
-      return (0, a.jsx)(k, {
+      return (0, a.jsx)(w, {
         role: o,
         guild: s,
         highestRole: T,
@@ -115,13 +115,13 @@ function V() {
   })
 }
 
-function k(e) {
+function w(e) {
   var t, l, o;
   let {
     role: d,
     guild: E,
     highestRole: S,
-    currentPosition: g,
+    currentPosition: f,
     memberCount: O,
     onDragStart: R,
     onDragReset: D,
@@ -130,11 +130,11 @@ function k(e) {
     disableDrag: x,
     setEditRoleId: p,
     setSelectedSection: v
-  } = e, P = (0, U.useLockTooltip)(E, S, d), H = null != P, [V, k] = n.useState(!1), Y = n.useMemo(() => ({
+  } = e, P = (0, U.useLockTooltip)(E, S, d), H = null != P, [V, w] = n.useState(!1), Y = n.useMemo(() => ({
     type: F,
     item: () => (R(d.id), {
       id: d.id,
-      position: g
+      position: f
     }),
     canDrag: () => V && !H,
     collect: e => ({
@@ -165,8 +165,8 @@ function k(e) {
       roleId: d.id
     })
   }), [H, d]), [{
-    dragSourcePosition: X
-  }, Z] = (0, r.useDrop)(z), J = n.useCallback(e => {
+    dragSourcePosition: Z
+  }, X] = (0, r.useDrop)(z), J = n.useCallback(e => {
     (0, c.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -193,12 +193,12 @@ function k(e) {
   return (0, a.jsxs)(u.Clickable, {
     className: i(b.roleRow, {
       [b.roleRowDisableHover]: G,
-      [b.containerDragBefore]: null != X && g < X,
-      [b.containerDragAfter]: null != X && g > X
+      [b.containerDragBefore]: null != Z && f < Z,
+      [b.containerDragAfter]: null != Z && f > Z
     }),
     onClick: q,
     onContextMenu: J,
-    innerRef: e => W(Z(e)),
+    innerRef: e => W(X(e)),
     "data-dnd-name": d.name,
     "aria-label": y.default.Messages.ROLE_ROW_DESCRIPTION.format({
       name: d.name,
@@ -208,8 +208,8 @@ function k(e) {
       className: i(b.dragIcon, B.dragSpacing, {
         [b.dragIconHidden]: H || x
       }),
-      onMouseEnter: () => k(!0),
-      onMouseLeave: () => k(!1),
+      onMouseEnter: () => w(!0),
+      onMouseLeave: () => w(!1),
       children: (0, a.jsx)(A.default, {})
     }), (0, a.jsxs)("div", {
       className: i(b.roleNameContainer, B.roleNameSpacing),
@@ -217,7 +217,7 @@ function k(e) {
         className: b.roleFlowerStar,
         color: d.colorString,
         size: 24
-      }) : (0, a.jsx)(w, {
+      }) : (0, a.jsx)(k, {
         guildId: E.id,
         role: d,
         size: 24,
@@ -257,11 +257,11 @@ function k(e) {
       })
     }), (0, a.jsxs)("div", {
       className: i(b.buttonsContainer, B.buttonsSpacing),
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(g.default, {
         className: i(b.circleButton, b.editButton),
         tooltip: H ? y.default.Messages.VIEW : y.default.Messages.EDIT,
-        color: f.CircleIconButtonColors.SECONDARY,
-        size: f.CircleIconButtonSizes.SIZE_36,
+        color: g.CircleIconButtonColors.SECONDARY,
+        size: g.CircleIconButtonSizes.SIZE_36,
         icon: H ? (0, a.jsx)(L.default, {
           width: 20,
           height: 20
@@ -270,11 +270,11 @@ function k(e) {
           height: 20
         }),
         onClick: q
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(g.default, {
         className: b.circleButton,
         tooltip: y.default.Messages.MORE,
-        color: f.CircleIconButtonColors.SECONDARY,
-        size: f.CircleIconButtonSizes.SIZE_36,
+        color: g.CircleIconButtonColors.SECONDARY,
+        size: g.CircleIconButtonSizes.SIZE_36,
         icon: (0, a.jsx)(m.default, {
           width: 20,
           height: 20
@@ -286,7 +286,7 @@ function k(e) {
   })
 }
 
-function w(e) {
+function k(e) {
   var t;
   let {
     guildId: s,

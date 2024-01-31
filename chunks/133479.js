@@ -44,7 +44,7 @@ function g() {
     let t = (0, i.debounce)(C, 100);
     window.addEventListener("resize", t)
   }, [C]);
-  let p = {
+  let m = {
       [S.AccountStandingState.ALL_GOOD]: {
         title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
         description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION.format({
@@ -88,12 +88,12 @@ function g() {
       }
     },
     {
-      title: m,
+      title: p,
       description: U,
       color: h,
       Icon: x
-    } = p[t.state],
-    H = Object.keys(p).length;
+    } = m[t.state],
+    H = Object.keys(m).length;
   return (0, n.jsxs)(d.Card, {
     className: I.container,
     outline: !1,
@@ -110,7 +110,7 @@ function g() {
         children: [(0, n.jsx)(d.Heading, {
           color: "header-primary",
           variant: "heading-lg/normal",
-          children: m.format({
+          children: p.format({
             hook: t => (0, n.jsx)(d.Text, {
               style: {
                 color: h.css
@@ -132,7 +132,7 @@ function g() {
         },
         children: [(0, n.jsx)("div", {
           className: I.line
-        }), Object.entries(p).map((e, a) => {
+        }), Object.entries(m).map((e, a) => {
           let [s, i] = e, l = parseInt(s) === t.state;
           return (0, n.jsxs)("div", {
             className: I.statusOption,

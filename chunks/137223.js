@@ -7,7 +7,7 @@ i.r(t), i.d(t, {
     return _
   },
   default: function() {
-    return h
+    return C
   }
 }), i("424973"), i("222007");
 var n, l, s = i("37983"),
@@ -164,10 +164,10 @@ class S extends a.Component {
       tags: m,
       onActivate: g,
       className: S,
-      inputProps: h,
-      focusAfterReady: C
-    } = this.props, T = null != t && t.length > 0, N = !1, A = [];
-    return null != m && m.length > 0 && ("string" == typeof m[0] ? m.forEach((e, t) => A.push((0, s.jsxs)(u.Anchor, {
+      inputProps: C,
+      focusAfterReady: h
+    } = this.props, T = null != t && t.length > 0, N = !1, v = [];
+    return null != m && m.length > 0 && ("string" == typeof m[0] ? m.forEach((e, t) => v.push((0, s.jsxs)(u.Anchor, {
       focusProps: {
         offset: 4
       },
@@ -177,7 +177,7 @@ class S extends a.Component {
         className: p.close,
         "aria-label": I.default.Messages.REMOVE
       })]
-    }, t))) : (N = !0, m.forEach((e, t) => A.push((0, s.jsxs)(u.Anchor, {
+    }, t))) : (N = !0, m.forEach((e, t) => v.push((0, s.jsxs)(u.Anchor, {
       className: o(p.tag, p.richTag),
       onClick: this.handleRemoveTag.bind(this, t),
       children: [("MEMBER" === e.type || "USER" === e.type) && null != e.avatar && (0, s.jsx)(u.Avatar, {
@@ -213,7 +213,7 @@ class S extends a.Component {
           style: {
             maxHeight: f
           },
-          children: [A, (0, s.jsx)("input", {
+          children: [v, (0, s.jsx)("input", {
             className: o(p.input, {
               [p.richTagInput]: N
             }),
@@ -227,10 +227,10 @@ class S extends a.Component {
             onFocus: this.handleFocus,
             disabled: l,
             "aria-disabled": l,
-            autoFocus: !C && e,
+            autoFocus: !h && e,
             onMouseDown: g,
             ...this.defaultInputProps,
-            ...h
+            ...C
           }), null != a ? (0, s.jsx)(_, {
             size: r,
             themeOverride: n,
@@ -309,4 +309,4 @@ S.Sizes = g, S.defaultProps = {
   preventEscapePropagation: !0,
   useKeyboardNavigation: !0
 };
-var h = S
+var C = S

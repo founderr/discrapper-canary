@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 }), s("222007");
 var a = s("37983"),
@@ -19,13 +19,13 @@ var a = s("37983"),
   I = s("59767"),
   S = s("561205"),
   N = s("782340"),
-  g = s("332227");
+  f = s("332227");
 
-function f() {
+function g() {
   var e;
   let {
     editStateId: t
-  } = (0, E.useEditStateContext)(), [s, l] = _.useTrialInterval(t), [f, A] = _.useTrialLimit(t), L = (0, u.useSubscriptionTrial)(t), {
+  } = (0, E.useEditStateContext)(), [s, l] = _.useTrialInterval(t), [g, A] = _.useTrialLimit(t), L = (0, u.useSubscriptionTrial)(t), {
     options: m
   } = (0, I.default)(null !== (e = null == L ? void 0 : L.active_trial) && void 0 !== e ? e : null), C = (0, T.default)(), O = null != s, h = n.useCallback(e => {
     let t = m.find(e => e.isDefault);
@@ -46,7 +46,7 @@ function f() {
       disabled: !O || R,
       children: [(0, a.jsx)(r.FormText, {
         type: r.FormText.Types.DESCRIPTION,
-        className: g.formDescription,
+        className: f.formDescription,
         disabled: !O || R,
         children: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TIME_LIMIT_DESCRIPTION
       }), (0, a.jsx)(o.default, {
@@ -54,7 +54,7 @@ function f() {
       }), (0, a.jsx)(r.SingleSelect, {
         "aria-labelledby": D,
         options: m,
-        className: g.formInput,
+        className: f.formInput,
         placeholder: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_DISABLED,
         value: s,
         onChange: l,
@@ -70,14 +70,14 @@ function f() {
       disabled: !O || R,
       children: [(0, a.jsx)(r.FormText, {
         type: r.FormText.Types.DESCRIPTION,
-        className: g.formDescription,
+        className: f.formDescription,
         disabled: !O || R,
         children: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_ACTIVE_TRIAL_USER_LIMIT_DESCRIPTION
       }), (0, a.jsx)(r.SingleSelect, {
         "aria-labelledby": M,
         options: C,
-        className: g.formInput,
-        value: f,
+        className: f.formInput,
+        value: g,
         onChange: A,
         maxVisibleItems: 5,
         isDisabled: !O || R,

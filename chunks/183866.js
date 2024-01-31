@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return E
   },
   getRuleInfo: function() {
-    return f
+    return g
   }
 });
 var a = s("116320"),
@@ -71,7 +71,7 @@ let E = e => {
   N = e => {
     if (e === u.AutomodTriggerType.KEYWORD) return c.default.Messages.GUILD_AUTOMOD_LINK_FILTER_MATCHING_STRATEGY_DESCRIPTION.format()
   },
-  g = e => {
+  f = e => {
     switch (e) {
       case u.AutomodTriggerType.MENTION_SPAM:
         return a.default;
@@ -85,13 +85,13 @@ let E = e => {
     }
   };
 
-function f(e, t) {
+function g(e, t) {
   var s, a, n, i, r;
   return null != e && _(e) ? {
     headerText: null !== (s = T(e, t)) && void 0 !== s ? s : "",
     headerSubtext: null !== (a = I(e, t)) && void 0 !== a ? a : "",
     descriptionText: null !== (n = S(e)) && void 0 !== n ? n : "",
     descriptionSubtext: null !== (i = N(e)) && void 0 !== i ? i : "",
-    icon: null !== (r = g(e)) && void 0 !== r ? r : l.default
+    icon: null !== (r = f(e)) && void 0 !== r ? r : l.default
   } : null
 }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 });
 var a = s("37983");
@@ -33,7 +33,7 @@ function N(e) {
   }) : null
 }
 
-function g(e) {
+function f(e) {
   let {
     guildId: t
   } = e, s = (0, n.useStateFromStores)([o.default], () => o.default.getGuild(t), [t]), d = (0, n.useStateFromStores)([r.default], () => null != s ? r.default.getChannel(s.rulesChannelId) : null, [s]), u = () => {
@@ -62,7 +62,7 @@ function g(e) {
   })
 }
 
-function f(e) {
+function g(e) {
   let {
     rule: t,
     onChangeRule: s
@@ -72,7 +72,7 @@ function f(e) {
       className: S.cardContentsContainer,
       children: [(0, a.jsx)(E.default, {
         step: 1,
-        header: (0, a.jsx)(g, {
+        header: (0, a.jsx)(f, {
           guildId: t.guildId
         })
       }), (0, a.jsx)(_.default, {

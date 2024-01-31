@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return A
+    return v
   }
 }), i("222007");
 var n = i("37983"),
@@ -21,8 +21,8 @@ var n = i("37983"),
   g = i("305961"),
   _ = i("773336"),
   S = i("215550"),
-  h = i("782340"),
-  C = i("465439");
+  C = i("782340"),
+  h = i("465439");
 let T = (e, t) => "".concat(e, ":").concat(t),
   N = l.forwardRef(function(e, t) {
     let i, {
@@ -37,21 +37,21 @@ let T = (e, t) => "".concat(e, ":").concat(t),
         rowIndex: _,
         size: T,
         surrogateCodePoint: N,
-        allowAnimatedEmoji: A,
-        selectedItemClassName: y,
-        ...v
+        allowAnimatedEmoji: v,
+        selectedItemClassName: A,
+        ...y
       } = e,
       j = (0, r.useStateFromStores)([g.default], () => l.type === f.EmojiTypes.GUILD ? g.default.getGuild(l.guildId) : void 0, [l]);
     return (0, n.jsx)(o.FocusRing, {
       children: (0, n.jsx)("button", {
-        ...v,
-        className: a(C.emojiItem, {
-          [C.emojiItemLarge]: u,
-          [C.emojiItemMedium]: c,
-          [C.emojiItemSelected]: d,
-          [null != y ? y : ""]: d,
-          [C.emojiItemDisabled]: E,
-          [C.showPulse]: I
+        ...y,
+        className: a(h.emojiItem, {
+          [h.emojiItemLarge]: u,
+          [h.emojiItemMedium]: c,
+          [h.emojiItemSelected]: d,
+          [null != A ? A : ""]: d,
+          [h.emojiItemDisabled]: E,
+          [h.showPulse]: I
         }),
         "data-type": m.PickerContextMenuDataTypes.EMOJI,
         "data-id": l.id,
@@ -59,10 +59,10 @@ let T = (e, t) => "".concat(e, ":").concat(t),
         "data-name": l.name,
         ref: t,
         children: (0, n.jsx)(S.default, {
-          "aria-label": (i = l.allNamesString, ((null == j ? void 0 : j.name) != null && (i = h.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
+          "aria-label": (i = l.allNamesString, ((null == j ? void 0 : j.name) != null && (i = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
             names: i,
             guildName: j.name
-          })), s) ? h.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
+          })), s) ? C.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
             names: i
           }) : i),
           columnIndex: p,
@@ -70,13 +70,13 @@ let T = (e, t) => "".concat(e, ":").concat(t),
           emoji: l,
           size: T,
           surrogateCodePoint: N,
-          allowAnimatedEmoji: A
+          allowAnimatedEmoji: v
         })
       })
     })
   });
 
-function A(e) {
+function v(e) {
   let {
     descriptor: t,
     emojiItemKey: s,
@@ -85,10 +85,10 @@ function A(e) {
     channelGuildId: m,
     onInspect: g,
     onSelect: S,
-    isScrolling: C,
-    isUsingKeyboardNavigation: A,
-    showEmojiFavoriteTooltip: y,
-    surrogateCodePoint: v,
+    isScrolling: h,
+    isUsingKeyboardNavigation: v,
+    showEmojiFavoriteTooltip: A,
+    surrogateCodePoint: y,
     selectedItemClassName: j,
     getEmojiItemProps: R,
     isMediumSize: O,
@@ -99,20 +99,20 @@ function A(e) {
     messageId: D,
     isBurstReaction: b,
     rowPosition: U
-  } = e, [w, G] = l.useState(""), k = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), F = (0, r.useStateFromStores)([d.default], () => d.default.getDisambiguatedEmojiContext(m), [m]), V = l.useRef(null), {
-    emoji: K,
-    size: H,
+  } = e, [w, G] = l.useState(""), k = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), V = (0, r.useStateFromStores)([d.default], () => d.default.getDisambiguatedEmojiContext(m), [m]), F = l.useRef(null), {
+    emoji: H,
+    size: K,
     isDisabled: B,
     columnIndex: J
   } = t, W = e => {
-    if (e.stopPropagation(), C.current || A.current) return;
+    if (e.stopPropagation(), h.current || v.current) return;
     let i = e.altKey;
-    i && !d.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(K) && L(s), (0, I.hideHotspot)(I.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), S(t, {
+    i && !d.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(H) && L(s), (0, I.hideHotspot)(I.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), S(t, {
       isFinalSelection: !e.shiftKey,
       toggleFavorite: i
     })
   }, z = () => {
-    !C.current && !A.current && g(t)
+    !h.current && !v.current && g(t)
   }, Z = e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
@@ -136,11 +136,11 @@ function A(e) {
     return (0, l.createElement)("li", {
       ...c,
       key: s,
-      ref: V
+      ref: F
     }, w !== T(J, f) && (0, n.jsx)(N, {
       ref: r,
-      emoji: K,
-      isFavorite: F.isFavoriteEmojiWithoutFetchingLatest(K),
+      emoji: H,
+      isFavorite: V.isFavoriteEmojiWithoutFetchingLatest(H),
       isLargeSize: M,
       isMediumSize: O,
       isInspected: a,
@@ -152,10 +152,10 @@ function A(e) {
       onMouseEnter: t,
       onMouseLeave: i,
       onClick: e => {
-        if (null != V.current && null != U && null != D && !e.shiftKey && null != K.name && b && !k && P) {
-          let e = null == K.id ? E.default.convertNameToSurrogate(K.name) : K.name,
-            t = V.current.getBoundingClientRect();
-          t.x = U.x + (J + 1) * H, G(T(J, f)), (0, p.addReactionPickerAnimation)(D, e, K.id, t)
+        if (null != F.current && null != U && null != D && !e.shiftKey && null != H.name && b && !k && P) {
+          let e = null == H.id ? E.default.convertNameToSurrogate(H.name) : H.name,
+            t = F.current.getBoundingClientRect();
+          t.x = U.x + (J + 1) * K, G(T(J, f)), (0, p.addReactionPickerAnimation)(D, e, H.id, t)
         }
         W(e)
       },
@@ -163,13 +163,13 @@ function A(e) {
       tabIndex: o,
       columnIndex: J,
       rowIndex: f,
-      size: H,
-      surrogateCodePoint: v,
+      size: K,
+      surrogateCodePoint: y,
       selectedItemClassName: j
     }))
   };
-  return y ? (0, n.jsx)(o.Tooltip, {
-    text: h.default.Messages.EMOJI_FAVORITE_TOOLTIP.format({
+  return A ? (0, n.jsx)(o.Tooltip, {
+    text: C.default.Messages.EMOJI_FAVORITE_TOOLTIP.format({
       key: (0, _.isMac)() ? "Opt" : "Alt"
     }),
     position: "top",

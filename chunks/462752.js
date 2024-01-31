@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("423487"),
   S = s("701909"),
   N = s("36402"),
-  g = s("766419"),
-  f = s("531493"),
+  f = s("766419"),
+  g = s("531493"),
   A = s("50693"),
   L = s("609542"),
   m = s("91816"),
@@ -83,9 +83,9 @@ function U(e) {
   } = (0, m.useScrolledToTop)(), P = (0, d.useStateFromStores)([N.default], () => {
     var e;
     return null === (e = N.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[s.id]
-  }, [s.id, t.id]), y = (0, d.useStateFromStoresArray)([f.default], () => {
+  }, [s.id, t.id]), y = (0, d.useStateFromStoresArray)([g.default], () => {
     var e;
-    return null !== (e = f.default.getEditedRoleConnectionConfigurationsMap().get(s.id)) && void 0 !== e ? e : []
+    return null !== (e = g.default.getEditedRoleConnectionConfigurationsMap().get(s.id)) && void 0 !== e ? e : []
   }), b = y.length > 1 ? E.ConnectionConfigurationRuleOperator.OR : E.ConnectionConfigurationRuleOperator.AND, B = n.useMemo(() => b === E.ConnectionConfigurationRuleOperator.OR ? y.flat() : null != y && y.length > 0 ? y[0] : [], [b, y]), F = n.useMemo(() => new Set(B.map(e => e.connectionType)), [B]);
 
   function H(e) {
@@ -97,7 +97,7 @@ function U(e) {
       applicationId: t,
       operator: void 0,
       value: void 0
-    }), (0, g.updateRoleConnectionConfigurations)(s.id, x(a, b))
+    }), (0, f.updateRoleConnectionConfigurations)(s.id, x(a, b))
   }
 
   function V() {
@@ -109,13 +109,13 @@ function U(e) {
       onCompleteApplication: e => H(h.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE, e)
     })
   }
-  let k = null;
-  if (0 === B.length) k = (0, a.jsx)(p, {
+  let w = null;
+  if (0 === B.length) w = (0, a.jsx)(p, {
     handleAddVerificationClicked: V,
     locked: l
   });
   else if (B.length > 0) {
-    var w, Y;
+    var k, Y;
     let e = null;
     B.length < 10 && (e = (0, a.jsx)(u.Button, {
       className: i(D.addVerificationButton, D.addVerificationButtonAppend),
@@ -128,8 +128,8 @@ function U(e) {
         className: D.addVerificationButtonAppendTextContainer,
         children: [(0, a.jsx)(T.default, {}), R.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION]
       })
-    })), k = (0, a.jsxs)(a.Fragment, {
-      children: [(w = () => (0, g.updateRoleConnectionConfigurations)(s.id, []), Y = l, (0, a.jsxs)(a.Fragment, {
+    })), w = (0, a.jsxs)(a.Fragment, {
+      children: [(k = () => (0, f.updateRoleConnectionConfigurations)(s.id, []), Y = l, (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)("div", {
           className: D.headerTitleContainer,
           children: [(0, a.jsx)("div", {
@@ -143,7 +143,7 @@ function U(e) {
             size: u.Button.Sizes.TINY,
             look: u.Button.Looks.LINK,
             color: u.Button.Colors.LINK,
-            onClick: w,
+            onClick: k,
             disabled: Y,
             children: R.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_CLEAR_ALL
           })]
@@ -172,7 +172,7 @@ function U(e) {
             "aria-labelledby": G
           })
         })
-      }(l, s.id, b, B, (e, t) => (0, g.updateRoleConnectionConfigurations)(s.id, x(e, t))), function(e, t, s, n, l) {
+      }(l, s.id, b, B, (e, t) => (0, f.updateRoleConnectionConfigurations)(s.id, x(e, t))), function(e, t, s, n, l) {
         function i(s, a) {
           let n = [];
           for (let t of e) n.push({
@@ -225,7 +225,7 @@ function U(e) {
             integrations: l
           }, e[0].configuration.connectionType + ":" + e[0].index))
         })
-      }(B, e => (0, g.updateRoleConnectionConfigurations)(s.id, x(e, b)), l, s.id, o), e]
+      }(B, e => (0, f.updateRoleConnectionConfigurations)(s.id, x(e, b)), l, s.id, o), e]
     })
   }
   return (0, a.jsx)(u.AdvancedScrollerAuto, {
@@ -256,7 +256,7 @@ function U(e) {
           color: "text-normal",
           children: R.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MEMBERS_WARNING
         })]
-      }) : null, k]
+      }) : null, w]
     })
   })
 }

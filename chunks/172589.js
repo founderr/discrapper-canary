@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("153160"),
   S = s("577357"),
   N = s("837008"),
-  g = s("648825"),
-  f = s("757715"),
+  f = s("648825"),
+  g = s("757715"),
   A = s("406876"),
   L = s("167109"),
   m = s("110498"),
@@ -40,7 +40,7 @@ function D(e) {
     groupListingId: x,
     onBeforeDispatchNewListing: p,
     onAfterDispatchNewListing: U
-  } = e, [v, j] = n.useState(r), P = (0, d.useStateFromStores)([g.default], () => g.default.getSubscriptionListing(v)), y = null == P, [b, B] = n.useState(y), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, V = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, k = (0, f.useRoleSubscriptionSettingsDisabled)(), [w] = L.useName(v), [Y] = L.usePriceTier(v), [K] = L.useDescription(v), [W] = L.useImage(v, 1024), z = "" !== w ? w : h.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, X = "" !== w && null != W && "" !== K && null != Y && !k, Z = L.useHasChanges(v), {
+  } = e, [v, j] = n.useState(r), P = (0, d.useStateFromStores)([f.default], () => f.default.getSubscriptionListing(v)), y = null == P, [b, B] = n.useState(y), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, V = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, w = (0, g.useRoleSubscriptionSettingsDisabled)(), [k] = L.useName(v), [Y] = L.usePriceTier(v), [K] = L.useDescription(v), [W] = L.useImage(v, 1024), z = "" !== k ? k : h.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, Z = "" !== k && null != W && "" !== K && null != Y && !w, X = L.useHasChanges(v), {
     loading: J,
     error: Q,
     handleCreateOrUpdateFromEditState: q
@@ -111,7 +111,7 @@ function D(e) {
               j(e.id), null == U || U(e)
             }
           }),
-          disabled: !X || !Z,
+          disabled: !Z || !X,
           className: R.autoWidth,
           submitting: es,
           children: h.default.Messages.SAVE

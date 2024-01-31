@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("424973");
 var l = n("37983"),
-  i = n("884691"),
-  s = n("310013"),
-  r = n.n(s),
+  s = n("884691"),
+  i = n("310013"),
+  r = n.n(i),
   o = n("407063");
 let a = /url\(['"](.*)['"]\)/,
   u = e => {
@@ -17,24 +17,24 @@ let a = /url\(['"](.*)['"]\)/,
   };
 
 function d(e) {
-  class t extends i.Component {
+  class t extends s.Component {
     componentDidUpdate(e, t) {
       if (t === this.state) return;
       let {
         cached: n,
         loaded: l
       } = this.state, {
-        style: i
-      } = this.props, s = null != i ? u(i.backgroundImage) : null;
-      null == s && s !== n ? this.setState({
+        style: s
+      } = this.props, i = null != s ? u(s.backgroundImage) : null;
+      null == i && i !== n ? this.setState({
         loaded: !0,
-        cached: s
-      }) : this.cachedURLs.indexOf(s) >= 0 ? this.setState({
+        cached: i
+      }) : this.cachedURLs.indexOf(i) >= 0 ? this.setState({
         loaded: !0,
-        cached: s
-      }) : null != s && s !== n && !0 === l && this.setState({
+        cached: i
+      }) : null != i && i !== n && !0 === l && this.setState({
         loaded: !1
-      }, () => this.preloadURL(s))
+      }, () => this.preloadURL(i))
     }
     preloadURL(e) {
       this.canceller && this.canceller(), this.canceller = (0, o.loadImage)(e, t => {
@@ -55,12 +55,12 @@ function d(e) {
       let {
         style: t,
         onBackgroundImageLoad: n,
-        ...i
+        ...s
       } = this.props, {
-        loaded: s,
+        loaded: i,
         cached: r
       } = this.state;
-      if (!s && null != t) {
+      if (!i && null != t) {
         var o;
         t = {
           ...t,
@@ -69,7 +69,7 @@ function d(e) {
       }
       return (0, l.jsx)(e, {
         style: t,
-        ...i
+        ...s
       })
     }
     constructor(e) {

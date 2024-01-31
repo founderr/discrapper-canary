@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("677099"),
   g = s("790618"),
   h = s("697218"),
-  I = s("659500"),
-  N = s("543306"),
+  N = s("659500"),
+  I = s("543306"),
   p = s("49111"),
   C = s("397336"),
   A = s("782340"),
@@ -42,7 +42,7 @@ function x() {
     {
       subsection: D,
       setSubsection: L
-    } = (0, N.default)(),
+    } = (0, I.default)(),
     {
       AnalyticsLocationProvider: P,
       analyticsLocations: j
@@ -65,10 +65,10 @@ function x() {
         onItemSelect: function(e) {
           if (D !== e) {
             if (R) {
-              I.ComponentDispatch.dispatch(p.ComponentActions.SHAKE_APP, {
+              N.ComponentDispatch.dispatch(p.ComponentActions.SHAKE_APP, {
                 duration: 300,
                 intensity: r.SHAKE_INTENSITY_DEFAULT
-              }), I.ComponentDispatch.dispatch(p.ComponentActions.EMPHASIZE_NOTICE);
+              }), N.ComponentDispatch.dispatch(p.ComponentActions.EMPHASIZE_NOTICE);
               return
             }
             e === C.ProfileCustomizationSubsection.GUILD && null == t && null != M && (0, u.initGuildIdentitySettings)(M, j), L(e)

@@ -1,58 +1,58 @@
 "use strict";
-t.r(n), t.d(n, {
+s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
-var a = t("37983");
-t("884691");
-var l = t("414456"),
-  i = t.n(l),
-  s = t("819855"),
-  o = t("77078"),
-  r = t("841098"),
-  c = t("376556"),
-  u = t("572943"),
-  d = t("926994"),
-  p = t("599110"),
-  m = t("49111"),
-  N = t("704184"),
-  f = e => {
+var a = s("37983");
+s("884691");
+var n = s("414456"),
+  l = s.n(n),
+  i = s("819855"),
+  r = s("77078"),
+  o = s("841098"),
+  d = s("376556"),
+  u = s("572943"),
+  c = s("926994"),
+  S = s("599110"),
+  E = s("49111"),
+  f = s("704184"),
+  T = e => {
     let {
-      disabled: n = !1,
-      type: t,
-      className: l,
-      innerClassName: f,
-      onConnect: h
-    } = e, x = (0, r.default)(), C = c.default.get((0, u.useLegacyPlatformType)(t));
-    return (0, a.jsx)(o.Tooltip, {
-      text: C.name,
+      disabled: t = !1,
+      type: s,
+      className: n,
+      innerClassName: T,
+      onConnect: m
+    } = e, _ = (0, o.default)(), g = d.default.get((0, u.useLegacyPlatformType)(s));
+    return (0, a.jsx)(r.Tooltip, {
+      text: g.name,
       children: e => {
         let {
-          onMouseEnter: r,
+          onMouseEnter: o,
           onMouseLeave: u
         } = e;
         return (0, a.jsx)("div", {
-          className: i(N.wrapper, l),
-          children: (0, a.jsx)(o.FocusRing, {
+          className: l(f.wrapper, n),
+          children: (0, a.jsx)(r.FocusRing, {
             children: (0, a.jsx)("button", {
-              onMouseEnter: r,
+              onMouseEnter: o,
               onMouseLeave: u,
-              className: i(N.inner, f),
+              className: l(f.inner, T),
               type: "button",
-              disabled: n,
+              disabled: t,
               style: {
-                backgroundImage: "url('".concat((0, s.isThemeDark)(x) ? C.icon.darkSVG : C.icon.lightSVG, "')")
+                backgroundImage: "url('".concat((0, i.isThemeDark)(_) ? g.icon.darkSVG : g.icon.lightSVG, "')")
               },
-              onClick: null != h ? h : () => (function(e) {
-                let n = c.default.get(e);
-                (0, d.default)(n.type, "Friends List"), p.default.track(m.AnalyticEvents.ACCOUNT_LINK_STEP, {
+              onClick: null != m ? m : () => (function(e) {
+                let t = d.default.get(e);
+                (0, c.default)(t.type, "Friends List"), S.default.track(E.AnalyticEvents.ACCOUNT_LINK_STEP, {
                   previous_step: "desktop connections",
                   current_step: "desktop oauth",
-                  platform_type: n.type
+                  platform_type: t.type
                 })
-              })(t),
-              "aria-label": C.name
+              })(s),
+              "aria-label": g.name
             })
           })
         })

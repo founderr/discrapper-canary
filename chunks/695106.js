@@ -21,14 +21,14 @@ var n = i("37983"),
   g = i("867805"),
   _ = i("476765"),
   S = i("402671"),
-  h = i("159885"),
-  C = i("49111"),
+  C = i("159885"),
+  h = i("49111"),
   T = i("782340"),
   N = i("576643");
-let A = (0, _.uid)(),
-  y = d.default.convert.fromCodePoint("1f44f"),
-  v = (0, h.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
-  j = (0, h.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
+let v = (0, _.uid)(),
+  A = d.default.convert.fromCodePoint("1f44f"),
+  y = (0, C.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+  j = (0, C.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
   R = e => {
     let {
       fade: t,
@@ -36,7 +36,7 @@ let A = (0, _.uid)(),
       onClick: l,
       delay: s,
       index: a
-    } = e, r = (0, c.useListItem)("item-".concat(a)), o = S.default.getURL(y + i), f = (0, u.useSpring)({
+    } = e, r = (0, c.useListItem)("item-".concat(a)), o = S.default.getURL(A + i), f = (0, u.useSpring)({
       opacity: 1,
       from: {
         opacity: t ? 0 : 1
@@ -82,7 +82,7 @@ let A = (0, _.uid)(),
       onClick: s,
       hasTabWrapper: r
     } = e, d = (0, p.default)("diversity"), f = (0, u.useSpring)({
-      height: (j + 2 * v) * (g.DIVERSITY_SURROGATES.length + 1),
+      height: (j + 2 * y) * (g.DIVERSITY_SURROGATES.length + 1),
       from: {
         height: j
       },
@@ -129,7 +129,7 @@ var M = e => {
     selectedSurrogate: i,
     className: s,
     hasTabWrapper: a
-  } = e, r = S.default.getURL(y + i), [o, u] = l.useState(!1), c = (0, I.default)(null, () => u(!1)), d = l.useRef(null);
+  } = e, r = S.default.getURL(A + i), [o, u] = l.useState(!1), c = (0, I.default)(null, () => u(!1)), d = l.useRef(null);
   return (0, n.jsxs)("div", {
     ref: c,
     className: s,
@@ -142,7 +142,7 @@ var M = e => {
       "aria-label": T.default.Messages.EMOJI_MODIFIER_MENU_BUTTON,
       "aria-haspopup": !0,
       "aria-expanded": o,
-      "aria-controls": A,
+      "aria-controls": v,
       tabIndex: o ? -1 : 0,
       children: (0, n.jsx)("div", {
         className: N.diversityEmojiItemImage,
@@ -152,10 +152,10 @@ var M = e => {
       })
     }), o ? (0, n.jsx)("div", {
       onKeyDown: e => {
-        e.keyCode === C.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus())
+        e.keyCode === h.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus())
       },
       children: (0, n.jsx)(O, {
-        id: A,
+        id: v,
         hasTabWrapper: a,
         selectedSurrogate: i,
         onClick: e => {

@@ -1,20 +1,20 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return R
+    return C
   }
 });
-var l = s("37983"),
-  a = s("884691"),
+var n = s("37983"),
+  l = s("884691"),
   o = s("414456"),
-  n = s.n(o),
-  r = s("862337"),
+  r = s.n(o),
+  a = s("862337"),
   i = s("77078"),
   u = s("920700"),
-  d = s("306160"),
-  c = s("782340"),
-  C = s("166392");
-class E extends a.PureComponent {
+  c = s("306160"),
+  d = s("782340"),
+  E = s("166392");
+class f extends l.PureComponent {
   componentWillUnmount() {
     this._timeout.stop()
   }
@@ -23,29 +23,29 @@ class E extends a.PureComponent {
       isVertical: e,
       value: t,
       text: s,
-      className: a,
+      className: l,
       inputClassName: o
     } = this.props, {
-      mode: r
-    } = this.state, d = r === u.default.Modes.SUCCESS ? c.default.Messages.COPIED : s;
-    return e ? (0, l.jsxs)("div", {
-      className: n(a, r),
-      children: [(0, l.jsx)(i.TextInput, {
+      mode: a
+    } = this.state, c = a === u.default.Modes.SUCCESS ? d.default.Messages.COPIED : s;
+    return e ? (0, n.jsxs)("div", {
+      className: r(l, a),
+      children: [(0, n.jsx)(i.TextInput, {
         value: t,
         inputClassName: o
-      }), (0, l.jsx)(i.Button, {
-        className: C.button,
+      }), (0, n.jsx)(i.Button, {
+        className: E.button,
         onClick: this.handleCopy,
         size: i.Button.Sizes.MIN,
-        color: this.getVerticalButtonColor(r),
+        color: this.getVerticalButtonColor(a),
         look: i.Button.Looks.FILLED,
-        children: d
+        children: c
       })]
-    }) : (0, l.jsx)(u.default, {
+    }) : (0, n.jsx)(u.default, {
       ...this.props,
       onCopy: this.handleCopy,
-      mode: r,
-      text: d
+      mode: a,
+      text: c
     })
   }
   handleCopy() {
@@ -53,9 +53,9 @@ class E extends a.PureComponent {
       onCopy: e,
       value: t,
       delay: s
-    } = this.props, l = (0, d.copy)(t);
+    } = this.props, n = (0, c.copy)(t);
     this.setState({
-      mode: l ? u.default.Modes.SUCCESS : u.default.Modes.ERROR
+      mode: n ? u.default.Modes.SUCCESS : u.default.Modes.ERROR
     }), this._timeout.start(s, () => this.setState({
       mode: u.default.Modes.DEFAULT
     })), null == e || e()
@@ -73,11 +73,11 @@ class E extends a.PureComponent {
   constructor(e) {
     super(e), this.state = {
       mode: u.default.Modes.DEFAULT
-    }, this._timeout = new r.Timeout, this.handleCopy = this.handleCopy.bind(this)
+    }, this._timeout = new a.Timeout, this.handleCopy = this.handleCopy.bind(this)
   }
 }
-E.defaultProps = {
+f.defaultProps = {
   isVertical: !1,
   delay: 300
 };
-var R = E
+var C = f

@@ -29,21 +29,21 @@ function _(e) {
   } = e, {
     analyticsLocations: h
   } = (0, d.default)(), {
-    pendingAvatarDecoration: I,
-    errors: N
+    pendingAvatarDecoration: N,
+    errors: I
   } = (0, r.useStateFromStoresObject)([c.default], () => ({
     pendingAvatarDecoration: c.default.getPendingAvatarDecoration(),
     errors: c.default.getErrors().avatarDecoration
   })), p = n.useCallback(() => (0, u.openAvatarDecorationModal)({
     analyticsLocations: h,
     isTryItOutFlow: g
-  }), [h, g]), C = g || void 0 !== I ? null != I : null != t.avatarDecoration, A = _ ? S.default : o.Button;
+  }), [h, g]), C = g || void 0 !== N ? null != N : null != t.avatarDecoration, A = _ ? S.default : o.Button;
   return (0, a.jsx)(f.default, {
     className: s,
     forcedDivider: l,
     hasBackground: !0,
     title: T.default.Messages.USER_SETTINGS_AVATAR_DECORATION,
-    errors: N,
+    errors: I,
     children: (0, a.jsxs)("div", {
       className: m.buttonsContainer,
       children: [(0, a.jsx)(A, {

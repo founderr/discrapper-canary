@@ -26,10 +26,10 @@ function N(e) {
     className: l,
     onClick: r,
     disabled: _ = !1
-  } = e, N = n.useRef(null), g = n.useMemo(() => null != t ? (0, d.getRoleIconProps)(t, S) : null, [t]), f = null != g ? (0, a.jsx)(E.default, {
+  } = e, N = n.useRef(null), f = n.useMemo(() => null != t ? (0, d.getRoleIconProps)(t, S) : null, [t]), g = null != f ? (0, a.jsx)(E.default, {
     enableTooltip: !1,
     className: I.icon,
-    ...g
+    ...f
   }) : (0, a.jsx)(c.default, {
     className: I.icon
   });
@@ -45,8 +45,8 @@ function N(e) {
       children: [(0, a.jsx)("div", {
         ref: N,
         className: I.preview,
-        children: f
-      }), null != g ? (0, a.jsx)(u.ImageUploaderIcon, {
+        children: g
+      }), null != f ? (0, a.jsx)(u.ImageUploaderIcon, {
         className: I.uploaderIcon
       }) : null]
     })

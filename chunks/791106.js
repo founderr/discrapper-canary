@@ -11,15 +11,15 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("37983"),
-  i = n("884691"),
-  s = n("748820"),
+  s = n("884691"),
+  i = n("748820"),
   r = n("669491");
 let o = Object.freeze({
-    PREMIUM_TIER_0: (0, s.v4)(),
-    PREMIUM_TIER_1: (0, s.v4)(),
-    PREMIUM_TIER_2: (0, s.v4)(),
-    PREMIUM_GUILD: (0, s.v4)(),
-    PREMIUM_GUILD_BADGE_V2_BACKGROUND: (0, s.v4)()
+    PREMIUM_TIER_0: (0, i.v4)(),
+    PREMIUM_TIER_1: (0, i.v4)(),
+    PREMIUM_TIER_2: (0, i.v4)(),
+    PREMIUM_GUILD: (0, i.v4)(),
+    PREMIUM_GUILD_BADGE_V2_BACKGROUND: (0, i.v4)()
   }),
   a = {
     PREMIUM_TIER_0: "url(#".concat(o.PREMIUM_TIER_0, ")"),
@@ -82,7 +82,7 @@ let o = Object.freeze({
       stopColor: r.default.unsafe_rawColors.PREMIUM_TIER_2_PINK.css
     })]
   }),
-  h = i.memo(function() {
+  h = s.memo(function() {
     return (0, l.jsxs)("svg", {
       viewBox: "0 0 1 1",
       style: {

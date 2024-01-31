@@ -5,21 +5,21 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("37983"),
-  i = n("884691"),
-  s = n("414456"),
-  r = n.n(s),
+  s = n("884691"),
+  i = n("414456"),
+  r = n.n(i),
   o = n("849085");
-let a = i.forwardRef(function(e, t) {
+let a = s.forwardRef(function(e, t) {
   let {
     isActive: n,
-    children: i
+    children: s
   } = e;
   return (0, l.jsx)("div", {
     className: r(o.wrapper, {
       [o.wrapperActive]: n
     }),
     ref: t,
-    children: i
+    children: s
   })
 });
 var u = a

@@ -24,7 +24,7 @@ function N(e) {
   let {
     guildId: t,
     scrollToQuestions: s
-  } = e, N = (0, n.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), g = (0, n.useStateFromStores)([E.default], () => E.default.editedDefaultChannelIds), [f, A] = (0, o.useChattableDefaultChannels)(t, [...g]), [L, m] = (0, _.useEditedChattableDefaultChannelsWithQuestions)(t, [...g]), C = N ? m.length : A.length, O = N ? L.length : f.length, h = C < T.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING, R = O >= T.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN, D = m.length - A.length, M = (0, a.jsx)(d.default, {
+  } = e, N = (0, n.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), f = (0, n.useStateFromStores)([E.default], () => E.default.editedDefaultChannelIds), [g, A] = (0, o.useChattableDefaultChannels)(t, [...f]), [L, m] = (0, _.useEditedChattableDefaultChannelsWithQuestions)(t, [...f]), C = N ? m.length : A.length, O = N ? L.length : g.length, h = C < T.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING, R = O >= T.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN, D = m.length - A.length, M = (0, a.jsx)(d.default, {
     color: l.default.unsafe_rawColors.BRAND_500.css,
     backgroundColor: l.default.unsafe_rawColors.WHITE_100.css,
     className: S.icon,

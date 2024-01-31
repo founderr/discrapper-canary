@@ -108,22 +108,22 @@ function N(e) {
   (0, i.useSyncAutomodRulesEffect)(t.id);
   let N = (0, r.useAvailableTriggerTypes)(t.id),
     {
-      rulesByTriggerType: g
+      rulesByTriggerType: f
     } = (0, i.useAutomodRulesList)(t.id),
     {
-      numEnabledRules: f,
+      numEnabledRules: g,
       numRules: A
     } = n.useMemo(() => {
       let e = 0,
         t = 0;
-      if (null == g) return {
+      if (null == f) return {
         numEnabledRules: e,
         numRules: t
       };
       let s = Object.values(N).flat();
       return s.forEach(s => {
         var a;
-        let n = null === (a = g[s]) || void 0 === a ? void 0 : a.filter(d.isNotNullish);
+        let n = null === (a = f[s]) || void 0 === a ? void 0 : a.filter(d.isNotNullish);
         if (null == n || 0 === n.length) {
           t++;
           return
@@ -135,7 +135,7 @@ function N(e) {
         numEnabledRules: e,
         numRules: t
       }
-    }, [N, g]),
+    }, [N, f]),
     L = (0, E.getGuildSafetySettings)(t),
     m = L[c.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION],
     C = L[c.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION],
@@ -174,7 +174,7 @@ function N(e) {
           icon: s("799036"),
           title: _.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
           subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-            enabled: f,
+            enabled: g,
             total: A
           }),
           page: c.GuildSettingsSafetyPage.AUTOMOD

@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("291655"),
   S = s("766274"),
   N = s("957255"),
-  g = s("439932"),
-  f = s("766419"),
+  f = s("439932"),
+  g = s("766419"),
   A = s("50693"),
   L = s("243863"),
   m = s("91816"),
@@ -37,7 +37,7 @@ let U = (0, c.makeLazy)({
     createPromise: () => s.el("282585").then(s.bind(s, "282585")),
     webpackId: "282585"
   }),
-  v = o.debounce((e, t) => (0, f.updateRoleName)(e, t), 200);
+  v = o.debounce((e, t) => (0, g.updateRoleName)(e, t), 200);
 
 function j(e) {
   let {
@@ -80,7 +80,7 @@ function P(e) {
       disabled: s,
       onChange: e => {
         var s, a;
-        return s = t, a = e, void(s.color !== a && (a !== R.DEFAULT_ROLE_COLOR || 0 !== s.color) && (a === R.DEFAULT_ROLE_COLOR && (a = 0), (0, f.updateRoleColor)(s.id, a)))
+        return s = t, a = e, void(s.color !== a && (a !== R.DEFAULT_ROLE_COLOR || 0 !== s.color) && (a === R.DEFAULT_ROLE_COLOR && (a = 0), (0, g.updateRoleColor)(s.id, a)))
       },
       customPickerPosition: "right"
     }, t.id)]
@@ -121,30 +121,30 @@ function y(e) {
       src: p,
       name: i.name
     },
-    f = (0, E.useRoleIconForPreview)(r, i);
+    g = (0, E.useRoleIconForPreview)(r, i);
   return (0, a.jsx)(u.FocusBlock, {
     children: (0, a.jsxs)("div", {
       className: M.previewContainer,
       "aria-hidden": !0,
       children: [(0, a.jsx)("div", {
-        className: (0, g.getThemeClass)(R.ThemeTypes.LIGHT),
+        className: (0, f.getThemeClass)(R.ThemeTypes.LIGHT),
         children: (0, a.jsx)("div", {
           className: M.messageContainer,
           children: (0, a.jsx)(I.default, {
             author: d,
             message: o,
-            roleIcon: null != f ? f : N,
+            roleIcon: null != g ? g : N,
             isGroupStart: !0
           })
         })
       }), (0, a.jsx)("div", {
-        className: (0, g.getThemeClass)(R.ThemeTypes.DARK),
+        className: (0, f.getThemeClass)(R.ThemeTypes.DARK),
         children: (0, a.jsx)("div", {
           className: M.messageContainer,
           children: (0, a.jsx)(I.default, {
             author: d,
             message: o,
-            roleIcon: null != f ? f : c,
+            roleIcon: null != g ? g : c,
             isGroupStart: !0
           })
         })
@@ -162,7 +162,7 @@ function b(e) {
     children: [(0, a.jsx)(u.FormSwitch, {
       disabled: s,
       value: t.hoist,
-      onChange: e => (0, f.toggleRoleSettings)(t.id, e, t.mentionable),
+      onChange: e => (0, g.toggleRoleSettings)(t.id, e, t.mentionable),
       hideBorder: !0,
       children: D.default.Messages.FORM_LABEL_HOIST_DESCRIPTION
     }), (0, a.jsx)(u.FormDivider, {
@@ -170,7 +170,7 @@ function b(e) {
     }), (0, a.jsx)(u.FormSwitch, {
       disabled: s,
       value: t.mentionable,
-      onChange: e => (0, f.toggleRoleSettings)(t.id, t.hoist, e),
+      onChange: e => (0, g.toggleRoleSettings)(t.id, t.hoist, e),
       note: D.default.Messages.FORM_LABEL_MENTIONABLE_DESCRIPTION,
       hideBorder: !0,
       children: D.default.Messages.FORM_LABEL_MENTIONABLE.format()

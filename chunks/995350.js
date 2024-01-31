@@ -28,8 +28,8 @@ function T() {
     _ = c.ConvertEmoticons.useSetting(),
     g = c.InlineAttachmentMedia.useSetting(),
     h = c.InlineEmbedMedia.useSetting(),
-    I = c.RenderEmbeds.useSetting(),
-    N = c.RenderReactions.useSetting(),
+    N = c.RenderEmbeds.useSetting(),
+    I = c.RenderReactions.useSetting(),
     {
       analyticsLocations: p
     } = (0, o.default)(r.default.TEXT_AND_IMAGES);
@@ -63,7 +63,7 @@ function T() {
       children: E.default.Messages.RENDER_EMBEDS_LABEL
     }), (0, a.jsx)(i.FormSwitch, {
       className: l(f.marginTop8, f.marginBottom40),
-      value: I,
+      value: N,
       onChange: c.RenderEmbeds.updateSetting,
       children: E.default.Messages.RENDER_EMBEDS
     }), (0, a.jsx)(i.FormTitle, {
@@ -71,7 +71,7 @@ function T() {
       children: E.default.Messages.EMOJI
     }), (0, a.jsx)(i.FormSwitch, {
       className: l(f.marginTop8, f.marginBottom20),
-      value: N,
+      value: I,
       onChange: c.RenderReactions.updateSetting,
       children: E.default.Messages.RENDER_REACTIONS
     }), (0, a.jsx)(i.FormSwitch, {

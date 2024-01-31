@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("131835"),
   S = s("330724"),
   N = s("136278"),
-  g = s("397947"),
-  f = s("259483"),
+  f = s("397947"),
+  g = s("259483"),
   A = s("867928"),
   L = s("706866"),
   m = s("764151"),
@@ -42,10 +42,10 @@ function x(e) {
   let t, {
       guildId: s
     } = e,
-    l = (0, r.useStateFromStores)([g.default], () => g.default.getCurrentPage()),
-    _ = (0, r.useStateFromStores)([g.default], () => {
-      let e = (0, f.pageToEducationUpsellType)(l);
-      return null != e && !g.default.isEducationUpsellDismissed(e)
+    l = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentPage()),
+    _ = (0, r.useStateFromStores)([f.default], () => {
+      let e = (0, g.pageToEducationUpsellType)(l);
+      return null != e && !f.default.isEducationUpsellDismissed(e)
     }),
     N = (0, A.default)(s),
     G = !N && _,
@@ -55,33 +55,33 @@ function x(e) {
   switch (n.useEffect(() => {
       (0, u.markDismissibleContentAsDismissed)(o.DismissibleContent.COMMUNITY_ONBOARDING_NEW_BADGE)
     }, []), l) {
-    case f.GuildSettingsOnboardingPage.LANDING:
+    case g.GuildSettingsOnboardingPage.LANDING:
       t = N ? (0, a.jsx)(C.default, {
         completed: !0,
         guildId: s
       }) : (0, a.jsx)(h.default, {});
       break;
-    case f.GuildSettingsOnboardingPage.SAFETY_CHECK:
+    case g.GuildSettingsOnboardingPage.SAFETY_CHECK:
       t = (0, a.jsx)(R.default, {
         hideChangelog: !0
       });
       break;
-    case f.GuildSettingsOnboardingPage.DEFAULT_CHANNELS:
+    case g.GuildSettingsOnboardingPage.DEFAULT_CHANNELS:
       t = (0, a.jsx)(L.default, {
         saveOnClose: !N
       });
       break;
-    case f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS:
+    case g.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS:
       t = (0, a.jsx)(O.default, {
         saveOnClose: !N
       });
       break;
-    case f.GuildSettingsOnboardingPage.HOME_SETTINGS:
+    case g.GuildSettingsOnboardingPage.HOME_SETTINGS:
       t = (0, a.jsx)(m.default, {
         saveOnClose: !N
       });
       break;
-    case f.GuildSettingsOnboardingPage.REVIEW:
+    case g.GuildSettingsOnboardingPage.REVIEW:
       t = (0, a.jsx)(C.default, {
         completed: N,
         guildId: s
@@ -91,17 +91,17 @@ function x(e) {
     className: i(M.onboardingContainer, {
       [M.upsellOnTop]: G
     }),
-    children: [!N && l !== f.GuildSettingsOnboardingPage.LANDING && (0, a.jsx)(p, {
+    children: [!N && l !== g.GuildSettingsOnboardingPage.LANDING && (0, a.jsx)(p, {
       setOnboardingStep: I.setOnboardingStep,
       page: l,
       homeSettingsEnabled: x
-    }), N && l !== f.GuildSettingsOnboardingPage.LANDING && (0, a.jsx)("div", {
+    }), N && l !== g.GuildSettingsOnboardingPage.LANDING && (0, a.jsx)("div", {
       children: (0, a.jsxs)(d.Button, {
         innerClassName: M.backButton,
         look: d.Button.Looks.BLANK,
         size: d.Button.Sizes.MIN,
         onClick: () => {
-          (0, S.resetGuildOnboardingPrompts)(), (0, T.resetDefaultChannels)(), (0, I.setOnboardingStep)(f.GuildSettingsOnboardingPage.LANDING)
+          (0, S.resetGuildOnboardingPrompts)(), (0, T.resetDefaultChannels)(), (0, I.setOnboardingStep)(g.GuildSettingsOnboardingPage.LANDING)
         },
         children: [(0, a.jsx)(E.default, {
           className: M.arrow,
@@ -123,20 +123,20 @@ function p(e) {
     page: t,
     setOnboardingStep: s,
     homeSettingsEnabled: n
-  } = e, l = (0, r.useStateFromStores)([g.default], () => g.default.hasErrors()), o = e => {
+  } = e, l = (0, r.useStateFromStores)([f.default], () => f.default.hasErrors()), o = e => {
     if (!l) return () => s(e)
   }, u = (0, r.useStateFromStores)([N.default], () => N.default.advancedMode);
   return (0, a.jsxs)("div", {
     className: M.progressContainer,
     children: [(0, a.jsxs)(d.Clickable, {
       className: i(M.progressBarContainer, M.clickableProgressBar),
-      onClick: o(f.GuildSettingsOnboardingPage.SAFETY_CHECK),
+      onClick: o(g.GuildSettingsOnboardingPage.SAFETY_CHECK),
       children: [(0, a.jsx)("div", {
         className: i(M.progressBar, {
-          [M.progressBarCurrent]: t === f.GuildSettingsOnboardingPage.SAFETY_CHECK
+          [M.progressBarCurrent]: t === g.GuildSettingsOnboardingPage.SAFETY_CHECK
         })
       }), (0, a.jsx)(d.Text, {
-        color: t === f.GuildSettingsOnboardingPage.SAFETY_CHECK ? "text-brand" : "text-muted",
+        color: t === g.GuildSettingsOnboardingPage.SAFETY_CHECK ? "text-brand" : "text-muted",
         variant: "text-xs/medium",
         children: D.default.Messages.GUILD_ONBOARDING_SETUP_STEP_SAFETY.format({
           stepNumber: 1
@@ -144,13 +144,13 @@ function p(e) {
       })]
     }), (0, a.jsxs)(d.Clickable, {
       className: i(M.progressBarContainer, M.clickableProgressBar),
-      onClick: o(f.GuildSettingsOnboardingPage.DEFAULT_CHANNELS),
+      onClick: o(g.GuildSettingsOnboardingPage.DEFAULT_CHANNELS),
       children: [(0, a.jsx)("div", {
         className: i(M.progressBar, {
-          [M.progressBarCurrent]: t === f.GuildSettingsOnboardingPage.DEFAULT_CHANNELS
+          [M.progressBarCurrent]: t === g.GuildSettingsOnboardingPage.DEFAULT_CHANNELS
         })
       }), (0, a.jsx)(d.Text, {
-        color: t === f.GuildSettingsOnboardingPage.DEFAULT_CHANNELS ? "text-brand" : "text-muted",
+        color: t === g.GuildSettingsOnboardingPage.DEFAULT_CHANNELS ? "text-brand" : "text-muted",
         variant: "text-xs/medium",
         children: u ? D.default.Messages.GUILD_ONBOARDING_SETUP_STEP_CHANNELS_ADVANCED.format({
           stepNumber: 2
@@ -160,13 +160,13 @@ function p(e) {
       })]
     }), (0, a.jsxs)(d.Clickable, {
       className: i(M.progressBarContainer, M.clickableProgressBar),
-      onClick: o(f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS),
+      onClick: o(g.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS),
       children: [(0, a.jsx)("div", {
         className: i(M.progressBar, {
-          [M.progressBarCurrent]: t === f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS
+          [M.progressBarCurrent]: t === g.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS
         })
       }), (0, a.jsx)(d.Text, {
-        color: t === f.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS ? "text-brand" : "text-muted",
+        color: t === g.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS ? "text-brand" : "text-muted",
         variant: "text-xs/medium",
         children: u ? D.default.Messages.GUILD_ONBOARDING_SETUP_STEP_PROMPTS_ADVANCED.format({
           stepNumber: 3
@@ -176,13 +176,13 @@ function p(e) {
       })]
     }), n && (0, a.jsxs)(d.Clickable, {
       className: i(M.progressBarContainer, M.clickableProgressBar),
-      onClick: o(f.GuildSettingsOnboardingPage.HOME_SETTINGS),
+      onClick: o(g.GuildSettingsOnboardingPage.HOME_SETTINGS),
       children: [(0, a.jsx)("div", {
         className: i(M.progressBar, {
-          [M.progressBarCurrent]: t === f.GuildSettingsOnboardingPage.HOME_SETTINGS
+          [M.progressBarCurrent]: t === g.GuildSettingsOnboardingPage.HOME_SETTINGS
         })
       }), (0, a.jsx)(d.Text, {
-        color: t === f.GuildSettingsOnboardingPage.HOME_SETTINGS ? "text-brand" : "text-muted",
+        color: t === g.GuildSettingsOnboardingPage.HOME_SETTINGS ? "text-brand" : "text-muted",
         variant: "text-xs/medium",
         children: D.default.Messages.GUILD_ONBOARDING_SETUP_STEP_HOME.format({
           stepNumber: 4
@@ -192,10 +192,10 @@ function p(e) {
       className: M.progressBarContainer,
       children: [(0, a.jsx)("div", {
         className: i(M.progressBar, {
-          [M.progressBarCurrent]: t === f.GuildSettingsOnboardingPage.REVIEW
+          [M.progressBarCurrent]: t === g.GuildSettingsOnboardingPage.REVIEW
         })
       }), (0, a.jsx)(d.Text, {
-        color: t === f.GuildSettingsOnboardingPage.REVIEW ? "text-brand" : "text-muted",
+        color: t === g.GuildSettingsOnboardingPage.REVIEW ? "text-brand" : "text-muted",
         variant: "text-xs/medium",
         children: D.default.Messages.GUILD_ONBOARDING_SETUP_STEP_REVIEW.format({
           stepNumber: 3 + (n ? 1 : 0) + 1

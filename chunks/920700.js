@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   CopyInputModes: function() {
-    return f
+    return E
   },
   default: function() {
-    return I
+    return C
   }
 }), s("222007");
 var n = s("37983"),
@@ -13,15 +13,15 @@ var n = s("37983"),
   r = s.n(o),
   a = s("77078"),
   i = s("474293"),
-  c = s("145131"),
-  u = s("782340"),
+  u = s("145131"),
+  c = s("782340"),
   d = s("863448");
-let f = {
+let E = {
   DEFAULT: "default",
   SUCCESS: "success",
   ERROR: "error"
 };
-class h extends l.PureComponent {
+class f extends l.PureComponent {
   select() {
     var e;
     null === (e = this.inputRef.current) || void 0 === e || e.select()
@@ -47,17 +47,17 @@ class h extends l.PureComponent {
   render() {
     let e;
     let {
-      text: t = u.default.Messages.COPY,
+      text: t = c.default.Messages.COPY,
       mode: s,
       hideMessage: l,
       className: o,
-      buttonLook: h
-    } = this.props, I = null != l;
+      buttonLook: f
+    } = this.props, C = null != l;
     switch (s) {
-      case f.SUCCESS:
+      case E.SUCCESS:
         e = a.ButtonColors.GREEN;
         break;
-      case f.ERROR:
+      case E.ERROR:
         e = a.ButtonColors.RED;
         break;
       default:
@@ -69,15 +69,15 @@ class h extends l.PureComponent {
       children: (0, n.jsx)("div", {
         className: r((0, i.getClass)(d, "copyInput", s), o),
         ref: this.containerRef,
-        children: (0, n.jsxs)(c.default, {
+        children: (0, n.jsxs)(u.default, {
           className: d.layout,
-          children: [(0, n.jsxs)(c.default, {
+          children: [(0, n.jsxs)(u.default, {
             className: d.inputWrapper,
-            children: [this.renderInput(I), I ? (0, n.jsx)("div", {
+            children: [this.renderInput(C), C ? (0, n.jsx)("div", {
               className: d.hiddenMessage,
               children: l
             }) : null]
-          }), (0, n.jsx)(c.default, {
+          }), (0, n.jsx)(u.default, {
             shrink: 1,
             grow: 0,
             style: {
@@ -88,7 +88,7 @@ class h extends l.PureComponent {
               onClick: this.handleButtonClick,
               size: a.ButtonSizes.MIN,
               color: e,
-              look: h,
+              look: f,
               children: t
             })
           })]
@@ -109,10 +109,10 @@ class h extends l.PureComponent {
     }
   }
 }
-h.contextType = a.FormContext, h.defaultProps = {
+f.contextType = a.FormContext, f.defaultProps = {
   supportsCopy: !0,
   buttonColor: a.ButtonColors.PRIMARY,
   buttonLook: a.ButtonLooks.FILLED,
-  mode: f.DEFAULT
-}, h.Modes = f, h.ButtonColors = a.ButtonColors, h.ButtonLooks = a.ButtonLooks;
-var I = h
+  mode: E.DEFAULT
+}, f.Modes = E, f.ButtonColors = a.ButtonColors, f.ButtonLooks = a.ButtonLooks;
+var C = f

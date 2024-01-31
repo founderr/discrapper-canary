@@ -20,8 +20,8 @@ var n = s("819855"),
   I = s("382531"),
   S = s("865332"),
   N = s("439044"),
-  g = s("912839"),
-  f = s("600719");
+  f = s("912839"),
+  g = s("600719");
 
 function A(e) {
   return (0, n.isThemeDark)(e) ? u.revenueSharePercentageDark : u.revenueSharePercentageLight
@@ -149,11 +149,11 @@ function O() {
       children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2
     }), (0, a.jsx)("img", {
       className: u.roleSubscriptionSocial,
-      src: f,
+      src: g,
       alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_1_ALT
     }), (0, a.jsx)("img", {
       className: u.roleSubscriptionLanyardIllo,
-      src: g,
+      src: f,
       alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_2_ALT
     })]
   })

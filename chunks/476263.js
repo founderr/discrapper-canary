@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("37983"),
-  i = n("884691"),
-  s = n("414456"),
-  r = n.n(s),
+  s = n("884691"),
+  i = n("414456"),
+  r = n.n(i),
   o = n("90915"),
   a = n("446674"),
   u = n("669491"),
@@ -48,7 +48,7 @@ let I = {
     [I.LARGER]: [19, 19, 17, 17, 15, 13, 11],
     [I.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
   };
-class _ extends i.PureComponent {
+class _ extends s.PureComponent {
   renderAcronym() {
     let {
       guild: e,
@@ -75,8 +75,8 @@ class _ extends i.PureComponent {
     var e, t;
     let {
       guild: n,
-      className: i,
-      showBadge: s,
+      className: s,
+      showBadge: i,
       active: o,
       size: a,
       style: u = {},
@@ -93,7 +93,7 @@ class _ extends i.PureComponent {
       ...N
     } = this.props, v = g[a], x = null != m ? d.Clickable : "div";
     return (0, l.jsxs)(x, {
-      className: r(E.icon, i, (0, h.getClass)(E, "iconSize", a), {
+      className: r(E.icon, s, (0, h.getClass)(E, "iconSize", a), {
         [null !== (e = (0, h.getClass)(E, "iconActive", a)) && void 0 !== e ? e : ""]: o,
         [E.iconInactive]: !o,
         [E.noIcon]: null == n.icon
@@ -119,7 +119,7 @@ class _ extends i.PureComponent {
       text: e.name,
       position: n,
       "aria-label": !1,
-      children: e => i.cloneElement(i.Children.only(this.renderIcon()), {
+      children: e => s.cloneElement(s.Children.only(this.renderIcon()), {
         ...e
       })
     }) : this.renderIcon()
@@ -129,11 +129,11 @@ class _ extends i.PureComponent {
       to: e,
       guild: t,
       source: n,
-      tabIndex: i,
-      "aria-hidden": s
+      tabIndex: s,
+      "aria-hidden": i
     } = this.props;
     return null != e ? (0, l.jsx)(o.Link, {
-      "aria-hidden": s,
+      "aria-hidden": i,
       to: {
         pathname: e,
         state: null != n ? {
@@ -141,7 +141,7 @@ class _ extends i.PureComponent {
         } : null
       },
       "aria-label": t.toString(),
-      tabIndex: i,
+      tabIndex: s,
       children: this.renderTooltip()
     }) : this.renderTooltip()
   }
@@ -151,19 +151,19 @@ let C = a.default.connectStores([f.default], e => {
     guild: t,
     animate: n,
     iconSrc: l,
-    style: i,
-    size: s
+    style: s,
+    size: i
   } = e;
   return {
     style: {
-      ...i,
-      backgroundImage: (0, p.makeCssUrlString)(null != l ? l : t.getIconURL(S[s], n && f.default.isFocused()))
+      ...s,
+      backgroundImage: (0, p.makeCssUrlString)(null != l ? l : t.getIconURL(S[i], n && f.default.isFocused()))
     }
   }
 })((0, c.backgroundImagePreloader)(e => (0, l.jsx)(_, {
   ...e
 })));
-class L extends i.PureComponent {
+class L extends s.PureComponent {
   render() {
     return (0, l.jsx)(C, {
       ...this.props

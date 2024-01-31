@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("149632"),
   S = s("525065"),
   N = s("84190"),
-  g = s("49111"),
-  f = s("782340"),
+  f = s("49111"),
+  g = s("782340"),
   A = s("667395"),
   L = s("319765");
 let m = ["322850917248663552", "172018499005317120", "414234792121597953", "228406572756369408"],
@@ -43,7 +43,7 @@ var O = e => {
   }), [t.id]), [x, p] = (0, o.useStateFromStoresArray)([S.default], () => [null, S.default.getMemberCount(t.id)], [t.id]), U = n.useCallback(() => {
     null != s && s()
   }, [s]), v = null;
-  return l ? G ? v = f.default.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !M && (v = f.default.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : v = f.default.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, a.jsxs)("div", {
+  return l ? G ? v = g.default.Messages.GUILD_SETTINGS_DISCOVERY_PENDING_HEALTHY : !M && (v = g.default.Messages.GUILD_SETTINGS_DISCOVERY_REQUIREMENTS_NOT_MET) : v = g.default.Messages.GUILD_SETTINGS_DISCOVERY_ADMIN_ONLY, (0, a.jsxs)("div", {
     className: A.container,
     children: [(0, a.jsx)("img", {
       alt: "",
@@ -60,7 +60,7 @@ var O = e => {
       }), (0, a.jsx)(T.default, {
         className: A.previewCard,
         guild: t,
-        description: f.default.Messages.GUILD_SETTINGS_DISCOVERY_PREVIEW_DESCRIPTION,
+        description: g.default.Messages.GUILD_SETTINGS_DISCOVERY_PREVIEW_DESCRIPTION,
         presenceCount: x,
         memberCount: p
       }), (0, a.jsx)(T.default, {
@@ -73,14 +73,14 @@ var O = e => {
     }), (0, a.jsx)(d.Heading, {
       className: A.header,
       variant: "heading-xl/semibold",
-      children: f.default.Messages.GUILD_SETTINGS_DISCOVERY_HEADER
+      children: g.default.Messages.GUILD_SETTINGS_DISCOVERY_HEADER
     }), (0, a.jsx)(d.Text, {
       variant: "text-md/normal",
       className: A.valueProp,
       color: "header-secondary",
-      children: f.default.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION.format({
+      children: g.default.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION.format({
         onLinkClick: () => (0, I.navigateToAndTrackHelpCenterClick)({
-          articleId: g.HelpdeskArticles.SERVER_DISCOVERY,
+          articleId: f.HelpdeskArticles.SERVER_DISCOVERY,
           guildId: t.id,
           pageView: c.DiscoverySettingsViews.INTRO
         })
@@ -89,9 +89,9 @@ var O = e => {
       variant: "text-md/normal",
       className: A.byline,
       color: "header-secondary",
-      children: f.default.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION_SUBHEADING.format({
+      children: g.default.Messages.GUILD_SETTINGS_DISCOVERY_PAGE_DESCRIPTION_SUBHEADING.format({
         onGuidelinesClick: () => (0, I.navigateToAndTrackHelpCenterClick)({
-          articleId: g.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES,
+          articleId: f.HelpdeskArticles.SERVER_DISCOVERY_GUIDELINES,
           guildId: t.id,
           pageView: c.DiscoverySettingsViews.INTRO
         })
@@ -105,7 +105,7 @@ var O = e => {
         size: d.Button.Sizes.LARGE,
         disabled: !M || !l,
         onClick: U,
-        children: f.default.Messages.GUILD_SETTINGS_SET_UP_DISCOVERY
+        children: g.default.Messages.GUILD_SETTINGS_SET_UP_DISCOVERY
       })
     }), (0, a.jsx)(N.default, {
       className: A.checklist,

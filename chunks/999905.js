@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("679653"),
   S = s("419830"),
   N = s("385976"),
-  g = s("233706"),
-  f = s("223170"),
+  f = s("233706"),
+  g = s("223170"),
   A = s("478964"),
   L = s("310457"),
   m = s("42203"),
@@ -44,7 +44,7 @@ let y = "WELCOME_CHANNEL",
         guildId: r,
         welcomeChannel: o,
         onEdit: T,
-        onChannelReorder: f,
+        onChannelReorder: g,
         isDropHovered: A,
         index: C
       } = e,
@@ -57,7 +57,7 @@ let y = "WELCOME_CHANNEL",
       F = (0, I.default)(x, !1),
       {
         homeSettingsEnabled: H
-      } = (0, g.useOnboardingHomeAdminExperiment)(r),
+      } = (0, f.useOnboardingHomeAdminExperiment)(r),
       [, V] = (0, d.useDrag)({
         type: y,
         item: {
@@ -65,21 +65,21 @@ let y = "WELCOME_CHANNEL",
           index: C
         },
         end: (e, t) => {
-          null != e && !t.didDrop() && f(e.channel, null, !0)
+          null != e && !t.didDrop() && g(e.channel, null, !0)
         }
       }),
-      [, k] = (0, d.useDrop)({
+      [, w] = (0, d.useDrop)({
         accept: y,
         hover: e => {
-          f(e.channel, C, !1)
+          g(e.channel, C, !1)
         },
         drop: e => {
-          f(e.channel, C, !0)
+          g(e.channel, C, !0)
         }
       });
-    return n.useLayoutEffect(() => (V(k(M)), () => {
-      V(null), k(null)
-    }), [V, k]), l = b ? null != p || null != o.emoji_name ? (0, a.jsx)(_.default, {
+    return n.useLayoutEffect(() => (V(w(M)), () => {
+      V(null), w(null)
+    }), [V, w]), l = b ? null != p || null != o.emoji_name ? (0, a.jsx)(_.default, {
       emojiId: null == p ? void 0 : p.id,
       emojiName: null != p ? p.name : o.emoji_name,
       animated: !!(null == p ? void 0 : p.animated)
@@ -106,7 +106,7 @@ let y = "WELCOME_CHANNEL",
             ...t,
             guildId: r,
             welcomeChannel: o,
-            onChannelReorder: f,
+            onChannelReorder: g,
             setShowConfirmModal: h,
             onEdit: T,
             index: C
@@ -170,36 +170,36 @@ var B = e => {
     enabled: y
   } = r, {
     homeSettingsEnabled: B
-  } = (0, g.useOnboardingHomeAdminExperiment)(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : ""), F = () => {
-    if (null != l) R !== d.description && ((0, f.saveWelcomeScreen)(l.id, {
+  } = (0, f.useOnboardingHomeAdminExperiment)(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : ""), F = () => {
+    if (null != l) R !== d.description && ((0, g.saveWelcomeScreen)(l.id, {
       description: null == R ? void 0 : R.trim()
     }), N(!0))
   }, H = e => {
-    if (null != l) !o(e, d.channels) && ((0, f.saveWelcomeScreen)(l.id, {
+    if (null != l) !o(e, d.channels) && ((0, g.saveWelcomeScreen)(l.id, {
       channels: e
     }), N(!0))
   }, V = e => {
-    if (null != l) e !== d.enabled && ((0, f.saveWelcomeScreen)(l.id, {
+    if (null != l) e !== d.enabled && ((0, g.saveWelcomeScreen)(l.id, {
       enabled: e
     }), m(!E), N(!0))
-  }, k = e => {
+  }, w = e => {
     if (null == e) return;
     let t = [...null != G ? G : [], e];
-    (0, f.updateSettings)({
+    (0, g.updateSettings)({
       channels: t
     }), H(t)
-  }, w = e => t => {
+  }, k = e => t => {
     let s = [...null != G ? G : []];
-    null == t ? s.splice(e, 1) : s[e] = t, (0, f.updateSettings)({
+    null == t ? s.splice(e, 1) : s[e] = t, (0, g.updateSettings)({
       channels: s
-    }), H(s), 0 === s.length && y && ((0, f.updateSettings)({
+    }), H(s), 0 === s.length && y && ((0, g.updateSettings)({
       enabled: !1
     }), V(!1))
   }, Y = (e, t, s) => {
     if (null == G) return;
     let a = G.indexOf(e),
       n = [...G];
-    null != t && t !== a && (n.splice(a, 1), n.splice(t, 0, e), (0, f.updateSettings)({
+    null != t && t !== a && (n.splice(a, 1), n.splice(t, 0, e), (0, g.updateSettings)({
       channels: n
     })), s ? (H(n), I(null)) : I(t)
   }, K = n.useRef(!1);
@@ -210,7 +210,7 @@ var B = e => {
     return t => (0, a.jsx)(e, {
       ...t,
       guildId: l.id,
-      onSave: k
+      onSave: w
     })
   }, {
     onCloseRequest: () => v.NOOP_NULL
@@ -232,7 +232,7 @@ var B = e => {
         is_enabled: y
       })
     }
-  }, [S, G, R, y, l, K]), n.useEffect(() => () => (0, f.clearWelcomeScreenSettings)(), []);
+  }, [S, G, R, y, l, K]), n.useEffect(() => () => (0, g.clearWelcomeScreenSettings)(), []);
   let W = n.useCallback(() => {
     null != l && x.default.open(l.id, U.GuildSettingsSections.ONBOARDING)
   }, [l]);
@@ -307,7 +307,7 @@ var B = e => {
             className: P.descriptionInput,
             placeholder: j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_DESCRIPTION_PLACEHOLDER,
             onChange: e => {
-              (0, f.updateSettings)({
+              (0, g.updateSettings)({
                 description: e
               })
             },
@@ -335,7 +335,7 @@ var B = e => {
         }), null == G ? void 0 : G.map((e, t) => (0, a.jsx)(b, {
           guildId: l.id,
           welcomeChannel: e,
-          onEdit: w(t),
+          onEdit: k(t),
           onChannelReorder: Y,
           isDropHovered: t === _,
           index: t
@@ -347,7 +347,7 @@ var B = e => {
             return t => (0, a.jsx)(e, {
               ...t,
               guildId: l.id,
-              onSave: k
+              onSave: w
             })
           }, {
             onCloseRequest: () => v.NOOP_NULL

@@ -46,8 +46,8 @@ var a = a || function(e) {
         !T && (t = f(t));
         var m, _, g = this,
           h = t.type,
-          I = !1,
-          N = function() {
+          N = !1,
+          I = function() {
             E(g, "writestart progress write writeend".split(" "))
           },
           p = function() {
@@ -55,10 +55,10 @@ var a = a || function(e) {
               var a = new FileReader;
               a.onloadend = function() {
                 var e = a.result;
-                _.location.href = "data:attachment/file" + e.slice(e.search(/[,;]/)), g.readyState = g.DONE, N()
+                _.location.href = "data:attachment/file" + e.slice(e.search(/[,;]/)), g.readyState = g.DONE, I()
               }, a.readAsDataURL(t), g.readyState = g.INIT;
               return
-            }(I || !m) && (m = s().createObjectURL(t)), _ ? _.location.href = m : void 0 === e.open(m, "_blank") && i && (e.location.href = m), g.readyState = g.DONE, N(), S(m)
+            }(N || !m) && (m = s().createObjectURL(t)), _ ? _.location.href = m : void 0 === e.open(m, "_blank") && i && (e.location.href = m), g.readyState = g.DONE, I(), S(m)
           },
           C = function(e) {
             return function() {
@@ -71,11 +71,11 @@ var a = a || function(e) {
           };
         if (g.readyState = g.INIT, !d && (d = "download"), n) {
           m = s().createObjectURL(t), setTimeout(function() {
-            a.href = m, a.download = d, l(a), N(), S(m), g.readyState = g.DONE
+            a.href = m, a.download = d, l(a), I(), S(m), g.readyState = g.DONE
           });
           return
         }
-        if (e.chrome && h && h !== u && (t = (t.slice || t.webkitSlice).call(t, 0, t.size, u), I = !0), r && "download" !== d && (d += ".download"), (h === u || r) && (_ = e), !o) {
+        if (e.chrome && h && h !== u && (t = (t.slice || t.webkitSlice).call(t, 0, t.size, u), N = !0), r && "download" !== d && (d += ".download"), (h === u || r) && (_ = e), !o) {
           p();
           return
         }

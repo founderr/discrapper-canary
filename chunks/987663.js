@@ -10,10 +10,10 @@ s.r(t), s.d(t, {
     return V
   },
   UserChangeStrings: function() {
-    return k
+    return w
   },
   RoleChangeStrings: function() {
-    return w
+    return k
   },
   OnboardingPromptChangeStrings: function() {
     return Y
@@ -28,10 +28,10 @@ s.r(t), s.d(t, {
     return z
   },
   WebhookChangeStrings: function() {
-    return X
+    return Z
   },
   EmojiChangeStrings: function() {
-    return Z
+    return X
   },
   StickerChangeStrings: function() {
     return J
@@ -103,8 +103,8 @@ var a = s("552442"),
   I = s("454686"),
   S = s("863636"),
   N = s("698882"),
-  g = s("287103"),
-  f = s("834052"),
+  f = s("287103"),
+  g = s("834052"),
   A = s("364685"),
   L = s("242020"),
   m = s("42203"),
@@ -180,13 +180,13 @@ let b = new _.default("AuditLogUtils"),
     ...F()
   }),
   V = () => ({
-    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE),
-    [p.AuditLogChangeKeys.POSITION]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE),
+    [p.AuditLogChangeKeys.NAME]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE),
+    [p.AuditLogChangeKeys.POSITION]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE),
     [p.AuditLogChangeKeys.TOPIC]: eL(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR),
-    [p.AuditLogChangeKeys.BITRATE]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CHANGE),
+    [p.AuditLogChangeKeys.BITRATE]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CHANGE),
     [p.AuditLogChangeKeys.RTC_REGION_OVERRIDE]: eL(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CHANGE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_DELETE),
-    [p.AuditLogChangeKeys.USER_LIMIT]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CHANGE),
-    [p.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
+    [p.AuditLogChangeKeys.USER_LIMIT]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CHANGE),
+    [p.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
     [p.AuditLogChangeKeys.PERMISSIONS_RESET]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_RESET,
     [p.AuditLogChangeKeys.PERMISSIONS_GRANTED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_GRANTED,
     [p.AuditLogChangeKeys.PERMISSIONS_DENIED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_DENIED,
@@ -195,15 +195,15 @@ let b = new _.default("AuditLogUtils"),
       false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_DISABLED,
       true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_ENABLED
     },
-    [p.AuditLogChangeKeys.TYPE]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CHANGE),
-    [p.AuditLogChangeKeys.VIDEO_QUALITY_MODE]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CHANGE),
-    [p.AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CHANGE),
+    [p.AuditLogChangeKeys.TYPE]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CHANGE),
+    [p.AuditLogChangeKeys.VIDEO_QUALITY_MODE]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CHANGE),
+    [p.AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CHANGE),
     [p.AuditLogChangeKeys.FLAGS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_FLAGS_CHANGE,
     [p.AuditLogChangeKeys.AVAILABLE_TAG_ADD]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_ADD,
     [p.AuditLogChangeKeys.AVAILABLE_TAG_EDIT]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_UPDATE,
     [p.AuditLogChangeKeys.AVAILABLE_TAG_DELETE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_DELETE
   }),
-  k = () => ({
+  w = () => ({
     [p.AuditLogChangeKeys.NICK]: eL(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE),
     [p.AuditLogChangeKeys.DEAF]: {
       true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON,
@@ -224,9 +224,9 @@ let b = new _.default("AuditLogUtils"),
     [p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
     ...F()
   }),
-  w = () => ({
-    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE),
-    [p.AuditLogChangeKeys.DESCRIPTION]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
+  k = () => ({
+    [p.AuditLogChangeKeys.NAME]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE),
+    [p.AuditLogChangeKeys.DESCRIPTION]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
     [p.AuditLogChangeKeys.PERMISSIONS_GRANTED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
     [p.AuditLogChangeKeys.PERMISSIONS_DENIED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
     [p.AuditLogChangeKeys.COLOR]: {
@@ -341,20 +341,20 @@ let b = new _.default("AuditLogUtils"),
     },
     ...F()
   }),
-  X = () => ({
-    [p.AuditLogChangeKeys.CHANNEL_ID]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE),
-    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE),
+  Z = () => ({
+    [p.AuditLogChangeKeys.CHANNEL_ID]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE),
+    [p.AuditLogChangeKeys.NAME]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE),
     [p.AuditLogChangeKeys.AVATAR_HASH]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
     [p.AuditLogChangeKeys.REASON]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON
   }),
-  Z = () => ({
-    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE),
+  X = () => ({
+    [p.AuditLogChangeKeys.NAME]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE),
     ...F()
   }),
   J = () => ({
-    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE),
-    [p.AuditLogChangeKeys.TAGS]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE),
-    [p.AuditLogChangeKeys.DESCRIPTION]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
+    [p.AuditLogChangeKeys.NAME]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE),
+    [p.AuditLogChangeKeys.TAGS]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE),
+    [p.AuditLogChangeKeys.DESCRIPTION]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
     ...F()
   }),
   Q = () => ({
@@ -370,7 +370,7 @@ let b = new _.default("AuditLogUtils"),
     ...F()
   }),
   q = () => ({
-    [p.AuditLogChangeKeys.TOPIC]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE),
+    [p.AuditLogChangeKeys.TOPIC]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE),
     [p.AuditLogChangeKeys.PRIVACY_LEVEL]: {
       [P.GuildScheduledEventPrivacyLevel.GUILD_ONLY]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
       [P.GuildScheduledEventPrivacyLevel.PUBLIC]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC
@@ -414,7 +414,7 @@ let b = new _.default("AuditLogUtils"),
     ...F()
   }),
   et = () => ({
-    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE),
+    [p.AuditLogChangeKeys.NAME]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE),
     [p.AuditLogChangeKeys.ARCHIVED]: {
       true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_ARCHIVED,
       false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNARCHIVED
@@ -427,8 +427,8 @@ let b = new _.default("AuditLogUtils"),
       true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_ENABLED,
       false: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_DISABLED
     },
-    [p.AuditLogChangeKeys.AUTO_ARCHIVE_DURATION]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CHANGE),
-    [p.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
+    [p.AuditLogChangeKeys.AUTO_ARCHIVE_DURATION]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CHANGE),
+    [p.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE),
     [p.AuditLogChangeKeys.FLAGS]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_FLAGS_CHANGE,
     ...F()
   }),
@@ -464,8 +464,8 @@ let b = new _.default("AuditLogUtils"),
     return e
   },
   en = () => ({
-    [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_NAME_CHANGE),
-    [p.AuditLogChangeKeys.VOLUME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_VOLUME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_VOLUME_CHANGE),
+    [p.AuditLogChangeKeys.NAME]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_NAME_CHANGE),
+    [p.AuditLogChangeKeys.VOLUME]: eg(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_VOLUME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_VOLUME_CHANGE),
     [p.AuditLogChangeKeys.EMOJI_NAME]: eL(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_REPLACE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_REMOVE),
     [p.AuditLogChangeKeys.EMOJI_ID]: eL(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_REPLACE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_REMOVE),
     ...F()
@@ -1077,9 +1077,9 @@ function e_(e, t) {
           case p.AuditLogTargetTypes.INVITE:
             return eN(e, p.AuditLogChangeKeys.CODE, p.NOOP_NULL);
           case p.AuditLogTargetTypes.INTEGRATION:
-            return eN(e, p.AuditLogChangeKeys.TYPE, e => g.default.integrations.find(t => t.id === e), e => e.name);
+            return eN(e, p.AuditLogChangeKeys.TYPE, e => f.default.integrations.find(t => t.id === e), e => e.name);
           case p.AuditLogTargetTypes.WEBHOOK:
-            return eN(e, p.AuditLogChangeKeys.NAME, e => g.default.webhooks.find(t => t.id === e), e => e.name);
+            return eN(e, p.AuditLogChangeKeys.NAME, e => f.default.webhooks.find(t => t.id === e), e => e.name);
           case p.AuditLogTargetTypes.EMOJI:
             return eN(e, p.AuditLogChangeKeys.NAME, e => T.default.getGuildEmoji(t.id).find(t => t.id === e), e => e.name);
           case p.AuditLogTargetTypes.STICKER:
@@ -1087,25 +1087,25 @@ function e_(e, t) {
           case p.AuditLogTargetTypes.STAGE_INSTANCE:
             return eN(e, p.AuditLogChangeKeys.TOPIC, e => {
               var s;
-              return null === (s = Object.values(f.default.getStageInstancesByGuild(t.id))) || void 0 === s ? void 0 : s.find(t => t.id === e)
+              return null === (s = Object.values(g.default.getStageInstancesByGuild(t.id))) || void 0 === s ? void 0 : s.find(t => t.id === e)
             }, e => e.topic);
           case p.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
           case p.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION:
-            return eN(e, p.AuditLogChangeKeys.NAME, e => g.default.guildScheduledEvents.find(t => t.id === e), e => e.name);
+            return eN(e, p.AuditLogChangeKeys.NAME, e => f.default.guildScheduledEvents.find(t => t.id === e), e => e.name);
           case p.AuditLogTargetTypes.THREAD:
-            return eN(e, p.AuditLogChangeKeys.NAME, e => g.default.threads.find(t => t.id === e), e => e.name);
+            return eN(e, p.AuditLogChangeKeys.NAME, e => f.default.threads.find(t => t.id === e), e => e.name);
           case p.AuditLogTargetTypes.APPLICATION_COMMAND:
             if (e.targetId === e.options.application_id) {
-              let t = g.default.integrations.find(t => t.application_id === e.targetId);
+              let t = f.default.integrations.find(t => t.application_id === e.targetId);
               if (null != t) return t.name;
               return e.targetId
             }
-            return eN(e, p.AuditLogChangeKeys.NAME, e => g.default.applicationCommands.find(t => t.id === e), e => {
+            return eN(e, p.AuditLogChangeKeys.NAME, e => f.default.applicationCommands.find(t => t.id === e), e => {
               let t = null != e.name_localized && "" !== e.name_localized ? e.name_localized : e.name;
               return e.type === c.ApplicationCommandType.CHAT ? "/⁠".concat(t) : t
             });
           case p.AuditLogTargetTypes.AUTO_MODERATION_RULE:
-            return eN(e, p.AuditLogChangeKeys.NAME, e => g.default.automodRules.find(t => t.id === e), e => e.name);
+            return eN(e, p.AuditLogChangeKeys.NAME, e => f.default.automodRules.find(t => t.id === e), e => e.name);
           case p.AuditLogTargetTypes.GUILD_SOUNDBOARD:
             return eN(e, p.AuditLogChangeKeys.NAME, p.NOOP_NULL);
           case p.AuditLogTargetTypes.HOME_SETTINGS:
@@ -1127,14 +1127,14 @@ function e_(e, t) {
             };
             switch (e.options.type) {
               case p.AuditLogSubtargetTypes.USER:
-                s.subtarget = eg(e.options.id, e => h.default.getUser(e), e => e.tag);
+                s.subtarget = ef(e.options.id, e => h.default.getUser(e), e => e.tag);
                 break;
               case p.AuditLogSubtargetTypes.ROLE:
-                s.subtarget = eg(e.options.role_name, p.NOOP_NULL)
+                s.subtarget = ef(e.options.role_name, p.NOOP_NULL)
             }
             if (null != e.options.channel_id && (s.channel = eN(e, "", e => m.default.getChannel(e), e => e, e.options.channel_id)), null != e.options.members_removed && 0 !== e.options.members_removed && (s.count = e.options.members_removed), null != e.options.event_exception_id) {
               var t;
-              let a = g.default.guildScheduledEvents.find(t => t.id === e.targetId),
+              let a = f.default.guildScheduledEvents.find(t => t.id === e.targetId),
                 n = null == a ? void 0 : a.guild_scheduled_event_exceptions.find(t => t.event_exception_id === e.options.event_exception_id);
               s.subtarget = (0, R.dateFormat)(i(x.default.extractTimestamp(null !== (t = null == n ? void 0 : n.event_exception_id) && void 0 !== t ? t : "0")), "LL")
             }
@@ -1149,13 +1149,13 @@ function e_(e, t) {
               let t = e.newValue || e.oldValue;
               switch (t.type) {
                 case p.ApplicationCommandPermissionTypes.ROLE:
-                  e.subtarget = eg(t.id, e => s.getRole(e), e => e.name);
+                  e.subtarget = ef(t.id, e => s.getRole(e), e => e.name);
                   break;
                 case p.ApplicationCommandPermissionTypes.USER:
-                  e.subtarget = eg(t.id, e => h.default.getUser(e), e => e.tag);
+                  e.subtarget = ef(t.id, e => h.default.getUser(e), e => e.tag);
                   break;
                 case p.ApplicationCommandPermissionTypes.CHANNEL:
-                  t.id === n(s.id).subtract(1).toString() ? e.subtarget = y.default.Messages.ALL_CHANNELS : e.subtarget = eg(t.id, e => m.default.getChannel(e), e => (0, E.computeChannelName)(e, h.default, O.default, !0))
+                  t.id === n(s.id).subtract(1).toString() ? e.subtarget = y.default.Messages.ALL_CHANNELS : e.subtarget = ef(t.id, e => m.default.getChannel(e), e => (0, E.computeChannelName)(e, h.default, O.default, !0))
               }
               return e
             }
@@ -1385,7 +1385,7 @@ function eN(e, t, s, a, n) {
   n = null != n ? n : e.targetId;
   let i = s(n);
   if (null != i && null != a && (l = a(i)), null == l) {
-    let t = g.default.deletedTargets[e.targetType];
+    let t = f.default.deletedTargets[e.targetType];
     null != t && null != t[n] && (l = t[n])
   }
   if (null == l && null != e.changes) {
@@ -1395,13 +1395,13 @@ function eN(e, t, s, a, n) {
   return null != l ? l : n
 }
 
-function eg(e, t, s) {
+function ef(e, t, s) {
   let a = e,
     n = t(e);
   return null != n && null != s && (a = s(n)), a
 }
 
-function ef(e, t) {
+function eg(e, t) {
   return s => null == s.oldValue ? e : t
 }
 

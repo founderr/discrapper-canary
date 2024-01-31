@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("642950"),
   S = s("465395"),
   N = s("510889"),
-  g = s("161778"),
-  f = s("242020"),
+  f = s("161778"),
+  g = s("242020"),
   A = s("766274"),
   L = s("42203"),
   m = s("305961"),
@@ -342,7 +342,7 @@ class H extends n.PureComponent {
       var s;
       let {
         actionFilter: n
-      } = this.props, l = (0, f.getActionType)(e.value), i = (0, f.getTargetType)(e.value), r = e.value === n;
+      } = this.props, l = (0, g.getActionType)(e.value), i = (0, g.getTargetType)(e.value), r = e.value === n;
       return (0, a.jsxs)(E.ComboboxItem, {
         value: e.value,
         selectedColor: E.ComboboxItem.Colors.BRAND,
@@ -518,7 +518,7 @@ class H extends n.PureComponent {
     }
   }
 }
-var V = c.default.connectStores([x.default, p.default, m.default, g.default, C.default, O.default], () => {
+var V = c.default.connectStores([x.default, p.default, m.default, f.default, C.default, O.default], () => {
   let e = p.default.getGuildId(),
     t = m.default.getGuild(e),
     s = x.default.logs,
@@ -536,7 +536,7 @@ var V = c.default.connectStores([x.default, p.default, m.default, g.default, C.d
     logs: null != s && null != t ? D.transformLogs(s, t) : [],
     actionFilter: x.default.actionFilter,
     userIdFilter: x.default.userIdFilter,
-    theme: g.default.theme,
+    theme: f.default.theme,
     hide: C.default.enabled
   }
 })(H)

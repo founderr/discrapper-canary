@@ -19,12 +19,12 @@ var a = s("37983"),
     var t;
     let {
       guildId: s
-    } = e, T = (0, l.useStateFromStores)([d.default], () => d.default.get(s)), [I, S] = n.useState(null), [N, g] = n.useState(null !== (t = null == T ? void 0 : T.description) && void 0 !== t ? t : ""), f = n.useRef(!1), A = n.useRef(!1);
+    } = e, T = (0, l.useStateFromStores)([d.default], () => d.default.get(s)), [I, S] = n.useState(null), [N, f] = n.useState(null !== (t = null == T ? void 0 : T.description) && void 0 !== t ? t : ""), g = n.useRef(!1), A = n.useRef(!1);
     n.useEffect(() => () => {
       A.current = !0
     }, []);
     let L = n.useCallback(async () => {
-      if (!f.current) {
+      if (!g.current) {
         S(null);
         try {
           await o.default.updateVerificationFormDescription(s, N)
@@ -34,7 +34,7 @@ var a = s("37983"),
           S(e.getAnyErrorMessage())
         } finally {
           if (A.current) return;
-          f.current = !1
+          g.current = !1
         }
       }
     }, [N, s]);
@@ -46,7 +46,7 @@ var a = s("37983"),
         value: null != N ? N : "",
         placeholder: E.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DESCRIPTION_PLACEHOLDER,
         onChange: e => {
-          g(e)
+          f(e)
         },
         onBlur: L,
         autosize: !0

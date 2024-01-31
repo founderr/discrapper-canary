@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 });
 var a = s("37983");
@@ -20,11 +20,11 @@ var n = s("819855"),
   I = s("49111"),
   S = s("944305"),
   N = s("782340"),
-  g = s("195072"),
-  f = function(e) {
+  f = s("195072"),
+  g = function(e) {
     let {
       guild: t,
-      disabled: f,
+      disabled: g,
       role: A
     } = e, L = (0, i.default)(), m = (0, u.useRoleIconForPreview)(t.id, A), {
       analyticsLocations: C
@@ -59,7 +59,7 @@ var n = s("819855"),
         perks: (0, S.customRoleIconUpsellPerks)()
       }))
     }, D = (0, a.jsx)(d.default, {
-      className: g.availabilityIndicator,
+      className: f.availabilityIndicator,
       guild: t,
       guildFeature: I.GuildFeatures.ROLE_ICONS,
       tooltipPosition: "top",
@@ -70,45 +70,45 @@ var n = s("819855"),
       })
     });
     return (0, a.jsxs)(l.FormItem, {
-      className: g.container,
+      className: f.container,
       children: [(0, a.jsxs)(l.FormTitle, {
-        className: g.formTitle,
+        className: f.formTitle,
         children: [(0, a.jsx)("div", {
           children: N.default.Messages.FORM_LABEL_ROLE_ICON
         }), D]
       }), (0, a.jsx)(l.FormText, {
-        className: g.description,
+        className: f.description,
         children: N.default.Messages.ROLE_ICON_HELP
       }), (0, a.jsxs)("div", {
-        className: g.rolePreviewArea,
+        className: f.rolePreviewArea,
         children: [(0, a.jsx)("div", {
-          className: g.previewContainer,
+          className: f.previewContainer,
           children: null != m ? (0, a.jsx)(_.default, {
             ...m,
-            className: g.roleIconPreview,
+            className: f.roleIconPreview,
             enableTooltip: !1
           }) : (0, a.jsx)(E.default, {
             width: 24,
             height: 24,
-            className: g.preview
+            className: f.preview
           })
         }), (0, a.jsx)(l.Button, {
-          className: g.button,
+          className: f.button,
           color: (0, n.isThemeLight)(L) ? l.Button.Colors.PRIMARY : l.Button.Colors.WHITE,
           look: l.Button.Looks.OUTLINED,
           onClick: () => t.hasFeature(I.GuildFeatures.ROLE_ICONS) ? O() : R({
             object: I.AnalyticsObjects.UPLOAD_IMAGE
           }),
-          disabled: f,
+          disabled: g,
           children: N.default.Messages.ROLE_ICON_CHOOSE_IMAGE
         }), null != m ? (0, a.jsx)(l.Button, {
-          className: g.button,
+          className: f.button,
           color: (0, n.isThemeLight)(L) ? l.Button.Colors.BLACK : l.Button.Colors.TRANSPARENT,
           look: l.Button.Looks.BLANK,
           onClick: () => {
             (0, T.updateRoleIcon)(A.id, null, null)
           },
-          disabled: f,
+          disabled: g,
           children: N.default.Messages.REMOVE_ICON
         }) : null]
       })]

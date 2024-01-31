@@ -47,8 +47,8 @@ var f = function(e) {
     categoryHeight: g,
     onScroll: _,
     renderCategoryListItem: S,
-    rowCountBySection: h,
-    renderSection: C
+    rowCountBySection: C,
+    renderSection: h
   } = e, T = u.useStore(e => e.activeCategoryIndex);
   d({
     activeIndex: T,
@@ -65,20 +65,20 @@ var f = function(e) {
         null === (n = i.current) || void 0 === n || n.scrollToSectionTop(e)
       }
     }, [i, u]),
-    A = l.useCallback(e => S(s[e], e, () => N(e), T === e), [T, s, N, S]),
-    y = l.useMemo(() => "function" == typeof g ? e => g(s[e], e) : g, [s, g]);
+    v = l.useCallback(e => S(s[e], e, () => N(e), T === e), [T, s, N, S]),
+    A = l.useMemo(() => "function" == typeof g ? e => g(s[e], e) : g, [s, g]);
   return (0, n.jsxs)("div", {
     className: a(c.wrapper, E),
     children: [(0, n.jsx)(r.default, {
       listPadding: m,
       onScroll: _,
       ref: t,
-      renderRow: A,
+      renderRow: v,
       rowCount: I,
-      rowHeight: y,
+      rowHeight: A,
       hideScrollbar: !0,
-      rowCountBySection: h,
-      renderSection: C
+      rowCountBySection: C,
+      renderSection: h
     }), null == f ? void 0 : f(N)]
   })
 }

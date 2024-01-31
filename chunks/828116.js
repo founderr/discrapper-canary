@@ -24,7 +24,7 @@ var a = s("37983"),
       disabled: I,
       placeholder: S,
       ...N
-    } = e, [g, f] = n.useState(null != l ? l : ""), A = s.map((e, t) => (0, a.jsxs)("span", {
+    } = e, [f, g] = n.useState(null != l ? l : ""), A = s.map((e, t) => (0, a.jsxs)("span", {
       className: i(u.tag, {
         [u.disabledTag]: I
       }),
@@ -38,19 +38,19 @@ var a = s("37983"),
         })
       })]
     }, t)), L = n.useCallback(() => {
-      let e = g.trim();
-      if (0 !== e.length)(null == T || !(s.length >= T)) && (E(e), f(""))
-    }, [g, T, E, s.length]), m = n.useCallback(e => {
+      let e = f.trim();
+      if (0 !== e.length)(null == T || !(s.length >= T)) && (E(e), g(""))
+    }, [f, T, E, s.length]), m = n.useCallback(e => {
       switch (e.keyCode) {
         case d.KeyboardKeys.BACKSPACE:
-          0 === g.length && s.length > 0 && (e.preventDefault(), e.stopPropagation(), c(s.length - 1));
+          0 === f.length && s.length > 0 && (e.preventDefault(), e.stopPropagation(), c(s.length - 1));
           break;
         case d.KeyboardKeys.ENTER:
         case d.KeyboardKeys.TAB:
         case d.KeyboardKeys.COMMA:
           e.preventDefault(), e.stopPropagation(), L()
       }
-    }, [L, g.length, c, s.length]);
+    }, [L, f.length, c, s.length]);
     return (0, a.jsxs)("div", {
       className: i(t, u.inputWrapper, {
         [u.disabled]: I
@@ -59,9 +59,9 @@ var a = s("37983"),
         className: u.inputOuter,
         inputClassName: u.inputInner,
         ...N,
-        value: g,
+        value: f,
         onKeyDown: m,
-        onChange: f,
+        onChange: g,
         maxLength: _,
         disabled: I,
         onBlur: L,

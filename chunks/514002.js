@@ -36,7 +36,7 @@ var T = e => {
   var t, s, i;
   let {
     quest: T
-  } = e, m = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, _ = (null === (s = T.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null, g = (null === (i = T.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, h = _ && !g, I = _ ? l.ButtonColors.BRAND_NEW : l.ButtonColors.GREEN, N = S(m, _, g), p = E(m, _), C = f(T), A = _ && !m, O = (0, n.useStateFromStores)([r.default], () => r.default.isEnrolling(T.id));
+  } = e, m = (null === (t = T.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, _ = (null === (s = T.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null, g = (null === (i = T.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null, h = _ && !g, N = _ ? l.ButtonColors.BRAND_NEW : l.ButtonColors.GREEN, I = S(m, _, g), p = E(m, _), C = f(T), A = _ && !m, O = (0, n.useStateFromStores)([r.default], () => r.default.isEnrolling(T.id));
   return (0, a.jsxs)("div", {
     className: c.outerContainer,
     children: [(0, a.jsx)("img", {
@@ -68,11 +68,11 @@ var T = e => {
           tooltipContentClassName: c.ctaTooltipCopy,
           shouldShow: !g,
           children: (0, a.jsx)(l.Button, {
-            color: I,
+            color: N,
             disabled: A,
             submitting: O,
             onClick: C,
-            children: N
+            children: I
           })
         })]
       }), h && (0, a.jsx)(d.default, {

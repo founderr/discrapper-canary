@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("808653"), n("424973");
 var l = n("37983"),
-  i = n("884691"),
-  s = n("414456"),
-  r = n.n(s),
+  s = n("884691"),
+  i = n("414456"),
+  r = n.n(i),
   o = n("446674"),
   a = n("266491"),
   u = n("77078"),
@@ -18,7 +18,7 @@ var l = n("37983"),
   h = n("423487"),
   m = n("782340"),
   E = n("47274");
-class I extends i.PureComponent {
+class I extends s.PureComponent {
   render() {
     let {
       onClose: e
@@ -40,19 +40,19 @@ function S(e) {
   let {
     imageClass: t,
     children: n,
-    error: i,
-    onDismissError: s
+    error: s,
+    onDismissError: i
   } = e;
   return (0, l.jsxs)("div", {
     className: E.content,
     children: [(0, l.jsx)("div", {
       className: r(E.image, t)
     }), n, (0, l.jsx)(a.default, {
-      children: null != i ? (0, l.jsx)(p.default, {
+      children: null != s ? (0, l.jsx)(p.default, {
         className: E.error,
         children: (0, l.jsx)(u.FormErrorBlock, {
-          onDismiss: s,
-          children: i.message
+          onDismiss: i,
+          children: s.message
         })
       }) : null
     })]
@@ -81,8 +81,8 @@ function _(e) {
   let {
     imageClass: t,
     blurb: n,
-    guild: i,
-    warning: s,
+    guild: s,
+    warning: i,
     error: r,
     onDismissError: o,
     slotCount: a = 1,
@@ -97,48 +97,48 @@ function _(e) {
       children: n
     }), (0, l.jsx)(d.default, {
       className: E.guildCard,
-      guild: i,
+      guild: s,
       subscriptionChange: a
     }), (0, l.jsx)(u.Text, {
       variant: "text-md/normal",
-      children: s
+      children: i
     }), c > 0 ? (0, l.jsx)(g, {
       canceledCount: c
     }) : null]
   })
 }
-class C extends i.PureComponent {
+class C extends s.PureComponent {
   render() {
     let {
       confirmation: e,
       confirmationLabel: t,
       isModifyingSubscription: n,
-      onConfirm: i,
-      onCancel: s
+      onConfirm: s,
+      onCancel: i
     } = this.props;
     return (0, l.jsxs)(u.ModalFooter, {
       children: [(0, l.jsx)(u.Button, {
-        onClick: i,
+        onClick: s,
         submitting: n,
         "aria-label": t,
         children: e
       }), (0, l.jsx)(u.Button, {
         look: u.Button.Looks.LINK,
         color: u.Button.Colors.PRIMARY,
-        onClick: s,
+        onClick: i,
         disabled: n,
         children: m.default.Messages.CANCEL
       })]
     })
   }
 }
-class L extends i.PureComponent {
+class L extends s.PureComponent {
   render() {
     let {
       guild: e,
       header: t,
       blurb: n,
-      warning: s,
+      warning: i,
       confirmation: r,
       confirmationLabel: o,
       imageClass: a,
@@ -149,14 +149,14 @@ class L extends i.PureComponent {
       onDismissError: h,
       canceledCount: m
     } = this.props;
-    return (0, l.jsxs)(i.Fragment, {
+    return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(I, {
         text: t
       }), (0, l.jsx)(u.ModalContent, {
         children: (0, l.jsx)(_, {
           guild: e,
           blurb: n,
-          warning: s,
+          warning: i,
           imageClass: a,
           error: d,
           onDismissError: h,
@@ -175,7 +175,7 @@ class L extends i.PureComponent {
 L.Header = I, L.ApplyBody = _, L.TransferBody = function(e) {
   var t, n;
   let {
-    imageClass: s,
+    imageClass: i,
     blurb: r,
     fromGuilds: o,
     toGuild: a,
@@ -183,9 +183,9 @@ L.Header = I, L.ApplyBody = _, L.TransferBody = function(e) {
     onDismissError: f,
     slotCount: p = 1,
     canceledCount: h = 0
-  } = e, I = i.useRef(o), _ = null === (t = I.current) || void 0 === t ? void 0 : t.length, C = null === (n = I.current) || void 0 === n ? void 0 : n.reduce((e, t) => (!e.hasOwnProperty(t.id) && (e[t.id] = []), e[t.id].push(t), e), {});
+  } = e, I = s.useRef(o), _ = null === (t = I.current) || void 0 === t ? void 0 : t.length, C = null === (n = I.current) || void 0 === n ? void 0 : n.reduce((e, t) => (!e.hasOwnProperty(t.id) && (e[t.id] = []), e[t.id].push(t), e), {});
   return (0, l.jsxs)(S, {
-    imageClass: s,
+    imageClass: i,
     error: c,
     onDismissError: f,
     children: [(0, l.jsx)(u.Text, {

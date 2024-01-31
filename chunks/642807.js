@@ -43,10 +43,10 @@ function N(e, t) {
   }, c.resourceChannels = [...c.resourceChannels]
 }
 
-function g() {
+function f() {
   E = !1, c = n.cloneDeep(Object.assign({}, r.default.getSettings(u)))
 }
-class f extends l.default.PersistedStore {
+class g extends l.default.PersistedStore {
   initialize(e) {
     null != e && (_ = e.dismissedSuggestedChannelIdsByGuildId), this.waitFor(o.default, r.default)
   }
@@ -92,8 +92,8 @@ class f extends l.default.PersistedStore {
     return void 0 !== s && (null != s || null != t.icon && null == s)
   }
 }
-f.displayName = "GuildSettingsOnboardingHomeSettingsStore", f.persistKey = "GuildSettingsOnboardingHomeSettingsStore";
-var A = new f(i.default, {
+g.displayName = "GuildSettingsOnboardingHomeSettingsStore", g.persistKey = "GuildSettingsOnboardingHomeSettingsStore";
+var A = new g(i.default, {
   GUILD_SETTINGS_INIT: I,
   GUILD_SETTINGS_SET_SECTION: I,
   GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET: I,
@@ -103,8 +103,8 @@ var A = new f(i.default, {
   GUILD_HOME_SETTINGS_UPDATE_START: function() {
     E = !0
   },
-  GUILD_HOME_SETTINGS_UPDATE_SUCCESS: g,
-  GUILD_HOME_SETTINGS_UPDATE_FAIL: g,
+  GUILD_HOME_SETTINGS_UPDATE_SUCCESS: f,
+  GUILD_HOME_SETTINGS_UPDATE_FAIL: f,
   GUILD_NEW_MEMBER_ACTION_UPDATE_SUCCESS: function(e) {
     let {
       action: t

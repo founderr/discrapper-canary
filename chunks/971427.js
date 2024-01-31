@@ -5,13 +5,13 @@ n.r(t), n.d(t, {
     return a
   }
 }), n("424973");
-var i = n("446674"),
-  s = n("913144");
+var s = n("446674"),
+  i = n("913144");
 let r = {
   hasAcceptedStoreTerms: !1,
   hasAcceptedEulaIds: []
 };
-class o extends i.default.PersistedStore {
+class o extends s.default.PersistedStore {
   initialize(e) {
     l = null != e ? e : r
   }
@@ -29,7 +29,7 @@ o.displayName = "ApplicationStoreUserSettingsStore", o.persistKey = "Application
   ...e,
   hasAcceptedEulaIds: []
 } : e];
-var a = new o(s.default, {
+var a = new o(i.default, {
   APPLICATION_STORE_ACCEPT_STORE_TERMS: function() {
     l.hasAcceptedStoreTerms = !0
   },

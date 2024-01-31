@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return h
+    return C
   }
 });
 var n = i("37983");
@@ -23,11 +23,11 @@ var l = i("414456"),
   _ = i("782340"),
   S = i("9014");
 
-function h(e) {
+function C(e) {
   var t, i;
   let {
     onDismiss: l
-  } = e, h = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), C = _.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, T = (0, c.usePremiumTrialOffer)(), N = (0, u.usePremiumDiscountOffer)(), A = (null == T ? void 0 : T.subscription_trial) != null, y = A || null != N, v = {
+  } = e, C = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), h = _.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, T = (0, c.usePremiumTrialOffer)(), N = (0, u.usePremiumDiscountOffer)(), v = (null == T ? void 0 : T.subscription_trial) != null, A = v || null != N, y = {
     object: p.AnalyticsObjects.BUTTON_CTA,
     section: p.AnalyticsSections.SUPER_REACTION_PICKER
   };
@@ -47,22 +47,22 @@ function h(e) {
         className: S.contentFill,
         children: (0, n.jsx)(I.default, {
           className: s(S.banner, {
-            [S.hasTrialOffer]: y
+            [S.hasTrialOffer]: A
           }),
           src: "https://cdn.discordapp.com/attachments/955557117622886410/1085270553759322153/super-reactions-launch.mp4",
           loop: !0,
-          autoPlay: !h,
+          autoPlay: !C,
           muted: !0,
           controls: !0
         })
-      }), y ? (0, n.jsx)(d.default, {
+      }), A ? (0, n.jsx)(d.default, {
         type: g.PremiumUpsellTypes.BURST_REACTION_QUICK_ACTION_UPSELL,
         subscriptionTier: null !== (i = null == T ? void 0 : null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== i ? i : g.PremiumSubscriptionSKUs.TIER_2,
         headingText: _.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE,
-        analyticsLocationObject: v,
+        analyticsLocationObject: y,
         discountOffer: N,
         trialOffer: T,
-        children: C
+        children: h
       }) : (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsxs)("div", {
           className: S.header,
@@ -78,7 +78,7 @@ function h(e) {
         }), (0, n.jsx)(r.Text, {
           className: S.subheaderText,
           variant: "text-md/normal",
-          children: C
+          children: h
         }), (0, n.jsx)("div", {
           className: S.ctaActionWrapper,
           children: (0, n.jsx)(f.default, {

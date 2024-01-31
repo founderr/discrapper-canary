@@ -45,8 +45,8 @@ function S(e) {
     buttonLabel: l,
     buttonCallback: i,
     disabled: d
-  } = e, [_, S] = n.useState(!1), N = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), g = s.flatMap(e => e.items.map(e => e.completed)), f = g.filter(e => e).length / g.length, A = (0, r.useSpring)({
-    width: "".concat(100 * f, "%"),
+  } = e, [_, S] = n.useState(!1), N = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), f = s.flatMap(e => e.items.map(e => e.completed)), g = f.filter(e => e).length / f.length, A = (0, r.useSpring)({
+    width: "".concat(100 * g, "%"),
     immediate: N
   });
   return (0, a.jsxs)("div", {
@@ -93,7 +93,7 @@ function S(e) {
         color: u.Button.Colors.BRAND_NEW,
         hover: u.Button.Colors.BRAND_NEW,
         onClick: i,
-        disabled: 1 !== f || d,
+        disabled: 1 !== g || d,
         children: l
       })]
     })]

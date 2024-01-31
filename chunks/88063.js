@@ -23,12 +23,12 @@ function N(e) {
   let {
     guildId: t,
     triggerType: s
-  } = e, N = n.useMemo(() => () => (0, c.createDefaultRule)(t, s), [t, s]), [g] = n.useState(N), [f, A] = n.useState(!1), {
+  } = e, N = n.useMemo(() => () => (0, c.createDefaultRule)(t, s), [t, s]), [f] = n.useState(N), [g, A] = n.useState(!1), {
     editingRule: L,
     createNewEditingRule: m
   } = (0, _.useAutomodEditingRuleState)(), {
     getDefaultRuleName: C
-  } = E.triggerConfigs[s], O = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), h = !(0, c.isBackendPersistedRule)(L) && (null == L ? void 0 : L.triggerType) === s, [R, D] = n.useState(h ? L : g), M = (0, l.useSpring)({
+  } = E.triggerConfigs[s], O = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), h = !(0, c.isBackendPersistedRule)(L) && (null == L ? void 0 : L.triggerType) === s, [R, D] = n.useState(h ? L : f), M = (0, l.useSpring)({
     opacity: h ? 0 : 1,
     pointerEvents: h ? "none" : "all",
     config: {
@@ -45,10 +45,10 @@ function N(e) {
     },
     immediate: O,
     onStart: () => {
-      D(h ? L : g)
+      D(h ? L : f)
     },
     onRest: () => {
-      D(h ? L : g), A(h)
+      D(h ? L : f), A(h)
     }
   });
   return null == L || h ? (0, a.jsxs)("div", {
@@ -61,7 +61,7 @@ function N(e) {
       style: G,
       children: (0, a.jsx)(T.default, {
         rule: R,
-        persistEdit: f
+        persistEdit: g
       })
     }), (0, a.jsx)(l.animated.div, {
       className: S.animatedNewRuleContainer,

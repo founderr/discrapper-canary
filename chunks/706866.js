@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("161188"),
   S = s("245997"),
   N = s("923959"),
-  g = s("98292"),
-  f = s("461380"),
+  f = s("98292"),
+  g = s("461380"),
   A = s("36694"),
   L = s("45029"),
   m = s("900938"),
@@ -42,7 +42,7 @@ var a = s("37983"),
 function j(e) {
   let {
     guild: t
-  } = e, l = (0, r.useStateFromStores)([c.default], () => c.default.getEnabled(t.id)), i = (0, r.useStateFromStores)([I.default], () => I.default.hasFetched(t.id)), d = (0, D.default)(t), S = (0, r.useStateFromStores)([O.default], () => O.default.editedDefaultChannelIds), N = d.filter(e => !S.has(e.id)), [f, m] = n.useState(!1);
+  } = e, l = (0, r.useStateFromStores)([c.default], () => c.default.getEnabled(t.id)), i = (0, r.useStateFromStores)([I.default], () => I.default.hasFetched(t.id)), d = (0, D.default)(t), S = (0, r.useStateFromStores)([O.default], () => O.default.editedDefaultChannelIds), N = d.filter(e => !S.has(e.id)), [g, m] = n.useState(!1);
   n.useEffect(() => {
     !i && !l && (0, T.fetchTopReadChannels)(t.id)
   }, [t.id, i, l]);
@@ -58,7 +58,7 @@ function j(e) {
       })
     })
   };
-  return f || 0 === N.length ? null : (0, a.jsxs)("div", {
+  return g || 0 === N.length ? null : (0, a.jsxs)("div", {
     className: v.recommendations,
     children: [(0, a.jsx)(o.Text, {
       variant: "text-md/medium",
@@ -96,7 +96,7 @@ function j(e) {
               children: [(0, a.jsx)(E.ChannelItemIcon, {
                 channel: e,
                 guild: t
-              }), (0, a.jsx)(g.default, {
+              }), (0, a.jsx)(f.default, {
                 className: v.name,
                 children: (0, a.jsx)(o.Text, {
                   className: v.channelText,
@@ -106,7 +106,7 @@ function j(e) {
                   children: e.name
                 })
               })]
-            }), null != e.topic && e.topic.length > 0 ? (0, a.jsx)(g.default, {
+            }), null != e.topic && e.topic.length > 0 ? (0, a.jsx)(f.default, {
               children: (0, a.jsx)(o.Text, {
                 className: v.topic,
                 variant: "text-xs/normal",
@@ -164,8 +164,8 @@ function P(e) {
       children: [(0, a.jsx)(o.Clickable, {
         className: v.collapseButton,
         onClick: () => I(e => !e),
-        children: (0, a.jsx)(f.default, {
-          direction: T ? f.default.Directions.DOWN : f.default.Directions.UP,
+        children: (0, a.jsx)(g.default, {
+          direction: T ? g.default.Directions.DOWN : g.default.Directions.UP,
           height: 16,
           width: 16
         })

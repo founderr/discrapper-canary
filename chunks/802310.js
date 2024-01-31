@@ -23,13 +23,13 @@ let N = e => {
     guild: t
   } = e, {
     inventorySettings: s
-  } = t, N = (null == s ? void 0 : s.isEmojiPackCollectible) !== !1, g = (0, u.useHasInventoryGuildSettingsPermission)(t), {
-    showSettingsToggle: f
+  } = t, N = (null == s ? void 0 : s.isEmojiPackCollectible) !== !1, f = (0, u.useHasInventoryGuildSettingsPermission)(t), {
+    showSettingsToggle: g
   } = (0, r.useInventoryGuildSettingsExperiment)({
     guildId: t.id
   }), [A, L] = n.useState(N), [m, C] = n.useState(void 0), O = (0, l.useStateFromStores)([c.default], () => c.default.locale);
   n.useEffect(() => {
-    if (!g) return;
+    if (!f) return;
     let e = async () => {
       var e;
       let s = await (0, o.getPackMetadata)({
@@ -38,7 +38,7 @@ let N = e => {
       C(null !== (e = null == s ? void 0 : s.collectedCount) && void 0 !== e ? e : 0)
     };
     e()
-  }, [t.id, g]);
+  }, [t.id, f]);
   let h = async () => {
     try {
       L(!N), await (0, o.updateInventorySettings)({
@@ -54,7 +54,7 @@ let N = e => {
       L(N)
     }
   };
-  return f && g ? (0, a.jsxs)(i.FormSection, {
+  return g && f ? (0, a.jsxs)(i.FormSection, {
     children: [(0, a.jsx)(i.FormSwitch, {
       className: S.marginBottom8,
       value: A,

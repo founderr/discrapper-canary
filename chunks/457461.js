@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("136278"),
   S = s("253308"),
   N = s("653138"),
-  g = s("782340"),
-  f = s("108852");
+  f = s("782340"),
+  g = s("108852");
 
 function A(e) {
   let {
@@ -46,33 +46,33 @@ function A(e) {
     S(A(C))
   }, [S, A, C]), (0, a.jsxs)("div", {
     ref: C,
-    className: i(f.separatorSection, {
-      [f.dropIndicatorBefore]: null != L && E < L,
-      [f.dropIndicatorAfter]: null != L && E > L
+    className: i(g.separatorSection, {
+      [g.dropIndicatorBefore]: null != L && E < L,
+      [g.dropIndicatorAfter]: null != L && E > L
     }),
     children: [!l && c.length < N.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING ? (0, a.jsxs)(o.Clickable, {
-      className: f.addPrompt,
+      className: g.addPrompt,
       onClick: () => (0, T.editGuildOnboardingPrompts)(t, [...d, (0, N.getEmptyPrompt)(!0)], !1),
       children: [(0, a.jsx)(_.default, {
-        className: f.plusIcon,
+        className: g.plusIcon,
         width: 20,
         height: 20
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
         color: "text-brand",
-        children: g.default.Messages.ONBOARDING_PROMPT_ADD_PROMPT
+        children: f.default.Messages.ONBOARDING_PROMPT_ADD_PROMPT
       })]
     }) : null, s ? null : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
-        className: f.divider
+        className: g.divider
       }), (0, a.jsx)(o.Heading, {
         variant: "heading-md/bold",
-        children: g.default.Messages.ONBOARDING_QUESTIONS_POST_JOIN_HEADER
+        children: f.default.Messages.ONBOARDING_QUESTIONS_POST_JOIN_HEADER
       }), (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        className: f.subtitle,
-        children: g.default.Messages.ONBOARDING_QUESTIONS_POST_JOIN_SUBHEADER
+        className: g.subtitle,
+        children: f.default.Messages.ONBOARDING_QUESTIONS_POST_JOIN_SUBHEADER
       })]
     })]
   })
@@ -111,8 +111,8 @@ function L(e) {
       }));
     if (s.length > N.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING) {
       d.default.show({
-        title: g.default.Messages.ONBOARDING_QUESTIONS_CANNOT_MOVE,
-        body: g.default.Messages.ONBOARDING_QUESTIONS_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({
+        title: f.default.Messages.ONBOARDING_QUESTIONS_CANNOT_MOVE,
+        body: f.default.Messages.ONBOARDING_QUESTIONS_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({
           numQuestions: N.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING
         })
       });
@@ -124,12 +124,12 @@ function L(e) {
       children: [s ? null : (0, a.jsxs)("div", {
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-md/bold",
-          children: g.default.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_HEADER
+          children: f.default.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_HEADER
         }), (0, a.jsx)(o.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          className: f.subtitle,
-          children: g.default.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_SUBHEADER
+          className: g.subtitle,
+          children: f.default.Messages.ONBOARDING_QUESTIONS_PRE_JOIN_SUBHEADER
         })]
       }), m.map((e, t) => (0, a.jsx)(S.default, {
         guild: u,
@@ -157,16 +157,16 @@ function L(e) {
         onPromptDragReset: R,
         onPromptDragComplete: D
       }, e.id)), L.length < N.MAX_NUM_PROMPTS ? (0, a.jsxs)(o.Clickable, {
-        className: f.addPrompt,
+        className: g.addPrompt,
         onClick: () => (0, T.editGuildOnboardingPrompts)(u, [...L, (0, N.getEmptyPrompt)(!1)], !1),
         children: [(0, a.jsx)(_.default, {
-          className: f.plusIcon,
+          className: g.plusIcon,
           width: 20,
           height: 20
         }), (0, a.jsx)(o.Text, {
           variant: "text-md/medium",
           color: "text-brand",
-          children: g.default.Messages.ONBOARDING_PROMPT_ADD_PROMPT
+          children: f.default.Messages.ONBOARDING_PROMPT_ADD_PROMPT
         })]
       }) : null]
     })]

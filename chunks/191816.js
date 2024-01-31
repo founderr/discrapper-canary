@@ -38,7 +38,7 @@ function T(e) {
       if (null != T) return o.default.getGuild(T.guildId)
     }, [T]),
     [g, h] = a.useState(!1),
-    I = null == s ? void 0 : function(e) {
+    N = null == s ? void 0 : function(e) {
       let {
         listing: t,
         subscription: s
@@ -63,6 +63,6 @@ function T(e) {
     handleToggleExpanded: () => h(e => !e),
     listing: s,
     groupListing: n,
-    subscriptionInfo: I
+    subscriptionInfo: N
   }
 }

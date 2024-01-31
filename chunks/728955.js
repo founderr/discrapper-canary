@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("957255"),
   S = s("730988"),
   N = s("246053"),
-  g = s("151185"),
-  f = s("531493"),
+  f = s("151185"),
+  g = s("531493"),
   A = s("476324"),
   L = s("983521"),
   m = s("91816"),
@@ -39,8 +39,8 @@ function M(e) {
       selectedItem: I,
       onClick: S,
       currentPosition: N,
-      onDragStart: g,
-      onDragReset: f,
+      onDragStart: f,
+      onDragReset: g,
       onDragComplete: L,
       roleStyle: m
     } = e,
@@ -50,7 +50,7 @@ function M(e) {
     G = (null === (t = E.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
     [, x] = (0, r.useDrag)({
       type: D,
-      item: () => (g(E.id), {
+      item: () => (f(E.id), {
         id: E.id,
         position: N
       }),
@@ -58,7 +58,7 @@ function M(e) {
       end: (e, t) => {
         let s = t.getDropResult();
         if (null == s) {
-          f();
+          g();
           return
         }
         L(s.roleId)
@@ -136,7 +136,7 @@ function G(e) {
     currentRoleId: s,
     setCurrentRoleId: l,
     setSelectedSection: r
-  } = e, o = (0, d.useStateFromStores)([f.default], () => f.default.roles), c = (0, d.useStateFromStores)([I.default], () => I.default.getHighestRole(t)), T = (0, d.useStateFromStores)([_.default], () => _.default.roleStyle), [A, O] = n.useState(o.length), {
+  } = e, o = (0, d.useStateFromStores)([g.default], () => g.default.roles), c = (0, d.useStateFromStores)([I.default], () => I.default.getHighestRole(t)), T = (0, d.useStateFromStores)([_.default], () => _.default.roleStyle), [A, O] = n.useState(o.length), {
     scrolledToTop: D,
     handleScroll: G
   } = (0, m.useScrolledToTop)(), {
@@ -189,7 +189,7 @@ function G(e) {
             className: R.addRole,
             ...e,
             onClick: P,
-            children: (0, a.jsx)(g.default, {
+            children: (0, a.jsx)(f.default, {
               width: 20,
               height: 20
             })

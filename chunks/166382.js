@@ -66,8 +66,8 @@ var S = e => {
   }, {
     icon: S,
     description: N,
-    color: g,
-    tooltip: f
+    color: f,
+    tooltip: g
   } = n[s];
   return (0, l.jsxs)("div", {
     className: I.emojiErrorItem,
@@ -85,9 +85,9 @@ var S = e => {
       })]
     }), (0, l.jsx)(r.TooltipContainer, {
       position: "right",
-      text: f,
+      text: g,
       children: (0, l.jsx)(_.default, {
-        color: g
+        color: f
       })
     })]
   })

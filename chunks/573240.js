@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return P
   }
 });
 var i = n("37983"),
@@ -166,7 +166,7 @@ let g = e => {
       }), a]
     })
   };
-var x = e => {
+var P = e => {
   var t, n;
   let {
     classificationId: a,

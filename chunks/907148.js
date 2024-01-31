@@ -22,8 +22,8 @@ var n = s("627445"),
   _ = s("79685"),
   g = s("741781"),
   h = s("121370"),
-  I = s("370505"),
-  N = s("783142"),
+  N = s("370505"),
+  I = s("783142"),
   p = s("713135"),
   C = s("217513"),
   A = s("790618"),
@@ -70,21 +70,21 @@ function D() {
     autoTrackExposure: !1
   });
   let q = (0, C.default)(b.id),
-    Z = null == q ? void 0 : q.getLegacyUsername(),
-    X = (null !== (s = null === (e = V.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? V.global_name : null !== (n = null == Y ? void 0 : Y.nick) && void 0 !== n ? n : [],
+    X = null == q ? void 0 : q.getLegacyUsername(),
+    Z = (null !== (s = null === (e = V.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? V.global_name : null !== (n = null == Y ? void 0 : Y.nick) && void 0 !== n ? n : [],
     J = (null !== (D = null === (t = V.bio) || void 0 === t ? void 0 : t.length) && void 0 !== D ? D : 0) > 0 ? V.bio : null !== (L = null == Y ? void 0 : Y.bio) && void 0 !== L ? L : [];
   return (0, a.jsxs)("div", {
     className: v.sectionsContainer,
     children: [(0, a.jsx)(f.default, {
       placeholder: b.username,
-      errors: X,
+      errors: Z,
       currentGlobalName: b.globalName,
       pendingGlobalName: y,
       onGlobalNameChange: r.setPendingGlobalNameName
-    }), (0, a.jsx)(I.default, {
+    }), (0, a.jsx)(N.default, {
       sectionTitle: M.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: V.pronouns,
-      onPronounsChange: N.setPendingPronouns,
+      onPronounsChange: I.setPendingPronouns,
       pendingPronouns: k,
       currentPronouns: null !== (P = null == U ? void 0 : U.pronouns) && void 0 !== P ? P : ""
     }, "pronouns"), (0, a.jsx)(E.default, {
@@ -101,20 +101,20 @@ function D() {
       children: [(0, a.jsx)(m.default, {
         showRemoveBannerButton: z,
         errors: V.banner,
-        onBannerChange: N.setPendingBanner,
+        onBannerChange: I.setPendingBanner,
         forcedDivider: !0
       }, "banner"), (0, a.jsx)(h.default, {
         user: b,
         pendingAvatar: B,
         pendingColors: w,
-        onThemeColorsChange: N.setPendingThemeColors,
+        onThemeColorsChange: I.setPendingThemeColors,
         forcedDivider: !0
       })]
     }) : (0, a.jsx)(_.default, {
       user: b,
       savedUserColor: null == U ? void 0 : U.accentColor,
       pendingColor: H,
-      setPendingAccentColor: N.setPendingAccentColor
+      setPendingAccentColor: I.setPendingAccentColor
     }, "color"), (0, a.jsx)(c.default, {
       sectionTitle: M.default.Messages.USER_SETTINGS_ABOUT_ME,
       errors: J,
@@ -123,8 +123,8 @@ function D() {
       },
       pendingBio: G,
       currentBio: null !== (j = null == U ? void 0 : U.bio) && void 0 !== j ? j : ""
-    }, "bio"), null != Z && (0, a.jsx)(T.default, {
-      legacyUsername: Z
+    }, "bio"), null != X && (0, a.jsx)(T.default, {
+      legacyUsername: X
     }, "legacy_username")]
   })
 }

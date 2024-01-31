@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   getPerkIcon: function() {
-    return f
+    return g
   }
 }), s("70102");
 var a = s("414456"),
@@ -19,57 +19,57 @@ var a = s("414456"),
   I = s("619911"),
   S = s("698015"),
   N = s("427459"),
-  g = s("392568");
+  f = s("392568");
 
-function f(e, t) {
+function g(e, t) {
   if (t) return {
     icon: l.default,
-    className: g.unlocked
+    className: f.unlocked
   };
   switch (e) {
     case N.PerkIcons.EMOJI:
       return {
-        icon: i.default, className: n(g.icon, g.emoji)
+        icon: i.default, className: n(f.icon, f.emoji)
       };
     case N.PerkIcons.AUDIO:
       return {
-        icon: r.default, className: n(g.icon, g.audio)
+        icon: r.default, className: n(f.icon, f.audio)
       };
     case N.PerkIcons.ANIMATED:
       return {
-        icon: o.default, className: n(g.icon, g.animated)
+        icon: o.default, className: n(f.icon, f.animated)
       };
     case N.PerkIcons.CUSTOMIZATION:
       return {
-        icon: u.default, className: n(g.icon, g.customization)
+        icon: u.default, className: n(f.icon, f.customization)
       };
     case N.PerkIcons.UPLOAD:
       return {
-        icon: S.default, className: n(g.icon, g.upload)
+        icon: S.default, className: n(f.icon, f.upload)
       };
     case N.PerkIcons.VANITY:
       return {
-        icon: _.default, className: n(g.icon, g.vanity)
+        icon: _.default, className: n(f.icon, f.vanity)
       };
     case N.PerkIcons.STREAM:
       return {
-        icon: I.default, className: n(g.icon, g.stream)
+        icon: I.default, className: n(f.icon, f.stream)
       };
     case N.PerkIcons.STICKER:
       return {
-        icon: T.default, className: n(g.icon, g.sticker)
+        icon: T.default, className: n(f.icon, f.sticker)
       };
     case N.PerkIcons.CUSTOM_ROLE_ICON:
       return {
-        icon: d.default, className: n(g.icon, g.customRoleIcon)
+        icon: d.default, className: n(f.icon, f.customRoleIcon)
       };
     case N.PerkIcons.STAGE_VIDEO:
       return {
-        icon: E.default, className: n(g.icon, g.stage)
+        icon: E.default, className: n(f.icon, f.stage)
       };
     case N.PerkIcons.SOUNDBOARD:
       return {
-        icon: c.default, className: n(g.icon, g.soundboard)
+        icon: c.default, className: n(f.icon, f.soundboard)
       }
   }
   throw Error("Unexpected perk icon ".concat(e))

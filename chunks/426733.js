@@ -78,15 +78,15 @@ var _ = e => {
     "aria-label": _,
     filters: T,
     setLoading: I
-  } = e, S = n.createRef(), N = n.useRef(null), [g, f] = n.useState(!1);
+  } = e, S = n.createRef(), N = n.useRef(null), [f, g] = n.useState(!1);
   n.useEffect(() => {
-    g && A()
-  }, [g]);
+    f && A()
+  }, [f]);
   let A = () => {
       null !== N.current && ((0, l.closeModal)(N.current), N.current = null)
     },
     L = async e => {
-      null == I || I(!0), await c(e, t), f(!0), null == I || I(!1)
+      null == I || I(!0), await c(e, t), g(!0), null == I || I(!1)
     }, m = async e => {
       var t, n, i;
       if (e.stopPropagation(), e.preventDefault(), (null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null || (null === (i = e.currentTarget) || void 0 === i ? void 0 : null === (n = i.files) || void 0 === n ? void 0 : n.length) === 0) return;

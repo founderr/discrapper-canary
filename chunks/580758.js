@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("251334"),
   g = s("218989"),
   h = s("308592"),
-  I = s("424876"),
-  N = s("699260"),
+  N = s("424876"),
+  I = s("699260"),
   p = s("102985"),
   C = s("26092"),
   A = s("160299"),
@@ -94,7 +94,7 @@ var w = function() {
     (0, E.fetchPremiumSubscriptionPlans)(), u.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), u.fetchPaymentSources()
   }), function() {
     f.default.clearSubsection()
-  }), []), p.default.enabled) ? (0, a.jsx)(T.default, {}) : S && M ? v === y.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(N.default, {
+  }), []), p.default.enabled) ? (0, a.jsx)(T.default, {}) : S && M ? v === y.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(I.default, {
     onGoBack: () => f.default.clearSubsection()
   }) : v === y.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(_.default, {
     onGoBack: () => f.default.clearSubsection()
@@ -110,7 +110,7 @@ var w = function() {
         subscriptions: t
       }) : (0, a.jsx)(b.SubscriptionDetailsEmpty, {
         className: G.subscriptionDetails
-      }), (0, a.jsx)(I.default, {
+      }), (0, a.jsx)(N.default, {
         onClickManageSubscription: () => f.default.setSection(B.UserSettingsSections.SUBSCRIPTIONS, y.ROLE_SUBSCRIPTION_SUBSECTION)
       }), (0, a.jsx)(m.default, {
         onClickManageSubscription: () => {

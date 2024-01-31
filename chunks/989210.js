@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("145131"),
   S = s("555158"),
   N = s("191814"),
-  g = s("476765"),
-  f = s("228220"),
+  f = s("476765"),
+  g = s("228220"),
   A = s("973956"),
   L = s("958706"),
   m = s("782340"),
@@ -54,15 +54,15 @@ function O(e) {
         }), s && t()
       }
     })
-  }, [i, S]), g = n.useMemo(() => null == I && null == s.name ? null : function() {
+  }, [i, S]), f = n.useMemo(() => null == I && null == s.name ? null : function() {
     return (0, a.jsx)(d.default, {
       className: C.emoji,
       emojiId: s.id,
       emojiName: s.name,
       animated: null == I ? void 0 : I.animated
     })
-  }, [s, I]), f = "";
-  return null != I ? f = ":".concat(I.name, ":") : null != s.name && (f = E.default.convertSurrogateToName(s.name)), (0, a.jsx)(o.Popout, {
+  }, [s, I]), g = "";
+  return null != I ? g = ":".concat(I.name, ":") : null != s.name && (g = E.default.convertSurrogateToName(s.name)), (0, a.jsx)(o.Popout, {
     animation: o.Popout.Animation.NONE,
     position: "top",
     renderPopout: N,
@@ -77,11 +77,11 @@ function O(e) {
           className: C.emojiButton,
           active: s,
           tabIndex: 0,
-          renderButtonContents: g
+          renderButtonContents: f
         }), (0, a.jsx)(o.TextInput, {
           inputClassName: C.emojiText,
           placeholder: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_EMOJI_PLACEHOLDER,
-          value: f,
+          value: g,
           "aria-labelledby": l,
           readOnly: !0
         })]
@@ -102,7 +102,7 @@ function h(e) {
     onDelete: c,
     transitionState: E,
     onClose: _
-  } = e, T = (0, g.useUID)(), S = (0, g.useUID)(), A = (0, g.useUID)(), [L, h] = n.useState(null !== (t = null == l ? void 0 : l.description) && void 0 !== t ? t : ""), [R, D] = n.useState(() => ({
+  } = e, T = (0, f.useUID)(), S = (0, f.useUID)(), A = (0, f.useUID)(), [L, h] = n.useState(null !== (t = null == l ? void 0 : l.description) && void 0 !== t ? t : ""), [R, D] = n.useState(() => ({
     id: null == l ? void 0 : l.emoji_id,
     name: null == l ? void 0 : l.emoji_name
   })), M = d && "" !== L && (null != R.id || null != R.name);
@@ -168,7 +168,7 @@ function h(e) {
             onClick: () => {
               c(), _()
             },
-            children: (0, a.jsx)(f.default, {
+            children: (0, a.jsx)(g.default, {
               "aria-label": m.default.Messages.DELETE
             })
           })]
@@ -193,7 +193,7 @@ function R(e) {
     onDelete: d,
     transitionState: u,
     onClose: c
-  } = e, [E, _] = n.useState(null == l ? void 0 : l.ref_id), T = (0, g.useUID)(), I = (0, a.jsxs)(a.Fragment, {
+  } = e, [E, _] = n.useState(null == l ? void 0 : l.ref_id), T = (0, f.useUID)(), I = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(S.default, {
       messageType: S.HelpMessageTypes.WARNING,
       children: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_CHANNEL_MODAL_WARNING
@@ -241,7 +241,7 @@ function D(e) {
     onClose: d,
     onDelete: u,
     guildId: c
-  } = e, [E, _] = n.useState(null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : ""), T = (0, g.useUID)(), I = (0, a.jsx)(o.FormSection, {
+  } = e, [E, _] = n.useState(null !== (t = null == s ? void 0 : s.name) && void 0 !== t ? t : ""), T = (0, f.useUID)(), I = (0, a.jsx)(o.FormSection, {
     title: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFIT_INTANGIBLE_NAME_TITLE,
     titleId: T,
     children: (0, a.jsx)(o.TextArea, {

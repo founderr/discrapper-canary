@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("900938"),
   S = s("986654"),
   N = s("482763"),
-  g = s("620296"),
-  f = s("500053"),
+  f = s("620296"),
+  g = s("500053"),
   A = s("53948"),
   L = s("49111");
 
@@ -78,14 +78,14 @@ function O(e) {
     setEditRoleId: m,
     selectedSection: C,
     setSelectedSection: O
-  }) : _ ? (0, a.jsx)(f.default, {
+  }) : _ ? (0, a.jsx)(g.default, {
     setEditRoleId: m,
     guild: s,
     everyoneRole: d,
     otherRoles: c,
     setSelectedSection: O,
     refToScroller: t
-  }) : (0, a.jsx)(g.default, {
+  }) : (0, a.jsx)(f.default, {
     guild: s,
     everyoneRole: d,
     setEditRoleId: m

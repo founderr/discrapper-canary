@@ -34,7 +34,7 @@ function N(e) {
       ...n,
       permissions: i.default.remove(n.permissions, e)
     }
-  })), g = (0, a.jsxs)(a.Fragment, {
+  })), f = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: I.itemContent,
       children: [(0, a.jsx)(r.Heading, {
@@ -65,7 +65,7 @@ function N(e) {
     children: e => (0, a.jsx)("div", {
       className: l(I.simpleItemWrapper, I.disabled),
       ...e,
-      children: g
+      children: f
     })
   }) : (0, a.jsx)(r.Clickable, {
     onClick: () => {
@@ -80,9 +80,9 @@ function N(e) {
       })
     },
     className: l(I.simpleItemWrapper, I.clickable),
-    children: g
+    children: f
   }) : (0, a.jsx)("div", {
     className: I.simpleItemWrapper,
-    children: g
+    children: f
   })
 }

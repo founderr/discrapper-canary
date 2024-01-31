@@ -54,8 +54,8 @@ class m extends s.Component {
       subscriptionPlan: N,
       finePrintClassname: v
     } = this.props, {
-      hasAcceptedEULA: C,
-      hasAcceptedWithdrawalWaiver: M
+      hasAcceptedEULA: M,
+      hasAcceptedWithdrawalWaiver: C
     } = this.state;
     return (c(!T || null != N, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"), n || null != e && !s || S) ? (0, a.jsxs)("div", {
       className: u,
@@ -64,7 +64,7 @@ class m extends s.Component {
         children: A.default.Messages.BILLING_ONLINE_PURCHASE_WAIVER
       }), null != e && (n || !s) ? (0, a.jsx)(o.Checkbox, {
         type: o.Checkbox.Types.INVERTED,
-        value: C,
+        value: M,
         onChange: this.handleToggleEULAAcceptance,
         disabled: r,
         className: L.checkbox,
@@ -92,7 +92,7 @@ class m extends s.Component {
         className: u,
         children: [(0, a.jsx)(o.Checkbox, {
           type: o.Checkbox.Types.INVERTED,
-          value: M,
+          value: C,
           onChange: this.handleToggleEUWithdralWaiverAcceptance,
           disabled: r,
           className: i(L.checkbox, d),

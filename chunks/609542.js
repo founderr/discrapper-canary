@@ -19,9 +19,9 @@ var a = s("37983"),
   I = s("49111"),
   S = s("214509"),
   N = s("782340"),
-  g = s("817760");
+  f = s("817760");
 
-function f(e) {
+function g(e) {
   var t, s;
   let n, {
     theme: l,
@@ -33,12 +33,12 @@ function f(e) {
   if ((null == E ? void 0 : E.application) != null) o(null != E.application.bot, "bot is null"), n = (0, a.jsx)(c.default, {
     size: u.AvatarSizes.SIZE_24,
     user: E.application.bot,
-    className: g.verifiedIcon
+    className: f.verifiedIcon
   });
   else if (null != r) {
     let e = (0, d.isThemeLight)(l) ? r.icon.lightSVG : r.icon.darkSVG;
     n = (0, a.jsx)("img", {
-      className: g.verifiedIcon,
+      className: f.verifiedIcon,
       src: e,
       alt: N.default.Messages.IMG_ALT_LOGO.format({
         name: r.name
@@ -46,10 +46,10 @@ function f(e) {
     })
   }
   return (0, a.jsxs)("div", {
-    className: i(g.verifiedRow, (null == r ? void 0 : r.hasMetadata) === !0 || (null == E ? void 0 : E.role_connections_metadata) != null && (null == E ? void 0 : E.role_connections_metadata.length) > 0 ? g.verifiedRowWithMetadata : null),
+    className: i(f.verifiedRow, (null == r ? void 0 : r.hasMetadata) === !0 || (null == E ? void 0 : E.role_connections_metadata) != null && (null == E ? void 0 : E.role_connections_metadata.length) > 0 ? f.verifiedRowWithMetadata : null),
     children: [n, (0, a.jsx)(u.Text, {
       variant: "text-md/medium",
-      className: g.verifiedText,
+      className: f.verifiedText,
       children: N.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MUST_HAVE_ACCOUNT.format({
         platformName: null !== (s = null == r ? void 0 : r.name) && void 0 !== s ? s : null == E ? void 0 : null === (t = E.application) || void 0 === t ? void 0 : t.name
       })
@@ -59,11 +59,11 @@ function f(e) {
       look: u.Button.Looks.BLANK,
       onClick: _,
       disabled: I,
-      className: g.closeButton,
+      className: f.closeButton,
       children: (0, a.jsx)(u.Tooltip, {
         text: N.default.Messages.REMOVE,
         children: e => (0, a.jsx)(T.default, {
-          className: g.closeIcon,
+          className: f.closeIcon,
           ...e
         })
       })
@@ -82,15 +82,15 @@ function A(e) {
     applicationId: E,
     metadataField: _,
     operator: T
-  } = e, I = null !== (s = null == r ? void 0 : r.index) && void 0 !== s ? s : -1, N = null != T ? T : S.OperatorTypes.GREATER_THAN, f = Math.round(Number(null !== (l = null == r ? void 0 : null === (t = r.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== l ? l : 0));
-  N === S.OperatorTypes.GREATER_THAN ? f = Math.max(1, f + 1) : N === S.OperatorTypes.LESS_THAN && (f = Math.max(0, f - 1));
-  let [A, L] = n.useState(f.toString());
+  } = e, I = null !== (s = null == r ? void 0 : r.index) && void 0 !== s ? s : -1, N = null != T ? T : S.OperatorTypes.GREATER_THAN, g = Math.round(Number(null !== (l = null == r ? void 0 : null === (t = r.configuration) || void 0 === t ? void 0 : t.value) && void 0 !== l ? l : 0));
+  N === S.OperatorTypes.GREATER_THAN ? g = Math.max(1, g + 1) : N === S.OperatorTypes.LESS_THAN && (g = Math.max(0, g - 1));
+  let [A, L] = n.useState(g.toString());
   return n.useEffect(() => {
     L(A)
   }, [A]), (0, a.jsx)(u.TextInput, {
     inputRef: i,
     type: "number",
-    className: g.numericalRuleInput,
+    className: f.numericalRuleInput,
     size: u.TextInput.Sizes.MINI,
     value: A,
     onChange: e => {
@@ -125,22 +125,22 @@ function L(e) {
     locked: d
   } = e;
   return (0, a.jsxs)("div", {
-    className: g.ruleContainer,
+    className: f.ruleContainer,
     children: [(0, a.jsxs)("div", {
       children: [(0, a.jsx)(u.Text, {
         variant: "text-md/bold",
-        className: g.ruleItemHeader,
+        className: f.ruleItemHeader,
         children: t
       }), (0, a.jsx)("div", {
-        className: g.numericalRuleSubItemContainer,
+        className: f.numericalRuleSubItemContainer,
         children: (0, a.jsx)(u.Text, {
           variant: "text-md/normal",
-          className: g.numericalRuleSubText,
+          className: f.numericalRuleSubText,
           children: s
         })
       })]
     }), (0, a.jsx)(u.Switch, {
-      className: g.ruleItemSwitch,
+      className: f.ruleItemSwitch,
       checked: (null == l ? void 0 : l.configuration.value) === "1",
       onChange: e => {
         var t, s;
@@ -179,32 +179,32 @@ function m(e) {
     platform: o,
     operator: _,
     applicationId: d
-  }, i), f = null != l ? l.format({
+  }, i), g = null != l ? l.format({
     metadataHook: () => N
   }) : (0, a.jsxs)(a.Fragment, {
     children: [N, (0, a.jsx)("span", {
-      className: g.fieldText,
+      className: f.fieldText,
       children: s
     })]
   });
   return (0, a.jsxs)("div", {
-    className: g.ruleContainer,
+    className: f.ruleContainer,
     children: [(0, a.jsxs)("div", {
-      className: g.ruleContainerLabel,
+      className: f.ruleContainerLabel,
       children: [(0, a.jsx)(u.Text, {
         variant: "text-md/bold",
-        className: g.ruleItemHeader,
+        className: f.ruleItemHeader,
         children: t
       }), (0, a.jsx)("div", {
-        className: g.numericalRuleSubItemContainer,
+        className: f.numericalRuleSubItemContainer,
         children: (0, a.jsx)(u.Text, {
           variant: "text-md/normal",
-          className: g.numericalRuleSubText,
-          children: f
+          className: f.numericalRuleSubText,
+          children: g
         })
       })]
     }), (0, a.jsx)(u.Switch, {
-      className: g.ruleItemSwitch,
+      className: f.ruleItemSwitch,
       checked: I,
       onChange: e => {
         var t, s, a;
@@ -618,8 +618,8 @@ function x(e) {
       })
   }
   return (0, a.jsxs)("div", {
-    className: g.container,
-    children: [(0, a.jsx)(f, {
+    className: f.container,
+    children: [(0, a.jsx)(g, {
       theme: r,
       platform: u,
       integration: d,

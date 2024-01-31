@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return Z
+    return X
   }
 }), s("222007");
 var a = s("37983"),
@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("79112"),
   g = s("642950"),
   h = s("875212"),
-  I = s("841098"),
-  N = s("812204"),
+  N = s("841098"),
+  I = s("812204"),
   p = s("685665"),
   C = s("619935"),
   A = s("308592"),
@@ -53,7 +53,7 @@ var a = s("37983"),
 function Q() {
   let e = (0, d.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()),
     t = (0, j.useHasDiscountApplied)(),
-    s = (0, I.default)(),
+    s = (0, N.default)(),
     {
       enabled: n
     } = (0, U.default)();
@@ -190,19 +190,19 @@ function q() {
     })]
   })
 }
-var Z = function() {
+var X = function() {
   let e = (0, C.useBlockedPaymentsConfig)(),
     {
       AnalyticsLocationProvider: t,
       analyticsLocations: s
-    } = (0, p.default)(N.default.PREMIUM_SETTINGS),
+    } = (0, p.default)(I.default.PREMIUM_SETTINGS),
     l = (0, d.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()),
     i = (0, d.useStateFromStores)([M.default], () => M.default.hasFetchedSubscriptions()),
     r = (0, A.useSubscriptionPlansLoaded)(),
     [o, c] = n.useState(!0),
     T = (0, B.useLocalizedPromoQuery)(),
     _ = null == T ? void 0 : T.countryCode,
-    I = (0, d.useStateFromStores)([R.default], () => R.default.enabled),
+    N = (0, d.useStateFromStores)([R.default], () => R.default.enabled),
     x = "PremiumManagementSettings";
   (0, h.useTriggerDebuggingAA)({
     location: x + " auto on",
@@ -212,11 +212,11 @@ var Z = function() {
     autoTrackExposure: !1
   }), n.useEffect(() => {
     E.default.wait(async () => {
-      !I && !e && await Promise.all([f.fetchSubscriptions(), f.fetchPaymentSources(), (0, m.fetchPremiumSubscriptionPlans)(_, null, w.RevenueSurfaces.DISCOVERY)]), c(!1)
+      !N && !e && await Promise.all([f.fetchSubscriptions(), f.fetchPaymentSources(), (0, m.fetchPremiumSubscriptionPlans)(_, null, w.RevenueSurfaces.DISCOVERY)]), c(!1)
     })
-  }, [_, I, e]);
+  }, [_, N, e]);
   let [D, P] = n.useState(!1);
-  if (I) return (0, a.jsx)(g.default, {});
+  if (N) return (0, a.jsx)(g.default, {});
   if (e) return (0, a.jsx)(O.BlockedPaymentsContentSettings, {});
   if ((!i || null == l || !r) && !o) return (0, a.jsx)(v.default, {
     title: V.default.Messages.REDIRECTED_CALLBACK_ERROR,

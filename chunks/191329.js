@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   GuildSettingsDiscoveryNotice: function() {
-    return k
+    return w
   },
   default: function() {
     return Y
@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("453910"),
   S = s("283167"),
   N = s("868246"),
-  g = s("324105"),
-  f = s("385976"),
+  f = s("324105"),
+  g = s("385976"),
   A = s("407063"),
   L = s("694187"),
   m = s("608684"),
@@ -46,7 +46,7 @@ var a = s("37983"),
   F = s("447621"),
   H = s("782340"),
   V = s("15145");
-let k = i.default.connectStores([v.default], () => {
+let w = i.default.connectStores([v.default], () => {
   let {
     guild: e,
     originalGuild: t,
@@ -82,7 +82,7 @@ let k = i.default.connectStores([v.default], () => {
     }
   }
 })(o.default);
-class w extends n.PureComponent {
+class k extends n.PureComponent {
   async componentDidMount() {
     let {
       guild: e
@@ -135,7 +135,7 @@ class w extends n.PureComponent {
             children: s ? H.default.Messages.GUILD_SETTINGS_DISABLE_DISCOVERABLE : H.default.Messages.GUILD_SETTINGS_ENABLE_DISCOVERABLE
           })
         })]
-      }), (0, a.jsx)(g.default, {
+      }), (0, a.jsx)(f.default, {
         className: V.guildCard,
         loading: null == e,
         guild: e
@@ -203,7 +203,7 @@ class w extends n.PureComponent {
       emojiDiscoverabilityEnabled: o
     } = s, d = i;
     if (null == d && null != n) {
-      let e = f.default.getGuildEmoji(n.id);
+      let e = g.default.getGuildEmoji(n.id);
       d = {
         ...n,
         premiumSubscriptionCount: null == n ? void 0 : n.premiumSubscriberCount,
@@ -512,4 +512,4 @@ var Y = i.default.connectStores([v.default, R.default, _.default, h.default, N.d
     primaryCategoryOptions: d,
     localeOptions: c
   }
-})(w)
+})(k)

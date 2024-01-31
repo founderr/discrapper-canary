@@ -7,11 +7,11 @@ s.r(t), s.d(t, {
     return u
   }
 });
-var l = s("37983");
+var n = s("37983");
 s("884691");
-var n = s("414456"),
-  r = s.n(n),
-  o = s("77078"),
+var l = s("414456"),
+  o = s.n(l),
+  r = s("77078"),
   a = s("53895");
 let i = {
   RED: a.redMessageBlock,
@@ -23,17 +23,17 @@ function u(e) {
   let {
     color: t,
     icon: s,
-    children: n,
+    children: l,
     className: i
   } = e;
-  return (0, l.jsx)(o.FormErrorBlock, {
-    icon: e => (0, l.jsx)(s, {
+  return (0, n.jsx)(r.FormErrorBlock, {
+    icon: e => (0, n.jsx)(s, {
       height: 20,
       width: 20,
       ...e
     }),
     iconClassName: a.messageBlockIcon,
-    className: r(t, i),
-    children: n
+    className: o(t, i),
+    children: l
   })
 }

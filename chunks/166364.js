@@ -20,9 +20,9 @@ var n = s("281071"),
   I = s("739726"),
   S = s("782340"),
   N = s("540583");
-let g = "guild-product-listings-header";
+let f = "guild-product-listings-header";
 
-function f(e) {
+function g(e) {
   let {
     guildId: t,
     handleCreateOrEditProduct: o
@@ -30,7 +30,7 @@ function f(e) {
     publishedOnly: !1
   }), {
     shouldRestrictUpdatingCreatorMonetizationSettings: _
-  } = (0, r.useShouldRestrictUpdatingCreatorMonetizationSettings)(t), f = e => {
+  } = (0, r.useShouldRestrictUpdatingCreatorMonetizationSettings)(t), g = e => {
     (0, u.updateGuildProductListing)(t, e, {
       published: !1
     })
@@ -52,17 +52,17 @@ function f(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(l.FormTitle, {
       className: N.productListingsHeader,
-      id: g,
+      id: f,
       children: m ? S.default.Messages.GUILD_PRODUCTS_YOUR_PRODUCTS_HEADER : S.default.Messages.GUILD_PRODUCTS_NO_PRODUCTS_HEADER
     }), m ? (0, a.jsx)("ul", {
       className: N.productListings,
-      "aria-labelledby": g,
+      "aria-labelledby": f,
       children: d.map(e => (0, a.jsx)("li", {
         children: (0, a.jsx)(I.default, {
           guildId: t,
           product: e,
           onEditProduct: () => o(e.id),
-          onUnpublishProduct: () => f(e.id),
+          onUnpublishProduct: () => g(e.id),
           onDeleteProduct: () => A(e.id, e.name),
           onCopyProductLink: () => L(t, e.id),
           onTestDownload: () => T.default.open({
@@ -105,7 +105,7 @@ function A(e) {
       }), S.default.Messages.GUILD_PRODUCTS_CREATE_PRODUCT_BUTTON]
     }), (0, a.jsx)(o.default, {
       size: 24
-    }), (0, a.jsx)(f, {
+    }), (0, a.jsx)(g, {
       guildId: t,
       handleCreateOrEditProduct: n
     })]

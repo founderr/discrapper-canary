@@ -128,7 +128,7 @@ function d(e, t) {
         }
       })
     }, [c]),
-    g = a.useCallback(function(e) {
+    f = a.useCallback(function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
       c(s => {
         let {
@@ -145,7 +145,7 @@ function d(e, t) {
         }
       })
     }, [c]),
-    f = a.useCallback(e => {
+    g = a.useCallback(e => {
       var t;
       c(e => {
         let {
@@ -268,13 +268,13 @@ function d(e, t) {
     }, [L]),
     R = a.useCallback(e => {
       let t = e.metaKey || e.ctrlKey;
-      "Meta" !== e.key && (r.NEXT_CHIP_INPUT_KEY.has(e.key) ? L(e) : "Backspace" === e.key ? m(e) : "Escape" === e.key ? f(e) : "a" === e.key && t ? O(e) : r.CHIPLET_STATE_HISTORY_KEYS.has(e.key) && t && C(e))
-    }, [L, m, f, O, C]),
+      "Meta" !== e.key && (r.NEXT_CHIP_INPUT_KEY.has(e.key) ? L(e) : "Backspace" === e.key ? m(e) : "Escape" === e.key ? g(e) : "a" === e.key && t ? O(e) : r.CHIPLET_STATE_HISTORY_KEYS.has(e.key) && t && C(e))
+    }, [L, m, g, O, C]),
     D = a.useCallback(e => {
       if (document.activeElement !== l.current) return;
       let t = e.metaKey || e.ctrlKey;
-      "Backspace" === e.key ? m(e) : "a" === e.key && t ? O(e) : "Escape" === e.key ? f(e) : r.CHIPLET_STATE_HISTORY_KEYS.has(e.key) && t ? C(e) : "Meta" !== e.key && f(e)
-    }, [C, m, O, f, l]);
+      "Backspace" === e.key ? m(e) : "a" === e.key && t ? O(e) : "Escape" === e.key ? g(e) : r.CHIPLET_STATE_HISTORY_KEYS.has(e.key) && t ? C(e) : "Meta" !== e.key && g(e)
+    }, [C, m, O, g, l]);
   return {
     handlePasteEvent: T,
     handleInputChange: A,
@@ -283,8 +283,8 @@ function d(e, t) {
     handleRemoveTag: I,
     handleTagChangeEvent: S,
     handleSelectTag: N,
-    handleUnselectTag: g,
-    handleResetTagSelections: f,
+    handleUnselectTag: f,
+    handleResetTagSelections: g,
     handleInputBlurEvent: h
   }
 }

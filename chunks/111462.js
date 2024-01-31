@@ -32,7 +32,7 @@ function r(e, t, s) {
     id: e,
     icon: T,
     size: s
-  }), S = a.useMemo(() => null != _ && _.length > t ? _.slice(0, t) : _, [_, t]), N = null != _ && _.length > t ? _.length - t : null, g = null == c ? void 0 : c.slug, f = null != g ? i.MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(g) : void 0, A = null == E ? void 0 : null === (r = E.guild) || void 0 === r ? void 0 : r.name, L = null == E ? void 0 : null === (o = E.role_subscription) || void 0 === o ? void 0 : o.subscriber_count, m = !d && null != A && null != T && null != I;
+  }), S = a.useMemo(() => null != _ && _.length > t ? _.slice(0, t) : _, [_, t]), N = null != _ && _.length > t ? _.length - t : null, f = null == c ? void 0 : c.slug, g = null != f ? i.MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(f) : void 0, A = null == E ? void 0 : null === (r = E.guild) || void 0 === r ? void 0 : r.name, L = null == E ? void 0 : null === (o = E.role_subscription) || void 0 === o ? void 0 : o.subscriber_count, m = !d && null != A && null != T && null != I;
   return m ? {
     hasAllImperativeDetails: m,
     isLoading: d,
@@ -40,7 +40,7 @@ function r(e, t, s) {
       guildName: A,
       guildIcon: T,
       guildAvatarUrl: I,
-      storePageUrl: f,
+      storePageUrl: g,
       subscriberCount: L,
       emojisToShow: S,
       notShownEmojiCount: N

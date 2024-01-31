@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("567062"),
   S = s("42203"),
   N = s("923959"),
-  g = s("957255"),
-  f = s("27618"),
+  f = s("957255"),
+  g = s("27618"),
   A = s("697218"),
   L = s("593195"),
   m = s("592407"),
@@ -38,8 +38,8 @@ function D(e) {
     isExpanded: s,
     selectedChannelId: l,
     className: r
-  } = e, I = (0, _.useCanEnableRaidAlerts)(t), N = t.canHaveRaidActivityAlerts(), [g, f] = n.useState(N), A = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(l), [l]), m = (0, c.default)(A), D = async () => {
-    f(!g);
+  } = e, I = (0, _.useCanEnableRaidAlerts)(t), N = t.canHaveRaidActivityAlerts(), [f, g] = n.useState(N), A = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(l), [l]), m = (0, c.default)(A), D = async () => {
+    g(!f);
     try {
       var e;
       await (0, E.setGuildRaidAlerts)(t, !N);
@@ -55,7 +55,7 @@ function D(e) {
         (0, u.trackWithMetadata)(O.AnalyticEvents.GUILD_RAID_ALERTS_SETUP, e)
       }
     } catch (e) {
-      (0, d.showToast)((0, d.createToast)(h.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, d.ToastType.FAILURE)), f(!N)
+      (0, d.showToast)((0, d.createToast)(h.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, d.ToastType.FAILURE)), g(!N)
     }
   };
   return (0, a.jsxs)("div", {
@@ -80,7 +80,7 @@ function D(e) {
         }), " ", m]
       })]
     }), (0, a.jsx)(C.default, {
-      checked: g,
+      checked: f,
       onChange: D,
       disabled: !I || null == l
     })]
@@ -94,20 +94,20 @@ function M(e) {
     selectedChannelId: n,
     setSelectedChannelId: l,
     className: E
-  } = e, _ = null !== (t = s.safetyAlertsChannelId) && void 0 !== t ? t : null, I = (0, o.useStateFromStoresArray)([N.default, A.default, f.default, g.default], () => {
+  } = e, _ = null !== (t = s.safetyAlertsChannelId) && void 0 !== t ? t : null, I = (0, o.useStateFromStoresArray)([N.default, A.default, g.default, f.default], () => {
     let e = N.default.getChannels(s.id),
       t = e[0, N.GUILD_SELECTABLE_CHANNELS_KEY].filter(e => {
         let {
           channel: t
         } = e;
-        return t.type === r.ChannelTypes.GUILD_TEXT && g.default.can(O.Permissions.SEND_MESSAGES, t)
+        return t.type === r.ChannelTypes.GUILD_TEXT && f.default.can(O.Permissions.SEND_MESSAGES, t)
       }).map(e => {
         let {
           channel: t
         } = e;
         return {
           value: t.id,
-          label: (0, c.computeChannelName)(t, A.default, f.default, !0)
+          label: (0, c.computeChannelName)(t, A.default, g.default, !0)
         }
       });
     return null != _ ? t : [...t]

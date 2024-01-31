@@ -1,61 +1,61 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return h
+    return f
   }
 });
-var i = n("37983");
-n("884691");
-var l = n("414456"),
-  r = n.n(l),
-  s = n("77078"),
-  a = n("181114"),
-  o = n("771325"),
-  u = n("570697"),
-  d = n("75015"),
-  c = n("782340"),
-  f = n("359223");
+var a = s("37983");
+s("884691");
+var n = s("414456"),
+  l = s.n(n),
+  i = s("77078"),
+  r = s("181114"),
+  o = s("771325"),
+  d = s("570697"),
+  u = s("75015"),
+  c = s("782340"),
+  S = s("359223");
 let E = [{
   name: "gif",
   extensions: ["gif"]
 }];
 
-function h(e) {
+function f(e) {
   let {
     showRemoveAvatarButton: t,
-    errors: n,
-    onAvatarChange: l,
-    sectionTitle: h,
-    changeAvatarButtonText: _,
-    guildId: C,
-    className: p,
-    disabled: S = !1,
-    isTryItOutFlow: I = !1,
-    forcedDivider: R,
-    withHighlight: m = !1
-  } = e, g = m ? a.default : s.Button;
-  return (0, i.jsx)(u.default, {
-    className: p,
-    title: h,
-    errors: n,
-    disabled: S,
-    forcedDivider: R,
-    children: (0, i.jsxs)("div", {
-      className: f.buttonsContainer,
-      children: [(0, i.jsx)(g, {
-        className: r({
-          [f.buttonHighlighted]: m
+    errors: s,
+    onAvatarChange: n,
+    sectionTitle: f,
+    changeAvatarButtonText: T,
+    guildId: m,
+    className: _,
+    disabled: g = !1,
+    isTryItOutFlow: h = !1,
+    forcedDivider: N,
+    withHighlight: I = !1
+  } = e, p = I ? r.default : i.Button;
+  return (0, a.jsx)(d.default, {
+    className: _,
+    title: f,
+    errors: s,
+    disabled: g,
+    forcedDivider: N,
+    children: (0, a.jsxs)("div", {
+      className: S.buttonsContainer,
+      children: [(0, a.jsx)(p, {
+        className: l({
+          [S.buttonHighlighted]: I
         }),
-        size: s.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(d.UploadTypes.AVATAR, C, I, I ? E : void 0),
-        children: null != _ ? _ : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
-      }), t && (0, i.jsx)(s.Button, {
-        className: f.removeButton,
-        color: s.Button.Colors.PRIMARY,
-        look: s.Button.Looks.LINK,
-        size: s.Button.Sizes.SMALL,
-        onClick: () => l(null),
-        children: null != C ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
+        size: i.Button.Sizes.SMALL,
+        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, m, h, h ? E : void 0),
+        children: null != T ? T : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
+      }), t && (0, a.jsx)(i.Button, {
+        className: S.removeButton,
+        color: i.Button.Colors.PRIMARY,
+        look: i.Button.Looks.LINK,
+        size: i.Button.Sizes.SMALL,
+        onClick: () => n(null),
+        children: null != m ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
       })]
     })
   })

@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return A
+    return v
   }
 }), i("222007");
 var n = i("37983"),
@@ -21,40 +21,40 @@ var n = i("37983"),
   g = i("788506"),
   _ = i("49111"),
   S = i("646718"),
-  h = i("782340"),
-  C = i("764942");
+  C = i("782340"),
+  h = i("764942");
 let T = "premiumRetentionEmojiPickerNotice",
   N = o.default.get(T);
-var A = e => {
+var v = e => {
   let {
     closePopout: t,
     channel: i
-  } = e, [s, A] = l.useState(!1), {
-    subscription: y,
-    hasFetchedSubscriptions: v
+  } = e, [s, v] = l.useState(!1), {
+    subscription: A,
+    hasFetchedSubscriptions: y
   } = (0, r.useStateFromStoresObject)([f.default], () => ({
     subscription: f.default.getPremiumSubscription(),
     hasFetchedSubscriptions: f.default.hasFetchedSubscriptions()
   }));
   if (l.useEffect(() => {
-      !v && (0, c.fetchSubscriptions)()
-    }, [v]), null == y || !(0, p.isSubscriptionStatusFailedPayment)(y.status) || s) return null;
-  let j = y.status === _.SubscriptionStatusTypes.PAST_DUE ? (0, p.getBillingGracePeriodDays)(y) : S.MAX_ACCOUNT_HOLD_DAYS,
-    R = a(y.currentPeriodStart).add(j, "days"),
-    O = "".concat(y.id, ":").concat(R.toISOString());
+      !y && (0, c.fetchSubscriptions)()
+    }, [y]), null == A || !(0, p.isSubscriptionStatusFailedPayment)(A.status) || s) return null;
+  let j = A.status === _.SubscriptionStatusTypes.PAST_DUE ? (0, p.getBillingGracePeriodDays)(A) : S.MAX_ACCOUNT_HOLD_DAYS,
+    R = a(A.currentPeriodStart).add(j, "days"),
+    O = "".concat(A.id, ":").concat(R.toISOString());
   if (N === O) return null;
-  let M = p.default.getPremiumType(y.planId) === S.PremiumTypes.TIER_0 ? E.GradientCssUrls.PREMIUM_TIER_0 : p.default.getPremiumType(y.planId) === S.PremiumTypes.TIER_1 ? E.GradientCssUrls.PREMIUM_TIER_1 : E.GradientCssUrls.PREMIUM_TIER_2;
+  let M = p.default.getPremiumType(A.planId) === S.PremiumTypes.TIER_0 ? E.GradientCssUrls.PREMIUM_TIER_0 : p.default.getPremiumType(A.planId) === S.PremiumTypes.TIER_1 ? E.GradientCssUrls.PREMIUM_TIER_1 : E.GradientCssUrls.PREMIUM_TIER_2;
   return (0, n.jsxs)("div", {
-    className: C.premiumRetentionNotice,
+    className: h.premiumRetentionNotice,
     children: [(0, n.jsx)(I.default, {
-      className: C.premiumRetentionNoticeIcon,
+      className: h.premiumRetentionNoticeIcon,
       color: M
     }), (0, n.jsxs)("div", {
-      className: C.premiumRetentionNoticeContent,
+      className: h.premiumRetentionNoticeContent,
       children: [(0, n.jsx)(u.Text, {
         variant: "text-xs/normal",
-        children: h.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
-          planName: p.default.getDisplayPremiumType(y.planId),
+        children: C.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
+          planName: p.default.getDisplayPremiumType(A.planId),
           endsAt: R
         })
       }), (0, n.jsx)("div", {
@@ -62,15 +62,15 @@ var A = e => {
           onClick: () => {
             (0, g.trackPremiumSettingsPaneOpened)(i), t(), d.default.open(_.UserSettingsSections.PREMIUM)
           },
-          children: h.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_UPDATE_PAYMENT_INFORMATION
+          children: C.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_UPDATE_PAYMENT_INFORMATION
         })
       })]
     }), (0, n.jsx)(u.Clickable, {
       onClick: () => {
-        o.default.set(T, O), N = O, A(!0)
+        o.default.set(T, O), N = O, v(!0)
       },
       children: (0, n.jsx)(m.default, {
-        className: C.premiumRetentionNoticeClose
+        className: h.premiumRetentionNoticeClose
       })
     })]
   })

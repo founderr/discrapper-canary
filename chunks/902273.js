@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("915639"),
   S = s("525065"),
   N = s("305961"),
-  g = s("37785"),
-  f = s("68238"),
+  f = s("37785"),
+  g = s("68238"),
   A = s("956089"),
   L = s("599110"),
   m = s("199938"),
@@ -54,10 +54,10 @@ let V = function(e, t, s) {
       isTrendingDown: t < 0
     }
   },
-  k = function(e) {
+  w = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return t || e === D.AbortCodes.NOT_ENOUGH_GUILD_MEMBERS ? (0, a.jsx)(c.FormErrorBlock, {
-      icon: f.default,
+      icon: g.default,
       className: p.notEnoughMembersError,
       backgroundColor: c.FormErrorBlockColors.BACKGROUND_ACCENT,
       children: x.default.Messages.GUILD_ANALYTICS_ERROR_GUILD_SIZE
@@ -67,7 +67,7 @@ let V = function(e, t, s) {
     })
   };
 
-function w(e) {
+function k(e) {
   L.default.track(D.AnalyticEvents.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, {
     guild_id: e
   });
@@ -91,7 +91,7 @@ let Y = () => {
   return (0, a.jsx)(c.Button, {
     className: p.developerPortalCta,
     onClick: () => {
-      t(!0), w(s).then(() => {
+      t(!0), k(s).then(() => {
         t(!1)
       })
     },
@@ -179,7 +179,7 @@ function K(e) {
             children: [N, (0, a.jsx)(c.TooltipContainer, {
               text: x.default.Messages.MEMBER_INSIGHTS_ACCESS_RATE_TOOLTIP,
               className: p.insightsTooltip,
-              children: (0, a.jsx)(f.default, {
+              children: (0, a.jsx)(g.default, {
                 className: p.insightsTooltipIcon
               })
             })]
@@ -230,7 +230,7 @@ function K(e) {
               className: p.actionText,
               variant: "text-sm/normal",
               children: x.default.Messages.ACCESS_RATE_ACTION_BOTS.format({
-                integrationsHook: (e, t) => (0, a.jsx)(g.default, {
+                integrationsHook: (e, t) => (0, a.jsx)(f.default, {
                   onClick: () => C.default.setSection(D.GuildSettingsSections.INTEGRATIONS),
                   className: p.link,
                   children: e
@@ -264,8 +264,8 @@ function K(e) {
             className: p.actionText,
             variant: "text-sm/normal",
             children: x.default.Messages.ACCESS_RATE_ACTION_SUCCESS.format({
-              insightsHook: (e, s) => (0, a.jsx)(g.default, {
-                onClick: () => w(t),
+              insightsHook: (e, s) => (0, a.jsx)(f.default, {
+                onClick: () => k(t),
                 className: p.link,
                 children: e
               }, s)
@@ -328,7 +328,7 @@ var W = () => {
     children: [(0, a.jsx)(c.FormText, {
       type: c.FormTextTypes.DESCRIPTION,
       children: x.default.Messages.GUILD_ANALYTICS_DESCRIPTION.format()
-    }), k(o, d), null != e ? (0, a.jsx)(K, {
+    }), w(o, d), null != e ? (0, a.jsx)(K, {
       guildId: e
     }) : null, (0, a.jsxs)("div", {
       className: p.developerPortalCtaWrapper,

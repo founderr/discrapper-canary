@@ -21,12 +21,12 @@ var a = s("37983"),
       paginationCaretClassName: l,
       intervalBetweenAutomaticItemRotations: _,
       renderItem: T
-    } = e, I = n.useMemo(() => new r.Interval, []), [S, N] = n.useState(u.SlideDirection.LEFT), [g, f] = n.useState(0), [A, L] = n.useState(!1), [m, C] = n.useState(!1), O = n.useCallback((e, t) => {
-      f(s => {
+    } = e, I = n.useMemo(() => new r.Interval, []), [S, N] = n.useState(u.SlideDirection.LEFT), [f, g] = n.useState(0), [A, L] = n.useState(!1), [m, C] = n.useState(!1), O = n.useCallback((e, t) => {
+      g(s => {
         let a = s + t;
         return a < 0 ? a = e.length - 1 : a > e.length - 1 && (a = 0), a
       })
-    }, [f]), h = n.useCallback(() => {
+    }, [g]), h = n.useCallback(() => {
       !m && O(t, 1)
     }, [O, t, m]), R = n.useCallback(() => {
       !m && O(t, -1)
@@ -49,12 +49,12 @@ var a = s("37983"),
           "aria-label": c.default.Messages.GUILD_ROLE_SUBSCRIPTION_OTHER_CREATOR_PREVIOUS_CARD_ARIA_LABEL
         })
       }), (0, a.jsx)(u.default, {
-        step: g,
+        step: f,
         direction: S,
         onAnimationStart: () => C(!0),
         onAnimationEnd: () => C(!1),
         className: i(E.carousel, s),
-        children: T(t[g])
+        children: T(t[f])
       }), (0, a.jsx)(o.Clickable, {
         className: i(E.carouselCaret, l),
         onClick: h,

@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("45029"),
   S = s("851490"),
   N = s("904383"),
-  g = s("223729"),
-  f = s("49111"),
+  f = s("223729"),
+  g = s("49111"),
   A = s("782340"),
   L = s("622802");
 
@@ -106,7 +106,7 @@ let C = n.memo(function() {
       isFirstChannel: _,
       isLastChannel: m,
       tooltipDirection: h = "right"
-    } = e, R = (0, N.useIsChecked)(t.id, n.id), D = (0, N.useIsDisabled)(t.id, n.id), M = (0, N.useDisabledTooltip)(t.id, n.id), G = (0, N.useTooltip)(l.id, n.id), x = (0, g.default)(l), p = null != x.find(e => e.id === t.id), U = (0, c.useIsChattableChannel)(t.id), v = e => {
+    } = e, R = (0, N.useIsChecked)(t.id, n.id), D = (0, N.useIsDisabled)(t.id, n.id), M = (0, N.useDisabledTooltip)(t.id, n.id), G = (0, N.useTooltip)(l.id, n.id), x = (0, f.default)(l), p = null != x.find(e => e.id === t.id), U = (0, c.useIsChattableChannel)(t.id), v = e => {
       if (D) return;
       e.stopPropagation();
       let n = (0, u.canChannelBeDefault)(l.id, t.id);
@@ -197,7 +197,7 @@ let C = n.memo(function() {
               color: o.Button.Colors.PRIMARY,
               className: L.lockedPill,
               innerClassName: L.lockedPillInner,
-              onClick: f.NOOP,
+              onClick: g.NOOP,
               children: [(0, a.jsx)(I.default, {
                 width: 16,
                 height: 16

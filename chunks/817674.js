@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
     return K
   },
   default: function() {
-    return X
+    return Z
   }
 }), s("222007");
 var a = s("37983"),
@@ -25,8 +25,8 @@ var a = s("37983"),
   I = s("298878"),
   S = s("610174"),
   N = s("413476"),
-  g = s("413266"),
-  f = s("926809"),
+  f = s("413266"),
+  g = s("926809"),
   A = s("466818"),
   L = s("42203"),
   m = s("957255"),
@@ -50,7 +50,7 @@ var a = s("37983"),
   H = s("782340"),
   V = s("761356");
 
-function k(e) {
+function w(e) {
   let {
     guild: t
   } = e, s = t.canHaveRaidActivityAlerts(), l = (0, o.useStateFromStores)([m.default], () => null != t && m.default.can(F.Permissions.MANAGE_GUILD, t), [t]), {
@@ -60,13 +60,13 @@ function k(e) {
     location: "1a2662_1"
   }, {
     autoTrackExposure: l
-  }), r = (0, f.useIsMentionRaidExperimentEnabled)(t.id), u = (0, o.useStateFromStores)([L.default], () => L.default.getChannel(t.safetyAlertsChannelId), [t.safetyAlertsChannelId]), c = (0, _.default)(u), S = null != u, A = n.useMemo(() => {
+  }), r = (0, g.useIsMentionRaidExperimentEnabled)(t.id), u = (0, o.useStateFromStores)([L.default], () => L.default.getChannel(t.safetyAlertsChannelId), [t.safetyAlertsChannelId]), c = (0, _.default)(u), S = null != u, A = n.useMemo(() => {
     let e = (null == u ? void 0 : u.type) != null ? (0, T.getSimpleChannelIconComponent)(u.type) : null;
     return null != e ? e : R.default
   }, [u]);
 
   function C() {
-    i && (0, g.openSafetyChannelSetupModal)(t.id)
+    i && (0, f.openSafetyChannelSetupModal)(t.id)
   }
   return l ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.FormDivider, {
@@ -195,7 +195,7 @@ function k(e) {
   }) : null
 }
 
-function w(e) {
+function k(e) {
   let {
     guild: t
   } = e, s = (0, o.useStateFromStores)([m.default], () => null != t && m.default.can(F.Permissions.MANAGE_GUILD, t), [t]), l = n.useCallback(async e => {
@@ -403,7 +403,7 @@ function z(e) {
   }) : null
 }
 
-function X() {
+function Z() {
   var e;
   let {
     guild: t,
@@ -417,7 +417,7 @@ function X() {
     titleClassName: V.headerContainer,
     children: [(0, a.jsx)(W, {
       guild: t
-    }), (0, a.jsx)(w, {
+    }), (0, a.jsx)(k, {
       guild: t
     }), (0, a.jsx)(z, {
       guild: t,
@@ -433,7 +433,7 @@ function X() {
           guild: t
         })
       })]
-    }) : (0, a.jsx)(k, {
+    }) : (0, a.jsx)(w, {
       guild: t
     })]
   })

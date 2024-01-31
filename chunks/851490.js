@@ -40,8 +40,8 @@ async function N(e) {
     s = E.default.advancedMode,
     [I, S] = (0, r.getChattableDefaultChannels)(e.id, [...t]),
     N = (0, r.getMinimumSetOfDefaultChannelIds)(e.id, t, E.default.editedOnboardingPrompts),
-    g = (0, r.getMinimumSetOfDefaultChannelIds)(e.id, t, E.default.editedOnboardingPrompts, r.isChattableChannelId);
-  if (i.default.getEnabled(e.id) && (!s && (S.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || I.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN) || s && (N.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || g.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN))) {
+    f = (0, r.getMinimumSetOfDefaultChannelIds)(e.id, t, E.default.editedOnboardingPrompts, r.isChattableChannelId);
+  if (i.default.getEnabled(e.id) && (!s && (S.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || I.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN) || s && (N.length < _.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING || f.length < _.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN))) {
     n.default.show({
       title: T.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
       body: T.default.Messages.DEFAULT_CHANNELS_SAVE_INVALID_DEFAULT_CHANNELS
@@ -61,11 +61,11 @@ async function N(e) {
         channelIds: t
       })
     } catch (s) {
-      var f;
+      var g;
       let {
         fieldName: e,
         error: t
-      } = null !== (f = new(0, l.APIError)(s).getAnyErrorMessageAndField()) && void 0 !== f ? f : {};
+      } = null !== (g = new(0, l.APIError)(s).getAnyErrorMessageAndField()) && void 0 !== g ? g : {};
       n.default.show({
         title: T.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
         body: [e, t].filter(d.isNotNullish).join(": ")

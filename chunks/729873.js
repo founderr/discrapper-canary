@@ -21,13 +21,13 @@ var n = i("37983"),
   g = i("351825"),
   _ = i("315102"),
   S = i("402671"),
-  h = i("788506"),
-  C = i("352046"),
+  C = i("788506"),
+  h = i("352046"),
   T = i("917764"),
   N = i("83017"),
-  A = i("913631"),
-  y = i("115279"),
-  v = i("782340"),
+  v = i("913631"),
+  A = i("115279"),
+  y = i("782340"),
   j = i("783935");
 
 function R(e) {
@@ -50,13 +50,13 @@ let O = e => {
         canViewAndUsePackEmoji: !0,
         guildId: n
       });
-      return e ? v.default.Messages.INVENTORY_LOCKED_PACK_EMOJI_UPSELL.format({
+      return e ? y.default.Messages.INVENTORY_LOCKED_PACK_EMOJI_UPSELL.format({
         packName: s.name
-      }) : v.default.Messages.EMOJI_FROM_PACK_V2.format({
+      }) : y.default.Messages.EMOJI_FROM_PACK_V2.format({
         packName: s.name
       })
     }
-    return null != a && r ? v.default.Messages.EMOJI_FROM_GUILD.format({
+    return null != a && r ? y.default.Messages.EMOJI_FROM_GUILD.format({
       guildName: a.name
     }) : null
   },
@@ -64,7 +64,7 @@ let O = e => {
     let t, {
         className: i,
         emojiGrid: S,
-        guildId: v,
+        guildId: y,
         pickerIntention: M,
         channel: x
       } = e,
@@ -89,21 +89,21 @@ let O = e => {
       w = (0, s.useStateFromStores)([p.default], () => p.default.isFocused()),
       G = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion, []),
       k = m.AnimateEmoji.useSetting(),
-      F = (0, h.useIsFavoriteEmoji)(v, R(D) ? D : null),
+      V = (0, C.useIsFavoriteEmoji)(y, R(D) ? D : null),
       {
-        newlyAddedEmojis: V
-      } = (0, C.default)(v, M),
-      K = D.id,
-      H = (null == L ? void 0 : L.type) === N.EmojiGridItemTypes.EMOJI ? L.subCategory : y.EmojiSubCategory.NONE;
+        newlyAddedEmojis: F
+      } = (0, h.default)(y, M),
+      H = D.id,
+      K = (null == L ? void 0 : L.type) === N.EmojiGridItemTypes.EMOJI ? L.subCategory : A.EmojiSubCategory.NONE;
     if (l.useEffect(() => {
         let e = Date.now();
         return () => {
           let t = Date.now() - e;
-          t >= 250 && R(D) && H !== y.EmojiSubCategory.NONE && (H === y.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== D && D.type === o.EmojiTypes.GUILD && (0, c.updateNewlyAddedEmojiSeenAcknowledged)(D.guildId, V[0].id), null != P.source && (0, h.trackEmojiFocus)({
+          t >= 250 && R(D) && K !== A.EmojiSubCategory.NONE && (K === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== D && D.type === o.EmojiTypes.GUILD && (0, c.updateNewlyAddedEmojiSeenAcknowledged)(D.guildId, F[0].id), null != P.source && (0, C.trackEmojiFocus)({
             emoji: D,
-            subCategory: H,
+            subCategory: K,
             position: L.columnIndex + 1,
-            newlyAddedHighlight: H === y.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(v, K)
+            newlyAddedHighlight: K === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(y, H)
           }))
         }
       }), null == D) return null;
@@ -129,7 +129,7 @@ let O = e => {
       width: 24,
       height: 24
     });
-    let J = null != U ? (0, n.jsx)(A.default, {
+    let J = null != U ? (0, n.jsx)(v.default, {
       className: j.guildIcon,
       pack: U
     }) : null != b ? (0, n.jsx)(T.default, {
@@ -145,12 +145,12 @@ let O = e => {
       titleSecondary: O({
         inspectedEmoji: D,
         channel: x,
-        guildId: v,
+        guildId: y,
         intention: M,
         pack: U,
         guild: b
       }),
-      isFavorite: F,
-      emojiSubCategory: H
+      isFavorite: V,
+      emojiSubCategory: K
     })
   })

@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("462491"),
   g = s("782340"),
   h = s("577199"),
-  I = s("180437"),
-  N = s("926622");
+  N = s("180437"),
+  I = s("926622");
 
 function p() {
   let e = c.ClipsAllowVoiceRecording.useSetting(),
@@ -54,10 +54,10 @@ function p() {
         children: [(0, a.jsx)(m.default, {}), (0, a.jsx)(_.default, {})]
       })
     }), p && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
-      className: N.marginTop20,
+      className: I.marginTop20,
       children: [(0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
-        className: I.formItem,
+        className: N.formItem,
         value: e,
         note: g.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
         onChange: e => f.updateAllowVoiceRecording({
@@ -66,7 +66,7 @@ function p() {
         children: g.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
       }), t && (0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
-        className: I.formItem,
+        className: N.formItem,
         value: C,
         note: g.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
         onChange: e => f.updateViewerClipsEnabled(e),

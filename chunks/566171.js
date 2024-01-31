@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("735201"),
   S = s("26989"),
   N = s("697218"),
-  g = s("773309"),
-  f = s("533403"),
+  f = s("773309"),
+  g = s("533403"),
   A = s("427459"),
   L = s("159885"),
   m = s("49111"),
@@ -57,7 +57,7 @@ class R extends n.Component {
     let l = {
         numRequired: 0,
         y: 0,
-        key: g.FIRST_TIER_KEY
+        key: f.FIRST_TIER_KEY
       },
       i = (0, A.getAppliedGuildBoostsRequired)(s),
       r = e.map(e => {
@@ -69,7 +69,7 @@ class R extends n.Component {
           key: e.tier
         }
       });
-    return (0, a.jsx)(g.default, {
+    return (0, a.jsx)(f.default, {
       className: n > 0 ? O.progressWithSubscriptions : O.progress,
       progress: n,
       tiers: [l, ...r],
@@ -100,7 +100,7 @@ class R extends n.Component {
     return (0, a.jsxs)("div", {
       ref: this.defaultTierRef,
       className: O.subscribers,
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(g.default, {
         guildId: null != s ? s : void 0,
         users: e,
         renderUser: this.renderSubscriber,

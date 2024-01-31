@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("570697"),
   g = s("632892"),
   h = s("49111"),
-  I = s("646718"),
-  N = s("782340"),
+  N = s("646718"),
+  I = s("782340"),
   p = s("273072");
 
 function C(e) {
@@ -49,7 +49,7 @@ function C(e) {
   }), [D, R]);
   n.useEffect(() => {
     v && f.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: I.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
+      type: N.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
       location_stack: D
     })
   }, [v, D]);
@@ -59,7 +59,7 @@ function C(e) {
     forcedDivider: C,
     borderType: g.FeatureBorderTypes.PREMIUM,
     hasBackground: !0,
-    title: N.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
+    title: I.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
     showBorder: O,
     errors: P,
     className: l,
@@ -71,7 +71,7 @@ function C(e) {
         className: i({
           [p.buttonHighlighted]: A
         }),
-        children: N.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
+        children: I.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
       }), b && (0, a.jsx)(o.Button, {
         className: p.removeButton,
         color: o.Button.Colors.PRIMARY,
@@ -80,7 +80,7 @@ function C(e) {
         onClick: function() {
           (0, m.setNewPendingProfileEffectId)(null, null == M ? void 0 : M.profileEffectId)
         },
-        children: N.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
+        children: I.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
       })]
     })
   })

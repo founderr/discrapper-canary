@@ -20,8 +20,8 @@ var n = s("77078"),
   I = s("130437"),
   S = s("940958"),
   N = s("657650"),
-  g = s("441901"),
-  f = s("49111"),
+  f = s("441901"),
+  g = s("49111"),
   A = s("782340"),
   L = s("794819");
 
@@ -30,7 +30,7 @@ function m(e) {
     payoutsByPeriod: t,
     team: s
   } = e, l = (0, c.useRoleSubscriptionSettingsDisabled)(), r = l ? null : A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EDIT_PAYMENT_METHOD_LINK.format({
-    url: null != s ? f.MarketingURLs.DEVELOPER_PORTAL_PAYOUT_SETTINGS(s.id) : null
+    url: null != s ? g.MarketingURLs.DEVELOPER_PORTAL_PAYOUT_SETTINGS(s.id) : null
   });
   return 0 === t.length ? (0, a.jsxs)(n.FormText, {
     type: n.FormText.Types.DESCRIPTION,
@@ -76,7 +76,7 @@ let O = e => {
     children: [D && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(l.default, {
         children: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_INSIGHTS_NOTICE_TEXT.format({
-          insightsURL: f.MarketingURLs.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(d)
+          insightsURL: g.MarketingURLs.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(d)
         })
       }), (0, a.jsx)(i.default, {
         size: 32
@@ -90,7 +90,7 @@ let O = e => {
         className: L.metricsContainer,
         children: [(0, a.jsx)(S.default, {
           label: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_REVENUE,
-          value: (0, o.formatPrice)(null !== (t = R.revenue) && void 0 !== t ? t : 0, f.CurrencyCodes.USD),
+          value: (0, o.formatPrice)(null !== (t = R.revenue) && void 0 !== t ? t : 0, g.CurrencyCodes.USD),
           additionalContent: (0, a.jsx)(S.MetricTrend, {
             value: R.revenuePctChange,
             isPercent: !0
@@ -129,7 +129,7 @@ let O = e => {
     }), (0, a.jsx)(n.FormSection, {
       title: A.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
       className: L.formSection,
-      children: (0, a.jsx)(g.default, {
+      children: (0, a.jsx)(f.default, {
         guildId: d,
         allPeriods: h
       })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   UserSettingsAppearanceInAppIcon: function() {
-    return N
+    return I
   }
 });
 var a = s("37983"),
@@ -21,12 +21,12 @@ var a = s("37983"),
   _ = s("782340"),
   g = s("393842"),
   h = s("926622");
-let I = () => {
+let N = () => {
     r.default.dispatch({
       type: "APP_ICON_EDITOR_OPEN"
     }), (0, o.popLayer)()
   },
-  N = () => {
+  I = () => {
     let {
       analyticsLocations: e
     } = (0, u.default)(d.default.USER_SETTINGS), t = (0, l.useStateFromStores)([c.default], () => c.default.isUpsellPreview);
@@ -43,7 +43,7 @@ let I = () => {
           className: g.tryItOutButtons,
           children: [(0, a.jsx)(i.Button, {
             color: t ? i.Button.Colors.PRIMARY : i.Button.Colors.BRAND,
-            onClick: () => I(),
+            onClick: () => N(),
             children: _.default.Messages.APP_ICON_PREVIEW_TITLE
           }), t ? (0, a.jsx)(E.default, {
             subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,

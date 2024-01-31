@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 });
 var a = s("37983"),
@@ -19,14 +19,14 @@ var a = s("37983"),
   I = s("459662"),
   S = s("49111"),
   N = s("988268"),
-  g = s("276541");
+  f = s("276541");
 
-function f() {
+function g() {
   let e;
   let t = (0, l.useStateFromStores)([u.default], () => u.default.getGuild()),
     {
       application: s,
-      loading: f
+      loading: g
     } = (0, o.default)(null == t ? void 0 : t.id, N.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS),
     A = n.useRef(null),
     L = (0, c.default)(null != t ? t : void 0);
@@ -34,7 +34,7 @@ function f() {
     null != t && (0, E.isEligibleForNewBadge)(t) && (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE)
   }, [t]);
   let m = (null == t ? void 0 : t.hasFeature(S.GuildFeatures.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(S.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
-  return e = null == t || f ? (0, a.jsx)(r.Spinner, {}) : null != L ? (0, a.jsx)(T.default, {
+  return e = null == t || g ? (0, a.jsx)(r.Spinner, {}) : null != L ? (0, a.jsx)(T.default, {
     guild: t,
     config: L
   }) : m ? (0, a.jsx)(I.default, {
@@ -43,14 +43,14 @@ function f() {
     guild: t,
     application: s
   }), (0, a.jsx)("div", {
-    className: g.settingsColumn,
+    className: f.settingsColumn,
     children: (0, a.jsx)("div", {
-      className: g.settingsContainer,
+      className: f.settingsContainer,
       children: (0, a.jsx)(r.ScrollerAuto, {
-        className: g.settingsScroller,
+        className: f.settingsScroller,
         children: (0, a.jsx)("main", {
           ref: A,
-          className: g.settingsContent,
+          className: f.settingsContent,
           children: (0, a.jsx)(r.FocusRingScope, {
             containerRef: A,
             children: e

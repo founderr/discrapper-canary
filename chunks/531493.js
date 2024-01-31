@@ -17,9 +17,9 @@ var i = s("917351"),
   I = s("991170"),
   S = s("900938"),
   N = s("53948"),
-  g = s("49111");
-let f = new Set,
-  A = g.FormStates.CLOSED,
+  f = s("49111");
+let g = new Set,
+  A = f.FormStates.CLOSED,
   L = !1,
   m = !1,
   C = [],
@@ -54,19 +54,19 @@ function p(e) {
   let {
     section: t
   } = e;
-  if (null != a || t !== g.GuildSettingsSections.ROLES) return !1;
+  if (null != a || t !== f.GuildSettingsSections.ROLES) return !1;
   U()
 }
 
 function U() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  a = S.default.getProps().guild, L = !1, m = !1, l = void 0, f.clear(), A = g.FormStates.OPEN, O = [...C = null != a ? r(a.roles).values().value() : []], R = !1, e && (G.clear(), M.forEach((e, t) => {
+  a = S.default.getProps().guild, L = !1, m = !1, l = void 0, g.clear(), A = f.FormStates.OPEN, O = [...C = null != a ? r(a.roles).values().value() : []], R = !1, e && (G.clear(), M.forEach((e, t) => {
     G.set(t, [...e])
   }))
 }
 let v = r.debounce(() => {
   let e = !1;
-  m && !(m = x().length > 0) && (e = !0), [...f].forEach(t => {
+  m && !(m = x().length > 0) && (e = !0), [...g].forEach(t => {
     r.isEqual(P(t), function(e) {
       return O.find(t => {
         let {
@@ -74,8 +74,8 @@ let v = r.debounce(() => {
         } = t;
         return s === e
       })
-    }(t)) && (f.delete(t), e = !0)
-  }), 0 === f.size && (L = !1), R && r.isEqual(M, G) && (e = !0, R = !1), e && B.emitChange()
+    }(t)) && (g.delete(t), e = !0)
+  }), 0 === g.size && (L = !1), R && r.isEqual(M, G) && (e = !0, R = !1), e && B.emitChange()
 }, 500);
 
 function j(e, t) {
@@ -85,7 +85,7 @@ function j(e, t) {
     ...e,
     ...t
   };
-  C[s] = a, C = [...C], L = !0, f.add(a.id), v()
+  C[s] = a, C = [...C], L = !0, g.add(a.id), v()
 }
 
 function P(e) {
@@ -101,10 +101,10 @@ function y(e) {
   let {
     guildId: t
   } = e;
-  if (null == a || t !== a.id || A === g.FormStates.SUBMITTING) return !1;
+  if (null == a || t !== a.id || A === f.FormStates.SUBMITTING) return !1;
   a = S.default.getProps().guild;
   let s = [];
-  null != a && (s = r(a.roles).values().value()), f.forEach(e => {
+  null != a && (s = r(a.roles).values().value()), g.forEach(e => {
     let t = P(e),
       a = -1,
       n = s.find((t, s) => {
@@ -113,8 +113,8 @@ function y(e) {
         } = t;
         if (n === e) return a = s, !0
       });
-    null == n || null == t ? f.delete(e) : s[a] = t
-  }), 0 === f.size && (L = !1), m = !1, C = [...s]
+    null == n || null == t ? g.delete(e) : s[a] = t
+  }), 0 === g.size && (L = !1), m = !1, C = [...s]
 }
 class b extends u.default.Store {
   initialize() {
@@ -136,7 +136,7 @@ class b extends u.default.Store {
     return a
   }
   get editedRoleIds() {
-    return Array.from(f)
+    return Array.from(g)
   }
   get editedRoleIdsForConfigurations() {
     return D
@@ -291,7 +291,7 @@ let B = new b(c.default, __OVERLAY__ ? {} : {
     R = !0, D.add(a.id), G.set(a.id, s), v()
   },
   GUILD_SETTINGS_CLOSE: function() {
-    a = null, O = C = [], M.clear(), f.clear(), G.clear(), D = new Set, L = !1, m = !1, R = !1, A = g.FormStates.CLOSED
+    a = null, O = C = [], M.clear(), g.clear(), G.clear(), D = new Set, L = !1, m = !1, R = !1, A = f.FormStates.CLOSED
   },
   GUILD_ROLE_CREATE: y,
   GUILD_ROLE_UPDATE: y,
@@ -299,13 +299,13 @@ let B = new b(c.default, __OVERLAY__ ? {} : {
     return D.has(e.roleId) && (D.delete(e.roleId), M.delete(e.roleId), G.delete(e.roleId), R = !1), y(e)
   },
   GUILD_SETTINGS_ROLES_SUBMITTING: function() {
-    A = g.FormStates.SUBMITTING
+    A = f.FormStates.SUBMITTING
   },
   GUILD_SETTINGS_ROLES_SAVE_FAIL: function(e) {
     let {
       message: t
     } = e;
-    A = g.FormStates.OPEN, l = t
+    A = f.FormStates.OPEN, l = t
   },
   GUILD_SETTINGS_ROLES_SAVE_SUCCESS: function() {
     U(!1)

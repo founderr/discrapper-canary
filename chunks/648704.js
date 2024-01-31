@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("716241"),
   S = s("137215"),
   N = s("965397"),
-  g = s("599110"),
-  f = s("659500"),
+  f = s("599110"),
+  g = s("659500"),
   A = s("900938"),
   L = s("851490"),
   m = s("131835"),
@@ -60,7 +60,7 @@ function B(e) {
   })), V = (0, o.useStateFromStores)([D.default], () => {
     let e = (0, M.pageToEducationUpsellType)(A);
     return null != e && !D.default.isEducationUpsellDismissed(e)
-  }), k = (0, o.useStateFromStores)([T.default], () => T.default.useReducedMotion), w = (0, _.default)(), Y = n.useRef(null), [{
+  }), w = (0, o.useStateFromStores)([T.default], () => T.default.useReducedMotion), k = (0, _.default)(), Y = n.useRef(null), [{
     spring: K
   }, W] = (0, r.useSpring)(() => ({
     spring: 0
@@ -76,20 +76,20 @@ function B(e) {
         delay: 1e3
       })
     }
-    return f.ComponentDispatch.subscribe(j.ComponentActions.EMPHASIZE_NOTICE, e), () => {
-      f.ComponentDispatch.unsubscribe(j.ComponentActions.EMPHASIZE_NOTICE, e)
+    return g.ComponentDispatch.subscribe(j.ComponentActions.EMPHASIZE_NOTICE, e), () => {
+      g.ComponentDispatch.unsubscribe(j.ComponentActions.EMPHASIZE_NOTICE, e)
     }
   }, [W]);
   let z = (0, E.useToken)(d.default.colors.BACKGROUND_FLOATING).hex(),
-    X = (0, E.useToken)(d.default.unsafe_rawColors.PRIMARY_160).hex(),
-    Z = (0, c.isThemeDark)(w) ? z : X,
+    Z = (0, E.useToken)(d.default.unsafe_rawColors.PRIMARY_160).hex(),
+    X = (0, c.isThemeDark)(k) ? z : Z,
     J = K.to({
       range: [0, 1],
       output: [(0, E.useToken)(d.default.unsafe_rawColors.WHITE_500).hex(), (0, E.useToken)(d.default.colors.TEXT_NORMAL).hex()]
     }),
     Q = K.to({
       range: [0, 1],
-      output: [Z, (0, E.useToken)(d.default.colors.STATUS_DANGER).hex()]
+      output: [X, (0, E.useToken)(d.default.colors.STATUS_DANGER).hex()]
     });
   if (b) {
     if (A === M.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) return (0, a.jsx)(p.GuildSettingsDefaultChannelsNotice, {});
@@ -115,14 +115,14 @@ function B(e) {
       }
       return !0
     }, ee = async () => {
-      g.default.track(j.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+      f.default.track(j.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
         ...(0, I.collectGuildAnalyticsMetadata)(l),
         step: M.GuildSettingsOnboardingPage[A],
         back: !1,
         skip: !B
       }), (0, m.dismissEducationUpsell)((0, M.pageToEducationUpsellType)(A)), await $() && (0, m.goToNextOnboardingStep)(l, A)
     }, et = async () => {
-      g.default.track(j.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+      f.default.track(j.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
         ...(0, I.collectGuildAnalyticsMetadata)(l),
         step: M.GuildSettingsOnboardingPage[A],
         back: !0,
@@ -181,7 +181,7 @@ function B(e) {
             className: y.educationUpsellRoot,
             children: [(0, a.jsx)("img", {
               className: i(y.wumpus, {
-                [y.animated]: !k
+                [y.animated]: !w
               }),
               src: s("353773"),
               alt: "wumpus"

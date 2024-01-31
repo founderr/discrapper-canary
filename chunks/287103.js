@@ -19,8 +19,8 @@ let _ = [E.Permissions.KICK_MEMBERS, E.Permissions.BAN_MEMBERS, E.Permissions.AD
   I = [],
   S = [],
   N = [],
-  g = [],
   f = [],
+  g = [],
   A = [],
   L = [],
   m = [],
@@ -107,10 +107,10 @@ class j extends i.default.Store {
     return S
   }
   get webhooks() {
-    return g
+    return f
   }
   get guildScheduledEvents() {
-    return f
+    return g
   }
   get automodRules() {
     return A
@@ -159,7 +159,7 @@ var P = new j(r.default, {
   },
   AUDIT_LOG_FETCH_SUCCESS: function(e) {
     var t;
-    p = 0, C = !1, O = !1, R = !0, D = !1, I = U(e.logs), S = e.integrations, g = e.webhooks, f = e.guildScheduledEvents, A = null !== (t = e.automodRules) && void 0 !== t ? t : [], L = e.threads, m = e.applicationCommands, e.logs.length < E.AUDIT_LOG_PAGE_LIMIT && (R = !1)
+    p = 0, C = !1, O = !1, R = !0, D = !1, I = U(e.logs), S = e.integrations, f = e.webhooks, g = e.guildScheduledEvents, A = null !== (t = e.automodRules) && void 0 !== t ? t : [], L = e.threads, m = e.applicationCommands, e.logs.length < E.AUDIT_LOG_PAGE_LIMIT && (R = !1)
   },
   AUDIT_LOG_FETCH_FAIL: function() {
     O = !1, D = !0, I = []
@@ -180,7 +180,7 @@ var P = new j(r.default, {
       threads: i,
       applicationCommands: r
     } = e;
-    if (h = !1, S = s, g = a, f = n, A = l, L = i, m = r, (0 === t.length || t.length < E.AUDIT_LOG_PAGE_LIMIT) && (R = !1), t.length > 0) {
+    if (h = !1, S = s, f = a, g = n, A = l, L = i, m = r, (0 === t.length || t.length < E.AUDIT_LOG_PAGE_LIMIT) && (R = !1), t.length > 0) {
       let e = U(t);
       I = [...I, ...e]
     }
@@ -211,6 +211,6 @@ var P = new j(r.default, {
     })
   },
   GUILD_SETTINGS_CLOSE: function() {
-    I = [], N = [], G = E.AuditLogActions.ALL, M = null, x = {}, p = 0, C = !0, S = [], g = [], f = [], A = [], L = []
+    I = [], N = [], G = E.AuditLogActions.ALL, M = null, x = {}, p = 0, C = !0, S = [], f = [], g = [], A = [], L = []
   }
 })

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return M
+    return C
   }
 }), l("222007"), l("70102");
 var a = l("37983"),
@@ -26,7 +26,7 @@ var a = l("37983"),
   E = l("49111"),
   N = l("782340"),
   v = l("861144");
-class C extends s.Component {
+class M extends s.Component {
   fetchInstallSize() {
     let {
       applicationId: e,
@@ -180,7 +180,7 @@ class C extends s.Component {
     }
   }
 }
-var M = n.default.connectStores([I.default, L.default, A.default, p.default], e => {
+var C = n.default.connectStores([I.default, L.default, A.default, p.default], e => {
   let {
     applicationId: t,
     branchId: l
@@ -193,4 +193,4 @@ var M = n.default.connectStores([I.default, L.default, A.default, p.default], e 
     buildSizeKB: null != a ? I.default.getBuildSize(a) : null,
     hasPreviouslyAcceptedStoreTerms: A.default.hasAcceptedStoreTerms
   }
-})(C)
+})(M)

@@ -1,13 +1,13 @@
 "use strict";
-i.r(t), i.d(t, {
+_.r(t), _.d(t, {
   default: function() {
     return l
   }
-}), i("222007");
-var _ = i("446674"),
-  s = i("913144"),
-  o = i("521012");
-let I = !1,
+}), _("222007");
+var i = _("446674"),
+  s = _("913144"),
+  I = _("521012");
+let o = !1,
   u = {};
 
 function r(e) {
@@ -22,15 +22,15 @@ function r(e) {
 
 function T() {
   let e = {};
-  for (let t of Object.values(u)) e[t.id] = t, t.subscription = o.default.getSubscriptionById(t.subscriptionId);
+  for (let t of Object.values(u)) e[t.id] = t, t.subscription = I.default.getSubscriptionById(t.subscriptionId);
   u = e
 }
-class d extends _.default.Store {
+class d extends i.default.Store {
   initialize() {
-    this.syncWith([o.default], T)
+    this.syncWith([I.default], T)
   }
   get hasFetched() {
-    return I
+    return o
   }
   get boostSlots() {
     return u
@@ -47,12 +47,12 @@ var l = new d(s.default, {
     } = e;
     u = {}, t.forEach(e => {
       u[e.id] = e
-    }), I = !0
+    }), o = !0
   },
   GUILD_BOOST_SLOT_UPDATE_SUCCESS: r,
   GUILD_BOOST_SLOT_CREATE: r,
   GUILD_BOOST_SLOT_UPDATE: r,
   LOGOUT: function() {
-    u = {}, I = !1
+    u = {}, o = !1
   }
 })

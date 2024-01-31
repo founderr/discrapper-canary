@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("37785"),
   S = s("599110"),
   N = s("837008"),
-  g = s("757715"),
-  f = s("352807"),
+  f = s("757715"),
+  g = s("352807"),
   A = s("417186"),
   L = s("441901"),
   m = s("341020"),
@@ -58,12 +58,12 @@ function G(e) {
     error: E
   } = (0, d.default)(), {
     fetchSubscriptionsSettings: _
-  } = (0, N.useFetchSubscriptionsSettings)(), T = (0, g.useRoleSubscriptionSettingsDisabled)(), I = n.useMemo(() => s.map(e => ({
+  } = (0, N.useFetchSubscriptionsSettings)(), T = (0, f.useRoleSubscriptionSettingsDisabled)(), I = n.useMemo(() => s.map(e => ({
     label: e.name,
     value: e.id
   })), [s]), S = async () => {
     let e = await u(t, r, O.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS);
-    e && (_(t.id), (0, f.openActionCompleteSuccessModal)({
+    e && (_(t.id), (0, g.openActionCompleteSuccessModal)({
       Icon: m.default,
       title: R.default.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_TITLE,
       body: R.default.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_SUBTITLE
@@ -97,15 +97,15 @@ function G(e) {
 var x = e => {
   let {
     guild: t
-  } = e, s = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()), d = t.isOwner(s), N = (0, o.useIsExpeditedOnboardingGuild)(t), g = (0, l.useStateFromStores)([T.default], () => T.default.isFocused()), {
-    teams: f,
+  } = e, s = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()), d = t.isOwner(s), N = (0, o.useIsExpeditedOnboardingGuild)(t), f = (0, l.useStateFromStores)([T.default], () => T.default.isFocused()), {
+    teams: g,
     loading: m
   } = (0, E.default)({
-    refreshOnDepChange: g
-  }), O = n.useMemo(() => f.filter(e => {
+    refreshOnDepChange: f
+  }), O = n.useMemo(() => g.filter(e => {
     var t;
     return e.payout_account_status !== h.PayoutAccountStatuses.BLOCKED && (0, c.isUserTeamAdministrator)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "", e)
-  }), [f, s]), x = O.length > 0, p = n.useCallback(async () => {
+  }), [g, s]), x = O.length > 0, p = n.useCallback(async () => {
     S.default.track(C.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
       is_onboarding_v2: N,
       has_eligible_team: x,

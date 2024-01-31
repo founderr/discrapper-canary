@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("298878"),
   g = s("54346"),
   h = s("684581"),
-  I = s("488284"),
-  N = s("649649"),
+  N = s("488284"),
+  I = s("649649"),
   p = s("640497"),
   C = s("128887"),
   A = s("699668"),
@@ -99,7 +99,7 @@ function K(e) {
     location: "791c79_2"
   }, {
     autoTrackExposure: !1
-  }), d = I.default.useIsRingtoneEligible();
+  }), d = N.default.useIsRingtoneEligible();
   n.useEffect(() => {
     x.default.trackExposure({
       location: "791c79_3"
@@ -322,7 +322,7 @@ class Q extends n.PureComponent {
     return (0, a.jsxs)(u.FormSection, {
       tag: u.FormTitleTags.H1,
       title: w.default.Messages.NOTIFICATIONS,
-      children: [(0, a.jsx)(X, {}), (0, a.jsx)(u.FormSwitch, {
+      children: [(0, a.jsx)(Z, {}), (0, a.jsx)(u.FormSwitch, {
         className: Y.marginBottom20,
         value: e !== k.DesktopNotificationTypes.NEVER && !c,
         onChange: this.handleDesktopChange,
@@ -330,7 +330,7 @@ class Q extends n.PureComponent {
         disabled: c,
         tooltipNote: c ? w.default.Messages.QUIET_MODE_DISABLED_BY : void 0,
         children: w.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE
-      }), (0, a.jsx)(Z, {}), (0, a.jsx)(u.FormSwitch, {
+      }), (0, a.jsx)(X, {}), (0, a.jsx)(u.FormSwitch, {
         className: S ? Y.marginBottom20 : Y.marginBottom40,
         value: !s,
         note: w.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_BODY,
@@ -414,7 +414,7 @@ let q = (0, m.createExperiment)({
   }]
 });
 
-function Z() {
+function X() {
   let e = q.useExperiment({
       location: "settings"
     }, {
@@ -432,7 +432,7 @@ function Z() {
   }) : null
 }
 
-function X() {
+function Z() {
   let e = C.QuietModeExperiment.useExperiment({
       location: "settings"
     }).allowQuietMode,
@@ -502,7 +502,7 @@ function J() {
 }
 async function $(e) {
   e(!0);
-  let t = await (0, N.listSnapshots)();
+  let t = await (0, I.listSnapshots)();
   0 === t.length ? await (0, A.revertToOldSystem)() : c.default.show({
     title: w.default.Messages.CONFIRM,
     body: w.default.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var l = n("446674"),
-  i = n("913144");
-let s = {},
+  s = n("913144");
+let i = {},
   r = null,
   o = [],
   a = !1,
@@ -18,10 +18,10 @@ function c() {
 }
 class f extends l.default.Store {
   getAppliedGuildBoostsForGuild(e) {
-    return null != s[e] ? s[e].subscriptions : null
+    return null != i[e] ? i[e].subscriptions : null
   }
   getLastFetchedAtForGuild(e) {
-    return null != s[e] ? s[e].lastFetchedAt : null
+    return null != i[e] ? i[e].lastFetchedAt : null
   }
   getCurrentUserAppliedBoosts() {
     return o
@@ -43,13 +43,13 @@ class f extends l.default.Store {
   }
 }
 f.displayName = "AppliedGuildBoostStore";
-var p = new f(i.default, {
+var p = new f(s.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
       appliedBoosts: n
     } = e;
-    s[t] = {
+    i[t] = {
       subscriptions: n,
       lastFetchedAt: Date.now()
     }

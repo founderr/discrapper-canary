@@ -25,9 +25,9 @@ let p = l.forwardRef(function(e, t) {
     onKeyDown: g,
     onFocus: _,
     autoFocus: S,
-    className: h,
-    defaultSearchPlaceholder: C
-  } = e, T = l.useRef(null), N = (0, d.useExpressionPickerStore)(e => e.searchQuery), [A, y] = c.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), v = l.useCallback(e => {
+    className: C,
+    defaultSearchPlaceholder: h
+  } = e, T = l.useRef(null), N = (0, d.useExpressionPickerStore)(e => e.searchQuery), [v, A] = c.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), y = l.useCallback(e => {
     var t;
     c.EmojiPickerStore.setActiveCategoryIndex("" === e ? 0 : f.INACTIVE_CATEGORY_INDEX), c.EmojiPickerStore.setInspectedExpressionPosition(0, 0), c.EmojiPickerStore.setSearchPlaceholder(null), (0, d.setSearchQuery)(e), null === (t = i.current) || void 0 === t || t.scrollTo(0)
   }, [i]), j = l.useCallback(() => {
@@ -43,7 +43,7 @@ let p = l.forwardRef(function(e, t) {
     query: N,
     ref: T,
     size: u.default.Sizes.MEDIUM,
-    placeholder: null != y ? y : C,
+    placeholder: null != A ? A : h,
     onClear: j,
     onKeyDown: e => {
       switch (e.keyCode) {
@@ -56,8 +56,8 @@ let p = l.forwardRef(function(e, t) {
       g(e)
     },
     onFocus: _,
-    onQueryChange: v,
-    className: a(h, {
+    onQueryChange: y,
+    className: a(C, {
       [I.searchBarFullRow]: p
     }),
     preventEscapePropagation: !1,
@@ -67,7 +67,7 @@ let p = l.forwardRef(function(e, t) {
       "aria-haspopup": "grid",
       "aria-controls": s,
       "aria-expanded": !0,
-      "aria-activedescendant": (0, o.makeGridId)(s, A.columnIndex, A.rowIndex)
+      "aria-activedescendant": (0, o.makeGridId)(s, v.columnIndex, v.rowIndex)
     }
   })
 });

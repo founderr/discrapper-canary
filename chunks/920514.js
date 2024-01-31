@@ -27,8 +27,8 @@ var l = i("414456"),
       searchBarRef: g,
       hasTabWrapper: _,
       diversitySurrogate: S,
-      isBurstReaction: h,
-      onBurstReactionToggle: C,
+      isBurstReaction: C,
+      onBurstReactionToggle: h,
       renderHeader: T
     } = e, N = (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(u.default, {
@@ -40,12 +40,12 @@ var l = i("414456"),
         isFullRow: i === d.EmojiIntention.COMMUNITY_CONTENT_ONLY,
         onFocus: I,
         autoFocus: p,
-        defaultSearchPlaceholder: (0, r.getSearchPlaceholder)(i, h)
+        defaultSearchPlaceholder: (0, r.getSearchPlaceholder)(i, C)
       }), i === d.EmojiIntention.REACTION ? (0, n.jsx)("div", {
         className: f.burstToggle,
         children: (0, n.jsx)(a.default, {
-          checked: h,
-          onClick: C
+          checked: C,
+          onClick: h
         })
       }) : null, i === d.EmojiIntention.COMMUNITY_CONTENT_ONLY ? null : null != t ? t : (0, n.jsx)(o.default, {
         searchBarRef: g,

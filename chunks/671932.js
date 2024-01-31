@@ -28,8 +28,8 @@ var a = s("37983"),
   I = s("620193"),
   S = s("423487"),
   N = s("435076"),
-  g = s("642807"),
-  f = s("682327"),
+  f = s("642807"),
+  g = s("682327"),
   A = s("653138"),
   L = s("782340"),
   m = s("967476");
@@ -138,7 +138,7 @@ function O(e) {
 
 function h(e) {
   let t = O(e),
-    s = (0, f.useAdvancedModeReady)(e);
+    s = (0, g.useAdvancedModeReady)(e);
   return t || s
 }
 
@@ -148,7 +148,7 @@ function R(e) {
     guildId: d,
     onEdit: u,
     disableGoodStatus: c
-  } = e, _ = (0, l.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(d)), T = (0, l.useStateFromStores)([r.default], () => (0, o.getMinimumSetOfDefaultChannelIds)(d, r.default.getDefaultChannelIds(d), r.default.getOnboardingPrompts(d)).length), [, I] = (0, o.useChattableDefaultChannels)(d, _), S = I.length, N = O(d), g = (0, f.useAdvancedModeReady)(d), h = (0, l.useStateFromStores)([r.default], () => r.default.isAdvancedMode(d));
+  } = e, _ = (0, l.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(d)), T = (0, l.useStateFromStores)([r.default], () => (0, o.getMinimumSetOfDefaultChannelIds)(d, r.default.getDefaultChannelIds(d), r.default.getOnboardingPrompts(d)).length), [, I] = (0, o.useChattableDefaultChannels)(d, _), S = I.length, N = O(d), f = (0, g.useAdvancedModeReady)(d), h = (0, l.useStateFromStores)([r.default], () => r.default.isAdvancedMode(d));
   let R = (t = N, s = h, n = S, i = T, s ? L.default.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS_ADVANCED.format({
     numDefaultChannels: n,
     numFromQuestions: i - n
@@ -167,7 +167,7 @@ function R(e) {
       className: m.channelIcon
     }),
     hasStarted: S > 0 || h,
-    status: N || g ? c ? "none" : "good" : "required",
+    status: N || f ? c ? "none" : "good" : "required",
     onEdit: u
   })
 }
@@ -177,8 +177,8 @@ function D(e) {
     guildId: t,
     onEdit: s,
     disableGoodStatus: n
-  } = e, i = (0, l.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(t)), d = (0, l.useStateFromStoresArray)([r.default], () => r.default.getOnboardingPrompts(t)), u = d.length, [c, E] = (0, o.useChannelCoverageForOnboarding)(t, d, i), _ = c.length, I = c.length + E.length, S = _ / I * 100, N = (0, l.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), g = u > 0, f = "none";
-  return g && (S >= 85 && !n ? f = "good" : S < 85 && (f = "warning")), (0, a.jsx)(C, {
+  } = e, i = (0, l.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(t)), d = (0, l.useStateFromStoresArray)([r.default], () => r.default.getOnboardingPrompts(t)), u = d.length, [c, E] = (0, o.useChannelCoverageForOnboarding)(t, d, i), _ = c.length, I = c.length + E.length, S = _ / I * 100, N = (0, l.useStateFromStores)([r.default], () => r.default.isAdvancedMode(t)), f = u > 0, g = "none";
+  return f && (S >= 85 && !n ? g = "good" : S < 85 && (g = "warning")), (0, a.jsx)(C, {
     title: N ? L.default.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER_ADVANCED : L.default.Messages.ONBOARDING_PROMPT_SETTINGS_HEADER,
     description: L.default.Messages.ONBOARDING_PROMPT_CHANNEL_COVERAGE.format({
       numChannels: _,
@@ -195,8 +195,8 @@ function D(e) {
       height: 24,
       className: m.channelIcon
     }),
-    hasStarted: g,
-    status: f,
+    hasStarted: f,
+    status: g,
     onEdit: s
   })
 }
@@ -206,9 +206,9 @@ function M(e) {
     guildId: t,
     onEdit: s,
     disableGoodStatus: o
-  } = e, c = (0, l.useStateFromStores)([g.default], () => g.default.getSettings()), E = (0, l.useStateFromStores)([r.default], () => r.default.getEnabled(t)), {
+  } = e, c = (0, l.useStateFromStores)([f.default], () => f.default.getSettings()), E = (0, l.useStateFromStores)([r.default], () => r.default.getEnabled(t)), {
     serverGuideOptional: _
-  } = (0, u.useOptionalOnboardingHomeAdminExperiment)(t), T = (0, d.isSettingsValid)(c), S = c.enabled, f = n.useCallback(() => {
+  } = (0, u.useOptionalOnboardingHomeAdminExperiment)(t), T = (0, d.isSettingsValid)(c), S = c.enabled, g = n.useCallback(() => {
     (0, N.enableHomeSettings)(t, !S)
   }, [t, S]), A = !(0, d.isSettingsEmpty)(c), O = "none";
   A && (T && !o ? O = "good" : !T && (O = "required"));
@@ -218,7 +218,7 @@ function M(e) {
   return A && _ && E && (R = (0, a.jsx)(i.Switch, {
     className: m.inlineSwitch,
     checked: S,
-    onChange: f,
+    onChange: g,
     disabled: !T
   })), (0, a.jsx)(C, {
     title: L.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_REVIEW_TITLE,

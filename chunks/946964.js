@@ -1,64 +1,64 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var l = a("37983");
-a("884691");
-var s = a("748820"),
-  r = a("77078"),
-  n = a("112679"),
-  i = a("55689"),
-  o = a("21526"),
-  c = a("599110"),
-  u = a("49111");
+var a = s("37983");
+s("884691");
+var n = s("748820"),
+  l = s("77078"),
+  i = s("112679"),
+  r = s("55689"),
+  o = s("21526"),
+  d = s("599110"),
+  u = s("49111");
 
-function d(e) {
+function c(e) {
   let {
     skuId: t,
-    isGift: d = !1,
-    giftMessage: f,
-    onClose: m,
-    onComplete: C,
-    analyticsLocations: p,
-    analyticsObject: g
-  } = e, E = !1, h = (0, s.v4)();
-  (0, r.openModalLazy)(async () => {
+    isGift: c = !1,
+    giftMessage: S,
+    onClose: E,
+    onComplete: f,
+    analyticsLocations: T,
+    analyticsObject: m
+  } = e, _ = !1, g = (0, n.v4)();
+  (0, l.openModalLazy)(async () => {
     let {
       default: e
-    } = await a.el("894742").then(a.bind(a, "894742"));
-    return a => {
+    } = await s.el("894742").then(s.bind(s, "894742"));
+    return s => {
       let {
-        onClose: s,
-        returnRef: r,
-        ...n
-      } = a;
-      return (0, l.jsx)(e, {
-        ...n,
-        loadId: h,
+        onClose: n,
+        returnRef: l,
+        ...i
+      } = s;
+      return (0, a.jsx)(e, {
+        ...i,
+        loadId: g,
         skuId: t,
-        isGift: d,
-        giftMessage: f,
-        analyticsLocations: p,
+        isGift: c,
+        giftMessage: S,
+        analyticsLocations: T,
         onClose: e => {
-          s(), null == m || m(e)
+          n(), null == E || E(e)
         },
         onComplete: () => {
-          E = !0, null == C || C()
+          _ = !0, null == f || f()
         },
-        returnRef: r
+        returnRef: l
       })
     }
   }, {
     onCloseCallback: () => {
-      !E && c.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-        load_id: h,
+      !_ && d.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+        load_id: g,
         payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
-        location: g,
+        location: m,
         is_gift: !1,
-        location_stack: p
-      }), (0, n.clearError)(), (0, i.clearPurchaseTokenAuthState)(), null == m || m(E), E && (0, o.fetchCollectiblesPurchases)()
+        location_stack: T
+      }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == E || E(_), _ && (0, o.fetchCollectiblesPurchases)()
     },
     onCloseRequest: u.NOOP
   })

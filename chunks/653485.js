@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("773336"),
   g = s("56947"),
   h = s("386045"),
-  I = s("30591"),
-  N = s("803725"),
+  N = s("30591"),
+  I = s("803725"),
   p = s("119052"),
   C = s("80028"),
   A = s("49111"),
@@ -133,7 +133,7 @@ function L() {
             scrollPosition: x.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })
-      }), j === I.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(f.default, {
+      }), j === N.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(f.default, {
         look: f.InfoBoxLooks.WARNING,
         className: v.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
@@ -143,7 +143,7 @@ function L() {
         className: v.formItem,
         value: t,
         note: R.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
-        onChange: e => N.updateClipsEnabled({
+        onChange: e => I.updateClipsEnabled({
           clipsEnabled: e,
           trackAnalytics: !0
         }),
@@ -162,7 +162,7 @@ function L() {
           className: v.formItem,
           value: l,
           note: R.default.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
-          onChange: e => N.updateDecoupledClipsEnabled({
+          onChange: e => I.updateDecoupledClipsEnabled({
             enabled: e,
             trackAnalytics: !0
           }),
@@ -177,7 +177,7 @@ function L() {
           className: v.formItem,
           value: s,
           note: R.default.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
-          onChange: e => N.updateRemindersEnabled(e),
+          onChange: e => I.updateRemindersEnabled(e),
           children: R.default.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
         })
       })]
@@ -185,14 +185,14 @@ function L() {
       className: D.marginTop20,
       children: [(0, a.jsx)(p.SelectItem, {
         className: v.formItem,
-        select: N.updateClipsLength,
+        select: I.updateClipsLength,
         title: R.default.Messages.CLIPS_SETTINGS_LENGTH,
         note: R.default.Messages.CLIPS_SETTINGS_LENGTH_HELP,
         value: L,
         options: F
       }), (0, a.jsx)(p.SelectItem, {
         className: v.formItem,
-        select: e => N.updateClipsQuality({
+        select: e => I.updateClipsQuality({
           resolution: e,
           frameRate: P.frameRate
         }),
@@ -202,7 +202,7 @@ function L() {
         options: G
       }), (0, a.jsx)(p.SelectItem, {
         className: v.formItem,
-        select: e => N.updateClipsQuality({
+        select: e => I.updateClipsQuality({
           resolution: P.resolution,
           frameRate: e
         }),

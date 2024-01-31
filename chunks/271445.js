@@ -32,7 +32,7 @@ function h(e) {
     authorizedApplicationId: S.default.testModeApplicationId,
     authorizationError: S.default.error,
     authorizing: S.default.isFetchingAuthorization
-  })), [I, N] = i.useState(null != a ? a : ""), [p, C] = i.useState("8080"), [A, O] = i.useState("localhost"), x = (0, f.useUID)(), R = g.test(I);
+  })), [N, I] = i.useState(null != a ? a : ""), [p, C] = i.useState("8080"), [A, O] = i.useState("localhost"), x = (0, f.useUID)(), R = g.test(N);
   async function M() {
     u.resetError();
     let e = function(e, t, s) {
@@ -43,14 +43,14 @@ function h(e) {
           case "proxy":
             return (0, c.default)(s)
         }
-      }(A, p, I),
-      s = await u.authorizeAndSetTestModeApplication(I, e);
+      }(A, p, N),
+      s = await u.authorizeAndSetTestModeApplication(N, e);
     null != s && t()
   }
   i.useEffect(() => () => d.default.wait(() => u.resetError()), []);
-  let v = null != a && a === I,
+  let v = null != a && a === N,
     D = v ? function() {
-      u.reset(), N(""), O(null)
+      u.reset(), I(""), O(null)
     } : M;
   return (0, l.jsxs)(o.ModalRoot, {
     "aria-labelledby": x,
@@ -87,11 +87,11 @@ function h(e) {
             title: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {
-              value: I,
+              value: N,
               maxLength: 19,
               error: R ? null : T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
               onChange: function(e) {
-                N(e)
+                I(e)
               },
               disabled: h
             })
@@ -99,7 +99,7 @@ function h(e) {
             className: m.inputWrapper,
             title: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
             children: (0, l.jsx)(o.SingleSelect, {
-              isDisabled: !R || "" === I,
+              isDisabled: !R || "" === N,
               value: A,
               options: [{
                 value: "localhost",
@@ -128,7 +128,7 @@ function h(e) {
           }), (0, l.jsx)(o.Button, {
             submitting: h,
             type: "submit",
-            disabled: !R || 0 === I.length || "localhost" === A && 0 === p.length,
+            disabled: !R || 0 === N.length || "localhost" === A && 0 === p.length,
             color: v ? o.Button.Colors.RED : o.Button.Colors.GREEN,
             children: v ? T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
           })]

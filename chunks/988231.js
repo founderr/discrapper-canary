@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("49111"),
   g = s("353927"),
   h = s("782340"),
-  I = s("926622");
-async function N() {
+  N = s("926622");
+async function I() {
   let e = await d.default.fileManager.getModulePath(),
     t = d.default.fileManager.join(e, "discord_voice");
   d.default.fileManager.showItemInFolder(t)
@@ -97,7 +97,7 @@ function C() {
     }
   }
   return (0, a.jsxs)(i.FormSection, {
-    className: I.marginBottom40,
+    className: N.marginBottom40,
     title: h.default.Messages.FORM_LABEL_DEBUG,
     children: [s && (0, a.jsx)(i.FormSwitch, {
       value: C,
@@ -113,7 +113,7 @@ function C() {
         children: h.default.Messages.FORM_CHECKBOX_CONNECTION_LOG
       }), (0, a.jsx)(i.FormItem, {
         children: (0, a.jsx)(f.default, {
-          className: I.marginBottom20,
+          className: N.marginBottom20,
           children: (0, a.jsx)(f.default.Child, {
             grow: 0,
             shrink: 0,
@@ -147,7 +147,7 @@ function C() {
           shrink: 0,
           children: (0, a.jsx)(i.Button, {
             size: i.Button.Sizes.SMALL,
-            onClick: N,
+            onClick: I,
             children: h.default.Messages.SHOW_FOLDER
           })
         })]

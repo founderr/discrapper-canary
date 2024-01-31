@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("37983"),
-  i = n("884691"),
-  s = n("414456"),
-  r = n.n(s),
+  s = n("884691"),
+  i = n("414456"),
+  r = n.n(i),
   o = n("77078"),
   a = n("760607"),
   u = n("89976");
@@ -16,12 +16,12 @@ function d(e) {
   let {
     children: t,
     size: n = 16,
-    className: s,
+    className: i,
     flowerStarClassName: d,
     ...c
-  } = e, f = i.Children.only(t), p = (0, o.useRedesignIconContext)().enabled;
+  } = e, f = s.Children.only(t), p = (0, o.useRedesignIconContext)().enabled;
   return (0, l.jsxs)("div", {
-    className: r(u.flowerStarContainer, s),
+    className: r(u.flowerStarContainer, i),
     style: {
       width: n,
       height: n

@@ -20,8 +20,8 @@ var n = s("446674"),
   I = s("191814"),
   S = s("449008"),
   N = s("257869"),
-  g = s("837008"),
-  f = s("757715"),
+  f = s("837008"),
+  g = s("757715"),
   A = s("432153"),
   L = s("195367"),
   m = s("258984"),
@@ -42,7 +42,7 @@ function P(e) {
   let {
     application: t,
     guild: s
-  } = e, n = (0, g.useSubscriptionsSettings)(s.id), l = (0, g.useSubscriptionListingsForGuild)(s.id), i = l.some(e => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset), r = l.map(e => null == s ? void 0 : s.roles[e.role_id]), o = r.some(e => null != e && 0 !== e.color), d = l.some(e => e.role_benefits.benefits.length > 0), u = null != t && s.hasFeature(x.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED), c = [{
+  } = e, n = (0, f.useSubscriptionsSettings)(s.id), l = (0, f.useSubscriptionListingsForGuild)(s.id), i = l.some(e => null != e.name && null != e.subscription_plans[0] && null != e.description && null != e.image_asset), r = l.map(e => null == s ? void 0 : s.roles[e.role_id]), o = r.some(e => null != e && 0 !== e.color), d = l.some(e => e.role_benefits.benefits.length > 0), u = null != t && s.hasFeature(x.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED), c = [{
     title: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PAYMENT,
     items: [{
       description: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHECKLIST_PAYMENT_ENABLE,
@@ -115,7 +115,7 @@ function b(e) {
   }(i) : M.TabBarSection.PAYMENT, (0, a.jsx)(N.GroupListingsFetchContextProvider, {
     guildId: s.id,
     refetchOnMount: !0,
-    children: (0, a.jsx)(f.RoleSubscriptionSettingsDisabledContextProvider, {
+    children: (0, a.jsx)(g.RoleSubscriptionSettingsDisabledContextProvider, {
       guildId: s.id,
       children: (0, a.jsx)(M.TabBarContextProvider, {
         initialTab: t,
@@ -138,10 +138,10 @@ function B(e) {
       currentTab: _,
       setCurrentTab: I
     } = (0, M.useTabBarState)(),
-    g = (0, N.useGroupListingsFetchContext)(),
-    f = (0, n.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
+    f = (0, N.useGroupListingsFetchContext)(),
+    g = (0, n.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
     C = (0, L.default)(s.id),
-    R = s.isOwner(f),
+    R = s.isOwner(g),
     U = () => {
       let e = s.roles[s.id];
       o.default.close();
@@ -155,7 +155,7 @@ function B(e) {
         returnToSection: x.GuildSettingsSections.ROLE_SUBSCRIPTIONS
       }), (0, A.announceCreateTemplateChannels)(s.id), (0, E.transitionTo)(x.Routes.CHANNEL(s.id, p.StaticChannelRoute.ROLE_SUBSCRIPTIONS))
     };
-  if (!g) return (0, a.jsx)(l.Spinner, {});
+  if (!f) return (0, a.jsx)(l.Spinner, {});
   switch (_) {
     case M.TabBarSection.BASIC_INFO:
       t = (0, a.jsx)(h.default, {

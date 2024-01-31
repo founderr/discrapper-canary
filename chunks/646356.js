@@ -1,7 +1,7 @@
 "use strict";
 a.r(e), a.d(e, {
   default: function() {
-    return p
+    return m
   }
 });
 var n = a("816494"),
@@ -66,7 +66,7 @@ class C extends i.default.Store {
   }
 }
 C.displayName = "SafetyHubStore";
-var p = new C(l.default, {
+var m = new C(l.default, {
   SAFETY_HUB_FETCH_START: function(t) {
     _ = !0
   },

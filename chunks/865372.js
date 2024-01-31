@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("424973");
 var l = n("917351"),
-  i = n.n(l),
-  s = n("446674"),
+  s = n.n(l),
+  i = n("446674"),
   r = n("913144"),
   o = n("80507"),
   a = n("374363"),
@@ -38,12 +38,12 @@ function E() {
   var e;
   let t = null === (e = a.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
   if (null == t) return !1;
-  p.overwriteHistory(i.mapValues(t, e => ({
+  p.overwriteHistory(s.mapValues(t, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), f.pendingUsages)
 }
-class I extends s.default.PersistedStore {
+class I extends i.default.PersistedStore {
   initialize(e) {
     this.waitFor(d.default), null != e && (f = e), this.syncWith([d.default], m), this.syncWith([a.default], E)
   }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 }), s("222007");
 var a = s("37983"),
@@ -19,27 +19,27 @@ var a = s("37983"),
   I = s("26754"),
   S = s("546470"),
   N = s("394294"),
-  g = s("782340"),
-  f = function(e) {
+  f = s("782340"),
+  g = function(e) {
     let {
       guild: t,
       submittedGuildJoinRequestsCount: s,
-      onFormFieldUpdate: f,
+      onFormFieldUpdate: g,
       hideVerificationLevelField: A
     } = e, L = n.useRef(!1), [m, C] = n.useState(null), [O, h] = n.useState(e.formFields), R = n.useRef(e.formFields), D = n.useMemo(() => O.filter(d.isAutomaticApprovalFormField), [O]), M = n.useMemo(() => O.filter(d.isManualApprovalFormField), [O]), G = M.length, x = n.useMemo(() => O.length === N.MAX_FORM_ELEMENTS, [O]), p = n.useMemo(() => O.some(o.isTermsFormField), [O]), U = n.useMemo(() => O.some(e => !(0, o.isTermsFormField)(e)), [O]), v = G > 1, j = (0, r.useIsMemberVerificationManualApproval)(t.id), P = n.useCallback(() => {
-      (0, l.showToast)((0, l.createToast)(g.default.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
+      (0, l.showToast)((0, l.createToast)(f.default.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
     }, []), y = n.useCallback(async e => {
       if (!L.current) {
         L.current = !0;
         try {
-          await i.default.updateVerificationForm(t.id, e), f(), h(e), R.current = e
+          await i.default.updateVerificationForm(t.id, e), g(), h(e), R.current = e
         } catch (e) {
           throw h(R.current), e
         } finally {
           null != m && C(null), L.current = !1
         }
       }
-    }, [m, t.id, f]), b = n.useCallback(async e => {
+    }, [m, t.id, g]), b = n.useCallback(async e => {
       let t = e.field_type === o.VerificationFormFieldTypes.TERMS ? [e, ...O] : [...O, e];
       await y(t)
     }, [O, y]), B = n.useCallback(async (e, t) => {
@@ -81,9 +81,9 @@ var a = s("37983"),
     });
     return j ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(I.default, {
-        text: g.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_AUTOMATIC_APPROVAL_DIVIDER
+        text: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_AUTOMATIC_APPROVAL_DIVIDER
       }), V, (0, a.jsx)(I.default, {
-        text: g.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_DIVIDER
+        text: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_DIVIDER
       }), !U && (0, a.jsx)(u.default, {
         addFormField: b,
         hasManualFormFields: G > 0

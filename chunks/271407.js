@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("68238"),
   S = s("240292"),
   N = s("701909"),
-  g = s("49111"),
-  f = s("533613"),
+  f = s("49111"),
+  g = s("533613"),
   A = s("782340"),
   L = s("430364"),
   m = s("175717"),
@@ -158,17 +158,17 @@ let x = () => [{
 var j = e => {
   let {
     guild: t
-  } = e, [s, l] = n.useState(0), [i, o] = n.useState(0), [T, I] = n.useState(), S = (0, r.useStateFromStores)([_.default], () => _.default.can(g.Permissions.ADMINISTRATOR, t)), O = (0, u.useInServerBadgingExperiment)(t.id), h = null == T ? void 0 : T.offsetWidth, R = null == T ? void 0 : T.offsetHeight;
+  } = e, [s, l] = n.useState(0), [i, o] = n.useState(0), [T, I] = n.useState(), S = (0, r.useStateFromStores)([_.default], () => _.default.can(f.Permissions.ADMINISTRATOR, t)), O = (0, u.useInServerBadgingExperiment)(t.id), h = null == T ? void 0 : T.offsetWidth, R = null == T ? void 0 : T.offsetHeight;
   n.useEffect(() => {
     null != h && l(h / 2), null != R && o(R / 2)
   }, [h, R, l, o]), n.useEffect(() => {
-    (0, c.hideHotspot)(f.HotspotLocations.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL)
+    (0, c.hideHotspot)(g.HotspotLocations.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL)
   }, []);
   let D = () => {
       E.default.open()
     },
     M = O ? A.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY_WITH_HELP_ARTICLE.format({
-      helpdeskArticle: N.default.getArticleURL(g.HelpdeskArticles.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
+      helpdeskArticle: N.default.getArticleURL(f.HelpdeskArticles.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES)
     }) : A.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_BODY;
   return (0, a.jsxs)("div", {
     className: L.container,
@@ -217,7 +217,7 @@ var j = e => {
       className: L.body,
       variant: "text-sm/normal",
       children: A.default.Messages.GUILD_SETTINGS_COMMUNITY_INTRO_LEARN_MORE.format({
-        helpdeskArticle: N.default.getArticleURL(g.HelpdeskArticles.GUILD_COMMUNITY_FEATURE)
+        helpdeskArticle: N.default.getArticleURL(f.HelpdeskArticles.GUILD_COMMUNITY_FEATURE)
       })
     }), (0, a.jsx)("div", {
       className: L.features,

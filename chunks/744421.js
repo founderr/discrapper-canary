@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return g
   }
 }), s("222007"), s("424973");
 var a = s("37983"),
@@ -19,15 +19,15 @@ var a = s("37983"),
   I = s("958706"),
   S = s("782340"),
   N = s("311352");
-let g = e => {
+let f = e => {
   var t;
   let {
     reason: s = "",
     emoji_name: l,
     onSetReason: u,
     onSelectEmoji: S,
-    onClearPressed: g,
-    reasonMinLength: f,
+    onClearPressed: f,
+    reasonMinLength: g,
     reasonMaxLength: A,
     placeholder: L,
     position: m
@@ -74,7 +74,7 @@ let g = e => {
         inputClassName: N.reason,
         placeholder: L,
         value: s,
-        minLength: f,
+        minLength: g,
         maxLength: A,
         onChange: e => {
           u(e)
@@ -82,7 +82,7 @@ let g = e => {
         defaultDirty: (null == s ? void 0 : s.length) > 0
       }, "text-input-".concat(m, "-").concat(h)), (null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0) > 0 || null != l ? (0, a.jsx)(o.Button, {
         className: N.clearStatusButton,
-        onClick: g,
+        onClick: f,
         look: o.Button.Looks.BLANK,
         size: o.Button.Sizes.NONE,
         tabIndex: -1,
@@ -94,14 +94,14 @@ let g = e => {
     })]
   })
 };
-var f = e => {
+var g = e => {
   let {
     reasonMinLength: t,
     reasonMaxLength: s,
     guildId: n,
     reasons: l
   } = e, i = [S.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_ONE, S.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_TWO, S.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_THREE, S.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_FOUR], r = [];
-  for (let e = 0; e < 4; e++) r.push((0, a.jsx)(g, {
+  for (let e = 0; e < 4; e++) r.push((0, a.jsx)(f, {
     position: e,
     placeholder: i[e],
     ...l[e],

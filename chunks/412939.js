@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("45299"),
   S = s("731898"),
   N = s("608684"),
-  g = s("965397"),
-  f = s("191814"),
+  f = s("965397"),
+  g = s("191814"),
   A = s("476765"),
   L = s("950603"),
   m = s("593195"),
@@ -112,13 +112,13 @@ function B(e) {
     return (null == r ? void 0 : null === (e = r.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, O.getAssetURL)(r.cover_image_asset.application_id, r.cover_image_asset, P)
   }, [r]), [c, _] = n.useState(i), [S, m] = n.useState(null !== (t = null == r ? void 0 : r.description) && void 0 !== t ? t : ""), [C, h] = n.useState(d), [y, B] = n.useState(null == r ? void 0 : r.store_page_guild_products_default_sort), [F, H] = n.useState(null == r ? void 0 : r.server_shop_tab_order), {
     loading: V,
-    error: k,
-    updateSubscriptionsSettings: w
+    error: w,
+    updateSubscriptionsSettings: k
   } = (0, R.useUpdateSubscriptionsSettings)(), {
     imageCTA: Y,
     imageAriaLabel: K,
     setFilename: W
-  } = (0, M.default)(null == r ? void 0 : r.cover_image_asset), z = (0, A.useUID)(), X = (0, A.useUID)(), Z = (0, A.useUID)();
+  } = (0, M.default)(null == r ? void 0 : r.cover_image_asset), z = (0, A.useUID)(), Z = (0, A.useUID)(), X = (0, A.useUID)();
 
   function J(e, t) {
     o(null != e, "Null value not allowed"), null != t && W(t.name), h(e)
@@ -149,10 +149,10 @@ function B(e) {
     }], []);
   return (0, a.jsxs)("div", {
     className: j.container,
-    children: [null != k && (0, a.jsxs)(a.Fragment, {
+    children: [null != w && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(x.default, {
-        children: k.getAnyErrorMessage()
-      }), (0, a.jsx)(f.default, {
+        children: w.getAnyErrorMessage()
+      }), (0, a.jsx)(g.default, {
         size: 16
       })]
     }), l ? null : (0, a.jsxs)(a.Fragment, {
@@ -187,7 +187,7 @@ function B(e) {
       })]
     }), (0, a.jsx)(T.FormSection, {
       title: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_DESCRIPTION_TITLE,
-      titleId: X,
+      titleId: Z,
       disabled: $,
       children: (0, a.jsx)(T.TextArea, {
         placeholder: l ? v.default.Messages.GUILD_PRODUCT_SETUP_INFO_DESCRIPTION_PLACEHOLDER : v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_DESCRIPTION_PLACEHOLDER,
@@ -196,7 +196,7 @@ function B(e) {
         rows: 2,
         autosize: !0,
         onChange: m,
-        "aria-labelledby": X,
+        "aria-labelledby": Z,
         disabled: $
       })
     }), (0, a.jsx)(T.FormDivider, {
@@ -222,7 +222,7 @@ function B(e) {
         onChange: J,
         "aria-label": K,
         disabled: $
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(g.default, {
         size: 16
       }), (0, a.jsx)(L.default, {
         onChange: J,
@@ -237,7 +237,7 @@ function B(e) {
         className: j.divider
       }), (0, a.jsxs)(T.FormSection, {
         title: v.default.Messages.CREATOR_MONETIZATION_SETTINGS_GUILD_PRODUCT_SORT_OPTION_TITLE,
-        titleId: Z,
+        titleId: X,
         disabled: $,
         children: [(0, a.jsx)(T.FormText, {
           type: T.FormText.Types.DESCRIPTION,
@@ -256,7 +256,7 @@ function B(e) {
         className: j.divider
       }), (0, a.jsxs)(T.FormSection, {
         title: v.default.Messages.CREATOR_MONETIZATION_SETTINGS_SERVER_SHOP_DEFAULT_TAB_OPTION_TITLE,
-        titleId: Z,
+        titleId: X,
         disabled: $,
         children: [(0, a.jsx)(T.FormText, {
           type: T.FormText.Types.DESCRIPTION,
@@ -273,7 +273,7 @@ function B(e) {
     }), (0, a.jsx)(E.default, {
       component: "div",
       className: j.contentRegion,
-      children: Q && (0, a.jsx)(g.default, {
+      children: Q && (0, a.jsx)(f.default, {
         children: (0, a.jsx)(I.default, {
           submitting: V,
           disabled: !q,
@@ -284,7 +284,7 @@ function B(e) {
           onSave: () => {
             o(null != r, "Settings must be defined");
             let e = {};
-            S !== r.description && (e.description = S), null != C && C.startsWith("data:") && (e.cover_image = C), c !== i && (e.full_server_gate = c === p.GuildRoleSubscriptionFormat.ALL_CHANNELS), y !== r.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = y), F !== r.server_shop_tab_order && (e.server_shop_tab_order = F), !u.isEmpty(e) && w(s.id, e)
+            S !== r.description && (e.description = S), null != C && C.startsWith("data:") && (e.cover_image = C), c !== i && (e.full_server_gate = c === p.GuildRoleSubscriptionFormat.ALL_CHANNELS), y !== r.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = y), F !== r.server_shop_tab_order && (e.server_shop_tab_order = F), !u.isEmpty(e) && k(s.id, e)
           },
           saveButtonTooltip: q ? void 0 : v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_FULL_OUT_ALL_INFO
         })

@@ -18,7 +18,7 @@ function d(e) {
     everyoneRole: d,
     otherRoles: u,
     setSelectedSection: c
-  } = e, [E, _] = n.useState(""), [T, I] = n.useState(o.DEFAULT_HEADER_HEIGHT_PX), S = E.trim(), N = n.useMemo(() => u.filter(e => (0, l.filterRole)(e, S)), [u, S]), g = n.useCallback(() => (0, a.jsx)(r.default, {
+  } = e, [E, _] = n.useState(""), [T, I] = n.useState(o.DEFAULT_HEADER_HEIGHT_PX), S = E.trim(), N = n.useMemo(() => u.filter(e => (0, l.filterRole)(e, S)), [u, S]), f = n.useCallback(() => (0, a.jsx)(r.default, {
     guild: s,
     everyoneRole: d,
     filteredRoles: N,
@@ -33,7 +33,7 @@ function d(e) {
     everyoneRole: d,
     otherRoles: u,
     setSelectedSection: c,
-    renderHeader: g,
+    renderHeader: f,
     headerHeight: T,
     query: E
   })

@@ -17,8 +17,8 @@ var a, n, l = s("37983"),
   I = s("445940"),
   S = s("578706"),
   N = s("381546"),
-  g = s("68238"),
-  f = s("717559"),
+  f = s("68238"),
+  g = s("717559"),
   A = s("207353"),
   L = s("215393"),
   m = s("397056"),
@@ -44,7 +44,7 @@ function R(e) {
     payoutStatus: a,
     ppgDeferralReasons: n,
     periodEndDate: i
-  } = (0, f.getStatusForPeriod)(t), r = null != i ? u(i).add(15, "days").toISOString() : void 0, o = (0, E.formatNextPaymentDate)(r, "MMM D");
+  } = (0, g.getStatusForPeriod)(t), r = null != i ? u(i).add(15, "days").toISOString() : void 0, o = (0, E.formatNextPaymentDate)(r, "MMM D");
   switch (s) {
     case m.PaymentPayoutGroupStatuses.OPEN:
       return (0, l.jsxs)(l.Fragment, {
@@ -112,7 +112,7 @@ let D = (0, A.createCurrencyAmountColumn)({
     renderHeader() {
       let e = (0, l.jsx)(c.Tooltip, {
         text: C.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_TABLE_AMOUNT_DISCLAIMER,
-        children: e => (0, l.jsx)(g.default, {
+        children: e => (0, l.jsx)(f.default, {
           className: O.amountDisclaimer,
           ...e
         })
@@ -151,7 +151,7 @@ let D = (0, A.createCurrencyAmountColumn)({
     renderHeader() {
       let e = (0, l.jsx)(c.Tooltip, {
         text: C.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_METRIC_NEXT_PAYMENT_DISCLAIMER,
-        children: e => (0, l.jsx)(g.default, {
+        children: e => (0, l.jsx)(f.default, {
           className: O.statusDisclaimer,
           ...e
         })

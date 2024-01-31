@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("376152"),
   g = s("243632"),
   h = s("180273"),
-  I = s("367376"),
-  N = s("44678"),
+  N = s("367376"),
+  I = s("44678"),
   p = s("694540"),
   C = s("541840"),
   A = s("437712"),
@@ -46,7 +46,7 @@ function b(e) {
     [c, E] = n.useState(!1),
     f = () => d(e => !e),
     T = (0, m.default)(),
-    _ = (0, N.getPromotionImageURL)(s.id, T),
+    _ = (0, I.getPromotionImageURL)(s.id, T),
     g = null != l,
     h = g ? (0, O.dateFormat)(u(s.endDate).add(L.OUTBOUND_PROMOTION_REDEMPTION_EXPIRATION_WINDOW), "LL") : (0, O.dateFormat)(u(s.endDate), "LL");
   g && o ? t = P.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
@@ -104,7 +104,7 @@ function b(e) {
         className: j.promotionLegalese,
         variant: "text-xs/normal",
         color: "header-secondary",
-        children: I.default.parse(R, !1, {
+        children: N.default.parse(R, !1, {
           allowLinks: !0
         })
       })]
@@ -143,9 +143,9 @@ var U = function() {
     })
   }, [u]);
   let m = R.DropsOptedOut.useSetting(),
-    I = null != d || !u,
+    N = null != d || !u,
     {
-      promotionsLoaded: N,
+      promotionsLoaded: I,
       activeOutboundPromotions: C,
       claimedEndedOutboundPromotions: O,
       claimedOutboundPromotionCodeMap: U,
@@ -155,7 +155,7 @@ var U = function() {
   function y() {
     T.default.open(D.UserSettingsSections.PREMIUM)
   }
-  return i && N && I ? (0, a.jsxs)(a.Fragment, {
+  return i && I && N ? (0, a.jsxs)(a.Fragment, {
     children: [u ? (0, a.jsx)(v.default, {
       dropsOptedOut: m,
       dropsStatuses: d

@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("379532"),
   S = s("52393"),
   N = s("102985"),
-  g = s("409633"),
-  f = s("181114"),
+  f = s("409633"),
+  g = s("181114"),
   A = s("118503"),
   L = s("427459"),
   m = s("900938"),
@@ -77,7 +77,7 @@ class p extends n.PureComponent {
             uses: l
           })
         }) : null]
-      }), (0, a.jsx)(g.default, {
+      }), (0, a.jsx)(f.default, {
         prefix: "".concat("https://discord.gg", "/"),
         value: n,
         onChange: this.handleInviteCodeChange,
@@ -97,7 +97,7 @@ class p extends n.PureComponent {
     })
   }
   renderUpsellButton() {
-    return (0, a.jsxs)(f.default, {
+    return (0, a.jsxs)(g.default, {
       color: o.Button.Colors.GREEN,
       className: i(G.marginTop16),
       innerClassName: G.upsellButton,

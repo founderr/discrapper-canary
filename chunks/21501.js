@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("851088"),
   S = s("385881"),
   N = s("253414"),
-  g = s("782340"),
-  f = s("332227"),
+  f = s("782340"),
+  g = s("332227"),
   A = s("888512");
 
 function L(e) {
@@ -51,24 +51,24 @@ function L(e) {
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-md/semibold",
           className: A.publishListingInfoHeader,
-          children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DRAFT_BANNER_TITLE
+          children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DRAFT_BANNER_TITLE
         }), (0, a.jsx)(o.FormText, {
           type: o.FormText.Types.DESCRIPTION,
-          children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DRAFT_BANNER_DESCRIPTION
+          children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DRAFT_BANNER_DESCRIPTION
         })]
       }), (0, a.jsx)(o.Tooltip, {
         shouldShow: x,
-        tooltipClassName: f.autoWidth,
-        text: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SAVE_BEFORE_PUBLISH_TOOLTIP,
+        tooltipClassName: g.autoWidth,
+        text: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SAVE_BEFORE_PUBLISH_TOOLTIP,
         children: e => (0, a.jsx)(o.Button, {
           ...e,
           disabled: x,
           color: o.Button.Colors.CUSTOM,
-          wrapperClassName: f.autoWidth,
-          className: i(A.publishButton, f.autoWidth),
+          wrapperClassName: g.autoWidth,
+          className: i(A.publishButton, g.autoWidth),
           onClick: O,
           submitting: m,
-          children: g.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_PUBLISH_DRAFT_CTA
+          children: f.default.Messages.GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_PUBLISH_DRAFT_CTA
         })
       })]
     }), (0, a.jsx)(T.default, {

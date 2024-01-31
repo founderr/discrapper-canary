@@ -17,8 +17,8 @@ var a, n, l = s("37983"),
   I = s("592407"),
   S = s("479756"),
   N = s("507950"),
-  g = s("393414"),
-  f = s("305961"),
+  f = s("393414"),
+  g = s("305961"),
   A = s("697218"),
   L = s("701909"),
   m = s("442379"),
@@ -36,7 +36,7 @@ function x(e) {
     hasValidApplication: s
   } = e, {
     listingsLoaded: a
-  } = (0, m.useFetchGuildProductListingsForGuild)(t), n = (0, o.default)([f.default], () => f.default.getGuild(t)), x = (0, o.default)([A.default], () => A.default.getCurrentUser()), p = (null == n ? void 0 : n.isOwner(x)) === !0, {
+  } = (0, m.useFetchGuildProductListingsForGuild)(t), n = (0, o.default)([g.default], () => g.default.getGuild(t)), x = (0, o.default)([A.default], () => A.default.getCurrentUser()), p = (null == n ? void 0 : n.isOwner(x)) === !0, {
     loading: U
   } = (0, u.useMonetizationSettings)(t), [v, j] = i.useState(s ? "manage_listings" : "payment");
   (0, _.useNewOwnerOnboardingRequired)(n);
@@ -52,7 +52,7 @@ function x(e) {
       roles: t,
       initialTab: "guild_products",
       returnToSection: R.GuildSettingsSections.GUILD_PRODUCTS
-    }), (0, g.transitionTo)(R.Routes.CHANNEL(n.id, D.StaticChannelRoute.GUILD_SHOP))
+    }), (0, f.transitionTo)(R.Routes.CHANNEL(n.id, D.StaticChannelRoute.GUILD_SHOP))
   }, [n]);
   if (!a || U) return (0, l.jsx)(d.Spinner, {});
   if (null == n) return null;

@@ -22,8 +22,8 @@ var a = s("37983"),
   I = s("45299"),
   S = s("734575"),
   N = s("841098"),
-  g = s("812204"),
-  f = s("716241"),
+  f = s("812204"),
+  g = s("716241"),
   A = s("685665"),
   L = s("320954"),
   m = s("679653"),
@@ -46,14 +46,14 @@ var a = s("37983"),
   F = s("245997"),
   H = s("525065"),
   V = s("957255"),
-  k = s("27618"),
-  w = s("697218"),
+  w = s("27618"),
+  k = s("697218"),
   Y = s("145131"),
   K = s("181114"),
   W = s("612434"),
   z = s("118503"),
-  X = s("956089"),
-  Z = s("315102"),
+  Z = s("956089"),
+  X = s("315102"),
   J = s("568734"),
   Q = s("449008"),
   q = s("701909"),
@@ -77,16 +77,16 @@ let eu = "NO_AFK_CHANNEL",
   eS = "".concat(3600);
 
 function eN(e) {
-  return eg(e[0])
+  return ef(e[0])
 }
 
-function eg(e) {
+function ef(e) {
   if (null == e) return;
   let {
     label: t,
     channel: s,
     category: n
-  } = e, l = (0, C.getChannelIconComponent)(s), i = null != n ? (0, m.computeChannelName)(n, w.default, k.default) : null;
+  } = e, l = (0, C.getChannelIconComponent)(s), i = null != n ? (0, m.computeChannelName)(n, k.default, w.default) : null;
   return (0, a.jsx)(W.default, {
     title: t,
     icon: l,
@@ -94,10 +94,10 @@ function eg(e) {
   })
 }
 
-function ef(e) {
+function eg(e) {
   return {
     value: e.id,
-    label: (0, m.computeChannelName)(e, w.default, k.default),
+    label: (0, m.computeChannelName)(e, k.default, w.default),
     channel: e,
     category: B.default.getChannel(e.parent_id)
   }
@@ -224,7 +224,7 @@ class eL extends n.PureComponent {
             onChange: this.handleIconChange,
             disabled: !s,
             hint: ei.default.Messages.CHANGE_ICON,
-            makeURL: t => Z.default.getGuildIconURL({
+            makeURL: t => X.default.getGuildIconURL({
               id: e.id,
               icon: t,
               canAnimate: !0,
@@ -321,7 +321,7 @@ class eL extends n.PureComponent {
       let {
         channel: t
       } = e;
-      return ef(t)
+      return eg(t)
     }).value();
     return o.unshift({
       value: eu,
@@ -338,7 +338,7 @@ class eL extends n.PureComponent {
               options: o,
               onChange: this.handleAFKChannelChange,
               isDisabled: !s,
-              renderOptionLabel: eg,
+              renderOptionLabel: ef,
               renderOptionValue: eN
             })
           })
@@ -377,7 +377,7 @@ class eL extends n.PureComponent {
       let {
         channel: t
       } = e;
-      return ef(t)
+      return eg(t)
     }).value();
     o.unshift({
       value: ec,
@@ -395,7 +395,7 @@ class eL extends n.PureComponent {
         options: o,
         isDisabled: !n,
         onChange: this.handleSystemChannelChange,
-        renderOptionLabel: eg,
+        renderOptionLabel: ef,
         renderOptionValue: eN
       }), (0, a.jsx)(T.FormText, {
         className: er.marginTop8,
@@ -511,7 +511,7 @@ class eL extends n.PureComponent {
           disabled: !t,
           children: (0, a.jsxs)("div", {
             className: er.badgedItem,
-            children: [ei.default.Messages.GUILD_SETTINGS_SUMMARIES_TOGGLE, (0, a.jsx)(X.TextBadge, {
+            children: [ei.default.Messages.GUILD_SETTINGS_SUMMARIES_TOGGLE, (0, a.jsx)(Z.TextBadge, {
               text: ei.default.Messages.BETA,
               color: E.default.unsafe_rawColors.BRAND_500.css,
               className: er.betaTag
@@ -527,7 +527,7 @@ class eL extends n.PureComponent {
       canManageGuild: t
     } = this.props, s = e.hasFeature(es.GuildFeatures.INVITE_SPLASH), n = t && s, l = (0, a.jsx)(P.default, {
       image: e.splash,
-      makeURL: t => null != t ? Z.default.getGuildSplashURL({
+      makeURL: t => null != t ? X.default.getGuildSplashURL({
         id: e.id,
         splash: t
       }) : null,
@@ -607,7 +607,7 @@ class eL extends n.PureComponent {
     if (!n || !i) return null;
     let r = (0, a.jsx)(P.default, {
       image: e.homeHeader,
-      makeURL: t => null != t ? Z.default.getGuildHomeHeaderURL({
+      makeURL: t => null != t ? X.default.getGuildHomeHeaderURL({
         id: e.id,
         homeHeader: t
       }) : null,
@@ -676,7 +676,7 @@ class eL extends n.PureComponent {
       analyticsLocations: s
     } = this.props, n = e.hasFeature(es.GuildFeatures.BANNER), l = e.hasFeature(es.GuildFeatures.ANIMATED_BANNER), i = n && t, r = (0, a.jsx)(P.default, {
       image: e.banner,
-      makeURL: t => null != t ? Z.default.getGuildBannerURL({
+      makeURL: t => null != t ? X.default.getGuildBannerURL({
         id: e.id,
         banner: t
       }, l) : null,
@@ -885,7 +885,7 @@ class eL extends n.PureComponent {
         guild: n,
         analyticsLocations: l
       } = this.props;
-      (0, f.trackWithMetadata)(es.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
+      (0, g.trackWithMetadata)(es.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
         location: {
           section: t,
           object: es.AnalyticsObjects.LEARN_MORE
@@ -945,7 +945,7 @@ function em() {
   } = (0, c.useStateFromStoresObject)([ee.default], () => ee.default.getProps()), r = (0, N.default)(), {
     AnalyticsLocationProvider: d,
     analyticsLocations: u
-  } = (0, A.default)(g.default.OVERVIEW);
+  } = (0, A.default)(f.default.OVERVIEW);
   n.useEffect(() => {
     (0, v.hideHotspot)(U.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
   }, []);
@@ -959,8 +959,8 @@ function em() {
       isGuildAdmin: V.default.can(es.Permissions.ADMINISTRATOR, t)
     })),
     S = (0, c.useStateFromStores)([H.default], () => H.default.getMemberCount(null == t ? void 0 : t.id)),
-    f = (0, c.useStateFromStores)([w.default], () => w.default.getCurrentUser());
-  o(null != f, "GuildSettingsOverview: currentUser cannot be undefined");
+    g = (0, c.useStateFromStores)([k.default], () => k.default.getCurrentUser());
+  o(null != g, "GuildSettingsOverview: currentUser cannot be undefined");
   let {
     enableDeadchat: m
   } = O.SimpleDeadchatPromptExperiment.useExperiment({
@@ -979,7 +979,7 @@ function em() {
       guild: t,
       errors: s,
       submitting: l,
-      currentUser: f,
+      currentUser: g,
       guildMemberCount: S,
       theme: r,
       analyticsLocations: u,

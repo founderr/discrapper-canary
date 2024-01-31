@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return N
   }
 });
 var a = s("37983"),
@@ -64,7 +64,7 @@ class h extends n.PureComponent {
     })
   }
 }
-var I = r.default.connectStores([E.default, S.default], () => {
+var N = r.default.connectStores([E.default, S.default], () => {
   let e = E.default.getCurrentUser();
   return i(null != e, "UserSettingsHypeSquad: currentUser cannot be undefined"), {
     houseMembership: S.default.getHouseMembership(),

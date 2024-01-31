@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("783142"),
   g = s("217513"),
   h = s("225849"),
-  I = s("790618"),
-  N = s("216422"),
+  N = s("790618"),
+  I = s("216422"),
   p = s("599110"),
   C = s("719923"),
   A = s("184900"),
@@ -54,18 +54,18 @@ function y(e) {
     tryItOutThemeColors: z,
     tryItOutAvatar: Q,
     tryItOutBanner: q,
-    tryItOutAvatarDecoration: Z,
-    tryItOutProfileEffectId: X
-  } = (0, l.useStateFromStoresObject)([I.default], () => {
-    let e = I.default.getAllPending(),
-      t = I.default.getErrors(),
-      s = I.default.getAllTryItOut();
+    tryItOutAvatarDecoration: X,
+    tryItOutProfileEffectId: Z
+  } = (0, l.useStateFromStoresObject)([N.default], () => {
+    let e = N.default.getAllPending(),
+      t = N.default.getErrors(),
+      s = N.default.getAllTryItOut();
     return {
       ...e,
       ...s,
       errors: t
     }
-  }), J = (0, c.default)(Z), $ = (0, S.default)(X), ee = n.useRef(null);
+  }), J = (0, c.default)(X), $ = (0, S.default)(Z), ee = n.useRef(null);
   (0, h.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
   let et = (0, g.default)(G.id),
     es = null == et ? void 0 : et.getPreviewBio(K),
@@ -102,7 +102,7 @@ function y(e) {
       children: [(0, a.jsx)(O.default, {
         layoutClassName: B.tryItOutLayout,
         previewTitle: (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(N.default, {
+          children: [(0, a.jsx)(I.default, {
             className: B.premiumIcon
           }), U.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW]
         }),

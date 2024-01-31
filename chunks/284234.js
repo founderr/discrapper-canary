@@ -19,8 +19,8 @@ var a = s("37983"),
   I = s("645266"),
   S = s("914985"),
   N = s("308073"),
-  g = s("565556"),
-  f = s("553275"),
+  f = s("565556"),
+  g = s("553275"),
   A = s("691307"),
   L = s("314143"),
   m = s("721302"),
@@ -47,7 +47,7 @@ function D(e) {
     null === (e = x.current) || void 0 === e || e.resetSearchText()
   }, []);
   if (null == s) return null;
-  let U = (0, f.getSearchState)(!1, !1, M);
+  let U = (0, g.getSearchState)(!1, !1, M);
   return (0, a.jsx)(l, {
     children: (0, a.jsx)("div", {
       className: R.settingsColumn,
@@ -82,7 +82,7 @@ function D(e) {
                     compact: !0,
                     onSelectRow: G,
                     onResetForNewMembers: p
-                  }), U !== f.SearchState.SUCCESS_STILL_INDEXING && (0, a.jsx)(L.default, {
+                  }), U !== g.SearchState.SUCCESS_STILL_INDEXING && (0, a.jsx)(L.default, {
                     guildId: s.id
                   })]
                 }) : (0, a.jsx)("div", {
@@ -104,7 +104,7 @@ function D(e) {
                   })
                 })]
               })
-            }, "body"), (0, a.jsx)(g.default, {
+            }, "body"), (0, a.jsx)(f.default, {
               guildId: s.id
             })]
           })

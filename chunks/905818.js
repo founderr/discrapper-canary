@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("79112"),
   g = s("457971"),
   h = s("447435"),
-  I = s("10130"),
-  N = s("298878"),
+  N = s("10130"),
+  I = s("298878"),
   p = s("916650"),
   C = s("775032"),
   A = s("36978"),
@@ -183,7 +183,7 @@ class K extends n.PureComponent {
         className: V.marginBottom8,
         children: (0, a.jsxs)("div", {
           className: i(w.betaTagContainer),
-          children: [H.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(N.default, {
+          children: [H.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(I.default, {
             className: w.betaTagIcon
           })]
         })
@@ -369,7 +369,7 @@ class K extends n.PureComponent {
         onChange: this.handleChangeDropsOptedOut,
         children: (0, a.jsxs)("div", {
           className: i(w.betaTagContainer, w.dependentSetting),
-          children: [H.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT, (0, a.jsx)(N.default, {
+          children: [H.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT, (0, a.jsx)(I.default, {
             className: w.betaTagIcon
           })]
         })
@@ -635,7 +635,7 @@ function z() {
     n = (0, c.useStateFromStores)([O.default], () => O.default.getFetchError()),
     l = (0, c.useStateFromStores)([v.default], () => v.default.getSubsection()),
     i = (0, g.useIsEligibleForExplicitMediaRedaction)(),
-    r = (0, I.useExplicitContentSettingOrDefault)(),
+    r = (0, N.useExplicitContentSettingOrDefault)(),
     d = (0, C.default)();
   return (0, a.jsx)(K, {
     currentUser: e,

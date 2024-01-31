@@ -102,8 +102,8 @@ function I(e) {
     onFocus: I,
     onRemove: S,
     isSelected: N,
-    isSelecting: g,
-    error: f,
+    isSelecting: f,
+    error: g,
     forceShowErrorTooltip: A
   } = e, L = n.useRef(null), m = n.useRef(null), [C, O] = n.useState(!1), {
     ref: h,
@@ -150,8 +150,8 @@ function I(e) {
         [_.isEditing]: C,
         [_.smallBlink]: !C && !G,
         [_.isSelected]: N,
-        [_.isSelecting]: g,
-        [_.isError]: null != f && !C
+        [_.isSelecting]: f,
+        [_.isError]: null != g && !C
       }),
       children: [(0, a.jsxs)(o.Clickable, {
         tag: "div",
@@ -161,14 +161,14 @@ function I(e) {
         onMouseEnter: () => p(!0),
         onMouseLeave: () => p(!1),
         className: i(_.chipletContainerInner, {
-          [_.isSelecting]: g,
+          [_.isSelecting]: f,
           [_.isEditing]: C
         }),
         ref: m,
         children: [(0, a.jsx)("input", {
           className: i(_.chipletInput, {
             [_.isEditing]: C,
-            [_.isSelecting]: g
+            [_.isSelecting]: f
           }),
           ref: L,
           onChange: j,
@@ -182,7 +182,7 @@ function I(e) {
           value: t,
           isEditing: C,
           isSelected: N,
-          error: f,
+          error: g,
           forceShowErrorTooltip: x || C
         })]
       }), !C && (0, a.jsx)(o.Clickable, {

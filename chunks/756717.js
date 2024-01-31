@@ -27,8 +27,8 @@ function I(e) {
       return (null == e ? void 0 : e.isOwner(t)) === !0
     }),
     {
-      error: g,
-      loading: f,
+      error: f,
+      loading: g,
       createEnableRequest: A,
       submittedRequest: L
     } = (0, d.default)(null == e ? void 0 : e.id),
@@ -66,8 +66,8 @@ function I(e) {
   return a.useEffect(() => {
     v && O()
   }, [O, v]), {
-    resubmittingEnableRequest: f,
-    resubmissionError: g,
+    resubmittingEnableRequest: g,
+    resubmissionError: f,
     isGuildOwner: N,
     createEnableRequest: A,
     resubmittedRequest: L,

@@ -22,8 +22,8 @@ var n = s("627445"),
   _ = s("697218"),
   g = s("216422"),
   h = s("719923"),
-  I = s("158998"),
-  N = s("929423"),
+  N = s("158998"),
+  I = s("929423"),
   p = s("424562"),
   C = s("754893"),
   A = s("8204"),
@@ -78,14 +78,14 @@ function v(e) {
     z = (0, C.canResetThemeColors)(y, null == V ? void 0 : V.themeColors),
     Q = null !== (t = null == V ? void 0 : V.bio) && void 0 !== t ? t : "",
     q = null !== (s = null == V ? void 0 : V.pronouns) && void 0 !== s ? s : "",
-    Z = (e, t, s) => {
+    X = (e, t, s) => {
       s(null != e ? e : null != t ? null : void 0)
     };
   return (0, a.jsxs)("div", {
     className: M.sectionsContainer,
     children: [(0, a.jsx)(A.default, {
       errors: null !== (n = null == F ? void 0 : F.nick) && void 0 !== n ? n : null == H ? void 0 : H.nick,
-      username: I.default.getName(L),
+      username: N.default.getName(L),
       pendingNick: j,
       currentNick: null == w ? void 0 : w.nick,
       guild: k
@@ -111,14 +111,14 @@ function v(e) {
           })]
         }),
         showRemoveAvatarButton: W,
-        onAvatarChange: e => Z(e, null == w ? void 0 : w.avatar, N.setPendingAvatar),
+        onAvatarChange: e => X(e, null == w ? void 0 : w.avatar, I.setPendingAvatar),
         errors: null == F ? void 0 : F.avatar,
         guildId: k.id,
         disabled: !Y
       }, "avatar"), (0, a.jsx)(S.default, {
         showRemoveBannerButton: K,
         errors: null == F ? void 0 : F.banner,
-        onBannerChange: e => Z(e, null == V ? void 0 : V.banner, N.setPendingBanner),
+        onBannerChange: e => X(e, null == V ? void 0 : V.banner, I.setPendingBanner),
         guildId: null == k ? void 0 : k.id,
         disabled: !Y
       }, "banner"), (0, a.jsx)(E.default, {
@@ -142,7 +142,7 @@ function v(e) {
           })]
         }),
         onBioChange: e => {
-          (0, C.setNewPendingGuildIdentityBio)(e, Q), (0, N.setDisableSubmit)(null != e && e.length > x.BIO_MAX_LENGTH)
+          (0, C.setNewPendingGuildIdentityBio)(e, Q), (0, I.setDisableSubmit)(null != e && e.length > x.BIO_MAX_LENGTH)
         },
         errors: null !== (v = null == F ? void 0 : F.bio) && void 0 !== v ? v : null == H ? void 0 : H.bio,
         pendingBio: U,

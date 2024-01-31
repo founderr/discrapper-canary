@@ -1,92 +1,92 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return S
+    return g
   }
-}), n("222007");
-var i = n("37983");
-n("884691");
-var l = n("414456"),
-  r = n.n(l),
-  s = n("969176"),
-  a = n.n(s),
-  o = n("669491"),
-  u = n("77078"),
-  d = n("462274"),
-  c = n("217513"),
-  f = n("528438"),
-  E = n("719923"),
-  h = n("409214"),
-  _ = n("570697"),
-  C = n("782340"),
-  p = n("431416");
+}), s("222007");
+var a = s("37983");
+s("884691");
+var n = s("414456"),
+  l = s.n(n),
+  i = s("969176"),
+  r = s.n(i),
+  o = s("669491"),
+  d = s("77078"),
+  u = s("462274"),
+  c = s("217513"),
+  S = s("528438"),
+  E = s("719923"),
+  f = s("409214"),
+  T = s("570697"),
+  m = s("782340"),
+  _ = s("431416");
 
-function S(e) {
+function g(e) {
   let {
     user: t,
-    pendingAvatar: n,
-    pendingColors: l,
-    onThemeColorsChange: s,
-    preventDisabled: S,
-    guildId: I,
-    className: R,
-    showPremiumIcon: m = !0,
-    showResetThemeButton: g = !1,
-    forcedDivider: v
-  } = e, L = (0, c.default)(t.id, I), [T, N] = (0, f.default)(t, L, {
-    pendingThemeColors: l,
+    pendingAvatar: s,
+    pendingColors: n,
+    onThemeColorsChange: i,
+    preventDisabled: g,
+    guildId: h,
+    className: N,
+    showPremiumIcon: I = !0,
+    showResetThemeButton: p = !1,
+    forcedDivider: C
+  } = e, A = (0, c.default)(t.id, h), [O, x] = (0, S.default)(t, A, {
+    pendingThemeColors: n,
     isPreview: !0
-  }), A = E.default.canUsePremiumProfileCustomization(t), M = null != n ? n : t.getAvatarURL(I, 80), x = (0, u.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), y = (0, d.useAvatarColors)(M, x, !1);
-  if (null == T || null == N) return null;
-  let P = e => {
-    let t = a(e, null == L ? void 0 : L.themeColors);
-    s(t ? void 0 : e)
+  }), R = E.default.canUsePremiumProfileCustomization(t), M = null != s ? s : t.getAvatarURL(h, 80), v = (0, d.useToken)(o.default.unsafe_rawColors.PRIMARY_530).hex(), D = (0, u.useAvatarColors)(M, v, !1);
+  if (null == O || null == x) return null;
+  let L = e => {
+    let t = r(e, null == A ? void 0 : A.themeColors);
+    i(t ? void 0 : e)
   };
-  return (0, i.jsx)(_.default, {
-    title: C.default.Messages.USER_SETTINGS_PROFILE_THEME,
-    disabled: !A && !S,
-    className: r(p.profileThemesSection, R),
-    showPremiumIcon: m,
-    forcedDivider: v,
-    children: (0, i.jsxs)("div", {
-      className: p.sectionContainer,
-      children: [(0, i.jsx)("div", {
-        className: p.sparkleContainer,
-        children: (0, i.jsx)(h.default, {
-          onChange: e => P([e, N]),
-          color: T,
-          suggestedColors: y,
+  return (0, a.jsx)(T.default, {
+    title: m.default.Messages.USER_SETTINGS_PROFILE_THEME,
+    disabled: !R && !g,
+    className: l(_.profileThemesSection, N),
+    showPremiumIcon: I,
+    forcedDivider: C,
+    children: (0, a.jsxs)("div", {
+      className: _.sectionContainer,
+      children: [(0, a.jsx)("div", {
+        className: _.sparkleContainer,
+        children: (0, a.jsx)(f.default, {
+          onChange: e => L([e, x]),
+          color: O,
+          suggestedColors: D,
           showEyeDropper: !0,
-          label: (0, i.jsx)(u.Text, {
-            className: p.colorSwatchLabel,
+          label: (0, a.jsx)(d.Text, {
+            className: _.colorSwatchLabel,
             color: "header-secondary",
             variant: "text-xs/normal",
             "aria-hidden": !0,
-            children: C.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
+            children: m.default.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
           })
         })
-      }), (0, i.jsx)("div", {
-        className: p.sparkleContainer,
-        children: (0, i.jsx)(h.default, {
-          onChange: e => P([T, e]),
-          color: N,
-          suggestedColors: y,
+      }), (0, a.jsx)("div", {
+        className: _.sparkleContainer,
+        children: (0, a.jsx)(f.default, {
+          onChange: e => L([O, e]),
+          color: x,
+          suggestedColors: D,
           showEyeDropper: !0,
-          label: (0, i.jsx)(u.Text, {
-            className: p.colorSwatchLabel,
+          label: (0, a.jsx)(d.Text, {
+            className: _.colorSwatchLabel,
             color: "header-secondary",
             variant: "text-xs/normal",
             "aria-hidden": !0,
-            children: C.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
+            children: m.default.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
           })
         })
-      }), g && null != I && (0, i.jsx)(u.Button, {
-        className: p.resetButton,
-        color: u.Button.Colors.PRIMARY,
-        look: u.Button.Looks.LINK,
-        size: u.Button.Sizes.SMALL,
-        onClick: () => P([null, null]),
-        children: C.default.Messages.USER_SETTINGS_RESET_PROFILE_THEME
+      }), p && null != h && (0, a.jsx)(d.Button, {
+        className: _.resetButton,
+        color: d.Button.Colors.PRIMARY,
+        look: d.Button.Looks.LINK,
+        size: d.Button.Sizes.SMALL,
+        onClick: () => L([null, null]),
+        children: m.default.Messages.USER_SETTINGS_RESET_PROFILE_THEME
       })]
     })
   })

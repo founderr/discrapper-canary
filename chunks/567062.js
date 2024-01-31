@@ -22,7 +22,7 @@ var a = s("37983"),
       isExpanded: l,
       isStuck: T,
       onExpand: I
-    } = e, S = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [N, g] = n.useState(!0), [f, A] = n.useState(!1), {
+    } = e, S = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [N, f] = n.useState(!0), [g, A] = n.useState(!1), {
       ref: L,
       height: m = 0
     } = (0, u.default)(), {
@@ -50,7 +50,7 @@ var a = s("37983"),
     };
     return n.useLayoutEffect(() => {
       let e = setTimeout(() => {
-        g(!1)
+        f(!1)
       }, 100);
       return () => clearTimeout(e)
     }, []), (0, a.jsx)(d.Clickable, {
@@ -65,7 +65,7 @@ var a = s("37983"),
       onMouseUp: x,
       children: (0, a.jsxs)(r.animated.div, {
         className: i(_.contentExpandContainer, {
-          [_.showOverflow]: l && f
+          [_.showOverflow]: l && g
         }),
         style: D,
         children: [(0, a.jsx)(d.Clickable, {

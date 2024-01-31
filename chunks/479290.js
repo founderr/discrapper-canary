@@ -21,8 +21,8 @@ var a = s("37983"),
   _ = s("108314"),
   g = s("946964"),
   h = s("649844"),
-  I = s("509167"),
-  N = s("635956"),
+  N = s("509167"),
+  I = s("635956"),
   p = s("305961"),
   C = s("521012"),
   A = s("49111"),
@@ -54,7 +54,7 @@ var M = function() {
   }), B = "true" !== b.gift && null != M, [y, F] = n.useState(v.length > 0 ? v[0].value : null), {
     AnalyticsLocationProvider: G,
     analyticsLocations: k
-  } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE), [H, w] = n.useState(""), [V, Y] = n.useState(""), [W, K] = n.useState(""), [z, Q] = n.useState(""), [q, Z] = n.useState("");
+  } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE), [H, w] = n.useState(""), [V, Y] = n.useState(""), [W, K] = n.useState(""), [z, Q] = n.useState(""), [q, X] = n.useState("");
   return (0, a.jsx)(G, {
     children: (0, a.jsxs)(r.FormSection, {
       title: "Payment Flow Modals",
@@ -79,7 +79,7 @@ var M = function() {
             label: "None"
           }],
           onChange: e => t(e)
-        }), (0, a.jsx)(N.default, {
+        }), (0, a.jsx)(I.default, {
           subscriptionTier: e,
           isGift: !0,
           premiumModalAnalyticsLocation: {}
@@ -281,7 +281,7 @@ var M = function() {
           value: z,
           onChange: Q
         }), (0, a.jsx)(r.Button, {
-          onClick: () => (0, I.default)({
+          onClick: () => (0, N.default)({
             applicationId: W,
             skuId: z,
             analyticsLocations: k
@@ -297,7 +297,7 @@ var M = function() {
         children: [(0, a.jsx)(r.TextInput, {
           placeholder: "SKU ID",
           value: q,
-          onChange: Z
+          onChange: X
         }), (0, a.jsx)(r.Button, {
           onClick: () => (0, g.default)({
             skuId: q,

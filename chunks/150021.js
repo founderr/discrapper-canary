@@ -7,19 +7,19 @@ i.r(t), i.d(t, {
     return S
   },
   uploadEmoji: function() {
-    return h
+    return C
   },
   deleteEmoji: function() {
-    return C
+    return h
   },
   updateEmoji: function() {
     return T
   },
   favoriteEmoji: function() {
-    return A
+    return v
   },
   unfavoriteEmoji: function() {
-    return y
+    return A
   }
 }), i("424973");
 var n = i("917351"),
@@ -61,7 +61,7 @@ function S(e) {
   }))
 }
 
-function h(e) {
+function C(e) {
   let {
     guildId: t,
     image: i,
@@ -88,7 +88,7 @@ function h(e) {
   }), Promise.reject(e)))
 }
 
-function C(e, t) {
+function h(e, t) {
   return r.default.dispatch({
     type: "EMOJI_DELETE",
     guildId: e,
@@ -127,7 +127,7 @@ function N(e) {
   })
 }
 
-function A(e) {
+function v(e) {
   var t;
   (function(e) {
     null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = N(t.emojis), l.size(t.emojis) >= p.MAX_FAVORITES) ? (m.default.show({
@@ -139,7 +139,7 @@ function A(e) {
   })(null !== (t = e.id) && void 0 !== t ? t : e.name)
 }
 
-function y(e) {
+function A(e) {
   var t;
   (function(e) {
     null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => {

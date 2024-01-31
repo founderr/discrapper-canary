@@ -21,13 +21,13 @@ var n = i("37983"),
   g = i("45961"),
   _ = i("515059"),
   S = i("139321"),
-  h = i("845579"),
-  C = i("124299"),
+  C = i("845579"),
+  h = i("124299"),
   T = i("599110"),
   N = i("159885"),
-  A = i("788506"),
-  y = i("675280"),
-  v = i("917764"),
+  v = i("788506"),
+  A = i("675280"),
+  y = i("917764"),
   j = i("83017"),
   R = i("232786"),
   O = i("842126"),
@@ -41,10 +41,10 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
   w = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT),
   G = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM),
   k = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
-  F = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
-  V = (0, N.cssValueToNumber)(d.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
-  K = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_SECTION_MARGIN_BOTTOM),
-  H = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_HEIGHT) + (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_MARGIN_TOP),
+  V = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP),
+  F = (0, N.cssValueToNumber)(d.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
+  H = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_SECTION_MARGIN_BOTTOM),
+  K = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_HEIGHT) + (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_MARGIN_TOP),
   B = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
   J = e => e + 2 * B,
   W = e => {
@@ -57,8 +57,8 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       searchQuery: f,
       sectionDescriptors: I,
       setCollapsedSections: g,
-      getEmojiItemProps: h,
-      getEmojiRowProps: C,
+      getEmojiItemProps: C,
+      getEmojiRowProps: h,
       isScrolling: N,
       isUsingKeyboardNavigation: D,
       allowAnimatedEmoji: B,
@@ -93,8 +93,8 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         surrogateCodePoint: X,
         onInspect: $,
         onSelect: d,
-        getEmojiItemProps: h,
-        getEmojiRowProps: C,
+        getEmojiItemProps: C,
+        getEmojiRowProps: h,
         isScrolling: N,
         isUsingKeyboardNavigation: D,
         rowIndex: e,
@@ -106,7 +106,7 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         messageId: W,
         isBurstReaction: z
       }, e)
-    }), [s, I, r, X, $, d, h, C, N, D, B, ee, J, W, z]);
+    }), [s, I, r, X, $, d, C, h, N, D, B, ee, J, W, z]);
     l.useEffect(() => () => {
       var e, t;
       return null === (t = et.cache) || void 0 === t ? void 0 : null === (e = t.clear) || void 0 === e ? void 0 : e.call(t)
@@ -122,7 +122,7 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           sectionId: u
         } = i;
         if (o === x.EmojiCategoryTypes.SEARCH_RESULTS) return;
-        let c = o === x.EmojiCategoryTypes.GUILD ? null != l ? (0, n.jsx)(v.default, {
+        let c = o === x.EmojiCategoryTypes.GUILD ? null != l ? (0, n.jsx)(y.default, {
             guild: l,
             height: 16,
             width: 16
@@ -130,13 +130,13 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
             pack: s,
             height: 16,
             width: 16
-          }) : null : null != r ? (0, n.jsx)(y.default, {
+          }) : null : null != r ? (0, n.jsx)(A.default, {
             categoryId: r,
             height: 16,
             width: 16
           }) : null,
           d = null == l ? void 0 : l.toString();
-        return null != r && (d = (0, A.getStringForEmojiCategory)(r, null == l ? void 0 : l.toString(), null == s ? void 0 : s.name)), (0, n.jsx)(_.default, {
+        return null != r && (d = (0, v.getStringForEmojiCategory)(r, null == l ? void 0 : l.toString(), null == s ? void 0 : s.name)), (0, n.jsx)(_.default, {
           className: a(b.header, Z),
           icon: c,
           isCollapsed: t.has(u),
@@ -172,16 +172,16 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       }, [I, t]),
       es = l.useCallback(e => {
         let i = I[e];
-        return i.sectionId !== x.EmojiCategoryTypes.PREMIUM_UPSELL || t.has(i.sectionId) ? 0 : H
+        return i.sectionId !== x.EmojiCategoryTypes.PREMIUM_UPSELL || t.has(i.sectionId) ? 0 : K
       }, [I, t]),
       ea = l.useCallback(e => {
         var i;
-        return e === I.length - 1 || t.has(null === (i = I[e]) || void 0 === i ? void 0 : i.sectionId) ? 0 : K
+        return e === I.length - 1 || t.has(null === (i = I[e]) || void 0 === i ? void 0 : i.sectionId) ? 0 : H
       }, [t, I]),
-      er = l.useMemo(() => ["" !== f ? F : U, w, G, k], [f]),
+      er = l.useMemo(() => ["" !== f ? V : U, w, G, k], [f]),
       eo = l.useCallback(e => {
         let t = I[e];
-        return t.type === x.EmojiCategoryTypes.SEARCH_RESULTS ? 0 : V
+        return t.type === x.EmojiCategoryTypes.SEARCH_RESULTS ? 0 : F
       }, [I]);
     return {
       listPadding: er,
@@ -211,9 +211,9 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       isUsingKeyboardNavigation: S,
       channelGuildId: T,
       messageId: N,
-      isBurstReaction: A,
-      listHeaderClassName: y
-    } = e, v = l.useRef(!1), j = m.EmojiPickerStore.useStore(e => e.activeCategoryIndex), R = (0, I.useExpressionPickerStore)(e => e.searchQuery), O = h.AnimateEmoji.useSetting(), {
+      isBurstReaction: v,
+      listHeaderClassName: A
+    } = e, y = l.useRef(!1), j = m.EmojiPickerStore.useStore(e => e.activeCategoryIndex), R = (0, I.useExpressionPickerStore)(e => e.searchQuery), O = C.AnimateEmoji.useSetting(), {
       listPadding: M,
       renderRow: x,
       renderSection: P,
@@ -233,16 +233,16 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       setCollapsedSections: d,
       getEmojiItemProps: E,
       getEmojiRowProps: p,
-      isScrolling: v,
+      isScrolling: y,
       isUsingKeyboardNavigation: S,
       allowAnimatedEmoji: O,
       channelGuildId: T,
       messageId: N,
-      isBurstReaction: A,
-      listHeaderClassName: y
-    }), F = (0, g.useSynchronizedActiveCategoryIndexForScrollPosition)({
+      isBurstReaction: v,
+      listHeaderClassName: A
+    }), V = (0, g.useSynchronizedActiveCategoryIndexForScrollPosition)({
       activeCategoryIndex: j,
-      isScrolling: v,
+      isScrolling: y,
       listRef: s,
       onActiveCategoryIndexChange: m.EmojiPickerStore.setActiveCategoryIndex,
       scrollOffset: 20,
@@ -253,14 +253,14 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       activeCategoryIndex: j,
       listRef: s
     });
-    let V = o.length > 0;
+    let F = o.length > 0;
     return (0, n.jsx)("div", {
       className: b.listWrapper,
-      children: V ? (0, n.jsx)(C.default, {
+      children: F ? (0, n.jsx)(h.default, {
         role: "none presentation",
         className: b.list,
         listPadding: M,
-        onScroll: F,
+        onScroll: V,
         renderRow: x,
         renderSection: P,
         renderSectionHeader: L,
