@@ -230,16 +230,16 @@ function U(e) {
 }
 
 function j(e) {
+  var t;
   let {
-    attachment: t,
-    alt: n,
+    attachment: n,
     className: s
   } = e, l = (0, p.useIsWindowFocused)(), i = I.GifAutoPlay.useSetting();
   return (0, a.jsx)(m.default, {
     className: s,
     imageClassName: R.attachmentImage,
-    src: null != t.proxy_url && "" !== t.proxy_url ? t.proxy_url : t.url,
-    alt: null != n ? n : (0, S.filterOutUUID)(t.filename),
+    src: null != n.proxy_url && "" !== n.proxy_url ? n.proxy_url : n.url,
+    alt: null !== (t = n.description) && void 0 !== t ? t : (0, S.filterOutUUID)(n.filename),
     responsive: !0,
     width: 212,
     height: 212,
@@ -252,19 +252,18 @@ function j(e) {
 function b(e) {
   var t;
   let {
-    alt: n,
-    className: s,
-    emoji: l
-  } = e, i = (0, d.default)([T.default], () => {
+    className: n,
+    emoji: s
+  } = e, l = (0, d.default)([T.default], () => {
     var e;
-    return T.default.getCustomEmojiById(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : "")
-  }, [l.id]), r = (null == l ? void 0 : l.name) !== "" ? l.name : null == i ? void 0 : i.name;
+    return T.default.getCustomEmojiById(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : "")
+  }, [s.id]), i = (null == s ? void 0 : s.name) !== "" ? s.name : null == l ? void 0 : l.name;
   return (0, a.jsx)(f.default, {
-    className: s,
-    emojiId: null == l ? void 0 : l.id,
-    emojiName: null == l ? void 0 : l.name,
-    alt: null != n ? n : r,
-    animated: null !== (t = null == i ? void 0 : i.animated) && void 0 !== t && t
+    className: n,
+    emojiId: null == s ? void 0 : s.id,
+    emojiName: null == s ? void 0 : s.name,
+    alt: i,
+    animated: null !== (t = null == l ? void 0 : l.animated) && void 0 !== t && t
   })
 }
 
@@ -283,23 +282,20 @@ function B(e) {
     containerClassName: n,
     attachmentClassName: s,
     emojiClassName: l,
-    fallback: i,
-    alt: r
+    fallback: i
   } = e, {
-    message: o
+    message: r
   } = (0, h.usePollContext)();
   if (t.attachmentIds.length > 0) {
-    let e = o.attachments.find(e => e.id === t.attachmentIds[0]);
+    let e = r.attachments.find(e => e.id === t.attachmentIds[0]);
     if (null != e) return G(n, (0, a.jsx)(j, {
       className: s,
-      attachment: e,
-      alt: r
+      attachment: e
     }))
   }
   return null != t.emoji ? G(n, (0, a.jsx)(b, {
     className: l,
-    emoji: t.emoji,
-    alt: r
+    emoji: t.emoji
   })) : void 0 !== i ? (0, a.jsx)(a.Fragment, {
     children: i
   }) : null
