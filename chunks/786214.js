@@ -16,8 +16,8 @@ var s = n("37983"),
   u = n("772017"),
   d = n("651693"),
   c = n("476765"),
-  f = n("58608"),
-  E = n("447435"),
+  E = n("58608"),
+  f = n("447435"),
   _ = n("612920"),
   T = n("782340"),
   I = n("471387");
@@ -51,7 +51,7 @@ let m = e => {
     } = e, l = (0, d.isVideoUrl)(t);
     return (0, s.jsx)("div", {
       className: I.mediaContainer,
-      children: l ? (0, s.jsx)(f.default, {
+      children: l ? (0, s.jsx)(E.default, {
         className: i(I.video, I.media),
         controls: !0,
         src: t
@@ -72,34 +72,44 @@ function S(e) {
     channelId: t,
     messageId: n,
     isReportFalsePositiveLoading: a,
-    attachmentPreview: i,
-    embedPreview: r,
-    onConfirmPress: u,
-    transitionState: d,
-    onClose: f
-  } = e, _ = (0, c.useUID)(), p = () => {
-    (0, E.trackMediaRedactionAction)({
-      action: E.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
+    analyticsContext: i,
+    attachmentPreview: r,
+    embedPreview: u,
+    onConfirmPress: d,
+    transitionState: E,
+    onClose: _
+  } = e, p = (0, c.useUID)(), A = l.useCallback(() => {
+    (0, f.trackMediaRedactionAction)({
+      action: f.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
       channelId: t,
-      messageId: n
-    }), f()
-  };
-  return l.useEffect(() => {
-    (0, E.trackMediaRedactionAction)({
-      action: E.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
+      messageId: n,
+      context: i
+    }), _()
+  }, [t, n, i, _]), S = l.useCallback(() => {
+    null == d || d(), (0, f.trackMediaRedactionAction)({
+      action: f.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
       channelId: t,
-      messageId: n
+      messageId: n,
+      context: i
     })
-  }, [t, n]), (0, s.jsxs)(o.ModalRoot, {
-    transitionState: d,
-    "aria-labelledby": _,
+  }, [t, n, i, d]);
+  return l.useEffect(() => {
+    (0, f.trackMediaRedactionAction)({
+      action: f.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
+      channelId: t,
+      messageId: n,
+      context: i
+    })
+  }, [t, n, i]), (0, s.jsxs)(o.ModalRoot, {
+    transitionState: E,
+    "aria-labelledby": p,
     size: o.ModalSize.SMALL,
     children: [(0, s.jsxs)(o.ModalContent, {
       children: [(0, s.jsx)(o.ModalCloseButton, {
-        onClick: p,
+        onClick: A,
         className: I.closeButton
       }), (0, s.jsx)(o.Heading, {
-        id: _,
+        id: p,
         variant: "heading-lg/semibold",
         color: "header-primary",
         className: I.header,
@@ -109,10 +119,10 @@ function S(e) {
         color: "header-secondary",
         className: I.subheader,
         children: T.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
-      }), null != i && (0, s.jsx)(m, {
-        attachment: i
-      }), null != r && (0, s.jsx)(N, {
-        embed: r
+      }), null != r && (0, s.jsx)(m, {
+        attachment: r
+      }), null != u && (0, s.jsx)(N, {
+        embed: u
       })]
     }), (0, s.jsxs)(o.ModalFooter, {
       children: [(0, s.jsx)(o.Button, {
@@ -121,20 +131,14 @@ function S(e) {
         submitting: a,
         size: o.Button.Sizes.MEDIUM,
         color: o.Button.Colors.BRAND,
-        onClick: () => {
-          null == u || u(), (0, E.trackMediaRedactionAction)({
-            action: E.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
-            channelId: t,
-            messageId: n
-          })
-        },
+        onClick: S,
         children: T.default.Messages.CONFIRM
       }), (0, s.jsx)(o.Button, {
         className: I.button,
         disabled: a,
         color: o.Button.Colors.TRANSPARENT,
         size: o.Button.Sizes.MEDIUM,
-        onClick: p,
+        onClick: A,
         children: T.default.Messages.CANCEL
       })]
     })]

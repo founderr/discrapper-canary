@@ -1,46 +1,63 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return _
   }
 });
 var s = n("37983"),
   l = n("884691"),
-  a = n("446674"),
-  i = n("77078"),
-  r = n("477566"),
-  o = n("29212"),
-  u = n("817892"),
-  d = n("782340");
+  a = n("432710"),
+  i = n("446674"),
+  r = n("77078"),
+  o = n("477566"),
+  u = n("155084"),
+  d = n("29212"),
+  c = n("447435"),
+  E = n("817892"),
+  f = n("782340");
 
-function c(e) {
+function _(e) {
   let {
     messageId: t,
-    channelId: c
-  } = e, f = (0, a.useStateFromStores)([u.default], () => u.default.canSubmitFpReport(t)), E = l.useCallback(() => {
-    if (!f) {
-      r.default.show({
-        title: d.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_HEADER,
-        body: d.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY,
-        confirmText: d.default.Messages.OKAY
-      }), o.default.disableFalsePositiveButton(c, t);
+    channelId: _
+  } = e, T = (0, i.useStateFromStores)([E.default], () => E.default.canSubmitFpReport(t));
+  l.useEffect(() => {
+    u.default.increment({
+      name: a.MetricEvents.EXPLICIT_MEDIA_SENDER_FP_BUTTON_VIEW
+    }), (0, c.trackMediaRedactionAction)({
+      action: c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_VIEWED,
+      messageId: t,
+      channelId: _
+    })
+  }, [t, _]);
+  let I = l.useCallback(() => {
+    if ((0, c.trackMediaRedactionAction)({
+        action: c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED,
+        messageId: t,
+        channelId: _
+      }), !T) {
+      o.default.show({
+        title: f.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_HEADER,
+        body: f.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY,
+        confirmText: f.default.Messages.OKAY
+      }), d.default.disableFalsePositiveButton(_, t);
       return
-    }(0, i.openModalLazy)(async () => {
+    }(0, r.openModalLazy)(async () => {
       let {
         default: e
       } = await n("492996");
       return n => (0, s.jsx)(e, {
-        channelId: c,
+        channelId: _,
         messageId: t,
         ...n
       })
     })
-  }, [c, t, f]);
-  return (0, s.jsx)(i.Button, {
-    size: i.Button.Sizes.MEDIUM,
-    color: i.Button.Colors.PRIMARY,
-    onClick: E,
-    disabled: !f,
-    children: d.default.Messages.SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE
+  }, [_, t, T]);
+  return (0, s.jsx)(r.Button, {
+    size: r.Button.Sizes.MEDIUM,
+    color: r.Button.Colors.PRIMARY,
+    onClick: I,
+    disabled: !T,
+    children: f.default.Messages.SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE
   })
 }
