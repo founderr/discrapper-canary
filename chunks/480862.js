@@ -33,7 +33,7 @@ function C(e) {
     section: c.AnalyticsSections.STREAM_SETTINGS,
     object: c.AnalyticsObjects.PREMIUM_UPSELL_BANNER,
     objectType: c.AnalyticsObjectTypes.BUY
-  }, _ = () => (d.default.trackExposure({
+  }, g = () => (d.default.trackExposure({
     location: "371fea_2"
   }), C.enabled) ? (0, u.default)({
     initialPlanId: null,
@@ -46,7 +46,7 @@ function C(e) {
   });
   return (0, n.jsxs)(r.Clickable, {
     onClick: () => {
-      _()
+      g()
     },
     className: s(S.upsellBanner, S.gradientBackground),
     children: [(0, n.jsxs)("div", {

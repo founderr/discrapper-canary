@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return O
+    return j
   }
 }), l("222007"), l("311790"), l("477657"), l("811875"), l("90301"), l("652153"), l("28797"), l("817884"), l("597349"), l("667536"), l("690341"), l("492311"), l("101997"), l("424973");
 var n = l("37983"),
@@ -19,10 +19,10 @@ var n = l("37983"),
   C = l("703370"),
   E = l("145131"),
   h = l("162933"),
-  _ = l("773336"),
-  g = l("301834"),
-  p = l("756898"),
-  N = l("375202"),
+  g = l("773336"),
+  N = l("301834"),
+  _ = l("756898"),
+  p = l("375202"),
   I = l("321443"),
   x = l("444276"),
   v = l("353927"),
@@ -87,20 +87,20 @@ async function L() {
 }
 
 function M(e) {
-  let t = (0, _.isWindows)() ? (0, N.default)(S.default, C.default) : null,
+  let t = (0, g.isWindows)() ? (0, p.default)(S.default, C.default) : null,
     l = S.default.getRunningGames();
-  return null != t && (0, p.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, p.default)(e.id, t.windowHandle)) ? 1 : 0
+  return null != t && (0, _.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, _.default)(e.id, t.windowHandle)) ? 1 : 0
 }
 
-function O(e) {
+function j(e) {
   let {
     selectedSource: t,
     onChangeSelectedSource: l
   } = e, {
     enableGoLiveCaptureCard: s
-  } = g.default.useExperiment({
+  } = N.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), i = m.default.supports(v.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [S, C] = a.useState(null), [_, p] = a.useState(null), N = null != _ && _.length > 0, [L, M] = a.useState(u.DesktopSources.WINDOW), [O, j] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
+  }), i = m.default.supports(v.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [S, C] = a.useState(null), [g, _] = a.useState(null), p = null != g && g.length > 0, [L, M] = a.useState(u.DesktopSources.WINDOW), [j, O] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
   a.useEffect(() => {
     let e = P.current;
     return T().then(e => {
@@ -109,14 +109,14 @@ function O(e) {
         windowSources: l,
         cameraSources: n
       } = e;
-      f(t), C(l), p(n)
+      f(t), C(l), _(n)
     }), e.start(1e3, async () => {
       let {
         screenSources: e,
         windowSources: t,
         cameraSources: l
       } = await T();
-      f(e), C(t), p(l)
+      f(e), C(t), _(l)
     }), () => {
       e.stop()
     }
@@ -124,26 +124,26 @@ function O(e) {
   let b = a.useCallback(e => {
       if (null !== e) {
         var t;
-        D.current = e, j((t = !e.isScrolledToTop(), t))
+        D.current = e, O((t = !e.isScrolledToTop(), t))
       }
     }, []),
-    G = function(e) {
+    y = function(e) {
       switch (e) {
         case u.DesktopSources.WINDOW:
           return S;
         case u.DesktopSources.SCREEN:
           return o;
         case u.DesktopSources.CAMERA:
-          return _
+          return g
       }
     }(L);
-  if (null == G) return (0, n.jsx)(E.default, {
+  if (null == y) return (0, n.jsx)(E.default, {
     className: R.spinner,
     justify: E.default.Justify.CENTER,
     align: E.default.Align.CENTER,
     children: (0, n.jsx)(c.Spinner, {})
   });
-  let U = G.map(e => {
+  let G = y.map(e => {
     let {
       id: a
     } = e, s = (null == t ? void 0 : t.id) === a;
@@ -159,15 +159,15 @@ function O(e) {
     }, a)
   });
 
-  function y() {
+  function U() {
     let e = D.current;
-    null != e && j(!e.isScrolledToTop())
+    null != e && O(!e.isScrolledToTop())
   }
   return (0, n.jsxs)(a.Fragment, {
     children: [(0, n.jsxs)("div", {
       className: R.segmentContainer,
       children: [(0, n.jsx)(I.default, {
-        separator: O
+        separator: j
       }), (0, n.jsx)(c.SegmentedControl, {
         options: function() {
           let e = [{
@@ -177,7 +177,7 @@ function O(e) {
             name: A.default.Messages.GO_LIVE_MODAL_SCREENS,
             value: u.DesktopSources.SCREEN
           }];
-          return s && i && N && e.push({
+          return s && i && p && e.push({
             name: A.default.Messages.GO_LIVE_MODAL_CAPTURE,
             value: u.DesktopSources.CAMERA
           }), e
@@ -197,23 +197,23 @@ function O(e) {
       children: (0, n.jsx)(c.AdvancedScroller, {
         ref: b,
         className: R.sourceScroller,
-        onScroll: y,
+        onScroll: U,
         children: (0, n.jsx)(h.default, {
           layout: h.default.Layout.WRAP,
           columns: 2,
           className: R.sourceContainer,
-          children: U
+          children: G
         })
       })
     }) : (0, n.jsx)(c.AdvancedScroller, {
       ref: b,
       className: R.sourceScroller,
-      onScroll: y,
+      onScroll: U,
       children: (0, n.jsx)(h.default, {
         layout: h.default.Layout.WRAP,
         columns: 2,
         className: R.sourceContainer,
-        children: U
+        children: G
       })
     })]
   })

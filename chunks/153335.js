@@ -49,24 +49,24 @@ var i = n("37983"),
       } = (0, c.default)(),
       {
         activeSubscription: M,
-        activeEntitlement: j
+        activeEntitlement: w
       } = (0, S.useActiveSubscriptionListingForApplication)(O, C),
-      w = (0, S.useEligibleApplicationSubscriptionGuilds)(O, C),
-      D = (0, d.default)(),
+      D = (0, S.useEligibleApplicationSubscriptionGuilds)(O, C),
+      j = (0, d.default)(),
       U = null != l && (0, m.isApplicationUserSubscription)(l.sku_flags),
-      B = null != j && j.userId === (null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
-      V = null == j || B,
-      K = null == j || G.length > 1,
-      W = null != C || w.length > 0,
+      B = null != w && w.userId === (null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
+      V = null == w || B,
+      K = null == w || G.length > 1,
+      W = null != C || D.length > 0,
       z = U && B,
       Z = null != R && null != y && V && K && (W || U) && !z;
     V ? W ? z && null != R && (n = T.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
       tierName: R.name
     })) : n = T.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = T.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, r.useEffect(() => {
-      x && null != F && D && u.default.wait(() => {
+      x && null != F && j && u.default.wait(() => {
         (0, o.fetchSubscriptionPlansForSKU)(F)
       })
-    }, [x, F, D]);
+    }, [x, F, j]);
     let Q = r.useCallback(() => {
       a(null != l, "No subscription listing"), a(null != y, "No application"), a(null != L, "No subscription plan"), a(x, "Cannot purchase this unpublished plan");
       let e = () => {
@@ -82,7 +82,7 @@ var i = n("37983"),
           initialPlanId: L.id,
           skuId: L.sku_id,
           guildId: C,
-          eligibleApplicationSubscriptionGuilds: w,
+          eligibleApplicationSubscriptionGuilds: D,
           planGroup: G,
           listing: l,
           application: y,
@@ -96,7 +96,7 @@ var i = n("37983"),
         onConfirm: e,
         onCancel: () => {}
       }) : e()
-    }, [x, l, L, G, y, C, W, U, H, A, M, N, w, v, b]);
+    }, [x, l, L, G, y, C, W, U, H, A, M, N, D, v, b]);
     return {
       openModal: Q,
       canOpenModal: Z,

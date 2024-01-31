@@ -20,9 +20,9 @@ var a = l("414456"),
   C = l("145131"),
   E = l("216422"),
   h = l("719923"),
-  N = l("773356"),
-  _ = l("480862"),
-  g = l("686298"),
+  g = l("773356"),
+  N = l("480862"),
+  _ = l("686298"),
   p = l("49111"),
   I = l("782340"),
   x = l("770420"),
@@ -111,45 +111,45 @@ function M(e) {
     onFPSChange: E,
     onPresetChange: T,
     targetGuildPremiumTier: M,
-    captureDeviceSelected: O
-  } = e, j = (0, u.useStateFromStores)([m.default], () => {
+    captureDeviceSelected: j
+  } = e, O = (0, u.useStateFromStores)([m.default], () => {
     let e = m.default.getCurrentUser();
     return i(null != e, "StreamSettings: user cannot be undefined"), e
-  }), D = h.default.canStreamQuality(h.StreamQuality.MID, j), {
+  }), D = h.default.canStreamQuality(h.StreamQuality.MID, O), {
     location: P
   } = (0, c.useAnalyticsContext)(), b = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !1
-  }), G = !D && !b, y = O ? g.GoLiveDeviceResolutionButtons : g.ApplicationStreamResolutionButtons, U = {
+  }), y = !D && !b, G = j ? _.GoLiveDeviceResolutionButtons : _.ApplicationStreamResolutionButtons, U = {
     ...P,
     section: p.AnalyticsSections.STREAM_SETTINGS
-  }, V = (0, n.jsx)(S.default, {
-    buttons: y.map(e => L({
+  }, w = (0, n.jsx)(S.default, {
+    buttons: G.map(e => L({
       type: e,
       selected: e.value === a,
-      needsPremium: !(0, N.default)(l, e.value, s, j, M),
+      needsPremium: !(0, g.default)(l, e.value, s, O, M),
       analyticsLocation: U,
       onClick: () => r(e.value),
       onClose: t
     }))
-  }), H = (0, n.jsx)(S.default, {
-    buttons: g.ApplicationStreamFPSButtons.map(e => L({
+  }), V = (0, n.jsx)(S.default, {
+    buttons: _.ApplicationStreamFPSButtons.map(e => L({
       type: e,
       selected: e.value === s,
-      needsPremium: !(0, N.default)(l, a, e.value, j, M),
+      needsPremium: !(0, g.default)(l, a, e.value, O, M),
       analyticsLocation: U,
       onClick: () => E(e.value),
       onClose: t
     }))
-  }), w = [{
-    value: g.ApplicationStreamPresets.PRESET_VIDEO,
+  }), H = [{
+    value: _.ApplicationStreamPresets.PRESET_VIDEO,
     label: I.default.Messages.STREAM_PRESET_VIDEO
-  }, ...O ? [] : [{
-    value: g.ApplicationStreamPresets.PRESET_DOCUMENTS,
+  }, ...j ? [] : [{
+    value: _.ApplicationStreamPresets.PRESET_DOCUMENTS,
     label: I.default.Messages.STREAM_PRESET_DOCUMENTS
   }], {
-    value: g.ApplicationStreamPresets.PRESET_CUSTOM,
+    value: _.ApplicationStreamPresets.PRESET_CUSTOM,
     label: I.default.Messages.STREAM_PRESET_CUSTOM
-  }], F = l === g.ApplicationStreamPresets.PRESET_DOCUMENTS ? (0, n.jsxs)(n.Fragment, {
+  }], k = l === _.ApplicationStreamPresets.PRESET_DOCUMENTS ? (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(C.default, {
       children: (0, n.jsx)(o.FormItem, {
         title: I.default.Messages.STREAM_RESOLUTION,
@@ -162,7 +162,7 @@ function M(e) {
           })
         })
       })
-    }), G ? (0, n.jsx)(_.default, {
+    }), y ? (0, n.jsx)(N.default, {
       message: I.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
       onClose: t,
       openStreamUpsellModal: R
@@ -173,14 +173,14 @@ function M(e) {
         title: I.default.Messages.STREAM_RESOLUTION,
         className: v.settingsGroup,
         titleClassName: x.formItemTitleSlim,
-        children: V
+        children: w
       }), (0, n.jsx)(o.FormItem, {
         title: I.default.Messages.SCREENSHARE_FRAME_RATE,
         className: v.settingsGroup,
         titleClassName: x.formItemTitleSlim,
-        children: H
+        children: V
       })]
-    }), G ? (0, n.jsx)(_.default, {
+    }), y ? (0, n.jsx)(N.default, {
       onClose: t,
       openStreamUpsellModal: R
     }) : null]
@@ -196,9 +196,9 @@ function M(e) {
         children: [(0, n.jsx)(o.SingleSelect, {
           value: l,
           className: A.marginTop8,
-          options: w,
+          options: H,
           onChange: e => T(e)
-        }), F]
+        }), k]
       })
     })
   })

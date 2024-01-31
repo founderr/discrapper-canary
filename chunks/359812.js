@@ -24,12 +24,12 @@ function E(e) {
     selectedChannelId: t,
     guildId: l,
     onChangeSelectedChannelId: E
-  } = e, h = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), _ = (0, a.useStateFromStores)([i.default, r.default, u.default], () => (0, c.getStreamEligibleChannels)(r.default.getChannels(l), i.default, u.default)), g = (0, a.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), p = _.map(e => {
+  } = e, h = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), g = (0, a.useStateFromStores)([i.default, r.default, u.default], () => (0, c.getStreamEligibleChannels)(r.default.getChannels(l), i.default, u.default)), N = (0, a.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), _ = g.map(e => {
     var l;
     return {
       name: (0, n.jsx)(f.default, {
         channel: e,
-        users: null === (l = g[e.id]) || void 0 === l ? void 0 : l.filter(e => {
+        users: null === (l = N[e.id]) || void 0 === l ? void 0 : l.filter(e => {
           let {
             user: t
           } = e;
@@ -49,7 +49,7 @@ function E(e) {
     title: S.default.Messages.GO_LIVE_MODAL_SELECT_CHANNEL_FORM_TITLE,
     scrollerInnerClassName: C.channelSelectScrollerInner,
     children: (0, n.jsx)(s.RadioGroup, {
-      options: p,
+      options: _,
       value: t,
       itemInfoClassName: C.channelInfoWrapper,
       itemTitleClassName: C.channelTitleWrapper,
