@@ -326,12 +326,12 @@ function en(e) {
     n = !1;
   i.default.Emitter.batched(() => {
     try {
-      if (e(), t.dispatcher.isEmpty()) {
-        G.verbose("Processing Dispatch Queue"), t.dispatcher.unpauseDispatchQueue();
+      if (e(), !t.dispatcher.hasStuffToDispatchNow()) {
+        G.verbose("Unpausing Dispatch Queue"), t.dispatcher.unpauseDispatchQueue();
         return
       }
       n = !0, S.default.loadLazyCache.recordEnd(), G.verbose("Processing First Queued Dispatch"), t.dispatcher.processFirstQueuedDispatch(new Set(["READY", "INITIAL_GUILD"])), setTimeout(() => {
-        G.verbose("Processing Dispatch Queue"), t.dispatcher.unpauseDispatchQueue()
+        G.verbose("Unpausing Dispatch Queue"), t.dispatcher.unpauseDispatchQueue()
       }, 100)
     } catch (e) {
       var a;

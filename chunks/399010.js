@@ -71,12 +71,14 @@ let P = new d.default("ConnectionStore"),
   U = {};
 
 function w(e, t) {
-  for (let n of e) U[n] = t
+  for (let n of e) U[n] = {
+    preload: () => null,
+    dispatch: t
+  }
 }
 
-function k(e, t) {
-  var n;
-  O.default.flush(e, t), null === (n = U[e]) || void 0 === n || n.call(U, t, e)
+function k(e) {
+  return U[e]
 }
 
 function V(e) {
