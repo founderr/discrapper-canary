@@ -182,119 +182,118 @@ function H(B) {
     iconClassName: R,
     subtitle: j,
     subtitleColor: H,
-    enableHangStatus: x,
     channel: {
-      type: b
+      type: x
     },
-    onMouseEnter: P,
-    onMouseLeave: w,
-    "aria-label": k,
-    children: V,
-    guild: J,
-    channelTypeOverride: K,
-    forceInteractable: W,
-    mentionCount: z,
-    unreadMode: Y,
-    isFavoriteSuggestion: q,
-    withGuildIcon: Z
+    onMouseEnter: b,
+    onMouseLeave: P,
+    "aria-label": w,
+    children: k,
+    guild: V,
+    channelTypeOverride: J,
+    forceInteractable: K,
+    mentionCount: W,
+    unreadMode: z,
+    isFavoriteSuggestion: Y,
+    withGuildIcon: q
   } = B, {
-    enabled: Q,
-    left: X
+    enabled: Z,
+    left: Q
   } = o.ChannelEmojisExperiment.useExperiment({
     location: "337985_1"
   }, {
     autoTrackExposure: !1
-  }), $ = Y === p.UnreadMode.IMPORTANT || null != z && z > 0, {
-    role: BB,
-    ...Be
-  } = (0, F.useListItem)(t.id), Bt = l.useRef(null), BE = l.useRef(null), Bl = (0, A.default)(t), Bn = S.Routes.CHANNEL(Bl, t.id), BC = (0, d.default)(t), BF = t.isGuildVocal(), {
-    reducedMotion: Bi
-  } = l.useContext(a.AccessibilityPreferencesContext), Bu = Bi.enabled, [Ba, Br] = l.useState([]);
-  g(Ba.length, 500, () => {
-    Br([])
+  }), X = z === p.UnreadMode.IMPORTANT || null != W && W > 0, {
+    role: $,
+    ...BB
+  } = (0, F.useListItem)(t.id), Be = l.useRef(null), Bt = l.useRef(null), BE = (0, A.default)(t), Bl = S.Routes.CHANNEL(BE, t.id), Bn = (0, d.default)(t), BC = t.isGuildVocal(), {
+    reducedMotion: BF
+  } = l.useContext(a.AccessibilityPreferencesContext), Bi = BF.enabled, [Bu, Ba] = l.useState([]);
+  g(Bu.length, 500, () => {
+    Ba([])
   });
-  let Bo = B => {
-      if (Bu) return;
+  let Br = B => {
+      if (Bi) return;
       let e = B.currentTarget.getBoundingClientRect(),
         t = e.width > e.height ? e.width : e.height,
         E = B.pageX - e.x - t / 2,
         l = B.pageY - e.y - t / 2;
-      Br([...Ba, {
+      Ba([...Bu, {
         x: E,
         y: l,
         size: t
       }])
     },
     {
-      emoji: BD,
-      color: Bd
+      emoji: Bo,
+      color: BD
     } = (0, c.useChannelEmojiAndColor)(t),
-    Bs = Q ? (0, E.jsx)(r.default, {
-      emojiName: BD.name,
-      emojiId: BD.id,
-      src: BD.url,
+    Bd = Z ? (0, E.jsx)(r.default, {
+      emojiName: Bo.name,
+      emojiId: Bo.id,
+      src: Bo.url,
       className: L.twemoji
     }) : null,
-    BA = (0, E.jsx)("div", {
+    Bs = (0, E.jsx)("div", {
       className: C({
-        [L.favoritesSuggestion]: q
+        [L.favoritesSuggestion]: Y
       }),
       children: (0, E.jsxs)(h.default, {
-        role: BF && !D ? "button" : "link",
-        href: BF ? void 0 : Bn,
+        role: BC && !D ? "button" : "link",
+        href: BC ? void 0 : Bl,
         target: "_blank",
-        ref: Bt,
+        ref: Be,
         className: C(L.link, {
-          [L.linkWithChannelEmoji]: null != Bs
+          [L.linkWithChannelEmoji]: null != Bd
         }),
         onMouseDown: B => {
-          Q && 0 === B.button && Bo(B)
+          Z && 0 === B.button && Br(B)
         },
         onClick: () => null == _ ? void 0 : _(t),
-        ...Be,
-        "aria-label": k,
+        ...BB,
+        "aria-label": w,
         focusProps: {
           enabled: !1
         },
-        children: [Q && (0, E.jsx)("div", {
+        children: [Z && (0, E.jsx)("div", {
           className: L.emojiColorFill,
           style: {
-            backgroundColor: Bd,
+            backgroundColor: BD,
             opacity: u ? 1 : 0
           }
         }), (0, E.jsxs)("div", {
           className: L.linkTop,
-          children: [null != Bs && X && (0, E.jsx)("div", {
+          children: [null != Bd && Q && (0, E.jsx)("div", {
             className: C(L.channelEmoji, L.channelEmojiLeftOfIcon),
             style: {
-              backgroundColor: Bd
+              backgroundColor: BD
             },
-            children: Bs
+            children: Bd
           }), (0, E.jsx)(G, {
             className: R,
             channel: t,
-            guild: J,
+            guild: V,
             hasActiveThreads: N,
             locked: f,
-            withGuildIcon: Z
-          }), null != Bs && !X && (0, E.jsx)("div", {
+            withGuildIcon: q
+          }), null != Bd && !Q && (0, E.jsx)("div", {
             className: C(L.channelEmoji, L.channelEmojiRightOfIcon),
             style: {
-              backgroundColor: Bd
+              backgroundColor: BD
             },
-            children: Bs
+            children: Bd
           }), (0, E.jsx)(m.default, {
             className: C(L.name),
             "aria-hidden": !0,
-            children: null == n ? BC : n
-          }), l.Children.count(V) > 0 ? (0, E.jsx)("div", {
+            children: null == n ? Bn : n
+          }), l.Children.count(k) > 0 ? (0, E.jsx)("div", {
             onClick: y,
             className: L.children,
-            children: V
+            children: k
           }) : null]
-        }), x || null == j ? null : (0, E.jsx)("div", {
+        }), null != j ? (0, E.jsx)("div", {
           className: C(L.linkBottom, {
-            [L.withGuildIcon]: Z
+            [L.withGuildIcon]: q
           }),
           children: (0, E.jsx)(a.Text, {
             color: null != H ? H : "text-muted",
@@ -302,14 +301,14 @@ function H(B) {
             className: L.subtitle,
             children: j
           })
-        }), Q && Ba.length > 0 && Ba.map((B, e) => (0, E.jsx)("span", {
+        }) : null, Z && Bu.length > 0 && Bu.map((B, e) => (0, E.jsx)("span", {
           className: L.ripple,
           style: {
             top: B.y,
             left: B.x,
             width: B.size,
             height: B.size,
-            backgroundColor: Bd,
+            backgroundColor: BD,
             animationDuration: "".concat(500, "ms"),
             opacity: .36
           }
@@ -317,20 +316,20 @@ function H(B) {
       })
     });
   return (0, E.jsx)(a.FocusRing, {
-    focusTarget: Bt,
-    ringTarget: BE,
+    focusTarget: Be,
+    ringTarget: Bt,
     offset: {
       top: 2,
       bottom: 2,
       right: 4
     },
     children: (0, E.jsxs)("div", {
-      className: C(M, null != _ || null != v || null != T || W ? L.wrapper : L.notInteractive, (() => {
-        if (u && !Q) return O.SELECTED;
+      className: C(M, null != _ || null != v || null != T || K ? L.wrapper : L.notInteractive, (() => {
+        if (u && !Z) return O.SELECTED;
         if (D) return O.CONNECTED;
         if (f) return O.LOCKED;
         if (i) return O.MUTED;
-        if (s) return $ ? O.UNREAD_IMPORTANT : O.UNREAD_LESS_IMPORTANT;
+        if (s) return X ? O.UNREAD_IMPORTANT : O.UNREAD_LESS_IMPORTANT;
         return null
       })(), function(B) {
         switch (B) {
@@ -349,15 +348,15 @@ function H(B) {
           default:
             return L.typeDefault
         }
-      }(null != K ? K : b)),
+      }(null != J ? J : x)),
       onMouseUp: B => null == v ? void 0 : v(B, t),
       onMouseDown: B => null == T ? void 0 : T(B, t),
       onContextMenu: B => null == I ? void 0 : I(B, t),
-      onMouseEnter: P,
-      onMouseLeave: w,
-      children: [i || !s || u && !BF ? null : (0, E.jsx)("div", {
-        className: C(L.unread, $ ? L.unreadImportant : void 0)
-      }), null !== (e = null == U ? void 0 : U(BA)) && void 0 !== e ? e : BA]
+      onMouseEnter: b,
+      onMouseLeave: P,
+      children: [i || !s || u && !BC ? null : (0, E.jsx)("div", {
+        className: C(L.unread, X ? L.unreadImportant : void 0)
+      }), null !== (e = null == U ? void 0 : U(Bs)) && void 0 !== e ? e : Bs]
     })
   })
 }

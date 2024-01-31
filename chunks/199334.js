@@ -27,32 +27,33 @@ function I(e) {
     connected: n,
     hovered: s,
     subtitle: I,
-    onClick: S
-  } = e, _ = (0, r.useStateFromStores)([u.default], () => u.default.getChannelStatus(t)), N = null != _ && _.length > 0, T = (0, r.useStateFromStores)([c.default], () => c.default.can(p.Permissions.SET_VOICE_CHANNEL_STATUS, t)), A = null != I && I.length > 0;
+    onClick: S,
+    enableHangStatus: _
+  } = e, N = (0, r.useStateFromStores)([u.default], () => u.default.getChannelStatus(t)), T = null != N && N.length > 0, A = (0, r.useStateFromStores)([c.default], () => !_ && c.default.can(p.Permissions.SET_VOICE_CHANNEL_STATUS, t)), L = null != I && I.length > 0;
   a.useEffect(() => {
-    N && C.default.track(p.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
+    T && C.default.track(p.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
       guild_id: t.guild_id,
       channel_id: t.id
     })
-  }, [t.id, N, t.guild_id]);
-  let L = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
+  }, [t.id, T, t.guild_id]);
+  let v = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
   if (null == t.guild_id) return null;
-  let v = i(E.statusDiv, n && T ? E.hoverable : null);
-  if (N) return (0, l.jsx)(o.Clickable, {
-    className: v,
-    onClick: T ? S : void 0,
+  let x = i(E.statusDiv, n && A ? E.hoverable : null);
+  if (T) return (0, l.jsx)(o.Clickable, {
+    className: x,
+    onClick: A ? S : void 0,
     children: (0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
       className: i(E.statusText, g.markup),
       children: (0, l.jsx)(f.default, {
-        children: d.default.parseVoiceChannelStatus(_, !0, {
+        children: d.default.parseVoiceChannelStatus(N, !0, {
           channelId: t.id
         })
       })
     })
   });
-  if (n && T && (!A || s)) return (0, l.jsxs)(o.Clickable, {
-    className: v,
+  if (n && A && (!L || s)) return (0, l.jsxs)(o.Clickable, {
+    className: x,
     onClick: S,
     children: [(0, l.jsx)(o.Text, {
       variant: "text-xs/medium",
@@ -60,11 +61,11 @@ function I(e) {
       children: m.default.Messages.VOICE_CHANNEL_SET_STATUS
     }), (0, l.jsx)(h.default, {
       className: E.pencilIcon,
-      width: L,
-      height: L
+      width: v,
+      height: v
     })]
   });
-  if (A) return (0, l.jsx)(f.default, {
+  if (L) return (0, l.jsx)(f.default, {
     children: I
   });
   return null

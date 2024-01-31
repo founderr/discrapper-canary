@@ -407,9 +407,8 @@ class eo extends a.PureComponent {
         voiceStates: l,
         stageChannelSpeakerVoiceStates: a,
         selectedVoiceChannelId: s,
-        enableHangStatus: i,
-        selectedGuildId: r
-      } = this.props, o = el.HEIGHT_CHANNEL;
+        selectedGuildId: i
+      } = this.props, r = el.HEIGHT_CHANNEL;
       if (e === j.SECTION_INDEX_COMMUNITY) {
         let e = n.getCommunitySection();
         if (e.isEmpty()) return 0;
@@ -417,49 +416,45 @@ class eo extends a.PureComponent {
           let t = e.getRows();
           return t.length > 1 ? E.PROGRESS_BAR_CONTAINER_HEIGHT_WITH_MARGIN : E.PROGRESS_BAR_CONTAINER_HEIGHT
         }
-        return o
+        return r
       }
       if (n.isPlaceholderRow(e, t)) return 0;
-      let u = n.getChannelFromSectionRow(e, t);
-      if (null == u) return 0;
+      let o = n.getChannelFromSectionRow(e, t);
+      if (null == o) return 0;
       let {
-        channel: d,
-        category: c
-      } = u;
-      if (d.record.type === ea.ChannelTypes.GUILD_CATEGORY) return 40;
+        channel: u,
+        category: d
+      } = o;
+      if (u.record.type === ea.ChannelTypes.GUILD_CATEGORY) return 40;
       let {
-        isFavoritesPerk: f
+        isFavoritesPerk: c
       } = m.default.getCurrentConfig({
         location: "channel_list"
       }, {
         autoTrackExposure: !0
       });
-      for (let e of (f && r === ea.FAVORITES && !d.record.isDM() && !d.record.isGroupDM() && !d.record.isGuildStageVoice() && (o = el.HEIGHT_CHANNEL_FAVORITES), d.threadIds)) {
-        o += el.HEIGHT_CHANNEL;
-        let t = l[d.id];
-        null != t && t.length > 0 && (o += (s === e ? t.length * el.HEIGHT_USER : el.HEIGHT_USER) + el.HEIGHT_USER_PADDING)
+      for (let e of (c && i === ea.FAVORITES && !u.record.isDM() && !u.record.isGroupDM() && !u.record.isGuildStageVoice() && (r = el.HEIGHT_CHANNEL_FAVORITES), u.threadIds)) {
+        r += el.HEIGHT_CHANNEL;
+        let t = l[u.id];
+        null != t && t.length > 0 && (r += (s === e ? t.length * el.HEIGHT_USER : el.HEIGHT_USER) + el.HEIGHT_USER_PADDING)
       }
-      if (d.record.isGuildVoice()) {
-        let e = l[d.id];
+      if (u.record.isGuildVoice()) {
+        let e = l[u.id];
         if (null != e && e.length > 0) {
           let t = e.length * el.HEIGHT_USER;
-          (d.isCollapsed || c.isCollapsed) && (t = el.HEIGHT_USER), o += t + el.HEIGHT_USER_PADDING
+          (u.isCollapsed || d.isCollapsed) && (t = el.HEIGHT_USER), r += t + el.HEIGHT_USER_PADDING
         }
       }
-      if (null != d.subtitle) {
-        let e = s === d.id && i ? 0 : el.HEIGHT_CHANNEL_SUBTITLE;
-        o += e
-      }
-      if (d.record.isGuildStageVoice()) {
-        var h, C;
-        let e = null !== (h = l[d.id]) && void 0 !== h ? h : [],
-          t = null !== (C = a[d.id]) && void 0 !== C ? C : [];
+      if (null != u.subtitle && (r += el.HEIGHT_CHANNEL_SUBTITLE), u.record.isGuildStageVoice()) {
+        var f, h;
+        let e = null !== (f = l[u.id]) && void 0 !== f ? f : [],
+          t = null !== (h = a[u.id]) && void 0 !== h ? h : [];
         if (null != e && e.length > 0) {
           let e = t.length * el.HEIGHT_USER;
-          d.isCollapsed || c.isCollapsed ? e = Math.ceil(e / el.COLLAPSED_USERS_PER_ROW) : e += el.HEIGHT_USER, o += e + el.HEIGHT_USER_PADDING
+          u.isCollapsed || d.isCollapsed ? e = Math.ceil(e / el.COLLAPSED_USERS_PER_ROW) : e += el.HEIGHT_USER, r += e + el.HEIGHT_USER_PADDING
         }
       }
-      return o
+      return r
     }, this.dismissRecents = () => {
       let {
         guild: e,

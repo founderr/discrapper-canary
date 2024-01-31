@@ -82,16 +82,18 @@ class X extends F.default {
     var e;
     let {
       channel: t,
-      connected: n
-    } = this.props, a = null === (e = (0, I.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
-      hovered: s
+      connected: n,
+      enableHangStatus: a
+    } = this.props, s = null === (e = (0, I.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
+      hovered: i
     } = this.state;
     return (0, l.jsx)(k.default, {
       onClick: this.handleVoiceStatusClick,
       channel: t,
       connected: n,
-      subtitle: a,
-      hovered: s
+      subtitle: s,
+      hovered: i,
+      enableHangStatus: a
     })
   }
   renderVoiceUsers() {
@@ -143,12 +145,11 @@ class X extends F.default {
       embeddedApps: N,
       isSubscriptionGated: T,
       isFavoriteSuggestion: A,
-      withGuildIcon: L,
-      enableHangStatus: v
+      withGuildIcon: L
     } = this.props, {
-      shouldShowActivities: x,
-      shouldShowGuildVerificationPopout: M
-    } = this.state, O = this.getVoiceStatesCount(), y = (0, l.jsxs)("li", {
+      shouldShowActivities: v,
+      shouldShowGuildVerificationPopout: x
+    } = this.state, M = this.getVoiceStatesCount(), O = (0, l.jsxs)("li", {
       className: s(this.getModeClass(), {
         [z.disabled]: this.isDisabled()
       }),
@@ -161,7 +162,7 @@ class X extends F.default {
           renderPopout: this.renderPopout,
           spacing: 0,
           onRequestClose: this.closeGuildVerificationPopout,
-          shouldShow: x && !d && !c && !M || M,
+          shouldShow: v && !d && !c && !x || x,
           children: () => (0, l.jsx)(o.Tooltip, {
             text: this.getTooltipText(),
             children: o => {
@@ -183,7 +184,6 @@ class X extends F.default {
                 mentionCount: r,
                 locked: u,
                 subtitle: this.renderSubtitle(),
-                enableHangStatus: v,
                 onClick: () => {
                   this.handleClick(), null == d || d()
                 },
@@ -196,7 +196,7 @@ class X extends F.default {
                   channel: e,
                   unread: a,
                   mentionCount: r,
-                  userCount: O,
+                  userCount: M,
                   embeddedActivitiesCount: N.length,
                   isSubscriptionGated: T
                 }),
@@ -213,12 +213,12 @@ class X extends F.default {
         })
       }), this.renderVoiceUsers()]
     });
-    return I && (y = C(y)), g && (y = f(h(y))), S && (y = (0, l.jsx)(R.default, {
+    return I && (O = C(O)), g && (O = f(h(O))), S && (O = (0, l.jsx)(R.default, {
       tutorialId: "voice-conversations",
       position: "right",
       offsetX: -20,
-      children: y
-    })), y
+      children: O
+    })), O
   }
   constructor(...e) {
     super(...e), this.state = {
