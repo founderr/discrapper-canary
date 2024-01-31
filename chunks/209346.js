@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n.d(t, {
-  useUserEligibleForPolls: function() {
+  useUserEligibleToViewPollsInChat: function() {
     return l
   }
 });

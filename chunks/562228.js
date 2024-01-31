@@ -1,37 +1,35 @@
 "use strict";
 n.r(t), n.d(t, {
   generateEmptyPollAnswer: function() {
-    return c
+    return u
   },
   filterOutUUID: function() {
-    return E
+    return o
   },
   hasNonVoteReactions: function() {
-    return f
+    return c
   },
   useCanPostPollsInChannel: function() {
-    return _
+    return E
   },
   isAnswerFilled: function() {
-    return g
+    return f
   },
   isIncompleteAnswer: function() {
-    return h
+    return _
   },
   createPollServerDataFromCreateRequest: function() {
-    return m
+    return g
   }
 }), n("781738"), n("222007");
 var a = n("748820"),
-  l = n("446674"),
-  s = n("418009"),
-  i = n("957255"),
-  r = n("697218"),
-  d = n("718517"),
-  u = n("83995"),
-  o = n("49111");
+  l = n("418009"),
+  s = n("957255"),
+  i = n("718517"),
+  r = n("83995"),
+  d = n("49111");
 
-function c() {
+function u() {
   return {
     text: void 0,
     image: void 0,
@@ -41,38 +39,39 @@ function c() {
   }
 }
 
-function E(e) {
+function o(e) {
   return e.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, "")
 }
 
-function f(e) {
+function c(e) {
   for (let t of e.reactions)
     if (null == t.me_vote) return !0;
   return !1
 }
 
-function _(e) {
+function E(e) {
   let {
     enabled: t
-  } = u.PollsExperiment.useExperiment({
+  } = r.CreateGuildPollsExperiment.useExperiment({
     guildId: e.guild_id,
     location: "useCanPostPollsInChannel"
-  }), n = (0, l.useStateFromStoresArray)([r.default], () => {
-    var t, n;
-    return null !== (n = null === (t = e.recipients) || void 0 === t ? void 0 : t.map(r.default.getUser)) && void 0 !== n ? n : []
-  }, [e.recipients]);
-  return !!o.ChannelTypesSets.POLLS.has(e.type) && (e.isPrivate() ? n.every(e => (null == e ? void 0 : e.isStaff()) === !0) : t && i.default.can(o.Permissions.SEND_MESSAGES, e))
+  }), {
+    enabled: n
+  } = r.CreateGDMPollsExperiment.useExperiment({
+    location: "useCanPostPollsInChannel"
+  });
+  return !!d.ChannelTypesSets.POLLS.has(e.type) && (e.isPrivate() ? n : t && s.default.can(d.Permissions.SEND_MESSAGES, e))
 }
 
-function g(e, t) {
-  return t === s.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? null != e.image : null != e.text && e.text.length > 0
+function f(e, t) {
+  return t === l.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? null != e.image : null != e.text && e.text.length > 0
 }
 
-function h(e, t) {
-  return t === s.PollLayoutTypes.DEFAULT && null != e.image && (null == e.text || 0 === e.text.length)
+function _(e, t) {
+  return t === l.PollLayoutTypes.DEFAULT && null != e.image && (null == e.text || 0 === e.text.length)
 }
 
-function m(e) {
+function g(e) {
   var t, n;
   if (null == e) return;
   let a = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {
@@ -91,7 +90,7 @@ function m(e) {
       poll_media: i
     }
   });
-  let l = (null == e ? void 0 : e.duration) != null ? (n = e.duration, new Date(Date.now() + n * d.default.Millis.HOUR).toISOString()) : "0";
+  let l = (null == e ? void 0 : e.duration) != null ? (n = e.duration, new Date(Date.now() + n * i.default.Millis.HOUR).toISOString()) : "0";
   return {
     ...e,
     expiry: l,

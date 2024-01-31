@@ -20,7 +20,7 @@ function c(e, t) {
     E = f[c.id],
     _ = (0, d.default)(null === (n = c.poll) || void 0 === n ? void 0 : n.expiry),
     T = a.AnimateEmoji.useSetting(),
-    I = (0, i.useUserEligibleForPolls)("poll_message_data"),
+    I = (0, i.useUserEligibleToViewPollsInChat)("poll_message_data"),
     m = (0, l.default)(),
     N = null != t ? t : m;
   return s.useMemo(() => (0, u.default)(c, I, E, {
