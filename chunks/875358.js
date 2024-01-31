@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -21,7 +21,7 @@ var a = n("37983"),
   I = n("49111"),
   T = n("782340"),
   S = n("948063");
-class p extends s.Component {
+class m extends s.Component {
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown)
   }
@@ -126,10 +126,10 @@ class p extends s.Component {
   }
 }
 
-function m() {
+function p() {
   let e = (0, r.useStateFromStores)([c.default], () => c.default.hasLayers()),
     t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
-  return (0, a.jsx)(p, {
+  return (0, a.jsx)(m, {
     activeRowKey: (0, r.useStateFromStores)([E.default], () => E.default.activeRowKey),
     hasModalOpen: t || e,
     filterQuery: (0, r.useStateFromStores)([f.default], () => f.default.applicationFilterQuery),

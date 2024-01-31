@@ -83,13 +83,13 @@ class u extends s.PureComponent {
       let T = Math.floor(a.width / (I - 3)),
         S = .5 * T;
       E.translate(T - T * f, 0), E.beginPath();
-      let p = -T;
+      let m = -T;
       s.forEach((e, a) => {
         t = {
-          x: p,
+          x: m,
           y: h * e / _
-        }, 0 === a ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + S, n.y, t.x - S, t.y, t.x, t.y), n = t, p += T
-      }), E.stroke(), E.lineTo(p - T, 0), E.lineTo(0, 0), E.fill(), d && f < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
+        }, 0 === a ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + S, n.y, t.x - S, t.y, t.x, t.y), n = t, m += T
+      }), E.stroke(), E.lineTo(m - T, 0), E.lineTo(0, 0), E.fill(), d && f < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
     }
   }
 }

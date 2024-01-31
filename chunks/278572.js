@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("659558"),
   T = n("439141"),
   S = n("648911"),
-  p = n("999180"),
-  m = n("289180"),
+  m = n("999180"),
+  p = n("289180"),
   A = n("19065"),
   g = n("981913"),
   N = n("742683"),
@@ -90,7 +90,7 @@ function V(e) {
   } = e, {
     cameraUnavailable: i,
     enabled: r
-  } = (0, p.default)(), o = (0, m.default)(n);
+  } = (0, m.default)(), o = (0, p.default)(n);
   return (0, a.jsxs)("div", {
     className: j.actions,
     children: [(0, a.jsx)(g.CenterControlButton, {
@@ -150,7 +150,7 @@ function Y(e) {
     y: n,
     x: i,
     channel: f
-  } = e, [C, I] = s.useState(!1), T = (0, _.getChannelIconURL)(f), S = (0, h.default)(f), [p, m] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.supports(U.Features.VIDEO), Object.keys(O.default.getVideoDevices()).length]), A = (0, o.useStateFromStores)([v.default], () => v.default.isFocused()), g = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
+  } = e, [C, I] = s.useState(!1), T = (0, _.getChannelIconURL)(f), S = (0, h.default)(f), [m, p] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.supports(U.Features.VIDEO), Object.keys(O.default.getVideoDevices()).length]), A = (0, o.useStateFromStores)([v.default], () => v.default.isFocused()), g = (0, o.useStateFromStores)([y.default], () => y.default.getMode(f.id)), N = s.useCallback(e => {
     null != e.top && null != e.left && c.default.move(e.left, e.top)
   }, []), R = (0, r.useSpring)({
     value: C ? 1 : 0,
@@ -165,7 +165,7 @@ function Y(e) {
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
   }, [f]);
-  let L = g === b.ChannelModes.VIDEO && p && m > 0,
+  let L = g === b.ChannelModes.VIDEO && m && p > 0,
     M = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(P.default, {
         className: j.icon,
@@ -219,7 +219,7 @@ function Y(e) {
         }), (0, a.jsx)(V, {
           canVideo: L,
           channel: f,
-          numVideoDevices: m
+          numVideoDevices: p
         }), L && !C ? (0, a.jsx)(u.Button, {
           size: u.Button.Sizes.SMALL,
           fullWidth: !0,

@@ -24,7 +24,7 @@ let o = (0, t.createExperiment)({
 function n(e) {
   let {
     location: _,
-    autoTrackExposure: E = !0
+    autoTrackExposure: E = !1
   } = e, {
     enabled: t
   } = o.getCurrentConfig({

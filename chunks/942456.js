@@ -22,13 +22,13 @@ var a, n, i = s("37983"),
   P = s("299285"),
   R = s("609190"),
   T = s("442379"),
-  C = s("565559"),
-  A = s("928576"),
+  A = s("565559"),
+  C = s("928576"),
   h = s("407417"),
   L = s("246421"),
-  M = s("264742"),
-  y = s("537325"),
-  g = s("24373"),
+  g = s("264742"),
+  M = s("537325"),
+  y = s("24373"),
   x = s("41170"),
   D = s("865146"),
   U = s("305961"),
@@ -48,8 +48,8 @@ var a, n, i = s("37983"),
   W = s("306160"),
   z = s("888400"),
   Z = s("568734"),
-  q = s("719923"),
-  X = s("153160"),
+  X = s("719923"),
+  q = s("153160"),
   J = s("364735"),
   Q = s("206343"),
   $ = s("89553"),
@@ -139,8 +139,8 @@ function ef(e) {
     guildProductListingId: s
   } = e, a = (0, T.useFetchGuildProductListing)(t, s, {
     requireCurrentGuild: !1
-  }), n = (0, A.useProductType)(a), l = (0, I.useStateFromStores)([U.default], () => U.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? ea.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = r.useCallback(async () => {
-    (null == l ? void 0 : l.hasFeature(ee.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, y.default)(ee.Routes.GUILD_PRODUCT(t, s)) : await (0, y.default)(ee.Routes.CHANNEL(t)), (0, _.popLayer)()
+  }), n = (0, C.useProductType)(a), l = (0, I.useStateFromStores)([U.default], () => U.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? ea.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = r.useCallback(async () => {
+    (null == l ? void 0 : l.hasFeature(ee.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, M.default)(ee.Routes.GUILD_PRODUCT(t, s)) : await (0, M.default)(ee.Routes.CHANNEL(t)), (0, _.popLayer)()
   }, [l, t, s]);
   return (0, i.jsxs)(i.Fragment, {
     children: [null != u && (0, i.jsx)(ec, {
@@ -163,7 +163,7 @@ function eE(e) {
     guildProductListingId: n
   } = e, r = (0, T.useFetchGuildProductListing)(a, n, {
     requireCurrentGuild: !1
-  }), l = (0, I.useStateFromStores)([C.default], () => C.default.getGuildProductFetchState(n) === C.FetchState.FETCHING), u = null == r ? void 0 : r.role_id, o = (0, I.useStateFromStores)([U.default], () => {
+  }), l = (0, I.useStateFromStores)([A.default], () => A.default.getGuildProductFetchState(n) === A.FetchState.FETCHING), u = null == r ? void 0 : r.role_id, o = (0, I.useStateFromStores)([U.default], () => {
     var e;
     return null != u ? null === (e = U.default.getGuild(a)) || void 0 === e ? void 0 : e.roles[u] : void 0
   }, [a, u]), d = (null !== (s = null == r ? void 0 : null === (t = r.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0, c = null != o;
@@ -286,7 +286,7 @@ class ep extends r.PureComponent {
     } = this.props, t = e.amount - e.amountRefunded;
     return (0, i.jsx)("span", {
       className: en.price,
-      children: (0, X.formatPrice)(t, e.currency)
+      children: (0, q.formatPrice)(t, e.currency)
     })
   }
   renderPaymentIdField() {
@@ -333,24 +333,24 @@ class ep extends r.PureComponent {
         children: [this.renderPaymentIdField(), !a && n > 0 ? (0, i.jsxs)(r.Fragment, {
           children: [(0, i.jsx)(eo, {
             description: e.description,
-            cost: (0, X.formatPrice)(l - n, d)
+            cost: (0, q.formatPrice)(l - n, d)
           }), (0, i.jsx)(eo, {
             description: ea.default.Messages.BILLING_PAYMENT_BREAKDOWN_TAXES,
-            cost: (0, X.formatPrice)(n, d)
+            cost: (0, q.formatPrice)(n, d)
           })]
         }) : null, (0, i.jsx)(eo, {
           description: ea.default.Messages.BILLING_PAYMENT_BREAKDOWN_TOTAL,
-          cost: (0, X.formatPrice)(l, d)
+          cost: (0, q.formatPrice)(l, d)
         }), e.isGuildProductPurchase && null != c && null != e.sku && (0, i.jsx)(ef, {
           guildId: c,
           guildProductListingId: e.sku.id
         }), o > 0 && (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(eo, {
             description: ea.default.Messages.BILLING_PAYMENT_BREAKDOWN_REFUNDED,
-            cost: (0, X.formatPrice)(o, d)
+            cost: (0, q.formatPrice)(o, d)
           }), (0, i.jsx)(eo, {
             description: ea.default.Messages.BILLING_PAYMENT_BREAKDOWN_NET,
-            cost: (0, X.formatPrice)(l - o, d)
+            cost: (0, q.formatPrice)(l - o, d)
           })]
         })]
       })]
@@ -509,7 +509,7 @@ class ep extends r.PureComponent {
           planId: t,
           quantity: n
         } = e;
-        (0, q.isPremiumBaseSubscriptionPlan)(t) ? (s.push(q.default.getDisplayName(t, !1, p)), a = et.SubscriptionPlanInfo[t].skuId) : (s.push("".concat(n > 1 ? "".concat(n, "x ") : "").concat(q.default.getDisplayName(t, !1, p))), null == a && (a = et.SubscriptionPlanInfo[t].skuId))
+        (0, X.isPremiumBaseSubscriptionPlan)(t) ? (s.push(X.default.getDisplayName(t, !1, p)), a = et.SubscriptionPlanInfo[t].skuId) : (s.push("".concat(n > 1 ? "".concat(n, "x ") : "").concat(X.default.getDisplayName(t, !1, p))), null == a && (a = et.SubscriptionPlanInfo[t].skuId))
       });
       else if (E.type === ee.SubscriptionTypes.GUILD) {
         let e = O.default.get(E.items[0].planId);
@@ -537,7 +537,7 @@ class ep extends r.PureComponent {
       if (t = a.isPreorder ? ea.default.Messages.PREORDER_SKU_NAME.format({
           name: c.name
         }) : a.isGuildProductPurchase && a.isSoftDeletedProduct ? ea.default.Messages.GUILD_PRODUCT_BILLING_DELISTED_PRODUCT : c.name, null != u) {
-        let t = (0, g.getStickerPackPreviewSticker)(u);
+        let t = (0, y.getStickerPackPreviewSticker)(u);
         e = (0, i.jsx)(x.default, {
           disableAnimation: !o,
           isInteracting: o,
@@ -592,9 +592,9 @@ class ep extends r.PureComponent {
     return n ? (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)("div", {
         className: en.sectionDivider
-      }), e.isSoftDeletedProduct ? (0, i.jsx)(M.default, {
+      }), e.isSoftDeletedProduct ? (0, i.jsx)(g.default, {
         className: en.warningBlock,
-        buttonPosition: M.WarningBlockButtonPosition.RIGHT,
+        buttonPosition: g.WarningBlockButtonPosition.RIGHT,
         notice: ea.default.Messages.GUILD_PRODUCT_BILLING_PRODUCT_UNAVAILABLE,
         ctaLabel: ea.default.Messages.GUILD_PRODUCT_BILLING_CONTACT_SUPPORT,
         onClick: () => (0, N.default)(ei(s))

@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("665182"),
   T = n("442174"),
   S = n("69927"),
-  p = n("10641"),
-  m = n("384997"),
+  m = n("10641"),
+  p = n("384997"),
   A = n("539938"),
   g = n("155084"),
   N = n("393414"),
@@ -190,8 +190,8 @@ let en = function(e) {
       n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       i = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion);
     return s.useEffect(() => {
-      (0, p.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
-    }, []), (0, a.jsx)(m.default, {
+      (0, m.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+    }, []), (0, a.jsx)(p.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
         let {

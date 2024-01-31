@@ -24,40 +24,40 @@ var a = n("37983"),
 function S(e) {
   let {
     user: t
-  } = e, i = (0, f.default)(), S = (0, E.useHasMaxConnections)(), p = (0, r.default)([u.default], () => u.default.getCurrentUser()), m = s.useCallback(() => {
-    l(void 0 !== p, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
+  } = e, i = (0, f.default)(), S = (0, E.useHasMaxConnections)(), m = (0, r.default)([u.default], () => u.default.getCurrentUser()), p = s.useCallback(() => {
+    l(void 0 !== m, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("134855").then(n.bind(n, "134855"));
       return n => (0, a.jsx)(e, {
         ...n,
-        currentUser: p,
+        currentUser: m,
         otherUser: t
       })
     })
-  }, [p, t]), A = s.useCallback(() => {
-    l(void 0 !== p, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
+  }, [m, t]), A = s.useCallback(() => {
+    l(void 0 !== m, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("217014").then(n.bind(n, "217014"));
       return n => (0, a.jsx)(e, {
         ...n,
-        currentUser: p,
+        currentUser: m,
         otherUser: t
       })
     })
-  }, [p, t]), g = s.useCallback(() => {
-    l(void 0 !== p, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
+  }, [m, t]), g = s.useCallback(() => {
+    l(void 0 !== m, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("809175").then(n.bind(n, "809175"));
       return n => (0, a.jsx)(e, {
         ...n,
-        currentUser: p,
+        currentUser: m,
         otherUser: t
       })
     })
-  }, [p, t]);
+  }, [m, t]);
   return (0, a.jsxs)("div", {
     className: T.container,
     children: [(0, a.jsx)("div", {
@@ -78,7 +78,7 @@ function S(e) {
           icon: d.default,
           className: T.actionAccept,
           tooltip: I.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
-          onClick: m
+          onClick: p
         }), (0, a.jsx)(_.default, {
           icon: c.default,
           className: T.actionDeny,

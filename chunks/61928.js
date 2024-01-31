@@ -24,8 +24,8 @@ var a = n("37983"),
   I = n("330387"),
   T = n("642400"),
   S = n("668596"),
-  p = n("892313"),
-  m = n("49111"),
+  m = n("892313"),
+  p = n("49111"),
   A = n("482931"),
   g = n("782340");
 let N = "Email Verification";
@@ -37,7 +37,7 @@ function R() {
   } = (0, l.useStateFromStoresObject)([I.default, C.default], () => ({
     action: I.default.getAction(),
     theme: C.default.theme
-  })), R = p.default.getVerificationTypes(e), [O, L] = s.useState(0), v = (0, f.default)(R);
+  })), R = m.default.getVerificationTypes(e), [O, L] = s.useState(0), v = (0, f.default)(R);
   (0, _.default)({
     type: i.ImpressionTypes.MODAL,
     name: i.ImpressionNames.USER_ACTION_REQUIRED,
@@ -76,7 +76,7 @@ function R() {
   return s.useEffect(() => (E.default.disable(), () => {
     E.default.enable()
   }), []), s.useEffect(() => {
-    (null == v ? void 0 : v[0]) === m.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === m.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
+    (null == v ? void 0 : v[0]) === p.VerificationTypes.PHONE && (null == R ? void 0 : R[0]) === p.VerificationTypes.EMAIL && (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("135230").then(n.bind(n, "135230"));
@@ -96,7 +96,7 @@ function R() {
     captchaKey: O,
     onCaptchaVerify: e => {
       r.default.post({
-        url: m.Endpoints.CAPTCHA,
+        url: p.Endpoints.CAPTCHA,
         body: {
           captcha_key: e
         },
@@ -107,7 +107,7 @@ function R() {
     },
     theme: t,
     onClick: e => {
-      e === m.VerificationTypes.EMAIL_OR_PHONE || e === m.VerificationTypes.EMAIL || e === m.VerificationTypes.REVERIFY_EMAIL ? M() : P()
+      e === p.VerificationTypes.EMAIL_OR_PHONE || e === p.VerificationTypes.EMAIL || e === p.VerificationTypes.REVERIFY_EMAIL ? M() : P()
     },
     onLogout: () => {
       (0, o.openModalLazy)(async () => {

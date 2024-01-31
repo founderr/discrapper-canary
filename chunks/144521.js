@@ -25,7 +25,7 @@ function I(e) {
     nickname: n,
     status: I,
     isFocused: T
-  } = e, S = s.useContext(d.AnalyticsContext), p = e => {
+  } = e, S = s.useContext(d.AnalyticsContext), m = e => {
     null == e || e.stopPropagation(), i.default.addRelationship({
       userId: t.id,
       context: {
@@ -35,7 +35,7 @@ function I(e) {
       friendToken: void 0,
       fromFriendSuggestion: !0
     })
-  }, m = e => {
+  }, p = e => {
     null == e || e.stopPropagation(), l.default.ignore(t.id)
   }, A = I === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : I;
   return (0, a.jsx)(f.default, {
@@ -51,13 +51,13 @@ function I(e) {
           icon: o.default,
           actionType: c.default.ActionTypes.ACCEPT,
           tooltip: h.default.Messages.FRIEND_REQUEST_ACCEPT,
-          onClick: p,
+          onClick: m,
           shouldHighlight: e
         }), (0, a.jsx)(c.default, {
           icon: u.default,
           actionType: c.default.ActionTypes.DENY,
           tooltip: h.default.Messages.FRIEND_REQUEST_IGNORE,
-          onClick: m,
+          onClick: p,
           shouldHighlight: e
         })]
       });

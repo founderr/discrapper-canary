@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var a = n("37983");
@@ -21,8 +21,8 @@ var s = n("77078"),
 let C = null;
 async function I(e) {
   var t, i, l, I;
-  let T, S, p, {
-      userId: m,
+  let T, S, m, {
+      userId: p,
       section: A,
       guildId: g = _.ME,
       channelId: N,
@@ -30,13 +30,13 @@ async function I(e) {
       autoFocusNote: O,
       analyticsLocation: L
     } = e,
-    v = c.default.getUser(m),
-    M = E.default.getUserProfile(m);
+    v = c.default.getUser(p),
+    M = E.default.getUserProfile(p);
   if (null == v) return;
-  let P = u.default.getPrimaryActivity(m);
-  null != P && (T = P.party, S = P.assets, p = null != P.application_id ? o.default.getApplication(P.application_id) : null);
-  let D = u.default.getStatus(m),
-    y = u.default.isMobileOnline(m),
+  let P = u.default.getPrimaryActivity(p);
+  null != P && (T = P.party, S = P.assets, m = null != P.application_id ? o.default.getApplication(P.application_id) : null);
+  let D = u.default.getStatus(p),
+    y = u.default.isMobileOnline(p),
     x = D;
   D === _.StatusTypes.ONLINE && (x = y ? _.AnalyticsUserStatusTypes.ONLINE_MOBILE : _.AnalyticsUserStatusTypes.ONLINE_DESKTOP), C = await (0, s.openModalLazy)(async () => {
     let {
@@ -55,11 +55,11 @@ async function I(e) {
     type: "Profile Modal",
     guild_id: g !== _.ME ? g : null,
     channel_id: N,
-    other_user_id: m,
+    other_user_id: p,
     application_id: null !== (i = null == P ? void 0 : P.application_id) && void 0 !== i ? i : null,
     application_name: null == P ? void 0 : P.name,
-    sku_id: null !== (l = null == p ? void 0 : p.primarySkuId) && void 0 !== l ? l : null,
-    is_friend: d.default.isFriend(m),
+    sku_id: null !== (l = null == m ? void 0 : m.primarySkuId) && void 0 !== l ? l : null,
+    is_friend: d.default.isFriend(p),
     has_images: !!(null !== (I = null == S ? void 0 : S.large_image) && void 0 !== I ? I : null == S ? void 0 : S.small_image),
     party_max: null == T ? void 0 : null === (t = T.size) || void 0 === t ? void 0 : t[1],
     party_id: null == T ? void 0 : T.id,
@@ -83,4 +83,4 @@ class S extends l.default {
     i.default.unsubscribe("USER_PROFILE_MODAL_OPEN", I), i.default.unsubscribe("USER_PROFILE_MODAL_CLOSE", T)
   }
 }
-var p = new S
+var m = new S

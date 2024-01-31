@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   getEventChannelsByType: function() {
-    return s
+    return r
   },
   useGetEventChannelsByType: function() {
-    return r
+    return i
   }
-}), n("222007"), n("424973");
-var l = n("446674"),
-  a = n("817963");
-n("834052");
-var i = n("923959");
+}), l("222007"), l("424973");
+var n = l("446674"),
+  a = l("817963");
+l("834052");
+var s = l("923959");
 
-function s(e, t) {
-  let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.default];
+function r(e, t) {
+  let [l] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.default];
   if (null == t) return [];
-  let l = n.getChannels(e)[i.GUILD_VOCAL_CHANNELS_KEY],
-    s = [];
+  let n = l.getChannels(e)[s.GUILD_VOCAL_CHANNELS_KEY],
+    r = [];
   for (let {
       channel: e
     }
-    of l) {
+    of n) {
     let {
-      canCreateGuildEvent: n,
-      canManageAllEvents: l
-    } = (0, a.getManageResourcePermissions)(e), i = n || l;
-    e.type === t && (e.isGuildVoice() && i ? s.push(e) : e.isGuildStageVoice() && i && s.push(e))
+      canCreateGuildEvent: l,
+      canManageAllEvents: n
+    } = (0, a.getManageResourcePermissions)(e), s = l || n;
+    e.type === t && (e.isGuildVoice() && s ? r.push(e) : e.isGuildStageVoice() && s && r.push(e))
   }
-  return s
+  return r
 }
 
-function r(e, t) {
-  return (0, l.useStateFromStoresArray)([i.default], () => s(e, t, [i.default]), [e, t])
+function i(e, t) {
+  return (0, n.useStateFromStoresArray)([s.default], () => r(e, t, [s.default]), [e, t])
 }
-n("957255"), n("270161")
+l("957255"), l("270161")

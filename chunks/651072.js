@@ -1,11 +1,11 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return r
   }
 });
-var n = s("862205");
-let a = (0, n.createExperiment)({
+var l = n("862205");
+let a = (0, l.createExperiment)({
   kind: "guild",
   id: "2023-09_recurring_events",
   label: "Allows guild to create recurring events",

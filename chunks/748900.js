@@ -20,8 +20,8 @@ var a, s = n("917351"),
   I = n("945956"),
   T = n("27618"),
   S = n("18494"),
-  p = n("843823"),
-  m = n("697218"),
+  m = n("843823"),
+  p = n("697218"),
   A = n("800762"),
   g = n("599110"),
   N = n("449008"),
@@ -41,7 +41,7 @@ a = class {
     for (let [e, n] of Object.entries(t)) this.rpcServer.setEventHandler(e, n)
   }
   init() {
-    this.rpcServer.getCurrentUser = () => m.default.getCurrentUser(), this.rpcServer.onConnect = e => {
+    this.rpcServer.getCurrentUser = () => p.default.getCurrentUser(), this.rpcServer.onConnect = e => {
       r.default.dispatch({
         type: "RPC_APP_CONNECTED",
         socketId: e.id,
@@ -196,7 +196,7 @@ a = class {
       instanceId: n
     } = e;
     if (0 === this.rpcServer.subscriptions.length) return;
-    let a = m.default.getCurrentUser();
+    let a = p.default.getCurrentUser();
     if (null == a) return;
     let s = o.default.getSelfEmbeddedActivityForChannel(t);
     null != s && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_INSTANCE_UPDATE, e => e.socket.application.id === s.applicationId, {
@@ -215,9 +215,9 @@ a = class {
       activity: i
     } = a;
     if (null == s || null == i || null == i.party_id) return;
-    let l = m.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
+    let l = p.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
     if (null == l) return;
-    let r = m.default.getCurrentUser();
+    let r = p.default.getCurrentUser();
     if (null == r || l.id === r.id) return;
     let o = i.type === M.ActivityActionTypes.JOIN_REQUEST ? C.default.getApplicationActivity(r.id, s.id) : C.default.getApplicationActivity(l.id, s.id);
     if (null == o || null == o.party || o.party.id !== i.party_id) return;
@@ -304,7 +304,7 @@ a = class {
       } = e;
       if (null != t) return;
       let a = T.default.getRelationshipType(n);
-      a === M.RelationshipTypes.NONE && p.default.getUserAffinitiesUserIds().has(n) && (a = M.RelationshipTypes.IMPLICIT), a !== M.RelationshipTypes.NONE && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, O.transformRelationship)(a, n))
+      a === M.RelationshipTypes.NONE && m.default.getUserAffinitiesUserIds().has(n) && (a = M.RelationshipTypes.IMPLICIT), a !== M.RelationshipTypes.NONE && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, O.transformRelationship)(a, n))
     })
   }
   handlePresencesReplace() {

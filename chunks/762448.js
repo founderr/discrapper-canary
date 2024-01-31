@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var a = n("37983"),
@@ -259,7 +259,7 @@ class S extends s.PureComponent {
     }
   }
 }
-var p = i.default.connectStores([o.default], () => ({
+var m = i.default.connectStores([o.default], () => ({
   installationPaths: o.default.installationPaths,
   installationPathsMetadata: o.default.installationPathsMetadata,
   defaultInstallationPath: o.default.defaultInstallationPath

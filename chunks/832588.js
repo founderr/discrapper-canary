@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return l
   },
   getResponseOptions: function() {
-    return o
+    return s
   },
   handleRsvp: function() {
-    return s
+    return o
   }
 });
 var u, l, r = n("271938"),
@@ -24,7 +24,7 @@ function E(e, t) {
   return d.default.getRsvp(e, t, n)
 }
 
-function o() {
+function s() {
   return [{
     name: c.default.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES,
     value: 0
@@ -34,7 +34,7 @@ function o() {
   }]
 }
 
-function s(e) {
+function o(e) {
   let {
     eventId: t,
     recurrenceId: n,
@@ -42,10 +42,10 @@ function s(e) {
     updateRsvp: l,
     openRsvpPicker: r,
     onRsvp: c,
-    canRsvpToRecurrences: o = !0
-  } = e, s = d.default.getGuildScheduledEvent(t);
-  if (null == s) return;
-  let _ = o ? null != n ? n : (0, i.getNextRecurrenceIdInEvent)(s) : null,
-    y = E(s.id, _);
-  null == _ ? (l(t, null, u, a.GuildScheduledEventUserResponses.INTERESTED), null == c || c()) : null != y ? (l(t, _, u, a.GuildScheduledEventUserResponses.UNINTERESTED), null == c || c()) : r(s, _)
+    canRsvpToRecurrences: s = !0
+  } = e, o = d.default.getGuildScheduledEvent(t);
+  if (null == o) return;
+  let _ = s ? null != n ? n : (0, i.getNextRecurrenceIdInEvent)(o) : null,
+    y = E(o.id, _);
+  null == _ ? (l(t, null, u, a.GuildScheduledEventUserResponses.INTERESTED), null == c || c()) : null != y ? (l(t, _, u, a.GuildScheduledEventUserResponses.UNINTERESTED), null == c || c()) : r(o, _)
 }(u = l || (l = {}))[u.SERIES = 0] = "SERIES", u[u.RECURRENCE = 1] = "RECURRENCE"

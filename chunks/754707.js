@@ -24,13 +24,13 @@ function h(e) {
     I = (null == e ? void 0 : e.defaultMessageNotifications) === c.UserNotificationSettings.ALL_MESSAGES,
     T = (0, d.useIsContentDismissed)(i.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""),
     S = h && (C || I) && !T,
-    p = s.useCallback(() => {
+    m = s.useCallback(() => {
       var t;
       (0, d.markContentAsDismissed)(i.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "", !0, f.ContentDismissActionType.DISMISS)
     }, [e]),
-    m = s.useRef(!1);
+    p = s.useRef(!1);
   s.useEffect(() => {
-    if (S && !m.current) {
+    if (S && !p.current) {
       var t;
       (0, l.openModalLazy)(async () => {
         let {
@@ -43,11 +43,11 @@ function h(e) {
           ...n
         })
       }, {
-        onCloseCallback: p
+        onCloseCallback: m
       }), o.default.track(c.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
         type: i.DismissibleGuildContent[i.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
         guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""
-      }), m.current = !0
+      }), p.current = !0
     }
-  }, [C, e, p, I, S])
+  }, [C, e, m, I, S])
 }

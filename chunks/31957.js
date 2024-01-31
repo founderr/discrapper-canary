@@ -24,9 +24,9 @@ let f = "IncomingCallStore",
   I = new Set,
   T = 0,
   S = 0,
-  p = !1;
+  m = !1;
 
-function m(e) {
+function p(e) {
   if (null == e || null == C.get(e)) return !1;
   C.delete(e), (I = new Set(I)).delete(e)
 }
@@ -47,7 +47,7 @@ function A(e) {
     }), (I = new Set(I)).add(t)
   } else {
     if (!I.has(t) || a) return !1;
-    m(t)
+    p(t)
   }
 }! function() {
   let e = s.default.get(f);
@@ -59,23 +59,23 @@ function A(e) {
 }();
 
 function g() {
-  p = d.default.getStatus() === c.StatusTypes.DND || l.QuietMode.getSetting()
+  m = d.default.getStatus() === c.StatusTypes.DND || l.QuietMode.getSetting()
 }
 class N extends a.default.Store {
   initialize() {
     this.waitFor(u.default, d.default), this.syncWith([d.default], g), this.syncWith([r.default], g)
   }
   getIncomingCalls() {
-    return p ? h : Array.from(C.values())
+    return m ? h : Array.from(C.values())
   }
   getIncomingCallChannelIds() {
-    return p ? _ : I
+    return m ? _ : I
   }
   getFirstIncomingCallId() {
-    return p ? null : I.values().next().value
+    return m ? null : I.values().next().value
   }
   hasIncomingCalls() {
-    return !p && I.size > 0
+    return !m && I.size > 0
   }
 }
 N.displayName = "IncomingCallStore";
@@ -86,13 +86,13 @@ var R = new N(i.default, {
     let {
       channelId: t
     } = e;
-    return m(t)
+    return p(t)
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return m(t)
+    return p(t)
   },
   INCOMING_CALL_MOVE: function(e) {
     let {
@@ -108,6 +108,6 @@ var R = new N(i.default, {
     let {
       channel: t
     } = e;
-    return m(t.id)
+    return p(t.id)
   }
 })

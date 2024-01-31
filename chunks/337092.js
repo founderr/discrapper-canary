@@ -26,9 +26,9 @@ var a = l("37983"),
   A = l("957255"),
   g = l("697218"),
   p = l("91551"),
-  H = l("4845"),
-  N = l("635731"),
-  L = l("491401"),
+  L = l("4845"),
+  H = l("635731"),
+  N = l("491401"),
   I = l("663745"),
   R = l("781896"),
   v = l("864982"),
@@ -39,8 +39,8 @@ var a = l("37983"),
   V = l("64905"),
   B = l("536999"),
   y = l("466818"),
-  U = l("178406"),
-  F = l("150162"),
+  F = l("178406"),
+  U = l("150162"),
   w = l("290491"),
   k = l("624663"),
   Z = l("553275"),
@@ -61,7 +61,7 @@ let q = n.memo(function(e) {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(H.default, {
+        return (0, a.jsx)(L.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
@@ -87,7 +87,7 @@ let q = n.memo(function(e) {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(L.default, {
+        return (0, a.jsx)(N.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
@@ -117,7 +117,7 @@ let q = n.memo(function(e) {
           onMouseEnter: t,
           onMouseLeave: l
         } = e;
-        return (0, a.jsx)(N.default, {
+        return (0, a.jsx)(H.default, {
           width: 20,
           height: 20,
           onMouseEnter: t,
@@ -461,19 +461,19 @@ var ea = n.memo(function(e) {
     isLoading: c = !1,
     isHoldingAdvancedInfoKey: f = !1,
     compact: m = !1
-  } = e, E = (0, C.default)([x.default], () => x.default.getGuildSidebarState(l), [l]), M = (null == E ? void 0 : E.details.userId) === t, h = (0, C.default)([U.default], () => U.default.getEnhancedMember(l, t), [l, t]), _ = (0, Z.useHighestRole)(h), T = (0, C.default)([g.default], () => g.default.getUser(t), [t]), S = (0, Z.useContextMenuModerateUser)(null != h ? h : void 0), A = n.useCallback(e => {
+  } = e, E = (0, C.default)([x.default], () => x.default.getGuildSidebarState(l), [l]), M = (null == E ? void 0 : E.details.userId) === t, h = (0, C.default)([F.default], () => F.default.getEnhancedMember(l, t), [l, t]), _ = (0, Z.useHighestRole)(h), T = (0, C.default)([g.default], () => g.default.getUser(t), [t]), S = (0, Z.useContextMenuModerateUser)(null != h ? h : void 0), A = n.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), S(e)
   }, [S]), p = n.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), null != h && (null == d || d(h))
-  }, [d, h]), H = n.useCallback(e => {
+  }, [d, h]), L = n.useCallback(e => {
     e.stopPropagation(), e.preventDefault(), null != h && (null == d || d(h))
-  }, [h, d]), N = n.useCallback((e, t) => r((0, o.omit)(e, el), (0, o.omit)(t, el)), []);
-  return null == h ? null : (0, a.jsx)(F.default, {
+  }, [h, d]), H = n.useCallback((e, t) => r((0, o.omit)(e, el), (0, o.omit)(t, el)), []);
+  return null == h ? null : (0, a.jsx)(U.default, {
     role: "row",
     value: h,
     style: s,
     className: i(J.roundedRow, J.memberRowContainer, u && J.selected, M && J.memberSelected, c && J.loading),
-    equalityFn: N,
+    equalityFn: H,
     onClick: p,
     onContextMenu: A,
     children: (0, a.jsx)(ee, {
@@ -482,7 +482,7 @@ var ea = n.memo(function(e) {
       highestRole: _,
       isHoldingAdvancedInfoKey: f,
       onOpenModerationMenu: A,
-      onOpenProfileMenu: H,
+      onOpenProfileMenu: L,
       compact: m
     })
   })

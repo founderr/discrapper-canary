@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("987697"),
   T = n("464682"),
   S = n("73749"),
-  p = n("191145"),
-  m = n("533466"),
+  m = n("191145"),
+  p = n("533466"),
   A = n("837844"),
   g = n("171984"),
   N = n("551254"),
@@ -93,13 +93,13 @@ let eC = () => (0, a.jsx)("div", {
     name: "GuildHomePage",
     renderLoader: eC
   }),
-  ep = (0, d.makeLazy)({
+  em = (0, d.makeLazy)({
     createPromise: () => n.el("112265").then(n.bind(n, "112265")),
     webpackId: "112265",
     name: "MemberSafetyPage",
     renderLoader: eC
   }),
-  em = (0, d.makeLazy)({
+  ep = (0, d.makeLazy)({
     createPromise: () => n.el("534702").then(n.bind(n, "534702")),
     webpackId: "534702",
     name: "ChannelsAndRolesPage",
@@ -156,7 +156,7 @@ let eC = () => (0, a.jsx)("div", {
           guildId: s
         });
       case ef.StaticChannelRoute.CHANNEL_BROWSER:
-        return (0, a.jsx)(em, {
+        return (0, a.jsx)(ep, {
           guildId: s,
           selectedSection: eE.GuildOnboardingTab.BROWSE
         });
@@ -165,12 +165,12 @@ let eC = () => (0, a.jsx)("div", {
           guildId: s
         });
       case ef.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-        return (0, a.jsx)(em, {
+        return (0, a.jsx)(ep, {
           guildId: s,
           selectedSection: eE.GuildOnboardingTab.CUSTOMIZE
         });
       case ef.StaticChannelRoute.MEMBER_SAFETY:
-        return (0, a.jsx)(ep, {
+        return (0, a.jsx)(em, {
           guildId: s
         });
       default:
@@ -187,7 +187,7 @@ let eC = () => (0, a.jsx)("div", {
         inputSkuId: e
       }, n.id)
     }
-    return (0, a.jsx)(m.default, {})
+    return (0, a.jsx)(p.default, {})
   },
   eN = s.memo(function() {
     let {
@@ -314,7 +314,7 @@ function ek(e) {
   }), _.UserTriggerAAExperiment.trackExposure({
     location: i
   });
-  let r = (0, f.useStateFromStores)([p.default], () => p.default.isFullscreenInContext());
+  let r = (0, f.useStateFromStores)([m.default], () => m.default.isFullscreenInContext());
   return s ? null : (0, a.jsxs)("div", {
     className: l(eh.sidebar, (0, ea.getThemeClass)(n), {
       [eh.hasNotice]: t,

@@ -1,27 +1,27 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return g
   }
 });
 var s = a("37983");
 a("884691");
-var l = a("414456"),
-  i = a.n(l),
-  n = a("446674"),
+var n = a("414456"),
+  i = a.n(n),
+  l = a("446674"),
   r = a("77078"),
   o = a("79112"),
-  d = a("915639"),
-  u = a("415133"),
+  u = a("915639"),
+  d = a("415133"),
   c = a("42060"),
   E = a("49111"),
   f = a("782340"),
   m = a("341923");
 
-function S(e) {
+function g(e) {
   let {
     onClose: t
-  } = e, a = (0, c.useForceMigration)(), l = (0, n.useStateFromStores)([d.default], () => d.default.locale);
+  } = e, a = (0, c.useForceMigration)(), n = (0, l.useStateFromStores)([u.default], () => u.default.locale);
   return (0, s.jsxs)("div", {
     className: m.infoContainer,
     children: [(0, s.jsx)(r.Heading, {
@@ -31,14 +31,14 @@ function S(e) {
       color: "header-primary",
       variant: "heading-xl/bold",
       children: a ? f.default.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_1.format({
-        date: (0, u.getLocalizedForcedUUDate)(l)
+        date: (0, d.getLocalizedForcedUUDate)(n)
       }) : f.default.Messages.POMELO_EXISTING_FLOW_REMINDER_TITLE
     }), (0, s.jsx)(r.Text, {
       className: m.subtitleFinish,
       color: "header-secondary",
       variant: "text-md/medium",
       children: a ? f.default.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_2.format({
-        date: (0, u.getLocalizedForcedUUDate)(l)
+        date: (0, d.getLocalizedForcedUUDate)(n)
       }) : f.default.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_1
     }), (0, s.jsx)(r.Text, {
       className: m.promptFinish,

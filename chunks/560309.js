@@ -1,248 +1,248 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return H
+    return B
   }
-}), n("222007");
-var l = n("37983"),
-  a = n("884691"),
-  i = n("866227"),
-  s = n.n(i),
-  r = n("446674"),
-  u = n("77078"),
-  d = n("679653"),
-  o = n("42203"),
-  c = n("305961"),
-  f = n("957255"),
-  E = n("27618"),
-  I = n("697218"),
-  _ = n("718550"),
-  h = n("368121"),
-  T = n("944633"),
-  v = n("228427"),
-  N = n("697468"),
-  m = n("398604"),
-  S = n("334683"),
-  g = n("799547"),
-  C = n("776863"),
-  p = n("613767"),
-  x = n("841363"),
-  L = n("306939"),
-  O = n("745049"),
-  A = n("49111"),
-  R = n("782340"),
-  M = n("869785");
-let y = e => e === O.GuildScheduledEventEntityTypes.EXTERNAL,
-  D = (e, t) => {
-    let n = o.default.getChannel(e);
-    if (null == n) return null;
-    let a = n.type === A.ChannelTypes.GUILD_STAGE_VOICE,
-      i = (0, p.isChannelPublic)(n, t),
-      s = i ? h.default : T.default,
-      r = i ? v.default : N.default;
-    return (0, l.jsx)(a ? r : s, {
+}), l("222007");
+var n = l("37983"),
+  a = l("884691"),
+  s = l("866227"),
+  r = l.n(s),
+  i = l("446674"),
+  u = l("77078"),
+  d = l("679653"),
+  o = l("42203"),
+  c = l("305961"),
+  E = l("957255"),
+  f = l("27618"),
+  I = l("697218"),
+  _ = l("718550"),
+  T = l("368121"),
+  h = l("944633"),
+  N = l("228427"),
+  v = l("697468"),
+  m = l("398604"),
+  S = l("334683"),
+  g = l("799547"),
+  C = l("776863"),
+  x = l("613767"),
+  p = l("841363"),
+  A = l("306939"),
+  O = l("745049"),
+  R = l("49111"),
+  M = l("782340"),
+  D = l("869785");
+let L = e => e === O.GuildScheduledEventEntityTypes.EXTERNAL,
+  y = (e, t) => {
+    let l = o.default.getChannel(e);
+    if (null == l) return null;
+    let a = l.type === R.ChannelTypes.GUILD_STAGE_VOICE,
+      s = (0, x.isChannelPublic)(l, t),
+      r = s ? T.default : h.default,
+      i = s ? N.default : v.default;
+    return (0, n.jsx)(a ? i : r, {
       height: 24,
-      className: M.channelOptionIcon
+      className: D.channelOptionIcon
     })
   },
-  U = e => {
+  j = e => {
     let {
       guildId: t,
-      channelType: n,
+      channelType: l,
       channel: a,
-      onSelectChannel: i,
-      disabled: s,
-      entityType: r
-    } = e, o = n === A.ChannelTypes.GUILD_STAGE_VOICE, c = (0, p.isChannelPublic)(a, r), f = (0, g.useGetEventChannelsByType)(t, n);
-    return (0, l.jsxs)(u.FormItem, {
-      title: o ? R.default.Messages.START_STAGE_MODAL_SET_TOPIC_SELECT_LABEL : R.default.Messages.GUILD_EVENT_LOCATION_VOICE_FIELD_LABEL,
-      className: M.options,
-      disabled: s,
+      onSelectChannel: s,
+      disabled: r,
+      entityType: i
+    } = e, o = l === R.ChannelTypes.GUILD_STAGE_VOICE, c = (0, x.isChannelPublic)(a, i), E = (0, g.useGetEventChannelsByType)(t, l);
+    return (0, n.jsxs)(u.FormItem, {
+      title: o ? M.default.Messages.START_STAGE_MODAL_SET_TOPIC_SELECT_LABEL : M.default.Messages.GUILD_EVENT_LOCATION_VOICE_FIELD_LABEL,
+      className: D.options,
+      disabled: r,
       required: !0,
-      children: [(0, l.jsx)(u.SearchableSelect, {
+      children: [(0, n.jsx)(u.SearchableSelect, {
         value: null == a ? void 0 : a.id,
-        options: f.map(e => ({
+        options: E.map(e => ({
           value: e.id,
-          label: (0, d.computeChannelName)(e, I.default, E.default, !0)
+          label: (0, d.computeChannelName)(e, I.default, f.default, !0)
         })),
         onChange: e => {
-          let t = f.find(t => t.id === e);
-          i(null != t ? t : void 0)
+          let t = E.find(t => t.id === e);
+          s(null != t ? t : void 0)
         },
-        renderOptionPrefix: e => D(null == e ? void 0 : e.value, r),
-        isDisabled: s
-      }), !c && (0, l.jsx)(u.Text, {
+        renderOptionPrefix: e => y(null == e ? void 0 : e.value, i),
+        isDisabled: r
+      }), !c && (0, n.jsx)(u.Text, {
         color: "header-secondary",
-        className: M.channelPrivate,
+        className: D.channelPrivate,
         variant: "text-sm/normal",
-        children: R.default.Messages.GUILD_EVENT_PRIVATE_DESCRIPTION
+        children: M.default.Messages.GUILD_EVENT_PRIVATE_DESCRIPTION
       })]
     })
   };
 
-function V(e, t, n, l) {
+function V(e, t, l, n) {
   return t ? {
     disabled: !0,
-    tooltipText: R.default.Messages.GUILD_EVENT_LOCATION_DISABLED_CANNOT_EDIT
-  } : n ? 0 === l && e !== O.GuildScheduledEventEntityTypes.EXTERNAL ? {
+    tooltipText: M.default.Messages.GUILD_EVENT_LOCATION_DISABLED_CANNOT_EDIT
+  } : l ? 0 === n && e !== O.GuildScheduledEventEntityTypes.EXTERNAL ? {
     disabled: !0,
-    tooltipText: R.default.Messages.GUILD_EVENT_LOCATION_DISABLED_NO_AVAILABLE_CHANNEL
+    tooltipText: M.default.Messages.GUILD_EVENT_LOCATION_DISABLED_NO_AVAILABLE_CHANNEL
   } : {
     disabled: !1,
     tooltipText: null
   } : {
     disabled: !0,
-    tooltipText: R.default.Messages.GUILD_EVENT_LOCATION_DISABLED_NO_PERMISSION
+    tooltipText: M.default.Messages.GUILD_EVENT_LOCATION_DISABLED_NO_PERMISSION
   }
 }
-let P = e => t => {
+let U = e => t => {
     e({
       entityMetadata: {
         location: t
       }
     })
   },
-  j = e => t => {
-    var n;
+  P = e => t => {
+    var l;
     e({
-      channelId: null !== (n = null == t ? void 0 : t.id) && void 0 !== n ? n : null
+      channelId: null !== (l = null == t ? void 0 : t.id) && void 0 !== l ? l : null
     })
   },
-  G = (e, t) => n => {
+  G = (e, t) => l => {
     let {
-      value: l
-    } = n, a = {
-      entityType: l,
+      value: n
+    } = l, a = {
+      entityType: n,
       scheduledEndTime: void 0
     };
-    if (y(l)) {
-      var i;
-      let e = (null !== (i = s(t.scheduledStartTime)) && void 0 !== i ? i : s()).add(2, "hour");
+    if (L(n)) {
+      var s;
+      let e = (null !== (s = r(t.scheduledStartTime)) && void 0 !== s ? s : r()).add(2, "hour");
       a.scheduledEndTime = e.toISOString()
     }
     e(a)
   };
 
-function F(e) {
-  let {
-    guildId: t,
-    guildEvent: n,
-    onChange: i,
-    isFocusReady: s
-  } = e, {
-    entityType: d,
-    channelId: c
-  } = n, f = (0, r.useStateFromStores)([o.default], () => o.default.getChannel(c), [c]), E = a.useRef(null);
-  a.useEffect(() => {
-    if (s && y(d)) {
-      var e;
-      null === (e = E.current) || void 0 === e || e.focus()
-    }
-  }, [s, d]);
-  let I = P(i),
-    _ = j(i),
-    h = (0, x.getLocationFromEventData)(n),
-    T = (0, x.getChannelTypeFromEntity)(d),
-    v = (0, m.isGuildScheduledEventActive)(n);
-  return null == d || d === O.GuildScheduledEventEntityTypes.NONE ? null : y(d) ? (0, l.jsx)(u.FormItem, {
-    title: R.default.Messages.GUILD_EVENT_LOCATION_ELSEWHERE_FIELD_LABEL,
-    className: M.options,
-    required: !0,
-    children: (0, l.jsx)(u.TextInput, {
-      className: M.textInput,
-      onChange: I,
-      placeholder: R.default.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_PLACEHOLDER,
-      maxLength: O.MAX_EVENT_LOCATION_LENGTH,
-      value: null != h ? h : "",
-      inputRef: E
-    })
-  }) : null == T ? null : (0, l.jsx)(U, {
-    guildId: t,
-    channelType: T,
-    onSelectChannel: _,
-    channel: f,
-    entityType: d,
-    disabled: v
-  })
-}
-
-function b(e) {
-  let {
-    guildId: t,
-    guildEvent: n,
-    onChange: i
-  } = e, s = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]), d = (0, S.default)(t, void 0), o = (0, S.default)(t, A.ChannelTypes.GUILD_VOICE), f = (0, S.default)(t, A.ChannelTypes.GUILD_STAGE_VOICE), E = (0, g.useGetEventChannelsByType)(t, A.ChannelTypes.GUILD_VOICE), I = (0, C.useChannelsUserCanStartStageIn)(s), T = null == s ? void 0 : s.hasFeature(A.GuildFeatures.COMMUNITY), N = (0, m.isGuildScheduledEventActive)(n), p = G(i, n), x = a.useMemo(() => {
-    let e = [{
-      name: R.default.Messages.VOICE_CHANNEL,
-      value: O.GuildScheduledEventEntityTypes.VOICE,
-      desc: R.default.Messages.GUILD_EVENT_LOCATION_OPTION_VOICE_HINT,
-      icon: h.default,
-      ...V(O.GuildScheduledEventEntityTypes.VOICE, N, o, E.length)
-    }, {
-      name: R.default.Messages.GUILD_EVENT_LOCATION_EXTERNAL,
-      value: O.GuildScheduledEventEntityTypes.EXTERNAL,
-      desc: R.default.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_HINT,
-      icon: _.default,
-      ...V(O.GuildScheduledEventEntityTypes.EXTERNAL, N, d, 0)
-    }];
-    return T ? [{
-      name: R.default.Messages.STAGE_CHANNEL,
-      value: O.GuildScheduledEventEntityTypes.STAGE_INSTANCE,
-      desc: R.default.Messages.GUILD_EVENT_LOCATION_OPTION_STAGE_HINT,
-      icon: v.default,
-      ...V(O.GuildScheduledEventEntityTypes.STAGE_INSTANCE, N, f, I.length)
-    }, ...e] : e
-  }, [d, o, f, T, E.length, I.length, N]);
-  return (0, l.jsx)(u.RadioGroup, {
-    value: n.entityType,
-    options: x,
-    onChange: p,
-    className: M.options
-  })
-}
-
 function H(e) {
   let {
     guildId: t,
-    guildEvent: a,
-    validationErrorMessage: i,
+    guildEvent: l,
     onChange: s,
+    isFocusReady: r
+  } = e, {
+    entityType: d,
+    channelId: c
+  } = l, E = (0, i.useStateFromStores)([o.default], () => o.default.getChannel(c), [c]), f = a.useRef(null);
+  a.useEffect(() => {
+    if (r && L(d)) {
+      var e;
+      null === (e = f.current) || void 0 === e || e.focus()
+    }
+  }, [r, d]);
+  let I = U(s),
+    _ = P(s),
+    T = (0, p.getLocationFromEventData)(l),
+    h = (0, p.getChannelTypeFromEntity)(d),
+    N = (0, m.isGuildScheduledEventActive)(l);
+  return null == d || d === O.GuildScheduledEventEntityTypes.NONE ? null : L(d) ? (0, n.jsx)(u.FormItem, {
+    title: M.default.Messages.GUILD_EVENT_LOCATION_ELSEWHERE_FIELD_LABEL,
+    className: D.options,
+    required: !0,
+    children: (0, n.jsx)(u.TextInput, {
+      className: D.textInput,
+      onChange: I,
+      placeholder: M.default.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_PLACEHOLDER,
+      maxLength: O.MAX_EVENT_LOCATION_LENGTH,
+      value: null != T ? T : "",
+      inputRef: f
+    })
+  }) : null == h ? null : (0, n.jsx)(j, {
+    guildId: t,
+    channelType: h,
+    onSelectChannel: _,
+    channel: E,
+    entityType: d,
+    disabled: N
+  })
+}
+
+function F(e) {
+  let {
+    guildId: t,
+    guildEvent: l,
+    onChange: s
+  } = e, r = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]), d = (0, S.default)(t, void 0), o = (0, S.default)(t, R.ChannelTypes.GUILD_VOICE), E = (0, S.default)(t, R.ChannelTypes.GUILD_STAGE_VOICE), f = (0, g.useGetEventChannelsByType)(t, R.ChannelTypes.GUILD_VOICE), I = (0, C.useChannelsUserCanStartStageIn)(r), h = null == r ? void 0 : r.hasFeature(R.GuildFeatures.COMMUNITY), v = (0, m.isGuildScheduledEventActive)(l), x = G(s, l), p = a.useMemo(() => {
+    let e = [{
+      name: M.default.Messages.VOICE_CHANNEL,
+      value: O.GuildScheduledEventEntityTypes.VOICE,
+      desc: M.default.Messages.GUILD_EVENT_LOCATION_OPTION_VOICE_HINT,
+      icon: T.default,
+      ...V(O.GuildScheduledEventEntityTypes.VOICE, v, o, f.length)
+    }, {
+      name: M.default.Messages.GUILD_EVENT_LOCATION_EXTERNAL,
+      value: O.GuildScheduledEventEntityTypes.EXTERNAL,
+      desc: M.default.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_HINT,
+      icon: _.default,
+      ...V(O.GuildScheduledEventEntityTypes.EXTERNAL, v, d, 0)
+    }];
+    return h ? [{
+      name: M.default.Messages.STAGE_CHANNEL,
+      value: O.GuildScheduledEventEntityTypes.STAGE_INSTANCE,
+      desc: M.default.Messages.GUILD_EVENT_LOCATION_OPTION_STAGE_HINT,
+      icon: N.default,
+      ...V(O.GuildScheduledEventEntityTypes.STAGE_INSTANCE, v, E, I.length)
+    }, ...e] : e
+  }, [d, o, E, h, f.length, I.length, v]);
+  return (0, n.jsx)(u.RadioGroup, {
+    value: l.entityType,
+    options: p,
+    onChange: x,
+    className: D.options
+  })
+}
+
+function B(e) {
+  let {
+    guildId: t,
+    guildEvent: a,
+    validationErrorMessage: s,
+    onChange: r,
     isSlideReady: d = !1
   } = e, {
     entityType: o
-  } = a, E = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]), I = (0, C.useChannelsUserCanStartStageIn)(E), _ = (0, r.useStateFromStores)([f.default], () => f.default.can(A.Permissions.MANAGE_CHANNELS, E)), h = null == E ? void 0 : E.hasFeature(A.GuildFeatures.COMMUNITY), T = G(s, a), v = h && !y(o) && 0 === I.length && _ && null != o;
-  return (0, l.jsxs)("div", {
-    className: M.container,
-    children: [(0, l.jsx)(u.Heading, {
+  } = a, f = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]), I = (0, C.useChannelsUserCanStartStageIn)(f), _ = (0, i.useStateFromStores)([E.default], () => E.default.can(R.Permissions.MANAGE_CHANNELS, f)), T = null == f ? void 0 : f.hasFeature(R.GuildFeatures.COMMUNITY), h = G(r, a), N = T && !L(o) && 0 === I.length && _ && null != o;
+  return (0, n.jsxs)("div", {
+    className: D.container,
+    children: [(0, n.jsx)(u.Heading, {
       variant: "heading-xl/semibold",
-      className: M.header,
-      children: R.default.Messages.GUILD_EVENT_LOCATION_TITLE
-    }), (0, l.jsx)(u.Text, {
+      className: D.header,
+      children: M.default.Messages.GUILD_EVENT_LOCATION_TITLE
+    }), (0, n.jsx)(u.Text, {
       color: "header-secondary",
-      className: M.text,
+      className: D.text,
       variant: "text-sm/normal",
-      children: R.default.Messages.GUILD_EVENT_LOCATION_SUBTITLE
-    }), (0, l.jsx)(b, {
+      children: M.default.Messages.GUILD_EVENT_LOCATION_SUBTITLE
+    }), (0, n.jsx)(F, {
       guildId: t,
       guildEvent: a,
-      onChange: s
-    }), (0, l.jsx)(F, {
+      onChange: r
+    }), (0, n.jsx)(H, {
       guildId: t,
       guildEvent: a,
       isFocusReady: d,
-      onChange: s
-    }), v ? (0, l.jsx)(L.default, {
+      onChange: r
+    }), N ? (0, n.jsx)(A.default, {
       onClick: () => {
-        T({
+        h({
           value: O.GuildScheduledEventEntityTypes.STAGE_INSTANCE,
-          name: R.default.Messages.STAGE_CHANNEL
+          name: M.default.Messages.STAGE_CHANNEL
         }), (0, u.openModalLazy)(async () => {
           let {
             default: e
-          } = await n.el("581354").then(n.bind(n, "581354"));
-          return n => (0, l.jsx)(e, {
-            ...n,
-            channelType: A.ChannelTypes.GUILD_STAGE_VOICE,
+          } = await l.el("581354").then(l.bind(l, "581354"));
+          return l => (0, n.jsx)(e, {
+            ...l,
+            channelType: R.ChannelTypes.GUILD_STAGE_VOICE,
             guildId: t
           })
         })

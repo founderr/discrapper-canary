@@ -26,15 +26,15 @@ var a = l("37983"),
   A = l("850646"),
   g = l("894282"),
   p = l("474507");
-let H = {
+let L = {
     transform: "translate3d(15%, 0, 0)",
     opacity: .3
   },
-  N = {
+  H = {
     transform: "translate3d(5%, 0, 0)",
     opacity: .5
   },
-  L = {
+  N = {
     transform: "translate3d(0, 0, 0)",
     opacity: 1
   },
@@ -79,9 +79,9 @@ let H = {
           let t = M.default.getEnhancedMember(l.id, e),
             a = M.default.getLastRefreshTimestamp(l.id),
             n = null != t && t.refreshTimestamp === a;
-          return null != t && 0 !== a && n ? V ? N : H : L
+          return null != t && 0 !== a && n ? V ? H : L : N
         },
-        enter: L,
+        enter: N,
         config: I
       });
     return (0, a.jsxs)("table", {

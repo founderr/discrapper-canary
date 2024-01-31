@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return E
   },
   recurrenceRuleFromServer: function() {
-    return o
+    return s
   },
   convertToFakeGuildEvent: function() {
-    return s
+    return o
   },
   getInitialGuildEventData: function() {
     return _
@@ -41,7 +41,7 @@ function E(e) {
   }
 }
 
-function o(e) {
+function s(e) {
   return null == e ? null : {
     start: new Date(e.start).toISOString(),
     end: null != e.end ? new Date(e.end).toISOString() : null,
@@ -56,15 +56,15 @@ function o(e) {
   }
 }(u = l || (l = {})).CHANNEL_SELECTOR = "ChannelSelector", u.DETAILS = "Details", u.PREVIEW = "Preview";
 
-function s(e, t, n) {
+function o(e, t, n) {
   let {
     name: u,
     description: l,
     privacyLevel: d,
     channelId: i,
     scheduledStartTime: c,
-    scheduledEndTime: o,
-    entityType: s,
+    scheduledEndTime: s,
+    entityType: o,
     entityMetadata: _,
     image: y,
     recurrenceRule: R,
@@ -76,8 +76,8 @@ function s(e, t, n) {
     description: null != l ? l : null,
     privacy_level: d,
     scheduled_start_time: c,
-    scheduled_end_time: o,
-    entity_type: s,
+    scheduled_end_time: s,
+    entity_type: o,
     entity_metadata: null != _ ? _ : null,
     image: null != y ? y : void 0,
     channel_id: i,
@@ -97,7 +97,7 @@ function s(e, t, n) {
 }
 
 function _(e, t) {
-  var n, u, l, r, c, E, s, _;
+  var n, u, l, r, c, E, o, _;
   let y = {
     name: null !== (n = null == e ? void 0 : e.name) && void 0 !== n ? n : "",
     privacyLevel: null !== (u = null == e ? void 0 : e.privacy_level) && void 0 !== u ? u : a.GuildScheduledEventPrivacyLevel.GUILD_ONLY,
@@ -109,8 +109,8 @@ function _(e, t) {
     creatorId: null == e ? void 0 : e.creator_id,
     image: null == e ? void 0 : e.image,
     scheduledEndTime: null == e ? void 0 : e.scheduled_end_time,
-    recurrenceRule: o(null == e ? void 0 : e.recurrence_rule),
-    eventExceptions: (null !== (s = null == e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== s ? s : []).map(e => ({
+    recurrenceRule: s(null == e ? void 0 : e.recurrence_rule),
+    eventExceptions: (null !== (o = null == e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== o ? o : []).map(e => ({
       eventExceptionId: e.event_exception_id,
       eventId: e.event_id,
       guildId: e.guild_id,

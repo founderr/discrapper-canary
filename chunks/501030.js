@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   getDirectoryEntryBroadcastInfo: function() {
-    return i
+    return s
   }
 });
-var l = n("872717"),
-  a = n("49111");
-async function i(e, t, n) {
-  let i = await l.default.get({
+var n = l("872717"),
+  a = l("49111");
+async function s(e, t, l) {
+  let s = await n.default.get({
     url: a.Endpoints.DIRECTORY_ENTRIES_BROADCAST_INFO(e),
     query: {
       type: t,
-      entity_id: n
+      entity_id: l
     }
   });
-  return i.body
+  return s.body
 }

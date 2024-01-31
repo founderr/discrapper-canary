@@ -8,8 +8,8 @@ var s = n("37983");
 n("884691");
 var a = n("77078"),
   l = n("653047"),
-  i = n("233069"),
-  r = n("813006"),
+  r = n("233069"),
+  i = n("813006"),
   u = n("766274"),
   o = n("800118"),
   d = n("570683"),
@@ -36,31 +36,31 @@ function _(e) {
     disableUser: _ = !1
   } = e;
   if (null == t) return null;
-  let p = null != t.guild ? new r.default(t.guild) : null,
-    h = null != t.channel ? (0, i.createChannelRecordFromInvite)(t.channel) : null,
-    T = null != t.target_application ? new l.default(t.target_application) : null,
-    N = _ || null == t.inviter ? null : new u.default(t.inviter),
-    m = null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != p && p.hasFeature(c.GuildFeatures.COMMUNITY),
-    g = !m && null != N && (0, o.isGroupInvite)(t),
+  let h = null != t.guild ? new i.default(t.guild) : null,
+    p = null != t.channel ? (0, r.createChannelRecordFromInvite)(t.channel) : null,
+    m = null != t.target_application ? new l.default(t.target_application) : null,
+    T = _ || null == t.inviter ? null : new u.default(t.inviter),
+    N = null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != h && h.hasFeature(c.GuildFeatures.COMMUNITY),
+    g = !N && null != T && (0, o.isGroupInvite)(t),
     A = I(t),
     S = {
       invite: t,
-      user: N,
-      guild: p,
-      channel: h,
-      application: T
+      user: T,
+      guild: h,
+      channel: p,
+      application: m
     };
   return (0, o.isEnhancedCommunityInvite)(t) ? (0, s.jsx)(d.default, {
     invite: t,
-    channel: h,
+    channel: p,
     isSubmitting: A,
     onAcceptInvite: n
   }) : (0, s.jsxs)("div", {
     className: E.container,
     children: [(0, s.jsx)(o.InviteDestinationIcon, {
-      application: T,
-      guild: p,
-      user: g || (0, o.isDirectInvite)(t) ? N : null
+      application: m,
+      guild: h,
+      user: g || (0, o.isDirectInvite)(t) ? T : null
     }), (0, o.isDirectInvite)(t) ? null : (0, s.jsx)(o.InviteJoinContext, {
       ...S,
       showBigUserIcon: g

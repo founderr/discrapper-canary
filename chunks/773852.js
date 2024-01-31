@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return T
   }
 }), n("222007");
 var s = n("37983"),
   a = n("884691"),
   l = n("730290"),
-  i = n("446674"),
-  r = n("872717"),
+  r = n("446674"),
+  i = n("872717"),
   u = n("77078"),
   o = n("457108"),
   d = n("970366"),
@@ -17,14 +17,14 @@ var s = n("37983"),
   E = n("124969"),
   I = n("49111"),
   _ = n("853994"),
-  p = n("782340"),
-  h = n("926622");
-i.default.initialize();
-class T extends a.PureComponent {
+  h = n("782340"),
+  p = n("926622");
+r.default.initialize();
+class m extends a.PureComponent {
   componentDidMount() {
     let e = (0, o.default)(this.props.location),
       t = (0, l.parse)(this.props.location.search);
-    r.default.post({
+    i.default.post({
       url: I.Endpoints.DISABLE_EMAIL_NOTIFICATIONS,
       body: {
         token: e,
@@ -59,25 +59,25 @@ class T extends a.PureComponent {
     let {
       defaultRoute: n,
       transitionTo: a
-    } = this.props, l = p.default.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_EMAIL_BODY.format({
+    } = this.props, l = h.default.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_EMAIL_BODY.format({
       category: t
     });
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Title, {
-        className: h.marginBottom8,
-        children: p.default.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_HEADER
+        className: p.marginBottom8,
+        children: h.default.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_HEADER
       }), (0, s.jsx)(E.SubTitle, {
         children: l
       }), (0, s.jsx)(E.Button, {
-        className: h.marginTop20,
+        className: p.marginTop20,
         onClick: () => a(n),
-        children: p.default.Messages.CONTINUE_TO_WEBAPP
+        children: h.default.Messages.CONTINUE_TO_WEBAPP
       }), (0, s.jsx)(E.Button, {
-        className: h.marginTop8,
+        className: p.marginTop8,
         color: E.Button.Colors.LINK,
         look: E.Button.Looks.LINK,
         onClick: () => a(I.Routes.SETTINGS("notifications", _.EMAILS_SUBSECTION)),
-        children: p.default.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
+        children: h.default.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
       })]
     })
   }
@@ -97,16 +97,16 @@ class T extends a.PureComponent {
       children: [(0, s.jsx)(E.Avatar, {
         src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
         size: u.AvatarSizes.DEPRECATED_SIZE_100,
-        className: h.marginBottom20
+        className: p.marginBottom20
       }), (0, s.jsx)(E.Title, {
-        className: h.marginBottom8,
-        children: p.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_HEADER
+        className: p.marginBottom8,
+        children: h.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_HEADER
       }), (0, s.jsx)(E.SubTitle, {
-        children: p.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_BODY
+        children: h.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_BODY
       }), (0, s.jsx)(E.Button, {
-        className: h.marginTop40,
+        className: p.marginTop40,
         onClick: () => t(e),
-        children: p.default.Messages.CONTINUE_TO_WEBAPP
+        children: h.default.Messages.CONTINUE_TO_WEBAPP
       })]
     })
   }
@@ -118,16 +118,16 @@ class T extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("2862"),
-        className: h.marginBottom20
+        className: p.marginBottom20
       }), (0, s.jsx)(E.Title, {
-        className: h.marginBottom8,
-        children: p.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
+        className: p.marginBottom8,
+        children: h.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
       }), (0, s.jsx)(E.SubTitle, {
-        children: p.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
+        children: h.default.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY
       }), (0, s.jsx)(E.Button, {
-        className: h.marginTop40,
+        className: p.marginTop40,
         onClick: () => t(e),
-        children: p.default.Messages.CONTINUE_TO_WEBAPP
+        children: h.default.Messages.CONTINUE_TO_WEBAPP
       })]
     })
   }
@@ -147,9 +147,9 @@ class T extends a.PureComponent {
     }
   }
 }
-T.defaultProps = {
+m.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var N = i.default.connectStores([f.default], () => ({
+var T = r.default.connectStores([f.default], () => ({
   defaultRoute: f.default.defaultRoute
-}))(T)
+}))(m)

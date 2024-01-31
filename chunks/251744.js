@@ -21,8 +21,8 @@ var a = n("917351"),
   I = n("578287"),
   T = n("65810"),
   S = n("716724"),
-  p = n("961400"),
-  m = n("694352"),
+  m = n("961400"),
+  p = n("694352"),
   A = n("492249"),
   g = n("49111");
 let N = e => (0, S.default)(e).required().keys({
@@ -343,7 +343,7 @@ let v = {
       } = e, a = {
         currentUser: _.default.getCurrentUser()
       };
-      return null != a.currentUser && (null == t || !(0, i.default)(a, t)) && n((0, m.default)(a.currentUser)), a
+      return null != a.currentUser && (null == t || !(0, i.default)(a, t)) && n((0, p.default)(a.currentUser)), a
     }
   },
   [g.RPCEvents.LOBBY_UPDATE]: {
@@ -407,7 +407,7 @@ let v = {
       let {
         prevState: a,
         dispatch: i
-      } = e, o = r.default.getStreamerActiveStreamMetadata(), u = (null == o ? void 0 : o.pid) != null ? E.default.getGameForPID(o.pid) : null, d = (null == u ? void 0 : u.id) != null ? l.default.getApplication(u.id) : null, c = null != d ? (0, p.default)(d) : null, f = null == o ? void 0 : o.sourceName, _ = {
+      } = e, o = r.default.getStreamerActiveStreamMetadata(), u = (null == o ? void 0 : o.pid) != null ? E.default.getGameForPID(o.pid) : null, d = (null == u ? void 0 : u.id) != null ? l.default.getApplication(u.id) : null, c = null != d ? (0, m.default)(d) : null, f = null == o ? void 0 : o.sourceName, _ = {
         active: null != o,
         pid: null !== (t = null == o ? void 0 : o.pid) && void 0 !== t ? t : null,
         application: (n = null != c, n) ? {

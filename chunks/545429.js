@@ -45,7 +45,7 @@ function S(e) {
     mutualGuilds: t.slice(0, 5)
   }
 }
-class p extends o.default {
+class m extends o.default {
   get comparator() {
     var e, t, n, a, s;
     return [this.type, null !== (s = null !== (a = null === (e = this.nickname) || void 0 === e ? void 0 : e.toLowerCase()) && void 0 !== a ? a : null === (n = this.user) || void 0 === n ? void 0 : null === (t = n.globalName) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== s ? s : this.usernameLower]
@@ -54,9 +54,9 @@ class p extends o.default {
     super(), this.key = e.key, this.type = e.type, this.status = e.status, this.activities = e.activities, this.applicationStream = e.applicationStream, this.user = e.user, this.isMobile = e.isMobile, this.usernameLower = e.usernameLower, this.mutualGuildsLength = e.mutualGuildsLength, this.mutualGuilds = e.mutualGuilds, this.nickname = e.nickname
   }
 }
-class m {
+class p {
   reset() {
-    let e = s.map(_.default.getRelationships(), (e, t) => new p({
+    let e = s.map(_.default.getRelationships(), (e, t) => new m({
         key: t,
         type: e,
         nickname: _.default.getNickname(t),
@@ -64,7 +64,7 @@ class m {
         ...T(t),
         ...S(t)
       })),
-      t = s.map(u.default.getSuggestions(), e => new p({
+      t = s.map(u.default.getSuggestions(), e => new m({
         key: e.key,
         type: 99,
         nickname: e.name,
@@ -72,10 +72,10 @@ class m {
         ...T(e.key),
         ...S(e.key)
       }));
-    return new m(s.concat(e, t))
+    return new p(s.concat(e, t))
   }
   clone() {
-    return new m(this._rows)
+    return new p(this._rows)
   }
   update(e) {
     let t = !1;
@@ -131,7 +131,7 @@ class m {
 let A = !0,
   g = !1,
   N = C.FriendsSections.ONLINE,
-  R = new m,
+  R = new p,
   O = !0,
   L = !1;
 
@@ -147,7 +147,7 @@ function M() {
 }
 
 function P() {
-  R = O ? new m : R.reset()
+  R = O ? new p : R.reset()
 }
 
 function D(e) {

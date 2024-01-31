@@ -30,8 +30,8 @@ function g(e) {
     guildId: t
   } = e, g = (0, _.useCanAccessBulkBanningFeature)(t), {
     selectedUserIds: p,
-    clearSelection: H
-  } = (0, T.default)(t), N = p.size > 0, L = async (e, t, l, a) => {
+    clearSelection: L
+  } = (0, T.default)(t), H = p.size > 0, N = async (e, t, l, a) => {
     try {
       let n = await r.default.banMultipleUsers(e, t, l, a);
       (0, d.showToast)((0, d.createToast)(S.default.Messages.BAN_MULTIPLE_SUCCESS_TOAST, d.ToastType.SUCCESS)), M.default.track(x.AnalyticEvents.BULK_MODERATION_ACTION_COMPLETED, {
@@ -45,10 +45,10 @@ function g(e) {
     } catch (e) {
       (0, d.showToast)((0, d.createToast)(S.default.Messages.BAN_MULTIPLE_FAILED_TOAST, d.ToastType.FAILURE))
     }
-    H()
+    L()
   }, I = n.useCallback(() => {
-    H()
-  }, [H]), R = (0, a.jsxs)("span", {
+    L()
+  }, [L]), R = (0, a.jsxs)("span", {
     className: A.messageContainer,
     children: [(0, a.jsx)(E.default, {
       width: 24,
@@ -80,7 +80,7 @@ function g(e) {
   return g ? (0, a.jsx)(i.default, {
     component: "div",
     className: A.saveNoticeContainer,
-    children: N && (0, a.jsx)(f.default, {
+    children: H && (0, a.jsx)(f.default, {
       children: (0, a.jsx)(u.default, {
         onSave: () => {
           M.default.track(x.AnalyticEvents.BULK_MODERATION_ACTION_STARTED, {
@@ -98,7 +98,7 @@ function g(e) {
               guildId: t,
               canBulkBan: g,
               userIds: p,
-              onBanMultiple: L
+              onBanMultiple: N
             })
           })
         },

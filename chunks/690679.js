@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return y
+    return M
   }
 }), s("222007"), s("70102");
 var a = s("37983"),
@@ -24,18 +24,18 @@ var a = s("37983"),
   P = s("719923"),
   R = s("713518"),
   T = s("380186"),
-  C = s("809071"),
-  A = s("49111"),
+  A = s("809071"),
+  C = s("49111"),
   h = s("782340"),
   L = s("539735"),
-  M = s("173791");
+  g = s("173791");
 
-function y(e) {
+function M(e) {
   let {
     subscription: t,
     onPaymentSourceAdded: i,
     highlightAddPaymentMethodButton: l,
-    dropdownClassName: y,
+    dropdownClassName: M,
     analyticsLocation: x,
     currentInvoicePreview: D,
     disabled: U = !1
@@ -46,7 +46,7 @@ function y(e) {
     null == e ? await f.changeSubscriptionCurrency(t, s, j, x) : await f.changePaymentSource(t, e, s, j, x), w(!1), Y(s)
   }, V = async (e, s, a) => {
     w(!0);
-    let n = await (0, C.updateSubscriptionInvoicePreview)({
+    let n = await (0, A.updateSubscriptionInvoicePreview)({
       subscriptionId: t.id,
       paymentSourceId: null == e ? void 0 : e.id,
       renewal: !0,
@@ -54,7 +54,7 @@ function y(e) {
       analyticsLocations: j,
       analyticsLocation: x
     });
-    D.currency !== n.currency || D.currency === n.currency && D.total !== n.total ? await g(n, () => {
+    D.currency !== n.currency || D.currency === n.currency && D.total !== n.total ? await y(n, () => {
       a(e, s)
     }, () => {
       w(!1)
@@ -63,7 +63,7 @@ function y(e) {
     let s = S.default.get(t.planIdForCurrencies);
     u(null != e, "paymentSource not specified for change"), u(null != s, "Unable to fetch plan");
     let a = (0, R.getCurrencies)(s.id, e.id, !1),
-      n = a.length > 0 ? a[0] : A.CurrencyCodes.USD;
+      n = a.length > 0 ? a[0] : C.CurrencyCodes.USD;
     return n
   }, W = e => {
     null != e && V(e, K(e), H)
@@ -85,7 +85,7 @@ function y(e) {
       onCloseCallback: () => {
         (0, c.clearError)()
       },
-      onCloseRequest: A.NOOP
+      onCloseRequest: C.NOOP
     })
   };
   if (t.isPurchasedExternally) return (e => {
@@ -123,7 +123,7 @@ function y(e) {
             label: h.default.Messages.ATTACH_PAYMENT_SOURCE_PROMPT_OPTION,
             value: null
           } : null,
-          className: y,
+          className: M,
           paymentSources: G,
           hidePersonalInformation: v,
           selectedPaymentSourceId: e,
@@ -135,7 +135,7 @@ function y(e) {
       })(), null != t.paymentSourceId ? (0, a.jsx)(E.CurrencyWrapper, {
         currencies: s,
         children: (0, a.jsxs)("div", {
-          className: r(L.currency, M.flex, M.alignCenter),
+          className: r(L.currency, g.flex, g.alignCenter),
           children: [(0, a.jsx)("div", {
             children: h.default.Messages.PAYMENT_CURRENCY_PAYING_IN
           }), (0, a.jsx)(E.default, {
@@ -151,7 +151,7 @@ function y(e) {
     })
   }
 }
-let g = async (e, t, n) => {
+let y = async (e, t, n) => {
   let i = await (0, d.openModalLazy)(async () => {
     let {
       default: i

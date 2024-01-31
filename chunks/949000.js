@@ -22,8 +22,8 @@ var s = n("77078"),
   I = n("812809"),
   T = n("435895"),
   S = n("49111"),
-  p = n("353927");
-class m extends f.default {
+  m = n("353927");
+class p extends f.default {
   _initialize() {
     super._initialize(), !__OVERLAY__ && i.default.subscribe("OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST", this._handleOverlaySoundboardSoundsFetchRequest)
   }
@@ -33,7 +33,7 @@ class m extends f.default {
   constructor(...e) {
     var t;
     super(...e), t = this, this.playingSoundsWeb = new Map, this._stopAndClearSounds = () => {
-      u.default.supports(p.Features.SAMPLE_PLAYBACK) && u.default.getMediaEngine().eachConnection(e => {
+      u.default.supports(m.Features.SAMPLE_PLAYBACK) && u.default.getMediaEngine().eachConnection(e => {
         e.stopAllSamplesLocalPlayback()
       }), this.playingSoundsWeb.forEach(e => {
         e.pause(), e.src = ""
@@ -50,7 +50,7 @@ class m extends f.default {
           soundVolume: (0, I.default)(n),
           reportSoundStartedPlaying: () => (0, E.reportSoundStartedPlaying)(e, a)
         };
-        u.default.supports(p.Features.SAMPLE_PLAYBACK) ? await (0, T.playDesktopSound)(s) : await (0, T.playWebSound)(s, t.playingSoundsWeb)
+        u.default.supports(m.Features.SAMPLE_PLAYBACK) ? await (0, T.playDesktopSound)(s) : await (0, T.playWebSound)(s, t.playingSoundsWeb)
       } finally {
         (0, E.reportSoundFinishedPlaying)(e, a)
       }
@@ -74,4 +74,4 @@ class m extends f.default {
     }
   }
 }
-var A = new m
+var A = new p

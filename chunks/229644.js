@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("812204"),
   T = n("716241"),
   S = n("685665"),
-  p = n("9759"),
-  m = n("754493"),
+  m = n("9759"),
+  p = n("754493"),
   A = n("813531"),
   g = n("21526"),
   N = n("176555"),
@@ -80,9 +80,9 @@ let eS = e => {
       ...n
     } = e, s = (0, o.useListItem)("friends"), i = (0, d.useStateFromStores)([Q.default], () => Q.default.getPendingCount()), l = (0, A.default)(), {
       canViewBroadcasts: r
-    } = p.default.useExperiment({
+    } = m.default.useExperiment({
       location: "friends_tab_no_track"
-    }), u = (0, m.default)();
+    }), u = (0, p.default)();
     return (0, a.jsxs)(eE.LinkButton, {
       selected: t,
       route: eC.Routes.FRIENDS,
@@ -114,7 +114,7 @@ let eS = e => {
       }) : null]
     })
   },
-  ep = e => {
+  em = e => {
     let {
       selected: t,
       hideGameUpdateProgressIndicator: n,
@@ -134,7 +134,7 @@ let eS = e => {
       })
     })
   },
-  em = e => {
+  ep = e => {
     let t, n, {
         selected: s,
         route: i,
@@ -153,8 +153,8 @@ let eS = e => {
       {
         enabled: S
       } = (0, b.default)(),
-      p = s || null != E || null != _ || I || T || null != u && Date.now() - u.createdAt.getTime() > 2592e6 || (0, ec.hasPremiumSubscriptionToDisplay)(u, c);
-    return p && (!S || s) ? (I ? n = (0, a.jsx)(j.default, {
+      m = s || null != E || null != _ || I || T || null != u && Date.now() - u.createdAt.getTime() > 2592e6 || (0, ec.hasPremiumSubscriptionToDisplay)(u, c);
+    return m && (!S || s) ? (I ? n = (0, a.jsx)(j.default, {
       isNitroTab: !0
     }) : T ? n = (0, a.jsx)(H.default, {}) : null != _ ? n = (0, a.jsx)(F.PremiumDiscountOfferTabBadge, {
       userDiscount: _,
@@ -376,10 +376,10 @@ let eP = e => {
       showDMHeader: !0,
       children: [(0, a.jsx)(eS, {
         selected: null != c ? c === eC.Routes.FRIENDS : s === eC.Routes.FRIENDS
-      }, "friends"), n && t ? (0, a.jsx)(ep, {
+      }, "friends"), n && t ? (0, a.jsx)(em, {
         selected: null == c ? null != s && s.startsWith(eC.Routes.APPLICATION_LIBRARY) : c.startsWith(eC.Routes.APPLICATION_LIBRARY),
         hideGameUpdateProgressIndicator: s === eC.Routes.APPLICATION_LIBRARY
-      }, "library") : null, (0, a.jsx)(em, {
+      }, "library") : null, (0, a.jsx)(ep, {
         selected: null == c ? o : c.startsWith(eC.Routes.APPLICATION_STORE),
         route: null == i || location.pathname.startsWith(eC.Routes.ACTIVITIES) || location.pathname.startsWith(eC.Routes.APPLICATION_STORE) ? eC.Routes.APPLICATION_STORE : i,
         locationState: {

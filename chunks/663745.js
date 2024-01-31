@@ -4,32 +4,32 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var r = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("469563"),
+var r = n("469563"),
   l = n("738707"),
   a = n("75196"),
-  o = (0, i.replaceIcon)(function(e) {
+  o = (0, r.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: n = 24,
-      color: i = "currentColor",
+      color: r = "currentColor",
       foreground: l,
       ...o
     } = e;
-    return (0, r.jsx)("svg", {
+    return (0, i.jsx)("svg", {
       ...(0, a.default)(o),
       width: t,
       height: n,
       viewBox: "0 0 24 24",
-      children: (0, r.jsxs)("g", {
+      children: (0, i.jsxs)("g", {
         fill: "none",
         fillRule: "evenodd",
-        children: [(0, r.jsx)("path", {
+        children: [(0, i.jsx)("path", {
           d: "M24 0v24H0V0z"
-        }), (0, r.jsx)("path", {
+        }), (0, i.jsx)("path", {
           className: l,
-          fill: i,
+          fill: r,
           d: "M12 16c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm0-6c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm0-6c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2z"
         })]
       })

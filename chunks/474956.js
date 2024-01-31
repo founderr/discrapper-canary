@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   }
 }), n("222007");
-var r, i, l = n("37983"),
+var i, r, l = n("37983"),
   a = n("884691"),
   o = n("77078"),
   s = n("651057"),
@@ -21,37 +21,37 @@ function m(e) {
   let {
     onClose: t,
     transitionState: n,
-    appId: r,
-    guildId: i,
+    appId: i,
+    guildId: r,
     subscriptionGroupListing: m
-  } = e, [C, x] = a.useState(() => {
-    let e = u.default.getApplication(r);
+  } = e, [x, C] = a.useState(() => {
+    let e = u.default.getApplication(i);
     if (null != e) return {
       status: 2,
       app: e
     };
-    let t = u.default.isFetchingApplication(r);
+    let t = u.default.isFetchingApplication(i);
     return t ? {
       status: 1
     } : {
       status: 0
     }
-  }), E = 2 === C.status ? C.app : null;
+  }), E = 2 === x.status ? x.app : null;
   if (a.useEffect(() => {
-      0 === C.status && (x({
+      0 === x.status && (C({
         status: 1
-      }), s.default.fetchApplication(r).then(e => {
-        x({
+      }), s.default.fetchApplication(i).then(e => {
+        C({
           status: 2,
           app: h.default.createFromServer(e)
         })
       }).catch(e => {
-        x({
+        C({
           status: 3,
           error: e.message
         })
       }))
-    }, [r, C.status]), null == E) return null;
+    }, [i, x.status]), null == E) return null;
   let b = v.default.Messages.STOREFRONT_TITLE.format({
     appName: E.name
   });
@@ -76,8 +76,8 @@ function m(e) {
       children: (0, l.jsx)(p.default, {
         app: E,
         subscriptionGroupListing: m,
-        guildId: i
+        guildId: r
       })
     })]
   })
-}(i = r || (r = {}))[i.NONE = 0] = "NONE", i[i.FETCHING = 1] = "FETCHING", i[i.FETCHED = 2] = "FETCHED", i[i.ERROR = 3] = "ERROR"
+}(r = i || (i = {}))[r.NONE = 0] = "NONE", r[r.FETCHING = 1] = "FETCHING", r[r.FETCHED = 2] = "FETCHED", r[r.ERROR = 3] = "ERROR"

@@ -1,34 +1,34 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return _
+    return S
   }
 }), a("222007");
 var s = a("37983"),
-  l = a("884691"),
+  n = a("884691"),
   i = a("907002"),
-  n = a("77078"),
+  l = a("77078"),
   r = a("79112"),
   o = a("217513"),
-  d = a("701909"),
-  u = a("158998"),
+  u = a("701909"),
+  d = a("158998"),
   c = a("303270"),
   E = a("935583"),
   f = a("49111"),
   m = a("782340"),
-  S = a("341923");
+  g = a("341923");
 
-function _(e) {
+function S(e) {
   let {
     userRef: t,
     usernameSuggestionLoading: a = !1,
-    oneClickFlow: _ = !1,
-    ...I
+    oneClickFlow: S = !1,
+    ..._
   } = e, {
-    user: N,
-    editState: h,
-    onClose: M
-  } = I, T = (0, o.default)(N.id), g = function(e, t, a) {
+    user: I,
+    editState: T,
+    onClose: h
+  } = _, O = (0, o.default)(I.id), M = function(e, t, a) {
     switch (e) {
       case E.EditState.EDIT_USERNAME:
         return {
@@ -51,7 +51,7 @@ function _(e) {
       case E.EditState.SUGGESTION:
         return {
           header: m.default.Messages.POMELO_ACTION_LABEL_OCF, subtitle: m.default.Messages.POMELO_EXISTING_FLOW_PROMPT_OCF.format(), link: m.default.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({
-            helpdeskArticle: d.default.getArticleURL(f.HelpdeskArticles.POMELO_FAQ)
+            helpdeskArticle: u.default.getArticleURL(f.HelpdeskArticles.POMELO_FAQ)
           })
         };
       default:
@@ -59,11 +59,11 @@ function _(e) {
           header: m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE, subtitle: m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
         }
     }
-  }(h, u.default.getName(N), M), [O, L] = (0, i.useSpring)(() => ({
+  }(T, d.default.getName(I), h), [N, L] = (0, i.useSpring)(() => ({
     opacity: 0,
     y: 10
   }));
-  return l.useEffect(() => {
+  return n.useEffect(() => {
     L({
       y: 0,
       opacity: 1,
@@ -72,37 +72,37 @@ function _(e) {
         opacity: 0
       }
     })
-  }, [L, h]), (0, s.jsxs)("div", {
-    className: S.displayNameContainer,
+  }, [L, T]), (0, s.jsxs)("div", {
+    className: g.displayNameContainer,
     children: [(0, s.jsxs)(i.animated.div, {
       style: {
-        opacity: O.opacity,
-        y: O.y
+        opacity: N.opacity,
+        y: N.y
       },
-      children: [(0, s.jsx)(n.Heading, {
-        className: S.title,
+      children: [(0, s.jsx)(l.Heading, {
+        className: g.title,
         color: "header-primary",
         variant: "heading-xl/extrabold",
-        children: g.header
+        children: M.header
       }), (0, s.jsxs)("div", {
-        className: S.subtitle,
-        children: [(0, s.jsx)(n.Heading, {
+        className: g.subtitle,
+        children: [(0, s.jsx)(l.Heading, {
           color: "header-secondary",
           variant: "heading-sm/medium",
-          children: g.subtitle
-        }), null != g.link && (0, s.jsx)(n.Text, {
-          className: S.link,
+          children: M.subtitle
+        }), null != M.link && (0, s.jsx)(l.Text, {
+          className: g.link,
           color: "header-secondary",
           variant: "text-sm/medium",
-          children: g.link
+          children: M.link
         })]
       })]
     }), (0, s.jsx)(c.default, {
-      ...I,
-      displayProfile: T,
+      ..._,
+      displayProfile: O,
       ref: t,
       usernameSuggestionLoading: a,
-      oneClickFlow: _
+      oneClickFlow: S
     })]
   })
 }

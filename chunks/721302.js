@@ -26,12 +26,12 @@ var a = l("37983"),
   A = l("645266"),
   g = l("248793"),
   p = l("843455"),
-  H = l("782340"),
-  N = l("863879");
-let L = n.forwardRef(function(e, t) {
+  L = l("782340"),
+  H = l("863879");
+let N = n.forwardRef(function(e, t) {
   let {
     guild: s
-  } = e, o = (0, C.default)([S.default], () => S.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([E.default], () => (0, f.isThemeDark)(E.default.theme)), L = (0, x.useIsInMembersTablesAdditionalFilteringExperiment)(s.id), I = (0, C.default)([M.default], () => M.default.can(p.Permissions.KICK_MEMBERS, s)), R = n.useCallback(() => {
+  } = e, o = (0, C.default)([S.default], () => S.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([E.default], () => (0, f.isThemeDark)(E.default.theme)), N = (0, x.useIsInMembersTablesAdditionalFilteringExperiment)(s.id), I = (0, C.default)([M.default], () => M.default.can(p.Permissions.KICK_MEMBERS, s)), R = n.useCallback(() => {
     null != s && I && (0, m.openModalLazy)(async () => {
       let {
         default: e
@@ -48,7 +48,7 @@ let L = n.forwardRef(function(e, t) {
     })
   }, [s.id, b]), B = n.useCallback(d(V, 300), [V]), y = n.useCallback(e => {
     D(e), B(e)
-  }, [B]), U = n.useCallback(() => {
+  }, [B]), F = n.useCallback(() => {
     D(""), V("")
   }, [V]);
   return n.useImperativeHandle(t, () => ({
@@ -56,26 +56,26 @@ let L = n.forwardRef(function(e, t) {
       D("")
     }
   })), (0, a.jsxs)("div", {
-    className: i(N.searchHeaderContainer),
+    className: i(H.searchHeaderContainer),
     children: [(0, a.jsx)("div", {
-      className: i(N.searchHeader),
+      className: i(H.searchHeader),
       children: o ? (0, a.jsx)(m.Heading, {
         variant: "heading-md/medium",
-        children: H.default.Messages.MEMBER_SAFETY_TABLE_TITLE
+        children: L.default.Messages.MEMBER_SAFETY_TABLE_TITLE
       }) : (0, a.jsx)(m.Heading, {
         variant: "heading-md/medium",
-        children: H.default.Messages.MEMBER_SAFETY_TABLE_TITLE_SEARCH
+        children: L.default.Messages.MEMBER_SAFETY_TABLE_TITLE_SEARCH
       })
     }), (0, a.jsx)("div", {
-      className: i(N.searchInput),
+      className: i(H.searchInput),
       children: (0, a.jsx)("div", {
-        className: i(N.searchHeader),
+        className: i(H.searchHeader),
         children: (0, a.jsx)(h.default, {
-          className: N.searchBar,
+          className: H.searchBar,
           query: j,
-          placeholder: H.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
+          placeholder: L.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
           onChange: y,
-          onClear: U,
+          onClear: F,
           autoComplete: "off",
           inputProps: {
             autoCapitalize: "none",
@@ -84,7 +84,7 @@ let L = n.forwardRef(function(e, t) {
           }
         })
       })
-    }), L && (0, a.jsx)("div", {
+    }), N && (0, a.jsx)("div", {
       children: (0, a.jsx)(m.Popout, {
         animation: m.Popout.Animation.FADE,
         position: "bottom",
@@ -102,12 +102,12 @@ let L = n.forwardRef(function(e, t) {
           return (0, a.jsx)(m.Button, {
             ...l,
             onClick: t,
-            "aria-label": H.default.Messages.SORT,
+            "aria-label": L.default.Messages.SORT,
             color: r ? m.Button.Colors.PRIMARY : m.Button.Colors.TRANSPARENT,
             look: r ? m.Button.Looks.FILLED : m.Button.Looks.OUTLINED,
             size: m.Button.Sizes.SMALL,
             children: (0, a.jsxs)("div", {
-              className: N.sortButton,
+              className: H.sortButton,
               children: [(0, a.jsx)(c.ArrowsUpDownIcon, {
                 height: 16,
                 width: 16,
@@ -115,25 +115,25 @@ let L = n.forwardRef(function(e, t) {
               }), (0, a.jsx)(m.Text, {
                 variant: "text-sm/medium",
                 color: O ? "interactive-active" : "header-secondary",
-                className: N.sortText,
-                children: H.default.Messages.SORT
+                className: H.sortText,
+                children: L.default.Messages.SORT
               })]
             })
           })
         }
       })
     }), (0, a.jsx)("div", {
-      className: i(N.tableOptions),
+      className: i(H.tableOptions),
       children: I && (0, a.jsx)(m.Button, {
-        className: i(N.pruneButton),
+        className: i(H.pruneButton),
         onClick: R,
-        "aria-label": H.default.Messages.PRUNE_MEMBERS,
+        "aria-label": L.default.Messages.PRUNE_MEMBERS,
         color: m.Button.Colors.RED,
         look: m.Button.Looks.OUTLINED,
         size: m.Button.Sizes.SMALL,
-        children: H.default.Messages.PRUNE
+        children: L.default.Messages.PRUNE
       })
     })]
   })
 });
-var I = L
+var I = N

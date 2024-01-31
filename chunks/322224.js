@@ -12,8 +12,8 @@ var u = n("872717"),
   a = n("299039"),
   c = n("271560"),
   E = n("398604"),
-  o = n("189443"),
-  s = n("832588"),
+  s = n("189443"),
+  o = n("832588"),
   _ = n("745049"),
   y = n("49111"),
   R = {
@@ -47,7 +47,7 @@ var u = n("872717"),
           channel_id: r,
           entity_metadata: d,
           broadcast_to_directory_channels: l.broadcastToDirectoryChannels,
-          recurrence_rule: (0, o.recurrenceRuleToServer)(t.recurrenceRule)
+          recurrence_rule: (0, s.recurrenceRuleToServer)(t.recurrenceRule)
         };
       return u.default.patch({
         url: y.Endpoints.GUILD_EVENT(n, e),
@@ -66,7 +66,7 @@ var u = n("872717"),
         channel_id: e.channelId,
         entity_metadata: e.entityMetadata,
         broadcast_to_directory_channels: n.broadcastToDirectoryChannels,
-        recurrence_rule: (0, o.recurrenceRuleToServer)(e.recurrenceRule)
+        recurrence_rule: (0, s.recurrenceRuleToServer)(e.recurrenceRule)
       };
       return u.default.post({
         url: y.Endpoints.GUILD_EVENTS_FOR_GUILD(t),
@@ -196,7 +196,7 @@ var u = n("872717"),
       }
     },
     async updateRsvp(e, t, n, u, l) {
-      let r = (0, s.getExistingRsvp)(e, t);
+      let r = (0, o.getExistingRsvp)(e, t);
       if (null != r) try {
         await this.deleteRsvpForGuildEvent(e, t, n), null != r && null != t && (null == l || l())
       } catch (e) {

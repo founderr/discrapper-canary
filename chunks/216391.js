@@ -2,7 +2,7 @@
 let a;
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("70102");
 var s = n("917351"),
@@ -81,7 +81,7 @@ class S extends l.default.Store {
   }
 }
 S.displayName = "RTCConnectionStore";
-var p = new S(r.default, f.default.isSupported() ? {
+var m = new S(r.default, f.default.isSupported() ? {
   CONNECTION_OPEN: function(e) {
     a = e.sessionId, h()
   },

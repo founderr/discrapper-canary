@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("77078"),
-  i = n("1339"),
-  r = n("914169"),
+  r = n("1339"),
+  i = n("914169"),
   u = n("931874"),
   o = n("745049"),
   d = n("171632");
@@ -18,12 +18,12 @@ function c(e) {
     guildScheduledEvent: t,
     channel: n,
     onClose: c
-  } = e, f = t.entity_type === o.GuildScheduledEventEntityTypes.EXTERNAL, E = a.useCallback(e => (0, r.createEventLocationClickHandler)(t, c)(e), [t, c]), I = (0, u.getLocationDataForEvent)(t, n);
+  } = e, f = t.entity_type === o.GuildScheduledEventEntityTypes.EXTERNAL, E = a.useCallback(e => (0, i.createEventLocationClickHandler)(t, c)(e), [t, c]), I = (0, u.getLocationDataForEvent)(t, n);
   if (null == I) return null;
   let {
     IconComponent: _,
-    locationName: p
-  } = I, h = (0, s.jsxs)(s.Fragment, {
+    locationName: h
+  } = I, p = (0, s.jsxs)(s.Fragment, {
     children: [null != _ && (0, s.jsx)(_, {
       width: 20,
       height: 20,
@@ -32,7 +32,7 @@ function c(e) {
       color: "header-secondary",
       variant: "text-sm/normal",
       className: d.locationText,
-      children: (0, i.guildEventDetailsParser)(p, !0)
+      children: (0, r.guildEventDetailsParser)(h, !0)
     })]
   });
   return (0, s.jsx)("div", {
@@ -40,7 +40,7 @@ function c(e) {
     children: null != E ? (0, s.jsx)(l.Clickable, {
       className: f ? d.externalLocation : d.channelLocation,
       onClick: E,
-      children: h
-    }) : h
+      children: p
+    }) : p
   })
 }

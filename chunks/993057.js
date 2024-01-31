@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("160299"),
   T = n("257869"),
   S = n("638779"),
-  p = n("459736"),
-  m = n("967251"),
+  m = n("459736"),
+  p = n("967251"),
   A = n("663831"),
   g = n("170185"),
   N = n("277860"),
@@ -58,7 +58,7 @@ function v(e) {
       toolbar: (0, a.jsx)(s.Fragment, {}),
       className: L.headerBar,
       children: [(0, a.jsx)(h.default.Icon, {
-        icon: p.default,
+        icon: m.default,
         "aria-hidden": !0
       }), (0, a.jsx)(h.default.Title, {
         children: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
@@ -71,7 +71,7 @@ function v(e) {
         className: L.scroller,
         children: (0, a.jsx)("div", {
           className: L.scrollerContent,
-          children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(m.default, {
+          children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(p.default, {
             guild: n
           })
         })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MAX_GUILDS_PER_PAGE: function() {
-    return m
+    return p
   },
   default: function() {
     return R
@@ -24,8 +24,8 @@ var a = n("37983"),
   I = n("719369"),
   T = n("447621"),
   S = n("782340"),
-  p = n("492898");
-let m = 12,
+  m = n("492898");
+let p = 12,
   A = () => {
     let e = (0, c.getHistory)(),
       t = e.location.search,
@@ -43,12 +43,12 @@ let m = 12,
       onClick: s
     });
     return (0, a.jsxs)("div", {
-      className: p.emptyContainer,
+      className: m.emptyContainer,
       children: [(0, a.jsx)("div", {
-        className: p.emptyImage
+        className: m.emptyImage
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: p.emptyHeader,
+        className: m.emptyHeader,
         children: l
       }), (0, a.jsx)(u.Text, {
         variant: "text-md/normal",
@@ -58,13 +58,13 @@ let m = 12,
     })
   },
   N = () => (0, a.jsxs)("div", {
-    className: p.emptyContainer,
+    className: m.emptyContainer,
     children: [(0, a.jsx)("div", {
-      className: p.errorImage
+      className: m.errorImage
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: p.emptyHeader,
+      className: m.emptyHeader,
       children: S.default.Messages.GUILD_DISCOVERY_SEARCH_ERROR
     })]
   });
@@ -110,7 +110,7 @@ var R = e => {
     let {
       offset: e,
       tag: t
-    } = A(), n = null != e ? Math.floor(parseInt(e, 10) / m) + 1 : 1;
+    } = A(), n = null != e ? Math.floor(parseInt(e, 10) / p) + 1 : 1;
     V(!!t), 1 === n && F(!0)
   }, [i]);
   let z = M === T.DISCOVERY_ALL_CATEGORIES_ID ? S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
@@ -122,21 +122,21 @@ var R = e => {
     category: P
   });
   return (0, a.jsxs)("div", {
-    className: p.container,
+    className: m.container,
     children: [(0, a.jsxs)("div", {
-      className: p.searchHeader,
+      className: m.searchHeader,
       children: [(0, a.jsx)(u.Clickable, {
         onClick: () => {
           d.clearSearch(), _.trackSearchClosed(t)
         },
-        className: p.arrow,
+        className: m.arrow,
         "aria-label": S.default.Messages.BACK,
         children: (0, a.jsx)(E.default, {
           direction: E.default.Directions.LEFT
         })
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: p.header,
+        className: m.header,
         children: z
       })]
     }), (0, a.jsx)(C.default, {
@@ -154,17 +154,17 @@ var R = e => {
       categoryId: M,
       categoryName: P,
       onClick: () => {
-        d.selectCategory(T.DISCOVERY_ALL_CATEGORIES_ID), W(0, m, !0)
+        d.selectCategory(T.DISCOVERY_ALL_CATEGORIES_ID), W(0, p, !0)
       }
     }) : (0, a.jsx)("div", {
-      className: p.results,
+      className: m.results,
       children: (0, a.jsx)(h.default, {
-        pageSize: m,
+        pageSize: p,
         totalCount: w,
         resetCurrentPage: k,
         onPageChange: e => {
-          let t = (e - 1) * m;
-          W(t, m), K()
+          let t = (e - 1) * p;
+          W(t, p), K()
         },
         children: e => {
           let {
@@ -175,7 +175,7 @@ var R = e => {
             children: [(0, a.jsx)(I.default, {
               guilds: G,
               loading: j,
-              loadingPlaceholderCount: m,
+              loadingPlaceholderCount: p,
               onViewGuild: D,
               loadingGuildId: L,
               theme: v,

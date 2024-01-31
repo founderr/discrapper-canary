@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return l
   }
 }), n("70102");
 var s = n("748820"),
   a = n("872717"),
-  l = n("49111"),
-  r = {
+  r = n("49111"),
+  l = {
     generateNonce: function() {
       return (0, s.v4)()
     },
@@ -17,7 +17,7 @@ var s = n("748820"),
           handoff_token: t
         }
       } = await a.default.post({
-        url: l.Endpoints.HANDOFF,
+        url: r.Endpoints.HANDOFF,
         body: {
           key: e
         },

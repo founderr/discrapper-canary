@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("810567"),
   T = n("791878"),
   S = n("637824"),
-  p = n("146378"),
-  m = n("709410"),
+  m = n("146378"),
+  p = n("709410"),
   A = n("411676"),
   g = n("86959"),
   N = n("748753"),
@@ -55,7 +55,7 @@ var a = n("37983"),
     }, [b, t]), w = i.filter(t, b[t]);
     if (0 === w.length && "" === b[t]) return (0, a.jsxs)("div", {
       className: M.emptyStateContainer,
-      children: [t === L.FriendsSections.ONLINE && (0, a.jsx)(E.default, {}), (0, a.jsx)(m.default, {
+      children: [t === L.FriendsSections.ONLINE && (0, a.jsx)(E.default, {}), (0, a.jsx)(p.default, {
         type: t,
         onClick: () => {
           u.default.setSection(L.FriendsSections.ADD_FRIEND)
@@ -115,8 +115,8 @@ var a = n("37983"),
         })]
       }), k ? (0, a.jsx)("div", {
         className: M.emptyStateContainer,
-        children: (0, a.jsx)(m.default, {
-          type: m.FriendsSearchStatus.SECTION_NO_RESULTS
+        children: (0, a.jsx)(p.default, {
+          type: p.FriendsSearchStatus.SECTION_NO_RESULTS
         }, P)
       }) : (0, a.jsx)(g.default, {
         relationshipCount: y,
@@ -141,7 +141,7 @@ var a = n("37983"),
             case L.FriendsSections.ONLINE:
             case L.FriendsSections.ALL:
             default:
-              return (0, a.jsx)(p.default, {
+              return (0, a.jsx)(m.default, {
                 ...e,
                 isFocused: D
               })

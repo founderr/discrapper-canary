@@ -22,14 +22,14 @@ var s = n("913144"),
   T = n("49111"),
   S = n("353927");
 
-function p() {
+function m() {
   var e;
   let t = a;
   if (null == t || !E.default.isOpen(t)) return !1;
   s.default.wait(() => i.close(t)), null === (e = _.default.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), a = null
 }
 
-function m() {
+function p() {
   let e = _.default.getChannelId(),
     t = a === e;
   return function() {
@@ -53,7 +53,7 @@ function m() {
     if (l) return !0;
     let d = e === t;
     return !!d || !1
-  }() ? p() : (!t && p(), null != e && function(e) {
+  }() ? m() : (!t && m(), null != e && function(e) {
     var t;
     let n = d.default.getChannel(e);
     if (null == n || E.default.isOpen(e)) return !1;
@@ -64,10 +64,10 @@ function m() {
 }
 class A extends l.default {
   _initialize() {
-    h.default.addChangeListener(m), C.default.addChangeListener(m), _.default.addChangeListener(m), I.default.addChangeListener(m), c.default.addChangeListener(m), u.default.addChangeListener(m), o.default.addChangeListener(m), f.default.addChangeListener(m), r.default.addChangeListener(m)
+    h.default.addChangeListener(p), C.default.addChangeListener(p), _.default.addChangeListener(p), I.default.addChangeListener(p), c.default.addChangeListener(p), u.default.addChangeListener(p), o.default.addChangeListener(p), f.default.addChangeListener(p), r.default.addChangeListener(p)
   }
   _terminate() {
-    h.default.removeChangeListener(m), C.default.removeChangeListener(m), _.default.removeChangeListener(m), I.default.removeChangeListener(m), c.default.removeChangeListener(m), u.default.removeChangeListener(m), o.default.removeChangeListener(m), f.default.removeChangeListener(m), r.default.removeChangeListener(m)
+    h.default.removeChangeListener(p), C.default.removeChangeListener(p), _.default.removeChangeListener(p), I.default.removeChangeListener(p), c.default.removeChangeListener(p), u.default.removeChangeListener(p), o.default.removeChangeListener(p), f.default.removeChangeListener(p), r.default.removeChangeListener(p)
   }
 }
 var g = new A

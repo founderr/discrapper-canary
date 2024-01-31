@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("945330"),
   T = n("664336"),
   S = n("679653"),
-  p = n("176347"),
-  m = n("782340"),
+  m = n("176347"),
+  p = n("782340"),
   A = n("768922"),
   g = n("421202");
 
@@ -33,7 +33,7 @@ function N(e) {
   } = e, N = (0, S.default)(t), R = (0, c.useListHasSingleMessageRequest)(), O = (0, c.useListHasSingleSpamMessageRequest)(), L = (0, i.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), v = (0, i.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), M = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), P = s.useCallback(() => {
     h.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), L && R && (0, _.transitionToChannel)(t.id), v && O && (0, _.transitionToChannel)(t.id)
   }, [t.id, v, O, L, R]), D = s.useCallback(() => {
-    (0, l.showToast)((0, l.createToast)(m.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
+    (0, l.showToast)((0, l.createToast)(p.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
   }, []), {
     markAsNotSpam: y
   } = (0, f.useMessageRequestActions)({
@@ -43,13 +43,13 @@ function N(e) {
   if (null == t || !t.isDM()) return null;
   let x = [(0, a.jsx)(T.default.Icon, {
     icon: I.default,
-    tooltip: m.default.Messages.CLOSE,
+    tooltip: p.default.Messages.CLOSE,
     onClick: () => h.default.closeChannelSidebar(n)
   }, "close")];
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(T.default, {
       toolbar: x,
-      "aria-label": m.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
+      "aria-label": p.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
       children: (0, o.renderTitle)({
         channel: t,
         channelName: N,
@@ -60,16 +60,16 @@ function N(e) {
       children: [(0, a.jsx)(l.Text, {
         className: g.hamBannerText,
         variant: "text-sm/normal",
-        children: m.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
+        children: p.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
       }), (0, a.jsx)(l.Button, {
         className: g.hamBannerButton,
         size: l.ButtonSizes.SMALL,
         onClick: () => y(t, M),
-        children: m.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
+        children: p.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
       })]
     }), (0, a.jsx)("div", {
       className: A.chat,
-      children: (0, a.jsx)(p.default, {
+      children: (0, a.jsx)(m.default, {
         channel: t,
         guild: null,
         chatInputType: r.ChatInputTypes.SIDEBAR

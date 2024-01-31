@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983");
@@ -22,7 +22,7 @@ var s = n("77078"),
   I = n("953314"),
   T = n("518151");
 let S = "PremiumServerDriveAnnouncementModal";
-class p extends l.default {
+class m extends l.default {
   _initialize() {
     i.default.subscribe("POST_CONNECTION_OPEN", this.mayShowAnnouncementModal), i.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
@@ -89,4 +89,4 @@ class p extends l.default {
     }
   }
 }
-var m = new p
+var p = new m

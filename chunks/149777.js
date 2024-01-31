@@ -26,9 +26,9 @@ var a = l("37983"),
   A = l("178406"),
   g = l("645266"),
   p = l("835257"),
-  H = l("561909"),
-  N = l("49111"),
-  L = l("782340"),
+  L = l("561909"),
+  H = l("49111"),
+  N = l("782340"),
   I = l("579550"),
   R = l("946032");
 let v = [p.JoinSourceType.DISCOVERY, p.JoinSourceType.VANITY_URL, p.JoinSourceType.BOT, p.JoinSourceType.HUB];
@@ -96,7 +96,7 @@ function j(e) {
     onClose: l
   } = e, s = (0, C.default)([A.default], () => A.default.getSearchStateByGuildId(t), [t], u), {
     inviteCodes: o
-  } = (0, H.useGuildInvites)(t), r = (0, C.default)([f.default], () => f.default.getGuild(t)), m = null == r ? void 0 : r.vanityURLCode, [E, h] = n.useState(!1), {
+  } = (0, L.useGuildInvites)(t), r = (0, C.default)([f.default], () => f.default.getGuild(t)), m = null == r ? void 0 : r.vanityURLCode, [E, h] = n.useState(!1), {
     selectedSourceInviteCode: x,
     selectedJoinSourceType: S
   } = s, j = null != S && S !== p.JoinSourceType.UNSPECIFIED, D = n.useCallback(e => {
@@ -122,8 +122,8 @@ function j(e) {
     onClose: () => {
       l()
     },
-    "aria-label": L.default.Messages.MEMBER_SAFETY_JOIN_METHOD_LABEL,
-    onSelect: N.NOOP,
+    "aria-label": N.default.Messages.MEMBER_SAFETY_JOIN_METHOD_LABEL,
+    onSelect: H.NOOP,
     children: E ? (0, a.jsxs)(c.MenuGroup, {
       children: [(0, a.jsx)(c.MenuItem, {
         id: "back",
@@ -138,7 +138,7 @@ function j(e) {
           }), (0, a.jsx)(c.Text, {
             variant: "eyebrow",
             color: "header-primary",
-            children: L.default.Messages.MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME
+            children: N.default.Messages.MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME
           })]
         })
       }), v.map(e => (0, a.jsx)(c.MenuRadioItem, {
@@ -162,11 +162,11 @@ function j(e) {
           query: null != x ? x : "",
           onChange: B,
           ref: t,
-          placeholder: L.default.Messages.MEMBER_SAFETY_INVITE_CODE_SEARCH_PLACEHOLDER
+          placeholder: N.default.Messages.MEMBER_SAFETY_INVITE_CODE_SEARCH_PLACEHOLDER
         })
       }, "invite-code-filter-search"), (0, a.jsx)(c.MenuSeparator, {}), (0, a.jsx)(c.MenuRadioItem, {
         id: "join-source-type-option-all",
-        label: L.default.Messages.GUILD_SETTINGS_FILTER_ALL,
+        label: N.default.Messages.GUILD_SETTINGS_FILTER_ALL,
         checked: null == x && null == S,
         disabled: !1,
         action: () => O(null),
@@ -195,7 +195,7 @@ function j(e) {
               className: i(I.selectedRadio, I.labelText, {
                 [I.focused]: e.isFocused
               }),
-              children: L.default.Messages.MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME
+              children: N.default.Messages.MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME
             }), j ? (0, a.jsx)("div", {
               className: I.selectedOption,
               children: (0, a.jsx)(b, {

@@ -1,15 +1,15 @@
-var r = n("390493");
+var i = n("390493");
 n("860677"), n("854508"), ! function(e, t) {
   "use strict";
   if (!e.setImmediate) {
-    var n, i = 1,
+    var n, r = 1,
       l = {},
       a = !1,
       o = e.document,
       s = Object.getPrototypeOf && Object.getPrototypeOf(e);
     s = s && s.setTimeout ? s : e, "[object process]" === ({}).toString.call(e.process) ? function() {
       n = function(e) {
-        r.nextTick(function() {
+        i.nextTick(function() {
           c(e)
         })
       }
@@ -23,10 +23,10 @@ n("860677"), n("854508"), ! function(e, t) {
       }
     }() ? function() {
       var t = "setImmediate$" + Math.random() + "$",
-        r = function(n) {
+        i = function(n) {
           n.source === e && "string" == typeof n.data && 0 === n.data.indexOf(t) && c(+n.data.slice(t.length))
         };
-      e.addEventListener ? e.addEventListener("message", r, !1) : e.attachEvent("onmessage", r), n = function(n) {
+      e.addEventListener ? e.addEventListener("message", i, !1) : e.attachEvent("onmessage", i), n = function(n) {
         e.postMessage(t + n, "*")
       }
     }() : e.MessageChannel ? function() {
@@ -50,12 +50,12 @@ n("860677"), n("854508"), ! function(e, t) {
       }
     }(), s.setImmediate = function(e) {
       "function" != typeof e && (e = Function("" + e));
-      for (var t = Array(arguments.length - 1), r = 0; r < t.length; r++) t[r] = arguments[r + 1];
+      for (var t = Array(arguments.length - 1), i = 0; i < t.length; i++) t[i] = arguments[i + 1];
       var a = {
         callback: e,
         args: t
       };
-      return l[i] = a, n(i), i++
+      return l[r] = a, n(r), r++
     }, s.clearImmediate = u
   }
 

@@ -41,7 +41,7 @@ function x(e) {
       ...s,
       requireUnusualAccountActivity: !s.requireUnusualAccountActivity
     })
-  }, [t, s, x]), H = n.useCallback(() => {
+  }, [t, s, x]), L = n.useCallback(() => {
     !s.requireUsernameQuarantined && x(f.MemberSafetyFlagType.USERNAME_QUARANTINED), (0, M.updateSearchState)(t, {
       ...s,
       requireUsernameQuarantined: !s.requireUsernameQuarantined
@@ -100,7 +100,7 @@ function x(e) {
               className: T.quarantinedLabelIcon
             }), _.default.Messages.MEMBER_SAFETY_USERNAME_QUARANTINED]
           }),
-          action: H,
+          action: L,
           checked: s.requireUsernameQuarantined
         })]
       })]

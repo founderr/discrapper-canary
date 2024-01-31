@@ -26,13 +26,13 @@ var a, n, s, i, o, d, r = l("37983"),
   A = l("42203"),
   g = l("305961"),
   p = l("27618"),
-  H = l("697218"),
-  N = l("476765"),
-  L = l("483093"),
+  L = l("697218"),
+  H = l("476765"),
+  N = l("483093"),
   I = l("782340"),
   R = l("159260");
-let v = (0, N.uid)(),
-  b = (0, N.uid)(),
+let v = (0, H.uid)(),
+  b = (0, H.uid)(),
   j = "text-sm/medium";
 
 function D(e) {
@@ -60,7 +60,7 @@ function V(e) {
 }
 
 function B(e) {
-  let t = (0, _.computeChannelName)(e, H.default, p.default);
+  let t = (0, _.computeChannelName)(e, L.default, p.default);
   return {
     tag: {
       type: h.RichTagTypes.CHANNEL,
@@ -98,7 +98,7 @@ let y = u.memo(function(e) {
       color: f,
       background: !1,
       tooltip: !1
-    }), null != o ? (0, r.jsx)(L.default, {
+    }), null != o ? (0, r.jsx)(N.default, {
       className: R.roleTagIcon,
       ...o,
       enableTooltip: !1
@@ -110,7 +110,7 @@ let y = u.memo(function(e) {
   })
 });
 
-function U(e) {
+function F(e) {
   let {
     channel: t,
     row: l,
@@ -131,12 +131,12 @@ function U(e) {
   })
 }
 
-function F(e, t, l) {
+function U(e, t, l) {
   return D(e) ? (0, r.jsx)(y, {
     row: e,
     guildId: t,
     className: l
-  }, e.record.id) : O(e) ? (0, r.jsx)(U, {
+  }, e.record.id) : O(e) ? (0, r.jsx)(F, {
     row: e,
     channel: e.record,
     className: l
@@ -166,7 +166,7 @@ function w(e) {
     }), t.forEach(e => {
       e in l && (a[e] = V(l[e]))
     }), a
-  })(n, s, f), [n, s, f]), T = u.useMemo(() => Object.keys(_), [_]), [x, S] = u.useState(""), [p, H] = u.useState(!1), [N, L] = u.useState(!1), [j, y] = u.useState(!1), U = u.useRef(null), {
+  })(n, s, f), [n, s, f]), T = u.useMemo(() => Object.keys(_), [_]), [x, S] = u.useState(""), [p, L] = u.useState(!1), [H, N] = u.useState(!1), [j, y] = u.useState(!1), F = u.useRef(null), {
     sections: w,
     sectionCounts: k
   } = u.useMemo(() => {
@@ -194,18 +194,18 @@ function w(e) {
       }).map(e => e.row.record.id);
     i(new Set(l), new Set(a))
   }, [i]), P = () => {
-    H(!1), L(!1)
+    L(!1), N(!1)
   };
   u.useEffect(() => {
     let e = setTimeout(() => {
-      y(p || N)
+      y(p || H)
     }, 32);
     return () => {
       clearTimeout(e)
     }
-  }, [p, N]);
+  }, [p, H]);
   let Y = (e, t, l) => {
-      l.stopPropagation(), l.preventDefault(), 2 === t ? H(e) : (1 === t || H(e), L(e))
+      l.stopPropagation(), l.preventDefault(), 2 === t ? L(e) : (1 === t || L(e), N(e))
     },
     G = u.useCallback(e => {
       let t = {
@@ -213,7 +213,7 @@ function w(e) {
       };
       O(e) ? t[e.id] = B(e.record) : D(e) && (t[e.id] = V(e.record)), Z(t), S(""), P(), setTimeout(() => {
         var e;
-        let t = null === (e = U.current) || void 0 === e ? void 0 : e.containerRef.current,
+        let t = null === (e = F.current) || void 0 === e ? void 0 : e.containerRef.current,
           l = null == t ? void 0 : t.firstChild;
         null != l && l.scrollTo({
           top: l.scrollHeight,
@@ -233,7 +233,7 @@ function w(e) {
         },
         children: (0, r.jsx)("div", {
           className: R.rowContainer,
-          children: F(n, t, R.searchRowLabel)
+          children: U(n, t, R.searchRowLabel)
         })
       }, n.id)
     }, [t, G, w]),
@@ -241,7 +241,7 @@ function w(e) {
       var l, a;
       return l = _[e], a = t, {
         ...l.tag,
-        label: F(l.row, a, R.noIndent)
+        label: U(l.row, a, R.noIndent)
       }
     }), [_, T, t]);
   return (0, r.jsxs)("div", {
@@ -253,7 +253,7 @@ function w(e) {
         maxHeight: 98,
         size: h.default.Sizes.MEDIUM,
         query: x,
-        ref: U,
+        ref: F,
         onRemoveTag: e => {
           let t = T[e],
             {

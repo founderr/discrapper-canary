@@ -26,8 +26,8 @@ function S(e) {
     user: t,
     type: n,
     status: S,
-    isFocused: p
-  } = e, m = s.useContext(f.AnalyticsContext), A = e => {
+    isFocused: m
+  } = e, p = s.useContext(f.AnalyticsContext), A = e => {
     e.stopPropagation(), l.default.cancelFriendRequest(t.id, {
       location: "Friends"
     })
@@ -40,11 +40,11 @@ function S(e) {
     })
   }, N = S === C.StatusTypes.OFFLINE ? C.StatusTypes.UNKNOWN : S, R = n === C.RelationshipTypes.PENDING_INCOMING ? I.default.Messages.INCOMING_FRIEND_REQUEST : I.default.Messages.OUTGOING_FRIEND_REQUEST;
   return (0, a.jsx)(_.default, {
-    isFocused: p,
+    isFocused: m,
     user: t,
     onClick: () => (0, r.openUserProfileModal)({
       userId: t.id,
-      analyticsLocation: m.location
+      analyticsLocation: p.location
     }),
     children: e => {
       var s;

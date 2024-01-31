@@ -26,8 +26,8 @@ let T = {
     error: null
   },
   S = (0, c.uid)(),
-  p = "".concat(S, "-decription"),
-  m = "".concat(S, "-error");
+  m = "".concat(S, "-decription"),
+  p = "".concat(S, "-error");
 
 function A(e, t) {
   switch (t.type) {
@@ -93,7 +93,7 @@ function g() {
     },
     autoComplete: "off",
     children: [(0, a.jsx)(u.FormText, {
-      id: p,
+      id: m,
       type: u.FormText.Types.DESCRIPTION,
       children: h.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION
     }), (0, a.jsx)(u.FocusRing, {
@@ -144,7 +144,7 @@ function g() {
           placeholder: h.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-label": h.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-invalid": null != N || void 0,
-          "aria-describedby": null != N ? m : p
+          "aria-describedby": null != N ? p : m
         }), null != c && (0, a.jsx)("div", {
           className: C.addFriendHint,
           "aria-hidden": !0,
@@ -158,7 +158,7 @@ function g() {
       })
     }), null != N && (0, a.jsx)(u.FormText, {
       role: "alert",
-      id: m,
+      id: p,
       type: u.FormText.Types.ERROR,
       className: I.marginTop8,
       children: N

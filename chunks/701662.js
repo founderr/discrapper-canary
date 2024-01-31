@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s, a, l = n("37983"),
-  i = n("884691"),
-  r = n("907002"),
+  r = n("884691"),
+  i = n("907002"),
   u = n("446674"),
   o = n("77078"),
   d = n("970728"),
@@ -15,21 +15,21 @@ var s, a, l = n("37983"),
   E = n("970366"),
   I = n("271938"),
   _ = n("337543"),
-  p = n("124969"),
-  h = n("599110"),
-  T = n("315102"),
-  N = n("449008"),
-  m = n("9294"),
+  h = n("124969"),
+  p = n("599110"),
+  m = n("315102"),
+  T = n("449008"),
+  N = n("9294"),
   g = n("800118"),
   A = n("243961"),
   S = n("570683"),
   C = n("49111"),
   v = n("782340"),
-  L = n("43730");
+  R = n("43730");
 
-function R() {
+function L() {
   return (0, l.jsx)("div", {
-    className: L.centerFlex,
+    className: R.centerFlex,
     children: (0, l.jsx)(o.Spinner, {})
   })
 }(a = s || (s = {}))[a.LOADING = 0] = "LOADING", a[a.DETAILS = 1] = "DETAILS", a[a.ERROR = 2] = "ERROR";
@@ -52,7 +52,7 @@ let O = e => {
     case C.InviteStates.RESOLVING:
       return 0;
     default:
-      (0, N.assertNever)(n)
+      (0, T.assertNever)(n)
   }
 };
 
@@ -82,21 +82,21 @@ function M(e) {
     ...u
   } = e, {
     invite: o
-  } = u, [d, c] = i.useState(O(o)), {
+  } = u, [d, c] = r.useState(O(o)), {
     ref: E,
     height: I
-  } = (0, f.default)(), _ = (0, r.useSpring)({
+  } = (0, f.default)(), _ = (0, i.useSpring)({
     height: null != I && 0 !== I ? "".concat(I, "px") : "".concat(s, "px"),
-    config: r.config.stiff
+    config: i.config.stiff
   });
-  return i.useEffect(() => {
+  return r.useEffect(() => {
     let e = O(o);
     e !== d && c(e)
-  }, [o, d]), (0, l.jsxs)(r.animated.div, {
-    className: L.inviteCard,
+  }, [o, d]), (0, l.jsxs)(i.animated.div, {
+    className: R.inviteCard,
     style: _,
-    children: [(0, l.jsx)(r.animated.div, {
-      className: L.inviteChildContainer,
+    children: [(0, l.jsx)(i.animated.div, {
+      className: R.inviteChildContainer,
       style: _,
       children: (0, l.jsx)("section", {
         ref: E,
@@ -121,7 +121,7 @@ function D(e) {
   };
   return (0, l.jsx)(M, {
     startAnimHeightPx: 0,
-    innerStyle: () => L.guildInfoInner,
+    innerStyle: () => R.guildInfoInner,
     ...e,
     children: e => n(e)
   })
@@ -131,7 +131,7 @@ function P(e) {
   let {
     invite: t
   } = e, n = n => {
-    if (null == t) return (0, l.jsx)(R, {});
+    if (null == t) return (0, l.jsx)(L, {});
     switch (n) {
       case 1:
         return (0, l.jsx)(A.default, {
@@ -144,12 +144,12 @@ function P(e) {
           invite: t
         });
       default:
-        return (0, l.jsx)(R, {})
+        return (0, l.jsx)(L, {})
     }
   }, s = {
-    1: L.inviteCardInner,
-    2: L.inviteCardInnerError,
-    0: L.inviteCardInnerLoading
+    1: R.inviteCardInner,
+    2: R.inviteCardInnerError,
+    0: R.inviteCardInnerLoading
   };
   return (0, l.jsx)(M, {
     startAnimHeightPx: 200,
@@ -167,17 +167,17 @@ function j(e) {
     guild: s
   } = null != t ? t : {}, a = {};
   if ((null == s ? void 0 : s.splash) != null) {
-    let e = T.default.getGuildSplashURL({
+    let e = m.default.getGuildSplashURL({
       id: s.id,
       splash: s.splash
     });
     null != e && (a.backgroundImage = "url(".concat(e, ")"), a.backgroundSize = "cover")
   }
-  return (0, l.jsxs)(p.default, {
+  return (0, l.jsxs)(h.default, {
     theme: C.ThemeTypes.DARK,
-    className: L.splashBackground,
+    className: R.splashBackground,
     style: a,
-    contentClassName: L.centerAuthBoxContent,
+    contentClassName: R.centerAuthBoxContent,
     children: [(0, l.jsx)(P, {
       ...e,
       onAcceptInvite: n
@@ -192,10 +192,10 @@ function U(e) {
     inviteKey: t,
     transitionTo: n
   } = e, s = (0, u.useStateFromStores)([_.default], () => _.default.getInvite(t));
-  return i.useEffect(() => {
+  return r.useEffect(() => {
     (0, E.trackAppUIViewed)("invite_mobile")
-  }, []), i.useEffect(() => {
-    null != s && s.state === C.InviteStates.RESOLVED && h.default.track(C.AnalyticEvents.INVITE_VIEWED, {
+  }, []), r.useEffect(() => {
+    null != s && s.state === C.InviteStates.RESOLVED && p.default.track(C.AnalyticEvents.INVITE_VIEWED, {
       invite_code: t,
       friends_count: null == s ? void 0 : s.friends_count
     }, {
@@ -206,17 +206,17 @@ function U(e) {
     onAcceptInvite: e => {
       ! function(e, t, n) {
         var s, a, l;
-        null == e || e.preventDefault(), h.default.track(C.AnalyticEvents.INVITE_APP_OPENED, {
-          invite_code: (0, m.parseInviteCodeFromInviteKey)(t),
+        null == e || e.preventDefault(), p.default.track(C.AnalyticEvents.INVITE_APP_OPENED, {
+          invite_code: (0, N.parseInviteCodeFromInviteKey)(t),
           guild_id: null == n ? void 0 : null === (s = n.guild) || void 0 === s ? void 0 : s.id,
           channel_id: null == n ? void 0 : null === (a = n.channel) || void 0 === a ? void 0 : a.id,
           inviter_id: null == n ? void 0 : null === (l = n.inviter) || void 0 === l ? void 0 : l.id
         });
-        let i = null != n && n.state !== C.InviteStates.EXPIRED && n.state !== C.InviteStates.BANNED ? t : void 0,
-          r = I.default.getFingerprint(),
-          u = null != r ? r : I.default.getId(),
+        let r = null != n && n.state !== C.InviteStates.EXPIRED && n.state !== C.InviteStates.BANNED ? t : void 0,
+          i = I.default.getFingerprint(),
+          u = null != i ? i : I.default.getId(),
           o = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
-        d.default.openApp(i, void 0, u, void 0, o)
+        d.default.openApp(r, void 0, u, void 0, o)
       }(e, t, s)
     },
     transitionTo: n
