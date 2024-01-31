@@ -22,27 +22,27 @@ function d(e) {
     onEmojiSelect: E,
     onGifSelect: _,
     onCustomUpload: A,
-    positionTargetRef: m
+    positionTargetRef: f
   } = e, {
-    showPollExpressionPicker: f,
+    showPollExpressionPicker: m,
     closePollExpressionPicker: L,
-    chatInputType: T
-  } = (0, u.default)(a), C = n.useCallback(e => {
+    chatInputType: p
+  } = (0, u.default)(a), T = n.useCallback(e => {
     r(null != d, "Expected to have an active input"), (null == e ? void 0 : e.gifSrc) != null && _(t.id, d, (0, o.makeTenorProxyURL)(e.gifSrc)), L()
-  }, [L, d, _, t.id]), p = n.useCallback(e => {
+  }, [L, d, _, t.id]), C = n.useCallback(e => {
     r(null != d, "Expected to have an active input"), r(null != e, "Expected to have an emoji"), E(e, d), L()
-  }, [d, E, L]), R = n.useCallback(e => {
+  }, [d, E, L]), P = n.useCallback(e => {
     r(null != d, "Expected to have an active input"), A(t.id, d, e), L()
-  }, [t.id, L, d, A]), P = n.useCallback(() => {}, []);
-  return f ? (0, l.jsx)(i.default, {
-    positionTargetRef: m,
-    type: T,
+  }, [t.id, L, d, A]), R = n.useCallback(() => {}, []);
+  return m ? (0, l.jsx)(i.default, {
+    positionTargetRef: f,
+    type: p,
     hideGifFavorites: !0,
     includeCreateEmojiButton: !1,
-    onSelectGIF: C,
-    onSelectEmoji: p,
-    onSelectSticker: P,
-    onCustomUpload: R,
+    onSelectGIF: T,
+    onSelectEmoji: C,
+    onSelectSticker: R,
+    onCustomUpload: P,
     channel: t,
     parentModalKey: s,
     closeOnModalOuterClick: !0,

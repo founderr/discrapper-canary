@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return D
   },
   validateOptionRoles: function() {
-    return A
+    return g
   }
 }), n("70102"), n("222007");
 var a = n("872717"),
@@ -61,7 +61,7 @@ function S(e, t) {
       type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT",
       prompts: t
     }), n) {
-    let n = t.map(n => g(e, t, n));
+    let n = t.map(n => A(e, t, n));
     l.default.dispatch({
       type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS",
       errors: n
@@ -96,7 +96,7 @@ async function m(e, t) {
     }),
     E = N.filter(e => e.inOnboarding),
     f = N.filter(e => !0 !== e.inOnboarding),
-    O = N.map(t => g(e, N, t));
+    O = N.map(t => A(e, N, t));
   if (O.filter(u.isNotNullish).length > 0) throw l.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
     errors: O
@@ -169,17 +169,17 @@ async function D(e, t) {
   })
 }
 
-function g(e, t, n) {
+function A(e, t, n) {
   let a = {
       optionErrors: []
     },
     l = !1;
   return n.title.length <= 0 && (a.title = I.default.Messages.ONBOARDING_PROMPT_TITLE_REQUIRED, l = !0), n.options.length <= 0 && (a.options = I.default.Messages.ONBOARDING_PROMPT_ANSWER_REQUIRED, l = !0), n.inOnboarding && t.filter(e => e.inOnboarding).length > _.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING && (a.config = I.default.Messages.ONBOARDING_PROMPT_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({
     numQuestions: _.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING
-  }), l = !0), a.optionErrors = n.options.map(a => A(e, t, n, a)), (l = l || a.optionErrors.some(e => null != e)) ? a : null
+  }), l = !0), a.optionErrors = n.options.map(a => g(e, t, n, a)), (l = l || a.optionErrors.some(e => null != e)) ? a : null
 }
 
-function A(e, t, n, a) {
+function g(e, t, n, a) {
   var l, s, i;
   if (n.singleSelect) {
     let e = new Set(null !== (l = a.roleIds) && void 0 !== l ? l : []);

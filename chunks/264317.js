@@ -14,22 +14,22 @@ var l = a("884691"),
 
 function c(e) {
   var t, a;
-  let [c, d] = l.useState(null), [E, _, A, m] = (0, i.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.lastActiveView, e.pickerId], n.default), f = r.ChatInputTypes.CREATE_POLL, L = null != E && null != _ && _ === f;
-  let T = (t = A, a = e, null != t && o.POLLS_SUPPORTED_EXPRESSION_PICKER_VIEW_TYPES.has(t) ? t : a === s.PollLayoutTypes.DEFAULT ? u.ExpressionPickerViewType.EMOJI : u.ExpressionPickerViewType.GIF),
-    C = l.useCallback(e => {
-      d(t => (t === e ? (0, i.toggleExpressionPicker)(T, f) : (0, i.openExpressionPicker)(T, f), e))
-    }, [T, f]),
-    p = l.useCallback(() => {
-      (0, i.closeExpressionPicker)(f)
-    }, [f]);
+  let [c, d] = l.useState(null), [E, _, A, f] = (0, i.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.lastActiveView, e.pickerId], n.default), m = r.ChatInputTypes.CREATE_POLL, L = null != E && null != _ && _ === m;
+  let p = (t = A, a = e, null != t && o.POLLS_SUPPORTED_EXPRESSION_PICKER_VIEW_TYPES.has(t) ? t : a === s.PollLayoutTypes.DEFAULT ? u.ExpressionPickerViewType.EMOJI : u.ExpressionPickerViewType.GIF),
+    T = l.useCallback(e => {
+      d(t => (t === e ? (0, i.toggleExpressionPicker)(p, m) : (0, i.openExpressionPicker)(p, m), e))
+    }, [p, m]),
+    C = l.useCallback(() => {
+      (0, i.closeExpressionPicker)(m)
+    }, [m]);
   return l.useEffect(() => () => {
-    (0, i.closeExpressionPicker)(f)
-  }, [f]), {
+    (0, i.closeExpressionPicker)(m)
+  }, [m]), {
     showPollExpressionPicker: L,
-    togglePollExpressionPicker: C,
-    closePollExpressionPicker: p,
-    pollExpressionPickerId: m,
-    chatInputType: f,
+    togglePollExpressionPicker: T,
+    closePollExpressionPicker: C,
+    pollExpressionPickerId: f,
+    chatInputType: m,
     lastActiveParentIndex: c
   }
 }

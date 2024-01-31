@@ -27,8 +27,8 @@ var l = n("414456"),
   m = n("733160"),
   T = n("599110"),
   D = n("900938"),
-  g = n("131835"),
-  A = n("259483"),
+  A = n("131835"),
+  g = n("259483"),
   G = n("49111"),
   h = n("782340"),
   L = n("247757");
@@ -187,10 +187,10 @@ function M() {
           onClick: function() {
             null != e && (T.default.track(G.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
               ...(0, d.collectGuildAnalyticsMetadata)(e),
-              step: A.GuildSettingsOnboardingPage[A.GuildSettingsOnboardingPage.LANDING],
+              step: g.GuildSettingsOnboardingPage[g.GuildSettingsOnboardingPage.LANDING],
               back: !1,
               skip: !1
-            }), (0, g.goToNextOnboardingStep)(e, A.GuildSettingsOnboardingPage.LANDING))
+            }), (0, A.goToNextOnboardingStep)(e, g.GuildSettingsOnboardingPage.LANDING))
           },
           color: r.Button.Colors.BRAND,
           disabled: !1,
