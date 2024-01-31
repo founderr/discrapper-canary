@@ -156,7 +156,13 @@ class G extends l.Component {
       ...e,
       userId: this.props.user.id,
       guildId: this.props.guildId,
-      channelId: this.props.channel.id
+      channelId: this.props.channel.id,
+      analyticsParams: {
+        location: {
+          page: w.AnalyticsPages.GUILD_CHANNEL,
+          section: w.AnalyticsSections.MEMBER_LIST
+        }
+      }
     })
   }
 }
