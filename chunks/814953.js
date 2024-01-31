@@ -901,7 +901,7 @@ let et = u.default.connectStores([D.default, x.default], () => ({
       children: "Enable Forced Canary"
     }), (0, a.jsx)(S.FormSwitch, {
       value: n,
-      note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see!",
+      note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
       onChange: e => (0, T.setDeveloperOptionSettings)({
         logGatewayEvents: e
       }),

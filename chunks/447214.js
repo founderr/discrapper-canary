@@ -425,7 +425,7 @@ i = class extends D.default {
   }
   constructor() {
     super(), this.dispatchExceptionBackoff = new o.default(1e3, F), this.dispatchSuccessTimer = 0, this.didForceClearGuildHashes = !1, this.identifyUncompressedByteSize = 0, this.identifyCompressedByteSize = 0, this.analytics = {}, this.identifyCount = 0, this.resumeUrl = null, this.lastIdentifyClientState = null, this.iosGoingAwayEventCount = 0, this.send = (e, t, n) => {
-      E.default.isLoggingGatewayEvents && U.verbose("~>", e, t);
+      E.default.isLoggingGatewayEvents && U.verboseDangerously("~>", e, t);
       let i = w.pack({
         op: e,
         d: t

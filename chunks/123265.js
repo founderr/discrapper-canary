@@ -57,7 +57,7 @@ i = class {
       let e = s - this.resumeAnalytics.lastUpdateTime;
       0 === this.resumeAnalytics.numEvents ? this.resumeAnalytics.initialWaitTime = e : e > this.resumeAnalytics.largestWaitTime && (this.resumeAnalytics.largestWaitTime = e), this.resumeAnalytics.totalWaitTime += e, this.resumeAnalytics.lastUpdateTime = s, this.resumeAnalytics.numEvents += 1
     }
-    if (a.default.isLoggingGatewayEvents && d.verbose("<~", n, t), "READY" === n) {
+    if (a.default.isLoggingGatewayEvents && d.verboseDangerously("<~", n, t), "READY" === n) {
       let e = (0, u.getReadyPayloadByteSizeAnalytics)(t);
       this.dispatchSocketMessage(n, t), (0, u.logReadyPayloadReceived)(this.socket, t, s, i, e)
     } else "RESUMED" === n ? (this.dispatchSocketMessage(n, t), (0, u.logResumeAnalytics)(this.resumeAnalytics), this.resumeAnalytics = (0, u.createResumeAnalytics)(), this.socket.handleResumeDispatched()) : this.dispatchSocketMessage(n, t);
