@@ -1774,6 +1774,6 @@ var tS = i = new tv(T.default, {
     let {
       settings: t
     } = e;
-    void 0 !== t.viewerClipsEnabled && eC.eachConnection(e => e.setClipsKeyFrameInterval(A.default.getSettings().viewerClipsEnabled ? eE.VIEWERSIDE_CLIP_KFI_MS : 0), eE.MediaEngineContextTypes.STREAM)
+    void 0 !== t.viewerClipsEnabled && eC.eachConnection(e => e.setClipsKeyFrameInterval(A.default.getSettings().viewerClipsEnabled ? eE.VIEWERSIDE_CLIP_KFI_MS : 0), eE.MediaEngineContextTypes.STREAM), !1 === t.decoupledClipsEnabled && (a = null, eC.setClipsSource(null))
   }
 })

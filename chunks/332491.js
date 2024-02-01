@@ -33,13 +33,12 @@ class A extends I.default {
       E = s.default.getSettings(),
       t = (E.clipsEnabled || E.decoupledClipsEnabled) && _,
       o = r.default.getMediaEngine();
-    if (o.setClipBufferLength(t ? E.clipsLength / 1e3 : 0), null == e ? void 0 : e.settings.decoupledClipsEnabled) this.fireClipsInitEvent();
-    else if ((null == e ? void 0 : e.settings.clipsQuality) != null) {
+    if (o.setClipBufferLength(t ? E.clipsLength / 1e3 : 0), (null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 && this.fireClipsInitEvent(), null == e || (null == e ? void 0 : e.settings.clipsQuality) != null) {
       let {
-        frameRate: e,
-        resolution: _
+        frameRate: _,
+        resolution: t
       } = E.clipsQuality;
-      !o.setClipsQualitySettings(_ <= 480 ? _ / 3 * 4 : _ / 9 * 16, _, e) && this.fireClipsInitEvent()
+      !o.setClipsQualitySettings(t <= 480 ? t / 3 * 4 : t / 9 * 16, t, _) && null != e && this.fireClipsInitEvent()
     }
   }
   handleClipsInitOnToggleDetection(e) {
