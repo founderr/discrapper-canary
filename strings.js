@@ -16465,6 +16465,7 @@ e.exports = Object.freeze({
   CUSTOM_HANG_STATUS_PLACEHOLDER: "What are you doing?",
   CUSTOM_HANGS_STATUS_COPY_CTA: "Swipe status",
   HANG_STATUS_VC_ROW_ADD: "Add a status",
+  HANG_STATUS_HELP: "Show your friends what you're up to by setting an activity status.",
   LAUNCH_PAD: "LaunchPad",
   LAUNCH_PAD_HISTORY: "Recent Channels",
   LAUNCH_PAD_STUFF_TO_CATCH_UP_ON: "Stuff To Catch Up On",
