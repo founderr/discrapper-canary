@@ -61,7 +61,7 @@ let g = (0, u.makeChannelSortable)(function(e) {
         selected: x,
         onContextMenu: M,
         forceInteractable: !0,
-        unreadMode: m.UnreadMode.NONE,
+        resolvedUnreadSetting: m.UnreadSetting.ONLY_MENTIONS,
         children: [(0, l.jsx)(h.ChannelItemInviteButton, {
           channel: L,
           tabIndex: A

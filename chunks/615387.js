@@ -9,5 +9,5 @@ var s = l("660478"),
   i = l("133335");
 
 function n(e) {
-  return s.default.hasUnread(e.id) && u.default.getChannelUnreadMode(e) === i.UnreadMode.IMPORTANT
+  return s.default.hasUnread(e.id) && u.default.resolveUnreadSetting(e) === i.UnreadSetting.ALL_MESSAGES
 }

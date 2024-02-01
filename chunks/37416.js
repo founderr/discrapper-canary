@@ -129,7 +129,7 @@ class X extends F.default {
       selected: t,
       connected: n,
       unread: a,
-      unreadMode: i,
+      resolvedUnreadSetting: i,
       mentionCount: r,
       locked: u,
       sorting: d,
@@ -180,7 +180,7 @@ class X extends F.default {
                 selected: !A && t,
                 connected: n,
                 unread: n ? a : void 0,
-                unreadMode: i,
+                resolvedUnreadSetting: i,
                 mentionCount: r,
                 locked: u,
                 subtitle: this.renderSubtitle(),
@@ -378,7 +378,7 @@ function q(e) {
   } = e, d = (0, i.useStateFromStoresObject)([j.default], () => ({
     unread: j.default.hasUnread(n.id),
     mentionCount: j.default.getMentionCount(n.id)
-  })), c = (0, i.useStateFromStores)([G.default], () => G.default.getChannelUnreadMode(n)), f = (0, i.useStateFromStoresObject)([O.default, D.default, b.default], () => {
+  })), c = (0, i.useStateFromStores)([G.default], () => G.default.resolveUnreadSetting(n)), f = (0, i.useStateFromStoresObject)([O.default, D.default, b.default], () => {
     let e = O.default.getChannel(n.parent_id),
       l = D.default.getCheck(n.guild_id);
     return {
@@ -423,6 +423,6 @@ function q(e) {
     forceShowButtons: y,
     channelInfo: M,
     enableHangStatus: R,
-    unreadMode: c
+    resolvedUnreadSetting: c
   })
 }
