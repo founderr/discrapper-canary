@@ -16,8 +16,8 @@ var n = s("759843"),
   c = s("79112"),
   S = s("534291"),
   E = s("545158"),
-  f = s("788434"),
-  T = s("311207"),
+  T = s("788434"),
+  f = s("311207"),
   m = s("824357"),
   _ = s("20606"),
   g = s("192845"),
@@ -52,8 +52,8 @@ var n = s("759843"),
   z = s("921600"),
   Q = s("250972"),
   q = s("89563"),
-  X = s("41525"),
-  Z = s("59574"),
+  Z = s("41525"),
+  X = s("59574"),
   J = s("602806"),
   $ = s("462506"),
   ee = s("500517"),
@@ -70,8 +70,8 @@ var n = s("759843"),
   ec = s("974926"),
   eS = s("905818"),
   eE = s("819638"),
-  ef = s("114582"),
-  eT = s("995350"),
+  eT = s("114582"),
+  ef = s("995350"),
   em = s("409462"),
   e_ = s("799458"),
   eg = s("227473"),
@@ -158,7 +158,7 @@ function eA(e) {
     section: eN.UserSettingsSections.CLIPS,
     label: eI.default.Messages.CLIPS,
     ariaLabel: eI.default.Messages.CLIPS,
-    icon: eR ? (0, a.jsx)(T.default, {}) : void 0,
+    icon: eR ? (0, a.jsx)(f.default, {}) : void 0,
     element: m.default
   }, {
     section: eN.UserSettingsSections.FRIEND_REQUESTS,
@@ -208,7 +208,7 @@ function eA(e) {
     section: eN.UserSettingsSections.APPEARANCE,
     label: eI.default.Messages.APPEARANCE,
     ariaLabel: eI.default.Messages.APPEARANCE,
-    element: Z.default,
+    element: X.default,
     newIndicator: (0, a.jsx)(j.PremiumBadge, {
       text: eI.default.Messages.NEW
     }),
@@ -235,8 +235,8 @@ function eA(e) {
     })
   }, {
     section: eN.UserSettingsSections.TEXT,
-    label: eI.default.Messages.TEXT_AND_IMAGES,
-    element: eT.default
+    label: eI.default.Messages.CHAT,
+    element: ef.default
   }, {
     section: eN.UserSettingsSections.NOTIFICATIONS,
     label: eI.default.Messages.NOTIFICATIONS,
@@ -262,7 +262,7 @@ function eA(e) {
   }, {
     section: eN.UserSettingsSections.STREAMER_MODE,
     label: eI.default.Messages.STREAMER_MODE,
-    element: ef.default
+    element: eT.default
   }, {
     section: eN.UserSettingsSections.SPEED_TEST,
     label: "Speed Test",
@@ -273,7 +273,7 @@ function eA(e) {
   }, {
     section: eN.UserSettingsSections.ADVANCED,
     label: eI.default.Messages.SETTINGS_ADVANCED,
-    element: X.default
+    element: Z.default
   }, {
     section: S.SectionTypes.DIVIDER
   }, {
@@ -297,7 +297,7 @@ function eA(e) {
     section: S.SectionTypes.DIVIDER
   }, {
     section: "changelog",
-    onClick: () => (0, f.openChangelog)(!0),
+    onClick: () => (0, T.openChangelog)(!0),
     label: eI.default.Messages.WHATS_NEW
   }, {
     section: "merchandise",
