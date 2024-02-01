@@ -4759,7 +4759,9 @@ html.decorate-links .lowSaturationUnderline__95e71 {
 
 .fade_d2e09a.didRender_f1da13 {
     transition: opacity 80ms ease-out;
-    opacity: 1
+    opacity: 1;
+    position: relative;
+    z-index: 0
 }
 
 .loader__9ec90 {
