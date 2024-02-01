@@ -46,4 +46,19 @@ let i = (0, l.createExperiment)({
       enabled: !0
     }
   }]
+});
+(0, l.createExperiment)({
+  kind: "user",
+  id: "2024-01_app_launcher_onboarding",
+  label: "App Launcher - Onboarding",
+  defaultConfig: {
+    enabled: !1
+  },
+  treatments: [{
+    id: 1,
+    label: "Enable onboarding within App Launcher",
+    config: {
+      enabled: !0
+    }
+  }]
 })

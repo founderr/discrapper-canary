@@ -4606,6 +4606,7 @@ e.exports = Object.freeze({
   BOT_PROFILE_SLASH_COMMANDS: "Try my commands",
   BOT_PROFILE_UPGRADE_CTA: "Upgrade",
   BOT_PROFILE_BENEFITS_HEADING: "Unlocked Premium Features",
+  BOT_PROFILE_VIEW_ALL_COMMANDS_CTA: "View All Commands",
   LOADING: "Loading",
   OAUTH2_CONNECT_TO_DISCORD: "Connect to Discord",
   OAUTH2_TITLE: "Authorize access to your account",
