@@ -26,8 +26,8 @@ var l = n("37983"),
   y = n("684607"),
   x = n("803322"),
   I = n("127875"),
-  N = n("169694"),
-  _ = n("100576"),
+  _ = n("169694"),
+  N = n("100576"),
   A = n("765446"),
   R = n("461593"),
   O = n("49111"),
@@ -81,10 +81,10 @@ var l = n("37983"),
       if (void 0 !== i && i !== o) {
         if (e.children = i, "parent" === t && !e.previewMarkdown) {
           try {
-            e.previewMarkdown = !0, (0, _.run)(e, b.guild_id, b.id)
+            e.previewMarkdown = !0, (0, N.run)(e, b.guild_id, b.id)
           } finally {
             e.previewMarkdown = !1
-          }(0, _.run)(e, b.guild_id, b.id), r = void 0
+          }(0, N.run)(e, b.guild_id, b.id), r = void 0
         }
         "undo" !== t && void 0 !== i && i !== o && m.HistoryUtils.insertEntry(e, "other", !1, o, s), a = !0
       }
@@ -102,7 +102,7 @@ var l = n("37983"),
       }
       let d = p.getCommandBlock(e);
       if (null != d && d[0].command.id !== (null === (l = u.default.getActiveCommand(b.id)) || void 0 === l ? void 0 : l.id) && m.HistoryUtils.withMergedEntry(e, () => {
-          (0, N.unsetCommand)(e, b.id, null, !0)
+          (0, _.unsetCommand)(e, b.id, null, !0)
         }), a) {
         if (!et && g.EditorUtils.focus(e), "parent" === t) try {
           eE.current = !1, e.onChange()
@@ -164,7 +164,7 @@ var l = n("37983"),
     (0, v.default)(t, ev, b, ex), (0, I.default)(ev, ep, F);
     let {
       handleKeyDown: eI,
-      handleKeyUp: eN
+      handleKeyUp: e_
     } = (0, y.default)({
       editor: ev,
       channel: b,
@@ -178,7 +178,7 @@ var l = n("37983"),
       hideAutocomplete: X,
       moveSelection: Z
     }), {
-      handlePaste: e_,
+      handlePaste: eN,
       handleGlobalPaste: eA
     } = (0, x.default)(ev, eS, H), eR = i.useCallback(e => {
       null == Q || Q()
@@ -224,9 +224,9 @@ var l = n("37983"),
           onFocus: G,
           onBlur: K,
           onClick: eR,
-          onPaste: e_,
+          onPaste: eN,
           onKeyDown: eI,
-          onKeyUp: eN,
+          onKeyUp: e_,
           decorateExtra: eM,
           renderExtraElement: eb,
           renderExtraLeaf: ek,

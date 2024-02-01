@@ -19,14 +19,14 @@ e.exports = o, o.create = function(e) {
     s = new r(1).toRed(o);
   !t && (t = Math.max(1, i / 48 | 0));
   for (var a = e.subn(1), c = 0; !a.testn(c); c++);
-  for (var u = e.shrn(c), d = a.toRed(o); t > 0; t--) {
-    var l = this._randrange(new r(2), a);
-    n && n(l);
-    var f = l.toRed(o).redPow(u);
-    if (0 !== f.cmp(s) && 0 !== f.cmp(d)) {
+  for (var u = e.shrn(c), l = a.toRed(o); t > 0; t--) {
+    var d = this._randrange(new r(2), a);
+    n && n(d);
+    var f = d.toRed(o).redPow(u);
+    if (0 !== f.cmp(s) && 0 !== f.cmp(l)) {
       for (var p = 1; p < c; p++) {
         if (0 === (f = f.redSqr()).cmp(s)) return !1;
-        if (0 === f.cmp(d)) break
+        if (0 === f.cmp(l)) break
       }
       if (p === c) return !1
     }
@@ -39,10 +39,10 @@ e.exports = o, o.create = function(e) {
   !t && (t = Math.max(1, n / 48 | 0));
   for (var s = e.subn(1), a = 0; !s.testn(a); a++);
   for (var c = e.shrn(a), u = s.toRed(i); t > 0; t--) {
-    var d = this._randrange(new r(2), s),
-      l = e.gcd(d);
-    if (0 !== l.cmpn(1)) return l;
-    var f = d.toRed(i).redPow(c);
+    var l = this._randrange(new r(2), s),
+      d = e.gcd(l);
+    if (0 !== d.cmpn(1)) return d;
+    var f = l.toRed(i).redPow(c);
     if (0 !== f.cmp(o) && 0 !== f.cmp(u)) {
       for (var p = 1; p < a; p++) {
         if (0 === (f = f.redSqr()).cmp(o)) return f.fromRed().subn(1).gcd(e);

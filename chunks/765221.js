@@ -23,8 +23,8 @@ var n = r("37983"),
   S = r("956089"),
   C = r("719923"),
   T = r("643070"),
-  h = r("688318"),
-  N = r("782340"),
+  N = r("688318"),
+  h = r("782340"),
   v = r("654353");
 let R = () => 80,
   g = e => {
@@ -61,7 +61,7 @@ let R = () => 80,
       P = (0, d.default)(null != i ? i : D),
       {
         avatarDecorationSrc: b
-      } = (0, h.default)({
+      } = (0, N.default)({
         user: t,
         avatarDecorationOverride: r,
         size: 80,
@@ -87,7 +87,7 @@ let R = () => 80,
             children: [(0, n.jsx)(m.default, {
               width: 12,
               height: 12
-            }), N.default.Messages.NEW]
+            }), h.default.Messages.NEW]
           })
         }) : (0, n.jsx)(S.IconBadge, {
           icon: A ? () => (0, n.jsx)(I.default, {
@@ -142,7 +142,7 @@ var M = e => {
         }), (0, n.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "header-primary",
-          children: N.default.Messages.NONE
+          children: h.default.Messages.NONE
         })]
       }, f)).with(T.SHOP_ITEM, () => (0, n.jsxs)(g, {
         style: d,
@@ -152,7 +152,7 @@ var M = e => {
         }), (0, n.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "header-primary",
-          children: N.default.Messages.COLLECTIBLES_SHOP
+          children: h.default.Messages.COLLECTIBLES_SHOP
         })]
       }, f)).otherwise(e => {
         let s = (null == r ? void 0 : r.id) === e.id;

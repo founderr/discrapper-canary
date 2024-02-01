@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useDrag: function() {
-    return d
+    return l
   }
 });
 var r = n("726687"),
@@ -12,10 +12,10 @@ var r = n("726687"),
   c = n("961719"),
   u = n("900255");
 
-function d(e, t) {
+function l(e, t) {
   var n = (0, i.useOptionalFactory)(e, t);
   (0, u.invariant)(!n.begin, "useDrag::spec.begin was deprecated in v14. Replace spec.begin() with spec.item(). (see more here - https://react-dnd.github.io/react-dnd/docs/api/use-drag)");
-  var d = (0, o.useDragSourceMonitor)(),
-    l = (0, s.useDragSourceConnector)(n.options, n.previewOptions);
-  return (0, r.useRegisteredDragSource)(n, d, l), [(0, a.useCollectedProps)(n.collect, d, l), (0, c.useConnectDragSource)(l), (0, c.useConnectDragPreview)(l)]
+  var l = (0, o.useDragSourceMonitor)(),
+    d = (0, s.useDragSourceConnector)(n.options, n.previewOptions);
+  return (0, r.useRegisteredDragSource)(n, l, d), [(0, a.useCollectedProps)(n.collect, l, d), (0, c.useConnectDragSource)(d), (0, c.useConnectDragPreview)(d)]
 }

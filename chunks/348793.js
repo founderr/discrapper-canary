@@ -36,7 +36,7 @@ function u(e, t) {
   }
 }
 
-function d(e, t, n) {
+function l(e, t, n) {
   let r = e.readUInt8(n);
   if (e.isError(r)) return r;
   if (!t && 128 === r) return null;
@@ -62,7 +62,7 @@ e.exports = a, a.prototype.decode = function(e, t) {
 }, c.prototype._decodeTag = function(e, t, n) {
   let r = u(e, 'Failed to decode tag of "' + t + '"');
   if (e.isError(r)) return r;
-  let i = d(e, r.primitive, 'Failed to get length of "' + t + '"');
+  let i = l(e, r.primitive, 'Failed to get length of "' + t + '"');
   if (e.isError(i)) return i;
   if (!n && r.tag !== t && r.tagStr !== t && r.tagStr + "of" !== t) return e.error('Failed to match tag: "' + t + '"');
   if (r.primitive || null !== i) return e.skip(i, 'Failed to match body of: "' + t + '"');
@@ -74,7 +74,7 @@ e.exports = a, a.prototype.decode = function(e, t) {
     let n;
     let r = u(e, t);
     if (e.isError(r)) return r;
-    let i = d(e, r.primitive, t);
+    let i = l(e, r.primitive, t);
     if (e.isError(i)) return i;
     if (n = r.primitive || null !== i ? e.skip(i) : this._skipUntilEnd(e, t), e.isError(n)) return n;
     if ("end" === r.tagStr) break

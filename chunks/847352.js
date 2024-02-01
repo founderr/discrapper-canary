@@ -30,8 +30,8 @@ var l = n("37983"),
       channel: n,
       closeOnModalOuterClick: r = !1,
       parentModalKey: x
-    } = e, I = i.useRef(null), N = i.useRef(null), {
-      renderWindow: _,
+    } = e, I = i.useRef(null), _ = i.useRef(null), {
+      renderWindow: N,
       windowDispatch: A
     } = i.useContext(f.default), R = null != x, O = (0, u.useIsModalAtTop)(null != x ? x : ""), M = () => {
       E.dismissAppLauncherPopup()
@@ -44,7 +44,7 @@ var l = n("37983"),
       if ((0, s.isElement)(n) && null != n.closest("." + v.CHAT_INPUT_BUTTON_CLASSNAME)) return;
       for (;
         (0, s.isElement)(n);) {
-        if (n === N.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
+        if (n === _.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
         n = n.parentNode
       }
       M();
@@ -53,9 +53,9 @@ var l = n("37983"),
     }, [r, O, R]), k = i.useCallback(() => {
       M()
     }, []);
-    i.useLayoutEffect(() => (_.addEventListener("mousedown", b), _.addEventListener("contextmenu", b), A.subscribe(T.ComponentActions.POPOUT_CLOSE, k), () => {
-      _.removeEventListener("mousedown", b), _.removeEventListener("contextmenu", b), A.unsubscribe(T.ComponentActions.POPOUT_CLOSE, k)
-    }), [k, b, _, A]), (0, d.useFocusLock)(I), i.useEffect(() => {
+    i.useLayoutEffect(() => (N.addEventListener("mousedown", b), N.addEventListener("contextmenu", b), A.subscribe(T.ComponentActions.POPOUT_CLOSE, k), () => {
+      N.removeEventListener("mousedown", b), N.removeEventListener("contextmenu", b), A.unsubscribe(T.ComponentActions.POPOUT_CLOSE, k)
+    }), [k, b, N, A]), (0, d.useFocusLock)(I), i.useEffect(() => {
       (!R && (0, u.hasAnyModalOpen)() || R && !O) && M()
     }, [O, R]);
     let P = (0, a.useStateFromStores)([S.default], () => S.default.getCurrentAppDetail());
@@ -79,7 +79,7 @@ var l = n("37983"),
             "aria-label": "Application Launcher",
             children: t ? (0, l.jsxs)("div", {
               className: y.drawerSizingWrapper,
-              ref: N,
+              ref: _,
               children: [(0, l.jsx)("div", {
                 className: y.resizeHandle
               }), (0, l.jsxs)("div", {

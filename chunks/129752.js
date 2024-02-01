@@ -30,7 +30,7 @@ i("ERR_INVALID_OPT_VALUE", function(e, t) {
   else f = "must be";
   if (s = e, a = " argument", (void 0 === c || c > s.length) && (c = s.length), s.substring(c - a.length, c) === a) p = "The ".concat(e, " ").concat(f, " ").concat(o(t, "type"));
   else {
-    var r, i, s, a, c, u, d, l, f, p, h = (u = e, d = ".", "number" != typeof l && (l = 0), l + d.length > u.length || -1 === u.indexOf(d, l)) ? "argument" : "property";
+    var r, i, s, a, c, u, l, d, f, p, h = (u = e, l = ".", "number" != typeof d && (d = 0), d + l.length > u.length || -1 === u.indexOf(l, d)) ? "argument" : "property";
     p = 'The "'.concat(e, '" ').concat(h, " ").concat(f, " ").concat(o(t, "type"))
   }
   return p += ". Received type ".concat(typeof n)

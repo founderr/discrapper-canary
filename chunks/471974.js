@@ -26,8 +26,8 @@ var s = n("362796"),
   a = Symbol("lastResolve"),
   c = Symbol("lastReject"),
   u = Symbol("error"),
-  d = Symbol("ended"),
-  l = Symbol("lastPromise"),
+  l = Symbol("ended"),
+  d = Symbol("lastPromise"),
   f = Symbol("handlePromise"),
   p = Symbol("stream");
 
@@ -38,18 +38,18 @@ function h(e, t) {
   }
 }
 
-function g(e) {
+function v(e) {
   var t = e[a];
   if (null !== t) {
     var n = e[p].read();
-    null !== n && (e[l] = null, e[a] = null, e[c] = null, t(h(n, !1)))
+    null !== n && (e[d] = null, e[a] = null, e[c] = null, t(h(n, !1)))
   }
 }
 
-function b(e) {
-  i.nextTick(g, e)
+function g(e) {
+  i.nextTick(v, e)
 }
-var v = Object.getPrototypeOf(function() {}),
+var b = Object.getPrototypeOf(function() {}),
   m = Object.setPrototypeOf((o(r = {
     get stream() {
       return this[p]
@@ -58,18 +58,18 @@ var v = Object.getPrototypeOf(function() {}),
       var e, t, n, r = this,
         o = this[u];
       if (null !== o) return Promise.reject(o);
-      if (this[d]) return Promise.resolve(h(void 0, !0));
+      if (this[l]) return Promise.resolve(h(void 0, !0));
       if (this[p].destroyed) return new Promise(function(e, t) {
         i.nextTick(function() {
           r[u] ? t(r[u]) : e(h(void 0, !0))
         })
       });
-      var s = this[l];
+      var s = this[d];
       if (s) {
         ;
         n = new Promise((e = s, t = this, function(n, r) {
           e.then(function() {
-            if (t[d]) {
+            if (t[l]) {
               n(h(void 0, !0));
               return
             }
@@ -81,7 +81,7 @@ var v = Object.getPrototypeOf(function() {}),
         if (null !== a) return Promise.resolve(h(a, !1));
         n = new Promise(this[f])
       }
-      return this[l] = n, n
+      return this[d] = n, n
     }
   }, Symbol.asyncIterator, function() {
     return this
@@ -96,7 +96,7 @@ var v = Object.getPrototypeOf(function() {}),
         t(h(void 0, !0))
       })
     })
-  }), r), v);
+  }), r), b);
 e.exports = function(e) {
   var t, n = Object.create(m, (o(t = {}, p, {
     value: e,
@@ -110,23 +110,23 @@ e.exports = function(e) {
   }), o(t, u, {
     value: null,
     writable: !0
-  }), o(t, d, {
+  }), o(t, l, {
     value: e._readableState.endEmitted,
     writable: !0
   }), o(t, f, {
     value: function(e, t) {
       var r = n[p].read();
-      r ? (n[l] = null, n[a] = null, n[c] = null, e(h(r, !1))) : (n[a] = e, n[c] = t)
+      r ? (n[d] = null, n[a] = null, n[c] = null, e(h(r, !1))) : (n[a] = e, n[c] = t)
     },
     writable: !0
   }), t));
-  return n[l] = null, s(e, function(e) {
+  return n[d] = null, s(e, function(e) {
     if (e && "ERR_STREAM_PREMATURE_CLOSE" !== e.code) {
       var t = n[c];
-      null !== t && (n[l] = null, n[a] = null, n[c] = null, t(e)), n[u] = e;
+      null !== t && (n[d] = null, n[a] = null, n[c] = null, t(e)), n[u] = e;
       return
     }
     var r = n[a];
-    null !== r && (n[l] = null, n[a] = null, n[c] = null, r(h(void 0, !0))), n[d] = !0
-  }), e.on("readable", b.bind(null, n)), n
+    null !== r && (n[d] = null, n[a] = null, n[c] = null, r(h(void 0, !0))), n[l] = !0
+  }), e.on("readable", g.bind(null, n)), n
 }

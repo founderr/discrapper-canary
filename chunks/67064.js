@@ -15,14 +15,14 @@ e.exports = function(e, t, n) {
   var r = arguments.length > 3 ? arguments[3] : null,
     i = arguments.length > 4 ? arguments[4] : null,
     u = arguments.length > 5 ? arguments[5] : null,
-    d = arguments.length > 6 && arguments[6],
-    l = !!c && c(e, t);
+    l = arguments.length > 6 && arguments[6],
+    d = !!c && c(e, t);
   if (o) o(e, t, {
-    configurable: null === u && l ? l.configurable : !u,
-    enumerable: null === r && l ? l.enumerable : !r,
+    configurable: null === u && d ? d.configurable : !u,
+    enumerable: null === r && d ? d.enumerable : !r,
     value: n,
-    writable: null === i && l ? l.writable : !i
+    writable: null === i && d ? d.writable : !i
   });
-  else if (!d && (r || i || u)) throw new s("This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.");
+  else if (!l && (r || i || u)) throw new s("This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.");
   else e[t] = n
 }

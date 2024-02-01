@@ -17,12 +17,12 @@ function c(e, t, n) {
   "function" != typeof e && ((0, r.invariant)((0, o.isValidType)(e), 'Expected "type" provided as the first argument to DragSource to be a string, or a function that returns a string given the current props. Instead, received %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source', e), u = function() {
     return e
   }), (0, r.invariant)((0, o.isPlainObject)(t), 'Expected "spec" provided as the second argument to DragSource to be a plain object. Instead, received %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source', t);
-  var d = (0, a.createSourceFactory)(t);
+  var l = (0, a.createSourceFactory)(t);
   return (0, r.invariant)("function" == typeof n, 'Expected "collect" provided as the third argument to DragSource to be a function that returns a plain object of props to inject. Instead, received %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source', n), (0, r.invariant)((0, o.isPlainObject)(c), 'Expected "options" provided as the fourth argument to DragSource to be a plain object when specified. Instead, received %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source', n),
     function(e) {
       return (0, s.decorateHandler)({
         containerDisplayName: "DragSource",
-        createHandler: d,
+        createHandler: l,
         registerHandler: i.registerSource,
         createConnector: function(e) {
           return new i.SourceConnector(e)

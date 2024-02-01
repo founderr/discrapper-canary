@@ -26,8 +26,8 @@ var l = n("37983"),
   y = n("697218"),
   x = n("599110"),
   I = n("159885"),
-  N = n("570759"),
-  _ = n("866353"),
+  _ = n("570759"),
+  N = n("866353"),
   A = n("178207"),
   R = n("256860"),
   O = n("364685"),
@@ -71,7 +71,7 @@ let F = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       ee = i.useRef(null),
       et = i.useRef(null),
       en = i.useRef(null),
-      el = (0, N.useStickerPickerUpsellStore)(e => e.showPremiumUpsell),
+      el = (0, _.useStickerPickerUpsellStore)(e => e.showPremiumUpsell),
       [ei, er] = (0, h.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], s.default),
       eo = i.useRef("");
     i.useImperativeHandle(t, () => ({
@@ -106,8 +106,8 @@ let F = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         rowCount: ey,
         rowCountBySection: ex,
         stickersGrid: eI,
-        gutterWidth: eN,
-        columnCounts: e_
+        gutterWidth: e_,
+        columnCounts: eN
       } = (0, R.useStickersGrid)({
         filteredStickers: ep,
         stickersCategories: es,
@@ -137,7 +137,7 @@ let F = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             });
             break;
           case M.StickerGridItemTypes.STICKER:
-            null != e.sticker && (0, _.isSendableSticker)(e.sticker, ef, u) && eT(e)
+            null != e.sticker && (0, N.isSendableSticker)(e.sticker, ef, u) && eT(e)
         }
       }, [q, ef, u, eT]),
       {
@@ -147,7 +147,7 @@ let F = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         handleGridContainerKeyDown: eb,
         isUsingKeyboardNavigation: ek
       } = (0, b.useKeyboardNavigation)({
-        columnCounts: e_,
+        columnCounts: eN,
         stickersListRef: et,
         stickersGrid: eI,
         onGridItemSelect: eA,
@@ -212,7 +212,7 @@ let F = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             getStickerItemProps: eR,
             getStickerRowProps: eO,
             gridWidth: eu,
-            gutterWidth: eN,
+            gutterWidth: e_,
             isUsingKeyboardNavigation: ek,
             onSelectSticker: eT,
             rowCount: ey,

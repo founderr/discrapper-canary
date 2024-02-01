@@ -33,16 +33,16 @@ Node.prototype.get_child = function(e) {
       i = 0,
       c = null,
       u = n,
-      d = null,
-      l = this._root;
+      l = null,
+      d = this._root;
     for (u.right = this._root;;) {
-      if (null === l ? (l = new Node(e), d.set_child(r, l), t = !0, this.size++) : o(l.left) && o(l.right) && (l.red = !0, l.left.red = !1, l.right.red = !1), o(l) && o(d)) {
+      if (null === d ? (d = new Node(e), l.set_child(r, d), t = !0, this.size++) : o(d.left) && o(d.right) && (d.red = !0, d.left.red = !1, d.right.red = !1), o(d) && o(l)) {
         var f = u.right === c;
-        l === d.get_child(i) ? u.set_child(f, s(c, !i)) : u.set_child(f, a(c, !i))
+        d === l.get_child(i) ? u.set_child(f, s(c, !i)) : u.set_child(f, a(c, !i))
       }
-      var p = this._comparator(l.data, e);
+      var p = this._comparator(d.data, e);
       if (0 === p) break;
-      i = r, r = p < 0, null !== c && (u = c), c = d, d = l, l = l.get_child(r)
+      i = r, r = p < 0, null !== c && (u = c), c = l, l = d, d = d.get_child(r)
     }
     this._root = n.right
   }
@@ -53,21 +53,21 @@ Node.prototype.get_child = function(e) {
     n = t;
   n.right = this._root;
   for (var r = null, i = null, c = null, u = 1; null !== n.get_child(u);) {
-    var d = u;
+    var l = u;
     i = r, r = n, n = n.get_child(u);
-    var l = this._comparator(e, n.data);
-    if (u = l > 0, 0 === l && (c = n), !o(n) && !o(n.get_child(u))) {
+    var d = this._comparator(e, n.data);
+    if (u = d > 0, 0 === d && (c = n), !o(n) && !o(n.get_child(u))) {
       if (o(n.get_child(!u))) {
         var f = s(n, u);
-        r.set_child(d, f), r = f
+        r.set_child(l, f), r = f
       } else if (!o(n.get_child(!u))) {
-        var p = r.get_child(!d);
+        var p = r.get_child(!l);
         if (null !== p) {
-          if (o(p.get_child(!d)) || o(p.get_child(d))) {
+          if (o(p.get_child(!l)) || o(p.get_child(l))) {
             var h = i.right === r;
-            o(p.get_child(d)) ? i.set_child(h, a(r, d)) : o(p.get_child(!d)) && i.set_child(h, s(r, d));
-            var g = i.get_child(h);
-            g.red = !0, n.red = !0, g.left.red = !1, g.right.red = !1
+            o(p.get_child(l)) ? i.set_child(h, a(r, l)) : o(p.get_child(!l)) && i.set_child(h, s(r, l));
+            var v = i.get_child(h);
+            v.red = !0, n.red = !0, v.left.red = !1, v.right.red = !1
           } else r.red = !1, p.red = !0, n.red = !0
         }
       }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return N
   }
 });
 var l = n("37983"),
@@ -26,13 +26,13 @@ var l = n("37983"),
   y = n("267005");
 let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
   I = (0, a.cssValueToNumber)(y.stickerPickerPreviewPadding),
-  N = i.memo(function(e) {
+  _ = i.memo(function(e) {
     let {
       isDisplayingIndividualStickers: t = !1,
       preferAnimation: r = !0,
       getStickerItemProps: a,
-      getStickerRowProps: N,
-      gutterWidth: _,
+      getStickerRowProps: _,
+      gutterWidth: N,
       inspectedStickerPosition: A,
       isScrolling: R,
       isUsingKeyboardNavigation: O,
@@ -51,11 +51,11 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
     } = e, {
       location: G
     } = (0, c.useAnalyticsContext)(), K = j + 2 * U, V = i.useMemo(() => ({
-      gridColumnGap: _,
+      gridColumnGap: N,
       gridTemplateColumns: "repeat(auto-fill, ".concat(K, "px)"),
       height: K,
       paddingRight: t ? void 0 : K
-    }), [t, _, K]), W = i.useMemo(() => ({
+    }), [t, N, K]), W = i.useMemo(() => ({
       width: j,
       height: j,
       padding: U
@@ -63,16 +63,16 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
     return (0, l.jsx)("div", {
       className: y.row,
       style: V,
-      ...null == N ? void 0 : N(k),
+      ...null == _ ? void 0 : _(k),
       children: L.map(e => {
         var c;
         let x = e.visibleRowIndex === (null == A ? void 0 : A.rowIndex) && e.columnIndex === (null == A ? void 0 : A.columnIndex),
           I = e.type === E.StickerGridItemTypes.STICKER && w && x,
-          N = (0, s.throttle)(() => {
+          _ = (0, s.throttle)(() => {
             (null == R ? void 0 : R.current) !== !0 && (null == O ? void 0 : O.current) !== !0 && !x && (null == M || M(e))
           }, 250),
           {
-            ref: _,
+            ref: N,
             tabIndex: L,
             onFocus: U,
             ...K
@@ -86,10 +86,10 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
                 className: o(y.createSticker, P, {
                   [y.createInspected]: x
                 }),
-                innerRef: _,
+                innerRef: N,
                 tabIndex: L,
-                onFocus: null != U ? U : N,
-                onMouseMove: N,
+                onFocus: null != U ? U : _,
+                onMouseMove: _,
                 onClick: () => {
                   e.type === E.StickerGridItemTypes.CREATE_STICKER && (m.default.track(T.AnalyticEvents.OPEN_MODAL, {
                     type: T.AnalyticsSections.CREATE_STICKER_MODAL,
@@ -128,10 +128,10 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
               className: o(y.sticker, P, {
                 [y.stickerInspected]: x
               }),
-              innerRef: _,
+              innerRef: N,
               tabIndex: L,
-              onFocus: null != U ? U : N,
-              onMouseMove: N,
+              onFocus: null != U ? U : _,
+              onMouseMove: _,
               onClick: t => {
                 (null == R ? void 0 : R.current) !== !0 && (null == O ? void 0 : O.current) !== !0 && (null == b || b(e, t))
               },
@@ -176,4 +176,4 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
       })
     })
   });
-var _ = N
+var N = _

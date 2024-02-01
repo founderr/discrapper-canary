@@ -11,11 +11,11 @@ if (c) {
     valueOf: u
   }, "symbol" == typeof Symbol.toPrimitive && (s[Symbol.toPrimitive] = u)
 }
-var d = a("Object.prototype.toString"),
-  l = Object.getOwnPropertyDescriptor;
+var l = a("Object.prototype.toString"),
+  d = Object.getOwnPropertyDescriptor;
 e.exports = c ? function(e) {
   if (!e || "object" != typeof e) return !1;
-  var t = l(e, "lastIndex");
+  var t = d(e, "lastIndex");
   if (!(t && r(t, "value"))) return !1;
   try {
     i(e, s)
@@ -23,5 +23,5 @@ e.exports = c ? function(e) {
     return e === o
   }
 } : function(e) {
-  return !!e && ("object" == typeof e || "function" == typeof e) && "[object RegExp]" === d(e)
+  return !!e && ("object" == typeof e || "function" == typeof e) && "[object RegExp]" === l(e)
 }

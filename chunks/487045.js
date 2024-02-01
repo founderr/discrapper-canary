@@ -43,10 +43,10 @@ c.prototype.deriveKeys = function(e, t) {
 }, c.prototype._encrypt = function(e, t, n, r, i) {
   for (var s = t, a = n, c = 0; c < e.keys.length; c += 2) {
     var u = e.keys[c],
-      d = e.keys[c + 1];
-    o.expand(a, e.tmp, 0), u ^= e.tmp[0], d ^= e.tmp[1];
-    var l = o.substitute(u, d),
-      f = o.permute(l),
+      l = e.keys[c + 1];
+    o.expand(a, e.tmp, 0), u ^= e.tmp[0], l ^= e.tmp[1];
+    var d = o.substitute(u, l),
+      f = o.permute(d),
       p = a;
     a = (s ^ f) >>> 0, s = p
   }
@@ -54,10 +54,10 @@ c.prototype.deriveKeys = function(e, t) {
 }, c.prototype._decrypt = function(e, t, n, r, i) {
   for (var s = n, a = t, c = e.keys.length - 2; c >= 0; c -= 2) {
     var u = e.keys[c],
-      d = e.keys[c + 1];
-    o.expand(s, e.tmp, 0), u ^= e.tmp[0], d ^= e.tmp[1];
-    var l = o.substitute(u, d),
-      f = o.permute(l),
+      l = e.keys[c + 1];
+    o.expand(s, e.tmp, 0), u ^= e.tmp[0], l ^= e.tmp[1];
+    var d = o.substitute(u, l),
+      f = o.permute(d),
       p = s;
     s = (a ^ f) >>> 0, a = p
   }

@@ -30,15 +30,15 @@ function T(e) {
     textValue: y,
     maxCharacterCount: x,
     showRemainingCharsAfterCount: I,
-    className: N
-  } = e, _ = (0, o.useStateFromStores)([f.default], () => m.default.canUseIncreasedMessageLength(f.default.getCurrentUser())), A = (0, d.default)(), R = null != x ? x : A, O = null !== (T = null != I ? I : x) && void 0 !== T ? T : A / 10, M = y.length, b = null != v.upsellLongMessages && (null != M ? M : 0) > E.MAX_MESSAGE_LENGTH && _, k = null != v.upsellLongMessages && !_, P = (null === (n = (0, c.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2, L = R - M, U = L > O, j = L < 0 && P, D = 0 === L ? g.default.Messages.CHARACTER_COUNT_AT_LIMIT : L > 0 ? g.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
+    className: _
+  } = e, N = (0, o.useStateFromStores)([f.default], () => m.default.canUseIncreasedMessageLength(f.default.getCurrentUser())), A = (0, d.default)(), R = null != x ? x : A, O = null !== (T = null != I ? I : x) && void 0 !== T ? T : A / 10, M = y.length, b = null != v.upsellLongMessages && (null != M ? M : 0) > E.MAX_MESSAGE_LENGTH && N, k = null != v.upsellLongMessages && !N, P = (null === (n = (0, c.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2, L = R - M, U = L > O, j = L < 0 && P, D = 0 === L ? g.default.Messages.CHARACTER_COUNT_AT_LIMIT : L > 0 ? g.default.Messages.CHARACTER_COUNT_CLOSE_TO_LIMIT.format({
     count: L
   }) : g.default.Messages.CHARACTER_COUNT_OVER_LIMIT, {
     AnalyticsLocationProvider: w
   } = (0, u.default)(a.default.CHARACTER_COUNT), B = b && L >= 0 || !U || k && !U;
   return B ? (0, l.jsx)(w, {
     children: (0, l.jsxs)("div", {
-      className: r(N, C.characterCount, {
+      className: r(_, C.characterCount, {
         [C.error]: L < 0
       }),
       children: [(0, l.jsxs)("div", {

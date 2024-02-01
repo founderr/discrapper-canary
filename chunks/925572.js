@@ -27,7 +27,7 @@ function u(e) {
   return 0 === t ? e : e.slice(t)
 }
 
-function d(e, t) {
+function l(e, t) {
   if (t < 128) {
     e.push(t);
     return
@@ -46,25 +46,25 @@ e.exports = s, s.prototype._importDER = function(e, t) {
   if (!1 === s) return !1;
   var u = e.slice(n.place, s + n.place);
   if (n.place += s, 2 !== e[n.place++]) return !1;
-  var d = c(e, n);
-  if (!1 === d || e.length !== d + n.place) return !1;
-  var l = e.slice(n.place, d + n.place);
+  var l = c(e, n);
+  if (!1 === l || e.length !== l + n.place) return !1;
+  var d = e.slice(n.place, l + n.place);
   if (0 === u[0]) {
     if (!(128 & u[1])) return !1;
     u = u.slice(1)
   }
-  if (0 === l[0]) {
-    if (!(128 & l[1])) return !1;
-    l = l.slice(1)
+  if (0 === d[0]) {
+    if (!(128 & d[1])) return !1;
+    d = d.slice(1)
   }
-  return this.r = new r(u), this.s = new r(l), this.recoveryParam = null, !0
+  return this.r = new r(u), this.s = new r(d), this.recoveryParam = null, !0
 }, s.prototype.toDER = function(e) {
   var t = this.r.toArray(),
     n = this.s.toArray();
   for (128 & t[0] && (t = [0].concat(t)), 128 & n[0] && (n = [0].concat(n)), t = u(t), n = u(n); !n[0] && !(128 & n[1]);) n = n.slice(1);
   var r = [2];
-  d(r, t.length), (r = r.concat(t)).push(2), d(r, n.length);
+  l(r, t.length), (r = r.concat(t)).push(2), l(r, n.length);
   var o = r.concat(n),
     s = [48];
-  return d(s, o.length), s = s.concat(o), i.encode(s, e)
+  return l(s, o.length), s = s.concat(o), i.encode(s, e)
 }

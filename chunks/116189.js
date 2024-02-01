@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return _
   }
 });
 var l = n("37983");
@@ -146,4 +146,4 @@ let C = {
       }
     }
   };
-var N = I
+var _ = I

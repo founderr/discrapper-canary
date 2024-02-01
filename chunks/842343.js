@@ -26,8 +26,8 @@ var l = n("37983"),
     var n, r, v, y, x;
     let {
       channel: I,
-      type: N,
-      editorHeight: _,
+      type: _,
+      editorHeight: N,
       onVisibilityChange: A
     } = e, R = (0, p.useUID)(), O = (0, a.useStateFromStores)([c.default], () => {
       var e;
@@ -35,7 +35,7 @@ var l = n("37983"),
     }, [I.guild_id]), M = i.useRef(), [b, k, P] = (0, C.default)({
       ...e,
       guild: O
-    }, t, M), L = (null === (n = N.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, U = (0, f.getAutocompleteRowId)(b.selectedIndex);
+    }, t, M), L = (null === (n = _.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, U = (0, f.getAutocompleteRowId)(b.selectedIndex);
     (0, d.useChannelEditorPopup)(R, b.isVisible, U), E.default.trackExposure({
       location: "6e9811_1"
     });
@@ -46,8 +46,8 @@ var l = n("37983"),
     }, {
       autoTrackExposure: !1
     }), D = (0, g.useChannelAutocompleteLayerPosition)({
-      editorHeight: _,
-      type: N,
+      editorHeight: N,
+      type: _,
       state: b,
       isInPopoutExperiment: j
     }), w = i.useMemo(() => null == D ? "" : String(Date.now()), [null == D ? void 0 : D.top, null == D ? void 0 : D.left, null == D ? void 0 : D.bottom, null == D ? void 0 : D.right]);
@@ -71,7 +71,7 @@ var l = n("37983"),
         [T.bottom]: null == D && "bottom" === e.position
       },
       F = 490;
-    null != D && (F = (null === (v = N.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (y = b.query) || void 0 === y ? void 0 : y.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
+    null != D && (F = (null === (v = _.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (y = b.query) || void 0 === y ? void 0 : y.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
     let G = (0, l.jsx)(f.default, {
       id: R,
       className: o(T.autocomplete, H),

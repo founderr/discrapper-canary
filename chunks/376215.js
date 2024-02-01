@@ -26,13 +26,13 @@ var l = n("37983"),
   y = n("49111"),
   x = n("735189"),
   I = n("180615");
-let N = [];
+let _ = [];
 
-function _(e) {
+function N(e) {
   let {
     channelId: t,
     type: n
-  } = e, r = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), _ = (0, m.default)("attachments", a.Orientations.HORIZONTAL), A = (0, u.useStateFromStores)([S.default], () => S.default.getUploads(t, n.drafts.type)), {
+  } = e, r = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), N = (0, m.default)("attachments", a.Orientations.HORIZONTAL), A = (0, u.useStateFromStores)([S.default], () => S.default.getUploads(t, n.drafts.type)), {
     isApplicationCommand: R,
     commandOptions: O,
     commandOptionStates: M
@@ -40,7 +40,7 @@ function _(e) {
     let e = h.default.getActiveCommand(t);
     if (null == e) return {
       isApplicationCommand: !1,
-      commandOptions: N,
+      commandOptions: _,
       commandOptionStates: null
     };
     let n = h.default.getOptionStates(t);
@@ -63,8 +63,8 @@ function _(e) {
     return d.default.subscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e), () => d.default.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)
   }, [t, n]);
   let L = i.useCallback(() => {
-    _.focusFirstVisibleItem()
-  }, [_]);
+    N.focusFirstVisibleItem()
+  }, [N]);
   return ((0, C.useComponentAction)({
     event: y.ComponentActions.FOCUS_ATTACHMENT_AREA,
     handler: L
@@ -79,7 +79,7 @@ function _(e) {
     }
   }, [t, b.length, n]), !R && 0 === A.length || R && 0 === b.length) ? null : (0, l.jsxs)(i.Fragment, {
     children: [(0, l.jsx)(s.ListNavigatorProvider, {
-      navigator: _,
+      navigator: N,
       children: (0, l.jsx)(s.ListNavigatorContainer, {
         children: e => {
           let {
@@ -113,7 +113,7 @@ var A = i.memo(function(e) {
     type: n,
     canAttachFiles: i
   } = e;
-  return i ? (0, l.jsx)(_, {
+  return i ? (0, l.jsx)(N, {
     channelId: t,
     type: n
   }) : null

@@ -27,27 +27,27 @@ var r = function() {
         }), ("string" == typeof t ? function(e, t) {
           return p(e, function(e) {
             var n, r, i = e,
-              s = d(e),
+              s = l(e),
               a = t.callback(s, t);
             if (s && a) {
               for (r in i = "<img ".concat('class="', t.className, '" ', 'draggable="false" ', 'alt="', e, '"', ' src="', a, '"'), n = t.attributes(e, s))
-                if (n.hasOwnProperty(r) && 0 !== r.indexOf("on") && -1 === i.indexOf(" " + r + "=")) i = i.concat(" ", r, '="', n[r].replace(o, l), '"');
+                if (n.hasOwnProperty(r) && 0 !== r.indexOf("on") && -1 === i.indexOf(" " + r + "=")) i = i.concat(" ", r, '="', n[r].replace(o, d), '"');
               i = i.concat("/>")
             }
             return i
           })
         } : function(e, t) {
-          for (var r, i, o, a, u, l, f, p, h, g, b, v, m, y = function e(t, n) {
+          for (var r, i, o, a, u, d, f, p, h, v, g, b, m, y = function e(t, n) {
               for (var r, i, o = t.childNodes, a = o.length; a--;) 3 === (i = (r = o[a]).nodeType) ? n.push(r) : 1 === i && !("ownerSVGElement" in r) && !s.test(r.nodeName.toLowerCase()) && e(r, n);
               return n
             }(e, []), x = y.length; x--;) {
-            for (o = !1, a = document.createDocumentFragment(), l = (u = y[x]).nodeValue, p = 0; f = n.exec(l);) {
-              if ((h = f.index) !== p && a.appendChild(c(l.slice(p, h), !0)), v = d(b = f[0]), p = h + b.length, m = t.callback(v, t), v && m) {
-                for (i in (g = new Image).onerror = t.onerror, g.setAttribute("draggable", "false"), r = t.attributes(b, v)) r.hasOwnProperty(i) && 0 !== i.indexOf("on") && !g.hasAttribute(i) && g.setAttribute(i, r[i]);
-                g.className = t.className, g.alt = b, g.src = m, o = !0, a.appendChild(g)
-              }!g && a.appendChild(c(b, !1)), g = null
+            for (o = !1, a = document.createDocumentFragment(), d = (u = y[x]).nodeValue, p = 0; f = n.exec(d);) {
+              if ((h = f.index) !== p && a.appendChild(c(d.slice(p, h), !0)), b = l(g = f[0]), p = h + g.length, m = t.callback(b, t), b && m) {
+                for (i in (v = new Image).onerror = t.onerror, v.setAttribute("draggable", "false"), r = t.attributes(g, b)) r.hasOwnProperty(i) && 0 !== i.indexOf("on") && !v.hasAttribute(i) && v.setAttribute(i, r[i]);
+                v.className = t.className, v.alt = g, v.src = m, o = !0, a.appendChild(v)
+              }!v && a.appendChild(c(g, !1)), v = null
             }
-            o && (p < l.length && a.appendChild(c(l.slice(p), !0)), u.parentNode.replaceChild(a, u))
+            o && (p < d.length && a.appendChild(c(d.slice(p), !0)), u.parentNode.replaceChild(a, u))
           }
           return e
         })(t, {
@@ -90,11 +90,11 @@ var r = function() {
     return "".concat(t.base, t.size, "/", e, t.ext)
   }
 
-  function d(e) {
+  function l(e) {
     return h(0 > e.indexOf(i) ? e.replace(r, "") : e)
   }
 
-  function l(e) {
+  function d(e) {
     return t[e]
   }
 

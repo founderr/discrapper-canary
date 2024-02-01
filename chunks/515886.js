@@ -7,7 +7,7 @@ function i(e, t) {
 i.prototype.update = function(e, t) {
   "string" == typeof e && (t = t || "utf8", e = r.from(e, t));
   for (var n = this._block, i = this._blockSize, o = e.length, s = this._len, a = 0; a < o;) {
-    for (var c = s % i, u = Math.min(o - a, i - c), d = 0; d < u; d++) n[c + d] = e[a + d];
+    for (var c = s % i, u = Math.min(o - a, i - c), l = 0; l < u; l++) n[c + l] = e[a + l];
     s += u, a += u, s % i == 0 && this._update(n)
   }
   return this._len += o, this

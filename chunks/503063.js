@@ -76,7 +76,7 @@ function y(e) {
     nick: y,
     colorString: x,
     colorRoleName: I
-  } = (0, d.default)(r), N = function(e, t) {
+  } = (0, d.default)(r), _ = function(e, t) {
     let n = e.id,
       l = t.id;
     return (0, s.useStateFromStores)([h.default], () => {
@@ -88,7 +88,7 @@ function y(e) {
       }
       return 10
     }, [n, l])
-  }(i, r), _ = (0, p.useCanStartPublicThread)(i, r), A = n.showThreadPromptOnReply && N >= 2 && _;
+  }(i, r), N = (0, p.useCanStartPublicThread)(i, r), A = n.showThreadPromptOnReply && _ >= 2 && N;
 
   function R(e) {
     e.stopPropagation(), (0, c.setPendingReplyShouldMention)(i.id, !u)
@@ -170,7 +170,7 @@ function y(e) {
       }), A && (0, l.jsx)(v, {
         channel: i,
         message: r,
-        replyChainLength: N
+        replyChainLength: _
       })]
     })
   })

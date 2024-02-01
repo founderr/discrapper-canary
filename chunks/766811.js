@@ -29,7 +29,7 @@ e.exports = ! function() {
     for (var u in n = Object(arguments[c]), n) i.call(n, u) && (a[u] = n[u]);
     if (r) {
       s = r(n);
-      for (var d = 0; d < s.length; d++) o.call(n, s[d]) && (a[s[d]] = n[s[d]])
+      for (var l = 0; l < s.length; l++) o.call(n, s[l]) && (a[s[l]] = n[s[l]])
     }
   }
   return a

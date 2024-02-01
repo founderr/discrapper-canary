@@ -32,8 +32,8 @@ var l = n("37983"),
   y = n("697218"),
   x = n("158998"),
   I = n("563911"),
-  N = n("346955"),
-  _ = n("548775"),
+  _ = n("346955"),
+  N = n("548775"),
   A = n("49111"),
   R = n("782340"),
   O = n("241970");
@@ -265,7 +265,7 @@ L.Generic = class e extends P {
     let {
       channel: e,
       category: t
-    } = this.props, n = e.type === A.ChannelTypes.GUILD_CATEGORY ? N.default : (0, E.getChannelIconComponent)(e);
+    } = this.props, n = e.type === A.ChannelTypes.GUILD_CATEGORY ? _.default : (0, E.getChannelIconComponent)(e);
     return (0, l.jsxs)(I.AutocompleteRowContent, {
       children: [null != n && (0, l.jsx)(I.AutocompleteRowIcon, {
         children: (0, l.jsx)(n, {
@@ -287,7 +287,7 @@ L.Generic = class e extends P {
     } = this.props;
     return (0, l.jsxs)(I.AutocompleteRowContent, {
       children: [(0, l.jsx)(I.AutocompleteRowIcon, {
-        children: (0, l.jsx)(_.default, {
+        children: (0, l.jsx)(N.default, {
           className: O.icon,
           foreground: O.iconForeground
         })

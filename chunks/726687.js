@@ -18,13 +18,13 @@ function c(e, t) {
 
 function u(e, t, n) {
   var u = (0, s.useDragDropManager)(),
-    d = (0, o.useDragSource)(e, t, n),
-    l = (0, a.useDragType)(e);
+    l = (0, o.useDragSource)(e, t, n),
+    d = (0, a.useDragType)(e);
   (0, i.useIsomorphicLayoutEffect)(function() {
-    if (null != l) {
+    if (null != d) {
       var e, i, o = (i = 2, function(e) {
           if (Array.isArray(e)) return e
-        }(e = (0, r.registerSource)(l, d, u)) || function(e, t) {
+        }(e = (0, r.registerSource)(d, l, u)) || function(e, t) {
           var n, r, i = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
           if (null != i) {
             var o = [],
@@ -57,5 +57,5 @@ function u(e, t, n) {
         a = o[1];
       return t.receiveHandlerId(s), n.receiveHandlerId(s), a
     }
-  }, [u, t, n, d, l])
+  }, [u, t, n, l, d])
 }

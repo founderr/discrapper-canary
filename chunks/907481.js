@@ -16,34 +16,34 @@ function u(e, t) {
   return e.pipe(t)
 }
 e.exports = function() {
-  for (var e, t, i = arguments.length, d = Array(i), l = 0; l < i; l++) d[l] = arguments[l];
-  var f = (e = d).length && "function" == typeof e[e.length - 1] ? e.pop() : a;
-  if (Array.isArray(d[0]) && (d = d[0]), d.length < 2) throw new o("streams");
-  var p = d.map(function(e, i) {
-    var o, a, u, l, h, g, b, v, m = i < d.length - 1;
-    return o = e, a = m, u = i > 0, h = l = function(e) {
+  for (var e, t, i = arguments.length, l = Array(i), d = 0; d < i; d++) l[d] = arguments[d];
+  var f = (e = l).length && "function" == typeof e[e.length - 1] ? e.pop() : a;
+  if (Array.isArray(l[0]) && (l = l[0]), l.length < 2) throw new o("streams");
+  var p = l.map(function(e, i) {
+    var o, a, u, d, h, v, g, b, m = i < l.length - 1;
+    return o = e, a = m, u = i > 0, h = d = function(e) {
         !t && (t = e), e && p.forEach(c), !m && (p.forEach(c), f(t))
-      }, g = !1, l = function() {
-        !g && (g = !0, h.apply(void 0, arguments))
-      }, b = !1, o.on("close", function() {
-        b = !0
+      }, v = !1, d = function() {
+        !v && (v = !0, h.apply(void 0, arguments))
+      }, g = !1, o.on("close", function() {
+        g = !0
       }), void 0 === r && (r = n("362796")), r(o, {
         readable: a,
         writable: u
       }, function(e) {
-        if (e) return l(e);
-        b = !0, l()
-      }), v = !1,
+        if (e) return d(e);
+        g = !0, d()
+      }), b = !1,
       function(e) {
-        if (!b) {
-          if (!v) {
+        if (!g) {
+          if (!b) {
             var t;
-            if (v = !0, (t = o).setHeader && "function" == typeof t.abort) return o.abort();
+            if (b = !0, (t = o).setHeader && "function" == typeof t.abort) return o.abort();
             if ("function" == typeof o.destroy) return o.destroy();
-            l(e || new s("pipe"))
+            d(e || new s("pipe"))
           }
         }
       }
   });
-  return d.reduce(u)
+  return l.reduce(u)
 }

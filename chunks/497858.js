@@ -22,9 +22,9 @@ var l = n("884691"),
   g = n("958706");
 
 function C(e, t, n) {
-  var C, T, v, y, x, I, N;
+  var C, T, v, y, x, I, _;
   let {
-    channel: _,
+    channel: N,
     type: A
   } = e, [R, O] = l.useState(() => (0, m.createInitialState)()), M = (0, i.useForceUpdate)(), b = (0, r.useStateFromStores)([d.default], () => {
     if (null != e.guild) {
@@ -35,22 +35,22 @@ function C(e, t, n) {
   }), k = (0, u.useClydeEnabled)(e.guild, e.channel) && !b && !(0, u.canUseCustomClydeProfiles)(e.guild), P = (0, r.useStateFromStores)([d.default, p.default], () => {
     var e, t;
     let n = p.default.getCurrentUser();
-    return null !== (t = null != _.guild_id && null != n ? null === (e = d.default.getMember(_.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+    return null !== (t = null != N.guild_id && null != n ? null === (e = d.default.getMember(N.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
   }), {
     canMentionEveryone: L,
     hidePersonalInformation: U
   } = (0, r.useStateFromStoresObject)([c.default, f.default], () => {
-    let e = _.isPrivate();
+    let e = N.isPrivate();
     return {
-      canMentionEveryone: e || P || A === a.ChatInputTypes.RULES_INPUT || c.default.can(E.Permissions.MENTION_EVERYONE, _),
+      canMentionEveryone: e || P || A === a.ChatInputTypes.RULES_INPUT || c.default.can(E.Permissions.MENTION_EVERYONE, N),
       hidePersonalInformation: f.default.hidePersonalInformation
     }
-  }, [_, A, P]), {
+  }, [N, A, P]), {
     activeCommand: j,
     activeCommandOption: D
   } = (0, r.useStateFromStoresObject)([s.default], () => ({
-    activeCommand: s.default.getActiveCommand(_.id),
-    activeCommandOption: s.default.getActiveOption(_.id)
+    activeCommand: s.default.getActiveCommand(N.id),
+    activeCommandOption: s.default.getActiveOption(N.id)
   })), w = (0, h.default)({
     navId: "channel-autocomplete",
     scrollerRef: n,
@@ -70,7 +70,7 @@ function C(e, t, n) {
     currentWord: null !== (I = null == B ? void 0 : B.word) && void 0 !== I ? I : "",
     currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
     optionText: null != D ? (0, o.getString)({
-      [D.name]: null !== (N = null === (v = e.editorRef.current) || void 0 === v ? void 0 : v.getCurrentCommandOptionValue()) && void 0 !== N ? N : []
+      [D.name]: null !== (_ = null === (v = e.editorRef.current) || void 0 === v ? void 0 : v.getCurrentCommandOptionValue()) && void 0 !== _ ? _ : []
     }, D.name) : ""
   }, [F] = l.useState(() => new m.default(H));
   return l.useEffect(() => {

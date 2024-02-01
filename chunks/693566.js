@@ -24,12 +24,12 @@ function u(e) {
   "function" != typeof n && (n = c), a(this, "lengthCalculator", n), a(this, "allowStale", e.stale || !1), a(this, "maxAge", e.maxAge || 0), a(this, "dispose", e.dispose), this.reset()
 }
 
-function d(e, t, n, r) {
+function l(e, t, n, r) {
   var i = n.value;
   f(e, i) && (h(e, n), !a(e, "allowStale") && (i = void 0)), i && t.call(r, i.value, i.key, e)
 }
 
-function l(e, t, n) {
+function d(e, t, n) {
   var r = a(e, "cache").get(t);
   if (r) {
     var i = r.value;
@@ -60,7 +60,7 @@ function h(e, t) {
   }
 }
 
-function g(e, t, n, r, i) {
+function v(e, t, n, r, i) {
   this.key = e, this.value = t, this.length = n, this.now = r, this.maxAge = i || 0
 }
 r = "function" == typeof Symbol ? function(e) {
@@ -115,13 +115,13 @@ r = "function" == typeof Symbol ? function(e) {
   t = t || this;
   for (var n = a(this, "lruList").tail; null !== n;) {
     var r = n.prev;
-    d(this, e, n, t), n = r
+    l(this, e, n, t), n = r
   }
 }, u.prototype.forEach = function(e, t) {
   t = t || this;
   for (var n = a(this, "lruList").head; null !== n;) {
     var r = n.next;
-    d(this, e, n, t), n = r
+    l(this, e, n, t), n = r
   }
 }, u.prototype.keys = function() {
   return a(this, "lruList").toArray().map(function(e) {
@@ -157,15 +157,15 @@ r = "function" == typeof Symbol ? function(e) {
   s && (r && (n += ","), n += "\n  maxAge: " + i.inspect(s, t), r = !0);
   var u = a(this, "lengthCalculator");
   u && u !== c && (r && (n += ","), n += "\n  length: " + i.inspect(a(this, "length"), t), r = !0);
-  var d = !1;
+  var l = !1;
   return a(this, "lruList").forEach(function(e) {
-    d ? n += ",\n  " : (r && (n += ",\n"), d = !0, n += "\n  ");
+    l ? n += ",\n  " : (r && (n += ",\n"), l = !0, n += "\n  ");
     var o = i.inspect(e.key).split("\n").join("\n  "),
       a = {
         value: e.value
       };
     e.maxAge !== s && (a.maxAge = e.maxAge), u !== c && (a.length = e.length), f(this, e) && (a.stale = !0), a = i.inspect(a, t).split("\n").join("\n  "), n += o + " => " + a
-  }), (d || r) && (n += "\n"), n += "}"
+  }), (l || r) && (n += "\n"), n += "}"
 }, u.prototype.set = function(e, t, n) {
   var r = (n = n || a(this, "maxAge")) ? Date.now() : 0,
     i = a(this, "lengthCalculator").call(this, t, e);
@@ -174,14 +174,14 @@ r = "function" == typeof Symbol ? function(e) {
     var o = a(this, "cache").get(e).value;
     return a(this, "dispose") && a(this, "dispose").call(this, e, o.value), o.now = r, o.maxAge = n, o.value = t, a(this, "length", a(this, "length") + (i - o.length)), o.length = i, this.get(e), p(this), !0
   }
-  var s = new g(e, t, i, r, n);
+  var s = new v(e, t, i, r, n);
   return s.length > a(this, "max") ? (a(this, "dispose") && a(this, "dispose").call(this, e, t), !1) : (a(this, "length", a(this, "length") + s.length), a(this, "lruList").unshift(s), a(this, "cache").set(e, a(this, "lruList").head), p(this), !0)
 }, u.prototype.has = function(e) {
   return !(!a(this, "cache").has(e) || f(this, a(this, "cache").get(e).value)) && !0
 }, u.prototype.get = function(e) {
-  return l(this, e, !0)
+  return d(this, e, !0)
 }, u.prototype.peek = function(e) {
-  return l(this, e, !1)
+  return d(this, e, !1)
 }, u.prototype.pop = function() {
   var e = a(this, "lruList").tail;
   return e ? (h(this, e), e.value) : null
@@ -201,6 +201,6 @@ r = "function" == typeof Symbol ? function(e) {
 }, u.prototype.prune = function() {
   var e = this;
   a(this, "cache").forEach(function(t, n) {
-    l(e, n, !1)
+    d(e, n, !1)
   })
 }

@@ -30,8 +30,8 @@ var l = a("37983"),
   N = a("697218"),
   _ = a("764490"),
   y = a("29557"),
-  O = a("599110"),
-  k = a("719923"),
+  k = a("599110"),
+  O = a("719923"),
   A = a("439932"),
   j = a("21526"),
   R = a("411691"),
@@ -134,7 +134,7 @@ var el = function(e) {
     analyticsLocations: o
   } = (0, h.default)([...r, E.default.COLLECTIBLES_SHOP]), L = (0, u.default)([I.default], () => I.default.getLayers().includes(Z.Layers.COLLECTIBLES_SHOP)), S = (0, f.useHasAnyModalOpen)(), {
     onClose: v
-  } = (0, V.useCollectiblesShopRouting)(), R = (0, u.default)([N.default], () => N.default.getCurrentUser()), M = k.default.canUseCollectibles(R), {
+  } = (0, V.useCollectiblesShopRouting)(), R = (0, u.default)([N.default], () => N.default.getCurrentUser()), M = O.default.canUseCollectibles(R), {
     categories: H,
     isFetchingCategories: U,
     error: G
@@ -155,11 +155,11 @@ var el = function(e) {
     scrollHandler: ec
   } = (0, b.usePageScrollPosition)(Z.AnalyticEvents.COLLECTIBLES_SHOP_SCROLLED, a);
   s.useEffect(() => {
-    O.default.track(Z.AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, {
+    k.default.track(Z.AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, {
       location_stack: o,
       source: a,
       page_session_id: ei
-    }), !M && O.default.track(Z.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    }), !M && k.default.track(Z.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: J.PremiumUpsellTypes.COLLECTIBLES_SHOP,
       location_stack: o
     })

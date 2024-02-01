@@ -221,8 +221,8 @@ let y = {
   },
   x = (0, p.default)([C, y]),
   I = (0, p.default)([T, y]),
-  N = a.astParserFor(x),
-  _ = a.astParserFor(I),
+  _ = a.astParserFor(x),
+  N = a.astParserFor(I),
   A = {
     max: 1 / 0,
     maxAge: 1 * m.default.Millis.MINUTE,
@@ -266,7 +266,7 @@ function M(e, t) {
                 0: ""
               },
               type: "paragraph",
-              content: (n ? _ : N)(o, !1, {
+              content: (n ? N : _)(o, !1, {
                 returnMentionIds: !0,
                 disableAutoBlockNewlines: !0,
                 guildId: t

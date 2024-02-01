@@ -26,8 +26,8 @@ var l = n("37983"),
   y = n("93393"),
   x = n("153769"),
   I = n("671434"),
-  N = n("229915"),
-  _ = n("368121"),
+  _ = n("229915"),
+  N = n("368121"),
   A = n("719923"),
   R = n("389480"),
   O = n("78581"),
@@ -84,7 +84,7 @@ function G(e) {
             className: B.headerIcon
           });
         case R.SoundboardSoundGridSectionType.SEARCH:
-          return (0, l.jsx)(N.default, {
+          return (0, l.jsx)(_.default, {
             className: B.headerIcon
           })
       }
@@ -178,7 +178,7 @@ function W(e) {
     gridNotice: y,
     soundButtonOverlay: x,
     listPadding: I,
-    renderHeader: N,
+    renderHeader: _,
     defaultSoundsOnly: k = !1
   } = e, {
     analyticsLocations: P
@@ -243,7 +243,7 @@ function W(e) {
     className: B.settingsClickArea,
     onClick: ef,
     "aria-label": w.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME,
-    children: (0, l.jsx)(_.default, {
+    children: (0, l.jsx)(N.default, {
       className: B.settingsIcon
     })
   }), [ef]), em = i.useCallback(e => (0, l.jsx)(L.default, {
@@ -287,7 +287,7 @@ function W(e) {
       renderEmptySearchState: K,
       renderInspector: eh,
       gridNotice: y,
-      renderHeader: N
+      renderHeader: _
     })]
   })
 }

@@ -8,12 +8,12 @@ var r = n("594140"),
   u = Object.prototype.hasOwnProperty;
 e.exports = function(e, t) {
   var n = o(e),
-    d = !n && i(e),
-    l = !n && !d && s(e),
-    f = !n && !d && !l && c(e),
-    p = n || d || l || f,
+    l = !n && i(e),
+    d = !n && !l && s(e),
+    f = !n && !l && !d && c(e),
+    p = n || l || d || f,
     h = p ? r(e.length, String) : [],
-    g = h.length;
-  for (var b in e)(t || u.call(e, b)) && !(p && ("length" == b || l && ("offset" == b || "parent" == b) || f && ("buffer" == b || "byteLength" == b || "byteOffset" == b) || a(b, g))) && h.push(b);
+    v = h.length;
+  for (var g in e)(t || u.call(e, g)) && !(p && ("length" == g || d && ("offset" == g || "parent" == g) || f && ("buffer" == g || "byteLength" == g || "byteOffset" == g) || a(g, v))) && h.push(g);
   return h
 }

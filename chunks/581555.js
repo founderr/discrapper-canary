@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useTableState: function() {
-    return l
+    return d
   },
   buildHeaderRows: function() {
     return c
@@ -190,23 +190,23 @@ class u extends o.GridCollection {
       o.unshift(e)
     }
     let u = [],
-      d = new Map,
-      l = e => {
+      l = new Map,
+      d = e => {
         switch (e.type) {
           case "body":
             r = e;
             break;
           case "column":
-            d.set(e.key, e), !e.hasChildNodes && (o.push(e), e.props.isRowHeader && i.add(e.key));
+            l.set(e.key, e), !e.hasChildNodes && (o.push(e), e.props.isRowHeader && i.add(e.key));
             break;
           case "item":
             u.push(e);
             return
         }
-        for (let t of e.childNodes) l(t)
+        for (let t of e.childNodes) d(t)
       };
-    for (let t of e) l(t);
-    let f = c(d, o);
+    for (let t of e) d(t);
+    let f = c(l, o);
     f.forEach((e, t) => u.splice(t, 0, e)), super({
       columnCount: o.length,
       items: u,
@@ -214,22 +214,22 @@ class u extends o.GridCollection {
     }), this._size = 0, this.columns = o, this.rowHeaderColumnKeys = i, this.body = r, this.headerRows = f, this._size = [...r.childNodes].length, 0 === this.rowHeaderColumnKeys.size && ((null == n ? void 0 : n.showSelectionCheckboxes) ? (null == n ? void 0 : n.showDragButtons) ? this.rowHeaderColumnKeys.add(this.columns[2].key) : this.rowHeaderColumnKeys.add(this.columns[1].key) : this.rowHeaderColumnKeys.add(this.columns[0].key))
   }
 }
-let d = {
+let l = {
   ascending: "descending",
   descending: "ascending"
 };
 
-function l(e) {
+function d(e) {
   let [t, n] = (0, i.useState)(!1), {
     selectionMode: s = "none",
     showSelectionCheckboxes: a,
     showDragButtons: c
-  } = e, l = (0, i.useMemo)(() => ({
+  } = e, d = (0, i.useMemo)(() => ({
     showSelectionCheckboxes: a && "none" !== s,
     showDragButtons: c,
     selectionMode: s,
     columns: []
-  }), [e.children, a, s, c]), f = (0, r.useCollection)(e, (0, i.useCallback)(e => new u(e, null, l), [l]), l), {
+  }), [e.children, a, s, c]), f = (0, r.useCollection)(e, (0, i.useCallback)(e => new u(e, null, d), [d]), d), {
     disabledKeys: p,
     selectionManager: h
   } = (0, o.useGridState)({
@@ -249,7 +249,7 @@ function l(e) {
       var r;
       e.onSortChange({
         column: t,
-        direction: null != n ? n : (null === (r = e.sortDescriptor) || void 0 === r ? void 0 : r.column) === t ? d[e.sortDescriptor.direction] : "ascending"
+        direction: null != n ? n : (null === (r = e.sortDescriptor) || void 0 === r ? void 0 : r.column) === t ? l[e.sortDescriptor.direction] : "ascending"
       })
     }
   }

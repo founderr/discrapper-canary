@@ -29,8 +29,8 @@ var l = n("37983"),
   y = n("524768"),
   x = n("389153"),
   I = n("586450"),
-  N = n("41884"),
-  _ = n("355263"),
+  _ = n("41884"),
+  N = n("355263"),
   A = n("317041"),
   R = n("49111"),
   O = n("782340"),
@@ -141,7 +141,7 @@ var U = i.forwardRef(function(e, t) {
   let en = i.useCallback(e => {
       let t = K[e];
       if (null == t) return null;
-      let i = (0, _.getIconComponent)(t),
+      let i = (0, N.getIconComponent)(t),
         r = (0, l.jsx)(i, {
           channel: n,
           section: t,
@@ -181,7 +181,7 @@ var U = i.forwardRef(function(e, t) {
       let r = V[t.sectionIndex],
         o = r.data[t.sectionRowIndex],
         s = "".concat(r.section.id, ":").concat(null !== (i = null == o ? void 0 : o.id) && void 0 !== i ? i : e);
-      if (null == o || r.section.id !== o.applicationId && r.section.id !== A.BuiltInSectionId.FRECENCY || o.inputType === y.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(N.default, {}, s);
+      if (null == o || r.section.id !== o.applicationId && r.section.id !== A.BuiltInSectionId.FRECENCY || o.inputType === y.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(_.default, {}, s);
       let a = G.find(e => e.id === o.applicationId);
       return (0, l.jsx)(E.default.NewCommand, {
         index: e,

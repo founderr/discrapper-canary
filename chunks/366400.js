@@ -16,10 +16,10 @@ var r = n("105195"),
     }
     c ? a(e, t, n, !0) : a(e, t, n)
   },
-  d = function(e, t) {
+  l = function(e, t) {
     var n = arguments.length > 2 ? arguments[2] : {},
       o = r(t);
     i && (o = s.call(o, Object.getOwnPropertySymbols(t)));
     for (var a = 0; a < o.length; a += 1) u(e, o[a], t[o[a]], n[o[a]])
   };
-d.supportsDescriptors = !!c, e.exports = d
+l.supportsDescriptors = !!c, e.exports = l

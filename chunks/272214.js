@@ -10,8 +10,8 @@ e.exports = function(e, t, n) {
     e = t, t = u
   }
   if (n || e % 1 || t % 1) {
-    var d = c();
-    return a(e + d * (t - e + s("1e-" + ((d + "").length - 1))), t)
+    var l = c();
+    return a(e + l * (t - e + s("1e-" + ((l + "").length - 1))), t)
   }
   return r(e, t)
 }

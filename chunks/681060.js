@@ -26,8 +26,8 @@ var l = n("37983"),
   y = n("383018"),
   x = n("529190"),
   I = n("829290"),
-  N = n("842343"),
-  _ = n("200197"),
+  _ = n("842343"),
+  N = n("200197"),
   A = n("538282"),
   R = n("241488"),
   O = n("292936"),
@@ -71,8 +71,8 @@ var l = n("37983"),
       richValue: ey,
       className: ex,
       innerClassName: eI,
-      editorClassName: eN,
-      id: e_,
+      editorClassName: e_,
+      id: eN,
       required: eA,
       disabled: eR,
       placeholder: eO,
@@ -279,11 +279,11 @@ var l = n("37983"),
         handleHideAutocomplete: n
       }
     }();
-    let tN = (eE = tT, eS = ek, eg = e9, i.useCallback(e => {
+    let t_ = (eE = tT, eS = ek, eg = e9, i.useCallback(e => {
       var t, n;
       eS === Q.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eg.current) || void 0 === n || n.insertGIF(e) : eE(e.url, void 0, void 0, !0), (0, A.closeExpressionPicker)(), null === (t = eg.current) || void 0 === t || t.focus()
     }, [eg, eE, eS]));
-    let t_ = (eC = e9, i.useCallback(function(e, t) {
+    let tN = (eC = e9, i.useCallback(function(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           l = eC.current;
         null != e && null != l && l.insertEmoji(e, t, n), t && (0, A.closeExpressionPicker)()
@@ -412,7 +412,7 @@ var l = n("37983"),
       tz = (0, I.useShouldShowPTONotice)(eb),
       tQ = null != tn || null != eD || tz,
       tX = !!(null === (eu = ek.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
-    return (0, l.jsx)(_.EventEmitterProvider, {
+    return (0, l.jsx)(N.EventEmitterProvider, {
       value: tS,
       children: (0, l.jsxs)(e3, {
         children: [tY && td ? (0, l.jsx)(ei.default, {
@@ -466,7 +466,7 @@ var l = n("37983"),
                 ringClassName: ea.focusRing,
                 children: (0, l.jsx)(X.default, {
                   ref: e9,
-                  id: e_,
+                  id: eN,
                   focused: eP,
                   useSlate: tc,
                   textValue: ev,
@@ -502,7 +502,7 @@ var l = n("37983"),
                   className: o({
                     [ea.textAreaThreadCreation]: ek === Q.ChatInputTypes.THREAD_CREATION,
                     [ea.profileBioInput]: ek === Q.ChatInputTypes.PROFILE_BIO_INPUT
-                  }, eN),
+                  }, e_),
                   "aria-labelledby": e$
                 })
               }), (0, l.jsx)(ee.default, {
@@ -517,7 +517,7 @@ var l = n("37983"),
             ref: e5,
             channel: eb,
             canOnlyUseTextCommands: tF
-          }), (0, l.jsx)(N.default, {
+          }), (0, l.jsx)(_.default, {
             ref: ty,
             channel: eb,
             canMentionRoles: eY,
@@ -558,8 +558,8 @@ var l = n("37983"),
         }), tj ? null : (0, l.jsx)(R.default, {
           positionTargetRef: e7,
           type: ek,
-          onSelectGIF: tN,
-          onSelectEmoji: t_,
+          onSelectGIF: t_,
+          onSelectEmoji: tN,
           onSelectSticker: tA,
           onSelectSound: tR,
           channel: eb,

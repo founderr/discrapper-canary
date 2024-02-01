@@ -6,12 +6,12 @@ var r = n("366400"),
   a = n("16662"),
   c = a(),
   u = n("60426"),
-  d = o("Array.prototype.slice"),
-  l = function(e, t) {
-    return i(e), c.apply(e, d(arguments, 1))
+  l = o("Array.prototype.slice"),
+  d = function(e, t) {
+    return i(e), c.apply(e, l(arguments, 1))
   };
-r(l, {
+r(d, {
   getPolyfill: a,
   implementation: s,
   shim: u
-}), e.exports = l
+}), e.exports = d

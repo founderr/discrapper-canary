@@ -7,15 +7,15 @@ var r = n("725214"),
   c = n("619127"),
   u = n("786561");
 
-function d(e, t, n) {
+function l(e, t, n) {
   a.call(this), this._cache = new f, this._cipher = new c.AES(t), this._prev = o.from(n), this._mode = e, this._autopadding = !0
 }
-n("599235")(d, a), d.prototype._update = function(e) {
+n("599235")(l, a), l.prototype._update = function(e) {
   this._cache.add(e);
   for (var t, n, r = []; t = this._cache.get();) n = this._mode.encrypt(this, t), r.push(n);
   return o.concat(r)
 };
-var l = o.alloc(16, 16);
+var d = o.alloc(16, 16);
 
 function f() {
   this.cache = o.allocUnsafe(0)
@@ -26,13 +26,13 @@ function p(e, t, n) {
   if (!a) throw TypeError("invalid suite type");
   if ("string" == typeof t && (t = o.from(t)), t.length !== a.key / 8) throw TypeError("invalid key length " + t.length);
   if ("string" == typeof n && (n = o.from(n)), "GCM" !== a.mode && n.length !== a.iv) throw TypeError("invalid iv length " + n.length);
-  return "stream" === a.type ? new s(a.module, t, n) : "auth" === a.type ? new i(a.module, t, n) : new d(a.module, t, n)
+  return "stream" === a.type ? new s(a.module, t, n) : "auth" === a.type ? new i(a.module, t, n) : new l(a.module, t, n)
 }
-d.prototype._final = function() {
+l.prototype._final = function() {
   var e = this._cache.flush();
   if (this._autopadding) return e = this._mode.encrypt(this, e), this._cipher.scrub(), e;
-  if (!e.equals(l)) throw this._cipher.scrub(), Error("data not multiple of block length")
-}, d.prototype.setAutoPadding = function(e) {
+  if (!e.equals(d)) throw this._cipher.scrub(), Error("data not multiple of block length")
+}, l.prototype.setAutoPadding = function(e) {
   return this._autopadding = !!e, this
 }, f.prototype.add = function(e) {
   this.cache = o.concat([this.cache, e])

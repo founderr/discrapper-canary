@@ -107,8 +107,8 @@ t.sum64_4_lo = function(e, t, n, r, i, o, s, a) {
   return t + r + o + a >>> 0
 };
 t.sum64_5_hi = function(e, t, n, r, i, o, s, a, c, u) {
-  var d, l = t;
-  return d = 0 + ((l = l + r >>> 0) < t ? 1 : 0), d += (l = l + o >>> 0) < o ? 1 : 0, d += (l = l + a >>> 0) < a ? 1 : 0, e + n + i + s + c + (d += (l = l + u >>> 0) < u ? 1 : 0) >>> 0
+  var l, d = t;
+  return l = 0 + ((d = d + r >>> 0) < t ? 1 : 0), l += (d = d + o >>> 0) < o ? 1 : 0, l += (d = d + a >>> 0) < a ? 1 : 0, e + n + i + s + c + (l += (d = d + u >>> 0) < u ? 1 : 0) >>> 0
 };
 t.sum64_5_lo = function(e, t, n, r, i, o, s, a, c, u) {
   return t + r + o + a + u >>> 0

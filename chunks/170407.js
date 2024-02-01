@@ -30,17 +30,17 @@ var a = /^\s*class\b/,
       return !1
     }
   },
-  d = Object.prototype.toString,
-  l = "function" == typeof Symbol && !!Symbol.toStringTag,
+  l = Object.prototype.toString,
+  d = "function" == typeof Symbol && !!Symbol.toStringTag,
   f = !(0 in [, ]),
   p = function() {
     return !1
   };
 if ("object" == typeof document) {
   var h = document.all;
-  d.call(h) === d.call(document.all) && (p = function(e) {
+  l.call(h) === l.call(document.all) && (p = function(e) {
     if ((f || !e) && (void 0 === e || "object" == typeof e)) try {
-      var t = d.call(e);
+      var t = l.call(e);
       return ("[object HTMLAllCollection]" === t || "[object HTML document.all class]" === t || "[object HTMLCollection]" === t || "[object Object]" === t) && null == e("")
     } catch (e) {}
     return !1
@@ -58,8 +58,8 @@ e.exports = s ? function(e) {
 } : function(e) {
   if (p(e)) return !0;
   if (!e || "function" != typeof e && "object" != typeof e) return !1;
-  if (l) return u(e);
+  if (d) return u(e);
   if (c(e)) return !1;
-  var t = d.call(e);
+  var t = l.call(e);
   return !!("[object Function]" === t || "[object GeneratorFunction]" === t || /^\[object HTML/.test(t)) && u(e)
 }

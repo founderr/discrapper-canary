@@ -20,15 +20,15 @@ function u(e) {
   }, e || {});
   var t, n = this.options;
   n.raw && n.windowBits > 0 ? n.windowBits = -n.windowBits : n.gzip && n.windowBits > 0 && n.windowBits < 16 && (n.windowBits += 16), this.err = 0, this.msg = "", this.ended = !1, this.chunks = [], this.strm = new a, this.strm.avail_out = 0;
-  var d = r.deflateInit2(this.strm, n.level, n.method, n.windowBits, n.memLevel, n.strategy);
-  if (0 !== d) throw Error(s[d]);
+  var l = r.deflateInit2(this.strm, n.level, n.method, n.windowBits, n.memLevel, n.strategy);
+  if (0 !== l) throw Error(s[l]);
   if (n.header && r.deflateSetHeader(this.strm, n.header), n.dictionary) {
-    if (t = "string" == typeof n.dictionary ? o.string2buf(n.dictionary) : "[object ArrayBuffer]" === c.call(n.dictionary) ? new Uint8Array(n.dictionary) : n.dictionary, 0 !== (d = r.deflateSetDictionary(this.strm, t))) throw Error(s[d]);
+    if (t = "string" == typeof n.dictionary ? o.string2buf(n.dictionary) : "[object ArrayBuffer]" === c.call(n.dictionary) ? new Uint8Array(n.dictionary) : n.dictionary, 0 !== (l = r.deflateSetDictionary(this.strm, t))) throw Error(s[l]);
     this._dict_set = !0
   }
 }
 
-function d(e, t) {
+function l(e, t) {
   var n = new u(t);
   if (n.push(e, !0), n.err) throw n.msg || s[n.err];
   return n.result
@@ -48,8 +48,8 @@ u.prototype.push = function(e, t) {
 }, u.prototype.onEnd = function(e) {
   0 === e && ("string" === this.options.to ? this.result = this.chunks.join("") : this.result = i.flattenChunks(this.chunks)), this.chunks = [], this.err = e, this.msg = this.strm.msg
 };
-t.Deflate = u, t.deflate = d, t.deflateRaw = function(e, t) {
-  return (t = t || {}).raw = !0, d(e, t)
+t.Deflate = u, t.deflate = l, t.deflateRaw = function(e, t) {
+  return (t = t || {}).raw = !0, l(e, t)
 }, t.gzip = function(e, t) {
-  return (t = t || {}).gzip = !0, d(e, t)
+  return (t = t || {}).gzip = !0, l(e, t)
 }

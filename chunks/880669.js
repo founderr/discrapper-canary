@@ -26,11 +26,11 @@ n("599235")(i, r), i.Readable = n("245387"), i.Writable = n("769419"), i.Duplex 
   }
 
   function u(e) {
-    if (d(), 0 === r.listenerCount(this, "error")) throw e
+    if (l(), 0 === r.listenerCount(this, "error")) throw e
   }
 
-  function d() {
-    n.removeListener("data", i), e.removeListener("drain", o), n.removeListener("end", a), n.removeListener("close", c), n.removeListener("error", u), e.removeListener("error", u), n.removeListener("end", d), n.removeListener("close", d), e.removeListener("close", d)
+  function l() {
+    n.removeListener("data", i), e.removeListener("drain", o), n.removeListener("end", a), n.removeListener("close", c), n.removeListener("error", u), e.removeListener("error", u), n.removeListener("end", l), n.removeListener("close", l), e.removeListener("close", l)
   }
-  return n.on("error", u), e.on("error", u), n.on("end", d), n.on("close", d), e.on("close", d), e.emit("pipe", n), e
+  return n.on("error", u), e.on("error", u), n.on("end", l), n.on("close", l), e.on("close", l), e.emit("pipe", n), e
 }

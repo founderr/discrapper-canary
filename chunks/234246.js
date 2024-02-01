@@ -130,8 +130,8 @@ l = class extends i.EventEmitter {
     for (let e of Object.values(T)) Array.isArray(e) && (y += e.length);
     let x = !0 === T.isLoading,
       I = this.shouldShow(y, x, m),
-      N = this.state.selectedIndex;
-    !I || x ? N = null : null != N && N >= y && (N = y - 1), I && !this.state.isVisible && (0, o.trackAutocompleteOpen)(p, this.props.channel, v), this.setState({
+      _ = this.state.selectedIndex;
+    !I || x ? _ = null : null != _ && _ >= y && (_ = y - 1), I && !this.state.isVisible && (0, o.trackAutocompleteOpen)(p, this.props.channel, v), this.setState({
       query: {
         type: p,
         typeInfo: m,
@@ -142,7 +142,7 @@ l = class extends i.EventEmitter {
         isLoading: x
       },
       isVisible: I,
-      selectedIndex: N
+      selectedIndex: _
     })
   }
   shouldShow(e, t, n) {

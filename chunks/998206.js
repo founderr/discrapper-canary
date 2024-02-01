@@ -27,16 +27,16 @@ var l = n("37983"),
   x = n("782340"),
   I = n("851855");
 
-function N(e) {
+function _(e) {
   let {
     disabled: t,
     channel: n,
     markAsDismissed: r,
     visibleContent: S,
-    innerRef: N
-  } = e, _ = (0, d.useAppContext)(), {
+    innerRef: _
+  } = e, N = (0, d.useAppContext)(), {
     analyticsLocations: A
-  } = (0, E.default)(), R = _ === T.AppContext.POPOUT, O = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), b = i.useCallback(() => {
+  } = (0, E.default)(), R = N === T.AppContext.POPOUT, O = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), b = i.useCallback(() => {
     r(v.ContentDismissActionType.UNKNOWN), (0, h.default)({
       channel: M ? n : void 0,
       guildId: n.guild_id,
@@ -72,7 +72,7 @@ function N(e) {
     children: e => (0, l.jsxs)("div", {
       ...e,
       className: o(y.CHAT_INPUT_BUTTON_CLASSNAME, I.buttonContainer),
-      ref: N,
+      ref: _,
       children: [(0, l.jsx)(m.default, {
         onClick: b,
         tabIndex: 0,
@@ -88,16 +88,16 @@ function N(e) {
     })
   })
 }
-let _ = [a.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
+let N = [a.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
 var A = i.memo(i.forwardRef(function(e, t) {
   return (0, l.jsx)(S.default, {
-    contentTypes: _,
+    contentTypes: N,
     children: n => {
       let {
         visibleContent: i,
         markAsDismissed: r
       } = n;
-      return (0, l.jsx)(N, {
+      return (0, l.jsx)(_, {
         ...e,
         innerRef: t,
         visibleContent: i,

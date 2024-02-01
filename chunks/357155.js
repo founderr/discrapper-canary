@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   reduce: function() {
-    return l
+    return d
   }
 }), n("424973");
 var r = n("344581"),
@@ -22,7 +22,7 @@ function u(e, t) {
   return n
 }
 
-function d(e) {
+function l(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     t % 2 ? u(Object(n), !0).forEach(function(t) {
@@ -41,13 +41,13 @@ function d(e) {
   return e
 }
 
-function l() {
+function d() {
   var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     t = arguments.length > 1 ? arguments[1] : void 0;
   return {
     dirtyHandlerIds: (0, s.reduce)(e.dirtyHandlerIds, {
       type: t.type,
-      payload: d(d({}, t.payload), {}, {
+      payload: l(l({}, t.payload), {}, {
         prevTargetIds: (0, c.get)(e, "dragOperation.targetIds", [])
       })
     }),

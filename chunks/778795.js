@@ -25,7 +25,7 @@ function u(e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? arguments[t] : {};
     t % 2 ? c(Object(n), !0).forEach(function(t) {
-      l(e, t, n[t])
+      d(e, t, n[t])
     }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : c(Object(n)).forEach(function(t) {
       Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t))
     })
@@ -33,14 +33,14 @@ function u(e) {
   return e
 }
 
-function d(e, t) {
+function l(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
   }
 }
 
-function l(e, t, n) {
+function d(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -55,19 +55,19 @@ var f = function() {
     var s = this;
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, c), l(this, "options", void 0), l(this, "actions", void 0), l(this, "monitor", void 0), l(this, "registry", void 0), l(this, "enterLeaveCounter", void 0), l(this, "sourcePreviewNodes", new Map), l(this, "sourcePreviewNodeOptions", new Map), l(this, "sourceNodes", new Map), l(this, "sourceNodeOptions", new Map), l(this, "dragStartSourceIds", null), l(this, "dropTargetIds", []), l(this, "dragEnterTargetIds", []), l(this, "currentNativeSource", null), l(this, "currentNativeHandle", null), l(this, "currentDragSourceNode", null), l(this, "altKeyPressed", !1), l(this, "mouseMoveTimeoutTimer", null), l(this, "asyncEndDragFrameId", null), l(this, "dragOverTargetIds", null), l(this, "getSourceClientOffset", function(e) {
+    }(this, c), d(this, "options", void 0), d(this, "actions", void 0), d(this, "monitor", void 0), d(this, "registry", void 0), d(this, "enterLeaveCounter", void 0), d(this, "sourcePreviewNodes", new Map), d(this, "sourcePreviewNodeOptions", new Map), d(this, "sourceNodes", new Map), d(this, "sourceNodeOptions", new Map), d(this, "dragStartSourceIds", null), d(this, "dropTargetIds", []), d(this, "dragEnterTargetIds", []), d(this, "currentNativeSource", null), d(this, "currentNativeHandle", null), d(this, "currentDragSourceNode", null), d(this, "altKeyPressed", !1), d(this, "mouseMoveTimeoutTimer", null), d(this, "asyncEndDragFrameId", null), d(this, "dragOverTargetIds", null), d(this, "getSourceClientOffset", function(e) {
       var t = s.sourceNodes.get(e);
       return t && (0, i.getNodeClientOffset)(t) || null
-    }), l(this, "endDragNativeItem", function() {
+    }), d(this, "endDragNativeItem", function() {
       s.isDraggingNativeItem() && (s.actions.endDrag(), s.currentNativeHandle && s.registry.removeSource(s.currentNativeHandle), s.currentNativeHandle = null, s.currentNativeSource = null)
-    }), l(this, "isNodeInDocument", function(e) {
+    }), d(this, "isNodeInDocument", function(e) {
       return !!(e && s.document && s.document.body && s.document.body.contains(e))
-    }), l(this, "endDragIfSourceWasRemovedFromDOM", function() {
+    }), d(this, "endDragIfSourceWasRemovedFromDOM", function() {
       var e = s.currentDragSourceNode;
       !(null == e || s.isNodeInDocument(e)) && s.clearCurrentDragSourceNode() && s.monitor.isDragging() && s.actions.endDrag()
-    }), l(this, "handleTopDragStartCapture", function() {
+    }), d(this, "handleTopDragStartCapture", function() {
       s.clearCurrentDragSourceNode(), s.dragStartSourceIds = []
-    }), l(this, "handleTopDragStart", function(e) {
+    }), d(this, "handleTopDragStart", function(e) {
       if (!e.defaultPrevented) {
         var t = s.dragStartSourceIds;
         s.dragStartSourceIds = null;
@@ -83,21 +83,21 @@ var f = function() {
           if (r && "function" == typeof r.setDragImage) {
             var c = s.monitor.getSourceId(),
               u = s.sourceNodes.get(c),
-              d = s.sourcePreviewNodes.get(c) || u;
-            if (d) {
-              var l = s.getCurrentSourcePreviewNodeOptions(),
-                f = l.anchorX,
-                p = l.anchorY,
-                h = l.offsetX,
-                g = l.offsetY,
-                b = (0, i.getDragPreviewOffset)(u, d, n, {
+              l = s.sourcePreviewNodes.get(c) || u;
+            if (l) {
+              var d = s.getCurrentSourcePreviewNodeOptions(),
+                f = d.anchorX,
+                p = d.anchorY,
+                h = d.offsetX,
+                v = d.offsetY,
+                g = (0, i.getDragPreviewOffset)(u, l, n, {
                   anchorX: f,
                   anchorY: p
                 }, {
                   offsetX: h,
-                  offsetY: g
+                  offsetY: v
                 });
-              r.setDragImage(d, b.x, b.y)
+              r.setDragImage(l, g.x, g.y)
             }
           }
           try {
@@ -112,24 +112,24 @@ var f = function() {
           e.preventDefault()
         }
       }
-    }), l(this, "handleTopDragEndCapture", function() {
+    }), d(this, "handleTopDragEndCapture", function() {
       s.clearCurrentDragSourceNode() && s.monitor.isDragging() && s.actions.endDrag()
-    }), l(this, "handleTopDragEnterCapture", function(e) {
+    }), d(this, "handleTopDragEnterCapture", function(e) {
       if (s.dragEnterTargetIds = [], !(!s.enterLeaveCounter.enter(e.target) || s.monitor.isDragging())) {
         var t = e.dataTransfer,
           n = (0, o.matchNativeItemType)(t);
         n && s.beginDragNativeItem(n, t)
       }
-    }), l(this, "handleTopDragEnter", function(e) {
+    }), d(this, "handleTopDragEnter", function(e) {
       var t = s.dragEnterTargetIds;
       s.dragEnterTargetIds = [], s.monitor.isDragging() && (s.altKeyPressed = e.altKey, t.length > 0 && s.actions.hover(t, {
         clientOffset: (0, i.getEventClientOffset)(e)
       }), t.some(function(e) {
         return s.monitor.canDropOnTarget(e)
       }) && (e.preventDefault(), e.dataTransfer && (e.dataTransfer.dropEffect = s.getCurrentDropEffect())))
-    }), l(this, "handleTopDragOverCapture", function() {
+    }), d(this, "handleTopDragOverCapture", function() {
       s.dragOverTargetIds = []
-    }), l(this, "handleTopDragOver", function(e) {
+    }), d(this, "handleTopDragOver", function(e) {
       var t = s.dragOverTargetIds;
       if (s.dragOverTargetIds = [], !s.monitor.isDragging()) {
         e.preventDefault(), e.dataTransfer && (e.dataTransfer.dropEffect = "none");
@@ -140,24 +140,24 @@ var f = function() {
       }), (t || []).some(function(e) {
         return s.monitor.canDropOnTarget(e)
       }) ? (e.preventDefault(), e.dataTransfer && (e.dataTransfer.dropEffect = s.getCurrentDropEffect())) : s.isDraggingNativeItem() ? e.preventDefault() : (e.preventDefault(), e.dataTransfer && (e.dataTransfer.dropEffect = "none"))
-    }), l(this, "handleTopDragLeaveCapture", function(e) {
+    }), d(this, "handleTopDragLeaveCapture", function(e) {
       s.isDraggingNativeItem() && e.preventDefault(), s.enterLeaveCounter.leave(e.target) && s.isDraggingNativeItem() && setTimeout(function() {
         return s.endDragNativeItem()
       }, 0)
-    }), l(this, "handleTopDropCapture", function(e) {
+    }), d(this, "handleTopDropCapture", function(e) {
       if (s.dropTargetIds = [], s.isDraggingNativeItem()) {
         var t;
         e.preventDefault(), null === (t = s.currentNativeSource) || void 0 === t || t.loadDataTransfer(e.dataTransfer)
       } else(0, o.matchNativeItemType)(e.dataTransfer) && e.preventDefault();
       s.enterLeaveCounter.reset()
-    }), l(this, "handleTopDrop", function(e) {
+    }), d(this, "handleTopDrop", function(e) {
       var t = s.dropTargetIds;
       s.dropTargetIds = [], s.actions.hover(t, {
         clientOffset: (0, i.getEventClientOffset)(e)
       }), s.actions.drop({
         dropEffect: s.getCurrentDropEffect()
       }), s.isDraggingNativeItem() ? s.endDragNativeItem() : s.monitor.isDragging() && s.actions.endDrag()
-    }), l(this, "handleSelectStart", function(e) {
+    }), d(this, "handleSelectStart", function(e) {
       var t = e.target;
       if ("function" == typeof t.dragDrop) "INPUT" !== t.tagName && "SELECT" !== t.tagName && "TEXTAREA" !== t.tagName && !t.isContentEditable && (e.preventDefault(), t.dragDrop())
     }), this.options = new a.OptionsReader(t, n), this.actions = e.getActions(), this.monitor = e.getMonitor(), this.registry = e.getRegistry(), this.enterLeaveCounter = new r.EnterLeaveCounter(this.isNodeInDocument)
@@ -339,5 +339,5 @@ var f = function() {
     value: function(e, t) {
       this.dropTargetIds.unshift(t)
     }
-  }], d(e.prototype, t), n && d(e, n), c
+  }], l(e.prototype, t), n && l(e, n), c
 }()

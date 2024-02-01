@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DndProvider: function() {
-    return l
+    return d
   }
 }), n("70102"), n("222007"), n("424973");
 var r = n("37983"),
@@ -16,9 +16,9 @@ function c(e, t) {
   return r
 }
 var u = 0,
-  d = Symbol.for("__REACT_DND_CONTEXT_INSTANCE__"),
-  l = (0, i.memo)(function(e) {
-    var t, n, l = e.children;
+  l = Symbol.for("__REACT_DND_CONTEXT_INSTANCE__"),
+  d = (0, i.memo)(function(e) {
+    var t, n, d = e.children;
     var p = (n = 2, function(e) {
         if (Array.isArray(e)) return e
       }(t = function(e) {
@@ -28,9 +28,9 @@ var u = 0,
           var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f(),
             n = arguments.length > 2 ? arguments[2] : void 0,
             r = arguments.length > 3 ? arguments[3] : void 0;
-          return !t[d] && (t[d] = {
+          return !t[l] && (t[l] = {
             dragDropManager: (0, o.createDragDropManager)(e, t, n, r)
-          }), t[d]
+          }), t[l]
         }(e.backend, e.context, e.options, e.debugMode), !e.context]
       }(function(e, t) {
         if (null == e) return {};
@@ -78,19 +78,19 @@ var u = 0,
         throw TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()),
       h = p[0],
-      g = p[1];
+      v = p[1];
     return (0, i.useEffect)(function() {
-      if (g) {
+      if (v) {
         var e = f();
         return ++u,
           function() {
-            0 == --u && (e[d] = null)
+            0 == --u && (e[l] = null)
           }
       }
     }, []), (0, r.jsx)(s.DndContext.Provider, Object.assign({
       value: h
     }, {
-      children: l
+      children: d
     }), void 0)
   });
 

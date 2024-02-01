@@ -7,18 +7,18 @@ var r = n("391149"),
   c = n("619127"),
   u = n("786561");
 
-function d(e, t, n) {
-  a.call(this), this._cache = new l, this._last = void 0, this._cipher = new c.AES(t), this._prev = i.from(n), this._mode = e, this._autopadding = !0
+function l(e, t, n) {
+  a.call(this), this._cache = new d, this._last = void 0, this._cipher = new c.AES(t), this._prev = i.from(n), this._mode = e, this._autopadding = !0
 }
 
-function l() {
+function d() {
   this.cache = i.allocUnsafe(0)
 }
-n("599235")(d, a), d.prototype._update = function(e) {
+n("599235")(l, a), l.prototype._update = function(e) {
   this._cache.add(e);
   for (var t, n, r = []; t = this._cache.get(this._autopadding);) n = this._mode.decrypt(this, t), r.push(n);
   return i.concat(r)
-}, d.prototype._final = function() {
+}, l.prototype._final = function() {
   var e = this._cache.flush();
   if (this._autopadding) return function(e) {
     var t = e[15];
@@ -28,17 +28,17 @@ n("599235")(d, a), d.prototype._update = function(e) {
     if (16 !== t) return e.slice(0, 16 - t)
   }(this._mode.decrypt(this, e));
   if (e) throw Error("data not multiple of block length")
-}, d.prototype.setAutoPadding = function(e) {
+}, l.prototype.setAutoPadding = function(e) {
   return this._autopadding = !!e, this
-}, l.prototype.add = function(e) {
+}, d.prototype.add = function(e) {
   this.cache = i.concat([this.cache, e])
-}, l.prototype.get = function(e) {
+}, d.prototype.get = function(e) {
   var t;
   if (e) {
     if (this.cache.length > 16) return t = this.cache.slice(0, 16), this.cache = this.cache.slice(16), t
   } else if (this.cache.length >= 16) return t = this.cache.slice(0, 16), this.cache = this.cache.slice(16), t;
   return null
-}, l.prototype.flush = function() {
+}, d.prototype.flush = function() {
   if (this.cache.length) return this.cache
 };
 
@@ -47,7 +47,7 @@ function f(e, t, n) {
   if (!a) throw TypeError("invalid suite type");
   if ("string" == typeof n && (n = i.from(n)), "GCM" !== a.mode && n.length !== a.iv) throw TypeError("invalid iv length " + n.length);
   if ("string" == typeof t && (t = i.from(t)), t.length !== a.key / 8) throw TypeError("invalid key length " + t.length);
-  return "stream" === a.type ? new s(a.module, t, n, !0) : "auth" === a.type ? new r(a.module, t, n, !0) : new d(a.module, t, n)
+  return "stream" === a.type ? new s(a.module, t, n, !0) : "auth" === a.type ? new r(a.module, t, n, !0) : new l(a.module, t, n)
 }
 t.createDecipher = function(e, t) {
   var n = o[e.toLowerCase()];

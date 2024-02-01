@@ -7,11 +7,11 @@ var r = n("648644"),
   c = n("284400");
 o();
 var u = r(a()),
-  d = function(e) {
+  l = function(e) {
     return u(void 0 === this ? Promise : this, e)
   };
-i(d, {
+i(l, {
   getPolyfill: a,
   implementation: s,
   shim: c
-}), e.exports = d
+}), e.exports = l

@@ -6,13 +6,13 @@ var r = n("626785"),
   c = n("558304"),
   u = n("540893");
 e.exports = function(e, t, n) {
-  var d = -1;
+  var l = -1;
   return t = r(t.length ? t : [u], a(i)), s(o(e, function(e, n, i) {
     return {
       criteria: r(t, function(t) {
         return t(e)
       }),
-      index: ++d,
+      index: ++l,
       value: e
     }
   }), function(e, t) {

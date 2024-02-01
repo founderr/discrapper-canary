@@ -21,28 +21,28 @@ e = n.nmd(e), n("781738"), (function() {
     var n = void 0 === t ? new Date : new Date(t instanceof Date ? t : 1e3 * t),
       r = /\\?([a-z])/gi,
       a = function(e, t) {
-        return d[e] ? d[e]() : t
+        return l[e] ? l[e]() : t
       },
       c = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       u = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-      d = {
+      l = {
         d: function() {
-          return i.pad(d.j(), 2, "0")
+          return i.pad(l.j(), 2, "0")
         },
         D: function() {
-          return d.l().slice(0, 3)
+          return l.l().slice(0, 3)
         },
         j: function() {
           return n.getDate()
         },
         l: function() {
-          return c[d.w()]
+          return c[l.w()]
         },
         N: function() {
-          return d.w() || 7
+          return l.w() || 7
         },
         S: function() {
-          var e = d.j();
+          var e = l.j();
           return e > 4 && e < 21 ? "th" : ({
             1: "st",
             2: "nd",
@@ -53,46 +53,46 @@ e = n.nmd(e), n("781738"), (function() {
           return n.getDay()
         },
         z: function() {
-          return (d.L() ? s[d.n()] : o[d.n()]) + d.j() - 1
+          return (l.L() ? s[l.n()] : o[l.n()]) + l.j() - 1
         },
         W: function() {
-          var e = d.z() - d.N() + 1.5;
+          var e = l.z() - l.N() + 1.5;
           return i.pad(1 + Math.floor(Math.abs(e) / 7) + (e % 7 > 3.5 ? 1 : 0), 2, "0")
         },
         F: function() {
           return u[n.getMonth()]
         },
         m: function() {
-          return i.pad(d.n(), 2, "0")
+          return i.pad(l.n(), 2, "0")
         },
         M: function() {
-          return d.F().slice(0, 3)
+          return l.F().slice(0, 3)
         },
         n: function() {
           return n.getMonth() + 1
         },
         t: function() {
-          return new Date(d.Y(), d.n(), 0).getDate()
+          return new Date(l.Y(), l.n(), 0).getDate()
         },
         L: function() {
-          return 1 === new Date(d.Y(), 1, 29).getMonth() ? 1 : 0
+          return 1 === new Date(l.Y(), 1, 29).getMonth() ? 1 : 0
         },
         o: function() {
-          var e = d.n(),
-            t = d.W();
-          return d.Y() + (12 === e && t < 9 ? -1 : 1 === e && t > 9)
+          var e = l.n(),
+            t = l.W();
+          return l.Y() + (12 === e && t < 9 ? -1 : 1 === e && t > 9)
         },
         Y: function() {
           return n.getFullYear()
         },
         y: function() {
-          return String(d.Y()).slice(-2)
+          return String(l.Y()).slice(-2)
         },
         a: function() {
           return n.getHours() > 11 ? "pm" : "am"
         },
         A: function() {
-          return d.a().toUpperCase()
+          return l.a().toUpperCase()
         },
         B: function() {
           var e = n.getTime() / 1e3,
@@ -102,16 +102,16 @@ e = n.nmd(e), n("781738"), (function() {
           return e < 0 ? Math.ceil(r) : Math.floor(r)
         },
         g: function() {
-          return d.G() % 12 || 12
+          return l.G() % 12 || 12
         },
         G: function() {
           return n.getHours()
         },
         h: function() {
-          return i.pad(d.g(), 2, "0")
+          return i.pad(l.g(), 2, "0")
         },
         H: function() {
-          return i.pad(d.G(), 2, "0")
+          return i.pad(l.G(), 2, "0")
         },
         i: function() {
           return i.pad(n.getMinutes(), 2, "0")
@@ -128,7 +128,7 @@ e = n.nmd(e), n("781738"), (function() {
           return (e > 0 ? "-" : "+") + i.pad(100 * Math.floor(t / 60) + t % 60, 4, "0")
         },
         P: function() {
-          var e = d.O();
+          var e = l.O();
           return e.substr(0, 3) + ":" + e.substr(3, 2)
         },
         Z: function() {
@@ -190,13 +190,13 @@ e = n.nmd(e), n("781738"), (function() {
     return (t = void 0 === t ? 1024 : t, e <= 0) ? "0 bytes" : (e < t && void 0 === n && (n = 0), void 0 === s && (s = " "), i.intword(e, ["bytes", "KB", "MB", "GB", "TB", "PB"], t, n, r, o, s))
   }, i.intword = function(e, t, n, r, o, s, a) {
     u = (t = t || ["", "K", "M", "B", "T"]).length - 1, n = n || 1e3, r = isNaN(r) ? 2 : Math.abs(r), o = o || ".", s = s || ",", a = a || "";
-    for (var c, u, d = 0; d < t.length; d++)
-      if (e < Math.pow(n, d + 1)) {
-        u = d;
+    for (var c, u, l = 0; l < t.length; l++)
+      if (e < Math.pow(n, l + 1)) {
+        u = l;
         break
       } c = e / Math.pow(n, u);
-    var l = t[u] ? a + t[u] : "";
-    return i.numberFormat(c, r, o, s) + l
+    var d = t[u] ? a + t[u] : "";
+    return i.numberFormat(c, r, o, s) + d
   }, i.linebreaks = function(e) {
     return "<p>" + (e = (e = (e = (e = (e = e.replace(/^([\n|\r]*)/, "")).replace(/([\n|\r]*)$/, "")).replace(/(\r\n|\n|\r)/g, "\n")).replace(/(\n{2,})/g, "</p><p>")).replace(/\n/g, "<br />")) + "</p>"
   }, i.nl2br = function(e) {

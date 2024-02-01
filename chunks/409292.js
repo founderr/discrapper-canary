@@ -21,8 +21,8 @@ function c(e) {
         instanceId: "dnd-core"
       }))
     }(c),
-    d = new s.DragDropMonitorImpl(u, new a.HandlerRegistryImpl(u)),
-    l = new r.DragDropManagerImpl(u, d),
-    f = e(l, t, n);
-  return l.receiveBackend(f), l
+    l = new s.DragDropMonitorImpl(u, new a.HandlerRegistryImpl(u)),
+    d = new r.DragDropManagerImpl(u, l),
+    f = e(d, t, n);
+  return d.receiveBackend(f), d
 }

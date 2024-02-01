@@ -23,8 +23,8 @@ var r = n("37983"),
   b = n("685665"),
   E = n("606292"),
   v = n("688318"),
-  m = n("38766"),
-  y = n("601095"),
+  y = n("38766"),
+  m = n("601095"),
   T = n("493390"),
   x = n("697218"),
   I = n("923702"),
@@ -64,7 +64,7 @@ let L = e => {
   }), D = o.useRef(null), {
     analyticsLocations: P,
     AnalyticsLocationProvider: z
-  } = (0, b.default)([...s, g.default.COLLECTIBLES_COLLECTED_MODAL]), V = (0, m.default)({
+  } = (0, b.default)([...s, g.default.COLLECTIBLES_COLLECTED_MODAL]), V = (0, y.default)({
     analyticsLocations: P
   });
   return (0, r.jsxs)(z, {
@@ -88,7 +88,7 @@ let L = e => {
           "aria-label": t.name
         }), (null == w ? void 0 : w.type) === f.CollectiblesItemType.PROFILE_EFFECT && (0, r.jsx)("div", {
           className: _.profileEffectShopPreview,
-          children: (0, r.jsx)(y.default, {
+          children: (0, r.jsx)(m.default, {
             forCollectedModal: !0,
             profileEffectId: w.id
           })

@@ -31,8 +31,8 @@ function I(e) {
   let {
     onClose: r,
     closePopout: I,
-    sound: N,
-    channel: _
+    sound: _,
+    channel: N
   } = e, A = (0, d.default)(), [R, O] = i.useState(!1), {
     location: M
   } = (0, u.useAnalyticsContext)(), b = i.useMemo(() => ({
@@ -42,8 +42,8 @@ function I(e) {
     analyticsLocations: k
   } = (0, f.default)(c.default.PREMIUM_UPSELL), {
     previewSound: P
-  } = (0, S.default)(N, null !== (t = null == _ ? void 0 : _.id) && void 0 !== t ? t : null), L = (0, g.PreviewButton)({
-    sound: N,
+  } = (0, S.default)(_, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null), L = (0, g.PreviewButton)({
+    sound: _,
     previewSound: P,
     tooltipPosition: "left"
   }), U = (0, s.isThemeLight)(A) ? n("602291") : n("609708");

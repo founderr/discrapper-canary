@@ -32,8 +32,8 @@ function T(e) {
     analyticsSource: y,
     suppressPlaySound: x,
     shouldShowUpsell: I = !0,
-    gridNotice: N,
-    autoWidth: _ = !1,
+    gridNotice: _,
+    autoWidth: N = !1,
     soundButtonOverlay: A,
     listPadding: R,
     renderHeader: O,
@@ -55,7 +55,7 @@ function T(e) {
     children: (0, l.jsx)("div", {
       className: o(C.picker, {
         [C.fetching]: b,
-        [C.autoWidth]: _
+        [C.autoWidth]: N
       }),
       children: b ? (0, l.jsx)(u.Spinner, {}) : (0, l.jsx)(g.default, {
         guildId: t,
@@ -65,7 +65,7 @@ function T(e) {
         containerWidth: r,
         suppressPlaySound: x,
         shouldShowUpsell: I,
-        gridNotice: N,
+        gridNotice: _,
         soundButtonOverlay: A,
         listPadding: R,
         renderHeader: O,

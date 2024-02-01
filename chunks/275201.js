@@ -28,70 +28,70 @@ e.exports = c, c.prototype.point = function() {
   var u = [];
   for (n = 0; n < s.length; n += i.step) {
     r = 0;
-    for (var d = n + i.step - 1; d >= n; d--) r = (r << 1) + s[d];
+    for (var l = n + i.step - 1; l >= n; l--) r = (r << 1) + s[l];
     u.push(r)
   }
-  for (var l = this.jpoint(null, null, null), f = this.jpoint(null, null, null), p = c; p > 0; p--) {
+  for (var d = this.jpoint(null, null, null), f = this.jpoint(null, null, null), p = c; p > 0; p--) {
     for (n = 0; n < u.length; n++)(r = u[n]) === p ? f = f.mixedAdd(i.points[n]) : r === -p && (f = f.mixedAdd(i.points[n].neg()));
-    l = l.add(f)
+    d = d.add(f)
   }
-  return l.toP()
+  return d.toP()
 }, c.prototype._wnafMul = function(e, t) {
   var n = 4,
     r = e._getNAFPoints(n);
   n = r.wnd;
   for (var i = r.points, s = o(t, n, this._bitLength), c = this.jpoint(null, null, null), u = s.length - 1; u >= 0; u--) {
-    for (var d = 0; u >= 0 && 0 === s[u]; u--) d++;
-    if (u >= 0 && d++, c = c.dblp(d), u < 0) break;
-    var l = s[u];
-    a(0 !== l), c = "affine" === e.type ? l > 0 ? c.mixedAdd(i[l - 1 >> 1]) : c.mixedAdd(i[-l - 1 >> 1].neg()) : l > 0 ? c.add(i[l - 1 >> 1]) : c.add(i[-l - 1 >> 1].neg())
+    for (var l = 0; u >= 0 && 0 === s[u]; u--) l++;
+    if (u >= 0 && l++, c = c.dblp(l), u < 0) break;
+    var d = s[u];
+    a(0 !== d), c = "affine" === e.type ? d > 0 ? c.mixedAdd(i[d - 1 >> 1]) : c.mixedAdd(i[-d - 1 >> 1].neg()) : d > 0 ? c.add(i[d - 1 >> 1]) : c.add(i[-d - 1 >> 1].neg())
   }
   return "affine" === e.type ? c.toP() : c
 }, c.prototype._wnafMulAdd = function(e, t, n, r, i) {
-  var a, c, u, d = this._wnafT1,
-    l = this._wnafT2,
+  var a, c, u, l = this._wnafT1,
+    d = this._wnafT2,
     f = this._wnafT3,
     p = 0;
   for (a = 0; a < r; a++) {
     var h = (u = t[a])._getNAFPoints(e);
-    d[a] = h.wnd, l[a] = h.points
+    l[a] = h.wnd, d[a] = h.points
   }
   for (a = r - 1; a >= 1; a -= 2) {
-    var g = a - 1,
-      b = a;
-    if (1 !== d[g] || 1 !== d[b]) {
-      f[g] = o(n[g], d[g], this._bitLength), f[b] = o(n[b], d[b], this._bitLength), p = Math.max(f[g].length, p), p = Math.max(f[b].length, p);
+    var v = a - 1,
+      g = a;
+    if (1 !== l[v] || 1 !== l[g]) {
+      f[v] = o(n[v], l[v], this._bitLength), f[g] = o(n[g], l[g], this._bitLength), p = Math.max(f[v].length, p), p = Math.max(f[g].length, p);
       continue
     }
-    var v = [t[g], null, null, t[b]];
-    0 === t[g].y.cmp(t[b].y) ? (v[1] = t[g].add(t[b]), v[2] = t[g].toJ().mixedAdd(t[b].neg())) : 0 === t[g].y.cmp(t[b].y.redNeg()) ? (v[1] = t[g].toJ().mixedAdd(t[b]), v[2] = t[g].add(t[b].neg())) : (v[1] = t[g].toJ().mixedAdd(t[b]), v[2] = t[g].toJ().mixedAdd(t[b].neg()));
+    var b = [t[v], null, null, t[g]];
+    0 === t[v].y.cmp(t[g].y) ? (b[1] = t[v].add(t[g]), b[2] = t[v].toJ().mixedAdd(t[g].neg())) : 0 === t[v].y.cmp(t[g].y.redNeg()) ? (b[1] = t[v].toJ().mixedAdd(t[g]), b[2] = t[v].add(t[g].neg())) : (b[1] = t[v].toJ().mixedAdd(t[g]), b[2] = t[v].toJ().mixedAdd(t[g].neg()));
     var m = [-3, -1, -5, -7, 0, 7, 5, 1, 3],
-      y = s(n[g], n[b]);
-    for (c = 0, p = Math.max(y[0].length, p), f[g] = Array(p), f[b] = Array(p); c < p; c++) {
+      y = s(n[v], n[g]);
+    for (c = 0, p = Math.max(y[0].length, p), f[v] = Array(p), f[g] = Array(p); c < p; c++) {
       var x = 0 | y[0][c],
         w = 0 | y[1][c];
-      f[g][c] = m[(x + 1) * 3 + (w + 1)], f[b][c] = 0, l[g] = v
+      f[v][c] = m[(x + 1) * 3 + (w + 1)], f[g][c] = 0, d[v] = b
     }
   }
   var S = this.jpoint(null, null, null),
     k = this._wnafT4;
   for (a = p; a >= 0; a--) {
-    for (var _ = 0; a >= 0;) {
-      var E = !0;
-      for (c = 0; c < r; c++) k[c] = 0 | f[c][a], 0 !== k[c] && (E = !1);
-      if (!E) break;
-      _++, a--
+    for (var E = 0; a >= 0;) {
+      var _ = !0;
+      for (c = 0; c < r; c++) k[c] = 0 | f[c][a], 0 !== k[c] && (_ = !1);
+      if (!_) break;
+      E++, a--
     }
-    if (a >= 0 && _++, S = S.dblp(_), a < 0) break;
+    if (a >= 0 && E++, S = S.dblp(E), a < 0) break;
     for (c = 0; c < r; c++) {
       var M = k[c];
       if (0 !== M) {
-        M > 0 ? u = l[c][M - 1 >> 1] : M < 0 && (u = l[c][-M - 1 >> 1].neg());
+        M > 0 ? u = d[c][M - 1 >> 1] : M < 0 && (u = d[c][-M - 1 >> 1].neg());
         S = "affine" === u.type ? S.mixedAdd(u) : S.add(u)
       }
     }
   }
-  for (a = 0; a < r; a++) l[a] = null;
+  for (a = 0; a < r; a++) d[a] = null;
   return i ? S : S.toP()
 }, c.BasePoint = u, u.prototype.eq = function() {
   throw Error("Not implemented")

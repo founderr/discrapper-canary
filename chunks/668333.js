@@ -26,8 +26,8 @@ var l = n("37983"),
   y = n("124299"),
   x = n("841811"),
   I = n("290581"),
-  N = n("599110"),
-  _ = n("159885"),
+  _ = n("599110"),
+  N = n("159885"),
   A = n("570759"),
   R = n("866353"),
   O = n("364685"),
@@ -43,25 +43,25 @@ var l = n("37983"),
   B = n("782340"),
   H = n("327518"),
   F = n("327769");
-let G = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-  K = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
-  V = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
-  W = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
-  Y = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-  q = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
-  z = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-  Q = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
-  X = (0, _.cssValueToNumber)(s.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
-  Z = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-  J = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-  $ = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-  ee = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+let G = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+  K = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
+  V = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
+  W = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
+  Y = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+  q = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
+  z = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+  Q = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
+  X = (0, N.cssValueToNumber)(s.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
+  Z = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+  J = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+  $ = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
+  ee = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
   et = Z + 2 * $,
   en = et + ee,
   el = J + 2 * $ + ee,
   ei = [V, Y, q, z],
   er = [W, Y, q, z],
-  eo = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
+  eo = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
   es = ["laugh", "wave", "yes", "dance", "sad", "no", "hi", "bye", "cry", "ok"],
   ea = e => {
     let {
@@ -106,7 +106,7 @@ let G = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       };
       if (null != a && !(0, R.isSendableSticker)(a, l, n)) {
         let e = O.default.getStickerPack(i);
-        null != e && (N.default.track(D.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
+        null != e && (_.default.track(D.AnalyticEvents.STICKER_PACK_VIEW_ALL, {
           sticker_id: a.id,
           sticker_pack_id: i,
           location: d,
@@ -141,7 +141,7 @@ let G = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       stickersGrid: E,
       stickersCategories: S,
       filteredStickers: y,
-      ownedStickerPacks: _,
+      ownedStickerPacks: N,
       channel: A
     } = e, R = (0, d.useAnalyticsContext)(), L = (0, o.useStateFromStores)([v.default], () => v.default.getCurrentUser()), {
       handleStickerInspect: j,
@@ -168,18 +168,18 @@ let G = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         stickerDescriptors: t,
         stickerSize: n > G ? Z : J,
         preferAnimation: n <= K,
-        ownedStickerPacks: _,
+        ownedStickerPacks: N,
         isDisplayingIndividualStickers: !0,
         channel: A,
         currentUser: L
       }, e) : null
-    }, [E, s, u, c, f, m, h, j, F, n, _, A, L]), z = i.useCallback((e, t) => (0, l.jsx)("div", {
+    }, [E, s, u, c, f, m, h, j, F, n, N, A, L]), z = i.useCallback((e, t) => (0, l.jsx)("div", {
       children: t
     }, e), []), $ = i.useCallback(function(e) {
       let {
         isStickerPack: n = !0
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, l = new Set(t), i = t.has(e);
-      i ? l.delete(e) : l.add(e), N.default.track(D.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+      i ? l.delete(e) : l.add(e), _.default.track(D.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
         location: null == R ? void 0 : R.location,
         tab: w.ExpressionPickerViewType.STICKER,
         collapsed: !i,
@@ -322,8 +322,8 @@ let G = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       rowCountBySection: v,
       stickersCategories: x,
       stickersGrid: I,
-      channel: N
-    } = e, _ = i.useRef(!1), A = i.useRef(null), [R, M] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], r.default), {
+      channel: _
+    } = e, N = i.useRef(!1), A = i.useRef(null), [R, M] = m.StickerPickerStore.useStore(e => [e.activeCategoryIndex, e.inspectedExpressionPosition], r.default), {
       AnalyticsLocationProvider: b
     } = (0, f.default)(c.default.STICKER_PICKER), k = (0, h.useExpressionPickerStore)(e => e.searchQuery), P = (0, o.useStateFromStores)([O.default], () => O.default.getPremiumPacks()), U = i.useMemo(() => new Set(P.map(e => e.id)), [P]), {
       renderRow: j,
@@ -337,7 +337,7 @@ let G = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       gridWidth: s,
       stickersCategories: x,
       stickersGrid: I,
-      isScrolling: _,
+      isScrolling: N,
       isUsingKeyboardNavigation: g,
       onSelectSticker: C,
       getStickerItemProps: d,
@@ -346,10 +346,10 @@ let G = (0, _.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       inspectedStickerPosition: M,
       filteredStickers: a,
       ownedStickerPacks: U,
-      channel: N
+      channel: _
     }), Y = (0, S.useSynchronizedActiveCategoryIndexForScrollPosition)({
       activeCategoryIndex: R,
-      isScrolling: _,
+      isScrolling: N,
       listRef: A,
       onActiveCategoryIndexChange: m.StickerPickerStore.setActiveCategoryIndex,
       scrollOffset: 20,

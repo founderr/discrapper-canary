@@ -14,6 +14,6 @@ t.encrypt = function(e, t) {
       u = s + 16 * a;
     e._cache.writeUInt32BE(c[0], u + 0), e._cache.writeUInt32BE(c[1], u + 4), e._cache.writeUInt32BE(c[2], u + 8), e._cache.writeUInt32BE(c[3], u + 12)
   }
-  var d = e._cache.slice(0, t.length);
-  return e._cache = e._cache.slice(t.length), r(t, d)
+  var l = e._cache.slice(0, t.length);
+  return e._cache = e._cache.slice(t.length), r(t, l)
 }

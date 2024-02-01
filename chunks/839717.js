@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return u
   },
   DndProvider: function() {
-    return d
+    return l
   }
 }), n("70102"), n("222007"), n("424973");
 var r = n("884691"),
@@ -28,9 +28,9 @@ function c(e, t) {
   return r
 }
 var u = (0, r.createContext)(null),
-  d = function(e) {
-    var t, n, d = e.portal,
-      l = function(e, t) {
+  l = function(e) {
+    var t, n, l = e.portal,
+      d = function(e, t) {
         if (null == e) return {};
         var n, r, i = function(e, t) {
           if (null == e) return {};
@@ -81,10 +81,10 @@ var u = (0, r.createContext)(null),
       p = f[0],
       h = f[1];
     return i.createElement(u.Provider, {
-      value: null != d ? d : p
+      value: null != l ? l : p
     }, i.createElement(o.DndProvider, a({
       backend: s.MultiBackend
-    }, l)), d ? null : i.createElement("div", {
+    }, d)), l ? null : i.createElement("div", {
       ref: h
     }))
   }

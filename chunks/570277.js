@@ -9,14 +9,14 @@ var o = Number.MAX_SAFE_INTEGER || 9007199254740991,
   c = t.tokens = {},
   u = 0;
 
-function d(e) {
+function l(e) {
   c[e] = u++
 }
-d("NUMERICIDENTIFIER"), a[c.NUMERICIDENTIFIER] = "0|[1-9]\\d*", d("NUMERICIDENTIFIERLOOSE"), a[c.NUMERICIDENTIFIERLOOSE] = "[0-9]+", d("NONNUMERICIDENTIFIER"), a[c.NONNUMERICIDENTIFIER] = "\\d*[a-zA-Z-][a-zA-Z0-9-]*", d("MAINVERSION"), a[c.MAINVERSION] = "(" + a[c.NUMERICIDENTIFIER] + ")\\.(" + a[c.NUMERICIDENTIFIER] + ")\\.(" + a[c.NUMERICIDENTIFIER] + ")", d("MAINVERSIONLOOSE"), a[c.MAINVERSIONLOOSE] = "(" + a[c.NUMERICIDENTIFIERLOOSE] + ")\\.(" + a[c.NUMERICIDENTIFIERLOOSE] + ")\\.(" + a[c.NUMERICIDENTIFIERLOOSE] + ")", d("PRERELEASEIDENTIFIER"), a[c.PRERELEASEIDENTIFIER] = "(?:" + a[c.NUMERICIDENTIFIER] + "|" + a[c.NONNUMERICIDENTIFIER] + ")", d("PRERELEASEIDENTIFIERLOOSE"), a[c.PRERELEASEIDENTIFIERLOOSE] = "(?:" + a[c.NUMERICIDENTIFIERLOOSE] + "|" + a[c.NONNUMERICIDENTIFIER] + ")", d("PRERELEASE"), a[c.PRERELEASE] = "(?:-(" + a[c.PRERELEASEIDENTIFIER] + "(?:\\." + a[c.PRERELEASEIDENTIFIER] + ")*))", d("PRERELEASELOOSE"), a[c.PRERELEASELOOSE] = "(?:-?(" + a[c.PRERELEASEIDENTIFIERLOOSE] + "(?:\\." + a[c.PRERELEASEIDENTIFIERLOOSE] + ")*))", d("BUILDIDENTIFIER"), a[c.BUILDIDENTIFIER] = "[0-9A-Za-z-]+", d("BUILD"), a[c.BUILD] = "(?:\\+(" + a[c.BUILDIDENTIFIER] + "(?:\\." + a[c.BUILDIDENTIFIER] + ")*))", d("FULL"), d("FULLPLAIN"), a[c.FULLPLAIN] = "v?" + a[c.MAINVERSION] + a[c.PRERELEASE] + "?" + a[c.BUILD] + "?", a[c.FULL] = "^" + a[c.FULLPLAIN] + "$", d("LOOSEPLAIN"), a[c.LOOSEPLAIN] = "[v=\\s]*" + a[c.MAINVERSIONLOOSE] + a[c.PRERELEASELOOSE] + "?" + a[c.BUILD] + "?", d("LOOSE"), a[c.LOOSE] = "^" + a[c.LOOSEPLAIN] + "$", d("GTLT"), a[c.GTLT] = "((?:<|>)?=?)", d("XRANGEIDENTIFIERLOOSE"), a[c.XRANGEIDENTIFIERLOOSE] = a[c.NUMERICIDENTIFIERLOOSE] + "|x|X|\\*", d("XRANGEIDENTIFIER"), a[c.XRANGEIDENTIFIER] = a[c.NUMERICIDENTIFIER] + "|x|X|\\*", d("XRANGEPLAIN"), a[c.XRANGEPLAIN] = "[v=\\s]*(" + a[c.XRANGEIDENTIFIER] + ")(?:\\.(" + a[c.XRANGEIDENTIFIER] + ")(?:\\.(" + a[c.XRANGEIDENTIFIER] + ")(?:" + a[c.PRERELEASE] + ")?" + a[c.BUILD] + "?)?)?", d("XRANGEPLAINLOOSE"), a[c.XRANGEPLAINLOOSE] = "[v=\\s]*(" + a[c.XRANGEIDENTIFIERLOOSE] + ")(?:\\.(" + a[c.XRANGEIDENTIFIERLOOSE] + ")(?:\\.(" + a[c.XRANGEIDENTIFIERLOOSE] + ")(?:" + a[c.PRERELEASELOOSE] + ")?" + a[c.BUILD] + "?)?)?", d("XRANGE"), a[c.XRANGE] = "^" + a[c.GTLT] + "\\s*" + a[c.XRANGEPLAIN] + "$", d("XRANGELOOSE"), a[c.XRANGELOOSE] = "^" + a[c.GTLT] + "\\s*" + a[c.XRANGEPLAINLOOSE] + "$", d("COERCE"), a[c.COERCE] = "(^|[^\\d])(\\d{1,16})(?:\\.(\\d{1,16}))?(?:\\.(\\d{1,16}))?(?:$|[^\\d])", d("COERCERTL"), s[c.COERCERTL] = RegExp(a[c.COERCE], "g"), d("LONETILDE"), a[c.LONETILDE] = "(?:~>?)", d("TILDETRIM"), a[c.TILDETRIM] = "(\\s*)" + a[c.LONETILDE] + "\\s+", s[c.TILDETRIM] = RegExp(a[c.TILDETRIM], "g");
-d("TILDE"), a[c.TILDE] = "^" + a[c.LONETILDE] + a[c.XRANGEPLAIN] + "$", d("TILDELOOSE"), a[c.TILDELOOSE] = "^" + a[c.LONETILDE] + a[c.XRANGEPLAINLOOSE] + "$", d("LONECARET"), a[c.LONECARET] = "(?:\\^)", d("CARETTRIM"), a[c.CARETTRIM] = "(\\s*)" + a[c.LONECARET] + "\\s+", s[c.CARETTRIM] = RegExp(a[c.CARETTRIM], "g");
-d("CARET"), a[c.CARET] = "^" + a[c.LONECARET] + a[c.XRANGEPLAIN] + "$", d("CARETLOOSE"), a[c.CARETLOOSE] = "^" + a[c.LONECARET] + a[c.XRANGEPLAINLOOSE] + "$", d("COMPARATORLOOSE"), a[c.COMPARATORLOOSE] = "^" + a[c.GTLT] + "\\s*(" + a[c.LOOSEPLAIN] + ")$|^$", d("COMPARATOR"), a[c.COMPARATOR] = "^" + a[c.GTLT] + "\\s*(" + a[c.FULLPLAIN] + ")$|^$", d("COMPARATORTRIM"), a[c.COMPARATORTRIM] = "(\\s*)" + a[c.GTLT] + "\\s*(" + a[c.LOOSEPLAIN] + "|" + a[c.XRANGEPLAIN] + ")", s[c.COMPARATORTRIM] = RegExp(a[c.COMPARATORTRIM], "g");
-d("HYPHENRANGE"), a[c.HYPHENRANGE] = "^\\s*(" + a[c.XRANGEPLAIN] + ")\\s+-\\s+(" + a[c.XRANGEPLAIN] + ")\\s*$", d("HYPHENRANGELOOSE"), a[c.HYPHENRANGELOOSE] = "^\\s*(" + a[c.XRANGEPLAINLOOSE] + ")\\s+-\\s+(" + a[c.XRANGEPLAINLOOSE] + ")\\s*$", d("STAR"), a[c.STAR] = "(<|>)?=?\\s*\\*";
-for (var l = 0; l < u; l++) r(l, a[l]), !s[l] && (s[l] = new RegExp(a[l]));
+l("NUMERICIDENTIFIER"), a[c.NUMERICIDENTIFIER] = "0|[1-9]\\d*", l("NUMERICIDENTIFIERLOOSE"), a[c.NUMERICIDENTIFIERLOOSE] = "[0-9]+", l("NONNUMERICIDENTIFIER"), a[c.NONNUMERICIDENTIFIER] = "\\d*[a-zA-Z-][a-zA-Z0-9-]*", l("MAINVERSION"), a[c.MAINVERSION] = "(" + a[c.NUMERICIDENTIFIER] + ")\\.(" + a[c.NUMERICIDENTIFIER] + ")\\.(" + a[c.NUMERICIDENTIFIER] + ")", l("MAINVERSIONLOOSE"), a[c.MAINVERSIONLOOSE] = "(" + a[c.NUMERICIDENTIFIERLOOSE] + ")\\.(" + a[c.NUMERICIDENTIFIERLOOSE] + ")\\.(" + a[c.NUMERICIDENTIFIERLOOSE] + ")", l("PRERELEASEIDENTIFIER"), a[c.PRERELEASEIDENTIFIER] = "(?:" + a[c.NUMERICIDENTIFIER] + "|" + a[c.NONNUMERICIDENTIFIER] + ")", l("PRERELEASEIDENTIFIERLOOSE"), a[c.PRERELEASEIDENTIFIERLOOSE] = "(?:" + a[c.NUMERICIDENTIFIERLOOSE] + "|" + a[c.NONNUMERICIDENTIFIER] + ")", l("PRERELEASE"), a[c.PRERELEASE] = "(?:-(" + a[c.PRERELEASEIDENTIFIER] + "(?:\\." + a[c.PRERELEASEIDENTIFIER] + ")*))", l("PRERELEASELOOSE"), a[c.PRERELEASELOOSE] = "(?:-?(" + a[c.PRERELEASEIDENTIFIERLOOSE] + "(?:\\." + a[c.PRERELEASEIDENTIFIERLOOSE] + ")*))", l("BUILDIDENTIFIER"), a[c.BUILDIDENTIFIER] = "[0-9A-Za-z-]+", l("BUILD"), a[c.BUILD] = "(?:\\+(" + a[c.BUILDIDENTIFIER] + "(?:\\." + a[c.BUILDIDENTIFIER] + ")*))", l("FULL"), l("FULLPLAIN"), a[c.FULLPLAIN] = "v?" + a[c.MAINVERSION] + a[c.PRERELEASE] + "?" + a[c.BUILD] + "?", a[c.FULL] = "^" + a[c.FULLPLAIN] + "$", l("LOOSEPLAIN"), a[c.LOOSEPLAIN] = "[v=\\s]*" + a[c.MAINVERSIONLOOSE] + a[c.PRERELEASELOOSE] + "?" + a[c.BUILD] + "?", l("LOOSE"), a[c.LOOSE] = "^" + a[c.LOOSEPLAIN] + "$", l("GTLT"), a[c.GTLT] = "((?:<|>)?=?)", l("XRANGEIDENTIFIERLOOSE"), a[c.XRANGEIDENTIFIERLOOSE] = a[c.NUMERICIDENTIFIERLOOSE] + "|x|X|\\*", l("XRANGEIDENTIFIER"), a[c.XRANGEIDENTIFIER] = a[c.NUMERICIDENTIFIER] + "|x|X|\\*", l("XRANGEPLAIN"), a[c.XRANGEPLAIN] = "[v=\\s]*(" + a[c.XRANGEIDENTIFIER] + ")(?:\\.(" + a[c.XRANGEIDENTIFIER] + ")(?:\\.(" + a[c.XRANGEIDENTIFIER] + ")(?:" + a[c.PRERELEASE] + ")?" + a[c.BUILD] + "?)?)?", l("XRANGEPLAINLOOSE"), a[c.XRANGEPLAINLOOSE] = "[v=\\s]*(" + a[c.XRANGEIDENTIFIERLOOSE] + ")(?:\\.(" + a[c.XRANGEIDENTIFIERLOOSE] + ")(?:\\.(" + a[c.XRANGEIDENTIFIERLOOSE] + ")(?:" + a[c.PRERELEASELOOSE] + ")?" + a[c.BUILD] + "?)?)?", l("XRANGE"), a[c.XRANGE] = "^" + a[c.GTLT] + "\\s*" + a[c.XRANGEPLAIN] + "$", l("XRANGELOOSE"), a[c.XRANGELOOSE] = "^" + a[c.GTLT] + "\\s*" + a[c.XRANGEPLAINLOOSE] + "$", l("COERCE"), a[c.COERCE] = "(^|[^\\d])(\\d{1,16})(?:\\.(\\d{1,16}))?(?:\\.(\\d{1,16}))?(?:$|[^\\d])", l("COERCERTL"), s[c.COERCERTL] = RegExp(a[c.COERCE], "g"), l("LONETILDE"), a[c.LONETILDE] = "(?:~>?)", l("TILDETRIM"), a[c.TILDETRIM] = "(\\s*)" + a[c.LONETILDE] + "\\s+", s[c.TILDETRIM] = RegExp(a[c.TILDETRIM], "g");
+l("TILDE"), a[c.TILDE] = "^" + a[c.LONETILDE] + a[c.XRANGEPLAIN] + "$", l("TILDELOOSE"), a[c.TILDELOOSE] = "^" + a[c.LONETILDE] + a[c.XRANGEPLAINLOOSE] + "$", l("LONECARET"), a[c.LONECARET] = "(?:\\^)", l("CARETTRIM"), a[c.CARETTRIM] = "(\\s*)" + a[c.LONECARET] + "\\s+", s[c.CARETTRIM] = RegExp(a[c.CARETTRIM], "g");
+l("CARET"), a[c.CARET] = "^" + a[c.LONECARET] + a[c.XRANGEPLAIN] + "$", l("CARETLOOSE"), a[c.CARETLOOSE] = "^" + a[c.LONECARET] + a[c.XRANGEPLAINLOOSE] + "$", l("COMPARATORLOOSE"), a[c.COMPARATORLOOSE] = "^" + a[c.GTLT] + "\\s*(" + a[c.LOOSEPLAIN] + ")$|^$", l("COMPARATOR"), a[c.COMPARATOR] = "^" + a[c.GTLT] + "\\s*(" + a[c.FULLPLAIN] + ")$|^$", l("COMPARATORTRIM"), a[c.COMPARATORTRIM] = "(\\s*)" + a[c.GTLT] + "\\s*(" + a[c.LOOSEPLAIN] + "|" + a[c.XRANGEPLAIN] + ")", s[c.COMPARATORTRIM] = RegExp(a[c.COMPARATORTRIM], "g");
+l("HYPHENRANGE"), a[c.HYPHENRANGE] = "^\\s*(" + a[c.XRANGEPLAIN] + ")\\s+-\\s+(" + a[c.XRANGEPLAIN] + ")\\s*$", l("HYPHENRANGELOOSE"), a[c.HYPHENRANGELOOSE] = "^\\s*(" + a[c.XRANGEPLAINLOOSE] + ")\\s+-\\s+(" + a[c.XRANGEPLAINLOOSE] + ")\\s*$", l("STAR"), a[c.STAR] = "(<|>)?=?\\s*\\*";
+for (var d = 0; d < u; d++) r(d, a[d]), !s[d] && (s[d] = new RegExp(a[d]));
 
 function f(e, t) {
   if ((!t || "object" != typeof t) && (t = {
@@ -70,7 +70,7 @@ t.SemVer = p, p.prototype.format = function() {
 }, p.prototype.compare = function(e) {
   return r("SemVer.compare", this.version, this.options, e), !(e instanceof p) && (e = new p(e, this.options)), this.compareMain(e) || this.comparePre(e)
 }, p.prototype.compareMain = function(e) {
-  return !(e instanceof p) && (e = new p(e, this.options)), g(this.major, e.major) || g(this.minor, e.minor) || g(this.patch, e.patch)
+  return !(e instanceof p) && (e = new p(e, this.options)), v(this.major, e.major) || v(this.minor, e.minor) || v(this.patch, e.patch)
 }, p.prototype.comparePre = function(e) {
   if (!(e instanceof p) && (e = new p(e, this.options)), this.prerelease.length && !e.prerelease.length) return -1;
   if (!this.prerelease.length && e.prerelease.length) return 1;
@@ -83,7 +83,7 @@ t.SemVer = p, p.prototype.format = function() {
     if (void 0 === i) return 1;
     else if (void 0 === n) return -1;
     else if (n === i) continue;
-    else return g(n, i)
+    else return v(n, i)
   } while (++t)
 }, p.prototype.compareBuild = function(e) {
   !(e instanceof p) && (e = new p(e, this.options));
@@ -95,7 +95,7 @@ t.SemVer = p, p.prototype.format = function() {
     if (void 0 === i) return 1;
     else if (void 0 === n) return -1;
     else if (n === i) continue;
-    else return g(n, i)
+    else return v(n, i)
   } while (++t)
 }, p.prototype.inc = function(e, t) {
   switch (e) {
@@ -152,16 +152,16 @@ t.diff = function(e, t) {
     if (("major" === s || "minor" === s || "patch" === s) && n[s] !== r[s]) return i + s;
   return o
 };
-t.compareIdentifiers = g;
+t.compareIdentifiers = v;
 var h = /^[0-9]+$/;
 
-function g(e, t) {
+function v(e, t) {
   var n = h.test(e),
     r = h.test(t);
   return n && r && (e = +e, t = +t), e === t ? 0 : n && !r ? -1 : r && !n ? 1 : e < t ? -1 : 1
 }
 t.rcompareIdentifiers = function(e, t) {
-  return g(t, e)
+  return v(t, e)
 };
 t.major = function(e, t) {
   return new p(e, t).major
@@ -173,11 +173,11 @@ t.patch = function(e, t) {
   return new p(e, t).patch
 };
 
-function b(e, t, n) {
+function g(e, t, n) {
   return new p(e, n).compare(new p(t, n))
 }
-t.compare = b, t.compareLoose = function(e, t) {
-  return b(e, t, !0)
+t.compare = g, t.compareLoose = function(e, t) {
+  return g(e, t, !0)
 };
 t.compareBuild = function(e, t, n) {
   var r = new p(e, n),
@@ -185,7 +185,7 @@ t.compareBuild = function(e, t, n) {
   return r.compare(i) || r.compareBuild(i)
 };
 t.rcompare = function(e, t, n) {
-  return b(t, e, n)
+  return g(t, e, n)
 };
 t.sort = function(e, n) {
   return e.sort(function(e, r) {
@@ -198,28 +198,28 @@ t.rsort = function(e, n) {
   })
 };
 
-function v(e, t, n) {
-  return b(e, t, n) > 0
+function b(e, t, n) {
+  return g(e, t, n) > 0
 }
 
 function m(e, t, n) {
-  return 0 > b(e, t, n)
+  return 0 > g(e, t, n)
 }
 
 function y(e, t, n) {
-  return 0 === b(e, t, n)
+  return 0 === g(e, t, n)
 }
 
 function x(e, t, n) {
-  return 0 !== b(e, t, n)
+  return 0 !== g(e, t, n)
 }
 
 function w(e, t, n) {
-  return b(e, t, n) >= 0
+  return g(e, t, n) >= 0
 }
 
 function S(e, t, n) {
-  return 0 >= b(e, t, n)
+  return 0 >= g(e, t, n)
 }
 
 function k(e, t, n, r) {
@@ -235,7 +235,7 @@ function k(e, t, n, r) {
     case "!=":
       return x(e, n, r);
     case ">":
-      return v(e, n, r);
+      return b(e, n, r);
     case ">=":
       return w(e, n, r);
     case "<":
@@ -247,26 +247,26 @@ function k(e, t, n, r) {
   }
 }
 
-function _(e, t) {
+function E(e, t) {
   if ((!t || "object" != typeof t) && (t = {
       loose: !!t,
       includePrerelease: !1
-    }), e instanceof _) {
+    }), e instanceof E) {
     if (!!t.loose === e.loose) return e;
     e = e.value
   }
-  if (!(this instanceof _)) return new _(e, t);
-  r("comparator", e, t), this.options = t, this.loose = !!t.loose, this.parse(e), this.semver === E ? this.value = "" : this.value = this.operator + this.semver.version, r("comp", this)
+  if (!(this instanceof E)) return new E(e, t);
+  r("comparator", e, t), this.options = t, this.loose = !!t.loose, this.parse(e), this.semver === _ ? this.value = "" : this.value = this.operator + this.semver.version, r("comp", this)
 }
-t.gt = v, t.lt = m, t.eq = y, t.neq = x, t.gte = w, t.lte = S, t.cmp = k, t.Comparator = _;
-var E = {};
+t.gt = b, t.lt = m, t.eq = y, t.neq = x, t.gte = w, t.lte = S, t.cmp = k, t.Comparator = E;
+var _ = {};
 
 function Range(e, t) {
   if ((!t || "object" != typeof t) && (t = {
       loose: !!t,
       includePrerelease: !1
     }), e instanceof Range) return !!t.loose === e.loose && !!t.includePrerelease === e.includePrerelease ? e : new Range(e.raw, t);
-  if (e instanceof _) return new Range(e.value, t);
+  if (e instanceof E) return new Range(e.value, t);
   if (!(this instanceof Range)) return new Range(e, t);
   if (this.options = t, this.loose = !!t.loose, this.includePrerelease = !!t.includePrerelease, this.raw = e, this.set = e.split(/\s*\|\|\s*/).map(function(e) {
       return this.parseRange(e.trim())
@@ -282,23 +282,23 @@ function M(e, t) {
   }), i = r.pop();
   return n
 }
-_.prototype.parse = function(e) {
+E.prototype.parse = function(e) {
   var t = this.options.loose ? s[c.COMPARATORLOOSE] : s[c.COMPARATOR],
     n = e.match(t);
   if (!n) throw TypeError("Invalid comparator: " + e);
-  this.operator = void 0 !== n[1] ? n[1] : "", "=" === this.operator && (this.operator = ""), n[2] ? this.semver = new p(n[2], this.options.loose) : this.semver = E
-}, _.prototype.toString = function() {
+  this.operator = void 0 !== n[1] ? n[1] : "", "=" === this.operator && (this.operator = ""), n[2] ? this.semver = new p(n[2], this.options.loose) : this.semver = _
+}, E.prototype.toString = function() {
   return this.value
-}, _.prototype.test = function(e) {
-  if (r("Comparator.test", e, this.options.loose), this.semver === E || e === E) return !0;
+}, E.prototype.test = function(e) {
+  if (r("Comparator.test", e, this.options.loose), this.semver === _ || e === _) return !0;
   if ("string" == typeof e) try {
     e = new p(e, this.options)
   } catch (e) {
     return !1
   }
   return k(e, this.operator, this.semver, this.options)
-}, _.prototype.intersects = function(e, t) {
-  if (!(e instanceof _)) throw TypeError("a Comparator is required");
+}, E.prototype.intersects = function(e, t) {
+  if (!(e instanceof E)) throw TypeError("a Comparator is required");
   if ((!t || "object" != typeof t) && (t = {
       loose: !!t,
       includePrerelease: !1
@@ -354,9 +354,9 @@ _.prototype.parse = function(e) {
               return e.replace(n, function(n, i, o, s, a, c) {
                 r("xRange", e, n, i, o, s, a, c);
                 var u = D(o),
-                  d = u || D(s),
-                  l = d || D(a);
-                return "=" === i && l && (i = ""), c = t.includePrerelease ? "-0" : "", u ? n = ">" === i || "<" === i ? "<0.0.0-0" : "*" : i && l ? (d && (s = 0), a = 0, ">" === i ? (i = ">=", d ? (o = +o + 1, s = 0) : s = +s + 1, a = 0) : "<=" === i && (i = "<", d ? o = +o + 1 : s = +s + 1), n = i + o + "." + s + "." + a + c) : d ? n = ">=" + o + ".0.0" + c + " <" + (+o + 1) + ".0.0" + c : l && (n = ">=" + o + "." + s + ".0" + c + " <" + o + "." + (+s + 1) + ".0" + c), r("xRange return", n), n
+                  l = u || D(s),
+                  d = l || D(a);
+                return "=" === i && d && (i = ""), c = t.includePrerelease ? "-0" : "", u ? n = ">" === i || "<" === i ? "<0.0.0-0" : "*" : i && d ? (l && (s = 0), a = 0, ">" === i ? (i = ">=", l ? (o = +o + 1, s = 0) : s = +s + 1, a = 0) : "<=" === i && (i = "<", l ? o = +o + 1 : s = +s + 1), n = i + o + "." + s + "." + a + c) : l ? n = ">=" + o + ".0.0" + c + " <" + (+o + 1) + ".0.0" + c : d && (n = ">=" + o + "." + s + ".0" + c + " <" + o + "." + (+s + 1) + ".0" + c), r("xRange return", n), n
               })
             }(e, t)
           }).join(" ")
@@ -368,7 +368,7 @@ _.prototype.parse = function(e) {
   return this.options.loose && (o = o.filter(function(e) {
     return !!e.match(i)
   })), o = o.map(function(e) {
-    return new _(e, this.options)
+    return new E(e, this.options)
   }, this)
 }, Range.prototype.intersects = function(e, t) {
   if (!(e instanceof Range)) throw TypeError("a Range is required");
@@ -393,8 +393,8 @@ function D(e) {
   return !e || "x" === e.toLowerCase() || "*" === e
 }
 
-function C(e, t, n, r, i, o, s, a, c, u, d, l, f) {
-  return t = D(n) ? "" : D(r) ? ">=" + n + ".0.0" : D(i) ? ">=" + n + "." + r + ".0" : ">=" + t, (t + " " + (a = D(c) ? "" : D(u) ? "<" + (+c + 1) + ".0.0" : D(d) ? "<" + c + "." + (+u + 1) + ".0" : l ? "<=" + c + "." + u + "." + d + "-" + l : "<=" + a)).trim()
+function C(e, t, n, r, i, o, s, a, c, u, l, d, f) {
+  return t = D(n) ? "" : D(r) ? ">=" + n + ".0.0" : D(i) ? ">=" + n + "." + r + ".0" : ">=" + t, (t + " " + (a = D(c) ? "" : D(u) ? "<" + (+c + 1) + ".0.0" : D(l) ? "<" + c + "." + (+u + 1) + ".0" : d ? "<=" + c + "." + u + "." + l + "-" + d : "<=" + a)).trim()
 }
 Range.prototype.test = function(e) {
   if (!e) return !1;
@@ -409,7 +409,7 @@ Range.prototype.test = function(e) {
           if (!e[i].test(t)) return !1;
         if (t.prerelease.length && !n.includePrerelease) {
           for (i = 0; i < e.length; i++)
-            if (r(e[i].semver), e[i].semver !== E && e[i].semver.prerelease.length > 0) {
+            if (r(e[i].semver), e[i].semver !== _ && e[i].semver.prerelease.length > 0) {
               var o = e[i].semver;
               if (o.major === t.major && o.minor === t.minor && o.patch === t.patch) return !0
             } return !1
@@ -464,7 +464,7 @@ t.minVersion = function(e, t) {
         0 === t.prerelease.length ? t.patch++ : t.prerelease.push(0), t.raw = t.format();
       case "":
       case ">=":
-        (!n || v(n, t)) && (n = t);
+        (!n || b(n, t)) && (n = t);
         break;
       case "<":
       case "<=":
@@ -492,22 +492,22 @@ t.gtr = function(e, t, n) {
 function T(e, t, n, r) {
   switch (e = new p(e, r), t = new Range(t, r), n) {
     case ">":
-      i = v, o = S, s = m, a = ">", c = ">=";
+      i = b, o = S, s = m, a = ">", c = ">=";
       break;
     case "<":
-      i = m, o = w, s = v, a = "<", c = "<=";
+      i = m, o = w, s = b, a = "<", c = "<=";
       break;
     default:
       throw TypeError('Must provide a hilo val of "<" or ">"')
   }
   if (P(e, t, r)) return !1;
   for (var i, o, s, a, c, u = 0; u < t.set.length; ++u) {
-    var d = t.set[u],
-      l = null,
+    var l = t.set[u],
+      d = null,
       f = null;
-    if (d.forEach(function(e) {
-        e.semver === E && (e = new _(">=0.0.0")), l = l || e, f = f || e, i(e.semver, l.semver, r) ? l = e : s(e.semver, f.semver, r) && (f = e)
-      }), l.operator === a || l.operator === c) return !1;
+    if (l.forEach(function(e) {
+        e.semver === _ && (e = new E(">=0.0.0")), d = d || e, f = f || e, i(e.semver, d.semver, r) ? d = e : s(e.semver, f.semver, r) && (f = e)
+      }), d.operator === a || d.operator === c) return !1;
     if ((!f.operator || f.operator === a) && o(e, f.semver)) return !1;
     if (f.operator === c && s(e, f.semver)) return !1
   }

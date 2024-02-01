@@ -6,8 +6,8 @@ var r = n("37549"),
   a = r("%TypeError%"),
   c = n("778841"),
   u = 4294967295,
-  d = n("29364")(),
-  l = r("%Object.setPrototypeOf%", !0) || (d ? function(e, t) {
+  l = n("29364")(),
+  d = r("%Object.setPrototypeOf%", !0) || (l ? function(e, t) {
     return e.__proto__ = t, e
   } : null);
 e.exports = function(e) {
@@ -16,8 +16,8 @@ e.exports = function(e) {
   var t = arguments.length > 1 ? arguments[1] : i,
     n = [];
   if (t !== i) {
-    if (!l) throw new s("ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]");
-    l(n, t)
+    if (!d) throw new s("ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]");
+    d(n, t)
   }
   return 0 !== e && (n.length = e), n
 }

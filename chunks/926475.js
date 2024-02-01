@@ -18,7 +18,7 @@ function u(e) {
     return !0
   }
 }
-var d = "undefined" == typeof window || void 0 === window.document || void 0 === window.document.createElement ? function(e, t) {
+var l = "undefined" == typeof window || void 0 === window.document || void 0 === window.document.createElement ? function(e, t) {
   return t()
 } : function(e, t) {
   var n = t(),
@@ -29,19 +29,19 @@ var d = "undefined" == typeof window || void 0 === window.document || void 0 ===
       }
     }),
     i = r[0].inst,
-    d = r[1];
+    l = r[1];
   return a(function() {
-    i.value = n, i.getSnapshot = t, u(i) && d({
+    i.value = n, i.getSnapshot = t, u(i) && l({
       inst: i
     })
   }, [e, n, t]), s(function() {
-    return u(i) && d({
+    return u(i) && l({
       inst: i
     }), e(function() {
-      u(i) && d({
+      u(i) && l({
         inst: i
       })
     })
   }, [e]), c(n), n
 };
-t.useSyncExternalStore = void 0 !== r.useSyncExternalStore ? r.useSyncExternalStore : d
+t.useSyncExternalStore = void 0 !== r.useSyncExternalStore ? r.useSyncExternalStore : l

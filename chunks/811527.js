@@ -7,18 +7,18 @@ var r = /Proc-Type: 4,ENCRYPTED[\n\r]+DEK-Info: AES-((?:128)|(?:192)|(?:256))-CB
   c = n("912065").Buffer;
 e.exports = function(e, t) {
   var n, u = e.toString(),
-    d = u.match(r);
-  if (d) {
-    var l = "aes" + d[1],
-      f = c.from(d[2], "hex"),
-      p = c.from(d[3].replace(/[\r\n]/g, ""), "base64"),
-      h = s(t, f.slice(0, 8), parseInt(d[1], 10)).key,
-      g = [],
-      b = a.createDecipheriv(l, h, f);
-    g.push(b.update(p)), g.push(b.final()), n = c.concat(g)
+    l = u.match(r);
+  if (l) {
+    var d = "aes" + l[1],
+      f = c.from(l[2], "hex"),
+      p = c.from(l[3].replace(/[\r\n]/g, ""), "base64"),
+      h = s(t, f.slice(0, 8), parseInt(l[1], 10)).key,
+      v = [],
+      g = a.createDecipheriv(d, h, f);
+    v.push(g.update(p)), v.push(g.final()), n = c.concat(v)
   } else {
-    var v = u.match(o);
-    n = c.from(v[2].replace(/[\r\n]/g, ""), "base64")
+    var b = u.match(o);
+    n = c.from(b[2].replace(/[\r\n]/g, ""), "base64")
   }
   return {
     tag: u.match(i)[1],

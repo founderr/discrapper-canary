@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return _
   }
 });
 var l = n("37983");
@@ -28,12 +28,12 @@ var i = n("65597"),
   x = n("782340"),
   I = n("762484");
 
-function N(e) {
+function _(e) {
   let {
     soundboardSound: t,
-    closePicker: N
-  } = e, _ = (0, c.useExpressionPickerStore)(e => e.searchQuery), A = (0, i.default)([v.default], () => null != t && v.default.isFavoriteSound(t.soundId)), R = (0, i.default)([p.default], () => p.default.getGuild(null == t ? void 0 : t.guildId)), O = (0, i.default)([a.default], () => a.default.useReducedMotion, []), M = (0, i.default)([h.default], () => h.default.isFocused()), b = (0, i.default)([m.default], () => m.default.getKeybindForAction(y.GlobalKeybindActions.SOUNDBOARD_HOLD));
-  if (null != t && _.length > 0) return (0, l.jsx)(f.default, {
+    closePicker: _
+  } = e, N = (0, c.useExpressionPickerStore)(e => e.searchQuery), A = (0, i.default)([v.default], () => null != t && v.default.isFavoriteSound(t.soundId)), R = (0, i.default)([p.default], () => p.default.getGuild(null == t ? void 0 : t.guildId)), O = (0, i.default)([a.default], () => a.default.useReducedMotion, []), M = (0, i.default)([h.default], () => h.default.isFocused()), b = (0, i.default)([m.default], () => m.default.getKeybindForAction(y.GlobalKeybindActions.SOUNDBOARD_HOLD));
+  if (null != t && N.length > 0) return (0, l.jsx)(f.default, {
     graphicPrimary: null != t.emojiId || null != t.emojiName ? (0, l.jsx)(s.default, {
       emojiId: t.emojiId,
       emojiName: t.emojiName,
@@ -50,7 +50,7 @@ function N(e) {
     isFavorite: A
   });
   let k = () => {
-      N(), (0, o.openModalLazy)(async () => {
+      _(), (0, o.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("644926").then(n.bind(n, "644926"));

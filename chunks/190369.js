@@ -28,18 +28,18 @@ var i, o = "https://js.stripe.com/v3",
     if (!r) throw Error("Expected document.body not to be null. Stripe.js requires a <body> element.");
     return r.appendChild(n), n
   },
-  d = function(e, t) {
+  l = function(e, t) {
     e && e._registerWrapper && e._registerWrapper({
       name: "stripe-js",
       version: "2.0.0",
       startTime: t
     })
   },
-  l = null,
+  d = null,
   f = function(e, t, n) {
     if (null === e) return null;
     var r = e.apply(void 0, t);
-    return d(r, n), r
+    return l(r, n), r
   },
   p = function(e) {
     var t = "invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    ".concat(JSON.stringify(e), "\n");
@@ -48,11 +48,11 @@ var i, o = "https://js.stripe.com/v3",
     throw Error(t)
   },
   h = !1,
-  g = function() {
+  v = function() {
     for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
     h = !0;
     var o = Date.now();
-    return (e = i, null !== l ? l : l = new Promise(function(t, n) {
+    return (e = i, null !== d ? d : d = new Promise(function(t, n) {
       if ("undefined" == typeof window || "undefined" == typeof document) {
         t(null);
         return
@@ -76,7 +76,7 @@ var i, o = "https://js.stripe.com/v3",
       return f(e, n, o)
     })
   };
-g.setLoadParameters = function(e) {
+v.setLoadParameters = function(e) {
   if (!(h && i && Object.keys(p(e)).reduce(function(t, n) {
       var r;
       return t && e[n] === (null === (r = i) || void 0 === r ? void 0 : r[n])
@@ -84,4 +84,4 @@ g.setLoadParameters = function(e) {
     if (h) throw Error("You cannot change load parameters after calling loadStripe");
     i = p(e)
   }
-}, t.loadStripe = g
+}, t.loadStripe = v

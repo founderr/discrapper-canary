@@ -72,9 +72,9 @@ o(c, s), e.exports = c, c.prototype._mulA = function(e) {
     a = r.redSub(t),
     c = i.redMul(s),
     u = o.redMul(a),
-    d = i.redMul(a),
-    l = s.redMul(o);
-  return this.curve.point(c, u, l, d)
+    l = i.redMul(a),
+    d = s.redMul(o);
+  return this.curve.point(c, u, d, l)
 }, u.prototype._projDbl = function() {
   var e, t, n, r, i, o, s = this.x.redAdd(this.y).redSqr(),
     a = this.x.redSqr(),
@@ -96,10 +96,10 @@ o(c, s), e.exports = c, c.prototype._mulA = function(e) {
     a = i.redAdd(r),
     c = n.redAdd(t),
     u = o.redMul(s),
-    d = a.redMul(c),
-    l = o.redMul(c),
+    l = a.redMul(c),
+    d = o.redMul(c),
     f = s.redMul(a);
-  return this.curve.point(u, d, f, l)
+  return this.curve.point(u, l, f, d)
 }, u.prototype._projAdd = function(e) {
   var t, n, r = this.z.redMul(e.z),
     i = r.redSqr(),
@@ -108,9 +108,9 @@ o(c, s), e.exports = c, c.prototype._mulA = function(e) {
     a = this.curve.d.redMul(o).redMul(s),
     c = i.redSub(a),
     u = i.redAdd(a),
-    d = this.x.redAdd(this.y).redMul(e.x.redAdd(e.y)).redISub(o).redISub(s),
-    l = r.redMul(c).redMul(d);
-  return this.curve.twisted ? (t = r.redMul(u).redMul(s.redSub(this.curve._mulA(o))), n = c.redMul(u)) : (t = r.redMul(u).redMul(s.redSub(o)), n = this.curve._mulC(c).redMul(u)), this.curve.point(l, t, n)
+    l = this.x.redAdd(this.y).redMul(e.x.redAdd(e.y)).redISub(o).redISub(s),
+    d = r.redMul(c).redMul(l);
+  return this.curve.twisted ? (t = r.redMul(u).redMul(s.redSub(this.curve._mulA(o))), n = c.redMul(u)) : (t = r.redMul(u).redMul(s.redSub(o)), n = this.curve._mulC(c).redMul(u)), this.curve.point(d, t, n)
 }, u.prototype.add = function(e) {
   return this.isInfinity() ? e : e.isInfinity() ? this : this.curve.extended ? this._extAdd(e) : this._projAdd(e)
 }, u.prototype.mul = function(e) {

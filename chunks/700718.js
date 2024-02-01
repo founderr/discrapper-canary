@@ -7,25 +7,25 @@ var r = n("488063"),
   c = n("531217");
 e.exports = function(e, t, n) {
   var u = -1,
-    d = i,
-    l = e.length,
+    l = i,
+    d = e.length,
     f = !0,
     p = [],
     h = p;
-  if (n) f = !1, d = o;
-  else if (l >= 200) {
-    var g = t ? null : a(e);
-    if (g) return c(g);
-    f = !1, d = s, h = new r
+  if (n) f = !1, l = o;
+  else if (d >= 200) {
+    var v = t ? null : a(e);
+    if (v) return c(v);
+    f = !1, l = s, h = new r
   } else h = t ? [] : p;
-  e: for (; ++u < l;) {
-    var b = e[u],
-      v = t ? t(b) : b;
-    if (b = n || 0 !== b ? b : 0, f && v == v) {
+  e: for (; ++u < d;) {
+    var g = e[u],
+      b = t ? t(g) : g;
+    if (g = n || 0 !== g ? g : 0, f && b == b) {
       for (var m = h.length; m--;)
-        if (h[m] === v) continue e;
-      t && h.push(v), p.push(b)
-    } else !d(h, v, n) && (h !== p && h.push(v), p.push(b))
+        if (h[m] === b) continue e;
+      t && h.push(b), p.push(g)
+    } else !l(h, b, n) && (h !== p && h.push(b), p.push(g))
   }
   return p
 }

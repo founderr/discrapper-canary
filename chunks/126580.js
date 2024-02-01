@@ -8,9 +8,9 @@ e.exports = function(e, t) {
       a = void 0 !== t,
       c = null === t,
       u = t == t,
-      d = r(t);
-    if (!c && !d && !s && e > t || s && a && u && !c && !d || i && a && u || !n && u || !o) return 1;
-    if (!i && !s && !d && e < t || d && n && o && !i && !s || c && n && o || !a && o || !u) return -1
+      l = r(t);
+    if (!c && !l && !s && e > t || s && a && u && !c && !l || i && a && u || !n && u || !o) return 1;
+    if (!i && !s && !l && e < t || l && n && o && !i && !s || c && n && o || !a && o || !u) return -1
   }
   return 0
 }

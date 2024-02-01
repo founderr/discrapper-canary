@@ -30,22 +30,22 @@ var r = n("380756"),
       },
       c = t.ignoreQueryPrefix ? e.replace(/^\?/, "") : e,
       u = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
-      d = c.split(t.delimiter, u),
-      l = -1,
+      l = c.split(t.delimiter, u),
+      d = -1,
       f = t.charset;
     if (t.charsetSentinel)
-      for (p = 0; p < d.length; ++p) 0 === d[p].indexOf("utf8=") && ("utf8=%E2%9C%93" === d[p] ? f = "utf-8" : "utf8=%26%2310003%3B" === d[p] && (f = "iso-8859-1"), l = p, p = d.length);
-    for (p = 0; p < d.length; ++p)
-      if (p !== l) {
-        var p, h, g, b = d[p],
-          v = b.indexOf("]="),
-          m = -1 === v ? b.indexOf("=") : v + 1;
-        if (-1 === m ? (h = t.decoder(b, s.decoder, f, "key"), g = t.strictNullHandling ? null : "") : (h = t.decoder(b.slice(0, m), s.decoder, f, "key"), g = r.maybeMap(a(b.slice(m + 1), t), function(e) {
+      for (p = 0; p < l.length; ++p) 0 === l[p].indexOf("utf8=") && ("utf8=%E2%9C%93" === l[p] ? f = "utf-8" : "utf8=%26%2310003%3B" === l[p] && (f = "iso-8859-1"), d = p, p = l.length);
+    for (p = 0; p < l.length; ++p)
+      if (p !== d) {
+        var p, h, v, g = l[p],
+          b = g.indexOf("]="),
+          m = -1 === b ? g.indexOf("=") : b + 1;
+        if (-1 === m ? (h = t.decoder(g, s.decoder, f, "key"), v = t.strictNullHandling ? null : "") : (h = t.decoder(g.slice(0, m), s.decoder, f, "key"), v = r.maybeMap(a(g.slice(m + 1), t), function(e) {
             return t.decoder(e, s.decoder, f, "value")
-          })), g && t.interpretNumericEntities && "iso-8859-1" === f) g = g.replace(/&#(\d+);/g, function(e, t) {
+          })), v && t.interpretNumericEntities && "iso-8859-1" === f) v = v.replace(/&#(\d+);/g, function(e, t) {
           return String.fromCharCode(parseInt(t, 10))
         });
-        b.indexOf("[]=") > -1 && (g = o(g) ? [g] : g), i.call(n, h) ? n[h] = r.combine(n[h], g) : n[h] = g
+        g.indexOf("[]=") > -1 && (v = o(v) ? [v] : v), i.call(n, h) ? n[h] = r.combine(n[h], v) : n[h] = v
       } return n
   },
   u = function(e, t, n, r) {
@@ -55,8 +55,8 @@ var r = n("380756"),
       else {
         s = n.plainObjects ? Object.create(null) : {};
         var u = "[" === c.charAt(0) && "]" === c.charAt(c.length - 1) ? c.slice(1, -1) : c,
-          d = parseInt(u, 10);
-        n.parseArrays || "" !== u ? !isNaN(d) && c !== u && String(d) === u && d >= 0 && n.parseArrays && d <= n.arrayLimit ? (s = [])[d] = i : "__proto__" !== u && (s[u] = i) : s = {
+          l = parseInt(u, 10);
+        n.parseArrays || "" !== u ? !isNaN(l) && c !== u && String(l) === u && l >= 0 && n.parseArrays && l <= n.arrayLimit ? (s = [])[l] = i : "__proto__" !== u && (s[u] = i) : s = {
           0: i
         }
       }
@@ -64,25 +64,25 @@ var r = n("380756"),
     }
     return i
   },
-  d = function(e, t, n, r) {
+  l = function(e, t, n, r) {
     if (e) {
       var o = n.allowDots ? e.replace(/\.([^.[]+)/g, "[$1]") : e,
         s = /(\[[^[\]]*])/g,
         a = n.depth > 0 && /(\[[^[\]]*])/.exec(o),
         c = a ? o.slice(0, a.index) : o,
-        d = [];
+        l = [];
       if (c) {
         if (!n.plainObjects && i.call(Object.prototype, c) && !n.allowPrototypes) return;
-        d.push(c)
+        l.push(c)
       }
-      for (var l = 0; n.depth > 0 && null !== (a = s.exec(o)) && l < n.depth;) {
-        if (l += 1, !n.plainObjects && i.call(Object.prototype, a[1].slice(1, -1)) && !n.allowPrototypes) return;
-        d.push(a[1])
+      for (var d = 0; n.depth > 0 && null !== (a = s.exec(o)) && d < n.depth;) {
+        if (d += 1, !n.plainObjects && i.call(Object.prototype, a[1].slice(1, -1)) && !n.allowPrototypes) return;
+        l.push(a[1])
       }
-      return a && d.push("[" + o.slice(a.index) + "]"), u(d, t, n, r)
+      return a && l.push("[" + o.slice(a.index) + "]"), u(l, t, n, r)
     }
   },
-  l = function(e) {
+  d = function(e) {
     if (!e) return s;
     if (null !== e.decoder && void 0 !== e.decoder && "function" != typeof e.decoder) throw TypeError("Decoder has to be a function.");
     if (void 0 !== e.charset && "utf-8" !== e.charset && "iso-8859-1" !== e.charset) throw TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");
@@ -107,11 +107,11 @@ var r = n("380756"),
     }
   };
 e.exports = function(e, t) {
-  var n = l(t);
+  var n = d(t);
   if ("" === e || null == e) return n.plainObjects ? Object.create(null) : {};
   for (var i = "string" == typeof e ? c(e, n) : e, o = n.plainObjects ? Object.create(null) : {}, s = Object.keys(i), a = 0; a < s.length; ++a) {
     var u = s[a],
-      f = d(u, i[u], n, "string" == typeof e);
+      f = l(u, i[u], n, "string" == typeof e);
     o = r.merge(o, f, n)
   }
   return !0 === n.allowSparse ? o : r.compact(o)

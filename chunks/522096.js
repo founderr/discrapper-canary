@@ -31,8 +31,8 @@ function d(e) {
     renderInspector: y,
     renderEmptySearchState: x,
     renderCategoryList: I,
-    renderHeaderAccessories: N,
-    rowHeight: _,
+    renderHeaderAccessories: _,
+    rowHeight: N,
     sectionHeaderHeight: A,
     sectionFooterHeight: R,
     itemNodeWidth: O,
@@ -99,7 +99,7 @@ function d(e) {
       gridNavigatorId: P,
       defaultSearchPlaceholder: h,
       emptySearchPlaceholder: E
-    }), null == N ? void 0 : N()]
+    }), null == _ ? void 0 : _()]
   });
   return (0, l.jsxs)(l.Fragment, {
     children: [null != U ? U(ei) : (0, l.jsxs)("div", {
@@ -127,7 +127,7 @@ function d(e) {
           renderEmptySearchState: x,
           rowCount: V,
           rowCountBySection: W,
-          rowHeight: _,
+          rowHeight: N,
           sectionHeaderHeight: A,
           sectionFooterHeight: R
         }) : null

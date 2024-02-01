@@ -7,13 +7,13 @@ var Symbol = n("330206"),
   s = n("531217"),
   a = Symbol ? Symbol.prototype : void 0,
   c = a ? a.valueOf : void 0;
-e.exports = function(e, t, n, a, u, d, l) {
+e.exports = function(e, t, n, a, u, l, d) {
   switch (n) {
     case "[object DataView]":
       if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
       e = e.buffer, t = t.buffer;
     case "[object ArrayBuffer]":
-      if (e.byteLength != t.byteLength || !d(new Uint8Array(e), new Uint8Array(t))) break;
+      if (e.byteLength != t.byteLength || !l(new Uint8Array(e), new Uint8Array(t))) break;
       return !0;
     case "[object Boolean]":
     case "[object Date]":
@@ -29,11 +29,11 @@ e.exports = function(e, t, n, a, u, d, l) {
     case "[object Set]":
       var p = 1 & a;
       if (f || (f = s), e.size != t.size && !p) break;
-      var h = l.get(e);
+      var h = d.get(e);
       if (h) return h == t;
-      a |= 2, l.set(e, t);
-      var g = i(f(e), f(t), a, u, d, l);
-      return l.delete(e), g;
+      a |= 2, d.set(e, t);
+      var v = i(f(e), f(t), a, u, l, d);
+      return d.delete(e), v;
     case "[object Symbol]":
       if (c) return c.call(e) == c.call(t)
   }

@@ -26,8 +26,8 @@ var l = n("37983"),
   y = n("161585"),
   x = n("24373"),
   I = n("41170"),
-  N = n("49111"),
-  _ = n("13030"),
+  _ = n("49111"),
+  N = n("13030"),
   A = n("782340"),
   R = n("75754");
 let O = (0, C.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
@@ -128,9 +128,9 @@ let O = (0, C.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_CATEGORY_LI
                 [R.firstPartyCategorySelected]: !S && L && w
               }),
               onClick: () => {
-                U.type === y.StickerCategoryTypes.PACK && g.default.track(N.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                U.type === y.StickerCategoryTypes.PACK && g.default.track(_.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                   location: null == p ? void 0 : p.location,
-                  tab: _.ExpressionPickerViewType.STICKER,
+                  tab: N.ExpressionPickerViewType.STICKER,
                   sticker_pack_id: U.id,
                   guild_id: f
                 }), s()

@@ -6,8 +6,8 @@ var r = n("559494"),
   a = /^\[object .+?Constructor\]$/,
   c = Object.prototype,
   u = Function.prototype.toString,
-  d = c.hasOwnProperty,
-  l = RegExp("^" + u.call(d).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
+  l = c.hasOwnProperty,
+  d = RegExp("^" + u.call(l).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
 e.exports = function(e) {
-  return !(!o(e) || i(e)) && (r(e) ? l : a).test(s(e))
+  return !(!o(e) || i(e)) && (r(e) ? d : a).test(s(e))
 }

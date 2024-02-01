@@ -30,8 +30,8 @@ var l = a("37983"),
   N = a("50885"),
   _ = a("21526"),
   y = a("775416"),
-  O = a("491232"),
-  k = a("342676"),
+  k = a("491232"),
+  O = a("342676"),
   A = a("450492"),
   j = a("920580"),
   R = a("54809"),
@@ -100,7 +100,7 @@ var V = function(e) {
   }), {
     buttonColors: ea,
     backgroundColors: el
-  } = (0, F.default)(t.styles), es = (0, O.getFormattedPriceForCollectiblesProduct)(t, S), er = (0, O.isPremiumCollectiblesProduct)(t), en = (0, O.isFreeCollectiblesProduct)(t), [ei, eo, ec] = (0, i.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), eu = s.useRef(null);
+  } = (0, F.default)(t.styles), es = (0, k.getFormattedPriceForCollectiblesProduct)(t, S), er = (0, k.isPremiumCollectiblesProduct)(t), en = (0, k.isFreeCollectiblesProduct)(t), [ei, eo, ec] = (0, i.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), eu = s.useRef(null);
   s.useEffect(() => {
     let {
       current: e
@@ -291,7 +291,7 @@ var V = function(e) {
             children: eb()
           })]
         })]
-      }), (0, l.jsx)(k.default, {
+      }), (0, l.jsx)(O.default, {
         category: a,
         className: w.limitedTimeBadge,
         display: "card"

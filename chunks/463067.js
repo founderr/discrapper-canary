@@ -7,7 +7,7 @@ var r = n("105562"),
   a = n("37549"),
   c = n("648644"),
   u = c(a("%Promise.all%")),
-  d = c(a("%Promise.reject%"));
+  l = c(a("%Promise.reject%"));
 e.exports = function(e) {
   var t = this;
   if ("Object" !== i(t)) throw TypeError("`this` value must be an object");
@@ -26,7 +26,7 @@ e.exports = function(e) {
         }
       })
     } catch (e) {
-      return d(t, e)
+      return l(t, e)
     }
   }))
 }

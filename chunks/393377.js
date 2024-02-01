@@ -29,7 +29,7 @@ function g(e) {
     T(!0)
   }, []), I = i.useCallback(() => {
     T(!1)
-  }, []), N = i.useCallback(e => {
+  }, []), _ = i.useCallback(e => {
     var l;
     T(!1);
     let i = {
@@ -46,10 +46,10 @@ function g(e) {
   }, [t, n]);
   return (i.useEffect(() => {
     let e = y.current;
-    return null == v && (null == e || e.addEventListener("dragover", x, !1), null == e || e.addEventListener("dragleave", I, !1), null == e || e.addEventListener("drop", N, !1)), () => {
-      null == e || e.removeEventListener("dragover", x, !1), null == e || e.removeEventListener("dragleave", I, !1), null == e || e.removeEventListener("drop", N, !1)
+    return null == v && (null == e || e.addEventListener("dragover", x, !1), null == e || e.addEventListener("dragleave", I, !1), null == e || e.addEventListener("drop", _, !1)), () => {
+      null == e || e.removeEventListener("dragover", x, !1), null == e || e.removeEventListener("dragleave", I, !1), null == e || e.removeEventListener("drop", _, !1)
     }
-  }, [v, x, I, N]), null != v) ? (0, l.jsx)(m.default, {
+  }, [v, x, I, _]), null != v) ? (0, l.jsx)(m.default, {
     channelId: t,
     upload: v,
     keyboardModeEnabled: r,

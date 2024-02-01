@@ -49,20 +49,20 @@ function c(e) {
       var t = e.getTargetIds().filter(e.canDropOnTarget, e);
       return t.reverse(), t
     })(n).forEach(function(c, u) {
-      var d = function(e, t, n, i) {
+      var l = function(e, t, n, i) {
           var s = n.getTarget(e),
             a = s ? s.drop(i, e) : void 0;
           return function(e) {
             (0, r.invariant)(void 0 === e || (0, o.isObject)(e), "Drop result must either be an object or undefined.")
           }(a), void 0 === a && (a = 0 === t ? {} : i.getDropResult()), a
         }(c, u, s, n),
-        l = {
+        d = {
           type: i.DROP,
           payload: {
-            dropResult: a(a({}, t), d)
+            dropResult: a(a({}, t), l)
           }
         };
-      e.dispatch(l)
+      e.dispatch(d)
     })
   }
 }

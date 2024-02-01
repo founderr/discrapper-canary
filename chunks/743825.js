@@ -25,8 +25,8 @@ var l, i = n("37983"),
   y = n("378765"),
   x = n("254490"),
   I = n("850391"),
-  N = n("149022"),
-  _ = n("296141"),
+  _ = n("149022"),
+  N = n("296141"),
   A = n("606013"),
   R = n("32647"),
   O = n("970153"),
@@ -56,7 +56,7 @@ l = class extends r.Component {
       let e;
       e = this.props.useSlate ? this.props.textValue : (0, O.toTextValue)(this.props.richValue, {
         mode: "plain"
-      }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, N.toRichValue)(e))
+      }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, _.toRichValue)(e))
     } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
   }
   componentWillUnmount() {
@@ -174,7 +174,7 @@ l = class extends r.Component {
       spellcheckEnabled: T,
       useNewSlashCommands: v,
       canOnlyUseTextCommands: x,
-      className: _,
+      className: N,
       id: O,
       required: b,
       maxCharacterCount: P,
@@ -187,7 +187,7 @@ l = class extends r.Component {
       popup: H
     } = this.state, F = {
       channel: E,
-      className: s(_, k.textArea, {
+      className: s(N, k.textArea, {
         [k.textAreaSlate]: C,
         [k.textAreaDisabled]: d || B
       }),
@@ -232,7 +232,7 @@ l = class extends r.Component {
       ref: this.ref,
       ...F,
       type: S,
-      value: d ? (0, N.toRichValue)("") : u,
+      value: d ? (0, _.toRichValue)("") : u,
       canUseCommands: null === (t = S.commands) || void 0 === t ? void 0 : t.enabled,
       canOnlyUseTextCommands: x
     }) : (0, i.jsx)(A.default, {
@@ -293,7 +293,7 @@ l = class extends r.Component {
       h.default.saveDraft(e, this.props.textValue, this.props.type.drafts.type)
     }, this.handleClearText = () => {
       var e, t;
-      null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, "", (0, N.toRichValue)(""))
+      null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, "", (0, _.toRichValue)(""))
     }, this.handleInsertText = e => {
       let {
         plainText: t,
@@ -426,7 +426,7 @@ l = class extends r.Component {
           }
         })
       })(s), this.focus(), !0)
-    }, this._unsubscribe = _.channelEditorPopupStore.subscribe(e => {
+    }, this._unsubscribe = N.channelEditorPopupStore.subscribe(e => {
       requestAnimationFrame(() => {
         this.setState({
           popup: e
@@ -435,7 +435,7 @@ l = class extends r.Component {
     }), this.state = {
       focused: !1,
       submitting: !1,
-      popup: _.channelEditorPopupStore.getState()
+      popup: N.channelEditorPopupStore.getState()
     }
   }
 }

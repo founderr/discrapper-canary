@@ -24,45 +24,45 @@ function c(e) {
       },
       c = n.publishSource,
       u = n.clientOffset,
-      d = n.getSourceClientOffset,
-      l = e.getMonitor(),
+      l = n.getSourceClientOffset,
+      d = e.getMonitor(),
       f = e.getRegistry();
     e.dispatch((0, i.setClientOffset)(u)),
       function(e, t, n) {
         (0, r.invariant)(!t.isDragging(), "Cannot call beginDrag while dragging."), e.forEach(function(e) {
           (0, r.invariant)(n.getSource(e), "Expected sourceIds to be registered.")
         })
-      }(t, l, f);
+      }(t, d, f);
     var p = function(e, t) {
       for (var n = null, r = e.length - 1; r >= 0; r--)
         if (t.canDragSource(e[r])) {
           n = e[r];
           break
         } return n
-    }(t, l);
+    }(t, d);
     if (null === p) {
       e.dispatch(a);
       return
     }
     var h = null;
     if (u) {
-      if (!d) throw Error("getSourceClientOffset must be defined");
+      if (!l) throw Error("getSourceClientOffset must be defined");
       (function(e) {
         (0, r.invariant)("function" == typeof e, "When clientOffset is provided, getSourceClientOffset must be a function.")
-      })(d), h = d(p)
+      })(l), h = l(p)
     }
     e.dispatch((0, i.setClientOffset)(u, h));
-    var g = f.getSource(p).beginDrag(l, p);
-    if (null != g) {
+    var v = f.getSource(p).beginDrag(d, p);
+    if (null != v) {
       (function(e) {
         (0, r.invariant)((0, o.isObject)(e), "Item must be an object.")
-      })(g), f.pinSource(p);
-      var b = f.getSourceType(p);
+      })(v), f.pinSource(p);
+      var g = f.getSourceType(p);
       return {
         type: s.BEGIN_DRAG,
         payload: {
-          itemType: b,
-          item: g,
+          itemType: g,
+          item: v,
           sourceId: p,
           clientOffset: u || null,
           sourceClientOffset: h || null,

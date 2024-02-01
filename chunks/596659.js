@@ -8,10 +8,10 @@ var r = n("678304"),
 
 function u(e) {
   "object" == typeof e && !c.isBuffer(e) && (t = e.passphrase, e = e.key), "string" == typeof e && (e = c.from(e));
-  var t, n, u, d = o(e, t),
-    l = d.tag,
-    f = d.data;
-  switch (l) {
+  var t, n, u, l = o(e, t),
+    d = l.tag,
+    f = l.data;
+  switch (d) {
     case "CERTIFICATE":
       u = r.certificate.decode(f, "der").tbsCertificate.subjectPublicKeyInfo;
     case "PUBLIC KEY":
@@ -37,12 +37,12 @@ function u(e) {
           r = parseInt(e.algorithm.decrypt.kde.kdeparams.iters.toString(), 10),
           o = i[e.algorithm.decrypt.cipher.algo.join(".")],
           u = e.algorithm.decrypt.cipher.iv,
-          d = e.subjectPrivateKey,
-          l = parseInt(o.split("-")[1], 10) / 8,
-          f = a.pbkdf2Sync(t, n, r, l, "sha1"),
+          l = e.subjectPrivateKey,
+          d = parseInt(o.split("-")[1], 10) / 8,
+          f = a.pbkdf2Sync(t, n, r, d, "sha1"),
           p = s.createDecipheriv(o, f, u),
           h = [];
-        return h.push(p.update(d)), h.push(p.final()), c.concat(h)
+        return h.push(p.update(l)), h.push(p.final()), c.concat(h)
       }(f = r.EncryptedPrivateKey.decode(f, "der"), t);
     case "PRIVATE KEY":
       switch (n = (u = r.PrivateKey.decode(f, "der")).algorithm.algorithm.join(".")) {
@@ -73,7 +73,7 @@ function u(e) {
         curve: (f = r.ECPrivateKey.decode(f, "der")).parameters.value, privateKey: f.privateKey
       };
     default:
-      throw Error("unknown key type " + l)
+      throw Error("unknown key type " + d)
   }
 }
 e.exports = u, u.signature = r.signature

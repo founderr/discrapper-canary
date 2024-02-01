@@ -14,9 +14,9 @@ c.prototype._update = function(e) {
   for (var t = this._w, n = 0 | this._a, r = 0 | this._b, i = 0 | this._c, o = 0 | this._d, a = 0 | this._e, c = 0; c < 16; ++c) t[c] = e.readInt32BE(4 * c);
   for (; c < 80; ++c) t[c] = t[c - 3] ^ t[c - 8] ^ t[c - 14] ^ t[c - 16];
   for (var u = 0; u < 80; ++u) {
-    var d, l, f, p, h, g, b = ~~(u / 20);
-    var v = ((d = n) << 5 | d >>> 27) + (l = b, f = r, p = i, h = o, 0 === l ? f & p | ~f & h : 2 === l ? f & p | f & h | p & h : f ^ p ^ h) + a + t[u] + s[b] | 0;
-    a = o, o = i, i = (g = r) << 30 | g >>> 2, r = n, n = v
+    var l, d, f, p, h, v, g = ~~(u / 20);
+    var b = ((l = n) << 5 | l >>> 27) + (d = g, f = r, p = i, h = o, 0 === d ? f & p | ~f & h : 2 === d ? f & p | f & h | p & h : f ^ p ^ h) + a + t[u] + s[g] | 0;
+    a = o, o = i, i = (v = r) << 30 | v >>> 2, r = n, n = b
   }
   this._a = n + this._a | 0, this._b = r + this._b | 0, this._c = i + this._c | 0, this._d = o + this._d | 0, this._e = a + this._e | 0
 }, c.prototype._hash = function() {

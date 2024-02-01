@@ -30,8 +30,8 @@ var l = a("37983"),
   N = a("462579"),
   _ = a("216422"),
   y = a("956089"),
-  O = a("50885"),
-  k = a("21526"),
+  k = a("50885"),
+  O = a("21526"),
   A = a("775416"),
   j = a("491232"),
   R = a("342676"),
@@ -43,7 +43,7 @@ var l = a("37983"),
   w = a("646718"),
   H = a("782340"),
   U = a("216365");
-let W = O.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
+let W = k.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
   G = u.AvatarSizes.SIZE_152,
   z = (0, g.getDecorationSizeForAvatarSize)(G),
   V = e => {
@@ -87,7 +87,7 @@ var Y = function(e) {
     category: a,
     onMount: r,
     isPremiumUser: N = !1,
-    isGiftEasterEggEnabled: O
+    isGiftEasterEggEnabled: k
   } = e, {
     analyticsLocations: Y
   } = (0, p.default)(C.default.COLLECTIBLES_SHOP_CARD), X = s.useRef(null), Z = (0, m.default)(X), [q, $] = s.useState(!1), J = Z || q, Q = (0, i.default)([v.default], () => v.default.getCurrentUser()), [ee] = t.items, {
@@ -172,7 +172,7 @@ var Y = function(e) {
     }) : (0, l.jsx)(P.default, {
       product: t,
       returnRef: X,
-      isGiftEasterEggEnabled: O,
+      isGiftEasterEggEnabled: k,
       disableCustomColor: !0,
       tooltipDelay: 250
     }),
@@ -183,7 +183,7 @@ var Y = function(e) {
         submittingStartedLabel: H.default.Messages.COLLECTIBLES_COLLECTING,
         submittingFinishedLabel: H.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
         onClick: async () => {
-          await (0, k.claimPremiumCollectiblesProduct)(t.skuId), (0, D.default)({
+          await (0, O.claimPremiumCollectiblesProduct)(t.skuId), (0, D.default)({
             product: t,
             analyticsLocations: Y
           })

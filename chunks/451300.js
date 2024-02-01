@@ -30,11 +30,11 @@ function I(e) {
   var t, n, r;
   let {
     className: I,
-    onClose: N
+    onClose: _
   } = e;
   (0, h.useFetchStickerPacks)();
   let {
-    analyticsLocations: _
+    analyticsLocations: N
   } = (0, d.default)(u.default.EMPTY_STATE), A = (0, s.useStateFromStoresArray)([E.default], () => C.EMPTY_STATE_STICKERS.map(e => E.default.getStickerById(e)));
   i.useEffect(() => {
     m.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
@@ -42,9 +42,9 @@ function I(e) {
       source: {
         section: T.AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL
       },
-      location_stack: _
+      location_stack: N
     })
-  }, [_]);
+  }, [N]);
   let R = (0, f.usePremiumTrialOffer)(),
     O = (0, c.usePremiumDiscountOffer)(),
     M = null != R || null != O,
@@ -56,7 +56,7 @@ function I(e) {
     children: [M ? (0, l.jsx)(p.default, {
       discountOffer: O,
       trialOffer: R,
-      onClose: N,
+      onClose: _,
       type: v.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
       subscriptionTier: null !== (r = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== r ? r : v.PremiumSubscriptionSKUs.TIER_2,
       children: y.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE

@@ -42,47 +42,47 @@ n("70102"), n("222007"), n("424973"), n("101997"), n("781738"), n("274635"), n("
           shimSafari: !0
         },
         u = r.log,
-        d = r.detectBrowser(t),
-        l = {
-          browserDetails: d,
+        l = r.detectBrowser(t),
+        d = {
+          browserDetails: l,
           commonShim: c,
           extractVersion: r.extractVersion,
           disableLog: r.disableLog,
           disableWarnings: r.disableWarnings
         };
-      switch (d.browser) {
+      switch (l.browser) {
         case "chrome":
           if (!i || !i.shimPeerConnection || !n.shimChrome) {
             u("Chrome shim is not included in this adapter release.");
             break
           }
-          u("adapter.js shimming chrome."), l.browserShim = i, i.shimGetUserMedia(t), i.shimMediaStream(t), i.shimPeerConnection(t), i.shimOnTrack(t), i.shimAddTrackRemoveTrack(t), i.shimGetSendersWithDtmf(t), i.shimGetStats(t), i.shimSenderReceiverGetStats(t), i.fixNegotiationNeeded(t), c.shimRTCIceCandidate(t), c.shimConnectionState(t), c.shimMaxMessageSize(t), c.shimSendThrowTypeError(t), c.removeAllowExtmapMixed(t);
+          u("adapter.js shimming chrome."), d.browserShim = i, i.shimGetUserMedia(t), i.shimMediaStream(t), i.shimPeerConnection(t), i.shimOnTrack(t), i.shimAddTrackRemoveTrack(t), i.shimGetSendersWithDtmf(t), i.shimGetStats(t), i.shimSenderReceiverGetStats(t), i.fixNegotiationNeeded(t), c.shimRTCIceCandidate(t), c.shimConnectionState(t), c.shimMaxMessageSize(t), c.shimSendThrowTypeError(t), c.removeAllowExtmapMixed(t);
           break;
         case "firefox":
           if (!s || !s.shimPeerConnection || !n.shimFirefox) {
             u("Firefox shim is not included in this adapter release.");
             break
           }
-          u("adapter.js shimming firefox."), l.browserShim = s, s.shimGetUserMedia(t), s.shimPeerConnection(t), s.shimOnTrack(t), s.shimRemoveStream(t), s.shimSenderGetStats(t), s.shimReceiverGetStats(t), s.shimRTCDataChannel(t), s.shimAddTransceiver(t), s.shimCreateOffer(t), s.shimCreateAnswer(t), c.shimRTCIceCandidate(t), c.shimConnectionState(t), c.shimMaxMessageSize(t), c.shimSendThrowTypeError(t);
+          u("adapter.js shimming firefox."), d.browserShim = s, s.shimGetUserMedia(t), s.shimPeerConnection(t), s.shimOnTrack(t), s.shimRemoveStream(t), s.shimSenderGetStats(t), s.shimReceiverGetStats(t), s.shimRTCDataChannel(t), s.shimAddTransceiver(t), s.shimCreateOffer(t), s.shimCreateAnswer(t), c.shimRTCIceCandidate(t), c.shimConnectionState(t), c.shimMaxMessageSize(t), c.shimSendThrowTypeError(t);
           break;
         case "edge":
           if (!o || !o.shimPeerConnection || !n.shimEdge) {
             u("MS edge shim is not included in this adapter release.");
             break
           }
-          u("adapter.js shimming edge."), l.browserShim = o, o.shimGetUserMedia(t), o.shimGetDisplayMedia(t), o.shimPeerConnection(t), o.shimReplaceTrack(t), c.shimMaxMessageSize(t), c.shimSendThrowTypeError(t);
+          u("adapter.js shimming edge."), d.browserShim = o, o.shimGetUserMedia(t), o.shimGetDisplayMedia(t), o.shimPeerConnection(t), o.shimReplaceTrack(t), c.shimMaxMessageSize(t), c.shimSendThrowTypeError(t);
           break;
         case "safari":
           if (!a || !n.shimSafari) {
             u("Safari shim is not included in this adapter release.");
             break
           }
-          u("adapter.js shimming safari."), l.browserShim = a, a.shimRTCIceServerUrls(t), a.shimCreateOfferLegacy(t), a.shimCallbacksAPI(t), a.shimLocalStreamsAPI(t), a.shimRemoteStreamsAPI(t), a.shimTrackEventTransceiver(t), a.shimGetUserMedia(t), c.shimRTCIceCandidate(t), c.shimMaxMessageSize(t), c.shimSendThrowTypeError(t), c.removeAllowExtmapMixed(t);
+          u("adapter.js shimming safari."), d.browserShim = a, a.shimRTCIceServerUrls(t), a.shimCreateOfferLegacy(t), a.shimCallbacksAPI(t), a.shimLocalStreamsAPI(t), a.shimRemoteStreamsAPI(t), a.shimTrackEventTransceiver(t), a.shimGetUserMedia(t), c.shimRTCIceCandidate(t), c.shimMaxMessageSize(t), c.shimSendThrowTypeError(t), c.removeAllowExtmapMixed(t);
           break;
         default:
           u("Unsupported browser!")
       }
-      return l
+      return d
     };
     var r = u(e("./utils")),
       i = u(e("./chrome/chrome_shim")),
@@ -395,12 +395,12 @@ n("70102"), n("222007"), n("424973"), n("101997"), n("781738"), n("274635"), n("
                 t = arguments,
                 r = arguments.length && "function" == typeof arguments[0];
               return r ? n.apply(this, [function(n) {
-                var r = d(e, n);
+                var r = l(e, n);
                 t[0].apply(null, [r])
               }, function(e) {
                 t[1] && t[1].apply(null, e)
               }, arguments[2]]) : n.apply(this, arguments).then(function(t) {
-                return d(e, t)
+                return l(e, t)
               })
             });
           e.RTCPeerConnection.prototype[t] = r[t]
@@ -423,7 +423,7 @@ n("70102"), n("222007"), n("424973"), n("101997"), n("781738"), n("274635"), n("
         Object.defineProperty(e.RTCPeerConnection.prototype, "localDescription", {
           get: function() {
             var e = u.get.apply(this);
-            return "" === e.type ? e : d(this, e)
+            return "" === e.type ? e : l(this, e)
           }
         }), e.RTCPeerConnection.prototype.removeTrack = function(e) {
           var t = this;
@@ -440,7 +440,7 @@ n("70102"), n("222007"), n("424973"), n("101997"), n("781738"), n("274635"), n("
         }
       }
 
-      function d(e, t) {
+      function l(e, t) {
         var n = t.sdp;
         return Object.keys(e._reverseStreams || []).forEach(function(t) {
           var r = e._reverseStreams[t],
@@ -617,16 +617,16 @@ n("70102"), n("222007"), n("424973"), n("101997"), n("781738"), n("274635"), n("
               var u = n.version < 66;
               if (c && ("user" === c.exact || "environment" === c.exact || "user" === c.ideal || "environment" === c.ideal) && !(t.mediaDevices.getSupportedConstraints && t.mediaDevices.getSupportedConstraints().facingMode && !u)) {
                 delete e.video.facingMode;
-                var d = void 0;
-                if ("environment" === c.exact || "environment" === c.ideal ? d = ["back", "rear"] : ("user" === c.exact || "user" === c.ideal) && (d = ["front"]), d) return t.mediaDevices.enumerateDevices().then(function(t) {
+                var l = void 0;
+                if ("environment" === c.exact || "environment" === c.ideal ? l = ["back", "rear"] : ("user" === c.exact || "user" === c.ideal) && (l = ["front"]), l) return t.mediaDevices.enumerateDevices().then(function(t) {
                   var n = (t = t.filter(function(e) {
                     return "videoinput" === e.kind
                   })).find(function(e) {
-                    return d.some(function(t) {
+                    return l.some(function(t) {
                       return e.label.toLowerCase().includes(t)
                     })
                   });
-                  return !n && t.length && d.includes("back") && (n = t[t.length - 1]), n && (e.video.deviceId = c.exact ? {
+                  return !n && t.length && l.includes("back") && (n = t[t.length - 1]), n && (e.video.deviceId = c.exact ? {
                     exact: n.deviceId
                   } : {
                     ideal: n.deviceId
@@ -772,12 +772,12 @@ n("70102"), n("222007"), n("424973"), n("101997"), n("781738"), n("274635"), n("
               o = a(arguments[0], e),
               u = void 0;
             u = 0 === i && 0 === o ? Number.POSITIVE_INFINITY : 0 === i || 0 === o ? Math.max(i, o) : Math.min(i, o);
-            var d = {};
-            Object.defineProperty(d, "maxMessageSize", {
+            var l = {};
+            Object.defineProperty(l, "maxMessageSize", {
               get: function() {
                 return u
               }
-            }), this._sctp = d
+            }), this._sctp = l
           }
           return c.apply(this, arguments)
         }
@@ -1349,8 +1349,8 @@ n("70102"), n("222007"), n("424973"), n("101997"), n("781738"), n("274635"), n("
       return a(t) ? Object.keys(t).reduce(function(n, r) {
         var i, o, s, c = a(t[r]),
           u = c ? e(t[r]) : t[r],
-          d = c && !Object.keys(u).length;
-        if (void 0 === u || d) return n;
+          l = c && !Object.keys(u).length;
+        if (void 0 === u || l) return n;
         return Object.assign(n, (i = {}, o = r, s = u, o in i ? Object.defineProperty(i, o, {
           value: s,
           enumerable: !0,
@@ -1628,9 +1628,9 @@ n("70102"), n("222007"), n("424973"), n("101997"), n("781738"), n("274635"), n("
       }), 0 === n.length && c && n.push({
         ssrc: c
       });
-      var d = r.matchPrefix(e, "b=");
-      return d.length && (d = 0 === d[0].indexOf("b=TIAS:") ? parseInt(d[0].substr(7), 10) : 0 === d[0].indexOf("b=AS:") ? 950 * parseInt(d[0].substr(5), 10) - 16e3 : void 0, n.forEach(function(e) {
-        e.maxBitrate = d
+      var l = r.matchPrefix(e, "b=");
+      return l.length && (l = 0 === l[0].indexOf("b=TIAS:") ? parseInt(l[0].substr(7), 10) : 0 === l[0].indexOf("b=AS:") ? 950 * parseInt(l[0].substr(5), 10) - 16e3 : void 0, n.forEach(function(e) {
+        e.maxBitrate = l
       })), n
     }, r.parseRtcpParameters = function(e) {
       var t = {},

@@ -49,11 +49,11 @@ function c(e, t, n) {
     }(r, c) || function() {
       throw TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
     }()),
-    d = u[0],
-    l = u[1],
+    l = u[0],
+    d = u[1],
     f = (0, o.useCallback)(function() {
       var r = t(e);
-      !i(d, r) && (l(r), n && n())
-    }, [d, e, n]);
-  return (0, s.useIsomorphicLayoutEffect)(f), [d, f]
+      !i(l, r) && (d(r), n && n())
+    }, [l, e, n]);
+  return (0, s.useIsomorphicLayoutEffect)(f), [l, f]
 }

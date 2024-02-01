@@ -9,9 +9,9 @@ e.exports = function(e, t, n, r) {
   for (var a = Object.prototype.hasOwnProperty.bind(t), c = 0; c < o.length; c++) {
     var u = o[c];
     if (!a(u)) return !1;
-    var d = e[u],
-      l = t[u];
-    if (!1 === (i = n ? n.call(r, d, l, u) : void 0) || void 0 === i && d !== l) return !1
+    var l = e[u],
+      d = t[u];
+    if (!1 === (i = n ? n.call(r, l, d, u) : void 0) || void 0 === i && l !== d) return !1
   }
   return !0
 }

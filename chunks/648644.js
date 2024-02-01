@@ -6,7 +6,7 @@ var r = n("342646"),
   a = i("%Reflect.apply%", !0) || r.call(s, o),
   c = i("%Object.getOwnPropertyDescriptor%", !0),
   u = i("%Object.defineProperty%", !0),
-  d = i("%Math.max%");
+  l = i("%Math.max%");
 if (u) try {
   u({}, "a", {
     value: 1
@@ -17,12 +17,12 @@ if (u) try {
 e.exports = function(e) {
   var t = a(r, s, arguments);
   return c && u && c(t, "length").configurable && u(t, "length", {
-    value: 1 + d(0, e.length - (arguments.length - 1))
+    value: 1 + l(0, e.length - (arguments.length - 1))
   }), t
 };
-var l = function() {
+var d = function() {
   return a(r, o, arguments)
 };
 u ? u(e.exports, "apply", {
-  value: l
-}) : e.exports.apply = l
+  value: d
+}) : e.exports.apply = d

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   createSourceFactory: function() {
-    return d
+    return l
   }
 }), n("70102");
 var r = n("900255"),
@@ -58,7 +58,7 @@ var a = ["canDrag", "beginDrag", "isDragging", "endDrag"],
     }], o(e.prototype, t), n && o(e, n), r
   }();
 
-function d(e) {
+function l(e) {
   return Object.keys(e).forEach(function(t) {
       (0, r.invariant)(a.indexOf(t) > -1, 'Expected the drag source specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source', a.join(", "), t), (0, r.invariant)("function" == typeof e[t], "Expected %s in the drag source specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source", t, t, e[t])
     }), c.forEach(function(t) {

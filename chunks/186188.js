@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   Emoji: function() {
-    return N
+    return _
   },
   CustomEmoji: function() {
-    return _
+    return N
   },
   TextMention: function() {
     return A
@@ -55,7 +55,7 @@ var i = n("446674"),
   x = n("503241"),
   I = n("632215");
 
-function N(e) {
+function _(e) {
   let {
     emoji: t
   } = e;
@@ -72,7 +72,7 @@ function N(e) {
   })
 }
 
-function _(e) {
+function N(e) {
   let {
     emoji: t
   } = e;

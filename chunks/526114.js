@@ -32,10 +32,10 @@ function c() {
     n = t.targetIds,
     c = void 0 === n ? [] : n,
     u = t.prevTargetIds,
-    d = void 0 === u ? [] : u,
-    l = (0, a.xor)(c, d);
-  if (!(l.length > 0 || !(0, o.areArraysEqual)(c, d))) return s.NONE;
-  var f = d[d.length - 1],
+    l = void 0 === u ? [] : u,
+    d = (0, a.xor)(c, l);
+  if (!(d.length > 0 || !(0, o.areArraysEqual)(c, l))) return s.NONE;
+  var f = l[l.length - 1],
     p = c[c.length - 1];
-  return f !== p && (f && l.push(f), p && l.push(p)), l
+  return f !== p && (f && d.push(f), p && d.push(p)), d
 }

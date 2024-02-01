@@ -38,7 +38,7 @@ function g(e) {
     limit: s.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY,
     placeholderCount: s.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
     scoreMethod: c.ScoreMethod.COMMAND_OR_APPLICATION
-  }), N = i.useCallback(e => {
+  }), _ = i.useCallback(e => {
     var t;
     if (null == y) return null;
     let i = y[e],
@@ -74,7 +74,7 @@ function g(e) {
           n = v.current.getListDimensions().height;
         t - e - n < 9 * p.ITEM_HEIGHT && I()
       },
-      renderRow: N,
+      renderRow: _,
       rowCount: y.length,
       rowHeight: p.ITEM_HEIGHT
     })]

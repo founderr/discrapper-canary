@@ -24,16 +24,16 @@ var u = r.define("EncryptedPrivateKeyInfo", function() {
   this.seq().obj(this.key("algorithm").seq().obj(this.key("id").objid(), this.key("decrypt").seq().obj(this.key("kde").seq().obj(this.key("id").objid(), this.key("kdeparams").seq().obj(this.key("salt").octstr(), this.key("iters").int())), this.key("cipher").seq().obj(this.key("algo").objid(), this.key("iv").octstr()))), this.key("subjectPrivateKey").octstr())
 });
 t.EncryptedPrivateKey = u;
-var d = r.define("DSAPrivateKey", function() {
+var l = r.define("DSAPrivateKey", function() {
   this.seq().obj(this.key("version").int(), this.key("p").int(), this.key("q").int(), this.key("g").int(), this.key("pub_key").int(), this.key("priv_key").int())
 });
-t.DSAPrivateKey = d, t.DSAparam = r.define("DSAparam", function() {
+t.DSAPrivateKey = l, t.DSAparam = r.define("DSAparam", function() {
   this.int()
 });
-var l = r.define("ECPrivateKey", function() {
+var d = r.define("ECPrivateKey", function() {
   this.seq().obj(this.key("version").int(), this.key("privateKey").octstr(), this.key("parameters").optional().explicit(0).use(f), this.key("publicKey").optional().explicit(1).bitstr())
 });
-t.ECPrivateKey = l;
+t.ECPrivateKey = d;
 var f = r.define("ECParameters", function() {
   this.choice({
     namedCurve: this.objid()

@@ -8,8 +8,8 @@ if (n("70102"), n("424973"), !Object.keys) {
       toString: null
     }, "toString"),
     u = a.call(function() {}, "prototype"),
-    d = ["toString", "toLocaleString", "valueOf", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "constructor"],
-    l = function(e) {
+    l = ["toString", "toLocaleString", "valueOf", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "constructor"],
+    d = function(e) {
       var t = e.constructor;
       return t && t.prototype === e
     },
@@ -42,7 +42,7 @@ if (n("70102"), n("424973"), !Object.keys) {
       if ("undefined" == typeof window) return !1;
       for (var e in window) try {
         if (!f["$" + e] && i.call(window, e) && null !== window[e] && "object" == typeof window[e]) try {
-          l(window[e])
+          d(window[e])
         } catch (e) {
           return !0
         }
@@ -52,9 +52,9 @@ if (n("70102"), n("424973"), !Object.keys) {
       return !1
     }(),
     h = function(e) {
-      if ("undefined" == typeof window || !p) return l(e);
+      if ("undefined" == typeof window || !p) return d(e);
       try {
-        return l(e)
+        return d(e)
       } catch (e) {
         return !1
       }
@@ -64,19 +64,19 @@ if (n("70102"), n("424973"), !Object.keys) {
       n = "[object Function]" === o.call(e),
       r = s(e),
       a = t && "[object String]" === o.call(e),
-      l = [];
+      d = [];
     if (!t && !n && !r) throw TypeError("Object.keys called on a non-object");
     var f = u && n;
     if (a && e.length > 0 && !i.call(e, 0))
-      for (var p = 0; p < e.length; ++p) l.push(String(p));
+      for (var p = 0; p < e.length; ++p) d.push(String(p));
     if (r && e.length > 0)
-      for (var g = 0; g < e.length; ++g) l.push(String(g));
+      for (var v = 0; v < e.length; ++v) d.push(String(v));
     else
-      for (var b in e) !(f && "prototype" === b) && i.call(e, b) && l.push(String(b));
+      for (var g in e) !(f && "prototype" === g) && i.call(e, g) && d.push(String(g));
     if (c) {
-      for (var v = h(e), m = 0; m < d.length; ++m) !(v && "constructor" === d[m]) && i.call(e, d[m]) && l.push(d[m])
+      for (var b = h(e), m = 0; m < l.length; ++m) !(b && "constructor" === l[m]) && i.call(e, l[m]) && d.push(l[m])
     }
-    return l
+    return d
   }
 }
 e.exports = r

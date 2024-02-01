@@ -24,8 +24,8 @@ var l, i, r = n("37983"),
   y = n("41170"),
   x = n("591522"),
   I = n("209069"),
-  N = n("845579"),
-  _ = n("945330"),
+  _ = n("845579"),
+  N = n("945330"),
   A = n("587974"),
   R = n("599110"),
   O = n("510500"),
@@ -293,11 +293,11 @@ var H = o.memo(function(e) {
                   location: {
                     section: b.AnalyticsSections.EXPRESSION_PICKER
                   }
-                }), N.ExpressionSuggestionsEnabled.updateSetting(!1)
+                }), _.ExpressionSuggestionsEnabled.updateSetting(!1)
               },
               children: (0, r.jsx)(p.Tooltip, {
                 text: k.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_DISABLE,
-                children: e => (0, r.jsx)(_.default, {
+                children: e => (0, r.jsx)(N.default, {
                   ...e,
                   className: P.closeIcon
                 })

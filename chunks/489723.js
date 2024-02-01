@@ -31,6 +31,6 @@ r(s, o), e.exports = s, s.prototype.decode = function(e, t) {
   if (-1 === a || -1 === c) throw Error("PEM section not found for: " + r);
   let u = n.slice(a + 1, c).join("");
   u.replace(/[^a-z0-9+/=]+/gi, "");
-  let d = i.from(u, "base64");
-  return o.prototype.decode.call(this, d, t)
+  let l = i.from(u, "base64");
+  return o.prototype.decode.call(this, l, t)
 }

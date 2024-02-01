@@ -48,10 +48,10 @@ function a(e) {
       throw TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
     }()),
     u = c[0],
-    d = c[1];
+    l = c[1];
   return (0, r.useEffect)(function() {
-    return a.subscribeToOffsetChange(d)
+    return a.subscribeToOffsetChange(l)
   }), (0, r.useEffect)(function() {
-    return a.subscribeToStateChange(d)
+    return a.subscribeToStateChange(l)
   }), u
 }

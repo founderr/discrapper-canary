@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return u
   },
   removeTarget: function() {
-    return d
+    return l
   }
 });
 var r = "dnd-core/ADD_SOURCE",
@@ -57,7 +57,7 @@ function u(e) {
   }
 }
 
-function d(e) {
+function l(e) {
   return {
     type: s,
     payload: {

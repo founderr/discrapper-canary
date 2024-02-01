@@ -26,8 +26,8 @@ var l = n("37983"),
   y = n("38290"),
   x = n("191191"),
   I = n("256860"),
-  N = n("364685"),
-  _ = n("889701"),
+  _ = n("364685"),
+  N = n("889701"),
   A = n("168973"),
   R = n("983782"),
   O = n("659500"),
@@ -143,7 +143,7 @@ var G = i.memo(function(e) {
   }), es = (0, b.useExpressionPickerStore)(e => e.activeView), ea = (0, I.useHasSendableSticker)(Y), {
     renderWindow: eu,
     windowDispatch: ed
-  } = i.useContext(S.default), ec = (0, c.useStateFromStores)([N.default], () => !N.default.hasLoadedStickerPacks), ef = (0, v.useSoundmojiExperiment)("expression_picker"), ep = null != J, em = (0, f.useIsModalAtTop)(null != J ? J : ""), eh = i.useCallback(e => {
+  } = i.useContext(S.default), ec = (0, c.useStateFromStores)([_.default], () => !_.default.hasLoadedStickerPacks), ef = (0, v.useSoundmojiExperiment)("expression_picker"), ep = null != J, em = (0, f.useIsModalAtTop)(null != J ? J : ""), eh = i.useCallback(e => {
     var t;
     if (!ep && (0, f.hasAnyModalOpen)() || ep && !(em && Z)) return;
     let {
@@ -268,7 +268,7 @@ var G = i.memo(function(e) {
                     children: D.default.Messages.EXPRESSION_PICKER_UPLOAD
                   })]
                 })
-              }) : null, es === k.ExpressionPickerViewType.STICKER && eC ? (0, l.jsx)(_.default, {
+              }) : null, es === k.ExpressionPickerViewType.STICKER && eC ? (0, l.jsx)(N.default, {
                 isLoading: ec,
                 channel: Y,
                 containerWidth: er,

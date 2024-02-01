@@ -38,35 +38,35 @@ function u(e, t, n) {
     o = t[n ? 3 : 1] ^ r[1],
     s = t[2] ^ r[2];
   t = t[n ? 1 : 3] ^ r[3];
-  var a, u, d, l, f = r.length / 4 - 2,
+  var a, u, l, d, f = r.length / 4 - 2,
     p = 4,
     h = [0, 0, 0, 0];
   e = (a = e.s[n])[0];
-  var g = a[1],
-    b = a[2],
-    v = a[3],
+  var v = a[1],
+    g = a[2],
+    b = a[3],
     m = a[4];
-  for (l = 0; l < f; l++) a = e[i >>> 24] ^ g[o >> 16 & 255] ^ b[s >> 8 & 255] ^ v[255 & t] ^ r[p], u = e[o >>> 24] ^ g[s >> 16 & 255] ^ b[t >> 8 & 255] ^ v[255 & i] ^ r[p + 1], d = e[s >>> 24] ^ g[t >> 16 & 255] ^ b[i >> 8 & 255] ^ v[255 & o] ^ r[p + 2], t = e[t >>> 24] ^ g[i >> 16 & 255] ^ b[o >> 8 & 255] ^ v[255 & s] ^ r[p + 3], p += 4, i = a, o = u, s = d;
-  for (l = 0; 4 > l; l++) h[n ? 3 & -l : l] = m[i >>> 24] << 24 ^ m[o >> 16 & 255] << 16 ^ m[s >> 8 & 255] << 8 ^ m[255 & t] ^ r[p++], a = i, i = o, o = s, s = t, t = a;
+  for (d = 0; d < f; d++) a = e[i >>> 24] ^ v[o >> 16 & 255] ^ g[s >> 8 & 255] ^ b[255 & t] ^ r[p], u = e[o >>> 24] ^ v[s >> 16 & 255] ^ g[t >> 8 & 255] ^ b[255 & i] ^ r[p + 1], l = e[s >>> 24] ^ v[t >> 16 & 255] ^ g[i >> 8 & 255] ^ b[255 & o] ^ r[p + 2], t = e[t >>> 24] ^ v[i >> 16 & 255] ^ g[o >> 8 & 255] ^ b[255 & s] ^ r[p + 3], p += 4, i = a, o = u, s = l;
+  for (d = 0; 4 > d; d++) h[n ? 3 & -d : d] = m[i >>> 24] << 24 ^ m[o >> 16 & 255] << 16 ^ m[s >> 8 & 255] << 8 ^ m[255 & t] ^ r[p++], a = i, i = o, o = s, s = t, t = a;
   return h
 }
 
-function d(e, t) {
+function l(e, t) {
   var n, r, i, o = e.F,
     s = e.b,
     a = o[0],
     c = o[1],
     u = o[2],
-    d = o[3],
-    l = o[4],
+    l = o[3],
+    d = o[4],
     f = o[5],
     p = o[6],
     h = o[7];
-  for (n = 0; 64 > n; n++) 16 > n ? r = t[n] : (r = t[n + 1 & 15], i = t[n + 14 & 15], r = t[15 & n] = (r >>> 7 ^ r >>> 18 ^ r >>> 3 ^ r << 25 ^ r << 14) + (i >>> 17 ^ i >>> 19 ^ i >>> 10 ^ i << 15 ^ i << 13) + t[15 & n] + t[n + 9 & 15] | 0), r = r + h + (l >>> 6 ^ l >>> 11 ^ l >>> 25 ^ l << 26 ^ l << 21 ^ l << 7) + (p ^ l & (f ^ p)) + s[n], h = p, p = f, f = l, l = d + r | 0, d = u, u = c, a = r + ((c = a) & u ^ d & (c ^ u)) + (c >>> 2 ^ c >>> 13 ^ c >>> 22 ^ c << 30 ^ c << 19 ^ c << 10) | 0;
-  o[0] = o[0] + a | 0, o[1] = o[1] + c | 0, o[2] = o[2] + u | 0, o[3] = o[3] + d | 0, o[4] = o[4] + l | 0, o[5] = o[5] + f | 0, o[6] = o[6] + p | 0, o[7] = o[7] + h | 0
+  for (n = 0; 64 > n; n++) 16 > n ? r = t[n] : (r = t[n + 1 & 15], i = t[n + 14 & 15], r = t[15 & n] = (r >>> 7 ^ r >>> 18 ^ r >>> 3 ^ r << 25 ^ r << 14) + (i >>> 17 ^ i >>> 19 ^ i >>> 10 ^ i << 15 ^ i << 13) + t[15 & n] + t[n + 9 & 15] | 0), r = r + h + (d >>> 6 ^ d >>> 11 ^ d >>> 25 ^ d << 26 ^ d << 21 ^ d << 7) + (p ^ d & (f ^ p)) + s[n], h = p, p = f, f = d, d = l + r | 0, l = u, u = c, a = r + ((c = a) & u ^ l & (c ^ u)) + (c >>> 2 ^ c >>> 13 ^ c >>> 22 ^ c << 30 ^ c << 19 ^ c << 10) | 0;
+  o[0] = o[0] + a | 0, o[1] = o[1] + c | 0, o[2] = o[2] + u | 0, o[3] = o[3] + l | 0, o[4] = o[4] + d | 0, o[5] = o[5] + f | 0, o[6] = o[6] + p | 0, o[7] = o[7] + h | 0
 }
 
-function l(e, t) {
+function d(e, t) {
   var n, r = c.random.K[e],
     i = [];
   for (n in r) r.hasOwnProperty(n) && i.push(r[n]);
@@ -86,7 +86,7 @@ function h(e) {
   return e.L.encrypt(e.h)
 }
 
-function g(e, t) {
+function v(e, t) {
   return function() {
     t.apply(e, arguments)
   }
@@ -127,12 +127,12 @@ c.cipher.aes = function(e) {
     var e, t, n, r, i, o, s, a = this.s[0],
       c = this.s[1],
       u = a[4],
-      d = c[4],
-      l = [],
+      l = c[4],
+      d = [],
       f = [];
-    for (e = 0; 256 > e; e++) f[(l[e] = e << 1 ^ 283 * (e >> 7)) ^ e] = e;
+    for (e = 0; 256 > e; e++) f[(d[e] = e << 1 ^ 283 * (e >> 7)) ^ e] = e;
     for (t = n = 0; !u[t]; t ^= r || 1, n = f[n] || 1)
-      for (o = (o = n ^ n << 1 ^ n << 2 ^ n << 3 ^ n << 4) >> 8 ^ 255 & o ^ 99, u[t] = o, d[o] = t, s = 16843009 * (i = l[e = l[r = l[t]]]) ^ 65537 * e ^ 257 * r ^ 16843008 * t, i = 257 * l[o] ^ 16843008 * o, e = 0; 4 > e; e++) a[e][t] = i = i << 24 ^ i >>> 8, c[e][o] = s = s << 24 ^ s >>> 8;
+      for (o = (o = n ^ n << 1 ^ n << 2 ^ n << 3 ^ n << 4) >> 8 ^ 255 & o ^ 99, u[t] = o, l[o] = t, s = 16843009 * (i = d[e = d[r = d[t]]]) ^ 65537 * e ^ 257 * r ^ 16843008 * t, i = 257 * d[o] ^ 16843008 * o, e = 0; 4 > e; e++) a[e][t] = i = i << 24 ^ i >>> 8, c[e][o] = s = s << 24 ^ s >>> 8;
     for (e = 0; 5 > e; e++) a[e] = a[e].slice(0), c[e] = c[e].slice(0)
   }
 }, c.bitArray = {
@@ -223,8 +223,8 @@ c.cipher.aes = function(e) {
       s = 0,
       a = c.codec.base32.B,
       u = 0,
-      d = c.bitArray.bitLength(e);
-    for (n && (a = c.codec.base32.X), n = 0; o.length * r < d;) o += a.charAt((u ^ e[n] >>> s) >>> i), s < r ? (u = e[n] << r - s, s += i, n++) : (u <<= r, s -= r);
+      l = c.bitArray.bitLength(e);
+    for (n && (a = c.codec.base32.X), n = 0; o.length * r < l;) o += a.charAt((u ^ e[n] >>> s) >>> i), s < r ? (u = e[n] << r - s, s += i, n++) : (u <<= r, s -= r);
     for (; 7 & o.length && !t;) o += "=";
     return o
   },
@@ -235,19 +235,19 @@ c.cipher.aes = function(e) {
       s = c.codec.base32.REMAINING,
       a = [],
       u = 0,
-      d = c.codec.base32.B,
-      l = 0,
+      l = c.codec.base32.B,
+      d = 0,
       f = "base32";
-    for (t && (d = c.codec.base32.X, f = "base32hex"), n = 0; n < e.length; n++) {
-      if (0 > (r = d.indexOf(e.charAt(n)))) {
+    for (t && (l = c.codec.base32.X, f = "base32hex"), n = 0; n < e.length; n++) {
+      if (0 > (r = l.indexOf(e.charAt(n)))) {
         if (!t) try {
           return c.codec.base32hex.toBits(e)
         } catch (e) {}
         throw new c.exception.invalid("this isn't " + f + "!")
       }
-      u > s ? (u -= s, a.push(l ^ r >>> u), l = r << i - u) : (u += o, l ^= r << i - u)
+      u > s ? (u -= s, a.push(d ^ r >>> u), d = r << i - u) : (u += o, d ^= r << i - u)
     }
-    return 56 & u && a.push(c.bitArray.partial(56 & u, l, 1)), a
+    return 56 & u && a.push(c.bitArray.partial(56 & u, d, 1)), a
   }
 }, c.codec.base32hex = {
   fromBits: function(e, t) {
@@ -303,10 +303,10 @@ c.cipher.aes = function(e) {
     if ("undefined" != typeof Uint32Array) {
       var r = new Uint32Array(n),
         i = 0;
-      for (t = 512 + t - (512 + t & 511); t <= e; t += 512) d(this, r.subarray(16 * i, 16 * (i + 1))), i += 1;
+      for (t = 512 + t - (512 + t & 511); t <= e; t += 512) l(this, r.subarray(16 * i, 16 * (i + 1))), i += 1;
       n.splice(0, 16 * i)
     } else
-      for (t = 512 + t - (512 + t & 511); t <= e; t += 512) d(this, n.splice(0, 16));
+      for (t = 512 + t - (512 + t & 511); t <= e; t += 512) l(this, n.splice(0, 16));
     return this
   },
   finalize: function() {
@@ -314,7 +314,7 @@ c.cipher.aes = function(e) {
       n = this.F,
       t = c.bitArray.concat(t, [c.bitArray.partial(1, 1)]);
     for (e = t.length + 2; 15 & e; e++) t.push(0);
-    for (t.push(Math.floor(this.l / 4294967296)), t.push(0 | this.l); t.length;) d(this, t.splice(0, 16));
+    for (t.push(Math.floor(this.l / 4294967296)), t.push(0 | this.l); t.length;) l(this, t.splice(0, 16));
     return this.reset(), n
   },
   Y: [],
@@ -348,9 +348,9 @@ c.cipher.aes = function(e) {
     var o, s = t.slice(0),
       a = c.bitArray,
       u = a.bitLength(n) / 8,
-      d = a.bitLength(s) / 8;
+      l = a.bitLength(s) / 8;
     if (i = i || 64, r = r || [], 7 > u) throw new c.exception.invalid("ccm: iv must be at least 7 bytes");
-    for (o = 2; 4 > o && d >>> 8 * o; o++);
+    for (o = 2; 4 > o && l >>> 8 * o; o++);
     return o < 15 - u && (o = 15 - u), n = a.clamp(n, 8 * (15 - o)), t = c.mode.ccm.V(e, t, n, r, i, o), s = c.mode.ccm.C(e, s, n, t, i, o), a.concat(s.data, s.tag)
   },
   decrypt: function(e, t, n, r, i) {
@@ -359,11 +359,11 @@ c.cipher.aes = function(e) {
       s = o.bitLength(n) / 8,
       a = o.bitLength(t),
       u = o.clamp(t, a - i),
-      d = o.bitSlice(t, a - i),
+      l = o.bitSlice(t, a - i),
       a = (a - i) / 8;
     if (7 > s) throw new c.exception.invalid("ccm: iv must be at least 7 bytes");
     for (t = 2; 4 > t && a >>> 8 * t; t++);
-    if (t < 15 - s && (t = 15 - s), n = o.clamp(n, 8 * (15 - t)), u = c.mode.ccm.C(e, u, n, d, i, t), e = c.mode.ccm.V(e, u.data, n, r, i, t), !o.equal(u.tag, e)) throw new c.exception.corrupt("ccm: tag doesn't match");
+    if (t < 15 - s && (t = 15 - s), n = o.clamp(n, 8 * (15 - t)), u = c.mode.ccm.C(e, u, n, l, i, t), e = c.mode.ccm.V(e, u.data, n, r, i, t), !o.equal(u.tag, e)) throw new c.exception.corrupt("ccm: tag doesn't match");
     return u.data
   },
   na: function(e, t, n, r, i, o) {
@@ -386,17 +386,17 @@ c.cipher.aes = function(e) {
     var s, a = c.bitArray;
     s = a.i;
     var u = t.length,
-      d = a.bitLength(t),
-      l = u / 50,
-      f = l;
+      l = a.bitLength(t),
+      d = u / 50,
+      f = d;
     if (n = a.concat([a.partial(8, o - 1)], n).concat([0, 0, 0]).slice(0, 4), r = a.bitSlice(s(r, e.encrypt(n)), 0, i), !u) return {
       tag: r,
       data: []
     };
-    for (s = 0; s < u; s += 4) s > l && (c.mode.ccm.fa(s / u), l += f), n[3]++, i = e.encrypt(n), t[s] ^= i[0], t[s + 1] ^= i[1], t[s + 2] ^= i[2], t[s + 3] ^= i[3];
+    for (s = 0; s < u; s += 4) s > d && (c.mode.ccm.fa(s / u), d += f), n[3]++, i = e.encrypt(n), t[s] ^= i[0], t[s + 1] ^= i[1], t[s + 2] ^= i[2], t[s + 3] ^= i[3];
     return {
       tag: r,
-      data: a.clamp(t, d)
+      data: a.clamp(t, l)
     }
   }
 }, c.mode.ocb2 = {
@@ -405,26 +405,26 @@ c.cipher.aes = function(e) {
     if (128 !== c.bitArray.bitLength(n)) throw new c.exception.invalid("ocb iv must be 128 bits");
     var s, a = c.mode.ocb2.S,
       u = c.bitArray,
-      d = u.i,
-      l = [0, 0, 0, 0];
+      l = u.i,
+      d = [0, 0, 0, 0];
     n = a(e.encrypt(n));
     var f, p = [];
-    for (s = 0, r = r || [], i = i || 64; s + 4 < t.length; s += 4) l = d(l, f = t.slice(s, s + 4)), p = p.concat(d(n, e.encrypt(d(n, f)))), n = a(n);
-    return f = t.slice(s), t = u.bitLength(f), s = e.encrypt(d(n, [0, 0, 0, t])), f = u.clamp(d(f.concat([0, 0, 0]), s), t), l = d(l, d(f.concat([0, 0, 0]), s)), l = e.encrypt(d(l, d(n, a(n)))), r.length && (l = d(l, o ? r : c.mode.ocb2.pmac(e, r))), p.concat(u.concat(f, u.clamp(l, i)))
+    for (s = 0, r = r || [], i = i || 64; s + 4 < t.length; s += 4) d = l(d, f = t.slice(s, s + 4)), p = p.concat(l(n, e.encrypt(l(n, f)))), n = a(n);
+    return f = t.slice(s), t = u.bitLength(f), s = e.encrypt(l(n, [0, 0, 0, t])), f = u.clamp(l(f.concat([0, 0, 0]), s), t), d = l(d, l(f.concat([0, 0, 0]), s)), d = e.encrypt(l(d, l(n, a(n)))), r.length && (d = l(d, o ? r : c.mode.ocb2.pmac(e, r))), p.concat(u.concat(f, u.clamp(d, i)))
   },
   decrypt: function(e, t, n, r, i, o) {
     if (128 !== c.bitArray.bitLength(n)) throw new c.exception.invalid("ocb iv must be 128 bits");
     i = i || 64;
     var s, a, u = c.mode.ocb2.S,
-      d = c.bitArray,
-      l = d.i,
+      l = c.bitArray,
+      d = l.i,
       f = [0, 0, 0, 0],
       p = u(e.encrypt(n)),
       h = c.bitArray.bitLength(t) - i,
-      g = [];
-    for (n = 0, r = r || []; n + 4 < h / 32; n += 4) s = l(p, e.decrypt(l(p, t.slice(n, n + 4)))), f = l(f, s), g = g.concat(s), p = u(p);
-    if (a = h - 32 * n, s = e.encrypt(l(p, [0, 0, 0, a])), s = l(s, d.clamp(t.slice(n), a).concat([0, 0, 0])), f = l(f, s), f = e.encrypt(l(f, l(p, u(p)))), r.length && (f = l(f, o ? r : c.mode.ocb2.pmac(e, r))), !d.equal(d.clamp(f, i), d.bitSlice(t, h))) throw new c.exception.corrupt("ocb: tag doesn't match");
-    return g.concat(d.clamp(s, a))
+      v = [];
+    for (n = 0, r = r || []; n + 4 < h / 32; n += 4) s = d(p, e.decrypt(d(p, t.slice(n, n + 4)))), f = d(f, s), v = v.concat(s), p = u(p);
+    if (a = h - 32 * n, s = e.encrypt(d(p, [0, 0, 0, a])), s = d(s, l.clamp(t.slice(n), a).concat([0, 0, 0])), f = d(f, s), f = e.encrypt(d(f, d(p, u(p)))), r.length && (f = d(f, o ? r : c.mode.ocb2.pmac(e, r))), !l.equal(l.clamp(f, i), l.bitSlice(t, h))) throw new c.exception.corrupt("ocb: tag doesn't match");
+    return v.concat(l.clamp(s, a))
   },
   pmac: function(e, t) {
     var n, r = c.mode.ocb2.S,
@@ -466,10 +466,10 @@ c.cipher.aes = function(e) {
     return t
   },
   C: function(e, t, n, r, i, o) {
-    var s, a, u, d, l, f, p, h, g = c.bitArray;
-    for (f = n.length, p = g.bitLength(n), h = g.bitLength(r), a = g.bitLength(i), s = t.encrypt([0, 0, 0, 0]), 96 === a ? (i = i.slice(0), i = g.concat(i, [1])) : (i = c.mode.gcm.j(s, [0, 0, 0, 0], i), i = c.mode.gcm.j(s, i, [0, 0, Math.floor(a / 4294967296), 4294967295 & a])), a = c.mode.gcm.j(s, [0, 0, 0, 0], r), l = i.slice(0), r = a.slice(0), e || (r = c.mode.gcm.j(s, a, n)), d = 0; d < f; d += 4) l[3]++, u = t.encrypt(l), n[d] ^= u[0], n[d + 1] ^= u[1], n[d + 2] ^= u[2], n[d + 3] ^= u[3];
-    return n = g.clamp(n, p), e && (r = c.mode.gcm.j(s, a, n)), e = [Math.floor(h / 4294967296), 4294967295 & h, Math.floor(p / 4294967296), 4294967295 & p], r = c.mode.gcm.j(s, r, e), u = t.encrypt(i), r[0] ^= u[0], r[1] ^= u[1], r[2] ^= u[2], r[3] ^= u[3], {
-      tag: g.bitSlice(r, 0, o),
+    var s, a, u, l, d, f, p, h, v = c.bitArray;
+    for (f = n.length, p = v.bitLength(n), h = v.bitLength(r), a = v.bitLength(i), s = t.encrypt([0, 0, 0, 0]), 96 === a ? (i = i.slice(0), i = v.concat(i, [1])) : (i = c.mode.gcm.j(s, [0, 0, 0, 0], i), i = c.mode.gcm.j(s, i, [0, 0, Math.floor(a / 4294967296), 4294967295 & a])), a = c.mode.gcm.j(s, [0, 0, 0, 0], r), d = i.slice(0), r = a.slice(0), e || (r = c.mode.gcm.j(s, a, n)), l = 0; l < f; l += 4) d[3]++, u = t.encrypt(d), n[l] ^= u[0], n[l + 1] ^= u[1], n[l + 2] ^= u[2], n[l + 3] ^= u[3];
+    return n = v.clamp(n, p), e && (r = c.mode.gcm.j(s, a, n)), e = [Math.floor(h / 4294967296), 4294967295 & h, Math.floor(p / 4294967296), 4294967295 & p], r = c.mode.gcm.j(s, r, e), u = t.encrypt(i), r[0] ^= u[0], r[1] ^= u[1], r[2] ^= u[2], r[3] ^= u[3], {
+      tag: v.bitSlice(r, 0, o),
       data: n
     }
   }
@@ -496,14 +496,14 @@ c.cipher.aes = function(e) {
 }, c.misc.pbkdf2 = function(e, t, n, r, i) {
   if (n = n || 1e4, 0 > r || 0 > n) throw new c.exception.invalid("invalid params to pbkdf2");
   "string" == typeof e && (e = c.codec.utf8String.toBits(e)), "string" == typeof t && (t = c.codec.utf8String.toBits(t)), e = new(i = i || c.misc.hmac)(e);
-  var o, s, a, u, d = [],
-    l = c.bitArray;
-  for (u = 1; 32 * d.length < (r || 1); u++) {
-    for (s = 1, i = o = e.encrypt(l.concat(t, [u])); s < n; s++)
+  var o, s, a, u, l = [],
+    d = c.bitArray;
+  for (u = 1; 32 * l.length < (r || 1); u++) {
+    for (s = 1, i = o = e.encrypt(d.concat(t, [u])); s < n; s++)
       for (o = e.encrypt(o), a = 0; a < o.length; a++) i[a] ^= o[a];
-    d = d.concat(i)
+    l = l.concat(i)
   }
-  return r && (d = l.clamp(d, r)), d
+  return r && (l = d.clamp(l, r)), l
 }, c.prng = function(e) {
   this.c = [new c.hash.sha256], this.m = [0], this.P = 0, this.H = {}, this.N = 0, this.U = {}, this.Z = this.f = this.o = this.ha = 0, this.b = [0, 0, 0, 0, 0, 0, 0, 0], this.h = [0, 0, 0, 0], this.L = void 0, this.M = e, this.D = !1, this.K = {
     progress: {},
@@ -557,7 +557,7 @@ c.cipher.aes = function(e) {
         u = 1
     }
     if (u) throw new c.exception.bug("random: addEntropy only supports number, array of numbers or string");
-    this.m[s] += t, this.f += t, a === this.u && (this.isReady() !== this.u && l("seeded", Math.max(this.o, this.f)), l("progress", this.getProgress()))
+    this.m[s] += t, this.f += t, a === this.u && (this.isReady() !== this.u && d("seeded", Math.max(this.o, this.f)), d("progress", this.getProgress()))
   },
   isReady: function(e) {
     return e = this.T[void 0 !== e ? e : this.M], this.o && this.o >= e ? this.m[0] > this.ba && (new Date).valueOf() > this.Z ? this.J | this.I : this.I : this.f >= e ? this.J | this.u : this.u
@@ -568,11 +568,11 @@ c.cipher.aes = function(e) {
   startCollectors: function() {
     if (!this.D) {
       if (this.a = {
-          loadTimeCollector: g(this, this.ma),
-          mouseCollector: g(this, this.oa),
-          keyboardCollector: g(this, this.la),
-          accelerometerCollector: g(this, this.ea),
-          touchCollector: g(this, this.qa)
+          loadTimeCollector: v(this, this.ma),
+          mouseCollector: v(this, this.oa),
+          keyboardCollector: v(this, this.la),
+          accelerometerCollector: v(this, this.ea),
+          touchCollector: v(this, this.qa)
         }, window.addEventListener) window.addEventListener("load", this.a.loadTimeCollector, !1), window.addEventListener("mousemove", this.a.mouseCollector, !1), window.addEventListener("keypress", this.a.keyboardCollector, !1), window.addEventListener("devicemotion", this.a.accelerometerCollector, !1), window.addEventListener("touchmove", this.a.touchCollector, !1);
       else if (document.attachEvent) document.attachEvent("onload", this.a.loadTimeCollector), document.attachEvent("onmousemove", this.a.mouseCollector), document.attachEvent("keypress", this.a.keyboardCollector);
       else throw new c.exception.bug("can't attach event");

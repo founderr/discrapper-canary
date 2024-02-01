@@ -14,6 +14,6 @@ var r = n("587134"),
 function u(e, t) {
   var n = (0, i.useOptionalFactory)(e, t),
     u = (0, o.useDropTargetMonitor)(),
-    d = (0, s.useDropTargetConnector)(n.options);
-  return (0, r.useRegisteredDropTarget)(n, u, d), [(0, a.useCollectedProps)(n.collect, u, d), (0, c.useConnectDropTarget)(d)]
+    l = (0, s.useDropTargetConnector)(n.options);
+  return (0, r.useRegisteredDropTarget)(n, u, l), [(0, a.useCollectedProps)(n.collect, u, l), (0, c.useConnectDropTarget)(l)]
 }

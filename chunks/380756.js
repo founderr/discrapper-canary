@@ -40,11 +40,11 @@ e.exports = {
       }], n = [], r = 0; r < t.length; ++r) {
       for (var i = t[r], o = i.obj[i.prop], s = Object.keys(o), c = 0; c < s.length; ++c) {
         var u = s[c],
-          d = o[u];
-        "object" == typeof d && null !== d && -1 === n.indexOf(d) && (t.push({
+          l = o[u];
+        "object" == typeof l && null !== l && -1 === n.indexOf(l) && (t.push({
           obj: o,
           prop: u
-        }), n.push(d))
+        }), n.push(l))
       }
     }
     return a(t), e
@@ -65,24 +65,24 @@ e.exports = {
       return "%26%23" + parseInt(e.slice(2), 16) + "%3B"
     });
     for (var c = "", u = 0; u < a.length; ++u) {
-      var d = a.charCodeAt(u);
-      if (45 === d || 46 === d || 95 === d || 126 === d || d >= 48 && d <= 57 || d >= 65 && d <= 90 || d >= 97 && d <= 122 || o === r.RFC1738 && (40 === d || 41 === d)) {
+      var l = a.charCodeAt(u);
+      if (45 === l || 46 === l || 95 === l || 126 === l || l >= 48 && l <= 57 || l >= 65 && l <= 90 || l >= 97 && l <= 122 || o === r.RFC1738 && (40 === l || 41 === l)) {
         c += a.charAt(u);
         continue
       }
-      if (d < 128) {
-        c += s[d];
+      if (l < 128) {
+        c += s[l];
         continue
       }
-      if (d < 2048) {
-        c += s[192 | d >> 6] + s[128 | 63 & d];
+      if (l < 2048) {
+        c += s[192 | l >> 6] + s[128 | 63 & l];
         continue
       }
-      if (d < 55296 || d >= 57344) {
-        c += s[224 | d >> 12] + s[128 | d >> 6 & 63] + s[128 | 63 & d];
+      if (l < 55296 || l >= 57344) {
+        c += s[224 | l >> 12] + s[128 | l >> 6 & 63] + s[128 | 63 & l];
         continue
       }
-      u += 1, c += s[240 | (d = 65536 + ((1023 & d) << 10 | 1023 & a.charCodeAt(u))) >> 18] + s[128 | d >> 12 & 63] + s[128 | d >> 6 & 63] + s[128 | 63 & d]
+      u += 1, c += s[240 | (l = 65536 + ((1023 & l) << 10 | 1023 & a.charCodeAt(u))) >> 18] + s[128 | l >> 12 & 63] + s[128 | l >> 6 & 63] + s[128 | 63 & l]
     }
     return c
   },

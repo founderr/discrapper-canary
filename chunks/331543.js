@@ -7,25 +7,25 @@ var r = n("464510"),
   a = n("554741"),
   c = n("903389"),
   u = n("862440"),
-  d = n("338100"),
-  l = n("955006"),
+  l = n("338100"),
+  d = n("955006"),
   f = n("812095"),
   p = n("264871"),
   h = Object("a"),
-  g = "a" !== h[0] || !(0 in h),
-  b = f("String.prototype.split");
+  v = "a" !== h[0] || !(0 in h),
+  g = f("String.prototype.split");
 e.exports = function(e) {
-  var t, n = d(this),
-    f = u((g && p(n) ? b(n, "") : n).length);
+  var t, n = l(this),
+    f = u((v && p(n) ? g(n, "") : n).length);
   if (!c(e)) throw TypeError("Array.prototype.map callback must be a function");
   arguments.length > 1 && (t = arguments[1]);
-  for (var h = r(n, f), v = 0; v < f;) {
-    var m = l(v);
+  for (var h = r(n, f), b = 0; b < f;) {
+    var m = d(b);
     if (a(n, m)) {
-      var y = i(e, t, [s(n, m), v, n]);
+      var y = i(e, t, [s(n, m), b, n]);
       o(h, m, y)
     }
-    v += 1
+    b += 1
   }
   return h
 }

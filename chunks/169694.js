@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return N
   },
   unsetCommand: function() {
     return A
@@ -29,14 +29,14 @@ var l = n("798609"),
   y = n("406291");
 let x = new Set(["applicationCommandOption"]),
   I = new Set([l.ApplicationCommandOptionType.ATTACHMENT]),
-  N = new Set(["line", "applicationCommand"]);
+  _ = new Set(["line", "applicationCommand"]);
 
-function _(e, t, n, d) {
+function N(e, t, n, d) {
   let {
     insertData: p,
     isInline: m,
     isVoid: h,
-    onChange: _,
+    onChange: N,
     deleteBackward: P,
     deleteForward: L,
     deleteFragment: U
@@ -134,9 +134,9 @@ function _(e, t, n, d) {
                       S = f.PREFIX_COMMAND_REGEX.exec(h);
                     null != S && (h = y.COMMAND_SENTINEL + h.substring(S.length));
                     let x = "".concat(y.COMMAND_SENTINEL).concat(d.displayName).toLocaleLowerCase(),
-                      N = "".concat(y.COMMAND_SENTINEL).concat(d.name).toLocaleLowerCase();
-                    h.startsWith(x) && h.length > x.length ? m = p.substring(x.length).trim() : h.startsWith(N) && h.length > N.length && (m = p.substring(N.length).trim());
-                    let _ = [],
+                      _ = "".concat(y.COMMAND_SENTINEL).concat(d.name).toLocaleLowerCase();
+                    h.startsWith(x) && h.length > x.length ? m = p.substring(x.length).trim() : h.startsWith(_) && h.length > _.length && (m = p.substring(_.length).trim());
+                    let N = [],
                       A = null,
                       O = null;
                     if (null != d.options) {
@@ -154,7 +154,7 @@ function _(e, t, n, d) {
                                 text: i
                               }]
                             };
-                          _.push(r), 0 === l.text.length && null == A && (A = r)
+                          N.push(r), 0 === l.text.length && null == A && (A = r)
                         }
                       for (let l of d.options)
                         if (!e.has(l.name) && (l.required || null != u[l.name])) {
@@ -169,15 +169,15 @@ function _(e, t, n, d) {
                               text: e
                             }]
                           };
-                          _.push(r), 0 === e.length && null == A && (A = r), null == i && (O = r)
+                          N.push(r), 0 === e.length && null == A && (A = r), null == i && (O = r)
                         }
                     }
-                    a = m.length > 0 ? "".concat(y.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === _.length ? "".concat(y.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(y.COMMAND_SENTINEL).concat(d.displayName), _.unshift({
+                    a = m.length > 0 ? "".concat(y.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === N.length ? "".concat(y.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(y.COMMAND_SENTINEL).concat(d.displayName), N.unshift({
                       text: a
                     });
                     let M = {
                       type: "applicationCommand",
-                      children: _,
+                      children: N,
                       command: {
                         id: d.id,
                         name: d.name,
@@ -218,7 +218,7 @@ function _(e, t, n, d) {
               let e = T.EditorUtils.richValue(t),
                 s = e[0],
                 u = s.children[0];
-              if (N.has(s.type) && T.TextUtils.isText(u)) {
+              if (_.has(s.type) && T.TextUtils.isText(u)) {
                 let e = function(e, t) {
                   if (!e.startsWith("/")) return null;
                   let n = (0, c.getCommandQuery)(t, e.substring(1));
@@ -325,7 +325,7 @@ function _(e, t, n, d) {
         j = T.EditorUtils.richValue(e), D = e.selection, w = u.activeCommand, H = h
       }
     }
-    _()
+    N()
   }, e
 }
 

@@ -12,8 +12,8 @@ e.exports = function(e, t) {
     r = !0,
     u = !0;
   if ("length" in e && s) {
-    var d = s(e, "length");
-    d && !d.configurable && (r = !1), d && !d.writable && (u = !1)
+    var l = s(e, "length");
+    l && !l.configurable && (r = !1), l && !l.writable && (u = !1)
   }
   return (r || u || !n) && (o ? i(e, "length", t, !0, !0) : i(e, "length", t)), e
 }

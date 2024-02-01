@@ -57,7 +57,7 @@ function o(e) {
       this.fillLast = a, t = 4;
       break;
     case "base64":
-      this.text = d, this.end = l, t = 3;
+      this.text = l, this.end = d, t = 3;
       break;
     default:
       this.write = f, this.end = p;
@@ -133,12 +133,12 @@ function u(e) {
   return t
 }
 
-function d(e, t) {
+function l(e, t) {
   var n = (e.length - t) % 3;
   return 0 === n ? e.toString("base64", t) : (this.lastNeed = 3 - n, this.lastTotal = 3, 1 === n ? this.lastChar[0] = e[e.length - 1] : (this.lastChar[0] = e[e.length - 2], this.lastChar[1] = e[e.length - 1]), e.toString("base64", t, e.length - n))
 }
 
-function l(e) {
+function d(e) {
   var t = e && e.length ? this.write(e) : "";
   return this.lastNeed ? t + this.lastChar.toString("base64", 0, 3 - this.lastNeed) : t
 }

@@ -6,21 +6,21 @@ var r = n("911718"),
   a = r("%WeakMap%", !0),
   c = r("%Map%", !0),
   u = i("WeakMap.prototype.get", !0),
-  d = i("WeakMap.prototype.set", !0),
-  l = i("WeakMap.prototype.has", !0),
+  l = i("WeakMap.prototype.set", !0),
+  d = i("WeakMap.prototype.has", !0),
   f = i("Map.prototype.get", !0),
   p = i("Map.prototype.set", !0),
   h = i("Map.prototype.has", !0),
-  g = function(e, t) {
+  v = function(e, t) {
     for (var n, r = e; null !== (n = r.next); r = n)
       if (n.key === t) return r.next = n.next, n.next = e.next, e.next = n, n
   },
-  b = function(e, t) {
-    var n = g(e, t);
+  g = function(e, t) {
+    var n = v(e, t);
     return n && n.value
   },
-  v = function(e, t, n) {
-    var r = g(e, t);
+  b = function(e, t, n) {
+    var r = v(e, t);
     r ? r.value = n : e.next = {
       key: t,
       next: e.next,
@@ -37,21 +37,21 @@ e.exports = function() {
         if (e) return u(e, r)
       } else if (c) {
         if (t) return f(t, r)
-      } else if (n) return b(n, r)
+      } else if (n) return g(n, r)
     },
     has: function(r) {
       if (a && r && ("object" == typeof r || "function" == typeof r)) {
-        if (e) return l(e, r)
+        if (e) return d(e, r)
       } else if (c) {
         if (t) return h(t, r)
-      } else if (n) return !!g(n, r);
+      } else if (n) return !!v(n, r);
       return !1
     },
     set: function(r, i) {
-      a && r && ("object" == typeof r || "function" == typeof r) ? (!e && (e = new a), d(e, r, i)) : c ? (!t && (t = new c), p(t, r, i)) : (!n && (n = {
+      a && r && ("object" == typeof r || "function" == typeof r) ? (!e && (e = new a), l(e, r, i)) : c ? (!t && (t = new c), p(t, r, i)) : (!n && (n = {
         key: {},
         next: null
-      }), v(n, r, i))
+      }), b(n, r, i))
     }
   };
   return r
