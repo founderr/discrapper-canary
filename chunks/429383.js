@@ -7,5 +7,9 @@ e.exports = {
   modalBody: "modalBody_bbc84d",
   modalContent: "modalContent_e57193",
   reward: "reward__29972",
+  rewardHeading: "rewardHeading_e27832",
+  rewardSubheading: "rewardSubheading__44e84",
+  rewardSubheadingIcon: "rewardSubheadingIcon__51701",
+  rewardSubheadingText: "rewardSubheadingText__50f73",
   rewardTile: "rewardTile__66a02"
 }
