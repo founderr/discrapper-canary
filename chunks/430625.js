@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return k
   }
 }), n("424973"), n("222007"), n("881410");
 var s = n("37983"),
@@ -122,7 +122,7 @@ function B(e) {
   }) : null
 }
 
-function F(e) {
+function k(e) {
   var t, n;
   let a, r, {
       invite: d,
@@ -131,29 +131,29 @@ function F(e) {
     {
       approximate_member_count: O,
       approximate_presence_count: L,
-      target_type: F,
-      target_application: k
+      target_type: k,
+      target_application: F
     } = d;
-  o(F === D.InviteTargetTypes.EMBEDDED_APPLICATION && null != k, "invalid application invite");
+  o(k === D.InviteTargetTypes.EMBEDDED_APPLICATION && null != F, "invalid application invite");
   let w = l.useRef(null),
     [H, V] = l.useState(!1),
-    [Y, K] = l.useState(!1);
+    [Y, W] = l.useState(!1);
   l.useEffect(() => {
     let e = new ResizeObserver(() => (function() {
         var e;
         let t = null === (e = w.current) || void 0 === e ? void 0 : e.offsetWidth;
-        null != t && (V(t < b + j), K(t <= 2 * U))
+        null != t && (V(t < b + j), W(t <= 2 * U))
       })()),
       t = w.current;
     return null != t && e.observe(t), () => {
       e.disconnect()
     }
-  }, [w, V, K]);
-  let W = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
-    z = (0, N.default)([k.id])[0],
+  }, [w, V, W]);
+  let K = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
+    z = (0, N.default)([F.id])[0],
     Z = (0, u.useStateFromStores)([f.default], () => {
       var e;
-      return (null == d ? void 0 : d.channel) != null && (null === (e = f.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === k.id
+      return (null == d ? void 0 : d.channel) != null && (null === (e = f.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === F.id
     }),
     J = (0, u.useStateFromStores)([f.default], () => {
       var e;
@@ -162,7 +162,7 @@ function F(e) {
         let {
           applicationId: t
         } = e;
-        return k.id === t
+        return F.id === t
       })
     }),
     Q = S.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
@@ -171,16 +171,16 @@ function F(e) {
       analyticsLocations: q
     } = (0, m.default)(I.default.INVITE_EMBED),
     $ = (0, _.default)({
-      applicationId: k.id,
+      applicationId: F.id,
       size: U
     }),
-    ee = (0, u.useStateFromStoresArray)([f.default], () => null != Q ? f.default.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [Q, k.id]),
+    ee = (0, u.useStateFromStoresArray)([f.default], () => null != Q ? f.default.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === F.id).flatMap(e => Array.from(e.userIds)) : [], [Q, F.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
     en = d.state === P.InviteStates.ACCEPTING,
-    es = null != W;
-  if (null == W) {
+    es = null != K;
+  if (null == K) {
     if (null == d.guild) return (0, s.jsx)(v.default, {});
-    W = new A.default(d.guild)
+    K = new A.default(d.guild)
   }
   let el = es && !X || es && Z,
     ea = () => {
@@ -225,7 +225,7 @@ function F(e) {
           children: null == z ? void 0 : z.name
         }), (0, s.jsx)(B, {
           channel: Q,
-          guild: W,
+          guild: K,
           isStacked: Y,
           hasEnded: !J
         })]
@@ -252,10 +252,10 @@ function F(e) {
           isStacked: Y
         }), (0, s.jsxs)("div", {
           className: y.cta,
-          children: [null != W && J ? (0, s.jsx)("div", {
+          children: [null != K && J ? (0, s.jsx)("div", {
             className: y.avatars,
             children: (0, s.jsx)(R.default, {
-              guildId: W.id,
+              guildId: K.id,
               users: et,
               max: 4
             })

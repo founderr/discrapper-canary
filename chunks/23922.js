@@ -21,8 +21,8 @@ var a = l("37983"),
   h = l("162933"),
   g = l("773336"),
   _ = l("301834"),
-  p = l("756898"),
-  N = l("375202"),
+  N = l("756898"),
+  p = l("375202"),
   I = l("321443"),
   x = l("444276"),
   v = l("353927"),
@@ -87,9 +87,9 @@ async function L() {
 }
 
 function O(e) {
-  let t = (0, g.isWindows)() ? (0, N.default)(S.default, E.default) : null,
+  let t = (0, g.isWindows)() ? (0, p.default)(S.default, E.default) : null,
     l = S.default.getRunningGames();
-  return null != t && (0, p.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, p.default)(e.id, t.windowHandle)) ? 1 : 0
+  return null != t && (0, N.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, N.default)(e.id, t.windowHandle)) ? 1 : 0
 }
 
 function j(e) {
@@ -100,7 +100,7 @@ function j(e) {
     enableGoLiveCaptureCard: s
   } = _.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), i = m.default.supports(v.Features.GO_LIVE_HARDWARE), [o, f] = n.useState(null), [S, E] = n.useState(null), [g, p] = n.useState(null), N = null != g && g.length > 0, [L, O] = n.useState(u.DesktopSources.WINDOW), [j, M] = n.useState(!1), D = n.useRef(null), P = n.useRef(new d.Interval);
+  }), i = m.default.supports(v.Features.GO_LIVE_HARDWARE), [o, f] = n.useState(null), [S, E] = n.useState(null), [g, N] = n.useState(null), p = null != g && g.length > 0, [L, O] = n.useState(u.DesktopSources.WINDOW), [j, M] = n.useState(!1), D = n.useRef(null), P = n.useRef(new d.Interval);
   n.useEffect(() => {
     let e = P.current;
     return T().then(e => {
@@ -109,14 +109,14 @@ function j(e) {
         windowSources: l,
         cameraSources: a
       } = e;
-      f(t), E(l), p(a)
+      f(t), E(l), N(a)
     }), e.start(1e3, async () => {
       let {
         screenSources: e,
         windowSources: t,
         cameraSources: l
       } = await T();
-      f(e), E(t), p(l)
+      f(e), E(t), N(l)
     }), () => {
       e.stop()
     }
@@ -159,7 +159,7 @@ function j(e) {
     }, n)
   });
 
-  function y() {
+  function w() {
     let e = D.current;
     null != e && M(!e.isScrolledToTop())
   }
@@ -177,7 +177,7 @@ function j(e) {
             name: A.default.Messages.GO_LIVE_MODAL_SCREENS,
             value: u.DesktopSources.SCREEN
           }];
-          return s && i && N && e.push({
+          return s && i && p && e.push({
             name: A.default.Messages.GO_LIVE_MODAL_CAPTURE,
             value: u.DesktopSources.CAMERA
           }), e
@@ -197,7 +197,7 @@ function j(e) {
       children: (0, a.jsx)(c.AdvancedScroller, {
         ref: b,
         className: R.sourceScroller,
-        onScroll: y,
+        onScroll: w,
         children: (0, a.jsx)(h.default, {
           layout: h.default.Layout.WRAP,
           columns: 2,
@@ -208,7 +208,7 @@ function j(e) {
     }) : (0, a.jsx)(c.AdvancedScroller, {
       ref: b,
       className: R.sourceScroller,
-      onScroll: y,
+      onScroll: w,
       children: (0, a.jsx)(h.default, {
         layout: h.default.Layout.WRAP,
         columns: 2,

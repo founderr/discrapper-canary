@@ -21,8 +21,8 @@ var a = n("414456"),
   m = n("106346"),
   E = n("144491"),
   g = n("716214"),
-  S = n("567469"),
-  I = n("998716"),
+  I = n("567469"),
+  S = n("998716"),
   _ = n("834052"),
   N = n("819450"),
   T = n("886776"),
@@ -107,8 +107,8 @@ class Y extends G.default {
       needSubscriptionToAccess: m,
       unread: E,
       resolvedUnreadSetting: g,
-      mentionCount: S,
-      isFavoriteSuggestion: I
+      mentionCount: I,
+      isFavoriteSuggestion: S
     } = this.props, {
       shouldShowGuildVerificationPopout: _
     } = this.state, N = this.getVoiceStatesCount(), T = (0, l.jsxs)("li", {
@@ -136,11 +136,11 @@ class Y extends G.default {
                 [k.iconLive]: null != C
               }),
               channel: e,
-              selected: !I && t,
+              selected: !S && t,
               connected: n,
               unread: n ? E : void 0,
               resolvedUnreadSetting: g,
-              mentionCount: S,
+              mentionCount: I,
               locked: a,
               onClick: () => {
                 this.handleClick(), null == r || r()
@@ -150,17 +150,17 @@ class Y extends G.default {
               },
               connectDragPreview: d,
               subtitle: this.renderSubtitle(),
-              isFavoriteSuggestion: I,
+              isFavoriteSuggestion: S,
               "aria-label": (0, f.default)({
                 channel: e,
                 unread: E,
-                mentionCount: S,
+                mentionCount: I,
                 userCount: N,
                 isSubscriptionGated: p,
                 needSubscriptionToAccess: m
               }),
               ...u,
-              children: [I && this.renderAcceptSuggestionButton(), I && this.renderRemoveSuggestionButton(), !I && this.renderOpenChatButton(), !I && this.renderInviteButton(), !I && this.renderEditButton(), !I && this.renderChannelInfo()]
+              children: [S && this.renderAcceptSuggestionButton(), S && this.renderRemoveSuggestionButton(), !S && this.renderOpenChatButton(), !S && this.renderInviteButton(), !S && this.renderEditButton(), !S && this.renderChannelInfo()]
             })
           }
         })
@@ -288,7 +288,7 @@ function W(e) {
       bypassLimit: R.default.can(F.Permissions.MOVE_MEMBERS, n),
       unverifiedAccount: !l.canChat
     }
-  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), C = (0, i.useStateFromStores)([_.default], () => _.default.getStageInstanceByChannel(n.id), [n.id]), m = (0, S.useStageParticipantsCount)(n.id, I.StageChannelParticipantNamedIndex.AUDIENCE), {
+  }), f = (0, i.useStateFromStores)([A.default], () => A.default.isCollapsed(n.parent_id)), h = (0, T.default)(n.id), C = (0, i.useStateFromStores)([_.default], () => _.default.getStageInstanceByChannel(n.id), [n.id]), m = (0, I.useStageParticipantsCount)(n.id, S.StageChannelParticipantNamedIndex.AUDIENCE), {
     isSubscriptionGated: E,
     needSubscriptionToAccess: g
   } = (0, p.default)(n.id), v = (0, i.useStateFromStores)([O.default], () => O.default.isFavorite(t.id, n.id)), y = (0, N.getStageHasMedia)(n.id), D = (0, U.default)({

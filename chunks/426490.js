@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return B
   },
   PollAnswerSelectedIcon: function() {
-    return k
+    return F
   },
   PollAnswerVictorIcon: function() {
     return w
@@ -301,7 +301,7 @@ function B(e) {
   }) : null
 }
 
-function F(e) {
+function k(e) {
   let {
     size: t,
     color: n,
@@ -316,22 +316,22 @@ function F(e) {
   })
 }
 
-function k(e) {
-  return (0, a.jsx)(F, {
+function F(e) {
+  return (0, a.jsx)(k, {
     color: (0, f.getColor)(M.Color.BRAND_500),
     ...e
   })
 }
 
 function w(e) {
-  return (0, a.jsx)(F, {
+  return (0, a.jsx)(k, {
     color: _.default.POLLS_VICTOR_BORDER,
     ...e
   })
 }
 
 function H(e) {
-  return (0, a.jsx)(F, {
+  return (0, a.jsx)(k, {
     color: _.default.POLLS_VOTED_BORDER,
     ...e
   })

@@ -13,11 +13,11 @@ let a = e => {
     width: t = 24,
     height: n = 24,
     color: a = r.default.colors.INTERACTIVE_NORMAL,
-    colorClass: o = "",
-    ...s
+    colorClass: s = "",
+    ...o
   } = e;
   return (0, i.jsx)("svg", {
-    ...(0, l.default)(s),
+    ...(0, l.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: n,
@@ -28,7 +28,7 @@ let a = e => {
       fillRule: "evenodd",
       d: "M10 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z",
       clipRule: "evenodd",
-      className: o
+      className: s
     })
   })
 }

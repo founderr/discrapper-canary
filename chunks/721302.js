@@ -22,8 +22,8 @@ var a = l("37983"),
   _ = l("130037"),
   T = l("490931"),
   x = l("536999"),
-  A = l("178406"),
-  S = l("645266"),
+  S = l("178406"),
+  A = l("645266"),
   g = l("248793"),
   p = l("843455"),
   L = l("782340"),
@@ -31,7 +31,7 @@ var a = l("37983"),
 let N = n.forwardRef(function(e, t) {
   let {
     guild: s
-  } = e, o = (0, C.default)([A.default], () => A.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([m.default], () => (0, f.isThemeDark)(m.default.theme)), N = (0, x.useIsInMembersTablesAdditionalFilteringExperiment)(s.id), I = (0, C.default)([M.default], () => M.default.can(p.Permissions.KICK_MEMBERS, s)), R = n.useCallback(() => {
+  } = e, o = (0, C.default)([S.default], () => S.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([m.default], () => (0, f.isThemeDark)(m.default.theme)), N = (0, x.useIsInMembersTablesAdditionalFilteringExperiment)(s.id), I = (0, C.default)([M.default], () => M.default.can(p.Permissions.KICK_MEMBERS, s)), R = n.useCallback(() => {
     null != s && I && (0, E.openModalLazy)(async () => {
       let {
         default: e
@@ -41,19 +41,19 @@ let N = n.forwardRef(function(e, t) {
         guild: s
       })
     })
-  }, [s, I]), v = (0, C.default)([A.default], () => A.default.getSearchStateByGuildId(s.id), [s.id], u), j = (0, _.useTrackMemberSearchUsed)(s.id), [b, D] = n.useState(v.query), O = null != v.selectedSort && v.selectedSort !== T.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC && v.selectedSort !== T.OrderBy.ORDER_BY_UNSPECIFIED, V = n.useCallback(e => {
+  }, [s, I]), v = (0, C.default)([S.default], () => S.default.getSearchStateByGuildId(s.id), [s.id], u), j = (0, _.useTrackMemberSearchUsed)(s.id), [D, b] = n.useState(v.query), O = null != v.selectedSort && v.selectedSort !== T.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC && v.selectedSort !== T.OrderBy.ORDER_BY_UNSPECIFIED, B = n.useCallback(e => {
     let t = e.trim();
-    t.length > 0 && j(), (0, S.updateSearchState)(s.id, {
+    t.length > 0 && j(), (0, A.updateSearchState)(s.id, {
       query: t
     })
-  }, [s.id, j]), B = n.useCallback(d(V, 300), [V]), y = n.useCallback(e => {
-    D(e), B(e)
-  }, [B]), F = n.useCallback(() => {
-    D(""), V("")
-  }, [V]);
+  }, [s.id, j]), V = n.useCallback(d(B, 300), [B]), y = n.useCallback(e => {
+    b(e), V(e)
+  }, [V]), F = n.useCallback(() => {
+    b(""), B("")
+  }, [B]);
   return n.useImperativeHandle(t, () => ({
     resetSearchText() {
-      D("")
+      b("")
     }
   })), (0, a.jsxs)("div", {
     className: i(H.searchHeaderContainer),
@@ -72,7 +72,7 @@ let N = n.forwardRef(function(e, t) {
         className: i(H.searchHeader),
         children: (0, a.jsx)(h.default, {
           className: H.searchBar,
-          query: b,
+          query: D,
           placeholder: L.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
           onChange: y,
           onClear: F,

@@ -40,14 +40,14 @@ var s = n("37983"),
   b = n("824563"),
   G = n("18494"),
   B = n("697218"),
-  F = n("800762"),
-  k = n("277174"),
+  k = n("800762"),
+  F = n("277174"),
   w = n("497880"),
   H = n("944662"),
   V = n("748880"),
   Y = n("888393"),
-  K = n("548703"),
-  W = n("859316"),
+  W = n("548703"),
+  K = n("859316"),
   z = n("427655"),
   Z = n("161225"),
   J = n("41163"),
@@ -182,7 +182,7 @@ let eM = Object.freeze({
     } = e, {
       id: r,
       author: o
-    } = t, d = D.default.getId(), c = t.getChannelId(), E = (0, a.useStateFromStores)([x.default], () => x.default.isCallActive(c, r), [c, r]), f = (0, a.useStateFromStores)([F.default], () => F.default.getVoiceState(ep.ME, d)), _ = !E && null != t.call && !t.call.participants.includes(d), T = E && (null == f || f.channelId !== c), I = l.useCallback(() => u.default.selectVoiceChannel(c), [c]), m = (0, eN.useUsernameHook)(o, c, i.guild_id);
+    } = t, d = D.default.getId(), c = t.getChannelId(), E = (0, a.useStateFromStores)([x.default], () => x.default.isCallActive(c, r), [c, r]), f = (0, a.useStateFromStores)([k.default], () => k.default.getVoiceState(ep.ME, d)), _ = !E && null != t.call && !t.call.participants.includes(d), T = E && (null == f || f.channelId !== c), I = l.useCallback(() => u.default.selectVoiceChannel(c), [c]), m = (0, eN.useUsernameHook)(o, c, i.guild_id);
     return (0, s.jsx)(V.default, {
       compact: n,
       message: t,
@@ -200,7 +200,7 @@ let eM = Object.freeze({
     } = e, {
       author: a
     } = t, i = t.getChannelId(), r = (0, eN.useUsernameHook)(a, i, l.guild_id);
-    return (0, s.jsx)(W.default, {
+    return (0, s.jsx)(K.default, {
       compact: n,
       message: t,
       usernameHook: r,
@@ -215,7 +215,7 @@ let eM = Object.freeze({
     } = e, {
       author: a
     } = t, i = t.getChannelId(), r = (0, eN.useUsernameHook)(a, i, l.guild_id);
-    return (0, s.jsx)(K.default, {
+    return (0, s.jsx)(W.default, {
       compact: n,
       message: t,
       usernameHook: r
@@ -500,7 +500,7 @@ let eM = Object.freeze({
         onClick: () => {
           (0, M.setUserSuppress)(r, l.author.id, !1), o.default.deleteMessage(r.id, l.id, !0)
         },
-        children: [(0, s.jsx)(k.default, {
+        children: [(0, s.jsx)(F.default, {
           height: 20,
           width: 20
         }), eS.default.Messages.REQUEST_TO_SPEAK_ACCEPT]

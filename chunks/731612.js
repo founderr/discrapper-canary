@@ -7,7 +7,7 @@ l.r(t), l.d(t, {
     return a
   },
   default: function() {
-    return S
+    return A
   }
 }), l("222007");
 var a, n, s = l("37983"),
@@ -26,13 +26,13 @@ var a, n, s = l("37983"),
   _ = l("165258");
 let T = "MMM Do, YYYY",
   x = u("2015-05-15").local(),
-  A = (0, C.makeLazy)({
+  S = (0, C.makeLazy)({
     createPromise: () => l.el("201959").then(l.bind(l, "201959")),
     webpackId: "201959"
   });
 (n = a || (a = {}))[n.ALL = 0] = "ALL", n[n["1_HOUR"] = 1] = "1_HOUR", n[n["24_HOURS"] = 2] = "24_HOURS", n[n["7_DAYS"] = 3] = "7_DAYS", n[n["2_WEEKS"] = 4] = "2_WEEKS", n[n["4_WEEKS"] = 5] = "4_WEEKS", n[n["3_MONTHS"] = 6] = "3_MONTHS", n[n.CUSTOM = 7] = "CUSTOM";
 
-function S(e) {
+function A(e) {
   let {
     startDateLabel: t,
     endDateLabel: l,
@@ -42,7 +42,7 @@ function S(e) {
     isCustomDateRange: r,
     menuName: C,
     onClose: T,
-    onSelectDateOption: S,
+    onSelectDateOption: A,
     onToggleCustomDateRange: g,
     onSelectStartDate: p,
     onSelectEndDate: L
@@ -106,11 +106,11 @@ function S(e) {
     I(!0), g()
   }, [g]), j = i.useCallback(e => {
     p(e)
-  }, [p]), b = i.useCallback(e => {
+  }, [p]), D = i.useCallback(e => {
     L(e)
-  }, [L]), D = i.useCallback(() => {
-    null == n && null == a && S(0, null), I(!1)
-  }, [a, n, S]);
+  }, [L]), b = i.useCallback(() => {
+    null == n && null == a && A(0, null), I(!1)
+  }, [a, n, A]);
   return (0, s.jsx)(c.Menu, {
     navId: "member-safety-guild-member-".concat(C, "-menu"),
     onClose: T,
@@ -120,7 +120,7 @@ function S(e) {
       children: N ? (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(c.MenuItem, {
           id: "back",
-          action: D,
+          action: b,
           render: e => (0, s.jsxs)("span", {
             ...e,
             className: _.nagivateBackContainer,
@@ -140,7 +140,7 @@ function S(e) {
           subMenuClassName: _.calendarContainer,
           children: (0, s.jsx)(c.MenuItem, {
             id: "after-date-picker",
-            render: e => (0, s.jsx)(A, {
+            render: e => (0, s.jsx)(S, {
               ...e,
               calendarClassName: _.calendar,
               value: r && null != a ? u(a) : void 0,
@@ -156,11 +156,11 @@ function S(e) {
           subMenuClassName: _.calendarContainer,
           children: (0, s.jsx)(c.MenuItem, {
             id: "before-date-picker",
-            render: e => (0, s.jsx)(A, {
+            render: e => (0, s.jsx)(S, {
               ...e,
               calendarClassName: _.calendar,
               value: r && null != n ? u(n) : void 0,
-              onSelect: b,
+              onSelect: D,
               maxDate: u().local(),
               minDate: r && null != a ? u(a) : x
             })
@@ -177,7 +177,7 @@ function S(e) {
             group: "member-safety-guild-member-".concat(C, "-menu"),
             id: "guild-member-".concat(C, "-option-").concat(t),
             label: a,
-            action: () => S(t, l),
+            action: () => A(t, l),
             checked: t === o
           }, "option-".concat(t))
         }), (0, s.jsx)(c.MenuSeparator, {}), (0, s.jsx)(c.MenuItem, {

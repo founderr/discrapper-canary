@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return b
+    return D
   }
 }), l("222007");
 var a = l("37983"),
@@ -22,8 +22,8 @@ var a = l("37983"),
   _ = l("875436"),
   T = l("772280"),
   x = l("71216"),
-  A = l("741919"),
-  S = l("178406"),
+  S = l("741919"),
+  A = l("178406"),
   g = l("645266"),
   p = l("835257"),
   L = l("561909"),
@@ -49,7 +49,7 @@ function j(e) {
           width: t
         });
       case p.JoinSourceType.INTEGRATION:
-        return (0, a.jsx)(A.default, {
+        return (0, a.jsx)(S.default, {
           className: I.icon,
           height: t,
           width: t
@@ -90,16 +90,16 @@ function j(e) {
   })
 }
 
-function b(e) {
+function D(e) {
   let {
     guildId: t,
     onClose: l
-  } = e, s = (0, C.default)([S.default], () => S.default.getSearchStateByGuildId(t), [t], u), {
+  } = e, s = (0, C.default)([A.default], () => A.default.getSearchStateByGuildId(t), [t], u), {
     inviteCodes: o
   } = (0, L.useGuildInvites)(t), r = (0, C.default)([f.default], () => f.default.getGuild(t)), E = null == r ? void 0 : r.vanityURLCode, [m, h] = n.useState(!1), {
     selectedSourceInviteCode: x,
-    selectedJoinSourceType: A
-  } = s, b = null != A && A !== p.JoinSourceType.UNSPECIFIED, D = n.useCallback(e => {
+    selectedJoinSourceType: S
+  } = s, D = null != S && S !== p.JoinSourceType.UNSPECIFIED, b = n.useCallback(e => {
     let l = e.trim();
     (0, g.updateSearchState)(t, {
       ...s,
@@ -107,16 +107,16 @@ function b(e) {
       selectedJoinSourceType: void 0
     })
   }, [t, s]), O = n.useCallback(e => {
-    e === A ? (0, g.updateSearchState)(t, {
+    e === S ? (0, g.updateSearchState)(t, {
       selectedSourceInviteCode: void 0,
       selectedJoinSourceType: void 0
     }) : (0, g.updateSearchState)(t, {
       selectedSourceInviteCode: null,
       selectedJoinSourceType: e
     }), h(!1)
-  }, [t, A]), V = n.useCallback(d(D, 300), [D]), B = n.useCallback(e => {
-    V(e)
-  }, [V]);
+  }, [t, S]), B = n.useCallback(d(b, 300), [b]), V = n.useCallback(e => {
+    B(e)
+  }, [B]);
   return (0, a.jsx)(c.Menu, {
     navId: "members-table-join-method-menu",
     onClose: () => {
@@ -149,7 +149,7 @@ function b(e) {
           vanityUrl: E,
           text: (0, p.getJoinSourceTypeLabel)(e, E)
         }),
-        checked: A === e,
+        checked: S === e,
         disabled: !1,
         action: () => O(e),
         group: "join-source-type-options"
@@ -160,14 +160,14 @@ function b(e) {
         control: (e, t) => (0, a.jsx)(c.MenuSearchControl, {
           ...e,
           query: null != x ? x : "",
-          onChange: B,
+          onChange: V,
           ref: t,
           placeholder: N.default.Messages.MEMBER_SAFETY_INVITE_CODE_SEARCH_PLACEHOLDER
         })
       }, "invite-code-filter-search"), (0, a.jsx)(c.MenuSeparator, {}), (0, a.jsx)(c.MenuRadioItem, {
         id: "join-source-type-option-all",
         label: N.default.Messages.GUILD_SETTINGS_FILTER_ALL,
-        checked: null == x && null == A,
+        checked: null == x && null == S,
         disabled: !1,
         action: () => O(null),
         group: "join-source-type-options"
@@ -181,7 +181,7 @@ function b(e) {
         }),
         checked: x === e,
         disabled: !1,
-        action: () => D(e),
+        action: () => b(e),
         group: "join-source-type-options"
       }, "join-source-type-option-".concat(e))), (0, a.jsx)(c.MenuSeparator, {}), (0, a.jsx)(c.MenuItem, {
         id: "other-join-methods",
@@ -196,17 +196,17 @@ function b(e) {
                 [I.focused]: e.isFocused
               }),
               children: N.default.Messages.MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME
-            }), b ? (0, a.jsx)("div", {
+            }), D ? (0, a.jsx)("div", {
               className: I.selectedOption,
               children: (0, a.jsx)(j, {
                 ...e,
                 size: 12,
-                text: (0, p.getJoinSourceTypeLabel)(A, E),
-                type: A,
+                text: (0, p.getJoinSourceTypeLabel)(S, E),
+                type: S,
                 vanityUrl: E
               })
             }) : null]
-          }), b ? (0, a.jsx)(_.default, {
+          }), D ? (0, a.jsx)(_.default, {
             background: I.radio,
             foreground: I.radioSelection,
             width: 16,

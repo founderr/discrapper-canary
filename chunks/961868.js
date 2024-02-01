@@ -99,7 +99,7 @@ function x(e) {
   })
 }
 
-function A(e) {
+function S(e) {
   let {
     onHandleEnableLockdown: t,
     incidentData: l,
@@ -147,7 +147,7 @@ function A(e) {
   })
 }
 
-function S(e) {
+function A(e) {
   let {
     onHandleEnableLockdown: t,
     onHandleReportFalseAlarm: l,
@@ -253,13 +253,13 @@ function g(e) {
         incidentData: a
       });
     case 2:
-      return (0, s.jsx)(A, {
+      return (0, s.jsx)(S, {
         onHandleEnableLockdown: E,
         incidentData: a,
         guildName: t.name
       });
     case 3:
-      return (0, s.jsx)(S, {
+      return (0, s.jsx)(A, {
         onHandleEnableLockdown: E,
         onHandleReportFalseAlarm: m,
         incidentData: a,

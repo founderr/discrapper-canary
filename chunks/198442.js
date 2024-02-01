@@ -20,8 +20,8 @@ var l = n("37983"),
   m = n("239380"),
   E = n("26989"),
   g = n("677099"),
-  S = n("15738"),
-  I = n("956089"),
+  I = n("15738"),
+  S = n("956089"),
   _ = n("108189"),
   N = n("674644"),
   T = n("945317"),
@@ -79,7 +79,7 @@ var j = a.memo(function(e) {
   null == ee && K > 0 ? ee = null !== (s = (0, R.renderMentionBadge)(K)) && void 0 !== s ? s : void 0 : null == ee && null != Q && (ee = null !== (h = (0, R.renderGuildJoinRequestBadge)({
     guildJoinRequestStatus: Q
   })) && void 0 !== h ? h : void 0);
-  let et = null !== (M = e.lowerBadgeWidth) && void 0 !== M ? M : (0, I.getBadgeWidthForValue)(K),
+  let et = null !== (M = e.lowerBadgeWidth) && void 0 !== M ? M : (0, S.getBadgeWidthForValue)(K),
     [{
       dragging: en
     }, el] = (0, r.useDrag)({
@@ -136,11 +136,11 @@ var j = a.memo(function(e) {
       }
       ef.cancel(), ec(!1)
     }, [ef]),
-    eS = a.useCallback(e => {
+    eI = a.useCallback(e => {
       null == G || G(q, e)
     }, [q, G]);
   if (null == F) return null;
-  let eI = ed || eo ? (0, l.jsx)(T.default, {
+  let eS = ed || eo ? (0, l.jsx)(T.default, {
       guild: F,
       show: ed,
       active: V,
@@ -186,12 +186,12 @@ var j = a.memo(function(e) {
         upperBadge: $,
         lowerBadge: ee,
         lowerBadgeWidth: et,
-        children: eI
+        children: eS
       })
     });
   return (0, l.jsxs)(x.ListItem, {
-    ref: eS,
-    children: [(0, l.jsx)(S.default, {
+    ref: eI,
+    children: [(0, l.jsx)(I.default, {
       hovered: !en && er,
       selected: !en && V,
       unread: !en && H,

@@ -45,12 +45,12 @@ var s = n("37983"),
       animateAvatar: b,
       subscribeToComponentDispatch: G,
       renderThreadAccessory: B,
-      trackAnnouncementViews: F = !1,
-      asPartialPreview: k = !0,
+      trackAnnouncementViews: k = !1,
+      asPartialPreview: F = !0,
       ...w
     } = e, H = l.isFirstMessageInForumPost(U), V = (0, u.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = l.editedTimestamp) && void 0 !== t ? t : l.timestamp).valueOf()), Y = (0, u.useShowImprovedMarkdownGuildExperimentConfig)(U.guild_id, (null !== (n = l.editedTimestamp) && void 0 !== n ? n : l.timestamp).valueOf()), {
-      content: K,
-      hasSpoilerEmbeds: W
+      content: W,
+      hasSpoilerEmbeds: K
     } = (0, p.default)(l, {
       hideSimpleEmbedContent: y,
       allowList: H || V.showListsAndHeaders || Y.showListsAndHeaders,
@@ -63,7 +63,7 @@ var s = n("37983"),
     }), $ = (0, o.useStateFromStores)([f.default], () => f.default.can(R.Permissions.CREATE_INSTANT_INVITE, U)), ee = (0, A.default)({
       message: l,
       channel: U,
-      enabled: F
+      enabled: k
     });
     if ((0, I.default)(l, $)) return null;
     let et = (0, N.getMessageAriaLabelledBy)(l),
@@ -83,11 +83,11 @@ var s = n("37983"),
         author: Q,
         roleIcon: q
       }),
-      childrenAccessories: e.hideAccessories ? void 0 : (0, S.renderSimpleAccessories)(e, W),
+      childrenAccessories: e.hideAccessories ? void 0 : (0, S.renderSimpleAccessories)(e, K),
       childrenMessageContent: (0, C.default)({
         ...e,
-        asPartialPreview: k
-      }, K),
+        asPartialPreview: F
+      }, W),
       childrenSystemMessage: (0, g.default)(e),
       onContextMenu: P,
       onClick: D,

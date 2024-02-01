@@ -119,7 +119,7 @@ let P = ["TOP_LEFT", "TOP_RIGHT"],
   G = n("689888"),
   B = [b, G];
 
-function F() {
+function k() {
   return n.el("510370").then(n.t.bind(n, "510370", 19)).then(e => {
     let {
       default: t
@@ -128,7 +128,7 @@ function F() {
   })
 }
 
-function k(e) {
+function F(e) {
   let {
     onAnimationComplete: t
   } = e, n = o.useRef(null), [s, a] = o.useState(null), [i] = o.useState(function() {
@@ -269,7 +269,7 @@ function k(e) {
       sceneSegments: v,
       onScenePlay: C,
       onSceneComplete: h,
-      importData: F,
+      importData: k,
       pauseWhileUnfocused: !1
     })]
   })
@@ -367,7 +367,7 @@ function w(e) {
     }), f ? (0, r.jsx)(h.default, {
       children: (0, r.jsx)("div", {
         className: L.cannonWrapper,
-        children: (0, r.jsx)(k, {
+        children: (0, r.jsx)(F, {
           onAnimationComplete: j
         })
       })

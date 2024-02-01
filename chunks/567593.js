@@ -20,8 +20,8 @@ var l = n("37983"),
   m = n("952451"),
   E = n("305961"),
   g = n("660478"),
-  S = n("18494"),
-  I = n("316133"),
+  I = n("18494"),
+  S = n("316133"),
   _ = n("822332"),
   N = n("409082"),
   T = n("476765"),
@@ -74,13 +74,13 @@ let G = o.default.connectStores([g.default, p.default], e => {
       category: p.default.getChannel(t.parent_id)
     }
   })(j),
-  U = o.default.connectStores([I.default], e => {
+  U = o.default.connectStores([S.default], e => {
     let {
       channel: t
     } = e;
     if (null == t.guild_id) throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
     return {
-      voiceStates: I.default.getVoiceStates(t.guild_id)[t.id]
+      voiceStates: S.default.getVoiceStates(t.guild_id)[t.id]
     }
   })(j),
   P = o.default.connectStores([m.default], e => {
@@ -362,7 +362,7 @@ class V extends a.PureComponent {
             return n => (0, l.jsx)(e, {
               ...n,
               channel: t.record,
-              selected: S.default.getChannelId() === t.record.id,
+              selected: I.default.getChannelId() === t.record.id,
               onSelect: v.hide
             })
           });

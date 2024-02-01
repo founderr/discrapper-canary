@@ -30,12 +30,12 @@ function T(e) {
       ...s,
       requireUnusualDmActivity: !s.requireUnusualDmActivity
     })
-  }, [t, s, T]), A = n.useCallback(() => {
+  }, [t, s, T]), S = n.useCallback(() => {
     !s.requireCommunicationDisabled && T(f.MemberSafetyFlagType.COMMUNICATION_DISABLED), (0, m.updateSearchState)(t, {
       ...s,
       requireCommunicationDisabled: !s.requireCommunicationDisabled
     })
-  }, [t, s, T]), S = n.useCallback(() => {
+  }, [t, s, T]), A = n.useCallback(() => {
     !s.requireUnusualAccountActivity && T(f.MemberSafetyFlagType.UNUSUAL_ACCOUNT_ACTIVITY), (0, m.updateSearchState)(t, {
       ...s,
       requireUnusualAccountActivity: !s.requireUnusualAccountActivity
@@ -74,7 +74,7 @@ function T(e) {
             className: _.timeoutLabelIcon
           }), h.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED]
         }),
-        action: A,
+        action: S,
         checked: s.requireCommunicationDisabled
       }), (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(d.MenuCheckboxItem, {
@@ -87,7 +87,7 @@ function T(e) {
               className: _.unusualAccountActivityLabelIcon
             }), h.default.Messages.MEMBER_SAFETY_UNUSUAL_ACCOUNT_ACTIVITY]
           }),
-          action: S,
+          action: A,
           checked: s.requireUnusualAccountActivity
         }), (0, a.jsx)(d.MenuCheckboxItem, {
           id: "toggle-require-username-quarantined",

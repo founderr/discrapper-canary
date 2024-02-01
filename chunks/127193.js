@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return I
   }
 });
 var l = n("37983"),
@@ -25,8 +25,8 @@ let g = (0, u.makeChannelSortable)(function(e) {
     selectedChannelId: s,
     position: u,
     disableManageChannels: g,
-    sorting: S,
-    sortingType: I,
+    sorting: I,
+    sortingType: S,
     sortingPosition: _,
     connectChannelDragSource: N,
     connectChannelDropTarget: T,
@@ -47,7 +47,7 @@ let g = (0, u.makeChannelSortable)(function(e) {
   }, [L]);
   if (null == L) return null;
   let O = (0, h.getChannelItemClassName)(u, _),
-    y = (0, h.isChannelItemDisabled)(L, S, I),
+    y = (0, h.isChannelItemDisabled)(L, I, S),
     D = (0, l.jsx)("div", {
       className: i(O, {
         [E.disabled]: y,
@@ -74,4 +74,4 @@ let g = (0, u.makeChannelSortable)(function(e) {
     });
   return R && (D = T(N(D))), D
 });
-var S = g
+var I = g

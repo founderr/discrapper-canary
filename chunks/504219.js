@@ -21,8 +21,8 @@ var a = l("37983"),
   h = l("30591"),
   g = l("803725"),
   _ = l("49111"),
-  p = l("994428"),
-  N = l("782340"),
+  N = l("994428"),
+  p = l("782340"),
   I = l("173266"),
   x = l("770420");
 let v = e => {
@@ -38,7 +38,7 @@ let v = e => {
     })
   }, [t]);
   let L = (e, t) => {
-    e.stopPropagation(), e.preventDefault(), null == t || t(), R(p.ContentDismissActionType.UNKNOWN)
+    e.stopPropagation(), e.preventDefault(), null == t || t(), R(N.ContentDismissActionType.UNKNOWN)
   };
   return (0, a.jsx)(o.Popout, {
     shouldShow: T,
@@ -54,23 +54,23 @@ let v = e => {
         inlineArt: !0,
         artClassName: I.clipsEducationArt,
         position: "right",
-        header: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
+        header: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
         headerClassName: I.clipsEducationHeader,
         body: (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "always-white",
-            children: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
+            children: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
           }), x ? (0, a.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "always-white",
             className: I.warningText,
-            children: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
+            children: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
               url: S.default.getArticleURL(_.HelpdeskArticles.CLIPS)
             })
           }) : null]
         }),
-        tryItText: N.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
+        tryItText: p.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
         onTryFeature: e => {
           (0, g.updateClipsEnabled)({
             clipsEnabled: !0,
@@ -94,7 +94,7 @@ var A = function(e) {
   r(null != s, "Clips keybind should be set");
   let u = E.toString(s.shortcut, !0);
   return (0, a.jsx)(o.FormItem, {
-    title: N.default.Messages.CLIPS_SETTINGS,
+    title: p.default.Messages.CLIPS_SETTINGS,
     titleClassName: x.formItemTitle,
     className: x.modalContent,
     children: (0, a.jsxs)("div", {
@@ -112,13 +112,13 @@ var A = function(e) {
             trackAnalytics: !0
           }),
           hideBorder: !0,
-          children: N.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
+          children: p.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
         })
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/normal",
         color: "interactive-normal",
         className: I.description,
-        children: N.default.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
+        children: p.default.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
           keybind: u,
           keybindHook: () => (0, a.jsx)("span", {
             className: I.keybindHintKeys,

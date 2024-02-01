@@ -46,8 +46,8 @@ function b(e) {
     message: G
   } = e, {
     analyticsLocations: B,
-    AnalyticsLocationProvider: F
-  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), k = (0, u.useAnalyticsContext)(), w = G.channel_id, H = (0, a.useStateFromStores)([T.default], () => T.default.getChannel(w), [w]), V = null == H ? void 0 : H.guild_id, Y = null != H && (H.isGuildVoice() || H.isPrivate()), K = (0, a.useStateFromStores)([h.default], () => h.default.getSelfEmbeddedActivityForChannel(w)), W = (null == K ? void 0 : K.applicationId) === b, [z, Z] = (0, E.default)([b, null !== (n = null == K ? void 0 : K.applicationId) && void 0 !== n ? n : ""]), J = (0, R.default)(null !== (i = null == z ? void 0 : z.maxParticipants) && void 0 !== i ? i : 0), [Q] = (0, a.useStateFromStoresArray)([h.default], () => Y ? h.default.getEmbeddedActivitiesForChannel(w).filter(e => e.applicationId === b) : [], [b, w, Y]), X = Array.from(null !== (S = null == Q ? void 0 : Q.userIds) && void 0 !== S ? S : []), q = (0, a.useStateFromStoresArray)([I.default], () => X.map(e => I.default.getUser(e)).filter(A.isNotNullish), [X]), $ = (0, L.default)({
+    AnalyticsLocationProvider: k
+  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), F = (0, u.useAnalyticsContext)(), w = G.channel_id, H = (0, a.useStateFromStores)([T.default], () => T.default.getChannel(w), [w]), V = null == H ? void 0 : H.guild_id, Y = null != H && (H.isGuildVoice() || H.isPrivate()), W = (0, a.useStateFromStores)([h.default], () => h.default.getSelfEmbeddedActivityForChannel(w)), K = (null == W ? void 0 : W.applicationId) === b, [z, Z] = (0, E.default)([b, null !== (n = null == W ? void 0 : W.applicationId) && void 0 !== n ? n : ""]), J = (0, R.default)(null !== (i = null == z ? void 0 : z.maxParticipants) && void 0 !== i ? i : 0), [Q] = (0, a.useStateFromStoresArray)([h.default], () => Y ? h.default.getEmbeddedActivitiesForChannel(w).filter(e => e.applicationId === b) : [], [b, w, Y]), X = Array.from(null !== (S = null == Q ? void 0 : Q.userIds) && void 0 !== S ? S : []), q = (0, a.useStateFromStoresArray)([I.default], () => X.map(e => I.default.getUser(e)).filter(A.isNotNullish), [X]), $ = (0, L.default)({
     applicationId: b,
     size: j
   }), ee = f.default.getWindowOpen(x.PopoutWindowKeys.CHANNEL_CALL_POPOUT), et = q.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START, en = async () => {
@@ -67,7 +67,7 @@ function b(e) {
         currentEmbeddedApplication: Z,
         activityChannelId: w,
         embeddedActivitiesManager: v.default,
-        locationObject: k.location,
+        locationObject: F.location,
         analyticsLocations: B
       });
       else {
@@ -90,14 +90,14 @@ function b(e) {
       }
     } else(0, P.default)({
       guildId: V,
-      locationObject: k.location,
+      locationObject: F.location,
       openInPopout: ee,
       initialSelectedApplicationId: b,
       initialSlide: D.ActivityShelfSlides.SELECT_CHANNEL,
       analyticsLocations: B
     })
   };
-  return null != z && (0, p.hasFlag)(z.flags, x.ApplicationFlags.EMBEDDED) ? (0, s.jsx)(F, {
+  return null != z && (0, p.hasFlag)(z.flags, x.ApplicationFlags.EMBEDDED) ? (0, s.jsx)(k, {
     children: (0, s.jsxs)("div", {
       className: U.container,
       children: [(0, s.jsx)("div", {
@@ -147,7 +147,7 @@ function b(e) {
               onClick: en,
               className: U.button,
               color: r.ButtonColors.GREEN,
-              disabled: W,
+              disabled: K,
               children: et
             })
           })]

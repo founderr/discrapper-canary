@@ -20,8 +20,8 @@ var l = n("37983"),
   m = n("158998"),
   E = n("754493"),
   g = n("813531"),
-  S = n("395635"),
-  I = n("49111"),
+  I = n("395635"),
+  S = n("49111"),
   _ = n("782340"),
   N = n("795329");
 
@@ -65,7 +65,7 @@ function A(e) {
     closePopout: t
   } = e, n = (0, g.default)(), s = n.slice(0, 3), d = (0, E.default)(), f = n.length - s.length;
   return a.useEffect(() => {
-    u.default.trackWithMetadata(I.AnalyticEvents.BROADCAST_POPOUT_VIEWED, {
+    u.default.trackWithMetadata(S.AnalyticEvents.BROADCAST_POPOUT_VIEWED, {
       num_broadcasts_shown: s.length,
       num_active_broadcasts: n.length,
       is_broadcasting: d
@@ -85,7 +85,7 @@ function A(e) {
           color: "header-primary",
           children: _.default.Messages.LIVE_BROADCASTS
         })]
-      }), (0, l.jsx)(S.default, {})]
+      }), (0, l.jsx)(I.default, {})]
     }), s.map((e, t) => (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(T, {
         ...e
@@ -104,7 +104,7 @@ function A(e) {
       })]
     }), (0, l.jsx)(r.Button, {
       onClick: () => {
-        (0, c.transitionTo)(I.Routes.ME), o.default.setSection(I.FriendsSections.ONLINE), u.default.trackWithMetadata(I.AnalyticEvents.BROADCAST_LIST_VISITED, {
+        (0, c.transitionTo)(S.Routes.ME), o.default.setSection(S.FriendsSections.ONLINE), u.default.trackWithMetadata(S.AnalyticEvents.BROADCAST_LIST_VISITED, {
           num_active_broadcasts: n.length,
           friends_tab_clicked: !1,
           is_broadcasting: d

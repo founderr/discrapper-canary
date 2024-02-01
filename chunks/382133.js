@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return o
   }
 });
 var i = n("37983");
@@ -9,14 +9,14 @@ n("884691");
 var r = n("421898"),
   l = n.n(r),
   a = n("15542"),
-  o = n("760742");
+  s = n("760742");
 
-function s(e) {
+function o(e) {
   let {
     onClick: t,
     title: n,
     body: r,
-    icon: s,
+    icon: o,
     selected: u,
     disabled: c
   } = e;
@@ -27,18 +27,18 @@ function s(e) {
         !c && t()
       },
       disabled: c,
-      className: l(o.wrapper, {
-        [o.selected]: u
+      className: l(s.wrapper, {
+        [s.selected]: u
       }),
       children: [(0, i.jsx)("div", {
-        className: o.icon,
-        children: s
+        className: s.icon,
+        children: o
       }), (0, i.jsxs)("div", {
         children: [(0, i.jsx)("div", {
-          className: o.title,
+          className: s.title,
           children: n
         }), (0, i.jsx)("div", {
-          className: o.body,
+          className: s.body,
           children: r
         })]
       })]

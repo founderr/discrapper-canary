@@ -22,9 +22,9 @@ var n = l("414456"),
   h = l("644169"),
   g = l("782340"),
   _ = l("770420"),
-  p = l("305013");
+  N = l("305013");
 
-function N(e) {
+function p(e) {
   let {
     guildId: t,
     onClick: l
@@ -36,18 +36,18 @@ function N(e) {
   }));
   return null != n && s ? (0, a.jsxs)(o.Clickable, {
     onClick: () => l(t),
-    className: p.guildRow,
+    className: N.guildRow,
     children: [(0, a.jsx)(S.default, {
       guild: n,
       size: S.default.Sizes.SMALL,
-      className: p.guildIcon
+      className: N.guildIcon
     }), (0, a.jsx)(o.Text, {
       variant: "text-md/normal",
-      className: p.guildName,
+      className: N.guildName,
       children: n.toString()
     }), (0, a.jsx)(E.default, {
       direction: E.default.Directions.RIGHT,
-      className: p.guildArrow
+      className: N.guildArrow
     })]
   }) : null
 }
@@ -58,12 +58,12 @@ function I(e) {
   } = e, l = (0, u.useStateFromStores)([m.default], () => m.default.getGuildFolders());
   return (0, a.jsx)(h.default, {
     title: g.default.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
-    scrollerClassName: s(p.guildScroller, _.marginBottom),
+    scrollerClassName: s(N.guildScroller, _.marginBottom),
     children: i.flatMap(l, e => {
       let {
         guildIds: l
       } = e;
-      return l.map(e => (0, a.jsx)(N, {
+      return l.map(e => (0, a.jsx)(p, {
         guildId: e,
         onClick: t
       }, e))

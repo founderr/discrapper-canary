@@ -21,8 +21,8 @@ var a = n("446674"),
   m = n("374014"),
   E = n("375202"),
   g = n("373469"),
-  S = n("271938"),
-  I = n("568307"),
+  I = n("271938"),
+  S = n("568307"),
   _ = n("18494"),
   N = n("101125"),
   T = n("703370"),
@@ -34,8 +34,8 @@ var a = n("446674"),
 
 function M() {
   let e = (0, a.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()),
-    t = (0, a.useStateFromStores)([S.default], () => S.default.getId()),
-    n = (0, a.useStateFromStores)([I.default, T.default], () => (0, E.default)(I.default, T.default)),
+    t = (0, a.useStateFromStores)([I.default], () => I.default.getId()),
+    n = (0, a.useStateFromStores)([S.default, T.default], () => (0, E.default)(S.default, T.default)),
     {
       canBroadcast: M
     } = d.default.useExperiment({

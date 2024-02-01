@@ -28,22 +28,22 @@ function T(e) {
   } = e, o = (0, r.default)([E.default], () => E.default.getMembersCountByGuildId(t.id, c.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [t.id]), T = (0, r.default)([E.default], () => {
     let e = E.default.getNewMemberTimestamp(t.id);
     return d(e).format("h:mm A")
-  }, [t.id]), x = (0, r.default)([E.default], () => E.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), A = n.useCallback(() => {
+  }, [t.id]), x = (0, r.default)([E.default], () => E.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), S = n.useCallback(() => {
     (0, m.refreshMemberSafetyTimestamp)(t.id), null == s || s()
-  }, [t.id, s]), S = n.useCallback(() => {
-    x ? A() : (0, u.openModalLazy)(async () => {
+  }, [t.id, s]), A = n.useCallback(() => {
+    x ? S() : (0, u.openModalLazy)(async () => {
       let {
         default: e
       } = await l.el("756912").then(l.bind(l, "756912"));
       return t => (0, a.jsx)(e, {
         ...t,
-        onConfirm: A
+        onConfirm: S
       })
     })
-  }, [A, x]), g = new Intl.NumberFormat(M.default.getLocale()).format(o), p = (0, f.useCanAccessInviteCodeFeature)(t.id), L = (0, f.useCanAccessBulkBanningFeature)(t.id), H = n.useMemo(() => 1 + (p ? 1 : 0) + (L ? 1 : 0), [p, L]);
+  }, [S, x]), g = new Intl.NumberFormat(M.default.getLocale()).format(o), p = (0, f.useCanAccessInviteCodeFeature)(t.id), L = (0, f.useCanAccessBulkBanningFeature)(t.id), H = n.useMemo(() => 1 + (p ? 1 : 0) + (L ? 1 : 0), [p, L]);
   return 0 === o ? null : (0, a.jsxs)("tr", {
     className: i(_.newMembersNotice),
-    onClick: S,
+    onClick: A,
     children: [(0, a.jsx)("td", {
       colSpan: 3,
       children: (0, a.jsx)(u.Text, {

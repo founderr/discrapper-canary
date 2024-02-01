@@ -24,9 +24,9 @@ function m(e) {
   } = e, [s, m] = n.useTransition(), M = (0, o.default)([C.default], () => C.default.getEstimatedMemberSearchCountByGuildId(t), [t]), h = (0, o.useStateFromStoresObject)([C.default], () => C.default.getPaginationStateByGuildId(t), [t]), _ = (0, u.useIsMakingRequest)(t), T = n.useMemo(() => r.PAGINATION_PAGE_SIZE_OPTIONS.map(e => ({
     value: e,
     label: Number(e).toLocaleString()
-  })), []), x = new Intl.NumberFormat(f.default.getLocale()).format(M), A = f.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
+  })), []), x = new Intl.NumberFormat(f.default.getLocale()).format(M), S = f.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
     count: _ ? "..." : x
-  }), S = M > h.pageSize || _, g = M > r.PAGINATION_PAGE_SIZE_OPTIONS[0];
+  }), A = M > h.pageSize || _, g = M > r.PAGINATION_PAGE_SIZE_OPTIONS[0];
   return (0, a.jsxs)("div", {
     className: i(E.paginationContainer),
     children: [(0, a.jsx)("div", {
@@ -37,7 +37,7 @@ function m(e) {
           color: "text-muted",
           children: f.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL
         }), (0, a.jsx)(d.Select, {
-          "aria-label": A,
+          "aria-label": S,
           className: E.pageSizeInput,
           options: T,
           isSelected: e => e === h.pageSize,
@@ -59,7 +59,7 @@ function m(e) {
             color: "text-muted",
             className: i(E.pageLabel),
             ...e,
-            children: A
+            children: S
           })
         })]
       }) : (0, a.jsx)(d.Text, {
@@ -71,7 +71,7 @@ function m(e) {
       })
     }), (0, a.jsx)("div", {
       className: i(E.pagination),
-      children: S && (0, a.jsx)(d.Paginator, {
+      children: A && (0, a.jsx)(d.Paginator, {
         className: i(E.paginationInput),
         totalCount: M,
         pageSize: h.pageSize,

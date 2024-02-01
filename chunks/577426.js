@@ -22,8 +22,8 @@ function _(e) {
     intention: i,
     containerWidth: _,
     rowSize: f,
-    isBurstReaction: g,
-    analyticsObject: I
+    isBurstReaction: I,
+    analyticsObject: g
   } = e, p = o.default.getChannel(s.default.getChannelId()), C = null == p ? void 0 : p.getGuildId(), O = r.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), y = null != p ? r.default.getDisambiguatedEmojiContext(p.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], T = O.slice(0, r.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), j = null != C ? r.default.getGuildEmoji(C) : [], S = a.default.getPacksForUser().map(e => e.content.emojis).reduce((e, t) => e.concat(t), []), A = null !== (t = r.default.getDisambiguatedEmojiContext(null == p ? void 0 : p.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}, h = Object.values(A).reduce((e, t) => e += t.length, 0), {
     topEmojis: M,
     newlyAddedEmojis: R
@@ -58,10 +58,10 @@ function _(e) {
     num_expressions_newly_added: P.length,
     num_animated_expressions_newly_added: P.filter(e => e.animated).length,
     ...i === c.EmojiIntention.REACTION && {
-      is_burst: g
+      is_burst: I
     },
-    ...null != I && {
-      location_object: I
+    ...null != g && {
+      location_object: g
     }
   })
 }

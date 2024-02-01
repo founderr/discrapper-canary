@@ -139,14 +139,14 @@ function M(e, t, n) {
     expirationLabel: b,
     hasSelectedAnswer: G,
     hasVoted: B,
-    isEditingVote: F,
-    isExpired: k,
+    isEditingVote: k,
+    isExpired: F,
     isInteractive: w,
     reactions: H,
     selectedAnswerIds: V,
     submitting: Y,
-    tapShouldOpenVotersModal: K
-  } = D, W = H.reduce((e, t) => {
+    tapShouldOpenVotersModal: W
+  } = D, K = H.reduce((e, t) => {
     var n, s;
     return e + (null !== (s = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== s ? s : 0)
   }, 0), z = Math.max(...v.map(e => {
@@ -159,12 +159,12 @@ function M(e, t, n) {
       u = S(H, o),
       E = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
       f = V.has(o),
-      _ = k ? E >= z && 0 !== E : void 0,
+      _ = F ? E >= z && 0 !== E : void 0,
       T = B && null !== (r = null == u ? void 0 : u.me_vote) && void 0 !== r && r,
       I = C({
         didSelfVote: T,
         hasVoted: B,
-        isExpired: k,
+        isExpired: F,
         isInteractive: w,
         isSelected: f,
         isVictor: _
@@ -207,16 +207,16 @@ function M(e, t, n) {
       didSelfVote: T,
       style: I,
       shouldAnimateTransition: Y,
-      votesPercentage: Math.round(100 * (0 === W ? 0 : E / W)),
+      votesPercentage: Math.round(100 * (0 === K ? 0 : E / K)),
       votes: (0, s.match)(P).with(l.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(E), ")")).otherwise(() => p.default.Messages.POLL_VOTES_COUNT.format({
         count: String(E)
       }))
     }
   }), J = (0, s.match)({
-    isExpired: k,
+    isExpired: F,
     canSubmitVote: j,
     hasVoted: B,
-    isEditingVote: F,
+    isEditingVote: k,
     canEditVote: y,
     isInteractive: w
   }).with({
@@ -244,7 +244,7 @@ function M(e, t, n) {
     type: "submit"
   })), Q = (0, s.match)({
     isInteractive: w,
-    isEditingVote: F
+    isEditingVote: k
   }).with({
     isInteractive: !1
   }, () => ({
@@ -263,13 +263,13 @@ function M(e, t, n) {
     presentation: "text",
     enabled: !1
   })), X = "normal";
-  k ? X = "victor" : B && (X = "voted");
+  F ? X = "victor" : B && (X = "voted");
   let q = M.allow_multiselect;
   return {
     question: M.question,
     answers: Z,
     answersInteraction: (0, s.match)({
-      tapShouldOpenVotersModal: K,
+      tapShouldOpenVotersModal: W,
       canTapAnswers: x,
       canSelectMultipleAnswers: q
     }).with({
@@ -282,7 +282,7 @@ function M(e, t, n) {
       canSelectMultipleAnswers: !0
     }, () => _.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
     answerTapAccessibilityLabel: (0, s.match)({
-      tapShouldOpenVotersModal: K,
+      tapShouldOpenVotersModal: W,
       platform: (0, E.getNativePlatform)()
     }).with({
       tapShouldOpenVotersModal: !0,
@@ -309,7 +309,7 @@ function M(e, t, n) {
     canShowVoteCounts: U,
     hasVoted: B,
     expirationLabel: null != b ? b : p.default.Messages.POLL_EXPIRED,
-    isExpired: k,
+    isExpired: F,
     myAvatarUrl: L,
     secondaryAction: Q
   }

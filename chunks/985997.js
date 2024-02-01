@@ -22,8 +22,8 @@ var n = l("414456"),
   h = l("719923"),
   g = l("773356"),
   _ = l("480862"),
-  p = l("686298"),
-  N = l("49111"),
+  N = l("686298"),
+  p = l("49111"),
   I = l("782340"),
   x = l("770420"),
   v = l("986916"),
@@ -119,37 +119,37 @@ function O(e) {
     location: P
   } = (0, c.useAnalyticsContext)(), b = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !1
-  }), G = !D && !b, U = j ? p.GoLiveDeviceResolutionButtons : p.ApplicationStreamResolutionButtons, y = {
+  }), G = !D && !b, U = j ? N.GoLiveDeviceResolutionButtons : N.ApplicationStreamResolutionButtons, w = {
     ...P,
-    section: N.AnalyticsSections.STREAM_SETTINGS
-  }, k = (0, a.jsx)(S.default, {
+    section: p.AnalyticsSections.STREAM_SETTINGS
+  }, y = (0, a.jsx)(S.default, {
     buttons: U.map(e => L({
       type: e,
       selected: e.value === n,
       needsPremium: !(0, g.default)(l, e.value, s, M, O),
-      analyticsLocation: y,
+      analyticsLocation: w,
       onClick: () => r(e.value),
       onClose: t
     }))
-  }), w = (0, a.jsx)(S.default, {
-    buttons: p.ApplicationStreamFPSButtons.map(e => L({
+  }), F = (0, a.jsx)(S.default, {
+    buttons: N.ApplicationStreamFPSButtons.map(e => L({
       type: e,
       selected: e.value === s,
       needsPremium: !(0, g.default)(l, n, e.value, M, O),
-      analyticsLocation: y,
+      analyticsLocation: w,
       onClick: () => C(e.value),
       onClose: t
     }))
-  }), F = [{
-    value: p.ApplicationStreamPresets.PRESET_VIDEO,
+  }), k = [{
+    value: N.ApplicationStreamPresets.PRESET_VIDEO,
     label: I.default.Messages.STREAM_PRESET_VIDEO
   }, ...j ? [] : [{
-    value: p.ApplicationStreamPresets.PRESET_DOCUMENTS,
+    value: N.ApplicationStreamPresets.PRESET_DOCUMENTS,
     label: I.default.Messages.STREAM_PRESET_DOCUMENTS
   }], {
-    value: p.ApplicationStreamPresets.PRESET_CUSTOM,
+    value: N.ApplicationStreamPresets.PRESET_CUSTOM,
     label: I.default.Messages.STREAM_PRESET_CUSTOM
-  }], V = l === p.ApplicationStreamPresets.PRESET_DOCUMENTS ? (0, a.jsxs)(a.Fragment, {
+  }], V = l === N.ApplicationStreamPresets.PRESET_DOCUMENTS ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(E.default, {
       children: (0, a.jsx)(o.FormItem, {
         title: I.default.Messages.STREAM_RESOLUTION,
@@ -173,12 +173,12 @@ function O(e) {
         title: I.default.Messages.STREAM_RESOLUTION,
         className: v.settingsGroup,
         titleClassName: x.formItemTitleSlim,
-        children: k
+        children: y
       }), (0, a.jsx)(o.FormItem, {
         title: I.default.Messages.SCREENSHARE_FRAME_RATE,
         className: v.settingsGroup,
         titleClassName: x.formItemTitleSlim,
-        children: w
+        children: F
       })]
     }), G ? (0, a.jsx)(_.default, {
       onClose: t,
@@ -186,7 +186,7 @@ function O(e) {
     }) : null]
   });
   return (0, a.jsx)(d.default, {
-    ...y,
+    ...w,
     children: (0, a.jsx)(o.FormItem, {
       title: I.default.Messages.STREAM_QUALITY,
       titleClassName: x.formItemTitle,
@@ -196,7 +196,7 @@ function O(e) {
         children: [(0, a.jsx)(o.SingleSelect, {
           value: l,
           className: A.marginTop8,
-          options: F,
+          options: k,
           onChange: e => T(e)
         }), V]
       })

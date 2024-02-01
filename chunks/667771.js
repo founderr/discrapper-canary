@@ -21,8 +21,8 @@ var a = n("476042"),
   m = n("305961"),
   E = n("957255"),
   g = n("162771"),
-  S = n("230674"),
-  I = n("991170"),
+  I = n("230674"),
+  S = n("991170"),
   _ = n("49111");
 let N = "DRAGGABLE_GUILD_CHANNEL";
 
@@ -41,14 +41,14 @@ function A(e) {
       let n;
       let a = g.default.getGuildId(),
         s = t.getItem(),
-        u = (0, S.getDropData)(T(a, s.id), s.position, e.channel, e.position, s.channelList);
+        u = (0, I.getDropData)(T(a, s.id), s.position, e.channel, e.position, s.channelList);
       if (null == u) return;
       let c = T(a, s.id);
       if (null == c) return;
       let f = C.default.getCategories(a),
         p = m.default.getGuild(a);
       if (null == p) return;
-      let N = (0, S.getDnDUpdates)(c, T(a, u.referenceId), u.parentId, f);
+      let N = (0, I.getDnDUpdates)(c, T(a, u.referenceId), u.parentId, f);
       if (0 !== N.length) {
         if (a === _.FAVORITES) {
           (0, d.updateFavoriteChannels)(N);
@@ -66,8 +66,8 @@ function A(e) {
             let t = h.default.getChannel(e.parent_id),
               l = null != t && E.default.can(_.Permissions.MANAGE_ROLES, c) && E.default.can(_.Permissions.MANAGE_ROLES, t);
             if (!l) return !0;
-            let a = I.default.areChannelsLocked(c, t),
-              s = I.default.areChannelsLocked(c, h.default.getChannel(c.parent_id));
+            let a = S.default.areChannelsLocked(c, t),
+              s = S.default.areChannelsLocked(c, h.default.getChannel(c.parent_id));
             return (null == c.parent_id && !a || s && !a) && (n = e), !0
           }), null != n) {
           let e = h.default.getChannel(n.parent_id);
@@ -89,7 +89,7 @@ function A(e) {
       let n = t.getItem(),
         l = h.default.getChannel(n.id);
       if (null == l) return !1;
-      let a = (0, S.getDropData)(h.default.getChannel(n.id), n.position, e.channel, e.position, n.channelList);
+      let a = (0, I.getDropData)(h.default.getChannel(n.id), n.position, e.channel, e.position, n.channelList);
       if (null == a) return !1;
       if (g.default.getGuildId() === _.FAVORITES) return !0;
       let s = m.default.getGuild(n.guildId);

@@ -57,7 +57,7 @@ function B(e) {
   }), (0, T.navigateToPremiumMarketingPage)()
 }
 
-function F(e) {
+function k(e) {
   let {
     sticker: t,
     description: n
@@ -84,7 +84,7 @@ function F(e) {
     })]
   })
 }
-let k = e => {
+let F = e => {
     let {
       closePopout: t,
       sticker: n,
@@ -151,14 +151,14 @@ let k = e => {
       P = M.default.canUseCustomStickersEverywhere(L),
       b = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(n.guild_id)),
       G = null != b,
-      [k, w] = l.useState(!1),
+      [F, w] = l.useState(!1),
       [H, V] = l.useState(null),
       Y = l.useMemo(() => ({
         page: null != a.guild_id ? D.AnalyticsPages.GUILD_CHANNEL : D.AnalyticsPages.DM_CHANNEL,
         section: D.AnalyticsSections.STICKER_POPOUT
       }), [a.guild_id]),
       {
-        current: K
+        current: W
       } = l.useRef({
         guild_id: a.getGuildId(),
         ...(0, d.collectChannelAnalyticsMetadata)(a)
@@ -174,11 +174,11 @@ let k = e => {
       };
       e()
     }, [n.id, G]);
-    let W = n.guild_id === a.getGuildId(),
+    let K = n.guild_id === a.getGuildId(),
       z = null != m,
       Z = !1,
       J = "Custom Sticker Popout";
-    P ? t = G ? W ? y.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : G ? (W ? t = y.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = y.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, Z = !0, J = "Custom Sticker Popout (Upsell)") : z ? (t = y.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, Z = !0, J = "Custom Sticker Popout (Upsell)") : (t = y.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
+    P ? t = G ? K ? y.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : G ? (K ? t = y.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = y.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, Z = !0, J = "Custom Sticker Popout (Upsell)") : z ? (t = y.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, Z = !0, J = "Custom Sticker Popout (Upsell)") : (t = y.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
       openPremiumSettings: () => {
         B(a), T()
       }
@@ -189,7 +189,7 @@ let k = e => {
     }, [O, m]), l.useEffect(() => {
       g.default.track(D.AnalyticEvents.OPEN_POPOUT, {
         type: J,
-        ...K
+        ...W
       })
     }, []), O) ? (0, s.jsxs)(_.MessagePopoutContent, {
       className: j.popoutContent,
@@ -204,7 +204,7 @@ let k = e => {
         };
         return (0, s.jsxs)("div", {
           className: j.emojiSection,
-          children: [(0, s.jsx)(F, {
+          children: [(0, s.jsx)(k, {
             description: t,
             sticker: n
           }), Z && (0, s.jsx)(N.default, {
@@ -241,7 +241,7 @@ let k = e => {
           }), !G && (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)(o.Clickable, {
               onClick: () => {
-                I(), w(!k)
+                I(), w(!F)
               },
               className: j.showMoreEmojis,
               children: (0, s.jsxs)(S.default, {
@@ -252,11 +252,11 @@ let k = e => {
                   children: y.default.Messages.STICKER_POPOUT_SHOW_MORE_STICKERS
                 }), (0, s.jsx)(h.default, {
                   className: i(j.showMoreEmojisArrow, {
-                    [j.showMoreEmojisArrowCollapsed]: !k
+                    [j.showMoreEmojisArrowCollapsed]: !F
                   })
                 })]
               })
-            }), k && (0, s.jsx)(S.default, {
+            }), F && (0, s.jsx)(S.default, {
               wrap: S.default.Wrap.WRAP,
               align: S.default.Align.START,
               justify: S.default.Justify.START,
@@ -309,7 +309,7 @@ function H(e) {
   } = e;
   return (0, s.jsx)(_.MessagePopoutContent, {
     className: U.popoutContent,
-    children: (0, s.jsx)(F, {
+    children: (0, s.jsx)(k, {
       sticker: l,
       description: y.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
         openPremiumSettings: () => {
@@ -326,7 +326,7 @@ var V = e => {
     closePopout: l,
     refreshPositionKey: a
   } = e, [i, r] = (0, O.useStickerForRenderableSticker)(t, !0);
-  if (null != i && (0, L.isStandardSticker)(i)) return (0, s.jsx)(k, {
+  if (null != i && (0, L.isStandardSticker)(i)) return (0, s.jsx)(F, {
     sticker: i,
     closePopout: l,
     channel: n,

@@ -1,10 +1,10 @@
 "use strict";
 l.r(t), l.d(t, {
   roleToPendingAddition: function() {
-    return V
+    return B
   },
   channelToPendingAddition: function() {
-    return B
+    return V
   },
   default: function() {
     return w
@@ -22,8 +22,8 @@ var a, n, s, i, o, d, r = l("37983"),
   _ = l("679653"),
   T = l("419830"),
   x = l("405645"),
-  A = l("19766"),
-  S = l("42203"),
+  S = l("19766"),
+  A = l("42203"),
   g = l("305961"),
   p = l("27618"),
   L = l("697218"),
@@ -33,9 +33,9 @@ var a, n, s, i, o, d, r = l("37983"),
   R = l("159260");
 let v = (0, H.uid)(),
   j = (0, H.uid)(),
-  b = "text-sm/medium";
+  D = "text-sm/medium";
 
-function D(e) {
+function b(e) {
   return 1 === e.type
 }
 
@@ -43,8 +43,8 @@ function O(e) {
   return 0 === e.type
 }
 
-function V(e) {
-  let t = "".concat(e.name.includes(A.EVERYONE_ID) ? "" : "@").concat(e.name);
+function B(e) {
+  let t = "".concat(e.name.includes(S.EVERYONE_ID) ? "" : "@").concat(e.name);
   return {
     tag: {
       type: h.RichTagTypes.ROLE,
@@ -59,7 +59,7 @@ function V(e) {
   }
 }
 
-function B(e) {
+function V(e) {
   let t = (0, _.computeChannelName)(e, L.default, p.default);
   return {
     tag: {
@@ -90,7 +90,7 @@ let y = u.memo(function(e) {
   }), d = (0, m.useStateFromStores)([g.default], () => {
     let e = g.default.getGuild(a);
     return null == e ? null : e.roles[s]
-  }, [s, a]), u = i.includes(A.EVERYONE_ID) ? "" : "@", C = (0, M.useToken)(M.tokens.unsafe_rawColors.PRIMARY_300).hsl(), f = null !== (t = null == d ? void 0 : d.colorString) && void 0 !== t ? t : C;
+  }, [s, a]), u = i.includes(S.EVERYONE_ID) ? "" : "@", C = (0, M.useToken)(M.tokens.unsafe_rawColors.PRIMARY_300).hsl(), f = null !== (t = null == d ? void 0 : d.colorString) && void 0 !== t ? t : C;
   return (0, r.jsxs)("div", {
     className: c(R.rowLabel, R.roleTagContainer, n),
     children: [(0, r.jsx)(M.RoleDot, {
@@ -103,7 +103,7 @@ let y = u.memo(function(e) {
       ...o,
       enableTooltip: !1
     }) : u, (0, r.jsx)(M.Text, {
-      variant: b,
+      variant: D,
       className: R.roleTagLabel,
       children: i
     })]
@@ -125,14 +125,14 @@ function F(e) {
       height: 16,
       className: R.channelIcon
     }), (0, r.jsx)(M.Text, {
-      variant: t.isCategory() ? "eyebrow" : b,
+      variant: t.isCategory() ? "eyebrow" : D,
       children: l.display
     })]
   })
 }
 
 function U(e, t, l) {
-  return D(e) ? (0, r.jsx)(y, {
+  return b(e) ? (0, r.jsx)(y, {
     row: e,
     guildId: t,
     className: l
@@ -161,12 +161,12 @@ function w(e) {
     if (null == e) return {};
     let a = {};
     return e.forEach(e => {
-      let t = S.default.getChannel(e);
-      null != t && (a[e] = B(t))
+      let t = A.default.getChannel(e);
+      null != t && (a[e] = V(t))
     }), t.forEach(e => {
-      e in l && (a[e] = V(l[e]))
+      e in l && (a[e] = B(l[e]))
     }), a
-  })(n, s, f), [n, s, f]), T = u.useMemo(() => Object.keys(_), [_]), [x, A] = u.useState(""), [p, L] = u.useState(!1), [H, N] = u.useState(!1), [b, y] = u.useState(!1), F = u.useRef(null), {
+  })(n, s, f), [n, s, f]), T = u.useMemo(() => Object.keys(_), [_]), [x, S] = u.useState(""), [p, L] = u.useState(!1), [H, N] = u.useState(!1), [D, y] = u.useState(!1), F = u.useRef(null), {
     sections: w,
     sectionCounts: k
   } = u.useMemo(() => {
@@ -190,7 +190,7 @@ function w(e) {
         let {
           row: t
         } = e;
-        return D(t)
+        return b(t)
       }).map(e => e.row.record.id);
     i(new Set(l), new Set(a))
   }, [i]), P = () => {
@@ -211,7 +211,7 @@ function w(e) {
       let t = {
         ..._
       };
-      O(e) ? t[e.id] = B(e.record) : D(e) && (t[e.id] = V(e.record)), Z(t), A(""), P(), setTimeout(() => {
+      O(e) ? t[e.id] = V(e.record) : b(e) && (t[e.id] = B(e.record)), Z(t), S(""), P(), setTimeout(() => {
         var e;
         let t = null === (e = F.current) || void 0 === e ? void 0 : e.containerRef.current,
           l = null == t ? void 0 : t.firstChild;
@@ -260,21 +260,21 @@ function w(e) {
               [t]: l,
               ...a
             } = _;
-          Z(a), A(""), P()
+          Z(a), S(""), P()
         },
         onQueryChange: e => {
-          A(e.trim().toLocaleLowerCase())
+          S(e.trim().toLocaleLowerCase())
         },
         placeholder: null != o ? o : I.default.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_PLACEHOLDER,
         sections: [T.length],
         inputProps: {
           "aria-labelledby": v,
           "aria-controls": j,
-          "aria-expanded": b,
+          "aria-expanded": D,
           onFocus: e => Y(!0, 2, e),
           onBlur: e => Y(!1, 2, e)
         }
-      }), b && (0, r.jsx)("div", {
+      }), D && (0, r.jsx)("div", {
         className: R.resultsListParent,
         onFocus: e => Y(!0, 1, e),
         onBlur: e => Y(!1, 1, e),

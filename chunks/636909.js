@@ -21,8 +21,8 @@ var a = l("37983"),
   h = l("525065"),
   g = l("305961"),
   _ = l("42887"),
-  p = l("568307"),
-  N = l("18494"),
+  N = l("568307"),
+  p = l("18494"),
   I = l("697218"),
   x = l("703370"),
   v = l("145131"),
@@ -38,16 +38,16 @@ var a = l("37983"),
   b = l("767960"),
   G = l("375202"),
   U = l("916262"),
-  y = l("75974"),
-  k = l("359812"),
-  w = l("273405"),
-  F = l("326620"),
+  w = l("75974"),
+  y = l("359812"),
+  F = l("273405"),
+  k = l("326620"),
   V = l("985997"),
   H = l("16750"),
   B = l("706530"),
   W = l("49111"),
-  K = l("782340"),
-  z = l("183351"),
+  z = l("782340"),
+  K = l("183351"),
   Y = l("770420");
 
 function Z(e) {
@@ -56,7 +56,7 @@ function Z(e) {
     selectSource: l,
     sourceChanged: n,
     onChangeSource: s
-  } = e, r = (0, i.useStateFromStores)([p.default, x.default], () => (0, P.isWindows)() ? (0, G.default)(p.default, x.default) : null), o = (0, i.useStateFromStores)([d.default], () => (null == r ? void 0 : r.id) != null ? d.default.getApplication(r.id) : null), c = (0, i.useStateFromStores)([p.default], () => p.default.getRunningGames()), f = (0, i.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(M.isNotNullish), [c]), m = null;
+  } = e, r = (0, i.useStateFromStores)([N.default, x.default], () => (0, P.isWindows)() ? (0, G.default)(N.default, x.default) : null), o = (0, i.useStateFromStores)([d.default], () => (null == r ? void 0 : r.id) != null ? d.default.getApplication(r.id) : null), c = (0, i.useStateFromStores)([N.default], () => N.default.getRunningGames()), f = (0, i.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(M.isNotNullish), [c]), m = null;
   if (null != t ? m = t.name : null != r && (m = r.name), null == m) return null;
   let S = (0, H.default)(r, t, c),
     E = n ? f.find(e => {
@@ -67,25 +67,25 @@ function Z(e) {
     }) : o,
     C = null != t && t.id.startsWith("screen") ? T.default : O.default;
   return (0, a.jsx)(u.FormItem, {
-    title: K.default.Messages.GO_LIVE_MODAL_APPLICATION_FORM_TITLE,
+    title: z.default.Messages.GO_LIVE_MODAL_APPLICATION_FORM_TITLE,
     className: Y.modalContent,
     titleClassName: Y.formItemTitleVerySlim,
-    children: (0, a.jsxs)(F.default, {
+    children: (0, a.jsxs)(k.default, {
       children: [null != E ? (0, a.jsx)(A.default, {
         game: E,
         size: A.default.Sizes.XSMALL,
-        className: z.selectedIcon
+        className: K.selectedIcon
       }) : (0, a.jsx)(C, {
-        className: z.selectedIcon
+        className: K.selectedIcon
       }), (0, a.jsx)("span", {
-        className: z.ellipsisText,
+        className: K.ellipsisText,
         children: m
       }), l ? (0, a.jsx)(u.Button, {
-        className: z.changeButton,
+        className: K.changeButton,
         color: u.Button.Colors.PRIMARY,
         size: u.Button.Sizes.SMALL,
         onClick: s,
-        children: K.default.Messages.CHANGE
+        children: z.default.Messages.CHANGE
       }) : null]
     })
   })
@@ -97,23 +97,23 @@ function J(e) {
     guildId: l
   } = e, n = (0, i.useStateFromStores)([g.default], () => g.default.getGuild(l));
   return null == n ? (t(), null) : (0, a.jsx)(u.FormItem, {
-    title: K.default.Messages.GO_LIVE_MODAL_GUILD_FORM_TITLE,
+    title: z.default.Messages.GO_LIVE_MODAL_GUILD_FORM_TITLE,
     className: Y.modalContent,
     titleClassName: Y.formItemTitle,
-    children: (0, a.jsxs)(F.default, {
+    children: (0, a.jsxs)(k.default, {
       children: [(0, a.jsx)(R.default, {
         guild: n,
         size: R.default.Sizes.SMALLER,
-        className: z.selectedIcon
+        className: K.selectedIcon
       }), (0, a.jsx)("span", {
-        className: z.ellipsisText,
+        className: K.ellipsisText,
         children: n.toString()
       }), (0, a.jsx)(u.Button, {
-        className: z.changeButton,
+        className: K.changeButton,
         color: u.Button.Colors.PRIMARY,
         size: u.Button.Sizes.SMALL,
         onClick: t,
-        children: K.default.Messages.CHANGE
+        children: z.default.Messages.CHANGE
       })]
     })
   })
@@ -125,9 +125,9 @@ function Q(e) {
   } = e;
   return (0, a.jsxs)(v.default, {
     align: v.default.Align.CENTER,
-    className: z.warning,
+    className: K.warning,
     children: [(0, a.jsx)(L.default, {
-      className: z.warningIcon
+      className: K.warningIcon
     }), (0, a.jsx)(u.Text, {
       color: "none",
       variant: "text-xs/normal",
@@ -148,14 +148,14 @@ function X(e) {
     })
   }, []), d = l >= 2 && l <= B.STREAM_NOTIFY_GUILD_MAX_SIZE;
   return d ? (0, a.jsx)(u.FormItem, {
-    className: r(Y.modalContent, z.checkboxRow),
+    className: r(Y.modalContent, K.checkboxRow),
     children: (0, a.jsx)(u.Checkbox, {
       value: !!s,
       type: u.Checkbox.Types.INVERTED,
       onChange: o,
       children: (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
-        children: K.default.Messages.GO_LIVE_MODAL_NOTIFY_FRIENDS_CHECKBOX_LABEL
+        children: z.default.Messages.GO_LIVE_MODAL_NOTIFY_FRIENDS_CHECKBOX_LABEL
       })
     })
   }) : null
@@ -169,14 +169,14 @@ function q(e) {
     l(t)
   }, [l]);
   return (0, a.jsx)(u.FormItem, {
-    className: r(Y.modalContent, z.checkboxRow),
+    className: r(Y.modalContent, K.checkboxRow),
     children: (0, a.jsx)(u.Checkbox, {
       value: t,
       type: u.Checkbox.Types.INVERTED,
       onChange: s,
       children: (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
-        children: K.default.Messages.GO_LIVE_MODAL_ENABLE_SCREEN_SOUNDSHARE_LABEL
+        children: z.default.Messages.GO_LIVE_MODAL_ENABLE_SCREEN_SOUNDSHARE_LABEL
       })
     })
   })
@@ -193,7 +193,7 @@ function $(e) {
     selectedGuildId: E,
     targetGuildPremiumTier: h,
     selectSource: g,
-    selectGuild: p,
+    selectGuild: N,
     sound: x,
     onClose: v,
     onChangeSelectedFPS: A,
@@ -204,24 +204,24 @@ function $(e) {
     onChangeAudioDevice: j,
     onChangeGuild: M,
     onChangeSound: G,
-    isAnimationDone: F
-  } = e, H = (0, i.useStateFromStores)([N.default, C.default], () => C.default.getChannel(N.default.getVoiceChannelId())), B = (0, i.useStateFromStores)([b.default], () => b.default.GPUDriversOutdated), z = (0, i.useStateFromStores)([b.default], () => b.default.problematicGPUDriver), Y = (0, i.useStateFromStores)([_.default], () => _.default.getSoundshareEnabled()), $ = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), ee = (0, f.useEnableClips)(), et = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+    isAnimationDone: k
+  } = e, H = (0, i.useStateFromStores)([p.default, C.default], () => C.default.getChannel(p.default.getVoiceChannelId())), B = (0, i.useStateFromStores)([b.default], () => b.default.GPUDriversOutdated), K = (0, i.useStateFromStores)([b.default], () => b.default.problematicGPUDriver), Y = (0, i.useStateFromStores)([_.default], () => _.default.getSoundshareEnabled()), $ = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), ee = (0, f.useEnableClips)(), et = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
     autoTrackExposure: !ee
   }), el = (0, U.default)();
-  null != t && t.id.startsWith("screen") && !_.default.supportsScreenSoundshare() ? el = K.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND : null == el && _.default.supportsEnableSoundshare() && Y !== W.SoundshareEnableState.ENABLED && (el = K.default.Messages.GO_LIVE_SCREENSHARE_ENABLE_FOR_SOUNDSHARE.format({
+  null != t && t.id.startsWith("screen") && !_.default.supportsScreenSoundshare() ? el = z.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND : null == el && _.default.supportsEnableSoundshare() && Y !== W.SoundshareEnableState.ENABLED && (el = z.default.Messages.GO_LIVE_SCREENSHARE_ENABLE_FOR_SOUNDSHARE.format({
     onVoiceSettingsClick: () => {
       v(), o.default.open(W.UserSettingsSections.VOICE)
     }
   }));
   let ea = ee ? (0, a.jsx)(S.default, {
       guildId: E,
-      isAnimationDone: F
+      isAnimationDone: k
     }) : et ? (0, a.jsx)(m.default, {}) : void 0,
     en = !!(null == t ? void 0 : t.id.startsWith("camera")),
     es = null != $ && $.verified && !$.bot,
     er = null != H && !(0, c.isPrivateGuildChannel)(H);
   return (0, a.jsxs)(n.Fragment, {
-    children: [en ? (0, a.jsx)(y.default, {
+    children: [en ? (0, a.jsx)(w.default, {
       selectedSource: t,
       onChangeVideoDeviceSource: O,
       onChangeAudioDevice: j
@@ -237,21 +237,21 @@ function $(e) {
         enabled: x,
         onChange: G
       }) : null]
-    }), p && null != E ? (0, a.jsx)(J, {
+    }), N && null != E ? (0, a.jsx)(J, {
       guildId: E,
       onChange: M
-    }) : null, null != H ? (0, a.jsx)(w.default, {
+    }) : null, null != H ? (0, a.jsx)(F.default, {
       channel: H
-    }) : (0, a.jsx)(k.default, {
+    }) : (0, a.jsx)(y.default, {
       guildId: E,
       selectedChannelId: s,
       onChangeSelectedChannelId: L
     }), null != E && es && er ? (0, a.jsx)(X, {
       guildId: E
     }) : null, B ? (0, a.jsx)(Q, {
-      text: K.default.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED
-    }) : null, z ? (0, a.jsx)(Q, {
-      text: K.default.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
+      text: z.default.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED
+    }) : null, K ? (0, a.jsx)(Q, {
+      text: z.default.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
         helpCenterLink: D.default.getArticleURL(W.HelpdeskArticles.NVIDIA_DRIVER_ISSUES)
       })
     }) : null, (0, a.jsx)(V.default, {

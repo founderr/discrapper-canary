@@ -5,9 +5,9 @@ n("860677"), n("854508"), ! function(e, t) {
     var n, r = 1,
       l = {},
       a = !1,
-      o = e.document,
-      s = Object.getPrototypeOf && Object.getPrototypeOf(e);
-    s = s && s.setTimeout ? s : e, "[object process]" === ({}).toString.call(e.process) ? function() {
+      s = e.document,
+      o = Object.getPrototypeOf && Object.getPrototypeOf(e);
+    o = o && o.setTimeout ? o : e, "[object process]" === ({}).toString.call(e.process) ? function() {
       n = function(e) {
         i.nextTick(function() {
           c(e)
@@ -36,10 +36,10 @@ n("860677"), n("854508"), ! function(e, t) {
       }, n = function(t) {
         e.port2.postMessage(t)
       }
-    }() : o && "onreadystatechange" in o.createElement("script") ? function() {
-      var e = o.documentElement;
+    }() : s && "onreadystatechange" in s.createElement("script") ? function() {
+      var e = s.documentElement;
       n = function(t) {
-        var n = o.createElement("script");
+        var n = s.createElement("script");
         n.onreadystatechange = function() {
           c(t), n.onreadystatechange = null, e.removeChild(n), n = null
         }, e.appendChild(n)
@@ -48,7 +48,7 @@ n("860677"), n("854508"), ! function(e, t) {
       n = function(e) {
         setTimeout(c, 0, e)
       }
-    }(), s.setImmediate = function(e) {
+    }(), o.setImmediate = function(e) {
       "function" != typeof e && (e = Function("" + e));
       for (var t = Array(arguments.length - 1), i = 0; i < t.length; i++) t[i] = arguments[i + 1];
       var a = {
@@ -56,7 +56,7 @@ n("860677"), n("854508"), ! function(e, t) {
         args: t
       };
       return l[r] = a, n(r), r++
-    }, s.clearImmediate = u
+    }, o.clearImmediate = u
   }
 
   function u(e) {

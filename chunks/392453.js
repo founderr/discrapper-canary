@@ -20,8 +20,8 @@ var l = n("917351"),
   m = n("177589"),
   E = n("67139"),
   g = n("671071"),
-  S = n("322631"),
-  I = n("947297"),
+  I = n("322631"),
+  S = n("947297"),
   _ = n("373469"),
   N = n("42203"),
   T = n("350522"),
@@ -58,7 +58,7 @@ function K(e) {
   let t = F[e];
   return null == t && (F = {
     ...F,
-    [e]: new I.default({
+    [e]: new S.default({
       name: e
     })
   }), F[e]
@@ -68,7 +68,7 @@ function W(e) {
   let t = B[e];
   return null == t && (B = {
     ...B,
-    [e]: new S.default({
+    [e]: new I.default({
       url: e
     })
   }), B[e]
@@ -124,7 +124,7 @@ function q(e, t, n) {
           tags: {
             source: "ACTIVITIES"
           }
-        }), null) : e === g.SPOTIFY_APPLICATION_ID ? g.SpotifyApplication : e.startsWith(I.XBOX_APPLICATION_ID_PREFIX) ? K(e.slice(I.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(S.TWITCH_APPLICATION_ID_PREFIX) ? W(e.slice(S.TWITCH_APPLICATION_ID_PREFIX.length)) : (Z(e), null)
+        }), null) : e === g.SPOTIFY_APPLICATION_ID ? g.SpotifyApplication : e.startsWith(S.XBOX_APPLICATION_ID_PREFIX) ? K(e.slice(S.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(I.TWITCH_APPLICATION_ID_PREFIX) ? W(e.slice(I.TWITCH_APPLICATION_ID_PREFIX.length)) : (Z(e), null)
       }(c),
       p = null === (l = d.timestamps) || void 0 === l ? void 0 : l.start;
     if ((0, u.default)(d)) {

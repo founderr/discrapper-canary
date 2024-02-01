@@ -67,27 +67,27 @@ function x(e) {
       containerRef: e,
       layout: t
     }
-  }(), F = (0, m.default)({
+  }(), k = (0, m.default)({
     applicationId: t.id,
     size: 1024
-  }), k = (0, I.default)(), w = (0, o.useStateFromStores)([C.default], () => C.default.getId()), H = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(a).find(e => e.instanceId === n.id)), V = (0, o.useStateFromStoresArray)([g.default], () => {
+  }), F = (0, I.default)(), w = (0, o.useStateFromStores)([C.default], () => C.default.getId()), H = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(a).find(e => e.instanceId === n.id)), V = (0, o.useStateFromStoresArray)([g.default], () => {
     var e;
     return Array.from(null !== (e = null == H ? void 0 : H.userIds) && void 0 !== e ? e : []).map(e => g.default.getUser(e)).filter(O.isNotNullish)
   }), Y = (0, o.useStateFromStores)([h.default], () => {
     var e;
     let n = null == H ? void 0 : H.userIds.values().next().value;
     return null == n ? null : null === (e = h.default.findActivity(n.user_id, e => e.application_id === t.id)) || void 0 === e ? void 0 : e.details
-  }), K = l.useMemo(() => {
+  }), W = l.useMemo(() => {
     let e = new S.default(t);
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = L.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
-  }, [t]), W = (0, T.useEmbeddedActivityJoinability)({
+  }, [t]), K = (0, T.useEmbeddedActivityJoinability)({
     userId: w,
     channelId: a,
-    application: K
+    application: W
   }), z = null == H, Z = (0, R.useJoinOrStartButtonState)({
     embeddedActivity: H,
     currentUserId: w,
-    joinability: W
+    joinability: K
   }), J = async () => {
     U(!0);
     try {
@@ -104,7 +104,7 @@ function x(e) {
         });
         await (0, _.default)({
           activityItem: s,
-          currentActivity: k,
+          currentActivity: F,
           channelId: a,
           guildId: x,
           locationObject: b.location,
@@ -113,7 +113,7 @@ function x(e) {
         })
       } else await (0, f.default)({
         applicationId: H.applicationId,
-        currentEmbeddedApplication: k,
+        currentEmbeddedApplication: F,
         activityChannelId: a,
         locationObject: b.location,
         embeddedActivitiesManager: p.default,
@@ -126,8 +126,8 @@ function x(e) {
     className: P.container,
     children: [B !== D.SMALL && (0, s.jsx)("div", {
       className: P.imgWrapper,
-      children: "fetched" === F.state && (0, s.jsx)(N.default, {
-        imageBackground: F,
+      children: "fetched" === k.state && (0, s.jsx)(N.default, {
+        imageBackground: k,
         applicationName: t.name,
         imageClassName: P.img,
         imageNotFoundClassName: P.imgBroken

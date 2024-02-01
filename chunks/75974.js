@@ -30,7 +30,7 @@ function _(e) {
   r(null != t, "Camera capture device cannot be null");
   let i = (0, S.default)(),
     _ = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
-    [p, N] = n.useState(function(e, t, l) {
+    [N, p] = n.useState(function(e, t, l) {
       if (null != t && null != l) {
         let a = t.find(t => t.id === e);
         if (null == a) return;
@@ -38,7 +38,7 @@ function _(e) {
         if (null != n) return n.id
       }
     }(t.id, i, _));
-  return null != p && s(p), (0, a.jsx)(n.Fragment, {
+  return null != N && s(N), (0, a.jsx)(n.Fragment, {
     children: (0, a.jsxs)(c.FormItem, {
       title: "Capture Device",
       className: h.modalContent,
@@ -60,10 +60,10 @@ function _(e) {
         className: g.marginTop8,
         title: E.default.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
         children: (0, a.jsx)(c.SingleSelect, {
-          value: p,
+          value: N,
           className: g.marginaTop8,
           onChange: e => {
-            N(e), s(e)
+            p(e), s(e)
           },
           options: u.map(_, e => {
             let {

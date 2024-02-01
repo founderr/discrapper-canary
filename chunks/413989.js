@@ -22,8 +22,8 @@ var a = l("37983"),
   _ = l("645266"),
   T = l("412013"),
   x = l("782340"),
-  A = l("554490"),
-  S = l("236807");
+  S = l("554490"),
+  A = l("236807");
 let g = new Set;
 
 function p(e) {
@@ -37,20 +37,20 @@ function p(e) {
     return (0, a.jsx)(E.ComboboxItem, {
       value: n.id,
       children: (0, a.jsxs)("div", {
-        className: i(A.roleNameContainer),
+        className: i(S.roleNameContainer),
         children: [(0, a.jsxs)("div", {
-          className: i(A.roleLabel),
+          className: i(S.roleLabel),
           children: [(0, a.jsx)("div", {
-            className: i(A.labelBackground, l && A.selected)
+            className: i(S.labelBackground, l && S.selected)
           }), (0, a.jsx)(E.ComboboxItem.Label, {
             children: (0, a.jsx)(T.default, {
-              className: i(S.roleTooltipItem),
+              className: i(A.roleTooltipItem),
               role: n,
               guildId: t
             }, n.id)
           })]
         }), (0, a.jsx)("div", {
-          className: A.checkboxContainer,
+          className: S.checkboxContainer,
           children: (0, a.jsx)(E.ComboboxItem.Checkbox, {
             checked: l
           })
@@ -71,7 +71,7 @@ function p(e) {
     C(t = r.has(e) ? new Set([...r].filter(t => t !== e)) : new Set([...r, e])), I(t)
   }, [r, I]);
   return (0, a.jsx)(E.ComboboxPopout, {
-    className: i(A.rolePopout),
+    className: i(S.rolePopout),
     placeholder: x.default.Messages.MEMBERS_TABLE_ROLE_SELECTION_PLACEHOLDER,
     value: r,
     onChange: R,

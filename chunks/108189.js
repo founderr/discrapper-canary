@@ -23,8 +23,8 @@ var f = e => {
       style: m,
       to: E,
       onClick: g,
-      selected: S = !1,
-      ...I
+      selected: I = !1,
+      ...S
     } = e,
     _ = (0, r.useHistory)();
   if (null == f && null != h) {
@@ -44,10 +44,10 @@ var f = e => {
     null != g && g(e)
   }, [_, E, g]);
   return (0, l.jsxs)(o.Clickable, {
-    ...I,
+    ...S,
     onClick: T,
     className: i(p, d.wrapper, {
-      [d.selected]: S
+      [d.selected]: I
     }),
     "aria-label": null != C && "" !== C ? C : null != h ? h : "",
     style: {
