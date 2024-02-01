@@ -24,15 +24,15 @@ function f(e) {
     selectedAccountAgeOption: i
   } = n, {
     afterDate: f,
-    beforeDate: m,
-    optionId: E
-  } = i, M = E === C.DATE_OPTION.CUSTOM, h = M && null != f ? o(f).format(C.MENU_DATE_FORMAT) : null, _ = M && null != m ? o(m).format(C.MENU_DATE_FORMAT) : null;
+    beforeDate: E,
+    optionId: m
+  } = i, M = m === C.DATE_OPTION.CUSTOM, h = M && null != f ? o(f).format(C.MENU_DATE_FORMAT) : null, _ = M && null != E ? o(E).format(C.MENU_DATE_FORMAT) : null;
   return (0, a.jsx)(C.default, {
     startDateLabel: h,
     endDateLabel: _,
     afterDate: f,
-    beforeDate: m,
-    selectedOption: E,
+    beforeDate: E,
+    selectedOption: m,
     isCustomDateRange: M,
     menuName: "account-age",
     accessibilityLabel: c.default.Messages.MEMBER_SAFETY_ACCOUNT_AGE_LABEL,
@@ -54,7 +54,7 @@ function f(e) {
         selectedAccountAgeOption: {
           optionId: C.DATE_OPTION.CUSTOM,
           afterDate: M ? f : null,
-          beforeDate: M ? m : null
+          beforeDate: M ? E : null
         }
       })
     },
@@ -64,7 +64,7 @@ function f(e) {
         selectedAccountAgeOption: {
           optionId: C.DATE_OPTION.CUSTOM,
           afterDate: e.valueOf(),
-          beforeDate: m
+          beforeDate: E
         }
       })
     },

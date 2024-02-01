@@ -23,12 +23,12 @@ var a = i("37983"),
       messageId: i,
       emoji: m,
       useChatFontScaling: E,
-      color: g,
-      count: _
-    } = e, R = (0, n.useStateFromStores)([d.default], () => d.default.getEffectForEmojiId(t, i, m)), I = E ? T : f, C = l.useMemo(() => (0, h.buildEffect)(m, g, t, {
+      color: _,
+      count: g
+    } = e, R = (0, n.useStateFromStores)([d.default], () => d.default.getEffectForEmojiId(t, i, m)), I = E ? T : f, C = l.useMemo(() => (0, h.buildEffect)(m, _, t, {
       key: R,
       messageId: i
-    }), [g, R, m, t, i]), [O, v] = l.useState(!1), A = (0, n.useStateFromStores)([s.default], () => s.default.useReducedMotion), N = u.AnimateEmoji.useSetting(), S = l.useCallback(() => {
+    }), [_, R, m, t, i]), [O, A] = l.useState(!1), S = (0, n.useStateFromStores)([s.default], () => s.default.useReducedMotion), v = u.AnimateEmoji.useSetting(), N = l.useCallback(() => {
       o.default.dispatch({
         type: "BURST_REACTION_EFFECT_CLEAR",
         channelId: t,
@@ -41,22 +41,22 @@ var a = i("37983"),
         if (O) return;
         let e = (0, c.getBurstAnimationHash)("".concat(Date.now()).concat(t).concat(i).concat(m.name)),
           a = e % 10;
-        (a += _ > 4 ? 4 : _ - 1) > 7 && (v(!0), (0, r.playBurstReaction)({
+        (a += g > 4 ? 4 : g - 1) > 7 && (A(!0), (0, r.playBurstReaction)({
           channelId: t,
           messageId: i,
           emoji: m,
           key: d.BurstReactionEffectSource.RANDOM
         }))
       };
-      if (O || A && !N || !N) return;
+      if (O || S && !v || !v) return;
       e();
       let a = setInterval(e, 5e3);
       return () => {
         clearInterval(a)
       }
-    }, [N, t, _, m, m.name, O, i, A]), null == R) ? null : (0, a.jsx)(p.default, {
+    }, [v, t, g, m, m.name, O, i, S]), null == R) ? null : (0, a.jsx)(p.default, {
       className: I.effect,
       effect: C,
-      onComplete: S
+      onComplete: N
     })
   })

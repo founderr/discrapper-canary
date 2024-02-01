@@ -23,8 +23,8 @@ t.r(e), t.d(e, {
   }
 }), t("702976");
 var E = t("872717"),
-  l = t("913144"),
-  n = t("81732");
+  n = t("913144"),
+  l = t("81732");
 t("21121"), t("693051");
 var C = t("263024");
 t("492114");
@@ -33,7 +33,7 @@ var F = t("42203"),
   u = t("49111");
 
 function a(B, e, t) {
-  l.default.dispatch({
+  n.default.dispatch({
     type: "CHANNEL_SETTINGS_INIT",
     channelId: B,
     location: e,
@@ -42,13 +42,13 @@ function a(B, e, t) {
 }
 
 function r() {
-  l.default.dispatch({
+  n.default.dispatch({
     type: "CHANNEL_SETTINGS_CLOSE"
   })
 }
 
 function o(B) {
-  l.default.dispatch({
+  n.default.dispatch({
     type: "CHANNEL_SETTINGS_SET_SECTION",
     section: B
   })
@@ -59,7 +59,7 @@ function D(B) {
     name: e,
     type: t,
     topic: E,
-    bitrate: n,
+    bitrate: l,
     userLimit: C,
     nsfw: F,
     flags: i,
@@ -73,18 +73,18 @@ function D(B) {
     autoArchiveDuration: A,
     locked: c,
     invitable: f,
-    availableTags: N,
-    defaultSortOrder: _,
+    availableTags: _,
+    defaultSortOrder: N,
     defaultForumLayout: T,
     iconEmoji: h,
     themeColor: m
   } = B;
-  l.default.dispatch({
+  n.default.dispatch({
     type: "CHANNEL_SETTINGS_UPDATE",
     name: e,
     channelType: t,
     topic: E,
-    bitrate: n,
+    bitrate: l,
     userLimit: C,
     nsfw: F,
     flags: i,
@@ -98,8 +98,8 @@ function D(B) {
     autoArchiveDuration: A,
     locked: c,
     invitable: f,
-    availableTags: N,
-    defaultSortOrder: _,
+    availableTags: _,
+    defaultSortOrder: N,
     defaultForumLayout: T,
     iconEmoji: h,
     themeColor: m
@@ -118,8 +118,8 @@ async function d(B, e) {
     permissionOverwrites: A,
     rateLimitPerUser: c,
     defaultThreadRateLimitPerUser: f,
-    defaultAutoArchiveDuration: N,
-    template: _,
+    defaultAutoArchiveDuration: _,
+    template: N,
     defaultReactionEmoji: T,
     rtcRegion: h,
     videoQualityMode: m,
@@ -132,7 +132,7 @@ async function d(B, e) {
     iconEmoji: O,
     themeColor: y
   } = e, U = F.default.getChannel(B);
-  return l.default.dispatch({
+  return n.default.dispatch({
     type: "CHANNEL_SETTINGS_SUBMIT"
   }), await C.default.unarchiveThreadIfNecessary(B), E.default.patch({
     url: u.Endpoints.CHANNEL(B),
@@ -148,8 +148,8 @@ async function d(B, e) {
       permission_overwrites: A,
       rate_limit_per_user: c,
       default_thread_rate_limit_per_user: f,
-      default_auto_archive_duration: N,
-      template: _,
+      default_auto_archive_duration: _,
+      template: N,
       rtc_region: h,
       video_quality_mode: m,
       auto_archive_duration: v,
@@ -176,13 +176,13 @@ async function d(B, e) {
     },
     oldFormErrors: !0
   }).then(e => {
-    l.default.dispatch({
+    n.default.dispatch({
       type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
       channelId: B
     });
     let t = null == U ? void 0 : U.getGuildId();
-    return null != t && !(null == U ? void 0 : U.isThread()) && n.default.checkGuildTemplateDirty(t), e
-  }, B => (l.default.dispatch({
+    return null != t && !(null == U ? void 0 : U.isThread()) && l.default.checkGuildTemplateDirty(t), e
+  }, B => (n.default.dispatch({
     type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
     errors: B.body
   }), B))
@@ -195,7 +195,7 @@ function s(B) {
     oldFormErrors: !0
   }).then(() => {
     let B = null == e ? void 0 : e.getGuildId();
-    null != B && !(null == e ? void 0 : e.isThread()) && n.default.checkGuildTemplateDirty(B), r()
+    null != B && !(null == e ? void 0 : e.isThread()) && l.default.checkGuildTemplateDirty(B), r()
   })
 }
 var A = {
@@ -206,7 +206,7 @@ var A = {
   close: r,
   setSection: o,
   selectPermissionOverwrite: function(B) {
-    l.default.dispatch({
+    n.default.dispatch({
       type: "CHANNEL_SETTINGS_OVERWRITE_SELECT",
       overwriteId: B
     })

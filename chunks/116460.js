@@ -27,8 +27,8 @@ var u = l("917351"),
   A = l("18494"),
   U = l("162771"),
   I = l("282109"),
-  N = l("25292"),
-  S = l("449008"),
+  S = l("25292"),
+  N = l("449008"),
   v = l("49111"),
   L = l("782340");
 let D = "seenQSTutorial",
@@ -80,7 +80,7 @@ function K(e, t) {
     switch (k) {
       case o.AutocompleterResultTypes.USER: {
         let e = f.default.getId();
-        return N.default.getRecentlyTalked(s, 100).filter(t => {
+        return S.default.getRecentlyTalked(s, 100).filter(t => {
           let {
             record: l
           } = t;
@@ -88,26 +88,26 @@ function K(e, t) {
         })
       }
       case o.AutocompleterResultTypes.APPLICATION:
-        return N.default.queryApplications({
+        return S.default.queryApplications({
           query: "",
           limit: 100,
           fuzzy: !0
         });
       case o.AutocompleterResultTypes.GUILD:
-        return N.default.queryGuilds({
+        return S.default.queryGuilds({
           query: "",
           limit: 100,
           fuzzy: !0
         });
       case o.AutocompleterResultTypes.TEXT_CHANNEL:
-        return N.default.queryChannels({
+        return S.default.queryChannels({
           query: "",
           guildId: U.default.getGuildId(),
           limit: 100,
           fuzzy: !0
         });
       case o.AutocompleterResultTypes.VOICE_CHANNEL:
-        return N.default.queryChannels({
+        return S.default.queryChannels({
           query: "",
           guildId: U.default.getGuildId(),
           limit: 100,
@@ -135,7 +135,7 @@ function K(e, t) {
       }), t
     }(e => e === s || w.includes(e));
     r.length > 0 && u.push((0, o.createHeaderResult)(L.default.Messages.QUICKSWITCHER_DRAFTS), ...r);
-    let a = m.default.getMentionChannelIds().filter(e => e !== s && !w.includes(e)).map(e => W(e)).filter(S.isNotNullish).reverse();
+    let a = m.default.getMentionChannelIds().filter(e => e !== s && !w.includes(e)).map(e => W(e)).filter(N.isNotNullish).reverse();
     if (a.length > 0 && (u.push((0, o.createHeaderResult)(L.default.Messages.QUICKSWITCHER_MENTIONS)), u = u.concat(a)), null != l) {
       let e = E.default.getSelectableChannelIds(l).filter(e => {
         let t = R.default.getChannel(e);

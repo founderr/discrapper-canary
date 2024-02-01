@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("394846"),
   d = n("446674"),
   c = n("77078"),
-  f = n("4919"),
-  E = n("812204"),
+  E = n("4919"),
+  f = n("812204"),
   _ = n("685665"),
   T = n("649844"),
   I = n("697218"),
@@ -171,14 +171,14 @@ function L(e) {
     return r ? null === (e = m.default.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null
   }), {
     analyticsLocations: c
-  } = (0, _.default)(E.default.SHARE_NITRO_EMBED), {
+  } = (0, _.default)(f.default.SHARE_NITRO_EMBED), {
     enabled: T
   } = C.default.useExperiment({
     location: "f4ff1d_1"
   }, {
     autoTrackExposure: !0
   });
-  return a ? (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
+  return a ? (0, s.jsx)(E.ResponsiveLoadingEmbedTile, {
     isHorizontal: !u.isMobile
   }) : n && null != l && void 0 !== i ? (0, s.jsx)(R, {
     trialOffer: l,

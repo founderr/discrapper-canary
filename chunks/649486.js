@@ -11,8 +11,8 @@ var s, l, a = n("37983"),
   u = n("597755"),
   d = n.n(u),
   c = n("394846"),
-  f = n("171718"),
-  E = n("446674"),
+  E = n("171718"),
+  f = n("446674"),
   _ = n("77078"),
   T = n("774146"),
   I = n("161778"),
@@ -84,12 +84,12 @@ let M = [{
       {
         getOs: d,
         icon: c,
-        url: f,
-        platformKey: E
+        url: E,
+        platformKey: f
       } = n,
       T = d(),
       I = o(g.icon, c, u);
-    if (Array.isArray(f)) t = f.map((e, t) => {
+    if (Array.isArray(E)) t = E.map((e, t) => {
       let n = r ? e.url() : "";
       return (0, a.jsx)(R, {
         url: n,
@@ -98,7 +98,7 @@ let M = [{
       }, "".concat(n, "-").concat(t))
     });
     else {
-      let e = r ? f() : void 0;
+      let e = r ? E() : void 0;
       t = (0, a.jsx)(R, {
         url: e,
         onClick: () => s(T),
@@ -109,7 +109,7 @@ let M = [{
       className: o(g.platform, {
         [g.active]: i
       }),
-      onMouseEnter: () => l(E),
+      onMouseEnter: () => l(f),
       children: (0, a.jsxs)("div", {
         className: g.contentWrapper,
         children: [(0, a.jsxs)("div", {
@@ -140,7 +140,7 @@ function v(e) {
     source: t,
     onClose: n,
     transitionState: s
-  } = e, l = (0, E.useStateFromStores)([N.default], () => N.default.getCurrentUser()), r = (0, E.useStateFromStores)([I.default], () => I.default.theme), o = (0, E.useStateFromStores)([m.default], () => m.default.getFingerprint()), u = null == l || l.isClaimed(), [S, R] = i.useState(function() {
+  } = e, l = (0, f.useStateFromStores)([N.default], () => N.default.getCurrentUser()), r = (0, f.useStateFromStores)([I.default], () => I.default.theme), o = (0, f.useStateFromStores)([m.default], () => m.default.getFingerprint()), u = null == l || l.isClaimed(), [S, R] = i.useState(function() {
     var e;
     switch (null === (e = d.os) || void 0 === e ? void 0 : e.family) {
       case "OS X":
@@ -164,7 +164,7 @@ function v(e) {
   }());
 
   function v(e) {
-    (null != f.default.getToken() || null != o) && A.default.track(C.AnalyticEvents.DOWNLOAD_APP, {
+    (null != E.default.getToken() || null != o) && A.default.track(C.AnalyticEvents.DOWNLOAD_APP, {
       platform: e,
       ptb: !1,
       released: !0,

@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return j
+    return b
   }
 }), l("222007");
 var a = l("37983"),
@@ -15,15 +15,15 @@ var a = l("37983"),
   C = l("65597"),
   c = l("77078"),
   f = l("305961"),
-  m = l("627490"),
-  E = l("745633"),
+  E = l("627490"),
+  m = l("745633"),
   M = l("980428"),
   h = l("83900"),
   _ = l("875436"),
   T = l("772280"),
   x = l("71216"),
-  S = l("741919"),
-  A = l("178406"),
+  A = l("741919"),
+  S = l("178406"),
   g = l("645266"),
   p = l("835257"),
   L = l("561909"),
@@ -33,7 +33,7 @@ var a = l("37983"),
   R = l("946032");
 let v = [p.JoinSourceType.DISCOVERY, p.JoinSourceType.VANITY_URL, p.JoinSourceType.BOT, p.JoinSourceType.HUB];
 
-function b(e) {
+function j(e) {
   let {
     type: t,
     text: l,
@@ -49,19 +49,19 @@ function b(e) {
           width: t
         });
       case p.JoinSourceType.INTEGRATION:
-        return (0, a.jsx)(S.default, {
+        return (0, a.jsx)(A.default, {
           className: I.icon,
           height: t,
           width: t
         });
       case p.JoinSourceType.DISCOVERY:
-        return (0, a.jsx)(m.default, {
+        return (0, a.jsx)(E.default, {
           className: I.icon,
           height: t,
           width: t
         });
       case p.JoinSourceType.HUB:
-        return (0, a.jsx)(E.default, {
+        return (0, a.jsx)(m.default, {
           className: I.icon,
           height: t,
           width: t
@@ -90,16 +90,16 @@ function b(e) {
   })
 }
 
-function j(e) {
+function b(e) {
   let {
     guildId: t,
     onClose: l
-  } = e, s = (0, C.default)([A.default], () => A.default.getSearchStateByGuildId(t), [t], u), {
+  } = e, s = (0, C.default)([S.default], () => S.default.getSearchStateByGuildId(t), [t], u), {
     inviteCodes: o
-  } = (0, L.useGuildInvites)(t), r = (0, C.default)([f.default], () => f.default.getGuild(t)), m = null == r ? void 0 : r.vanityURLCode, [E, h] = n.useState(!1), {
+  } = (0, L.useGuildInvites)(t), r = (0, C.default)([f.default], () => f.default.getGuild(t)), E = null == r ? void 0 : r.vanityURLCode, [m, h] = n.useState(!1), {
     selectedSourceInviteCode: x,
-    selectedJoinSourceType: S
-  } = s, j = null != S && S !== p.JoinSourceType.UNSPECIFIED, D = n.useCallback(e => {
+    selectedJoinSourceType: A
+  } = s, b = null != A && A !== p.JoinSourceType.UNSPECIFIED, D = n.useCallback(e => {
     let l = e.trim();
     (0, g.updateSearchState)(t, {
       ...s,
@@ -107,14 +107,14 @@ function j(e) {
       selectedJoinSourceType: void 0
     })
   }, [t, s]), O = n.useCallback(e => {
-    e === S ? (0, g.updateSearchState)(t, {
+    e === A ? (0, g.updateSearchState)(t, {
       selectedSourceInviteCode: void 0,
       selectedJoinSourceType: void 0
     }) : (0, g.updateSearchState)(t, {
       selectedSourceInviteCode: null,
       selectedJoinSourceType: e
     }), h(!1)
-  }, [t, S]), V = n.useCallback(d(D, 300), [D]), B = n.useCallback(e => {
+  }, [t, A]), V = n.useCallback(d(D, 300), [D]), B = n.useCallback(e => {
     V(e)
   }, [V]);
   return (0, a.jsx)(c.Menu, {
@@ -124,7 +124,7 @@ function j(e) {
     },
     "aria-label": N.default.Messages.MEMBER_SAFETY_JOIN_METHOD_LABEL,
     onSelect: H.NOOP,
-    children: E ? (0, a.jsxs)(c.MenuGroup, {
+    children: m ? (0, a.jsxs)(c.MenuGroup, {
       children: [(0, a.jsx)(c.MenuItem, {
         id: "back",
         action: () => h(!1),
@@ -143,13 +143,13 @@ function j(e) {
         })
       }), v.map(e => (0, a.jsx)(c.MenuRadioItem, {
         id: "join-source-type-option-".concat(e),
-        label: t => (0, a.jsx)(b, {
+        label: t => (0, a.jsx)(j, {
           ...t,
           type: e,
-          vanityUrl: m,
-          text: (0, p.getJoinSourceTypeLabel)(e, m)
+          vanityUrl: E,
+          text: (0, p.getJoinSourceTypeLabel)(e, E)
         }),
-        checked: S === e,
+        checked: A === e,
         disabled: !1,
         action: () => O(e),
         group: "join-source-type-options"
@@ -167,16 +167,16 @@ function j(e) {
       }, "invite-code-filter-search"), (0, a.jsx)(c.MenuSeparator, {}), (0, a.jsx)(c.MenuRadioItem, {
         id: "join-source-type-option-all",
         label: N.default.Messages.GUILD_SETTINGS_FILTER_ALL,
-        checked: null == x && null == S,
+        checked: null == x && null == A,
         disabled: !1,
         action: () => O(null),
         group: "join-source-type-options"
       }, "join-source-type-option-all"), o.map(e => (0, a.jsx)(c.MenuRadioItem, {
         id: "join-source-type-option-".concat(e),
-        label: t => (0, a.jsx)(b, {
+        label: t => (0, a.jsx)(j, {
           ...t,
           type: p.JoinSourceType.INVITE,
-          vanityUrl: m,
+          vanityUrl: E,
           text: e
         }),
         checked: x === e,
@@ -196,17 +196,17 @@ function j(e) {
                 [I.focused]: e.isFocused
               }),
               children: N.default.Messages.MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME
-            }), j ? (0, a.jsx)("div", {
+            }), b ? (0, a.jsx)("div", {
               className: I.selectedOption,
-              children: (0, a.jsx)(b, {
+              children: (0, a.jsx)(j, {
                 ...e,
                 size: 12,
-                text: (0, p.getJoinSourceTypeLabel)(S, m),
-                type: S,
-                vanityUrl: m
+                text: (0, p.getJoinSourceTypeLabel)(A, E),
+                type: A,
+                vanityUrl: E
               })
             }) : null]
-          }), j ? (0, a.jsx)(_.default, {
+          }), b ? (0, a.jsx)(_.default, {
             background: I.radio,
             foreground: I.radioSelection,
             width: 16,

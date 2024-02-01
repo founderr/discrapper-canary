@@ -14,8 +14,8 @@ var l = n("627445"),
   u = n("373469"),
   d = n("162771"),
   c = n("174622"),
-  f = n("793079"),
-  E = n("49111"),
+  E = n("793079"),
+  f = n("49111"),
   _ = n("91366"),
   T = n("782340"),
   I = n("18978");
@@ -41,10 +41,10 @@ function m(e) {
   } = m;
   a(L === _.InviteTargetTypes.STREAM && null != v, "invalid streaming invite");
   let P = N === v.id,
-    D = m.state === E.InviteStates.ACCEPTING,
+    D = m.state === f.InviteStates.ACCEPTING,
     x = null != p;
   if (null == p) {
-    if (null == m.guild) return (0, s.jsx)(f.default, {});
+    if (null == m.guild) return (0, s.jsx)(E.default, {});
     p = new o.default(m.guild)
   }
   let y = null != m.channel ? (0, r.createChannelRecordFromInvite)(m.channel) : null,

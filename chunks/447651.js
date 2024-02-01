@@ -21,8 +21,8 @@ let M = "https://media.discordapp.net",
   g = /^.*\.discordapp\.net$/,
   p = "https://cdn.discordapp.com",
   I = "".concat(M, "/stickers"),
-  v = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
-  S = new Set(["jpg", "jpeg", "png"]),
+  S = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
+  v = new Set(["jpg", "jpeg", "png"]),
   h = e => {
     var t;
     return null === (t = new URL(e).pathname.split(".").pop()) || void 0 === t ? void 0 : t.toLowerCase()
@@ -40,7 +40,7 @@ function _(e, t, n) {
   if (l || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !d.isPlatformEmbedded || null == e || ! function(e) {
       let t = new URL(e),
         n = h(e);
-      return (g.test(t.hostname) || t.origin === p) && !e.startsWith(I) && !(0, s.isRoleIconAssetUrl)(e) && null != n && v.has(n)
+      return (g.test(t.hostname) || t.origin === p) && !e.startsWith(I) && !(0, s.isRoleIconAssetUrl)(e) && null != n && S.has(n)
     }(e)) return null;
   let o = function(e) {
       let t = new URL(e);
@@ -69,7 +69,7 @@ function _(e, t, n) {
     };
   return [c.default.canCopyImage() && function(e) {
     let t = h(e);
-    return null != t && S.has(t)
+    return null != t && v.has(t)
   }(e) ? (0, a.jsx)(i.MenuItem, {
     id: "copy-image",
     label: m.default.Messages.COPY_IMAGE_MENU_ITEM,

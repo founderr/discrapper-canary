@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return m
+    return E
   }
 }), l("222007");
 var a = l("37983"),
@@ -24,14 +24,14 @@ let c = {
     clamp: !0
   };
 
-function m(e) {
+function E(e) {
   let {
     value: t,
     children: l,
     equalityFn: s = i,
     style: d,
-    ...m
-  } = e, E = (0, C.default)(t), [{
+    ...E
+  } = e, m = (0, C.default)(t), [{
     spring: M
   }, h] = (0, o.useSpring)(() => ({
     spring: 0
@@ -46,21 +46,21 @@ function m(e) {
     })
   }, [h]);
   n.useEffect(() => {
-    if (null != t && null != E) !s(t, E) && x()
-  }, [x, t, E, s]);
-  let S = null == M ? void 0 : M.to({
+    if (null != t && null != m) !s(t, m) && x()
+  }, [x, t, m, s]);
+  let A = null == M ? void 0 : M.to({
       range: [0, 1],
       output: ["".concat(_, "00"), "".concat(T, "27")]
     }),
-    A = null != d ? {
+    S = null != d ? {
       ...d,
-      backgroundColor: S
+      backgroundColor: A
     } : {
-      backgroundColor: S
+      backgroundColor: A
     };
   return (0, a.jsx)(o.animated.tr, {
-    ...m,
-    style: A,
+    ...E,
+    style: S,
     children: l
   })
 }

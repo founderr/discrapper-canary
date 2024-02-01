@@ -25,10 +25,10 @@ var m = e => {
     guild: a,
     closePopout: l,
     ctaRef: m
-  } = e, E = (0, d.useUID)(), [g, _] = o.useState(!1), R = (0, s.useStateFromStores)([p.default], () => p.default.isLurking(a.id), [a.id]);
+  } = e, E = (0, d.useUID)(), [_, g] = o.useState(!1), R = (0, s.useStateFromStores)([p.default], () => p.default.isLurking(a.id), [a.id]);
   o.useEffect(() => {
-    g && !R && l()
-  }, [g, R, l]);
+    _ && !R && l()
+  }, [_, R, l]);
   let I = null,
     C = f.default.Messages.LURKER_MODE_POPOUT_UPSELL_BODY;
   switch (t) {
@@ -43,13 +43,13 @@ var m = e => {
   }
   if (null == I) return null;
   let O = async () => {
-    _(!0);
+    g(!0);
     try {
       await u.default.joinGuild(a.id, {
         source: h.JoinGuildSources.CHAT_INPUT_BLOCKER
       }), l()
     } catch {
-      _(!1)
+      g(!1)
     }
   };
   return (0, n.jsxs)(r.Dialog, {
@@ -74,7 +74,7 @@ var m = e => {
         children: [(0, n.jsx)(r.Button, {
           buttonRef: m,
           onClick: O,
-          submitting: g,
+          submitting: _,
           children: f.default.Messages.LURKER_MODE_POPOUT_JOIN
         }), (0, n.jsx)(r.Button, {
           onClick: l,

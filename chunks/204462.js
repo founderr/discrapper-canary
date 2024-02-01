@@ -21,8 +21,8 @@ var i = n("414456"),
   g = n("402671"),
   p = n("49111"),
   I = n("958706"),
-  v = n("782340"),
-  S = n("791507");
+  S = n("782340"),
+  v = n("791507");
 let h = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 
 function A(e) {
@@ -45,19 +45,19 @@ function A(e) {
     spacing: 16,
     forceOpen: i,
     children: e => (0, a.jsx)("div", {
-      "aria-label": v.default.Messages.ADD_REACTION_NAMED.format({
+      "aria-label": S.default.Messages.ADD_REACTION_NAMED.format({
         emojiName: n.name
       }),
-      className: l(S.button, {
-        [S.focused]: i
+      className: l(v.button, {
+        [v.focused]: i
       }),
       ...e,
       children: null == r || "" === r.trim() ? (0, a.jsx)("span", {
-        className: l("emoji", "emoji-text", S.icon),
+        className: l("emoji", "emoji-text", v.icon),
         ...e,
         children: d
       }) : (0, a.jsx)("img", {
-        className: S.icon,
+        className: v.icon,
         src: r,
         alt: ""
       })
@@ -83,13 +83,13 @@ function _(e, t) {
     });
   l.length > 4 && (l.length = 4);
   let M = E.RenderReactions.useSetting(),
-    v = (0, f.useIsActiveChannelOrUnarchivableThread)(t),
-    _ = (0, s.useStateFromStores)([m.default], () => M && v && (t.isPrivate() || m.default.can(p.Permissions.ADD_REACTIONS, t)), [t, v, M]),
+    S = (0, f.useIsActiveChannelOrUnarchivableThread)(t),
+    _ = (0, s.useStateFromStores)([m.default], () => M && S && (t.isPrivate() || m.default.can(p.Permissions.ADD_REACTIONS, t)), [t, S, M]),
     T = n => {
       (0, o.addReaction)(t.id, e.id, (0, c.toReactionEmoji)(n), void 0)
     };
   return _ && l.length > 0 ? (0, a.jsx)(u.MenuGroup, {
-    className: S.wrapper,
+    className: v.wrapper,
     children: l.map((e, t) => {
       var n;
       return (0, a.jsx)(u.MenuItem, {

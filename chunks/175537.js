@@ -20,8 +20,8 @@ var a = n("37983"),
   g = n("659500"),
   p = n("402671"),
   I = n("49111"),
-  v = n("958706"),
-  S = n("782340");
+  S = n("958706"),
+  v = n("782340");
 
 function h(e, t) {
   let {
@@ -35,7 +35,7 @@ function h(e, t) {
   let C = _.filter(e => !p.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
-    intention: v.EmojiIntention.REACTION,
+    intention: S.EmojiIntention.REACTION,
     canViewAndUsePackEmoji: T
   })).slice(0, 12).map((i, l) => {
     var u, r, c;
@@ -62,7 +62,7 @@ function h(e, t) {
   });
   return (0, a.jsx)(s.MenuItem, {
     id: "add-reaction",
-    label: S.default.Messages.ADD_REACTION,
+    label: v.default.Messages.ADD_REACTION,
     action: () => {
       g.ComponentDispatch.dispatchKeyed(I.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {
         emojiPicker: !0
@@ -73,7 +73,7 @@ function h(e, t) {
       children: [C, (0, a.jsx)(s.MenuSeparator, {}), (0, a.jsx)(s.MenuItem, {
         color: "default",
         id: "other-reactions",
-        label: S.default.Messages.VIEW_MORE,
+        label: v.default.Messages.VIEW_MORE,
         icon: m.default,
         action: () => {
           g.ComponentDispatch.dispatchKeyed(I.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT, e.id, {

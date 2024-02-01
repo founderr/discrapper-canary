@@ -24,16 +24,16 @@ async function u() {
       }),
       d = null !== (e = u.body.user_trial_offer) && void 0 !== e ? e : null,
       c = null !== (t = u.body.user_discount) && void 0 !== t ? t : null,
-      f = null !== (n = u.body.user_discount_offer) && void 0 !== n ? n : null;
+      E = null !== (n = u.body.user_discount_offer) && void 0 !== n ? n : null;
     return null == d && (0, i.isDismissibleContentDismissed)(l.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, r.removeDismissedContent)(l.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING), a.default.dispatch({
       type: "BILLING_USER_OFFER_FETCH_SUCCESS",
       userTrialOffer: d,
       userDiscount: c,
-      userDiscountOffer: f
+      userDiscountOffer: E
     }), {
       userTrialOffer: d,
       userDiscount: c,
-      userDiscountOffer: f
+      userDiscountOffer: E
     }
   } catch (e) {
     a.default.dispatch({

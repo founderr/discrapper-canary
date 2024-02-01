@@ -30,7 +30,7 @@ function f(e) {
     onClick: () => {
       n.default.open(d.UserSettingsSections.PREMIUM), l()
     }
-  }), E = (0, s.usePremiumTrialOffer)(), g = (0, o.usePremiumDiscountOffer)();
+  }), E = (0, s.usePremiumTrialOffer)(), _ = (0, o.usePremiumDiscountOffer)();
   return (0, a.jsx)(r.default, {
     artURL: h,
     artContainerClassName: p.artContainer,
@@ -46,7 +46,7 @@ function f(e) {
       object: d.AnalyticsObjects.BUTTON_CTA
     },
     onClose: l,
-    subscribeButtonText: null != E || null != g ? void 0 : c.default.Messages.PREMIUM_SETTINGS_GET,
+    subscribeButtonText: null != E || null != _ ? void 0 : c.default.Messages.PREMIUM_SETTINGS_GET,
     subscriptionTier: null !== (i = null == E ? void 0 : null === (t = E.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== i ? i : u.PremiumSubscriptionSKUs.TIER_2,
     backButtonText: c.default.Messages.NO_THANKS,
     ...T

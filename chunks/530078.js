@@ -14,8 +14,8 @@ var l = n("498574"),
   u = n("266926"),
   d = n("568734"),
   c = n("427459"),
-  f = n("665618"),
-  E = n("605953"),
+  E = n("665618"),
+  f = n("605953"),
   _ = n("793079"),
   T = n("49111"),
   I = n("782340"),
@@ -47,12 +47,12 @@ function N(e) {
     F = null !== (N = null == g ? void 0 : g.hasFeature(T.GuildFeatures.HUB)) && void 0 !== N && N;
   if (null == g) {
     if (null == M.guild) return (0, s.jsx)(_.default, {});
-    g = f.fromInviteGuild(M.guild);
+    g = E.fromInviteGuild(M.guild);
     let e = (0, c.getGuildTierFromAppliedBoostCount)(M.guild.premium_subscription_count, M.guild.id);
     g.premiumTier = e
   }
   let k = U ? C : h,
-    w = (0, E.getHeaderTextForInvite)({
+    w = (0, f.getHeaderTextForInvite)({
       isVoiceChannel: b,
       isOwnInvite: L,
       isGuest: B,

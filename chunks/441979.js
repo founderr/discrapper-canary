@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("529805"),
   d = n("364685"),
   c = n("41170"),
-  f = n("46829"),
-  E = n("840817"),
+  E = n("46829"),
+  f = n("840817"),
   _ = n("304198"),
   T = n("599110"),
   I = n("659500"),
@@ -73,7 +73,7 @@ function S(e) {
               shouldMention: !0
             })
           },
-          children: (0, s.jsx)(E.default, {})
+          children: (0, s.jsx)(f.default, {})
         })
       }), (0, s.jsx)(o.TooltipContainer, {
         text: p.default.Messages.CHANNEL_PROMPT_RANDOM_STICKER_CTA,
@@ -90,7 +90,7 @@ function S(e) {
           children: null != g ? (0, s.jsx)(c.default, {
             size: 32,
             sticker: g
-          }) : (0, s.jsx)(f.default, {})
+          }) : (0, s.jsx)(E.default, {})
         })
       })]
     })]

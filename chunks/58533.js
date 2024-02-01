@@ -24,10 +24,10 @@ function E(e) {
     messageId: t,
     emoji: i,
     startPosition: E,
-    targetPosition: g
-  } = e, [_, R] = l.useState(0), [I, C] = l.useState(0), [O, v] = l.useState(null), {
-    confettiCanvas: A
-  } = l.useContext(u.ConfettiCannonContext), N = (0, n.useConfettiCannon)(A, O), S = l.useMemo(() => {
+    targetPosition: _
+  } = e, [g, R] = l.useState(0), [I, C] = l.useState(0), [O, A] = l.useState(null), {
+    confettiCanvas: S
+  } = l.useContext(u.ConfettiCannonContext), v = (0, n.useConfettiCannon)(S, O), N = l.useMemo(() => {
     let e = null == i.id ? h.default.getURL(i.name) : p.default.getEmojiURL({
       id: i.id,
       animated: !1,
@@ -37,7 +37,7 @@ function E(e) {
       src: e,
       colorize: !1
     }]
-  }, [i.name, i.id]), P = g.x - g.width / 2 * .5, L = g.y - g.height / 2 * .5, y = (0, o.useSpring)({
+  }, [i.name, i.id]), P = _.x - _.width / 2 * .5, L = _.y - _.height / 2 * .5, M = (0, o.useSpring)({
     from: {
       y: E.y
     },
@@ -54,7 +54,7 @@ function E(e) {
       } = e;
       C(t)
     }
-  }), x = (0, o.useSpring)({
+  }), y = (0, o.useSpring)({
     from: {
       x: E.x,
       scale: 1,
@@ -80,33 +80,33 @@ function E(e) {
     }
   });
   return l.useEffect(() => {
-    _ > 0 && I > 0 && N.createConfetti({
+    g > 0 && I > 0 && v.createConfetti({
       ...f.COMMON_CONFETTI_BASE_CONFIG,
       position: {
         type: "static",
         value: {
-          x: _,
+          x: g,
           y: I
         }
       }
     })
-  }, [N, _, I]), (0, a.jsxs)(a.Fragment, {
+  }, [v, g, I]), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(n.SpriteCanvas, {
-      ref: v,
-      sprites: S,
+      ref: A,
+      sprites: N,
       colors: m,
       spriteWidth: f.COMMON_CONFETTI_MAX_SPRITE_SIZE,
       spriteHeight: f.COMMON_CONFETTI_MAX_SPRITE_SIZE
     }), (0, a.jsx)(c.default, {
       children: (0, a.jsx)(o.animated.div, {
         style: {
-          ...y
+          ...M
         },
         className: T.emojiContainer,
         children: (0, a.jsx)(o.animated.div, {
           style: {
-            ...x,
-            opacity: x.opacity
+            ...y,
+            opacity: y.opacity
           },
           children: (0, a.jsx)(r.default, {
             className: T.emoji,

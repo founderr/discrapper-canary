@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var l = a("37983");
@@ -15,17 +15,17 @@ var n = a("474643"),
   u = a("49111"),
   _ = a("782340");
 
-function f(e) {
+function E(e) {
   var t;
   let {
-    channel: f,
-    onClose: E,
-    content: c,
+    channel: E,
+    onClose: c,
+    content: f,
     ...p
   } = e;
 
   function A() {
-    E(), (0, o.navigateToPremiumMarketingPage)(!0)
+    c(), (0, o.navigateToPremiumMarketingPage)(!0)
   }
   return (0, l.jsx)(i.default, {
     artURL: a("7115"),
@@ -42,20 +42,20 @@ function f(e) {
       onLearnMore: A
     }),
     analyticsSource: {
-      page: (null == (t = f) ? void 0 : t.getGuildId()) != null ? u.AnalyticsPages.GUILD_CHANNEL : (null == t ? void 0 : t.isGroupDM()) || (null == t ? void 0 : t.isPrivate()) ? u.AnalyticsPages.DM_CHANNEL : null
+      page: (null == (t = E) ? void 0 : t.getGuildId()) != null ? u.AnalyticsPages.GUILD_CHANNEL : (null == t ? void 0 : t.isGroupDM()) || (null == t ? void 0 : t.isPrivate()) ? u.AnalyticsPages.DM_CHANNEL : null
     },
     analyticsLocation: {
       section: u.AnalyticsSections.MESSAGE_LENGTH_UPSELL_MODAL,
       object: u.AnalyticsObjects.BUTTON_CTA
     },
-    onClose: E,
+    onClose: c,
     secondaryCTA: _.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_MODAL_UPLOAD,
     onSecondaryClick: function() {
-      E();
-      let e = new Blob([c], {
+      c();
+      let e = new Blob([f], {
         type: "text/plain"
       });
-      (0, r.promptToUpload)([(0, s.makeFile)(e, "message.txt")], f, n.DraftType.ChannelMessage, {
+      (0, r.promptToUpload)([(0, s.makeFile)(e, "message.txt")], E, n.DraftType.ChannelMessage, {
         requireConfirm: !0,
         showLargeMessageDialog: !0
       })

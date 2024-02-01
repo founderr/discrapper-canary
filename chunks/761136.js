@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return S
   }
 }), n("222007"), n("808653");
 var a = n("37983"),
@@ -21,14 +21,14 @@ var a = n("37983"),
   p = n("490291");
 let I = M.AutomodTriggerType.KEYWORD;
 
-function v(e, t) {
+function S(e, t) {
   let {
     perGuildMaxCount: n
   } = r.triggerConfigs[I], {
     isLoading: M,
-    saveRule: v
+    saveRule: S
   } = (0, o.useAutomodEditingRuleActions)(), {
-    createNewEditingRule: S
+    createNewEditingRule: v
   } = (0, o.useAutomodEditingRuleState)(), [h, A] = i.useState(!1), [_, T] = (0, u.useSyncAutomodRules)(t), {
     rulesByTriggerType: C,
     updateRule: R
@@ -40,7 +40,7 @@ function v(e, t) {
   let b = e.split(" ").length,
     j = () => {
       null != t && ((0, s.closeContextMenu)(), E.default.open(t, m.GuildSettingsSections.GUILD_AUTOMOD), setTimeout(() => {
-        S(t, I, {
+        v(t, I, {
           triggerMetadata: {
             keywordFilter: [e],
             regexPatterns: [],
@@ -61,7 +61,7 @@ function v(e, t) {
           keywordFilter: [...null !== (a = null === (n = t.triggerMetadata) || void 0 === n ? void 0 : n.keywordFilter) && void 0 !== a ? a : [], e]
         }
       };
-      await v(l, x), R(l)
+      await S(l, x), R(l)
     }, D = (0, a.jsx)(a.Fragment, {
       children: (0, a.jsx)(l.MenuItem, {
         id: "automod-rules-loading",

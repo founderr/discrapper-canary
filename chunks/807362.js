@@ -1,7 +1,7 @@
 "use strict";
 t.r(e), t.d(e, {
   default: function() {
-    return l
+    return n
   }
 });
 let E = Object.freeze({
@@ -1855,4 +1855,4 @@ let E = Object.freeze({
   "\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC73\uDB40\uDC63\uDB40\uDC74\uDB40\uDC7F": "#206694",
   "\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC77\uDB40\uDC6C\uDB40\uDC73\uDB40\uDC7F": "#11806A"
 });
-var l = E
+var n = E

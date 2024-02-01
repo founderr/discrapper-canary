@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return j
+    return b
   }
 }), l("222007");
 var a = l("37983"),
@@ -15,15 +15,15 @@ var a = l("37983"),
   C = l("206230"),
   c = l("685665"),
   f = l("334572"),
-  m = l("866190"),
-  E = l("130037"),
+  E = l("866190"),
+  m = l("130037"),
   M = l("178406"),
   h = l("645266"),
   _ = l("913132"),
   T = l("553275"),
   x = l("151123"),
-  S = l("337092"),
-  A = l("850646"),
+  A = l("337092"),
+  S = l("850646"),
   g = l("894282"),
   p = l("474507");
 let L = {
@@ -45,7 +45,7 @@ let L = {
   },
   R = e => e.shiftKey || e.key === g.KeyboardKeysUpdated.SHIFT,
   v = e => e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key),
-  b = n.memo(function(e) {
+  j = n.memo(function(e) {
     let {
       members: t,
       guild: l,
@@ -54,15 +54,15 @@ let L = {
       compact: d,
       onSelectRow: c,
       onResetForNewMembers: f
-    } = e, E = (0, u.default)([C.default], () => C.default.useReducedMotion), g = (0, m.useIsWindowFocused)(), [b, j] = n.useState(!1), [D, O] = n.useState(!1);
+    } = e, m = (0, u.default)([C.default], () => C.default.useReducedMotion), g = (0, E.useIsWindowFocused)(), [j, b] = n.useState(!1), [D, O] = n.useState(!1);
     n.useEffect(() => {
-      !g && (j(!1), O(!1))
+      !g && (b(!1), O(!1))
     }, [g]), n.useLayoutEffect(() => {
       let e = e => {
-          R(e) && j(!0), v(e) && O(!0)
+          R(e) && b(!0), v(e) && O(!0)
         },
         t = e => {
-          R(e) && j(!1), v(e) && O(!1)
+          R(e) && b(!1), v(e) && O(!1)
         };
       return window.addEventListener("keydown", e), window.addEventListener("keyup", t), () => {
         window.removeEventListener("keydown", e), window.removeEventListener("keyup", t)
@@ -74,7 +74,7 @@ let L = {
       B = (0, r.useTransition)(t, {
         key: e => e,
         trail: V ? 5 : 15,
-        immediate: E,
+        immediate: m,
         from(e) {
           let t = M.default.getEnhancedMember(l.id, e),
             a = M.default.getLastRefreshTimestamp(l.id),
@@ -91,15 +91,15 @@ let L = {
         currentPagedMembers: t
       }), (0, a.jsx)("tbody", {
         children: o === T.SearchState.SUCCESS_FULL || o === T.SearchState.LOADING ? (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(A.default, {
+          children: [(0, a.jsx)(S.default, {
             guild: l,
             onSubmit: f
-          }), B((e, t) => (0, a.jsx)(S.default, {
+          }), B((e, t) => (0, a.jsx)(A.default, {
             userId: t,
             guildId: l.id,
             style: e,
             onSelect: c,
-            isHoldingAdvancedInfoKey: b && D,
+            isHoldingAdvancedInfoKey: j && D,
             compact: d,
             isLoading: o === T.SearchState.LOADING
           }, t))]
@@ -118,7 +118,7 @@ let L = {
       s = e.compact === t.compact;
     return l && a && n && s
   });
-var j = function(e) {
+var b = function(e) {
   var t, l;
   let {
     guild: s,
@@ -127,18 +127,18 @@ var j = function(e) {
     compact: d,
     onSelectRow: r,
     onResetForNewMembers: C
-  } = e, m = (0, u.useStateFromStoresObject)([M.default], () => M.default.getPaginationStateByGuildId(s.id), [s.id]), [_] = (0, u.default)([M.default], () => M.default.getPagedMembersByGuildId(s.id), [s.id], f.isVersionEqual);
+  } = e, E = (0, u.useStateFromStoresObject)([M.default], () => M.default.getPaginationStateByGuildId(s.id), [s.id]), [_] = (0, u.default)([M.default], () => M.default.getPagedMembersByGuildId(s.id), [s.id], f.isVersionEqual);
   n.useEffect(() => {
     (0, h.initializeMemberSafetyStore)(s.id)
   }, [s.id]);
-  let T = n.useDeferredValue(null !== (t = _[m.currentPage]) && void 0 !== t ? t : []),
+  let T = n.useDeferredValue(null !== (t = _[E.currentPage]) && void 0 !== t ? t : []),
     {
       analyticsLocations: x
     } = (0, c.default)(),
-    S = null !== (l = null == x ? void 0 : x[0]) && void 0 !== l ? l : null;
+    A = null !== (l = null == x ? void 0 : x[0]) && void 0 !== l ? l : null;
   return n.useEffect(() => {
-    (0, E.trackMembersPageViewed)(s.id, S)
-  }, [s.id, S]), (0, a.jsx)(b, {
+    (0, m.trackMembersPageViewed)(s.id, A)
+  }, [s.id, A]), (0, a.jsx)(j, {
     members: T,
     guild: s,
     className: i,

@@ -20,9 +20,9 @@ var a = n("37983"),
   g = n("364685"),
   p = n("24373"),
   I = n("49111"),
-  v = n("782340");
+  S = n("782340");
 
-function S(e) {
+function v(e) {
   return c.default.getByName(e.replace(/(^:|:$)/g, ""))
 }
 
@@ -42,14 +42,14 @@ function h(e) {
       if (null != n) return o.default.getDisambiguatedEmojiContext().getById(n);
       if (null != h) {
         var e;
-        return null !== (e = S(h)) && void 0 !== e ? e : S(c.default.convertSurrogateToName(h))
+        return null !== (e = v(h)) && void 0 !== e ? e : v(c.default.convertSurrogateToName(h))
       }
     }
   }), y = (0, d.useIsFavoriteEmoji)(null, O);
   if (null != R && t === f.PickerContextMenuDataTypes.STICKER) return (0, p.isGuildSticker)(R) && !(0, p.isAvailableGuildSticker)(R) ? null : x ? (0, a.jsx)(s.MenuItem, {
     id: "unfavorite",
     action: () => (0, E.unfavoriteSticker)(R.id),
-    label: v.default.Messages.UNFAVORITE_ITEM
+    label: S.default.Messages.UNFAVORITE_ITEM
   }) : (0, a.jsx)(s.MenuItem, {
     id: "favorite",
     action: () => {
@@ -61,12 +61,12 @@ function h(e) {
         }
       }), (0, E.favoriteSticker)(null == R ? void 0 : R.id)
     },
-    label: v.default.Messages.FAVORITE_ITEM
+    label: S.default.Messages.FAVORITE_ITEM
   });
   if (null != O && t === f.PickerContextMenuDataTypes.EMOJI) return y ? (0, a.jsx)(s.MenuItem, {
     id: "unfavorite",
     action: () => (0, u.unfavoriteEmoji)(O),
-    label: v.default.Messages.UNFAVORITE_ITEM
+    label: S.default.Messages.UNFAVORITE_ITEM
   }) : (0, a.jsx)(s.MenuItem, {
     id: "favorite",
     action: () => {
@@ -78,6 +78,6 @@ function h(e) {
         }
       }), (0, u.favoriteEmoji)(O)
     },
-    label: v.default.Messages.FAVORITE_ITEM
+    label: S.default.Messages.FAVORITE_ITEM
   })
 }

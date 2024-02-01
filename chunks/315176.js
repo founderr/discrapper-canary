@@ -13,23 +13,23 @@ var s = n("249654"),
   u = n("467094"),
   d = n("364685"),
   c = n("161585"),
-  f = n("305961"),
-  E = n("697218"),
+  E = n("305961"),
+  f = n("697218"),
   _ = n("402671"),
   T = n("49111"),
   I = n("958706");
 
 function m(e) {
-  let t = f.default.getGuild(e);
+  let t = E.default.getGuild(e);
   return null != t && (t.nsfwLevel === T.GuildNSFWContentLevel.DEFAULT || t.nsfwLevel === T.GuildNSFWContentLevel.SAFE)
 }
 async function N(e, t) {
   var n, T, N;
   let p = t.getGuildId();
   if (null == p) return;
-  let A = f.default.getGuild(p);
+  let A = E.default.getGuild(p);
   if (null == A) return;
-  let S = E.default.getCurrentUser();
+  let S = f.default.getCurrentUser();
   if (null == S) return;
   await (0, u.fetchStickerPacks)();
   let C = Array.from(d.default.getAllStickersIterator()),
@@ -50,7 +50,7 @@ async function N(e, t) {
       user: S,
       autoTrackExposure: !1
     }).viewAndUseEnabled,
-    O = f.default.getGuilds(),
+    O = E.default.getGuilds(),
     R = Object.keys(O).filter(m).map(e => a.default.getUsableGuildEmoji(e)).flat().filter(e => null == _.default.getEmojiUnavailableReason({
       emoji: e,
       channel: t,

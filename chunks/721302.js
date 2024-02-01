@@ -15,15 +15,15 @@ var a = l("37983"),
   C = l("65597"),
   c = l("620000"),
   f = l("819855"),
-  m = l("77078"),
-  E = l("161778"),
+  E = l("77078"),
+  m = l("161778"),
   M = l("957255"),
   h = l("810567"),
   _ = l("130037"),
   T = l("490931"),
   x = l("536999"),
-  S = l("178406"),
-  A = l("645266"),
+  A = l("178406"),
+  S = l("645266"),
   g = l("248793"),
   p = l("843455"),
   L = l("782340"),
@@ -31,8 +31,8 @@ var a = l("37983"),
 let N = n.forwardRef(function(e, t) {
   let {
     guild: s
-  } = e, o = (0, C.default)([S.default], () => S.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([E.default], () => (0, f.isThemeDark)(E.default.theme)), N = (0, x.useIsInMembersTablesAdditionalFilteringExperiment)(s.id), I = (0, C.default)([M.default], () => M.default.can(p.Permissions.KICK_MEMBERS, s)), R = n.useCallback(() => {
-    null != s && I && (0, m.openModalLazy)(async () => {
+  } = e, o = (0, C.default)([A.default], () => A.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([m.default], () => (0, f.isThemeDark)(m.default.theme)), N = (0, x.useIsInMembersTablesAdditionalFilteringExperiment)(s.id), I = (0, C.default)([M.default], () => M.default.can(p.Permissions.KICK_MEMBERS, s)), R = n.useCallback(() => {
+    null != s && I && (0, E.openModalLazy)(async () => {
       let {
         default: e
       } = await l.el("494440").then(l.bind(l, "494440"));
@@ -41,12 +41,12 @@ let N = n.forwardRef(function(e, t) {
         guild: s
       })
     })
-  }, [s, I]), v = (0, C.default)([S.default], () => S.default.getSearchStateByGuildId(s.id), [s.id], u), b = (0, _.useTrackMemberSearchUsed)(s.id), [j, D] = n.useState(v.query), O = null != v.selectedSort && v.selectedSort !== T.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC && v.selectedSort !== T.OrderBy.ORDER_BY_UNSPECIFIED, V = n.useCallback(e => {
+  }, [s, I]), v = (0, C.default)([A.default], () => A.default.getSearchStateByGuildId(s.id), [s.id], u), j = (0, _.useTrackMemberSearchUsed)(s.id), [b, D] = n.useState(v.query), O = null != v.selectedSort && v.selectedSort !== T.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC && v.selectedSort !== T.OrderBy.ORDER_BY_UNSPECIFIED, V = n.useCallback(e => {
     let t = e.trim();
-    t.length > 0 && b(), (0, A.updateSearchState)(s.id, {
+    t.length > 0 && j(), (0, S.updateSearchState)(s.id, {
       query: t
     })
-  }, [s.id, b]), B = n.useCallback(d(V, 300), [V]), y = n.useCallback(e => {
+  }, [s.id, j]), B = n.useCallback(d(V, 300), [V]), y = n.useCallback(e => {
     D(e), B(e)
   }, [B]), F = n.useCallback(() => {
     D(""), V("")
@@ -59,10 +59,10 @@ let N = n.forwardRef(function(e, t) {
     className: i(H.searchHeaderContainer),
     children: [(0, a.jsx)("div", {
       className: i(H.searchHeader),
-      children: o ? (0, a.jsx)(m.Heading, {
+      children: o ? (0, a.jsx)(E.Heading, {
         variant: "heading-md/medium",
         children: L.default.Messages.MEMBER_SAFETY_TABLE_TITLE
-      }) : (0, a.jsx)(m.Heading, {
+      }) : (0, a.jsx)(E.Heading, {
         variant: "heading-md/medium",
         children: L.default.Messages.MEMBER_SAFETY_TABLE_TITLE_SEARCH
       })
@@ -72,7 +72,7 @@ let N = n.forwardRef(function(e, t) {
         className: i(H.searchHeader),
         children: (0, a.jsx)(h.default, {
           className: H.searchBar,
-          query: j,
+          query: b,
           placeholder: L.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
           onChange: y,
           onClear: F,
@@ -85,8 +85,8 @@ let N = n.forwardRef(function(e, t) {
         })
       })
     }), N && (0, a.jsx)("div", {
-      children: (0, a.jsx)(m.Popout, {
-        animation: m.Popout.Animation.FADE,
+      children: (0, a.jsx)(E.Popout, {
+        animation: E.Popout.Animation.FADE,
         position: "bottom",
         spacing: 4,
         align: "left",
@@ -99,20 +99,20 @@ let N = n.forwardRef(function(e, t) {
             onClick: t,
             ...l
           } = e;
-          return (0, a.jsx)(m.Button, {
+          return (0, a.jsx)(E.Button, {
             ...l,
             onClick: t,
             "aria-label": L.default.Messages.SORT,
-            color: r ? m.Button.Colors.PRIMARY : m.Button.Colors.TRANSPARENT,
-            look: r ? m.Button.Looks.FILLED : m.Button.Looks.OUTLINED,
-            size: m.Button.Sizes.SMALL,
+            color: r ? E.Button.Colors.PRIMARY : E.Button.Colors.TRANSPARENT,
+            look: r ? E.Button.Looks.FILLED : E.Button.Looks.OUTLINED,
+            size: E.Button.Sizes.SMALL,
             children: (0, a.jsxs)("div", {
               className: H.sortButton,
               children: [(0, a.jsx)(c.ArrowsUpDownIcon, {
                 height: 16,
                 width: 16,
-                color: O ? m.tokens.colors.INTERACTIVE_ACTIVE.css : m.tokens.colors.HEADER_SECONDARY.css
-              }), (0, a.jsx)(m.Text, {
+                color: O ? E.tokens.colors.INTERACTIVE_ACTIVE.css : E.tokens.colors.HEADER_SECONDARY.css
+              }), (0, a.jsx)(E.Text, {
                 variant: "text-sm/medium",
                 color: O ? "interactive-active" : "header-secondary",
                 className: H.sortText,
@@ -124,13 +124,13 @@ let N = n.forwardRef(function(e, t) {
       })
     }), (0, a.jsx)("div", {
       className: i(H.tableOptions),
-      children: I && (0, a.jsx)(m.Button, {
+      children: I && (0, a.jsx)(E.Button, {
         className: i(H.pruneButton),
         onClick: R,
         "aria-label": L.default.Messages.PRUNE_MEMBERS,
-        color: m.Button.Colors.RED,
-        look: m.Button.Looks.OUTLINED,
-        size: m.Button.Sizes.SMALL,
+        color: E.Button.Colors.RED,
+        look: E.Button.Looks.OUTLINED,
+        size: E.Button.Sizes.SMALL,
         children: L.default.Messages.PRUNE
       })
     })]

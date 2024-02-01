@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return E
+    return m
   }
 });
 var a = l("37983"),
@@ -15,13 +15,13 @@ var a = l("37983"),
   C = l("645266"),
   c = l("49111"),
   f = l("782340");
-let m = [r.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC, r.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, r.OrderBy.ORDER_BY_USER_ID_DESC, r.OrderBy.ORDER_BY_USER_ID_ASC];
+let E = [r.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC, r.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, r.OrderBy.ORDER_BY_USER_ID_DESC, r.OrderBy.ORDER_BY_USER_ID_ASC];
 
-function E(e) {
+function m(e) {
   let {
     guildId: t,
     onClose: l
-  } = e, s = (0, o.default)([u.default], () => u.default.getSearchStateByGuildId(t), [t], i), E = n.useCallback(e => {
+  } = e, s = (0, o.default)([u.default], () => u.default.getSearchStateByGuildId(t), [t], i), m = n.useCallback(e => {
     (0, C.updateSearchState)(t, {
       ...s,
       selectedSort: e
@@ -35,7 +35,7 @@ function E(e) {
     "aria-label": f.default.Messages.MEMBER_SAFETY_JOIN_METHOD_LABEL,
     onSelect: c.NOOP,
     children: (0, a.jsx)(d.MenuGroup, {
-      children: m.map(e => {
+      children: E.map(e => {
         var t, l;
         return (0, a.jsx)(d.MenuRadioItem, {
           id: "members-table-sort-".concat(e),
@@ -55,7 +55,7 @@ function E(e) {
           }(e),
           checked: (t = e, (l = s.selectedSort) === r.OrderBy.ORDER_BY_UNSPECIFIED || null == l ? t === r.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC : t === l),
           disabled: !1,
-          action: () => E(e),
+          action: () => m(e),
           group: "members-table-sort"
         }, "members-table-sort-".concat(e))
       })

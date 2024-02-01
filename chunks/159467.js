@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("272030"),
   d = n("997289"),
   c = n("860285"),
-  f = n("86878"),
-  E = n("568307"),
+  E = n("86878"),
+  f = n("568307"),
   _ = n("535974"),
   T = n("181114"),
   I = n("837899"),
@@ -86,8 +86,8 @@ class C extends l.PureComponent {
     } = this.props;
     if (!a) return c ? null : this.renderDisabledButton(A.default.Messages.GAME_ACTION_BUTTON_PLAY, m.isPlatformEmbedded ? A.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : A.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
     if (u) return this.renderDisabledButton(A.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
-    let f = d ? T.default : o.Button;
-    return (0, s.jsxs)(f, {
+    let E = d ? T.default : o.Button;
+    return (0, s.jsxs)(E, {
       className: i(S.playButton, e),
       innerClassName: S.playButtonContents,
       fullWidth: t,
@@ -145,7 +145,7 @@ function h(e) {
   let {
     applicationId: t,
     libraryApplication: n
-  } = e, l = (0, d.useAnalyticsContext)(), [a, i] = (0, r.useStateFromStoresArray)([f.default, c.default, _.default], () => [f.default.isConnected(t) || c.default.isLaunchable(t) || null != n && _.default.isLaunchable(n.id, n.branchId), c.default.launchingGames.has(t)], [t, n]), o = (0, r.useStateFromStores)([E.default], () => new Set(E.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, r.useStateFromStores)([_.default], () => null != n ? _.default.getState(n.id, n.branchId) : null, [n]);
+  } = e, l = (0, d.useAnalyticsContext)(), [a, i] = (0, r.useStateFromStoresArray)([E.default, c.default, _.default], () => [E.default.isConnected(t) || c.default.isLaunchable(t) || null != n && _.default.isLaunchable(n.id, n.branchId), c.default.launchingGames.has(t)], [t, n]), o = (0, r.useStateFromStores)([f.default], () => new Set(f.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, r.useStateFromStores)([_.default], () => null != n ? _.default.getState(n.id, n.branchId) : null, [n]);
   return (0, s.jsx)(C, {
     ...e,
     analyticsContext: l,

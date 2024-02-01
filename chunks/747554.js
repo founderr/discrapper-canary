@@ -14,8 +14,8 @@ var l = n("414456"),
   u = n("77078"),
   d = n("305961"),
   c = n("162771"),
-  f = n("549103"),
-  E = n("233322"),
+  E = n("549103"),
+  f = n("233322"),
   _ = n("567054"),
   T = n("982527"),
   I = n("49111"),
@@ -43,7 +43,7 @@ var l = n("414456"),
             header: N.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
             confirmText: N.default.Messages.CONFIRM,
             cancelText: N.default.Messages.CANCEL,
-            onConfirm: () => f.default.removeGuildJoinRequest(S.id),
+            onConfirm: () => E.default.removeGuildJoinRequest(S.id),
             confirmButtonColor: u.Button.Colors.BRAND,
             ...e,
             children: (0, s.jsx)(u.Text, {
@@ -68,7 +68,7 @@ var l = n("414456"),
         break;
       default:
         O = N.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, R = N.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, L = () => {
-          (0, E.openMemberVerificationModal)(S.id)
+          (0, f.openMemberVerificationModal)(S.id)
         }
     }
     return (0, s.jsxs)("div", {

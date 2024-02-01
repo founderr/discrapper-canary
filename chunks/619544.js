@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var s = n("37983");
@@ -36,13 +36,13 @@ function c(e) {
   })
 }
 
-function f(e) {
+function E(e) {
   let {
     answer: t,
     hasVoted: n,
     isExpired: l,
     myAvatarUrl: i
-  } = e, r = n || l, u = !0 === t.isSelected, f = !0 === t.didSelfVote, E = !0 === t.isVictor;
+  } = e, r = n || l, u = !0 === t.isSelected, E = !0 === t.didSelfVote, f = !0 === t.isVictor;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(o.PollMediaView, {
       attachmentClassName: a(d.attachment, {
@@ -58,14 +58,14 @@ function f(e) {
       className: d.selectedIcon
     }), r && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(c, {
-        didSelfVote: f,
+        didSelfVote: E,
         percentage: t.votesPercentage,
         label: t.votes,
-        myAvatarUrl: f ? i : void 0
-      }), !l && f && (0, s.jsx)(o.PollAnswerVotedIcon, {
+        myAvatarUrl: E ? i : void 0
+      }), !l && E && (0, s.jsx)(o.PollAnswerVotedIcon, {
         size: 18,
         className: d.pollAnswerIcon
-      }), E && (0, s.jsx)(o.PollAnswerVictorIcon, {
+      }), f && (0, s.jsx)(o.PollAnswerVictorIcon, {
         size: 18,
         className: d.pollAnswerIcon
       })]
@@ -73,7 +73,7 @@ function f(e) {
   })
 }
 
-function E(e) {
+function f(e) {
   let {
     isExpired: t,
     hasVoted: n,
@@ -86,7 +86,7 @@ function E(e) {
       [d.currentlyVoting]: !n && !t
     }),
     myAvatarUrl: l,
-    renderAnswerContent: e => (0, s.jsx)(f, {
+    renderAnswerContent: e => (0, s.jsx)(E, {
       answer: e,
       isExpired: t,
       hasVoted: n,

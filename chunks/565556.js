@@ -15,15 +15,15 @@ var a = l("37983"),
   C = l("716241"),
   c = l("271938"),
   f = l("965397"),
-  m = l("530346"),
-  E = l("781896"),
+  E = l("530346"),
+  m = l("781896"),
   M = l("599110"),
   h = l("130037"),
   _ = l("466818"),
   T = l("624663"),
   x = l("49111"),
-  S = l("782340"),
-  A = l("275699");
+  A = l("782340"),
+  S = l("275699");
 
 function g(e) {
   let {
@@ -34,7 +34,7 @@ function g(e) {
   } = (0, T.default)(t), H = p.size > 0, N = async (e, t, l, a) => {
     try {
       let n = await r.default.banMultipleUsers(e, t, l, a);
-      (0, d.showToast)((0, d.createToast)(S.default.Messages.BAN_MULTIPLE_SUCCESS_TOAST, d.ToastType.SUCCESS)), M.default.track(x.AnalyticEvents.BULK_MODERATION_ACTION_COMPLETED, {
+      (0, d.showToast)((0, d.createToast)(A.default.Messages.BAN_MULTIPLE_SUCCESS_TOAST, d.ToastType.SUCCESS)), M.default.track(x.AnalyticEvents.BULK_MODERATION_ACTION_COMPLETED, {
         ...(0, C.collectGuildAnalyticsMetadata)(e),
         action_type: h.ModerationActionType.BAN,
         target_user_ids: [...p],
@@ -43,43 +43,43 @@ function g(e) {
         location
       })
     } catch (e) {
-      (0, d.showToast)((0, d.createToast)(S.default.Messages.BAN_MULTIPLE_FAILED_TOAST, d.ToastType.FAILURE))
+      (0, d.showToast)((0, d.createToast)(A.default.Messages.BAN_MULTIPLE_FAILED_TOAST, d.ToastType.FAILURE))
     }
     L()
   }, I = n.useCallback(() => {
     L()
   }, [L]), R = (0, a.jsxs)("span", {
-    className: A.messageContainer,
-    children: [(0, a.jsx)(E.default, {
+    className: S.messageContainer,
+    children: [(0, a.jsx)(m.default, {
       width: 24,
       height: 24,
       color: (0, o.useToken)(s.default.unsafe_rawColors.PRIMARY_500).hex()
     }), (0, a.jsx)(d.Text, {
       variant: "heading-md/bold",
       color: "text-normal",
-      children: S.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_SELECTED_MEMBERS_MESSAGE.format({
+      children: A.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_SELECTED_MEMBERS_MESSAGE.format({
         count: p.size
       })
     }), (0, a.jsx)(d.Button, {
       color: d.Button.Colors.LINK,
       look: d.Button.Looks.LINK,
       onClick: I,
-      className: A.clearButton,
-      children: S.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_CLEAR_SELECTION
+      className: S.clearButton,
+      children: A.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_CLEAR_SELECTION
     })]
   }), v = (0, a.jsxs)("span", {
-    className: A.buttonContainer,
-    children: [(0, a.jsx)(m.default, {
+    className: S.buttonContainer,
+    children: [(0, a.jsx)(E.default, {
       width: 20,
       height: 20
     }), (0, a.jsx)(d.Text, {
       variant: "text-sm/semibold",
-      children: S.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION
+      children: A.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION
     })]
   });
   return g ? (0, a.jsx)(i.default, {
     component: "div",
-    className: A.saveNoticeContainer,
+    className: S.saveNoticeContainer,
     children: H && (0, a.jsx)(f.default, {
       children: (0, a.jsx)(u.default, {
         onSave: () => {

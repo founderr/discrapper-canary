@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("997289"),
   d = n("550766"),
   c = n("191225"),
-  f = n("602718"),
-  E = n("706508"),
+  E = n("602718"),
+  f = n("706508"),
   _ = n("986214"),
   T = n("501260"),
   I = n("698372"),
@@ -97,7 +97,7 @@ function x(e) {
           applications: n
         } = await (0, d.fetchShelf)({
           guildId: x
-        }), s = (0, f.default)({
+        }), s = (0, E.default)({
           applicationId: t.id,
           activityConfigs: e,
           applications: n
@@ -111,7 +111,7 @@ function x(e) {
           embeddedActivitiesManager: p.default,
           analyticsLocations: j
         })
-      } else await (0, E.default)({
+      } else await (0, f.default)({
         applicationId: H.applicationId,
         currentEmbeddedApplication: k,
         activityChannelId: a,

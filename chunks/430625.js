@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("446674"),
   d = n("769846"),
   c = n("77078"),
-  f = n("970728"),
-  E = n("191225"),
+  E = n("970728"),
+  f = n("191225"),
   _ = n("969380"),
   T = n("817039"),
   I = n("812204"),
@@ -151,13 +151,13 @@ function F(e) {
   }, [w, V, K]);
   let W = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
     z = (0, N.default)([k.id])[0],
-    Z = (0, u.useStateFromStores)([E.default], () => {
+    Z = (0, u.useStateFromStores)([f.default], () => {
       var e;
-      return (null == d ? void 0 : d.channel) != null && (null === (e = E.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === k.id
+      return (null == d ? void 0 : d.channel) != null && (null === (e = f.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === k.id
     }),
-    J = (0, u.useStateFromStores)([E.default], () => {
+    J = (0, u.useStateFromStores)([f.default], () => {
       var e;
-      let t = (null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? E.default.getEmbeddedActivitiesForChannel(d.channel.id) : [];
+      let t = (null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? f.default.getEmbeddedActivitiesForChannel(d.channel.id) : [];
       return t.some(e => {
         let {
           applicationId: t
@@ -174,7 +174,7 @@ function F(e) {
       applicationId: k.id,
       size: U
     }),
-    ee = (0, u.useStateFromStoresArray)([E.default], () => null != Q ? E.default.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [Q, k.id]),
+    ee = (0, u.useStateFromStoresArray)([f.default], () => null != Q ? f.default.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [Q, k.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
     en = d.state === P.InviteStates.ACCEPTING,
     es = null != W;
@@ -184,7 +184,7 @@ function F(e) {
   }
   let el = es && !X || es && Z,
     ea = () => {
-      f.default.acceptInviteAndTransitionToInviteChannel({
+      E.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: d.code,
         context: p("Invite Button Embed"),
         analyticsLocations: q

@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("446674"),
   d = n("77078"),
   c = n("716241"),
-  f = n("428958"),
-  E = n("442379"),
+  E = n("428958"),
+  f = n("442379"),
   _ = n("537325"),
   T = n("305961"),
   I = n("476263"),
@@ -37,14 +37,14 @@ function O(e) {
     subscriptionsSettings: R
   } = (0, A.useMonetizationSettings)(n), {
     listingsLoaded: L
-  } = (0, E.useFetchGuildProductListingsForGuild)(n), v = (0, E.useGuildProductsForGuild)(n, {
+  } = (0, f.useFetchGuildProductListingsForGuild)(n), v = (0, f.useGuildProductsForGuild)(n, {
     publishedOnly: !0
   }), P = l.useCallback(async () => {
     p.default.track(h.AnalyticEvents.GUILD_SHOP_EMBED_CLICKED, {
       ...(0, c.collectGuildAnalyticsMetadata)(n)
     }), await (0, _.default)(h.Routes.SERVER_SHOP(n))
   }, [n]);
-  (0, f.default)({
+  (0, E.default)({
     type: r.ImpressionTypes.VIEW,
     name: r.ImpressionNames.GUILD_SHOP_EMBED
   }, {

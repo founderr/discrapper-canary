@@ -16,8 +16,8 @@ var s = n("37983"),
   u = n("716241"),
   d = n("10641"),
   c = n("837008"),
-  f = n("903724"),
-  E = n("38654"),
+  E = n("903724"),
+  f = n("38654"),
   _ = n("393414"),
   T = n("923959"),
   I = n("305961"),
@@ -41,7 +41,7 @@ function O(e) {
     children: n,
     initialTab: a,
     guildId: i
-  } = e, M = (0, r.default)([I.default], () => I.default.getGuild(i)), O = (0, r.default)([E.default], () => E.default.isViewingServerShop(i)), R = (0, p.useGuildShopPreviewVisible)(M, "guild_shop_page"), L = (0, N.useIsEligibleForSubscriptionsInGuildShop)(i, "guild_shop_page"), v = (null == M ? void 0 : M.hasFeature(h.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0, P = (0, f.useRoleSubscriptionsVisibleInGuild)(null == M ? void 0 : M.id), D = null === (t = (0, c.useSubscriptionsSettings)(i)) || void 0 === t ? void 0 : t.server_shop_tab_order, x = [], y = A.GuildShopTab.GUILD_SHOP_FULL_PREVIEW;
+  } = e, M = (0, r.default)([I.default], () => I.default.getGuild(i)), O = (0, r.default)([f.default], () => f.default.isViewingServerShop(i)), R = (0, p.useGuildShopPreviewVisible)(M, "guild_shop_page"), L = (0, N.useIsEligibleForSubscriptionsInGuildShop)(i, "guild_shop_page"), v = (null == M ? void 0 : M.hasFeature(h.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0, P = (0, E.useRoleSubscriptionsVisibleInGuild)(null == M ? void 0 : M.id), D = null === (t = (0, c.useSubscriptionsSettings)(i)) || void 0 === t ? void 0 : t.server_shop_tab_order, x = [], y = A.GuildShopTab.GUILD_SHOP_FULL_PREVIEW;
   O || v && P ? (x.push(D === S.ServerShopTabOrder.PRODUCTS_FIRST ? A.GuildShopTab.GUILD_PRODUCTS : A.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), x.push(D === S.ServerShopTabOrder.PRODUCTS_FIRST ? A.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS : A.GuildShopTab.GUILD_PRODUCTS), y = x[0]) : v && !P ? (x.push(A.GuildShopTab.GUILD_PRODUCTS), y = A.GuildShopTab.GUILD_PRODUCTS) : !v && P && (x.push(A.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), y = A.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS, R && x.push(A.GuildShopTab.GUILD_PRODUCTS_PREVIEW)), a = null != a ? a : y;
   let [U, j] = l.useState(a), b = R && !(P && L) || U === A.GuildShopTab.GUILD_PRODUCTS_PREVIEW;
   return l.useEffect(() => {

@@ -24,7 +24,7 @@ function g(e, t) {
   } = i.useContext(s.AccessibilityPreferencesContext), g = (0, o.useIsActiveChannelOrUnarchivableThread)(t), p = (0, l.useStateFromStores)([c.default], () => c.default.can(m.Permissions.MANAGE_MESSAGES, t) && g, [t, g]), I = e.reactions.reduce((e, t) => {
     var n;
     return (null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) != null || null != e.find(e => null != e.id && e.id === t.emoji.id || e.name === t.emoji.name) ? e : [...e, t.emoji]
-  }, []), v = (n, a) => {
+  }, []), S = (n, a) => {
     n.shiftKey ? (0, d.removeEmojiReactions)(t.id, e.id, a) : u.default.show({
       title: M.default.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_TITLE,
       body: M.default.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_BODY,
@@ -44,7 +44,7 @@ function g(e, t) {
       return (0, a.jsx)(s.MenuItem, {
         id: "remove-emoji-reactions-".concat(null !== (t = e.name) && void 0 !== t ? t : e.id),
         label: null == e.id ? e.name : ":".concat(e.name, ":"),
-        action: t => v(t, e),
+        action: t => S(t, e),
         imageUrl: t => {
           var a;
           let {

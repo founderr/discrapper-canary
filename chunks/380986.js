@@ -55,8 +55,8 @@ var s = n("37983"),
   u = n("244201"),
   d = n("42203"),
   c = n("836417"),
-  f = n("377253"),
-  E = n("697218"),
+  E = n("377253"),
+  f = n("697218"),
   _ = n("659500"),
   T = n("791776"),
   I = n("568734"),
@@ -78,7 +78,7 @@ function g(e, t, n) {
 
 function M(e, t, n) {
   return l.useCallback(s => {
-    let l = E.default.getUser(e);
+    let l = f.default.getUser(e);
     if (null == l) return;
     if (s.preventDefault(), s.stopPropagation(), !s.shiftKey) {
       n();
@@ -135,7 +135,7 @@ function y(e, t, a, r) {
   let {
     id: o
   } = t, {
-    id: E,
+    id: f,
     flags: _
   } = e, T = (0, I.hasFlag)(_, C.MessageFlags.EPHEMERAL), N = (0, A.default)(e), p = (0, u.useAppContext)();
   return l.useCallback((e, t) => {
@@ -147,8 +147,8 @@ function y(e, t, a, r) {
       if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return
     }
     let l = d.default.getChannel(o),
-      u = f.default.getMessage(o, E),
-      _ = c.default.isEditing(o, E);
+      u = E.default.getMessage(o, f),
+      _ = c.default.isEditing(o, f);
     null != l && null != u && !_ && (a({
       contextMenu: !0
     }), (0, i.openContextMenuLazy)(e, async () => {
@@ -180,12 +180,12 @@ function y(e, t, a, r) {
       }),
       context: p
     }))
-  }, [T, o, E, a, p, N, r])
+  }, [T, o, f, a, p, N, r])
 }
 
 function U(e, t) {
   return l.useCallback(n => {
-    let s = E.default.getUser(e),
+    let s = f.default.getUser(e),
       l = d.default.getChannel(t);
     null != s && null != l && (n.stopPropagation(), (0, p.openUserContextMenu)(n, s, l))
   }, [e, t])
@@ -193,7 +193,7 @@ function U(e, t) {
 
 function j(e, t, n) {
   return l.useCallback(s => {
-    let l = E.default.getUser(e),
+    let l = f.default.getUser(e),
       a = d.default.getChannel(t);
     null != l && null != a && (s.stopPropagation(), (0, p.openModerateUserContextMenu)(s, {
       user: l,
@@ -205,7 +205,7 @@ function j(e, t, n) {
 
 function b(e, t) {
   return l.useCallback(n => {
-    let s = E.default.getUser(e),
+    let s = f.default.getUser(e),
       l = d.default.getChannel(t);
     null != s && null != l && (n.stopPropagation(), (0, p.openModerationRaidContextMenu)(n, s, l.guild_id))
   }, [e, t])

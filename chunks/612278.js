@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useFirstForumPostMessage: function() {
-    return x
+    return M
   },
   useMostRecentForumMessage: function() {
-    return M
+    return x
   },
   preloadForumThreads: function() {
     return S
@@ -38,7 +38,7 @@ class g {
     this._set = {}, this._defaultValueFunc = e
   }
 }
-let h = new class e {
+let _ = new class e {
     request(e, t) {
       this.requested.get(e).add(t)
     }
@@ -47,7 +47,7 @@ let h = new class e {
     }
     finishRequesting(e, t) {
       let n = this.requested.get(e);
-      t.forEach(e => n.delete(e)), h.compact(e)
+      t.forEach(e => n.delete(e)), _.compact(e)
     }
     getRequested(e) {
       return this.requested.get(e)
@@ -68,7 +68,7 @@ let h = new class e {
       this.requested = new g(() => new Set)
     }
   },
-  _ = null;
+  h = null;
 
 function p(e, t) {
   let n = (0, d.isForumActivityExperimentEnabled)(e);
@@ -86,7 +86,7 @@ function E(e, t) {
   return !e && null == t
 }
 
-function x(e) {
+function M(e) {
   var t, n;
   let {
     loaded: l,
@@ -99,7 +99,7 @@ function x(e) {
   }
 }
 
-function M(e, t) {
+function x(e, t) {
   let {
     loaded: n,
     message: l
@@ -118,8 +118,8 @@ function A(e, t) {
       loaded: a,
       firstMessage: s
     } = c.default.getMessage(t);
-    if (l = a, i = s, !l && null == i || p(e.guild_id, t)) h.request(e.id, t), n = !0
-  }), n && null == _ && (_ = setTimeout(v, 0))
+    if (l = a, i = s, !l && null == i || p(e.guild_id, t)) _.request(e.id, t), n = !0
+  }), n && null == h && (h = setTimeout(v, 0))
 }
 
 function S(e) {
@@ -127,21 +127,21 @@ function S(e) {
 }
 
 function T(e, t) {
-  if (h.hasRequested(e.id, t)) return;
+  if (_.hasRequested(e.id, t)) return;
   let n = (0, o.computeThreadIdsSnapshot)(e.id),
     l = n.findIndex(e => e === t),
-    i = n.slice(l, l + 5).filter(t => !h.hasRequested(e.id, t));
+    i = n.slice(l, l + 5).filter(t => !_.hasRequested(e.id, t));
   A(e, i)
 }
 async function v() {
   try {
-    for (; h.hasNext();) await C(h.next())
+    for (; _.hasNext();) await C(_.next())
   } finally {
-    _ = null
+    h = null
   }
 }
 async function C(e) {
-  let t = h.getNextBatch(e, 10);
+  let t = _.getNextBatch(e, 10);
   try {
     var n;
     if (0 === t.length) return;
@@ -163,6 +163,6 @@ async function C(e) {
       threads: i
     })
   } catch (e) {} finally {
-    h.finishRequesting(e, t)
+    _.finishRequesting(e, t)
   }
 }

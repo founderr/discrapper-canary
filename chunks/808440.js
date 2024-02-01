@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("398604"),
   d = n("914169"),
   c = n("42793"),
-  f = n("141254"),
-  E = n("116616"),
+  E = n("141254"),
+  f = n("116616"),
   _ = n("271938"),
   T = n("305961"),
   I = n("337543"),
@@ -61,7 +61,7 @@ function R(e) {
       null != P.channel && i.default.transitionToInviteSync(P)
     },
     b = () => {
-      (0, f.isAtGuildCapAndNonPremium)() ? (0, E.default)({
+      (0, E.isAtGuildCapAndNonPremium)() ? (0, f.default)({
         analyticsSource: {
           page: O.AnalyticsPages.INVITE_EMBED
         },

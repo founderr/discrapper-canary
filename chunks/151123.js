@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return b
+    return j
   }
 }), l("222007");
 var a = l("37983"),
@@ -15,15 +15,15 @@ var a = l("37983"),
   C = l("77078"),
   c = l("305961"),
   f = l("957255"),
-  m = l("118530"),
-  E = l("490931"),
+  E = l("118530"),
+  m = l("490931"),
   M = l("536999"),
   h = l("466818"),
   _ = l("178406"),
   T = l("624663"),
   x = l("463200"),
-  S = l("868967"),
-  A = l("512882"),
+  A = l("868967"),
+  S = l("512882"),
   g = l("149777"),
   p = l("413989"),
   L = l("49111"),
@@ -54,7 +54,7 @@ function R(e) {
         children: t
       }), null != l && (0, a.jsx)("div", {
         className: N.filterIconButton,
-        children: (0, a.jsx)(m.default, {
+        children: (0, a.jsx)(E.default, {
           className: N.filterIcon,
           color: s ? C.tokens.colors.CONTROL_BRAND_FOREGROUND.css : C.tokens.colors.TEXT_MUTED.css,
           width: 16,
@@ -66,19 +66,19 @@ function R(e) {
 }
 let v = "member-safety-force-show-signals-tooltip";
 
-function b(e) {
+function j(e) {
   let {
     guildId: t,
     currentPagedMembers: l
   } = e, s = (0, r.default)([_.default], () => _.default.getSearchStateByGuildId(t), [t], d), o = (0, r.default)([f.default, c.default], () => f.default.can(L.Permissions.MANAGE_GUILD, c.default.getGuild(t)), [t]), {
-    selectedUserIds: m,
-    addUsers: b,
-    clearSelection: j
-  } = (0, T.default)(t), D = s.requireUnusualDmActivity || s.requireCommunicationDisabled || s.requireUnusualAccountActivity || s.requireUsernameQuarantined, O = s.selectedRoleIds.size > 0, V = null != s.selectedJoinDateOption.afterDate, B = s.selectedSort === E.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, y = null != s.selectedAccountAgeOption.afterDate, F = s.selectedSort === E.OrderBy.ORDER_BY_USER_ID_ASC || s.selectedSort === E.OrderBy.ORDER_BY_USER_ID_DESC, U = null != s.selectedSourceInviteCode && "" !== s.selectedSourceInviteCode, w = null != s.selectedJoinSourceType, k = U || w, [Z, P] = n.useState(null == u.default.get(v, null)), Y = n.useCallback(() => {
+    selectedUserIds: E,
+    addUsers: j,
+    clearSelection: b
+  } = (0, T.default)(t), D = s.requireUnusualDmActivity || s.requireCommunicationDisabled || s.requireUnusualAccountActivity || s.requireUsernameQuarantined, O = s.selectedRoleIds.size > 0, V = null != s.selectedJoinDateOption.afterDate, B = s.selectedSort === m.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, y = null != s.selectedAccountAgeOption.afterDate, F = s.selectedSort === m.OrderBy.ORDER_BY_USER_ID_ASC || s.selectedSort === m.OrderBy.ORDER_BY_USER_ID_DESC, U = null != s.selectedSourceInviteCode && "" !== s.selectedSourceInviteCode, w = null != s.selectedJoinSourceType, k = U || w, [Z, P] = n.useState(null == u.default.get(v, null)), Y = n.useCallback(() => {
     u.default.set(v, Date.now()), P(!1)
-  }, []), G = (0, h.useCanAccessBulkBanningFeature)(t), J = (0, M.isInMembersTablesAdditionalFilteringExperiment)(t), q = o && J, z = n.useMemo(() => l.filter(e => (0, h.canBulkBanUser)(t, G, e)), [G, l, t]), K = z.length > 0, W = z.filter(e => !m.has(e)), Q = 0 === W.length, X = n.useCallback(() => {
-    K && (Q ? j() : b(z))
-  }, [K, Q, j, b, z]);
+  }, []), G = (0, h.useCanAccessBulkBanningFeature)(t), J = (0, M.isInMembersTablesAdditionalFilteringExperiment)(t), q = o && J, z = n.useMemo(() => l.filter(e => (0, h.canBulkBanUser)(t, G, e)), [G, l, t]), K = z.length > 0, W = z.filter(e => !E.has(e)), Q = 0 === W.length, X = n.useCallback(() => {
+    K && (Q ? b() : j(z))
+  }, [K, Q, b, j, z]);
   return (0, a.jsx)("thead", {
     children: (0, a.jsxs)("tr", {
       className: N.tableHeaderRow,
@@ -106,7 +106,7 @@ function b(e) {
           position: "bottom",
           spacing: 4,
           align: "left",
-          renderPopout: () => (0, a.jsx)(A.default, {
+          renderPopout: () => (0, a.jsx)(S.default, {
             guildId: t,
             onClose: L.NOOP
           }),
@@ -224,7 +224,7 @@ function b(e) {
             let {
               closePopout: l
             } = e;
-            return (0, a.jsx)(S.default, {
+            return (0, a.jsx)(A.default, {
               guildId: t,
               onClose: l
             })

@@ -16,8 +16,8 @@ var s = n("37983"),
   u = n("875978"),
   d = n("836943"),
   c = n("865343"),
-  f = n("621698"),
-  E = n("350134"),
+  E = n("621698"),
+  f = n("350134"),
   _ = n("782340"),
   T = n("550244"),
   I = n("314934");
@@ -72,7 +72,7 @@ class A extends l.PureComponent {
       onMouseLeave: () => this.setState({
         isHovered: !1
       }),
-      children: [(0, s.jsx)(f.MessageReactionsGroupWrapper, {
+      children: [(0, s.jsx)(E.MessageReactionsGroupWrapper, {
         reactions: O,
         message: e,
         readOnly: n,
@@ -84,7 +84,7 @@ class A extends l.PureComponent {
         className: C
       }), M > 0 && (0, s.jsx)(o.Clickable, {
         onClick: t => {
-          t.stopPropagation(), (0, E.showReactionsModal)(p, e)
+          t.stopPropagation(), (0, f.showReactionsModal)(p, e)
         },
         className: i(v.reaction, C, v.remainingReactions),
         "aria-label": _.default.Messages.ADD_REACTION,

@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("733724"),
   d = n("6938"),
   c = n("446674"),
-  f = n("669491"),
-  E = n("167338"),
+  E = n("669491"),
+  f = n("167338"),
   _ = n("582601"),
   T = n("77078"),
   I = n("417796"),
@@ -91,7 +91,7 @@ function Y(e) {
       children: [(0, s.jsx)(U.default, {
         width: 16,
         height: 16,
-        color: f.default.colors.HEADER_SECONDARY.css
+        color: E.default.colors.HEADER_SECONDARY.css
       }), (0, s.jsx)(T.Text, {
         variant: "text-md/semibold",
         color: "header-secondary",
@@ -114,7 +114,7 @@ function K(e) {
   } = e, i = P.default.getUser((0, S.getUserIdOfAutomodAction)(n)), r = null === (t = L.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, o = null != r && null != i, u = o ? v.default.getMember(r, i.id) : null, {
     avatarSrc: d,
     avatarDecorationSrc: c,
-    eventHandlers: E
+    eventHandlers: f
   } = (0, R.default)({
     user: i,
     guildId: r,
@@ -126,7 +126,7 @@ function K(e) {
       children: [(0, s.jsx)(_.SettingsInfoIcon, {
         width: 16,
         height: 16,
-        color: f.default.colors.TEXT_POSITIVE.css
+        color: E.default.colors.TEXT_POSITIVE.css
       }), (0, s.jsx)(T.Text, {
         variant: "text-md/semibold",
         color: "text-positive",
@@ -156,7 +156,7 @@ function K(e) {
               className: w.alertsEnabledSubHeaderAvatarUsername,
               ...e,
               children: [(0, s.jsx)("div", {
-                ...E,
+                ...f,
                 children: (0, s.jsx)(T.Avatar, {
                   src: d,
                   avatarDecoration: c,
@@ -166,7 +166,7 @@ function K(e) {
               }), (0, s.jsxs)(T.Text, {
                 variant: "text-xs/medium",
                 style: {
-                  color: null != u.colorString ? u.colorString : f.default.colors.TEXT_NORMAL.css
+                  color: null != u.colorString ? u.colorString : E.default.colors.TEXT_NORMAL.css
                 },
                 children: [" ", "@", i.username]
               })]
@@ -204,14 +204,14 @@ function W(e) {
   } = (0, N.useGuildIncidentsState)(O), P = (0, M.useContextMenuRaidAlert)(a.author.id, a.channel_id), D = l.useCallback(() => {
     let e = null == g ? void 0 : g.guild_id;
     null != e && (0, C.openRaidResolveModal)(a.id, e)
-  }, [a.id, g]), j = m === I.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : E.ChatAlertIcon;
+  }, [a.id, g]), j = m === I.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : f.ChatAlertIcon;
   return (0, s.jsx)(Z, {
     compact: i,
     header: (0, s.jsxs)(l.Fragment, {
       children: [(0, s.jsx)(b, {
         width: 16,
         height: 16,
-        color: f.default.colors.TEXT_DANGER.css
+        color: E.default.colors.TEXT_DANGER.css
       }), (0, s.jsx)(T.Text, {
         variant: "text-md/semibold",
         color: "text-danger",
@@ -334,7 +334,7 @@ function z(e) {
       children: [(0, s.jsx)(U.default, {
         width: 16,
         height: 16,
-        color: f.default.colors.TEXT_DANGER.css
+        color: E.default.colors.TEXT_DANGER.css
       }), (0, s.jsx)(T.Text, {
         variant: "text-md/semibold",
         color: "text-danger",
@@ -442,7 +442,7 @@ function J(e) {
     }
   } = (0, G.useAutomodAvatar)(!0), {
     notificationType: c
-  } = (0, S.extractAutomodNotificationFields)(l), f = null == c || c === d.AutomodNotificationEmbedTypeKeys.RAID;
+  } = (0, S.extractAutomodNotificationFields)(l), E = null == c || c === d.AutomodNotificationEmbedTypeKeys.RAID;
   return (0, s.jsx)("div", {
     onMouseEnter: o,
     onMouseLeave: u,
@@ -476,7 +476,7 @@ function J(e) {
             }), (0, s.jsx)(D.default, {
               type: F.BotTagTypes.SYSTEM_DM,
               className: w.systemTag
-            }), f && (0, s.jsx)(T.Text, {
+            }), E && (0, s.jsx)(T.Text, {
               variant: "text-md/normal",
               color: "header-primary",
               tag: "span",

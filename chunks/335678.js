@@ -22,7 +22,7 @@ var s = a("37983"),
       messageId: R,
       transitionState: T,
       onClose: f
-    } = e, A = (0, o.default)(), C = i.useCallback(e => {
+    } = e, C = (0, o.default)(), I = i.useCallback(e => {
       (0, c.trackMediaRedactionAction)({
         action: e,
         channelId: t,
@@ -55,13 +55,13 @@ var s = a("37983"),
         }), (0, s.jsx)(n.Text, {
           variant: "text-md/normal",
           color: "header-secondary",
-          children: A ? E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_ADULT : E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_TEEN
+          children: C ? E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_ADULT : E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_TEEN
         }), (0, s.jsxs)("div", {
           className: _.buttonContainer,
-          children: [A ? (0, s.jsx)(n.Button, {
+          children: [C ? (0, s.jsx)(n.Button, {
             color: n.Button.Colors.BRAND,
             onClick: function() {
-              C(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), d.default.open(u.UserSettingsSections.PRIVACY_AND_SAFETY), f()
+              I(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), d.default.open(u.UserSettingsSections.PRIVACY_AND_SAFETY), f()
             },
             fullWidth: !0,
             children: E.default.Messages.OBSCURED_CONTENT_UPDATE_SETTINGS_CTA
@@ -75,7 +75,7 @@ var s = a("37983"),
           }), (0, s.jsx)(n.Button, {
             color: n.Button.Colors.PRIMARY,
             onClick: function() {
-              f(), C(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS)
+              f(), I(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS)
             },
             fullWidth: !0,
             children: E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DISMISS
@@ -84,7 +84,7 @@ var s = a("37983"),
             color: "header-secondary",
             children: E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE.format({
               handleFalsePositiveHook: () => {
-                f(), C(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE), (0, n.openModalLazy)(async () => {
+                f(), I(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE), (0, n.openModalLazy)(async () => {
                   let {
                     default: e
                   } = await a("151622");

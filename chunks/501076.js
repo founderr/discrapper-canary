@@ -16,8 +16,8 @@ var s = n("37983"),
   u = n("901582"),
   d = n("658457"),
   c = n("359606"),
-  f = n("883610"),
-  E = n("4919"),
+  E = n("883610"),
+  f = n("4919"),
   _ = n("86621"),
   T = n("737960"),
   I = n("299285"),
@@ -67,8 +67,8 @@ class M extends l.Component {
       width: n,
       fetchFailed: l,
       renderFallback: i
-    } = this.props, r = n > E.HORIZONTAL_EMBED_BREAKPOINT;
-    if (null == e || null == t) return l ? i() : (0, s.jsx)(E.ResponsiveLoadingEmbedTile, {
+    } = this.props, r = n > f.HORIZONTAL_EMBED_BREAKPOINT;
+    if (null == e || null == t) return l ? i() : (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
       isHorizontal: r
     });
     return e.productLine === C.SKUProductLines.COLLECTIBLES ? (0, s.jsx)(u.default, {
@@ -125,8 +125,8 @@ class M extends l.Component {
       } = this.props, {
         playing: o,
         muted: u
-      } = this.state, d = l > E.HORIZONTAL_EMBED_BREAKPOINT;
-      return (0, s.jsx)(f.default, {
+      } = this.state, d = l > f.HORIZONTAL_EMBED_BREAKPOINT;
+      return (0, s.jsx)(E.default, {
         sku: e,
         storeListing: t,
         playing: o,
