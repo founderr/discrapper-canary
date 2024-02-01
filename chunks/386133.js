@@ -3,7 +3,7 @@ n.r(t), n.d(t, {
   default: function() {
     return D
   }
-});
+}), n("222007");
 var a = n("37983"),
   s = n("884691"),
   i = n("917351"),
@@ -34,32 +34,38 @@ let v = 15 * I.default.Millis.MINUTE,
     let {
       party: t,
       onUserContextMenu: n,
-      onChannelContextMenu: i
-    } = e, l = (0, a.jsx)(m.default, {
+      onChannelContextMenu: i,
+      registerQuestEntrypoint: l,
+      unregisterQuestEntrypoint: r,
+      shouldRenderQuestEntrypoint: u
+    } = e, c = (0, a.jsx)(m.default, {
       party: t,
       onUserContextMenu: n
-    }), r = (0, a.jsx)(S.default, {
+    }), f = (0, a.jsx)(S.default, {
       party: t,
-      onChannelContextMenu: i
+      onChannelContextMenu: i,
+      registerQuestEntrypoint: l,
+      unregisterQuestEntrypoint: r,
+      shouldRenderQuestEntrypoint: u
     }), {
-      partiedMembers: u,
-      applicationStreams: c,
-      currentActivities: f,
-      voiceChannels: E
-    } = t, _ = u.length, h = c.length, I = f.length, T = E.length > 0, g = s.useCallback(() => {
-      let e = f.filter(e => {
+      partiedMembers: E,
+      applicationStreams: _,
+      currentActivities: h,
+      voiceChannels: I
+    } = t, T = E.length, g = _.length, O = h.length, M = I.length > 0, P = s.useCallback(() => {
+      let e = h.filter(e => {
         var t, n;
         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === R.ApplicationTypes.GAME
       }).map(e => e.game.name);
       C.default.track(N.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
-        num_users: _,
-        num_streams: h,
-        num_activities: I,
-        in_voice_channel: T,
+        num_users: T,
+        num_streams: g,
+        num_activities: O,
+        in_voice_channel: M,
         games_detected: e
       })
-    }, [_, h, I, T, f]), O = o(g, v);
-    return null != l || null != r ? (0, a.jsx)(d.Popout, {
+    }, [T, g, O, M, h]), D = o(P, v);
+    return null != c || null != f ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
         let {
@@ -77,12 +83,12 @@ let v = 15 * I.default.Millis.MINUTE,
         } = t;
         return (0, a.jsx)(p.default, {
           ...e,
-          onMouseEnter: O,
+          onMouseEnter: D,
           "aria-haspopup": "menu",
           className: L.itemCard,
           active: n,
           children: (0, a.jsxs)("div", {
-            children: [l, r]
+            children: [c, f]
           })
         })
       }
@@ -103,17 +109,27 @@ function D() {
     needsRefresh: E.default.needsRefresh(),
     fetching: E.default.getFetching(),
     currentUser: _.default.getCurrentUser()
-  }));
+  })), r = s.useRef(new Map), o = s.useCallback((e, t) => {
+    let n = r.current.get(e);
+    return null == n || n === t
+  }, []), f = s.useCallback((e, t) => {
+    r.current.set(e, t)
+  }, []), C = s.useCallback(e => {
+    r.current.delete(e)
+  }, []);
   s.useEffect(() => (c.default.wait(() => T.mount()), () => c.default.wait(() => T.unmount())), [null == l ? void 0 : l.id]), s.useEffect(() => {
     n && !i && P()
   }, [n, i]);
-  let r = null;
-  return t ? (r = e.length > 0 ? e.map(e => {
+  let I = null;
+  return t ? (I = e.length > 0 ? e.map(e => {
     let {
       party: t
     } = e;
     return (0, a.jsx)(M, {
-      party: t
+      party: t,
+      shouldRenderQuestEntrypoint: o,
+      registerQuestEntrypoint: f,
+      unregisterQuestEntrypoint: C
     }, t.id)
   }) : (0, a.jsxs)("div", {
     className: L.emptyCard,
@@ -128,7 +144,7 @@ function D() {
       children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
     })]
   }), (0, a.jsx)(a.Fragment, {
-    children: r
+    children: I
   })) : (0, a.jsx)("div", {
     className: L.emptyCard,
     children: (0, a.jsx)(d.Spinner, {})

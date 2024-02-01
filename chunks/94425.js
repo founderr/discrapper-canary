@@ -20,14 +20,14 @@ var a = n("37983"),
   C = n("433487"),
   I = n("284679"),
   T = n("448881"),
-  S = n("879364"),
-  m = n("2973"),
-  p = n("588025"),
-  A = n("227231"),
-  g = n("555226"),
-  N = n("315130"),
-  R = n("228399"),
-  O = n("45198"),
+  S = n("2973"),
+  m = n("588025"),
+  p = n("227231"),
+  A = n("555226"),
+  g = n("315130"),
+  N = n("228399"),
+  R = n("45198"),
+  O = n("686098"),
   L = n("166604"),
   v = n("782340"),
   M = n("874275");
@@ -94,14 +94,14 @@ function k(e) {
       children: [(0, a.jsx)("img", {
         alt: r.config.messages.rewardName,
         className: M.questProgressRewardTile,
-        src: (0, A.getRewardAssetUrl)(r.id)
-      }), (0, a.jsx)(N.default, {
+        src: (0, p.getRewardAssetUrl)(r.id)
+      }), (0, a.jsx)(g.default, {
         className: M.questProgressBar,
         quest: r
       })]
     }) : (0, a.jsxs)("div", {
       className: M.brandingWrapper,
-      children: [(0, a.jsx)(g.default, {
+      children: [(0, a.jsx)(A.default, {
         className: M.partnerBranding,
         quest: r
       }), (0, a.jsx)(c.Heading, {
@@ -114,32 +114,22 @@ function k(e) {
   })
 }
 let F = s.forwardRef(function(e, t) {
-  var i, r;
+  var n, i;
   let {
-    expansionFactor: o,
-    isExpanded: f,
-    isExpansionAnimationComplete: _,
-    quest: h
-  } = e, I = (0, d.useStateFromStores)([m.default], () => m.default.isEnrolling(h.id), [h]), S = (0, d.useStateFromStores)([E.default], () => E.default.locale), p = s.useMemo(() => new Date(h.config.expiresAt).toLocaleDateString(S, {
+    expansionFactor: r,
+    isExpanded: o,
+    isExpansionAnimationComplete: f,
+    quest: _
+  } = e, h = (0, d.useStateFromStores)([S.default], () => S.default.isEnrolling(_.id), [_]), I = (0, d.useStateFromStores)([E.default], () => E.default.locale), m = s.useMemo(() => new Date(_.config.expiresAt).toLocaleDateString(I, {
     dateStyle: "long"
-  }), [h.config.expiresAt, S]), g = s.useCallback(() => {}, []), L = s.useCallback(() => {
-    (0, T.enrollInQuest)(h.id)
-  }, [h]), P = s.useCallback(() => {
-    (0, c.openModalLazy)(async () => {
-      let {
-        default: e
-      } = await n.el("36170").then(n.bind(n, "36170"));
-      return t => (0, a.jsx)(e, {
-        ...t,
-        quest: h
-      })
-    })
-  }, [h]), D = (null === (i = h.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null, y = (null === (r = h.userStatus) || void 0 === r ? void 0 : r.completedAt) != null;
+  }), [_.config.expiresAt, I]), A = s.useCallback(() => {}, []), L = s.useCallback(() => {
+    (0, T.enrollInQuest)(_.id)
+  }, [_]), P = (0, O.useHandleClaimQuestsReward)(_), D = (null === (n = _.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, y = (null === (i = _.userStatus) || void 0 === i ? void 0 : i.completedAt) != null;
   return (0, a.jsx)(u.animated.div, {
-    "aria-hidden": !f && _,
+    "aria-hidden": !o && f,
     className: l(M.content, M.contentExpanded),
     style: {
-      opacity: o.to({
+      opacity: r.to({
         range: [0, 1],
         output: [0, 1]
       })
@@ -152,9 +142,9 @@ let F = s.forwardRef(function(e, t) {
         children: [(0, a.jsxs)("div", {
           className: M.questAcceptedContentHeading,
           children: [(0, a.jsx)("img", {
-            alt: h.config.messages.rewardName,
+            alt: _.config.messages.rewardName,
             className: M.questProgressRewardTile,
-            src: (0, A.getRewardAssetUrl)(h.id)
+            src: (0, p.getRewardAssetUrl)(_.id)
           }), (0, a.jsxs)("div", {
             className: M.questAcceptedContentCopy,
             children: [(0, a.jsx)(c.Heading, {
@@ -167,15 +157,15 @@ let F = s.forwardRef(function(e, t) {
               color: "always-white",
               variant: "text-xxs/normal",
               children: y ? v.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_COMPLETE.format({
-                expirationDate: p
+                expirationDate: m
               }) : v.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_INCOMPLETE.format({
-                expirationDate: p
+                expirationDate: m
               })
             })]
           })]
         }), (0, a.jsx)(c.Clickable, {
           className: M.submenuWrapper,
-          onClick: g,
+          onClick: A,
           children: (0, a.jsx)(C.default, {
             className: M.submenuIcon
           })
@@ -192,12 +182,12 @@ let F = s.forwardRef(function(e, t) {
         color: "always-white",
         variant: "text-xs/normal",
         children: v.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-          gameTitle: h.config.messages.gameTitle,
-          streamingDurationRequirement: h.config.streamDurationRequirementMinutes,
-          questReward: h.config.messages.rewardNameWithArticle
+          gameTitle: _.config.messages.gameTitle,
+          streamingDurationRequirement: _.config.streamDurationRequirementMinutes,
+          questReward: _.config.messages.rewardNameWithArticle
         })
-      }), (0, a.jsx)(N.default, {
-        quest: h
+      }), (0, a.jsx)(g.default, {
+        quest: _
       })]
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
@@ -205,33 +195,35 @@ let F = s.forwardRef(function(e, t) {
         ref: t,
         children: [(0, a.jsxs)("div", {
           className: M.utils,
-          children: [(0, a.jsx)(O.default, {}), (0, a.jsx)(c.Clickable, {
+          children: [(0, a.jsx)(R.default, {
+            color: "always-white"
+          }), (0, a.jsx)(c.Clickable, {
             className: M.submenuWrapper,
-            onClick: g,
+            onClick: A,
             children: (0, a.jsx)(C.default, {
               className: M.submenuIcon
             })
           })]
         }), (0, a.jsxs)("div", {
           className: M.details,
-          children: [(0, a.jsx)(R.default, {
+          children: [(0, a.jsx)(N.default, {
             className: M.rewardTile,
-            quest: h
+            quest: _
           }), (0, a.jsx)(c.Heading, {
             className: M.title,
             color: "always-white",
             variant: "heading-md/medium",
             children: v.default.Messages.QUESTS_TITLE.format({
-              questName: h.config.messages.questName
+              questName: _.config.messages.questName
             })
           }), (0, a.jsx)(c.Text, {
             className: M.description,
             color: "always-white",
             variant: "text-sm/normal",
             children: v.default.Messages.QUESTS_INSTRUCTIONS_TO_WIN_REWARD.format({
-              gameTitle: h.config.messages.gameTitle,
-              streamingDurationRequirement: h.config.streamDurationRequirementMinutes,
-              questReward: h.config.messages.rewardNameWithArticle
+              gameTitle: _.config.messages.gameTitle,
+              streamingDurationRequirement: _.config.streamDurationRequirementMinutes,
+              questReward: _.config.messages.rewardNameWithArticle
             })
           })]
         }), (0, a.jsx)("div", {
@@ -242,17 +234,17 @@ let F = s.forwardRef(function(e, t) {
             fullWidth: !0,
             onClick: L,
             size: c.Button.Sizes.NONE,
-            submitting: I,
+            submitting: h,
             children: v.default.Messages.QUESTS_ACCEPT_QUEST
           })
         })]
       }), (0, a.jsx)("div", {
         className: M.heroAnimationWrapper,
         style: {
-          color: h.config.colors.primary
+          color: _.config.colors.primary
         },
         children: (0, a.jsx)("img", {
-          src: (0, A.getQuestBarHeroAssetUrl)(h.id),
+          src: (0, p.getQuestBarHeroAssetUrl)(_.id),
           className: M.heroAnimation,
           alt: ""
         })
@@ -262,15 +254,15 @@ let F = s.forwardRef(function(e, t) {
 });
 var B = function() {
   var e, t, n;
-  let i = (0, S.useIsEligibleForQuests)(L.QuestExperimentLocations.ACTIVITY_PANEL),
+  let i = (0, O.useIsEligibleForQuests)(L.QuestExperimentLocations.ACTIVITY_PANEL),
     r = (0, d.useStateFromStores)([f.default], () => f.default.useReducedMotion),
-    o = (0, d.useStateFromStores)([m.default], () => (0, A.getQuestForTargetedContent)(m.default.quests, p.QuestContent.QUEST_BAR)),
+    o = (0, d.useStateFromStores)([S.default], () => (0, p.getQuestForTargetedContent)(S.default.quests, m.QuestContent.QUEST_BAR)),
     c = (0, d.useStateFromStores)([_.default], () => _.default.isFocused()),
     E = s.useRef(-1),
     C = s.useRef(!1),
-    [T, g] = s.useState(!1),
-    [N, R] = s.useState(!1),
-    [O, v] = s.useState(!0),
+    [T, A] = s.useState(!1),
+    [g, N] = s.useState(!1),
+    [R, v] = s.useState(!0),
     [P, y] = s.useState(240),
     x = s.useRef(!1),
     b = s.useRef(null),
@@ -299,7 +291,7 @@ var B = function() {
         expansionFactor: 0
       },
       to: {
-        expansionFactor: N ? 1 : 0
+        expansionFactor: g ? 1 : 0
       },
       config: {
         tension: 300,
@@ -316,14 +308,14 @@ var B = function() {
     }),
     K = s.useCallback(() => {
       var e, t;
-      y((null !== (t = null === (e = b.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), R(!0)
+      y((null !== (t = null === (e = b.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 84) + 16), N(!0)
     }, []),
     z = s.useCallback(() => {
-      window.clearTimeout(E.current), C.current = !0, x.current = !0, K(), g(!1)
+      window.clearTimeout(E.current), C.current = !0, x.current = !0, K(), A(!1)
     }, [K]),
     q = s.useCallback(() => {
       !B && (C.current = !1, E.current = window.setTimeout(() => {
-        !C.current && R(!1)
+        !C.current && N(!1)
       }, 200))
     }, [B]),
     Q = s.useCallback(() => {
@@ -332,7 +324,7 @@ var B = function() {
   return (s.useEffect(() => {
     if (x.current) return;
     let e = window.setTimeout(() => {
-      g(_.default.isFocused())
+      A(_.default.isFocused())
     }, 500);
     return () => {
       window.clearTimeout(e)
@@ -343,7 +335,7 @@ var B = function() {
     className: M.wrapper,
     style: {
       color: o.config.colors.secondary,
-      height: B && N ? P : void 0
+      height: B && g ? P : void 0
     },
     children: [(0, a.jsxs)(u.animated.div, {
       onMouseOut: q,
@@ -351,7 +343,7 @@ var B = function() {
       onFocus: z,
       onBlur: q,
       className: l(M.contentWrapper, {
-        [M.contentWrapperExpanded]: N,
+        [M.contentWrapperExpanded]: g,
         [M.contentWrapperAccepted]: G
       }),
       style: {
@@ -363,17 +355,17 @@ var B = function() {
       },
       children: [(0, a.jsx)(k, {
         expansionFactor: W,
-        isExpanded: N,
-        isExpansionAnimationComplete: O,
+        isExpanded: g,
+        isExpansionAnimationComplete: R,
         quest: o
       }), (0, a.jsx)(F, {
         expansionFactor: W,
-        isExpanded: N,
-        isExpansionAnimationComplete: O,
+        isExpanded: g,
+        isExpansionAnimationComplete: R,
         quest: o,
         ref: b
       })]
-    }), null != Y && !G && (!N || N && !O) && (0, a.jsx)("div", {
+    }), null != Y && !G && (!g || g && !R) && (0, a.jsx)("div", {
       className: M.lottieAnimationBackgroundWrapper,
       children: (0, a.jsx)(h.default, {
         importData: () => U(o.id, Y),

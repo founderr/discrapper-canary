@@ -52,7 +52,7 @@ class R extends t.default {
       if (null == E || null == E.pid) return;
       let t = a.default.getGameForPID(E.pid);
       if (null == t || null == t.id) return;
-      let r = (0, S.getQuestByApplicationId)(t.id);
+      let r = (0, S.getQuestByApplicationId)(T.default.quests, t.id);
       if (null == r || r.id !== _) return;
       let i = n.default.getCurrentUserActiveStream();
       null != i && this.initiateHeartbeat({
@@ -79,16 +79,16 @@ class R extends t.default {
         pid: I
       } = e, s = null != I ? a.default.getGameForPID(I) : null;
       if (null == s) return;
-      let T = null != s.id ? (0, S.getQuestByApplicationId)(s.id) : null;
-      if ((null == T ? void 0 : null === (_ = T.userStatus) || void 0 === _ ? void 0 : _.enrolledAt) != null && (null == T ? void 0 : null === (E = T.userStatus) || void 0 === E ? void 0 : E.completedAt) == null) !(0, S.isQuestExpired)(T) && this.initiateHeartbeat({
+      let N = null != s.id ? (0, S.getQuestByApplicationId)(T.default.quests, s.id) : null;
+      (null == N ? void 0 : null === (_ = N.userStatus) || void 0 === _ ? void 0 : _.enrolledAt) != null && (null == N ? void 0 : null === (E = N.userStatus) || void 0 === E ? void 0 : E.completedAt) == null && this.initiateHeartbeat({
         streamKey: (0, o.encodeStreamKey)({
           streamType: t,
           guildId: n,
           channelId: i,
           ownerId: r.default.getId()
         }),
-        applicationId: T.config.applicationId,
-        questId: T.id
+        applicationId: N.config.applicationId,
+        questId: N.id
       })
     }, this.handleStreamClose = e => {
       let {

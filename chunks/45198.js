@@ -9,11 +9,20 @@ n("884691");
 var s = n("77078"),
   i = n("782340"),
   l = n("718383"),
-  r = function() {
+  r = function(e) {
+    let {
+      color: t = "header-primary",
+      opacity: n = .9
+    } = e;
     return (0, a.jsx)(s.Text, {
       variant: "text-xxs/medium",
-      color: "always-white",
+      color: t,
       className: l.sponsoredTag,
-      children: i.default.Messages.QUESTS_SPONSORED
+      children: (0, a.jsx)("span", {
+        style: {
+          opacity: n
+        },
+        children: i.default.Messages.QUESTS_SPONSORED
+      })
     })
   }
