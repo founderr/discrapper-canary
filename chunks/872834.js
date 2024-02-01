@@ -3,23 +3,11 @@ n.r(t), n.d(t, {
   useCollection: function() {
     return a
   },
-  getItemCount: function() {
-    return g
-  },
-  getChildNodes: function() {
+  getFirstItem: function() {
     return c
   },
-  getFirstItem: function() {
-    return u
-  },
   getLastItem: function() {
-    return l
-  },
-  getNthItem: function() {
-    return d
-  },
-  compareNodeOrder: function() {
-    return f
+    return u
   }
 }), n("222007"), n("424973"), n("70102"), n("843762");
 var r = n("884691");
@@ -89,21 +77,21 @@ class i {
       for (; !u.done && u.value;) {
         let r = u.value;
         e.index = c;
-        let d = r.key;
-        !d && (d = r.element ? null : this.getKey(a, e, t, n));
-        let l = [...this.getFullNode({
+        let l = r.key;
+        !l && (l = r.element ? null : this.getKey(a, e, t, n));
+        let d = [...this.getFullNode({
           ...r,
-          key: d,
+          key: l,
           index: c,
           wrapper: function(e, t) {
             return e && t ? n => e(t(n)) : e ? e : t ? t : void 0
           }(e.wrapper, r.wrapper)
         }, this.getChildState(t, r), n ? "".concat(n).concat(a.key) : a.key, i)];
-        for (let t of l) {
+        for (let t of d) {
           if (t.value = r.value || e.value, t.value && this.cache.set(t.value, t), e.type && t.type !== e.type) throw Error("Unsupported type <".concat(s(t.type), "> in <").concat(s(i.type), ">. Only <").concat(s(e.type), "> is supported."));
           c++, yield t
         }
-        u = o.next(l)
+        u = o.next(d)
       }
       return
     }
@@ -165,51 +153,20 @@ function a(e, t, n) {
   }, n)), [o, s, a, c, n, t])
 }
 
-function c(e, t) {
-  return "function" == typeof t.getChildren ? t.getChildren(e.key) : e.childNodes
+function c(e) {
+  return function(e, t) {
+    if (t < 0) return;
+    let n = 0;
+    for (let r of e) {
+      if (n === t) return r;
+      n++
+    }
+  }(e, 0)
 }
 
 function u(e) {
-  return d(e, 0)
-}
-
-function d(e, t) {
-  if (t < 0) return;
-  let n = 0;
-  for (let r of e) {
-    if (n === t) return r;
-    n++
-  }
-}
-
-function l(e) {
   let t;
   for (let n of e) t = n;
   return t
 }
-
-function f(e, t, n) {
-  if (t.parentKey === n.parentKey) return t.index - n.index;
-  let r = [...p(e, t), t],
-    i = [...p(e, n), n],
-    o = r.slice(0, i.length).findIndex((e, t) => e !== i[t]);
-  return -1 !== o ? (t = r[o], n = i[o], t.index - n.index) : r.findIndex(e => e === n) >= 0 ? 1 : (i.findIndex(e => e === t), -1)
-}
-
-function p(e, t) {
-  let n = [];
-  for (;
-    (null == t ? void 0 : t.parentKey) != null;) t = e.getItem(t.parentKey), n.unshift(t);
-  return n
-}
-let h = new WeakMap;
-
-function g(e) {
-  let t = h.get(e);
-  if (null != t) return t;
-  t = 0;
-  let n = r => {
-    for (let i of r) "section" === i.type ? n(c(i, e)) : t++
-  };
-  return n(e), h.set(e, t), t
-}
+new WeakMap

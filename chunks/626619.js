@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
     return a
   }
 }), n("222007"), n("424973");
-var r = n("872834"),
+var r = n("846794"),
   i = n("884691"),
-  o = n("919740");
+  o = n("72634");
 
 function s(e) {
   let {
@@ -28,22 +28,22 @@ function s(e) {
     c(e, i)
   };
   let u = (0, i.useMemo)(() => new o.SelectionManager(t, s), [t, s]),
-    d = (0, i.useRef)(null);
+    l = (0, i.useRef)(null);
   return (0, i.useEffect)(() => {
     if (null != s.focusedKey && !t.getItem(s.focusedKey)) {
       let e;
-      let n = d.current.getItem(s.focusedKey),
-        i = null != n.parentKey && ("cell" === n.type || "rowheader" === n.type || "column" === n.type) ? d.current.getItem(n.parentKey) : n,
-        o = d.current.rows,
+      let n = l.current.getItem(s.focusedKey),
+        i = null != n.parentKey && ("cell" === n.type || "rowheader" === n.type || "column" === n.type) ? l.current.getItem(n.parentKey) : n,
+        o = l.current.rows,
         a = t.rows,
         c = o.length - a.length,
-        l = Math.min(c > 1 ? Math.max(i.index - c + 1, 0) : i.index, a.length - 1);
-      for (; l >= 0;) {
-        if (!u.isDisabled(a[l].key) && "headerrow" !== a[l].type) {
-          e = a[l];
+        d = Math.min(c > 1 ? Math.max(i.index - c + 1, 0) : i.index, a.length - 1);
+      for (; d >= 0;) {
+        if (!u.isDisabled(a[d].key) && "headerrow" !== a[d].type) {
+          e = a[d];
           break
         }
-        l < a.length - 1 ? l++ : (l > i.index && (l = i.index), l--)
+        d < a.length - 1 ? d++ : (d > i.index && (d = i.index), d--)
       }
       if (e) {
         let o = e.hasChildNodes ? [...(0, r.getChildNodes)(e, t)] : [],
@@ -51,7 +51,7 @@ function s(e) {
         s.setFocusedKey(a)
       } else s.setFocusedKey(null)
     }
-    d.current = t
+    l.current = t
   }, [t, u, s, s.focusedKey]), {
     collection: t,
     disabledKeys: a,

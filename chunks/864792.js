@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var r = n("884691"),
-  i = n("919740"),
-  o = n("872834"),
+  i = n("72634"),
+  o = n("846794"),
   s = n("679750");
 class a {
   *[Symbol.iterator]() {
@@ -56,13 +56,13 @@ class a {
 }
 
 function c(e) {
-  let [t, n] = (0, s.useControlledState)(e.expandedKeys ? new Set(e.expandedKeys) : void 0, e.defaultExpandedKeys ? new Set(e.defaultExpandedKeys) : new Set, e.onExpandedChange), c = (0, i.useMultipleSelectionState)(e), u = (0, r.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set, [e.disabledKeys]), d = (0, o.useCollection)(e, (0, r.useCallback)(e => new a(e, {
+  let [t, n] = (0, s.useControlledState)(e.expandedKeys ? new Set(e.expandedKeys) : void 0, e.defaultExpandedKeys ? new Set(e.defaultExpandedKeys) : new Set, e.onExpandedChange), c = (0, i.useMultipleSelectionState)(e), u = (0, r.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set, [e.disabledKeys]), l = (0, o.useCollection)(e, (0, r.useCallback)(e => new a(e, {
     expandedKeys: t
   }), [t]), null);
   return (0, r.useEffect)(() => {
-    null != c.focusedKey && !d.getItem(c.focusedKey) && c.setFocusedKey(null)
-  }, [d, c.focusedKey]), {
-    collection: d,
+    null != c.focusedKey && !l.getItem(c.focusedKey) && c.setFocusedKey(null)
+  }, [l, c.focusedKey]), {
+    collection: l,
     expandedKeys: t,
     disabledKeys: u,
     toggleKey: e => {
@@ -72,6 +72,6 @@ function c(e) {
       }(t, e))
     },
     setExpandedKeys: n,
-    selectionManager: new i.SelectionManager(d, c)
+    selectionManager: new i.SelectionManager(l, c)
   }
 }
