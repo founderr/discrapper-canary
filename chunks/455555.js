@@ -43,14 +43,14 @@ var s = n("37983"),
   b = n("747554"),
   G = n("740316"),
   B = n("592407"),
-  F = n("977169"),
-  k = n("363691"),
+  k = n("977169"),
+  F = n("363691"),
   w = n("64165"),
   H = n("649844"),
   V = n("538620"),
   Y = n("703537"),
-  K = n("55282"),
-  W = n("42203"),
+  W = n("55282"),
+  K = n("42203"),
   z = n("305961"),
   Z = n("42887"),
   J = n("945956"),
@@ -137,11 +137,11 @@ let eN = l.memo(function() {
   let eC = null === (e = g.metadata) || void 0 === e ? void 0 : e.premiumType;
   switch (g.type) {
     case eu.NoticeTypes.LURKING_GUILD:
-      return (0, s.jsx)(k.default, {});
+      return (0, s.jsx)(F.default, {});
     case eu.NoticeTypes.PENDING_MEMBER:
       return (0, s.jsx)(b.default, {});
     case eu.NoticeTypes.INVITED_TO_SPEAK:
-      return (0, s.jsx)(K.default, {});
+      return (0, s.jsx)(W.default, {});
     case eu.NoticeTypes.GUILD_RAID_NOTIFICATION:
       let {
         dismissUntil: eh
@@ -160,6 +160,32 @@ let eN = l.memo(function() {
           noticeType: eu.NoticeTypes.WIN32_DEPRECATED_MESSAGE
         }), ef.default.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
           helpCenterLink: ea.default.getArticleURL(eu.HelpdeskArticles.WIN32_DEPRECATE)
+        })]
+      });
+    case eu.NoticeTypes.WIN7_8_DEPRECATED_MESSAGE:
+      let {
+        dismissUntil: eM
+      } = g.metadata;
+      return (0, s.jsxs)(es.default, {
+        color: es.NoticeColors.WARNING,
+        children: [(0, s.jsx)(es.NoticeCloseButton, {
+          onClick: () => em(eM),
+          noticeType: eu.NoticeTypes.WIN7_8_DEPRECATED_MESSAGE
+        }), ef.default.Messages.WINDOWS_7_8_DEPRECATED_WARNING.format({
+          helpCenterLink: ea.default.getArticleURL(eu.HelpdeskArticles.WIN7_8_DEPRECATE)
+        })]
+      });
+    case eu.NoticeTypes.MACOS_17_18_DEPRECATED_MESSAGE:
+      let {
+        dismissUntil: eO
+      } = g.metadata;
+      return (0, s.jsxs)(es.default, {
+        color: es.NoticeColors.WARNING,
+        children: [(0, s.jsx)(es.NoticeCloseButton, {
+          onClick: () => em(eO),
+          noticeType: eu.NoticeTypes.MACOS_17_18_DEPRECATED_MESSAGE
+        }), ef.default.Messages.MACOS_DEPRECATED_WARNING.format({
+          helpCenterLink: ea.default.getArticleURL(eu.HelpdeskArticles.MACOS_17_18_DEPRECATE)
         })]
       });
     case eu.NoticeTypes.GENERIC:
@@ -198,7 +224,7 @@ let eN = l.memo(function() {
           onClick: () => {
             let e = J.default.getRemoteDisconnectVoiceChannelId();
             if (null != e) {
-              let t = W.default.getChannel(e);
+              let t = K.default.getChannel(e);
               null != t && I.default.selectVoiceChannel(e)
             }
           },
@@ -218,7 +244,7 @@ let eN = l.memo(function() {
           onClick: () => {
             let e = J.default.getLastSessionVoiceChannelId();
             if (null != e) {
-              let t = W.default.getChannel(e);
+              let t = K.default.getChannel(e);
               null != t && I.default.selectVoiceChannel(e)
             }
           },
@@ -227,7 +253,7 @@ let eN = l.memo(function() {
         })]
       });
     case eu.NoticeTypes.SPOTIFY_AUTO_PAUSED:
-      let eM = h.default.get(eu.PlatformTypes.SPOTIFY);
+      let eR = h.default.get(eu.PlatformTypes.SPOTIFY);
       return (0, s.jsxs)(es.default, {
         color: es.NoticeColors.DANGER,
         children: [(0, s.jsx)(es.NoticeCloseButton, {
@@ -236,7 +262,7 @@ let eN = l.memo(function() {
         }), (0, s.jsx)("img", {
           alt: "",
           className: e_.platformIcon,
-          src: eM.icon.whiteSVG
+          src: eR.icon.whiteSVG
         }), ef.default.Messages.NOTICE_SPOTIFY_AUTO_PAUSED, (0, s.jsx)(es.PrimaryCTANoticeButton, {
           onClick: () => C.default.open(eu.UserSettingsSections.VOICE),
           noticeType: eu.NoticeTypes.SPOTIFY_AUTO_PAUSED,
@@ -293,15 +319,15 @@ let eN = l.memo(function() {
     case eu.NoticeTypes.HARDWARE_MUTE:
       if (null == g.metadata) return null;
       let {
-        vendor: eO, model: eR
+        vendor: eL, model: ev
       } = g.metadata;
       return (0, s.jsxs)(es.default, {
         color: es.NoticeColors.DANGER,
         children: [ef.default.Messages.NOTICE_HARDWARE_MUTE.format({
-          vendorName: eO.name,
-          modelName: eR.name
+          vendorName: eL.name,
+          modelName: ev.name
         }), (0, s.jsx)(es.NoticeButtonAnchor, {
-          href: eR.url,
+          href: ev.url,
           target: "_blank",
           rel: "noreferrer noopener",
           children: ef.default.Messages.SUPPORT
@@ -336,39 +362,39 @@ let eN = l.memo(function() {
     case eu.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
       if (null == g.metadata) return null;
       let {
-        skuId: eL, applicationId: ev
-      } = g.metadata, eP = q.default.get(eL), eD = O.default.getApplication(ev);
-      if (null == eP || null == eD) return null;
-      let ex = {
+        skuId: eP, applicationId: eD
+      } = g.metadata, ex = q.default.get(eP), ey = O.default.getApplication(eD);
+      if (null == ex || null == ey) return null;
+      let eU = {
         page: eu.AnalyticsPages.IN_APP
       };
       return (0, s.jsxs)(es.default, {
         color: es.NoticeColors.PREMIUM_TIER_1,
         children: [(0, s.jsx)(es.NoticeCloseButton, {
-          onClick: () => E.dismiss(eP.id),
+          onClick: () => E.dismiss(ex.id),
           noticeType: eu.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK
         }), (0, s.jsx)(en.default, {
           className: e_.premiumIcon
         }), ef.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
-          applicationName: eD.name,
-          skuName: eP.name
+          applicationName: ey.name,
+          skuName: ex.name
         }), (0, s.jsx)(es.PrimaryCTANoticeButton, {
           noticeType: eu.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK,
           onClick: () => (0, ei.openIAPPurchaseModal)({
-            applicationId: eD.id,
-            skuId: eP.id,
+            applicationId: ey.id,
+            skuId: ex.id,
             openPremiumPaymentModal: () => {
               (0, H.default)({
                 initialPlanId: null,
                 subscriptionTier: ed.PremiumSubscriptionSKUs.TIER_2,
                 analyticsLocations: eN,
-                analyticsObject: ex
+                analyticsObject: eU
               })
             },
             analyticsLocations: eN,
-            analyticsLocationObject: ex,
+            analyticsLocationObject: eU,
             context: __OVERLAY__ ? eu.AppContext.OVERLAY : eu.AppContext.APP
-          }).then(() => E.dismiss(eP.id)),
+          }).then(() => E.dismiss(ex.id)),
           children: ef.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
         })]
       });
@@ -483,14 +509,14 @@ let eN = l.memo(function() {
     case eu.NoticeTypes.DISPATCH_ERROR:
       if (null == g.metadata) return null;
       let {
-        error: ey
+        error: ej
       } = g.metadata;
       return (0, s.jsxs)(es.default, {
         color: es.NoticeColors.DANGER,
         children: [(0, s.jsx)(es.NoticeCloseButton, {
           onClick: () => em(),
           noticeType: eu.NoticeTypes.DISPATCH_ERROR
-        }), null == ey ? void 0 : ey.displayMessage, (0, s.jsx)(es.PrimaryCTANoticeButton, {
+        }), null == ej ? void 0 : ej.displayMessage, (0, s.jsx)(es.PrimaryCTANoticeButton, {
           noticeType: eu.NoticeTypes.DISPATCH_ERROR,
           onClick: () => (0, u.openModalLazy)(async () => {
             let {
@@ -506,7 +532,7 @@ let eN = l.memo(function() {
     case eu.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS:
       if (null == g.metadata) return null;
       let {
-        progress: eU, total: ej, name: eb
+        progress: eb, total: eG, name: eB
       } = g.metadata;
       return (0, s.jsxs)(es.default, {
         color: es.NoticeColors.DEFAULT,
@@ -515,13 +541,13 @@ let eN = l.memo(function() {
           noticeType: eu.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS
         }), (0, s.jsxs)(et.default, {
           justify: et.default.Justify.CENTER,
-          children: [null != eb ? ef.default.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
-            name: "".concat(eb),
-            progress: "".concat(eU),
-            total: "".concat(ej)
+          children: [null != eB ? ef.default.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
+            name: "".concat(eB),
+            progress: "".concat(eb),
+            total: "".concat(eG)
           }) : ef.default.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
-            progress: "".concat(eU),
-            total: "".concat(ej)
+            progress: "".concat(eb),
+            total: "".concat(eG)
           }), (0, s.jsx)(u.Spinner, {
             type: u.Spinner.Type.PULSING_ELLIPSIS,
             className: e_.ellipsis
@@ -594,7 +620,7 @@ let eN = l.memo(function() {
         })]
       });
     case eu.NoticeTypes.VIEWING_ROLES:
-      return (0, s.jsx)(F.default, {});
+      return (0, s.jsx)(k.default, {});
     case eu.NoticeTypes.PREMIUM_UNCANCEL:
       return (0, s.jsxs)(es.default, {
         color: eC === ed.PremiumTypes.TIER_1 ? es.NoticeColors.PREMIUM_TIER_1 : eC === ed.PremiumTypes.TIER_0 ? es.NoticeColors.PREMIUM_TIER_0 : es.NoticeColors.PREMIUM_TIER_2,
@@ -634,21 +660,21 @@ let eN = l.memo(function() {
       });
     case eu.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
       let {
-        daysPastDue: eG, dismissUntil: eB
+        daysPastDue: ek, dismissUntil: eF
       } = g.metadata;
       return (0, s.jsxs)(es.default, {
         color: es.NoticeColors.WARNING,
         children: [(0, s.jsx)(es.NoticeCloseButton, {
           noticeType: ep,
           onClick: () => {
-            em(eB)
+            em(eF)
           }
         }), ef.default.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
-          daysPastDue: eG
+          daysPastDue: ek
         }), (0, s.jsx)(es.PrimaryCTANoticeButton, {
           noticeType: eu.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
           onClick: () => {
-            em(eB), C.default.open(eu.UserSettingsSections.SUBSCRIPTIONS)
+            em(eF), C.default.open(eu.UserSettingsSections.SUBSCRIPTIONS)
           },
           children: ef.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
         })]
@@ -768,19 +794,19 @@ let eN = l.memo(function() {
       });
     case eu.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION:
       let {
-        dismissUntil: eF, decisionId: ek
+        dismissUntil: ew, decisionId: eH
       } = g.metadata;
       return (0, s.jsxs)(es.default, {
         color: es.NoticeColors.WARNING,
         children: [(0, s.jsx)(es.NoticeCloseButton, {
           noticeType: eu.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION,
           onClick: () => {
-            null != _ && (0, x.clearMentionRaidDetected)(_), em(eF)
+            null != _ && (0, x.clearMentionRaidDetected)(_), em(ew)
           }
         }), ef.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE, (0, s.jsx)(es.NoticeButton, {
           onClick: () => {
-            null != _ && (0, x.removeMentionRaidRestrictionWithFeedback)(_, ek, () => {
-              em(eF), (0, x.clearMentionRaidDetected)(_)
+            null != _ && (0, x.removeMentionRaidRestrictionWithFeedback)(_, eH, () => {
+              em(ew), (0, x.clearMentionRaidDetected)(_)
             })
           },
           children: ef.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION

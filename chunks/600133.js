@@ -43,14 +43,14 @@ var s = n("866227"),
   b = n("840895"),
   G = n("143573"),
   B = n("703537"),
-  F = n("662285"),
-  k = n("808422"),
+  k = n("662285"),
+  F = n("808422"),
   w = n("845579"),
   H = n("374363"),
   V = n("271938"),
   Y = n("250404"),
-  K = n("881719"),
-  W = n("42203"),
+  W = n("881719"),
+  K = n("42203"),
   z = n("47319"),
   Z = n("320268"),
   J = n("26989"),
@@ -113,6 +113,8 @@ let eL = {
     [eC.NoticeTypes.GUILD_RAID_NOTIFICATION]: "hideGuildRaidDetectionNotice",
     [eC.NoticeTypes.SERVER_USAGE_SURVEY]: "hideServerUsageSurvey",
     [eC.NoticeTypes.WIN32_DEPRECATED_MESSAGE]: "hideWin32DeprecationMessageNotice",
+    [eC.NoticeTypes.WIN7_8_DEPRECATED_MESSAGE]: "hideWin78DeprecationMessageNotice",
+    [eC.NoticeTypes.MACOS_17_18_DEPRECATED_MESSAGE]: "hideMacOS17_18DeprecationMessageNotice",
     [eC.NoticeTypes.ESLATAM_LANGUAGE_LAUNCH]: "hideEslatamLanguageLaunchNotice"
   },
   eP = new Set([eC.NoticeTypes.NO_INPUT_DETECTED, eC.NoticeTypes.STREAMER_MODE, eC.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER, eC.NoticeTypes.SPOTIFY_AUTO_PAUSED, eC.NoticeTypes.DISPATCH_ERROR, eC.NoticeTypes.DISPATCH_ERROR, eC.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS, eC.NoticeTypes.BLOCKED_BY_PROXY]),
@@ -158,9 +160,9 @@ function eb(e) {
   let s = eD[e];
   return !!s || (null != n && "" !== n ? o.default.get(n) : !!eP.has(e) && s)
 }
-let eG = [eC.NoticeTypes.QUARANTINED, eC.NoticeTypes.AUTOMOD_QUARANTINED_USER_PROFILE, eC.NoticeTypes.VIEWING_ROLES, eC.NoticeTypes.INVITED_TO_SPEAK, eC.NoticeTypes.LURKING_GUILD, eC.NoticeTypes.VOICE_DISABLED, eC.NoticeTypes.NO_INPUT_DETECTED, eC.NoticeTypes.HARDWARE_MUTE, eC.NoticeTypes.H264_DISABLED, eC.NoticeTypes.DISPATCH_ERROR, eC.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS, eC.NoticeTypes.SPOTIFY_AUTO_PAUSED, eC.NoticeTypes.DROPS_PROGRESS_INTERRUPTION, eC.NoticeTypes.WIN32_DEPRECATED_MESSAGE, eC.NoticeTypes.BLOCKED_BY_PROXY, eC.NoticeTypes.VOICE_CONNECTED_LAST_SESSION, eC.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION, eC.NoticeTypes.GUILD_RAID_NOTIFICATION, eC.NoticeTypes.ESLATAM_LANGUAGE_LAUNCH, eC.NoticeTypes.UNCLAIMED_ACCOUNT, eC.NoticeTypes.POMELO_ELIGIBLE, eC.NoticeTypes.PENDING_MEMBER, eC.NoticeTypes.OUTBOUND_PROMOTION, eC.NoticeTypes.CORRUPT_INSTALLATION, eC.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER, eC.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK, eC.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL, eC.NoticeTypes.STREAMER_MODE, eC.NoticeTypes.SCHEDULED_MAINTENANCE, eC.NoticeTypes.BOUNCED_EMAIL_DETECTED, eC.NoticeTypes.UNVERIFIED_ACCOUNT, eC.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING, eC.NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING, eC.NoticeTypes.PREMIUM_UNCANCEL, eC.NoticeTypes.PREMIUM_MISSING_PAYMENT, eC.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT, eC.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT, eC.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT, eC.NoticeTypes.PREMIUM_REACTIVATE, eC.NoticeTypes.ACTIVATE_SERVER_SUBSCRIPTION, eC.NoticeTypes.MFA_SMS_BACKUP, eC.NoticeTypes.APPLICATION_TEST_MODE, eC.NoticeTypes.LOCALIZED_PRICING, eC.NoticeTypes.DOWNLOAD_NAG, eC.NoticeTypes.CONNECT_SPOTIFY, eC.NoticeTypes.CONNECT_PLAYSTATION, eC.NoticeTypes.SURVEY, eC.NoticeTypes.SERVER_USAGE_SURVEY, eC.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR, eC.NoticeTypes.DROPS_GO_LIVE_BANNER, eC.NoticeTypes.DROPS_ENDED_INCOMPLETE, eC.NoticeTypes.GUILD_ONBOARDING_UPSELL_NAGBAR, eC.NoticeTypes.HABITUAL_DND],
+let eG = [eC.NoticeTypes.QUARANTINED, eC.NoticeTypes.AUTOMOD_QUARANTINED_USER_PROFILE, eC.NoticeTypes.VIEWING_ROLES, eC.NoticeTypes.INVITED_TO_SPEAK, eC.NoticeTypes.LURKING_GUILD, eC.NoticeTypes.VOICE_DISABLED, eC.NoticeTypes.NO_INPUT_DETECTED, eC.NoticeTypes.HARDWARE_MUTE, eC.NoticeTypes.H264_DISABLED, eC.NoticeTypes.DISPATCH_ERROR, eC.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS, eC.NoticeTypes.SPOTIFY_AUTO_PAUSED, eC.NoticeTypes.DROPS_PROGRESS_INTERRUPTION, eC.NoticeTypes.WIN32_DEPRECATED_MESSAGE, eC.NoticeTypes.WIN7_8_DEPRECATED_MESSAGE, eC.NoticeTypes.MACOS_17_18_DEPRECATED_MESSAGE, eC.NoticeTypes.BLOCKED_BY_PROXY, eC.NoticeTypes.VOICE_CONNECTED_LAST_SESSION, eC.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION, eC.NoticeTypes.GUILD_RAID_NOTIFICATION, eC.NoticeTypes.ESLATAM_LANGUAGE_LAUNCH, eC.NoticeTypes.UNCLAIMED_ACCOUNT, eC.NoticeTypes.POMELO_ELIGIBLE, eC.NoticeTypes.PENDING_MEMBER, eC.NoticeTypes.OUTBOUND_PROMOTION, eC.NoticeTypes.CORRUPT_INSTALLATION, eC.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER, eC.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK, eC.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL, eC.NoticeTypes.STREAMER_MODE, eC.NoticeTypes.SCHEDULED_MAINTENANCE, eC.NoticeTypes.BOUNCED_EMAIL_DETECTED, eC.NoticeTypes.UNVERIFIED_ACCOUNT, eC.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING, eC.NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING, eC.NoticeTypes.PREMIUM_UNCANCEL, eC.NoticeTypes.PREMIUM_MISSING_PAYMENT, eC.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT, eC.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT, eC.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT, eC.NoticeTypes.PREMIUM_REACTIVATE, eC.NoticeTypes.ACTIVATE_SERVER_SUBSCRIPTION, eC.NoticeTypes.MFA_SMS_BACKUP, eC.NoticeTypes.APPLICATION_TEST_MODE, eC.NoticeTypes.LOCALIZED_PRICING, eC.NoticeTypes.DOWNLOAD_NAG, eC.NoticeTypes.CONNECT_SPOTIFY, eC.NoticeTypes.CONNECT_PLAYSTATION, eC.NoticeTypes.SURVEY, eC.NoticeTypes.SERVER_USAGE_SURVEY, eC.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR, eC.NoticeTypes.DROPS_GO_LIVE_BANNER, eC.NoticeTypes.DROPS_ENDED_INCOMPLETE, eC.NoticeTypes.GUILD_ONBOARDING_UPSELL_NAGBAR, eC.NoticeTypes.HABITUAL_DND],
   eB = [eC.NoticeTypes.QUARANTINED, eC.NoticeTypes.AUTOMOD_QUARANTINED_USER_PROFILE, eC.NoticeTypes.VIEWING_ROLES, eC.NoticeTypes.INVITED_TO_SPEAK, eC.NoticeTypes.LURKING_GUILD, eC.NoticeTypes.VOICE_DISABLED, eC.NoticeTypes.NO_INPUT_DETECTED, eC.NoticeTypes.HARDWARE_MUTE, eC.NoticeTypes.H264_DISABLED, eC.NoticeTypes.DISPATCH_ERROR, eC.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS, eC.NoticeTypes.SPOTIFY_AUTO_PAUSED, eC.NoticeTypes.BLOCKED_BY_PROXY, eC.NoticeTypes.VOICE_CONNECTED_LAST_SESSION, eC.NoticeTypes.PENDING_MEMBER, eC.NoticeTypes.STREAMER_MODE, eC.NoticeTypes.SCHEDULED_MAINTENANCE],
-  eF = {
+  ek = {
     [eC.NoticeTypes.GUILD_RAID_NOTIFICATION]: {
       predicate: () => (0, C.shouldShowRaidNotificationNagbar)().show && !eb(eC.NoticeTypes.GUILD_RAID_NOTIFICATION),
       metadata: () => {
@@ -202,7 +204,7 @@ let eG = [eC.NoticeTypes.QUARANTINED, eC.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           voiceState: t
         } = e;
-        return (0, k.getAudienceRequestToSpeakState)(t) === k.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+        return (0, F.getAudienceRequestToSpeakState)(t) === F.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
       }
     },
     [eC.NoticeTypes.LURKING_GUILD]: {
@@ -224,7 +226,7 @@ let eG = [eC.NoticeTypes.QUARANTINED, eC.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           voiceChannelId: t,
           voiceState: n
-        } = e, s = W.default.getChannel(t), l = (null == s ? void 0 : s.isGuildStageVoice()) && (null == n ? void 0 : n.suppress);
+        } = e, s = K.default.getChannel(t), l = (null == s ? void 0 : s.isGuildStageVoice()) && (null == n ? void 0 : n.suppress);
         return !1 === X.default.getInputDetected() && !l
       }
     },
@@ -232,7 +234,7 @@ let eG = [eC.NoticeTypes.QUARANTINED, eC.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       predicate: e => {
         let {
           voiceChannelId: t
-        } = e, n = W.default.getChannel(t);
+        } = e, n = K.default.getChannel(t);
         return !X.default.getOpenH264() && null != t && ed.default.hasVideo(t) && null != n && n.isGuildStageVoice()
       }
     },
@@ -240,8 +242,8 @@ let eG = [eC.NoticeTypes.QUARANTINED, eC.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       predicate: () => et.default.isConnected() && X.default.isHardwareMute(),
       metadata: () => {
         let e = X.default.getInputDeviceId(),
-          t = K.default.getVendor(e),
-          n = K.default.getModel(e);
+          t = W.default.getVendor(e),
+          n = W.default.getModel(e);
         if (null != t && null != n) return {
           vendor: t,
           model: n
@@ -259,7 +261,7 @@ let eG = [eC.NoticeTypes.QUARANTINED, eC.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       metadata: () => eA.default.getLastProgress()
     },
     [eC.NoticeTypes.SPOTIFY_AUTO_PAUSED]: {
-      predicate: () => F.default.wasAutoPaused()
+      predicate: () => k.default.wasAutoPaused()
     },
     [eC.NoticeTypes.BLOCKED_BY_PROXY]: {
       predicate: () => !eb(eC.NoticeTypes.BLOCKED_BY_PROXY) && G.default.blockedByProxy && b.default.getCurrentConfig({
@@ -375,7 +377,7 @@ let eG = [eC.NoticeTypes.QUARANTINED, eC.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [eC.NoticeTypes.CONNECT_SPOTIFY]: {
-      predicate: () => !F.default.hasConnectedAccount() && en.default.isObservedAppRunning(E.default.get(eC.PlatformTypes.SPOTIFY).name) && !eb(eC.NoticeTypes.CONNECT_SPOTIFY)
+      predicate: () => !k.default.hasConnectedAccount() && en.default.isObservedAppRunning(E.default.get(eC.PlatformTypes.SPOTIFY).name) && !eb(eC.NoticeTypes.CONNECT_SPOTIFY)
     },
     [eC.NoticeTypes.WIN32_DEPRECATED_MESSAGE]: {
       predicate: () => {
@@ -385,6 +387,36 @@ let eG = [eC.NoticeTypes.QUARANTINED, eC.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
           location: "window32_deprecation_message"
         });
         return e && (null === c.default || void 0 === c.default ? void 0 : c.default.os.arch) === "ia32" && (null === c.default || void 0 === c.default ? void 0 : c.default.process.platform) === "win32"
+      },
+      metadata: () => {
+        let e = {
+          dismissUntil: l().add(5, "days").toDate()
+        };
+        return e
+      }
+    },
+    [eC.NoticeTypes.WIN7_8_DEPRECATED_MESSAGE]: {
+      predicate: () => {
+        if ((null === c.default || void 0 === c.default ? void 0 : c.default.process.platform) === "win32") try {
+          let e = parseInt(null === c.default || void 0 === c.default ? void 0 : c.default.os.release.split(".")[0]);
+          return e < 10
+        } catch (e) {}
+        return !1
+      },
+      metadata: () => {
+        let e = {
+          dismissUntil: l().add(5, "days").toDate()
+        };
+        return e
+      }
+    },
+    [eC.NoticeTypes.MACOS_17_18_DEPRECATED_MESSAGE]: {
+      predicate: () => {
+        if ((null === c.default || void 0 === c.default ? void 0 : c.default.process.platform) === "darwin") try {
+          let e = parseInt(null === c.default || void 0 === c.default ? void 0 : c.default.os.release.split(".")[0]);
+          return e < 19
+        } catch (e) {}
+        return !1
       },
       metadata: () => {
         let e = {
@@ -619,7 +651,7 @@ let eG = [eC.NoticeTypes.QUARANTINED, eC.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
     }
   };
 
-function ek() {
+function eF() {
   if (!A.default.isConnected()) return !1;
   ey = null;
   let e = eu.default.getCurrentUser();
@@ -631,7 +663,7 @@ function ek() {
     a = null != l ? ed.default.getVoiceStateForChannel(l) : null,
     i = eh.CONFERENCE_MODE_ENABLED ? eB : eG;
   for (let u of i)
-    if (null != eF[u] && eF[u].predicate({
+    if (null != ek[u] && ek[u].predicate({
         selectedGuildId: s,
         voiceChannelId: l,
         voiceState: a,
@@ -640,7 +672,7 @@ function ek() {
         isLocalizedPromoEnabled: n
       })) {
       var r, o;
-      let n = null === (r = (o = eF[u]).metadata) || void 0 === r ? void 0 : r.call(o, {
+      let n = null === (r = (o = ek[u]).metadata) || void 0 === r ? void 0 : r.call(o, {
         currentUser: e,
         premiumSubscription: t,
         selectedGuildId: s
@@ -655,11 +687,11 @@ function ek() {
 }
 
 function ew() {
-  return !ei.default.enabled && delete eD[eC.NoticeTypes.STREAMER_MODE], ek()
+  return !ei.default.enabled && delete eD[eC.NoticeTypes.STREAMER_MODE], eF()
 }
 class eH extends a.default.Store {
   initialize() {
-    this.syncWith([er.default, ee.default, Z.default, el.default, j.default, e_.default, Y.default, z.default, H.default, h.default, v.default], ek), this.waitFor(eu.default, ea.default, Q.default, J.default, et.default, X.default, ei.default, p.default, el.default, eo.default, F.default, en.default, ee.default, ep.default, eA.default, eI.default, q.default, ef.default, eS.default, Z.default, eE.default, $.default, j.default, eT.default, e_.default, z.default, L.default, m.default, T.default, G.default)
+    this.syncWith([er.default, ee.default, Z.default, el.default, j.default, e_.default, Y.default, z.default, H.default, h.default, v.default], eF), this.waitFor(eu.default, ea.default, Q.default, J.default, et.default, X.default, ei.default, p.default, el.default, eo.default, k.default, en.default, ee.default, ep.default, eA.default, eI.default, q.default, ef.default, eS.default, Z.default, eE.default, $.default, j.default, eT.default, e_.default, z.default, L.default, m.default, T.default, G.default)
   }
   hasNotice() {
     return null != ey && null != ey.type
@@ -673,47 +705,47 @@ class eH extends a.default.Store {
 }
 eH.displayName = "NoticeStore";
 var eV = new eH(u.default, {
-  CURRENT_USER_UPDATE: ek,
-  MEDIA_ENGINE_SET_AUDIO_ENABLED: ek,
-  CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: ek,
-  CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: ek,
-  STATUS_PAGE_SCHEDULED_MAINTENANCE: ek,
-  STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: ek,
-  GUILD_CREATE: ek,
-  GUILD_DELETE: ek,
-  AUDIO_INPUT_DETECTED: ek,
-  AUDIO_SET_DISPLAY_SILENCE_WARNING: ek,
-  CERTIFIED_DEVICES_SET: ek,
-  AUDIO_SET_INPUT_DEVICE: ek,
-  AUDIO_SET_OUTPUT_DEVICE: ek,
-  MEDIA_ENGINE_DEVICES: ek,
-  RTC_CONNECTION_STATE: ek,
-  RPC_APP_AUTHENTICATED: ek,
-  RPC_APP_DISCONNECTED: ek,
-  USER_CONNECTIONS_UPDATE: ek,
-  WINDOW_FOCUS: ek,
-  INSTANT_INVITE_CREATE: ek,
-  INSTANT_INVITE_REVOKE_SUCCESS: ek,
-  SPOTIFY_PLAYER_PAUSE: ek,
-  RUNNING_GAMES_CHANGE: ek,
-  EXPERIMENTS_FETCH_SUCCESS: ek,
-  PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: ek,
-  DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: ek,
-  DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: ek,
-  DEVELOPER_TEST_MODE_RESET: ek,
-  BILLING_SUBSCRIPTION_FETCH_SUCCESS: ek,
-  DISPATCH_APPLICATION_INSTALL: ek,
-  IMPERSONATE_STOP: ek,
-  IMPERSONATE_UPDATE: ek,
+  CURRENT_USER_UPDATE: eF,
+  MEDIA_ENGINE_SET_AUDIO_ENABLED: eF,
+  CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: eF,
+  CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: eF,
+  STATUS_PAGE_SCHEDULED_MAINTENANCE: eF,
+  STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: eF,
+  GUILD_CREATE: eF,
+  GUILD_DELETE: eF,
+  AUDIO_INPUT_DETECTED: eF,
+  AUDIO_SET_DISPLAY_SILENCE_WARNING: eF,
+  CERTIFIED_DEVICES_SET: eF,
+  AUDIO_SET_INPUT_DEVICE: eF,
+  AUDIO_SET_OUTPUT_DEVICE: eF,
+  MEDIA_ENGINE_DEVICES: eF,
+  RTC_CONNECTION_STATE: eF,
+  RPC_APP_AUTHENTICATED: eF,
+  RPC_APP_DISCONNECTED: eF,
+  USER_CONNECTIONS_UPDATE: eF,
+  WINDOW_FOCUS: eF,
+  INSTANT_INVITE_CREATE: eF,
+  INSTANT_INVITE_REVOKE_SUCCESS: eF,
+  SPOTIFY_PLAYER_PAUSE: eF,
+  RUNNING_GAMES_CHANGE: eF,
+  EXPERIMENTS_FETCH_SUCCESS: eF,
+  PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: eF,
+  DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: eF,
+  DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: eF,
+  DEVELOPER_TEST_MODE_RESET: eF,
+  BILLING_SUBSCRIPTION_FETCH_SUCCESS: eF,
+  DISPATCH_APPLICATION_INSTALL: eF,
+  IMPERSONATE_STOP: eF,
+  IMPERSONATE_UPDATE: eF,
   GUILD_MEMBER_ADD: function(e) {
-    return e.user.id === V.default.getId() && ek()
+    return e.user.id === V.default.getId() && eF()
   },
-  GUILD_MEMBER_UPDATE: ek,
-  SURVEY_FETCHED: ek,
-  ENTITLEMENT_FETCH_APPLICATION_SUCCESS: ek,
-  BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: ek,
-  BILLING_SUBSCRIPTION_UPDATE_SUCCESS: ek,
-  BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: ek,
+  GUILD_MEMBER_UPDATE: eF,
+  SURVEY_FETCHED: eF,
+  ENTITLEMENT_FETCH_APPLICATION_SUCCESS: eF,
+  BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: eF,
+  BILLING_SUBSCRIPTION_UPDATE_SUCCESS: eF,
+  BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: eF,
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
@@ -723,39 +755,39 @@ var eV = new eH(u.default, {
         userId: t
       } = e;
       return t !== V.default.getId()
-    }) && ek()
+    }) && eF()
   },
   STREAMER_MODE_UPDATE: ew,
   RUNNING_STREAMER_TOOLS_CHANGE: ew,
   DISPATCH_APPLICATION_ERROR: function() {
-    return delete eD[eC.NoticeTypes.DISPATCH_ERROR], ek()
+    return delete eD[eC.NoticeTypes.DISPATCH_ERROR], eF()
   },
   DISPATCH_APPLICATION_LAUNCH_SETUP_START: function() {
-    return delete eD[eC.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS], ek()
+    return delete eD[eC.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS], eF()
   },
   DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: function() {
-    return ek()
+    return eF()
   },
   DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: function() {
-    return ek()
+    return eF()
   },
   NOTICE_SHOW: function(e) {
     ey = e.notice
   },
   NOTICE_DISMISS: function(e) {
-    return null != ey && (null == e.id || e.id === ey.id) && (ej(ey.type, e.isTemporary, e.untilAtLeast), ek())
+    return null != ey && (null == e.id || e.id === ey.id) && (ej(ey.type, e.isTemporary, e.untilAtLeast), eF())
   },
   NOTICE_DISABLE: function(e) {
     let {
       noticeType: t
     } = e;
-    return ej(t), ek()
+    return ej(t), eF()
   },
   LOGOUT: function() {
     eD = {}, ey = null
   },
-  SUBSCRIPTION_PLANS_FETCH_SUCCESS: ek,
-  AUTO_MODERATION_MENTION_RAID_DETECTION: ek,
-  CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: ek,
-  PROXY_BLOCKED_REQUEST: ek
+  SUBSCRIPTION_PLANS_FETCH_SUCCESS: eF,
+  AUTO_MODERATION_MENTION_RAID_DETECTION: eF,
+  CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: eF,
+  PROXY_BLOCKED_REQUEST: eF
 })
