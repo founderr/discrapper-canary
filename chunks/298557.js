@@ -375,6 +375,9 @@ function ev(e) {
                 className: em.detailedDescription,
                 parser: ef,
                 output: eh,
+                state: {
+                  allowLinks: !0
+                },
                 children: n
               })
             }), (e6 || e2) && (0, i.jsx)(eR, {
