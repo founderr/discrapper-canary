@@ -24,7 +24,7 @@ function C(e) {
         a = c.default.getVoiceStates(e);
       for (let s in a) {
         let r = i.default.getBasicChannel(a[s].channelId);
-        if (null == r || r.type === l.ChannelTypes.GUILD_STAGE_VOICE || n === r.id || !u.default.canBasicChannel(h.BasicPermissions.VIEW_CHANNEL, r)) return [];
+        if (null == r || r.type === l.ChannelTypes.GUILD_STAGE_VOICE || n === r.id || !u.default.canBasicChannel(h.BasicPermissions.VIEW_CHANNEL, r)) continue;
         let o = d.default.getActivities(s, e);
         o.forEach(e => {
           let n = e.application_id;
