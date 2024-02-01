@@ -63,7 +63,7 @@ class L extends r.default.Store {
     b()
   }
   async getClientState() {
-    let [e, t] = await Promise.all([S && (0, m.isCacheEnabled)() ? l.default.getCommittedVersionsAsync() : Promise.resolve({}), S && (0, m.isCacheEnabled)() ? u.default.getCommittedVersions() : Promise.resolve({})]);
+    let [e, t] = await Promise.all([S && (0, m.isCacheEnabled)() ? l.default.getCommittedVersions() : Promise.resolve({}), S && (0, m.isCacheEnabled)() ? u.default.getCommittedVersions() : Promise.resolve({})]);
     return {
       knownGuildVersions: e,
       highestLastMessageId: T,

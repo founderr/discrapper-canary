@@ -20,10 +20,12 @@ i = class {
       s = performance.now() - n;
     return a.verbose("loaded in ".concat(s, "ms (guild: ").concat(t, ", channels: ").concat(i.length, ")")), i
   }
-  static getGuildIdsSync() {
+  static async getGuildIds() {
     try {
-      var e, t;
-      let n = null !== (t = null === (e = r.default.channels()) || void 0 === e ? void 0 : e.getGuildIdsSyncUnsafe()) && void 0 !== t ? t : [],
+      var e;
+      let t = r.default.channels();
+      if (null == t) return new Set;
+      let n = null !== (e = await t.getGuildIds()) && void 0 !== e ? e : [],
         i = n.filter(e => null !== e && "string" == typeof e);
       return new Set(i)
     } catch (e) {

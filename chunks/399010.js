@@ -251,7 +251,12 @@ w(["INITIAL_GUILD"], e => {
   }), setTimeout(() => V({
     type: "POST_CONNECTION_OPEN"
   }), 2e3)
-}), w(["READY"], e => {
+}), ! function(e, t, n) {
+  for (let i of e) U[i] = {
+    preload: t,
+    dispatch: n
+  }
+}(["READY"], () => R.preloadReadyPayloadData(), (e, t, n) => {
   if (e.user.bot) {
     V({
       type: "LOGOUT"
@@ -260,26 +265,26 @@ w(["INITIAL_GUILD"], e => {
   }
   _.default.ready.measure(() => {
     r.default.Emitter.batched(() => {
-      e = _.default.hydrateReady.measure(() => R.hydrateReadyPayloadPrioritized(e, D.socket.identifyStartTime));
+      e = _.default.hydrateReady.measure(() => R.hydrateReadyPayloadPrioritized(e, D.socket.identifyStartTime, n));
       let t = e.private_channels.map(e => (0, g.createChannelRecordFromServer)(e)),
-        n = e.guilds.filter(e => !0 === e.unavailable && !0 !== e.geo_restricted).map(e => e.id),
-        i = e.guilds.filter(e => !0 !== e.unavailable),
-        s = e.guilds.filter(e => !0 === e.geo_restricted);
-      i.forEach(e => {
+        i = e.guilds.filter(e => !0 === e.unavailable && !0 !== e.geo_restricted).map(e => e.id),
+        s = e.guilds.filter(e => !0 !== e.unavailable),
+        r = e.guilds.filter(e => !0 === e.geo_restricted);
+      s.forEach(e => {
         e.presences = []
       });
-      let r = null == e.user_settings_proto ? void 0 : (0, h.b64ToPreloadedUserSettingsProto)(e.user_settings_proto);
+      let a = null == e.user_settings_proto ? void 0 : (0, h.b64ToPreloadedUserSettingsProto)(e.user_settings_proto);
       _.default.dispatchReady.measure(() => {
-        var a;
+        var n;
         V({
           type: "CONNECTION_OPEN",
           sessionId: e.session_id,
           authSessionIdHash: e.auth_session_id_hash,
           user: e.user,
           users: e.users,
-          guilds: i,
+          guilds: s,
           initialPrivateChannels: t,
-          unavailableGuilds: n,
+          unavailableGuilds: i,
           readState: e.read_state,
           userGuildSettings: e.user_guild_settings,
           tutorial: e.tutorial,
@@ -294,15 +299,15 @@ w(["INITIAL_GUILD"], e => {
           consents: e.consents,
           sessions: x(e.sessions || []),
           pendingPayments: e.pending_payments,
-          countryCode: null !== (a = e.country_code) && void 0 !== a ? a : void 0,
+          countryCode: null !== (n = e.country_code) && void 0 !== n ? n : void 0,
           guildJoinRequests: e.guild_join_requests || [],
-          userSettingsProto: r,
+          userSettingsProto: a,
           apiCodeVersion: e.api_code_version,
           auth: e.auth,
           notificationSettings: {
             flags: e.notification_settings.flags
           },
-          geoRestrictedGuilds: s
+          geoRestrictedGuilds: r
         })
       }), null != e.auth_token && V({
         type: "UPDATE_TOKEN",

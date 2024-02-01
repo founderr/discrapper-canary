@@ -9,16 +9,7 @@ var i = n("605250"),
   r = n("802493");
 let a = new i.default("GuildVersions");
 var o = new class e {
-  getCommittedVersions() {
-    try {
-      var e, t;
-      let n = null === (t = r.default.guildVersions()) || void 0 === t ? void 0 : null === (e = t.getManySyncUnsafe()) || void 0 === e ? void 0 : e.map(e => [e.id, e.version]);
-      return new Map(null != n ? n : [])
-    } catch (e) {
-      return a.warn("couldn't load guild versions", e), new Map
-    }
-  }
-  async getCommittedVersionsAsync() {
+  async getCommittedVersions() {
     try {
       let e = r.default.guildVersions();
       if (null == e) return {};
