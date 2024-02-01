@@ -39,7 +39,8 @@ let n = 1060,
     ["".concat(l.CollectiblesCategorySkuId.FALL)]: [a("740683"), a("489847")],
     ["".concat(l.CollectiblesCategorySkuId.WINTER)]: [a("770704"), a("165057")],
     ["".concat(l.CollectiblesCategorySkuId.MONSTERS)]: [a("330825"), a("125221")],
-    ["".concat(l.CollectiblesCategorySkuId.CYBERPUNK)]: [a("424869"), a("714293")]
+    ["".concat(l.CollectiblesCategorySkuId.CYBERPUNK)]: [a("424869"), a("714293")],
+    ["".concat(l.CollectiblesCategorySkuId.LUNAR_NEW_YEAR)]: [a("424869"), a("714293")]
   },
   f = e => {
     var t;
