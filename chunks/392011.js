@@ -24,7 +24,7 @@ function E() {
     t = e[c.UserSettingsTypes.PRELOADED_USER_SETTINGS];
   t.editInfo.triggeredMigrations && u.PreloadedUserSettingsActionCreators.markDirtyFromMigration(t.proto, t.editInfo.cleanupFuncs), s.forEach(u.UserSettingsActionCreatorsByType, (t, n) => {
     let a = e[Number(n)];
-    null != a.editInfo.offlineEditDataVersion && t.scheduleSaveFromOfflineEdit()
+    null != a.editInfo.offlineEditDataVersion && null != a.editInfo.protoToSave && t.scheduleSaveFromOfflineEdit()
   })
 }
 
