@@ -7636,6 +7636,16 @@
                     [a.DARKER]: {
                         raw: "PLUM_13",
                         opacity: 1
+                    },
+                    gradient: {
+                        light: {
+                            color: "BLACK_500",
+                            opacity: .2
+                        },
+                        dark: {
+                            color: "WHITE_500",
+                            opacity: .2
+                        }
                     }
                 },
                 REDESIGN_BUTTON_SECONDARY_PRESSED_BORDER: {

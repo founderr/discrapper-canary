@@ -159,6 +159,16 @@ let a = {
       opacity: .1
     }
   },
+  "redesign-button-secondary-pressed-background": {
+    dark: {
+      color: "white.500",
+      opacity: .2
+    },
+    light: {
+      color: "black.500",
+      opacity: .2
+    }
+  },
   "redesign-button-primary-pressed-background": {
     dark: {
       color: "white.500",
