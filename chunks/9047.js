@@ -16,8 +16,8 @@ var n = s("77078"),
   c = s("374023"),
   S = s("49470"),
   E = s("566126"),
-  f = s("832837"),
-  T = s("49111"),
+  T = s("832837"),
+  f = s("49111"),
   m = s("188338");
 
 function _() {
@@ -42,20 +42,20 @@ function _() {
         width: "360px"
       },
       analyticsLocation: {
-        page: T.AnalyticsPages.GIFTING_SETTINGS,
-        section: T.AnalyticsSections.GIFT_BANNER
+        page: f.AnalyticsPages.GIFTING_SETTINGS,
+        section: f.AnalyticsSections.GIFT_BANNER
       }
     }), (0, a.jsx)(l.default, {
-      section: T.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
+      section: f.AnalyticsSections.LIBRARY_INVENTORY_CODE_REDEMPTION,
       children: (0, a.jsx)(E.default, {})
     }), e && (0, a.jsx)(l.default, {
-      section: T.AnalyticsSections.QUESTS,
+      section: f.AnalyticsSections.QUESTS,
       children: (0, a.jsx)(S.default, {})
     }), (0, a.jsx)(n.FormDivider, {
       className: m.divider
     }), (0, a.jsx)(l.default, {
-      section: T.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
-      children: (0, a.jsx)(f.default, {})
+      section: f.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
+      children: (0, a.jsx)(T.default, {})
     })]
   })
 }

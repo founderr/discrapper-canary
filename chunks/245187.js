@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   BlockedPaymentsContentSettings: function() {
-    return A
+    return m
   },
   BlockedPaymentsContentModal: function() {
     return N
@@ -16,8 +16,8 @@ var n = s("414456"),
   r = s.n(n),
   i = s("669491"),
   l = s("819855"),
-  u = s("77078"),
-  o = s("841098"),
+  o = s("77078"),
+  u = s("841098"),
   d = s("145131"),
   c = s("423487"),
   _ = s("701909"),
@@ -28,17 +28,17 @@ var n = s("414456"),
   S = s("584503"),
   R = s("45656");
 
-function m(e) {
+function A(e) {
   let {
     className: t
-  } = e, s = (0, o.default)(), n = (0, l.isThemeDark)(s) ? S : R;
+  } = e, s = (0, u.default)(), n = (0, l.isThemeDark)(s) ? S : R;
   return (0, a.jsxs)("div", {
     className: r(f.container, t),
-    children: [(0, a.jsx)(u.Heading, {
+    children: [(0, a.jsx)(o.Heading, {
       className: f.header,
       variant: "heading-xl/semibold",
       children: T.default.Messages.REGION_BLOCKED_PAYMENTS_HEADER
-    }), (0, a.jsxs)(u.Text, {
+    }), (0, a.jsxs)(o.Text, {
       className: f.description,
       variant: "text-md/normal",
       color: "header-secondary",
@@ -57,8 +57,8 @@ function m(e) {
   })
 }
 
-function A() {
-  return (0, a.jsx)(m, {
+function m() {
+  return (0, a.jsx)(A, {
     className: f.settings
   })
 }
@@ -68,15 +68,15 @@ function N(e) {
     onClose: t
   } = e;
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(u.ModalHeader, {
+    children: [(0, a.jsx)(o.ModalHeader, {
       className: f.blockedPaymentsModalHeader,
       justify: d.default.Justify.END,
-      children: (0, a.jsx)(u.ModalCloseButton, {
+      children: (0, a.jsx)(o.ModalCloseButton, {
         onClick: t
       })
-    }), (0, a.jsx)(u.ModalContent, {
+    }), (0, a.jsx)(o.ModalContent, {
       className: f.blockedPaymentsModalContent,
-      children: (0, a.jsx)(m, {
+      children: (0, a.jsx)(A, {
         className: f.modal
       })
     })]
@@ -87,13 +87,13 @@ function p(e) {
   let {
     className: t
   } = e, s = (0, E.useBlockedPaymentsConfig)();
-  return s ? (0, a.jsxs)(u.Card, {
+  return s ? (0, a.jsxs)(o.Card, {
     className: r(f.blockedPaymentsWarning, t),
-    type: u.Card.Types.CUSTOM,
+    type: o.Card.Types.CUSTOM,
     children: [(0, a.jsx)(c.default, {
       className: f.blockedPaymentsWarningIcon,
       color: i.default.unsafe_rawColors.YELLOW_300.css
-    }), (0, a.jsx)(u.Text, {
+    }), (0, a.jsx)(o.Text, {
       variant: "text-sm/normal",
       children: T.default.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
         helpdeskArticle: _.default.getArticleURL(I.HelpdeskArticles.BLOCKED_PAYMENTS)

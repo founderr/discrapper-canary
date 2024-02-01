@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("79112"),
   S = s("642950"),
   E = s("404515"),
-  f = s("87641"),
-  T = s("245187"),
+  T = s("87641"),
+  f = s("245187"),
   m = s("102985"),
   _ = s("697218"),
   g = s("160299"),
@@ -51,7 +51,7 @@ class O extends n.PureComponent {
       children: [e && 0 === Object.keys(s).length ? (0, a.jsx)("div", {
         className: A.syncing,
         children: (0, a.jsx)(o.Spinner, {})
-      }) : (0, a.jsx)(f.default, {
+      }) : (0, a.jsx)(T.default, {
         paymentSources: s,
         defaultPaymentSourceId: n,
         premiumSubscriptionPaymentSourceId: null != i && i.status !== p.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
@@ -65,7 +65,7 @@ class O extends n.PureComponent {
             tag: "h1",
             children: C.default.Messages.BILLING_PAYMENT_HISTORY
           }),
-          children: [(0, a.jsx)(T.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
+          children: [(0, a.jsx)(f.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
             locale: l
           })]
         })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 });
 var a = s("917351"),
@@ -18,7 +18,7 @@ let o = !1,
     viewNonce: "",
     regenerateNonce: ""
   };
-class f extends i.default.Store {
+class T extends i.default.Store {
   getVerificationKey() {
     return u
   }
@@ -38,8 +38,8 @@ class f extends i.default.Store {
     return S
   }
 }
-f.displayName = "MFAStore";
-var T = new f(r.default, {
+T.displayName = "MFAStore";
+var f = new T(r.default, {
   MFA_ENABLE_SUCCESS: function(e) {
     let {
       token: t,

@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return n
   },
   default: function() {
-    return f
+    return T
   }
 });
 var a, n, l = s("37983");
@@ -25,7 +25,7 @@ let S = {
     warning: u.default
   };
 
-function f(e) {
+function T(e) {
   let {
     children: t,
     className: s,

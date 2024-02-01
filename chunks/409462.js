@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("452804"),
   S = s("304580"),
   E = s("206230"),
-  f = s("489740"),
-  T = s("355025"),
+  T = s("489740"),
+  f = s("355025"),
   m = s("773336"),
   _ = s("161778"),
   g = s("49111"),
@@ -75,9 +75,9 @@ function C() {
     })
   }, []);
   let x = m.isPlatformEmbedded ? s : e,
-    R = (0, r.useStateFromStores)([f.default], () => {
+    R = (0, r.useStateFromStores)([T.default], () => {
       var e, t;
-      return (0, T.probablyHasBuildOverride)() ? null === (t = f.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
+      return (0, f.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     [M, v] = p("playground-overrideText", null),
     [D, L] = p("playground-defaultText", I[0].value),

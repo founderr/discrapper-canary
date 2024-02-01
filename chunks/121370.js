@@ -16,8 +16,8 @@ var n = s("414456"),
   c = s("217513"),
   S = s("528438"),
   E = s("719923"),
-  f = s("409214"),
-  T = s("570697"),
+  T = s("409214"),
+  f = s("570697"),
   m = s("782340"),
   _ = s("431416");
 
@@ -42,7 +42,7 @@ function g(e) {
     let t = r(e, null == A ? void 0 : A.themeColors);
     i(t ? void 0 : e)
   };
-  return (0, a.jsx)(T.default, {
+  return (0, a.jsx)(f.default, {
     title: m.default.Messages.USER_SETTINGS_PROFILE_THEME,
     disabled: !R && !g,
     className: l(_.profileThemesSection, N),
@@ -52,7 +52,7 @@ function g(e) {
       className: _.sectionContainer,
       children: [(0, a.jsx)("div", {
         className: _.sparkleContainer,
-        children: (0, a.jsx)(f.default, {
+        children: (0, a.jsx)(T.default, {
           onChange: e => L([e, x]),
           color: O,
           suggestedColors: D,
@@ -67,7 +67,7 @@ function g(e) {
         })
       }), (0, a.jsx)("div", {
         className: _.sparkleContainer,
-        children: (0, a.jsx)(f.default, {
+        children: (0, a.jsx)(T.default, {
           onChange: e => L([O, e]),
           color: x,
           suggestedColors: D,

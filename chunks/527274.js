@@ -16,8 +16,8 @@ var n = s("627445"),
   c = s("447645"),
   S = s("52704"),
   E = s("121370"),
-  f = s("370505"),
-  T = s("713135"),
+  T = s("370505"),
+  f = s("713135"),
   m = s("26989"),
   _ = s("697218"),
   g = s("216422"),
@@ -71,14 +71,14 @@ function v(e) {
   l(null != k, "guild should not be null");
   let H = (0, o.useGuildAutomodProfileQuarantineErrors)(k.id),
     w = (0, i.useStateFromStores)([m.default], () => null == k.id ? null : m.default.getMember(k.id, L.id)),
-    V = (0, i.useStateFromStores)([T.default], () => T.default.getGuildMemberProfile(L.id, k.id)),
+    V = (0, i.useStateFromStores)([f.default], () => f.default.getGuildMemberProfile(L.id, k.id)),
     Y = h.default.canUsePremiumProfileCustomization(L),
     W = (0, d.showRemoveAvatar)(P, null == w ? void 0 : w.avatar),
     K = (0, d.showRemoveBanner)(b, null == V ? void 0 : V.banner),
     z = (0, C.canResetThemeColors)(y, null == V ? void 0 : V.themeColors),
     Q = null !== (t = null == V ? void 0 : V.bio) && void 0 !== t ? t : "",
     q = null !== (s = null == V ? void 0 : V.pronouns) && void 0 !== s ? s : "",
-    X = (e, t, s) => {
+    Z = (e, t, s) => {
       s(null != e ? e : null != t ? null : void 0)
     };
   return (0, a.jsxs)("div", {
@@ -89,7 +89,7 @@ function v(e) {
       pendingNick: j,
       currentNick: null == w ? void 0 : w.nick,
       guild: k
-    }, "nick"), (0, a.jsx)(f.default, {
+    }, "nick"), (0, a.jsx)(T.default, {
       sectionTitle: R.default.Messages.USER_SETTINGS_PRONOUNS,
       errors: null == F ? void 0 : F.pronouns,
       onPronounsChange: e => {
@@ -111,14 +111,14 @@ function v(e) {
           })]
         }),
         showRemoveAvatarButton: W,
-        onAvatarChange: e => X(e, null == w ? void 0 : w.avatar, I.setPendingAvatar),
+        onAvatarChange: e => Z(e, null == w ? void 0 : w.avatar, I.setPendingAvatar),
         errors: null == F ? void 0 : F.avatar,
         guildId: k.id,
         disabled: !Y
       }, "avatar"), (0, a.jsx)(S.default, {
         showRemoveBannerButton: K,
         errors: null == F ? void 0 : F.banner,
-        onBannerChange: e => X(e, null == V ? void 0 : V.banner, I.setPendingBanner),
+        onBannerChange: e => Z(e, null == V ? void 0 : V.banner, I.setPendingBanner),
         guildId: null == k ? void 0 : k.id,
         disabled: !Y
       }, "banner"), (0, a.jsx)(E.default, {

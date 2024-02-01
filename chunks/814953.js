@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("669491"),
   S = s("77078"),
   E = s("913144"),
-  f = s("776156"),
-  T = s("527015"),
+  T = s("776156"),
+  f = s("527015"),
   m = s("518888"),
   _ = s("133403"),
   g = s("913801"),
@@ -60,7 +60,7 @@ let z = ["discord_web", "discord_marketing", "discord_developers", "discord_ios"
 function q(e) {
   return "discord_ios" in e || "discord_android" in e
 }
-class X extends n.Component {
+class Z extends n.Component {
   render() {
     let {
       project: e,
@@ -136,7 +136,7 @@ class X extends n.Component {
     }
   }
 }
-class Z extends n.Component {
+class X extends n.Component {
   async refreshBuildOverrides() {
     this.setState({
       loading: !0
@@ -187,7 +187,7 @@ class Z extends n.Component {
       saving: t,
       errors: s
     } = this.state;
-    return null == e ? null : o.map(e, (e, n) => (0, a.jsx)(X, {
+    return null == e ? null : o.map(e, (e, n) => (0, a.jsx)(Z, {
       project: n,
       overrideType: e.type,
       overrideId: e.id,
@@ -862,13 +862,13 @@ let et = u.default.connectStores([D.default, x.default], () => ({
     isAnalyticsDebuggerEnabled: d,
     isIdleStatusIndicatorEnabled: c,
     appDirectoryIncludesInactiveCollections: E,
-    isDevToolsEnabled: f
+    isDevToolsEnabled: T
   } = e, m = (0, u.useStateFromStores)([P.default], () => P.default.getCurrentUser());
   return (0, a.jsxs)(S.FormSection, {
     title: "Developer Flags",
     tag: S.FormTitleTags.H1,
     children: [v.default.isDeveloper && (0, a.jsx)(S.FormSwitch, {
-      value: f,
+      value: T,
       note: (0, a.jsxs)(a.Fragment, {
         children: ["Enable client DevTools (open via Help menu in top right or with", " ", (0, a.jsx)("kbd", {
           className: V.key,
@@ -888,63 +888,63 @@ let et = u.default.connectStores([D.default, x.default], () => ({
     }), (0, a.jsx)(S.FormSwitch, {
       value: t,
       note: "Force trace all client requests with APM",
-      onChange: e => (0, T.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         trace: e
       }),
       children: "Enable Tracing Requests"
     }), (0, a.jsx)(S.FormSwitch, {
       value: s,
       note: "Force all API requests to canary instances",
-      onChange: e => (0, T.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         canary: e
       }),
       children: "Enable Forced Canary"
     }), (0, a.jsx)(S.FormSwitch, {
       value: n,
       note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
-      onChange: e => (0, T.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         logGatewayEvents: e
       }),
       children: "Enable Logging of Gateway Events to Console"
     }), (0, a.jsx)(S.FormSwitch, {
       value: l,
       note: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
-      onChange: e => (0, T.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         logOverlayEvents: e
       }),
       children: "Enable Logging of Overlay RPC Events & Commands"
     }), (0, a.jsx)(S.FormSwitch, {
       value: i,
       note: "Logs all analytics events to the developer console",
-      onChange: e => (0, T.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         logAnalyticsEvents: e
       }),
       children: "Enable Logging of Analytics Events"
     }), (0, a.jsx)(S.FormSwitch, {
       value: o,
       note: "Only enable on devices you trust.",
-      onChange: e => (0, T.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         sourceMapsEnabled: e
       }),
       children: "Enable source maps to be loaded on this client"
     }), (0, a.jsx)(S.FormSwitch, {
       value: d,
       note: "Displays a floating debugger with viewed impressions",
-      onChange: e => (0, T.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         analyticsDebuggerEnabled: e
       }),
       children: "Enable standard analytics debugger view"
     }), (null == m ? void 0 : m.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
       value: c,
       note: "Displays a floating idle status indicator",
-      onChange: e => (0, T.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         idleStatusIndicatorEnabled: e
       }),
       children: "Enable idle status indicator"
     }) : null, null, (null == m ? void 0 : m.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
       value: E,
       note: "In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.",
-      onChange: e => (0, T.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         appDirectoryIncludesInactiveCollections: e
       }),
       children: "Preview Unpublished Collections on App Directory Homepage"
@@ -1033,7 +1033,7 @@ function en() {
         onChange: l
       }), (0, a.jsx)(S.Button, {
         onClick: () => {
-          "" === s ? f.default.setChangelogOverride(null) : f.default.setChangelogOverride(s)
+          "" === s ? T.default.setChangelogOverride(null) : T.default.setChangelogOverride(s)
         },
         disabled: t === s,
         children: "Update Changelog"
@@ -1044,7 +1044,7 @@ function en() {
 class el extends n.PureComponent {
   render() {
     return (0, a.jsxs)(n.Fragment, {
-      children: [(0, a.jsx)(et, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(es, {}), (0, a.jsx)(ea, {}), (0, a.jsx)(en, {}), (0, a.jsx)(Z, {})]
+      children: [(0, a.jsx)(et, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(es, {}), (0, a.jsx)(ea, {}), (0, a.jsx)(en, {}), (0, a.jsx)(X, {})]
     })
   }
 }

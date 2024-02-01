@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("476765"),
   S = s("271560"),
   E = s("837008"),
-  f = s("108314"),
-  T = s("677795"),
+  T = s("108314"),
+  f = s("677795"),
   m = s("782340"),
   _ = s("623777");
 let g = e => {
@@ -53,7 +53,7 @@ let g = e => {
     } = g(A), M = async () => {
       let e = await O(h.id);
       e && N()
-    }, v = o.role_benefits.benefits.filter(e => e.ref_type === T.GuildRoleSubscriptionBenefitTypes.CHANNEL), D = o.role_benefits.benefits.filter(e => e.ref_type === T.GuildRoleSubscriptionBenefitTypes.INTANGIBLE), L = i(h.currentPeriodEnd).format("MMMM Do, YYYY"), P = m.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
+    }, v = o.role_benefits.benefits.filter(e => e.ref_type === f.GuildRoleSubscriptionBenefitTypes.CHANNEL), D = o.role_benefits.benefits.filter(e => e.ref_type === f.GuildRoleSubscriptionBenefitTypes.INTANGIBLE), L = i(h.currentPeriodEnd).format("MMMM Do, YYYY"), P = m.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
       numChannels: v.length,
       numAdditionalBenefits: D.length,
       subscriptionEndDate: L
@@ -85,7 +85,7 @@ let g = e => {
           className: _.description,
           variant: "text-sm/normal",
           children: P
-        }), (0, a.jsx)(f.GuildRoleSubscriptionBenefits, {
+        }), (0, a.jsx)(T.GuildRoleSubscriptionBenefits, {
           listingId: o.id,
           guildId: n.guild_id,
           className: _.benefits

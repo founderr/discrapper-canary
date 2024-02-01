@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("70102");
 var s, a, l = n("37983"),
-  r = n("884691"),
-  i = n("414456"),
-  u = n.n(i),
+  i = n("884691"),
+  r = n("414456"),
+  u = n.n(r),
   o = n("446674"),
   d = n("913144"),
   c = n("437822"),
@@ -15,30 +15,30 @@ var s, a, l = n("37983"),
   E = n("568131"),
   I = n("327037"),
   _ = n("208620"),
-  h = n("970366"),
-  p = n("271938"),
-  m = n("476108"),
-  T = n("55411"),
-  N = n("686470"),
+  p = n("970366"),
+  h = n("271938"),
+  T = n("476108"),
+  N = n("55411"),
+  m = n("686470"),
   g = n("552712"),
   A = n("124969"),
   S = n("659632"),
   C = n("701909"),
   v = n("158998"),
-  R = n("404432"),
-  L = n("291850"),
+  L = n("404432"),
+  R = n("291850"),
   O = n("860959"),
   x = n("49111"),
   M = n("782340"),
   D = n("926622");
 o.default.initialize(), (a = s || (s = {})).REGISTER = "register", a.LOGIN = "login";
-class P extends r.PureComponent {
+class P extends i.PureComponent {
   componentDidMount() {
     let {
       authenticated: e,
       isResolved: t
     } = this.props;
-    e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, h.trackAppUIViewed)("gift_code")
+    e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, p.trackAppUIViewed)("gift_code")
   }
   componentDidUpdate(e) {
     let {
@@ -163,7 +163,7 @@ class P extends r.PureComponent {
   renderAuthenticated(e, t) {
     let n = this.getErrorMessage(e);
     return (0, l.jsxs)(A.default, {
-      children: [(0, l.jsx)(R.default, {
+      children: [(0, l.jsx)(L.default, {
         giftCode: e
       }), (0, l.jsx)(A.Button, {
         disabled: null != n,
@@ -189,8 +189,8 @@ class P extends r.PureComponent {
       authenticated: n,
       giftCode: s,
       isResolved: a,
-      isAccepting: r,
-      transitionTo: i,
+      isAccepting: i,
+      transitionTo: r,
       location: u
     } = this.props, {
       fetchingUser: o,
@@ -198,22 +198,22 @@ class P extends r.PureComponent {
     } = this.state;
     if (e === x.NativeAppStates.OPEN && !d) return this.renderAppOpened();
     if (e === x.NativeAppStates.OPENING) return this.renderSpinner(M.default.Messages.APP_OPENING);
-    if (r) return this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_ACCEPTING);
+    if (i) return this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_ACCEPTING);
     if (null == s) return a ? this.renderExpiredInvite() : this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_RESOLVING);
     if (a) {
       if (n) {
         let e = this.state.currentUser;
         return o || null == e ? this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e)
       }
-      return "login" === this.getMode() ? (0, l.jsx)(L.default, {
+      return "login" === this.getMode() ? (0, l.jsx)(R.default, {
         giftCodeSKU: t,
         giftCode: s,
-        transitionTo: i,
+        transitionTo: r,
         location: u
       }) : (0, l.jsx)(O.default, {
         giftCodeSKU: t,
         giftCode: s,
-        transitionTo: i,
+        transitionTo: r,
         location: u
       })
     }
@@ -272,19 +272,19 @@ class P extends r.PureComponent {
     }
   }
 }
-var j = o.default.connectStores([T.default, N.default, p.default, g.default, m.default, _.default], e => {
+var j = o.default.connectStores([N.default, m.default, h.default, g.default, T.default, _.default], e => {
   let t = e.match.params.giftCode,
-    n = T.default.get(t),
+    n = N.default.get(t),
     s = null != n ? g.default.get(n.skuId) : null;
   return {
     giftCode: n,
     sku: s,
-    libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, N.default) : null,
-    authenticated: p.default.isAuthenticated(),
-    defaultRoute: m.default.defaultRoute,
-    isResolved: T.default.getIsResolved(t),
-    isAccepting: T.default.getIsAccepting(t),
-    libraryApplicationsFetched: N.default.fetched,
+    libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, m.default) : null,
+    authenticated: h.default.isAuthenticated(),
+    defaultRoute: T.default.defaultRoute,
+    isResolved: N.default.getIsResolved(t),
+    isAccepting: N.default.getIsAccepting(t),
+    libraryApplicationsFetched: m.default.fetched,
     nativeAppState: _.default.getState(t)
   }
 })(P)

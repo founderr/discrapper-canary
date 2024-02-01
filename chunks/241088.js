@@ -10,10 +10,10 @@ s.r(t), s.d(t, {
     return E
   },
   getSanitizedActivityJoiningRestrictedGuilds: function() {
-    return f
+    return T
   },
   computeFlags: function() {
-    return T
+    return f
   },
   harvestDisabled: function() {
     return m
@@ -51,12 +51,12 @@ function E() {
   return 0 === i.default.totalUnavailableGuilds && (e = e.filter(e => null != r.default.getGuild(e))), e
 }
 
-function f() {
+function T() {
   let e = l.ActivityJoiningRestrictedGuilds.getSetting();
   return 0 === i.default.totalUnavailableGuilds && (e = e.filter(e => null != r.default.getGuild(e))), e
 }
 
-function T(e) {
+function f(e) {
   return (e & o.AllFriendSourceFlags) === o.AllFriendSourceFlags ? {
     all: !0,
     mutualFriends: !0,

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return i
   }
 });
 var s = n("597755"),
   a = n.n(s),
   l = n("279295"),
-  r = {
+  i = {
     dump(e) {
       let t;
       null != performance.memory && (t = {

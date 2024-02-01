@@ -16,8 +16,8 @@ var n = s("917351"),
   c = s("42887"),
   S = s("145131"),
   E = s("161778"),
-  f = s("597870"),
-  T = s("353927"),
+  T = s("597870"),
+  f = s("353927"),
   m = s("782340"),
   _ = s("947148"),
   g = s("926622");
@@ -31,8 +31,8 @@ function h() {
       inputDeviceId: I,
       outputDeviceId: p
     } = (0, i.useStateFromStoresObject)([c.default], () => ({
-      canSetInputDevice: c.default.supports(T.Features.AUDIO_INPUT_DEVICE),
-      canSetOutputDevice: c.default.supports(T.Features.AUDIO_OUTPUT_DEVICE),
+      canSetInputDevice: c.default.supports(f.Features.AUDIO_INPUT_DEVICE),
+      canSetOutputDevice: c.default.supports(f.Features.AUDIO_OUTPUT_DEVICE),
       inputDeviceId: c.default.getInputDeviceId(),
       outputDeviceId: c.default.getOutputDeviceId()
     })),
@@ -42,13 +42,13 @@ function h() {
     type: o.FormText.Types.DESCRIPTION,
     className: g.marginTop8,
     children: m.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
-      onDownloadClick: () => (0, f.openDownloadAppsModal)("Help Text Input Devices")
+      onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Input Devices")
     })
   })), !N && (t = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
     className: g.marginTop8,
     children: m.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
-      onDownloadClick: () => (0, f.openDownloadAppsModal)("Help Text Output Devices")
+      onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Output Devices")
     })
   }));
   let O = l(C).values().first(),

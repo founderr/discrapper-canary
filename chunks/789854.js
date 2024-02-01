@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("42887"),
   S = s("145131"),
   E = s("599110"),
-  f = s("773336"),
-  T = s("50885"),
+  T = s("773336"),
+  f = s("50885"),
   m = s("161778"),
   _ = s("225849"),
   g = s("397336"),
@@ -40,7 +40,7 @@ function x() {
   } = (0, r.useStateFromStoresObject)([c.default], () => ({
     experimentalEncoders: c.default.getExperimentalEncoders()
   }));
-  return "stable" !== T.default.releaseChannel && c.default.isExperimentalEncodersSupported() ? (0, a.jsx)(d.FormSwitch, {
+  return "stable" !== f.default.releaseChannel && c.default.isExperimentalEncodersSupported() ? (0, a.jsx)(d.FormSwitch, {
     className: i(p.marginTop8, p.marginBottom20),
     value: e,
     onChange: e => u.default.setExperimentalEncoders(e),
@@ -62,8 +62,8 @@ function R() {
       supportsOpenH264: c.default.supports(N.Features.OPEN_H264),
       av1Enabled: c.default.getAv1Enabled()
     })),
-    T = n.useRef(null);
-  return (0, _.default)(T, g.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
+    f = n.useRef(null);
+  return (0, _.default)(f, g.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(d.FormSection, {
       className: p.marginBottom20,
       title: I.default.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
@@ -94,24 +94,24 @@ function R() {
         style: {
           scrollMarginTop: "48px"
         },
-        ref: T
+        ref: f
       }), (0, a.jsx)(d.FormSwitch, {
         className: i(p.marginTop8, p.marginBottom20),
         value: s,
         onChange: e => {
-          (0, f.isWindows)() && u.default.setAV1Enabled(e && E), u.default.setHardwareH264(e)
+          (0, T.isWindows)() && u.default.setAV1Enabled(e && E), u.default.setHardwareH264(e)
         },
         disabled: !t,
         note: I.default.Messages.FORM_HELP_HARDWARE_H264,
         children: I.default.Messages.USER_SETTINGS_VOICE_HARDWARE_H264
-      }), (0, f.isWindows)() && (0, a.jsx)(d.FormSwitch, {
+      }), (0, T.isWindows)() && (0, a.jsx)(d.FormSwitch, {
         className: i(p.marginTop8, p.marginBottom20),
-        value: (0, f.isWindows)() ? E && s : E,
+        value: (0, T.isWindows)() ? E && s : E,
         onChange: e => {
-          (0, f.isWindows)() ? O(e && s): O(e)
+          (0, T.isWindows)() ? O(e && s): O(e)
         },
-        note: (0, f.isWindows)() && I.default.Messages.FORM_HELP_HARDWARE_AV1,
-        disabled: (0, f.isWindows)() && !s,
+        note: (0, T.isWindows)() && I.default.Messages.FORM_HELP_HARDWARE_AV1,
+        disabled: (0, T.isWindows)() && !s,
         children: I.default.Messages.USER_SETTINGS_VOICE_AV1
       }), (0, a.jsx)(x, {})]
     })]

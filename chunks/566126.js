@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("599110"),
   S = s("659632"),
   E = s("49111"),
-  f = s("782340"),
-  T = s("882553");
+  T = s("782340"),
+  f = s("882553");
 class m extends n.Component {
   get analyticsLocation() {
     let {
@@ -40,9 +40,9 @@ class m extends n.Component {
     } = this.state;
     return (0, a.jsxs)(i.FormSection, {
       tag: i.FormTitleTags.H1,
-      title: f.default.Messages.GIFT_INVENTORY_REDEEM_CODES,
+      title: T.default.Messages.GIFT_INVENTORY_REDEEM_CODES,
       children: [(0, a.jsx)(i.FormTitle, {
-        children: f.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_PROMPT
+        children: T.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_PROMPT
       }), (0, a.jsx)("form", {
         onSubmit: this.handleSubmit,
         children: (0, a.jsxs)(u.default, {
@@ -51,18 +51,18 @@ class m extends n.Component {
             value: t,
             onChange: this.handleChange,
             placeholder: "WUMP-AAAAA-BBBBB-CCCCC",
-            error: !l && n ? f.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_INVALID : null,
-            className: T.codeRedemptionInput
+            error: !l && n ? T.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_INVALID : null,
+            className: f.codeRedemptionInput
           }), (0, a.jsx)(i.Button, {
             type: "submit",
             submitting: s,
-            children: f.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_REDEEM
+            children: T.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_REDEEM
           })]
         })
       }), l ? (0, a.jsx)(i.Text, {
-        className: T.errorMessage,
+        className: f.errorMessage,
         variant: "text-sm/normal",
-        children: f.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_PROMOTION.format({
+        children: T.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_PROMOTION.format({
           promoLink: () => {
             window.open("https://discord.com/billing/promotions/".concat(t))
           }

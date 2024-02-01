@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("642950"),
   S = s("812204"),
   E = s("716241"),
-  f = s("685665"),
-  T = s("360871"),
+  T = s("685665"),
+  f = s("360871"),
   m = s("184900"),
   _ = s("11899"),
   g = s("713135"),
@@ -60,7 +60,7 @@ function j(e) {
     selectedGuild: t
   } = e, {
     AnalyticsLocationProvider: s
-  } = (0, f.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([N.default], () => {
+  } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([N.default], () => {
     let e = N.default.getCurrentUser();
     return i(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
   }), u = (0, r.useStateFromStores)([g.default], () => !g.default.isFetchingProfile(l.id)), I = (0, r.useStateFromStores)([h.default], () => h.default.hidePersonalInformation), {
@@ -112,7 +112,7 @@ function j(e) {
       pendingPronouns: y,
       pendingNickname: b,
       activityName: D.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
-      activityCharacter: T.FakeActivityCharacter.PHIBI,
+      activityCharacter: f.FakeActivityCharacter.PHIBI,
       openPremiumSettings: L
     };
   return (0, a.jsxs)(s, {

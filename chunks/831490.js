@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("439141"),
   S = s("739477"),
   E = s("42887"),
-  f = s("697218"),
-  T = s("49111"),
+  T = s("697218"),
+  f = s("49111"),
   m = s("782340"),
   _ = s("967790");
 let g = {
@@ -28,7 +28,7 @@ function h(e) {
   let {
     previewEnabled: t,
     onEnablePreview: s
-  } = e, h = E.default.getCameraComponent(), [N, I] = n.useState((0, d.getLastUsedVideoBackgroundOption)(f.default.getCurrentUser())), p = n.useRef(!1), C = n.useRef(N), A = (0, o.useAnalyticsContext)(), O = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
+  } = e, h = E.default.getCameraComponent(), [N, I] = n.useState((0, d.getLastUsedVideoBackgroundOption)(T.default.getCurrentUser())), p = n.useRef(!1), C = n.useRef(N), A = (0, o.useAnalyticsContext)(), O = (0, l.useStateFromStores)([E.default], () => Object.values(E.default.getVideoDevices()).length > 0);
   return n.useEffect(() => () => {
     p.current && r.default.wait(() => (0, u.saveLastUsedBackgroundOption)(C.current))
   }, []), (0, a.jsx)(S.default, {
@@ -36,7 +36,7 @@ function h(e) {
     onSelectBackgroundOption: e => {
       p.current = !0, C.current = e, I(e), (0, c.applyBackgroundOptionLive)(e, {
         location: A.location
-      }).catch(T.NOOP)
+      }).catch(f.NOOP)
     },
     renderCamera: e => t ? (0, a.jsx)("div", {
       className: _.cameraWrapper,

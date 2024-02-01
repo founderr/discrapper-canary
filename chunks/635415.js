@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("345210"),
   S = s("793346"),
   E = s("154889"),
-  f = s("917247"),
-  T = s("956597"),
+  T = s("917247"),
+  f = s("956597"),
   m = s("635956"),
   _ = s("783142"),
   g = s("217513"),
@@ -54,8 +54,8 @@ function y(e) {
     tryItOutThemeColors: z,
     tryItOutAvatar: Q,
     tryItOutBanner: q,
-    tryItOutAvatarDecoration: X,
-    tryItOutProfileEffectId: Z
+    tryItOutAvatarDecoration: Z,
+    tryItOutProfileEffectId: X
   } = (0, l.useStateFromStoresObject)([N.default], () => {
     let e = N.default.getAllPending(),
       t = N.default.getErrors(),
@@ -65,7 +65,7 @@ function y(e) {
       ...s,
       errors: t
     }
-  }), J = (0, c.default)(X), $ = (0, S.default)(Z), ee = n.useRef(null);
+  }), J = (0, c.default)(Z), $ = (0, S.default)(X), ee = n.useRef(null);
   (0, h.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
   let et = (0, g.default)(G.id),
     es = null == et ? void 0 : et.getPreviewBio(K),
@@ -82,7 +82,7 @@ function y(e) {
       location_stack: en
     })
   }, [en, G]);
-  let el = (null === (y = (0, f.usePremiumTrialOffer)()) || void 0 === y ? void 0 : null === (t = y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === j.PremiumSubscriptionSKUs.TIER_2,
+  let el = (null === (y = (0, T.usePremiumTrialOffer)()) || void 0 === y ? void 0 : null === (t = y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === j.PremiumSubscriptionSKUs.TIER_2,
     ei = (0, E.usePremiumDiscountOffer)(),
     er = (0, E.discountOfferHasTier)(ei, j.PremiumSubscriptionSKUs.TIER_2),
     eo = "TryOutPremiumSection";
@@ -185,7 +185,7 @@ function y(e) {
       }), el && (0, a.jsxs)("div", {
         children: [(0, a.jsx)("div", {
           className: B.premiumTier2Divider
-        }), (0, a.jsx)(T.default, {
+        }), (0, a.jsx)(f.default, {
           type: j.PremiumUpsellTypes.CUSTOM_PROFILE_TRY_OUT_UPSELL,
           subscriptionTier: j.PremiumSubscriptionSKUs.TIER_2
         })]

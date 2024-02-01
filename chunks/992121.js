@@ -15,16 +15,16 @@ var a = s("37983"),
   c = s("831490"),
   S = s("353927"),
   E = s("782340"),
-  f = s("926622");
+  T = s("926622");
 
-function T() {
+function f() {
   return (0, a.jsx)(o.FormNotice, {
     type: o.CardTypes.PRIMARY,
     title: E.default.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
     body: E.default.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
     button: (0, a.jsx)(o.Button, {
       size: o.Button.Sizes.SMALL,
-      className: f.marginTop20,
+      className: T.marginTop20,
       onClick: () => (0, u.openDownloadAppsModal)("Video unsupported browser"),
       children: E.default.Messages.DOWNLOAD_APP
     })
@@ -38,15 +38,15 @@ function m() {
     children: [(0, a.jsx)(o.HeadingLevel, {
       component: (0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H1,
-        className: f.marginBottom20,
+        className: T.marginBottom20,
         children: E.default.Messages.VIDEO_SETTINGS
       }),
       children: e ? (0, a.jsx)(c.default, {
         previewEnabled: t,
         onEnablePreview: () => s(!0)
-      }) : (0, a.jsx)(T, {})
+      }) : (0, a.jsx)(f, {})
     }), (0, a.jsx)(o.FormDivider, {
-      className: i(f.marginBottom40, f.marginTop40)
+      className: i(T.marginBottom40, T.marginTop40)
     })]
   })
 }

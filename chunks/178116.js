@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 }), n("222007");
 var s = n("37983"),
   a = n("884691"),
   l = n("730290"),
-  r = n("446674"),
-  i = n("872717"),
+  i = n("446674"),
+  r = n("872717"),
   u = n("970366"),
   o = n("813006"),
   d = n("476108"),
@@ -17,12 +17,12 @@ var s = n("37983"),
   E = n("49111"),
   I = n("782340"),
   _ = n("926622");
-r.default.initialize();
-class h extends a.PureComponent {
+i.default.initialize();
+class p extends a.PureComponent {
   componentDidMount() {
     let e = (0, f.default)(this.props.location),
       t = (0, l.parse)(this.props.location.search);
-    i.default.post({
+    r.default.post({
       url: E.Endpoints.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
       body: {
         token: e,
@@ -117,9 +117,9 @@ class h extends a.PureComponent {
     }
   }
 }
-h.defaultProps = {
+p.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var p = r.default.connectStores([d.default], () => ({
+var h = i.default.connectStores([d.default], () => ({
   defaultRoute: d.default.defaultRoute
-}))(h)
+}))(p)

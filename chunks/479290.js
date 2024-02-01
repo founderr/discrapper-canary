@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("812204"),
   S = s("685665"),
   E = s("585653"),
-  f = s("617917"),
-  T = s("257869"),
+  T = s("617917"),
+  f = s("257869"),
   m = s("837008"),
   _ = s("108314"),
   g = s("946964"),
@@ -54,7 +54,7 @@ var M = function() {
   }), B = "true" !== b.gift && null != M, [y, F] = n.useState(v.length > 0 ? v[0].value : null), {
     AnalyticsLocationProvider: G,
     analyticsLocations: k
-  } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE), [H, w] = n.useState(""), [V, Y] = n.useState(""), [W, K] = n.useState(""), [z, Q] = n.useState(""), [q, X] = n.useState("");
+  } = (0, S.default)(c.default.PAYMENT_FLOW_TEST_PAGE), [H, w] = n.useState(""), [V, Y] = n.useState(""), [W, K] = n.useState(""), [z, Q] = n.useState(""), [q, Z] = n.useState("");
   return (0, a.jsx)(G, {
     children: (0, a.jsxs)(r.FormSection, {
       title: "Payment Flow Modals",
@@ -123,7 +123,7 @@ var M = function() {
           value: D,
           options: v,
           onChange: e => L(e)
-        }), null != D ? (0, a.jsx)(f.default, {
+        }), null != D ? (0, a.jsx)(T.default, {
           guild: D,
           analyticsLocation: {}
         }) : (0, a.jsx)("div", {
@@ -234,7 +234,7 @@ var M = function() {
           options: v,
           onChange: e => F(e)
         })]
-      }), (0, a.jsx)(T.GroupListingsFetchContextProvider, {
+      }), (0, a.jsx)(f.GroupListingsFetchContextProvider, {
         guildId: null == y ? void 0 : y.id,
         children: (0, a.jsx)(R, {
           selectedGuildForGuildSub: y
@@ -297,7 +297,7 @@ var M = function() {
         children: [(0, a.jsx)(r.TextInput, {
           placeholder: "SKU ID",
           value: q,
-          onChange: X
+          onChange: Z
         }), (0, a.jsx)(r.Button, {
           onClick: () => (0, g.default)({
             skuId: q,

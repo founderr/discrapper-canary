@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("368121"),
   S = s("228220"),
   E = s("719923"),
-  f = s("78581"),
-  T = s("23106"),
+  T = s("78581"),
+  f = s("23106"),
   m = s("429829"),
   _ = s("553372"),
   g = s("191191"),
@@ -70,7 +70,7 @@ function p(e) {
     sound: t
   } = e, {
     previewSound: s
-  } = (0, T.default)(t, null), n = (0, f.getAmplitudinalSoundboardVolume)(), l = 0 === n ? h.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : h.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
+  } = (0, f.default)(t, null), n = (0, T.getAmplitudinalSoundboardVolume)(), l = 0 === n ? h.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME : h.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
     emojiName: t.emojiName,
     soundName: t.name
   });
@@ -88,7 +88,7 @@ function C(e) {
     sound: t,
     isGlobal: s,
     onSelect: n
-  } = e, l = null != t, d = null == t ? void 0 : t.emojiId, u = null == t ? void 0 : t.emojiName, E = l && (null != u || null != d), f = e => (0, a.jsx)(r.Text, {
+  } = e, l = null != t, d = null == t ? void 0 : t.emojiId, u = null == t ? void 0 : t.emojiName, E = l && (null != u || null != d), T = e => (0, a.jsx)(r.Text, {
     variant: "text-xs/medium",
     color: "header-secondary",
     tag: "span",
@@ -108,7 +108,7 @@ function C(e) {
         className: N.soundText,
         children: null == t ? h.default.Messages.NONE : s ? h.default.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
           soundName: t.name,
-          subtextHook: f
+          subtextHook: T
         }) : t.name
       }), l ? (0, a.jsx)(p, {
         sound: t

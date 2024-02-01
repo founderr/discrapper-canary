@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("427459"),
   S = s("719923"),
   E = s("560437"),
-  f = s("397723"),
-  T = s("717266"),
+  T = s("397723"),
+  f = s("717266"),
   m = s("49111"),
   _ = s("782340"),
   g = s("152089");
@@ -34,7 +34,7 @@ function h(e) {
     className: g.unappliedGuildBoostSlot,
     children: [(0, a.jsxs)("div", {
       className: g.unappliedGuildBoostSlotContentPrimary,
-      children: [(0, a.jsx)(T.default, {
+      children: [(0, a.jsx)(f.default, {
         className: g.unappliedGuildBoostSlotIcon,
         hasCooldown: t.isOnCooldown(),
         isCanceled: S,
@@ -45,7 +45,7 @@ function h(e) {
         children: _.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format({
           date: o.currentPeriodEnd
         })
-      }) : t.isOnCooldown() && null != u ? (0, a.jsx)(f.default, {
+      }) : t.isOnCooldown() && null != u ? (0, a.jsx)(T.default, {
         cooldown: u.getTime()
       }) : (0, a.jsx)(i.Text, {
         className: g.unappliedGuildBoostSlotDescription,
@@ -100,7 +100,7 @@ function I(e) {
 var p = function(e) {
   let {
     guildBoostSlots: t
-  } = e, f = (0, l.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()), T = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), p = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), {
+  } = e, T = (0, l.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()), f = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), p = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), {
     appliedGuildBoostSlots: C,
     unappliedGuildBoostSlots: A,
     numActiveGuildBoostSlots: O
@@ -115,14 +115,14 @@ var p = function(e) {
       unappliedGuildBoostSlots: s,
       numActiveGuildBoostSlots: a
     }
-  }, [t]), x = null != f ? S.default.getNumIncludedPremiumGuildSubscriptionSlots(f.planId) : 0, R = Math.max(0, x - C.length), M = O > x, v = x === t.length, D = v && R === x ? x : 1, L = n.useMemo(() => {
+  }, [t]), x = null != T ? S.default.getNumIncludedPremiumGuildSubscriptionSlots(T.planId) : 0, R = Math.max(0, x - C.length), M = O > x, v = x === t.length, D = v && R === x ? x : 1, L = n.useMemo(() => {
     let e = [];
     for (let t = 0; t < D; t++) e.push((0, a.jsx)(E.default, {
       className: g.headerBoostGem,
-      useReducedMotion: T
+      useReducedMotion: f
     }, t));
     return e
-  }, [D, T]), P = n.useMemo(() => A.find(e => e.isAvailable()), [A]);
+  }, [D, f]), P = n.useMemo(() => A.find(e => e.isAvailable()), [A]);
   if (0 === A.length) return null;
   let j = A.length;
   return (0, a.jsxs)("div", {
@@ -202,8 +202,8 @@ var p = function(e) {
         isCancellable: M,
         onCancel: N,
         onUncancel: I,
-        premiumSubscription: f,
-        useReducedMotion: T
+        premiumSubscription: T,
+        useReducedMotion: f
       }, e.id))
     })]
   })

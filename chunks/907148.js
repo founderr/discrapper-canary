@@ -16,8 +16,8 @@ var n = s("627445"),
   c = s("702877"),
   S = s("668688"),
   E = s("447645"),
-  f = s("569460"),
-  T = s("97747"),
+  T = s("569460"),
+  f = s("97747"),
   m = s("52704"),
   _ = s("79685"),
   g = s("741781"),
@@ -70,14 +70,14 @@ function D() {
     autoTrackExposure: !1
   });
   let q = (0, C.default)(b.id),
-    X = null == q ? void 0 : q.getLegacyUsername(),
-    Z = (null !== (s = null === (e = V.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? V.global_name : null !== (n = null == Y ? void 0 : Y.nick) && void 0 !== n ? n : [],
+    Z = null == q ? void 0 : q.getLegacyUsername(),
+    X = (null !== (s = null === (e = V.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0) > 0 ? V.global_name : null !== (n = null == Y ? void 0 : Y.nick) && void 0 !== n ? n : [],
     J = (null !== (D = null === (t = V.bio) || void 0 === t ? void 0 : t.length) && void 0 !== D ? D : 0) > 0 ? V.bio : null !== (L = null == Y ? void 0 : Y.bio) && void 0 !== L ? L : [];
   return (0, a.jsxs)("div", {
     className: v.sectionsContainer,
-    children: [(0, a.jsx)(f.default, {
+    children: [(0, a.jsx)(T.default, {
       placeholder: b.username,
-      errors: Z,
+      errors: X,
       currentGlobalName: b.globalName,
       pendingGlobalName: y,
       onGlobalNameChange: r.setPendingGlobalNameName
@@ -123,8 +123,8 @@ function D() {
       },
       pendingBio: G,
       currentBio: null !== (j = null == U ? void 0 : U.bio) && void 0 !== j ? j : ""
-    }, "bio"), null != X && (0, a.jsx)(T.default, {
-      legacyUsername: X
+    }, "bio"), null != Z && (0, a.jsx)(f.default, {
+      legacyUsername: Z
     }, "legacy_username")]
   })
 }

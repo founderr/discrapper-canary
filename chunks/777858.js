@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return p
   }
 }), n("222007");
 var s = n("37983"),
   a = n("884691"),
   l = n("446674"),
-  r = n("142833"),
-  i = n("457108"),
+  i = n("142833"),
+  r = n("457108"),
   u = n("393414"),
   o = n("970366"),
   d = n("124969"),
@@ -18,22 +18,22 @@ var s = n("37983"),
   I = n("782340"),
   _ = n("255987");
 
-function h(e) {
+function p(e) {
   let {
     location: t
-  } = e, [h, p] = a.useState(!1), {
-    verifySuccess: m,
-    verifyErrors: T,
-    redirectGuildId: N
+  } = e, [p, h] = a.useState(!1), {
+    verifySuccess: T,
+    verifyErrors: N,
+    redirectGuildId: m
   } = (0, l.useStateFromStores)([c.default], () => c.default.getState());
   a.useEffect(() => {
-    let e = (0, i.default)(t);
-    r.default.verify(e), (0, o.trackAppUIViewed)("verify_hub_email")
+    let e = (0, r.default)(t);
+    i.default.verify(e), (0, o.trackAppUIViewed)("verify_hub_email")
   }, [t]);
   let g = () => {
-    (0, f.default)(N), p(!0)
+    (0, f.default)(m), h(!0)
   };
-  return h ? (0, s.jsxs)(d.default, {
+  return p ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Title, {
       className: _.title,
       children: I.default.Messages.APP_OPENED_TITLE
@@ -42,10 +42,10 @@ function h(e) {
       children: I.default.Messages.APP_OPENED_BODY
     }), (0, s.jsx)(d.Button, {
       className: _.spacedButton,
-      onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(N)),
+      onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(m)),
       children: I.default.Messages.CONTINUE_TO_WEBAPP
     })]
-  }) : m ? (0, s.jsxs)(d.default, {
+  }) : T ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
       className: _.image,
       src: n("176872")
@@ -56,7 +56,7 @@ function h(e) {
       onClick: g,
       children: I.default.Messages.VERIFICATION_OPEN_DISCORD
     })]
-  }) : null != T ? (0, s.jsxs)(d.default, {
+  }) : null != N ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
       className: _.image,
       src: n("768025")

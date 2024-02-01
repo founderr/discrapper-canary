@@ -16,8 +16,8 @@ var n = s("77078"),
   c = s("845579"),
   S = s("49111"),
   E = s("782340"),
-  f = s("852003"),
-  T = s("926622");
+  T = s("852003"),
+  f = s("926622");
 
 function m() {
   let e = c.ShowCurrentGame.useSetting(),
@@ -43,10 +43,10 @@ function m() {
       }(e)
     };
   return (0, a.jsxs)(n.FormSection, {
-    className: T.marginBottom40,
+    className: f.marginBottom40,
     children: [(0, a.jsx)(n.FormTitle, {
       tag: n.FormTitleTags.H5,
-      className: T.marginBottom8,
+      className: f.marginBottom8,
       children: E.default.Messages.ACTIVITY_STATUS
     }), (0, a.jsx)(n.FormSwitch, {
       value: e,
@@ -68,10 +68,10 @@ function _() {
   let e = c.AllowActivityPartyPrivacyFriends.useSetting(),
     t = c.AllowActivityPartyPrivacyVoiceChannel.useSetting();
   return (0, a.jsxs)(n.FormSection, {
-    className: T.marginBottom40,
+    className: f.marginBottom40,
     children: [(0, a.jsx)(n.FormTitle, {
       tag: n.FormTitleTags.H5,
-      className: T.marginBottom8,
+      className: f.marginBottom8,
       children: E.default.Messages.ACTIVITY_PARTY_PRIVACY
     }), (0, a.jsx)(n.FormSwitch, {
       value: e,
@@ -89,16 +89,16 @@ function _() {
 
 function g() {
   return (0, a.jsxs)(n.FormSection, {
-    className: T.marginBottom40,
+    className: f.marginBottom40,
     children: [(0, a.jsxs)(n.FormTitle, {
       tag: n.FormTitleTags.H5,
-      className: T.marginBottom8,
+      className: f.marginBottom8,
       children: [E.default.Messages.BROADCASTING_SETTINGS, (0, a.jsx)(i.default, {
-        className: f.betaTag
+        className: T.betaTag
       })]
     }), (0, a.jsx)(n.FormText, {
       type: n.FormText.Types.DESCRIPTION,
-      className: T.marginBottom20,
+      className: f.marginBottom20,
       children: E.default.Messages.BROADCASTING_SETTINGS_DESCRIPTION
     }), (0, a.jsx)(n.FormItem, {
       children: (0, a.jsx)(n.Button, {
@@ -112,7 +112,7 @@ function g() {
 
 function h() {
   return (0, a.jsx)(n.FormSection, {
-    className: T.marginBottom40,
+    className: f.marginBottom40,
     children: (0, a.jsx)(n.FormNotice, {
       type: n.FormNotice.Types.PRIMARY,
       body: E.default.Messages.USER_SETTINGS_PRIVACY_TERMS.format({

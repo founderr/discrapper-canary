@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("956089"),
   S = s("306160"),
   E = s("701909"),
-  f = s("773336"),
-  T = s("50885"),
+  T = s("773336"),
+  f = s("50885"),
   m = s("845579"),
   _ = s("271445"),
   g = s("49111"),
@@ -24,7 +24,7 @@ var a = s("37983"),
   N = s("393149");
 
 function I() {
-  let [e] = n.useState(() => T.default.getEnableHardwareAcceleration()), t = m.DisableGamesTab.useSetting(), s = m.DeveloperMode.useSetting(), I = m.DisableHomeAutoNav.useSetting(), {
+  let [e] = n.useState(() => f.default.getEnableHardwareAcceleration()), t = m.DisableGamesTab.useSetting(), s = m.DeveloperMode.useSetting(), I = m.DisableHomeAutoNav.useSetting(), {
     hasLibraryApplication: p,
     testModeApplicationId: C
   } = (0, l.useStateFromStoresObject)([u.default, d.default], () => ({
@@ -41,7 +41,7 @@ function I() {
       header: h.default.Messages.SWITCH_HARDWARE_ACCELERATION,
       confirmText: h.default.Messages.OKAY,
       cancelText: h.default.Messages.CANCEL,
-      onConfirm: () => T.default.setEnableHardwareAcceleration(e),
+      onConfirm: () => f.default.setEnableHardwareAcceleration(e),
       ...t,
       children: (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
@@ -61,7 +61,7 @@ function I() {
         apiDocsUrl: g.MarketingURLs.API_DOCS
       }),
       children: h.default.Messages.DEVELOPER_MODE
-    }), f.isPlatformEmbedded && (0, a.jsx)(r.FormSwitch, {
+    }), T.isPlatformEmbedded && (0, a.jsx)(r.FormSwitch, {
       value: e,
       onChange: x,
       note: h.default.Messages.HARDWARE_ACCELERATION_HELP_TEXT,

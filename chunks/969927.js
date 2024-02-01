@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 }), s("222007");
 var a = s("37983"),
@@ -16,8 +16,8 @@ var a = s("37983"),
   S = s("782340"),
   E = s("964405");
 
-function f(e) {
-  var t, s, f, T;
+function T(e) {
+  var t, s, T, f;
   let {
     transitionState: m,
     onSuccess: _,
@@ -79,7 +79,7 @@ function f(e) {
         }), (0, a.jsx)(i.FormItem, {
           className: E.newPassword,
           title: S.default.Messages.FORM_LABEL_NEW_PASSWORD,
-          error: null !== (T = null !== (f = null == L ? void 0 : null === (s = L.new_password) || void 0 === s ? void 0 : s[0]) && void 0 !== f ? f : R) && void 0 !== T ? T : void 0,
+          error: null !== (f = null !== (T = null == L ? void 0 : null === (s = L.new_password) || void 0 === s ? void 0 : s[0]) && void 0 !== T ? T : R) && void 0 !== f ? f : void 0,
           children: (0, a.jsx)(i.TextInput, {
             type: "password",
             value: C,

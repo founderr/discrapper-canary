@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("77078"),
   S = s("913144"),
   E = s("54239"),
-  f = s("376152"),
-  T = s("579565"),
+  T = s("376152"),
+  f = s("579565"),
   m = s("778695"),
   _ = s("298878"),
   g = s("697218"),
@@ -47,12 +47,12 @@ function A(e) {
     dropsQuestId: _,
     assets: g,
     articleUrl: h
-  } = t, N = (0, T.getDropByQuestId)(_);
+  } = t, N = (0, f.getDropByQuestId)(_);
   if (null == N) return null;
   let C = () => {
-    (0, f.enrollDropsUser)(_).then(() => {
+    (0, T.enrollDropsUser)(_).then(() => {
       S.default.wait(async () => {
-        await (0, f.fetchDropsUserStatus)()
+        await (0, T.fetchDropsUserStatus)()
       })
     })
   };
@@ -131,7 +131,7 @@ function O(e) {
     platform: l
   } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, h.dateFormat)(o(t.endDate), "LL"), E = I.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
     endDate: S
-  }), f = u ? I.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : I.default.Messages.PROMOTION_CARD_ACTION_CLAIM, T = n.useCallback(() => d(!1), []);
+  }), T = u ? I.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : I.default.Messages.PROMOTION_CARD_ACTION_CLAIM, f = n.useCallback(() => d(!1), []);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: i(p.skuCard, p.promotionCard),
@@ -161,18 +161,18 @@ function O(e) {
           color: c.Button.Colors.BRAND,
           size: c.Button.Sizes.SMALL,
           onClick: () => d(!0),
-          children: f
+          children: T
         })]
       })
     }), r && (0, a.jsx)(c.Modal, {
       renderModal: e => (0, a.jsx)(m.default, {
         ...e,
-        onClose: T,
+        onClose: f,
         code: s,
         drop: t,
         platform: l
       }),
-      onCloseRequest: T
+      onCloseRequest: f
     })]
   })
 }
@@ -184,14 +184,14 @@ var x = function(e) {
   } = e, l = [], i = [], r = (0, u.default)([g.default], () => g.default.getCurrentUser()), d = !1;
   if (null == n) return null;
   for (let e of Object.keys(n)) {
-    let t = (0, T.getDropByQuestId)(e);
+    let t = (0, f.getDropByQuestId)(e);
     if (null == t) continue;
     let s = n[e],
-      a = (0, T.getDropsPartnerGameNameByQuestId)(e);
+      a = (0, f.getDropsPartnerGameNameByQuestId)(e);
     if (null == a) continue;
-    let u = (0, T.getEligibilityByRunningGameDetection)(a),
+    let u = (0, f.getEligibilityByRunningGameDetection)(a),
       c = s.eligible && u,
-      S = (0, T.getDropsExperiment)(a);
+      S = (0, f.getDropsExperiment)(a);
     if (null == S) continue;
     c && S.trackExposure({
       location: "ENTITLEMENT_GIFTS"
@@ -201,12 +201,12 @@ var x = function(e) {
       }, {
         autoTrackExposure: !1
       }).showUnenroll),
-      f = S.getCurrentConfig({
+      T = S.getCurrentConfig({
         location: "076035_3"
       }, {
         autoTrackExposure: !1
       }).dropsEnabled;
-    if (!f) continue;
+    if (!T) continue;
     d = !0;
     let m = o(t.endDate, C),
       _ = o();
@@ -248,7 +248,7 @@ var x = function(e) {
     children: [S, (0, a.jsx)(c.FormDivider, {
       className: p.divider
     }), l.map(e => {
-      let t = (0, T.getDropByQuestId)(e.dropsQuestId),
+      let t = (0, f.getDropByQuestId)(e.dropsQuestId),
         s = null != e.dropsStatus.enrolled_at,
         n = null != e.dropsStatus.completed_at;
       return null != t ? (0, a.jsxs)(a.Fragment, {
@@ -260,13 +260,13 @@ var x = function(e) {
           completed: n
         }, t.dropsQuestId), e.showUnenroll && (0, a.jsx)(c.Button, {
           size: c.Button.Sizes.SMALL,
-          onClick: () => (0, f.unenrollDropsUser)(e.dropsQuestId),
+          onClick: () => (0, T.unenrollDropsUser)(e.dropsQuestId),
           children: "UNENROLL"
         })]
       }) : null
     }), i.map(e => {
       var t, s;
-      let n = (0, T.getDropByQuestId)(e.dropsQuestId);
+      let n = (0, f.getDropByQuestId)(e.dropsQuestId);
       return null != n ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(O, {
           drop: n,
@@ -274,7 +274,7 @@ var x = function(e) {
           platform: null !== (s = e.dropsStatus.platform) && void 0 !== s ? s : void 0
         }, e.dropsQuestId), e.showUnenroll && (0, a.jsx)(c.Button, {
           size: c.Button.Sizes.SMALL,
-          onClick: () => (0, f.unenrollDropsUser)(e.dropsQuestId),
+          onClick: () => (0, T.unenrollDropsUser)(e.dropsQuestId),
           children: "UNENROLL"
         })]
       }) : null

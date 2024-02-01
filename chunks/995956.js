@@ -21,7 +21,7 @@ var n = s("77078"),
       hasGuildAffinitiesOrInGuild: S
     } = e, {
       subtitle: E,
-      flavor: f
+      flavor: T
     } = function(e) {
       let {
         hasAppliedGuildBoosts: t,
@@ -57,9 +57,9 @@ var n = s("77078"),
         variant: "heading-lg/bold",
         className: c.subtitle,
         children: E
-      }), null != f && (0, a.jsx)(n.Text, {
+      }), null != T && (0, a.jsx)(n.Text, {
         variant: "text-sm/normal",
-        children: f
+        children: T
       })]
     })
   }

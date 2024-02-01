@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("790618"),
   S = s("181114"),
   E = s("906932"),
-  f = s("570697"),
-  T = s("782340"),
+  T = s("570697"),
+  f = s("782340"),
   m = s("808084");
 
 function _(e) {
@@ -38,11 +38,11 @@ function _(e) {
     analyticsLocations: h,
     isTryItOutFlow: g
   }), [h, g]), C = g || void 0 !== N ? null != N : null != t.avatarDecoration, A = _ ? S.default : o.Button;
-  return (0, a.jsx)(f.default, {
+  return (0, a.jsx)(T.default, {
     className: s,
     forcedDivider: l,
     hasBackground: !0,
-    title: T.default.Messages.USER_SETTINGS_AVATAR_DECORATION,
+    title: f.default.Messages.USER_SETTINGS_AVATAR_DECORATION,
     errors: I,
     children: (0, a.jsxs)("div", {
       className: m.buttonsContainer,
@@ -52,7 +52,7 @@ function _(e) {
         className: i({
           [m.buttonHighlighted]: _
         }),
-        children: T.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+        children: f.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
       }), C && (0, a.jsx)(o.Button, {
         className: m.removeButton,
         color: o.Button.Colors.PRIMARY,
@@ -61,7 +61,7 @@ function _(e) {
         onClick: function() {
           (0, E.setNewPendingAvatarDecoration)(null, t.avatarDecoration)
         },
-        children: T.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
+        children: f.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
       })]
     })
   })

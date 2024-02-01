@@ -16,8 +16,8 @@ var n = s("414456"),
   c = s("476263"),
   S = s("118503"),
   E = s("277703"),
-  f = s("16988"),
-  T = s("427459"),
+  T = s("16988"),
+  f = s("427459"),
   m = s("49111"),
   _ = s("782340"),
   g = s("396375");
@@ -32,7 +32,7 @@ function h(e) {
     style: {
       height: n
     },
-    children: (0, a.jsx)(f.default, {
+    children: (0, a.jsx)(T.default, {
       className: l(g.sparkle, g.sideSparkle),
       style: {
         top: i
@@ -84,7 +84,7 @@ var N = function(e) {
         }), (0, a.jsx)(r.Text, {
           variant: "text-sm/bold",
           color: "text-muted",
-          children: (0, T.getTierName)(I.premiumTier, {
+          children: (0, f.getTierName)(I.premiumTier, {
             useLevels: !1
           })
         })]
@@ -121,7 +121,7 @@ var N = function(e) {
       }), (0, a.jsx)(h, {
         className: g.sparkle3,
         extraLongSparkle: !0
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(T.default, {
         className: l(g.sparkle, g.sparkle4)
       })]
     })]

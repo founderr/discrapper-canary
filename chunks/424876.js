@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("49111"),
   S = s("782340"),
   E = s("973742"),
-  f = s("376121"),
-  T = s("137963");
+  T = s("376121"),
+  f = s("137963");
 
 function m(e) {
   let {
@@ -37,9 +37,9 @@ function m(e) {
     }), (0, a.jsx)(u.default, {
       size: 24
     }), (0, a.jsxs)("div", {
-      className: i(f.guildBoostingSubscriptionRow, E.card),
+      className: i(T.guildBoostingSubscriptionRow, E.card),
       children: [(0, a.jsx)("img", {
-        src: T,
+        src: f,
         alt: "",
         className: E.handImage
       }), (0, a.jsxs)("div", {

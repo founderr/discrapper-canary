@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("77078"),
   S = s("79112"),
   E = s("145079"),
-  f = s("583227"),
-  T = s("426902"),
+  T = s("583227"),
+  f = s("426902"),
   m = s("861370"),
   _ = s("956967"),
   g = s("878720"),
@@ -48,7 +48,7 @@ function H(e) {
   let {
     className: r,
     user: o
-  } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, N.useIsEligibleForPomelo)(), f = (0, _.useGuildAutomodProfileQuarantineErrors)(), T = null !== (l = null == f ? void 0 : null === (t = f.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, m = null != d.current && d.current.scrollWidth > d.current.clientWidth, g = !o.isClaimed(), I = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || g, p = I ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+  } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, N.useIsEligibleForPomelo)(), T = (0, _.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, m = null != d.current && d.current.scrollWidth > d.current.clientWidth, g = !o.isClaimed(), I = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || g, p = I ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, a.jsxs)("div", {
     className: i(G.field, r),
     children: [(0, a.jsx)("div", {
@@ -83,10 +83,10 @@ function H(e) {
           color: u.default.colors.STATUS_WARNING.css
         })
       })
-    }), null != T && (0, a.jsx)("div", {
+    }), null != f && (0, a.jsx)("div", {
       className: G.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
-        text: T,
+        text: f,
         "aria-label": !1,
         children: e => (0, a.jsx)(M.default, {
           ...e,
@@ -238,7 +238,7 @@ function Y(e) {
     buttonAriaLabel: F.default.Messages.CLAIM_ACCOUNT_SHORT,
     buttonColor: c.Button.Colors.BRAND,
     valueMessage: F.default.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
-    handleClick: () => T.default.openClaimAccountModal()
+    handleClick: () => f.default.openClaimAccountModal()
   };
   return (0, a.jsxs)("div", {
     className: i(G.field, n),
@@ -309,7 +309,7 @@ function W(e) {
         color: c.Button.Colors.PRIMARY,
         "aria-label": F.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_A11Y_LABEL,
         onClick: function() {
-          (0, c.openModal)(e => (0, a.jsx)(f.default, {
+          (0, c.openModal)(e => (0, a.jsx)(T.default, {
             ...e,
             title: F.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
             children: l.hasFlag(b.UserFlags.MFA_SMS) ? F.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,

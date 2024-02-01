@@ -4,15 +4,15 @@ n.r(t), n.d(t, {
     return _
   },
   default: function() {
-    return h
+    return p
   }
 });
 var s = n("37983");
 n("884691");
 var a = n("414456"),
   l = n.n(a),
-  r = n("669491"),
-  i = n("77078"),
+  i = n("669491"),
+  r = n("77078"),
   u = n("145131"),
   o = n("124969"),
   d = n("49111"),
@@ -36,9 +36,9 @@ function _(e) {
     }), (0, s.jsx)(o.SubTitle, {
       className: I.marginBottom40,
       children: c.default.Messages.DISCORD_DESC_LONG
-    }), (0, s.jsxs)(i.Card, {
+    }), (0, s.jsxs)(r.Card, {
       className: f.card,
-      type: i.Card.Types.CUSTOM,
+      type: r.Card.Types.CUSTOM,
       children: [(0, s.jsx)("img", {
         alt: "",
         className: f.cardAccentLeft,
@@ -52,12 +52,12 @@ function _(e) {
         direction: u.default.Direction.VERTICAL,
         align: u.default.Align.STRETCH,
         grow: 0,
-        children: [(0, s.jsx)(i.Text, {
+        children: [(0, s.jsx)(r.Text, {
           tag: "strong",
           className: f.buttonTitle,
           variant: "text-md/normal",
           style: {
-            color: r.default.unsafe_rawColors.PRIMARY_300.css
+            color: i.default.unsafe_rawColors.PRIMARY_300.css
           },
           children: t
         }), (0, s.jsx)(o.Button, {
@@ -70,7 +70,7 @@ function _(e) {
   })
 }
 
-function h(e) {
+function p(e) {
   let {
     text: t,
     buttonCta: n,

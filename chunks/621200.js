@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("642950"),
   S = s("875212"),
   E = s("812204"),
-  f = s("685665"),
-  T = s("104385"),
+  T = s("685665"),
+  f = s("104385"),
   m = s("884351"),
   _ = s("184900"),
   g = s("11899"),
@@ -62,7 +62,7 @@ function M() {
     y = A.default.canUsePremiumProfileCustomization(e),
     {
       AnalyticsLocationProvider: F
-    } = (0, f.default)(E.default.PROFILE),
+    } = (0, T.default)(E.default.PROFILE),
     G = {
       user: e,
       canUsePremiumCustomization: y,
@@ -87,7 +87,7 @@ function M() {
     autoTrackExposure: !1
   }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(F, {
     children: (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(T.default, {}), (0, a.jsx)(g.default, {
+      children: [(0, a.jsx)(f.default, {}), (0, a.jsx)(g.default, {
         profilePreview: (0, a.jsx)(_.default, {
           ...G,
           pendingThemeColors: j,

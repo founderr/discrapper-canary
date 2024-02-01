@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("634634"),
   S = s("449918"),
   E = s("973262"),
-  f = s("832132"),
-  T = s("771325"),
+  T = s("832132"),
+  f = s("771325"),
   m = s("49111"),
   _ = s("782340"),
   g = s("727125");
@@ -32,7 +32,7 @@ function h(e) {
     colorPickerMiddle: p,
     colorPickerFooter: C,
     showEyeDropper: A
-  } = e, O = n.useRef(null), x = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), R = d.default.colors.BACKGROUND_ACCENT.css, M = (0, T.isColorDark)(l), v = (0, o.int2hex)(l), D = v === x ? R : v, L = (0, S.getColor)(M ? m.Color.WHITE_500 : m.Color.PRIMARY_530), P = (0, c.default)(p), j = (0, c.default)(C), [b, U] = n.useState((0, r.v4)());
+  } = e, O = n.useRef(null), x = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), R = d.default.colors.BACKGROUND_ACCENT.css, M = (0, f.isColorDark)(l), v = (0, o.int2hex)(l), D = v === x ? R : v, L = (0, S.getColor)(M ? m.Color.WHITE_500 : m.Color.PRIMARY_530), P = (0, c.default)(p), j = (0, c.default)(C), [b, U] = n.useState((0, r.v4)());
   return n.useEffect(() => {
     (P !== p || j !== C) && U((0, r.v4)())
   }, [C, p, j, P]), (0, a.jsx)(u.Popout, {
@@ -70,7 +70,7 @@ function h(e) {
           focusProps: {
             ringTarget: O
           },
-          children: (0, a.jsx)(f.default, {
+          children: (0, a.jsx)(T.default, {
             className: g.editPencilIcon,
             width: 14,
             height: 14,

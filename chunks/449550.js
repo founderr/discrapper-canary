@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("805199"),
   S = s("433724"),
   E = s("635956"),
-  f = s("599110"),
-  T = s("49111"),
+  T = s("599110"),
+  f = s("49111"),
   m = s("646718"),
   _ = s("782340"),
   g = s("393842"),
@@ -31,7 +31,7 @@ let N = () => {
       analyticsLocations: e
     } = (0, u.default)(d.default.USER_SETTINGS), t = (0, l.useStateFromStores)([c.default], () => c.default.isUpsellPreview);
     return n.useEffect(() => {
-      t && f.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      t && T.default.track(f.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         type: m.PremiumUpsellTypes.APP_ICON_UPSELL,
         location_stack: e
       })

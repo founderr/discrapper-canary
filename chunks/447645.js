@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
 var a = s("37983");
@@ -20,13 +20,13 @@ let E = [{
   extensions: ["gif"]
 }];
 
-function f(e) {
+function T(e) {
   let {
     showRemoveAvatarButton: t,
     errors: s,
     onAvatarChange: n,
-    sectionTitle: f,
-    changeAvatarButtonText: T,
+    sectionTitle: T,
+    changeAvatarButtonText: f,
     guildId: m,
     className: _,
     disabled: g = !1,
@@ -36,7 +36,7 @@ function f(e) {
   } = e, p = I ? r.default : i.Button;
   return (0, a.jsx)(d.default, {
     className: _,
-    title: f,
+    title: T,
     errors: s,
     disabled: g,
     forcedDivider: N,
@@ -48,7 +48,7 @@ function f(e) {
         }),
         size: i.Button.Sizes.SMALL,
         onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, m, h, h ? E : void 0),
-        children: null != T ? T : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
+        children: null != f ? f : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
       }), t && (0, a.jsx)(i.Button, {
         className: S.removeButton,
         color: i.Button.Colors.PRIMARY,

@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("446674"),
   S = s("77078"),
   E = s("913144"),
-  f = s("316718"),
-  T = s("79112"),
+  T = s("316718"),
+  f = s("79112"),
   m = s("841098"),
   _ = s("376152"),
   g = s("243632"),
@@ -44,23 +44,23 @@ function b(e) {
     } = e,
     [o, d] = n.useState(!1),
     [c, E] = n.useState(!1),
-    f = () => d(e => !e),
-    T = (0, m.default)(),
-    _ = (0, I.getPromotionImageURL)(s.id, T),
+    T = () => d(e => !e),
+    f = (0, m.default)(),
+    _ = (0, I.getPromotionImageURL)(s.id, f),
     g = null != l,
     h = g ? (0, O.dateFormat)(u(s.endDate).add(L.OUTBOUND_PROMOTION_REDEMPTION_EXPIRATION_WINDOW), "LL") : (0, O.dateFormat)(u(s.endDate), "LL");
   g && o ? t = P.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
     endDate: h,
-    onClickDetails: f
+    onClickDetails: T
   }) : g && !o ? t = P.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_UNEXPANDED_BODY.format({
     endDate: h,
-    onClickDetails: f
+    onClickDetails: T
   }) : !g && o ? t = P.default.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_EXPANDED_BODY.format({
     endDate: h,
-    onClickDetails: f
+    onClickDetails: T
   }) : !g && !o && (t = P.default.Messages.OUTBOUND_PROMOTION_CARD_UNCLAIMED_UNEXPANDED_BODY.format({
     endDate: h,
-    onClickDetails: f
+    onClickDetails: T
   }));
   let p = g ? P.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : P.default.Messages.PROMOTION_CARD_ACTION_CLAIM,
     A = n.useCallback(() => E(!1), []),
@@ -133,7 +133,7 @@ var U = function() {
     d = (0, c.useStateFromStores)([h.default], () => h.default.userStatus);
   n.useEffect(() => {
     E.default.wait(() => {
-      (0, f.fetchGiftableEntitlements)().then(() => r(!0))
+      (0, T.fetchGiftableEntitlements)().then(() => r(!0))
     })
   }, []);
   let u = (0, g.useAnyDropsEnabled)();
@@ -153,7 +153,7 @@ var U = function() {
     } = (0, p.useOutboundPromotions)();
 
   function y() {
-    T.default.open(D.UserSettingsSections.PREMIUM)
+    f.default.open(D.UserSettingsSections.PREMIUM)
   }
   return i && I && N ? (0, a.jsxs)(a.Fragment, {
     children: [u ? (0, a.jsx)(v.default, {

@@ -9,8 +9,8 @@ var a = s("65597"),
   r = s("79112"),
   i = s("841098"),
   l = s("697218"),
-  u = s("719923"),
-  o = s("49111"),
+  o = s("719923"),
+  u = s("49111"),
   d = s("397336"),
   c = s("782340"),
   _ = s("737117"),
@@ -20,8 +20,8 @@ var a = s("65597"),
   f = s("404875"),
   S = s("118536"),
   R = s("411389"),
-  m = s("840456"),
-  A = s("720917"),
+  A = s("840456"),
+  m = s("720917"),
   N = s("982784"),
   p = s("19530"),
   g = s("215541"),
@@ -44,7 +44,7 @@ let k = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
       styles: t
     } = e, s = (0, i.default)(), n = (0, a.default)([l.default], () => {
       let e = l.default.getCurrentUser();
-      return u.default.canUsePremiumProfileCustomization(e)
+      return o.default.canUsePremiumProfileCustomization(e)
     }), B = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, y = {
       badge: {
         title: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
@@ -81,7 +81,7 @@ let k = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
         title: c.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
         description: e => {
           let t = () => {
-            r.default.open(o.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
+            r.default.open(u.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
               scrollPosition: d.ProfileCustomizationScrollPositions.TRY_IT_OUT,
               analyticsLocations: e
             })
@@ -110,7 +110,7 @@ let k = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
       moreGuildsAlt: {
         title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-        imageSource: k(s, m, A),
+        imageSource: k(s, A, m),
         imageClassName: t.moreGuildsAltImage
       },
       remix: {

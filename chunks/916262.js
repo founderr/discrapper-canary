@@ -4,8 +4,8 @@ l.r(t), l.d(t, {
     return f
   }
 });
-var a = l("570277"),
-  n = l.n(a),
+var n = l("570277"),
+  a = l.n(n),
   s = l("229353"),
   r = l("49671"),
   i = l("42887"),
@@ -16,7 +16,7 @@ var a = l("570277"),
 
 function f() {
   if (!i.default.supports(d.Features.SOUNDSHARE)) return s.GO_LIVE_SCREENSHARE_NO_SOUND;
-  if ((0, u.isWindows)() && !n.satisfies(null === r.default || void 0 === r.default ? void 0 : r.default.os.release, o.WINDOWS_SOUNDSHARE_VERSION)) return c.default.Messages.GO_LIVE_SCREENSHARE_UPDATE_WINDOWS_FOR_SOUNDSHARE;
-  if ((0, u.isMac)() && !n.satisfies(null === r.default || void 0 === r.default ? void 0 : r.default.os.release, o.DARWIN_SOUNDSHARE_VERSION)) return c.default.Messages.GO_LIVE_SCREENSHARE_UPDATE_MACOS_FOR_SOUNDSHARE;
+  if ((0, u.isWindows)() && !a.satisfies(null === r.default || void 0 === r.default ? void 0 : r.default.os.release, o.WINDOWS_SOUNDSHARE_VERSION)) return c.default.Messages.GO_LIVE_SCREENSHARE_UPDATE_WINDOWS_FOR_SOUNDSHARE;
+  if ((0, u.isMac)() && !a.satisfies(null === r.default || void 0 === r.default ? void 0 : r.default.os.release, o.DARWIN_SOUNDSHARE_VERSION)) return c.default.Messages.GO_LIVE_SCREENSHARE_UPDATE_MACOS_FOR_SOUNDSHARE;
   return null
 }

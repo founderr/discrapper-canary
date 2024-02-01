@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("42887"),
   S = s("661919"),
   E = s("697218"),
-  f = s("145131"),
-  T = s("922932"),
+  T = s("145131"),
+  f = s("922932"),
   m = s("50885"),
   _ = s("49111"),
   g = s("353927"),
@@ -61,7 +61,7 @@ function C() {
   async function M() {
     t(!0);
     try {
-      await c.default.getMediaEngine().writeAudioDebugState(), await T.default.submitLiveCrashReport({
+      await c.default.getMediaEngine().writeAudioDebugState(), await f.default.submitLiveCrashReport({
         message: {
           message: "User Live Dump"
         }
@@ -112,9 +112,9 @@ function C() {
         note: h.default.Messages.FORM_HELP_CONNECTION_LOG,
         children: h.default.Messages.FORM_CHECKBOX_CONNECTION_LOG
       }), (0, a.jsx)(i.FormItem, {
-        children: (0, a.jsx)(f.default, {
+        children: (0, a.jsx)(T.default, {
           className: N.marginBottom20,
-          children: (0, a.jsx)(f.default.Child, {
+          children: (0, a.jsx)(T.default.Child, {
             grow: 0,
             shrink: 0,
             children: (0, a.jsx)(i.Button, {
@@ -132,8 +132,8 @@ function C() {
       note: h.default.Messages.FORM_HELP_DEBUG_LOGGING,
       children: h.default.Messages.FORM_CHECKBOX_DEBUG_LOGGING
     }), (0, a.jsx)(i.FormItem, {
-      children: (0, a.jsxs)(f.default, {
-        children: [(0, a.jsx)(f.default.Child, {
+      children: (0, a.jsxs)(T.default, {
+        children: [(0, a.jsx)(T.default.Child, {
           grow: 0,
           shrink: 0,
           children: (0, a.jsx)(i.Button, {
@@ -142,7 +142,7 @@ function C() {
             onClick: M,
             children: h.default.Messages.UPLOAD
           })
-        }), (0, a.jsx)(f.default.Child, {
+        }), (0, a.jsx)(T.default.Child, {
           grow: 0,
           shrink: 0,
           children: (0, a.jsx)(i.Button, {

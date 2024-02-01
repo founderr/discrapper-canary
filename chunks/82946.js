@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s, a, l = n("37983"),
-  r = n("884691"),
-  i = n("414456"),
-  u = n.n(i),
+  i = n("884691"),
+  r = n("414456"),
+  u = n.n(r),
   o = n("43982"),
   d = n("209535"),
   c = n("393414"),
@@ -20,21 +20,21 @@ var _ = function(e) {
     match: t,
     location: n,
     attemptDeepLink: s
-  } = e, [a, i] = r.useState(0);
-  r.useEffect(() => {
+  } = e, [a, r] = i.useState(0);
+  i.useEffect(() => {
     o.default.once("connected", () => {
-      i(1)
+      r(1)
     }), o.default.once("disconnected", () => {
       (0, c.transitionTo)((0, d.getRedirectPath)())
     }), o.default.connect()
-  }, []), r.useEffect(() => {
+  }, []), i.useEffect(() => {
     if (0 !== a) return;
     let e = setTimeout(() => (0, c.transitionTo)((0, d.getRedirectPath)()), 3e3);
     return () => clearTimeout(e)
   }, [a]);
-  let _ = r.useCallback(async (e, t) => {
+  let _ = i.useCallback(async (e, t) => {
     try {
-      i(2), await s(e, t), i(3)
+      r(2), await s(e, t), r(3)
     } catch (e) {
       console.error("Error opening deeplink", e)
     }

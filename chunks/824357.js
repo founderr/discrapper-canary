@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("845579"),
   S = s("56947"),
   E = s("386045"),
-  f = s("803725"),
-  T = s("311207"),
+  T = s("803725"),
+  f = s("311207"),
   m = s("653485"),
   _ = s("462491"),
   g = s("782340"),
@@ -47,7 +47,7 @@ function p() {
       tag: r.FormTitleTags.H1,
       title: (0, a.jsxs)("div", {
         className: h.headerContainer,
-        children: [g.default.Messages.CLIPS, (0, a.jsx)(T.default, {})]
+        children: [g.default.Messages.CLIPS, (0, a.jsx)(f.default, {})]
       }),
       children: p && (0, a.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
@@ -60,7 +60,7 @@ function p() {
         className: N.formItem,
         value: e,
         note: g.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
-        onChange: e => f.updateAllowVoiceRecording({
+        onChange: e => T.updateAllowVoiceRecording({
           allowVoiceRecording: e
         }),
         children: g.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
@@ -69,7 +69,7 @@ function p() {
         className: N.formItem,
         value: C,
         note: g.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
-        onChange: e => f.updateViewerClipsEnabled(e),
+        onChange: e => T.updateViewerClipsEnabled(e),
         children: g.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
       })]
     })]

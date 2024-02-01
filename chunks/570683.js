@@ -11,8 +11,8 @@ var s = n("37983");
 n("884691");
 var a = n("77078"),
   l = n("400271"),
-  r = n("586403"),
-  i = n("813006"),
+  i = n("586403"),
+  r = n("813006"),
   u = n("580357"),
   o = n("476263"),
   d = n("800118"),
@@ -23,7 +23,7 @@ function E(e) {
   var t;
   let {
     guildScheduledEvent: n,
-    channel: i,
+    channel: r,
     onAcceptInvite: u,
     isSubmitting: o
   } = e;
@@ -37,11 +37,11 @@ function E(e) {
       guildId: n.guild_id,
       guildEventId: n.id,
       eventPreview: n
-    }), null != i && (0, s.jsx)("div", {
+    }), null != r && (0, s.jsx)("div", {
       className: f.channelInfo,
-      children: (0, s.jsx)(r.default, {
+      children: (0, s.jsx)(i.default, {
         guildScheduledEvent: n,
-        channel: i
+        channel: r
       })
     }), (0, s.jsx)(a.Button, {
       className: f.acceptButton,
@@ -57,9 +57,9 @@ function I(e) {
   var t;
   let {
     invite: n
-  } = e, l = null != n.guild ? new i.default(n.guild) : null;
+  } = e, l = null != n.guild ? new r.default(n.guild) : null;
   if (null == l) return null;
-  let r = null !== (t = l.description) && void 0 !== t ? t : "";
+  let i = null !== (t = l.description) && void 0 !== t ? t : "";
   return (0, s.jsxs)("div", {
     className: f.guildInfoCard,
     children: [(0, s.jsx)(a.Heading, {
@@ -90,12 +90,12 @@ function I(e) {
           className: f.guildInfoMemberCount
         })]
       })]
-    }), r.length > 0 && (0, s.jsx)("details", {
+    }), i.length > 0 && (0, s.jsx)("details", {
       className: f.guildDescriptionContainer,
       children: (0, s.jsx)(a.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: r
+        children: i
       })
     })]
   })
@@ -108,10 +108,10 @@ function _(e) {
     isSubmitting: a,
     onAcceptInvite: l
   } = e, {
-    guild_scheduled_event: r
+    guild_scheduled_event: i
   } = t;
-  return null != r ? (0, s.jsx)(E, {
-    guildScheduledEvent: r,
+  return null != i ? (0, s.jsx)(E, {
+    guildScheduledEvent: i,
     channel: n,
     isSubmitting: a,
     onAcceptInvite: l

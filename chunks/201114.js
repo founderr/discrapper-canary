@@ -16,13 +16,13 @@ var n = s("414456"),
   c = s("42887"),
   S = s("145131"),
   E = s("476765"),
-  f = s("773336"),
-  T = s("597870"),
+  T = s("773336"),
+  f = s("597870"),
   m = s("49111"),
   _ = s("782340"),
   g = s("871940"),
   h = s("926622");
-let N = !f.isPlatformEmbedded,
+let N = !T.isPlatformEmbedded,
   I = (0, E.uid)();
 
 function p(e) {
@@ -37,7 +37,7 @@ function p(e) {
       title: _.default.Messages.PTT_LIMITED_TITLE,
       confirmText: _.default.Messages.DOWNLOAD,
       cancelText: _.default.Messages.OKAY,
-      onConfirm: () => (0, T.openDownloadAppsModal)("PTT Limited Modal"),
+      onConfirm: () => (0, f.openDownloadAppsModal)("PTT Limited Modal"),
       body: _.default.Messages.PTT_LIMITED_BODY,
       ...t
     })
@@ -56,7 +56,7 @@ function A(e) {
       shortcut: n,
       delay: E
     } = (0, i.useStateFromStoresObject)([c.default], () => c.default.getModeOptions());
-  return t = f.isPlatformEmbedded || s !== m.InputModes.PUSH_TO_TALK ? (0, a.jsx)(r.FormText, {
+  return t = T.isPlatformEmbedded || s !== m.InputModes.PUSH_TO_TALK ? (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
     className: l(g.pttToolsMessage, h.marginBottom8),
     children: _.default.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
@@ -66,7 +66,7 @@ function A(e) {
     type: r.FormText.Types.DESCRIPTION,
     className: l(g.pttToolsMessage, g.pttToolsWarning, h.marginBottom8),
     children: _.default.Messages.PTT_LIMITED_WARNING.format({
-      onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text PTT")
+      onDownloadClick: () => (0, f.openDownloadAppsModal)("Help Text PTT")
     })
   }), (0, a.jsxs)("div", {
     className: g.pttTools,

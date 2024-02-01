@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 });
 var s = n("37983"),
   a = n("884691"),
   l = n("597755"),
-  r = n.n(l),
-  i = n("446674"),
+  i = n.n(l),
+  r = n("446674"),
   u = n("437822"),
   o = n("457108"),
   d = n("970366"),
@@ -17,14 +17,14 @@ var s = n("37983"),
   E = n("49111"),
   I = n("782340"),
   _ = n("926622");
-i.default.initialize();
-class h extends a.PureComponent {
+r.default.initialize();
+class p extends a.PureComponent {
   componentDidMount() {
     let e = (0, o.default)(this.props.location);
     null != e && u.default.authorizeIPAddress(e), (0, d.trackAppUIViewed)("authorize_ip")
   }
   renderLoginButton() {
-    if ("Android" === r.os.family || "iOS" === r.os.family) return null;
+    if ("Android" === i.os.family || "iOS" === i.os.family) return null;
     let {
       transitionTo: e
     } = this.props;
@@ -78,10 +78,10 @@ class h extends a.PureComponent {
     return e ? this.renderFailed() : t ? this.renderSucceeded() : this.renderDefault()
   }
 }
-h.defaultProps = {
+p.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var p = i.default.connectStores([c.default], () => ({
+var h = r.default.connectStores([c.default], () => ({
   verifyFailed: c.default.didVerifyFail(),
   verifySucceeded: c.default.didVerifySucceed()
-}))(h)
+}))(p)

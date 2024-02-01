@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("583367"),
   S = s("316718"),
   E = s("775433"),
-  f = s("79112"),
-  T = s("642950"),
+  T = s("79112"),
+  f = s("642950"),
   m = s("736642"),
   _ = s("251334"),
   g = s("218989"),
@@ -93,11 +93,11 @@ var w = function() {
   return (n.useEffect(() => (d.default.wait(() => {
     (0, E.fetchPremiumSubscriptionPlans)(), u.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), u.fetchPaymentSources()
   }), function() {
-    f.default.clearSubsection()
-  }), []), p.default.enabled) ? (0, a.jsx)(T.default, {}) : S && M ? v === y.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(I.default, {
-    onGoBack: () => f.default.clearSubsection()
+    T.default.clearSubsection()
+  }), []), p.default.enabled) ? (0, a.jsx)(f.default, {}) : S && M ? v === y.ROLE_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(I.default, {
+    onGoBack: () => T.default.clearSubsection()
   }) : v === y.APPLICATION_SUBSCRIPTION_SUBSECTION ? (0, a.jsx)(_.default, {
-    onGoBack: () => f.default.clearSubsection()
+    onGoBack: () => T.default.clearSubsection()
   }) : (0, a.jsx)("div", {
     className: G.container,
     children: (0, a.jsxs)("div", {
@@ -111,10 +111,10 @@ var w = function() {
       }) : (0, a.jsx)(b.SubscriptionDetailsEmpty, {
         className: G.subscriptionDetails
       }), (0, a.jsx)(N.default, {
-        onClickManageSubscription: () => f.default.setSection(B.UserSettingsSections.SUBSCRIPTIONS, y.ROLE_SUBSCRIPTION_SUBSECTION)
+        onClickManageSubscription: () => T.default.setSection(B.UserSettingsSections.SUBSCRIPTIONS, y.ROLE_SUBSCRIPTION_SUBSECTION)
       }), (0, a.jsx)(m.default, {
         onClickManageSubscription: () => {
-          f.default.setSection(B.UserSettingsSections.SUBSCRIPTIONS, y.APPLICATION_SUBSCRIPTION_SUBSECTION), D.default.track(B.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
+          T.default.setSection(B.UserSettingsSections.SUBSCRIPTIONS, y.APPLICATION_SUBSCRIPTION_SUBSECTION), D.default.track(B.AnalyticEvents.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED)
         }
       }), (0, a.jsx)(H, {}), null != e ? (0, a.jsx)(j.default, {
         subscription: e,

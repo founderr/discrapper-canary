@@ -49,8 +49,8 @@ function d() {
     isClaiming: c,
     fetchError: S,
     claimError: E,
-    isFetching: f,
-    purchases: T
+    isFetching: T,
+    purchases: f
   } = function() {
     let e = "useFetchPurchases";
     (0, l.useTriggerDebuggingAA)({
@@ -72,12 +72,12 @@ function d() {
     }
   }(), m = null !== (e = null != u ? u : S) && void 0 !== e ? e : E;
   return {
-    isFetching: s || f,
+    isFetching: s || T,
     isFetchingCategories: s,
-    isFetchingPurchases: f,
+    isFetchingPurchases: T,
     isClaiming: c,
     categories: d,
-    purchases: T,
+    purchases: f,
     error: m
   }
 }

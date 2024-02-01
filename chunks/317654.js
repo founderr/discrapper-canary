@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return X
+    return Z
   }
 }), s("222007");
 var a, n, l, i, r = s("37983"),
@@ -11,8 +11,8 @@ var a, n, l, i, r = s("37983"),
   c = s("669491"),
   S = s("77078"),
   E = s("54239"),
-  f = s("206230"),
-  T = s("491605"),
+  T = s("206230"),
+  f = s("491605"),
   m = s("16594"),
   _ = s("772280"),
   g = s("300113"),
@@ -112,7 +112,7 @@ function k(e) {
       warningSeen: s
     },
     updateSettings: a
-  } = e, n = (0, u.useStateFromStores)([f.default], () => f.default.useReducedMotion);
+  } = e, n = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion);
   return (0, r.jsx)(S.FormSwitch, {
     value: t,
     note: v.default.Messages.POGGERMODE_ENABLE_DESCRIPTION,
@@ -269,7 +269,7 @@ function V(e) {
       screenshakeEnabledLocations: n
     },
     updateSettings: l
-  } = e, i = (0, u.useStateFromStores)([f.default], () => f.default.useReducedMotion), o = !t || !s || i, d = (e, t) => {
+  } = e, i = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), o = !t || !s || i, d = (e, t) => {
     null != e.shakeIntensity && e.shakeIntensity > a && (0, I.unlockAchievement)(p.PoggermodeAchievementId.MORE), l(e, t)
   };
   return (0, r.jsxs)(S.FormSection, {
@@ -417,13 +417,13 @@ function z(e) {
         })
       }
     },
-    f = e => {
+    T = e => {
       l({
         x: e.clientX,
         y: e.clientY
       })
     };
-  return o.useEffect(() => (window.addEventListener("mousemove", f), () => window.removeEventListener("mousemove", f)), []), (0, r.jsxs)(r.Fragment, {
+  return o.useEffect(() => (window.addEventListener("mousemove", T), () => window.removeEventListener("mousemove", T)), []), (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)(S.Heading, {
       variant: "heading-lg/semibold",
       className: D.title,
@@ -467,8 +467,8 @@ let Q = (e, t, s) => {
   },
   q = e => 0 === e ? m.SlideDirection.LEFT : m.SlideDirection.RIGHT;
 
-function X() {
-  let [e, t] = o.useState(0), [s, a] = o.useState(q(e)), [n, l] = o.useState(!1), i = (0, u.useStateFromStores)([f.default], () => f.default.useReducedMotion), d = n && !i;
+function Z() {
+  let [e, t] = o.useState(0), [s, a] = o.useState(q(e)), [n, l] = o.useState(!1), i = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), d = n && !i;
   return o.useEffect(() => {
     let t = setTimeout(() => {
       a(q(e))
@@ -484,7 +484,7 @@ function X() {
       children: Q(e, t, l)
     }), (0, r.jsx)("div", {
       className: d ? D.enableAnimationOverlayVisible : D.enableAnimationOverlayHidden,
-      children: (0, r.jsx)(T.default, {
+      children: (0, r.jsx)(f.default, {
         className: D.enableAnimation,
         importData: K,
         shouldAnimate: d,

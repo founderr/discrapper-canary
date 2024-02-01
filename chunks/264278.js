@@ -15,13 +15,13 @@ var a = s("37983"),
   c = s("305961"),
   S = s("162771"),
   E = s("145131"),
-  f = s("409082"),
-  T = s("375822"),
+  T = s("409082"),
+  f = s("375822"),
   m = s("782340"),
   _ = s("279309");
 
 function g() {}
-let h = [T.AutocompleterResultTypes.VOICE_CHANNEL];
+let h = [f.AutocompleterResultTypes.VOICE_CHANNEL];
 
 function N(e) {
   e.setOptions({
@@ -174,7 +174,7 @@ function x(e) {
         return null === (e = D[L]) || void 0 === e ? void 0 : e.id
       }
       let t = v[L];
-      if ((null == t ? void 0 : t.type) === T.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
+      if ((null == t ? void 0 : t.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
     })();
   return (0, a.jsx)("div", {
     className: _.voiceModalContainer,
@@ -199,7 +199,7 @@ function x(e) {
                 let e = (() => {
                   if (null != D) return D[L];
                   let e = v[L];
-                  if ((null == e ? void 0 : e.type) === T.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
+                  if ((null == e ? void 0 : e.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
                 })();
                 null == e ? r(void 0) : r(e.id), s();
                 break
@@ -231,12 +231,12 @@ function x(e) {
           } = e, n = (() => {
             if (null != D) return D[t];
             let e = v[t];
-            if ((null == e ? void 0 : e.type) === T.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
+            if ((null == e ? void 0 : e.type) === f.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
           })();
           if (null == n) return null;
           let l = null != n.parent_id ? d.default.getChannel(n.parent_id) : void 0,
             i = c.default.getGuild(n.guild_id);
-          return (0, a.jsx)(f.Channel, {
+          return (0, a.jsx)(T.Channel, {
             id: n.id,
             channel: n,
             category: l,
@@ -288,7 +288,7 @@ function R(e) {
     color: "text-muted",
     className: _.noVoiceChannelSelected,
     children: m.default.Messages.USER_SETTINGS_KEYBINDS_NO_VOICE_CHANNEL_SELECTED
-  }) : (0, a.jsx)(f.Channel, {
+  }) : (0, a.jsx)(T.Channel, {
     channel: s,
     id: s.id,
     category: n,

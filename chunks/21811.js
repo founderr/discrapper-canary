@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("49671"),
   S = s("42887"),
   E = s("26092"),
-  f = s("476765"),
-  T = s("701909"),
+  T = s("476765"),
+  f = s("701909"),
   m = s("773336"),
   _ = s("934810"),
   g = s("789854"),
@@ -34,8 +34,8 @@ var a = s("37983"),
   D = s("353927"),
   L = s("782340"),
   P = s("926622");
-let j = (0, f.uid)(),
-  b = "".concat(T.default.getArticleURL(v.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm");
+let j = (0, T.uid)(),
+  b = "".concat(f.default.getArticleURL(v.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm");
 
 function U(e, t, s) {
   (0, o.openModal)(n => (0, a.jsx)(o.ConfirmModal, {
@@ -57,8 +57,8 @@ function B() {
     qosEnabled: t,
     attenuation: s,
     attenuateWhileSpeakingSelf: l,
-    attenuateWhileSpeakingOthers: f,
-    audioSubsystem: T,
+    attenuateWhileSpeakingOthers: T,
+    audioSubsystem: f,
     silenceWarning: v,
     debugLoggingEnabled: B,
     legacyAudioSubsystemSupported: y,
@@ -127,7 +127,7 @@ function B() {
         }), (0, a.jsx)(o.Slider, {
           initialValue: s,
           onValueChange: e => {
-            d.default.setAttenuation(e, l, f)
+            d.default.setAttenuation(e, l, T)
           },
           "aria-labelledby": j
         }), (0, a.jsx)(o.FormText, {
@@ -138,10 +138,10 @@ function B() {
           className: P.marginBottom20
         }), (0, a.jsx)(o.FormSwitch, {
           value: l,
-          onChange: e => d.default.setAttenuation(s, e, f),
+          onChange: e => d.default.setAttenuation(s, e, T),
           children: L.default.Messages.ATTENUATE_WHILE_SPEAKING_SELF
         }), (0, a.jsx)(o.FormSwitch, {
-          value: f,
+          value: T,
           onChange: e => d.default.setAttenuation(s, l, e),
           children: L.default.Messages.ATTENUATE_WHILE_SPEAKING_OTHERS
         })]
@@ -150,7 +150,7 @@ function B() {
         title: L.default.Messages.FORM_LABEL_SUBSYSTEM,
         children: [(0, a.jsx)(o.SingleSelect, {
           className: P.marginBottom20,
-          value: T,
+          value: f,
           options: function(e, t) {
             let s = [{
               value: D.AudioSubsystems.STANDARD,

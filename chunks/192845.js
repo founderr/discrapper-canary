@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("872173"),
   S = s("374363"),
   E = s("145131"),
-  f = s("810567"),
-  T = s("258078"),
+  T = s("810567"),
+  f = s("258078"),
   m = s("674268"),
   _ = s("585653"),
   g = s("989691"),
@@ -37,7 +37,7 @@ function p(e) {
         n(s), l ? (0, c.removeDismissedContent)(o.DismissibleContent[s]) : (0, c.addDismissedContent)(o.DismissibleContent[s])
       },
       children: (0, a.jsx)(u.FormText, {
-        size: T.default.Sizes.SIZE_16,
+        size: f.default.Sizes.SIZE_16,
         className: I.marginTop4,
         children: "".concat(s.toLowerCase(), " (").concat(o.DismissibleContent[s], ")")
       })
@@ -70,7 +70,7 @@ function A() {
       dailyCapReached: g.default.hasUserHitDCCap(),
       dailyCapOverridden: g.default.dailyCapOverridden
     })),
-    [T, m] = n.useState(""),
+    [f, m] = n.useState(""),
     p = null !== (e = (0, r.useStateFromStores)([S.default], () => {
       var e;
       return null === (e = S.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
@@ -93,8 +93,8 @@ function A() {
       })
     },
     R = t.map(e => o.DismissibleContent[e]),
-    M = A.filter(e => e.toLowerCase().includes(T.toLowerCase())).filter(e => !R.includes(e)),
-    v = Object.keys(o.DismissibleContent).filter(e => !R.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(T.toLowerCase())).sort((e, t) => e.localeCompare(t));
+    M = A.filter(e => e.toLowerCase().includes(f.toLowerCase())).filter(e => !R.includes(e)),
+    v = Object.keys(o.DismissibleContent).filter(e => !R.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(f.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormSection, {
       title: "Dismissible Content Fatigue",
@@ -121,10 +121,10 @@ function A() {
     }), (0, a.jsxs)(u.FormSection, {
       title: "Dismissible Contents",
       tag: u.FormTitleTags.H1,
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(T.default, {
         className: I.marginBottom20,
-        size: f.default.Sizes.LARGE,
-        query: T,
+        size: T.default.Sizes.LARGE,
+        query: f,
         onChange: m,
         onClear: () => m("")
       }), (0, a.jsxs)(u.FormItem, {

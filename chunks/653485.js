@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("278108"),
   S = s("584687"),
   E = s("915639"),
-  f = s("216503"),
-  T = s("42887"),
+  T = s("216503"),
+  f = s("42887"),
   m = s("227602"),
   _ = s("773336"),
   g = s("56947"),
@@ -34,7 +34,7 @@ var a = s("37983"),
   D = s("926622");
 
 function L() {
-  let e = (0, r.useStateFromStores)([T.default], () => T.default.getHardwareH264()),
+  let e = (0, r.useStateFromStores)([f.default], () => f.default.getHardwareH264()),
     {
       clipsEnabled: t,
       remindersEnabled: s,
@@ -125,16 +125,16 @@ function L() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(o.FormSection, {
       disabled: !e,
-      children: [!e && (0, a.jsx)(f.default, {
-        look: f.InfoBoxLooks.WARNING,
+      children: [!e && (0, a.jsx)(T.default, {
+        look: T.InfoBoxLooks.WARNING,
         className: v.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({
           onClick: () => u.default.open(A.UserSettingsSections.VOICE, null, {
             scrollPosition: x.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION
           })
         })
-      }), j === N.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(f.default, {
-        look: f.InfoBoxLooks.WARNING,
+      }), j === N.ClipsHardwareClassification.BELOW_MINIMUM ? (0, a.jsx)(T.default, {
+        look: T.InfoBoxLooks.WARNING,
         className: v.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_UNDER_MIN_SPECS
       }) : null, (0, a.jsx)(o.FormSwitch, {
@@ -148,7 +148,7 @@ function L() {
           trackAnalytics: !0
         }),
         children: R.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
-      }), e && (0, a.jsx)(f.default, {
+      }), e && (0, a.jsx)(T.default, {
         className: v.formItem,
         children: R.default.Messages.CLIPS_SETTINGS_QUALITY_INFOBOX
       })]

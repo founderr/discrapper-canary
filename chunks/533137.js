@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("54239"),
   S = s("215082"),
   E = s("79112"),
-  f = s("812204"),
-  T = s("685665"),
+  T = s("812204"),
+  f = s("685665"),
   m = s("20606"),
   _ = s("465869"),
   g = s("809071"),
@@ -75,11 +75,11 @@ let G = e => {
       subscription: t
     } = e, {
       analyticsLocations: s
-    } = (0, T.default)(), [n] = (0, g.useSubscriptionInvoicePreview)({
+    } = (0, f.default)(), [n] = (0, g.useSubscriptionInvoicePreview)({
       subscriptionId: t.id,
       renewal: !0,
       analyticsLocations: s,
-      analyticsLocation: f.default.GUILD_ROLE_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
+      analyticsLocation: T.default.GUILD_ROLE_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
     }), l = (0, o.useStateFromStores)([I.default], () => I.default.hasFetchedPaymentSources);
     return null != n && l ? (0, a.jsx)(h.default, {
       subscription: t,
@@ -125,12 +125,12 @@ var w = e => {
     listing: s,
     groupListing: l,
     guild: o,
-    expanded: f,
+    expanded: T,
     handleToggleExpanded: g,
     subscriptionInfo: h
   } = (0, v.default)(t), [I, C] = n.useState(!1), R = (0, O.useUID)(), {
     analyticsLocations: w
-  } = (0, T.default)(), {
+  } = (0, f.default)(), {
     shouldHideGuildPurchaseEntryPoints: V
   } = (0, _.useShouldHideGuildPurchaseEntryPoints)(null == o ? void 0 : o.id), Y = (null == t ? void 0 : t.paymentGateway) === b.PaymentGateways.APPLE_PARTNER;
   if (null == l || null == s || null == h) return null;
@@ -154,8 +154,8 @@ var w = e => {
     }, {
       isCancelled: Q,
       isPastDue: q,
-      subscriptionPrice: X,
-      memberSince: Z,
+      subscriptionPrice: Z,
+      memberSince: X,
       nextRenewalDate: J,
       nextRenewalLabel: $,
       isTrial: ee
@@ -222,19 +222,19 @@ var w = e => {
             onClick: n(g),
             "aria-label": y.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TOGGLE_SECTION_LABEL,
             "aria-controls": R,
-            "aria-expanded": f,
+            "aria-expanded": T,
             focusProps: {
               ringTarget: t
             },
             children: (0, a.jsx)(x.default, {
               className: i(F.arrowIcon, {
-                [F.arrowIconExpanded]: f
+                [F.arrowIconExpanded]: T
               })
             })
           })]
         })
       }
-    }), f ? (0, a.jsxs)("div", {
+    }), T ? (0, a.jsxs)("div", {
       id: R,
       children: [(0, a.jsx)("div", {
         className: F.divider
@@ -249,12 +249,12 @@ var w = e => {
           value: J
         }), (0, a.jsx)(G, {
           label: y.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_PRICE,
-          value: X,
+          value: Z,
           showInfoIcon: ee,
           infoIconTooltipText: ee ? y.default.Messages.GUILD_ROLE_SUBSCRIPTION_MANAGE_SUBSCRIPTION_PAGE_TRIAL_PRICE_INFO : void 0
         }), (0, a.jsx)(G, {
           label: y.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_MEMBER_SINCE,
-          value: Z
+          value: X
         })]
       }), (0, a.jsx)(A.default, {
         size: 16

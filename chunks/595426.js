@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("414456"),
   i = s.n(r),
   l = s("446674"),
-  u = s("77078"),
-  o = s("913144"),
+  o = s("77078"),
+  u = s("913144"),
   d = s("850068"),
   c = s("583367"),
   _ = s("775433"),
@@ -20,8 +20,8 @@ var a = s("37983"),
   f = s("619935"),
   S = s("308592"),
   R = s("245187"),
-  m = s("102985"),
-  A = s("697218"),
+  A = s("102985"),
+  m = s("697218"),
   N = s("521012"),
   p = s("599110"),
   g = s("764364"),
@@ -46,11 +46,11 @@ var a = s("37983"),
       sourceAnalyticsLocations: k
     } = (0, T.default)(I.default.PREMIUM_MARKETING), {
       enabled: B
-    } = (0, M.default)(), y = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), H = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), K = (0, x.usePremiumTrialOffer)(), W = (0, L.usePremiumDiscountOffer)(), F = (0, S.useSubscriptionPlansLoaded)(), [w, V] = n.useState(!0), Y = n.useRef(0), z = (0, g.isPremiumExactly)(H, b.PremiumTypes.TIER_2), Q = (0, h.useLocalizedPromoQuery)(), X = null == Q ? void 0 : Q.countryCode, J = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
+    } = (0, M.default)(), y = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), H = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()), K = (0, x.usePremiumTrialOffer)(), W = (0, L.usePremiumDiscountOffer)(), F = (0, S.useSubscriptionPlansLoaded)(), [w, V] = n.useState(!0), Y = n.useRef(0), z = (0, g.isPremiumExactly)(H, b.PremiumTypes.TIER_2), Q = (0, h.useLocalizedPromoQuery)(), X = null == Q ? void 0 : Q.countryCode, J = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
     n.useEffect(() => {
       !J && d.getNitroAffinity()
     }, [J]), n.useEffect(() => {
-      o.default.wait(async () => {
+      u.default.wait(async () => {
         let e = Date.now();
         await Promise.all([d.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), d.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(X, null, j.RevenueSurfaces.DISCOVERY)]), Y.current = Date.now() - e, V(!1)
       })
@@ -65,7 +65,7 @@ var a = s("37983"),
         load_duration_ms: Y.current
       })
     }, [k, w]);
-    let Z = (0, l.useStateFromStores)([m.default], () => m.default.enabled);
+    let Z = (0, l.useStateFromStores)([A.default], () => A.default.enabled);
     if (Z) return (0, a.jsx)(E.default, {});
     if (s) return (0, a.jsx)(R.BlockedPaymentsContentSettings, {});
     let q = t === b.PremiumMarketingEntrypoints.ApplicationStoreHome;
@@ -77,6 +77,6 @@ var a = s("37983"),
       })
     }) : (0, a.jsx)("div", {
       className: i(G.container, G.loading),
-      children: (0, a.jsx)(u.Spinner, {})
+      children: (0, a.jsx)(o.Spinner, {})
     })
   }

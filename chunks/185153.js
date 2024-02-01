@@ -18,8 +18,8 @@ var a = s("37983"),
   c = s("677099"),
   S = s("476263"),
   E = s("449008"),
-  f = s("424562"),
-  T = s("782340"),
+  T = s("424562"),
+  f = s("782340"),
   m = s("764347");
 
 function _(e) {
@@ -33,7 +33,7 @@ function _(e) {
   } = e;
   return (0, a.jsx)(d.default, {
     className: i(m.section, s),
-    title: T.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_TITLE,
+    title: f.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_TITLE,
     hideDivider: l,
     forcedDivider: !0,
     children: (0, a.jsx)(g, {
@@ -51,7 +51,7 @@ function g(e) {
     globalOption: s,
     onChange: l,
     renderOptionSuffix: i
-  } = e, d = (0, r.useStateFromStores)([f.default], () => f.default.showNotice()), _ = (0, r.useStateFromStores)([c.default], () => c.default.getFlattenedGuildIds()), g = (0, r.useStateFromStores)([u.default], () => u.default.getGuilds()), h = n.useMemo(() => {
+  } = e, d = (0, r.useStateFromStores)([T.default], () => T.default.showNotice()), _ = (0, r.useStateFromStores)([c.default], () => c.default.getFlattenedGuildIds()), g = (0, r.useStateFromStores)([u.default], () => u.default.getGuilds()), h = n.useMemo(() => {
     let e = _.map(e => {
       let t = g[e];
       return null == t ? null : {
@@ -83,6 +83,6 @@ function g(e) {
     options: h,
     renderOptionPrefix: N,
     renderOptionSuffix: i,
-    placeholder: T.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_PLACEHOLDER
+    placeholder: f.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_PLACEHOLDER
   })
 }

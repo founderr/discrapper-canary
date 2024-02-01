@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("305122"),
   S = s("235004"),
   E = s("78581"),
-  f = s("675961"),
-  T = s("561847"),
+  T = s("675961"),
+  f = s("561847"),
   m = s("555158"),
   _ = s("216422"),
   g = s("368121"),
@@ -43,7 +43,7 @@ function R(e) {
 function M() {
   let {
     analyticsLocations: e
-  } = (0, o.default)(), [t, s] = n.useState(C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, f.useCustomJoinSound)(t), g = R(r), N = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === f.CustomSoundType.GLOBAL, D = N && null != r && null == g;
+  } = (0, o.default)(), [t, s] = n.useState(C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = R(r), N = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, D = N && null != r && null == g;
   n.useEffect(() => {
     D && (0, E.trackCustomCallSoundExternallyDeleted)({
       location: e
@@ -96,7 +96,7 @@ function M() {
         })
       }),
       forcedDivider: !0,
-      children: [(0, a.jsx)(T.default, {
+      children: [(0, a.jsx)(f.default, {
         sound: g,
         isGlobal: M,
         onSelect: s => {

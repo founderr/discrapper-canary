@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("363188"),
   S = s("926622");
 let E = 0,
-  f = () => "notification-position-selector-".concat(E++),
-  T = e => {
+  T = () => "notification-position-selector-".concat(E++),
+  f = e => {
     switch (e) {
       case d.OverlayNotificationPositions.TOP_LEFT:
         return u.default.Messages.OVERLAY_NOTIFICATIONS_TOP_LEFT;
@@ -36,8 +36,8 @@ function _(e) {
   let {
     position: t,
     onChange: s
-  } = e, [l] = n.useState(() => f()), E = t === d.OverlayNotificationPositions.DISABLED ? u.default.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : u.default.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({
-    position: T(t)
+  } = e, [l] = n.useState(() => T()), E = t === d.OverlayNotificationPositions.DISABLED ? u.default.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : u.default.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({
+    position: f(t)
   });
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(r.FocusRing, {
@@ -56,7 +56,7 @@ function _(e) {
             [c.bottomRight]: e === d.OverlayNotificationPositions.BOTTOM_RIGHT,
             [c.bottomLeft]: e === d.OverlayNotificationPositions.BOTTOM_LEFT
           }),
-          children: [T(e), e === d.OverlayNotificationPositions.DISABLED ? (0, a.jsx)(o.default, {
+          children: [f(e), e === d.OverlayNotificationPositions.DISABLED ? (0, a.jsx)(o.default, {
             className: c.disabledIcon
           }) : null, (0, a.jsx)("input", {
             type: "radio",

@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("776466"),
   S = s("79112"),
   E = s("642950"),
-  f = s("135230"),
-  T = s("550766"),
+  T = s("135230"),
+  f = s("550766"),
   m = s("191225"),
   _ = s("29479"),
   g = s("250404"),
@@ -69,7 +69,7 @@ let b = e => {
           applicationName: s.name
         })
       })]
-    })), (0, u.openModal)(t => (0, a.jsx)(f.default, {
+    })), (0, u.openModal)(t => (0, a.jsx)(T.default, {
       title: v.default.Messages.DEAUTHORIZE_APP,
       body: e,
       confirmText: v.default.Messages.DEAUTHORIZE,
@@ -164,13 +164,13 @@ var U = () => {
       } = e;
       c.default.delete(t);
       let a = l.get(s.id);
-      null != a && (0, T.stopEmbeddedActivity)({
+      null != a && (0, f.stopEmbeddedActivity)({
         channelId: a.channelId,
         applicationId: s.id
       })
     },
     [r, S] = n.useState(""),
-    f = e => {
+    T = e => {
       S(e)
     },
     _ = () => (0, a.jsx)("div", {
@@ -178,7 +178,7 @@ var U = () => {
       children: (0, a.jsx)(p.default, {
         size: p.default.Sizes.MEDIUM,
         query: r,
-        onChange: f,
+        onChange: T,
         placeholder: v.default.Messages.INTEGRATIONS_SEARCH,
         "aria-label": v.default.Messages.INTEGRATIONS_SEARCH
       })

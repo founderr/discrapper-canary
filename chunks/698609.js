@@ -1,10 +1,10 @@
 "use strict";
 a.r(e), a.d(e, {
   useSafetyHubClassification: function() {
-    return o
+    return c
   },
   useActiveSafetyHubClassifications: function() {
-    return c
+    return o
   },
   useExpiredSafetyHubClassifications: function() {
     return d
@@ -17,17 +17,17 @@ var n = a("884691"),
   s = a("446674"),
   i = a("299039"),
   l = a("781324"),
-  r = a("646356");
+  u = a("646356");
 
-function u() {
-  let t = (0, s.useStateFromStoresArray)([r.default], () => r.default.getClassifications());
+function r() {
+  let t = (0, s.useStateFromStoresArray)([u.default], () => u.default.getClassifications());
   return t.sort((t, e) => i.default.extractTimestamp(e.id) - i.default.extractTimestamp(t.id))
 }
 
-function o(t) {
-  let e = (0, s.useStateFromStores)([r.default], () => r.default.getClassification(t)),
-    a = (0, s.useStateFromStores)([r.default], () => r.default.getClassificationRequestState(t)),
-    i = (0, s.useStateFromStores)([r.default], () => r.default.getIsDsaEligible());
+function c(t) {
+  let e = (0, s.useStateFromStores)([u.default], () => u.default.getClassification(t)),
+    a = (0, s.useStateFromStores)([u.default], () => u.default.getClassificationRequestState(t)),
+    i = (0, s.useStateFromStores)([u.default], () => u.default.getIsDsaEligible());
   return n.useEffect(() => {
     void 0 === e && null == a && l.getSafetyHubDataForClassification(t)
   }, [t, e, a]), {
@@ -38,19 +38,19 @@ function o(t) {
   }
 }
 
-function c() {
-  let t = u(),
+function o() {
+  let t = r(),
     e = new Date;
   return t.filter(t => new Date(t.max_expiration_time) > e)
 }
 
 function d() {
-  let t = u(),
+  let t = r(),
     e = new Date;
   return t.filter(t => new Date(t.max_expiration_time) <= e)
 }
 
 function _() {
-  let t = (0, s.useStateFromStores)([r.default], () => r.default.getAppealSignal());
+  let t = (0, s.useStateFromStores)([u.default], () => u.default.getAppealSignal());
   return t
 }

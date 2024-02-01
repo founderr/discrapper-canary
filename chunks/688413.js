@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("133403"),
   S = s("810549"),
   E = s("546463"),
-  f = s("686470"),
-  T = s("568307"),
+  T = s("686470"),
+  f = s("568307"),
   m = s("941886"),
   _ = s("931138"),
   g = s("398288"),
@@ -45,7 +45,7 @@ let B = r.default.connectStores([M.default], () => ({
 function F(e) {
   let {
     onClose: t
-  } = e, s = (0, r.useStateFromStores)([T.default], () => T.default.getCandidateGames()), [l, o] = n.useState(null), c = s.map(e => ({
+  } = e, s = (0, r.useStateFromStores)([f.default], () => f.default.getCandidateGames()), [l, o] = n.useState(null), c = s.map(e => ({
     value: e.pid,
     label: null != e.name ? e.name : ""
   }));
@@ -86,7 +86,7 @@ function G(e) {
     rawGame: s,
     nowPlaying: l = !1,
     isOverride: S
-  } = e, m = (0, r.useStateFromStoresObject)([E.default, T.default, f.default], () => (0, T.transformForGameSettings)(s)), [x, R] = n.useState(!1), [M, P] = n.useState(null !== (t = m.name) && void 0 !== t ? t : "???"), U = i(j.flexCenter, {
+  } = e, m = (0, r.useStateFromStoresObject)([E.default, f.default, T.default], () => (0, f.transformForGameSettings)(s)), [x, R] = n.useState(!1), [M, P] = n.useState(null !== (t = m.name) && void 0 !== t ? t : "???"), U = i(j.flexCenter, {
     [L.game]: !l,
     [L.activeGame]: l,
     [b.card]: !l,
@@ -308,13 +308,13 @@ let w = (0, x.cachedFunction)(function() {
   return new Set(t.map(e => e.exePath))
 });
 var V = function() {
-  let e = (0, r.useStateFromStoresArray)([T.default], () => T.default.getGamesSeen(!0)),
+  let e = (0, r.useStateFromStoresArray)([f.default], () => f.default.getGamesSeen(!0)),
     {
       runningGame: t,
       overrideExePaths: s
-    } = (0, r.useStateFromStoresObject)([T.default], () => ({
-      runningGame: T.default.getVisibleGame(),
-      overrideExePaths: w(...T.default.getOverrides())
+    } = (0, r.useStateFromStoresObject)([f.default], () => ({
+      runningGame: f.default.getVisibleGame(),
+      overrideExePaths: w(...f.default.getOverrides())
     }));
   return n.useEffect(() => ((0, S.watchCandidateGames)(), S.stopWatchingCandidateGames), []), (0, a.jsxs)(d.FormSection, {
     tag: "h1",

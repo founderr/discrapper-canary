@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 });
 var a = s("37983");
@@ -16,13 +16,13 @@ var n = s("414456"),
   c = s("926994"),
   S = s("599110"),
   E = s("49111"),
-  f = s("704184"),
-  T = e => {
+  T = s("704184"),
+  f = e => {
     let {
       disabled: t = !1,
       type: s,
       className: n,
-      innerClassName: T,
+      innerClassName: f,
       onConnect: m
     } = e, _ = (0, o.default)(), g = d.default.get((0, u.useLegacyPlatformType)(s));
     return (0, a.jsx)(r.Tooltip, {
@@ -33,12 +33,12 @@ var n = s("414456"),
           onMouseLeave: u
         } = e;
         return (0, a.jsx)("div", {
-          className: l(f.wrapper, n),
+          className: l(T.wrapper, n),
           children: (0, a.jsx)(r.FocusRing, {
             children: (0, a.jsx)("button", {
               onMouseEnter: o,
               onMouseLeave: u,
-              className: l(f.inner, T),
+              className: l(T.inner, f),
               type: "button",
               disabled: t,
               style: {

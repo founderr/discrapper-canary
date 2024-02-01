@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("570697"),
   S = s("49111"),
   E = s("782340"),
-  f = s("515847");
-let T = (0, u.uid)(),
+  T = s("515847");
+let f = (0, u.uid)(),
   m = (0, d.createChannelRecord)({
     id: "1",
     type: S.ChannelTypes.DM
@@ -40,14 +40,14 @@ function g(e) {
     }
   }, [u, h]), (0, a.jsxs)(c.default, {
     title: t,
-    titleId: T,
+    titleId: f,
     description: E.default.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
     errors: s,
     disabled: N,
     children: [(0, a.jsx)(o.default, {
       "aria-describedby": _,
-      "aria-labelledby": T,
-      innerClassName: f.bioTextArea,
+      "aria-labelledby": f,
+      innerClassName: T.bioTextArea,
       maxCharacterCount: S.BIO_MAX_LENGTH,
       onChange: function(e, t, s) {
         t !== I && (p(t), A(s), d(t))

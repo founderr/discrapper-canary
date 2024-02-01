@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return X
+    return Z
   }
 }), s("222007");
 var a = s("37983"),
@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("819855"),
   S = s("77078"),
   E = s("913144"),
-  f = s("850068"),
-  T = s("54239"),
+  T = s("850068"),
+  f = s("54239"),
   m = s("775433"),
   _ = s("79112"),
   g = s("642950"),
@@ -62,7 +62,7 @@ function Q() {
     r = t || l,
     u = null != e.trialEndsAt ? o(e.trialEndsAt).diff(o(), "d") : 0,
     E = H.SubscriptionPlanInfo[e.planIdFromItems],
-    f = P.default.formatPriceString(P.default.getDefaultPrice(E.id), E.interval);
+    T = P.default.formatPriceString(P.default.getDefaultPrice(E.id), E.interval);
   return (0, a.jsxs)("div", {
     className: i(Y.tierCard, {
       [Y.withTier2Rim]: r
@@ -84,10 +84,10 @@ function Q() {
           className: Y.trialHeader,
           children: l ? V.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
             remainingTime: u,
-            price: f
+            price: T
           }) : V.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION.format({
             percent: 30,
-            regularPrice: f
+            regularPrice: T
           })
         })]
       }) : (0, a.jsx)(G.default, {
@@ -99,7 +99,7 @@ function Q() {
           L.default.track(w.AnalyticEvents.PREMIUM_SETTINGS_INTERACTED, {
             cta_type: "to_premium_home_button",
             target: "premium home page"
-          }), (0, T.popLayer)(), (0, x.transitionTo)(w.Routes.APPLICATION_STORE)
+          }), (0, f.popLayer)(), (0, x.transitionTo)(w.Routes.APPLICATION_STORE)
         },
         children: (0, a.jsx)(S.Text, {
           className: Y.tierCardButtonCTA,
@@ -190,7 +190,7 @@ function q() {
     })]
   })
 }
-var X = function() {
+var Z = function() {
   let e = (0, C.useBlockedPaymentsConfig)(),
     {
       AnalyticsLocationProvider: t,
@@ -200,8 +200,8 @@ var X = function() {
     i = (0, d.useStateFromStores)([M.default], () => M.default.hasFetchedSubscriptions()),
     r = (0, A.useSubscriptionPlansLoaded)(),
     [o, c] = n.useState(!0),
-    T = (0, B.useLocalizedPromoQuery)(),
-    _ = null == T ? void 0 : T.countryCode,
+    f = (0, B.useLocalizedPromoQuery)(),
+    _ = null == f ? void 0 : f.countryCode,
     N = (0, d.useStateFromStores)([R.default], () => R.default.enabled),
     x = "PremiumManagementSettings";
   (0, h.useTriggerDebuggingAA)({
@@ -212,7 +212,7 @@ var X = function() {
     autoTrackExposure: !1
   }), n.useEffect(() => {
     E.default.wait(async () => {
-      !N && !e && await Promise.all([f.fetchSubscriptions(), f.fetchPaymentSources(), (0, m.fetchPremiumSubscriptionPlans)(_, null, w.RevenueSurfaces.DISCOVERY)]), c(!1)
+      !N && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, m.fetchPremiumSubscriptionPlans)(_, null, w.RevenueSurfaces.DISCOVERY)]), c(!1)
     })
   }, [_, N, e]);
   let [D, P] = n.useState(!1);

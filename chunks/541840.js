@@ -19,19 +19,19 @@ var a = s("37983"),
       onClaim: s,
       code: S,
       outboundPromotion: E,
-      transitionState: f
-    } = e, [T, m] = n.useState(null), _ = (0, o.useUID)();
+      transitionState: T
+    } = e, [f, m] = n.useState(null), _ = (0, o.useUID)();
     return n.useEffect(() => {
       null == S && (0, d.claimOutboundPromotion)(E.id).then(e => s(e)).catch(e => {
         var t;
         return m(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code)
       })
     }, [S, E.id, s]), (0, a.jsx)(l.ModalRoot, {
-      transitionState: f,
+      transitionState: T,
       "aria-labelledby": _,
-      children: null != T ? (0, a.jsx)(r.DropsModalClaimErrorBody, {
+      children: null != f ? (0, a.jsx)(r.DropsModalClaimErrorBody, {
         onClose: t,
-        errorCode: T
+        errorCode: f
       }) : null == S ? (0, a.jsx)(l.ModalContent, {
         children: (0, a.jsx)(l.Spinner, {
           className: c.loading

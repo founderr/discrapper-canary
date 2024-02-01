@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
 var a = s("37983");
@@ -21,7 +21,7 @@ let E = {
   }
 };
 
-function f() {
+function T() {
   return (0, a.jsxs)("div", {
     className: S.socialLinks,
     children: [(0, a.jsx)(n.Anchor, {

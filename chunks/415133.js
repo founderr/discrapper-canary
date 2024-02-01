@@ -1,38 +1,38 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   getUserAvatarURLForPomelo: function() {
-    return f
-  },
-  getDefaultPomelo: function() {
     return E
   },
+  getDefaultPomelo: function() {
+    return f
+  },
   shouldSkipToEditUsername: function() {
-    return _
+    return h
   },
   formatPomeloForEditing: function() {
-    return N
+    return m
   },
   getMemberSince: function() {
-    return S
+    return C
   },
   formatUsernameLiveCheckValidation: function() {
-    return P
+    return I
   },
   getLocalizedForcedUUDate: function() {
-    return R
+    return g
   }
-}), s("781738"), s("222007"), s("794252");
-var a = s("866227"),
-  n = s.n(a),
-  i = s("506838"),
-  r = s("315102"),
-  l = s("299039"),
-  u = s("159885"),
-  o = s("644417"),
-  d = s("935583"),
-  c = s("782340");
+}), n("781738"), n("222007"), n("794252");
+var i = n("866227"),
+  s = n.n(i),
+  l = n("506838"),
+  r = n("315102"),
+  a = n("299039"),
+  u = n("159885"),
+  o = n("644417"),
+  d = n("935583"),
+  c = n("782340");
 
-function f(e) {
+function E(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   return r.default.getUserAvatarURL({
     id: e.id,
@@ -42,47 +42,47 @@ function f(e) {
   }, t, 80)
 }
 
-function E(e) {
+function f(e) {
   let t = (0, u.stripDiacritics)(e.username).replace(d.dirtyChars, "").replace(d.coalescePeriods, ".").toLowerCase();
   return "".concat(t).concat(e.discriminator).substring(0, 32)
 }
-let p = ["@", "#", ":"],
-  I = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
-  m = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
+let _ = ["@", "#", ":"],
+  p = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
+  S = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
 
-function _(e) {
-  var t, s;
-  let a = e.username.toLowerCase();
-  if ((t = a, s = d.CONTROL_CHARACTERS_CODE, t.split("").filter(e => !s.includes(e.charCodeAt(0))).join("")).length < 2) return !0;
+function h(e) {
+  var t, n;
+  let i = e.username.toLowerCase();
+  if ((t = i, n = d.CONTROL_CHARACTERS_CODE, t.split("").filter(e => !n.includes(e.charCodeAt(0))).join("")).length < 2) return !0;
+  for (let e of _)
+    if (i.includes(e)) return !0;
+  for (let e of S)
+    if (i === e.toLowerCase()) return !0;
   for (let e of p)
-    if (a.includes(e)) return !0;
-  for (let e of m)
-    if (a === e.toLowerCase()) return !0;
-  for (let e of I)
-    if (a.includes(e.toLowerCase())) return !0;
+    if (i.includes(e.toLowerCase())) return !0;
   return !1
 }
 
-function N(e) {
+function m(e) {
   return e.toLowerCase().replace(/\s/g, "").replace("@", "")
 }
 
-function S(e) {
-  let t = l.default.extractTimestamp(e);
+function C(e) {
+  let t = a.default.extractTimestamp(e);
   try {
-    return n(new Date(t)).format("MMM DD, YYYY")
+    return s(new Date(t)).format("MMM DD, YYYY")
   } catch (e) {}
   return null
 }
 
-function P(e) {
-  return (0, i.match)(e).with({
+function I(e) {
+  return (0, l.match)(e).with({
     rateLimited: !0
   }, () => ({
     type: o.NameValidationState.RATE_LIMIT,
     message: c.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT
   })).with({
-    error: i.P.not(i.P.nullish)
+    error: l.P.not(l.P.nullish)
   }, e => {
     let {
       error: t
@@ -102,14 +102,14 @@ function P(e) {
     type: o.NameValidationState.ERROR,
     message: c.default.Messages.POMELO_EXISTING_FLOW_ERROR_UNAVAILABLE
   })).with({
-    error: i.P.nullish
+    error: l.P.nullish
   }, () => ({
     type: o.NameValidationState.INTERNAL_ERROR,
     message: ""
   })).otherwise(() => void 0)
 }
 
-function R(e) {
+function g(e) {
   let t = new Date(2024, 2, 4);
   return t.toLocaleDateString(e, {
     month: "long",

@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("424562"),
   S = s("376402"),
   E = s("506885"),
-  f = s("621200"),
-  T = s("305961"),
+  T = s("621200"),
+  f = s("305961"),
   m = s("162771"),
   _ = s("677099"),
   g = s("790618"),
@@ -35,7 +35,7 @@ function x() {
   let e = (0, l.useStateFromStores)([_.default], () => _.default.getFlattenedGuildIds()),
     t = (0, l.useStateFromStores)([c.default], () => c.default.getGuild()),
     s = (0, l.useStateFromStores)([m.default], () => m.default.getGuildId()),
-    x = (0, l.useStateFromStores)([T.default], () => T.default.getGuild(null != s ? s : e[0])),
+    x = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(null != s ? s : e[0])),
     R = (0, l.useStateFromStores)([c.default, g.default], () => c.default.showNotice() || g.default.showNotice()),
     M = null != t ? t : x,
     v = (0, l.useStateFromStores)([h.default], () => h.default.getCurrentUser()),
@@ -85,7 +85,7 @@ function x() {
         }, C.ProfileCustomizationSubsection.GUILD)]
       }), D === C.ProfileCustomizationSubsection.GUILD ? (0, a.jsx)(S.default, {
         selectedGuild: M
-      }) : (0, a.jsx)(f.default, {})]
+      }) : (0, a.jsx)(T.default, {})]
     })
   })
 }

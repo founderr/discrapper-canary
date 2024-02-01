@@ -16,8 +16,8 @@ var n = s("627445"),
   c = s("153160"),
   S = s("809071"),
   E = s("646718"),
-  f = s("49111"),
-  T = s("782340"),
+  T = s("49111"),
+  f = s("782340"),
   m = s("700135");
 
 function _(e) {
@@ -46,21 +46,21 @@ function _(e) {
   l(null != I, "Missing plan");
   let p = (0, c.formatPrice)(_.total, _.currency),
     C = "";
-  return I.interval === E.SubscriptionIntervalTypes.YEAR ? C = T.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+  return I.interval === E.SubscriptionIntervalTypes.YEAR ? C = f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
     price: p,
-    termsUrl: f.MarketingURLs.TERMS,
-    paidURL: f.MarketingURLs.PAID_TERMS,
-    privacyUrl: f.MarketingURLs.PRIVACY
-  }) : I.interval === E.SubscriptionIntervalTypes.MONTH && (C = 1 === I.intervalCount ? T.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
+    termsUrl: T.MarketingURLs.TERMS,
+    paidURL: T.MarketingURLs.PAID_TERMS,
+    privacyUrl: T.MarketingURLs.PRIVACY
+  }) : I.interval === E.SubscriptionIntervalTypes.MONTH && (C = 1 === I.intervalCount ? f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
     price: p,
-    termsUrl: f.MarketingURLs.TERMS,
-    paidURL: f.MarketingURLs.PAID_TERMS,
-    privacyUrl: f.MarketingURLs.PRIVACY
-  }) : T.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
+    termsUrl: T.MarketingURLs.TERMS,
+    paidURL: T.MarketingURLs.PAID_TERMS,
+    privacyUrl: T.MarketingURLs.PRIVACY
+  }) : f.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
     price: p,
-    termsUrl: f.MarketingURLs.TERMS,
-    paidURL: f.MarketingURLs.PAID_TERMS,
-    privacyUrl: f.MarketingURLs.PRIVACY,
+    termsUrl: T.MarketingURLs.TERMS,
+    paidURL: T.MarketingURLs.PAID_TERMS,
+    privacyUrl: T.MarketingURLs.PRIVACY,
     intervalCount: I.intervalCount
   })), (0, a.jsx)(i.Text, {
     color: "text-muted",
@@ -75,7 +75,7 @@ function g(e) {
     subscription: t,
     withOverheadSeparator: s
   } = e;
-  return t.status === f.SubscriptionStatusTypes.CANCELED || t.isPurchasedExternally ? null : (0, a.jsx)(_, {
+  return t.status === T.SubscriptionStatusTypes.CANCELED || t.isPurchasedExternally ? null : (0, a.jsx)(_, {
     subscription: t,
     withOverheadSeparator: s
   })

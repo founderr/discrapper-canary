@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("77078"),
   S = s("913144"),
   E = s("619340"),
-  f = s("642950"),
-  T = s("264044"),
+  T = s("642950"),
+  f = s("264044"),
   m = s("135230"),
   _ = s("841098"),
   g = s("376556"),
@@ -109,34 +109,34 @@ function q(e) {
   var t, s, l;
   let i, r, o, {
       onDisconnect: S,
-      account: f,
-      theme: T,
+      account: T,
+      theme: f,
       locale: _
     } = e,
-    [C, A] = n.useState(f.friendSync),
-    [O, x] = n.useState(f.visibility),
-    [R, M] = n.useState(f.metadataVisibility),
-    [D, P] = n.useState(f.showActivity),
+    [C, A] = n.useState(T.friendSync),
+    [O, x] = n.useState(T.visibility),
+    [R, M] = n.useState(T.metadataVisibility),
+    [D, P] = n.useState(T.showActivity),
     [U, y] = n.useState(null),
     [Y, z] = n.useState(null),
-    [q, X] = n.useState(!1),
-    [Z, J] = n.useState([]),
-    $ = (0, h.useLegacyPlatformType)(f.type),
+    [q, Z] = n.useState(!1),
+    [X, J] = n.useState([]),
+    $ = (0, h.useLegacyPlatformType)(T.type),
     ee = g.default.get($);
   n.useEffect(() => {
-    A(f.friendSync), x(f.visibility), M(f.metadataVisibility), P(f.showActivity)
-  }, [f]), n.useEffect(() => {
-    !1 !== f.verified && (null != U && (x(U), E.default.setVisibility(f.type, f.id, U), y(null)), null != Y && (M(Y), E.default.setMetadataVisibility(f.type, f.id, Y), z(null)))
-  }, [f]);
+    A(T.friendSync), x(T.visibility), M(T.metadataVisibility), P(T.showActivity)
+  }, [T]), n.useEffect(() => {
+    !1 !== T.verified && (null != U && (x(U), E.default.setVisibility(T.type, T.id, U), y(null)), null != Y && (M(Y), E.default.setMetadataVisibility(T.type, T.id, Y), z(null)))
+  }, [T]);
 
   function et() {
-    (0, p.default)(f.type, "User Settings")
+    (0, p.default)(T.type, "User Settings")
   }
 
   function es() {
-    let e = g.default.get(f.type),
+    let e = g.default.get(T.type),
       t = W.default.Messages.DISCONNECT_ACCOUNT_BODY;
-    (0, F.default)(f) && (t = (0, a.jsxs)(a.Fragment, {
+    (0, F.default)(T) && (t = (0, a.jsxs)(a.Fragment, {
       children: [t, (0, a.jsx)(G.default, {
         className: K.infoBox,
         children: W.default.Messages.CONNECTED_ACCOUNT_IS_AUTHORIZED_APP_DISCONNECT_WARNING.format({
@@ -158,31 +158,31 @@ function q(e) {
   function ea(e) {
     let {
       verified: t
-    } = f, s = e ? 1 : 0;
+    } = T, s = e ? 1 : 0;
     if (e && !t) {
-      y(s), (0, p.default)(f.type, "User Settings");
+      y(s), (0, p.default)(T.type, "User Settings");
       return
     }
-    x(s), E.default.setVisibility(f.type, f.id, s)
+    x(s), E.default.setVisibility(T.type, T.id, s)
   }
 
   function en(e) {
     let {
       verified: t
-    } = f, s = e ? 1 : 0;
+    } = T, s = e ? 1 : 0;
     if (e && !t) {
-      z(s), (0, p.default)(f.type, "User Settings");
+      z(s), (0, p.default)(T.type, "User Settings");
       return
     }
-    M(s), E.default.setMetadataVisibility(f.type, f.id, s)
+    M(s), E.default.setMetadataVisibility(T.type, T.id, s)
   }
 
   function el(e) {
-    A(e), E.default.setFriendSync(f.type, f.id, e)
+    A(e), E.default.setFriendSync(T.type, T.id, e)
   }
 
   function ei(e) {
-    P(e), E.default.setShowActivity(f.type, f.id, e)
+    P(e), E.default.setShowActivity(T.type, T.id, e)
   }
   return (0, a.jsxs)("div", {
     className: K.connection,
@@ -208,7 +208,7 @@ function q(e) {
         children: [(0, a.jsx)("img", {
           alt: n.name,
           className: K.connectionIcon,
-          src: (0, u.isThemeDark)(T) ? n.icon.darkSVG : n.icon.lightSVG
+          src: (0, u.isThemeDark)(f) ? n.icon.darkSVG : n.icon.lightSVG
         }), (0, a.jsxs)("div", {
           children: [(0, a.jsx)(c.Text, {
             color: "header-primary",
@@ -241,7 +241,7 @@ function q(e) {
           })
         })]
       })
-    }(f), (t = f).twoWayLink ? null : t.type === w.PlatformTypes.XBOX ? (0, a.jsx)("div", {
+    }(T), (t = T).twoWayLink ? null : t.type === w.PlatformTypes.XBOX ? (0, a.jsx)("div", {
       className: K.upsellWrapper,
       children: (0, a.jsx)(H.XboxTwoWayLinkUpsell, {})
     }) : t.type === w.PlatformTypes.PLAYSTATION ? (0, a.jsx)("div", {
@@ -279,7 +279,7 @@ function q(e) {
           date: l
         })
       }, "member-since")));
-      let i = Z.includes(e.id),
+      let i = X.includes(e.id),
         r = W.default.Messages.REFRESH;
       if (null == n || 0 === n.length) {
         if (!0 !== g.default.get(e.type).hasMetadata) return null;
@@ -301,9 +301,9 @@ function q(e) {
         submitting: q,
         disabled: i,
         onClick: i ? void 0 : () => {
-          X(!0), E.default.refresh(e.type, e.id).finally(() => {
+          Z(!0), E.default.refresh(e.type, e.id).finally(() => {
             setTimeout(() => {
-              Z.push(e.id), J(Z), X(!1)
+              X.push(e.id), J(X), Z(!1)
             }, 2e3)
           })
         },
@@ -312,7 +312,7 @@ function q(e) {
         className: K.metadataContainer,
         children: n
       })
-    }(f), (s = ee, w.FRIEND_SYNC_PLATFORM_TYPES.has(f.type) && (i = (0, a.jsx)(c.FormSwitch, {
+    }(T), (s = ee, w.FRIEND_SYNC_PLATFORM_TYPES.has(T.type) && (i = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
       value: C,
@@ -321,7 +321,7 @@ function q(e) {
         variant: "text-sm/semibold",
         children: W.default.Messages.SYNC_FRIENDS
       })
-    })), w.ACTIVITY_PLATFORM_TYPES.has(f.type) && (r = (0, a.jsx)(c.FormSwitch, {
+    })), w.ACTIVITY_PLATFORM_TYPES.has(T.type) && (r = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
       value: D,
@@ -332,12 +332,12 @@ function q(e) {
           platform: s.name
         })
       })
-    })), (null === (l = g.default.get(f.type)) || void 0 === l ? void 0 : l.hasMetadata) === !0 && (o = (0, a.jsx)(c.FormSwitch, {
+    })), (null === (l = g.default.get(T.type)) || void 0 === l ? void 0 : l.hasMetadata) === !0 && (o = (0, a.jsx)(c.FormSwitch, {
       className: K.connectionOptionSwitch,
       hideBorder: !0,
       value: 1 === R,
       onChange: en,
-      disabled: 1 !== O || null == f.metadata,
+      disabled: 1 !== O || null == T.metadata,
       children: (0, a.jsx)(c.Text, {
         variant: "text-sm/semibold",
         children: W.default.Messages.DISPLAY_DETAILS_ON_PROFILE
@@ -358,10 +358,10 @@ function q(e) {
         }), o, r, i]
       })
     })), function() {
-      if (f.revoked || f.integrations.length > 0) return (0, a.jsx)(c.FormDivider, {
+      if (T.revoked || T.integrations.length > 0) return (0, a.jsx)(c.FormDivider, {
         className: K.connectedAccountSeparator
       })
-    }(), f.revoked ? (0, a.jsx)(c.FormItem, {
+    }(), T.revoked ? (0, a.jsx)(c.FormItem, {
       className: K.integrationsWrapper,
       children: (0, a.jsx)(c.FormText, {
         className: K.integrationRevoked,
@@ -369,7 +369,7 @@ function q(e) {
           onReconnect: et
         })
       })
-    }) : f.integrations.length > 0 ? (0, a.jsxs)(c.FormItem, {
+    }) : T.integrations.length > 0 ? (0, a.jsxs)(c.FormItem, {
       className: K.integrationsWrapper,
       children: [(0, a.jsx)(c.FormTitle, {
         tag: c.FormTitleTags.H5,
@@ -378,7 +378,7 @@ function q(e) {
           children: W.default.Messages.SUB_ENABLED_SERVERS
         })
       }), (0, a.jsx)("div", {
-        children: f.integrations.map(e => (0, a.jsx)(Q, {
+        children: T.integrations.map(e => (0, a.jsx)(Q, {
           integration: e
         }, e.id))
       })]
@@ -386,7 +386,7 @@ function q(e) {
   })
 }
 
-function X() {
+function Z() {
   return n.useEffect(() => () => {
     (0, C.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
       dismissAction: Y.ContentDismissActionType.AUTO
@@ -404,11 +404,11 @@ function X() {
       children: W.default.Messages.CONNECTIONS_USER_SETTINGS_CONNECT_ACCOUNTS_DESCRIPTION.format({
         privacyPolicyUrl: w.MarketingURLs.PRIVACY
       })
-    }), (0, a.jsx)(Z, {})]
+    }), (0, a.jsx)(X, {})]
   })
 }
 
-function Z() {
+function X() {
   function e(e) {
     let t = g.default.get(e);
     (0, p.default)(t.type), U.default.track(w.AnalyticEvents.ACCOUNT_LINK_STEP, {
@@ -429,7 +429,7 @@ function Z() {
     l = n ? 24 : 18;
   return (0, a.jsxs)("div", {
     className: K.connectionsContainer,
-    children: [s.slice(0, 10).map(e => (0, a.jsx)(T.default, {
+    children: [s.slice(0, 10).map(e => (0, a.jsx)(f.default, {
       type: e.type,
       className: K.accountButton,
       innerClassName: K.accountButtonInner
@@ -510,11 +510,11 @@ var $ = () => {
   let i = (0, r.useStateFromStores)([y.default], () => y.default.locale);
   return (n.useEffect(() => {
     E.default.fetch()
-  }, []), e) ? (0, a.jsx)(f.default, {}) : (0, a.jsxs)(c.FormSection, {
+  }, []), e) ? (0, a.jsx)(T.default, {}) : (0, a.jsxs)(c.FormSection, {
     className: K.connections,
     tag: c.FormTitleTags.H1,
     title: W.default.Messages.CONNECTIONS,
-    children: [(0, a.jsx)(X, {}), (0, a.jsx)(J, {
+    children: [(0, a.jsx)(Z, {}), (0, a.jsx)(J, {
       fetching: t,
       accounts: s,
       theme: l,

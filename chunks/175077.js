@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
 var a = s("37983"),
@@ -16,7 +16,7 @@ var a = s("37983"),
   S = s("782340"),
   E = s("926622");
 
-function f() {
+function T() {
   let e = u.FriendSourceFlagsSetting.useSetting(),
     t = n.useMemo(() => (0, d.computeFlags)(e), [e]);
   return (0, a.jsx)(r.FormSection, {

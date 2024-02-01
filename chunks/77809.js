@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("521128"),
   S = s("853994"),
   E = s("782340"),
-  f = s("716553"),
-  T = s("926622");
+  T = s("716553"),
+  f = s("926622");
 
 function m(e) {
   let {
@@ -52,7 +52,7 @@ function _() {
     children: [(0, a.jsx)("div", {
       ref: t
     }), (0, a.jsxs)(o.FormSection, {
-      className: i(T.marginTop40),
+      className: i(f.marginTop40),
       tag: o.FormTitleTags.H1,
       title: E.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
       children: [S.EmailCategoriesList.map(e => {
@@ -71,7 +71,7 @@ function _() {
           }
         }, n())
       }), (0, a.jsx)(o.Button, {
-        className: f.marketingUnsubscribeButton,
+        className: T.marketingUnsubscribeButton,
         disabled: !_,
         look: o.ButtonLooks.LINK,
         color: o.ButtonColors.LINK,
@@ -81,7 +81,7 @@ function _() {
         type: o.FormTextTypes.DESCRIPTION,
         children: E.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING_DESCRIPTION
       }), (0, a.jsx)(o.FormDivider, {
-        className: i(T.marginTop40, T.marginBottom40)
+        className: i(f.marginTop40, f.marginBottom40)
       })]
     })]
   }) : null

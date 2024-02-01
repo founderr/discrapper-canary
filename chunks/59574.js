@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("452804"),
   S = s("79112"),
   E = s("485328"),
-  f = s("180748"),
-  T = s("206230"),
+  T = s("180748"),
+  f = s("206230"),
   m = s("951212"),
   _ = s("714657"),
   g = s("10641"),
@@ -253,7 +253,7 @@ class Y extends n.Component {
     })
   }
   handleDarkSidebarChecked() {
-    (0, f.toggleDarkSidebar)()
+    (0, T.toggleDarkSidebar)()
   }
   renderScalingAndSpacing() {
     return (0, a.jsxs)(a.Fragment, {
@@ -289,7 +289,7 @@ class Y extends n.Component {
     })
   }
   handleFontSizeChange(e) {
-    (0, f.setFontSize)(e)
+    (0, T.setFontSize)(e)
   }
   handleMessageSpacingChange(e) {
     switch (e) {
@@ -298,11 +298,11 @@ class Y extends n.Component {
       case 8:
       case 16:
       case 24:
-        (0, f.setMessageGroupSpacing)(e)
+        (0, T.setMessageGroupSpacing)(e)
     }
   }
   handleZoomChange(e) {
-    (0, f.setZoom)(e)
+    (0, T.setZoom)(e)
   }
   constructor(...e) {
     super(...e), this.darkMessages = V(P.ThemeTypes.DARK), this.lightMessages = V(P.ThemeTypes.LIGHT), this.handleDisplayCompactAvatarsChanged = e => {
@@ -313,7 +313,7 @@ class Y extends n.Component {
       let {
         value: t
       } = e;
-      v.MessageDisplayCompact.updateSetting(t === F.COMPACT), (0, f.setMessageGroupSpacing)()
+      v.MessageDisplayCompact.updateSetting(t === F.COMPACT), (0, T.setMessageGroupSpacing)()
     }
   }
 }
@@ -335,16 +335,16 @@ function W() {
       forceTrack: !0
     })
   }, []);
-  let i = (0, r.useStateFromStoresObject)([R.default, M.default, T.default, C.default, _.default], () => {
+  let i = (0, r.useStateFromStoresObject)([R.default, M.default, f.default, C.default, _.default], () => {
     var e, t;
     return {
       theme: R.default.theme,
-      useForcedColors: T.default.useForcedColors,
+      useForcedColors: f.default.useForcedColors,
       useSystemTheme: M.default.useSystemTheme,
       darkSidebar: R.default.darkSidebar,
-      fontSize: T.default.fontSize,
-      zoom: T.default.zoom,
-      messageGroupSpacing: T.default.messageGroupSpacing,
+      fontSize: f.default.fontSize,
+      zoom: f.default.zoom,
+      messageGroupSpacing: f.default.messageGroupSpacing,
       displayCompactAvatars: M.default.displayCompactAvatars,
       isStaff: null !== (t = null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
       gradientPreset: _.default.gradientPreset

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 }), s("222007");
 var a = s("37983"),
@@ -15,7 +15,7 @@ var a = s("37983"),
   c = s("859893"),
   S = s("782340"),
   E = s("804642");
-let f = e => {
+let T = e => {
   let {
     quest: t
   } = e;
@@ -28,7 +28,7 @@ let f = e => {
     })]
   })
 };
-var T = () => {
+var f = () => {
   let [e, t] = n.useState(!1), s = (0, l.useStateFromStoresArray)([d.default], () => [...d.default.quests.values()]), {
     isFetchingCurrentQuests: u,
     lastFetchedCurrentQuests: c
@@ -52,7 +52,7 @@ var T = () => {
       }),
       children: [(0, a.jsx)(i.FormDivider, {
         className: E.divider
-      }), s.map(e => (0, a.jsx)(f, {
+      }), s.map(e => (0, a.jsx)(T, {
         quest: e
       }, e.id))]
     })

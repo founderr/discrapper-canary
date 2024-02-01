@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return Y
   }
 }), n("794252"), n("222007");
-var i, a, l = n("37983"),
-  s = n("884691"),
+var i, a, s = n("37983"),
+  l = n("884691"),
   r = n("414456"),
   o = n.n(r),
   u = n("506838"),
@@ -22,41 +22,41 @@ var i, a, l = n("37983"),
   h = n("452804"),
   g = n("206230"),
   _ = n("812204"),
-  p = n("685665"),
-  S = n("626301"),
-  v = n("917247"),
-  T = n("956597"),
-  E = n("891653"),
-  N = n("505093"),
-  I = n("161778"),
+  S = n("685665"),
+  p = n("626301"),
+  T = n("917247"),
+  E = n("956597"),
+  v = n("891653"),
+  I = n("505093"),
+  N = n("161778"),
   y = n("168973"),
   O = n("491605"),
   C = n("476765"),
-  M = n("599110"),
-  A = n("32531"),
-  b = n("714657"),
-  P = n("164546"),
+  A = n("599110"),
+  M = n("32531"),
+  P = n("714657"),
+  b = n("164546"),
   R = n("941719"),
   w = n("49111"),
   D = n("646718"),
   x = n("116319"),
   G = n("397336"),
   L = n("843455"),
-  j = n("782340"),
-  k = n("809404");
+  U = n("782340"),
+  j = n("809404");
 (a = i || (i = {})).EDITOR = "EDITOR", a.SETTINGS = "SETTINGS";
-let U = Object.freeze({
+let k = Object.freeze({
     EDITOR: G.UserSettingsDelay.SLOW_USER_ACTION,
     SETTINGS: G.UserSettingsDelay.INFREQUENT_USER_ACTION
   }),
-  F = s.createContext({}),
+  F = l.createContext({}),
   H = e => {
     let {
       isPersisted: t,
       themeName: n,
       analyticsLocations: i
     } = e;
-    M.default.track(w.AnalyticEvents.CLIENT_THEME_UPDATED, {
+    A.default.track(w.AnalyticEvents.CLIENT_THEME_UPDATED, {
       feature_name: D.AnalyticsPremiumFeatureNames.CLIENT_THEME,
       theme_name: n,
       is_persisted: t,
@@ -76,18 +76,18 @@ let U = Object.freeze({
       type: "EDITOR",
       isCoachmark: !0,
       isPreview: !0
-    }, () => j.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER).with({
+    }, () => U.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER).with({
       type: "EDITOR",
       isCoachmark: !0
-    }, () => j.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => j.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
-    return (0, l.jsxs)("div", {
-      className: k.title,
-      children: [(0, l.jsx)(m.Heading, {
+    }, () => U.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => U.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
+    return (0, s.jsxs)("div", {
+      className: j.title,
+      children: [(0, s.jsx)(m.Heading, {
         "aria-label": a,
         variant: "text-md/medium",
         children: a
-      }), (0, l.jsx)(E.default, {
-        className: k.premiumIcon
+      }), (0, s.jsx)(v.default, {
+        className: j.premiumIcon
       })]
     })
   },
@@ -96,30 +96,30 @@ let U = Object.freeze({
     let {
       type: i,
       isPreview: a,
-      isCoachmark: s
-    } = e, r = (null === (n = (0, v.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
+      isCoachmark: l
+    } = e, r = (null === (n = (0, T.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
     if (r && a) return null;
     let o = (0, u.match)({
       type: i,
       isPreview: a,
-      isCoachmark: s
+      isCoachmark: l
     }).with({
       type: "EDITOR",
       isPreview: !0
-    }, () => j.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
-      onPremiumClick: S.navigateToPremiumMarketingPage
+    }, () => U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
+      onPremiumClick: p.navigateToPremiumMarketingPage
     })).with({
       type: "EDITOR",
       isCoachmark: !0
-    }, () => j.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK).with({
+    }, () => U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK).with({
       type: "EDITOR",
       isPreview: !1
-    }, () => j.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
+    }, () => U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
       isPreview: !0
-    }, () => j.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
-      onPremiumClick: S.navigateToPremiumMarketingPage
-    })).otherwise(() => j.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
-    return (0, l.jsx)(m.Heading, {
+    }, () => U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
+      onPremiumClick: p.navigateToPremiumMarketingPage
+    })).otherwise(() => U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
+    return (0, s.jsx)(m.Heading, {
       variant: "text-sm/normal",
       children: o
     })
@@ -131,15 +131,15 @@ let U = Object.freeze({
     } = e, i = (0, C.useUID)(), a = (0, m.useRadioGroup)({
       orientation: "horizontal",
       labelledBy: i
-    }), r = s.useMemo(() => ({
+    }), r = l.useMemo(() => ({
       type: t,
-      delay: U[t]
+      delay: k[t]
     }), [t]);
-    return (0, l.jsx)(F.Provider, {
+    return (0, s.jsx)(F.Provider, {
       value: r,
-      children: (0, l.jsx)("div", {
+      children: (0, s.jsx)("div", {
         ...a,
-        className: k.container,
+        className: j.container,
         children: n
       })
     })
@@ -149,10 +149,10 @@ K.Basic = e => {
     className: t
   } = e, {
     delay: n
-  } = s.useContext(F), {
+  } = l.useContext(F), {
     analyticsLocations: i
-  } = (0, p.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [a, r, u] = (0, d.useStateFromStoresArray)([I.default, y.default, b.default], () => [I.default.theme, null == b.default.gradientPreset, y.default.useSystemTheme === x.SystemThemeState.ON]), c = e => {
-    (0, A.resetBackgroundGradientPreset)(), H({
+  } = (0, S.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [a, r, u] = (0, d.useStateFromStoresArray)([N.default, y.default, P.default], () => [N.default.theme, null == P.default.gradientPreset, y.default.useSystemTheme === x.SystemThemeState.ON]), c = e => {
+    (0, M.resetBackgroundGradientPreset)(), H({
       isPersisted: !0,
       analyticsLocations: i,
       themeName: "default ".concat(e)
@@ -160,17 +160,17 @@ K.Basic = e => {
       theme: e
     }, n)
   };
-  return (0, l.jsxs)("section", {
-    className: o(k.presets, t),
-    children: [(0, l.jsx)(P.DefaultThemeSelection, {
+  return (0, s.jsxs)("section", {
+    className: o(j.presets, t),
+    children: [(0, s.jsx)(b.DefaultThemeSelection, {
       theme: L.ThemeTypes.LIGHT,
       isSelected: r && !u && (0, f.isThemeLight)(a),
       onSelect: () => c(L.ThemeTypes.LIGHT)
-    }), (0, l.jsx)(P.DefaultThemeSelection, {
+    }), (0, s.jsx)(b.DefaultThemeSelection, {
       theme: L.ThemeTypes.DARK,
       isSelected: r && !u && (0, f.isThemeDark)(a),
       onSelect: () => c(L.ThemeTypes.DARK)
-    }), (0, l.jsx)(P.DefaultThemeSelection, {
+    }), (0, s.jsx)(b.DefaultThemeSelection, {
       theme: "system",
       isSelected: r && u,
       onSelect: () => c("system")
@@ -185,65 +185,65 @@ K.Basic = e => {
   } = e, {
     type: u,
     delay: f
-  } = s.useContext(F), {
+  } = l.useContext(F), {
     analyticsLocations: m
-  } = (0, p.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [E, I, y] = (0, d.useStateFromStoresArray)([b.default], () => {
+  } = (0, S.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [v, N, y] = (0, d.useStateFromStoresArray)([P.default], () => {
     var e;
-    return [b.default.isPreview, b.default.isCoachmark, null === (e = b.default.gradientPreset) || void 0 === e ? void 0 : e.id]
-  }), [C, M] = s.useState(!1), [w, G] = s.useState(-1), L = (0, d.useStateFromStores)([g.default], () => g.default.useReducedMotion), U = (null === (i = (0, v.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
-  s.useEffect(() => {
-    (w === R.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || y === c.BackgroundGradientPresetId.EASTER_EGG) && M(!0)
+    return [P.default.isPreview, P.default.isCoachmark, null === (e = P.default.gradientPreset) || void 0 === e ? void 0 : e.id]
+  }), [C, A] = l.useState(!1), [w, G] = l.useState(-1), L = (0, d.useStateFromStores)([g.default], () => g.default.useReducedMotion), k = (null === (i = (0, T.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
+  l.useEffect(() => {
+    (w === R.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || y === c.BackgroundGradientPresetId.EASTER_EGG) && A(!0)
   }, [w, u, y]);
   let K = (e, t) => {
-    if ((0, A.updateBackgroundGradientPreset)(e.id), H({
-        isPersisted: !E,
+    if ((0, M.updateBackgroundGradientPreset)(e.id), H({
+        isPersisted: !v,
         analyticsLocations: m,
         themeName: c.BackgroundGradientPresetId[e.id]
-      }), E) {
-      (0, N.setUseSystemTheme)(x.SystemThemeState.OFF);
+      }), v) {
+      (0, I.setUseSystemTheme)(x.SystemThemeState.OFF);
       return
     }
     if ((0, h.saveClientTheme)({
         backgroundGradientPresetId: e.id,
         theme: e.theme
       }, f), null != t) {
-      if (C && M(!1), t <= w || 0 === t) {
+      if (C && A(!1), t <= w || 0 === t) {
         G(0);
         return
       }
       G(e => e + 1)
     }
   };
-  return (0, l.jsxs)("section", {
+  return (0, s.jsxs)("section", {
     className: a,
-    children: ["EDITOR" === u && E && U ? (0, l.jsx)(T.default, {
+    children: ["EDITOR" === u && v && k ? (0, s.jsx)(E.default, {
       type: D.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
       subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2,
-      children: j.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
-        onPremiumClick: S.navigateToPremiumMarketingPage
+      children: U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
+        onPremiumClick: p.navigateToPremiumMarketingPage
       })
-    }) : (0, l.jsxs)("div", {
-      className: k.header,
-      children: [(0, l.jsxs)("div", {
-        className: k.headings,
-        children: [(0, l.jsx)(B, {
+    }) : (0, s.jsxs)("div", {
+      className: j.header,
+      children: [(0, s.jsxs)("div", {
+        className: j.headings,
+        children: [(0, s.jsx)(B, {
           type: u,
-          isPreview: E,
-          isCoachmark: I
-        }), (0, l.jsx)(W, {
+          isPreview: v,
+          isCoachmark: N
+        }), (0, s.jsx)(W, {
           type: u,
-          isPreview: E,
-          isCoachmark: I
+          isPreview: v,
+          isCoachmark: N
         })]
       }), null == r ? void 0 : r()]
-    }), (0, l.jsxs)("div", {
-      className: k.presets,
+    }), (0, s.jsxs)("div", {
+      className: j.presets,
       children: [R.BACKGROUND_GRADIENT_PRESETS.filter(e => {
         let {
           id: t
         } = e;
         return t !== c.BackgroundGradientPresetId.EASTER_EGG
-      }).map((e, t) => (0, l.jsx)(P.GradientThemeSelection, {
+      }).map((e, t) => (0, s.jsx)(b.GradientThemeSelection, {
         preset: e,
         isSelected: y === e.id,
         onSelect: () => K(e, t),
@@ -259,16 +259,16 @@ K.Basic = e => {
           } = await n.el("922510").then(n.t.bind(n, "922510", 19));
           return e
         }
-        return (0, l.jsxs)("div", {
-          className: k.easterEggSelection,
-          children: [(0, l.jsx)(P.GradientThemeSelection, {
+        return (0, s.jsxs)("div", {
+          className: j.easterEggSelection,
+          children: [(0, s.jsx)(b.GradientThemeSelection, {
             preset: e,
             isSelected: y === c.BackgroundGradientPresetId.EASTER_EGG,
             onSelect: () => K(e)
-          }), (0, l.jsx)(O.default, {
+          }), (0, s.jsx)(O.default, {
             importData: t,
             shouldAnimate: !L,
-            className: k.sparkles
+            className: j.sparkles
           })]
         })
       })()]

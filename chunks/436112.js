@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("404118"),
   S = s("193990"),
   E = s("519705"),
-  f = s("533280"),
-  T = s("408166"),
+  T = s("533280"),
+  f = s("408166"),
   m = s("862205"),
   _ = s("298878"),
   g = s("54346"),
@@ -95,7 +95,7 @@ function K(e) {
     autoTrackExposure: !1
   }), {
     enabled: o
-  } = T.ActivitiesSoundsExperiment.useExperiment({
+  } = f.ActivitiesSoundsExperiment.useExperiment({
     location: "791c79_2"
   }, {
     autoTrackExposure: !1
@@ -107,7 +107,7 @@ function K(e) {
   }, []);
   let c = n.useRef(),
     E = y.QuietMode.useSetting(),
-    f = n.useCallback((e, t) => {
+    T = n.useCallback((e, t) => {
       t.stopPropagation(), t.preventDefault(), null != c.current && c.current.stop(), c.current = B.playSound(e)
     }, []),
     m = n.useCallback((e, s) => {
@@ -225,7 +225,7 @@ function K(e) {
         disabled: s || !0 === i || !0 === r,
         tooltip: r ? w.default.Messages.QUIET_MODE_DISABLED_BY : void 0,
         onChange: e => m(l, e),
-        onPreview: e => f(l, e),
+        onPreview: e => T(l, e),
         enabled: !s && !t.includes(l) && !0 !== r
       }, l)
     })]
@@ -322,7 +322,7 @@ class Q extends n.PureComponent {
     return (0, a.jsxs)(u.FormSection, {
       tag: u.FormTitleTags.H1,
       title: w.default.Messages.NOTIFICATIONS,
-      children: [(0, a.jsx)(Z, {}), (0, a.jsx)(u.FormSwitch, {
+      children: [(0, a.jsx)(X, {}), (0, a.jsx)(u.FormSwitch, {
         className: Y.marginBottom20,
         value: e !== k.DesktopNotificationTypes.NEVER && !c,
         onChange: this.handleDesktopChange,
@@ -330,7 +330,7 @@ class Q extends n.PureComponent {
         disabled: c,
         tooltipNote: c ? w.default.Messages.QUIET_MODE_DISABLED_BY : void 0,
         children: w.default.Messages.DESKTOP_NOTIFICATIONS_ENABLE
-      }), (0, a.jsx)(X, {}), (0, a.jsx)(u.FormSwitch, {
+      }), (0, a.jsx)(Z, {}), (0, a.jsx)(u.FormSwitch, {
         className: S ? Y.marginBottom20 : Y.marginBottom40,
         value: !s,
         note: w.default.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_BODY,
@@ -372,7 +372,7 @@ class Q extends n.PureComponent {
     }, this.handleToggleShowFlash = () => {
       S.default.setTaskbarFlash(!this.props.taskbarFlash)
     }, this.renderTTS = () => {
-      if (!f.supported) return null;
+      if (!T.supported) return null;
       let e = [{
         name: w.default.Messages.TTS_ALLS,
         value: k.TTSNotificationTypes.ALL_CHANNELS
@@ -414,7 +414,7 @@ let q = (0, m.createExperiment)({
   }]
 });
 
-function X() {
+function Z() {
   let e = q.useExperiment({
       location: "settings"
     }, {
@@ -432,7 +432,7 @@ function X() {
   }) : null
 }
 
-function Z() {
+function X() {
   let e = C.QuietModeExperiment.useExperiment({
       location: "settings"
     }).allowQuietMode,

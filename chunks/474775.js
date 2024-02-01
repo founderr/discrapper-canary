@@ -15,11 +15,11 @@ var n = s("597755"),
 function d() {
   var e, t, s, n, d;
   let u = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    c = (e = "bdb6edd5dc120491af747e3ea6231548e92c35b6", e.substring(0, 7)),
+    c = (e = "c54a3ac83c2540912c73a6f41babd980556d4911", e.substring(0, 7)),
     S = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
     E = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
-    f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
-    T = function() {
+    T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
+    f = function() {
       var e;
       let t = null == l ? void 0 : null === (e = l.os) || void 0 === e ? void 0 : e.toString();
       if (null == t || null == r.default) return null;
@@ -34,7 +34,7 @@ function d() {
       className: o.line,
       variant: "text-xs/normal",
       color: "text-muted",
-      children: [u, " ", "263201", " ", (0, a.jsxs)("span", {
+      children: [u, " ", "263272", " ", (0, a.jsxs)("span", {
         className: o.versionHash,
         children: ["(", c, ")"]
       })]
@@ -44,19 +44,19 @@ function d() {
         className: o.line,
         variant: "text-xs/normal",
         color: "text-muted",
-        children: ["Host ", S, " ", null != f ? (0, a.jsxs)("span", {
+        children: ["Host ", S, " ", null != T ? (0, a.jsxs)("span", {
           className: o.appArch,
-          children: [f.toLowerCase(), " "]
+          children: [T.toLowerCase(), " "]
         }) : null, null != E ? (0, a.jsxs)("span", {
           children: ["(", E, ")"]
         }) : null]
       }), " "]
-    }) : null, null != T ? (0, a.jsx)(i.Text, {
+    }) : null, null != f ? (0, a.jsx)(i.Text, {
       tag: "span",
       className: o.line,
       variant: "text-xs/normal",
       color: "text-muted",
-      children: T
+      children: f
     }) : null]
   })
 }

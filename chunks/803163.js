@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return E
   },
   default: function() {
-    return f
+    return T
   }
 }), s("70102"), s("222007");
 var a = s("37983"),
@@ -71,7 +71,7 @@ function E() {
     })
   })
 }
-var f = {
+var T = {
   enableMFA: async function e() {
     let e = await new Promise((e, t) => {
       (0, i.openModalLazy)(async () => {

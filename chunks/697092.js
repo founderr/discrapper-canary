@@ -8,14 +8,14 @@ var a, n, r = s("37983");
 s("884691");
 var i = s("414456"),
   l = s.n(i),
-  u = s("446674"),
-  o = s("77078"),
+  o = s("446674"),
+  u = s("77078"),
   d = s("87657"),
   c = s("471671"),
   _ = s("782340"),
   E = s("898555");
 (n = a || (a = {}))[n.STAFF_NOTES = 1] = "STAFF_NOTES";
-let I = u.default.connectStores([c.default], () => ({
+let I = o.default.connectStores([c.default], () => ({
     animate: c.default.isFocused()
   }))(e => {
     let {
@@ -26,7 +26,7 @@ let I = u.default.connectStores([c.default], () => ({
     return (0, r.jsxs)("div", {
       className: l(E.staffReviewHeader, s),
       children: [(0, r.jsx)(d.default, {
-        size: o.AvatarSizes.SIZE_32,
+        size: u.AvatarSizes.SIZE_32,
         user: t,
         animate: a
       }), (0, r.jsxs)("div", {

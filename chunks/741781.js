@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("217513"),
   S = s("790618"),
   E = s("181114"),
-  f = s("599110"),
-  T = s("719923"),
+  T = s("599110"),
+  f = s("719923"),
   m = s("906932"),
   _ = s("570697"),
   g = s("632892"),
@@ -35,7 +35,7 @@ function C(e) {
     showBorder: O = !1,
     isTryItOutFlow: x = !1,
     initialSelectedEffectId: R
-  } = e, M = (0, c.default)(t.id, null == s ? void 0 : s.id), v = T.default.canUsePremiumProfileCustomization(t), {
+  } = e, M = (0, c.default)(t.id, null == s ? void 0 : s.id), v = f.default.canUsePremiumProfileCustomization(t), {
     analyticsLocations: D
   } = (0, d.default)(), {
     pendingProfileEffectId: L,
@@ -48,7 +48,7 @@ function C(e) {
     initialSelectedEffectId: R
   }), [D, R]);
   n.useEffect(() => {
-    v && f.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    v && T.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: N.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
       location_stack: D
     })

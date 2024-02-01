@@ -16,8 +16,8 @@ var a, n, l = s("37983"),
   c = s("917351"),
   S = s.n(c),
   E = s("77078"),
-  f = s("13798"),
-  T = s("145131"),
+  T = s("13798"),
+  f = s("145131"),
   m = s("782340"),
   _ = s("523192");
 (n = a || (a = {})).DEFAULT = "DEFAULT", n.RECORDING = "RECORDING";
@@ -51,7 +51,7 @@ class h extends i.PureComponent {
       mode: t,
       value: s,
       disabled: a
-    } = this.props, n = (0, f.toString)(s, !0);
+    } = this.props, n = (0, T.toString)(s, !0);
     e = "RECORDING" === t ? m.default.Messages.SHORTCUT_RECORDER_BUTTON_RECORDING : 0 === s.length ? m.default.Messages.SHORTCUT_RECORDER_BUTTON : m.default.Messages.SHORTCUT_RECORDER_BUTTON_EDIT;
     let i = "DEFAULT" === t && s.length > 0;
     return (0, l.jsx)(E.FocusRing, {
@@ -65,9 +65,9 @@ class h extends i.PureComponent {
           [_.hasValue]: i,
           [_.disabled]: a
         }),
-        children: (0, l.jsxs)(T.default, {
+        children: (0, l.jsxs)(f.default, {
           className: _.layout,
-          children: [(0, l.jsx)(T.default.Child, {
+          children: [(0, l.jsx)(f.default.Child, {
             className: _.input,
             children: (0, l.jsx)("input", {
               id: this._inputId,
@@ -78,7 +78,7 @@ class h extends i.PureComponent {
               value: n,
               disabled: "RECORDING" !== this.props.mode || a
             })
-          }), (0, l.jsx)(T.default, {
+          }), (0, l.jsx)(f.default, {
             shrink: 1,
             grow: 0,
             style: {

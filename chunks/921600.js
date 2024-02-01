@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("79112"),
   S = s("533280"),
   E = s("180748"),
-  f = s("206230"),
-  T = s("951212"),
+  T = s("206230"),
+  f = s("951212"),
   m = s("692038"),
   _ = s("815297"),
   g = s("574073"),
@@ -55,7 +55,7 @@ function W(e) {
   return (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
     title: B.default.Messages.ACCESSIBILITY,
-    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(X, {}), (0, T.canEnableForcedColors)() ? (0, a.jsx)(Z, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
+    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
       className: F.marginBottom20
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
@@ -121,9 +121,9 @@ function z() {
   let {
     saturation: e,
     desaturateUserColors: t
-  } = (0, d.useStateFromStoresObject)([f.default], () => ({
-    saturation: f.default.saturation,
-    desaturateUserColors: f.default.desaturateUserColors
+  } = (0, d.useStateFromStoresObject)([T.default], () => ({
+    saturation: T.default.saturation,
+    desaturateUserColors: T.default.desaturateUserColors
   }));
   return (0, a.jsxs)(u.FormSection, {
     className: F.marginTop20,
@@ -159,7 +159,7 @@ function z() {
 }
 
 function Q() {
-  let e = (0, d.useStateFromStores)([f.default], () => f.default.alwaysShowLinkDecorations);
+  let e = (0, d.useStateFromStores)([T.default], () => T.default.alwaysShowLinkDecorations);
   return (0, a.jsx)(u.FormItem, {
     className: F.marginTop20,
     children: (0, a.jsx)(u.FormSwitch, {
@@ -174,7 +174,7 @@ function Q() {
 }
 
 function q() {
-  let e = (0, d.useStateFromStores)([f.default], () => f.default.roleStyle);
+  let e = (0, d.useStateFromStores)([T.default], () => T.default.roleStyle);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormItem, {
       title: B.default.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_TITLE,
@@ -205,8 +205,8 @@ function q() {
   })
 }
 
-function X() {
-  let e = (0, d.useStateFromStores)([f.default], () => f.default.syncProfileThemeWithUserTheme),
+function Z() {
+  let e = (0, d.useStateFromStores)([T.default], () => T.default.syncProfileThemeWithUserTheme),
     t = n.useRef(null);
   return (0, L.default)(t, P.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME), (0, a.jsx)(u.FormItem, {
     ref: t,
@@ -226,8 +226,8 @@ function X() {
   })
 }
 
-function Z() {
-  let [e] = (0, d.useStateFromStoresArray)([f.default], () => [f.default.syncForcedColors, f.default.systemForcedColors]), [t, s] = n.useState(e);
+function X() {
+  let [e] = (0, d.useStateFromStoresArray)([T.default], () => [T.default.syncForcedColors, T.default.systemForcedColors]), [t, s] = n.useState(e);
   n.useEffect(() => {
     s(e)
   }, [e]);
@@ -259,16 +259,16 @@ function J() {
       systemPrefersReducedMotion: r,
       gifAutoPlayOverrideReason: o,
       animateEmojiOverrideReason: c
-    } = (0, d.useStateFromStoresObject)([f.default, D.default], () => ({
-      systemPrefersReducedMotion: f.default.systemPrefersReducedMotion,
-      rawPrefersReducedMotion: f.default.rawPrefersReducedMotion,
-      useReducedMotion: f.default.useReducedMotion,
+    } = (0, d.useStateFromStoresObject)([T.default, D.default], () => ({
+      systemPrefersReducedMotion: T.default.systemPrefersReducedMotion,
+      rawPrefersReducedMotion: T.default.rawPrefersReducedMotion,
+      useReducedMotion: T.default.useReducedMotion,
       gifAutoPlayOverrideReason: D.default.getAppliedOverrideReasonKey("gifAutoPlay"),
       animateEmojiOverrideReason: D.default.getAppliedOverrideReasonKey("animateEmoji")
     })),
     S = n.useRef(null);
   (0, L.default)(S, P.AccessibilityScrollPositions.REDUCED_MOTION);
-  let T = n.useCallback((e, t) => {
+  let f = n.useCallback((e, t) => {
       (0, E.setPrefersReducedMotion)(t ? "auto" : r)
     }, [r]),
     m = n.useCallback(e => {
@@ -289,7 +289,7 @@ function J() {
       value: "auto" === l,
       shape: u.Checkbox.Shapes.BOX,
       type: u.Checkbox.Types.INVERTED,
-      onChange: T,
+      onChange: f,
       children: (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
         children: B.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_AUTO
@@ -347,7 +347,7 @@ function $() {
 }
 
 function ee() {
-  let e = (0, d.useStateFromStores)([f.default], () => f.default.isSubmitButtonEnabled),
+  let e = (0, d.useStateFromStores)([T.default], () => T.default.isSubmitButtonEnabled),
     t = v.UseLegacyChatInput.useSetting(),
     s = n.useRef(null);
   return (0, L.default)(s, P.AccessibilityScrollPositions.LEGACY_CHAT_INPUT), (0, a.jsxs)(u.FormItem, {

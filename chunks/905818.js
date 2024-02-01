@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("446674"),
   S = s("151426"),
   E = s("77078"),
-  f = s("404118"),
-  T = s("629803"),
+  T = s("404118"),
+  f = s("629803"),
   m = s("152584"),
   _ = s("79112"),
   g = s("457971"),
@@ -73,7 +73,7 @@ function W(e) {
 }
 class K extends n.PureComponent {
   componentDidMount() {
-    (0, T.fetchConsents)(), (0, m.getHarvestStatus)().then(e => {
+    (0, f.fetchConsents)(), (0, m.getHarvestStatus)().then(e => {
       let t = {
         requestingHarvest: !1,
         currentHarvestRequest: e.body
@@ -556,21 +556,21 @@ class K extends n.PureComponent {
       }, () => this.showMessageRequestRestrictionModal(!e))
     }, this.handleUsageStatisticsChange = () => {
       let e = !this.props.usageStatistics;
-      e ? (0, T.setConsents)([G.Consents.USAGE_STATISTICS], []).catch(W) : Y({
+      e ? (0, f.setConsents)([G.Consents.USAGE_STATISTICS], []).catch(W) : Y({
         header: H.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_TITLE,
         body: H.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_BODY,
         confirmText: H.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CONFIRM,
         cancelText: H.default.Messages.USAGE_STATISTICS_DISABLE_MODAL_CANCEL,
-        onConfirm: () => (0, T.setConsents)([], [G.Consents.USAGE_STATISTICS]).catch(W)
+        onConfirm: () => (0, f.setConsents)([], [G.Consents.USAGE_STATISTICS]).catch(W)
       })
     }, this.handlePersonalizationChange = () => {
       let e = !this.props.personalization;
-      e ? (0, T.setConsents)([G.Consents.PERSONALIZATION], []).catch(W) : Y({
+      e ? (0, f.setConsents)([G.Consents.PERSONALIZATION], []).catch(W) : Y({
         header: H.default.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
         confirmText: H.default.Messages.PERSONALIZATION_DISABLE_MODAL_CONFIRM,
         cancelText: H.default.Messages.PERSONALIZATION_DISABLE_MODAL_CANCEL,
         onConfirm: () => {
-          (0, T.setConsents)([], [G.Consents.PERSONALIZATION]).catch(W), y.DropsOptedOut.updateSetting(!0)
+          (0, f.setConsents)([], [G.Consents.PERSONALIZATION]).catch(W), y.DropsOptedOut.updateSetting(!0)
         },
         body: H.default.Messages.PERSONALIZATION_DISABLE_MODAL_BODY
       })
@@ -587,13 +587,13 @@ class K extends n.PureComponent {
             (0, m.requestHarvest)().then(e => {
               null != e && null != e.body ? (this.setState({
                 currentHarvestRequest: e.body
-              }), f.default.show({
+              }), T.default.show({
                 body: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS
-              })) : f.default.show({
+              })) : T.default.show({
                 title: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
                 body: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
               })
-            }, () => f.default.show({
+            }, () => T.default.show({
               title: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
               body: H.default.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
             })).finally(() => this.setState({

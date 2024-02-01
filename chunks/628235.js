@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("920636"),
   S = s("583227"),
   E = s("878720"),
-  f = s("601745"),
-  T = s("685223"),
+  T = s("601745"),
+  f = s("685223"),
   m = s("271938"),
   _ = s("650893"),
   g = s("697218"),
@@ -207,7 +207,7 @@ class D extends n.PureComponent {
             children: x.default.Messages.TWO_FA_ENABLE
           })
         })]
-      }), e, this.renderMFASMS(), (0, a.jsx)(T.default, {})]
+      }), e, this.renderMFASMS(), (0, a.jsx)(f.default, {})]
     })
   }
   renderDisabled() {
@@ -223,7 +223,7 @@ class D extends n.PureComponent {
           size: o.ButtonSizes.SMALL,
           children: x.default.Messages.TWO_FA_ENABLE
         })
-      }), (0, a.jsx)(T.default, {})]
+      }), (0, a.jsx)(f.default, {})]
     })
   }
   render() {
@@ -246,7 +246,7 @@ class D extends n.PureComponent {
   }
   openPhoneVerificationModal() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    (0, o.openModal)(t => (0, a.jsx)(f.default, {
+    (0, o.openModal)(t => (0, a.jsx)(T.default, {
       reason: E.ChangePhoneReason.USER_SETTINGS_UPDATE,
       ...t,
       ...e

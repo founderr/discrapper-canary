@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("599110"),
   S = s("21526"),
   E = s("411691"),
-  f = s("49111"),
-  T = s("646718"),
+  T = s("49111"),
+  f = s("646718"),
   m = s("782340"),
   _ = s("439985");
 let g = () => (0, a.jsxs)(a.Fragment, {
@@ -81,8 +81,8 @@ var I = () => {
     analyticsLocations: e
   } = (0, u.default)(d.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL), t = n.useRef(null), s = (0, E.default)("CollectiblesUpsellBanner");
   return n.useEffect(() => {
-    c.default.track(f.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: T.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
+    c.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: f.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
       location_stack: e
     })
   }, [e]), (0, a.jsxs)("div", {

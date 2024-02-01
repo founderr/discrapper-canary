@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return p
   }
 });
 var s = n("627445"),
   a = n.n(s),
   l = n("597755"),
-  r = n.n(l),
-  i = n("742270"),
+  i = n.n(l),
+  r = n("742270"),
   u = n("815157"),
   o = n("391679"),
   d = n("393414"),
@@ -18,14 +18,14 @@ var s = n("627445"),
   I = n("65300"),
   _ = n("49111");
 
-function h(e) {
+function p(e) {
   let t = function(e) {
       var t;
-      let n = null === (t = r.os) || void 0 === t ? void 0 : t.family;
+      let n = null === (t = i.os) || void 0 === t ? void 0 : t.family;
       if ("Android" === n || "iOS" === n) {
         let t = c.default.getFingerprint(),
           n = (0, u.generateAttemptId)();
-        return a(null != e, "generateAppPath: guildId cannot be null"), (0, u.default)((0, i.getInviteDynamicLinkTemplate)(e), {
+        return a(null != e, "generateAppPath: guildId cannot be null"), (0, u.default)((0, r.getInviteDynamicLinkTemplate)(e), {
           utmSource: "verify_hub_email",
           fingerprint: t,
           attemptId: n

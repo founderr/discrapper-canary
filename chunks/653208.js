@@ -25,11 +25,11 @@ function E(e) {
   let i = null != s,
     {
       name: E,
-      description: f,
-      hideDescriptionUntilUnlock: T,
+      description: T,
+      hideDescriptionUntilUnlock: f,
       onAction: m
     } = n,
-    _ = T && !i,
+    _ = f && !i,
     g = i ? "header-primary" : "text-muted",
     h = i ? "header-secondary" : "text-muted",
     N = r(s),
@@ -61,7 +61,7 @@ function E(e) {
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/normal",
         color: h,
-        children: _ ? "?????" : f()
+        children: _ ? "?????" : T()
       })]
     })]
   })

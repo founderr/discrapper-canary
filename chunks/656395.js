@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("77078"),
   S = s("913139"),
   E = s("133403"),
-  f = s("278108"),
-  T = s("347445"),
+  T = s("278108"),
+  f = s("347445"),
   m = s("493765"),
   _ = s("485328"),
   g = s("56947"),
@@ -108,7 +108,7 @@ class k extends n.PureComponent {
           children: (0, a.jsx)(c.FormItem, {
             title: j.default.Messages.USER_SETTINGS_KEYBINDS_KEYBIND,
             className: b.item,
-            children: (0, a.jsx)(f.default, {
+            children: (0, a.jsx)(T.default, {
               defaultValue: this.props.keybind.shortcut,
               onChange: this.handleShortcutChange
             })
@@ -327,7 +327,7 @@ class H extends n.PureComponent {
           }), (0, a.jsx)("div", {
             className: b.defaultKeybindShortcutGroup,
             children: (0, a.jsx)(c.KeyCombo, {
-              shortcut: T.TOGGLE_HOTKEYS.binds[0],
+              shortcut: f.TOGGLE_HOTKEYS.binds[0],
               className: b.defaultKeybindShortcut
             })
           })]

@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("77078"),
   S = s("430713"),
   E = s("152584"),
-  f = s("642950"),
-  T = s("583227"),
+  T = s("642950"),
+  f = s("583227"),
   m = s("426902"),
   _ = s("415133"),
   g = s("42060"),
@@ -236,7 +236,7 @@ class H extends n.PureComponent {
     }
   }
   render() {
-    if (this.props.hide) return (0, a.jsx)(f.default, {});
+    if (this.props.hide) return (0, a.jsx)(T.default, {});
     let {
       currentUser: e
     } = this.props;
@@ -278,7 +278,7 @@ class H extends n.PureComponent {
       });
       return
     }
-    t.isClaimed() ? (0, c.openModal)(t => (0, a.jsx)(T.default, {
+    t.isClaimed() ? (0, c.openModal)(t => (0, a.jsx)(f.default, {
       ...t,
       handleSubmit: t => this.handleSubmitDisableAccount(t, e),
       title: e ? F.default.Messages.DELETE_ACCOUNT : F.default.Messages.DISABLE_ACCOUNT,

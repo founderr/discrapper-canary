@@ -15,8 +15,8 @@ var a = s("37983"),
   c = s("663745"),
   S = s("427459"),
   E = s("719923"),
-  f = s("299039"),
-  T = s("397723"),
+  T = s("299039"),
+  f = s("397723"),
   m = s("717266"),
   _ = s("131424"),
   g = s("49111"),
@@ -35,7 +35,7 @@ function p(e) {
     if (o) return N.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format({
       date: d.currentPeriodEnd
     });
-    let e = null != s.premiumGuildSubscription ? f.default.extractTimestamp(s.premiumGuildSubscription.id) : 0;
+    let e = null != s.premiumGuildSubscription ? T.default.extractTimestamp(s.premiumGuildSubscription.id) : 0;
     return N.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_DURATION_SHORTENED.format({
       date: new Date(e)
     })
@@ -98,7 +98,7 @@ function C(e) {
     premiumSubscription: l,
     hasCancelableGuildBoostSlot: u,
     showAltText: E,
-    isLastGuildBoostSlot: f
+    isLastGuildBoostSlot: T
   } = e, _ = (0, i.default)([o.default], () => o.default.useReducedMotion), g = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), h = n.useMemo(() => null != g && g > new Date, [g]), C = (0, S.isGuildBoostSlotCanceled)(s);
   return (0, a.jsxs)("div", {
     className: I.boostContainer,
@@ -110,7 +110,7 @@ function C(e) {
         useReducedMotion: _
       }), (0, a.jsx)("div", {
         className: I.boostDescriptionContainer,
-        children: null != g && h && !C ? (0, a.jsx)(T.default, {
+        children: null != g && h && !C ? (0, a.jsx)(f.default, {
           className: I.boostDescriptionInnerContainer,
           cooldown: g.getTime()
         }) : (0, a.jsx)(p, {
@@ -141,7 +141,7 @@ function C(e) {
           children: (0, a.jsx)(c.default, {})
         })
       })]
-    }), !f && (0, a.jsx)("div", {
+    }), !T && (0, a.jsx)("div", {
       className: I.boostContainerSeparator
     })]
   })

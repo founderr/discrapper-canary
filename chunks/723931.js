@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   MessageAccessories: function() {
-    return ek
+    return eF
   },
   default: function() {
-    return eF
+    return ek
   },
   SimpleMessageAccessories: function() {
     return ew
@@ -46,8 +46,8 @@ var s = n("37983"),
   b = n("467475"),
   G = n("801177"),
   B = n("985883"),
-  k = n("311830"),
-  F = n("626301"),
+  F = n("311830"),
+  k = n("626301"),
   w = n("428786"),
   H = n("705423"),
   V = n("315021"),
@@ -106,7 +106,7 @@ function ex() {
       color: "text-muted",
       className: eP.nitroFileSizeUpsellText,
       children: ev.default.Messages.LARGE_FILE_UPLOAD_POWERED_BY_NITRO.format({
-        onClick: () => (0, F.navigateToPremiumMarketingPage)()
+        onClick: () => (0, k.navigateToPremiumMarketingPage)()
       })
     })]
   })
@@ -148,7 +148,7 @@ let ey = new Set([eR.MessageEmbedTypes.AUTO_MODERATION_MESSAGE, eR.MessageEmbedT
       className: eP.gifFavoriteButton
     }) : null
   };
-class ek extends l.Component {
+class eF extends l.Component {
   shouldRenderInvite(e) {
     let {
       channel: t
@@ -563,7 +563,7 @@ class ek extends l.Component {
     })
   }
   renderPoll(e, t) {
-    if (null != t) return (0, s.jsx)(k.default, {
+    if (null != t) return (0, s.jsx)(F.default, {
       message: e,
       poll: t,
       className: eP.pollContainer
@@ -652,7 +652,7 @@ class ek extends l.Component {
   }
 }
 
-function eF(e) {
+function ek(e) {
   var t, n, l;
   let {
     channel: a,
@@ -677,8 +677,8 @@ function eF(e) {
     isGuest: p,
     communicationDisabled: h,
     isActiveChannelOrUnarchivableThread: O
-  }), y = (0, N.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), j = (0, N.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = a.guild_id) && void 0 !== n ? n : "", (null !== (l = i.editedTimestamp) && void 0 !== l ? l : i.timestamp).valueOf()), G = (0, b.default)(null == a ? void 0 : a.id), k = (0, B.default)(i), F = (0, g.useShouldRedactExplicitContent)(a.id, i.author.id), w = (0, M.useShouldRenderReportFalsePositiveButton)(i.id, eb);
-  return (0, s.jsx)(ek, {
+  }), y = (0, N.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), j = (0, N.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = a.guild_id) && void 0 !== n ? n : "", (null !== (l = i.editedTimestamp) && void 0 !== l ? l : i.timestamp).valueOf()), G = (0, b.default)(null == a ? void 0 : a.id), F = (0, B.default)(i), k = (0, g.useShouldRedactExplicitContent)(a.id, i.author.id), w = (0, M.useShouldRenderReportFalsePositiveButton)(i.id, eb);
+  return (0, s.jsx)(eF, {
     canSuppressEmbeds: R,
     canDeleteAttachments: v,
     ...x,
@@ -693,15 +693,15 @@ function eF(e) {
     renderEmbeds: f,
     gifAutoPlay: T,
     canRenderReferralEmbed: a.isDM(),
-    poll: k,
+    poll: F,
     showListsAndHeaders: y.showListsAndHeaders || j.showListsAndHeaders,
     showMaskedLinks: y.showMaskedLinks || j.showMaskedLinks,
     shouldHideMediaOptions: G,
-    shouldRedactExplicitContent: F,
+    shouldRedactExplicitContent: k,
     shouldRenderCtaButton: w
   })
 }
-ek.defaultProps = {
+eF.defaultProps = {
   renderEmbeds: !0,
   compact: !1
 };
@@ -717,7 +717,7 @@ let ew = e => {
     disableReactionUpdates: c = !0,
     ...E
   } = e, f = Z.InlineAttachmentMedia.useSetting(), _ = Z.InlineEmbedMedia.useSetting(), T = Z.RenderEmbeds.useSetting() && !a.author.isClyde(), I = Z.GifAutoPlay.useSetting(), m = (0, N.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = a.editedTimestamp) && void 0 !== t ? t : a.timestamp).valueOf()), p = (0, N.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = i.guild_id) && void 0 !== n ? n : "", (null !== (l = a.editedTimestamp) && void 0 !== l ? l : a.timestamp).valueOf()), A = (0, b.default)(null == i ? void 0 : i.id), S = (0, g.useShouldRedactExplicitContent)(i.id, a.author.id), C = (0, M.useShouldRenderReportFalsePositiveButton)(a.id, eb), h = (0, B.default)(a);
-  return (0, s.jsx)(ek, {
+  return (0, s.jsx)(eF, {
     ...E,
     message: a,
     channel: i,

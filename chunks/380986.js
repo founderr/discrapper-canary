@@ -37,10 +37,10 @@ n.r(t), n.d(t, {
     return B
   },
   useFocusInside: function() {
-    return k
+    return F
   },
   useClickReply: function() {
-    return F
+    return k
   },
   useClickInteractionCommandName: function() {
     return w
@@ -241,7 +241,7 @@ function B(e, t, n) {
   }
 }
 
-function k(e, t) {
+function F(e, t) {
   let [n, s] = l.useState(!1), [a, i] = l.useState(!1), r = l.useCallback(t => {
     var n, l;
     let a = null !== (l = null === (n = (0, T.eventOwnerDocument)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== l ? l : null;
@@ -259,7 +259,7 @@ function k(e, t) {
   }
 }
 
-function F(e, t) {
+function k(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   return l.useCallback(() => {
     null != t && (n ? a.default.show({

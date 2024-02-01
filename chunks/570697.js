@@ -39,8 +39,8 @@ function S(e) {
     description: r,
     children: S,
     className: E,
-    errors: f,
-    disabled: T = !1,
+    errors: T,
+    disabled: f = !1,
     hideDivider: m = !1,
     showBorder: _ = !1,
     borderType: g,
@@ -50,7 +50,7 @@ function S(e) {
   } = e;
   return (0, a.jsx)("div", {
     className: l(u.customizationSection, E, {
-      [u.disabled]: T,
+      [u.disabled]: f,
       [u.hideDivider]: m,
       [u.showBorder]: _,
       [u.withDivider]: N
@@ -69,8 +69,8 @@ function S(e) {
         type: i.FormText.Types.DESCRIPTION,
         className: u.sectionDescription,
         children: r
-      }) : null, S, null != f && (0, a.jsx)(c, {
-        errors: f
+      }) : null, S, null != T && (0, a.jsx)(c, {
+        errors: T
       })]
     })
   })

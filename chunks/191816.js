@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 }), s("222007");
 var a = s("884691"),
@@ -15,13 +15,13 @@ var a = s("884691"),
   c = s("186211"),
   S = s("90592"),
   E = s("49111"),
-  f = s("782340");
+  T = s("782340");
 
-function T(e) {
+function f(e) {
   let t = (0, S.getApplicationSubscriptionPlanId)(e),
     s = (0, i.useStateFromStores)([c.default], () => c.default.getSubscriptionListingForPlan(t), [t]),
     n = (0, i.useStateFromStores)([c.default], () => null != s ? c.default.getSubscriptionGroupListingForSubscriptionListing(s.id) : null, [s]),
-    T = (0, i.useStateFromStores)([d.default], () => {
+    f = (0, i.useStateFromStores)([d.default], () => {
       let t = d.default.getForSubscription(e.id);
       if (null != t) {
         let [e] = Array.from(t);
@@ -30,13 +30,13 @@ function T(e) {
       return null
     }, [e]),
     m = (0, i.useStateFromStores)([r.default], () => {
-      if (null == T) return;
-      let e = r.default.getApplication(T.applicationId);
+      if (null == f) return;
+      let e = r.default.getApplication(f.applicationId);
       if (null != e) return e
-    }, [T]),
+    }, [f]),
     _ = (0, i.useStateFromStores)([o.default], () => {
-      if (null != T) return o.default.getGuild(T.guildId)
-    }, [T]),
+      if (null != f) return o.default.getGuild(f.guildId)
+    }, [f]),
     [g, h] = a.useState(!1),
     N = null == s ? void 0 : function(e) {
       let {
@@ -46,7 +46,7 @@ function T(e) {
       return {
         subscribedSinceDate: r,
         currentPeriodEndDate: a,
-        currentPeriodEndLabel: l().isAfter(s.currentPeriodEnd) ? f.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIPTION_ENDED : f.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIPTION_ENDS,
+        currentPeriodEndLabel: l().isAfter(s.currentPeriodEnd) ? T.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIPTION_ENDED : T.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIPTION_ENDS,
         subscriptionPlanPrice: i,
         isCancelled: o,
         isDeleted: d,

@@ -15,13 +15,13 @@ var a = s("37983"),
   c = s("77078"),
   S = s("629109"),
   E = s("42887"),
-  f = s("476765"),
-  T = s("353927"),
+  T = s("476765"),
+  f = s("353927"),
   m = s("782340"),
   _ = s("675235"),
   g = s("173791"),
   h = s("926622");
-let N = (0, f.uid)();
+let N = (0, T.uid)();
 
 function I() {
   let [e, t] = n.useState(-100), [s, l] = n.useState(!1), {
@@ -33,12 +33,12 @@ function I() {
     isEnabled: O
   } = (0, r.useStateFromStoresObject)([E.default], () => ({
     inputMode: E.default.getMode(),
-    automaticVADSupported: E.default.supports(T.Features.AUTOMATIC_VAD),
+    automaticVADSupported: E.default.supports(f.Features.AUTOMATIC_VAD),
     isEnabled: E.default.isEnabled()
   }));
 
   function x(e, s) {
-    t(e), l((s & T.SpeakingFlags.VOICE) === T.SpeakingFlags.VOICE)
+    t(e), l((s & f.SpeakingFlags.VOICE) === f.SpeakingFlags.VOICE)
   }
 
   function R(e, t) {
@@ -103,7 +103,7 @@ function I() {
       className: h.marginBottom8,
       children: m.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
     }), (0, a.jsxs)("div", {
-      children: [A && (0, a.jsx)(f.UID, {
+      children: [A && (0, a.jsx)(T.UID, {
         children: e => (0, a.jsxs)("div", {
           className: i(g.horizontal, h.marginBottom4),
           children: [(0, a.jsx)(c.FormTitle, {

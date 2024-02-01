@@ -14,12 +14,12 @@ var a, n = s("37983"),
   c = s("49111"),
   S = s("782340"),
   E = s("76666");
-let f = {
+let T = {
     [c.HypeSquadHouses.HOUSE_1]: E.membershipDialogHouse1,
     [c.HypeSquadHouses.HOUSE_2]: E.membershipDialogHouse2,
     [c.HypeSquadHouses.HOUSE_3]: E.membershipDialogHouse3
   },
-  T = {
+  f = {
     [c.HypeSquadHouses.HOUSE_1]: E.houseLogoHouse1,
     [c.HypeSquadHouses.HOUSE_2]: E.houseLogoHouse2,
     [c.HypeSquadHouses.HOUSE_3]: E.houseLogoHouse3
@@ -50,7 +50,7 @@ a = class extends l.Component {
         houseName: (0, u.getHouseNameFromHouseID)(e)
       });
       return (0, n.jsx)("div", {
-        className: r(E.membershipDialog, f[e]),
+        className: r(E.membershipDialog, T[e]),
         children: (0, n.jsxs)("div", {
           className: E.membershipDialogContent,
           children: [(0, n.jsxs)(d.default, {
@@ -76,7 +76,7 @@ a = class extends l.Component {
               shrink: 0,
               wrap: !0,
               children: (0, n.jsx)("img", {
-                className: r(E.houseLogo, T[e]),
+                className: r(E.houseLogo, f[e]),
                 src: m[e],
                 alt: t
               })
