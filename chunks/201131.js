@@ -135,7 +135,7 @@ function R(e, t) {
   }
   let l = M(e, r.AutomodMessageEmbedKeys.FLAGGED_MESSAGE_ID),
     O = d.default.can(N.Permissions.VIEW_CHANNEL, t);
-  let c = (n = t, O ? null !== (o = null == n ? void 0 : n.name) && void 0 !== o ? o : "#".concat(I.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER) : "#".concat(I.default.Messages.NO_ACCESS)),
+  let c = (n = t, O ? null !== (o = null == n ? void 0 : n.name) && void 0 !== o ? o : I.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER : I.default.Messages.NO_ACCESS),
     R = null != t && O ? _ : N.NOOP_NULL,
     f = function(e, t, n) {
       let o = M(e, r.AutomodMessageEmbedKeys.VOICE_CHANNEL_STATUS_OUTCOME);
