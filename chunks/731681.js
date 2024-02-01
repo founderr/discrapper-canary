@@ -68,7 +68,7 @@ function N(e) {
     }, {
       autoTrackExposure: !1
     }),
-    H = (0, f.useGuildUpcomingEventsNotice)(n);
+    B = (0, f.useGuildUpcomingEventsNotice)(n);
   if (i.useEffect(() => {
       u.default.getGuildEventsForCurrentUser(n)
     }, [n]), i.useEffect(() => {
@@ -81,7 +81,7 @@ function N(e) {
     }, [n, y]), R) return 0;
   if (N) return 1;
   if (O) return 2;
-  else if (x || F && null != H) return 3;
+  else if (x || F && null != B) return 3;
   else if (b) return 4;
   else if (U) return 5;
   else if (w) return 6;

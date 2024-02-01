@@ -42,7 +42,7 @@ var a = n("37983"),
   w = n("49111"),
   k = n("782340"),
   F = n("918702");
-let H = e => {
+let B = e => {
     let {
       className: t,
       children: n,
@@ -55,7 +55,7 @@ let H = e => {
       children: n
     })
   },
-  B = [d.default.unsafe_rawColors.BLUE_345.css, d.default.colors.INTERACTIVE_NORMAL.css],
+  H = [d.default.unsafe_rawColors.BLUE_345.css, d.default.colors.INTERACTIVE_NORMAL.css],
   V = e => {
     let {
       tooltip: t,
@@ -293,7 +293,7 @@ class Q extends s.PureComponent {
       children: [(0, a.jsx)(f.StackedProgress, {
         percents: t,
         size: f.Progress.Sizes.SMALL,
-        foregroundColors: B,
+        foregroundColors: H,
         animate: this.isFocused
       }), (0, a.jsx)("div", {
         className: F.progressCellText,
@@ -589,7 +589,7 @@ class et extends s.PureComponent {
         data: e,
         className: F.table,
         rowClassName: F.row,
-        rowComponent: H,
+        rowComponent: B,
         cellProps: {
           paused: t,
           isFocused: s,

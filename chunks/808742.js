@@ -1,5 +1,5 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   getHangStatusOptions: function() {
     return f
   },
@@ -10,59 +10,59 @@ l.r(t), l.d(t, {
     return E
   }
 });
-var a = l("49111"),
-  n = l("782340"),
-  s = l("65833"),
-  i = l("270664"),
-  r = l("763388"),
-  u = l("708206"),
-  o = l("787795"),
-  c = l("908332"),
-  d = l("850390");
+var l = a("49111"),
+  n = a("782340"),
+  s = a("65833"),
+  i = a("270664"),
+  r = a("763388"),
+  u = a("708206"),
+  o = a("787795"),
+  c = a("908332"),
+  d = a("850390");
 let f = () => ({
-    [a.HangStatusTypes.CHILLING]: {
+    [l.HangStatusTypes.CHILLING]: {
       title: n.default.Messages.STATUS_CHILLING,
       icon: i,
       color: "#567C7E"
     },
-    [a.HangStatusTypes.GAMING]: {
+    [l.HangStatusTypes.GAMING]: {
       title: n.default.Messages.STATUS_GAMING,
       icon: r,
       color: "#685F8C"
     },
-    [a.HangStatusTypes.FOCUSING]: {
+    [l.HangStatusTypes.FOCUSING]: {
       title: n.default.Messages.STATUS_FOCUSING,
       icon: o,
       color: "#7F6956"
     },
-    [a.HangStatusTypes.BRB]: {
+    [l.HangStatusTypes.BRB]: {
       title: n.default.Messages.STATUS_BRB,
       icon: s,
       color: "#76567E"
     },
-    [a.HangStatusTypes.EATING]: {
+    [l.HangStatusTypes.EATING]: {
       title: n.default.Messages.STATUS_EATING,
       icon: u,
       color: "#717B54"
     },
-    [a.HangStatusTypes.IN_TRANSIT]: {
+    [l.HangStatusTypes.IN_TRANSIT]: {
       title: n.default.Messages.STATUS_IN_TRANSIT,
       icon: c,
       color: "#56697F"
     },
-    [a.HangStatusTypes.WATCHING]: {
+    [l.HangStatusTypes.WATCHING]: {
       title: n.default.Messages.STATUS_WATCHING,
       icon: d,
       color: "#7C5571"
     }
   }),
   T = e => {
-    if ((null == e ? void 0 : e.type) !== a.ActivityTypes.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
+    if ((null == e ? void 0 : e.type) !== l.ActivityTypes.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
     let t = e.state;
-    return t === a.HangStatusTypes.CUSTOM ? null : f()[t]
+    return t === l.HangStatusTypes.CUSTOM ? null : f()[t]
   },
   E = e => {
     var t;
-    let l = (null == e ? void 0 : e.state) != null ? e.state : null;
-    return l === a.HangStatusTypes.CUSTOM ? null == e ? void 0 : e.details : null === (t = T(e)) || void 0 === t ? void 0 : t.title
+    let a = (null == e ? void 0 : e.state) != null ? e.state : null;
+    return a === l.HangStatusTypes.CUSTOM ? null == e ? void 0 : e.details : null === (t = T(e)) || void 0 === t ? void 0 : t.title
   }

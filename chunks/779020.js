@@ -42,8 +42,8 @@ var a = n("37983"),
   w = n("132943"),
   k = n("319769"),
   F = n("506377"),
-  H = n("318915"),
-  B = n("619443"),
+  B = n("318915"),
+  H = n("619443"),
   V = n("263901"),
   Y = n("643130"),
   W = n("802896"),
@@ -96,8 +96,8 @@ var a = n("37983"),
   ew = n("305961"),
   ek = n("778588"),
   eF = n("686470"),
-  eH = n("18494"),
-  eB = n("162771"),
+  eB = n("18494"),
+  eH = n("162771"),
   eV = n("167726"),
   eY = n("552067"),
   eW = n("866681"),
@@ -126,8 +126,8 @@ let e2 = !1;
     }
   })
 }));
-let e4 = o.default.connectStores([B.default, ej.default, eb.default], () => ({
-    isConnected: B.default.isConnected(),
+let e4 = o.default.connectStores([H.default, ej.default, eb.default], () => ({
+    isConnected: H.default.isConnected(),
     defaultRoute: ej.default.defaultRoute,
     defaultRouteFallback: ej.default.fallbackRoute,
     token: eb.default.getToken()
@@ -439,7 +439,7 @@ function ta(e) {
     guildId: n,
     pathname: a
   } = e;
-  if (!B.default.isConnected()) return;
+  if (!H.default.isConnected()) return;
   let {
     location: s
   } = (0, eC.getHistory)();
@@ -447,7 +447,7 @@ function ta(e) {
 }
 class ts extends s.PureComponent {
   componentDidMount() {
-    P.default.initialize(), eZ.default.setZoomFactor(C.default.zoom), eI.default.init(), v.default.initialize(), eo.default.initialize(), w.default.initialize(), ex.default.initialize(), k.default.initialize(), ed.default.initialize(), J.default.initialize(), I.default.init(), H.default.init(), F.default.init(), ea.default.initialize(), A.default.initialize(), j.default.initialize(), ec.default.initialize(), p.default.initialize(), ey.default.initialize(), er.default.initialize(), m.default.initialize(), Y.default.init(), Z.default.init(), eK.default.init(), eq.default.init(), S.default.initialize(), eO.default.init(), eW.default.init(), eY.default.init(), eM.default.init(), eA.default.initialize(), eg.default.initialize(), ev.default.initialize(), eP.default.init(), G.default.initialize(), T.default.initialize(), eT.default.initialize(), ep.default.initialize(), ei.default.initialize(), es.default.initialize(), el.default.initialize(), D.default.initialize(), ef.default.initialize(), X.default.init({
+    P.default.initialize(), eZ.default.setZoomFactor(C.default.zoom), eI.default.init(), v.default.initialize(), eo.default.initialize(), w.default.initialize(), ex.default.initialize(), k.default.initialize(), ed.default.initialize(), J.default.initialize(), I.default.init(), B.default.init(), F.default.init(), ea.default.initialize(), A.default.initialize(), j.default.initialize(), ec.default.initialize(), p.default.initialize(), ey.default.initialize(), er.default.initialize(), m.default.initialize(), Y.default.init(), Z.default.init(), eK.default.init(), eq.default.init(), S.default.initialize(), eO.default.init(), eW.default.init(), eY.default.init(), eM.default.init(), eA.default.initialize(), eg.default.initialize(), ev.default.initialize(), eP.default.init(), G.default.initialize(), T.default.initialize(), eT.default.initialize(), ep.default.initialize(), ei.default.initialize(), es.default.initialize(), el.default.initialize(), D.default.initialize(), ef.default.initialize(), X.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -468,7 +468,7 @@ class ts extends s.PureComponent {
       search: n
     } = e;
     ! function(e) {
-      if (B.default.isConnected() || B.default.isTryingToConnect()) return;
+      if (H.default.isConnected() || H.default.isTryingToConnect()) return;
       let t = eb.default.getToken();
       if (null == t) return;
       let n = function(e) {
@@ -494,9 +494,9 @@ class ts extends s.PureComponent {
         channelId: s,
         messageId: r,
         threadId: o
-      } = e5(n), u = (0, eh.isValidGuildId)(a), d = (0, eh.isValidChannelId)(s), c = (0, eh.isValidChannelId)(o), _ = eB.default.getGuildId(), h = _ !== a;
+      } = e5(n), u = (0, eh.isValidGuildId)(a), d = (0, eh.isValidChannelId)(s), c = (0, eh.isValidChannelId)(o), _ = eH.default.getGuildId(), h = _ !== a;
       if (u && h && f.default.selectGuild(a), u && d) {
-        let n = eH.default.getChannelId(_),
+        let n = eB.default.getChannelId(_),
           l = n !== s;
         if (!e2 || h || l || null != r) {
           e2 = !0, E.default.selectChannel({
@@ -545,7 +545,7 @@ class ts extends s.PureComponent {
     }(t, n)
   }
   ensureChannelMatchesGuild(e) {
-    if (!B.default.isConnected()) return null;
+    if (!H.default.isConnected()) return null;
     let {
       pathname: t
     } = e, n = tn(t);

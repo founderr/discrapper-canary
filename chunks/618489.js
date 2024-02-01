@@ -42,8 +42,8 @@ var a = n("37983"),
   w = n("597517"),
   k = n("269596"),
   F = n("38654"),
-  H = n("393414"),
-  B = n("245463"),
+  B = n("393414"),
+  H = n("245463"),
   V = n("486185"),
   Y = n("488464"),
   W = n("998716"),
@@ -107,7 +107,7 @@ function eF(e) {
   })
 }
 
-function eH() {
+function eB() {
   let e = s.useRef(null);
   (0, c.useFocusLock)(e), s.useEffect(() => {
     eP.default.track(eU.AnalyticEvents.OPEN_POPOUT, {
@@ -160,7 +160,7 @@ function eH() {
   })
 }
 
-function eB() {
+function eH() {
   let e = (0, d.useStateFromStores)([Q.default], () => Q.default.isMuted()),
     t = e ? ej.default.Messages.STAGE_MUSIC_UNMUTE : ej.default.Messages.STAGE_MUSIC_MUTE;
   return (0, a.jsx)(ev.default, {
@@ -176,7 +176,7 @@ function eV(e) {
     channel: t,
     enableActivities: n,
     disabled: i
-  } = e, r = (0, J.default)(), o = (0, ee.default)(t), u = (0, d.useStateFromStoresObject)([p.default], () => null != p.default.getSelfEmbeddedActivityForChannel(t.id)), E = (0, B.default)(t), {
+  } = e, r = (0, J.default)(), o = (0, ee.default)(t), u = (0, d.useStateFromStoresObject)([p.default], () => null != p.default.getSelfEmbeddedActivityForChannel(t.id)), E = (0, H.default)(t), {
     reachedLimit: _,
     limit: h
   } = (0, $.default)(t), C = s.useCallback(() => {
@@ -185,7 +185,7 @@ function eV(e) {
     if (ef.default.isVideoEnabled() === e) return;
     let n = () => {
       var n;
-      f.default.setVideoEnabled(e), e && (0, H.transitionTo)(eU.Routes.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eU.ME, t.id))
+      f.default.setVideoEnabled(e), e && (0, B.transitionTo)(eU.Routes.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eU.ME, t.id))
     };
     e ? (0, ei.default)(n, I) : n()
   }, [t, I]), m = u || n || E;
@@ -327,7 +327,7 @@ function eW(e) {
     E = (0, ee.default)(n),
     _ = n.getGuildId(),
     h = (0, d.useStateFromStoresObject)([p.default], () => null != p.default.getSelfEmbeddedActivityForChannel(n.id)),
-    C = (0, B.default)(n),
+    C = (0, H.default)(n),
     I = s.useCallback(() => {
       (0, es.default)(_, n.id, eU.AnalyticsSections.ACTIVITY_PANEL)
     }, [_, n.id]),
@@ -434,7 +434,7 @@ class eK extends s.PureComponent {
     if (null != s) return null;
     if (null == i ? void 0 : i.isGuildStageVoice()) {
       let e = null != l.find(e => e.user.id === eo.default.getId() && (0, Z.getAudienceRequestToSpeakState)(e.voiceState) === Z.RequestToSpeakStates.ON_STAGE);
-      if (!e && (0, q.shouldShowStageMusicMuteButton)(i.id)) return (0, a.jsx)(eB, {})
+      if (!e && (0, q.shouldShowStageMusicMuteButton)(i.id)) return (0, a.jsx)(eH, {})
     }
     return !n && t ? (0, a.jsx)(c.Tooltip, {
       text: ej.default.Messages.NOISE_CANCELLATION_CPU_OVERUSE,
@@ -454,7 +454,7 @@ class eK extends s.PureComponent {
     }) : (0, a.jsx)(c.Popout, {
       position: "top",
       align: "center",
-      renderPopout: () => (0, a.jsx)(eH, {}),
+      renderPopout: () => (0, a.jsx)(eB, {}),
       children: (t, n) => {
         let {
           isShown: s
@@ -517,7 +517,7 @@ class eK extends s.PureComponent {
         children: [d ? (0, a.jsx)(eY, {
           channel: e,
           enableActivities: s
-        }) : null, (0, B.default)(e) ? (0, a.jsx)(V.default, {
+        }) : null, (0, H.default)(e) ? (0, a.jsx)(V.default, {
           className: l(ew.button, ew.buttonColor),
           innerClassName: ew.buttonContents,
           iconClassName: ew.buttonIcon,
@@ -674,7 +674,7 @@ var ez = (0, I.default)(function(e) {
   }, [T, S, D]);
   let {
     AnalyticsLocationProvider: y
-  } = (0, M.default)(v.default.RTC_PANEL), j = (0, A.default)(null != u ? u : "", null == o ? void 0 : o.id), w = (0, R.default)(null == o ? void 0 : o.id), H = (0, P.default)();
+  } = (0, M.default)(v.default.RTC_PANEL), j = (0, A.default)(null != u ? u : "", null == o ? void 0 : o.id), w = (0, R.default)(null == o ? void 0 : o.id), B = (0, P.default)();
   return (0, a.jsx)(y, {
     children: (0, a.jsxs)("div", {
       className: ew.wrapper,
@@ -696,7 +696,7 @@ var ez = (0, I.default)(function(e) {
         showVoiceStates: m,
         shouldShowVoicePanelIntroduction: _,
         isPrivateChannelWithEnabledActivities: w,
-        isBroadcasting: H
+        isBroadcasting: B
       }), !L && T && null != u ? (0, a.jsxs)("div", {
         className: ew.viewAsRolesWarning,
         children: [(0, a.jsx)(c.Text, {

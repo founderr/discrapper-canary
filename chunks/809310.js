@@ -43,14 +43,14 @@ let G = new I.default("CacheStore"),
   w = "stable-27",
   k = !1,
   F = "initializing",
-  H = 15 * M.default.Millis.MINUTE,
-  B = 0,
+  B = 15 * M.default.Millis.MINUTE,
+  H = 0,
   V = !1,
   Y = !1,
   W = !1;
 
 function K(e) {
-  G.log("Clearing cache store"), B = Date.now(), y.default.clear(), l.default.remove(U.CACHE_STORE_KEY), l.default.remove(U.CACHE_STORE_LAZY_KEY), l.default.remove(U.CACHE_STORE_CHANNELS_LAZY_KEY), C.default.replaceDisableAllDatabases("CacheStore (".concat(e, ")")), F = "no-cache"
+  G.log("Clearing cache store"), H = Date.now(), y.default.clear(), l.default.remove(U.CACHE_STORE_KEY), l.default.remove(U.CACHE_STORE_LAZY_KEY), l.default.remove(U.CACHE_STORE_CHANNELS_LAZY_KEY), C.default.replaceDisableAllDatabases("CacheStore (".concat(e, ")")), F = "no-cache"
 }
 
 function z() {
@@ -70,7 +70,7 @@ function z() {
 }
 
 function q() {
-  G.verbose("Writing cache now"), B = Date.now();
+  G.verbose("Writing cache now"), H = Date.now();
   let e = Q(),
     t = {
       version: w,
@@ -415,6 +415,6 @@ ea.displayName = "CacheStore", new ea(r.default, j ? {
     let {
       focused: t
     } = e;
-    return !t && (Date.now() - B > H ? (G.verbose("Writing cache from window unfocus"), z()) : G.verbose("Not writing cache from window unfocus")), !1
+    return !t && (Date.now() - H > B ? (G.verbose("Writing cache from window unfocus"), z()) : G.verbose("Not writing cache from window unfocus")), !1
   }
 } : {})

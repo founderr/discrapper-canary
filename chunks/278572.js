@@ -48,12 +48,12 @@ let k = {
     width: 232,
     height: 267
   },
-  H = {
+  B = {
     width: 475,
     height: 267
   };
 
-function B(e) {
+function H(e) {
   let {
     header: t
   } = e, n = O.default.getCameraComponent(), i = (0, o.useStateFromStores)([O.default], () => O.default.getVideoDeviceId()), l = (0, S.default)();
@@ -72,8 +72,8 @@ function B(e) {
       children: (0, a.jsx)(n, {
         disabled: !1,
         deviceId: i,
-        width: H.width,
-        height: H.height
+        width: B.width,
+        height: B.height
       })
     }), (0, a.jsx)("div", {
       className: j.previewChannelHeader,
@@ -207,11 +207,11 @@ function Y(e) {
         }, C ? (0, D.getThemeClass)("dark") : null),
         style: {
           ...t,
-          width: R.value.interpolate([0, 1], [x.width, H.width]),
-          minHeight: R.value.interpolate([0, 1], [x.height, H.height]),
-          translateX: R.value.interpolate([0, 1], [0, -1 * Math.abs(H.width - x.width) / 2])
+          width: R.value.interpolate([0, 1], [x.width, B.width]),
+          minHeight: R.value.interpolate([0, 1], [x.height, B.height]),
+          translateX: R.value.interpolate([0, 1], [0, -1 * Math.abs(B.width - x.width) / 2])
         },
-        children: [C ? (0, a.jsx)(B, {
+        children: [C ? (0, a.jsx)(H, {
           header: M
         }) : (0, a.jsx)("div", {
           className: j.mainChannelInfo,

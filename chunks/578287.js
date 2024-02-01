@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return F
   },
   transformRelationship: function() {
-    return H
+    return B
   },
   isMatchingOrigin: function() {
-    return B
+    return H
   },
   hasMessageReadPermission: function() {
     return V
@@ -185,7 +185,7 @@ function F(e, t, n) {
   }
 }
 
-function H(e, t, n) {
+function B(e, t, n) {
   let a = p.default.getUser(t);
   return {
     type: e,
@@ -197,7 +197,7 @@ function H(e, t, n) {
   }
 }
 
-function B(e) {
+function H(e) {
   let t;
   if (null == e) return !1;
   let n = window.location.origin;

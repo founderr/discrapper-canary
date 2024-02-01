@@ -1,25 +1,25 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return r
   }
 });
-var a = l("37983");
-l("884691");
-var n = l("880114"),
-  s = l("777003"),
-  i = l("814076");
+var l = a("37983");
+a("884691");
+var n = a("880114"),
+  s = a("777003"),
+  i = a("814076");
 
 function r(e) {
   let {
     userId: t,
-    guild: l,
+    guild: a,
     guildMember: r
   } = e;
-  return (0, a.jsx)(s.default, {
-    children: (0, a.jsx)(n.default, {
+  return (0, l.jsx)(s.default, {
+    children: (0, l.jsx)(n.default, {
       userId: t,
-      guild: l,
+      guild: a,
       guildMember: r,
       headingClassName: i.title,
       textClassName: i.body

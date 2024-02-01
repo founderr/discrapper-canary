@@ -42,8 +42,8 @@ var a = n("37983"),
   w = n("240239"),
   k = n("6895"),
   F = n("817963"),
-  H = n("1501"),
-  B = n("689275"),
+  B = n("1501"),
+  H = n("689275"),
   V = n("12896"),
   Y = n("612246"),
   W = n("5667"),
@@ -101,10 +101,10 @@ class eA extends s.PureComponent {
   }
   componentDidMount() {
     var e;
-    this.setAnimatedValue(0), f.default.subscribe("LAYER_PUSH", this.closeAllHeaderNotices), this.historyUnlisten = H.default.addRouteChangeListener(this.handleHistoryChange);
+    this.setAnimatedValue(0), f.default.subscribe("LAYER_PUSH", this.closeAllHeaderNotices), this.historyUnlisten = B.default.addRouteChangeListener(this.handleHistoryChange);
     let {
       location: t
-    } = H.default.getHistory();
+    } = B.default.getHistory();
     (null === (e = t.state) || void 0 === e ? void 0 : e.shouldShowSubscribeTooltip) && this.showTimeout.start(1e3, () => this.setState({
       shouldShowSubscribeTooltip: !0
     }))
@@ -480,7 +480,7 @@ function eg(e) {
     _ = (0, o.useStateFromStores)([en.default], () => en.default.getChannelId()),
     [R, M, U] = (0, o.useStateFromStoresArray)([et.default], () => [et.default.can(eE.Permissions.MANAGE_GUILD, d), et.default.can(eE.Permissions.MANAGE_ROLES, d), et.default.can(eE.Permissions.MANAGE_THREADS, d)]),
     w = (0, o.useStateFromStores)([Z.default], () => Z.default.isUnavailable(n)),
-    H = (0, o.useStateFromStores)([es.default], () => es.default.getCurrentUser()),
+    B = (0, o.useStateFromStores)([es.default], () => es.default.getCurrentUser()),
     V = (0, o.useStateFromStores)([K.default], () => K.default.darkSidebar ? eE.ThemeTypes.DARK : K.default.theme),
     {
       enableStudyGroup: W
@@ -497,15 +497,15 @@ function eg(e) {
   s.useEffect(() => {
     n !== eu && eo(!X)
   }, [n, eu, X]);
-  let [ef, eC] = (0, L.default)(e => [e_.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eh.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), eI = (0, N.default)(d), eT = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eS = (0, o.useStateFromStores)([ee.default], () => ee.default.hasLayers()), ep = (0, o.useStateFromStores)([Y.default], () => Y.default.shouldShow(em)), eg = R && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !el.ProcessArgs.isDisallowPopupsSet(), eN = (0, o.useStateFromStores)([J.default], () => J.default.getMemberCount(n)), eR = R && null != eN && eN >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !el.ProcessArgs.isDisallowPopupsSet(), eO = M && null != d && (d.hasFeature(eE.GuildFeatures.COMMUNITY) || null != eN && eN > 50), eL = (0, b.default)(n), ev = (0, O.useLowerMemberCountRequirements)(n), eM = (null == d ? void 0 : d.hasFeature(eE.GuildFeatures.HUB)) === !0, eP = R && (null == d ? void 0 : d.hasFeature(eE.GuildFeatures.DISCOVERABLE)) === !0, eD = (0, g.useBlockedPaymentsConfig)(), ey = (R || (null == d ? void 0 : d.premiumTier) === eE.BoostedGuildTiers.NONE) && !el.ProcessArgs.isDisallowPopupsSet() && !eD, ex = (0, o.useStateFromStores)([G.default, ee.default], () => null != d && null != H && R && !ee.default.hasLayers() && G.default.shouldShowGuildTemplateDirtyTooltip(n)), eb = (0, o.useStateFromStores)([z.default], () => z.default.getChannel(r)), {
+  let [ef, eC] = (0, L.default)(e => [e_.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eh.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), eI = (0, N.default)(d), eT = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eS = (0, o.useStateFromStores)([ee.default], () => ee.default.hasLayers()), ep = (0, o.useStateFromStores)([Y.default], () => Y.default.shouldShow(em)), eg = R && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !el.ProcessArgs.isDisallowPopupsSet(), eN = (0, o.useStateFromStores)([J.default], () => J.default.getMemberCount(n)), eR = R && null != eN && eN >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !el.ProcessArgs.isDisallowPopupsSet(), eO = M && null != d && (d.hasFeature(eE.GuildFeatures.COMMUNITY) || null != eN && eN > 50), eL = (0, b.default)(n), ev = (0, O.useLowerMemberCountRequirements)(n), eM = (null == d ? void 0 : d.hasFeature(eE.GuildFeatures.HUB)) === !0, eP = R && (null == d ? void 0 : d.hasFeature(eE.GuildFeatures.DISCOVERABLE)) === !0, eD = (0, g.useBlockedPaymentsConfig)(), ey = (R || (null == d ? void 0 : d.premiumTier) === eE.BoostedGuildTiers.NONE) && !el.ProcessArgs.isDisallowPopupsSet() && !eD, ex = (0, o.useStateFromStores)([G.default, ee.default], () => null != d && null != B && R && !ee.default.hasLayers() && G.default.shouldShowGuildTemplateDirtyTooltip(n)), eb = (0, o.useStateFromStores)([z.default], () => z.default.getChannel(r)), {
     isPopoutOpen: eU
-  } = (0, D.useGuildHeaderPopoutStore)(), eG = null !== (t = null == d ? void 0 : d.hasFeature(eE.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ej = (0, o.useStateFromStores)([B.default], () => !l.isEmpty(B.default.getThreadsForGuild(n))), {
+  } = (0, D.useGuildHeaderPopoutStore)(), eG = null !== (t = null == d ? void 0 : d.hasFeature(eE.GuildFeatures.COMMUNITY)) && void 0 !== t && t, ej = (0, o.useStateFromStores)([H.default], () => !l.isEmpty(H.default.getThreadsForGuild(n))), {
     enabled: ew
   } = m.BashOutCoachMarkExperiment.useExperiment({
     location: "91c8a9_2"
   }, {
     autoTrackExposure: !0
-  }), ek = ei.default.canUsePremiumActivities(H), eF = ei.default.isNewUser(H), eH = er && ew && ek, eB = er && !eF, {
+  }), ek = ei.default.canUsePremiumActivities(B), eF = ei.default.isNewUser(B), eB = er && ew && ek, eH = er && !eF, {
     enabled: eV
   } = S.ActivityCoachMarkGarticPhoneExperiment.useExperiment({
     location: "91c8a9_3"
@@ -535,7 +535,7 @@ function eg(e) {
     voiceStates: f,
     isUnavailable: w,
     theme: V,
-    user: H,
+    user: B,
     hasChannelNotice: null != eI || ef,
     anyLayerOpen: eT || eS,
     showGuildBoostingProgressBarUpsell: eg,
@@ -559,12 +559,12 @@ function eg(e) {
     canShowCoachMarkAtBottom: er,
     HeaderAnalyticsLocationProvider: ed,
     FooterAnalyticsLocationProvider: ec,
-    shouldRenderBashOutCoachMark: eH,
+    shouldRenderBashOutCoachMark: eB,
     shouldRenderGarticPhoneCoachMark: eY,
     shouldRenderActivitiesGameNightCoachMark: eK,
     isEligibleForClipsPremiumEarlyAccessCoachmark: null != ez && eq,
     isTutorialHighlightDismissed: eQ,
-    shouldRenderBurstCoachmark: eB,
+    shouldRenderBurstCoachmark: eH,
     showKrunkerStrikeCoachmark: e$
   })
 }

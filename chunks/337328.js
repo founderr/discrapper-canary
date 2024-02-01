@@ -42,8 +42,8 @@ var a = n("37983"),
   w = n("718517"),
   k = n("158998"),
   F = n("583232"),
-  H = n("644091"),
-  B = n("891964"),
+  B = n("644091"),
+  H = n("891964"),
   V = n("49111"),
   Y = n("590456"),
   W = n("782340"),
@@ -198,7 +198,7 @@ function Z(e) {
       has_profile_effect: (null == w ? void 0 : w.profileEffectId) != null
     })
   }, []);
-  let et = (0, H.useMultiAccountMenuItems)(),
+  let et = (0, B.useMultiAccountMenuItems)(),
     en = (0, p.useCustomStatusMenuItem)(null != n ? n : void 0, K.menuItemFocused),
     ea = (0, A.default)({
       id: t.id,
@@ -320,7 +320,7 @@ function Z(e) {
                   label: W.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
                   icon: G.default,
                   showIconFirst: !0,
-                  action: B.default,
+                  action: H.default,
                   children: et
                 }, "switch-account")
               }), (0, a.jsx)(f.MenuGroup, {

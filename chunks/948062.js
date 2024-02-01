@@ -50,12 +50,12 @@ var L = e => {
     memberCount: U,
     keywords: G
   } = i, [j, w] = s.useState(!1), [k, F] = s.useState(!1), {
-    analyticsLocations: H
-  } = (0, u.default)(), B = h.default.getGuildDiscoverySplashURL({
+    analyticsLocations: B
+  } = (0, u.default)(), H = h.default.getGuildDiscoverySplashURL({
     id: M,
     splash: P,
     size: 240 * (0, d.getDevicePixelRatio)()
-  }), V = null != B ? B : function(e) {
+  }), V = null != H ? H : function(e) {
     switch (e) {
       case p.ThemeTypes.DARK:
         return N;
@@ -80,7 +80,7 @@ var L = e => {
             page: p.AnalyticsPages.GUILD_DISCOVERY,
             section: p.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
-          analyticsLocations: H
+          analyticsLocations: B
         });
         return
       }

@@ -1,24 +1,24 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return r
   }
 });
-var a = l("37983");
-l("884691");
-var n = l("775377"),
-  s = l("777003"),
-  i = l("184256");
+var l = a("37983");
+a("884691");
+var n = a("775377"),
+  s = a("777003"),
+  i = a("184256");
 
 function r(e) {
   let {
     customStatusActivity: t,
-    className: l,
+    className: a,
     animate: r
   } = e;
-  return null == t ? null : (0, a.jsx)(s.default, {
-    className: l,
-    children: (0, a.jsx)(n.default, {
+  return null == t ? null : (0, l.jsx)(s.default, {
+    className: a,
+    children: (0, l.jsx)(n.default, {
       activity: t,
       className: i.customStatus,
       animate: r,

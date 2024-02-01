@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return H
+    return B
   }
 }), n("222007");
 var a = n("37983"),
@@ -77,7 +77,7 @@ function F(e) {
     children: () => n()
   })
 }
-var H = s.memo(function(e) {
+var B = s.memo(function(e) {
   let {
     contentTypes: t,
     theme: n,
@@ -92,7 +92,7 @@ var H = s.memo(function(e) {
         page: N.AnalyticsPages.GUILD_CHANNEL
       }
     })
-  }, H = () => {
+  }, B = () => {
     m.default.track(N.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: v.PremiumUpsellTypes.INVITE_SPLASH_UPSELL,
       location: {
@@ -100,7 +100,7 @@ var H = s.memo(function(e) {
       },
       location_stack: f
     })
-  }, B = (0, l.isThemeDark)(n) ? x : b, [V, Y] = (0, c.useSelectedDismissibleContent)(t, O.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, H = (0, l.isThemeDark)(n) ? x : b, [V, Y] = (0, c.useSelectedDismissibleContent)(t, O.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, a.jsx)(a.Fragment, {
     children: (() => {
       switch (V) {
@@ -111,7 +111,7 @@ var H = s.memo(function(e) {
               header: M.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: B,
+                src: H,
                 className: D.fullWidthImage
               }),
               content: M.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_CONTENT.format(),
@@ -130,7 +130,7 @@ var H = s.memo(function(e) {
               header: M.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",
-                src: B,
+                src: H,
                 className: D.fullWidthImage
               }),
               content: M.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_CONTENT.format(),
@@ -174,7 +174,7 @@ var H = s.memo(function(e) {
             t = (0, p.isTierUnlocked)(s, N.BoostedGuildTiers.TIER_1) ? M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : M.default.Messages.LEARN_MORE;
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(T.default, {
-              onComponentMount: H,
+              onComponentMount: B,
               header: M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
               asset: (0, a.jsx)("img", {
                 alt: "",

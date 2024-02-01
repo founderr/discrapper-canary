@@ -42,8 +42,8 @@ var a = n("37983"),
   w = n("311092"),
   k = n("447621"),
   F = n("49111"),
-  H = n("782340"),
-  B = n("309633"),
+  B = n("782340"),
+  H = n("309633"),
   V = n("479999"),
   Y = n("183127");
 class W extends s.PureComponent {
@@ -138,7 +138,7 @@ class W extends s.PureComponent {
     } = this.state;
     return t ? (0, a.jsx)(U.default, {
       loadId: this.loadId,
-      title: H.default.Messages.GUILD_DISCOVERY_HEADER_GAMES_YOU_PLAY,
+      title: B.default.Messages.GUILD_DISCOVERY_HEADER_GAMES_YOU_PLAY,
       guildsData: l,
       loadingGuildId: r,
       analyticsContext: P.AnalyticsContexts.RECOMMENDED,
@@ -170,9 +170,9 @@ class W extends s.PureComponent {
       location: "54961b_2"
     }, {
       autoTrackExposure: !1
-    }), c = d ? r === k.DISCOVERY_ALL_CATEGORIES_ID ? H.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER_TAGS : H.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER_TAGS.format({
+    }), c = d ? r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER_TAGS : B.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER_TAGS.format({
       categoryName: u
-    }) : r === k.DISCOVERY_ALL_CATEGORIES_ID ? H.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : H.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
+    }) : r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : B.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: u
     }), f = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[r]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
     return (0, a.jsx)(j.default, {
@@ -201,7 +201,7 @@ class W extends s.PureComponent {
       currentCategoryName: d
     } = this.props, {
       loadingGuildId: c
-    } = this.state, f = u === k.DISCOVERY_ALL_CATEGORIES_ID ? H.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : H.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
+    } = this.state, f = u === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_SEARCH_PLACEHOLDER : B.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
       categoryName: d
     }), E = null !== (t = null === (e = s[n]) || void 0 === e ? void 0 : e[u]) && void 0 !== t ? t : O.EMPTY_DISCOVERABLE_GUILDS_SECTION;
     return (0, a.jsx)(G.default, {
@@ -231,7 +231,7 @@ class W extends s.PureComponent {
     } = this.state;
     return (0, a.jsx)(U.default, {
       loadId: this.loadId,
-      title: H.default.Messages.GUILD_DISCOVERY_FEATURED_HEADER,
+      title: B.default.Messages.GUILD_DISCOVERY_FEATURED_HEADER,
       guildsData: e.featured,
       analyticsContext: P.AnalyticsContexts.POPULAR,
       onViewGuild: this.handleViewGuild,
@@ -252,7 +252,7 @@ class W extends s.PureComponent {
     } = this.state;
     return (0, a.jsx)(U.default, {
       loadId: this.loadId,
-      title: H.default.Messages.GUILD_DISCOVERY_POPULAR_HEADER,
+      title: B.default.Messages.GUILD_DISCOVERY_POPULAR_HEADER,
       guildsData: e[n],
       loadingGuildId: s,
       analyticsContext: P.AnalyticsContexts.POPULAR,
@@ -285,54 +285,54 @@ class W extends s.PureComponent {
     if (r === k.DISCORD_HUB_ID) return (0, a.jsx)(m.default, {
       loadId: this.loadId
     });
-    let h = r === k.DISCOVERY_ALL_CATEGORIES_ID ? H.default.Messages.GUILD_DISCOVERY_HOME_TITLE : H.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
+    let h = r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_HOME_TITLE : B.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
       categoryName: n
     });
     return (0, a.jsxs)("div", {
-      className: B.pageWrapper,
+      className: H.pageWrapper,
       children: [(0, a.jsx)(T.AppPageTitle, {
         subsection: d ? i : void 0,
         location: h
       }), (0, a.jsx)("div", {
-        className: l(B.dragRegion, B.pageHeaderDrag, {
-          [B.searchPageDrag]: d
+        className: l(H.dragRegion, H.pageHeaderDrag, {
+          [H.searchPageDrag]: d
         })
       }), c.isMobile && (0, a.jsx)(M.default, {
         children: (0, a.jsx)(s.Fragment, {})
       }), (0, a.jsx)(E.AdvancedScrollerAuto, {
-        className: B.scroller,
+        className: H.scroller,
         ref: this._scroller,
         onScroll: this.handleScroll,
         children: (0, a.jsx)("div", {
-          className: l(B.viewWrapper, {
-            [B.searchPage]: d
+          className: l(H.viewWrapper, {
+            [H.searchPage]: d
           }),
           children: d ? this.renderSearchResults() : (0, a.jsxs)(E.HeadingLevel, {
             forceLevel: 1,
             component: (0, a.jsxs)("div", {
-              className: B.searchHeader,
+              className: H.searchHeader,
               children: [(0, a.jsx)("img", {
                 alt: "",
-                className: B.headerImage,
+                className: H.headerImage,
                 src: Y
               }), (0, a.jsx)("div", {
-                className: B.headerContentWrapper,
+                className: H.headerContentWrapper,
                 children: (0, a.jsxs)("div", {
-                  className: B.headerContent,
+                  className: H.headerContent,
                   children: [(0, a.jsx)(E.Heading, {
                     variant: "heading-xl/semibold",
-                    className: B.searchTitle,
-                    children: r === k.DISCOVERY_ALL_CATEGORIES_ID ? H.default.Messages.GUILD_DISCOVERY_HOME_TITLE : H.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
+                    className: H.searchTitle,
+                    children: r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_HOME_TITLE : B.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
                       categoryName: n
                     })
                   }), (0, a.jsx)(E.Text, {
                     variant: "text-md/normal",
-                    className: B.searchSubtitle,
-                    children: r === k.DISCOVERY_ALL_CATEGORIES_ID && H.default.Messages.GUILD_DISCOVERY_HOME_SUBTITLE
+                    className: H.searchSubtitle,
+                    children: r === k.DISCOVERY_ALL_CATEGORIES_ID && B.default.Messages.GUILD_DISCOVERY_HOME_SUBTITLE
                   }), this.renderSearchBar(), f && (0, a.jsx)(w.DiscoveryTags, {
                     hideOverflow: !0,
                     section: P.AnalyticsContexts.HEADER,
-                    className: B.headerTagContainer,
+                    className: H.headerTagContainer,
                     discoveryTagStyle: w.DiscoveryTagStyle.LIGHT,
                     onTagClick: e => this.handleTagSearch(e, void 0, P.AnalyticsContexts.HEADER),
                     tags: o.chain(_).flatMap(e => e.keywords).compact().uniq().sampleSize(10).value()
@@ -341,23 +341,23 @@ class W extends s.PureComponent {
               })]
             }),
             children: [(0, a.jsx)("div", {
-              className: B.featuredBody,
+              className: H.featuredBody,
               children: r === k.DISCOVERY_ALL_CATEGORIES_ID ? this.renderRecommendedGuildsSection() : this.renderPopularGuildsSection()
             }), (0, a.jsxs)("div", {
-              className: B.footer,
+              className: H.footer,
               children: [(0, a.jsx)("img", {
                 alt: "",
                 src: V,
-                className: B.footerImage
+                className: H.footerImage
               }), (0, a.jsx)(E.Heading, {
                 variant: "heading-md/semibold",
-                children: H.default.Messages.GUILD_DISCOVERY_CATEGORY_FOOTER_TITLE
+                children: B.default.Messages.GUILD_DISCOVERY_CATEGORY_FOOTER_TITLE
               }), (0, a.jsx)(E.Button, {
                 look: E.Button.Looks.LINK,
                 color: E.Button.Colors.LINK,
                 size: E.Button.Sizes.MIN,
                 onClick: this.scrollToTop,
-                children: H.default.Messages.GUILD_DISCOVERY_FOOTER_BODY
+                children: B.default.Messages.GUILD_DISCOVERY_FOOTER_BODY
               })]
             })]
           })

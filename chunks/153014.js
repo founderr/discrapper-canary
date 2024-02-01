@@ -49,8 +49,8 @@ var a, s, i = n("37983"),
   w = n("593897"),
   k = n("466148"),
   F = n("534222"),
-  H = n("841363"),
-  B = n("822516"),
+  B = n("841363"),
+  H = n("822516"),
   V = n("936965"),
   Y = n("745049"),
   W = n("49111"),
@@ -156,7 +156,7 @@ function Z(e) {
   let {
     guildEvent: t,
     noticeType: n
-  } = e, a = (0, B.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([y.default], () => y.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), l = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
+  } = e, a = (0, H.getNextRecurrenceIdInEvent)(t), s = (0, r.useStateFromStores)([y.default], () => y.default.isInterestedInEventRecurrence(t.id, a), [t.id, a]), l = (0, r.useStateFromStores)([U.default], () => U.default.getUpcomingNoticeSeenTime(t.id), [t.id]);
   return !s && null == l && (0, x.markUpcomingEventNoticeAsSeen)(t.id), (0, i.jsxs)(o.Button, {
     fullWidth: !0,
     className: z.joinButton,
@@ -187,14 +187,14 @@ function X(e) {
   let {
     guildEvent: n,
     noticeType: a
-  } = e, s = (0, H.getLocationFromEvent)(n), r = null != s ? (0, j.guildEventDetailsParser)(s, !0) : null, d = (0, H.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
+  } = e, s = (0, B.getLocationFromEvent)(n), r = null != s ? (0, j.guildEventDetailsParser)(s, !0) : null, d = (0, B.getChannelFromEvent)(n), c = (0, u.getChannelIconComponent)(d), {
     startTime: f,
     endTime: E
   } = (0, k.default)(n.id), {
     startDateTimeString: _,
     upcomingEvent: h,
     diffMinutes: C
-  } = (0, B.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), I = h ? C > 0 ? K.default.Messages.STARTING_IN_MINUTES.format({
+  } = (0, H.getEventTimeData)(f.toISOString(), null == E ? void 0 : E.toISOString()), I = h ? C > 0 ? K.default.Messages.STARTING_IN_MINUTES.format({
     minutes: C
   }) : K.default.Messages.STARTING_SOON : K.default.Messages.STARTING_ON_DATE.format({
     date: _
@@ -271,7 +271,7 @@ function X(e) {
 function J(e) {
   let {
     guildEvent: t
-  } = e, n = (0, H.getLocationFromEvent)(t);
+  } = e, n = (0, B.getLocationFromEvent)(t);
   return null == n ? null : (0, i.jsx)(q, {
     onClickCloseIcon: () => (0, x.hideLiveChannelNotice)({
       eventId: null == t ? void 0 : t.id

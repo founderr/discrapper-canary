@@ -184,13 +184,13 @@ function F(e) {
   null != n && (p = null !== (t = (0, s.getCountryCodeByAlpha2)(n)) && void 0 !== t ? t : null)
 }
 
-function H() {
+function B() {
   c = null, f = null, E = {}, _ = g(), h = N(), A = {}, S = !1, m = null
 }
-class B extends i.default {
+class H extends i.default {
   takeSnapshot() {
     return {
-      version: B.LATEST_SNAPSHOT_VERSION,
+      version: H.LATEST_SNAPSHOT_VERSION,
       data: {
         linkedUsers: Object.values(E),
         teenActivityTotals: Object.entries(h).map(e => {
@@ -254,7 +254,7 @@ class B extends i.default {
   }
   constructor() {
     super(), this.loadCache = () => {
-      let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);
+      let e = this.readSnapshot(H.LATEST_SNAPSHOT_VERSION);
       if (null != e) R(e.linkedUsers), v(e.guilds), L(e.teenActivity), h = e.teenActivityTotals.reduce((e, t) => {
         let [n, a] = t.split(":"), s = (0, u.displayTypeFromString)(n);
         return void 0 === s ? e : {
@@ -276,9 +276,9 @@ class B extends i.default {
       FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: j,
       FAMILY_CENTER_HANDLE_TAB_SELECT: w,
       SET_LOCATION_METADATA: F,
-      LOGOUT: H
+      LOGOUT: B
     }), this.waitFor(l.default)
   }
 }
-B.displayName = "FamilyCenterStore", B.LATEST_SNAPSHOT_VERSION = 3;
-var V = new B
+H.displayName = "FamilyCenterStore", H.LATEST_SNAPSHOT_VERSION = 3;
+var V = new H

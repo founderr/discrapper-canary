@@ -64,8 +64,8 @@ var a = n("37983"),
     });
     let k = 0 === w.length && "" !== b[t],
       F = w.filter(e => e.type === L.RelationshipTypes.PENDING_INCOMING).length,
-      H = t === L.FriendsSections.PENDING && F > 0,
-      B = H && x && F >= O.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
+      B = t === L.FriendsSections.PENDING && F > 0,
+      H = B && x && F >= O.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
     return (0, a.jsxs)(c.default, {
       section: L.AnalyticsSections.FRIENDS_LIST,
       children: [(0, a.jsx)(I.default, {
@@ -102,7 +102,7 @@ var a = n("37983"),
                 })
             }
           }(t, w.length)
-        }), B && (0, a.jsx)(o.Button, {
+        }), H && (0, a.jsx)(o.Button, {
           look: o.ButtonLooks.LINK,
           color: o.ButtonColors.LINK,
           className: M.clearButton,

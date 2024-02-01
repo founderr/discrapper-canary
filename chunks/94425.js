@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return H
+    return B
   }
 }), n("222007"), n("808653");
 var a = n("37983"),
@@ -260,7 +260,7 @@ let F = s.forwardRef(function(e, t) {
     })
   })
 });
-var H = function() {
+var B = function() {
   var e, t, n;
   let i = (0, S.useIsEligibleForQuests)(L.QuestExperimentLocations.ACTIVITY_PANEL),
     r = (0, d.useStateFromStores)([f.default], () => f.default.useReducedMotion),
@@ -275,8 +275,8 @@ var H = function() {
     x = s.useRef(!1),
     b = s.useRef(null),
     G = (null == o ? void 0 : null === (e = o.userStatus) || void 0 === e ? void 0 : e.enrolledAt) != null,
-    H = (null == o ? void 0 : null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-    B = (null == o ? void 0 : null === (n = o.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
+    B = (null == o ? void 0 : null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+    H = (null == o ? void 0 : null === (n = o.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
     V = s.useMemo(() => {
       if (null == o) return null;
       let e = (0, I.hexToRgb)(o.config.colors.primary);
@@ -322,10 +322,10 @@ var H = function() {
       window.clearTimeout(E.current), C.current = !0, x.current = !0, K(), g(!1)
     }, [K]),
     q = s.useCallback(() => {
-      !H && (C.current = !1, E.current = window.setTimeout(() => {
+      !B && (C.current = !1, E.current = window.setTimeout(() => {
         !C.current && R(!1)
       }, 200))
-    }, [H]),
+    }, [B]),
     Q = s.useCallback(() => {
       x.current = !0
     }, []);
@@ -338,12 +338,12 @@ var H = function() {
       window.clearTimeout(e)
     }
   }, []), s.useEffect(() => {
-    H && K()
-  }, [H, K]), B || !i || null == o) ? null : (0, a.jsxs)("div", {
+    B && K()
+  }, [B, K]), H || !i || null == o) ? null : (0, a.jsxs)("div", {
     className: M.wrapper,
     style: {
       color: o.config.colors.secondary,
-      height: H && N ? P : void 0
+      height: B && N ? P : void 0
     },
     children: [(0, a.jsxs)(u.animated.div, {
       onMouseOut: q,

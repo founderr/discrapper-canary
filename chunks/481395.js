@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return H
+    return B
   }
 }), n("781738"), n("843762");
 var a = n("913144"),
@@ -143,7 +143,7 @@ function k(e) {
 function F() {
   _.default.isSelfDeaf() && s.cancelAll()
 }
-var H = {
+var B = {
   init() {
     a.default.subscribe("SPEAK_TEXT", U), a.default.subscribe("SPEAK_MESSAGE", j), a.default.subscribe("STOP_SPEAKING", G), a.default.subscribe("MESSAGE_CREATE", w), a.default.subscribe("MESSAGE_DELETE", k), a.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", F), a.default.subscribe("USER_SETTINGS_PROTO_UPDATE", y), a.default.subscribe("I18N_LOAD_SUCCESS", y)
   }

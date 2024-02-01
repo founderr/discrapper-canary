@@ -90,8 +90,8 @@ var R = e => {
     loading: j,
     total: w
   } = n, [k, F] = s.useState(!1), {
-    tag: H
-  } = A(), [B, V] = s.useState(H), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
+    tag: B
+  } = A(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
     d.doAlgoliaSearch(i, {
       categoryId: n ? T.DISCOVERY_ALL_CATEGORIES_ID : M,
       preferredLocale: r.code,
@@ -149,7 +149,7 @@ var R = e => {
       availableLanguages: c,
       isSearchPage: !0,
       currentCategoryId: M,
-      isTagSearch: B
+      isTagSearch: H
     }), Y ? (0, a.jsx)(N, {}) : w <= 0 ? (0, a.jsx)(g, {
       categoryId: M,
       categoryName: P,

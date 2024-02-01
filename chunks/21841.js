@@ -20,15 +20,15 @@ var l = n("884691"),
   m = n("305961"),
   E = n("10802"),
   g = n("957255"),
-  I = n("945956"),
-  S = n("282109"),
+  S = n("945956"),
+  I = n("282109"),
   _ = n("800762"),
   N = n("501981"),
   T = n("49111");
 
 function A(e) {
   var t, n, A;
-  let L = (0, s.useStateFromStores)([S.default], () => S.default.isMuted(e)),
+  let L = (0, s.useStateFromStores)([I.default], () => I.default.isMuted(e)),
     v = (0, s.useStateFromStores)([m.default], () => m.default.getGuild(e)),
     x = (null === (t = (0, d.default)(e)) || void 0 === t ? void 0 : t.length) > 0,
     R = (0, u.useGuildActiveEvent)(e),
@@ -37,9 +37,9 @@ function A(e) {
     {
       selectedVoiceGuildId: y,
       selectedVoiceChannelId: D
-    } = (0, s.useStateFromStoresObject)([I.default], () => ({
-      selectedVoiceGuildId: I.default.getGuildId(),
-      selectedVoiceChannelId: I.default.getChannelId()
+    } = (0, s.useStateFromStoresObject)([S.default], () => ({
+      selectedVoiceGuildId: S.default.getGuildId(),
+      selectedVoiceChannelId: S.default.getChannelId()
     })),
     b = y === e,
     j = (0, s.useStateFromStores)([h.default], () => !!b && null != h.default.getActiveStreamForUser(O, e)),

@@ -45,8 +45,8 @@ var a = n("37983"),
   w = n("586391"),
   k = n("994428"),
   F = n("782340"),
-  H = n("177960");
-let B = {
+  B = n("177960");
+let H = {
     [G.FamilyCenterSubPages.REQUESTS]: () => (0, a.jsx)(b.default, {}),
     [G.FamilyCenterSubPages.ACTIVITY]: () => (0, a.jsx)(x.default, {}),
     [G.FamilyCenterSubPages.SETTINGS]: () => (0, a.jsx)(U.default, {})
@@ -62,26 +62,26 @@ function Y(e) {
     handleItemSelect: n
   } = e, s = (0, y.usePendingRequestCount)(), i = (0, D.default)();
   return (0, a.jsxs)(c.TabBar, {
-    className: H.settingsTabBar,
+    className: B.settingsTabBar,
     "aria-label": F.default.Messages.FAMILY_CENTER_TITLE,
     selectedItem: t,
     type: "top",
     look: "brand",
     onItemSelect: n,
     children: [(0, a.jsx)(c.TabBar.Item, {
-      className: H.settingsTabBarItem,
+      className: B.settingsTabBarItem,
       id: G.FamilyCenterSubPages.ACTIVITY,
       children: F.default.Messages.FAMILY_CENTER_ACTIVITY_TAB
     }), (0, a.jsxs)(c.TabBar.Item, {
-      className: H.settingsTabBarItem,
+      className: B.settingsTabBarItem,
       id: G.FamilyCenterSubPages.REQUESTS,
       "aria-label": F.default.Messages.FAMILY_CENTER_REQUESTS_TAB,
       children: [F.default.Messages.FAMILY_CENTER_REQUESTS_TAB, s > 0 ? (0, a.jsx)(N.NumberBadge, {
-        className: H.badge,
+        className: B.badge,
         count: s
       }) : null]
     }), i ? (0, a.jsx)(c.TabBar.Item, {
-      className: H.settingsTabBarItem,
+      className: B.settingsTabBarItem,
       id: G.FamilyCenterSubPages.SETTINGS,
       children: F.default.Messages.SETTINGS
     }) : null]
@@ -95,7 +95,7 @@ function W(e) {
     handleItemSelect: s
   } = e, i = (0, A.useUID)(), o = (0, y.usePendingRequestCount)();
   return (0, a.jsxs)(C.default, {
-    className: l((0, O.getThemeClass)(t), H.sidebarTabBar),
+    className: l((0, O.getThemeClass)(t), B.sidebarTabBar),
     scrollable: r.isMobile,
     role: "navigation",
     "aria-labelledby": i,
@@ -111,17 +111,17 @@ function W(e) {
       selectedItem: n,
       type: "top-pill",
       onItemSelect: s,
-      className: H.tabBar,
+      className: B.tabBar,
       children: [(0, a.jsx)(c.TabBar.Item, {
         id: G.FamilyCenterSubPages.ACTIVITY,
-        className: H.item,
+        className: B.item,
         children: F.default.Messages.FAMILY_CENTER_ACTIVITY_TAB
       }), (0, a.jsxs)(c.TabBar.Item, {
         id: G.FamilyCenterSubPages.REQUESTS,
-        className: H.item,
+        className: B.item,
         "aria-label": F.default.Messages.FAMILY_CENTER_REQUESTS_TAB,
         children: [F.default.Messages.FAMILY_CENTER_REQUESTS_TAB, o > 0 ? (0, a.jsx)(N.NumberBadge, {
-          className: H.badge,
+          className: B.badge,
           count: o
         }) : null]
       })]
@@ -159,7 +159,7 @@ function K() {
       name: o.MetricEvents.FAMILY_CENTER_VIEW
     }))
   }, [i, g]), N) ? ((0, E.openAgeGateModal)(w.AgeGateSource.FAMILY_CENTER), null) : (0, a.jsxs)("main", {
-    className: l(H.container),
+    className: l(B.container),
     "aria-label": F.default.Messages.FAMILY_CENTER_TITLE,
     children: [(0, a.jsx)(_.AppPageTitle, {
       location: F.default.Messages.FAMILY_CENTER_TITLE
@@ -171,9 +171,9 @@ function K() {
     }), (0, a.jsx)(c.TabBar.Panel, {
       id: f,
       "aria-labelledby": S,
-      className: H.contentPanel,
+      className: B.contentPanel,
       children: (0, a.jsx)("div", {
-        children: B[f]()
+        children: H[f]()
       })
     })]
   })
@@ -213,25 +213,25 @@ function z() {
       let t = m.FamilyCenterEnabled.getSetting();
       i && e && void 0 === t && m.FamilyCenterEnabled.updateSetting(!0)
     }, [i, e]), U) return (0, E.openAgeGateModal)(w.AgeGateSource.FAMILY_CENTER), null;
-  let B = g !== G.FamilyCenterSubPages.SETTINGS ? g : G.FamilyCenterSubPages.ACTIVITY,
-    Y = V[B];
+  let H = g !== G.FamilyCenterSubPages.SETTINGS ? g : G.FamilyCenterSubPages.ACTIVITY,
+    Y = V[H];
   return (0, a.jsxs)("main", {
-    className: l(H.container, H.containerSidenav),
+    className: l(B.container, B.containerSidenav),
     "aria-label": F.default.Messages.FAMILY_CENTER_TITLE,
     children: [(0, a.jsx)(_.AppPageTitle, {
       location: F.default.Messages.FAMILY_CENTER_TITLE
     }), (0, a.jsx)(W, {
       theme: C,
-      section: B,
+      section: H,
       handleItemSelect: e => {
         N(e)
       }
     }), (0, a.jsx)(c.TabBar.Panel, {
-      id: B,
+      id: H,
       "aria-labelledby": O,
-      className: H.contentPanel,
+      className: B.contentPanel,
       children: (0, a.jsx)("div", {
-        className: H.sideNavContent,
+        className: B.sideNavContent,
         children: Y()
       })
     })]

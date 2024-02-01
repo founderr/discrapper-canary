@@ -40,8 +40,8 @@ var a, s, i = n("37983"),
   w = n("936629"),
   k = n("420145"),
   F = n("368121"),
-  H = n("980423"),
-  B = n("550368"),
+  B = n("980423"),
+  H = n("550368"),
   V = n("449008"),
   Y = n("158998"),
   W = n("356070"),
@@ -481,8 +481,8 @@ es.Header = ea, es.Body = e => {
         className: q.applicationStreamingAvatar
       }), (0, i.jsxs)("div", {
         children: [X(Y.default.getName(s)), J(h)]
-      }), (0, i.jsx)(H.default, {
-        size: H.default.Sizes.SMALL
+      }), (0, i.jsx)(B.default, {
+        size: B.default.Sizes.SMALL
       })]
     }), _]
   })
@@ -494,7 +494,7 @@ es.Header = ea, es.Body = e => {
     participants: s
   } = e, r = (0, A.default)(), [o, d] = l.useState(null), f = t.application_id;
   l.useEffect(() => {
-    null != f && (0, B.fetchAssetIds)(f, ["embedded_background"]).then(e => {
+    null != f && (0, H.fetchAssetIds)(f, ["embedded_background"]).then(e => {
       let [t] = e;
       return d(t)
     })
@@ -510,7 +510,7 @@ es.Header = ea, es.Body = e => {
   let S = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    m = (0, B.getAssetImage)(T.id, o, 300);
+    m = (0, H.getAssetImage)(T.id, o, 300);
   return (0, i.jsxs)(ee, {
     children: [(0, i.jsxs)("div", {
       className: q.embeddedActivityTopRow,

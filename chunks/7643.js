@@ -99,7 +99,7 @@ function E(e) {
         })
       }
     })
-  }, [y, R, t]), P = s.useCallback((e, t, n) => {
+  }, [y, R, t]), b = s.useCallback((e, t, n) => {
     let s = (s, a) => {
         a && d.NonSpamRetrainingOptIn.updateSetting(s), s && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
           action: p.MessageRequestAnalyticsAction.ACCEPT_HAM_CONFIRMATION_PROMPT,
@@ -124,7 +124,7 @@ function E(e) {
     acceptMessageRequest: g ? j : y,
     rejectMessageRequest: O,
     rejectAll: D,
-    markAsNotSpam: P,
+    markAsNotSpam: b,
     isAcceptLoading: S,
     isRejectLoading: _,
     isUserProfileLoading: M,

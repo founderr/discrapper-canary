@@ -42,8 +42,8 @@ var a = n("37983"),
   w = n("775377"),
   k = n("10641"),
   F = n("384997"),
-  H = n("243632"),
-  B = n("180273"),
+  B = n("243632"),
+  H = n("180273"),
   V = n("579565"),
   Y = n("473503"),
   W = n("257426"),
@@ -96,12 +96,12 @@ var a = n("37983"),
   ew = n("718517"),
   ek = n("197881"),
   eF = n("158998"),
-  eH = n("50885"),
-  eB = n("49111"),
+  eB = n("50885"),
+  eH = n("49111"),
   eV = n("411511"),
   eY = n("782340"),
   eW = n("374555");
-let eK = eH.default.getEnableHardwareAcceleration() ? S.AnimatedAvatar : S.Avatar,
+let eK = eB.default.getEnableHardwareAcceleration() ? S.AnimatedAvatar : S.Avatar,
   ez = 30 * ew.default.Millis.DAY;
 class eq extends s.PureComponent {
   get isCopiedStreakGodlike() {
@@ -144,7 +144,7 @@ class eq extends s.PureComponent {
     } = this.props;
     if (null == i) return null;
     let r = eF.default.getName(i),
-      o = null != l && l !== eB.StatusTypes.UNKNOWN,
+      o = null != l && l !== eH.StatusTypes.UNKNOWN,
       u = null != n;
     return (u || o && i.isPomelo()) && (e = (0, a.jsx)(eA.default, {
       hoverText: s,
@@ -185,7 +185,7 @@ class eq extends s.PureComponent {
       color: i,
       delay: 500,
       onAnimationRest: (e, a) => {
-        n && !t && a.phase === eB.SpringTransitionPhases.LEAVE && this.setState({
+        n && !t && a.phase === eH.SpringTransitionPhases.LEAVE && this.setState({
           shouldShowCopiedFeedback: !1
         })
       },
@@ -228,7 +228,7 @@ class eq extends s.PureComponent {
       size: (0, M.getDecorationSizeForAvatarSize)(S.AvatarSizes.SIZE_32)
     });
     return (0, a.jsx)(N.default, {
-      object: eB.AnalyticsObjects.AVATAR,
+      object: eH.AnalyticsObjects.AVATAR,
       children: (0, a.jsx)(S.Popout, {
         renderPopout: this.renderStatusPickerPopout,
         position: "top",
@@ -249,7 +249,7 @@ class eq extends s.PureComponent {
             src: n.getAvatarURL(void 0, 32, !1),
             avatarDecoration: o,
             "aria-label": n.username,
-            status: t ? eB.StatusTypes.STREAMING : s,
+            status: t ? eH.StatusTypes.STREAMING : s,
             isSpeaking: e,
             className: eW.avatar
           }), i || r ? (0, a.jsx)("div", {
@@ -464,7 +464,7 @@ class eq extends s.PureComponent {
     }, this.handleOpenAccountSettings = () => {
       this.handleOpenSettings()
     }, this.handleOpenSettings = function() {
-      let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eB.UserSettingsSections.ACCOUNT,
+      let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eH.UserSettingsSections.ACCOUNT,
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = arguments.length > 2 ? arguments[2] : void 0;
       A.default.open(e, t, n)
@@ -534,7 +534,7 @@ class eq extends s.PureComponent {
       (0, ej.copy)(eF.default.getUserTag(e, {
         decoration: "never",
         identifiable: "always"
-      })), eU.default.track(eB.AnalyticEvents.TEXT_COPIED, {
+      })), eU.default.track(eH.AnalyticEvents.TEXT_COPIED, {
         type: "User Tag"
       });
       let a = {
@@ -613,7 +613,7 @@ class eq extends s.PureComponent {
 
 function eQ() {
   let e = (0, r.useStateFromStores)([eS.default], () => eS.default.getCurrentUser()),
-    t = (0, H.useShowEligibilityEnrollmentTooltip)(eV.PartnerGame.FORTNITE),
+    t = (0, B.useShowEligibilityEnrollmentTooltip)(eV.PartnerGame.FORTNITE),
     n = (0, r.useStateFromStores)([ef.default], () => ef.default.getId()),
     i = eo.CustomStatusSetting.useSetting(),
     l = s.useMemo(() => null != i ? (0, j.default)(i) : null, [i]),
@@ -621,7 +621,7 @@ function eQ() {
       streaming: u,
       status: d
     } = (0, r.useStateFromStoresObject)([eI.default], () => ({
-      streaming: null != eI.default.findActivity(e => e.type === eB.ActivityTypes.STREAMING),
+      streaming: null != eI.default.findActivity(e => e.type === eH.ActivityTypes.STREAMING),
       status: eI.default.getStatus()
     })),
     c = (0, v.default)({
@@ -669,8 +669,8 @@ function eQ() {
     }, {
       autoTrackExposure: !1
     }),
-    Y = (0, r.useStateFromStores)([B.default], () => B.default.isCurrentQuestCompleted),
-    W = (0, r.useStateFromStores)([B.default], () => B.default.currentDropQuestGameTitle),
+    Y = (0, r.useStateFromStores)([H.default], () => H.default.isCurrentQuestCompleted),
+    W = (0, r.useStateFromStores)([H.default], () => H.default.currentDropQuestGameTitle),
     Q = (0, z.useIsHomeSelected)(),
     $ = (0, O.useIsDmSpamFilterCoachmarkEnabled)(),
     en = (0, ee.useCanSeeSafetyEducationBlockMuteCoachmark)(),
@@ -698,7 +698,7 @@ function eQ() {
         }),
         u = s.useMemo(() => {
           let e = new Date().getTime();
-          return null != i && (i.status === eB.SubscriptionStatusTypes.ACTIVE || e - i.currentPeriodEnd.getTime() < ez)
+          return null != i && (i.status === eH.SubscriptionStatusTypes.ACTIVE || e - i.currentPeriodEnd.getTime() < ez)
         }, [i]);
       return s.useEffect(() => {
         let s = async () => {

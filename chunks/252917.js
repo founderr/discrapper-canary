@@ -42,8 +42,8 @@ var a = n("37983"),
   w = n("598156"),
   k = n("397039"),
   F = n("628805"),
-  H = n("755729"),
-  B = n("934743"),
+  B = n("755729"),
+  H = n("934743"),
   V = n("566396"),
   Y = n("618489"),
   W = n("209688"),
@@ -209,7 +209,7 @@ function eR(e) {
     } = e;
     return t
   });
-  return (0, a.jsx)(B.default, {
+  return (0, a.jsx)(H.default, {
     ...e,
     guildId: t
   })
@@ -334,7 +334,7 @@ function ek(e) {
         children: (0, a.jsx)(Y.default, {})
       }), (0, a.jsx)(eo.default, {
         section: ec.AnalyticsSections.ACCOUNT_PANEL,
-        children: (0, a.jsx)(H.default, {})
+        children: (0, a.jsx)(B.default, {})
       })]
     }), (0, a.jsx)(ei.default, {})]
   })

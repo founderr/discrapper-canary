@@ -1,25 +1,25 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return r
   }
 });
-var a = l("37983");
-l("884691");
-var n = l("414456"),
-  s = l.n(n),
-  i = l("383957");
+var l = a("37983");
+a("884691");
+var n = a("414456"),
+  s = a.n(n),
+  i = a("383957");
 
 function r(e) {
   let {
     children: t,
-    lastSection: l = !1,
+    lastSection: a = !1,
     className: n,
     ...r
   } = e;
-  return (0, a.jsx)("div", {
+  return (0, l.jsx)("div", {
     className: s(i.section, n, {
-      [i.lastSection]: l
+      [i.lastSection]: a
     }),
     ...r,
     children: t

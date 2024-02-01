@@ -1,25 +1,25 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return T
   }
 });
-var a = l("37983");
-l("884691");
-var n = l("414456"),
-  s = l.n(n),
-  i = l("77078"),
-  r = l("145079"),
-  u = l("123377"),
-  o = l("158998"),
-  c = l("777003"),
-  d = l("782340"),
-  f = l("119111");
+var l = a("37983");
+a("884691");
+var n = a("414456"),
+  s = a.n(n),
+  i = a("77078"),
+  r = a("145079"),
+  u = a("123377"),
+  o = a("158998"),
+  c = a("777003"),
+  d = a("782340"),
+  f = a("119111");
 
 function T(e) {
   let {
     user: t,
-    shouldCopyOnClick: l,
+    shouldCopyOnClick: a,
     nickname: n,
     pronouns: T,
     usernameIcon: E,
@@ -28,12 +28,12 @@ function T(e) {
     isTryItOut: S = !1,
     lastSection: m
   } = e;
-  return (0, a.jsx)(c.default, {
+  return (0, l.jsx)(c.default, {
     className: s(f.container, _),
     lastSection: m,
-    children: (0, a.jsxs)("div", {
-      className: l ? f.copiableNameTag : void 0,
-      children: [(0, a.jsx)(u.CopiableField, {
+    children: (0, l.jsxs)("div", {
+      className: a ? f.copiableNameTag : void 0,
+      children: [(0, l.jsx)(u.CopiableField, {
         className: f.copiableField,
         copyMetaData: "User Tag",
         copyValue: o.default.getUserTag(t, {
@@ -41,14 +41,14 @@ function T(e) {
           identifiable: "always"
         }),
         showCopyIcon: !0,
-        disableCopy: !l,
-        children: (0, a.jsxs)("div", {
+        disableCopy: !a,
+        children: (0, l.jsxs)("div", {
           className: f.userText,
-          children: [null != n ? (0, a.jsx)(i.Heading, {
+          children: [null != n ? (0, l.jsx)(i.Heading, {
             variant: "heading-lg/semibold",
             className: f.nickname,
             children: n
-          }) : null, (0, a.jsx)(r.default, {
+          }) : null, (0, l.jsx)(r.default, {
             usernameIcon: E,
             user: t,
             forceUsername: !0,
@@ -59,9 +59,9 @@ function T(e) {
             botClass: null == n ? f.headerBotTag : f.headerBotTagWithNickname
           }), A]
         })
-      }), null != T && "" !== T && (0, a.jsx)(i.Tooltip, {
+      }), null != T && "" !== T && (0, l.jsx)(i.Tooltip, {
         text: d.default.Messages.USER_PROFILE_PRONOUNS,
-        children: e => (0, a.jsx)(i.Text, {
+        children: e => (0, l.jsx)(i.Text, {
           ...e,
           variant: "text-sm/normal",
           className: f.pronouns,

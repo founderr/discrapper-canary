@@ -64,7 +64,7 @@ function D(e) {
   } = n, [y, x] = s.useState(!1), b = (0, i.useStateFromStores)([I.default], () => I.default.getUser(l)), U = (0, i.useStateFromStores)([h.default], () => {
     var e, t;
     return null !== (t = null === (e = h.default.getDetectableGame(m)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : ""
-  }), [G] = (0, c.default)([U]), j = null !== (t = A.default.getGlobalName(b)) && void 0 !== t ? t : A.default.getUserTag(b), w = (0, R.default)(), k = (0, i.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, l)), F = (0, i.useStateFromStores)([C.default], () => C.default.getVoiceChannelId()), H = (0, N.default)(), B = (0, g.default)(p);
+  }), [G] = (0, c.default)([U]), j = null !== (t = A.default.getGlobalName(b)) && void 0 !== t ? t : A.default.getUserTag(b), w = (0, R.default)(), k = (0, i.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, l)), F = (0, i.useStateFromStores)([C.default], () => C.default.getVoiceChannelId()), B = (0, N.default)(), H = (0, g.default)(p);
   if (s.useEffect(() => {
       y && F === p && x(!1)
     }, [F, y, p]), null == b || null == j) return null;
@@ -81,7 +81,7 @@ function D(e) {
       buttonCTA: s ? v.default.Messages.BROADCAST_FULL : a ? v.default.Messages.VIEW_BROADCAST : v.default.Messages.JOIN_BROADCAST,
       disabled: s
     }
-  }(l, B);
+  }(l, H);
   return (0, a.jsxs)("div", {
     className: M.container,
     children: [(0, a.jsx)(r.Avatar, {
@@ -101,8 +101,8 @@ function D(e) {
         }) : v.default.Messages.STREAMING_A_GAME
       }), (0, a.jsxs)("div", {
         className: M.activity,
-        children: [B.length > 0 && (0, a.jsx)(P, {
-          users: B
+        children: [H.length > 0 && (0, a.jsx)(P, {
+          users: H
         }), (0, a.jsxs)(r.Button, {
           onClick: () => {
             if (F === p) {
@@ -112,7 +112,7 @@ function D(e) {
             x(!0), (0, u.joinPrivateChannelAndWatchStream)(p, D), d.default.trackWithMetadata(O.AnalyticEvents.BROADCAST_VIEWED, {
               num_active_broadcasts: w.length,
               broadcast_position: w.findIndex(e => e.userId === l) + 1,
-              is_broadcasting: H,
+              is_broadcasting: B,
               broadcast_channel_id: p
             })
           },

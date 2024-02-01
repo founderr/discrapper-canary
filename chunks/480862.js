@@ -1,13 +1,13 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return C
+    return E
   }
 });
-var n = l("37983");
+var a = l("37983");
 l("884691");
-var a = l("414456"),
-  s = l.n(a),
+var n = l("414456"),
+  s = l.n(n),
   r = l("77078"),
   i = l("685665"),
   u = l("649844"),
@@ -18,47 +18,47 @@ var a = l("414456"),
   m = l("782340"),
   S = l("139191");
 
-function C(e) {
+function E(e) {
   let {
     message: t,
     onClose: l,
-    openStreamUpsellModal: a
-  } = e, C = d.default.useExperiment({
+    openStreamUpsellModal: n
+  } = e, E = d.default.useExperiment({
     location: "371fea_1"
   }, {
     autoTrackExposure: !1
   }), {
-    analyticsLocations: E
+    analyticsLocations: C
   } = (0, i.default)(), h = {
     section: c.AnalyticsSections.STREAM_SETTINGS,
     object: c.AnalyticsObjects.PREMIUM_UPSELL_BANNER,
     objectType: c.AnalyticsObjectTypes.BUY
   }, g = () => (d.default.trackExposure({
     location: "371fea_2"
-  }), C.enabled) ? (0, u.default)({
+  }), E.enabled) ? (0, u.default)({
     initialPlanId: null,
     subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
-    analyticsLocations: E,
+    analyticsLocations: C,
     analyticsObject: h
-  }) : a({
+  }) : n({
     analyticsLocation: h,
     onClose: l
   });
-  return (0, n.jsxs)(r.Clickable, {
+  return (0, a.jsxs)(r.Clickable, {
     onClick: () => {
       g()
     },
     className: s(S.upsellBanner, S.gradientBackground),
-    children: [(0, n.jsxs)("div", {
+    children: [(0, a.jsxs)("div", {
       className: S.iconTextContainer,
-      children: [(0, n.jsx)(o.default, {
+      children: [(0, a.jsx)(o.default, {
         className: S.iconColor
-      }), (0, n.jsx)(r.Text, {
+      }), (0, a.jsx)(r.Text, {
         variant: "text-sm/medium",
         className: S.upsellText,
         children: null != t ? t : m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER
       })]
-    }), (0, n.jsx)(r.Text, {
+    }), (0, a.jsx)(r.Text, {
       variant: "text-sm/medium",
       className: S.textLink,
       children: m.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA

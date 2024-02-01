@@ -1,20 +1,20 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return r
   }
 });
-var a = l("37983");
-l("884691");
-var n = l("414456"),
-  s = l.n(n),
-  i = l("193853");
+var l = a("37983");
+a("884691");
+var n = a("414456"),
+  s = a.n(n),
+  i = a("193853");
 
 function r(e) {
   let {
     className: t
   } = e;
-  return (0, a.jsx)("div", {
+  return (0, l.jsx)("div", {
     className: s(i.divider, t)
   })
 }

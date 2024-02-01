@@ -42,8 +42,8 @@ var a = n("37983"),
   w = n("916650"),
   k = n("803524"),
   F = n("7643"),
-  H = n("785770"),
-  B = n("260488"),
+  B = n("785770"),
+  H = n("260488"),
   V = n("500526"),
   Y = n("452229"),
   W = n("196986"),
@@ -58,7 +58,7 @@ var a = n("37983"),
 
 function ee() {
   let e = s.useRef(null),
-    t = (0, B.useMessageRequestsCount)(),
+    t = (0, H.useMessageRequestsCount)(),
     n = (0, V.default)(),
     i = (0, k.useListHasSingleMessageRequest)(),
     u = (0, _.useIsRejectAllMessageRequestsEnabled)(),
@@ -73,7 +73,7 @@ function ee() {
     E = (0, C.default)("message-requests-list"),
     {
       channelId: h
-    } = (0, H.useMessageRequestSidebarState)(),
+    } = (0, B.useMessageRequestSidebarState)(),
     I = s.useCallback(() => {
       let e = n.map(e => e.channel.id);
       f(e)
@@ -235,7 +235,7 @@ function es(e) {
 let ei = (0, E.default)(function(e) {
   let {
     width: t
-  } = e, n = (0, B.useMessageRequestsCount)();
+  } = e, n = (0, H.useMessageRequestsCount)();
   s.useEffect(() => {
     f.setHomeLink(Q.Routes.MESSAGE_REQUESTS), (0, O.trackAppUIViewed)("message-requests"), b.default.track(Q.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
       num_message_requests: n

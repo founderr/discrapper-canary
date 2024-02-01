@@ -32,8 +32,8 @@ var l = n("679653"),
   m = n("305961"),
   E = n("945956"),
   g = n("27618"),
-  I = n("18494"),
-  S = n("162771"),
+  S = n("18494"),
+  I = n("162771"),
   _ = n("101125"),
   N = n("282109"),
   T = n("697218"),
@@ -64,7 +64,7 @@ function D(e, t) {
     u = T.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
   if (null == s || null == r || null == u || s.type === R.ChannelTypes.GROUP_DM && e.type === R.MessageTypes.RECIPIENT_REMOVE || !y(r, u, s, a) || i.default.isMessageRequest(t)) return !1;
   if (!l) {
-    let e = I.default.getChannelId(S.default.getGuildId());
+    let e = S.default.getChannelId(I.default.getGuildId());
     if (e === s.id || C.default.getCurrentSidebarChannelId(e) === s.id) return !1
   }
   if (void 0 !== e.activity_instance && null != e.interaction && e.interaction.user.id === r.id) return !1;
@@ -93,7 +93,7 @@ function D(e, t) {
 
 function b(e, t) {
   var n;
-  let l = I.default.getChannelId(S.default.getGuildId());
+  let l = S.default.getChannelId(I.default.getGuildId());
   if (l !== t) return !1;
   let a = p.default.getChannel(t);
   e.type === R.MessageTypes.THREAD_STARTER_MESSAGE && (a = p.default.getChannel(null == a ? void 0 : a.parent_id));
@@ -109,7 +109,7 @@ function j(e, t) {
     s = T.default.getUser(e.ownerId);
   if (null == t || null == a || null == s || !y(a, s, t, l, !0) || N.default.isGuildOrCategoryOrChannelMuted(t.guild_id, t.id)) return !1;
   if (!n) {
-    let e = I.default.getChannelId(S.default.getGuildId());
+    let e = S.default.getChannelId(I.default.getGuildId());
     if (e === t.id) return !1
   }
   return N.default.getNewForumThreadsCreated(t)

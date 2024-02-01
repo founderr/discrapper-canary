@@ -35,10 +35,10 @@ var s = n("37983"),
   O = n("662255"),
   D = n("85175"),
   j = n("83900"),
-  P = n("993477"),
-  b = n("733160"),
-  H = n("100300"),
-  F = n("433487"),
+  b = n("993477"),
+  P = n("733160"),
+  F = n("100300"),
+  H = n("433487"),
   U = n("987772"),
   k = n("566998"),
   w = n("516358"),
@@ -46,8 +46,8 @@ var s = n("37983"),
   B = n("959097"),
   V = n("228220"),
   W = n("149279"),
-  Z = n("599110"),
-  z = n("306160"),
+  z = n("599110"),
+  Z = n("306160"),
   K = n("870190"),
   Y = n("61400"),
   q = n("327054"),
@@ -183,8 +183,8 @@ function er(e) {
     } = (0, u.useStateFromStoresObject)([x.default], () => ({
       canAddNewReactions: I && x.default.can(et.Permissions.ADD_REACTIONS, t),
       canManageMessages: x.default.can(et.Permissions.MANAGE_MESSAGES, t)
-    }), [t, I]), O = (0, A.useCanReplyToMessage)(t, n), D = (0, _.useCanStartPublicThread)(t, n), j = (0, _.useCanViewThreadForMessage)(n), P = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (R || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
-    n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && R);
+    }), [t, I]), O = (0, A.useCanReplyToMessage)(t, n), D = (0, _.useCanStartPublicThread)(t, n), j = (0, _.useCanViewThreadForMessage)(n), b = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), P = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), F = o.id === f, H = (R || F) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
+    n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (H = H && R);
     let U = (0, K.canReportMessage)(n),
       k = (0, q.default)(n, t, R),
       w = !t.isSystemDM() && (0, Y.default)(n, f) && h && !E,
@@ -195,17 +195,17 @@ function er(e) {
         canChat: I,
         renderReactions: g,
         canAddNewReactions: y,
-        isLurking: P,
-        isGuest: b,
+        isLurking: b,
+        isGuest: P,
         isActiveChannelOrUnarchivableThread: h
       }),
-      B = t.type === et.ChannelTypes.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(et.GuildFeatures.NEWS) && (H || R) && n.type === et.MessageTypes.DEFAULT,
+      B = t.type === et.ChannelTypes.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(et.GuildFeatures.NEWS) && (F || R) && n.type === et.MessageTypes.DEFAULT,
       V = t.getGuildId(),
       W = null != V && (n.type === et.MessageTypes.USER_JOIN || n.type === et.MessageTypes.GUILD_INVITE_REMINDER) && x.default.canWithPartialContext(et.Permissions.MANAGE_GUILD, {
         guildId: V
       }),
       {
-        showReminders: Z
+        showReminders: z
       } = p.default.useExperiment({
         location: "9bfedc_1"
       }, {
@@ -219,12 +219,12 @@ function er(e) {
       message: n,
       canPin: k,
       canEdit: w,
-      canDelete: F,
+      canDelete: H,
       canReport: U,
       canReply: O,
       canStartThread: D,
       canViewThread: j,
-      canCopy: z.SUPPORTS_COPY,
+      canCopy: Z.SUPPORTS_COPY,
       hasDeveloperMode: S,
       canReact: !G && g,
       canPublish: B,
@@ -233,14 +233,14 @@ function er(e) {
       showEmojiPicker: s,
       showEmojiBurstPicker: a,
       showMoreUtilities: l,
-      showMessageRemindersActions: Z,
+      showMessageRemindersActions: z,
       isMessageReminder: J,
       setPopout: i,
       isFocused: r,
       isGuildInviteReminder: n.type === et.MessageTypes.GUILD_INVITE_REMINDER
     }
   }(e), ef = a.useCallback(() => {
-    !W && Z.default.track(et.AnalyticEvents.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+    !W && z.default.track(et.AnalyticEvents.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
       message_id: n.id,
       channel: n.channel_id
     }), er({
@@ -279,14 +279,14 @@ function er(e) {
         channel: t,
         message: n,
         label: ea ? en.default.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : en.default.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
-        icon: ea ? y.default : H.default,
+        icon: ea ? y.default : F.default,
         onClick: ea ? J.markMessageRemindersAsComplete : J.markMessageAsReminder
       }) : null, eC ? ei({
         key: "mark-unread",
         channel: t,
         message: n,
         label: en.default.Messages.MARK_UNREAD,
-        icon: P.default,
+        icon: b.default,
         onClick: J.markMessageUnread
       }) : null, i ? ei({
         key: "pin",
@@ -343,7 +343,7 @@ function er(e) {
       channel: t,
       message: n,
       label: ep ? en.default.Messages.NEWS_CHANNEL_PUBLISHED : en.default.Messages.NEWS_CHANNEL_PUBLISH,
-      icon: b.default,
+      icon: P.default,
       onClick: J.publishMessage,
       disabled: ep
     }) : null, r && (ed || G) ? ei({
@@ -384,7 +384,7 @@ function er(e) {
         return ei({
           key: "more",
           label: en.default.Messages.MORE,
-          icon: F.default,
+          icon: H.default,
           channel: t,
           message: n,
           selected: i,

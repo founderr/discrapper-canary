@@ -1,35 +1,35 @@
 "use strict";
-let a, n;
-l.r(t), l.d(t, {
+let l, n;
+a.r(t), a.d(t, {
   CopiableField: function() {
     return S
   }
-}), l("222007");
-var s = l("37983"),
-  i = l("884691"),
-  r = l("414456"),
-  u = l.n(r),
-  o = l("862337"),
-  c = l("77078"),
-  d = l("413709"),
-  f = l("599110"),
-  T = l("306160"),
-  E = l("49111"),
-  A = l("782340"),
-  _ = l("491701");
+}), a("222007");
+var s = a("37983"),
+  i = a("884691"),
+  r = a("414456"),
+  u = a.n(r),
+  o = a("862337"),
+  c = a("77078"),
+  d = a("413709"),
+  f = a("599110"),
+  T = a("306160"),
+  E = a("49111"),
+  A = a("782340"),
+  _ = a("491701");
 
 function S(e) {
   var t;
   let {
-    className: l,
+    className: a,
     copyValue: r,
     copyMetaData: S,
     children: m,
     disableCopy: C,
     showCopyIcon: N
-  } = e, [g, v] = i.useState(0), [p, I] = i.useState(!1), [M, h] = i.useState(!1);
-  if (i.useEffect(() => (a = new o.Timeout, n = new o.Timeout, function() {
-      a.stop(), n.stop()
+  } = e, [g, v] = i.useState(0), [p, I] = i.useState(!1), [h, M] = i.useState(!1);
+  if (i.useEffect(() => (l = new o.Timeout, n = new o.Timeout, function() {
+      l.stop(), n.stop()
     }), []), !T.SUPPORTS_COPY || C) return (0, s.jsx)(s.Fragment, {
     children: m
   });
@@ -40,42 +40,42 @@ function S(e) {
     y = x ? c.TooltipColors.RED : c.TooltipColors.GREEN,
     j = p ? y : c.TooltipColors.PRIMARY,
     P = () => {
-      a.stop(), h(!1)
+      l.stop(), M(!1)
     },
     H = e => {
       (0, T.copy)(r), f.default.track(E.AnalyticEvents.TEXT_COPIED, {
         type: S
-      }), "function" == typeof e && e(), !M && v(g + 1), h(!0), I(!0), a.start(1e3, () => h(!1)), n.start(2e3, () => v(0))
+      }), "function" == typeof e && e(), !h && v(g + 1), M(!0), I(!0), l.start(1e3, () => M(!1)), n.start(2e3, () => v(0))
     };
   return (0, s.jsx)(c.Tooltip, {
     delay: 500,
     color: j,
-    forceOpen: M,
+    forceOpen: h,
     text: p ? (0, s.jsx)(c.Shaker, {
       isShaking: x,
       children: R
     }) : A.default.Messages.ACCOUNT_CLICK_TO_COPY,
     onAnimationRest: (e, t) => {
-      !M && p && t.phase === E.SpringTransitionPhases.LEAVE && I(!1)
+      !h && p && t.phase === E.SpringTransitionPhases.LEAVE && I(!1)
     },
     "aria-label": A.default.Messages.ACCOUNT_CLICK_TO_COPY,
     children: e => {
       let {
         onClick: t,
-        onMouseEnter: a,
+        onMouseEnter: l,
         ...n
       } = e;
       return (0, s.jsx)(c.Clickable, {
         ...n,
         className: _.clickTarget,
         onMouseEnter: () => {
-          p ? P() : "function" == typeof a && a()
+          p ? P() : "function" == typeof l && l()
         },
         onClick: () => {
           H(t)
         },
         children: (0, s.jsxs)("div", {
-          className: u(l, _.copiableWrapper),
+          className: u(a, _.copiableWrapper),
           children: [(0, s.jsx)("div", {
             className: _.childWrapper,
             children: m
