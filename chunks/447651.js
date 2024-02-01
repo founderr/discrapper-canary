@@ -19,7 +19,7 @@ var i = n("77078"),
   m = n("782340");
 let M = "https://media.discordapp.net",
   g = /^.*\.discordapp\.net$/,
-  p = "https://cdn.discordapp.com",
+  p = "cdn.discordapp.com",
   I = "".concat(M, "/stickers"),
   S = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
   v = new Set(["jpg", "jpeg", "png"]),
@@ -40,11 +40,11 @@ function _(e, t, n) {
   if (l || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !d.isPlatformEmbedded || null == e || ! function(e) {
       let t = new URL(e),
         n = h(e);
-      return (g.test(t.hostname) || t.origin === p) && !e.startsWith(I) && !(0, s.isRoleIconAssetUrl)(e) && null != n && S.has(n)
+      return (g.test(t.hostname) || t.host === p) && !e.startsWith(I) && !(0, s.isRoleIconAssetUrl)(e) && null != n && S.has(n)
     }(e)) return null;
   let o = function(e) {
       let t = new URL(e);
-      return t.origin === p ? e : t.origin === M ? p + t.pathname : (t.searchParams.delete("width"), t.searchParams.delete("height"), t.searchParams.set("quality", "lossless"), t.toString())
+      return t.host === p ? e : t.origin === M ? (t.host = p, t.searchParams.delete("size"), t.searchParams.delete("width"), t.searchParams.delete("height"), t.searchParams.delete("quality"), t.searchParams.delete("format"), t.toString()) : (t.searchParams.delete("width"), t.searchParams.delete("height"), t.searchParams.set("quality", "lossless"), t.toString())
     }(e),
     _ = async () => {
       try {
