@@ -20,7 +20,8 @@ class I extends t.default {
         channelId: _,
         guildId: E
       } = e, {
-        enableHangStatus: t
+        enableHangStatus: t,
+        setDefaultStatus: I
       } = r.HangStatusExperiment.getCurrentConfig({
         guildId: null != E ? E : "",
         location: "HangStatusManager"
@@ -33,26 +34,27 @@ class I extends t.default {
       }
       if (!t || _ === this.previousVoiceChannelId) return;
       if (this.previousVoiceChannelId = _, null == E || null == _) return;
-      let I = o.default.getChannel(_);
-      if (null == I || I.type !== i.ChannelTypes.GUILD_VOICE) return;
-      let s = a.default.getCurrentHangStatus();
-      if (null != s) return;
-      let T = a.default.getCurrentDefaultStatus();
-      if ((null == T ? void 0 : T.expiresAt) != null && (null == T ? void 0 : T.expiresAt) >= Date.now()) {
-        if (T.status === i.HangStatusTypes.CUSTOM && null != T.customHangStatus) {
+      let s = o.default.getChannel(_);
+      if (null == s || s.type !== i.ChannelTypes.GUILD_VOICE) return;
+      let T = a.default.getCurrentHangStatus();
+      if (null != T) return;
+      let S = a.default.getCurrentDefaultStatus();
+      if ((null == S ? void 0 : S.expiresAt) != null && (null == S ? void 0 : S.expiresAt) >= Date.now()) {
+        if (S.status === i.HangStatusTypes.CUSTOM && null != S.customHangStatus) {
           let {
             status: e,
             emoji: _
-          } = T.customHangStatus;
+          } = S.customHangStatus;
           (0, n.updateCustomHangStatus)(e, _);
           return
         }
-        if (null == T.status) return;
+        if (null == S.status) return;
         else {
-          (0, n.updateHangStatus)(T.status);
+          (0, n.updateHangStatus)(S.status);
           return
         }
       }
+      I && (0, n.updateHangStatus)(i.HangStatusTypes.CHILLING)
     }, this.handleDisconnectFromVoiceChannel = () => {
       (0, n.clearHangStatus)()
     }, this.handleLogout = () => {

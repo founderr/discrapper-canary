@@ -83,17 +83,19 @@ class X extends F.default {
     let {
       channel: t,
       connected: n,
-      enableHangStatus: a
-    } = this.props, s = null === (e = (0, I.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
-      hovered: i
+      enableHangStatus: a,
+      allowChannelTopic: s
+    } = this.props, i = null === (e = (0, I.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
+      hovered: r
     } = this.state;
     return (0, l.jsx)(k.default, {
       onClick: this.handleVoiceStatusClick,
       channel: t,
       connected: n,
-      subtitle: s,
-      hovered: i,
-      enableHangStatus: a
+      subtitle: i,
+      hovered: r,
+      enableHangStatus: a,
+      allowChannelTopic: s
     })
   }
   renderVoiceUsers() {
@@ -393,11 +395,12 @@ function q(e) {
     isSubscriptionGated: I,
     needSubscriptionToAccess: _
   } = (0, T.default)(n.id), N = (0, S.default)(), L = (0, i.useStateFromStores)([G.default], () => G.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
-    enableHangStatus: R
+    enableHangStatus: R,
+    allowChannelTopic: M
   } = v.HangStatusExperiment.useExperiment({
     guildId: n.guild_id,
     location: "VoiceChannel"
-  }), M = (0, B.default)({
+  }), y = (0, B.default)({
     channel: n,
     isChannelSelected: r,
     isChannelCollapsed: o,
@@ -406,7 +409,7 @@ function q(e) {
     needSubscriptionToAccess: _,
     enableConnectedUserLimit: !0,
     enableActivities: !0
-  }), y = x && null == M;
+  }), P = x && null == y;
   return (0, l.jsx)(Q, {
     channelName: m,
     embeddedApps: p,
@@ -420,9 +423,10 @@ function q(e) {
     ...e,
     connected: x,
     isFavoriteSuggestion: s && !L,
-    forceShowButtons: y,
-    channelInfo: M,
+    forceShowButtons: P,
+    channelInfo: y,
     enableHangStatus: R,
+    allowChannelTopic: M,
     resolvedUnreadSetting: c
   })
 }
