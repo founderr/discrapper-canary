@@ -10,8 +10,8 @@ s.r(t), s.d(t, {
 var a, n, r = s("65597"),
   i = s("151426"),
   l = s("79112"),
-  u = s("841098"),
-  o = s("812204"),
+  o = s("841098"),
+  u = s("812204"),
   d = s("685665"),
   c = s("18346"),
   _ = s("21526"),
@@ -21,8 +21,8 @@ var a, n, r = s("65597"),
   f = s("701909"),
   S = s("719923"),
   R = s("184684"),
-  m = s("598739"),
-  A = s("646718"),
+  A = s("598739"),
+  m = s("646718"),
   N = s("49111"),
   p = s("397336"),
   g = s("782340"),
@@ -55,7 +55,7 @@ var a, n, r = s("65597"),
 var X = () => {
   let {
     analyticsLocations: e
-  } = (0, d.default)(o.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = g.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, r.default)([T.default], () => T.default.getPremiumTypeSubscription()), n = null != a ? S.default.getPremiumPlanItem(a) : null, X = null != n ? S.default.getSkuIdForPlan(n.planId) : null, J = X === A.PremiumSubscriptionSKUs.TIER_2, {
+  } = (0, d.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, o.default)(), s = g.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, r.default)([T.default], () => T.default.getPremiumTypeSubscription()), n = null != a ? S.default.getPremiumPlanItem(a) : null, X = null != n ? S.default.getSkuIdForPlan(n.planId) : null, J = X === m.PremiumSubscriptionSKUs.TIER_2, {
     flipped: Z
   } = (0, R.useWhatsNewAvatarDecoRollout)(), {
     flipped: q
@@ -70,7 +70,7 @@ var X = () => {
   }, es = () => {
     (0, _.openCollectiblesShop)({
       analyticsLocations: e,
-      analyticsSource: o.default.PREMIUM_MARKETING_PERK_CARD
+      analyticsSource: u.default.PREMIUM_MARKETING_PERK_CARD
     })
   }, ea = {
     avatarDecorations: J ? {
@@ -337,7 +337,13 @@ var X = () => {
       title: g.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
       subtitle: g.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
       perkImage: U,
-      description: g.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO
+      description: g.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
+      descriptionCta: g.default.Messages.TAKE_ME_THERE,
+      onCtaClick: () => {
+        l.default.open(N.UserSettingsSections.APPEARANCE, null, {
+          scrollPosition: p.AppearanceScrollPositions.CUSTOM_APP_ICONS
+        })
+      }
     },
     moreEmojiPower: {
       name: "moreEmojiPower",
@@ -350,14 +356,14 @@ var X = () => {
       name: "customSoundsEverywhere",
       title: g.default.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
       subtitle: g.default.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
-      perkImage: (0, m.getThemedImage)(t, P, O),
+      perkImage: (0, A.getThemedImage)(t, P, O),
       description: g.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO
     },
     specialStickerAccess: {
       name: "specialStickerAccess",
       title: g.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
       subtitle: g.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-      perkImage: (0, m.getThemedImage)(t, M, w),
+      perkImage: (0, A.getThemedImage)(t, M, w),
       description: g.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO
     },
     largeUploads: {
