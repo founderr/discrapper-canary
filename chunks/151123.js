@@ -22,8 +22,8 @@ var a = l("37983"),
   _ = l("178406"),
   T = l("624663"),
   x = l("463200"),
-  A = l("868967"),
-  S = l("512882"),
+  S = l("868967"),
+  A = l("512882"),
   g = l("149777"),
   p = l("413989"),
   L = l("49111"),
@@ -39,8 +39,8 @@ function R(e) {
     isSorted: s,
     className: o,
     ...d
-  } = e;
-  return (0, a.jsx)("th", {
+  } = e, r = n ? "header-primary" : "header-secondary";
+  return s && (r = "text-brand"), (0, a.jsx)("th", {
     className: i(N.tableHeaderCellContainer, o),
     children: (0, a.jsxs)(C.Clickable, {
       ...d,
@@ -50,13 +50,13 @@ function R(e) {
       }),
       children: [(0, a.jsx)(C.Text, {
         variant: "eyebrow",
-        color: n ? "text-brand" : "header-secondary",
+        color: r,
         children: t
       }), null != l && (0, a.jsx)("div", {
         className: N.filterIconButton,
         children: (0, a.jsx)(E.default, {
           className: N.filterIcon,
-          color: s ? C.tokens.colors.CONTROL_BRAND_FOREGROUND.css : C.tokens.colors.TEXT_MUTED.css,
+          color: n ? C.tokens.colors.CONTROL_BRAND_FOREGROUND.css : C.tokens.colors.TEXT_MUTED.css,
           width: 16,
           height: 16
         })
@@ -73,12 +73,12 @@ function j(e) {
   } = e, s = (0, r.default)([_.default], () => _.default.getSearchStateByGuildId(t), [t], d), o = (0, r.default)([f.default, c.default], () => f.default.can(L.Permissions.MANAGE_GUILD, c.default.getGuild(t)), [t]), {
     selectedUserIds: E,
     addUsers: j,
-    clearSelection: b
-  } = (0, T.default)(t), D = s.requireUnusualDmActivity || s.requireCommunicationDisabled || s.requireUnusualAccountActivity || s.requireUsernameQuarantined, O = s.selectedRoleIds.size > 0, V = null != s.selectedJoinDateOption.afterDate, B = s.selectedSort === m.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, y = null != s.selectedAccountAgeOption.afterDate, F = s.selectedSort === m.OrderBy.ORDER_BY_USER_ID_ASC || s.selectedSort === m.OrderBy.ORDER_BY_USER_ID_DESC, U = null != s.selectedSourceInviteCode && "" !== s.selectedSourceInviteCode, w = null != s.selectedJoinSourceType, k = U || w, [Z, P] = n.useState(null == u.default.get(v, null)), Y = n.useCallback(() => {
+    clearSelection: D
+  } = (0, T.default)(t), b = s.requireUnusualDmActivity || s.requireCommunicationDisabled || s.requireUnusualAccountActivity || s.requireUsernameQuarantined, O = s.selectedRoleIds.size > 0, B = null != s.selectedJoinDateOption.afterDate, V = s.selectedSort === m.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, y = null != s.selectedAccountAgeOption.afterDate, F = s.selectedSort === m.OrderBy.ORDER_BY_USER_ID_ASC || s.selectedSort === m.OrderBy.ORDER_BY_USER_ID_DESC, U = null != s.selectedSourceInviteCode && "" !== s.selectedSourceInviteCode, w = null != s.selectedJoinSourceType, k = U || w, [Z, P] = n.useState(null == u.default.get(v, null)), Y = n.useCallback(() => {
     u.default.set(v, Date.now()), P(!1)
   }, []), G = (0, h.useCanAccessBulkBanningFeature)(t), J = (0, M.isInMembersTablesAdditionalFilteringExperiment)(t), q = o && J, z = n.useMemo(() => l.filter(e => (0, h.canBulkBanUser)(t, G, e)), [G, l, t]), K = z.length > 0, W = z.filter(e => !E.has(e)), Q = 0 === W.length, X = n.useCallback(() => {
-    K && (Q ? b() : j(z))
-  }, [K, Q, b, j, z]);
+    K && (Q ? D() : j(z))
+  }, [K, Q, D, j, z]);
   return (0, a.jsx)("thead", {
     children: (0, a.jsxs)("tr", {
       className: N.tableHeaderRow,
@@ -106,7 +106,7 @@ function j(e) {
           position: "bottom",
           spacing: 4,
           align: "left",
-          renderPopout: () => (0, a.jsx)(S.default, {
+          renderPopout: () => (0, a.jsx)(A.default, {
             guildId: t,
             onClose: L.NOOP
           }),
@@ -118,8 +118,8 @@ function j(e) {
             return (0, a.jsx)(R, {
               label: H.default.Messages.MEMBER_SAFETY_TABLE_HEADER_JOINED_AT,
               onFilter: t,
-              isFiltered: V,
-              isSorted: B,
+              isFiltered: B,
+              isSorted: V,
               className: I.smallCol,
               ...l
             })
@@ -224,7 +224,7 @@ function j(e) {
             let {
               closePopout: l
             } = e;
-            return (0, a.jsx)(A.default, {
+            return (0, a.jsx)(S.default, {
               guildId: t,
               onClose: l
             })
@@ -236,7 +236,7 @@ function j(e) {
               var a, n;
               Y(), null === (a = t.onClick) || void 0 === a || a.call(t, l), null === (n = e.onClick) || void 0 === n || n.call(e)
             },
-            isFiltered: D,
+            isFiltered: b,
             className: i(I.smallCol),
             onMouseEnter: () => {
               var l, a;

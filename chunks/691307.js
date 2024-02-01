@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return b
+    return D
   }
 }), l("222007");
 var a = l("37983"),
@@ -22,8 +22,8 @@ var a = l("37983"),
   _ = l("913132"),
   T = l("553275"),
   x = l("151123"),
-  A = l("337092"),
-  S = l("850646"),
+  S = l("337092"),
+  A = l("850646"),
   g = l("894282"),
   p = l("474507");
 let L = {
@@ -54,15 +54,15 @@ let L = {
       compact: d,
       onSelectRow: c,
       onResetForNewMembers: f
-    } = e, m = (0, u.default)([C.default], () => C.default.useReducedMotion), g = (0, E.useIsWindowFocused)(), [j, b] = n.useState(!1), [D, O] = n.useState(!1);
+    } = e, m = (0, u.default)([C.default], () => C.default.useReducedMotion), g = (0, E.useIsWindowFocused)(), [j, D] = n.useState(!1), [b, O] = n.useState(!1);
     n.useEffect(() => {
-      !g && (b(!1), O(!1))
+      !g && (D(!1), O(!1))
     }, [g]), n.useLayoutEffect(() => {
       let e = e => {
-          R(e) && b(!0), v(e) && O(!0)
+          R(e) && D(!0), v(e) && O(!0)
         },
         t = e => {
-          R(e) && b(!1), v(e) && O(!1)
+          R(e) && D(!1), v(e) && O(!1)
         };
       return window.addEventListener("keydown", e), window.addEventListener("keyup", t), () => {
         window.removeEventListener("keydown", e), window.removeEventListener("keyup", t)
@@ -70,20 +70,21 @@ let L = {
     }, []), n.useEffect(() => {
       (0, h.getMemberSupplemental)(l.id, t)
     }, [l.id, t]);
-    let V = t.length > 30,
-      B = (0, r.useTransition)(t, {
+    let B = t.length > 30,
+      V = (0, r.useTransition)(t, {
         key: e => e,
-        trail: V ? 5 : 15,
+        trail: B ? 5 : 15,
         immediate: m,
         from(e) {
           let t = M.default.getEnhancedMember(l.id, e),
             a = M.default.getLastRefreshTimestamp(l.id),
             n = null != t && t.refreshTimestamp === a;
-          return null != t && 0 !== a && n ? V ? H : L : N
+          return null != t && 0 !== a && n ? B ? H : L : N
         },
         enter: N,
         config: I
-      });
+      }),
+      y = !m && o === T.SearchState.LOADING;
     return (0, a.jsxs)("table", {
       className: i(p.table, s),
       children: [(0, a.jsx)(x.default, {
@@ -91,17 +92,17 @@ let L = {
         currentPagedMembers: t
       }), (0, a.jsx)("tbody", {
         children: o === T.SearchState.SUCCESS_FULL || o === T.SearchState.LOADING ? (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(S.default, {
+          children: [(0, a.jsx)(A.default, {
             guild: l,
             onSubmit: f
-          }), B((e, t) => (0, a.jsx)(A.default, {
+          }), V((e, t) => (0, a.jsx)(S.default, {
             userId: t,
             guildId: l.id,
             style: e,
             onSelect: c,
-            isHoldingAdvancedInfoKey: j && D,
+            isHoldingAdvancedInfoKey: j && b,
             compact: d,
-            isLoading: o === T.SearchState.LOADING
+            isLoading: y
           }, t))]
         }) : (0, a.jsx)("td", {
           colSpan: 7,
@@ -118,7 +119,7 @@ let L = {
       s = e.compact === t.compact;
     return l && a && n && s
   });
-var b = function(e) {
+var D = function(e) {
   var t, l;
   let {
     guild: s,
@@ -135,10 +136,10 @@ var b = function(e) {
     {
       analyticsLocations: x
     } = (0, c.default)(),
-    A = null !== (l = null == x ? void 0 : x[0]) && void 0 !== l ? l : null;
+    S = null !== (l = null == x ? void 0 : x[0]) && void 0 !== l ? l : null;
   return n.useEffect(() => {
-    (0, m.trackMembersPageViewed)(s.id, A)
-  }, [s.id, A]), (0, a.jsx)(j, {
+    (0, m.trackMembersPageViewed)(s.id, S)
+  }, [s.id, S]), (0, a.jsx)(j, {
     members: T,
     guild: s,
     className: i,
