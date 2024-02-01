@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 }), n("424973");
 var s = n("446674"),
@@ -12,7 +12,11 @@ var s = n("446674"),
   o = n("49111");
 let u = [],
   d = !1;
-class c extends s.default.PersistedStore {
+
+function c() {
+  return u.length >= 3 && u.some(e => e < Date.now() - 2 * r.default.Millis.DAY)
+}
+class E extends s.default.PersistedStore {
   initialize(e) {
     null != e && Array.isArray(e.sessionStartsWithDND) && (u = e.sessionStartsWithDND)
   }
@@ -30,14 +34,16 @@ class c extends s.default.PersistedStore {
     }
   }
 }
-c.displayName = "HabitualDNDStore", c.persistKey = "habitualDND";
-var E = new c(l.default, {
+E.displayName = "HabitualDNDStore", E.persistKey = "habitualDND";
+var f = new E(l.default, {
   POST_CONNECTION_OPEN: function() {
-    i.default.getStatus() === o.StatusTypes.DND ? (u.push(Date.now()), (u = u.filter(e => e > Date.now() - 5 * r.default.Millis.DAY)).length >= 3 && u.some(e => e < Date.now() - 2 * r.default.Millis.DAY) && setTimeout(() => {
-      d = !0, u = [], l.default.dispatch({
+    i.default.getStatus() === o.StatusTypes.DND && "0" === a.StatusExpiresAtSetting.getSetting() ? (u.push(Date.now()), u = u.filter(e => e > Date.now() - 5 * r.default.Millis.DAY), c() && setTimeout(() => {
+      l.default.dispatch({
         type: "HABITUAL_DND_CLEAR"
       })
-    }, 15 * r.default.Millis.SECOND)) : u = []
+    }, 5 * r.default.Millis.SECOND)) : u = []
   },
-  HABITUAL_DND_CLEAR: () => !0
+  HABITUAL_DND_CLEAR: function() {
+    d = !!c() || !1, u = []
+  }
 })
