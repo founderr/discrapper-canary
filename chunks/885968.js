@@ -76,7 +76,7 @@ function x(e) {
   }), Y = (0, o.useStateFromStores)([h.default], () => {
     var e;
     let n = null == H ? void 0 : H.userIds.values().next().value;
-    return null == n ? null : null === (e = h.default.findActivity(n.user_id, e => e.application_id === t.id)) || void 0 === e ? void 0 : e.details
+    return null == n ? null : null === (e = h.default.findActivity(n, e => e.application_id === t.id)) || void 0 === e ? void 0 : e.details
   }), W = l.useMemo(() => {
     let e = new S.default(t);
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = L.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
