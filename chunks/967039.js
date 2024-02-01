@@ -174,6 +174,13 @@ let s = (0, i.createExperiment)({
       enabled: !0,
       fullname: "bandwidth_estimation/trendline-window-duration-7500,robust-estimator/trendline-window-duration-7500,robust-estimator"
     }
+  }, {
+    id: 24,
+    label: "Sender + Worker: Trendline Window Duration 3750ms + Robust Estimator + RC Link Capacity Fix (Worker-only)",
+    config: {
+      enabled: !0,
+      fullname: "bandwidth_estimation/trendline-window-duration-3750,robust-estimator/trendline-window-duration-3750,robust-estimator,rate-control-link-capacity-fix"
+    }
   }]
 });
 var r = {
