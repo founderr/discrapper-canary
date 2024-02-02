@@ -42,14 +42,11 @@ s.r(t), s.d(t, {
   INVITE_OPTIONS_7_DAYS: function() {
     return f
   },
-  INVITE_OPTIONS_30_DAYS: function() {
+  INVITE_OPTIONS_FOREVER: function() {
     return g
   },
-  INVITE_OPTIONS_FOREVER: function() {
-    return A
-  },
   MAX_AGE_OPTIONS: function() {
-    return L
+    return A
   }
 });
 var a = s("782340");
@@ -102,8 +99,5 @@ let l = n(0, () => a.default.Messages.MAX_USES.format({
   f = n(604800, () => a.default.Messages.DURATION_DAYS.format({
     days: 7
   })),
-  g = n(2592e3, () => a.default.Messages.DURATION_DAYS.format({
-    days: 30
-  })),
-  A = n(0, () => a.default.Messages.MAX_AGE_NEVER),
-  L = [_, T, I, S, N, f, g, A]
+  g = n(0, () => a.default.Messages.MAX_AGE_NEVER),
+  A = [_, T, I, S, N, f, g]

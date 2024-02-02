@@ -1,102 +1,81 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return h
   }
-}), n("222007");
-var l = n("37983"),
-  i = n("884691"),
-  a = n("414456"),
-  s = n.n(a),
-  r = n("77078"),
-  o = n("272091"),
-  u = n("577617"),
-  d = n("255070"),
-  c = n("354023"),
-  f = n("849366"),
-  g = n("782340"),
-  h = n("911011"),
-  I = n("926622");
-let m = c.default.getMaxAgeOptions;
+});
+var l = n("37983");
+n("884691");
+var i = n("414456"),
+  s = n.n(i),
+  a = n("77078"),
+  r = n("354023"),
+  o = n("782340"),
+  u = n("911011"),
+  d = n("926622");
+let c = r.default.getMaxAgeOptions;
 
-function E(e) {
+function f(e) {
   let {
     temporary: t,
     shouldHide: n,
     onToggleTemporary: i
   } = e;
   return n ? (0, l.jsx)("div", {
-    className: I.marginTop20
-  }) : (0, l.jsx)(r.FormItem, {
-    className: s(I.marginTop20, h.switch),
-    children: (0, l.jsx)(r.FormSwitch, {
+    className: d.marginTop20
+  }) : (0, l.jsx)(a.FormItem, {
+    className: s(d.marginTop20, u.switch),
+    children: (0, l.jsx)(a.FormSwitch, {
       value: t,
       onChange: e => i(e),
-      note: g.default.Messages.TEMPORARY_MEMBERSHIP_EXPLANATION,
+      note: o.default.Messages.TEMPORARY_MEMBERSHIP_EXPLANATION,
       hideBorder: !0,
-      children: (0, l.jsx)(r.Text, {
+      children: (0, l.jsx)(a.Text, {
         variant: "text-sm/normal",
-        children: g.default.Messages.GRANT_TEMPORARY_MEMBERSHIP
+        children: o.default.Messages.GRANT_TEMPORARY_MEMBERSHIP
       })
     })
   })
 }
-let p = c.default.getMaxUsesOptions;
+let g = r.default.getMaxUsesOptions;
 
-function v(e) {
+function h(e) {
   var t;
   let {
-    guildId: n,
-    shouldHideTemporaryInviteToggle: a,
-    maxAge: c,
-    maxUses: v,
-    temporary: _,
-    onGenerateNewLink: T,
-    onToggleTemporary: N,
-    onSelectMaxAge: C,
-    onSelectMaxUses: S
-  } = e, x = (0, o.default)(n, 0 === c), A = (0, o.default)(n, !0), M = (0, f.default)(n), w = M.find(e => e.value === c), L = p.find(e => e.value === v), [y, R] = i.useState(!1), U = (0, o.useIsNewCommunity)(n, y);
+    shouldHideTemporaryInviteToggle: n,
+    maxAge: i,
+    maxUses: r,
+    temporary: h,
+    onGenerateNewLink: I,
+    onToggleTemporary: E,
+    onSelectMaxAge: m,
+    onSelectMaxUses: v
+  } = e, p = c.find(e => e.value === i), T = g.find(e => e.value === r);
   return (0, l.jsx)("div", {
-    className: h.settingsContent,
+    className: u.settingsContent,
     children: (0, l.jsxs)("form", {
-      onSubmit: T,
-      children: [(0, l.jsx)(r.FormItem, {
-        title: g.default.Messages.EXPIRE_AFTER,
-        className: I.marginTop20,
-        children: (0, l.jsx)(r.SingleSelect, {
-          value: null !== (t = null == w ? void 0 : w.value) && void 0 !== t ? t : m[0].value,
-          options: M,
-          renderOptionLabel: e => {
-            let t = 0 === e.value;
-            return (0, u.renderOption)(e, t && A, t && U)
-          },
-          renderOptionValue: e => {
-            let [t] = e, n = 0 === t.value;
-            return (0, u.renderOption)(t, n && A, n && U)
-          },
-          onChange: C,
-          optionClassName: h.option,
-          className: h.option,
+      onSubmit: I,
+      children: [(0, l.jsx)(a.FormItem, {
+        title: o.default.Messages.EXPIRE_AFTER,
+        className: d.marginTop20,
+        children: (0, l.jsx)(a.SingleSelect, {
+          value: null !== (t = null == p ? void 0 : p.value) && void 0 !== t ? t : c[0].value,
+          options: c,
+          onChange: m,
           maxVisibleItems: 8
         })
-      }), x ? (0, l.jsx)(d.default, {
-        guildId: n,
-        permanentInviteSelected: 0 === c,
-        onClick: () => R(!0)
-      }) : (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(r.FormItem, {
-          title: g.default.Messages.MAX_NUMBER_OF_USES,
-          className: s(I.marginTop20, I.marginBottom4),
-          children: (0, l.jsx)(r.SingleSelect, {
-            value: null == L ? void 0 : L.value,
-            options: p,
-            onChange: S
-          })
-        }), (0, l.jsx)(E, {
-          temporary: _,
-          shouldHide: x || a,
-          onToggleTemporary: N
-        })]
+      }), (0, l.jsx)(a.FormItem, {
+        title: o.default.Messages.MAX_NUMBER_OF_USES,
+        className: s(d.marginTop20, d.marginBottom4),
+        children: (0, l.jsx)(a.SingleSelect, {
+          value: null == T ? void 0 : T.value,
+          options: g,
+          onChange: v
+        })
+      }), (0, l.jsx)(f, {
+        temporary: h,
+        shouldHide: n,
+        onToggleTemporary: E
       })]
     })
   })
