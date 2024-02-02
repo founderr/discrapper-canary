@@ -44,6 +44,9 @@ n.r(t), n.d(t, {
   },
   exportClip: function() {
     return B
+  },
+  dismissClipsUserEducation: function() {
+    return K
   }
 }), n("222007"), n("424973");
 var a = n("750028"),
@@ -66,8 +69,8 @@ var a = n("750028"),
   v = n("386045"),
   I = n("13136"),
   y = n("881095"),
-  A = n("997942"),
-  C = n("310238"),
+  C = n("997942"),
+  A = n("310238"),
   T = n("99366"),
   D = n("80028"),
   N = n("49111");
@@ -293,24 +296,30 @@ async function V(e) {
     o = null != e && null != f.default.getActiveStreamForStreamKey(e) && a;
   if (!l && !d && !o) return;
   let c = f.default.getCurrentUserActiveStream(),
-    g = null != c ? (0, s.encodeStreamKey)(c) : void 0;
+    m = null != c ? (0, s.encodeStreamKey)(c) : void 0,
+    E = null != e ? e : m,
+    h = (() => {
+      let e = null != E ? (0, s.decodeStreamKey)(E).ownerId : void 0;
+      return e === g.default.getId() ? D.ClipSaveTypes.STREAMER : null != e ? D.ClipSaveTypes.VIEWER : D.ClipSaveTypes.DECOUPLED
+    })();
   i.default.dispatch({
-    type: "CLIPS_SAVE_CLIP_START"
+    type: "CLIPS_SAVE_CLIP_START",
+    clipType: h
   });
-  let m = (0, S.playSound)("clip_save", .5),
-    E = performance.now();
+  let I = (0, S.playSound)("clip_save", .5),
+    y = performance.now();
   try {
-    let t = await F(null != e ? e : g);
+    let e = await F(E);
     i.default.dispatch({
       type: "CLIPS_SAVE_CLIP",
-      clip: t
+      clip: e
     })
   } catch (e) {
-    D.ClipsLogger.error("Clip Failed to Save", e), null == m || m.stop(), (0, S.playSound)("clip_error", .5), i.default.dispatch({
+    D.ClipsLogger.error("Clip Failed to Save", e), null == I || I.stop(), (0, S.playSound)("clip_error", .5), i.default.dispatch({
       type: "CLIPS_SAVE_CLIP_ERROR"
     })
   }
-  D.ClipsLogger.info("".concat(v.default.getSettings().clipsLength / 1e3, "s clip save took ").concat(Math.round(performance.now() - E), "ms"))
+  D.ClipsLogger.info("".concat(v.default.getSettings().clipsLength / 1e3, "s clip save took ").concat(Math.round(performance.now() - y), "ms"))
 }
 async function k(e, t) {
   let n = v.default.getClips().find(t => t.id === e);
@@ -319,7 +328,7 @@ async function k(e, t) {
       ...n,
       ...t
     },
-    l = await (0, A.validateClipMetadata)(a);
+    l = await (0, C.validateClipMetadata)(a);
   null != l && (await p.default.getMediaEngine().updateClipMetadata(a.filepath, JSON.stringify(a)), E.default.track(N.AnalyticEvents.CLIP_EDITED, {
     clip_id: a.id
   }), i.default.dispatch({
@@ -345,7 +354,7 @@ async function H(e) {
   let n = await l.default.clips.loadClipsDirectory(e),
     a = [];
   for (let e of n) {
-    let t = await (0, A.validateClipMetadata)({
+    let t = await (0, C.validateClipMetadata)({
       ...e.metadata,
       filepath: e.filepath
     });
@@ -366,5 +375,12 @@ async function W(e) {
 async function B(e, t) {
   let n = p.default.getMediaEngine(),
     a = await n.exportClip(e.filepath, t);
-  return (0, C.default)(a)
+  return (0, A.default)(a)
+}
+
+function K(e) {
+  i.default.dispatch({
+    type: "CLIPS_DISMISS_EDUCATION",
+    educationType: e
+  })
 }
