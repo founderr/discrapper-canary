@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("808653");
 var a = n("917351"),
   s = n.n(a),
-  i = n("446674"),
-  l = n("913144"),
+  l = n("446674"),
+  i = n("913144"),
   r = n("258516"),
   o = n("766274"),
   u = n("697218"),
@@ -29,7 +29,7 @@ function I(e, t) {
     isUnseen: !t && !e.is_viewed
   }
 }(0, a.debounce)(e => d.default.viewSuggestions(e), 15e3);
-class T extends i.default.Store {
+class T extends l.default.Store {
   initialize() {
     this.waitFor(u.default)
   }
@@ -47,7 +47,7 @@ class T extends i.default.Store {
   }
 }
 T.displayName = "FriendSuggestionStore";
-var S = new T(l.default, {
+var S = new T(i.default, {
   CONNECTION_OPEN: function(e) {
     c = {}, (f = e.friendSuggestionCount) > 0 && (_ = !0, E || !_ || (E = !0, _ = !1, d.default.fetch()))
   },

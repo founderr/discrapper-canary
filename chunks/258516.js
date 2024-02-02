@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   isInFriendSuggestionSeenStateExperiment: function() {
-    return i
+    return l
   }
 }), n("222007"), n("65597");
 var a = n("862205");
@@ -121,7 +121,7 @@ let s = (0, a.createExperiment)({
   }]
 });
 
-function i(e) {
+function l(e) {
   let {
     enabled: t
   } = s.getCurrentConfig({

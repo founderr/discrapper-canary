@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("77078"),
   u = n("206230"),
@@ -29,7 +29,7 @@ let A = e => {
       className: n
     } = e;
     return (0, a.jsx)(h.TextBadge, {
-      className: l(p.tag, n),
+      className: i(p.tag, n),
       text: t
     })
   },
@@ -38,19 +38,19 @@ let A = e => {
       header: t,
       subHeader: n,
       imageSrc: s,
-      tagText: i,
+      tagText: l,
       wideStyle: r
     } = e;
     return (0, a.jsxs)("div", {
-      className: l(p.featureCard, {
+      className: i(p.featureCard, {
         [p.wideStyle]: r
       }),
-      children: [null != i ? (0, a.jsx)(A, {
-        tagText: i,
+      children: [null != l ? (0, a.jsx)(A, {
+        tagText: l,
         className: p.featureCardTag
       }) : null, (0, a.jsx)("img", {
         alt: "",
-        className: l(p.featureCardImg, {
+        className: i(p.featureCardImg, {
           [p.wideStyle]: r
         }),
         src: s
@@ -72,7 +72,7 @@ function N(e) {
   let {
     className: t,
     renderModalProps: n,
-    heroArt: i,
+    heroArt: l,
     heroArtClassName: h,
     modalDismissibleContent: A,
     modalTopExtra: N,
@@ -120,7 +120,7 @@ function N(e) {
       })
     }
   }, [A, P]), (0, a.jsxs)(o.ModalRoot, {
-    className: l(p.root, t),
+    className: i(p.root, t),
     transitionState: x,
     "aria-labelledby": b,
     children: [(0, a.jsx)(o.ModalCloseButton, {
@@ -132,17 +132,17 @@ function N(e) {
       className: p.content,
       children: [(0, a.jsx)(o.Heading, {
         variant: "display-md",
-        className: l(p.headerText, O),
+        className: i(p.headerText, O),
         children: R
-      }), "video" === i.type ? (0, a.jsx)(C.default, {
-        className: l(p.video, h),
+      }), "video" === l.type ? (0, a.jsx)(C.default, {
+        className: i(p.video, h),
         autoPlay: !G,
         loop: !0,
         muted: !0,
         controls: !0,
         controlsList: "nofullscreen nodownload noremoteplayback noplaybackrate",
-        src: i.src,
-        poster: i.poster,
+        src: l.src,
+        poster: l.poster,
         onPlay: e => {
           I.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
             change_log_id: P
@@ -158,15 +158,15 @@ function N(e) {
           J(), K(e.currentTarget.muted), Y(!1)
         },
         disablePictureInPicture: !0
-      }) : "embed" === i.type ? (0, a.jsx)(f.EmbedVideo, {
-        className: l(p.video, h),
+      }) : "embed" === l.type ? (0, a.jsx)(f.EmbedVideo, {
+        className: i(p.video, h),
         allowFullScreen: !1,
-        href: i.href,
-        thumbnail: i.thumbnail,
-        video: i.embed,
+        href: l.href,
+        thumbnail: l.thumbnail,
+        video: l.embed,
         provider: E.SupportedEmbedIFrame.YOUTUBE,
-        maxWidth: i.embed.width,
-        maxHeight: i.embed.height,
+        maxWidth: l.embed.width,
+        maxHeight: l.embed.height,
         renderVideoComponent: c.renderVideoComponent,
         renderImageComponent: c.renderImageComponent,
         renderLinkComponent: c.renderMaskedLinkComponent,
@@ -175,16 +175,16 @@ function N(e) {
             change_log_id: P
           })
         }
-      }) : "image" === i.type ? (0, a.jsx)("img", {
+      }) : "image" === l.type ? (0, a.jsx)("img", {
         alt: "",
-        className: l(p.video, h),
-        src: i.src
+        className: i(p.video, h),
+        src: l.src
       }) : null, (0, a.jsx)(o.Heading, {
         variant: "heading-lg/extrabold",
         className: p.bodyText,
         children: L
       }), null == v ? void 0 : v(), (0, a.jsx)("div", {
-        className: l(p.featureCardGroup, {
+        className: i(p.featureCardGroup, {
           [p.wideStyle]: U
         }),
         children: M.map((e, t) => (0, a.jsx)(g, {

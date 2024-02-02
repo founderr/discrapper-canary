@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("669491"),
   u = n("77078"),
@@ -19,10 +19,10 @@ var a = n("37983"),
     let {
       className: t,
       color: n = o.default.colors.WHITE.css,
-      quest: i
-    } = e, _ = (0, r.useStateFromStores)([d.default], () => d.default.locale), h = s.useMemo(() => (0, f.calculatePercentComplete)(i), [i]), C = 100 * h;
+      quest: l
+    } = e, _ = (0, r.useStateFromStores)([d.default], () => d.default.locale), h = s.useMemo(() => (0, f.calculatePercentComplete)(l), [l]), C = 100 * h;
     return (0, a.jsxs)("div", {
-      className: l(E.wrapper, t),
+      className: i(E.wrapper, t),
       style: {
         color: n
       },

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("77078"),
   u = n("913144"),
@@ -43,8 +43,8 @@ class m extends s.Component {
       activeRowKey: n
     } = this.props, a = t.findIndex(e => e.key === n), s = 0;
     a >= 0 && (s = (a + e) % t.length) < 0 && (s = t.length - 1);
-    let i = t[s];
-    d.updateActiveRowKey(null != i ? i.key : null, !0)
+    let l = t[s];
+    d.updateActiveRowKey(null != l ? l.key : null, !0)
   }
   render() {
     let {
@@ -53,7 +53,7 @@ class m extends s.Component {
       focused: t
     } = this.state;
     return (0, a.jsx)("div", {
-      className: l({
+      className: i({
         [S.libraryFilter]: !0,
         [S.focused]: t
       }),
@@ -89,13 +89,13 @@ class m extends s.Component {
         hasModalOpen: a,
         applicationViewItems: s
       } = this.props, {
-        searchBarRef: i
+        searchBarRef: l
       } = this;
-      if (a || e.ctrlKey || e.altKey || e.metaKey || null == i) return;
-      let l = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-      if (!(l !== i.inputRef.current && (0, h.isInputLikeElement)(l))) switch (e.which) {
+      if (a || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
+      let i = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+      if (!(i !== l.inputRef.current && (0, h.isInputLikeElement)(i))) switch (e.which) {
         case I.KeyboardKeys.ESCAPE:
-          e.target !== i.inputRef.current ? this.reset() : null != i.inputRef.current && i.blur();
+          e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
           break;
         case I.KeyboardKeys.ENTER:
           if (null != n) {
@@ -120,7 +120,7 @@ class m extends s.Component {
           e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === I.KeyboardKeys.ARROW_DOWN ? 1 : -1);
           break;
         default:
-          null != i.inputRef.current && e.target !== i.inputRef.current && i.focus()
+          null != l.inputRef.current && e.target !== l.inputRef.current && l.focus()
       }
     }
   }

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("151426"),
-  l = n("819855"),
+  l = n("151426"),
+  i = n("819855"),
   r = n("77078"),
   o = n("685665"),
   u = n("593094"),
@@ -100,11 +100,11 @@ var B = s.memo(function(e) {
       },
       location_stack: f
     })
-  }, H = (0, l.isThemeDark)(n) ? x : b, [V, Y] = (0, c.useSelectedDismissibleContent)(t, O.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+  }, H = (0, i.isThemeDark)(n) ? x : b, [V, Y] = (0, c.useSelectedDismissibleContent)(t, O.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
   return (0, a.jsx)(a.Fragment, {
     children: (() => {
       switch (V) {
-        case i.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
+        case l.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(T.default, {
               onComponentMount: L,
@@ -123,7 +123,7 @@ var B = s.memo(function(e) {
             }),
             renderGuildHeaderDropdownButton: r
           });
-        case i.DismissibleContent.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
+        case l.DismissibleContent.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(T.default, {
               onComponentMount: L,
@@ -142,7 +142,7 @@ var B = s.memo(function(e) {
             }),
             renderGuildHeaderDropdownButton: r
           });
-        case i.DismissibleContent.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
+        case l.DismissibleContent.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(E.default, {
               guildId: s.id,
@@ -150,7 +150,7 @@ var B = s.memo(function(e) {
             }),
             renderGuildHeaderDropdownButton: r
           });
-        case i.DismissibleContent.GUILD_HEADER_SERVER_DISCOVERY_TOOLTIP:
+        case l.DismissibleContent.GUILD_HEADER_SERVER_DISCOVERY_TOOLTIP:
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(d.default, {
               onClick: () => w(s, !0),
@@ -159,7 +159,7 @@ var B = s.memo(function(e) {
             }),
             renderGuildHeaderDropdownButton: r
           });
-        case i.DismissibleContent.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
+        case l.DismissibleContent.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(u.default, {
               guild: s,
@@ -167,7 +167,7 @@ var B = s.memo(function(e) {
             }),
             renderGuildHeaderDropdownButton: r
           });
-        case i.DismissibleContent.GUILD_HEADER_INVITE_SPLASH:
+        case l.DismissibleContent.GUILD_HEADER_INVITE_SPLASH:
           let e = (0, p.isTierUnlocked)(s, N.BoostedGuildTiers.TIER_1) ? M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
               boostCount: (0, p.getNumberOfAppliedBoostsNeededForTier)(s, N.BoostedGuildTiers.TIER_1)
             }),
@@ -190,14 +190,14 @@ var B = s.memo(function(e) {
             }),
             renderGuildHeaderDropdownButton: r
           });
-        case i.DismissibleContent.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
+        case l.DismissibleContent.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(C.default, {
               markAsDismissed: Y
             }),
             renderGuildHeaderDropdownButton: r
           });
-        case i.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
+        case l.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(T.default, {
               className: P.tooltipOverrideColor,
@@ -209,7 +209,7 @@ var B = s.memo(function(e) {
             }),
             renderGuildHeaderDropdownButton: r
           });
-        case i.DismissibleContent.CLYDE_GUILD_HEADER_NUX:
+        case l.DismissibleContent.CLYDE_GUILD_HEADER_NUX:
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(T.default, {
               header: (0, a.jsxs)(a.Fragment, {
@@ -237,7 +237,7 @@ var B = s.memo(function(e) {
             }),
             renderGuildHeaderDropdownButton: r
           });
-        case i.DismissibleContent.GUILD_HEADER_SOUNDBOARD_PERMISSION:
+        case l.DismissibleContent.GUILD_HEADER_SOUNDBOARD_PERMISSION:
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(T.default, {
               header: M.default.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
@@ -256,7 +256,7 @@ var B = s.memo(function(e) {
             }),
             renderGuildHeaderDropdownButton: r
           });
-        case i.DismissibleContent.MEDIA_CHANNEL_UPSELL:
+        case l.DismissibleContent.MEDIA_CHANNEL_UPSELL:
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(I.default, {
               guildId: s.id,
@@ -264,7 +264,7 @@ var B = s.memo(function(e) {
             }),
             renderGuildHeaderDropdownButton: r
           });
-        case i.DismissibleContent.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
+        case l.DismissibleContent.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(_.default, {
               guildId: s.id,
@@ -272,7 +272,7 @@ var B = s.memo(function(e) {
             }),
             renderGuildHeaderDropdownButton: r
           });
-        case i.DismissibleContent.INVENTORY_GUILD_SETTINGS_MODMIN_COACHMARK_ROLLBACK:
+        case l.DismissibleContent.INVENTORY_GUILD_SETTINGS_MODMIN_COACHMARK_ROLLBACK:
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(g.default, {
               guild: s,

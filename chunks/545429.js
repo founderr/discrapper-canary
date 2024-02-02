@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("424973");
 var a = n("917351"),
   s = n.n(a),
-  i = n("446674"),
-  l = n("913144"),
+  l = n("446674"),
+  i = n("913144"),
   r = n("736964"),
   o = n("666038"),
   u = n("449004"),
@@ -155,7 +155,7 @@ function D(e) {
     return !O && !!R.update(e) && (R = R.clone(), !0)
   }
 }
-class y extends i.default.Store {
+class y extends l.default.Store {
   initialize() {
     this.waitFor(_.default, E.default, h.default, f.default, c.default, d.default, u.default), this.syncWith([_.default], P), this.syncWith([u.default], P), this.syncWith([h.default], D(I)), this.syncWith([E.default, d.default], D(T)), M()
   }
@@ -169,7 +169,7 @@ class y extends i.default.Store {
   }
 }
 y.displayName = "FriendsStore";
-var x = new y(l.default, {
+var x = new y(i.default, {
   CONNECTION_OPEN: function() {
     M()
   },

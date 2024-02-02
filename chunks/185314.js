@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("151426"),
-  l = n("77078"),
+  l = n("151426"),
+  i = n("77078"),
   r = n("997289"),
   o = n("685665"),
   u = n("369964"),
@@ -36,7 +36,7 @@ var a = n("37983"),
         location_stack: p
       })
     }, [n, g, m.location, p]), n ? (0, a.jsx)(u.default, {
-      dismissibleContent: i.DismissibleContent.CLIPS_GUILD_PANEL_PREMIUM_EARLY_ACCESS_COACHMARK,
+      dismissibleContent: l.DismissibleContent.CLIPS_GUILD_PANEL_PREMIUM_EARLY_ACCESS_COACHMARK,
       contentClassName: S.container,
       isPremiumEarlyAccess: !0,
       shouldUseHorizontalButtons: !0,
@@ -45,7 +45,7 @@ var a = n("37983"),
       position: "right",
       header: T.default.Messages.CLIPS_NITRO_EA_ANNOUNCEMENT_COACHMARK_TITLE,
       headerClassName: S.clipsEducationHeader,
-      body: (0, a.jsx)(l.Text, {
+      body: (0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "always-white",
         children: T.default.Messages.CLIPS_NITRO_EA_ANNOUNCEMENT_COACHMARK_BODY

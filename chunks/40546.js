@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("446674"),
-  i = n("77078"),
-  l = n("139321"),
+  l = n("77078"),
+  i = n("139321"),
   r = n("269596"),
   o = n("745633"),
   u = n("11056"),
@@ -20,7 +20,7 @@ var s = n("446674"),
       handleCategorySelect: t,
       shouldDisplaySelectedCategory: n,
       currentCategoryId: E
-    } = e, _ = (0, s.useStateFromStores)([r.default], () => r.default.hasHotspot(l.HotspotLocations.HUB_NEW));
+    } = e, _ = (0, s.useStateFromStores)([r.default], () => r.default.hasHotspot(i.HotspotLocations.HUB_NEW));
     return (0, a.jsx)(u.default, {
       avatar: (0, a.jsx)(o.default, {}),
       name: c.default.Messages.HUB_SCHOOL_HUBS,
@@ -32,7 +32,7 @@ var s = n("446674"),
         }
       },
       onClick: () => {
-        t(d.DISCORD_HUB_ID), (0, l.hideHotspot)(l.HotspotLocations.HUB_NEW)
+        t(d.DISCORD_HUB_ID), (0, i.hideHotspot)(i.HotspotLocations.HUB_NEW)
       },
       wrapContent: !0,
       selected: n && d.DISCORD_HUB_ID === E,
@@ -41,7 +41,7 @@ var s = n("446674"),
       innerClassName: f.itemInner,
       children: _ && (0, a.jsx)("div", {
         className: f.new,
-        children: (0, a.jsx)(i.Text, {
+        children: (0, a.jsx)(l.Text, {
           color: "none",
           variant: "text-xs/semibold",
           className: f.newText,

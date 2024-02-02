@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("290381"),
   o = n("77078"),
   u = n("272030"),
@@ -43,7 +43,7 @@ class O extends s.PureComponent {
       guild: t,
       className: n,
       theme: s,
-      onTagClick: i
+      onTagClick: l
     } = this.props, {
       loaded: u,
       hasBeenSeen: g,
@@ -93,7 +93,7 @@ class O extends s.PureComponent {
         active: !g,
         threshold: .55,
         children: (0, a.jsxs)("div", {
-          className: l(n, {
+          className: i(n, {
             [A.loaded]: u,
             [A.loading]: !u
           }),
@@ -102,7 +102,7 @@ class O extends s.PureComponent {
             className: A.spinner
           }) : null, (0, a.jsxs)(o.Clickable, {
             onClick: this.handleClickView,
-            className: l(A.card, {
+            className: i(A.card, {
               [A.submitting]: R,
               [A.cardWithTags]: U
             }),
@@ -114,7 +114,7 @@ class O extends s.PureComponent {
                 children: (0, a.jsx)("img", {
                   src: x,
                   alt: "",
-                  className: l(A.splashImage, {
+                  className: i(A.splashImage, {
                     [A.splashImageHeight]: !D
                   }),
                   onLoad: () => this.setState({
@@ -165,9 +165,9 @@ class O extends s.PureComponent {
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: L
-              }), U && null != P && null != i && (0, a.jsx)(f.DiscoveryTags, {
+              }), U && null != P && null != l && (0, a.jsx)(f.DiscoveryTags, {
                 tags: P,
-                onTagClick: e => i(e, t.id),
+                onTagClick: e => l(e, t.id),
                 guildId: t.id,
                 section: I.AnalyticsContexts.POPULAR
               }), (0, a.jsxs)("div", {
@@ -200,7 +200,7 @@ class O extends s.PureComponent {
           })]
         })
       }) : (0, a.jsx)("div", {
-        className: l(A.card, {
+        className: i(A.card, {
           [A.cardWithTags]: U
         })
       })
@@ -257,6 +257,6 @@ class O extends s.PureComponent {
   }
 }
 O.Placeholder = e => (0, a.jsx)("div", {
-  className: l(e.className, A.cardPlaceholder)
+  className: i(e.className, A.cardPlaceholder)
 });
 var L = O

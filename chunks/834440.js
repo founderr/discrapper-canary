@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("77078"),
   u = n("79112"),
@@ -26,9 +26,9 @@ function m(e) {
   var t;
   let {
     quest: n
-  } = e, i = (0, r.useStateFromStores)([d.default], () => d.default.locale), l = s.useMemo(() => new Date(n.config.expiresAt).toLocaleDateString(i, {
+  } = e, l = (0, r.useStateFromStores)([d.default], () => d.default.locale), i = s.useMemo(() => new Date(n.config.expiresAt).toLocaleDateString(l, {
     dateStyle: "short"
-  }), [n.config.expiresAt, i]), u = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
+  }), [n.config.expiresAt, l]), u = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
   return (0, a.jsxs)("div", {
     className: S.heading,
     children: [(0, a.jsx)("img", {
@@ -47,9 +47,9 @@ function m(e) {
         variant: "text-xs/normal",
         color: "header-secondary",
         children: u ? T.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_COMPLETE.format({
-          expirationDate: l
+          expirationDate: i
         }) : T.default.Messages.QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_INCOMPLETE.format({
-          expirationDate: l
+          expirationDate: i
         })
       })]
     })]
@@ -58,9 +58,9 @@ function m(e) {
 var p = function(e) {
   var t, n;
   let {
-    onUnmount: i,
+    onUnmount: l,
     quest: d
-  } = e, p = (0, r.useStateFromStores)([E.default], () => E.default.isEnrolling(d.id), [d]), A = s.useRef(i), g = s.useCallback(e => {
+  } = e, p = (0, r.useStateFromStores)([E.default], () => E.default.isEnrolling(d.id), [d]), A = s.useRef(l), g = s.useCallback(e => {
     e.stopPropagation()
   }, []), N = s.useCallback(() => {}, []), R = s.useCallback(() => {
     (0, f.enrollInQuest)(d.id)
@@ -68,15 +68,15 @@ var p = function(e) {
     u.default.open(I.UserSettingsSections.INVENTORY)
   }, []), L = (0, C.useHandleClaimQuestsReward)(d);
   s.useEffect(() => {
-    A.current = i
-  }, [i]), s.useEffect(() => () => {
+    A.current = l
+  }, [l]), s.useEffect(() => () => {
     var e;
     null === (e = A.current) || void 0 === e || e.call(A)
   }, []);
   let v = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
     M = (null === (n = d.userStatus) || void 0 === n ? void 0 : n.completedAt) != null;
   return (0, a.jsxs)("div", {
-    className: l(S.wrapper, {
+    className: i(S.wrapper, {
       [S.wrapperQuestAccepted]: v
     }),
     onClick: g,

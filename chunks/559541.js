@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("414456"),
-  i = n.n(s),
-  l = n("446674"),
+  l = n.n(s),
+  i = n("446674"),
   r = n("145079"),
   o = n("87657"),
   u = n("27618"),
@@ -22,9 +22,9 @@ var s = n("414456"),
       status: f,
       isMobile: E,
       className: _
-    } = e, h = (0, l.useStateFromStores)([u.default], () => u.default.getNickname(t.id));
+    } = e, h = (0, i.useStateFromStores)([u.default], () => u.default.getNickname(t.id));
     return (0, a.jsxs)("div", {
-      className: i(d.userInfo, _, {
+      className: l(d.userInfo, _, {
         [d.hovered]: n
       }),
       children: [(0, a.jsx)(o.default, {
@@ -39,7 +39,7 @@ var s = n("414456"),
           user: t,
           nick: h,
           botClass: d.botTag,
-          className: i(d.discordTag, {
+          className: l(d.discordTag, {
             [d.alignPomelo]: t.isPomelo()
           }),
           usernameClass: d.username,

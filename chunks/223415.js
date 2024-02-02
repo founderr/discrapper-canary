@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("917351"),
-  l = n.n(i),
+  l = n("917351"),
+  i = n.n(l),
   r = n("775560"),
   o = n("907002"),
   u = n("446674"),
@@ -38,7 +38,7 @@ var A = () => {
       return e !== n.id
     })),
     n = (0, u.useStateFromStores)([I.default], () => I.default.hasIncomingCalls()),
-    i = (0, u.useStateFromStores)([_.default], () => _.default.isSoundDisabled("call_ringing")),
+    l = (0, u.useStateFromStores)([_.default], () => _.default.isSoundDisabled("call_ringing")),
     A = f.default.useIsRingtoneEligible(),
     g = f.default.useIsRingtoneDisabled(),
     N = (0, u.useStateFromStores)([C.default], () => C.default.disableSounds),
@@ -48,7 +48,7 @@ var A = () => {
       let e = "call_ringing";
       if (A && !g) return (0, T.createSound)(c.default.ringtone, e);
       if (R === S.Soundpacks.CLASSIC) {
-        let t = 500 === l.random(1, 1e3) ? "call_ringing_beat" : "call_ringing";
+        let t = 500 === i.random(1, 1e3) ? "call_ringing_beat" : "call_ringing";
         return (0, T.createSound)(t, e)
       }
       return (0, T.createSoundForPack)("call_ringing", R)
@@ -56,12 +56,12 @@ var A = () => {
   s.useEffect(() => () => {
     L.stop()
   }, [L]), s.useEffect(() => {
-    if (N || i) {
+    if (N || l) {
       O.current && (L.stop(), O.current = !1);
       return
     }
     n && !O.current ? (L.loop(), O.current = !0) : !n && O.current && (L.stop(), O.current = !1)
-  }, [i, N, n, L]);
+  }, [l, N, n, L]);
   let v = (0, o.useTransition)(t, {
     keys: e => {
       var t;

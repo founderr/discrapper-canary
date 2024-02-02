@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return V
   }
 }), n("222007");
-var a, s, i = n("37983"),
-  l = n("884691"),
+var a, s, l = n("37983"),
+  i = n("884691"),
   r = n("414456"),
   o = n.n(r),
   u = n("446674"),
@@ -69,7 +69,7 @@ function V(e) {
       listenerCount: t
     }
   }, [W]), q = (0, u.useStateFromStores)([D.default], () => D.default.can(k.Permissions.CONNECT, a)), Q = (0, v.default)(null == a ? void 0 : a.id), Z = null == s ? void 0 : s.creator_id, X = (0, u.useStateFromStores)([y.default], () => y.default.getUser(Z), [Z]);
-  l.useEffect(() => {
+  i.useEffect(() => {
     null != Z && (0, f.getUser)(Z)
   }, [Z]);
   let {
@@ -80,15 +80,15 @@ function V(e) {
     canListenIn: en,
     buttonText: ea,
     users: es,
-    overflowUsers: ei,
-    onClose: el
-  } = l.useMemo(() => (function(e) {
+    overflowUsers: el,
+    onClose: ei
+  } = i.useMemo(() => (function(e) {
     let {
       guildEvent: t,
       stageInstance: n,
       activeChannel: a,
       canConnect: s,
-      myRole: l,
+      myRole: i,
       eventCreator: r,
       speakers: o,
       listenerCount: u,
@@ -102,7 +102,7 @@ function V(e) {
         noticeType: 3,
         title: "\uD83D\uDCDA☕ ".concat(a.name),
         location: B.default.Messages.HUB_STUDY_ROOM_VOICE_CHANNEL_TOOLTIP,
-        locationIcon: null != e ? (0, i.jsx)(e, {
+        locationIcon: null != e ? (0, l.jsx)(e, {
           width: 16,
           height: 16,
           className: H.locationIcon
@@ -116,11 +116,11 @@ function V(e) {
     if (null == t || d) {
       if (I) {
         let e = B.default.Messages.STAGE_CHANNEL_JOIN_BUTTON;
-        return (null == l ? void 0 : l.speaker) ? e = B.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != l && (e = B.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
+        return (null == i ? void 0 : i.speaker) ? e = B.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != i && (e = B.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
           noticeType: 0,
           title: n.topic,
           location: a.name,
-          locationIcon: (0, i.jsx)(j.default, {
+          locationIcon: (0, l.jsx)(j.default, {
             width: 16,
             height: 16,
             className: H.locationIcon
@@ -131,13 +131,13 @@ function V(e) {
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
-          overflowUsers: u < 1 ? null : (0, i.jsxs)("div", {
+          overflowUsers: u < 1 ? null : (0, l.jsxs)("div", {
             className: H.pill,
-            children: [(0, i.jsx)(b.default, {
+            children: [(0, l.jsx)(b.default, {
               width: 12,
               height: 12,
               className: H.pillIcon
-            }), (0, i.jsx)(c.Text, {
+            }), (0, l.jsx)(c.Text, {
               variant: "text-xs/medium",
               color: "header-secondary",
               className: H.pillLabel,
@@ -149,11 +149,11 @@ function V(e) {
     } else {
       if (t.entity_type === F.GuildScheduledEventEntityTypes.STAGE_INSTANCE && I) {
         let e = B.default.Messages.STAGE_CHANNEL_JOIN_BUTTON;
-        return (null == l ? void 0 : l.speaker) ? e = B.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != l && (e = B.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
+        return (null == i ? void 0 : i.speaker) ? e = B.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != i && (e = B.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
           noticeType: 0,
           title: n.topic,
           location: a.name,
-          locationIcon: (0, i.jsx)(j.default, {
+          locationIcon: (0, l.jsx)(j.default, {
             width: 16,
             height: 16,
             className: H.locationIcon
@@ -164,13 +164,13 @@ function V(e) {
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
-          overflowUsers: u < 1 ? null : (0, i.jsxs)("div", {
+          overflowUsers: u < 1 ? null : (0, l.jsxs)("div", {
             className: H.pill,
-            children: [(0, i.jsx)(b.default, {
+            children: [(0, l.jsx)(b.default, {
               width: 12,
               height: 12,
               className: H.pillIcon
-            }), (0, i.jsx)(c.Text, {
+            }), (0, l.jsx)(c.Text, {
               variant: "text-xs/medium",
               color: "header-secondary",
               className: H.pillLabel,
@@ -189,7 +189,7 @@ function V(e) {
           noticeType: 1,
           title: t.name,
           location: (0, T.guildEventDetailsParser)(e, !0),
-          locationIcon: (0, i.jsx)(G.default, {
+          locationIcon: (0, l.jsx)(G.default, {
             width: 16,
             height: 16,
             className: H.locationIcon
@@ -200,13 +200,13 @@ function V(e) {
             eventId: null == t ? void 0 : t.id
           }),
           users: null == r ? [] : [r],
-          overflowUsers: n < 1 ? null : (0, i.jsxs)("div", {
+          overflowUsers: n < 1 ? null : (0, l.jsxs)("div", {
             className: H.pill,
-            children: [(0, i.jsx)(w.default, {
+            children: [(0, l.jsx)(w.default, {
               width: 12,
               height: 12,
               className: H.pillIcon
-            }), (0, i.jsx)(c.Text, {
+            }), (0, l.jsx)(c.Text, {
               variant: "text-xs/medium",
               color: "header-secondary",
               className: H.pillLabel,
@@ -221,7 +221,7 @@ function V(e) {
           noticeType: 2,
           title: t.name,
           location: a.name,
-          locationIcon: null != e ? (0, i.jsx)(e, {
+          locationIcon: null != e ? (0, l.jsx)(e, {
             width: 16,
             height: 16,
             className: H.locationIcon
@@ -232,13 +232,13 @@ function V(e) {
             eventId: null == t ? void 0 : t.id
           }),
           users: null == r ? [] : [r],
-          overflowUsers: n < 1 ? null : (0, i.jsxs)("div", {
+          overflowUsers: n < 1 ? null : (0, l.jsxs)("div", {
             className: H.pill,
-            children: [(0, i.jsx)(w.default, {
+            children: [(0, l.jsx)(w.default, {
               width: 12,
               height: 12,
               className: H.pillIcon
-            }), (0, i.jsx)(c.Text, {
+            }), (0, l.jsx)(c.Text, {
               variant: "text-xs/medium",
               color: "header-secondary",
               className: H.pillLabel,
@@ -264,59 +264,59 @@ function V(e) {
     isStageNoticeHidden: V,
     isStudyRoomNotice: n
   }), [s, r, a, q, Q, X, K, z, Y, V, n]);
-  return null == J ? null : (0, i.jsxs)("div", {
+  return null == J ? null : (0, l.jsxs)("div", {
     className: H.container,
-    children: [null != el ? (0, i.jsx)(c.Clickable, {
-      onClick: el,
+    children: [null != ei ? (0, l.jsx)(c.Clickable, {
+      onClick: ei,
       className: H.close,
       "aria-label": B.default.Messages.DISMISS,
-      children: (0, i.jsx)(x.default, {
+      children: (0, l.jsx)(x.default, {
         className: H.closeIcon
       })
-    }) : null, (0, i.jsxs)("div", {
+    }) : null, (0, l.jsxs)("div", {
       className: H.header,
-      children: [(0, i.jsx)(U.default, {
+      children: [(0, l.jsx)(U.default, {
         color: d.default.unsafe_rawColors.GREEN_230.css,
         width: 16,
         height: 16
-      }), (0, i.jsx)(c.Text, {
+      }), (0, l.jsx)(c.Text, {
         variant: "text-xs/semibold",
         color: "text-positive",
         children: B.default.Messages.LIVE
       })]
-    }), (es.length > 0 || null != ei) && (0, i.jsxs)("div", {
+    }), (es.length > 0 || null != el) && (0, l.jsxs)("div", {
       className: H.participants,
-      children: [es.map(e => (0, i.jsx)(c.Popout, {
+      children: [es.map(e => (0, l.jsx)(c.Popout, {
         preload: () => (0, M.default)(e.id, e.getAvatarURL(t.id, 80), {
           guildId: t.id
         }),
-        renderPopout: t => (0, i.jsx)(P.default, {
+        renderPopout: t => (0, l.jsx)(P.default, {
           ...t,
           userId: e.id
         }),
         position: "right",
-        children: n => (0, i.jsx)(c.Avatar, {
+        children: n => (0, l.jsx)(c.Avatar, {
           ...n,
           src: e.getAvatarURL(t.id, 24),
           "aria-label": e.username,
           size: c.AvatarSizes.SIZE_24,
           className: H.avatar
         })
-      }, e.id)), ei]
-    }), (0, i.jsx)(c.Text, {
+      }, e.id)), el]
+    }), (0, l.jsx)(c.Text, {
       variant: "text-md/medium",
       color: "header-primary",
       className: o(H.title, H.live),
       children: $
-    }), (0, i.jsxs)("div", {
+    }), (0, l.jsxs)("div", {
       className: H.locationContainer,
-      children: [et, (0, i.jsx)(c.Text, {
+      children: [et, (0, l.jsx)(c.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         className: H.location,
         children: ee
       })]
-    }), en || 1 === J ? (0, i.jsx)(c.Button, {
+    }), en || 1 === J ? (0, l.jsx)(c.Button, {
       size: c.Button.Sizes.SMALL,
       color: c.Button.Colors.GREEN,
       onClick: () => {

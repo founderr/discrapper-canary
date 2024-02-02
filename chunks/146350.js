@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("669491"),
   u = n("77078"),
@@ -80,7 +80,7 @@ function R(e) {
       })
     })
   }) : (0, a.jsxs)("div", {
-    className: l(g.statusItem, g.customStatusContentIcon),
+    className: i(g.statusItem, g.customStatusContentIcon),
     "aria-label": A.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
     children: [(0, a.jsx)("div", {
       className: g.customEmojiPlaceholder
@@ -96,7 +96,7 @@ function O(e) {
     focused: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: l(g.statusItem, g.statusItemNoPadding, g.customStatusContentIcon, g.switchAccountsItem),
+    className: i(g.statusItem, g.statusItemNoPadding, g.customStatusContentIcon, g.switchAccountsItem),
     "aria-label": A.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
     children: [(0, a.jsx)(T.default, {
       width: 18,
@@ -112,27 +112,27 @@ function O(e) {
 let L = e => {
   let {
     customStatus: t,
-    onClose: i,
-    analyticsContext: l,
+    onClose: l,
+    analyticsContext: i,
     onSelect: r
   } = e, o = (0, _.useMultiAccountMenuItems)();
   s.useEffect(() => {
     S.default.track(p.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != t,
-      location: l.location
+      location: i.location
     })
   }, []);
   let d = e => {
     (0, f.default)(e, void 0, {
-      location: l.location
+      location: i.location
     })
   };
   return (0, a.jsxs)(u.Menu, {
     navId: "status-picker",
     variant: "fixed",
     "aria-label": A.default.Messages.SET_STATUS,
-    onClose: i,
+    onClose: l,
     onSelect: r,
     children: [(0, a.jsx)(u.MenuItem, {
       id: "online",
@@ -201,7 +201,7 @@ let L = e => {
           } = await n.el("711438").then(n.bind(n, "711438"));
           return t => (0, a.jsx)(e, {
             ...t,
-            sourceAnalyticsContext: l
+            sourceAnalyticsContext: i
           })
         })
       }

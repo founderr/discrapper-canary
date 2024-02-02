@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("446674"),
-  l = n("669491"),
+  l = n("446674"),
+  i = n("669491"),
   r = n("77078"),
   o = n("987317"),
   u = n("990766"),
@@ -41,7 +41,7 @@ function P(e) {
     children: [(0, a.jsx)(m.default, {
       width: 16,
       height: 16,
-      color: l.default.colors.HEADER_PRIMARY.css
+      color: i.default.colors.HEADER_PRIMARY.css
     }), (0, a.jsx)(p.default, {
       showUserPopout: !0,
       useFallbackUserForPopout: !0,
@@ -57,14 +57,14 @@ function D(e) {
   let {
     broadcast: n
   } = e, {
-    userId: l,
+    userId: i,
     applicationId: m,
     channelId: p,
     streamKey: D
-  } = n, [y, x] = s.useState(!1), b = (0, i.useStateFromStores)([I.default], () => I.default.getUser(l)), U = (0, i.useStateFromStores)([h.default], () => {
+  } = n, [y, x] = s.useState(!1), b = (0, l.useStateFromStores)([I.default], () => I.default.getUser(i)), U = (0, l.useStateFromStores)([h.default], () => {
     var e, t;
     return null !== (t = null === (e = h.default.getDetectableGame(m)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : ""
-  }), [G] = (0, c.default)([U]), j = null !== (t = A.default.getGlobalName(b)) && void 0 !== t ? t : A.default.getUserTag(b), w = (0, R.default)(), k = (0, i.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, l)), F = (0, i.useStateFromStores)([C.default], () => C.default.getVoiceChannelId()), B = (0, N.default)(), H = (0, g.default)(p);
+  }), [G] = (0, c.default)([U]), j = null !== (t = A.default.getGlobalName(b)) && void 0 !== t ? t : A.default.getUserTag(b), w = (0, R.default)(), k = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, i)), F = (0, l.useStateFromStores)([C.default], () => C.default.getVoiceChannelId()), B = (0, N.default)(), H = (0, g.default)(p);
   if (s.useEffect(() => {
       y && F === p && x(!1)
     }, [F, y, p]), null == b || null == j) return null;
@@ -81,7 +81,7 @@ function D(e) {
       buttonCTA: s ? v.default.Messages.BROADCAST_FULL : a ? v.default.Messages.VIEW_BROADCAST : v.default.Messages.JOIN_BROADCAST,
       disabled: s
     }
-  }(l, H);
+  }(i, H);
   return (0, a.jsxs)("div", {
     className: M.container,
     children: [(0, a.jsx)(r.Avatar, {
@@ -111,7 +111,7 @@ function D(e) {
             }
             x(!0), (0, u.joinPrivateChannelAndWatchStream)(p, D), d.default.trackWithMetadata(O.AnalyticEvents.BROADCAST_VIEWED, {
               num_active_broadcasts: w.length,
-              broadcast_position: w.findIndex(e => e.userId === l) + 1,
+              broadcast_position: w.findIndex(e => e.userId === i) + 1,
               is_broadcasting: B,
               broadcast_channel_id: p
             })
@@ -131,7 +131,7 @@ function D(e) {
       className: M.stream,
       stream: {
         streamType: L.StreamTypes.CALL,
-        ownerId: l,
+        ownerId: i,
         channelId: p
       }
     }) : (0, a.jsx)(T.default, {

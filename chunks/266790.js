@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var a, s, i = n("884691"),
-  l = n("862205");
-let r = (a = "Watch Together", s = "2021-09_watch_together_rollout", (0, l.createExperiment)({
+var a, s, l = n("884691"),
+  i = n("862205");
+let r = (a = "Watch Together", s = "2021-09_watch_together_rollout", (0, i.createExperiment)({
     kind: "guild",
     id: s,
     label: "Exposure tracking for ".concat(a, " (do not override)"),
@@ -16,7 +16,7 @@ let r = (a = "Watch Together", s = "2021-09_watch_together_rollout", (0, l.creat
   o = [r];
 
 function u(e) {
-  i.useEffect(() => {
+  l.useEffect(() => {
     null != e && o.forEach(t => {
       t.trackExposure({
         guildId: e,

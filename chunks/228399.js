@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("77078"),
   o = n("79112"),
   u = n("227231"),
@@ -18,12 +18,12 @@ var a = n("37983"),
     let {
       className: t,
       quest: n
-    } = e, i = s.useCallback(() => {
+    } = e, l = s.useCallback(() => {
       o.default.open(d.UserSettingsSections.INVENTORY)
     }, []);
     return (0, a.jsxs)(r.Clickable, {
-      className: l(f.questRewardTile, t),
-      onClick: i,
+      className: i(f.questRewardTile, t),
+      onClick: l,
       children: [(0, a.jsx)(r.Text, {
         color: "always-white",
         variant: "text-xs/normal",

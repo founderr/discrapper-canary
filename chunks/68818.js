@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("90915"),
   o = n("750485"),
   u = n("446674"),
@@ -38,7 +38,7 @@ var a = n("37983"),
         color: "text-muted",
         children: S.default.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
       }), (0, a.jsx)(d.FormSwitch, {
-        className: l(p.marginTop8, p.marginBottom20),
+        className: i(p.marginTop8, p.marginBottom20),
         value: e,
         note: S.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
         hideBorder: !0,
@@ -74,7 +74,7 @@ var a = n("37983"),
           })]
         })
       }) : null, (0, a.jsx)(d.FormSwitch, {
-        className: l(p.marginTop20, p.marginBottom20),
+        className: i(p.marginTop20, p.marginBottom20),
         value: !!t[T.EmailCategories.FAMILY_CENTER_DIGEST],
         note: S.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
         hideBorder: !0,

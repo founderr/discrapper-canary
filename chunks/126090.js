@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return p
   }
 }), n("222007");
-var a, s, i = n("884691"),
-  l = n("446674"),
+var a, s, l = n("884691"),
+  i = n("446674"),
   r = n("629109"),
   o = n("79112"),
   u = n("952451"),
@@ -19,7 +19,7 @@ var a, s, i = n("884691"),
   I = n("49111");
 (s = a || (a = {})).DEFAULT = "DEFAULT", s.UNREAD = "UNREAD", s.CONNECTED = "CONNECTED", s.SPEAKING = "SPEAKING", s.MUTED = "MUTED", s.DEAFENED = "DEAFENED";
 let T = (0, h.isMac)() ? null : "DEFAULT";
-class S extends i.PureComponent {
+class S extends l.PureComponent {
   componentDidMount() {
     C.default.setSystemTrayIcon(this.getIcon())
   }
@@ -40,15 +40,15 @@ class S extends i.PureComponent {
         speaking: n,
         connected: a,
         unread: s
-      } = this.props, i = T;
-      return (0, h.isMac)() && !a ? i : (0, h.isLinux)() || !a ? (s && (i = "UNREAD"), i) : i = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED"
+      } = this.props, l = T;
+      return (0, h.isMac)() && !a ? l : (0, h.isLinux)() || !a ? (s && (l = "UNREAD"), l) : l = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED"
     }
   }
 }
 let m = () => null;
 h.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default.toggleSelfMute()), C.default.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => r.default.toggleSelfDeaf()), C.default.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
   o.default.open(I.UserSettingsSections.VOICE)
-}), m = l.default.connectStores([f.default, d.default, _.default, u.default, E.default, c.default], () => {
+}), m = i.default.connectStores([f.default, d.default, _.default, u.default, E.default, c.default], () => {
   let e = u.default.getTotalMentionCount(),
     t = u.default.hasAnyUnread(),
     n = E.default.getPendingCount(),

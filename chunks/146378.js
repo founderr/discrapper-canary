@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("917351"),
-  l = n.n(i),
+  l = n("917351"),
+  i = n.n(l),
   r = n("446674"),
   o = n("77078"),
   u = n("450911"),
@@ -36,13 +36,13 @@ function O(e) {
     c.default.removeFriend(t.id, {
       location: "Friends"
     })
-  }, i = (0, r.useStateFromStores)([_.default], () => _.default.supports(g.Features.VIDEO));
+  }, l = (0, r.useStateFromStores)([_.default], () => _.default.supports(g.Features.VIDEO));
   return (0, a.jsxs)(o.Menu, {
     navId: "friend-row",
     "aria-label": N.default.Messages.USER_ACTIONS_MENU_LABEL,
     onClose: d.closeContextMenu,
     onSelect: n,
-    children: [i ? (0, a.jsx)(o.MenuItem, {
+    children: [l ? (0, a.jsx)(o.MenuItem, {
       id: "start-video-call",
       label: N.default.Messages.START_VIDEO_CALL,
       action: function() {
@@ -91,8 +91,8 @@ class L extends s.PureComponent {
       isFocused: t,
       activities: n,
       applicationStream: s,
-      status: i,
-      isMobile: l
+      status: l,
+      isMobile: i
     } = this.props, {
       isActiveRow: r
     } = this.state;
@@ -107,13 +107,13 @@ class L extends s.PureComponent {
         className: R.listItemContents,
         children: [(0, a.jsx)(p.default, {
           user: e,
-          status: i,
-          isMobile: l,
+          status: l,
+          isMobile: i,
           subText: (0, a.jsx)(m.default, {
             hovered: t,
             activities: n,
             applicationStream: s,
-            status: i,
+            status: l,
             user: e
           }),
           hovered: t,
@@ -143,7 +143,7 @@ class L extends s.PureComponent {
         user: t
       } = this.props;
       e.stopPropagation();
-      let n = l.find(E.default.getMutablePrivateChannels(), e => e.type === A.ChannelTypes.DM && e.getRecipientId() === t.id);
+      let n = i.find(E.default.getMutablePrivateChannels(), e => e.type === A.ChannelTypes.DM && e.getRecipientId() === t.id);
       null != n ? (0, f.transitionTo)(A.Routes.CHANNEL(A.ME, n.id)) : u.default.openPrivateChannel(t.id)
     }, this.handleOpenActionsMenu = e => {
       let {

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("252931"),
-  l = n("5667"),
+  l = n("252931"),
+  i = n("5667"),
   r = n("701909"),
   o = n("49111"),
   u = n("994428"),
@@ -22,7 +22,7 @@ var s = n("77078"),
     } = e, {
       getNewSettingsDescriptionLine1: E,
       getNewSettingsDescriptionLine2: _
-    } = (0, i.useInventoryGuildSettingsExperiment)({
+    } = (0, l.useInventoryGuildSettingsExperiment)({
       guildId: t.id
     }), h = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(s.Text, {
@@ -37,7 +37,7 @@ var s = n("77078"),
         children: _()
       })]
     });
-    return (0, a.jsx)(l.default, {
+    return (0, a.jsx)(i.default, {
       header: d.default.Messages.INVENTORY_CHANGE_IN_SETTINGS,
       content: h,
       buttonCTA: d.default.Messages.GOT_IT,

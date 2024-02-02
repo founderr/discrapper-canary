@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("446674"),
-  l = n("77078"),
+  l = n("446674"),
+  i = n("77078"),
   r = n("850391"),
   o = n("557809"),
   u = n("288518"),
@@ -30,10 +30,10 @@ function N(e) {
   let {
     channel: t,
     baseChannelId: n
-  } = e, N = (0, S.default)(t), R = (0, c.useListHasSingleMessageRequest)(), O = (0, c.useListHasSingleSpamMessageRequest)(), L = (0, i.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), v = (0, i.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), M = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), P = s.useCallback(() => {
+  } = e, N = (0, S.default)(t), R = (0, c.useListHasSingleMessageRequest)(), O = (0, c.useListHasSingleSpamMessageRequest)(), L = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), v = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), M = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), P = s.useCallback(() => {
     h.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), L && R && (0, _.transitionToChannel)(t.id), v && O && (0, _.transitionToChannel)(t.id)
   }, [t.id, v, O, L, R]), D = s.useCallback(() => {
-    (0, l.showToast)((0, l.createToast)(p.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, l.ToastType.FAILURE))
+    (0, i.showToast)((0, i.createToast)(p.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), {
     markAsNotSpam: y
   } = (0, f.useMessageRequestActions)({
@@ -57,13 +57,13 @@ function N(e) {
       })
     }), v && (0, a.jsxs)("div", {
       className: g.hamBanner,
-      children: [(0, a.jsx)(l.Text, {
+      children: [(0, a.jsx)(i.Text, {
         className: g.hamBannerText,
         variant: "text-sm/normal",
         children: p.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
-      }), (0, a.jsx)(l.Button, {
+      }), (0, a.jsx)(i.Button, {
         className: g.hamBannerButton,
-        size: l.ButtonSizes.SMALL,
+        size: i.ButtonSizes.SMALL,
         onClick: () => y(t, M),
         children: p.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
       })]

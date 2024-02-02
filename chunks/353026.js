@@ -6,14 +6,14 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("917351"),
   s = n.n(a),
-  i = n("605250"),
-  l = n("374363"),
+  l = n("605250"),
+  i = n("374363"),
   r = n("271938"),
   o = n("968027"),
   u = n("802493"),
   d = n("723939"),
   c = n("11275");
-let f = new i.default("UserSettingsProto");
+let f = new l.default("UserSettingsProto");
 var E = new class e {
   async getAll(e) {
     if (o.isStable) return {};
@@ -42,7 +42,7 @@ var E = new class e {
       let e = r.default.getId(),
         t = d.default.database(e);
       null == t || t.transaction(e => {
-        let t = l.default.computeState(),
+        let t = i.default.computeState(),
           n = u.default.userSettingsTransaction(e);
         for (let e in t) n.put({
           id: Number(e),

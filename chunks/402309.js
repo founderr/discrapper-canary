@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var a = n("446674"),
   s = n("862205"),
-  i = n("957255"),
-  l = n("49111");
+  l = n("957255"),
+  i = n("49111");
 let r = (0, s.createExperiment)({
   kind: "guild",
   id: "2022-11_default_disable_mass_mention",
@@ -38,7 +38,7 @@ function o(e) {
 
 function u(e) {
   var t;
-  let n = (0, a.useStateFromStores)([i.default], () => i.default.can(l.Permissions.MANAGE_GUILD, e)),
+  let n = (0, a.useStateFromStores)([l.default], () => l.default.can(i.Permissions.MANAGE_GUILD, e)),
     {
       enabled: s
     } = r.useExperiment({
@@ -48,6 +48,6 @@ function u(e) {
       autoTrackExposure: !0
     });
   if (null == e) return !1;
-  let o = e.hasFeature(l.GuildFeatures.COMMUNITY);
+  let o = e.hasFeature(i.GuildFeatures.COMMUNITY);
   return n && o && s
 }

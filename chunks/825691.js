@@ -55,7 +55,7 @@ function v(e) {
     onToggleTemporary: N,
     onSelectMaxAge: C,
     onSelectMaxUses: S
-  } = e, x = (0, o.default)(n, 0 === c), A = (0, o.default)(n, !0), M = (0, f.default)(n), w = M.find(e => e.value === c), L = p.find(e => e.value === v), [R, y] = i.useState(!1), U = (0, o.useIsNewCommunity)(n, R);
+  } = e, x = (0, o.default)(n, 0 === c), A = (0, o.default)(n, !0), M = (0, f.default)(n), w = M.find(e => e.value === c), L = p.find(e => e.value === v), [y, R] = i.useState(!1), U = (0, o.useIsNewCommunity)(n, y);
   return (0, l.jsx)("div", {
     className: h.settingsContent,
     children: (0, l.jsxs)("form", {
@@ -82,7 +82,7 @@ function v(e) {
       }), x ? (0, l.jsx)(d.default, {
         guildId: n,
         permanentInviteSelected: 0 === c,
-        onClick: () => y(!0)
+        onClick: () => R(!0)
       }) : (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(r.FormItem, {
           title: g.default.Messages.MAX_NUMBER_OF_USES,

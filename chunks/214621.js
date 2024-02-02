@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("77078"),
   u = n("70845"),
@@ -28,7 +28,7 @@ let A = s.memo(function(e) {
     channel: t
   } = e, {
     loaded: n,
-    error: i,
+    error: l,
     message: A
   } = (0, C.useMessageRequestPreview)(t), g = (0, r.useStateFromStores)([E.default], () => null != A && E.default.isBlocked(A.author.id), [A]), N = (0, r.useStateFromStores)([f.default], () => f.default.can(I.Permissions.MANAGE_MESSAGES, t)), R = c.RenderSpoilers.useSetting(), {
     content: O
@@ -38,7 +38,7 @@ let A = s.memo(function(e) {
   }) : {
     content: null
   }, [A]), L = null;
-  if (i) L = (0, a.jsx)(o.Text, {
+  if (l) L = (0, a.jsx)(o.Text, {
     className: m.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
@@ -55,7 +55,7 @@ let A = s.memo(function(e) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, h.renderSingleLineMessage)(A, O, g, l(m.messageContent, p.inlineFormat, p.smallFontSize), {
+      } = (0, h.renderSingleLineMessage)(A, O, g, i(m.messageContent, p.inlineFormat, p.smallFontSize), {
         iconClass: m.messageContentIcon,
         iconSize: T.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });

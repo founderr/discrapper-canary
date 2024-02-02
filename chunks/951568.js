@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return N
   }
 });
-var a, s, i = n("37983"),
-  l = n("884691"),
+var a, s, l = n("37983"),
+  i = n("884691"),
   r = n("446674"),
   o = n("77078"),
   u = n("545158"),
@@ -80,7 +80,7 @@ let A = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
       analyticsLocations: x,
       AnalyticsLocationProvider: b
     } = (0, _.default)(s);
-    l.useEffect(() => {
+    i.useEffect(() => {
       I.default.track(T.AnalyticEvents.TOOLTIP_VIEWED, {
         type: N
       })
@@ -88,14 +88,14 @@ let A = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
     let U = (0, d.useAppContext)(),
       G = U === T.AppContext.POPOUT,
       j = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
-    return (0, i.jsx)(b, {
-      children: (0, i.jsx)("div", {
+    return (0, l.jsx)(b, {
+      children: (0, l.jsx)("div", {
         className: p.wrapper,
-        children: (0, i.jsx)("div", {
+        children: (0, l.jsx)("div", {
           className: p.container,
-          children: (0, i.jsxs)("div", {
+          children: (0, l.jsxs)("div", {
             className: p.content,
-            children: [(0, i.jsx)(C.default, {
+            children: [(0, l.jsx)(C.default, {
               className: p.video,
               src: D,
               poster: P,
@@ -104,34 +104,34 @@ let A = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
               loop: !0,
               muted: !0,
               autoPlay: !0
-            }), (0, i.jsx)("div", {
+            }), (0, l.jsx)("div", {
               className: p.header,
-              children: (0, i.jsx)(o.Heading, {
+              children: (0, l.jsx)(o.Heading, {
                 className: p.headerText,
                 variant: "text-sm/bold",
                 color: "always-white",
                 children: M
               })
-            }), (0, i.jsxs)(o.Text, {
+            }), (0, l.jsxs)(o.Text, {
               className: p.subheaderText,
               variant: "text-xs/normal",
               color: "always-white",
-              children: [L, v ? (0, i.jsxs)(i.Fragment, {
-                children: [" ", (0, i.jsx)(o.Anchor, {
+              children: [L, v ? (0, l.jsxs)(l.Fragment, {
+                children: [" ", (0, l.jsx)(o.Anchor, {
                   className: p.learnMoreLink,
                   href: "https://support.discord.com/hc/articles/4422142836759",
                   children: m.default.Messages.LEARN_MORE
                 })]
               }) : null]
-            }), (0, i.jsxs)("div", {
+            }), (0, l.jsxs)("div", {
               className: p.ctaActionWrapper,
-              children: [(0, i.jsx)(o.Button, {
+              children: [(0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 onClick: () => {
                   n(S.ContentDismissActionType.UNKNOWN)
                 },
                 children: O
-              }), (0, i.jsx)(o.Button, {
+              }), (0, l.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,
                 onClick: null != y ? y : () => {

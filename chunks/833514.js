@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("884691"),
   s = n("446674"),
-  i = n("151426"),
-  l = n("384997"),
+  l = n("151426"),
+  i = n("384997"),
   r = n("697218"),
   o = n("158998"),
   u = n("351348"),
@@ -27,16 +27,16 @@ var a = n("884691"),
       }),
       f = a.useMemo(() => {
         if ((0, o.ageEligibleForPremiumUpsell)(e)) {
-          if (n) return [i.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE];
-          if (t) return [i.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE]
+          if (n) return [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE];
+          if (t) return [l.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE]
         }
         return []
       }, [t, n, e]),
-      [E, _] = (0, l.useSelectedDismissibleContent)(f, void 0, !0);
+      [E, _] = (0, i.useSelectedDismissibleContent)(f, void 0, !0);
     return {
       collectiblesShopTabNewBadge: E,
       dismissCollectiblesShopTabNewBadge: () => {
-        E && [i.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE, i.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE].includes(E) && _(c.ContentDismissActionType.AUTO)
+        E && [l.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE, l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE].includes(E) && _(c.ContentDismissActionType.AUTO)
       }
     }
   }

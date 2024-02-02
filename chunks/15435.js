@@ -7,23 +7,23 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("469563"),
-  i = n("409186"),
-  l = n("75196"),
+  l = n("409186"),
+  i = n("75196"),
   r = (0, s.replaceIcon)(function(e) {
     let {
       width: t = 20,
       height: n = 16,
       color: s = "currentColor",
-      className: i,
+      className: l,
       foreground: r,
       ...o
     } = e;
     return (0, a.jsx)("svg", {
-      className: i,
+      className: l,
       width: t,
       height: n,
       viewBox: "0 0 20 16",
-      ...(0, l.default)(o),
+      ...(0, i.default)(o),
       children: (0, a.jsxs)("g", {
         fill: "none",
         fillRule: "evenodd",
@@ -37,6 +37,6 @@ var s = n("469563"),
         })]
       })
     })
-  }, i.XNeutralIcon, void 0, {
+  }, l.XNeutralIcon, void 0, {
     size: 16
   })

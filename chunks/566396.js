@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("917351"),
-  l = n.n(i),
+  l = n("917351"),
+  i = n.n(l),
   r = n("446674"),
   o = n("272030"),
   u = n("630273"),
@@ -78,14 +78,14 @@ var m = r.default.connectStores([c.default, h.default, _.default, E.default], ()
   let n = c.default.getSyncingWith(),
     a = c.default.getActivity(),
     s = h.default.getCurrentUser(),
-    i = [];
+    l = [];
   if (null != n ? (e = h.default.getUser(n.userId), t = n.partyId) : null != a && null != a.party && null != a.party.id && (e = s, t = a.party.id), null != t) {
     var r;
-    i = l(Array.from(null !== (r = E.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(I.isNotNullish).orderBy([t => null == e || e.id === t.id, e => _.default.isFriend(e.id)], ["desc", "desc"]).value()
+    l = i(Array.from(null !== (r = E.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(I.isNotNullish).orderBy([t => null == e || e.id === t.id, e => _.default.isFriend(e.id)], ["desc", "desc"]).value()
   }
   return {
     currentUser: s,
     host: e,
-    party: i
+    party: l
   }
 })(S)

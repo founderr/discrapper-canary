@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var a = n("917351"),
   s = n.n(a),
-  i = n("446674"),
-  l = n("913144"),
+  l = n("446674"),
+  i = n("913144"),
   r = n("629109"),
   o = n("374363"),
   u = n("773336"),
@@ -50,7 +50,7 @@ function g(e, t, n) {
     type: c.ConnectedDeviceType.INPUT_AND_OUTPUT
   } : e
 }
-class N extends i.default.DeviceSettingsStore {
+class N extends l.default.DeviceSettingsStore {
   initialize(e) {
     this.waitFor(d.default, o.default), _ = null != e ? e : E
   }
@@ -77,7 +77,7 @@ class N extends i.default.DeviceSettingsStore {
   }
 }
 N.displayName = "ConnectedDeviceStore", N.persistKey = "ConnectedDeviceStore";
-var R = new N(l.default, {
+var R = new N(i.default, {
   MEDIA_ENGINE_DEVICES: function(e) {
     let {
       inputDevices: t,
@@ -90,26 +90,26 @@ var R = new N(l.default, {
         n !== S.id && (S.justChanged = !0), S.id = n
       }
     });
-    let i = {};
+    let l = {};
     if (m.justChanged = !1, n.forEach(e => {
-        if (i[A(e)] = e.id, e.id === f.DEFAULT_DEVICE_ID) {
+        if (l[A(e)] = e.id, e.id === f.DEFAULT_DEVICE_ID) {
           var t;
           let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
           n !== m.id && (m.justChanged = !0), m.id = n
         }
       }), !h) {
-      C = a, I = i, h = !0;
+      C = a, I = l, h = !0;
       return
     }
-    let l = Object.keys(C),
+    let i = Object.keys(C),
       r = Object.keys(a),
       o = Object.keys(I),
-      u = Object.keys(i),
-      d = s.difference(l, r),
+      u = Object.keys(l),
+      d = s.difference(i, r),
       E = s.difference(o, u);
     if (d.length > 0 || E.length > 0) T = {};
     else {
-      let e = s.difference(r, l);
+      let e = s.difference(r, i);
       e.forEach(e => {
         T[e] = g(T[e], e, c.ConnectedDeviceType.INPUT)
       });
@@ -118,7 +118,7 @@ var R = new N(l.default, {
         T[e] = g(T[e], e, c.ConnectedDeviceType.OUTPUT)
       })
     }
-    return !(s.isEqual(l, r) && s.isEqual(o, u)) && (C = a, I = i, !0)
+    return !(s.isEqual(i, r) && s.isEqual(o, u)) && (C = a, I = l, !0)
   },
   CONNECTED_DEVICE_SET: function(e) {
     let {
@@ -129,11 +129,11 @@ var R = new N(l.default, {
     ! function(e, t, n) {
       if (t === c.ConnectedDevicePreference.INPUT || t === c.ConnectedDevicePreference.INPUT_AND_OUTPUT) {
         let t = C[e];
-        null != t && l.default.wait(() => r.default.setInputDevice(t, n))
+        null != t && i.default.wait(() => r.default.setInputDevice(t, n))
       }
       if (t === c.ConnectedDevicePreference.OUTPUT || t === c.ConnectedDevicePreference.INPUT_AND_OUTPUT) {
         let t = I[e];
-        l.default.wait(() => r.default.setOutputDevice(t, n))
+        i.default.wait(() => r.default.setOutputDevice(t, n))
       }
     }(t, n, a), delete T[t]
   },

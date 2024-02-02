@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("990766"),
   s = n("373469"),
-  i = n("42203"),
-  l = n("305961"),
+  l = n("42203"),
+  i = n("305961"),
   r = n("42887"),
   o = n("957255"),
   u = n("568307"),
@@ -23,10 +23,10 @@ function h() {
   let t = (0, _.default)(u.default, c.default);
   if (null == t || t.isLauncher && !e) return !1;
   let n = d.default.getVoiceChannelId(),
-    h = i.default.getChannel(n);
+    h = l.default.getChannel(n);
   if (null == h) return !1;
   let C = h.getGuildId();
-  return !!(0, f.canStreamInChannel)(h, l.default, o.default, !1) && ((0, a.startStream)(C, h.id, {
+  return !!(0, f.canStreamInChannel)(h, i.default, o.default, !1) && ((0, a.startStream)(C, h.id, {
     pid: t.pid
   }), !0)
 }

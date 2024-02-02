@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("917351"),
   s = n.n(a),
-  i = n("233736"),
-  l = n("299285"),
+  l = n("233736"),
+  i = n("299285"),
   r = n("373469"),
   o = n("42203"),
   u = n("305961"),
@@ -88,18 +88,18 @@ let v = {
         var n;
         let {
           prevState: a,
-          dispatch: i
-        } = e, l = u.default.getGuild(t);
-        if (null == l) return;
+          dispatch: l
+        } = e, i = u.default.getGuild(t);
+        if (null == i) return;
         let r = {
           guild: {
-            id: l.id,
-            name: l.name,
-            icon_url: null !== (n = l.getIconURL(128)) && void 0 !== n ? n : null
+            id: i.id,
+            name: i.name,
+            icon_url: null !== (n = i.getIconURL(128)) && void 0 !== n ? n : null
           },
           online: 0
         };
-        return !s.isEqual(a, r) && i(r), r
+        return !s.isEqual(a, r) && l(r), r
       }
     }
   },
@@ -123,10 +123,10 @@ let v = {
         let {
           prevState: n,
           dispatch: a
-        } = e, i = o.default.getChannel(t);
-        if (null == i) return;
-        let l = i.getGuildId(),
-          r = Object.values(h.default.getVoiceStatesForChannel(i.id));
+        } = e, l = o.default.getChannel(t);
+        if (null == l) return;
+        let i = l.getGuildId(),
+          r = Object.values(h.default.getVoiceStatesForChannel(l.id));
         if (n) {
           let e = s.differenceBy(r, n, e => {
             let {
@@ -134,7 +134,7 @@ let v = {
             } = e;
             return t
           });
-          e.forEach(e => a((0, I.transformVoiceState)(l, i.id, e)))
+          e.forEach(e => a((0, I.transformVoiceState)(i, l.id, e)))
         }
         return r
       }
@@ -160,17 +160,17 @@ let v = {
         let {
           prevState: n,
           dispatch: a
-        } = e, i = o.default.getChannel(t);
-        if (null == i) return;
-        let l = i.getGuildId(),
-          r = Object.values(h.default.getVoiceStatesForChannel(i.id)),
+        } = e, l = o.default.getChannel(t);
+        if (null == l) return;
+        let i = l.getGuildId(),
+          r = Object.values(h.default.getVoiceStatesForChannel(l.id)),
           u = s.differenceBy(n, r, e => {
             let {
               userId: t
             } = e;
             return t
           });
-        return u.forEach(e => a((0, I.transformVoiceState)(l, i.id, e))), r
+        return u.forEach(e => a((0, I.transformVoiceState)(i, l.id, e))), r
       }
     }
   },
@@ -194,10 +194,10 @@ let v = {
         let {
           prevState: n,
           dispatch: a
-        } = e, i = o.default.getChannel(t);
-        if (null == i) return;
-        let l = i.getGuildId(),
-          r = Object.values(h.default.getVoiceStatesForChannel(i.id)).map(e => (0, I.transformVoiceState)(l, i.id, e)),
+        } = e, l = o.default.getChannel(t);
+        if (null == l) return;
+        let i = l.getGuildId(),
+          r = Object.values(h.default.getVoiceStatesForChannel(l.id)).map(e => (0, I.transformVoiceState)(i, l.id, e)),
           u = s.differenceWith(r, n, s.isEqual);
         return u.forEach(e => a(e)), r
       }
@@ -343,7 +343,7 @@ let v = {
       } = e, a = {
         currentUser: _.default.getCurrentUser()
       };
-      return null != a.currentUser && (null == t || !(0, i.default)(a, t)) && n((0, p.default)(a.currentUser)), a
+      return null != a.currentUser && (null == t || !(0, l.default)(a, t)) && n((0, p.default)(a.currentUser)), a
     }
   },
   [g.RPCEvents.LOBBY_UPDATE]: {
@@ -406,15 +406,15 @@ let v = {
       var t, n;
       let {
         prevState: a,
-        dispatch: i
-      } = e, o = r.default.getStreamerActiveStreamMetadata(), u = (null == o ? void 0 : o.pid) != null ? E.default.getGameForPID(o.pid) : null, d = (null == u ? void 0 : u.id) != null ? l.default.getApplication(u.id) : null, c = null != d ? (0, m.default)(d) : null, f = null == o ? void 0 : o.sourceName, _ = {
+        dispatch: l
+      } = e, o = r.default.getStreamerActiveStreamMetadata(), u = (null == o ? void 0 : o.pid) != null ? E.default.getGameForPID(o.pid) : null, d = (null == u ? void 0 : u.id) != null ? i.default.getApplication(u.id) : null, c = null != d ? (0, m.default)(d) : null, f = null == o ? void 0 : o.sourceName, _ = {
         active: null != o,
         pid: null !== (t = null == o ? void 0 : o.pid) && void 0 !== t ? t : null,
         application: (n = null != c, n) ? {
           name: f
         } : null
       };
-      return !s.isEqual(_, a) && i(_), _
+      return !s.isEqual(_, a) && l(_), _
     }
   },
   [g.RPCEvents.VIDEO_STATE_UPDATE]: {

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("421898"),
-  l = n.n(i),
+  l = n("421898"),
+  i = n.n(l),
   r = n("122508"),
   o = n("637487");
 let u = {
@@ -43,19 +43,19 @@ class _ extends s.PureComponent {
       children: e,
       className: t,
       shrink: n,
-      grow: i,
+      grow: l,
       basis: r,
       style: u,
       wrap: d,
       ...c
     } = this.props, f = {
       style: {
-        flexGrow: i,
+        flexGrow: l,
         flexShrink: n,
         flexBasis: r,
         ...u
       },
-      className: t === o.flexChild ? t : l(o.flexChild, t),
+      className: t === o.flexChild ? t : i(o.flexChild, t),
       ...c
     };
     if (!d && "string" != typeof e && 1 === s.Children.count(e)) {
@@ -63,7 +63,7 @@ class _ extends s.PureComponent {
       return f.style = {
         ...f.style,
         ...n.props.style
-      }, f.className = l(n.props.className, t), s.cloneElement(n, f)
+      }, f.className = i(n.props.className, t), s.cloneElement(n, f)
     }
     return (0, a.jsx)("div", {
       ...f,
@@ -83,7 +83,7 @@ class h extends s.PureComponent {
       className: t,
       direction: n,
       justify: s,
-      align: i,
+      align: l,
       wrap: r,
       shrink: u,
       grow: d,
@@ -99,7 +99,7 @@ class h extends s.PureComponent {
     };
     return (0, a.jsx)("div", {
       style: h,
-      className: l(o.flex, n, s, i, r, E, t),
+      className: i(o.flex, n, s, l, r, E, t),
       ..._,
       children: e
     })

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return N
   }
 });
-var a, s, i = n("884691"),
-  l = n("446674"),
+var a, s, l = n("884691"),
+  i = n("446674"),
   r = n("583367"),
   o = n("650509"),
   u = n("933326"),
@@ -32,27 +32,27 @@ function N(e) {
   let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
     {
       lastFetchedAt: a
-    } = (0, l.useStateFromStoresObject)([C.default], () => ({
+    } = (0, i.useStateFromStoresObject)([C.default], () => ({
       appliedGuildBoosts: C.default.getAppliedGuildBoostsForGuild(n),
       lastFetchedAt: C.default.getLastFetchedAtForGuild(n)
     })),
     {
       lastDismissedGracePeriod: s,
       isGracePeriodVisible: N
-    } = (0, l.useStateFromStoresObject)([T.default], () => ({
+    } = (0, i.useStateFromStoresObject)([T.default], () => ({
       lastDismissedGracePeriod: T.default.getLastDismissedGracePeriodForGuild(n),
       isGracePeriodVisible: T.default.isVisible(n)
     })),
-    R = (0, l.useStateFromStores)([h.default], () => h.default.isVisible(e)),
-    O = (0, l.useStateFromStores)([m.default], () => m.default.isVisible(e)),
-    L = (0, l.useStateFromStores)([I.default], () => I.default.can(g.Permissions.ADMINISTRATOR, e)),
+    R = (0, i.useStateFromStores)([h.default], () => h.default.isVisible(e)),
+    O = (0, i.useStateFromStores)([m.default], () => m.default.isVisible(e)),
+    L = (0, i.useStateFromStores)([I.default], () => I.default.can(g.Permissions.ADMINISTRATOR, e)),
     v = null != s && Date.now() - s <= g.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
     M = null != e ? e.premiumSubscriberCount : 0,
     P = (0, A.getGuildTierFromAppliedBoostCount)(M, n) !== g.BoostedGuildTiers.NONE,
     D = null != a && Date.now() - a <= 432e5,
     y = !D && !v && L && P,
     x = (0, c.useGuildHasLiveChannelNotice)(n),
-    b = (0, l.useStateFromStores)([S.default], () => S.default.isVisible(e)),
+    b = (0, i.useStateFromStores)([S.default], () => S.default.isVisible(e)),
     U = _.default.useShouldShowChannelNotice(n),
     G = (0, o.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {
@@ -69,9 +69,9 @@ function N(e) {
       autoTrackExposure: !1
     }),
     B = (0, f.useGuildUpcomingEventsNotice)(n);
-  if (i.useEffect(() => {
+  if (l.useEffect(() => {
       u.default.getGuildEventsForCurrentUser(n)
-    }, [n]), i.useEffect(() => {
+    }, [n]), l.useEffect(() => {
       let e = -1;
       return y && (e = window.setTimeout(() => {
         null != n && (0, r.fetchAppliedGuildBoostsForGuild)(n)
