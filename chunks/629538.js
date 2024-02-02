@@ -14,12 +14,6 @@ var a = new class e {
       i = performance.now();
     return r.log("asynchronously loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n
   }
-  getSync(e) {
-    let t = performance.now(),
-      n = s.default.emojis(e).getMapEntriesSyncUnsafe(),
-      i = performance.now();
-    return r.log("synchronously loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n
-  }
   handleConnectionOpen(e, t) {
     for (let n of e.guilds) this.handleOneGuildCreate(n, t)
   }
