@@ -6,14 +6,22 @@ s.r(t), s.d(t, {
   BACKUP_CODE_MAX_LENGTH: function() {
     return a
   },
-  trySubmit: function() {
+  TOTP_CODE_LENGTH: function() {
+    return r
+  },
+  SMS_CODE_LENGTH: function() {
     return i
+  },
+  trySubmit: function() {
+    return u
   }
 }), s("70102");
 var n = s("872717");
 let l = 8,
-  a = 11;
-async function r(e) {
+  a = 11,
+  r = 6,
+  i = 6;
+async function o(e) {
   let {
     ticket: t,
     mfaType: s,
@@ -36,10 +44,10 @@ async function r(e) {
     throw e
   }
 }
-async function i(e, t) {
+async function u(e, t) {
   let {
     token: s
-  } = await r(e);
+  } = await o(e);
   return new Promise((e, n) => {
     t({
       "X-Discord-MFA-Authorization": s
