@@ -26,8 +26,8 @@ var l = n("37983"),
   y = n("503330"),
   x = n("278410"),
   I = n("410957"),
-  _ = n("730708"),
-  N = n("754702");
+  N = n("730708"),
+  _ = n("754702");
 let A = async (e, t, n) => {
   n(!0), await (0, S.createReferralTrial)(e).then(() => {
     t(), (0, c.popAllLayers)()
@@ -54,7 +54,7 @@ let A = async (e, t, n) => {
         className: y.closeButton
       }), (0, l.jsx)("img", {
         alt: "",
-        src: a ? I : _,
+        src: a ? I : N,
         className: y.confirmationImage
       }), (0, l.jsx)(d.Heading, {
         variant: "heading-xl/bold",
@@ -105,28 +105,28 @@ function O(e) {
     channel: n,
     onClose: r,
     isResending: s
-  } = e, [u, c] = i.useState(!1), [S, _] = i.useState(!1), O = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
+  } = e, [u, c] = i.useState(!1), [S, N] = i.useState(!1), O = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null, {
     analyticsLocations: M
   } = (0, p.default)(f.default.REFERRAL_TRIALS_POPOUT), {
-    enabled: b
+    enabled: k
   } = g.default.useExperiment({
     location: "200c24_1"
   }, {
     autoTrackExposure: !0
-  }), k = new Date("2023-06-15T08:00:00-08:00");
+  }), b = new Date("2023-06-15T08:00:00-08:00");
   return null == O ? null : u ? (0, l.jsx)(R, {
     onClose: r,
     referralsRemaining: t,
     recipient: O,
     analyticsLocations: M,
-    shouldShowBirthdayUX: b
+    shouldShowBirthdayUX: k
   }) : (0, l.jsxs)("div", {
     className: y.generalContainer,
     children: [(0, l.jsxs)("div", {
       className: y.generalBodyContainer,
       children: [(0, l.jsx)("img", {
         alt: "",
-        src: b ? I : N,
+        src: k ? I : _,
         className: y.generalBodyImage
       }), (0, l.jsxs)("div", {
         className: y.innerContent,
@@ -153,11 +153,11 @@ function O(e) {
             children: v.default.Messages.SHARE_NITRO_RESEND_TRIAL_BODY_2
           }) : (0, l.jsx)("div", {
             children: v.default.Messages.SHARE_NITRO_MODAL_BODY_SHARE_THEM_BY.format({
-              date: (0, h.dateFormat)(a(k), "LL")
+              date: (0, h.dateFormat)(a(b), "LL")
             })
           })]
         })]
-      }), b && (0, l.jsx)("img", {
+      }), k && (0, l.jsx)("img", {
         alt: "",
         src: x,
         className: y.birthdayBackgroundImage
@@ -168,7 +168,7 @@ function O(e) {
         className: y.generalShareButton,
         submitting: S,
         onClick: () => {
-          s ? A(O, r, _) : (c(!0), m.default.track(T.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+          s ? A(O, r, N) : (c(!0), m.default.track(T.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
             location_stack: M,
             step: C.ReferralTrialsAnalyticSteps.FLOW_STARTED,
             other_user_id: Number(O)

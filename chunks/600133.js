@@ -43,8 +43,8 @@ var s = n("866227"),
   b = n("807345"),
   G = n("840895"),
   B = n("143573"),
-  F = n("703537"),
-  k = n("662285"),
+  k = n("703537"),
+  F = n("662285"),
   w = n("808422"),
   H = n("845579"),
   V = n("374363"),
@@ -163,8 +163,8 @@ function eG(e) {
   return !!s || (null != n && "" !== n ? o.default.get(n) : !!eD.has(e) && s)
 }
 let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PROFILE, eh.NoticeTypes.VIEWING_ROLES, eh.NoticeTypes.INVITED_TO_SPEAK, eh.NoticeTypes.LURKING_GUILD, eh.NoticeTypes.VOICE_DISABLED, eh.NoticeTypes.NO_INPUT_DETECTED, eh.NoticeTypes.HARDWARE_MUTE, eh.NoticeTypes.H264_DISABLED, eh.NoticeTypes.DISPATCH_ERROR, eh.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS, eh.NoticeTypes.SPOTIFY_AUTO_PAUSED, eh.NoticeTypes.DROPS_PROGRESS_INTERRUPTION, eh.NoticeTypes.WIN32_DEPRECATED_MESSAGE, eh.NoticeTypes.WIN7_8_DEPRECATED_MESSAGE, eh.NoticeTypes.MACOS_17_18_DEPRECATED_MESSAGE, eh.NoticeTypes.BLOCKED_BY_PROXY, eh.NoticeTypes.VOICE_CONNECTED_LAST_SESSION, eh.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION, eh.NoticeTypes.GUILD_RAID_NOTIFICATION, eh.NoticeTypes.ESLATAM_LANGUAGE_LAUNCH, eh.NoticeTypes.UNCLAIMED_ACCOUNT, eh.NoticeTypes.POMELO_ELIGIBLE, eh.NoticeTypes.PENDING_MEMBER, eh.NoticeTypes.OUTBOUND_PROMOTION, eh.NoticeTypes.CORRUPT_INSTALLATION, eh.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER, eh.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK, eh.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL, eh.NoticeTypes.STREAMER_MODE, eh.NoticeTypes.SCHEDULED_MAINTENANCE, eh.NoticeTypes.BOUNCED_EMAIL_DETECTED, eh.NoticeTypes.UNVERIFIED_ACCOUNT, eh.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING, eh.NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING, eh.NoticeTypes.PREMIUM_UNCANCEL, eh.NoticeTypes.PREMIUM_MISSING_PAYMENT, eh.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT, eh.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT, eh.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT, eh.NoticeTypes.PREMIUM_REACTIVATE, eh.NoticeTypes.ACTIVATE_SERVER_SUBSCRIPTION, eh.NoticeTypes.MFA_SMS_BACKUP, eh.NoticeTypes.APPLICATION_TEST_MODE, eh.NoticeTypes.LOCALIZED_PRICING, eh.NoticeTypes.DOWNLOAD_NAG, eh.NoticeTypes.CONNECT_SPOTIFY, eh.NoticeTypes.CONNECT_PLAYSTATION, eh.NoticeTypes.SURVEY, eh.NoticeTypes.SERVER_USAGE_SURVEY, eh.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR, eh.NoticeTypes.DROPS_GO_LIVE_BANNER, eh.NoticeTypes.DROPS_ENDED_INCOMPLETE, eh.NoticeTypes.GUILD_ONBOARDING_UPSELL_NAGBAR, eh.NoticeTypes.HABITUAL_DND, eh.NoticeTypes.UU_MIGRATION],
-  eF = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PROFILE, eh.NoticeTypes.VIEWING_ROLES, eh.NoticeTypes.INVITED_TO_SPEAK, eh.NoticeTypes.LURKING_GUILD, eh.NoticeTypes.VOICE_DISABLED, eh.NoticeTypes.NO_INPUT_DETECTED, eh.NoticeTypes.HARDWARE_MUTE, eh.NoticeTypes.H264_DISABLED, eh.NoticeTypes.DISPATCH_ERROR, eh.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS, eh.NoticeTypes.SPOTIFY_AUTO_PAUSED, eh.NoticeTypes.BLOCKED_BY_PROXY, eh.NoticeTypes.VOICE_CONNECTED_LAST_SESSION, eh.NoticeTypes.PENDING_MEMBER, eh.NoticeTypes.STREAMER_MODE, eh.NoticeTypes.SCHEDULED_MAINTENANCE],
-  ek = {
+  ek = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PROFILE, eh.NoticeTypes.VIEWING_ROLES, eh.NoticeTypes.INVITED_TO_SPEAK, eh.NoticeTypes.LURKING_GUILD, eh.NoticeTypes.VOICE_DISABLED, eh.NoticeTypes.NO_INPUT_DETECTED, eh.NoticeTypes.HARDWARE_MUTE, eh.NoticeTypes.H264_DISABLED, eh.NoticeTypes.DISPATCH_ERROR, eh.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS, eh.NoticeTypes.SPOTIFY_AUTO_PAUSED, eh.NoticeTypes.BLOCKED_BY_PROXY, eh.NoticeTypes.VOICE_CONNECTED_LAST_SESSION, eh.NoticeTypes.PENDING_MEMBER, eh.NoticeTypes.STREAMER_MODE, eh.NoticeTypes.SCHEDULED_MAINTENANCE],
+  eF = {
     [eh.NoticeTypes.GUILD_RAID_NOTIFICATION]: {
       predicate: () => (0, C.shouldShowRaidNotificationNagbar)().show && !eG(eh.NoticeTypes.GUILD_RAID_NOTIFICATION),
       metadata: () => {
@@ -263,7 +263,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       metadata: () => eS.default.getLastProgress()
     },
     [eh.NoticeTypes.SPOTIFY_AUTO_PAUSED]: {
-      predicate: () => k.default.wasAutoPaused()
+      predicate: () => F.default.wasAutoPaused()
     },
     [eh.NoticeTypes.BLOCKED_BY_PROXY]: {
       predicate: () => !eG(eh.NoticeTypes.BLOCKED_BY_PROXY) && B.default.blockedByProxy && G.default.getCurrentConfig({
@@ -379,7 +379,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       }
     },
     [eh.NoticeTypes.CONNECT_SPOTIFY]: {
-      predicate: () => !k.default.hasConnectedAccount() && es.default.isObservedAppRunning(E.default.get(eh.PlatformTypes.SPOTIFY).name) && !eG(eh.NoticeTypes.CONNECT_SPOTIFY)
+      predicate: () => !F.default.hasConnectedAccount() && es.default.isObservedAppRunning(E.default.get(eh.PlatformTypes.SPOTIFY).name) && !eG(eh.NoticeTypes.CONNECT_SPOTIFY)
     },
     [eh.NoticeTypes.WIN32_DEPRECATED_MESSAGE]: {
       predicate: () => {
@@ -641,7 +641,7 @@ let eB = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           currentUser: t
         } = e;
-        return F.isEligibleForNotice(t)
+        return k.isEligibleForNotice(t)
       }
     },
     [eh.NoticeTypes.ESLATAM_LANGUAGE_LAUNCH]: {
@@ -666,9 +666,9 @@ function ew() {
     s = ea.default.getGuildId(),
     l = el.default.getVoiceChannelId(),
     a = null != l ? ec.default.getVoiceStateForChannel(l) : null,
-    i = eg.CONFERENCE_MODE_ENABLED ? eF : eB;
+    i = eg.CONFERENCE_MODE_ENABLED ? ek : eB;
   for (let u of i)
-    if (null != ek[u] && ek[u].predicate({
+    if (null != eF[u] && eF[u].predicate({
         selectedGuildId: s,
         voiceChannelId: l,
         voiceState: a,
@@ -677,7 +677,7 @@ function ew() {
         isLocalizedPromoEnabled: n
       })) {
       var r, o;
-      let n = null === (r = (o = ek[u]).metadata) || void 0 === r ? void 0 : r.call(o, {
+      let n = null === (r = (o = eF[u]).metadata) || void 0 === r ? void 0 : r.call(o, {
         currentUser: e,
         premiumSubscription: t,
         selectedGuildId: s
@@ -696,7 +696,7 @@ function eH() {
 }
 class eV extends a.default.Store {
   initialize() {
-    this.syncWith([eo.default, et.default, J.default, ea.default, b.default, eT.default, W.default, Z.default, V.default, h.default, v.default], ew), this.waitFor(ed.default, ei.default, X.default, Q.default, en.default, q.default, er.default, p.default, ea.default, eu.default, k.default, es.default, et.default, eA.default, eS.default, em.default, $.default, e_.default, eC.default, J.default, ef.default, ee.default, b.default, eI.default, eT.default, Z.default, L.default, m.default, T.default, B.default)
+    this.syncWith([eo.default, et.default, J.default, ea.default, b.default, eT.default, W.default, Z.default, V.default, h.default, v.default], ew), this.waitFor(ed.default, ei.default, X.default, Q.default, en.default, q.default, er.default, p.default, ea.default, eu.default, F.default, es.default, et.default, eA.default, eS.default, em.default, $.default, e_.default, eC.default, J.default, ef.default, ee.default, b.default, eI.default, eT.default, Z.default, L.default, m.default, T.default, B.default)
   }
   hasNotice() {
     return null != eU && null != eU.type

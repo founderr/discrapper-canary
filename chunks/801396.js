@@ -31,9 +31,9 @@ var l = n("37983"),
       guildId: n,
       channel: r,
       shouldTrackUpsellViewed: I,
-      setTrackedUpsellViewed: _
+      setTrackedUpsellViewed: N
     } = e, {
-      location: N
+      location: _
     } = (0, u.useAnalyticsContext)(), {
       analyticsLocations: A
     } = (0, c.default)(), R = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(n)), {
@@ -41,13 +41,13 @@ var l = n("37983"),
     } = (0, h.useManageResourcePermissions)(R), M = null != R && 0 === (0, C.getTotalStickerCountForTier)(R.premiumTier) && !R.hasFeature(T.GuildFeatures.MORE_STICKERS);
     return (i.useEffect(() => {
       O && M && I && ((0, d.trackWithMetadata)(T.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
-        location: N,
+        location: _,
         guild_id: null == R ? void 0 : R.id,
         channel_id: null == r ? void 0 : r.id,
         type: "Expression Picker Inline Sticker Upsell",
         location_stack: A
-      }), _(!0))
-    }, [M, R, r, N, I, _, A, O]), null != R && O) ? M ? (0, l.jsxs)("div", {
+      }), N(!0))
+    }, [M, R, r, _, I, N, A, O]), null != R && O) ? M ? (0, l.jsxs)("div", {
       className: o(x.upsell, t),
       children: [(0, l.jsx)(S.default, {
         className: x.icon,
@@ -66,7 +66,7 @@ var l = n("37983"),
         onClick: () => {
           (0, p.default)({
             analyticsLocations: A,
-            analyticsSourceLocation: N,
+            analyticsSourceLocation: _,
             guild: R,
             perks: (0, v.guildBoostingPerks)()
           })
@@ -88,7 +88,7 @@ var l = n("37983"),
         look: a.Button.Looks.LINK,
         color: a.Button.Colors.LINK,
         onClick: () => {
-          (0, f.closeExpressionPicker)(), m.default.open(n, T.GuildSettingsSections.STICKERS, N)
+          (0, f.closeExpressionPicker)(), m.default.open(n, T.GuildSettingsSections.STICKERS, _)
         },
         children: y.default.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_CTA
       })]

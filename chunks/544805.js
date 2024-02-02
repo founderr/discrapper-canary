@@ -15,7 +15,7 @@ function r(e) {
     application: t,
     onAgree: r,
     onDisagree: d
-  } = e, o = a.default.getWindowOpen(u.PopoutWindowKeys.CHANNEL_CALL_POPOUT), s = o ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
+  } = e, s = a.default.getWindowOpen(u.PopoutWindowKeys.CHANNEL_CALL_POPOUT), o = s ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
   return (0, l.openModalLazy)(async () => {
     let {
       ActivityAgeGateModal: e
@@ -28,6 +28,6 @@ function r(e) {
     })
   }, {
     modalKey: "activity-age-gate",
-    contextKey: s
+    contextKey: o
   }), Promise.resolve()
 }

@@ -85,12 +85,12 @@ function v(e) {
       let n = a.default.getGuild(t);
       null != n && e.push(n)
     }), e
-  }), _ = c.default.canUseSoundboardEverywhere(i), N = (0, r.useStateFromStores)([a.default], () => a.default.getGuild(null == e ? void 0 : e.guild_id)), A = (0, r.useStateFromStores)([u.default], () => {
+  }), N = c.default.canUseSoundboardEverywhere(i), _ = (0, r.useStateFromStores)([a.default], () => a.default.getGuild(null == e ? void 0 : e.guild_id)), A = (0, r.useStateFromStores)([u.default], () => {
     let {
       canCreateExpressions: e
-    } = (0, o.getManageResourcePermissions)(N);
+    } = (0, o.getManageResourcePermissions)(_);
     return e
-  }, [N]), {
+  }, [_]), {
     canSeeRecentlyHeard: R,
     canSeeFrequentlyPlayed: O
   } = (0, f.useRecentlyHeardExperiment)({
@@ -102,7 +102,7 @@ function v(e) {
     }, []);
     let e = (0, r.useStateFromStores)([p.default], () => p.default.frecentlyPlayedSounds);
     return e
-  }(), b = (0, r.useStateFromStoresArray)([p.default], () => p.default.recentlyHeardSoundIds);
+  }(), k = (0, r.useStateFromStoresArray)([p.default], () => p.default.recentlyHeardSoundIds);
   return l.useMemo(() => {
     let e = [];
     return n ? (T(e, S), {
@@ -119,7 +119,7 @@ function v(e) {
       sections: e,
       guildIds: x,
       allSounds: S,
-      potentialSoundIdsForSection: b,
+      potentialSoundIdsForSection: k,
       sectionType: h.SoundboardSoundGridSectionType.RECENTLY_HEARD,
       sortById: !1
     }), O && C({
@@ -148,7 +148,7 @@ function v(e) {
         key: t.id,
         items: s
       })
-    }(e, N, A, S, t), !_ && T(e, S), ! function(e, t, n, l) {
+    }(e, _, A, S, t), !N && T(e, S), ! function(e, t, n, l) {
       for (let r of t) {
         var i;
         if (r.id === n) continue;
@@ -163,11 +163,11 @@ function v(e) {
           items: o
         })
       }
-    }(e, I, null == N ? void 0 : N.id, S), _ && T(e, S), {
+    }(e, I, null == _ ? void 0 : _.id, S), N && T(e, S), {
       categories: e,
       isFetching: y
     })
-  }, [x, S, v, b, M, O, R, N, A, t, _, I, n, y])
+  }, [x, S, v, k, M, O, R, _, A, t, N, I, n, y])
 }
 
 function y(e, t, n) {

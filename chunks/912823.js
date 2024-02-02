@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return k
+    return b
   }
 }), n("222007"), n("424973");
 var l = n("37983"),
@@ -26,14 +26,14 @@ var l = n("37983"),
   y = n("695369"),
   x = n("198"),
   I = n("315814"),
-  _ = n("108486"),
-  N = n("923582"),
+  N = n("108486"),
+  _ = n("923582"),
   A = n("80921"),
   R = n("954016"),
   O = n("646718"),
   M = n("537461");
 
-function b(e) {
+function k(e) {
   let {
     disabled: t,
     channel: n
@@ -50,7 +50,7 @@ function b(e) {
     })
   }, [o]);
   let s = r && o;
-  return s ? (0, l.jsx)(_.default, {
+  return s ? (0, l.jsx)(N.default, {
     disabled: t,
     channel: n
   }) : (0, l.jsx)(x.default, {
@@ -58,8 +58,8 @@ function b(e) {
     channel: n
   })
 }
-var k = i.memo(function(e) {
-  var t, n, i, p, x, _, k, P, L;
+var b = i.memo(function(e) {
+  var t, n, i, p, x, N, b, P, L;
   let {
     type: U,
     disabled: j,
@@ -109,11 +109,11 @@ var k = i.memo(function(e) {
         referralsRemaining: X,
         channel: D,
         isResending: Z
-      }, "referral"))), (null == ee ? void 0 : ee.showChatInputButton) && R.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(D.type) && null == V && (null === (_ = U.commands) || void 0 === _ ? void 0 : _.enabled) && q.push((0, l.jsx)(T.default, {
+      }, "referral"))), (null == ee ? void 0 : ee.showChatInputButton) && R.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(D.type) && null == V && (null === (N = U.commands) || void 0 === N ? void 0 : N.enabled) && q.push((0, l.jsx)(T.default, {
         disabled: j,
         channel: D,
         type: U
-      }, "activity")), (null === (k = U.gifts) || void 0 === k ? void 0 : k.button) != null && null == V && !Y) {
+      }, "activity")), (null === (b = U.gifts) || void 0 === b ? void 0 : b.button) != null && null == V && !Y) {
       let {
         hideChannelGiftButton: e
       } = m.default.getCurrentConfig({
@@ -121,7 +121,7 @@ var k = i.memo(function(e) {
       }, {
         autoTrackExposure: D.isDM()
       }), t = D.isDM() && e;
-      !t && q.push((0, l.jsx)(b, {
+      !t && q.push((0, l.jsx)(k, {
         disabled: j,
         channel: D
       }, "gift"))
@@ -136,7 +136,7 @@ var k = i.memo(function(e) {
   return ((null === (t = U.emojis) || void 0 === t ? void 0 : t.button) != null && (null == V || null != W && W.type !== s.ApplicationCommandOptionType.ATTACHMENT) && q.push((0, l.jsx)(v.default, {
     disabled: j,
     type: U
-  }, "emoji")), (null === (n = U.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (i = U.submit) || void 0 === i ? void 0 : i.ignorePreference) || H) && q.push((0, l.jsx)(N.default, {
+  }, "emoji")), (null === (n = U.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (i = U.submit) || void 0 === i ? void 0 : i.ignorePreference) || H) && q.push((0, l.jsx)(_.default, {
     onClick: w,
     disabled: j || 0 === K.length && B && !G
   }, "submit")), 0 === q.length) ? null : (0, l.jsx)("div", {

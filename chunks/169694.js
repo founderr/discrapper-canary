@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return _
   },
   unsetCommand: function() {
     return A
@@ -29,14 +29,14 @@ var l = n("798609"),
   y = n("406291");
 let x = new Set(["applicationCommandOption"]),
   I = new Set([l.ApplicationCommandOptionType.ATTACHMENT]),
-  _ = new Set(["line", "applicationCommand"]);
+  N = new Set(["line", "applicationCommand"]);
 
-function N(e, t, n, d) {
+function _(e, t, n, d) {
   let {
     insertData: p,
     isInline: m,
     isVoid: h,
-    onChange: N,
+    onChange: _,
     deleteBackward: P,
     deleteForward: L,
     deleteFragment: U
@@ -72,11 +72,11 @@ function N(e, t, n, d) {
     }
     return p(n)
   }, e.isInline = e => !!x.has(e.type) || m(e), e.isVoid = e => !!("applicationCommandOption" === e.type && I.has(e.optionType)) || h(e), e.deleteBackward = t => {
-    b(e, () => P(t))
+    k(e, () => P(t))
   }, e.deleteForward = t => {
-    b(e, () => L(t))
+    k(e, () => L(t))
   }, e.deleteFragment = t => {
-    b(e, () => U(t))
+    k(e, () => U(t))
   };
   let j = null,
     D = null,
@@ -134,9 +134,9 @@ function N(e, t, n, d) {
                       S = f.PREFIX_COMMAND_REGEX.exec(h);
                     null != S && (h = y.COMMAND_SENTINEL + h.substring(S.length));
                     let x = "".concat(y.COMMAND_SENTINEL).concat(d.displayName).toLocaleLowerCase(),
-                      _ = "".concat(y.COMMAND_SENTINEL).concat(d.name).toLocaleLowerCase();
-                    h.startsWith(x) && h.length > x.length ? m = p.substring(x.length).trim() : h.startsWith(_) && h.length > _.length && (m = p.substring(_.length).trim());
-                    let N = [],
+                      N = "".concat(y.COMMAND_SENTINEL).concat(d.name).toLocaleLowerCase();
+                    h.startsWith(x) && h.length > x.length ? m = p.substring(x.length).trim() : h.startsWith(N) && h.length > N.length && (m = p.substring(N.length).trim());
+                    let _ = [],
                       A = null,
                       O = null;
                     if (null != d.options) {
@@ -144,7 +144,7 @@ function N(e, t, n, d) {
                       if (null != c)
                         for (let l of c) {
                           e.add(l.name);
-                          let i = null !== (s = k(n, t, l.name)) && void 0 !== s ? s : l.text,
+                          let i = null !== (s = b(n, t, l.name)) && void 0 !== s ? s : l.text,
                             r = {
                               type: "applicationCommandOption",
                               optionName: l.name,
@@ -154,12 +154,12 @@ function N(e, t, n, d) {
                                 text: i
                               }]
                             };
-                          N.push(r), 0 === l.text.length && null == A && (A = r)
+                          _.push(r), 0 === l.text.length && null == A && (A = r)
                         }
                       for (let l of d.options)
                         if (!e.has(l.name) && (l.required || null != u[l.name])) {
                           let e, i;
-                          m.length > 0 && !I.has(l.type) ? (e = m, m = "") : e = null != (i = k(n, t, l.name)) ? i : "";
+                          m.length > 0 && !I.has(l.type) ? (e = m, m = "") : e = null != (i = b(n, t, l.name)) ? i : "";
                           let r = {
                             type: "applicationCommandOption",
                             optionName: l.name,
@@ -169,15 +169,15 @@ function N(e, t, n, d) {
                               text: e
                             }]
                           };
-                          N.push(r), 0 === e.length && null == A && (A = r), null == i && (O = r)
+                          _.push(r), 0 === e.length && null == A && (A = r), null == i && (O = r)
                         }
                     }
-                    a = m.length > 0 ? "".concat(y.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === N.length ? "".concat(y.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(y.COMMAND_SENTINEL).concat(d.displayName), N.unshift({
+                    a = m.length > 0 ? "".concat(y.COMMAND_SENTINEL).concat(d.displayName, " ").concat(m.replace(/\r|\n/g, " ")) : 0 === _.length ? "".concat(y.COMMAND_SENTINEL).concat(d.displayName, " ") : "".concat(y.COMMAND_SENTINEL).concat(d.displayName), _.unshift({
                       text: a
                     });
                     let M = {
                       type: "applicationCommand",
-                      children: N,
+                      children: _,
                       command: {
                         id: d.id,
                         name: d.name,
@@ -192,8 +192,8 @@ function N(e, t, n, d) {
                         voids: !0
                       })
                     });
-                    let b = null;
-                    return null != A ? (C.SlateTransforms.selectCommandOption(e, A.optionName), b = A.optionName) : null != O ? (C.SlateTransforms.selectCommandOption(e, O.optionName, !1), b = O.optionName) : C.SlateTransforms.resetSelectionToEnd(e), null == O && R(e, d), b
+                    let k = null;
+                    return null != A ? (C.SlateTransforms.selectCommandOption(e, A.optionName), k = A.optionName) : null != O ? (C.SlateTransforms.selectCommandOption(e, O.optionName, !1), k = O.optionName) : C.SlateTransforms.resetSelectionToEnd(e), null == O && R(e, d), k
                   }(t, r, n),
                   l = E.getOptionValues(t, S);
                 return O({
@@ -218,7 +218,7 @@ function N(e, t, n, d) {
               let e = T.EditorUtils.richValue(t),
                 s = e[0],
                 u = s.children[0];
-              if (_.has(s.type) && T.TextUtils.isText(u)) {
+              if (N.has(s.type) && T.TextUtils.isText(u)) {
                 let e = function(e, t) {
                   if (!e.startsWith("/")) return null;
                   let n = (0, c.getCommandQuery)(t, e.substring(1));
@@ -325,7 +325,7 @@ function N(e, t, n, d) {
         j = T.EditorUtils.richValue(e), D = e.selection, w = u.activeCommand, H = h
       }
     }
-    N()
+    _()
   }, e
 }
 
@@ -432,7 +432,7 @@ function M(e) {
   }
 }
 
-function b(e, t) {
+function k(e, t) {
   let n = E.getOptionNames(e)[0];
   t();
   let l = T.RangeUtils.toPoint(e.selection);
@@ -447,7 +447,7 @@ function b(e, t) {
   }) && C.SlateTransforms.insertText(e, " ")
 }
 
-function k(e, t, n) {
+function b(e, t, n) {
   var i, r, o, s, a;
   let u = null === (r = e.activeCommand) || void 0 === r ? void 0 : null === (i = r.options) || void 0 === i ? void 0 : i.find(e => e.name === n),
     d = e.initialValues[n];

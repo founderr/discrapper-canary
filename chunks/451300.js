@@ -30,11 +30,11 @@ function I(e) {
   var t, n, r;
   let {
     className: I,
-    onClose: _
+    onClose: N
   } = e;
   (0, h.useFetchStickerPacks)();
   let {
-    analyticsLocations: N
+    analyticsLocations: _
   } = (0, d.default)(u.default.EMPTY_STATE), A = (0, s.useStateFromStoresArray)([E.default], () => C.EMPTY_STATE_STICKERS.map(e => E.default.getStickerById(e)));
   i.useEffect(() => {
     m.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
@@ -42,13 +42,13 @@ function I(e) {
       source: {
         section: T.AnalyticsSections.EMPTY_STICKER_PICKER_UPSELL
       },
-      location_stack: N
+      location_stack: _
     })
-  }, [N]);
+  }, [_]);
   let R = (0, f.usePremiumTrialOffer)(),
     O = (0, c.usePremiumDiscountOffer)(),
     M = null != R || null != O,
-    b = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === v.PremiumSubscriptionSKUs.TIER_0;
+    k = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === v.PremiumSubscriptionSKUs.TIER_0;
   return (0, l.jsxs)("div", {
     className: o(x.emptyState, I, {
       [x.unifyTrialUpsell]: M
@@ -56,7 +56,7 @@ function I(e) {
     children: [M ? (0, l.jsx)(p.default, {
       discountOffer: O,
       trialOffer: R,
-      onClose: _,
+      onClose: N,
       type: v.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL,
       subscriptionTier: null !== (r = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== r ? r : v.PremiumSubscriptionSKUs.TIER_2,
       children: y.default.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE
@@ -80,7 +80,7 @@ function I(e) {
       })]
     }), !M && (0, l.jsx)(g.default, {
       analyticsSection: T.AnalyticsSections.EXPRESSION_PICKER,
-      buttonText: M ? b ? y.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : y.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
+      buttonText: M ? k ? y.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : y.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
     })]
   })
 }

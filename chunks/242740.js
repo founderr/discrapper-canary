@@ -11,8 +11,8 @@ var l = i("77078"),
   u = i("76393"),
   r = i("393414"),
   d = i("755624"),
-  o = i("263024"),
-  s = i("271938"),
+  s = i("263024"),
+  o = i("271938"),
   c = i("18494"),
   f = i("800762"),
   _ = i("792367"),
@@ -28,11 +28,11 @@ var l = i("77078"),
         bypassChangeModal: v,
         bypassGuildIdCheck: S = !1
       } = e;
-      t.isThread() && (await o.default.unarchiveThreadIfNecessary(t.id), !d.default.hasJoined(t.id) && await o.default.joinThread(t, "Join Voice"));
+      t.isThread() && (await s.default.unarchiveThreadIfNecessary(t.id), !d.default.hasJoined(t.id) && await s.default.joinThread(t, "Join Voice"));
       let N = u.default.getRemoteSessionId(),
-        h = f.default.getVoiceStateForSession(s.default.getId(), N),
-        D = (null == h ? void 0 : h.channelId) === t.id,
-        p = D || c.default.getChannelId() === f.default.getCurrentClientVoiceChannelId(t.guild_id);
+        y = f.default.getVoiceStateForSession(o.default.getId(), N),
+        h = (null == y ? void 0 : y.channelId) === t.id,
+        p = h || c.default.getChannelId() === f.default.getCurrentClientVoiceChannelId(t.guild_id);
       return !v && !T && (0, _.shouldShowVoiceChannelChangeConfirmation)(t) ? new Promise(e => {
         (0, l.openModalLazy)(async () => {
           let {

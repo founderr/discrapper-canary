@@ -26,14 +26,14 @@ var l = n("37983"),
   y = n("93393"),
   x = n("153769"),
   I = n("671434"),
-  _ = n("229915"),
-  N = n("368121"),
+  N = n("229915"),
+  _ = n("368121"),
   A = n("719923"),
   R = n("389480"),
   O = n("78581"),
   M = n("262439"),
-  b = n("557585"),
-  k = n("553372"),
+  k = n("557585"),
+  b = n("553372"),
   P = n("122557"),
   L = n("478477"),
   U = n("181021"),
@@ -84,7 +84,7 @@ function G(e) {
             className: B.headerIcon
           });
         case R.SoundboardSoundGridSectionType.SEARCH:
-          return (0, l.jsx)(_.default, {
+          return (0, l.jsx)(N.default, {
             className: B.headerIcon
           })
       }
@@ -142,7 +142,7 @@ function V(e) {
         a = o && p.rowIndex === r && p.columnIndex === t;
       switch (e.item.type) {
         case R.SoundboardSoundItemType.SOUND:
-          return (0, i.createElement)(k.default, {
+          return (0, i.createElement)(b.default, {
             ...u(t),
             ...n,
             key: "".concat(l, "-").concat(e.item.sound.soundId),
@@ -178,8 +178,8 @@ function W(e) {
     gridNotice: y,
     soundButtonOverlay: x,
     listPadding: I,
-    renderHeader: _,
-    defaultSoundsOnly: k = !1
+    renderHeader: N,
+    defaultSoundsOnly: b = !1
   } = e, {
     analyticsLocations: P
   } = (0, f.default)(), [W, Y] = i.useState(null), q = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), z = (0, s.useStateFromStores)([C.default], () => {
@@ -187,7 +187,7 @@ function W(e) {
     return C.default.getVoiceState(t, null !== (e = null == q ? void 0 : q.id) && void 0 !== e ? e : "")
   }), Q = (null == z ? void 0 : z.selfDeaf) || (null == z ? void 0 : z.mute) || (null == z ? void 0 : z.suppress), X = (0, h.useExpressionPickerStore)(e => e.searchQuery), Z = (0, T.useUID)(), {
     categories: J
-  } = (0, b.default)(r, void 0, k), [$, ee] = i.useState([]), et = (0, b.useSearchCategories)(J, $, X), en = S.SoundboardPickerCollapsedSections.useSetting(), el = i.useMemo(() => new Set(en), [en]), ei = null == r, er = A.default.canUseCustomCallSounds(q), eo = i.useCallback(e => {
+  } = (0, k.default)(r, void 0, b), [$, ee] = i.useState([]), et = (0, k.useSearchCategories)(J, $, X), en = S.SoundboardPickerCollapsedSections.useSetting(), el = i.useMemo(() => new Set(en), [en]), ei = null == r, er = A.default.canUseCustomCallSounds(q), eo = i.useCallback(e => {
     let t = !el.has(e);
     t ? el.add(e) : el.delete(e), S.SoundboardPickerCollapsedSections.updateSetting(Array.from(el))
   }, [el]), es = i.useCallback((e, t) => {
@@ -243,7 +243,7 @@ function W(e) {
     className: B.settingsClickArea,
     onClick: ef,
     "aria-label": w.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME,
-    children: (0, l.jsx)(N.default, {
+    children: (0, l.jsx)(_.default, {
       className: B.settingsIcon
     })
   }), [ef]), em = i.useCallback(e => (0, l.jsx)(L.default, {
@@ -287,7 +287,7 @@ function W(e) {
       renderEmptySearchState: K,
       renderInspector: eh,
       gridNotice: y,
-      renderHeader: _
+      renderHeader: N
     })]
   })
 }

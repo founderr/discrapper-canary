@@ -221,8 +221,8 @@ let y = {
   },
   x = (0, p.default)([C, y]),
   I = (0, p.default)([T, y]),
-  _ = a.astParserFor(x),
-  N = a.astParserFor(I),
+  N = a.astParserFor(x),
+  _ = a.astParserFor(I),
   A = {
     max: 1 / 0,
     maxAge: 1 * m.default.Millis.MINUTE,
@@ -266,13 +266,13 @@ function M(e, t) {
                 0: ""
               },
               type: "paragraph",
-              content: (n ? N : _)(o, !1, {
+              content: (n ? _ : N)(o, !1, {
                 returnMentionIds: !0,
                 disableAutoBlockNewlines: !0,
                 guildId: t
               })
             };
-          b(l, o, s, 0, []);
+          k(l, o, s, 0, []);
           let a = function(e) {
             if (0 === (e = e.filter(e => e.text.length > 0)).length) return e;
             let t = [e[0]];
@@ -299,7 +299,7 @@ function M(e, t) {
   return s
 }
 
-function b(e, t, n, l, r) {
+function k(e, t, n, l, r) {
   let {
     content: o,
     type: s,
@@ -311,7 +311,7 @@ function b(e, t, n, l, r) {
     case "paragraph":
     case "text":
     case "emoticon":
-      return k(e, t, o || "", l, r);
+      return b(e, t, o || "", l, r);
     case "emoji":
     case "customEmoji": {
       let i = t.substring(l);
@@ -370,7 +370,7 @@ function b(e, t, n, l, r) {
         attributes: [s],
         data: n
       });
-      return k(e, t, a[0], l, r);
+      return b(e, t, a[0], l, r);
     case "em":
     case "autolink":
     case "strong":
@@ -400,14 +400,14 @@ function b(e, t, n, l, r) {
         if ("inlineStyle" === i.type) return i;
         throw Error("Slate: rule must be an inlineStyle")
       }(t, s, l, a);
-      return l = P(e, t, n, l, "syntaxBefore"), r.push(s), l = k(e, t, null != o ? o : "", l, r), r.pop(), l = P(e, t, i, l, "syntaxAfter"), U(t, l)
+      return l = P(e, t, n, l, "syntaxBefore"), r.push(s), l = b(e, t, null != o ? o : "", l, r), r.pop(), l = P(e, t, i, l, "syntaxAfter"), U(t, l)
     }
     default:
       throw Error("Slate: Unknown rule type: ".concat(s))
   }
 }
 
-function k(e, t, n, l, i) {
+function b(e, t, n, l, i) {
   return "string" == typeof n ? l = L({
     result: e,
     sourceText: t,
@@ -416,7 +416,7 @@ function k(e, t, n, l, i) {
     attributes: i,
     data: null
   }) : (!(n instanceof Array) && (n = [n]), n.forEach(n => {
-    l = b(e, t, n, l, i)
+    l = k(e, t, n, l, i)
   })), U(t, l)
 }
 

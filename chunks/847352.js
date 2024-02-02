@@ -30,12 +30,12 @@ var l = n("37983"),
       channel: n,
       closeOnModalOuterClick: r = !1,
       parentModalKey: x
-    } = e, I = i.useRef(null), _ = i.useRef(null), {
-      renderWindow: N,
+    } = e, I = i.useRef(null), N = i.useRef(null), {
+      renderWindow: _,
       windowDispatch: A
     } = i.useContext(f.default), R = null != x, O = (0, u.useIsModalAtTop)(null != x ? x : ""), M = () => {
       E.dismissAppLauncherPopup()
-    }, b = i.useCallback(e => {
+    }, k = i.useCallback(e => {
       var t;
       if (!R && (0, u.hasAnyModalOpen)() || R && !(O && r)) return;
       let {
@@ -44,18 +44,18 @@ var l = n("37983"),
       if ((0, s.isElement)(n) && null != n.closest("." + v.CHAT_INPUT_BUTTON_CLASSNAME)) return;
       for (;
         (0, s.isElement)(n);) {
-        if (n === _.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
+        if (n === N.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
         n = n.parentNode
       }
       M();
       let l = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
       (null == l || "BODY" === l.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.TEXTAREA_FOCUS)
-    }, [r, O, R]), k = i.useCallback(() => {
+    }, [r, O, R]), b = i.useCallback(() => {
       M()
     }, []);
-    i.useLayoutEffect(() => (N.addEventListener("mousedown", b), N.addEventListener("contextmenu", b), A.subscribe(T.ComponentActions.POPOUT_CLOSE, k), () => {
-      N.removeEventListener("mousedown", b), N.removeEventListener("contextmenu", b), A.unsubscribe(T.ComponentActions.POPOUT_CLOSE, k)
-    }), [k, b, N, A]), (0, d.useFocusLock)(I), i.useEffect(() => {
+    i.useLayoutEffect(() => (_.addEventListener("mousedown", k), _.addEventListener("contextmenu", k), A.subscribe(T.ComponentActions.POPOUT_CLOSE, b), () => {
+      _.removeEventListener("mousedown", k), _.removeEventListener("contextmenu", k), A.unsubscribe(T.ComponentActions.POPOUT_CLOSE, b)
+    }), [b, k, _, A]), (0, d.useFocusLock)(I), i.useEffect(() => {
       (!R && (0, u.hasAnyModalOpen)() || R && !O) && M()
     }, [O, R]);
     let P = (0, a.useStateFromStores)([S.default], () => S.default.getCurrentAppDetail());
@@ -79,7 +79,7 @@ var l = n("37983"),
             "aria-label": "Application Launcher",
             children: t ? (0, l.jsxs)("div", {
               className: y.drawerSizingWrapper,
-              ref: _,
+              ref: N,
               children: [(0, l.jsx)("div", {
                 className: y.resizeHandle
               }), (0, l.jsxs)("div", {

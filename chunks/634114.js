@@ -39,7 +39,7 @@ function E(e) {
   }, [y]);
   let x = null !== (n = null === (t = T[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
     I = v.filter(e => e.id !== m.BuiltInSectionId.FRECENCY && e.id !== m.BuiltInSectionId.BUILT_IN),
-    _ = (0, d.useSortApplicationsViaFrecency)(I);
+    N = (0, d.useSortApplicationsViaFrecency)(I);
   return (0, l.jsxs)("div", {
     className: o(h.container, {
       [h.appDetailVisible]: E
@@ -62,7 +62,7 @@ function E(e) {
         sectionDescriptors: v
       }), (0, l.jsx)(p.default, {
         channel: r,
-        applications: _
+        applications: N
       })]
     })]
   })

@@ -25,26 +25,26 @@ var l, i = n("37983"),
   y = n("378765"),
   x = n("254490"),
   I = n("850391"),
-  _ = n("149022"),
-  N = n("296141"),
+  N = n("149022"),
+  _ = n("296141"),
   A = n("606013"),
   R = n("32647"),
   O = n("970153"),
   M = n("49111"),
-  b = n("782340"),
-  k = n("537461");
+  k = n("782340"),
+  b = n("537461");
 new T.default("ChannelEditor.tsx");
 let P = function() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n]
   },
   L = {
-    12: k.fontSize12Padding,
-    14: k.fontSize14Padding,
-    15: k.fontSize15Padding,
-    16: k.fontSize16Padding,
-    18: k.fontSize18Padding,
-    20: k.fontSize20Padding,
-    24: k.fontSize24Padding
+    12: b.fontSize12Padding,
+    14: b.fontSize14Padding,
+    15: b.fontSize15Padding,
+    16: b.fontSize16Padding,
+    18: b.fontSize18Padding,
+    20: b.fontSize20Padding,
+    24: b.fontSize24Padding
   };
 l = class extends r.Component {
   componentDidMount() {
@@ -56,7 +56,7 @@ l = class extends r.Component {
       let e;
       e = this.props.useSlate ? this.props.textValue : (0, O.toTextValue)(this.props.richValue, {
         mode: "plain"
-      }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, _.toRichValue)(e))
+      }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, N.toRichValue)(e))
     } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
   }
   componentWillUnmount() {
@@ -155,7 +155,7 @@ l = class extends r.Component {
       placeholder: t,
       isPreviewing: n
     } = this.props;
-    return e && !n ? b.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
+    return e && !n ? k.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
   }
   render() {
     var e, t, n, l, r, o;
@@ -174,9 +174,9 @@ l = class extends r.Component {
       spellcheckEnabled: T,
       useNewSlashCommands: v,
       canOnlyUseTextCommands: x,
-      className: N,
+      className: _,
       id: O,
-      required: b,
+      required: k,
       maxCharacterCount: P,
       allowNewLines: U,
       "aria-describedby": j,
@@ -187,13 +187,13 @@ l = class extends r.Component {
       popup: H
     } = this.state, F = {
       channel: E,
-      className: s(N, k.textArea, {
-        [k.textAreaSlate]: C,
-        [k.textAreaDisabled]: d || B
+      className: s(_, b.textArea, {
+        [b.textAreaSlate]: C,
+        [b.textAreaDisabled]: d || B
       }),
       id: O,
       placeholder: this.getPlaceholder(),
-      required: b,
+      required: k,
       accessibilityLabel: w,
       disabled: d || !1,
       submitting: B,
@@ -212,9 +212,9 @@ l = class extends r.Component {
       onKeyDown: f,
       onSubmit: h,
       textAreaPaddingClassName: s(L[g], {
-        [k.textAreaWithoutAttachmentButton]: S !== I.ChatInputTypes.NORMAL && S !== I.ChatInputTypes.OVERLAY && S !== I.ChatInputTypes.THREAD_CREATION && S !== I.ChatInputTypes.SIDEBAR,
-        [k.textAreaForPostCreation]: S === I.ChatInputTypes.CREATE_FORUM_POST,
-        [k.textAreaCustomGift]: S === I.ChatInputTypes.CUSTOM_GIFT
+        [b.textAreaWithoutAttachmentButton]: S !== I.ChatInputTypes.NORMAL && S !== I.ChatInputTypes.OVERLAY && S !== I.ChatInputTypes.THREAD_CREATION && S !== I.ChatInputTypes.SIDEBAR,
+        [b.textAreaForPostCreation]: S === I.ChatInputTypes.CREATE_FORUM_POST,
+        [b.textAreaCustomGift]: S === I.ChatInputTypes.CUSTOM_GIFT
       }),
       spellcheckEnabled: T,
       useNewSlashCommands: v,
@@ -232,7 +232,7 @@ l = class extends r.Component {
       ref: this.ref,
       ...F,
       type: S,
-      value: d ? (0, _.toRichValue)("") : u,
+      value: d ? (0, N.toRichValue)("") : u,
       canUseCommands: null === (t = S.commands) || void 0 === t ? void 0 : t.enabled,
       canOnlyUseTextCommands: x
     }) : (0, i.jsx)(A.default, {
@@ -293,7 +293,7 @@ l = class extends r.Component {
       h.default.saveDraft(e, this.props.textValue, this.props.type.drafts.type)
     }, this.handleClearText = () => {
       var e, t;
-      null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, "", (0, _.toRichValue)(""))
+      null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, "", (0, N.toRichValue)(""))
     }, this.handleInsertText = e => {
       let {
         plainText: t,
@@ -426,7 +426,7 @@ l = class extends r.Component {
           }
         })
       })(s), this.focus(), !0)
-    }, this._unsubscribe = N.channelEditorPopupStore.subscribe(e => {
+    }, this._unsubscribe = _.channelEditorPopupStore.subscribe(e => {
       requestAnimationFrame(() => {
         this.setState({
           popup: e
@@ -435,7 +435,7 @@ l = class extends r.Component {
     }), this.state = {
       focused: !1,
       submitting: !1,
-      popup: N.channelEditorPopupStore.getState()
+      popup: _.channelEditorPopupStore.getState()
     }
   }
 }

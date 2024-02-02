@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return M
   },
   default: function() {
-    return k
+    return b
   }
 });
 var l = n("37983");
@@ -36,8 +36,8 @@ var i = n("271841"),
   y = n("851745"),
   x = n("406291"),
   I = n("317041"),
-  _ = n("782340"),
-  N = n("94885");
+  N = n("782340"),
+  _ = n("94885");
 let A = {
   results: {
     entries: []
@@ -64,7 +64,7 @@ function M(e) {
     location: e
   }) ? y.MAX_COMMAND_AUTOCOMPLETE_RESULTS : y.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY
 }
-let b = {
+let k = {
   sentinel: x.COMMAND_SENTINEL,
   stores: [p.default, f.default, u.default, g.default],
   matches: (e, t, n, l, i) => i.commands !== y.CommandMode.DISABLED && null == p.default.getActiveCommand(e.id) && (l || i.commands !== y.CommandMode.OLD_BUILT_INS),
@@ -145,8 +145,8 @@ let b = {
       autocompletes: t,
       onHover: a,
       onClick: u,
-      titleWithQuery: _.default.Messages.COMMANDS_MATCHING,
-      titleWithoutQuery: _.default.Messages.COMMANDS,
+      titleWithQuery: N.default.Messages.COMMANDS_MATCHING,
+      titleWithoutQuery: N.default.Messages.COMMANDS,
       getQuery: e => "".concat(x.COMMAND_SENTINEL).concat(e),
       Component: f ? C.default.Command : C.default.NewCommand,
       getProps: e => {
@@ -164,14 +164,14 @@ let b = {
         }
       },
       key: "commands",
-      headerClassName: f ? N.legacyInputCommandHeader : null,
+      headerClassName: f ? _.legacyInputCommandHeader : null,
       headerTrailingContent: f ? (0, l.jsx)(i.Button, {
         type: "button",
         look: i.Button.Looks.LINK,
         color: i.Button.Colors.BRAND,
         size: i.Button.Sizes.MIN,
         onClick: O,
-        children: _.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
+        children: N.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
       }) : null,
       footer: (0, l.jsx)(R, {})
     })
@@ -210,4 +210,4 @@ let b = {
     }
   }
 };
-var k = b
+var b = k

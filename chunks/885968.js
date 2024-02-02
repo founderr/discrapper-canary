@@ -67,10 +67,10 @@ function x(e) {
       containerRef: e,
       layout: t
     }
-  }(), F = (0, m.default)({
+  }(), k = (0, m.default)({
     applicationId: t.id,
     size: 1024
-  }), k = (0, I.default)(), w = (0, o.useStateFromStores)([C.default], () => C.default.getId()), {
+  }), F = (0, I.default)(), w = (0, o.useStateFromStores)([C.default], () => C.default.getId()), {
     embeddedActivity: H,
     currentEmbeddedActivity: V
   } = (0, o.useStateFromStoresObject)([c.default], () => ({
@@ -110,7 +110,7 @@ function x(e) {
         });
         await (0, _.default)({
           activityItem: s,
-          currentActivity: k,
+          currentActivity: F,
           channelId: a,
           guildId: x,
           locationObject: b.location,
@@ -119,7 +119,7 @@ function x(e) {
         })
       } else await (0, f.default)({
         applicationId: H.applicationId,
-        currentEmbeddedApplication: k,
+        currentEmbeddedApplication: F,
         activityChannelId: a,
         locationObject: b.location,
         embeddedActivitiesManager: p.default,
@@ -132,8 +132,8 @@ function x(e) {
     className: P.container,
     children: [B !== D.SMALL && (0, s.jsx)("div", {
       className: P.imgWrapper,
-      children: "fetched" === F.state && (0, s.jsx)(N.default, {
-        imageBackground: F,
+      children: "fetched" === k.state && (0, s.jsx)(N.default, {
+        imageBackground: k,
         applicationName: t.name,
         imageClassName: P.img,
         imageNotFoundClassName: P.imgBroken

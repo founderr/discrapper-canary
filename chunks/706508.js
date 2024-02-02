@@ -10,8 +10,8 @@ var n = i("651057"),
   u = i("42203"),
   r = i("18494"),
   d = i("697218"),
-  o = i("427953"),
-  s = i("550766"),
+  s = i("427953"),
+  o = i("550766"),
   c = i("544805"),
   f = i("370507"),
   _ = i("420444"),
@@ -33,8 +33,8 @@ async function v(e, t, i, n, l) {
       bypassChangeModal: l
     });
     if (!e) return !1
-  } else if (!(0, o.isActivitiesInTextEnabled)(a, "joinEmbeddedActivity") || !v) return !1;
-  return (0, A.default)(r, t), (0, s.startEmbeddedActivity)(t, e, n), (0, I.default)({
+  } else if (!(0, s.isActivitiesInTextEnabled)(a, "joinEmbeddedActivity") || !v) return !1;
+  return (0, A.default)(r, t), (0, o.startEmbeddedActivity)(t, e, n), (0, I.default)({
     type: C.AnalyticsGameOpenTypes.JOIN,
     userId: c.id,
     applicationId: e,
@@ -47,13 +47,13 @@ function S(e) {
   let {
     applicationId: t,
     currentEmbeddedApplication: i,
-    activityChannelId: o,
-    locationObject: s,
+    activityChannelId: s,
+    locationObject: o,
     embeddedActivitiesManager: _,
     analyticsLocations: E
-  } = e, I = u.default.getChannel(o), T = null == I ? void 0 : I.getGuildId(), C = null == T || "" === T, S = d.default.getCurrentUser();
-  if (null == I || C && !I.isPrivate() || null == o) return Promise.resolve(!1);
-  if (r.default.getVoiceChannelId() === o && (null == i ? void 0 : i.id) === t) return (0, A.default)(T, o), Promise.resolve(!0);
+  } = e, I = u.default.getChannel(s), T = null == I ? void 0 : I.getGuildId(), C = null == T || "" === T, S = d.default.getCurrentUser();
+  if (null == I || C && !I.isPrivate() || null == s) return Promise.resolve(!1);
+  if (r.default.getVoiceChannelId() === s && (null == i ? void 0 : i.id) === t) return (0, A.default)(T, s), Promise.resolve(!0);
   let N = async function() {
     let {
       bypassChangeVcModal: e
@@ -67,18 +67,18 @@ function S(e) {
         (0, c.confirmActivityAgeGate)({
           application: i,
           onAgree: () => {
-            n(v(t, o, s, E, e))
+            n(v(t, s, o, E, e))
           },
           onDisagree: () => n(!1)
         })
       })
     }
-    return v(t, o, s, E, e)
+    return v(t, s, o, E, e)
   };
   return null != i ? new Promise((e, t) => {
     (0, f.default)(i, I, () => {
       _.leaveActivity({
-        channelId: o,
+        channelId: s,
         applicationId: i.id
       }), N({
         bypassChangeVcModal: !0

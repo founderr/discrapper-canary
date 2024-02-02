@@ -26,17 +26,17 @@ var l = n("37983"),
     var n, r, v, y, x;
     let {
       channel: I,
-      type: _,
-      editorHeight: N,
+      type: N,
+      editorHeight: _,
       onVisibilityChange: A
     } = e, R = (0, p.useUID)(), O = (0, a.useStateFromStores)([c.default], () => {
       var e;
       return null !== (e = c.default.getGuild(I.guild_id)) && void 0 !== e ? e : null
-    }, [I.guild_id]), M = i.useRef(), [b, k, P] = (0, C.default)({
+    }, [I.guild_id]), M = i.useRef(), [k, b, P] = (0, C.default)({
       ...e,
       guild: O
-    }, t, M), L = (null === (n = _.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, U = (0, f.getAutocompleteRowId)(b.selectedIndex);
-    (0, d.useChannelEditorPopup)(R, b.isVisible, U), E.default.trackExposure({
+    }, t, M), L = (null === (n = N.autocomplete) || void 0 === n ? void 0 : n.forceChatLayer) ? h.default : m.default, U = (0, f.getAutocompleteRowId)(k.selectedIndex);
+    (0, d.useChannelEditorPopup)(R, k.isVisible, U), E.default.trackExposure({
       location: "6e9811_1"
     });
     let {
@@ -46,23 +46,23 @@ var l = n("37983"),
     }, {
       autoTrackExposure: !1
     }), D = (0, g.useChannelAutocompleteLayerPosition)({
-      editorHeight: N,
-      type: _,
-      state: b,
+      editorHeight: _,
+      type: N,
+      state: k,
       isInPopoutExperiment: j
     }), w = i.useMemo(() => null == D ? "" : String(Date.now()), [null == D ? void 0 : D.top, null == D ? void 0 : D.left, null == D ? void 0 : D.bottom, null == D ? void 0 : D.right]);
     if (i.useEffect(() => {
-        A(b.isVisible)
-      }, [A, b.isVisible]), !b.isVisible || null == b.query || void 0 === D) return null;
-    let B = null !== (r = b.query.typeInfo.renderResults({
-      results: b.query.results,
-      selectedIndex: b.selectedIndex,
+        A(k.isVisible)
+      }, [A, k.isVisible]), !k.isVisible || null == k.query || void 0 === D) return null;
+    let B = null !== (r = k.query.typeInfo.renderResults({
+      results: k.query.results,
+      selectedIndex: k.selectedIndex,
       channel: I,
       guild: O,
-      query: b.query.queryText,
-      options: b.query.options,
-      onHover: e => k.onResultHover(e),
-      onClick: e => k.onResultClick(e)
+      query: k.query.queryText,
+      options: k.query.options,
+      onHover: e => b.onResultHover(e),
+      onClick: e => b.onResultClick(e)
     })) && void 0 !== r ? r : null;
     if (null == B) return null;
     let H = {
@@ -71,7 +71,7 @@ var l = n("37983"),
         [T.bottom]: null == D && "bottom" === e.position
       },
       F = 490;
-    null != D && (F = (null === (v = _.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (y = b.query) || void 0 === y ? void 0 : y.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
+    null != D && (F = (null === (v = N.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (y = k.query) || void 0 === y ? void 0 : y.type) === S.AutocompleteOptionTypes.EMOJIS_AND_STICKERS ? 490 : 245), F = Math.min(window.innerHeight - 175, F);
     let G = (0, l.jsx)(f.default, {
       id: R,
       className: o(T.autocomplete, H),

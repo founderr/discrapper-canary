@@ -26,8 +26,8 @@ var l = n("37983"),
   y = n("49111"),
   x = n("317041"),
   I = n("782340"),
-  _ = n("253072"),
-  N = n("632215");
+  N = n("253072"),
+  _ = n("632215");
 
 function A(e) {
   let {
@@ -45,7 +45,7 @@ function A(e) {
     })
   }, [t, n, r]);
   return (0, l.jsxs)("li", {
-    className: _.command,
+    className: N.command,
     onClick: o,
     children: [(0, l.jsx)(s.Text, {
       variant: "text-sm/semibold",
@@ -91,45 +91,45 @@ function R(e) {
       C.dismissAppDetail()
     }, []),
     M = (0, s.useToken)(s.tokens.colors.BG_BASE_PRIMARY).hex(),
-    b = (0, p.default)("number" == typeof R ? "" : null == R ? void 0 : R.uri, null != M ? M : ""),
-    k = (0, f.getIconComponent)(u),
+    k = (0, p.default)("number" == typeof R ? "" : null == R ? void 0 : R.uri, null != M ? M : ""),
+    b = (0, f.getIconComponent)(u),
     P = i.useMemo(() => {
       var e, t;
       return (0, m.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
     }, [null === (n = u.application) || void 0 === n ? void 0 : n.description]);
   return (0, l.jsxs)(s.ScrollerNone, {
-    className: _.container,
+    className: N.container,
     fade: !0,
     children: [(0, l.jsx)("div", {
-      className: _.headerWhenSideCard,
+      className: N.headerWhenSideCard,
       style: {
-        backgroundColor: b
+        backgroundColor: k
       },
       children: (0, l.jsx)(s.Clickable, {
         "aria-label": I.default.Messages.CLOSE,
         onClick: O,
-        className: _.headerCloseButton,
+        className: N.headerCloseButton,
         children: (0, l.jsx)(h.default, {})
       })
     }), (0, l.jsxs)("div", {
-      className: _.contentContainer,
+      className: N.contentContainer,
       children: [(0, l.jsxs)("div", {
-        className: _.appIcon,
-        children: [(0, l.jsx)(k, {
+        className: N.appIcon,
+        children: [(0, l.jsx)(b, {
           channel: r,
           section: u,
           width: 72,
           height: 72
         }), (0, l.jsx)("div", {
-          className: _.appIconBorderThingy
+          className: N.appIconBorderThingy
         })]
       }), (0, l.jsxs)("section", {
         children: [(0, l.jsx)(s.Heading, {
-          className: _.appName,
+          className: N.appName,
           variant: "heading-lg/bold",
           children: u.name
         }), (0, l.jsx)(s.Text, {
-          className: o(_.appDescription, N.markup),
+          className: o(N.appDescription, _.markup),
           variant: "text-sm/medium",
           lineClamp: 3,
           children: P
@@ -138,12 +138,12 @@ function R(e) {
         commands: y,
         channel: r
       }), (0, l.jsxs)("div", {
-        className: _.commandListHeader,
+        className: N.commandListHeader,
         children: [(0, l.jsx)(s.Heading, {
           variant: "text-md/medium",
           children: "All Commands"
         }), (0, l.jsxs)(s.Text, {
-          className: _.sortSelector,
+          className: N.sortSelector,
           variant: "text-md/medium",
           children: ["Popular", (0, l.jsx)(E.default, {})]
         })]

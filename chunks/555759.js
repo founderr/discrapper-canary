@@ -12,7 +12,7 @@ async function r(e, t, i) {
   let {
     hasSpotifyAccount: r,
     activity: d,
-    user: o
+    user: s
   } = e;
-  (0, u.default)(r) && null != d && null != d.sync_id && (await (0, l.ensureSpotifyPlayable)(), n.play(d, o.id), (0, a.default)(t, o, d, i))
+  (0, u.default)(r) && null != d && null != d.sync_id && (await (0, l.ensureSpotifyPlayable)(), n.play(d, s.id), (0, a.default)(t, s, d, i))
 }

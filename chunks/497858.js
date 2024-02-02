@@ -22,35 +22,35 @@ var l = n("884691"),
   g = n("958706");
 
 function C(e, t, n) {
-  var C, T, v, y, x, I, _;
+  var C, T, v, y, x, I, N;
   let {
-    channel: N,
+    channel: _,
     type: A
-  } = e, [R, O] = l.useState(() => (0, m.createInitialState)()), M = (0, i.useForceUpdate)(), b = (0, r.useStateFromStores)([d.default], () => {
+  } = e, [R, O] = l.useState(() => (0, m.createInitialState)()), M = (0, i.useForceUpdate)(), k = (0, r.useStateFromStores)([d.default], () => {
     if (null != e.guild) {
       var t;
       return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, S.CLYDE_AI_USER_ID)
     }
     return !1
-  }), k = (0, u.useClydeEnabled)(e.guild, e.channel) && !b && !(0, u.canUseCustomClydeProfiles)(e.guild), P = (0, r.useStateFromStores)([d.default, p.default], () => {
+  }), b = (0, u.useClydeEnabled)(e.guild, e.channel) && !k && !(0, u.canUseCustomClydeProfiles)(e.guild), P = (0, r.useStateFromStores)([d.default, p.default], () => {
     var e, t;
     let n = p.default.getCurrentUser();
-    return null !== (t = null != N.guild_id && null != n ? null === (e = d.default.getMember(N.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+    return null !== (t = null != _.guild_id && null != n ? null === (e = d.default.getMember(_.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
   }), {
     canMentionEveryone: L,
     hidePersonalInformation: U
   } = (0, r.useStateFromStoresObject)([c.default, f.default], () => {
-    let e = N.isPrivate();
+    let e = _.isPrivate();
     return {
-      canMentionEveryone: e || P || A === a.ChatInputTypes.RULES_INPUT || c.default.can(E.Permissions.MENTION_EVERYONE, N),
+      canMentionEveryone: e || P || A === a.ChatInputTypes.RULES_INPUT || c.default.can(E.Permissions.MENTION_EVERYONE, _),
       hidePersonalInformation: f.default.hidePersonalInformation
     }
-  }, [N, A, P]), {
+  }, [_, A, P]), {
     activeCommand: j,
     activeCommandOption: D
   } = (0, r.useStateFromStoresObject)([s.default], () => ({
-    activeCommand: s.default.getActiveCommand(N.id),
-    activeCommandOption: s.default.getActiveOption(N.id)
+    activeCommand: s.default.getActiveCommand(_.id),
+    activeCommandOption: s.default.getActiveOption(_.id)
   })), w = (0, h.default)({
     navId: "channel-autocomplete",
     scrollerRef: n,
@@ -63,14 +63,14 @@ function C(e, t, n) {
     activeCommandOption: D,
     canMentionUsers: null !== (x = null === (T = A.users) || void 0 === T ? void 0 : T.allowMentioning) && void 0 !== x && x,
     canMentionEveryone: L,
-    canMentionClyde: k,
+    canMentionClyde: b,
     hidePersonalInformation: U,
     hideMentionDescription: A === a.ChatInputTypes.RULES_INPUT,
     emojiIntention: A === a.ChatInputTypes.RULES_INPUT ? g.EmojiIntention.COMMUNITY_CONTENT : g.EmojiIntention.CHAT,
     currentWord: null !== (I = null == B ? void 0 : B.word) && void 0 !== I ? I : "",
     currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
     optionText: null != D ? (0, o.getString)({
-      [D.name]: null !== (_ = null === (v = e.editorRef.current) || void 0 === v ? void 0 : v.getCurrentCommandOptionValue()) && void 0 !== _ ? _ : []
+      [D.name]: null !== (N = null === (v = e.editorRef.current) || void 0 === v ? void 0 : v.getCurrentCommandOptionValue()) && void 0 !== N ? N : []
     }, D.name) : ""
   }, [F] = l.useState(() => new m.default(H));
   return l.useEffect(() => {

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("446674"),
-  i = n("567469"),
-  u = n("998716"),
+  u = n("567469"),
+  i = n("998716"),
   a = n("834052"),
   r = n("42203"),
   s = n("305961");
@@ -24,7 +24,7 @@ function d(e) {
   } = e, E = (0, l.useStateFromStores)([s.default, r.default], () => {
     var e;
     return s.default.getGuild(null === (e = r.default.getChannel(t)) || void 0 === e ? void 0 : e.getGuildId())
-  }, [t]), v = (0, l.useStateFromStores)([a.default], () => a.default.getStageInstanceByChannel(t), [t]), g = (0, i.useStageParticipants)(t, u.StageChannelParticipantNamedIndex.SPEAKER), S = (0, i.useStageParticipantsCount)(t), h = null != v ? g : o, m = (null != v ? S : c) - h.length;
+  }, [t]), v = (0, l.useStateFromStores)([a.default], () => a.default.getStageInstanceByChannel(t), [t]), g = (0, u.useStageParticipants)(t, i.StageChannelParticipantNamedIndex.SPEAKER), S = (0, u.useStageParticipantsCount)(t), h = null != v ? g : o, m = (null != v ? S : c) - h.length;
   return {
     channelId: t,
     guild: null != E ? E : n,

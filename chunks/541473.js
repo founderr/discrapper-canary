@@ -10,8 +10,8 @@ var n = i("203288"),
   u = i("42203"),
   r = i("957255"),
   d = i("18494"),
-  o = i("800762");
-class s extends Error {}
+  s = i("800762");
+class o extends Error {}
 async function c(e) {
   let {
     channelId: t,
@@ -23,13 +23,13 @@ async function c(e) {
     bypassGuildIdCheck: !0,
     bypassChangeModal: c,
     channel: f,
-    connected: o.default.isInChannel(t),
+    connected: s.default.isInChannel(t),
     needSubscriptionToAccess: (0, a.getChannelRoleSubscriptionStatus)(t, u.default, n.default, r.default).needSubscriptionToAccess
   });
   if (!_) return !1;
   let E = new Promise((e, n) => {
     let l = setTimeout(() => {
-      n(new s("Joining voice channel has timed out."))
+      n(new o("Joining voice channel has timed out."))
     }, i);
     d.default.addConditionalChangeListener(() => {
       let i = d.default.getVoiceChannelId();
@@ -39,7 +39,7 @@ async function c(e) {
   try {
     await E
   } catch (e) {
-    if (e instanceof s) return !1;
+    if (e instanceof o) return !1;
     throw e
   }
   return !0

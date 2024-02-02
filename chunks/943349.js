@@ -17,8 +17,8 @@ var n, l, a = i("446674"),
   u = i("42203"),
   r = i("305961"),
   d = i("957255"),
-  o = i("702173"),
-  s = i("49111"),
+  s = i("702173"),
+  o = i("49111"),
   c = i("782340");
 
 function f(e) {
@@ -29,14 +29,14 @@ function f(e) {
     PermissionStore: l
   } = e, a = i.getChannel(t);
   if (null == a) return 3;
-  if (!(0, o.isPrivateChannelWithEnabledActivities)(a.id)) {
+  if (!(0, s.isPrivateChannelWithEnabledActivities)(a.id)) {
     let e = a.getGuildId();
     if (null == e) return 4;
     let t = n.getGuild(e);
     if ((null == t ? void 0 : t.afkChannelId) === a.id) return 5;
-    let i = l.can(s.Permissions.CONNECT, a);
+    let i = l.can(o.Permissions.CONNECT, a);
     if (!i) return 2;
-    let u = l.can(s.Permissions.USE_EMBEDDED_ACTIVITIES, a);
+    let u = l.can(o.Permissions.USE_EMBEDDED_ACTIVITIES, a);
     if (!u) return 1
   }
   return 0

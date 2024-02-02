@@ -7,7 +7,7 @@ i.r(t), i.d(t, {
     return d
   },
   getMetadata: function() {
-    return o
+    return s
   }
 }), i("70102");
 var n = i("872717"),
@@ -24,7 +24,7 @@ function r(e, t) {
 }
 
 function d(e, t) {
-  o(e, t).then(i => l.default.dispatch({
+  s(e, t).then(i => l.default.dispatch({
     type: "ACTIVITY_PLAY",
     activity: e,
     userId: t,
@@ -36,7 +36,7 @@ function d(e, t) {
   }))
 }
 
-function o(e, t) {
+function s(e, t) {
   let i = e.metadata;
   if (null != i) return Promise.resolve(i);
   let r = a.default.getActivityMetadata(t);

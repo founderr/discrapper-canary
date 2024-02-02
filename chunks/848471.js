@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return I
   },
   default: function() {
-    return _
+    return N
   }
 }), n("222007");
 var l = n("37983"),
@@ -39,19 +39,19 @@ function I(e) {
   } = e, a = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor();
   return null == a ? null : (0, l.jsxs)("div", {
     className: x.buttons,
-    children: [(0, l.jsx)(N, {
+    children: [(0, l.jsx)(_, {
       slateEditor: a,
       markdownSyntax: "bold",
       children: (0, l.jsx)(c.default, {
         className: o(x.icon, r)
       })
-    }), (0, l.jsx)(N, {
+    }), (0, l.jsx)(_, {
       slateEditor: a,
       markdownSyntax: "italics",
       children: (0, l.jsx)(p.default, {
         className: o(x.icon, r)
       })
-    }), (0, l.jsx)(N, {
+    }), (0, l.jsx)(_, {
       slateEditor: a,
       markdownSyntax: "strikethrough",
       children: (0, l.jsx)(h.default, {
@@ -65,13 +65,13 @@ function I(e) {
       children: (0, l.jsx)(d.default, {
         className: o(x.icon, r)
       })
-    }), (0, l.jsx)(N, {
+    }), (0, l.jsx)(_, {
       slateEditor: a,
       markdownSyntax: "inlineCode",
       children: (0, l.jsx)(f.default, {
         className: o(x.icon, r)
       })
-    }), (0, l.jsx)(N, {
+    }), (0, l.jsx)(_, {
       slateEditor: a,
       markdownSyntax: "spoiler",
       children: (0, l.jsx)(m.default, {
@@ -80,7 +80,7 @@ function I(e) {
     })]
   })
 }
-var _ = i.forwardRef(function(e, t) {
+var N = i.forwardRef(function(e, t) {
   var n;
   let {
     editorRef: r,
@@ -151,11 +151,11 @@ var _ = i.forwardRef(function(e, t) {
       x: g + (C - g) / 2,
       y
     }
-  }, [o, c, r]), [_, N] = i.useState(0), [A, O] = i.useState(0);
+  }, [o, c, r]), [N, _] = i.useState(0), [A, O] = i.useState(0);
   if (i.useLayoutEffect(() => {
       if (null == T || null == y || null == d.current) return;
       let e = d.current.getBoundingClientRect();
-      O(e.width / 2), N(e.height + 12)
+      O(e.width / 2), _(e.height + 12)
     }, [T, y]), null == T || null == y) return null;
   let M = null === (n = r.current) || void 0 === n ? void 0 : n.getSlateEditor();
   return null == M ? null : (0, l.jsx)(E.default, {
@@ -164,7 +164,7 @@ var _ = i.forwardRef(function(e, t) {
       ref: d,
       className: x.toolbar,
       style: {
-        top: y - _,
+        top: y - N,
         left: T - A
       },
       onMouseDown: e => {
@@ -183,7 +183,7 @@ var _ = i.forwardRef(function(e, t) {
   })
 });
 
-function N(e) {
+function _(e) {
   let {
     slateEditor: t,
     markdownSyntax: n,

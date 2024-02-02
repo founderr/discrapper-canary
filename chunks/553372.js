@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return M
   },
   PreviewButton: function() {
-    return b
+    return k
   },
   default: function() {
-    return k
+    return b
   }
 });
 var l = n("37983"),
@@ -32,8 +32,8 @@ var l = n("37983"),
   y = n("235004"),
   x = n("389480"),
   I = n("78581"),
-  _ = n("23106"),
-  N = n("796864"),
+  N = n("23106"),
+  _ = n("796864"),
   A = n("172858"),
   R = n("782340"),
   O = n("955761");
@@ -61,7 +61,7 @@ function M(e) {
   })
 }
 
-function b(e) {
+function k(e) {
   let {
     sound: t,
     previewSound: n,
@@ -83,10 +83,10 @@ function b(e) {
     })
   })
 }
-var k = i.forwardRef(function(e, t) {
+var b = i.forwardRef(function(e, t) {
   var n, r, T;
   let {
-    sound: k,
+    sound: b,
     channel: P,
     className: L,
     focused: U,
@@ -104,14 +104,14 @@ var k = i.forwardRef(function(e, t) {
     name: Y,
     emojiId: q,
     emojiName: z
-  } = k, Q = (0, a.useStateFromStores)([h.default], () => h.default.getCurrentUser()), X = (0, N.useSoundButtonContextMenu)(k, null == P ? void 0 : P.guild_id), {
+  } = b, Q = (0, a.useStateFromStores)([h.default], () => h.default.getCurrentUser()), X = (0, _.useSoundButtonContextMenu)(b, null == P ? void 0 : P.guild_id), {
     playSoundboardSound: Z,
     previewSound: J,
     isPlayingSound: $
-  } = (0, _.default)(k, null !== (n = null == P ? void 0 : P.id) && void 0 !== n ? n : null), {
+  } = (0, N.default)(b, null !== (n = null == P ? void 0 : P.id) && void 0 !== n ? n : null), {
     createMultipleConfettiAt: ee
   } = i.useContext(m.ConfettiCannonContext), et = i.useRef(null);
-  let en = (r = k.soundId, T = et.current, i.useMemo(() => {
+  let en = (r = b.soundId, T = et.current, i.useMemo(() => {
       if (null == T || "1" !== r) return {
         x: 0,
         y: 0
@@ -125,12 +125,12 @@ var k = i.forwardRef(function(e, t) {
     el = (0, a.useStateFromStores)([p.default], () => p.default.useReducedMotion),
     ei = i.useRef(.01),
     er = i.useRef(new u.Interval),
-    eo = "1" === k.soundId,
+    eo = "1" === b.soundId,
     es = (0, a.useStateFromStores)([y.default], () => y.default.isFavoriteSound(W), [W]),
-    ea = "sound-".concat(k.soundId),
+    ea = "sound-".concat(b.soundId),
     eu = (0, s.useListItem)(ea),
     ed = null != q || null != z,
-    ec = !(0, I.canUseSoundboardSound)(Q, k, P),
+    ec = !(0, I.canUseSoundboardSound)(Q, b, P),
     ef = j || w && !ec;
 
   function ep(e) {
@@ -142,8 +142,8 @@ var k = i.forwardRef(function(e, t) {
       disabled: !D && !j,
       onClick: ep,
       text: R.default.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
-        emojiName: k.emojiName,
-        soundName: k.name
+        emojiName: b.emojiName,
+        soundName: b.name
       }),
       children: es ? (0, l.jsx)(S.default, {
         className: o(O.secondaryIcon, O.favoriteIconFavorite),
@@ -153,8 +153,8 @@ var k = i.forwardRef(function(e, t) {
       })
     })
   }
-  let eh = b({
-      sound: k,
+  let eh = k({
+      sound: b,
       previewSound: J,
       disabled: ec
     }),
@@ -188,8 +188,8 @@ var k = i.forwardRef(function(e, t) {
         role: "button"
       },
       "aria-label": R.default.Messages.SOUNDBOARD_PLAY_SOUND.format({
-        emojiName: k.emojiName,
-        soundName: k.name
+        emojiName: b.emojiName,
+        soundName: b.name
       }),
       className: o(L, O.soundButton, {
         [O.playing]: $,
@@ -252,7 +252,7 @@ var k = i.forwardRef(function(e, t) {
             return eE()
         }
       }()]
-    }), !k.available && (0, l.jsx)(c.Tooltip, {
+    }), !b.available && (0, l.jsx)(c.Tooltip, {
       text: R.default.Messages.SOUNDBOARD_SOUND_DISABLED_PREMIUM_TIER_LOST,
       children: e => (0, l.jsx)("div", {
         className: O.unavailableTooltip,

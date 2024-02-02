@@ -24,14 +24,14 @@ var l, i, r = n("37983"),
   y = n("41170"),
   x = n("591522"),
   I = n("209069"),
-  _ = n("845579"),
-  N = n("945330"),
+  N = n("845579"),
+  _ = n("945330"),
   A = n("587974"),
   R = n("599110"),
   O = n("510500"),
   M = n("171209"),
-  b = n("49111"),
-  k = n("782340"),
+  k = n("49111"),
+  b = n("782340"),
   P = n("612729");
 let L = (0, c.cssValueToNumber)(f.default.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
   U = (0, c.cssValueToNumber)(f.default.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
@@ -188,7 +188,7 @@ var H = o.memo(function(e) {
     }),
     es = (e, t) => {
       if (er) {
-        if (R.default.track(b.AnalyticEvents.AUTO_SUGGEST_EXPRESSION_SELECTED, {
+        if (R.default.track(k.AnalyticEvents.AUTO_SUGGEST_EXPRESSION_SELECTED, {
             sticker_id: e.id,
             suggestion_trigger: W
           }), t === g.StickerSendability.SENDABLE) U(!0), s(e, T.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), V("");
@@ -278,9 +278,9 @@ var H = o.memo(function(e) {
                 maxWidth: D
               },
               variant: "text-sm/normal",
-              children: null != j ? k.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_NAME.format({
+              children: null != j ? b.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_NAME.format({
                 stickerName: null === (t = Z[+j]) || void 0 === t ? void 0 : t.sticker.name
-              }) : k.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_SHORT_NAV_PROMPT.format({
+              }) : b.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_SHORT_NAV_PROMPT.format({
                 upHook: (e, t) => (0, r.jsx)(p.KeyCombo, {
                   shortcut: "up",
                   className: P.keybind
@@ -288,16 +288,16 @@ var H = o.memo(function(e) {
               })
             }), (0, r.jsx)(p.Clickable, {
               onClick: () => {
-                R.default.track(b.AnalyticEvents.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+                R.default.track(k.AnalyticEvents.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                   enabled: !1,
                   location: {
-                    section: b.AnalyticsSections.EXPRESSION_PICKER
+                    section: k.AnalyticsSections.EXPRESSION_PICKER
                   }
-                }), _.ExpressionSuggestionsEnabled.updateSetting(!1)
+                }), N.ExpressionSuggestionsEnabled.updateSetting(!1)
               },
               children: (0, r.jsx)(p.Tooltip, {
-                text: k.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_DISABLE,
-                children: e => (0, r.jsx)(N.default, {
+                text: b.default.Messages.EXPRESSION_SUGGESTIONS_STICKER_DISABLE,
+                children: e => (0, r.jsx)(_.default, {
                   ...e,
                   className: P.closeIcon
                 })

@@ -33,9 +33,9 @@ var l = n("37983"),
       location: "ec41f5_1"
     }, {
       autoTrackExposure: !0
-    }), x = y ? g.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : v ? g.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : g.default.Messages.SHARE_NITRO_TOOLTIP, I = y ? g.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [_, N] = i.useState(!1), [A, R] = i.useState(!1), O = (0, s.default)(null, () => R(!1)), {
+    }), x = y ? g.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : v ? g.default.Messages.SHARE_NITRO_RESEND_TOOLTIP : g.default.Messages.SHARE_NITRO_TOOLTIP, I = y ? g.default.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null, [N, _] = i.useState(!1), [A, R] = i.useState(!1), O = (0, s.default)(null, () => R(!1)), {
       analyticsLocations: M
-    } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), b = T.isDM() && void 0 !== T.recipients ? T.recipients[0] : null, k = (0, a.default)();
+    } = (0, d.default)(u.default.REFERRAL_TRIALS_COMPOSER_BUTTON), k = T.isDM() && void 0 !== T.recipients ? T.recipients[0] : null, b = (0, a.default)();
     return t ? null : (0, l.jsxs)("div", {
       ref: O,
       className: C.buttonContainer,
@@ -51,14 +51,14 @@ var l = n("37983"),
         "aria-label": null != I ? I : x,
         children: e => (0, l.jsx)("div", {
           onMouseEnter: () => {
-            !A && !_ && (N(!0), h.default.track(E.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
+            !A && !N && (_(!0), h.default.track(E.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
               location_stack: M,
               step: S.ReferralTrialsAnalyticSteps.BADGE_TOOLTIP_VIEWED,
-              other_user_id: Number(b)
+              other_user_id: Number(k)
             }))
           },
           onMouseLeave: () => {
-            N(!1)
+            _(!1)
           },
           children: (0, l.jsx)(p.default, {
             ...e,
@@ -70,15 +70,15 @@ var l = n("37983"),
               R(e => !e), h.default.track(E.AnalyticEvents.SHARE_NITRO_FLOW_STEPS, {
                 location_stack: M,
                 step: S.ReferralTrialsAnalyticSteps.BADGE_CLICKED,
-                other_user_id: Number(b)
+                other_user_id: Number(k)
               })
             },
             children: (0, l.jsx)(m.default, {
               referralsRemaining: n,
-              hovered: _,
+              hovered: N,
               isResending: v,
               shouldShowBirthdayUX: y,
-              isLightTheme: (0, o.isThemeLight)(k)
+              isLightTheme: (0, o.isThemeLight)(b)
             })
           })
         })

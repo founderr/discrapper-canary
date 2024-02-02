@@ -19,8 +19,8 @@ var n = i("376556"),
   u = i("613691"),
   r = i("155815"),
   d = i("662285"),
-  o = i("450484"),
-  s = i("49111");
+  s = i("450484"),
+  o = i("49111");
 let c = 30 * a.default.Millis.SECOND;
 
 function f(e) {
@@ -32,7 +32,7 @@ function _() {
   if (null != e) return Promise.resolve(e);
   if (!r.default.isProtocolRegistered()) return Promise.reject(Error("protocol is not registered"));
   let t = d.default.getPlayableComputerDevices();
-  if (l.default.isObservedAppRunning(n.default.get(s.PlatformTypes.SPOTIFY).name) && t.length > 0) {
+  if (l.default.isObservedAppRunning(n.default.get(o.PlatformTypes.SPOTIFY).name) && t.length > 0) {
     let {
       socket: e,
       device: i
@@ -59,7 +59,7 @@ function _() {
           })
         }))
       };
-    d.default.addChangeListener(l), window.open("".concat(o.SPOTIFY_APP_PROTOCOL, ":"))
+    d.default.addChangeListener(l), window.open("".concat(s.SPOTIFY_APP_PROTOCOL, ":"))
   })
 }
 

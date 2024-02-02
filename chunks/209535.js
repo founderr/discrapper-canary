@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(e), r.d(e, {
   getRedirectPath: function() {
-    return o
+    return u
   },
   default: function() {
-    return u
+    return c
   }
 });
-var a = n("37983");
-n("884691");
-var s = n("803182"),
-  l = n("447669"),
-  i = n("49111"),
-  r = n("492397");
+var n = r("37983");
+r("884691");
+var o = r("803182"),
+  a = r("447669"),
+  i = r("49111"),
+  l = r("492397");
 
-function o() {
-  let e = location.pathname + location.search,
-    t = r.CONFERENCE_MODE_ENABLED ? i.Routes.REGISTER : (0, l.getLoginPath)(e, !1);
-  return t
+function u() {
+  let t = location.pathname + location.search,
+    e = l.CONFERENCE_MODE_ENABLED ? i.Routes.REGISTER : (0, a.getLoginPath)(t, !1);
+  return e
 }
-var u = function() {
-  return (0, a.jsx)(s.Redirect, {
-    to: o()
+var c = function() {
+  return (0, n.jsx)(o.Redirect, {
+    to: u()
   })
 }

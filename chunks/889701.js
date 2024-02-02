@@ -26,14 +26,14 @@ var l = n("37983"),
   y = n("697218"),
   x = n("599110"),
   I = n("159885"),
-  _ = n("570759"),
-  N = n("866353"),
+  N = n("570759"),
+  _ = n("866353"),
   A = n("178207"),
   R = n("256860"),
   O = n("364685"),
   M = n("161585"),
-  b = n("585948"),
-  k = n("234175"),
+  k = n("585948"),
+  b = n("234175"),
   P = n("451300"),
   L = n("668333"),
   U = n("313790"),
@@ -71,7 +71,7 @@ let F = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       ee = i.useRef(null),
       et = i.useRef(null),
       en = i.useRef(null),
-      el = (0, _.useStickerPickerUpsellStore)(e => e.showPremiumUpsell),
+      el = (0, N.useStickerPickerUpsellStore)(e => e.showPremiumUpsell),
       [ei, er] = (0, h.useExpressionPickerStore)(e => [e.searchQuery, e.isSearchSuggestion], s.default),
       eo = i.useRef("");
     i.useImperativeHandle(t, () => ({
@@ -106,8 +106,8 @@ let F = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         rowCount: ey,
         rowCountBySection: ex,
         stickersGrid: eI,
-        gutterWidth: e_,
-        columnCounts: eN
+        gutterWidth: eN,
+        columnCounts: e_
       } = (0, R.useStickersGrid)({
         filteredStickers: ep,
         stickersCategories: es,
@@ -137,17 +137,17 @@ let F = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             });
             break;
           case M.StickerGridItemTypes.STICKER:
-            null != e.sticker && (0, N.isSendableSticker)(e.sticker, ef, u) && eT(e)
+            null != e.sticker && (0, _.isSendableSticker)(e.sticker, ef, u) && eT(e)
         }
       }, [q, ef, u, eT]),
       {
         getItemProps: eR,
         getRowProps: eO,
         gridContainerProps: eM,
-        handleGridContainerKeyDown: eb,
-        isUsingKeyboardNavigation: ek
-      } = (0, b.useKeyboardNavigation)({
-        columnCounts: eN,
+        handleGridContainerKeyDown: ek,
+        isUsingKeyboardNavigation: eb
+      } = (0, k.useKeyboardNavigation)({
+        columnCounts: e_,
         stickersListRef: et,
         stickersGrid: eI,
         onGridItemSelect: eA,
@@ -192,7 +192,7 @@ let F = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         className: H.header,
         children: (0, l.jsx)(U.default, {
           ref: en,
-          onKeyDown: eb,
+          onKeyDown: ek,
           stickersListRef: et,
           channel: u
         })
@@ -212,8 +212,8 @@ let F = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             getStickerItemProps: eR,
             getStickerRowProps: eO,
             gridWidth: eu,
-            gutterWidth: e_,
-            isUsingKeyboardNavigation: ek,
+            gutterWidth: eN,
+            isUsingKeyboardNavigation: eb,
             onSelectSticker: eT,
             rowCount: ey,
             rowCountBySection: ex,
@@ -221,7 +221,7 @@ let F = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             stickersGrid: eI,
             channel: u
           }) : null
-        }), (0, l.jsx)(k.default, {
+        }), (0, l.jsx)(b.default, {
           stickersListRef: et,
           channel: u
         })]

@@ -15,8 +15,8 @@ function a(e) {
     applicationId: u,
     partyId: r,
     messageId: d,
-    locationObject: o,
-    analyticsLocations: s
+    locationObject: s,
+    analyticsLocations: o
   } = e;
   n.default.track(l.AnalyticEvents.APPLICATION_OPENED, {
     type: t,
@@ -25,7 +25,7 @@ function a(e) {
     party_id: null != r ? r : void 0,
     other_user_id: a,
     message_id: d,
-    location: o,
-    location_stack: s
+    location: s,
+    location_stack: o
   })
 }

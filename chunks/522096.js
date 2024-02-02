@@ -31,14 +31,14 @@ function d(e) {
     renderInspector: y,
     renderEmptySearchState: x,
     renderCategoryList: I,
-    renderHeaderAccessories: _,
-    rowHeight: N,
+    renderHeaderAccessories: N,
+    rowHeight: _,
     sectionHeaderHeight: A,
     sectionFooterHeight: R,
     itemNodeWidth: O,
     listPaddingRight: M,
-    itemNodeMargin: b,
-    listPadding: k,
+    itemNodeMargin: k,
+    listPadding: b,
     gridNavigatorId: P,
     gridNotice: L,
     renderHeader: U
@@ -58,7 +58,7 @@ function d(e) {
     gridWidth: G,
     listPaddingRight: M,
     itemNodeWidth: O,
-    itemNodeMargin: b
+    itemNodeMargin: k
   }), {
     getItemProps: z,
     getRowProps: Q,
@@ -99,7 +99,7 @@ function d(e) {
       gridNavigatorId: P,
       defaultSearchPlaceholder: h,
       emptySearchPlaceholder: E
-    }), null == _ ? void 0 : _()]
+    }), null == N ? void 0 : N()]
   });
   return (0, l.jsxs)(l.Fragment, {
     children: [null != U ? U(ei) : (0, l.jsxs)("div", {
@@ -118,7 +118,7 @@ function d(e) {
           ref: D,
           store: c,
           hasSearchResults: m,
-          listPadding: k,
+          listPadding: b,
           renderRow: $,
           renderSection: null != C ? ee : void 0,
           renderSectionHeader: null != T ? et : void 0,
@@ -127,7 +127,7 @@ function d(e) {
           renderEmptySearchState: x,
           rowCount: V,
           rowCountBySection: W,
-          rowHeight: N,
+          rowHeight: _,
           sectionHeaderHeight: A,
           sectionFooterHeight: R
         }) : null

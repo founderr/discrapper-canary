@@ -11,15 +11,15 @@ var l = i("77078"),
   u = i("135230"),
   r = i("550766"),
   d = i("648456"),
-  o = i("782340");
-class s extends d.default {
+  s = i("782340");
+class o extends d.default {
   showErrorModal(e) {
     let {
       code: t,
       message: i
     } = e;
     (0, l.openModalLazy)(async () => e => (0, n.jsx)(u.default, {
-      title: o.default.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
+      title: s.default.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
         code: t
       }),
       body: i,
@@ -28,7 +28,7 @@ class s extends d.default {
   }
   showLaunchErrorModal(e) {
     (0, l.openModalLazy)(async () => t => (0, n.jsx)(u.default, {
-      title: o.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+      title: s.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
       body: e,
       ...t
     }))
@@ -56,4 +56,4 @@ class s extends d.default {
     }
   }
 }
-var c = new s
+var c = new o

@@ -40,8 +40,8 @@ var s = n("37983"),
   b = n("250375"),
   G = n("49111"),
   B = n("988268"),
-  F = n("903639"),
-  k = n("894488"),
+  k = n("903639"),
+  F = n("894488"),
   w = n("782340"),
   H = n("180094");
 
@@ -198,7 +198,7 @@ function Z(e) {
       popouts: n,
       selected: s,
       setPopout: a
-    } = (0, C.default)(e.id, k.DEFAULT_POPOUTS), {
+    } = (0, C.default)(e.id, F.DEFAULT_POPOUTS), {
       usernameProfile: i,
       avatarProfile: r
     } = n, o = (0, S.useContextMenuUser)(e.author.id, t.id), u = (0, S.useContextMenuModerateUser)(e.author.id, t.id, e.id), d = (0, S.useClickMessageAuthorUsername)(e, t, i, a), c = (0, S.useClickMessageAuthorAvatar)(r, a), E = l.useCallback(() => a({
@@ -230,7 +230,7 @@ function Z(e) {
       className: H.channelName,
       openChatWithoutConnecting: !0
     })
-  })), [a, Q]), ef = (0, F.getFriendlyDurationString)(Number(en)), e_ = null != es, eT = Z && null != et && (null == el || !el.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
+  })), [a, Q]), ef = (0, k.getFriendlyDurationString)(Number(en)), e_ = null != es, eT = Z && null != et && (null == el || !el.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
   return (0, s.jsx)("div", {
     onMouseEnter: g,
     onMouseLeave: O,

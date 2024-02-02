@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ITEM_HEIGHT: function() {
-    return k
+    return b
   },
   default: function() {
     return U
@@ -29,14 +29,14 @@ var l = n("37983"),
   y = n("524768"),
   x = n("389153"),
   I = n("586450"),
-  _ = n("41884"),
-  N = n("355263"),
+  N = n("41884"),
+  _ = n("355263"),
   A = n("317041"),
   R = n("49111"),
   O = n("782340"),
   M = n("253184"),
-  b = n("327769");
-let k = 56,
+  k = n("327769");
+let b = 56,
   P = [8, 8, 0, 8],
   L = a.debounce(() => {
     (0, c.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_BROWSER_SCROLLED)
@@ -82,7 +82,7 @@ var U = i.forwardRef(function(e, t) {
   }), Z = e => {
     let t = K.length,
       n = V.reduce((e, t) => e + t.data.length, 0) - (W ? 7 : 0),
-      l = 48 * t + n * k - 512;
+      l = 48 * t + n * b - 512;
     W && e + 420 > l && z(), X(e), L(), a.current = e
   };
   i.useEffect(() => {
@@ -141,7 +141,7 @@ var U = i.forwardRef(function(e, t) {
   let en = i.useCallback(e => {
       let t = K[e];
       if (null == t) return null;
-      let i = (0, N.getIconComponent)(t),
+      let i = (0, _.getIconComponent)(t),
         r = (0, l.jsx)(i, {
           channel: n,
           section: t,
@@ -171,7 +171,7 @@ var U = i.forwardRef(function(e, t) {
           message: O.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
             applicationName: i.name
           }),
-          noResultsImageURL: b,
+          noResultsImageURL: k,
           className: M.noSearchResults
         })]
       }, e)
@@ -181,7 +181,7 @@ var U = i.forwardRef(function(e, t) {
       let r = V[t.sectionIndex],
         o = r.data[t.sectionRowIndex],
         s = "".concat(r.section.id, ":").concat(null !== (i = null == o ? void 0 : o.id) && void 0 !== i ? i : e);
-      if (null == o || r.section.id !== o.applicationId && r.section.id !== A.BuiltInSectionId.FRECENCY || o.inputType === y.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(_.default, {}, s);
+      if (null == o || r.section.id !== o.applicationId && r.section.id !== A.BuiltInSectionId.FRECENCY || o.inputType === y.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(N.default, {}, s);
       let a = G.find(e => e.id === o.applicationId);
       return (0, l.jsx)(E.default.NewCommand, {
         index: e,
@@ -223,7 +223,7 @@ var U = i.forwardRef(function(e, t) {
       renderSectionHeader: en,
       rowCount: K.length,
       rowCountBySection: $,
-      rowHeight: k,
+      rowHeight: b,
       sectionHeaderHeight: 32,
       sectionMarginBottom: J,
       ref: w,

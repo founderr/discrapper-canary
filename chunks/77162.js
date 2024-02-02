@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return _
   }
 });
 var l = n("37983"),
@@ -26,19 +26,19 @@ var l = n("37983"),
   y = n("267005");
 let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
   I = (0, a.cssValueToNumber)(y.stickerPickerPreviewPadding),
-  _ = i.memo(function(e) {
+  N = i.memo(function(e) {
     let {
       isDisplayingIndividualStickers: t = !1,
       preferAnimation: r = !0,
       getStickerItemProps: a,
-      getStickerRowProps: _,
-      gutterWidth: N,
+      getStickerRowProps: N,
+      gutterWidth: _,
       inspectedStickerPosition: A,
       isScrolling: R,
       isUsingKeyboardNavigation: O,
       onInspect: M,
-      onSelect: b,
-      rowIndex: k,
+      onSelect: k,
+      rowIndex: b,
       stickerClassName: P,
       stickerDescriptors: L,
       stickerPadding: U = I,
@@ -51,11 +51,11 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
     } = e, {
       location: G
     } = (0, c.useAnalyticsContext)(), K = j + 2 * U, V = i.useMemo(() => ({
-      gridColumnGap: N,
+      gridColumnGap: _,
       gridTemplateColumns: "repeat(auto-fill, ".concat(K, "px)"),
       height: K,
       paddingRight: t ? void 0 : K
-    }), [t, N, K]), W = i.useMemo(() => ({
+    }), [t, _, K]), W = i.useMemo(() => ({
       width: j,
       height: j,
       padding: U
@@ -63,20 +63,20 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
     return (0, l.jsx)("div", {
       className: y.row,
       style: V,
-      ...null == _ ? void 0 : _(k),
+      ...null == N ? void 0 : N(b),
       children: L.map(e => {
         var c;
         let x = e.visibleRowIndex === (null == A ? void 0 : A.rowIndex) && e.columnIndex === (null == A ? void 0 : A.columnIndex),
           I = e.type === E.StickerGridItemTypes.STICKER && w && x,
-          _ = (0, s.throttle)(() => {
+          N = (0, s.throttle)(() => {
             (null == R ? void 0 : R.current) !== !0 && (null == O ? void 0 : O.current) !== !0 && !x && (null == M || M(e))
           }, 250),
           {
-            ref: N,
+            ref: _,
             tabIndex: L,
             onFocus: U,
             ...K
-          } = null !== (c = null == a ? void 0 : a(e.columnIndex, k)) && void 0 !== c ? c : {};
+          } = null !== (c = null == a ? void 0 : a(e.columnIndex, b)) && void 0 !== c ? c : {};
         switch (e.type) {
           case E.StickerGridItemTypes.CREATE_STICKER:
             return (0, l.jsx)("div", {
@@ -86,10 +86,10 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
                 className: o(y.createSticker, P, {
                   [y.createInspected]: x
                 }),
-                innerRef: N,
+                innerRef: _,
                 tabIndex: L,
-                onFocus: null != U ? U : _,
-                onMouseMove: _,
+                onFocus: null != U ? U : N,
+                onMouseMove: N,
                 onClick: () => {
                   e.type === E.StickerGridItemTypes.CREATE_STICKER && (m.default.track(T.AnalyticEvents.OPEN_MODAL, {
                     type: T.AnalyticsSections.CREATE_STICKER_MODAL,
@@ -128,12 +128,12 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
               className: o(y.sticker, P, {
                 [y.stickerInspected]: x
               }),
-              innerRef: N,
+              innerRef: _,
               tabIndex: L,
-              onFocus: null != U ? U : _,
-              onMouseMove: _,
+              onFocus: null != U ? U : N,
+              onMouseMove: N,
               onClick: t => {
-                (null == R ? void 0 : R.current) !== !0 && (null == O ? void 0 : O.current) !== !0 && (null == b || b(e, t))
+                (null == R ? void 0 : R.current) !== !0 && (null == O ? void 0 : O.current) !== !0 && (null == k || k(e, t))
               },
               onContextMenu: e => {
                 (0, d.openContextMenuLazy)(e, async () => {
@@ -176,4 +176,4 @@ let x = (0, a.cssValueToNumber)(y.stickerPickerPreviewDimensions),
       })
     })
   });
-var N = _
+var _ = N

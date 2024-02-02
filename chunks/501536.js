@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return M
   },
   getAutocompleteTitleId: function() {
-    return b
+    return k
   },
   default: function() {
     return U
@@ -32,8 +32,8 @@ var l = n("37983"),
   y = n("697218"),
   x = n("158998"),
   I = n("563911"),
-  _ = n("346955"),
-  N = n("548775"),
+  N = n("346955"),
+  _ = n("548775"),
   A = n("49111"),
   R = n("782340"),
   O = n("241970");
@@ -42,10 +42,10 @@ function M(e) {
   return null != e ? "autocomplete-".concat(e) : null
 }
 
-function b(e) {
+function k(e) {
   return "autocomplete-".concat(e, "-title")
 }
-let k = i.createContext(null);
+let b = i.createContext(null);
 class P extends i.PureComponent {
   isSelectable() {
     return this.selectable
@@ -122,7 +122,7 @@ class L extends i.PureComponent {
       id: r,
       ...s
     } = this.props;
-    return i.Children.count(e) > 0 ? (0, l.jsx)(k.Provider, {
+    return i.Children.count(e) > 0 ? (0, l.jsx)(b.Provider, {
       value: {
         id: null != r ? r : ""
       },
@@ -176,11 +176,11 @@ L.Generic = class e extends P {
     title: t,
     className: n,
     children: r
-  } = e, s = i.useContext(k);
+  } = e, s = i.useContext(b);
   return (0, l.jsx)("div", {
     className: O.base,
     children: (0, l.jsxs)(d.Heading, {
-      id: b(s.id),
+      id: k(s.id),
       className: o(O.contentTitle, n),
       variant: "heading-deprecated-12/semibold",
       children: [t, r]
@@ -265,7 +265,7 @@ L.Generic = class e extends P {
     let {
       channel: e,
       category: t
-    } = this.props, n = e.type === A.ChannelTypes.GUILD_CATEGORY ? _.default : (0, E.getChannelIconComponent)(e);
+    } = this.props, n = e.type === A.ChannelTypes.GUILD_CATEGORY ? N.default : (0, E.getChannelIconComponent)(e);
     return (0, l.jsxs)(I.AutocompleteRowContent, {
       children: [null != n && (0, l.jsx)(I.AutocompleteRowIcon, {
         children: (0, l.jsx)(n, {
@@ -287,7 +287,7 @@ L.Generic = class e extends P {
     } = this.props;
     return (0, l.jsxs)(I.AutocompleteRowContent, {
       children: [(0, l.jsx)(I.AutocompleteRowIcon, {
-        children: (0, l.jsx)(N.default, {
+        children: (0, l.jsx)(_.default, {
           className: O.icon,
           foreground: O.iconForeground
         })

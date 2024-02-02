@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   Emoji: function() {
-    return _
+    return N
   },
   CustomEmoji: function() {
-    return N
+    return _
   },
   TextMention: function() {
     return A
@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return M
   },
   SoundboardMention: function() {
-    return b
+    return k
   },
   StaticRouteMention: function() {
-    return k
+    return b
   },
   CommandMention: function() {
     return P
@@ -55,7 +55,7 @@ var i = n("446674"),
   x = n("503241"),
   I = n("632215");
 
-function _(e) {
+function N(e) {
   let {
     emoji: t
   } = e;
@@ -72,7 +72,7 @@ function _(e) {
   })
 }
 
-function N(e) {
+function _(e) {
   let {
     emoji: t
   } = e;
@@ -180,7 +180,7 @@ function M(e) {
   })
 }
 
-function b(e) {
+function k(e) {
   var t;
   let {
     id: n
@@ -190,7 +190,7 @@ function b(e) {
   })
 }
 
-function k(e) {
+function b(e) {
   let {
     id: t
   } = e, n = {

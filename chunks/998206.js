@@ -27,16 +27,16 @@ var l = n("37983"),
   x = n("782340"),
   I = n("851855");
 
-function _(e) {
+function N(e) {
   let {
     disabled: t,
     channel: n,
     markAsDismissed: r,
     visibleContent: S,
-    innerRef: _
-  } = e, N = (0, d.useAppContext)(), {
+    innerRef: N
+  } = e, _ = (0, d.useAppContext)(), {
     analyticsLocations: A
-  } = (0, E.default)(), R = N === T.AppContext.POPOUT, O = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), b = i.useCallback(() => {
+  } = (0, E.default)(), R = _ === T.AppContext.POPOUT, O = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), k = i.useCallback(() => {
     r(v.ContentDismissActionType.UNKNOWN), (0, h.default)({
       channel: M ? n : void 0,
       guildId: n.guild_id,
@@ -52,7 +52,7 @@ function _(e) {
     }), (0, p.fetchShelf)({
       guildId: n.guild_id
     })
-  }, [A, n, M, r, R]), k = () => {
+  }, [A, n, M, r, R]), b = () => {
     if (S === a.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, l.jsxs)("div", {
       className: I.sparkleContainer,
       children: [(0, l.jsx)(C.default, {
@@ -72,9 +72,9 @@ function _(e) {
     children: e => (0, l.jsxs)("div", {
       ...e,
       className: o(y.CHAT_INPUT_BUTTON_CLASSNAME, I.buttonContainer),
-      ref: _,
+      ref: N,
       children: [(0, l.jsx)(m.default, {
-        onClick: b,
+        onClick: k,
         tabIndex: 0,
         focusProps: {
           offset: {
@@ -84,20 +84,20 @@ function _(e) {
             right: -4
           }
         }
-      }), k()]
+      }), b()]
     })
   })
 }
-let N = [a.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
+let _ = [a.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
 var A = i.memo(i.forwardRef(function(e, t) {
   return (0, l.jsx)(S.default, {
-    contentTypes: N,
+    contentTypes: _,
     children: n => {
       let {
         visibleContent: i,
         markAsDismissed: r
       } = n;
-      return (0, l.jsx)(_, {
+      return (0, l.jsx)(N, {
         ...e,
         innerRef: t,
         visibleContent: i,

@@ -10,8 +10,8 @@ var n = i("404118"),
   u = i("645999"),
   r = i("653047"),
   d = i("42203"),
-  o = i("305961"),
-  s = i("957255"),
+  s = i("305961"),
+  o = i("957255"),
   c = i("697218"),
   f = i("800762"),
   _ = i("191225"),
@@ -27,23 +27,23 @@ async function T(e) {
     inputApplication: v,
     analyticsLocations: S,
     embeddedActivitiesManager: N
-  } = e, h = _.default.getEmbeddedActivitiesForChannel(i), D = h.find(e => e.applicationId === T && (null == C || e.instanceId === C)), p = v;
+  } = e, y = _.default.getEmbeddedActivitiesForChannel(i), h = y.find(e => e.applicationId === T && (null == C || e.instanceId === C)), p = v;
   if (null == p) {
     let e = await l.default.fetchApplication(T);
     p = r.default.createFromServer(e)
   }
-  if (null == D || null == p) return;
-  let y = c.default.getCurrentUser(),
+  if (null == h || null == p) return;
+  let D = c.default.getCurrentUser(),
     O = (0, I.default)({
-      userId: null == y ? void 0 : y.id,
+      userId: null == D ? void 0 : D.id,
       application: p,
       channelId: i,
-      currentUser: y,
+      currentUser: D,
       isActivitiesEnabledForCurrentPlatform: !0,
       ChannelStore: d.default,
       VoiceStateStore: f.default,
-      PermissionStore: s.default,
-      GuildStore: o.default
+      PermissionStore: o.default,
+      GuildStore: s.default
     }),
     g = _.default.getSelfEmbeddedActivityForChannel(i),
     L = null == g ? void 0 : g.applicationId,
@@ -94,8 +94,8 @@ async function T(e) {
   }({
     embeddedActivityJoinability: O,
     handleCanJoin: async function e() {
-      null != D && await (0, E.default)({
-        applicationId: D.applicationId,
+      null != h && await (0, E.default)({
+        applicationId: h.applicationId,
         currentEmbeddedApplication: m,
         activityChannelId: i,
         locationObject: {},

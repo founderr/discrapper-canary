@@ -27,16 +27,16 @@ var l = n("37983"),
     } = e, [C, T] = i.useState(!1), v = (0, a.useStateFromStores)([c.default], () => {
       var e, t;
       return C && Object.values(null !== (t = null === (e = c.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
-    }), [y, x, I] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], s.default), _ = i.useRef(0), N = i.useCallback(() => {
-      T(!0), clearTimeout(_.current), _.current = setTimeout(() => {
+    }), [y, x, I] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], s.default), N = i.useRef(0), _ = i.useCallback(() => {
+      T(!0), clearTimeout(N.current), N.current = setTimeout(() => {
         T(!1)
       }, 1500)
     }, []);
     i.useEffect(() => () => {
-      clearTimeout(_.current)
+      clearTimeout(N.current)
     }), (0, m.useComponentAction)({
       event: h.ComponentActions.FAVORITE_GIF,
-      handler: N
+      handler: _
     });
     let A = i.useCallback(() => {
       (0, d.toggleExpressionPicker)(E.ExpressionPickerViewType.GIF, r)

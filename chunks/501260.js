@@ -14,8 +14,8 @@ var n, l, a = i("446674"),
   u = i("42203"),
   r = i("305961"),
   d = i("957255"),
-  o = i("697218"),
-  s = i("800762"),
+  s = i("697218"),
+  o = i("800762"),
   c = i("404008"),
   f = i("126939"),
   _ = i("803353"),
@@ -29,19 +29,19 @@ function I(e) {
     application: u,
     channelId: r,
     currentUser: d,
-    isActivitiesEnabledForCurrentPlatform: o,
-    ChannelStore: s,
+    isActivitiesEnabledForCurrentPlatform: s,
+    ChannelStore: o,
     VoiceStateStore: f,
     PermissionStore: I,
     GuildStore: A
   } = e;
   if (null == l) return 8;
   if ((null == d ? void 0 : d.nsfwAllowed) === !1 && (null == u ? void 0 : null === (t = u.embeddedActivityConfig) || void 0 === t ? void 0 : t.requires_age_gate) === !0) return 7;
-  if (!o) return 5;
+  if (!s) return 5;
   if (!(0, _.default)(null == u ? void 0 : null === (i = u.embeddedActivityConfig) || void 0 === i ? void 0 : i.supported_platforms)) return 6;
   let T = null != r ? r : null === (n = f.getVoiceStateForSession(l, null == a ? void 0 : a.session_id)) || void 0 === n ? void 0 : n.channelId;
   if (null == T) return 4;
-  let C = s.getChannel(r);
+  let C = o.getChannel(r);
   if (null == C) return 4;
   let v = C.getGuildId();
   if (!C.isPrivate()) {
@@ -67,7 +67,7 @@ function A(e) {
     activity: i,
     channelId: n,
     application: l
-  } = e, c = (0, f.useIsActivitiesEnabledForCurrentPlatform)(), _ = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), E = (0, a.useStateFromStores)([u.default, s.default, d.default, r.default], () => I({
+  } = e, c = (0, f.useIsActivitiesEnabledForCurrentPlatform)(), _ = (0, a.useStateFromStores)([s.default], () => s.default.getCurrentUser()), E = (0, a.useStateFromStores)([u.default, o.default, d.default, r.default], () => I({
     userId: t,
     activity: i,
     application: l,
@@ -75,7 +75,7 @@ function A(e) {
     currentUser: _,
     isActivitiesEnabledForCurrentPlatform: c,
     ChannelStore: u.default,
-    VoiceStateStore: s.default,
+    VoiceStateStore: o.default,
     PermissionStore: d.default,
     GuildStore: r.default
   }), [i, l, n, _, c, t]);

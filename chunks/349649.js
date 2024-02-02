@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return o
+    return s
   }
 });
 var n = i("884691"),
@@ -11,16 +11,16 @@ var n = i("884691"),
   r = i("555179"),
   d = i("49111");
 
-function o(e) {
+function s(e) {
   let t = (0, l.useStateFromStores)([r.default], () => r.default.getNote(e));
   return n.useEffect(() => {
-    null == t && s(e)
+    null == t && o(e)
   }, [t, e]), null != t ? t : {
     loading: !0,
     note: null
   }
 }
-async function s(e) {
+async function o(e) {
   u.default.dispatch({
     type: "USER_NOTE_LOAD_START",
     userId: e

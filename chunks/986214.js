@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return D
+    return h
   }
 });
 var n = i("645999"),
@@ -10,8 +10,8 @@ var n = i("645999"),
   u = i("957255"),
   r = i("697218"),
   d = i("659500"),
-  o = i("427953"),
-  s = i("898065"),
+  s = i("427953"),
+  o = i("898065"),
   c = i("550766"),
   f = i("191225"),
   _ = i("544805"),
@@ -23,29 +23,29 @@ var n = i("645999"),
   v = i("578708"),
   S = i("702173"),
   N = i("954016"),
-  h = i("49111");
+  y = i("49111");
 
-function D(e) {
+function h(e) {
   let {
     activityItem: t,
     currentActivity: i,
-    locationObject: o,
-    channelId: s,
+    locationObject: s,
+    channelId: o,
     guildId: c,
     embeddedActivitiesManager: A,
     analyticsLocations: T
-  } = e, C = a.default.getGuild(c), v = r.default.getCurrentUser(), N = f.default.getConnectedActivityChannelId(), D = l.default.getChannel(N);
-  if (null == C && !(0, S.isPrivateChannelWithEnabledActivities)(s) || null == v || null == t) return Promise.resolve(!1);
+  } = e, C = a.default.getGuild(c), v = r.default.getCurrentUser(), N = f.default.getConnectedActivityChannelId(), h = l.default.getChannel(N);
+  if (null == C && !(0, S.isPrivateChannelWithEnabledActivities)(o) || null == v || null == t) return Promise.resolve(!1);
   let {
-    application: y,
+    application: D,
     activity: O
   } = t;
-  if (null == y) return Promise.resolve(!1);
-  if (null == s) return d.ComponentDispatch.dispatch(h.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
-    applicationId: y.id
+  if (null == D) return Promise.resolve(!1);
+  if (null == o) return d.ComponentDispatch.dispatch(y.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR, {
+    applicationId: D.id
   }), Promise.resolve(!1);
-  let g = null != s ? (0, I.getEmbeddedActivityLaunchability)({
-    channelId: s,
+  let g = null != o ? (0, I.getEmbeddedActivityLaunchability)({
+    channelId: o,
     ChannelStore: l.default,
     GuildStore: a.default,
     PermissionStore: u.default
@@ -59,30 +59,30 @@ function D(e) {
     }, t = O.requires_age_gate && null == v.nsfwAllowed;
     return t ? new Promise(t => {
       (0, _.confirmActivityAgeGate)({
-        application: y,
+        application: D,
         onAgree: () => t(p({
-          channelId: s,
+          channelId: o,
           guildId: null == C ? void 0 : C.id,
-          locationObject: o,
-          application: y,
+          locationObject: s,
+          application: D,
           analyticsLocations: T,
           bypassChangeVcModal: e
         })),
         onDisagree: () => t(!1)
       })
     }) : p({
-      channelId: s,
+      channelId: o,
       guildId: null == C ? void 0 : C.id,
-      locationObject: o,
-      application: y,
+      locationObject: s,
+      application: D,
       analyticsLocations: T,
       bypassChangeVcModal: e
     })
   };
   return null != i ? new Promise(e => {
-    (0, E.default)(i, D, () => {
+    (0, E.default)(i, h, () => {
       A.leaveActivity({
-        channelId: s,
+        channelId: o,
         applicationId: i.id
       }), e(L({
         bypassChangeVcModal: !0
@@ -108,12 +108,12 @@ async function p(e) {
       bypassChangeModal: d
     });
     if (!e) return !1
-  } else if (!(0, o.isActivitiesInTextEnabled)(_, "handleStartEmbeddedActivity") || !I) return !1;
+  } else if (!(0, s.isActivitiesInTextEnabled)(_, "handleStartEmbeddedActivity") || !I) return !1;
   return c.startEmbeddedActivity(t, a.id, u), (0, v.default)(i, t), (0, C.default)({
-    type: h.AnalyticsGameOpenTypes.LAUNCH,
+    type: y.AnalyticsGameOpenTypes.LAUNCH,
     userId: f.id,
     applicationId: a.id,
     locationObject: n,
     analyticsLocations: u
-  }), s.markActivityUsed(a.id), !0
+  }), o.markActivityUsed(a.id), !0
 }

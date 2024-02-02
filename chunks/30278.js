@@ -43,22 +43,22 @@ function I(e) {
     className: n,
     iconOnly: r,
     remaining: I
-  } = e, _ = (0, s.useStateFromStores)([h.default, m.default], () => {
+  } = e, N = (0, s.useStateFromStores)([h.default, m.default], () => {
     let e = m.default.getChannel(h.default.getChannelId());
     return (null == e ? void 0 : e.isPrivate()) ? C.AnalyticsPages.DM_CHANNEL : C.AnalyticsPages.GUILD_CHANNEL
   }), {
-    analyticsLocations: N
+    analyticsLocations: _
   } = (0, d.default)(u.default.PREMIUM_UPSELL), A = (0, c.usePremiumDiscountOffer)(), R = (0, f.usePremiumTrialOffer)(), O = (0, c.discountOfferHasTier)(A, T.PremiumSubscriptionSKUs.TIER_2), M = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.PremiumSubscriptionSKUs.TIER_2;
   return (i.useEffect(() => {
     g.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: "longer messages inline",
       location: {
-        location_page: _,
+        location_page: N,
         location_section: C.AnalyticsSections.CHANNEL_TEXT_AREA
       },
-      location_stack: N
+      location_stack: _
     })
-  }, [_, N]), (M || O) && I < 0) ? (0, l.jsx)(p.default, {
+  }, [N, _]), (M || O) && I < 0) ? (0, l.jsx)(p.default, {
     type: T.PremiumUpsellTypes.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
     subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
     context: I,
