@@ -21,11 +21,13 @@ let c = {},
 
 function I(e, t) {
   var n;
+  let a = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
   return {
     key: e.suggested_user.id,
     name: null === (n = s.first(e.reasons)) || void 0 === n ? void 0 : n.name,
     user: new o.default(e.suggested_user),
     mutualFriendsCount: e.mutual_friends_count,
+    contactNames: a,
     isUnseen: !t && !e.is_viewed
   }
 }(0, a.debounce)(e => d.default.viewSuggestions(e), 15e3);
