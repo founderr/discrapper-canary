@@ -191,7 +191,7 @@ function V(e, t) {
   } = function(e) {
     let t = e.filter(e => k(e) && (0, v.shouldRedactExplicitContent)(e)),
       n = e.map(e => {
-        if (null != e && "referenced_message" in e && null != e.referenced_message && k(e.referenced_message)) return e.referenced_message
+        if (null != e && "referenced_message" in e && null != e.referenced_message && k(e.referenced_message) && (0, v.shouldRedactExplicitContent)(e)) return e.referenced_message
       }).filter(function(e) {
         return null != e
       });
@@ -338,7 +338,7 @@ function z(e) {
         n = e.map(e => {
           if (T.MessageTypesWithLazyLoadedReferences.has(e.type) && null != e.messageReference) {
             let t = d.default.getMessageByReference(e.messageReference);
-            if (t.state === d.ReferencedMessageState.LOADED && null != t.message && k(t.message)) return t.message
+            if (t.state === d.ReferencedMessageState.LOADED && null != t.message && k(t.message) && (0, v.shouldRedactExplicitContent)(e)) return t.message
           }
         }).filter(function(e) {
           return null != e
