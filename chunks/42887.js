@@ -1101,17 +1101,19 @@ class tv extends E.default.Store {
     }), t
   }
   getSupportedSecureFramesProtocolVersion(e) {
-    let t = eC.getSupportedSecureFramesProtocolVersion(),
-      n = B.SecureFramesUserExperiment.getCurrentConfig({
+    var t;
+    let n = eC.getSupportedSecureFramesProtocolVersion(),
+      i = B.SecureFramesUserExperiment.getCurrentConfig({
         location: "MediaEngineStore"
       }),
-      i = null != e ? B.SecureFramesGuildExperiment.getCurrentConfig({
+      s = null != e ? B.SecureFramesGuildExperiment.getCurrentConfig({
         guildId: e,
         location: "MediaEngineStore"
       }) : null,
-      s = n.canSupportSecureFrames || (null == i ? void 0 : i.canSupportSecureFrames),
-      r = !(0, ee.isIOS)() && !(0, ee.isAndroid)() && (n.canSupportMls || (null == i ? void 0 : i.canSupportMls));
-    return s ? r ? t : t % 100 : 0
+      r = i.canSupportSecureFrames || (null == s ? void 0 : s.canSupportSecureFrames),
+      a = !(0, ee.isIOS)() && !(0, ee.isAndroid)() && (i.canSupportMls || (null == s ? void 0 : s.canSupportMls)),
+      o = Math.max(i.protocolVersionFloor, null !== (t = null == s ? void 0 : s.protocolVersionFloor) && void 0 !== t ? t : 0);
+    return r && n % 100 >= o ? a ? n : n % 100 : 0
   }
   hasClipsSource() {
     return null != a
