@@ -35,9 +35,9 @@ let R = !1,
   L = !1,
   M = !0,
   U = Object.freeze([]),
-  w = [];
+  k = [];
 
-function k(e) {
+function w(e) {
   return (0, p.shouldShareApplicationActivity)(e, I.default)
 }
 
@@ -45,17 +45,17 @@ function V(e) {
   switch (e.type) {
     case N.ActivityTypes.LISTENING:
       if ((0, c.default)(e)) return _.default.shouldShowActivity();
-      if (null != e.application_id) return k(e.application_id);
+      if (null != e.application_id) return w(e.application_id);
       return !1;
     case N.ActivityTypes.PLAYING:
-      return null != e.application_id ? k(e.application_id) : function(e) {
+      return null != e.application_id ? w(e.application_id) : function(e) {
         let t = S.default.getGameByName(e);
-        return null != t ? k(t.id) : h.ShowCurrentGame.getSetting()
+        return null != t ? w(t.id) : h.ShowCurrentGame.getSetting()
       }(e.name);
     case N.ActivityTypes.STREAMING:
     case N.ActivityTypes.WATCHING:
     default:
-      return null == e.application_id || k(e.application_id)
+      return null == e.application_id || w(e.application_id)
   }
 }
 
@@ -69,7 +69,7 @@ function G() {
   if (U !== i && (U = i, t = !0), t) {
     let e = b.find(e => e.type === N.ActivityTypes.CUSTOM_STATUS),
       t = b.filter(e => e.type !== N.ActivityTypes.CUSTOM_STATUS);
-    w = t.length > 0 ? b : null != e ? [e, ...l(U).filter(e => e.type !== N.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : l.uniqBy(U, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+    k = t.length > 0 ? b : null != e ? [e, ...l(U).filter(e => e.type !== N.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : l.uniqBy(U, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
   }
 }
 
@@ -78,7 +78,7 @@ function F() {
 }
 
 function x() {
-  M = !1, D = N.StatusTypes.UNKNOWN, G(), A.default.setCurrentUserOnConnectionOpen(O, w)
+  M = !1, D = N.StatusTypes.UNKNOWN, G(), A.default.setCurrentUserOnConnectionOpen(O, k)
 }
 class B extends u.default.Store {
   initialize() {
@@ -98,11 +98,11 @@ class B extends u.default.Store {
   }
   getActivities() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? w : b
+    return e ? k : b
   }
   getPrimaryActivity() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? w[0] : b[0]
+    return e ? k[0] : b[0]
   }
   getApplicationActivity(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];

@@ -37,10 +37,10 @@ n.r(t), n.d(t, {
     return U
   },
   extractInteractionDataProps: function() {
-    return w
+    return k
   },
   useIsInUserAppExperiment: function() {
-    return k
+    return w
   },
   isInUserAppExperiment: function() {
     return V
@@ -317,7 +317,7 @@ function U(e) {
   }
 }
 
-function w(e) {
+function k(e) {
   let t = e.id,
     n = e.options,
     i = null == n ? void 0 : n.find(e => e.type === d.ApplicationCommandOptionType.SUB_COMMAND_GROUP);
@@ -329,7 +329,7 @@ function w(e) {
   }
 }
 
-function k(e, t, n) {
+function w(e, t, n) {
   let i = E.default.useExperiment(t, n).userAppsTreatment === g.UserAppsTreatment.ALLOWED,
     s = p.default.useExperiment({
       guildId: null != e ? e : "",

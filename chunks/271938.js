@@ -35,8 +35,8 @@ let y = n("551042").hasModalOpen,
   L = null,
   M = null,
   U = null,
-  w = null,
   k = null,
+  w = null,
   V = C.LoginStates.NONE,
   G = C.RegistrationStates.NONE,
   F = !1,
@@ -112,7 +112,7 @@ function ei(e) {
 }
 
 function es() {
-  w = U, U = null, c.default.remove(R)
+  k = U, U = null, c.default.remove(R)
 }
 
 function er(e, t) {
@@ -179,7 +179,7 @@ class eu extends u.default.Store {
     return U
   }
   getAnalyticsToken() {
-    return k
+    return w
   }
   getErrors() {
     return Q
@@ -256,7 +256,7 @@ var ed = new eu(f.default, {
       analyticsToken: r,
       auth: a
     } = e;
-    et("handleConnectionOpen called"), S.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, E.default)(n)), L = i, M = s, k = r, P = n.id, b = n.email, void 0 !== a && (x = a.authenticator_types), c.default.set(O, n.email), c.default.set(D, n.id)
+    et("handleConnectionOpen called"), S.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, E.default)(n)), L = i, M = s, w = r, P = n.id, b = n.email, void 0 !== a && (x = a.authenticator_types), c.default.set(O, n.email), c.default.set(D, n.id)
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -266,7 +266,7 @@ var ed = new eu(f.default, {
       analyticsToken: s,
       token: r
     } = e;
-    S.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, E.default)(n)), L = i, k = s, er(r), es(), P = n.id, c.default.set(D, n.id)
+    S.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, E.default)(n)), L = i, w = s, er(r), es(), P = n.id, c.default.set(D, n.id)
   },
   CONNECTION_CLOSED: function(e) {
     let {
@@ -388,9 +388,9 @@ var ed = new eu(f.default, {
   FINGERPRINT: function(e) {
     let t = e.fingerprint;
     null == U ? null != t ? (p.default.track(C.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
-      old_fingerprint: null != w ? (0, l.extractId)(w) : null,
+      old_fingerprint: null != k ? (0, l.extractId)(k) : null,
       new_fingerprint: (0, l.extractId)(t)
-    }), U = t, w = t, c.default.set(R, U)) : en() : null != t && U !== t && p.default.track(C.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+    }), U = t, k = t, c.default.set(R, U)) : en() : null != t && U !== t && p.default.track(C.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
       fingerprint: (0, l.extractId)(U),
       dropped_fingerprint: (0, l.extractId)(t)
     })

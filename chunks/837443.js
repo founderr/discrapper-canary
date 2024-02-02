@@ -122,8 +122,8 @@ class p extends a.PureComponent {
       markerPosition: L = 0,
       "aria-hidden": M,
       "aria-label": U,
-      "aria-labelledby": w,
-      "aria-describedby": k
+      "aria-labelledby": k,
+      "aria-describedby": w
     } = this.props, V = 0;
     E ? null != a && (null != u ? V = a[u] : null != o && (V = a[o])) : V = this.scaleValue(t);
     let G = "".concat(V, "%"),
@@ -167,8 +167,8 @@ class p extends a.PureComponent {
         "aria-orientation": y,
         "aria-hidden": M,
         "aria-label": U,
-        "aria-labelledby": w,
-        "aria-describedby": k,
+        "aria-labelledby": k,
+        "aria-describedby": w,
         "aria-valuetext": B,
         role: "slider",
         tabIndex: 0,

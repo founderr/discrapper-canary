@@ -31,10 +31,10 @@ n.r(t), n.d(t, {
     return U
   },
   confirmSofort: function() {
-    return w
+    return k
   },
   confirmCardPaymentSource: function() {
-    return k
+    return w
   },
   createPaymentRequestPaymentSource: function() {
     return V
@@ -522,7 +522,7 @@ async function U(e, t, n, i) {
     bank: h
   })
 }
-async function w(e, t, n) {
+async function k(e, t, n) {
   if (null == e) throw P("Stripe not loaded");
   o.default.dispatch({
     type: "BILLING_PAYMENT_SOURCE_CREATE_START"
@@ -566,7 +566,7 @@ async function w(e, t, n) {
     analyticsLocation: n
   })
 }
-async function k(e, t, n, i) {
+async function w(e, t, n, i) {
   if (null == e || null == t) throw P("Stripe or token not loaded");
   o.default.dispatch({
     type: "BILLING_PAYMENT_SOURCE_CREATE_START"

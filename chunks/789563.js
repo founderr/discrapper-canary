@@ -47,12 +47,12 @@ function M(e) {
   }
 }
 let U = g.TriggerDebuggingAAExperiments.map(e => M(e)),
-  w = {
+  k = {
     title: "Unnamed Experiment",
     description: "No description provided"
   };
 
-function k(e, t) {
+function w(e, t) {
   return e || U.includes(t)
 }
 
@@ -189,7 +189,7 @@ function K(e, t) {
       override: 0 === s,
       hashResult: null != a ? a : -1,
       aaMode: 1 === o,
-      triggerDebuggingEnabled: k(1 === l, t)
+      triggerDebuggingEnabled: w(1 === l, t)
     }
   }), null != t && t.forEach(e => {
     let [t, n, i, s, r, a, o, l, u, d] = e;
@@ -212,7 +212,7 @@ function K(e, t) {
       holdoutName: null != o ? o : null,
       holdoutBucket: null != l ? l : null,
       aaMode: 1 === u,
-      triggerDebuggingEnabled: k(1 === d, t)
+      triggerDebuggingEnabled: w(1 === d, t)
     }
   })
 }
@@ -321,7 +321,7 @@ function et(e) {
     } = e,
     a = "function" == typeof i.getExperimentId ? i.getExperimentId() : null;
   if (!a) throw Error("Experiment Store must have a static getExperimentId method defined");
-  let o = "function" == typeof i.getMetaData ? i.getMetaData() : w;
+  let o = "function" == typeof i.getMetaData ? i.getMetaData() : k;
   Object.keys(r).forEach(e => {
     if (e === g.ExperimentTypes.NONE_LEGACY) return;
     s(null != r[e], "Unexpected missing renderFunctions"), t = e;

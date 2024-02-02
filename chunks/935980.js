@@ -159,8 +159,8 @@ function b(e) {
     popoutPosition: b = "bottom",
     popoutLayerContext: M,
     optionClassName: U,
-    closeOnSelect: w,
-    select: k,
+    closeOnSelect: k,
+    select: w,
     isSelected: V,
     serialize: G,
     clear: F,
@@ -176,11 +176,11 @@ function b(e) {
   }, [o, A, y, Y]), X = s.useCallback(e => {
     Y && !e && q(!1)
   }, [q, Y]), Q = (0, h.useIsVisible)(X), Z = s.useCallback(e => {
-    if (k(e), w) {
+    if (w(e), k) {
       var t;
       null === (t = W.current) || void 0 === t || t.focus()
     }
-  }, [k, w]), J = s.useCallback(e => {
+  }, [w, k]), J = s.useCallback(e => {
     e.stopPropagation(), null == F || F()
   }, [F]), $ = t.filter(e => V(e.value));
   s.useLayoutEffect(() => {
@@ -208,7 +208,7 @@ function b(e) {
       } = e;
       return (0, i.jsx)(L, {
         className: O,
-        closeOnSelect: w,
+        closeOnSelect: k,
         maxVisibleItems: u,
         width: null != g ? g : K,
         isSelected: V,

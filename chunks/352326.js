@@ -61,26 +61,26 @@ function U() {
   }
 }
 
-function w(e, t) {
+function k(e, t) {
   let n = (0, m.getComboId)(e, t);
   return A.findIndex(e => e.comboId === n)
 }
 
-function k(e, t, n, i) {
+function w(e, t, n, i) {
   let s = (0, m.getComboId)(e, t),
     r = {
       comboId: s,
       action: i
     },
     a = y.indexOf(s); - 1 !== a && y.splice(a, 1);
-  let o = w(e, t);
+  let o = k(e, t);
   0 !== o && (n ? -1 === o && (A.push(r), U()) : (o > 0 && A.splice(o, 1), A.unshift(r), U())), !n && N && E.default.resume(), M()
 }
 
 function V(e, t) {
   let n = (0, m.getComboId)(e, t),
     i = y.indexOf(n); - 1 !== i && y.splice(i, 1);
-  let s = w(e, t); - 1 !== s && (A.splice(s, 1), M()), U()
+  let s = k(e, t); - 1 !== s && (A.splice(s, 1), M()), U()
 }
 
 function G(e) {
@@ -138,7 +138,7 @@ class H extends u.default.Store {
     return N
   }
   getQueuePosition(e, t) {
-    return w(e, t)
+    return k(e, t)
   }
   isCorruptInstallation() {
     return b
@@ -151,7 +151,7 @@ var Y = new H(c.default, {
       applicationId: t,
       branchId: n
     } = e;
-    P.set((0, m.getComboId)(t, n), "Install"), k(t, n, !1, "Patch")
+    P.set((0, m.getComboId)(t, n), "Install"), w(t, n, !1, "Patch")
   },
   DISPATCH_APPLICATION_UPDATE: function(e) {
     let {
@@ -159,7 +159,7 @@ var Y = new H(c.default, {
       branchId: n,
       automatic: i
     } = e;
-    k(t, n, i, "Patch")
+    w(t, n, i, "Patch")
   },
   DISPATCH_APPLICATION_UNINSTALL: function(e) {
     G(e), F(e)
@@ -170,13 +170,13 @@ var Y = new H(c.default, {
       applicationId: t,
       branchId: n
     } = e;
-    P.set((0, m.getComboId)(t, n), "Repair"), k(t, n, !1, "Repair")
+    P.set((0, m.getComboId)(t, n), "Repair"), w(t, n, !1, "Repair")
   },
   DISPATCH_APPLICATION_MOVE_UP: function(e) {
     let {
       applicationId: t,
       branchId: n
-    } = e, i = w(t, n);
+    } = e, i = k(t, n);
     if (i < 1) return !1;
     A.splice(0, 0, A.splice(i, 1)[0]), U(), N && E.default.resume(), M()
   },

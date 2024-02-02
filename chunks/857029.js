@@ -131,7 +131,7 @@ function d(e) {
       }, [A, T]), i.useEffect(() => {
         I && (!N && P(d, c), R(!1))
       }, [d, c]);
-      let w = i.useCallback(e => {
+      let k = i.useCallback(e => {
           if (!S.current) return;
           if (!v && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
             e.preventDefault(), e.stopPropagation(), b();
@@ -179,7 +179,7 @@ function d(e) {
               }), null != f ? f(d, c, e) : null != T && T.click()
           }
         }, [b, g, p, T, f, d, c]),
-        k = i.useCallback(e => e.currentTarget !== e.target ? (!I && (C(!0), R(!0)), !1) : I ? (b(!1), !1) : void(m && null != T ? P(d, c) : b(!0)), [I, m, T, b, P, d, c]),
+        w = i.useCallback(e => e.currentTarget !== e.target ? (!I && (C(!0), R(!0)), !1) : I ? (b(!1), !1) : void(m && null != T ? P(d, c) : b(!0)), [I, m, T, b, P, d, c]),
         V = i.useCallback(e => {
           if (e.target !== e.currentTarget) {
             if (e.currentTarget.contains(e.relatedTarget)) return !1;
@@ -193,10 +193,10 @@ function d(e) {
           "aria-colcount": G,
           tabIndex: I && m ? -1 : 0,
           "data-ref-id": t,
-          onKeyDown: w,
-          onFocus: k,
+          onKeyDown: k,
+          onFocus: w,
           onBlur: V
-        }), [n.length, G, I, m, t, w, k, V]),
+        }), [n.length, G, I, m, t, k, w, V]),
         x = i.useCallback((e, n) => {
           let i = {
             role: "gridcell",

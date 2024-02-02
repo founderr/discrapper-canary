@@ -61,8 +61,8 @@ function O(e, t) {
   }
   let M = null,
     U = !1,
-    w = P,
-    k = b,
+    k = P,
+    w = b,
     V = null;
   if (null != P && null != b) {
     var G, F, x;
@@ -71,7 +71,7 @@ function O(e, t) {
     M = null !== (x = null == t ? void 0 : t.guild_id) && void 0 !== x ? x : null;
     let n = p.default.getGuild(M),
       i = (null == e ? void 0 : null === (G = e.messageReference) || void 0 === G ? void 0 : G.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(y.MessageFlags.IS_CROSSPOST)) && null != M;
-    i && (null == e ? void 0 : null === (F = e.messageReference) || void 0 === F ? void 0 : F.guild_id) != null ? (w = e.messageReference.message_id, k = e.messageReference.channel_id, V = e.messageReference.guild_id) : V = M;
+    i && (null == e ? void 0 : null === (F = e.messageReference) || void 0 === F ? void 0 : F.guild_id) != null ? (k = e.messageReference.message_id, w = e.messageReference.channel_id, V = e.messageReference.guild_id) : V = M;
     let s = (null == t ? void 0 : t.type) === y.ChannelTypes.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(y.GuildFeatures.COMMUNITY)) === !0,
       r = (null == e ? void 0 : e.hasFlag(y.MessageFlags.EPHEMERAL)) === !0;
     U = null != e && !r && (i || s)
@@ -95,10 +95,10 @@ function O(e, t) {
   }
   let Y = () => {
       if (U && f.default.trackAnnouncementMessageLinkClicked({
-          messageId: w,
+          messageId: k,
           channelId: b,
           guildId: M,
-          sourceChannelId: k,
+          sourceChannelId: w,
           sourceGuildId: V
         }), null != O) {
         O();
@@ -123,10 +123,10 @@ function O(e, t) {
     z = !("http:" === K || "https:" === K);
   if (!z && (W || v.default.isTrustedDomain(L)) || z && v.default.isTrustedProtocol(L)) {
     null == t || null != D && D ? Y() : U && f.default.trackAnnouncementMessageLinkClicked({
-      messageId: w,
+      messageId: k,
       channelId: b,
       guildId: M,
-      sourceChannelId: k,
+      sourceChannelId: w,
       sourceGuildId: V
     });
     return

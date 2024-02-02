@@ -71,7 +71,7 @@ function M(e) {
       s = e(i);
     return s ? (! function(e, t) {
       let n = _.default.getChannel(e);
-      null != n && n.isGuildStageVoice() ? 0 === t.size() ? w(n.id) : null == y.get(n.id) && y.set(n.id, n) : w(e)
+      null != n && n.isGuildStageVoice() ? 0 === t.size() ? k(n.id) : null == y.get(n.id) && y.set(n.id, n) : k(e)
     }(n, i), !0) : t
   }, !1)
 }
@@ -81,11 +81,11 @@ function U(e) {
   return M(t => t.updateParticipant(e), t)
 }
 
-function w(e) {
+function k(e) {
   return null != e && (delete R[e], y.delete(e), !0)
 }
 
-function k() {
+function w() {
   N.clear(), y.clear(), R = {}
 }
 
@@ -168,8 +168,8 @@ class Y extends o.default.Store {
 }
 Y.displayName = "StageChannelParticipantStore";
 var j = new Y(u.default, {
-  CONNECTION_OPEN: k,
-  OVERLAY_INITIALIZE: k,
+  CONNECTION_OPEN: w,
+  OVERLAY_INITIALIZE: w,
   VOICE_STATE_UPDATES: function(e) {
     let {
       voiceStates: t
@@ -186,7 +186,7 @@ var j = new Y(u.default, {
         id: t
       }
     } = e;
-    return w(t)
+    return k(t)
   },
   GUILD_MEMBERS_CHUNK: function(e) {
     let {

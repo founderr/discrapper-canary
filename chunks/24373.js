@@ -37,10 +37,10 @@ n.r(t), n.d(t, {
     return U
   },
   getMessageStickers: function() {
-    return w
+    return k
   },
   isAvailableGuildSticker: function() {
-    return k
+    return w
   }
 }), n("70102");
 var i = n("171209"),
@@ -138,7 +138,7 @@ let {
     default:
       return !1
   }
-}, M = e => e.type === d.MetaStickerType.GUILD, U = e => e.type === d.MetaStickerType.STANDARD, w = e => e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : [], k = e => {
+}, M = e => e.type === d.MetaStickerType.GUILD, U = e => e.type === d.MetaStickerType.STANDARD, k = e => e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : [], w = e => {
   if (null === e) return !1;
   let t = e.guild_id;
   return void 0 !== r.default.getGuild(t)

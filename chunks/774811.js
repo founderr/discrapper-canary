@@ -51,8 +51,8 @@ let L = s.forwardRef(function(e, t) {
       className: N,
       isDisabled: L = !1,
       maxVisibleItems: M = 7,
-      look: w = O.SelectLooks.FILLED,
-      autoFocus: k = !1,
+      look: k = O.SelectLooks.FILLED,
+      autoFocus: w = !1,
       popoutPosition: V = "bottom",
       filter: x = !0,
       debounceTime: B,
@@ -189,10 +189,10 @@ let L = s.forwardRef(function(e, t) {
         setFocus: eb,
         disableClickOnSpace: !0
       }),
-      ew = (0, I.default)(eU),
-      ek = (0, I.default)(ep);
+      ek = (0, I.default)(eU),
+      ew = (0, I.default)(ep);
     s.useEffect(() => {
-      let e = ek.current,
+      let e = ew.current,
         t = eA.current;
       ed && null != t && !ev && requestAnimationFrame(() => {
         let n = em.current,
@@ -203,7 +203,7 @@ let L = s.forwardRef(function(e, t) {
         })
       })
     }, [ed, ev]), s.useEffect(() => {
-      let e = ew.current;
+      let e = ek.current;
       if (ed && !ev) {
         var t;
         let n = eo.current;
@@ -244,11 +244,11 @@ let L = s.forwardRef(function(e, t) {
       eu(null), (!h || g) && eO(!1), eg(!1)
     }, [n, ep, h, g, l, r, eO]);
     s.useLayoutEffect(() => {
-      if (k) {
+      if (w) {
         var e;
         null === (e = eo.current) || void 0 === e || e.focus()
       }
-    }, [k]);
+    }, [w]);
     let eG = s.useCallback(() => {
         e_(""), eV(null), eO(!0)
       }, [eV, eO]),
@@ -344,7 +344,7 @@ let L = s.forwardRef(function(e, t) {
                 },
                 className: a(P.select, P.searchable, N, {
                   [P.open]: r,
-                  [P.lookFilled]: w === O.SelectLooks.FILLED,
+                  [P.lookFilled]: k === O.SelectLooks.FILLED,
                   [P.disabled]: L,
                   [P.multi]: h,
                   [P.selectPositionTop]: "top" === o
@@ -536,13 +536,13 @@ function U(e) {
   })
 }
 
-function w(e, t) {
+function k(e, t) {
   if (null == e || null == t) return !1;
   let n = Node.DOCUMENT_POSITION_CONTAINED_BY | Node.DOCUMENT_POSITION_FOLLOWING;
   return (e.compareDocumentPosition(t) & n) === n
 }
 
-function k(e) {
+function w(e) {
   let {
     selectedOptions: t,
     selectValue: n,
@@ -566,11 +566,11 @@ function k(e) {
     onKeyDown: d,
     onFocus: e => {
       let t = e.target;
-      null != r.current && w(r.current, t) && f(t.getAttribute("data-option-pill-value"))
+      null != r.current && k(r.current, t) && f(t.getAttribute("data-option-pill-value"))
     },
     onBlur: e => {
       let t = e.relatedTarget;
-      !w(r.current, t) && f(null)
+      !k(r.current, t) && f(null)
     },
     children: t.map((e, t) => (0, i.jsx)("li", {
       className: P.optionPillItem,
@@ -753,7 +753,7 @@ function F(e) {
     }
   }(p, f, r);
   return (0, i.jsxs)(i.Fragment, {
-    children: [r.length > 0 && (0, i.jsx)(k, {
+    children: [r.length > 0 && (0, i.jsx)(w, {
       listRef: p,
       selectedOptions: r,
       renderOptionPrefix: _,

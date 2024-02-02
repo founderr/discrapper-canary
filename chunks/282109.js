@@ -58,7 +58,7 @@ let S = {},
   M = {},
   U = {};
 
-function w(e, t) {
+function k(e, t) {
   var n;
   let i = S[e],
     r = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
@@ -73,7 +73,7 @@ function w(e, t) {
       channel_overrides: a
     };
   N.clearTimer(e), !0 === o.muted && N.setTimer(e, o.mute_config, () => {
-    k(e, {
+    w(e, {
       muted: !1
     }), q.emitChange()
   }), s.forEach(r, e => {
@@ -103,10 +103,10 @@ function w(e, t) {
     }(e), delete I[e]
 }
 
-function k(e, t) {
+function w(e, t) {
   var n;
   let i = S[e];
-  w(e, {
+  k(e, {
     channel_overrides: null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
     ...t
   })
@@ -139,7 +139,7 @@ function F(e, t) {
   var n;
   let i = S[e],
     s = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {};
-  w(e, {
+  k(e, {
     channel_overrides: null == i ? t : {
       ...s,
       ...t
@@ -415,7 +415,7 @@ let q = new z(a.default, {
       userGuildSettings: t
     } = e;
     t.forEach(e => {
-      null != e.guild_id && (T[e.guild_id] = !0 === e.hide_muted_channels), w(e.guild_id, {
+      null != e.guild_id && (T[e.guild_id] = !0 === e.hide_muted_channels), k(e.guild_id, {
         channel_overrides: {},
         ...e
       })
@@ -426,14 +426,14 @@ let q = new z(a.default, {
       guildId: t,
       settings: n
     } = e;
-    k(t, n)
+    w(t, n)
   },
   USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: function(e) {
     let {
       guildId: t,
       settings: n
     } = e;
-    k(t, n), G(t, n.channel_overrides)
+    w(t, n), G(t, n.channel_overrides)
   },
   USER_GUILD_SETTINGS_CHANNEL_UPDATE: function(e) {
     let {
@@ -459,7 +459,7 @@ let q = new z(a.default, {
     Y(e.notificationSettings), !e.userGuildSettings.partial && (N.reset(), R.reset(), S = {}, P = {}, b = {}), !e.userGuildSettings.partial && (T = {}, e.userGuildSettings.entries.forEach(e => {
       null != e.guild_id && (T[e.guild_id] = !0 === e.hide_muted_channels)
     })), e.userGuildSettings.entries.forEach(e => {
-      !("channel_overrides" in e) && (e.channel_overrides = {}), w(e.guild_id, e)
+      !("channel_overrides" in e) && (e.channel_overrides = {}), k(e.guild_id, e)
     })
   },
   OVERLAY_INITIALIZE: function(e) {

@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return U
   },
   COLOR_TOGETHER_APPLICATION_ID: function() {
-    return w
+    return k
   },
   SPELL_CAST_APPLICATION_ID: function() {
-    return k
+    return w
   },
   LAND_IO_APPLICATION_ID: function() {
     return V
@@ -131,8 +131,8 @@ let R = 160,
   L = "1050941315912835122",
   M = "1070087967294631976",
   U = "1007373802981822582",
-  w = "1039835161136746497",
-  k = "852509694341283871",
+  k = "1039835161136746497",
+  w = "852509694341283871",
   V = "903769130790969345",
   G = "880218394199220334",
   F = "1078728822972764312",

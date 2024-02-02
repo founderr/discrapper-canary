@@ -20,7 +20,7 @@ function l(e) {
 }
 s.r(t), s.d(t, {
   create: function() {
-    return E
+    return g
   },
   get: function() {
     return x
@@ -90,7 +90,7 @@ var c = {
     appidExclude: d(a),
     credProps: d(a)
   },
-  m = {
+  _ = {
     publicKey: u({
       rp: u(a),
       user: u({
@@ -108,7 +108,7 @@ var c = {
     }),
     signal: d(a)
   },
-  p = {
+  m = {
     type: u(a),
     id: u(a),
     rawId: u(r),
@@ -123,7 +123,7 @@ var c = {
     }),
     clientExtensionResults: o(h, e => e.getClientExtensionResults())
   },
-  _ = {
+  E = {
     mediation: d(a),
     publicKey: u({
       challenge: u(r),
@@ -135,7 +135,7 @@ var c = {
     }),
     signal: d(a)
   },
-  g = {
+  p = {
     type: u(a),
     id: u(a),
     rawId: u(r),
@@ -148,11 +148,11 @@ var c = {
     }),
     clientExtensionResults: o(h, e => e.getClientExtensionResults())
   };
-async function E(e) {
-  let t = await navigator.credentials.create(i(n, m, e));
-  return i(l, p, t)
+async function g(e) {
+  let t = await navigator.credentials.create(i(n, _, e));
+  return i(l, m, t)
 }
 async function x(e) {
-  let t = await navigator.credentials.get(i(n, _, e));
-  return i(l, g, t)
+  let t = await navigator.credentials.get(i(n, E, e));
+  return i(l, p, t)
 }

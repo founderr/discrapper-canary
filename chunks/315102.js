@@ -29,7 +29,7 @@ n.r(t), n.d(t, {
     return R
   },
   getVideoFilterAssetURL: function() {
-    return k
+    return w
   },
   isAnimatedIconHash: function() {
     return G
@@ -312,7 +312,7 @@ function U(e) {
   if (a) return h
 }
 
-function w(e) {
+function k(e) {
   let {
     id: t,
     hash: n,
@@ -330,7 +330,7 @@ function w(e) {
   })
 }
 
-function k(e) {
+function w(e) {
   let {
     userId: t,
     assetId: n,
@@ -464,10 +464,10 @@ var H = {
   getChannelIconURL: V,
   getEmojiURL: v,
   getApplicationIconURL: U,
-  getGameAssetURL: w,
-  getVideoFilterAssetURL: k,
+  getGameAssetURL: k,
+  getVideoFilterAssetURL: w,
   getGameAssetSource(e) {
-    let t = w(e);
+    let t = k(e);
     return B(t)
   },
   getGuildIconSource(e) {

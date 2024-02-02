@@ -50,7 +50,7 @@ let U = r.throttle(function(e) {
       timestamp: Date.now()
     }, ...O]).slice(0, 200)
   }, 200),
-  w = r.throttle(function(e) {
+  k = r.throttle(function(e) {
     let t = Date.now(),
       n = t - S;
     R = (R = [{
@@ -63,7 +63,7 @@ let U = r.throttle(function(e) {
       return t >= n
     })
   }, 200),
-  k = r.throttle(function(e) {
+  w = r.throttle(function(e) {
     D = (D = [{
       bytes: e,
       timestamp: Date.now()
@@ -267,9 +267,9 @@ var F = new G(o.default, {
           let e = V(n, d, b);
           e > 0 && U(A += e);
           let i = V(n, d, L);
-          i > 0 && k(y += i);
+          i > 0 && w(y += i);
           let r = V(n, d, M);
-          if (r > 0 && w(N += r), s === t) {
+          if (r > 0 && k(N += r), s === t) {
             let e = n[d];
             if (!0 !== e.paused && (e.type === v.LocalDispatchApplicationStates.UNINSTALLING || e.type === v.LocalDispatchApplicationStates.INSTALLING || e.type === v.LocalDispatchApplicationStates.UPDATING)) switch (e.stage) {
               case v.DispatchApplicationStages.PATCHING:

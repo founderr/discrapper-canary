@@ -92,7 +92,7 @@ function U(e) {
   0 !== c.length && (N.push(v), D.push(v)), I.set(s, N), T.set(R, D)
 }
 
-function w(e) {
+function k(e) {
   let t = e.embedded_activities;
   t.forEach(t => {
     let {
@@ -110,7 +110,7 @@ function w(e) {
   })
 }
 
-function k() {
+function w() {
   C = !1
 }
 
@@ -253,13 +253,13 @@ let F = new G(r.default, {
     let {
       guilds: t
     } = e;
-    I.clear(), T.clear(), t.forEach(e => w(e))
+    I.clear(), T.clear(), t.forEach(e => k(e))
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    w(t)
+    k(t)
   },
   CALL_CREATE: function(e) {
     let {
@@ -300,8 +300,8 @@ let F = new G(r.default, {
   EMBEDDED_ACTIVITY_LAUNCH_START: function() {
     C = !0
   },
-  EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: k,
-  EMBEDDED_ACTIVITY_LAUNCH_FAIL: k,
+  EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: w,
+  EMBEDDED_ACTIVITY_LAUNCH_FAIL: w,
   EMBEDDED_ACTIVITY_OPEN: function(e) {
     var t, n;
     let {

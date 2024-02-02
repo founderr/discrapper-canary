@@ -56,13 +56,13 @@ function R(e) {
     onSelect: O,
     draftType: D,
     editorTextContent: j,
-    setValue: P,
-    openClips: b
+    setValue: b,
+    openClips: P
   } = e;
   (0, f.useMaybeFetchPremiumLikelihood)(h.default);
-  let H = (0, u.useOmnibuttonFileUploadSubtextEnabled)("ChannelAttachMenu"),
+  let F = (0, u.useOmnibuttonFileUploadSubtextEnabled)("ChannelAttachMenu"),
     {
-      analyticsLocations: F
+      analyticsLocations: H
     } = (0, c.default)();
   a.useEffect(() => {
     E.default.track(M.AnalyticEvents.OPEN_POPOUT, {
@@ -77,11 +77,11 @@ function R(e) {
   }
 
   function k() {
-    E.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P("/", (0, _.toRichValue)("/"))
+    E.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), b("/", (0, _.toRichValue)("/"))
   }
 
   function w() {
-    b()
+    P()
   }
 
   function G() {
@@ -110,7 +110,7 @@ function R(e) {
       },
       openInPopout: !1,
       enableSelectedTextChannelInvite: !0,
-      analyticsLocations: F
+      analyticsLocations: H
     }), (0, o.fetchShelf)({
       guildId: t.guild_id
     })
@@ -163,7 +163,7 @@ function R(e) {
           return (0, s.jsx)(i.MenuItem, {
             id: "upload-file",
             label: a,
-            subtext: H ? r : null,
+            subtext: F ? r : null,
             action: R
           }, "upload-file");
         case T.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
@@ -195,7 +195,7 @@ function R(e) {
                 type: "Send Join Invite",
                 application_id: n.application_id,
                 location: M.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), L(n, t, M.ActivityActionTypes.JOIN, F))
+              }), L(n, t, M.ActivityActionTypes.JOIN, H))
             }
           }, "play");
         case T.AttachmentTypes.INVITE_TO_LISTEN:
@@ -207,7 +207,7 @@ function R(e) {
               return n = e.activity, void(E.default.track(M.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
                 location: M.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), L(n, t, M.ActivityActionTypes.LISTEN, F))
+              }), L(n, t, M.ActivityActionTypes.LISTEN, H))
             }
           }, "listen");
         case T.AttachmentTypes.INVITE_TO_WATCH:
@@ -219,7 +219,7 @@ function R(e) {
               return n = e.activity, void(E.default.track(M.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
                 location: M.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), L(n, t, M.ActivityActionTypes.WATCH, F))
+              }), L(n, t, M.ActivityActionTypes.WATCH, H))
             }
           }, "watch");
         case T.AttachmentTypes.CREATE_THREAD:
