@@ -1,39 +1,39 @@
 "use strict";
 n.r(t), n.d(t, {
   getCachedCommand: function() {
-    return A
-  },
-  getCachedApplicationSection: function() {
     return E
   },
-  getCachedResults: function() {
+  getCachedApplicationSection: function() {
     return N
   },
-  getChangeKeys: function() {
+  getCachedResults: function() {
     return S
   },
-  useDiscovery: function() {
+  getChangeKeys: function() {
     return g
   },
-  executeQuery: function() {
+  useDiscovery: function() {
     return M
   },
-  useQuery: function() {
+  executeQuery: function() {
     return O
   },
-  useCommand: function() {
+  useQuery: function() {
     return h
   },
-  useCommandsForApplication: function() {
+  useCommand: function() {
     return v
   },
-  useSearchOpenState: function() {
+  useCommandsForApplication: function() {
     return y
   },
-  isInIndexExperiment: function() {
+  useSearchOpenState: function() {
     return D
+  },
+  isInIndexExperiment: function() {
+    return R
   }
-}), n("222007"), n("424973");
+}), n("222007"), n("424973"), n("808653");
 var i = n("884691"),
   l = n("446674"),
   a = n("938767"),
@@ -48,16 +48,17 @@ var i = n("884691"),
   m = n("216193"),
   I = n("166004"),
   _ = n("524768"),
-  C = n("317041"),
-  T = n("49111");
+  C = n("389153"),
+  T = n("317041"),
+  A = n("49111");
 
-function A(e, t) {
+function E(e, t) {
   var n, i, l, a;
   if (null == t) return {
     application: void 0,
     command: void 0
   };
-  if (!D({
+  if (!R({
       location: "getCachedCommand"
     })) {
     let e = m.default.getCommand(t),
@@ -83,9 +84,9 @@ function A(e, t) {
   }
 }
 
-function E(e, t, n) {
+function N(e, t, n) {
   var i, l, a, s, o, r;
-  if (!D({
+  if (!R({
       location: "getCachedApplicationSection"
     })) return null === (o = I.default.getApplicationSections(e.id, t)) || void 0 === o ? void 0 : o.find(e => e.id === n);
   let u = p.default.getUserState(),
@@ -94,8 +95,8 @@ function E(e, t, n) {
   return null == c ? void 0 : c.descriptor
 }
 
-function N(e, t, n) {
-  if (!D({
+function S(e, t, n) {
+  if (!R({
       location: "getCachedResults"
     })) {
     var i, l;
@@ -117,8 +118,8 @@ function N(e, t, n) {
   }
 }
 
-function S(e, t, n) {
-  if (!D({
+function g(e, t, n) {
+  if (!R({
       location: "getChangeKeys"
     }, {
       autoTrackExposure: !1
@@ -128,8 +129,8 @@ function S(e, t, n) {
   return [null == i ? void 0 : i.result, null == l ? void 0 : l.result]
 }
 
-function g(e, t, n) {
-  if (!R({
+function M(e, t, n) {
+  if (!P({
       location: "useDiscovery"
     })) {
     var a, o;
@@ -148,13 +149,13 @@ function g(e, t, n) {
       ...n,
       allowFetch: !0
     }),
-    [A, E] = i.useState(null),
+    [C, E] = i.useState(null),
     N = i.useRef(!1);
   N.current = _;
   let S = i.useMemo(() => {
     let e = [];
     if (null != n.placeholderCount)
-      for (let i = 0; i < n.placeholderCount; i++) e.push(L(i, t.commandType));
+      for (let i = 0; i < n.placeholderCount; i++) e.push(U(i, t.commandType));
     return e
   }, [t.commandType, n.placeholderCount]);
   return i.useMemo(() => {
@@ -163,17 +164,17 @@ function g(e, t, n) {
       commands: c,
       activeSections: u,
       commandsByActiveSection: m,
-      filteredSectionId: A,
+      filteredSectionId: C,
       hasMoreAfter: !1,
       placeholders: _ ? S : [],
       sectionDescriptors: u,
       filterSection: e => {
         E(e)
       },
-      scrollDown: T.NOOP
+      scrollDown: A.NOOP
     };
-    if (null != A) {
-      let t = m.find(e => e.section.id === A);
+    if (null != C) {
+      let t = m.find(e => e.section.id === C);
       e.activeSections = null != t ? [t.section] : [], e.commandsByActiveSection = null != t ? [t] : []
     }
     if (_) {
@@ -183,7 +184,7 @@ function g(e, t, n) {
         data: [...t.data, ...S]
       }, ...m.slice(1)];
       else {
-        let t = d.BUILT_IN_SECTIONS[C.BuiltInSectionId.BUILT_IN];
+        let t = d.BUILT_IN_SECTIONS[T.BuiltInSectionId.BUILT_IN];
         e.activeSections = [t], e.commandsByActiveSection = [{
           section: t,
           data: S
@@ -192,11 +193,11 @@ function g(e, t, n) {
       e.commands = [...c, ...S]
     }
     return e
-  }, [c, u, A, m, _, S])
+  }, [c, u, C, m, _, S])
 }
 
-function M(e, t, n) {
-  if (!D({
+function O(e, t, n) {
+  if (!R({
       location: "executeQuery"
     })) {
     var i, l, s, o, r;
@@ -211,15 +212,15 @@ function M(e, t, n) {
     loading: m
   } = p.default.query(e, t, n), _ = [];
   if (null != n.placeholderCount && m)
-    for (let e = 0; e < n.placeholderCount; e++) _.push(L(e, t.commandType));
+    for (let e = 0; e < n.placeholderCount; e++) _.push(U(e, t.commandType));
   return {
     commands: m ? [...f, ..._] : f,
-    sections: m && 0 === c.length ? [d.BUILT_IN_SECTIONS[C.BuiltInSectionId.BUILT_IN]] : c
+    sections: m && 0 === c.length ? [d.BUILT_IN_SECTIONS[T.BuiltInSectionId.BUILT_IN]] : c
   }
 }
 
-function O(e, t, n) {
-  if (!R({
+function h(e, t, n) {
+  if (!P({
       location: "useQuery"
     })) {
     var l, a;
@@ -235,18 +236,18 @@ function O(e, t, n) {
   }), u = i.useMemo(() => {
     let e = [];
     if (null != n.placeholderCount)
-      for (let i = 0; i < n.placeholderCount; i++) e.push(L(i, t.commandType));
+      for (let i = 0; i < n.placeholderCount; i++) e.push(U(i, t.commandType));
     return e
   }, [t.commandType, n.placeholderCount]);
   return i.useMemo(() => ({
     commands: r ? [...o, ...u] : o,
-    sections: r && 0 === s.length ? [d.BUILT_IN_SECTIONS[C.BuiltInSectionId.BUILT_IN]] : s,
-    scrollDown: T.NOOP
+    sections: r && 0 === s.length ? [d.BUILT_IN_SECTIONS[T.BuiltInSectionId.BUILT_IN]] : s,
+    scrollDown: A.NOOP
   }), [r, o, s, u])
 }
 
-function h(e, t) {
-  if (!R({
+function v(e, t) {
+  if (!P({
       location: "useCommand"
     })) {
     var n;
@@ -304,8 +305,8 @@ function h(e, t) {
   }, [s.result, a.result, t])
 }
 
-function v(e, t, n) {
-  if (!R({
+function y(e, t, n) {
+  if (!P({
       location: "useCommandsForApplication"
     })) return i.useEffect(() => {
     u.fetchCommands(e.guild_id, e.id, n)
@@ -320,36 +321,41 @@ function v(e, t, n) {
   let a = (0, p.useUserIndexState)(!0, !0),
     s = (0, p.useContextIndexState)(e, !0, !0);
   return i.useMemo(() => {
-    var e, i, l, o, u;
-    let d = null !== (u = null === (i = a.result) || void 0 === i ? void 0 : null === (e = i.sections) || void 0 === e ? void 0 : e[t]) && void 0 !== u ? u : null === (l = s.result) || void 0 === l ? void 0 : l.sections[t];
+    var e, i, l, o, u, d;
+    let c = null !== (u = null === (i = a.result) || void 0 === i ? void 0 : null === (e = i.sections) || void 0 === e ? void 0 : e[t]) && void 0 !== u ? u : null === (l = s.result) || void 0 === l ? void 0 : l.sections[t],
+      p = Object.values(null !== (d = null == c ? void 0 : c.commands) && void 0 !== d ? d : {}).map(e => null == e.rootCommand ? e : (0, C.buildCommand)({
+        rootCommand: e.rootCommand,
+        command: e.rootCommand,
+        applicationId: e.applicationId
+      })).reduce((e, t) => (e[t.id] = t, e), {});
     return {
-      application: null == d ? void 0 : null === (o = d.descriptor) || void 0 === o ? void 0 : o.application,
-      commands: null != d ? n.map(e => d.commands[e]).filter(r.isNotNullish) : []
+      application: null == c ? void 0 : null === (o = c.descriptor) || void 0 === o ? void 0 : o.application,
+      commands: n.map(e => p[e]).filter(r.isNotNullish)
     }
   }, [null == a ? void 0 : a.result, null == s ? void 0 : s.result, t, n])
 }
 
-function y() {
-  !R({
+function D() {
+  !P({
     location: "useSearchOpenState"
   }) && (0, I.useSearchStoreOpenState)()
 }
 
-function D(e, t) {
+function R(e, t) {
   return c.default.getCurrentConfig(e, t).enabled
 }
 
-function R(e, t) {
-  let [n] = i.useState(D(e, t));
+function P(e, t) {
+  let [n] = i.useState(R(e, t));
   return n
 }
-let P = {
+let L = {
   id: "placeholder-section",
   type: _.ApplicationCommandSectionType.APPLICATION,
   name: ""
 };
 
-function L(e, t) {
+function U(e, t) {
   return {
     type: t,
     inputType: _.ApplicationCommandInputType.PLACEHOLDER,
@@ -359,6 +365,6 @@ function L(e, t) {
     description: "",
     displayDescription: "",
     applicationId: "",
-    section: P
+    section: L
   }
 }
