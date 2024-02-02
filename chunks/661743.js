@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   HangStatusPopout: function() {
-    return M
+    return R
   }
 }), n("222007");
 var a = n("37983"),
@@ -10,167 +10,172 @@ var a = n("37983"),
   i = n.n(s),
   r = n("917351"),
   o = n.n(r),
-  u = n("77078"),
-  d = n("446674"),
-  c = n("943722"),
-  f = n("697218"),
-  h = n("468759"),
-  p = n("987772"),
-  m = n("956089"),
-  E = n("315102"),
-  C = n("233965"),
-  S = n("32346"),
-  g = n("808742"),
-  _ = n("342845"),
-  I = n("49111"),
-  T = n("843455"),
-  v = n("782340"),
-  x = n("492013");
-let N = e => {
-    e.stopPropagation(), (0, u.openModalLazy)(async () => {
-      let {
-        default: e
-      } = await n.el("579371").then(n.bind(n, "579371"));
-      return t => (0, a.jsx)(e, {
-        ...t
-      })
-    })
-  },
-  A = e => {
+  u = n("446674"),
+  d = n("151426"),
+  c = n("77078"),
+  f = n("943722"),
+  h = n("10641"),
+  p = n("697218"),
+  m = n("468759"),
+  E = n("987772"),
+  C = n("956089"),
+  S = n("315102"),
+  g = n("233965"),
+  _ = n("32346"),
+  I = n("808742"),
+  T = n("342845"),
+  v = n("49111"),
+  x = n("843455"),
+  N = n("782340"),
+  A = n("492013");
+let M = e => {
     let {
       style: t,
       className: n,
       name: l,
       icon: s
     } = e;
-    return (0, a.jsx)(u.Tooltip, {
+    return (0, a.jsx)(c.Tooltip, {
       text: l,
       children: e => (0, a.jsx)("div", {
-        className: i(n, x.iconWidget),
+        className: i(n, A.iconWidget),
         style: t,
         ...e,
         children: null != s && s
       })
     })
   },
-  M = e => {
+  R = e => {
     let {
       currentStatus: t
-    } = e, n = l.useRef(S.default.getRecentCustomStatuses()), s = (0, g.getHangStatusOptions)(), [r, M] = l.useState(null != t ? t : null), R = (0, d.useStateFromStores)([f.default], () => f.default.getCurrentUser()), j = (e, t) => {
-      e.stopPropagation(), (0, C.updateHangStatus)(t, !0)
-    }, L = (e, t) => {
-      e.stopPropagation(), (0, C.updateCustomHangStatus)(t.status, t.emoji, !0)
-    }, O = l.useCallback(e => {
-      e.stopPropagation(), (0, C.clearHangStatus)(!0)
-    }, []), y = l.useCallback(e => {
-      M({
-        type: I.ActivityTypes.HANG_STATUS,
+    } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, I.getHangStatusOptions)(), [j, L] = l.useState(null != t ? t : null), O = (0, u.useStateFromStores)([p.default], () => p.default.getCurrentUser()), y = () => {
+      !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
+    }, b = (e, t) => {
+      e.stopPropagation(), (0, g.updateHangStatus)(t, !0), y()
+    }, P = (e, t) => {
+      e.stopPropagation(), (0, g.updateCustomHangStatus)(t.status, t.emoji, !0), y()
+    }, D = l.useCallback(e => {
+      e.stopPropagation(), (0, g.clearHangStatus)(!0)
+    }, []), U = e => {
+      e.stopPropagation(), (0, c.openModalLazy)(async () => {
+        let {
+          default: e
+        } = await n.el("579371").then(n.bind(n, "579371"));
+        return t => (0, a.jsx)(e, {
+          ...t
+        })
+      }), y()
+    }, w = l.useCallback(e => {
+      L({
+        type: v.ActivityTypes.HANG_STATUS,
         name: "Hang Status",
         state: e
       })
-    }, []), P = l.useCallback(e => {
-      M({
-        type: I.ActivityTypes.HANG_STATUS,
+    }, []), F = l.useCallback(e => {
+      L({
+        type: v.ActivityTypes.HANG_STATUS,
         name: "Hang Status",
-        state: T.HangStatusTypes.CUSTOM,
+        state: x.HangStatusTypes.CUSTOM,
         details: e.status,
         emoji: e.emoji
       })
     }, []);
     return (0, a.jsxs)("div", {
-      className: x.popout,
-      children: [(0, a.jsx)("div", {
-        className: x.popoutBackground
-      }), (0, a.jsxs)("div", {
-        className: x.onboarding,
-        children: [(0, a.jsxs)("div", {
-          className: x.title,
-          children: [(0, a.jsx)(u.Text, {
-            variant: "text-md/semibold",
-            color: "header-primary",
-            children: v.default.Messages.ACTIVITY_STATUS
-          }), (0, a.jsx)(m.TextBadge, {
-            text: v.default.Messages.BETA,
-            disableColor: !0,
-            className: x.newBadge
-          })]
-        }), (0, a.jsx)(u.Text, {
-          variant: "text-xs/normal",
-          color: "text-muted",
-          className: x.helpText,
-          children: v.default.Messages.HANG_STATUS_HELP
+      className: A.popout,
+      children: [!r && (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)("div", {
+          className: A.popoutBackground
         }), (0, a.jsxs)("div", {
-          className: x.iconGroup,
-          children: [null != R && (0, a.jsxs)("div", {
-            className: x.avatarWrapper,
-            children: [(0, a.jsx)(u.Avatar, {
-              className: x.avatar,
-              size: u.AvatarSizes.SIZE_40,
-              src: (0, E.getUserAvatarURL)(R),
-              "aria-hidden": !0
-            }), (0, a.jsx)("div", {
-              className: x.outline
+          className: A.onboarding,
+          children: [(0, a.jsxs)("div", {
+            className: A.title,
+            children: [(0, a.jsx)(c.Text, {
+              variant: "text-md/semibold",
+              color: "header-primary",
+              children: N.default.Messages.ACTIVITY_STATUS
+            }), (0, a.jsx)(C.TextBadge, {
+              text: N.default.Messages.BETA,
+              disableColor: !0,
+              className: A.newBadge
             })]
-          }), (0, a.jsx)(_.default, {
-            className: x.statusIcon,
-            hangStatusActivity: r
+          }), (0, a.jsx)(c.Text, {
+            variant: "text-xs/normal",
+            color: "text-muted",
+            className: A.helpText,
+            children: N.default.Messages.HANG_STATUS_HELP
+          }), (0, a.jsxs)("div", {
+            className: A.iconGroup,
+            children: [null != O && (0, a.jsxs)("div", {
+              className: A.avatarWrapper,
+              children: [(0, a.jsx)(c.Avatar, {
+                className: A.avatar,
+                size: c.AvatarSizes.SIZE_40,
+                src: (0, S.getUserAvatarURL)(O),
+                "aria-hidden": !0
+              }), (0, a.jsx)("div", {
+                className: A.outline
+              })]
+            }), (0, a.jsx)(T.default, {
+              className: A.statusIcon,
+              hangStatusActivity: j
+            })]
           })]
         })]
       }), (0, a.jsxs)("div", {
-        className: x.options,
+        className: A.options,
         children: [(0, a.jsxs)("div", {
-          className: x.iconsContainer,
-          children: [Object.entries(s).map(e => {
+          className: A.iconsContainer,
+          children: [Object.entries(R).map(e => {
             let [n, l] = e;
-            return (0, a.jsx)(u.Clickable, {
+            return (0, a.jsx)(c.Clickable, {
               "aria-label": l.title,
-              onMouseEnter: () => y(n),
-              onClick: e => j(e, n),
-              children: (0, a.jsx)(A, {
-                className: i(x.iconWidget, {
-                  [x.selectedWidget]: n === (null == t ? void 0 : t.state)
+              onMouseEnter: () => w(n),
+              onClick: e => b(e, n),
+              children: (0, a.jsx)(M, {
+                className: i(A.iconWidget, {
+                  [A.selectedWidget]: n === (null == t ? void 0 : t.state)
                 }),
                 name: l.title,
                 icon: (0, a.jsx)("img", {
                   src: l.icon,
                   alt: "",
-                  className: x.icon
+                  className: A.icon
                 }),
                 style: n === (null == t ? void 0 : t.state) ? {
                   backgroundColor: null != l.color ? l.color : void 0
                 } : {}
               })
             }, n)
-          }), (0, a.jsx)(u.Clickable, {
-            "aria-label": v.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
-            onClick: O,
-            onMouseEnter: () => M(null),
-            children: (0, a.jsx)(A, {
-              className: x.optionButton,
-              name: v.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
-              icon: (0, a.jsx)(h.default, {
-                className: x.editIcon,
-                foreground: x.editIconColor
+          }), (0, a.jsx)(c.Clickable, {
+            "aria-label": N.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
+            onClick: D,
+            onMouseEnter: () => L(null),
+            children: (0, a.jsx)(M, {
+              className: A.optionButton,
+              name: N.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
+              icon: (0, a.jsx)(m.default, {
+                className: A.editIcon,
+                foreground: A.editIconColor
               })
             })
           })]
         }), (0, a.jsx)("div", {
-          className: x.divider
+          className: A.divider
         }), (0, a.jsxs)("div", {
-          className: x.iconsContainer,
-          children: [n.current.map((e, n) => {
+          className: A.iconsContainer,
+          children: [s.current.map((e, n) => {
             let l = e.status === (null == t ? void 0 : t.details) && o.isEqual(e.emoji, null == t ? void 0 : t.emoji);
-            return (0, a.jsx)(u.Clickable, {
+            return (0, a.jsx)(c.Clickable, {
               "aria-label": e.status,
-              onMouseEnter: () => P(e),
-              onClick: t => L(t, e),
-              children: (0, a.jsx)(A, {
-                className: i(x.iconWidget, {
-                  [x.selectedWidget]: l
+              onMouseEnter: () => F(e),
+              onClick: t => P(t, e),
+              children: (0, a.jsx)(M, {
+                className: i(A.iconWidget, {
+                  [A.selectedWidget]: l
                 }),
                 name: e.status,
-                icon: null != e.emoji ? (0, a.jsx)(c.ActivityEmoji, {
-                  className: x.customIcon,
+                icon: null != e.emoji ? (0, a.jsx)(f.ActivityEmoji, {
+                  className: A.customIcon,
                   emoji: e.emoji,
                   hideTooltip: !0
                 }) : null,
@@ -181,29 +186,29 @@ let N = e => {
                 }
               })
             }, "custom-status-".concat(n))
-          }), n.current.length > 0 ? (0, a.jsx)(u.Clickable, {
-            "aria-label": null != t ? v.default.Messages.STATUS_POPOUT_EDIT_CUSTOM : v.default.Messages.STATUS_POPOUT_SET_CUSTOM,
-            onClick: N,
-            children: (0, a.jsx)(A, {
-              className: x.optionButton,
-              name: null != t ? v.default.Messages.STATUS_POPOUT_EDIT_CUSTOM : v.default.Messages.STATUS_POPOUT_SET_CUSTOM,
-              icon: (0, a.jsx)(p.default, {
+          }), s.current.length > 0 ? (0, a.jsx)(c.Clickable, {
+            "aria-label": null != t ? N.default.Messages.STATUS_POPOUT_EDIT_CUSTOM : N.default.Messages.STATUS_POPOUT_SET_CUSTOM,
+            onClick: U,
+            children: (0, a.jsx)(M, {
+              className: A.optionButton,
+              name: null != t ? N.default.Messages.STATUS_POPOUT_EDIT_CUSTOM : N.default.Messages.STATUS_POPOUT_SET_CUSTOM,
+              icon: (0, a.jsx)(E.default, {
                 width: 20,
                 height: 20,
-                foreground: x.editIconColor
+                foreground: A.editIconColor
               })
             })
-          }, "custom-status-edit") : (0, a.jsxs)(u.Clickable, {
-            "aria-label": v.default.Messages.STATUS_POPOUT_SET_CUSTOM,
-            onClick: N,
-            className: x.setCustomButton,
-            children: [(0, a.jsx)(p.default, {
-              className: x.editIcon,
-              foreground: x.editIconColor
-            }), (0, a.jsx)(u.Text, {
+          }, "custom-status-edit") : (0, a.jsxs)(c.Clickable, {
+            "aria-label": N.default.Messages.STATUS_POPOUT_SET_CUSTOM,
+            onClick: U,
+            className: A.setCustomButton,
+            children: [(0, a.jsx)(E.default, {
+              className: A.editIcon,
+              foreground: A.editIconColor
+            }), (0, a.jsx)(c.Text, {
               variant: "text-xs/medium",
               color: "interactive-active",
-              children: v.default.Messages.STATUS_POPOUT_SET_CUSTOM
+              children: N.default.Messages.STATUS_POPOUT_SET_CUSTOM
             })]
           }, "custom-status-edit-full")]
         })]
