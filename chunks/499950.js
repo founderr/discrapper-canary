@@ -18,8 +18,8 @@ var a = l("446674"),
   f = l("330154"),
   I = l("943232"),
   _ = l("945330"),
-  T = l("599110"),
-  h = l("306160"),
+  h = l("599110"),
+  T = l("306160"),
   N = l("354023"),
   v = l("841363"),
   m = l("49111"),
@@ -35,25 +35,25 @@ function p(e) {
   let {
     onClose: A,
     event: O
-  } = e, R = null == O ? void 0 : O.guild_id, M = (0, a.useStateFromStores)([c.default], () => {
+  } = e, M = null == O ? void 0 : O.guild_id, R = (0, a.useStateFromStores)([c.default], () => {
     var e;
-    return null != R ? null === (e = c.default.getDefaultChannel(R)) || void 0 === e ? void 0 : e.id : null
-  }, [R]), D = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(R), [R]), L = (null == D ? void 0 : D.vanityURLCode) != null && (null == D ? void 0 : D.vanityURLCode.length) > 0, {
+    return null != M ? null === (e = c.default.getDefaultChannel(M)) || void 0 === e ? void 0 : e.id : null
+  }, [M]), L = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(M), [M]), D = (null == L ? void 0 : L.vanityURLCode) != null && (null == L ? void 0 : L.vanityURLCode.length) > 0, {
     enabled: y
   } = i.default.useExperiment({
-    guildId: null != R ? R : "",
+    guildId: null != M ? M : "",
     location: "bd50e8_1"
   }, {
-    autoTrackExposure: L
+    autoTrackExposure: D
   }), {
     channel_id: j,
     id: V
   } = null != O ? O : {}, U = (0, a.useStateFromStores)([f.default], () => {
-    let e = null != j ? j : M;
+    let e = null != j ? j : R;
     return null == e ? null : f.default.getInvite(e)
-  }, [j, M]);
+  }, [j, R]);
   if (null == O) return A(), null;
-  let P = y && null !== (t = null == D ? void 0 : D.vanityURLCode) && void 0 !== t ? t : null == U ? void 0 : U.code,
+  let P = y && null !== (t = null == L ? void 0 : L.vanityURLCode) && void 0 !== t ? t : null == U ? void 0 : U.code,
     G = null != P ? (0, r.generateInviteKeyFromExtraData)({
       baseCode: P,
       guildScheduledEventId: V
@@ -94,9 +94,9 @@ function p(e) {
         autoFocus: !1,
         onCopy: e => {
           if (H) return;
-          (0, h.copy)(e);
+          (0, T.copy)(e);
           let t = (0, v.getChannelTypeFromEntity)(O.entity_type);
-          T.default.track(m.AnalyticEvents.COPY_INSTANT_INVITE, {
+          h.default.track(m.AnalyticEvents.COPY_INSTANT_INVITE, {
             server: O.guild_id,
             channel: j,
             channel_type: t,
@@ -105,7 +105,7 @@ function p(e) {
             guild_scheduled_event_id: null == O ? void 0 : O.id
           })
         }
-      }), (null == D ? void 0 : D.vanityURLCode) == null && (0, n.jsx)(s.Text, {
+      }), (null == L ? void 0 : L.vanityURLCode) == null && (0, n.jsx)(s.Text, {
         variant: "text-xs/normal",
         color: "header-secondary",
         className: g.inviteDetail,

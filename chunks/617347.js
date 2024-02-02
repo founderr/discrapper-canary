@@ -18,8 +18,8 @@ var n, a, s = l("37983"),
   f = l("656038"),
   I = l("419830"),
   _ = l("817963"),
-  T = l("957255"),
-  h = l("476263"),
+  h = l("957255"),
+  T = l("476263"),
   N = l("718550"),
   v = l("398604"),
   m = l("651072"),
@@ -30,10 +30,10 @@ var n, a, s = l("37983"),
   p = l("255050"),
   A = l("400271"),
   O = l("427554"),
-  R = l("644189"),
-  M = l("29913"),
-  D = l("745049"),
-  L = l("49111"),
+  M = l("644189"),
+  R = l("29913"),
+  L = l("745049"),
+  D = l("49111"),
   y = l("782340"),
   j = l("955614");
 
@@ -43,7 +43,7 @@ function V(e) {
     onClick: l
   } = e, {
     canManageAllEvents: n
-  } = (0, _.useManageResourcePermissions)(t), a = (0, d.useStateFromStores)([T.default], () => !t.isGuildVocal() || T.default.can(L.Permissions.CONNECT, t), [t]), i = r.useMemo(() => (0, f.default)(t), [t]), c = (0, I.getChannelIconComponent)(t);
+  } = (0, _.useManageResourcePermissions)(t), a = (0, d.useStateFromStores)([h.default], () => !t.isGuildVocal() || h.default.can(D.Permissions.CONNECT, t), [t]), i = r.useMemo(() => (0, f.default)(t), [t]), c = (0, I.getChannelIconComponent)(t);
   return (0, s.jsx)(o.Tooltip, {
     text: y.default.Messages.GUILD_EVENT_CANNOT_CONNECT,
     shouldShow: !a && null != l,
@@ -85,9 +85,9 @@ function U(e) {
   } = e;
   if (d) return null == t ? (0, s.jsx)("div", {}) : (0, s.jsxs)("div", {
     className: j.inline,
-    children: [(0, s.jsx)(h.default, {
+    children: [(0, s.jsx)(T.default, {
       className: j.guildIcon,
-      size: h.default.Sizes.MINI,
+      size: T.default.Sizes.MINI,
       active: !0,
       guild: t
     }), (0, s.jsx)(o.Text, {
@@ -125,11 +125,11 @@ function P(e) {
     entityType: f,
     description: I,
     imageLocation: _ = 0,
-    imageSource: T,
-    isActive: h,
+    imageSource: h,
+    isActive: T,
     isUserLurking: N,
     isJoined: S = !1,
-    isMember: L = !1,
+    isMember: D = !1,
     isHub: y = !1,
     speakers: V,
     speakerCount: P,
@@ -140,8 +140,8 @@ function P(e) {
     onContextMenu: b,
     onJoinClick: w,
     onJoinGuildClick: k,
-    onGoToGuildClick: Y,
-    onRsvpClick: z,
+    onGoToGuildClick: z,
+    onRsvpClick: Y,
     onStartClick: Z,
     onInviteClick: X,
     onEndClick: W,
@@ -151,7 +151,7 @@ function P(e) {
     eventPreview: Q,
     recurrenceRule: $,
     recurrenceId: ee
-  } = e, et = (0, g.isChannelPublic)(a, f), el = f === D.GuildScheduledEventEntityTypes.EXTERNAL, {
+  } = e, et = (0, g.isChannelPublic)(a, f), el = f === L.GuildScheduledEventEntityTypes.EXTERNAL, {
     analyticsLocations: en
   } = (0, E.default)(c.default.GUILD_EVENT_CARD), {
     showRecurringEventsDesktop: ea
@@ -179,12 +179,12 @@ function P(e) {
         [j.isRecurring]: ei
       }),
       children: [0 === _ && (0, s.jsx)(p.default, {
-        source: T
+        source: h
       }), (0, s.jsx)(A.default, {
         creator: r,
         name: i,
         description: I,
-        imageSource: 1 === _ ? T : null,
+        imageSource: 1 === _ ? h : null,
         truncate: B,
         guildId: null == n ? void 0 : n.id,
         isHub: y,
@@ -192,7 +192,7 @@ function P(e) {
         guildEventId: J,
         eventPreview: Q,
         recurrenceId: ee
-      }), h && null != n && null != V && P > 0 && (0, s.jsx)(M.default, {
+      }), T && null != n && null != V && P > 0 && (0, s.jsx)(R.default, {
         guild: n,
         speakers: V,
         speakerCount: P,
@@ -209,14 +209,14 @@ function P(e) {
           location: F,
           isExternal: el,
           isHub: y
-        }), y ? (0, s.jsx)(R.default, {
-          isActive: h,
+        }), y ? (0, s.jsx)(M.default, {
+          isActive: T,
           isUserLurking: N,
-          isMember: L,
+          isMember: D,
           rsvped: G,
-          onRsvpClick: z,
+          onRsvpClick: Y,
           onJoinGuildClick: k,
-          onGoToGuildClick: Y,
+          onGoToGuildClick: z,
           guildName: null == n ? void 0 : n.name,
           canInvite: H,
           isChannelPublic: et,
@@ -224,14 +224,14 @@ function P(e) {
         }) : (0, s.jsx)(x.default, {
           entityType: f,
           isJoined: S,
-          isActive: h,
+          isActive: T,
           isUserLurking: N,
           rsvped: G,
           canInvite: H,
           isChannelPublic: et,
           onContextMenu: b,
           onJoinClick: w,
-          onRsvpClick: z,
+          onRsvpClick: Y,
           onStartClick: Z,
           onInviteClick: X,
           onEndClick: W

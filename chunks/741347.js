@@ -1,11 +1,11 @@
 "use strict";
-l.r(t), l.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return i
   }
 });
-var s = l("666038");
-class u extends s.default {
+var l = s("666038");
+class u extends l.default {
   static fromPath(e) {
     return new u({
       id: e,

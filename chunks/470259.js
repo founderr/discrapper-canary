@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   INVITE_ROW_HEIGHT: function() {
-    return _
+    return T
   },
   InviteRow: function() {
-    return T
+    return _
   }
 }), n("222007");
 var l = n("37983"),
   i = n("884691"),
-  a = n("819855"),
-  s = n("77078"),
+  s = n("819855"),
+  a = n("77078"),
   r = n("148387"),
   o = n("843962"),
   u = n("679653"),
@@ -20,12 +20,12 @@ var l = n("37983"),
   g = n("27618"),
   h = n("697218"),
   I = n("315102"),
-  m = n("159885"),
-  E = n("158998"),
-  p = n("782340"),
-  v = n("435808");
-let _ = 44;
-class T extends i.Component {
+  E = n("159885"),
+  m = n("158998"),
+  v = n("782340"),
+  p = n("435808");
+let T = 44;
+class _ extends i.Component {
   shouldComponentUpdate(e, t) {
     return this.state.sending !== t.sending || this.state.invited !== t.invited || this.state.hovered !== t.hovered || this.props.user !== e.user || this.props.channel !== e.channel
   }
@@ -33,27 +33,27 @@ class T extends i.Component {
     let e, t, n;
     let {
       user: i,
-      channel: a
+      channel: s
     } = this.props;
-    if (null != i) t = i.getAvatarURL(null == a ? void 0 : a.guild_id, 32), n = E.default.getName(i);
-    else if (null != a && (t = (0, o.getChannelIconURL)(a), n = (0, u.computeChannelName)(a, h.default, g.default), null == t && null != a.guild_id)) {
-      let n = c.default.getGuild(a.guild_id);
+    if (null != i) t = i.getAvatarURL(null == s ? void 0 : s.guild_id, 32), n = m.default.getName(i);
+    else if (null != s && (t = (0, o.getChannelIconURL)(s), n = (0, u.computeChannelName)(s, h.default, g.default), null == t && null != s.guild_id)) {
+      let n = c.default.getGuild(s.guild_id);
       null != n && (null != n.icon ? t = I.default.getGuildIconURL({
-        id: a.guild_id,
+        id: s.guild_id,
         icon: n.icon,
         size: 32
-      }) : e = (0, m.getAcronym)(n.name))
+      }) : e = (0, E.getAcronym)(n.name))
     }
     if (null == t || null == n) return null != e ? (0, l.jsx)("div", {
-      className: v.acronym,
+      className: p.acronym,
       "aria-hidden": !0,
       children: e
     }) : null;
-    return (0, l.jsx)(s.Avatar, {
+    return (0, l.jsx)(a.Avatar, {
       src: t,
       "aria-label": n,
-      size: s.AvatarSizes.SIZE_32,
-      className: v.inviteRowAvatar
+      size: a.AvatarSizes.SIZE_32,
+      className: p.inviteRowAvatar
     })
   }
   render() {
@@ -66,29 +66,29 @@ class T extends i.Component {
       invited: r,
       hovered: o
     } = this.state;
-    return e = r ? (0, l.jsx)(s.Button, {
-      look: s.Button.Looks.LINK,
-      size: s.Button.Sizes.SMALL,
+    return e = r ? (0, l.jsx)(a.Button, {
+      look: a.Button.Looks.LINK,
+      size: a.Button.Sizes.SMALL,
       disabled: !0,
-      color: (0, a.isThemeDark)(d.default.theme) ? s.Button.Colors.WHITE : s.Button.Colors.BLACK,
-      children: p.default.Messages.INVITE_FRIEND_MODAL_SENT
-    }) : (0, l.jsx)(s.Button, {
-      color: s.Button.Colors.GREEN,
-      look: o ? s.Button.Looks.FILLED : s.Button.Looks.OUTLINED,
-      className: v.inviteRowButton,
-      size: s.Button.Sizes.SMALL,
+      color: (0, s.isThemeDark)(d.default.theme) ? a.Button.Colors.WHITE : a.Button.Colors.BLACK,
+      children: v.default.Messages.INVITE_FRIEND_MODAL_SENT
+    }) : (0, l.jsx)(a.Button, {
+      color: a.Button.Colors.GREEN,
+      look: o ? a.Button.Looks.FILLED : a.Button.Looks.OUTLINED,
+      className: p.inviteRowButton,
+      size: a.Button.Sizes.SMALL,
       submitting: i,
       onClick: this.handleClickInvite,
-      children: p.default.Messages.INVITE_FRIEND_MODAL_INVITE
+      children: v.default.Messages.INVITE_FRIEND_MODAL_INVITE
     }), (0, l.jsxs)("div", {
-      className: v.inviteRow,
+      className: p.inviteRow,
       onMouseEnter: this.handleMouseEnter,
       onMouseLeave: this.handleMouseLeave,
       children: [(0, l.jsxs)("div", {
-        className: v.inviteRowInfo,
+        className: p.inviteRowInfo,
         children: [this.renderUserOrChannel(), (0, l.jsxs)("div", {
-          className: v.inviteRowName,
-          children: [E.default.getName(t), null != n ? (0, u.computeChannelName)(n, h.default, g.default, !0) : null]
+          className: p.inviteRowName,
+          children: [m.default.getName(t), null != n ? (0, u.computeChannelName)(n, h.default, g.default, !0) : null]
         })]
       }), e]
     })

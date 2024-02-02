@@ -6,8 +6,8 @@ a.r(t), a.d(t, {
 }), a("222007");
 var n = a("446674"),
   i = a("913144"),
-  s = a("27618");
-let l = !1,
+  l = a("27618");
+let s = !1,
   r = Object.freeze({
     userAffinities: [],
     affinityUserIds: new Set,
@@ -18,17 +18,17 @@ let l = !1,
   };
 
 function o() {
-  u.affinityUserIds = new Set(u.userAffinities.map(e => e.user_id).filter(e => !s.default.isBlocked(e)))
+  u.affinityUserIds = new Set(u.userAffinities.map(e => e.user_id).filter(e => !l.default.isBlocked(e)))
 }
 class d extends n.default.PersistedStore {
   initialize(e) {
-    this.waitFor(s.default), null != e && (u.userAffinities = e.userAffinities, u.affinityUserIds = new Set(e.affinityUserIds), u.lastFetched = e.lastFetched), this.syncWith([s.default], o)
+    this.waitFor(l.default), null != e && (u.userAffinities = e.userAffinities, u.affinityUserIds = new Set(e.affinityUserIds), u.lastFetched = e.lastFetched), this.syncWith([l.default], o)
   }
   needsRefresh() {
     return Date.now() - u.lastFetched > 864e5
   }
   getFetching() {
-    return l
+    return s
   }
   getState() {
     return u
@@ -47,13 +47,13 @@ var c = new d(i.default, {
     let {
       affinities: a
     } = e;
-    u.userAffinities = null !== (t = a.user_affinities) && void 0 !== t ? t : [], u.lastFetched = Date.now(), o(), l = !1
+    u.userAffinities = null !== (t = a.user_affinities) && void 0 !== t ? t : [], u.lastFetched = Date.now(), o(), s = !1
   },
   LOAD_USER_AFFINITIES: function() {
-    l = !0
+    s = !0
   },
   LOAD_USER_AFFINITIES_FAILURE: function() {
-    l = !1
+    s = !1
   },
   LOGOUT: function() {
     u = {

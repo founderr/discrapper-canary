@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("808653");
 var l = n("37983"),
   i = n("884691"),
-  a = n("414456"),
-  s = n.n(a),
+  s = n("414456"),
+  a = n.n(s),
   r = n("77078"),
   o = n("155996"),
   u = n("41594"),
@@ -19,11 +19,11 @@ let h = e => {
     let {
       guild: t,
       inviteChannel: n,
-      setInviteChannel: a
-    } = e, s = (0, o.default)(t.id), d = i.useMemo(() => s.reduce((e, t) => ({
+      setInviteChannel: s
+    } = e, a = (0, o.default)(t.id), d = i.useMemo(() => a.reduce((e, t) => ({
       ...e,
       [t.id]: t
-    }), {}), [s]), f = i.useMemo(() => Object.values(d).map(e => ({
+    }), {}), [a]), f = i.useMemo(() => Object.values(d).map(e => ({
       value: e.id,
       label: e.name
     })), [d]);
@@ -31,7 +31,7 @@ let h = e => {
       options: f,
       value: null == n ? void 0 : n.id,
       onChange: e => {
-        a(d[e])
+        s(d[e])
       },
       placeholder: c.default.Messages.INVITE_A_GUEST_SELECT_VOICE_CHANNEL,
       renderOptionPrefix: e => {
@@ -50,7 +50,7 @@ let h = e => {
       handleDone: t,
       headerId: n,
       inviteChannel: i,
-      copyValue: a
+      copyValue: s
     } = e;
     return (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsxs)(r.ModalHeader, {
@@ -62,7 +62,7 @@ let h = e => {
           children: (0, l.jsx)(r.FormTitle, {
             id: n,
             tag: "h2",
-            className: s(g.marginReset, f.headerCloseButtonSpacing, f.headerText),
+            className: a(g.marginReset, f.headerCloseButtonSpacing, f.headerText),
             children: c.default.Messages.INVITE_A_GUEST_VOICE_ONLY
           })
         })]
@@ -87,7 +87,7 @@ let h = e => {
             children: c.default.Messages.INVITE_A_GUEST_STEP_2
           }), (0, l.jsx)(d.InviteCopyInput, {
             ...e,
-            copyValue: null == i ? "" : a,
+            copyValue: null == i ? "" : s,
             disabled: null == i
           })]
         })

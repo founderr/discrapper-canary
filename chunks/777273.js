@@ -6,15 +6,15 @@ a.r(t), a.d(t, {
 });
 var n = a("872717"),
   i = a("913144"),
-  s = a("843823"),
-  l = a("49111");
+  l = a("843823"),
+  s = a("49111");
 
 function r() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  return s.default.needsRefresh() ? (i.default.dispatch({
+  return l.default.needsRefresh() ? (i.default.dispatch({
     type: "LOAD_USER_AFFINITIES"
   }), n.default.get({
-    url: l.Endpoints.USER_AFFINITIES,
+    url: s.Endpoints.USER_AFFINITIES,
     retries: e ? 3 : 0,
     oldFormErrors: !0
   }).then(e => {

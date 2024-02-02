@@ -16,17 +16,17 @@ let o = {
 };
 
 function c(e, t, l) {
-  let [c, E] = n.useState(o), [f, I] = n.useState(!1), _ = n.useRef(!1), T = null == e ? void 0 : e.id, h = null == e ? void 0 : e.hasFeature(d.GuildFeatures.HAS_DIRECTORY_ENTRY);
+  let [c, E] = n.useState(o), [f, I] = n.useState(!1), _ = n.useRef(!1), h = null == e ? void 0 : e.id, T = null == e ? void 0 : e.hasFeature(d.GuildFeatures.HAS_DIRECTORY_ENTRY);
   n.useEffect(() => {
-    if (!h) {
+    if (!T) {
       E(o);
       return
     }
-    if (_.current || null == T) return;
+    if (_.current || null == h) return;
     let e = async () => {
       _.current = !0;
       try {
-        let e = await (0, i.getDirectoryEntryBroadcastInfo)(T, u.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT, t);
+        let e = await (0, i.getDirectoryEntryBroadcastInfo)(h, u.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT, t);
         E(e)
       } catch (e) {
         E(o)
@@ -34,7 +34,7 @@ function c(e, t, l) {
       _.current = !1
     };
     e()
-  }, [T, h, t]), n.useEffect(() => {
+  }, [h, T, t]), n.useEffect(() => {
     var e;
     if (!c.can_broadcast) {
       I(!1);

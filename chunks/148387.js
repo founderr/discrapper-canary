@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return g
   }
 });
-var l, i, a = n("450911"),
-  s = n("819689"),
+var l, i, s = n("450911"),
+  a = n("819689"),
   r = n("605250"),
   o = n("42203"),
   u = n("718517"),
@@ -17,7 +17,7 @@ let c = 1 * u.default.Millis.SECOND + 10;
 (l = i || (i = {}))[l.GROUP_DM = 0] = "GROUP_DM", l[l.USER = 1] = "USER", l[l.CHANNEL = 2] = "CHANNEL";
 class f extends d.default {
   _sendInvite(e, t, n, l, i) {
-    s.default.sendInvite(e.id, t, n, l).then(() => i(null, !0), () => i(null, !1))
+    a.default.sendInvite(e.id, t, n, l).then(() => i(null, !0), () => i(null, !1))
   }
   drain(e, t) {
     let {
@@ -30,9 +30,9 @@ class f extends d.default {
         this._sendInvite(e.channel, e.inviteKey, n, l, t);
         break;
       case 1:
-        a.default.ensurePrivateChannel(e.user.id).then(i => {
-          let a = o.default.getChannel(i);
-          null != a && this._sendInvite(a, e.inviteKey, n, l, t)
+        s.default.ensurePrivateChannel(e.user.id).then(i => {
+          let s = o.default.getChannel(i);
+          null != s && this._sendInvite(s, e.inviteKey, n, l, t)
         }, () => t(null, !1))
     }
   }

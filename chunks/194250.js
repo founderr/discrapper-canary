@@ -17,8 +17,8 @@ var n = l("37983"),
   f = l("189443"),
   I = l("822516"),
   _ = l("93550"),
-  T = l("953143"),
-  h = l("745049"),
+  h = l("953143"),
+  T = l("745049"),
   N = l("75015"),
   v = l("837979"),
   m = l("782340"),
@@ -76,34 +76,34 @@ function C(e) {
     error: p,
     validationErrorMessage: A,
     onChange: O,
-    canSetFocus: R = !1
+    canSetFocus: M = !1
   } = e, {
-    entityType: M,
-    channelId: D,
-    description: L,
+    entityType: R,
+    channelId: L,
+    description: D,
     name: y,
     image: j,
     scheduledEndTime: V,
     scheduledStartTime: U,
     recurrenceRule: P
-  } = t, G = (0, o.useStageBlockedUsersCount)(D), H = null != t && (0, E.isGuildScheduledEventActive)(t), F = a.useMemo(() => {
+  } = t, G = (0, o.useStageBlockedUsersCount)(L), H = null != t && (0, E.isGuildScheduledEventActive)(t), F = a.useMemo(() => {
     let e = (0, I.getScheduleFromEventData)(t);
     return null != e ? e : {
       startDate: r(U)
     }
   }, [t, U]), [B, b] = a.useState(null), w = a.useRef(null);
   a.useEffect(() => {
-    if (R) {
+    if (M) {
       var e;
       null === (e = w.current) || void 0 === e || e.focus()
     }
-  }, [R]);
+  }, [M]);
   let k = e => {
       O({
         image: e
       })
     },
-    Y = (e, t) => {
+    z = (e, t) => {
       if (null == e || void 0 === t) {
         k(null);
         return
@@ -124,8 +124,8 @@ function C(e) {
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)("div", {
       className: S.blockedUsersContainer,
-      children: null != D && !H && G > 0 && (0, n.jsx)(c.BlockedUsersNotice, {
-        channelId: D
+      children: null != L && !H && G > 0 && (0, n.jsx)(c.BlockedUsersNotice, {
+        channelId: L
       })
     }), (0, n.jsxs)("div", {
       className: S.form,
@@ -151,7 +151,7 @@ function C(e) {
           className: S.warning,
           children: p.getAnyErrorMessage()
         }) : null]
-      }), (0, n.jsx)(T.default, {
+      }), (0, n.jsx)(h.default, {
         className: S.formItem,
         onScheduleChange: e => {
           let {
@@ -173,8 +173,8 @@ function C(e) {
         },
         schedule: F,
         recurrenceRule: P,
-        showEndDate: M === h.GuildScheduledEventEntityTypes.EXTERNAL,
-        requireEndDate: M === h.GuildScheduledEventEntityTypes.EXTERNAL,
+        showEndDate: R === T.GuildScheduledEventEntityTypes.EXTERNAL,
+        requireEndDate: R === T.GuildScheduledEventEntityTypes.EXTERNAL,
         disableStartDateTime: H,
         guildId: C
       }), null != A ? (0, n.jsx)(i.Text, {
@@ -188,13 +188,13 @@ function C(e) {
         children: (0, n.jsx)(i.TextArea, {
           className: S.descriptionInput,
           placeholder: m.default.Messages.GUILD_EVENT_CREATE_DESCRIPTION_PLACEHOLDER,
-          value: L,
+          value: D,
           onChange: e => {
             O({
               description: e
             })
           },
-          maxLength: h.GUILD_EVENT_MAX_DESCRIPTION_LENGTH,
+          maxLength: T.GUILD_EVENT_MAX_DESCRIPTION_LENGTH,
           autosize: !0
         })
       }), (0, n.jsxs)(i.FormItem, {
@@ -217,7 +217,7 @@ function C(e) {
                 return null !== (l = (0, _.default)((0, f.convertToFakeGuildEvent)(t, C, s))) && void 0 !== l ? l : null
               }
             },
-            onChange: Y,
+            onChange: z,
             hint: m.default.Messages.GUILD_EVENT_CHANGE_IMAGE,
             showRemoveButton: !1,
             enabled: !0
@@ -229,7 +229,7 @@ function C(e) {
         }) : (0, n.jsxs)(i.Button, {
           size: i.Button.Sizes.SMALL,
           children: [m.default.Messages.GUILD_EVENT_ADD_IMAGE, (0, n.jsx)(d.default, {
-            onChange: Y
+            onChange: z
           })]
         })]
       }), (0, n.jsx)(g, {

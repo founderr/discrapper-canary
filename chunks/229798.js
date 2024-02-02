@@ -24,7 +24,7 @@ function h(e) {
     onClose: g
   } = e, x = (0, u.default)(l, t.id), f = (0, o.getBaseScheduleForRecurrence)(l, t), D = (0, o.getScheduleForRecurrenceWithException)(f, x), [A, m] = a.useState(D), [N, {
     loading: T,
-    error: R
+    error: v
   }] = (0, i.default)(async () => {
     let e = (0, o.areDatesIdentical)(f.startDate, A.startDate) ? null : A.startDate,
       n = (0, o.areDatesIdentical)(f.endDate, A.endDate) ? null : A.endDate;
@@ -42,7 +42,7 @@ function h(e) {
         is_canceled: !1
       }, t.guild_id, t.id)
     }
-    null == R && g()
+    null == v && g()
   });
   return (0, n.jsxs)(r.ModalRoot, {
     transitionState: h,
@@ -69,11 +69,11 @@ function h(e) {
         requireEndDate: null != A.endDate,
         guildId: t.guild_id,
         recurrenceRule: t.recurrence_rule
-      }), null != R ? (0, n.jsx)(r.Text, {
+      }), null != v ? (0, n.jsx)(r.Text, {
         color: "text-danger",
         variant: "text-xs/normal",
         className: _.warning,
-        children: R.getAnyErrorMessage()
+        children: v.getAnyErrorMessage()
       }) : null]
     }), (0, n.jsxs)(r.ModalFooter, {
       className: _.footer,

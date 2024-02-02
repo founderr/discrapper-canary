@@ -70,14 +70,14 @@ function D(e) {
     loading: G,
     onSave: U,
     onEventSave: B,
-    onClose: P,
-    onSelectChannel: V,
-    isEvent: b = !1,
+    onClose: V,
+    onSelectChannel: b,
+    isEvent: P = !1,
     defaultOptions: H,
     isSlideReady: Y = !0
-  } = e, F = a.useMemo(() => m.default.getStageInstanceByChannel(j.id), [j.id]), [W, Z] = a.useState(null !== (n = null !== (t = null == H ? void 0 : H.topic) && void 0 !== t ? t : null == F ? void 0 : F.topic) && void 0 !== n ? n : ""), [K, z] = a.useState(null !== (r = null == H ? void 0 : H.description) && void 0 !== r ? r : ""), [q] = a.useState(b), [X, J] = a.useState(null !== (g = null == H ? void 0 : H.schedule) && void 0 !== g ? g : {
+  } = e, F = a.useMemo(() => m.default.getStageInstanceByChannel(j.id), [j.id]), [W, Z] = a.useState(null !== (n = null !== (t = null == H ? void 0 : H.topic) && void 0 !== t ? t : null == F ? void 0 : F.topic) && void 0 !== n ? n : ""), [K, z] = a.useState(null !== (r = null == H ? void 0 : H.description) && void 0 !== r ? r : ""), [q] = a.useState(P), [X, J] = a.useState(null !== (g = null == H ? void 0 : H.schedule) && void 0 !== g ? g : {
     startDate: (0, d.getInitialEventStartDate)()
-  }), [Q, $] = a.useState(q && (null == H ? void 0 : H.schedule) != null), ee = (0, R.useCanSendStageStartNotification)(j), et = (0, R.useDefaultSendStartStageNotificationToggle)(j), en = null == F && ee && !q, [el, ea] = a.useState(en && et), er = (0, i.useStateFromStores)([h.default], () => h.default.hasHotspot(x.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), es = I.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [ei] = a.useState(null !== (v = null !== (_ = null == H ? void 0 : H.privacyLevel) && void 0 !== _ ? _ : null == F ? void 0 : F.privacy_level) && void 0 !== v ? v : es), [eu, eo] = a.useState(null == H ? void 0 : H.recurrenceRule), ec = (0, C.useStageBlockedUsersCount)(j.id), [ed, ef] = a.useState(!1), eE = (0, o.default)(j), eh = (0, c.useChannelsUserCanStartStageIn)(O), eg = null != V, e_ = eh.length > 1;
+  }), [Q, $] = a.useState(q && (null == H ? void 0 : H.schedule) != null), ee = (0, R.useCanSendStageStartNotification)(j), et = (0, R.useDefaultSendStartStageNotificationToggle)(j), en = null == F && ee && !q, [el, ea] = a.useState(en && et), er = (0, i.useStateFromStores)([h.default], () => h.default.hasHotspot(x.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), es = I.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [ei] = a.useState(null !== (v = null !== (_ = null == H ? void 0 : H.privacyLevel) && void 0 !== _ ? _ : null == F ? void 0 : F.privacy_level) && void 0 !== v ? v : es), [eu, eo] = a.useState(null == H ? void 0 : H.recurrenceRule), ec = (0, C.useStageBlockedUsersCount)(j.id), [ed, ef] = a.useState(!1), eE = (0, o.default)(j), eh = (0, c.useChannelsUserCanStartStageIn)(O), eg = null != b, e_ = eh.length > 1;
   a.useEffect(() => {
     S.default.track(p.AnalyticEvents.START_STAGE_OPENED, {
       stage_instance_id: null == F ? void 0 : F.id,
@@ -140,7 +140,7 @@ function D(e) {
         onSubmit: ev,
         className: A.form,
         children: [(0, l.jsxs)(u.FormItem, {
-          title: b ? L.default.Messages.GUILD_EVENT_CREATE_TOPIC_LABEL : L.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_LABEL,
+          title: P ? L.default.Messages.GUILD_EVENT_CREATE_TOPIC_LABEL : L.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_LABEL,
           className: A.topicFormItem,
           required: !0,
           children: [(0, l.jsx)(u.TextInput, {
@@ -165,7 +165,7 @@ function D(e) {
         }), eg && e_ ? (0, l.jsx)(y, {
           stageChannelsInGuild: eh,
           channel: j,
-          onSelectChannel: V
+          onSelectChannel: b
         }) : null, q && (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(E.default, {
             className: A.formItem,
@@ -186,7 +186,7 @@ function D(e) {
             className: A.warning,
             children: L.default.Messages.GUILD_EVENT_PAST_START_DATE
           }) : null]
-        }), b && (0, l.jsx)(u.FormItem, {
+        }), P && (0, l.jsx)(u.FormItem, {
           title: L.default.Messages.CREATE_STAGE_INSTANCE_DESCRIPTION_INPUT_LABEL,
           className: A.formItem,
           children: (0, l.jsx)(u.TextArea, {
@@ -216,13 +216,13 @@ function D(e) {
       children: [(0, l.jsx)(u.Button, {
         color: eS,
         onClick: ev,
-        disabled: "" === W || null == ei || b && !eC,
+        disabled: "" === W || null == ei || P && !eC,
         submitting: G,
         children: eR
       }), (0, l.jsx)(u.Button, {
         color: u.Button.Colors.PRIMARY,
         className: A.cancelButton,
-        onClick: P,
+        onClick: V,
         children: L.default.Messages.CANCEL
       })]
     })]

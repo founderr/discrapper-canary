@@ -16,7 +16,7 @@ function s(e) {
     guild: n,
     channel: s,
     applicationId: l,
-    inviteTargetType: a
+    inviteTargetType: i
   } = e;
   return (0, I.fetchUserAffinities)().then(() => {
     u.default.dispatch({
@@ -25,7 +25,7 @@ function s(e) {
       guild: n,
       channel: s,
       applicationId: l,
-      inviteTargetType: a
+      inviteTargetType: i
     })
   })
 }

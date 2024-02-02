@@ -35,10 +35,10 @@ var s = n("37983"),
   O = n("159492"),
   D = n("998415"),
   j = n("228800"),
-  b = n("681060"),
-  P = n("939563"),
-  F = n("538282"),
-  H = n("956967"),
+  P = n("681060"),
+  b = n("939563"),
+  H = n("538282"),
+  F = n("956967"),
   U = n("952104"),
   k = n("509"),
   w = n("406043"),
@@ -46,8 +46,8 @@ var s = n("37983"),
   B = n("934288"),
   V = n("87635"),
   W = n("734570"),
-  z = n("884351"),
-  Z = n("818950"),
+  Z = n("884351"),
+  z = n("818950"),
   K = n("28007"),
   Y = n("880731"),
   q = n("943551"),
@@ -175,7 +175,7 @@ class eO extends a.PureComponent {
       poggermodeEnabled: C
     } = this.props, {
       contentWarningProps: p
-    } = this.state, m = (0, s.jsx)(b.default, {
+    } = this.state, m = (0, s.jsx)(P.default, {
       textValue: this.state.textValue,
       richValue: this.state.richValue,
       focused: t,
@@ -374,7 +374,7 @@ class eO extends a.PureComponent {
           isEdit: !1
         });
         null != f && (null != f.content && (t = f.content), null != f.tts && (c = f.tts));
-        let C = z.default.parse(o, t);
+        let C = Z.default.parse(o, t);
         C.tts = C.tts || c;
         let E = h.default.getSendMessageOptionsForReply(u);
         if (i) return h.default.sendMessage(o.id, C, void 0, E), (0, $.deletePendingReply)(o.id), {
@@ -409,7 +409,7 @@ class eO extends a.PureComponent {
     }, this.handleSetValue = e => {
       var t, n;
       let s = null === (t = this.editorRef) || void 0 === t ? void 0 : t.getSlateEditor();
-      null != s && (P.SlateTransforms.select(s, []), s.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
+      null != s && (b.SlateTransforms.select(s, []), s.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
     }, this.renderAttachButton = (e, t) => (0, s.jsx)(j.default, {
       className: t,
       channel: this.props.channel,
@@ -527,7 +527,7 @@ class eD extends a.PureComponent {
                   })
                 })
               }),
-              children: [(0, s.jsx)(Z.default, {
+              children: [(0, s.jsx)(z.default, {
                 channel: n,
                 forceCozy: A,
                 filterAfterTimestamp: C,
@@ -631,7 +631,7 @@ class eD extends a.PureComponent {
       let {
         activeView: t
       } = e;
-      (0, F.openExpressionPicker)(t, this.props.chatInputType)
+      (0, H.openExpressionPicker)(t, this.props.chatInputType)
     }, this.handleChatInteract = () => {
       var e;
       null === (e = this.dispatchGroupRef.current) || void 0 === e || e.bumpDispatchPriority()
@@ -661,7 +661,7 @@ var ej = a.memo(function(e) {
   } = e, {
     placeholder: i,
     accessibilityLabel: r
-  } = (0, e_.default)(t), o = (0, Q.useShouldBlockDMInputForQuarantinedUser)(ef.default.getCurrentUser(), t), [u] = (0, w.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, H.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, d.useStateFromStores)([ef.default], () => ef.default.getCurrentUser()), C = (0, d.useStateFromStores)([er.default], () => {
+  } = (0, e_.default)(t), o = (0, Q.useShouldBlockDMInputForQuarantinedUser)(ef.default.getCurrentUser(), t), [u] = (0, w.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, F.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, d.useStateFromStores)([ef.default], () => ef.default.getCurrentUser()), C = (0, d.useStateFromStores)([er.default], () => {
     var e, t, s;
     return null != h && null !== (s = null === (e = er.default.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : "", null == h ? void 0 : h.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== s && s
   }), p = (0, d.useStateFromStores)([Y.default], () => Y.default.isEnabled()), m = (0, J.default)(t.id), E = (0, B.default)(t.id);
