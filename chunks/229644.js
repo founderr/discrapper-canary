@@ -100,7 +100,7 @@ let ep = e => {
       ...n,
       ...s,
       children: [i.length > 0 && r && (0, a.jsx)(ec.TextBadge, {
-        color: L.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND,
+        color: L.default.BG_BRAND,
         text: (0, a.jsxs)("div", {
           className: em.broadcastingBadge,
           children: [(0, a.jsx)(el.default, {
@@ -329,7 +329,7 @@ let ep = e => {
         } = e;
         return t === c.DismissibleContent.FAMILY_CENTER_NEW_BADGE ? (0, a.jsx)(ec.TextBadge, {
           text: eS.default.Messages.NEW,
-          color: L.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
+          color: L.default.BG_BRAND
         }) : null
       }
     })

@@ -126,7 +126,7 @@ function eA(e) {
     badgeCount: ex,
     newIndicator: (0, a.jsx)(j.TextBadge, {
       text: eI.default.Messages.NEW,
-      color: _.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
+      color: _.default.BG_BRAND
     }),
     newIndicatorDismissibleContentTypes: [l.DismissibleContent.FAMILY_CENTER_NEW_BADGE]
   }, {

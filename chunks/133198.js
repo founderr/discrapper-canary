@@ -591,7 +591,7 @@ let a = {
       light: "white.500",
       meta: n
     },
-    brand: {
+    "bg-brand": {
       dark: "brand.500",
       light: "brand.500",
       meta: n

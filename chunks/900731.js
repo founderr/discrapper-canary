@@ -436,6 +436,6 @@ var a = (0, r("237436").defineColorTokens)({
     }
   },
   "redesign-button-selected-text": {
-    name: "brand"
+    name: "bg-brand"
   }
 })

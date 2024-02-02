@@ -22,7 +22,7 @@ function d(e) {
     className: c.title,
     children: [o.default.Messages.CREATE_EVENT_RECUR_LABEL, (0, l.jsx)(i.TextBadge, {
       text: o.default.Messages.NEW,
-      color: s.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
+      color: s.default.BG_BRAND
     })]
   });
   return (0, l.jsx)(r.FormItem, {

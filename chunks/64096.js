@@ -52,7 +52,7 @@ function T(e) {
     icon: c.default,
     display: _.default.Messages.CLIPS_SHARE_A_CLIP,
     badgeVal: N,
-    badgeColor: r.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
+    badgeColor: r.default.BG_BRAND
   }), n && R.push({
     type: "CREATE_THREAD",
     icon: S.default,

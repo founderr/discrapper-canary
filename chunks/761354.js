@@ -324,7 +324,7 @@ function D(e) {
         title: _.name,
         guildId: D
       }), (0, l.jsx)(E.TextBadge, {
-        color: h.default.BRAND,
+        color: h.default.BG_BRAND,
         className: C.clipsBadge,
         text: j.default.Messages.CLIP_TAG
       })]
