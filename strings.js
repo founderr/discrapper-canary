@@ -2810,6 +2810,7 @@ e.exports = Object.freeze({
   SENSITIVE_CONTENT: "Content warning: images or videos may contain nudity, violence, or other sensitive content",
   IMAGE_ALT: "Alt",
   SUPPRESS_ALL_EMBEDS: "Remove all embeds",
+  APP_TAG: "APP",
   BOT_TAG_BOT: "BOT",
   BOT_TAG_SERVER: "SERVER",
   REPORT_MESSAGE_MENU_OPTION: "Report Message",
