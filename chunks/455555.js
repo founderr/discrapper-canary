@@ -43,8 +43,8 @@ var s = n("37983"),
   b = n("747554"),
   G = n("740316"),
   B = n("592407"),
-  F = n("977169"),
-  k = n("363691"),
+  k = n("977169"),
+  F = n("363691"),
   w = n("64165"),
   H = n("649844"),
   V = n("538620"),
@@ -126,7 +126,12 @@ let eN = l.memo(function() {
         let {
           metadata: e
         } = g, t = P.default.getUserExperimentDescriptor(e.id);
-        null != t && (0, v.trackExposureToExperiment)(e.id, t)
+        null != t && (0, v.trackExposureToExperiment)(e.id, t);
+        let n = async () => {
+          var e, t;
+          (null === (e = g.metadata) || void 0 === e ? void 0 : e.id) != null && await (0, A.surveySeen)(null === (t = g.metadata) || void 0 === t ? void 0 : t.id)
+        };
+        n()
       }
     }, [g]), null == g) return null;
   let eS = ee.typeToDismissibleContent[g.type];
@@ -137,7 +142,7 @@ let eN = l.memo(function() {
   let eC = null === (e = g.metadata) || void 0 === e ? void 0 : e.premiumType;
   switch (g.type) {
     case eu.NoticeTypes.LURKING_GUILD:
-      return (0, s.jsx)(k.default, {});
+      return (0, s.jsx)(F.default, {});
     case eu.NoticeTypes.PENDING_MEMBER:
       return (0, s.jsx)(b.default, {});
     case eu.NoticeTypes.INVITED_TO_SPEAK:
@@ -620,7 +625,7 @@ let eN = l.memo(function() {
         })]
       });
     case eu.NoticeTypes.VIEWING_ROLES:
-      return (0, s.jsx)(F.default, {});
+      return (0, s.jsx)(k.default, {});
     case eu.NoticeTypes.PREMIUM_UNCANCEL:
       return (0, s.jsxs)(es.default, {
         color: eC === ed.PremiumTypes.TIER_1 ? es.NoticeColors.PREMIUM_TIER_1 : eC === ed.PremiumTypes.TIER_0 ? es.NoticeColors.PREMIUM_TIER_0 : es.NoticeColors.PREMIUM_TIER_2,
@@ -660,21 +665,21 @@ let eN = l.memo(function() {
       });
     case eu.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
       let {
-        daysPastDue: eF, dismissUntil: ek
+        daysPastDue: ek, dismissUntil: eF
       } = g.metadata;
       return (0, s.jsxs)(es.default, {
         color: es.NoticeColors.WARNING,
         children: [(0, s.jsx)(es.NoticeCloseButton, {
           noticeType: ep,
           onClick: () => {
-            em(ek)
+            em(eF)
           }
         }), ef.default.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
-          daysPastDue: eF
+          daysPastDue: ek
         }), (0, s.jsx)(es.PrimaryCTANoticeButton, {
           noticeType: eu.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
           onClick: () => {
-            em(ek), C.default.open(eu.UserSettingsSections.SUBSCRIPTIONS)
+            em(eF), C.default.open(eu.UserSettingsSections.SUBSCRIPTIONS)
           },
           children: ef.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
         })]
