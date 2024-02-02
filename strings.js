@@ -9740,6 +9740,7 @@ e.exports = Object.freeze({
   AUDIO_DEVICES_INVALID: "INVALID",
   AUDIO_DEVICES_TOGGLE_UNAVAILABLE: "Unavailable during video call.",
   AUDIO_DEVICES_NONE_AVAILABLE: "No devices available",
+  AUDIO_DEVICES_BLUETOOTH_LE_HEADSET: "Bluetooth LE",
   WORKING: "Working...",
   GUILD_TEMPLATE_RESOLVING_TITLE: "Loading server template",
   GUILD_TEMPLATE_INVALID_TITLE: "Invalid server template",
