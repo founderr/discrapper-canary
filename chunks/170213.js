@@ -46,7 +46,7 @@ n.r(t), n.d(t, {
 var s, l, a, i, r, o, u, d, c, E, f, _, T = n("49111");
 (s = u || (u = {})).SETTINGS = "SETTINGS", s.ACCOUNT_STANDING = "ACCOUNT_STANDING";
 class I {}
-I.TOS_LINK = "https://discord.com/terms", I.COMMUNITY_GUIDELINES = "https://discord.com/guidelines", I.APPEALS_LINK = "https://support.discord.com/hc/requests/new", I.WARNING_SYSTEM_HELPCENTER_LINK = "https://support.discord.com/hc/articles/18210965981847", I.AGE_VERIFICATION_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731", I.SPAM_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__";
+I.TOS_LINK = "https://discord.com/terms", I.COMMUNITY_GUIDELINES = "https://discord.com/guidelines", I.APPEALS_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731", I.WARNING_SYSTEM_HELPCENTER_LINK = "https://support.discord.com/hc/articles/18210965981847", I.AGE_VERIFICATION_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731", I.SPAM_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__";
 class m {}
 m.CLASSIFICATION_ID = "classification_id", m.INCIDENT_TIMESTAMP = "incident_time", (l = d || (d = {})).POLICY_VIOLATION_DETAIL = "policy_violation_detail", l.LEARN_MORE_LINK = "learn_more_link";
 class N {}
