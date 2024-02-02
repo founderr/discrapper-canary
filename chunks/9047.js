@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return g
   }
 });
 var a = s("37983");
@@ -18,25 +18,27 @@ var n = s("77078"),
   E = s("566126"),
   T = s("832837"),
   f = s("49111"),
-  m = s("188338");
+  m = s("166604"),
+  _ = s("188338");
 
-function _() {
-  let {
-    enabled: e
-  } = c.default.useExperiment({
-    location: "UserSettingsInventory"
-  }), {
-    enabled: t
-  } = d.default.useExperiment({
-    location: "UserSettingsInventory"
-  }, {
-    autoTrackExposure: !0
-  }), s = (0, r.useBlockedPaymentsConfig)();
+function g() {
+  let e = (0, c.useIsEligibleForQuests)({
+      location: m.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY,
+      autoTrackExposure: !0
+    }),
+    {
+      enabled: t
+    } = d.default.useExperiment({
+      location: "UserSettingsInventory"
+    }, {
+      autoTrackExposure: !0
+    }),
+    s = (0, r.useBlockedPaymentsConfig)();
   return s ? (0, a.jsx)(o.BlockedPaymentsContentSettings, {}) : (0, a.jsxs)(a.Fragment, {
     children: [t && (0, a.jsx)(u.default, {
       location: i.default.USER_SETTINGS_GIFT_INVENTORY,
-      className: m.giftNitro,
-      imageClassName: m.giftNitroImage,
+      className: _.giftNitro,
+      imageClassName: _.giftNitroImage,
       textContainerOverrideStyles: {
         padding: "32px",
         width: "360px"
@@ -52,7 +54,7 @@ function _() {
       section: f.AnalyticsSections.QUESTS,
       children: (0, a.jsx)(S.default, {})
     }), (0, a.jsx)(n.FormDivider, {
-      className: m.divider
+      className: _.divider
     }), (0, a.jsx)(l.default, {
       section: f.AnalyticsSections.LIBRARY_INVENTORY_GIFTS_LIST,
       children: (0, a.jsx)(T.default, {})

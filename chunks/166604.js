@@ -1,7 +1,7 @@
 "use strict";
-var a;
-n.r(t), n.d(t, {
-  QuestExperimentLocations: function() {
-    return a
+var t, o;
+E.r(_), E.d(_, {
+  QuestsExperimentLocations: function() {
+    return t
   }
-}), (a || (a = {})).ACTIVITY_PANEL = "quests_bar_activity_panel"
+}), (o = t || (t = {})).ACTIVITY_PANEL = "quests_bar_activity_panel", o.QUESTS_MANAGER = "quests_manager", o.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory"
