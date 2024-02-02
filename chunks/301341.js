@@ -41,7 +41,7 @@ function c(e) {
         children: "".concat(T.length, " / ").concat(s)
       })]
     }), null != N ? (0, a.jsx)(r.Text, {
-      className: u.paddingTop,
+      className: i(u.paddingTop, u.errorText),
       variant: "text-xs/medium",
       color: "text-danger",
       children: N
