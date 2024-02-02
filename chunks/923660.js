@@ -18,8 +18,8 @@ var a = t("37983"),
   N = t("276345"),
   I = t("380353"),
   T = t("49111"),
-  f = t("782340"),
-  m = t("650287");
+  m = t("782340"),
+  f = t("650287");
 
 function v(e) {
   let {
@@ -42,9 +42,9 @@ function v(e) {
       type: "notification_migration_modal"
     })
   }, []), (0, a.jsxs)(i.ModalRoot, {
-    className: m.modal,
+    className: f.modal,
     transitionState: t,
-    "aria-label": f.default.Messages.NOTIFICATIONS,
+    "aria-label": m.default.Messages.NOTIFICATIONS,
     size: i.ModalSize.DYNAMIC,
     children: [(0, a.jsx)(x.default, {
       selectedTab: g,
@@ -62,46 +62,54 @@ function v(e) {
         return (null !== (s = e.overrideMode) && void 0 !== s ? s : e.mode) === I.Mode.UseGreyDot
       }).length
     }), (0, a.jsxs)(i.ModalFooter, {
-      className: m.buttons,
+      className: f.buttons,
       children: [(0, a.jsxs)("div", {
-        className: m.left,
-        children: [u && g === x.Tab.Intro ? (0, a.jsx)(i.Clickable, {
-          className: m.dismiss,
+        className: f.left,
+        children: [u || g !== x.Tab.Tips && g !== x.Tab.Customize ? null : (0, a.jsx)(i.Anchor, {
+          className: f.dismiss,
+          href: "https://dis.gd/better-muting",
+          children: (0, a.jsx)(i.Text, {
+            variant: "text-sm/semibold",
+            color: "interactive-normal",
+            children: m.default.Messages.LEARN_MORE
+          })
+        }), u && g === x.Tab.Intro ? (0, a.jsx)(i.Clickable, {
+          className: f.dismiss,
           onClick: s,
           children: (0, a.jsx)(i.Text, {
             variant: "text-sm/semibold",
             color: "interactive-normal",
-            children: f.default.Messages.DISMISS
+            children: m.default.Messages.DISMISS
           })
         }) : null, u && g === x.Tab.Customize ? (0, a.jsx)(i.Clickable, {
-          className: m.dismiss,
+          className: f.dismiss,
           onClick: s,
           children: (0, a.jsx)(i.Text, {
             variant: "text-sm/semibold",
             color: "interactive-normal",
-            children: f.default.Messages.CANCEL
+            children: m.default.Messages.CANCEL
           })
         }) : null]
       }), (0, a.jsxs)("div", {
-        className: m.right,
+        className: f.right,
         children: [g === x.Tab.Customize ? (0, a.jsx)(i.Text, {
-          className: m.warning,
+          className: f.warning,
           variant: "text-xs/medium",
           color: "text-muted",
-          children: f.default.Messages.NOTIF_MIGRATION_BACKUP
+          children: m.default.Messages.NOTIF_MIGRATION_BACKUP
         }) : null, g !== x.Tab.Customize || O ? null : (0, a.jsxs)(i.Button, {
           onClick: () => M(x.Tab.Intro),
           color: i.Button.Colors.TRANSPARENT,
           children: [(0, a.jsx)(n.default, {
             width: 16,
             height: 16
-          }), " ", f.default.Messages.BACK]
+          }), " ", m.default.Messages.BACK]
         }), g === x.Tab.Intro ? (0, a.jsxs)(i.Button, {
           onClick: () => {
             var e;
             (null === (e = w.current) || void 0 === e ? void 0 : e.maybeChangeToAfterTab()) && M(x.Tab.Customize)
           },
-          children: [f.default.Messages.TRY_IT_OUT, " ", (0, a.jsx)(d.default, {
+          children: [m.default.Messages.TRY_IT_OUT, " ", (0, a.jsx)(d.default, {
             width: 16,
             height: 16
           })]
@@ -109,14 +117,14 @@ function v(e) {
           onClick: () => {
             M(x.Tab.Tips), A(R)
           },
-          children: [f.default.Messages.APPLY, " ", (0, a.jsx)(r.default, {
+          children: [m.default.Messages.APPLY, " ", (0, a.jsx)(r.default, {
             width: 16,
             height: 16
           })]
         }) : (0, a.jsx)(i.Button, {
           submitting: C,
           onClick: s,
-          children: f.default.Messages.CLOSE
+          children: m.default.Messages.CLOSE
         })]
       })]
     })]
@@ -129,18 +137,18 @@ function j(e) {
     overrideGuild: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: m.content,
+    className: f.content,
     children: [(0, a.jsxs)("div", {
-      className: m.header,
+      className: f.header,
       children: [(0, a.jsx)(i.Heading, {
         variant: "heading-xl/bold",
         color: "header-primary",
-        children: f.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
+        children: m.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
       }), (0, a.jsx)(i.Text, {
-        className: m.subtitle,
+        className: f.subtitle,
         variant: "text-md/medium",
         color: "header-secondary",
-        children: f.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SUB_TITLE
+        children: m.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SUB_TITLE
       })]
     }), (0, a.jsx)(u.default, {
       guildPlans: s,
