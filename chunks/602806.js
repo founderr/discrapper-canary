@@ -197,7 +197,7 @@ var U = () => {
     }),
     C = n.useMemo(() => {
       let e = r.trim().toLowerCase();
-      return "" === e || null == t ? t : t.length < 100 ? t.filter(t => o(e, t.application.name)) : t.filter(t => t.application.name.toLowerCase().includes(e))
+      return "" === e || null == t ? t : t.length < 100 ? t.filter(t => o(e, t.application.name.toLowerCase())) : t.filter(t => t.application.name.toLowerCase().includes(e))
     }, [t, r]);
   return e ? (0, a.jsx)(E.default, {}) : (0, a.jsx)(u.FormSection, {
     tag: u.FormTitleTags.H1,
