@@ -15,7 +15,7 @@ var n = r("884691"),
       d = n.useRef(a);
     return n.useEffect(() => {
       u(e), o(i.default.getProfileEffectById(e))
-    }, [e]), {
+    }, [e, t]), {
       increment: () => {
         let e = (d.current + 1) % t.length;
         d.current = e, s(e), u(t[e].id), o(t[e])
