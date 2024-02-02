@@ -25490,6 +25490,10 @@ html .progress__4ef76 {
     margin-bottom: var(--spacing-16)
 }
 
+.toast__49c25 {
+    gap: var(--spacing-8)
+}
+
 .ephemeral_c26b64 {
     position: relative;
     background-color: var(--brand-experiment-05a)

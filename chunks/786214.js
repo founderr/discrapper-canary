@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   handleSuccess: function() {
-    return A
+    return h
   },
   ExplicitMediaFalsePositiveModal: function() {
-    return S
+    return g
   }
 });
 var s = n("37983"),
@@ -12,134 +12,152 @@ var s = n("37983"),
   a = n("414456"),
   i = n.n(a),
   r = n("246111"),
-  o = n("77078"),
-  u = n("772017"),
-  d = n("651693"),
-  c = n("476765"),
-  E = n("58608"),
-  f = n("447435"),
-  _ = n("612920"),
-  T = n("782340"),
-  I = n("471387");
-let m = e => {
+  o = n("877585"),
+  u = n("77078"),
+  d = n("772017"),
+  c = n("651693"),
+  E = n("476765"),
+  f = n("58608"),
+  _ = n("447435"),
+  T = n("612920"),
+  I = n("782340"),
+  m = n("471387"),
+  N = n("677841");
+let p = e => {
     let {
       attachment: t
     } = e, {
       url: n,
       description: l
     } = t;
-    return null == n ? null : (0, s.jsx)(p, {
+    return null == n ? null : (0, s.jsx)(S, {
       url: n,
       description: l
     })
   },
-  N = e => {
+  A = e => {
     var t, n, l;
     let {
       embed: a
     } = e;
-    if (!_.SUPPORTED_EMBED_TYPES.has(a.type)) return null;
+    if (!T.SUPPORTED_EMBED_TYPES.has(a.type)) return null;
     let i = void 0 !== a.video && a.type !== r.MessageEmbedTypes.GIFV ? a.video.url : null !== (l = null === (t = a.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== l ? l : null === (n = a.image) || void 0 === n ? void 0 : n.url;
-    return null == i ? null : (0, s.jsx)(p, {
+    return null == i ? null : (0, s.jsx)(S, {
       url: i
     })
   },
-  p = e => {
+  S = e => {
     let {
       url: t,
       description: n
-    } = e, l = (0, d.isVideoUrl)(t);
+    } = e, l = (0, c.isVideoUrl)(t);
     return (0, s.jsx)("div", {
-      className: I.mediaContainer,
-      children: l ? (0, s.jsx)(E.default, {
-        className: i(I.video, I.media),
+      className: m.mediaContainer,
+      children: l ? (0, s.jsx)(f.default, {
+        className: i(m.video, m.media),
         controls: !0,
         src: t
       }) : (0, s.jsx)("img", {
-        className: i(I.image, I.media),
+        className: i(m.image, m.media),
         src: t,
         alt: n
       })
     })
   };
 
-function A(e) {
-  u.default.pop(), (0, o.showToast)((0, o.createToast)(T.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS, o.ToastType.CUSTOM)), e()
+function C() {
+  return (0, s.jsxs)("div", {
+    className: i(N.toast, m.toast),
+    children: [(0, s.jsx)(o.ShieldIcon, {
+      color: u.tokens.colors.TEXT_BRAND
+    }), (0, s.jsx)(u.Text, {
+      className: N.content,
+      color: "header-primary",
+      variant: "text-md/normal",
+      children: I.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS
+    })]
+  })
 }
 
-function S(e) {
+function h(e) {
+  d.default.pop(), (0, u.showToast)((0, u.createToast)(I.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS, u.ToastType.CUSTOM, {
+    component: (0, s.jsx)(C, {})
+  })), e()
+}
+
+function g(e) {
   let {
     channelId: t,
     messageId: n,
     isReportFalsePositiveLoading: a,
     analyticsContext: i,
     attachmentPreview: r,
-    embedPreview: u,
+    embedPreview: o,
     onConfirmPress: d,
-    transitionState: E,
-    onClose: _
-  } = e, p = (0, c.useUID)(), A = l.useCallback(() => {
-    (0, f.trackMediaRedactionAction)({
-      action: f.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
+    transitionState: c,
+    onClose: f
+  } = e, T = (0, E.useUID)(), N = l.useCallback(() => {
+    (0, _.trackMediaRedactionAction)({
+      action: _.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
       channelId: t,
       messageId: n,
       context: i
-    }), _()
-  }, [t, n, i, _]), S = l.useCallback(() => {
-    null == d || d(), (0, f.trackMediaRedactionAction)({
-      action: f.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
+    }), f()
+  }, [t, n, i, f]), S = l.useCallback(() => {
+    null == d || d(), (0, _.trackMediaRedactionAction)({
+      action: _.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
       channelId: t,
       messageId: n,
       context: i
     })
   }, [t, n, i, d]);
   return l.useEffect(() => {
-    (0, f.trackMediaRedactionAction)({
-      action: f.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
+    (0, _.trackMediaRedactionAction)({
+      action: _.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
       channelId: t,
       messageId: n,
       context: i
     })
-  }, [t, n, i]), (0, s.jsxs)(o.ModalRoot, {
-    transitionState: E,
-    "aria-labelledby": p,
-    size: o.ModalSize.SMALL,
-    children: [(0, s.jsxs)(o.ModalContent, {
-      children: [(0, s.jsx)(o.ModalCloseButton, {
-        onClick: A,
-        className: I.closeButton
-      }), (0, s.jsx)(o.Heading, {
-        id: p,
+  }, [t, n, i]), (0, s.jsxs)(u.ModalRoot, {
+    transitionState: c,
+    "aria-labelledby": T,
+    size: u.ModalSize.SMALL,
+    children: [(0, s.jsxs)(u.ModalContent, {
+      children: [(0, s.jsx)(u.ModalCloseButton, {
+        onClick: N,
+        className: m.closeButton
+      }), (0, s.jsx)(u.Heading, {
+        id: T,
         variant: "heading-lg/semibold",
         color: "header-primary",
-        className: I.header,
-        children: T.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER
-      }), (0, s.jsx)(o.Text, {
+        className: m.header,
+        children: I.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER
+      }), (0, s.jsx)(u.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        className: I.subheader,
-        children: T.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
-      }), null != r && (0, s.jsx)(m, {
+        className: m.subheader,
+        children: I.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
+      }), null != r && (0, s.jsx)(p, {
         attachment: r
-      }), null != u && (0, s.jsx)(N, {
-        embed: u
+      }), null != o && (0, s.jsx)(A, {
+        embed: o
       })]
-    }), (0, s.jsxs)(o.ModalFooter, {
-      children: [(0, s.jsx)(o.Button, {
-        className: I.button,
+    }), (0, s.jsxs)(u.ModalFooter, {
+      children: [(0, s.jsx)(u.Button, {
+        className: m.button,
         disabled: a,
         submitting: a,
-        size: o.Button.Sizes.MEDIUM,
-        color: o.Button.Colors.BRAND,
+        size: u.Button.Sizes.MEDIUM,
+        color: u.Button.Colors.BRAND,
         onClick: S,
-        children: T.default.Messages.CONFIRM
-      }), (0, s.jsx)(o.Button, {
-        className: I.button,
+        children: I.default.Messages.CONFIRM
+      }), (0, s.jsx)(u.Button, {
+        className: m.button,
         disabled: a,
-        color: o.Button.Colors.TRANSPARENT,
-        size: o.Button.Sizes.MEDIUM,
-        onClick: A,
-        children: T.default.Messages.CANCEL
+        color: u.Button.Colors.TRANSPARENT,
+        size: u.Button.Sizes.MEDIUM,
+        onClick: N,
+        children: I.default.Messages.CANCEL
       })]
     })]
   })
