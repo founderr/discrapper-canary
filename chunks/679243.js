@@ -37,8 +37,8 @@ var a = n("37983"),
   L = n("328275"),
   O = n("437825"),
   y = n("142303"),
-  P = n("200639"),
-  b = n("97347"),
+  b = n("200639"),
+  P = n("97347"),
   D = n("216947"),
   U = n("267675"),
   w = n("433487"),
@@ -67,8 +67,8 @@ let et = l.memo(e => {
     onContextMenu: f,
     onClick: L,
     onMouseDown: y,
-    onKeyDown: P,
-    className: b,
+    onKeyDown: b,
+    className: P,
     style: D,
     channel: U,
     width: w,
@@ -203,7 +203,7 @@ let et = l.memo(e => {
     children: (0, a.jsx)("div", {
       className: i(ee.wrapper, {
         [ee.ringing]: eS
-      }, b),
+      }, P),
       children: (0, a.jsxs)(T.default, {
         shakeLocation: q.ShakeLocation.VOICE_USER,
         isShaking: eC,
@@ -225,7 +225,7 @@ let et = l.memo(e => {
             onContextMenu: eM,
             onClick: eN,
             onMouseDown: y,
-            onKeyDown: P,
+            onKeyDown: b,
             focusProps: {
               offset: 1
             },
@@ -365,7 +365,7 @@ let ea = l.memo(e => {
           color: o.default.colors.WHITE
         }) : null
       } else if (n || t || l) {
-        let e = n ? P.default : b.default;
+        let e = n ? b.default : P.default;
         F = (0, a.jsx)(e, {
           foreground: i({
             [ee.localMuteStrikethrough]: l && !n

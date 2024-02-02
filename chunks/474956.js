@@ -36,7 +36,7 @@ function g(e) {
     } : {
       status: 0
     }
-  }), E = 2 === x.status ? x.app : null;
+  }), b = 2 === x.status ? x.app : null;
   if (a.useEffect(() => {
       0 === x.status && (C({
         status: 1
@@ -51,13 +51,13 @@ function g(e) {
           error: e.message
         })
       }))
-    }, [i, x.status]), null == E) return null;
-  let b = v.default.Messages.STOREFRONT_TITLE.format({
-    appName: E.name
+    }, [i, x.status]), null == b) return null;
+  let E = v.default.Messages.STOREFRONT_TITLE.format({
+    appName: b.name
   });
   return (0, l.jsxs)(s.ModalRoot, {
     transitionState: n,
-    "aria-label": b,
+    "aria-label": E,
     size: s.ModalSize.LARGE,
     children: [(0, l.jsx)(s.ModalHeader, {
       children: (0, l.jsxs)(f.default, {
@@ -66,7 +66,7 @@ function g(e) {
           "aria-hidden": !0,
           color: c.default.INTERACTIVE_ACTIVE
         }), (0, l.jsx)(f.default.Title, {
-          children: b
+          children: E
         }), (0, l.jsx)(s.ModalCloseButton, {
           onClick: t,
           className: m.modalCloseButton
@@ -74,7 +74,7 @@ function g(e) {
       })
     }), (0, l.jsx)(s.ModalContent, {
       children: (0, l.jsx)(p.default, {
-        app: E,
+        app: b,
         subscriptionGroupListing: g,
         guildId: r
       })

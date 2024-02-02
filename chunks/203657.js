@@ -18,8 +18,8 @@ var a = t("37983"),
   N = t("282109"),
   I = t("476263"),
   T = t("660279"),
-  f = t("109264"),
-  m = t("578706"),
+  m = t("109264"),
+  f = t("578706"),
   v = t("564875"),
   j = t("599110"),
   _ = t("380353"),
@@ -116,7 +116,7 @@ function R(e) {
         children: i.name
       }), (0, a.jsxs)("div", {
         className: O.tooltipRow,
-        children: [(0, a.jsx)(f.default, {
+        children: [(0, a.jsx)(m.default, {
           width: 12,
           height: 12
         }), (0, a.jsx)(c.Text, {
@@ -152,7 +152,7 @@ function R(e) {
       ...e,
       className: n(O.guild, d ? O.selected : void 0),
       onClick: r,
-      children: [(0, a.jsx)(m.default, {
+      children: [(0, a.jsx)(f.default, {
         className: O.checkmark,
         width: 16,
         height: 16,

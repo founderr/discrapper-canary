@@ -40,8 +40,8 @@ var a = n("37983"),
       width: L,
       height: O,
       idle: y,
-      mode: P,
-      popoutWindow: b,
+      mode: b,
+      popoutWindow: P,
       awaitingRemoteSessionInfo: D
     } = e;
     l.useEffect(() => {
@@ -56,7 +56,7 @@ var a = n("37983"),
       participants: t,
       hasConnectPermission: N
     });
-    if (P === C.ChannelModes.VOICE) return (0, a.jsx)(o.default, {
+    if (b === C.ChannelModes.VOICE) return (0, a.jsx)(o.default, {
       guildId: x.guild_id,
       width: L,
       className: g.voiceCallWrapper,
@@ -90,7 +90,7 @@ var a = n("37983"),
       selectedParticipant: s,
       filteredParticipants: U,
       participants: t,
-      popoutWindow: b,
+      popoutWindow: P,
       className: A,
       idle: y,
       height: O,

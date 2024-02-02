@@ -106,7 +106,7 @@ let B = (e, t, n) => {
   })) : []
 };
 
-function F(e, t) {
+function b(e, t) {
   if (0 === t.length) return e;
   let n = [...e],
     i = (0, R.buildApplicationCommands)(t).filter(e => {
@@ -116,7 +116,7 @@ function F(e, t) {
   return [...n, ...i]
 }
 
-function b(e) {
+function F(e) {
   let t = e.map(R.getApplicationCommandSection);
   return t.concat(h.BUILT_IN_SECTIONS[P.BuiltInSectionId.BUILT_IN])
 }
@@ -416,7 +416,7 @@ function Q(e, t, n, l) {
       includeApplications: null == m
     }, e => {
       if (null == e) return;
-      let t = F([], e.applicationCommands),
+      let t = b([], e.applicationCommands),
         n = {
           applicationCommands: t,
           topCursor: e.prevCursor,
@@ -424,7 +424,7 @@ function Q(e, t, n, l) {
         };
       if (null != e.applications) {
         var i;
-        n.applicationSections = b(null !== (i = e.applications) && void 0 !== i ? i : [])
+        n.applicationSections = F(null !== (i = e.applications) && void 0 !== i ? i : [])
       }
       E(n)
     }, !1)
@@ -435,7 +435,7 @@ function Q(e, t, n, l) {
         cursor: c
       }, e => {
         if (null == e) return;
-        let t = !1 === e.repaired ? F([], e.applicationCommands) : F(null != C ? C : [], e.applicationCommands);
+        let t = !1 === e.repaired ? b([], e.applicationCommands) : b(null != C ? C : [], e.applicationCommands);
         E({
           applicationCommands: t,
           scrollDownCursor: e.nextCursor
@@ -458,7 +458,7 @@ function Q(e, t, n, l) {
           applicationId: t
         }, e => {
           null != e && E({
-            applicationCommands: F([], e.applicationCommands)
+            applicationCommands: b([], e.applicationCommands)
           })
         }), E({
           filteredSectionId: t,
@@ -547,10 +547,10 @@ function Z(e) {
     c = K.getOrInsertChannelState(n.channel.id, i);
   if (c.queriedApplicationId !== d) c.queries.clear(), c.pendingQueries.clear(), c.queriedApplicationId = d;
   else if (c.queries.has(l)) return !0;
-  if (null != u && (c.applicationSections = b(u)), s) t = [];
+  if (null != u && (c.applicationSections = F(u)), s) t = [];
   else {
     var p;
-    t = n.channel.isPrivate() ? null !== (p = c.applicationCommands) && void 0 !== p ? p : [] : F([], null != o ? o : [])
+    t = n.channel.isPrivate() ? null !== (p = c.applicationCommands) && void 0 !== p ? p : [] : b([], null != o ? o : [])
   }
   let f = B(n, i, s),
     m = (0, R.canUseApplicationCommands)(S.default, _.default, s, n.channel) && (n.channel.isPrivate() ? null == c.applicationCommands : null == o),
@@ -618,9 +618,9 @@ let $ = a(e => {
         var t;
         if (null == e) return;
         let l = {
-          applicationCommands: F([], null !== (t = e.applicationCommands) && void 0 !== t ? t : [])
+          applicationCommands: b([], null !== (t = e.applicationCommands) && void 0 !== t ? t : [])
         };
-        null != e.applications && (l.applicationSections = b(e.applications)), d.default.dispatch({
+        null != e.applications && (l.applicationSections = F(e.applications)), d.default.dispatch({
           type: "APPLICATION_COMMAND_SEARCH_STORE_UPDATE",
           channelId: n.channel.id,
           commandType: i,
@@ -678,7 +678,7 @@ let $ = a(e => {
       var t, n;
       if (null == e || !K.channelStates.has(i.channel.id)) return;
       let s = null !== (n = null === (t = o.queries.get(a)) || void 0 === t ? void 0 : t.commands.filter(e => e.inputType !== D.ApplicationCommandInputType.PLACEHOLDER)) && void 0 !== n ? n : [],
-        r = F([], e.applicationCommands),
+        r = b([], e.applicationCommands),
         u = [],
         d = a.split(" ");
       r.forEach(e => {

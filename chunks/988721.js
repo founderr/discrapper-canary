@@ -46,22 +46,22 @@ var i, l, a = n("884691"),
 let L = new r.default("ApplicationCommandIndexStore"),
   U = Symbol("currentUser"),
   B = Symbol("stale"),
-  F = Symbol("current"),
-  b = Object.freeze({
+  b = Symbol("current"),
+  F = Object.freeze({
     descriptors: [],
     commands: [],
     sectionedCommands: [],
     loading: !0
   }),
   H = Object.freeze({
-    serverVersion: F,
+    serverVersion: b,
     fetchState: {
       fetching: !1
     },
     result: {
       sections: {},
       sectionIdsByBotId: {},
-      version: F
+      version: b
     }
   }),
   w = Object.freeze({
@@ -147,7 +147,7 @@ class q extends u.default.Store {
   }
   query(e, t, n) {
     let i = A.default.getCurrentUser();
-    if (null == i) return b;
+    if (null == i) return F;
     let l = this.getContextState(e),
       a = this.getUserState(),
       s = (0, y.buildPermissionContext)(e, t.commandType),
@@ -261,7 +261,7 @@ let K = new q(d.default, {
       }
       t.commands[e.id] = e
     }
-    let u = null !== (n = l.version) && void 0 !== n ? n : F;
+    let u = null !== (n = l.version) && void 0 !== n ? n : b;
     W(i, {
       serverVersion: u,
       result: {
