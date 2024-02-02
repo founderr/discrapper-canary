@@ -70,28 +70,34 @@ function x(e) {
   }(), F = (0, m.default)({
     applicationId: t.id,
     size: 1024
-  }), k = (0, I.default)(), w = (0, o.useStateFromStores)([C.default], () => C.default.getId()), H = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(a).find(e => e.instanceId === n.id)), V = (0, o.useStateFromStoresArray)([g.default], () => {
+  }), k = (0, I.default)(), w = (0, o.useStateFromStores)([C.default], () => C.default.getId()), {
+    embeddedActivity: H,
+    currentEmbeddedActivity: V
+  } = (0, o.useStateFromStoresObject)([c.default], () => ({
+    embeddedActivity: c.default.getEmbeddedActivitiesForChannel(a).find(e => e.instanceId === n.id),
+    currentEmbeddedActivity: c.default.getCurrentEmbeddedActivity()
+  })), Y = (0, o.useStateFromStoresArray)([g.default], () => {
     var e;
     return Array.from(null !== (e = null == H ? void 0 : H.userIds) && void 0 !== e ? e : []).map(e => g.default.getUser(e)).filter(O.isNotNullish)
-  }), Y = (0, o.useStateFromStores)([h.default], () => {
+  }), W = (0, o.useStateFromStores)([h.default], () => {
     var e;
     let n = null == H ? void 0 : H.userIds.values().next().value;
     return null == n ? null : null === (e = h.default.findActivity(n, e => e.application_id === t.id)) || void 0 === e ? void 0 : e.details
-  }), W = l.useMemo(() => {
+  }), K = l.useMemo(() => {
     let e = new S.default(t);
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = L.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
-  }, [t]), K = (0, T.useEmbeddedActivityJoinability)({
+  }, [t]), z = (0, T.useEmbeddedActivityJoinability)({
     userId: w,
     channelId: a,
-    application: W
-  }), z = null == H, Z = (0, R.useJoinOrStartButtonState)({
+    application: K
+  }), Z = null == H, J = (0, R.useJoinOrStartButtonState)({
     embeddedActivity: H,
-    currentUserId: w,
-    joinability: K
-  }), J = async () => {
+    joinability: z,
+    currentEmbeddedActivity: V
+  }), Q = async () => {
     U(!0);
     try {
-      if (z) {
+      if (Z) {
         let {
           activityConfigs: e,
           applications: n
@@ -122,7 +128,7 @@ function x(e) {
     } finally {
       U(!1)
     }
-  }, Q = (0, s.jsxs)("div", {
+  }, X = (0, s.jsxs)("div", {
     className: P.container,
     children: [B !== D.SMALL && (0, s.jsx)("div", {
       className: P.imgWrapper,
@@ -139,14 +145,14 @@ function x(e) {
         children: [(0, s.jsx)(r.Heading, {
           variant: "heading-lg/bold",
           children: null == t ? void 0 : t.name
-        }), !z && (0, s.jsx)(r.Text, {
+        }), !Z && (0, s.jsx)(r.Text, {
           variant: "text-md/medium",
           lineClamp: 1,
-          children: null != Y ? Y : v.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
+          children: null != W ? W : v.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
         })]
       }), (0, s.jsxs)("div", {
         className: P.footerContainer,
-        children: [z ? (0, s.jsxs)("div", {
+        children: [Z ? (0, s.jsxs)("div", {
           className: P.endedNote,
           children: [(0, s.jsx)(r.Text, {
             variant: "text-md/medium",
@@ -157,10 +163,10 @@ function x(e) {
           })]
         }) : (0, s.jsx)(M.default, {
           guildId: x,
-          users: V,
+          users: Y,
           max: 4
         }), (0, s.jsx)(r.Tooltip, {
-          text: Z.tooltip,
+          text: J.tooltip,
           children: e => {
             let {
               onClick: t,
@@ -168,14 +174,14 @@ function x(e) {
             } = e;
             return (0, l.createElement)(r.Button, {
               ...n,
-              key: "".concat(Z.isJoinAction),
+              key: "".concat(J.isJoinAction),
               onClick: () => {
-                J(), null == t || t()
+                Q(), null == t || t()
               },
-              color: Z.isJoinAction ? r.ButtonColors.PRIMARY : r.ButtonColors.GREEN,
+              color: J.isJoinAction ? r.ButtonColors.PRIMARY : r.ButtonColors.GREEN,
               submitting: y,
-              disabled: Z.disabled
-            }, Z.text)
+              disabled: J.disabled
+            }, J.text)
           }
         })]
       })]
@@ -184,6 +190,6 @@ function x(e) {
   return (0, s.jsx)("div", {
     className: i(P.outerContainer, B),
     ref: G,
-    children: B !== D.UNKNOWN && Q
+    children: B !== D.UNKNOWN && X
   })
 }
