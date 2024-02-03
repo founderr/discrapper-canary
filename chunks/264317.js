@@ -1,35 +1,45 @@
 "use strict";
 a.r(t), a.d(t, {
+  useToggleExpressionPicker: function() {
+    return E
+  },
   default: function() {
-    return c
+    return A
   }
 }), a("222007");
 var l = a("884691"),
-  n = a("16470"),
-  s = a("418009"),
-  r = a("850391"),
-  i = a("538282"),
+  n = a("418009"),
+  s = a("850391"),
+  r = a("538282"),
+  i = a("957255"),
   o = a("186859"),
-  u = a("13030");
+  u = a("13030"),
+  c = a("843455");
+let d = s.ChatInputTypes.CREATE_POLL;
 
-function c(e) {
-  var t, a;
-  let [c, d] = l.useState(null), [E, _, A, f] = (0, i.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.lastActiveView, e.pickerId], n.default), m = r.ChatInputTypes.CREATE_POLL, L = null != E && null != _ && _ === m;
-  let p = (t = A, a = e, null != t && o.POLLS_SUPPORTED_EXPRESSION_PICKER_VIEW_TYPES.has(t) ? t : a === s.PollLayoutTypes.DEFAULT ? u.ExpressionPickerViewType.EMOJI : u.ExpressionPickerViewType.GIF),
-    T = l.useCallback(e => {
-      d(t => (t === e ? (0, i.toggleExpressionPicker)(p, m) : (0, i.openExpressionPicker)(p, m), e))
-    }, [p, m]),
-    C = l.useCallback(() => {
-      (0, i.closeExpressionPicker)(m)
-    }, [m]);
+function E(e, t) {
+  let [a, s] = l.useState(null), E = l.useCallback(a => {
+    var l, E, A;
+    let _ = r.useExpressionPickerStore.getState().lastActiveView,
+      m = e.isPrivate() || i.default.can(c.Permissions.ATTACH_FILES, e);
+    let f = (l = m, E = _, A = t, l ? null != E && o.POLLS_SUPPORTED_EXPRESSION_PICKER_VIEW_TYPES.has(E) ? E : A === n.PollLayoutTypes.DEFAULT ? u.ExpressionPickerViewType.EMOJI : u.ExpressionPickerViewType.GIF : u.ExpressionPickerViewType.EMOJI);
+    s(e => (e === a ? (0, r.toggleExpressionPicker)(f, d) : (0, r.openExpressionPicker)(f, d), a))
+  }, [e, t]);
+  return {
+    lastActiveInputIndex: a,
+    togglePollExpressionPicker: E
+  }
+}
+
+function A() {
+  let e = (0, r.useExpressionPickerStore)(e => null != e.activeView && e.activeViewType === d),
+    t = l.useCallback(() => {
+      (0, r.closeExpressionPicker)(d)
+    }, []);
   return l.useEffect(() => () => {
-    (0, i.closeExpressionPicker)(m)
-  }, [m]), {
-    showPollExpressionPicker: L,
-    togglePollExpressionPicker: T,
-    closePollExpressionPicker: C,
-    pollExpressionPickerId: f,
-    chatInputType: m,
-    lastActiveParentIndex: c
+    (0, r.closeExpressionPicker)(d)
+  }, []), {
+    showPollExpressionPicker: e,
+    closePollExpressionPicker: t
   }
 }

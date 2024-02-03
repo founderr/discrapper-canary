@@ -181,8 +181,8 @@ var G = i.memo(function(e) {
       }), et.current = !0)
     }
   });
-  let eS = (null === (t = q.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile,
-    eg = null === (n = q.stickers) || void 0 === n ? void 0 : n.allowSending,
+  let eS = (null === (t = q.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile && null != A,
+    eg = (null === (n = q.stickers) || void 0 === n ? void 0 : n.allowSending) && null != K,
     eC = !(null === (r = q.expressionPicker) || void 0 === r ? void 0 : r.onlyEmojis) && (eS || eg),
     eT = "left" === Q ? "right" : "left",
     ev = null != X ? X : "left" === Q ? w.positionLayerDefaultAlignLeft : w.positionLayerDefaultAlignRight;
@@ -227,14 +227,14 @@ var G = i.memo(function(e) {
                   className: w.navList,
                   role: "tablist",
                   "aria-label": D.default.Messages.EXPRESSION_PICKER_CATEGORIES_A11Y_LABEL,
-                  children: [eS && (0, l.jsx)(H, {
+                  children: [eS ? (0, l.jsx)(H, {
                     id: L.GIF_PICKER_TAB_ID,
                     "aria-controls": L.GIF_PICKER_TAB_PANEL_ID,
                     "aria-selected": es === b.ExpressionPickerViewType.GIF,
                     isActive: es === b.ExpressionPickerViewType.GIF,
                     viewType: b.ExpressionPickerViewType.GIF,
                     children: D.default.Messages.EXPRESSION_PICKER_GIF
-                  }), eg ? (0, l.jsx)(H, {
+                  }) : null, eg ? (0, l.jsx)(H, {
                     id: j.STICKER_PICKER_TAB_ID,
                     "aria-controls": j.STICKER_PICKER_TAB_PANEL_ID,
                     "aria-selected": es === b.ExpressionPickerViewType.STICKER,
@@ -268,7 +268,7 @@ var G = i.memo(function(e) {
                     children: D.default.Messages.EXPRESSION_PICKER_UPLOAD
                   })]
                 })
-              }) : null, es === b.ExpressionPickerViewType.STICKER && eC ? (0, l.jsx)(_.default, {
+              }) : null, es === b.ExpressionPickerViewType.STICKER && eg ? (0, l.jsx)(_.default, {
                 isLoading: ec,
                 channel: Y,
                 containerWidth: er,
@@ -277,7 +277,7 @@ var G = i.memo(function(e) {
                 ref: e => {
                   en.current = e
                 }
-              }) : null, es === b.ExpressionPickerViewType.GIF && eC ? (0, l.jsx)(T.default, {
+              }) : null, es === b.ExpressionPickerViewType.GIF && eS ? (0, l.jsx)(T.default, {
                 onSelectGIF: A,
                 hideFavorites: a,
                 persistSearch: !0
