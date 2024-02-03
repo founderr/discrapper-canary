@@ -1,43 +1,44 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return x
   }
 }), n("70102"), n("222007"), n("881410");
 var s = n("627445"),
   l = n.n(s),
   a = n("917351"),
   i = n.n(a),
-  r = n("446674"),
-  o = n("913144"),
-  u = n("404118"),
-  d = n("819689"),
-  c = n("448993"),
-  E = n("875978"),
-  f = n("815297"),
-  _ = n("256572"),
-  T = n("271938"),
-  I = n("474643"),
-  m = n("377253"),
-  N = n("585722"),
-  p = n("239013"),
-  A = n("914271"),
-  S = n("690714"),
-  C = n("641126"),
-  h = n("905206"),
-  g = n("782340");
+  r = n("418009"),
+  o = n("446674"),
+  u = n("913144"),
+  d = n("404118"),
+  c = n("819689"),
+  E = n("448993"),
+  f = n("875978"),
+  _ = n("815297"),
+  T = n("256572"),
+  I = n("271938"),
+  m = n("474643"),
+  N = n("377253"),
+  p = n("585722"),
+  A = n("239013"),
+  S = n("914271"),
+  C = n("690714"),
+  h = n("641126"),
+  g = n("905206"),
+  M = n("782340");
 
-function M(e) {
+function O(e) {
   let {
     channelId: t,
     messageId: n
-  } = e, s = m.default.getMessage(t, n);
+  } = e, s = N.default.getMessage(t, n);
   if (null != s) return {
     message: s,
     channelId: t,
     messageId: n
   };
-  let a = _.default.getMessage(t, n);
+  let a = T.default.getMessage(t, n);
   if (null != a.message) return {
     channelId: t,
     messageId: n,
@@ -46,15 +47,15 @@ function M(e) {
   throw l(null != s, "Tapped on a non-existent poll message"), Error()
 }
 
-function O(e) {
+function R(e) {
   let {
     isEditing: t,
     ...n
   } = e, {
     channelId: s,
     messageId: l
-  } = M(n);
-  (0, C.updatePollState)(s, l, () => ({
+  } = O(n);
+  (0, h.updatePollState)(s, l, () => ({
     channelId: s,
     selectedAnswerIds: new Set,
     submitting: !1,
@@ -62,34 +63,34 @@ function O(e) {
   }))
 }
 
-function R(e) {
+function L(e) {
   let {
     channelId: t,
     messageId: n
-  } = e, s = m.default.getMessage(t, n);
+  } = e, s = N.default.getMessage(t, n);
   return null == s ? [] : s.reactions.flatMap(e => !0 === e.me_vote ? e.emoji.name : [])
 }
-async function L(e) {
+async function v(e) {
   let {
     channelId: t,
     messageId: n,
     answerIds: s
-  } = e, l = R({
+  } = e, l = L({
     channelId: t,
     messageId: n
-  }), a = i.difference(l, s), u = i.difference(s, l), d = T.default.getId(), c = [...a.map(e => ({
+  }), a = i.difference(l, s), r = i.difference(s, l), d = I.default.getId(), c = [...a.map(e => ({
     type: "MESSAGE_REACTION_REMOVE",
     id: e
-  })), ...u.map(e => ({
+  })), ...r.map(e => ({
     type: "MESSAGE_REACTION_ADD",
     id: e
-  }))], f = r.default.Emitter.batched(() => {
+  }))], E = o.default.Emitter.batched(() => {
     let e;
     for (let {
         id: s,
         type: l
       }
-      of c) e = o.default.dispatch({
+      of c) e = u.default.dispatch({
       type: l,
       channelId: t,
       messageId: n,
@@ -99,47 +100,47 @@ async function L(e) {
       },
       userId: d,
       optimistic: !0,
-      reactionType: E.ReactionTypes.VOTE
+      reactionType: f.ReactionTypes.VOTE
     });
     return e
   });
-  null != f && await f
+  null != E && await E
 }
-async function v(e) {
+async function P(e) {
   let {
     channelId: t,
     messageId: n
-  } = M(e), s = (0, C.getPollState)(t, n);
+  } = O(e), s = (0, h.getPollState)(t, n);
   l(null != s, "Must not be able to vote without existing state!");
-  let a = R({
+  let a = L({
     channelId: t,
     messageId: n
   });
   try {
     let e = [...s.selectedAnswerIds.values()];
-    await L({
+    await v({
       channelId: t,
       messageId: n,
       answerIds: e
-    }), (0, C.updatePollState)(t, n, e => (l(null != e, "Must not be able to vote without existing state!"), {
+    }), (0, h.updatePollState)(t, n, e => (l(null != e, "Must not be able to vote without existing state!"), {
       ...e,
       submitting: !0,
       editing: !1
-    })), await S.submitPollVote({
+    })), await C.submitPollVote({
       channelId: t,
       messageId: n,
       answerIds: e
-    }), (0, C.updatePollState)(t, n, () => void 0)
+    }), (0, h.updatePollState)(t, n, () => void 0)
   } catch (e) {
     var i, r, o;
-    u.default.show({
-      title: g.default.Messages.GENERIC_ERROR_TITLE,
-      body: null !== (o = null !== (r = null === (i = e.getAnyErrorMessage) || void 0 === i ? void 0 : i.call(e)) && void 0 !== r ? r : e.message) && void 0 !== o ? o : g.default.Messages.GENERIC_ERROR_BODY
-    }), await L({
+    d.default.show({
+      title: M.default.Messages.GENERIC_ERROR_TITLE,
+      body: null !== (o = null !== (r = null === (i = e.getAnyErrorMessage) || void 0 === i ? void 0 : i.call(e)) && void 0 !== r ? r : e.message) && void 0 !== o ? o : M.default.Messages.GENERIC_ERROR_BODY
+    }), await v({
       channelId: t,
       messageId: n,
       answerIds: a
-    }), (0, C.updatePollState)(t, n, e => {
+    }), (0, h.updatePollState)(t, n, e => {
       if (null != e) return {
         ...e,
         submitting: !1,
@@ -148,7 +149,7 @@ async function v(e) {
     })
   }
 }
-async function P(e) {
+async function D(e) {
   let {
     channelId: t,
     messageId: n,
@@ -156,20 +157,20 @@ async function P(e) {
   } = e;
   switch (s) {
     case "submit":
-      await v({
+      await P({
         channelId: t,
         messageId: n
       });
       break;
     case "edit":
-      O({
+      R({
         channelId: t,
         messageId: n,
         isEditing: !0
       });
       break;
     case "cancel":
-      O({
+      R({
         channelId: t,
         messageId: n,
         isEditing: !1
@@ -179,7 +180,7 @@ async function P(e) {
       l(!1, "Unknown poll action type: ".concat(s))
   }
 }
-var D = {
+var x = {
   handlePollAnswerTapped: function(e) {
     var t, n, s, l, a;
     let {
@@ -187,26 +188,26 @@ var D = {
       ...r
     } = e, {
       channelId: o,
-      messageId: d,
+      messageId: u,
       message: c
-    } = M(r), {
+    } = O(r), {
       tapShouldOpenVotersModal: E,
       reactions: f
-    } = null !== (n = (0, h.computeBasicPollChatData)(c)) && void 0 !== n ? n : {};
+    } = null !== (n = (0, g.computeBasicPollChatData)(c)) && void 0 !== n ? n : {};
     if (!0 === E) {
-      let e = null !== (a = null === (l = (0, h.reactionForId)(null != f ? f : [], i)) || void 0 === l ? void 0 : null === (s = l.count_details) || void 0 === s ? void 0 : s.vote) && void 0 !== a ? a : 0;
-      0 === e ? u.default.show({
-        title: g.default.Messages.POLL_NO_VOTES_FOR_ANSWER_TITLE,
-        body: g.default.Messages.POLL_NO_VOTES_FOR_ANSWER_BODY
-      }) : p.showVotesForAnswer({
+      let e = null !== (a = null === (l = (0, g.reactionForId)(null != f ? f : [], i)) || void 0 === l ? void 0 : null === (s = l.count_details) || void 0 === s ? void 0 : s.vote) && void 0 !== a ? a : 0;
+      0 === e ? d.default.show({
+        title: M.default.Messages.POLL_NO_VOTES_FOR_ANSWER_TITLE,
+        body: M.default.Messages.POLL_NO_VOTES_FOR_ANSWER_BODY
+      }) : A.showVotesForAnswer({
         channelId: o,
-        messageId: d,
+        messageId: u,
         answerId: i
       });
       return
     }
     let _ = null === (t = c.poll) || void 0 === t ? void 0 : t.allow_multiselect;
-    (0, C.updatePollState)(o, d, e => {
+    (0, h.updatePollState)(o, u, e => {
       if (null == e) return {
         channelId: o,
         selectedAnswerIds: new Set([i]),
@@ -226,9 +227,9 @@ var D = {
       return t
     })
   },
-  handlePollSubmitVote: v,
-  handleUpdateVoteEditingState: O,
-  handlePollActionTapped: P,
+  handlePollSubmitVote: P,
+  handleUpdateVoteEditingState: R,
+  handlePollActionTapped: D,
   createPoll: async function e(e) {
     let {
       channel: t,
@@ -237,14 +238,14 @@ var D = {
       allowMultiSelect: l,
       duration: a,
       layout: i,
-      onClose: r
-    } = e, o = N.default.getUploads(t.id, I.DraftType.Poll), u = s.map(e => {
+      onClose: o
+    } = e, u = p.default.getUploads(t.id, m.DraftType.Poll), d = s.map(e => {
       var t;
-      let n = null == o ? void 0 : o.findIndex(t => t.id === e.localCreationAnswerId),
+      let n = null == u ? void 0 : u.findIndex(t => t.id === e.localCreationAnswerId),
         s = {
           attachment_ids: -1 !== n ? ["".concat(n)] : []
         };
-      s.text = e.text;
+      i === r.PollLayoutTypes.DEFAULT && (s.text = e.text);
       let l = null === (t = e.image) || void 0 === t ? void 0 : t.emoji;
       return null != l && (null != l.id ? s.emoji = {
         id: l.id,
@@ -254,32 +255,32 @@ var D = {
       })), {
         poll_media: s
       }
-    }), E = {
+    }), f = {
       question: {
         text: n,
         attachment_ids: []
       },
-      answers: u,
+      answers: d,
       allow_multiselect: l,
       duration: a,
       layout_type: i
     };
     try {
-      if (null != o && o.length > 0) {
-        var _;
-        let e = null !== (_ = T.default.getToken()) && void 0 !== _ ? _ : "";
-        await A.sendPollMessageWithAttachments({
+      if (null != u && u.length > 0) {
+        var T;
+        let e = null !== (T = I.default.getToken()) && void 0 !== T ? T : "";
+        await S.sendPollMessageWithAttachments({
           channel: t,
-          items: o,
+          items: u,
           token: e,
-          poll: E,
-          nonce: (0, f.createNonce)(),
+          poll: f,
+          nonce: (0, _.createNonce)(),
           maxSizeCallback: () => {}
         })
-      } else await d.default.sendPollMessage(t.id, E);
-      null == r || r()
+      } else await c.default.sendPollMessage(t.id, f);
+      null == o || o()
     } catch (t) {
-      let e = t instanceof c.APIError ? t : new c.APIError(t);
+      let e = t instanceof E.APIError ? t : new E.APIError(t);
       if ("poll" === e.getAnyErrorMessage() && null != t.text) throw {
         ...t,
         body: JSON.parse(t.text)
@@ -291,11 +292,11 @@ var D = {
     let {
       channelId: t,
       messageId: n
-    } = e, s = await u.default.confirm({
-      title: g.default.Messages.POLL_END_EARLY_CONFIRMATION_TITLE,
-      body: g.default.Messages.POLL_END_EARLY_CONFIRMATION_TEXT
+    } = e, s = await d.default.confirm({
+      title: M.default.Messages.POLL_END_EARLY_CONFIRMATION_TITLE,
+      body: M.default.Messages.POLL_END_EARLY_CONFIRMATION_TEXT
     });
-    s && await S.endPollEarly({
+    s && await C.endPollEarly({
       channelId: t,
       messageId: n
     })
