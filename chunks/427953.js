@@ -11,9 +11,6 @@ n.r(t), n.d(t, {
   },
   useActivitiesInTextButtonVisibility: function() {
     return _
-  },
-  useIsActivitiesInTextActionBarEnabled: function() {
-    return h
   }
 });
 var i = n("298386"),
@@ -25,24 +22,13 @@ let o = (0, r.createExperiment)({
     id: "2023-08_activities_in_text",
     label: "Activities in Text User",
     defaultConfig: {
-      enabled: !1,
-      actionBarEnabled: !1
+      enabled: !1
     },
     treatments: [{
       id: 1,
       label: "enable Activities in text channels",
       config: {
         enabled: !0,
-        actionBarEnabled: !1,
-        showInOmniButtonMenu: !0,
-        showChatInputButton: !1
-      }
-    }, {
-      id: 2,
-      label: "enable Activities in text channels with action bar",
-      config: {
-        enabled: !0,
-        actionBarEnabled: !0,
         showInOmniButtonMenu: !0,
         showChatInputButton: !1
       }
@@ -51,7 +37,6 @@ let o = (0, r.createExperiment)({
       label: "enable Activities in text with the rocket button in chat input",
       config: {
         enabled: !0,
-        actionBarEnabled: !1,
         showInOmniButtonMenu: !1,
         showChatInputButton: !0
       }
@@ -62,26 +47,23 @@ let o = (0, r.createExperiment)({
     id: "2023-11_activities_in_text_guild",
     label: "Activities in Text Guild",
     defaultConfig: {
-      enabled: !1,
-      actionBarEnabled: !1
+      enabled: !1
     },
     treatments: [{
       id: 1,
       label: "enable Activities in text channels",
       config: {
         enabled: !0,
-        actionBarEnabled: !1,
         showInOmniButtonMenu: !0,
         showChatInputButton: !1
       }
     }, {
-      id: 2,
-      label: "enable Activities in text channels with action bar",
+      id: 3,
+      label: "enable Activities in text with the rocket button in chat input",
       config: {
         enabled: !0,
-        actionBarEnabled: !0,
-        showInOmniButtonMenu: !0,
-        showChatInputButton: !1
+        showInOmniButtonMenu: !1,
+        showChatInputButton: !0
       }
     }]
   });
@@ -134,16 +116,4 @@ function _(e, t) {
     showInOmniButtonMenu: r.showInOmniButtonMenu,
     showChatInputButton: r.showChatInputButton
   } : null
-}
-
-function h(e, t) {
-  let n = (0, s.useStateFromStores)([a.default], () => a.default.getChannel(e)),
-    i = (null == n ? void 0 : n.guild_id) != null ? l : o,
-    r = i.useExperiment({
-      guildId: null == n ? void 0 : n.guild_id,
-      location: t
-    }, {
-      autoTrackExposure: !1
-    });
-  return r.actionBarEnabled
 }

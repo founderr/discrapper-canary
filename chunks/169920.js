@@ -33,7 +33,7 @@ function h(e) {
     }
   }), E = (0, r.useIsActivitiesInTextEnabled)(h, "ActivityPanelUI"), C = (0, i.default)(h);
   if (l.useEffect(() => {
-      null == h && null != C ? (0, o.updateActivityPanelMode)(f.ActivityPanelModes.ACTION_BAR) : null != h && null == C && (0, o.updateFocusedActivityLayout)(f.FocusedActivityLayouts.RESIZABLE)
+      null != h && null == C && (0, o.updateFocusedActivityLayout)(f.FocusedActivityLayouts.RESIZABLE)
     }, [h, C]), !E) return null;
   let S = null == p ? void 0 : p.applicationId;
   return m !== f.ActivityPanelModes.PANEL || null == S ? null : null == h || null == p || (0, d.default)(h) || null == S ? null : (0, a.jsx)(c.default, {

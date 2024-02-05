@@ -15,7 +15,6 @@ let u = "no_text_activity",
     [u]: [r.ChatOverlays.NEW_MESSAGES, r.ChatOverlays.OPT_IN_CHANNEL, r.ChatOverlays.SUMMARIES],
     [o.ActivityPanelModes.DISCONNECTED]: [r.ChatOverlays.NEW_MESSAGES, r.ChatOverlays.OPT_IN_CHANNEL, r.ChatOverlays.SUMMARIES],
     [o.ActivityPanelModes.LAUNCHING_WITH_ORIENTATION_CHANGE]: [r.ChatOverlays.NEW_MESSAGES, r.ChatOverlays.OPT_IN_CHANNEL, r.ChatOverlays.SUMMARIES],
-    [o.ActivityPanelModes.ACTION_BAR]: [r.ChatOverlays.NEW_MESSAGES],
     [o.ActivityPanelModes.PANEL]: [],
     [o.ActivityPanelModes.PIP]: [r.ChatOverlays.NEW_MESSAGES, r.ChatOverlays.OPT_IN_CHANNEL, r.ChatOverlays.SUMMARIES]
   };
