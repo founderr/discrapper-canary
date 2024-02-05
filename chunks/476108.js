@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var i = n("446674"),
-  s = n("95410"),
-  r = n("913144"),
+var r = n("446674"),
+  i = n("95410"),
+  s = n("913144"),
   l = n("49111");
 let a = {
     lastViewedPath: null,
@@ -14,7 +14,7 @@ let a = {
   },
   u = a,
   o = "LAST_VIEWED_PATH";
-class c extends i.default.PersistedStore {
+class c extends r.default.PersistedStore {
   initialize() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a;
     u = null != e ? e : a
@@ -34,12 +34,12 @@ class c extends i.default.PersistedStore {
   }
 }
 c.displayName = "DefaultRouteStore", c.persistKey = "DefaultRouteStore", c.migrations = [() => {
-  let e = s.default.get(o, null);
-  return s.default.remove(o), {
+  let e = i.default.get(o, null);
+  return i.default.remove(o), {
     lastViewedPath: e
   }
 }];
-var d = new c(r.default, {
+var d = new c(s.default, {
   SAVE_LAST_ROUTE: function(e) {
     let {
       path: t

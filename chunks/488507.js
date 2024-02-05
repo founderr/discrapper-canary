@@ -389,7 +389,7 @@ function p(e) {
   E.notificationAnalytics.increment(e.notificationType, e.action)
 }
 
-function g(e) {
+function y(e) {
   var _;
   c.verbose("OVERLAY_WIDGET_CHANGED", e);
   let E = P.getByName(null !== (_ = e.gameName) && void 0 !== _ ? _ : e.gameId);
@@ -401,7 +401,7 @@ function g(e) {
   null != t && (!t.initialized && (t.initialized = !0, t.pinned = e.pinned), t.pinned !== e.pinned && ++t.pinnedToggledCount, t.pinned = e.pinned, t.visibleDuration.toggle(e.visible))
 }
 
-function y(e) {
+function g(e) {
   if (c.verbose("OVERLAY_FOCUSED", e), P.gameSetAllUnfocused(), null == e.pid) return;
   let _ = P.getByPid(e.pid);
   if (null == _) {
@@ -520,10 +520,10 @@ class V extends I.default {
       MESSAGE_ACKED: Y.handleMessageAcked,
       MESSAGE_CREATE: Y.handleMessageCreate
     } : {
-      OVERLAY_FOCUSED: y,
+      OVERLAY_FOCUSED: g,
       OVERLAY_NOTIFICATION_EVENT: p,
       OVERLAY_SET_UI_LOCKED: G,
-      OVERLAY_WIDGET_CHANGED: g,
+      OVERLAY_WIDGET_CHANGED: y,
       OVERLAY_MESSAGE_EVENT_ACTION: f,
       RUNNING_GAMES_CHANGE: m,
       SOUNDBOARD_SET_OVERLAY_ENABLED: B,

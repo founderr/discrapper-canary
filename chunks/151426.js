@@ -34,7 +34,7 @@ E.r(_), E.d(_, {
     return p
   },
   InboxSettings: function() {
-    return y
+    return g
   },
   AllGuildSettings: function() {
     return f
@@ -99,7 +99,7 @@ class G extends M.MessageType {
           o.versions = m.Versions.internalBinaryRead(e, e.uint32(), E, o.versions);
           break;
         case 2:
-          o.inbox = y.internalBinaryRead(e, e.uint32(), E, o.inbox);
+          o.inbox = g.internalBinaryRead(e, e.uint32(), E, o.inbox);
           break;
         case 3:
           o.guilds = f.internalBinaryRead(e, e.uint32(), E, o.guilds);
@@ -144,7 +144,7 @@ class G extends M.MessageType {
           o.audioContextSettings = ep.internalBinaryRead(e, e.uint32(), E, o.audioContextSettings);
           break;
         case 17:
-          o.communities = ey.internalBinaryRead(e, e.uint32(), E, o.communities);
+          o.communities = eg.internalBinaryRead(e, e.uint32(), E, o.communities);
           break;
         case 18:
           o.broadcast = ew.internalBinaryRead(e, e.uint32(), E, o.broadcast);
@@ -162,7 +162,7 @@ class G extends M.MessageType {
     return o
   }
   internalBinaryWrite(e, _, E) {
-    e.versions && m.Versions.internalBinaryWrite(e.versions, _.tag(1, M.WireType.LengthDelimited).fork(), E).join(), e.inbox && y.internalBinaryWrite(e.inbox, _.tag(2, M.WireType.LengthDelimited).fork(), E).join(), e.guilds && f.internalBinaryWrite(e.guilds, _.tag(3, M.WireType.LengthDelimited).fork(), E).join(), e.userContent && k.internalBinaryWrite(e.userContent, _.tag(4, M.WireType.LengthDelimited).fork(), E).join(), e.voiceAndVideo && Q.internalBinaryWrite(e.voiceAndVideo, _.tag(5, M.WireType.LengthDelimited).fork(), E).join(), e.textAndImages && $.internalBinaryWrite(e.textAndImages, _.tag(6, M.WireType.LengthDelimited).fork(), E).join(), e.notifications && ee.internalBinaryWrite(e.notifications, _.tag(7, M.WireType.LengthDelimited).fork(), E).join(), e.privacy && eE.internalBinaryWrite(e.privacy, _.tag(8, M.WireType.LengthDelimited).fork(), E).join(), e.debug && eo.internalBinaryWrite(e.debug, _.tag(9, M.WireType.LengthDelimited).fork(), E).join(), e.gameLibrary && er.internalBinaryWrite(e.gameLibrary, _.tag(10, M.WireType.LengthDelimited).fork(), E).join(), e.status && ei.internalBinaryWrite(e.status, _.tag(11, M.WireType.LengthDelimited).fork(), E).join(), e.localization && eS.internalBinaryWrite(e.localization, _.tag(12, M.WireType.LengthDelimited).fork(), E).join(), e.appearance && eR.internalBinaryWrite(e.appearance, _.tag(13, M.WireType.LengthDelimited).fork(), E).join(), e.guildFolders && eC.internalBinaryWrite(e.guildFolders, _.tag(14, M.WireType.LengthDelimited).fork(), E).join(), e.favorites && eU.internalBinaryWrite(e.favorites, _.tag(15, M.WireType.LengthDelimited).fork(), E).join(), e.audioContextSettings && ep.internalBinaryWrite(e.audioContextSettings, _.tag(16, M.WireType.LengthDelimited).fork(), E).join(), e.communities && ey.internalBinaryWrite(e.communities, _.tag(17, M.WireType.LengthDelimited).fork(), E).join(), e.broadcast && ew.internalBinaryWrite(e.broadcast, _.tag(18, M.WireType.LengthDelimited).fork(), E).join(), e.clips && eY.internalBinaryWrite(e.clips, _.tag(19, M.WireType.LengthDelimited).fork(), E).join();
+    e.versions && m.Versions.internalBinaryWrite(e.versions, _.tag(1, M.WireType.LengthDelimited).fork(), E).join(), e.inbox && g.internalBinaryWrite(e.inbox, _.tag(2, M.WireType.LengthDelimited).fork(), E).join(), e.guilds && f.internalBinaryWrite(e.guilds, _.tag(3, M.WireType.LengthDelimited).fork(), E).join(), e.userContent && k.internalBinaryWrite(e.userContent, _.tag(4, M.WireType.LengthDelimited).fork(), E).join(), e.voiceAndVideo && Q.internalBinaryWrite(e.voiceAndVideo, _.tag(5, M.WireType.LengthDelimited).fork(), E).join(), e.textAndImages && $.internalBinaryWrite(e.textAndImages, _.tag(6, M.WireType.LengthDelimited).fork(), E).join(), e.notifications && ee.internalBinaryWrite(e.notifications, _.tag(7, M.WireType.LengthDelimited).fork(), E).join(), e.privacy && eE.internalBinaryWrite(e.privacy, _.tag(8, M.WireType.LengthDelimited).fork(), E).join(), e.debug && eo.internalBinaryWrite(e.debug, _.tag(9, M.WireType.LengthDelimited).fork(), E).join(), e.gameLibrary && er.internalBinaryWrite(e.gameLibrary, _.tag(10, M.WireType.LengthDelimited).fork(), E).join(), e.status && ei.internalBinaryWrite(e.status, _.tag(11, M.WireType.LengthDelimited).fork(), E).join(), e.localization && eS.internalBinaryWrite(e.localization, _.tag(12, M.WireType.LengthDelimited).fork(), E).join(), e.appearance && eR.internalBinaryWrite(e.appearance, _.tag(13, M.WireType.LengthDelimited).fork(), E).join(), e.guildFolders && eC.internalBinaryWrite(e.guildFolders, _.tag(14, M.WireType.LengthDelimited).fork(), E).join(), e.favorites && eU.internalBinaryWrite(e.favorites, _.tag(15, M.WireType.LengthDelimited).fork(), E).join(), e.audioContextSettings && ep.internalBinaryWrite(e.audioContextSettings, _.tag(16, M.WireType.LengthDelimited).fork(), E).join(), e.communities && eg.internalBinaryWrite(e.communities, _.tag(17, M.WireType.LengthDelimited).fork(), E).join(), e.broadcast && ew.internalBinaryWrite(e.broadcast, _.tag(18, M.WireType.LengthDelimited).fork(), E).join(), e.clips && eY.internalBinaryWrite(e.clips, _.tag(19, M.WireType.LengthDelimited).fork(), E).join();
     let t = E.writeUnknownFields;
     return !1 !== t && (!0 == t ? M.UnknownFieldHandler.onWrite : t)(this.typeName, e, _), _
   }
@@ -176,7 +176,7 @@ class G extends M.MessageType {
       no: 2,
       name: "inbox",
       kind: "message",
-      T: () => y
+      T: () => g
     }, {
       no: 3,
       name: "guilds",
@@ -251,7 +251,7 @@ class G extends M.MessageType {
       no: 17,
       name: "communities",
       kind: "message",
-      T: () => ey
+      T: () => eg
     }, {
       no: 18,
       name: "broadcast",
@@ -266,7 +266,7 @@ class G extends M.MessageType {
   }
 }
 let p = new G;
-class g extends M.MessageType {
+class y extends M.MessageType {
   create(e) {
     let _ = {
       currentTab: 0,
@@ -317,7 +317,7 @@ class g extends M.MessageType {
     }])
   }
 }
-let y = new g;
+let g = new y;
 class B extends M.MessageType {
   create(e) {
     let _ = {
@@ -2464,7 +2464,7 @@ class eG extends M.MessageType {
   }
 }
 let ep = new eG;
-class eg extends M.MessageType {
+class ey extends M.MessageType {
   create(e) {
     let _ = {};
     return globalThis.Object.defineProperty(_, M.MESSAGE_TYPE, {
@@ -2501,7 +2501,7 @@ class eg extends M.MessageType {
     }])
   }
 }
-let ey = new eg;
+let eg = new ey;
 class eB extends M.MessageType {
   create(e) {
     let _ = {

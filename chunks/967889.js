@@ -24,8 +24,8 @@ var a = n("37983"),
   _ = n("286235"),
   T = n("50885"),
   v = n("49111"),
-  A = n("782340"),
-  I = n("143941");
+  I = n("782340"),
+  A = n("143941");
 
 function M() {
   let [e, t] = r.useState(!1), n = (0, d.useStateFromStores)([h.default], () => {
@@ -44,8 +44,8 @@ function M() {
     size: c.ButtonSizes.LARGE,
     onClick: s,
     submitting: e,
-    className: I.clearOverrideButton,
-    children: A.default.Messages.CLEAR_BUILD_OVERRIDE
+    className: A.clearOverrideButton,
+    children: I.default.Messages.CLEAR_BUILD_OVERRIDE
   })
 }
 let x = i.throttle(() => {
@@ -99,24 +99,24 @@ class R extends r.PureComponent {
     if (null !== this.state.error) {
       let e = (0, a.jsxs)("div", {
           children: [(0, a.jsx)("p", {
-            children: A.default.Messages.ERRORS_UNEXPECTED_CRASH
+            children: I.default.Messages.ERRORS_UNEXPECTED_CRASH
           }), (0, a.jsx)("p", {
-            children: A.default.Messages.ERRORS_ACTION_TO_TAKE
+            children: I.default.Messages.ERRORS_ACTION_TO_TAKE
           })]
         }),
         n = (0, a.jsxs)("div", {
-          className: I.buttons,
+          className: A.buttons,
           children: [(0, a.jsx)(c.Button, {
             size: c.ButtonSizes.LARGE,
             onClick: this._handleSubmitReport,
-            children: A.default.Messages.ERRORS_RELOAD
+            children: I.default.Messages.ERRORS_RELOAD
           }), (0, a.jsx)(M, {})]
         });
       return (0, a.jsx)(S.default, {
-        title: A.default.Messages.UNSUPPORTED_BROWSER_TITLE,
+        title: I.default.Messages.UNSUPPORTED_BROWSER_TITLE,
         note: null != t ? t() : e,
         action: n,
-        className: I.errorPage
+        className: A.errorPage
       })
     }
     return e

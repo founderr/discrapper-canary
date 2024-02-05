@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("201380"),
   O = n("49111"),
   y = n("39141"),
-  P = n("707155");
-let b = l.memo(e => {
+  b = n("707155");
+let P = l.memo(e => {
   var t;
   let {
     mute: n,
@@ -44,7 +44,7 @@ let b = l.memo(e => {
     channel: i,
     sessionId: o,
     nick: I
-  } = e, M = s.id, P = (0, r.useStateFromStores)([C.default], () => C.default.getId() === M, [M]), [b, D, U] = (0, r.useStateFromStoresArray)([_.default], () => P ? [!_.default.isSupported() || _.default.isSelfMute() || _.default.isSelfMutedTemporarily(), _.default.isSelfDeaf(), !1] : [!_.default.isSupported() || _.default.isLocalMute(M), !1, _.default.isLocalVideoDisabled(M)], [P, M]), w = (0, r.useStateFromStores)([N.default], () => N.default.isPrioritySpeaker(M)), F = (0, u.default)({
+  } = e, M = s.id, b = (0, r.useStateFromStores)([C.default], () => C.default.getId() === M, [M]), [P, D, U] = (0, r.useStateFromStoresArray)([_.default], () => b ? [!_.default.isSupported() || _.default.isSelfMute() || _.default.isSelfMutedTemporarily(), _.default.isSelfDeaf(), !1] : [!_.default.isSupported() || _.default.isLocalMute(M), !1, _.default.isLocalVideoDisabled(M)], [b, M]), w = (0, r.useStateFromStores)([N.default], () => N.default.isPrioritySpeaker(M)), F = (0, u.default)({
     userId: M,
     checkSoundSharing: !0
   }), k = (0, r.useStateFromStores)([g.default], () => g.default.isGuestOrLurker(i.guild_id, M)), V = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
@@ -52,7 +52,7 @@ let b = l.memo(e => {
       userIds: t
     } = e;
     return t.has(M)
-  }), [M, i.id]), B = (0, f.default)(null != V ? [V.applicationId] : []), H = (0, j.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), G = (0, r.useStateFromStores)([T.default, v.default], () => P ? v.default.getActivities() : T.default.getActivities(M, i.guild_id)), W = G.find(e => null != e.application_id && e.type === O.ActivityTypes.PLAYING), Y = (0, r.useStateFromStores)([S.default], () => (null == W ? void 0 : W.application_id) != null ? S.default.getDetectableGame(W.application_id) : null), z = (0, r.useStateFromStores)([c.default], () => null != Y && (null == W ? void 0 : W.application_id) != null ? c.default.getApplication(null == W ? void 0 : W.application_id) : void 0);
+  }), [M, i.id]), B = (0, f.default)(null != V ? [V.applicationId] : []), H = (0, j.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), G = (0, r.useStateFromStores)([T.default, v.default], () => b ? v.default.getActivities() : T.default.getActivities(M, i.guild_id)), W = G.find(e => null != e.application_id && e.type === O.ActivityTypes.PLAYING), Y = (0, r.useStateFromStores)([S.default], () => (null == W ? void 0 : W.application_id) != null ? S.default.getDetectableGame(W.application_id) : null), z = (0, r.useStateFromStores)([c.default], () => null != Y && (null == W ? void 0 : W.application_id) != null ? c.default.getApplication(null == W ? void 0 : W.application_id) : void 0);
   null != Y && j.default.trackExposure({
     location: "voice_users"
   });
@@ -61,7 +61,7 @@ let b = l.memo(e => {
   } = h.HangStatusExperiment.useExperiment({
     guildId: i.guild_id,
     location: "VoiceUsers"
-  }), $ = (0, r.useStateFromStores)([p.default], () => P ? p.default.getHangStatusActivity() : null, [P]), ee = (0, r.useStateFromStores)([T.default], () => T.default.findActivity(M, e => e.type === O.ActivityTypes.HANG_STATUS), [M]);
+  }), $ = (0, r.useStateFromStores)([p.default], () => b ? p.default.getHangStatusActivity() : null, [b]), ee = (0, r.useStateFromStores)([T.default], () => T.default.findActivity(M, e => e.type === O.ActivityTypes.HANG_STATUS), [M]);
   return (0, a.jsx)(m.default, {
     shakeLocation: y.ShakeLocation.VOICE_USER,
     isShaking: F,
@@ -71,9 +71,9 @@ let b = l.memo(e => {
       canDrag: e.canDrag && !k,
       otherClientSessionType: null == X ? void 0 : null === (t = X.clientInfo) || void 0 === t ? void 0 : t.os,
       voicePlatform: q,
-      localMute: b && !P,
+      localMute: P && !b,
       localVideoDisabled: U,
-      mute: n || b,
+      mute: n || P,
       deaf: l || D,
       speaking: F,
       priority: w,
@@ -82,13 +82,13 @@ let b = l.memo(e => {
       isWatching: null != Z && Z.state !== O.ApplicationStreamStates.ENDED,
       isGuest: k,
       showHangStatus: Q && (C.default.getId() === s.id || null != ee),
-      hangStatusActivity: P ? $ : ee,
+      hangStatusActivity: b ? $ : ee,
       isSelf: C.default.getId() === s.id,
       application: H ? z : void 0
     })
   })
 });
-b.displayName = "ConnectedVoiceUser";
+P.displayName = "ConnectedVoiceUser";
 class D extends l.Component {
   renderVoiceUsers() {
     let {
@@ -113,7 +113,7 @@ class D extends l.Component {
           nick: c,
           voiceState: f
         } = n;
-        return (0, a.jsx)(b, {
+        return (0, a.jsx)(P, {
           user: o,
           nick: c,
           isSelfOnOtherClient: C.default.getId() === o.id && f.sessionId !== C.default.getSessionId(),
@@ -150,9 +150,9 @@ class D extends l.Component {
         withGuildIcon: s
       } = this.props;
     return null == e && null == l ? null : (0, a.jsxs)(M.VoiceUserList, {
-      className: i(n, P.list, {
-        [P.collapsed]: t,
-        [P.withGuildIcon]: s
+      className: i(n, b.list, {
+        [b.collapsed]: t,
+        [b.withGuildIcon]: s
       }),
       collapsed: t,
       children: [e, l]

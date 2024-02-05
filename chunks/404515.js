@@ -29,9 +29,9 @@ var a = s("37983"),
   h = s("843455"),
   L = s("782340"),
   M = s("116523"),
-  y = s("852225");
+  g = s("852225");
 
-function g(e) {
+function y(e) {
   let {
     payments: t,
     locale: s,
@@ -122,17 +122,17 @@ class x extends n.PureComponent {
           children: (0, a.jsxs)(P.default, {
             className: M.paymentRowHeader,
             children: [(0, a.jsx)("div", {
-              className: y.date,
+              className: g.date,
               children: L.default.Messages.BILLING_PAYMENT_TABLE_HEADER_DATE
             }), (0, a.jsx)("div", {
               className: M.paymentRowHeaderDescription,
               children: L.default.Messages.BILLING_PAYMENT_TABLE_HEADER_DESCRIPTION
             }), (0, a.jsx)("div", {
-              className: y.amount,
+              className: g.amount,
               children: L.default.Messages.BILLING_PAYMENT_TABLE_HEADER_AMOUNT
             })]
           })
-        }), (0, a.jsx)(g, {
+        }), (0, a.jsx)(y, {
           compactMode: e,
           locale: n,
           payments: t,

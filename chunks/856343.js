@@ -25,11 +25,11 @@ function S(e, t) {
     preset: S,
     resolution: g,
     fps: _
-  } = (0, s.useStateFromStoresObject)([d.default], () => d.default.getState()), T = (0, s.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), v = (0, s.useStateFromStores)([h.default], () => h.default.getCurrentUser()), A = (0, s.useStateFromStores)([c.default], () => {
+  } = (0, s.useStateFromStoresObject)([d.default], () => d.default.getState()), T = (0, s.useStateFromStores)([f.default], () => f.default.getGoLiveSource()), v = (0, s.useStateFromStores)([h.default], () => h.default.getCurrentUser()), I = (0, s.useStateFromStores)([c.default], () => {
     var t;
     return null === (t = c.default.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier
   }), {
-    location: I
+    location: A
   } = (0, u.useAnalyticsContext)(), M = r.useCallback((e, r, s, u) => {
     if (e) {
       if (null != T) {
@@ -52,7 +52,7 @@ function S(e, t) {
     } else {
       var o, d;
       o = t, d = {
-        ...I,
+        ...A,
         object: p.AnalyticsObjects.RADIO_ITEM,
         objectType: u
       }, (0, i.openModalLazy)(async () => {
@@ -67,14 +67,14 @@ function S(e, t) {
         contextKey: o === p.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
       })
     }
-  }, [t, I, T]);
+  }, [t, A, T]);
   if (null == e) return null;
   let x = S === E.ApplicationStreamPresets.PRESET_DOCUMENTS ? E.ApplicationStreamFPS.FPS_30 : _,
     R = E.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
       let {
         value: t,
         label: n
-      } = e, r = (0, o.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, g, t, v, A);
+      } = e, r = (0, o.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, g, t, v, I);
       return (0, a.jsx)(i.MenuRadioItem, {
         group: "stream-settings-fps",
         id: "stream-settings-fps-".concat(t),
@@ -87,7 +87,7 @@ function S(e, t) {
       let {
         value: t,
         label: n
-      } = e, r = (0, o.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, t, x, v, A);
+      } = e, r = (0, o.default)(E.ApplicationStreamPresets.PRESET_CUSTOM, t, x, v, I);
       return (0, a.jsx)(i.MenuRadioItem, {
         group: "stream-settings-resolution",
         id: "stream-settings-resolution-".concat(t),

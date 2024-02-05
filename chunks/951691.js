@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return v
   },
   default: function() {
-    return A
+    return I
   }
 });
 var a = n("37983");
@@ -41,7 +41,7 @@ function v(e, t, n) {
   return i
 }
 
-function A(e) {
+function I(e) {
   var t;
   let {
     channel: n,
@@ -50,8 +50,8 @@ function A(e) {
     hideSelfOptions: c = !1,
     showReportOption: h = !1,
     handleGoLive: m,
-    onClose: A,
-    onSelect: I,
+    onClose: I,
+    onSelect: A,
     appContext: M = g.AppContext.APP
   } = e, x = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS), R = null !== (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) && void 0 !== t ? t : null, N = v(n, r, l), L = (0, o.default)(R, M), O = (0, u.default)(R, M, g.NOOP_NULL), y = null == R ? (0, a.jsx)(s.MenuItem, {
     id: "share-your-screen",
@@ -78,9 +78,9 @@ function A(e) {
   return (0, a.jsx)(i.default, {
     section: g.AnalyticsSections.CONTEXT_MENU,
     children: (0, a.jsxs)(s.Menu, {
-      onSelect: I,
+      onSelect: A,
       navId: "manage-streams",
-      onClose: A,
+      onClose: I,
       "aria-label": null != R ? T.default.Messages.STOP_STREAMING : T.default.Messages.SHARE_YOUR_SCREEN,
       children: [(0, a.jsx)(s.MenuGroup, {
         children: N.map(e => {

@@ -41,8 +41,8 @@ function C(e) {
     transitionState: b,
     onClose: D,
     onSubscribeClick: F,
-    onSecondaryClick: y,
-    secondaryCTA: j,
+    onSecondaryClick: j,
+    secondaryCTA: y,
     subscribeButtonText: w,
     showNewBadge: B = !1,
     enableArtBoxShadow: G = !0,
@@ -116,13 +116,13 @@ function C(e) {
       className: S.footer,
       children: [(0, i.jsxs)("div", {
         className: S.primaryActions,
-        children: [null != j ? (0, i.jsx)(a.Button, {
+        children: [null != y ? (0, i.jsx)(a.Button, {
           className: S.secondaryAction,
-          onClick: y,
+          onClick: j,
           size: a.Button.Sizes.SMALL,
           color: a.Button.Colors.PRIMARY,
           look: a.Button.Looks.LINK,
-          children: j
+          children: y
         }) : null, (() => {
           let e, t;
           if (z) return (0, i.jsx)(d.default, {

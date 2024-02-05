@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MoreVoiceUser: function() {
-    return b
+    return P
   },
   AudienceVoiceUser: function() {
     return D
@@ -40,14 +40,14 @@ var a = n("37983"),
   L = n("171644"),
   O = n("706530"),
   y = n("782340"),
-  P = n("375674");
+  b = n("375674");
 
-function b(e) {
+function P(e) {
   let {
     numUsers: t
   } = e;
   return (0, a.jsx)("div", {
-    className: P.moreContainer,
+    className: b.moreContainer,
     children: (0, a.jsxs)(o.Text, {
       color: "text-muted",
       variant: "text-sm/medium",
@@ -64,13 +64,13 @@ function D(e) {
     count: t
   });
   return (0, a.jsxs)("div", {
-    className: i(P.audienceContainer, {
-      [P.audienceContainerCollapsed]: n
+    className: i(b.audienceContainer, {
+      [b.audienceContainerCollapsed]: n
     }),
     children: [(0, a.jsx)("div", {
-      className: P.audienceIconContainer,
+      className: b.audienceIconContainer,
       children: (0, a.jsx)(M.default, {
-        className: P.audienceIcon
+        className: b.audienceIcon
       })
     }), (0, a.jsx)(o.Text, {
       color: "text-muted",
@@ -97,7 +97,7 @@ class U extends l.PureComponent {
       user: s,
       channel: i
     } = this.props, r = (0, a.jsx)("div", {
-      className: P.draggable,
+      className: b.draggable,
       "data-dnd-name": i.name,
       onMouseEnter: l ? void 0 : this.handleMouseEnter,
       onMouseLeave: l ? void 0 : this.handleHidePreview,
@@ -253,7 +253,7 @@ class U extends l.PureComponent {
         isSelf: j,
         application: O
       } = this.props, {
-        userPopoutOpen: b,
+        userPopoutOpen: P,
         isHoveringOwnHangStatus: D
       } = this.state, U = L.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), w = {
         user: f,
@@ -276,10 +276,10 @@ class U extends l.PureComponent {
         voicePlatform: l,
         embeddedApplication: x,
         avatarContainerClass: i({
-          [P.userAvatar]: !0
+          [b.userAvatar]: !0
         }),
         disabled: t && !U,
-        selected: b,
+        selected: P,
         onClick: U ? void 0 : this.handleClickUser,
         onDoubleClick: this.handleWatchStream,
         onContextMenu: this.handleUserContextMenu,
@@ -310,7 +310,7 @@ class U extends l.PureComponent {
       return (0, a.jsx)(o.Popout, {
         position: "right",
         renderPopout: M && j && D || !C ? this.renderHangStatusPopout : this.renderStreamPopout,
-        shouldShow: s && !b,
+        shouldShow: s && !P,
         onRequestClose: this.handleHidePreview,
         spacing: 0,
         children: () => (0, a.jsx)(R.default, {

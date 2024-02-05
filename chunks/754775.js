@@ -24,7 +24,7 @@ var a = n("37983"),
       pulseSpeakingIndicator: C = !1,
       speaking: m = !1,
       ...S
-    } = e, g = null != p ? p : n, _ = (0, l.default)(g, s.default.unsafe_rawColors.PRIMARY_800.css), T = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, v = (0, c.default)(null != E ? E : ""), A = null == v ? void 0 : v.getBannerURL({
+    } = e, g = null != p ? p : n, _ = (0, l.default)(g, s.default.unsafe_rawColors.PRIMARY_800.css), T = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, v = (0, c.default)(null != E ? E : ""), I = null == v ? void 0 : v.getBannerURL({
       size: 1024,
       canAnimate: f.GifAutoPlay.getSetting()
     });
@@ -33,7 +33,7 @@ var a = n("37983"),
           dispatchWait: !0
         })
       }, [T, E]), null == n) return null;
-    let I = (0, a.jsx)(i.Avatar, {
+    let A = (0, a.jsx)(i.Avatar, {
         className: h.avatarWrapper,
         src: n,
         ...S
@@ -42,12 +42,12 @@ var a = n("37983"),
         ...t,
         backgroundColor: _
       };
-    return null != A && m && T && (M.backgroundImage = "url(".concat(A, ")"), M.backgroundSize = "cover"), (0, a.jsx)("div", {
+    return null != I && m && T && (M.backgroundImage = "url(".concat(I, ")"), M.backgroundSize = "cover"), (0, a.jsx)("div", {
       style: M,
       className: h.background,
       children: C ? (0, a.jsx)(o.default, {
         shouldAnimate: m,
-        children: I
-      }) : I
+        children: A
+      }) : A
     })
   }

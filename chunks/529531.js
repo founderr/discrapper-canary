@@ -49,7 +49,7 @@ let G = () => {
       subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2
     })
   },
-  g = e => {
+  y = e => {
     let {
       markAsDismissed: _
     } = e, E = () => {
@@ -74,7 +74,7 @@ let G = () => {
       })]
     })
   },
-  y = e => {
+  g = e => {
     let {
       isCoachmark: _,
       markAsDismissed: E
@@ -123,14 +123,14 @@ function B(e) {
       ref: u,
       className: r(m.editor, l ? m.editorAnimate : null),
       children: (0, t.jsxs)(i.HeadingLevel, {
-        children: [(0, t.jsx)(g, {
+        children: [(0, t.jsx)(y, {
           markAsDismissed: E
         }), (0, t.jsx)(i.Scroller, {
           className: m.editorBody,
           children: (0, t.jsx)(d.default, {
             className: m.selectionGroup
           })
-        }), (0, t.jsx)(y, {
+        }), (0, t.jsx)(g, {
           markAsDismissed: E,
           isCoachmark: _
         })]

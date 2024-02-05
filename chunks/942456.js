@@ -27,8 +27,8 @@ var a, n, i = s("37983"),
   h = s("407417"),
   L = s("246421"),
   M = s("264742"),
-  y = s("537325"),
-  g = s("24373"),
+  g = s("537325"),
+  y = s("24373"),
   x = s("41170"),
   D = s("865146"),
   U = s("305961"),
@@ -140,7 +140,7 @@ function ef(e) {
   } = e, a = (0, T.useFetchGuildProductListing)(t, s, {
     requireCurrentGuild: !1
   }), n = (0, A.useProductType)(a), l = (0, I.useStateFromStores)([U.default], () => U.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? ea.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = r.useCallback(async () => {
-    (null == l ? void 0 : l.hasFeature(ee.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, y.default)(ee.Routes.GUILD_PRODUCT(t, s)) : await (0, y.default)(ee.Routes.CHANNEL(t)), (0, _.popLayer)()
+    (null == l ? void 0 : l.hasFeature(ee.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, g.default)(ee.Routes.GUILD_PRODUCT(t, s)) : await (0, g.default)(ee.Routes.CHANNEL(t)), (0, _.popLayer)()
   }, [l, t, s]);
   return (0, i.jsxs)(i.Fragment, {
     children: [null != u && (0, i.jsx)(ec, {
@@ -537,7 +537,7 @@ class ep extends r.PureComponent {
       if (t = a.isPreorder ? ea.default.Messages.PREORDER_SKU_NAME.format({
           name: c.name
         }) : a.isGuildProductPurchase && a.isSoftDeletedProduct ? ea.default.Messages.GUILD_PRODUCT_BILLING_DELISTED_PRODUCT : c.name, null != u) {
-        let t = (0, g.getStickerPackPreviewSticker)(u);
+        let t = (0, y.getStickerPackPreviewSticker)(u);
         e = (0, i.jsx)(x.default, {
           disableAnimation: !o,
           isInteracting: o,

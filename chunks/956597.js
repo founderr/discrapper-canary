@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PremiumTrialGradientBadge: function() {
-    return j
+    return y
   },
   default: function() {
     return H
@@ -100,7 +100,7 @@ function F(e) {
   })
 }
 
-function y(e) {
+function j(e) {
   var t, n;
   let {
     className: l,
@@ -133,7 +133,7 @@ function y(e) {
   })
 }
 
-function j(e) {
+function y(e) {
   var t, n;
   let r = null === (t = (0, L.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial,
     l = null !== (n = null == r ? void 0 : r.sku_id) && void 0 !== n ? n : h.PremiumSubscriptionSKUs.TIER_2;
@@ -167,7 +167,7 @@ function w(e) {
       look: _.ButtonLooks.BLANK,
       className: A.cancelButton,
       children: x.default.Messages.CLOSE
-    }), (0, i.jsx)(y, {
+    }), (0, i.jsx)(j, {
       className: A.subscribeButton,
       subscriptionTier: t,
       analyticsLocationObject: r,
@@ -195,7 +195,7 @@ function B(e) {
       children: x.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_TRIAL_DESCRIPTION.format({
         onClick: g.navigateToPremiumMarketingPage
       })
-    }), (0, i.jsx)(y, {
+    }), (0, i.jsx)(j, {
       trialOffer: r,
       className: A.subscribeButtonWide,
       subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
@@ -418,7 +418,7 @@ function H(e) {
             planName: (0, O.getDisplayNameFromSku)(d),
             onClick: () => (0, P.transitionTo)(N.Routes.APPLICATION_STORE)
           })
-        }), (0, i.jsx)(y, {
+        }), (0, i.jsx)(j, {
           className: A.upsellButton,
           subscriptionTier: d,
           analyticsLocationObject: S,
@@ -464,7 +464,7 @@ function H(e) {
               (0, P.transitionTo)(N.Routes.APPLICATION_STORE), null == a || a()
             }
           })
-        }), (0, i.jsx)(y, {
+        }), (0, i.jsx)(j, {
           subscriptionTier: d,
           analyticsLocationObject: S,
           onClose: a,

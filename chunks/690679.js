@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return y
+    return g
   }
 }), s("222007"), s("70102");
 var a = s("37983"),
@@ -30,12 +30,12 @@ var a = s("37983"),
   L = s("539735"),
   M = s("173791");
 
-function y(e) {
+function g(e) {
   let {
     subscription: t,
     onPaymentSourceAdded: i,
     highlightAddPaymentMethodButton: l,
-    dropdownClassName: y,
+    dropdownClassName: g,
     analyticsLocation: x,
     currentInvoicePreview: D,
     disabled: U = !1
@@ -54,7 +54,7 @@ function y(e) {
       analyticsLocations: j,
       analyticsLocation: x
     });
-    D.currency !== n.currency || D.currency === n.currency && D.total !== n.total ? await g(n, () => {
+    D.currency !== n.currency || D.currency === n.currency && D.total !== n.total ? await y(n, () => {
       a(e, s)
     }, () => {
       w(!1)
@@ -123,7 +123,7 @@ function y(e) {
             label: h.default.Messages.ATTACH_PAYMENT_SOURCE_PROMPT_OPTION,
             value: null
           } : null,
-          className: y,
+          className: g,
           paymentSources: G,
           hidePersonalInformation: v,
           selectedPaymentSourceId: e,
@@ -151,7 +151,7 @@ function y(e) {
     })
   }
 }
-let g = async (e, t, n) => {
+let y = async (e, t, n) => {
   let i = await (0, d.openModalLazy)(async () => {
     let {
       default: i

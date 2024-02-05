@@ -24,9 +24,9 @@ var a = n("37983"),
   _ = n("99795"),
   T = n("49111"),
   v = n("782340"),
-  A = n("2081");
+  I = n("2081");
 
-function I(e, t) {
+function A(e, t) {
   switch (e) {
     case _.ParticipantTypes.ACTIVITY:
       return v.default.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format({
@@ -49,23 +49,23 @@ function M(e) {
     participantType: s,
     channelId: l,
     handleUserContextMenu: u
-  } = e, o = I(s, t.length);
+  } = e, o = A(s, t.length);
   return (0, a.jsx)(c.Dialog, {
     "aria-label": o,
-    className: A.popoutWrapper,
+    className: I.popoutWrapper,
     children: (0, a.jsxs)(c.Scroller, {
-      className: A.scroller,
+      className: I.scroller,
       children: [(0, a.jsx)(c.Heading, {
         variant: "heading-deprecated-12/semibold",
-        className: A.memberListHeader,
+        className: I.memberListHeader,
         children: o
       }), (0, a.jsx)("div", {
         children: t.map(e => (0, a.jsx)(C.default, {
           guildId: null != r ? r : void 0,
-          className: i(A.memberListItem, {
-            [A.popoutDisabled]: n
+          className: i(I.memberListItem, {
+            [I.popoutDisabled]: n
           }),
-          textClassName: A.memberListItemText,
+          textClassName: I.memberListItemText,
           user: e,
           disablePopout: n,
           nick: g.default.getNickname(r, l, e),
@@ -84,17 +84,17 @@ function x(e) {
     maxVisibleUsers: s = 3,
     className: l,
     participantType: u
-  } = e, o = I(u, t.length), d = t.length < s ? t.map(e => (0, a.jsx)("div", {
-    className: A.viewersTooltipItem,
+  } = e, o = A(u, t.length), d = t.length < s ? t.map(e => (0, a.jsx)("div", {
+    className: I.viewersTooltipItem,
     children: g.default.getName(n, r, e)
   }, e.id)) : o;
   return (0, a.jsx)(c.TooltipContainer, {
     text: d,
     "aria-label": o,
     children: (0, a.jsxs)("div", {
-      className: i(A.viewers, l),
+      className: i(I.viewers, l),
       children: [(0, a.jsx)(m.default, {
-        className: A.viewersIcon
+        className: I.viewersIcon
       }), (0, a.jsx)("span", {
         "aria-hidden": "true",
         children: t.length
@@ -113,7 +113,7 @@ function N(e) {
     compact: m = !1,
     disableInteraction: g = !1,
     maxVisibleUsers: v = 3
-  } = e, [I, N] = r.useState(!1), L = r.useRef(new d.DelayedCall(150, () => N(!1))), O = (0, o.useStateFromStoresArray)([p.default, E.default], () => {
+  } = e, [A, N] = r.useState(!1), L = r.useRef(new d.DelayedCall(150, () => N(!1))), O = (0, o.useStateFromStoresArray)([p.default, E.default], () => {
     if (l.type === _.ParticipantTypes.STREAM) {
       let e = p.default.getViewerIds(l.id);
       return e.length > 0 ? e.map(e => E.default.getUser(e)).filter(S.isNotNullish) : R
@@ -123,7 +123,7 @@ function N(e) {
     L.current.cancel(), N(!0)
   }, []), P = r.useCallback(() => {
     L.current.delay()
-  }, []), D = r.useCallback((e, t) => {
+  }, []), b = r.useCallback((e, t) => {
     y(), (0, f.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -145,14 +145,14 @@ function N(e) {
     className: C,
     participantType: l.type
   });
-  let b = u(O).take(v).map(e => (0, a.jsx)(c.Avatar, {
+  let D = u(O).take(v).map(e => (0, a.jsx)(c.Avatar, {
     src: e.getAvatarURL(s, 24),
     "aria-label": e.username,
     size: c.AvatarSizes.SIZE_24,
-    className: A.viewer
+    className: I.viewer
   }, e.id)).value();
-  return O.length > v && (b[b.length - 1] = (0, a.jsxs)("div", {
-    className: A.overflow,
+  return O.length > v && (D[D.length - 1] = (0, a.jsxs)("div", {
+    className: I.overflow,
     children: ["+", O.length - v + 1]
   }, "overflow")), (0, a.jsx)(h.default, {
     section: T.AnalyticsSections.STREAM_VIEWER_POPOUT,
@@ -162,17 +162,17 @@ function N(e) {
       children: (0, a.jsx)(c.Popout, {
         renderPopout: () => (0, a.jsx)(M, {
           participantType: l.type,
-          handleUserContextMenu: D,
+          handleUserContextMenu: b,
           guildId: s,
           channelId: t,
           users: O,
           disableInteraction: g
         }),
-        shouldShow: I,
+        shouldShow: A,
         position: "top",
         children: () => (0, a.jsx)("div", {
-          className: i(A.viewers, C),
-          children: b
+          className: i(I.viewers, C),
+          children: D
         })
       })
     })
