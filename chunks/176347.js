@@ -35,8 +35,8 @@ var s = n("37983"),
   O = n("159492"),
   D = n("998415"),
   j = n("228800"),
-  P = n("681060"),
-  b = n("939563"),
+  b = n("681060"),
+  P = n("939563"),
   H = n("538282"),
   F = n("956967"),
   U = n("952104"),
@@ -175,7 +175,7 @@ class eO extends a.PureComponent {
       poggermodeEnabled: C
     } = this.props, {
       contentWarningProps: p
-    } = this.state, m = (0, s.jsx)(P.default, {
+    } = this.state, m = (0, s.jsx)(b.default, {
       textValue: this.state.textValue,
       richValue: this.state.richValue,
       focused: t,
@@ -409,7 +409,7 @@ class eO extends a.PureComponent {
     }, this.handleSetValue = e => {
       var t, n;
       let s = null === (t = this.editorRef) || void 0 === t ? void 0 : t.getSlateEditor();
-      null != s && (b.SlateTransforms.select(s, []), s.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
+      null != s && (P.SlateTransforms.select(s, []), s.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
     }, this.renderAttachButton = (e, t) => (0, s.jsx)(j.default, {
       className: t,
       channel: this.props.channel,

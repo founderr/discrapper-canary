@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return A
+    return _
   }
 });
 var l = a("37983"),
@@ -15,7 +15,7 @@ var l = a("37983"),
   d = a("782340"),
   E = a("105335");
 
-function _(e) {
+function A(e) {
   let {
     label: t,
     isSelected: a,
@@ -32,7 +32,7 @@ function _(e) {
     children: s
   })
 }
-var A = function(e) {
+var _ = function(e) {
   let {
     selectedLayoutType: t,
     onSelectedLayoutType: a
@@ -46,7 +46,7 @@ var A = function(e) {
     name: o.PollLayoutTypes.IMAGE_ONLY_ANSWERS,
     label: d.default.Messages.CREATE_POLL_LAYOUT_IMAGE,
     icon: u.default
-  }], []), A = e => {
+  }], []), _ = e => {
     a(e)
   };
   return (0, l.jsx)("div", {
@@ -55,10 +55,10 @@ var A = function(e) {
     ...s,
     children: r.map(e => {
       let a = e.icon;
-      return (0, l.jsx)(_, {
+      return (0, l.jsx)(A, {
         label: e.label,
         isSelected: e.name === t,
-        onClick: () => A(e.name),
+        onClick: () => _(e.name),
         children: (0, l.jsx)(a, {
           className: E.icon
         })

@@ -41,8 +41,8 @@ var s = n("37983"),
   O = n("969706"),
   D = n("39331"),
   j = n("68480"),
-  P = n("115859"),
-  b = n("922177"),
+  b = n("115859"),
+  P = n("922177"),
   H = n("789790"),
   F = n("227984"),
   U = n("82080"),
@@ -119,7 +119,7 @@ function Y(e) {
     },
     compact: L = !1,
     className: j,
-    groupId: b
+    groupId: P
   } = e, H = m.type === V.MessageTypes.REPLY ? m.messageReference : void 0, {
     onFocus: k,
     ...z
@@ -135,7 +135,7 @@ function Y(e) {
     handleMouseEnter: ea,
     handleMouseLeave: el,
     isHovered: ei
-  } = (0, R.useHoveredMessage)(b, m.author.id, J), er = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), eo = J || er && K, eu = eo || ei, {
+  } = (0, R.useHoveredMessage)(P, m.author.id, J), er = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), eo = J || er && K, eu = eo || ei, {
     content: ed,
     hasSpoilerEmbeds: ec
   } = (0, D.default)(m, {
@@ -146,7 +146,7 @@ function Y(e) {
     allowHeading: en.showListsAndHeaders || es.showListsAndHeaders,
     allowLinks: en.showMaskedLinks || es.showMaskedLinks,
     previewLinkTarget: en.showMaskedLinks || es.showMaskedLinks
-  }), ef = (0, y.default)(A, _, er), eh = (0, v.default)(m), eC = (0, x.getMessageAriaLabelledBy)(m, b), ep = (0, x.getMessageAriaDescribedBy)(m), em = (0, U.default)(e, ed, !1), eE = a.useCallback(() => (0, g.transitionToGuild)(I, _, A), [I, _, A]), eg = (0, p.useRoleIcon)({
+  }), ef = (0, y.default)(A, _, er), eh = (0, v.default)(m), eC = (0, x.getMessageAriaLabelledBy)(m, P), ep = (0, x.getMessageAriaDescribedBy)(m), em = (0, U.default)(e, ed, !1), eE = a.useCallback(() => (0, g.transitionToGuild)(I, _, A), [I, _, A]), eg = (0, p.useRoleIcon)({
     guildId: I,
     roleId: eh.iconRoleId
   });
@@ -167,7 +167,7 @@ function Y(e) {
         [Z.mentioned]: m.mentioned && !(0, N.default)(m),
         [Z.ephemeral]: (0, M.hasFlag)(m.flags, V.MessageFlags.EPHEMERAL),
         [Z.systemMessage]: (0, N.default)(m),
-        [Z.groupStart]: m.id === b || m.type === V.MessageTypes.REPLY,
+        [Z.groupStart]: m.id === P || m.type === V.MessageTypes.REPLY,
         [Z.selected]: eo
       }),
       zalgo: !0,
@@ -184,7 +184,7 @@ function Y(e) {
         repliedMessage: et,
         roleIcon: eg
       }),
-      childrenAccessories: (0, P.default)({
+      childrenAccessories: (0, b.default)({
         channelMessageProps: e,
         hasSpoilerEmbeds: ec,
         isInteracting: eu,
@@ -280,15 +280,15 @@ var q = a.memo(function(e) {
       guildId: K.guild_id,
       roleId: ey.iconRoleId
     }),
-    eP = (0, x.getMessageAriaLabelledBy)(I, Q),
-    eb = (0, x.getMessageAriaDescribedBy)(I),
+    eb = (0, x.getMessageAriaLabelledBy)(I, Q),
+    eP = (0, x.getMessageAriaDescribedBy)(I),
     eH = (0, d.useStateFromStores)([C.default], () => C.default.getMessage(z), [z]),
     eF = (0, j.default)({
       message: I,
       channel: K
     }),
     eU = null != eH;
-  r = I.type === V.MessageTypes.CUSTOM_GIFT ? "" : !eS && eU ? (0, b.default)(e, eL) : (0, U.default)(e, eL, eS);
+  r = I.type === V.MessageTypes.CUSTOM_GIFT ? "" : !eS && eU ? (0, P.default)(e, eL) : (0, U.default)(e, eL, eS);
   let ek = I.id === Q,
     ew = (0, s.jsx)(c.FocusRing, {
       offset: {
@@ -303,8 +303,8 @@ var q = a.memo(function(e) {
           ...en,
           "aria-setsize": -1,
           "aria-roledescription": W.default.Messages.MESSAGE_A11Y_ROLE_DESCRIPTION,
-          "aria-labelledby": eP,
-          "aria-describedby": eb,
+          "aria-labelledby": eb,
+          "aria-describedby": eP,
           onFocus: eE,
           onBlur: eg,
           onContextMenu: eu,
@@ -336,7 +336,7 @@ var q = a.memo(function(e) {
             repliedMessage: el,
             roleIcon: ej
           }),
-          childrenAccessories: (0, P.default)({
+          childrenAccessories: (0, b.default)({
             channelMessageProps: e,
             hasSpoilerEmbeds: ex,
             handleContextMenu: eu,

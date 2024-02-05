@@ -56,8 +56,8 @@ function R(e) {
     onSelect: O,
     draftType: D,
     editorTextContent: j,
-    setValue: P,
-    openClips: b
+    setValue: b,
+    openClips: P
   } = e;
   (0, f.useMaybeFetchPremiumLikelihood)(h.default);
   let H = (0, u.useOmnibuttonFileUploadSubtextEnabled)("ChannelAttachMenu"),
@@ -77,11 +77,11 @@ function R(e) {
   }
 
   function k() {
-    E.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P("/", (0, _.toRichValue)("/"))
+    E.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), b("/", (0, _.toRichValue)("/"))
   }
 
   function w() {
-    b()
+    P()
   }
 
   function G() {

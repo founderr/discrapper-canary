@@ -95,7 +95,7 @@ function L(e) {
       delay: 400
     }).start()
   }, [_, j, y, L]);
-  let P = a.useCallback(() => {
+  let b = a.useCallback(() => {
     null != T && (0, g.selectNewMemberActionChannel)(f, T.channelId)
   }, [f, T]);
   return null == m || x && !y ? null : (0, s.jsx)("div", {
@@ -109,7 +109,7 @@ function L(e) {
       },
       children: (0, s.jsxs)(u.Clickable, {
         className: i(I.banner, I.clickable),
-        onClick: P,
+        onClick: b,
         children: [(0, s.jsx)(v, {
           channelId: T.channelId,
           emojiId: null === (t = T.emoji) || void 0 === t ? void 0 : t.id,

@@ -35,8 +35,8 @@ var s = n("37983"),
   O = n("659500"),
   D = n("773336"),
   j = n("412861"),
-  P = n("79254"),
-  b = n("64096"),
+  b = n("79254"),
+  P = n("64096"),
   H = n("49111"),
   F = n("80028"),
   U = n("782340"),
@@ -112,7 +112,7 @@ var s = n("37983"),
       eS = (0, u.useRedesignIconContext)().enabled,
       eA = (0, h.useActivitiesInTextButtonVisibility)(V.id, "ChannelAttachButton"),
       e_ = null !== (l = null == $ ? void 0 : $.length) && void 0 !== l ? l : 0,
-      eT = (0, b.default)({
+      eT = (0, P.default)({
         canAttachFiles: ed,
         canStartThreads: eC || ep,
         useSlate: em,
@@ -168,7 +168,7 @@ var s = n("37983"),
               lastClipsSession: Q
             });
           case "attachMenu":
-            return (0, s.jsx)(P.default, {
+            return (0, s.jsx)(b.default, {
               ...e,
               onClose: () => er(null),
               options: eT,

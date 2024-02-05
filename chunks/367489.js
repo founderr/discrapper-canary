@@ -36,9 +36,9 @@ function S(e) {
     disabled: A
   } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, j] = l.useState(!1), L = (0, c.default)(), O = (0, o.isThemeDark)(L) || t ? C : E, {
     width: y = 0,
-    ref: b
+    ref: P
   } = (0, d.default)(), {
-    width: P = 0,
+    width: b = 0,
     ref: D
   } = (0, d.default)();
   return (0, a.jsxs)(u.TooltipContainer, {
@@ -72,13 +72,13 @@ function S(e) {
         [m.labelUnchecked]: !t && !S
       }),
       style: x ? {
-        width: t ? y : y + P
+        width: t ? y : y + b
       } : void 0,
       children: [t ? (0, a.jsx)(p.Shine, {
         className: m.shine,
         shinePaused: M
       }) : null, (0, a.jsx)("img", {
-        ref: b,
+        ref: P,
         src: O,
         alt: g
       }), (0, a.jsx)("span", {

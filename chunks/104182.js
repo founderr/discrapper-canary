@@ -18,13 +18,13 @@ function E(e, t) {
   let a = e.id,
     E = l.useRef();
   null == E.current && (E.current = [(0, c.generateEmptyPollAnswer)(), (0, c.generateEmptyPollAnswer)()]);
-  let [A, f] = l.useState(E.current), [m, L] = l.useState(""), [p, T] = l.useState(n.PollLayoutTypes.DEFAULT), [C, P] = l.useState(!1), [R, O] = l.useState(d.PollDurations.ONE_DAY), x = A.filter(e => (0, c.isAnswerFilled)(e, p)), h = A.filter(e => (0, c.isIncompleteAnswer)(e, p)), I = m.length > 0 && x.length >= d.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === h.length, [N, {
+  let [_, m] = l.useState(E.current), [f, L] = l.useState(""), [p, T] = l.useState(n.PollLayoutTypes.DEFAULT), [C, P] = l.useState(!1), [R, O] = l.useState(d.PollDurations.ONE_DAY), x = _.filter(e => (0, c.isAnswerFilled)(e, p)), I = _.filter(e => (0, c.isIncompleteAnswer)(e, p)), h = f.length > 0 && x.length >= d.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === I.length, [N, {
     error: g,
-    loading: v
-  }] = (0, s.default)(u.default.createPoll), M = A.length < d.MAX_NUMBER_OF_ANSWERS_PER_POLL, S = l.useCallback(() => {
-    M && f(e => [...e, (0, c.generateEmptyPollAnswer)()])
-  }, [M]), D = l.useCallback((e, t) => {
-    f(a => {
+    loading: S
+  }] = (0, s.default)(u.default.createPoll), v = _.length < d.MAX_NUMBER_OF_ANSWERS_PER_POLL, M = l.useCallback(() => {
+    v && m(e => [...e, (0, c.generateEmptyPollAnswer)()])
+  }, [v]), D = l.useCallback((e, t) => {
+    m(a => {
       let l = [...a];
       return l[t] = {
         ...l[t],
@@ -32,7 +32,7 @@ function E(e, t) {
       }, l
     })
   }, []), j = l.useCallback((e, t) => {
-    f(a => {
+    m(a => {
       let l = [...a];
       return l[t] = {
         ...l[t],
@@ -41,30 +41,30 @@ function E(e, t) {
     })
   }, []), y = l.useCallback((e, t, a) => {
     var l;
-    let n = A[t],
+    let n = _[t],
       s = null === (l = n.image) || void 0 === l ? void 0 : l.mediaAttachmentState;
     null != s && s.mediaURL !== a && o.removePollUploadAttachment(e, n.localCreationAnswerId, (0, r.getFileNameFromGifUrl)(n.localCreationAnswerId, s.mediaURL))
-  }, [A]), b = l.useCallback(async (e, t, a) => {
-    let l = A[t].localCreationAnswerId;
-    y(e, t), j(_(a, i.PollMediaUploadAttachmentStatus.PREPARING), t);
+  }, [_]), b = l.useCallback(async (e, t, a) => {
+    let l = _[t].localCreationAnswerId;
+    y(e, t), j(A(a, i.PollMediaUploadAttachmentStatus.PREPARING), t);
     let n = await o.handlePollGifAttachmentAdd(e, l, a);
     if (null == n) {
-      j(_(a, i.PollMediaUploadAttachmentStatus.ERROR), t);
+      j(A(a, i.PollMediaUploadAttachmentStatus.ERROR), t);
       return
     }
-    j(_(a, i.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t)
-  }, [A, j, y]), k = l.useCallback((e, t, a) => {
-    let l = A[t].localCreationAnswerId,
+    j(A(a, i.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t)
+  }, [_, j, y]), k = l.useCallback((e, t, a) => {
+    let l = _[t].localCreationAnswerId,
       n = URL.createObjectURL(a);
-    y(e, t), j(_(n, i.PollMediaUploadAttachmentStatus.PREPARING), t), o.handlePollMediaAttachmentAdd(e, l, a), j(_(n, i.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t)
-  }, [A, j, y]), U = l.useCallback((e, t) => {
+    y(e, t), j(A(n, i.PollMediaUploadAttachmentStatus.PREPARING), t), o.handlePollMediaAttachmentAdd(e, l, a), j(A(n, i.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t)
+  }, [_, j, y]), w = l.useCallback((e, t) => {
     y(a, t), j({
       emoji: e,
       stickerId: void 0,
       mediaAttachmentState: void 0
     }, t)
-  }, [a, j, y]), w = l.useCallback(e => {
-    y(a, e), f(t => {
+  }, [a, j, y]), U = l.useCallback(e => {
+    y(a, e), m(t => {
       let a = [...t];
       return a.splice(e, 1), a
     })
@@ -75,17 +75,17 @@ function E(e, t) {
   let B = l.useCallback(async () => {
     await N({
       channel: e,
-      question: m,
+      question: f,
       answers: x,
       allowMultiSelect: C,
       duration: R,
       layout: p,
       onClose: t
     })
-  }, [m, x, C, R, N, e, p, t]);
+  }, [f, x, C, R, N, e, p, t]);
   return {
-    answers: A,
-    question: m,
+    answers: _,
+    question: f,
     setQuestion: L,
     selectedLayoutType: p,
     setSelectedLayoutType: T,
@@ -93,21 +93,21 @@ function E(e, t) {
     setAllowMultiSelect: P,
     duration: R,
     setDuration: O,
-    canPost: I,
-    canAddMoreAnswers: M,
-    handleAddAnswer: S,
+    canPost: h,
+    canAddMoreAnswers: v,
+    handleAddAnswer: M,
     handleAnswerTextChange: D,
     handleGifSelect: b,
-    handleEmojiSelect: U,
+    handleEmojiSelect: w,
     handleCustomUpload: k,
-    handleRemoveAnswer: w,
+    handleRemoveAnswer: U,
     createPoll: B,
-    submitting: v,
+    submitting: S,
     createPollError: g
   }
 }
 
-function _(e, t) {
+function A(e, t) {
   return {
     mediaAttachmentState: {
       status: t,
