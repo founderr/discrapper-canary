@@ -709,7 +709,7 @@ class eN extends a.PureComponent {
       canManageChannels: a,
       guild: n
     } = this.props;
-    if (null == n || !this.showVoiceSettings()) return null;
+    if (null == n || !this.showVoiceSettings() || e.isGuildStageVoice()) return null;
     let i = [];
     if (null != s) {
       let e = s.filter(e => !e.deprecated && !e.hidden);
