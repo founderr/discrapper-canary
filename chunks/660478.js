@@ -1080,12 +1080,16 @@ let eX = new eq(h.default, {
     });
     (null == o.oldestUnreadMessageId || o.oldestUnreadMessageIdStale) && (o.oldestUnreadMessageId = r.id), o.unreadCount++;
     let _ = null != r.author && Q.default.isBlocked(r.author.id) || r.type === et.MessageTypes.RECIPIENT_REMOVE && (null == u ? void 0 : u.type) === et.ChannelTypes.GROUP_DM;
-    !_ && (null != l && (0, A.isRawMessageMentioned)({
-      rawMessage: r,
-      userId: l.id,
-      suppressEveryone: J.default.isSuppressEveryoneEnabled(o.guildId),
-      suppressRoles: J.default.isSuppressRolesEnabled(o.guildId)
-    }) || eA(H.default.getChannel(s)) || J.default.mentionOnAllMessages) && o.mentionCount++
+    !_ && function(e, t, n) {
+      if (null != t && (0, A.isRawMessageMentioned)({
+          rawMessage: e,
+          userId: t.id,
+          suppressEveryone: J.default.isSuppressEveryoneEnabled(n.guildId),
+          suppressRoles: J.default.isSuppressRolesEnabled(n.guildId)
+        })) return !0;
+      let i = H.default.getChannel(e.channel_id);
+      return !!eA(i) || !!J.default.mentionOnAllMessages && null != i && !i.isVocal() && !J.default.isChannelMuted(i.guild_id, i.id) && J.default.resolvedMessageNotifications(i) === et.UserNotificationSettings.ALL_MESSAGES || !1
+    }(r, l, o) && o.mentionCount++
   },
   MESSAGE_DELETE: eG,
   MESSAGE_DELETE_BULK: eG,
