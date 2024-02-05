@@ -1,27 +1,29 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return C
+    return d
   },
   setRequestPatch: function() {
-    return c
+    return M
   },
   setAwaitOnline: function() {
-    return U
+    return P
   }
 }), E("222007"), E("424973");
 var t = E("726581"),
   o = E.n(t),
   n = E("981980");
 E("704744");
-var r = E("644642"),
-  a = E("486196"),
-  i = E("614247"),
-  I = E("446825").Buffer;
-let s = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
+var r = E("811022"),
+  a = E("644642"),
+  i = E("486196"),
+  I = E("614247"),
+  s = E("446825").Buffer;
+let T = new r.default("HTTPUtils"),
+  S = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
 
-function T(e, _, E, t, r) {
-  var S, O, A, R, l;
+function N(e, _, E, t, r) {
+  var a, T, O, A, l;
   let L = o[e](_.url);
   if (null != _.onRequestCreated && _.onRequestCreated(L), null != _.query) {
     let e = _.query;
@@ -35,14 +37,14 @@ function T(e, _, E, t, r) {
     }
     L.query(e)
   }
-  if (_.body && L.send(_.body), null != _.headers && L.set(_.headers), null != _.reason && L.set("X-Audit-Log-Reason", encodeURIComponent(_.reason)), null === (S = _.attachments) || void 0 === S || S.forEach(e => {
+  if (_.body && L.send(_.body), null != _.headers && L.set(_.headers), null != _.reason && L.set("X-Audit-Log-Reason", encodeURIComponent(_.reason)), null === (a = _.attachments) || void 0 === a || a.forEach(e => {
       L.attach(e.name, e.file, e.filename)
-    }), null === (O = _.fields) || void 0 === O || O.forEach(e => {
+    }), null === (T = _.fields) || void 0 === T || T.forEach(e => {
       L.field(e.name, e.value)
     }), null != _.context) {
     let e = function(e) {
       try {
-        return I.from(JSON.stringify(e)).toString("base64")
+        return s.from(JSON.stringify(e)).toString("base64")
       } catch (e) {
         return null
       }
@@ -54,21 +56,21 @@ function T(e, _, E, t, r) {
     null === (E = _.onRequestProgress) || void 0 === E || E.call(_, e)
   });
   let u = () => {
-    _.backoff = null != _.backoff ? _.backoff : new n.default, _.retried = (null != _.retried ? _.retried : 0) + 1, _.backoff.fail(() => d(_.url).then(() => T(e, _, E, t, r)))
+    _.backoff = null != _.backoff ? _.backoff : new n.default, _.retried = (null != _.retried ? _.retried : 0) + 1, _.backoff.fail(() => h(_.url).then(() => N(e, _, E, t, r)))
   };
-  null == D || null === (A = D.prepareRequest) || void 0 === A || A.call(D, L), L.ok(e => null != e.status), L.then(o => {
-    var n, I, S;
-    if (null != _.retries && _.retries-- > 0 && s.has(o.status)) return u();
-    let O = {
+  null == U || null === (O = U.prepareRequest) || void 0 === O || O.call(U, L), L.ok(e => null != e.status), L.then(o => {
+    var n, a, s;
+    if (null != _.retries && _.retries-- > 0 && S.has(o.status)) return u();
+    let T = {
       ok: o.ok,
       headers: o.headers,
       body: o.body,
       text: o.text,
       status: o.status
     };
-    N(_, O);
-    let A = !1,
-      R = (o, n) => {
+    R(_, T);
+    let O = !1,
+      A = (o, n) => {
         let a = {
           ..._,
           headers: {
@@ -77,76 +79,96 @@ function T(e, _, E, t, r) {
           },
           interceptResponse: n
         };
-        A = !0, T(e, a, E, t, r)
+        O = !0, N(e, a, E, t, r)
       },
       l = e => {
-        !A && (t(e), null == r || r({
+        !O && (t(e), null == r || r({
           ok: !1,
           hasErr: !0,
           err: e
         }))
       };
-    if ((null == _ ? void 0 : null === (n = _.interceptResponse) || void 0 === n ? void 0 : n.call(_, o, R, l)) !== !0) {
-      if ((null == D ? void 0 : null === (I = D.interceptResponse) || void 0 === I ? void 0 : I.call(D, o, R, l)) !== !0) {
-        if (o.ok) E(O);
+    if ((null == _ ? void 0 : null === (n = _.interceptResponse) || void 0 === n ? void 0 : n.call(_, o, A, l)) !== !0) {
+      if ((null == U ? void 0 : null === (a = U.interceptResponse) || void 0 === a ? void 0 : a.call(U, o, A, l)) !== !0) {
+        if (o.ok) E(T);
         else {
-          if (_.oldFormErrors && (null == O ? void 0 : null === (S = O.body) || void 0 === S ? void 0 : S.code) === a.INVALID_FORM_BODY_ERROR_CODE) {
+          if (_.oldFormErrors && (null == T ? void 0 : null === (s = T.body) || void 0 === s ? void 0 : s.code) === i.INVALID_FORM_BODY_ERROR_CODE) {
             let {
               errors: e
-            } = O.body;
-            null != e && (O.body = (0, i.default)(e))
+            } = T.body;
+            null != e && (T.body = (0, I.default)(e))
           }
-          t(O)
+          t(T)
         }
         null != r && r({
           hasErr: !1,
-          ...O
+          ...T
         })
       }
     }
   }, e => {
-    null != _.retries && _.retries-- > 0 && "ABORTED" !== e.code ? u() : (N(_), t(e), null != r && r({
+    null != _.retries && _.retries-- > 0 && "ABORTED" !== e.code ? u() : (R(_), t(e), null != r && r({
       ok: !1,
       hasErr: !0,
       err: e
     }))
-  }), (null === (R = _.signal) || void 0 === R ? void 0 : R.aborted) ? L.abort() : null === (l = _.signal) || void 0 === l || l.addEventListener("abort", () => L.abort(), {
+  }), (null === (A = _.signal) || void 0 === A ? void 0 : A.aborted) ? L.abort() : null === (l = _.signal) || void 0 === l || l.addEventListener("abort", () => L.abort(), {
     once: !0
   })
 }
-let S = new Map;
+let O = new Map;
 
-function N(e, _) {
-  let E = S.get(e.url);
-  if (null == E) return;
-  let t = E.queue.shift();
-  if (null == t) {
-    S.delete(e.url);
+function A(e) {
+  let _ = O.get(e);
+  if (null == _) {
+    T.verbose("rateLimitExpirationHandler: rate limit for", e, "expired, but record was already removed");
     return
   }
-  if (null != _ && 429 === _.status) {
-    var o;
-    let e = (null === (o = _.body) || void 0 === o ? void 0 : o.retry_after) || 5;
-    setTimeout(t, 1e3 * e)
-  } else t()
+  let E = _.queue.shift();
+  if (null == E) {
+    T.verbose("rateLimitExpirationHandler: removing key for", e), O.delete(e);
+    return
+  }
+  T.verbose("rateLimitExpirationHandler: moving to next record for ", e), E()
 }
 
-function O(e, _, E) {
+function R(e, _) {
+  let E = O.get(e.url);
+  if (null != _ && 429 === _.status) {
+    var t, o;
+    let n = (null === (t = _.body) || void 0 === t ? void 0 : t.retry_after) || 5,
+      r = Date.now() + 1e3 * n;
+    if (null != E) {
+      if (E.retryAfterTimestamp < r) T.verbose("cleanupRequestEntry: extending rate limit for ", e.url), clearTimeout(E.timeoutId);
+      else {
+        T.verbose("cleanupRequestEntry: already has rate limit for ", e.url);
+        return
+      }
+    }
+    T.verbose("cleanupRequestEntry: rate limit for ".concat(e.url, " retry after ").concat(n, " seconds"));
+    let a = setTimeout(() => A(e.url), 1e3 * n);
+    O.set(e.url, {
+      queue: null !== (o = null == E ? void 0 : E.queue) && void 0 !== o ? o : [],
+      retryAfterTimestamp: r,
+      timeoutId: a
+    })
+  } else null != E && E.retryAfterTimestamp < Date.now() && (T.verbose("cleanupRequestEntry: rate limit for ", e.url, "expired"), A(e.url))
+}
+
+function l(e, _, E) {
   return new Promise((t, o) => {
     "string" == typeof _ && (_ = {
       url: _
     });
-    let n = S.get(_.url);
-    null != n ? n.queue.push(T.bind(null, e, _, t, o, E)) : (S.set(_.url, {
-      queue: []
-    }), T(e, _, t, o, E))
+    let n = O.get(_.url);
+    null != n ? (T.verbose("makeRequest: queueing request for ", _.url), n.queue.push(N.bind(null, e, _, t, o, E))) : N(e, _, t, o, E)
   })
 }
-let A = O.bind(null, "get"),
-  R = O.bind(null, "post"),
-  l = O.bind(null, "put"),
-  L = O.bind(null, "patch"),
-  u = O.bind(null, "del");
+let L = l.bind(null, "get"),
+  u = l.bind(null, "post"),
+  C = l.bind(null, "put"),
+  D = l.bind(null, "patch"),
+  c = l.bind(null, "del");
 if (E.g.isServerRendering) {
   let e = (e, _) => Promise.resolve({
     ok: !0,
@@ -155,28 +177,28 @@ if (E.g.isServerRendering) {
     body: null,
     text: ""
   });
-  A = e, R = e, l = e, L = e, u = e
+  L = e, u = e, C = e, D = e, c = e
 }
-var C = {
-  get: A,
-  post: R,
-  put: l,
-  patch: L,
-  delete: u,
-  V6OrEarlierAPIError: r.default,
-  V8APIError: a.default,
+var d = {
+  get: L,
+  post: u,
+  put: C,
+  patch: D,
+  delete: c,
+  V6OrEarlierAPIError: a.default,
+  V8APIError: i.default,
   getAPIBaseURL() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return "https:" + window.GLOBAL_ENV.API_ENDPOINT + (e ? "/v".concat(window.GLOBAL_ENV.API_VERSION) : "")
   }
 };
-let D = null;
+let U = null;
 
-function c(e) {
-  D = e
+function M(e) {
+  U = e
 }
-let d = () => Promise.resolve();
+let h = () => Promise.resolve();
 
-function U(e) {
-  d = e
+function P(e) {
+  h = e
 }
