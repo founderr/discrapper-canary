@@ -1,11 +1,14 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   isEligibleForInappropriateConversationWarning: function() {
-    return n
+    return s
+  },
+  useIsEligibleForInappropriateConversationWarning: function() {
+    return i
   }
 });
-var t = E("862205");
-let o = (0, t.createExperiment)({
+var a = n("862205");
+let r = (0, a.createExperiment)({
   kind: "user",
   id: "2024-01_inappropriate_conversation_warning",
   label: "Inappropriate Conversation Warning",
@@ -21,16 +24,30 @@ let o = (0, t.createExperiment)({
   }]
 });
 
-function n(e) {
+function s(e) {
   let {
-    location: _,
-    autoTrackExposure: E = !1
+    location: t,
+    autoTrackExposure: n = !1
   } = e, {
-    enabled: t
-  } = o.getCurrentConfig({
-    location: _
+    enabled: a
+  } = r.getCurrentConfig({
+    location: t
   }, {
-    autoTrackExposure: E
+    autoTrackExposure: n
   });
-  return t
+  return a
+}
+
+function i(e) {
+  let {
+    location: t,
+    autoTrackExposure: n = !1
+  } = e, {
+    enabled: a
+  } = r.useExperiment({
+    location: t
+  }, {
+    autoTrackExposure: n
+  });
+  return a
 }
