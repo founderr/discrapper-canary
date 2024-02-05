@@ -80,8 +80,17 @@ var i, s, r, a = n("44170"),
     })
   }
   updateGuildSubscriptions(e) {
-    this.send(37, {
-      subscriptions: e
+    let t = {},
+      n = 0;
+    for (let i in e) {
+      let s = e[i],
+        r = JSON.stringify([i, s]).length;
+      n + r > 15360 && (this.send(37, {
+        subscriptions: t
+      }), t = {}, n = 0), t[i] = s, n += r
+    }
+    n > 0 && this.send(37, {
+      subscriptions: t
     })
   }
   callConnect(e) {
