@@ -405,7 +405,9 @@ function Z(e) {
   } = e;
   return (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)("div", {
-      className: w.embedCard,
+      className: i(w.embedCard, {
+        [w.compact]: t
+      }),
       children: [(0, s.jsxs)("div", {
         className: w.cardContent,
         children: [(0, s.jsxs)("div", {
@@ -487,13 +489,10 @@ function J(e) {
           compact: n,
           showTimestamp: !0
         }), (0, s.jsx)("div", {
-          className: i(w.messageContent, {
-            [w.compact]: n
-          }),
-          children: (0, s.jsx)(V, {
-            message: l,
-            compact: n
-          })
+          className: w.flexLineBreak
+        }), (0, s.jsx)(V, {
+          message: l,
+          compact: n
         })]
       })
     })

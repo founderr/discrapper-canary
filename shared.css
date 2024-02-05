@@ -18804,6 +18804,10 @@ html.disable-forced-colors * {
     align-items: center
 }
 
+.flexLineBreak__29302 {
+    flex-basis: 100%
+}
+
 .embedCard__05d17 {
     display: flex;
     flex-direction: column;
@@ -18811,7 +18815,12 @@ html.disable-forced-colors * {
     background-color: var(--background-secondary);
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 12px
+    margin-bottom: 12px;
+    margin-left: 0
+}
+
+.embedCard__05d17.compact__0b450 {
+    margin-left: 3.3rem
 }
 
 .cardContent_fc7261 {
