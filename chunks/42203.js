@@ -358,5 +358,9 @@ var ei = new en(l.default, {
       E.ALL_CHANNEL_TYPES.has(e.type) && H(e)
     })
   },
-  THREAD_UPDATE: X
+  THREAD_UPDATE: X,
+  VOICE_BACKGROUND_UPDATE: function(e) {
+    let t = B(e.channelId);
+    null != t && (t.voiceBackgroundDisplay = e.background, H(t))
+  }
 })

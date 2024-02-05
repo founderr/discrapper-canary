@@ -26653,8 +26653,8 @@ html .progress__4ef76 {
 }
 
 .planInfo_cd8cba {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     margin-top: 8px
 }
 
@@ -26977,8 +26977,8 @@ html .progress__4ef76 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -116741,6 +116741,16 @@ html .invoiceCancelRow_c1bfe7 {
 
 .rewardSubheadingIcon__51701 {
     margin-right: 2px
+}
+
+.platformSelectionOptionLabelContainer__251bb {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.platformSelectionOptionIcon__6a873 {
+    margin-right: 8px
 }
 
 .modalContent_d4e781 {

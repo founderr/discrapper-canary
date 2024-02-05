@@ -10187,6 +10187,7 @@ e.exports = Object.freeze({
   VOICE_PANEL_ONLY_SHOW_VIDEO_SUBTITLE: "We won't show non-video participants",
   VOICE_PANEL_CHANGE_BACKGROUND_TITLE: "Change Background",
   VOICE_PANEL_CHANGE_BACKGROUND_SUBTITLE: "Set background for everyone",
+  VOICE_PANEL_CHANGE_BACKGROUND_FOOTER: "This background will be shown to everyone after saving.",
   VOICE_PANEL_LOAD_MORE: "Load more",
   VOICE_PANEL_NO_JOIN_PERMISSIONS_ALERT_TITLE: "You don’t have permission to join this Voice Channel.",
   VOICE_PANEL_NO_JOIN_PERMISSIONS_ALERT_SUBTITLE: "This channel is only for selected members and roles.",

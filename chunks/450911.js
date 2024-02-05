@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return p
   }
 }), n("222007");
 var i = n("872717"),
@@ -17,8 +17,9 @@ var i = n("872717"),
   _ = n("561288"),
   h = n("987317"),
   g = n("49111"),
-  m = n("782340"),
-  E = {
+  m = n("333188"),
+  E = n("782340"),
+  p = {
     async openPrivateChannel(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -125,9 +126,9 @@ var i = n("872717"),
         },
         oldFormErrors: !0
       }).then(() => {
-        s.AccessibilityAnnouncer.announce(m.default.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED)
+        s.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED)
       }).catch(() => {
-        s.AccessibilityAnnouncer.announce(m.default.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED_FAILED)
+        s.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED_FAILED)
       })
     },
     updatePermissionOverwrite: (e, t) => i.default.put({
@@ -146,7 +147,7 @@ var i = n("872717"),
           location: n
         },
         oldFormErrors: !0
-      }).then(t => (s.AccessibilityAnnouncer.announce(m.default.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM), null == r || r(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e).catch(() => (s.AccessibilityAnnouncer.announce(m.default.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM_FAILED), e))
+      }).then(t => (s.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM), null == r || r(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e).catch(() => (s.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_USER_ADDED_TO_GROUP_DM_FAILED), e))
     },
     addRecipients(e, t, n, i) {
       return this.addRecipient(e, t[0], n, i).then(e => Promise.all(t.slice(1).map(t => this.addRecipient(e, t, n))).then(() => e))
@@ -185,6 +186,19 @@ var i = n("872717"),
       }).then(() => {
         let e = null == n ? void 0 : n.getGuildId();
         null != e && !(null == n ? void 0 : n.isThread()) && a.default.checkGuildTemplateDirty(e)
+      })
+    },
+    setVoiceBackgroundDisplay(e, t) {
+      let n;
+      return n = t.type === m.VoiceCallBackgroundTypes.EMPTY ? t : {
+        type: t.type,
+        resource_id: t.resourceId
+      }, i.default.patch({
+        url: g.Endpoints.CHANNEL(e),
+        body: {
+          voice_background_display: n
+        },
+        oldFormErrors: !0
       })
     },
     convertToGuild: e => i.default.post({
