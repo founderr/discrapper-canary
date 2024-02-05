@@ -69,31 +69,35 @@ function i(e) {
 }
 
 function I(e) {
+  var _, E, o;
   return {
     id: e.id,
-    config: function(e) {
-      var _, E;
-      let o = new Set(Object.values(t.QuestRewardCodePlatforms));
-      return {
-        expiresAt: e.expires_at,
-        streamDurationRequirementMinutes: e.stream_duration_requirement_minutes,
-        gameTitle: e.game_title,
-        applicationId: e.application_id,
-        messages: {
-          questName: (_ = e.messages).quest_name,
-          rewardName: _.reward_name,
-          rewardNameWithArticle: _.reward_name_with_article,
-          rewardRedemptionInstructions: _.reward_redemption_instructions,
-          gameTitle: _.game_title,
-          gamePublisher: _.game_publisher
-        },
-        colors: {
-          primary: (E = e.colors).primary,
-          secondary: E.secondary
-        },
-        rewardCodePlatforms: e.reward_code_platforms.filter(e => o.has(e))
-      }
-    }(e.config),
+    config: {
+      expiresAt: (_ = e.config).expires_at,
+      streamDurationRequirementMinutes: _.stream_duration_requirement_minutes,
+      gameTitle: _.game_title,
+      applicationId: _.application_id,
+      messages: {
+        questName: (E = _.messages).quest_name,
+        rewardName: E.reward_name,
+        rewardNameWithArticle: E.reward_name_with_article,
+        rewardRedemptionInstructionsByPlatform: function(e) {
+          let _ = {};
+          for (let E in e) {
+            let o = parseInt(E);
+            t.QUEST_REWARD_CODE_PLATFORMS_SET.has(o) && (_[o] = e[E])
+          }
+          return _
+        }(E.reward_redemption_instructions_by_platform),
+        gameTitle: E.game_title,
+        gamePublisher: E.game_publisher
+      },
+      colors: {
+        primary: (o = _.colors).primary,
+        secondary: o.secondary
+      },
+      rewardCodePlatforms: _.reward_code_platforms.filter(e => t.QUEST_REWARD_CODE_PLATFORMS_SET.has(e))
+    },
     userStatus: null == e.user_status ? null : i(e.user_status),
     targetedContent: e.targeted_content
   }
@@ -129,8 +133,8 @@ let l = e => {
       return o.default.Messages.QUESTS_REWARD_CODE_PLATFORM_SWITCH;
     case t.QuestRewardCodePlatforms.PC:
       return o.default.Messages.QUESTS_REWARD_CODE_PLATFORM_PC;
-    default:
-      return ""
+    case t.QuestRewardCodePlatforms.CROSS_PLATFORM:
+      return o.default.Messages.QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM
   }
 };
 
