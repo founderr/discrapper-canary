@@ -10,8 +10,8 @@ var s = a("37983"),
   l = a.n(i),
   r = a("907002"),
   o = a("65597"),
-  u = a("77078"),
-  d = a("206230"),
+  d = a("77078"),
+  u = a("206230"),
   c = a("526887"),
   E = a("289918"),
   f = a("935409"),
@@ -31,9 +31,9 @@ let N = n.forwardRef(function(e, t) {
     placeholder: i,
     maxLength: r,
     onFocus: o,
-    onChange: d
+    onChange: u
   } = e;
-  return (0, s.jsx)(u.TextArea, {
+  return (0, s.jsx)(d.TextArea, {
     className: l(O.userCardInput, a),
     autosize: !0,
     error: null,
@@ -44,7 +44,7 @@ let N = n.forwardRef(function(e, t) {
     placeholder: i,
     rows: 1,
     maxLength: r,
-    onChange: d,
+    onChange: u,
     onFocus: o,
     onKeyDown: e => {
       "Enter" === e.key && e.preventDefault()
@@ -68,7 +68,7 @@ var L = n.forwardRef(function(e, t) {
   } = e, {
     username: U,
     globalName: G
-  } = L, b = n.useRef(null), D = n.useRef(null), j = n.useMemo(() => a.merge({
+  } = L, D = n.useRef(null), b = n.useRef(null), j = n.useMemo(() => a.merge({
     discriminator: "0000"
   }), [a]), [k, F] = (0, r.useSpring)(() => ({
     opacity: 0,
@@ -86,14 +86,14 @@ var L = n.forwardRef(function(e, t) {
   }, [F, x]), n.useImperativeHandle(t, () => ({
     focusDisplayName: () => {
       var e, t, a;
-      null === (t = D.current) || void 0 === t || t.setSelection(0, null === (e = D.current) || void 0 === e ? void 0 : e.value.length), null === (a = D.current) || void 0 === a || a.focus()
+      null === (t = b.current) || void 0 === t || t.setSelection(0, null === (e = b.current) || void 0 === e ? void 0 : e.value.length), null === (a = b.current) || void 0 === a || a.focus()
     },
     focusUsername: () => {
       var e, t, a;
-      null === (t = b.current) || void 0 === t || t.setSelection(0, null === (e = b.current) || void 0 === e ? void 0 : e.value.length), null === (a = b.current) || void 0 === a || a.focus()
+      null === (t = D.current) || void 0 === t || t.setSelection(0, null === (e = D.current) || void 0 === e ? void 0 : e.value.length), null === (a = D.current) || void 0 === a || a.focus()
     }
   }), []);
-  let w = (0, o.default)([d.default], () => d.default.useReducedMotion),
+  let w = (0, o.default)([u.default], () => u.default.useReducedMotion),
     {
       createMultipleConfettiAt: B
     } = n.useContext(c.ConfettiCannonContext),
@@ -149,13 +149,13 @@ var L = n.forwardRef(function(e, t) {
         animateOnHover: !1
       }), x === I.EditState.PREVIEW && null != H && (0, s.jsx)("div", {
         className: O.legacyUsernameBadgeContainer,
-        children: (0, s.jsx)(u.Tooltip, {
+        children: (0, s.jsx)(d.Tooltip, {
           position: "top",
           text: h.default.Messages.ORIGINALLY_KNOWN_AS.format({
             legacyUsername: H
           }),
           spacing: 12,
-          children: e => (0, s.jsx)(u.Anchor, {
+          children: e => (0, s.jsx)(d.Anchor, {
             ...e,
             onClick: e.onClick,
             children: (0, s.jsx)("img", {
@@ -173,7 +173,7 @@ var L = n.forwardRef(function(e, t) {
       },
       className: O.inputContainer,
       children: [x === I.EditState.EDIT_DISPLAY_NAME && (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(u.Text, {
+        children: [(0, s.jsx)(d.Text, {
           className: O.textPadding,
           color: "text-muted",
           variant: "text-sm/semibold",
@@ -187,10 +187,10 @@ var L = n.forwardRef(function(e, t) {
             globalName: e
           }),
           onFocus: P,
-          ref: D
+          ref: b
         })]
       }), (x === I.EditState.EDIT_USERNAME || x === I.EditState.SUGGESTION) && (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(u.Text, {
+        children: [(0, s.jsx)(d.Text, {
           className: O.textPadding,
           color: "text-muted",
           variant: "text-sm/semibold",
@@ -204,7 +204,7 @@ var L = n.forwardRef(function(e, t) {
             username: e.replace("@", "")
           }),
           onFocus: C,
-          ref: b
+          ref: D
         })]
       }), (0, s.jsx)("div", {
         className: O.messageContainer,
@@ -214,7 +214,7 @@ var L = n.forwardRef(function(e, t) {
             children: i
           });
           if (null != p) {
-            if (x !== I.EditState.SUGGESTION) return (0, s.jsx)(u.Text, {
+            if (x !== I.EditState.SUGGESTION) return (0, s.jsx)(d.Text, {
               variant: "text-sm/normal",
               children: p
             });
@@ -231,15 +231,15 @@ var L = n.forwardRef(function(e, t) {
       })]
     }), x === I.EditState.PREVIEW && (0, s.jsxs)("div", {
       className: O.userCard,
-      children: [(0, s.jsx)(u.Heading, {
+      children: [(0, s.jsx)(d.Heading, {
         color: "header-primary",
         variant: "heading-xl/bold",
         children: m.default.getName(a)
-      }), (0, s.jsx)(u.Heading, {
+      }), (0, s.jsx)(d.Heading, {
         color: "text-normal",
         variant: "heading-lg/medium",
         children: a.username
-      }), (0, s.jsx)(u.Text, {
+      }), (0, s.jsx)(d.Text, {
         className: O.memberText,
         color: "text-muted",
         variant: "text-sm/medium",

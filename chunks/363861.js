@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
 var i = n("37983");
 n("884691");
 var s = n("77078");
-async function l(e) {
+async function a(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   await (0, s.openModalLazy)(async () => {
     let {

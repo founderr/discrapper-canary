@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return s
   },
   usePomeloEligibility: function() {
-    return l
+    return a
   },
   getPomeloEligibility: function() {
-    return a
+    return l
   }
 });
 var i = n("862205");
@@ -26,7 +26,7 @@ let s = (0, i.createExperiment)({
       }
     }]
   }),
-  l = () => {
+  a = () => {
     let {
       enabled: e
     } = s.useExperiment({
@@ -36,7 +36,7 @@ let s = (0, i.createExperiment)({
     });
     return e
   },
-  a = () => {
+  l = () => {
     let {
       enabled: e
     } = s.getCurrentConfig({

@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 }), n("222007"), n("424973");
 var i = n("693566"),
   s = n.n(i),
-  l = n("689988"),
-  a = n("599110"),
+  a = n("689988"),
+  l = n("599110"),
   r = n("49111");
-class u extends l.default {
+class o extends a.default {
   handleMessageBecameVisible(e) {
     let {
       messageId: t
@@ -36,7 +36,7 @@ class u extends l.default {
     this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel.clear(), this.drainBuffer()
   }
   drainBuffer() {
-    for (let e of this.batchBuffer) a.default.track(r.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
+    for (let e of this.batchBuffer) l.default.track(r.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
       message_id: e.messageId,
       channel_id: e.channelId,
       guild_id: e.guildId,
@@ -57,4 +57,4 @@ class u extends l.default {
     }
   }
 }
-var o = new u
+var u = new o

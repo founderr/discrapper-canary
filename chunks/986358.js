@@ -35,9 +35,9 @@ var l = n("414456"),
   L = n("763225"),
   O = n("49111"),
   y = n("782340"),
-  b = n("298028");
+  P = n("298028");
 
-function P(e) {
+function b(e) {
   let {
     user: t,
     backgroundColor: n,
@@ -45,14 +45,14 @@ function P(e) {
     onClose: s
   } = e, o = t.id, u = (0, i.default)([g.default, S.default, p.default], () => o === p.default.getId() ? g.default.getStatus() : S.default.getStatus(o, l), [o, l]);
   return (0, a.jsxs)("div", {
-    className: b.topRow,
+    className: P.topRow,
     style: {
       backgroundColor: n
     },
     children: [(0, a.jsxs)("div", {
-      className: b.memberNameContainer,
+      className: P.memberNameContainer,
       children: [(0, a.jsx)("div", {
-        className: b.memberAvatar,
+        className: P.memberAvatar,
         children: (0, a.jsx)(r.Avatar, {
           src: t.getAvatarURL(l, 48),
           "aria-label": t.username,
@@ -60,7 +60,7 @@ function P(e) {
           status: u
         })
       }), (0, a.jsx)("div", {
-        className: b.memberName,
+        className: P.memberName,
         children: (0, a.jsx)(r.Text, {
           variant: "text-lg/medium",
           children: (0, a.jsx)(r.NameWithRole, {
@@ -69,7 +69,7 @@ function P(e) {
           })
         })
       }), (0, a.jsx)("div", {
-        className: b.memberGlobalName,
+        className: P.memberGlobalName,
         children: (0, a.jsx)(r.Text, {
           variant: "text-md/medium",
           color: "text-normal",
@@ -77,12 +77,12 @@ function P(e) {
         })
       })]
     }), (0, a.jsx)("div", {
-      className: b.close,
+      className: P.close,
       children: (0, a.jsx)(r.Text, {
         variant: "text-md/medium",
         color: "text-normal",
         children: (0, a.jsx)(r.Clickable, {
-          className: b.closeAction,
+          className: P.closeAction,
           onClick: s,
           children: (0, a.jsx)(x.default, {})
         })
@@ -102,12 +102,12 @@ function D(e) {
   return (0, a.jsx)(r.Clickable, {
     ...o,
     tag: t,
-    className: s(b.bottomRowAction, {
-      [b.bottomRowActionDisabled]: n
+    className: s(P.bottomRowAction, {
+      [P.bottomRowActionDisabled]: n
     }),
     onClick: n ? void 0 : i,
     children: (0, a.jsx)("div", {
-      className: b.innerBottomRowAction,
+      className: P.innerBottomRowAction,
       children: l
     })
   })
@@ -130,13 +130,13 @@ function U(e) {
   }), [l, m]), R = (0, d.isMemberCommunicationDisabled)(s), {
     analyticsLocations: j,
     newestAnalyticsLocation: L
-  } = (0, u.default)(), P = (0, h.useTrackModerationAction)(p, {
+  } = (0, u.default)(), b = (0, h.useTrackModerationAction)(p, {
     targetUserId: l.id,
     location: L,
     locations: j
   });
   return (0, a.jsxs)("div", {
-    className: b.bottomRow,
+    className: P.bottomRow,
     children: [(0, a.jsxs)(D, {
       "aria-label": y.default.Messages.SEND_DM,
       style: {
@@ -233,7 +233,7 @@ function U(e) {
         backgroundColor: t
       },
       onClick: () => {
-        P(h.ModerationActionType.COPY_ID), (0, M.copy)(l.id)
+        b(h.ModerationActionType.COPY_ID), (0, M.copy)(l.id)
       },
       disabled: !M.SUPPORTS_COPY,
       children: [(0, a.jsx)(N.default, {
@@ -256,8 +256,8 @@ function w(e) {
     onClose: l
   } = e, s = (0, i.default)([_.default], () => _.default.getUser(t), [t]), o = (0, i.default)([m.default], () => m.default.getMember(n, t), [n, t]), u = (0, L.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
   return null == s || null == o ? null : (0, a.jsxs)("div", {
-    className: b.container,
-    children: [(0, a.jsx)(P, {
+    className: P.container,
+    children: [(0, a.jsx)(b, {
       user: s,
       guildId: n,
       onClose: l,

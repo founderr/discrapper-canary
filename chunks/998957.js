@@ -10,8 +10,8 @@ var s = a("37983"),
   l = a("77078"),
   r = a("79112"),
   o = a("217513"),
-  u = a("701909"),
-  d = a("158998"),
+  d = a("701909"),
+  u = a("158998"),
   c = a("303270"),
   E = a("935583"),
   f = a("49111"),
@@ -51,7 +51,7 @@ function S(e) {
       case E.EditState.SUGGESTION:
         return {
           header: m.default.Messages.POMELO_ACTION_LABEL_OCF, subtitle: m.default.Messages.POMELO_EXISTING_FLOW_PROMPT_OCF.format(), link: m.default.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format({
-            helpdeskArticle: u.default.getArticleURL(f.HelpdeskArticles.POMELO_FAQ)
+            helpdeskArticle: d.default.getArticleURL(f.HelpdeskArticles.POMELO_FAQ)
           })
         };
       default:
@@ -59,7 +59,7 @@ function S(e) {
           header: m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE, subtitle: m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
         }
     }
-  }(T, d.default.getName(I), h), [N, L] = (0, i.useSpring)(() => ({
+  }(T, u.default.getName(I), h), [N, L] = (0, i.useSpring)(() => ({
     opacity: 0,
     y: 10
   }));

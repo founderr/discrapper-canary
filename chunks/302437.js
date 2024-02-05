@@ -1,30 +1,30 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
-var n = i("974667"),
-  l = i("446674"),
-  s = i("206230");
+var i = n("974667"),
+  s = n("446674"),
+  r = n("206230");
 
-function a() {
+function l() {
   return Promise.resolve()
 }
 
-function r(e) {
+function a(e) {
   let t = document.querySelector(e);
   null != t && t.focus()
 }
 
-function o(e, t) {
-  let i = (0, l.useStateFromStores)([s.default], () => s.default.keyboardModeEnabled);
-  return (0, n.default)({
+function u(e, t) {
+  let n = (0, s.useStateFromStores)([r.default], () => r.default.keyboardModeEnabled);
+  return (0, i.default)({
     id: e,
-    isEnabled: i,
+    isEnabled: n,
     orientation: t,
-    setFocus: r,
-    scrollToStart: a,
-    scrollToEnd: a
+    setFocus: a,
+    scrollToStart: l,
+    scrollToEnd: l
   })
 }

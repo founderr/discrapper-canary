@@ -11,8 +11,8 @@ var n = a("414456"),
   l = a("77078"),
   r = a("564875"),
   o = a("701909"),
-  u = a("386244"),
-  d = a("253989"),
+  d = a("386244"),
+  u = a("253989"),
   c = a("49111"),
   E = a("782340"),
   f = a("341923"),
@@ -64,7 +64,7 @@ function g(e) {
       className: i([f.infoItem, f.infoItemSpacing]),
       children: [(0, s.jsx)("div", {
         className: f.infoIcon,
-        children: (0, s.jsx)(u.default, {
+        children: (0, s.jsx)(d.default, {
           width: 20,
           height: 20
         })
@@ -77,7 +77,7 @@ function g(e) {
       className: f.infoItem,
       children: [(0, s.jsx)("div", {
         className: f.infoIcon,
-        children: (0, s.jsx)(d.default, {
+        children: (0, s.jsx)(u.default, {
           width: 20,
           height: 20
         })

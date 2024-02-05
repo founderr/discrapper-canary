@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   useUsernameLiveCheck: function() {
-    return d
+    return u
   }
 });
 var s = a("884691"),
@@ -10,16 +10,16 @@ var s = a("884691"),
   l = a("255403"),
   r = a("947962"),
   o = a("2581"),
-  u = a("415133");
-let d = function(e) {
+  d = a("415133");
+let u = function(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+    u = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     c = (0, i.default)([o.default], () => o.default.validate(e), [e]),
     E = (0, i.default)([o.default], () => o.default.isRateLimited()),
     f = (0, r.usePomeloDebounceDelay)(),
-    m = s.useMemo(() => (0, n.debounce)(e => l.default.attemptPomelo(e, a ? "registration" : "modal", a, d), f), [f, a, d]);
+    m = s.useMemo(() => (0, n.debounce)(e => l.default.attemptPomelo(e, a ? "registration" : "modal", a, u), f), [f, a, u]);
   return s.useEffect(() => {
     t && !E && null == c && "" !== e && m(e)
-  }, [t, E, c, e, m]), s.useMemo(() => null != c ? (0, u.formatUsernameLiveCheckValidation)(c) : void 0, [c])
+  }, [t, E, c, e, m]), s.useMemo(() => null != c ? (0, d.formatUsernameLiveCheckValidation)(c) : void 0, [c])
 }

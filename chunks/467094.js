@@ -1,72 +1,72 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   fetchStickerPack: function() {
-    return p
-  },
-  fetchStickerPacks: function() {
-    return g
-  },
-  fetchSticker: function() {
-    return T
-  },
-  fetchGuildStickers: function() {
     return _
   },
-  deleteGuildSticker: function() {
-    return h
+  fetchStickerPacks: function() {
+    return T
   },
-  createGuildSticker: function() {
-    return R
-  },
-  updateGuildSticker: function() {
-    return m
-  },
-  addStickerPreview: function() {
+  fetchSticker: function() {
     return A
   },
+  fetchGuildStickers: function() {
+    return m
+  },
+  deleteGuildSticker: function() {
+    return S
+  },
+  createGuildSticker: function() {
+    return g
+  },
+  updateGuildSticker: function() {
+    return R
+  },
+  addStickerPreview: function() {
+    return N
+  },
   clearStickerPreview: function() {
-    return F
+    return x
   },
   favoriteSticker: function() {
     return P
   },
   unfavoriteSticker: function() {
-    return G
+    return y
   }
-}), r("424973");
-var i = r("917351"),
-  u = r.n(i),
-  n = r("872717"),
-  s = r("913144"),
-  l = r("404118"),
-  a = r("619443"),
-  d = r("915639"),
-  c = r("872173"),
-  o = r("766274"),
-  S = r("341542"),
-  f = r("697218"),
-  k = r("271560"),
-  E = r("364685"),
-  y = r("49111"),
-  C = r("397336"),
-  I = r("782340");
-let p = async (e, t) => {
+}), n("424973");
+var i = n("917351"),
+  s = n.n(i),
+  r = n("872717"),
+  l = n("913144"),
+  a = n("404118"),
+  u = n("619443"),
+  o = n("915639"),
+  c = n("872173"),
+  d = n("766274"),
+  f = n("341542"),
+  h = n("697218"),
+  p = n("271560"),
+  I = n("364685"),
+  v = n("49111"),
+  E = n("397336"),
+  C = n("782340");
+let _ = async (e, t) => {
   let {
-    body: r
-  } = await (0, k.httpGetWithCountryCodeQuery)(y.Endpoints.STICKER_PACK(e));
-  return s.default.dispatch({
+    body: n
+  } = await (0, p.httpGetWithCountryCodeQuery)(v.Endpoints.STICKER_PACK(e));
+  return l.default.dispatch({
     type: "STICKER_PACK_FETCH_SUCCESS",
     packId: e,
-    pack: r,
+    pack: n,
     ingestStickers: t
-  }), r
-}, g = async function() {
+  }), n
+}, T = async function() {
   let {
-    locale: e = d.default.locale
+    locale: e = o.default.locale
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-  if (E.default.isFetchingStickerPacks || E.default.hasLoadedStickerPacks) return;
-  s.default.wait(() => {
-    s.default.dispatch({
+  if (I.default.isFetchingStickerPacks || I.default.hasLoadedStickerPacks) return;
+  l.default.wait(() => {
+    l.default.dispatch({
       type: "STICKER_PACKS_FETCH_START"
     })
   });
@@ -74,97 +74,97 @@ let p = async (e, t) => {
     body: {
       sticker_packs: t
     }
-  } = await n.default.get({
-    url: y.Endpoints.STICKER_PACKS,
+  } = await r.default.get({
+    url: v.Endpoints.STICKER_PACKS,
     query: {
       locale: e
     }
   });
-  s.default.dispatch({
+  l.default.dispatch({
     type: "STICKER_PACKS_FETCH_SUCCESS",
     packs: t
   })
-}, T = async e => {
+}, A = async e => {
   let {
     body: t
-  } = await n.default.get({
-    url: y.Endpoints.STICKER(e)
+  } = await r.default.get({
+    url: v.Endpoints.STICKER(e)
   });
-  s.default.dispatch({
+  l.default.dispatch({
     type: "STICKER_FETCH_SUCCESS",
     sticker: t
   })
-}, _ = async e => {
+}, m = async e => {
   let {
     body: t
-  } = await n.default.get({
-    url: y.Endpoints.GUILD_STICKER_PACKS(e)
+  } = await r.default.get({
+    url: v.Endpoints.GUILD_STICKER_PACKS(e)
   });
-  s.default.dispatch({
+  l.default.dispatch({
     type: "GUILD_STICKERS_FETCH_SUCCESS",
     guildId: e,
     stickers: t.map(e => null != e.user ? {
       ...e,
-      user: new o.default(e.user)
+      user: new d.default(e.user)
     } : e)
   })
-}, h = async e => {
-  await n.default.delete({
-    url: y.Endpoints.GUILD_STICKER(e.guild_id, e.id)
+}, S = async e => {
+  await r.default.delete({
+    url: v.Endpoints.GUILD_STICKER(e.guild_id, e.id)
   })
-}, R = async (e, t) => {
-  let r = await n.default.post({
-    url: y.Endpoints.GUILD_STICKER_PACKS(e),
+}, g = async (e, t) => {
+  let n = await r.default.post({
+    url: v.Endpoints.GUILD_STICKER_PACKS(e),
     body: t
   });
-  return s.default.dispatch({
+  return l.default.dispatch({
     type: "GUILD_STICKERS_CREATE_SUCCESS",
     guildId: e,
     sticker: {
-      ...r.body,
-      user: f.default.getCurrentUser()
+      ...n.body,
+      user: h.default.getCurrentUser()
     }
-  }), r.body
-}, m = async (e, t, r) => {
-  let i = await n.default.patch({
-    url: y.Endpoints.GUILD_STICKER(e, t),
-    body: r
+  }), n.body
+}, R = async (e, t, n) => {
+  let i = await r.default.patch({
+    url: v.Endpoints.GUILD_STICKER(e, t),
+    body: n
   });
   return i.body
 };
 
-function A(e, t, r) {
-  s.default.dispatch({
+function N(e, t, n) {
+  l.default.dispatch({
     type: "ADD_STICKER_PREVIEW",
     channelId: e,
     sticker: t,
-    draftType: r
+    draftType: n
   })
 }
 
-function F(e, t) {
-  s.default.dispatch({
+function x(e, t) {
+  l.default.dispatch({
     type: "CLEAR_STICKER_PREVIEW",
     channelId: e,
     draftType: t
   })
 }
 
-function v(e) {
-  return S.default.totalUnavailableGuilds > 0 || !a.default.isConnected() ? e : e.filter(e => null != E.default.getStickerById(e))
+function L(e) {
+  return f.default.totalUnavailableGuilds > 0 || !u.default.isConnected() ? e : e.filter(e => null != I.default.getStickerById(e))
 }
 
 function P(e) {
-  c.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = v(t.stickerIds), u.size(t.stickerIds) >= C.MAX_FAVORITES) ? (l.default.show({
-    title: I.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-    body: I.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
-      count: C.MAX_FAVORITES
+  c.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => (t.stickerIds = L(t.stickerIds), s.size(t.stickerIds) >= E.MAX_FAVORITES) ? (a.default.show({
+    title: C.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+    body: C.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
+      count: E.MAX_FAVORITES
     })
-  }), !1) : !t.stickerIds.includes(e) && void t.stickerIds.push(e), C.UserSettingsDelay.INFREQUENT_USER_ACTION)
+  }), !1) : !t.stickerIds.includes(e) && void t.stickerIds.push(e), E.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function G(e) {
+function y(e) {
   c.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => {
-    t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = v(t.stickerIds)
-  }, C.UserSettingsDelay.INFREQUENT_USER_ACTION)
+    t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = L(t.stickerIds)
+  }, E.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }

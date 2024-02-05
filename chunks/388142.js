@@ -15,11 +15,11 @@ n.r(t), n.d(t, {
 });
 var i = n("872717"),
   s = n("295426"),
-  l = n("819689"),
-  a = n("529805"),
+  a = n("819689"),
+  l = n("529805"),
   r = n("42203"),
-  u = n("474643"),
-  o = n("377253"),
+  o = n("474643"),
+  u = n("377253"),
   d = n("659500"),
   c = n("49111");
 
@@ -59,16 +59,16 @@ async function h(e) {
   });
   if (null != t.text && "" !== t.text) {
     let n = r.default.getChannel(e.channel_id);
-    null != n && ((0, a.createPendingReply)({
+    null != n && ((0, l.createPendingReply)({
       channel: n,
       message: e,
       shouldMention: !1,
       showMentionToggle: !1
-    }), p(n.id)), s.default.saveDraft(e.channel_id, t.text, u.DraftType.ChannelMessage)
+    }), p(n.id)), s.default.saveDraft(e.channel_id, t.text, o.DraftType.ChannelMessage)
   }
 }
 
 function p(e) {
-  let t = o.default.getMessages(e);
-  t.hasMoreAfter ? l.default.jumpToPresent(e, c.MAX_MESSAGES_PER_CHANNEL) : d.ComponentDispatch.dispatch(c.ComponentActions.SCROLLTO_PRESENT)
+  let t = u.default.getMessages(e);
+  t.hasMoreAfter ? a.default.jumpToPresent(e, c.MAX_MESSAGES_PER_CHANNEL) : d.ComponentDispatch.dispatch(c.ComponentActions.SCROLLTO_PRESENT)
 }
