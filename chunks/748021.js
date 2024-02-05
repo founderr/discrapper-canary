@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   openMigrationModal: function() {
-    return f
+    return h
   },
   default: function() {
-    return m
+    return g
   }
 }), n("222007");
 var i = n("37983");
@@ -13,20 +13,22 @@ var a = n("95410"),
   s = n("77078"),
   l = n("872717"),
   r = n("689988"),
-  o = n("282109"),
-  u = n("640497"),
-  d = n("699668");
-class c extends r.default {
+  o = n("350522"),
+  u = n("282109"),
+  d = n("640497"),
+  c = n("699668"),
+  f = n("49111");
+class m extends r.default {
   async handlePostConnectionOpen() {
-    if (a.default.get("turnedOffNewNotifications") || !u.NotificationsExperiment.getCurrentConfig({
+    if (a.default.get("turnedOffNewNotifications") || !o.default.hasConsented(f.Consents.PERSONALIZATION) || !d.NotificationsExperiment.getCurrentConfig({
         location: "NotificationMigrationManager"
       }, {
         autoTrackExposure: !1
-      }).enabled || o.default.useNewNotifications) return;
+      }).enabled || u.default.useNewNotifications) return;
     let {
       logExposure: e,
       autoOpen: t
-    } = u.UnreadsEntryPointExperiment.getCurrentConfig({
+    } = d.UnreadsEntryPointExperiment.getCurrentConfig({
       location: "NotificationMigrationManager"
     }, {
       autoTrackExposure: !1
@@ -35,21 +37,21 @@ class c extends r.default {
     let {
       body: {
         guild_noise: r,
-        usage: c
+        usage: m
       }
-    } = await l.default.get("/users/@me/notification-migration-data2"), f = (0, d.transformUsageData)(c), {
-      default: m
+    } = await l.default.get("/users/@me/notification-migration-data2"), h = (0, c.transformUsageData)(m), {
+      default: g
     } = await n.el("923660").then(n.bind(n, "923660"));
-    if (!(0, s.hasAnyModalOpen)()) u.UnreadsEntryPointExperiment.trackExposure({
+    if (!(0, s.hasAnyModalOpen)()) d.UnreadsEntryPointExperiment.trackExposure({
       location: "NotificationMigrationManager"
-    }), t && ((0, d.hasGoodCandidateServers)(r, f) ? (0, s.openModal)(e => (0, i.jsx)(m, {
+    }), t && ((0, c.hasGoodCandidateServers)(r, h) ? (0, s.openModal)(e => (0, i.jsx)(g, {
       ...e,
       dismissable: !1,
       guildPain: r,
-      myUsage: f
+      myUsage: h
     }), {
       onCloseRequest: () => {}
-    }) : (0, d.autoMigrateToNewSystem)())
+    }) : (0, c.autoMigrateToNewSystem)())
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -57,13 +59,13 @@ class c extends r.default {
     }
   }
 }
-async function f(e) {
+async function h(e) {
   let {
     body: {
       guild_noise: t,
       usage: a
     }
-  } = await l.default.get("/users/@me/notification-migration-data2"), r = (0, d.transformUsageData)(a);
+  } = await l.default.get("/users/@me/notification-migration-data2"), r = (0, c.transformUsageData)(a);
   (0, s.openModalLazy)(async () => {
     let {
       default: a
@@ -76,4 +78,4 @@ async function f(e) {
     })
   })
 }
-var m = new c
+var g = new m
