@@ -50,8 +50,8 @@ var d = n("414456"),
   b = n("619911"),
   D = n("698015"),
   F = n("75196"),
-  y = n("719923"),
-  j = n("153160"),
+  j = n("719923"),
+  y = n("153160"),
   w = n("309318"),
   B = n("446488"),
   G = n("182650"),
@@ -180,7 +180,8 @@ function er(e) {
   let t, {
     text: n,
     className: i,
-    colorOptions: r = 2
+    colorOptions: r = 2,
+    isPillOnBorder: l = !0
   } = e;
   switch (r) {
     case 1:
@@ -195,7 +196,7 @@ function er(e) {
     default:
       t = "white"
   }
-  return (0, u.jsxs)("div", {
+  return l ? (0, u.jsxs)("div", {
     className: c(i, J.freeTrialPillWithSparkles),
     children: [(0, u.jsx)(et, {
       foreground: J.sparkleStar1,
@@ -214,6 +215,22 @@ function er(e) {
       color: t
     }), (0, u.jsx)(et, {
       foreground: J.sparkleStar5,
+      color: t
+    })]
+  }) : (0, u.jsxs)("div", {
+    className: c(i, J.freeTrialPillWithSparkles),
+    children: [(0, u.jsx)(ei, {
+      text: n,
+      colorOptions: r
+    }), (0, u.jsx)(et, {
+      foreground: J.sparkleStar1,
+      style: {
+        marginLeft: 4,
+        marginBottom: -6
+      },
+      color: t
+    }), (0, u.jsx)(et, {
+      foreground: J.sparkleStar2,
       color: t
     })]
   })
@@ -310,7 +327,7 @@ function eo(e) {
   if (!t && null != c && n === c && null != s && null != s.planIdFromItems) {
     let e = null != s.trialEndsAt ? f(null == s ? void 0 : s.trialEndsAt).diff(f(), "d") : 0,
       t = W.SubscriptionPlanInfo[s.planIdFromItems],
-      n = y.default.formatPriceString(y.default.getDefaultPrice(t.id), t.interval);
+      n = j.default.formatPriceString(j.default.getDefaultPrice(t.id), t.interval);
     return (0, u.jsx)(u.Fragment, {
       children: (0, u.jsx)(I.Heading, {
         variant: "heading-md/normal",
@@ -328,14 +345,14 @@ function eo(e) {
   }
   if (!t && i) {
     var T, P, p, S;
-    let e = y.default.formatPriceString(y.default.getDefaultPrice(n === W.PremiumTypes.TIER_0 ? W.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : W.SubscriptionPlans.PREMIUM_MONTH_TIER_2), W.SubscriptionIntervalTypes.MONTH);
+    let e = j.default.formatPriceString(j.default.getDefaultPrice(n === W.PremiumTypes.TIER_0 ? W.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : W.SubscriptionPlans.PREMIUM_MONTH_TIER_2), W.SubscriptionIntervalTypes.MONTH);
     return (0, u.jsx)(I.Heading, {
       variant: "heading-md/normal",
       color: "always-white",
       className: J.trialHeader,
       children: 0 === r ? X.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW.format({
-        planName: (0, y.getTierDisplayName)(null !== (P = W.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (T = null == E ? void 0 : E.sku_id) && void 0 !== T ? T : W.PremiumSubscriptionSKUs.NONE]) && void 0 !== P ? P : W.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-        duration: (0, y.formatIntervalDuration)({
+        planName: (0, j.getTierDisplayName)(null !== (P = W.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (T = null == E ? void 0 : E.sku_id) && void 0 !== T ? T : W.PremiumSubscriptionSKUs.NONE]) && void 0 !== P ? P : W.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+        duration: (0, j.formatIntervalDuration)({
           intervalType: null !== (p = null == E ? void 0 : E.interval) && void 0 !== p ? p : W.SubscriptionIntervalTypes.DAY,
           intervalCount: null !== (S = null == E ? void 0 : E.interval_count) && void 0 !== S ? S : 30,
           capitalize: !1
@@ -366,7 +383,7 @@ function eu() {
     children: [(0, u.jsx)(es, {
       Icon: D.default,
       text: X.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-        maxUploadPremium: (0, y.getMaxFileSizeForPremiumType)(W.PremiumTypes.TIER_0, {
+        maxUploadPremium: (0, j.getMaxFileSizeForPremiumType)(W.PremiumTypes.TIER_0, {
           useSpace: !1
         })
       })
@@ -475,12 +492,12 @@ function ec(e) {
       Icon: h.default,
       text: X.default.Messages.PREMIUM_TIER_SERVER_BOOST_WITH_PERCENTAGE_ITEM.format({
         numBoosts: W.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-        percentageOff: (0, j.formatPercent)(r, W.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+        percentageOff: (0, y.formatPercent)(r, W.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
       })
     }), (0, u.jsx)(es, {
       Icon: D.default,
       text: X.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-        maxUploadPremium: (0, y.getMaxFileSizeForPremiumType)(W.PremiumTypes.TIER_2, {
+        maxUploadPremium: (0, j.getMaxFileSizeForPremiumType)(W.PremiumTypes.TIER_2, {
           useSpace: !1
         })
       })
@@ -499,7 +516,7 @@ function ec(e) {
     children: [(0, u.jsx)(es, {
       Icon: D.default,
       text: X.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-        maxUploadPremium: (0, y.getMaxFileSizeForPremiumType)(W.PremiumTypes.TIER_2, {
+        maxUploadPremium: (0, j.getMaxFileSizeForPremiumType)(W.PremiumTypes.TIER_2, {
           useSpace: !1
         })
       })
@@ -523,32 +540,32 @@ function ec(e) {
 }
 
 function em(e) {
-  var t, n, i;
+  var t;
   let {
-    showWumpus: r,
-    ctaButton: l,
-    showYearlyPrice: s,
-    featureSet: a = 0,
-    className: o,
-    isGift: d = !1,
-    isModal: m = !1
-  } = e, f = (0, _.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()), E = (0, _.useStateFromStores)([O.default], () => O.default.getCurrentUser()), T = (0, k.usePremiumTrialOffer)(), P = null == T ? void 0 : null === (t = T.subscription_trial) || void 0 === t ? void 0 : t.sku_id, p = (null == f ? void 0 : f.trialId) != null ? null == E ? void 0 : E.premiumType : null, S = (0, G.useIsInPremiumOfferExperience)(), R = (0, H.usePremiumDiscountOffer)(), C = (0, G.useHasDiscountApplied)(), L = null != P || null != p ? 0 : null != R || C ? 1 : null, v = (0, V.useIsEligibleForBogoPromotion)(), U = (0, V.getBOGOPillCopy)();
+    showWumpus: n,
+    ctaButton: i,
+    showYearlyPrice: r,
+    featureSet: l = 0,
+    className: s,
+    isGift: a = !1,
+    isModal: o = !1
+  } = e, d = (0, _.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()), m = (0, _.useStateFromStores)([O.default], () => O.default.getCurrentUser()), f = (0, k.usePremiumTrialOffer)(), E = null == f ? void 0 : null === (t = f.subscription_trial) || void 0 === t ? void 0 : t.sku_id, T = (null == d ? void 0 : d.trialId) != null ? null == m ? void 0 : m.premiumType : null, P = (0, G.useIsInPremiumOfferExperience)(), p = (0, H.usePremiumDiscountOffer)(), S = (0, G.useHasDiscountApplied)(), R = null != E || null != T ? 0 : null != p || S ? 1 : null, C = (0, V.useIsEligibleForBogoPromotion)(), L = (0, V.getBOGOPillCopy)();
   return (0, u.jsxs)("div", {
-    className: c(J.tier2, J.card, o, {
-      [J.withTier2Rim]: !d && S,
-      [J.withCardHover]: !d && S
+    className: c(J.tier2, J.card, s, {
+      [J.withTier2Rim]: !a && P,
+      [J.withCardHover]: !a && P
     }),
-    children: [!d && null != R && (0, H.discountOfferHasTier)(R, W.PremiumSubscriptionSKUs.TIER_2) && (null === (n = R.discount) || void 0 === n ? void 0 : n.amount) !== void 0 ? (0, u.jsxs)(u.Fragment, {
+    children: [!a && null != p && (0, H.discountOfferHasTier)(p, W.PremiumSubscriptionSKUs.TIER_2) && void 0 !== p.discount.amount ? (0, u.jsxs)(u.Fragment, {
       children: [(0, u.jsx)(er, {
-        text: X.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
-          percent: null === (i = R.discount) || void 0 === i ? void 0 : i.amount
+        text: S ? X.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED : X.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
+          percent: p.discount.amount
         }),
         className: J.topRimPill,
         colorOptions: 2
       }), (0, u.jsx)("div", {
         className: J.rimGlowTier2
       })]
-    }) : null, d || P !== W.PremiumSubscriptionSKUs.TIER_2 ? null : (0, u.jsxs)(u.Fragment, {
+    }) : null, a || E !== W.PremiumSubscriptionSKUs.TIER_2 ? null : (0, u.jsxs)(u.Fragment, {
       children: [(0, u.jsx)(er, {
         text: X.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
         className: J.topRimPill,
@@ -556,7 +573,7 @@ function em(e) {
       }), (0, u.jsx)("div", {
         className: J.rimGlowTier2
       })]
-    }), d || p !== W.PremiumTypes.TIER_2 ? null : (0, u.jsxs)(u.Fragment, {
+    }), a || T !== W.PremiumTypes.TIER_2 ? null : (0, u.jsxs)(u.Fragment, {
       children: [(0, u.jsx)(er, {
         text: X.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
         className: J.topRimPill,
@@ -564,7 +581,7 @@ function em(e) {
       }), (0, u.jsx)("div", {
         className: J.rimGlowTier2
       })]
-    }), !d && C && (0, u.jsxs)(u.Fragment, {
+    }), !a && S && (0, u.jsxs)(u.Fragment, {
       children: [(0, u.jsx)(er, {
         text: X.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED,
         className: J.topRimPill,
@@ -572,7 +589,7 @@ function em(e) {
       }), (0, u.jsx)("div", {
         className: J.rimGlowTier2
       })]
-    }), r ? (0, u.jsx)("div", {
+    }), n ? (0, u.jsx)("div", {
       className: J.wumpusImageContainer,
       children: (0, u.jsx)(g.default, {
         src: Q,
@@ -584,22 +601,22 @@ function em(e) {
     }) : null, (0, u.jsxs)("div", {
       children: [(0, u.jsx)(N.default, {
         className: c(J.tier2Title, J.title)
-      }), !d && P !== W.PremiumSubscriptionSKUs.TIER_2 && v && (0, u.jsx)(I.Text, {
+      }), !a && E !== W.PremiumSubscriptionSKUs.TIER_2 && C && (0, u.jsx)(I.Text, {
         variant: "text-xs/bold",
         className: J.freeTrialPillInline,
-        children: U
+        children: L
       }), (0, u.jsx)(eo, {
-        isGift: d,
+        isGift: a,
         premiumTier: W.PremiumTypes.TIER_2,
-        offerType: L,
-        offerTierMatchesCard: P === W.PremiumSubscriptionSKUs.TIER_2 || (0, H.discountOfferHasTier)(R, W.PremiumSubscriptionSKUs.TIER_2),
-        showYearlyPrice: s
+        offerType: R,
+        offerTierMatchesCard: E === W.PremiumSubscriptionSKUs.TIER_2 || (0, H.discountOfferHasTier)(p, W.PremiumSubscriptionSKUs.TIER_2),
+        showYearlyPrice: r
       }), (0, u.jsx)(ec, {
-        featureSet: a,
-        isModal: m,
-        isGift: d
+        featureSet: l,
+        isModal: o,
+        isGift: a
       })]
-    }), l, d || P !== W.PremiumSubscriptionSKUs.TIER_2 && null == R ? null : (0, u.jsx)(en, {
+    }), i, a || E !== W.PremiumSubscriptionSKUs.TIER_2 && null == p ? null : (0, u.jsx)(en, {
       tier: W.PremiumTypes.TIER_2
     })]
   })
