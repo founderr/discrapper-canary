@@ -37,9 +37,13 @@ function g(e) {
 
 function m(e) {
   let t = d[e];
-  c.clearTimer(e), !0 === t.muted ? ((f = new Set(f)).add(e), c.setTimer(e, t.muteConfig, () => {
-    d[e].muted = !1, (f = new Set(f)).delete(e), v.emitChange()
-  })) : (f = new Set(f)).delete(e)
+  if (c.clearTimer(e), !0 === t.muted) {
+    (f = new Set(f)).add(e);
+    let n = c.setTimer(e, t.muteConfig, () => {
+      d[e].muted = !1, (f = new Set(f)).delete(e), v.emitChange()
+    });
+    n && (d[e].muted = !1, (f = new Set(f)).delete(e))
+  } else(f = new Set(f)).delete(e)
 }
 
 function E(e) {

@@ -181,6 +181,7 @@ var w = new Y(a.default, {
   CHANNEL_CREATE: M,
   CHANNEL_DELETE: M,
   CHANNEL_LOCAL_ACK: U,
+  CHANNEL_MUTE_EXPIRED: P,
   CHANNEL_RTC_UPDATE_CHAT_OPEN: U,
   CHANNEL_SELECT: H,
   CHANNEL_STATUSES: function(e) {
@@ -240,6 +241,7 @@ var w = new Y(a.default, {
     } = e;
     return A.default.getId() === n.id && b.clearGuildId(t)
   },
+  GUILD_MUTE_EXPIRED: P,
   GUILD_ROLE_CREATE: P,
   GUILD_ROLE_DELETE: P,
   GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: P,
@@ -281,6 +283,7 @@ var w = new Y(a.default, {
   THREAD_MEMBER_UPDATE: K,
   THREAD_MEMBERS_UPDATE: K,
   THREAD_UPDATE: y,
+  TRY_ACK: U,
   UPDATE_CHANNEL_DIMENSIONS: U,
   UPDATE_CHANNEL_LIST_SUBTITLES: function(e) {
     let {
@@ -333,6 +336,5 @@ var w = new Y(a.default, {
       of t) null != o && !i.has(o) && (b.nonPositionalChannelIdUpdate(o) && (n = !0), i.add(o)), null != e && !i.has(e) && (b.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
     return n
   },
-  WINDOW_FOCUS: m,
-  TRY_ACK: U
+  WINDOW_FOCUS: m
 })
