@@ -88,7 +88,7 @@ let m = (e, t, n) => ({
       if (null != l && o && (u.SlateTransforms.removeInlineChildren(e, r), i = !1), E(e, n, l, i), null != l && o) {
         let n = s.getCommandBlock(e);
         if (r = d.ElementUtils.updateElement(e, r), null != n) {
-          let l = d.ElementUtils.markdown(n[0], t.id);
+          let l = d.ElementUtils.markdown(n[0], t.guild_id);
           (0, f.convertRawToInlineVoids)(e, r, t.id, l) && (r = d.ElementUtils.updateElement(e, r))
         }
         s.validateOption(e, t.guild_id, t.id, d.ElementUtils.updateElement(e, r), !1), u.SlateTransforms.selectNextCommandOption(e)
