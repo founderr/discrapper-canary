@@ -17,6 +17,9 @@ n.r(t), n.d(t, {
   },
   capitalizeText: function() {
     return T
+  },
+  isGuildClassification: function() {
+    return I
   }
 }), n("808653");
 var s = n("866227"),
@@ -65,4 +68,8 @@ let _ = e => {
     };
     return t[e]
   },
-  T = e => null == e || 0 === e.length ? "" : 1 === e.length ? e.toUpperCase() : "".concat(e.charAt(0).toUpperCase()).concat(e.slice(1))
+  T = e => null == e || 0 === e.length ? "" : 1 === e.length ? e.toUpperCase() : "".concat(e.charAt(0).toUpperCase()).concat(e.slice(1));
+
+function I(e) {
+  return null != e && null != e.guild_metadata
+}

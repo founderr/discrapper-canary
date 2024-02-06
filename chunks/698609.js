@@ -1,56 +1,59 @@
 "use strict";
 a.r(e), a.d(e, {
   useSafetyHubClassification: function() {
-    return c
-  },
-  useActiveSafetyHubClassifications: function() {
-    return o
-  },
-  useExpiredSafetyHubClassifications: function() {
     return d
   },
-  useSafetyHubAppealSignal: function() {
+  useActiveSafetyHubClassifications: function() {
     return _
+  },
+  useExpiredSafetyHubClassifications: function() {
+    return S
+  },
+  useSafetyHubAppealSignal: function() {
+    return E
   }
 });
 var n = a("884691"),
-  s = a("446674"),
-  i = a("299039"),
+  i = a("446674"),
+  s = a("299039"),
   l = a("781324"),
-  u = a("646356");
+  u = a("997510"),
+  r = a("646356"),
+  o = a("736393");
 
-function r() {
-  let t = (0, s.useStateFromStoresArray)([u.default], () => u.default.getClassifications());
-  return t.sort((t, e) => i.default.extractTimestamp(e.id) - i.default.extractTimestamp(t.id))
+function c() {
+  let t = (0, i.useStateFromStoresArray)([r.default], () => r.default.getClassifications());
+  return t.sort((t, e) => s.default.extractTimestamp(e.id) - s.default.extractTimestamp(t.id))
 }
 
-function c(t) {
-  let e = (0, s.useStateFromStores)([u.default], () => u.default.getClassification(t)),
-    a = (0, s.useStateFromStores)([u.default], () => u.default.getClassificationRequestState(t)),
-    i = (0, s.useStateFromStores)([u.default], () => u.default.getIsDsaEligible());
+function d(t) {
+  let e = (0, i.useStateFromStores)([r.default], () => r.default.getClassification(t)),
+    a = (0, i.useStateFromStores)([r.default], () => r.default.getClassificationRequestState(t)),
+    s = (0, i.useStateFromStores)([r.default], () => r.default.getIsDsaEligible()),
+    c = (0, u.useIsSafetyHubGuildViolationInAppAppealsEnabled)("classification_detail");
   return n.useEffect(() => {
     void 0 === e && null == a && l.getSafetyHubDataForClassification(t)
   }, [t, e, a]), {
     classification: e,
     classificationRequestState: a,
-    isDsaEligible: i,
-    isAppealEligible: i && null != e && null == e.appeal_status
+    isDsaEligible: s,
+    isAppealEligible: s && null != e && null == e.appeal_status && (!(0, o.isGuildClassification)(e) || c)
   }
 }
 
-function o() {
-  let t = r(),
+function _() {
+  let t = c(),
     e = new Date;
   return t.filter(t => new Date(t.max_expiration_time) > e)
 }
 
-function d() {
-  let t = r(),
+function S() {
+  let t = c(),
     e = new Date;
   return t.filter(t => new Date(t.max_expiration_time) <= e)
 }
 
-function _() {
-  let t = (0, s.useStateFromStores)([u.default], () => u.default.getAppealSignal());
+function E() {
+  let t = (0, i.useStateFromStores)([r.default], () => r.default.getAppealSignal());
   return t
 }

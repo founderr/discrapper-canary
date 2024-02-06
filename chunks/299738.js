@@ -27,7 +27,7 @@ function S(e) {
     className: I,
     onClose: x,
     onNext: f
-  } = e, T = (0, r.useEmitAppealIngestionEvent)(), g = null !== (t = null == l ? void 0 : l.explainer_link) && void 0 !== t ? t : "", m = null != l && null != l.flagged_content && l.flagged_content.length > 0, p = (0, d.capitalizeText)(null == l ? void 0 : l.description), C = !S && !N, L = m && null == l.guild_metadata;
+  } = e, T = (0, r.useEmitAppealIngestionEvent)(), g = null !== (t = null == l ? void 0 : l.explainer_link) && void 0 !== t ? t : "", p = null != l && null != l.flagged_content && l.flagged_content.length > 0, m = (0, d.capitalizeText)(null == l ? void 0 : l.description), C = !S && !N, L = p && !(0, d.isGuildClassification)(l);
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)(i.ModalHeader, {
       direction: o.default.Direction.VERTICAL,
@@ -60,7 +60,7 @@ function S(e) {
         className: A.policyContainer,
         children: (0, s.jsx)(i.Text, {
           variant: "text-md/semibold",
-          children: p
+          children: m
         })
       }), N && (0, s.jsx)(c.default, {
         url: E.SafetyHubLinks.AGE_VERIFICATION_LINK,

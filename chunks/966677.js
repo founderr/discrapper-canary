@@ -5,180 +5,180 @@ a.r(e), a.d(e, {
   }
 }), a("222007");
 var n = a("37983"),
-  s = a("884691"),
-  i = a("414456"),
-  l = a.n(i),
+  i = a("884691"),
+  s = a("414456"),
+  l = a.n(s),
   u = a("446674"),
   r = a("779807"),
-  c = a("77078"),
-  o = a("461380"),
+  o = a("77078"),
+  c = a("461380"),
   d = a("543289"),
   _ = a("300113"),
   S = a("599110"),
   E = a("299039"),
-  T = a("667963"),
-  f = a("646356"),
+  f = a("667963"),
+  T = a("646356"),
   A = a("736393"),
   I = a("310888"),
   g = a("132206"),
   N = a("698609"),
   C = a("170213"),
-  m = a("49111"),
-  U = a("782340"),
-  p = a("231180");
+  p = a("49111"),
+  m = a("782340"),
+  U = a("231180");
 let h = t => {
     let {
       status: e,
       onClick: a,
-      opened: s,
-      count: i
+      opened: i,
+      count: s
     } = t;
-    return (0, n.jsxs)(c.Clickable, {
-      className: p.header,
+    return (0, n.jsxs)(o.Clickable, {
+      className: U.header,
       onClick: a,
       children: [(0, n.jsx)("div", {
-        className: p.headerIconWrapper,
+        className: U.headerIconWrapper,
         children: (0, n.jsx)(r.WarningIcon, {
-          color: "active" === e ? c.tokens.colors.INTERACTIVE_ACTIVE : c.tokens.colors.INTERACTIVE_MUTED,
+          color: "active" === e ? o.tokens.colors.INTERACTIVE_ACTIVE : o.tokens.colors.INTERACTIVE_MUTED,
           width: 24,
           height: 24
         })
       }), (0, n.jsxs)("div", {
-        className: p.title,
-        children: [(0, n.jsx)(c.Heading, {
+        className: U.title,
+        children: [(0, n.jsx)(o.Heading, {
           variant: "heading-md/semibold",
           color: "text-normal",
-          children: "active" === e ? U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE.format({
-            count: i.toString()
-          }) : U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED.format({
-            count: i.toString()
+          children: "active" === e ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE.format({
+            count: s.toString()
+          }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED.format({
+            count: s.toString()
           })
-        }), (0, n.jsx)(c.Heading, {
+        }), (0, n.jsx)(o.Heading, {
           variant: "text-sm/normal",
           color: "text-muted",
-          children: "active" === e ? U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE : U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED
+          children: "active" === e ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED
         })]
       }), (0, n.jsx)("div", {
-        className: p.caret,
-        children: (0, n.jsx)(o.default, {
+        className: U.caret,
+        children: (0, n.jsx)(c.default, {
           width: 18,
           height: 18,
-          direction: s ? o.default.Directions.UP : o.default.Directions.DOWN
+          direction: i ? c.default.Directions.UP : c.default.Directions.DOWN
         })
       })]
     })
   },
   x = () => (0, n.jsxs)("div", {
-    className: p.emptyState,
+    className: U.emptyState,
     children: [(0, n.jsxs)("div", {
-      className: p.iconContainer,
+      className: U.iconContainer,
       children: [(0, n.jsx)("div", {
-        className: p.iconBackground,
+        className: U.iconBackground,
         children: (0, n.jsx)(_.default, {
-          className: p.icon
+          className: U.icon
         })
       }), (0, n.jsx)(d.default, {
-        className: p.stars
+        className: U.stars
       })]
-    }), (0, n.jsx)(c.Heading, {
+    }), (0, n.jsx)(o.Heading, {
       variant: "heading-md/bold",
-      className: p.emptyStateText,
-      children: U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
-    }), (0, n.jsx)(c.Text, {
+      className: U.emptyStateText,
+      children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
+    }), (0, n.jsx)(o.Text, {
       variant: "text-xs/normal",
-      className: p.emptyStateSubtext,
-      children: U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
+      className: U.emptyStateSubtext,
+      children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
     })]
   }),
   H = () => (0, n.jsx)("div", {
-    className: p.emptyState,
-    children: (0, n.jsx)(c.Text, {
+    className: U.emptyState,
+    children: (0, n.jsx)(o.Text, {
       variant: "text-xs/normal",
-      className: p.emptyStateSubtext,
-      children: U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
+      className: U.emptyStateSubtext,
+      children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
     })
   }),
   O = t => {
     let {
       timestamp: e
     } = t;
-    return (0, n.jsx)(c.Text, {
+    return (0, n.jsx)(o.Text, {
       variant: "text-xs/normal",
-      className: p.timestamp,
+      className: U.timestamp,
       children: (0, A.getClassificationRelativeIncidentTime)(e)
     })
   },
-  D = () => (0, n.jsx)(c.Text, {
+  D = () => (0, n.jsx)(o.Text, {
     variant: "text-xs/bold",
-    className: p.newBadge,
-    children: U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
+    className: U.newBadge,
+    children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
   }),
   F = t => {
     var e;
     let {
-      classification: s
+      classification: i
     } = t, {
-      id: i,
+      id: s,
       description: u,
       max_expiration_time: r
-    } = s, o = E.default.extractTimestamp(i), d = (0, I.useIsNewClassification)(s), _ = (0, T.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), S = new Date(r), f = S.toDateString();
-    return (0, n.jsx)(c.Clickable, {
+    } = i, c = E.default.extractTimestamp(s), d = (0, I.useIsNewClassification)(i), _ = (0, f.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), S = new Date(r), T = S.toDateString();
+    return (0, n.jsx)(o.Clickable, {
       onClick: () => {
-        (0, c.openModalLazy)(async () => {
+        (0, o.openModalLazy)(async () => {
           let {
             default: t
           } = await a.el("825138").then(a.bind(a, "825138"));
           return e => (0, n.jsx)(t, {
-            classificationId: i,
+            classificationId: s,
             source: C.SafetyHubAnalyticsActionSource.StandingTab,
             ...e
           })
         })
       },
-      className: l(p.itemDetail, {
-        [p.itemDetailNew]: d
+      className: l(U.itemDetail, {
+        [U.itemDetailNew]: d
       }),
       children: (0, n.jsxs)("div", {
-        className: p.descriptionContainer,
+        className: U.descriptionContainer,
         children: [d ? (0, n.jsx)(D, {}) : (0, n.jsx)(O, {
-          timestamp: o
-        }), (0, n.jsx)(c.Heading, {
+          timestamp: c
+        }), (0, n.jsx)(o.Heading, {
           variant: "heading-lg/normal",
-          children: _ && null != s.guild_metadata ? U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
-            guildName: null == s ? void 0 : null === (e = s.guild_metadata) || void 0 === e ? void 0 : e.name,
+          children: _ && (0, A.isGuildClassification)(i) ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
+            guildName: null == i ? void 0 : null === (e = i.guild_metadata) || void 0 === e ? void 0 : e.name,
             description: u,
-            descriptionHook: t => (0, n.jsx)(c.Text, {
+            descriptionHook: t => (0, n.jsx)(o.Text, {
               tag: "span",
               variant: "heading-lg/bold",
               children: t
             })
-          }) : U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format({
+          }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format({
             description: u,
-            descriptionHook: t => (0, n.jsx)(c.Text, {
+            descriptionHook: t => (0, n.jsx)(o.Text, {
               tag: "span",
               variant: "heading-lg/bold",
               children: t
             })
           })
-        }), (0, n.jsx)(c.Text, {
+        }), (0, n.jsx)(o.Text, {
           variant: "text-sm/normal",
-          className: p.expirationDate,
-          children: S > new Date ? U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
-            expirationDate: f
-          }) : U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format({
-            expirationDate: f
+          className: U.expirationDate,
+          children: S > new Date ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
+            expirationDate: T
+          }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format({
+            expirationDate: T
           })
         })]
       })
-    }, i)
+    }, s)
   },
   v = t => {
     let {
       status: e,
       classifications: a
-    } = t, [i, l] = s.useState(!1), [r, o] = s.useState(3), d = (0, g.useSafetyHubAccountStanding)(), _ = (0, u.useStateFromStores)([f.default], () => f.default.getIsDsaEligible()), E = s.useMemo(() => a.slice(0, r), [a, r]);
-    s.useEffect(() => {
-      i && S.default.track(m.AnalyticEvents.SAFETY_HUB_ACTION, {
+    } = t, [s, l] = i.useState(!1), [r, c] = i.useState(3), d = (0, g.useSafetyHubAccountStanding)(), _ = (0, u.useStateFromStores)([T.default], () => T.default.getIsDsaEligible()), E = i.useMemo(() => a.slice(0, r), [a, r]);
+    i.useEffect(() => {
+      s && S.default.track(p.AnalyticEvents.SAFETY_HUB_ACTION, {
         action: C.SafetyHubAnalyticsActions.ViewViolationsDropdown,
         account_standing: d.state,
         classification_ids: E.map(t => Number(t.id)),
@@ -186,18 +186,18 @@ let h = t => {
         is_violative_content_shown: !1,
         is_dsa_eligible: _
       })
-    }, [i, d.state, E, _]);
-    let T = a.length - E.length > 3 ? 3 : a.length - E.length;
+    }, [s, d.state, E, _]);
+    let f = a.length - E.length > 3 ? 3 : a.length - E.length;
     return (0, n.jsxs)("div", {
-      className: p.dropdown,
+      className: U.dropdown,
       children: [(0, n.jsx)(h, {
         status: e,
         onClick: () => l(t => !t),
-        opened: i,
+        opened: s,
         count: a.length
-      }), i && (0, n.jsxs)("div", {
-        className: p.items,
-        children: [(0, n.jsx)(c.TabBar.Separator, {
+      }), s && (0, n.jsxs)("div", {
+        className: U.items,
+        children: [(0, n.jsx)(o.TabBar.Separator, {
           style: {
             height: "1px",
             width: "100%"
@@ -205,16 +205,16 @@ let h = t => {
         }), E.length > 0 && E.map(t => (0, n.jsx)(F, {
           classification: t
         }, t.id)), E.length < a.length && (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(c.TabBar.Separator, {
+          children: [(0, n.jsx)(o.TabBar.Separator, {
             style: {
               height: "1px",
               width: "100%"
             }
           }), (0, n.jsx)("button", {
-            className: p.paginationButton,
-            onClick: () => o(t => t + T),
-            children: U.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({
-              nextPageSize: T
+            className: U.paginationButton,
+            onClick: () => c(t => t + f),
+            children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({
+              nextPageSize: f
             })
           })]
         }), 0 === E.length && "active" === e && (0, n.jsx)(x, {}), 0 === E.length && "expired" === e && (0, n.jsx)(H, {})]

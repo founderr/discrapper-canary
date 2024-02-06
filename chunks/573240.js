@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return P
   }
 });
 var i = n("37983"),
@@ -15,30 +15,31 @@ var i = n("37983"),
   d = n("599110"),
   f = n("667963"),
   E = n("908539"),
-  _ = n("132206"),
-  S = n("698609"),
-  p = n("57242"),
-  I = n("380676"),
-  h = n("170213"),
-  T = n("49111"),
-  C = n("782340"),
-  v = n("383496");
+  _ = n("736393"),
+  S = n("132206"),
+  p = n("698609"),
+  I = n("57242"),
+  h = n("380676"),
+  T = n("170213"),
+  C = n("49111"),
+  v = n("782340"),
+  A = n("383496");
 let N = e => {
     let {
       classificationTypeText: t,
       guildName: n
     } = e, r = (0, f.useIsSafetyHubDisplayGuildViolationsEnabled)("classification_detail");
     return (0, i.jsx)("div", {
-      className: v.classificationHeader,
+      className: A.classificationHeader,
       children: (0, i.jsx)(u.Heading, {
         variant: "heading-xl/normal",
-        children: r && null != n ? C.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD.format({
+        children: r && null != n ? v.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD.format({
           guildName: n,
           classification_type: t,
           classificationHook: (e, t) => (0, i.jsx)("strong", {
             children: e
           }, t)
-        }) : C.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V2.format({
+        }) : v.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V2.format({
           classification_type: t,
           classificationHook: (e, t) => (0, i.jsx)("strong", {
             children: e
@@ -47,31 +48,31 @@ let N = e => {
       })
     })
   },
-  A = e => {
+  m = e => {
     let {
       actions: t
     } = e, n = t.filter(e => e.descriptions.length > 0);
     return 0 === n.length ? null : (0, i.jsxs)("div", {
-      className: v.classificationActionsTakenContainer,
+      className: A.classificationActionsTakenContainer,
       children: [(0, i.jsx)(u.Text, {
         variant: "eyebrow",
         color: "text-muted",
-        children: C.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER
+        children: v.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER
       }), (0, i.jsx)("ul", {
-        className: v.classificationActionsTakenList,
-        children: t.map(e => (0, i.jsx)(m, {
+        className: A.classificationActionsTakenList,
+        children: t.map(e => (0, i.jsx)(g, {
           action: e
         }, e.id))
       })]
     })
   },
-  m = e => {
+  g = e => {
     let {
       action: t
     } = e;
     return (0, i.jsx)(i.Fragment, {
       children: t.descriptions.map((e, t) => (0, i.jsx)("li", {
-        className: v.classificationActionsTakenRow,
+        className: A.classificationActionsTakenRow,
         children: (0, i.jsx)(u.Text, {
           tag: "span",
           variant: "heading-md/normal",
@@ -81,32 +82,32 @@ let N = e => {
       }, t))
     })
   },
-  g = e => {
+  L = e => {
     let {
       classificationTypeText: t,
       policyExplainerLink: n
     } = e;
     return (0, i.jsxs)(u.Anchor, {
       href: n,
-      className: v.classificationPolicyCard,
+      className: A.classificationPolicyCard,
       useDefaultUnderlineStyles: !1,
       children: [(0, i.jsx)("div", {
-        className: v.classificationPolicyCardIcon,
+        className: A.classificationPolicyCardIcon,
         children: (0, i.jsx)(o.ShieldIcon, {
           width: 24,
           height: 24,
           color: a.default.colors.FOCUS_PRIMARY
         })
       }), (0, i.jsx)("div", {
-        className: v.classificationPolicyDescriptionContainer,
+        className: A.classificationPolicyDescriptionContainer,
         children: (0, i.jsx)(u.Text, {
           variant: "text-md/normal",
-          children: C.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER.format({
+          children: v.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER.format({
             classificationDescription: t
           })
         })
       }), (0, i.jsx)("div", {
-        className: v.classificationPolicyLinkIcon,
+        className: A.classificationPolicyLinkIcon,
         children: (0, i.jsx)(s.ChevronSmallRightIcon, {
           width: 24,
           height: 24,
@@ -115,15 +116,15 @@ let N = e => {
       })]
     })
   },
-  L = () => (0, i.jsx)(u.Text, {
+  U = () => (0, i.jsx)(u.Text, {
     variant: "text-md/normal",
     color: "text-muted",
-    children: C.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
+    children: v.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
   }),
-  U = e => (0, i.jsx)(u.Text, {
+  R = e => (0, i.jsx)(u.Text, {
     variant: "text-md/normal",
     color: "text-muted",
-    children: C.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
+    children: v.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
       letUsKnowHook: (t, n) => (0, i.jsx)(u.Anchor, {
         href: e.isAppealEligible ? void 0 : e.appealLink,
         onClick: e.letUsKnowClick,
@@ -131,15 +132,15 @@ let N = e => {
       }, n)
     })
   }),
-  R = e => (0, i.jsx)("div", {
-    className: v.classificationLetUsKnowContainer,
-    children: e.hasBeenAppealed ? (0, i.jsx)(L, {}) : (0, i.jsx)(U, {
-      appealLink: h.SafetyHubLinks.APPEALS_LINK,
+  y = e => (0, i.jsx)("div", {
+    className: A.classificationLetUsKnowContainer,
+    children: e.hasBeenAppealed ? (0, i.jsx)(U, {}) : (0, i.jsx)(R, {
+      appealLink: T.SafetyHubLinks.APPEALS_LINK,
       letUsKnowClick: e.onLetUsKnowClick,
       isAppealEligible: e.isAppealEligible
     })
   }),
-  y = e => {
+  x = e => {
     let {
       tosLink: t,
       communityGuidelinesLink: n,
@@ -148,25 +149,25 @@ let N = e => {
       appealComponent: a
     } = e;
     return (0, i.jsxs)("div", {
-      className: v.classificationActionExplanationContainer,
+      className: A.classificationActionExplanationContainer,
       children: [(0, i.jsx)(u.Text, {
         variant: "eyebrow",
         color: "text-muted",
-        children: C.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_HEADER
+        children: v.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_HEADER
       }), (0, i.jsx)(u.Text, {
-        className: v.guidelinesExplanation,
+        className: A.guidelinesExplanation,
         variant: "text-sm/normal",
-        children: C.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_DESCRIPTION.format({
+        children: v.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_DESCRIPTION.format({
           tosLink: t,
           communityGuidelinesLink: n
         })
-      }), (0, i.jsx)(g, {
+      }), (0, i.jsx)(L, {
         classificationTypeText: r,
         policyExplainerLink: l
       }), a]
     })
   };
-var x = e => {
+var P = e => {
   var t, n;
   let {
     classificationId: a,
@@ -175,47 +176,47 @@ var x = e => {
   } = e, {
     classification: u,
     classificationRequestState: f,
-    isAppealEligible: C,
-    isDsaEligible: m
-  } = (0, S.useSafetyHubClassification)(a), g = (0, _.useSafetyHubAccountStanding)(), L = null != u && null != u.flagged_content && u.flagged_content.length > 0;
+    isAppealEligible: v,
+    isDsaEligible: g
+  } = (0, p.useSafetyHubClassification)(a), L = (0, S.useSafetyHubAccountStanding)(), U = null != u && null != u.flagged_content && u.flagged_content.length > 0;
   return (r.useEffect(() => {
-    d.default.track(T.AnalyticEvents.SAFETY_HUB_ACTION, {
-      action: h.SafetyHubAnalyticsActions.ViewViolationDetail,
-      account_standing: g.state,
+    d.default.track(C.AnalyticEvents.SAFETY_HUB_ACTION, {
+      action: T.SafetyHubAnalyticsActions.ViewViolationDetail,
+      account_standing: L.state,
       classification_ids: [Number(a)],
       source: s,
-      is_violative_content_shown: L,
-      is_dsa_eligible: m
+      is_violative_content_shown: U,
+      is_dsa_eligible: g
     })
   }, []), null == u && f === E.ClassificationRequestState.FAILED) ? (o(), null) : null == u ? null : (0, i.jsxs)("div", {
-    className: v.classificationContainer,
+    className: A.classificationContainer,
     children: [(0, i.jsx)(N, {
       classificationTypeText: u.description,
       guildName: null == u ? void 0 : null === (t = u.guild_metadata) || void 0 === t ? void 0 : t.name
-    }), L && null == u.guild_metadata && (0, i.jsx)(I.ClassificationEvidence, {
+    }), U && !(0, _.isGuildClassification)(u) && (0, i.jsx)(h.ClassificationEvidence, {
       flaggedContent: null !== (n = u.flagged_content) && void 0 !== n ? n : []
-    }), (0, i.jsx)(A, {
+    }), (0, i.jsx)(m, {
       actions: u.actions
-    }), (0, i.jsx)(y, {
+    }), (0, i.jsx)(x, {
       classificationTypeText: u.description,
-      tosLink: h.SafetyHubLinks.TOS_LINK,
-      communityGuidelinesLink: h.SafetyHubLinks.COMMUNITY_GUIDELINES,
+      tosLink: T.SafetyHubLinks.TOS_LINK,
+      communityGuidelinesLink: T.SafetyHubLinks.COMMUNITY_GUIDELINES,
       policyExplainerLink: u.explainer_link,
-      appealComponent: (0, i.jsx)(R, {
+      appealComponent: (0, i.jsx)(y, {
         hasBeenAppealed: null != u.appeal_status,
         onLetUsKnowClick: () => {
-          d.default.track(T.AnalyticEvents.SAFETY_HUB_ACTION, {
-            action: h.SafetyHubAnalyticsActions.ClickLetUsKnow,
-            account_standing: g.state,
+          d.default.track(C.AnalyticEvents.SAFETY_HUB_ACTION, {
+            action: T.SafetyHubAnalyticsActions.ClickLetUsKnow,
+            account_standing: L.state,
             classification_ids: [Number(a)],
             source: s,
-            is_violative_content_shown: L,
-            is_dsa_eligible: m
-          }), C && (c.default.increment({
+            is_violative_content_shown: U,
+            is_dsa_eligible: g
+          }), v && (c.default.increment({
             name: l.MetricEvents.APPEAL_INGESTION_VIEW
-          }), p.default.open(a))
+          }), I.default.open(a))
         },
-        isAppealEligible: C
+        isAppealEligible: v
       })
     })]
   })
