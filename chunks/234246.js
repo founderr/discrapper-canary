@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   createInitialState: function() {
-    return f
+    return d
   },
   default: function() {
     return l
@@ -10,13 +10,11 @@ n.r(t), n.d(t, {
 var l, i = n("44170"),
   r = n("507217"),
   o = n("834725"),
-  s = n("252931"),
-  a = n("845579"),
-  u = n("697218"),
-  d = n("851745"),
-  c = n("962254");
+  s = n("845579"),
+  a = n("851745"),
+  u = n("962254");
 
-function f() {
+function d() {
   return {
     query: null,
     selectedIndex: null,
@@ -50,14 +48,14 @@ l = class extends i.EventEmitter {
     if (null == this.state.selectedIndex) {
       var t;
       let n = null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo.focusMode;
-      return !e && (n === d.FocusMode.MANUAL || n === d.FocusMode.AUTO_WHEN_FILTERED) && (this.setSelectedIndex(0), !0)
+      return !e && (n === a.FocusMode.MANUAL || n === a.FocusMode.AUTO_WHEN_FILTERED) && (this.setSelectedIndex(0), !0)
     }
     return this.selectResult(this.state.selectedIndex, e, !0)
   }
   onMoveSelection(e) {
     var t, n;
     if (!this.state.isVisible) return !1;
-    if (e < 0 ? this.props.navigator.focusPreviousItem() : e > 0 && this.props.navigator.focusNextItem(), null != this.state.selectedIndex && (null === (t = this.state.query) || void 0 === t ? void 0 : t.type) === d.AutocompleteOptionTypes.COMMANDS) {
+    if (e < 0 ? this.props.navigator.focusPreviousItem() : e > 0 && this.props.navigator.focusNextItem(), null != this.state.selectedIndex && (null === (t = this.state.query) || void 0 === t ? void 0 : t.type) === a.AutocompleteOptionTypes.COMMANDS) {
       let e = null === (n = this.state.query.results.commands) || void 0 === n ? void 0 : n[this.state.selectedIndex];
       null != e && r.setPreferredCommandId(this.props.channel.id, e.id)
     }
@@ -96,8 +94,8 @@ l = class extends i.EventEmitter {
     let n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
       l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null == this.props.editorRef.current) return;
-    let i = (0, c.getOptions)(this.props),
-      r = (0, c.findMatchingAutocompleteType)({
+    let i = (0, u.getOptions)(this.props),
+      r = (0, u.findMatchingAutocompleteType)({
         channel: this.props.channel,
         guild: this.props.guild,
         options: i,
@@ -106,43 +104,38 @@ l = class extends i.EventEmitter {
         textValue: this.props.textValue,
         optionText: this.props.optionText
       }),
-      f = i.commands !== d.CommandMode.DISABLED ? (0, c.findCommandOptionAutocompleteType)(this.props.activeCommandOption, this.props.currentWord) : null;
-    if (null == r && null != f) r = f;
-    else if (null == r || null != f && r.type !== f.type) {
+      d = i.commands !== a.CommandMode.DISABLED ? (0, u.findCommandOptionAutocompleteType)(this.props.activeCommandOption, this.props.currentWord) : null;
+    if (null == r && null != d) r = d;
+    else if (null == r || null != d && r.type !== d.type) {
       this.clearQuery();
       return
     }
     let {
-      type: p,
-      typeInfo: m,
-      query: h
-    } = r, E = l || n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== h || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== m), S = u.default.getCurrentUser(), g = (0, s.getInventoryGuildPacksUserExperimentConfig)({
-      user: S,
-      autoTrackExposure: !1
-    }).viewAndUseEnabled;
-    i.canViewAndUsePackEmoji = g;
-    let C = a.IncludeStickersInAutocomplete.getSetting();
-    i.allowStickers = i.allowStickers ? C : i.allowStickers;
+      type: c,
+      typeInfo: f,
+      query: p
+    } = r, m = l || n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== p || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== f), h = s.IncludeStickersInAutocomplete.getSetting();
+    i.allowStickers = i.allowStickers ? h : i.allowStickers;
     let {
-      results: T,
-      metadata: v
-    } = m.queryResults(this.props.channel, this.props.guild, h, i, E), y = 0;
-    for (let e of Object.values(T)) Array.isArray(e) && (y += e.length);
-    let x = !0 === T.isLoading,
-      I = this.shouldShow(y, x, m),
-      N = this.state.selectedIndex;
-    !I || x ? N = null : null != N && N >= y && (N = y - 1), I && !this.state.isVisible && (0, o.trackAutocompleteOpen)(p, this.props.channel, v), this.setState({
+      results: E,
+      metadata: S
+    } = f.queryResults(this.props.channel, this.props.guild, p, i, m), g = 0;
+    for (let e of Object.values(E)) Array.isArray(e) && (g += e.length);
+    let C = !0 === E.isLoading,
+      T = this.shouldShow(g, C, f),
+      v = this.state.selectedIndex;
+    !T || C ? v = null : null != v && v >= g && (v = g - 1), T && !this.state.isVisible && (0, o.trackAutocompleteOpen)(c, this.props.channel, S), this.setState({
       query: {
-        type: p,
-        typeInfo: m,
-        queryText: h,
-        results: T,
-        resultCount: y,
+        type: c,
+        typeInfo: f,
+        queryText: p,
+        results: E,
+        resultCount: g,
         options: i,
-        isLoading: x
+        isLoading: C
       },
-      isVisible: I,
-      selectedIndex: N
+      isVisible: T,
+      selectedIndex: v
     })
   }
   shouldShow(e, t, n) {
@@ -153,16 +146,16 @@ l = class extends i.EventEmitter {
     if (!this.state.isVisible) return !1;
     let {
       type: s,
-      typeInfo: a,
-      results: u,
+      typeInfo: u,
+      results: d,
       resultCount: c,
       options: f
     } = this.state.query;
     if (e >= c) return !1;
-    let p = null === (i = a.onSelect) || void 0 === i ? void 0 : i.call(a, {
-      results: u,
+    let p = null === (i = u.onSelect) || void 0 === i ? void 0 : i.call(u, {
+      results: d,
       index: e,
-      type: t ? d.SelectType.SEND : d.SelectType.INSERT,
+      type: t ? a.SelectType.SEND : a.SelectType.INSERT,
       options: f,
       channel: this.props.channel,
       tabOrEnter: n,
@@ -181,6 +174,6 @@ l = class extends i.EventEmitter {
       }
   }
   constructor(e) {
-    super(), this.props = e, this.state = f()
+    super(), this.props = e, this.state = d()
   }
 }

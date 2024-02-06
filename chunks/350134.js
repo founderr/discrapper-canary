@@ -1,23 +1,23 @@
 "use strict";
 i.r(t), i.d(t, {
   REACTION_MIN_WIDTH_DIGITS: function() {
-    return eo
+    return el
   },
   showReactionsModal: function() {
-    return es
+    return en
   },
   isMeReaction: function() {
-    return er
+    return es
   },
   Reaction: function() {
-    return ed
+    return er
   }
 }), i("222007");
 var a = i("37983"),
   l = i("884691"),
   n = i("414456"),
-  o = i.n(n),
-  s = i("748820"),
+  s = i.n(n),
+  o = i("748820"),
   r = i("458960"),
   u = i("509043"),
   d = i("446674"),
@@ -32,47 +32,45 @@ var a = i("37983"),
   g = i("385976"),
   R = i("858619"),
   I = i("102873"),
-  C = i("865453"),
-  O = i("233322"),
-  A = i("252931"),
-  S = i("529932"),
-  v = i("446066"),
-  N = i("13066"),
-  P = i("785621"),
-  L = i("635956"),
-  M = i("85589"),
-  y = i("166257"),
-  x = i("432173"),
-  j = i("845579"),
-  U = i("42203"),
-  b = i("305961"),
-  D = i("486996"),
-  B = i("162771"),
-  k = i("697218"),
-  w = i("471671"),
-  V = i("738107"),
-  F = i("791106"),
-  G = i("256170"),
-  H = i("216422"),
-  K = i("599110"),
-  W = i("719923"),
-  J = i("15935"),
-  z = i("875978"),
-  Y = i("412745"),
-  X = i("459698"),
-  Z = i("933629"),
-  q = i("331011"),
-  Q = i("81924"),
-  $ = i("49111"),
-  ee = i("646718"),
-  et = i("782340"),
-  ei = i("154403"),
-  ea = i("550244"),
-  el = i("314934"),
-  en = i("219468");
-let eo = 9;
+  C = i("101263"),
+  O = i("865453"),
+  A = i("233322"),
+  S = i("13066"),
+  v = i("785621"),
+  N = i("635956"),
+  P = i("85589"),
+  L = i("166257"),
+  M = i("432173"),
+  y = i("845579"),
+  x = i("42203"),
+  j = i("305961"),
+  U = i("486996"),
+  b = i("162771"),
+  D = i("697218"),
+  B = i("471671"),
+  w = i("738107"),
+  k = i("791106"),
+  V = i("256170"),
+  F = i("216422"),
+  G = i("599110"),
+  H = i("719923"),
+  K = i("15935"),
+  W = i("875978"),
+  J = i("412745"),
+  z = i("459698"),
+  Y = i("933629"),
+  X = i("331011"),
+  Z = i("81924"),
+  q = i("49111"),
+  Q = i("646718"),
+  $ = i("782340"),
+  ee = i("154403"),
+  et = i("550244"),
+  ei = i("314934"),
+  ea = i("219468");
+let el = 9;
 
-function es(e, t, i) {
+function en(e, t, i) {
   (0, h.openModal)(e => (0, a.jsx)(T.default, {
     ...e,
     message: t,
@@ -80,10 +78,10 @@ function es(e, t, i) {
   }))
 }
 
-function er(e, t, i) {
-  return i === z.ReactionTypes.BURST && t || i === z.ReactionTypes.NORMAL && e
+function es(e, t, i) {
+  return i === W.ReactionTypes.BURST && t || i === W.ReactionTypes.NORMAL && e
 }
-class eu extends l.PureComponent {
+class eo extends l.PureComponent {
   componentWillAppear(e) {
     this.animateIn(e)
   }
@@ -97,7 +95,7 @@ class eu extends l.PureComponent {
     let {
       autoUnfurlReactionTooltip: t
     } = this.props;
-    w.default.isFocused() ? (this.scale.setValue(0), this.opacity.setValue(0), r.default.parallel([r.default.timing(this.scale, {
+    B.default.isFocused() ? (this.scale.setValue(0), this.opacity.setValue(0), r.default.parallel([r.default.timing(this.scale, {
       toValue: 1,
       duration: t ? 200 : 300,
       easing: r.default.Easing.inOut(r.default.Easing.back())
@@ -112,7 +110,7 @@ class eu extends l.PureComponent {
       count: i,
       burst_count: l,
       colors: n,
-      isBurstReaction: s,
+      isBurstReaction: o,
       hideCount: d,
       emoji: c,
       readOnly: p,
@@ -127,24 +125,24 @@ class eu extends l.PureComponent {
     } = this.props, {
       shouldShowTooltip: A,
       tooltipTextAria: S,
-      reactionRef: v,
-      tooltipPositionKey: N
-    } = this.state, L = R ? el : ea, M = {
+      reactionRef: N,
+      tooltipPositionKey: P
+    } = this.state, L = R ? ei : et, y = {
       transform: [{
         scale: this.scale
       }],
       opacity: this.opacity
-    }, y = s ? l : i;
-    if (s && null != n) {
+    }, x = o ? l : i;
+    if (o && null != n) {
       var j;
       let {
         accentColor: i,
         backgroundColor: a,
         opacity: l
-      } = n, o = null !== (j = (0, u.hex2rgb)(null != a ? a : "", l)) && void 0 !== j ? j : "";
-      this.isMe() && (M.borderColor = a), M.background = o, e = i, t = i
+      } = n, s = null !== (j = (0, u.hex2rgb)(null != a ? a : "", l)) && void 0 !== j ? j : "";
+      this.isMe() && (y.borderColor = a), y.background = s, e = i, t = i
     }
-    let U = null == v ? void 0 : v.getBoundingClientRect(),
+    let U = null == N ? void 0 : N.getBoundingClientRect(),
       b = null != O && null != U,
       D = null == O;
     return (0, a.jsx)(a.Fragment, {
@@ -155,18 +153,18 @@ class eu extends l.PureComponent {
         nudgeAlignIntoViewport: !0,
         position: "top",
         align: "center",
-        positionKey: N,
+        positionKey: P,
         children: () => (0, a.jsx)("div", {
           onMouseEnter: this.handleEnter,
           onMouseLeave: this.handleLeave,
           ref: this.handleSetReactionRef,
           children: (0, a.jsx)(r.default.div, {
-            className: o(L.reaction, g, {
+            className: s(L.reaction, g, {
               [L.reactionMe]: this.isMe(),
               [L.reactionReadOnly]: p && !T && !E && !m,
               [L.shakeReaction]: C && null == O
             }),
-            style: M,
+            style: y,
             children: (0, a.jsx)(h.Popout, {
               renderPopout: this.renderLurkerModeUpsellPopout,
               position: "top",
@@ -175,23 +173,23 @@ class eu extends l.PureComponent {
                 className: L.reactionInner,
                 onClick: this.handleClick,
                 "aria-disabled": p,
-                "aria-label": (0, x.getAccessibleEmojiDisplayName)(this.isMe(), y, c, s),
+                "aria-label": (0, M.getAccessibleEmojiDisplayName)(this.isMe(), x, c, o),
                 "aria-pressed": this.isMe(),
                 children: [(0, a.jsx)("div", {
-                  className: o({
-                    [L.burstGlow]: s
+                  className: s({
+                    [L.burstGlow]: o
                   }),
                   style: {
                     boxShadow: "0 0 16px ".concat(t)
                   }
                 }), (0, a.jsxs)("div", {
-                  children: [s ? (0, a.jsxs)(a.Fragment, {
+                  children: [o ? (0, a.jsxs)(a.Fragment, {
                     children: [b && (0, a.jsx)(_.default, {
                       messageId: I.id,
                       emoji: c,
                       startPosition: O,
                       targetPosition: U
-                    }), D && (0, a.jsx)(Q.default, {
+                    }), D && (0, a.jsx)(Z.default, {
                       count: l,
                       emoji: c,
                       channelId: I.getChannelId(),
@@ -200,7 +198,7 @@ class eu extends l.PureComponent {
                       color: t
                     })]
                   }) : null, (0, a.jsx)(f.default, {
-                    className: o({
+                    className: s({
                       [L.hideEmoji]: C
                     }),
                     emojiId: c.id,
@@ -208,14 +206,14 @@ class eu extends l.PureComponent {
                     size: "reaction",
                     animated: c.animated
                   })]
-                }), d ? null : (0, a.jsx)(V.default, {
+                }), d ? null : (0, a.jsx)(w.default, {
                   className: L.reactionCount,
-                  value: y,
+                  value: x,
                   color: e,
-                  digitWidth: eo
-                }), (0, a.jsx)(P.default, {
-                  count: y,
-                  reactionRef: v
+                  digitWidth: el
+                }), (0, a.jsx)(v.default, {
+                  count: x,
+                  reactionRef: N
                 })]
               })
             })
@@ -225,7 +223,7 @@ class eu extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), this.isReactionEventActive = !1, this.isKeyboardNavigation = !1, this.scale = new r.default.Value(1), this.opacity = new r.default.Value(1), this.timeout = new c.Timeout, this.hideTimeout = new c.Timeout, this.ctaRef = l.createRef(), this.type = z.ReactionTypes.NORMAL, this.colors = {
+    super(...e), this.isReactionEventActive = !1, this.isKeyboardNavigation = !1, this.scale = new r.default.Value(1), this.opacity = new r.default.Value(1), this.timeout = new c.Timeout, this.hideTimeout = new c.Timeout, this.ctaRef = l.createRef(), this.type = W.ReactionTypes.NORMAL, this.colors = {
       backgroundColor: void 0,
       borderColor: void 0,
       textColor: void 0
@@ -235,7 +233,7 @@ class eu extends l.PureComponent {
       tooltipTextAria: null,
       reactionRef: null,
       tooltipPositionKey: void 0
-    }, this.hasShownTooltip = !1, this.nonce = (0, s.v4)(), this.userCanBurstReact = () => this.props.userHasPremium, this.handleClick = e => {
+    }, this.hasShownTooltip = !1, this.nonce = (0, o.v4)(), this.userCanBurstReact = () => this.props.userHasPremium, this.handleClick = e => {
       e.stopPropagation();
       let {
         message: t,
@@ -243,31 +241,31 @@ class eu extends l.PureComponent {
         readOnly: a,
         isBurstReaction: l,
         isPendingMember: n,
-        isLurking: o,
-        isGuest: s,
+        isLurking: s,
+        isGuest: o,
         isForumToolbar: r
-      } = this.props, u = U.default.getChannel(t.getChannelId());
-      if (o || s) {
+      } = this.props, u = x.default.getChannel(t.getChannelId());
+      if (s || o) {
         var d, c;
         null === (c = this.ctaRef) || void 0 === c || null === (d = c.current) || void 0 === d || d.focus();
         return
       }
       let p = t.getChannelId(),
-        h = r ? y.ReactionLocations.FORUM_TOOLBAR : y.ReactionLocations.MESSAGE;
+        h = r ? L.ReactionLocations.FORUM_TOOLBAR : L.ReactionLocations.MESSAGE;
       if (l && !this.userCanBurstReact()) {
-        (0, M.openBurstReactionsUpsellModal)({
+        (0, P.openBurstReactionsUpsellModal)({
           analytics: {
-            type: ee.PremiumUpsellTypes.BURST_REACTION_UPSELL,
-            page: (null == u ? void 0 : u.getGuildId()) != null ? $.AnalyticsPages.GUILD_CHANNEL : $.AnalyticsPages.DM_CHANNEL,
-            section: null != u ? (0, x.getBurstAnalyticsSection)(u) : void 0,
-            object: $.AnalyticsObjects.EMOJI_REACTION_UPSELL
+            type: Q.PremiumUpsellTypes.BURST_REACTION_UPSELL,
+            page: (null == u ? void 0 : u.getGuildId()) != null ? q.AnalyticsPages.GUILD_CHANNEL : q.AnalyticsPages.DM_CHANNEL,
+            section: null != u ? (0, M.getBurstAnalyticsSection)(u) : void 0,
+            object: q.AnalyticsObjects.EMOJI_REACTION_UPSELL
           }
         });
         return
       }
-      n ? this.handleShowVerificationGate() : !a && (this.isMe() ? (0, y.removeReaction)(p, t.id, i, void 0, h, {
+      n ? this.handleShowVerificationGate() : !a && (this.isMe() ? (0, L.removeReaction)(p, t.id, i, void 0, h, {
         burst: l
-      }) : (0, y.addReaction)(p, t.id, i, h, {
+      }) : (0, L.addReaction)(p, t.id, i, h, {
         burst: l
       }))
     }, this.handleEnter = e => {
@@ -277,26 +275,26 @@ class eu extends l.PureComponent {
         type: a,
         reduceMotion: l,
         animateEmoji: n,
-        autoUnfurlReactionTooltip: o
-      } = this.props, s = a === z.ReactionTypes.BURST;
-      s && !this.isReactionEventActive && !l && n && (0, y.playBurstReaction)({
+        autoUnfurlReactionTooltip: s
+      } = this.props, o = a === W.ReactionTypes.BURST;
+      o && !this.isReactionEventActive && !l && n && (0, L.playBurstReaction)({
         channelId: i.getChannelId(),
         messageId: i.id,
         emoji: t,
-        key: J.BurstReactionEffectSource.HOVER
-      }), this.isReactionEventActive = !0, this.isKeyboardNavigation = "focus" === e.type, this.timeout.start(s ? 750 : o ? 200 : 500, this.showTooltip, !1)
+        key: K.BurstReactionEffectSource.HOVER
+      }), this.isReactionEventActive = !0, this.isKeyboardNavigation = "focus" === e.type, this.timeout.start(o ? 750 : s ? 200 : 500, this.showTooltip, !1)
     }, this.handleEnterTooltip = () => {
       this.isReactionEventActive = !0, this.handleShowTooltip()
     }, this.handleShowTooltip = () => {
-      this.hideTimeout.stop(), this.isReactionEventActive && (this.updateTooltipText(), D.default.addChangeListener(this.updateTooltipText))
+      this.hideTimeout.stop(), this.isReactionEventActive && (this.updateTooltipText(), U.default.addChangeListener(this.updateTooltipText))
     }, this.showTooltip = () => {
       this.handleShowTooltip(), this.isReactionEventActive && this.trackReactionTooltipViewed(), this.hasShownTooltip = !0
     }, this.handleLeave = () => {
-      this.isReactionEventActive = !1, this.isKeyboardNavigation = !1, this.timeout.stop(), D.default.removeChangeListener(this.updateTooltipText), this.hideTimeout.start(200, this.hideTooltip, !1)
+      this.isReactionEventActive = !1, this.isKeyboardNavigation = !1, this.timeout.stop(), U.default.removeChangeListener(this.updateTooltipText), this.hideTimeout.start(200, this.hideTooltip, !1)
     }, this.hideTooltip = () => {
       this.setState({
         shouldShowTooltip: !1
-      }), this.hasShownTooltip && K.default.track($.AnalyticEvents.CLOSE_POPOUT, {
+      }), this.hasShownTooltip && G.default.track(q.AnalyticEvents.CLOSE_POPOUT, {
         nonce: this.nonce
       })
     }, this.isMe = () => {
@@ -305,13 +303,13 @@ class eu extends l.PureComponent {
         me_burst: t,
         type: i
       } = this.props;
-      return er(e, t, i)
+      return es(e, t, i)
     }, this.updateTooltipText = () => {
       let {
         message: e,
         emoji: t,
         type: i
-      } = this.props, a = (0, q.getReactionTooltipText)(e, t, i), l = this.isKeyboardNavigation ? a : (0, q.getReactionTooltipText)(e, t, i, $.NOOP);
+      } = this.props, a = (0, X.getReactionTooltipText)(e, t, i), l = this.isKeyboardNavigation ? a : (0, X.getReactionTooltipText)(e, t, i, q.NOOP);
       this.setState({
         tooltipText: l,
         tooltipTextAria: a,
@@ -323,16 +321,16 @@ class eu extends l.PureComponent {
       } = e, {
         message: i,
         isLurking: l
-      } = this.props, n = U.default.getChannel(i.getChannelId()), o = b.default.getGuild(null == n ? void 0 : n.getGuildId());
-      return l && null != o ? (0, a.jsx)(N.default, {
+      } = this.props, n = x.default.getChannel(i.getChannelId()), s = j.default.getGuild(null == n ? void 0 : n.getGuildId());
+      return l && null != s ? (0, a.jsx)(S.default, {
         ctaRef: this.ctaRef,
-        type: N.LurkerModeUpsellPopoutTypes.REACTIONS,
-        guild: o,
+        type: S.LurkerModeUpsellPopoutTypes.REACTIONS,
+        guild: s,
         closePopout: t
       }) : (0, a.jsx)(a.Fragment, {})
     }, this.renderEmojiDetails = () => {
       let e = this.props.emoji;
-      return null != e.id && (0, a.jsx)(ep, {
+      return null != e.id && (0, a.jsx)(ed, {
         emojiId: e.id,
         refreshPositionKey: this.refreshTooltipPositionKey,
         onClose: this.handleLeave,
@@ -346,33 +344,33 @@ class eu extends l.PureComponent {
         me_burst: l,
         isBurstReaction: n = !1
       } = this.props, {
-        tooltipText: s
+        tooltipText: o
       } = this.state, r = i => {
-        let a = U.default.getChannel(t.getChannelId());
+        let a = x.default.getChannel(t.getChannelId());
         if (null == a) return;
         this.handleLeave();
-        let l = n ? z.ReactionTypes.BURST : z.ReactionTypes.NORMAL;
-        es(a, t, {
+        let l = n ? W.ReactionTypes.BURST : W.ReactionTypes.NORMAL;
+        en(a, t, {
           emoji: e,
           reactionType: l
         })
-      }, u = "string" == typeof s, d = u ? "" === s.trim() : null == s, c = () => d || null == s ? null : (0, a.jsx)(h.Text, {
+      }, u = "string" == typeof o, d = u ? "" === o.trim() : null == o, c = () => d || null == o ? null : (0, a.jsx)(h.Text, {
         variant: "text-sm/normal",
-        className: en.reactionTooltipText,
-        "aria-label": s,
-        children: s
+        className: ea.reactionTooltipText,
+        "aria-label": o,
+        children: o
       });
-      return i === z.ReactionTypes.BURST ? (0, a.jsxs)(p.Dialog, {
-        className: en.reactionTooltip,
+      return i === W.ReactionTypes.BURST ? (0, a.jsxs)(p.Dialog, {
+        className: ea.reactionTooltip,
         onMouseEnter: this.handleEnterTooltip,
         onMouseLeave: this.handleLeave,
         children: [(0, a.jsx)(h.Clickable, {
-          className: en.burstReactionTooltipInner,
+          className: ea.burstReactionTooltipInner,
           onClick: r,
           children: (0, a.jsxs)("div", {
-            className: en.burstReactionTooltipMessage,
+            className: ea.burstReactionTooltipMessage,
             children: [(0, a.jsx)(f.default, {
-              className: en.reactionTooltipEmoji,
+              className: ea.reactionTooltipEmoji,
               emojiId: e.id,
               emojiName: e.name,
               animated: e.animated,
@@ -380,45 +378,45 @@ class eu extends l.PureComponent {
             }), c()]
           })
         }), (() => {
-          let e = k.default.getCurrentUser();
+          let e = D.default.getCurrentUser();
           if (l) return (0, a.jsxs)("div", {
-            className: o(en.burstReactionTooltipPrompt, en.burstReactionTooltipSpacer),
-            children: [(0, W.isPremium)(e) && (0, a.jsx)(H.default, {
-              className: en.burstReactionTooltipNitroIcon,
-              color: F.GradientCssUrls.PREMIUM_TIER_2
+            className: s(ea.burstReactionTooltipPrompt, ea.burstReactionTooltipSpacer),
+            children: [(0, H.isPremium)(e) && (0, a.jsx)(F.default, {
+              className: ea.burstReactionTooltipNitroIcon,
+              color: k.GradientCssUrls.PREMIUM_TIER_2
             }), (0, a.jsx)(h.Text, {
               variant: "text-sm/normal",
-              className: en.reactionTooltipText,
+              className: ea.reactionTooltipText,
               "aria-label": "super reaction tooltip cta",
-              children: et.default.Messages.SUPER_REACTION_TOOLTIP_CTA_REACTED
+              children: $.default.Messages.SUPER_REACTION_TOOLTIP_CTA_REACTED
             })]
           });
           if (this.userCanBurstReact()) return (0, a.jsxs)("div", {
-            className: o(en.burstReactionTooltipPrompt, en.burstReactionTooltipSpacer, en.burstReactionTooltipPromptClickable),
-            children: [(0, a.jsx)(H.default, {
-              className: en.burstReactionTooltipNitroIcon,
-              color: F.GradientCssUrls.PREMIUM_TIER_2
+            className: s(ea.burstReactionTooltipPrompt, ea.burstReactionTooltipSpacer, ea.burstReactionTooltipPromptClickable),
+            children: [(0, a.jsx)(F.default, {
+              className: ea.burstReactionTooltipNitroIcon,
+              color: k.GradientCssUrls.PREMIUM_TIER_2
             }), (0, a.jsx)(h.Clickable, {
               onClick: this.handleClick,
               children: (0, a.jsx)(h.Text, {
                 variant: "text-sm/normal",
-                className: en.reactionTooltipText,
+                className: ea.reactionTooltipText,
                 "aria-label": "super reaction tooltip cta",
-                children: et.default.Messages.SUPER_REACTION_TOOLTIP_CTA
+                children: $.default.Messages.SUPER_REACTION_TOOLTIP_CTA
               })
             })]
           });
           if (!this.userCanBurstReact() && !this.isKeyboardNavigation) return (0, a.jsx)("div", {
-            className: o(en.burstReactionTooltipPrompt, en.burstReactionTooltipSpacer),
+            className: s(ea.burstReactionTooltipPrompt, ea.burstReactionTooltipSpacer),
             children: (0, a.jsxs)("div", {
               children: [(0, a.jsx)(h.Text, {
                 variant: "text-sm/normal",
                 "aria-label": "super reaction tooltip upsell",
-                children: et.default.Messages.SUPER_REACTION_TOOLTIP_UPSELL
-              }), (0, a.jsx)(L.default, {
-                subscriptionTier: ee.PremiumSubscriptionSKUs.TIER_2,
-                buttonText: et.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
-                className: en.burstReactionTooltipUpsellCta,
+                children: $.default.Messages.SUPER_REACTION_TOOLTIP_UPSELL
+              }), (0, a.jsx)(N.default, {
+                subscriptionTier: Q.PremiumSubscriptionSKUs.TIER_2,
+                buttonText: $.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+                className: ea.burstReactionTooltipUpsellCta,
                 onClick: e => e.stopPropagation()
               })]
             })
@@ -426,15 +424,15 @@ class eu extends l.PureComponent {
           return null
         })(), this.renderEmojiDetails()]
       }) : (0, a.jsxs)(p.Dialog, {
-        className: en.reactionTooltip,
+        className: ea.reactionTooltip,
         onMouseEnter: this.handleEnterTooltip,
         onMouseLeave: this.handleLeave,
         children: [(0, a.jsx)(h.Clickable, {
           onClick: r,
           children: (0, a.jsxs)("div", {
-            className: en.reactionTooltipInner,
+            className: ea.reactionTooltipInner,
             children: [(0, a.jsx)(f.default, {
-              className: en.reactionTooltipEmoji,
+              className: ea.reactionTooltipEmoji,
               emojiId: e.id,
               emojiName: e.name,
               animated: e.animated,
@@ -453,9 +451,9 @@ class eu extends l.PureComponent {
         isPendingMember: t
       } = this.props;
       if (!t) return null;
-      let i = U.default.getChannel(e.getChannelId()),
-        a = b.default.getGuild(null == i ? void 0 : i.getGuildId());
-      null != a && (0, O.openMemberVerificationModal)(a.id)
+      let i = x.default.getChannel(e.getChannelId()),
+        a = j.default.getGuild(null == i ? void 0 : i.getGuildId());
+      null != a && (0, A.openMemberVerificationModal)(a.id)
     }, this.handleSetReactionRef = e => {
       this.setState({
         reactionRef: e
@@ -465,195 +463,164 @@ class eu extends l.PureComponent {
         emoji: e,
         message: t,
         type: i
-      } = this.props, a = k.default.getCurrentUser(), l = U.default.getChannel(t.getChannelId()), n = i === z.ReactionTypes.BURST, o = (0, W.isPremium)(a), s = n ? ee.PremiumUpsellTypes.EMOJI_IN_BURST_REACTION_HOVER : ee.PremiumUpsellTypes.EMOJI_IN_REACTION_HOVER;
-      n && !this.userCanBurstReact() && !o && (s = ee.PremiumUpsellTypes.EMOJI_IN_BURST_REACTION_HOVER_UPSELL), E.default.trackWithMetadata($.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
-        type: s,
+      } = this.props, a = D.default.getCurrentUser(), l = x.default.getChannel(t.getChannelId()), n = i === W.ReactionTypes.BURST, s = (0, H.isPremium)(a), o = n ? Q.PremiumUpsellTypes.EMOJI_IN_BURST_REACTION_HOVER : Q.PremiumUpsellTypes.EMOJI_IN_REACTION_HOVER;
+      n && !this.userCanBurstReact() && !s && (o = Q.PremiumUpsellTypes.EMOJI_IN_BURST_REACTION_HOVER_UPSELL), E.default.trackWithMetadata(q.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
+        type: o,
         expression_id: e.id,
         expression_name: e.name,
         is_animated: e.animated,
         is_custom: null != e.id,
         nonce: this.nonce
-      }), n && null != l && !o && !this.userCanBurstReact() && K.default.track($.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-        type: ee.PremiumUpsellTypes.BURST_REACTION_UPSELL,
+      }), n && null != l && !s && !this.userCanBurstReact() && G.default.track(q.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+        type: Q.PremiumUpsellTypes.BURST_REACTION_UPSELL,
         location: {
-          page: (null == l ? void 0 : l.getGuildId()) != null ? $.AnalyticsPages.GUILD_CHANNEL : $.AnalyticsPages.DM_CHANNEL,
-          section: (0, x.getBurstAnalyticsSection)(l),
-          object: $.AnalyticsObjects.EMOJI_REACTION_TOOLTIP_UPSELL
+          page: (null == l ? void 0 : l.getGuildId()) != null ? q.AnalyticsPages.GUILD_CHANNEL : q.AnalyticsPages.DM_CHANNEL,
+          section: (0, M.getBurstAnalyticsSection)(l),
+          object: q.AnalyticsObjects.EMOJI_REACTION_TOOLTIP_UPSELL
         }
       })
     }
   }
 }
-eu.defaultProps = {
+eo.defaultProps = {
   emojiSize: "jumbo"
 };
-let ed = l.memo(e => {
+let er = l.memo(e => {
     let {
       type: t,
       burst_colors: i,
       message: l,
       emoji: n
-    } = e, o = t === z.ReactionTypes.BURST, {
-      autoUnfurlReactionTooltip: s
-    } = (0, A.useInventoryGuildPacksUserExperiment)({
-      autoTrackExposure: !1
-    }), r = (0, I.useEmojiColorPalette)(o && null != i ? i : []), u = (0, d.useStateFromStores)([J.default], () => void 0 !== J.default.getEffectForEmojiId(l.getChannelId(), l.id, n)), c = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion), p = j.AnimateEmoji.useSetting(), h = k.default.getCurrentUser(), f = (0, W.isPremium)(h), T = (0, d.useStateFromStores)([J.default], () => J.default.getReactionPickerAnimation(l.id, n.name, n.id)), E = o && (u || null != T);
-    return (0, a.jsx)(eu, {
+    } = e, s = t === W.ReactionTypes.BURST, o = (0, I.useEmojiColorPalette)(s && null != i ? i : []), r = (0, d.useStateFromStores)([K.default], () => void 0 !== K.default.getEffectForEmojiId(l.getChannelId(), l.id, n)), u = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion), c = y.AnimateEmoji.useSetting(), p = D.default.getCurrentUser(), h = (0, H.isPremium)(p), f = (0, d.useStateFromStores)([K.default], () => K.default.getReactionPickerAnimation(l.id, n.name, n.id)), T = s && (r || null != f);
+    return (0, a.jsx)(eo, {
       ...e,
-      colors: r,
-      isBurstReaction: o,
-      hideEmoji: E,
-      userHasPremium: f,
-      reduceMotion: c,
-      animateEmoji: p,
-      animationStartPosition: T,
-      autoUnfurlReactionTooltip: s
+      colors: o,
+      isBurstReaction: s,
+      hideEmoji: T,
+      userHasPremium: h,
+      reduceMotion: u,
+      animateEmoji: c,
+      animationStartPosition: f
     })
   }),
-  ec = e => {
+  eu = e => {
     var t;
     let {
       emojiId: i,
       expressionSourceGuild: l,
       hasJoinedExpressionSourceGuild: n,
-      onClose: o,
-      packCollectionData: s,
-      popoutData: r,
-      currentGuildId: u,
-      nonce: d
+      onClose: s,
+      popoutData: o,
+      currentGuildId: r,
+      nonce: u
     } = e;
-    (0, C.useTrackOpenPopout)({
+    (0, O.useTrackOpenPopout)({
       emojiId: i,
-      currentGuildId: u,
-      popoutData: r,
+      currentGuildId: r,
+      popoutData: o,
       emojiSourceGuildId: null == l ? void 0 : l.id,
-      nonce: d
+      nonce: u
     });
-    let c = null !== (t = null == l ? void 0 : l.isDiscoverable()) && void 0 !== t && t,
-      p = s.collectEnabled,
-      f = null !== l && (c || p);
+    let d = null !== (t = null == l ? void 0 : l.isDiscoverable()) && void 0 !== t && t,
+      c = null !== l && d;
     return (0, a.jsx)(a.Fragment, {
-      children: f ? null == l ? null : (0, a.jsxs)(a.Fragment, {
+      children: c ? null == l ? null : (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("div", {
-          className: ei.reactionEmojiDetailsUnfurlGuildDetails,
-          children: (0, a.jsx)(X.GuildDetails, {
+          className: ee.reactionEmojiDetailsUnfurlGuildDetails,
+          children: (0, a.jsx)(z.GuildDetails, {
             expressionSourceGuild: l,
             hasJoinedExpressionSourceGuild: n,
-            isDisplayingJoinGuildButtonInPopout: r.type === Y.EmojiPopoutType.JOIN_GUILD
+            isDisplayingJoinGuildButtonInPopout: o.type === J.EmojiPopoutType.JOIN_GUILD
           })
-        }), (0, a.jsx)(X.EmojiPopoutList, {
+        }), (0, a.jsx)(z.EmojiPopoutList, {
           emojiId: i,
           expressionSourceGuild: l,
           hasJoinedEmojiSourceGuild: n,
-          onClose: o,
-          popoutData: r,
-          packCollectionData: s,
-          isDisplayingButtonInTopSection: !1,
-          nonce: d
+          onClose: s,
+          popoutData: o,
+          isDisplayingButtonInTopSection: !1
         })]
       }) : (0, a.jsx)(h.Text, {
         variant: "text-sm/normal",
-        "aria-label": r.type,
-        children: r.emojiDescription
+        "aria-label": o.type,
+        children: o.emojiDescription
       })
     })
   },
-  ep = e => {
+  ed = e => {
     var t;
     let {
       emojiId: i,
       refreshPositionKey: n,
-      onClose: s,
+      onClose: o,
       nonce: r
     } = e, {
       joinedEmojiSourceGuild: u
-    } = (0, d.useStateFromStoresObject)([g.default, b.default], () => {
+    } = (0, d.useStateFromStoresObject)([g.default, j.default], () => {
       let e = g.default.getCustomEmojiById(i);
       return {
-        joinedEmojiSourceGuild: (null == e ? void 0 : e.type) === R.EmojiTypes.GUILD ? b.default.getGuild(null == e ? void 0 : e.guildId) : void 0
+        joinedEmojiSourceGuild: (null == e ? void 0 : e.type) === R.EmojiTypes.GUILD ? j.default.getGuild(null == e ? void 0 : e.guildId) : void 0
       }
-    }), [c, p] = l.useState(void 0), [f, T] = l.useState(!1), [m, E] = l.useState(!1), [_, I] = l.useState(!1), C = null != u, O = (0, S.usePackCollectionData)({
-      expressionSourceGuild: c
-    }), A = O.autoUnfurlReactionTooltip, N = null !== (t = null == c ? void 0 : c.isDiscoverable()) && void 0 !== t && t, P = B.default.getGuildId(), L = null != P && (P === (null == c ? void 0 : c.id) || P === (null == u ? void 0 : u.id)), M = (0, Y.getEmojiPopoutData)({
-      isPremium: O.isPremium,
-      hasJoinedEmojiSourceGuild: C,
-      isDiscoverable: N,
-      packCollectionData: O,
-      emojiComesFromCurrentGuild: L,
+    }), [c, p] = l.useState(void 0), [f, T] = l.useState(!1), [m, E] = l.useState(!1), [_, I] = l.useState(!1), O = null != u, A = null !== (t = null == c ? void 0 : c.isDiscoverable()) && void 0 !== t && t, S = b.default.getGuildId(), v = null != S && (S === (null == c ? void 0 : c.id) || S === (null == u ? void 0 : u.id)), N = D.default.getCurrentUser(), P = (0, J.getEmojiPopoutData)({
+      isPremium: H.default.isPremium(N),
+      hasJoinedEmojiSourceGuild: O,
+      isDiscoverable: A,
+      emojiComesFromCurrentGuild: v,
       isUnusableRoleSubscriptionEmoji: !1,
       userIsRoleSubscriber: !1,
       isRoleSubscriptionEmoji: !1,
       shouldHideRoleSubscriptionCTA: !1
     });
     l.useEffect(() => {
-      let e = !f,
-        t = !A || _;
-      if (e && t) return;
-      let a = async () => {
+      if (!f || _) return;
+      let e = async () => {
         n(), E(!0);
-        let e = await v.default.getGuildFromEmojiId(i);
+        let e = await C.default.getGuildFromEmojiId(i);
         p(e), E(!1), I(!0), n()
       };
-      a()
-    }, [i, A, f, _, n]);
-    let y = !O.viewAndUseEnabled || C;
-    if (y) return null;
-    let x = () => {
+      e()
+    }, [i, f, _, n]);
+    if (O) return null;
+    let L = () => {
         T(!f)
       },
-      j = () => {
-        let e = et.default.Messages.INVENTORY_EMOJI_DETAILS_V2;
+      M = f && void 0 !== c;
+    return (0, a.jsxs)("div", {
+      children: [M ? (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)("div", {
+          className: ee.reactionEmojiDetailsDivider
+        }), null != P.emojiDescription && P.type !== J.EmojiPopoutType.UNAVAILABLE && (0, a.jsx)(h.Text, {
+          variant: "text-sm/normal",
+          "aria-label": P.type,
+          children: P.emojiDescription
+        })]
+      }) : (() => {
+        let e = $.default.Messages.INVENTORY_EMOJI_DETAILS_V2;
         return (0, a.jsxs)(h.Clickable, {
-          onClick: x,
-          className: ei.reactionEmojiDetailsClickable,
+          onClick: L,
+          className: ee.reactionEmojiDetailsClickable,
           children: [(0, a.jsx)(h.Text, {
             variant: "text-sm/normal",
             color: "none",
             "aria-label": e,
             children: e
-          }), (0, a.jsx)(G.default, {
+          }), (0, a.jsx)(V.default, {
             width: 16,
             height: 16,
-            className: o(ei.reactionEmojiDetailsArrow, {
-              [ei.reactionEmojiDetailsArrowCollapsed]: !f
+            className: s(ee.reactionEmojiDetailsArrow, {
+              [ee.reactionEmojiDetailsArrowCollapsed]: !f
             })
           })]
         })
-      },
-      U = f && void 0 !== c,
-      D = () => (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)("div", {
-          className: ei.reactionEmojiDetailsDivider
-        }), null != M.emojiDescription && M.type !== Y.EmojiPopoutType.UNAVAILABLE && (0, a.jsx)(h.Text, {
-          variant: "text-sm/normal",
-          "aria-label": M.type,
-          children: M.emojiDescription
-        })]
-      });
-    return A ? (0, a.jsxs)("div", {
-      children: [_ ? D() : null, m ? (0, a.jsx)(Z.PopoutLoadingAnimation, {
-        className: ei.emojiDetailsLoader
-      }) : _ && (0, a.jsx)(ec, {
+      })(), m ? (0, a.jsx)(Y.PopoutLoadingAnimation, {
+        className: ee.emojiDetailsLoader
+      }) : M && (0, a.jsx)(eu, {
         emojiId: i,
         expressionSourceGuild: c,
-        hasJoinedExpressionSourceGuild: C,
-        onClose: s,
-        popoutData: M,
-        packCollectionData: O,
-        currentGuildId: P,
-        nonce: r
-      })]
-    }) : (0, a.jsxs)("div", {
-      children: [U ? D() : j(), m ? (0, a.jsx)(Z.PopoutLoadingAnimation, {
-        className: ei.emojiDetailsLoader
-      }) : U && (0, a.jsx)(ec, {
-        emojiId: i,
-        expressionSourceGuild: c,
-        hasJoinedExpressionSourceGuild: C,
-        onClose: s,
-        popoutData: M,
-        packCollectionData: O,
-        currentGuildId: P,
+        hasJoinedExpressionSourceGuild: O,
+        onClose: o,
+        popoutData: P,
+        currentGuildId: S,
         nonce: r
       })]
     })

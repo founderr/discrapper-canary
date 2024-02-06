@@ -22,14 +22,6 @@ function u() {
         return t => (0, a.jsx)(e, {
           renderModalProps: t
         })
-      },
-      InventoryTryPacksModal: async () => {
-        let {
-          default: e
-        } = await r.el("953314").then(r.bind(r, "953314"));
-        return t => (0, a.jsx)(e, {
-          renderModalProps: t
-        })
       }
     },
     t = Object.keys(e).map(e => ({

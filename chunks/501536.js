@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return M
   },
   getAutocompleteTitleId: function() {
-    return k
+    return b
   },
   default: function() {
     return U
@@ -42,10 +42,10 @@ function M(e) {
   return null != e ? "autocomplete-".concat(e) : null
 }
 
-function k(e) {
+function b(e) {
   return "autocomplete-".concat(e, "-title")
 }
-let b = i.createContext(null);
+let k = i.createContext(null);
 class P extends i.PureComponent {
   isSelectable() {
     return this.selectable
@@ -122,7 +122,7 @@ class L extends i.PureComponent {
       id: r,
       ...s
     } = this.props;
-    return i.Children.count(e) > 0 ? (0, l.jsx)(b.Provider, {
+    return i.Children.count(e) > 0 ? (0, l.jsx)(k.Provider, {
       value: {
         id: null != r ? r : ""
       },
@@ -176,11 +176,11 @@ L.Generic = class e extends P {
     title: t,
     className: n,
     children: r
-  } = e, s = i.useContext(b);
+  } = e, s = i.useContext(k);
   return (0, l.jsx)("div", {
     className: O.base,
     children: (0, l.jsxs)(d.Heading, {
-      id: k(s.id),
+      id: b(s.id),
       className: o(O.contentTitle, n),
       variant: "heading-deprecated-12/semibold",
       children: [t, r]
@@ -328,30 +328,25 @@ L.Generic = class e extends P {
     let {
       emoji: e,
       sentinel: t,
-      guild: n,
-      pack: i
-    } = this.props, r = null != e.url && "" !== e.url ? (0, l.jsx)("img", {
+      guild: n
+    } = this.props, i = null != e.url && "" !== e.url ? (0, l.jsx)("img", {
       alt: "",
       className: O.emojiImage,
       src: e.url
     }) : (0, l.jsx)("span", {
       className: O.emojiRaw,
       children: e.surrogates
-    }), o = null != i ? (0, l.jsx)(I.AutocompleteRowContentSecondary, {
-      children: R.default.Messages.EMOJI_CATEGORY_PACK.format({
-        packName: i.name
-      })
-    }) : null != n ? (0, l.jsx)(I.AutocompleteRowContentSecondary, {
+    }), r = null != n ? (0, l.jsx)(I.AutocompleteRowContentSecondary, {
       children: n.name
     }) : null;
     return (0, l.jsxs)(I.AutocompleteRowContent, {
       children: [(0, l.jsx)(I.AutocompleteRowIcon, {
-        children: r
+        children: i
       }), (0, l.jsx)(I.AutocompleteRowContentPrimary, {
         children: (0, l.jsxs)(I.AutocompleteRowHeading, {
           children: [t, e.name, t]
         })
-      }), o]
+      }), r]
     })
   }
   constructor(...e) {

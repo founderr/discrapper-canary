@@ -29,8 +29,8 @@ var r = n("448105"),
   S = n("233069"),
   _ = n("766274"),
   T = n("42203"),
-  I = n("923959"),
-  N = n("26989"),
+  N = n("923959"),
+  I = n("26989"),
   v = n("305961"),
   R = n("377253"),
   b = n("957255"),
@@ -49,8 +49,8 @@ var r = n("448105"),
   H = n("49111"),
   V = n("375822"),
   K = n("724210"),
-  j = n("782340");
-let Y = new d.default("AutocompleteUtils"),
+  Y = n("782340");
+let j = new d.default("AutocompleteUtils"),
   Q = () => !0,
   W = /(\t|\s)/,
   z = [];
@@ -65,7 +65,7 @@ function ee() {
     t = arguments.length > 1 ? arguments[1] : void 0;
   return 1e3 * e * (null != t ? t : 1)
 }
-let et = [I.GUILD_SELECTABLE_CHANNELS_KEY, I.GUILD_VOCAL_CHANNELS_KEY, H.ChannelTypes.GUILD_CATEGORY];
+let et = [N.GUILD_SELECTABLE_CHANNELS_KEY, N.GUILD_VOCAL_CHANNELS_KEY, H.ChannelTypes.GUILD_CATEGORY];
 
 function en(e, t) {
   let {
@@ -88,7 +88,7 @@ function en(e, t) {
       }(r, e)) return 3;
     if (i && a(r, e)) return 1
   } catch (e) {
-    Y.error(e)
+    j.error(e)
   }
   return 0
 }
@@ -106,10 +106,10 @@ function er(e) {
     allowSnowflake: i
   } = e, u = D.default.getUsers(), s = O.default.getGuildId(), c = t.toLocaleLowerCase(), d = (0, q.normalize)(c), f = [], p = [], h = n.length, m = 0, g = 0;
   for (; m < h;) {
-    var E, C, y, L, A, S, T, I, v;
+    var E, C, y, L, A, S, T, N, v;
     let e, l;
     let o = n[m];
-    o instanceof _.default ? (l = o, e = null === (C = N.default.getNick(s, l.id)) || void 0 === C ? void 0 : C.toLocaleLowerCase()) : (e = null === (y = o.nick) || void 0 === y ? void 0 : y.toLocaleLowerCase(), l = u[o.userId]);
+    o instanceof _.default ? (l = o, e = null === (C = I.default.getNick(s, l.id)) || void 0 === C ? void 0 : C.toLocaleLowerCase()) : (e = null === (y = o.nick) || void 0 === y ? void 0 : y.toLocaleLowerCase(), l = u[o.userId]);
     let h = null === (E = B.default.getGlobalName(l)) || void 0 === E ? void 0 : E.toLocaleLowerCase();
     if (null == r || r(l)) {
       let n = l.username.toLocaleLowerCase(),
@@ -135,7 +135,7 @@ function er(e) {
         type: V.AutocompleterResultTypes.USER,
         record: l,
         score: 1,
-        comparator: null !== (I = null != h ? h : e) && void 0 !== I ? I : n,
+        comparator: null !== (N = null != h ? h : e) && void 0 !== N ? N : n,
         sortable: null !== (v = null != m ? m : o) && void 0 !== v ? v : r
       }), g += 1)
     }
@@ -160,12 +160,12 @@ function ei(e, t) {
     if (null == e || e.isNonUserBot() && !e.isClyde()) return !1;
     let t = n.getGuildId();
     if (null == t) return !0;
-    let l = N.default.getMember(t, e.id);
+    let l = I.default.getMember(t, e.id);
     return el(l)
   }).map(e => {
     var t;
     let l = n.getGuildId(),
-      r = null != l ? N.default.getMember(l, e.id) : null;
+      r = null != l ? I.default.getMember(l, e.id) : null;
     return {
       type: V.AutocompleterResultTypes.USER,
       record: e,
@@ -234,7 +234,7 @@ var eu = {
         let e = ei(o.id, r);
         if (e.length > 0) return e
       }
-      t = N.default.getMembers(c.guild_id).filter(el), a && w.default.requestMembers(c.guild_id, l, r)
+      t = I.default.getMembers(c.guild_id).filter(el), a && w.default.requestMembers(c.guild_id, l, r)
     }
     return er({
       query: l,
@@ -263,7 +263,7 @@ var eu = {
       let e = ei(U.default.getChannelId(t), l);
       if (e.length > 0) return e
     }
-    let o = N.default.getMembers(t).filter(el);
+    let o = I.default.getMembers(t).filter(el);
     return r && n.length > 0 && w.default.requestMembers(t, n, l), er({
       query: n,
       members: o,
@@ -290,7 +290,7 @@ var eu = {
         limit: r = H.MAX_AUTOCOMPLETE_RESULTS,
         fuzzy: a = !0,
         filter: i = Q,
-        type: c = I.GUILD_SELECTABLE_CHANNELS_KEY,
+        type: c = N.GUILD_SELECTABLE_CHANNELS_KEY,
         allowEmptyQueries: d = !1,
         requireVocalConnectAccess: f = !0,
         boosters: p = {},
@@ -318,12 +318,12 @@ var eu = {
         }
         return n
       }(n, d);
-    t = null != l ? u(I.default.getChannels(l)[c]).map(e => e.channel).concat(L.default.computeAllActiveJoinedThreads(l)).value() : u(T.default.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(L.default.computeAllActiveJoinedThreads()).value();
+    t = null != l ? u(N.default.getChannels(l)[c]).map(e => e.channel).concat(L.default.computeAllActiveJoinedThreads(l)).value() : u(T.default.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(L.default.computeAllActiveJoinedThreads()).value();
     let g = {},
       E = [];
     for (let e of t) {
-      var C, y, A, _, N;
-      if (C = c, y = e.type, A = null != l, !(C === y || (A || (0, S.isGuildChannelType)(y)) && (C === I.GUILD_SELECTABLE_CHANNELS_KEY ? (0, S.isGuildSelectableChannelType)(y) || (0, S.isGuildVocalChannelType)(y) : C === I.GUILD_VOCAL_CHANNELS_KEY && (0, S.isGuildVocalChannelType)(y))) || (0, S.isGuildChannelType)(e.type) && !b.default.can(f ? e.accessPermissions : H.Permissions.VIEW_CHANNEL, e) || !i(e)) continue;
+      var C, y, A, _, I;
+      if (C = c, y = e.type, A = null != l, !(C === y || (A || (0, S.isGuildChannelType)(y)) && (C === N.GUILD_SELECTABLE_CHANNELS_KEY ? (0, S.isGuildSelectableChannelType)(y) || (0, S.isGuildVocalChannelType)(y) : C === N.GUILD_VOCAL_CHANNELS_KEY && (0, S.isGuildVocalChannelType)(y))) || (0, S.isGuildChannelType)(e.type) && !b.default.can(f ? e.accessPermissions : H.Permissions.VIEW_CHANNEL, e) || !i(e)) continue;
       let t = [...m],
         r = e.name.toLocaleLowerCase(),
         u = h && n === e.id,
@@ -355,7 +355,7 @@ var eu = {
         }
         if (0 !== o && !(t.length > 1) && (1 !== t.length || t[0].isFullMatch || u)) {
           ;
-          if (_ = c, N = e.type, _ === I.GUILD_SELECTABLE_CHANNELS_KEY && (0, S.isGuildVocalChannelType)(N)) o = Math.max(o - 1, .5);
+          if (_ = c, I = e.type, _ === N.GUILD_SELECTABLE_CHANNELS_KEY && (0, S.isGuildVocalChannelType)(I)) o = Math.max(o - 1, .5);
           E.push({
             type: (0, S.isGuildVocalChannelType)(e.type) ? V.AutocompleterResultTypes.VOICE_CHANNEL : V.AutocompleterResultTypes.TEXT_CHANNEL,
             record: e,
@@ -512,7 +512,7 @@ var eu = {
         user: t,
         score: l,
         comparator: r,
-        nick: N.default.getNick(n.guild_id, t.id),
+        nick: I.default.getNick(n.guild_id, t.id),
         status: M.default.getStatus(t.id)
       }
     }) : [], E = g.length, C = t.toLowerCase(), y = [];
@@ -602,13 +602,13 @@ var eu = {
       queryLower: l
     }, a = ((0, p.canSeeGuildHome)(n.id) || (0, m.canSeeOnboardingHome)(n.id)) && !n.hasFeature(H.GuildFeatures.HUB), i = n.hasFeature(H.GuildFeatures.COMMUNITY), u = (0, h.isGuildOnboardingAvailable)(n) && n.hasFeature(H.GuildFeatures.COMMUNITY), o = [{
       id: K.StaticChannelId.SERVER_GUIDE,
-      name: j.default.Messages.SERVER_GUIDE
+      name: Y.default.Messages.SERVER_GUIDE
     }, {
       id: K.StaticChannelId.CHANNEL_BROWSER,
-      name: j.default.Messages.CHANNEL_BROWSER_TITLE
+      name: Y.default.Messages.CHANNEL_BROWSER_TITLE
     }, {
       id: K.StaticChannelId.CUSTOMIZE_COMMUNITY,
-      name: j.default.Messages.CHANNELS_AND_ROLES
+      name: Y.default.Messages.CHANNELS_AND_ROLES
     }], s = [];
     for (let e of o) {
       if (e.id === K.StaticChannelId.SERVER_GUIDE && !a || e.id === K.StaticChannelId.CHANNEL_BROWSER && !i || e.id === K.StaticChannelId.CUSTOMIZE_COMMUNITY && !u) continue;
@@ -627,7 +627,7 @@ var eu = {
     let {
       query: t,
       channel: n,
-      type: l = I.GUILD_SELECTABLE_CHANNELS_KEY,
+      type: l = N.GUILD_SELECTABLE_CHANNELS_KEY,
       channelTypes: r
     } = e, a = this.queryChannels({
       query: t,
@@ -695,21 +695,19 @@ var eu = {
       query: t,
       channel: n,
       intention: l,
-      canViewAndUsePackEmoji: r,
-      maxCount: a = H.MAX_AUTOCOMPLETE_RESULTS,
-      matchComparator: i
+      maxCount: r = H.MAX_AUTOCOMPLETE_RESULTS,
+      matchComparator: a
     } = e;
     A.FrecencyUserSettingsActionCreators.loadIfNecessary();
-    let u = f.default.searchWithoutFetchingLatest({
+    let i = f.default.searchWithoutFetchingLatest({
       channel: n,
       query: t,
-      count: a,
+      count: r,
       intention: l,
-      canViewAndUsePackEmoji: r,
-      matchComparator: i
+      matchComparator: a
     });
     return {
-      emojis: u
+      emojis: i
     }
   },
   queryStickers(e) {

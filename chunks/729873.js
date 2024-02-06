@@ -1,156 +1,128 @@
 "use strict";
 i.r(t), i.d(t, {
   EmojiPickerInspector: function() {
-    return M
+    return R
   }
 });
 var n = i("37983"),
   l = i("884691"),
   s = i("446674"),
-  a = i("77078"),
-  r = i("206230"),
+  r = i("77078"),
+  a = i("206230"),
   o = i("858619"),
   u = i("575226"),
   c = i("305781"),
   d = i("986632"),
   f = i("562323"),
-  E = i("166465"),
-  m = i("845579"),
-  I = i("305961"),
-  p = i("471671"),
-  g = i("351825"),
-  _ = i("315102"),
-  S = i("402671"),
-  h = i("788506"),
-  C = i("352046"),
-  T = i("917764"),
-  N = i("83017"),
-  v = i("913631"),
-  A = i("115279"),
-  y = i("782340"),
-  j = i("783935");
+  E = i("845579"),
+  m = i("305961"),
+  I = i("471671"),
+  p = i("351825"),
+  g = i("315102"),
+  _ = i("788506"),
+  S = i("352046"),
+  h = i("917764"),
+  C = i("83017"),
+  T = i("115279"),
+  N = i("782340"),
+  v = i("783935");
 
-function R(e) {
+function A(e) {
   return "animated" in e
 }
-let O = e => {
+let y = e => {
     let {
       inspectedEmoji: t,
-      channel: i,
-      guildId: n,
-      intention: l,
-      pack: s,
-      guild: a
-    } = e, r = R(t);
-    if (null != s) {
-      let e = !!r && S.default.isEmojiPremiumLocked({
-        emoji: t,
-        channel: i,
-        intention: l,
-        canViewAndUsePackEmoji: !0,
-        guildId: n
-      });
-      return e ? y.default.Messages.INVENTORY_LOCKED_PACK_EMOJI_UPSELL.format({
-        packName: s.name
-      }) : y.default.Messages.EMOJI_FROM_PACK_V2.format({
-        packName: s.name
-      })
-    }
-    return null != a && r ? y.default.Messages.EMOJI_FROM_GUILD.format({
-      guildName: a.name
+      guild: i
+    } = e, n = A(t);
+    return null != i && n ? N.default.Messages.EMOJI_FROM_GUILD.format({
+      guildName: i.name
     }) : null
   },
-  M = l.memo(function(e) {
+  R = l.memo(function(e) {
     let t, {
         className: i,
-        emojiGrid: S,
-        guildId: y,
-        pickerIntention: M,
-        channel: x
+        emojiGrid: N,
+        guildId: R,
+        pickerIntention: j,
+        channel: O
       } = e,
-      P = d.EmojiPickerStore.useStore(e => e.inspectedExpressionPosition),
-      L = l.useMemo(() => {
+      M = d.EmojiPickerStore.useStore(e => e.inspectedExpressionPosition),
+      x = l.useMemo(() => {
         var e;
         let {
           rowIndex: t,
           columnIndex: i
-        } = P;
-        return null === (e = S[t]) || void 0 === e ? void 0 : e[i]
-      }, [S, P]),
-      D = (null == L ? void 0 : L.type) === N.EmojiGridItemTypes.EMOJI ? null == L ? void 0 : L.emoji : {
+        } = M;
+        return null === (e = N[t]) || void 0 === e ? void 0 : e[i]
+      }, [N, M]),
+      L = (null == x ? void 0 : x.type) === C.EmojiGridItemTypes.EMOJI ? null == x ? void 0 : x.emoji : {
         type: "CREATE_EMOJI",
-        guildId: null == L ? void 0 : L.guildId,
-        allNamesString: null == L ? void 0 : L.name
+        guildId: null == x ? void 0 : x.guildId,
+        allNamesString: null == x ? void 0 : x.name
       },
-      b = (0, s.useStateFromStores)([I.default], () => null !== D && D.type === o.EmojiTypes.GUILD ? I.default.getGuild(D.guildId) : null, [D]),
-      U = (0, s.useStateFromStores)([E.default], () => null != L && L.type === N.EmojiGridItemTypes.EMOJI && null != L.emoji && L.emoji.type === o.EmojiTypes.PACK ? E.default.getPackByPackId({
-        packId: L.emoji.packId
-      }) : null, [L]),
-      w = (0, s.useStateFromStores)([p.default], () => p.default.isFocused()),
-      G = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion, []),
-      k = m.AnimateEmoji.useSetting(),
-      V = (0, h.useIsFavoriteEmoji)(y, R(D) ? D : null),
+      P = (0, s.useStateFromStores)([m.default], () => null !== L && L.type === o.EmojiTypes.GUILD ? m.default.getGuild(L.guildId) : null, [L]),
+      D = (0, s.useStateFromStores)([I.default], () => I.default.isFocused()),
+      b = (0, s.useStateFromStores)([a.default], () => a.default.useReducedMotion, []),
+      U = E.AnimateEmoji.useSetting(),
+      w = (0, _.useIsFavoriteEmoji)(R, A(L) ? L : null),
       {
-        newlyAddedEmojis: F
-      } = (0, C.default)(y, M),
-      H = D.id,
-      K = (null == L ? void 0 : L.type) === N.EmojiGridItemTypes.EMOJI ? L.subCategory : A.EmojiSubCategory.NONE;
+        newlyAddedEmojis: G
+      } = (0, S.default)(R, j),
+      k = L.id,
+      V = (null == x ? void 0 : x.type) === C.EmojiGridItemTypes.EMOJI ? x.subCategory : T.EmojiSubCategory.NONE;
     if (l.useEffect(() => {
         let e = Date.now();
         return () => {
           let t = Date.now() - e;
-          t >= 250 && R(D) && K !== A.EmojiSubCategory.NONE && (K === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== D && D.type === o.EmojiTypes.GUILD && (0, c.updateNewlyAddedEmojiSeenAcknowledged)(D.guildId, F[0].id), null != P.source && (0, h.trackEmojiFocus)({
-            emoji: D,
-            subCategory: K,
-            position: L.columnIndex + 1,
-            newlyAddedHighlight: K === A.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(y, H)
+          t >= 250 && A(L) && V !== T.EmojiSubCategory.NONE && (V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && null !== L && L.type === o.EmojiTypes.GUILD && (0, c.updateNewlyAddedEmojiSeenAcknowledged)(L.guildId, G[0].id), null != M.source && (0, _.trackEmojiFocus)({
+            emoji: L,
+            subCategory: V,
+            position: x.columnIndex + 1,
+            newlyAddedHighlight: V === T.EmojiSubCategory.NEWLY_ADDED_EMOJI && u.default.isNewerThanLastSeen(R, k)
           }))
         }
-      }), null == D) return null;
-    if (R(D)) {
-      var B;
-      let e = null != D.id ? _.default.getEmojiURL({
-        id: D.id,
-        animated: k && D.animated,
+      }), null == L) return null;
+    if (A(L)) {
+      var F;
+      let e = null != L.id ? g.default.getEmojiURL({
+        id: L.id,
+        animated: U && L.animated,
         size: 28
-      }) : D.url;
-      t = "" === e ? (0, n.jsx)(a.Text, {
+      }) : L.url;
+      t = "" === e ? (0, n.jsx)(r.Text, {
         variant: "text-md/normal",
-        className: j.glyphEmoji,
-        children: "surrogates" in D ? D.surrogates : null
+        className: v.glyphEmoji,
+        children: "surrogates" in L ? L.surrogates : null
       }) : (0, n.jsx)("img", {
-        alt: null !== (B = D.allNamesString) && void 0 !== B ? B : "",
+        alt: null !== (F = L.allNamesString) && void 0 !== F ? F : "",
         src: e,
-        className: j.emoji
+        className: v.emoji
       })
-    } else t = (0, n.jsx)(g.default, {
-      className: j.icon,
-      foreground: j.icon,
+    } else t = (0, n.jsx)(p.default, {
+      className: v.icon,
+      foreground: v.icon,
       width: 24,
       height: 24
     });
-    let J = null != U ? (0, n.jsx)(v.default, {
-      className: j.guildIcon,
-      pack: U
-    }) : null != b ? (0, n.jsx)(T.default, {
-      className: j.guildIcon,
-      guild: b,
-      shouldAnimate: !G && w
+    let H = null != P ? (0, n.jsx)(h.default, {
+      className: v.guildIcon,
+      guild: P,
+      shouldAnimate: !b && D
     }) : null;
     return (0, n.jsx)(f.default, {
       className: i,
       graphicPrimary: t,
-      graphicSecondary: J,
-      titlePrimary: D.allNamesString,
-      titleSecondary: O({
-        inspectedEmoji: D,
-        channel: x,
-        guildId: y,
-        intention: M,
-        pack: U,
-        guild: b
+      graphicSecondary: H,
+      titlePrimary: L.allNamesString,
+      titleSecondary: y({
+        inspectedEmoji: L,
+        channel: O,
+        guildId: R,
+        intention: j,
+        guild: P
       }),
-      isFavorite: V,
-      emojiSubCategory: K
+      isFavorite: w,
+      emojiSubCategory: V
     })
   })

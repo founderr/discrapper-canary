@@ -58,10 +58,6 @@ let o = {
     actions: ["EMOJI_INTERACTION_INITIATED"],
     inlineRequire: () => E("531150").default
   },
-  InventoryDataManager: {
-    actions: ["EMOJI_INTERACTION_INITIATED"],
-    inlineRequire: () => E("338169").default
-  },
   EntityVersionsManager: {
     actions: ["GUILD_CREATE", "DELETED_ENTITY_IDS"],
     inlineRequire: () => E("382022").default,

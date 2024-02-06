@@ -20,18 +20,16 @@ let f = {
     return i && null !== (s = null === (o = r.chatInputType.autocomplete) || void 0 === o ? void 0 : o.addReactionShortcut) && void 0 !== s && s && (l.default.can(u.Permissions.ADD_REACTIONS, e) || e.isPrivate())
   },
   queryResults(e, t, n, l, i) {
-    var o;
     let {
-      emojis: s
+      emojis: o
     } = r.default.queryEmojiResults({
       query: n,
       channel: e,
-      intention: d.EmojiIntention.REACTION,
-      canViewAndUsePackEmoji: null !== (o = l.canViewAndUsePackEmoji) && void 0 !== o && o
+      intention: d.EmojiIntention.REACTION
     });
     return {
       results: {
-        emojis: s.unlocked
+        emojis: o.unlocked
       }
     }
   },
