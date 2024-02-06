@@ -1,21 +1,21 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return c
   }
 });
-var a = r("37983");
-r("884691");
-var n = r("77078"),
-  i = r("484894"),
-  l = r("579921"),
-  o = r("926622");
+var a = t("37983");
+t("884691");
+var n = t("77078"),
+  i = t("484894"),
+  l = t("579921"),
+  o = t("926622");
 let s = () => {
-  r.el("776502").then(r.bind(r, "776502")).then(e => {
+  t.el("776502").then(t.bind(t, "776502")).then(e => {
     let {
-      openMFAModal: t
+      openMFAModal: r
     } = e;
-    t({
+    r({
       ticket: "ticket",
       methods: [{
         type: "webauthn",

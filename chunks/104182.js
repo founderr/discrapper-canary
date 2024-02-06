@@ -18,7 +18,7 @@ function E(e, t) {
   let a = e.id,
     E = l.useRef();
   null == E.current && (E.current = [(0, c.generateEmptyPollAnswer)(), (0, c.generateEmptyPollAnswer)()]);
-  let [_, m] = l.useState(E.current), [f, L] = l.useState(""), [p, T] = l.useState(n.PollLayoutTypes.DEFAULT), [C, P] = l.useState(!1), [R, O] = l.useState(d.PollDurations.ONE_DAY), x = _.filter(e => (0, c.isAnswerFilled)(e, p)), I = _.filter(e => (0, c.isIncompleteAnswer)(e, p)), h = f.length > 0 && x.length >= d.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === I.length, [N, {
+  let [_, m] = l.useState(E.current), [f, L] = l.useState(""), [T, p] = l.useState(n.PollLayoutTypes.DEFAULT), [C, P] = l.useState(!1), [R, O] = l.useState(d.PollDurations.ONE_DAY), x = _.filter(e => (0, c.isAnswerFilled)(e, T)), h = _.filter(e => (0, c.isIncompleteAnswer)(e, T)), I = f.length > 0 && x.length >= d.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === h.length, [N, {
     error: g,
     loading: S
   }] = (0, s.default)(u.default.createPoll), v = _.length < d.MAX_NUMBER_OF_ANSWERS_PER_POLL, M = l.useCallback(() => {
@@ -39,36 +39,36 @@ function E(e, t) {
         image: e
       }, l
     })
-  }, []), y = l.useCallback((e, t, a) => {
+  }, []), k = l.useCallback((e, t, a) => {
     var l;
     let n = _[t],
       s = null === (l = n.image) || void 0 === l ? void 0 : l.mediaAttachmentState;
     null != s && s.mediaURL !== a && o.removePollUploadAttachment(e, n.localCreationAnswerId, (0, r.getFileNameFromGifUrl)(n.localCreationAnswerId, s.mediaURL))
-  }, [_]), b = l.useCallback(async (e, t, a) => {
+  }, [_]), y = l.useCallback(async (e, t, a) => {
     let l = _[t].localCreationAnswerId;
-    y(e, t), j(A(a, i.PollMediaUploadAttachmentStatus.PREPARING), t);
+    k(e, t), j(A(a, i.PollMediaUploadAttachmentStatus.PREPARING), t);
     let n = await o.handlePollGifAttachmentAdd(e, l, a);
     if (null == n) {
       j(A(a, i.PollMediaUploadAttachmentStatus.ERROR), t);
       return
     }
     j(A(a, i.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t)
-  }, [_, j, y]), k = l.useCallback((e, t, a) => {
+  }, [_, j, k]), b = l.useCallback((e, t, a) => {
     let l = _[t].localCreationAnswerId,
       n = URL.createObjectURL(a);
-    y(e, t), j(A(n, i.PollMediaUploadAttachmentStatus.PREPARING), t), o.handlePollMediaAttachmentAdd(e, l, a), j(A(n, i.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t)
-  }, [_, j, y]), w = l.useCallback((e, t) => {
-    y(a, t), j({
+    k(e, t), j(A(n, i.PollMediaUploadAttachmentStatus.PREPARING), t), o.handlePollMediaAttachmentAdd(e, l, a), j(A(n, i.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t)
+  }, [_, j, k]), w = l.useCallback((e, t) => {
+    k(a, t), j({
       emoji: e,
       stickerId: void 0,
       mediaAttachmentState: void 0
     }, t)
-  }, [a, j, y]), U = l.useCallback(e => {
-    y(a, e), m(t => {
+  }, [a, j, k]), U = l.useCallback(e => {
+    k(a, e), m(t => {
       let a = [...t];
       return a.splice(e, 1), a
     })
-  }, [a, y]);
+  }, [a, k]);
   l.useEffect(() => () => {
     o.removeAllPollUploadAttachments(a)
   }, [a]);
@@ -79,27 +79,27 @@ function E(e, t) {
       answers: x,
       allowMultiSelect: C,
       duration: R,
-      layout: p,
+      layout: T,
       onClose: t
     })
-  }, [f, x, C, R, N, e, p, t]);
+  }, [f, x, C, R, N, e, T, t]);
   return {
     answers: _,
     question: f,
     setQuestion: L,
-    selectedLayoutType: p,
-    setSelectedLayoutType: T,
+    selectedLayoutType: T,
+    setSelectedLayoutType: p,
     allowMultiSelect: C,
     setAllowMultiSelect: P,
     duration: R,
     setDuration: O,
-    canPost: h,
+    canPost: I,
     canAddMoreAnswers: v,
     handleAddAnswer: M,
     handleAnswerTextChange: D,
-    handleGifSelect: b,
+    handleGifSelect: y,
     handleEmojiSelect: w,
-    handleCustomUpload: k,
+    handleCustomUpload: b,
     handleRemoveAnswer: U,
     createPoll: B,
     submitting: S,

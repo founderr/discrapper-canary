@@ -25,9 +25,9 @@ function m(e) {
     onEmojiSelect: m,
     onGifSelect: f,
     onCustomUpload: L,
-    positionTargetRef: p
+    positionTargetRef: T
   } = e, {
-    showPollExpressionPicker: T,
+    showPollExpressionPicker: p,
     closePollExpressionPicker: C
   } = (0, E.default)(), P = (0, i.useStateFromStores)([d.default], () => t.isPrivate() || d.default.can(A.Permissions.ATTACH_FILES, t)), R = n.useCallback(e => {
     r(null != s, "Expected to have an active input"), (null == e ? void 0 : e.gifSrc) != null && f(t.id, s, (0, c.makeTenorProxyURL)(e.gifSrc)), C()
@@ -36,8 +36,8 @@ function m(e) {
   }, [s, m, C]), x = n.useCallback(e => {
     r(null != s, "Expected to have an active input"), L(t.id, s, e), C()
   }, [t.id, C, s, L]);
-  return T ? (0, l.jsx)(u.default, {
-    positionTargetRef: p,
+  return p ? (0, l.jsx)(u.default, {
+    positionTargetRef: T,
     type: o.ChatInputTypes.CREATE_POLL,
     hideGifFavorites: !0,
     includeCreateEmojiButton: !1,

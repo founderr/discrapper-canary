@@ -1,56 +1,56 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return V
   }
-}), r("424973"), r("222007");
-var a = r("37983"),
-  n = r("884691"),
-  i = r("414456"),
-  l = r.n(i),
-  o = r("759843"),
-  s = r("446674"),
-  c = r("77078"),
-  d = r("594203"),
-  u = r("428958"),
-  h = r("368694"),
-  p = r("461380"),
-  f = r("945330"),
-  m = r("496657"),
-  g = r("664336"),
-  b = r("370492"),
-  y = r("584369"),
-  x = r("676574");
-r("444489");
-var k = r("224249"),
-  v = r("706098"),
-  C = r("383925"),
-  S = r("21573"),
-  j = r("245515"),
-  T = r("172248"),
-  w = r("811199"),
-  N = r("175768"),
-  E = r("358344"),
-  L = r("34971"),
-  _ = r("134034"),
-  A = r("79953"),
-  R = r("388557"),
-  P = r("238161"),
-  O = r("20950"),
-  M = r("724209"),
-  I = r("782340"),
-  B = r("978482"),
-  D = r("694735");
+}), t("424973"), t("222007");
+var a = t("37983"),
+  n = t("884691"),
+  i = t("414456"),
+  l = t.n(i),
+  o = t("759843"),
+  s = t("446674"),
+  c = t("77078"),
+  d = t("594203"),
+  u = t("428958"),
+  h = t("368694"),
+  p = t("461380"),
+  f = t("945330"),
+  m = t("496657"),
+  g = t("664336"),
+  b = t("370492"),
+  y = t("584369"),
+  x = t("676574");
+t("444489");
+var k = t("224249"),
+  v = t("706098"),
+  C = t("383925"),
+  S = t("21573"),
+  j = t("245515"),
+  T = t("172248"),
+  w = t("811199"),
+  N = t("175768"),
+  E = t("358344"),
+  L = t("34971"),
+  _ = t("134034"),
+  A = t("79953"),
+  R = t("388557"),
+  P = t("238161"),
+  O = t("20950"),
+  M = t("724209"),
+  I = t("782340"),
+  B = t("978482"),
+  D = t("694735");
 
 function H(e) {
   let {
-    resizableNode: t,
-    onResize: r,
+    resizableNode: r,
+    onResize: t,
     onResizeEnd: n
   } = e, i = (0, d.default)({
     minDimension: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
-    resizableDomNodeRef: t,
-    onElementResize: r,
+    resizableDomNodeRef: r,
+    onElementResize: t,
     onElementResizeEnd: n,
     orientation: d.ResizeOrientation.HORIZONTAL_LEFT
   });
@@ -62,7 +62,7 @@ function H(e) {
 
 function G() {
   var e;
-  let t = n.useMemo(() => {
+  let r = n.useMemo(() => {
       let e = [{
         id: "analytics",
         name: "Analytics",
@@ -131,18 +131,18 @@ function G() {
       })), e
     }, []),
     {
-      TabBar: r,
+      TabBar: t,
       renderSelectedTab: i,
       selectedTabId: l
     } = (0, M.default)({
-      tabs: t,
+      tabs: r,
       initialSelectedTabId: null !== (e = y.default.lastOpenTabId) && void 0 !== e ? e : void 0,
       onChangeTab: e => {
         (0, b.updateDevToolsSettings)({
           lastOpenTabId: e
         })
       }
-    }, [t]);
+    }, [r]);
   return (0, u.default)({
     type: o.ImpressionTypes.PANE,
     name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
@@ -163,7 +163,7 @@ function G() {
       }), (0, a.jsx)(g.default.Title, {
         children: "DevTools"
       })]
-    }), (0, a.jsx)(r, {}), i(), (0, a.jsx)(w.DevToolsLayerContainer, {
+    }), (0, a.jsx)(t, {}), i(), (0, a.jsx)(w.DevToolsLayerContainer, {
       className: B.layerContainer
     })]
   })
@@ -171,19 +171,19 @@ function G() {
 
 function F() {
   let e = n.useRef(null),
-    t = (0, s.useStateFromStores)([y.default], () => y.default.sidebarWidth),
-    [r, i] = n.useState(null),
+    r = (0, s.useStateFromStores)([y.default], () => y.default.sidebarWidth),
+    [t, i] = n.useState(null),
     o = n.useCallback(e => (0, b.updateDevToolsSettings)({
       sidebarWidth: e
     }), []);
   return (n.useEffect(() => {
-    null === r && null !== t && i(t)
-  }, [t, r]), null === r) ? null : (0, a.jsxs)("div", {
+    null === t && null !== r && i(r)
+  }, [r, t]), null === t) ? null : (0, a.jsxs)("div", {
     ref: e,
     className: l(B.container),
     style: {
       minWidth: y.DEVTOOLS_SIDEBAR_MIN_WIDTH,
-      width: r
+      width: t
     },
     children: [(0, a.jsx)(H, {
       resizableNode: e,
@@ -226,7 +226,7 @@ function U() {
 
 function V(e) {
   let {
-    mobile: t
+    mobile: r
   } = e;
-  return t ? (0, a.jsx)(U, {}) : (0, a.jsx)(F, {})
+  return r ? (0, a.jsx)(U, {}) : (0, a.jsx)(F, {})
 }

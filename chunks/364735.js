@@ -1,22 +1,22 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return n
   }
 });
-var a, n, i = r("37983"),
-  l = r("884691"),
-  o = r("414456"),
-  s = r.n(o),
-  c = r("77078"),
-  d = r("339783"),
-  u = r("865146"),
-  h = r("145131"),
-  p = r("712218"),
-  f = r("745279"),
-  m = r("159885"),
-  g = r("782340"),
-  b = r("584565");
+var a, n, i = t("37983"),
+  l = t("884691"),
+  o = t("414456"),
+  s = t.n(o),
+  c = t("77078"),
+  d = t("339783"),
+  u = t("865146"),
+  h = t("145131"),
+  p = t("712218"),
+  f = t("745279"),
+  m = t("159885"),
+  g = t("782340"),
+  b = t("584565");
 (a = class extends l.PureComponent {
   get typeString() {
     let {
@@ -54,10 +54,10 @@ var a, n, i = r("37983"),
   renderDescription() {
     let {
       paymentSource: e,
-      descriptionClassName: t
+      descriptionClassName: r
     } = this.props;
     return (0, i.jsx)(c.Text, {
-      className: s(b.description, t),
+      className: s(b.description, r),
       variant: "text-md/semibold",
       children: this.getLabel(e)
     })
@@ -65,18 +65,18 @@ var a, n, i = r("37983"),
   renderSubText() {
     let {
       paymentSource: e,
-      locale: t
-    } = this.props, r = null;
-    return e instanceof u.CreditCardSourceRecord ? r = g.default.Messages.PAYMENT_SOURCE_CARD_EXPIRES.format({
-      month: (0, f.getLocalizedDisplayMonth)(e.expiresMonth, t),
+      locale: r
+    } = this.props, t = null;
+    return e instanceof u.CreditCardSourceRecord ? t = g.default.Messages.PAYMENT_SOURCE_CARD_EXPIRES.format({
+      month: (0, f.getLocalizedDisplayMonth)(e.expiresMonth, r),
       year: e.expiresYear
-    }) : e instanceof u.PaypalSourceRecord ? r = e.email : e instanceof u.SofortSourceRecord ? r = e.email : e instanceof u.Przelewy24SourceRecord ? r = e.email : e instanceof u.VenmoSourceRecord ? r = "@" + e.username : e instanceof u.CashAppSourceRecord && (r = e.username), r
+    }) : e instanceof u.PaypalSourceRecord ? t = e.email : e instanceof u.SofortSourceRecord ? t = e.email : e instanceof u.Przelewy24SourceRecord ? t = e.email : e instanceof u.VenmoSourceRecord ? t = "@" + e.username : e instanceof u.CashAppSourceRecord && (t = e.username), t
   }
   render() {
     let {
       isDefault: e,
-      paymentSource: t,
-      showSubtext: r,
+      paymentSource: r,
+      showSubtext: t,
       isForSubscription: a
     } = this.props, n = this.renderSubText();
     return (0, i.jsxs)(h.default, {
@@ -93,11 +93,11 @@ var a, n, i = r("37983"),
           }) : null, a ? (0, i.jsx)("div", {
             className: b.premiumIndicator,
             children: g.default.Messages.PAYMENT_SOURCE_SUBSCRIPTION
-          }) : null, t.invalid ? (0, i.jsx)("div", {
+          }) : null, r.invalid ? (0, i.jsx)("div", {
             className: b.invalidIndicator,
             children: g.default.Messages.PAYMENT_SOURCE_INVALID
           }) : null]
-        }), r && null != n ? (0, i.jsx)("div", {
+        }), t && null != n ? (0, i.jsx)("div", {
           className: b.subText,
           children: n
         }) : null]

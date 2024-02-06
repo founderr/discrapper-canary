@@ -39,15 +39,15 @@ var i, a, s = n("37983"),
   R = n("941719"),
   w = n("49111"),
   D = n("646718"),
-  x = n("116319"),
-  G = n("397336"),
+  G = n("116319"),
+  x = n("397336"),
   L = n("843455"),
   U = n("782340"),
   j = n("809404");
 (a = i || (i = {})).EDITOR = "EDITOR", a.SETTINGS = "SETTINGS";
 let k = Object.freeze({
-    EDITOR: G.UserSettingsDelay.SLOW_USER_ACTION,
-    SETTINGS: G.UserSettingsDelay.INFREQUENT_USER_ACTION
+    EDITOR: x.UserSettingsDelay.SLOW_USER_ACTION,
+    SETTINGS: x.UserSettingsDelay.INFREQUENT_USER_ACTION
   }),
   F = l.createContext({}),
   H = e => {
@@ -151,7 +151,7 @@ K.Basic = e => {
     delay: n
   } = l.useContext(F), {
     analyticsLocations: i
-  } = (0, S.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [a, r, u] = (0, d.useStateFromStoresArray)([N.default, y.default, P.default], () => [N.default.theme, null == P.default.gradientPreset, y.default.useSystemTheme === x.SystemThemeState.ON]), c = e => {
+  } = (0, S.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [a, r, u] = (0, d.useStateFromStoresArray)([N.default, y.default, P.default], () => [N.default.theme, null == P.default.gradientPreset, y.default.useSystemTheme === G.SystemThemeState.ON]), c = e => {
     (0, M.resetBackgroundGradientPreset)(), H({
       isPersisted: !0,
       analyticsLocations: i,
@@ -190,7 +190,7 @@ K.Basic = e => {
   } = (0, S.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [v, N, y] = (0, d.useStateFromStoresArray)([P.default], () => {
     var e;
     return [P.default.isPreview, P.default.isCoachmark, null === (e = P.default.gradientPreset) || void 0 === e ? void 0 : e.id]
-  }), [C, A] = l.useState(!1), [w, G] = l.useState(-1), L = (0, d.useStateFromStores)([g.default], () => g.default.useReducedMotion), k = (null === (i = (0, T.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
+  }), [C, A] = l.useState(!1), [w, x] = l.useState(-1), L = (0, d.useStateFromStores)([g.default], () => g.default.useReducedMotion), k = (null === (i = (0, T.usePremiumTrialOffer)()) || void 0 === i ? void 0 : null === (t = i.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
   l.useEffect(() => {
     (w === R.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || y === c.BackgroundGradientPresetId.EASTER_EGG) && A(!0)
   }, [w, u, y]);
@@ -200,7 +200,7 @@ K.Basic = e => {
         analyticsLocations: m,
         themeName: c.BackgroundGradientPresetId[e.id]
       }), v) {
-      (0, I.setUseSystemTheme)(x.SystemThemeState.OFF);
+      (0, I.setUseSystemTheme)(G.SystemThemeState.OFF);
       return
     }
     if ((0, h.saveClientTheme)({
@@ -208,10 +208,10 @@ K.Basic = e => {
         theme: e.theme
       }, f), null != t) {
       if (C && A(!1), t <= w || 0 === t) {
-        G(0);
+        x(0);
         return
       }
-      G(e => e + 1)
+      x(e => e + 1)
     }
   };
   return (0, s.jsxs)("section", {

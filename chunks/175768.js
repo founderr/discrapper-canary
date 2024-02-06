@@ -1,34 +1,34 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return u
   }
-}), r("222007");
-var a = r("37983"),
-  n = r("884691"),
-  i = r("414456"),
-  l = r.n(i),
-  o = r("77078"),
-  s = r("811199"),
-  c = r("694735"),
-  d = r("186720");
+}), t("222007");
+var a = t("37983"),
+  n = t("884691"),
+  i = t("414456"),
+  l = t.n(i),
+  o = t("77078"),
+  s = t("811199"),
+  c = t("694735"),
+  d = t("186720");
 
 function u() {
   let e = {
       BOGOAnnouncementModal: async () => {
         let {
           default: e
-        } = await r.el("981125").then(r.bind(r, "981125"));
-        return t => (0, a.jsx)(e, {
-          renderModalProps: t
+        } = await t.el("981125").then(t.bind(t, "981125"));
+        return r => (0, a.jsx)(e, {
+          renderModalProps: r
         })
       }
     },
-    t = Object.keys(e).map(e => ({
+    r = Object.keys(e).map(e => ({
       label: e,
       value: e
     })),
-    [i, u] = n.useState(t[0].value);
+    [i, u] = n.useState(r[0].value);
   return (0, a.jsx)(o.ScrollerThin, {
     className: l(c.panel),
     children: (0, a.jsx)("div", {
@@ -42,7 +42,7 @@ function u() {
           className: d.inputRow,
           children: [(0, a.jsx)(o.Select, {
             className: d.input,
-            options: t,
+            options: r,
             isSelected: e => i === e,
             placeholder: "Trial ID",
             serialize: e => String(e),

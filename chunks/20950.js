@@ -1,60 +1,60 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return _
   }
-}), r("222007");
-var a = r("37983"),
-  n = r("884691"),
-  i = r("414456"),
-  l = r.n(i),
-  o = r("448105"),
-  s = r.n(o),
-  c = r("866227"),
-  d = r.n(c),
-  u = r("446674"),
-  h = r("77078"),
-  p = r("913144"),
-  f = r("810567"),
-  m = r("756609"),
-  g = r("228220"),
-  b = r("664336"),
-  y = r("888400"),
-  x = r("398570"),
-  k = r("370492"),
-  v = r("332814"),
-  C = r("928063"),
-  S = r("637171"),
-  j = r("724209"),
-  T = r("782340"),
-  w = r("185187"),
-  N = r("694735");
+}), t("222007");
+var a = t("37983"),
+  n = t("884691"),
+  i = t("414456"),
+  l = t.n(i),
+  o = t("448105"),
+  s = t.n(o),
+  c = t("866227"),
+  d = t.n(c),
+  u = t("446674"),
+  h = t("77078"),
+  p = t("913144"),
+  f = t("810567"),
+  m = t("756609"),
+  g = t("228220"),
+  b = t("664336"),
+  y = t("888400"),
+  x = t("398570"),
+  k = t("370492"),
+  v = t("332814"),
+  C = t("928063"),
+  S = t("637171"),
+  j = t("724209"),
+  T = t("782340"),
+  w = t("185187"),
+  N = t("694735");
 let E = [{
     key: "id",
     cellClassName: w.eventColumn,
     render(e) {
       let {
-        experimentId: t
+        experimentId: r
       } = e;
-      return t
+      return r
     }
   }, {
     key: "bucket",
     cellClassName: w.locationColumn,
     render(e) {
       let {
-        descriptor: t
+        descriptor: r
       } = e;
-      return t.bucket
+      return r.bucket
     }
   }, {
     key: "timestamp",
     cellClassName: w.locationColumn,
     render(e) {
       let {
-        timestamp: t
+        timestamp: r
       } = e;
-      return t.toLocaleString()
+      return r.toLocaleString()
     }
   }],
   L = [{
@@ -63,8 +63,8 @@ let E = [{
     render: e => {
       let {
         loggedTrigger: {
-          experimentId: t,
-          descriptor: r,
+          experimentId: r,
+          descriptor: t,
           exposureType: n,
           excluded: i,
           timestamp: o,
@@ -77,9 +77,9 @@ let E = [{
           className: l(N.headerBar, w.subPanelHeaderBar),
           children: [(0, a.jsx)(b.default.Icon, {
             icon: m.default,
-            tooltip: t
+            tooltip: r
           }), (0, a.jsx)(b.default.Title, {
-            children: t
+            children: r
           })]
         }), (0, a.jsxs)(v.Properties, {
           className: w.commonProperties,
@@ -90,25 +90,25 @@ let E = [{
               title: (0, y.dateFormat)(u, "LLLL"),
               children: (0, y.calendarFormat)(u)
             })
-          }), "guild" === r.type && (0, a.jsx)(v.Property, {
+          }), "guild" === t.type && (0, a.jsx)(v.Property, {
             name: "Guild ID",
             children: (0, a.jsx)("code", {
-              children: r.guildId
+              children: t.guildId
             })
           }), (0, a.jsx)(v.Property, {
             name: "Bucket",
             children: (0, a.jsx)("code", {
-              children: r.bucket
+              children: t.bucket
             })
           }), (0, a.jsx)(v.Property, {
             name: "Revision",
             children: (0, a.jsx)("code", {
-              children: r.revision
+              children: t.revision
             })
           }), (0, a.jsx)(v.Property, {
             name: "Override",
             children: (0, a.jsx)(v.BooleanPropertyValue, {
-              value: r.override
+              value: t.override
             })
           }), (0, a.jsx)(v.Property, {
             name: "Exposure type",
@@ -137,7 +137,7 @@ let E = [{
   }];
 
 function _() {
-  let [e, t] = n.useState(""), r = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(t => 0 === e.length || s(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), m = o.find(e => e.key === c), {
+  let [e, r] = n.useState(""), t = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(r => 0 === e.length || s(e, r.experimentId)).sort((e, r) => r.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), m = o.find(e => e.key === c), {
     TabBar: b,
     renderSelectedTab: y
   } = (0, j.default)({
@@ -149,7 +149,7 @@ function _() {
     })
   }, []);
   return (0, a.jsxs)("div", {
-    ref: r,
+    ref: t,
     className: l(N.panel, w.panel),
     children: [(0, a.jsxs)("div", {
       className: w.toolbar,
@@ -175,8 +175,8 @@ function _() {
       }), (0, a.jsx)(f.default, {
         className: w.searchBar,
         query: e,
-        onChange: t,
-        onClear: () => t(""),
+        onChange: r,
+        onClear: () => r(""),
         placeholder: "Search by experiment id"
       })]
     }), (0, a.jsx)(h.ScrollerThin, {
@@ -190,7 +190,7 @@ function _() {
     }), null != m && (0, a.jsxs)(C.default, {
       className: w.subPanel,
       minHeight: 100,
-      initialHeight: null != r.current ? r.current.clientHeight / 2 : 300,
+      initialHeight: null != t.current ? t.current.clientHeight / 2 : 300,
       children: [(0, a.jsx)(b, {}), y({
         loggedTrigger: m
       })]

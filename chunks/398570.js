@@ -1,15 +1,15 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return f
   }
-}), r("222007");
-var a = r("748820"),
-  n = r("391679"),
-  i = r("446674"),
-  l = r("913144"),
-  o = r("271938"),
-  s = r("584369");
+}), t("222007");
+var a = t("748820"),
+  n = t("391679"),
+  i = t("446674"),
+  l = t("913144"),
+  o = t("271938"),
+  s = t("584369");
 let c = 0,
   d = [],
   u = [],
@@ -32,16 +32,16 @@ p.displayName = "AnalyticsLogStore";
 var f = new p(l.default, {
   TRACK: function(e) {
     let {
-      event: t,
-      properties: r,
+      event: r,
+      properties: t,
       fingerprint: a
     } = e;
     if (s.default.devToolsEnabled) {
       var i;
       (d = [...d, {
         key: (c++).toString(),
-        event: t,
-        properties: r,
+        event: r,
+        properties: t,
         fingerprint: null != (i = a) ? (0, n.extractId)(i) : o.default.getId(),
         timestamp: new Date
       }]).length > 500 && d.shift()
@@ -49,8 +49,8 @@ var f = new p(l.default, {
   },
   TRACK_TRIGGER: function(e) {
     let {
-      experimentId: t,
-      descriptor: r,
+      experimentId: r,
+      descriptor: t,
       exposureType: n,
       excluded: i,
       location: l,
@@ -58,8 +58,8 @@ var f = new p(l.default, {
     } = e;
     if (!!s.default.devToolsEnabled) h && (u = [...u, {
       key: (0, a.v4)(),
-      experimentId: t,
-      descriptor: r,
+      experimentId: r,
+      descriptor: t,
       exposureType: n,
       excluded: i,
       location: l,
@@ -69,9 +69,9 @@ var f = new p(l.default, {
   },
   SET_TRACK_TRIGGERS: function(e) {
     let {
-      enabled: t
+      enabled: r
     } = e;
-    h = t
+    h = r
   },
   ANALYTICS_LOG_CLEAR: function() {
     d = [], u = []

@@ -1,35 +1,35 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return p
   }
-}), r("222007");
-var a = r("37983"),
-  n = r("884691"),
-  i = r("414456"),
-  l = r.n(i),
-  o = r("446674"),
-  s = r("77078"),
-  c = r("220462"),
-  d = r("676574"),
-  u = r("954098"),
-  h = r("694735");
+}), t("222007");
+var a = t("37983"),
+  n = t("884691"),
+  i = t("414456"),
+  l = t.n(i),
+  o = t("446674"),
+  s = t("77078"),
+  c = t("220462"),
+  d = t("676574"),
+  u = t("954098"),
+  h = t("694735");
 
 function p(e) {
   let {
-    devSettingsCategory: t
-  } = e, r = (0, o.useStateFromStores)([d.default], () => d.default.allByCategory(t), [t], o.statesWillNeverBeEqual), i = n.useMemo(() => r.map(e => {
-    let [t, r, {
+    devSettingsCategory: r
+  } = e, t = (0, o.useStateFromStores)([d.default], () => d.default.allByCategory(r), [r], o.statesWillNeverBeEqual), i = n.useMemo(() => t.map(e => {
+    let [r, t, {
       label: n
     }] = e;
     return (0, a.jsx)(s.FormSwitch, {
-      value: r,
-      onChange: e => (0, c.toggle)(t, e),
+      value: t,
+      onChange: e => (0, c.toggle)(r, e),
       hideBorder: !0,
       className: u.switch,
       children: n
-    }, t)
-  }), [r]);
+    }, r)
+  }), [t]);
   return (0, a.jsx)("div", {
     className: l(h.panel, u.panel),
     children: i
