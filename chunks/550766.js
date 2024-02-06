@@ -52,8 +52,8 @@ var a = n("759843"),
   E = n("191145"),
   I = n("752598"),
   p = n("653047"),
-  A = n("271938"),
-  f = n("42203"),
+  f = n("271938"),
+  A = n("42203"),
   _ = n("18494"),
   T = n("697218"),
   C = n("449008"),
@@ -66,34 +66,38 @@ var a = n("759843"),
   g = n("91366");
 
 function v(t, e, n) {
-  let a = N.default.getSelfEmbeddedActivityForChannel(t);
-  null != a && O({
+  let a = f.default.getId(),
+    i = N.default.getSelfEmbeddedActivityForChannel(t),
+    r = N.default.getEmbeddedActivitiesForChannel(t),
+    d = r.find(t => t.applicationId === e && t.userIds.has(a));
+  null != i ? O({
     channelId: t,
-    applicationId: a.applicationId
-  }), l.default.dispatch({
+    applicationId: i.applicationId,
+    showFeedback: !1
+  }) : null != d && F(t, e), l.default.dispatch({
     type: "EMBEDDED_ACTIVITY_OPEN",
     channelId: t,
     applicationId: e,
     analyticsLocations: n
   });
-  let i = (0, S.default)(t);
-  i ? (u.default.selectParticipant(t, e), u.default.updateLayout(t, m.ChannelLayouts.NO_CHAT)) : (0, D.default)(t)
+  let o = (0, S.default)(t);
+  o ? (u.default.selectParticipant(t, e), u.default.updateLayout(t, m.ChannelLayouts.NO_CHAT)) : (0, D.default)(t)
 }
 async function L(t) {
   var e, n;
-  let i = f.default.getChannel(t),
+  let i = A.default.getChannel(t),
     r = null !== (e = null == i ? void 0 : i.getGuildId()) && void 0 !== e ? e : void 0;
   if (null == r && !(null !== (n = null == i ? void 0 : i.isPrivate()) && void 0 !== n && n)) return;
   let u = N.default.getSelfEmbeddedActivityForChannel(t);
   if (null === u) return;
-  let d = A.default.getSessionId();
+  let d = f.default.getSessionId();
   try {
     l.default.dispatch({
         type: "EMBEDDED_ACTIVITY_LAUNCH_START",
         embeddedActivity: u
       }),
       function(t, e) {
-        let n = f.default.getChannel(t),
+        let n = A.default.getChannel(t),
           a = N.default.getEmbeddedActivitiesForChannel(t).some(t => t.applicationId === e);
         if (a) return !1;
         let i = (0, h.isActivitiesInTextEnabled)(n, "EmbeddedActivitiesActionCreators#isActivityInTextStart");
@@ -293,7 +297,7 @@ async function b(t) {
     target_type: g.InviteTargetTypes.EMBEDDED_APPLICATION,
     target_application_id: a
   }, i);
-  null != f.default.getChannel(n) && o.default.sendInvite(n, l.code, i, null)
+  null != A.default.getChannel(n) && o.default.sendInvite(n, l.code, i, null)
 }
 async function G(t) {
   let {
@@ -306,7 +310,7 @@ async function G(t) {
     target_application_id: n
   }, i);
   r.default.ensurePrivateChannel(a).then(t => {
-    null != f.default.getChannel(t) && o.default.sendInvite(t, l.code, i, null)
+    null != A.default.getChannel(t) && o.default.sendInvite(t, l.code, i, null)
   })
 }
 
