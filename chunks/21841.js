@@ -1,97 +1,140 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return M
   }
 }), n("222007");
 var l = n("884691"),
-  a = n("298386"),
-  s = n("446674"),
-  i = n("427953"),
-  r = n("191225"),
-  o = n("534222"),
-  u = n("170183"),
-  d = n("130563"),
-  c = n("233069"),
-  f = n("373469"),
-  h = n("271938"),
-  C = n("42203"),
-  p = n("305961"),
-  m = n("957255"),
-  E = n("945956"),
-  g = n("282109"),
-  I = n("800762"),
-  S = n("501981"),
-  _ = n("49111");
+  a = n("917351"),
+  s = n.n(a),
+  i = n("298386"),
+  r = n("446674"),
+  o = n("862337"),
+  u = n("666020"),
+  d = n("427953"),
+  c = n("191225"),
+  f = n("534222"),
+  h = n("170183"),
+  C = n("130563"),
+  p = n("233069"),
+  m = n("373469"),
+  E = n("271938"),
+  g = n("42203"),
+  I = n("525065"),
+  S = n("305961"),
+  _ = n("957255"),
+  N = n("945956"),
+  T = n("282109"),
+  A = n("800762"),
+  L = n("471374"),
+  v = n("501981"),
+  x = n("49111");
+let R = [];
 
-function N(e) {
-  var t, n, N;
-  let T = (0, s.useStateFromStores)([g.default], () => g.default.isMuted(e)),
-    A = (0, s.useStateFromStores)([p.default], () => p.default.getGuild(e)),
-    L = (null === (t = (0, u.default)(e)) || void 0 === t ? void 0 : t.length) > 0,
-    v = (0, o.useGuildActiveEvent)(e),
-    x = (null === (n = (0, d.default)()) || void 0 === n ? void 0 : n.guild_id) === e,
-    R = (0, s.useStateFromStores)([h.default], () => h.default.getId()),
+function M(e) {
+  var t, n, a;
+  let M = (0, r.useStateFromStores)([T.default], () => T.default.isMuted(e)),
+    O = (0, r.useStateFromStores)([S.default], () => S.default.getGuild(e)),
+    y = (null === (t = (0, h.default)(e)) || void 0 === t ? void 0 : t.length) > 0,
+    D = (0, f.useGuildActiveEvent)(e),
+    b = (null === (n = (0, C.default)()) || void 0 === n ? void 0 : n.guild_id) === e,
+    j = (0, r.useStateFromStores)([E.default], () => E.default.getId()),
     {
-      selectedVoiceGuildId: M,
-      selectedVoiceChannelId: O
-    } = (0, s.useStateFromStoresObject)([E.default], () => ({
-      selectedVoiceGuildId: E.default.getGuildId(),
-      selectedVoiceChannelId: E.default.getChannelId()
+      selectedVoiceGuildId: G,
+      selectedVoiceChannelId: U
+    } = (0, r.useStateFromStoresObject)([N.default], () => ({
+      selectedVoiceGuildId: N.default.getGuildId(),
+      selectedVoiceChannelId: N.default.getChannelId()
     })),
-    y = M === e,
-    D = (0, s.useStateFromStores)([f.default], () => !!y && null != f.default.getActiveStreamForUser(R, e)),
-    b = null == A ? void 0 : A.afkChannelId,
+    P = G === e,
+    w = (0, r.useStateFromStores)([m.default], () => !!P && null != m.default.getActiveStreamForUser(j, e)),
+    F = null == O ? void 0 : O.afkChannelId,
     {
-      guildHasVoice: j,
-      guildHasVideo: G,
-      selectedVoiceChannelHasVideo: U
-    } = (0, s.useStateFromStoresObject)([I.default, C.default, m.default], () => {
+      guildHasVoice: B,
+      guildHasVideo: V,
+      selectedVoiceChannelHasVideo: H
+    } = (0, r.useStateFromStoresObject)([A.default, g.default, _.default], () => {
       let t = !1,
         n = !1,
-        l = I.default.getVoiceStates(e);
+        l = A.default.getVoiceStates(e);
       for (let e in l) {
-        let s = C.default.getBasicChannel(l[e].channelId);
-        null != s && s.type !== a.ChannelTypes.GUILD_STAGE_VOICE && b !== s.id && m.default.canBasicChannel(_.BasicPermissions.VIEW_CHANNEL, s) && (t = !0, l[e].selfVideo && (n = !0))
+        let a = g.default.getBasicChannel(l[e].channelId);
+        null != a && a.type !== i.ChannelTypes.GUILD_STAGE_VOICE && F !== a.id && _.default.canBasicChannel(x.BasicPermissions.VIEW_CHANNEL, a) && (t = !0, l[e].selfVideo && (n = !0))
       }
       return {
         guildHasVoice: t,
         guildHasVideo: n,
-        selectedVoiceChannelHasVideo: null != O && I.default.hasVideo(O)
+        selectedVoiceChannelHasVideo: null != U && A.default.hasVideo(U)
       }
-    }, [b, e, O]),
-    P = (0, s.useStateFromStores)([f.default], () => f.default.getAllApplicationStreams().some(t => t.guildId === e)),
-    w = (0, S.default)(e),
-    F = (0, s.useStateFromStores)([r.default], () => r.default.getEmbeddedActivitiesForGuild(e)),
-    B = (0, i.useIsActivitiesInTextEnabled)(null === (N = F[0]) || void 0 === N ? void 0 : N.channelId, "GuildMediaState"),
-    V = (0, s.useStateFromStores)([C.default], () => {
-      if (B) return F.length > 0;
-      for (let e of F) {
-        let t = C.default.getChannel(e.channelId);
-        if (null != t && (0, c.isVoiceChannel)(t.type)) return !0
+    }, [F, e, U]),
+    k = (0, r.useStateFromStores)([m.default], () => m.default.getAllApplicationStreams().some(t => t.guildId === e));
+  ! function(e, t) {
+    let n = l.useRef(new Set),
+      a = l.useRef(new o.Timeout),
+      {
+        shouldSubscribeToGuildMemberUpdates: i
+      } = L.default.useExperiment({
+        location: "useGuildMediaState"
+      }, {
+        autoTrackExposure: !1
+      }),
+      d = (0, r.useStateFromStores)([I.default], () => {
+        let t = I.default.getMemberCount(e);
+        return null == t || t > 1e3
+      }),
+      c = (0, r.useStateFromStoresObject)([A.default], () => {
+        if (!i || t || d) return R;
+        let n = A.default.getVoiceStates(e),
+          l = Object.keys(n);
+        return 0 === l.length ? R : l.slice(0, 50)
+      }, [e, t, d, i]);
+    l.useEffect(() => {
+      ! function(e, t, n, l, a) {
+        let i = s.random(1e3, 1e4);
+        l.start(i, () => {
+          let l = new Set(t),
+            s = t.filter(e => !n.has(e)),
+            i = Array.from(n).filter(e => !l.has(e));
+          (0, u.unsubscribeMembers)(e, i), (0, u.subscribeMembers)(e, s), a()
+        })
+      }(e, c, n.current, a.current, () => {
+        n.current = new Set(c)
+      })
+    }, [e, c]), l.useEffect(() => () => {
+      a.current.stop(), (0, u.unsubscribeMembers)(e, Array.from(n.current))
+    }, [e])
+  }(e, M);
+  let Y = (0, v.default)(e),
+    K = (0, r.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForGuild(e)),
+    W = (0, d.useIsActivitiesInTextEnabled)(null === (a = K[0]) || void 0 === a ? void 0 : a.channelId, "GuildMediaState"),
+    Z = (0, r.useStateFromStores)([g.default], () => {
+      if (W) return K.length > 0;
+      for (let e of K) {
+        let t = g.default.getChannel(e.channelId);
+        if (null != t && (0, p.isVoiceChannel)(t.type)) return !0
       }
       return !1
     }),
-    H = (0, s.useStateFromStores)([r.default], () => Array.from(r.default.getSelfEmbeddedActivities().values()).some(t => {
+    z = (0, r.useStateFromStores)([c.default], () => Array.from(c.default.getSelfEmbeddedActivities().values()).some(t => {
       let {
         guildId: n
       } = t;
       return n === e
     })),
-    k = !1,
-    Y = !1,
-    K = !1,
-    W = !1,
-    Z = !1,
-    z = !1;
-  return y ? (k = !0, Y = (null == v ? void 0 : v.channel_id) === O, K = x, W = y && U, Z = D, z = H) : !T && (k = j, Y = null != v, K = L, W = G, Z = P, z = V), l.useMemo(() => ({
-    audio: k,
-    video: W,
-    screenshare: Z,
-    liveStage: K,
-    activeEvent: Y,
-    activity: z,
-    gaming: w,
-    isCurrentUserConnected: y || x
-  }), [k, W, Z, K, Y, z, y, x, w])
+    X = !1,
+    Q = !1,
+    q = !1,
+    J = !1,
+    $ = !1,
+    ee = !1;
+  return P ? (X = !0, Q = (null == D ? void 0 : D.channel_id) === U, q = b, J = P && H, $ = w, ee = z) : !M && (X = B, Q = null != D, q = y, J = V, $ = k, ee = Z), l.useMemo(() => ({
+    audio: X,
+    video: J,
+    screenshare: $,
+    liveStage: q,
+    activeEvent: Q,
+    activity: ee,
+    gaming: Y,
+    isCurrentUserConnected: P || b
+  }), [X, J, $, q, Q, ee, P, b, Y])
 }
