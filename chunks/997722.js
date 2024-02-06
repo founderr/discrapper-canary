@@ -28,8 +28,8 @@ var i, s, r = n("552442"),
   N = n("834604"),
   R = n("355014");
 n("222920");
-var O = n("901946"),
-  D = n("42203"),
+var D = n("901946"),
+  O = n("42203"),
   P = n("42887"),
   b = n("661919"),
   L = n("590401"),
@@ -299,7 +299,7 @@ s = class extends _.default {
       }
       let t = L.default.shouldIncludePreferredRegion() ? L.default.getPreferredRegion() : null,
         n = P.default.getSettings(),
-        s = D.default.getChannel(this.channelId);
+        s = O.default.getChannel(this.channelId);
       M.default.track(z.AnalyticEvents.VOICE_DISCONNECT, {
         ...this._getAnalyticsProperties(),
         hostname: this.hostname,
@@ -316,6 +316,7 @@ s = class extends _.default {
         ...null != this._voiceQuality ? this._voiceQuality.getFrameOpStats() : null,
         ...null != this._voiceQuality ? this._voiceQuality.getDurationStats() : null,
         ...null != this._voiceQuality ? this._voiceQuality.getTransportStats() : null,
+        ...null != this._voiceQuality ? this._voiceQuality.getE2EEStats() : null,
         ...null != this._voiceDuration ? this._voiceDuration.getDurationStats() : null,
         media_session_id: this.getMediaSessionId(),
         channel_bitrate: null != s ? s.bitrate : null,
@@ -656,7 +657,7 @@ s = class extends _.default {
     this._soundshareStats.traceEvent(void 0, e)
   }
   _getAnalyticsProperties() {
-    let e = D.default.getChannel(this.channelId),
+    let e = O.default.getChannel(this.channelId),
       t = null != e ? e.type : null;
     return {
       guild_id: this.guildId,
@@ -811,7 +812,7 @@ s = class extends _.default {
     let {
       enableSendingVoiceStats: t,
       percentageOfCalls: n
-    } = O.default.getCurrentConfig({
+    } = D.default.getCurrentConfig({
       location: "104dee_3"
     }, {
       autoTrackExposure: !1
@@ -887,7 +888,7 @@ s = class extends _.default {
           this._voiceQualityPeriodicStatsSequenceId++
         }
       }, this._trackVoiceConnectionConnecting = () => {
-        let e = D.default.getChannel(this.channelId),
+        let e = O.default.getChannel(this.channelId),
           t = null != e ? e.type : null;
         M.default.track(z.AnalyticEvents.VOICE_CONNECTION_CONNECTING, {
           guild_id: this.guildId,
@@ -900,7 +901,7 @@ s = class extends _.default {
         })
       }, this.context = s, this.logger = new p.default("RTCConnection(".concat(null !== (o = null != r ? r : n) && void 0 !== o ? o : i, ", ").concat(this.context, ")")), this.userId = e, this.sessionId = t, this.guildId = n, this._channelId = i, this.channelIds = new Set([i]), this.rtcServerId = r, this.parentMediaSessionId = a, this._endpoint = null, this.hostname = null, this.port = null, this.token = null, this.voiceVersion = null, this.rtcWorkerVersion = null, this.state = z.RTCConnectionStates.AWAITING_ENDPOINT, this.stateHistory = new F.StateHistory(this.state), this._socket = null, this._backoff = new f.default(1e3, 1e4), this._destroyed = !1, this._pings = [], this._pingBadCount = 0, this._pingTimeouts = [], this._mediaSessionId = null, this._voiceQuality = null, this._voiceQualityPeriodicStatsInterval = null, this._voiceQualityPeriodicStatsSequenceId = 0, this._voiceDuration = null, this._videoQuality = null, this._videoHealthManager = null, this._sentVideo = !1, this._outboundLossRate = null, this._createdTime = (0, g.now)(), this._connectStartTime = 0, this._connectCompletedTime = 0, this._rtcConnectionId = (0, c.v4)(), this._connectCount = 0, this._connected = !1, this._connecting = !1, this._encountered_socket_failure = !1, this._inputDetected = !1, this._selectedExperiments = [], s === q.MediaEngineContextTypes.DEFAULT) {
       let t = P.default.supports(q.Features.FIRST_FRAME_CALLBACK) && P.default.supports(q.Features.REMOTE_USER_MULTI_STREAM),
-        n = (null === (l = D.default.getChannel(this.channelId)) || void 0 === l ? void 0 : l.type) === z.ChannelTypes.GUILD_STAGE_VOICE;
+        n = (null === (l = O.default.getChannel(this.channelId)) || void 0 === l ? void 0 : l.type) === z.ChannelTypes.GUILD_STAGE_VOICE;
       this._localMediaSinkWantsManager = new B.default(e, n, t), this._localMediaSinkWantsManager.on(B.RTCMediaSinkWantsManagerEvent.Update, e => {
         if (this.state === z.RTCConnectionStates.RTC_CONNECTED && null != this._socket) {
           var t;

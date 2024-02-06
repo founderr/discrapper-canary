@@ -68,19 +68,19 @@ function T(e) {
 }
 class I {
   static parseInboundStats(e, t) {
-    var n, i;
-    let s = new I;
-    return null == e ? s : (s.bytes = e.bytesReceived, s.framesCodec = e.framesDecoded, s.framesCodecError = null !== (n = e.framesDecodeErrors) && void 0 !== n ? n : null, s.framesNetwork = e.framesReceived, s.packets = e.packetsReceived, s.packetsLost = e.packetsLost, s.framesDropped = e.framesDropped, s.resolution = null != e.resolution ? e.resolution.height : 0, s.minorResolution = null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0, s.majorResolution = null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0, s.timestamp = t, s.nackCount = e.nackCount, s.pliCount = e.pliCount, s.decoder = function(e) {
+    var n, i, s, r, a, o, l;
+    let u = new I;
+    return null == e ? u : (u.bytes = e.bytesReceived, u.framesCodec = e.framesDecoded, u.framesCodecError = null !== (n = e.framesDecodeErrors) && void 0 !== n ? n : null, u.framesNetwork = e.framesReceived, u.packets = e.packetsReceived, u.packetsLost = e.packetsLost, u.framesDropped = e.framesDropped, u.resolution = null != e.resolution ? e.resolution.height : 0, u.minorResolution = null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0, u.majorResolution = null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0, u.timestamp = t, u.nackCount = e.nackCount, u.pliCount = e.pliCount, u.decoder = function(e) {
       if (null == e) return "unknown";
       for (let t of Object.keys(v))
         if (e.includes(t)) return v[t];
       return "uncategorized"
-    }(e.decoderImplementationName), s.codecType = T(e.codec.name), s.qpSum = 0, s.freezeCount = e.freezeCount, s.pauseCount = e.pauseCount, s.totalFreezesDuration = e.totalFreezesDuration, s.totalPausesDuration = e.totalPausesDuration, s.totalFramesDuration = e.totalFramesDuration, s.keyframes = null !== (i = e.keyFramesDecoded) && void 0 !== i ? i : null, s)
+    }(e.decoderImplementationName), u.codecType = T(e.codec.name), u.qpSum = 0, u.freezeCount = e.freezeCount, u.pauseCount = e.pauseCount, u.totalFreezesDuration = e.totalFreezesDuration, u.totalPausesDuration = e.totalPausesDuration, u.totalFramesDuration = e.totalFramesDuration, u.keyframes = null !== (i = e.keyFramesDecoded) && void 0 !== i ? i : null, u.passthroughCount = null !== (s = e.passthroughCount) && void 0 !== s ? s : 0, u.cryptorSuccessCount = null !== (r = e.decryptSuccessCount) && void 0 !== r ? r : 0, u.cryptorFailedCount = null !== (a = e.decryptFailureCount) && void 0 !== a ? a : 0, u.cryptorDuration = null !== (o = e.decryptDuration) && void 0 !== o ? o : 0, u.cryptorAttempts = null !== (l = e.decryptAttempts) && void 0 !== l ? l : 0, u)
   }
   static parseOutboundStats(e, t) {
-    var n, i, s, r, a, o, l, u, d;
-    let c = new I;
-    return null == e ? c : {
+    var n, i, s, r, a, o, l, u, d, c, f, _, h, g, m;
+    let E = new I;
+    return null == e ? E : {
       bytes: e.bytesSent,
       framesCodec: e.framesEncoded,
       framesCodecError: null,
@@ -109,11 +109,17 @@ class I {
       keyframes: null !== (o = e.keyFramesEncoded) && void 0 !== o ? o : null,
       framesDroppedRateLimiter: null !== (l = e.framesDroppedRateLimiter) && void 0 !== l ? l : null,
       framesDroppedEncoderQueue: null !== (u = e.framesDroppedEncoderQueue) && void 0 !== u ? u : null,
-      framesDroppedCongestionWindow: null !== (d = e.framesDroppedCongestionWindow) && void 0 !== d ? d : null
+      framesDroppedCongestionWindow: null !== (d = e.framesDroppedCongestionWindow) && void 0 !== d ? d : null,
+      passthroughCount: null !== (c = e.passthroughCount) && void 0 !== c ? c : 0,
+      cryptorSuccessCount: null !== (f = e.encryptSuccessCount) && void 0 !== f ? f : 0,
+      cryptorFailedCount: null !== (_ = e.encryptFailureCount) && void 0 !== _ ? _ : 0,
+      cryptorDuration: null !== (h = e.encryptDuration) && void 0 !== h ? h : 0,
+      cryptorAttempts: null !== (g = e.encryptAttempts) && void 0 !== g ? g : 0,
+      maxCryptorAttempts: null !== (m = e.encryptMaxAttempts) && void 0 !== m ? m : 0
     }
   }
   constructor() {
-    this.bytes = 0, this.framesCodec = 0, this.framesCodecError = null, this.framesNetwork = 0, this.resolution = 0, this.minorResolution = 0, this.majorResolution = 0, this.timestamp = 0, this.packets = 0, this.packetsLost = 0, this.framesDropped = 0, this.nackCount = 0, this.pliCount = 0, this.encoder = null, this.decoder = null, this.codecType = null, this.qpSum = 0, this.freezeCount = 0, this.pauseCount = 0, this.totalFreezesDuration = 0, this.totalPausesDuration = 0, this.totalFramesDuration = 0, this.vmafScore = null, this.psnrDb = null, this.outboundSinkWant = null, this.keyframes = null, this.framesDroppedRateLimiter = null, this.framesDroppedEncoderQueue = null, this.framesDroppedCongestionWindow = null
+    this.bytes = 0, this.framesCodec = 0, this.framesCodecError = null, this.framesNetwork = 0, this.resolution = 0, this.minorResolution = 0, this.majorResolution = 0, this.timestamp = 0, this.packets = 0, this.packetsLost = 0, this.framesDropped = 0, this.nackCount = 0, this.pliCount = 0, this.encoder = null, this.decoder = null, this.codecType = null, this.qpSum = 0, this.freezeCount = 0, this.pauseCount = 0, this.totalFreezesDuration = 0, this.totalPausesDuration = 0, this.totalFramesDuration = 0, this.vmafScore = null, this.psnrDb = null, this.outboundSinkWant = null, this.keyframes = null, this.framesDroppedRateLimiter = null, this.framesDroppedEncoderQueue = null, this.framesDroppedCongestionWindow = null, this.passthroughCount = 0, this.cryptorSuccessCount = 0, this.cryptorFailedCount = 0, this.cryptorDuration = 0, this.cryptorAttempts = 0, this.maxCryptorAttempts = 0
   }
 }
 class C {
@@ -222,7 +228,7 @@ class C {
       totalPausesDuration: 0,
       totalFramesDuration: 0,
       keyframes: 0
-    }, this.aggregationDuration = 0, this.bitrateBuckets = {}, this.fpsBuckets = {}, this.resolutionBuckets = {}, this.resolutionTotal = 0, this.minorResolutionTotal = 0, this.majorResolutionTotal = 0, this.intervalTotal = 0, this.videoStoppedReason = 0, this.startTime = e.now(), this.videoStoppedWatch = new c.StopWatch(e), h.forEach(e => {
+    }, this.aggregationDuration = 0, this.bitrateBuckets = {}, this.fpsBuckets = {}, this.resolutionBuckets = {}, this.resolutionTotal = 0, this.minorResolutionTotal = 0, this.majorResolutionTotal = 0, this.intervalTotal = 0, this.passthroughCount = 0, this.cryptorSuccessCount = 0, this.cryptorFailedCount = 0, this.cryptorDuration = 0, this.cryptorAttempts = 0, this.maxCryptorAttempts = 0, this.videoStoppedReason = 0, this.startTime = e.now(), this.videoStoppedWatch = new c.StopWatch(e), h.forEach(e => {
       this.bitrateBuckets[e] = 0
     }), g.forEach(e => {
       this.fpsBuckets[e] = 0

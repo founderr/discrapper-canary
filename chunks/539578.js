@@ -85,7 +85,13 @@ function l(e, t) {
     cpuLimitedResolution: e.cpuLimitedResolution,
     encoderQualityVmaf: null !== (E = null === (d = v.encoderQualityStats) || void 0 === d ? void 0 : d.imageQualityVmaf_v061) && void 0 !== E ? E : void 0,
     encoderQualityPsnr: null !== (p = null === (c = v.encoderQualityStats) || void 0 === c ? void 0 : c.imageQualityWebrtcPsnrDb) && void 0 !== p ? p : void 0,
-    filter: e.filter
+    filter: e.filter,
+    passthroughCount: e.passthroughCount,
+    encryptSuccessCount: e.encryptSuccessCount,
+    encryptFailureCount: e.encryptFailureCount,
+    encryptDuration: e.encryptDuration,
+    encryptAttempts: e.encryptAttempts,
+    encryptMaxAttempts: e.encryptMaxAttempts
   }
 }
 
@@ -138,6 +144,11 @@ function u(e, t, n, s) {
     totalPausesDuration: e.totalPausesDuration,
     totalFramesDuration: e.totalFramesDuration,
     sumOfSquaredFramesDurations: e.sumOfSquaredFramesDurations,
+    passthroughCount: e.passthroughCount,
+    decryptSuccessCount: e.decryptSuccessCount,
+    decryptFailureCount: e.decryptFailureCount,
+    decryptDuration: e.decryptDuration,
+    decryptAttempts: e.decryptAttempts,
     ...null != s ? o({
       videoJitterBuffer: s.videoJitterBuffer,
       videoJitterDelay: s.videoJitterDelay,
@@ -176,7 +187,13 @@ function d(e, t, n, s) {
       framesCaptured: e.framesCaptured,
       framesRendered: e.framesRendered,
       noiseCancellerProcessTime: e.noiseCancellerProcessTime,
-      voiceActivityDetectorProcessTime: e.voiceActivityDetectorProcessTime
+      voiceActivityDetectorProcessTime: e.voiceActivityDetectorProcessTime,
+      passthroughCount: e.passthroughCount,
+      encryptSuccessCount: e.encryptSuccessCount,
+      encryptFailureCount: e.encryptFailureCount,
+      encryptDuration: e.encryptDuration,
+      encryptAttempts: e.encryptAttempts,
+      encryptMaxAttempts: e.encryptMaxAttempts
     });
     if (null != s) s.forEach(e => {
       let t = l(e, n);
@@ -234,6 +251,11 @@ function d(e, t, n, s) {
       opPreemptiveExpand: a.opPreemptiveExpand,
       opCNG: a.opCNG,
       delayEstimate: a.delayEstimate,
+      passthroughCount: a.passthroughCount,
+      decryptSuccessCount: a.decryptSuccessCount,
+      decryptFailureCount: a.decryptFailureCount,
+      decryptDuration: a.decryptDuration,
+      decryptAttempts: a.decryptAttempts,
       ...null != c ? o({
         audioJitterBuffer: c.audioJitterBuffer,
         audioJitterDelay: c.audioJitterDelay,

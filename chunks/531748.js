@@ -288,7 +288,13 @@ class h extends a.default {
         resolution_percentile25: d.percentiles[25],
         resolution_percentile50: d.percentiles[50],
         resolution_percentile75: d.percentiles[75],
-        duration_video_effect: f(this.videoEffectDuration.totalDuration() / 1e3)
+        duration_video_effect: f(this.videoEffectDuration.totalDuration() / 1e3),
+        cryptor_passthrough_count: e.passthroughCount,
+        cryptor_success_count: e.cryptorSuccessCount,
+        cryptor_failure_count: e.cryptorFailedCount,
+        cryptor_duration: e.cryptorDuration,
+        cryptor_attempts: e.cryptorAttempts,
+        cryptor_max_attempts: e.maxCryptorAttempts
       },
       {
         bytes: _,
@@ -306,7 +312,7 @@ class h extends a.default {
         totalPausesDuration: y,
         totalFreezesDuration: N,
         totalFramesDuration: R,
-        keyframes: O
+        keyframes: D
       } = e.aggregatedProperties;
     return {
       ...c,
@@ -327,7 +333,7 @@ class h extends a.default {
       receiver_total_pauses_duration: y,
       receiver_total_freezes_duration: N,
       receiver_total_frames_duration: R,
-      num_keyframes: O
+      num_keyframes: D
     }
   }
   receivedStats(e, t, n) {
