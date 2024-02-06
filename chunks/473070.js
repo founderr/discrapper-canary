@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), a("222007"), a("511434"), a("313619"), a("654714"), a("287168"), a("956660");
 var n = a("37983"),
@@ -14,7 +14,7 @@ var n = a("37983"),
   d = a("685665"),
   c = a("803725"),
   f = a("758946"),
-  m = a("99366"),
+  m = a("430481"),
   v = a("135284"),
   E = a("488673"),
   p = a("5431"),
@@ -23,12 +23,12 @@ var n = a("37983"),
   N = a("782340"),
   x = a("756458");
 
-function S(e) {
-  var t, a, p, h, C, S, g, _;
+function g(e) {
+  var t, a, p, h, C, g, _, S;
   let {
     clip: L,
-    channelId: M,
-    transitionState: T,
+    channelId: T,
+    transitionState: M,
     onClose: A
   } = e, [R, j] = l.useState(!0), [b, P] = l.useState(!1), [w, D] = l.useState(null), [y, O] = l.useState(null), {
     AnalyticsLocationProvider: k
@@ -60,16 +60,16 @@ function S(e) {
   }, [w]), l.useEffect(() => () => {
     null != y && URL.revokeObjectURL(y)
   }, [y]);
-  let [F, G] = l.useState(null === (C = null === (t = L.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === C || C), [U, B] = l.useState(null === (S = null === (a = L.editMetadata) || void 0 === a ? void 0 : a.applicationAudio) || void 0 === S || S), [V, H] = l.useState({
-    start: null !== (g = null === (p = L.editMetadata) || void 0 === p ? void 0 : p.start) && void 0 !== g ? g : 0,
-    end: null !== (_ = null === (h = L.editMetadata) || void 0 === h ? void 0 : h.end) && void 0 !== _ ? _ : 0
+  let [F, U] = l.useState(null === (C = null === (t = L.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === C || C), [G, B] = l.useState(null === (g = null === (a = L.editMetadata) || void 0 === a ? void 0 : a.applicationAudio) || void 0 === g || g), [V, H] = l.useState({
+    start: null !== (_ = null === (p = L.editMetadata) || void 0 === p ? void 0 : p.start) && void 0 !== _ ? _ : 0,
+    end: null !== (S = null === (h = L.editMetadata) || void 0 === h ? void 0 : h.end) && void 0 !== S ? S : 0
   }), [z, Z] = l.useState(L.name), K = l.useRef({
     name: z,
     editMetadata: {
       start: V.start,
       end: V.end,
       voiceAudio: F,
-      applicationAudio: U
+      applicationAudio: G
     }
   });
   K.current = {
@@ -78,7 +78,7 @@ function S(e) {
       start: V.start,
       end: V.end,
       voiceAudio: F,
-      applicationAudio: U
+      applicationAudio: G
     }
   };
   let X = (0, v.useClipProtocolURL)(L);
@@ -101,7 +101,7 @@ function S(e) {
     },
     size: r.ModalSize.DYNAMIC,
     className: x.modalRoot,
-    transitionState: T,
+    transitionState: M,
     children: (0, n.jsx)(k, {
       children: (0, n.jsx)(r.ModalContent, {
         className: x.modalContent,
@@ -111,7 +111,7 @@ function S(e) {
         }) : (0, n.jsxs)(n.Fragment, {
           children: [(0, n.jsx)(I, {
             voiceAudioEnabled: F,
-            applicationAudioEnabled: U,
+            applicationAudioEnabled: G,
             videoURL: w,
             cropData: V,
             onSetCropData: H,
@@ -119,13 +119,13 @@ function S(e) {
             hasOpenPrompt: b,
             onDoneLoading: () => j(!1),
             audioURL: y,
-            transitionState: T
+            transitionState: M
           }), !R && (0, n.jsx)(E.default, {
             voiceAudioEnabled: F,
-            channelId: M,
-            applicationAudioEnabled: U,
+            channelId: T,
+            applicationAudioEnabled: G,
             onChangeApplicationAudioEnabled: B,
-            onChangeVoiceAudioEnabled: G,
+            onChangeVoiceAudioEnabled: U,
             cropData: V,
             onSetClipName: Z,
             clipName: z,
