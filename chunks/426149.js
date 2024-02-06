@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var s = a("37983");
@@ -18,27 +18,28 @@ var n = a("414456"),
   f = a("782340"),
   m = a("341923");
 
-function g(e) {
+function S(e) {
   let {
-    onClose: t
-  } = e, a = (0, c.useForceMigration)(), n = (0, l.useStateFromStores)([d.default], () => d.default.locale);
+    onClose: t,
+    handleStartFlow: a
+  } = e, n = (0, c.useForceMigration)(), S = (0, l.useStateFromStores)([d.default], () => d.default.locale);
   return (0, s.jsxs)("div", {
     className: m.infoContainer,
     children: [(0, s.jsx)(r.Heading, {
       className: i(m.finishTitle, {
-        [m.finishTitlePadding]: a
+        [m.finishTitlePadding]: n
       }),
       color: "header-primary",
       variant: "heading-xl/bold",
-      children: a ? f.default.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_1.format({
-        date: (0, u.getLocalizedForcedUUDate)(n)
+      children: n ? f.default.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_1.format({
+        date: (0, u.getLocalizedForcedUUDate)(S)
       }) : f.default.Messages.POMELO_EXISTING_FLOW_REMINDER_TITLE
     }), (0, s.jsx)(r.Text, {
       className: m.subtitleFinish,
       color: "header-secondary",
       variant: "text-md/medium",
-      children: a ? f.default.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_2.format({
-        date: (0, u.getLocalizedForcedUUDate)(n)
+      children: n ? f.default.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_2.format({
+        date: (0, u.getLocalizedForcedUUDate)(S)
       }) : f.default.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_1
     }), (0, s.jsx)(r.Text, {
       className: m.promptFinish,
@@ -53,8 +54,8 @@ function g(e) {
       className: m.button,
       type: "button",
       size: r.Button.Sizes.SMALL,
-      onClick: t,
-      children: f.default.Messages.INVITES_DISABLED_CONFIRMATION
+      onClick: n ? a : t,
+      children: n ? f.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT : f.default.Messages.INVITES_DISABLED_CONFIRMATION
     })]
   })
 }
