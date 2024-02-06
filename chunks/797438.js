@@ -20,8 +20,8 @@ var l = n("37983"),
   m = n("363887"),
   E = n("472942"),
   g = n("492950"),
-  I = n("610898"),
-  S = n("829562"),
+  S = n("610898"),
+  I = n("829562"),
   _ = n("782340"),
   N = n("54965"),
   T = n("789978");
@@ -87,14 +87,14 @@ function x(e) {
     config: {
       duration: A
     }
-  }), en = a.useCallback(e => null == n ? void 0 : n(F, e), [n, F]), el = (0, l.jsxs)(I.ListItem, {
+  }), en = a.useCallback(e => null == n ? void 0 : n(F, e), [n, F]), el = (0, l.jsxs)(S.ListItem, {
     children: [(0, l.jsx)(h.default, {
       disabled: Z || d,
       hovered: H,
       selected: s,
       unread: R,
       className: T.pill
-    }), (0, l.jsx)(S.default, {
+    }), (0, l.jsx)(I.default, {
       text: q,
       disabled: D,
       selected: s,

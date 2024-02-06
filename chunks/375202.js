@@ -1,15 +1,15 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return a
+    return n
   }
 });
-var n = l("819068");
+var a = l("819068");
 
-function a(e, t) {
+function n(e, t) {
   if (__OVERLAY__) {
     let e = t.getGame(),
-      l = (0, n.getPID)();
+      l = (0, a.getPID)();
     return null == e || null == l ? null : {
       id: e.id,
       pid: l,

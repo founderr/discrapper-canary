@@ -85,8 +85,8 @@ function j(e) {
     var e, t;
     return (null === (e = A.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
   }), {
-    guildPopulated: H,
-    guildMessaged: F,
+    guildPopulated: F,
+    guildMessaged: H,
     guildPersonalized: U
   } = (0, p.useCompletedStates)(l), {
     handleInvite: k,
@@ -169,9 +169,9 @@ function j(e) {
       handleDownload: r,
       handleAddApplication: o
     }
-  }(l), W = !(P || H || F || U), {
-    titleAnimatedStyle: Z,
-    opacities: z
+  }(l), W = !(P || F || H || U), {
+    titleAnimatedStyle: z,
+    opacities: Z
   } = function(e) {
     let t = (0, r.useLazyValue)(() => new o.default.Value(0)),
       n = (0, r.useLazyValue)(() => new o.default.Value(0)),
@@ -219,18 +219,18 @@ function j(e) {
   !f && (T && q.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: Z[q.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("243826"),
       header: y.default.Messages.WELCOME_CTA_INVITE_TITLE,
-      completed: H,
+      completed: F,
       onClick: k
     })
   }, "invite")), j && q.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: Z[q.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("215036"),
@@ -241,18 +241,18 @@ function j(e) {
   }, "customize")), b && q.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: Z[q.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("505873"),
       header: y.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
-      completed: F,
+      completed: H,
       onClick: w
     })
   }, "message")), (0, N.isWeb)() && q.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: Z[q.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("238032"),
@@ -263,7 +263,7 @@ function j(e) {
   }, "download")), q.push((0, s.jsx)(o.default.div, {
     className: O.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: Z[q.length]
     } : {},
     children: (0, s.jsx)(D, {
       iconUrl: n("356451"),
@@ -282,7 +282,7 @@ function j(e) {
       children: (0, s.jsxs)("div", {
         className: O.inner,
         children: [(0, s.jsxs)(o.default.div, {
-          style: Z,
+          style: z,
           children: [(0, s.jsx)(c.Heading, {
             className: O.titleName,
             variant: "heading-xxl/semibold",

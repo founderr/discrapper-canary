@@ -15,7 +15,7 @@ function l(e) {
   (0, n.openModalLazy)(async () => {
     let {
       default: n
-    } = await s.el("997510").then(s.bind(s, "997510"));
+    } = await s.el("476141").then(s.bind(s, "476141"));
     return s => (0, a.jsx)(n, {
       guildId: e,
       demonetized: t,

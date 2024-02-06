@@ -1,11 +1,11 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return g
+    return _
   }
 }), l("808653"), l("222007");
-var n = l("37983"),
-  a = l("884691"),
+var a = l("37983"),
+  n = l("884691"),
   s = l("627445"),
   r = l.n(s),
   i = l("917351"),
@@ -16,12 +16,12 @@ var n = l("37983"),
   f = l("42887"),
   m = l("326620"),
   S = l("32649"),
-  C = l("782340"),
-  E = l("389915"),
+  E = l("782340"),
+  C = l("389915"),
   h = l("770420"),
-  N = l("926622");
+  g = l("926622");
 
-function g(e) {
+function _(e) {
   let {
     selectedSource: t,
     onChangeVideoDeviceSource: l,
@@ -29,43 +29,43 @@ function g(e) {
   } = e;
   r(null != t, "Camera capture device cannot be null");
   let i = (0, S.default)(),
-    g = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
-    [_, p] = a.useState(function(e, t, l) {
+    _ = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
+    [N, p] = n.useState(function(e, t, l) {
       if (null != t && null != l) {
-        let n = t.find(t => t.id === e);
-        if (null == n) return;
-        let a = u.reduce(l, (e, t) => (0, o.stringSimilarity)(n.name, t.name) > (0, o.stringSimilarity)(n.name, e.name) ? t : e);
-        if (null != a) return a.id
+        let a = t.find(t => t.id === e);
+        if (null == a) return;
+        let n = u.reduce(l, (e, t) => (0, o.stringSimilarity)(a.name, t.name) > (0, o.stringSimilarity)(a.name, e.name) ? t : e);
+        if (null != n) return n.id
       }
-    }(t.id, i, g));
-  return null != _ && s(_), (0, n.jsx)(a.Fragment, {
-    children: (0, n.jsxs)(c.FormItem, {
+    }(t.id, i, _));
+  return null != N && s(N), (0, a.jsx)(n.Fragment, {
+    children: (0, a.jsxs)(c.FormItem, {
       title: "Capture Device",
       className: h.modalContent,
-      children: [(0, n.jsx)(c.FormItem, {
-        className: N.marginTop8,
-        children: (0, n.jsxs)(m.default, {
-          children: [(0, n.jsx)("span", {
-            className: E.ellipsisText,
+      children: [(0, a.jsx)(c.FormItem, {
+        className: g.marginTop8,
+        children: (0, a.jsxs)(m.default, {
+          children: [(0, a.jsx)("span", {
+            className: C.ellipsisText,
             children: t.name
-          }), (0, n.jsx)(c.Button, {
-            className: E.changeButton,
+          }), (0, a.jsx)(c.Button, {
+            className: C.changeButton,
             color: c.Button.Colors.PRIMARY,
             size: c.Button.Sizes.SMALL,
             onClick: l,
-            children: C.default.Messages.CHANGE
+            children: E.default.Messages.CHANGE
           })]
         })
-      }), (0, n.jsx)(c.FormItem, {
-        className: N.marginTop8,
-        title: C.default.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
-        children: (0, n.jsx)(c.SingleSelect, {
-          value: _,
-          className: N.marginaTop8,
+      }), (0, a.jsx)(c.FormItem, {
+        className: g.marginTop8,
+        title: E.default.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
+        children: (0, a.jsx)(c.SingleSelect, {
+          value: N,
+          className: g.marginaTop8,
           onChange: e => {
             p(e), s(e)
           },
-          options: u.map(g, e => {
+          options: u.map(_, e => {
             let {
               id: t,
               name: l

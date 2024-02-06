@@ -20,8 +20,8 @@ var l = n("37983"),
   m = n("151185"),
   E = n("472942"),
   g = n("966270"),
-  I = n("49111"),
-  S = n("243338"),
+  S = n("49111"),
+  I = n("243338"),
   _ = n("782340"),
   N = n("823660");
 let T = {
@@ -52,7 +52,7 @@ function L(e) {
   let {
     disableTooltip: t,
     lastTargetNode: n
-  } = e, o = (0, s.useStateFromStores)([C.default], () => C.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, S.CREATE_GUILD_MODAL_KEY)), {
+  } = e, o = (0, s.useStateFromStores)([C.default], () => C.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), v = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(v)), [L, v]), R = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, I.CREATE_GUILD_MODAL_KEY)), {
     analyticsLocations: M
   } = (0, u.default)(), O = (0, r.useRedesignIconContext)().enabled, y = (0, l.jsx)(g.default, {
     showPill: !1,
@@ -60,11 +60,11 @@ function L(e) {
     onClick: () => {
       (0, c.isAtGuildCapAndNonPremium)() ? (0, f.default)({
         analyticsSource: {
-          page: I.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL
+          page: S.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL
         },
         analyticsLocation: {
-          page: I.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL,
-          section: I.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+          page: S.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL,
+          section: S.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
         },
         analyticsLocations: M
       }) : d.default.openCreateGuildModal({

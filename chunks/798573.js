@@ -20,8 +20,8 @@ var l = n("37983"),
   m = n("651896"),
   E = n("520480"),
   g = n("813531"),
-  I = n("749387"),
-  S = n("260488"),
+  S = n("749387"),
+  I = n("260488"),
   _ = n("12896"),
   N = n("27618"),
   T = n("18494"),
@@ -64,7 +64,7 @@ function Y(e) {
     badge: h,
     link: p,
     showProgressBadge: m
-  } = e, S = (0, i.useStateFromStores)([c.default], () => c.default.isEditorOpen), [N, T] = a.useState(!1), [A, L] = a.useState(!1), [v, x] = a.useState(null), [R, b] = a.useState(0), [G, B] = a.useState(!1), {
+  } = e, I = (0, i.useStateFromStores)([c.default], () => c.default.isEditorOpen), [N, T] = a.useState(!1), [A, L] = a.useState(!1), [v, x] = a.useState(null), [R, b] = a.useState(0), [G, B] = a.useState(!1), {
     canViewBroadcasts: Y
   } = C.default.useExperiment({
     location: "home_button_no_track"
@@ -90,7 +90,7 @@ function Y(e) {
   }) : W && (Q = (0, l.jsx)(M.default, {
     className: H.broadcastBadge
   }));
-  let q = t || N || S,
+  let q = t || N || I,
     J = (0, l.jsx)(o.BlobMask, {
       highlight: W,
       selected: q,
@@ -131,7 +131,7 @@ function Y(e) {
         let {
           closePopout: t
         } = e;
-        return (0, l.jsx)(I.default, {
+        return (0, l.jsx)(S.default, {
           closePopout: t
         })
       },
@@ -196,19 +196,19 @@ function K() {
     })),
     c = o + u,
     f = (0, i.useStateFromStores)([A.default], () => A.default.getCurrentUser()),
-    C = (0, S.useMessageRequestsCount)(),
+    C = (0, I.useMessageRequestsCount)(),
     E = s + c + C,
     g = E === c && c > 0 && s + C === 0;
   a.useEffect(() => {
     n.length > 0 && (0, h.fetchBroadcasterBuckets)()
   }, [n]), (0, m.default)();
-  let I = v.default.getHomeLink();
-  return g && (I = F.Routes.APPLICATION_STORE), (0, l.jsx)(Y, {
+  let S = v.default.getHomeLink();
+  return g && (S = F.Routes.APPLICATION_STORE), (0, l.jsx)(Y, {
     selected: e,
     user: f,
     selectedChannelId: T.default.getChannelId(F.ME),
     badge: E,
-    link: I,
+    link: S,
     showProgressBadge: t
   })
 }

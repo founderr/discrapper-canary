@@ -5,19 +5,19 @@ a.r(e), a.d(e, {
   }
 });
 var n = a("37983"),
-  s = a("884691"),
-  i = a("432710"),
+  i = a("884691"),
+  s = a("432710"),
   l = a("77078"),
   u = a("155084"),
   r = a("489622"),
-  c = a("599110"),
-  o = a("781324"),
+  o = a("599110"),
+  c = a("781324"),
   d = a("132206"),
   _ = a("333781"),
   S = a("422671"),
   E = a("792105"),
-  T = a("133479"),
-  f = a("966677"),
+  f = a("133479"),
+  T = a("966677"),
   A = a("49111"),
   I = a("782340"),
   g = a("302713");
@@ -27,13 +27,13 @@ function N() {
     e = (0, S.useSafetyHubInitialized)(),
     a = (0, d.useSafetyHubAccountStanding)(),
     N = (0, _.useSafetyHubFetchError)();
-  return (s.useEffect(() => {
-    o.getSafetyHubData()
-  }, []), s.useEffect(() => {
-    e && (c.default.track(A.AnalyticEvents.SAFETY_HUB_VIEWED, {
+  return (i.useEffect(() => {
+    c.getSafetyHubData()
+  }, []), i.useEffect(() => {
+    e && (o.default.track(A.AnalyticEvents.SAFETY_HUB_VIEWED, {
       account_standing: a.state
     }), u.default.increment({
-      name: i.MetricEvents.SAFETY_HUB_VIEW
+      name: s.MetricEvents.SAFETY_HUB_VIEW
     }))
   }, [e]), t) ? (0, n.jsx)("div", {
     children: (0, n.jsx)(l.Spinner, {})
@@ -41,11 +41,11 @@ function N() {
     color: r.NoticeColors.DANGER,
     className: g.nagbar,
     children: [I.default.Messages.SAFETY_HUB_ERROR_MESSAGE, (0, n.jsx)(r.NoticeButton, {
-      onClick: () => o.getSafetyHubData(),
+      onClick: () => c.getSafetyHubData(),
       children: I.default.Messages.SAFETY_HUB_ERROR_ACTION_BUTTON
     })]
   }) : (0, n.jsxs)("div", {
     className: g.container,
-    children: [(0, n.jsx)(T.default, {}), (0, n.jsx)(f.ConnectedSafetyHubViolationsContainer, {})]
+    children: [(0, n.jsx)(f.default, {}), (0, n.jsx)(T.ConnectedSafetyHubViolationsContainer, {})]
   })
 }

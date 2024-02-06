@@ -37,8 +37,8 @@ var s = n("37983"),
   j = n("991170"),
   b = n("361528"),
   P = n("49111"),
-  H = n("482931"),
-  F = n("782340"),
+  F = n("482931"),
+  H = n("782340"),
   U = n("334831");
 class k extends a.PureComponent {
   componentDidMount() {
@@ -86,28 +86,28 @@ class k extends a.PureComponent {
       theme: h,
       useReducedMotion: A
     };
-    if (e && !p) N.message = F.default.Messages.FOLLOW_NEWS_CHAT_INPUT_MESSAGE, null != m && m >= 1e3 && (N.subtitle = F.default.Messages.FOLLOW_NEWS_CHAT_INPUT_SUBTITLE.format({
+    if (e && !p) N.message = H.default.Messages.FOLLOW_NEWS_CHAT_INPUT_MESSAGE, null != m && m >= 1e3 && (N.subtitle = H.default.Messages.FOLLOW_NEWS_CHAT_INPUT_SUBTITLE.format({
       count: (1e3 * Math.floor(m / 1e3)).toLocaleString()
-    })), N.buttonText = F.default.Messages.FOLLOW, N.onButtonClick = this.handleFollowAnnouncement, N.imageSrc = n("757000"), t && (N.onSecondaryButtonClick = this.handleJoinServer, N.secondaryButtonText = F.default.Messages.LURKER_MODE_CHAT_INPUT_BUTTON);
-    else if (l) N.message = F.default.Messages.GUILD_VERIFICATION_TEXT_NOT_CLAIMED, N.buttonText = F.default.Messages.CLAIM_ACCOUNT, N.onButtonClick = S ? this.handleShowMemberVerification : this.handleClaimAccount, N.imageSrc = n("978834");
+    })), N.buttonText = H.default.Messages.FOLLOW, N.onButtonClick = this.handleFollowAnnouncement, N.imageSrc = n("757000"), t && (N.onSecondaryButtonClick = this.handleJoinServer, N.secondaryButtonText = H.default.Messages.LURKER_MODE_CHAT_INPUT_BUTTON);
+    else if (l) N.message = H.default.Messages.GUILD_VERIFICATION_TEXT_NOT_CLAIMED, N.buttonText = H.default.Messages.CLAIM_ACCOUNT, N.onButtonClick = S ? this.handleShowMemberVerification : this.handleClaimAccount, N.imageSrc = n("978834");
     else if (S) switch (null == T ? void 0 : T.applicationStatus) {
       case E.GuildJoinRequestApplicationStatuses.SUBMITTED:
-        N.message = F.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, N.subtitle = F.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_SUBTITLE, N.buttonText = F.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, N.onButtonClick = this.handleCancelApplication, N.imageSrc = n("897176");
+        N.message = H.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, N.subtitle = H.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_SUBTITLE, N.buttonText = H.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, N.onButtonClick = this.handleCancelApplication, N.imageSrc = n("897176");
         break;
       case E.GuildJoinRequestApplicationStatuses.REJECTED:
-        N.message = F.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, N.buttonText = F.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, N.onButtonClick = this.handleViewApplicationRejection, N.imageSrc = n("376180");
+        N.message = H.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, N.buttonText = H.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, N.onButtonClick = this.handleViewApplicationRejection, N.imageSrc = n("376180");
         break;
       default:
-        N.message = F.default.Messages.MEMBER_VERIFICATION_CHAT_BLOCKER_TEXT, N.buttonText = F.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, N.buttonColor = o.ButtonColors.BRAND, N.onButtonClick = this.handleShowMemberVerification;
+        N.message = H.default.Messages.MEMBER_VERIFICATION_CHAT_BLOCKER_TEXT, N.buttonText = H.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, N.buttonColor = o.ButtonColors.BRAND, N.onButtonClick = this.handleShowMemberVerification;
         N.animationSrc = () => n.el("170206").then(n.t.bind(n, "170206", 19)).then(e => {
           let {
             default: t
           } = e;
           return t
         })
-    } else i && !_ ? (N.message = F.default.Messages.GUILD_VERIFICATION_TEXT_NOT_PHONE_VERIFIED, N.buttonText = F.default.Messages.VERIFY_PHONE, N.onButtonClick = this.handleVerifyPhone, N.imageSrc = n("958347")) : r ? (N.message = F.default.Messages.GUILD_VERIFICATION_TEXT_NOT_VERIFIED, N.buttonText = F.default.Messages.RESEND_VERIFICATION_EMAIL, N.onButtonClick = this.handleResendVerification, N.imageSrc = n("978834")) : u ? (N.message = F.default.Messages.GUILD_VERIFICATION_TEXT_MEMBER_AGE.format({
+    } else i && !_ ? (N.message = H.default.Messages.GUILD_VERIFICATION_TEXT_NOT_PHONE_VERIFIED, N.buttonText = H.default.Messages.VERIFY_PHONE, N.onButtonClick = this.handleVerifyPhone, N.imageSrc = n("958347")) : r ? (N.message = H.default.Messages.GUILD_VERIFICATION_TEXT_NOT_VERIFIED, N.buttonText = H.default.Messages.RESEND_VERIFICATION_EMAIL, N.onButtonClick = this.handleResendVerification, N.imageSrc = n("978834")) : u ? (N.message = H.default.Messages.GUILD_VERIFICATION_TEXT_MEMBER_AGE.format({
       min: P.VerificationCriteria.MEMBER_AGE
-    }), N.countdown = d) : c && (N.message = F.default.Messages.GUILD_VERIFICATION_TEXT_ACCOUNT_AGE.format({
+    }), N.countdown = d) : c && (N.message = H.default.Messages.GUILD_VERIFICATION_TEXT_ACCOUNT_AGE.format({
       min: P.VerificationCriteria.ACCOUNT_AGE
     }), N.countdown = f);
     return (0, s.jsx)(o.Popout, {
@@ -156,15 +156,15 @@ class k extends a.PureComponent {
         guild: e
       } = this.props;
       null != e && (0, o.openModal)(t => (0, s.jsx)(o.ConfirmModal, {
-        header: F.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
-        confirmText: F.default.Messages.CONFIRM,
-        cancelText: F.default.Messages.CANCEL,
+        header: H.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
+        confirmText: H.default.Messages.CONFIRM,
+        cancelText: H.default.Messages.CANCEL,
         onConfirm: () => C.default.removeGuildJoinRequest(e.id),
         confirmButtonColor: o.Button.Colors.BRAND,
         ...t,
         children: (0, s.jsx)(o.Text, {
           variant: "text-md/normal",
-          children: F.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
+          children: H.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
         })
       }))
     }, this.handleViewApplicationRejection = () => {
@@ -197,7 +197,7 @@ class k extends a.PureComponent {
           ...t
         })
       }, {
-        modalKey: H.PHONE_VERIFICATION_MODAL_KEY
+        modalKey: F.PHONE_VERIFICATION_MODAL_KEY
       })
     }, this.handleResendVerification = () => {
       var e;
@@ -205,12 +205,12 @@ class k extends a.PureComponent {
       let t = null === (e = D.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
       null != t && (0, o.openModal)(e => (0, s.jsx)(o.ConfirmModal, {
         ...e,
-        header: F.default.Messages.VERIFICATION_EMAIL_TITLE,
-        confirmText: F.default.Messages.OKAY,
+        header: H.default.Messages.VERIFICATION_EMAIL_TITLE,
+        confirmText: H.default.Messages.OKAY,
         confirmButtonColor: o.Button.Colors.BRAND,
         children: (0, s.jsx)(o.Text, {
           variant: "text-md/normal",
-          children: F.default.Messages.VERIFICATION_EMAIL_BODY.format({
+          children: H.default.Messages.VERIFICATION_EMAIL_BODY.format({
             email: t
           })
         })

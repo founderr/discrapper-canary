@@ -20,20 +20,20 @@ var l = n("37983"),
   m = n("27978"),
   E = n("64657"),
   g = n("49111"),
-  I = n("782340"),
-  S = n("909130");
+  S = n("782340"),
+  I = n("909130");
 let _ = [{
   icon: (0, l.jsx)(c.default, {
-    className: S.icon
+    className: I.icon
   }),
   key: "EVENTS",
   getName: e => {
     let {
       numEvents: t
     } = e;
-    return t > 0 ? I.default.Messages.GUILD_EVENTS_PLURAL.format({
+    return t > 0 ? S.default.Messages.GUILD_EVENTS_PLURAL.format({
       number: t
-    }) : I.default.Messages.GUILD_EVENTS
+    }) : S.default.Messages.GUILD_EVENTS
   },
   handler: e => (0, i.openModalLazy)(async () => {
     let {
@@ -46,17 +46,17 @@ let _ = [{
   })
 }, {
   icon: (0, l.jsx)(f.default, {
-    className: S.icon
+    className: I.icon
   }),
   key: "JOIN_SERVERS",
-  getName: () => I.default.Messages.HUB_SIDEBAR_JOIN_SERVERS,
+  getName: () => S.default.Messages.HUB_SIDEBAR_JOIN_SERVERS,
   handler: (e, t) => (0, u.transitionToGuild)(e.id, t.id)
 }, {
   icon: (0, l.jsx)(C.default, {
-    className: S.icon
+    className: I.icon
   }),
   key: "ADD_SERVERS",
-  getName: () => I.default.Messages.HUB_SIDEBAR_ADD_SERVERS,
+  getName: () => S.default.Messages.HUB_SIDEBAR_ADD_SERVERS,
   handler: (e, t) => (0, i.openModalLazy)(async () => {
     let {
       default: a
@@ -70,10 +70,10 @@ let _ = [{
   })
 }, {
   icon: (0, l.jsx)(h.default, {
-    className: S.icon
+    className: I.icon
   }),
   key: "INVITE_MEMBERS",
-  getName: () => I.default.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
+  getName: () => S.default.Messages.HUB_SIDEBAR_INVITE_MEMBERS,
   handler: (e, t) => (0, i.openModalLazy)(async () => {
     let {
       default: a
@@ -128,10 +128,10 @@ var N = e => {
         },
         onClick: () => h(e.key),
         selected: t,
-        className: S.optionItem,
-        selectedClassName: S.selected,
-        innerClassName: S.itemInner,
-        avatarClassName: S.avatar,
+        className: I.optionItem,
+        selectedClassName: I.selected,
+        innerClassName: I.itemInner,
+        avatarClassName: I.avatar,
         children: "JOIN_SERVERS" === e.key && C > 0 ? (0, o.renderMentionBadge)(C) : null
       }, e.key)
     })

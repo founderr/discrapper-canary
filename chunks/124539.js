@@ -27,12 +27,12 @@ function x(e) {
     onClose: n,
     onNext: x,
     onBack: f
-  } = e, T = (0, _.useSafetyHubAppealSignal)(), g = (0, o.useStateFromStores)([u.default], () => u.default.getFreeTextAppealReason()), [m, p] = l.useState(""), [C, L] = l.useState(!1);
+  } = e, T = (0, _.useSafetyHubAppealSignal)(), g = (0, o.useStateFromStores)([u.default], () => u.default.getFreeTextAppealReason()), [p, m] = l.useState(""), [C, L] = l.useState(!1);
   l.useEffect(() => {
-    p(null != g ? g : ""), L(T === A.AppealIngestionSignal.SOMETHING_ELSE)
+    m(null != g ? g : ""), L(T === A.AppealIngestionSignal.SOMETHING_ELSE)
   }, [g, T]);
   let h = e => {
-      L(e === A.AppealIngestionSignal.SOMETHING_ELSE), e !== A.AppealIngestionSignal.SOMETHING_ELSE && (p(""), r.default.dispatch({
+      L(e === A.AppealIngestionSignal.SOMETHING_ELSE), e !== A.AppealIngestionSignal.SOMETHING_ELSE && (m(""), r.default.dispatch({
         type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
         userInput: ""
       })), r.default.dispatch({
@@ -82,8 +82,8 @@ function x(e) {
           rows: 4,
           maxLength: 1024,
           placeholder: S.default.Messages.APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_PLACEHOLDER,
-          value: m,
-          onChange: p,
+          value: p,
+          onChange: m,
           autoFocus: !0
         }), (0, s.jsx)(d.Text, {
           variant: "text-sm/normal",
@@ -100,7 +100,7 @@ function x(e) {
         onClick: () => {
           r.default.dispatch({
             type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
-            userInput: m
+            userInput: p
           }), null == x || x()
         },
         color: d.Button.Colors.BRAND,
@@ -109,7 +109,7 @@ function x(e) {
         onClick: () => {
           r.default.dispatch({
             type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
-            userInput: m
+            userInput: p
           }), null == f || f()
         },
         color: d.Button.Colors.PRIMARY,

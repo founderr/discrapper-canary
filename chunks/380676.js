@@ -23,8 +23,8 @@ var i = n("37983"),
   T = n("377502"),
   C = n("103603"),
   v = n("736393"),
-  N = n("170213"),
-  A = n("49111"),
+  A = n("170213"),
+  N = n("49111"),
   m = n("719347"),
   g = n("782340"),
   L = n("161730");
@@ -40,20 +40,20 @@ let U = (e, t) => {
       if (!((0, u.isImageFile)(e.filename) || (0, u.isVideoFile)(e.filename))) return a;
       return {
         ...a,
-        width: null !== (r = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== r ? r : N.DEFAULT_MEDIA_MAX_WIDTH,
-        height: null !== (l = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== l ? l : N.DEFAULT_MEDIA_MAX_HEIGHT
+        width: null !== (r = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== r ? r : A.DEFAULT_MEDIA_MAX_WIDTH,
+        height: null !== (l = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== l ? l : A.DEFAULT_MEDIA_MAX_HEIGHT
       }
     });
     return (0, c.createMessageRecord)({
       ...(0, d.default)({
         nonce: e.id,
         content: e.content,
-        type: A.MessageTypes.DEFAULT,
+        type: N.MessageTypes.DEFAULT,
         channelId: ""
       }),
       timestamp: new Date(a.default.extractTimestamp(e.id)).toISOString(),
       attachments: n,
-      state: A.MessageStates.SENT
+      state: N.MessageStates.SENT
     })
   },
   R = e => {
@@ -64,16 +64,16 @@ let U = (e, t) => {
     } = t;
     if (0 === n.length) return null;
     let r = (e, t, n) => {
-        let r = N.DEFAULT_MEDIA_MAX_WIDTH,
-          a = N.DEFAULT_MEDIA_MAX_HEIGHT;
+        let r = A.DEFAULT_MEDIA_MAX_WIDTH,
+          a = A.DEFAULT_MEDIA_MAX_HEIGHT;
         if (null != t.width && null != t.height) {
           let e = (0, C.getRatio)({
             width: t.width,
             height: t.height,
-            maxWidth: N.DEFAULT_MEDIA_MAX_WIDTH,
-            maxHeight: N.DEFAULT_MEDIA_MAX_HEIGHT
+            maxWidth: A.DEFAULT_MEDIA_MAX_WIDTH,
+            maxHeight: A.DEFAULT_MEDIA_MAX_HEIGHT
           });
-          r = (0, l.clamp)(Math.round(t.width * e), 0, N.DEFAULT_MEDIA_MAX_WIDTH), a = (0, l.clamp)(Math.round(t.height * e), 0, N.DEFAULT_MEDIA_MAX_HEIGHT)
+          r = (0, l.clamp)(Math.round(t.width * e), 0, A.DEFAULT_MEDIA_MAX_WIDTH), a = (0, l.clamp)(Math.round(t.height * e), 0, A.DEFAULT_MEDIA_MAX_HEIGHT)
         }
         return (0, i.jsx)("div", {
           style: {

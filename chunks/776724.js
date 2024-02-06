@@ -26,13 +26,13 @@ function N(e) {
     onBack: I
   } = e, x = (0, n.useStateFromStores)([c.default], () => c.default.getAppealClassificationId()), {
     classification: f
-  } = (0, E.useSafetyHubClassification)(null != x ? x : ""), T = (0, u.capitalizeText)(null == f ? void 0 : f.description), g = (0, n.useStateFromStores)([c.default], () => c.default.getIsSubmitting()), m = (0, n.useStateFromStores)([c.default], () => c.default.getAppealSignal()), p = (0, n.useStateFromStores)([c.default], () => c.default.getFreeTextAppealReason()), [C, L] = l.useState(p), [h, M] = l.useState(!1), [O, j] = l.useState(!1), P = l.useCallback(async () => {
+  } = (0, E.useSafetyHubClassification)(null != x ? x : ""), T = (0, u.capitalizeText)(null == f ? void 0 : f.description), g = (0, n.useStateFromStores)([c.default], () => c.default.getIsSubmitting()), p = (0, n.useStateFromStores)([c.default], () => c.default.getAppealSignal()), m = (0, n.useStateFromStores)([c.default], () => c.default.getFreeTextAppealReason()), [C, L] = l.useState(m), [h, M] = l.useState(!1), [O, j] = l.useState(!1), P = l.useCallback(async () => {
     if (null !== x) try {
-      j(!1), await r.requestReview(x, m, p), null == N || N()
+      j(!1), await r.requestReview(x, p, m), null == N || N()
     } catch (e) {
       j(!0)
     }
-  }, [x, m, p, N]);
+  }, [x, p, m, N]);
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)(i.ModalHeader, {
       direction: d.default.Direction.VERTICAL,
@@ -56,7 +56,7 @@ function N(e) {
       paddingFix: !1,
       children: [(0, s.jsx)("ul", {
         className: A.listContainer,
-        children: [(0, u.getAppealSignalDisplayText)(m), p].filter(e => e.length > 0).map((e, t) => (0, s.jsx)("li", {
+        children: [(0, u.getAppealSignalDisplayText)(p), m].filter(e => e.length > 0).map((e, t) => (0, s.jsx)("li", {
           className: A.listItem,
           children: (0, s.jsx)(i.Text, {
             tag: "span",
@@ -71,7 +71,7 @@ function N(e) {
           children: (0, s.jsx)(i.Heading, {
             variant: "heading-md/normal",
             color: "text-link",
-            children: p.length > 0 ? _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
+            children: m.length > 0 ? _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
           })
         })
       }), h && (0, s.jsxs)("div", {

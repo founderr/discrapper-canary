@@ -1,38 +1,38 @@
 "use strict";
 a.r(e), a.d(e, {
   default: function() {
-    return m
+    return p
   }
 });
 var n = a("816494"),
-  s = a.n(n),
-  i = a("446674"),
+  i = a.n(n),
+  s = a("446674"),
   l = a("913144"),
   u = a("908539"),
   r = a("170213");
-let c = {},
-  o = {},
+let o = {},
+  c = {},
   d = {
     state: u.AccountStandingState.ALL_GOOD
   },
   _ = !1,
   S = !1,
   E = null,
-  T = null,
-  f = !1,
+  f = null,
+  T = !1,
   A = !1,
   I = null,
   g = r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY,
   N = "";
-class C extends i.default.Store {
+class C extends s.default.Store {
   isFetching() {
     return _
   }
   getClassifications() {
-    return Object.values(c)
+    return Object.values(o)
   }
   getClassification(t) {
-    return c[t]
+    return o[t]
   }
   getAccountStanding() {
     return d
@@ -44,13 +44,13 @@ class C extends i.default.Store {
     return S
   }
   getClassificationRequestState(t) {
-    return o[t]
+    return c[t]
   }
   getAppealClassificationId() {
-    return T
+    return f
   }
   getIsDsaEligible() {
-    return f
+    return T
   }
   getAppealSignal() {
     return g
@@ -66,7 +66,7 @@ class C extends i.default.Store {
   }
 }
 C.displayName = "SafetyHubStore";
-var m = new C(l.default, {
+var p = new C(l.default, {
   SAFETY_HUB_FETCH_START: function(t) {
     _ = !0
   },
@@ -76,7 +76,7 @@ var m = new C(l.default, {
       accountStanding: a,
       isDsaEligible: n
     } = t;
-    c = s(e, "id"), d = a, f = n, _ = !1, S = !0, E = null
+    o = i(e, "id"), d = a, T = n, _ = !1, S = !0, E = null
   },
   SAFETY_HUB_FETCH_FAILURE: function(t) {
     let {
@@ -85,7 +85,7 @@ var m = new C(l.default, {
     _ = !1, S = !1, E = e
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_START: function(t) {
-    o[t.classificationId] = u.ClassificationRequestState.PENDING, _ = !0
+    c[t.classificationId] = u.ClassificationRequestState.PENDING, _ = !0
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function(t) {
     let {
@@ -93,23 +93,23 @@ var m = new C(l.default, {
       accountStanding: a,
       isDsaEligible: n
     } = t;
-    c[e.id] = e, o[e.id] = u.ClassificationRequestState.SUCCESS, d = a, _ = !1, E = null, f = n
+    o[e.id] = e, c[e.id] = u.ClassificationRequestState.SUCCESS, d = a, _ = !1, E = null, T = n
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(t) {
     let {
       error: e,
       classificationId: a
     } = t;
-    _ = !1, E = e, o[a] = u.ClassificationRequestState.FAILED
+    _ = !1, E = e, c[a] = u.ClassificationRequestState.FAILED
   },
   SAFETY_HUB_APPEAL_OPEN: function(t) {
     let {
       classificationId: e
     } = t;
-    T = e
+    f = e
   },
   SAFETY_HUB_APPEAL_CLOSE: function() {
-    T = null, g = r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, N = ""
+    f = null, g = r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, N = ""
   },
   SAFETY_HUB_APPEAL_SIGNAL_SELECT: function(t) {
     let {
@@ -131,7 +131,7 @@ var m = new C(l.default, {
     let {
       classificationId: e
     } = t;
-    A = !1, I = null, c[e].appeal_status = {
+    A = !1, I = null, o[e].appeal_status = {
       status: u.AppealStatusType.REVIEW_PENDING
     }
   },
@@ -142,8 +142,8 @@ var m = new C(l.default, {
     A = !1, I = e
   },
   LOGOUT: function() {
-    _ = !1, c = {}, d = {
+    _ = !1, o = {}, d = {
       state: u.AccountStandingState.ALL_GOOD
-    }, T = null, g = r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, N = ""
+    }, f = null, g = r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, N = ""
   }
 })

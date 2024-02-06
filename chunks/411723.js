@@ -30,7 +30,7 @@ var r = n("414456"),
     } = e, T = (0, c.useGetOrFetchApplication)(r), C = (0, o.useStateFromStoresArray)([f.default], () => {
       var e;
       return null !== (e = n.map(e => f.default.getUser(e)).filter(_.isNotNullish)) && void 0 !== e ? e : []
-    }), v = null == T ? void 0 : T.name, N = s(t).fromNow();
+    }), v = null == T ? void 0 : T.name, A = s(t).fromNow();
     return null == t ? null : (0, i.jsxs)("div", {
       className: l(h, p.container),
       children: [(0, i.jsx)(E.default, {
@@ -49,7 +49,7 @@ var r = n("414456"),
           variant: "text-xs/medium",
           color: "text-muted",
           className: p.subtitle,
-          children: [null != v ? "".concat(v, " • ") : null, N]
+          children: [null != v ? "".concat(v, " • ") : null, A]
         }), (0, i.jsx)(u.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
