@@ -858,7 +858,6 @@ k(["INITIAL_GUILD"], e => {
     messageId: e.message_id,
     userId: e.user_id,
     emoji: e.emoji,
-    burst: e.burst,
     colors: e.burst_colors,
     messageAuthorId: e.message_author_id,
     reactionType: e.type

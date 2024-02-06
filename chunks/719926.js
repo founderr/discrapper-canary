@@ -31,21 +31,20 @@ class f extends r.default {
   addReaction(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-      i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-      s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : o.ReactionTypes.NORMAL,
-      r = -1,
-      u = this.reactions.map((u, c) => {
-        if ((0, l.emojiEquals)(u.emoji, e)) {
-          if (r = c, i) {
-            if (t && u.me) return u;
-            let e = t && u.me_burst ? u.burst_count : u.burst_count + 1,
-              i = null != u.burst_colors && u.burst_colors.length > 0 ? u.burst_colors : n;
-            u = {
-              ...u,
-              me_burst: !!t || u.me_burst,
+      i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.ReactionTypes.NORMAL,
+      s = -1,
+      r = this.reactions.map((r, u) => {
+        if ((0, l.emojiEquals)(r.emoji, e)) {
+          if (s = u, i === o.ReactionTypes.BURST) {
+            if (t && r.me) return r;
+            let e = t && r.me_burst ? r.burst_count : r.burst_count + 1,
+              i = null != r.burst_colors && r.burst_colors.length > 0 ? r.burst_colors : n;
+            r = {
+              ...r,
+              me_burst: !!t || r.me_burst,
               burst_count: e,
               count_details: {
-                ...u.count_details,
+                ...r.count_details,
                 burst: e
               },
               burst_colors: i,
@@ -54,35 +53,35 @@ class f extends r.default {
                 shouldProcessMobileColors: (0, d.isIOS)()
               })
             }
-          } else if (s === o.ReactionTypes.VOTE) {
-            var f, _;
-            let e = null !== (_ = null === (f = u.count_details) || void 0 === f ? void 0 : f.vote) && void 0 !== _ ? _ : 0,
-              n = t && u.me_vote ? e : e + 1;
-            u = {
-              ...u,
+          } else if (i === o.ReactionTypes.VOTE) {
+            var c, f;
+            let e = null !== (f = null === (c = r.count_details) || void 0 === c ? void 0 : c.vote) && void 0 !== f ? f : 0,
+              n = t && r.me_vote ? e : e + 1;
+            r = {
+              ...r,
               count_details: {
-                ...u.count_details,
+                ...r.count_details,
                 vote: n
               },
-              me_vote: !!t || u.me_vote
+              me_vote: !!t || r.me_vote
             }
           } else {
-            if (t && u.me_burst) return u;
-            let e = t && u.me ? u.count : u.count + 1;
-            u = {
-              ...u,
+            if (t && r.me_burst) return r;
+            let e = t && r.me ? r.count : r.count + 1;
+            r = {
+              ...r,
               count: e,
               count_details: {
-                ...u.count_details,
+                ...r.count_details,
                 normal: e
               },
-              me: !!t || u.me
+              me: !!t || r.me
             }
           }
         }
-        return u
+        return r
       });
-    return -1 === r && (i ? u.push({
+    return -1 === s && (i === o.ReactionTypes.BURST ? r.push({
       emoji: e,
       me: !1,
       me_burst: t,
@@ -97,7 +96,7 @@ class f extends r.default {
         colors: null != n ? n : [],
         shouldProcessMobileColors: (0, d.isIOS)()
       })
-    }) : s === o.ReactionTypes.VOTE ? u.push({
+    }) : i === o.ReactionTypes.VOTE ? r.push({
       emoji: e,
       me: !1,
       me_burst: !1,
@@ -110,7 +109,7 @@ class f extends r.default {
       },
       burst_count: 0,
       burst_colors: []
-    }) : u.push({
+    }) : r.push({
       emoji: e,
       me: t,
       me_burst: !1,
@@ -121,7 +120,7 @@ class f extends r.default {
       },
       burst_count: 0,
       burst_colors: []
-    })), this.set("reactions", u)
+    })), this.set("reactions", r)
   }
   addReactionBatch(e, t) {
     return e.reduce((e, n) => {
@@ -135,12 +134,11 @@ class f extends r.default {
   removeReaction(e) {
     var t, n, i, s;
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-      a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-      u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.ReactionTypes.NORMAL,
-      d = -1,
-      c = this.reactions.map((t, n) => {
+      a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.ReactionTypes.NORMAL,
+      u = -1,
+      d = this.reactions.map((t, n) => {
         if ((0, l.emojiEquals)(t.emoji, e)) {
-          if (a) {
+          if (a === o.ReactionTypes.BURST) {
             let e = r && !t.me_burst ? t.burst_count : t.burst_count - 1;
             t = {
               ...t,
@@ -151,7 +149,7 @@ class f extends r.default {
                 burst: e
               }
             }
-          } else if (u === o.ReactionTypes.VOTE) {
+          } else if (a === o.ReactionTypes.VOTE) {
             var i, s;
             let e = null !== (s = null === (i = t.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== s ? s : 0,
               n = r && !t.me_vote ? e : e - 1;
@@ -175,19 +173,19 @@ class f extends r.default {
               }
             }
           }
-          d = n
+          u = n
         }
         return t
       }),
       {
-        count: f,
-        burst_count: _,
-        count_details: h
-      } = null !== (t = c[d]) && void 0 !== t ? t : {},
-      g = null !== (n = null == h ? void 0 : h.normal) && void 0 !== n ? n : 0,
-      m = null !== (i = null == h ? void 0 : h.burst) && void 0 !== i ? i : 0,
-      E = null !== (s = null == h ? void 0 : h.vote) && void 0 !== s ? s : 0;
-    return -1 !== d && f <= 0 && _ <= 0 && g <= 0 && m <= 0 && E <= 0 && c.splice(d, 1), this.set("reactions", c)
+        count: c,
+        burst_count: f,
+        count_details: _
+      } = null !== (t = d[u]) && void 0 !== t ? t : {},
+      h = null !== (n = null == _ ? void 0 : _.normal) && void 0 !== n ? n : 0,
+      g = null !== (i = null == _ ? void 0 : _.burst) && void 0 !== i ? i : 0,
+      m = null !== (s = null == _ ? void 0 : _.vote) && void 0 !== s ? s : 0;
+    return -1 !== u && c <= 0 && f <= 0 && h <= 0 && g <= 0 && m <= 0 && d.splice(u, 1), this.set("reactions", d)
   }
   removeReactionsForEmoji(e) {
     return this.set("reactions", this.reactions.filter(t => !(0, l.emojiEquals)(t.emoji, e)))

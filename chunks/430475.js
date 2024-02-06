@@ -40,21 +40,15 @@ function c(e) {
     userId: l,
     emoji: a,
     optimistic: s,
-    burst: d,
-    reactionType: o
-  } = e, c = u[n];
-  if (null == c || null == c.firstMessage || i !== c.firstMessage.id) return !1;
-  let _ = r.default.getCurrentUser(),
-    f = null != _ && _.id === l;
-  if (s && !f) return !1;
-  if (u[n] = {
-      ...c
-    }, "MESSAGE_REACTION_ADD" === t) {
-    let {
-      colors: t
-    } = e;
-    u[n].firstMessage = c.firstMessage.addReaction(a, f, t, d, o)
-  } else u[n].firstMessage = c.firstMessage.removeReaction(a, f, d, o)
+    reactionType: d
+  } = e, o = u[n];
+  if (null == o || null == o.firstMessage || i !== o.firstMessage.id) return !1;
+  let c = r.default.getCurrentUser(),
+    _ = null != c && c.id === l;
+  if (s && !_) return !1;
+  u[n] = {
+    ...o
+  }, "MESSAGE_REACTION_ADD" === t ? u[n].firstMessage = o.firstMessage.addReaction(a, _, e.colors, d) : u[n].firstMessage = o.firstMessage.removeReaction(a, _, d)
 }
 class _ extends i.default.Store {
   initialize() {

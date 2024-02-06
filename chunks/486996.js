@@ -1,75 +1,73 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   }
 });
-var l = n("446674"),
-  a = n("913144"),
+var a = n("446674"),
+  l = n("913144"),
   r = n("267567"),
-  i = n("875978"),
-  o = n("166257"),
-  s = n("766274"),
-  u = n("42203"),
-  c = n("697218");
-let d = {};
-class f {
+  i = n("166257"),
+  o = n("766274"),
+  s = n("42203"),
+  u = n("697218");
+let c = {};
+class d {
   static ensure(e, t, n) {
-    var l, a;
-    let r = "".concat(e, ":").concat(t.name, ":").concat(null !== (l = t.id) && void 0 !== l ? l : "", ":").concat(n);
-    return d[r] = null !== (a = d[r]) && void 0 !== a ? a : new f
+    var a, l;
+    let r = "".concat(e, ":").concat(t.name, ":").concat(null !== (a = t.id) && void 0 !== a ? a : "", ":").concat(n);
+    return c[r] = null !== (l = c[r]) && void 0 !== l ? l : new d
   }
   constructor() {
     this.fetched = !1, this.users = {}
   }
 }
 
-function R(e) {
+function f(e) {
   let {
     type: t,
     messageId: n,
-    userId: l,
-    emoji: a,
-    burst: r,
-    reactionType: o
-  } = e, s = null != o ? o : r ? i.ReactionTypes.BURST : i.ReactionTypes.NORMAL, u = f.ensure(n, a, s);
+    userId: a,
+    emoji: l,
+    reactionType: r
+  } = e, i = d.ensure(n, l, r);
   if ("MESSAGE_REACTION_ADD" === t) {
-    let e = c.default.getUser(l);
-    null != e && (u.users[l] = e)
-  } else delete u.users[l]
+    let e = u.default.getUser(a);
+    null != e && (i.users[a] = e)
+  } else delete i.users[a]
 }
-class m extends l.default.Store {
-  getReactions(e, t, n, l, a) {
-    let i = f.ensure(t, n, a);
-    if (!i.fetched) {
-      let s = u.default.getChannel(e),
-        c = null != s ? s.getGuildId() : null;
+class R extends a.default.Store {
+  getReactions(e, t, n, a, l) {
+    let o = d.ensure(t, n, l);
+    if (!o.fetched) {
+      let u = s.default.getChannel(e),
+        c = null != u ? u.getGuildId() : null;
       if (null != c && r.default.isLurking(c)) return;
-      o.getReactors({
+      i.getReactors({
         channelId: e,
         messageId: t,
         emoji: n,
-        limit: l,
-        type: a
-      }), i.fetched = !0
+        limit: a,
+        type: l
+      }), o.fetched = !0
     }
-    return i.users
+    return o.users
   }
 }
-m.displayName = "MessageReactionsStore";
-var E = new m(a.default, {
+R.displayName = "MessageReactionsStore";
+var m = new R(l.default, {
   CONNECTION_OPEN: function() {
-    d = {}
+    c = {}
   },
-  MESSAGE_REACTION_ADD: R,
-  MESSAGE_REACTION_REMOVE: R,
+  MESSAGE_REACTION_ADD: f,
+  MESSAGE_REACTION_REMOVE: f,
   MESSAGE_REACTION_ADD_USERS: function(e) {
     let {
       messageId: t,
       users: n,
-      emoji: l,
-      reactionType: a
-    } = e, r = f.ensure(t, l, a);
-    n.forEach(e => r.users[e.id] = new s.default(e))
+      emoji: a,
+      reactionType: l
+    } = e, r = d.ensure(t, a, l);
+    n.forEach(e => r.users[e.id] = new o.default(e))
   }
 })

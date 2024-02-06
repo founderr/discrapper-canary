@@ -37,8 +37,8 @@ let S = {
   A = {},
   D = {},
   M = {},
-  v = {},
   p = {},
+  v = {},
   y = {};
 
 function h(e) {
@@ -68,12 +68,12 @@ let N = {},
 
 function H(e, t, n) {
   var d, i;
-  return null === (i = p[e]) || void 0 === i ? void 0 : null === (d = i[t]) || void 0 === d ? void 0 : d[n]
+  return null === (i = v[e]) || void 0 === i ? void 0 : null === (d = i[t]) || void 0 === d ? void 0 : d[n]
 }
 
 function P(e, t) {
   var n;
-  return null === (n = v[e]) || void 0 === n ? void 0 : n[t]
+  return null === (n = p[e]) || void 0 === n ? void 0 : n[t]
 }
 
 function w(e) {
@@ -88,7 +88,7 @@ function b(e, t, n) {
   let i = H(d, e, t);
   if (null == i) return !1;
   let r = n(i);
-  return p[d][e][t] = r, !0
+  return v[d][e][t] = r, !0
 }
 
 function V(e, t) {
@@ -97,7 +97,7 @@ function V(e, t) {
 
 function k(e, t) {
   var n, d;
-  (null === (n = p[e]) || void 0 === n ? void 0 : n[t.channel_id]) == null && (p[e] = null !== (d = p[e]) && void 0 !== d ? d : {}, p[e][t.channel_id] = {}), p[e][t.channel_id][t.id] = t, null == v[t.channel_id] && (v[t.channel_id] = {}), v[t.channel_id][t.id] = e
+  (null === (n = v[e]) || void 0 === n ? void 0 : n[t.channel_id]) == null && (v[e] = null !== (d = v[e]) && void 0 !== d ? d : {}, v[e][t.channel_id] = {}), v[e][t.channel_id][t.id] = t, null == p[t.channel_id] && (p[t.channel_id] = {}), p[t.channel_id][t.id] = e
 }
 
 function B(e, t) {
@@ -110,7 +110,7 @@ function B(e, t) {
 function Y(e, t) {
   var n, d, i;
   let r = P(e, t);
-  return null != r && (null === (d = p[r]) || void 0 === d || null === (n = d[e]) || void 0 === n || delete n[t], null === (i = v[e]) || void 0 === i || delete i[t], ! function(e, t) {
+  return null != r && (null === (d = v[r]) || void 0 === d || null === (n = d[e]) || void 0 === n || delete n[t], null === (i = p[e]) || void 0 === i || delete i[t], ! function(e, t) {
     let n = B(e, t);
     if (null == n) return;
     let d = (0, I.default)(n),
@@ -134,14 +134,7 @@ function x(e) {
     let {
       reactionType: d
     } = e;
-    if ("MESSAGE_REACTION_ADD" !== t) return n.removeReaction(r, l, void 0, d);
-    {
-      let {
-        burst: t,
-        colors: i
-      } = e;
-      return n.addReaction(r, l, i, t, d)
-    }
+    return "MESSAGE_REACTION_ADD" === t ? n.addReaction(r, l, e.colors, d) : n.removeReaction(r, l, d)
   })
 }
 
@@ -156,7 +149,7 @@ function j(e) {
   var t;
   let n = e.guild_id;
   if (null == n) return !1;
-  delete v[e.id], null === (t = p[n]) || void 0 === t || delete t[e.id]
+  delete p[e.id], null === (t = v[n]) || void 0 === t || delete t[e.id]
 }
 class W extends r.default.Store {
   getLastFetchedMillis(e) {
@@ -232,7 +225,7 @@ var X = new W(u.default, {
     G[t] = {
       loading: 0,
       error: null
-    }, delete y[t], delete M[t], delete A[t], N[t] = new Set, O[t] = new Set, U[t] = new Set, p[t] = {}
+    }, delete y[t], delete M[t], delete A[t], N[t] = new Set, O[t] = new Set, U[t] = new Set, v[t] = {}
   },
   GUILD_FEED_FETCH_PAGE_START: function(e) {
     let {
@@ -338,7 +331,7 @@ var X = new W(u.default, {
     if (!(l in U) && (U[l] = new Set), U[l].add(u), !r.hoist) return;
     let s = h(l),
       a = null !== (d = s.get(u)) && void 0 !== d ? d : (0, _.createFakeGuildFeedItem)(i);
-    null != a && (null != a.message && (null === (n = p[l]) || void 0 === n ? void 0 : null === (t = n[a.message.channel_id]) || void 0 === t ? void 0 : t[a.message.id]) == null && k(l, a.message), s.delete(a.id), a.featured = !0, a.seen = !1, s.set(a.id, a))
+    null != a && (null != a.message && (null === (n = v[l]) || void 0 === n ? void 0 : null === (t = n[a.message.channel_id]) || void 0 === t ? void 0 : t[a.message.id]) == null && k(l, a.message), s.delete(a.id), a.featured = !0, a.seen = !1, s.set(a.id, a))
   },
   GUILD_FEED_UNFEATURE_ITEM: function(e) {
     var t, n, d, i;
@@ -360,8 +353,8 @@ var X = new W(u.default, {
       guild: n
     } = e;
     if (null == g[n.id]) return !1;
-    for (let e in delete g[n.id], delete M[n.id], null !== (t = p[n.id]) && void 0 !== t ? t : {}) delete v[e];
-    delete p[n.id], delete y[n.id]
+    for (let e in delete g[n.id], delete M[n.id], null !== (t = v[n.id]) && void 0 !== t ? t : {}) delete p[e];
+    delete v[n.id], delete y[n.id]
   },
   CHANNEL_UPDATES: function(e) {
     let {
@@ -371,7 +364,7 @@ var X = new W(u.default, {
       if (null == e ? void 0 : e.hasFlag(m.ChannelFlags.GUILD_FEED_REMOVED)) return j(e)
   },
   LOGOUT: function() {
-    g = {}, M = {}, v = {}, p = {}, y = {}, N = {}, O = {}, U = {}, C = {}
+    g = {}, M = {}, p = {}, v = {}, y = {}, N = {}, O = {}, U = {}, C = {}
   },
   MESSAGE_UPDATE: function(e) {
     let {

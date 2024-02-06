@@ -76,20 +76,11 @@ function V(e) {
     messageId: i,
     userId: s,
     emoji: r,
-    burst: a,
-    reactionType: l
-  } = e, u = o.default.get(n);
-  if (null == u || !(0, g.shouldApplyReaction)(e)) return !1;
-  let d = p.default.getId() === s;
-  u = u.update(i, n => {
-    if ("MESSAGE_REACTION_ADD" !== t) return n.removeReaction(r, d, a, l);
-    {
-      let {
-        colors: t
-      } = e;
-      return n.addReaction(r, d, t, a, l)
-    }
-  }), o.default.commit(u)
+    reactionType: a
+  } = e, l = o.default.get(n);
+  if (null == l || !(0, g.shouldApplyReaction)(e)) return !1;
+  let u = p.default.getId() === s;
+  l = l.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(r, u, e.colors, a) : n.removeReaction(r, u, a)), o.default.commit(l)
 }
 
 function G(e) {
