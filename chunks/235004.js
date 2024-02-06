@@ -124,10 +124,7 @@ var O = new D(l.default, {
     let {
       soundId: t,
       guildId: n
-    } = e;
-    E.delete(t);
-    let i = E.get(n),
-      s = null == i ? void 0 : i.findIndex(e => e.soundId === t);
+    } = e, i = E.get(n), s = null == i ? void 0 : i.findIndex(e => e.soundId === t);
     null != i && null != s && !(s < 0) && (i.splice(s, 1), E.set(n, [...i]))
   },
   GUILD_SOUNDBOARD_SOUND_PLAY_START: function(e) {
