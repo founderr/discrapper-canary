@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
 var i = n("37983");
 n("884691");
 var l = n("77078"),
-  a = n("272030"),
-  r = n("838446"),
+  r = n("272030"),
+  a = n("838446"),
   s = n("158534"),
-  o = n("798609"),
-  u = n("846883"),
+  u = n("798609"),
+  o = n("846883"),
   d = n("812204"),
   c = n("243288"),
   f = n("321135"),
@@ -28,8 +28,8 @@ var l = n("77078"),
   g = n("170990"),
   m = n("304582"),
   A = n("72057"),
-  M = n("563816"),
-  R = n("489836"),
+  R = n("563816"),
+  M = n("489836"),
   L = n("406703"),
   O = n("126710"),
   y = n("502533"),
@@ -41,11 +41,11 @@ var l = n("77078"),
   b = n("623879"),
   F = n("49111"),
   w = n("782340"),
-  j = (0, s.default)((0, r.default)(function(e) {
+  j = (0, s.default)((0, a.default)(function(e) {
     let {
       user: t,
       channel: n,
-      channelSelected: r = !1,
+      channelSelected: a = !1,
       showMute: s = !0,
       showMediaItems: d = !1,
       showChannelCallItems: F = !1,
@@ -57,14 +57,14 @@ var l = n("77078"),
     } = e, Y = (0, D.default)(t.id, null), Z = (0, L.default)(t, V), W = (0, A.default)({
       user: t,
       context: V
-    }), K = (0, m.default)(t), z = (0, b.default)(t.id), q = (0, O.default)(n.id, r), X = (0, U.default)(t), Q = (0, u.default)(null, t), J = (0, x.default)(t.id), $ = (0, G.default)(t.id, n.id), ee = (0, g.default)(t), et = (0, P.default)(t.id), en = (0, y.default)(t.id, n.id), ei = (0, R.default)(t), el = (0, _.default)(n), ea = (0, I.default)({
+    }), K = (0, m.default)(t), z = (0, b.default)(t.id), q = (0, O.default)(n.id, a), X = (0, U.default)(t), Q = (0, o.default)(null, t), J = (0, x.default)(t.id), $ = (0, G.default)(t.id, n.id), ee = (0, g.default)(t), et = (0, P.default)(t.id), en = (0, y.default)(t.id, n.id), ei = (0, M.default)(t), el = (0, _.default)(n), er = (0, I.default)({
       id: t.id,
       label: w.default.Messages.COPY_ID_USER
-    }), er = (0, I.default)({
+    }), ea = (0, I.default)({
       id: n.id,
       label: w.default.Messages.COPY_ID_CHANNEL
-    }), es = (0, E.default)(n), eo = (0, f.default)(t.id), eu = (0, c.default)(n.id), ed = (0, v.default)(t), ec = (0, h.default)(t.id), ef = (0, M.default)({
-      commandType: o.ApplicationCommandType.USER,
+    }), es = (0, E.default)(n), eu = (0, f.default)(t.id), eo = (0, c.default)(n.id), ed = (0, v.default)(t), ec = (0, h.default)(t.id), ef = (0, R.default)({
+      commandType: u.ApplicationCommandType.USER,
       commandTargetId: t.id,
       channel: n,
       guildId: void 0,
@@ -72,7 +72,7 @@ var l = n("77078"),
     }), eh = (0, p.useAddToFavoritesItem)(n), eE = (0, p.useRemoveFromFavoritesItem)(n), e_ = (0, C.default)(n), eI = (0, T.default)(n), ep = (0, S.useMessageRequestItem)(n), eC = (0, N.useSafetyWarningsItem)(n), eT = n.isManaged(), eS = t.isNonUserBot();
     return (0, i.jsxs)(l.Menu, {
       navId: "user-context",
-      onClose: a.closeContextMenu,
+      onClose: r.closeContextMenu,
       "aria-label": w.default.Messages.USER_ACTIONS_MENU_LABEL,
       onSelect: B,
       children: [(0, i.jsx)(l.MenuGroup, {
@@ -99,12 +99,12 @@ var l = n("77078"),
         }), (0, i.jsx)(l.MenuGroup, {
           children: s && el
         }), F && (0, i.jsxs)(l.MenuGroup, {
-          children: [eu, eo]
+          children: [eo, eu]
         })]
       }), (0, i.jsx)(l.MenuGroup, {
         children: eE
       }), (0, i.jsxs)(l.MenuGroup, {
-        children: [ea, !H && er]
+        children: [er, !H && ea]
       })]
     })
   }, {

@@ -22,8 +22,8 @@ function _(e) {
     maxUsers: r,
     users: o,
     guildId: _,
-    onFocus: p
-  } = e, [S, I] = l.useState(!1);
+    onFocus: S
+  } = e, [p, I] = l.useState(!1);
 
   function T() {
     return (0, i.jsx)(u.Dialog, {
@@ -67,12 +67,12 @@ function _(e) {
         t = o.length - r;
       return t > 0 && (e[e.length - 1] = (0, i.jsx)(u.Popout, {
         renderPopout: T,
-        shouldShow: S,
+        shouldShow: p,
         position: "bottom",
         onRequestClose: () => I(!1),
         children: () => (0, i.jsxs)(u.Button, {
           className: a(E.avatar, E.overflow),
-          onFocus: p,
+          onFocus: S,
           onClick: () => I(!0),
           look: u.Button.Looks.BLANK,
           size: u.Button.Sizes.NONE,

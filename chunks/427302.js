@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return p
   }
 }), n("222007");
 var i = n("37983"),
@@ -16,7 +16,7 @@ var i = n("37983"),
   f = n("145131"),
   E = n("49111"),
   _ = n("123106");
-class p extends l.Component {
+class S extends l.Component {
   render() {
     let {
       popoutOpen: e
@@ -104,7 +104,7 @@ class p extends l.Component {
     }
   }
 }
-p.defaultProps = {
+S.defaultProps = {
   disablePopout: !1
 };
-var S = (0, u.default)(p)
+var p = (0, u.default)(S)

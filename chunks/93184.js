@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return T
   }
 });
 var i = n("37983"),
@@ -31,17 +31,17 @@ let I = () => (0, i.jsx)(a.default, {
   onSaveText: h.default.Messages.MEMBER_VERIFICATION_PROGRESS_LOST_CONTINUE,
   onSaveButtonColor: s.ButtonColors.RED
 });
-var C = e => {
+var T = e => {
   let {
     guildId: t,
     transitionState: n,
     onClose: a,
     onComplete: _,
     isPreview: h = !1
-  } = e, C = (0, f.useMemberVerificationFormNoticeStore)(e => e.shouldShowWarning), T = (0, l.useStateFromStores)([d.default], () => d.default.get(t)), S = (0, c.useUID)();
+  } = e, T = (0, f.useMemberVerificationFormNoticeStore)(e => e.shouldShowWarning), C = (0, l.useStateFromStores)([d.default], () => d.default.get(t)), S = (0, c.useUID)();
   return (r.useEffect(() => {
-    T === d.NO_MEMBER_VERIFICATION_FORM && a()
-  }, [a, T]), T === d.NO_MEMBER_VERIFICATION_FORM) ? null : (0, i.jsxs)(i.Fragment, {
+    C === d.NO_MEMBER_VERIFICATION_FORM && a()
+  }, [a, C]), C === d.NO_MEMBER_VERIFICATION_FORM) ? null : (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsxs)(s.ModalRoot, {
       size: s.ModalSize.MEDIUM,
       className: p.container,
@@ -58,7 +58,7 @@ var C = e => {
         isPreview: h
       })]
     }), (0, i.jsx)(o.default, {
-      children: !0 === C && (0, i.jsx)(u.default, {
+      children: !0 === T && (0, i.jsx)(u.default, {
         className: p.notice,
         children: (0, i.jsx)(I, {})
       })

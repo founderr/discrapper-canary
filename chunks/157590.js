@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("222007");
-var i, r = n("817736"),
-  l = n("118810");
+var i, l = n("817736"),
+  r = n("118810");
 let o = {
   root: null,
   rootMargin: "0px",
@@ -19,8 +19,8 @@ i = class {
     let t = this._observer;
     if (null == t) return;
     this.unobserve(e);
-    let n = (0, r.findDOMNode)(e);
-    (0, l.isElement)(n, HTMLElement) && (this._nodes.set(n, e), this._components.set(e, n), t.observe(n))
+    let n = (0, l.findDOMNode)(e);
+    (0, r.isElement)(n, HTMLElement) && (this._nodes.set(n, e), this._components.set(e, n), t.observe(n))
   }
   unobserve(e) {
     let t = this._observer;

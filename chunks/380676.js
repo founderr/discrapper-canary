@@ -16,14 +16,14 @@ var i = n("37983"),
   f = n("933629"),
   E = n("39331"),
   _ = n("596368"),
-  p = n("227439"),
-  S = n("697218"),
+  S = n("227439"),
+  p = n("697218"),
   I = n("170113"),
   T = n("780571"),
   h = n("377502"),
   C = n("103603"),
-  v = n("736393"),
-  g = n("170213"),
+  g = n("736393"),
+  v = n("170213"),
   m = n("49111"),
   A = n("719347"),
   N = n("782340"),
@@ -33,15 +33,15 @@ let U = (e, t) => {
       var n, i, l, r;
       let a = {
         ...e,
-        filename: (0, v.getAttachmentFilename)(e),
+        filename: (0, g.getAttachmentFilename)(e),
         size: 0,
         proxy_url: e.url
       };
       if (!((0, u.isImageFile)(e.filename) || (0, u.isVideoFile)(e.filename))) return a;
       return {
         ...a,
-        width: null !== (l = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== l ? l : g.DEFAULT_MEDIA_MAX_WIDTH,
-        height: null !== (r = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== r ? r : g.DEFAULT_MEDIA_MAX_HEIGHT
+        width: null !== (l = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== l ? l : v.DEFAULT_MEDIA_MAX_WIDTH,
+        height: null !== (r = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== r ? r : v.DEFAULT_MEDIA_MAX_HEIGHT
       }
     });
     return (0, c.createMessageRecord)({
@@ -64,16 +64,16 @@ let U = (e, t) => {
     } = t;
     if (0 === n.length) return null;
     let l = (e, t, n) => {
-        let l = g.DEFAULT_MEDIA_MAX_WIDTH,
-          a = g.DEFAULT_MEDIA_MAX_HEIGHT;
+        let l = v.DEFAULT_MEDIA_MAX_WIDTH,
+          a = v.DEFAULT_MEDIA_MAX_HEIGHT;
         if (null != t.width && null != t.height) {
           let e = (0, C.getRatio)({
             width: t.width,
             height: t.height,
-            maxWidth: g.DEFAULT_MEDIA_MAX_WIDTH,
-            maxHeight: g.DEFAULT_MEDIA_MAX_HEIGHT
+            maxWidth: v.DEFAULT_MEDIA_MAX_WIDTH,
+            maxHeight: v.DEFAULT_MEDIA_MAX_HEIGHT
           });
-          l = (0, r.clamp)(Math.round(t.width * e), 0, g.DEFAULT_MEDIA_MAX_WIDTH), a = (0, r.clamp)(Math.round(t.height * e), 0, g.DEFAULT_MEDIA_MAX_HEIGHT)
+          l = (0, r.clamp)(Math.round(t.width * e), 0, v.DEFAULT_MEDIA_MAX_WIDTH), a = (0, r.clamp)(Math.round(t.height * e), 0, v.DEFAULT_MEDIA_MAX_HEIGHT)
         }
         return (0, i.jsx)("div", {
           style: {
@@ -137,7 +137,7 @@ let U = (e, t) => {
     var t;
     let {
       flaggedContent: n
-    } = e, r = (0, o.useStateFromStores)([S.default], () => S.default.getCurrentUser()), [a, c] = l.useState({}), [d, f] = l.useState(!0), I = n[0], h = U(I, a), C = (0, E.default)(h, {
+    } = e, r = (0, o.useStateFromStores)([p.default], () => p.default.getCurrentUser()), [a, c] = l.useState({}), [d, f] = l.useState(!0), I = n[0], h = U(I, a), C = (0, E.default)(h, {
       hideSimpleEmbedContent: !1,
       allowList: !1,
       allowHeading: !1,
@@ -191,7 +191,7 @@ let U = (e, t) => {
         className: L.classificationEvidenceCard,
         children: (0, i.jsx)(T.default, {
           compact: !1,
-          childrenHeader: (0, p.default)({
+          childrenHeader: (0, S.default)({
             author: {
               ...r,
               colorString: "",

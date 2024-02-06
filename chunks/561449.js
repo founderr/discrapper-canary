@@ -1,6 +1,6 @@
 e.exports = function(e, t) {
   var n = -1,
-    i = e.length;
-  for (t || (t = Array(i)); ++n < i;) t[n] = e[n];
+    l = e.length;
+  for (t || (t = Array(l)); ++n < l;) t[n] = e[n];
   return t
 }

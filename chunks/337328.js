@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("252744"),
   T = n("502651"),
   S = n("812204"),
-  m = n("685665"),
-  p = n("106803"),
+  p = n("685665"),
+  m = n("106803"),
   A = n("861370"),
   g = n("91639"),
   N = n("128887"),
@@ -151,7 +151,7 @@ function Z(e) {
     closePopout: D
   } = e, y = (0, h.useAnalyticsContext)(), {
     AnalyticsLocationProvider: b
-  } = (0, m.default)(S.default.ACCOUNT_PROFILE_POPOUT), w = (0, R.default)(t.id, l), [F, z, Z, X] = (0, d.useStateFromStoresArray)([x.default], () => {
+  } = (0, p.default)(S.default.ACCOUNT_PROFILE_POPOUT), w = (0, R.default)(t.id, l), [F, z, Z, X] = (0, d.useStateFromStoresArray)([x.default], () => {
     var e;
     let n = t.id;
     return "string" != typeof n ? [void 0, void 0, V.StatusTypes.UNKNOWN, !1] : [null !== (e = x.default.findActivity(n, e => e.type !== V.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, x.default.findActivity(t.id, e => e.type === V.ActivityTypes.CUSTOM_STATUS), x.default.getStatus(n), x.default.isMobileOnline(n)]
@@ -199,7 +199,7 @@ function Z(e) {
     })
   }, []);
   let et = (0, B.useMultiAccountMenuItems)(),
-    en = (0, p.useCustomStatusMenuItem)(null != n ? n : void 0, K.menuItemFocused),
+    en = (0, m.useCustomStatusMenuItem)(null != n ? n : void 0, K.menuItemFocused),
     ea = (0, A.default)({
       id: t.id,
       label: W.default.Messages.COPY_ID_USER,

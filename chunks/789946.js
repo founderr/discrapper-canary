@@ -19,8 +19,8 @@ var i = n("37983"),
   E = n("956597"),
   T = n("635956"),
   I = n("646718"),
-  P = n("49111"),
-  p = n("782340"),
+  p = n("49111"),
+  P = n("782340"),
   S = n("857513"),
   R = n("393828");
 
@@ -55,13 +55,13 @@ function C(e) {
     analyticsLocations: J
   } = (0, u.default)(o.default.PREMIUM_UPSELL_MODAL);
   r.useEffect(() => {
-    !k && (z ? c.default.track(P.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+    !k && (z ? c.default.track(p.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
       type: "".concat(O, " - Tier ").concat(M.boostedGuildTier),
       guild_id: M.guild.id,
       channel_id: M.channelId,
       location: L,
       location_stack: J
-    }) : c.default.track(P.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    }) : c.default.track(p.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: O,
       source: g,
       location_stack: J,
@@ -137,7 +137,7 @@ function C(e) {
                 intervalType: null == W ? void 0 : null === (n = W.subscription_trial) || void 0 === n ? void 0 : n.interval,
                 intervalCount: null == W ? void 0 : null === (r = W.subscription_trial) || void 0 === r ? void 0 : r.interval_count
               }), t = null == W ? void 0 : W.trial_id
-            } else null != Z && (e = p.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+            } else null != Z && (e = P.default.Messages.PREMIUM_DISCOUNT_CTA.format({
               percent: Z.discount.amount
             }))
           }
@@ -158,7 +158,7 @@ function C(e) {
         size: a.Button.Sizes.SMALL,
         color: a.Button.Colors.PRIMARY,
         look: a.Button.Looks.LINK,
-        children: null != V ? V : p.default.Messages.BACK
+        children: null != V ? V : P.default.Messages.BACK
       })]
     })]
   })

@@ -1,47 +1,47 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return S
+    return N
   }
 });
-var r, i, u, l, a = n("37983"),
-  o = n("884691"),
-  s = n("414456"),
-  c = n.n(s),
-  d = n("145131"),
-  _ = n("298754");
-(r = u || (u = {})).PRIMARY = "primary", r.SECONDARY = "secondary", r.WARNING = "warning", r.ERROR = "error", (i = l || (l = {})).SMALL = "small", i.LARGE = "large", i.NONE = "none";
-let E = {
-    primary: _.colorPrimary,
-    secondary: _.colorSecondary,
-    warning: _.colorWarning,
-    error: _.colorError
+var s, l, n, a, i = r("37983"),
+  c = r("884691"),
+  o = r("414456"),
+  u = r.n(o),
+  d = r("145131"),
+  S = r("298754");
+(s = n || (n = {})).PRIMARY = "primary", s.SECONDARY = "secondary", s.WARNING = "warning", s.ERROR = "error", (l = a || (a = {})).SMALL = "small", l.LARGE = "large", l.NONE = "none";
+let m = {
+    primary: S.colorPrimary,
+    secondary: S.colorSecondary,
+    warning: S.colorWarning,
+    error: S.colorError
   },
-  f = {
-    small: _.small,
-    large: _.large,
+  E = {
+    small: S.small,
+    large: S.large,
     none: null
   };
-class T extends o.PureComponent {
+class p extends c.PureComponent {
   render() {
     let {
       icon: e,
       color: t,
-      children: n,
-      iconSize: r,
-      className: i,
-      iconClassName: u
+      children: r,
+      iconSize: s,
+      className: l,
+      iconClassName: n
     } = this.props;
-    return (0, a.jsxs)(d.default, {
-      className: c(_.note, E[t], i),
+    return (0, i.jsxs)(d.default, {
+      className: u(S.note, m[t], l),
       align: d.default.Align.CENTER,
-      children: [(0, a.jsx)(e, {
-        className: c(_.icon, f[r], u)
-      }), (0, a.jsx)("div", {
-        children: n
+      children: [(0, i.jsx)(e, {
+        className: u(S.icon, E[s], n)
+      }), (0, i.jsx)("div", {
+        children: r
       })]
     })
   }
 }
-T.Colors = u, T.Sizes = l;
-var S = T
+p.Colors = n, p.Sizes = a;
+var N = p

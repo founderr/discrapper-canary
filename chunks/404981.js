@@ -15,8 +15,8 @@ var s = n("37983"),
   c = n("377114"),
   f = n("965153"),
   E = n("98352"),
-  I = n("271938"),
-  _ = n("760190"),
+  _ = n("271938"),
+  I = n("760190"),
   p = n("124969"),
   h = n("701909"),
   T = n("49111"),
@@ -78,8 +78,8 @@ let A = e => {
   })
 };
 var S = () => {
-  let e = (0, i.useStateFromStores)([I.default], () => I.default.isAuthenticated()),
-    t = (0, i.useStateFromStores)([_.default], () => _.default.hasLoadedExperiments),
+  let e = (0, i.useStateFromStores)([_.default], () => _.default.isAuthenticated()),
+    t = (0, i.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments),
     n = (0, E.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"),
     [l, c] = a.useState(!0);
   return a.useEffect(() => {

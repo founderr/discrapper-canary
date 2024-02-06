@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return C
+    return S
   }
 }), r("794252");
 var n = r("37983");
@@ -33,7 +33,7 @@ let m = [{
     avatarSize: o.AvatarSizes.SIZE_32,
     showStatus: !0
   }],
-  S = e => {
+  C = e => {
     let {
       purchase: t
     } = e, r = (0, u.useStateFromStores)([f.default], () => f.default.locale), a = (0, l.isPremiumCollectiblesPurchase)(t);
@@ -60,20 +60,20 @@ let m = [{
       })]
     })
   };
-var C = e => {
+var S = e => {
   let {
     user: t,
     avatarDecorationOverride: r,
     className: a
   } = e, f = (0, u.useStateFromStores)([E.default], () => E.default.getStatus(t.id)), {
-    category: C,
+    category: S,
     product: T,
     purchase: N
-  } = (0, c.default)(null == r ? void 0 : r.skuId), h = _.default.canUseCollectibles(t), v = (0, l.isPremiumCollectiblesPurchase)(N), R = (0, l.isPremiumCollectiblesProduct)(T), g = !h && v;
-  return null != T && (null == N || g) ? (0, n.jsxs)("div", {
+  } = (0, c.default)(null == r ? void 0 : r.skuId), R = _.default.canUseCollectibles(t), h = (0, l.isPremiumCollectiblesPurchase)(N), v = (0, l.isPremiumCollectiblesProduct)(T), O = !R && h;
+  return null != T && (null == N || O) ? (0, n.jsxs)("div", {
     className: i(p.modalPreview, p.shopPreviewContainer, a),
     children: [(0, n.jsx)(d.default, {
-      asset: null == C ? void 0 : C.banner,
+      asset: null == S ? void 0 : S.banner,
       className: p.shopPreviewBanner,
       children: (0, n.jsx)(A.default, {
         user: t,
@@ -86,7 +86,7 @@ var C = e => {
         children: T.name
       }), (0, n.jsx)(o.Text, {
         variant: "text-sm/normal",
-        children: g ? I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, s.match)([R, h]).with([!0, !0], () => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+        children: O ? I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, s.match)([v, R]).with([!0, !0], () => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
       })]
     })]
   }) : (0, n.jsxs)("div", {
@@ -118,7 +118,7 @@ var C = e => {
           }, "".concat(a).concat(i))
         })
       })]
-    }), null != N && (0, n.jsx)(S, {
+    }), null != N && (0, n.jsx)(C, {
       purchase: N
     })]
   })

@@ -19,8 +19,8 @@ var i = n("37983"),
   E = n("789946"),
   T = n("646718"),
   I = n("49111"),
-  P = n("527382"),
-  p = n("782340"),
+  p = n("527382"),
+  P = n("782340"),
   S = n("74230");
 
 function R(e) {
@@ -41,28 +41,28 @@ function R(e) {
     g = !C && M === T.PremiumTypes.TIER_0,
     L = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
     v = (0, i.jsx)(u.default, {
-      icons: P.DEFAULT_FILE_UPLOAD_ICONS
+      icons: p.DEFAULT_FILE_UPLOAD_ICONS
     });
-  t = g ? p.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
+  t = g ? P.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
     premiumPlan: (0, m.getPremiumTypeDisplayName)(T.PremiumTypes.TIER_0),
-    premiumMaxSize: p.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED
-  }) : p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
+    premiumMaxSize: P.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED
+  }) : P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
   let U = r.useMemo(() => {
       let e = m.default.getUserMaxFileSize(L),
         t = (0, c.formatSize)(e / 1024, {
           useKibibytes: !0
         }),
-        n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+        n = P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
           maxSize: t
         });
       switch (null == L ? void 0 : L.premiumType) {
         case T.PremiumTypes.TIER_0:
-          n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
+          n = P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
             maxSize: t
           });
           break;
         case T.PremiumTypes.TIER_1:
-          n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({
+          n = P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({
             maxSize: t
           })
       }
@@ -82,10 +82,10 @@ function R(e) {
     artContainerClassName: s(S.artContainer),
     enableArtBoxShadow: !1,
     type: T.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
-    title: p.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+    title: P.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
     body: h,
-    context: p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
-      maxSize: p.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
+    context: P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+      maxSize: P.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
     }),
     glowUp: t,
     analyticsLocation: {

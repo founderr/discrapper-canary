@@ -28,9 +28,9 @@ function I(e) {
     (0, i.showToast)((0, i.createToast)(h.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE)), r.default.increment({
       name: l.MetricEvents.SPAM_MESSAGE_REQUEST_ERROR_VIEW
     })
-  }, []), m = s.useCallback(() => {
-    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
   }, []), p = s.useCallback(() => {
+    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+  }, []), m = s.useCallback(() => {
     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), T && (0, o.transitionToChannel)(I.id)
   }, [I.id, T]), {
     acceptMessageRequest: A,
@@ -39,8 +39,8 @@ function I(e) {
     isOptimisticAccepted: R
   } = (0, f.useMessageRequestActions)({
     user: n,
-    onAcceptSuccess: p,
-    onRejectSuccess: m,
+    onAcceptSuccess: m,
+    onRejectSuccess: p,
     onError: S
   }), O = g || N, L = O || R;
   return (0, a.jsxs)("div", {

@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("981601"),
   T = n("271938"),
   S = n("42887"),
-  m = n("211248"),
-  p = n("200639"),
+  p = n("211248"),
+  m = n("200639"),
   A = n("97347"),
   g = n("151185"),
   N = n("342169"),
@@ -35,7 +35,7 @@ let M = {
   },
   P = {
     serverDeaf: {
-      icon: p.default,
+      icon: m.default,
       colorize: !0,
       getStatus: () => L.default.Messages.SERVER_DEAFENED
     },
@@ -45,7 +45,7 @@ let M = {
       getStatus: () => L.default.Messages.SERVER_MUTED
     },
     deaf: {
-      icon: p.default,
+      icon: m.default,
       colorize: !1,
       getStatus: () => L.default.Messages.VOICE_CHANNEL_DEAFENED
     },
@@ -92,8 +92,8 @@ function y(e) {
     mute: d,
     deaf: c,
     serverMute: T,
-    serverDeaf: m
-  } = e, p = (0, r.useStateFromStores)([S.default], () => S.default.isLocalMute(o.id)), A = (0, _.default)({
+    serverDeaf: p
+  } = e, m = (0, r.useStateFromStores)([S.default], () => S.default.isLocalMute(o.id)), A = (0, _.default)({
     userId: o.id,
     checkSoundSharing: !0
   }), g = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), y = null != u ? u : R.default.getName(o), {
@@ -114,11 +114,11 @@ function y(e) {
     else if (l) return i ? D.localMute : P.mute;
     else if (s) return i ? D.mute : P.mute
   }({
-    serverDeaf: m,
+    serverDeaf: p,
     deaf: c,
     serverMute: T,
     mute: d,
-    localMute: p
+    localMute: m
   })) && void 0 !== s ? s : {}, G = null != U ? L.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
     userName: y,
     status: U()
@@ -198,11 +198,11 @@ function x(e) {
     voiceStates: t,
     channel: n,
     className: l
-  } = e, [o, u] = s.useState(!1), d = o ? N.default : g.default, c = (0, a.jsx)(m.default, {
+  } = e, [o, u] = s.useState(!1), d = o ? N.default : g.default, c = (0, a.jsx)(p.default, {
     className: v.expandButton,
     onClick: () => u(!o),
-    color: m.CircleIconButtonColors.PRIMARY,
-    size: m.CircleIconButtonSizes.SIZE_24,
+    color: p.CircleIconButtonColors.PRIMARY,
+    size: p.CircleIconButtonSizes.SIZE_24,
     tooltip: o ? L.default.Messages.VOICE_PANEL_HIDE_EXTRAS : L.default.Messages.VOICE_PANEL_SHOW_EXTRAS,
     icon: (0, a.jsx)(d, {
       width: 16,

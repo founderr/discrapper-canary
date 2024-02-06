@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var a, s, l = n("884691"),
@@ -45,10 +45,10 @@ class S extends l.PureComponent {
     }
   }
 }
-let m = () => null;
+let p = () => null;
 h.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default.toggleSelfMute()), C.default.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => r.default.toggleSelfDeaf()), C.default.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
   o.default.open(I.UserSettingsSections.VOICE)
-}), m = i.default.connectStores([f.default, d.default, _.default, u.default, E.default, c.default], () => {
+}), p = i.default.connectStores([f.default, d.default, _.default, u.default, E.default, c.default], () => {
   let e = u.default.getTotalMentionCount(),
     t = u.default.hasAnyUnread(),
     n = E.default.getPendingCount(),
@@ -61,4 +61,4 @@ h.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default
     unread: !a && !!(t || e + n > 0)
   }
 })(S));
-var p = m
+var m = p

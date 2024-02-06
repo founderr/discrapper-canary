@@ -15,10 +15,10 @@ let c = !1,
   T = {},
   I = {};
 
-function P() {
+function p() {
   i = void 0, r = void 0, l = void 0, s = void 0, a = void 0, f = null
 }
-class p extends u.default.Store {
+class P extends u.default.Store {
   getSettings(e) {
     if (null != e) return T[e]
   }
@@ -73,8 +73,8 @@ class p extends u.default.Store {
     return m
   }
 }
-p.displayName = "ClydeStore";
-var S = new p(d.default, {
+P.displayName = "ClydeStore";
+var S = new P(d.default, {
   CLYDE_GUILD_SETTINGS_FETCH_START: function(e) {
     let {
       guildId: t
@@ -141,12 +141,12 @@ var S = new p(d.default, {
     let {
       settings: t
     } = e;
-    c = !1, T[t.guild_id] = t, P()
+    c = !1, T[t.guild_id] = t, p()
   },
   CLYDE_GUILD_SETTINGS_SAVE_FAIL: function(e) {
     c = !1, f = e.errors
   },
-  CLYDE_RESET_PENDING_CHANGES: P,
+  CLYDE_RESET_PENDING_CHANGES: p,
   CLYDE_PROFILE_FETCH_START: function(e) {
     let {
       clydeProfileId: t

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var a = n("37983"),
@@ -22,7 +22,7 @@ var a = n("37983"),
   T = n("782340"),
   S = n("670375");
 
-function m(e) {
+function p(e) {
   var t;
   let {
     quest: n
@@ -55,12 +55,12 @@ function m(e) {
     })]
   })
 }
-var p = function(e) {
+var m = function(e) {
   var t, n;
   let {
     onUnmount: l,
     quest: d
-  } = e, p = (0, r.useStateFromStores)([E.default], () => E.default.isEnrolling(d.id), [d]), A = s.useRef(l), g = s.useCallback(e => {
+  } = e, m = (0, r.useStateFromStores)([E.default], () => E.default.isEnrolling(d.id), [d]), A = s.useRef(l), g = s.useCallback(e => {
     e.stopPropagation()
   }, []), N = s.useCallback(() => {}, []), R = s.useCallback(() => {
     (0, f.enrollInQuest)(d.id)
@@ -83,7 +83,7 @@ var p = function(e) {
     onKeyPress: g,
     children: [(0, a.jsxs)("div", {
       className: S.utils,
-      children: [v ? (0, a.jsx)(m, {
+      children: [v ? (0, a.jsx)(p, {
         quest: d
       }) : (0, a.jsx)(h.default, {
         opacity: .5
@@ -95,7 +95,7 @@ var p = function(e) {
         })
       })]
     }), !v && (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(m, {
+      children: [(0, a.jsx)(p, {
         quest: d
       }), (0, a.jsx)(o.Text, {
         className: S.instructions,
@@ -142,7 +142,7 @@ var p = function(e) {
           fullWidth: !0,
           onClick: R,
           size: o.Button.Sizes.SMALL,
-          submitting: p,
+          submitting: m,
           children: T.default.Messages.QUESTS_ACCEPT_QUEST
         })]
       }), v && !M && (0, a.jsx)(o.Button, {

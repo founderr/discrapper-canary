@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return v
   }
 });
 var l = n("37983");
@@ -19,23 +19,23 @@ var a = n("866227"),
   h = n("782340"),
   g = n("234865");
 
-function _(e) {
+function v(e) {
   let {
     className: t,
     guildId: n,
     onScheduleChange: a,
-    onRecurrenceChange: _,
-    onTimeChange: v,
+    onRecurrenceChange: v,
+    onTimeChange: _,
     timeSelected: S = !0,
     schedule: R,
     recurrenceRule: m,
-    showEndDate: C = !1,
-    requireEndDate: N = !1,
-    disableStartDateTime: T = !1
+    showEndDate: N = !1,
+    requireEndDate: T = !1,
+    disableStartDateTime: C = !1
   } = e, {
     analyticsLocations: p
   } = (0, u.default)(i.default.EVENT_SETTINGS), {
-    showRecurringEventsDesktop: I
+    showRecurringEventsDesktop: x
   } = d.default.useExperiment({
     guildId: null != n ? n : "",
     location: p[0]
@@ -43,12 +43,12 @@ function _(e) {
     autoTrackExposure: !1
   });
   if (null == R) return null;
-  let x = null,
+  let I = null,
     L = R.startDate,
     A = r(),
-    y = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
-    D = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
-  null != m && (y.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"), D.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"));
+    D = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
+    y = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
+  null != m && (D.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"), y.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"));
   let M = e => {
     a({
       ...R,
@@ -58,27 +58,27 @@ function _(e) {
   return null != L && d.default.trackExposure({
     guildId: null != n ? n : "",
     location: p[0]
-  }), C && (x = null != R.endDate || N ? (0, l.jsxs)(l.Fragment, {
+  }), N && (I = null != R.endDate || T ? (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)("div", {
       className: g.doubleInput,
       children: [(0, l.jsx)(s.FormItem, {
         title: h.default.Messages.CREATE_EVENT_END_DATE_LABEL,
-        required: N,
+        required: T,
         children: (0, l.jsx)(s.DateInput, {
           value: R.endDate,
           onSelect: M,
           minDate: R.startDate,
-          maxDate: D
+          maxDate: y
         })
       }), (0, l.jsx)(s.FormItem, {
         title: h.default.Messages.CREATE_EVENT_END_TIME_LABEL,
-        required: N,
+        required: T,
         children: (0, l.jsx)(s.TimeInput, {
           value: R.endDate,
           onChange: M
         })
       })]
-    }), N ? null : (0, l.jsx)(s.Button, {
+    }), T ? null : (0, l.jsx)(s.Button, {
       onClick: () => {
         M(void 0)
       },
@@ -129,8 +129,8 @@ function _(e) {
             })
           },
           minDate: A,
-          maxDate: y,
-          disabled: T
+          maxDate: D,
+          disabled: C
         })
       }), (0, l.jsx)(s.FormItem, {
         title: h.default.Messages.CREATE_EVENT_START_TIME_LABEL,
@@ -138,17 +138,17 @@ function _(e) {
         children: (0, l.jsx)(s.TimeInput, {
           value: R.startDate,
           onChange: e => {
-            e.isValid() && (null == v || v(!0), a({
+            e.isValid() && (null == _ || _(!0), a({
               ...R,
               startDate: e
             }))
           },
           hideValue: !S,
-          disabled: T
+          disabled: C
         })
       })]
-    }), x, I && null != L && null != _ && (0, l.jsx)(E.default, {
-      onRecurrenceChange: _,
+    }), I, x && null != L && null != v && (0, l.jsx)(E.default, {
+      onRecurrenceChange: v,
       startDate: L,
       recurrenceRule: m
     })]

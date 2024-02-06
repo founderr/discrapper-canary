@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var l = n("509043"),
-  r = n("405645"),
+var r = n("509043"),
+  l = n("405645"),
   o = n("483093"),
   s = n("339023"),
   u = n("49111");
@@ -19,7 +19,7 @@ function a(e) {
     role: a,
     size: c,
     className: d
-  } = e, f = (0, r.useRoleIcon)({
+  } = e, f = (0, l.useRoleIcon)({
     guildId: n,
     roleId: a.id,
     size: c
@@ -28,7 +28,7 @@ function a(e) {
     className: d,
     ...f
   }) : (0, i.jsx)(s.default, {
-    color: null !== (t = a.colorString) && void 0 !== t ? t : (0, l.int2hex)(u.DEFAULT_ROLE_COLOR),
+    color: null !== (t = a.colorString) && void 0 !== t ? t : (0, r.int2hex)(u.DEFAULT_ROLE_COLOR),
     className: d,
     size: c
   })

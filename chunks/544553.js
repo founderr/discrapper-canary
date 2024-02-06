@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var a = n("37983");
@@ -22,27 +22,27 @@ var s = n("65597"),
   I = n("490013"),
   T = n("922832"),
   S = n("782340"),
-  m = n("54236"),
-  p = () => {
+  p = n("54236"),
+  m = () => {
     let e = (0, f.useUserForLinkStatus)(T.UserLinkStatus.ACTIVE),
       t = (0, c.useSelectedTeenUser)(),
       n = (0, s.default)([r.default], () => r.default.getCurrentUser()),
-      p = (0, d.useAgeSpecificText)(S.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, S.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
+      m = (0, d.useAgeSpecificText)(S.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, S.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
       A = (0, d.useAgeSpecificText)(S.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_TEEN, S.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_DESCRIPTION_PARENT),
       g = (0, d.useAgeSpecificText)(S.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_TEEN, S.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_DESCRIPTION_PARENT),
       N = (0, i.useRedesignIconContext)().enabled;
     return void 0 === n ? null : (0, a.jsxs)("div", {
-      className: m.container,
+      className: p.container,
       children: [(0, a.jsx)("div", {
-        className: m.banner,
+        className: p.banner,
         children: (0, a.jsx)(E.default, {})
       }), (0, a.jsxs)("div", {
-        className: m.featureCards,
+        className: p.featureCards,
         children: [(0, a.jsx)(C.default, {
-          iconClassName: m.chatCheckIcon,
+          iconClassName: p.chatCheckIcon,
           icon: o.default,
           header: S.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_HEADER,
-          description: p
+          description: m
         }), (0, a.jsx)(C.default, {
           icon: u.default,
           header: S.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,

@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("84339"),
   T = n("614175"),
   S = n("180065"),
-  m = n("768613"),
-  p = n("812204"),
+  p = n("768613"),
+  m = n("812204"),
   A = n("685665"),
   g = n("619935"),
   N = n("731681"),
@@ -75,7 +75,7 @@ var a = n("37983"),
   eI = n("706904");
 let eT = 64,
   eS = "server-settings",
-  em = {
+  ep = {
     origin: {
       x: -8,
       y: -48
@@ -87,7 +87,7 @@ let eT = 64,
       y: 0
     }
   };
-class ep extends s.PureComponent {
+class em extends s.PureComponent {
   static getDerivedStateFromProps(e) {
     let {
       guild: t,
@@ -131,7 +131,7 @@ class ep extends s.PureComponent {
       children: (0, a.jsx)(Y.default, {
         tutorialId: eS,
         position: "bottom",
-        inlineSpecs: em,
+        inlineSpecs: ep,
         children: this.renderGuildHeaderDropdownButton(e)
       })
     });
@@ -486,18 +486,18 @@ function eA(e) {
     eo = (0, I.default)(n),
     {
       AnalyticsLocationProvider: eu
-    } = (0, A.default)(p.default.GUILD_HEADER),
+    } = (0, A.default)(m.default.GUILD_HEADER),
     {
       AnalyticsLocationProvider: ed
-    } = (0, A.default)(p.default.GUILD_CHANNEL_LIST_FOOTER);
+    } = (0, A.default)(m.default.GUILD_CHANNEL_LIST_FOOTER);
   s.useEffect(() => {
     n !== eo && er(!X)
   }, [n, eo, X]);
-  let [ec, eh] = (0, v.default)(e => [eE.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(e_.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), eC = (0, N.default)(d), eI = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eT = (0, o.useStateFromStores)([ee.default], () => ee.default.hasLayers()), em = (0, o.useStateFromStores)([W.default], () => W.default.shouldShow(eS)), eA = R && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !el.ProcessArgs.isDisallowPopupsSet(), eg = (0, o.useStateFromStores)([J.default], () => J.default.getMemberCount(n)), eN = R && null != eg && eg >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !el.ProcessArgs.isDisallowPopupsSet(), eR = P && null != d && (d.hasFeature(ef.GuildFeatures.COMMUNITY) || null != eg && eg > 50), eO = (0, U.default)(n), eL = (0, L.useLowerMemberCountRequirements)(n), ev = (null == d ? void 0 : d.hasFeature(ef.GuildFeatures.HUB)) === !0, eM = R && (null == d ? void 0 : d.hasFeature(ef.GuildFeatures.DISCOVERABLE)) === !0, eP = (0, g.useBlockedPaymentsConfig)(), eD = (R || (null == d ? void 0 : d.premiumTier) === ef.BoostedGuildTiers.NONE) && !el.ProcessArgs.isDisallowPopupsSet() && !eP, ey = (0, o.useStateFromStores)([j.default, ee.default], () => null != d && null != H && R && !ee.default.hasLayers() && j.default.shouldShowGuildTemplateDirtyTooltip(n)), ex = (0, o.useStateFromStores)([q.default], () => q.default.getChannel(r)), {
+  let [ec, eh] = (0, v.default)(e => [eE.CHANNEL_NOTICES.some(t => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(e_.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS)]), eC = (0, N.default)(d), eI = (0, c.useModalsStore)(c.hasAnyModalOpenSelector), eT = (0, o.useStateFromStores)([ee.default], () => ee.default.hasLayers()), ep = (0, o.useStateFromStores)([W.default], () => W.default.shouldShow(eS)), eA = R && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !el.ProcessArgs.isDisallowPopupsSet(), eg = (0, o.useStateFromStores)([J.default], () => J.default.getMemberCount(n)), eN = R && null != eg && eg >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !el.ProcessArgs.isDisallowPopupsSet(), eR = P && null != d && (d.hasFeature(ef.GuildFeatures.COMMUNITY) || null != eg && eg > 50), eO = (0, U.default)(n), eL = (0, L.useLowerMemberCountRequirements)(n), ev = (null == d ? void 0 : d.hasFeature(ef.GuildFeatures.HUB)) === !0, eM = R && (null == d ? void 0 : d.hasFeature(ef.GuildFeatures.DISCOVERABLE)) === !0, eP = (0, g.useBlockedPaymentsConfig)(), eD = (R || (null == d ? void 0 : d.premiumTier) === ef.BoostedGuildTiers.NONE) && !el.ProcessArgs.isDisallowPopupsSet() && !eP, ey = (0, o.useStateFromStores)([j.default, ee.default], () => null != d && null != H && R && !ee.default.hasLayers() && j.default.shouldShowGuildTemplateDirtyTooltip(n)), ex = (0, o.useStateFromStores)([q.default], () => q.default.getChannel(r)), {
     isPopoutOpen: eb
   } = (0, y.useGuildHeaderPopoutStore)(), eU = null !== (t = null == d ? void 0 : d.hasFeature(ef.GuildFeatures.COMMUNITY)) && void 0 !== t && t, eG = (0, o.useStateFromStores)([V.default], () => !i.isEmpty(V.default.getThreadsForGuild(n))), {
     enabled: ej
-  } = m.BashOutCoachMarkExperiment.useExperiment({
+  } = p.BashOutCoachMarkExperiment.useExperiment({
     location: "91c8a9_2"
   }, {
     autoTrackExposure: !0
@@ -520,7 +520,7 @@ function eA(e) {
     eQ = (0, b.default)(n),
     eZ = (0, B.useShouldShowInventoryGuildSettingsCoachmark)(d),
     eX = (0, C.useShowKrunkerStrikeCoachmark)();
-  return (0, a.jsx)(ep, {
+  return (0, a.jsx)(em, {
     guildId: n,
     hideSelectedChannel: l,
     guild: d,
@@ -538,7 +538,7 @@ function eA(e) {
     showGuildBoostingProgressBarSizeUpsell: eN,
     showInviteSplashUpsell: eD,
     showDiscoveryLandingPageSettingsUpsell: eM,
-    showGuildHeaderTutorial: em,
+    showGuildHeaderTutorial: ep,
     showGuildTemplateDirtyTooltip: ey,
     showRoleSubscriptionUpsell: eO,
     showDiscoveryTooltip: eL,

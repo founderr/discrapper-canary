@@ -32,8 +32,8 @@ var d = n("414456"),
   E = n("669491"),
   T = n("819855"),
   I = n("77078"),
-  P = n("841098"),
-  p = n("812204"),
+  p = n("841098"),
+  P = n("812204"),
   S = n("685665"),
   R = n("441413"),
   C = n("915639"),
@@ -129,7 +129,7 @@ function et(e) {
 function en(e) {
   let {
     tier: t = W.PremiumTypes.TIER_2
-  } = e, n = (0, P.default)(), i = (0, T.isThemeLight)(n);
+  } = e, n = (0, p.default)(), i = (0, T.isThemeLight)(n);
   return (0, u.jsxs)(u.Fragment, {
     children: [!i && (0, u.jsxs)(u.Fragment, {
       children: [(0, u.jsx)("div", {
@@ -344,16 +344,16 @@ function eo(e) {
     })
   }
   if (!t && i) {
-    var T, P, p, S;
+    var T, p, P, S;
     let e = j.default.formatPriceString(j.default.getDefaultPrice(n === W.PremiumTypes.TIER_0 ? W.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : W.SubscriptionPlans.PREMIUM_MONTH_TIER_2), W.SubscriptionIntervalTypes.MONTH);
     return (0, u.jsx)(I.Heading, {
       variant: "heading-md/normal",
       color: "always-white",
       className: J.trialHeader,
       children: 0 === r ? X.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW.format({
-        planName: (0, j.getTierDisplayName)(null !== (P = W.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (T = null == E ? void 0 : E.sku_id) && void 0 !== T ? T : W.PremiumSubscriptionSKUs.NONE]) && void 0 !== P ? P : W.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+        planName: (0, j.getTierDisplayName)(null !== (p = W.PREMIUM_SKU_TO_MONTHLY_PLAN[null !== (T = null == E ? void 0 : E.sku_id) && void 0 !== T ? T : W.PremiumSubscriptionSKUs.NONE]) && void 0 !== p ? p : W.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
         duration: (0, j.formatIntervalDuration)({
-          intervalType: null !== (p = null == E ? void 0 : E.interval) && void 0 !== p ? p : W.SubscriptionIntervalTypes.DAY,
+          intervalType: null !== (P = null == E ? void 0 : E.interval) && void 0 !== P ? P : W.SubscriptionIntervalTypes.DAY,
           intervalCount: null !== (S = null == E ? void 0 : E.interval_count) && void 0 !== S ? S : 30,
           capitalize: !1
         }),
@@ -549,16 +549,16 @@ function em(e) {
     className: s,
     isGift: a = !1,
     isModal: o = !1
-  } = e, d = (0, _.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()), m = (0, _.useStateFromStores)([O.default], () => O.default.getCurrentUser()), f = (0, k.usePremiumTrialOffer)(), E = null == f ? void 0 : null === (t = f.subscription_trial) || void 0 === t ? void 0 : t.sku_id, T = (null == d ? void 0 : d.trialId) != null ? null == m ? void 0 : m.premiumType : null, P = (0, G.useIsInPremiumOfferExperience)(), p = (0, H.usePremiumDiscountOffer)(), S = (0, G.useHasDiscountApplied)(), R = null != E || null != T ? 0 : null != p || S ? 1 : null, C = (0, V.useIsEligibleForBogoPromotion)(), L = (0, V.getBOGOPillCopy)();
+  } = e, d = (0, _.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()), m = (0, _.useStateFromStores)([O.default], () => O.default.getCurrentUser()), f = (0, k.usePremiumTrialOffer)(), E = null == f ? void 0 : null === (t = f.subscription_trial) || void 0 === t ? void 0 : t.sku_id, T = (null == d ? void 0 : d.trialId) != null ? null == m ? void 0 : m.premiumType : null, p = (0, G.useIsInPremiumOfferExperience)(), P = (0, H.usePremiumDiscountOffer)(), S = (0, G.useHasDiscountApplied)(), R = null != E || null != T ? 0 : null != P || S ? 1 : null, C = (0, V.useIsEligibleForBogoPromotion)(), L = (0, V.getBOGOPillCopy)();
   return (0, u.jsxs)("div", {
     className: c(J.tier2, J.card, s, {
-      [J.withTier2Rim]: !a && P,
-      [J.withCardHover]: !a && P
+      [J.withTier2Rim]: !a && p,
+      [J.withCardHover]: !a && p
     }),
-    children: [!a && null != p && (0, H.discountOfferHasTier)(p, W.PremiumSubscriptionSKUs.TIER_2) && void 0 !== p.discount.amount ? (0, u.jsxs)(u.Fragment, {
+    children: [!a && null != P && (0, H.discountOfferHasTier)(P, W.PremiumSubscriptionSKUs.TIER_2) && void 0 !== P.discount.amount ? (0, u.jsxs)(u.Fragment, {
       children: [(0, u.jsx)(er, {
         text: S ? X.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED : X.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
-          percent: p.discount.amount
+          percent: P.discount.amount
         }),
         className: J.topRimPill,
         colorOptions: 2
@@ -609,14 +609,14 @@ function em(e) {
         isGift: a,
         premiumTier: W.PremiumTypes.TIER_2,
         offerType: R,
-        offerTierMatchesCard: E === W.PremiumSubscriptionSKUs.TIER_2 || (0, H.discountOfferHasTier)(p, W.PremiumSubscriptionSKUs.TIER_2),
+        offerTierMatchesCard: E === W.PremiumSubscriptionSKUs.TIER_2 || (0, H.discountOfferHasTier)(P, W.PremiumSubscriptionSKUs.TIER_2),
         showYearlyPrice: r
       }), (0, u.jsx)(ec, {
         featureSet: l,
         isModal: o,
         isGift: a
       })]
-    }), i, a || E !== W.PremiumSubscriptionSKUs.TIER_2 && null == p ? null : (0, u.jsx)(en, {
+    }), i, a || E !== W.PremiumSubscriptionSKUs.TIER_2 && null == P ? null : (0, u.jsx)(en, {
       tier: W.PremiumTypes.TIER_2
     })]
   })
@@ -631,7 +631,7 @@ function ef(e) {
     className: l
   } = e, {
     AnalyticsLocationProvider: s
-  } = (0, S.default)(p.default.PREMIUM_MARKETING_TIER_CARD);
+  } = (0, S.default)(P.default.PREMIUM_MARKETING_TIER_CARD);
   return (0, u.jsx)(s, {
     children: (0, u.jsxs)("div", {
       className: c(J.premiumCards, l),

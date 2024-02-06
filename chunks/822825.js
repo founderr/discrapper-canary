@@ -24,8 +24,8 @@ let c = null,
   }(),
   T = !1,
   S = !1,
-  m = null,
   p = null,
+  m = null,
   A = {};
 
 function g() {
@@ -91,7 +91,7 @@ function P(e) {
     teenId: r,
     rangeStartId: o
   } = n;
-  c = r, f = o, L(s), O(i), v(l), R(t), S = !1, m = a.default.fromTimestamp(Date.now()), T = !0
+  c = r, f = o, L(s), O(i), v(l), R(t), S = !1, p = a.default.fromTimestamp(Date.now()), T = !0
 }
 
 function D(e) {
@@ -120,7 +120,7 @@ function x(e) {
     teenId: i,
     rangeStartId: r
   } = t;
-  c = i, f = r, L(n), O(s), v(l), S = !1, m = a.default.fromTimestamp(Date.now())
+  c = i, f = r, L(n), O(s), v(l), S = !1, p = a.default.fromTimestamp(Date.now())
 }
 
 function b(e) {
@@ -181,11 +181,11 @@ function F(e) {
   let {
     countryCode: n
   } = e;
-  null != n && (p = null !== (t = (0, s.getCountryCodeByAlpha2)(n)) && void 0 !== t ? t : null)
+  null != n && (m = null !== (t = (0, s.getCountryCodeByAlpha2)(n)) && void 0 !== t ? t : null)
 }
 
 function B() {
-  c = null, f = null, E = {}, _ = g(), h = N(), A = {}, S = !1, m = null
+  c = null, f = null, E = {}, _ = g(), h = N(), A = {}, S = !1, p = null
 }
 class H extends l.default {
   takeSnapshot() {
@@ -244,13 +244,13 @@ class H extends l.default {
     return T
   }
   getUserCountry() {
-    return p
+    return m
   }
   isLoading() {
     return S
   }
   canRefetch() {
-    return null === m || a.default.age(m) > d.FAMILY_CENTER_REFETCH_COOLDOWN
+    return null === p || a.default.age(p) > d.FAMILY_CENTER_REFETCH_COOLDOWN
   }
   constructor() {
     super(), this.loadCache = () => {

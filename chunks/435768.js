@@ -17,8 +17,8 @@ var l = n("37983"),
   E = n("813934"),
   h = n("767680"),
   g = n("249873"),
-  _ = n("837979"),
-  v = n("782340"),
+  v = n("837979"),
+  _ = n("782340"),
   S = n("636843");
 
 function R(e) {
@@ -51,12 +51,12 @@ function R(e) {
         variant: "heading-xl/semibold",
         color: "header-primary",
         className: S.headerTitle,
-        children: null == a ? v.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TITLE : v.default.Messages.EDIT_STAGE_CHANNEL_TITLE
+        children: null == a ? _.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TITLE : _.default.Messages.EDIT_STAGE_CHANNEL_TITLE
       }), (0, l.jsx)(s.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         className: S.headerSubtitle,
-        children: null == a ? v.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_SUBTITLE : v.default.Messages.EDIT_STAGE_SUBTITLE
+        children: null == a ? _.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_SUBTITLE : _.default.Messages.EDIT_STAGE_SUBTITLE
       })]
     }), (0, l.jsx)(E.default, {
       guild: t,
@@ -77,27 +77,27 @@ function m(e) {
     onClose: n,
     transitionState: o,
     ...d
-  } = e, E = (0, u.useUID)(), v = (0, r.useStateFromStores)([i.default], () => i.default.getGuild(t.guild_id)), m = a.useMemo(() => c.default.getStageInstanceByChannel(t.id), [t.id]), {
-    loading: C,
-    error: N,
-    onSave: T
+  } = e, E = (0, u.useUID)(), _ = (0, r.useStateFromStores)([i.default], () => i.default.getGuild(t.guild_id)), m = a.useMemo(() => c.default.getStageInstanceByChannel(t.id), [t.id]), {
+    loading: N,
+    error: T,
+    onSave: C
   } = (0, h.default)(t, n), {
     modalStep: p,
-    setModalStep: I,
-    readySlide: x,
+    setModalStep: x,
+    readySlide: I,
     handleSlideReady: L,
     savedOptions: A,
-    handleSettingsSave: y,
-    handleDelayedSave: D
+    handleSettingsSave: D,
+    handleDelayedSave: y
   } = (0, g.default)({
     stageInstance: m,
-    defaultStep: _.StartStageSteps.STAGE_CHANNEL_SETTINGS,
-    error: N,
-    onSave: T
+    defaultStep: v.StartStageSteps.STAGE_CHANNEL_SETTINGS,
+    error: T,
+    onSave: C
   });
   return (a.useEffect(() => {
-    null == v && n()
-  }, [v, n]), null == v) ? null : (0, l.jsx)(s.ModalRoot, {
+    null == _ && n()
+  }, [_, n]), null == _) ? null : (0, l.jsx)(s.ModalRoot, {
     transitionState: o,
     "aria-labelledby": E,
     ...d,
@@ -107,35 +107,35 @@ function m(e) {
       width: 440,
       onSlideReady: L,
       children: [(0, l.jsx)(s.Slide, {
-        id: _.StartStageSteps.STAGE_CHANNEL_SETTINGS,
+        id: v.StartStageSteps.STAGE_CHANNEL_SETTINGS,
         children: (0, l.jsx)("div", {
           className: S.slideContainer,
           children: (0, l.jsx)(R, {
-            guild: v,
+            guild: _,
             channel: t,
             stageInstance: m,
             headerId: E,
             onClose: n,
-            loading: C,
-            error: N,
-            onSave: y,
+            loading: N,
+            error: T,
+            onSave: D,
             defaultOptions: A,
-            isSlideReady: x === _.StartStageSteps.STAGE_CHANNEL_SETTINGS
+            isSlideReady: I === v.StartStageSteps.STAGE_CHANNEL_SETTINGS
           })
         })
       }), (0, l.jsx)(s.Slide, {
-        id: _.StartStageSteps.PUBLIC_STAGE_PREVIEW,
+        id: v.StartStageSteps.PUBLIC_STAGE_PREVIEW,
         children: (0, l.jsx)("div", {
           className: S.slideContainer,
           children: (0, l.jsx)(f.default, {
             headerId: E,
-            guild: v,
+            guild: _,
             channel: t,
             stageData: A,
-            loading: C,
-            onNext: D,
+            loading: N,
+            onNext: y,
             onCancel: n,
-            onBack: () => I(_.StartStageSteps.STAGE_CHANNEL_SETTINGS)
+            onBack: () => x(v.StartStageSteps.STAGE_CHANNEL_SETTINGS)
           })
         })
       })]

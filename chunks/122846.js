@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return H
+    return F
   }
 });
 var r = n("37983"),
@@ -32,8 +32,8 @@ var r = n("37983"),
   L = n("719923"),
   M = n("153160"),
   v = n("49111"),
-  y = n("646718"),
-  D = n("782340"),
+  D = n("646718"),
+  y = n("782340"),
   g = n("643076");
 let G = e => {
   let {
@@ -43,36 +43,36 @@ let G = e => {
     children: [(0, r.jsx)(C.default, {
       icon: h.default,
       iconClassName: g.iconColorPurple,
-      description: D.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_CUSTOM
+      description: y.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_CUSTOM
     }), (0, r.jsx)(C.default, {
       icon: U.default,
       iconClassName: g.iconColorPink,
-      description: D.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_GUILD_SUBSCRIPTION.format({
-        numGuildSubscriptions: y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-        discountPercent: (0, M.formatPercent)(t, y.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+      description: y.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_GUILD_SUBSCRIPTION.format({
+        numGuildSubscriptions: D.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
+        discountPercent: (0, M.formatPercent)(t, D.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
       })
     }), (0, r.jsx)(C.default, {
       icon: m.default,
       iconClassName: g.iconColorYellow,
-      description: D.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_PREMIUM_SUBSCRIPTION
+      description: y.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_PREMIUM_SUBSCRIPTION
     })]
   })
 };
 
-function b() {
+function B() {
   return (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)(C.default, {
       icon: h.default,
       iconClassName: g.iconColorPurple,
-      description: D.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_CUSTOM
+      description: y.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_CUSTOM
     }), (0, r.jsx)(C.default, {
       icon: m.default,
       iconClassName: g.iconColorYellow,
-      description: D.default.Messages.STICKER_PREMIUM_TIER_0_UPSELL_PERK_PREMIUM_SUBSCRIPTION
+      description: y.default.Messages.STICKER_PREMIUM_TIER_0_UPSELL_PERK_PREMIUM_SUBSCRIPTION
     })]
   })
 }
-let B = e => {
+let b = e => {
     let {
       trialOffer: t,
       discountOffer: i,
@@ -100,15 +100,15 @@ let B = e => {
           className: g.heading,
           children: null == c ? (0, r.jsx)(o.Spinner, {
             type: o.Spinner.Type.PULSING_ELLIPSIS
-          }) : u ? D.default.Messages.STICKER_PREMIUM_SUBSCRIPTION_UPSELL_ALERT_TITLE.format({
-            planName: (0, L.getTierDisplayName)(y.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+          }) : u ? y.default.Messages.STICKER_PREMIUM_SUBSCRIPTION_UPSELL_ALERT_TITLE.format({
+            planName: (0, L.getTierDisplayName)(D.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
             monthlyPrice: (0, M.formatPrice)(c.amount, c.currency)
-          }) : D.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_ALERT_TITLE.format({
+          }) : y.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_ALERT_TITLE.format({
             monthlyPrice: (0, M.formatPrice)(c.amount, c.currency)
           })
         }), (0, r.jsx)("div", {
           className: g.perks,
-          children: u ? (0, r.jsx)(b, {}) : (0, r.jsx)(G, {
+          children: u ? (0, r.jsx)(B, {}) : (0, r.jsx)(G, {
             locale: _
           })
         })]
@@ -131,11 +131,11 @@ let B = e => {
         size: o.Button.Sizes.SMALL,
         color: o.Button.Colors.PRIMARY,
         look: o.Button.Looks.LINK,
-        children: D.default.Messages.CLOSE
+        children: y.default.Messages.CLOSE
       }), (0, r.jsx)(R.default, {
-        buttonText: null != t || null != n ? i ? D.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : D.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0,
+        buttonText: null != t || null != n ? i ? y.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : y.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0,
         premiumModalAnalyticsLocation: l,
-        subscriptionTier: i ? y.PremiumSubscriptionSKUs.TIER_0 : y.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: i ? D.PremiumSubscriptionSKUs.TIER_0 : D.PremiumSubscriptionSKUs.TIER_2,
         size: o.Button.Sizes.SMALL,
         color: o.Button.Colors.GREEN,
         onClick: () => {
@@ -145,7 +145,7 @@ let B = e => {
     })
   };
 
-function H(e) {
+function F(e) {
   let {
     onClose: t,
     ...n
@@ -162,8 +162,8 @@ function H(e) {
       (0, c.fetchPaymentSources)(), (0, d.fetchPremiumSubscriptionPlans)(null, null, v.RevenueSurfaces.DISCOVERY)
     })
   }, []);
-  let m = U === y.PremiumTypes.TIER_0 && null == C,
-    h = A ? L.default.getDefaultPrice(m ? y.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : y.SubscriptionPlans.PREMIUM_MONTH_TIER_2) : null;
+  let m = U === D.PremiumTypes.TIER_0 && null == C,
+    h = A ? L.default.getDefaultPrice(m ? D.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : D.SubscriptionPlans.PREMIUM_MONTH_TIER_2) : null;
   return (0, r.jsx)(E.PaymentContextProvider, {
     activeSubscription: null,
     stepConfigs: [],
@@ -173,7 +173,7 @@ function H(e) {
       "aria-labelledby": "sticker-pack-premium-upsell-modal-header",
       children: (0, r.jsx)(N.default, {
         hideBreadcrumbs: !0,
-        body: (0, r.jsx)(B, {
+        body: (0, r.jsx)(b, {
           trialOffer: R,
           discountOffer: C,
           isTier0Upsell: m,

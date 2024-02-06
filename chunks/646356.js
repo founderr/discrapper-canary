@@ -1,149 +1,149 @@
 "use strict";
-a.r(e), a.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return m
+    return v
   }
 });
-var n = a("816494"),
-  s = a.n(n),
-  i = a("446674"),
-  l = a("913144"),
-  u = a("908539"),
-  r = a("170213");
-let c = {},
-  o = {},
+var i = n("816494"),
+  l = n.n(i),
+  r = n("446674"),
+  a = n("913144"),
+  o = n("908539"),
+  s = n("170213");
+let u = {},
+  c = {},
   d = {
-    state: u.AccountStandingState.ALL_GOOD
+    state: o.AccountStandingState.ALL_GOOD
   },
-  _ = !1,
-  S = !1,
-  E = null,
-  T = null,
   f = !1,
-  A = !1,
-  I = null,
-  g = r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY,
-  N = "";
-class C extends i.default.Store {
+  E = !1,
+  _ = null,
+  S = null,
+  p = !1,
+  I = !1,
+  T = null,
+  h = s.AppealIngestionSignal.DIDNT_VIOLATE_POLICY,
+  C = "";
+class g extends r.default.Store {
   isFetching() {
-    return _
+    return f
   }
   getClassifications() {
-    return Object.values(c)
+    return Object.values(u)
   }
-  getClassification(t) {
-    return c[t]
+  getClassification(e) {
+    return u[e]
   }
   getAccountStanding() {
     return d
   }
   getFetchError() {
-    return E
+    return _
   }
   isInitialized() {
-    return S
+    return E
   }
-  getClassificationRequestState(t) {
-    return o[t]
+  getClassificationRequestState(e) {
+    return c[e]
   }
   getAppealClassificationId() {
-    return T
+    return S
   }
   getIsDsaEligible() {
-    return f
+    return p
   }
   getAppealSignal() {
-    return g
+    return h
   }
   getFreeTextAppealReason() {
-    return N
+    return C
   }
   getIsSubmitting() {
-    return A
-  }
-  getSubmitError() {
     return I
   }
+  getSubmitError() {
+    return T
+  }
 }
-C.displayName = "SafetyHubStore";
-var m = new C(l.default, {
-  SAFETY_HUB_FETCH_START: function(t) {
-    _ = !0
+g.displayName = "SafetyHubStore";
+var v = new g(a.default, {
+  SAFETY_HUB_FETCH_START: function(e) {
+    f = !0
   },
-  SAFETY_HUB_FETCH_SUCCESS: function(t) {
+  SAFETY_HUB_FETCH_SUCCESS: function(e) {
     let {
-      classifications: e,
-      accountStanding: a,
-      isDsaEligible: n
-    } = t;
-    c = s(e, "id"), d = a, f = n, _ = !1, S = !0, E = null
+      classifications: t,
+      accountStanding: n,
+      isDsaEligible: i
+    } = e;
+    u = l(t, "id"), d = n, p = i, f = !1, E = !0, _ = null
   },
-  SAFETY_HUB_FETCH_FAILURE: function(t) {
+  SAFETY_HUB_FETCH_FAILURE: function(e) {
     let {
-      error: e
-    } = t;
-    _ = !1, S = !1, E = e
+      error: t
+    } = e;
+    f = !1, E = !1, _ = t
   },
-  SAFETY_HUB_FETCH_CLASSIFICATION_START: function(t) {
-    o[t.classificationId] = u.ClassificationRequestState.PENDING, _ = !0
+  SAFETY_HUB_FETCH_CLASSIFICATION_START: function(e) {
+    c[e.classificationId] = o.ClassificationRequestState.PENDING, f = !0
   },
-  SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function(t) {
+  SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function(e) {
     let {
-      classification: e,
-      accountStanding: a,
-      isDsaEligible: n
-    } = t;
-    c[e.id] = e, o[e.id] = u.ClassificationRequestState.SUCCESS, d = a, _ = !1, E = null, f = n
+      classification: t,
+      accountStanding: n,
+      isDsaEligible: i
+    } = e;
+    u[t.id] = t, c[t.id] = o.ClassificationRequestState.SUCCESS, d = n, f = !1, _ = null, p = i
   },
-  SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(t) {
+  SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(e) {
     let {
-      error: e,
-      classificationId: a
-    } = t;
-    _ = !1, E = e, o[a] = u.ClassificationRequestState.FAILED
+      error: t,
+      classificationId: n
+    } = e;
+    f = !1, _ = t, c[n] = o.ClassificationRequestState.FAILED
   },
-  SAFETY_HUB_APPEAL_OPEN: function(t) {
+  SAFETY_HUB_APPEAL_OPEN: function(e) {
     let {
-      classificationId: e
-    } = t;
-    T = e
+      classificationId: t
+    } = e;
+    S = t
   },
   SAFETY_HUB_APPEAL_CLOSE: function() {
-    T = null, g = r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, N = ""
+    S = null, h = s.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, C = ""
   },
-  SAFETY_HUB_APPEAL_SIGNAL_SELECT: function(t) {
+  SAFETY_HUB_APPEAL_SIGNAL_SELECT: function(e) {
     let {
-      signal: e
-    } = t;
-    g = e
+      signal: t
+    } = e;
+    h = t
   },
-  SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE: function(t) {
+  SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE: function(e) {
     let {
-      userInput: e
-    } = t;
-    N = e
+      userInput: t
+    } = e;
+    C = t
   },
-  SAFETY_HUB_REQUEST_REVIEW_START: function(t) {
-    let {} = t;
-    A = !0, I = null
+  SAFETY_HUB_REQUEST_REVIEW_START: function(e) {
+    let {} = e;
+    I = !0, T = null
   },
-  SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function(t) {
+  SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function(e) {
     let {
-      classificationId: e
-    } = t;
-    A = !1, I = null, c[e].appeal_status = {
-      status: u.AppealStatusType.REVIEW_PENDING
+      classificationId: t
+    } = e;
+    I = !1, T = null, u[t].appeal_status = {
+      status: o.AppealStatusType.REVIEW_PENDING
     }
   },
-  SAFETY_HUB_REQUEST_REVIEW_FAILURE: function(t) {
+  SAFETY_HUB_REQUEST_REVIEW_FAILURE: function(e) {
     let {
-      error: e
-    } = t;
-    A = !1, I = e
+      error: t
+    } = e;
+    I = !1, T = t
   },
   LOGOUT: function() {
-    _ = !1, c = {}, d = {
-      state: u.AccountStandingState.ALL_GOOD
-    }, T = null, g = r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, N = ""
+    f = !1, u = {}, d = {
+      state: o.AccountStandingState.ALL_GOOD
+    }, S = null, h = s.AppealIngestionSignal.DIDNT_VIOLATE_POLICY, C = ""
   }
 })

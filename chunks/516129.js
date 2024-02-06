@@ -26,8 +26,8 @@ function C(e) {
     renderModalProps: I,
     analyticsLocations: T,
     analyticsLocation: S,
-    isLightTheme: m
-  } = e, p = "AnnouncementModalVariant1", {
+    isLightTheme: p
+  } = e, m = "AnnouncementModalVariant1", {
     onClose: A
   } = I, g = null != C.button && "" !== C.button.copy ? C.button.copy : E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, N = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
     (0, r.transitionTo)(f.Routes.APPLICATION_STORE), A()
@@ -52,11 +52,11 @@ function C(e) {
     })
   }) : void 0, L = {
     type: "video",
-    src: m ? C.heroArtVideoLinkLightTheme : C.videoLink
+    src: p ? C.heroArtVideoLinkLightTheme : C.videoLink
   };
   return ("" !== C.heroArtImageLinkDarkTheme || "" !== C.heroArtImageLinkLightTheme) && (L = {
     type: "image",
-    src: m ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
+    src: p ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
   }), {
     renderModalProps: I,
     header: C.header,
@@ -66,10 +66,10 @@ function C(e) {
     featureCards: C.featureCards.map(e => ({
       header: e.header,
       subHeader: e.body,
-      imageSrc: m ? e.imageLinkLightTheme : e.imageLink,
+      imageSrc: p ? e.imageLinkLightTheme : e.imageLink,
       tagText: "" !== e.pill ? e.pill : void 0
     })),
-    changeLogId: p,
+    changeLogId: m,
     button: () => {
       let e = Date.now();
       return (0, a.jsxs)(o.default, {
@@ -79,10 +79,10 @@ function C(e) {
         size: l.Button.Sizes.SMALL,
         onClick: () => {
           u.default.track(f.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-            change_log_id: p,
+            change_log_id: m,
             cta_type: N,
             seconds_open: Math.round((Date.now() - e) / 1e3),
-            target: p
+            target: m
           }), R()
         },
         children: [(0, a.jsx)("img", {

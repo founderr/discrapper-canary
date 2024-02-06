@@ -39,12 +39,12 @@ function _() {
     n = (0, r.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
     _ = (0, o.useHasActiveTrial)(),
     [E, T] = i.useState(!1),
-    [I, P] = i.useState([]);
+    [I, p] = i.useState([]);
   i.useEffect(() => {
     null != e && l.default.wait(() => d.default.markOutboundPromotionsSeen())
   }, [e]);
-  let p = i.useCallback(e => {
-      P(t => t.some(t => {
+  let P = i.useCallback(e => {
+      p(t => t.some(t => {
         let {
           promotion: n
         } = t;
@@ -59,9 +59,9 @@ function _() {
   }, [e, S]), i.useEffect(() => {
     l.default.wait(() => {
       (0, u.fetchClaimedOutboundPromotionCodes)().then(e => {
-        P(e), T(!0)
+        p(e), T(!0)
       }).catch(() => {
-        P([]), T(!0)
+        p([]), T(!0)
       })
     })
   }, []);
@@ -89,7 +89,7 @@ function _() {
     activeOutboundPromotions: t.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e) && (!_ || (0, u.isTrialUserEligibleToSeeOutboundPromotion)(e, R))),
     claimedEndedOutboundPromotions: O.filter(e => (0, u.shouldShowOutboundPromotionOnPlatform)(e.promotion)),
     claimedOutboundPromotionCodeMap: R,
-    addClaimedOutboundPromotionCode: p
+    addClaimedOutboundPromotionCode: P
   }
 }
 

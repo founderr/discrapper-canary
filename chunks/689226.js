@@ -7,18 +7,18 @@ n.r(t), n.d(t, {
     return f
   },
   isRoleIconAssetUrl: function() {
-    return _
+    return p
   },
   canGuildUseRoleIcons: function() {
-    return I
+    return h
   }
 }), n("781738");
 var i = n("867805"),
-  r = n("407063"),
-  l = n("315102"),
+  l = n("407063"),
+  r = n("315102"),
   o = n("773336"),
-  s = n("49111");
-let a = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/role-icons"),
+  a = n("49111");
+let s = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/role-icons"),
   u = "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT),
   c = (0, o.isAndroid)(),
   d = (e, t) => {
@@ -29,7 +29,7 @@ let a = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/
       unicodeEmoji: null != n ? n : void 0
     }
   },
-  f = (e, t) => e.replace(/size=[0-9]+/g, "size=".concat((0, r.getBestMediaProxySize)(t * (0, r.getDevicePixelRatio)()))),
+  f = (e, t) => e.replace(/size=[0-9]+/g, "size=".concat((0, l.getBestMediaProxySize)(t * (0, l.getDevicePixelRatio)()))),
   E = (e, t) => {
     let {
       id: n,
@@ -37,14 +37,14 @@ let a = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/
     } = e;
     if (null == i) return;
     if (i.startsWith("data:")) return i;
-    let o = l.SUPPORTS_WEBP ? "webp" : "png",
+    let o = r.SUPPORTS_WEBP ? "webp" : "png",
       d = "",
       f = "quality=lossless";
-    return (null != t && (d = "size=" + (0, r.getBestMediaProxySize)(t * (0, r.getDevicePixelRatio)()), f = c ? "" : "&" + f), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(a, "/").concat(n, "/").concat(i, ".").concat(o, "?").concat(d).concat(f) : "".concat(u).concat(s.Endpoints.ROLE_ICON(n, i), "?").concat(d)
+    return (null != t && (d = "size=" + (0, l.getBestMediaProxySize)(t * (0, l.getDevicePixelRatio)()), f = c ? "" : "&" + f), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(s, "/").concat(n, "/").concat(i, ".").concat(o, "?").concat(d).concat(f) : "".concat(u).concat(a.Endpoints.ROLE_ICON(n, i), "?").concat(d)
   },
-  _ = e => e.startsWith(a) || e.startsWith("".concat(u, "/roles")) && e.includes("/icons/"),
-  I = (e, t) => {
+  p = e => e.startsWith(s) || e.startsWith("".concat(u, "/roles")) && e.includes("/icons/"),
+  h = (e, t) => {
     var n;
     let i = (null == t ? void 0 : null === (n = t.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null;
-    return i || e.features.has(s.GuildFeatures.ROLE_ICONS)
+    return i || e.features.has(a.GuildFeatures.ROLE_ICONS)
   }

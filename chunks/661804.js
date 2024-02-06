@@ -20,11 +20,11 @@ var a, s = n("37983"),
   I = n("153034"),
   T = n("129215"),
   S = n("49111"),
-  m = n("492249"),
-  p = n("677654");
+  p = n("492249"),
+  m = n("677654");
 a = class extends l.PureComponent {
   componentDidMount() {
-    d.setHomeLink(S.Routes.APPLICATION_LIBRARY), (0, _.deepLinkRouteIfLanded)(m.RPCDeepLinks.LIBRARY), u.default.wait(() => (0, c.fetchBranches)()), (0, f.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
+    d.setHomeLink(S.Routes.APPLICATION_LIBRARY), (0, _.deepLinkRouteIfLanded)(p.RPCDeepLinks.LIBRARY), u.default.wait(() => (0, c.fetchBranches)()), (0, f.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
   }
   renderToolbar() {
     return (0, s.jsx)(h.default, {})
@@ -45,7 +45,7 @@ a = class extends l.PureComponent {
         currentRoute: S.Routes.APPLICATION_LIBRARY,
         renderToolbar: this.renderToolbar
       }), e ? null : t, (0, s.jsxs)(o.AdvancedScrollerAuto, {
-        className: r(p.container, p.scroller),
+        className: r(m.container, m.scroller),
         ref: this._scrollerRef,
         children: [e ? t : null, (0, s.jsx)(E.default, {
           section: S.AnalyticsSections.LIBRARY_APPLICATION_LIST,

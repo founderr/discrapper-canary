@@ -29,8 +29,8 @@ function _(e) {
     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), h && (0, i.transitionToChannel)(_.id)
   }, [_.id, h]), {
     acceptMessageRequest: S,
-    rejectMessageRequest: m,
-    isAcceptLoading: p,
+    rejectMessageRequest: p,
+    isAcceptLoading: m,
     isRejectLoading: A,
     isUserProfileLoading: g,
     isOptimisticAccepted: N,
@@ -40,7 +40,7 @@ function _(e) {
     onAcceptSuccess: T,
     onRejectSuccess: I,
     onError: C
-  }), O = p || A || g || N || R;
+  }), O = m || A || g || N || R;
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsx)(c.default, {
@@ -54,7 +54,7 @@ function _(e) {
         color: l.ButtonColors.PRIMARY,
         size: l.Button.Sizes.SMALL,
         onClick: e => {
-          e.stopPropagation(), m(_.id)
+          e.stopPropagation(), p(_.id)
         },
         disabled: O,
         submitting: A || R,
@@ -67,7 +67,7 @@ function _(e) {
           e.stopPropagation(), S(_.id)
         },
         disabled: O,
-        submitting: p || g || N,
+        submitting: m || g || N,
         children: f.default.Messages.MESSAGE_REQUEST_ACCEPT
       })]
     })]

@@ -8,11 +8,11 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("37983"),
-  r = n("884691"),
-  l = n("516555"),
+  l = n("884691"),
+  r = n("516555"),
   o = n("65597"),
-  s = n("206230"),
-  a = n("49111");
+  a = n("206230"),
+  s = n("49111");
 let u = {
     confettiCanvas: null,
     cannon: null,
@@ -20,27 +20,27 @@ let u = {
     createConfettiAt: () => void 0,
     createMultipleConfetti: () => [],
     createMultipleConfettiAt: () => [],
-    addClickListener: () => a.NOOP,
-    removeClickListener: a.NOOP
+    addClickListener: () => s.NOOP,
+    removeClickListener: s.NOOP
   },
-  c = r.createContext(u);
+  c = l.createContext(u);
 
 function d(e) {
   let {
     children: t,
     confettiCanvas: n,
-    spriteCanvas: a,
+    spriteCanvas: s,
     baseConfig: d,
     addClickListener: f,
     removeClickListener: E
-  } = e, _ = (0, l.useConfettiCannon)(n, a), I = (0, o.default)([s.default], () => s.default.useReducedMotion), h = r.useMemo(() => I ? u : {
+  } = e, p = (0, r.useConfettiCannon)(n, s), h = (0, o.default)([a.default], () => a.default.useReducedMotion), _ = l.useMemo(() => h ? u : {
     confettiCanvas: n,
-    cannon: _,
-    createConfetti: (e, t) => _.createConfetti({
+    cannon: p,
+    createConfetti: (e, t) => p.createConfetti({
       ...d,
       ...e
     }, t),
-    createConfettiAt: (e, t, n, i) => _.createConfetti({
+    createConfettiAt: (e, t, n, i) => p.createConfetti({
       ...d,
       position: {
         type: "static",
@@ -54,15 +54,15 @@ function d(e) {
     createMultipleConfetti: function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
         n = arguments.length > 2 ? arguments[2] : void 0;
-      return _.createMultipleConfetti({
+      return p.createMultipleConfetti({
         ...d,
         ...e
       }, t, n)
     },
     createMultipleConfettiAt: function(e, t, n) {
       let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 20,
-        r = arguments.length > 4 ? arguments[4] : void 0;
-      return _.createMultipleConfetti({
+        l = arguments.length > 4 ? arguments[4] : void 0;
+      return p.createMultipleConfetti({
         ...d,
         position: {
           type: "static",
@@ -72,13 +72,13 @@ function d(e) {
           }
         },
         ...n
-      }, i, r)
+      }, i, l)
     },
     addClickListener: f,
     removeClickListener: E
-  }, [f, d, _, n, I, E]);
+  }, [f, d, p, n, h, E]);
   return (0, i.jsx)(c.Provider, {
-    value: h,
+    value: _,
     children: t
   })
 }

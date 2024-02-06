@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("424973"), n("222007");
 var a = n("37983");
@@ -22,13 +22,13 @@ var s = n("446674"),
   I = n("67139"),
   T = n("62659"),
   S = n("636174"),
-  m = n("49111");
+  p = n("49111");
 
-function p(e) {
+function m(e) {
   let {
     party: t,
     onChannelContextMenu: n,
-    registerQuestEntrypoint: p,
+    registerQuestEntrypoint: m,
     unregisterQuestEntrypoint: A,
     shouldRenderQuestEntrypoint: g
   } = e, {
@@ -117,7 +117,7 @@ function p(e) {
       activityUser: G
     } = e;
     if (null == x || null == x.type) return null;
-    if (R.length > 1 && x.type === m.ActivityTypes.PLAYING && !(0, r.default)(x) && null != b) D((0, a.jsx)(T.default.GameSection, {
+    if (R.length > 1 && x.type === p.ActivityTypes.PLAYING && !(0, r.default)(x) && null != b) D((0, a.jsx)(T.default.GameSection, {
       icon: b.getIconURL(S.ICON_SIZE),
       name: b.name,
       partySize: {
@@ -136,7 +136,7 @@ function p(e) {
         channel: t,
         guildId: t.guild_id
       }, "embedded-activity-".concat(x.application_id)))
-    } else if ((null != x.assets || (0, r.default)(x)) && x.type === m.ActivityTypes.PLAYING) D((0, a.jsx)(T.default.RichPresenceSection, {
+    } else if ((null != x.assets || (0, r.default)(x)) && x.type === p.ActivityTypes.PLAYING) D((0, a.jsx)(T.default.RichPresenceSection, {
       activity: x,
       getAssetImage: C.getAssetImage
     }, "rich-presence-".concat(null !== (f = x.session_id) && void 0 !== f ? f : n, "-").concat(G.id)));
@@ -159,7 +159,7 @@ function p(e) {
       },
       getAssetImage: C.getAssetImage,
       members: U
-    }, "spotify-".concat(null !== (I = x.session_id) && void 0 !== I ? I : n, "-").concat(G.id))) : (null != x.assets || (0, r.default)(x)) && x.type === m.ActivityTypes.LISTENING ? D((0, a.jsx)(T.default.RichPresenceSection, {
+    }, "spotify-".concat(null !== (I = x.session_id) && void 0 !== I ? I : n, "-").concat(G.id))) : (null != x.assets || (0, r.default)(x)) && x.type === p.ActivityTypes.LISTENING ? D((0, a.jsx)(T.default.RichPresenceSection, {
       activity: x,
       getAssetImage: C.getAssetImage
     }, "rich-presence-".concat(null !== (L = x.session_id) && void 0 !== L ? L : n, "-").concat(G.id))) : (0, d.default)(x) && D((0, a.jsx)(T.default.XboxSection, {
@@ -167,7 +167,7 @@ function p(e) {
     }, "xbox-".concat(null !== (P = x.session_id) && void 0 !== P ? P : n)));
     if (null != b) {
       let e = (0, E.getQuestByApplicationId)(M, b.id);
-      null != e && g(e.id, t.id) && (p(e.id, t.id), D((0, a.jsx)(_.default, {
+      null != e && g(e.id, t.id) && (m(e.id, t.id), D((0, a.jsx)(_.default, {
         quest: e,
         onUnmount: () => A(e.id)
       }, "quest-".concat(e.id, "-").concat(null !== (y = x.session_id) && void 0 !== y ? y : n))))

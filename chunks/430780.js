@@ -63,12 +63,12 @@ function _(e) {
     }
   }, [n, I]);
   if (null == n || null == T || null == S) return null;
-  let m = i(n.currentPeriodEnd).format("MMM DD, YYYY");
+  let p = i(n.currentPeriodEnd).format("MMM DD, YYYY");
   return (0, a.jsx)(c.default, {
     message: f.default.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_DESCRIPTION.format({
       currentListing: T.name,
       nextListing: S.name,
-      changeDate: m
+      changeDate: p
     }),
     error: null == C ? void 0 : C.message,
     onClick: () => _(n),

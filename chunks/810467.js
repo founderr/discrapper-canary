@@ -19,8 +19,8 @@ var a, s, l = n("37983"),
   I = n("824650"),
   T = n("1339"),
   S = n("593897"),
-  m = n("534222"),
-  p = n("841363"),
+  p = n("534222"),
+  m = n("841363"),
   A = n("822516"),
   g = n("393414"),
   N = n("716214"),
@@ -48,7 +48,7 @@ function V(e) {
   let {
     guild: t,
     isStudyRoomNotice: n = !1
-  } = e, a = (0, S.useActiveEventOrStageInstanceChannel)(t.id), s = (0, m.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
+  } = e, a = (0, S.useActiveEventOrStageInstanceChannel)(t.id), s = (0, p.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: V,
     isEventNoticeHidden: Y
   } = (0, u.useStateFromStoresObject)([I.default], () => ({
@@ -180,7 +180,7 @@ function V(e) {
         }
       }
       if (t.entity_type === F.GuildScheduledEventEntityTypes.EXTERNAL) {
-        let e = (0, p.getLocationFromEvent)(t);
+        let e = (0, m.getLocationFromEvent)(t);
         if (null == e) return {
           noticeType: null
         };

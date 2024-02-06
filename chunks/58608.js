@@ -4,32 +4,32 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var i = n("37983"),
-  r = n("884691"),
+var r = n("37983"),
+  i = n("884691"),
   u = n("118810"),
   o = n("446674"),
-  s = n("206230"),
-  l = n("719347");
-let a = e => {
+  a = n("206230"),
+  s = n("719347");
+let l = e => {
   let {
     externalRef: t,
     autoPlay: n,
-    playOnHover: a,
+    playOnHover: l,
     responsive: c,
     mediaLayoutType: d,
     ...E
-  } = e, f = (0, o.useStateFromStores)([s.default], () => s.default.useReducedMotion), _ = r.useRef(null);
+  } = e, f = (0, o.useStateFromStores)([a.default], () => a.default.useReducedMotion), _ = i.useRef(null);
 
   function h() {
     var e;
-    a && (null == _ || null === (e = _.current) || void 0 === e || e.play())
+    l && (null == _ || null === (e = _.current) || void 0 === e || e.play())
   }
 
   function I() {
     var e;
-    a && (null == _ || null === (e = _.current) || void 0 === e || e.pause())
+    l && (null == _ || null === (e = _.current) || void 0 === e || e.pause())
   }
-  return r.useLayoutEffect(() => () => {
+  return i.useLayoutEffect(() => () => {
     let {
       current: e
     } = _;
@@ -41,16 +41,16 @@ let a = e => {
         e.load()
       } catch (e) {}
     }(e)
-  }, []), r.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(_.current)) : null != t && (t.current = _.current), () => {
+  }, []), i.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(_.current)) : null != t && (t.current = _.current), () => {
     "function" == typeof t ? t(null) : null != t && (t.current = null)
-  }), [t, _]), (0, i.jsx)("video", {
+  }), [t, _]), (0, r.jsx)("video", {
     ref: _,
-    autoPlay: !f && !a && n,
+    autoPlay: !f && !l && n,
     onMouseEnter: h,
     onMouseLeave: I,
     onFocus: h,
     onBlur: I,
-    style: d === l.MediaLayoutType.MOSAIC ? {
+    style: d === s.MediaLayoutType.MOSAIC ? {
       width: "100%",
       height: "100%",
       maxHeight: "inherit",
@@ -66,7 +66,7 @@ let a = e => {
     ...E
   })
 };
-var c = r.forwardRef((e, t) => (0, i.jsx)(a, {
+var c = i.forwardRef((e, t) => (0, r.jsx)(l, {
   ...e,
   externalRef: t
 }))

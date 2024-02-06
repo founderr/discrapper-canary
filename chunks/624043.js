@@ -23,10 +23,10 @@ let _ = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack(
   S = () => {
     !h && (_.loop(), h = !0)
   },
-  m = () => {
+  p = () => {
     _.stop(), h = !1
   },
-  p = () => {
+  m = () => {
     let e = c.default.isEnabled(),
       t = c.default.comboSoundsEnabled;
     if (!e || !t) return !1;
@@ -34,7 +34,7 @@ let _ = (0, d.createSoundForPack)("poggermode_applause", l.default.getSoundpack(
     return null != n && !0
   },
   A = () => {
-    if (0 === I.length || !p() || C) return;
+    if (0 === I.length || !m() || C) return;
     C = !0;
     let [e, t] = I[I.length - 1];
     (0, d.playSound)(e, t), T = setTimeout(g, 1e3)
@@ -64,24 +64,24 @@ class R extends s.default {
     let {
       userId: t
     } = e, n = i.default.getId();
-    n === t && m()
+    n === t && p()
   }
   stopAudio() {
-    m()
+    p()
   }
   startAudio() {
     var e;
-    if (!p()) return;
+    if (!m()) return;
     let t = o.default.getChannelId();
     if (null == t) return;
     let n = i.default.getId(),
       a = u.default.isTyping(t, n),
       s = f.default.getUserCombo(n, t),
       l = null !== (e = null == s ? void 0 : s.multiplier) && void 0 !== e ? e : 1;
-    a && l >= 7 ? S() : m()
+    a && l >= 7 ? S() : p()
   }
   playAchievementUnlockSound() {
-    p() && N("poggermode_achievement_unlock")
+    m() && N("poggermode_achievement_unlock")
   }
 }
 var O = new R

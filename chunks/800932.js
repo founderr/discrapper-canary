@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return R
   }
 }), n("222007");
 var s = n("37983"),
@@ -15,8 +15,8 @@ var s = n("37983"),
   c = n("77078"),
   f = n("437822"),
   E = n("327037"),
-  I = n("68130"),
-  _ = n("697218"),
+  _ = n("68130"),
+  I = n("697218"),
   p = n("461380"),
   h = n("593195"),
   T = n("368121"),
@@ -28,7 +28,7 @@ var s = n("37983"),
   C = n("782340"),
   v = n("953066");
 
-function L(e) {
+function R(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     [n, l] = a.useState(""),
     [i, r] = a.useState(null),
@@ -36,7 +36,7 @@ function L(e) {
     d = (0, m.default)(e.code);
   a.useEffect(() => {
     (async function e() {
-      let e = _.default.getCurrentUser();
+      let e = I.default.getCurrentUser();
       if (null == e) try {
         e = await (0, E.fetchCurrentUser)()
       } catch (e) {
@@ -53,7 +53,7 @@ function L(e) {
         guildTemplate: e
       }) : null, (0, s.jsx)("div", {
         className: v.icon,
-        children: (0, s.jsx)(I.default, {
+        children: (0, s.jsx)(_.default, {
           icon: i,
           onChange: r
         })
@@ -82,7 +82,7 @@ function L(e) {
       }), (0, s.jsxs)(c.FormItem, {
         className: v.previewSection,
         title: C.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_HEADER,
-        children: [(0, s.jsx)(R, {
+        children: [(0, s.jsx)(O, {
           channels: e.serializedSourceGuild.channels
         }), (0, s.jsxs)(c.Text, {
           variant: "text-xs/normal",
@@ -97,7 +97,7 @@ function L(e) {
         children: (0, s.jsx)(c.FormItem, {
           className: v.previewSection,
           title: C.default.Messages.GUILD_TEMPLATE_MODAL_ROLES_HEADER2,
-          children: (0, s.jsx)(O, {
+          children: (0, s.jsx)(L, {
             roles: h
           })
         })
@@ -110,7 +110,7 @@ function L(e) {
   }
 }
 
-function R(e) {
+function O(e) {
   let {
     channels: t
   } = e, n = u(t).sortBy(e => null == e.parent_id ? 1e4 * Number(e.id) : 1e4 * Number(e.parent_id) + e.id).map(e => {
@@ -140,7 +140,7 @@ function R(e) {
 }
 n("721247");
 
-function O(e) {
+function L(e) {
   let {
     roles: t
   } = e, n = t.slice().reverse().map(e => (0, s.jsx)(x, {

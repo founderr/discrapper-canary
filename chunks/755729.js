@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("197801"),
   T = n("582601"),
   S = n("77078"),
-  m = n("850068"),
-  p = n("272030"),
+  p = n("850068"),
+  m = n("272030"),
   A = n("79112"),
   g = n("146350"),
   N = n("901582"),
@@ -75,8 +75,8 @@ var a = n("37983"),
   eI = n("101125"),
   eT = n("102985"),
   eS = n("697218"),
-  em = n("521012"),
-  ep = n("145131"),
+  ep = n("521012"),
+  em = n("145131"),
   eA = n("398288"),
   eg = n("837899"),
   eN = n("425190"),
@@ -307,7 +307,7 @@ class eq extends s.PureComponent {
       className: eW.container,
       onMouseEnter: this.handleMouseEnter,
       onMouseLeave: this.handleMouseLeave,
-      children: [this.renderNameZone(), (0, a.jsxs)(ep.default, {
+      children: [this.renderNameZone(), (0, a.jsxs)(em.default, {
         grow: 0,
         children: [(0, a.jsx)(eD.default, {
           tooltipText: c ? eY.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, x.default)(n, l, u, s),
@@ -472,7 +472,7 @@ class eq extends s.PureComponent {
       let {
         currentUser: t
       } = this.props;
-      null != t && (0, p.openContextMenuLazy)(e, async () => {
+      null != t && (0, m.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("727212").then(n.bind(n, "727212"));
@@ -484,24 +484,24 @@ class eq extends s.PureComponent {
         })
       })
     }, this.handleInputAudioContextMenu = e => {
-      (0, p.openContextMenuLazy)(e, async () => {
+      (0, m.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("266392").then(n.bind(n, "266392"));
         return () => (0, a.jsx)(e, {
-          onClose: p.closeContextMenu,
+          onClose: m.closeContextMenu,
           renderInputDevices: !0,
           renderInputModes: !0,
           renderInputVolume: !0
         })
       })
     }, this.handleOutputAudioContextMenu = e => {
-      (0, p.openContextMenuLazy)(e, async () => {
+      (0, m.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("266392").then(n.bind(n, "266392"));
         return () => (0, a.jsx)(e, {
-          onClose: p.closeContextMenu,
+          onClose: m.closeContextMenu,
           renderOutputDevices: !0,
           renderOutputVolume: !0
         })
@@ -642,13 +642,13 @@ function eQ() {
     } = (0, ec.default)(_),
     {
       selfDeaf: T,
-      deaf: p
+      deaf: m
     } = (0, ed.default)(_),
     A = (0, r.useStateFromStores)([P.default], () => {
       var e;
       return (0, D.probablyHasBuildOverride)() ? null === (e = P.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
-    g = (0, r.useStateFromStores)([em.default], () => em.default.getPremiumTypeSubscription()),
+    g = (0, r.useStateFromStores)([ep.default], () => ep.default.getPremiumTypeSubscription()),
     N = (0, r.useStateFromStores)([eh.default], () => eh.default.getEverSpeakingWhileMuted()),
     M = (0, r.useStateFromStores)([e_.default], () => e_.default.hasLayers()),
     y = (0, S.useModalsStore)(S.hasAnyModalOpenSelector),
@@ -688,7 +688,7 @@ function eQ() {
     eu = function() {
       let e = (0, k.useIsDismissibleContentDismissed)(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
         [t, n] = (0, r.useStateFromStoresArray)([X.default], () => [X.default.hasFetchedRelevance, X.default.profileThemesRelevanceExceeded]),
-        [a, l] = (0, r.useStateFromStoresArray)([em.default], () => [em.default.hasFetchedMostRecentPremiumTypeSubscription(), em.default.getMostRecentPremiumTypeSubscription()]),
+        [a, l] = (0, r.useStateFromStoresArray)([ep.default], () => [ep.default.hasFetchedMostRecentPremiumTypeSubscription(), ep.default.getMostRecentPremiumTypeSubscription()]),
         {
           enabled: i
         } = J.default.useExperiment({
@@ -704,36 +704,36 @@ function eQ() {
         let s = async () => {
           if (!e && null == n && !!i) {
             if (!a) {
-              await (0, m.fetchMostRecentSubscription)();
+              await (0, p.fetchMostRecentSubscription)();
               return
-            }!u && !t && await (0, m.getPerksRelevance)()
+            }!u && !t && await (0, p.getPerksRelevance)()
           }
         };
         s()
       }, [i, n, e, a, t, u]), !e && !!i && !u && null != n && n
     }(),
-    ep = {
+    em = {
       avatar: [],
       settings: []
     };
   if (!x) {
-    if (eu && ep.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), t) {
+    if (eu && em.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), t) {
       var eA;
-      ep.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && W === (null === (eA = (0, V.getDrop)(eV.PartnerGame.FORTNITE)) || void 0 === eA ? void 0 : eA.title) && ep.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)
+      em.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && W === (null === (eA = (0, V.getDrop)(eV.PartnerGame.FORTNITE)) || void 0 === eA ? void 0 : eA.title) && em.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)
     }
-    Q && $ && ep.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? ep.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ep.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), er && ep.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), es && ep.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING)
+    Q && $ && em.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? em.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : em.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), er && em.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), es && em.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING)
   }
   return (0, a.jsx)(eq, {
     currentUser: e,
     customStatusActivity: i,
-    dismissibleContents: ep,
+    dismissibleContents: em,
     userTag: f,
     hidePrivateData: E,
     occluded: x,
     premiumSubscription: g,
     selfDeaf: T,
     selfMute: C,
-    serverDeaf: p,
+    serverDeaf: m,
     serverMute: h,
     showRichProfilePopup: G,
     showTagAsButton: w,

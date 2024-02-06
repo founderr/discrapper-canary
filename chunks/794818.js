@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return g
   },
   startLurking: function() {
-    return _
+    return v
   },
   viewGuild: function() {
-    return v
+    return _
   },
   makeDiscoverableGuild: function() {
     return S
@@ -22,22 +22,22 @@ n.r(t), n.d(t, {
     return m
   },
   trackSearchClosed: function() {
-    return C
-  },
-  trackSearchStarted: function() {
     return N
   },
-  trackTagSearchStarted: function() {
+  trackSearchStarted: function() {
     return T
+  },
+  trackTagSearchStarted: function() {
+    return C
   },
   trackSearchResultsViewed: function() {
     return p
   },
   trackGuildJoinClicked: function() {
-    return I
+    return x
   },
   getDiscoverableGuild: function() {
-    return x
+    return I
   }
 }), n("222007");
 var l, a, r = n("522632"),
@@ -52,7 +52,7 @@ var l, a, r = n("522632"),
   h = n("49111");
 (a = l || (l = {})).SEARCH = "Search", a.RECOMMENDED = "Recommended", a.POPULAR = "Popular", a.RECOMMENDED_E3 = "Recommended - E3", a.HEADER = "Header";
 let g = ">200";
-async function _(e, t) {
+async function v(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
     {
       channelId: l,
@@ -82,7 +82,7 @@ async function _(e, t) {
     search: E.location.search
   }, l)), null == a || a()
 }
-async function v(e) {
+async function _(e) {
   let t, {
     loadId: n,
     guildId: a,
@@ -96,7 +96,7 @@ async function v(e) {
     object: h.AnalyticsObjects.CARD,
     section: t
   };
-  await _(a, u, {
+  await v(a, u, {
       loadId: n
     }),
     function(e) {
@@ -177,13 +177,13 @@ function m(e, t) {
   })
 }
 
-function C(e) {
+function N(e) {
   E.default.track(h.AnalyticEvents.SEARCH_CLOSED, {
     load_id: e
   })
 }
 
-function N(e, t) {
+function T(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   E.default.track(h.AnalyticEvents.SEARCH_STARTED, {
     search_type: h.SearchTypes.GUILD_DISCOVERY,
@@ -193,7 +193,7 @@ function N(e, t) {
   })
 }
 
-function T(e, t, n, l) {
+function C(e, t, n, l) {
   E.default.track(h.AnalyticEvents.SEARCH_STARTED, {
     search_type: h.SearchTypes.GUILD_DISCOVERY_TAG,
     load_id: e,
@@ -228,7 +228,7 @@ function p(e) {
   })
 }
 
-function I(e) {
+function x(e) {
   let t = u.default.getLoadId(e);
   E.default.track(h.AnalyticEvents.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
     guild_id: e,
@@ -236,7 +236,7 @@ function I(e) {
     guild_size: d.default.getMemberCount(e)
   })
 }
-async function x(e) {
+async function I(e) {
   try {
     var t, n;
     let l = await s.default.get({

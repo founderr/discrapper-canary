@@ -18,14 +18,14 @@ var l = n("414456"),
   h = n("271938"),
   E = n("824563"),
   C = n("101125"),
-  p = n("697218"),
-  v = n("155207"),
+  v = n("697218"),
+  p = n("155207"),
   _ = n("398604"),
   g = n("745049"),
   S = n("782340"),
   T = n("758024");
 
-function m(e) {
+function N(e) {
   let {
     children: t
   } = e;
@@ -34,7 +34,7 @@ function m(e) {
     children: [(0, i.jsx)(d.default, {
       children: (0, i.jsx)("div", {
         className: T.circle,
-        children: (0, i.jsx)(v.default, {
+        children: (0, i.jsx)(p.default, {
           height: 40,
           width: 40,
           className: T.icon
@@ -44,8 +44,8 @@ function m(e) {
   })
 }
 
-function N() {
-  return (0, i.jsx)(m, {
+function m() {
+  return (0, i.jsx)(N, {
     children: (0, i.jsx)(a.Heading, {
       color: "header-primary",
       variant: "heading-xl/semibold",
@@ -56,7 +56,7 @@ function N() {
 }
 
 function I() {
-  return (0, i.jsx)(m, {
+  return (0, i.jsx)(N, {
     children: (0, i.jsx)(a.Heading, {
       color: "header-secondary",
       variant: "heading-md/semibold",
@@ -75,7 +75,7 @@ function A(e) {
       className: T.listRow,
       children: [(0, i.jsx)("div", {
         className: r(T.listRowCircle, T.listAvatar),
-        children: (0, i.jsx)(v.default, {
+        children: (0, i.jsx)(p.default, {
           height: 14,
           width: 14,
           className: T.icon
@@ -96,7 +96,7 @@ function R(e) {
   let {
     eventUser: n,
     onContextMenu: l
-  } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getUser(n.user_id)), d = null === (t = n.member) || void 0 === t ? void 0 : t.guildId, v = (0, s.useStateFromStores)([C.default, E.default, h.default], () => n.user_id === h.default.getId() ? C.default.getStatus() : E.default.getStatus(n.user_id, d), [n.user_id, d]);
+  } = e, o = (0, s.useStateFromStores)([v.default], () => v.default.getUser(n.user_id)), d = null === (t = n.member) || void 0 === t ? void 0 : t.guildId, p = (0, s.useStateFromStores)([C.default, E.default, h.default], () => n.user_id === h.default.getId() ? C.default.getStatus() : E.default.getStatus(n.user_id, d), [n.user_id, d]);
   return null == o ? null : (0, i.jsx)(a.Popout, {
     preload: () => (0, c.default)(o.id, o.getAvatarURL(d, 80), {
       guildId: d
@@ -124,7 +124,7 @@ function R(e) {
           "aria-label": o.username,
           size: a.AvatarSizes.SIZE_24,
           className: T.listAvatar,
-          status: v
+          status: p
         }), (0, i.jsx)(u.default, {
           user: o,
           className: T.listName,
@@ -153,7 +153,7 @@ function U(e) {
   })
 }
 
-function y(e) {
+function x(e) {
   let {
     children: t,
     style: n
@@ -165,12 +165,12 @@ function y(e) {
   })
 }
 
-function x(e) {
+function y(e) {
   let {
     children: t,
     height: n
   } = e;
-  return (0, i.jsx)(y, {
+  return (0, i.jsx)(x, {
     style: {
       height: n
     },
@@ -187,22 +187,22 @@ function L(e) {
     error: d,
     containerHeight: c
   } = e, f = (0, s.useStateFromStores)([_.default], () => _.default.getUserCount(t.id, l));
-  if (u && 0 === r.length) return (0, i.jsx)(x, {
+  if (u && 0 === r.length) return (0, i.jsx)(y, {
     height: c,
     children: (0, i.jsx)(a.Spinner, {
       type: a.Spinner.Type.SPINNING_CIRCLE,
       className: T.spinner
     })
   });
-  if (null != d && 0 === r.length) return (0, i.jsx)(x, {
+  if (null != d && 0 === r.length) return (0, i.jsx)(y, {
     height: c,
     children: (0, i.jsx)(I, {})
   });
   let h = 0;
-  return r.length >= g.MAX_RSVP_USER_DISPLAY_COUNT && f > g.MAX_RSVP_USER_DISPLAY_COUNT && (h = Math.max(f - r.length, 0)), 0 === r.length ? (0, i.jsx)(x, {
+  return r.length >= g.MAX_RSVP_USER_DISPLAY_COUNT && f > g.MAX_RSVP_USER_DISPLAY_COUNT && (h = Math.max(f - r.length, 0)), 0 === r.length ? (0, i.jsx)(y, {
     height: c,
-    children: (0, i.jsx)(N, {})
-  }) : (0, i.jsx)(y, {
+    children: (0, i.jsx)(m, {})
+  }) : (0, i.jsx)(x, {
     children: (0, i.jsx)(U, {
       eventUsers: r,
       onContextMenu: function(e, t) {

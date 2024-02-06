@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("519440"),
   T = n("947337"),
   S = n("197881"),
-  m = n("401774"),
-  p = n("607894"),
+  p = n("401774"),
+  m = n("607894"),
   A = n("746504"),
   g = n("107153"),
   N = n("32505"),
@@ -83,7 +83,7 @@ function M(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE:
-            return (0, a.jsx)(p.default, {
+            return (0, a.jsx)(m.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -125,7 +125,7 @@ var P = e => {
         guild: t
       });
     case R.ConnectedChannelNotices.GUILD_MFA_WARNING:
-      return (0, a.jsx)(m.default, {
+      return (0, a.jsx)(p.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.COMMANDS_MIGRATION:

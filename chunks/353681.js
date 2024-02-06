@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("139245"),
   T = n("69927"),
   S = n("444497"),
-  m = n("349682"),
-  p = n("393414"),
+  p = n("349682"),
+  m = n("393414"),
   A = n("970366"),
   g = n("915639"),
   N = n("161778"),
@@ -84,7 +84,7 @@ class W extends s.PureComponent {
         length: parseInt(n, 10)
       })
     } else null != r && r !== k.DISCOVERY_ALL_CATEGORIES_ID && _.default.wait(() => (0, h.selectCategory)(r));
-    let d = (0, p.getHistory)().location,
+    let d = (0, m.getHistory)().location,
       c = null !== (t = null === (e = d.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
     c > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({
       to: c
@@ -282,7 +282,7 @@ class W extends s.PureComponent {
     }, {
       autoTrackExposure: !1
     }), _ = r === k.DISCOVERY_ALL_CATEGORIES_ID ? null === (e = u[F.GuildDiscoverySections.FEATURED]) || void 0 === e ? void 0 : e.guilds : null === (t = u[r]) || void 0 === t ? void 0 : t.guilds;
-    if (r === k.DISCORD_HUB_ID) return (0, a.jsx)(m.default, {
+    if (r === k.DISCORD_HUB_ID) return (0, a.jsx)(p.default, {
       loadId: this.loadId
     });
     let h = r === k.DISCOVERY_ALL_CATEGORIES_ID ? B.default.Messages.GUILD_DISCOVERY_HOME_TITLE : B.default.Messages.GUILD_DISCOVERY_CATEGORY_TITLE.format({
@@ -390,8 +390,8 @@ class W extends s.PureComponent {
       let o = null !== (l = null === (s = this._scroller.current) || void 0 === s ? void 0 : s.getScrollerState().scrollTop) && void 0 !== l ? l : 0,
         {
           location: u
-        } = (0, p.getHistory)();
-      (0, p.replaceWith)({
+        } = (0, m.getHistory)();
+      (0, m.replaceWith)({
         ...u,
         state: o
       }), this.setState({

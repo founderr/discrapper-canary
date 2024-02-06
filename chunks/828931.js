@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("519119"),
   T = n("5667"),
   S = n("79798"),
-  m = n("599110"),
-  p = n("427459"),
+  p = n("599110"),
+  m = n("427459"),
   A = n("701909"),
   g = n("246351"),
   N = n("49111"),
@@ -50,7 +50,7 @@ function w(e, t) {
 }
 
 function k(e, t) {
-  null != t && ((0, p.isTierUnlocked)(t, N.BoostedGuildTiers.TIER_1) ? h.default.open(t.id, N.GuildSettingsSections.OVERVIEW, {
+  null != t && ((0, m.isTierUnlocked)(t, N.BoostedGuildTiers.TIER_1) ? h.default.open(t.id, N.GuildSettingsSections.OVERVIEW, {
     section: N.AnalyticsSections.PREMIUM_GUILD_INVITE_SPLASH
   }, N.GuildSettingsSubsections.INVITE) : (0, f.default)({
     analyticsLocations: e,
@@ -86,14 +86,14 @@ var B = s.memo(function(e) {
   } = e, {
     analyticsLocations: f
   } = (0, o.default)(), L = () => {
-    m.default.track(N.AnalyticEvents.TOOLTIP_VIEWED, {
+    p.default.track(N.AnalyticEvents.TOOLTIP_VIEWED, {
       type: v.PremiumUpsellTypes.PREMIUM_PROGRESS_BAR,
       location: {
         page: N.AnalyticsPages.GUILD_CHANNEL
       }
     })
   }, B = () => {
-    m.default.track(N.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    p.default.track(N.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: v.PremiumUpsellTypes.INVITE_SPLASH_UPSELL,
       location: {
         page: N.AnalyticsPages.GUILD_CHANNEL
@@ -168,10 +168,10 @@ var B = s.memo(function(e) {
             renderGuildHeaderDropdownButton: r
           });
         case l.DismissibleContent.GUILD_HEADER_INVITE_SPLASH:
-          let e = (0, p.isTierUnlocked)(s, N.BoostedGuildTiers.TIER_1) ? M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
-              boostCount: (0, p.getNumberOfAppliedBoostsNeededForTier)(s, N.BoostedGuildTiers.TIER_1)
+          let e = (0, m.isTierUnlocked)(s, N.BoostedGuildTiers.TIER_1) ? M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT.format() : M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CONTENT_LOCKED.format({
+              boostCount: (0, m.getNumberOfAppliedBoostsNeededForTier)(s, N.BoostedGuildTiers.TIER_1)
             }),
-            t = (0, p.isTierUnlocked)(s, N.BoostedGuildTiers.TIER_1) ? M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : M.default.Messages.LEARN_MORE;
+            t = (0, m.isTierUnlocked)(s, N.BoostedGuildTiers.TIER_1) ? M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : M.default.Messages.LEARN_MORE;
           return (0, a.jsx)(F, {
             renderPopout: (0, a.jsx)(T.default, {
               onComponentMount: B,

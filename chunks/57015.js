@@ -26,23 +26,23 @@ var l = n("37983"),
       imgURI: n,
       transitionState: I,
       allowSkip: R = !1,
-      onCrop: C,
-      onClose: g,
-      uploadType: m = A.UploadTypes.AVATAR,
-      showUpsellHeader: N = !1,
-      analyticsPage: M
-    } = e, [S, O] = i.useState({
+      onCrop: g,
+      onClose: N,
+      uploadType: C = A.UploadTypes.AVATAR,
+      showUpsellHeader: m = !1,
+      analyticsPage: S
+    } = e, [v, M] = i.useState({
       width: 0,
       height: 0
-    }), [v, w] = i.useState({
+    }), [O, w] = i.useState({
       top: 0,
       bottom: 0,
       left: 0,
       right: 0
-    }), [D, L] = i.useState(!1), [U, y] = i.useState(1), [b, P] = i.useState({
+    }), [D, U] = i.useState(!1), [L, y] = i.useState(1), [b, P] = i.useState({
       x: 0,
       y: 0
-    }), [H, x] = i.useState(null), [G, B] = i.useState(!1), {
+    }), [H, x] = i.useState(null), [B, G] = i.useState(!1), {
       AnalyticsLocationProvider: V
     } = (0, s.default)(o.default.IMAGE_CROPPING_MODAL), j = i.useRef({
       x: 0,
@@ -51,15 +51,15 @@ var l = n("37983"),
     i.useEffect(() => {
       (0, f.default)()
     }, []), i.useEffect(() => {
-      W && N && d.default.track(_.AnalyticEvents.OPEN_MODAL, {
+      W && m && d.default.track(_.AnalyticEvents.OPEN_MODAL, {
         type: _.AnalyticsSections.CROP_GIF_MODAL,
         location: {
-          page: M
+          page: S
         }
       })
-    }, [N, M, W]);
+    }, [m, S, W]);
     let Z = () => {
-        switch (m) {
+        switch (C) {
           case A.UploadTypes.BANNER:
             return {
               height: A.USER_BANNER_MAX_HEIGHT, width: A.USER_BANNER_MAX_WIDTH
@@ -89,19 +89,19 @@ var l = n("37983"),
         j.current = (0, E.getBoundedCoordinates)(e, t, n), null != k.current && (k.current.style.transform = "translate3d(".concat(j.current.x, "px, ").concat(j.current.y, "px, 0)"))
       }, [k]),
       Y = i.useCallback(() => {
-        if (null == k.current || U > 1) return;
+        if (null == k.current || L > 1) return;
         let {
           width: e,
           height: t
         } = k.current.getBoundingClientRect(), {
           width: n,
           height: l
-        } = (0, E.adjustImageDimensionsForAspectRatio)(m, e, t), i = (0, E.calculateOverlaySize)(m, n, l, t);
+        } = (0, E.adjustImageDimensionsForAspectRatio)(C, e, t), i = (0, E.calculateOverlaySize)(C, n, l, t);
         x({
           width: n,
           height: l
-        }), O(i), w((0, E.calculateDragBoundaries)(n, l, i))
-      }, [m, U]),
+        }), M(i), w((0, E.calculateDragBoundaries)(n, l, i))
+      }, [C, L]),
       z = i.useCallback(e => {
         let {
           x: t,
@@ -110,32 +110,32 @@ var l = n("37983"),
         if (!D || e.clientX === t && e.clientY === n) return;
         let l = e.clientX - b.x,
           i = e.clientY - b.y;
-        X(l, i, v)
-      }, [v, D, b, X]),
+        X(l, i, O)
+      }, [O, D, b, X]),
       K = () => {
-        L(!1)
+        U(!1)
       },
       q = () => {
         let e = Z();
         return e.width !== e.height
       },
-      J = async () => {
+      Q = async () => {
         let e;
         if (null == k.current) return;
-        B(!0);
+        G(!0);
         let n = k.current,
           l = Z();
         if (W) try {
           let {
             result: i,
             cancelFn: r
-          } = await (0, E.cropGIF)(t, n, S, j.current, l);
+          } = await (0, E.cropGIF)(t, n, v, j.current, l);
           F.current = r, e = await i, F.current = null
         } catch (e) {
           var i;
           throw null === (i = F.current) || void 0 === i || i.call(F), F.current = null, Error("Error cropping GIF")
-        } else e = (0, E.cropStaticImage)(n, S, j.current, l);
-        await C(e, t), B(!1), g()
+        } else e = (0, E.cropStaticImage)(n, v, j.current, l);
+        await g(e, t), G(!1), N()
       };
     return i.useEffect(() => (window.addEventListener("mouseup", K), window.addEventListener("resize", Y), () => {
       window.removeEventListener("mouseup", K), window.removeEventListener("resize", Y)
@@ -148,9 +148,9 @@ var l = n("37983"),
         onAnimationEnd: Y,
         transitionState: I,
         size: a.ModalSize.MEDIUM,
-        children: [N && (0, l.jsx)(u.default, {
-          type: m,
-          analyticsPage: M,
+        children: [m && (0, l.jsx)(u.default, {
+          type: C,
+          analyticsPage: S,
           analyticsSection: _.AnalyticsSections.CROP_GIF_MODAL,
           isGIF: W,
           banner: n
@@ -172,15 +172,15 @@ var l = n("37983"),
                 ...(() => {
                   if (null == H) return {};
                   let e = H.width / H.height,
-                    t = q() && e > A.BANNER_ASPECT_RATIO ? S.height / H.height : 1;
+                    t = q() && e > A.BANNER_ASPECT_RATIO ? v.height / H.height : 1;
                   return {
-                    width: H.width * U * t,
-                    minWidth: H.width * U * t,
-                    height: H.height * U * t
+                    width: H.width * L * t,
+                    minWidth: H.width * L * t,
+                    height: H.height * L * t
                   }
                 })()
               },
-              className: G ? h.imageDisabled : h.imageEnabled,
+              className: B ? h.imageDisabled : h.imageEnabled,
               src: n,
               alt: "avatar",
               ref: k,
@@ -190,15 +190,15 @@ var l = n("37983"),
                 P({
                   x: t,
                   y: n
-                }), L(!0)
+                }), U(!0)
               },
               draggable: !1
             }), (0, l.jsx)("div", {
-              className: m === A.UploadTypes.AVATAR ? h.overlayAvatar : h.overlayBanner,
+              className: C === A.UploadTypes.AVATAR ? h.overlayAvatar : h.overlayBanner,
               style: {
                 opacity: null == H ? 0 : 1,
-                width: S.width,
-                height: S.height
+                width: v.width,
+                height: v.height
               }
             })]
           }), (0, l.jsxs)("div", {
@@ -217,13 +217,13 @@ var l = n("37983"),
                 let {
                   width: t,
                   height: n
-                } = H, l = (0, E.calculateDragBoundaries)(t * e, n * e, S), {
+                } = H, l = (0, E.calculateDragBoundaries)(t * e, n * e, v), {
                   x: i,
                   y: a
                 } = j.current;
                 (!(0, r.inRange)(i, l.right, l.left) || !(0, r.inRange)(a, l.top, l.bottom)) && X(i, a, l), y(e), w(l)
               },
-              disabled: G,
+              disabled: B,
               equidistant: !0,
               hideBubble: !0,
               "aria-label": p.default.Messages.FORM_LABEL_AVATAR_SIZE
@@ -241,7 +241,7 @@ var l = n("37983"),
             color: a.Button.Colors.PRIMARY,
             size: a.ButtonSizes.SMALL,
             onClick: () => {
-              R && (C(n, t), g())
+              R && (g(n, t), N())
             },
             children: p.default.Messages.AVATAR_UPLOAD_SKIP
           }) : null, (0, l.jsxs)("div", {
@@ -253,16 +253,16 @@ var l = n("37983"),
               size: a.ButtonSizes.SMALL,
               onClick: () => {
                 if (null != F.current) {
-                  F.current(), F.current = null, B(!1);
+                  F.current(), F.current = null, G(!1);
                   return
                 }
-                g()
+                N()
               },
               children: p.default.Messages.AVATAR_UPLOAD_CANCEL
             }), (0, l.jsx)(a.Button, {
-              submitting: G,
+              submitting: B,
               size: a.ButtonSizes.SMALL,
-              onClick: J,
+              onClick: Q,
               children: p.default.Messages.AVATAR_UPLOAD_APPLY
             })]
           })]

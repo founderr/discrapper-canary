@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("710514"),
   T = n("339853"),
   S = n("775032"),
-  m = n("25132"),
-  p = n("453479"),
+  p = n("25132"),
+  m = n("453479"),
   A = n("975344"),
   g = n("57"),
   N = n("863972"),
@@ -65,11 +65,11 @@ function y(e) {
     isMoreLoading: c
   } = (0, C.useFamilyCenterActions)({
     onError: n
-  }), E = L.ACTION_TO_TEXT.get(t), [h, T] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), m = s.useCallback(() => {
+  }), E = L.ACTION_TO_TEXT.get(t), [h, T] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), p = s.useCallback(() => {
     T(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
   i(E, "No text for action type");
-  let p = E.sectionHeader(u),
+  let m = E.sectionHeader(u),
     N = s.useCallback(e => {
       let {
         row: t
@@ -87,14 +87,14 @@ function y(e) {
         className: P.sectionHeader,
         variant: "eyebrow",
         color: "header-secondary",
-        children: p
+        children: m
       }), void 0 !== E.sectionDescription ? (0, a.jsx)(o.Text, {
         className: P.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
         children: E.sectionDescription(null != l && l)
       }) : null]
-    }), [p, E, l]);
+    }), [m, E, l]);
   if (0 === r.length) return null;
   let O = r.slice(0, h);
   return (0, a.jsxs)("div", {
@@ -109,7 +109,7 @@ function y(e) {
       }))
     }), O.length !== u ? (0, a.jsx)(o.Clickable, {
       className: P.loadMoreBar,
-      onClick: m,
+      onClick: p,
       role: "button",
       children: c ? (0, a.jsx)(o.Spinner, {
         type: o.Spinner.Type.PULSING_ELLIPSIS,
@@ -126,12 +126,12 @@ function y(e) {
 }
 let x = () => {
     let e = (0, S.default)(),
-      t = (0, m.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
+      t = (0, p.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       n = (0, h.useAgeSpecificText)(M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
       }), M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
       s = (0, _.getActivityWindowTimestampFormatter)(!!e),
-      l = (0, m.useActivityWindowTimeStamp)(s);
+      l = (0, p.useActivityWindowTimeStamp)(s);
     return e && t.length > 1 ? (0, a.jsx)(o.Text, {
       variant: "eyebrow",
       children: l
@@ -168,7 +168,7 @@ let x = () => {
     })
   },
   U = () => {
-    let e = (0, m.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
+    let e = (0, p.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       t = (0, r.default)([E.default], () => E.default.getSelectedTeenId()),
       {
         selectTeenUser: n
@@ -201,7 +201,7 @@ let x = () => {
   G = e => {
     let {
       userId: t
-    } = e, n = (0, S.default)(), s = (0, m.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), l = (0, _.getActivityWindowTimestampFormatter)(!!n), i = (0, m.useActivityWindowTimeStamp)(l);
+    } = e, n = (0, S.default)(), s = (0, p.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), l = (0, _.getActivityWindowTimestampFormatter)(!!n), i = (0, p.useActivityWindowTimeStamp)(l);
     return n && 1 !== s.length ? (0, a.jsx)(U, {}) : (0, a.jsx)(b, {
       userId: t,
       subText: i
@@ -210,7 +210,7 @@ let x = () => {
 var j = e => {
   let {
     user: t
-  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, I.useHasActionForAnyDisplayType)(), l = (0, _.getEmptyActivityFormatter)(), i = (0, m.useActivityWindowTimeStamp)(l);
+  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, I.useHasActionForAnyDisplayType)(), l = (0, _.getEmptyActivityFormatter)(), i = (0, p.useActivityWindowTimeStamp)(l);
   return (0, a.jsxs)("div", {
     className: P.container,
     children: [(0, a.jsxs)("div", {
@@ -229,7 +229,7 @@ var j = e => {
           className: P.activityCounterRow,
           children: n.map(e => {
             let [t, n] = e;
-            return (0, a.jsx)(p.default, {
+            return (0, a.jsx)(m.default, {
               displayType: t,
               header: n.tooltipHeader()
             }, "counter-".concat(t))

@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("718517"),
   T = n("744923"),
   S = n("333705"),
-  m = n("749554"),
-  p = n("62659"),
+  p = n("749554"),
+  m = n("62659"),
   A = n("36512"),
   g = n("638441"),
   N = n("49111"),
@@ -38,7 +38,7 @@ let v = 15 * I.default.Millis.MINUTE,
       registerQuestEntrypoint: i,
       unregisterQuestEntrypoint: r,
       shouldRenderQuestEntrypoint: u
-    } = e, c = (0, a.jsx)(m.default, {
+    } = e, c = (0, a.jsx)(p.default, {
       party: t,
       onUserContextMenu: n
     }), f = (0, a.jsx)(S.default, {
@@ -81,7 +81,7 @@ let v = 15 * I.default.Millis.MINUTE,
         let {
           isShown: n
         } = t;
-        return (0, a.jsx)(p.default, {
+        return (0, a.jsx)(m.default, {
           ...e,
           onMouseEnter: D,
           "aria-haspopup": "menu",

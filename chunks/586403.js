@@ -18,13 +18,13 @@ function c(e) {
     guildScheduledEvent: t,
     channel: n,
     onClose: c
-  } = e, f = t.entity_type === o.GuildScheduledEventEntityTypes.EXTERNAL, E = a.useCallback(e => (0, r.createEventLocationClickHandler)(t, c)(e), [t, c]), I = (0, u.getLocationDataForEvent)(t, n);
-  if (null == I) return null;
+  } = e, f = t.entity_type === o.GuildScheduledEventEntityTypes.EXTERNAL, E = a.useCallback(e => (0, r.createEventLocationClickHandler)(t, c)(e), [t, c]), _ = (0, u.getLocationDataForEvent)(t, n);
+  if (null == _) return null;
   let {
-    IconComponent: _,
+    IconComponent: I,
     locationName: p
-  } = I, h = (0, s.jsxs)(s.Fragment, {
-    children: [null != _ && (0, s.jsx)(_, {
+  } = _, h = (0, s.jsxs)(s.Fragment, {
+    children: [null != I && (0, s.jsx)(I, {
       width: 20,
       height: 20,
       className: d.channelIcon

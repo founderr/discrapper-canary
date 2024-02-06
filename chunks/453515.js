@@ -16,14 +16,14 @@ let C = "ActivityTrackingStore",
   I = 30 * d.default.Millis.MINUTE,
   T = 5 * d.default.Millis.MINUTE,
   S = null !== (a = l.default.get(C)) && void 0 !== a ? a : {},
-  m = {},
-  p = !1;
+  p = {},
+  m = !1;
 
 function A(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   t && g(e, !0);
-  let n = m[e.applicationId];
-  null != n && (n.stop(), delete m[e.applicationId]), delete S[e.applicationId], l.default.set(C, S)
+  let n = p[e.applicationId];
+  null != n && (n.stop(), delete p[e.applicationId]), delete S[e.applicationId], l.default.set(C, S)
 }
 
 function g(e) {
@@ -38,8 +38,8 @@ function g(e) {
     duration: Math.floor(a / 1e3),
     closed: t
   }), e.updatedAt = n;
-  let s = m[e.applicationId];
-  null == s && (s = m[e.applicationId] = new i.Interval).start(I, () => g(e)), !t && (S[e.applicationId] = e, l.default.set(C, S))
+  let s = p[e.applicationId];
+  null == s && (s = p[e.applicationId] = new i.Interval).start(I, () => g(e)), !t && (S[e.applicationId] = e, l.default.set(C, S))
 }
 
 function N() {
@@ -63,7 +63,7 @@ function N() {
 
 function R() {
   for (let e of Object.keys(S)) A(S[e]);
-  p = !1
+  m = !1
 }
 class O extends s.default.Store {
   initialize() {
@@ -76,9 +76,9 @@ class O extends s.default.Store {
 O.displayName = "ActivityTrackingStore", new O(r.default, {
   RUNNING_GAMES_CHANGE: () => N(),
   CONNECTION_OPEN: function() {
-    if (p) return !1;
+    if (m) return !1;
     for (let e of Object.keys(S)) g(S[e]);
-    N(!1), p = !0
+    N(!1), m = !0
   },
   CONNECTION_CLOSED: function(e) {
     let {

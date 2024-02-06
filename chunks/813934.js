@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return y
   }
 }), n("222007");
 var l = n("37983"),
@@ -17,21 +17,21 @@ var l = n("37983"),
   E = n("953143"),
   h = n("269596"),
   g = n("27618"),
-  _ = n("697218"),
-  v = n("228427"),
+  v = n("697218"),
+  _ = n("228427"),
   S = n("599110"),
   R = n("887143"),
   m = n("834052"),
-  C = n("151642"),
-  N = n("29846"),
-  T = n("837979"),
+  N = n("151642"),
+  T = n("29846"),
+  C = n("837979"),
   p = n("49111"),
-  I = n("745049"),
-  x = n("533613"),
+  x = n("745049"),
+  I = n("533613"),
   L = n("782340"),
   A = n("529555");
 
-function y(e) {
+function D(e) {
   let {
     stageChannelsInGuild: t,
     channel: n,
@@ -46,13 +46,13 @@ function y(e) {
         value: n.id,
         options: t.map(e => ({
           value: e.id,
-          label: (0, o.computeChannelName)(e, _.default, g.default, !0)
+          label: (0, o.computeChannelName)(e, v.default, g.default, !0)
         })),
         onChange: e => {
           let n = t.find(t => t.id === e);
           null != n && a(n)
         },
-        renderOptionPrefix: () => (0, l.jsx)(v.default, {
+        renderOptionPrefix: () => (0, l.jsx)(_.default, {
           height: 24
         })
       })
@@ -60,24 +60,24 @@ function y(e) {
   })
 }
 
-function D(e) {
-  var t, n, r, g, _, v, D, M;
+function y(e) {
+  var t, n, r, g, v, _, y, M;
   let {
     channel: j,
     guild: O,
     header: w,
     error: k,
-    loading: G,
-    onSave: U,
-    onEventSave: B,
-    onClose: V,
-    onSelectChannel: b,
+    loading: U,
+    onSave: B,
+    onEventSave: G,
+    onClose: b,
+    onSelectChannel: V,
     isEvent: P = !1,
     defaultOptions: H,
     isSlideReady: Y = !0
   } = e, F = a.useMemo(() => m.default.getStageInstanceByChannel(j.id), [j.id]), [W, Z] = a.useState(null !== (n = null !== (t = null == H ? void 0 : H.topic) && void 0 !== t ? t : null == F ? void 0 : F.topic) && void 0 !== n ? n : ""), [K, z] = a.useState(null !== (r = null == H ? void 0 : H.description) && void 0 !== r ? r : ""), [q] = a.useState(P), [X, J] = a.useState(null !== (g = null == H ? void 0 : H.schedule) && void 0 !== g ? g : {
     startDate: (0, d.getInitialEventStartDate)()
-  }), [Q, $] = a.useState(q && (null == H ? void 0 : H.schedule) != null), ee = (0, R.useCanSendStageStartNotification)(j), et = (0, R.useDefaultSendStartStageNotificationToggle)(j), en = null == F && ee && !q, [el, ea] = a.useState(en && et), er = (0, i.useStateFromStores)([h.default], () => h.default.hasHotspot(x.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), es = I.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [ei] = a.useState(null !== (v = null !== (_ = null == H ? void 0 : H.privacyLevel) && void 0 !== _ ? _ : null == F ? void 0 : F.privacy_level) && void 0 !== v ? v : es), [eu, eo] = a.useState(null == H ? void 0 : H.recurrenceRule), ec = (0, C.useStageBlockedUsersCount)(j.id), [ed, ef] = a.useState(!1), eE = (0, o.default)(j), eh = (0, c.useChannelsUserCanStartStageIn)(O), eg = null != b, e_ = eh.length > 1;
+  }), [Q, $] = a.useState(q && (null == H ? void 0 : H.schedule) != null), ee = (0, R.useCanSendStageStartNotification)(j), et = (0, R.useDefaultSendStartStageNotificationToggle)(j), en = null == F && ee && !q, [el, ea] = a.useState(en && et), er = (0, i.useStateFromStores)([h.default], () => h.default.hasHotspot(I.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), es = x.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [ei] = a.useState(null !== (_ = null !== (v = null == H ? void 0 : H.privacyLevel) && void 0 !== v ? v : null == F ? void 0 : F.privacy_level) && void 0 !== _ ? _ : es), [eu, eo] = a.useState(null == H ? void 0 : H.recurrenceRule), ec = (0, N.useStageBlockedUsersCount)(j.id), [ed, ef] = a.useState(!1), eE = (0, o.default)(j), eh = (0, c.useChannelsUserCanStartStageIn)(O), eg = null != V, ev = eh.length > 1;
   a.useEffect(() => {
     S.default.track(p.AnalyticEvents.START_STAGE_OPENED, {
       stage_instance_id: null == F ? void 0 : F.id,
@@ -85,8 +85,8 @@ function D(e) {
       guild_id: j.guild_id
     })
   }, []);
-  let ev = e => {
-    if (e.preventDefault(), ei === I.GuildScheduledEventPrivacyLevel.PUBLIC && W.length < 20 && !ed) {
+  let e_ = e => {
+    if (e.preventDefault(), ei === x.GuildScheduledEventPrivacyLevel.PUBLIC && W.length < 20 && !ed) {
       ef(!0);
       return
     }
@@ -97,26 +97,26 @@ function D(e) {
     };
     if (q) {
       if (!Q) return;
-      null == B || B({
+      null == G || G({
         ...t,
         schedule: X,
         description: K,
-        entityType: I.GuildScheduledEventEntityTypes.STAGE_INSTANCE
+        entityType: x.GuildScheduledEventEntityTypes.STAGE_INSTANCE
       });
       return
     }
-    null == U || U(t)
+    null == B || B(t)
   };
   let {
     color: eS,
     text: eR
-  } = (D = F, M = ei, q ? {
+  } = (y = F, M = ei, q ? {
     color: u.Button.Colors.BRAND,
     text: L.default.Messages.SCHEDULE_EVENT
-  } : M === I.GuildScheduledEventPrivacyLevel.PUBLIC && (null == D ? void 0 : D.privacy_level) !== I.GuildScheduledEventPrivacyLevel.PUBLIC ? {
+  } : M === x.GuildScheduledEventPrivacyLevel.PUBLIC && (null == y ? void 0 : y.privacy_level) !== x.GuildScheduledEventPrivacyLevel.PUBLIC ? {
     color: u.Button.Colors.BRAND,
     text: L.default.Messages.CONTINUE
-  } : null == D ? {
+  } : null == y ? {
     color: u.Button.Colors.GREEN,
     text: L.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_BUTTON
   } : {
@@ -127,17 +127,17 @@ function D(e) {
     var e;
     Y && (null === (e = em.current) || void 0 === e || e.focus())
   }, [Y]);
-  let eC = Q && null != X.startDate && X.startDate >= s();
+  let eN = Q && null != X.startDate && X.startDate >= s();
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(u.ModalContent, {
       className: A.modalContent,
       children: [w, (0, l.jsx)("div", {
         className: A.blockedUsersContainer,
-        children: null == F && ec > 0 && (0, l.jsx)(N.BlockedUsersNotice, {
+        children: null == F && ec > 0 && (0, l.jsx)(T.BlockedUsersNotice, {
           channelId: j.id
         })
       }), (0, l.jsxs)("form", {
-        onSubmit: ev,
+        onSubmit: e_,
         className: A.form,
         children: [(0, l.jsxs)(u.FormItem, {
           title: P ? L.default.Messages.GUILD_EVENT_CREATE_TOPIC_LABEL : L.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_LABEL,
@@ -147,7 +147,7 @@ function D(e) {
             className: A.textInput,
             onChange: e => Z(e),
             placeholder: L.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_PLACEHOLDER,
-            maxLength: T.MAX_STAGE_TOPIC_LENGTH,
+            maxLength: C.MAX_STAGE_TOPIC_LENGTH,
             value: W,
             autoComplete: "off",
             inputRef: em
@@ -162,10 +162,10 @@ function D(e) {
             className: A.warning,
             children: k.getAnyErrorMessage()
           }) : null]
-        }), eg && e_ ? (0, l.jsx)(y, {
+        }), eg && ev ? (0, l.jsx)(D, {
           stageChannelsInGuild: eh,
           channel: j,
-          onSelectChannel: b
+          onSelectChannel: V
         }) : null, q && (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(E.default, {
             className: A.formItem,
@@ -193,13 +193,13 @@ function D(e) {
             placeholder: L.default.Messages.GUILD_EVENT_CREATE_DESCRIPTION_PLACEHOLDER,
             value: K,
             onChange: e => z(e),
-            maxLength: I.GUILD_EVENT_MAX_DESCRIPTION_LENGTH
+            maxLength: x.GUILD_EVENT_MAX_DESCRIPTION_LENGTH
           })
         }), en ? (0, l.jsx)(f.default, {
           sendStartNotification: el,
           setSendStartNotification: ea,
           showNotificationNewBadge: er
-        }) : null, eg && !e_ ? (0, l.jsx)(u.Text, {
+        }) : null, eg && !ev ? (0, l.jsx)(u.Text, {
           color: "header-secondary",
           variant: "text-xs/normal",
           className: A.channelSelection,
@@ -215,14 +215,14 @@ function D(e) {
     }), (0, l.jsxs)(u.ModalFooter, {
       children: [(0, l.jsx)(u.Button, {
         color: eS,
-        onClick: ev,
-        disabled: "" === W || null == ei || P && !eC,
-        submitting: G,
+        onClick: e_,
+        disabled: "" === W || null == ei || P && !eN,
+        submitting: U,
         children: eR
       }), (0, l.jsx)(u.Button, {
         color: u.Button.Colors.PRIMARY,
         className: A.cancelButton,
-        onClick: V,
+        onClick: b,
         children: L.default.Messages.CANCEL
       })]
     })]

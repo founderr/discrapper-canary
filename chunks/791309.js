@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return c
+    return u
   }
 });
 var l = a("37983");
@@ -11,15 +11,15 @@ var s = a("414456"),
   n = a("77078"),
   i = a("153160"),
   o = a("846367"),
-  c = e => {
+  u = e => {
     var t;
     let {
       price: {
         amount: a,
         currency: s
       },
-      renderPrice: c,
-      icon: u,
+      renderPrice: u,
+      icon: c,
       className: d,
       variant: f = "heading-md/semibold",
       alwaysWhiteText: m = !0
@@ -28,6 +28,6 @@ var s = a("414456"),
       variant: f,
       color: m ? "always-white" : "none",
       className: r(o.heading, d),
-      children: [u, null !== (t = null == c ? void 0 : c(C)) && void 0 !== t ? t : C]
+      children: [c, null !== (t = null == u ? void 0 : u(C)) && void 0 !== t ? t : C]
     })
   }

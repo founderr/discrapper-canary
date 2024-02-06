@@ -27,18 +27,18 @@ function f(e) {
     var e, t, n;
     return null === (n = C.current) || void 0 === n ? void 0 : null === (t = n.ref) || void 0 === t ? void 0 : null === (e = t.blur) || void 0 === e ? void 0 : e.call(t)
   }, []);
-  let p = d.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_TAB_TITLE.format({
+  let v = d.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_TAB_TITLE.format({
       userCount: f
     }),
-    v = [(0, i.jsx)(a.TabBar.Item, {
+    p = [(0, i.jsx)(a.TabBar.Item, {
       className: c.tabBarItem,
       id: u.EventDetailSections.EVENT_INFO,
       children: d.default.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE
     }, "event-details")];
-  return !E && v.push((0, i.jsx)(a.TabBar.Item, {
+  return !E && p.push((0, i.jsx)(a.TabBar.Item, {
     className: c.tabBarItem,
     id: u.EventDetailSections.RSVP_LIST,
-    children: p
+    children: v
   }, "is-hub")), (0, i.jsxs)("div", {
     className: c.container,
     children: [(0, i.jsx)(a.Clickable, {
@@ -55,7 +55,7 @@ function f(e) {
       selectedItem: n,
       type: "top",
       onItemSelect: r,
-      children: v
+      children: p
     })]
   })
 }

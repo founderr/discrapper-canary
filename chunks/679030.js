@@ -13,8 +13,8 @@ var s, a, l = n("37983"),
   c = n("437822"),
   f = n("569272"),
   E = n("568131"),
-  I = n("327037"),
-  _ = n("208620"),
+  _ = n("327037"),
+  I = n("208620"),
   p = n("970366"),
   h = n("271938"),
   T = n("476108"),
@@ -25,9 +25,9 @@ var s, a, l = n("37983"),
   S = n("659632"),
   C = n("701909"),
   v = n("158998"),
-  L = n("404432"),
-  R = n("291850"),
-  O = n("860959"),
+  R = n("404432"),
+  O = n("291850"),
+  L = n("860959"),
   x = n("49111"),
   M = n("782340"),
   D = n("926622");
@@ -163,7 +163,7 @@ class P extends i.PureComponent {
   renderAuthenticated(e, t) {
     let n = this.getErrorMessage(e);
     return (0, l.jsxs)(A.default, {
-      children: [(0, l.jsx)(L.default, {
+      children: [(0, l.jsx)(R.default, {
         giftCode: e
       }), (0, l.jsx)(A.Button, {
         disabled: null != n,
@@ -205,12 +205,12 @@ class P extends i.PureComponent {
         let e = this.state.currentUser;
         return o || null == e ? this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e)
       }
-      return "login" === this.getMode() ? (0, l.jsx)(R.default, {
+      return "login" === this.getMode() ? (0, l.jsx)(O.default, {
         giftCodeSKU: t,
         giftCode: s,
         transitionTo: r,
         location: u
-      }) : (0, l.jsx)(O.default, {
+      }) : (0, l.jsx)(L.default, {
         giftCodeSKU: t,
         giftCode: s,
         transitionTo: r,
@@ -229,7 +229,7 @@ class P extends i.PureComponent {
     }, this.refreshUser = () => {
       this.setState({
         fetchingUser: !0
-      }), I.fetchCurrentUser({
+      }), _.fetchCurrentUser({
         withAnalyticsToken: !0
       }).then(e => this.setState({
         currentUser: e,
@@ -272,7 +272,7 @@ class P extends i.PureComponent {
     }
   }
 }
-var j = o.default.connectStores([N.default, m.default, h.default, g.default, T.default, _.default], e => {
+var j = o.default.connectStores([N.default, m.default, h.default, g.default, T.default, I.default], e => {
   let t = e.match.params.giftCode,
     n = N.default.get(t),
     s = null != n ? g.default.get(n.skuId) : null;
@@ -285,6 +285,6 @@ var j = o.default.connectStores([N.default, m.default, h.default, g.default, T.d
     isResolved: N.default.getIsResolved(t),
     isAccepting: N.default.getIsAccepting(t),
     libraryApplicationsFetched: m.default.fetched,
-    nativeAppState: _.default.getState(t)
+    nativeAppState: I.default.getState(t)
   }
 })(P)

@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("444752"),
   T = n("437942"),
   S = n("267235"),
-  m = n("49111"),
-  p = n("289382"),
+  p = n("49111"),
+  m = n("289382"),
   A = n("782340"),
   g = n("936791"),
   N = e => {
@@ -30,7 +30,7 @@ var a = n("37983"),
     let {
       guildId: n,
       inviteCode: N
-    } = e, [R, O] = s.useState(p.WaveStates.INITIAL), L = (0, l.useStateFromStores)([_.default], () => _.default.get(n)), v = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(n)), M = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(n)), {
+    } = e, [R, O] = s.useState(m.WaveStates.INITIAL), L = (0, l.useStateFromStores)([_.default], () => _.default.get(n)), v = (0, l.useStateFromStores)([C.default], () => C.default.getRequest(n)), M = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(n)), {
       hasFetchedRequestToJoinGuilds: P,
       guildPreviewDisabled: D
     } = (0, l.useStateFromStoresObject)([C.default], () => ({
@@ -38,7 +38,7 @@ var a = n("37983"),
       guildPreviewDisabled: C.default.getJoinRequestGuild(n)
     }));
     s.useEffect(() => {
-      null != M && (0, r.transitionTo)(m.Routes.CHANNEL(n))
+      null != M && (0, r.transitionTo)(p.Routes.CHANNEL(n))
     }, [M, n]), s.useEffect(() => {
       !P && f.default.fetchRequestToJoinGuilds()
     }, [P]);
@@ -67,7 +67,7 @@ var a = n("37983"),
       }, G = x(A.default.Messages.LEAVE_SERVER_BODY.format({
         name: null == M ? void 0 : M.toString()
       }), () => {
-        O(Math.max(R, p.WaveStates.FILLING)), f.default.removeGuildJoinRequest(n), (0, r.transitionTo)(m.Routes.ME)
+        O(Math.max(R, m.WaveStates.FILLING)), f.default.removeGuildJoinRequest(n), (0, r.transitionTo)(p.Routes.ME)
       }), j = (null == L ? void 0 : null === (t = L.guild) || void 0 === t ? void 0 : t.splash) != null ? c.default.getGuildSplashURL({
         id: L.guild.id,
         splash: L.guild.splash

@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("284679"),
   T = n("448881"),
   S = n("374023"),
-  m = n("2973"),
-  p = n("588025"),
+  p = n("2973"),
+  m = n("588025"),
   A = n("227231"),
   g = n("555226"),
   N = n("315130"),
@@ -121,9 +121,9 @@ let B = s.forwardRef(function(e, t) {
     isExpanded: o,
     isExpansionAnimationComplete: f,
     quest: _
-  } = e, h = (0, d.useStateFromStores)([m.default], () => m.default.isEnrolling(_.id), [_]), I = (0, d.useStateFromStores)([E.default], () => E.default.locale), S = s.useMemo(() => new Date(_.config.expiresAt).toLocaleDateString(I, {
+  } = e, h = (0, d.useStateFromStores)([p.default], () => p.default.isEnrolling(_.id), [_]), I = (0, d.useStateFromStores)([E.default], () => E.default.locale), S = s.useMemo(() => new Date(_.config.expiresAt).toLocaleDateString(I, {
     dateStyle: "long"
-  }), [_.config.expiresAt, I]), p = s.useCallback(() => {}, []), g = s.useCallback(() => {
+  }), [_.config.expiresAt, I]), m = s.useCallback(() => {}, []), g = s.useCallback(() => {
     (0, T.enrollInQuest)(_.id)
   }, [_]), v = (0, L.useHandleClaimQuestsReward)(_), D = (null === (n = _.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, y = (null === (l = _.userStatus) || void 0 === l ? void 0 : l.completedAt) != null;
   return (0, a.jsx)(u.animated.div, {
@@ -166,7 +166,7 @@ let B = s.forwardRef(function(e, t) {
           })]
         }), (0, a.jsx)(c.Clickable, {
           className: P.submenuWrapper,
-          onClick: p,
+          onClick: m,
           children: (0, a.jsx)(C.default, {
             className: P.submenuIcon
           })
@@ -200,7 +200,7 @@ let B = s.forwardRef(function(e, t) {
             color: "always-white"
           }), (0, a.jsx)(c.Clickable, {
             className: P.submenuWrapper,
-            onClick: p,
+            onClick: m,
             children: (0, a.jsx)(C.default, {
               className: P.submenuIcon
             })
@@ -260,7 +260,7 @@ var H = function() {
       autoTrackExposure: !0
     }),
     r = (0, d.useStateFromStores)([f.default], () => f.default.useReducedMotion),
-    o = (0, d.useStateFromStores)([m.default], () => (0, A.getQuestForTargetedContent)(m.default.quests, p.QuestContent.QUEST_BAR)),
+    o = (0, d.useStateFromStores)([p.default], () => (0, A.getQuestForTargetedContent)(p.default.quests, m.QuestContent.QUEST_BAR)),
     c = (0, d.useStateFromStores)([_.default], () => _.default.isFocused()),
     E = s.useRef(-1),
     C = s.useRef(!1),

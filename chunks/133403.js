@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return c
   }
 });
-var i = n("37983");
-n("884691");
-var r = n("414456"),
-  l = n.n(r),
-  o = n("77078"),
-  s = n("782340"),
-  a = n("239636");
+var n = s("37983");
+s("884691");
+var l = s("414456"),
+  o = s.n(l),
+  r = s("77078"),
+  a = s("782340"),
+  i = s("239636");
 let u = Object.freeze({
-  DEFAULT: a.default,
-  FILLED: a.filled
+  DEFAULT: i.default,
+  FILLED: i.filled
 });
 
 function c(e) {
   let {
     className: t,
-    onClick: n,
-    "aria-label": r,
+    onClick: s,
+    "aria-label": l,
     look: c = u.DEFAULT
   } = e;
-  return (0, i.jsx)(o.Clickable, {
-    "aria-label": null != r ? r : s.default.Messages.REMOVE,
-    className: l(a.button, c, t),
-    onClick: n
+  return (0, n.jsx)(r.Clickable, {
+    "aria-label": null != l ? l : a.default.Messages.REMOVE,
+    className: o(i.button, c, t),
+    onClick: s
   })
 }
 c.Looks = u

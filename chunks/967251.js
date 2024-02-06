@@ -32,7 +32,7 @@ var s = n("77078"),
     });
     let {
       activeSubscription: S
-    } = (0, r.default)(null == T ? void 0 : T.id), m = (0, l.useSubscriptionsSettings)(I.id), p = null == m ? void 0 : m.description, {
+    } = (0, r.default)(null == T ? void 0 : T.id), p = (0, l.useSubscriptionsSettings)(I.id), m = null == p ? void 0 : p.description, {
       editStateIds: A
     } = i.useEditStateIds(null !== (t = null == T ? void 0 : T.id) && void 0 !== t ? t : null, I.id);
     return (0, a.jsxs)(a.Fragment, {
@@ -40,8 +40,8 @@ var s = n("77078"),
         title: h.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_PAGE_GROUP_CTA.format({
           serverName: I.toString()
         }),
-        description: null != p ? p : null,
-        coverImageAsset: null !== (n = null == m ? void 0 : m.cover_image_asset) && void 0 !== n ? n : null,
+        description: null != m ? m : null,
+        coverImageAsset: null !== (n = null == p ? void 0 : p.cover_image_asset) && void 0 !== n ? n : null,
         guild: I,
         children: [null != T ? (0, a.jsx)(u.default, {
           className: C.pendingPlanChangeNotice,

@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   getInventoryGuildPacksUserExperimentConfig: function() {
-    return d
-  },
-  useInventoryGuildPacksUserExperiment: function() {
     return c
   },
+  useInventoryGuildPacksUserExperiment: function() {
+    return d
+  },
   useInventoryGuildSettingsExperiment: function() {
-    return p
+    return E
   }
 });
-var l = n("65597"),
-  s = n("862205"),
-  i = n("697218"),
-  r = n("719923"),
-  o = n("782340");
-let a = (0, s.createExperiment)({
+var i = n("65597"),
+  l = n("862205"),
+  r = n("697218"),
+  o = n("719923"),
+  a = n("782340");
+let s = (0, l.createExperiment)({
     kind: "user",
     id: "2023-05_inventory_guild_packs",
     label: "Inventory Guild Packs Experiment",
@@ -113,20 +113,20 @@ let a = (0, s.createExperiment)({
       user: t,
       config: n
     } = e, {
-      desktopViewAndUseAndCollectEnabled: l,
-      mobileViewAndUseEnabled: s,
-      mobileAndFreemiumCollectEnabled: i,
-      autoUnfurlReactionTooltip: o,
-      collectOffOverride: a
-    } = n, u = r.default.isPremium(t);
+      desktopViewAndUseAndCollectEnabled: i,
+      mobileViewAndUseEnabled: l,
+      mobileAndFreemiumCollectEnabled: r,
+      autoUnfurlReactionTooltip: a,
+      collectOffOverride: s
+    } = n, u = o.default.isPremium(t);
     return {
-      viewAndUseEnabled: l,
-      showTryPacksModalAndV2Copy: i,
-      collectEnabled: !a && (u ? l : i),
-      autoUnfurlReactionTooltip: o
+      viewAndUseEnabled: i,
+      showTryPacksModalAndV2Copy: r,
+      collectEnabled: !s && (u ? i : r),
+      autoUnfurlReactionTooltip: a
     }
   },
-  d = e => {
+  c = e => {
     let {
       user: t,
       autoTrackExposure: n = !0
@@ -138,14 +138,14 @@ let a = (0, s.createExperiment)({
       autoUnfurlReactionTooltip: !1
     } : u({
       user: t,
-      config: a.getCurrentConfig({
+      config: s.getCurrentConfig({
         location: "inventory_guild_packs_experiment"
       }, {
         autoTrackExposure: n
       })
     })
   },
-  c = function() {
+  d = function() {
     var e;
     let {
       expressionSourceGuild: t,
@@ -153,27 +153,27 @@ let a = (0, s.createExperiment)({
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
       expressionSourceGuild: void 0,
       autoTrackExposure: !0
-    }, s = (0, l.default)([i.default], () => i.default.getCurrentUser()), r = a.useExperiment({
+    }, l = (0, i.default)([r.default], () => r.default.getCurrentUser()), o = s.useExperiment({
       location: "inventory_guild_setting_experiment"
     }, {
       autoTrackExposure: n
     }), {
-      viewAndUseEnabled: o,
-      showTryPacksModalAndV2Copy: d,
-      collectEnabled: c,
+      viewAndUseEnabled: a,
+      showTryPacksModalAndV2Copy: c,
+      collectEnabled: d,
       autoUnfurlReactionTooltip: f
     } = u({
-      user: s,
-      config: r
-    }), p = o && c && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
+      user: l,
+      config: o
+    }), E = a && d && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
     return {
-      viewAndUseEnabled: o,
-      collectEnabled: p,
-      showTryPacksModalAndV2Copy: d,
+      viewAndUseEnabled: a,
+      collectEnabled: E,
+      showTryPacksModalAndV2Copy: c,
       autoUnfurlReactionTooltip: f
     }
   },
-  f = (0, s.createExperiment)({
+  f = (0, l.createExperiment)({
     kind: "guild",
     id: "2023-06_inventory_guild_setting",
     label: "Inventory Guild Settings Experiment",
@@ -216,12 +216,12 @@ let a = (0, s.createExperiment)({
       config: {
         showSettingsToggle: !0,
         allowCollection: !0,
-        getNewSettingsDescriptionLine1: () => o.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_1,
-        getNewSettingsDescriptionLine2: () => o.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_2
+        getNewSettingsDescriptionLine1: () => a.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_1,
+        getNewSettingsDescriptionLine2: () => a.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_2
       }
     }]
   }),
-  p = function() {
+  E = function() {
     let {
       guildId: e,
       autoTrackExposure: t = !0

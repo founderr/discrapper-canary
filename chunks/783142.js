@@ -4,81 +4,81 @@ n.r(t), n.d(t, {
     return E
   },
   handleProfileAccessibilityTooltipViewed: function() {
-    return _
-  },
-  resetPendingProfileChanges: function() {
-    return S
-  },
-  setPendingBanner: function() {
-    return T
-  },
-  setPendingBio: function() {
-    return A
-  },
-  setPendingPronouns: function() {
     return p
   },
-  setPendingAccentColor: function() {
-    return g
+  resetPendingProfileChanges: function() {
+    return h
   },
-  setPendingThemeColors: function() {
-    return I
+  setPendingBanner: function() {
+    return _
   },
-  setTryItOutAvatar: function() {
-    return N
-  },
-  setTryItOutAvatarDecoration: function() {
+  setPendingBio: function() {
     return C
   },
+  setPendingPronouns: function() {
+    return S
+  },
+  setPendingAccentColor: function() {
+    return I
+  },
+  setPendingThemeColors: function() {
+    return T
+  },
+  setTryItOutAvatar: function() {
+    return g
+  },
+  setTryItOutAvatarDecoration: function() {
+    return N
+  },
   setTryItOutBanner: function() {
-    return O
+    return v
   },
   setTryItOutThemeColors: function() {
-    return m
+    return A
   }
 });
-var l = n("872717"),
-  i = n("913144"),
-  a = n("448993"),
-  u = n("884351"),
-  o = n("845579"),
-  d = n("697218"),
-  r = n("599110"),
-  s = n("49111"),
-  c = n("646718");
+var i = n("872717"),
+  l = n("913144"),
+  r = n("448993"),
+  o = n("884351"),
+  a = n("845579"),
+  s = n("697218"),
+  u = n("599110"),
+  c = n("49111"),
+  d = n("646718");
 
 function f(e) {
-  r.default.track(s.AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, {
+  u.default.track(c.AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, {
     feature_name: e,
-    feature_tier: c.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD
+    feature_tier: d.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD
   })
 }
 async function E(e, t) {
-  var n, r;
-  let c = null === (n = d.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-  if (null == c) return;
-  let f = o.UseLegacyChatInput.getSetting();
-  null != e.bio && f && (e.bio = u.default.parse(void 0, e.bio).content);
+  var n, u;
+  let d = null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+  if (null == d) return;
+  let f = a.UseLegacyChatInput.getSetting();
+  null != e.bio && f && (e.bio = o.default.parse(void 0, e.bio).content);
   try {
-    i.default.dispatch({
+    l.default.dispatch({
       type: "USER_PROFILE_UPDATE_START",
-      userId: c
+      userId: d
     });
-    let n = await l.default.patch({
-      url: null != t ? s.Endpoints.GUILD_PROFILE(t, s.ME) : s.Endpoints.USER_PROFILE(s.ME),
+    let n = await i.default.patch({
+      url: null != t ? c.Endpoints.GUILD_PROFILE(t, c.ME) : c.Endpoints.USER_PROFILE(c.ME),
       body: e
     });
     if (n.ok) {
-      let e = null === (r = n.body.profile_effect) || void 0 === r ? void 0 : r.id;
-      i.default.dispatch({
+      let e = null === (u = n.body.profile_effect) || void 0 === u ? void 0 : u.id;
+      l.default.dispatch({
         type: "USER_PROFILE_UPDATE_SUCCESS",
-        userId: c,
+        userId: d,
         profileEffectId: e,
         ...n.body
       })
     } else {
-      let e = new a.APIError(n);
-      i.default.dispatch({
+      let e = new r.APIError(n);
+      l.default.dispatch({
         type: "USER_PROFILE_UPDATE_FAILURE",
         errors: n.body,
         apiError: e
@@ -86,8 +86,8 @@ async function E(e, t) {
     }
     return n
   } catch (t) {
-    let e = new a.APIError(t);
-    i.default.dispatch({
+    let e = new r.APIError(t);
+    l.default.dispatch({
       type: "USER_PROFILE_UPDATE_FAILURE",
       errors: {},
       apiError: e
@@ -95,77 +95,77 @@ async function E(e, t) {
   }
 }
 
-function _() {
-  i.default.dispatch({
+function p() {
+  l.default.dispatch({
     type: "USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED"
   })
 }
 
-function S() {
-  i.default.dispatch({
+function h() {
+  l.default.dispatch({
     type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES"
   })
 }
 
-function T(e) {
-  i.default.dispatch({
+function _(e) {
+  l.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER",
     banner: e
   })
 }
 
-function A(e) {
-  i.default.dispatch({
+function C(e) {
+  l.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO",
     bio: e
   })
 }
 
-function p(e) {
-  i.default.dispatch({
+function S(e) {
+  l.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
     pronouns: e
   })
 }
 
-function g(e) {
-  i.default.dispatch({
+function I(e) {
+  l.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
     color: e
   })
 }
 
-function I(e) {
-  i.default.dispatch({
+function T(e) {
+  l.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS",
     themeColors: e
   })
 }
 
-function N(e) {
-  i.default.dispatch({
+function g(e) {
+  l.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
     avatar: e
-  }), f(c.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)
+  }), f(d.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)
 }
 
-function C(e) {
-  i.default.dispatch({
+function N(e) {
+  l.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
     avatarDecoration: e
-  }), f(c.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
+  }), f(d.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
 }
 
-function O(e) {
-  i.default.dispatch({
+function v(e) {
+  l.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
     banner: e
-  }), f(c.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
+  }), f(d.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
 }
 
-function m(e) {
-  i.default.dispatch({
+function A(e) {
+  l.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
     themeColors: e
-  }), f(c.AnalyticsPremiumFeatureNames.PROFILE_THEME_COLOR)
+  }), f(d.AnalyticsPremiumFeatureNames.PROFILE_THEME_COLOR)
 }

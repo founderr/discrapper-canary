@@ -15,8 +15,8 @@ var s = n("37983"),
   c = n("970366"),
   f = n("271938"),
   E = n("124969"),
-  I = n("599110"),
-  _ = n("49111"),
+  _ = n("599110"),
+  I = n("49111"),
   p = n("782340"),
   h = n("956874"),
   T = n("926622");
@@ -88,12 +88,12 @@ class N extends a.PureComponent {
       let {
         transitionTo: e
       } = this.props;
-      e(_.Routes.LOGIN)
+      e(I.Routes.LOGIN)
     }, this.handleOpenApp = () => {
       let {
         verifyingUserId: e
       } = this.props;
-      I.default.track(_.AnalyticEvents.VERIFY_ACCOUNT_APP_OPENED, {
+      _.default.track(I.AnalyticEvents.VERIFY_ACCOUNT_APP_OPENED, {
         verifying_user_id: e
       }), (0, d.default)("verify_email")
     }

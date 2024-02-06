@@ -15,8 +15,8 @@ var s = n("37983"),
   c = n("893552"),
   f = n("810621"),
   E = n("49111"),
-  I = n("782340"),
-  _ = n("255987");
+  _ = n("782340"),
+  I = n("255987");
 
 function p(e) {
   let {
@@ -35,51 +35,51 @@ function p(e) {
   };
   return p ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Title, {
-      className: _.title,
-      children: I.default.Messages.APP_OPENED_TITLE
+      className: I.title,
+      children: _.default.Messages.APP_OPENED_TITLE
     }), (0, s.jsx)(d.SubTitle, {
-      className: _.subtitle,
-      children: I.default.Messages.APP_OPENED_BODY
+      className: I.subtitle,
+      children: _.default.Messages.APP_OPENED_BODY
     }), (0, s.jsx)(d.Button, {
-      className: _.spacedButton,
+      className: I.spacedButton,
       onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(m)),
-      children: I.default.Messages.CONTINUE_TO_WEBAPP
+      children: _.default.Messages.CONTINUE_TO_WEBAPP
     })]
   }) : T ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
-      className: _.image,
+      className: I.image,
       src: n("176872")
     }), (0, s.jsx)(d.Title, {
-      className: _.title,
-      children: I.default.Messages.VERIFICATION_VERIFIED
+      className: I.title,
+      children: _.default.Messages.VERIFICATION_VERIFIED
     }), (0, s.jsx)(d.Button, {
       onClick: g,
-      children: I.default.Messages.VERIFICATION_OPEN_DISCORD
+      children: _.default.Messages.VERIFICATION_OPEN_DISCORD
     })]
   }) : null != N ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
-      className: _.image,
+      className: I.image,
       src: n("768025")
     }), (0, s.jsx)(d.Title, {
-      className: _.title,
-      children: I.default.Messages.VERFICATION_EXPIRED
+      className: I.title,
+      children: _.default.Messages.VERFICATION_EXPIRED
     }), (0, s.jsx)(d.SubTitle, {
-      className: _.subtitle,
-      children: I.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
+      className: I.subtitle,
+      children: _.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
     }), (0, s.jsx)(d.Button, {
       onClick: g,
-      children: I.default.Messages.VERIFICATION_OPEN_DISCORD
+      children: _.default.Messages.VERIFICATION_OPEN_DISCORD
     })]
   }) : (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
-      className: _.image,
+      className: I.image,
       src: n("951536")
     }), (0, s.jsx)(d.Title, {
-      className: _.title,
-      children: I.default.Messages.VERIFICATION_VERIFYING
+      className: I.title,
+      children: _.default.Messages.VERIFICATION_VERIFYING
     }), (0, s.jsx)(d.SubTitle, {
-      className: _.subtitle,
-      children: I.default.Messages.ACTION_MAY_TAKE_A_MOMENT
+      className: I.subtitle,
+      children: _.default.Messages.ACTION_MAY_TAKE_A_MOMENT
     }), (0, s.jsx)(d.Button, {
       submitting: !0,
       color: d.Button.Colors.PRIMARY

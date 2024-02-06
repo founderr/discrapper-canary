@@ -11,31 +11,31 @@ var s = a("414456"),
   n = a("451594"),
   i = a("927694"),
   o = a("395535"),
-  c = a("492666");
-let u = () => 4 * Math.random() + 8,
-  d = [u(), u(), u()];
+  u = a("492666");
+let c = () => 4 * Math.random() + 8,
+  d = [c(), c(), c()];
 var f = () => (0, l.jsx)(l.Fragment, {
   children: d.map(e => (0, l.jsxs)("div", {
     className: n.cardsContainer,
     children: [(0, l.jsx)("div", {
-      className: r(c.skeleton, i.shopBanner),
+      className: r(u.skeleton, i.shopBanner),
       children: (0, l.jsx)("div", {
-        className: c.bannerBody
+        className: u.bannerBody
       })
     }), Array.from({
       length: e
     }, (e, t) => t).map(e => (0, l.jsx)("div", {
-      className: r(c.skeleton, o.shopCard),
+      className: r(u.skeleton, o.shopCard),
       children: (0, l.jsxs)("div", {
-        className: c.cardBody,
+        className: u.cardBody,
         children: [(0, l.jsx)("div", {
-          className: c.cardAvatar
+          className: u.cardAvatar
         }), (0, l.jsx)("div", {
-          className: c.cardTitle
+          className: u.cardTitle
         }), (0, l.jsx)("div", {
-          className: c.cardDescription
+          className: u.cardDescription
         }), (0, l.jsx)("div", {
-          className: c.cardSummary
+          className: u.cardSummary
         })]
       })
     }, e))]

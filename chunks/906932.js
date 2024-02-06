@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   useAvatarsWithGuilds: function() {
-    return d
-  },
-  setNewPendingUserBio: function() {
-    return r
-  },
-  setNewPendingAvatar: function() {
     return s
   },
-  setNewPendingAvatarDecoration: function() {
+  setNewPendingUserBio: function() {
+    return u
+  },
+  setNewPendingAvatar: function() {
     return c
+  },
+  setNewPendingAvatarDecoration: function() {
+    return d
   },
   setNewPendingProfileEffectId: function() {
     return f
@@ -19,62 +19,62 @@ n.r(t), n.d(t, {
     return E
   },
   showRemoveAvatar: function() {
-    return _
+    return p
   },
   showRemoveBanner: function() {
-    return S
+    return h
   }
 }), n("424973");
-var l = n("884691"),
-  i = n("152584"),
-  a = n("234251"),
-  u = n("783142"),
-  o = n("26989");
+var i = n("884691"),
+  l = n("152584"),
+  r = n("234251"),
+  o = n("783142"),
+  a = n("26989");
 
-function d(e) {
-  return l.useMemo(() => {
-    let t = o.default.getMutableAllGuildsAndMembers(),
+function s(e) {
+  return i.useMemo(() => {
+    let t = a.default.getMutableAllGuildsAndMembers(),
       n = {};
-    for (let i in t) {
-      var l;
-      let a = t[i],
-        u = null === (l = a[e]) || void 0 === l ? void 0 : l.avatar;
-      null != u && (null == n[u] && (n[u] = []), n[u].push(i))
+    for (let l in t) {
+      var i;
+      let r = t[l],
+        o = null === (i = r[e]) || void 0 === i ? void 0 : i.avatar;
+      null != o && (null == n[o] && (n[o] = []), n[o].push(l))
     }
     return null != n ? Object.entries(n).map(e => e[1][0]) : []
   }, [e])
 }
 
-function r(e, t) {
-  (0, u.setPendingBio)(e === t ? void 0 : e)
-}
-
-function s(e, t) {
-  (0, i.setPendingAvatar)(e === t ? void 0 : e)
+function u(e, t) {
+  (0, o.setPendingBio)(e === t ? void 0 : e)
 }
 
 function c(e, t) {
-  if ((0, a.isEqualAvatarDecoration)(e, null != t ? t : null)) {
-    (0, i.setPendingAvatarDecoration)(void 0);
+  (0, l.setPendingAvatar)(e === t ? void 0 : e)
+}
+
+function d(e, t) {
+  if ((0, r.isEqualAvatarDecoration)(e, null != t ? t : null)) {
+    (0, l.setPendingAvatarDecoration)(void 0);
     return
-  }(0, i.setPendingAvatarDecoration)(e)
+  }(0, l.setPendingAvatarDecoration)(e)
 }
 
 function f(e, t) {
   if (e === t) {
-    (0, i.setPendingProfileEffectId)(void 0);
+    (0, l.setPendingProfileEffectId)(void 0);
     return
-  }(0, i.setPendingProfileEffectId)(e)
+  }(0, l.setPendingProfileEffectId)(e)
 }
 
 function E(e, t, n) {
-  let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+  let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
   if (null != e) return "" === e ? {
-    value: l ? n : null,
+    value: i ? n : null,
     isUsingGuildValue: !1
   } : {
     value: e,
-    isUsingGuildValue: l
+    isUsingGuildValue: i
   };
   return null != t && "" !== t ? {
     value: t,
@@ -85,10 +85,10 @@ function E(e, t, n) {
   }
 }
 
-function _(e, t) {
+function p(e, t) {
   return void 0 === e ? null != t : null != e
 }
 
-function S(e, t) {
+function h(e, t) {
   return void 0 === e ? null != t : null != e
 }

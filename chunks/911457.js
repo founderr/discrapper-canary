@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return _
+    return v
   }
 });
 var l, a, r = n("37983");
@@ -20,19 +20,19 @@ var s = n("414456"),
   h = n("193038"),
   g = n("366091");
 
-function _(e) {
+function v(e) {
   let {
     guild: t,
     stageInstance: n,
     showGuildPopout: l,
     setShowGuildPopout: a,
     handleGuildNameClick: s,
-    source: _,
-    speakers: v,
+    source: v,
+    speakers: _,
     speakerCount: S,
     audienceCount: R,
     channelName: m
-  } = e, C = t.id;
+  } = e, N = t.id;
   return (0, r.jsx)("div", {
     className: g.contentContainer,
     children: (0, r.jsxs)("div", {
@@ -40,7 +40,7 @@ function _(e) {
       children: [(0, r.jsxs)("div", {
         className: g.guildInfoContainer,
         children: [(0, r.jsx)(o.default, {
-          guildId: C,
+          guildId: N,
           shouldShow: l,
           onRequestClose: () => a(!1),
           children: () => (0, r.jsxs)(u.Clickable, {
@@ -66,7 +66,7 @@ function _(e) {
           })
         }), (0, r.jsxs)("div", {
           className: g.rightJustifiedContent,
-          children: [6 === _ && (0, r.jsx)("div", {
+          children: [6 === v && (0, r.jsx)("div", {
             className: g.featuredTag,
             children: (0, r.jsx)(u.Text, {
               variant: "text-sm/normal",
@@ -90,7 +90,7 @@ function _(e) {
         children: n.description
       }), (0, r.jsx)(c.default, {
         guild: t,
-        speakers: v,
+        speakers: _,
         speakerCount: S,
         className: g.speakers
       }), null != m && (0, r.jsxs)(r.Fragment, {

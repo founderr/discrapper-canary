@@ -11,8 +11,8 @@ var s = a("414456"),
   n = a("65597"),
   i = a("854588"),
   o = a("206230"),
-  c = a("284679"),
-  u = a("491232"),
+  u = a("284679"),
+  c = a("491232"),
   d = a("408381"),
   f = a("268779"),
   m = e => {
@@ -22,21 +22,21 @@ var s = a("414456"),
       className: s,
       style: m,
       children: C
-    } = e, p = (0, n.default)([o.default], () => o.default.saturation);
+    } = e, E = (0, n.default)([o.default], () => o.default.saturation);
     return (0, l.jsx)("div", {
       className: r(f.banner, s),
       style: (() => {
         if (null == t) return m;
-        let e = (0, u.getCollectiblesAssetURL)(t, {
+        let e = (0, c.getCollectiblesAssetURL)(t, {
           size: a,
           format: "jpg"
         });
-        if (1 === p) return {
+        if (1 === E) return {
           ...m,
           backgroundImage: "url(".concat(e, ")"),
           backgroundSize: "cover"
         };
-        let l = (0, c.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - p);
+        let l = (0, u.hexOpacityToRgba)(i.default.unsafe_rawColors.BLACK_500, 1 - E);
         return {
           ...m,
           backgroundImage: "linear-gradient(".concat(l, ", ").concat(l, "), url(").concat(e, ")"),

@@ -26,7 +26,7 @@ let c = e => {
     skuIDs: [_],
     paymentSourceId: f,
     isGift: !1
-  }), T = (0, u.usePremiumDiscountOffer)(), [I, P] = (0, o.useSubscriptionInvoicePreview)({
+  }), T = (0, u.usePremiumDiscountOffer)(), [I, p] = (0, o.useSubscriptionInvoicePreview)({
     items: [{
       planId: e,
       quantity: 1
@@ -35,6 +35,6 @@ let c = e => {
     preventFetch: !(null != T),
     paymentSourceId: f,
     currency: E.currency
-  }), p = null == I ? void 0 : null === (m = I.invoiceItems) || void 0 === m ? void 0 : null === (c = m.find(t => t.subscriptionPlanId === e)) || void 0 === c ? void 0 : null === (n = c.discounts) || void 0 === n ? void 0 : null === (t = n.find(e => e.type === i.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount, S = (0, s.getPrice)(e, !1, !1, E);
-  return (0, a.formatPrice)(S.amount - (null != p ? p : 0), S.currency)
+  }), P = null == I ? void 0 : null === (m = I.invoiceItems) || void 0 === m ? void 0 : null === (c = m.find(t => t.subscriptionPlanId === e)) || void 0 === c ? void 0 : null === (n = c.discounts) || void 0 === n ? void 0 : null === (t = n.find(e => e.type === i.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === t ? void 0 : t.amount, S = (0, s.getPrice)(e, !1, !1, E);
+  return (0, a.formatPrice)(S.amount - (null != P ? P : 0), S.currency)
 }
