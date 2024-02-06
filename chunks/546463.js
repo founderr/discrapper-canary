@@ -45,9 +45,12 @@ class S extends r.default.PersistedStore {
     null != e && (null != e.detectableGamesEtag && (m = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => v(e)))
   }
   getState() {
-    return {
+    return (0, d.isDesktop)() ? {
       detectableGamesEtag: m,
       detectableGames: Object.values(f)
+    } : {
+      detectableGamesEtag: "",
+      detectableGames: []
     }
   }
   get games() {
