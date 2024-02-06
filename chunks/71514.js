@@ -25,11 +25,11 @@ let s = e => {
         color: "interactive-active",
         variant: "text-md/semibold",
         children: n
-      }), (0, a.jsx)(l.Text, {
+      }), null != s ? (0, a.jsx)(l.Text, {
         color: "interactive-active",
         variant: "text-sm/normal",
         children: s
-      })]
+      }) : null]
     })
   })
 };
