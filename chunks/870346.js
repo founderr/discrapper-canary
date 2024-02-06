@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return O
   }
 }), n("222007"), n("70102");
 var i = n("627445"),
@@ -22,7 +22,7 @@ let g = {},
   p = {},
   v = {},
   S = new Set,
-  T = () => O.emitChange(),
+  T = () => D.emitChange(),
   I = a.debounce(T, 150);
 
 function C(e) {
@@ -43,7 +43,7 @@ function A(e) {
     s(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", T), t.removeEventListener("blur", T), t.removeEventListener("resize", I);
     let n = p[e];
     s(null != n, "Window root was null while unmounting"), n.unmount(), delete E[e], delete m[e], delete v[e], delete p[e]
-  }(e), O.emitChange())
+  }(e), D.emitChange())
 }
 
 function y(e) {
@@ -75,7 +75,7 @@ function y(e) {
         }(0, t);
         let r = (0, o.createRoot)(i.getElementById("app-mount"));
         s(null != r, "No render target for popout!"), p[e] = r, r.render(n(e))
-      }(i), S.delete(i), O.emitChange()));
+      }(i), S.delete(i), D.emitChange()));
     case h.PopoutEventTypes.UNLOADED:
       return A(n.key)
   }
@@ -120,7 +120,7 @@ class R extends l.default.PersistedStore {
   }
 }
 R.displayName = "PopoutWindowStore", R.persistKey = "PopoutWindowStore";
-let O = new R(u.default, {
+let D = new R(u.default, {
   POPOUT_WINDOW_OPEN: function(e) {
     let {
       key: t,
@@ -177,4 +177,4 @@ let O = new R(u.default, {
   },
   LOGOUT: N
 });
-var D = O
+var O = D

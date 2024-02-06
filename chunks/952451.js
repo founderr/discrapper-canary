@@ -48,12 +48,12 @@ function R(e) {
   return C[null != e ? e : I] = null !== (t = C[null != e ? e : I]) && void 0 !== t ? t : N(e)
 }
 
-function O(e) {
+function D(e) {
   let t = R(e);
   t.sentinel++, y++
 }
 
-function D(e, t, n) {
+function O(e, t, n) {
   let i = e.guild_id;
   return null != i && n && !((0, u.isThread)(e.type) || E.default.isChannelRecordOrParentOptedIn(e)) && 0 === t
 }
@@ -66,7 +66,7 @@ function P(e) {
     let t = e.isThread() ? o.default.isMuted(e.id) || E.default.isGuildOrCategoryOrChannelMuted(e.guild_id, e.parent_id) : E.default.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id);
     if (t) return !1
   }
-  return !(!e.isPrivate() && (D(e, t, (0, r.isOptInEnabledForGuild)(e.guild_id)) || !_.default.can(e.accessPermissions, e))) && (t > 0 || E.default.resolveUnreadSetting(e) === T.UnreadSetting.ALL_MESSAGES)
+  return !(!e.isPrivate() && (O(e, t, (0, r.isOptInEnabledForGuild)(e.guild_id)) || !_.default.can(e.accessPermissions, e))) && (t > 0 || E.default.resolveUnreadSetting(e) === T.UnreadSetting.ALL_MESSAGES)
 }
 
 function b(e) {
@@ -102,7 +102,7 @@ function U(e) {
 function k(e, t) {}
 
 function w(e, t, n) {
-  if (U(t), t.mentionCount = s(t.mentionCounts).values().sum(), t.unread !== n.unread || t.mentionCount !== n.mentionCount) return C[null != e ? e : I] = t, null != e && (t.unread ? A.add(e) : A.delete(e)), y++, O(null != e ? e : I), !0;
+  if (U(t), t.mentionCount = s(t.mentionCounts).values().sum(), t.unread !== n.unread || t.mentionCount !== n.mentionCount) return C[null != e ? e : I] = t, null != e && (t.unread ? A.add(e) : A.delete(e)), y++, D(null != e ? e : I), !0;
   return !1
 }
 
@@ -165,7 +165,7 @@ function F(e, t) {
       let m = !a && (!r || g) && c;
       if (m || g) {
         let e = function(e, t, n) {
-          if ((0, u.isGuildVocalChannelType)(e.type) && 0 === t || !_.default.canBasicChannel((0, u.getBasicAccessPermissions)(e.type), e) || D(e, t, n)) return !1;
+          if ((0, u.isGuildVocalChannelType)(e.type) && 0 === t || !_.default.canBasicChannel((0, u.getBasicAccessPermissions)(e.type), e) || O(e, t, n)) return !1;
           return !("flags" in e && e.hasFlag(S.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && (t > 0 || E.default.resolveUnreadSetting(e) === T.UnreadSetting.ALL_MESSAGES)
         }(n, o, d);
         e && (m && (i.unreadByType[T.ReadStateTypes.CHANNEL] = !0, i.unreadChannelId = t), g && (i.mentionCount += o, i.mentionCounts[n.id] = o))
@@ -181,7 +181,7 @@ function F(e, t) {
   }
   U(i);
   let s = R(n);
-  if (i.unread !== s.unread || i.mentionCount !== s.mentionCount) return C[null != n ? n : I] = i, null != n && (i.unread ? A.add(n) : A.delete(n)), y++, O(null != n ? n : I), !0;
+  if (i.unread !== s.unread || i.mentionCount !== s.mentionCount) return C[null != n ? n : I] = i, null != n && (i.unread ? A.add(n) : A.delete(n)), y++, D(null != n ? n : I), !0;
   return !1
 }
 

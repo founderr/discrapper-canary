@@ -21,8 +21,8 @@ var n = i("37983"),
   g = i("788506"),
   _ = i("49111"),
   S = i("646718"),
-  C = i("782340"),
-  h = i("764942");
+  h = i("782340"),
+  C = i("764942");
 let T = "premiumRetentionEmojiPickerNotice",
   N = o.default.get(T);
 var v = e => {
@@ -45,15 +45,15 @@ var v = e => {
   if (N === O) return null;
   let M = p.default.getPremiumType(A.planId) === S.PremiumTypes.TIER_0 ? E.GradientCssUrls.PREMIUM_TIER_0 : p.default.getPremiumType(A.planId) === S.PremiumTypes.TIER_1 ? E.GradientCssUrls.PREMIUM_TIER_1 : E.GradientCssUrls.PREMIUM_TIER_2;
   return (0, n.jsxs)("div", {
-    className: h.premiumRetentionNotice,
+    className: C.premiumRetentionNotice,
     children: [(0, n.jsx)(I.default, {
-      className: h.premiumRetentionNoticeIcon,
+      className: C.premiumRetentionNoticeIcon,
       color: M
     }), (0, n.jsxs)("div", {
-      className: h.premiumRetentionNoticeContent,
+      className: C.premiumRetentionNoticeContent,
       children: [(0, n.jsx)(u.Text, {
         variant: "text-xs/normal",
-        children: C.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
+        children: h.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
           planName: p.default.getDisplayPremiumType(A.planId),
           endsAt: R
         })
@@ -62,7 +62,7 @@ var v = e => {
           onClick: () => {
             (0, g.trackPremiumSettingsPaneOpened)(i), t(), d.default.open(_.UserSettingsSections.PREMIUM)
           },
-          children: C.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_UPDATE_PAYMENT_INFORMATION
+          children: h.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_UPDATE_PAYMENT_INFORMATION
         })
       })]
     }), (0, n.jsx)(u.Clickable, {
@@ -70,7 +70,7 @@ var v = e => {
         o.default.set(T, O), N = O, v(!0)
       },
       children: (0, n.jsx)(m.default, {
-        className: h.premiumRetentionNoticeClose
+        className: C.premiumRetentionNoticeClose
       })
     })]
   })

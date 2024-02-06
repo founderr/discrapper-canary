@@ -38,8 +38,8 @@ let p = {
   y = new Map,
   N = new Map,
   R = new Map,
-  O = new Map,
   D = new Map,
+  O = new Map,
   P = new Map;
 let b = m.ActivityPanelModes.DISCONNECTED,
   L = m.FocusedActivityLayouts.RESIZABLE;
@@ -87,9 +87,9 @@ function U(e) {
   let y = null !== (t = I.get(s)) && void 0 !== t ? t : [],
     N = y.filter(e => e.applicationId !== a),
     R = M(i),
-    O = null !== (n = T.get(R)) && void 0 !== n ? n : [],
-    D = O.filter(e => !(e.applicationId === a && e.channelId === s));
-  0 !== c.length && (N.push(v), D.push(v)), I.set(s, N), T.set(R, D)
+    D = null !== (n = T.get(R)) && void 0 !== n ? n : [],
+    O = D.filter(e => !(e.applicationId === a && e.channelId === s));
+  0 !== c.length && (N.push(v), O.push(v)), I.set(s, N), T.set(R, O)
 }
 
 function k(e) {
@@ -196,10 +196,10 @@ class G extends s.default.PersistedStore {
   }
   getGridOrientationLockStateForApp(e) {
     var t, n;
-    return null !== (n = null !== (t = O.get(e)) && void 0 !== t ? t : R.get(e)) && void 0 !== n ? n : this.getOrientationLockStateForApp(e)
+    return null !== (n = null !== (t = D.get(e)) && void 0 !== t ? t : R.get(e)) && void 0 !== n ? n : this.getOrientationLockStateForApp(e)
   }
   getLayoutModeForApp(e) {
-    return D.get(e)
+    return O.get(e)
   }
   getUsersHavePlayedByApp(e) {
     var t;
@@ -247,7 +247,7 @@ let F = new G(r.default, {
       applicationId: t,
       layoutMode: n
     } = e;
-    D.set(t, n)
+    O.set(t, n)
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
@@ -446,7 +446,7 @@ let F = new G(r.default, {
       pictureInPictureLockState: i,
       gridLockState: s
     } = e;
-    null == n ? N.delete(t) : N.set(t, n), null === i ? R.delete(t) : void 0 !== i && R.set(t, i), null === s ? O.delete(t) : void 0 !== s && O.set(t, s)
+    null == n ? N.delete(t) : N.set(t, n), null === i ? R.delete(t) : void 0 !== i && R.set(t, i), null === s ? D.delete(t) : void 0 !== s && D.set(t, s)
   },
   EMBEDDED_ACTIVITY_SET_PANEL_MODE: function(e) {
     let {

@@ -21,8 +21,8 @@ var n = i("37983"),
   g = i("405607"),
   _ = i("423080"),
   S = i("704815"),
-  C = i("471671"),
-  h = i("46829"),
+  h = i("471671"),
+  C = i("46829"),
   T = i("599110"),
   N = i("159885"),
   v = i("788506"),
@@ -58,21 +58,21 @@ function W(e) {
     handleCategorySelect: d,
     isWindowFocused: m,
     useReducedMotion: I
-  } = e, p = (0, u.useListItem)("expression-guild-".concat(s)), g = c.type === O.EmojiCategoryTypes.GUILD ? null : c.id, C = t === s, h = c.type === O.EmojiCategoryTypes.GUILD ? c.guild : null, N = c.type === O.EmojiCategoryTypes.PACK ? c.pack : null, j = (0, n.jsxs)(f.Clickable, {
+  } = e, p = (0, u.useListItem)("expression-guild-".concat(s)), g = c.type === O.EmojiCategoryTypes.GUILD ? null : c.id, h = t === s, C = c.type === O.EmojiCategoryTypes.GUILD ? c.guild : null, N = c.type === O.EmojiCategoryTypes.PACK ? c.pack : null, j = (0, n.jsxs)(f.Clickable, {
     ...p,
-    "aria-label": (0, v.getAriaIdForEmojiCategory)(c, h, N),
+    "aria-label": (0, v.getAriaIdForEmojiCategory)(c, C, N),
     className: a({
-      [L.categoryItemGuildCategory]: null != h,
+      [L.categoryItemGuildCategory]: null != C,
       [L.categoryItemPackCategory]: null != N,
-      [L.categoryItemDefaultCategory]: null == h && null == N,
-      [L.categoryItemDefaultCategorySelected]: null == h && null == N && C,
+      [L.categoryItemDefaultCategory]: null == C && null == N,
+      [L.categoryItemDefaultCategorySelected]: null == C && null == N && h,
       [L.categoryItemRecentEmoji]: c.type === O.EmojiCategoryTypes.RECENT
     }),
     onClick: () => {
-      null != h && T.default.track(M.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+      null != C && T.default.track(M.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
         location: null == r ? void 0 : r.location,
         tab: x.ExpressionPickerViewType.EMOJI,
-        guild_id: h.id
+        guild_id: C.id
       }), d(s)
     },
     onContextMenu: null != N ? e => {
@@ -87,22 +87,22 @@ function W(e) {
     } : void 0,
     children: [null != N ? (0, n.jsx)(R.default, {
       pack: N,
-      isSelected: C,
+      isSelected: h,
       shouldAnimate: !I && m
-    }) : null, null != h ? (0, n.jsx)(y.default, {
-      guild: h,
-      isSelected: C,
+    }) : null, null != C ? (0, n.jsx)(y.default, {
+      guild: C,
+      isSelected: h,
       shouldAnimate: !I && m
-    }) : null, null == h && null == N && null != g ? (0, n.jsx)(A.default, {
+    }) : null, null == C && null == N && null != g ? (0, n.jsx)(A.default, {
       categoryId: g,
       className: L.categoryIcon,
       height: U,
       width: U
     }) : null]
   }), P = o[s + 1], D = null != P && c.type === O.EmojiCategoryTypes.GUILD && P.type !== O.EmojiCategoryTypes.GUILD && P.type !== O.EmojiCategoryTypes.PACK;
-  return null != h ? (0, n.jsxs)(l.Fragment, {
+  return null != C ? (0, n.jsxs)(l.Fragment, {
     children: [(0, n.jsx)(_.default, {
-      guild: h,
+      guild: C,
       includeActivity: !1,
       children: (0, n.jsx)("div", {
         children: j
@@ -129,7 +129,7 @@ var z = e => {
   } = e, d = p.EmojiPickerStore.useStore(e => e.activeCategoryIndex), E = (0, j.useCategorySelectHandler)({
     sectionDescriptors: s,
     emojiListRef: i
-  }), _ = (0, m.useAnalyticsContext)(), S = (0, v.useEmojiCategories)(r, u), T = l.useRef(null), N = (0, c.useStateFromStores)([C.default], () => C.default.isFocused()), A = (0, c.useStateFromStores)([I.default], () => I.default.useReducedMotion, []), y = l.useMemo(() => o.memoize((e, t) => {
+  }), _ = (0, m.useAnalyticsContext)(), S = (0, v.useEmojiCategories)(r, u), T = l.useRef(null), N = (0, c.useStateFromStores)([h.default], () => h.default.isFocused()), A = (0, c.useStateFromStores)([I.default], () => I.default.useReducedMotion, []), y = l.useMemo(() => o.memoize((e, t) => {
     let i = S[t];
     if (null != i) return (0, n.jsx)(W, {
       activeIndex: d,
@@ -225,7 +225,7 @@ var z = e => {
       }),
       tabIndex: Z ? 0 : -1,
       onClick: () => X(e),
-      children: (0, n.jsx)(h.default, {
+      children: (0, n.jsx)(C.default, {
         height: U,
         width: U
       })

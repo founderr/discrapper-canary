@@ -148,13 +148,13 @@ n.r(t), n.d(t, {
     return R.useFocusLock
   },
   FocusRing: function() {
-    return O.FocusRing
+    return D.FocusRing
   },
   FocusRingScope: function() {
-    return O.FocusRingScope
+    return D.FocusRingScope
   },
   FocusRingManager: function() {
-    return D.FocusRingManager
+    return O.FocusRingManager
   },
   FormContext: function() {
     return P.FormContext
@@ -502,19 +502,19 @@ n.r(t), n.d(t, {
     return eR.PinToBottomScrollerAuto
   },
   ScrollerAuto: function() {
-    return eO.ScrollerAuto
+    return eD.ScrollerAuto
   },
   ScrollerNone: function() {
-    return eO.ScrollerNone
+    return eD.ScrollerNone
   },
   ScrollerThin: function() {
-    return eO.ScrollerThin
+    return eD.ScrollerThin
   },
   Scroller: function() {
-    return eO.ScrollerThin
+    return eD.ScrollerThin
   },
   SegmentedControl: function() {
-    return eD.SegmentedControl
+    return eO.SegmentedControl
   },
   Select: function() {
     return eP.Select
@@ -734,8 +734,8 @@ var i = n("539826"),
   y = n("633661"),
   N = n("690977"),
   R = n("311720"),
-  O = n("718776"),
-  D = n("688817"),
+  D = n("718776"),
+  O = n("688817"),
   P = n("516826"),
   b = n("370373"),
   L = n("16256"),
@@ -788,8 +788,8 @@ var i = n("539826"),
   ey = n("211009"),
   eN = n("256023"),
   eR = n("617657"),
-  eO = n("670914"),
-  eD = n("506395"),
+  eD = n("670914"),
+  eO = n("506395"),
   eP = n("935980"),
   eb = n("774811"),
   eL = n("178814"),

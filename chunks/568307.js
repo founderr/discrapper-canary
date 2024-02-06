@@ -36,8 +36,8 @@ var s, r, a = n("917351"),
   y = n("819068"),
   N = n("546463"),
   R = n("686470"),
-  O = n("535974"),
-  D = n("49111"),
+  D = n("535974"),
+  O = n("49111"),
   P = n("6791");
 let b = new g.default("RunningGameStore"),
   L = "RunningGameStore",
@@ -114,7 +114,7 @@ let b = new g.default("RunningGameStore"),
       os: "linux",
       name: "spotify"
     }],
-    name: h.default.get(D.PlatformTypes.SPOTIFY).name
+    name: h.default.get(O.PlatformTypes.SPOTIFY).name
   }],
   U = !0,
   k = new Set,
@@ -254,7 +254,7 @@ function ea() {
   return w = o.values(R.default.libraryApplications).reduce((t, n) => {
     let i = N.default.getDetectableGame(n.id);
     if (null == i) return t;
-    let s = O.default.getLaunchOptions(n.id, n.branchId);
+    let s = D.default.getLaunchOptions(n.id, n.branchId);
     for (let r of s) {
       let s = "".concat(n.id, ":").concat(n.branchId);
       !k.has(s) && (e = !0, k.add(s));
@@ -349,9 +349,9 @@ function eu() {
     let n = [],
       s = {};
     e = e.filter(e => (e.distributor = function(e) {
-      if (null != B[e.exePath]) return D.Distributors.DISCORD;
-      if (/steamapps/.test(e.cmdLine)) return D.Distributors.STEAM;
-      if (/-epicapp/.test(e.cmdLine)) return D.Distributors.EPIC;
+      if (null != B[e.exePath]) return O.Distributors.DISCORD;
+      if (/steamapps/.test(e.cmdLine)) return O.Distributors.STEAM;
+      if (/-epicapp/.test(e.cmdLine)) return O.Distributors.EPIC;
       return e.distributor
     }(e), e.isLauncher = t.has(e.exeName), e.isLauncher && null != e.id && (s[e.id] = e), e.windowHandle = function(e, t) {
       if (void 0 === t) {
@@ -392,7 +392,7 @@ class ed extends d.default.Store {
         Y.gameOverrides[t] = e
       }), Y.enableOverlay = null !== (n = s.enableOverlay) && void 0 !== n ? n : {}, Y.enableDetection = null !== (i = s.enableDetection) && void 0 !== i ? i : {}, eo(), Array.isArray(s.gamesSeen))
       for (let e of s.gamesSeen) "number" == typeof e.id && (e.nativeProcessObserverId = e.id, delete e.id, r = !0);
-    el(s.gamesSeen), this.waitFor(N.default), this.syncWith([R.default, N.default, O.default], o.throttle(ea, 1e3)), r && es()
+    el(s.gamesSeen), this.waitFor(N.default), this.syncWith([R.default, N.default, D.default], o.throttle(ea, 1e3)), r && es()
   }
   getVisibleGame() {
     return null != F && (F.hidden || !ei(F)) ? null : F
@@ -516,7 +516,7 @@ var ec = new ed(f.default, {
   RUNNING_GAME_TOGGLE_OVERLAY: function(e) {
     if (Y.enableOverlay[ee(e.game)] = e.newEnabledValue, es(), !__OVERLAY__) {
       let t = null != e.game.id ? N.default.getDetectableGame(e.game.id) : null;
-      null != t && v.default.track(D.AnalyticEvents.OVERLAY_TOGGLED, {
+      null != t && v.default.track(O.AnalyticEvents.OVERLAY_TOGGLED, {
         enabled: e.newEnabledValue,
         setting_type: "overlay toggled - game",
         application_id: t.id,

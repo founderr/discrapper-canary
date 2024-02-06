@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return R
   },
   OAuth2ErrorPage: function() {
-    return O
+    return D
   }
 });
 var i = n("37983"),
@@ -161,7 +161,7 @@ function R() {
   })
 }
 
-function O(e) {
+function D(e) {
   var t, n;
   let {
     location: r

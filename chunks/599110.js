@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return R
   },
   trackNetworkAction: function() {
-    return D
+    return O
   },
   AnalyticsSchema: function() {
     return d
@@ -304,13 +304,13 @@ function R(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   u.default.isLoggingAnalyticsEvents && console.info("AnalyticsUtils.track(...):", e, t), n ? o.report("Analytics", e, t) : o.report("Analytics", e)
 }
-let O = (0, s.trackMaker)({
+let D = (0, s.trackMaker)({
   analyticEventConfigs: T,
   dispatcher: r.default,
   TRACK_ACTION_NAME: "TRACK"
 });
 
-function D(e, t) {
+function O(e, t) {
   let n = (0, a.getLocation)(),
     i = N({
       location: n,
@@ -319,7 +319,7 @@ function D(e, t) {
   (0, a.setDebugTrackedData)(e, {
     type: "action",
     ...t
-  }), R(e, i), O(e, i)
+  }), R(e, i), D(e, i)
 }
 var P = {
   ...s.default,

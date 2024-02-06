@@ -58,10 +58,10 @@ n.r(t), n.d(t, {
     return R
   },
   CLIPS_THUMBNAIL_MAX_WIDTH: function() {
-    return O
+    return D
   },
   CLIPS_THUMBNAIL_MAX_HEIGHT: function() {
-    return D
+    return O
   },
   CLIPS_MAX_PARTICIPANTS: function() {
     return P
@@ -112,8 +112,8 @@ let _ = "alt+c",
   y = 200,
   N = "clips-edit",
   R = "clips-gallery",
-  O = 640,
-  D = 360,
+  D = 640,
+  O = 360,
   P = 100,
   b = e => "Clip - ".concat(new Date(e).toLocaleString()),
   L = 15,

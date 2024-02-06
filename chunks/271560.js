@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return R
   },
   skuOperatingSystemToText: function() {
-    return O
+    return D
   },
   getPrimarySKUForApplication: function() {
-    return D
+    return O
   },
   getSocialRecommendationReasons: function() {
     return b
@@ -154,7 +154,7 @@ function R(e) {
   }
 }
 
-function O(e) {
+function D(e) {
   switch (e) {
     case S.OperatingSystems.WINDOWS:
       return T.default.Messages.WINDOWS;
@@ -166,7 +166,7 @@ function O(e) {
   throw Error("Unknown operating system value: ".concat(e))
 }
 
-function D(e, t, n) {
+function O(e, t, n) {
   let i = t.getApplication(e);
   return null == i || null == i.primarySkuId ? null : n.get(i.primarySkuId)
 }

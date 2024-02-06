@@ -40,11 +40,11 @@ let E = 2,
       type: "CACHED_STICKERS_LOADED",
       stickers: t
     })
-  }, O = function(e) {
+  }, D = function(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    v.set(e.id, e), t && D(e, n)
-  }, D = function(e) {
+    v.set(e.id, e), t && O(e, n)
+  }, O = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     if (null == S) return;
     let {
@@ -94,18 +94,18 @@ let E = 2,
     let i = [...T];
     if (t) {
       let t = i.findIndex(t => t.id === e.id); - 1 !== t ? i[t] = e : i.push(e), T = i
-    }(t || n) && e.stickers.forEach(e => O(e))
+    }(t || n) && e.stickers.forEach(e => D(e))
   }, b = () => {
     A.forEach((e, t) => {
       let n = _.default.getGuild(t);
-      null != n && e.forEach(e => D(e, n))
+      null != n && e.forEach(e => O(e, n))
     }), T.forEach(e => {
-      e.stickers.forEach(e => D(e))
+      e.stickers.forEach(e => O(e))
     })
   };
 
 function L(e) {
-  null != e.stickers && (e.stickers.forEach(t => O(t, !0, e)), y(e.id, e.stickers))
+  null != e.stickers && (e.stickers.forEach(t => D(t, !0, e)), y(e.id, e.stickers))
 }
 class M extends s.default.Store {
   initialize() {
@@ -201,7 +201,7 @@ var U = new M(r.default, {
       guildId: t,
       stickers: n
     } = e;
-    n.forEach(e => O(e)), y(t, n)
+    n.forEach(e => D(e)), y(t, n)
   },
   GUILD_STICKERS_CREATE_SUCCESS: e => {
     var t, n;
@@ -209,13 +209,13 @@ var U = new M(r.default, {
       guildId: i,
       sticker: s
     } = e, r = null !== (t = A.get(i)) && void 0 !== t ? t : [];
-    y(i, [...null !== (n = r.filter(e => e.id !== s.id)) && void 0 !== n ? n : [], s]), O(s)
+    y(i, [...null !== (n = r.filter(e => e.id !== s.id)) && void 0 !== n ? n : [], s]), D(s)
   },
   STICKER_FETCH_SUCCESS: e => {
     let {
       sticker: t
     } = e;
-    O(t, !1)
+    D(t, !1)
   },
   GUILD_STICKERS_UPDATE: e => {
     var t;
@@ -234,7 +234,7 @@ var U = new M(r.default, {
       v.delete(e.id), null != S && S.delete(e.id)
     });
     let o = i.map(e => s(e));
-    o.forEach(e => O(e)), y(n, o)
+    o.forEach(e => D(e)), y(n, o)
   },
   CACHED_STICKERS_LOADED: function(e) {
     let {
@@ -243,7 +243,7 @@ var U = new M(r.default, {
     for (let [e, n] of t)
       if (f.default.isMember(e) && !A.has(e)) {
         let t = _.default.getGuild(e);
-        for (let e of n) O(e, !0, t);
+        for (let e of n) D(e, !0, t);
         y(e, n)
       }
   }

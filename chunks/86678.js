@@ -21,8 +21,8 @@ var n = i("37983"),
   g = i("812204"),
   _ = i("685665"),
   S = i("384997"),
-  C = i("385976"),
-  h = i("575226"),
+  h = i("385976"),
+  C = i("575226"),
   T = i("305781"),
   N = i("986632"),
   v = i("538282"),
@@ -71,7 +71,7 @@ let ee = (0, w.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
       emojiList: r,
       channelGuildId: o,
       isBurstReaction: d
-    } = e, f = (0, c.useStateFromStores)([C.default], () => C.default.getDisambiguatedEmojiContext(o), [o]), E = l.useCallback((e, n) => {
+    } = e, f = (0, c.useStateFromStores)([h.default], () => h.default.getDisambiguatedEmojiContext(o), [o]), E = l.useCallback((e, n) => {
       switch (e.type) {
         case B.EmojiGridItemTypes.CREATE_EMOJI:
           s(void 0, !0), R.default.open(e.guildId, Q.GuildSettingsSections.EMOJI);
@@ -102,7 +102,7 @@ let ee = (0, w.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINE
             pickerIntention: i,
             category: e.category,
             subCategory: e.subCategory,
-            newlyAddedHighlight: e.subCategory === Y.EmojiSubCategory.NEWLY_ADDED_EMOJI && h.default.isNewerThanLastSeen(o, e.emoji.id)
+            newlyAddedHighlight: e.subCategory === Y.EmojiSubCategory.NEWLY_ADDED_EMOJI && C.default.isNewerThanLastSeen(o, e.emoji.id)
           }), s(e.emoji, !n.shiftKey, d)
         }
       }
@@ -187,8 +187,8 @@ var ec = l.memo(l.forwardRef(function(e, t) {
       wrapper: eg,
       shouldHidePickerActions: e_ = !1,
       messageId: eS,
-      renderHeader: eC,
-      listHeaderClassName: eh
+      renderHeader: eh,
+      listHeaderClassName: eC
     } = e,
     {
       onFocus: eT,
@@ -225,8 +225,8 @@ var ec = l.memo(l.forwardRef(function(e, t) {
     AnalyticsLocationProvider: eJ
   } = (0, _.default)(g.default.EMOJI_PICKER), {
     diversitySurrogate: eW
-  } = (0, c.useStateFromStoresObject)([C.default], () => ({
-    diversitySurrogate: C.default.diversitySurrogate
+  } = (0, c.useStateFromStoresObject)([h.default], () => ({
+    diversitySurrogate: h.default.diversitySurrogate
   })), ez = (0, G.useEmojiSearchResults)(eM, u, o), eZ = null == ez ? 0 : ez.locked.length + ez.unlocked.length, eY = P.EmojiPickerCollapsedSections.useSetting(), eQ = l.useMemo(() => new Set(eY), [eY]), eX = l.useCallback(e => {
     P.EmojiPickerCollapsedSections.updateSetting(Array.from(e))
   }, []), eq = (0, y.useExpressionPickerGridWidth)({
@@ -285,7 +285,7 @@ var ec = l.memo(l.forwardRef(function(e, t) {
           category: e.category,
           subCategory: e.subCategory,
           position: e.columnIndex + 1,
-          newlyAddedHighlight: e.subCategory === Y.EmojiSubCategory.NEWLY_ADDED_EMOJI && h.default.isNewerThanLastSeen(eD, e.emoji.id),
+          newlyAddedHighlight: e.subCategory === Y.EmojiSubCategory.NEWLY_ADDED_EMOJI && C.default.isNewerThanLastSeen(eD, e.emoji.id),
           isBurstReaction: eb
         })
       },
@@ -369,10 +369,10 @@ var ec = l.memo(l.forwardRef(function(e, t) {
       diversitySurrogate: eW,
       isBurstReaction: eb,
       onBurstReactionToggle: () => eU(!eb),
-      renderHeader: eC
+      renderHeader: eh
     }),
     ta = [];
-  o === q.EmojiIntention.REACTION && ta.push(d.DismissibleContent.SUPER_REACTIONS_NITRO_MARKETING), !C.default.hasFavoriteEmojis(eD) && ta.push(d.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
+  o === q.EmojiIntention.REACTION && ta.push(d.DismissibleContent.SUPER_REACTIONS_NITRO_MARKETING), !h.default.hasFavoriteEmojis(eD) && ta.push(d.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
   let tr = (0, n.jsx)(I.default, {
     ...eB,
     children: (0, n.jsxs)(tn, {
@@ -430,7 +430,7 @@ var ec = l.memo(l.forwardRef(function(e, t) {
               channelGuildId: eD,
               messageId: eS,
               isBurstReaction: eb,
-              listHeaderClassName: eh
+              listHeaderClassName: eC
             }) : null
           })]
         }), (0, n.jsx)(J.EmojiPickerInspector, {

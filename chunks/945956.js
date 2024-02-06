@@ -2,7 +2,7 @@
 let i, s;
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return O
   }
 }), n("70102"), n("808653");
 var r = n("446674"),
@@ -179,7 +179,7 @@ class R extends r.default.Store {
   }
 }
 R.displayName = "RTCConnectionStore";
-let O = new R(a.default, __OVERLAY__ ? {} : {
+let D = new R(a.default, __OVERLAY__ ? {} : {
   CONNECTION_OPEN: function(e) {
     return s = e.sessionId, m = null, E = null, C(), !1
   },
@@ -267,7 +267,7 @@ n.el("599110").then(n.bind(n, "599110")).then(e => {
     addExtraAnalyticsDecorator: t
   } = e;
   t(e => {
-    e.client_rtc_state = O.getState()
+    e.client_rtc_state = D.getState()
   })
 });
-var D = O
+var O = D

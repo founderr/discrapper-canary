@@ -21,8 +21,8 @@ var n = i("37983"),
   g = i("305961"),
   _ = i("773336"),
   S = i("215550"),
-  C = i("782340"),
-  h = i("465439");
+  h = i("782340"),
+  C = i("465439");
 let T = (e, t) => "".concat(e, ":").concat(t),
   N = l.forwardRef(function(e, t) {
     let i, {
@@ -45,13 +45,13 @@ let T = (e, t) => "".concat(e, ":").concat(t),
     return (0, n.jsx)(o.FocusRing, {
       children: (0, n.jsx)("button", {
         ...y,
-        className: a(h.emojiItem, {
-          [h.emojiItemLarge]: u,
-          [h.emojiItemMedium]: c,
-          [h.emojiItemSelected]: d,
+        className: a(C.emojiItem, {
+          [C.emojiItemLarge]: u,
+          [C.emojiItemMedium]: c,
+          [C.emojiItemSelected]: d,
           [null != A ? A : ""]: d,
-          [h.emojiItemDisabled]: E,
-          [h.showPulse]: I
+          [C.emojiItemDisabled]: E,
+          [C.showPulse]: I
         }),
         "data-type": m.PickerContextMenuDataTypes.EMOJI,
         "data-id": l.id,
@@ -59,10 +59,10 @@ let T = (e, t) => "".concat(e, ":").concat(t),
         "data-name": l.name,
         ref: t,
         children: (0, n.jsx)(S.default, {
-          "aria-label": (i = l.allNamesString, ((null == j ? void 0 : j.name) != null && (i = C.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
+          "aria-label": (i = l.allNamesString, ((null == j ? void 0 : j.name) != null && (i = h.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
             names: i,
             guildName: j.name
-          })), s) ? C.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
+          })), s) ? h.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
             names: i
           }) : i),
           columnIndex: p,
@@ -85,7 +85,7 @@ function v(e) {
     channelGuildId: m,
     onInspect: g,
     onSelect: S,
-    isScrolling: h,
+    isScrolling: C,
     isUsingKeyboardNavigation: v,
     showEmojiFavoriteTooltip: A,
     surrogateCodePoint: y,
@@ -105,14 +105,14 @@ function v(e) {
     isDisabled: B,
     columnIndex: J
   } = t, W = e => {
-    if (e.stopPropagation(), h.current || v.current) return;
+    if (e.stopPropagation(), C.current || v.current) return;
     let i = e.altKey;
     i && !d.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(H) && L(s), (0, I.hideHotspot)(I.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), S(t, {
       isFinalSelection: !e.shiftKey,
       toggleFavorite: i
     })
   }, z = () => {
-    !h.current && !v.current && g(t)
+    !C.current && !v.current && g(t)
   }, Z = e => {
     (0, u.openContextMenuLazy)(e, async () => {
       let {
@@ -169,7 +169,7 @@ function v(e) {
     }))
   };
   return A ? (0, n.jsx)(o.Tooltip, {
-    text: C.default.Messages.EMOJI_FAVORITE_TOOLTIP.format({
+    text: h.default.Messages.EMOJI_FAVORITE_TOOLTIP.format({
       key: (0, _.isMac)() ? "Opt" : "Alt"
     }),
     position: "top",

@@ -73,7 +73,7 @@ function d(e) {
         [I, C] = i.useState(!1),
         [A, y] = i.useState(!1),
         [N, R] = i.useState(!1),
-        [O] = i.useState(() => new a.HandlerMemoizer(e => {
+        [D] = i.useState(() => new a.HandlerMemoizer(e => {
           let [t, n] = e.split(",").map(Number);
           return () => {
             C(!0), g({
@@ -83,8 +83,8 @@ function d(e) {
             })
           }
         }));
-      i.useEffect(() => () => O.clean(), [O]);
-      let D = i.useCallback(e => {
+      i.useEffect(() => () => D.clean(), [D]);
+      let O = i.useCallback(e => {
           if (!S.current || !p) return !1;
           e.focus()
         }, [p]),
@@ -93,9 +93,9 @@ function d(e) {
             s = null != _ ? _(e, n, i) : Promise.resolve();
           s.then(() => {
             let e = u(i);
-            null != e ? (D(e), y(!1)) : requestAnimationFrame(() => y(!0))
+            null != e ? (O(e), y(!1)) : requestAnimationFrame(() => y(!0))
           })
-        }, [t, _, D]),
+        }, [t, _, O]),
         b = i.useCallback(function() {
           let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
             [n, i] = null != h ? h(d, c) : [d, c];
@@ -108,26 +108,26 @@ function d(e) {
             return
           }
           let r = u(l(t, n, i));
-          null != r && (R(!0), D(r))
-        }, [g, d, c, h, t, D]),
+          null != r && (R(!0), O(r))
+        }, [g, d, c, h, t, O]),
         [L, M] = i.useState(!1);
       i.useEffect(() => {
         if (!L || !I) return;
         M(!1);
         let e = u(l(t, d, c));
         if (null != e) {
-          D(e);
+          O(e);
           return
         }
         C(!1);
         let n = u(l(t));
-        null != n && D(n)
-      }, [t, L, I, D, d, c]);
+        null != n && O(n)
+      }, [t, L, I, O, d, c]);
       let U = i.useCallback(e => {
         S.current && null == e && M(!0)
       }, []);
       i.useEffect(() => {
-        I && A && null != T && (D(T), y(!1))
+        I && A && null != T && (O(T), y(!1))
       }, [A, T]), i.useEffect(() => {
         I && (!N && P(d, c), R(!1))
       }, [d, c]);
@@ -204,10 +204,10 @@ function d(e) {
             "aria-colindex": e + 1,
             id: (0, a.makeGridId)(t, e, n),
             tabIndex: m && e === d && n === c ? 0 : -1,
-            onFocus: O.get("".concat(e, ",").concat(n))
+            onFocus: D.get("".concat(e, ",").concat(n))
           };
           return e === d && n === c && (i.ref = U), i
-        }, [t, m, d, c, O, U]),
+        }, [t, m, d, c, D, U]),
         B = i.useCallback(e => ({
           role: "row",
           "aria-rowindex": e + 1

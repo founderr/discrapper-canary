@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return R
   },
   isMultiUserDM: function() {
-    return D
+    return O
   },
   TEXT_CHANNEL_TYPES: function() {
     return P
@@ -165,10 +165,10 @@ let y = new Set([f.ChannelTypes.GUILD_STAGE_VOICE]),
 function R(e) {
   return N.has(e)
 }
-let O = new Set([f.ChannelTypes.GROUP_DM]);
+let D = new Set([f.ChannelTypes.GROUP_DM]);
 
-function D(e) {
-  return O.has(e)
+function O(e) {
+  return D.has(e)
 }
 let P = new Set([f.ChannelTypes.DM, f.ChannelTypes.GROUP_DM, f.ChannelTypes.GUILD_TEXT, f.ChannelTypes.GUILD_ANNOUNCEMENT, f.ChannelTypes.ANNOUNCEMENT_THREAD, f.ChannelTypes.PUBLIC_THREAD, f.ChannelTypes.PRIVATE_THREAD]);
 
@@ -342,7 +342,7 @@ class ed extends eo {
     return this.type === f.ChannelTypes.GROUP_DM
   }
   isMultiUserDM() {
-    return D(this.type)
+    return O(this.type)
   }
   isDM() {
     return this.type === f.ChannelTypes.DM

@@ -78,10 +78,10 @@ var C = {
     let [i, r, a, o] = e, f = () => ({
       type: c.AST_KEY.TEXT,
       content: i
-    }), _ = h(a), g = h(r), C = h(null != o ? o : ""), A = _.whitespaceSanitized, y = g.fullySanitized, N = C.fullySanitized, R = y.trim(), O = A.trim();
-    if (0 === O.length || 0 === R.length) return f();
-    let D = l.unescapeUrl(a),
-      P = I(D),
+    }), _ = h(a), g = h(r), C = h(null != o ? o : ""), A = _.whitespaceSanitized, y = g.fullySanitized, N = C.fullySanitized, R = y.trim(), D = A.trim();
+    if (0 === D.length || 0 === R.length) return f();
+    let O = l.unescapeUrl(a),
+      P = I(O),
       b = (0, u.default)(r).length > 0 || (0, u.default)(o).length > 0;
     if (null == P || b) return f();
     let L = {

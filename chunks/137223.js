@@ -7,7 +7,7 @@ i.r(t), i.d(t, {
     return _
   },
   default: function() {
-    return C
+    return h
   }
 }), i("424973"), i("222007");
 var n, l, s = i("37983"),
@@ -164,8 +164,8 @@ class S extends a.Component {
       tags: m,
       onActivate: g,
       className: S,
-      inputProps: C,
-      focusAfterReady: h
+      inputProps: h,
+      focusAfterReady: C
     } = this.props, T = null != t && t.length > 0, N = !1, v = [];
     return null != m && m.length > 0 && ("string" == typeof m[0] ? m.forEach((e, t) => v.push((0, s.jsxs)(u.Anchor, {
       focusProps: {
@@ -227,10 +227,10 @@ class S extends a.Component {
             onFocus: this.handleFocus,
             disabled: l,
             "aria-disabled": l,
-            autoFocus: !h && e,
+            autoFocus: !C && e,
             onMouseDown: g,
             ...this.defaultInputProps,
-            ...C
+            ...h
           }), null != a ? (0, s.jsx)(_, {
             size: r,
             themeOverride: n,
@@ -309,4 +309,4 @@ S.Sizes = g, S.defaultProps = {
   preventEscapePropagation: !0,
   useKeyboardNavigation: !0
 };
-var C = S
+var h = S

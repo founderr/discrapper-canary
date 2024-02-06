@@ -28,8 +28,8 @@ var r = n("627445"),
   y = n("353927");
 let N = {},
   R = {},
-  O = {},
   D = {},
+  O = {},
   P = A.StreamLayouts.THEATRE,
   b = {},
   L = [];
@@ -138,7 +138,7 @@ class w extends u.default.Store {
     return null != t ? t.getMaxViewers() : null
   }
   getStreamSourceId(e) {
-    return D[e]
+    return O[e]
   }
 }
 w.displayName = "StreamRTCConnectionStore";
@@ -174,7 +174,7 @@ var V = new w(c.default, !S.default.isSupported() || __OVERLAY__ ? {} : {
           analyticsContext: t
         } = e;
         t.setActionContext(s)
-      }), D[o] = a, O[o] = r, null != r) {
+      }), O[o] = a, D[o] = r, null != r) {
       let e = C.default.getGameForPID(r);
       null != e && (R[o] = {
         name: e.name,
@@ -193,7 +193,7 @@ var V = new w(c.default, !S.default.isSupported() || __OVERLAY__ ? {} : {
         analyticsContext: n
       } = e;
       n.setActionContext(t)
-    }), D[n] = null, O[n] = null
+    }), O[n] = null, D[n] = null
   },
   STREAM_CREATE: function(e) {
     let {
@@ -206,9 +206,9 @@ var V = new w(c.default, !S.default.isSupported() || __OVERLAY__ ? {} : {
     let l = b[t];
     if (null == l && null != n) {
       var u, c, g;
-      null == O[t] && (R[t] = null);
+      null == D[t] && (R[t] = null);
       let e = (0, _.decodeStreamKey)(t);
-      null == R[t] && null == D[t] && (R[t] = (0, h.getStreamerApplication)(e, T.default));
+      null == R[t] && null == O[t] && (R[t] = (0, h.getStreamerApplication)(e, T.default));
       let s = v.default.getChannel(e.channelId),
         d = null != s && s.isBroadcastChannel(),
         E = new f.StreamRTCAnalyticsContext({
@@ -224,7 +224,7 @@ var V = new w(c.default, !S.default.isSupported() || __OVERLAY__ ? {} : {
             } else if ((null === (n = platform) || void 0 === n ? void 0 : n.name) === "Firefox") return "" !== e ? "window" : "screen";
             else if ((null === (i = platform) || void 0 === i ? void 0 : i.name) === "Safari") return "window";
             return "unknown"
-          }(D[t]),
+          }(O[t]),
           actionContext: N[t],
           numViewers: null != o ? o.length : 0,
           isBroadcast: d

@@ -47,7 +47,7 @@ function R() {
   }), y = {}
 }
 
-function O(e, t) {
+function D(e, t) {
   if (null == e.id || null == e.channel_id) return;
   let n = N(e);
   if (null != y[n]) {
@@ -84,7 +84,7 @@ function O(e, t) {
   }
   return !1
 }
-let D = (e, t) => {
+let O = (e, t) => {
   if (0 !== e.length) {
     if (t) {
       (0, E.sendMultiChannelMessagesForScanning)(e);
@@ -104,7 +104,7 @@ function P(e, t) {
       setAt: Date.now(),
       timeout: setTimeout(() => {
         ! function(e) {
-          if (O(e, v.TimeoutCancelSource.TIMEOUT)) {
+          if (D(e, v.TimeoutCancelSource.TIMEOUT)) {
             let t = h.default.getMessage(e.channel_id, e.id),
               {
                 attachmentIds: n,
@@ -128,8 +128,8 @@ function P(e, t) {
   let s = n || new Set(e.map(e => e.channel_id)).size > 1;
   i ? setTimeout(() => {
     let t = e.filter(e => null != y[N(e)]);
-    D(t, s)
-  }, Math.random() * A) : D(e, s)
+    O(t, s)
+  }, Math.random() * A) : O(e, s)
 }
 let b = e => null == e.content_scan_version || e.content_scan_version < 1,
   L = e => {
@@ -223,7 +223,7 @@ function G(e) {
   if (!(0, p.isEligibleForExplicitMediaRedaction)() || null == r.channel_id || null == r.id || (null === (t = r.author) || void 0 === t ? void 0 : t.id) === c.default.getId() || null == r.embeds && null == r.attachments) return !1;
   if (!M(r)) {
     let e = null !== (s = null !== (i = h.default.getMessage(r.channel_id, r.id)) && void 0 !== i ? i : S.default.getMessage(r.id, r.channel_id)) && void 0 !== s ? s : null === (n = d.default.getMessage(r.channel_id, r.id)) || void 0 === n ? void 0 : n.message;
-    null != e && !M((0, u.updateMessageRecord)(e, r)) && O(e, v.TimeoutCancelSource.UPDATE)
+    null != e && !M((0, u.updateMessageRecord)(e, r)) && D(e, v.TimeoutCancelSource.UPDATE)
   }
   let a = g.default.getChannelId(),
     o = f.default.getCurrentSidebarChannelId(a),

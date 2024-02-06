@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return C
+    return h
   }
 });
 var n = i("37983");
@@ -23,11 +23,11 @@ var l = i("414456"),
   _ = i("782340"),
   S = i("9014");
 
-function C(e) {
+function h(e) {
   var t, i;
   let {
     onDismiss: l
-  } = e, C = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), h = _.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, T = (0, c.usePremiumTrialOffer)(), N = (0, u.usePremiumDiscountOffer)(), v = (null == T ? void 0 : T.subscription_trial) != null, A = v || null != N, y = {
+  } = e, h = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), C = _.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, T = (0, c.usePremiumTrialOffer)(), N = (0, u.usePremiumDiscountOffer)(), v = (null == T ? void 0 : T.subscription_trial) != null, A = v || null != N, y = {
     object: p.AnalyticsObjects.BUTTON_CTA,
     section: p.AnalyticsSections.SUPER_REACTION_PICKER
   };
@@ -51,7 +51,7 @@ function C(e) {
           }),
           src: "https://cdn.discordapp.com/attachments/955557117622886410/1085270553759322153/super-reactions-launch.mp4",
           loop: !0,
-          autoPlay: !C,
+          autoPlay: !h,
           muted: !0,
           controls: !0
         })
@@ -62,7 +62,7 @@ function C(e) {
         analyticsLocationObject: y,
         discountOffer: N,
         trialOffer: T,
-        children: h
+        children: C
       }) : (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsxs)("div", {
           className: S.header,
@@ -78,7 +78,7 @@ function C(e) {
         }), (0, n.jsx)(r.Text, {
           className: S.subheaderText,
           variant: "text-md/normal",
-          children: h
+          children: C
         }), (0, n.jsx)("div", {
           className: S.ctaActionWrapper,
           children: (0, n.jsx)(f.default, {

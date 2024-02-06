@@ -65,17 +65,17 @@ function R() {
   return e
 }
 
-function O() {
+function D() {
   if (T === d.default.isActive()) return !1;
   T = d.default.isActive()
 }
-class D extends s.default.PersistedStore {
+class O extends s.default.PersistedStore {
   initialize(e) {
     if (null != e) {
       var t, n, i, s, r;
       p = null !== (t = e.isMembersOpen) && void 0 !== t && t, v = null !== (n = e.isSummariesOpen) && void 0 !== n && n, S = null === (i = e.isProfileOpen) || void 0 === i || i, I = null !== (s = e.sidebars) && void 0 !== s ? s : {}, C = null !== (r = e.guildSidebars) && void 0 !== r ? r : {}
     }
-    this.syncWith([d.default], O), this.syncWith([u.default], R)
+    this.syncWith([d.default], D), this.syncWith([u.default], R)
   }
   getState() {
     return {
@@ -107,8 +107,8 @@ class D extends s.default.PersistedStore {
     return null == n ? null : n.type === a.SidebarType.VIEW_THREAD || n.type === a.SidebarType.VIEW_CHANNEL ? null === (t = n.details) || void 0 === t ? void 0 : t.initialMessageId : null
   }
 }
-D.displayName = "ChannelSectionStore", D.persistKey = "ChannelSectionStore2";
-var P = new D(r.default, {
+O.displayName = "ChannelSectionStore", O.persistKey = "ChannelSectionStore2";
+var P = new O(r.default, {
   CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
     v && (v = N(v)), p = N(p)
   },

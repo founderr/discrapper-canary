@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return f
   },
   isGuildScheduledEventActive: function() {
-    return O
+    return D
   },
   isEventUpcoming: function() {
-    return D
+    return O
   },
   isGuildEventEnded: function() {
     return P
@@ -43,7 +43,7 @@ function f(e) {
   let {
     id: t,
     scheduled_start_time: n
-  } = e, i = O(e) ? "\x00" : "\x01";
+  } = e, i = D(e) ? "\x00" : "\x01";
   return "".concat(i, "-").concat(new Date(n).getTime(), "-").concat(t)
 }
 let _ = new a.default(e => {
@@ -52,7 +52,7 @@ let _ = new a.default(e => {
       entity_id: n,
       channel_id: i
     } = e, s = [t];
-    return null != n && s.push(n), s.push(c.GUILD_EVENT(t)), null != i && s.push(c.CHANNEL_EVENT(i)), O(e) && (s.push(c.EVENT_ACTIVE), s.push(c.GUILD_EVENT_ACTIVE(t)), null != i && s.push(c.CHANNEL_EVENT_ACTIVE(i))), D(e) && (s.push(c.EVENT_UPCOMING), s.push(c.GUILD_EVENT_UPCOMING(t)), null != i && s.push(c.CHANNEL_EVENT_UPCOMING(i))), s
+    return null != n && s.push(n), s.push(c.GUILD_EVENT(t)), null != i && s.push(c.CHANNEL_EVENT(i)), D(e) && (s.push(c.EVENT_ACTIVE), s.push(c.GUILD_EVENT_ACTIVE(t)), null != i && s.push(c.CHANNEL_EVENT_ACTIVE(i))), O(e) && (s.push(c.EVENT_UPCOMING), s.push(c.GUILD_EVENT_UPCOMING(t)), null != i && s.push(c.CHANNEL_EVENT_UPCOMING(i))), s
   }, f),
   h = 0,
   g = [],
@@ -132,12 +132,12 @@ function R(e) {
   }), !0
 }
 
-function O(e) {
+function D(e) {
   var t;
   return null != e && (t = (null == e ? void 0 : e.status) === d.GuildScheduledEventStatus.ACTIVE, t)
 }
 
-function D(e) {
+function O(e) {
   return !d.GuildScheduledEventStatusDone.has(e.status)
 }
 
@@ -190,7 +190,7 @@ class b extends r.default.Store {
     return (null === (n = p[e]) || void 0 === n ? void 0 : n[i]) != null
   }
   isActive(e) {
-    return null != e && O(_.get(e))
+    return null != e && D(_.get(e))
   }
   getActiveEventByChannel(e) {
     if (null == e) return;

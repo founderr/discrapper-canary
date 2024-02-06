@@ -33,8 +33,8 @@ let S = new d.default("GuildMemberStore"),
   y = 0,
   N = 0,
   R = {},
-  O = {},
-  D = {
+  D = {},
+  O = {
     added: [],
     removed: []
   };
@@ -431,12 +431,12 @@ class z extends l.default.Store {
   }
   getPendingRoleUpdates(e) {
     var t;
-    return null !== (t = O[e]) && void 0 !== t ? t : D
+    return null !== (t = D[e]) && void 0 !== t ? t : O
   }
   getMemberRoleWithPendingUpdates(e, t) {
     var n, i;
     let s = null !== (i = null === (n = this.getMember(e, t)) || void 0 === n ? void 0 : n.roles) && void 0 !== i ? i : [],
-      r = O[e];
+      r = D[e];
     return null == r ? s : a.difference(a.union(s, r.added), r.removed)
   }
   getMemberVersion() {
@@ -493,8 +493,8 @@ var q = new z(u.default, {
     if (null == f) return !1;
     let _ = p.default.getGuild(s);
     if (null == _) return !1;
-    let h = null !== (t = O[s]) && void 0 !== t ? t : {};
-    O[s] = {
+    let h = null !== (t = D[s]) && void 0 !== t ? t : {};
+    D[s] = {
       added: a.difference(a.union(null !== (n = h.added) && void 0 !== n ? n : [], o), null != l ? l : []),
       removed: a.difference(a.union(null !== (i = h.removed) && void 0 !== i ? i : [], l), null != o ? o : [])
     }, c[d] = G({
@@ -622,7 +622,7 @@ var q = new z(u.default, {
       guildId: t
     } = e;
     if (null == t) return !1;
-    delete O[t]
+    delete D[t]
   },
   LOCAL_MESSAGES_LOADED: function(e) {
     var t, n;

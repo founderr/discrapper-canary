@@ -25,8 +25,8 @@ let p = l.forwardRef(function(e, t) {
     onKeyDown: g,
     onFocus: _,
     autoFocus: S,
-    className: C,
-    defaultSearchPlaceholder: h
+    className: h,
+    defaultSearchPlaceholder: C
   } = e, T = l.useRef(null), N = (0, d.useExpressionPickerStore)(e => e.searchQuery), [v, A] = c.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), y = l.useCallback(e => {
     var t;
     c.EmojiPickerStore.setActiveCategoryIndex("" === e ? 0 : f.INACTIVE_CATEGORY_INDEX), c.EmojiPickerStore.setInspectedExpressionPosition(0, 0), c.EmojiPickerStore.setSearchPlaceholder(null), (0, d.setSearchQuery)(e), null === (t = i.current) || void 0 === t || t.scrollTo(0)
@@ -43,7 +43,7 @@ let p = l.forwardRef(function(e, t) {
     query: N,
     ref: T,
     size: u.default.Sizes.MEDIUM,
-    placeholder: null != A ? A : h,
+    placeholder: null != A ? A : C,
     onClear: j,
     onKeyDown: e => {
       switch (e.keyCode) {
@@ -57,7 +57,7 @@ let p = l.forwardRef(function(e, t) {
     },
     onFocus: _,
     onQueryChange: y,
-    className: a(C, {
+    className: a(h, {
       [I.searchBarFullRow]: p
     }),
     preventEscapePropagation: !1,

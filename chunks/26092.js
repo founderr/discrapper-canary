@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return O
   }
 });
 var i = n("917351"),
@@ -54,7 +54,7 @@ function N() {
 function R() {
   u = l.FormStates.OPEN, h = {}
 }
-class O extends r.default.Store {
+class D extends r.default.Store {
   initialize() {
     this.waitFor(o.default)
   }
@@ -99,8 +99,8 @@ class O extends r.default.Store {
     return S
   }
 }
-O.displayName = "UserSettingsModalStore";
-var D = new O(a.default, {
+D.displayName = "UserSettingsModalStore";
+var O = new D(a.default, {
   USER_SETTINGS_MODAL_OPEN: function(e) {
     E = !0, y(e)
   },

@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return R
   },
   isStickerAssetUrl: function() {
-    return O
+    return D
   },
   isStickerPackAnimated: function() {
-    return D
+    return O
   },
   createStickerPackCategory: function() {
     return P
@@ -112,7 +112,7 @@ let {
   if (null == i) return null;
   let r = o.SUPPORTS_WEBP ? "webp" : "png";
   return n = null != E ? "".concat(location.protocol, "//").concat(E, "/app-assets/").concat(c.STICKER_APPLICATION_ID, "/store/").concat(i, ".").concat(r) : "".concat(location.protocol).concat(_).concat(f.Endpoints.STORE_ASSET(c.STICKER_APPLICATION_ID, i, r)), null != t && (n += "?size=".concat((0, s.getBestMediaProxySize)(t))), n
-}, O = e => e.match("development" !== g ? S : T), D = e => e.stickers.some(e => {
+}, D = e => e.match("development" !== g ? S : T), O = e => e.stickers.some(e => {
   let {
     format_type: t
   } = e;

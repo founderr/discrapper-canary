@@ -22,8 +22,8 @@ var o, l, u, d, c = n("627445"),
   y = n("18346"),
   N = n("605250"),
   R = n("808122"),
-  O = n("733589"),
-  D = n("933034"),
+  D = n("733589"),
+  O = n("933034"),
   P = n("746800"),
   b = n("584687"),
   L = n("636243"),
@@ -130,8 +130,8 @@ let eC = (0, p.initializeMediaEngine)((0, p.determineMediaEngine)()),
   ey = new Set([eE.MediaEngineContextTypes.DEFAULT]),
   eN = eC.supports(eE.Features.AUTO_ENABLE),
   eR = !1,
-  eO = eE.MediaEngineContextTypes.STREAM,
-  eD = {
+  eD = eE.MediaEngineContextTypes.STREAM,
+  eO = {
     [eE.DEFAULT_DEVICE_ID]: ta(ep.default.Messages.NO_INPUT_DEVICES)
   },
   eP = {
@@ -208,7 +208,7 @@ function e7() {
   let s = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ew,
     a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r,
     o = r;
-  if ((null == o ? void 0 : o.desktopSource) != null && o.desktopSource.id !== (null == a ? void 0 : null === (e = a.desktopSource) || void 0 === e ? void 0 : e.id) && (null != o.desktopSource.soundshareId && (0, ee.isWindows)() && C.cancelAttachToProcess(o.desktopSource.soundshareId), eC.setGoLiveSource(null, eO)), (null == o ? void 0 : o.cameraSource) != null && (o.cameraSource.videoDeviceGuid !== (null == a ? void 0 : null === (t = a.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || o.cameraSource.audioDeviceGuid !== (null == a ? void 0 : null === (n = a.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && eC.setGoLiveSource(null, eO), (ew || s) && (eV = (ew = s) ? tl(eb, e4().videoDeviceId) : eE.DISABLED_DEVICE_ID, eC.setVideoInputDevice(eV)), r = a, null != a) {
+  if ((null == o ? void 0 : o.desktopSource) != null && o.desktopSource.id !== (null == a ? void 0 : null === (e = a.desktopSource) || void 0 === e ? void 0 : e.id) && (null != o.desktopSource.soundshareId && (0, ee.isWindows)() && C.cancelAttachToProcess(o.desktopSource.soundshareId), eC.setGoLiveSource(null, eD)), (null == o ? void 0 : o.cameraSource) != null && (o.cameraSource.videoDeviceGuid !== (null == a ? void 0 : null === (t = a.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || o.cameraSource.audioDeviceGuid !== (null == a ? void 0 : null === (n = a.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && eC.setGoLiveSource(null, eD), (ew || s) && (eV = (ew = s) ? tl(eb, e4().videoDeviceId) : eE.DISABLED_DEVICE_ID, eC.setVideoInputDevice(eV)), r = a, null != a) {
     let e = {
       resolution: a.quality.resolution,
       frameRate: a.quality.frameRate
@@ -245,7 +245,7 @@ function e7() {
           hdrCaptureMode: n
         },
         quality: e
-      }, eO)
+      }, eD)
     }
     null != a.cameraSource && eC.setGoLiveSource({
       cameraDescription: {
@@ -253,7 +253,7 @@ function e7() {
         audioDeviceGuid: a.cameraSource.audioDeviceGuid
       },
       quality: e
-    }, eO)
+    }, eD)
   }
 }
 
@@ -266,7 +266,7 @@ function e5(e, t, n, i) {
     soundshare_failure_code: t,
     soundshare_failure_reason: n,
     soundshare_failure_will_retry: i,
-    ...(0, D.default)(e)
+    ...(0, O.default)(e)
   })
 }
 
@@ -608,7 +608,7 @@ class tv extends E.default.Store {
           }
         })
       }), e.on(p.BaseConnectionEvent.SoundshareAttached, () => {
-        (null == r ? void 0 : r.desktopSource) != null && Z.default.track(e_.AnalyticEvents.SOUNDSHARE_ATTACHED, (0, D.default)(null == r ? void 0 : r.desktopSource))
+        (null == r ? void 0 : r.desktopSource) != null && Z.default.track(e_.AnalyticEvents.SOUNDSHARE_ATTACHED, (0, O.default)(null == r ? void 0 : r.desktopSource))
       }), e.on(p.BaseConnectionEvent.SoundshareFailed, e => {
         let {
           failureCode: t,
@@ -617,7 +617,7 @@ class tv extends E.default.Store {
         } = e;
         e5(null == r ? void 0 : r.desktopSource, t, n, i)
       }), e.on(p.BaseConnectionEvent.SoundshareSpeaking, () => {
-        (null == r ? void 0 : r.desktopSource) != null && (Z.default.track(e_.AnalyticEvents.SOUNDSHARE_TRANSMITTING, (0, D.default)(null == r ? void 0 : r.desktopSource)), null != eu.default.getHookError(e_.MediaEngineHookTypes.SOUND) && T.default.wait(() => T.default.dispatch({
+        (null == r ? void 0 : r.desktopSource) != null && (Z.default.track(e_.AnalyticEvents.SOUNDSHARE_TRANSMITTING, (0, O.default)(null == r ? void 0 : r.desktopSource)), null != eu.default.getHookError(e_.MediaEngineHookTypes.SOUND) && T.default.wait(() => T.default.dispatch({
           type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING"
         })))
       });
@@ -660,7 +660,7 @@ class tv extends E.default.Store {
           sample_count: i,
           success: s,
           reinitialization: a,
-          ...(0, D.default)(null == r ? void 0 : r.desktopSource)
+          ...(0, O.default)(null == r ? void 0 : r.desktopSource)
         })
       }), e.on(p.BaseConnectionEvent.NoiseCancellationError, e => {
         ev.warn("noisecancellererror event: ".concat(e)), eq = !0, Z.default.track(e_.AnalyticEvents.VOICE_PROCESSING, {
@@ -878,12 +878,12 @@ class tv extends E.default.Store {
   }
   isScreenSharing() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eE.MediaEngineContextTypes.STREAM;
-    return eO === e && null != r
+    return eD === e && null != r
   }
   isSoundSharing() {
     var e;
     let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eE.MediaEngineContextTypes.STREAM;
-    return eO === t && null != r && (null === (e = r.desktopSource) || void 0 === e ? void 0 : e.soundshareId) != null
+    return eD === t && null != r && (null === (e = r.desktopSource) || void 0 === e ? void 0 : e.soundshareId) != null
   }
   isLocalMute(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eE.MediaEngineContextTypes.DEFAULT;
@@ -920,7 +920,7 @@ class tv extends E.default.Store {
     return r
   }
   getGoLiveContext() {
-    return eO
+    return eD
   }
   getLocalPan(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eE.MediaEngineContextTypes.DEFAULT,
@@ -961,7 +961,7 @@ class tv extends E.default.Store {
     }), e
   }
   getInputDeviceId() {
-    return tl(eD, e4().inputDeviceId)
+    return tl(eO, e4().inputDeviceId)
   }
   getOutputDeviceId() {
     return tl(eP, e4().outputDeviceId)
@@ -970,7 +970,7 @@ class tv extends E.default.Store {
     return tl(eb, e4().videoDeviceId)
   }
   getInputDevices() {
-    return eD
+    return eO
   }
   getOutputDevices() {
     return eP
@@ -1033,12 +1033,12 @@ class tv extends E.default.Store {
   getState() {
     return {
       settingsByContext: eA,
-      inputDevices: eD,
+      inputDevices: eO,
       outputDevices: eP,
       appSupported: e1,
       krispModuleLoaded: eK,
       goLiveSource: r,
-      goLiveContext: eO
+      goLiveContext: eD
     }
   }
   getInputDetected() {
@@ -1330,7 +1330,7 @@ var tS = i = new tv(T.default, {
       id: t
     } = e;
     ts({
-      inputDeviceId: t = tl(eD, t)
+      inputDeviceId: t = tl(eO, t)
     }), eC.setAudioInputDevice(t)
   },
   AUDIO_SET_OUTPUT_DEVICE: function(e) {
@@ -1422,10 +1422,10 @@ var tS = i = new tv(T.default, {
       videoDevices: i
     } = e;
     ! function(e) {
-      let t = eD;
-      if (eD = to(e, ep.default.Messages.NO_INPUT_DEVICES), !h.isEqual(eD, t)) {
+      let t = eO;
+      if (eO = to(e, ep.default.Messages.NO_INPUT_DEVICES), !h.isEqual(eO, t)) {
         let e = e4(),
-          t = tl(eD, e.inputDeviceId);
+          t = tl(eO, e.inputDeviceId);
         eC.setAudioInputDevice(t)
       }
     }(t), ! function(e) {
@@ -1515,7 +1515,7 @@ var tS = i = new tv(T.default, {
       ee.isPlatformEmbedded && !0 === l && ({
         soundshareId: e,
         soundshareSession: i
-      } = td(c), null != e && tc(e, i)), (a = u) !== eO && (null != r && eC.setGoLiveSource(null, eO), eO = a);
+      } = td(c), null != e && tc(e, i)), (a = u) !== eD && (null != r && eC.setGoLiveSource(null, eD), eD = a);
       let f = u === eE.MediaEngineContextTypes.STREAM && ew;
       e7(f, {
         desktopSource: {
@@ -1590,7 +1590,7 @@ var tS = i = new tv(T.default, {
     let {
       mediaEngineState: t
     } = e;
-    eA = t.settingsByContext, eD = t.inputDevices, eP = t.outputDevices, e1 = t.appSupported, eK = t.krispModuleLoaded, eO = t.goLiveContext
+    eA = t.settingsByContext, eO = t.inputDevices, eP = t.outputDevices, e1 = t.appSupported, eK = t.krispModuleLoaded, eD = t.goLiveContext
   },
   MEDIA_ENGINE_SET_OPEN_H264: function(e) {
     let {
@@ -1619,7 +1619,7 @@ var tS = i = new tv(T.default, {
   APP_STATE_UPDATE: function(e) {
     let {
       state: t
-    } = e, n = O.default.isEnabled();
+    } = e, n = D.default.isEnabled();
     if (t === e_.AppStates.BACKGROUND && ew && !n) eF = !0, e7(!1);
     else {
       if (t !== e_.AppStates.ACTIVE || !eF) return !1;
@@ -1679,7 +1679,7 @@ var tS = i = new tv(T.default, {
       if (null != s) {
         let e = null !== (t = s.soundshareId) && void 0 !== t ? t : 0,
           r = i.getExperimentalSoundshare();
-        n && eC.setSoundshareSource(e, r, eO)
+        n && eC.setSoundshareSource(e, r, eD)
       }
     }()
   },

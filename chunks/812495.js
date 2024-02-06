@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   redeemGiftCode: function() {
-    return o
+    return d
   },
   default: function() {
-    return d
+    return o
   }
 });
 var i = n("872717"),
-  s = n("913144"),
-  l = n("448993"),
+  l = n("913144"),
+  s = n("448993"),
   r = n("745279"),
   a = n("49111");
 let u = Object.freeze({});
-async function o(e) {
+async function d(e) {
   let {
     code: t,
     options: n = u,
-    onRedeemed: o,
-    onError: d
+    onRedeemed: d,
+    onError: o
   } = e, {
     channelId: c = null,
     paymentSource: E = null
   } = n;
-  s.default.dispatch({
+  l.default.dispatch({
     type: "GIFT_CODE_REDEEM",
     code: t
   });
@@ -37,23 +37,23 @@ async function o(e) {
       },
       oldFormErrors: !0
     });
-    return s.default.dispatch({
+    return l.default.dispatch({
       type: "GIFT_CODE_REDEEM_SUCCESS",
       code: t,
       entitlement: e.body
-    }), null == o || o(), {
+    }), null == d || d(), {
       code: t,
       entitlement: e
     }
   } catch (n) {
-    let e = new l.BillingError(n);
-    throw s.default.dispatch({
+    let e = new s.BillingError(n);
+    throw l.default.dispatch({
       type: "GIFT_CODE_REDEEM_FAILURE",
       code: t,
       error: e
-    }), null == d || d(e), e
+    }), null == o || o(e), e
   }
 }
-var d = {
-  redeemGiftCode: o
+var o = {
+  redeemGiftCode: d
 }

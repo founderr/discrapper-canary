@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return O
   }
 }), n("222007"), n("70102"), n("424973"), n("462568");
 var i = n("714617"),
@@ -169,7 +169,7 @@ let N = new class e {
 function R() {
   _.default.enabled ? N.start() : N.stop()
 }
-class O extends r.default.Store {
+class D extends r.default.Store {
   initialize() {
     R(), this.waitFor(f.default), this.syncWith([_.default], R)
   }
@@ -177,8 +177,8 @@ class O extends r.default.Store {
     return v
   }
 }
-O.displayName = "ExternalStreamingStore";
-var D = new O(o.default, {
+D.displayName = "ExternalStreamingStore";
+var O = new D(o.default, {
   STREAMING_UPDATE: function(e) {
     var t;
     if (s(e.stream, v)) return !1;

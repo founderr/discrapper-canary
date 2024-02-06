@@ -35,14 +35,14 @@ function g(e) {
     onFocus: y,
     className: N,
     focusedClassName: R,
-    subMenuIconClassName: O,
-    dontCloseOnActionIfHoldingShiftKey: D,
+    subMenuIconClassName: D,
+    dontCloseOnActionIfHoldingShiftKey: O,
     iconProps: P,
     sparkle: b
   } = e, L = s.useContext(u.OnMenuSelectContext), M = s.useRef(null), U = s.useCallback(e => {
     if (null == C) return !1;
-    !(e.shiftKey && D) && A(), e.persist(), null == L || L(), requestAnimationFrame(() => C(e))
-  }, [C, A, L, D]);
+    !(e.shiftKey && O) && A(), e.persist(), null == L || L(), requestAnimationFrame(() => C(e))
+  }, [C, A, L, O]);
   return s.useEffect(() => {
     T && ((0, d.ensureItemVisible)(M), null == y || y())
   }, [T, y]), (0, i.jsxs)(o.Clickable, {
@@ -89,7 +89,7 @@ function g(e) {
     }), v && (0, i.jsxs)("div", {
       className: h.iconContainer,
       children: [(0, i.jsx)(f.default, {
-        className: a(h.caret, O)
+        className: a(h.caret, D)
       }), b && (0, i.jsx)(c.default, {
         className: h.sparkles
       })]

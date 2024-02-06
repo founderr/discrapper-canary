@@ -38,8 +38,8 @@ function S() {
       y = f.default.getMutableParticipants(T.id, _.StageChannelParticipantNamedIndex.SPEAKER),
       N = y.filter(e => e.type === _.StageChannelParticipantTypes.STREAM).length,
       R = y.length - N,
-      O = f.default.getParticipantCount(u) - N,
-      D = (null == A ? void 0 : null === (t = A.party) || void 0 === t ? void 0 : t.size) != null ? A.party.size[1] : 0;
+      D = f.default.getParticipantCount(u) - N,
+      O = (null == A ? void 0 : null === (t = A.party) || void 0 === t ? void 0 : t.size) != null ? A.party.size[1] : 0;
     return {
       application_id: E.STAGE_APPLICATION_ID,
       name: null !== (s = null !== (i = S.topic) && void 0 !== i ? i : T.topic) && void 0 !== s ? s : T.name,
@@ -53,7 +53,7 @@ function S() {
       },
       party: {
         id: C,
-        size: [R, Math.max(O, D)]
+        size: [R, Math.max(D, O)]
       }
     }
   }();

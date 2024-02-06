@@ -118,8 +118,8 @@ class v extends s.Component {
       flex: y,
       autosize: N,
       required: R,
-      onInvalid: O,
-      inputRef: D
+      onInvalid: D,
+      inputRef: O
     } = this.props, P = N ? c.TextAreaAutosize : "textarea", b = this.hasError(), L = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, M = this.getAriaDescribedBy();
     return (0, i.jsxs)("div", {
       className: a(h.inputWrapper, {
@@ -156,9 +156,9 @@ class v extends s.Component {
             onBlur: this.onBlur,
             onFocus: this.onFocus,
             onKeyDown: this.onKeyDown,
-            onInvalid: O,
+            onInvalid: D,
             rows: A,
-            ref: D
+            ref: O
           })
         }), null != u && (0, i.jsx)(d.HiddenVisually, {
           id: E,

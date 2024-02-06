@@ -26,8 +26,8 @@ let I = [T.DispatchErrorCodes.AUTHENTICATION_FAILED, T.DispatchErrorCodes.NOT_EN
   y = [],
   N = !1,
   R = null,
-  O = null,
-  D = !1,
+  D = null,
+  O = !1,
   P = new Map,
   b = !1,
   L = null;
@@ -52,7 +52,7 @@ function U() {
       applicationId: r,
       branchId: a
     } = (0, m.convertComboId)(i);
-    if (t = r, n = a, (null == R || R.applicationId !== t || R.branchId !== n) && (null == O || O.applicationId !== t || O.branchId !== n)) {
+    if (t = r, n = a, (null == R || R.applicationId !== t || R.branchId !== n) && (null == D || D.applicationId !== t || D.branchId !== n)) {
       let e = _.default.getToken(),
         t = _.default.getId();
       if (null == e) throw Error("missing user token");
@@ -185,9 +185,9 @@ var Y = new H(c.default, {
     let {
       state: t
     } = e;
-    !D && (D = !0, U(), !N && E.default.resume());
+    !O && (O = !0, U(), !N && E.default.resume());
     let n = N;
-    N = t.paused, R = t.currentTask, O = t.nextTask;
+    N = t.paused, R = t.currentTask, D = t.nextTask;
     let i = !1;
     A = A.filter(e => {
       let {

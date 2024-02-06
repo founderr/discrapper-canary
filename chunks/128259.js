@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return R
   },
   handleClick: function() {
-    return O
+    return D
   }
 });
 var i = n("404828"),
@@ -38,13 +38,13 @@ function R(e, t) {
   return !!(null == i || i.type !== y.ChannelTypes.DM || I.default.isFriend(null !== (n = i.getRecipientId()) && void 0 !== n ? n : "")) && e === t
 }
 
-function O(e, t) {
+function D(e, t) {
   let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
     {
       trusted: I,
       onClick: R,
-      onConfirm: O,
-      shouldConfirm: D,
+      onConfirm: D,
+      shouldConfirm: O,
       messageId: P,
       channelId: b
     } = e,
@@ -100,8 +100,8 @@ function O(e, t) {
           guildId: M,
           sourceChannelId: w,
           sourceGuildId: V
-        }), null != O) {
-        O();
+        }), null != D) {
+        D();
         return
       }(0, o.default)(L)
     },
@@ -122,7 +122,7 @@ function O(e, t) {
     K = (0, S.getProtocol)(L),
     z = !("http:" === K || "https:" === K);
   if (!z && (W || v.default.isTrustedDomain(L)) || z && v.default.isTrustedProtocol(L)) {
-    null == t || null != D && D ? Y() : U && f.default.trackAnnouncementMessageLinkClicked({
+    null == t || null != O && O ? Y() : U && f.default.trackAnnouncementMessageLinkClicked({
       messageId: k,
       channelId: b,
       guildId: M,

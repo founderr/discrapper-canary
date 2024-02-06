@@ -31,7 +31,7 @@ function y() {
   for (let e in E = {}, T = {}, p = {}, v = {}, S = {}, C = f.default.getChannelId(), A) clearTimeout(A[e]);
   A = {}, _.default.forEachGuild(e => {
     R(e)
-  }), O()
+  }), D()
 }
 
 function N(e) {
@@ -65,12 +65,12 @@ function R(e) {
     }
 }
 
-function O() {
+function D() {
   for (let e in I = {}, v)
     for (let t in v[e]) P(e, t)
 }
 
-function D(e) {
+function O(e) {
   let t = u.default.getBasicChannel(e);
   null != t && l.THREADED_CHANNEL_TYPES.has(t.type) && P(t.guild_id, t.id)
 }
@@ -177,13 +177,13 @@ function k() {
           s = c.default.isForumPostUnread(n);
         s && x(S, i, i, !1)
       }
-  O()
+  D()
 }
 
 function w() {
   let e = C;
   if ((C = f.default.getChannelId()) === e) return !1;
-  D(e), D(C)
+  O(e), O(C)
 }
 
 function V(e) {

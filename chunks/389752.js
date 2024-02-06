@@ -81,16 +81,16 @@ function c(e) {
         })
       }));
       i.useEffect(() => () => R.clean(), [R]);
-      let O = i.useCallback((e, t) => {
+      let D = i.useCallback((e, t) => {
           A.current && _(e, t)
         }, [_]),
-        [D, P] = i.useState(!0);
+        [O, P] = i.useState(!0);
       i.useEffect(() => {
-        if (D && !p) {
+        if (O && !p) {
           P(!1);
           return
         }
-        O(S(t, c), c)
+        D(S(t, c), c)
       }, [c]);
       let b = i.useCallback(function() {
           let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -98,8 +98,8 @@ function c(e) {
           n !== c && g({
             type: s.ListActionType.SET_FOCUSED_INDEX,
             index: n
-          }), e && O(S(t, n), n)
-        }, [S, c, h, g, t, O]),
+          }), e && D(S(t, n), n)
+        }, [S, c, h, g, t, D]),
         L = i.useCallback(e => {
           if (!A.current) return;
           if (o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
@@ -147,17 +147,17 @@ function c(e) {
           y || N(!0)
         }, [y]),
         U = i.useCallback(() => {
-          !y && (m ? O(S(t, c), c) : b(!0))
-        }, [S, t, O, m, y, c, b]),
+          !y && (m ? D(S(t, c), c) : b(!0))
+        }, [S, t, D, m, y, c, b]),
         k = i.useCallback(e => {
           !e.currentTarget.contains(e.relatedTarget) && requestAnimationFrame(() => {
             if (null == u(l(S, t, c))) {
-              O(t);
+              D(t);
               return
             }
             N(!1)
           })
-        }, [S, t, c, O]),
+        }, [S, t, c, D]),
         w = i.useRef(null);
       i.useLayoutEffect(() => {
         let e = w.current;

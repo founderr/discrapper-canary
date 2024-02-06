@@ -27,8 +27,8 @@ let p = new d.default("ClientStateStore"),
   y = g.initialState.apiCodeVersion,
   N = null !== (i = g.initialState.privateChannelsVersion) && void 0 !== i ? i : "0",
   R = new Set(null !== (s = g.initialState.guildIdsRequiringDeletedIdsSync) && void 0 !== s ? s : []),
-  O = g.initialState.lastSelectedGuildId,
-  D = !1;
+  D = g.initialState.lastSelectedGuildId,
+  O = !1;
 
 function P(e) {
   null != e && 1 === h.default.compare(e, T) && (T = e)
@@ -40,8 +40,8 @@ function b() {
 class L extends r.default.Store {
   initialize() {
     this.waitFor(c.default), this.syncWith([_.default], () => {
-      if (!D) return !1;
-      O = _.default.getGuildId()
+      if (!O) return !1;
+      D = _.default.getGuildId()
     })
   }
   persist(e) {
@@ -56,7 +56,7 @@ class L extends r.default.Store {
       privateChannelsVersion: N,
       apiCodeVersion: y,
       guildIdsRequiringDeletedIdsSync: Array.from(R),
-      lastSelectedGuildId: O
+      lastSelectedGuildId: D
     }), a.default.remove("GuildIdsRequiringDeletedIdsSync")
   }
   clear() {
@@ -71,7 +71,7 @@ class L extends r.default.Store {
       userGuildSettingsVersion: C,
       privateChannelsVersion: N,
       apiCodeVersion: y,
-      lastSelectedGuildId: O,
+      lastSelectedGuildId: D,
       userSettingsVersion: t.user_settings_version
     }
   }
@@ -95,7 +95,7 @@ var M = new L(o.default, {
       userGuildSettings: i,
       apiCodeVersion: s
     } = e;
-    for (let e of (I = n.version, C = i.version, y = s, D = !0, S = !0, t)) {
+    for (let e of (I = n.version, C = i.version, y = s, O = !0, S = !0, t)) {
       var r, a, o, l;
       e.unableToSyncDeletes && R.add(e.id), e.unableToSyncDeletes && R.add(e.id), null === (r = e.channels) || void 0 === r || r.forEach(e => P(e.lastMessageId)), null === (o = e.channelUpdates) || void 0 === o || null === (a = o.writes) || void 0 === a || a.forEach(e => P(e.lastMessageId)), null === (l = e.channelTimestampUpdates) || void 0 === l || l.forEach(e => P(e.last_message_id))
     }

@@ -7,10 +7,10 @@ i.r(t), i.d(t, {
     return S
   },
   uploadEmoji: function() {
-    return C
+    return h
   },
   deleteEmoji: function() {
-    return h
+    return C
   },
   updateEmoji: function() {
     return T
@@ -61,7 +61,7 @@ function S(e) {
   }))
 }
 
-function C(e) {
+function h(e) {
   let {
     guildId: t,
     image: i,
@@ -88,7 +88,7 @@ function C(e) {
   }), Promise.reject(e)))
 }
 
-function h(e, t) {
+function C(e, t) {
   return r.default.dispatch({
     type: "EMOJI_DELETE",
     guildId: e,

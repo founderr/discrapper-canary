@@ -271,7 +271,7 @@ function I(e) {
 I.Masks = s;
 var C = I;
 let A = a.memo(function() {
-  var e, t, n, i, s, a, o, l, c, I, C, A, y, N, R, O, D, P;
+  var e, t, n, i, s, a, o, l, c, I, C, A, y, N, R, D, O, P;
   return (0, r.jsxs)("svg", {
     viewBox: "0 0 1 1",
     style: {
@@ -597,8 +597,8 @@ let A = a.memo(function() {
         r: "0.5",
         fill: "black"
       })]
-    })), (O = "svg-mask-autocomplete-emoji-upsell-emoji", (0, r.jsxs)("mask", {
-      id: O,
+    })), (D = "svg-mask-autocomplete-emoji-upsell-emoji", (0, r.jsxs)("mask", {
+      id: D,
       maskContentUnits: "objectBoundingBox",
       viewBox: "0 0 1 1",
       children: [(0, r.jsx)("rect", {
@@ -611,8 +611,8 @@ let A = a.memo(function() {
         cy: .5,
         r: .5833333333333334
       })]
-    })), (D = "svg-mask-event-ticket", (0, r.jsx)("mask", {
-      id: D,
+    })), (O = "svg-mask-event-ticket", (0, r.jsx)("mask", {
+      id: O,
       maskContentUnits: "objectBoundingBox",
       viewBox: "0 0 1 1",
       children: (0, r.jsx)("path", {

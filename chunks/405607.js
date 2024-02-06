@@ -47,8 +47,8 @@ var f = function(e) {
     categoryHeight: g,
     onScroll: _,
     renderCategoryListItem: S,
-    rowCountBySection: C,
-    renderSection: h
+    rowCountBySection: h,
+    renderSection: C
   } = e, T = u.useStore(e => e.activeCategoryIndex);
   d({
     activeIndex: T,
@@ -77,8 +77,8 @@ var f = function(e) {
       rowCount: I,
       rowHeight: A,
       hideScrollbar: !0,
-      rowCountBySection: C,
-      renderSection: h
+      rowCountBySection: h,
+      renderSection: C
     }), null == f ? void 0 : f(N)]
   })
 }

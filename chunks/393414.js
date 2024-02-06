@@ -35,7 +35,7 @@ n.r(t), n.d(t, {
     return R
   },
   forward: function() {
-    return O
+    return D
   }
 }), n("424973"), n("781738");
 var a = n("294094"),
@@ -133,6 +133,6 @@ function R() {
   g() && (s = null, i.goBack())
 }
 
-function O() {
+function D() {
   g() && (s = null, i.goForward())
 }

@@ -32,12 +32,12 @@ var i = n("759843"),
   y = n("599110"),
   N = n("991170"),
   R = n("719923"),
-  O = n("840707"),
-  D = n("404118"),
+  D = n("840707"),
+  O = n("404118"),
   P = n("49111"),
   b = n("782340");
 let L = e => {
-    D.default.show({
+    O.default.show({
       title: b.default.Messages.TOO_MANY_USER_GUILDS_ALERT_TITLE,
       body: b.default.Messages.TOO_MANY_USER_GUILDS_ALERT_DESCRIPTION.format({
         quantity: e
@@ -53,7 +53,7 @@ let L = e => {
     })
   },
   U = () => {
-    D.default.show({
+    O.default.show({
       title: b.default.Messages.SERVER_IS_CURRENTLY_FULL,
       body: b.default.Messages.PLEASE_TRY_AGAIN_LATER
     })
@@ -202,7 +202,7 @@ var V = {
       reason: a,
       location: o
     } = e;
-    return O.default.patch({
+    return D.default.patch({
       url: P.Endpoints.GUILD_MEMBER(t, n),
       reason: a,
       body: {

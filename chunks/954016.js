@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return R
   },
   validStreamURL: function() {
-    return O
+    return D
   },
   XBOX_ACTIVITY_APPLICATION_ID: function() {
-    return D
+    return O
   },
   END_GAME_APPLICATION_ID: function() {
     return P
@@ -124,8 +124,8 @@ n.r(t), n.d(t, {
 var i, s, r, a, o, l, u, d, c, f, _, h, g, m, E, p, v, S, T, I, C, A, y = n("798609"),
   N = n("49111");
 let R = 160,
-  O = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
-  D = "438122941302046720",
+  D = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
+  O = "438122941302046720",
   P = "773336526917861400",
   b = "880218832743055411",
   L = "1050941315912835122",

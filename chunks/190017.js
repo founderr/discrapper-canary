@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return R
   },
   completeRepair: function() {
-    return O
+    return D
   },
   completeInstall: function() {
-    return D
+    return O
   }
 }), n("70102");
 var i = n("872717"),
@@ -194,12 +194,12 @@ function R(e, t) {
   })
 }
 
-function O(e, t) {
+function D(e, t) {
   let n = r.default.getApplication(e);
   null != n && f.default.createShortcuts(o.InstallShortcutDesktop.getSetting(), o.InstallShortcutStartMenu.getSetting(), n.name, n.id, t.installPath)
 }
 
-function D(e, t) {
+function O(e, t) {
   let s = r.default.getApplication(e);
   i.default.post({
     url: g.Endpoints.LIBRARY_APPLICATION_INSTALLED(e, e),

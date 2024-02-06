@@ -32,8 +32,8 @@ var i = n("597755"),
   y = n("487946"),
   N = n("258158"),
   R = n("877275"),
-  O = n("393414"),
-  D = n("716214"),
+  D = n("393414"),
+  O = n("716214"),
   P = n("233069"),
   b = n("271938"),
   L = n("42203"),
@@ -101,7 +101,7 @@ function ee(e) {
         default: n
       } = e, a = () => {
         if (c) {
-          (0, D.connectAndOpen)(i instanceof P.ChannelRecordBase ? i : (0, P.createChannelRecord)(i)), (0, O.transitionTo)(f);
+          (0, O.connectAndOpen)(i instanceof P.ChannelRecordBase ? i : (0, P.createChannelRecord)(i)), (0, D.transitionTo)(f);
           return
         }
         n.selectVoiceChannel(o), u === X.InviteTargetTypes.STREAM && null != l && W.watchStreamAndTransitionToStream({
@@ -109,11 +109,11 @@ function ee(e) {
           ownerId: l,
           guildId: t,
           channelId: o
-        }), u === X.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, O.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, h.default)(o, d, r, null == s ? void 0 : s.intent))
+        }), u === X.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, h.default)(o, d, r, null == s ? void 0 : s.intent))
       };
       (0, v.shouldShowMembershipVerificationGate)(t, [k.default, w.default, F.default, U.default]) ? (0, p.openMemberVerificationModal)(t, a) : a()
     })
-  }) : (0, _.isActivityInTextSupportedForChannelType)(a) && u === X.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, O.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, h.default)(o, d, r, null == s ? void 0 : s.intent)), (function(e, t) {
+  }) : (0, _.isActivityInTextSupportedForChannelType)(a) && u === X.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, h.default)(o, d, r, null == s ? void 0 : s.intent)), (function(e, t) {
     let {
       type: n
     } = e, {
@@ -123,7 +123,7 @@ function ee(e) {
     } = null != t ? t : {}, a = n === K.ChannelTypes.GUILD_STAGE_VOICE, o = {
       navigationReplace: !0
     };
-    return null != s && (o.welcomeModalChannelId = s), a && (o.state = Q.STAGE_INVITE_STATE_KEY), null != r && (o.guildScheduledEventId = r.id), e => null != i ? i(e, o, R.default.INVITE_ACCEPT) : (0, O.transitionTo)(e, o, R.default.INVITE_ACCEPT)
+    return null != s && (o.welcomeModalChannelId = s), a && (o.state = Q.STAGE_INVITE_STATE_KEY), null != r && (o.guildScheduledEventId = r.id), e => null != i ? i(e, o, R.default.INVITE_ACCEPT) : (0, D.transitionTo)(e, o, R.default.INVITE_ACCEPT)
   })(i, s)(f)
 }
 let et = function(e, t) {
@@ -408,7 +408,7 @@ var ei = {
       return
     }
     if (null != a && (null === (i = a.features) || void 0 === i ? void 0 : i.includes(K.GuildFeatures.COMMUNITY)) && (null === (s = a.features) || void 0 === s ? void 0 : s.includes(K.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)) && !a.features.includes(K.GuildFeatures.PREVIEW_ENABLED)) {
-      (0, O.transitionTo)(K.Routes.GUILD_MEMBER_VERIFICATION(a.id, e.code));
+      (0, D.transitionTo)(K.Routes.GUILD_MEMBER_VERIFICATION(a.id, e.code));
       return
     }
     if (null == r) return;

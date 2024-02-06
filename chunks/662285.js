@@ -25,19 +25,19 @@ var a, o, l = n("917351"),
   y = n("800762"),
   N = n("599110"),
   R = n("550368"),
-  O = n("718517"),
-  D = n("613691"),
+  D = n("718517"),
+  O = n("613691"),
   P = n("450484"),
   b = n("49111");
 let L = m.default.get(b.PlatformTypes.SPOTIFY),
   M = "hm://pusher/v1/connections/",
-  U = 30 * O.default.Millis.SECOND,
-  k = 30 * O.default.Millis.SECOND,
-  w = 5 * O.default.Millis.MINUTE,
-  V = 5 * O.default.Millis.SECOND,
-  G = 1.5 * O.default.Millis.SECOND,
-  F = 1 * O.default.Millis.MINUTE,
-  x = 3 * O.default.Millis.SECOND;
+  U = 30 * D.default.Millis.SECOND,
+  k = 30 * D.default.Millis.SECOND,
+  w = 5 * D.default.Millis.MINUTE,
+  V = 5 * D.default.Millis.SECOND,
+  G = 1.5 * D.default.Millis.SECOND,
+  F = 1 * D.default.Millis.MINUTE,
+  x = 3 * D.default.Millis.SECOND;
 (o = a || (a = {})).PLAYER_STATE_CHANGED = "PLAYER_STATE_CHANGED", o.DEVICE_STATE_CHANGED = "DEVICE_STATE_CHANGED";
 let B = {
     MESSAGE: "message",
@@ -113,7 +113,7 @@ class es {
     })))
   }
   handleOpen() {
-    Y.info("WS Connected"), this.backoff.succeed(), this.pingInterval.start(U, () => this.ping()), (0, D.getProfile)(this.accountId, this.accessToken), (0, D.getDevices)(this.accountId, this.accessToken)
+    Y.info("WS Connected"), this.backoff.succeed(), this.pingInterval.start(U, () => this.ping()), (0, O.getProfile)(this.accountId, this.accessToken), (0, O.getDevices)(this.accountId, this.accessToken)
   }
   handleMessage(e) {
     let {
@@ -127,7 +127,7 @@ class es {
     } = JSON.parse(t);
     switch (n) {
       case B.MESSAGE:
-        if ("string" == typeof i && i.startsWith(M)) this.connectionId = decodeURIComponent(i.split(M)[1]), (0, D.subscribePlayerStateNotifications)(this.accountId, this.accessToken, this.connectionId);
+        if ("string" == typeof i && i.startsWith(M)) this.connectionId = decodeURIComponent(i.split(M)[1]), (0, O.subscribePlayerStateNotifications)(this.accountId, this.accessToken, this.connectionId);
         else if (Array.isArray(s)) {
           for (let {
               events: e
@@ -162,7 +162,7 @@ class es {
   }
   constructor(e, t) {
     this._requestedDisconnect = !1, this._requestedConnect = !1, this.handleDeviceStateChange = u.throttle(() => {
-      (0, D.getDevices)(this.accountId, this.accessToken), eh(this.accountId, this.accessToken)
+      (0, O.getDevices)(this.accountId, this.accessToken), eh(this.accountId, this.accessToken)
     }, x), this.accountId = e, this.accessToken = t, this.pingInterval = new _.Interval, this.backoff = new d.default(void 0, F), this.connect()
   }
 }
@@ -198,7 +198,7 @@ function el(e, t, n) {
     c = Math.max(0, Date.now() - d),
     f = !1,
     _ = Z[r.accountId];
-  null != _ && !1 === _.repeat && (f = null), (0, D.play)(r.accountId, r.accessToken, o, {
+  null != _ && !1 === _.repeat && (f = null), (0, O.play)(r.accountId, r.accessToken, o, {
     position: +c,
     deviceId: a.id,
     repeat: f
@@ -227,7 +227,7 @@ function eu() {
   let {
     socket: n
   } = t, i = Z[n.accountId];
-  null != i && i.track.id === e && (0, D.pause)(n.accountId, n.accessToken)
+  null != i && i.track.id === e && (0, O.pause)(n.accountId, n.accessToken)
 }
 
 function ed() {
@@ -252,7 +252,7 @@ function ed() {
       if (null != n.accessToken) {
         er(n.id, n.accessToken);
         continue
-      }(0, D.getAccessToken)(n.id)
+      }(0, O.getAccessToken)(n.id)
     } return s
 }
 
@@ -263,7 +263,7 @@ function ec() {
   let {
     socket: t
   } = e;
-  J = !0, (0, D.pause)(t.accountId, t.accessToken), N.default.track(b.AnalyticEvents.SPOTIFY_AUTO_PAUSED), Y.info("Playback auto paused")
+  J = !0, (0, O.pause)(t.accountId, t.accessToken), N.default.track(b.AnalyticEvents.SPOTIFY_AUTO_PAUSED), Y.info("Playback auto paused")
 }
 
 function ef(e) {
@@ -308,7 +308,7 @@ function e_(e, t, n) {
       is_active: !0
     }), null != d && [P.SpotifyResourceTypes.PLAYLIST, P.SpotifyResourceTypes.ALBUM].includes(d.type)) {
     let n = em.getPlayerState(e);
-    s = null != n && null != n.context && n.context.uri === d.uri ? Promise.resolve(n.context) : d.type === P.SpotifyResourceTypes.ALBUM ? Promise.resolve(d) : D.SpotifyAPI.get(e, t, {
+    s = null != n && null != n.context && n.context.uri === d.uri ? Promise.resolve(n.context) : d.type === P.SpotifyResourceTypes.ALBUM ? Promise.resolve(d) : O.SpotifyAPI.get(e, t, {
       url: d.href
     }).then(e => {
       let {
@@ -336,7 +336,7 @@ function e_(e, t, n) {
 }
 
 function eh(e, t) {
-  return D.SpotifyAPI.get(e, t, {
+  return O.SpotifyAPI.get(e, t, {
     url: P.SpotifyEndpoints.PLAYER,
     onlyRetryOnAuthorizationErrors: !0
   }).then(n => {
@@ -363,7 +363,7 @@ class eg extends c.default.Store {
         party: a
       } = n, o = null != i && s.trackId !== i, l = null != r && s.startTime !== r.start;
       return o || l ? el(t, n, !1) : null != a && a.id !== s.partyId && (s.partyId = a.id, !0)
-    })()), (0, D.fetchIsSpotifyProtocolRegistered)()
+    })()), (0, O.fetchIsSpotifyProtocolRegistered)()
   }
   hasConnectedAccount() {
     return Object.keys(X).length > 0
@@ -554,7 +554,7 @@ let em = new eg(h.default, {
       party: u
     } = n;
     if (null == l || null == u || null == u.id || !(0, P.isSpotifyParty)(u.id)) return !1;
-    null != i && (t = i.context_uri), null != s && eu(), (0, D.play)(a.accountId, a.accessToken, l, {
+    null != i && (t = i.context_uri), null != s && eu(), (0, O.play)(a.accountId, a.accessToken, l, {
       contextUri: t,
       deviceId: o.id
     }), Y.info("Play started: ".concat(a.accountId, " playing ").concat(l, " on ").concat(o.name))

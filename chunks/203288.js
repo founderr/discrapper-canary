@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return D
   }
 }), n("222007");
 var i = n("316693"),
@@ -126,7 +126,7 @@ class R extends s.default.Store {
   }
 }
 R.displayName = "GatedChannelStore";
-var O = new R(r.default, {
+var D = new R(r.default, {
   CONNECTION_OPEN: C,
   OVERLAY_INITIALIZE: C,
   CACHE_LOADED_LAZY: C,

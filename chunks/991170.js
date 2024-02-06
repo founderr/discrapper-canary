@@ -38,7 +38,7 @@ function R(e, t, n) {
   return e
 }
 
-function O(e, t, n, i) {
+function D(e, t, n, i) {
   let s = i[e];
   if (null != s && (n = r.default.remove(n, s.deny), n = r.default.add(n, s.allow)), null != t) {
     let e = v,
@@ -59,7 +59,7 @@ function O(e, t, n, i) {
   return n
 }
 
-function D(e) {
+function O(e) {
   let {
     userId: t,
     member: n,
@@ -70,7 +70,7 @@ function D(e) {
     excludeGuildPermissions: l = !1,
     lurkerPermissionsMask: u = I
   } = e;
-  if (l) return O(i.id, n, v, s);
+  if (l) return D(i.id, n, v, s);
   a = null != a ? {
     ...i.roles,
     ...a
@@ -82,7 +82,7 @@ function D(e) {
       let t = a[n.roles[e]];
       void 0 !== t && (f = r.default.add(f, t.permissions))
     }
-  return f = r.default.has(f, p.Permissions.ADMINISTRATOR) ? S : O(i.id, n, f, s), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (f = r.default.filter(f, u)), g.default.isCurrentUserGuest(i.id) && (f = r.default.filter(f, C)), R(f, i, t, o)
+  return f = r.default.has(f, p.Permissions.ADMINISTRATOR) ? S : D(i.id, n, f, s), (d.default.isLurking(i.id) || (null == n ? void 0 : n.isPending)) && (f = r.default.filter(f, u)), g.default.isCurrentUserGuest(i.id) && (f = r.default.filter(f, C)), R(f, i, t, o)
 }
 
 function P(e) {
@@ -124,7 +124,7 @@ function P(e) {
   if (null == s) return v;
   if (!(p === (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.default.isViewingRoles(s.id)) && s.isOwner(p)) return R(S, s, p, d);
   let C = g.default.getMember(s.id, p);
-  return D({
+  return O({
     userId: p,
     member: C,
     guild: s,
@@ -221,7 +221,7 @@ var U = {
       joinedAt: new Date().toISOString(),
       communicationDisabledUntil: null
     };
-    return D({
+    return O({
       userId: "",
       member: c,
       guild: n,

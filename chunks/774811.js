@@ -29,8 +29,8 @@ var i = n("37983"),
   y = n("36694"),
   N = n("578706"),
   R = n("945330"),
-  O = n("178814"),
-  D = n("782340"),
+  D = n("178814"),
+  O = n("782340"),
   P = n("257260");
 
 function b(e) {
@@ -46,12 +46,12 @@ let L = s.forwardRef(function(e, t) {
       closeOnSelect: g = !0,
       onOpen: E,
       onClose: p,
-      placeholder: T = D.default.Messages.SELECT,
+      placeholder: T = O.default.Messages.SELECT,
       wrapperClassName: y,
       className: N,
       isDisabled: L = !1,
       maxVisibleItems: M = 7,
-      look: k = O.SelectLooks.FILLED,
+      look: k = D.SelectLooks.FILLED,
       autoFocus: w = !1,
       popoutPosition: V = "bottom",
       filter: x = !0,
@@ -147,14 +147,14 @@ let L = s.forwardRef(function(e, t) {
       if (null == t) return [];
       let n = Array.isArray(t) ? t : [t];
       return n.map(t => "object" == typeof t && (null == t || "value" in t) ? t : e.find(e => e.value === t)).filter(Boolean)
-    })(ep, r), [ep, r]), eI = s.useMemo(() => eT.map(e => e.value), [eT]), eC = eT[eT.length - 1], eA = (0, I.default)(eC), ey = s.useId(), eN = s.useId(), eR = s.useId(), eO = s.useCallback(e => {
+    })(ep, r), [ep, r]), eI = s.useMemo(() => eT.map(e => e.value), [eT]), eC = eT[eT.length - 1], eA = (0, I.default)(eC), ey = s.useId(), eN = s.useId(), eR = s.useId(), eD = s.useCallback(e => {
       ed !== e && !L && (ec(e), e ? null == E || E() : null == p || p())
-    }, [L, p, E, ed]), eD = s.useCallback(e => {
-      ed && !e && eO(!1)
-    }, [eO, ed]), eP = (0, S.useIsVisible)(eD);
+    }, [L, p, E, ed]), eO = s.useCallback(e => {
+      ed && !e && eD(!1)
+    }, [eD, ed]), eP = (0, S.useIsVisible)(eO);
     s.useImperativeHandle(t, () => ({
       close() {
-        eO(!1)
+        eD(!1)
       }
     }));
     let eb = s.useCallback((e, t) => {
@@ -241,8 +241,8 @@ let L = s.forwardRef(function(e, t) {
           null === (a = eo.current) || void 0 === a || a.focus()
         }
       } else l(s);
-      eu(null), (!h || g) && eO(!1), eg(!1)
-    }, [n, ep, h, g, l, r, eO]);
+      eu(null), (!h || g) && eD(!1), eg(!1)
+    }, [n, ep, h, g, l, r, eD]);
     s.useLayoutEffect(() => {
       if (w) {
         var e;
@@ -250,18 +250,18 @@ let L = s.forwardRef(function(e, t) {
       }
     }, [w]);
     let eG = s.useCallback(() => {
-        e_(""), eV(null), eO(!0)
-      }, [eV, eO]),
+        e_(""), eV(null), eD(!0)
+      }, [eV, eD]),
       eF = s.useCallback(e => {
         switch (e.key) {
           case "Escape":
-            ed && (e.stopPropagation(), eO(!1));
+            ed && (e.stopPropagation(), eD(!1));
             break;
           case "ArrowDown":
           case "ArrowUp":
-            eO(!0)
+            eD(!0)
         }
-      }, [eO, ed]),
+      }, [eD, ed]),
       ex = ep;
     eh && null != ef && !1 !== x && (ex = "function" == typeof x ? x(ep, ef) : (0, o.matchSorter)(ep, ef, {
       keys: ["label"]
@@ -278,7 +278,7 @@ let L = s.forwardRef(function(e, t) {
         spacing: 0,
         animation: m.Popout.Animation.NONE,
         shouldShow: ed,
-        onRequestClose: () => eO(!1),
+        onRequestClose: () => eD(!1),
         layerContext: $.popoutLayerContext,
         renderPopout: e => {
           let {
@@ -326,7 +326,7 @@ let L = s.forwardRef(function(e, t) {
             },
             onBlur: e => {
               var t, n, i;
-              !((null === (t = eE.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (null === (i = em.current) || void 0 === i ? void 0 : null === (n = i.getScrollerNode()) || void 0 === n ? void 0 : n.contains(e.relatedTarget))) && (!h && null != eC && e_(eC.label), eg(!1), eO(!1), null == J || J(e))
+              !((null === (t = eE.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (null === (i = em.current) || void 0 === i ? void 0 : null === (n = i.getScrollerNode()) || void 0 === n ? void 0 : n.contains(e.relatedTarget))) && (!h && null != eC && e_(eC.label), eg(!1), eD(!1), null == J || J(e))
             },
             children: [(0, i.jsx)(f.FocusRing, {
               ringTarget: er,
@@ -334,7 +334,7 @@ let L = s.forwardRef(function(e, t) {
               offset: 4,
               children: (0, i.jsx)("div", {
                 onClick: L ? void 0 : e => {
-                  e.stopPropagation(), e.preventDefault(), e_(""), eO(!0)
+                  e.stopPropagation(), e.preventDefault(), e_(""), eD(!0)
                 },
                 onMouseDown: e => {
                   e.preventDefault()
@@ -344,7 +344,7 @@ let L = s.forwardRef(function(e, t) {
                 },
                 className: a(P.select, P.searchable, N, {
                   [P.open]: r,
-                  [P.lookFilled]: k === O.SelectLooks.FILLED,
+                  [P.lookFilled]: k === D.SelectLooks.FILLED,
                   [P.disabled]: L,
                   [P.multi]: h,
                   [P.selectPositionTop]: "top" === o
@@ -375,7 +375,7 @@ let L = s.forwardRef(function(e, t) {
                       null === (e = eo.current) || void 0 === e || e.setSelectionRange(0, null !== (t = null == ef ? void 0 : ef.length) && void 0 !== t ? t : 0)
                     },
                     onChange: e => {
-                      eS(e), null == Y || Y(e), e_(e), eO(!0), eg(!0)
+                      eS(e), null == Y || Y(e), e_(e), eD(!0), eg(!0)
                     },
                     onKeyDown: e => {
                       var t;
@@ -401,7 +401,7 @@ let L = s.forwardRef(function(e, t) {
               }),
               ref: ee,
               children: [d && (null != ef && "" !== ef || eT.length > 0) ? (0, i.jsx)(c.Clickable, {
-                "aria-label": D.default.Messages.CLEAR,
+                "aria-label": O.default.Messages.CLEAR,
                 "aria-controls": eR,
                 onClick: eG,
                 children: (0, i.jsx)(R.default, {
@@ -413,10 +413,10 @@ let L = s.forwardRef(function(e, t) {
                 className: a({
                   [P.iconsCenter]: Z
                 }),
-                "aria-label": ed ? D.default.Messages.CLOSE : D.default.Messages.OPEN,
+                "aria-label": ed ? O.default.Messages.CLOSE : O.default.Messages.OPEN,
                 "aria-controls": eR,
                 onClick: () => {
-                  eO(!ed)
+                  eD(!ed)
                 },
                 children: (0, i.jsx)(l, {
                   className: P.dropdownIcon
@@ -474,7 +474,7 @@ function U(e) {
     children: (0, i.jsx)(p.Text, {
       color: "text-muted",
       variant: "text-md/normal",
-      children: D.default.Messages.NO_RESULTS_FOUND
+      children: O.default.Messages.NO_RESULTS_FOUND
     })
   }) : (0, i.jsx)(u.ListNavigatorContainer, {
     children: e => {
@@ -869,7 +869,7 @@ function B(e) {
         className: P.suffix,
         children: u
       }), (0, i.jsx)(h.HiddenVisually, {
-        children: D.default.Messages.REMOVE
+        children: O.default.Messages.REMOVE
       }), (0, i.jsx)(R.default, {
         className: P.deleteOptionIcon,
         width: 14,

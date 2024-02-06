@@ -33,7 +33,7 @@ let u = s.memo(s.forwardRef((e, t) => {
     fade: y = !1,
     initialScrollTop: N = 0,
     role: R = "list"
-  } = e, [O, D] = s.useState(-1), [P, b] = s.useState(-1), L = s.useRef(null), M = s.useRef(0), U = s.useRef(-1);
+  } = e, [D, O] = s.useState(-1), [P, b] = s.useState(-1), L = s.useRef(null), M = s.useRef(0), U = s.useRef(-1);
   s.useLayoutEffect(() => {
     var e;
     let t = null === (e = L.current) || void 0 === e ? void 0 : e.getScrollerNode();
@@ -113,7 +113,7 @@ let u = s.memo(s.forwardRef((e, t) => {
       offsetHeight: i,
       scrollTop: s
     } = t;
-    b(i), D(s), null == r || r({
+    b(i), O(s), null == r || r({
       width: n,
       height: i
     })
@@ -135,7 +135,7 @@ let u = s.memo(s.forwardRef((e, t) => {
       let {
         scrollTop: e
       } = t;
-      M.current = e, null == n || n(e), D(e)
+      M.current = e, null == n || n(e), O(e)
     }))
   }, [n]);
   s.useImperativeHandle(t, () => ({
@@ -218,16 +218,16 @@ let u = s.memo(s.forwardRef((e, t) => {
     visibleItems: z,
     listOffset: q
   } = s.useMemo(() => {
-    if (-1 === P || -1 === O) return {
+    if (-1 === P || -1 === D) return {
       visibleItems: null,
       listOffset: 0
     };
-    let e = O + P,
+    let e = D + P,
       t = 0,
       n = u[0],
       i = [],
       s = k();
-    null != h && O < s ? i.push(h()) : n += s;
+    null != h && D < s ? i.push(h()) : n += s;
     for (let s = 0; s < j.length; s++) {
       let r = j[s],
         {
@@ -242,20 +242,20 @@ let u = s.memo(s.forwardRef((e, t) => {
       let h = V(s),
         g = G(s),
         m = F(s);
-      if (l <= O) n = l;
-      else if (l > O && o < e) {
+      if (l <= D) n = l;
+      else if (l > D && o < e) {
         t = a;
         let r = [],
           l = 0,
           E = 0,
           p = o + h,
-          v = p >= O && o <= e;
+          v = p >= D && o <= e;
         for (null != f && (I || v) && r.push(f(s)), !v && !I && (n += h); l + h + g < u - m;) {
           let i = w(s, E, t),
             a = o + l + h,
             u = a + i;
-          if (u <= O) n = u - (I ? h : 0);
-          else if (u > O && a < e) r.push(d(t, {
+          if (u <= D) n = u - (I ? h : 0);
+          else if (u > D && a < e) r.push(d(t, {
             sectionIndex: s,
             sectionRowIndex: E
           }));
@@ -264,7 +264,7 @@ let u = s.memo(s.forwardRef((e, t) => {
         }
         let S = o + h + l,
           T = S + g,
-          C = T >= O && S <= e;
+          C = T >= D && S <= e;
         null != _ && C && r.push(_(s)), null != c ? i.push(c(s, r)) : i = [...i, ...r]
       } else break
     }
@@ -272,7 +272,7 @@ let u = s.memo(s.forwardRef((e, t) => {
       visibleItems: i,
       listOffset: n
     }
-  }, [w, G, V, F, u, d, c, _, f, O, j, I, h, k, P]), X = s.useMemo(() => {
+  }, [w, G, V, F, u, d, c, _, f, D, j, I, h, k, P]), X = s.useMemo(() => {
     var e, t, n;
     return {
       top: q,

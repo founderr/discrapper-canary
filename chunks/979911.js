@@ -35,8 +35,8 @@ __OVERLAY__ && (A = n("901165").default), (r = i || (i = {})).OVERLAY_UNLOCKED =
 let y = e => 0 === e.type,
   N = e => 1 === e.type,
   R = e => y(e) ? e.message.nonce : N(e) ? e.message.messageId : e.message.data.id,
-  O = [1 * p.default.Millis.SECOND, 5 * p.default.Millis.MINUTE];
-class D extends S.default {
+  D = [1 * p.default.Millis.SECOND, 5 * p.default.Millis.MINUTE];
+class O extends S.default {
   isFull() {
     return this.queue.length >= this.maxSize
   }
@@ -57,7 +57,7 @@ class D extends S.default {
     null === (t = this.requests.get(e)) || void 0 === t || t.abort(), this.requests.delete(e), this.cancelQueueMetricTimers(e)
   }
   startQueueMetricTimers(e) {
-    let t = O.map(e => setTimeout(() => {
+    let t = D.map(e => setTimeout(() => {
       (0, f.trackWithMetadata)(C.AnalyticEvents.SEND_MESSAGE_QUEUED, {
         queued_duration_ms: e
       })
@@ -215,4 +215,4 @@ class D extends S.default {
     super(new _.default("MessageQueue")), this.maxSize = e, this.requests = new Map, this.analyticsTimeouts = new Map
   }
 }
-var P = new D
+var P = new O

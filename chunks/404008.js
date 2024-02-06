@@ -13,13 +13,13 @@ n.r(t), n.d(t, {
     return R
   },
   isChannelFull: function() {
-    return O
+    return D
   },
   sanitizeGuildTextChannelName: function() {
     return r.default
   },
   getBitrateLimit: function() {
-    return D
+    return O
   },
   computeSummarizedVoiceUsers: function() {
     return P
@@ -111,7 +111,7 @@ function R(e) {
   }]
 }
 
-function O(e, t, n) {
+function D(e, t, n) {
   var i, s;
   let r = e.getGuildId(),
     o = n.getGuild(r),
@@ -126,7 +126,7 @@ function O(e, t, n) {
   return g || E && !_
 }
 
-function D(e, t) {
+function O(e, t) {
   return t.isGuildStageVoice() ? m.BITRATE_DEFAULT : null == e ? m.BITRATE_MAX : Math.max(e.hasFeature(m.GuildFeatures.VIP_REGIONS) ? E.BoostedGuildFeatures[m.BoostedGuildTiers.TIER_3].limits.bitrate : m.BITRATE_MAX, E.BoostedGuildFeatures[e.premiumTier].limits.bitrate)
 }
 

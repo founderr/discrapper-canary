@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return D
   }
 }), n("222007"), n("702976");
 var i = n("446674"),
@@ -379,4 +379,4 @@ let R = new N(s.default, {
     t.length > 0 && (A.clipsEducationState.numberOfGamesLaunchedSinceDismissal += 1)
   }
 });
-var O = R
+var D = R

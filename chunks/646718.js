@@ -163,7 +163,7 @@ n.r(t), n.d(t, {
     return _
   },
   PremiumUserLimits: function() {
-    return eO
+    return eD
   },
   BoostingUpsellAction: function() {
     return m
@@ -172,7 +172,7 @@ n.r(t), n.d(t, {
     return E
   },
   LegacyPricingCountries: function() {
-    return eD
+    return eO
   },
   LegacySeasonalGiftStyles: function() {
     return eP
@@ -184,7 +184,7 @@ n.r(t), n.d(t, {
     return eL
   }
 }), n("222007");
-var i, s, r, a, o, l, u, d, c, f, _, h, g, m, E, p, v, S, T, I, C, A, y, N, R, O, D, P, b, L, M = n("866227"),
+var i, s, r, a, o, l, u, d, c, f, _, h, g, m, E, p, v, S, T, I, C, A, y, N, R, D, O, P, b, L, M = n("866227"),
   U = n.n(M),
   k = n("78345"),
   w = n("49111"),
@@ -531,8 +531,8 @@ let eR = Object.freeze({
   high_streaming_quality: 2,
   mid_streaming_quality: 1
 });
-(R = f || (f = {}))[R.UserSettings = 0] = "UserSettings", R[R.ApplicationStoreHome = 1] = "ApplicationStoreHome", (O = _ || (_ = {})).USER_NOT_VERIFIED = "user_not_verified", O.NO_CODE_BODY = "no_code_body", O.NO_PROMOTION = "no_promotion", O.CODE_CLAIMED = "code_claimed", O.EXISTING_SUBSCRIBER = "existing_subscriber", O.PREVIOUS_SUBSCRIBER = "previous_subscriber", O.BLOCKED_PAYMENT = "blocked_payment";
-let eO = Object.freeze({
+(R = f || (f = {}))[R.UserSettings = 0] = "UserSettings", R[R.ApplicationStoreHome = 1] = "ApplicationStoreHome", (D = _ || (_ = {})).USER_NOT_VERIFIED = "user_not_verified", D.NO_CODE_BODY = "no_code_body", D.NO_PROMOTION = "no_promotion", D.CODE_CLAIMED = "code_claimed", D.EXISTING_SUBSCRIBER = "existing_subscriber", D.PREVIOUS_SUBSCRIBER = "previous_subscriber", D.BLOCKED_PAYMENT = "blocked_payment";
+let eD = Object.freeze({
   3: {
     fileSize: eS
   },
@@ -543,8 +543,8 @@ let eO = Object.freeze({
     fileSize: 524288e3
   }
 });
-(D = h || (h = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", D.HELPER_COLLAPSED = "helper_collapsed", D.HELPER_UNCOLLAPSED = "helper_uncollapsed", D.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", D.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", D.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", D.HELPER_DISMISSED = "premium_feature_helper_dismissed", D.HELPER_RENDERED = "premium_feature_helper_rendered", (P = g || (g = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", P.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", P.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", P.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", P.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", P.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", P.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", P.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", P.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", P.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", P.BOOST_INTRO_VIEWED = "boost_intro_viewed", P.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (b = m || (m = {})).BOOST = "boost", b.DISMISS = "dismiss", (L = E || (E = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", L.BADGE_CLICKED = "share_nitro_badge_clicked", L.FLOW_STARTED = "share_nitro_flow_started", L.FLOW_COMPLETED = "share_nitro_flow_completed";
-let eD = new Set(["PL", "TR"]),
+(O = h || (h = {})).EXPLORE_ALL_PERKS_CLICKED = "explore_all_perks_clicked", O.HELPER_COLLAPSED = "helper_collapsed", O.HELPER_UNCOLLAPSED = "helper_uncollapsed", O.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked", O.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked", O.SERVER_BOOSTS_CLICKED = "server_boosts_clicked", O.HELPER_DISMISSED = "premium_feature_helper_dismissed", O.HELPER_RENDERED = "premium_feature_helper_rendered", (P = g || (g = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started", P.EMOJI_INTRO_VIEWED = "emoji_intro_viewed", P.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed", P.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started", P.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = "custom_profile_avatar_intro_viewed", P.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = "custom_profile_avatar_decorations_viewed", P.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = "custom_profile_banner_intro_viewed", P.CUSTOM_PROFILE_THEME_INTRO_VIEWED = "custom_profile_theme_intro_viewed", P.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed", P.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started", P.BOOST_INTRO_VIEWED = "boost_intro_viewed", P.BOOST_PROMPT_VIEWED = "boost_prompt_viewed", (b = m || (m = {})).BOOST = "boost", b.DISMISS = "dismiss", (L = E || (E = {})).BADGE_TOOLTIP_VIEWED = "share_nitro_bagde_tooltip_viewed", L.BADGE_CLICKED = "share_nitro_badge_clicked", L.FLOW_STARTED = "share_nitro_flow_started", L.FLOW_COMPLETED = "share_nitro_flow_completed";
+let eO = new Set(["PL", "TR"]),
   eP = [k.PremiumGiftStyles.SNOWGLOBE, k.PremiumGiftStyles.BOX, k.PremiumGiftStyles.CUP],
   eb = [k.PremiumGiftStyles.SEASONAL_STANDARD_BOX, k.PremiumGiftStyles.SEASONAL_CAKE, k.PremiumGiftStyles.SEASONAL_COFFEE, k.PremiumGiftStyles.SEASONAL_CHEST],
   eL = eb.concat(eP)

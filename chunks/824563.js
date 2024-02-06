@@ -125,15 +125,15 @@ function R(e) {
   }
 }
 
-function O(e, t) {
+function D(e, t) {
   if (t === c.default.getId()) return !1;
   let n = g[t];
   if (null == n || null == n[e]) return !1;
   delete n[e], 0 === Object.keys(n).length && delete g[t], A(t)
 }
 
-function D(e) {
-  for (let t of Object.keys(g)) O(e, t)
+function O(e) {
+  for (let t of Object.keys(g)) D(e, t)
 }
 class P extends o.default.Store {
   initialize() {
@@ -291,14 +291,14 @@ var b = new P(l.default, {
     let {
       guild: t
     } = e;
-    D(t.id)
+    O(t.id)
   },
   GUILD_MEMBER_REMOVE: function(e) {
     let {
       guildId: t,
       user: n
     } = e;
-    return O(t, n.id)
+    return D(t, n.id)
   },
   PRESENCE_UPDATES: function(e) {
     let {
@@ -325,7 +325,7 @@ var b = new P(l.default, {
     let {
       presences: t
     } = e;
-    D(_.ME), t.forEach(e => {
+    O(_.ME), t.forEach(e => {
       let {
         user: t,
         status: n,

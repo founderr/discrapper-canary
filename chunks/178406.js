@@ -31,13 +31,13 @@ function I() {
   return !1
 }
 
-function f(e) {
+function E(e) {
   let t = !1,
     r = M(e.guildId);
   return "GUILD_ROLE_DELETE" === e.type && (t = r.removeRoleFromSearchState(e.roleId)), r.rebuildAllMembers() || t
 }
 
-function E(e) {
+function f(e) {
   let {
     guildId: t,
     userId: r
@@ -205,8 +205,8 @@ let p = new b(n.default, {
     } = e, i = M(t);
     return i.removeMember(r.id)
   },
-  GUILD_ROLE_UPDATE: f,
-  GUILD_ROLE_DELETE: f,
+  GUILD_ROLE_UPDATE: E,
+  GUILD_ROLE_DELETE: E,
   GUILD_MEMBER_PROFILE_UPDATE: function(e) {
     let {
       guildId: t,
@@ -214,8 +214,8 @@ let p = new b(n.default, {
     } = e, i = M(t);
     return i.updateMembersByMemberIds([r.user.id])
   },
-  GUILD_ROLE_MEMBER_REMOVE: E,
-  GUILD_ROLE_MEMBER_ADD: E,
+  GUILD_ROLE_MEMBER_REMOVE: f,
+  GUILD_ROLE_MEMBER_ADD: f,
   THREAD_MEMBER_LIST_UPDATE: function(e) {
     let {
       guildId: t,
@@ -327,7 +327,7 @@ let p = new b(n.default, {
       total_result_count: c
     } = e, S = M(d), {
       memberIds: I,
-      memberSupplementals: f
+      memberSupplementals: E
     } = _.reduce((e, t) => {
       let {
         member: r,
@@ -344,7 +344,7 @@ let p = new b(n.default, {
     }, {
       memberIds: [],
       memberSupplementals: []
-    }), E = (0, o.syncMemberSupplemental)(d, f);
+    }), f = (0, o.syncMemberSupplemental)(d, E);
     (0, m.registerFetchedSupplementals)(d, I);
     let g = S.updateSearchedMembersByMemberIds(I);
     _.length > 0 && (a = _[0], l = _[_.length - 1]);
@@ -361,7 +361,7 @@ let p = new b(n.default, {
         })
       }
     }, !1);
-    return E || g || b
+    return f || g || b
   },
   MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: function(e) {
     let {

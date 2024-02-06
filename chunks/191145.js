@@ -29,8 +29,8 @@ var i = n("627445"),
 let y = new d.default("ChannelRTCStore"),
   N = Object.freeze([]),
   R = [],
-  O = {},
   D = {},
+  O = {},
   P = {},
   b = {},
   L = {},
@@ -41,8 +41,8 @@ let y = new d.default("ChannelRTCStore"),
   V = {};
 
 function G(e) {
-  let t = O[e];
-  return null == t && (t = new I.default(e), O[e] = t), t
+  let t = D[e];
+  return null == t && (t = new I.default(e), D[e] = t), t
 }
 
 function F(e) {
@@ -92,13 +92,13 @@ function B(e) {
   var t;
   let n = m.default.getChannel(e),
     i = (null == n ? void 0 : n.isDM()) ? C.ParticipantSelectionTypes.AUTO : C.ParticipantSelectionTypes.NONE;
-  return null !== (t = D[e]) && void 0 !== t ? t : [i, C.ParticipantSelectionTypes.NONE]
+  return null !== (t = O[e]) && void 0 !== t ? t : [i, C.ParticipantSelectionTypes.NONE]
 }
 
 function H(e) {
-  let t = D[e];
+  let t = O[e];
   if (null == t) return !1;
-  let [n] = D[e];
+  let [n] = O[e];
   return n !== C.ParticipantSelectionTypes.NONE
 }
 
@@ -122,7 +122,7 @@ function Y(e) {
 function j(e, t) {
   Y(e);
   let n = H(e);
-  null == t ? delete D[e] : D[e] = t;
+  null == t ? delete O[e] : O[e] = t;
   let i = H(e);
   n !== i && P[e].toggleCount++
 }
@@ -132,7 +132,7 @@ function W(e) {
 }
 
 function K(e) {
-  delete O[e], delete D[e], delete b[e], delete L[e]
+  delete D[e], delete O[e], delete b[e], delete L[e]
 }
 
 function z() {

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return N
   },
   AnimatedAvatar: function() {
-    return O
+    return D
   }
 }), n("70102"), n("222007");
 var i = n("37983"),
@@ -144,10 +144,10 @@ function A(e) {
     avatarDecoration: y,
     typingOffset: N,
     specs: R
-  } = e, O = {
+  } = e, D = {
     width: (0, h.getAvatarSize)(n),
     height: (0, h.getAvatarSize)(n)
-  }, D = null == S || T ? void 0 : function(e, t) {
+  }, O = null == S || T ? void 0 : function(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return null != t ? E.default.Messages.LABEL_WITH_ONLINE_STATUS.format({
       label: e,
@@ -235,7 +235,7 @@ function A(e) {
   });
   return null != s || null != r ? (0, i.jsxs)(l.Clickable, {
     className: a(p.wrapper, p.pointer, g),
-    style: O,
+    style: D,
     onClick: s,
     tabIndex: v,
     onContextMenu: u,
@@ -243,17 +243,17 @@ function A(e) {
     onKeyDown: o,
     onMouseEnter: null != d ? d : void 0,
     onMouseLeave: null != c ? c : void 0,
-    "aria-label": D,
+    "aria-label": O,
     "aria-hidden": T,
     children: [t, L]
   }) : (0, i.jsxs)("div", {
     className: a(p.wrapper, g),
-    style: O,
+    style: D,
     onContextMenu: null != u ? u : void 0,
     onMouseEnter: null != d ? d : void 0,
     onMouseLeave: null != c ? c : void 0,
     role: "img",
-    "aria-label": D,
+    "aria-label": O,
     "aria-hidden": T,
     children: [t, L]
   })
@@ -291,14 +291,14 @@ function N(e) {
     statusBackdropColor: S,
     "aria-hidden": C = !1,
     "aria-label": N
-  } = e, R = n !== g.StatusTypes.UNKNOWN ? n : null, O = (0, h.getAvatarSpecs)(s), D = null != R ? Math.ceil((O.status * h.TYPING_WIDTH_RATIO - O.status) / 2) : 0, P = O.size + D, b = (0, d.useStatusFillColor)(R, r);
+  } = e, R = n !== g.StatusTypes.UNKNOWN ? n : null, D = (0, h.getAvatarSpecs)(s), O = null != R ? Math.ceil((D.status * h.TYPING_WIDTH_RATIO - D.status) / 2) : 0, P = D.size + O, b = (0, d.useStatusFillColor)(R, r);
   return (0, i.jsx)(A, {
     ...e,
     ariaLabel: N,
     ariaHidden: C,
     status: R,
-    specs: O,
-    typingOffset: D,
+    specs: D,
+    typingOffset: O,
     children: (0, i.jsxs)("svg", {
       width: P,
       height: P,
@@ -308,8 +308,8 @@ function N(e) {
       children: [(0, i.jsx)("foreignObject", {
         x: 0,
         y: 0,
-        width: O.size,
-        height: O.size,
+        width: D.size,
+        height: D.size,
         mask: "url(#".concat(function(e, t, n, i) {
           if (null == e) return f.MaskIDs.AVATAR_DEFAULT;
           if (i) switch (t) {
@@ -382,19 +382,19 @@ function N(e) {
         text: v ? (0, _.humanizeStatus)(R) : null,
         "aria-label": !1,
         position: "top",
-        spacing: 5 + 1.5 * O.stroke,
+        spacing: 5 + 1.5 * D.stroke,
         children: e => (0, i.jsxs)(i.Fragment, {
-          children: [null != S && I(S, o, O, R), (0, i.jsx)("rect", {
+          children: [null != S && I(S, o, D, R), (0, i.jsx)("rect", {
             ...e,
-            ...T(O, R, o, l),
+            ...T(D, R, o, l),
             fill: b,
             mask: "url(#".concat((0, d.getStatusMask)(R, o, l), ")"),
             className: p.pointerEvents
           }), l ? (0, i.jsx)(u.Dots, {
             ref: m,
-            dotRadius: O.status / 4,
-            x: O.size - 1.375 * O.status - O.offset,
-            y: O.size - O.status / 1.333 - O.offset
+            dotRadius: D.status / 4,
+            x: D.size - 1.375 * D.status - D.offset,
+            y: D.size - D.status / 1.333 - D.offset
           }) : null]
         })
       }) : null]
@@ -415,8 +415,8 @@ function R(e) {
     src: T,
     status: N,
     statusColor: R,
-    statusTooltip: O = !1,
-    statusBackdropColor: D,
+    statusTooltip: D = !1,
+    statusBackdropColor: O,
     "aria-hidden": P = !1,
     "aria-label": b
   } = e, L = (0, d.useStatusFillColor)(N, R), M = s.useId(), U = s.useId(), [k] = s.useState(() => ({
@@ -491,7 +491,7 @@ function R(e) {
           isSpeaking: m
         })
       }), (0, i.jsx)(c.Tooltip, {
-        text: O ? (0, _.humanizeStatus)(N) : null,
+        text: D ? (0, _.humanizeStatus)(N) : null,
         "aria-label": !1,
         position: "top",
         spacing: function(e, t, n) {
@@ -499,13 +499,13 @@ function R(e) {
           return 5 - (n && !i ? 0 : .5 * e) + 1.5 * t
         }(W.status, W.stroke, l, f),
         children: e => (0, i.jsxs)(i.Fragment, {
-          children: [null != D && I(D, l, W, N), (0, i.jsxs)("svg", {
+          children: [null != O && I(O, l, W, N), (0, i.jsxs)("svg", {
             x: X,
             y: Q,
             width: K,
             height: z,
             viewBox: "0 0 ".concat(K, " ").concat(z),
-            className: O ? p.cursorDefault : void 0,
+            className: D ? p.cursorDefault : void 0,
             children: [(0, d.renderStatusMask)(Y, W.status, U), (0, i.jsx)(o.animated.rect, {
               fill: H,
               width: K,
@@ -530,7 +530,7 @@ function R(e) {
     })
   })
 }
-let O = s.memo(function(e) {
+let D = s.memo(function(e) {
   var t, n, r, a, o;
   let {
     statusColor: l,

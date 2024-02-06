@@ -21,14 +21,14 @@ var n = i("37983"),
   g = i("867805"),
   _ = i("476765"),
   S = i("402671"),
-  C = i("159885"),
-  h = i("49111"),
+  h = i("159885"),
+  C = i("49111"),
   T = i("782340"),
   N = i("576643");
 let v = (0, _.uid)(),
   A = d.default.convert.fromCodePoint("1f44f"),
-  y = (0, C.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
-  j = (0, C.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
+  y = (0, h.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+  j = (0, h.cssValueToNumber)(f.default.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
   R = e => {
     let {
       fade: t,
@@ -152,7 +152,7 @@ var M = e => {
       })
     }), o ? (0, n.jsx)("div", {
       onKeyDown: e => {
-        e.keyCode === h.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus())
+        e.keyCode === C.KeyboardKeys.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus())
       },
       children: (0, n.jsx)(O, {
         id: v,

@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return y
   },
   getChattableDefaultChannels: function() {
-    return O
+    return D
   },
   useChattableDefaultChannels: function() {
-    return D
+    return O
   },
   getSelectedRoleIds: function() {
     return P
@@ -173,7 +173,7 @@ function R(e, t) {
   })
 }
 
-function O(e, t) {
+function D(e, t) {
   let n = R(e, t),
     i = a.default.getChannels(e),
     s = i[a.GUILD_SELECTABLE_CHANNELS_KEY],
@@ -186,7 +186,7 @@ function O(e, t) {
   return [r, n]
 }
 
-function D(e, t) {
+function O(e, t) {
   let n = function(e, t) {
       let n = (0, i.useStateFromStores)([a.default], () => a.default.getChannels(e)),
         s = n[a.GUILD_SELECTABLE_CHANNELS_KEY];

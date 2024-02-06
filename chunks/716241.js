@@ -53,9 +53,9 @@ var i = n("917351"),
   y = n("991170"),
   N = n("761932"),
   R = n("49111"),
-  O = n("724210");
+  D = n("724210");
 
-function D(e) {
+function O(e) {
   let t = 0;
   for (let n in e) t += 1;
   return t
@@ -78,12 +78,12 @@ function P(e) {
     guild_num_channels: a + o,
     guild_num_text_channels: a,
     guild_num_voice_channels: o,
-    guild_num_roles: D(n.roles),
+    guild_num_roles: O(n.roles),
     guild_member_num_roles: null != s ? s.roles.length : 0,
     guild_member_perms: String(null !== (t = g.default.getGuildPermissions(n)) && void 0 !== t ? t : y.default.NONE),
     guild_is_vip: n.hasFeature(R.GuildFeatures.VIP_REGIONS),
     is_member: null != s,
-    num_voice_channels_active: D(u)
+    num_voice_channels_active: O(u)
   }
 }
 
@@ -144,7 +144,7 @@ function U(e) {
   let h = {
     ...a,
     ...P(_),
-    ...null != d && null != c && (0, O.isStaticChannelRoute)(c) ? (r = 0, {
+    ...null != d && null != c && (0, D.isStaticChannelRoute)(c) ? (r = 0, {
       channel_static_route: c,
       channel_hidden: !1
     }) : L(f)

@@ -52,10 +52,10 @@ n.r(t), n.d(t, {
     return R
   },
   STREAM_HIGH_QUALITY: function() {
-    return O
+    return D
   },
   FANCY_VOICE_CHANNEL_REACTIONS: function() {
-    return D
+    return O
   },
   INSTALL_PREMIUM_APPLICATIONS: function() {
     return P
@@ -128,8 +128,8 @@ let c = new d("animatedEmojis"),
   y = new d("freeBoosts"),
   N = new d("hostPremiumActivities"),
   R = new d("streamMidQuality"),
-  O = new d("streamHighQuality"),
-  D = new d("fancyVoiceChannelReactions"),
+  D = new d("streamHighQuality"),
+  O = new d("fancyVoiceChannelReactions"),
   P = new d("installPremiumApplications"),
   b = new d("redeemPremiumPerks"),
   L = new d("videoFilterAssets");
@@ -140,8 +140,8 @@ let M = new d("increasedGuildLimit"),
   w = new d("uploadLargeFiles"),
   V = Object.freeze({
     [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [c, f, _, v, L, k, w, I]),
-    [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [c, f, m, E, v, A, R, D, k, w, I]),
-    [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [c, f, _, h, g, m, E, p, v, S, C, A, y, N, R, O, D, P, b, L, M, U, k, w, I, T])
+    [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [c, f, m, E, v, A, R, O, k, w, I]),
+    [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [c, f, _, h, g, m, E, p, v, S, C, A, y, N, R, D, O, P, b, L, M, U, k, w, I, T])
   });
 
 function G(e, t) {

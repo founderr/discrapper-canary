@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return R
   },
   canUseApplicationCommands: function() {
-    return O
+    return D
   },
   DISABLED_BY_DEFAULT_PERMISSION_FLAG: function() {
-    return D
+    return O
   },
   hasAccess: function() {
     return P
@@ -241,7 +241,7 @@ function R(e) {
   return s(e).subtract(1).toString()
 }
 
-function O(e, t, n, i) {
+function D(e, t, n, i) {
   if (n) return !1;
   if (i.isMultiUserDM()) return V(i.guild_id, {
     location: "canUseApplicationCommands"
@@ -255,7 +255,7 @@ function O(e, t, n, i) {
   }) || t.getIntegrations(i.id).length > 0);
   return i.isArchivedLockedThread() ? e.can(u.default.combine(T.Permissions.USE_APPLICATION_COMMANDS, T.Permissions.MANAGE_THREADS), i) : !!(0, _.isReadableType)(i.type) && e.can(u.default.combine(T.Permissions.USE_APPLICATION_COMMANDS, T.Permissions.SEND_MESSAGES), i)
 }
-let D = u.default.deserialize(0);
+let O = u.default.deserialize(0);
 
 function P(e) {
   let {
@@ -273,7 +273,7 @@ function P(e) {
     if ("boolean" == typeof e) return e
   }
   let l = b(i, o, s);
-  return ("boolean" != typeof l || !!l) && (null == a || !u.default.equals(a, D) && t.can(a, n))
+  return ("boolean" != typeof l || !!l) && (null == a || !u.default.equals(a, O) && t.can(a, n))
 }
 
 function b(e, t, n) {

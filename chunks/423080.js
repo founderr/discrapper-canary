@@ -24,8 +24,8 @@ var n = i("37983"),
   g = i("38654"),
   _ = i("319165"),
   S = i("488464"),
-  C = i("998716"),
-  h = i("170183"),
+  h = i("998716"),
+  C = i("170183"),
   T = i("689275"),
   N = i("373469"),
   v = i("546463"),
@@ -99,7 +99,7 @@ function Y(e) {
       }),
       t = Object.values(T.default.getThreadsForGuild(c)).flatMap(e => Object.keys(e));
     return [...e, ...t]
-  }, [c]), m = (0, h.default)(c), I = l.useMemo(() => m.map(e => e.id), [m]), p = (0, u.useStateFromStores)([O.default], () => O.default.getVoiceStates(c), [c]), g = o.flatMap(E, e => {
+  }, [c]), m = (0, C.default)(c), I = l.useMemo(() => m.map(e => e.id), [m]), p = (0, u.useStateFromStores)([O.default], () => O.default.getVoiceStates(c), [c]), g = o.flatMap(E, e => {
     var t;
     if (e === r.afkChannelId) return [];
     let i = null !== (t = p[e]) && void 0 !== t ? t : [];
@@ -111,8 +111,8 @@ function Y(e) {
     })
   }), _ = (0, u.useStateFromStoresArray)([S.default], () => o.flatMap(I, e => {
     if (e === r.afkChannelId) return [];
-    let t = S.default.getMutableParticipants(e, C.StageChannelParticipantNamedIndex.SPEAKER);
-    return t.filter(e => e.type === C.StageChannelParticipantTypes.VOICE).map(e => {
+    let t = S.default.getMutableParticipants(e, h.StageChannelParticipantNamedIndex.SPEAKER);
+    return t.filter(e => e.type === h.StageChannelParticipantTypes.VOICE).map(e => {
       let {
         user: t
       } = e;
@@ -120,7 +120,7 @@ function Y(e) {
     })
   })), M = (0, u.useStateFromStores)([S.default], () => {
     let e = 0;
-    for (let t of I) e += S.default.getParticipantCount(t, C.StageChannelParticipantNamedIndex.AUDIENCE);
+    for (let t of I) e += S.default.getParticipantCount(t, h.StageChannelParticipantNamedIndex.AUDIENCE);
     return e
   }), x = (0, u.useStateFromStoresArray)([N.default], () => N.default.getAllApplicationStreams().filter(e => e.guildId === c).map(e => e.ownerId), [c]), k = (0, V.useIsGamingVoiceActivityEnabled)("Guild Tooltip", !1), H = (0, u.useStateFromStoresArray)([y.default, v.default], () => g.filter(e => y.default.getActivities(e.id, c).some(e => (null == e ? void 0 : e.application_id) != null && null != v.default.getDetectableGame(null == e ? void 0 : e.application_id)))), B = z(P.default, H, c), J = k ? H.map(e => e.id) : [], W = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(c).flatMap(e => Array.from(e.userIds)), [c]), Y = (0, u.useStateFromStoresArray)([R.default], () => W.map(e => R.default.getUser(e)), [W]), Q = (0, u.useStateFromStoresArray)([R.default], () => x.map(e => R.default.getUser(e)), [x]), X = z(b.default, g.filter(e => !x.includes(e.id) && !W.includes(e.id) && !J.includes(e.id)), c);
   let q = (t = c, i = _, s = M, 0 === i.length ? null : (0, n.jsxs)("div", {

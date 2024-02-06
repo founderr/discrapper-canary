@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return O
   }
 }), n("222007"), n("702976"), n("860677");
 var i = n("917351"),
@@ -69,7 +69,7 @@ function R() {
     ...m
   }
 }
-class O extends r.default.Store {
+class D extends r.default.Store {
   initialize() {
     this.waitFor(c.default);
     let e = a.default.get(_);
@@ -136,8 +136,8 @@ class O extends r.default.Store {
     })
   }
 }
-O.displayName = "LibraryApplicationStore";
-var D = new O(o.default, {
+D.displayName = "LibraryApplicationStore";
+var O = new D(o.default, {
   LOGOUT: function() {
     g = !1
   },

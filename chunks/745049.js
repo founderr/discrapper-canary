@@ -43,10 +43,10 @@ n.r(t), n.d(t, {
     return R
   },
   NEW_EVENT_WINDOW_MILLISECONDS: function() {
-    return O
+    return D
   },
   EVENT_STARTING_SOON_WINDOW_MILLISECONDS: function() {
-    return D
+    return O
   },
   ACKED_RECENTLY_WINDOW_DAYS: function() {
     return P
@@ -75,7 +75,7 @@ let A = {
   N = new Set([1, 2]);
 (h = o || (o = {}))[h.EVENT_INFO = 0] = "EVENT_INFO", h[h.RSVP_LIST = 1] = "RSVP_LIST";
 let R = 100,
-  O = 2 * E.default.Millis.DAY,
-  D = 12 * E.default.Millis.HOUR,
+  D = 2 * E.default.Millis.DAY,
+  O = 12 * E.default.Millis.HOUR,
   P = 4;
 (g = l || (l = {})).NEW_EVENT = "Upcoming Event Notice", g.EVENT_STARTING_SOON = "Event Starting Soon Notice", (m = u || (u = {}))[m.UNINTERESTED = 0] = "UNINTERESTED", m[m.INTERESTED = 1] = "INTERESTED"

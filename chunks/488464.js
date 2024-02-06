@@ -33,7 +33,7 @@ let A = "NO_GUILD",
   N = new Set,
   R = {};
 
-function O(e) {
+function D(e) {
   return y.values(null != e ? e : void 0, !0).map(e => {
     let {
       id: t
@@ -42,7 +42,7 @@ function O(e) {
   })
 }
 
-function D(e) {
+function O(e) {
   !N.has(e) && (N.add(e), a(_.default.getMutableGuildChannelsForGuild(e)).values().forEach(e => {
     L(e) && y.set(e.id, e)
   }))
@@ -52,7 +52,7 @@ function P(e) {
   let t = R[e];
   if (null != t) return t;
   let n = _.default.getChannel(e);
-  return null != n && n.isGuildStageVoice() ? (D(n.guild_id), L(n)) ? b(e) : null : null
+  return null != n && n.isGuildStageVoice() ? (O(n.guild_id), L(n)) ? b(e) : null : null
 }
 
 function b(e) {
@@ -65,7 +65,7 @@ function L(e) {
 }
 
 function M(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O();
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D();
   return t.reduce((t, n) => {
     let i = b(n),
       s = e(i);
@@ -77,7 +77,7 @@ function M(e) {
 }
 
 function U(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O();
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D();
   return M(t => t.updateParticipant(e), t)
 }
 
@@ -156,7 +156,7 @@ class Y extends o.default.Store {
     return null !== (i = null === (n = P(e)) || void 0 === n ? void 0 : n.size(t)) && void 0 !== i ? i : 0
   }
   getChannels(e) {
-    return D(null != e ? e : A), y.values(null != e ? e : A)
+    return O(null != e ? e : A), y.values(null != e ? e : A)
   }
   getChannelsVersion() {
     return y.version
@@ -212,7 +212,7 @@ var j = new Y(u.default, {
     let {
       guildId: t
     } = e;
-    if (N.has(t)) return M(e => e.rebuild(), O(t))
+    if (N.has(t)) return M(e => e.rebuild(), D(t))
   },
   RTC_CONNECTION_VIDEO: function(e) {
     let {
@@ -230,7 +230,7 @@ var j = new Y(u.default, {
   GUILD_DELETE: x,
   PASSIVE_UPDATE_V1: function(e) {
     let t = !1;
-    for (let n of O(e.guildId)) t = b(n).rebuild() || t;
+    for (let n of D(e.guildId)) t = b(n).rebuild() || t;
     return t
   }
 })

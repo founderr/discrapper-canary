@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return R
   },
   TooltipContainer: function() {
-    return O
+    return D
   }
 }), n("70102"), n("222007");
 var i, s, r = n("37983"),
@@ -268,7 +268,7 @@ R.Colors = i, R.defaultProps = {
   allowOverflow: !1,
   overflowOnly: !1
 };
-let O = e => {
+let D = e => {
   let {
     children: t,
     className: n,

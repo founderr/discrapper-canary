@@ -37,7 +37,7 @@ async function R(e, t) {
     context: N.AppContext.APP
   })
 }
-async function O(e) {
+async function D(e) {
   var t;
   let n = S.default.getInvite(e.code);
   if (null == n) {
@@ -56,18 +56,18 @@ async function O(e) {
     r = null != s && i.includes(s);
   r ? o.default.transitionToInviteSync(n) : await R(n, e.code)
 }
-let D = {
+let O = {
   skipExtensionCheck: void 0,
   analyticsLocations: []
 };
 
 function P(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D,
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O,
     i = (0, f.findCodedLink)(e),
     {
       skipExtensionCheck: a
     } = t;
-  if (null != i && (i.type === c.CodedLinkType.INVITE || i.type === c.CodedLinkType.EMBEDDED_ACTIVITY_INVITE)) return e => (null == e || e.preventDefault(), O(i), !0);
+  if (null != i && (i.type === c.CodedLinkType.INVITE || i.type === c.CodedLinkType.EMBEDDED_ACTIVITY_INVITE)) return e => (null == e || e.preventDefault(), D(i), !0);
   if (null != i && i.type === c.CodedLinkType.APP_DIRECTORY_PROFILE) return e => {
     var t;
     null == e || e.preventDefault();

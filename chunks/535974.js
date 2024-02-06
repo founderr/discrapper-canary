@@ -29,8 +29,8 @@ let T = {},
   y = 0,
   N = 0,
   R = [],
-  O = [],
   D = [],
+  O = [],
   P = !1;
 
 function b(e) {
@@ -45,10 +45,10 @@ function M(e) {
   return e.type === v.LocalDispatchApplicationStates.INSTALLING || e.type === v.LocalDispatchApplicationStates.UPDATING || e.type === v.LocalDispatchApplicationStates.REPAIRING ? e.readerProgress : null
 }
 let U = r.throttle(function(e) {
-    O = (O = [{
+    D = (D = [{
       bytes: e,
       timestamp: Date.now()
-    }, ...O]).slice(0, 200)
+    }, ...D]).slice(0, 200)
   }, 200),
   k = r.throttle(function(e) {
     let t = Date.now(),
@@ -64,10 +64,10 @@ let U = r.throttle(function(e) {
     })
   }, 200),
   w = r.throttle(function(e) {
-    D = (D = [{
+    O = (O = [{
       bytes: e,
       timestamp: Date.now()
-    }, ...D]).slice(0, 200)
+    }, ...O]).slice(0, 200)
   }, 200);
 
 function V(e, t, n) {
@@ -122,10 +122,10 @@ class G extends a.default.Store {
     return R
   }
   getHistoricalTotalBytesDownloaded() {
-    return O
+    return D
   }
   getHistoricalTotalBytesWritten() {
-    return D
+    return O
   }
   whenInitialized(e) {
     this.addConditionalChangeListener(() => {

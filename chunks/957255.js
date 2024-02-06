@@ -29,8 +29,8 @@ var i = n("917351"),
   y = n("562980");
 let N = {},
   R = {},
-  O = {},
-  D = 0;
+  D = {},
+  O = 0;
 
 function P(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -71,13 +71,13 @@ function L(e) {
 function M(e) {
   if (null != e) {
     var t;
-    O[e] = (null !== (t = O[e]) && void 0 !== t ? t : 0) + 1
+    D[e] = (null !== (t = D[e]) && void 0 !== t ? t : 0) + 1
   }
 }
 
 function U() {
-  for (let e in N = {}, R = {}, O) O[e] += 1;
-  D += 1
+  for (let e in N = {}, R = {}, D) D[e] += 1;
+  O += 1
 }
 
 function k() {
@@ -109,7 +109,7 @@ function F(e) {
   let n = v.default.getMutableBasicGuildChannelsForGuild(t);
   s.forEach(n, e => {
     delete R[e.id]
-  }), D += 1, M(t)
+  }), O += 1, M(t)
 }
 
 function x(e) {
@@ -123,7 +123,7 @@ function x(e) {
       context: n
     });
   if (s === R[n.id]) return !1;
-  R[n.id] = s, D += 1
+  R[n.id] = s, O += 1
 }
 
 function B(e) {
@@ -134,7 +134,7 @@ function B(e) {
   let n = v.default.getMutableBasicGuildChannelsForGuild(t);
   s.forEach(n, e => {
     delete R[e.id]
-  }), D += 1, M(t)
+  }), O += 1, M(t)
 }
 
 function H(e, t, n, i) {
@@ -233,15 +233,15 @@ class Y extends a.default.Store {
   }
   getGuildVersion(e) {
     var t;
-    return null !== (t = O[e]) && void 0 !== t ? t : 0
+    return null !== (t = D[e]) && void 0 !== t ? t : 0
   }
   getChannelsVersion() {
-    return D
+    return O
   }
 }
 
 function j() {
-  R = {}, N = {}, O = {}, D = 0
+  R = {}, N = {}, D = {}, O = 0
 }
 Y.displayName = "PermissionStore";
 var W = new Y(o.default, {
@@ -272,7 +272,7 @@ var W = new Y(o.default, {
         context: n
       });
     if (R[n.id] === s) return !1;
-    R[n.id] = s, D += 1, M(n.getGuildId())
+    R[n.id] = s, O += 1, M(n.getGuildId())
   },
   THREAD_CREATE: G,
   THREAD_UPDATE: G,
@@ -296,7 +296,7 @@ var W = new Y(o.default, {
         });
       R[t.id] !== s && (R[t.id] = s, M(t.getGuildId()), n = !0)
     }
-    return !!n && (D += 1, n)
+    return !!n && (O += 1, n)
   },
   LOAD_MESSAGES_SUCCESS: function(e) {
     let {
@@ -328,7 +328,7 @@ var W = new Y(o.default, {
     let {
       channel: t
     } = e;
-    return delete R[t.id], D += 1, M(t.guild_id), !1
+    return delete R[t.id], O += 1, M(t.guild_id), !1
   },
   GUILD_ROLE_CREATE: F,
   GUILD_ROLE_UPDATE: F,

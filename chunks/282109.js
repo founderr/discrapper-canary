@@ -31,7 +31,7 @@ let S = {},
   },
   N = new o.default,
   R = new o.default,
-  O = {
+  D = {
     suppress_everyone: !1,
     suppress_roles: !1,
     mute_scheduled_events: !1,
@@ -42,13 +42,13 @@ let S = {},
     channel_overrides: {},
     notify_highlights: m.HighlightSettings.NULL
   },
-  D = {
+  O = {
     [m.UserNotificationSettings.ALL_MESSAGES]: {
-      ...O,
+      ...D,
       message_notifications: m.UserNotificationSettings.ALL_MESSAGES
     },
     [m.UserNotificationSettings.ONLY_MENTIONS]: {
-      ...O,
+      ...D,
       message_notifications: m.UserNotificationSettings.ONLY_MENTIONS
     }
   },
@@ -180,7 +180,7 @@ function B(e, t, n) {
 function H(e) {
   let t = h.default.getGuild(e),
     n = null != t ? t.defaultMessageNotifications : m.UserNotificationSettings.ALL_MESSAGES;
-  return D[n]
+  return O[n]
 }
 
 function Y(e) {

@@ -21,8 +21,8 @@ var n = i("37983"),
   g = i("45961"),
   _ = i("515059"),
   S = i("139321"),
-  C = i("845579"),
-  h = i("124299"),
+  h = i("845579"),
+  C = i("124299"),
   T = i("599110"),
   N = i("159885"),
   v = i("788506"),
@@ -57,8 +57,8 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       searchQuery: f,
       sectionDescriptors: I,
       setCollapsedSections: g,
-      getEmojiItemProps: C,
-      getEmojiRowProps: h,
+      getEmojiItemProps: h,
+      getEmojiRowProps: C,
       isScrolling: N,
       isUsingKeyboardNavigation: D,
       allowAnimatedEmoji: B,
@@ -93,8 +93,8 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         surrogateCodePoint: X,
         onInspect: $,
         onSelect: d,
-        getEmojiItemProps: C,
-        getEmojiRowProps: h,
+        getEmojiItemProps: h,
+        getEmojiRowProps: C,
         isScrolling: N,
         isUsingKeyboardNavigation: D,
         rowIndex: e,
@@ -106,7 +106,7 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         messageId: W,
         isBurstReaction: z
       }, e)
-    }), [s, I, r, X, $, d, C, h, N, D, B, ee, J, W, z]);
+    }), [s, I, r, X, $, d, h, C, N, D, B, ee, J, W, z]);
     l.useEffect(() => () => {
       var e, t;
       return null === (t = et.cache) || void 0 === t ? void 0 : null === (e = t.clear) || void 0 === e ? void 0 : e.call(t)
@@ -213,7 +213,7 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       messageId: N,
       isBurstReaction: v,
       listHeaderClassName: A
-    } = e, y = l.useRef(!1), j = m.EmojiPickerStore.useStore(e => e.activeCategoryIndex), R = (0, I.useExpressionPickerStore)(e => e.searchQuery), O = C.AnimateEmoji.useSetting(), {
+    } = e, y = l.useRef(!1), j = m.EmojiPickerStore.useStore(e => e.activeCategoryIndex), R = (0, I.useExpressionPickerStore)(e => e.searchQuery), O = h.AnimateEmoji.useSetting(), {
       listPadding: M,
       renderRow: x,
       renderSection: P,
@@ -256,7 +256,7 @@ let U = (0, N.cssValueToNumber)(d.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
     let F = o.length > 0;
     return (0, n.jsx)("div", {
       className: b.listWrapper,
-      children: F ? (0, n.jsx)(h.default, {
+      children: F ? (0, n.jsx)(C.default, {
         role: "none presentation",
         className: b.list,
         listPadding: M,

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   startStream: function() {
-    return O
+    return D
   },
   setStreamPaused: function() {
-    return D
+    return O
   },
   watchStream: function() {
     return b
@@ -69,7 +69,7 @@ var i = n("627445"),
   N = n("49111"),
   R = n("706530");
 
-function O(e, t, n) {
+function D(e, t, n) {
   o.default.dispatch({
     type: "STREAM_START",
     streamType: null != e ? R.StreamTypes.GUILD : R.StreamTypes.CALL,
@@ -80,7 +80,7 @@ function O(e, t, n) {
   })
 }
 
-function D(e, t) {
+function O(e, t) {
   let n = (0, u.encodeStreamKey)(e);
   o.default.dispatch({
     type: "STREAM_SET_PAUSED",
@@ -237,7 +237,7 @@ function B(e) {
       sourceId: i,
       sourceName: s
     }
-  }), null == t ? C.default.createBroadcastPrivateChannel() : O(null, t, {
+  }), null == t ? C.default.createBroadcastPrivateChannel() : D(null, t, {
     pid: n,
     sourceId: i,
     sourceName: s

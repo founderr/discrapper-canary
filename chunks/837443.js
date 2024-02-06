@@ -115,8 +115,8 @@ class p extends a.PureComponent {
       orientation: y,
       onValueRender: N,
       renderMarker: R,
-      getAriaValueText: O,
-      barClassName: D,
+      getAriaValueText: D,
+      barClassName: O,
       grabberClassName: P,
       grabberStyles: b = {},
       markerPosition: L = 0,
@@ -151,7 +151,7 @@ class p extends a.PureComponent {
         }, t)
       }) : null,
       x = null != N ? N(t) : "".concat(V.toFixed(0), "%"),
-      B = null !== (e = null == O ? void 0 : O(t)) && void 0 !== e ? e : void 0;
+      B = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
     return (0, r.jsx)(f.FocusRing, {
       focusTarget: this.containerRef,
       ringTarget: this.grabberRef,
@@ -181,7 +181,7 @@ class p extends a.PureComponent {
           className: g.track,
           children: F
         }), (0, r.jsx)("div", {
-          className: l(g.bar, D),
+          className: l(g.bar, O),
           style: S,
           children: (0, r.jsx)("div", {
             className: g.barFill,

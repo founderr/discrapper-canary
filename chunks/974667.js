@@ -52,13 +52,13 @@ function c(e) {
   i.useLayoutEffect(() => {
     y.current = u
   }, [u]);
-  let O = i.useCallback((e, t) => {
+  let D = i.useCallback((e, t) => {
       if (y.current) {
         let n = null != g ? g : R;
         n(e, t)
       }
     }, [g]),
-    D = i.useCallback(e => {
+    O = i.useCallback(e => {
       if (y.current) {
         let t = null != m ? m : R;
         t(e)
@@ -68,8 +68,8 @@ function c(e) {
       I.current = e;
       let n = (0, l.createSelector)(e),
         i = (0, l.getItemId)(e);
-      O(n, i), (0, r.notifyFocusSubscribers)(t, i, E)
-    }, [t, E, O]),
+      D(n, i), (0, r.notifyFocusSubscribers)(t, i, E)
+    }, [t, E, D]),
     b = i.useMemo(() => (0, s.createFocusManager)({
       getFocusableElements: () => d(t, A),
       getActiveElement() {
@@ -102,7 +102,7 @@ function c(e) {
         let e = I.current;
         if (null !== e) {
           let n = (0, l.createSelector)(e);
-          null == N(n) && D((0, l.createSelector)(t, l.LIST_ID_ATTRIBUTE))
+          null == N(n) && O((0, l.createSelector)(t, l.LIST_ID_ATTRIBUTE))
         }
       }))
     }
@@ -115,10 +115,10 @@ function c(e) {
         let t = (0, l.createSelector)(i),
           n = N(t);
         if (null != n) {
-          if (!0 !== C.current) return O(t, (0, l.getItemId)(i));
+          if (!0 !== C.current) return D(t, (0, l.getItemId)(i));
           {
             let s = await (0, a.isItemVisible)(e, n);
-            if (s) return O(t, (0, l.getItemId)(i))
+            if (s) return D(t, (0, l.getItemId)(i))
           }
         }
       }
@@ -129,7 +129,7 @@ function c(e) {
     function r() {
       C.current = !0
     }
-  }, [u, t, E, O, m, D, P]);
+  }, [u, t, E, D, m, O, P]);
   let k = i.useMemo(() => ({
       wrap: v,
       get from() {

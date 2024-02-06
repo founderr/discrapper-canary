@@ -41,8 +41,8 @@ let T = Object.freeze({
   y = new Set,
   N = !1,
   R = null,
-  O = !1,
   D = !1,
+  O = !1,
   P = new Set,
   b = !1;
 
@@ -77,12 +77,12 @@ function G(e) {
       i.default.PersistedStore.initializeAll(e.states);
       break;
     case v.OverlayEventTypes.DISPATCH:
-      null != e.payloads && (O = !0, e.payloads.forEach(e => (function(e) {
+      null != e.payloads && (D = !0, e.payloads.forEach(e => (function(e) {
         var t, n, i, s, a, d;
         if ("OVERLAY_INITIALIZE" === e.type && (null == (d = e).version && 1 === E.OVERLAY_VERSION || d.version === E.OVERLAY_VERSION || (r.default.dispatch({
             type: "OVERLAY_INCOMPATIBLE_APP"
-          }), (0, o.disconnect)(), 0))) D = !0;
-        if (D) switch (e.type) {
+          }), (0, o.disconnect)(), 0))) O = !0;
+        if (O) switch (e.type) {
           case "CHANNEL_CREATE":
           case "THREAD_CREATE":
           case "THREAD_UPDATE":
@@ -130,7 +130,7 @@ function G(e) {
           default:
             r.default.dispatch(e)
         }
-      })(e)), O = !1)
+      })(e)), D = !1)
   }
 }
 class F extends i.default.PersistedStore {
@@ -208,7 +208,7 @@ class F extends i.default.PersistedStore {
     return I
   }
   get initialized() {
-    return D
+    return O
   }
   get incompatibleApp() {
     return N
@@ -260,7 +260,7 @@ var x = new F(r.default, {
   },
   OVERLAY_START_SESSION: function() {
     r.default.addInterceptor(e => {
-      if (O || !k.has(e.type)) return !1;
+      if (D || !k.has(e.type)) return !1;
       if ("CHANNEL_SELECT" === e.type) {
         let {
           guildId: t,

@@ -21,8 +21,8 @@ var n = i("37983"),
   g = i("458604"),
   _ = i("115279"),
   S = i("49111"),
-  C = i("782340"),
-  h = i("465439"),
+  h = i("782340"),
+  C = i("465439"),
   T = e => {
     let {
       emojiDescriptors: t,
@@ -79,14 +79,14 @@ var n = i("37983"),
                 key: t
               }, (0, n.jsx)(r.FocusRing, {
                 children: (0, n.jsx)("button", {
-                  "aria-label": C.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
+                  "aria-label": h.default.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                   ref: f,
-                  className: a(h.emojiItem, {
-                    [h.emojiItemLarge]: H,
-                    [h.emojiItemMedium]: K,
-                    [h.emojiItemSelected]: u,
+                  className: a(C.emojiItem, {
+                    [C.emojiItemLarge]: H,
+                    [C.emojiItemMedium]: K,
+                    [C.emojiItemSelected]: u,
                     [null != L ? L : ""]: u,
-                    [h.showPulse]: k === t
+                    [C.showPulse]: k === t
                   }),
                   onFocus: null != I ? I : d,
                   onMouseOver: d,
@@ -95,8 +95,8 @@ var n = i("37983"),
                   onClick: c,
                   tabIndex: E,
                   children: (0, n.jsx)(m.default, {
-                    className: h.icon,
-                    foreground: h.icon,
+                    className: C.icon,
+                    foreground: C.icon,
                     width: 24,
                     height: 24
                   })
@@ -138,9 +138,9 @@ var n = i("37983"),
       },
       J = e => (0, n.jsx)("ul", {
         ...A(R),
-        className: a(h.emojiListRow, {
-          [h.emojiListRowLargeSize]: H,
-          [h.emojiListRowMediumSize]: K
+        className: a(C.emojiListRow, {
+          [C.emojiListRowLargeSize]: H,
+          [C.emojiListRowMediumSize]: K
         }),
         ref: F,
         children: e.map(B)
@@ -149,32 +149,32 @@ var n = i("37983"),
     let W = t.filter(e => e.subCategory === _.EmojiSubCategory.TOP_GUILD_EMOJI || e.subCategory === _.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && !c.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id)),
       z = t.filter(e => e.subCategory === _.EmojiSubCategory.NEWLY_ADDED_EMOJI && e.emoji.type === u.EmojiTypes.GUILD && c.default.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
     return 0 === z.length ? J(t) : (0, n.jsxs)("div", {
-      className: h.topEmojiSectionContainer,
+      className: C.topEmojiSectionContainer,
       children: [(0, n.jsx)("div", {
-        className: a(h.topEmojiContainer, {
-          [h.noEmojis]: 0 === W.length
+        className: a(C.topEmojiContainer, {
+          [C.noEmojis]: 0 === W.length
         }),
         children: J(W)
       }), (0, n.jsxs)("div", {
-        className: h.newlyAddedHighlightContainer,
+        className: C.newlyAddedHighlightContainer,
         children: [(0, n.jsx)("div", {
-          className: a(h.newlyAddedHighlight, {
-            [h.oneItem]: 1 === z.length,
-            [h.alignRight]: W.length > 0
+          className: a(C.newlyAddedHighlight, {
+            [C.oneItem]: 1 === z.length,
+            [C.alignRight]: W.length > 0
           }),
           children: J(z)
         }), (0, n.jsxs)("div", {
-          className: a(h.newlyAddedBadge, {
-            [h.newlyAddedBadgeLarge]: H,
-            [h.newlyAddedBadgeMedium]: K,
-            [h.alignRight]: W.length > 0
+          className: a(C.newlyAddedBadge, {
+            [C.newlyAddedBadgeLarge]: H,
+            [C.newlyAddedBadgeMedium]: K,
+            [C.alignRight]: W.length > 0
           }),
           children: [(0, n.jsx)(I.default, {
-            foreground: h.newlyAddedBadgeStar
+            foreground: C.newlyAddedBadgeStar
           }), (0, n.jsx)(r.Text, {
             variant: "text-xs/semibold",
             color: "always-white",
-            children: C.default.Messages.NEW
+            children: h.default.Messages.NEW
           })]
         })]
       })]

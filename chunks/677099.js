@@ -136,7 +136,7 @@ function R(e) {
   })
 }
 
-function O(e) {
+function D(e) {
   let {
     guildId: t,
     joinedAt: n,
@@ -146,7 +146,7 @@ function O(e) {
   let a = "string" == typeof n ? new Date(n) : n;
   return a !== r.joinedAt && null != a && I()
 }
-let D = (0, c.cachedFunction)((e, t) => e.sortedGuildNodes().map(e => e.id)),
+let O = (0, c.cachedFunction)((e, t) => e.sortedGuildNodes().map(e => e.id)),
   P = (0, c.cachedFunction)((e, t) => e.getRoots().map(S));
 class b extends m.default {
   getGuildsTree() {
@@ -159,7 +159,7 @@ class b extends m.default {
     return this.getGuildFolders().find(t => t.folderId === e)
   }
   getFlattenedGuildIds() {
-    return D(v, v.version)
+    return O(v, v.version)
   }
   getCompatibleGuildFolders() {
     return v.root.children.map(S)
@@ -183,7 +183,7 @@ class b extends m.default {
       CACHE_LOADED_LAZY: this.loadCache,
       GUILD_CREATE: I,
       GUILD_DELETE: I,
-      GUILD_MEMBER_ADD: O,
+      GUILD_MEMBER_ADD: D,
       USER_SETTINGS_PROTO_UPDATE: C,
       GUILD_MOVE_BY_ID: A,
       GUILD_FOLDER_CREATE_LOCAL: y,

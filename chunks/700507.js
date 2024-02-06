@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return N
   },
   transferToPlayStation: function() {
-    return D
+    return O
   }
 }), n("424973"), n("222007");
 var i = n("30945"),
@@ -55,7 +55,7 @@ async function v() {
     type: "REMOTE_SESSION_DISCONNECT"
   });
   let n = [];
-  ((null == e ? void 0 : e.type) === m.PlatformTypes.PLAYSTATION || (null == e ? void 0 : e.type) === m.PlatformTypes.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(O(e.type, e.deviceId, e.commandId)), null != t && n.push(function(e) {
+  ((null == e ? void 0 : e.type) === m.PlatformTypes.PLAYSTATION || (null == e ? void 0 : e.type) === m.PlatformTypes.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(D(e.type, e.deviceId, e.commandId)), null != t && n.push(function(e) {
     return r.default.delete({
       url: m.Endpoints.CONNECT_REQUEST(e)
     })
@@ -199,7 +199,7 @@ async function R(e, t, n, s) {
     commandId: l
   }), l
 }
-async function O(e, t, n) {
+async function D(e, t, n) {
   a.default.dispatch({
     type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_START",
     platform: e,
@@ -226,7 +226,7 @@ async function O(e, t, n) {
     commandId: n
   })
 }
-async function D(e, t, n) {
+async function O(e, t, n) {
   await _.default.maybeShowPTTAlert(e), await v();
   let i = await A();
   await R(e, t, n, i), (0, g.default)(n.id, e)

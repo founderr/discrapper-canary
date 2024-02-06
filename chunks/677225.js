@@ -30,11 +30,11 @@ let p = new Set,
   N = 10 * g.default.Millis.MINUTE,
   R = new a.Timeout;
 
-function O(e) {
+function D(e) {
   R.start(e + Math.random() * A, l.fetchBranches)
 }
 
-function D() {
+function O() {
   if (!(0, E.isSupportedPlatform)()) return !1;
   let e = f.default.entitledBranchIds,
     t = [];
@@ -60,7 +60,7 @@ function b() {
 }
 class L extends r.default.Store {
   initialize() {
-    this.syncWith([f.default], D), this.waitFor(_.default, f.default, c.default)
+    this.syncWith([f.default], O), this.waitFor(_.default, f.default, c.default)
   }
   getTargetBuildId(e, t) {
     return null == v[t] ? null : v[t].id
@@ -84,7 +84,7 @@ class L extends r.default.Store {
 L.displayName = "ApplicationBuildStore";
 var M = new L(o.default, {
   CONNECTION_OPEN: function() {
-    return O(y), D()
+    return D(y), O()
   },
   GAMES_DATABASE_UPDATE: function() {
     if (!(0, E.isSupportedPlatform)()) return !1;
@@ -169,10 +169,10 @@ var M = new L(o.default, {
       }
       C[t] = i
     }
-    O(y)
+    D(y)
   },
   APPLICATION_BRANCHES_FETCH_FAIL: function() {
-    O(N)
+    D(N)
   },
   CONNECTION_CLOSED: b,
   LOGOUT: b,

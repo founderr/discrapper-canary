@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return O
   }
 }), n("222007"), n("424973"), n("834022");
 var i, s, r = n("917351"),
@@ -46,7 +46,7 @@ function R(e) {
   for (let [e, t] of Object.entries(i)) t.soundboardMuted ? v.add(e) : v.delete(e);
   for (let e of v.keys()) null == i[e] && v.delete(e)
 }
-class O extends o.default.Store {
+class D extends o.default.Store {
   initialize() {
     this.waitFor(d.default), R(d.default.settings)
   }
@@ -110,8 +110,8 @@ class O extends o.default.Store {
     return 2 === T && 2 === S
   }
 }
-O.displayName = "SoundboardStore";
-var D = new O(l.default, {
+D.displayName = "SoundboardStore";
+var O = new D(l.default, {
   LOGOUT: function() {
     E.clear(), p.clear(), C.clear(), A = !1, T = 0, S = 0
   },

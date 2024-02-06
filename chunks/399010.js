@@ -30,10 +30,10 @@ var r = n("446674"),
   y = n("521012"),
   N = n("224400"),
   R = n("390946"),
-  O = n("509065"),
-  D = n("518916");
+  D = n("509065"),
+  O = n("518916");
 let P = new d.default("ConnectionStore"),
-  b = new O.default(D.socket, (e, t) => {
+  b = new D.default(O.socket, (e, t) => {
     var n;
     e = null != e ? e : {
       type: "CHANNEL_UPDATES",
@@ -48,7 +48,7 @@ let P = new d.default("ConnectionStore"),
       });
     return e.channels.push(null != r ? r : i), e
   }, e => "CHANNEL_UPDATE" !== e),
-  L = new O.default(D.socket, (e, t) => ((e = null == e ? {
+  L = new D.default(O.socket, (e, t) => ((e = null == e ? {
     type: "SOUNDBOARD_SOUNDS_RECEIVED",
     updates: []
   } : e).updates.push({
@@ -64,7 +64,7 @@ let P = new d.default("ConnectionStore"),
       guildId: t.guild_id
     }))
   }), e), e => "SOUNDBOARD_SOUNDS" !== e),
-  M = new O.default(D.socket, (e, t) => ((e = null == e ? {
+  M = new D.default(O.socket, (e, t) => ((e = null == e ? {
     type: "PRESENCE_UPDATES",
     updates: []
   } : e).updates.push(t), e), e => "PRESENCE_UPDATE" !== e),
@@ -82,7 +82,7 @@ function w(e) {
 }
 
 function V(e) {
-  a.default.dispatch(e).catch(t => D.socket.resetSocketOnError(t, e.type))
+  a.default.dispatch(e).catch(t => O.socket.resetSocketOnError(t, e.type))
 }
 
 function G(e, t, n) {
@@ -143,8 +143,8 @@ function x(e) {
 }
 
 function B() {
-  D.socket.isSessionEstablished() && T.default.getPendingLobbies().forEach(e => {
-    D.socket.lobbyConnect(e.id, e.secret)
+  O.socket.isSessionEstablished() && T.default.getPendingLobbies().forEach(e => {
+    O.socket.lobbyConnect(e.id, e.secret)
   })
 }
 
@@ -169,7 +169,7 @@ function H(e) {
 k(["INITIAL_GUILD"], e => {
   _.default.initialGuild.measure(() => {
     r.default.Emitter.batched(() => {
-      let t = R.hydrateInitialGuild(e, D.socket.identifyStartTime);
+      let t = R.hydrateInitialGuild(e, O.socket.identifyStartTime);
       null != I.default.getCurrentUser() && (V({
         type: "GUILD_CREATE",
         guild: t
@@ -199,7 +199,7 @@ k(["INITIAL_GUILD"], e => {
   _.default.readySupplemental.measure(() => {
     r.default.Emitter.batched(() => {
       var t, n;
-      e = _.default.hydrateReadySupplemental.measure(() => R.hydrateReadySupplementalPayload(e, D.socket.identifyStartTime));
+      e = _.default.hydrateReadySupplemental.measure(() => R.hydrateReadySupplementalPayload(e, O.socket.identifyStartTime));
       let i = e => e.map(e => ({
           user: e.user,
           status: e.status,
@@ -246,7 +246,7 @@ k(["INITIAL_GUILD"], e => {
         type: "VOICE_STATE_UPDATES",
         voiceStates: l,
         initial: !0
-      }), D.localVoiceState.update(), D.localLobbyVoiceStates.update({}, !0)
+      }), O.localVoiceState.update(), O.localLobbyVoiceStates.update({}, !0)
     })
   }), setTimeout(() => V({
     type: "POST_CONNECTION_OPEN"
@@ -265,7 +265,7 @@ k(["INITIAL_GUILD"], e => {
   }
   _.default.ready.measure(() => {
     r.default.Emitter.batched(() => {
-      e = _.default.hydrateReady.measure(() => R.hydrateReadyPayloadPrioritized(e, D.socket.identifyStartTime, n));
+      e = _.default.hydrateReady.measure(() => R.hydrateReadyPayloadPrioritized(e, O.socket.identifyStartTime, n));
       let t = e.private_channels.map(e => (0, g.createChannelRecordFromServer)(e)),
         i = e.guilds.filter(e => !0 === e.unavailable && !0 !== e.geo_restricted).map(e => e.id),
         s = e.guilds.filter(e => !0 !== e.unavailable),
@@ -313,11 +313,11 @@ k(["INITIAL_GUILD"], e => {
         type: "UPDATE_TOKEN",
         token: e.auth_token,
         userId: e.user.id
-      }), D.localPresenceState.update(), D.localVoiceState.update(), D.localLobbyVoiceStates.update(), B()
+      }), O.localPresenceState.update(), O.localVoiceState.update(), O.localLobbyVoiceStates.update(), B()
     })
   })
 }), k(["RESUMED"], () => {
-  D.localPresenceState.forceUpdate(), D.localVoiceState.forceUpdate(), D.localLobbyVoiceStates.forceUpdate(), B(), V({
+  O.localPresenceState.forceUpdate(), O.localVoiceState.forceUpdate(), O.localLobbyVoiceStates.forceUpdate(), B(), V({
     type: "CONNECTION_RESUMED"
   })
 }), k(["TYPING_START"], e => {
@@ -568,7 +568,7 @@ k(["INITIAL_GUILD"], e => {
         clientStatus: s,
         broadcast: a
       })
-    }), O.default.flush()
+    }), D.default.flush()
   })
 }), k(["THREAD_MEMBER_LIST_UPDATE"], e => {
   r.default.Emitter.batched(() => {
@@ -593,7 +593,7 @@ k(["INITIAL_GUILD"], e => {
         clientStatus: s,
         broadcast: a
       })
-    }), O.default.flush()
+    }), D.default.flush()
   })
 }), k(["GUILD_BAN_ADD", "GUILD_BAN_REMOVE", "GUILD_MEMBER_ADD", "GUILD_MEMBER_UPDATE", "GUILD_MEMBER_REMOVE"], (e, t) => {
   V({
@@ -963,7 +963,7 @@ k(["INITIAL_GUILD"], e => {
         case "INSERT":
           t(s)
       }
-    }), O.default.flush(), V({
+    }), D.default.flush(), V({
       type: "GUILD_MEMBER_LIST_UPDATE",
       guildId: e.guild_id,
       id: e.id,

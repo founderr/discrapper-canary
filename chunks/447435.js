@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   resolveDefaultSetting: function() {
-    return O
+    return D
   },
   getExplicitContentSettingOrDefault: function() {
-    return D
+    return O
   },
   getShouldObscureForSetting: function() {
     return P
@@ -79,19 +79,19 @@ let R = () => {
     let e = v.default.getCurrentUser();
     return (null == e ? void 0 : e.nsfwAllowed) === !1 ? f.ExplicitContentRedaction.BLUR : f.ExplicitContentRedaction.SHOW
   },
-  O = function() {
+  D = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
       t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (!e) return R();
     let n = m.ExplicitContentFilter.getSetting();
     return t ? n === N.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS ? f.ExplicitContentRedaction.BLOCK : R() : n === N.ExplicitContentFilterTypes.NON_FRIENDS || n === N.ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIENDS ? f.ExplicitContentRedaction.BLOCK : R()
   },
-  D = () => {
+  O = () => {
     let e = m.ExplicitContentSettings.getSetting();
     return {
-      explicitContentGuilds: e.explicitContentGuilds === f.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION ? O() : e.explicitContentGuilds,
-      explicitContentNonFriendDm: e.explicitContentNonFriendDm === f.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION ? O(!0) : e.explicitContentNonFriendDm,
-      explicitContentFriendDm: e.explicitContentFriendDm === f.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION ? O(!0, !0) : e.explicitContentFriendDm
+      explicitContentGuilds: e.explicitContentGuilds === f.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION ? D() : e.explicitContentGuilds,
+      explicitContentNonFriendDm: e.explicitContentNonFriendDm === f.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION ? D(!0) : e.explicitContentNonFriendDm,
+      explicitContentFriendDm: e.explicitContentFriendDm === f.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION ? D(!0, !0) : e.explicitContentFriendDm
     }
   };
 
@@ -108,13 +108,13 @@ function b(e) {
     explicitContentGuilds: i,
     explicitContentFriendDm: s,
     explicitContentNonFriendDm: r
-  } = D(), a = E.default.getChannel(e.channel_id);
+  } = O(), a = E.default.getChannel(e.channel_id);
   if (null == a) return !1;
   if (a.isDM() || a.isGroupDM()) return null != e.author && p.default.getFriendIDs().includes(e.author.id) ? P(s) : P(r);
   return P(i)
 }
 let L = e => {
-  let t = D();
+  let t = O();
   m.ExplicitContentSettings.updateSetting({
     ...t,
     ...e

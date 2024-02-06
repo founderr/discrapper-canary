@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return C
+    return h
   }
 });
 var n = i("37983"),
@@ -58,4 +58,4 @@ let _ = e => {
       ...i
     })
   });
-var C = S
+var h = S

@@ -154,11 +154,11 @@ function N(e) {
       userNick: S.default.getName(null == N ? void 0 : N.getGuildId(), this.channelId, T),
       localVideoDisabled: g.default.isLocalVideoDisabled(T.id)
     }, _.push(o));
-    let O = null !== (r = c.default.getStreamForUser(e, null == N ? void 0 : N.getGuildId())) && void 0 !== r ? r : c.default.getActiveStreamForUser(e, null == N ? void 0 : N.getGuildId());
-    if (null != O && O.channelId === this.channelId) {
-      let t = (0, d.encodeStreamKey)(O),
+    let D = null !== (r = c.default.getStreamForUser(e, null == N ? void 0 : N.getGuildId())) && void 0 !== r ? r : c.default.getActiveStreamForUser(e, null == N ? void 0 : N.getGuildId());
+    if (null != D && D.channelId === this.channelId) {
+      let t = (0, d.encodeStreamKey)(D),
         n = this.getParticipant(t),
-        i = O.ownerId === f.default.getId() && c.default.isSelfStreamHidden(this.channelId),
+        i = D.ownerId === f.default.getId() && c.default.isSelfStreamHidden(this.channelId),
         s = (null == n ? void 0 : n.type) === I.ParticipantTypes.STREAM ? {
           maxResolution: null != n.maxResolution ? {
             ...n.maxResolution
@@ -173,7 +173,7 @@ function N(e) {
         userVideo: null !== (a = null == C ? void 0 : C.selfVideo) && void 0 !== a && a,
         user: T,
         userNick: S.default.getName(null == N ? void 0 : N.getGuildId(), this.channelId, T),
-        stream: O
+        stream: D
       }, _.push(u)
     }
     return _

@@ -42,8 +42,8 @@ function S(e) {
   var t, n, i, o, h, E, S, T, I;
   let {
     reactions: R,
-    interactionData: O
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, D = null !== (o = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== o ? o : [], P = null !== (h = e.mention_roles) && void 0 !== h ? h : [], b = null !== (E = e.mention_channels) && void 0 !== E ? E : [], L = e.message_reference, M = s(new Date(e.timestamp)), U = e.type === p.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
+    interactionData: D
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, O = null !== (o = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== o ? o : [], P = null !== (h = e.mention_roles) && void 0 !== h ? h : [], b = null !== (E = e.mention_channels) && void 0 !== E ? E : [], L = e.message_reference, M = s(new Date(e.timestamp)), U = e.type === p.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
   let k = null == (T = e).author ? v : null != T.webhook_id ? new d.default(T.author) : null !== (I = _.default.getUser(T.author.id)) && void 0 !== I ? I : new d.default(T.author),
     w = null == e ? void 0 : e.gift_info,
     V = null != e.interaction ? l.default.createFromServer(e.interaction) : null,
@@ -58,7 +58,7 @@ function S(e) {
     timestamp: M,
     editedTimestamp: null != e.edited_timestamp ? s(new Date(e.edited_timestamp)) : null,
     mentionEveryone: e.mention_everyone,
-    mentions: D,
+    mentions: O,
     mentionRoles: P,
     mentionChannels: b,
     messageReference: L,
@@ -66,7 +66,7 @@ function S(e) {
       userId: c.default.getId(),
       channelId: e.channel_id,
       mentionEveryone: null !== (S = e.mention_everyone) && void 0 !== S && S,
-      mentionUsers: D,
+      mentionUsers: O,
       mentionRoles: P
     }),
     attachments: C(e),
@@ -78,7 +78,7 @@ function S(e) {
     call: A(e.call, M),
     reactions: N(null != R ? R : e.reactions),
     interaction: V,
-    interactionData: null != O ? O : e.interaction_data,
+    interactionData: null != D ? D : e.interaction_data,
     roleSubscriptionData: e.role_subscription_data,
     purchaseNotification: e.purchase_notification,
     poll: null == e.poll ? void 0 : (0, a.default)(e.poll),

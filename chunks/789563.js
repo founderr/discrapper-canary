@@ -32,8 +32,8 @@ let E = "scientist:triggered",
   y = [],
   N = {},
   R = {},
-  O = {},
   D = {},
+  O = {},
   P = {},
   b = "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL,
   L = {};
@@ -169,7 +169,7 @@ function j(e) {
 }
 
 function W(e) {
-  !b && "CONNECTION_OPEN" === e.type && V(e.user) && (b = !0), N = {}, R = {}, O = {};
+  !b && "CONNECTION_OPEN" === e.type && V(e.user) && (b = !0), N = {}, R = {}, D = {};
   let t = "CONNECTION_OPEN" === e.type || null == e.fingerprint || e.fingerprint === c.default.getFingerprint(),
     {
       experiments: n,
@@ -270,7 +270,7 @@ function X(e) {
     serializedExperimentStore: t,
     user: n
   } = e;
-  !b && V(n) && (b = !0), T = t.hasLoadedExperiments, I = t.trackedExposureExperiments, N = t.loadedUserExperiments, D = t.userExperimentOverrides, P = t.guildExperimentOverrides, R = q(t.loadedGuildExperiments), O = {}
+  !b && V(n) && (b = !0), T = t.hasLoadedExperiments, I = t.trackedExposureExperiments, N = t.loadedUserExperiments, O = t.userExperimentOverrides, P = t.guildExperimentOverrides, R = q(t.loadedGuildExperiments), D = {}
 }
 
 function Q() {
@@ -281,7 +281,7 @@ function Z(e) {
   let {
     isSwitchingAccount: t
   } = e;
-  u.default.remove(E), !t && (u.default.remove(p), u.default.remove(v), u.default.remove(S), D = {}, P = {}), N = {}, A = [], I = {}, T = !1
+  u.default.remove(E), !t && (u.default.remove(p), u.default.remove(v), u.default.remove(S), O = {}, P = {}), N = {}, A = [], I = {}, T = !1
 }
 
 function J() {
@@ -342,12 +342,12 @@ function en(e) {
     experimentBucket: n
   } = e, i = C[t];
   if (null == i) return !1;
-  for (let e of (null == n ? (D = {
-      ...D
-    }, delete D[t], P = {
+  for (let e of (null == n ? (O = {
+      ...O
+    }, delete O[t], P = {
       ...P
-    }, delete P[t]) : "user" === i.type ? D = {
-      ...D,
+    }, delete P[t]) : "user" === i.type ? O = {
+      ...O,
       [t]: {
         type: i.type,
         revision: 1,
@@ -363,18 +363,18 @@ function en(e) {
         bucket: n,
         override: !0
       }
-    }, [D, P]))
-    for (let t in e) null == C[t] && delete D[t];
-  u.default.set(v, D), u.default.set(S, P)
+    }, [O, P]))
+    for (let t in e) null == C[t] && delete O[t];
+  u.default.set(v, O), u.default.set(S, P)
 }
 
 function ei(e) {
   let {
     guild: t
   } = e;
-  for (let e in O) {
+  for (let e in D) {
     let [n] = e.split(":");
-    t.id === n && delete O[e]
+    t.id === n && delete D[e]
   }
 }
 class es extends f.default {
@@ -390,15 +390,15 @@ class es extends f.default {
     }(), ! function() {
       var e, t, n;
       let i = [null !== (e = u.default.get(p)) && void 0 !== e ? e : {}, null !== (t = u.default.get(v)) && void 0 !== t ? t : {}, null !== (n = u.default.get(S)) && void 0 !== n ? n : {}];
-      D = {}, P = {};
+      O = {}, P = {};
       let s = !a.isEmpty(i[0]);
       for (let e of i)
         for (let t in e) {
           let n = e[t];
-          null == n || n.type !== g.ExperimentTypes.USER && n.type !== g.ExperimentTypes.GUILD || null == n.bucket || !0 !== n.override || n.fromCookie ? (delete e[t], s = !0) : n.type === g.ExperimentTypes.USER ? D[t] = n : P[t] = n
+          null == n || n.type !== g.ExperimentTypes.USER && n.type !== g.ExperimentTypes.GUILD || null == n.bucket || !0 !== n.override || n.fromCookie ? (delete e[t], s = !0) : n.type === g.ExperimentTypes.USER ? O[t] = n : P[t] = n
         }
       let r = (0, d.getBuildOverrideExperiments)();
-      for (let e in r) D[e] = {
+      for (let e in r) O[e] = {
         type: g.ExperimentTypes.USER,
         revision: 1,
         population: 0,
@@ -412,7 +412,7 @@ class es extends f.default {
         fromCookie: !0,
         bucket: r[e]
       }, s = !0;
-      s && (u.default.set(v, D), u.default.set(S, P))
+      s && (u.default.set(v, O), u.default.set(S, P))
     }()
   }
   takeSnapshot() {
@@ -432,7 +432,7 @@ class es extends f.default {
   }
   getUserExperimentDescriptor(e) {
     if (b) {
-      let t = D[e];
+      let t = O[e];
       if (null != t) return t
     }
     let t = M(e);
@@ -443,7 +443,7 @@ class es extends f.default {
       i = P[e];
     if (b && null != i) return i;
     let s = "".concat(n, ":").concat(e);
-    if (s in O) return O[s];
+    if (s in D) return D[s];
     let r = function e(t, n) {
       var i, s;
       let r = M(n),
@@ -495,7 +495,7 @@ class es extends f.default {
         triggerDebuggingEnabled: d
       }
     }(n, e);
-    return O[s] = r, r
+    return D[s] = r, r
   }
   getUserExperimentBucket(e) {
     let t = this.getUserExperimentDescriptor(e);
@@ -534,13 +534,13 @@ class es extends f.default {
   }
   getAllExperimentOverrideDescriptors() {
     return b ? {
-      ...D,
+      ...O,
       ...P
     } : {}
   }
   getExperimentOverrideDescriptor(e) {
     var t;
-    return b ? null !== (t = D[e]) && void 0 !== t ? t : P[e] : null
+    return b ? null !== (t = O[e]) && void 0 !== t ? t : P[e] : null
   }
   getAllExperimentAssignments() {
     let e = {},
@@ -551,8 +551,8 @@ class es extends f.default {
       let i = t[n];
       null != i && (e[i] = N[n].bucket)
     }
-    for (let t in O) {
-      let n = O[t];
+    for (let t in D) {
+      let n = D[t];
       null != n && (e[t] = n.bucket)
     }
     return e
@@ -566,7 +566,7 @@ class es extends f.default {
       trackedExposureExperiments: I,
       loadedUserExperiments: N,
       loadedGuildExperiments: e,
-      userExperimentOverrides: D,
+      userExperimentOverrides: O,
       guildExperimentOverrides: P
     }
   }

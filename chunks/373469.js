@@ -31,11 +31,11 @@ function R() {
 }
 R();
 
-function O(e) {
+function D(e) {
   i.delete(e)
 }
 
-function D() {
+function O() {
   let e = [];
   for (let t in s) {
     let n = s[t];
@@ -134,10 +134,10 @@ class M extends o.default.Store {
     return (0, f.default)(m.default) ? null !== (t = r[e]) && void 0 !== t ? t : null : null
   }
   getAllApplicationStreams() {
-    return (0, f.default)(m.default) ? D().filter(e => null != e && b(e.streamType, e.channelId)) : []
+    return (0, f.default)(m.default) ? O().filter(e => null != e && b(e.streamType, e.channelId)) : []
   }
   getAllApplicationStreamsForChannel(e) {
-    return (0, f.default)(m.default) ? D().filter(t => null != t && t.channelId === e && b(t.streamType, t.channelId)) : []
+    return (0, f.default)(m.default) ? O().filter(t => null != t && t.channelId === e && b(t.streamType, t.channelId)) : []
   }
   getViewerIds(e) {
     if (!(0, f.default)(m.default)) return [];
@@ -278,13 +278,13 @@ var U = new M(l.default, {
     i.set(t, {
       ...o,
       state: l
-    }), l === I.ApplicationStreamStates.ENDED && A !== t && O(t)
+    }), l === I.ApplicationStreamStates.ENDED && A !== t && D(t)
   },
   STREAM_CLOSE: function(e) {
     let {
       streamKey: t
     } = e;
-    O(t)
+    D(t)
   },
   STREAM_UPDATE_SELF_HIDDEN: function(e) {
     let {
@@ -327,7 +327,7 @@ var U = new M(l.default, {
       channelId: n
     } = e;
     if (A = t, Array.from(i.values()).forEach(e => {
-        (0, d.encodeStreamKey)(e) !== A && e.state === I.ApplicationStreamStates.ENDED && O((0, d.encodeStreamKey)(e))
+        (0, d.encodeStreamKey)(e) !== A && e.state === I.ApplicationStreamStates.ENDED && D((0, d.encodeStreamKey)(e))
       }), null == t) return;
     let s = (0, d.isStreamKey)(t);
     s && t.includes(_.default.getId()) && (y[n] = !1)

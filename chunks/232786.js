@@ -21,12 +21,12 @@ var n = i("37983"),
   g = i("599110"),
   _ = i("719923"),
   S = i("49111"),
-  C = i("646718"),
-  h = i("782340"),
+  h = i("646718"),
+  C = i("782340"),
   T = i("624698"),
   N = function(e) {
     let {
-      bodyCopy: t = h.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_BODY,
+      bodyCopy: t = C.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_BODY,
       className: i,
       onDismiss: s,
       onCtaClick: N
@@ -40,7 +40,7 @@ var n = i("37983"),
     } = (0, E.default)({
       autoTrackExposure: !0,
       experiment: f.default,
-      location: C.PremiumUpsellTypes.EMOJI_PICKER_SEARCH
+      location: h.PremiumUpsellTypes.EMOJI_PICKER_SEARCH
     }), R = l.useRef(!1), O = l.useCallback(() => {
       (0, d.default)({
         subscriptionTier: _.default.getSkuIdForPremiumType(j),
@@ -51,7 +51,7 @@ var n = i("37983"),
           objectType: S.AnalyticsObjectTypes.TIER_2
         }
       }), null == N || N()
-    }, [A, v, N, j]), M = j === C.PremiumTypes.TIER_0;
+    }, [A, v, N, j]), M = j === h.PremiumTypes.TIER_0;
     return (0, n.jsx)("div", {
       className: a(T.wrapper, i),
       children: y ? (0, n.jsx)(o.Spinner, {
@@ -59,7 +59,7 @@ var n = i("37983"),
       }) : (0, n.jsx)(r.default, {
         onChange: e => {
           e && !R.current && (g.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-            type: C.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
+            type: h.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
             location: v,
             location_stack: A,
             sku_id: _.default.getSkuIdForPremiumType(j)
@@ -74,14 +74,14 @@ var n = i("37983"),
             color: "interactive-normal",
             className: T.body,
             variant: "text-sm/normal",
-            children: M ? h.default.Messages.EMOJI_PICKER_PREMIUM_TIER_0_UPSELL_BODY.format({
-              planName: (0, _.getTierDisplayName)(C.SubscriptionPlans.PREMIUM_MONTH_TIER_0)
+            children: M ? C.default.Messages.EMOJI_PICKER_PREMIUM_TIER_0_UPSELL_BODY.format({
+              planName: (0, _.getTierDisplayName)(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0)
             }) : t
           }), (0, n.jsx)(o.Button, {
             look: o.Button.Looks.LINK,
             color: o.Button.Colors.LINK,
             onClick: O,
-            children: M ? h.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : h.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA
+            children: M ? C.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : C.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA
           }), null != s && (0, n.jsx)(o.Button, {
             onClick: s,
             className: T.dismissButton,

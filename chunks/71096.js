@@ -121,17 +121,17 @@ function v(e) {
   s.useEffect(() => {
     R.isUsingKeyboardNavigation ? !h.default.keyboardModeEnabled && (0, _.enableKeyboardMode)() : h.default.keyboardModeEnabled && (0, _.disableKeyboardMode)()
   }, [R.isUsingKeyboardNavigation]);
-  let O = s.useRef(null);
-  (0, d.useFocusLock)(O);
-  let D = o ? c.ScrollerNone : c.ScrollerThin;
+  let D = s.useRef(null);
+  (0, d.useFocusLock)(D);
+  let O = o ? c.ScrollerNone : c.ScrollerThin;
   return (0, i.jsx)(m.OnMenuSelectContext.Provider, {
     value: I,
     children: (0, i.jsx)("div", {
       className: a(p.menu, p[r], f),
       ...R.getContainerProps(),
-      ref: O,
+      ref: D,
       "aria-label": e["aria-label"],
-      children: (0, i.jsxs)(D, {
+      children: (0, i.jsxs)(O, {
         className: p.scroller,
         children: [0 === C.length && (0, i.jsx)(E.Item, {
           disabled: !0,

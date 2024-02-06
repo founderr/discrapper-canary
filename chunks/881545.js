@@ -109,7 +109,7 @@ function o(e) {
     onBlur: A,
     onMouseLeave: y,
     "aria-activedescendant": g.length > 0 ? (0, a.makeId)(t, g.join("--")) : void 0
-  }), [t, I, C, A, y, g]), O = i.useCallback(e => {
+  }), [t, I, C, A, y, g]), D = i.useCallback(e => {
     let {
       path: n
     } = e;
@@ -120,7 +120,7 @@ function o(e) {
       focusIndex: f.focusIndex,
       isUsingKeyboardNavigation: p
     }
-  }, [t, g, N, f.focusIndex, p]), D = i.useCallback(e => {
+  }, [t, g, N, f.focusIndex, p]), O = i.useCallback(e => {
     let {
       path: n,
       hasSubmenu: i = !1,
@@ -140,10 +140,10 @@ function o(e) {
   }, [t, N, S, T]), P = i.useMemo(() => ({
     dispatch: h,
     getContainerProps: R,
-    getSubmenuProps: O,
-    getItemProps: D,
+    getSubmenuProps: D,
+    getItemProps: O,
     isFocused: N,
     isUsingKeyboardNavigation: p
-  }), [h, R, O, D, N, p]);
+  }), [h, R, D, O, N, p]);
   return P
 }

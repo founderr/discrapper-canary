@@ -29,9 +29,9 @@ var i = n("917351"),
   y = n("399010"),
   N = n("49111"),
   R = n("397336");
-let O = window.DiscordNative;
+let D = window.DiscordNative;
 C.socket.dispatcher.getDispatchHandler = y.default;
-let D = new u.default("ConnectionStore"),
+let O = new u.default("ConnectionStore"),
   P = 0,
   b = null,
   L = !0;
@@ -41,7 +41,7 @@ async function M(e) {
     n = v.default.getVoiceChannelId();
   if (null != n) {
     var i, s, r, a, l, u, d, c;
-    let e = (null === (l = window) || void 0 === l ? void 0 : null === (a = l.performance) || void 0 === a ? void 0 : null === (r = a.getEntriesByType) || void 0 === r ? void 0 : null === (s = r.call(a, "navigation")) || void 0 === s ? void 0 : null === (i = s[0]) || void 0 === i ? void 0 : i.type) === "reload" || (null === (u = await (null == O ? void 0 : null === (c = O.processUtils) || void 0 === c ? void 0 : null === (d = c.getLastCrash) || void 0 === d ? void 0 : d.call(c))) || void 0 === u ? void 0 : u.rendererCrashReason) != null;
+    let e = (null === (l = window) || void 0 === l ? void 0 : null === (a = l.performance) || void 0 === a ? void 0 : null === (r = a.getEntriesByType) || void 0 === r ? void 0 : null === (s = r.call(a, "navigation")) || void 0 === s ? void 0 : null === (i = s[0]) || void 0 === i ? void 0 : i.type) === "reload" || (null === (u = await (null == D ? void 0 : null === (c = D.processUtils) || void 0 === c ? void 0 : null === (d = c.getLastCrash) || void 0 === d ? void 0 : d.call(c))) || void 0 === u ? void 0 : u.rendererCrashReason) != null;
     if (e || !L) {
       let e = h.default.getChannel(n);
       null != e && (t = {
@@ -95,15 +95,15 @@ class F extends r.default.Store {
 F.displayName = "GatewayConnectionStore";
 var x = new F(a.default, {
   START_SESSION: function() {
-    return C.socket.isClosed() ? (D.verbose("Socket is reconnecting because of starting new session"), C.socket.connect()) : (D.verbose("Socket is not reconnecting during a new session because it is not closed"), !1)
+    return C.socket.isClosed() ? (O.verbose("Socket is reconnecting because of starting new session"), C.socket.connect()) : (O.verbose("Socket is not reconnecting during a new session because it is not closed"), !1)
   },
   LOGIN_SUCCESS: function() {
-    return D.verbose("session refresh dispatched", {
+    return O.verbose("session refresh dispatched", {
       isEstablished: C.socket.isSessionEstablished()
     }), !!C.socket.isSessionEstablished() && (C.socket.close(), C.socket.connect())
   },
   LOGOUT: function(e) {
-    e.isSwitchingAccount && C.localPresenceState.handleAccountSwitch(), D.verbose("Closing socket because of logout"), C.socket.close()
+    e.isSwitchingAccount && C.localPresenceState.handleAccountSwitch(), O.verbose("Closing socket because of logout"), C.socket.close()
   },
   CLEAR_CACHES: function(e) {
     return C.socket.close(), C.socket.dispatcher.clear(), C.socket.connect(), !1
@@ -112,7 +112,7 @@ var x = new F(a.default, {
     M(e)
   },
   CONNECTION_CLOSED: function() {
-    D.verbose("connection closed dispatched"), P = Date.now()
+    O.verbose("connection closed dispatched"), P = Date.now()
   },
   RTC_CONNECTION_STATE: function(e) {
     if (e.state !== N.RTCConnectionStates.DISCONNECTED) return !1;

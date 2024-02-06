@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return R
   },
   singleSelect: function() {
-    return O
+    return D
   },
   Select: function() {
     return b
@@ -122,7 +122,7 @@ function R(e, t) {
   }
 }
 
-function O(e, t) {
+function D(e, t) {
   return t.has(e) ? {
     newValues: t,
     updated: !1
@@ -132,12 +132,12 @@ function O(e, t) {
   }
 }
 
-function D(e) {
+function O(e) {
   return null == e ? void 0 : e.label
 }
 
 function P(e) {
-  return e.map(e => D(e)).join(", ")
+  return e.map(e => O(e)).join(", ")
 }
 
 function b(e) {
@@ -153,9 +153,9 @@ function b(e) {
     look: C = S.SelectLooks.FILLED,
     onClose: A,
     onOpen: y,
-    renderOptionLabel: N = D,
+    renderOptionLabel: N = O,
     renderOptionValue: R = P,
-    popoutClassName: O,
+    popoutClassName: D,
     popoutPosition: b = "bottom",
     popoutLayerContext: M,
     optionClassName: U,
@@ -207,7 +207,7 @@ function b(e) {
         updatePosition: r
       } = e;
       return (0, i.jsx)(L, {
-        className: O,
+        className: D,
         closeOnSelect: k,
         maxVisibleItems: u,
         width: null != g ? g : K,
@@ -307,10 +307,10 @@ function L(e) {
     async scrollToStart() {},
     isEnabled: !0,
     wrap: !0
-  }), O = s.useRef(null);
-  (0, u.useFocusLock)(O), s.useLayoutEffect(() => {
+  }), D = s.useRef(null);
+  (0, u.useFocusLock)(D), s.useLayoutEffect(() => {
     var e;
-    null === (e = O.current) || void 0 === e || e.focus()
+    null === (e = D.current) || void 0 === e || e.focus()
   }, []), s.useEffect(() => {
     v > 0 && S()
   }, [v, S]), (0, g.default)(S), s.useLayoutEffect(() => {
@@ -320,7 +320,7 @@ function L(e) {
   }, [h]), s.useEffect(() => {
     S()
   }, [S, C]);
-  let D = s.useCallback(e => {
+  let O = s.useCallback(e => {
       n(e), l && r()
     }, [r, n, l]),
     P = f.map((e, t) => {
@@ -329,7 +329,7 @@ function L(e) {
         isSelected: d(e.value),
         value: e.value,
         label: m(e),
-        onSelect: D,
+        onSelect: O,
         className: p,
         isDisabled: e.disabled,
         serialize: E
@@ -356,7 +356,7 @@ function L(e) {
             ref: e => {
               var t;
               let i = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null;
-              n.current = i, O.current = i
+              n.current = i, D.current = i
             },
             ...s,
             role: "listbox",

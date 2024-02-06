@@ -29,8 +29,8 @@ let I = new h.default("ChannelStore"),
   y = {},
   N = {},
   R = null,
-  O = {},
   D = {},
+  O = {},
   P = 0,
   b = {},
   L = {},
@@ -54,7 +54,7 @@ function V(e, t, n) {
 }
 
 function G(e, t, n) {
-  if (M.size > 0 && !Object.hasOwn(A, e) && !Object.hasOwn(N, e) && !Object.hasOwn(O, e) && !Object.hasOwn(L, e) && 1 === t) {
+  if (M.size > 0 && !Object.hasOwn(A, e) && !Object.hasOwn(N, e) && !Object.hasOwn(D, e) && !Object.hasOwn(L, e) && 1 === t) {
     let i = f.default.getBasicChannel(e);
     (null == i ? void 0 : i.guild_id) != null && V(i.guild_id, t, n)
   }
@@ -69,12 +69,12 @@ function F(e) {
 
 function x(e) {
   var t, n, i, s;
-  return G(e, 0, "getBasicChannel"), null !== (s = null !== (i = null !== (n = null !== (t = A[e]) && void 0 !== t ? t : N[e]) && void 0 !== n ? n : O[e]) && void 0 !== i ? i : L[e]) && void 0 !== s ? s : f.default.getBasicChannel(e)
+  return G(e, 0, "getBasicChannel"), null !== (s = null !== (i = null !== (n = null !== (t = A[e]) && void 0 !== t ? t : N[e]) && void 0 !== n ? n : D[e]) && void 0 !== i ? i : L[e]) && void 0 !== s ? s : f.default.getBasicChannel(e)
 }
 
 function B(e) {
   var t, n, i, s;
-  return G(e, 1, "getChannel"), null !== (s = null !== (i = null !== (n = null !== (t = A[e]) && void 0 !== t ? t : N[e]) && void 0 !== n ? n : O[e]) && void 0 !== i ? i : L[e]) && void 0 !== s ? s : U[e]
+  return G(e, 1, "getChannel"), null !== (s = null !== (i = null !== (n = null !== (t = A[e]) && void 0 !== t ? t : N[e]) && void 0 !== n ? n : D[e]) && void 0 !== i ? i : L[e]) && void 0 !== s ? s : U[e]
 }
 
 function H(e) {
@@ -84,12 +84,12 @@ function H(e) {
 }
 
 function Y(e) {
-  N[e.id] = e, e.type === T.ChannelTypes.DM && (D[e.getRecipientId()] = e.id), P += 1
+  N[e.id] = e, e.type === T.ChannelTypes.DM && (O[e.getRecipientId()] = e.id), P += 1
 }
 
 function j(e) {
   let t = A[e.parent_id];
-  O[e.id] = e.merge({
+  D[e.id] = e.merge({
     nsfw: (null == t ? void 0 : t.nsfw) === !0,
     parentChannelThreadType: null == t ? void 0 : t.type
   }), e.isScheduledForDeletion() && l.default.dispatch({
@@ -120,7 +120,7 @@ function K(e) {
 }
 
 function z() {
-  D = {}, A = {}, y = {}, b = {}, N = {}, U = {}, O = {}, M = new Set
+  O = {}, A = {}, y = {}, b = {}, N = {}, U = {}, D = {}, M = new Set
 }
 
 function q(e) {
@@ -154,7 +154,7 @@ function Q(e) {
 function Z(e) {
   if (null == e) return;
   let t = e.guild_id;
-  e.id in N && delete N[e.id], e.id in A && delete A[e.id], e.id in O && delete O[e.id], null != t && null != y[t] && e.id in y[t] && delete y[t][e.id], ! function(e) {
+  e.id in N && delete N[e.id], e.id in A && delete A[e.id], e.id in D && delete D[e.id], null != t && null != y[t] && e.id in y[t] && delete y[t][e.id], ! function(e) {
     if (null == e.guild_id || E.THREAD_CHANNEL_TYPES.has(e.type))(0, E.isPrivate)(e.type) && (P += 1);
     else {
       var t;
@@ -167,13 +167,13 @@ function J(e) {
   var t, n;
   let {
     channel: i
-  } = e, s = null !== (n = null !== (t = A[i.id]) && void 0 !== t ? t : N[i.id]) && void 0 !== n ? n : O[i.id];
+  } = e, s = null !== (n = null !== (t = A[i.id]) && void 0 !== t ? t : N[i.id]) && void 0 !== n ? n : D[i.id];
   if (null == s) return !1;
   Z(s), ! function(e) {
     if ("basicPermissions" in e || e.type !== T.ChannelTypes.DM) return;
     let t = e.getRecipientId(),
-      n = D[t];
-    n === e.id && delete D[t]
+      n = O[t];
+    n === e.id && delete O[t]
   }(s)
 }
 
@@ -181,11 +181,11 @@ function $(e) {
   let {
     messages: t
   } = e;
-  for (let e of t) null != e.thread && !(e.thread.id in O) && E.ALL_CHANNEL_TYPES.has(e.thread.type) && j((0, E.createChannelRecordFromServer)(e.thread))
+  for (let e of t) null != e.thread && !(e.thread.id in D) && E.ALL_CHANNEL_TYPES.has(e.thread.type) && j((0, E.createChannelRecordFromServer)(e.thread))
 }
 
 function ee(e) {
-  null != e && !(e.id in O) && E.ALL_CHANNEL_TYPES.has(e.type) && j((0, E.createChannelRecordFromServer)(e))
+  null != e && !(e.id in D) && E.ALL_CHANNEL_TYPES.has(e.type) && j((0, E.createChannelRecordFromServer)(e))
 }
 
 function et() {
@@ -233,10 +233,10 @@ class en extends o.default.Store {
     return s(N).values().sort((e, t) => a.default.compare(e.lastMessageId, t.lastMessageId)).reverse().value()
   }
   getDMFromUserId(e) {
-    if (null != e) return D[e]
+    if (null != e) return O[e]
   }
   getDMUserIds() {
-    return Object.keys(D)
+    return Object.keys(O)
   }
   getPrivateChannelsVersion() {
     return P
@@ -246,13 +246,13 @@ class en extends o.default.Store {
     return null !== (t = b[e]) && void 0 !== t ? t : 0
   }
   getAllThreadsForParent(e) {
-    return s.values(O).filter(t => t.parent_id === e)
+    return s.values(D).filter(t => t.parent_id === e)
   }
   getInitialOverlayState() {
     return {
       ...A,
       ...N,
-      ...O
+      ...D
     }
   }
 }
@@ -299,7 +299,7 @@ var ei = new en(l.default, {
       return e.nsfw !== (null == t ? void 0 : t.nsfw) || e.type !== (null == t ? void 0 : t.type)
     });
     for (let t of e.channels) H(t);
-    t && Object.values(O).forEach(e => H(e))
+    t && Object.values(D).forEach(e => H(e))
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
@@ -309,7 +309,7 @@ var ei = new en(l.default, {
   },
   CONNECTION_OPEN: function(e) {
     let t = y;
-    for (let n of (D = {}, A = {}, y = {}, O = {}, b = {}, U = {}, M = new Set, R = e.initialPrivateChannels, e.initialPrivateChannels.forEach(Y), e.guilds)) "partial" === n.dataMode && s.forEach(t[n.id], W), K(n);
+    for (let n of (O = {}, A = {}, y = {}, D = {}, b = {}, U = {}, M = new Set, R = e.initialPrivateChannels, e.initialPrivateChannels.forEach(Y), e.guilds)) "partial" === n.dataMode && s.forEach(t[n.id], W), K(n);
     et()
   },
   GUILD_CREATE: function(e) {
@@ -322,7 +322,7 @@ var ei = new en(l.default, {
     let {
       data: t
     } = e, n = !1, i = (0, m.getThreadsFromGuildFeedFetch)(t);
-    for (let e of i) !(e.id in O) && E.ALL_CHANNEL_TYPES.has(e.type) && (j((0, E.createChannelRecordFromServer)(e)), n = !0);
+    for (let e of i) !(e.id in D) && E.ALL_CHANNEL_TYPES.has(e.type) && (j((0, E.createChannelRecordFromServer)(e)), n = !0);
     return n
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: Q,

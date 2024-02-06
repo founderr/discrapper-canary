@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   },
   default: function() {
-    return D
+    return O
   }
 }), n("222007"), n("424973");
 var i, s, r = n("627445"),
@@ -72,7 +72,7 @@ function R(e) {
     keywords: e.keywords
   }
 }
-class O extends u.default.Store {
+class D extends u.default.Store {
   initialize() {
     this.waitFor(f.default)
   }
@@ -111,8 +111,8 @@ class O extends u.default.Store {
     return N
   }
 }
-O.displayName = "GuildDiscoveryStore";
-var D = new O(d.default, {
+D.displayName = "GuildDiscoveryStore";
+var O = new D(d.default, {
   GUILD_DISCOVERY_SEARCH_INIT: function(e) {
     let {
       index: t

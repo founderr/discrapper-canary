@@ -143,7 +143,7 @@ function R(e) {
   }), A()
 }
 
-function O(e) {
+function D(e) {
   let {
     context: t,
     userId: n
@@ -158,7 +158,7 @@ function O(e) {
   }
 }
 
-function D(e) {
+function O(e) {
   let {
     context: t,
     userId: n
@@ -182,8 +182,8 @@ class b extends l.default {
     super(...e), this.actions = {
       POST_CONNECTION_OPEN: C,
       AUDIO_SET_LOCAL_VOLUME: R,
-      AUDIO_TOGGLE_LOCAL_MUTE: O,
-      AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: D
+      AUDIO_TOGGLE_LOCAL_MUTE: D,
+      AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: O
     }
   }
 }

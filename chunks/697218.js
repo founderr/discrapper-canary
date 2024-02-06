@@ -123,7 +123,7 @@ function R(e) {
   return t.forEach(e => A(e, !0)), !1
 }
 
-function O(e) {
+function D(e) {
   let {
     firstMessages: t,
     owners: n
@@ -131,7 +131,7 @@ function O(e) {
   null != t && t.forEach(e => A(e, !0)), null != n && n.forEach(e => I(e.user, !0))
 }
 
-function D(e) {
+function O(e) {
   let {
     message: t
   } = e;
@@ -319,8 +319,8 @@ var G = new V(r.default, {
     } = e;
     return null == t || t.forEach(e => A(e, !1)), !1
   },
-  MESSAGE_CREATE: D,
-  MESSAGE_UPDATE: D,
+  MESSAGE_CREATE: O,
+  MESSAGE_UPDATE: O,
   GUILD_SETTINGS_LOADED_BANS: function(e) {
     let {
       bans: t
@@ -467,8 +467,8 @@ var G = new V(r.default, {
     } = e;
     (0, o.getMessagesFromGuildFeedFetch)(t).forEach(e => A(e, !0))
   },
-  LOAD_THREADS_SUCCESS: O,
-  LOAD_ARCHIVED_THREADS_SUCCESS: O,
+  LOAD_THREADS_SUCCESS: D,
+  LOAD_ARCHIVED_THREADS_SUCCESS: D,
   LOAD_FORUM_POSTS: function(e) {
     let {
       threads: t

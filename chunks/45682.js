@@ -21,8 +21,8 @@ var n = i("37983"),
   g = i("719923"),
   _ = i("994428"),
   S = i("782340"),
-  C = i("985330");
-let h = {
+  h = i("985330");
+let C = {
   tension: 750,
   mass: 2.5,
   friction: 70
@@ -35,11 +35,11 @@ function T(e) {
     textColor: l
   } = e, s = null != i;
   return (0, n.jsxs)("span", {
-    className: s ? void 0 : C.tooltipContainer,
+    className: s ? void 0 : h.tooltipContainer,
     children: [(0, n.jsxs)("span", {
-      className: C.tooltipContainer,
+      className: h.tooltipContainer,
       children: [(0, n.jsx)(p.default, {
-        className: C.nitroWheel
+        className: h.nitroWheel
       }), s ? (0, n.jsx)(d.Heading, {
         color: null != l ? l : "text-normal",
         variant: "heading-sm/semibold",
@@ -75,9 +75,9 @@ function N(e) {
     color: d.Tooltip.Colors.BRAND,
     forceOpen: R,
     "aria-label": L,
-    tooltipClassName: C.tooltip,
+    tooltipClassName: h.tooltip,
     children: [(0, n.jsx)("input", {
-      className: C.visuallyHidden,
+      className: h.visuallyHidden,
       checked: t,
       onChange: function() {
         x({
@@ -87,28 +87,28 @@ function N(e) {
           to: {
             rotate: t ? "0deg" : "360deg"
           },
-          config: h
+          config: C
         }), null == i || i(), O(!1)
       },
       id: s,
       type: "checkbox"
     }), (0, n.jsxs)("label", {
       htmlFor: s,
-      className: a(C.label, {
-        [C.labelChecked]: t
+      className: a(h.label, {
+        [h.labelChecked]: t
       }),
       children: [t ? (0, n.jsx)(I.Shine, {
-        className: C.shine,
+        className: h.shine,
         shinePaused: p
       }) : null, (0, n.jsx)(P, {
         style: p ? void 0 : M,
         width: 20,
         height: 20,
         color: t ? "white" : void 0,
-        className: C.icon
+        className: h.icon
       }), (0, n.jsx)("span", {
         children: (0, n.jsx)(d.Text, {
-          className: C.visuallyHidden,
+          className: h.visuallyHidden,
           variant: "text-sm/semibold",
           children: S.default.Messages.SUPER_REACTION_TOGGLE_DISABLED
         })

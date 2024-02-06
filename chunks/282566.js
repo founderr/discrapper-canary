@@ -21,8 +21,8 @@ var n = i("37983"),
   g = i("917247"),
   _ = i("956597"),
   S = i("635956"),
-  C = i("599110"),
-  h = i("402671"),
+  h = i("599110"),
+  C = i("402671"),
   T = i("719923"),
   N = i("788506"),
   v = i("115279"),
@@ -57,10 +57,10 @@ var n = i("37983"),
         let e;
         e = b === y.EmojiIntention.REACTION ? j.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : D.subCategory === v.EmojiSubCategory.TOP_GUILD_EMOJI ? j.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : D.subCategory === v.EmojiSubCategory.NEWLY_ADDED_EMOJI ? j.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : j.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
         let t = D.emoji;
-        C.default.track(A.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+        h.default.track(A.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
           type: e,
           is_animated: t.animated,
-          is_external: !h.default.isInternalEmojiForGuildId(t, null == L ? void 0 : L.getGuildId()),
+          is_external: !C.default.isInternalEmojiForGuildId(t, null == L ? void 0 : L.getGuildId()),
           has_search_query: null != z && "" !== z,
           location: {
             ...U,

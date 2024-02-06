@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return N
   },
   hydrateInitialGuild: function() {
-    return O
+    return D
   },
   hydratePreviouslyUnavailableGuild: function() {
     return L
@@ -45,9 +45,9 @@ function A(e, t) {
     merged_members: s,
     merged_presences: r,
     ...a
-  } = e, o = D(C, null == r ? void 0 : r.friends), l = null !== (n = null == i ? void 0 : i.map((e, t) => {
-    let n = D(C, null == r ? void 0 : r.guilds[t]),
-      i = D(C, null == s ? void 0 : s[t]);
+  } = e, o = O(C, null == r ? void 0 : r.friends), l = null !== (n = null == i ? void 0 : i.map((e, t) => {
+    let n = O(C, null == r ? void 0 : r.guilds[t]),
+      i = O(C, null == s ? void 0 : s[t]);
     return {
       ...e,
       unavailable: void 0 === e.voice_states,
@@ -112,12 +112,12 @@ function N(e, t, n) {
       })
     }
   })(n), C = a.keyBy(r, e => e.id);
-  let m = D(C, l);
+  let m = O(C, l);
   null == u || u.forEach(e => {
     let t = e.recipient_ids;
     null != t && (e.recipients = t.map(e => (s(null != C[e], "Missing user in compressed ready payload"), C[e]))), delete e.recipient_ids
   });
-  let S = null !== (i = null == f ? void 0 : f.map((e, t) => !0 === e.unavailable ? e : (e.members = D(C, null == d ? void 0 : d[t]), b(e)))) && void 0 !== i ? i : [],
+  let S = null !== (i = null == f ? void 0 : f.map((e, t) => !0 === e.unavailable ? e : (e.members = O(C, null == d ? void 0 : d[t]), b(e)))) && void 0 !== i ? i : [],
     I = R(t, f, e => b(e));
   return null != I && S.push(I), {
     ..._,
@@ -133,7 +133,7 @@ function R(e, t, n) {
   return null == I || I.identifyTime !== e || null != t && t.some(e => e.id === I.guild.id) ? null : n(I.guild)
 }
 
-function O(e, t) {
+function D(e, t) {
   var n, i, s;
   let r = E.default.getGuild(e.id),
     a = L(e, null == r ? void 0 : {
@@ -149,7 +149,7 @@ function O(e, t) {
   }, a
 }
 
-function D(e, t) {
+function O(e, t) {
   let n = [];
   return null == t || t.forEach(t => {
     if (null == t) return;

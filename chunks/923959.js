@@ -35,8 +35,8 @@ let C = "SELECTABLE",
   y = null,
   N = {},
   R = {},
-  O = {},
-  D = null,
+  D = {},
+  O = null,
   P = {},
   b = {
     comparator: -1,
@@ -70,7 +70,7 @@ function w(e, t) {
 }
 
 function V() {
-  N = {}, P = {}, R = {}, O = {}, null != y && G(y)
+  N = {}, P = {}, R = {}, D = {}, null != y && G(y)
 }
 
 function G(e) {
@@ -106,7 +106,7 @@ function G(e) {
       s.forEach(n, n => {
         var i;
         let s = n.channel;
-        if (e.count += 1, f.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(s.type) && !p.default.can(T.Permissions.VIEW_CHANNEL, s) && !l.default.isChannelGated(s.guild_id, s.id) && s.id !== D) return;
+        if (e.count += 1, f.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(s.type) && !p.default.can(T.Permissions.VIEW_CHANNEL, s) && !l.default.isChannelGated(s.guild_id, s.id) && s.id !== O) return;
         let r = (i = s.type, (0, f.isGuildSelectableChannelType)(i) ? C : (0, f.isGuildVocalChannelType)(i) ? A : i);
         s.type === T.ChannelTypes.GUILD_DIRECTORY && (null == P[t] && (P[t] = []), P[t].push(n)), null != e[r] && e[r].push(n)
       })
@@ -145,7 +145,7 @@ function G(e) {
           of r)
           if (H(e, t)) return !0;
         return !1
-      })(t, e) ? O[e] = !0: delete O[e]
+      })(t, e) ? D[e] = !0: delete D[e]
     }(e), n
 }
 
@@ -186,7 +186,7 @@ function H(e, t) {
 
 function Y(e, t) {
   var n;
-  D = t;
+  O = t;
   let i = null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : null;
   if (null == i) return !1;
   N[i] = void 0, i === y && G(i)
@@ -259,7 +259,7 @@ class W extends a.default.Store {
     return this.getSelectableChannelIds(e).includes(t)
   }
   hasElevatedPermissions(e) {
-    return O[e] || !1
+    return D[e] || !1
   }
   hasChannels(e) {
     return this.getChannels(e).count > 0
@@ -293,7 +293,7 @@ var K = new W(o.default, {
         id: t
       }
     } = e;
-    return delete N[t], delete R[t], delete O[t], delete P[t], !0
+    return delete N[t], delete R[t], delete D[t], delete P[t], !0
   },
   GUILD_MEMBER_UPDATE: function(e) {
     let {
@@ -326,7 +326,7 @@ var K = new W(o.default, {
     let {
       channelId: t
     } = e;
-    return null == t && null != D ? Y(g.default.getChannel(D), null) : Y(g.default.getChannel(t), t)
+    return null == t && null != O ? Y(g.default.getChannel(O), null) : Y(g.default.getChannel(t), t)
   },
   VOICE_CHANNEL_STATUS_UPDATE: function(e) {
     let t = g.default.getBasicChannel(e.id);

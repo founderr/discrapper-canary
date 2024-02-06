@@ -43,8 +43,8 @@ var i, s, r, a, o = n("37983"),
   y = n("393414"),
   N = n("766274"),
   R = n("271938"),
-  O = n("449008"),
-  D = n("991170"),
+  D = n("449008"),
+  O = n("991170"),
   P = n("253981"),
   b = n("872825"),
   L = n("8222"),
@@ -153,15 +153,15 @@ function J(e) {
     }),
     eE = em.userAppsTreatment === I.UserAppsTreatment.ALLOWED;
   !eE && (e_ = !1);
-  let [ep, ev] = l.useState(0), [eS, eT] = l.useState(null), [eI, eC] = l.useState(D.default.NONE), [eA, ey] = l.useState(1), [eN, eR] = l.useState(null), [eO] = l.useState(k.OrderedAccountScopes.filter(e => eh.includes(e))), [eD, eP] = l.useState(null != ee ? ee : null), [eb, eL] = l.useState(null != et ? et : null), [eM, eU] = l.useState(!1), ek = l.useMemo(() => {
+  let [ep, ev] = l.useState(0), [eS, eT] = l.useState(null), [eI, eC] = l.useState(O.default.NONE), [eA, ey] = l.useState(1), [eN, eR] = l.useState(null), [eD] = l.useState(k.OrderedAccountScopes.filter(e => eh.includes(e))), [eO, eP] = l.useState(null != ee ? ee : null), [eb, eL] = l.useState(null != et ? et : null), [eM, eU] = l.useState(!1), ek = l.useMemo(() => {
     var e;
-    return null == eS ? void 0 : null === (e = eS.guilds) || void 0 === e ? void 0 : e.find(e => e.id === eD)
-  }, [null == eS ? void 0 : eS.guilds, eD]), ew = (0, _.useStateFromStoresObject)([p.default, v.default], () => {
+    return null == eS ? void 0 : null === (e = eS.guilds) || void 0 === e ? void 0 : e.find(e => e.id === eO)
+  }, [null == eS ? void 0 : eS.guilds, eO]), ew = (0, _.useStateFromStoresObject)([p.default, v.default], () => {
     var e, t;
     let n;
     let i = null === (e = v.default.getSelfEmbeddedActivities().values().next()) || void 0 === e ? void 0 : e.value,
       s = p.default.getIsEnabled();
-    return (0, O.isNotNullish)(i) && (n = v.default.getShelfActivities(i.guildId).find(e => e.application_id === i.application_id), s && void 0 === n && (n = null === (t = p.default.getDeveloperShelfItems().find(e => e.id === i.application_id)) || void 0 === t ? void 0 : t.embeddedActivityConfig), (0, O.isNotNullish)(n)) ? {
+    return (0, D.isNotNullish)(i) && (n = v.default.getShelfActivities(i.guildId).find(e => e.application_id === i.application_id), s && void 0 === n && (n = null === (t = p.default.getDeveloperShelfItems().find(e => e.id === i.application_id)) || void 0 === t ? void 0 : t.embeddedActivityConfig), (0, D.isNotNullish)(n)) ? {
       ...W.DEFAULT_EMBEDDED_ACTIVITY_CONFIG,
       ...n
     } : {}
@@ -188,8 +188,8 @@ function J(e) {
         codeChallenge: Z,
         codeChallengeMethod: J,
         state: $,
-        permissions: f.default.remove(null != en ? en : D.default.NONE, eI),
-        guildId: null == eD || e_ ? void 0 : eD,
+        permissions: f.default.remove(null != en ? en : O.default.NONE, eI),
+        guildId: null == eO || e_ ? void 0 : eO,
         channelId: null != eb ? eb : void 0,
         userInstall: e_
       });
@@ -214,7 +214,7 @@ function J(e) {
       let e = t.body;
       (null == e ? void 0 : e.message) != null && "" !== e.message ? eR(Error(e.message)) : eR(e), ey(1), ev(2), eU(!1)
     }
-  }, [eo, el, A, Z, J, eI, eu, en, Q, X, eh, eD, eb, $, ed, null == eS ? void 0 : eS.application, ek, e_]), eF = l.useRef(!1), ex = l.useCallback(async () => {
+  }, [eo, el, A, Z, J, eI, eu, en, Q, X, eh, eO, eb, $, ed, null == eS ? void 0 : eS.application, ek, e_]), eF = l.useRef(!1), ex = l.useCallback(async () => {
     if (0 === ep) {
       if (ev(1), !R.default.isAuthenticated()) {
         (0, L.logoutWithRedirect)(eg);
@@ -256,10 +256,10 @@ function J(e) {
   }, []);
   l.useEffect(() => {
     let e = eh.filter(e => !k.ValidScopes.includes(e));
-    0 === eh.length ? (eR(Error("No scopes were provided.")), ev(2)) : e.length > 0 ? (eR(Error("Invalid scope: ".concat(e[0]))), ev(2)) : (0, U.containsDisallowedPermission)(null != en ? en : D.default.NONE) ? (eR(Error("Invalid permission(s) provided.")), ev(2)) : ex()
+    0 === eh.length ? (eR(Error("No scopes were provided.")), ev(2)) : e.length > 0 ? (eR(Error("Invalid scope: ".concat(e[0]))), ev(2)) : (0, U.containsDisallowedPermission)(null != en ? en : O.default.NONE) ? (eR(Error("Invalid permission(s) provided.")), ev(2)) : ex()
   }, [ex, eh, en]);
   let eH = null != eb ? null == eS ? void 0 : null === (t = eS.channels) || void 0 === t ? void 0 : t.find(e => e.id === eb) : null,
-    eY = null != eD ? null == eS ? void 0 : null === (n = eS.guilds) || void 0 === n ? void 0 : n.find(e => e.id === eD) : null;
+    eY = null != eO ? null == eS ? void 0 : null === (n = eS.guilds) || void 0 === n ? void 0 : n.find(e => e.id === eO) : null;
   if (l.useEffect(() => {
       null != eS && (null != eH ? eP(null) : null == eY && (eP(null), eL(null)))
     }, [eS, eY, eH]), eN instanceof Error) return {
@@ -281,31 +281,31 @@ function J(e) {
       m = (0, o.jsxs)(o.Fragment, {
         children: [(0, o.jsx)(G.default, {
           application: eS.application,
-          accountScopes: eO,
+          accountScopes: eD,
           errors: ez,
           isTrustedName: ec
         }), null == eH && eX && !e_ ? (0, o.jsx)(x.GuildSelector, {
           error: (null !== (a = null !== (r = ez[j.OAuth2Scopes.BOT]) && void 0 !== r ? r : ez[j.OAuth2Scopes.APPLICATIONS_COMMANDS]) && void 0 !== a ? a : [])[0],
-          selectedGuildId: eD,
+          selectedGuildId: eO,
           onGuildChange: e => {
             eP(e)
           },
           guilds: null != eq ? eq : [],
-          disabled: "" !== eD && !0 === es
+          disabled: "" !== eO && !0 === es
         }) : null, eh.includes(j.OAuth2Scopes.WEBHOOK_INCOMING) ? (0, o.jsx)(x.WebhookGuildChannelSelector, {
           error: (null !== (d = ez[j.OAuth2Scopes.WEBHOOK_INCOMING]) && void 0 !== d ? d : [])[0],
           selectedChannelId: eb,
-          selectedGuildId: eD,
+          selectedGuildId: eO,
           onChannelChange: e => eL(e)
         }) : null]
-      }), eh.includes(j.OAuth2Scopes.BOT) && !f.default.equals(en, D.default.NONE) && (C = 2);
+      }), eh.includes(j.OAuth2Scopes.BOT) && !f.default.equals(en, O.default.NONE) && (C = 2);
       let eQ = null != eY && eh.includes(j.OAuth2Scopes.WEBHOOK_INCOMING) && null == eb;
       eK = !e_ && (eX && null == eY && null == eH || eQ);
       break;
     case 2:
       m = (0, o.jsx)(F.default, {
         application: eS.application,
-        permissions: null != en ? en : D.default.NONE,
+        permissions: null != en ? en : O.default.NONE,
         deniedPermissions: eI,
         onPermissionsChange: eB,
         guild: eY
@@ -347,7 +347,7 @@ function J(e) {
       user: ej,
       application: eS.application,
       bot: eS.bot,
-      accountScopes: eO,
+      accountScopes: eD,
       showLogout: er || !1,
       location: eg,
       isTrustedName: ec

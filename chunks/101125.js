@@ -28,8 +28,8 @@ var r = n("714617"),
   y = n("235660"),
   N = n("49111");
 let R = !1,
-  O = N.StatusTypes.ONLINE,
-  D = N.StatusTypes.UNKNOWN,
+  D = N.StatusTypes.ONLINE,
+  O = N.StatusTypes.UNKNOWN,
   P = 0,
   b = [],
   L = !1,
@@ -61,9 +61,9 @@ function V(e) {
 
 function G() {
   var e;
-  P = null !== (e = T.default.getIdleSince()) && void 0 !== e ? e : 0, L = T.default.isAFK(), M ? (O = D, F()) : O = R ? N.StatusTypes.INVISIBLE : h.StatusSetting.getSetting(), O === N.StatusTypes.ONLINE && P > 0 && (O = N.StatusTypes.IDLE);
+  P = null !== (e = T.default.getIdleSince()) && void 0 !== e ? e : 0, L = T.default.isAFK(), M ? (D = O, F()) : D = R ? N.StatusTypes.INVISIBLE : h.StatusSetting.getSetting(), D === N.StatusTypes.ONLINE && P > 0 && (D = N.StatusTypes.IDLE);
   let t = !1,
-    n = M || O === N.StatusTypes.INVISIBLE ? [] : C.default.getActivities().filter(V);
+    n = M || D === N.StatusTypes.INVISIBLE ? [] : C.default.getActivities().filter(V);
   !a(b, n) && (b = n, t = !0);
   let i = y.default.getRemoteActivities();
   if (U !== i && (U = i, t = !0), t) {
@@ -78,7 +78,7 @@ function F() {
 }
 
 function x() {
-  M = !1, D = N.StatusTypes.UNKNOWN, G(), A.default.setCurrentUserOnConnectionOpen(O, k)
+  M = !1, O = N.StatusTypes.UNKNOWN, G(), A.default.setCurrentUserOnConnectionOpen(D, k)
 }
 class B extends u.default.Store {
   initialize() {
@@ -86,7 +86,7 @@ class B extends u.default.Store {
   }
   getLocalPresence() {
     return {
-      status: O,
+      status: D,
       since: P,
       activities: b,
       afk: L,
@@ -94,7 +94,7 @@ class B extends u.default.Store {
     }
   }
   getStatus() {
-    return O
+    return D
   }
   getActivities() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -122,7 +122,7 @@ var H = new B(d.default, {
   CONNECTION_OPEN: function() {
     x(), .001 > Math.random() && E.default.track(N.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
       reason: "status_on_connection",
-      rating: O
+      rating: D
     })
   },
   CONNECTION_OPEN_SUPPLEMENTAL: x,
@@ -142,7 +142,7 @@ var H = new B(d.default, {
   LIBRARY_FETCH_SUCCESS: G,
   LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: G,
   LOGOUT: function() {
-    M = !0, D = O, G()
+    M = !0, O = D, G()
   },
   EMBEDDED_ACTIVITY_CLOSE: G,
   EMBEDDED_ACTIVITY_OPEN: G,
