@@ -102,7 +102,7 @@ function v(e) {
     })]
   })
 }
-class j extends n.PureComponent {
+class P extends n.PureComponent {
   render() {
     let {
       user: e,
@@ -158,7 +158,7 @@ class j extends n.PureComponent {
     }
   }
 }
-class P extends n.PureComponent {
+class j extends n.PureComponent {
   makeFilter(e) {
     if (null == e || 0 === e.length) return e => null != e;
     {
@@ -231,7 +231,7 @@ class P extends n.PureComponent {
       let u = this.getSortedBans(l, o),
         c = u[n],
         E = null == l ? void 0 : l.get(null !== (t = null == c ? void 0 : c.id) && void 0 !== t ? t : "");
-      if (null != c && null != E) return (0, a.jsx)(j, {
+      if (null != c && null != E) return (0, a.jsx)(P, {
         user: c,
         ban: E,
         hideDiscriminator: i,
@@ -311,7 +311,7 @@ let y = o.default.connectStores([h.default, T.default, I.default], () => {
     theme: T.default.theme,
     streamerMode: I.default.hidePersonalInformation
   }
-})(P);
+})(j);
 
 function b() {
   var e;

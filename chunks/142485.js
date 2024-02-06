@@ -19,8 +19,8 @@ var a = l("884691"),
         clip: a,
         cropData: n,
         applicationAudioEnabled: o,
-        voiceAudioEnabled: d,
-        onShareComplete: u
+        voiceAudioEnabled: u,
+        onShareComplete: d
       } = e;
       l(a.id);
       try {
@@ -33,11 +33,11 @@ var a = l("884691"),
             start: null !== (E = null !== (h = null == n ? void 0 : n.start) && void 0 !== h ? h : null === (c = a.editMetadata) || void 0 === c ? void 0 : c.start) && void 0 !== E ? E : 0,
             end: null !== (C = null !== (v = null == n ? void 0 : n.end) && void 0 !== v ? v : null === (f = a.editMetadata) || void 0 === f ? void 0 : f.end) && void 0 !== C ? C : a.length / 1e3,
             applicationAudio: null === (_ = null != o ? o : null === (p = a.editMetadata) || void 0 === p ? void 0 : p.applicationAudio) || void 0 === _ || _,
-            voiceAudio: null === (g = null != d ? d : null === (m = a.editMetadata) || void 0 === m ? void 0 : m.voiceAudio) || void 0 === g || g
+            voiceAudio: null === (g = null != u ? u : null === (m = a.editMetadata) || void 0 === m ? void 0 : m.voiceAudio) || void 0 === g || g
           }
         })
       } catch (e) {} finally {
-        null == u || u(), l(null)
+        null == d || d(), l(null)
       }
     }, [t, r, l]);
     return {

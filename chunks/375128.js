@@ -1,6 +1,6 @@
-var l = n("437083"),
-  i = n("329252"),
-  r = n("725502");
+var r = n("437083"),
+  a = n("329252"),
+  i = n("725502");
 e.exports = function(e) {
-  return (r(e) ? l : i)(e)
+  return (i(e) ? r : a)(e)
 }

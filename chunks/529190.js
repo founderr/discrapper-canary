@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ITEM_HEIGHT: function() {
-    return b
+    return k
   },
   default: function() {
     return U
@@ -35,8 +35,8 @@ var l = n("37983"),
   R = n("49111"),
   O = n("782340"),
   M = n("253184"),
-  k = n("327769");
-let b = 56,
+  b = n("327769");
+let k = 56,
   P = [8, 8, 0, 8],
   L = a.debounce(() => {
     (0, c.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_BROWSER_SCROLLED)
@@ -82,7 +82,7 @@ var U = i.forwardRef(function(e, t) {
   }), Z = e => {
     let t = K.length,
       n = V.reduce((e, t) => e + t.data.length, 0) - (W ? 7 : 0),
-      l = 48 * t + n * b - 512;
+      l = 48 * t + n * k - 512;
     W && e + 420 > l && z(), X(e), L(), a.current = e
   };
   i.useEffect(() => {
@@ -171,7 +171,7 @@ var U = i.forwardRef(function(e, t) {
           message: O.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
             applicationName: i.name
           }),
-          noResultsImageURL: k,
+          noResultsImageURL: b,
           className: M.noSearchResults
         })]
       }, e)
@@ -223,7 +223,7 @@ var U = i.forwardRef(function(e, t) {
       renderSectionHeader: en,
       rowCount: K.length,
       rowCountBySection: $,
-      rowHeight: b,
+      rowHeight: k,
       sectionHeaderHeight: 32,
       sectionMarginBottom: J,
       ref: w,

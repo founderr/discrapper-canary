@@ -7,17 +7,17 @@ r.r(t), r.d(t, {
 var o = r("37983");
 r("884691");
 var a = r("469563"),
-  l = r("521590"),
-  s = r("75196"),
+  s = r("521590"),
+  l = r("75196"),
   i = (0, a.replaceIcon)(function(e) {
     let {
       width: t = 10,
       height: r = 10,
       color: a = "currentColor",
-      ...l
+      ...s
     } = e;
     return (0, o.jsxs)("svg", {
-      ...(0, s.default)(l),
+      ...(0, l.default)(s),
       width: t,
       height: r,
       viewBox: "0 0 10 10",
@@ -40,6 +40,6 @@ var a = r("469563"),
         })
       })]
     })
-  }, l.GlobeEarthIcon, void 0, {
+  }, s.GlobeEarthIcon, void 0, {
     size: 10
   })

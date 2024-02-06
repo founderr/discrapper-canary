@@ -12,8 +12,8 @@ var r = n("37983"),
   s = n("414456"),
   a = n.n(s),
   l = n("77078"),
-  o = n("174727"),
-  u = n("93393"),
+  u = n("174727"),
+  o = n("93393"),
   c = n("888400"),
   d = n("719923"),
   f = n("917247"),
@@ -26,7 +26,7 @@ function E(e) {
     isTabSelected: t,
     expiresAt: n,
     trialDuration: s
-  } = e, d = i.useMemo(() => Date.parse(n), [n]), f = (0, o.default)(d, 6e4);
+  } = e, d = i.useMemo(() => Date.parse(n), [n]), f = (0, u.default)(d, 6e4);
   return Object.values(f).every(e => 0 === e) ? null : (0, r.jsx)(l.Tooltip, {
     text: (0, c.unitsAsStrings)(f, {
       days: _.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_DAYS,
@@ -38,7 +38,7 @@ function E(e) {
       className: a(m.premiumTrialBadge, m.premiumTrialAcknowledgedBadge, {
         [m.premiumTrialBadgeSelected]: t
       }),
-      children: [(0, r.jsx)(u.default, {
+      children: [(0, r.jsx)(o.default, {
         className: m.premiumTrialBadgeIcon
       }), s]
     })

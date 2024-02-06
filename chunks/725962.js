@@ -17,38 +17,38 @@ var l = n("37983"),
       href: t,
       className: n,
       iconClassName: c,
-      rel: f,
-      target: m,
+      rel: m,
+      target: f,
       mimeType: h,
       fileName: p,
       focusProps: g,
       onClick: E,
-      ...v
-    } = e, C = a.useMemo(() => s.designConfig.getDefaultLinkInterceptor(t), [t]), I = a.useCallback(e => {
+      ...C
+    } = e, v = a.useMemo(() => s.designConfig.getDefaultLinkInterceptor(t), [t]), I = a.useCallback(e => {
       r.default.track(u.AnalyticEvents.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
         attachment_type: null == h ? void 0 : h[0],
         attachment_subtype: null == h ? void 0 : h[1]
-      }), null == E || E(), null == C || C(e)
-    }, [C, h, E]);
+      }), null == E || E(), null == v || v(e)
+    }, [v, h, E]);
     return null != p ? (0, l.jsx)(i.Anchor, {
       href: t,
       onClick: I,
-      target: m,
-      rel: f,
+      target: f,
+      rel: m,
       className: n,
       "aria-label": d.default.Messages.DOWNLOAD,
       focusProps: g,
-      ...v,
+      ...C,
       children: p
     }) : (0, l.jsx)(i.Anchor, {
       href: t,
       onClick: I,
-      target: m,
-      rel: f,
+      target: f,
+      rel: m,
       className: n,
       "aria-label": d.default.Messages.DOWNLOAD,
       focusProps: g,
-      ...v,
+      ...C,
       children: (0, l.jsx)(o.default, {
         className: c
       })

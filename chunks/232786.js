@@ -5,10 +5,10 @@ i.r(t), i.d(t, {
   }
 });
 var n = i("37983"),
-  l = i("884691"),
-  s = i("414456"),
-  a = i.n(s),
-  r = i("235855"),
+  s = i("884691"),
+  l = i("414456"),
+  r = i.n(l),
+  a = i("235855"),
   o = i("77078"),
   u = i("997289"),
   c = i("685665"),
@@ -28,7 +28,7 @@ var n = i("37983"),
     let {
       bodyCopy: t = C.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_BODY,
       className: i,
-      onDismiss: s,
+      onDismiss: l,
       onCtaClick: N
     } = e, {
       location: v
@@ -36,14 +36,14 @@ var n = i("37983"),
       analyticsLocations: A
     } = (0, c.default)(), {
       isLoading: y,
-      suggestedPremiumType: j
+      suggestedPremiumType: R
     } = (0, E.default)({
       autoTrackExposure: !0,
       experiment: f.default,
       location: h.PremiumUpsellTypes.EMOJI_PICKER_SEARCH
-    }), R = l.useRef(!1), O = l.useCallback(() => {
+    }), j = s.useRef(!1), O = s.useCallback(() => {
       (0, d.default)({
-        subscriptionTier: _.default.getSkuIdForPremiumType(j),
+        subscriptionTier: _.default.getSkuIdForPremiumType(R),
         analyticsLocations: A,
         analyticsObject: {
           ...v,
@@ -51,19 +51,19 @@ var n = i("37983"),
           objectType: S.AnalyticsObjectTypes.TIER_2
         }
       }), null == N || N()
-    }, [A, v, N, j]), M = j === h.PremiumTypes.TIER_0;
+    }, [A, v, N, R]), M = R === h.PremiumTypes.TIER_0;
     return (0, n.jsx)("div", {
-      className: a(T.wrapper, i),
+      className: r(T.wrapper, i),
       children: y ? (0, n.jsx)(o.Spinner, {
         type: o.SpinnerTypes.PULSING_ELLIPSIS
-      }) : (0, n.jsx)(r.default, {
+      }) : (0, n.jsx)(a.default, {
         onChange: e => {
-          e && !R.current && (g.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+          e && !j.current && (g.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
             type: h.PremiumUpsellTypes.EMOJI_PICKER_SEARCH,
             location: v,
             location_stack: A,
-            sku_id: _.default.getSkuIdForPremiumType(j)
-          }), R.current = !0)
+            sku_id: _.default.getSkuIdForPremiumType(R)
+          }), j.current = !0)
         },
         children: (0, n.jsxs)("div", {
           className: T.upsell,
@@ -82,8 +82,8 @@ var n = i("37983"),
             color: o.Button.Colors.LINK,
             onClick: O,
             children: M ? C.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : C.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA
-          }), null != s && (0, n.jsx)(o.Button, {
-            onClick: s,
+          }), null != l && (0, n.jsx)(o.Button, {
+            onClick: l,
             className: T.dismissButton,
             look: o.Button.Looks.BLANK,
             size: o.Button.Sizes.ICON,

@@ -1,5 +1,5 @@
 "use strict";
-var l, a, s, i, r, o, u, d, c, f, m, h, p, g;
+var l, a, s, i, r, o, u, d, c, m, f, h, p, g;
 
 function E(e, t) {
   let {
@@ -21,7 +21,7 @@ function E(e, t) {
   }
 }
 
-function v(e) {
+function C(e) {
   let {
     soundId: t,
     guildId: n,
@@ -56,7 +56,7 @@ n.r(t), n.d(t, {
     return E
   },
   soundboardSoundToAPI: function() {
-    return v
+    return C
   },
   SoundboardSoundGridSectionType: function() {
     return r
@@ -67,4 +67,4 @@ n.r(t), n.d(t, {
   LocalSoundTrigger: function() {
     return u
   }
-}), (d = l || (l = {}))[d.PLAY = 0] = "PLAY", d[d.ADD = 1] = "ADD", (c = a || (a = {})).ENTRY = "entry_sound", c.EXIT = "exit_sound", c.DEFAULT = "default", (f = s || (s = {})).ADDED = "added", f.UPDATED = "updated", f.REMOVED = "removed", (m = i || (i = {})).DEFAULT = "default", m.CUSTOM = "custom", (h = r || (r = {}))[h.FAVORITES = 0] = "FAVORITES", h[h.RECENTLY_HEARD = 1] = "RECENTLY_HEARD", h[h.FREQUENTLY_USED = 2] = "FREQUENTLY_USED", h[h.GUILD = 3] = "GUILD", h[h.DEFAULTS = 4] = "DEFAULTS", h[h.SEARCH = 5] = "SEARCH", (p = o || (o = {}))[p.SOUND = 0] = "SOUND", p[p.ADD_SOUND = 1] = "ADD_SOUND", (g = u || (u = {}))[g.GIFT_CODE = 0] = "GIFT_CODE", g[g.SOUNDBOARD = 1] = "SOUNDBOARD", g[g.JOINED_VOICE_CHANNEL = 2] = "JOINED_VOICE_CHANNEL"
+}), (d = l || (l = {}))[d.PLAY = 0] = "PLAY", d[d.ADD = 1] = "ADD", (c = a || (a = {})).ENTRY = "entry_sound", c.EXIT = "exit_sound", c.DEFAULT = "default", (m = s || (s = {})).ADDED = "added", m.UPDATED = "updated", m.REMOVED = "removed", (f = i || (i = {})).DEFAULT = "default", f.CUSTOM = "custom", (h = r || (r = {}))[h.FAVORITES = 0] = "FAVORITES", h[h.RECENTLY_HEARD = 1] = "RECENTLY_HEARD", h[h.FREQUENTLY_USED = 2] = "FREQUENTLY_USED", h[h.GUILD = 3] = "GUILD", h[h.DEFAULTS = 4] = "DEFAULTS", h[h.SEARCH = 5] = "SEARCH", (p = o || (o = {}))[p.SOUND = 0] = "SOUND", p[p.ADD_SOUND = 1] = "ADD_SOUND", (g = u || (u = {}))[g.GIFT_CODE = 0] = "GIFT_CODE", g[g.SOUNDBOARD = 1] = "SOUNDBOARD", g[g.JOINED_VOICE_CHANNEL = 2] = "JOINED_VOICE_CHANNEL"

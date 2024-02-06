@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return g
   }
 }), n("222007");
 var i = n("37983"),
   r = n("884691"),
   o = n("627445"),
-  l = n.n(o),
-  s = n("446674"),
+  s = n.n(o),
+  l = n("446674"),
   a = n("77078"),
   u = n("913144"),
   c = n("430713"),
@@ -16,10 +16,10 @@ var i = n("37983"),
   f = n("367376"),
   E = n("878720"),
   _ = n("601745"),
-  h = n("650893"),
-  I = n("697218"),
-  p = n("145131"),
-  S = n("583227"),
+  I = n("650893"),
+  h = n("697218"),
+  S = n("145131"),
+  p = n("583227"),
   T = n("49111"),
   N = n("482931"),
   C = n("782340"),
@@ -31,8 +31,8 @@ let v = e => {
     children: r,
     ...o
   } = e;
-  return (0, i.jsxs)(p.default, {
-    direction: p.default.Direction.VERTICAL,
+  return (0, i.jsxs)(S.default, {
+    direction: S.default.Direction.VERTICAL,
     ...o,
     children: [(0, i.jsx)(a.FormTitle, {
       tag: "h2",
@@ -41,13 +41,13 @@ let v = e => {
       variant: "text-md/normal",
       className: R.sectionBody,
       children: n
-    }) : null, (0, i.jsx)(p.default.Child, {
+    }) : null, (0, i.jsx)(S.default.Child, {
       wrap: !0,
       children: r
     })]
   })
 };
-class g extends r.PureComponent {
+class A extends r.PureComponent {
   renderSMSSection() {
     let {
       currentUser: e
@@ -112,7 +112,7 @@ class g extends r.PureComponent {
   renderHeader(e) {
     return (0, i.jsxs)(a.ModalHeader, {
       separator: !1,
-      children: [(0, i.jsxs)(p.default.Child, {
+      children: [(0, i.jsxs)(S.default.Child, {
         grow: 1,
         shrink: 1,
         children: [(0, i.jsx)(a.Heading, {
@@ -124,7 +124,7 @@ class g extends r.PureComponent {
           className: R.subHeader,
           children: e
         })]
-      }), (0, i.jsx)(p.default.Child, {
+      }), (0, i.jsx)(S.default.Child, {
         grow: 0,
         children: (0, i.jsx)(a.ModalCloseButton, {
           onClick: this.handleCloseModal
@@ -233,7 +233,7 @@ class g extends r.PureComponent {
       let {
         currentUser: e
       } = this.props, t = () => {
-        (0, a.openModal)(e => (0, i.jsx)(S.default, {
+        (0, a.openModal)(e => (0, i.jsx)(p.default, {
           ...e,
           handleSubmit: e => c.default.enableSMS(e),
           title: C.default.Messages.MFA_SMS_ENABLE
@@ -245,11 +245,11 @@ class g extends r.PureComponent {
     }
   }
 }
-var A = s.default.connectStores([I.default, h.default], () => {
-  let e = I.default.getCurrentUser();
-  return l(null != e, "MFAEnableSuccess: currentUser cannot be undefined"), {
+var g = l.default.connectStores([h.default, I.default], () => {
+  let e = h.default.getCurrentUser();
+  return s(null != e, "MFAEnableSuccess: currentUser cannot be undefined"), {
     currentUser: e,
-    backupCodes: h.default.getBackupCodes(),
-    hasSeenBackupPrompt: h.default.hasSeenBackupPrompt
+    backupCodes: I.default.getBackupCodes(),
+    hasSeenBackupPrompt: I.default.hasSeenBackupPrompt
   }
-})(g)
+})(A)

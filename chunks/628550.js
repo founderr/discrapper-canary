@@ -10,8 +10,8 @@ s.r(t), s.d(t, {
 var a, n, r = s("65597"),
   i = s("151426"),
   l = s("79112"),
-  o = s("841098"),
-  u = s("812204"),
+  u = s("841098"),
+  o = s("812204"),
   d = s("685665"),
   c = s("18346"),
   _ = s("21526"),
@@ -55,7 +55,7 @@ var a, n, r = s("65597"),
 var X = () => {
   let {
     analyticsLocations: e
-  } = (0, d.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, o.default)(), s = g.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, r.default)([T.default], () => T.default.getPremiumTypeSubscription()), n = null != a ? S.default.getPremiumPlanItem(a) : null, X = null != n ? S.default.getSkuIdForPlan(n.planId) : null, J = X === m.PremiumSubscriptionSKUs.TIER_2, {
+  } = (0, d.default)(o.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = g.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, r.default)([T.default], () => T.default.getPremiumTypeSubscription()), n = null != a ? S.default.getPremiumPlanItem(a) : null, X = null != n ? S.default.getSkuIdForPlan(n.planId) : null, J = X === m.PremiumSubscriptionSKUs.TIER_2, {
     flipped: Z
   } = (0, R.useWhatsNewAvatarDecoRollout)(), {
     flipped: q
@@ -70,7 +70,7 @@ var X = () => {
   }, es = () => {
     (0, _.openCollectiblesShop)({
       analyticsLocations: e,
-      analyticsSource: u.default.PREMIUM_MARKETING_PERK_CARD
+      analyticsSource: o.default.PREMIUM_MARKETING_PERK_CARD
     })
   }, ea = {
     avatarDecorations: J ? {

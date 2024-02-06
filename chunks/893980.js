@@ -7,25 +7,25 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("373469"),
-  s = n("824563"),
+var s = n("373469"),
+  i = n("824563"),
   r = n("27618"),
-  l = n("599110"),
-  a = n("49111");
+  a = n("599110"),
+  l = n("49111");
 let u = e => {
     let {
       displayProfile: t,
       isMobile: n,
-      loadDurationMs: i,
-      activity: s,
+      loadDurationMs: s,
+      activity: i,
       customStatusActivity: r,
       status: u
     } = e;
-    l.default.track(a.AnalyticEvents.DM_PROFILE_VIEWED, {
+    a.default.track(l.AnalyticEvents.DM_PROFILE_VIEWED, {
       has_mobile_indicator: n,
-      has_activity: null != s && (null == s ? void 0 : s.type) !== a.ActivityTypes.CUSTOM_STATUS,
-      has_game_activity: (null == s ? void 0 : s.type) === a.ActivityTypes.PLAYING,
-      load_duration_ms: i,
+      has_activity: null != i && (null == i ? void 0 : i.type) !== l.ActivityTypes.CUSTOM_STATUS,
+      has_game_activity: (null == i ? void 0 : i.type) === l.ActivityTypes.PLAYING,
+      load_duration_ms: s,
       profile_user_status: u,
       has_custom_status: null != r,
       has_profile_effect: null != t.profileEffectId,
@@ -33,7 +33,7 @@ let u = e => {
     })
   },
   o = (e, t) => {
-    l.default.track(a.AnalyticEvents.DM_PROFILE_TOGGLED, {
+    a.default.track(l.AnalyticEvents.DM_PROFILE_TOGGLED, {
       is_profile_open: t,
       ...c(e)
     })
@@ -42,12 +42,12 @@ let u = e => {
     var t;
     if (null == e) return {};
     let n = e.userId,
-      l = null != i.default.getAnyStreamForUser(n),
-      u = s.default.findActivity(n, e => {
+      a = null != s.default.getAnyStreamForUser(n),
+      u = i.default.findActivity(n, e => {
         let {
           type: t
         } = e;
-        return l ? t === a.ActivityTypes.PLAYING : t !== a.ActivityTypes.CUSTOM_STATUS
+        return a ? t === l.ActivityTypes.PLAYING : t !== l.ActivityTypes.CUSTOM_STATUS
       }),
       o = null == u ? void 0 : u.assets,
       c = r.default.isFriend(n);

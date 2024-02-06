@@ -38,16 +38,16 @@ var a = s("37983"),
   p = s("523096"),
   U = s("49111"),
   v = s("782340"),
-  j = s("254984");
+  P = s("254984");
 
-function P(e, t) {
+function j(e, t) {
   let s = R.NotRenderedChanges[e.targetType];
   return null != s && !0 === s[t.key]
 }
 let y = {
-  [U.AuditLogActionTypes.CREATE]: j.typeCreate,
-  [U.AuditLogActionTypes.UPDATE]: j.typeUpdate,
-  [U.AuditLogActionTypes.DELETE]: j.typeDelete
+  [U.AuditLogActionTypes.CREATE]: P.typeCreate,
+  [U.AuditLogActionTypes.UPDATE]: P.typeUpdate,
+  [U.AuditLogActionTypes.DELETE]: P.typeDelete
 };
 class b extends n.PureComponent {
   render() {
@@ -57,32 +57,32 @@ class b extends n.PureComponent {
       targetType: n,
       action: l,
       themeOverride: r
-    } = this.props, o = null != r ? j["themeOverride".concat((0, G.upperCaseFirstChar)(r))] : null;
-    let d = i(j.icon, y[s], (e = n, (t = l) === U.AuditLogActions.MESSAGE_DELETE ? j.targetMessage : t === U.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE || t === U.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL || t === U.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || t === U.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER ? j.autoModerationBlockMessage : ({
-      [U.AuditLogTargetTypes.ALL]: j.targetAll,
-      [U.AuditLogTargetTypes.GUILD]: j.targetGuild,
-      [U.AuditLogTargetTypes.CHANNEL]: j.targetChannel,
-      [U.AuditLogTargetTypes.CHANNEL_OVERWRITE]: j.targetChannel,
-      [U.AuditLogTargetTypes.USER]: j.targetMember,
-      [U.AuditLogTargetTypes.ROLE]: j.targetRole,
-      [U.AuditLogTargetTypes.ONBOARDING_PROMPT]: j.targetOnboarding,
-      [U.AuditLogTargetTypes.GUILD_ONBOARDING]: j.targetOnboarding,
-      [U.AuditLogTargetTypes.HOME_SETTINGS]: j.targetOnboarding,
-      [U.AuditLogTargetTypes.INTEGRATION]: j.targetIntegration,
-      [U.AuditLogTargetTypes.INVITE]: j.targetInvite,
-      [U.AuditLogTargetTypes.WEBHOOK]: j.targetWebhook,
-      [U.AuditLogTargetTypes.EMOJI]: j.targetEmoji,
-      [U.AuditLogTargetTypes.STICKER]: j.targetSticker,
-      [U.AuditLogTargetTypes.STAGE_INSTANCE]: j.targetStageInstance,
-      [U.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT]: j.targetGuildScheduledEvent,
-      [U.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION]: j.targetGuildScheduledEvent,
-      [U.AuditLogTargetTypes.THREAD]: j.thread,
-      [U.AuditLogTargetTypes.APPLICATION_COMMAND]: j.applicationCommand,
-      [U.AuditLogTargetTypes.AUTO_MODERATION_RULE]: j.autoModerationRule,
-      [U.AuditLogTargetTypes.GUILD_HOME]: j.targetGuildHome,
-      [U.AuditLogTargetTypes.GUILD_SOUNDBOARD]: j.targetGuildSoundboard,
-      [U.AuditLogTargetTypes.VOICE_CHANNEL_STATUS]: j.targetChannel,
-      [U.AuditLogTargetTypes.CLYDE_AI]: j.targetMember
+    } = this.props, o = null != r ? P["themeOverride".concat((0, G.upperCaseFirstChar)(r))] : null;
+    let d = i(P.icon, y[s], (e = n, (t = l) === U.AuditLogActions.MESSAGE_DELETE ? P.targetMessage : t === U.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE || t === U.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL || t === U.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || t === U.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER ? P.autoModerationBlockMessage : ({
+      [U.AuditLogTargetTypes.ALL]: P.targetAll,
+      [U.AuditLogTargetTypes.GUILD]: P.targetGuild,
+      [U.AuditLogTargetTypes.CHANNEL]: P.targetChannel,
+      [U.AuditLogTargetTypes.CHANNEL_OVERWRITE]: P.targetChannel,
+      [U.AuditLogTargetTypes.USER]: P.targetMember,
+      [U.AuditLogTargetTypes.ROLE]: P.targetRole,
+      [U.AuditLogTargetTypes.ONBOARDING_PROMPT]: P.targetOnboarding,
+      [U.AuditLogTargetTypes.GUILD_ONBOARDING]: P.targetOnboarding,
+      [U.AuditLogTargetTypes.HOME_SETTINGS]: P.targetOnboarding,
+      [U.AuditLogTargetTypes.INTEGRATION]: P.targetIntegration,
+      [U.AuditLogTargetTypes.INVITE]: P.targetInvite,
+      [U.AuditLogTargetTypes.WEBHOOK]: P.targetWebhook,
+      [U.AuditLogTargetTypes.EMOJI]: P.targetEmoji,
+      [U.AuditLogTargetTypes.STICKER]: P.targetSticker,
+      [U.AuditLogTargetTypes.STAGE_INSTANCE]: P.targetStageInstance,
+      [U.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT]: P.targetGuildScheduledEvent,
+      [U.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION]: P.targetGuildScheduledEvent,
+      [U.AuditLogTargetTypes.THREAD]: P.thread,
+      [U.AuditLogTargetTypes.APPLICATION_COMMAND]: P.applicationCommand,
+      [U.AuditLogTargetTypes.AUTO_MODERATION_RULE]: P.autoModerationRule,
+      [U.AuditLogTargetTypes.GUILD_HOME]: P.targetGuildHome,
+      [U.AuditLogTargetTypes.GUILD_SOUNDBOARD]: P.targetGuildSoundboard,
+      [U.AuditLogTargetTypes.VOICE_CHANNEL_STATUS]: P.targetChannel,
+      [U.AuditLogTargetTypes.CLYDE_AI]: P.targetMember
     })[e]), o);
     return (0, a.jsx)("div", {
       className: d
@@ -97,7 +97,7 @@ class B extends n.PureComponent {
     } = this.props;
     return (0, a.jsxs)("span", {
       onContextMenu: t,
-      className: j.userHook,
+      className: P.userHook,
       children: [(0, a.jsx)(T.Text, {
         variant: "text-md/normal",
         children: x.default.getUserTag(e, {
@@ -105,7 +105,7 @@ class B extends n.PureComponent {
         })
       }), "0" !== e.discriminator && (0, a.jsxs)(T.Text, {
         variant: "text-xs/normal",
-        className: j.discrim,
+        className: P.discrim,
         children: ["#", e.discriminator]
       })]
     })
@@ -118,7 +118,7 @@ class F extends n.PureComponent {
     } = this.props, {
       changes: t
     } = e;
-    return (e.actionType !== U.AuditLogActionTypes.DELETE || e.action === U.AuditLogActions.MEMBER_BAN_ADD || e.action === U.AuditLogActions.MEMBER_KICK || e.action === U.AuditLogActions.MEMBER_PRUNE) && null != t && t.some(t => !P(e, t))
+    return (e.actionType !== U.AuditLogActionTypes.DELETE || e.action === U.AuditLogActions.MEMBER_BAN_ADD || e.action === U.AuditLogActions.MEMBER_KICK || e.action === U.AuditLogActions.MEMBER_PRUNE) && null != t && t.some(t => !j(e, t))
   }
   getActionTypeColor(e) {
     switch (e) {
@@ -142,7 +142,7 @@ class F extends n.PureComponent {
       options: r
     } = e, o = R.getChangeTitle(e);
     return null != o ? (0, a.jsx)("div", {
-      className: j.overflowEllipsis,
+      className: P.overflowEllipsis,
       children: o.format({
         user: l,
         target: i,
@@ -180,7 +180,7 @@ class F extends n.PureComponent {
       newValue: t
     } = e;
     return Array.isArray(t) ? t.map(e => (0, a.jsx)("div", {
-      className: j.subListItem,
+      className: P.subListItem,
       children: e.name
     }, e.id)) : null
   }
@@ -189,7 +189,7 @@ class F extends n.PureComponent {
       newValue: t
     } = e;
     return Array.isArray(t) ? t.map(e => (0, a.jsx)("div", {
-      className: j.subListItem,
+      className: P.subListItem,
       children: R.getStringForPermission(e, this.props.log)
     }, e)) : null
   }
@@ -199,10 +199,10 @@ class F extends n.PureComponent {
       oldValue: s
     } = e, n = [];
     return (Array.isArray(s) && (n = n.concat(s.map(e => (0, a.jsx)("div", {
-      className: j.subListItem,
+      className: P.subListItem,
       children: R.getStringForRemovedChannelFlag(e)
     }, e)))), Array.isArray(t) && (n = n.concat(t.map(e => (0, a.jsx)("div", {
-      className: j.subListItem,
+      className: P.subListItem,
       children: R.getStringForAddedChannelFlag(e)
     }, e)))), n.length > 0) ? n : null
   }
@@ -231,13 +231,13 @@ class F extends n.PureComponent {
           count: Array.isArray(r) ? r.length : null,
           subtarget: null !== (c = null !== (u = l.options.subtarget) && void 0 !== u ? u : o.subtarget) && void 0 !== c ? c : null,
           newColorHook: (e, t) => (0, a.jsx)("div", {
-            className: j.colorHook,
+            className: P.colorHook,
             style: {
               backgroundColor: o.newValue
             }
           }, t),
           oldColorHook: (e, t) => (0, a.jsx)("div", {
-            className: j.colorHook,
+            className: P.colorHook,
             style: {
               backgroundColor: o.oldValue
             }
@@ -260,23 +260,23 @@ class F extends n.PureComponent {
       } else d = t
     }
     return d ? (0, a.jsxs)("div", {
-      className: j.detail,
+      className: P.detail,
       style: {
         position: "relative",
         top: 1
       },
       children: [(0, a.jsxs)(T.Text, {
-        className: j.prefix,
+        className: P.prefix,
         variant: "code",
         color: this.getActionTypeColor(l.actionType),
         children: [n < 10 ? "0".concat(n) : n, (0, a.jsx)("span", {
-          className: j.dash,
+          className: P.dash,
           children: "—"
         })]
       }), (0, a.jsxs)("div", {
-        className: j.change,
+        className: P.change,
         children: [(0, a.jsx)("div", {
-          className: j.changeStr,
+          className: P.changeStr,
           children: d
         }), null != s ? (0, a.jsx)("div", {
           children: s
@@ -305,7 +305,7 @@ class F extends n.PureComponent {
           l = l.calendar()
         }(t.action === U.AuditLogActions.ONBOARDING_PROMPT_UPDATE || t.action === U.AuditLogActions.ONBOARDING_PROMPT_CREATE) && s.key === U.AuditLogChangeKeys.OPTIONS && (i = this.renderOnboardingPromptOptionsChange(s)), (t.action === U.AuditLogActions.HOME_SETTINGS_CREATE || t.action === U.AuditLogActions.HOME_SETTINGS_UPDATE) && (i = this.renderHomeSettingsOptionsChange(s));
         let r = e[s.key];
-        return P(t, s) ? null : ("function" == typeof r && (r = r(s)), Array.isArray(r)) ? r.map(e => (n++, this.renderChangeLineItem({
+        return j(t, s) ? null : ("function" == typeof r && (r = r(s)), Array.isArray(r)) ? r.map(e => (n++, this.renderChangeLineItem({
           changeItem: e,
           subChanges: i,
           changeNumber: n,
@@ -325,7 +325,7 @@ class F extends n.PureComponent {
       })).filter(M.isNotNullish);
     return (0, a.jsx)(T.Clickable, {
       onClick: s,
-      className: j.changeDetails,
+      className: P.changeDetails,
       children: l
     })
   }
@@ -351,7 +351,7 @@ class F extends n.PureComponent {
       } = t, d = e.role_ids.map(i).filter(M.isNotNullish), u = e.channel_ids.map(r).filter(M.isNotNullish), c = t.role_ids.map(i).filter(M.isNotNullish), E = t.channel_ids.map(r).filter(M.isNotNullish), _ = o.difference(c, d), I = o.difference(d, c), S = o.difference(E, u), N = o.difference(u, E), f = [];
       return (!o.isEqual(e.title, t.title) && f.push("title"), !o.isEqual(e.description, t.description) && f.push("description"), 0 === _.length && 0 === I.length && 0 === S.length && 0 === N.length && 0 === f.length) ? null : (0, a.jsxs)("li", {
         children: [(0, a.jsxs)("div", {
-          className: j.onboardingChangeLogItemTitle,
+          className: P.onboardingChangeLogItemTitle,
           children: [(0, a.jsx)(b, {
             actionType: U.AuditLogActionTypes.UPDATE,
             targetType: n.targetType,
@@ -363,7 +363,7 @@ class F extends n.PureComponent {
             })
           })]
         }), (0, a.jsxs)("div", {
-          className: j.onboardingChangeLogItemChanges,
+          className: P.onboardingChangeLogItemChanges,
           children: [_.length > 0 && (0, a.jsx)(T.Text, {
             variant: "text-md/normal",
             children: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_ROLES.format({
@@ -396,7 +396,7 @@ class F extends n.PureComponent {
       }, l)
     }, u = o.keyBy(null != t ? t : [], "id"), c = o.keyBy(null != s ? s : [], "id"), E = o.difference(Object.keys(c), Object.keys(u)).map(e => c[e]), _ = o.difference(Object.keys(u), Object.keys(c)).map(e => u[e]), I = o.intersection(Object.keys(c), Object.keys(u));
     return (0, a.jsxs)("ul", {
-      className: j.onboardingChangeLogContainer,
+      className: P.onboardingChangeLogContainer,
       children: [E.map(e => {
         let {
           role_ids: t,
@@ -406,7 +406,7 @@ class F extends n.PureComponent {
         } = e, d = (null != t ? t : []).map(i).filter(M.isNotNullish), u = (null != s ? s : []).map(r).filter(M.isNotNullish);
         return (0, a.jsxs)("li", {
           children: [(0, a.jsxs)("div", {
-            className: j.onboardingChangeLogItemTitle,
+            className: P.onboardingChangeLogItemTitle,
             children: [(0, a.jsx)(b, {
               actionType: U.AuditLogActionTypes.CREATE,
               targetType: n.targetType,
@@ -418,7 +418,7 @@ class F extends n.PureComponent {
               })
             })]
           }), (0, a.jsxs)("div", {
-            className: j.onboardingChangeLogItemChanges,
+            className: P.onboardingChangeLogItemChanges,
             children: [d.length > 0 && (0, a.jsx)(T.Text, {
               variant: "text-md/normal",
               children: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_ROLES.format({
@@ -434,7 +434,7 @@ class F extends n.PureComponent {
         }, o)
       }), _.map(e => (0, a.jsx)("li", {
         children: (0, a.jsxs)("div", {
-          className: j.onboardingChangeLogItemTitle,
+          className: P.onboardingChangeLogItemTitle,
           children: [(0, a.jsx)(b, {
             actionType: U.AuditLogActionTypes.DELETE,
             targetType: n.targetType,
@@ -466,7 +466,7 @@ class F extends n.PureComponent {
             d = O.default.getUser(null === (n = e.author_ids) || void 0 === n ? void 0 : n[0]),
             u = (null == o ? void 0 : o.id) !== (null == d ? void 0 : d.id) ? (0, a.jsx)("li", {
               children: (0, a.jsx)("div", {
-                className: j.onboardingChangeLogItemTitle,
+                className: P.onboardingChangeLogItemTitle,
                 children: (0, a.jsx)(T.Text, {
                   variant: "text-md/normal",
                   children: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_AUTHOR_CHANGE.format({
@@ -478,7 +478,7 @@ class F extends n.PureComponent {
             }) : null,
             c = (null == t ? void 0 : t.message) !== e.message ? (0, a.jsx)("li", {
               children: (0, a.jsx)("div", {
-                className: j.onboardingChangeLogItemTitle,
+                className: P.onboardingChangeLogItemTitle,
                 children: (0, a.jsx)(T.Text, {
                   variant: "text-md/normal",
                   children: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_MESSAGE_CHANGE.format({
@@ -503,7 +503,7 @@ class F extends n.PureComponent {
           return (0, a.jsxs)("ul", {
             children: [u.map(e => (0, a.jsx)("li", {
               children: (0, a.jsxs)("div", {
-                className: j.onboardingChangeLogItemTitle,
+                className: P.onboardingChangeLogItemTitle,
                 children: [(0, a.jsx)(b, {
                   actionType: U.AuditLogActionTypes.CREATE,
                   targetType: l,
@@ -517,7 +517,7 @@ class F extends n.PureComponent {
               })
             }, e.channel_id)), c.map(e => (0, a.jsx)("li", {
               children: (0, a.jsxs)("div", {
-                className: j.onboardingChangeLogItemTitle,
+                className: P.onboardingChangeLogItemTitle,
                 children: [(0, a.jsx)(b, {
                   actionType: U.AuditLogActionTypes.DELETE,
                   targetType: l,
@@ -543,7 +543,7 @@ class F extends n.PureComponent {
           return (0, a.jsxs)("ul", {
             children: [u.map(e => (0, a.jsx)("li", {
               children: (0, a.jsxs)("div", {
-                className: j.onboardingChangeLogItemTitle,
+                className: P.onboardingChangeLogItemTitle,
                 children: [(0, a.jsx)(b, {
                   actionType: U.AuditLogActionTypes.CREATE,
                   targetType: l,
@@ -557,7 +557,7 @@ class F extends n.PureComponent {
               })
             }, e.channel_id)), c.map(e => (0, a.jsx)("li", {
               children: (0, a.jsxs)("div", {
-                className: j.onboardingChangeLogItemTitle,
+                className: P.onboardingChangeLogItemTitle,
                 children: [(0, a.jsx)(b, {
                   actionType: U.AuditLogActionTypes.DELETE,
                   targetType: l,
@@ -658,7 +658,7 @@ class F extends n.PureComponent {
           onClick: e => {
             e.stopPropagation(), s.onClick(e)
           },
-          className: j.avatar,
+          className: P.avatar,
           src: (n = e, l = t, n.action === U.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE || n.action === U.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL || n.action === U.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || n.action === U.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER ? (0, p.getAutomodAvatarURL)() : null === (i = n.user) || void 0 === i ? void 0 : i.getAvatarURL(l, 40)),
           "aria-hidden": !0,
           size: T.AvatarSizes.SIZE_40
@@ -670,7 +670,7 @@ class F extends n.PureComponent {
       if (null != e) {
         let t = (0, _.isThemeDark)(s) ? e.icon.darkSVG : e.icon.lightSVG;
         return (0, a.jsx)(T.Avatar, {
-          className: j.avatar,
+          className: P.avatar,
           src: t,
           "aria-hidden": !0,
           size: T.AvatarSizes.SIZE_40
@@ -686,16 +686,16 @@ class F extends n.PureComponent {
       className: s,
       expanded: n,
       onHeaderClick: l
-    } = this.props, r = this.hasChangesToRender(), o = j.headerDefault;
-    n ? o = j.headerExpanded : r && (o = j.headerClickable);
+    } = this.props, r = this.hasChangesToRender(), o = P.headerDefault;
+    n ? o = P.headerExpanded : r && (o = P.headerClickable);
     let d = t.timestampStart.calendar(),
       u = t.timestampEnd.calendar();
     e = d === u ? (0, a.jsx)(T.Text, {
-      className: j.timestamp,
+      className: P.timestamp,
       variant: "text-sm/normal",
       children: d
     }) : (0, a.jsxs)(T.Text, {
-      className: j.timestamp,
+      className: P.timestamp,
       variant: "text-sm/normal",
       children: [d, "—", u]
     });
@@ -703,7 +703,7 @@ class F extends n.PureComponent {
     return (0, a.jsx)(c.ListNavigatorItem, {
       id: t.id,
       children: l => (0, a.jsxs)("div", {
-        className: i(j.auditLog, s),
+        className: i(P.auditLog, s),
         children: [(0, a.jsxs)(T.Clickable, {
           className: o,
           "aria-expanded": n,
@@ -714,19 +714,19 @@ class F extends n.PureComponent {
             actionType: t.actionType,
             targetType: t.targetType
           }), this.renderEntryAvatar(), (0, a.jsxs)("div", {
-            className: j.timeWrap,
+            className: P.timeWrap,
             children: [(0, a.jsx)("div", {
-              className: j.title,
+              className: P.title,
               children: this.renderTitle()
             }), e]
           }), r ? (0, a.jsx)(h.default, {
-            className: j.expand,
-            foreground: j.expandForeground,
+            className: P.expand,
+            foreground: P.expandForeground,
             expanded: n,
             "aria-hidden": !0
           }) : null]
         }), n ? (0, a.jsx)("div", {
-          className: j.divider
+          className: P.divider
         }) : null, this.renderChangeSummary()]
       })
     })

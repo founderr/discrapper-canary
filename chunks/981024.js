@@ -45,15 +45,15 @@ function I(e) {
     items: N,
     loading: I,
     loadMore: C
-  } = (0, c.useDesktopNotificationCenterItemsLoader)(), A = (0, i.useStateFromStores)([o.default], () => o.default.localItems), M = l.useMemo(() => [...[...N, ...A].sort((e, t) => -1 * s.default.compare(e.id, t.id))], [N, A]), x = N.length > 0 ? N[0] : null, v = h.NotificationCenterAckedBeforeId.useSetting(), R = l.useMemo(() => {
-    let e = null != x && 0 >= s.default.compare(x.id, v);
+  } = (0, c.useDesktopNotificationCenterItemsLoader)(), A = (0, i.useStateFromStores)([o.default], () => o.default.localItems), M = l.useMemo(() => [...[...N, ...A].sort((e, t) => -1 * s.default.compare(e.id, t.id))], [N, A]), v = N.length > 0 ? N[0] : null, x = h.NotificationCenterAckedBeforeId.useSetting(), R = l.useMemo(() => {
+    let e = null != v && 0 >= s.default.compare(v.id, x);
     if (e) return !1;
     for (let e of M) {
-      if (0 >= s.default.compare(e.id, v)) break;
-      if (!(0, d.isRemoteAcked)(e, v)) return !0
+      if (0 >= s.default.compare(e.id, x)) break;
+      if (!(0, d.isRemoteAcked)(e, x)) return !0
     }
     return !1
-  }, [x, v, M]);
+  }, [v, x, M]);
   return (0, a.jsxs)("div", {
     className: _.container,
     children: [(0, a.jsx)(S.default, {
@@ -63,7 +63,7 @@ function I(e) {
       closePopout: E,
       children: R ? (0, a.jsx)(T, {
         onClick: () => {
-          null != x && (h.NotificationCenterAckedBeforeId.updateSetting(x.id), p.default.track(g.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
+          null != v && (h.NotificationCenterAckedBeforeId.updateSetting(v.id), p.default.track(g.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
             action_type: u.NotificationCenterActionTypes.MARK_ALL_READ
           }))
         }

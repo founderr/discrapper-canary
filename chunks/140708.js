@@ -1,25 +1,25 @@
 "use strict";
 i.r(t), i.d(t, {
   addReactionPickerAnimation: function() {
-    return l
+    return s
   },
   clearReactionPickerAnimation: function() {
-    return s
+    return l
   }
 });
 var n = i("913144");
 
-function l(e, t, i, l) {
+function s(e, t, i, s) {
   n.default.dispatch({
     type: "BURST_REACTION_PICKER_ANIMATION_ADD",
     messageId: e,
     emojiName: t,
     emojiId: i,
-    startPosition: l
+    startPosition: s
   })
 }
 
-function s(e, t, i) {
+function l(e, t, i) {
   n.default.dispatch({
     type: "BURST_REACTION_PICKER_ANIMATION_CLEAR",
     messageId: e,

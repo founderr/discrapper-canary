@@ -8,8 +8,8 @@ var n = l("37983"),
   a = l("884691"),
   s = l("414456"),
   i = l.n(s),
-  o = l("77078"),
-  r = l("244201"),
+  r = l("77078"),
+  o = l("244201"),
   u = l("685665"),
   c = l("181114"),
   d = l("427459"),
@@ -33,7 +33,7 @@ var n = l("37983"),
       ...w
     } = t, {
       analyticsLocations: y
-    } = (0, u.default)(), x = (0, r.useAppContext)(), T = x === C.AppContext.POPOUT, [v, N] = a.useState(!1), P = null != L ? Math.max((0, d.getNumberOfAppliedBoostsNeededForTier)(s, L), 1) : 1, R = (0, d.generateBlockGuildSubscriptionPurchasesNode)(), I = async () => {
+    } = (0, u.default)(), x = (0, o.useAppContext)(), T = x === C.AppContext.POPOUT, [v, N] = a.useState(!1), P = null != L ? Math.max((0, d.getNumberOfAppliedBoostsNeededForTier)(s, L), 1) : 1, R = (0, d.generateBlockGuildSubscriptionPurchasesNode)(), I = async () => {
       N(!0), await (0, f.addAppliedGuildBoosts)({
         analyticsLocations: y,
         analyticsLocation: e,
@@ -47,19 +47,19 @@ var n = l("37983"),
         handleSubscribeModalClose: A
       }), N(!1)
     };
-    return null != R ? (0, n.jsx)(o.Tooltip, {
+    return null != R ? (0, n.jsx)(r.Tooltip, {
       text: R,
       "aria-label": !1,
       children: t => (0, n.jsx)(c.default, {
         ...t,
         disabled: !0,
-        size: o.Button.Sizes.SMALL,
+        size: r.Button.Sizes.SMALL,
         pauseAnimation: S,
         ...w,
         children: null != M ? M : h.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
       })
     }) : (0, n.jsx)(c.default, {
-      size: o.Button.Sizes.SMALL,
+      size: r.Button.Sizes.SMALL,
       ...w,
       className: i(w.className, {
         [p.buttonHighlighted]: E

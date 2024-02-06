@@ -39,12 +39,12 @@ function R(e) {
   } = (0, f.useAutomodEditingRuleState)(), {
     guild: x,
     subsection: p
-  } = (0, l.useStateFromStoresObject)([o.default], () => o.default.getProps()), U = null !== (s = null !== (t = null == x ? void 0 : x.id) && void 0 !== t ? t : R) && void 0 !== s ? s : "", v = null != M, [j] = (0, I.useSyncAutomodRulesEffect)(U), {
-    rulesByTriggerType: P
+  } = (0, l.useStateFromStoresObject)([o.default], () => o.default.getProps()), U = null !== (s = null !== (t = null == x ? void 0 : x.id) && void 0 !== t ? t : R) && void 0 !== s ? s : "", v = null != M, [P] = (0, I.useSyncAutomodRulesEffect)(U), {
+    rulesByTriggerType: j
   } = (0, I.useAutomodRulesList)(U), y = {
     [S.AutomodTriggerCategory.MEMBERS]: O.default.Messages.GUILD_SETTINGS_AUTOMOD_MEMBER_CATEGORY_TITLE,
     [S.AutomodTriggerCategory.CONTENT]: O.default.Messages.GUILD_SETTINGS_AUTOMOD_CONTENT_CATEGORY_TITLE
-  }, b = n.useMemo(() => Object.values(null != P ? P : {}).flat().filter(E.isNotNullish), [P]);
+  }, b = n.useMemo(() => Object.values(null != j ? j : {}).flat().filter(E.isNotNullish), [j]);
   n.useEffect(() => {
     v && G(null)
   }, [U]);
@@ -74,7 +74,7 @@ function R(e) {
         return (0, a.jsx)(A.default, {
           guildId: U,
           triggerType: e,
-          rules: null !== (t = P[e]) && void 0 !== t ? t : [],
+          rules: null !== (t = j[e]) && void 0 !== t ? t : [],
           initWithEdit: p === C.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM && e === m.AutomodTriggerType.MENTION_SPAM
         }, e)
       })
@@ -122,7 +122,7 @@ function R(e) {
           className: h.textBadge
         })]
       })]
-    }), j ? (0, a.jsx)(N.default, {}) : Object.entries(H).map(e => {
+    }), P ? (0, a.jsx)(N.default, {}) : Object.entries(H).map(e => {
       let [t, s] = e;
       if (0 === s.length) return (0, a.jsx)(n.Fragment, {}, t);
       let l = null != y[t] ? (0, a.jsx)(r.FormSection, {

@@ -6,8 +6,8 @@ t.r(A), t.d(A, {
 });
 var a = t("37983");
 t("884691");
-var l = t("627445"),
-  n = t.n(l),
+var n = t("627445"),
+  l = t.n(n),
   r = t("509043"),
   s = t("77078"),
   o = t("973262"),
@@ -24,9 +24,9 @@ function T(e) {
     newRoleParams: A,
     setNewRoleParams: t
   } = e, {
-    name: l,
+    name: n,
     color: d
-  } = A, T = e => t(A => (n(null != A, "newRoleParams should be defined"), {
+  } = A, T = e => t(A => (l(null != A, "newRoleParams should be defined"), {
     ...A,
     color: e
   }));
@@ -34,8 +34,8 @@ function T(e) {
     className: C.roleInputContainer,
     children: [(0, a.jsx)(s.TextInput, {
       autoFocus: !0,
-      value: l,
-      onChange: e => t(A => (n(null != A, "newRoleParams should be defined"), {
+      value: n,
+      onChange: e => t(A => (l(null != A, "newRoleParams should be defined"), {
         ...A,
         name: e
       })),

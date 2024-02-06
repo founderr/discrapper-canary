@@ -1,38 +1,38 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return r
+    return n
   }
-}), n("808653"), n("794252"), n("424973");
-var r, l = n("506838"),
-  i = n("265586"),
-  s = n("797647"),
-  a = n("730297"),
-  o = n("792382"),
-  u = n("806410"),
-  c = n("49111");
-r = class e extends o.default {
+}), r("808653"), r("794252"), r("424973");
+var n, l = r("506838"),
+  i = r("265586"),
+  s = r("797647"),
+  a = r("730297"),
+  u = r("792382"),
+  o = r("806410"),
+  c = r("49111");
+n = class e extends u.default {
   static fromServer(t) {
-    var n;
+    var r;
     let {
-      type: r,
-      premium_type: o,
+      type: n,
+      premium_type: u,
       category_sku_id: d,
       prices: f,
       ...C
     } = t;
     return new e({
       ...super.fromServer(C),
-      type: r,
-      premiumType: o === c.PREMIUM_TYPE_NONE ? null : o,
+      type: n,
+      premiumType: u === c.PREMIUM_TYPE_NONE ? null : u,
       categorySkuId: d,
-      prices: null == (n = f) ? {} : Object.keys(n).reduce((e, t) => {
-        if (null == n) return e;
-        let r = n[t];
+      prices: null == (r = f) ? {} : Object.keys(r).reduce((e, t) => {
+        if (null == r) return e;
+        let n = r[t];
         return e[t] = {
           countryPrices: {
-            countryCode: r.country_prices.country_code,
-            prices: r.country_prices.prices.map(e => (0, s.getPriceFromServer)(e, !0))
+            countryCode: n.country_prices.country_code,
+            prices: n.country_prices.prices.map(e => (0, s.getPriceFromServer)(e, !0))
           },
           paymentSourcePrices: {}
         }, e
@@ -41,7 +41,7 @@ r = class e extends o.default {
         type: i.CollectiblesItemType.AVATAR_DECORATION
       }, t => (e.push(a.default.fromServer(t)), e)).with({
         type: i.CollectiblesItemType.PROFILE_EFFECT
-      }, t => (e.push(u.default.fromServer(t)), e)).otherwise(() => e), [])
+      }, t => (e.push(o.default.fromServer(t)), e)).otherwise(() => e), [])
     })
   }
   constructor(e) {

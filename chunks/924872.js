@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return _
   },
   default: function() {
-    return v
+    return T
   }
 }), n("222007");
 var a = n("446674"),
@@ -76,7 +76,7 @@ function _(e) {
     r = h.default.getStageInstanceByChannel(e);
   return t && null == r && !a
 }
-class T extends r.default {
+class v extends r.default {
   handleVoiceChannelSelect(e) {
     let {
       channelId: t
@@ -125,4 +125,4 @@ class T extends r.default {
     }
   }
 }
-var v = new T
+var T = new v

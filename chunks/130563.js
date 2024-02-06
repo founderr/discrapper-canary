@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return l
   }
 });
-var l = n("446674"),
+var u = n("446674"),
   i = n("42203"),
   a = n("18494");
 
-function u() {
-  return (0, l.useStateFromStores)([a.default, i.default], () => {
+function l() {
+  return (0, u.useStateFromStores)([a.default, i.default], () => {
     let e = a.default.getVoiceChannelId();
     if (null != e) {
       let t = i.default.getChannel(e);

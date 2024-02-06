@@ -18,8 +18,8 @@ var a = r("37983"),
   f = r("810567"),
   m = r("756609"),
   g = r("228220"),
-  y = r("664336"),
-  b = r("888400"),
+  b = r("664336"),
+  y = r("888400"),
   x = r("398570"),
   k = r("370492"),
   v = r("332814"),
@@ -73,12 +73,12 @@ let E = [{
         }
       } = e, u = d(o);
       return (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsxs)(y.default, {
+        children: [(0, a.jsxs)(b.default, {
           className: l(N.headerBar, w.subPanelHeaderBar),
-          children: [(0, a.jsx)(y.default.Icon, {
+          children: [(0, a.jsx)(b.default.Icon, {
             icon: m.default,
             tooltip: t
-          }), (0, a.jsx)(y.default.Title, {
+          }), (0, a.jsx)(b.default.Title, {
             children: t
           })]
         }), (0, a.jsxs)(v.Properties, {
@@ -87,8 +87,8 @@ let E = [{
             name: "Timestamp (local)",
             children: (0, a.jsx)("time", {
               dateTime: o.toISOString(),
-              title: (0, b.dateFormat)(u, "LLLL"),
-              children: (0, b.calendarFormat)(u)
+              title: (0, y.dateFormat)(u, "LLLL"),
+              children: (0, y.calendarFormat)(u)
             })
           }), "guild" === r.type && (0, a.jsx)(v.Property, {
             name: "Guild ID",
@@ -138,8 +138,8 @@ let E = [{
 
 function _() {
   let [e, t] = n.useState(""), r = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(t => 0 === e.length || s(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), m = o.find(e => e.key === c), {
-    TabBar: y,
-    renderSelectedTab: b
+    TabBar: b,
+    renderSelectedTab: y
   } = (0, j.default)({
     tabs: L
   }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), _ = n.useCallback(e => {
@@ -191,7 +191,7 @@ function _() {
       className: w.subPanel,
       minHeight: 100,
       initialHeight: null != r.current ? r.current.clientHeight / 2 : 300,
-      children: [(0, a.jsx)(y, {}), b({
+      children: [(0, a.jsx)(b, {}), y({
         loggedTrigger: m
       })]
     })]

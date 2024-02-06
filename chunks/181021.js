@@ -32,7 +32,7 @@ function N(e) {
   let {
     soundboardSound: t,
     closePicker: N
-  } = e, _ = (0, c.useExpressionPickerStore)(e => e.searchQuery), A = (0, i.default)([v.default], () => null != t && v.default.isFavoriteSound(t.soundId)), R = (0, i.default)([p.default], () => p.default.getGuild(null == t ? void 0 : t.guildId)), O = (0, i.default)([a.default], () => a.default.useReducedMotion, []), M = (0, i.default)([h.default], () => h.default.isFocused()), k = (0, i.default)([m.default], () => m.default.getKeybindForAction(y.GlobalKeybindActions.SOUNDBOARD_HOLD));
+  } = e, _ = (0, c.useExpressionPickerStore)(e => e.searchQuery), A = (0, i.default)([v.default], () => null != t && v.default.isFavoriteSound(t.soundId)), R = (0, i.default)([p.default], () => p.default.getGuild(null == t ? void 0 : t.guildId)), O = (0, i.default)([a.default], () => a.default.useReducedMotion, []), M = (0, i.default)([h.default], () => h.default.isFocused()), b = (0, i.default)([m.default], () => m.default.getKeybindForAction(y.GlobalKeybindActions.SOUNDBOARD_HOLD));
   if (null != t && _.length > 0) return (0, l.jsx)(f.default, {
     graphicPrimary: null != t.emojiId || null != t.emojiName ? (0, l.jsx)(s.default, {
       emojiId: t.emojiId,
@@ -49,7 +49,7 @@ function N(e) {
     titleSecondary: null == R ? void 0 : R.name,
     isFavorite: A
   });
-  let b = () => {
+  let k = () => {
       N(), (0, o.openModalLazy)(async () => {
         let {
           default: e
@@ -60,10 +60,10 @@ function N(e) {
       })
     },
     P = (0, u.isDismissibleContentDismissed)(r.DismissibleContent.SOUNDBOARD_KEYBIND_TIP),
-    L = null != k && (0, C.isWindows)() && !P ? x.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
-      keybind: (0, T.toString)(k.shortcut, !0),
+    L = null != b && (0, C.isWindows)() && !P ? x.default.Messages.SOUNDBOARD_KEYBIND_HINT_NO_POPOUT_WHEEL_SUPPORT.format({
+      keybind: (0, T.toString)(b.shortcut, !0),
       openSettingsHook: (e, t) => (0, l.jsx)(o.Anchor, {
-        onClick: b,
+        onClick: k,
         children: e
       }, t)
     }) : null;

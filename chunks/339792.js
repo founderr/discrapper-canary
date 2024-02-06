@@ -12,8 +12,8 @@ var n = s("627445"),
   l = s("308503"),
   i = s("482402"),
   r = s("335710"),
-  o = s("446674"),
-  u = s("42203"),
+  u = s("446674"),
+  o = s("42203"),
   d = s("446480");
 let c = new Set,
   h = {
@@ -42,7 +42,7 @@ class f {
         channelStates: t
       } = this.get(), s = t[e];
       if (null == s) {
-        let t = u.default.getChannel(e);
+        let t = o.default.getChannel(e);
         a(null != t, "[Forum Channel Store] The channel should not be missing."), s = {
           layoutType: t.getDefaultLayout(),
           sortOrder: t.getDefaultSortOrder(),
@@ -77,7 +77,7 @@ class f {
 let m = (0, l.default)((e, t) => new f(e, t)),
   g = e => {
     let t = m(),
-      s = (0, o.useStateFromStores)([u.default], () => u.default.getChannel(e));
+      s = (0, u.useStateFromStores)([o.default], () => o.default.getChannel(e));
     return null == s ? h : t.getChannelState(e)
   },
   S = () => m

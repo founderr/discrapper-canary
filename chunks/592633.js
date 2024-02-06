@@ -19,9 +19,9 @@ var a = s("37983"),
   g = s("605160"),
   x = s("70845"),
   C = s("933629"),
-  T = s("845579"),
-  _ = s("982108"),
-  S = s("42203"),
+  _ = s("845579"),
+  S = s("982108"),
+  T = s("42203"),
   p = s("957255"),
   E = s("594098"),
   N = s("887718"),
@@ -55,7 +55,7 @@ var a = s("37983"),
       gridCoords: u,
       gridSectionBoundaries: d,
       observePostVisibilityAnalytics: c
-    } = e, m = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(s));
+    } = e, m = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(s));
     return null == m ? null : (0, a.jsx)(z, {
       id: t,
       channel: m,
@@ -80,7 +80,7 @@ function z(e) {
     gridCoords: f,
     gridSectionBoundaries: g,
     observePostVisibilityAnalytics: C
-  } = e, E = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(s.parent_id)), N = s.id, M = n.useRef(null), A = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentSidebarChannelId(s.parent_id) === s.id), {
+  } = e, E = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(s.parent_id)), N = s.id, M = n.useRef(null), A = (0, o.useStateFromStores)([S.default], () => S.default.getCurrentSidebarChannelId(s.parent_id) === s.id), {
     firstMessage: v,
     loaded: F
   } = (0, R.useFirstForumPostMessage)(s), {
@@ -106,8 +106,8 @@ function z(e) {
     null == C || C(M.current, N)
   }, [C, N]);
   let J = (0, o.useStateFromStores)([p.default], () => p.default.can(H.Permissions.MANAGE_MESSAGES, s)),
-    $ = T.GifAutoPlay.useSetting(),
-    ee = T.RenderSpoilers.useSetting(),
+    $ = _.GifAutoPlay.useSetting(),
+    ee = _.RenderSpoilers.useSetting(),
     et = (0, x.default)(ee, J),
     es = (0, O.useForumPostMediaThumbnail)(v, E, !1),
     [ea, en] = (0, b.getFrameDimensions)(h.width - 2 * b.IMAGE_PADDING),
@@ -291,28 +291,28 @@ let K = e => e.preventDefault(),
       numAttachments: x.length,
       containerWidth: l,
       containerHeight: i
-    }), T = (0, P.useImageDimensionStyles)({
+    }), _ = (0, P.useImageDimensionStyles)({
       imageContainerStyles: C,
       containerWidth: l,
       containerHeight: i
-    }), _ = (0, h.useShouldRedactExplicitContentForForum)(), S = n.useMemo(() => x.map((e, t) => {
+    }), S = (0, h.useShouldRedactExplicitContentForForum)(), T = n.useMemo(() => x.map((e, t) => {
       var n;
-      let [l, i] = (0, g.getForumPostShouldObscure)(e, !s, _), h = (0, g.getObscuredAlt)(i), x = {
-        ...T[t],
+      let [l, i] = (0, g.getForumPostShouldObscure)(e, !s, S), h = (0, g.getObscuredAlt)(i), x = {
+        ..._[t],
         src: e.src,
         width: e.width,
         height: e.height,
         alt: null != e.alt && l ? h : e.alt,
         onClick: K,
         shouldRenderAccessory: !c && !d
-      }, S = (0, f.isAnimatedImageUrl)(e.src) ? "".concat(e.src, "?format=png") : e.src, p = o && !l ? e.src : S;
+      }, T = (0, f.isAnimatedImageUrl)(e.src) ? "".concat(e.src, "?format=png") : e.src, p = o && !l ? e.src : T;
       return (0, a.jsxs)("div", {
         className: G.bodyMediaFrame,
         style: C[t],
         children: [u ? (0, a.jsx)(m.default, {
           ...x,
           src: p,
-          backgroundSrc: S,
+          backgroundSrc: T,
           aspectRatio: x.maxWidth / x.maxHeight,
           alt: null !== (n = x.alt) && void 0 !== n ? n : "",
           className: r(G.mediaPostContainer, {
@@ -341,7 +341,7 @@ let K = e => e.preventDefault(),
           })
         })]
       }, e.src)
-    }), [o, c, d, s, C, T, x, u, _]);
+    }), [o, c, d, s, C, _, x, u, S]);
     return (0, a.jsxs)("div", {
       className: G.bodyMedia,
       style: {
@@ -349,7 +349,7 @@ let K = e => e.preventDefault(),
         height: i
       },
       children: [(0, a.jsx)(a.Fragment, {
-        children: S
+        children: T
       }), (c || d) && (0, a.jsxs)("div", {
         className: G.mediaIconsRow,
         children: [d && (0, a.jsx)(A.default, {

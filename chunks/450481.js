@@ -44,7 +44,7 @@ let m = function(e, t) {
           (0, i.openModalLazy)(async () => {
             let {
               default: e
-            } = await n.el("440224").then(n.bind(n, "440224"));
+            } = await n.el("242144").then(n.bind(n, "242144"));
             return t => e(t)
           });
           return

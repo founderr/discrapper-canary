@@ -58,16 +58,16 @@ function M(e) {
       return null !== (t = p[e]) && void 0 !== t ? t : e
     });
     return (0, r.uniq)(e)
-  }, [D, p]), j = (e, t) => {
+  }, [D, p]), P = (e, t) => {
     U(s => ({
       ...s,
       [e]: t
     }))
-  }, P = (0, N.useGuildEligibleForTierTemplates)(t), y = (0, N.useUserEligibleForTierTemplates)(), b = n.useCallback(() => {
+  }, j = (0, N.useGuildEligibleForTierTemplates)(t), y = (0, N.useUserEligibleForTierTemplates)(), b = n.useCallback(() => {
     y && S.GuildRoleSubscriptionsTierTemplatesExperiment.trackExposure({
       guildId: t,
       location: "b2d9de_1"
-    }), y && P ? (0, u.openModalLazy)(async () => {
+    }), y && j ? (0, u.openModalLazy)(async () => {
       let {
         default: e
       } = await s.el("183424").then(s.bind(s, "183424"));
@@ -81,7 +81,7 @@ function M(e) {
     }, {
       modalKey: R
     }) : M()
-  }, [t, G, M, l, y, P]), B = L.useHasChangesForEditStateIds(v), F = n.useCallback(() => v.forEach(L.clearEditState), [v]), H = (0, A.useRoleSubscriptionSettingsDisabled)(), V = (0, o.default)([E.default], () => E.default.getProps().subsection);
+  }, [t, G, M, l, y, j]), B = L.useHasChangesForEditStateIds(v), F = n.useCallback(() => v.forEach(L.clearEditState), [v]), H = (0, A.useRoleSubscriptionSettingsDisabled)(), V = (0, o.default)([E.default], () => E.default.getProps().subsection);
   return n.useEffect(() => (V === C.GuildSettingsSubsections.ROLE_SUBSCRIPTION_TIER_TEMPLATE && b(), () => {
     (0, u.closeModal)(R)
   }), [V, b]), (0, a.jsxs)(a.Fragment, {
@@ -94,7 +94,7 @@ function M(e) {
         priceTiers: l,
         groupListingId: T,
         onDeleteEditState: () => x(e),
-        onBeforeDispatchNewListing: t => j(t.id, e),
+        onBeforeDispatchNewListing: t => P(t.id, e),
         onAfterDispatchNewListing: () => x(e)
       }, e)), (0, a.jsxs)(u.Clickable, {
         onClick: H ? void 0 : b,

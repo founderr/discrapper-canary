@@ -1,36 +1,36 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return o
   }
 });
 var i = n("37983"),
-  l = n("884691"),
-  r = n("77078"),
-  o = n("393414"),
-  a = n("49111"),
-  s = l.forwardRef(function(e, t) {
+  r = n("884691"),
+  l = n("77078"),
+  s = n("393414"),
+  u = n("49111"),
+  o = r.forwardRef(function(e, t) {
     let {
       href: n,
-      children: s,
-      onClick: u,
+      children: o,
+      onClick: a,
       onKeyPress: c,
       focusProps: d,
       ...f
-    } = e, E = l.useCallback(e => {
-      !e.repeat && ((e.charCode === a.KeyboardKeys.SPACE || e.charCode === a.KeyboardKeys.ENTER) && (e.preventDefault(), null != n && (0, o.transitionTo)(n), null == u || u()), null == c || c(e))
-    }, [n, c, u]), p = l.useCallback(e => {
-      !e.metaKey && !e.shiftKey && 0 === e.button && (e.preventDefault(), e.stopPropagation(), null != n && (0, o.transitionTo)(n), null == u || u())
-    }, [n, u]), h = (0, i.jsx)("a", {
+    } = e, E = r.useCallback(e => {
+      !e.repeat && ((e.charCode === u.KeyboardKeys.SPACE || e.charCode === u.KeyboardKeys.ENTER) && (e.preventDefault(), null != n && (0, s.transitionTo)(n), null == a || a()), null == c || c(e))
+    }, [n, c, a]), _ = r.useCallback(e => {
+      !e.metaKey && !e.shiftKey && 0 === e.button && (e.preventDefault(), e.stopPropagation(), null != n && (0, s.transitionTo)(n), null == a || a())
+    }, [n, a]), I = (0, i.jsx)("a", {
       ref: t,
       href: n,
-      onClick: p,
+      onClick: _,
       onKeyPress: E,
       ...f,
-      children: s
+      children: o
     });
-    return (0, i.jsx)(r.FocusRing, {
+    return (0, i.jsx)(l.FocusRing, {
       ...d,
-      children: h
+      children: I
     })
   })

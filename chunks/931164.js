@@ -5,20 +5,20 @@ t.r(A), t.d(A, {
   }
 });
 var a = t("917351"),
-  l = t.n(a),
-  n = t("270926"),
+  n = t.n(a),
+  l = t("270926"),
   r = t("888198"),
   s = t("367376");
-let o = l.omit(r.default.RULES, ["codeBlock", "heading"]),
+let o = n.omit(r.default.RULES, ["codeBlock", "heading"]),
   i = {
-    ...n.default,
+    ...l.default,
     parse: function(e, A, t) {
       var a;
-      let l = n.default.parse(e, A, t),
+      let n = l.default.parse(e, A, t),
         r = null !== (a = t.initialHeaderLevel) && void 0 !== a ? a : 3,
-        s = Math.min(6, r + l.level);
+        s = Math.min(6, r + n.level);
       return {
-        ...l,
+        ...n,
         level: s
       }
     }

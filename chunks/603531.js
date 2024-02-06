@@ -27,8 +27,8 @@ var a = n("37983"),
   C = n("574073"),
   A = n("359132"),
   M = n("723931"),
-  x = n("39331"),
-  v = n("68480"),
+  v = n("39331"),
+  x = n("68480"),
   R = n("596368"),
   L = n("227439"),
   O = n("862451"),
@@ -56,13 +56,13 @@ var a = n("37983"),
     } = (0, A.default)(N), {
       content: en,
       hasSpoilerEmbeds: ea
-    } = (0, x.default)(D, {
+    } = (0, v.default)(D, {
       hideSimpleEmbedContent: X && q,
       allowList: J.showListsAndHeaders || $.showListsAndHeaders,
       allowHeading: J.showListsAndHeaders || $.showListsAndHeaders,
       allowLinks: J.showMaskedLinks || $.showMaskedLinks,
       previewLinkTarget: J.showMaskedLinks || $.showMaskedLinks
-    }), el = (0, C.default)(D), es = (0, r.useStateFromStores)([m.default], () => D.hasFlag(j.MessageFlags.HAS_THREAD) && m.default.getChannel(D.id)), ei = D.type === j.MessageTypes.THREAD_STARTER_MESSAGE && z.state === h.ReferencedMessageState.LOADED && null != Q, er = !ei && void 0 === S, eo = (0, v.default)({
+    }), el = (0, C.default)(D), es = (0, r.useStateFromStores)([m.default], () => D.hasFlag(j.MessageFlags.HAS_THREAD) && m.default.getChannel(D.id)), ei = D.type === j.MessageTypes.THREAD_STARTER_MESSAGE && z.state === h.ReferencedMessageState.LOADED && null != Q, er = !ei && void 0 === S, eo = (0, x.default)({
       message: D,
       channel: N,
       enabled: er

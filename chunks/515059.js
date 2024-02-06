@@ -5,41 +5,41 @@ i.r(t), i.d(t, {
   }
 });
 var n = i("37983"),
-  l = i("884691"),
-  s = i("414456"),
-  a = i.n(s),
-  r = i("77078"),
+  s = i("884691"),
+  l = i("414456"),
+  r = i.n(l),
+  a = i("77078"),
   o = i("256170"),
   u = i("572935");
-let c = l.memo(function(e) {
+let c = s.memo(function(e) {
   let {
     children: t,
     className: i,
-    icon: l,
-    isCollapsed: s,
+    icon: s,
+    isCollapsed: l,
     onClick: c,
     "aria-label": d
   } = e;
   return (0, n.jsx)("div", {
-    className: a(u.wrapper, i),
-    children: (0, n.jsxs)(r.Clickable, {
+    className: r(u.wrapper, i),
+    children: (0, n.jsxs)(a.Clickable, {
       onClick: c,
       onKeyDown: e => e.stopPropagation(),
-      className: a(u.header, {
-        [u.interactive]: null != s
+      className: r(u.header, {
+        [u.interactive]: null != l
       }),
-      "aria-expanded": null != s ? !s : void 0,
+      "aria-expanded": null != l ? !l : void 0,
       "aria-label": d,
-      children: [null != l && (0, n.jsx)("div", {
+      children: [null != s && (0, n.jsx)("div", {
         "aria-hidden": !0,
         className: u.headerIcon,
-        children: l
+        children: s
       }), (0, n.jsx)("span", {
         className: u.headerLabel,
         children: t
-      }), null != s ? (0, n.jsx)(o.default, {
-        className: a(u.headerCollapseIcon, {
-          [u.headerCollapseIconCollapsed]: s
+      }), null != l ? (0, n.jsx)(o.default, {
+        className: r(u.headerCollapseIcon, {
+          [u.headerCollapseIconCollapsed]: l
         }),
         height: 16,
         width: 16

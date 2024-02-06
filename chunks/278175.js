@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
 var i, l, s = n("37983"),
   r = n("884691"),
   a = n("414456"),
-  o = n.n(a),
-  u = n("461380"),
+  u = n.n(a),
+  o = n("461380"),
   d = n("718517"),
   c = n("129722"),
   f = n("859971"),
-  m = n("184692"),
-  h = n("89050"),
+  h = n("184692"),
+  m = n("89050"),
   g = n("721013");
 (l = i || (i = {}))[l.START = 0] = "START", l[l.PLAYHEAD = 1] = "PLAYHEAD", l[l.END = 2] = "END";
 var E = r.memo(function(e) {
@@ -24,152 +24,152 @@ var E = r.memo(function(e) {
     onChangePosition: l,
     disabled: a = !1
   } = e, E = {
-    ...h.defaultWaveformConfig
+    ...m.defaultWaveformConfig
   }, {
     audio: S
-  } = (0, c.useAudioTrimmerStore)(), p = null != S, v = r.useRef(null), _ = r.useRef(null), N = r.useRef(null), [C, A] = r.useState(0), [b, I] = r.useState(0), [O, D] = r.useState(0), [w, x] = r.useState(!1), [L, U] = r.useState(!1), [T, M] = r.useState(!1), [R, y] = r.useState(0), [P, k] = r.useState(-1), F = r.useMemo(() => R / E.fineTuningScale, [E.fineTuningScale, R]);
+  } = (0, c.useAudioTrimmerStore)(), v = null != S, p = r.useRef(null), _ = r.useRef(null), N = r.useRef(null), [C, I] = r.useState(0), [O, A] = r.useState(0), [x, D] = r.useState(0), [L, M] = r.useState(!1), [b, R] = r.useState(!1), [T, U] = r.useState(!1), [y, w] = r.useState(0), [P, j] = r.useState(-1), F = r.useMemo(() => y / E.fineTuningScale, [E.fineTuningScale, y]);
   r.useEffect(() => {
     if (null == S) return;
     let e = S.duration * d.default.Millis.SECOND;
-    A(0), I(0), D(e), y(e)
+    I(0), A(0), D(e), w(e)
   }, [S]);
-  let j = r.useCallback((e, t) => {
+  let V = r.useCallback((e, t) => {
       if (n(), 0 === e.button) switch (t) {
         case 0:
-          x(!0);
+          M(!0);
           break;
         case 1:
-          U(!0);
+          R(!0);
           break;
         case 2:
-          M(!0)
+          U(!0)
       }
     }, [n]),
-    V = r.useCallback(e => {
+    k = r.useCallback(e => {
       switch (e) {
         case 0:
-          x(!1);
+          M(!1);
           break;
         case 1:
-          U(!1);
+          R(!1);
           break;
         case 2:
-          M(!1)
+          U(!1)
       }
-      k(-1)
+      j(-1)
     }, []),
     B = r.useCallback(e => {
-      if (null == S || !w) return;
-      let t = parseInt(e.target.value),
-        n = t > O ? O : t;
-      i((0, f.toSeconds)(n)), A(n), I(n)
-    }, [S, i, O, w]),
-    G = r.useCallback(e => {
       if (null == S || !L) return;
-      let t = parseInt(e.target.value);
-      t < C ? (i((0, f.toSeconds)(C)), I(C)) : t > O ? (i((0, f.toSeconds)(O)), I(O)) : (i((0, f.toSeconds)(t)), I(t))
-    }, [S, i, O, L, C]),
+      let t = parseInt(e.target.value),
+        n = t > x ? x : t;
+      i((0, f.toSeconds)(n)), I(n), A(n)
+    }, [S, i, x, L]),
     H = r.useCallback(e => {
+      if (null == S || !b) return;
+      let t = parseInt(e.target.value);
+      t < C ? (i((0, f.toSeconds)(C)), A(C)) : t > x ? (i((0, f.toSeconds)(x)), A(x)) : (i((0, f.toSeconds)(t)), A(t))
+    }, [S, i, x, b, C]),
+    G = r.useCallback(e => {
       if (null == S || !T) return;
       let t = parseInt(e.target.value),
         n = t > C ? t : C;
-      i((0, f.toSeconds)(C)), I(C), D(n)
+      i((0, f.toSeconds)(C)), A(C), D(n)
     }, [S, i, T, C]);
   return r.useEffect(() => {
-    null != l && p && l({
+    null != l && v && l({
       startPositionMs: C,
-      endPositionMs: O,
-      playheadPositionMs: b
+      endPositionMs: x,
+      playheadPositionMs: O
     })
-  }, [C, O, l, p, b]), r.useEffect(() => {
+  }, [C, x, l, v, O]), r.useEffect(() => {
     let e;
     if (null != S) return t && (e = setInterval(() => {
-      S.currentTime < (0, f.toSeconds)(O) ? S.currentTime >= (0, f.toSeconds)(b) && I(S.currentTime * d.default.Millis.SECOND) : (n((0, f.toSeconds)(C)), I(C))
+      S.currentTime < (0, f.toSeconds)(x) ? S.currentTime >= (0, f.toSeconds)(O) && A(S.currentTime * d.default.Millis.SECOND) : (n((0, f.toSeconds)(C)), A(C))
     }, 16)), () => {
       clearInterval(e)
     }
-  }, [S, O, n, b, t, C]), r.useEffect(() => {
+  }, [S, x, n, O, t, C]), r.useEffect(() => {
     if (E.fineTuningDelay <= 0) return;
     let e = setTimeout(() => {
-      w && C == C && -1 === P ? k(C) : T && O == O && -1 === P ? k(O) : L && b == b && -1 === P && k(b)
+      L && C == C && -1 === P ? j(C) : T && x == x && -1 === P ? j(x) : b && O == O && -1 === P && j(O)
     }, E.fineTuningDelay);
     return () => {
       clearTimeout(e)
     }
-  }, [E.fineTuningDelay, T, O, P, L, b, w, C]), (0, s.jsxs)("div", {
-    className: o(g.timeline, {
-      [g.initialized]: p
+  }, [E.fineTuningDelay, T, x, P, b, O, L, C]), (0, s.jsxs)("div", {
+    className: u(g.timeline, {
+      [g.initialized]: v
     }),
     children: [(0, s.jsxs)("div", {
       className: g.rangeHandleContainer,
       children: [(0, s.jsxs)("div", {
         className: g.rangeHandleFrame,
         children: [(0, s.jsx)("input", {
-          ref: v,
-          className: o(g.rangeHandle, g.rangeHandleStart),
+          ref: p,
+          className: u(g.rangeHandle, g.rangeHandleStart),
           type: "range",
-          min: (0, f.getMinValue)(P, F, R),
-          max: (0, f.getMaxValue)(P, F, R),
+          min: (0, f.getMinValue)(P, F, y),
+          max: (0, f.getMaxValue)(P, F, y),
           value: C,
           onChange: B,
-          onMouseDown: e => j(e, 0),
-          onMouseUp: () => V(0),
-          disabled: !p || a
+          onMouseDown: e => V(e, 0),
+          onMouseUp: () => k(0),
+          disabled: !v || a
         }), (0, s.jsx)("input", {
           ref: N,
-          className: o(g.rangeHandle, g.rangeHandleEnd),
+          className: u(g.rangeHandle, g.rangeHandleEnd),
           type: "range",
-          min: (0, f.getMinValue)(P, F, R),
-          max: (0, f.getMaxValue)(P, F, R),
-          value: O,
-          onChange: H,
-          onMouseDown: e => j(e, 2),
-          onMouseUp: () => V(2),
-          disabled: !p || a
+          min: (0, f.getMinValue)(P, F, y),
+          max: (0, f.getMaxValue)(P, F, y),
+          value: x,
+          onChange: G,
+          onMouseDown: e => V(e, 2),
+          onMouseUp: () => k(2),
+          disabled: !v || a
         })]
       }), (0, s.jsx)("div", {
         className: g.handlePlayheadTrack,
         children: (0, s.jsx)("input", {
           ref: _,
-          className: o(g.rangeHandle, g.rangeHandlePlayhead),
+          className: u(g.rangeHandle, g.rangeHandlePlayhead),
           type: "range",
-          min: (0, f.getMinValue)(P, F, R),
-          max: (0, f.getMaxValue)(P, F, R),
-          value: b,
-          onChange: G,
-          onMouseDown: e => j(e, 1),
-          onMouseUp: () => V(1),
-          disabled: !p || a
+          min: (0, f.getMinValue)(P, F, y),
+          max: (0, f.getMaxValue)(P, F, y),
+          value: O,
+          onChange: H,
+          onMouseDown: e => V(e, 1),
+          onMouseUp: () => k(1),
+          disabled: !v || a
         })
       })]
     }), (0, s.jsxs)("div", {
       className: g.handleContainer,
       children: [(0, s.jsxs)("div", {
-        className: o(g.handleFrame, {
-          [g.startDragging]: w,
+        className: u(g.handleFrame, {
+          [g.startDragging]: L,
           [g.endDragging]: T
         }),
         style: {
-          left: "".concat((0, f.getStartHandleValue)(C, P, F, R), "%"),
-          right: "".concat((0, f.getEndHandleValue)(O, P, F, R), "%")
+          left: "".concat((0, f.getStartHandleValue)(C, P, F, y), "%"),
+          right: "".concat((0, f.getEndHandleValue)(x, P, F, y), "%")
         },
         children: [(0, s.jsx)("div", {
-          className: o(g.handleIconFrame, g.handleIconFrameStart),
+          className: u(g.handleIconFrame, g.handleIconFrameStart),
           children: (0, s.jsx)("div", {
-            className: o(g.handleIconContainer, g.start),
-            children: (0, s.jsx)(u.default, {
-              direction: u.default.Directions.RIGHT,
+            className: u(g.handleIconContainer, g.start),
+            children: (0, s.jsx)(o.default, {
+              direction: o.default.Directions.RIGHT,
               className: g.handleIcon,
               width: 16,
               height: 16
             })
           })
         }), (0, s.jsx)("div", {
-          className: o(g.handleIconFrame, g.handleIconFrameEnd),
+          className: u(g.handleIconFrame, g.handleIconFrameEnd),
           children: (0, s.jsx)("div", {
-            className: o(g.handleIconContainer, g.end),
-            children: (0, s.jsx)(u.default, {
-              direction: u.default.Directions.LEFT,
+            className: u(g.handleIconContainer, g.end),
+            children: (0, s.jsx)(o.default, {
+              direction: o.default.Directions.LEFT,
               className: g.handleIcon,
               width: 16,
               height: 16
@@ -179,20 +179,20 @@ var E = r.memo(function(e) {
       }), (0, s.jsx)("div", {
         className: g.playheadTrack,
         children: (0, s.jsx)("div", {
-          className: o(g.playhead, {
-            [g.dragging]: L || w || T || t
+          className: u(g.playhead, {
+            [g.dragging]: b || L || T || t
           }),
           style: {
-            left: "".concat((0, f.getStartHandleValue)(b, P, F, R), "%")
+            left: "".concat((0, f.getStartHandleValue)(O, P, F, y), "%")
           }
         })
       })]
     }), (0, s.jsx)("div", {
       className: g.waveformContainer,
-      children: (0, s.jsx)(m.default, {
+      children: (0, s.jsx)(h.default, {
         fineTuning: P,
         fineTuningResolution: F,
-        duration: R
+        duration: y
       })
     })]
   })

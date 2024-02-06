@@ -62,7 +62,7 @@ function T(e) {
   }
 }
 
-function I(e, t) {
+function N(e, t) {
   var n;
   let l = s.default.getChannel(e),
     r = (0, u.getChannelRoleSubscriptionStatus)(e, s.default, a.default, d.default).isSubscriptionGated,
@@ -98,7 +98,7 @@ function I(e, t) {
   } : null
 }
 
-function N(e) {
+function I(e) {
   return {
     type: "link",
     content: [{
@@ -169,7 +169,7 @@ function b(e, t, n, l) {
       inContent: [_(e)],
       content: [T(!1)]
     };
-    return null != (i = l) ? N(i) : v("#".concat(L.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
+    return null != (i = l) ? I(i) : v("#".concat(L.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER))
   }
   let u = e.guildId === n;
   return {
@@ -223,7 +223,7 @@ let M = {
         type: "channelMention",
         id: l
       };
-      let r = I(l, n.mentionChannels);
+      let r = N(l, n.mentionChannels);
       return null == r ? R(null, l, null, A(n.channelId)) : b(r, null, A(n.channelId))
     }
   },
@@ -239,8 +239,8 @@ let M = {
         r = e[1],
         a = e[2],
         i = e[3];
-      if (null == a) return N(l);
-      let u = I(a, null);
+      if (null == a) return I(l);
+      let u = N(a, null);
       return null == u ? R(r, a, i, A(n.channelId), l) : b(u, i, A(n.channelId), l)
     }
   },
@@ -254,10 +254,10 @@ let M = {
         a = e[2],
         i = e[3],
         u = e[4];
-      if (null == a || null == i) return N(l);
-      let o = I(i, null);
+      if (null == a || null == i) return I(l);
+      let o = N(i, null);
       if (null != o) return b(o, u, A(n.channelId), l);
-      let s = I(a, null);
+      let s = N(a, null);
       return null != s ? b(s, u, A(n.channelId), l) : R(r, a, u, A(n.channelId), l)
     }
   };

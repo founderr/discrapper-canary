@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return v
   },
   default: function() {
-    return P
+    return j
   }
 }), s("222007"), s("511434"), s("313619"), s("654714"), s("287168"), s("956660"), s("686130"), s("781738");
 var a = s("37983"),
@@ -71,7 +71,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       }
     })
   },
-  j = () => {
+  P = () => {
     var e;
     let t = n.useRef(null),
       s = (0, l.useStateFromStores)([h.default], () => h.default.getGuild()),
@@ -80,10 +80,10 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       !u && null != s && (c.maybeFetchGuildDiscoveryCategories(), c.fetchMetadataForGuild(s.id), c.fetchSlugForGuild(s.id), v(!0))
     }, [s, u]);
     let {
-      canManageGuild: j
+      canManageGuild: P
     } = (0, l.useStateFromStoresObject)([N.default], () => ({
       canManageGuild: N.default.can(M.Permissions.MANAGE_GUILD, s)
-    })), P = (0, l.useStateFromStores)([h.default], () => h.default.isGuildMetadataLoaded()), y = (0, l.useStateFromStores)([h.default], () => null != s ? h.default.getMetadata() : null), b = (0, l.useStateFromStores)([h.default], () => null != s && (null == y ? void 0 : y.isPublished) ? h.default.getSlug() : null), [B, F] = n.useState([!0]), [H, V] = n.useState(!0), [w, k] = n.useState([!1]), [Y, K] = n.useState([""]), W = e => {
+    })), j = (0, l.useStateFromStores)([h.default], () => h.default.isGuildMetadataLoaded()), y = (0, l.useStateFromStores)([h.default], () => null != s ? h.default.getMetadata() : null), b = (0, l.useStateFromStores)([h.default], () => null != s && (null == y ? void 0 : y.isPublished) ? h.default.getSlug() : null), [B, F] = n.useState([!0]), [H, V] = n.useState(!0), [w, k] = n.useState([!1]), [Y, K] = n.useState([""]), W = e => {
       let t = Object.entries(G.ALLOWED_SOCIAL_LINKS_DOMAINS).filter(e => !Y.includes(e[1].presentation)).map(e => ({
         label: e[1].presentation,
         value: e[0]
@@ -303,7 +303,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                         placeholder: x.default.Messages.SELECT,
                         options: eo,
                         onChange: Q,
-                        disabled: !j,
+                        disabled: !P,
                         searchable: !0,
                         clearable: !0
                       }), (0, a.jsxs)(r.FormSection, {
@@ -314,7 +314,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                         }), (0, a.jsx)(R.default, {
                           guild: s,
                           guildMetadata: y,
-                          disabled: !j
+                          disabled: !P
                         })]
                       }), (null == Z ? void 0 : Z.category) != null ? (0, a.jsx)(r.Text, {
                         color: "text-danger",
@@ -342,7 +342,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                             color: r.Button.Colors.PRIMARY,
                             hover: r.Button.Colors.PRIMARY,
                             children: [x.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(I.default, {
-                              disabled: !j,
+                              disabled: !P,
                               onChange: J
                             })]
                           })]
@@ -353,7 +353,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                             splash: e,
                             size: 512 * (0, T.getDevicePixelRatio)()
                           }),
-                          disabled: !j,
+                          disabled: !P,
                           onChange: J,
                           hint: x.default.Messages.CHANGE_SPLASH,
                           imageClassName: p.imageUploaderInnerSquare,
@@ -380,7 +380,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                       placeholder: x.default.Messages.DISCOVERY_LANDING_PAGE_SERVER_DESCRIPTION_HINT,
                       onChange: q,
                       maxLength: 120,
-                      disabled: !j
+                      disabled: !P
                     })]
                   }), (0, a.jsx)(r.FormDivider, {
                     className: p.divider
@@ -431,9 +431,9 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                         onChange: $,
                         minLength: 300,
                         maxLength: 2400,
-                        disabled: !j,
+                        disabled: !P,
                         defaultDirty: (null === (e = y.about) || void 0 === e ? void 0 : e.length) > 0
-                      }, "text-area-".concat(P))]
+                      }, "text-area-".concat(j))]
                     }), (null == Z ? void 0 : Z.about) != null ? (0, a.jsx)(r.Text, {
                       color: "text-danger",
                       variant: "text-sm/normal",
@@ -462,14 +462,14 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           placeholder: x.default.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_DROPDOWN_PLACEHOLDER,
                           value: Y[t],
                           onChange: e => es(e, t),
-                          isDisabled: !j
+                          isDisabled: !P
                         }, "dropdown-" + t), (0, a.jsx)(r.TextInput, {
                           value: e,
                           className: y.isPublished ? p.socialLinksMax : p.socialLinksMin,
                           onChange: e => ea(e, t),
                           placeholder: x.default.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_HINT,
                           maxLength: 150,
-                          disabled: !j
+                          disabled: !P
                         }, "link-" + t), B[t] ? (0, a.jsx)(A.default, {
                           className: y.isPublished ? p.validationButtonMax : p.validationButtonMin,
                           color: i.default.unsafe_rawColors.GREEN_230.css,
@@ -480,7 +480,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                           color: i.default.unsafe_rawColors.RED_400.css,
                           width: 20,
                           height: 20
-                        }, "validation-failed-" + t), j && (0, a.jsx)(o.default, {
+                        }, "validation-failed-" + t), P && (0, a.jsx)(o.default, {
                           className: w[t] ? y.isPublished ? p.deleteButtonMax : p.deleteButtonMin : y.isPublished ? p.deleteButtonHiddenMax : p.deleteButtonHiddenMin,
                           onClick: () => en(t)
                         }, "delete-button-" + t)]
@@ -493,7 +493,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                         color: r.Button.Colors.PRIMARY,
                         hover: r.Button.Colors.PRIMARY,
                         onClick: et,
-                        disabled: !j || y.socialLinks.length >= 9,
+                        disabled: !P || y.socialLinks.length >= 9,
                         children: x.default.Messages.DISCOVERY_LANDING_PAGE_SOCIAL_LINKS_BUTTON_ADD_ANOTHER
                       })]
                     })
@@ -513,7 +513,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                         color: r.Button.Colors.RED,
                         hover: r.Button.Colors.RED,
                         onClick: () => ee(!1),
-                        disabled: !j,
+                        disabled: !P,
                         children: x.default.Messages.DISCOVERY_LANDING_PAGE_DISABLE_BUTTON
                       })]
                     })]
@@ -529,7 +529,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
                     children: er,
                     buttonLabel: x.default.Messages.DISCOVERY_LANDING_PAGE_CHECKLIST_PUBLISH,
                     buttonCallback: () => ee(!0),
-                    disabled: !j || !H
+                    disabled: !P || !H
                   })
                 })]
               })
@@ -539,7 +539,7 @@ let U = "https:" + window.GLOBAL_ENV.MARKETING_ENDPOINT + "/servers/",
       })
     })
   };
-var P = () => {
+var j = () => {
   let e = (0, l.useStateFromStores)([h.default], () => h.default.getGuild());
-  return null == e ? null : (0, a.jsx)(j, {})
+  return null == e ? null : (0, a.jsx)(P, {})
 }

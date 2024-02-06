@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return r
   }
 });
-var l = n("446674"),
+var u = n("446674"),
   i = n("271938"),
   a = n("18494"),
-  u = n("808422");
+  l = n("808422");
 
-function o() {
-  let e = (0, l.useStateFromStores)([a.default], () => a.default.getVoiceChannelId()),
-    t = (0, l.useStateFromStores)([i.default], () => i.default.getId()),
-    n = (0, u.default)(t, e);
-  return n === u.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+function r() {
+  let e = (0, u.useStateFromStores)([a.default], () => a.default.getVoiceChannelId()),
+    t = (0, u.useStateFromStores)([i.default], () => i.default.getId()),
+    n = (0, l.default)(t, e);
+  return n === l.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
 }

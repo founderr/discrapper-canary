@@ -33,17 +33,17 @@ let E = /^\/([a-zA-Z0-9-]+)$/,
   A = /^\/channels\/([0-9]+)\/shop$/,
   y = /^\/clyde-profiles\/([0-9-]+)\/?$/,
   N = /^dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+$/i,
-  R = w(window.GLOBAL_ENV.INVITE_HOST),
-  D = w(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-  O = w(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(m.PRIMARY_DOMAIN)),
-  P = w("//canary.".concat(m.PRIMARY_DOMAIN)),
-  b = w("//ptb.".concat(m.PRIMARY_DOMAIN)),
-  L = w("discordapp.com"),
-  M = w("discord.com"),
+  R = k(window.GLOBAL_ENV.INVITE_HOST),
+  D = k(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
+  O = k(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(m.PRIMARY_DOMAIN)),
+  P = k("//canary.".concat(m.PRIMARY_DOMAIN)),
+  b = k("//ptb.".concat(m.PRIMARY_DOMAIN)),
+  L = k("discordapp.com"),
+  M = k("discord.com"),
   U = [_.default.escape(null !== (s = R.host) && void 0 !== s ? s : ""), _.default.escape(null !== (r = D.host) && void 0 !== r ? r : ""), _.default.escape(null !== (a = O.host) && void 0 !== a ? a : ""), _.default.escape(null !== (o = L.host) && void 0 !== o ? o : ""), _.default.escape(null !== (l = M.host) && void 0 !== l ? l : "")].filter(Boolean),
-  k = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(U.join("|"), ")"), "g");
+  w = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(U.join("|"), ")"), "g");
 
-function w(e) {
+function k(e) {
   if (null == e) return {
     host: null,
     pathPrefix: null
@@ -80,7 +80,7 @@ function F(e) {
   if (null == e) return [];
   let t = new Set,
     n = [],
-    i = (e = e.replace(k, (e, t, n, i) => null == n ? "".concat(t, "http://").concat(i) : e)).match(h.default.URL_REGEX),
+    i = (e = e.replace(w, (e, t, n, i) => null == n ? "".concat(t, "http://").concat(i) : e)).match(h.default.URL_REGEX),
     s = e.match(N);
   if (null == (i = (null != i ? i : []).concat(null != s ? s : [])) || 0 === i.length) return [];
   for (let e of i) {
@@ -124,12 +124,12 @@ function F(e) {
       let e = U[1];
       h(g.CodedLinkType.APP_DIRECTORY_PROFILE, e)
     }
-    let k = null == _ ? void 0 : _.match(y);
-    if (null != k) {
-      let e = k[1];
+    let w = null == _ ? void 0 : _.match(y);
+    if (null != w) {
+      let e = w[1];
       h(g.CodedLinkType.CLYDE_PROFILE, e)
     }
-    let w = null == _ ? void 0 : _.match(I),
+    let k = null == _ ? void 0 : _.match(I),
       {
         activityBookmarkEmbedEnabled: G
       } = d.ActivityBookmarkEmbedExperiment.getCurrentConfig({
@@ -137,8 +137,8 @@ function F(e) {
       }, {
         autoTrackExposure: !1
       });
-    if (null != w && G) {
-      let e = w[1];
+    if (null != k && G) {
+      let e = k[1];
       h(g.CodedLinkType.ACTIVITY_BOOKMARK, e)
     }
     let F = null == _ ? void 0 : _.match(C);

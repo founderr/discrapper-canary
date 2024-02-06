@@ -24,8 +24,8 @@ var n = l("274870"),
   _ = l("274652"),
   p = l("922744"),
   I = l("155207"),
-  x = l("745183"),
-  v = l("368121"),
+  v = l("745183"),
+  x = l("368121"),
   A = l("944633"),
   R = l("228427"),
   T = l("959097"),
@@ -61,7 +61,7 @@ function j(e, t) {
       return R.default;
     case M.ChannelTypes.GUILD_VOICE:
       if ((0, L.default)(e)) return A.default;
-      return v.default;
+      return x.default;
     case M.ChannelTypes.ANNOUNCEMENT_THREAD:
     case M.ChannelTypes.PUBLIC_THREAD:
       if (e.isNSFW()) return p.default;
@@ -69,7 +69,7 @@ function j(e, t) {
       else return T.default;
     case M.ChannelTypes.PRIVATE_THREAD:
       if (e.isNSFW()) return p.default;
-      return x.default;
+      return v.default;
     case M.ChannelTypes.GUILD_DIRECTORY:
       return s.default;
     default:

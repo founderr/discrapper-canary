@@ -18,8 +18,8 @@ var l = a("37983"),
   C = a("270227"),
   E = a("719923"),
   h = a("491232"),
-  g = a("716120"),
-  p = a("342676"),
+  p = a("716120"),
+  g = a("342676"),
   T = a("408381"),
   L = a("177586"),
   x = a("646718"),
@@ -65,7 +65,7 @@ function _(e) {
   } = e, {
     backgroundColors: s
   } = (0, L.default)(t.styles);
-  return (0, l.jsxs)(g.default, {
+  return (0, l.jsxs)(p.default, {
     asset: t.banner,
     className: n(v.shopBanner, a),
     style: null != s ? {
@@ -92,7 +92,7 @@ function _(e) {
       children: t.skuId === i.CollectiblesCategorySkuId.DISXCORE ? (0, l.jsx)(I, {
         category: t
       }) : t.summary
-    }), (0, l.jsx)(p.default, {
+    }), (0, l.jsx)(g.default, {
       category: t,
       className: v.limitedTimeBadge,
       display: "banner"

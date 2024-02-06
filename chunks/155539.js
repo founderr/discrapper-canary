@@ -5,9 +5,9 @@ t.r(A), t.d(A, {
   }
 }), t("222007");
 var a = t("37983"),
-  l = t("884691"),
-  n = t("414456"),
-  r = t.n(n),
+  n = t("884691"),
+  l = t("414456"),
+  r = t.n(l),
   s = t("77078"),
   o = t("160864"),
   i = t("966724"),
@@ -30,11 +30,11 @@ function q(e) {
   var A;
   let {
     upload: t,
-    progress: n = 0,
+    progress: l = 0,
     onDeleteAttachment: o
-  } = e, i = l.useCallback(() => {
+  } = e, i = n.useCallback(() => {
     null == o || o(t.id)
-  }, [o, t.id]), c = n >= 1, f = n < 0, T = c || f, h = null !== (A = t.filename) && void 0 !== A ? A : t.id, U = (0, m.describeUploadProgressError)(n);
+  }, [o, t.id]), c = l >= 1, f = l < 0, T = c || f, h = null !== (A = t.filename) && void 0 !== A ? A : t.id, U = (0, m.describeUploadProgressError)(l);
   return (0, a.jsx)(s.TooltipContainer, {
     text: U,
     children: (0, a.jsxs)("div", {
@@ -79,12 +79,12 @@ function N(e) {
     onFileAdded: A
   } = e, {
     uploads: t,
-    canAttachFiles: n,
+    canAttachFiles: l,
     canAttachArchives: r,
     addAttachment: d,
     deleteAttachment: c,
     fileUploadProgresses: C
-  } = (0, h.useGuildProductAttachmentManagerContext)(), g = l.useRef(!1);
+  } = (0, h.useGuildProductAttachmentManagerContext)(), g = n.useRef(!1);
 
   function m(e) {
     try {
@@ -95,7 +95,7 @@ function N(e) {
       g.current = !0
     } catch {}
   }
-  return l.useEffect(() => {
+  return n.useEffect(() => {
     g.current && (A(), g.current = !1)
   }, [A]), (0, a.jsxs)("div", {
     className: v.container,
@@ -109,7 +109,7 @@ function N(e) {
       className: v.addFileButtonLook,
       innerClassName: v.addFileButton,
       color: s.Button.Colors.CUSTOM,
-      disabled: !n,
+      disabled: !l,
       "aria-label": p.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON,
       "aria-describedby": E,
       multiple: !0,

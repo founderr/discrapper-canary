@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   InviteResolvingHeader: function() {
-    return O
+    return v
   },
   default: function() {
     return A
@@ -27,7 +27,7 @@ var l = n("37983"),
   g = n("91366"),
   h = n("782340"),
   S = n("310042");
-let O = () => (0, l.jsxs)(a.Fragment, {
+let v = () => (0, l.jsxs)(a.Fragment, {
     children: [(0, l.jsx)(f.Avatar, {
       src: null,
       size: u.AvatarSizes.DEPRECATED_SIZE_100,
@@ -39,7 +39,7 @@ let O = () => (0, l.jsxs)(a.Fragment, {
       children: h.default.Messages.LOADING
     })]
   }),
-  v = e => {
+  O = e => {
     let {
       guild: t,
       user: n,
@@ -73,7 +73,7 @@ var A = e => {
   var t;
   let n, a, c, {
       invite: N,
-      disableUser: O = !1,
+      disableUser: v = !1,
       error: A,
       flatActivityCount: C = !1,
       isRegister: R = !1
@@ -89,7 +89,7 @@ var A = e => {
   let D = null != N.guild ? new d.default(N.guild) : null,
     L = null != N.channel ? (0, o.createChannelRecordFromInvite)(N.channel) : null,
     P = null != N.target_application ? new s.default(N.target_application) : null,
-    V = O || null == N.inviter ? null : new _.default(N.inviter),
+    V = v || null == N.inviter ? null : new _.default(N.inviter),
     H = null != N.approximate_member_count && N.approximate_member_count > 100 || null != D && D.hasFeature(p.GuildFeatures.COMMUNITY),
     F = !H && null != V,
     U = null,
@@ -146,7 +146,7 @@ var A = e => {
   }
   return (0, l.jsxs)("div", {
     className: S.container,
-    children: [(0, l.jsx)(v, {
+    children: [(0, l.jsx)(O, {
       application: P,
       guild: D,
       user: F ? V : null,

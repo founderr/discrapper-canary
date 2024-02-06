@@ -11,8 +11,8 @@ var r, i, s = n("37983");
 n("884691");
 var a = n("414456"),
   l = n.n(a),
-  o = n("446674"),
-  u = n("102985"),
+  u = n("446674"),
+  o = n("102985"),
   c = n("959905"),
   d = n("485138"),
   f = n("49111"),
@@ -26,8 +26,8 @@ var a = n("414456"),
   T = n("176261"),
   g = n("6618"),
   S = n("852384"),
-  A = n("908707"),
-  v = n("825425"),
+  v = n("908707"),
+  A = n("825425"),
   N = n("46894"),
   R = n("725607"),
   O = n("570954"),
@@ -79,7 +79,7 @@ let en = new Map([
   ["RO", Q],
   ["SE", X],
   ["CY", g],
-  ["EE", v],
+  ["EE", A],
   ["IS", y],
   ["IE", L],
   ["LV", B],
@@ -97,7 +97,7 @@ let en = new Map([
   ["AT", m],
   ["CH", h],
   ["FR", O],
-  ["DE", A],
+  ["DE", v],
   ["ES", N],
   ["IT", U],
   ["NL", Y],
@@ -109,7 +109,7 @@ function er(e) {
   let {
     entryPoint: t,
     className: n
-  } = e, i = (0, o.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), a = (0, c.useLocalizedPromoQuery)(), _ = null == a ? void 0 : a.countryCode;
+  } = e, i = (0, u.useStateFromStores)([o.default], () => o.default.hidePersonalInformation), a = (0, c.useLocalizedPromoQuery)(), _ = null == a ? void 0 : a.countryCode;
   if ((0, d.useTrackLocalizedPricingPromoImpression)(f.AnalyticsSections.SETTINGS_PREMIUM, _), null == _ || !en.has(_) || i) return null;
   let m = en.get(_),
     E = "badgeIcon" + r[t];

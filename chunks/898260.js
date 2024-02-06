@@ -9,8 +9,8 @@ var r = n("37983"),
   s = n("414456"),
   i = n.n(s),
   l = n("841559"),
-  u = n("782340"),
-  c = n("359027"),
+  c = n("782340"),
+  u = n("359027"),
   o = a.forwardRef(function(e, t) {
     let {
       className: n,
@@ -23,23 +23,23 @@ var r = n("37983"),
     } = e;
     return (0, r.jsxs)("div", {
       className: i(n, {
-        [c.divider]: !0,
-        [c.isUnread]: s,
-        [c.hasContent]: null != o
+        [u.divider]: !0,
+        [u.isUnread]: s,
+        [u.hasContent]: null != o
       }),
       ref: t,
       id: d,
       role: f,
       "aria-label": E,
       children: [null != o ? (0, r.jsx)("span", {
-        className: i(c.content, a),
+        className: i(u.content, a),
         children: o
       }) : null, s ? (0, r.jsxs)("span", {
-        className: c.unreadPill,
+        className: u.unreadPill,
         children: [(0, r.jsx)(l.default, {
-          foreground: c.unreadPillCapStroke,
-          className: c.unreadPillCap
-        }), u.default.Messages.NEW]
+          foreground: u.unreadPillCapStroke,
+          className: u.unreadPillCap
+        }), c.default.Messages.NEW]
       }) : null]
     })
   })

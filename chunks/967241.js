@@ -1,96 +1,96 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   openThreadSidebarForViewing: function() {
-    return S
+    return _
   },
   openThreadSidebarForCreating: function() {
-    return A
+    return L
   },
   closeThreadSidebar: function() {
-    return O
+    return x
   },
   closeAndClearThreadSidebar: function() {
-    return x
+    return T
   }
 });
-var i = a("627445"),
-  s = a.n(i),
-  r = a("917351"),
-  n = a.n(r),
-  l = a("913144"),
-  o = a("295426"),
-  d = a("244201"),
-  c = a("716241"),
-  u = a("565298"),
-  h = a("393414"),
-  f = a("144491"),
-  p = a("845579"),
-  _ = a("474643"),
-  m = a("18494"),
-  g = a("800762"),
-  C = a("659500"),
-  T = a("648564"),
-  E = a("49111"),
-  v = a("724210");
+var l = n("627445"),
+  r = n.n(l),
+  a = n("917351"),
+  i = n.n(a),
+  s = n("913144"),
+  u = n("295426"),
+  o = n("244201"),
+  d = n("716241"),
+  c = n("565298"),
+  f = n("393414"),
+  h = n("144491"),
+  p = n("845579"),
+  C = n("474643"),
+  m = n("18494"),
+  v = n("800762"),
+  g = n("659500"),
+  E = n("648564"),
+  S = n("49111"),
+  I = n("724210");
 
-function S(e, t, a) {
-  d.MainWindowDispatch.dispatch(E.ComponentActions.POPOUT_CLOSE);
-  let i = !n.isEmpty(g.default.getVoiceStatesForChannel(e.id));
-  if (t || !p.UseThreadSidebar.getSetting() || __OVERLAY__ || i) {
-    l.default.dispatch({
+function _(e, t, n) {
+  o.MainWindowDispatch.dispatch(S.ComponentActions.POPOUT_CLOSE);
+  let l = !i.isEmpty(v.default.getVoiceStatesForChannel(e.id));
+  if (t || !p.UseThreadSidebar.getSetting() || __OVERLAY__ || l) {
+    s.default.dispatch({
       type: "SIDEBAR_CLOSE",
       baseChannelId: e.parent_id
-    }), null != a ? (0, f.transitionToThread)(e, a) : (0, f.transitionToChannel)(e.id);
+    }), null != n ? (0, h.transitionToThread)(e, n) : (0, h.transitionToChannel)(e.id);
     return
   }
-  s(null != e.parent_id, "all threads must have parents");
-  let r = m.default.getChannelId();
-  e.parent_id !== r && !(0, v.isGuildHomeChannel)(r) && (0, f.transitionToChannel)(e.parent_id), (0, h.transitionTo)(E.Routes.CHANNEL_THREAD_VIEW((0, u.getGuildIdForGenericRedirect)(e), (0, v.isGuildHomeChannel)(r) ? v.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? T.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
-    C.ComponentDispatch.dispatch(E.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+  r(null != e.parent_id, "all threads must have parents");
+  let a = m.default.getChannelId();
+  e.parent_id !== a && !(0, I.isGuildHomeChannel)(a) && (0, h.transitionToChannel)(e.parent_id), (0, f.transitionTo)(S.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, I.isGuildHomeChannel)(a) ? I.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? E.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
+    g.ComponentDispatch.dispatch(S.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: e.id
     })
   }, 0)
 }
 
-function A(e, t, a) {
-  s(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), s(!__OVERLAY__, "Cannot create threads in the overlay."), (0, c.trackWithMetadata)(E.AnalyticEvents.THREAD_CREATION_STARTED, {
-    location: a,
+function L(e, t, n) {
+  r(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), r(!__OVERLAY__, "Cannot create threads in the overlay."), (0, d.trackWithMetadata)(S.AnalyticEvents.THREAD_CREATION_STARTED, {
+    location: n,
     channel_id: e.id,
     guild_id: e.guild_id
-  }), d.MainWindowDispatch.dispatch(E.ComponentActions.POPOUT_CLOSE), m.default.getChannelId() !== e.id && (0, f.transitionToChannel)(e.id);
-  let i = _.default.getDraft(e.id, _.DraftType.FirstThreadMessage);
-  if ("" === i) {
-    let t = _.default.getDraft(e.id, _.DraftType.ChannelMessage);
-    o.default.saveDraft(e.id, "", _.DraftType.ChannelMessage), o.default.saveDraft(e.id, t, _.DraftType.FirstThreadMessage)
+  }), o.MainWindowDispatch.dispatch(S.ComponentActions.POPOUT_CLOSE), m.default.getChannelId() !== e.id && (0, h.transitionToChannel)(e.id);
+  let l = C.default.getDraft(e.id, C.DraftType.FirstThreadMessage);
+  if ("" === l) {
+    let t = C.default.getDraft(e.id, C.DraftType.ChannelMessage);
+    u.default.saveDraft(e.id, "", C.DraftType.ChannelMessage), u.default.saveDraft(e.id, t, C.DraftType.FirstThreadMessage)
   }
   setTimeout(() => {
-    l.default.dispatch({
+    s.default.dispatch({
       type: "SIDEBAR_CREATE_THREAD",
       parentChannelId: e.id,
       parentMessageId: null == t ? void 0 : t.id,
-      location: a
+      location: n
     })
   }, 0)
 }
 
-function O(e, t) {
-  (0, h.transitionTo)(E.Routes.CHANNEL(e, (0, v.isGuildHomeChannel)(t) ? v.StaticChannelRoute.GUILD_HOME : t)), l.default.dispatch({
+function x(e, t) {
+  (0, f.transitionTo)(S.Routes.CHANNEL(e, (0, I.isGuildHomeChannel)(t) ? I.StaticChannelRoute.GUILD_HOME : t)), s.default.dispatch({
     type: "SIDEBAR_CLOSE",
     baseChannelId: t
   })
 }
 
-function x(e) {
-  l.default.dispatch({
+function T(e) {
+  s.default.dispatch({
     type: "SIDEBAR_CLOSE",
     baseChannelId: e
-  }), l.default.dispatch({
+  }), s.default.dispatch({
     type: "DRAFT_CLEAR",
     channelId: e,
-    draftType: _.DraftType.FirstThreadMessage
-  }), l.default.dispatch({
+    draftType: C.DraftType.FirstThreadMessage
+  }), s.default.dispatch({
     type: "DRAFT_CLEAR",
     channelId: e,
-    draftType: _.DraftType.ThreadSettings
+    draftType: C.DraftType.ThreadSettings
   })
 }

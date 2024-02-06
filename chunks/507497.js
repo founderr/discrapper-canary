@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983");
 n("884691");
 var i = n("446674"),
-  l = n("77078"),
-  r = n("685665"),
+  r = n("77078"),
+  l = n("685665"),
   o = n("836275"),
   a = n("379532"),
   u = n("305961"),
@@ -27,18 +27,18 @@ function I(e) {
     banner: E
   } = e, C = (0, i.useStateFromStores)([c.default], () => c.default.getGuildId()), _ = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(C)), {
     analyticsLocations: R
-  } = (0, r.default)();
+  } = (0, l.default)();
   return null == _ || _.hasFeature(f.GuildFeatures.ANIMATED_BANNER) || !I && _.hasFeature(f.GuildFeatures.BANNER) ? null : (0, s.jsxs)("div", {
     className: v.container,
     children: [(0, s.jsx)(d.default, {
       className: v.guildBoostingIcon
-    }), (0, s.jsx)(l.Text, {
+    }), (0, s.jsx)(r.Text, {
       color: "header-primary",
       variant: "text-sm/semibold",
       children: p.default.Messages.PREMIUM_GUILD_PREVIEW
-    }), (0, s.jsx)(l.Button, {
-      look: l.Button.Looks.LINK,
-      color: l.Button.Colors.LINK,
+    }), (0, s.jsx)(r.Button, {
+      look: r.Button.Looks.LINK,
+      color: r.Button.Colors.LINK,
       className: v.subscribeButton,
       onClick: () => {
         if (null == _) return;

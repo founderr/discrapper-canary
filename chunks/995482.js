@@ -97,19 +97,19 @@ function I(e) {
       value: p,
       tags: U,
       selections: v,
-      isSelecting: j
+      isSelecting: P
     }
-  } = A, [P, y] = n.useState(!1), b = n.useCallback(() => {
+  } = A, [j, y] = n.useState(!1), b = n.useCallback(() => {
     var e;
     y(!1), G(), null === (e = N.current) || void 0 === e || e.focus({
       preventScroll: !0
     })
   }, [G]);
   n.useEffect(() => {
-    !P && l(U)
-  }, [l, U, P]), n.useEffect(() => {
-    !P && o(p)
-  }, [o, p, P]);
+    !j && l(U)
+  }, [l, U, j]), n.useEffect(() => {
+    !j && o(p)
+  }, [o, p, j]);
   let B = n.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
       e && b(), y(!1)
@@ -142,12 +142,12 @@ function I(e) {
         onFocus: F(t),
         onRemove: () => h(t),
         isSelected: v.includes(e),
-        isSelecting: j,
+        isSelecting: P,
         error: u[e],
-        forceShowErrorTooltip: !P && t === U.length - 1
+        forceShowErrorTooltip: !j && t === U.length - 1
       }, t)), (0, a.jsx)("input", {
         className: i(E.mainTextInput, {
-          [E.isEditingOtherNodes]: P
+          [E.isEditingOtherNodes]: j
         }),
         ref: N,
         onChange: m,

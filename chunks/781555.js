@@ -19,9 +19,9 @@ var a = s("37983"),
   g = s("258039"),
   x = s("291444"),
   C = s("592407"),
-  T = s("305961"),
-  _ = s("181114"),
-  S = s("191814"),
+  _ = s("305961"),
+  S = s("181114"),
+  T = s("191814"),
   p = s("109264"),
   E = s("945330"),
   N = s("68238"),
@@ -85,7 +85,7 @@ function D(e) {
       color: "header-primary",
       "aria-hidden": !0,
       children: s
-    }), (0, a.jsx)(S.default, {
+    }), (0, a.jsx)(T.default, {
       size: 10
     }), (0, a.jsx)(A.default, {
       className: O.video,
@@ -93,7 +93,7 @@ function D(e) {
       autoPlay: !0,
       loop: !0,
       muted: !0
-    }), (0, a.jsx)(S.default, {
+    }), (0, a.jsx)(T.default, {
       size: 10
     }), (0, a.jsx)("div", {
       className: O.footer,
@@ -132,7 +132,7 @@ var w = e => {
   var t, s;
   let {
     channel: l
-  } = e, p = (0, c.default)(), E = (0, u.isThemeDark)(p), A = (0, o.useStateFromStores)([T.default], () => T.default.getGuild(l.guild_id)), w = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion), U = (0, o.useStateFromStores)([h.default], () => h.default.hasHidden(l.id)), k = (0, x.useSubscriptionListingsForChannel)({
+  } = e, p = (0, c.default)(), E = (0, u.isThemeDark)(p), A = (0, o.useStateFromStores)([_.default], () => _.default.getGuild(l.guild_id)), w = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion), U = (0, o.useStateFromStores)([h.default], () => h.default.hasHidden(l.id)), k = (0, x.useSubscriptionListingsForChannel)({
     guildId: l.guild_id,
     channelId: l.id
   }), {
@@ -212,13 +212,13 @@ var w = e => {
               variant: "heading-lg/semibold",
               color: "header-primary",
               children: Z
-            }), (0, a.jsx)(S.default, {
+            }), (0, a.jsx)(T.default, {
               size: 8
             }), (0, a.jsx)(d.Text, {
               variant: "text-md/normal",
               color: "text-muted",
               children: q
-            }), (0, a.jsx)(S.default, {
+            }), (0, a.jsx)(T.default, {
               size: 16
             }), (0, a.jsxs)(d.Clickable, {
               onClick: () => open(v.default.getCreatorSupportArticleURL(j.HelpdeskArticles.MEDIA_CHANNEL)),
@@ -233,7 +233,7 @@ var w = e => {
                 height: 16,
                 className: O.helpCenterLinkIcon
               })]
-            }), (0, a.jsx)(S.default, {
+            }), (0, a.jsx)(T.default, {
               size: 16
             }), (0, a.jsx)("div", {
               className: O.mediaChannelTagsContainer,
@@ -271,19 +271,19 @@ var w = e => {
                 "aria-label": "",
                 children: "\uD83D\uDD25"
               })]
-            }), (0, a.jsx)(S.default, {
+            }), (0, a.jsx)(T.default, {
               size: 10
             }), (0, a.jsx)(d.Heading, {
               variant: "heading-lg/semibold",
               color: "header-primary",
               children: R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_TITLE
-            }), (0, a.jsx)(S.default, {
+            }), (0, a.jsx)(T.default, {
               size: 8
             }), (0, a.jsx)(d.Text, {
               variant: "text-md/normal",
               color: "text-muted",
               children: R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_SUBTITLE
-            }), (0, a.jsx)(S.default, {
+            }), (0, a.jsx)(T.default, {
               size: 16
             }), (0, a.jsx)("div", {
               className: O.mediaChannelTagsContainer,
@@ -293,9 +293,9 @@ var w = e => {
                 className: O.mediaChannelTag,
                 children: e
               }, e))
-            }), (0, a.jsx)(S.default, {
+            }), (0, a.jsx)(T.default, {
               size: 16
-            }), 0 === k.length && (0, a.jsx)(_.default, {
+            }), 0 === k.length && (0, a.jsx)(S.default, {
               size: d.Button.Sizes.MEDIUM,
               pauseAnimation: w,
               onClick: W,

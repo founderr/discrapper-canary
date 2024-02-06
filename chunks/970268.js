@@ -32,8 +32,8 @@ var a, l, s, i, r = n("884691"),
   C = n("414833"),
   A = n("872173"),
   M = n("374363"),
-  x = n("233069"),
-  v = n("42203"),
+  v = n("233069"),
+  x = n("42203"),
   R = n("923959"),
   L = n("247013"),
   O = n("305961"),
@@ -267,14 +267,14 @@ function Y() {
         a = null !== (t = null === (e = M.default.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
       for (let e in a)
         for (let t in a[e].channels) {
-          let l = v.default.getChannel(t);
+          let l = x.default.getChannel(t);
           (!(t in n) || (null == l ? void 0 : l.guild_id) === e) && (n[t] = a[e].channels[t].collapsedInInbox)
         }
       return n
     }(),
     t = function(e) {
       let t = [];
-      v.default.getSortedPrivateChannels().forEach(n => K(e, t, null, n.id));
+      x.default.getSortedPrivateChannels().forEach(n => K(e, t, null, n.id));
       let n = F.default.getFlattenedGuildIds();
       return n.forEach(n => {
         if (null == n) return;
@@ -302,9 +302,9 @@ function Y() {
 
 function K(e, t, n, a) {
   if (null == a) return;
-  let l = v.default.getChannel(a);
+  let l = x.default.getChannel(a);
   if (null == l) return;
-  let s = x.THREAD_CHANNEL_TYPES.has(l.type);
+  let s = v.THREAD_CHANNEL_TYPES.has(l.type);
   if (!s && D.default.isGuildOrCategoryOrChannelMuted(n, l.id)) return;
   if (l.isPrivate()) {
     if (0 === j.default.getMentionCount(a)) return
@@ -335,7 +335,7 @@ function K(e, t, n, a) {
     hasMentionsOrUnreads: d,
     mentionCount: u,
     sortOrder: function(e, t, n) {
-      let a = v.default.getChannel(t);
+      let a = x.default.getChannel(t);
       if (S.default.isFavorite(t)) return 0;
       if (a.isPrivate()) return 1;
       if (j.default.getMentionCount(t) > 0) return 2;

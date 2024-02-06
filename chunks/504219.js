@@ -24,14 +24,14 @@ var n = l("37983"),
   _ = l("994428"),
   p = l("782340"),
   I = l("173266"),
-  x = l("770420");
-let v = e => {
+  v = l("770420");
+let x = e => {
   let {
     clipsEnabled: t,
     isAnimationDone: l,
     guildId: s,
     children: r
-  } = e, m = (0, i.useStateFromStores)([E.default], () => E.default.getHardwareClassification()), C = m === h.ClipsHardwareClassification.MEETS_MINIMUM || m === h.ClipsHardwareClassification.UNKNOWN, x = m === h.ClipsHardwareClassification.BELOW_MINIMUM, v = l && (C || x) && !t, [A, R] = (0, c.useGetDismissibleContent)(v ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), T = A === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
+  } = e, m = (0, i.useStateFromStores)([E.default], () => E.default.getHardwareClassification()), C = m === h.ClipsHardwareClassification.MEETS_MINIMUM || m === h.ClipsHardwareClassification.UNKNOWN, v = m === h.ClipsHardwareClassification.BELOW_MINIMUM, x = l && (C || v) && !t, [A, R] = (0, c.useGetDismissibleContent)(x ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), T = A === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
   a.useEffect(() => {
     t && (0, d.markDismissibleContentAsDismissed)(u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
       forceTrack: !0
@@ -61,7 +61,7 @@ let v = e => {
             variant: "text-sm/normal",
             color: "always-white",
             children: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
-          }), x ? (0, n.jsx)(o.Text, {
+          }), v ? (0, n.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "always-white",
             className: I.warningText,
@@ -95,11 +95,11 @@ var A = function(e) {
   let u = C.toString(s.shortcut, !0);
   return (0, n.jsx)(o.FormItem, {
     title: p.default.Messages.CLIPS_SETTINGS,
-    titleClassName: x.formItemTitle,
-    className: x.modalContent,
+    titleClassName: v.formItemTitle,
+    className: v.modalContent,
     children: (0, n.jsxs)("div", {
       className: I.container,
-      children: [(0, n.jsx)(v, {
+      children: [(0, n.jsx)(x, {
         clipsEnabled: a,
         guildId: l,
         isAnimationDone: t,

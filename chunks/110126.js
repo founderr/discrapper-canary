@@ -23,17 +23,17 @@ var n = {
   "./spritesheet-picker-22.png": "819107"
 };
 
-function l(e) {
-  return i(s(e))
+function s(e) {
+  return i(l(e))
 }
 
-function s(e) {
+function l(e) {
   if (!i.o(n, e)) {
     var t = Error("Cannot find module '" + e + "'");
     throw t.code = "MODULE_NOT_FOUND", t
   }
   return n[e]
 }
-l.id = '"110126"', l.keys = function() {
+s.id = '"110126"', s.keys = function() {
   return Object.keys(n)
-}, l.resolve = s, e.exports = l
+}, s.resolve = l, e.exports = s

@@ -19,9 +19,9 @@ var a = s("37983"),
   g = s("18054"),
   x = s("581583"),
   C = s("206230"),
-  T = s("656038"),
-  _ = s("454273"),
-  S = s("781555"),
+  _ = s("656038"),
+  S = s("454273"),
+  T = s("781555"),
   p = s("305961"),
   E = s("36694"),
   N = s("945330"),
@@ -79,10 +79,10 @@ class Z {
   }
 }
 let q = (e, t, n) => {
-    let l = (0, T.default)(t) ? c.default.combine(V.Permissions.VIEW_CHANNEL, V.Permissions.SEND_MESSAGES) : V.Permissions.SEND_MESSAGES,
-      r = null != e ? (0, y.getAllExistingRolesWithPermission)(e, t, l).filter(s => t.permissionOverwrites.hasOwnProperty(s.id) || (0, _.isEveryoneRoleId)(e.id, s.id)) : [],
+    let l = (0, _.default)(t) ? c.default.combine(V.Permissions.VIEW_CHANNEL, V.Permissions.SEND_MESSAGES) : V.Permissions.SEND_MESSAGES,
+      r = null != e ? (0, y.getAllExistingRolesWithPermission)(e, t, l).filter(s => t.permissionOverwrites.hasOwnProperty(s.id) || (0, S.isEveryoneRoleId)(e.id, s.id)) : [],
       i = r.length > 0,
-      o = r.some(t => (0, _.isEveryoneRoleId)(e.id, t.id));
+      o = r.some(t => (0, S.isEveryoneRoleId)(e.id, t.id));
     return {
       name: z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_PERMISSION_TITLE,
       description: z.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_PERMISSION_DESCRIPTION,
@@ -352,8 +352,8 @@ var ex = e => {
   } = (0, D.useForumChannelStore)(s.id), o = (0, h.useStateFromStores)([p.default], () => p.default.getGuild(s.getGuildId())), c = (0, w.useCanManageChannel)(s), {
     transitions: m,
     setVisible: g
-  } = eo(), x = eu(l), C = eh(), T = es(s.id, g), {
-    onboardingSteps: _,
+  } = eo(), x = eu(l), C = eh(), _ = es(s.id, g), {
+    onboardingSteps: S,
     isDismissed: N,
     isHidden: M,
     isAllDone: A
@@ -361,9 +361,9 @@ var ex = e => {
     guild: o,
     channel: s,
     hasAnyThread: t,
-    handleHide: T
+    handleHide: _
   }), F = !M && !N, L = (0, B.useForumPostComposerStoreApi)(), b = s.isMediaChannel(), P = e => L.getState().setOnboardingExpanded(e);
-  return (er(A, F, T), ei({
+  return (er(A, F, _), ei({
     isAllDone: A,
     isVisible: F,
     canManageChannel: c,
@@ -371,7 +371,7 @@ var ex = e => {
     channel: s
   }), en(N, M, g), n.useEffect(() => {
     (!t || !F) && P(!0)
-  }, []), null == o) ? null : F && c ? b ? t ? null : (0, a.jsx)(S.default, {
+  }, []), null == o) ? null : F && c ? b ? t ? null : (0, a.jsx)(T.default, {
     channel: s
   }) : (0, a.jsx)(a.Fragment, {
     children: m((e, t) => t ? (0, a.jsx)(u.animated.div, {
@@ -390,8 +390,8 @@ var ex = e => {
               variant: "heading-md/medium",
               className: W.header,
               children: z.default.Messages.FORUM_CHANNEL_ONBOARDING_COMPLETED_COUNT.format({
-                numCompleted: _.completedSteps.toString(),
-                numSteps: _.steps.length.toString()
+                numCompleted: S.completedSteps.toString(),
+                numSteps: S.steps.length.toString()
               })
             }), (0, a.jsxs)(f.Text, {
               variant: "text-xs/normal",
@@ -405,7 +405,7 @@ var ex = e => {
               expanded: l,
               onClick: () => P(!l)
             }), (0, a.jsx)(ef, {
-              handleHide: T
+              handleHide: _
             })]
           })
         }), x((e, t) => t ? (0, a.jsx)(u.animated.div, {
@@ -413,7 +413,7 @@ var ex = e => {
           className: W.listContainer,
           children: (0, a.jsx)("ol", {
             className: W.checklist,
-            children: _.getSteps().map(e => (0, a.jsxs)(f.Clickable, {
+            children: S.getSteps().map(e => (0, a.jsxs)(f.Clickable, {
               tag: "li",
               "aria-label": e.name,
               onClick: () => C(e),

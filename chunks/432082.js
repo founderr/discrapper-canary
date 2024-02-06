@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var i = s("37983");
 s("884691");
-var l = s("917351"),
-  n = s.n(l),
+var n = s("917351"),
+  l = s.n(n),
   a = s("446674"),
   r = s("77078"),
   d = s("320954"),
@@ -35,7 +35,7 @@ function x(e) {
   var t;
   let {
     guildId: s,
-    onSelected: l
+    onSelected: n
   } = e;
   let {
     channels: c,
@@ -46,7 +46,7 @@ function x(e) {
       channels: (0, d.default)(e._categories, e, _),
       categories: e
     }
-  })), I = n(c).filter(e => {
+  })), I = l(c).filter(e => {
     let {
       channel: t
     } = e;
@@ -68,17 +68,17 @@ function x(e) {
       className: T.input,
       children: (0, i.jsx)(r.SearchableSelect, {
         value: "",
-        onChange: l,
+        onChange: n,
         options: I,
         renderOptionLabel: e => {
           let t = h.default.getChannel(e.value);
           if (null == t) return e.label;
           let s = h.default.getChannel(t.parent_id),
-            l = null != s ? s.name : null;
+            n = null != s ? s.name : null;
           return (0, i.jsx)(S.default, {
             icon: (0, u.getChannelIconComponent)(t),
             title: e.label,
-            subtitle: l
+            subtitle: n
           })
         },
         placeholder: m.default.Messages.SELECT_CHANNEL_OR_CATEGORY

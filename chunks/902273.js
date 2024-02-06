@@ -35,8 +35,8 @@ var a = s("37983"),
   p = s("383353"),
   U = s("330808"),
   v = s("424596"),
-  j = s("284776"),
-  P = s("101332"),
+  P = s("284776"),
+  j = s("101332"),
   y = s("831153"),
   b = s("432392"),
   B = s("933861"),
@@ -199,7 +199,7 @@ function K(e) {
             children: [(0, a.jsx)("img", {
               alt: "",
               className: p.actionIcon,
-              src: j
+              src: P
             }), (0, a.jsx)(c.Text, {
               className: p.actionText,
               variant: "text-sm/normal",
@@ -212,7 +212,7 @@ function K(e) {
             children: [(0, a.jsx)("img", {
               alt: "",
               className: p.actionIcon,
-              src: P
+              src: j
             }), (0, a.jsx)(c.Text, {
               className: p.actionText,
               variant: "text-sm/normal",

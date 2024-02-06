@@ -40,7 +40,7 @@ function D(e) {
     groupListingId: x,
     onBeforeDispatchNewListing: p,
     onAfterDispatchNewListing: U
-  } = e, [v, j] = n.useState(r), P = (0, d.useStateFromStores)([f.default], () => f.default.getSubscriptionListing(v)), y = null == P, [b, B] = n.useState(y), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, V = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, w = (0, g.useRoleSubscriptionSettingsDisabled)(), [k] = L.useName(v), [Y] = L.usePriceTier(v), [K] = L.useDescription(v), [W] = L.useImage(v, 1024), z = "" !== k ? k : h.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, Z = "" !== k && null != W && "" !== K && null != Y && !w, X = L.useHasChanges(v), {
+  } = e, [v, P] = n.useState(r), j = (0, d.useStateFromStores)([f.default], () => f.default.getSubscriptionListing(v)), y = null == j, [b, B] = n.useState(y), F = null == j ? void 0 : j.subscription_plans[0], H = null !== (t = null == j ? void 0 : j.published) && void 0 !== t && t, V = null !== (s = null == j ? void 0 : j.archived) && void 0 !== s && s, w = (0, g.useRoleSubscriptionSettingsDisabled)(), [k] = L.useName(v), [Y] = L.usePriceTier(v), [K] = L.useDescription(v), [W] = L.useImage(v, 1024), z = "" !== k ? k : h.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, Z = "" !== k && null != W && "" !== K && null != Y && !w, X = L.useHasChanges(v), {
     loading: J,
     error: Q,
     handleCreateOrUpdateFromEditState: q
@@ -75,7 +75,7 @@ function D(e) {
           size: 2
         }), (0, a.jsxs)("div", {
           className: R.headerDescriptionContainer,
-          children: [!V && !H && void 0 !== P && (0, a.jsx)(T.TextBadge, {
+          children: [!V && !H && void 0 !== j && (0, a.jsx)(T.TextBadge, {
             color: (0, c.getColor)(O.Color.YELLOW_300),
             text: h.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_MANAGEMENT_DRAFT_LABEL,
             className: R.draftBadge
@@ -83,7 +83,7 @@ function D(e) {
             color: (0, c.getColor)(O.Color.PRIMARY_500),
             text: h.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_MANAGEMENT_ARCHIVED_LABEL,
             className: R.archivedBadge
-          }), void 0 === P && (0, a.jsx)(T.TextBadge, {
+          }), void 0 === j && (0, a.jsx)(T.TextBadge, {
             color: (0, c.getColor)(O.Color.PRIMARY_500),
             text: h.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_MANAGEMENT_UNSAVED_LABEL,
             className: R.unsavedBadge
@@ -108,7 +108,7 @@ function D(e) {
             groupListingId: x,
             onBeforeDispatchNewListing: p,
             onAfterDispatchNewListing: e => {
-              j(e.id), null == U || U(e)
+              P(e.id), null == U || U(e)
             }
           }),
           disabled: !Z || !X,
@@ -133,10 +133,10 @@ function D(e) {
         loading: es,
         error: null != Q ? Q : ee,
         handlePublishTier: () => {
-          o(null != x, "group listing doesnt exist"), o(null != P, "subscription listing doesnt exist"), et({
+          o(null != x, "group listing doesnt exist"), o(null != j, "subscription listing doesnt exist"), et({
             guildId: l,
             groupListingId: x,
-            listingId: P.id
+            listingId: j.id
           })
         },
         onDeleteEditState: G

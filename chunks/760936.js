@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("414456"),
   i = s.n(r),
   l = s("77078"),
-  o = s("506885"),
-  u = s("981601"),
+  u = s("506885"),
+  o = s("981601"),
   d = s("280174"),
   c = s("533403"),
   _ = s("158998"),
@@ -71,7 +71,7 @@ class S extends n.PureComponent {
   }
   renderActivityDiscordTag(e) {
     return (0, a.jsx)(l.Popout, {
-      preload: () => (0, o.default)(e.id, e.getAvatarURL(void 0, 80)),
+      preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
       renderPopout: t => this.renderUserPopout(e, t),
       position: "right",
       children: t => (0, a.jsx)("span", {
@@ -109,7 +109,7 @@ class S extends n.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), this.renderUserPopout = (e, t) => (0, a.jsx)(u.default, {
+    super(...e), this.renderUserPopout = (e, t) => (0, a.jsx)(o.default, {
       ...t,
       userId: e.id
     }), this.renderUserTooltip = (e, t, s) => (0, a.jsxs)("div", {
@@ -126,7 +126,7 @@ class S extends n.PureComponent {
       if (null == e) return null;
       let r = this.props.reason.userInfo.find(t => t.user === e);
       return null == r ? null : (0, a.jsx)(l.Popout, {
-        preload: () => (0, o.default)(e.id, e.getAvatarURL(void 0, 80)),
+        preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => this.renderUserPopout(e, t),
         position: "right",
         children: t => (0, a.jsx)(l.Tooltip, {

@@ -36,7 +36,7 @@ function N(e) {
     innerRef: N
   } = e, _ = (0, d.useAppContext)(), {
     analyticsLocations: A
-  } = (0, E.default)(), R = _ === T.AppContext.POPOUT, O = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), k = i.useCallback(() => {
+  } = (0, E.default)(), R = _ === T.AppContext.POPOUT, O = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), b = i.useCallback(() => {
     r(v.ContentDismissActionType.UNKNOWN), (0, h.default)({
       channel: M ? n : void 0,
       guildId: n.guild_id,
@@ -52,7 +52,7 @@ function N(e) {
     }), (0, p.fetchShelf)({
       guildId: n.guild_id
     })
-  }, [A, n, M, r, R]), b = () => {
+  }, [A, n, M, r, R]), k = () => {
     if (S === a.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, l.jsxs)("div", {
       className: I.sparkleContainer,
       children: [(0, l.jsx)(C.default, {
@@ -74,7 +74,7 @@ function N(e) {
       className: o(y.CHAT_INPUT_BUTTON_CLASSNAME, I.buttonContainer),
       ref: N,
       children: [(0, l.jsx)(m.default, {
-        onClick: k,
+        onClick: b,
         tabIndex: 0,
         focusProps: {
           offset: {
@@ -84,7 +84,7 @@ function N(e) {
             right: -4
           }
         }
-      }), b()]
+      }), k()]
     })
   })
 }

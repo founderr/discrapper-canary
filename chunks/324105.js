@@ -49,7 +49,7 @@ var A = function(e) {
     id: l.id,
     icon: l.icon,
     size: 40
-  })) && void 0 !== t ? t : void 0, j = null != l.description ? l.description : C, P = null != O ? O : null == l ? void 0 : l.memberCount, y = null != h ? h : null == l ? void 0 : l.presenceCount, b = null;
+  })) && void 0 !== t ? t : void 0, P = null != l.description ? l.description : C, j = null != O ? O : null == l ? void 0 : l.memberCount, y = null != h ? h : null == l ? void 0 : l.presenceCount, b = null;
   if (null != v) b = (0, a.jsx)("img", {
     src: v,
     alt: "",
@@ -121,7 +121,7 @@ var A = function(e) {
         className: S.description,
         variant: "text-sm/normal",
         children: (0, a.jsx)("span", {
-          children: j
+          children: P
         })
       }), (0, a.jsxs)("div", {
         className: S.memberInfo,
@@ -137,16 +137,16 @@ var A = function(e) {
               membersOnline: y
             })
           })]
-        }), null != P && (0, a.jsxs)("div", {
+        }), null != j && (0, a.jsxs)("div", {
           className: S.memberCount,
           children: [(0, a.jsx)("div", {
             className: S.dotOffline
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/normal",
             children: L ? I.default.Messages.NUMBERS_ONLY.format({
-              count: P
+              count: j
             }) : I.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-              count: P
+              count: j
             })
           })]
         })]

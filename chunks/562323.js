@@ -6,10 +6,10 @@ i.r(t), i.d(t, {
 });
 var n = i("37983");
 i("884691");
-var l = i("414456"),
-  s = i.n(l),
-  a = i("77078"),
-  r = i("346314"),
+var s = i("414456"),
+  l = i.n(s),
+  r = i("77078"),
+  a = i("346314"),
   o = i("642032"),
   u = i("290581"),
   c = i("115279"),
@@ -20,12 +20,12 @@ let E = e => {
     emojiSubCategory: t
   } = e;
   return (0, n.jsxs)("div", {
-    className: s(f.badgeLabel, t === c.EmojiSubCategory.TOP_GUILD_EMOJI ? f.topGuildEmojiBadge : f.newlyAddedBadge),
-    children: [t === c.EmojiSubCategory.TOP_GUILD_EMOJI ? (0, n.jsx)(r.default, {
+    className: l(f.badgeLabel, t === c.EmojiSubCategory.TOP_GUILD_EMOJI ? f.topGuildEmojiBadge : f.newlyAddedBadge),
+    children: [t === c.EmojiSubCategory.TOP_GUILD_EMOJI ? (0, n.jsx)(a.default, {
       foreground: f.newlyAddedBadgeIcon
     }) : (0, n.jsx)(o.default, {
       foreground: f.newlyAddedBadgeIcon
-    }), (0, n.jsx)(a.Text, {
+    }), (0, n.jsx)(r.Text, {
       variant: "text-sm/semibold",
       color: "always-white",
       children: t === c.EmojiSubCategory.TOP_GUILD_EMOJI ? d.default.Messages.TOP_GUILD_EMOJI_BADGE : d.default.Messages.NEWLY_ADDED_GUILD_EMOJI_BADGE
@@ -36,40 +36,40 @@ var m = e => {
   let {
     className: t,
     graphicPrimary: i,
-    graphicSecondary: l,
-    titlePrimary: r,
+    graphicSecondary: s,
+    titlePrimary: a,
     titleSecondary: o,
     isFavorite: m = !1,
     emojiSubCategory: I = c.EmojiSubCategory.NONE
   } = e;
   return (0, n.jsxs)("div", {
-    className: s(f.inspector, t),
+    className: l(f.inspector, t),
     children: [(0, n.jsx)("div", {
       className: f.graphicPrimary,
       "aria-hidden": !0,
       children: i
     }), (0, n.jsxs)("div", {
       className: f.textWrapper,
-      children: [(0, n.jsxs)(a.Text, {
+      children: [(0, n.jsxs)(r.Text, {
         className: f.titlePrimary,
         variant: "text-md/semibold",
         children: [m ? (0, n.jsx)(u.default, {
           "aria-label": m ? d.default.Messages.EMOJI_IS_FAVORITE_ARIA_LABEL.format({
-            names: r
+            names: a
           }) : void 0,
           width: 15,
           height: 15,
           className: f.favorite
-        }) : null, r]
-      }), null != o && (0, n.jsx)(a.Text, {
+        }) : null, a]
+      }), null != o && (0, n.jsx)(r.Text, {
         className: f.titleSecondary,
         variant: "text-xs/normal",
         children: o
       })]
-    }), I === c.EmojiSubCategory.NONE ? null != l && (0, n.jsx)("div", {
+    }), I === c.EmojiSubCategory.NONE ? null != s && (0, n.jsx)("div", {
       className: f.graphicSecondary,
       "aria-hidden": !0,
-      children: l
+      children: s
     }) : (0, n.jsx)(E, {
       emojiSubCategory: I
     })]

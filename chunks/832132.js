@@ -6,19 +6,19 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var l = n("469563"),
-  r = n("504318"),
+var r = n("469563"),
+  l = n("504318"),
   s = n("75196"),
-  a = (0, l.replaceIcon)(function(e) {
+  a = (0, r.replaceIcon)(function(e) {
     let {
       color: t = "currentColor",
       height: n = 24,
-      width: l = 24,
-      ...r
+      width: r = 24,
+      ...l
     } = e;
     return (0, i.jsx)("svg", {
-      ...(0, s.default)(r),
-      width: l,
+      ...(0, s.default)(l),
+      width: r,
       height: n,
       viewBox: "0 0 24 24",
       children: (0, i.jsx)("path", {
@@ -28,6 +28,6 @@ var l = n("469563"),
         fill: t
       })
     })
-  }, r.PencilIcon, void 0, {
+  }, l.PencilIcon, void 0, {
     size: 24
   })

@@ -1,75 +1,75 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
     return R
   }
-}), n("222007");
-var r = n("37983"),
-  l = n("884691"),
-  i = n("265586"),
-  s = n("446674"),
-  a = n("77078"),
-  o = n("812204"),
-  u = n("685665"),
-  c = n("21526"),
-  d = n("491232"),
-  f = n("984002"),
-  C = n("161009"),
-  E = n("635956"),
-  h = n("906932"),
-  p = n("217513"),
-  I = n("790618"),
-  L = n("697218"),
-  v = n("599110"),
-  _ = n("719923"),
-  S = n("717262"),
-  g = n("598854"),
-  T = n("49111"),
-  m = n("646718"),
-  A = n("782340"),
-  O = n("811855");
+}), r("222007");
+var n = r("37983"),
+  l = r("884691"),
+  i = r("265586"),
+  s = r("446674"),
+  a = r("77078"),
+  u = r("812204"),
+  o = r("685665"),
+  c = r("21526"),
+  d = r("491232"),
+  f = r("984002"),
+  C = r("161009"),
+  E = r("635956"),
+  h = r("906932"),
+  p = r("217513"),
+  I = r("790618"),
+  v = r("697218"),
+  L = r("599110"),
+  _ = r("719923"),
+  S = r("717262"),
+  g = r("598854"),
+  T = r("49111"),
+  m = r("646718"),
+  A = r("782340"),
+  O = r("811855");
 
 function N(e) {
   let {
     user: t,
-    product: n,
+    product: r,
     purchase: i,
     onApply: s,
-    onClose: u,
+    onClose: o,
     disableApplyButton: f,
     canUseCollectibles: C,
     selectedProfileEffectId: h,
     selectedProfileEffectItem: p,
     analyticsLocations: I
-  } = e, L = l.useCallback(() => {
-    u(), (0, c.openCollectiblesShop)({
+  } = e, v = l.useCallback(() => {
+    o(), (0, c.openCollectiblesShop)({
       analyticsLocations: I,
-      analyticsSource: o.default.EDIT_PROFILE_EFFECT_MODAL,
+      analyticsSource: u.default.EDIT_PROFILE_EFFECT_MODAL,
       initialProductSkuId: null != p ? p.skuId : void 0
     })
-  }, [u, I, p]);
-  return (0, r.jsx)(a.ModalFooter, {
+  }, [o, I, p]);
+  return (0, n.jsx)(a.ModalFooter, {
     className: O.modalFooter,
-    children: (0, r.jsxs)("div", {
+    children: (0, n.jsxs)("div", {
       className: O.buttonsRight,
-      children: [(0, r.jsx)(a.Button, {
+      children: [(0, n.jsx)(a.Button, {
         look: a.Button.Looks.LINK,
         color: a.Button.Colors.PRIMARY,
-        onClick: u,
+        onClick: o,
         children: A.default.Messages.CANCEL
       }), (() => {
         let e = null != i && (!(0, d.isPremiumCollectiblesPurchase)(i) || C);
-        if (e || null === h) return (0, r.jsx)(a.Button, {
+        if (e || null === h) return (0, n.jsx)(a.Button, {
           onClick: s,
           disabled: f,
           children: A.default.Messages.AVATAR_DECORATION_MODAL_APPLY
         });
-        let l = C || !(0, d.isPremiumCollectiblesProduct)(n);
-        return l ? (0, r.jsx)(a.Button, {
+        let l = C || !(0, d.isPremiumCollectiblesProduct)(r);
+        return l ? (0, n.jsx)(a.Button, {
           className: O.modalFooterShopButton,
-          onClick: L,
+          onClick: v,
           children: A.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
-        }) : (0, r.jsx)(E.default, {
+        }) : (0, n.jsx)(E.default, {
           subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
           buttonText: _.default.isPremium(t) ? A.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : A.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
         })
@@ -81,63 +81,63 @@ function N(e) {
 function P(e) {
   let {
     user: t,
-    categories: n,
+    categories: r,
     purchases: i,
-    onClose: o,
-    initialSelectedProfileEffectId: u,
+    onClose: u,
+    initialSelectedProfileEffectId: o,
     currentSavedEffectId: c,
     analyticsLocations: C
-  } = e, E = (0, s.useStateFromStores)([I.default], () => I.default.getPendingProfileEffectId()), [p, L] = l.useMemo(() => {
-    let e = (0, d.groupProfileEffects)(n, i);
+  } = e, E = (0, s.useStateFromStores)([I.default], () => I.default.getPendingProfileEffectId()), [p, v] = l.useMemo(() => {
+    let e = (0, d.groupProfileEffects)(r, i);
     return [e.purchased, e.shopPreviews]
-  }, [n, i]), [v, T] = l.useState(() => null != u ? u : void 0 !== E ? E : null == c ? null : null != c ? c : null), [m, P] = l.useMemo(() => {
+  }, [r, i]), [L, T] = l.useState(() => null != o ? o : void 0 !== E ? E : null == c ? null : null != c ? c : null), [m, P] = l.useMemo(() => {
     var e;
-    let t = p.find(e => (null == e ? void 0 : e.id) === v),
-      n = null != t || null === v,
-      r = null !== (e = null != t ? t : L.find(e => (null == e ? void 0 : e.id) === v)) && void 0 !== e ? e : null;
-    return [r, n]
-  }, [v, p, L]), {
+    let t = p.find(e => (null == e ? void 0 : e.id) === L),
+      r = null != t || null === L,
+      n = null !== (e = null != t ? t : v.find(e => (null == e ? void 0 : e.id) === L)) && void 0 !== e ? e : null;
+    return [n, r]
+  }, [L, p, v]), {
     product: R,
     purchase: y
-  } = (0, f.default)(null == m ? void 0 : m.skuId), x = l.useRef(null), F = _.default.canUseCollectibles(t), w = v === (void 0 === E ? null != c ? c : null : E), M = l.useCallback(e => {
+  } = (0, f.default)(null == m ? void 0 : m.skuId), x = l.useRef(null), F = _.default.canUseCollectibles(t), w = L === (void 0 === E ? null != c ? c : null : E), M = l.useCallback(e => {
     T(e)
   }, [T]);
-  return (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsxs)(a.ModalHeader, {
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsxs)(a.ModalHeader, {
       separator: !1,
       className: O.modalHeader,
-      children: [(0, r.jsx)(a.Heading, {
+      children: [(0, n.jsx)(a.Heading, {
         variant: "heading-lg/semibold",
         children: A.default.Messages.PROFILE_EFFECT_MODAL_HEADER
-      }), (0, r.jsx)(a.ModalCloseButton, {
+      }), (0, n.jsx)(a.ModalCloseButton, {
         className: O.modalCloseButton,
-        onClick: o
+        onClick: u
       })]
-    }), (0, r.jsxs)(a.ModalContent, {
+    }), (0, n.jsxs)(a.ModalContent, {
       className: O.modalContent,
-      children: [(0, r.jsx)(g.default, {
+      children: [(0, n.jsx)(g.default, {
         user: t,
-        pendingProfileEffect: v,
+        pendingProfileEffect: L,
         selectedProfileEffectRef: x,
         onSelect: M,
-        onClose: o
-      }), (0, r.jsx)(S.default, {
+        onClose: u
+      }), (0, n.jsx)(S.default, {
         user: t,
         canApplySelectedChange: P,
         pendingProfileEffectRecord: m,
         product: R,
         purchase: y
       })]
-    }), (0, r.jsx)(N, {
+    }), (0, n.jsx)(N, {
       user: t,
       onApply: () => {
-        (0, h.setNewPendingProfileEffectId)(v, c), o()
+        (0, h.setNewPendingProfileEffectId)(L, c), u()
       },
-      onClose: o,
+      onClose: u,
       product: R,
       purchase: y,
       canUseCollectibles: F,
-      selectedProfileEffectId: v,
+      selectedProfileEffectId: L,
       selectedProfileEffectItem: m,
       disableApplyButton: w,
       analyticsLocations: C
@@ -148,7 +148,7 @@ function P(e) {
 function R(e) {
   var t;
   let {
-    transitionState: n,
+    transitionState: r,
     analyticsLocations: d,
     initialSelectedEffectId: f,
     onClose: E
@@ -156,12 +156,12 @@ function R(e) {
     isFetching: h,
     categories: I,
     purchases: _
-  } = (0, C.default)(), S = (0, s.useStateFromStores)([L.default], () => L.default.getCurrentUser()), {
+  } = (0, C.default)(), S = (0, s.useStateFromStores)([v.default], () => v.default.getCurrentUser()), {
     AnalyticsLocationProvider: g,
     analyticsLocations: m
-  } = (0, u.default)(d, o.default.EDIT_PROFILE_EFFECT_MODAL), A = (0, p.default)(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : ""), N = null == A ? void 0 : A.profileEffectId;
+  } = (0, o.default)(d, u.default.EDIT_PROFILE_EFFECT_MODAL), A = (0, p.default)(null !== (t = null == S ? void 0 : S.id) && void 0 !== t ? t : ""), N = null == A ? void 0 : A.profileEffectId;
   return l.useEffect(() => {
-    v.default.track(T.AnalyticEvents.OPEN_MODAL, {
+    L.default.track(T.AnalyticEvents.OPEN_MODAL, {
       type: T.AnalyticsSections.PROFILE_EFFECT_CUSTOMIZATION,
       location_stack: m
     })
@@ -170,15 +170,15 @@ function R(e) {
       categories: [...I.values()],
       itemTypes: [i.CollectiblesItemType.PROFILE_EFFECT]
     })
-  }, [I]), null == S ? null : (0, r.jsx)(g, {
-    children: (0, r.jsx)(a.ModalRoot, {
-      transitionState: n,
+  }, [I]), null == S ? null : (0, n.jsx)(g, {
+    children: (0, n.jsx)(a.ModalRoot, {
+      transitionState: r,
       size: a.ModalSize.DYNAMIC,
       className: O.modal,
-      children: h ? (0, r.jsx)(a.Spinner, {
+      children: h ? (0, n.jsx)(a.Spinner, {
         className: O.spinner,
         type: a.Spinner.Type.SPINNING_CIRCLE
-      }) : (0, r.jsx)(P, {
+      }) : (0, n.jsx)(P, {
         user: S,
         categories: I,
         purchases: _,

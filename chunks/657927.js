@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return S
   }
 });
 var a = s("37983");
@@ -20,9 +20,9 @@ var n = s("414456"),
   g = s("761953"),
   x = s("241558"),
   C = s("260177"),
-  T = s("714358");
+  _ = s("714358");
 
-function _(e) {
+function S(e) {
   let {
     onDismiss: t
   } = e;
@@ -81,7 +81,7 @@ function _(e) {
           children: f.default.Messages.FORUM_HELPER_CARD_BODY
         })]
       }), (0, a.jsx)("img", {
-        src: T,
+        src: _,
         alt: f.default.Messages.FORUM_HELPER_CARD_ALT_TEXT,
         width: c.MAX_THUMBNAIL_WIDTH,
         height: c.MAX_THUMBNAIL_WIDTH

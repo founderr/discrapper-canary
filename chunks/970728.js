@@ -39,8 +39,8 @@ var i = n("597755"),
   L = n("42203"),
   M = n("923959"),
   U = n("26989"),
-  k = n("305961"),
-  w = n("88093"),
+  w = n("305961"),
+  k = n("88093"),
   V = n("330154"),
   G = n("957255"),
   F = n("697218"),
@@ -71,7 +71,7 @@ function $(e) {
     case X.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE:
       s.targetType = e.target_type
   }
-  let r = null != k.default.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id),
+  let r = null != w.default.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id),
     a = !r || e.new_member;
   return a && null != e.channel && (0, P.isGuildTextChannelType)(e.channel.type) && (s.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (s.guildScheduledEvent = e.guild_scheduled_event), s
 }
@@ -111,7 +111,7 @@ function ee(e) {
           channelId: o
         }), u === X.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, h.default)(o, d, r, null == s ? void 0 : s.intent))
       };
-      (0, v.shouldShowMembershipVerificationGate)(t, [k.default, w.default, F.default, U.default]) ? (0, p.openMemberVerificationModal)(t, a) : a()
+      (0, v.shouldShowMembershipVerificationGate)(t, [w.default, k.default, F.default, U.default]) ? (0, p.openMemberVerificationModal)(t, a) : a()
     })
   }) : (0, _.isActivityInTextSupportedForChannelType)(a) && u === X.InviteTargetTypes.EMBEDDED_APPLICATION && null != d && ((0, D.transitionTo)(K.Routes.CHANNEL(null != t ? t : K.ME, o)), (0, h.default)(o, d, r, null == s ? void 0 : s.intent)), (function(e, t) {
     let {

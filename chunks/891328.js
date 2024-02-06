@@ -6,11 +6,11 @@ n.r(t), n.d(t, {
 });
 var r = n("37983");
 n("884691");
-var u = n("414456"),
-  s = n.n(u),
-  i = n("77078"),
+var s = n("414456"),
+  u = n.n(s),
+  o = n("77078"),
   l = n("750482"),
-  o = n("945330"),
+  i = n("945330"),
   a = n("516864");
 
 function c(e) {
@@ -18,10 +18,10 @@ function c(e) {
     className: t,
     onClose: n
   } = e;
-  return (0, r.jsx)(i.Clickable, {
-    className: s(a.closeButtonContainer, t),
+  return (0, r.jsx)(o.Clickable, {
+    className: u(a.closeButtonContainer, t),
     onClick: n,
-    children: (0, r.jsx)(o.default, {
+    children: (0, r.jsx)(i.default, {
       width: 16,
       height: 16,
       className: a.closeButtonIcon
@@ -33,10 +33,10 @@ function d(e) {
   let {
     guildProductListing: t,
     onClose: n,
-    className: u
+    className: s
   } = e;
-  return (0, r.jsxs)(i.ModalHeader, {
-    className: s(a.header, u),
+  return (0, r.jsxs)(o.ModalHeader, {
+    className: u(a.header, s),
     separator: !1,
     children: [(0, r.jsx)(l.default, {
       className: a.headerImage,

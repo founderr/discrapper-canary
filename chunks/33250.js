@@ -1,34 +1,34 @@
 "use strict";
-a.r(l), a.d(l, {
+t.r(l), t.d(l, {
   default: function() {
     return i
   }
 });
-var t = a("37983"),
-  n = a("884691"),
-  r = a("77078"),
-  s = a("487269"),
-  u = a("537560"),
-  C = a("782340"),
-  d = a("813599");
+var a = t("37983"),
+  n = t("884691"),
+  r = t("77078"),
+  s = t("487269"),
+  u = t("537560"),
+  C = t("782340"),
+  d = t("813599");
 
 function i(e) {
   let {
     channel: l,
-    onClose: a,
+    onClose: t,
     transitionState: i
   } = e;
   return n.useEffect(() => {
     (0, s.trackThreadBrowserOpened)()
-  }, []), (0, t.jsx)(r.ModalRoot, {
+  }, []), (0, a.jsx)(r.ModalRoot, {
     className: d.modal,
     transitionState: i,
     "aria-label": C.default.Messages.THREADS,
     size: r.ModalSize.DYNAMIC,
-    children: (0, t.jsx)(u.default, {
+    children: (0, a.jsx)(u.default, {
       className: d.browser,
       channel: l,
-      onClose: a
+      onClose: t
     })
   })
 }

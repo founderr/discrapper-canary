@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var i = s("37983");
 s("884691");
-var l = s("446674"),
-  n = s("225389"),
+var n = s("446674"),
+  l = s("225389"),
   a = s("77078"),
   r = s("519705"),
   d = s("282109"),
@@ -19,7 +19,7 @@ var l = s("446674"),
 function N(e) {
   let {
     guildId: t
-  } = e, s = (0, l.useStateFromStoresObject)([d.default], () => ({
+  } = e, s = (0, n.useStateFromStoresObject)([d.default], () => ({
     highligths: d.default.getNotifyHighlights(t),
     mobilePush: d.default.isMobilePushEnabled(t),
     suppressRoles: d.default.isSuppressRolesEnabled(t),
@@ -49,7 +49,7 @@ function N(e) {
               onMouseEnter: t,
               onMouseLeave: s
             } = e;
-            return (0, i.jsx)(n.CircleInformationIcon, {
+            return (0, i.jsx)(l.CircleInformationIcon, {
               width: 14,
               height: 14,
               onMouseEnter: t,

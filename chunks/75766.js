@@ -15,30 +15,30 @@ var r = n("446674"),
 let s = 1e3,
   a = 200,
   l = {},
-  o = !1;
-class u extends r.default.Store {
+  u = !1;
+class o extends r.default.Store {
   isLoading() {
-    return o
+    return u
   }
   passesChecklist(e) {
     var t;
-    return !o && (null === (t = l[e]) || void 0 === t ? void 0 : t.sufficient)
+    return !u && (null === (t = l[e]) || void 0 === t ? void 0 : t.sufficient)
   }
   isPendingSuccess(e) {
     let t = l[e];
-    return null != t && !o && t.healthScorePending && t.safeEnvironment && 0 === Object.keys(t.nsfwProperties).length && t.size && t.protected
+    return null != t && !u && t.healthScorePending && t.safeEnvironment && 0 === Object.keys(t.nsfwProperties).length && t.size && t.protected
   }
   getDiscoveryChecklist(e) {
     return l[e]
   }
 }
-u.displayName = "DiscoverGuildChecklistStore";
-var c = new u(i.default, {
+o.displayName = "DiscoverGuildChecklistStore";
+var c = new o(i.default, {
   DISCOVER_CHECKLIST_FETCH_START: function(e) {
-    o = !0
+    u = !0
   },
   DISCOVER_CHECKLIST_FETCH_FAILURE: function(e) {
-    o = !1
+    u = !1
   },
   DISCOVER_CHECKLIST_FETCH_SUCCESS: function(e) {
     var t;
@@ -46,7 +46,7 @@ var c = new u(i.default, {
       checklist: n,
       guildId: r
     } = e;
-    o = !1, l[r] = {
+    u = !1, l[r] = {
       guildId: n.guild_id,
       safeEnvironment: n.safe_environment,
       healthy: n.healthy,

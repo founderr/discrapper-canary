@@ -10,8 +10,8 @@ var a = l("37983"),
   s = l.n(i),
   r = l("65597"),
   o = l("77078"),
-  d = l("79112"),
-  u = l("227602"),
+  u = l("79112"),
+  d = l("227602"),
   c = l("13798"),
   f = l("386045"),
   p = l("49111"),
@@ -22,8 +22,8 @@ function E(e) {
   let {
     isEmptyBecauseQuery: t,
     closePopout: l
-  } = e, i = (0, r.default)([u.default], () => u.default.getKeybindForAction(p.GlobalKeybindActions.SAVE_CLIP)), E = (0, r.default)([f.default], () => f.default.getSettings().clipsEnabled), v = t ? h.noSearchResultsImage : h.noClipsImage, C = n.useCallback(() => {
-    l(), d.default.open(p.UserSettingsSections.CLIPS)
+  } = e, i = (0, r.default)([d.default], () => d.default.getKeybindForAction(p.GlobalKeybindActions.SAVE_CLIP)), E = (0, r.default)([f.default], () => f.default.getSettings().clipsEnabled), v = t ? h.noSearchResultsImage : h.noClipsImage, C = n.useCallback(() => {
+    l(), u.default.open(p.UserSettingsSections.CLIPS)
   }, [l]), _ = (() => {
     if (!E) return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_CLIPS_NOT_ENABLED.format({
       onClick: C

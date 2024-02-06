@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("414456"),
   i = s.n(r),
   l = s("446674"),
-  o = s("819855"),
-  u = s("77078"),
+  u = s("819855"),
+  o = s("77078"),
   d = s("875212"),
   c = s("841098"),
   _ = s("812204"),
@@ -51,7 +51,7 @@ let B = e => {
   },
   y = () => (0, a.jsx)("div", {
     className: U.mostPopularPill,
-    children: (0, a.jsx)(u.Heading, {
+    children: (0, a.jsx)(o.Heading, {
       className: U.mostPopularText,
       variant: "heading-deprecated-12/extrabold",
       children: D.default.Messages.MOST_POPULAR
@@ -62,7 +62,7 @@ let B = e => {
         premiumType: s
       } = e,
       n = (0, c.default)();
-    t = s === x.PremiumTypes.TIER_0 ? (0, o.isThemeDark)(n) ? b : j : (0, o.isThemeDark)(n) ? G : k;
+    t = s === x.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? b : j : (0, u.isThemeDark)(n) ? G : k;
     let r = (0, m.getPremiumTypeDisplayName)(s);
     return (0, a.jsx)("img", {
       src: t,
@@ -75,7 +75,7 @@ let B = e => {
       text: t,
       badge: s
     } = e;
-    return (0, a.jsxs)(u.Text, {
+    return (0, a.jsxs)(o.Text, {
       color: "text-normal",
       variant: "text-sm/normal",
       children: [t, " ", s]
@@ -85,7 +85,7 @@ let B = e => {
     let {
       text: t
     } = e;
-    return (0, a.jsx)(u.Text, {
+    return (0, a.jsx)(o.Text, {
       color: "header-primary",
       variant: "text-md/semibold",
       children: t
@@ -99,14 +99,14 @@ let B = e => {
       children: [(0, a.jsx)(R.default, {
         className: U.checkmarkIcon,
         "aria-hidden": !0
-      }), (0, a.jsx)(u.HiddenVisually, {
+      }), (0, a.jsx)(o.HiddenVisually, {
         children: D.default.Messages.INCLUDED
       })]
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(A.default, {
         className: U.closeIcon,
         "aria-hidden": !0
-      }), (0, a.jsx)(u.HiddenVisually, {
+      }), (0, a.jsx)(o.HiddenVisually, {
         children: D.default.Messages.NOT_INCLUDED
       })]
     })
@@ -141,15 +141,15 @@ let B = e => {
       column2: n,
       withBottomBorder: r = !0,
       withTopBorderRadius: l = !1,
-      withBottomBorderRadius: o = !1,
-      buttonsRow: u = !1,
+      withBottomBorderRadius: u = !1,
+      buttonsRow: o = !1,
       shortRow: d = !1
     } = e;
     return (0, a.jsxs)("tr", {
       className: i(U.row, {
-        [U.wideRow]: u,
+        [U.wideRow]: o,
         [U.topBorderRadius]: l,
-        [U.bottomBorderRadius]: o,
+        [U.bottomBorderRadius]: u,
         [U.rowBottomBorder]: r,
         [U.shortRow]: d
       }),
@@ -159,14 +159,14 @@ let B = e => {
         children: t
       }), (0, a.jsx)("td", {
         className: i(U.cell, {
-          [U.buttonsCell]: u
+          [U.buttonsCell]: o
         }),
         children: s
       }), (0, a.jsx)("td", {
         className: i(U.cell, {
           [U.topBorderRadius]: l,
-          [U.bottomBorderRadius]: o,
-          [U.buttonsCell]: u
+          [U.bottomBorderRadius]: u,
+          [U.buttonsCell]: o
         }),
         children: n
       })]
@@ -196,7 +196,7 @@ var Y = e => {
     autoTrackExposure: !1
   });
   let X = (0, c.default)(),
-    J = (0, o.isThemeLight)(X),
+    J = (0, u.isThemeLight)(X),
     Z = (0, l.useStateFromStores)([f.default], () => f.default.getCurrentUser()),
     q = (0, m.isPremiumExactly)(Z, x.PremiumTypes.TIER_2),
     $ = (0, C.usePremiumTrialOffer)(),
@@ -209,9 +209,9 @@ var Y = e => {
     ei = (0, O.useIsEligibleForBogoPromotion)();
   if (!Y || !z) return null;
   let el = m.default.getDefaultPrice(x.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-    eo = m.default.getDefaultPrice(x.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-    eu = {
-      label: (0, a.jsx)(u.Heading, {
+    eu = m.default.getDefaultPrice(x.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+    eo = {
+      label: (0, a.jsx)(o.Heading, {
         className: U.textColor,
         variant: "heading-lg/extrabold",
         children: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
@@ -234,7 +234,7 @@ var Y = e => {
       }),
       column2: (0, a.jsx)(a.Fragment, {
         children: (0, a.jsx)(W, {
-          text: ea ? er : m.default.formatPriceString(eo, x.SubscriptionIntervalTypes.MONTH)
+          text: ea ? er : m.default.formatPriceString(eu, x.SubscriptionIntervalTypes.MONTH)
         })
       })
     }, {
@@ -428,8 +428,8 @@ var Y = e => {
         className: U.button,
         subscriptionTier: x.PremiumSubscriptionSKUs.TIER_0,
         showIcon: !1,
-        look: u.ButtonLooks.OUTLINED,
-        color: J ? u.ButtonColors.BRAND_NEW : u.ButtonColors.WHITE,
+        look: o.ButtonLooks.OUTLINED,
+        color: J ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
         buttonShineClassName: void 0
       }) : (0, a.jsx)(L.default, {
         className: U.button,
@@ -445,8 +445,8 @@ var Y = e => {
         className: U.button,
         subscriptionTier: x.PremiumSubscriptionSKUs.TIER_2,
         showIcon: !1,
-        look: u.ButtonLooks.OUTLINED,
-        color: J ? u.ButtonColors.BRAND_NEW : u.ButtonColors.WHITE,
+        look: o.ButtonLooks.OUTLINED,
+        color: J ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
         buttonShineClassName: void 0
       }) : (0, a.jsx)(L.default, {
         className: U.button,
@@ -471,7 +471,7 @@ var Y = e => {
     children: (0, a.jsxs)("div", {
       className: i(U.root, r),
       "data-testid": "v2-marketing-page-comparison-table",
-      children: [(0, a.jsx)(u.Heading, {
+      children: [(0, a.jsx)(o.Heading, {
         className: i(U.titleText, U.textColor),
         variant: "heading-xxl/extrabold",
         children: null != A ? A : D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
@@ -484,7 +484,7 @@ var Y = e => {
           className: U.table,
           children: [(0, a.jsx)("thead", {
             children: (0, a.jsx)(w, {
-              ...eu
+              ...eo
             })
           }), (0, a.jsx)("tbody", {
             children: ed.map((e, t) => (0, n.createElement)(V, {

@@ -80,9 +80,9 @@ var h = o.memo(function(e) {
           useForcedColors: n,
           systemForcedColors: r
         }
-      }), p = (0, i.useLocation)(), y = o.useMemo(() => M.has(p.pathname), [p.pathname]);
-      (0, c.default)(window, y);
-      let g = (0, d.default)(window, __OVERLAY__ || n),
+      }), p = (0, i.useLocation)(), g = o.useMemo(() => M.has(p.pathname), [p.pathname]);
+      (0, c.default)(window, g);
+      let y = (0, d.default)(window, __OVERLAY__ || n),
         B = (0, s.useStateFromStores)([A.default], () => A.default.sidebarWidth),
         f = (0, S.useRedesignIconContext)().enabled;
       return (0, t.jsx)("html", {
@@ -90,7 +90,7 @@ var h = o.memo(function(e) {
         style: "font-size: ".concat(O, "%; --saturation-factor: ").concat(h, "; --devtools-sidebar-width: ").concat(B, "px;"),
         className: r(e, {
           overlay: __OVERLAY__,
-          "mouse-mode": g,
+          "mouse-mode": y,
           "keyboard-mode": U,
           "reduce-motion": a.enabled,
           "full-motion": !a.enabled,

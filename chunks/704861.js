@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("55620"),
   i = s("440351"),
   l = s("782340"),
-  o = s("76101");
-class u extends n.PureComponent {
+  u = s("76101");
+class o extends n.PureComponent {
   render() {
     let {
       game: {
@@ -18,7 +18,7 @@ class u extends n.PureComponent {
       }
     } = this.props;
     return (0, a.jsx)("div", {
-      className: o.matureListing,
+      className: u.matureListing,
       children: (0, a.jsx)(i.default, {
         onAgree: this.handleAgree,
         onDisagree: this.handleDisagree,
@@ -39,4 +39,4 @@ class u extends n.PureComponent {
     }
   }
 }
-var d = u
+var d = o

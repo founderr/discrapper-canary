@@ -14,8 +14,8 @@ var a = l("37983"),
   o = l("77078"),
   d = l("971427"),
   h = l("701909"),
-  p = l("719923"),
-  f = l("49111"),
+  f = l("719923"),
+  p = l("49111"),
   I = l("646718"),
   A = l("782340"),
   L = l("461503");
@@ -107,25 +107,25 @@ class m extends s.Component {
       }) : null, g && (0, a.jsxs)("div", {
         className: L.finePrint,
         children: ["*", A.default.Messages.BILLING_HOW_PRICING_WORKS.format({
-          documentationLink: h.default.getArticleURL(f.HelpdeskArticles.LOCALIZED_PRICING)
+          documentationLink: h.default.getArticleURL(p.HelpdeskArticles.LOCALIZED_PRICING)
         })]
       }), T && null != N && (0, a.jsx)(o.Text, {
         variant: "text-xs/medium",
         color: "interactive-normal",
         children: A.default.Messages.BILLING_TRIAL_LEGAL_COPY_V2.format({
-          buttonText: (0, p.getBillingReviewSubheader)(null, N),
+          buttonText: (0, f.getBillingReviewSubheader)(null, N),
           interval: this.formatInterval(null == N ? void 0 : N.interval),
-          cancelSubscriptionArticle: h.default.getArticleURL(f.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB),
-          paidServiceTermsArticle: h.default.getArticleURL(f.HelpdeskArticles.PAID_TERMS)
+          cancelSubscriptionArticle: h.default.getArticleURL(p.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB),
+          paidServiceTermsArticle: h.default.getArticleURL(p.HelpdeskArticles.PAID_TERMS)
         })
       }), E && null != N && (0, a.jsx)(o.Text, {
         variant: "text-xs/medium",
         color: "interactive-normal",
         children: A.default.Messages.BILLING_DISCOUNT_LEGAL_COPY.format({
-          buttonText: (0, p.getBillingReviewSubheader)(null, N),
+          buttonText: (0, f.getBillingReviewSubheader)(null, N),
           interval: this.formatInterval(null == N ? void 0 : N.interval),
-          cancelSubscriptionArticle: h.default.getArticleURL(f.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB),
-          paidServiceTermsArticle: h.default.getArticleURL(f.HelpdeskArticles.PAID_TERMS)
+          cancelSubscriptionArticle: h.default.getArticleURL(p.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB),
+          paidServiceTermsArticle: h.default.getArticleURL(p.HelpdeskArticles.PAID_TERMS)
         })
       })]
     }) : null

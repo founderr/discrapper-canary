@@ -10,8 +10,8 @@ t.r(l), t.d(l, {
     return Q
   }
 });
-var a = t("677315"),
-  n = t("157186"),
+var n = t("677315"),
+  a = t("157186"),
   s = t("26989"),
   r = t("305961"),
   i = t("88093"),
@@ -19,8 +19,8 @@ var a = t("677315"),
   u = t("290182"),
   d = t("116320"),
   o = t("437825"),
-  C = t("972894"),
-  f = t("446685"),
+  f = t("972894"),
+  C = t("446685"),
   h = t("978499"),
   v = t("617559"),
   L = t("213523"),
@@ -58,20 +58,20 @@ var a = t("677315"),
   b = t("49111"),
   K = t("782340");
 
-function q(e, l, t, a) {
+function q(e, l, t, n) {
   if (null == e) return null;
   if (e.id === (null == l ? void 0 : l.rulesChannelId)) return K.default.Messages.CHANNEL_TOOLTIP_RULES;
   switch (e.type) {
     case b.ChannelTypes.GUILD_TEXT:
-      if (a) return K.default.Messages.CHANNEL_TOOLTIP_TEXT_ACTIVE_THREADS;
+      if (n) return K.default.Messages.CHANNEL_TOOLTIP_TEXT_ACTIVE_THREADS;
       if (e.isNSFW()) return K.default.Messages.CHANNEL_TOOLTIP_TEXT_NSFW;
       if ((0, X.default)(e)) return K.default.Messages.CHANNEL_TOOLTIP_TEXT_LIMITED;
       return K.default.Messages.CHANNEL_TOOLTIP_TEXT;
     case b.ChannelTypes.GUILD_FORUM:
-      let n = e.isMediaChannel();
-      if (e.isNSFW()) return n ? K.default.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW : K.default.Messages.CHANNEL_TOOLTIP_FORUM_NSFW;
-      if ((0, X.default)(e)) return n ? K.default.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED : K.default.Messages.CHANNEL_TOOLTIP_FORUM_LIMITED;
-      return n ? K.default.Messages.MEDIA_CHANNEL : K.default.Messages.FORUM;
+      let a = e.isMediaChannel();
+      if (e.isNSFW()) return a ? K.default.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW : K.default.Messages.CHANNEL_TOOLTIP_FORUM_NSFW;
+      if ((0, X.default)(e)) return a ? K.default.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED : K.default.Messages.CHANNEL_TOOLTIP_FORUM_LIMITED;
+      return a ? K.default.Messages.MEDIA_CHANNEL : K.default.Messages.FORUM;
     case b.ChannelTypes.GUILD_MEDIA:
       if (e.isNSFW()) return K.default.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW;
       if ((0, X.default)(e)) return K.default.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED;
@@ -116,8 +116,8 @@ function J(e, l) {
     } = t;
   if (null == e) return null;
   null == l && (l = r.default.getGuild(e.getGuildId()));
-  let ee = (0, n.shouldShowMembershipVerificationGate)(null == l ? void 0 : l.id, [r.default, i.default, c.default, s.default]),
-    el = null != l && (0, a.canSeeGuildHome)(null == l ? void 0 : l.id);
+  let ee = (0, a.shouldShowMembershipVerificationGate)(null == l ? void 0 : l.id, [r.default, i.default, c.default, s.default]),
+    el = null != l && (0, n.canSeeGuildHome)(null == l ? void 0 : l.id);
   if ((null == e ? void 0 : e.id) === (null == l ? void 0 : l.rulesChannelId)) return L.default;
   switch (e.type) {
     case b.ChannelTypes.GUILD_ANNOUNCEMENT:
@@ -170,10 +170,10 @@ function J(e, l) {
       if (J) return W.default;
       if (ee) {
         if ((0, X.default)(e)) return w.default;
-        return q ? C.default : S.default
+        return q ? f.default : S.default
       }
       if (K) return w.default;
-      if ((0, X.default)(e)) return q ? C.default : S.default;
+      if ((0, X.default)(e)) return q ? f.default : S.default;
       else return q ? o.default : U.default;
     case b.ChannelTypes.GUILD_DIRECTORY:
       return v.default;
@@ -185,7 +185,7 @@ function J(e, l) {
           if (el) return T.default;
           return B.default
         }
-        if (e.id === Y.StaticChannelId.CHANNEL_BROWSER || e.id === Y.StaticChannelId.CUSTOMIZE_COMMUNITY) return f.default
+        if (e.id === Y.StaticChannelId.CHANNEL_BROWSER || e.id === Y.StaticChannelId.CUSTOMIZE_COMMUNITY) return C.default
       }
       return null
   }

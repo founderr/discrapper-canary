@@ -5,25 +5,25 @@ n.r(t), n.d(t, {
   }
 }), n("808653");
 var l = n("37983"),
-  i = n("884691"),
-  s = n("414456"),
-  a = n.n(s),
+  s = n("884691"),
+  a = n("414456"),
+  i = n.n(a),
   r = n("77078"),
-  o = n("155996"),
-  u = n("41594"),
+  u = n("155996"),
+  o = n("41594"),
   d = n("652453"),
   c = n("782340"),
   f = n("435808"),
-  g = n("926622");
-let h = e => {
+  h = n("926622");
+let g = e => {
     let {
       guild: t,
       inviteChannel: n,
-      setInviteChannel: s
-    } = e, a = (0, o.default)(t.id), d = i.useMemo(() => a.reduce((e, t) => ({
+      setInviteChannel: a
+    } = e, i = (0, u.default)(t.id), d = s.useMemo(() => i.reduce((e, t) => ({
       ...e,
       [t.id]: t
-    }), {}), [a]), f = i.useMemo(() => Object.values(d).map(e => ({
+    }), {}), [i]), f = s.useMemo(() => Object.values(d).map(e => ({
       value: e.id,
       label: e.name
     })), [d]);
@@ -31,15 +31,15 @@ let h = e => {
       options: f,
       value: null == n ? void 0 : n.id,
       onChange: e => {
-        s(d[e])
+        a(d[e])
       },
       placeholder: c.default.Messages.INVITE_A_GUEST_SELECT_VOICE_CHANNEL,
       renderOptionPrefix: e => {
         if (null == e) return null;
         let n = e.value,
-          i = d[n];
-        return null == i ? null : (0, l.jsx)(u.ChannelItemIcon, {
-          channel: i,
+          s = d[n];
+        return null == s ? null : (0, l.jsx)(o.ChannelItemIcon, {
+          channel: s,
           guild: t
         })
       }
@@ -49,8 +49,8 @@ let h = e => {
     let {
       handleDone: t,
       headerId: n,
-      inviteChannel: i,
-      copyValue: s
+      inviteChannel: s,
+      copyValue: a
     } = e;
     return (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsxs)(r.ModalHeader, {
@@ -62,7 +62,7 @@ let h = e => {
           children: (0, l.jsx)(r.FormTitle, {
             id: n,
             tag: "h2",
-            className: a(g.marginReset, f.headerCloseButtonSpacing, f.headerText),
+            className: i(h.marginReset, f.headerCloseButtonSpacing, f.headerText),
             children: c.default.Messages.INVITE_A_GUEST_VOICE_ONLY
           })
         })]
@@ -79,7 +79,7 @@ let h = e => {
             tag: "h5",
             className: f.guestSelectChannelHeader,
             children: c.default.Messages.INVITE_A_GUEST_STEP_1
-          }), (0, l.jsx)(h, {
+          }), (0, l.jsx)(g, {
             ...e
           }), (0, l.jsx)(r.FormTitle, {
             tag: "h5",
@@ -87,8 +87,8 @@ let h = e => {
             children: c.default.Messages.INVITE_A_GUEST_STEP_2
           }), (0, l.jsx)(d.InviteCopyInput, {
             ...e,
-            copyValue: null == i ? "" : s,
-            disabled: null == i
+            copyValue: null == s ? "" : a,
+            disabled: null == s
           })]
         })
       })]

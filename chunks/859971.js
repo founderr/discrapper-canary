@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return a
   },
   getStartHandleValue: function() {
-    return o
+    return u
   },
   getEndHandleValue: function() {
-    return u
+    return o
   },
   loadAudioFromFile: function() {
     return d
@@ -30,11 +30,11 @@ function r(e) {
   return e / 1e3
 }
 let a = (e, t, n) => -1 === e ? n : e + t * (n - e) / n,
-  o = (e, t, n, i) => {
+  u = (e, t, n, i) => {
     let l = 0;
     return (l = t >= 0 && n > 0 ? (e - (t - n * t / i)) * 100 / n : 100 * e / i).toFixed(4)
   },
-  u = (e, t, n, i) => {
+  o = (e, t, n, i) => {
     let l = 0;
     return (l = t >= 0 && n > 0 ? -((e - (t + n * (i - t) / i)) * 100) / n : -100 * e / i + 100).toFixed(4)
   };

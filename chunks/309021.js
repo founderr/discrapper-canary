@@ -31,10 +31,10 @@ s.r(t), s.d(t, {
     return v
   },
   StageInstanceChangeStrings: function() {
-    return j
+    return P
   },
   GuildScheduledEventChangeStrings: function() {
-    return P
+    return j
   },
   ThreadChangeStrings: function() {
     return y
@@ -240,7 +240,7 @@ let m = new d.default("AuditLogUtils"),
     [g.AuditLogChangeKeys.EXPIRE_GRACE_PERIOD]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_GRACE_PERIOD,
     ...O()
   }),
-  j = () => ({
+  P = () => ({
     [g.AuditLogChangeKeys.TOPIC]: z(L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE, L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE),
     [g.AuditLogChangeKeys.PRIVACY_LEVEL]: {
       [A.GuildScheduledEventPrivacyLevel.GUILD_ONLY]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
@@ -248,7 +248,7 @@ let m = new d.default("AuditLogUtils"),
     },
     ...O()
   }),
-  P = () => ({
+  j = () => ({
     [g.AuditLogChangeKeys.NAME]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
     [g.AuditLogChangeKeys.DESCRIPTION]: L.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DESCRIPTION_CREATE,
     [g.AuditLogChangeKeys.PRIVACY_LEVEL]: {

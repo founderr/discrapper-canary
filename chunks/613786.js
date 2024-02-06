@@ -26,7 +26,7 @@ var a = s("37983"),
       submittedGuildJoinRequestsCount: s,
       onFormFieldUpdate: g,
       hideVerificationLevelField: A
-    } = e, L = n.useRef(!1), [m, C] = n.useState(null), [O, h] = n.useState(e.formFields), R = n.useRef(e.formFields), D = n.useMemo(() => O.filter(d.isAutomaticApprovalFormField), [O]), M = n.useMemo(() => O.filter(d.isManualApprovalFormField), [O]), G = M.length, x = n.useMemo(() => O.length === N.MAX_FORM_ELEMENTS, [O]), p = n.useMemo(() => O.some(o.isTermsFormField), [O]), U = n.useMemo(() => O.some(e => !(0, o.isTermsFormField)(e)), [O]), v = G > 1, j = (0, r.useIsMemberVerificationManualApproval)(t.id), P = n.useCallback(() => {
+    } = e, L = n.useRef(!1), [m, C] = n.useState(null), [O, h] = n.useState(e.formFields), R = n.useRef(e.formFields), D = n.useMemo(() => O.filter(d.isAutomaticApprovalFormField), [O]), M = n.useMemo(() => O.filter(d.isManualApprovalFormField), [O]), G = M.length, x = n.useMemo(() => O.length === N.MAX_FORM_ELEMENTS, [O]), p = n.useMemo(() => O.some(o.isTermsFormField), [O]), U = n.useMemo(() => O.some(e => !(0, o.isTermsFormField)(e)), [O]), v = G > 1, P = (0, r.useIsMemberVerificationManualApproval)(t.id), j = n.useCallback(() => {
       (0, l.showToast)((0, l.createToast)(f.default.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
     }, []), y = n.useCallback(async e => {
       if (!L.current) {
@@ -52,15 +52,15 @@ var a = s("37983"),
       if (null != t && t !== a && (n.splice(a, 1), n.splice(t, 0, e), h(n)), s) try {
         await y(n), null !== m && C(null)
       } catch (e) {
-        P()
+        j()
       } else m !== t && C(t)
-    }, [m, O, y, P]), H = n.useCallback(async e => {
+    }, [m, O, y, j]), H = n.useCallback(async e => {
       try {
         await y([...O.slice(0, e), ...O.slice(e + 1)])
       } catch (e) {
-        P()
+        j()
       }
-    }, [O, y, P]), V = (0, a.jsxs)(a.Fragment, {
+    }, [O, y, j]), V = (0, a.jsxs)(a.Fragment, {
       children: [!A && (0, a.jsx)(_.default, {
         guild: t
       }), (0, a.jsx)(c.default, {
@@ -79,7 +79,7 @@ var a = s("37983"),
         updateFormFieldOrder: F
       }))]
     });
-    return j ? (0, a.jsxs)(a.Fragment, {
+    return P ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(I.default, {
         text: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_AUTOMATIC_APPROVAL_DIVIDER
       }), V, (0, a.jsx)(I.default, {

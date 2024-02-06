@@ -5,9 +5,9 @@ i.r(t), i.d(t, {
   }
 }), i("222007");
 var n = i("37983"),
-  l = i("884691"),
-  s = i("414456"),
-  r = i.n(s),
+  s = i("884691"),
+  l = i("414456"),
+  r = i.n(l),
   a = i("446674"),
   o = i("77078"),
   u = i("272030"),
@@ -24,10 +24,10 @@ var n = i("37983"),
   h = i("782340"),
   C = i("465439");
 let T = (e, t) => "".concat(e, ":").concat(t),
-  N = l.forwardRef(function(e, t) {
+  N = s.forwardRef(function(e, t) {
     let i, {
-        emoji: l,
-        isFavorite: s,
+        emoji: s,
+        isFavorite: l,
         isLargeSize: u,
         isMediumSize: c,
         isInspected: d,
@@ -41,7 +41,7 @@ let T = (e, t) => "".concat(e, ":").concat(t),
         selectedItemClassName: A,
         ...y
       } = e,
-      R = (0, a.useStateFromStores)([g.default], () => l.type === f.EmojiTypes.GUILD ? g.default.getGuild(l.guildId) : void 0, [l]);
+      R = (0, a.useStateFromStores)([g.default], () => s.type === f.EmojiTypes.GUILD ? g.default.getGuild(s.guildId) : void 0, [s]);
     return (0, n.jsx)(o.FocusRing, {
       children: (0, n.jsx)("button", {
         ...y,
@@ -54,19 +54,19 @@ let T = (e, t) => "".concat(e, ":").concat(t),
           [C.showPulse]: I
         }),
         "data-type": m.PickerContextMenuDataTypes.EMOJI,
-        "data-id": l.id,
-        "data-name": l.name,
+        "data-id": s.id,
+        "data-name": s.name,
         ref: t,
         children: (0, n.jsx)(S.default, {
-          "aria-label": (i = l.allNamesString, ((null == R ? void 0 : R.name) != null && (i = h.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
+          "aria-label": (i = s.allNamesString, ((null == R ? void 0 : R.name) != null && (i = h.default.Messages.EMOJI_FROM_GUILD_LABEL.format({
             names: i,
             guildName: R.name
-          })), s) ? h.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
+          })), l) ? h.default.Messages.EMOJI_NAMES_WITH_FAVORITED.format({
             names: i
           }) : i),
           columnIndex: p,
           rowIndex: _,
-          emoji: l,
+          emoji: s,
           size: T,
           surrogateCodePoint: N,
           allowAnimatedEmoji: v
@@ -78,7 +78,7 @@ let T = (e, t) => "".concat(e, ":").concat(t),
 function v(e) {
   let {
     descriptor: t,
-    emojiItemKey: s,
+    emojiItemKey: l,
     isInspected: r,
     rowIndex: f,
     channelGuildId: m,
@@ -98,7 +98,7 @@ function v(e) {
     messageId: D,
     isBurstReaction: b,
     rowPosition: U
-  } = e, [w, G] = l.useState(""), k = (0, a.useStateFromStores)([c.default], () => c.default.useReducedMotion), V = (0, a.useStateFromStores)([d.default], () => d.default.getDisambiguatedEmojiContext(m), [m]), F = l.useRef(null), {
+  } = e, [w, G] = s.useState(""), k = (0, a.useStateFromStores)([c.default], () => c.default.useReducedMotion), V = (0, a.useStateFromStores)([d.default], () => d.default.getDisambiguatedEmojiContext(m), [m]), F = s.useRef(null), {
     emoji: H,
     size: K,
     isDisabled: B,
@@ -106,7 +106,7 @@ function v(e) {
   } = t, z = e => {
     if (e.stopPropagation(), C.current || v.current) return;
     let i = e.altKey;
-    i && !d.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(H) && P(s), (0, I.hideHotspot)(I.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), S(t, {
+    i && !d.default.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(H) && P(l), (0, I.hideHotspot)(I.HotspotLocations.FAVORITE_EMOJI_TOOLTIP), S(t, {
       isFinalSelection: !e.shiftKey,
       toggleFavorite: i
     })
@@ -132,9 +132,9 @@ function v(e) {
       onFocus: u,
       ...c
     } = null !== (e = j(J, f)) && void 0 !== e ? e : {};
-    return (0, l.createElement)("li", {
+    return (0, s.createElement)("li", {
       ...c,
-      key: s,
+      key: l,
       ref: F
     }, w !== T(J, f) && (0, n.jsx)(N, {
       ref: a,
@@ -144,7 +144,7 @@ function v(e) {
       isMediumSize: O,
       isInspected: r,
       isDisabled: B,
-      showPulse: x === s,
+      showPulse: x === l,
       allowAnimatedEmoji: L,
       onFocus: null != u ? u : W,
       onMouseMove: W,
@@ -174,5 +174,5 @@ function v(e) {
     position: "top",
     delay: 200,
     children: e => Y(e)
-  }, s) : Y()
+  }, l) : Y()
 }

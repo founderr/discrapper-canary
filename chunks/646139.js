@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return U
   },
   STEPS: function() {
-    return v
+    return j
   },
   default: function() {
     return D
@@ -63,8 +63,8 @@ function U(e) {
     applicationId: b,
     guildId: U,
     referralTrialOfferId: k,
-    skuId: j,
-    returnRef: v
+    skuId: v,
+    returnRef: j
   } = e, {
     analyticsLocations: D
   } = (0, o.default)();
@@ -108,10 +108,10 @@ function U(e) {
     applicationId: b,
     guildId: U,
     referralTrialOfferId: k,
-    skuId: j,
+    skuId: v,
     shakeWhilePurchasing: !0,
     isLargeModal: W,
-    returnRef: v
+    returnRef: j
   })
 }
 
@@ -130,7 +130,7 @@ function k(e) {
   })
 }
 
-function j(e) {
+function v(e) {
   let {
     initialPlanId: t,
     handleStepChange: n,
@@ -158,7 +158,7 @@ function j(e) {
     })
   })
 }
-let v = [{
+let j = [{
   key: null,
   renderStep: e => (0, s.jsx)(m.PaymentPredicateStep, {
     ...e
@@ -196,7 +196,7 @@ let v = [{
 }, {
   key: E.Step.ADD_PAYMENT_STEPS,
   renderStep: e => (0, s.jsx)(s.Fragment, {
-    children: (0, s.jsx)(j, {
+    children: (0, s.jsx)(v, {
       ...e
     })
   }),
@@ -256,7 +256,7 @@ function D(e) {
     children: (0, s.jsx)(I.PaymentContextProvider, {
       loadId: _,
       activeSubscription: null != e.subscription ? e.subscription : t,
-      stepConfigs: v,
+      stepConfigs: j,
       skuIDs: [...h.ACTIVE_PREMIUM_SKUS],
       isGift: l,
       defaultPlanId: E,

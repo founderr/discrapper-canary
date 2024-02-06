@@ -6,10 +6,10 @@ i.r(t), i.d(t, {
 });
 var n = i("37983");
 i("884691");
-var l = i("414456"),
-  s = i.n(l),
-  a = i("446674"),
-  r = i("77078"),
+var s = i("414456"),
+  l = i.n(s),
+  r = i("446674"),
+  a = i("77078"),
   o = i("206230"),
   u = i("154889"),
   c = i("917247"),
@@ -26,15 +26,15 @@ var l = i("414456"),
 function h(e) {
   var t, i;
   let {
-    onDismiss: l
-  } = e, h = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), C = _.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, T = (0, c.usePremiumTrialOffer)(), N = (0, u.usePremiumDiscountOffer)(), v = (null == T ? void 0 : T.subscription_trial) != null, A = v || null != N, y = {
+    onDismiss: s
+  } = e, h = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion), C = _.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2, T = (0, c.usePremiumTrialOffer)(), N = (0, u.usePremiumDiscountOffer)(), v = (null == T ? void 0 : T.subscription_trial) != null, A = v || null != N, y = {
     object: p.AnalyticsObjects.BUTTON_CTA,
     section: p.AnalyticsSections.SUPER_REACTION_PICKER
   };
   return (0, n.jsxs)("div", {
     className: S.wrapper,
-    children: [(0, n.jsx)(r.Clickable, {
-      onClick: l,
+    children: [(0, n.jsx)(a.Clickable, {
+      onClick: s,
       className: S.closeButton,
       "aria-label": _.default.Messages.DISMISS,
       children: (0, n.jsx)(E.default, {
@@ -46,7 +46,7 @@ function h(e) {
       children: [(0, n.jsx)("div", {
         className: S.contentFill,
         children: (0, n.jsx)(I.default, {
-          className: s(S.banner, {
+          className: l(S.banner, {
             [S.hasTrialOffer]: A
           }),
           src: "https://cdn.discordapp.com/attachments/955557117622886410/1085270553759322153/super-reactions-launch.mp4",
@@ -70,12 +70,12 @@ function h(e) {
             className: S.nitroWheel,
             width: 32,
             height: 32
-          }), (0, n.jsx)(r.Heading, {
+          }), (0, n.jsx)(a.Heading, {
             className: S.headerText,
             variant: "heading-xl/bold",
             children: _.default.Messages.SUPER_REACTIONS_UPSELL_TITLE_MOBILE
           })]
-        }), (0, n.jsx)(r.Text, {
+        }), (0, n.jsx)(a.Text, {
           className: S.subheaderText,
           variant: "text-md/normal",
           children: C

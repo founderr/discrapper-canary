@@ -19,19 +19,19 @@ function c(e) {
     className: n,
     animateOnHover: s = !1,
     isHovering: c = !1,
-    lineClamp: f = 6
-  } = e, m = a.useMemo(() => (0, o.parseBioReact)(t), [t]);
+    lineClamp: m = 6
+  } = e, f = a.useMemo(() => (0, o.parseBioReact)(t), [t]);
   return (0, l.jsx)("div", {
     className: i(n, d.markup),
     children: (0, l.jsx)(r.Text, {
       variant: "text-sm/normal",
-      lineClamp: f,
+      lineClamp: m,
       children: (0, l.jsx)(u.MessagesInteractionContext.Provider, {
         value: {
           disableAnimations: s && !c,
           disableInteractions: !1
         },
-        children: m
+        children: f
       })
     })
   })

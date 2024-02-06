@@ -8,7 +8,7 @@ var n = s("37983"),
   l = s("884691"),
   a = s("421898"),
   i = s.n(a),
-  r = s("122508"),
+  r = s("151538"),
   o = s("637487");
 let c = {
     VERTICAL: r.flexVertical,

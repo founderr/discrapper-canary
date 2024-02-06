@@ -8,8 +8,8 @@ var a, n, i = l("37983"),
   s = l("884691"),
   r = l("414456"),
   o = l.n(r),
-  d = l("866227"),
-  u = l.n(d),
+  u = l("866227"),
+  d = l.n(u),
   c = l("446674"),
   f = l("862337"),
   p = l("185370"),
@@ -42,8 +42,8 @@ var w = function(e) {
   let {
     clip: n,
     exporting: r,
-    actionsDisabled: d,
-    isNew: u,
+    actionsDisabled: u,
+    isNew: d,
     onDelete: p,
     onEdit: m,
     onShare: _
@@ -73,13 +73,13 @@ var w = function(e) {
   }), Y = "".concat(F, " • ").concat(G);
   return (0, i.jsx)(T, {
     children: (0, i.jsxs)(h.ClickableContainer, {
-      "aria-disabled": d,
+      "aria-disabled": u,
       "aria-label": O.default.Messages.EDIT,
-      onClick: d ? void 0 : () => {
+      onClick: u ? void 0 : () => {
         m(n), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_CLICKED)
       },
       className: o(b.clipItem, {
-        [b.disabled]: d
+        [b.disabled]: u
       }),
       onBlur: B,
       onFocus: H,
@@ -87,7 +87,7 @@ var w = function(e) {
       onMouseLeave: w,
       children: [(0, i.jsx)(k, {
         clip: n,
-        isNew: u,
+        isNew: d,
         videoRef: N
       }), (0, i.jsxs)("div", {
         className: b.clipFooter,
@@ -118,7 +118,7 @@ var w = function(e) {
             }
           }), I && (0, i.jsx)(V, {
             clip: n,
-            actionsDisabled: d,
+            actionsDisabled: u,
             exporting: r,
             onBeforeDelete: y,
             onDelete: p,
@@ -144,8 +144,8 @@ function k(e) {
     let e = t.length,
       l = !1,
       a = null != t.editMetadata ? t.editMetadata.end - t.editMetadata.start : null;
-    return null != a && 1e3 * a < t.length && (e = 1e3 * a, l = !0), [l, u.duration(e)]
-  }, [t.length, t.editMetadata]), d = "".concat(o.seconds()).padStart(2, "0");
+    return null != a && 1e3 * a < t.length && (e = 1e3 * a, l = !0), [l, d.duration(e)]
+  }, [t.length, t.editMetadata]), u = "".concat(o.seconds()).padStart(2, "0");
   return (0, i.jsxs)(L.default, {
     aspectRatio: 16 / 9,
     className: b.clipThumbContainer,
@@ -175,7 +175,7 @@ function k(e) {
         }) : null, (0, i.jsx)(h.Text, {
           variant: "text-md/medium",
           color: "always-white",
-          children: "".concat(o.minutes(), ":").concat(d)
+          children: "".concat(o.minutes(), ":").concat(u)
         })]
       })]
     })]
@@ -188,7 +188,7 @@ function U(e) {
     clip: l,
     focused: a,
     onFocus: n
-  } = e, [r, d] = s.useState(l.name), u = !l.name, [c, f] = s.useState(!1), [E, v] = s.useState(null !== (t = l.name) && void 0 !== t ? t : ""), [C, _] = s.useState(!1), g = async () => {
+  } = e, [r, u] = s.useState(l.name), d = !l.name, [c, f] = s.useState(!1), [E, v] = s.useState(null !== (t = l.name) && void 0 !== t ? t : ""), [C, _] = s.useState(!1), g = async () => {
     _(!0), await (0, j.updateClipMetadata)(l.id, {
       name: "" === E ? void 0 : E
     }), _(!1), f(!1)
@@ -196,7 +196,7 @@ function U(e) {
   return (s.useEffect(() => {
     if (r !== l.name) {
       var e;
-      d(l.name), v(null !== (e = l.name) && void 0 !== e ? e : "")
+      u(l.name), v(null !== (e = l.name) && void 0 !== e ? e : "")
     }
   }, [l.name, r]), c) ? (0, i.jsx)(h.TextInput, {
     inputClassName: o(H["heading-lg/medium"], b.clipTitleInput),
@@ -215,7 +215,7 @@ function U(e) {
     onClick: e => {
       e.stopPropagation(), f(!0)
     },
-    children: [u ? (0, i.jsx)(h.Heading, {
+    children: [d ? (0, i.jsx)(h.Heading, {
       className: b.clipTitle,
       color: "text-muted",
       variant: "heading-lg/medium",
@@ -266,8 +266,8 @@ function V(e) {
     onBeforeDelete: n,
     onDelete: r,
     onEdit: o,
-    onShare: d,
-    onBlur: u
+    onShare: u,
+    onBlur: d
   } = e, c = (0, _.default)(), f = s.useCallback(e => {
     e.stopPropagation(), e.shiftKey ? (n(), (0, j.deleteClip)(t.filepath)) : r(t, n), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
       type: "delete"
@@ -277,10 +277,10 @@ function V(e) {
       type: "edit"
     })
   }, [o, t]), m = s.useCallback(e => {
-    e.stopPropagation(), d(t), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+    e.stopPropagation(), u(t), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
       type: "share"
     })
-  }, [d, t]);
+  }, [u, t]);
   return (0, i.jsxs)("div", {
     className: b.buttonContainer,
     children: [null != r && (0, i.jsx)(h.Tooltip, {
@@ -315,7 +315,7 @@ function V(e) {
       disabled: a && !l,
       submitting: l,
       color: h.Button.Colors.BRAND,
-      onBlur: u,
+      onBlur: d,
       onClick: m,
       className: b.button,
       size: h.Button.Sizes.NONE,

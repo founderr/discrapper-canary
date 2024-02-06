@@ -4,18 +4,18 @@ n.r(t), n.d(t, {
     return f
   }
 }), n("222007");
-var l = n("37983"),
-  s = n("884691"),
-  i = n("414456"),
-  r = n.n(i),
+var i = n("37983"),
+  r = n("884691"),
+  l = n("414456"),
+  s = n.n(l),
   o = n("458960"),
-  a = n("77078"),
-  u = n("866893");
-let d = {
+  u = n("77078"),
+  a = n("866893");
+let c = {
   friction: 7,
   tension: 60
 };
-class c extends s.Component {
+class d extends r.Component {
   componentWillAppear(e) {
     this.animateTo(1).start(e)
   }
@@ -30,7 +30,7 @@ class c extends s.Component {
   }
   animateTo(e) {
     return o.default.spring(this.animation, {
-      ...d,
+      ...c,
       toValue: e
     })
   }
@@ -53,8 +53,8 @@ class c extends s.Component {
       className: e,
       children: t
     } = this.props;
-    return (0, l.jsx)(o.default.div, {
-      className: r(e, u.slider),
+    return (0, i.jsx)(o.default.div, {
+      className: s(e, a.slider),
       style: this.getAnimatedStyle(),
       children: t
     })
@@ -63,5 +63,5 @@ class c extends s.Component {
     super(...e), this.animation = new o.default.Value(0)
   }
 }
-c.contextType = a.AccessibilityPreferencesContext;
-var f = c
+d.contextType = u.AccessibilityPreferencesContext;
+var f = d

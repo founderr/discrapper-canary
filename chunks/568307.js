@@ -117,8 +117,8 @@ let b = new g.default("RunningGameStore"),
     name: h.default.get(O.PlatformTypes.SPOTIFY).name
   }],
   U = !0,
-  k = new Set,
-  w = [],
+  w = new Set,
+  k = [],
   V = [],
   G = [],
   F = null,
@@ -251,13 +251,13 @@ function er(e) {
 
 function ea() {
   let e = !1;
-  return w = o.values(R.default.libraryApplications).reduce((t, n) => {
+  return k = o.values(R.default.libraryApplications).reduce((t, n) => {
     let i = N.default.getDetectableGame(n.id);
     if (null == i) return t;
     let s = D.default.getLaunchOptions(n.id, n.branchId);
     for (let r of s) {
       let s = "".concat(n.id, ":").concat(n.branchId);
-      !k.has(s) && (e = !0, k.add(s));
+      !w.has(s) && (e = !0, w.add(s));
       let {
         fullExecutablePath: a
       } = r, o = a.replace(/\\/g, "/").toLowerCase();
@@ -276,7 +276,7 @@ function ea() {
 
 function eo() {
   if (!__OVERLAY__ && C.isPlatformEmbedded) {
-    let e = [...w, ...o.values(Y.gameOverrides)];
+    let e = [...k, ...o.values(Y.gameOverrides)];
     A.default.setGameCandidateOverrides(e)
   }
 }

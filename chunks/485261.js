@@ -8,14 +8,14 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("37983"),
-  l = n("884691"),
-  r = n("446674"),
+  r = n("884691"),
+  l = n("446674"),
   s = n("77078"),
   a = n("305961"),
   o = n("145131"),
   u = n("599110"),
-  d = n("335189"),
-  c = n("473591"),
+  c = n("335189"),
+  d = n("473591"),
   f = n("980215"),
   E = n("879253"),
   h = n("709594"),
@@ -33,24 +33,24 @@ function S(e) {
     isSavingSettings: R,
     hasPendingChanges: m,
     errors: g
-  } = (0, r.useStateFromStoresObject)([c.default], () => ({
-    settings: c.default.getSettings(n),
-    isFetchingSettings: c.default.isFetchingSettings(n),
-    isSavingSettings: c.default.isSavingSettings(),
-    hasPendingChanges: c.default.hasPendingChanges(),
-    errors: c.default.getErrors()
-  })), v = (0, r.useStateFromStores)([a.default], () => a.default.getGuild(n)), L = (0, f.useClydeProfilesEnabled)(v), [T, N] = l.useState(!1);
-  l.useEffect(() => ((0, d.startEditingClydeProfile)(), () => {
-    (0, d.doneEditingClydeProfile)(), (0, d.resetPendingChanges)()
-  }), []), l.useEffect(() => {
-    (0, d.fetchClydeSettings)(n, !0)
-  }, [n]), l.useEffect(() => {
+  } = (0, l.useStateFromStoresObject)([d.default], () => ({
+    settings: d.default.getSettings(n),
+    isFetchingSettings: d.default.isFetchingSettings(n),
+    isSavingSettings: d.default.isSavingSettings(),
+    hasPendingChanges: d.default.hasPendingChanges(),
+    errors: d.default.getErrors()
+  })), v = (0, l.useStateFromStores)([a.default], () => a.default.getGuild(n)), L = (0, f.useClydeProfilesEnabled)(v), [T, N] = r.useState(!1);
+  r.useEffect(() => ((0, c.startEditingClydeProfile)(), () => {
+    (0, c.doneEditingClydeProfile)(), (0, c.resetPendingChanges)()
+  }), []), r.useEffect(() => {
+    (0, c.fetchClydeSettings)(n, !0)
+  }, [n]), r.useEffect(() => {
     (m || null != g) && N(!1)
   }, [m, g]);
   let A = async () => {
-    if (null == n || !c.default.hasPendingChanges()) return;
-    let e = c.default.getPendingUpdates();
-    await (0, d.saveClydeProfile)(n, function(e) {
+    if (null == n || !d.default.hasPendingChanges()) return;
+    let e = d.default.getPendingUpdates();
+    await (0, c.saveClydeProfile)(n, function(e) {
       let t = {};
       return void 0 !== e.pendingPersonality && (t.personality = e.pendingPersonality), void 0 !== e.pendingNick && (t.nick = e.pendingNick), void 0 !== e.pendingAvatar && (t.avatar = e.pendingAvatar), void 0 !== e.pendingBanner && (t.banner = e.pendingBanner), void 0 !== e.pendingAccentColor && (t.accent_color = e.pendingAccentColor), void 0 !== e.pendingThemeColors && (t.theme_colors = e.pendingThemeColors), t
     }(e)), N(!0)
@@ -88,7 +88,7 @@ function S(e) {
         className: p.resetButtonContainer,
         children: (0, i.jsx)(s.Button, {
           onClick: () => {
-            (0, d.resetPendingChanges)(), u.default.track(_.AnalyticEvents.CLYDE_AI_PROFILE_MODAL_RESET_BUTTON_CLICKED, {
+            (0, c.resetPendingChanges)(), u.default.track(_.AnalyticEvents.CLYDE_AI_PROFILE_MODAL_RESET_BUTTON_CLICKED, {
               guild_id: n
             })
           },
@@ -124,14 +124,14 @@ function I(e) {
   let {
     transitionState: t,
     onClose: n,
-    guildId: l
+    guildId: r
   } = e;
   return (0, i.jsx)(s.ModalRoot, {
     transitionState: t,
     size: s.ModalSize.LARGE,
     children: (0, i.jsx)(S, {
       onClose: n,
-      guildId: l
+      guildId: r
     })
   })
 }

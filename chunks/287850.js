@@ -1,11 +1,11 @@
 "use strict";
-let i, s, r;
+let s, i, r;
 n.r(t), n.d(t, {
   default: function() {
     return O
   }
 }), n("222007"), n("424973");
-var l, a, u = n("866227"),
+var a, l, u = n("866227"),
   o = n.n(u),
   c = n("446674"),
   d = n("407846"),
@@ -22,7 +22,7 @@ var l, a, u = n("866227"),
   m = n("697218"),
   S = n("299039"),
   g = n("724210");
-(a = l || (l = {})).DEFAULT = "DEFAULT", a.FAVORITE = "FAVORITE";
+(l = a || (a = {})).DEFAULT = "DEFAULT", l.FAVORITE = "FAVORITE";
 let R = new d.default(e => {
   let {
     isRequest: t,
@@ -39,14 +39,14 @@ let R = new d.default(e => {
 function N(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(e) {
     var t, n;
-    let i = null !== (n = null !== (t = T.default.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
-      s = e.isMessageRequestTimestamp;
-    if (null != s) {
-      let e = o(s).valueOf(),
+    let s = null !== (n = null !== (t = T.default.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
+      i = e.isMessageRequestTimestamp;
+    if (null != i) {
+      let e = o(i).valueOf(),
         t = S.default.fromTimestamp(e);
-      return S.default.compare(i, t) > 0 ? i : t
+      return S.default.compare(s, t) > 0 ? s : t
     }
-    return i
+    return s
   }(e);
   return {
     channelId: e.id,
@@ -69,20 +69,20 @@ function L() {
   let e = C.default.getMutablePrivateChannels();
   for (let t in e) R.set(t, N(e[t]))
 }
-let P = (i = [], s = [], r = [], () => {
+let P = (s = [], i = [], r = [], () => {
   let e = R.values("FAVORITE"),
     t = R.values("DEFAULT");
-  return (i !== e || s !== t) && (r = [], e.forEach(e => {
+  return (s !== e || i !== t) && (r = [], e.forEach(e => {
     let {
       channelId: t
     } = e;
     return r.push(t)
-  }), i = e, t.forEach(e => {
+  }), s = e, t.forEach(e => {
     let {
       channelId: t
     } = e;
     return r.push(t)
-  }), s = t), r
+  }), i = t), r
 });
 class y extends c.default.Store {
   initialize() {
@@ -99,9 +99,9 @@ class y extends c.default.Store {
     return R.values().forEach(t => {
       let {
         channelId: n,
-        lastMessageId: i
+        lastMessageId: s
       } = t;
-      e[n] = i
+      e[n] = s
     }), e
   }
 }
@@ -139,8 +139,8 @@ var O = new y(f.default, {
       message: n
     } = e;
     if (!R.has(t)) return !1;
-    let i = C.default.getChannel(t);
-    return null != i && R.set(t, N(i, n.id))
+    let s = C.default.getChannel(t);
+    return null != s && R.set(t, N(s, n.id))
   },
   GUILD_CREATE: function(e) {
     let t = e.guild.id;

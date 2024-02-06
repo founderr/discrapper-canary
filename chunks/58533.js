@@ -7,8 +7,8 @@ i.r(t), i.d(t, {
 var a = i("37983"),
   l = i("884691"),
   n = i("516555"),
-  o = i("907002"),
-  s = i("458960"),
+  s = i("907002"),
+  o = i("458960"),
   r = i("430568"),
   u = i("526887"),
   d = i("140708"),
@@ -37,7 +37,7 @@ function E(e) {
       src: e,
       colorize: !1
     }]
-  }, [i.name, i.id]), P = _.x - _.width / 2 * .5, L = _.y - _.height / 2 * .5, M = (0, o.useSpring)({
+  }, [i.name, i.id]), P = _.x - _.width / 2 * .5, L = _.y - _.height / 2 * .5, M = (0, s.useSpring)({
     from: {
       y: E.y
     },
@@ -46,7 +46,7 @@ function E(e) {
     },
     config: {
       duration: 450,
-      easing: s.default.Easing.in(s.default.Easing.exp)
+      easing: o.default.Easing.in(o.default.Easing.exp)
     },
     onChange: e => {
       let {
@@ -54,7 +54,7 @@ function E(e) {
       } = e;
       C(t)
     }
-  }), y = (0, o.useSpring)({
+  }), y = (0, s.useSpring)({
     from: {
       x: E.x,
       scale: 1,
@@ -67,7 +67,7 @@ function E(e) {
     },
     config: {
       duration: 450,
-      easing: s.default.Easing.in(s.default.Easing.ease)
+      easing: o.default.Easing.in(o.default.Easing.ease)
     },
     onRest: () => {
       (0, d.clearReactionPickerAnimation)(t, i.name, i.id)
@@ -98,12 +98,12 @@ function E(e) {
       spriteWidth: f.COMMON_CONFETTI_MAX_SPRITE_SIZE,
       spriteHeight: f.COMMON_CONFETTI_MAX_SPRITE_SIZE
     }), (0, a.jsx)(c.default, {
-      children: (0, a.jsx)(o.animated.div, {
+      children: (0, a.jsx)(s.animated.div, {
         style: {
           ...M
         },
         className: T.emojiContainer,
-        children: (0, a.jsx)(o.animated.div, {
+        children: (0, a.jsx)(s.animated.div, {
           style: {
             ...y,
             opacity: y.opacity

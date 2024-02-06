@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   UNSELECTED_PREMIUM_TYPE_OVERRIDE: function() {
-    return w
+    return k
   },
   PREMIUM_TYPE_OVERRIDE_OPTIONS: function() {
     return V
@@ -183,9 +183,9 @@ n.r(t), n.d(t, {
 }), n("222007");
 var i, s, r, a, o, l, u, d, c, f, _, h, g, m, E, p, v, S, T, I, C, A, y, N, R, D, O, P, b, L, M = n("78345"),
   U = n("49111"),
-  k = n("958706");
+  w = n("958706");
 (p = i || (i = {}))[p.TIER_1 = 1] = "TIER_1", p[p.TIER_2 = 2] = "TIER_2", p[p.TIER_0 = 3] = "TIER_0";
-let w = void 0,
+let k = void 0,
   V = [{
     value: null,
     label: "Non-Nitro"
@@ -457,7 +457,7 @@ let em = Object.freeze({
     [U.BoostedGuildTiers.NONE]: {
       features: [],
       limits: {
-        emoji: k.EMOJI_MAX_SLOTS,
+        emoji: w.EMOJI_MAX_SLOTS,
         bitrate: U.BITRATE_MAX,
         fileSize: U.MAX_ATTACHMENT_SIZE,
         screenShareQualityFramerate: 30,

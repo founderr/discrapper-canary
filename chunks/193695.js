@@ -22,9 +22,9 @@ var a = s("37983"),
   g = s("669491"),
   x = s("77078"),
   C = s("125667"),
-  T = s("731898"),
-  _ = s("419135"),
-  S = s("206230"),
+  _ = s("731898"),
+  S = s("419135"),
+  T = s("206230"),
   p = s("651693"),
   E = s("605160"),
   N = s("875978"),
@@ -76,9 +76,9 @@ var a = s("37983"),
   eg = s("810758"),
   ex = s("390083"),
   eC = s("49111"),
-  eT = s("724210"),
-  e_ = s("648564"),
-  eS = s("719347"),
+  e_ = s("724210"),
+  eS = s("648564"),
+  eT = s("719347"),
   ep = s("782340"),
   eE = s("552175"),
   eN = s("590787"),
@@ -95,7 +95,7 @@ let eA = 26,
 function ej(e) {
   let {
     shouldAnimate: t = !1
-  } = e, s = (0, f.useStateFromStores)([S.default], () => S.default.useReducedMotion);
+  } = e, s = (0, f.useStateFromStores)([T.default], () => T.default.useReducedMotion);
   return (0, a.jsxs)("div", {
     className: eE.startTheConversation,
     children: [(0, a.jsx)(Y.default, {
@@ -121,8 +121,8 @@ var eR = n.memo(function(e) {
     messageCount: h,
     unreadCount: g,
     firstMessage: C,
-    firstMessageLoaded: _,
-    firstMedia: S,
+    firstMessageLoaded: S,
+    firstMedia: T,
     firstMediaIsEmbed: p
   } = function(e) {
     let {
@@ -161,12 +161,12 @@ var eR = n.memo(function(e) {
   }), E = (0, f.useStateFromStores)([H.default], () => H.default.getChannel(d.parent_id)), {
     ref: N,
     height: M
-  } = (0, T.default)(), A = (0, ec.useForumPostComposerStore)(e => e.setCardHeight), [v, I] = n.useState(162);
+  } = (0, _.default)(), A = (0, ec.useForumPostComposerStore)(e => e.setCardHeight), [v, I] = n.useState(162);
   n.useEffect(() => {
     null != M && (A(s, M + eA), I(M))
-  }, [N, M, A, s, I, _]), n.useEffect(() => {
+  }, [N, M, A, s, I, S]), n.useEffect(() => {
     null == i || i(u.current, s)
-  }, [i, s, _]);
+  }, [i, s, S]);
   let j = n.useRef(null),
     {
       handleLeftClick: R,
@@ -212,7 +212,7 @@ var eR = n.memo(function(e) {
       children: [(0, a.jsx)("div", {
         ref: N,
         className: eE.contentContainer,
-        children: _ ? (0, a.jsx)(eO, {
+        children: S ? (0, a.jsx)(eO, {
           parentChannel: E,
           channel: d,
           firstMessage: C,
@@ -221,9 +221,9 @@ var eR = n.memo(function(e) {
           facepileRef: j,
           onClick: R
         }) : (0, a.jsx)(em.ForumPostContentPlaceholder, {})
-      }), _ ? (null == C ? void 0 : C.blocked) || null == S ? null : (0, a.jsx)(eH, {
+      }), S ? (null == C ? void 0 : C.blocked) || null == T ? null : (0, a.jsx)(eH, {
         channel: d,
-        firstMedia: S,
+        firstMedia: T,
         firstMessage: C,
         isEmbed: p,
         contentHeight: v
@@ -321,7 +321,7 @@ function eL(e) {
     hasUnreads: c
   } = (0, ea.useForumPostReadStates)(s), m = (0, f.useStateFromStores)([et.default], () => et.default.getFirstNoReplyThreadId()), h = (0, w.useIsNonModInLockedThread)(s), g = (0, I.useNullableMessageAuthor)(u);
   if (n > 0) {
-    var C, T;
+    var C, _;
     return (0, a.jsxs)(x.Clickable, {
       onClick: e => {
         null != u && null != s.parent_id && (e.stopPropagation(), (0, ei.trackForumPostClicked)({
@@ -332,7 +332,7 @@ function eL(e) {
             page: eC.AnalyticsPages.GUILD_CHANNEL,
             section: eC.AnalyticsSections.FORUM_CHANNEL_POST
           }
-        }), e.shiftKey ? (0, P.transitionToThreadMessage)(s, u.id, e_.OpenThreadAnalyticsLocations.BROWSER) : y.default.openThreadAsSidebar({
+        }), e.shiftKey ? (0, P.transitionToThreadMessage)(s, u.id, eS.OpenThreadAnalyticsLocations.BROWSER) : y.default.openThreadAsSidebar({
           guildId: s.guild_id,
           channelId: s.id,
           baseChannelId: s.parent_id,
@@ -344,7 +344,7 @@ function eL(e) {
         }))
       },
       children: [(0, a.jsxs)(x.HiddenVisually, {
-        children: ["Latest message:", null != g ? null !== (C = g.nick) && void 0 !== C ? C : ep.default.Messages.UNKNOWN_USER : null, " ", null == (T = null == u ? void 0 : u.content) ? "" : T.length > 120 ? "".concat(T.substring(0, 120), "...") : T]
+        children: ["Latest message:", null != g ? null !== (C = g.nick) && void 0 !== C ? C : ep.default.Messages.UNKNOWN_USER : null, " ", null == (_ = null == u ? void 0 : u.content) ? "" : _.length > 120 ? "".concat(_.substring(0, 120), "...") : _]
       }), (0, a.jsxs)(x.FocusBlock, {
         className: eE.replies,
         children: [(0, a.jsx)(ew, {
@@ -419,7 +419,7 @@ function eP(e) {
   } = (0, ea.useForumPostReadStates)(t), r = function(e) {
     let t = (0, f.useStateFromStores)([er.default], () => er.default.getHasSearchResults(e.parent_id)),
       s = (0, f.useStateFromStores)([er.default], () => er.default.getSearchQuery(e.parent_id)),
-      a = n.useMemo(() => (0, _.createASTHighlighter)(t && null != s ? s : ""), [t, s]),
+      a = n.useMemo(() => (0, S.createASTHighlighter)(t && null != s ? s : ""), [t, s]),
       l = n.useMemo(() => (0, v.default)({
         content: e.name,
         embeds: []
@@ -470,7 +470,7 @@ let ey = n.memo(function(e) {
       renderedContent: ee.default.stringify(l, s)
     } : (0, Q.renderSingleLineMessage)(l, h, u, r(eE.mostRecentMessageContent, eM.inlineFormat, eM.smallFontSize), {
       iconClass: eE.messageContentIcon,
-      iconSize: eS.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+      iconSize: eT.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
     });
     C = null != t ? (0, a.jsx)(x.Text, {
       variant: "text-sm/semibold",
@@ -489,20 +489,20 @@ let ey = n.memo(function(e) {
       children: ep.default.Messages.FORUM_CHANNEL_MOST_RECENT_MESSAGE_DELETED
     }) : null
   }
-  let T = null != o ? null !== (t = o.nick) && void 0 !== t ? t : ep.default.Messages.UNKNOWN_USER : null,
-    _ = (0, b.useUsernameHook)(null == l ? void 0 : l.author, s.id, s.guild_id, !0)(null != o ? o : void 0)((0, a.jsxs)(a.Fragment, {
-      children: [null != T ? T : "", null != l ? ":" : ""]
+  let _ = null != o ? null !== (t = o.nick) && void 0 !== t ? t : ep.default.Messages.UNKNOWN_USER : null,
+    S = (0, b.useUsernameHook)(null == l ? void 0 : l.author, s.id, s.guild_id, !0)(null != o ? o : void 0)((0, a.jsxs)(a.Fragment, {
+      children: [null != _ ? _ : "", null != l ? ":" : ""]
     }), s.id);
   return (0, a.jsx)(X.ObscuredDisplayContext.Provider, {
     value: (0, M.default)(c, d),
     children: (0, a.jsxs)("div", {
       className: eE.mostRecentMessage,
-      children: [null == T || g ? null : (0, a.jsx)("div", {
+      children: [null == _ || g ? null : (0, a.jsx)("div", {
         className: eE.mostRecentMessageAuthor,
         children: (0, a.jsx)(x.Text, {
           tag: "span",
           variant: "text-sm/semibold",
-          children: _
+          children: S
         })
       }), (0, a.jsx)(x.FocusBlock, {
         children: C
@@ -523,12 +523,12 @@ function eD(e) {
   } = (0, j.default)(t), m = (0, F.findReactionIndex)(s.reactions, i) >= 0, h = !m && !u, {
     ref: g,
     width: x
-  } = (0, T.default)(), [C, _] = n.useState(10), [S, p] = n.useState(!0);
+  } = (0, _.default)(), [C, S] = n.useState(10), [T, p] = n.useState(!0);
   return n.useEffect(() => {
-    if (null != x) _(Math.floor((x - 78) / 66)), p(!1)
+    if (null != x) S(Math.floor((x - 78) / 66)), p(!1)
   }, [x, s.reactions, i]), (0, a.jsxs)("div", {
     className: r(eE.reactionRow, {
-      [eE.loading]: S
+      [eE.loading]: T
     }),
     ref: g,
     children: [h && null != i ? (0, a.jsx)(L.Reaction, {
@@ -631,7 +631,7 @@ function ek(e) {
     firstMessage: s,
     isNew: n,
     containsTags: l
-  } = e, r = t.hasFlag(eT.ChannelFlags.PINNED), i = (0, f.useStateFromStores)([V.default], () => null != s && V.default.isBlocked(s.author.id));
+  } = e, r = t.hasFlag(e_.ChannelFlags.PINNED), i = (0, f.useStateFromStores)([V.default], () => null != s && V.default.isBlocked(s.author.id));
   return (0, a.jsxs)("div", {
     className: eE.header,
     children: [!l && r && (0, a.jsx)("div", {
@@ -670,10 +670,10 @@ function eH(e) {
     width: m,
     height: h,
     alt: g
-  } = s, [C, T] = (0, E.useShouldObscure)({
+  } = s, [C, _] = (0, E.useShouldObscure)({
     media: s,
     channel: t
-  }), _ = (0, E.getObscuredAlt)(T);
+  }), S = (0, E.getObscuredAlt)(_);
   return (0, a.jsx)(x.FocusBlock, {
     enabled: !0,
     children: (0, a.jsxs)("div", {
@@ -692,7 +692,7 @@ function eH(e) {
         minWidth: 143,
         minHeight: i,
         maxHeight: i,
-        alt: null != g && C ? _ : g,
+        alt: null != g && C ? S : g,
         imageClassName: r({
           [eE.obscured]: C
         })
@@ -703,7 +703,7 @@ function eH(e) {
         minWidth: 143,
         minHeight: i,
         maxHeight: i,
-        alt: null != g && C ? _ : g,
+        alt: null != g && C ? S : g,
         autoPlay: d,
         animated: u && !C && o,
         imageContainerClassName: r({
@@ -711,7 +711,7 @@ function eH(e) {
         })
       }), C && (0, a.jsx)(eu.default, {
         iconClassname: eE.obscuredTag,
-        obscureReason: T
+        obscureReason: _
       })]
     })
   })

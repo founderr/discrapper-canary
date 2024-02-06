@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var l = n("118810"),
-  a = n("77078"),
+var a = n("118810"),
+  l = n("77078"),
   s = n("272030"),
   r = n("798609"),
   u = n("861370"),
@@ -28,22 +28,22 @@ function N(e) {
       target: m,
       attachment: O,
       onSelect: A,
-      onHeightUpdate: C
+      onHeightUpdate: v
     } = e,
-    G = m;
+    C = m;
   if (null != O) N = n = O.url;
   else
     for (;
-      (0, l.isElement)(G);)(0, l.isElement)(G, HTMLImageElement) && null != G.src && (N = G.src), (0, l.isElement)(G, HTMLAnchorElement) && null != G.href && (n = G.href, S = G.textContent), G = G.parentNode;
-  let v = null === (t = document.getSelection()) || void 0 === t ? void 0 : t.toString(),
-    M = (0, d.default)(v),
-    R = (0, c.default)(v),
+      (0, a.isElement)(C);)(0, a.isElement)(C, HTMLImageElement) && null != C.src && (N = C.src), (0, a.isElement)(C, HTMLAnchorElement) && null != C.href && (n = C.href, S = C.textContent), C = C.parentNode;
+  let G = null === (t = document.getSelection()) || void 0 === t ? void 0 : t.toString(),
+    M = (0, d.default)(G),
+    R = (0, c.default)(G),
     g = (0, I.default)({
       commandType: r.ApplicationCommandType.MESSAGE,
       commandTargetId: h.id,
       channel: _,
       guildId: void 0,
-      onHeightUpdate: C
+      onHeightUpdate: v
     }),
     y = (0, E.default)(h, _),
     P = (0, p.default)(h, _),
@@ -54,20 +54,20 @@ function N(e) {
       label: f.default.Messages.COPY_ID_MESSAGE,
       shiftId: "".concat(h.channel_id, "-").concat(h.id)
     });
-  return (0, i.jsxs)(a.Menu, {
+  return (0, i.jsxs)(l.Menu, {
     navId: "message",
     onClose: s.closeContextMenu,
     "aria-label": f.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
     onSelect: A,
-    children: [(0, i.jsx)(a.MenuGroup, {
+    children: [(0, i.jsx)(l.MenuGroup, {
       children: M
-    }), (0, i.jsx)(a.MenuGroup, {
+    }), (0, i.jsx)(l.MenuGroup, {
       children: R
-    }), (0, i.jsxs)(a.MenuGroup, {
+    }), (0, i.jsxs)(l.MenuGroup, {
       children: [g, y, P, x]
-    }), (0, i.jsx)(a.MenuGroup, {
+    }), (0, i.jsx)(l.MenuGroup, {
       children: b
-    }), (0, i.jsx)(a.MenuGroup, {
+    }), (0, i.jsx)(l.MenuGroup, {
       children: D
     })]
   })

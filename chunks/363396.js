@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return R
   },
   pinMessage: function() {
-    return x
+    return O
   },
   publishMessage: function() {
-    return O
+    return x
   },
   retrySendMessage: function() {
     return y
@@ -91,7 +91,7 @@ function R(e, t) {
   (0, I.default)(e.id, t.id)
 }
 
-function x(e, t, n) {
+function O(e, t, n) {
   if (!1 === t.pinned) {
     n.shiftKey ? a.default.pinMessage(e, t.id) : l.default.confirmPin(e, t);
     return
@@ -99,7 +99,7 @@ function x(e, t, n) {
   n.shiftKey ? a.default.unpinMessage(e, t.id) : l.default.confirmUnpin(e, t)
 }
 
-function O(e, t) {
+function x(e, t) {
   (0, s.default)(e.id, t.id)
 }
 

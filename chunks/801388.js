@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var r = n("37983");
@@ -10,15 +10,15 @@ var i = n("414456"),
   s = n.n(i),
   a = n("641078"),
   l = n("78938"),
-  o = n("212942");
+  u = n("212942");
 
-function u(e) {
+function o(e) {
   let {
     isNitroTab: t = !1
   } = e, n = (0, a.useIsEligibleForBogoPromotion)(), i = (0, a.getBOGOPillCopy)();
   return n ? (0, r.jsx)(l.default, {
     className: s({
-      [o.nitroTabBadgeContainer]: t
+      [u.nitroTabBadgeContainer]: t
     }),
     copy: i
   }) : null

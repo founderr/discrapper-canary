@@ -10,8 +10,8 @@ var s = n("37983"),
   l = n("292915"),
   i = n("77078"),
   u = n("389480"),
-  o = n("191191"),
-  c = n("782340"),
+  c = n("191191"),
+  o = n("782340"),
   d = n("895576");
 let f = [54, 8, 8, 8];
 
@@ -30,10 +30,10 @@ function m(e) {
       className: d.customGiftHeaderText,
       children: [(0, s.jsx)(i.Text, {
         variant: "text-md/bold",
-        children: c.default.Messages.GIFT_SELECT_SOUND
+        children: o.default.Messages.GIFT_SELECT_SOUND
       }), (0, s.jsx)(i.Text, {
         variant: "text-sm/normal",
-        children: c.default.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
+        children: o.default.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
       })]
     }), (0, s.jsx)("div", {
       className: d.searchAndSound,
@@ -50,7 +50,7 @@ function m(e) {
         closePopout: t
       } = e;
       return (0, s.jsx)(i.Dialog, {
-        children: (0, s.jsx)(o.default, {
+        children: (0, s.jsx)(c.default, {
           suppressPlaySound: !0,
           shouldShowUpsell: !1,
           guildId: null,
@@ -77,7 +77,7 @@ function m(e) {
         }), (0, s.jsx)(i.Text, {
           className: d.text,
           variant: "text-sm/semibold",
-          children: c.default.Messages.GIFT_SELECT_SOUND
+          children: o.default.Messages.GIFT_SELECT_SOUND
         })]
       }) : (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(i.Text, {

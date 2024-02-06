@@ -35,8 +35,8 @@ var a = s("37983"),
   p = s("369158"),
   U = s("49111"),
   v = s("843455"),
-  j = s("782340"),
-  P = s("244317");
+  P = s("782340"),
+  j = s("244317");
 let y = "WELCOME_CHANNEL",
   b = e => {
     var t;
@@ -86,14 +86,14 @@ let y = "WELCOME_CHANNEL",
     }) : (0, a.jsx)(B, {
       width: 24,
       height: 24,
-      className: P.channelIcon
+      className: j.channelIcon
     }) : (0, a.jsx)(D.default, {
       width: 24,
       height: 24,
-      className: P.warningIcon
+      className: j.warningIcon
     }), (0, a.jsxs)("div", {
-      className: i(P.welcomeChannel, {
-        [P.dragging]: A
+      className: i(j.welcomeChannel, {
+        [j.dragging]: A
       }),
       ref: M,
       "data-dnd-name": o.description,
@@ -114,21 +114,21 @@ let y = "WELCOME_CHANNEL",
         })
       },
       children: [l, (0, a.jsxs)("div", {
-        className: P.channelDescriptionWrapper,
+        className: j.channelDescriptionWrapper,
         children: [(0, a.jsx)(c.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
           children: o.description
         }), (0, a.jsxs)(c.Text, {
-          className: b ? void 0 : P.channelWarning,
+          className: b ? void 0 : j.channelWarning,
           variant: "text-xs/normal",
           color: "header-secondary",
           children: [(0, a.jsx)(B, {
-            className: P.channelTitleIcon,
+            className: j.channelTitleIcon,
             width: 12,
             height: 12
           }), (0, a.jsx)("span", {
-            children: b ? F : j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INVALID_CHANNEL
+            children: b ? F : P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INVALID_CHANNEL
           })]
         })]
       }), (0, a.jsx)(c.Button, {
@@ -148,7 +148,7 @@ let y = "WELCOME_CHANNEL",
         }, {
           onCloseRequest: () => v.NOOP_NULL
         }),
-        children: j.default.Messages.EDIT
+        children: P.default.Messages.EDIT
       }), O && (0, a.jsx)(L.default, {
         onConfirm: () => T(),
         onCancel: () => h(!1),
@@ -237,15 +237,15 @@ var B = e => {
     null != l && x.default.open(l.id, U.GuildSettingsSections.ONBOARDING)
   }, [l]);
   return null == l ? null : (0, a.jsxs)(c.FormSection, {
-    title: j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
+    title: P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
     tag: c.FormTitleTags.H1,
     children: [B && (0, a.jsx)("div", {
-      className: P.notice,
+      className: j.notice,
       children: (0, a.jsxs)(c.Text, {
         variant: "text-md/normal",
         children: [(0, a.jsx)(D.default, {
-          className: P.noticeIcon
-        }), j.default.Messages.WELCOME_SCREEN_DEPRECATED.format({
+          className: j.noticeIcon
+        }), P.default.Messages.WELCOME_SCREEN_DEPRECATED.format({
           onboardingLink: e => (0, a.jsx)(h.default, {
             onClick: W,
             children: e
@@ -253,9 +253,9 @@ var B = e => {
         })]
       })
     }), (0, a.jsx)(c.Text, {
-      className: P.description,
+      className: j.description,
       variant: "text-sm/normal",
-      children: j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SETTINGS_TEXT
+      children: P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SETTINGS_TEXT
     }), (0, a.jsx)(p.default, {
       enabled: y,
       onPreview: (null == G ? void 0 : G.length) === 0 ? void 0 : () => {
@@ -274,38 +274,38 @@ var B = e => {
         V(!y)
       } : void 0,
       animateStatus: L,
-      firstLine: y ? j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED : j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PROGRESS_WILL_SAVE,
-      secondLine: y ? j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED_SECOND_LINE : j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLE_REMINDER
+      firstLine: y ? P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED : P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PROGRESS_WILL_SAVE,
+      secondLine: y ? P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLED_SECOND_LINE : P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ENABLE_REMINDER
     }), (0, a.jsxs)("div", {
-      className: P.previewContainer,
+      className: j.previewContainer,
       children: [(0, a.jsxs)("div", {
-        className: P.welcomeHeader,
+        className: j.welcomeHeader,
         children: [(0, a.jsx)(O.default, {
           size: O.default.Sizes.LARGER,
-          className: P.icon,
+          className: j.icon,
           guild: l,
           animate: !0,
           tabIndex: -1
         }), (0, a.jsx)(c.Heading, {
-          className: P.welcomeTitle,
+          className: j.welcomeTitle,
           variant: "heading-xl/semibold",
-          children: j.default.Messages.WELCOME_SCREEN_TITLE.format({
+          children: P.default.Messages.WELCOME_SCREEN_TITLE.format({
             guildName: l.name,
             guildNameHook: (e, t) => (0, a.jsxs)("span", {
               children: [(0, a.jsx)(C.default, {
                 guild: l,
-                className: P.headerGuildBadge,
-                flowerStarClassName: P.flowerStar
+                className: j.headerGuildBadge,
+                flowerStarClassName: j.flowerStar
               }), (0, a.jsx)("strong", {
                 children: e
               })]
             }, t)
           })
         }), (0, a.jsx)("div", {
-          className: P.descriptionWrapper,
+          className: j.descriptionWrapper,
           children: (0, a.jsx)(c.TextArea, {
-            className: P.descriptionInput,
-            placeholder: j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_DESCRIPTION_PLACEHOLDER,
+            className: j.descriptionInput,
+            placeholder: P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_DESCRIPTION_PLACEHOLDER,
             onChange: e => {
               (0, g.updateSettings)({
                 description: e
@@ -323,15 +323,15 @@ var B = e => {
           })
         })]
       }), (0, a.jsx)(c.FormDivider, {
-        className: P.divider
+        className: j.divider
       }), (0, a.jsxs)("div", {
-        className: P.welcomeChannels,
+        className: j.welcomeChannels,
         children: [(0, a.jsx)(c.FormTitle, {
-          children: j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_RECOMMENDED_CHANNELS_TITLE
+          children: P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_RECOMMENDED_CHANNELS_TITLE
         }), (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
-          className: P.addChannelSubtext,
-          children: j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_RECOMMENDED_CHANNELS_DESCRIPTION
+          className: j.addChannelSubtext,
+          children: P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_RECOMMENDED_CHANNELS_DESCRIPTION
         }), null == G ? void 0 : G.map((e, t) => (0, a.jsx)(b, {
           guildId: l.id,
           welcomeChannel: e,
@@ -352,10 +352,10 @@ var B = e => {
           }, {
             onCloseRequest: () => v.NOOP_NULL
           }),
-          className: P.addChannelButton,
+          className: j.addChannelButton,
           disabled: B,
           color: c.Button.Colors.PRIMARY,
-          children: j.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ADD_RECOMMENDED_CHANNEL
+          children: P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ADD_RECOMMENDED_CHANNEL
         })]
       })]
     })]

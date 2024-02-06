@@ -8,8 +8,8 @@ var l = n("37983");
 n("884691");
 var u = n("446674"),
   a = n("77078"),
-  d = n("817963"),
-  i = n("398604"),
+  i = n("817963"),
+  d = n("398604"),
   r = n("322224"),
   s = n("397680"),
   o = n("466148"),
@@ -23,11 +23,11 @@ function E(e) {
     channel: f
   } = e, _ = null != n, {
     canManageGuildEvent: T
-  } = (0, d.useManageResourcePermissions)(null != f ? f : E), [S, v] = (0, u.useStateFromStoresArray)([i.default], () => [i.default.isActive(t), i.default.getGuildScheduledEvent(t)]), g = (0, s.default)(n, null == v ? void 0 : v.id), I = null != v && T(v), N = (null == v ? void 0 : v.recurrence_rule) != null && !_, {
+  } = (0, i.useManageResourcePermissions)(null != f ? f : E), [v, S] = (0, u.useStateFromStoresArray)([d.default], () => [d.default.isActive(t), d.default.getGuildScheduledEvent(t)]), g = (0, s.default)(n, null == S ? void 0 : S.id), I = null != S && T(S), N = (null == S ? void 0 : S.recurrence_rule) != null && !_, {
     startTime: m
   } = (0, o.default)(t, n);
-  if (!I || S && !N && !_ || _ && !_ || null == v) return null;
-  if (S && _) {
+  if (!I || v && !N && !_ || _ && !_ || null == S) return null;
+  if (v && _) {
     var h;
     if (null == m) return null;
     let e = new Date(null !== (h = null == g ? void 0 : g.scheduled_start_time) && void 0 !== h ? h : m);

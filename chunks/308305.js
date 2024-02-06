@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var i = s("37983"),
-  l = s("884691"),
-  n = s("77078"),
+  n = s("884691"),
+  l = s("77078"),
   a = s("519705"),
   r = s("133403"),
   d = s("679653"),
@@ -20,7 +20,7 @@ var i = s("37983"),
   S = s("49111"),
   E = s("782340"),
   m = s("296884");
-class T extends l.PureComponent {
+class T extends n.PureComponent {
   highlight() {
     this.setState({
       highlight: !0
@@ -34,8 +34,8 @@ class T extends l.PureComponent {
   setMessageNotification(e, t, s) {
     let {
       channel: i
-    } = this.props, l = i.getGuildId();
-    null != l && a.default.updateChannelOverrideSettings(l, i.id, {
+    } = this.props, n = i.getGuildId();
+    null != n && a.default.updateChannelOverrideSettings(n, i.id, {
       message_notifications: e,
       muted: null != t && t
     }, s)
@@ -47,16 +47,16 @@ class T extends l.PureComponent {
     let {
       messageNotifications: t,
       guildMuted: s,
-      muted: l,
+      muted: n,
       guildMessageNotifications: a,
       checkboxColor: r
     } = this.props, d = t === e;
     (null == t || t === S.UserNotificationSettings.NULL) && e === a && (d = !0);
-    let o = n.Checkbox.Types.INVERTED;
-    return (l || t === S.UserNotificationSettings.NULL || null == t) && (o = n.Checkbox.Types.GHOST), (0, i.jsx)(n.Checkbox, {
+    let o = l.Checkbox.Types.INVERTED;
+    return (n || t === S.UserNotificationSettings.NULL || null == t) && (o = l.Checkbox.Types.GHOST), (0, i.jsx)(l.Checkbox, {
       value: !s && d,
       disabled: s,
-      shape: n.Checkbox.Shapes.ROUND,
+      shape: l.Checkbox.Shapes.ROUND,
       color: r,
       type: o,
       onChange: this.handleRadioChange.bind(this, e)
@@ -68,7 +68,7 @@ class T extends l.PureComponent {
       channel: s
     } = this.props;
     null != s.parent_id && (e = u.default.getChannel(s.parent_id));
-    let l = (0, o.getChannelIconComponent)(s);
+    let n = (0, o.getChannelIconComponent)(s);
     if (s.type === S.ChannelTypes.GUILD_CATEGORY && null != s.guild_id && "" !== s.guild_id) {
       let e = c.default.getCategories(s.guild_id);
       t = E.default.Messages.NUM_CHANNELS.format({
@@ -80,15 +80,15 @@ class T extends l.PureComponent {
     return (0, i.jsxs)(f.default, {
       grow: 1,
       className: m.nameContainer,
-      children: [null != l ? (0, i.jsx)(l, {
+      children: [null != n ? (0, i.jsx)(n, {
         className: m.icon
       }) : null, (0, i.jsxs)("div", {
         className: m.channelNameContainer,
-        children: [(0, i.jsx)(n.Text, {
+        children: [(0, i.jsx)(l.Text, {
           variant: "text-md/semibold",
           className: m.channelName,
           children: (0, d.computeChannelName)(s, N.default, h.default)
-        }), (0, i.jsx)(n.Text, {
+        }), (0, i.jsx)(l.Text, {
           variant: "text-xs/normal",
           className: m.channelNameByline,
           children: t
@@ -130,10 +130,10 @@ class T extends l.PureComponent {
         grow: 0,
         shrink: 0,
         className: m.checkboxMute,
-        children: (0, i.jsx)(n.Checkbox, {
+        children: (0, i.jsx)(l.Checkbox, {
           value: e,
-          shape: n.Checkbox.Shapes.BOX,
-          type: n.Checkbox.Types.INVERTED,
+          shape: l.Checkbox.Shapes.BOX,
+          type: l.Checkbox.Types.INVERTED,
           onChange: this.handleMute
         })
       })]
@@ -143,7 +143,7 @@ class T extends l.PureComponent {
     let {
       highlight: e
     } = this.state;
-    return (0, i.jsxs)(n.Card, {
+    return (0, i.jsxs)(l.Card, {
       outline: !0,
       editable: !0,
       className: e ? m.overrideHighlight : m.override,

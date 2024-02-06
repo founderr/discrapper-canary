@@ -67,7 +67,7 @@ function U() {
 let v = r.debounce(() => {
   let e = !1;
   m && !(m = x().length > 0) && (e = !0), [...g].forEach(t => {
-    r.isEqual(P(t), function(e) {
+    r.isEqual(j(t), function(e) {
       return O.find(t => {
         let {
           id: s
@@ -78,7 +78,7 @@ let v = r.debounce(() => {
   }), 0 === g.size && (L = !1), R && r.isEqual(M, G) && (e = !0, R = !1), e && B.emitChange()
 }, 500);
 
-function j(e, t) {
+function P(e, t) {
   let s = C.indexOf(e);
   if (s < 0) return !1;
   let a = {
@@ -88,7 +88,7 @@ function j(e, t) {
   C[s] = a, C = [...C], L = !0, g.add(a.id), v()
 }
 
-function P(e) {
+function j(e) {
   return C.find(t => {
     let {
       id: s
@@ -105,7 +105,7 @@ function y(e) {
   a = S.default.getProps().guild;
   let s = [];
   null != a && (s = r(a.roles).values().value()), g.forEach(e => {
-    let t = P(e),
+    let t = j(e),
       a = -1,
       n = s.find((t, s) => {
         let {
@@ -157,7 +157,7 @@ class b extends u.default.Store {
     return this.hasChanges()
   }
   getRole(e) {
-    return P(e)
+    return j(e)
   }
   getPermissionSearchQuery() {
     return n
@@ -176,19 +176,19 @@ let B = new b(c.default, __OVERLAY__ ? {} : {
       roles: t
     } = e;
     if (null != C && t.length !== C.length) return !1;
-    C = t.map(e => P(e)).filter(T.isNotNullish), m = !0, v()
+    C = t.map(e => j(e)).filter(T.isNotNullish), m = !0, v()
   },
   GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function(e) {
     let {
       id: t,
       flag: s,
       allow: a
-    } = e, n = P(t);
+    } = e, n = j(t);
     if (null == n) return !1;
     let {
       permissions: l
     } = n;
-    return j(n, {
+    return P(n, {
       permissions: l = a ? o.default.add(l, s) : o.default.remove(l, s)
     })
   },
@@ -196,16 +196,16 @@ let B = new b(c.default, __OVERLAY__ ? {} : {
     let {
       id: t,
       permissions: s
-    } = e, a = P(t);
-    return null != a && j(a, {
+    } = e, a = j(t);
+    return null != a && P(a, {
       permissions: s
     })
   },
   GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS: function(e) {
     let {
       id: t
-    } = e, s = P(t);
-    return null != s && j(s, {
+    } = e, s = j(t);
+    return null != s && P(s, {
       permissions: I.default.NONE
     })
   },
@@ -213,8 +213,8 @@ let B = new b(c.default, __OVERLAY__ ? {} : {
     let {
       id: t,
       name: s
-    } = e, a = P(t);
-    return null != a && j(a, {
+    } = e, a = j(t);
+    return null != a && P(a, {
       name: s
     })
   },
@@ -222,8 +222,8 @@ let B = new b(c.default, __OVERLAY__ ? {} : {
     let {
       id: t,
       description: s
-    } = e, a = P(t);
-    return null != a && j(a, {
+    } = e, a = j(t);
+    return null != a && P(a, {
       description: s
     })
   },
@@ -231,8 +231,8 @@ let B = new b(c.default, __OVERLAY__ ? {} : {
     let {
       id: t,
       color: s
-    } = e, a = 0 === s ? null : (0, d.int2hex)(s), n = P(t);
-    return null != n && j(n, {
+    } = e, a = 0 === s ? null : (0, d.int2hex)(s), n = j(t);
+    return null != n && P(n, {
       color: s,
       colorString: a
     })
@@ -242,8 +242,8 @@ let B = new b(c.default, __OVERLAY__ ? {} : {
       id: t,
       hoist: s,
       mentionable: a
-    } = e, n = P(t);
-    return null != n && j(n, {
+    } = e, n = j(t);
+    return null != n && P(n, {
       hoist: s,
       mentionable: a
     })
@@ -253,8 +253,8 @@ let B = new b(c.default, __OVERLAY__ ? {} : {
       id: t,
       icon: s,
       unicodeEmoji: a
-    } = e, n = P(t);
-    return null != n && j(n, {
+    } = e, n = j(t);
+    return null != n && P(n, {
       icon: s,
       unicodeEmoji: a
     })
@@ -265,8 +265,8 @@ let B = new b(c.default, __OVERLAY__ ? {} : {
       searchQuery: s
     } = e;
     if (n = s, null != t) {
-      if (null != P(t.id)) {
-        j(t, t);
+      if (null != j(t.id)) {
+        P(t, t);
         return
       }
       C = [...C, t], v()
@@ -276,7 +276,7 @@ let B = new b(c.default, __OVERLAY__ ? {} : {
     let {
       roleId: t,
       roleConnectionConfigurations: s
-    } = e, a = P(t);
+    } = e, a = j(t);
     if (null == a) return !1;
     let n = M.get(a.id);
     if (r.isEqual(n, s)) return !1;
@@ -286,7 +286,7 @@ let B = new b(c.default, __OVERLAY__ ? {} : {
     let {
       roleId: t,
       roleConnectionConfigurations: s
-    } = e, a = P(t);
+    } = e, a = j(t);
     if (null == a) return !1;
     R = !0, D.add(a.id), G.set(a.id, s), v()
   },

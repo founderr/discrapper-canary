@@ -30,11 +30,11 @@ function o(e) {
     var e;
     null === (e = c.current) || void 0 === e || e.cancel(), c.current = null
   }), [n]);
-  let f = a.useCallback(e => {
+  let m = a.useCallback(e => {
       var t;
       u(!1), d.current.add(e), null === (t = c.current) || void 0 === t || t.cancel()
     }, [d, c, u]),
-    m = a.useCallback(e => {
+    f = a.useCallback(e => {
       if (d.current.delete(e), 0 === d.current.size) {
         var t;
         null === (t = c.current) || void 0 === t || t.delay()
@@ -51,11 +51,11 @@ function o(e) {
       !(d.current.size > 0) && (null === (e = c.current) || void 0 === e || e.cancel(), u(!0))
     }, [c, u]),
     g = a.useMemo(() => ({
-      onAllowIdle: m,
-      onPreventIdle: f,
+      onAllowIdle: f,
+      onPreventIdle: m,
       onActive: h,
       onForceIdle: p
-    }), [m, f, h, p]);
+    }), [f, m, h, p]);
   return (0, l.jsx)(r.Provider, {
     value: o,
     children: (0, l.jsx)(i.Provider, {

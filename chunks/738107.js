@@ -4,10 +4,10 @@ i.r(t), i.d(t, {
     return f
   },
   default: function() {
-    return o
+    return s
   }
 });
-var a, l, n, o, s = i("37983"),
+var a, l, n, s, o = i("37983"),
   r = i("884691"),
   u = i("917351"),
   d = i.n(u),
@@ -98,7 +98,7 @@ function f(e, t, i) {
       color: i,
       formatString: a
     } = this.props, l = d.omit(this.props, ["value", "digitWidth", "padStartLength", "forcePosition"]);
-    if (null == e) return (0, s.jsx)("div", {
+    if (null == e) return (0, o.jsx)("div", {
       ...l,
       style: {
         color: i,
@@ -107,26 +107,26 @@ function f(e, t, i) {
       children: null != a ? a(this.padValue(t)) : this.padValue(t)
     });
     let n = Math.max(e, t);
-    return (0, s.jsxs)("div", {
+    return (0, o.jsxs)("div", {
       ...l,
       style: {
         color: i,
         position: "relative",
         overflow: "hidden"
       },
-      children: [(0, s.jsx)("div", {
+      children: [(0, o.jsx)("div", {
         style: {
           visibility: "hidden",
           minWidth: this.getMinWidth(n)
         },
         children: this.padValue(n)
-      }), (0, s.jsx)(c.default.div, {
+      }), (0, o.jsx)(c.default.div, {
         style: {
           color: i,
           ...this.getAnimatedStyle(this.prevAnimate)
         },
         children: null != a ? a(this.padValue(e)) : this.padValue(e)
-      }), (0, s.jsx)(c.default.div, {
+      }), (0, o.jsx)(c.default.div, {
         style: {
           color: i,
           ...this.getAnimatedStyle(this.currAnimate)
@@ -154,4 +154,4 @@ function f(e, t, i) {
       nextValue: null
     }, this.prevAnimate = new c.default.Value(0), this.currAnimate = new c.default.Value(1)
   }
-}).Positions = n, o = l
+}).Positions = n, s = l

@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return v
   }
 }), n("222007");
 var l = n("917351"),
   u = n.n(l),
   a = n("446674"),
-  d = n("913144"),
-  i = n("398604"),
+  i = n("913144"),
+  d = n("398604"),
   r = n("813006"),
   s = n("730647");
 let o = !1,
@@ -39,7 +39,7 @@ class T extends a.default.Store {
   }
 }
 T.displayName = "EventDirectoryStore";
-var S = new T(d.default, {
+var v = new T(i.default, {
   EVENT_DIRECTORY_FETCH_START: function() {
     o = !0
   },
@@ -50,7 +50,7 @@ var S = new T(d.default, {
     } = e;
     o = !1;
     let l = u.sortBy([...n], [function(e) {
-        return (0, i.scheduledEventSort)(e.guild_scheduled_event)
+        return (0, d.scheduledEventSort)(e.guild_scheduled_event)
       }]),
       a = u.map(l, _);
     c[t] = a

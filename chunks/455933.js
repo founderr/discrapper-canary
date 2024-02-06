@@ -8,8 +8,8 @@ var l = n("37983");
 n("884691");
 var u = n("398351"),
   a = n.n(u),
-  d = n("866227"),
-  i = n.n(d),
+  i = n("866227"),
+  d = n.n(i),
   r = n("730290"),
   s = n("446674"),
   o = n("77078"),
@@ -18,8 +18,8 @@ var u = n("398351"),
   f = n("305961"),
   _ = n("773336"),
   T = n("398604"),
-  S = n("466148"),
-  v = n("189443"),
+  v = n("466148"),
+  S = n("189443"),
   g = n("822516"),
   I = n("745049"),
   N = n("782340");
@@ -28,13 +28,13 @@ let m = "YYYYMMDDTHHmmss",
   M = /RRULE:.*/;
 
 function p(e, t, n, u) {
-  var d, p, C;
+  var i, p, C;
   let R;
   let D = (0, s.useStateFromStores)([T.default], () => T.default.isActive(e)),
     {
       startTime: O,
       endTime: A
-    } = (0, S.default)(null != e ? e : "", u),
+    } = (0, v.default)(null != e ? e : "", u),
     L = (0, s.useStateFromStores)([T.default], () => T.default.getGuildScheduledEvent(e), [e]),
     y = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
   if (D || null == L) return null;
@@ -42,13 +42,13 @@ function p(e, t, n, u) {
     channelName: n.name,
     guildName: y.name
   }) : N.default.Messages.NOTIFICATION_TITLE_DISCORD;
-  let x = i(L.scheduled_start_time),
-    G = null != L.scheduled_end_time ? i(L.scheduled_end_time) : x,
-    V = null != L.description && "" !== L.description ? E.default.unparse(L.description, null !== (d = null == n ? void 0 : n.id) && void 0 !== d ? d : "", !0) : "",
-    U = (0, v.recurrenceRuleFromServer)(L.recurrence_rule),
+  let x = d(L.scheduled_start_time),
+    G = null != L.scheduled_end_time ? d(L.scheduled_end_time) : x,
+    V = null != L.description && "" !== L.description ? E.default.unparse(L.description, null !== (i = null == n ? void 0 : n.id) && void 0 !== i ? i : "", !0) : "",
+    U = (0, S.recurrenceRuleFromServer)(L.recurrence_rule),
     b = null != U ? (0, g.getRRule)(U) : null,
-    w = null !== (p = i(O)) && void 0 !== p ? p : x,
-    P = null !== (C = i(null != A ? A : O)) && void 0 !== C ? C : x,
+    w = null !== (p = d(O)) && void 0 !== p ? p : x,
+    P = null !== (C = d(null != A ? A : O)) && void 0 !== C ? C : x,
     j = () => {
       let e = a();
       e.createEvent({

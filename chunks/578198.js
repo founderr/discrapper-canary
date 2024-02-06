@@ -18,8 +18,8 @@ var n = s("308503"),
   l = s("295426"),
   i = s("149022"),
   r = s("42203"),
-  o = s("474643"),
-  u = s("404607"),
+  u = s("474643"),
+  o = s("404607"),
   d = s("867965");
 class c {
   constructor(e, t, s) {
@@ -76,7 +76,7 @@ class c {
     }, this.setFormOpen = e => {
       this.set({
         formOpen: e
-      }), u.default.clearForumSearch(this.channelId)
+      }), o.default.clearForumSearch(this.channelId)
     }, this.setOnboardingExpanded = e => {
       this.set({
         onboardingExpanded: e
@@ -98,7 +98,7 @@ class c {
     }, this.setTextAreaState = e => {
       this.set({
         textAreaState: e
-      }), l.default.saveDraft(this.channelId, e.textValue, o.DraftType.FirstThreadMessage)
+      }), l.default.saveDraft(this.channelId, e.textValue, u.DraftType.FirstThreadMessage)
     }, this.setHasClickedForm = e => {
       this.set({
         hasClickedForm: e
@@ -111,7 +111,7 @@ class c {
         textAreaState: (0, i.createState)(t),
         appliedTags: new Set,
         hasClickedForm: !1
-      }), u.default.clearForumSearch(this.channelId)
+      }), o.default.clearForumSearch(this.channelId)
     }, this.setFormOpenFromUserAction = () => {
       if (this.hasClickedForm) return;
       let e = r.default.getChannel(this.channelId);
@@ -121,13 +121,13 @@ class c {
       }), this.set({
         hasClickedForm: !0,
         formOpen: !0
-      }), u.default.clearForumSearch(this.channelId)
+      }), o.default.clearForumSearch(this.channelId)
     };
     let h = r.default.getChannel(e);
     if (null == h) return;
-    let f = null !== (n = o.default.getThreadSettings(h.id)) && void 0 !== n ? n : {},
+    let f = null !== (n = u.default.getThreadSettings(h.id)) && void 0 !== n ? n : {},
       m = null == h.template ? "" : h.template.trim(),
-      g = o.default.getDraft(h.id, o.DraftType.FirstThreadMessage),
+      g = u.default.getDraft(h.id, u.DraftType.FirstThreadMessage),
       S = (0, i.createState)(null != g && "" !== g.trim() ? g : m);
     this.name = null !== (a = f.name) && void 0 !== a ? a : "", c = new Set(f.appliedTags), this.appliedTags = void 0 !== c ? c : new Set, this.formOpen = this.name.length > 0, this.textAreaState = S
   }

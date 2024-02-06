@@ -43,7 +43,7 @@ function g(e) {
     lastClipsSession: h.default.getLastClipsSession(),
     remindersEnabled: h.default.getSettings().remindersEnabled,
     hasAnyClipAnimations: h.default.hasAnyClipAnimations()
-  })), x = null != C && C.newClipIds.length > 0, R = (0, E.useClipsButtonStore)(e => e.clipsButtonRef), v = (0, E.useClipsButtonStore)(e => e.setClipsButtonRef), L = (0, s.useStateFromStores)([o.default], () => o.default.hasLayers()), {
+  })), v = null != C && C.newClipIds.length > 0, x = (0, E.useClipsButtonStore)(e => e.clipsButtonRef), R = (0, E.useClipsButtonStore)(e => e.setClipsButtonRef), L = (0, s.useStateFromStores)([o.default], () => o.default.hasLayers()), {
     preventIdle: O,
     allowIdle: b
   } = (0, r.usePreventIdle)("animation");
@@ -61,12 +61,12 @@ function g(e) {
     })
   }
   return (l.useEffect(() => (M ? O() : b(), () => b()), [M, O, b]), N && ((0, c.isWindows)() || _) && T) ? (0, a.jsxs)(a.Fragment, {
-    children: [null != R && t && A && x && !(0, i.hasAnyModalOpen)() && !L && (0, a.jsx)(m.default, {
-      clipIconRef: R,
+    children: [null != x && t && A && v && !(0, i.hasAnyModalOpen)() && !L && (0, a.jsx)(m.default, {
+      clipIconRef: x,
       lastClipsSession: C,
       onOpenClipsGallery: y
     }), (0, a.jsx)("div", {
-      ref: v,
+      ref: R,
       children: (0, a.jsx)(d.Icon, {
         className: g,
         icon: u.default,

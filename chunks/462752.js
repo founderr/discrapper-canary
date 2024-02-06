@@ -79,8 +79,8 @@ function U(e) {
     headerRef: U
   } = (0, A.default)(0), {
     scrolledToTop: v,
-    handleScroll: j
-  } = (0, m.useScrolledToTop)(), P = (0, d.useStateFromStores)([N.default], () => {
+    handleScroll: P
+  } = (0, m.useScrolledToTop)(), j = (0, d.useStateFromStores)([N.default], () => {
     var e;
     return null === (e = N.default.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[s.id]
   }, [s.id, t.id]), y = (0, d.useStateFromStoresArray)([g.default], () => {
@@ -233,7 +233,7 @@ function U(e) {
     style: {
       scrollPaddingTop: _
     },
-    onScroll: j,
+    onScroll: P,
     children: (0, a.jsxs)("div", {
       className: M.contentWidth,
       children: [(0, a.jsx)("div", {
@@ -247,7 +247,7 @@ function U(e) {
           selectedSection: C.GuildSettingsRoleEditSections.VERIFICATIONS,
           setSelectedSection: r
         })
-      }), (null != P ? P : 0) > 0 ? (0, a.jsxs)("div", {
+      }), (null != j ? j : 0) > 0 ? (0, a.jsxs)("div", {
         className: D.warningContainer,
         children: [(0, a.jsx)(I.default, {
           className: D.warningIcon

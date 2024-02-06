@@ -10,8 +10,8 @@ var s = n("37983"),
   l = n("635357"),
   i = n("742926"),
   u = n("659632"),
-  o = n("210721"),
-  c = n("78345"),
+  c = n("210721"),
+  o = n("78345"),
   d = n("53253"),
   f = n("65324"),
   m = n("563613"),
@@ -19,13 +19,13 @@ var s = n("37983"),
   E = n("646718"),
   I = n("782340"),
   p = n("734203");
-let N = [c.PremiumGiftStyles.STANDARD_BOX, c.PremiumGiftStyles.CAKE, c.PremiumGiftStyles.COFFEE, c.PremiumGiftStyles.CHEST],
+let N = [o.PremiumGiftStyles.STANDARD_BOX, o.PremiumGiftStyles.CAKE, o.PremiumGiftStyles.COFFEE, o.PremiumGiftStyles.CHEST],
   S = () => {
     let {
       giftRecipient: e,
       selectedGiftStyle: t,
       setSelectedGiftStyle: n,
-      emojiConfetti: c,
+      emojiConfetti: o,
       soundEffect: S,
       setEmojiConfetti: P,
       setSoundEffect: T
@@ -43,8 +43,8 @@ let N = [c.PremiumGiftStyles.STANDARD_BOX, c.PremiumGiftStyles.CAKE, c.PremiumGi
         className: p.giftMainAnimation,
         children: [null != t ? (0, s.jsx)(f.default, {
           giftStyle: t,
-          defaultAnimationState: o.AnimationState.ACTION,
-          idleAnimationState: o.AnimationState.LOOP,
+          defaultAnimationState: c.AnimationState.ACTION,
+          idleAnimationState: c.AnimationState.LOOP,
           shouldAnimate: !0,
           className: p.animation
         }) : (0, s.jsx)(a.Spinner, {
@@ -63,7 +63,7 @@ let N = [c.PremiumGiftStyles.STANDARD_BOX, c.PremiumGiftStyles.CAKE, c.PremiumGi
             className: p.emoji,
             children: (0, s.jsx)(m.default, {
               setEmojiConfetti: P,
-              emojiConfetti: null == c ? void 0 : c
+              emojiConfetti: null == o ? void 0 : o
             })
           })]
         })]

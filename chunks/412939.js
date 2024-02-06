@@ -35,8 +35,8 @@ var a = s("37983"),
   p = s("677795"),
   U = s("874146"),
   v = s("782340"),
-  j = s("254981");
-let P = (0, h.cssValueToNumber)(_.default.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
+  P = s("254981");
+let j = (0, h.cssValueToNumber)(_.default.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
 
 function y() {
   return [{
@@ -68,14 +68,14 @@ function b(e) {
         icon: t
       } = e;
       return (0, a.jsx)("div", {
-        className: j.formatRadioIconWrapper,
+        className: P.formatRadioIconWrapper,
         children: (0, a.jsx)(t, {
-          className: j.formatRadioIcon
+          className: P.formatRadioIcon
         })
       })
     },
-    radioBarClassName: j.formatOptionRadioBar,
-    radioItemIconClassName: j.formatOptionRadioItemIcon
+    radioBarClassName: P.formatOptionRadioBar,
+    radioItemIconClassName: P.formatOptionRadioItemIcon
   })), [u]), _ = null != d && d >= 400;
   return (0, a.jsx)("div", {
     ref: o,
@@ -85,9 +85,9 @@ function b(e) {
       orientation: _ ? "horizontal" : "vertical",
       size: T.RadioGroup.Sizes.NONE,
       className: i({
-        [j.radioGroupHorizontal]: _
+        [P.radioGroupHorizontal]: _
       }),
-      radioItemClassName: j.formatOptionRadioItem,
+      radioItemClassName: P.formatOptionRadioItem,
       onChange: e => {
         let {
           value: t
@@ -109,7 +109,7 @@ function B(e) {
     format: i
   } = (0, G.default)(s.id), r = (0, R.useSubscriptionsSettings)(s.id), d = n.useCallback(() => {
     var e;
-    return (null == r ? void 0 : null === (e = r.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, O.getAssetURL)(r.cover_image_asset.application_id, r.cover_image_asset, P)
+    return (null == r ? void 0 : null === (e = r.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, O.getAssetURL)(r.cover_image_asset.application_id, r.cover_image_asset, j)
   }, [r]), [c, _] = n.useState(i), [S, m] = n.useState(null !== (t = null == r ? void 0 : r.description) && void 0 !== t ? t : ""), [C, h] = n.useState(d), [y, B] = n.useState(null == r ? void 0 : r.store_page_guild_products_default_sort), [F, H] = n.useState(null == r ? void 0 : r.server_shop_tab_order), {
     loading: V,
     error: w,
@@ -131,7 +131,7 @@ function B(e) {
   n.useEffect(() => {
     var e;
     if ((null == r ? void 0 : null === (e = r.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null) {
-      let e = (0, O.getAssetURL)(r.cover_image_asset.application_id, r.cover_image_asset, P);
+      let e = (0, O.getAssetURL)(r.cover_image_asset.application_id, r.cover_image_asset, j);
       h(e)
     }
   }, [null == r ? void 0 : r.cover_image_asset]);
@@ -148,7 +148,7 @@ function B(e) {
       value: U.ServerShopTabOrder.SUBS_FIRST
     }], []);
   return (0, a.jsxs)("div", {
-    className: j.container,
+    className: P.container,
     children: [null != w && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(x.default, {
         children: w.getAnyErrorMessage()
@@ -162,7 +162,7 @@ function B(e) {
         disabled: $,
         children: [(0, a.jsx)(T.FormText, {
           type: T.FormText.Types.DESCRIPTION,
-          className: j.formDescription,
+          className: P.formDescription,
           disabled: $,
           children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_DESCRIPTION
         }), (0, a.jsx)(b, {
@@ -183,7 +183,7 @@ function B(e) {
           disabled: $
         })]
       }), (0, a.jsx)(T.FormDivider, {
-        className: j.divider
+        className: P.divider
       })]
     }), (0, a.jsx)(T.FormSection, {
       title: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_DESCRIPTION_TITLE,
@@ -200,13 +200,13 @@ function B(e) {
         disabled: $
       })
     }), (0, a.jsx)(T.FormDivider, {
-      className: j.divider
+      className: P.divider
     }), (0, a.jsxs)(T.FormSection, {
       title: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_TITLE,
       disabled: $,
       children: [(0, a.jsx)(T.FormText, {
         type: T.FormText.Types.DESCRIPTION,
-        className: j.formDescription,
+        className: P.formDescription,
         disabled: $,
         children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_DESCRIPTION
       }), (0, a.jsx)(N.default, {
@@ -215,10 +215,10 @@ function B(e) {
         showIcon: !0,
         showRemoveButton: !1,
         hideSize: !0,
-        className: j.coverImageUploader,
-        iconWrapperClassName: j.coverImageUploaderIconWrapper,
-        imageClassName: j.coverImageUploaderInner,
-        iconClassName: j.coverImageUploaderIcon,
+        className: P.coverImageUploader,
+        iconWrapperClassName: P.coverImageUploaderIconWrapper,
+        imageClassName: P.coverImageUploaderInner,
+        iconClassName: P.coverImageUploaderIcon,
         onChange: J,
         "aria-label": K,
         disabled: $
@@ -234,14 +234,14 @@ function B(e) {
       })]
     }), l ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(T.FormDivider, {
-        className: j.divider
+        className: P.divider
       }), (0, a.jsxs)(T.FormSection, {
         title: v.default.Messages.CREATOR_MONETIZATION_SETTINGS_GUILD_PRODUCT_SORT_OPTION_TITLE,
         titleId: X,
         disabled: $,
         children: [(0, a.jsx)(T.FormText, {
           type: T.FormText.Types.DESCRIPTION,
-          className: j.formDescription,
+          className: P.formDescription,
           disabled: $,
           children: v.default.Messages.CREATOR_MONETIZATION_SETTINGS_GUILD_PRODUCT_SORT_OPTION_DESCRIPTION
         }), (0, a.jsx)(T.SingleSelect, {
@@ -253,14 +253,14 @@ function B(e) {
       })]
     }) : null, et.length > 0 && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(T.FormDivider, {
-        className: j.divider
+        className: P.divider
       }), (0, a.jsxs)(T.FormSection, {
         title: v.default.Messages.CREATOR_MONETIZATION_SETTINGS_SERVER_SHOP_DEFAULT_TAB_OPTION_TITLE,
         titleId: X,
         disabled: $,
         children: [(0, a.jsx)(T.FormText, {
           type: T.FormText.Types.DESCRIPTION,
-          className: j.formDescription,
+          className: P.formDescription,
           disabled: $,
           children: v.default.Messages.CREATOR_MONETIZATION_SETTINGS_SERVER_SHOP_DEFAULT_TAB_OPTION_DESCRIPTION
         }), (0, a.jsx)(T.SingleSelect, {
@@ -272,7 +272,7 @@ function B(e) {
       })]
     }), (0, a.jsx)(E.default, {
       component: "div",
-      className: j.contentRegion,
+      className: P.contentRegion,
       children: Q && (0, a.jsx)(f.default, {
         children: (0, a.jsx)(I.default, {
           submitting: V,

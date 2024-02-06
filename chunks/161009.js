@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return o
+    return u
   }
-}), n("222007");
-var r = n("884691"),
-  l = n("446674"),
-  i = n("189293"),
-  s = n("845962"),
-  a = n("235898");
+}), r("222007");
+var n = r("884691"),
+  l = r("446674"),
+  i = r("189293"),
+  s = r("845962"),
+  a = r("235898");
 
-function o() {
+function u() {
   let {
     isFetching: e,
     error: t,
-    categories: n,
-    purchases: o
-  } = (0, a.default)(), [u, c, d] = (0, l.useStateFromStoresArray)([s.default], () => [s.default.isFetching, s.default.fetchError, s.default.profileEffects]);
-  return (0, r.useEffect)(() => {
+    categories: r,
+    purchases: u
+  } = (0, a.default)(), [o, c, d] = (0, l.useStateFromStoresArray)([s.default], () => [s.default.isFetching, s.default.fetchError, s.default.profileEffects]);
+  return (0, n.useEffect)(() => {
     (0, i.fetchUserProfileEffects)()
   }, []), {
-    isFetching: e || u,
+    isFetching: e || o,
     error: null != t ? t : c,
     profileEffects: d,
-    categories: n,
-    purchases: o
+    categories: r,
+    purchases: u
   }
 }

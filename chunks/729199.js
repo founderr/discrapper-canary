@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("414456"),
   i = s.n(r),
   l = s("730290"),
-  o = s("446674"),
-  u = s("77078"),
+  u = s("446674"),
+  o = s("77078"),
   d = s("851387"),
   c = s("55620"),
   _ = s("984376"),
@@ -61,15 +61,15 @@ class O extends n.PureComponent {
       isLurking: n,
       isAuthenticated: r,
       className: l,
-      pageSize: o
+      pageSize: u
     } = this.props;
     if (t && s) return null;
     let d = new f.default(e),
       c = C.default.Messages.LURKER_MODE_VIEW_GUILD,
       _ = this.handleJoinOrView,
-      E = u.Button.Looks.FILLED,
-      I = u.Button.Colors.PRIMARY;
-    return r ? s ? (E = u.Button.Looks.OUTLINED, I = P.buttonColorInGuild, c = (0, a.jsxs)(A.default, {
+      E = o.Button.Looks.FILLED,
+      I = o.Button.Colors.PRIMARY;
+    return r ? s ? (E = o.Button.Looks.OUTLINED, I = P.buttonColorInGuild, c = (0, a.jsxs)(A.default, {
       align: A.default.Align.CENTER,
       children: [(0, a.jsx)("div", {
         children: C.default.Messages.JOINED_GUILD
@@ -77,7 +77,7 @@ class O extends n.PureComponent {
         className: P.joinedCheckmark
       })]
     })) : n && t && (c = C.default.Messages.JOIN_GUILD) : (c = C.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
-      className: i(l, o === p.PageSizes.SMALL ? P.inviteSmall : P.inviteLarge),
+      className: i(l, u === p.PageSizes.SMALL ? P.inviteSmall : P.inviteLarge),
       children: [(0, a.jsx)(R.default, {
         children: C.default.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
       }), (0, a.jsxs)("div", {
@@ -96,8 +96,8 @@ class O extends n.PureComponent {
               children: e.name
             }), this.renderMemberInfo()]
           })]
-        }), (0, a.jsx)(u.Button, {
-          size: u.Button.Sizes.SMALL,
+        }), (0, a.jsx)(o.Button, {
+          size: o.Button.Sizes.SMALL,
           className: P.actionButton,
           fullWidth: !0,
           color: I,
@@ -134,7 +134,7 @@ class O extends n.PureComponent {
     }
   }
 }
-var M = (0, _.default)(o.default.connectStores([S.default, E.default], e => {
+var M = (0, _.default)(u.default.connectStores([S.default, E.default], e => {
   let {
     guild: t
   } = e, s = E.default.isLurking(t.id);

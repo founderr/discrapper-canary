@@ -15,11 +15,11 @@ var i = n("37983"),
       duration: l
     } = e, {
       file: a,
-      audio: o
+      audio: u
     } = (0, s.useAudioTrimmerStore)();
     return (0, i.jsx)(r.default, {
       file: a,
-      audio: o,
+      audio: u,
       waveformSettings: {
         fineTuning: t,
         fineTuningResolution: n,

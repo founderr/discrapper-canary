@@ -38,8 +38,8 @@ var a = s("37983"),
   p = s("843257"),
   U = s("139321"),
   v = s("597517"),
-  j = s("424960"),
-  P = s("656913"),
+  P = s("424960"),
+  j = s("656913"),
   y = s("694187"),
   b = s("608684"),
   B = s("42203"),
@@ -525,7 +525,7 @@ class eL extends n.PureComponent {
     let {
       guild: e,
       canManageGuild: t
-    } = this.props, s = e.hasFeature(es.GuildFeatures.INVITE_SPLASH), n = t && s, l = (0, a.jsx)(P.default, {
+    } = this.props, s = e.hasFeature(es.GuildFeatures.INVITE_SPLASH), n = t && s, l = (0, a.jsx)(j.default, {
       image: e.splash,
       makeURL: t => null != t ? X.default.getGuildSplashURL({
         id: e.id,
@@ -536,7 +536,7 @@ class eL extends n.PureComponent {
       hint: ei.default.Messages.CHANGE_SPLASH,
       enabled: n,
       maxFileSizeBytes: el.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-      onFileSizeError: () => (0, j.default)(el.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
+      onFileSizeError: () => (0, P.default)(el.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
     });
     return (0, a.jsx)("div", {
       ref: this._inviteSectionRef,
@@ -576,7 +576,7 @@ class eL extends n.PureComponent {
                 disabled: !n,
                 onChange: this.handleSplashChange,
                 maxFileSizeBytes: el.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-                onFileSizeError: () => (0, j.default)(el.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
+                onFileSizeError: () => (0, P.default)(el.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
               })]
             }) : this.uploadBGUpsellButton(this.handleInviteSplashUpsellButton)]
           }), (0, a.jsx)(Y.default.Child, {
@@ -605,7 +605,7 @@ class eL extends n.PureComponent {
       location: "4b6c0f_1"
     });
     if (!n || !i) return null;
-    let r = (0, a.jsx)(P.default, {
+    let r = (0, a.jsx)(j.default, {
       image: e.homeHeader,
       makeURL: t => null != t ? X.default.getGuildHomeHeaderURL({
         id: e.id,
@@ -616,7 +616,7 @@ class eL extends n.PureComponent {
       hint: ei.default.Messages.CHANGE_HOME_HEADER,
       enabled: l,
       maxFileSizeBytes: el.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-      onFileSizeError: () => (0, j.default)(el.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
+      onFileSizeError: () => (0, P.default)(el.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
     });
     return (0, a.jsx)(T.FormSection, {
       className: er.divider,
@@ -652,7 +652,7 @@ class eL extends n.PureComponent {
               disabled: !l,
               onChange: this.handleHomeHeaderChange,
               maxFileSizeBytes: el.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-              onFileSizeError: () => (0, j.default)(el.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
+              onFileSizeError: () => (0, P.default)(el.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
             })]
           }) : this.uploadBGUpsellButton(this.handleBannerUpsellButton)]
         }), (0, a.jsx)(Y.default.Child, {
@@ -674,7 +674,7 @@ class eL extends n.PureComponent {
       guild: e,
       canManageGuild: t,
       analyticsLocations: s
-    } = this.props, n = e.hasFeature(es.GuildFeatures.BANNER), l = e.hasFeature(es.GuildFeatures.ANIMATED_BANNER), i = n && t, r = (0, a.jsx)(P.default, {
+    } = this.props, n = e.hasFeature(es.GuildFeatures.BANNER), l = e.hasFeature(es.GuildFeatures.ANIMATED_BANNER), i = n && t, r = (0, a.jsx)(j.default, {
       image: e.banner,
       makeURL: t => null != t ? X.default.getGuildBannerURL({
         id: e.id,

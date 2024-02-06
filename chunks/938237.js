@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return s
   },
   markAnalyticsFeedItemUnseen: function() {
-    return l
+    return r
   },
   flushAnalyticsFeedItems: function() {
-    return r
+    return l
   }
 });
 var i = n("913144");
@@ -21,7 +21,7 @@ function s(e, t, n) {
   })
 }
 
-function l(e, t, n) {
+function r(e, t, n) {
   i.default.dispatch({
     type: "ANALYTICS_FEED_ITEM_UNSEEN",
     id: e,
@@ -30,7 +30,7 @@ function l(e, t, n) {
   })
 }
 
-function r(e, t) {
+function l(e, t) {
   i.default.dispatch({
     type: "ANALYTICS_FEED_FLUSH",
     id: e,

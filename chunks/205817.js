@@ -57,10 +57,10 @@ function U(e) {
   })
 }
 
-function k() {
+function w() {
   return !0
 }
-class w extends u.default.Store {
+class k extends u.default.Store {
   getActiveStreamKey() {
     return (0, g.default)(S.default) ? s : null
   }
@@ -141,17 +141,17 @@ class w extends u.default.Store {
     return O[e]
   }
 }
-w.displayName = "StreamRTCConnectionStore";
-var V = new w(c.default, !S.default.isSupported() || __OVERLAY__ ? {} : {
+k.displayName = "StreamRTCConnectionStore";
+var V = new k(c.default, !S.default.isSupported() || __OVERLAY__ ? {} : {
   CONNECTION_OPEN: function(e) {
     i = e.sessionId, s = null, M()
   },
   CONNECTION_CLOSED: function() {
     i = null, s = null, M()
   },
-  RTC_CONNECTION_STATE: k,
-  RTC_CONNECTION_PING: k,
-  RTC_CONNECTION_LOSS_RATE: k,
+  RTC_CONNECTION_STATE: w,
+  RTC_CONNECTION_PING: w,
+  RTC_CONNECTION_LOSS_RATE: w,
   RTC_CONNECTION_UPDATE_ID: function(e) {
     return l.some(b, t => t === e.connection)
   },

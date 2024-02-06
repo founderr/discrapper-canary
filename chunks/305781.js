@@ -4,10 +4,10 @@ i.r(t), i.d(t, {
     return o
   },
   updateNewlyAddedLastSeen: function() {
-    return s
+    return u
   },
   updateNewlyAddedEmojiSeenAcknowledged: function() {
-    return u
+    return s
   }
 });
 var n = i("872717"),
@@ -34,7 +34,7 @@ function o(e) {
   }))
 }
 
-function s(e, t) {
+function u(e, t) {
   r.default.dispatch({
     type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED"
   }), null != e && null != t && r.default.dispatch({
@@ -44,7 +44,7 @@ function s(e, t) {
   })
 }
 
-function u(e, t) {
+function s(e, t) {
   null != e && null != t && r.default.dispatch({
     type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED",
     guildId: e,

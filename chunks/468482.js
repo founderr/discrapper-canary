@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return m
   }
 });
 var l = n("37983");
@@ -14,13 +14,13 @@ var a = n("414456"),
   u = n("132755"),
   d = n("782340"),
   c = n("335171"),
-  f = e => {
+  m = e => {
     let {
       onPlay: t,
       externalURL: n,
       className: a,
-      renderLinkComponent: f,
-      inactive: m,
+      renderLinkComponent: m,
+      inactive: f,
       messageId: h,
       channelId: p
     } = e;
@@ -29,7 +29,7 @@ var a = n("414456"),
         className: s(a, c.wrapper, {
           [c.disableInteractions]: e.disableInteractions
         }),
-        children: [m && null == t ? (0, l.jsx)("div", {
+        children: [f && null == t ? (0, l.jsx)("div", {
           className: c.iconWrapper,
           children: (0, l.jsx)(u.default, {
             className: c.iconPlay
@@ -37,12 +37,12 @@ var a = n("414456"),
         }) : null, null != t ? (0, l.jsx)(i.Clickable, {
           onClick: t,
           className: s(c.iconWrapperActive),
-          tabIndex: m ? -1 : 0,
+          tabIndex: f ? -1 : 0,
           "aria-label": d.default.Messages.PLAY,
           children: (0, l.jsx)(u.default, {
             className: c.iconPlay
           })
-        }) : null, null != n ? f({
+        }) : null, null != n ? m({
           href: n,
           target: "_blank",
           rel: "noreferrer noopener",

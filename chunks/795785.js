@@ -5,9 +5,9 @@ t.r(A), t.d(A, {
   }
 }), t("222007");
 var a = t("37983"),
-  l = t("884691"),
-  n = t("414456"),
-  r = t.n(n),
+  n = t("884691"),
+  l = t("414456"),
+  r = t.n(l),
   s = t("77078"),
   o = t("694187"),
   i = t("818643"),
@@ -16,28 +16,28 @@ var a = t("37983"),
   c = t("782340"),
   f = t("610828");
 let C = "custom-image",
-  g = l.forwardRef(function(e, A) {
+  g = n.forwardRef(function(e, A) {
     let {
       selectedImageName: t,
-      onChange: l,
-      disabled: n = !1,
+      onChange: n,
+      disabled: l = !1,
       name: o,
       alt: i,
       data: d
     } = e, u = o === t, c = (0, s.useRadioItem)({
       isSelected: u,
       label: i
-    }), C = n ? void 0 : () => {
-      l(d, o)
+    }), C = l ? void 0 : () => {
+      n(d, o)
     };
     return (0, a.jsx)(s.Clickable, {
       ref: A,
       className: r(f.radioOption, {
         [f.selected]: u,
-        [f.disabled]: n
+        [f.disabled]: l
       }),
       onClick: C,
-      "aria-disabled": n,
+      "aria-disabled": l,
       ...c,
       children: (0, a.jsx)("img", {
         src: d,
@@ -51,14 +51,14 @@ function T(e) {
   let {
     presetImages: A,
     image: t,
-    imageName: n,
+    imageName: l,
     savedImageName: T,
     onChange: h,
     uploadButtonLabel: m = c.default.Messages.UPLOAD_IMAGE,
     radioGroupAriaLabel: U = c.default.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
     disabled: I = !1
-  } = e, p = n === C, [v, E] = l.useState(p ? t : null), [q, N] = l.useState(null), O = l.useRef(null), x = l.useRef(null);
-  l.useEffect(() => {
+  } = e, p = l === C, [v, E] = n.useState(p ? t : null), [q, N] = n.useState(null), O = n.useRef(null), x = n.useRef(null);
+  n.useEffect(() => {
     T !== C && (E(null), N(null))
   }, [T]);
   let R = null != q ? c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({
@@ -73,9 +73,9 @@ function T(e) {
       return null === (e = O.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
     },
     P = () => {
-      n === C && h(A[0].data, A[0].name), E(null), N(null)
+      l === C && h(A[0].data, A[0].name), E(null), N(null)
     };
-  return l.useEffect(() => {
+  return n.useEffect(() => {
     if (p && null != q) {
       var e, A;
       null === (A = x.current) || void 0 === A || null === (e = A.ref) || void 0 === e || e.focus()
@@ -146,14 +146,14 @@ function T(e) {
       className: f.radioGroup,
       children: [null != v && (0, a.jsx)(g, {
         ref: x,
-        selectedImageName: n,
+        selectedImageName: l,
         onChange: h,
         disabled: I,
         name: C,
         alt: R,
         data: v
       }), A.map(e => (0, a.jsx)(g, {
-        selectedImageName: n,
+        selectedImageName: l,
         onChange: h,
         disabled: I,
         ...e

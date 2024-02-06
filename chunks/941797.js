@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("414456"),
   i = s.n(r),
   l = s("907002"),
-  o = s("891722"),
-  u = s("704426"),
+  u = s("891722"),
+  o = s("704426"),
   d = s("77078"),
   c = s("558566"),
   _ = s("821265"),
@@ -48,7 +48,7 @@ var a = s("37983"),
             [_.leftArrow]: R,
             [_.inactiveArrow]: !R
           }),
-          children: (0, a.jsx)(o.ArrowSmallLeftIcon, {
+          children: (0, a.jsx)(u.ArrowSmallLeftIcon, {
             className: _.arrowIcon,
             colorClass: _.arrowIcon
           })
@@ -74,7 +74,7 @@ var a = s("37983"),
             T(e => e >= m - f ? (A(!0), 0) : e + 1)
           },
           className: _.rightArrow,
-          children: (0, a.jsx)(u.ArrowSmallRightIcon, {
+          children: (0, a.jsx)(o.ArrowSmallRightIcon, {
             className: _.arrowIcon,
             colorClass: _.arrowIcon
           })

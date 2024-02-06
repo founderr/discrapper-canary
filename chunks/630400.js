@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   maybeFetchTopEmojisByGuild: function() {
-    return s
+    return u
   }
 });
 var n = i("697218"),
@@ -9,7 +9,7 @@ var n = i("697218"),
   a = i("26430"),
   o = i("305781");
 
-function s(e) {
+function u(e) {
   if (null == e) return;
   let t = n.default.getCurrentUser();
   if (null == t) return;

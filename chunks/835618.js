@@ -10,8 +10,8 @@ var n = s("414456"),
   r = s.n(n),
   i = s("77078"),
   l = s("685665"),
-  o = s("53253"),
-  u = s("635956"),
+  u = s("53253"),
+  o = s("635956"),
   d = s("782340"),
   c = s("903610"),
   _ = s("35257"),
@@ -25,9 +25,9 @@ var n = s("414456"),
       analyticsLocation: T
     } = e, {
       AnalyticsLocationProvider: f
-    } = (0, l.default)(I), S = (0, o.useIsSeasonalGiftingActive)(), {
+    } = (0, l.default)(I), S = (0, u.useIsSeasonalGiftingActive)(), {
       enabled: R
-    } = o.SeasonalGiftingMarketingExperiment.useExperiment({
+    } = u.SeasonalGiftingMarketingExperiment.useExperiment({
       location: "GiftNitro"
     }, {
       autoTrackExposure: S
@@ -45,7 +45,7 @@ var n = s("414456"),
           }), (0, a.jsx)(i.Text, {
             variant: "text-sm/medium",
             children: A ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
-          }), (0, a.jsx)(u.default, {
+          }), (0, a.jsx)(o.default, {
             isGift: !0,
             className: c.giftCardButton,
             look: i.Button.Looks.OUTLINED,

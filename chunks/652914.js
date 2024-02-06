@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983");
 n("884691");
 var i = n("507497"),
-  l = n("193867"),
-  r = n("75015");
+  r = n("193867"),
+  l = n("75015");
 
 function o(e) {
   let {
@@ -18,10 +18,10 @@ function o(e) {
     isGIF: a,
     banner: u
   } = e;
-  return [r.UploadTypes.BANNER, r.UploadTypes.AVATAR].includes(t) && a ? (0, s.jsx)(l.default, {
+  return [l.UploadTypes.BANNER, l.UploadTypes.AVATAR].includes(t) && a ? (0, s.jsx)(r.default, {
     analyticsSection: o,
     type: t
-  }) : t === r.UploadTypes.GUILD_BANNER ? (0, s.jsx)(i.default, {
+  }) : t === l.UploadTypes.GUILD_BANNER ? (0, s.jsx)(i.default, {
     analyticsSection: o,
     analyticsPage: n,
     isGIF: a,

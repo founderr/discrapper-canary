@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return f
   }
 }), n("222007");
 var l = n("37983"),
@@ -24,7 +24,7 @@ function c(e) {
     n = t % 60;
   return "".concat((t - n) / 60, ":").concat(String(n).padStart(2, "0"))
 }
-class f extends a.Component {
+class m extends a.Component {
   componentDidMount() {
     let {
       previewWidth: e,
@@ -221,7 +221,7 @@ class f extends a.Component {
     }
   }
 }
-f.Types = d, f.defaultProps = {
+m.Types = d, m.defaultProps = {
   currentWindow: window
 };
-var m = f
+var f = m

@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("913144"),
-  l = n("327037"),
-  r = n("697218"),
+  r = n("327037"),
+  l = n("697218"),
   s = n("506885"),
   a = n("49111");
 
@@ -19,12 +19,12 @@ function o(e) {
     section: n,
     guildId: o = a.ME,
     channelId: u,
-    friendToken: d,
-    autoFocusNote: c,
+    friendToken: c,
+    autoFocusNote: d,
     analyticsLocation: f
-  } = e, E = r.default.getUser(t), h = o !== a.ME ? o : void 0;
-  if (null == E) return (0, l.fetchProfile)(t, {
-    friendToken: d,
+  } = e, E = l.default.getUser(t), h = o !== a.ME ? o : void 0;
+  if (null == E) return (0, r.fetchProfile)(t, {
+    friendToken: c,
     guildId: h
   }).then(() => {
     i.default.dispatch({
@@ -33,14 +33,14 @@ function o(e) {
       section: n,
       guildId: o,
       channelId: u,
-      friendToken: d,
-      autoFocusNote: c,
+      friendToken: c,
+      autoFocusNote: d,
       analyticsLocation: f
     })
   });
   (0, s.default)(t, E.getAvatarURL(void 0, 80), {
     withMutualGuilds: !0,
-    friendToken: d,
+    friendToken: c,
     guildId: h
   }), i.default.dispatch({
     type: "USER_PROFILE_MODAL_OPEN",
@@ -48,8 +48,8 @@ function o(e) {
     section: n,
     guildId: o,
     channelId: u,
-    friendToken: d,
-    autoFocusNote: c,
+    friendToken: c,
+    autoFocusNote: d,
     analyticsLocation: f
   })
 }

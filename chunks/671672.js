@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return m
   }
 }), n("222007"), n("424973");
 var r = n("37983"),
   i = n("884691"),
-  l = n("627445"),
-  s = n.n(l),
+  s = n("627445"),
+  l = n.n(s),
   u = n("252438"),
   a = n("834897"),
   o = n("206230"),
@@ -21,79 +21,79 @@ var r = n("37983"),
   T = n("650484"),
   N = n("367767"),
   p = n("425480"),
-  m = n("782340");
+  C = n("782340");
 
-function C(e) {
+function m(e) {
   let t, n, {
-      showBenefits: l,
-      application: C,
-      listing: h,
-      handleClose: P,
-      onSubscriptionConfirmation: L
+      showBenefits: s,
+      application: m,
+      listing: P,
+      handleClose: h,
+      onSubscriptionConfirmation: R
     } = e,
     {
-      selectedPlan: A,
-      selectedSkuId: R,
-      step: g,
-      updatedSubscription: v,
-      readySlideId: O
+      selectedPlan: L,
+      selectedSkuId: M,
+      step: v,
+      updatedSubscription: A,
+      readySlideId: g
     } = (0, _.usePaymentContext)();
-  s(null != A, "Expected plan to selected"), s(null != R, "Expected selectedSkuId"), s(null != g, "Step should be set");
-  let M = (0, a.default)(p.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
+  l(null != L, "Expected plan to selected"), l(null != M, "Expected selectedSkuId"), l(null != v, "Step should be set");
+  let O = (0, a.default)(p.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
     {
       createMultipleConfettiAt: U
     } = i.useContext(I.ConfettiCannonContext),
     x = () => {
-      P(), null == L || L()
+      h(), null == R || R()
     },
-    D = O === E.Step.CONFIRM,
-    y = (0, c.isApplicationUserSubscription)(h.sku_flags),
-    b = i.useMemo(() => {
+    D = g === E.Step.CONFIRM,
+    y = (0, c.isApplicationUserSubscription)(P.sku_flags),
+    G = i.useMemo(() => {
       let e = 0,
         t = 0;
-      for (let n of h.sku_benefits.benefits) n.ref_type === u.SKUBenefitTypes.APPLICATION_PREMIUM_COMMAND ? e += 1 : n.ref_type === u.SKUBenefitTypes.INTANGIBLE && (t += 1);
+      for (let n of P.sku_benefits.benefits) n.ref_type === u.SKUBenefitTypes.APPLICATION_PREMIUM_COMMAND ? e += 1 : n.ref_type === u.SKUBenefitTypes.INTANGIBLE && (t += 1);
       let n = [];
-      return 0 !== e && n.push(m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_EXCLUSIVE_CHANNELS_SUBTITLE.format({
+      return 0 !== e && n.push(C.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_EXCLUSIVE_CHANNELS_SUBTITLE.format({
         commandCount: e
-      })), 0 !== t && n.push(m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({
+      })), 0 !== t && n.push(C.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_BENEFITS_SUBTITLE.format({
         benefitCount: t
       })), n
-    }, [h]);
-  return l ? M ? t = (0, r.jsx)(f.BenefitsConfirmationLite, {
-    title: m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({
-      tierName: h.name
+    }, [P]);
+  return s ? O ? t = (0, r.jsx)(f.BenefitsConfirmationLite, {
+    title: C.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({
+      tierName: P.name
     }),
-    subtitle: b.length > 0 ? m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
-      benefits: new Intl.ListFormat(m.default.getLocale()).format(b)
+    subtitle: G.length > 0 ? C.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
+      benefits: new Intl.ListFormat(C.default.getLocale()).format(G)
     }) : null,
     onConfirm: x,
-    confirmCta: m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
+    confirmCta: C.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
   }) : (t = (0, r.jsx)(d.BenefitsConfirmation, {
-    icon: h.image_asset,
-    storeListingBenefits: h.store_listing_benefits,
-    skuBenefits: h.sku_benefits.benefits,
-    application: C,
-    title: m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({
-      tier: h.name
+    icon: P.image_asset,
+    storeListingBenefits: P.store_listing_benefits,
+    skuBenefits: P.sku_benefits.benefits,
+    application: m,
+    title: C.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({
+      tier: P.name
     }),
-    subtitle: m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_BENEFITS_PREVIEW,
-    description: y ? m.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
-      applicationName: null == C ? void 0 : C.name
-    }) : m.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
-      tier: h.name
+    subtitle: C.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_BENEFITS_PREVIEW,
+    description: y ? C.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
+      applicationName: null == m ? void 0 : m.name
+    }) : C.default.Messages.APPLICATION_GUILD_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_SUBTITLE.format({
+      tier: P.name
     })
   }), n = (0, r.jsx)(S.default, {
     onPrimary: x,
     primaryCTA: S.CTAType.CONTINUE,
-    primaryText: m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
-  })) : t = M ? (0, r.jsx)(f.PurchaseConfirmationLite, {
-    tierName: h.name,
+    primaryText: C.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
+  })) : t = O ? (0, r.jsx)(f.PurchaseConfirmationLite, {
+    tierName: P.name,
     onConfirm: x,
-    subscription: v
+    subscription: A
   }) : (0, r.jsx)(d.PurchaseConfirmation, {
-    tierName: h.name,
+    tierName: P.name,
     onConfirm: x,
-    subscription: v
+    subscription: A
   }), i.useEffect(() => {
     o.default.useReducedMotion && D && U(window.innerWidth / 2, window.innerHeight / 2)
   }, [U, D]), (0, r.jsxs)(r.Fragment, {

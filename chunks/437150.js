@@ -101,11 +101,11 @@ function S(e) {
     href: M,
     src: m,
     textContent: h
-  } = p(a), g = (0, i.default)(s, t), I = (0, f.default)(null != M ? M : m, h), S = (0, c.default)(m), x = (0, o.default)({
+  } = p(a), g = (0, i.default)(s, t), I = (0, f.default)(null != M ? M : m, h), S = (0, c.default)(m), v = (0, o.default)({
     id: s.id,
     label: _.default.Messages.COPY_ID_MESSAGE,
     shiftId: "".concat(s.channel_id, "-").concat(s.id)
-  }), v = C(l, t.guild_id), L = G(l, l.message, t), A = (0, d.default)(s, t, {
+  }), x = C(l, t.guild_id), L = G(l, l.message, t), A = (0, d.default)(s, t, {
     hoist: !1
   });
   return (0, n.jsxs)(r.Menu, {
@@ -114,9 +114,9 @@ function S(e) {
     "aria-label": _.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
     onSelect: E,
     children: [(0, n.jsxs)(r.MenuGroup, {
-      children: [v, L, A]
+      children: [x, L, A]
     }), (0, n.jsxs)(r.MenuGroup, {
-      children: [g, S, I, x]
+      children: [g, S, I, v]
     })]
   })
 }

@@ -13,19 +13,19 @@ var l = n("37983"),
   u = n("206230"),
   d = n("806135"),
   c = n("170113"),
-  f = n("316680"),
-  m = n("830837"),
+  m = n("316680"),
+  f = n("830837"),
   h = n("132755"),
   p = n("659500"),
   g = n("718517"),
   E = n("829536"),
-  v = n("534107"),
-  C = n("49111"),
+  C = n("534107"),
+  v = n("49111"),
   I = n("782340"),
-  x = n("447946");
+  S = n("447946");
 let _ = a.lazy(() => n.el("403130").then(n.bind(n, "403130")));
 
-function S(e) {
+function x(e) {
   let {
     played: t,
     duration: n,
@@ -33,20 +33,20 @@ function S(e) {
   } = e, s = null == n ? "--:--" : t ? (0, c.convertSecondsToClockFormat)(Math.ceil(n - a)) : (0, c.convertSecondsToClockFormat)(Math.ceil(n));
   return (0, l.jsx)(o.Text, {
     variant: "text-sm/normal",
-    className: x.duration,
+    className: S.duration,
     tabularNumbers: !0,
     children: s
   })
 }
 var N = a.memo(function(e) {
-  var t, n, s, c, N, M;
-  let T, {
+  var t, n, s, c, N, T;
+  let M, {
       src: A,
-      volume: j = 1,
-      onVolumeChange: y,
-      onMute: R,
+      volume: O = 1,
+      onVolumeChange: j,
+      onMute: y,
       waveform: L,
-      durationSecs: O,
+      durationSecs: R,
       onVolumeShow: b,
       onVolumeHide: D,
       onPlay: P,
@@ -55,16 +55,16 @@ var N = a.memo(function(e) {
     } = e,
     k = a.useRef(null),
     [V, F] = a.useState(0),
-    [B, H] = a.useState(O),
+    [B, H] = a.useState(R),
     [G, W] = a.useState(!1),
-    [z, Y] = a.useState(!1),
-    [Z, K] = a.useState(!1),
-    [X, J] = a.useState(!1),
+    [z, Z] = a.useState(!1),
+    [J, Y] = a.useState(!1),
+    [X, K] = a.useState(!1),
     [q, Q] = a.useState("none"),
-    [$, ee] = a.useState(() => "function" == typeof j ? j() : j),
+    [$, ee] = a.useState(() => "function" == typeof O ? O() : O),
     et = a.useRef(void 0),
     en = a.useCallback(() => {
-      Y(e => !e)
+      Z(e => !e)
     }, []),
     el = a.useCallback(() => {
       Q("metadata")
@@ -74,13 +74,13 @@ var N = a.memo(function(e) {
       !isNaN(t) && H(t)
     }, []),
     es = a.useCallback(() => {
-      Y(!1), null == et.current && (et.current = setTimeout(() => {
-        J(!1), et.current = void 0
+      Z(!1), null == et.current && (et.current = setTimeout(() => {
+        K(!1), et.current = void 0
       }, 500))
     }, []),
     ei = a.useCallback(() => {
-      !Z && es()
-    }, [es, Z]),
+      !J && es()
+    }, [es, J]),
     er = a.useCallback(() => {
       let e = k.current;
       if (null == e) return;
@@ -89,36 +89,36 @@ var N = a.memo(function(e) {
     }, [U]),
     eo = a.useCallback(e => {
       let t = (0, E.perceptualToAmplitude)(e, 1);
-      W(0 === t), ee(t), null == y || y(t)
-    }, [y]),
+      W(0 === t), ee(t), null == j || j(t)
+    }, [j]),
     eu = a.useCallback(() => {
-      W(!G), null == R || R(!G)
-    }, [G, R]),
+      W(!G), null == y || y(!G)
+    }, [G, y]),
     ed = a.useCallback(() => {
-      K(!0)
+      Y(!0)
     }, []),
     ec = a.useCallback(() => {
-      K(!1), V === B && es()
+      Y(!1), V === B && es()
     }, [V, B, es]),
-    ef = a.useCallback(e => {
+    em = a.useCallback(e => {
       let t = k.current;
       if (null == B || null == t) return;
       let n = e * B;
-      F(n), t.currentTime = n, J(!0), clearTimeout(et.current), et.current = void 0
+      F(n), t.currentTime = n, K(!0), clearTimeout(et.current), et.current = void 0
     }, [B]);
   a.useEffect(() => {
-    !X && z && J(!0)
+    !X && z && K(!0)
   }, [z, X]);
-  let em = a.useRef(null);
+  let ef = a.useRef(null);
   a.useEffect(() => {
     if (X || z) {
       if (z) {
         var e, t;
-        em.current = performance.now(), null == P || P(!1, V, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * g.default.Millis.SECOND)
+        ef.current = performance.now(), null == P || P(!1, V, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * g.default.Millis.SECOND)
       } else {
         let e = performance.now(),
-          t = em.current;
-        null == w || w(V, null != t ? (e - t) / 1e3 : 0), em.current = null
+          t = ef.current;
+        null == w || w(V, null != t ? (e - t) / 1e3 : 0), ef.current = null
       }
     }
   }, [z]), t = k, n = z, s = F, a.useEffect(() => {
@@ -129,29 +129,29 @@ var N = a.memo(function(e) {
     }(), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [t, n, s]), c = A, N = z, M = Y, a.useEffect(() => {
-    if (N) return p.ComponentDispatch.dispatch(C.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
+  }, [t, n, s]), c = A, N = z, T = Z, a.useEffect(() => {
+    if (N) return p.ComponentDispatch.dispatch(v.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
       src: c
-    }), p.ComponentDispatch.subscribe(C.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
-      p.ComponentDispatch.unsubscribe(C.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
+    }), p.ComponentDispatch.subscribe(v.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
+      p.ComponentDispatch.unsubscribe(v.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e)
     };
 
     function e(e) {
       let {
         src: t
       } = e;
-      c !== t && M(!1)
+      c !== t && T(!1)
     }
-  }, [c, N, M]);
-  let eh = z ? m.default : h.default,
+  }, [c, N, T]);
+  let eh = z ? f.default : h.default,
     ep = z ? I.default.Messages.PAUSE : I.default.Messages.PLAY;
-  T = "Safari" === platform.name ? (0, l.jsx)(a.Suspense, {
+  M = "Safari" === platform.name ? (0, l.jsx)(a.Suspense, {
     children: (0, l.jsx)(_, {
       ref: k,
-      className: x.audioElement,
+      className: S.audioElement,
       src: A,
       preload: q,
-      playing: z && !Z,
+      playing: z && !J,
       onEnded: ei,
       onLoadedMetadata: ea,
       onError: er,
@@ -160,7 +160,7 @@ var N = a.memo(function(e) {
     })
   }) : (0, l.jsx)(d.default, {
     ref: k,
-    className: x.audioElement,
+    className: S.audioElement,
     controls: !1,
     preload: q,
     onEnded: ei,
@@ -168,7 +168,7 @@ var N = a.memo(function(e) {
     onError: er,
     muted: G,
     volume: $,
-    playing: z && !Z,
+    playing: z && !J,
     children: (0, l.jsx)("source", {
       src: A
     })
@@ -178,46 +178,46 @@ var N = a.memo(function(e) {
       enabled: eE
     } = (0, o.useRedesignIconContext)();
   return (0, l.jsxs)("div", {
-    className: i(x.container, {
-      [x.playing]: z
+    className: i(S.container, {
+      [S.playing]: z
     }),
     onMouseEnter: el,
     children: [(0, l.jsx)("div", {
-      className: x.rippleContainer,
+      className: S.rippleContainer,
       children: (0, l.jsx)("div", {
-        className: i(x.ripple, {
-          [x.reducedMotion]: eg
+        className: i(S.ripple, {
+          [S.reducedMotion]: eg
         })
       })
     }), (0, l.jsx)(o.Clickable, {
-      className: x.playButtonContainer,
+      className: S.playButtonContainer,
       onClick: en,
       "aria-label": ep,
       children: (0, l.jsx)(eh, {
-        className: i(x.playIcon, {
-          [x.oldPlayIconSpacing]: !eE && !z
+        className: i(S.playIcon, {
+          [S.oldPlayIconSpacing]: !eE && !z
         }),
         width: 18,
         height: 18
       })
-    }), (0, l.jsx)(v.default, {
-      className: x.waveform,
+    }), (0, l.jsx)(C.default, {
+      className: S.waveform,
       waveform: L,
       currentTime: V,
       duration: null != B ? B : 1,
       playing: z,
       played: X,
-      onDrag: ef,
+      onDrag: em,
       onDragStart: ed,
       onDragEnd: ec
-    }), (0, l.jsx)(S, {
+    }), (0, l.jsx)(x, {
       played: X,
       currentTime: V,
       duration: B
-    }), (0, l.jsx)(f.default, {
-      className: x.volumeButton,
-      iconClassName: x.volumeButtonIcon,
-      sliderWrapperClassName: x.volumeSlider,
+    }), (0, l.jsx)(m.default, {
+      className: S.volumeButton,
+      iconClassName: S.volumeButtonIcon,
+      sliderWrapperClassName: S.volumeSlider,
       muted: G,
       value: (0, E.amplitudeToPerceptual)($, 1),
       minValue: 0,
@@ -227,6 +227,6 @@ var N = a.memo(function(e) {
       onToggleMute: eu,
       onVolumeShow: b,
       onVolumeHide: D
-    }), T]
+    }), M]
   })
 })

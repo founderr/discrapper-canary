@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return M
   }
 }), n("222007");
 var l = n("37983"),
@@ -13,21 +13,21 @@ var l = n("37983"),
   u = n("903962"),
   d = n("993105"),
   c = n("410889"),
-  f = n("461380"),
-  m = n("195812"),
+  m = n("461380"),
+  f = n("195812"),
   h = n("967685"),
   p = n("204591"),
   g = n("782340"),
   E = n("219127"),
-  v = n("180615");
+  C = n("180615");
 
-function C(e) {
+function v(e) {
   let {
     text: t,
     language: a
   } = e, s = () => (0, l.jsx)("pre", {
     children: (0, l.jsx)("code", {
-      className: i(v.scrollbarGhostHairline, E.codeView, "hljs"),
+      className: i(C.scrollbarGhostHairline, E.codeView, "hljs"),
       children: t
     })
   });
@@ -39,7 +39,7 @@ function C(e) {
       let n = e.highlight(a, t, !0);
       return null == n ? s() : (0, l.jsx)("pre", {
         children: (0, l.jsx)("code", {
-          className: i(v.scrollbarGhostHairline, E.codeView, "hljs", n.language),
+          className: i(C.scrollbarGhostHairline, E.codeView, "hljs", n.language),
           dangerouslySetInnerHTML: {
             __html: n.value
           }
@@ -67,14 +67,14 @@ function I(e) {
       onClick: () => {
         n(!t)
       },
-      children: [(0, l.jsx)(f.default, {
-        direction: t ? f.default.Directions.UP : f.default.Directions.DOWN
+      children: [(0, l.jsx)(m.default, {
+        direction: t ? m.default.Directions.UP : m.default.Directions.DOWN
       }), t ? g.default.Messages.COLLAPSE : g.default.Messages.EXPAND]
     })
   })
 }
 
-function x(e) {
+function S(e) {
   let {
     attachment: t
   } = e, n = "".concat(t.filename, " (").concat((0, d.formatKbSize)(t.size), ")");
@@ -101,7 +101,7 @@ function x(e) {
         href: t.url,
         target: "_blank",
         rel: "noreferrer noopener",
-        children: (0, l.jsx)(m.default, {
+        children: (0, l.jsx)(f.default, {
           className: E.downloadButton,
           width: 24,
           height: 24
@@ -155,14 +155,14 @@ function _(e) {
   })
 }
 
-function S(e) {
+function x(e) {
   return (0, l.jsx)(o.Tooltip, {
     text: g.default.Messages.PREVIEW_WHOLE_FILE,
     children: t => (0, l.jsx)(o.Clickable, {
       ...t,
       className: E.openFullPreviewSection,
       onClick: () => {
-        (0, o.openModal)(t => (0, l.jsx)(M, {
+        (0, o.openModal)(t => (0, l.jsx)(T, {
           ...e,
           ...t
         }))
@@ -181,26 +181,26 @@ function N(e) {
     setExpanded: r,
     language: u,
     setLanguage: c,
-    bytesLeft: f,
-    className: m
-  } = e, h = null == a ? void 0 : a.split("\n"), p = null !== (t = null == h ? void 0 : h.length) && void 0 !== t ? t : 0, v = s ? 100 : 6, N = 0 === f, M = "";
-  N && s && p > v ? M = "\n..." : !N && (M = "..."), "" !== M && (N ? M += " " + g.default.Messages.PREVIEW_LINES_LEFT.format({
-    lines: p - v
-  }) : M += " " + g.default.Messages.PREVIEW_BYTES_LEFT.format({
-    formattedBytes: (0, d.formatKbSize)(f)
+    bytesLeft: m,
+    className: f
+  } = e, h = null == a ? void 0 : a.split("\n"), p = null !== (t = null == h ? void 0 : h.length) && void 0 !== t ? t : 0, C = s ? 100 : 6, N = 0 === m, T = "";
+  N && s && p > C ? T = "\n..." : !N && (T = "..."), "" !== T && (N ? T += " " + g.default.Messages.PREVIEW_LINES_LEFT.format({
+    lines: p - C
+  }) : T += " " + g.default.Messages.PREVIEW_BYTES_LEFT.format({
+    formattedBytes: (0, d.formatKbSize)(m)
   }));
-  let T = (null == h ? void 0 : h.slice(0, v).join("\n")) + M,
-    A = s || v < p;
+  let M = (null == h ? void 0 : h.slice(0, C).join("\n")) + T,
+    A = s || C < p;
   return (0, l.jsxs)("div", {
-    className: i(m, E.container),
+    className: i(f, E.container),
     children: [(0, l.jsx)("div", {
       className: i(E.textContainer, {
         [E.expanded]: s
       }),
       children: null == a ? (0, l.jsx)(o.Spinner, {
         className: E.spinner
-      }) : (0, l.jsx)(C, {
-        text: T,
+      }) : (0, l.jsx)(v, {
+        text: M,
         language: u
       })
     }), (0, l.jsxs)(o.Text, {
@@ -213,15 +213,15 @@ function N(e) {
           setExpanded: r,
           isWholeFile: N,
           numLines: p
-        }), (0, l.jsx)(S, {
+        }), (0, l.jsx)(x, {
           language: u,
           fileContents: a,
-          bytesLeft: f,
+          bytesLeft: m,
           attachment: n
         })]
       }) : null, (0, l.jsx)("div", {
         className: E.footerGap
-      }), (0, l.jsx)(x, {
+      }), (0, l.jsx)(S, {
         attachment: n
       }), (0, l.jsx)(_, {
         language: u,
@@ -231,15 +231,15 @@ function N(e) {
   })
 }
 
-function M(e) {
+function T(e) {
   let {
     transitionState: t,
     language: n,
     fileContents: s,
     bytesLeft: i,
     attachment: r
-  } = e, [u, c] = a.useState(n), f = null != s ? s : "";
-  return 0 !== i && (f += "... ".concat(g.default.Messages.PREVIEW_BYTES_LEFT.format({
+  } = e, [u, c] = a.useState(n), m = null != s ? s : "";
+  return 0 !== i && (m += "... ".concat(g.default.Messages.PREVIEW_BYTES_LEFT.format({
     formattedBytes: (0, d.formatKbSize)(i)
   }))), (0, l.jsx)(o.ModalRoot, {
     transitionState: t,
@@ -252,8 +252,8 @@ function M(e) {
         className: E.modalTextContainer,
         children: null == s ? (0, l.jsx)(o.Spinner, {
           className: E.spinner
-        }) : (0, l.jsx)(C, {
-          text: f,
+        }) : (0, l.jsx)(v, {
+          text: m,
           language: u
         })
       }), (0, l.jsxs)(o.Text, {
@@ -262,7 +262,7 @@ function M(e) {
         variant: "text-sm/normal",
         children: [(0, l.jsx)("div", {
           className: E.footerGap
-        }), (0, l.jsx)(x, {
+        }), (0, l.jsx)(S, {
           attachment: r
         }), (0, l.jsx)(_, {
           language: u,
@@ -272,14 +272,14 @@ function M(e) {
     })
   })
 }
-var T = a.memo(function(e) {
+var M = a.memo(function(e) {
   let {
     attachment: t,
     className: n,
     onClick: s,
     onContextMenu: r
-  } = e, [o, u] = a.useState(!1), [d, f] = a.useState(t.filename.split(".").slice(-1)[0]), {
-    fileContents: m,
+  } = e, [o, u] = a.useState(!1), [d, m] = a.useState(t.filename.split(".").slice(-1)[0]), {
+    fileContents: f,
     bytesLeft: h,
     hadError: p
   } = function(e, t) {
@@ -308,9 +308,9 @@ var T = a.memo(function(e) {
             u = r.decode(await s.arrayBuffer()),
             d = null !== (n = s.headers.get("content-range")) && void 0 !== n ? n : "0",
             c = null !== (a = s.headers.get("content-length")) && void 0 !== a ? a : "1",
-            f = parseInt(d.split("/")[1]),
-            m = f - parseInt(c);
-          i(0 === m ? u : u.slice(0, -1)), o(m), l(!1)
+            m = parseInt(d.split("/")[1]),
+            f = m - parseInt(c);
+          i(0 === f ? u : u.slice(0, -1)), o(f), l(!1)
         } catch (e) {
           o(0), l(!0)
         }
@@ -330,12 +330,12 @@ var T = a.memo(function(e) {
     className: n
   }) : (0, l.jsx)(N, {
     attachment: t,
-    fileContents: m,
+    fileContents: f,
     bytesLeft: h,
     expanded: o,
     setExpanded: u,
     language: d,
-    setLanguage: f,
+    setLanguage: m,
     className: i(E.newMosaicStyle, n)
   })
 }, (e, t) => e.attachment.id === t.attachment.id && e.className === t.className)

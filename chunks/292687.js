@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l.default
+    return u.default
   }
 });
-var l = n("870346")
+var u = n("870346")

@@ -18,8 +18,8 @@ var l = a("37983"),
   C = a("606292"),
   E = a("688318"),
   h = a("946964"),
-  g = a("635956"),
-  p = a("38766"),
+  p = a("635956"),
+  g = a("38766"),
   T = a("601095"),
   L = a("493390"),
   x = a("697218"),
@@ -111,7 +111,7 @@ var V = function(e) {
       e.removeEventListener("focusin", t)
     }
   }, []);
-  let ed = (0, p.default)({
+  let ed = (0, g.default)({
       analyticsLocations: V
     }),
     ef = () => {
@@ -139,7 +139,7 @@ var V = function(e) {
     eE = em(f.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eh = () => (0, l.jsx)("div", {
       className: w.hoverUpsellContainer,
-      children: (0, l.jsx)(g.default, {
+      children: (0, l.jsx)(p.default, {
         fullWidth: !0,
         className: w.premiumSubscribeButton,
         disabled: eu,
@@ -151,7 +151,7 @@ var V = function(e) {
   s.useEffect(() => {
     null == r || r(K)
   }, [r]);
-  let eg = () => null != ei ? (0, l.jsx)(o.Text, {
+  let ep = () => null != ei ? (0, l.jsx)(o.Text, {
       color: "always-white",
       variant: "text-md/semibold",
       className: w.priceTag,
@@ -166,7 +166,7 @@ var V = function(e) {
       className: w.priceTag,
       disableTooltipPointerEvents: !0
     }),
-    ep = () => er ? null : en ? (0, l.jsx)(z, {
+    eg = () => er ? null : en ? (0, l.jsx)(z, {
       style: null != ea ? {
         background: ea.secondary.toHslString(),
         color: ea.text.toHslString()
@@ -217,7 +217,7 @@ var V = function(e) {
           disabled: eu,
           onClick: ef,
           children: M.default.Messages.COLLECTIBLES_USE_NOW
-        }), ep()]
+        }), eg()]
       })
     },
     eL = null != el ? {
@@ -285,7 +285,7 @@ var V = function(e) {
               className: w.description,
               variant: "text-md/normal",
               children: t.summary
-            }), eg()]
+            }), ep()]
           }), (0, l.jsx)("div", {
             className: w.innerHover,
             children: eT()

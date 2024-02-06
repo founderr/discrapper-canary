@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983"),
   i = n("884691"),
-  l = n("446674"),
-  r = n("77078"),
+  r = n("446674"),
+  l = n("77078"),
   o = n("812204"),
   a = n("685665"),
   u = n("67069"),
@@ -26,7 +26,7 @@ function R(e) {
   let {
     analyticsSection: t,
     type: n
-  } = e, R = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), g = p.default.canUseAnimatedAvatar(R), M = p.default.canUsePremiumProfileCustomization(R), m = n === I.UploadTypes.BANNER && M || n === I.UploadTypes.AVATAR && g, {
+  } = e, R = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), g = p.default.canUseAnimatedAvatar(R), M = p.default.canUsePremiumProfileCustomization(R), m = n === I.UploadTypes.BANNER && M || n === I.UploadTypes.AVATAR && g, {
     sourceAnalyticsLocations: x
   } = (0, a.default)(o.default.PREMIUM_PREVIEW_UPSELL_HEADER);
   if (i.useEffect(() => {
@@ -37,9 +37,9 @@ function R(e) {
     }, [m, t, x]), m) return null;
   let L = (0, s.jsx)(c.default, {
     className: _.getNitroLink,
-    size: r.Button.Sizes.SMALL,
-    look: r.Button.Looks.LINK,
-    color: r.Button.Colors.LINK,
+    size: l.Button.Sizes.SMALL,
+    look: l.Button.Looks.LINK,
+    color: l.Button.Colors.LINK,
     subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
     buttonText: C.default.Messages.PREMIUM_PREVIEW_GET_NITRO.format(),
     showIcon: !1,

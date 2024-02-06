@@ -8,8 +8,8 @@ i.r(t), i.d(t, {
   }
 }), i("222007");
 var a, l, n = i("37983"),
-  o = i("884691"),
-  s = i("446674"),
+  s = i("884691"),
+  o = i("446674"),
   r = i("77078"),
   u = i("851387"),
   d = i("476765"),
@@ -25,8 +25,8 @@ var m = e => {
     guild: a,
     closePopout: l,
     ctaRef: m
-  } = e, E = (0, d.useUID)(), [_, g] = o.useState(!1), R = (0, s.useStateFromStores)([p.default], () => p.default.isLurking(a.id), [a.id]);
-  o.useEffect(() => {
+  } = e, E = (0, d.useUID)(), [_, g] = s.useState(!1), R = (0, o.useStateFromStores)([p.default], () => p.default.isLurking(a.id), [a.id]);
+  s.useEffect(() => {
     _ && !R && l()
   }, [_, R, l]);
   let I = null,

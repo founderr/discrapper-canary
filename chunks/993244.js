@@ -1,33 +1,33 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return a
+    return r
   }
 });
 var n = i("37983"),
-  l = i("884691"),
-  s = i("430047"),
-  a = e => {
+  s = i("884691"),
+  l = i("430047"),
+  r = e => {
     let {
       src: t,
       alt: i,
-      size: a,
-      "aria-label": r
-    } = e, o = l.useRef(null), u = l.useRef(!1);
+      size: r,
+      "aria-label": a
+    } = e, o = s.useRef(null), u = s.useRef(!1);
     return (0, n.jsx)("img", {
-      className: u.current ? s.image : s.imageLoading,
+      className: u.current ? l.image : l.imageLoading,
       alt: i,
       src: t,
       ref: o,
-      "aria-label": r,
+      "aria-label": a,
       style: {
-        backgroundSize: a,
-        height: a,
-        width: a
+        backgroundSize: r,
+        height: r,
+        width: r
       },
       onLoad: u.current ? void 0 : () => {
         window.requestAnimationFrame(() => {
-          null != o.current && (u.current = !0, o.current.classList.remove(s.imageLoading), o.current.classList.add(s.image))
+          null != o.current && (u.current = !0, o.current.classList.remove(l.imageLoading), o.current.classList.add(l.image))
         })
       }
     })

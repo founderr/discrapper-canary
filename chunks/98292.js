@@ -1,42 +1,42 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var l = n("37983"),
-  i = n("884691"),
-  s = n("414456"),
-  a = n.n(s),
+  s = n("884691"),
+  a = n("414456"),
+  i = n.n(a),
   r = n("77078"),
-  o = n("374665");
+  u = n("374665");
 
-function u(e) {
+function o(e) {
   let {
     children: t,
     "aria-label": n,
-    className: s,
-    position: u
-  } = e, d = i.useRef(null), c = null != n ? n : "string" == typeof t && t;
+    className: a,
+    position: o
+  } = e, d = s.useRef(null), c = null != n ? n : "string" == typeof t && t;
   return (0, l.jsx)(r.Tooltip, {
-    position: null != u ? u : "top",
+    position: null != o ? o : "top",
     delay: 500,
     text: t,
     "aria-label": c,
     children: n => {
       let {
-        onMouseEnter: i,
+        onMouseEnter: s,
         onMouseLeave: r
       } = n;
       return (0, l.jsx)("div", {
-        className: a(s, o.overflow),
+        className: i(a, u.overflow),
         ref: d,
         "aria-hidden": e["aria-hidden"],
         onMouseEnter: () => {
           let {
             current: e
           } = d;
-          null != e && e.offsetWidth < e.scrollWidth && (null == i || i())
+          null != e && e.offsetWidth < e.scrollWidth && (null == s || s())
         },
         onMouseLeave: r,
         children: t

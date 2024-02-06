@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 }), n("222007");
-var i = n("37983"),
-  s = n("884691"),
+var s = n("37983"),
+  i = n("884691"),
   r = n("862337");
-class l extends s.Component {
+class a extends i.Component {
   static getDerivedStateFromProps(e) {
     return e.disable ? {
       hovered: !1
@@ -24,13 +24,13 @@ class l extends s.Component {
     this.stopTimer()
   }
   componentDidUpdate(e, t) {
-    var n, i, s, r;
+    var n, s, i, r;
     let {
-      props: l
+      props: a
     } = this;
-    let a = (n = l, i = this.state, !n.disable && !(i.hovered && n.pauseOnHover));
-    let u = (s = e, r = t, !s.disable && !(r.hovered && s.pauseOnHover));
-    a && !u || e.interval !== l.interval ? this.startTimer() : !a && u && this.stopTimer()
+    let l = (n = a, s = this.state, !n.disable && !(s.hovered && n.pauseOnHover));
+    let u = (i = e, r = t, !i.disable && !(r.hovered && i.pauseOnHover));
+    l && !u || e.interval !== a.interval ? this.startTimer() : !l && u && this.stopTimer()
   }
   startTimer() {
     let {
@@ -50,14 +50,14 @@ class l extends s.Component {
       children: e,
       className: t,
       disable: n
-    } = this.props, s = n ? null : {
+    } = this.props, i = n ? null : {
       onMouseEnter: this.handlePause,
       onFocus: this.handlePause,
       onMouseLeave: this.handleResume,
       onBlur: this.handleResume
     };
-    return (0, i.jsx)("div", {
-      ...s,
+    return (0, s.jsx)("div", {
+      ...i,
       className: t,
       children: e
     })
@@ -76,8 +76,8 @@ class l extends s.Component {
     }
   }
 }
-l.defaultProps = {
+a.defaultProps = {
   disable: !1,
   pauseOnHover: !1
 };
-var a = l
+var l = a

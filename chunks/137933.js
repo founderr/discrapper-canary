@@ -35,8 +35,8 @@ var a = s("37983"),
   p = s("900938"),
   U = s("347584"),
   v = s("49111"),
-  j = s("782340"),
-  P = s("800755"),
+  P = s("782340"),
+  j = s("800755"),
   y = s("241372"),
   b = s("212029");
 class B extends n.PureComponent {
@@ -121,7 +121,7 @@ class B extends n.PureComponent {
             return s => (0, a.jsx)(e, {
               ...s,
               id: t.targetId,
-              label: j.default.Messages.COPY_ID_UNKNOWN
+              label: P.default.Messages.COPY_ID_UNKNOWN
             })
           });
         case v.AuditLogTargetTypes.USER:
@@ -177,7 +177,7 @@ function F(e) {
               guildId: s,
               guild: l,
               ref: t ? u : n ? c : null,
-              className: P.row,
+              className: j.row,
               onHeaderClick: E,
               onContentClick: _,
               log: e,
@@ -242,14 +242,14 @@ class H extends n.PureComponent {
   renderHeader() {
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
-        className: P.customHeader,
+        className: j.customHeader,
         children: [(0, a.jsx)(E.FormTitle, {
           tag: E.FormTitleTags.H1,
-          className: P.formTitle,
-          children: j.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG
+          className: j.formTitle,
+          children: P.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG
         }), this.renderHeaderDropdowns()]
       }), (0, a.jsx)(E.FormDivider, {
-        className: P.divider
+        className: j.divider
       })]
     })
   }
@@ -275,11 +275,11 @@ class H extends n.PureComponent {
     if (i) return (0, a.jsx)(I.default, {});
     if (o || r) return this.renderSpinner();
     if (0 === n.length) {
-      let e = d ? j.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : j.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
-        t = d ? j.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : j.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
+      let e = d ? P.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : P.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
+        t = d ? P.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : P.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
       return (0, a.jsxs)(h.default, {
         theme: l,
-        className: P.empty,
+        className: j.empty,
         children: [(0, a.jsx)(h.EmptyStateImage, {
           darkSrc: s("935855"),
           lightSrc: s("847598"),
@@ -318,11 +318,11 @@ class H extends n.PureComponent {
       children: (0, a.jsx)("div", {
         className: y.customContainer,
         children: (0, a.jsx)(E.AdvancedScrollerAuto, {
-          className: i(y.customScroller, P.scroller),
+          className: i(y.customScroller, j.scroller),
           onScroll: this.handleOnScroll,
           ref: this.handleSetScrollerRef,
           children: (0, a.jsx)("div", {
-            className: P.content,
+            className: j.content,
             ref: this._contentRef,
             children: (0, a.jsxs)(E.FocusRingScope, {
               containerRef: this._contentRef,
@@ -369,7 +369,7 @@ class H extends n.PureComponent {
               size: E.AvatarSizes.SIZE_32,
               src: t.getAvatarURL(this.props.guildId, 32),
               "aria-label": t.username,
-              className: P.avatar
+              className: j.avatar
             })
           }), (0, a.jsxs)(E.ComboboxItem.Label, {
             children: [(0, a.jsx)(E.Text, {
@@ -379,7 +379,7 @@ class H extends n.PureComponent {
               })
             }), !t.isPomelo() && (0, a.jsxs)(E.Text, {
               variant: "text-xs/normal",
-              className: P.discriminator,
+              className: j.discriminator,
               children: ["#", t.discriminator]
             })]
           }), (0, a.jsx)(E.ComboboxItem.Checkmark, {})]
@@ -414,8 +414,8 @@ class H extends n.PureComponent {
           return s === t
         })) && void 0 !== e ? e : o[0],
         u = {
-          label: j.default.Messages.GUILD_SETTINGS_FILTER_ALL_USERS,
-          valueLabel: j.default.Messages.GUILD_SETTINGS_FILTER_ALL,
+          label: P.default.Messages.GUILD_SETTINGS_FILTER_ALL_USERS,
+          valueLabel: P.default.Messages.GUILD_SETTINGS_FILTER_ALL,
           value: null
         },
         c = [u, ...r].map(e => {
@@ -434,24 +434,24 @@ class H extends n.PureComponent {
           return t === l
         })) && void 0 !== t ? t : u;
       return (0, a.jsxs)("div", {
-        className: P.quickSelect,
+        className: j.quickSelect,
         children: [(0, a.jsx)(S.default, {
-          popoutClassName: i(P.selectFilterPopout, b.elevationBorderHigh),
+          popoutClassName: i(j.selectFilterPopout, b.elevationBorderHigh),
           items: c,
           renderItem: this.renderUserQuickSelectItem,
           renderValue: this.renderUserQuickSelectValue,
           value: E,
           onChange: this.handleFilterUserChange,
-          label: j.default.Messages.GUILD_SETTINGS_FILTER_USER,
-          placeholder: j.default.Messages.SEARCH_MEMBERS,
+          label: P.default.Messages.GUILD_SETTINGS_FILTER_USER,
+          placeholder: P.default.Messages.SEARCH_MEMBERS,
           popoutProps: {
             autoInvert: !1,
             position: "bottom"
           }
         }), (0, a.jsx)(S.default, {
-          placeholder: j.default.Messages.SEARCH_ACTIONS,
-          label: j.default.Messages.GUILD_SETTINGS_FILTER_ACTION,
-          popoutClassName: i(P.selectFilterPopout, b.elevationBorderLow),
+          placeholder: P.default.Messages.SEARCH_ACTIONS,
+          label: P.default.Messages.GUILD_SETTINGS_FILTER_ACTION,
+          popoutClassName: i(j.selectFilterPopout, b.elevationBorderLow),
           items: o,
           renderItem: this.renderActionQuickSelectItem,
           renderValue: this.renderActionQuickSelectValue,
@@ -471,9 +471,9 @@ class H extends n.PureComponent {
       } = this.props;
       if (e && t && !s) return (0, a.jsx)(E.Button, {
         color: E.Button.Colors.PRIMARY,
-        className: P.loadMore,
+        className: j.loadMore,
         onClick: this.handleFetchNextPage,
-        children: j.default.Messages.GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE
+        children: P.default.Messages.GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE
       })
     }, this.handleFilterActionChange = e => {
       (0, _.filterByAction)(e, this.props.guildId)

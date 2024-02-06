@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var l = n("37983"),
+var r = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  r = n.n(i),
-  o = n("849085");
-let a = s.forwardRef(function(e, t) {
+  l = n("414456"),
+  i = n.n(l),
+  a = n("849085");
+let o = s.forwardRef(function(e, t) {
   let {
     isActive: n,
     children: s
   } = e;
-  return (0, l.jsx)("div", {
-    className: r(o.wrapper, {
-      [o.wrapperActive]: n
+  return (0, r.jsx)("div", {
+    className: i(a.wrapper, {
+      [a.wrapperActive]: n
     }),
     ref: t,
     children: s
   })
 });
-var u = a
+var u = o

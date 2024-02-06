@@ -5,21 +5,21 @@ i.r(t), i.d(t, {
   }
 });
 var n = i("446674"),
-  l = i("26989"),
-  s = i("697218"),
-  a = i("591023"),
-  r = i("520141"),
+  s = i("26989"),
+  l = i("697218"),
+  r = i("591023"),
+  a = i("520141"),
   o = i("982527");
 
 function u(e) {
-  let t = (0, r.useIsMemberVerificationManualApproval)(null != e ? e : ""),
-    i = (0, n.useStateFromStores)([o.default, s.default, l.default], () => {
+  let t = (0, a.useIsMemberVerificationManualApproval)(null != e ? e : ""),
+    i = (0, n.useStateFromStores)([o.default, l.default, s.default], () => {
       let t = o.default.getRequest(e),
-        i = s.default.getCurrentUser();
+        i = l.default.getCurrentUser();
       if (null == i || null == t || t.userId !== i.id) return;
-      let n = l.default.getMember(e, t.userId),
-        r = null != n && !n.isPending;
-      if (!r || (0, a.isActionedAndNotAcked)(t)) return t.applicationStatus
+      let n = s.default.getMember(e, t.userId),
+        a = null != n && !n.isPending;
+      if (!a || (0, r.isActionedAndNotAcked)(t)) return t.applicationStatus
     }, [e]);
   return t ? i : void 0
 }

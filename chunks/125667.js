@@ -9,9 +9,9 @@ var n = s("37983"),
   l = s("414456"),
   i = s.n(l),
   r = s("917351"),
-  o = s.n(r),
-  u = s("866227"),
-  d = s.n(u),
+  u = s.n(r),
+  o = s("866227"),
+  d = s.n(o),
   c = s("458960"),
   h = s("509043"),
   f = s("446674"),
@@ -139,7 +139,7 @@ class W extends a.PureComponent {
       showInviteEducation: a,
       isFocused: l,
       typingUsers: r,
-      className: u,
+      className: o,
       slowmodeCooldownGuess: h,
       isBypassSlowmode: f,
       channel: m,
@@ -149,7 +149,7 @@ class W extends a.PureComponent {
       isComboing: x
     } = this.props, {
       rateLimitPerUser: C
-    } = m, N = O.default.getCurrentUser(), E = I.default.getGuild(t), _ = C > 0, M = S ? [] : o(r).keys().filter(e => e !== (null == N ? void 0 : N.id)).reject(A.default.isBlocked).map(e => O.default.getUser(e)).filter(P.isNotNullish).map(e => D.default.getName(t, this.props.channel.id, e)).value();
+    } = m, N = O.default.getCurrentUser(), E = I.default.getGuild(t), _ = C > 0, M = S ? [] : u(r).keys().filter(e => e !== (null == N ? void 0 : N.id)).reject(A.default.isBlocked).map(e => O.default.getUser(e)).filter(P.isNotNullish).map(e => D.default.getName(t, this.props.channel.id, e)).value();
     if (0 === M.length && !_ && !x) return a && null != s ? (0, n.jsx)(z, {
       activity: s,
       isFocused: l
@@ -209,7 +209,7 @@ class W extends a.PureComponent {
       className: i(k.typing, {
         "stop-animation": !l,
         [k.isComboing]: v && x
-      }, u),
+      }, o),
       children: [(0, n.jsxs)("div", {
         className: k.typingDots,
         children: [M.length > 0 && !1 !== p && (0, n.jsx)(g.Dots, {
@@ -261,7 +261,7 @@ function V(e) {
     channel: t,
     isThreadCreation: s = !1,
     ...a
-  } = e, l = (0, f.useStateFromStores)([M.default], () => M.default.findActivity(e => null != e.application_id)), i = (0, f.useStateFromStores)([C.default, E.default], () => C.default.getUserCombo(E.default.getId(), t.id)), r = (0, f.useStateFromStores)([N.default, v.default], () => (0, p.default)(t, l, N.default, v.default)), o = (0, f.useStateFromStores)([F.default], () => F.default.getSlowmodeCooldownGuess(t.id, s ? F.SlowmodeType.CreateThread : F.SlowmodeType.SendMessage)), u = (0, f.useStateFromStores)([_.default], () => s ? _.default.can(U.Permissions.MANAGE_THREADS, t) : _.default.can(U.Permissions.MANAGE_CHANNELS, t) || _.default.can(U.Permissions.MANAGE_MESSAGES, t)), d = {
+  } = e, l = (0, f.useStateFromStores)([M.default], () => M.default.findActivity(e => null != e.application_id)), i = (0, f.useStateFromStores)([C.default, E.default], () => C.default.getUserCombo(E.default.getId(), t.id)), r = (0, f.useStateFromStores)([N.default, v.default], () => (0, p.default)(t, l, N.default, v.default)), u = (0, f.useStateFromStores)([F.default], () => F.default.getSlowmodeCooldownGuess(t.id, s ? F.SlowmodeType.CreateThread : F.SlowmodeType.SendMessage)), o = (0, f.useStateFromStores)([_.default], () => s ? _.default.can(U.Permissions.MANAGE_THREADS, t) : _.default.can(U.Permissions.MANAGE_CHANNELS, t) || _.default.can(U.Permissions.MANAGE_MESSAGES, t)), d = {
     ...a,
     baseTextColor: (0, g.useToken)(m.default.colors.INTERACTIVE_NORMAL).hex(),
     activeTextColor: (0, g.useToken)(m.default.colors.INTERACTIVE_NORMAL).hex(),
@@ -270,9 +270,9 @@ function V(e) {
     typingUsers: (0, f.useStateFromStores)([j.default], () => j.default.getTypingUsers(t.id)),
     isFocused: (0, f.useStateFromStores)([w.default], () => w.default.isFocused()),
     guildId: t.guild_id,
-    slowmodeCooldownGuess: o,
+    slowmodeCooldownGuess: u,
     isComboing: null != i,
-    isBypassSlowmode: u,
+    isBypassSlowmode: o,
     channel: t,
     isThreadCreation: s
   };

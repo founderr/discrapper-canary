@@ -8,8 +8,8 @@ var r = n("37983"),
   i = n("884691"),
   u = n("118810"),
   o = n("446674"),
-  a = n("206230"),
-  s = n("719347");
+  s = n("206230"),
+  a = n("719347");
 let l = e => {
   let {
     externalRef: t,
@@ -18,7 +18,7 @@ let l = e => {
     responsive: c,
     mediaLayoutType: d,
     ...E
-  } = e, f = (0, o.useStateFromStores)([a.default], () => a.default.useReducedMotion), _ = i.useRef(null);
+  } = e, f = (0, o.useStateFromStores)([s.default], () => s.default.useReducedMotion), _ = i.useRef(null);
 
   function h() {
     var e;
@@ -50,7 +50,7 @@ let l = e => {
     onMouseLeave: I,
     onFocus: h,
     onBlur: I,
-    style: d === s.MediaLayoutType.MOSAIC ? {
+    style: d === a.MediaLayoutType.MOSAIC ? {
       width: "100%",
       height: "100%",
       maxHeight: "inherit",

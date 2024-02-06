@@ -7,8 +7,8 @@ i.r(t), i.d(t, {
 var a = i("37983"),
   l = i("884691"),
   n = i("446674"),
-  o = i("913144"),
-  s = i("206230"),
+  s = i("913144"),
+  o = i("206230"),
   r = i("166257"),
   u = i("845579"),
   d = i("15935"),
@@ -28,8 +28,8 @@ var a = i("37983"),
     } = e, R = (0, n.useStateFromStores)([d.default], () => d.default.getEffectForEmojiId(t, i, m)), I = E ? T : f, C = l.useMemo(() => (0, h.buildEffect)(m, _, t, {
       key: R,
       messageId: i
-    }), [_, R, m, t, i]), [O, A] = l.useState(!1), S = (0, n.useStateFromStores)([s.default], () => s.default.useReducedMotion), v = u.AnimateEmoji.useSetting(), N = l.useCallback(() => {
-      o.default.dispatch({
+    }), [_, R, m, t, i]), [O, A] = l.useState(!1), S = (0, n.useStateFromStores)([o.default], () => o.default.useReducedMotion), v = u.AnimateEmoji.useSetting(), N = l.useCallback(() => {
+      s.default.dispatch({
         type: "BURST_REACTION_EFFECT_CLEAR",
         channelId: t,
         messageId: i,

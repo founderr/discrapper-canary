@@ -1,34 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   maybeFetchSoundboardSounds: function() {
-    return x
+    return S
   },
   uploadSound: function() {
     return _
   },
   updateSound: function() {
-    return S
+    return x
   },
   deleteSound: function() {
     return N
   },
   addFavoriteSound: function() {
-    return M
+    return T
   },
   removeFavoriteSound: function() {
-    return T
+    return M
   },
   playSoundLocally: function() {
     return A
   },
   reportSoundStartedPlaying: function() {
-    return j
+    return O
   },
   reportSoundFinishedPlaying: function() {
-    return y
+    return j
   },
   updateUserSoundboardVolume: function() {
-    return R
+    return y
   },
   muteCustomJoinSound: function() {
     return L
@@ -43,8 +43,8 @@ var l = n("917351"),
   u = n("872173"),
   d = n("235004"),
   c = n("389480"),
-  f = n("24156"),
-  m = n("846325"),
+  m = n("24156"),
+  f = n("846325"),
   h = n("49111"),
   p = n("397336"),
   g = n("782340");
@@ -56,7 +56,7 @@ let E = async e => {
           guild_ids: e
         }
       }),
-      n = t.body.map(e => (0, c.soundboardSoundFromAPI)(e, m.DEFAULT_SOUND_GUILD_ID));
+      n = t.body.map(e => (0, c.soundboardSoundFromAPI)(e, f.DEFAULT_SOUND_GUILD_ID));
     i.default.dispatch({
       type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS",
       soundboardSounds: n
@@ -66,31 +66,31 @@ let E = async e => {
       type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE"
     }), new o.default(e)
   }
-}, v = e => new Promise(t => {
+}, C = e => new Promise(t => {
   let n = () => {
     i.default.unsubscribe(e, n), setTimeout(t, 0)
   };
   i.default.subscribe(e, n)
-}), C = e => {
+}), v = e => {
   if (!d.default.shouldFetchDefaultSounds()) return Promise.resolve();
   i.default.dispatch({
     type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS"
   });
-  let t = v("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
+  let t = C("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
   return E(e), t
 }, I = () => {
-  let e = (0, f.getGuildIdsToFetchSoundsFor)();
+  let e = (0, m.getGuildIdsToFetchSoundsFor)();
   if (0 === e.length) return Promise.resolve();
-  let t = v("SOUNDBOARD_SOUNDS_RECEIVED");
+  let t = C("SOUNDBOARD_SOUNDS_RECEIVED");
   return i.default.dispatch({
     type: "GUILD_SOUNDBOARD_FETCH"
   }), i.default.dispatch({
     type: "REQUEST_SOUNDBOARD_SOUNDS",
     guildIds: e
   }), t
-}, x = () => __OVERLAY__ ? (i.default.dispatch({
+}, S = () => __OVERLAY__ ? (i.default.dispatch({
   type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST"
-}), Promise.all([])) : Promise.all([C(), I()]);
+}), Promise.all([])) : Promise.all([v(), I()]);
 async function _(e) {
   let {
     guildId: t,
@@ -111,7 +111,7 @@ async function _(e) {
   }), u = (0, c.soundboardSoundFromAPI)(o.body, t);
   return u
 }
-async function S(e) {
+async function x(e) {
   let {
     guildId: t,
     soundId: n,
@@ -137,7 +137,7 @@ async function N(e, t) {
   })
 }
 
-function M(e) {
+function T(e) {
   u.FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", t => a.size(t.soundIds) >= p.MAX_FAVORITES ? (r.default.show({
     title: g.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
     body: g.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
@@ -146,7 +146,7 @@ function M(e) {
   }), !1) : !t.soundIds.includes(e) && void t.soundIds.push(e), p.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function T(e) {
+function M(e) {
   u.FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", t => {
     t.soundIds = t.soundIds.filter(t => t !== e)
   }, p.UserSettingsDelay.INFREQUENT_USER_ACTION)
@@ -161,7 +161,7 @@ function A(e, t, n) {
   })
 }
 
-function j(e, t) {
+function O(e, t) {
   i.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_START",
     soundId: e,
@@ -169,7 +169,7 @@ function j(e, t) {
   })
 }
 
-function y(e, t) {
+function j(e, t) {
   i.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_END",
     soundId: e,
@@ -177,7 +177,7 @@ function y(e, t) {
   })
 }
 
-function R(e) {
+function y(e) {
   i.default.dispatch({
     type: "USER_SOUNDBOARD_SET_VOLUME",
     volume: e

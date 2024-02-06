@@ -24,8 +24,8 @@ var a = t("37983"),
   M = t("24373"),
   C = t("83910"),
   m = t("95689"),
-  _ = t("943409"),
-  v = t("437472"),
+  v = t("943409"),
+  _ = t("437472"),
   T = t("8161"),
   N = t("315102"),
   x = t("888400"),
@@ -92,7 +92,7 @@ function w(e, s, t, l, n) {
     content: s,
     className: l,
     asPartialPreview: !0
-  }), g ? c = (0, a.jsx)(v.default, {
+  }), g ? c = (0, a.jsx)(_.default, {
     className: u,
     width: d,
     height: d
@@ -100,7 +100,7 @@ function w(e, s, t, l, n) {
     className: u,
     width: d,
     height: d
-  }) : p ? c = (0, a.jsx)(_.default, {
+  }) : p ? c = (0, a.jsx)(v.default, {
     className: u,
     width: d * (19 / 24),
     height: d
@@ -123,7 +123,7 @@ function y(e) {
     baseMessage: i,
     referencedMessage: M,
     renderPopout: C
-  } = e, m = l.useMemo(() => null != C && M.state === p.ReferencedMessageState.LOADED ? e => C(e, M.message) : void 0, [M, C]), _ = l.useContext(d.default), v = function(e, s, t) {
+  } = e, m = l.useMemo(() => null != C && M.state === p.ReferencedMessageState.LOADED ? e => C(e, M.message) : void 0, [M, C]), v = l.useContext(d.default), _ = function(e, s, t) {
     let {
       referencedMessage: l,
       compact: n,
@@ -170,7 +170,7 @@ function y(e) {
       onRequestClose: g,
       children: f
     }) : f()
-  }(e, _, m), R = function(e, s) {
+  }(e, v, m), R = function(e, s) {
     let {
       baseMessage: t,
       channel: l,
@@ -251,6 +251,6 @@ function y(e) {
     id: (0, o.getMessageReplyId)(i),
     className: r(P.repliedMessage, D),
     "aria-label": s,
-    children: [v, R, y]
+    children: [_, R, y]
   })
 }

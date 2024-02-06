@@ -9,8 +9,8 @@ s("884691");
 var l = s("77078"),
   o = s("191814"),
   r = s("430677"),
-  a = s("476765"),
-  i = s("782340"),
+  i = s("476765"),
+  a = s("782340"),
   u = s("937769");
 
 function c(e) {
@@ -20,7 +20,7 @@ function c(e) {
     title: c,
     body: d,
     onClose: E
-  } = e, f = (0, a.useUID)();
+  } = e, f = (0, i.useUID)();
   return (0, n.jsxs)(l.ModalRoot, {
     className: u.container,
     transitionState: t,
@@ -48,7 +48,7 @@ function c(e) {
       size: l.Button.Sizes.MEDIUM,
       grow: !1,
       onClick: E,
-      children: i.default.Messages.GOT_IT
+      children: a.default.Messages.GOT_IT
     })]
   })
 }

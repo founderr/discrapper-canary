@@ -22,8 +22,8 @@ var a = n("37983"),
   S = n("90404"),
   g = n("599110"),
   _ = n("286235"),
-  T = n("50885"),
-  v = n("49111"),
+  v = n("50885"),
+  T = n("49111"),
   I = n("782340"),
   A = n("143941");
 
@@ -69,14 +69,14 @@ class R extends r.PureComponent {
     let a = _.default.captureCrash(e, {
       extra: t
     });
-    g.default.track(v.AnalyticEvents.APP_CRASHED, {
+    g.default.track(T.AnalyticEvents.APP_CRASHED, {
       path: n.pathname,
       extra: t,
       error_message: e.message,
       error_stack: e.stack,
       sentry_issue_id: a,
       uses_client_mods: (0, E.usesClientMods)()
-    }), x(), T.default.cleanupDisplaySleep()
+    }), x(), v.default.cleanupDisplaySleep()
   }
   _handleSubmitReport() {
     location.reload(!0)

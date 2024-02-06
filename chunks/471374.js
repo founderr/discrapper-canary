@@ -1,17 +1,17 @@
 "use strict";
 i.r(t), i.d(t, {
   useIsGamingVoiceActivityEnabled: function() {
-    return s
+    return l
   },
   isGamingVoiceActivityEnabled: function() {
-    return a
+    return r
   },
   default: function() {
-    return r
+    return a
   }
 });
 var n = i("862205");
-let l = (0, n.createExperiment)({
+let s = (0, n.createExperiment)({
   kind: "user",
   id: "2024-01_guild_gaming_voice_activity",
   label: "Guild Gaming Voice Activity",
@@ -36,10 +36,10 @@ let l = (0, n.createExperiment)({
   }]
 });
 
-function s(e, t) {
+function l(e, t) {
   let {
     showGamingVoiceActivity: i
-  } = l.useExperiment({
+  } = s.useExperiment({
     location: e
   }, {
     autoTrackExposure: t
@@ -47,14 +47,14 @@ function s(e, t) {
   return i
 }
 
-function a(e, t) {
+function r(e, t) {
   let {
     showGamingVoiceActivity: i
-  } = l.getCurrentConfig({
+  } = s.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: t
   });
   return i
 }
-var r = l
+var a = s

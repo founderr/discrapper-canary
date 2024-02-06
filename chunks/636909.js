@@ -24,8 +24,8 @@ var n = l("37983"),
   _ = l("568307"),
   p = l("18494"),
   I = l("697218"),
-  x = l("703370"),
-  v = l("145131"),
+  v = l("703370"),
+  x = l("145131"),
   A = l("953109"),
   R = l("476263"),
   T = l("267675"),
@@ -56,7 +56,7 @@ function Y(e) {
     selectSource: l,
     sourceChanged: a,
     onChangeSource: s
-  } = e, r = (0, i.useStateFromStores)([_.default, x.default], () => (0, P.isWindows)() ? (0, G.default)(_.default, x.default) : null), o = (0, i.useStateFromStores)([d.default], () => (null == r ? void 0 : r.id) != null ? d.default.getApplication(r.id) : null), c = (0, i.useStateFromStores)([_.default], () => _.default.getRunningGames()), f = (0, i.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(O.isNotNullish), [c]), m = null;
+  } = e, r = (0, i.useStateFromStores)([_.default, v.default], () => (0, P.isWindows)() ? (0, G.default)(_.default, v.default) : null), o = (0, i.useStateFromStores)([d.default], () => (null == r ? void 0 : r.id) != null ? d.default.getApplication(r.id) : null), c = (0, i.useStateFromStores)([_.default], () => _.default.getRunningGames()), f = (0, i.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(O.isNotNullish), [c]), m = null;
   if (null != t ? m = t.name : null != r && (m = r.name), null == m) return null;
   let S = (0, k.default)(r, t, c),
     C = a ? f.find(e => {
@@ -123,8 +123,8 @@ function X(e) {
   let {
     text: t
   } = e;
-  return (0, n.jsxs)(v.default, {
-    align: v.default.Align.CENTER,
+  return (0, n.jsxs)(x.default, {
+    align: x.default.Align.CENTER,
     className: Z.warning,
     children: [(0, n.jsx)(L.default, {
       className: Z.warningIcon
@@ -194,8 +194,8 @@ function $(e) {
     targetGuildPremiumTier: h,
     selectSource: N,
     selectGuild: _,
-    sound: x,
-    onClose: v,
+    sound: v,
+    onClose: x,
     onChangeSelectedFPS: A,
     onChangeSelectedResolution: R,
     onChangeSelectedPreset: T,
@@ -210,7 +210,7 @@ function $(e) {
   }), el = (0, y.default)();
   null != t && t.id.startsWith("screen") && !g.default.supportsScreenSoundshare() ? el = z.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND : null == el && g.default.supportsEnableSoundshare() && K !== W.SoundshareEnableState.ENABLED && (el = z.default.Messages.GO_LIVE_SCREENSHARE_ENABLE_FOR_SOUNDSHARE.format({
     onVoiceSettingsClick: () => {
-      v(), o.default.open(W.UserSettingsSections.VOICE)
+      x(), o.default.open(W.UserSettingsSections.VOICE)
     }
   }));
   let en = ee ? (0, n.jsx)(S.default, {
@@ -234,7 +234,7 @@ function $(e) {
       }), null != el ? (0, n.jsx)(X, {
         text: el
       }) : null, (0, P.isWindows)() && null != t && t.id.startsWith("screen") && null == el ? (0, n.jsx)(q, {
-        enabled: x,
+        enabled: v,
         onChange: G
       }) : null]
     }), _ && null != C ? (0, n.jsx)(J, {
@@ -259,7 +259,7 @@ function $(e) {
       selectedFPS: l,
       selectedResolution: u,
       targetGuildPremiumTier: h,
-      onClose: v,
+      onClose: x,
       onFPSChange: A,
       onResolutionChange: R,
       onPresetChange: T,

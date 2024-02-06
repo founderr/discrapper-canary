@@ -12,9 +12,9 @@ var i = i || function(e) {
         var t = new MouseEvent("click");
         e.dispatchEvent(t)
       },
-      l = /Version\/[\d\.]+.*Safari/.test(navigator.userAgent),
-      s = e.webkitRequestFileSystem,
-      a = e.requestFileSystem || s || e.mozRequestFileSystem,
+      s = /Version\/[\d\.]+.*Safari/.test(navigator.userAgent),
+      l = e.webkitRequestFileSystem,
+      a = e.requestFileSystem || l || e.mozRequestFileSystem,
       u = function(t) {
         (e.setImmediate || e.setTimeout)(function() {
           throw t
@@ -42,58 +42,58 @@ var i = i || function(e) {
           type: e.type
         }) : e
       },
-      h = function(t, u, h) {
-        !h && (t = _(t));
-        var I, p, S = this,
+      I = function(t, u, I) {
+        !I && (t = _(t));
+        var h, S, p = this,
           T = t.type,
           N = !1,
           C = function() {
-            E(S, "writestart progress write writeend".split(" "))
+            E(p, "writestart progress write writeend".split(" "))
           },
           R = function() {
-            if (p && l && "undefined" != typeof FileReader) {
+            if (S && s && "undefined" != typeof FileReader) {
               var i = new FileReader;
               i.onloadend = function() {
                 var e = i.result;
-                p.location.href = "data:attachment/file" + e.slice(e.search(/[,;]/)), S.readyState = S.DONE, C()
-              }, i.readAsDataURL(t), S.readyState = S.INIT;
+                S.location.href = "data:attachment/file" + e.slice(e.search(/[,;]/)), p.readyState = p.DONE, C()
+              }, i.readAsDataURL(t), p.readyState = p.INIT;
               return
-            }(N || !I) && (I = n().createObjectURL(t)), p ? p.location.href = I : void 0 === e.open(I, "_blank") && l && (e.location.href = I), S.readyState = S.DONE, C(), f(I)
+            }(N || !h) && (h = n().createObjectURL(t)), S ? S.location.href = h : void 0 === e.open(h, "_blank") && s && (e.location.href = h), p.readyState = p.DONE, C(), f(h)
           },
           v = function(e) {
             return function() {
-              if (S.readyState !== S.DONE) return e.apply(this, arguments)
+              if (p.readyState !== p.DONE) return e.apply(this, arguments)
             }
           },
-          g = {
+          A = {
             create: !0,
             exclusive: !1
           };
-        if (S.readyState = S.INIT, !u && (u = "download"), r) {
-          I = n().createObjectURL(t), setTimeout(function() {
-            i.href = I, i.download = u, o(i), C(), f(I), S.readyState = S.DONE
+        if (p.readyState = p.INIT, !u && (u = "download"), r) {
+          h = n().createObjectURL(t), setTimeout(function() {
+            i.href = h, i.download = u, o(i), C(), f(h), p.readyState = p.DONE
           });
           return
         }
-        if (e.chrome && T && T !== c && (t = (t.slice || t.webkitSlice).call(t, 0, t.size, c), N = !0), s && "download" !== u && (u += ".download"), (T === c || s) && (p = e), !a) {
+        if (e.chrome && T && T !== c && (t = (t.slice || t.webkitSlice).call(t, 0, t.size, c), N = !0), l && "download" !== u && (u += ".download"), (T === c || l) && (S = e), !a) {
           R();
           return
         }
         d += t.size, a(e.TEMPORARY, d, v(function(e) {
-          e.root.getDirectory("saved", g, v(function(e) {
+          e.root.getDirectory("saved", A, v(function(e) {
             var n = function() {
-              e.getFile(u, g, v(function(e) {
+              e.getFile(u, A, v(function(e) {
                 e.createWriter(v(function(n) {
                   n.onwriteend = function(t) {
-                    p.location.href = e.toURL(), S.readyState = S.DONE, E(S, "writeend", t), f(e)
+                    S.location.href = e.toURL(), p.readyState = p.DONE, E(p, "writeend", t), f(e)
                   }, n.onerror = function() {
                     var e = n.error;
                     e.code !== e.ABORT_ERR && R()
                   }, "writestart progress write abort".split(" ").forEach(function(e) {
-                    n["on" + e] = S["on" + e]
-                  }), n.write(t), S.abort = function() {
-                    n.abort(), S.readyState = S.DONE
-                  }, S.readyState = S.WRITING
+                    n["on" + e] = p["on" + e]
+                  }), n.write(t), p.abort = function() {
+                    n.abort(), p.readyState = p.DONE
+                  }, p.readyState = p.WRITING
                 }), R)
               }), R)
             };
@@ -107,13 +107,13 @@ var i = i || function(e) {
           }), R)
         }), R)
       },
-      I = h.prototype;
+      h = I.prototype;
     return "undefined" != typeof navigator && navigator.msSaveOrOpenBlob ? function(e, t, n) {
       return !n && (e = _(e)), navigator.msSaveOrOpenBlob(e, t || "download")
-    } : (I.abort = function() {
+    } : (h.abort = function() {
       this.readyState = this.DONE, E(this, "abort")
-    }, I.readyState = I.INIT = 0, I.WRITING = 1, I.DONE = 2, I.error = I.onwritestart = I.onprogress = I.onwrite = I.onabort = I.onerror = I.onwriteend = null, function(e, t, n) {
-      return new h(e, t, n)
+    }, h.readyState = h.INIT = 0, h.WRITING = 1, h.DONE = 2, h.error = h.onwritestart = h.onprogress = h.onwrite = h.onabort = h.onerror = h.onwriteend = null, function(e, t, n) {
+      return new I(e, t, n)
     })
   }
 }("undefined" != typeof self && self || "undefined" != typeof window && window || this.content);

@@ -19,18 +19,18 @@ var a = s("37983"),
   g = s("673078"),
   x = s("987772"),
   C = s("680986"),
-  T = s("578198"),
-  _ = s("49111"),
-  S = s("782340"),
+  _ = s("578198"),
+  S = s("49111"),
+  T = s("782340"),
   p = s("743344"),
   E = s("632215"),
   N = n.memo(function(e) {
     let {
       channel: t,
       onChange: l
-    } = e, N = (0, T.useForumPostComposerStoreApi)(), {
+    } = e, N = (0, _.useForumPostComposerStoreApi)(), {
       guidelinesOpen: M
-    } = (0, T.useForumPostComposerStore)(e => {
+    } = (0, _.useForumPostComposerStore)(e => {
       let {
         guidelinesOpen: t
       } = e;
@@ -70,9 +70,9 @@ var a = s("37983"),
             children: [(0, a.jsx)(h.default, {
               width: 20,
               height: 20
-            }), S.default.Messages.FORUM_POST_GUIDELINES_TITLE, A && (0, a.jsx)(u.Clickable, {
+            }), T.default.Messages.FORUM_POST_GUIDELINES_TITLE, A && (0, a.jsx)(u.Clickable, {
               onClick: () => {
-                d.default.open(t.id, void 0, _.ChannelSettingsSubsections.TOPIC)
+                d.default.open(t.id, void 0, S.ChannelSettingsSubsections.TOPIC)
               },
               tag: "span",
               className: p.clickable,
@@ -82,7 +82,7 @@ var a = s("37983"),
               })
             })]
           }), (0, a.jsx)(u.Clickable, {
-            "aria-label": S.default.Messages.CLOSE,
+            "aria-label": T.default.Messages.CLOSE,
             className: p.clickable,
             onClick: () => {
               N.getState().setGuidelinesOpen(!1)
@@ -133,7 +133,7 @@ var a = s("37983"),
                   variant: "text-sm/semibold",
                   color: "text-brand",
                   className: p.showMoreText,
-                  children: [S.default.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, a.jsx)(g.default, {
+                  children: [T.default.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, a.jsx)(g.default, {
                     className: p.showMoreIcon
                   })]
                 })

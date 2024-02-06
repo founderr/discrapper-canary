@@ -19,16 +19,16 @@ var r = n("884691"),
   u = n("448993"),
   a = n("702873"),
   l = n("254365"),
-  d = n("143460");
-let s = {},
+  s = n("143460");
+let d = {},
   T = e => {
     let t = {
-      [d.AutomodTriggerType.KEYWORD]: [],
-      [d.AutomodTriggerType.ML_SPAM]: [],
-      [d.AutomodTriggerType.DEFAULT_KEYWORD_LIST]: [],
-      [d.AutomodTriggerType.MENTION_SPAM]: [],
-      [d.AutomodTriggerType.USER_PROFILE]: [],
-      [d.AutomodTriggerType.SERVER_POLICY]: []
+      [s.AutomodTriggerType.KEYWORD]: [],
+      [s.AutomodTriggerType.ML_SPAM]: [],
+      [s.AutomodTriggerType.DEFAULT_KEYWORD_LIST]: [],
+      [s.AutomodTriggerType.MENTION_SPAM]: [],
+      [s.AutomodTriggerType.USER_PROFILE]: [],
+      [s.AutomodTriggerType.SERVER_POLICY]: []
     };
     return e.forEach(e => {
       var n;
@@ -49,13 +49,13 @@ let s = {},
         id: u,
         triggerType: a
       } = n, {
-        rules: d
-      } = t(), s = null !== (r = d[i]) && void 0 !== r ? r : {}, T = null !== (o = s[a]) && void 0 !== o ? o : [], E = T.some(e => e.id === u), A = T.filter(e => (!(0, l.isDefaultRuleId)(e.id) || e.triggerType !== a) && !0), _ = E ? A.map(e => e.id === u ? n : e) : [...A, n];
+        rules: s
+      } = t(), d = null !== (r = s[i]) && void 0 !== r ? r : {}, T = null !== (o = d[a]) && void 0 !== o ? o : [], E = T.some(e => e.id === u), A = T.filter(e => (!(0, l.isDefaultRuleId)(e.id) || e.triggerType !== a) && !0), _ = E ? A.map(e => e.id === u ? n : e) : [...A, n];
       e({
         rules: {
-          ...d,
+          ...s,
           [i]: {
-            ...s,
+            ...d,
             [a]: _
           }
         },
@@ -83,10 +83,10 @@ let s = {},
       if (function(e) {
           var t;
           let n = Date.now(),
-            r = null !== (t = s[e]) && void 0 !== t ? t : 0;
+            r = null !== (t = d[e]) && void 0 !== t ? t : 0;
           return n - r > 2e4
         }(n)) {
-        s[n] = Date.now();
+        d[n] = Date.now();
         try {
           let r = await (0, a.fetchAutomodRules)(n),
             o = T(r),

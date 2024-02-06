@@ -131,7 +131,7 @@ let x = (e, t, s, a) => {
       children: null != t ? t : "-"
     })
   },
-  j = e => {
+  P = e => {
     let {
       children: t
     } = e;
@@ -140,7 +140,7 @@ let x = (e, t, s, a) => {
       children: u(t).utc().format("MMMM YYYY")
     })
   },
-  P = e => {
+  j = e => {
     var t;
     let {
       listingId: s
@@ -211,11 +211,11 @@ let x = (e, t, s, a) => {
     render(e, t) {
       let {
         expandedRows: s
-      } = t, a = [(0, l.jsx)(j, {
+      } = t, a = [(0, l.jsx)(P, {
         children: e.periodStartingAt
       }, e.key)], n = s.has(e.key);
       if (n)
-        for (let t in e.ppgs) a.push((0, l.jsx)(P, {
+        for (let t in e.ppgs) a.push((0, l.jsx)(j, {
           listingId: t
         }, t));
       return a

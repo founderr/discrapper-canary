@@ -5,10 +5,10 @@ i.r(t), i.d(t, {
   }
 }), i("222007");
 var n = i("37983"),
-  l = i("884691"),
-  s = i("866227"),
-  a = i.n(s),
-  r = i("446674"),
+  s = i("884691"),
+  l = i("866227"),
+  r = i.n(l),
+  a = i("446674"),
   o = i("95410"),
   u = i("77078"),
   c = i("850068"),
@@ -29,19 +29,19 @@ var v = e => {
   let {
     closePopout: t,
     channel: i
-  } = e, [s, v] = l.useState(!1), {
+  } = e, [l, v] = s.useState(!1), {
     subscription: A,
     hasFetchedSubscriptions: y
-  } = (0, r.useStateFromStoresObject)([f.default], () => ({
+  } = (0, a.useStateFromStoresObject)([f.default], () => ({
     subscription: f.default.getPremiumSubscription(),
     hasFetchedSubscriptions: f.default.hasFetchedSubscriptions()
   }));
-  if (l.useEffect(() => {
+  if (s.useEffect(() => {
       !y && (0, c.fetchSubscriptions)()
-    }, [y]), null == A || !(0, p.isSubscriptionStatusFailedPayment)(A.status) || s) return null;
-  let j = A.status === _.SubscriptionStatusTypes.PAST_DUE ? (0, p.getBillingGracePeriodDays)(A) : S.MAX_ACCOUNT_HOLD_DAYS,
-    R = a(A.currentPeriodStart).add(j, "days"),
-    O = "".concat(A.id, ":").concat(R.toISOString());
+    }, [y]), null == A || !(0, p.isSubscriptionStatusFailedPayment)(A.status) || l) return null;
+  let R = A.status === _.SubscriptionStatusTypes.PAST_DUE ? (0, p.getBillingGracePeriodDays)(A) : S.MAX_ACCOUNT_HOLD_DAYS,
+    j = r(A.currentPeriodStart).add(R, "days"),
+    O = "".concat(A.id, ":").concat(j.toISOString());
   if (N === O) return null;
   let M = p.default.getPremiumType(A.planId) === S.PremiumTypes.TIER_0 ? E.GradientCssUrls.PREMIUM_TIER_0 : p.default.getPremiumType(A.planId) === S.PremiumTypes.TIER_1 ? E.GradientCssUrls.PREMIUM_TIER_1 : E.GradientCssUrls.PREMIUM_TIER_2;
   return (0, n.jsxs)("div", {
@@ -55,7 +55,7 @@ var v = e => {
         variant: "text-xs/normal",
         children: h.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
           planName: p.default.getDisplayPremiumType(A.planId),
-          endsAt: R
+          endsAt: j
         })
       }), (0, n.jsx)("div", {
         children: (0, n.jsx)(u.Anchor, {

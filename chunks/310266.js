@@ -38,9 +38,9 @@ function x(e) {
     listingsLoaded: a
   } = (0, m.useFetchGuildProductListingsForGuild)(t), n = (0, o.default)([g.default], () => g.default.getGuild(t)), x = (0, o.default)([A.default], () => A.default.getCurrentUser()), p = (null == n ? void 0 : n.isOwner(x)) === !0, {
     loading: U
-  } = (0, u.useMonetizationSettings)(t), [v, j] = i.useState(s ? "manage_listings" : "payment");
+  } = (0, u.useMonetizationSettings)(t), [v, P] = i.useState(s ? "manage_listings" : "payment");
   (0, _.useNewOwnerOnboardingRequired)(n);
-  let P = i.useCallback(() => {
+  let j = i.useCallback(() => {
     if (null == n) return;
     let e = n.roles[n.id];
     I.default.close();
@@ -74,7 +74,7 @@ function x(e) {
       className: G.tabBar,
       "aria-label": M.default.Messages.GUILD_PRODUCTS_TITLE,
       selectedItem: v,
-      onItemSelect: j,
+      onItemSelect: P,
       children: [(0, l.jsx)(E.default, {
         id: "basic_info",
         disabledTooltip: M.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
@@ -92,7 +92,7 @@ function x(e) {
       }) : null, s ? (0, l.jsx)("div", {
         className: G.previewButton,
         children: (0, l.jsx)(d.Button, {
-          onClick: P,
+          onClick: j,
           color: d.Button.Colors.PRIMARY,
           size: d.Button.Sizes.SMALL,
           look: d.Button.Looks.OUTLINED,

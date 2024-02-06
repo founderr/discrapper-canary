@@ -9,8 +9,8 @@ n("884691");
 var o = n("77078"),
   r = n("446674"),
   E = n("393414"),
-  l = n("271938"),
-  s = n("489622"),
+  s = n("271938"),
+  l = n("489622"),
   c = n("861348"),
   a = n("170213"),
   I = n("49111"),
@@ -18,15 +18,15 @@ var o = n("77078"),
   A = n("876680");
 
 function _() {
-  return (0, i.jsxs)(s.default, {
-    color: s.NoticeColors.DANGER,
+  return (0, i.jsxs)(l.default, {
+    color: l.NoticeColors.DANGER,
     className: A.nagbar,
     children: [(0, i.jsx)(o.Text, {
       tag: "span",
       color: "always-white",
       variant: "text-md/normal",
       children: S.default.Messages.SAFETY_HUB_STANDALONE_PAGE_NAGBAR
-    }), (0, i.jsx)(s.NoticeButtonAnchor, {
+    }), (0, i.jsx)(l.NoticeButtonAnchor, {
       href: a.SafetyHubLinks.WARNING_SYSTEM_HELPCENTER_LINK,
       children: (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
@@ -45,7 +45,7 @@ function N() {
 }
 
 function u() {
-  let e = (0, r.useStateFromStores)([l.default], () => l.default.getSuspendedUserToken());
+  let e = (0, r.useStateFromStores)([s.default], () => s.default.getSuspendedUserToken());
   return null == e && (0, E.transitionTo)(I.Routes.LOGIN), (0, i.jsxs)("div", {
     className: A.container,
     children: [(0, i.jsx)(_, {}), (0, i.jsx)(N, {})]

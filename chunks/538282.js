@@ -23,10 +23,10 @@ i.r(t), i.d(t, {
   }
 });
 var n = i("995008"),
-  l = i.n(n),
-  s = i("308503"),
-  a = i("136759"),
-  r = i("13030");
+  s = i.n(n),
+  l = i("308503"),
+  r = i("136759"),
+  a = i("13030");
 let o = Object.freeze({
     activeView: null,
     lastActiveView: null,
@@ -35,10 +35,10 @@ let o = Object.freeze({
     isSearchSuggestion: !1,
     pickerId: function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "uid_";
-      return l(e)
+      return s(e)
     }()
   }),
-  u = (0, s.default)((0, a.persist)((e, t) => o, {
+  u = (0, l.default)((0, r.persist)((e, t) => o, {
     name: "expression-picker-last-active-view",
     partialize: e => ({
       lastActiveView: e.lastActiveView
@@ -63,7 +63,7 @@ let o = Object.freeze({
     let t = u.getState();
     if (null == t.activeView) {
       var i;
-      c(null !== (i = t.lastActiveView) && void 0 !== i ? i : r.ExpressionPickerViewType.EMOJI, e)
+      c(null !== (i = t.lastActiveView) && void 0 !== i ? i : a.ExpressionPickerViewType.EMOJI, e)
     } else d()
   },
   E = (e, t) => {

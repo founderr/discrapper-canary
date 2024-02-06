@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return C
   },
   default: function() {
-    return v
+    return x
   }
 });
 var a = n("37983");
@@ -50,19 +50,19 @@ function A(e) {
     "aria-labelledby": T,
     scrollable: A,
     role: M,
-    hideSearch: x,
-    showDivider: v
+    hideSearch: v,
+    showDivider: x
   } = e, R = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), L = (null == R ? void 0 : R.isStaff()) || (null == R ? void 0 : R.isStaffPersonal()) || !1;
   return (0, a.jsx)(E.default, {
     className: n,
     innerClassName: o,
     toolbar: function() {
       if (null == m) return null;
-      let e = null != l && !x;
+      let e = null != l && !v;
       return i.isMobile ? p : (0, a.jsxs)(a.Fragment, {
         children: [m, e ? (0, a.jsx)(f.default, {
           className: I.search
-        }, null != s ? s : l) : null, v && (0, a.jsx)(E.default.Divider, {}), (0, a.jsx)(N.default, {}), (0, a.jsx)(d.default, {
+        }, null != s ? s : l) : null, x && (0, a.jsx)(E.default.Divider, {}), (0, a.jsx)(N.default, {}), (0, a.jsx)(d.default, {
           canShowReminder: !0
         }), (0, a.jsx)(c.default, {}), L ? (0, a.jsx)(g.default, {}) : (0, a.jsx)(S.default, {})]
       })
@@ -95,7 +95,7 @@ function M(e) {
   })
 }
 
-function x(e) {
+function v(e) {
   let {
     isAuthenticated: t = !0,
     ...n
@@ -114,5 +114,5 @@ function x(e) {
     })
   })
 }
-x.Title = E.default.Title, x.Icon = E.default.Icon, x.Divider = E.default.Divider, x.Caret = E.default.Caret;
-var v = x
+v.Title = E.default.Title, v.Icon = E.default.Icon, v.Divider = E.default.Divider, v.Caret = E.default.Caret;
+var x = v

@@ -4,8 +4,8 @@ t.r(A), t.d(A, {
     return a
   }
 }), t("424973");
-var a, l = t("872717"),
-  n = t("448993"),
+var a, n = t("872717"),
+  l = t("448993"),
   r = t("981112"),
   s = t("966724"),
   o = t("980134"),
@@ -50,13 +50,13 @@ a = class extends r.default {
         body: a,
         signal: e
       },
-      d = "POST" === this._method ? l.default.post : l.default.patch;
+      d = "POST" === this._method ? n.default.post : n.default.patch;
     try {
       let e = await d(i);
       return this._handleComplete(e.body), e.body
     } catch (e) {
       var u;
-      if (this._raiseEndpointErrors) throw new n.APIError(e);
+      if (this._raiseEndpointErrors) throw new l.APIError(e);
       this._handleError({
         code: null == e ? void 0 : null === (u = e.body) || void 0 === u ? void 0 : u.code,
         body: null == e ? void 0 : e.body

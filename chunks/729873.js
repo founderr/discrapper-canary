@@ -5,8 +5,8 @@ i.r(t), i.d(t, {
   }
 });
 var n = i("37983"),
-  l = i("884691"),
-  s = i("446674"),
+  s = i("884691"),
+  l = i("446674"),
   r = i("77078"),
   a = i("206230"),
   o = i("858619"),
@@ -39,7 +39,7 @@ let y = e => {
       guildName: i.name
     }) : null
   },
-  R = l.memo(function(e) {
+  R = s.memo(function(e) {
     let t, {
         className: i,
         emojiGrid: N,
@@ -48,7 +48,7 @@ let y = e => {
         channel: O
       } = e,
       M = d.EmojiPickerStore.useStore(e => e.inspectedExpressionPosition),
-      x = l.useMemo(() => {
+      x = s.useMemo(() => {
         var e;
         let {
           rowIndex: t,
@@ -61,9 +61,9 @@ let y = e => {
         guildId: null == x ? void 0 : x.guildId,
         allNamesString: null == x ? void 0 : x.name
       },
-      P = (0, s.useStateFromStores)([m.default], () => null !== L && L.type === o.EmojiTypes.GUILD ? m.default.getGuild(L.guildId) : null, [L]),
-      D = (0, s.useStateFromStores)([I.default], () => I.default.isFocused()),
-      b = (0, s.useStateFromStores)([a.default], () => a.default.useReducedMotion, []),
+      P = (0, l.useStateFromStores)([m.default], () => null !== L && L.type === o.EmojiTypes.GUILD ? m.default.getGuild(L.guildId) : null, [L]),
+      D = (0, l.useStateFromStores)([I.default], () => I.default.isFocused()),
+      b = (0, l.useStateFromStores)([a.default], () => a.default.useReducedMotion, []),
       U = E.AnimateEmoji.useSetting(),
       w = (0, _.useIsFavoriteEmoji)(R, A(L) ? L : null),
       {
@@ -71,7 +71,7 @@ let y = e => {
       } = (0, S.default)(R, j),
       k = L.id,
       V = (null == x ? void 0 : x.type) === C.EmojiGridItemTypes.EMOJI ? x.subCategory : T.EmojiSubCategory.NONE;
-    if (l.useEffect(() => {
+    if (s.useEffect(() => {
         let e = Date.now();
         return () => {
           let t = Date.now() - e;

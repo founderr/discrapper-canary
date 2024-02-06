@@ -7,21 +7,21 @@ t.r(A), t.d(A, {
     return c
   }
 }), t("222007");
-var a, l, n = t("37983"),
+var a, n, l = t("37983"),
   r = t("884691"),
   s = t("77078"),
   o = t("191814"),
   i = t("423487"),
   d = t("782340"),
   u = t("55472");
-(l = a || (a = {})).DANGER = "danger", l.WARNING = "warning";
+(n = a || (a = {})).DANGER = "danger", n.WARNING = "warning";
 
 function c(e) {
   let {
     transitionState: A,
     onClose: t,
     title: a,
-    body: l,
+    body: n,
     cta: c,
     closeLabel: f,
     onConfirm: C,
@@ -34,16 +34,16 @@ function c(e) {
       h(!1)
     }
   }, U = null != a ? a : d.default.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
-  return (0, n.jsxs)(s.ModalRoot, {
+  return (0, l.jsxs)(s.ModalRoot, {
     className: u.container,
     size: s.ModalSize.DYNAMIC,
     transitionState: A,
     "aria-label": U,
-    children: [(0, n.jsxs)(s.ModalContent, {
+    children: [(0, l.jsxs)(s.ModalContent, {
       className: u.content,
-      children: [(0, n.jsxs)("div", {
+      children: [(0, l.jsxs)("div", {
         className: u.header,
-        children: [(0, n.jsx)(i.default, {
+        children: [(0, l.jsx)(i.default, {
           width: 20,
           height: 20,
           className: function(e) {
@@ -54,32 +54,32 @@ function c(e) {
                 return u.warningIcon
             }
           }(g)
-        }), (0, n.jsx)(o.default, {
+        }), (0, l.jsx)(o.default, {
           size: 8,
           horizontal: !0
-        }), (0, n.jsx)(s.Heading, {
+        }), (0, l.jsx)(s.Heading, {
           variant: "heading-xl/semibold",
           color: "header-primary",
           children: U
         })]
-      }), (0, n.jsx)(o.default, {
+      }), (0, l.jsx)(o.default, {
         size: 12
-      }), (0, n.jsx)(s.Text, {
+      }), (0, l.jsx)(s.Text, {
         variant: "text-md/normal",
         color: "text-muted",
         className: u.body,
-        children: l
+        children: n
       })]
-    }), (0, n.jsxs)(s.ModalFooter, {
-      children: [(0, n.jsx)(s.Button, {
+    }), (0, l.jsxs)(s.ModalFooter, {
+      children: [(0, l.jsx)(s.Button, {
         color: s.Button.Colors.BRAND,
         onClick: m,
         submitting: T,
         children: c
-      }), (0, n.jsx)(o.default, {
+      }), (0, l.jsx)(o.default, {
         size: 12,
         horizontal: !0
-      }), null != f && (0, n.jsx)(s.Button, {
+      }), null != f && (0, l.jsx)(s.Button, {
         color: s.Button.Colors.PRIMARY,
         look: s.Button.Looks.OUTLINED,
         onClick: t,

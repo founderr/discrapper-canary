@@ -45,20 +45,20 @@ function M(e) {
     href: I,
     src: _,
     textContent: C
-  } = (0, f.targetToContext)(M), G = (0, o.default)(h, t), p = (0, i.default)(null != I ? I : _, C), S = (0, d.default)(_), x = (0, u.default)({
+  } = (0, f.targetToContext)(M), G = (0, o.default)(h, t), p = (0, i.default)(null != I ? I : _, C), S = (0, d.default)(_), v = (0, u.default)({
     id: g.id,
     label: E.default.Messages.COPY_ID_MESSAGE,
     shiftId: "".concat(t.id, "-").concat(g.id)
-  }), v = (0, f.useGuildFeedHideItem)(s, t.guild_id), L = (0, f.useGuildFeedRemoveItem)(s, g, t);
+  }), x = (0, f.useGuildFeedHideItem)(s, t.guild_id), L = (0, f.useGuildFeedRemoveItem)(s, g, t);
   return (0, n.jsxs)(a.Menu, {
     navId: "message",
     onClose: r.closeContextMenu,
     "aria-label": E.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
     onSelect: m,
     children: [(0, n.jsxs)(a.MenuGroup, {
-      children: [v, L]
+      children: [x, L]
     }), (0, n.jsxs)(a.MenuGroup, {
-      children: [G, S, p, x]
+      children: [G, S, p, v]
     })]
   })
 }

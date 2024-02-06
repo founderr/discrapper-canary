@@ -79,10 +79,10 @@ n.r(t), n.d(t, {
     return U
   },
   SEEK_SHIFT_MODIFIER: function() {
-    return k
+    return w
   },
   CLIPS_EDUCATION_COOLDOWN: function() {
-    return w
+    return k
   },
   CLIPS_EDUCATION_GAME_LAUNCH_THRESHOLD: function() {
     return V
@@ -119,8 +119,8 @@ let _ = "alt+c",
   L = 15,
   M = 3e4,
   U = 30,
-  k = 10,
-  w = 14 * f.default.Millis.DAY,
+  w = 10,
+  k = 14 * f.default.Millis.DAY,
   V = 5,
   G = 5,
   F = 1

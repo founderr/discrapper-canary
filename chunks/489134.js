@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return r
+    return n
   }
 });
-var r, l = n("407788");
-r = class e extends l.default {
+var n, l = r("407788");
+n = class e extends l.default {
   static fromServer(t) {
     let {
-      purchased_at: n,
-      purchase_type: r,
+      purchased_at: r,
+      purchase_type: n,
       ...l
     } = t;
     return new e({
       ...super.fromServer(l),
-      purchaseType: r,
-      purchasedAt: null != n ? new Date(n) : n
+      purchaseType: n,
+      purchasedAt: null != r ? new Date(r) : r
     })
   }
   constructor(e) {

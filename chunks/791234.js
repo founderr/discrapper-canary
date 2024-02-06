@@ -7,22 +7,22 @@ n.r(t), n.d(t, {
     return l
   },
   useForumPostMediaThumbnail: function() {
-    return x
+    return S
   },
   useForumPostMediaProperties: function() {
     return _
   },
   useFindFirstMediaProperties: function() {
-    return S
+    return x
   },
   useFirstMediaIsEmbed: function() {
     return N
   },
   shouldShowAddMediaToOriginalPostModal: function() {
-    return M
+    return T
   },
   messageContainsGifOrVideo: function() {
-    return T
+    return M
   }
 }), n("702976"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007"), n("808653");
 var l, a, s = n("884691"),
@@ -32,8 +32,8 @@ var l, a, s = n("884691"),
   u = n("42203"),
   d = n("377253"),
   c = n("697218"),
-  f = n("568734"),
-  m = n("449008"),
+  m = n("568734"),
+  f = n("449008"),
   h = n("49111");
 
 function p(e, t) {
@@ -58,17 +58,17 @@ function E(e) {
   return null != e && null != e && (0, i.isVideoFile)(e.filename) && null != e.proxy_url
 }
 
-function v(e) {
+function C(e) {
   return g(e) || E(e)
 }(a = l || (l = {})).EMBED = "embed", a.ATTACHMENT = "attachment";
 
-function C(e) {
+function v(e) {
   let t = o.InlineAttachmentMedia.useSetting();
   return function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.InlineAttachmentMedia.getSetting();
     if (!t) return [];
     let n = null == e ? void 0 : e.attachments;
-    return null == e || null == n ? [] : n.filter(v).map(e => {
+    return null == e || null == n ? [] : n.filter(C).map(e => {
       let {
         proxy_url: t,
         url: n,
@@ -82,7 +82,7 @@ function C(e) {
       } = e;
       if (null == r || null == o) return null;
       let c = (0, i.isVideoFile)(u),
-        m = null != e.flags && (0, f.hasFlag)(e.flags, h.MessageAttachmentFlags.IS_THUMBNAIL),
+        f = null != e.flags && (0, m.hasFlag)(e.flags, h.MessageAttachmentFlags.IS_THUMBNAIL),
         p = null != t ? t : n;
       if (c) {
         let e = new URL(t);
@@ -97,10 +97,10 @@ function C(e) {
         contentScanVersion: d,
         alt: l,
         isVideo: c,
-        isThumbnail: m,
+        isThumbnail: f,
         type: "attachment"
       }
-    }).filter(m.isNotNullish)
+    }).filter(f.isNotNullish)
   }(e, t)
 }
 
@@ -130,10 +130,10 @@ function I(e, t) {
         type: "embed"
       }
     }
-  }).filter(m.isNotNullish) : []
+  }).filter(f.isNotNullish) : []
 }
 
-function x(e, t) {
+function S(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     l = _(e, n);
   return s.useMemo(() => {
@@ -147,25 +147,25 @@ function x(e, t) {
 }
 
 function _(e, t) {
-  let n = C(e),
+  let n = v(e),
     l = I(e, t);
   return [...n, ...l]
 }
 
-function S(e, t) {
+function x(e, t) {
   var n, l;
-  let a = C(e),
+  let a = v(e),
     s = I(e, t);
   return null !== (l = null !== (n = a[0]) && void 0 !== n ? n : s[0]) && void 0 !== l ? l : null
 }
 
 function N(e, t) {
-  let n = C(e),
+  let n = v(e),
     l = I(e, t);
   return null == n[0] && null != l[0]
 }
 
-function M(e, t) {
+function T(e, t) {
   var n;
   let l = u.default.getChannel(t);
   if (null == l) return !1;
@@ -173,7 +173,7 @@ function M(e, t) {
   return null != a && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && l.isForumPost() && l.ownerId === (null === (n = c.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === r.default.getCount(l.id) && (0 === a.attachments.length || null == a.attachments.find(e => g(e) || E(e)))
 }
 
-function T(e) {
+function M(e) {
   return e.reduce((e, t) => ({
     containsVideo: e.containsVideo || t.isVideo,
     containsGif: e.containsGif || (0, i.isAnimatedImageUrl)(t.src)

@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), a("222007");
 var n = a("37983"),
@@ -22,20 +22,20 @@ var n = a("37983"),
   C = a("80028"),
   N = a("782340"),
   x = a("766825"),
-  S = function(e) {
-    var t, a, i, S, _, L;
+  g = function(e) {
+    var t, a, i, g, S, L;
     let {
-      sourceURL: M,
-      cropData: T,
+      sourceURL: T,
+      cropData: M,
       videoPlayerRef: A,
       setCropData: R
-    } = e, [j, b] = l.useState((L = !(null === (a = A.current) || void 0 === a ? void 0 : null === (t = a.videoElement) || void 0 === t ? void 0 : t.paused), L)), P = l.useRef(null), [w, D] = l.useState(null), [y, O] = l.useState(), k = l.useRef(null), F = l.useRef(null), [G, U] = l.useState(0), [B, V] = l.useState(!1), [H, z] = l.useState(null);
+    } = e, [j, b] = l.useState((L = !(null === (a = A.current) || void 0 === a ? void 0 : null === (t = a.videoElement) || void 0 === t ? void 0 : t.paused), L)), P = l.useRef(null), [w, D] = l.useState(null), [y, O] = l.useState(), k = l.useRef(null), F = l.useRef(null), [U, G] = l.useState(0), [B, V] = l.useState(!1), [H, z] = l.useState(null);
     (0, f.default)(() => {
       var e;
       let t = null === (e = A.current) || void 0 === e ? void 0 : e.videoElement;
-      null != t && G !== t.currentTime && U(t.currentTime)
+      null != t && U !== t.currentTime && G(t.currentTime)
     });
-    let Z = l.useMemo(() => T.end - T.start, [T]);
+    let Z = l.useMemo(() => M.end - M.start, [M]);
     l.useEffect(() => {
       var e;
       let t = null === (e = A.current) || void 0 === e ? void 0 : e.videoElement,
@@ -66,22 +66,22 @@ var n = a("37983"),
       J = l.useRef({}),
       Q = l.useCallback(e => {
         var t;
-        let a = (0, s.clamp)(e, 0, T.end - C.MIN_CLIP_DURATION_SECONDS);
+        let a = (0, s.clamp)(e, 0, M.end - C.MIN_CLIP_DURATION_SECONDS);
         R({
-          ...T,
+          ...M,
           start: a
         }), null === (t = A.current) || void 0 === t || t.seek(a)
-      }, [T, R, A]),
+      }, [M, R, A]),
       $ = l.useCallback(e => {
         var t, a;
         let n = null === (t = A.current) || void 0 === t ? void 0 : t.videoElement;
         if (null == n) return;
-        let l = (0, s.clamp)(e, T.start + C.MIN_CLIP_DURATION_SECONDS, n.duration);
+        let l = (0, s.clamp)(e, M.start + C.MIN_CLIP_DURATION_SECONDS, n.duration);
         R({
-          ...T,
+          ...M,
           end: l
         }), null === (a = A.current) || void 0 === a || a.seek(l)
-      }, [T, R, A]),
+      }, [M, R, A]),
       ee = l.useCallback((e, t) => {
         var a, n;
         if (null == y) return;
@@ -90,13 +90,13 @@ var n = a("37983"),
           i = (l - H.left) / H.width * y,
           r = (0, s.clamp)(i, 0, y),
           u = w;
-        if (null == u && t && (u = r <= T.start ? "start" : r >= T.end ? "end" : "playhead", null === (a = A.current) || void 0 === a || a.pause(), D(u), V(j)), "start" === u) Q(r);
+        if (null == u && t && (u = r <= M.start ? "start" : r >= M.end ? "end" : "playhead", null === (a = A.current) || void 0 === a || a.pause(), D(u), V(j)), "start" === u) Q(r);
         else if ("end" === u) $(r);
         else if ("playhead" === u) {
-          let e = (0, s.clamp)(r, T.start, T.end);
+          let e = (0, s.clamp)(r, M.start, M.end);
           null === (n = A.current) || void 0 === n || n.seek(e)
         }
-      }, [y, H, w, T.start, T.end, A, j, Q, $]),
+      }, [y, H, w, M.start, M.end, A, j, Q, $]),
       et = l.useCallback(e => {
         var t;
         let a = null === (t = A.current) || void 0 === t ? void 0 : t.videoElement;
@@ -105,13 +105,13 @@ var n = a("37983"),
           l = !1;
         switch (e.key) {
           case "ArrowLeft":
-            l = !0, Q(T.start - n);
+            l = !0, Q(M.start - n);
             break;
           case "ArrowRight":
-            l = !0, Q(T.start + n)
+            l = !0, Q(M.start + n)
         }
         l && (e.stopPropagation(), e.preventDefault())
-      }, [A, Q, T.start]),
+      }, [A, Q, M.start]),
       ea = l.useCallback(e => {
         var t;
         let a = null === (t = A.current) || void 0 === t ? void 0 : t.videoElement;
@@ -120,13 +120,13 @@ var n = a("37983"),
           l = !1;
         switch (e.key) {
           case "ArrowLeft":
-            l = !0, $(T.end - n);
+            l = !0, $(M.end - n);
             break;
           case "ArrowRight":
-            l = !0, $(T.end + n)
+            l = !0, $(M.end + n)
         }
         l && (e.stopPropagation(), e.preventDefault())
-      }, [A, $, T.end]),
+      }, [A, $, M.end]),
       en = l.useCallback(e => {
         ee(e.clientX, !0)
       }, [ee]),
@@ -176,7 +176,7 @@ var n = a("37983"),
         })
       })()
     }, [X, W, K, y, q]);
-    let er = G - T.start,
+    let er = U - M.start,
       es = null === (i = A.current) || void 0 === i ? void 0 : i.videoElement;
     return (0, n.jsx)("div", {
       className: x.centeringWrapper,
@@ -226,11 +226,11 @@ var n = a("37983"),
             onLoadedMetadata: function() {
               let e = P.current;
               if (null != e) {
-                if (O(e.duration), 0 === T.start && (0 === T.end || T.end === e.duration)) {
+                if (O(e.duration), 0 === M.start && (0 === M.end || M.end === e.duration)) {
                   var t;
-                  null === (t = A.current) || void 0 === t || t.seek(e.duration / 2), U(e.duration / 2)
+                  null === (t = A.current) || void 0 === t || t.seek(e.duration / 2), G(e.duration / 2)
                 }
-                0 === T.end && R(t => ({
+                0 === M.end && R(t => ({
                   ...t,
                   end: e.duration
                 }))
@@ -238,13 +238,13 @@ var n = a("37983"),
             },
             className: x.timelineVideo,
             ref: P,
-            src: M,
+            src: T,
             muted: !0
           }), (0, n.jsxs)("div", {
             className: x.dragBox,
             style: {
-              left: null != y ? "".concat(T.start / y * 100, "%") : "0",
-              right: null != y ? "".concat((y - T.end) / y * 100, "%") : "0"
+              left: null != y ? "".concat(M.start / y * 100, "%") : "0",
+              right: null != y ? "".concat((y - M.end) / y * 100, "%") : "0"
             },
             children: [(0, n.jsx)("div", {
               className: x.timePillContainer,
@@ -271,9 +271,9 @@ var n = a("37983"),
                 role: "slider",
                 tabIndex: 0,
                 "aria-valuemin": 0,
-                "aria-valuenow": T.start,
-                "aria-valuetext": g(T.start),
-                "aria-valuemax": T.end - C.MIN_CLIP_DURATION_SECONDS,
+                "aria-valuenow": M.start,
+                "aria-valuetext": _(M.start),
+                "aria-valuemax": M.end - C.MIN_CLIP_DURATION_SECONDS,
                 "aria-label": N.default.Messages.CLIPS_CROP_START,
                 children: (0, n.jsx)("div", {
                   className: x.cropLeftArrow
@@ -288,10 +288,10 @@ var n = a("37983"),
                 onKeyDown: ea,
                 role: "slider",
                 tabIndex: 0,
-                "aria-valuemin": T.start + C.MIN_CLIP_DURATION_SECONDS,
-                "aria-valuenow": T.end,
-                "aria-valuetext": g(T.end),
-                "aria-valuemax": null === (_ = A.current) || void 0 === _ ? void 0 : null === (S = _.videoElement) || void 0 === S ? void 0 : S.duration,
+                "aria-valuemin": M.start + C.MIN_CLIP_DURATION_SECONDS,
+                "aria-valuenow": M.end,
+                "aria-valuetext": _(M.end),
+                "aria-valuemax": null === (S = A.current) || void 0 === S ? void 0 : null === (g = S.videoElement) || void 0 === g ? void 0 : g.duration,
                 "aria-label": N.default.Messages.CLIPS_CROP_END,
                 children: (0, n.jsx)("div", {
                   className: x.cropRightArrow
@@ -312,7 +312,7 @@ function I(e) {
   return t = t < 10 ? "0" + t : t, a = a < 10 ? "0" + a : a, n = n < 10 ? "0" + n : n, "".concat(t, ":").concat(a, ".").concat(n)
 }
 
-function g(e) {
+function _(e) {
   let t = N.default.Messages.DURATION_MINUTES.format({
       minutes: Math.floor(e / 60)
     }),

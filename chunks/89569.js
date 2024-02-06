@@ -65,7 +65,7 @@ let d = "".concat("#").concat("itemSkuId", "="),
       isLayer: u,
       initialItemCardRef: d
     } = e, m = l.useRef(null), C = (0, s.useLocation)(), h = C.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : C.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
-      analyticsLocations: g
+      analyticsLocations: p
     } = (0, i.default)(h);
     l.useEffect(() => {
       if (u) return;
@@ -75,17 +75,17 @@ let d = "".concat("#").concat("itemSkuId", "="),
         m.current = t
       }
     }, []);
-    let p = (0, r.useStateFromStores)([o.default], () => o.default.initialProductSkuId);
+    let g = (0, r.useStateFromStores)([o.default], () => o.default.initialProductSkuId);
     l.useEffect(() => {
       if (a) return;
       let e = null;
-      if (u && null != p && (e = p), !u && null != m.current && (e = m.current), null != e) {
+      if (u && null != g && (e = g), !u && null != m.current && (e = m.current), null != e) {
         let a = [],
           l = setTimeout(() => {
             let l = E({
               categories: t,
               productSkuId: e,
-              analyticsLocations: g,
+              analyticsLocations: p,
               analyticsSource: h,
               initialItemCardRef: d
             });
@@ -95,5 +95,5 @@ let d = "".concat("#").concat("itemSkuId", "="),
           a.forEach(e => e())
         }
       }
-    }, [u, g, h, t, a, p, d])
+    }, [u, p, h, t, a, g, d])
   }

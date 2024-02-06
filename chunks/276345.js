@@ -18,8 +18,8 @@ var a = t("37983"),
   N = t("70025"),
   I = t("461380"),
   T = t("593195"),
-  m = t("578706"),
-  f = t("945330"),
+  f = t("578706"),
+  m = t("945330"),
   v = t("474571"),
   j = t("76539"),
   _ = t("975743"),
@@ -37,7 +37,7 @@ function R(e) {
     className: C.content,
     children: [(0, a.jsxs)("div", {
       className: n(C.header, A.header),
-      children: [(0, a.jsx)(m.default, {
+      children: [(0, a.jsx)(f.default, {
         width: 40,
         height: 40
       }), (0, a.jsx)(d.Heading, {
@@ -120,7 +120,7 @@ function p(e) {
               color: "interactive-active",
               lineClamp: 1,
               children: null != t ? t : "Keyboard Nerds"
-            }), i >= 1 ? (0, a.jsx)(f.default, {
+            }), i >= 1 ? (0, a.jsx)(m.default, {
               className: A.icon,
               width: 24,
               height: 24
@@ -201,7 +201,7 @@ function p(e) {
             className: A.notifTabs,
             children: [(0, a.jsxs)("div", {
               className: A.notifTab,
-              children: [(0, a.jsx)(m.default, {
+              children: [(0, a.jsx)(f.default, {
                 width: 24,
                 height: 24
               }), (0, a.jsx)(d.Text, {

@@ -22,18 +22,18 @@ var a = n("37983"),
   S = n("449008"),
   g = n("387111"),
   _ = n("99795"),
-  T = n("49111"),
-  v = n("782340"),
+  v = n("49111"),
+  T = n("782340"),
   I = n("2081");
 
 function A(e, t) {
   switch (e) {
     case _.ParticipantTypes.ACTIVITY:
-      return v.default.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format({
+      return T.default.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format({
         numUsers: t
       });
     case _.ParticipantTypes.STREAM:
-      return v.default.Messages.SPECTATORS.format({
+      return T.default.Messages.SPECTATORS.format({
         numViewers: t
       });
     default:
@@ -112,7 +112,7 @@ function N(e) {
     className: C,
     compact: m = !1,
     disableInteraction: g = !1,
-    maxVisibleUsers: v = 3
+    maxVisibleUsers: T = 3
   } = e, [A, N] = r.useState(!1), L = r.useRef(new d.DelayedCall(150, () => N(!1))), O = (0, o.useStateFromStoresArray)([p.default, E.default], () => {
     if (l.type === _.ParticipantTypes.STREAM) {
       let e = p.default.getViewerIds(l.id);
@@ -138,24 +138,24 @@ function N(e) {
   }, [P, y]);
   if (0 === O.length) return null;
   if (m) return (0, a.jsx)(x, {
-    maxVisibleUsers: v,
+    maxVisibleUsers: T,
     users: O,
     guildId: s,
     channelId: t,
     className: C,
     participantType: l.type
   });
-  let D = u(O).take(v).map(e => (0, a.jsx)(c.Avatar, {
+  let D = u(O).take(T).map(e => (0, a.jsx)(c.Avatar, {
     src: e.getAvatarURL(s, 24),
     "aria-label": e.username,
     size: c.AvatarSizes.SIZE_24,
     className: I.viewer
   }, e.id)).value();
-  return O.length > v && (D[D.length - 1] = (0, a.jsxs)("div", {
+  return O.length > T && (D[D.length - 1] = (0, a.jsxs)("div", {
     className: I.overflow,
-    children: ["+", O.length - v + 1]
+    children: ["+", O.length - T + 1]
   }, "overflow")), (0, a.jsx)(h.default, {
-    section: T.AnalyticsSections.STREAM_VIEWER_POPOUT,
+    section: v.AnalyticsSections.STREAM_VIEWER_POPOUT,
     children: (0, a.jsx)("div", {
       onMouseEnter: y,
       onMouseLeave: P,

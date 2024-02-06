@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return P
+    return j
   }
 }), s("424973"), s("222007"), s("843762");
 var a = s("917351"),
@@ -99,7 +99,7 @@ function v(e) {
     }
   })).map(e => e.userId).value()
 }
-class j extends i.default.Store {
+class P extends i.default.Store {
   get logs() {
     return I
   }
@@ -152,8 +152,8 @@ class j extends i.default.Store {
     return p
   }
 }
-j.displayName = "GuildSettingsAuditLogStore";
-var P = new j(r.default, {
+P.displayName = "GuildSettingsAuditLogStore";
+var j = new P(r.default, {
   AUDIT_LOG_FETCH_START: function() {
     O = !0
   },

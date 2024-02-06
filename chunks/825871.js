@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return M
   },
   default: function() {
-    return b
+    return k
   }
 });
 var l = n("37983");
@@ -64,7 +64,7 @@ function M(e) {
     location: e
   }) ? y.MAX_COMMAND_AUTOCOMPLETE_RESULTS : y.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY
 }
-let k = {
+let b = {
   sentinel: x.COMMAND_SENTINEL,
   stores: [p.default, f.default, u.default, g.default],
   matches: (e, t, n, l, i) => i.commands !== y.CommandMode.DISABLED && null == p.default.getActiveCommand(e.id) && (l || i.commands !== y.CommandMode.OLD_BUILT_INS),
@@ -210,4 +210,4 @@ let k = {
     }
   }
 };
-var b = k
+var k = b

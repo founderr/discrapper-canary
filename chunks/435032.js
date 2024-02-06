@@ -5,9 +5,9 @@ t.r(A), t.d(A, {
   }
 }), t("222007");
 var a = t("37983"),
-  l = t("884691"),
-  n = t("414456"),
-  r = t.n(n),
+  n = t("884691"),
+  l = t("414456"),
+  r = t.n(l),
   s = t("748820"),
   o = t("77078"),
   i = t("149022"),
@@ -37,15 +37,15 @@ function I(e) {
   var A;
   let {
     hasError: t,
-    maxLength: l,
-    text: n
+    maxLength: n,
+    text: l
   } = e;
   return (0, a.jsxs)("div", {
     className: r(T.maxLength, {
       [T.errorOverflow]: t
     }),
     "aria-hidden": "true",
-    children: [null !== (A = null == n ? void 0 : n.length) && void 0 !== A ? A : 0, " ", null != l && "/ ".concat(l)]
+    children: [null !== (A = null == l ? void 0 : l.length) && void 0 !== A ? A : 0, " ", null != n && "/ ".concat(n)]
   })
 }
 
@@ -53,7 +53,7 @@ function p(e) {
   var A;
   let {
     "aria-labelledby": t,
-    className: n,
+    className: l,
     id: s,
     autoFocus: u,
     maxLength: f,
@@ -65,7 +65,7 @@ function p(e) {
     value: N,
     enableThemedBackground: O = !1,
     parentModalKey: x
-  } = e, R = (0, o.useFormContext)(), [L, D] = l.useState(() => (0, i.toRichValue)(N)), P = l.useRef(!0 === u), V = null != t ? t : null == R ? void 0 : R.titleId, j = null !== (A = null == R ? void 0 : R.errorId) && void 0 !== A ? A : h, M = l.useMemo(() => ({
+  } = e, R = (0, o.useFormContext)(), [L, D] = n.useState(() => (0, i.toRichValue)(N)), P = n.useRef(!0 === u), V = null != t ? t : null == R ? void 0 : R.titleId, j = null !== (A = null == R ? void 0 : R.errorId) && void 0 !== A ? A : h, M = n.useMemo(() => ({
     analyticsName: "simple",
     autocomplete: {
       alwaysUseLayer: !0,
@@ -89,7 +89,7 @@ function p(e) {
   return (0, a.jsxs)(d.default, {
     "aria-describedby": j,
     "aria-labelledby": V,
-    innerClassName: r(n, g.textArea),
+    innerClassName: r(l, g.textArea),
     id: s,
     maxCharacterCount: f,
     onChange: function(e, A, t) {

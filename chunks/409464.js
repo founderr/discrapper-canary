@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   isValidFormResponse: function() {
-    return o
-  },
-  isAutomaticApprovalFormField: function() {
     return s
   },
+  isAutomaticApprovalFormField: function() {
+    return o
+  },
   isManualApprovalFormField: function() {
-    return a
+    return u
   }
 });
 var i = n("449008"),
   r = n("567054"),
   l = n("394294");
-let o = e => {
+let s = e => {
   let {
     required: t,
     response: n,
@@ -35,10 +35,10 @@ let o = e => {
   }
 };
 
-function s(e) {
+function o(e) {
   return l.AUTOMATIC_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
 }
 
-function a(e) {
+function u(e) {
   return l.MANUAL_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
 }

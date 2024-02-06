@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return g
   }
 });
 var l = n("37983");
 n("884691");
-var i = n("414456"),
-  s = n.n(i),
-  a = n("77078"),
+var s = n("414456"),
+  a = n.n(s),
+  i = n("77078"),
   r = n("354023"),
-  o = n("782340"),
-  u = n("911011"),
+  u = n("782340"),
+  o = n("911011"),
   d = n("926622");
 let c = r.default.getMaxAgeOptions;
 
@@ -19,61 +19,61 @@ function f(e) {
   let {
     temporary: t,
     shouldHide: n,
-    onToggleTemporary: i
+    onToggleTemporary: s
   } = e;
   return n ? (0, l.jsx)("div", {
     className: d.marginTop20
-  }) : (0, l.jsx)(a.FormItem, {
-    className: s(d.marginTop20, u.switch),
-    children: (0, l.jsx)(a.FormSwitch, {
+  }) : (0, l.jsx)(i.FormItem, {
+    className: a(d.marginTop20, o.switch),
+    children: (0, l.jsx)(i.FormSwitch, {
       value: t,
-      onChange: e => i(e),
-      note: o.default.Messages.TEMPORARY_MEMBERSHIP_EXPLANATION,
+      onChange: e => s(e),
+      note: u.default.Messages.TEMPORARY_MEMBERSHIP_EXPLANATION,
       hideBorder: !0,
-      children: (0, l.jsx)(a.Text, {
+      children: (0, l.jsx)(i.Text, {
         variant: "text-sm/normal",
-        children: o.default.Messages.GRANT_TEMPORARY_MEMBERSHIP
+        children: u.default.Messages.GRANT_TEMPORARY_MEMBERSHIP
       })
     })
   })
 }
-let g = r.default.getMaxUsesOptions;
+let h = r.default.getMaxUsesOptions;
 
-function h(e) {
+function g(e) {
   var t;
   let {
     shouldHideTemporaryInviteToggle: n,
-    maxAge: i,
+    maxAge: s,
     maxUses: r,
-    temporary: h,
+    temporary: g,
     onGenerateNewLink: I,
     onToggleTemporary: E,
-    onSelectMaxAge: m,
-    onSelectMaxUses: v
-  } = e, p = c.find(e => e.value === i), T = g.find(e => e.value === r);
+    onSelectMaxAge: v,
+    onSelectMaxUses: m
+  } = e, p = c.find(e => e.value === s), _ = h.find(e => e.value === r);
   return (0, l.jsx)("div", {
-    className: u.settingsContent,
+    className: o.settingsContent,
     children: (0, l.jsxs)("form", {
       onSubmit: I,
-      children: [(0, l.jsx)(a.FormItem, {
-        title: o.default.Messages.EXPIRE_AFTER,
+      children: [(0, l.jsx)(i.FormItem, {
+        title: u.default.Messages.EXPIRE_AFTER,
         className: d.marginTop20,
-        children: (0, l.jsx)(a.SingleSelect, {
+        children: (0, l.jsx)(i.SingleSelect, {
           value: null !== (t = null == p ? void 0 : p.value) && void 0 !== t ? t : c[0].value,
           options: c,
-          onChange: m,
+          onChange: v,
           maxVisibleItems: 8
         })
-      }), (0, l.jsx)(a.FormItem, {
-        title: o.default.Messages.MAX_NUMBER_OF_USES,
-        className: s(d.marginTop20, d.marginBottom4),
-        children: (0, l.jsx)(a.SingleSelect, {
-          value: null == T ? void 0 : T.value,
-          options: g,
-          onChange: v
+      }), (0, l.jsx)(i.FormItem, {
+        title: u.default.Messages.MAX_NUMBER_OF_USES,
+        className: a(d.marginTop20, d.marginBottom4),
+        children: (0, l.jsx)(i.SingleSelect, {
+          value: null == _ ? void 0 : _.value,
+          options: h,
+          onChange: m
         })
       }), (0, l.jsx)(f, {
-        temporary: h,
+        temporary: g,
         shouldHide: n,
         onToggleTemporary: E
       })]

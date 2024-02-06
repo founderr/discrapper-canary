@@ -178,10 +178,10 @@ var G = e => {
         R = (0, I.getTotalStickerCountForTier)(d.tier),
         U = (0, I.getIncrementalStickerCountForTier)(d.tier),
         v = T.slice(h, R),
-        j = v.length > 0,
-        P = G < d.tier,
+        P = v.length > 0,
+        j = G < d.tier,
         y = O(T.length),
-        b = S && !P && y === d.tier && R !== v.length,
+        b = S && !j && y === d.tier && R !== v.length,
         B = b || v.length > 0,
         F = R - h,
         H = s("89734"),
@@ -218,18 +218,18 @@ var G = e => {
         children: [B && (0, a.jsxs)("div", {
           className: C.grid,
           children: [v.map(e => (0, a.jsx)(A.default, {
-            isDisabled: P,
+            isDisabled: j,
             sticker: e,
             canManageSticker: N(e)
           }, e.id)), k]
-        }), !P && !b && 0 === v.length && (0, a.jsx)("div", {
+        }), !j && !b && 0 === v.length && (0, a.jsx)("div", {
           className: i(C.emptyTierWrapper, C.unusedTierWrapper),
           children: (0, a.jsx)(o.Text, {
             variant: "text-md/normal",
             color: "header-secondary",
             children: m.default.Messages.GUILD_STICKER_UNUSED_TIER
           })
-        }), P && !j && (0, a.jsxs)("div", {
+        }), j && !P && (0, a.jsxs)("div", {
           className: C.emptyTierWrapper,
           children: [(0, a.jsx)("img", {
             alt: m.default.Messages.GUILD_STICKER_SETTINGS_ICON_ALT_TEXT,

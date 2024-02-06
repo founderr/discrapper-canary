@@ -2,7 +2,7 @@
 var i, l, s, r;
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 }), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102"), n("222007"), n("808653"), n("990131"), n("424973");
 (s = i || (i = {}))[s.NONE = 0] = "NONE", s[s.CONTINUATION = 1] = "CONTINUATION", s[s.BEGINNING_OF_STREAM = 2] = "BEGINNING_OF_STREAM", s[s.END_OF_STREAM = 4] = "END_OF_STREAM";
@@ -39,7 +39,7 @@ class a {
     let s = this._offset;
     for (let t of (this.appendBytes([0, 0, 0, 0, e.segments.length]), this.appendBytes(e.segments.map(e => e.length)), e.segments)) this.appendBytes(t);
     let r = function(e) {
-      return e.reduce((e, t) => e << 8 >>> 0 ^ u[e >>> 24 ^ t], 0) >>> 0
+      return e.reduce((e, t) => e << 8 >>> 0 ^ o[e >>> 24 ^ t], 0) >>> 0
     }(this._buffer.subarray(i, this._offset));
     this._buffer.set([255 & r, r >> 8 & 255, r >> 16 & 255, r >> 24 & 255], s), this._pageSequenceNumber++
   }
@@ -58,7 +58,7 @@ class a {
   }
 }
 
-function o(e, t) {
+function u(e, t) {
   let n = new Uint8Array([79, 112, 117, 115, 72, 101, 97, 100, 1, t.channelCount, 0, 0, 255 & t.inputSampleRate, t.inputSampleRate >> 8 & 255, t.inputSampleRate >> 16 & 255, t.inputSampleRate >> 24 & 255, 255 & t.outputGain, t.outputGain >> 8 & 255, t.channelMappingFamily]),
     i = new Uint8Array([79, 112, 117, 115, 84, 97, 103, 115, 0, 0, 0, 0, 0, 0, 0, 0]),
     l = new a;
@@ -91,7 +91,7 @@ function o(e, t) {
   }
   return l.finalize(s)
 }(r = l || (l = {}))[r.ZERO = 0] = "ZERO";
-let u = function() {
+let o = function() {
   let e = new Uint32Array(256);
   for (let t = 256; t > 0; t--) {
     let n = t << 24;

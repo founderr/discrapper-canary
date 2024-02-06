@@ -9,8 +9,8 @@ l("884691");
 var a = l("77078"),
   s = l("404118"),
   i = l("850068"),
-  o = l("775433"),
-  r = l("521012"),
+  r = l("775433"),
+  o = l("521012"),
   u = l("599110"),
   c = l("719923"),
   d = l("49111"),
@@ -28,7 +28,7 @@ async function C(t) {
     onSubscriptionConfirmation: S,
     inPopout: _,
     applicationId: A
-  } = t, E = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT, w = r.default.getPremiumTypeSubscription();
+  } = t, E = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT, w = o.default.getPremiumTypeSubscription();
   if (null != w && w.isPurchasedExternally && null != w.paymentGateway) {
     null != M && M(), s.default.show({
       title: f.default.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({
@@ -41,7 +41,7 @@ async function C(t) {
     });
     return
   }
-  Promise.all([(0, i.fetchPaymentSources)(), (0, o.fetchPremiumSubscriptionPlans)()]);
+  Promise.all([(0, i.fetchPaymentSources)(), (0, r.fetchPremiumSubscriptionPlans)()]);
   let y = await (0, a.openModalLazy)(async () => {
     let {
       default: t

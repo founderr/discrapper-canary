@@ -6,10 +6,10 @@ i.r(t), i.d(t, {
 });
 var n = i("37983");
 i("884691");
-var l = i("414456"),
-  s = i.n(l),
-  a = i("45682"),
-  r = i("788506"),
+var s = i("414456"),
+  l = i.n(s),
+  r = i("45682"),
+  a = i("788506"),
   o = i("695106"),
   u = i("974634"),
   c = i("115279"),
@@ -19,7 +19,7 @@ var l = i("414456"),
     let {
       accessory: t,
       pickerIntention: i,
-      headerClassName: l,
+      headerClassName: s,
       emojiListRef: E,
       onKeyDown: m,
       onFocus: I,
@@ -40,10 +40,10 @@ var l = i("414456"),
         isFullRow: i === d.EmojiIntention.COMMUNITY_CONTENT_ONLY,
         onFocus: I,
         autoFocus: p,
-        defaultSearchPlaceholder: (0, r.getSearchPlaceholder)(i, h)
+        defaultSearchPlaceholder: (0, a.getSearchPlaceholder)(i, h)
       }), i === d.EmojiIntention.REACTION ? (0, n.jsx)("div", {
         className: f.burstToggle,
-        children: (0, n.jsx)(a.default, {
+        children: (0, n.jsx)(r.default, {
           checked: h,
           onClick: C
         })
@@ -55,7 +55,7 @@ var l = i("414456"),
       })]
     });
     return (0, n.jsx)("div", {
-      className: s(f.header, l),
+      className: l(f.header, s),
       children: null != T ? T(N) : N
     })
   }

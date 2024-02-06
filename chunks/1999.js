@@ -22,9 +22,9 @@ var a = s("37983"),
   g = s("42203"),
   x = s("474643"),
   C = s("585722"),
-  T = s("840817"),
-  _ = s("659500"),
-  S = s("412861"),
+  _ = s("840817"),
+  S = s("659500"),
+  T = s("412861"),
   p = s("867965"),
   E = s("49111"),
   N = s("572228");
@@ -72,14 +72,14 @@ function j(e) {
       className: N.fileInput,
       ref: c,
       onChange: e => {
-        null == l || l(), (0, S.promptToUpload)(e.currentTarget.files, m, x.DraftType.FirstThreadMessage, {
+        null == l || l(), (0, T.promptToUpload)(e.currentTarget.files, m, x.DraftType.FirstThreadMessage, {
           requireConfirm: !0
-        }), _.ComponentDispatch.dispatch(E.ComponentActions.TEXTAREA_FOCUS), e.currentTarget.value = null
+        }), S.ComponentDispatch.dispatch(E.ComponentActions.TEXTAREA_FOCUS), e.currentTarget.value = null
       },
       multiple: m.rateLimitPerUser <= 0,
       tabIndex: -1,
       "aria-hidden": !0
-    }), (0, a.jsx)(T.default, {
+    }), (0, a.jsx)(_.default, {
       width: 28,
       height: 28,
       className: N.uploadIcon
@@ -97,7 +97,7 @@ function R(e) {
     from: d.enabled ? A : M,
     to: v,
     config: I
-  }), x = (0, o.useStateFromStores)([c.default], () => c.default.keyboardModeEnabled), T = (0, o.useStateFromStores)([C.default], () => C.default.getUploads(t, m.ChatInputTypes.CREATE_FORUM_POST.drafts.type));
+  }), x = (0, o.useStateFromStores)([c.default], () => c.default.keyboardModeEnabled), _ = (0, o.useStateFromStores)([C.default], () => C.default.getUploads(t, m.ChatInputTypes.CREATE_FORUM_POST.drafts.type));
   return (0, a.jsx)(i.animated.div, {
     className: N.popoutContainer,
     onMouseLeave: () => {
@@ -119,7 +119,7 @@ function R(e) {
         }
       }), (0, a.jsx)("div", {
         className: N.uploads,
-        children: T.map(e => (0, a.jsx)(f.default, {
+        children: _.map(e => (0, a.jsx)(f.default, {
           channelId: t,
           draftType: m.ChatInputTypes.CREATE_FORUM_POST.drafts.type,
           upload: e,

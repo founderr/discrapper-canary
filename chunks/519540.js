@@ -27,8 +27,8 @@ var a = n("37983"),
   C = n("699473"),
   A = n("393414"),
   M = n("845579"),
-  x = n("42203"),
-  v = n("305961"),
+  v = n("42203"),
+  x = n("305961"),
   R = n("377253"),
   L = n("476263"),
   O = n("93393"),
@@ -101,10 +101,10 @@ function B(e) {
       message: f,
       channel: _
     } = (0, I.getSavedMessageAndChannel)(s),
-    T = x.default.getChannel(_.id),
+    T = v.default.getChannel(_.id),
     b = (0, S.default)(T, !0),
     j = null != b ? b : _.name,
-    F = (0, c.useStateFromStores)([v.default], () => v.default.getGuild(null == _ ? void 0 : _.guild_id)),
+    F = (0, c.useStateFromStores)([x.default], () => x.default.getGuild(null == _ ? void 0 : _.guild_id)),
     G = null != _ ? (0, p.getChannelIconURL)(_) : null,
     B = null;
   return null != s.dueAt && (s.dueAt > new Date ? (t = "text-muted", B = U.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({

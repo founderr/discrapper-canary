@@ -1,26 +1,26 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return l
+    return s
   }
 });
 var o = r("37983");
 r("884691");
 var a = r("75196");
 
-function l(e) {
+function s(e) {
   let {
     width: t = 10,
     height: r = 10,
-    color: l = "currentColor",
-    ...s
+    color: s = "currentColor",
+    ...l
   } = e;
   return (0, o.jsxs)("svg", {
-    ...(0, a.default)(s),
+    ...(0, a.default)(l),
     width: t,
     height: r,
     viewBox: "0 0 17 22",
-    fill: l,
+    fill: s,
     xmlns: "http://www.w3.org/2000/svg",
     children: [(0, o.jsxs)("g", {
       filter: "url(#filter0_d_1296_1706)",

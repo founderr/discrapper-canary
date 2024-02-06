@@ -27,24 +27,24 @@ function C(e) {
     channel: t,
     closePopout: s,
     setPopoutRef: C
-  } = e, T = (0, d.useVisibleForumTags)(t), {
-    tagFilter: _
-  } = (0, u.useForumChannelStore)(t.id), S = (0, u.useForumChannelStoreApi)(), p = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), E = n.useCallback(e => {
+  } = e, _ = (0, d.useVisibleForumTags)(t), {
+    tagFilter: S
+  } = (0, u.useForumChannelStore)(t.id), T = (0, u.useForumChannelStoreApi)(), p = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), E = n.useCallback(e => {
     (0, c.trackForumTagFilterClicked)({
       guildId: t.guild_id,
       channelId: t.id,
       tagId: e,
-      filterTagIds: Array.from(_),
-      added: !_.has(e),
+      filterTagIds: Array.from(S),
+      added: !S.has(e),
       location: {
         page: h.AnalyticsPages.GUILD_CHANNEL,
         section: h.AnalyticsSections.FORUM_CHANNEL_HEADER,
         object: h.AnalyticsObjects.CHANNEL_TAG
       }
-    }), S.getState().toggleTagFilter(t.id, e)
-  }, [t, _, S]), N = n.useCallback(() => {
-    S.getState().setTagFilter(t.id, new Set), !p && s()
-  }, [S, t.id, p, s]), M = (0, l.default)({
+    }), T.getState().toggleTagFilter(t.id, e)
+  }, [t, S, T]), N = n.useCallback(() => {
+    T.getState().setTagFilter(t.id, new Set), !p && s()
+  }, [T, t.id, p, s]), M = (0, l.default)({
     id: "".concat(t.id, "-all-tags-dropdown-navigator"),
     isEnabled: !0,
     wrap: !0,
@@ -77,7 +77,7 @@ function C(e) {
             className: g.countText,
             color: "none",
             variant: "text-xs/medium",
-            children: _.size
+            children: S.size
           })
         })]
       })
@@ -95,10 +95,10 @@ function C(e) {
             },
             ...s,
             className: g.tagContainer,
-            children: T.map(e => (0, a.jsx)(m.default, {
+            children: _.map(e => (0, a.jsx)(m.default, {
               className: g.tag,
               tag: e,
-              selected: _.has(e.id),
+              selected: S.has(e.id),
               onClick: () => E(e.id)
             }, e.id))
           })

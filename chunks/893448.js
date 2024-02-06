@@ -154,7 +154,7 @@ function v(e) {
   })
 }
 
-function j(e) {
+function P(e) {
   let {
     handleAddClick: t,
     locked: s
@@ -180,7 +180,7 @@ function j(e) {
   })
 }
 
-function P(e) {
+function j(e) {
   let {
     guildId: t,
     roleId: s,
@@ -211,7 +211,7 @@ function P(e) {
       let {
         row: n
       } = e;
-      if (0 === T.length) return (0, a.jsx)(j, {
+      if (0 === T.length) return (0, a.jsx)(P, {
         handleAddClick: c,
         locked: r
       }, "empty");
@@ -312,7 +312,7 @@ function b(e) {
           }) : null]
         })
       })
-    }), (0, a.jsx)(P, {
+    }), (0, a.jsx)(j, {
       headerHeight: _ + 8,
       query: c,
       guildId: t.id,

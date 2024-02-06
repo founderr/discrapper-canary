@@ -29,25 +29,25 @@ function d(e) {
     className: c
   } = e;
   t = !d && t, n = !d && n, a = !d && a;
-  let f = {
+  let m = {
       opacity: 1,
       height: t ? 40 : n ? 20 : 8,
       x: 0
     },
-    m = (0, i.useTransition)(t || n || a, {
+    f = (0, i.useTransition)(t || n || a, {
       config: o,
       keys: e => e ? "pill" : "empty",
       immediate: !n && !document.hasFocus(),
-      initial: t || n || a ? f : null,
+      initial: t || n || a ? m : null,
       from: u,
       leave: u,
-      enter: f,
-      update: f
+      enter: m,
+      update: m
     });
   return (0, l.jsx)("div", {
     className: s(c, r.wrapper),
     "aria-hidden": !0,
-    children: m((e, t) => t && (0, l.jsx)(i.animated.span, {
+    children: f((e, t) => t && (0, l.jsx)(i.animated.span, {
       className: r.item,
       style: e
     }))

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   maybeFetchGuildDiscoveryCategories: function() {
-    return o
+    return u
   },
   fetchMetadataForGuild: function() {
-    return u
+    return o
   },
   fetchSlugForGuild: function() {
     return c
@@ -45,7 +45,7 @@ var r = n("872717"),
   s = n("915639"),
   a = n("868246"),
   l = n("49111");
-async function o() {
+async function u() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = s.default.locale;
   if (t === a.default.getFetchedLocale()) return;
@@ -63,7 +63,7 @@ async function o() {
     locale: t
   })
 }
-async function u(e) {
+async function o(e) {
   try {
     let t = await r.default.get({
         url: l.Endpoints.GUILD_DISCOVERY_METADATA(e),
@@ -73,8 +73,8 @@ async function u(e) {
         primary_category_id: n,
         category_ids: s,
         keywords: a,
-        emoji_discoverability_enabled: o,
-        partner_actioned_timestamp: u,
+        emoji_discoverability_enabled: u,
+        partner_actioned_timestamp: o,
         partner_application_timestamp: c,
         is_published: d,
         reasons_to_join: f,
@@ -85,8 +85,8 @@ async function u(e) {
         primaryCategoryId: n,
         secondaryCategoryIds: s,
         keywords: a,
-        emojiDiscoverabilityEnabled: o,
-        partnerActionedTimestamp: u,
+        emojiDiscoverabilityEnabled: u,
+        partnerActionedTimestamp: o,
         partnerApplicationTimestamp: c,
         isPublished: d,
         reasonsToJoin: f,
@@ -183,8 +183,8 @@ async function h(e) {
     primaryCategoryId: n,
     keywords: s,
     emojiDiscoverabilityEnabled: a,
-    partnerActionedTimestamp: o,
-    partnerApplicationTimestamp: u,
+    partnerActionedTimestamp: u,
+    partnerApplicationTimestamp: o,
     isPublished: c,
     reasonsToJoin: d,
     socialLinks: f,
@@ -196,8 +196,8 @@ async function h(e) {
         body: {
           primary_category_id: n,
           emoji_discoverability_enabled: a,
-          partner_actioned_timestamp: o,
-          partner_application_timestamp: u,
+          partner_actioned_timestamp: u,
+          partner_application_timestamp: o,
           keywords: s,
           is_published: c,
           reasons_to_join: d,
@@ -216,7 +216,7 @@ async function h(e) {
         is_published: T,
         reasons_to_join: g,
         social_links: S,
-        about: A
+        about: v
       } = e.body;
     i.default.dispatch({
       type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER",
@@ -231,7 +231,7 @@ async function h(e) {
         isPublished: T,
         reasonsToJoin: g,
         socialLinks: S,
-        about: A
+        about: v
       }
     })
   } catch (e) {

@@ -35,7 +35,7 @@ var a = n("37983"),
   O = n("881235");
 let y = A.default.getEnableHardwareAcceleration();
 
-function P(e) {
+function b(e) {
   let {
     user: t,
     channel: l
@@ -94,7 +94,7 @@ function P(e) {
   })
 }
 
-function b(e) {
+function P(e) {
   var t;
   let {
     integration: i,
@@ -192,14 +192,14 @@ function D(e) {
           className: O.decorator,
           type: C.default.Types.STAFF_ONLY_DM
         }) : null]
-      }), u.map(e => (0, a.jsx)(P, {
+      }), u.map(e => (0, a.jsx)(b, {
         user: e,
         channel: t
       }, e.id)), m && (f.length > 0 || p && h.length > 0) && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(_.default, {
           className: O.membersGroup,
           children: "".concat(j.default.Messages.APPS, "—").concat(f.length)
-        }), f.map(e => (0, a.jsx)(b, {
+        }), f.map(e => (0, a.jsx)(P, {
           integration: e,
           channel: t
         }, e.application.id)), T.length > 0 && (0, a.jsx)(g.default, {

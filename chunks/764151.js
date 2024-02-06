@@ -38,8 +38,8 @@ var a = s("37983"),
   p = s("945330"),
   U = s("673220"),
   v = s("832132"),
-  j = s("118503"),
-  P = s("351825"),
+  P = s("118503"),
+  j = s("351825"),
   y = s("641892"),
   b = s("315102"),
   B = s("991170"),
@@ -120,11 +120,11 @@ function ee(e) {
   } = e, R = (0, r.default)([h.default], () => h.default.getChannel(I.channelId)), M = (0, r.default)([D.default], () => D.default.getGuild(T)), {
     customEmoji: x,
     unicodeEmoji: p
-  } = (0, N.default)(null === (t = I.emoji) || void 0 === t ? void 0 : t.id, null === (l = I.emoji) || void 0 === l ? void 0 : l.name), j = null == I.emoji || null != x || null != p, P = b.default.getNewMemberActionIconURL({
+  } = (0, N.default)(null === (t = I.emoji) || void 0 === t ? void 0 : t.id, null === (l = I.emoji) || void 0 === l ? void 0 : l.name), P = null == I.emoji || null != x || null != p, j = b.default.getNewMemberActionIconURL({
     channelId: I.channelId,
     icon: I.icon
   }), y = null;
-  null != R && (0, f.isChannelValidForNewMemberAction)(R) ? !j && (y = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : y = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL;
+  null != R && (0, f.isChannelValidForNewMemberAction)(R) ? !P && (y = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL_EMOJI) : y = z.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_INVALID_ACTION_CHANNEL;
   let {
     drag: B,
     dragSourcePosition: F,
@@ -172,10 +172,10 @@ function ee(e) {
         children: (0, a.jsx)(U.default, {
           className: Z.dragIcon
         })
-      }), null != P ? (0, a.jsx)("div", {
+      }), null != j ? (0, a.jsx)("div", {
         className: Z.iconWrapper,
         children: (0, a.jsx)("img", {
-          src: P,
+          src: j,
           className: Z.icon,
           width: 48,
           height: 48,
@@ -327,7 +327,7 @@ function ea(e) {
   return (0, a.jsxs)(d.Clickable, {
     className: Z.addActionItem,
     onClick: i,
-    children: [(0, a.jsx)(P.default, {}), (0, a.jsx)(d.Text, {
+    children: [(0, a.jsx)(j.default, {}), (0, a.jsx)(d.Text, {
       variant: "text-md/normal",
       color: "none",
       children: z.default.Messages.GUILD_SETTINGS_ONBOARDING_ADD_A_TASK
@@ -481,7 +481,7 @@ function el(e) {
           innerClassName: Z.upsellButtonInner,
           color: d.Button.Colors.GREEN,
           onClick: E,
-          children: [(0, a.jsx)(j.default, {
+          children: [(0, a.jsx)(P.default, {
             height: 16,
             width: 16,
             className: Z.premiumUpsellBadge
@@ -754,7 +754,7 @@ function ed(e) {
     }, e.channelId)), l.length < f.RESOURCE_CHANNEL_MAX && (0, a.jsxs)(d.Clickable, {
       className: Z.addActionItem,
       onClick: _,
-      children: [(0, a.jsx)(P.default, {}), (0, a.jsx)(d.Text, {
+      children: [(0, a.jsx)(j.default, {}), (0, a.jsx)(d.Text, {
         variant: "text-md/normal",
         color: "none",
         children: z.default.Messages.GUILD_SETTINGS_ONBOARDING_ADD_A_RESOURCE

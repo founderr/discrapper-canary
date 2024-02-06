@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MessageStandardEmoji: function() {
-    return C
+    return v
   },
   MessageCustomEmoji: function() {
     return I
@@ -16,14 +16,14 @@ var l = n("37983"),
   u = n("913144"),
   d = n("430568"),
   c = n("716241"),
-  f = n("599110"),
-  m = n("459698"),
+  m = n("599110"),
+  f = n("459698"),
   h = n("933629"),
   p = n("49111"),
   g = n("958706"),
   E = n("646718"),
-  v = n("228551");
-let C = e => {
+  C = n("228551");
+let v = e => {
     var t;
     let {
       node: n,
@@ -36,13 +36,13 @@ let C = e => {
       src: n.src,
       alt: r,
       animated: !1
-    }), f = e => (0, l.jsx)(o.Tooltip, {
+    }), m = e => (0, l.jsx)(o.Tooltip, {
       text: (0, h.renderClickableTooltipNode)(n.name, s),
       "aria-label": u,
       ...h.EXPRESSION_TOOLTIP_PROPS,
       position: a,
       onTooltipShow: () => {
-        s && x({
+        s && S({
           emojiNode: n,
           isCustomEmoji: !1
         })
@@ -50,8 +50,8 @@ let C = e => {
       children: t => (0, l.jsx)(o.Clickable, {
         ...e,
         tag: "span",
-        className: i(v.emojiContainer, {
-          [v.emojiContainerClickable]: s
+        className: i(C.emojiContainer, {
+          [C.emojiContainerClickable]: s
         }),
         children: c(t)
       })
@@ -62,12 +62,12 @@ let C = e => {
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
       position: "right",
-      renderPopout: e => (0, l.jsx)(m.MessageStandardEmojiPopout, {
+      renderPopout: e => (0, l.jsx)(f.MessageStandardEmojiPopout, {
         ...e,
         node: n
       }),
-      children: f
-    }) : f()
+      children: m
+    }) : m()
   },
   I = e => {
     let {
@@ -75,7 +75,7 @@ let C = e => {
       isInteracting: n,
       tooltipPosition: s = h.EXPRESSION_TOOLTIP_PROPS.position,
       enableClick: c = !0
-    } = e, [E, C] = a.useState(String(Date.now())), [I, _] = a.useState(!1), S = function() {
+    } = e, [E, v] = a.useState(String(Date.now())), [I, _] = a.useState(!1), x = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return (0, l.jsx)(d.default, {
         ...e,
@@ -85,13 +85,13 @@ let C = e => {
         animated: t.animated,
         isInteracting: n
       })
-    }, N = (0, r.v4)(), M = e => (0, l.jsx)(o.Tooltip, {
+    }, N = (0, r.v4)(), T = e => (0, l.jsx)(o.Tooltip, {
       text: (0, h.renderClickableTooltipNode)(t.name, c),
       "aria-label": t.name,
       ...h.EXPRESSION_TOOLTIP_PROPS,
       position: s,
       onTooltipShow: () => {
-        _(!0), c && (x({
+        _(!0), c && (S({
           emojiNode: t,
           isCustomEmoji: !0,
           nonce: N
@@ -111,39 +111,39 @@ let C = e => {
           _(!1), null == e || null === (n = e.onClick) || void 0 === n || n.call(e, t)
         },
         onMouseLeave: () => {
-          I && (f.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
+          I && (m.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
             nonce: N
           }), _(!1))
         },
         tag: "span",
-        className: i(v.emojiContainer, {
-          [v.emojiContainerClickable]: c
+        className: i(C.emojiContainer, {
+          [C.emojiContainerClickable]: c
         }),
-        children: S(t)
+        children: x(t)
       })
     });
     return c ? (0, l.jsx)(o.Popout, {
       animation: o.Popout.Animation.FADE,
       align: "center",
       onRequestClose: () => {
-        f.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
+        m.default.track(p.AnalyticEvents.CLOSE_POPOUT, {
           nonce: N
         }), _(!1)
       },
       autoInvert: !0,
       nudgeAlignIntoViewport: !0,
       position: "right",
-      renderPopout: e => (0, l.jsx)(m.MessageCustomEmojiPopout, {
+      renderPopout: e => (0, l.jsx)(f.MessageCustomEmojiPopout, {
         ...e,
         node: t,
-        refreshPositionKey: () => C(String(Date.now())),
+        refreshPositionKey: () => v(String(Date.now())),
         nonce: N
       }),
       positionKey: E,
-      children: M
-    }) : M()
+      children: T
+    }) : T()
   },
-  x = e => {
+  S = e => {
     let {
       emojiNode: t,
       isCustomEmoji: n,

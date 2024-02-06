@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return k
+    return b
   }
 }), n("222007"), n("424973");
 var l = n("37983"),
@@ -32,12 +32,12 @@ var l = n("37983"),
   R = n("461593"),
   O = n("49111"),
   M = n("147320"),
-  k = i.forwardRef(function(e, t) {
+  b = i.forwardRef(function(e, t) {
     let {
       value: n,
       type: r,
-      channel: k,
-      className: b,
+      channel: b,
+      className: k,
       id: P,
       disabled: L,
       submitting: U,
@@ -81,10 +81,10 @@ var l = n("37983"),
       if (void 0 !== i && i !== o) {
         if (e.children = i, "parent" === t && !e.previewMarkdown) {
           try {
-            e.previewMarkdown = !0, (0, _.run)(e, k.guild_id, k.id)
+            e.previewMarkdown = !0, (0, _.run)(e, b.guild_id, b.id)
           } finally {
             e.previewMarkdown = !1
-          }(0, _.run)(e, k.guild_id, k.id), r = void 0
+          }(0, _.run)(e, b.guild_id, b.id), r = void 0
         }
         "undo" !== t && void 0 !== i && i !== o && m.HistoryUtils.insertEntry(e, "other", !1, o, s), a = !0
       }
@@ -101,8 +101,8 @@ var l = n("37983"),
         null != t && (t.selection = r), a = !0
       }
       let d = p.getCommandBlock(e);
-      if (null != d && d[0].command.id !== (null === (l = u.default.getActiveCommand(k.id)) || void 0 === l ? void 0 : l.id) && m.HistoryUtils.withMergedEntry(e, () => {
-          (0, N.unsetCommand)(e, k.id, null, !0)
+      if (null != d && d[0].command.id !== (null === (l = u.default.getActiveCommand(b.id)) || void 0 === l ? void 0 : l.id) && m.HistoryUtils.withMergedEntry(e, () => {
+          (0, N.unsetCommand)(e, b.id, null, !0)
         }), a) {
         if (!et && g.EditorUtils.focus(e), "parent" === t) try {
           eE.current = !1, e.onChange()
@@ -110,12 +110,12 @@ var l = n("37983"),
           eE.current = !0
         } else e.onChange()
       }
-    }, [k.id, k.guild_id, et]), eC = i.useCallback(() => {
+    }, [b.id, b.guild_id, et]), eC = i.useCallback(() => {
       eh.current = !1
     }, []), eT = i.useCallback(() => {
       eh.current = !0
     }, []), ev = (0, T.default)({
-      channel: k,
+      channel: b,
       chatInputType: r,
       canUseCommands: $,
       canOnlyUseTextCommands: ee,
@@ -124,14 +124,14 @@ var l = n("37983"),
       updateState: eg
     }), ey = i.useCallback((e, t) => {
       let n = p.getOptionValues(ev, e),
-        l = p.validateOptionValues(e, k.guild_id, k.id, n, t);
+        l = p.validateOptionValues(e, b.guild_id, b.id, n, t);
       return {
         values: n,
         results: l
       }
-    }, [k.guild_id, k.id, ev]), ex = i.useCallback(() => {
+    }, [b.guild_id, b.id, ev]), ex = i.useCallback(() => {
       let e;
-      let t = $ ? u.default.getActiveCommand(k.id) : null;
+      let t = $ ? u.default.getActiveCommand(b.id) : null;
       if (null != t && null != t.options) {
         let i = ey(t, !1);
         e = i.values;
@@ -160,14 +160,14 @@ var l = n("37983"),
         mode: "raw",
         ignoreTrailingEmptyNodes: !0
       }), t, e)
-    }, [k.id, ev, z, ey, $]);
-    (0, v.default)(t, ev, k, ex), (0, I.default)(ev, ep, F);
+    }, [b.id, ev, z, ey, $]);
+    (0, v.default)(t, ev, b, ex), (0, I.default)(ev, ep, F);
     let {
       handleKeyDown: eI,
       handleKeyUp: eN
     } = (0, y.default)({
       editor: ev,
-      channel: k,
+      channel: b,
       disableEnterToSubmit: en,
       onKeyDown: V,
       onKeyUp: W,
@@ -194,26 +194,26 @@ var l = n("37983"),
     }, [ev, n, eg]), i.useEffect(() => {
       let e = () => {
         var e;
-        let t = null !== (e = u.default.getActiveCommand(k.id)) && void 0 !== e ? e : null;
+        let t = null !== (e = u.default.getActiveCommand(b.id)) && void 0 !== e ? e : null;
         null !== t && null != t.options && ey(t, !0)
       };
       return d.default.addChangeListener(e), () => d.default.removeChangeListener(e)
-    }, [k, ev, ey]);
+    }, [b, ev, ey]);
     let eM = i.useCallback((e, t) => (0, C.default)(e, t), []),
-      ek = i.useCallback(e => (0, A.default)(ev, e, k.id), [k.id, ev]),
-      eb = i.useCallback(e => (0, R.default)(e), []);
+      eb = i.useCallback(e => (0, A.default)(ev, e, b.id), [b.id, ev]),
+      ek = i.useCallback(e => (0, R.default)(e), []);
     return (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(c.ComponentAction, {
         event: O.ComponentActions.GLOBAL_CLIPBOARD_PASTE,
         handler: eA
       }), (0, l.jsx)("div", {
         ref: ep,
-        className: o(b, M.slateContainer),
+        className: o(k, M.slateContainer),
         children: (0, l.jsx)(h.default, {
           id: P,
           editor: ev,
-          channelId: k.id,
-          guildId: k.guild_id,
+          channelId: b.id,
+          guildId: b.guild_id,
           className: o(M.slateTextArea, w),
           placeholder: j,
           readOnly: eS,
@@ -228,8 +228,8 @@ var l = n("37983"),
           onKeyDown: eI,
           onKeyUp: eN,
           decorateExtra: eM,
-          renderExtraElement: ek,
-          renderExtraLeaf: eb,
+          renderExtraElement: eb,
+          renderExtraLeaf: ek,
           "aria-owns": ei,
           "aria-haspopup": eo,
           "aria-expanded": er,

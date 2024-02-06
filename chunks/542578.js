@@ -35,8 +35,8 @@ var a = s("37983"),
   p = s("986654"),
   U = s("476324"),
   v = s("983521"),
-  j = s("53948"),
-  P = s("49111"),
+  P = s("53948"),
+  j = s("49111"),
   y = s("782340"),
   b = s("898952"),
   B = s("273899");
@@ -58,7 +58,7 @@ function H(e) {
   }, [s.id]);
   let S = n.useRef(!1);
   n.useEffect(() => {
-    !S.current && "" !== c.trimStart() && (M.default.track(P.AnalyticEvents.SEARCH_STARTED, {
+    !S.current && "" !== c.trimStart() && (M.default.track(j.AnalyticEvents.SEARCH_STARTED, {
       search_type: "Roles"
     }), S.current = !0)
   }, [c]);
@@ -130,7 +130,7 @@ function w(e) {
     disableDrag: x,
     setEditRoleId: p,
     setSelectedSection: v
-  } = e, P = (0, U.useLockTooltip)(E, S, d), H = null != P, [V, w] = n.useState(!1), Y = n.useMemo(() => ({
+  } = e, j = (0, U.useLockTooltip)(E, S, d), H = null != j, [V, w] = n.useState(!1), Y = n.useMemo(() => ({
     type: F,
     item: () => (R(d.id), {
       id: d.id,
@@ -188,7 +188,7 @@ function w(e) {
   }
 
   function $() {
-    q(), v(j.GuildSettingsRoleEditSections.MEMBERS)
+    q(), v(P.GuildSettingsRoleEditSections.MEMBERS)
   }
   return (0, a.jsxs)(u.Clickable, {
     className: i(b.roleRow, {
@@ -223,9 +223,9 @@ function w(e) {
         size: 24,
         className: b.roleIcon,
         defaultIconClassName: b.shield
-      }), null != P ? (0, a.jsx)(U.default, {
+      }), null != j ? (0, a.jsx)(U.default, {
         className: b.lock,
-        tooltipText: P
+        tooltipText: j
       }) : null, (0, a.jsx)(u.Text, {
         className: b.roleName,
         color: "header-primary",
@@ -306,7 +306,7 @@ function k(e) {
     enableTooltip: r
   }) : (0, a.jsx)(R.default, {
     className: i(d, u),
-    color: null !== (t = n.colorString) && void 0 !== t ? t : (0, o.int2hex)(P.DEFAULT_ROLE_COLOR),
+    color: null !== (t = n.colorString) && void 0 !== t ? t : (0, o.int2hex)(j.DEFAULT_ROLE_COLOR),
     width: l,
     height: l
   })

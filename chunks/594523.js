@@ -52,9 +52,9 @@ function A(e) {
     onDragReset: R
   }), {
     customEmoji: v,
-    unicodeEmoji: j
-  } = (0, E.default)(null === (t = m.emoji) || void 0 === t ? void 0 : t.id, null === (n = m.emoji) || void 0 === n ? void 0 : n.name), P = (0, N.isEmojiEmpty)(m.emoji) || null != v || null != j;
-  return !P && (D = f.default.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI), (0, a.jsxs)(o.Clickable, {
+    unicodeEmoji: P
+  } = (0, E.default)(null === (t = m.emoji) || void 0 === t ? void 0 : t.id, null === (n = m.emoji) || void 0 === n ? void 0 : n.name), j = (0, N.isEmojiEmpty)(m.emoji) || null != v || null != P;
+  return !j && (D = f.default.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI), (0, a.jsxs)(o.Clickable, {
     className: l(g.optionCard, {
       [g.hasError]: C || null != D,
       [g.dropIndicatorBefore]: null != x && M < x,

@@ -10,8 +10,8 @@ var s = n("37983"),
   l = n.n(a),
   i = n("976979"),
   u = n("446674"),
-  o = n("669491"),
-  c = n("77078"),
+  c = n("669491"),
+  o = n("77078"),
   d = n("335430"),
   f = n("703332"),
   m = n("740055"),
@@ -66,8 +66,8 @@ function Y(e) {
       hideSubscriptionDetails: el,
       referralTrialOfferId: ei,
       isTrial: eu = !1,
-      isDiscount: eo = !1,
-      handleClose: ec
+      isDiscount: ec = !1,
+      handleClose: eo
     } = e,
     {
       isEmbeddedIAP: ed,
@@ -157,7 +157,7 @@ function Y(e) {
     eZ = (0, P.planSwitchLoadingShowSpinner)(ew, eg, eA);
   if (null != ej) {
     let e = ej.message;
-    return ej.code === E.ErrorCodes.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (e = w.default.Messages.BILLING_ERROR_UNSUPPORTED_CURRENCY), (0, s.jsx)(c.FormErrorBlock, {
+    return ej.code === E.ErrorCodes.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (e = w.default.Messages.BILLING_ERROR_UNSUPPORTED_CURRENCY), (0, s.jsx)(o.FormErrorBlock, {
       children: e
     })
   }
@@ -175,10 +175,10 @@ function Y(e) {
       className: H.invoice,
       children: [(0, s.jsxs)("div", {
         className: H.trialPriceLine,
-        children: [(0, s.jsx)(c.Text, {
+        children: [(0, s.jsx)(o.Text, {
           variant: "text-md/bold",
           children: w.default.Messages.BILLING_PAYMENT_BREAKDOWN_TOTAL
-        }), (0, s.jsx)(c.Text, {
+        }), (0, s.jsx)(o.Text, {
           variant: "text-md/normal",
           children: w.default.Messages.BILLING_TRIAL_PRICE_NOW.format({
             price: (0, g.formatPrice)(0, eg.currency, {
@@ -198,7 +198,7 @@ function Y(e) {
   else {
     if (null == eg || null == ev || eZ) return (0, s.jsx)("div", {
       className: H.spinnerWrapper,
-      children: (0, s.jsx)(c.Spinner, {})
+      children: (0, s.jsx)(o.Spinner, {})
     });
     eu && eg.subscriptionPeriodEnd !== ev.subscriptionPeriodEnd && (Y = eg.subscriptionPeriodEnd), W = (0, s.jsxs)(L.PremiumInvoiceTable, {
       className: H.invoice,
@@ -254,10 +254,10 @@ function Y(e) {
     children: [null != es && (0, s.jsxs)("div", {
       className: H.reviewWarningMessageContainer,
       children: [(0, s.jsx)(O.default, {
-        color: o.default.unsafe_rawColors.YELLOW_300.css,
+        color: c.default.unsafe_rawColors.YELLOW_300.css,
         width: 20,
         height: 20
-      }), (0, s.jsx)(c.Text, {
+      }), (0, s.jsx)(o.Text, {
         className: H.reviewWarningMessage,
         variant: "text-sm/normal",
         children: es
@@ -274,10 +274,10 @@ function Y(e) {
         subscriptionPeriodEnd: eH,
         showTotal: !1,
         discountInvoiceItems: eC ? null == eL ? void 0 : eL.invoiceItems : void 0,
-        handleClose: ec
+        handleClose: eo
       }), (0, s.jsx)(L.PremiumInvoiceTableDivider, {})]
-    }), !eu && (0, s.jsx)(c.FormTitle, {
-      tag: c.FormTitleTags.H5,
+    }), !eu && (0, s.jsx)(o.FormTitle, {
+      tag: o.FormTitleTags.H5,
       children: eJ
     }), eb && null != eS && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(b.default, {
@@ -290,12 +290,12 @@ function Y(e) {
       })]
     }), W, (0, s.jsxs)("div", {
       className: H.paymentSourceWrapper,
-      children: [eu ? (0, s.jsx)(c.FormTitle, {
-        tag: c.FormTitleTags.H5,
+      children: [eu ? (0, s.jsx)(o.FormTitle, {
+        tag: o.FormTitleTags.H5,
         className: H.formTitle,
         children: w.default.Messages.BILLING_STEP_PAYMENT_METHOD
-      }) : (0, s.jsx)(c.FormTitle, {
-        tag: c.FormTitleTags.H5,
+      }) : (0, s.jsx)(o.FormTitle, {
+        tag: o.FormTitleTags.H5,
         children: w.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
       }), (0, s.jsx)(m.default, {
         paymentSources: Object.values(K),
@@ -313,11 +313,11 @@ function Y(e) {
         children: w.default.Messages.ATTACH_PAYMENT_SOURCE_OPTIONAL_WITH_ENTITLEMENTS_WARNING.format({
           months: eB.length
         })
-      }) : null, eo ? null : (0, s.jsxs)(d.CurrencyWrapper, {
+      }) : null, ec ? null : (0, s.jsxs)(d.CurrencyWrapper, {
         currencies: z,
         className: H.currencyWrapper,
-        children: [(0, s.jsx)(c.FormTitle, {
-          tag: c.FormTitleTags.H5,
+        children: [(0, s.jsx)(o.FormTitle, {
+          tag: o.FormTitleTags.H5,
           children: w.default.Messages.PAYMENT_CURRENCY
         }), (0, s.jsx)(d.default, {
           selectedCurrency: V.currency,
@@ -335,7 +335,7 @@ function Y(e) {
         checkboxClassname: ez,
         checkboxLabelClassname: eX,
         finePrint: null != en ? en : (0, s.jsx)(f.default, {
-          hide: eu || eo,
+          hide: eu || ec,
           subscriptionPlan: eA,
           renewalInvoice: ev,
           isGift: ep,
@@ -347,7 +347,7 @@ function Y(e) {
         showWithdrawalWaiver: eK,
         disabled: eh,
         isTrial: eu && null == en,
-        isDiscount: eo,
+        isDiscount: ec,
         subscriptionPlan: eA,
         isGift: ep
       })

@@ -15,8 +15,8 @@ var a = s("884691"),
   r = s("151426"),
   i = s("619935"),
   l = s("10641"),
-  o = s("235145"),
-  u = s("374363"),
+  u = s("235145"),
+  o = s("374363"),
   d = s("184684"),
   c = s("397336");
 let _ = [
@@ -41,13 +41,13 @@ let _ = [
         });
         return a ? t : null
       }).filter(e => null != e),
-      [s] = (0, o.useGetDismissibleContent)(e ? [] : t),
+      [s] = (0, u.useGetDismissibleContent)(e ? [] : t),
       a = null != s && t.includes(s) && !e;
     a && (0, l.markDismissibleContentAsDismissed)(s)
   };
 var T = () => {
   let e = (0, i.useBlockedPaymentsConfig)(),
-    t = (0, n.default)([u.default], () => u.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
+    t = (0, n.default)([o.default], () => o.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
     s = _.map(e => {
       let [t, s, a] = e, {
         flipped: n
@@ -64,6 +64,6 @@ var T = () => {
       n && (0, l.markDismissibleContentAsDismissed)(t)
     })
   }, [s, t]);
-  let [r] = (0, o.useGetDismissibleContent)(e ? [] : s), d = null != r && s.includes(r);
+  let [r] = (0, u.useGetDismissibleContent)(e ? [] : s), d = null != r && s.includes(r);
   return d && !e
 }

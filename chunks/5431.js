@@ -44,7 +44,7 @@ var d = l.forwardRef(function(e, t) {
     onDoneLoading: v,
     startTime: E = 0,
     endTime: p
-  } = e, h = l.useRef({}), [C, N] = l.useState([]), x = l.useRef(!1), S = l.useCallback(() => {
+  } = e, h = l.useRef({}), [C, N] = l.useState([]), x = l.useRef(!1), g = l.useCallback(() => {
     let e = h.current.main;
     if (null == e) return;
     let t = (0, i.round)(e.currentTime, 3),
@@ -57,28 +57,28 @@ var d = l.forwardRef(function(e, t) {
   }, [E, p]);
   (0, r.default)(() => {
     if (x.current) {
-      let e = S();
+      let e = g();
       e && I()
     }
   });
   let I = l.useCallback(() => {
-      for (let e of (x.current = !0, S(), Object.values(h.current))) null != e && e.play()
-    }, [S]),
-    g = l.useCallback(() => {
+      for (let e of (x.current = !0, g(), Object.values(h.current))) null != e && e.play()
+    }, [g]),
+    _ = l.useCallback(() => {
       for (let e of Object.values(h.current)) null != e && e.pause()
     }, []),
-    _ = l.useCallback(e => {
+    S = l.useCallback(e => {
       var t;
       for (let a of ((null === (t = h.current.main) || void 0 === t ? void 0 : t.paused) && (x.current = !1), Object.values(h.current))) null != a && (a.currentTime = e)
     }, []),
     L = l.useCallback(() => {
       var e;
-      (null === (e = h.current.main) || void 0 === e ? void 0 : e.paused) ? I(): g()
-    }, [I, g]),
-    M = l.useCallback(e => {
+      (null === (e = h.current.main) || void 0 === e ? void 0 : e.paused) ? I(): _()
+    }, [I, _]),
+    T = l.useCallback(e => {
       h.current.main = e
     }, []),
-    T = l.useCallback(e => {
+    M = l.useCallback(e => {
       let t = [];
       for (let a of Object.values(e.currentTarget.audioTracks)) a.label.includes(":application") ? a.enabled = !0 : a.label.includes(":voice") ? (a.enabled = !1, !t.includes(a.label) && t.push(a.label)) : a.enabled = !1;
       N(t)
@@ -88,14 +88,14 @@ var d = l.forwardRef(function(e, t) {
     }, []);
   return (l.useImperativeHandle(t, () => ({
     play: I,
-    seek: _,
-    pause: g,
+    seek: S,
+    pause: _,
     videoElement: h.current.main
   })), null == a) ? null : (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(s.default, {
       onClick: L,
       className: m ? u.hidden : u.displayVideo,
-      ref: M,
+      ref: T,
       src: a,
       muted: !0,
       onLoadedData: v,
@@ -107,7 +107,7 @@ var d = l.forwardRef(function(e, t) {
       preload: "auto",
       className: u.hidden,
       ref: e => A(e, "application"),
-      onLoadedMetadata: T
+      onLoadedMetadata: M
     }), C.map(e => (0, n.jsx)(o, {
       audioTrackLabel: e,
       setRef: A,

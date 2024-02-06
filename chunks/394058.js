@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var a = s("37983");
@@ -16,7 +16,7 @@ function l(e) {
     useGrouping: !1
   })
 }
-var o = function(e) {
+var u = function(e) {
   let {
     endDate: t
   } = e, s = (0, n.default)(t, 1e3);

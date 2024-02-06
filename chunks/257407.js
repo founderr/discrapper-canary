@@ -34,8 +34,8 @@ var a = n("37983"),
   L = n("99795"),
   O = n("958706"),
   y = n("646718"),
-  P = n("397336"),
-  b = n("782340"),
+  b = n("397336"),
+  P = n("782340"),
   D = n("308036");
 let U = O.EmojiIntention.CHAT,
   w = {
@@ -106,27 +106,27 @@ function k(e) {
       } = e, s = O && t === r.DismissibleContent.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
       return (0, a.jsx)(o.Popout, {
         position: "left",
-        "aria-label": b.default.Messages.VOICE_CHANNEL_EFFECTS_MORE,
+        "aria-label": P.default.Messages.VOICE_CHANNEL_EFFECTS_MORE,
         shouldShow: s,
         renderPopout: () => (0, a.jsx)("div", {
           onMouseEnter: g,
           children: (0, a.jsx)(E.default, {
             className: D.reducedMotionTooltip,
-            header: b.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
-            content: b.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
+            header: P.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_TITLE,
+            content: P.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
             onClick: () => {
               d.default.open(j.UserSettingsSections.ACCESSIBILITY, null, {
-                scrollPosition: P.AccessibilityScrollPositions.REDUCED_MOTION
+                scrollPosition: b.AccessibilityScrollPositions.REDUCED_MOTION
               }), m()
             },
             markAsDismissed: l,
-            buttonCTA: b.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
-            secondaryButtonCTA: b.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CANCEL,
+            buttonCTA: P.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CONFIRM,
+            secondaryButtonCTA: P.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_CANCEL,
             caretPosition: E.CaretPosition.RIGHT_CENTER
           })
         }),
         children: () => (0, a.jsx)(M.default, {
-          title: b.default.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
+          title: P.default.Messages.VOICE_CHANNEL_EFFECTS_HOTBAR_TITLE,
           channel: n,
           closePopout: m,
           onSelectEmoji: Z,
@@ -136,7 +136,7 @@ function k(e) {
           analyticsOverride: w,
           emojiSearchProps: {
             accessory: (0, a.jsx)(N.default, {
-              labelText: b.default.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
+              labelText: P.default.Messages.VOICE_CHANNEL_EFFECTS_TOGGLE,
               value: ee,
               onChange: () => {
                 if (V) return f.default.trackWithMetadata(j.AnalyticEvents.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {

@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return T
   },
   search: function() {
-    return y
+    return v
   },
   fetchSuggestions: function() {
-    return v
+    return y
   },
   resetSearch: function() {
     return A
@@ -115,7 +115,7 @@ function g(e, t, n) {
 }
 let m = l.debounce(g, 250);
 
-function y(e, t) {
+function v(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     r = arguments.length > 3 ? arguments[3] : void 0;
   "" === e ? A() : (s.default.dispatch({
@@ -124,7 +124,7 @@ function y(e, t) {
   }), n ? g(e, t, r) : m(e, t, r))
 }
 
-function v(e) {
+function y(e) {
   "" !== e && null != e && i.default.get({
     url: S.Endpoints.GIFS_SUGGEST,
     query: {

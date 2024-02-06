@@ -5,10 +5,10 @@ i.r(t), i.d(t, {
   }
 }), i("222007");
 var n = i("37983"),
-  l = i("884691"),
-  s = i("414456"),
-  a = i.n(s),
-  r = i("16470"),
+  s = i("884691"),
+  l = i("414456"),
+  r = i.n(l),
+  a = i("16470"),
   o = i("74139"),
   u = i("137223"),
   c = i("986632"),
@@ -17,23 +17,23 @@ var n = i("37983"),
   E = i("49111"),
   m = i("782340"),
   I = i("431364");
-let p = l.forwardRef(function(e, t) {
+let p = s.forwardRef(function(e, t) {
   let {
     emojiListRef: i,
-    gridNavigatorId: s,
+    gridNavigatorId: l,
     isFullRow: p,
     onKeyDown: g,
     onFocus: _,
     autoFocus: S,
     className: h,
     defaultSearchPlaceholder: C
-  } = e, T = l.useRef(null), N = (0, d.useExpressionPickerStore)(e => e.searchQuery), [v, A] = c.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], r.default), y = l.useCallback(e => {
+  } = e, T = s.useRef(null), N = (0, d.useExpressionPickerStore)(e => e.searchQuery), [v, A] = c.EmojiPickerStore.useStore(e => [e.inspectedExpressionPosition, e.searchPlaceholder], a.default), y = s.useCallback(e => {
     var t;
     c.EmojiPickerStore.setActiveCategoryIndex("" === e ? 0 : f.INACTIVE_CATEGORY_INDEX), c.EmojiPickerStore.setInspectedExpressionPosition(0, 0), c.EmojiPickerStore.setSearchPlaceholder(null), (0, d.setSearchQuery)(e), null === (t = i.current) || void 0 === t || t.scrollTo(0)
-  }, [i]), j = l.useCallback(() => {
+  }, [i]), R = s.useCallback(() => {
     (0, d.setSearchQuery)("")
   }, []);
-  return l.useImperativeHandle(t, () => ({
+  return s.useImperativeHandle(t, () => ({
     focus: () => {
       var e;
       return null === (e = T.current) || void 0 === e ? void 0 : e.focus()
@@ -44,7 +44,7 @@ let p = l.forwardRef(function(e, t) {
     ref: T,
     size: u.default.Sizes.MEDIUM,
     placeholder: null != A ? A : C,
-    onClear: j,
+    onClear: R,
     onKeyDown: e => {
       switch (e.keyCode) {
         case E.KeyboardKeys.ARROW_LEFT:
@@ -57,7 +57,7 @@ let p = l.forwardRef(function(e, t) {
     },
     onFocus: _,
     onQueryChange: y,
-    className: a(h, {
+    className: r(h, {
       [I.searchBarFullRow]: p
     }),
     preventEscapePropagation: !1,
@@ -65,10 +65,10 @@ let p = l.forwardRef(function(e, t) {
     inputProps: {
       "aria-label": m.default.Messages.SEARCH_EMOJIS,
       "aria-haspopup": "grid",
-      "aria-controls": s,
+      "aria-controls": l,
       "aria-expanded": !0,
-      "aria-activedescendant": (0, o.makeGridId)(s, v.columnIndex, v.rowIndex)
+      "aria-activedescendant": (0, o.makeGridId)(l, v.columnIndex, v.rowIndex)
     }
   })
 });
-var g = l.memo(p)
+var g = s.memo(p)

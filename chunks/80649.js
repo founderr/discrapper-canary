@@ -27,8 +27,8 @@ var a = n("37983"),
   C = n("814744"),
   A = n("805614"),
   M = n("64318"),
-  x = n("49111"),
-  v = n("782340"),
+  v = n("49111"),
+  x = n("782340"),
   R = n("228146");
 let L = {
   offset: {
@@ -42,7 +42,7 @@ function O(e, t, n) {
     l = t ? _.default.roleFilter : null,
     s = t ? _.default.everyoneFilter : null,
     i = null;
-  null != e && null != a && (i = a === x.RecentMentionsFilters.ALL_SERVERS ? null : e.getGuildId()), r.default.fetchRecentMentions(n, x.MAX_MENTIONS_PER_FETCH, i, l, s)
+  null != e && null != a && (i = a === v.RecentMentionsFilters.ALL_SERVERS ? null : e.getGuildId()), r.default.fetchRecentMentions(n, v.MAX_MENTIONS_PER_FETCH, i, l, s)
 }
 
 function b(e) {
@@ -77,7 +77,7 @@ function b(e) {
       location: "mentions"
     }).enabled && (null == S ? void 0 : S.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), O(m, !0))
   }, []), l.useEffect(() => () => {
-    r.default.truncateMentions(x.MAX_MENTIONS_PER_FETCH)
+    r.default.truncateMentions(v.MAX_MENTIONS_PER_FETCH)
   }, []);
   let F = l.useCallback(() => (0, a.jsx)(M.default, {
     tab: i.InboxTab.MENTIONS,
@@ -108,7 +108,7 @@ function b(e) {
       renderHeader: F,
       renderEmptyState: D,
       renderMessage: j,
-      "aria-label": v.default.Messages.RECENT_MENTIONS,
+      "aria-label": x.default.Messages.RECENT_MENTIONS,
       listName: "recents"
     })
   })
@@ -147,7 +147,7 @@ function F(e) {
       gotoChannel: n,
       children: null != l ? (0, a.jsx)(S.default, {
         className: R.closeButton,
-        tooltip: v.default.Messages.CLOSE,
+        tooltip: x.default.Messages.CLOSE,
         color: S.CircleIconButtonColors.TERTIARY,
         icon: (0, a.jsx)(N.default, {
           width: 16,
@@ -177,7 +177,7 @@ function F(e) {
 function D(e) {
   return (0, a.jsx)(A.default, {
     Icon: g.default,
-    header: v.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
-    tip: v.default.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
+    header: x.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
+    tip: x.default.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
   })
 }

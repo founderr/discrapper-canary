@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var i = s("37983");
 s("884691");
-var l = s("866227"),
-  n = s.n(l),
+var n = s("866227"),
+  l = s.n(n),
   a = s("65597"),
   r = s("77078"),
   d = s("519705"),
@@ -23,8 +23,8 @@ function S(e) {
   var t;
   let {
     guildId: s
-  } = e, l = (0, a.default)([o.default], () => o.default.getGuild(s)), S = (0, a.default)([u.default], () => u.default.isMuted(s)), E = (0, a.default)([u.default], () => u.default.getMuteConfig(s));
-  return null == l ? null : (0, i.jsxs)(r.FormItem, {
+  } = e, n = (0, a.default)([o.default], () => o.default.getGuild(s)), S = (0, a.default)([u.default], () => u.default.isMuted(s)), E = (0, a.default)([u.default], () => u.default.getMuteConfig(s));
+  return null == n ? null : (0, i.jsxs)(r.FormItem, {
     children: [(0, i.jsx)(r.FormSwitch, {
       hideBorder: !0,
       value: S,
@@ -38,7 +38,7 @@ function S(e) {
       },
       note: f.default.Messages.FOR_LABEL_MUTE_SEVER_DESCRIPTION_V2,
       children: f.default.Messages.FORM_LABEL_MUTE_SERVER.format({
-        name: l.name
+        name: n.name
       })
     }), S && (0, i.jsxs)("div", {
       className: g.mutedConfig,
@@ -62,7 +62,7 @@ function S(e) {
         })]
       }), (0, i.jsx)(r.SingleSelect, {
         onChange: e => {
-          let t = e > 0 ? n().add(e, "second").toISOString() : null;
+          let t = e > 0 ? l().add(e, "second").toISOString() : null;
           d.default.updateGuildNotificationSettings(s, {
             mute_config: {
               selected_time_window: e,

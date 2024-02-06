@@ -38,8 +38,8 @@ var a = s("37983"),
   p = s("287883"),
   U = s("883206"),
   v = s("808388"),
-  j = s("65722"),
-  P = s("432153"),
+  P = s("65722"),
+  j = s("432153"),
   y = s("922835"),
   b = s("46166"),
   B = s("883069"),
@@ -92,8 +92,8 @@ var a = s("37983"),
   ep = s("582372"),
   eU = s("789123"),
   ev = s("78730"),
-  ej = s("757120"),
-  eP = s("310490"),
+  eP = s("757120"),
+  ej = s("310490"),
   ey = s("49111"),
   eb = s("533613"),
   eB = s("69741"),
@@ -127,10 +127,10 @@ function ew(e) {
     welcomeScreenEmpty: Z,
     guildMetadata: X,
     section: $
-  } = e, es = () => (0, j.canSeeGuildRoleSubscriptionSettings)({
+  } = e, es = () => (0, P.canSeeGuildRoleSubscriptionSettings)({
     guild: t,
     isOwner: G,
-    canManageGuildRoleSubscriptions: (0, j.canManageGuildRoleSubscriptions)(t),
+    canManageGuildRoleSubscriptions: (0, P.canManageGuildRoleSubscriptions)(t),
     isMonetizationWaitlistEnabledForGuild: (0, N.isMonetizationWaitlistEnabledForGuild)(t.id),
     isGuildEligibleForRoleSubscriptions: (0, v.isGuildEligibleForRoleSubscriptions)(t.id),
     isExpeditedMonetizationOnboardingGuild: (0, N.isExpeditedMonetizationOnboardingGuild)(t),
@@ -198,7 +198,7 @@ function ew(e) {
     section: ey.GuildSettingsSections.WIDGET,
     impressionName: l.ImpressionNames.GUILD_SETTINGS_WIDGET,
     label: eF.default.Messages.WIDGET,
-    element: eP.default,
+    element: ej.default,
     predicate: () => n
   }, {
     section: ey.GuildSettingsSections.GUILD_TEMPLATES,
@@ -217,10 +217,10 @@ function ew(e) {
     section: ey.GuildSettingsSections.VANITY_URL,
     impressionName: l.ImpressionNames.GUILD_SETTINGS_VANITY_URL,
     label: eF.default.Messages.VANITY_URL,
-    element: ej.default,
+    element: eP.default,
     notice: {
       stores: [er.default],
-      element: ej.GuildSettingsVanityURLNotice
+      element: eP.GuildSettingsVanityURLNotice
     },
     predicate: () => n
   }, {
@@ -407,7 +407,7 @@ function ew(e) {
     element: y.default,
     type: c.ContentTypes.CUSTOM,
     predicate: es,
-    newIndicatorDismissibleContentTypes: (0, P.isEligibleForNewBadge)(t) ? [r.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
+    newIndicatorDismissibleContentTypes: (0, j.isEligibleForNewBadge)(t) ? [r.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
   }, {
     section: ey.GuildSettingsSections.GUILD_PRODUCTS,
     label: eF.default.Messages.GUILD_PRODUCTS_TITLE,
@@ -703,7 +703,7 @@ function ez() {
   } = (0, $.useGuildAccessRateInsightExperiment)(null == s ? void 0 : s.id, !h || !C || !L), v = (0, i.useStateFromStores)([F.default], () => {
     var e;
     return (null == s ? void 0 : s.id) != null && (null === (e = F.default.getForGuild(s.id)) || void 0 === e ? void 0 : e.isDirty) === !0
-  }, [s]), j = (0, i.useStateFromStores)([Z.default], () => Z.default.getMemberCount(null == s ? void 0 : s.id), [s]), P = (0, m.useGuildAuditLogV2Enabled)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "");
+  }, [s]), P = (0, i.useStateFromStores)([Z.default], () => Z.default.getMemberCount(null == s ? void 0 : s.id), [s]), j = (0, m.useGuildAuditLogV2Enabled)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "");
   n.useEffect(() => {
     null != N && S.canManageGuild && B.default.loadTemplatesForGuild(N)
   }, [N, S.canManageGuild]), n.useEffect(() => {
@@ -721,8 +721,8 @@ function ez() {
       channels: I,
       showDirtyGuildTemplateIndicator: v,
       analyticsLocation: r,
-      memberCount: j,
-      isGuildAuditLogV2Enabled: P,
+      memberCount: P,
+      isGuildAuditLogV2Enabled: j,
       ...S,
       canViewGuildAnalytics: C,
       showAccessRate: U,

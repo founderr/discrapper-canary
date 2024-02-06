@@ -1,45 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
   INVITE_ROW_HEIGHT: function() {
-    return T
+    return _
   },
   InviteRow: function() {
-    return _
+    return T
   }
 }), n("222007");
 var l = n("37983"),
-  i = n("884691"),
-  s = n("819855"),
-  a = n("77078"),
+  s = n("884691"),
+  a = n("819855"),
+  i = n("77078"),
   r = n("148387"),
-  o = n("843962"),
-  u = n("679653"),
+  u = n("843962"),
+  o = n("679653"),
   d = n("161778"),
   c = n("305961"),
   f = n("705955"),
-  g = n("27618"),
-  h = n("697218"),
+  h = n("27618"),
+  g = n("697218"),
   I = n("315102"),
   E = n("159885"),
-  m = n("158998"),
-  v = n("782340"),
+  v = n("158998"),
+  m = n("782340"),
   p = n("435808");
-let T = 44;
-class _ extends i.Component {
+let _ = 44;
+class T extends s.Component {
   shouldComponentUpdate(e, t) {
     return this.state.sending !== t.sending || this.state.invited !== t.invited || this.state.hovered !== t.hovered || this.props.user !== e.user || this.props.channel !== e.channel
   }
   renderUserOrChannel() {
     let e, t, n;
     let {
-      user: i,
-      channel: s
+      user: s,
+      channel: a
     } = this.props;
-    if (null != i) t = i.getAvatarURL(null == s ? void 0 : s.guild_id, 32), n = m.default.getName(i);
-    else if (null != s && (t = (0, o.getChannelIconURL)(s), n = (0, u.computeChannelName)(s, h.default, g.default), null == t && null != s.guild_id)) {
-      let n = c.default.getGuild(s.guild_id);
+    if (null != s) t = s.getAvatarURL(null == a ? void 0 : a.guild_id, 32), n = v.default.getName(s);
+    else if (null != a && (t = (0, u.getChannelIconURL)(a), n = (0, o.computeChannelName)(a, g.default, h.default), null == t && null != a.guild_id)) {
+      let n = c.default.getGuild(a.guild_id);
       null != n && (null != n.icon ? t = I.default.getGuildIconURL({
-        id: s.guild_id,
+        id: a.guild_id,
         icon: n.icon,
         size: 32
       }) : e = (0, E.getAcronym)(n.name))
@@ -49,10 +49,10 @@ class _ extends i.Component {
       "aria-hidden": !0,
       children: e
     }) : null;
-    return (0, l.jsx)(a.Avatar, {
+    return (0, l.jsx)(i.Avatar, {
       src: t,
       "aria-label": n,
-      size: a.AvatarSizes.SIZE_32,
+      size: i.AvatarSizes.SIZE_32,
       className: p.inviteRowAvatar
     })
   }
@@ -62,24 +62,24 @@ class _ extends i.Component {
       user: t,
       channel: n
     } = this.props, {
-      sending: i,
+      sending: s,
       invited: r,
-      hovered: o
+      hovered: u
     } = this.state;
-    return e = r ? (0, l.jsx)(a.Button, {
-      look: a.Button.Looks.LINK,
-      size: a.Button.Sizes.SMALL,
+    return e = r ? (0, l.jsx)(i.Button, {
+      look: i.Button.Looks.LINK,
+      size: i.Button.Sizes.SMALL,
       disabled: !0,
-      color: (0, s.isThemeDark)(d.default.theme) ? a.Button.Colors.WHITE : a.Button.Colors.BLACK,
-      children: v.default.Messages.INVITE_FRIEND_MODAL_SENT
-    }) : (0, l.jsx)(a.Button, {
-      color: a.Button.Colors.GREEN,
-      look: o ? a.Button.Looks.FILLED : a.Button.Looks.OUTLINED,
+      color: (0, a.isThemeDark)(d.default.theme) ? i.Button.Colors.WHITE : i.Button.Colors.BLACK,
+      children: m.default.Messages.INVITE_FRIEND_MODAL_SENT
+    }) : (0, l.jsx)(i.Button, {
+      color: i.Button.Colors.GREEN,
+      look: u ? i.Button.Looks.FILLED : i.Button.Looks.OUTLINED,
       className: p.inviteRowButton,
-      size: a.Button.Sizes.SMALL,
-      submitting: i,
+      size: i.Button.Sizes.SMALL,
+      submitting: s,
       onClick: this.handleClickInvite,
-      children: v.default.Messages.INVITE_FRIEND_MODAL_INVITE
+      children: m.default.Messages.INVITE_FRIEND_MODAL_INVITE
     }), (0, l.jsxs)("div", {
       className: p.inviteRow,
       onMouseEnter: this.handleMouseEnter,
@@ -88,7 +88,7 @@ class _ extends i.Component {
         className: p.inviteRowInfo,
         children: [this.renderUserOrChannel(), (0, l.jsxs)("div", {
           className: p.inviteRowName,
-          children: [m.default.getName(t), null != n ? (0, u.computeChannelName)(n, h.default, g.default, !0) : null]
+          children: [v.default.getName(t), null != n ? (0, o.computeChannelName)(n, g.default, h.default, !0) : null]
         })]
       }), e]
     })

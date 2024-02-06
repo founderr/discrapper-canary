@@ -1,36 +1,36 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var l = n("65597"),
-  i = n("305961"),
-  s = n("354023"),
-  a = n("659404"),
+  s = n("305961"),
+  a = n("354023"),
+  i = n("659404"),
   r = n("49111");
 
-function o(e) {
+function u(e) {
   let {
     guildId: t
-  } = e, n = a.CommunityEndlessInvitesExperiment.useExperiment({
+  } = e, n = i.CommunityEndlessInvitesExperiment.useExperiment({
     guildId: null != t ? t : "",
     location: "6798be_2"
-  }), o = (0, l.default)([i.default], () => i.default.getGuild(t));
+  }), u = (0, l.default)([s.default], () => s.default.getGuild(t));
   return null != t && function(e) {
     var t;
     let {
       guild: n,
       experimentConfig: l
     } = e, {
-      defaultInvitesToNeverExpire: i
-    } = null != l ? l : a.CommunityEndlessInvitesExperiment.getCurrentConfig({
+      defaultInvitesToNeverExpire: s
+    } = null != l ? l : i.CommunityEndlessInvitesExperiment.getCurrentConfig({
       guildId: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : "",
       location: "6798be_1"
     });
-    if ((null == n ? void 0 : n.hasFeature(r.GuildFeatures.HUB)) === !0 || (null == n ? void 0 : n.hasFeature(r.GuildFeatures.COMMUNITY)) === !0 && i) return s.default.INVITE_OPTIONS_FOREVER.value
+    if ((null == n ? void 0 : n.hasFeature(r.GuildFeatures.HUB)) === !0 || (null == n ? void 0 : n.hasFeature(r.GuildFeatures.COMMUNITY)) === !0 && s) return a.default.INVITE_OPTIONS_FOREVER.value
   }({
-    guild: o,
+    guild: u,
     experimentConfig: n
   })
 }

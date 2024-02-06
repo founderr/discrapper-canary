@@ -35,7 +35,7 @@ var a = s("37983"),
 let p = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401e3, 12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236],
   U = /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
   v = p[4],
-  j = e => {
+  P = e => {
     var t, s;
     let {
       guild: l,
@@ -43,10 +43,10 @@ let p = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
     } = e, d = (0, D.useSubscriptionsSettings)(l.id), {
       loading: c,
       updateSubscriptionsSettings: A
-    } = (0, D.useUpdateSubscriptionsSettings)(), [R, j] = n.useState(l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE)), [P, y] = n.useState(null !== (t = null == d ? void 0 : d.store_page_primary_color) && void 0 !== t ? t : v), [b, B] = n.useState(null == d ? void 0 : d.store_page_trailer_url), F = null == b || null != b.match(U), [H, V] = n.useState(null !== (s = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== s && s), w = n.useRef(null == d ? void 0 : d.store_page_slug).current, k = R !== l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE) || (null == d ? void 0 : d.store_page_primary_color) == null && P !== v || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color) || b !== (null == d ? void 0 : d.store_page_trailer_url) || null != H && H !== (null == d ? void 0 : d.store_page_show_subscriber_count), Y = async () => {
+    } = (0, D.useUpdateSubscriptionsSettings)(), [R, P] = n.useState(l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE)), [j, y] = n.useState(null !== (t = null == d ? void 0 : d.store_page_primary_color) && void 0 !== t ? t : v), [b, B] = n.useState(null == d ? void 0 : d.store_page_trailer_url), F = null == b || null != b.match(U), [H, V] = n.useState(null !== (s = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== s && s), w = n.useRef(null == d ? void 0 : d.store_page_slug).current, k = R !== l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE) || (null == d ? void 0 : d.store_page_primary_color) == null && j !== v || (null == d ? void 0 : d.store_page_primary_color) != null && j !== (null == d ? void 0 : d.store_page_primary_color) || b !== (null == d ? void 0 : d.store_page_trailer_url) || null != H && H !== (null == d ? void 0 : d.store_page_show_subscriber_count), Y = async () => {
       o(null != d, "Settings must be defined");
       let e = {};
-      R !== l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE) && (e.store_page_enabled = R), ((null == d ? void 0 : d.store_page_primary_color) == null && P !== v || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color)) && (e.store_page_primary_color = P), b !== (null == d ? void 0 : d.store_page_trailer_url) && (e.store_page_trailer_url = b), H !== (null == d ? void 0 : d.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = H), !u.isEmpty(e) && (await A(l.id, e), "store_page_enabled" in e && h.default.track(M.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
+      R !== l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE) && (e.store_page_enabled = R), ((null == d ? void 0 : d.store_page_primary_color) == null && j !== v || (null == d ? void 0 : d.store_page_primary_color) != null && j !== (null == d ? void 0 : d.store_page_primary_color)) && (e.store_page_primary_color = j), b !== (null == d ? void 0 : d.store_page_trailer_url) && (e.store_page_trailer_url = b), H !== (null == d ? void 0 : d.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = H), !u.isEmpty(e) && (await A(l.id, e), "store_page_enabled" in e && h.default.track(M.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
         enabled: R,
         ...(0, f.collectGuildAnalyticsMetadata)(l.id)
       }))
@@ -66,7 +66,7 @@ let p = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
         disabled: z || !R && !r,
         tooltipNote: R || r ? void 0 : G.default.Messages.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_PRIMARY_TOGGLE_DISABLED_TOOLTIP,
         hideBorder: !0,
-        onChange: e => j(e),
+        onChange: e => P(e),
         children: (0, a.jsx)(T.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
@@ -100,7 +100,7 @@ let p = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             onClick: () => null,
             color: T.Button.Colors.CUSTOM,
             style: {
-              backgroundColor: "#".concat(P.toString(16).padStart(6, "0"))
+              backgroundColor: "#".concat(j.toString(16).padStart(6, "0"))
             },
             className: x.buttonPreview,
             disabled: z,
@@ -109,7 +109,7 @@ let p = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             colors: p,
             customColor: null,
             defaultColor: v,
-            value: P,
+            value: j,
             onChange: e => y(e),
             renderDefaultButton: () => null,
             renderCustomButton: () => null,
@@ -186,7 +186,7 @@ let p = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             submitting: c,
             onReset: () => {
               var e, t;
-              j(l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE)), y(null !== (e = null == d ? void 0 : d.store_page_primary_color) && void 0 !== e ? e : v), B(null == d ? void 0 : d.store_page_trailer_url), V(null !== (t = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== t && t)
+              P(l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE)), y(null !== (e = null == d ? void 0 : d.store_page_primary_color) && void 0 !== e ? e : v), B(null == d ? void 0 : d.store_page_trailer_url), V(null !== (t = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== t && t)
             },
             onSave: Y,
             disabled: Z
@@ -196,12 +196,12 @@ let p = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
     })
   };
 
-function P() {
+function j() {
   let e = (0, c.useStateFromStores)([A.default], () => A.default.getGuild()),
     t = (0, R.useGroupListingsFetchContext)(),
     s = (0, D.useSubscriptionListingsForGuild)(null == e ? void 0 : e.id),
     n = s.some(e => e.published);
-  return null != e && t ? (0, a.jsx)(j, {
+  return null != e && t ? (0, a.jsx)(P, {
     guild: e,
     canEnable: n
   }) : (0, a.jsx)(T.Spinner, {})
@@ -212,6 +212,6 @@ function y() {
   return (0, a.jsxs)(R.GroupListingsFetchContextProvider, {
     guildId: null == e ? void 0 : e.id,
     refetchOnMount: !0,
-    children: [(0, a.jsx)(P, {}), ";"]
+    children: [(0, a.jsx)(j, {}), ";"]
   })
 }

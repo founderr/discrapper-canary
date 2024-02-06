@@ -58,7 +58,7 @@ let S = {},
   M = {},
   U = {};
 
-function k(e, t) {
+function w(e, t) {
   var n;
   let i = S[e],
     r = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
@@ -74,7 +74,7 @@ function k(e, t) {
     };
   N.clearTimer(e), s.forEach(r, e => {
     R.clearTimer(e.channel_id)
-  }), w(e, o), S[e] = o, null != e && (T[e] = !0 === o.hide_muted_channels), P[e] = W(S[e]);
+  }), k(e, o), S[e] = o, null != e && (T[e] = !0 === o.hide_muted_channels), P[e] = W(S[e]);
   let l = s.filter(o.channel_overrides, e => {
     var t;
     return f.hasFlag(null !== (t = e.flags) && void 0 !== t ? t : 0, v.ChannelNotificationSettingsFlags.OPT_IN_ENABLED)
@@ -93,7 +93,7 @@ function k(e, t) {
     }(e), delete I[e]
 }
 
-function w(e, t) {
+function k(e, t) {
   if (!0 === t.muted) {
     let n = N.setTimer(e, t.mute_config, () => {
       V(e, {
@@ -124,7 +124,7 @@ function w(e, t) {
 function V(e, t) {
   var n;
   let i = S[e];
-  k(e, {
+  w(e, {
     channel_overrides: null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {},
     ...t
   })
@@ -157,7 +157,7 @@ function x(e, t) {
   var n;
   let i = S[e],
     s = null !== (n = null == i ? void 0 : i.channel_overrides) && void 0 !== n ? n : {};
-  k(e, {
+  w(e, {
     channel_overrides: null == i ? t : {
       ...s,
       ...t
@@ -433,7 +433,7 @@ let X = new q(a.default, {
       userGuildSettings: t
     } = e;
     t.forEach(e => {
-      null != e.guild_id && (T[e.guild_id] = !0 === e.hide_muted_channels), k(e.guild_id, {
+      null != e.guild_id && (T[e.guild_id] = !0 === e.hide_muted_channels), w(e.guild_id, {
         channel_overrides: {},
         ...e
       })
@@ -477,8 +477,8 @@ let X = new q(a.default, {
     j(e.notificationSettings), N.reset(), R.reset(), !e.userGuildSettings.partial && (S = {}, P = {}, b = {}, T = {});
     let t = new Set;
     for (let n in e.userGuildSettings.entries.forEach(e => {
-        !("channel_overrides" in e) && (e.channel_overrides = {}), k(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
-      }), S) !t.has(n) && w(n, S[n])
+        !("channel_overrides" in e) && (e.channel_overrides = {}), w(e.guild_id, e), null != e.guild_id && t.add(e.guild_id)
+      }), S) !t.has(n) && k(n, S[n])
   },
   OVERLAY_INITIALIZE: function(e) {
     let {

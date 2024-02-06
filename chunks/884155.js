@@ -34,7 +34,7 @@ var a = n("37983"),
   L = n("49111"),
   O = n("39141"),
   y = n("707155");
-let P = l.memo(e => {
+let b = l.memo(e => {
   var t;
   let {
     mute: n,
@@ -43,7 +43,7 @@ let P = l.memo(e => {
     channel: i,
     sessionId: o,
     nick: _
-  } = e, A = s.id, y = (0, r.useStateFromStores)([C.default], () => C.default.getId() === A, [A]), [P, b, D] = (0, r.useStateFromStoresArray)([g.default], () => y ? [!g.default.isSupported() || g.default.isSelfMute() || g.default.isSelfMutedTemporarily(), g.default.isSelfDeaf(), !1] : [!g.default.isSupported() || g.default.isLocalMute(A), !1, g.default.isLocalVideoDisabled(A)], [y, A]), U = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), w = (0, u.default)({
+  } = e, A = s.id, y = (0, r.useStateFromStores)([C.default], () => C.default.getId() === A, [A]), [b, P, D] = (0, r.useStateFromStoresArray)([g.default], () => y ? [!g.default.isSupported() || g.default.isSelfMute() || g.default.isSelfMutedTemporarily(), g.default.isSelfDeaf(), !1] : [!g.default.isSupported() || g.default.isLocalMute(A), !1, g.default.isLocalVideoDisabled(A)], [y, A]), U = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), w = (0, u.default)({
     userId: A,
     checkSoundSharing: !0
   }), F = (0, r.useStateFromStores)([S.default], () => S.default.isGuestOrLurker(i.guild_id, A)), k = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
@@ -70,10 +70,10 @@ let P = l.memo(e => {
       canDrag: e.canDrag && !F,
       otherClientSessionType: null == K ? void 0 : null === (t = K.clientInfo) || void 0 === t ? void 0 : t.os,
       voicePlatform: X,
-      localMute: P && !y,
+      localMute: b && !y,
       localVideoDisabled: D,
-      mute: n || P,
-      deaf: l || b,
+      mute: n || b,
+      deaf: l || P,
       speaking: w,
       priority: U,
       embeddedApplication: V[0],
@@ -87,8 +87,8 @@ let P = l.memo(e => {
     })
   })
 });
-P.displayName = "ConnectedVoiceUser";
-class b extends l.Component {
+b.displayName = "ConnectedVoiceUser";
+class P extends l.Component {
   renderVoiceUsers() {
     let {
       channel: e,
@@ -112,7 +112,7 @@ class b extends l.Component {
           nick: c,
           voiceState: f
         } = n;
-        return (0, a.jsx)(P, {
+        return (0, a.jsx)(b, {
           user: o,
           nick: c,
           isSelfOnOtherClient: C.default.getId() === o.id && f.sessionId !== C.default.getSessionId(),
@@ -184,8 +184,8 @@ class b extends l.Component {
     }
   }
 }
-b.defaultProps = {
+P.defaultProps = {
   allowPreviews: !0,
   allowDragging: !0
 };
-var D = b
+var D = P

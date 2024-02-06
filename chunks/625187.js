@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   default: function() {
     return s
   }
 });
-var i = n("37983");
+var u = n("37983");
 n("884691");
-var l = n("446674"),
-  u = n("77078"),
-  o = n("305961"),
-  r = n("697218"),
+var r = n("446674"),
+  i = n("77078"),
+  l = n("305961"),
+  o = n("697218"),
   a = n("782340");
 
-function s(e, t) {
-  let s = (0, l.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
-    d = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(t));
-  return null == d || null == s || e.id === d.ownerId || e.bot || !d.isOwnerWithRequiredMfaLevel(s) ? null : (0, i.jsx)(u.MenuItem, {
+function s(t, e) {
+  let s = (0, r.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
+    d = (0, r.useStateFromStores)([l.default], () => l.default.getGuild(e));
+  return null == d || null == s || t.id === d.ownerId || t.bot || !d.isOwnerWithRequiredMfaLevel(s) ? null : (0, u.jsx)(i.MenuItem, {
     id: "transfer-ownership",
     color: "danger",
     label: a.default.Messages.TRANSFER_OWNERSHIP,
-    action: () => (0, u.openModalLazy)(async () => {
+    action: () => (0, i.openModalLazy)(async () => {
       let {
-        default: t
+        default: e
       } = await n.el("878551").then(n.bind(n, "878551"));
-      return n => (0, i.jsx)(t, {
+      return n => (0, u.jsx)(e, {
         ...n,
         guild: d,
         fromUser: s,
-        toUser: e
+        toUser: t
       })
     })
   })

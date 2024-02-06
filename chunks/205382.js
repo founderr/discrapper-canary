@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return v
+    return M
   }
 }), s("222007"), s("702976");
 var i = s("37983"),
-  l = s("884691"),
-  n = s("414456"),
-  a = s.n(n),
+  n = s("884691"),
+  l = s("414456"),
+  a = s.n(l),
   r = s("65597"),
   d = s("225389"),
   o = s("833222"),
@@ -27,7 +27,7 @@ var i = s("37983"),
   p = s("782340"),
   C = s("297697"),
   O = s("587621");
-let M = () => [{
+let v = () => [{
   value: T.Presets.ALL_MESSAGES,
   name: p.default.Messages.NOTIFICATION_PRESET_1
 }, {
@@ -41,14 +41,14 @@ let M = () => [{
   name: p.default.Messages.NOTIFICATION_PRESET_CUSTOM
 }];
 
-function v(e) {
+function M(e) {
   let {
     guildId: t
-  } = e, s = (0, r.default)([h.default], () => h.default.getGuildFlags(t)), n = (0, r.default)([h.default], () => {
+  } = e, s = (0, r.default)([h.default], () => h.default.getGuildFlags(t)), l = (0, r.default)([h.default], () => {
     let e = h.default.getGuildUnreadSetting(t),
       s = h.default.getMessageNotifications(t);
     return e === x.UnreadSetting.UNSET ? s === _.UserNotificationSettings.ALL_MESSAGES ? x.UnreadSetting.ALL_MESSAGES : x.UnreadSetting.ONLY_MENTIONS : e
-  }), a = (0, r.default)([h.default], () => h.default.getMessageNotifications(t)), [N, f] = (0, l.useState)(!1), O = N ? T.Presets.CUSTOM : (0, T.presetFromSettings)(n, a), v = e => {
+  }), a = (0, r.default)([h.default], () => h.default.getMessageNotifications(t)), [N, f] = (0, n.useState)(!1), O = N ? T.Presets.CUSTOM : (0, T.presetFromSettings)(l, a), M = e => {
     if (e === T.Presets.CUSTOM) {
       f(!0);
       return
@@ -60,12 +60,12 @@ function v(e) {
       className: C.segmentedControlsContainer,
       children: (0, i.jsx)(u.SegmentedControl, {
         value: O,
-        options: M(),
+        options: v(),
         onChange: e => {
           let {
             value: t
           } = e;
-          return v(t)
+          return M(t)
         },
         className: C.segmentedControl,
         look: "pill"
@@ -77,7 +77,7 @@ function v(e) {
       children: [(0, i.jsxs)("div", {
         className: C.grid,
         children: [(0, i.jsx)(L, {
-          unreadSetting: n
+          unreadSetting: l
         }), (0, i.jsx)(A, {
           notificationSetting: a
         })]
@@ -107,7 +107,7 @@ function v(e) {
       }), (0, i.jsxs)("div", {
         className: C.grid,
         children: [(0, i.jsx)(u.SingleSelect, {
-          value: n,
+          value: l,
           className: C.input,
           onChange: e => {
             f(!1), c.default.updateGuildNotificationSettings(t, {
@@ -118,7 +118,7 @@ function v(e) {
             notificationSetting: a
           }),
           renderOptionLabel: e => {
-            let t = e.disabled && e.value === x.UnreadSetting.ONLY_MENTIONS && n !== x.UnreadSetting.ONLY_MENTIONS;
+            let t = e.disabled && e.value === x.UnreadSetting.ONLY_MENTIONS && l !== x.UnreadSetting.ONLY_MENTIONS;
             return (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsx)("div", {
                 children: (0, i.jsx)(u.Text, {
@@ -145,13 +145,13 @@ function v(e) {
             let s = {
               message_notifications: e
             };
-            e === _.UserNotificationSettings.ALL_MESSAGES && n !== x.UnreadSetting.ALL_MESSAGES && (s.flags = (0, S.withGuildUnreadFlags)(h.default.getGuildFlags(t), I.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)), c.default.updateGuildNotificationSettings(t, s, g.NotificationLabel.notifications(e))
+            e === _.UserNotificationSettings.ALL_MESSAGES && l !== x.UnreadSetting.ALL_MESSAGES && (s.flags = (0, S.withGuildUnreadFlags)(h.default.getGuildFlags(t), I.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)), c.default.updateGuildNotificationSettings(t, s, g.NotificationLabel.notifications(e))
           },
           options: (0, m.getPushNotificationSelectOptions)({
             notificationSetting: a
           }),
           renderOptionLabel: e => {
-            let t = e.value === _.UserNotificationSettings.ALL_MESSAGES && n !== x.UnreadSetting.ALL_MESSAGES && a !== _.UserNotificationSettings.ALL_MESSAGES;
+            let t = e.value === _.UserNotificationSettings.ALL_MESSAGES && l !== x.UnreadSetting.ALL_MESSAGES && a !== _.UserNotificationSettings.ALL_MESSAGES;
             return (0, i.jsxs)(i.Fragment, {
               children: [(0, i.jsx)(u.Text, {
                 variant: "text-md/normal",

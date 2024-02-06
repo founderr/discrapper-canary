@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return b
+    return k
   }
 }), n("222007"), n("424973");
 var l = n("37983"),
@@ -33,7 +33,7 @@ var l = n("37983"),
   O = n("646718"),
   M = n("537461");
 
-function k(e) {
+function b(e) {
   let {
     disabled: t,
     channel: n
@@ -58,8 +58,8 @@ function k(e) {
     channel: n
   })
 }
-var b = i.memo(function(e) {
-  var t, n, i, p, x, N, b, P, L;
+var k = i.memo(function(e) {
+  var t, n, i, p, x, N, k, P, L;
   let {
     type: U,
     disabled: j,
@@ -113,7 +113,7 @@ var b = i.memo(function(e) {
         disabled: j,
         channel: D,
         type: U
-      }, "activity")), (null === (b = U.gifts) || void 0 === b ? void 0 : b.button) != null && null == V && !Y) {
+      }, "activity")), (null === (k = U.gifts) || void 0 === k ? void 0 : k.button) != null && null == V && !Y) {
       let {
         hideChannelGiftButton: e
       } = m.default.getCurrentConfig({
@@ -121,7 +121,7 @@ var b = i.memo(function(e) {
       }, {
         autoTrackExposure: D.isDM()
       }), t = D.isDM() && e;
-      !t && q.push((0, l.jsx)(k, {
+      !t && q.push((0, l.jsx)(b, {
         disabled: j,
         channel: D
       }, "gift"))

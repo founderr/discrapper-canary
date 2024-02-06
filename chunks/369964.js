@@ -28,8 +28,8 @@ var n = l("37983"),
       onTryFeature: _,
       onClose: p,
       className: I,
-      inlineArt: x = !1,
-      isPremiumFeature: v = !1,
+      inlineArt: v = !1,
+      isPremiumFeature: x = !1,
       shouldUseHorizontalButtons: A = !1,
       showGIFTag: R = !1,
       dismissibleContent: T,
@@ -59,21 +59,21 @@ var n = l("37983"),
       ref: t,
       children: (0, n.jsxs)("div", {
         className: r(S.content, h, {
-          [S.contentNoArt]: null == C || x,
-          [S.contentPremium]: v || O
+          [S.contentNoArt]: null == C || v,
+          [S.contentPremium]: x || O
         }),
         children: [(0, n.jsxs)("div", {
-          className: r(C, x ? S.artInline : S.artAbsolute),
+          className: r(C, v ? S.artInline : S.artAbsolute),
           children: [R && (0, n.jsx)(d.default, {
             className: S.gifTag
           }), j]
         }), (0, n.jsxs)("div", {
           className: S.body,
           children: [(0, n.jsxs)(i.Heading, {
-            className: r(v ? S.headerWithPremiumIcon : S.header, E),
+            className: r(x ? S.headerWithPremiumIcon : S.header, E),
             variant: "heading-md/bold",
             color: "always-white",
-            children: [v && !O ? (0, n.jsx)(c.default, {
+            children: [x && !O ? (0, n.jsx)(c.default, {
               className: S.premiumIcon
             }) : null, O ? (0, n.jsxs)(i.Text, {
               color: "always-white",
@@ -101,8 +101,8 @@ var n = l("37983"),
               onClick: e => {
                 null == p || p(e), _(e), w(f.ContentDismissActionType.PRIMARY)
               },
-              color: v || O ? i.Button.Colors.BRAND : i.Button.Colors.WHITE,
-              look: v || O ? i.Button.Looks.INVERTED : i.Button.Looks.FILLED,
+              color: x || O ? i.Button.Colors.BRAND : i.Button.Colors.WHITE,
+              look: x || O ? i.Button.Looks.INVERTED : i.Button.Looks.FILLED,
               children: null != N ? N : m.default.Messages.EDUCATION_NEW_FEATURE_TRY_IT
             }), (0, n.jsx)(i.Button, {
               className: S.button,
@@ -110,8 +110,8 @@ var n = l("37983"),
               onClick: e => {
                 null == p || p(e), w(f.ContentDismissActionType.DISMISS)
               },
-              color: v || O ? i.Button.Colors.WHITE : i.Button.Colors.BRAND,
-              look: v || O ? i.Button.Looks.LINK : i.Button.Looks.FILLED,
+              color: x || O ? i.Button.Colors.WHITE : i.Button.Colors.BRAND,
+              look: x || O ? i.Button.Looks.LINK : i.Button.Looks.FILLED,
               children: null != g ? g : m.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
             })]
           }) : (0, n.jsx)(i.Button, {

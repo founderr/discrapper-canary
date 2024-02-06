@@ -10,8 +10,8 @@ var s = n("37983"),
   l = n("78345"),
   i = n("203142"),
   u = n("392459"),
-  o = n("26245"),
-  c = n("21340"),
+  c = n("26245"),
+  o = n("21340"),
   d = n("159548"),
   f = n("897184"),
   m = n("990439"),
@@ -25,8 +25,8 @@ let I = {
     [l.PremiumGiftStyles.SNOWGLOBE]: "",
     [l.PremiumGiftStyles.BOX]: "",
     [l.PremiumGiftStyles.CUP]: "",
-    [l.PremiumGiftStyles.SEASONAL_CAKE]: o,
-    [l.PremiumGiftStyles.SEASONAL_CHEST]: c,
+    [l.PremiumGiftStyles.SEASONAL_CAKE]: c,
+    [l.PremiumGiftStyles.SEASONAL_CHEST]: o,
     [l.PremiumGiftStyles.SEASONAL_COFFEE]: d,
     [l.PremiumGiftStyles.SEASONAL_STANDARD_BOX]: u
   },
@@ -36,13 +36,13 @@ let I = {
       giftStyle: r,
       setSelectedGiftStyle: l,
       onFocus: u,
-      onBlur: o
+      onBlur: c
     } = e;
     return (0, s.jsx)(a.Clickable, {
       innerRef: t,
       onClick: () => l(r),
       onFocus: u,
-      onBlur: o,
+      onBlur: c,
       children: (0, s.jsx)("img", {
         style: {
           width: "100%",

@@ -24,10 +24,10 @@ var a = s("37983"),
   N = s("868246"),
   f = s("324105"),
   g = s("385976"),
-  A = s("407063"),
-  L = s("694187"),
-  m = s("608684"),
-  C = s("446066"),
+  A = s("101263"),
+  L = s("407063"),
+  m = s("694187"),
+  C = s("608684"),
   O = s("459698"),
   h = s("923959"),
   R = s("957255"),
@@ -38,8 +38,8 @@ var a = s("37983"),
   p = s("794818"),
   U = s("592407"),
   v = s("900938"),
-  j = s("26991"),
-  P = s("796178"),
+  P = s("26991"),
+  j = s("796178"),
   y = s("237938"),
   b = s("53948"),
   B = s("49111"),
@@ -163,19 +163,19 @@ class k extends n.PureComponent {
             size: r.Button.Sizes.SMALL,
             color: r.Button.Colors.PRIMARY,
             hover: r.Button.Colors.PRIMARY,
-            children: [H.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(L.default, {
+            children: [H.default.Messages.UPLOAD_BACKGROUND, (0, a.jsx)(m.default, {
               disabled: !s,
               onChange: this.handleSplashChange
             })]
           })]
         }), (0, a.jsx)("div", {
           className: V.imageUploaderWrapper,
-          children: (0, a.jsx)(m.default, {
+          children: (0, a.jsx)(C.default, {
             image: e.discoverySplash,
             makeURL: t => x.default.getGuildDiscoverySplashURL({
               id: e.id,
               splash: t,
-              size: 512 * (0, A.getDevicePixelRatio)()
+              size: 512 * (0, L.getDevicePixelRatio)()
             }),
             disabled: !s,
             onChange: this.handleSplashChange,
@@ -213,7 +213,7 @@ class k extends n.PureComponent {
         memberCount: 1234
       }
     }
-    let u = null != d ? C.default.createFromDiscoverableGuild(d) : null,
+    let u = null != d ? A.default.createFromDiscoverableGuild(d) : null,
       c = null == d ? void 0 : null === (e = d.emojis) || void 0 === e ? void 0 : e[0],
       E = null != c ? {
         name: c.require_colons ? ":".concat(c.name, ":") : c.name,
@@ -308,7 +308,7 @@ class k extends n.PureComponent {
         children: [(0, a.jsx)(r.FormTitle, {
           className: V.formTitle,
           children: H.default.Messages.GUILD_SETTINGS_DISCOVERY_SUBCATEGORY_TITLE
-        }), (0, a.jsx)(j.default, {
+        }), (0, a.jsx)(P.default, {
           guild: l,
           guildMetadata: t
         })]
@@ -365,7 +365,7 @@ class k extends n.PureComponent {
           isGuildAdmin: s
         });
       case T.DiscoverySettingsViews.DISQUALIFIED:
-        return (0, a.jsx)(P.default, {
+        return (0, a.jsx)(j.default, {
           guild: e
         });
       case T.DiscoverySettingsViews.SETTINGS:

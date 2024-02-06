@@ -1,68 +1,68 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return o
   },
   renderAutomodMessageMarkup: function() {
     return u
   }
 }), n("222007"), n("781738"), n("355025");
-var i = n("367376"),
-  l = n("240873"),
-  r = n("49111");
-let o = new Set([r.MessageEmbedTypes.IMAGE, r.MessageEmbedTypes.GIFV]),
-  a = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
+var a = n("367376"),
+  i = n("240873"),
+  s = n("49111");
+let r = new Set([s.MessageEmbedTypes.IMAGE, s.MessageEmbedTypes.GIFV]),
+  l = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 
-function s(e) {
+function o(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-    n = t.formatInline ? i.default.parseInlineReply : i.default.parse;
+    n = t.formatInline ? a.default.parseInlineReply : a.default.parse;
   return function(e, t, n) {
-    var i, r;
+    var a, s;
     let {
-      toAST: s = !1,
+      toAST: o = !1,
       hideSimpleEmbedContent: u = !0,
-      formatInline: f = !1,
-      postProcessor: E
-    } = n, p = !1;
-    let h = e(t.content, !0, (i = t, r = n, {
-      allowLinks: null != i.webhookId || !!r.allowLinks,
-      allowEmojiLinks: null != i.webhookId,
-      channelId: i.channel_id,
-      messageId: i.id,
-      mentionChannels: i.mentionChannels,
-      isInteracting: !!r.isInteracting,
-      formatInline: !!r.formatInline,
-      noStyleAndInteraction: !!r.noStyleAndInteraction,
-      allowHeading: !!r.allowHeading,
-      allowList: !!r.allowList,
-      previewLinkTarget: !!r.previewLinkTarget,
-      disableAnimatedEmoji: !!r.disableAnimatedEmoji,
+      formatInline: m = !1,
+      postProcessor: f
+    } = n, g = !1;
+    let p = e(t.content, !0, (a = t, s = n, {
+      allowLinks: null != a.webhookId || !!s.allowLinks,
+      allowEmojiLinks: null != a.webhookId,
+      channelId: a.channel_id,
+      messageId: a.id,
+      mentionChannels: a.mentionChannels,
+      isInteracting: !!s.isInteracting,
+      formatInline: !!s.formatInline,
+      noStyleAndInteraction: !!s.noStyleAndInteraction,
+      allowHeading: !!s.allowHeading,
+      allowList: !!s.allowList,
+      previewLinkTarget: !!s.previewLinkTarget,
+      disableAnimatedEmoji: !!s.disableAnimatedEmoji,
       disableAutoBlockNewlines: !0,
       muted: !1
     }), (e, n) => (!Array.isArray(e) && (e = [e]), u && (e = function(e, t) {
       if (1 !== e.length || 1 !== t.length) return e;
       let n = e[0],
-        i = t[0];
-      return ("link" === n.type || "attachmentLink" === n.type) && o.has(i.type) && (0, l.isEmbedInline)(i) ? [] : e
-    }(e, t.embeds)), !f && (e = function(e, t) {
+        a = t[0];
+      return ("link" === n.type || "attachmentLink" === n.type) && r.has(a.type) && (0, i.isEmbedInline)(a) ? [] : e
+    }(e, t.embeds)), !m && (e = function(e, t) {
       return t ? c(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = c(e[0].content)), e)
-    }(e, n)), p = function(e, t) {
+    }(e, n)), g = function(e, t) {
       return t ? d(e) : "paragraph" === e[0].type && e[0].content instanceof Array && d(e[0].content)
-    }(e, n), f && (e = function e(t) {
+    }(e, n), m && (e = function e(t) {
       return t.forEach(t => {
-        a.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
+        l.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
       }), t
-    }(e)), null != E && (e = E(e, n)), e));
+    }(e)), null != f && (e = f(e, n)), e));
     return {
-      hasSpoilerEmbeds: p,
-      content: h
+      hasSpoilerEmbeds: g,
+      content: p
     }
   }(n, e, t)
 }
 
 function u(e, t, n) {
-  var l;
-  return l = i.default.parseAutoModerationSystemMessage, l(e, !0, {
+  var i;
+  return i = a.default.parseAutoModerationSystemMessage, i(e, !0, {
     allowLinks: !1,
     allowEmojiLinks: !1,
     mentionChannels: [],

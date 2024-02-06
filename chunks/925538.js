@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return p
   },
   default: function() {
-    return j
+    return P
   }
 }), s("222007"), s("424973");
 var a = s("37983"),
@@ -216,12 +216,12 @@ let x = "dismissedCommunityFeaturesUpsell",
           publicUpdatesChannelId: e
         })
       },
-      j = e => {
+      P = e => {
         m.default.updateGuild({
           preferredLocale: e
         })
       },
-      P = e => {
+      j = e => {
         m.default.updateGuild({
           description: e
         })
@@ -365,7 +365,7 @@ let x = "dismissedCommunityFeaturesUpsell",
           children: (0, a.jsx)(u.SearchableSelect, {
             value: t.preferredLocale,
             options: c,
-            onChange: j,
+            onChange: P,
             isDisabled: !s
           })
         })]
@@ -384,7 +384,7 @@ let x = "dismissedCommunityFeaturesUpsell",
           }), (0, a.jsx)(u.TextArea, {
             value: null !== (e = t.description) && void 0 !== e ? e : "",
             placeholder: D.default.Messages.SERVER_DESCIPTION_EMPTY,
-            onChange: P,
+            onChange: j,
             maxLength: 120,
             disabled: !s
           })]
@@ -418,7 +418,7 @@ let x = "dismissedCommunityFeaturesUpsell",
       })]
     })
   };
-var j = () => {
+var P = () => {
   let e = (0, r.useStateFromStores)([C.default], () => C.default.getGuild());
   if (null == e) return null;
   let t = e.features.has(h.GuildFeatures.COMMUNITY);

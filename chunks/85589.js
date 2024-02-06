@@ -11,8 +11,8 @@ var a = i("37983");
 i("884691");
 var l = i("77078"),
   n = i("79112"),
-  o = i("154889"),
-  s = i("917247"),
+  s = i("154889"),
+  o = i("917247"),
   r = i("789946"),
   u = i("646718"),
   d = i("49111"),
@@ -30,7 +30,7 @@ function f(e) {
     onClick: () => {
       n.default.open(d.UserSettingsSections.PREMIUM), l()
     }
-  }), E = (0, s.usePremiumTrialOffer)(), _ = (0, o.usePremiumDiscountOffer)();
+  }), E = (0, o.usePremiumTrialOffer)(), _ = (0, s.usePremiumDiscountOffer)();
   return (0, a.jsx)(r.default, {
     artURL: h,
     artContainerClassName: p.artContainer,

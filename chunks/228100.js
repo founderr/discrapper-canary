@@ -5,13 +5,13 @@ t.r(A), t.d(A, {
   }
 }), t("222007");
 var a = t("884691"),
-  l = t("446674"),
-  n = t("448993"),
+  n = t("446674"),
+  l = t("448993"),
   r = t("651057"),
   s = t("299285");
 
 function o(e, A) {
-  let t = (0, l.useStateFromStores)([s.default], () => s.default.getGuildApplication(e, A)),
+  let t = (0, n.useStateFromStores)([s.default], () => s.default.getGuildApplication(e, A)),
     [o, i] = a.useState(null == t),
     [d, u] = a.useState(),
     [c, f] = a.useState(!1),
@@ -24,7 +24,7 @@ function o(e, A) {
             includeTeam: !0
           })
         } catch (e) {
-          u(new n.APIError(e))
+          u(new l.APIError(e))
         } finally {
           i(!1)
         }

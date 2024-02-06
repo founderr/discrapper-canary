@@ -24,8 +24,8 @@ var n = a("37983"),
   x = a("58622"),
   _ = a("413266"),
   S = a("701203"),
-  A = a("95039"),
-  v = a("255812"),
+  v = a("95039"),
+  A = a("255812"),
   G = a("199938"),
   C = a("592407"),
   R = a("267567"),
@@ -85,7 +85,7 @@ let q = i.memo(function(e) {
     ea = t.isOwner(q),
     en = (0, d.useStateFromStores)([R.default], () => R.default.isLurking(t.id), [t.id]),
     ei = (0, d.useStateFromStores)([L.default], () => L.default.isCurrentUserGuest(t.id)),
-    el = (0, v.default)(t.id, !0),
+    el = (0, A.default)(t.id, !0),
     es = (0, g.default)(t),
     ed = (0, x.default)({
       source: Z.InstantInviteSources.GUILD_HEADER,
@@ -229,7 +229,7 @@ let q = i.memo(function(e) {
         label: K.default.Messages.PREMIUM_GUILD_HEADER_DROPDOWN_NITRO_SERVER_SUBSCRIBE,
         icon: w.default,
         action: () => {
-          (0, A.openGuildBoostingMarketingModal)({
+          (0, v.openGuildBoostingMarketingModal)({
             guildId: t.id,
             location: {
               section: Z.AnalyticsSections.GUILD_HEADER_POPOUT

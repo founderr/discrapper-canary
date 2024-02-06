@@ -10,8 +10,8 @@ s.r(t), s.d(t, {
 var a, n, r = s("37983"),
   i = s("884691"),
   l = s("446674"),
-  o = s("913144"),
-  u = s("465527"),
+  u = s("913144"),
+  o = s("465527"),
   d = s("622839"),
   c = s("782340");
 (a = n || (n = {})).SHORT = "SHORT", a.LONG = "LONG";
@@ -31,7 +31,7 @@ class _ extends i.PureComponent {
     }
   }
   componentWillUnmount() {
-    null != this.props.purchaseError && o.default.wait(() => u.clearPurchaseError())
+    null != this.props.purchaseError && u.default.wait(() => o.clearPurchaseError())
   }
   render() {
     let {

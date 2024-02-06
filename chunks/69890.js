@@ -4,24 +4,24 @@ n.r(t), n.d(t, {
     return a
   },
   formatMessageCountLabel: function() {
-    return u
+    return o
   }
 });
 var i = n("299039"),
   s = n("648564"),
-  l = n("782340");
-let r = e => i.default.compare("992549565104128000", e) > -1,
+  r = n("782340");
+let l = e => i.default.compare("992549565104128000", e) > -1,
   a = (e, t) => {
     if (null == e || e < 0) return "0";
     {
-      let n = r(t);
+      let n = l(t);
       return (null == t || n) && e >= s.MAX_THREAD_MESSAGE_COUNT_OLD ? "50+" : e >= s.MAX_THREAD_MESSAGE_COUNT ? "100k+" : "".concat(e)
     }
   },
-  o = (e, t, n) => {
+  u = (e, t, n) => {
     let i = a(e, n);
-    return "0" === i ? l.default.Messages.SEE_THREAD : t.format({
+    return "0" === i ? r.default.Messages.SEE_THREAD : t.format({
       count: i
     })
   },
-  u = (e, t) => o(e, l.default.Messages.THREAD_MESSAGE_COUNT, t)
+  o = (e, t) => u(e, r.default.Messages.THREAD_MESSAGE_COUNT, t)

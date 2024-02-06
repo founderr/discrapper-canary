@@ -23,10 +23,10 @@ i.r(t), i.d(t, {
   }
 }), i("424973");
 var n = i("917351"),
-  l = i.n(n),
-  s = i("872717"),
-  a = i("750028"),
-  r = i("913144"),
+  s = i.n(n),
+  l = i("872717"),
+  r = i("750028"),
+  a = i("913144"),
   o = i("599417"),
   u = i("385976"),
   c = i("867805"),
@@ -40,22 +40,22 @@ var n = i("917351"),
 
 function _(e) {
   f.PreloadedUserSettingsActionCreators.updateAsync("textAndImages", t => {
-    t.diversitySurrogate = a.StringValue.create(), t.diversitySurrogate.value = e
+    t.diversitySurrogate = r.StringValue.create(), t.diversitySurrogate.value = e
   }, p.UserSettingsDelay.FREQUENT_USER_ACTION)
 }
 
 function S(e) {
-  r.default.dispatch({
+  a.default.dispatch({
     type: "EMOJI_FETCH",
     guildId: e
-  }), s.default.get({
+  }), l.default.get({
     url: I.Endpoints.GUILD_EMOJIS(e),
     oldFormErrors: !0
-  }).then(t => r.default.dispatch({
+  }).then(t => a.default.dispatch({
     type: "EMOJI_FETCH_SUCCESS",
     guildId: e,
     emojis: t.body
-  }), () => r.default.dispatch({
+  }), () => a.default.dispatch({
     type: "EMOJI_FETCH_FAILURE",
     guildId: e
   }))
@@ -66,34 +66,34 @@ function h(e) {
     guildId: t,
     image: i,
     name: n,
-    roles: l
+    roles: s
   } = e;
-  return r.default.dispatch({
+  return a.default.dispatch({
     type: "EMOJI_UPLOAD_START",
     guildId: t
-  }), s.default.post({
+  }), l.default.post({
     url: I.Endpoints.GUILD_EMOJIS(t),
     body: {
       image: i,
       name: n,
-      roles: l
+      roles: s
     },
     oldFormErrors: !0
-  }).then(() => r.default.dispatch({
+  }).then(() => a.default.dispatch({
     type: "EMOJI_UPLOAD_STOP",
     guildId: t
-  }), e => (r.default.dispatch({
+  }), e => (a.default.dispatch({
     type: "EMOJI_UPLOAD_STOP",
     guildId: t
   }), Promise.reject(e)))
 }
 
 function C(e, t) {
-  return r.default.dispatch({
+  return a.default.dispatch({
     type: "EMOJI_DELETE",
     guildId: e,
     emojiId: t
-  }), s.default.delete({
+  }), l.default.delete({
     url: I.Endpoints.GUILD_EMOJI(e, t),
     oldFormErrors: !0
   })
@@ -103,14 +103,14 @@ async function T(e) {
     guildId: t,
     emojiId: i,
     name: n,
-    roles: l
+    roles: s
   } = e;
   try {
-    return await s.default.patch({
+    return await l.default.patch({
       url: I.Endpoints.GUILD_EMOJI(t, i),
       body: {
         name: n,
-        roles: l
+        roles: s
       },
       oldFormErrors: !0
     })
@@ -130,7 +130,7 @@ function N(e) {
 function v(e) {
   var t;
   (function(e) {
-    null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = N(t.emojis), l.size(t.emojis) >= p.MAX_FAVORITES) ? (m.default.show({
+    null != e && f.FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", t => (t.emojis = N(t.emojis), s.size(t.emojis) >= p.MAX_FAVORITES) ? (m.default.show({
       title: g.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
       body: g.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
         count: p.MAX_FAVORITES

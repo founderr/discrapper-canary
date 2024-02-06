@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return m
   }
 });
 var l = n("37983"),
@@ -14,14 +14,14 @@ var l = n("37983"),
   d = n("782340"),
   c = n("760687");
 
-function f(e) {
+function m(e) {
   let {
     onPlay: t,
     className: n,
     inactive: s
-  } = e, f = a.useRef(null), m = (0, l.jsx)("div", {
+  } = e, m = a.useRef(null), f = (0, l.jsx)("div", {
     className: c.iconWrapper,
-    ref: f,
+    ref: m,
     children: (0, l.jsx)(u.default, {
       className: i(c.icon)
     })
@@ -29,7 +29,7 @@ function f(e) {
   return (0, l.jsx)(o.MessagesInteractionContext.Consumer, {
     children: e => s || null == t ? (0, l.jsx)("div", {
       className: c.cover,
-      children: m
+      children: f
     }) : (0, l.jsx)(r.Clickable, {
       className: i(n, c.cover, {
         [c.active]: !e.disableInteractions
@@ -38,9 +38,9 @@ function f(e) {
       tabIndex: 0,
       "aria-label": d.default.Messages.PLAY,
       focusProps: {
-        ringTarget: f
+        ringTarget: m
       },
-      children: m
+      children: f
     })
   })
 }

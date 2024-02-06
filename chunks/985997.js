@@ -25,8 +25,8 @@ var a = l("414456"),
   _ = l("686298"),
   p = l("49111"),
   I = l("782340"),
-  x = l("770420"),
-  v = l("986916"),
+  v = l("770420"),
+  x = l("986916"),
   A = l("926622");
 
 function R(e) {
@@ -48,11 +48,11 @@ function R(e) {
 
 function T() {
   return (0, n.jsxs)("div", {
-    className: v.toolTipTextContainer,
+    className: x.toolTipTextContainer,
     children: [(0, n.jsx)(E.default, {
-      className: s(v.premiumIcon, v.premiumIconColor)
+      className: s(x.premiumIcon, x.premiumIconColor)
     }), (0, n.jsx)(o.Text, {
-      className: v.upsellText,
+      className: x.upsellText,
       variant: "text-sm/medium",
       children: I.default.Messages.STREAM_QUALITY_DISCORD_NITRO_UNLOCK
     })]
@@ -73,7 +73,7 @@ function L(e) {
       label: m
     } = a;
   return i ? (t = (0, n.jsx)(o.TooltipContainer, {
-    tooltipClassName: v.tooltip,
+    tooltipClassName: x.tooltip,
     spacing: 12,
     "aria-label": I.default.Messages.STREAM_QUALITY_DISCORD_NITRO_UNLOCK,
     text: (0, n.jsx)(T, {}),
@@ -81,7 +81,7 @@ function L(e) {
       align: C.default.Align.CENTER,
       children: (0, n.jsx)(o.Text, {
         variant: "text-xs/bold",
-        className: v.selectorNitroText,
+        className: x.selectorNitroText,
         children: m
       })
     })
@@ -90,12 +90,12 @@ function L(e) {
     onClose: c
   })) : (t = (0, n.jsx)(o.Text, {
     variant: "text-xs/normal",
-    className: r ? v.selectorTextSelected : v.selectorText,
+    className: r ? x.selectorTextSelected : x.selectorText,
     children: m
   }), l = () => d(f)), {
     content: t,
-    className: s(r ? v.selectorButtonSelected : v.selectorButton, {
-      [v.selectorButtonPremiumRequired]: i
+    className: s(r ? x.selectorButtonSelected : x.selectorButton, {
+      [x.selectorButtonPremiumRequired]: i
     }),
     onClick: l
   }
@@ -153,8 +153,8 @@ function M(e) {
     children: [(0, n.jsx)(C.default, {
       children: (0, n.jsx)(o.FormItem, {
         title: I.default.Messages.STREAM_RESOLUTION,
-        titleClassName: x.formItemTitleSlim,
-        className: v.documentModeGroup,
+        titleClassName: v.formItemTitleSlim,
+        className: x.documentModeGroup,
         children: (0, n.jsx)(o.Text, {
           variant: "text-xs/normal",
           children: I.default.Messages.STREAM_PRESET_DOCUMENTS_DESCRIPTION_NITRO.format({
@@ -171,13 +171,13 @@ function M(e) {
     children: [(0, n.jsxs)(C.default, {
       children: [(0, n.jsx)(o.FormItem, {
         title: I.default.Messages.STREAM_RESOLUTION,
-        className: v.settingsGroup,
-        titleClassName: x.formItemTitleSlim,
+        className: x.settingsGroup,
+        titleClassName: v.formItemTitleSlim,
         children: w
       }), (0, n.jsx)(o.FormItem, {
         title: I.default.Messages.SCREENSHARE_FRAME_RATE,
-        className: v.settingsGroup,
-        titleClassName: x.formItemTitleSlim,
+        className: x.settingsGroup,
+        titleClassName: v.formItemTitleSlim,
         children: V
       })]
     }), G ? (0, n.jsx)(g.default, {
@@ -189,10 +189,10 @@ function M(e) {
     ...U,
     children: (0, n.jsx)(o.FormItem, {
       title: I.default.Messages.STREAM_QUALITY,
-      titleClassName: x.formItemTitle,
-      className: x.modalContent,
+      titleClassName: v.formItemTitle,
+      className: v.modalContent,
       children: (0, n.jsxs)("div", {
-        className: v.qualitySettingsContainer,
+        className: x.qualitySettingsContainer,
         children: [(0, n.jsx)(o.SingleSelect, {
           value: l,
           className: A.marginTop8,

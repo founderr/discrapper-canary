@@ -14,8 +14,8 @@ var a = l("37983"),
   o = l("885508"),
   d = l("190017"),
   h = l("545876"),
-  p = l("299285"),
-  f = l("393414"),
+  f = l("299285"),
+  p = l("393414"),
   I = l("677225"),
   A = l("971427"),
   L = l("98328"),
@@ -161,7 +161,7 @@ class M extends s.Component {
         manifestIds: t,
         installationPath: this.state.selectedInstallationPath,
         analyticsLocation: s
-      }), (0, f.transitionTo)(E.Routes.APPLICATION_LIBRARY), this.close()
+      }), (0, p.transitionTo)(E.Routes.APPLICATION_LIBRARY), this.close()
     }, this.handleInstall = () => {
       let {
         application: e,
@@ -180,13 +180,13 @@ class M extends s.Component {
     }
   }
 }
-var C = n.default.connectStores([I.default, L.default, A.default, p.default], e => {
+var C = n.default.connectStores([I.default, L.default, A.default, f.default], e => {
   let {
     applicationId: t,
     branchId: l
   } = e, a = I.default.getTargetBuildId(t, l);
   return {
-    application: p.default.getApplication(t),
+    application: f.default.getApplication(t),
     defaultInstallationPath: L.default.defaultInstallationPath,
     buildId: a,
     manifestIds: I.default.getTargetManifests(t, l),

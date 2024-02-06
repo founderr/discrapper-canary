@@ -6,15 +6,15 @@ t.r(A), t.d(A, {
 });
 var a = t("37983");
 t("884691");
-var l = t("469563"),
-  n = t("606169"),
+var n = t("469563"),
+  l = t("606169"),
   r = t("75196"),
-  s = (0, l.replaceIcon)(function(e) {
+  s = (0, n.replaceIcon)(function(e) {
     let {
       width: A = 16,
       height: t = 16,
-      color: l = "currentColor",
-      foreground: n,
+      color: n = "currentColor",
+      foreground: l,
       ...s
     } = e;
     return (0, a.jsxs)("svg", {
@@ -26,11 +26,11 @@ var l = t("469563"),
       children: [(0, a.jsx)("g", {
         clipPath: "url(#clip0)",
         children: (0, a.jsx)("path", {
-          className: n,
+          className: l,
           fillRule: "evenodd",
           clipRule: "evenodd",
           d: "M8.94267 0L12 3.05733V8.05467C10.7 8.24067 9.574 8.95867 8.85067 9.986L8 8L5.33333 11.3333L4 10L2 12.6667H8V12.6673C8 13.384 8.16667 14.06 8.45467 14.6667H1.33333C0.598 14.6667 0 14.0687 0 13.3333V1.33333C0 0.598667 0.598 0 1.33333 0H8.94267ZM2 7C2 7.92133 2.74533 8.66667 3.66667 8.66667C4.586 8.66667 5.33333 7.92133 5.33333 7C5.33333 6.07933 4.586 5.33333 3.66667 5.33333C2.74533 5.33333 2 6.07933 2 7ZM8 0.666667V4H11.3333L8 0.666667ZM9.52865 12.862L12.6666 9.72396L15.8046 12.862L14.862 13.804L13.3333 12.276V16.0006H12V12.276L10.4713 13.804L9.52865 12.862Z",
-          fill: l
+          fill: n
         })
       }), (0, a.jsx)("defs", {
         children: (0, a.jsx)("clipPath", {
@@ -43,6 +43,6 @@ var l = t("469563"),
         })
       })]
     })
-  }, n.ImageFileUpIcon, void 0, {
+  }, l.ImageFileUpIcon, void 0, {
     size: 16
   })

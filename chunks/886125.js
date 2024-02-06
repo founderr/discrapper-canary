@@ -14,8 +14,8 @@ var a = n("414456"),
   u = n("545158"),
   d = n("765089"),
   c = n("787336"),
-  f = n("666897"),
-  m = n("844659"),
+  m = n("666897"),
+  f = n("844659"),
   h = n("49111"),
   p = n("909266"),
   g = n("671934");
@@ -23,10 +23,10 @@ var a = n("414456"),
 function E(e) {
   return {
     react(t, a, E) {
-      let v = E.noStyleAndInteraction ? void 0 : async n => {
+      let C = E.noStyleAndInteraction ? void 0 : async n => {
         let l = await (0, c.maybeRefreshAttachmentUrl)(t.attachmentUrl);
         e.shouldStopPropagation && (null == n || n.stopPropagation()), d.default.trackLinkClicked(l), e.shouldCloseDefaultModals && (0, r.closeAllModals)(), (0, u.default)(l)
-      }, C = E.noStyleAndInteraction ? h.NOOP : e => {
+      }, v = E.noStyleAndInteraction ? h.NOOP : e => {
         (0, o.openContextMenuLazy)(e, async () => {
           let {
             default: e
@@ -38,18 +38,18 @@ function E(e) {
           })
         })
       };
-      return (0, l.jsxs)(f.default, {
+      return (0, l.jsxs)(m.default, {
         role: "link",
         href: t.attachmentUrl,
-        onClick: v,
-        onContextMenu: C,
+        onClick: C,
+        onContextMenu: v,
         className: "attachmentLink",
         children: [(0, l.jsx)(i.AttachmentIcon, {
           className: s(g.icon, p.icon),
           color: r.tokens.colors.MENTION_FOREGROUND,
           width: 16,
           height: 16
-        }), (0, m.smartOutput)(t, a, E)]
+        }), (0, f.smartOutput)(t, a, E)]
       }, E.key)
     }
   }

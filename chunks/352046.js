@@ -1,10 +1,10 @@
 "use strict";
 i.r(t), i.d(t, {
   getTopAndNewlyAddedEmojis: function() {
-    return s
+    return u
   },
   default: function() {
-    return u
+    return s
   }
 });
 var n = i("65597"),
@@ -12,7 +12,7 @@ var n = i("65597"),
   a = i("958706");
 let o = [];
 
-function s(e) {
+function u(e) {
   let {
     emojiStoreInstance: t = r.default,
     guildId: i,
@@ -24,8 +24,8 @@ function s(e) {
   }
 }
 
-function u(e, t) {
-  return (0, n.useStateFromStoresObject)([r.default], () => s({
+function s(e, t) {
+  return (0, n.useStateFromStoresObject)([r.default], () => u({
     emojiStoreInstance: r.default,
     guildId: e,
     pickerIntention: t

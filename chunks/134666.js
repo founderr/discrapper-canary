@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   openGuildProductPurchaseConfirmationModal: function() {
-    return s
+    return u
   }
 });
 var r = n("37983");
 n("884691");
-var u = n("77078");
+var s = n("77078");
 
-function s(e) {
-  (0, u.openModalLazy)(async () => {
+function u(e) {
+  (0, s.openModalLazy)(async () => {
     let {
       default: t
     } = await n.el("392977").then(n.bind(n, "392977"));

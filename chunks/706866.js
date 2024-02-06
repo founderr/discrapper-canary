@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return P
+    return j
   },
   GuildSettingsDefaultChannelsNotice: function() {
     return y
@@ -39,7 +39,7 @@ var a = s("37983"),
   U = s("782340"),
   v = s("284246");
 
-function j(e) {
+function P(e) {
   let {
     guild: t
   } = e, l = (0, r.useStateFromStores)([c.default], () => c.default.getEnabled(t.id)), i = (0, r.useStateFromStores)([I.default], () => I.default.hasFetched(t.id)), d = (0, D.default)(t), S = (0, r.useStateFromStores)([O.default], () => O.default.editedDefaultChannelIds), N = d.filter(e => !S.has(e.id)), [g, m] = n.useState(!1);
@@ -145,7 +145,7 @@ function j(e) {
   })
 }
 
-function P(e) {
+function j(e) {
   let {
     saveOnClose: t = !1
   } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getGuild()), l = (0, r.useStateFromStores)([c.default], () => c.default.isLoading()), d = (0, r.useStateFromStores)([N.default], () => N.default.getChannels(null == s ? void 0 : s.id)), u = (0, r.useStateFromStores)([S.default], () => S.default.getCategories(null == s ? void 0 : s.id)), E = (0, r.useStateFromStores)([R.default], () => R.default.advancedMode), _ = n.useRef(null), [T, I] = n.useState(!1);
@@ -181,7 +181,7 @@ function P(e) {
         className: v.advancedModeToggle,
         guildId: s.id
       }), T ? null : (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(j, {
+        children: [(0, a.jsx)(P, {
           guild: s
         }), (0, a.jsx)(G.default, {
           className: i(v.channelBrowserOuter),

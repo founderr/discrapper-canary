@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var l = n("37983");
 n("884691");
-var a = n("77078"),
-  r = n("945330"),
+var r = n("77078"),
+  a = n("945330"),
   i = n("959097"),
   s = n("557872"),
   u = n("967241"),
@@ -21,28 +21,28 @@ function f(e) {
     onClose: n,
     transitionState: f
   } = e;
-  return (0, l.jsx)(a.ModalRoot, {
+  return (0, l.jsx)(r.ModalRoot, {
     className: c.modal,
     transitionState: f,
     "aria-label": d.default.Messages.THREADS,
-    size: a.ModalSize.DYNAMIC,
+    size: r.ModalSize.DYNAMIC,
     children: (0, l.jsxs)("div", {
       className: c.container,
       children: [(0, l.jsxs)("div", {
         className: c.header,
         children: [(0, l.jsx)(i.default, {
           className: c.threadIcon
-        }), (0, l.jsx)(a.Heading, {
+        }), (0, l.jsx)(r.Heading, {
           variant: "heading-md/semibold",
           className: c.title,
           children: d.default.Messages.ALL_ACTIVE_THREADS
         }), (0, l.jsx)("div", {
           className: c.spacer
-        }), (0, l.jsx)(a.Clickable, {
+        }), (0, l.jsx)(r.Clickable, {
           className: c.closeIcon,
           onClick: n,
           "aria-label": d.default.Messages.CLOSE,
-          children: (0, l.jsx)(r.default, {})
+          children: (0, l.jsx)(a.default, {})
         })]
       }), (0, l.jsx)(s.default, {
         guildId: t,

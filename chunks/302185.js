@@ -12,10 +12,10 @@ var i = n("884691"),
   s = n("129722"),
   r = n("89050");
 let a = new Worker(new URL(n.p + n.u("21401"), n.b)),
-  o = new AudioContext;
-async function u(e) {
+  u = new AudioContext;
+async function o(e) {
   let t = await e.arrayBuffer(),
-    n = await o.decodeAudioData(t);
+    n = await u.decodeAudioData(t);
   return n.getChannelData(0)
 }
 
@@ -24,7 +24,7 @@ function d(e) {
   return i.useEffect(() => {
     if (null == e) return;
     let t = (0, r.getAudioFileId)(e);
-    t !== l && (s(t), n(null), u(e).then(n))
+    t !== l && (s(t), n(null), o(e).then(n))
   }, [l, e]), t
 }
 let c = {
@@ -32,11 +32,11 @@ let c = {
 };
 
 function f(e, t, n) {
-  let [o, u] = i.useState(null), [d, f] = i.useState(null), [m, h] = i.useState(1), {
+  let [u, o] = i.useState(null), [d, f] = i.useState(null), [h, m] = i.useState(1), {
     setMaxVolume: g
   } = (0, s.useAudioTrimmerStore)(), E = i.useCallback((e, t) => {
-    var i, s, r, o, u;
-    f(null), (i = e, s = t.offsetWidth, r = n, o = c, u = h, new Promise(e => {
+    var i, s, r, u, o;
+    f(null), (i = e, s = t.offsetWidth, r = n, u = c, o = m, new Promise(e => {
       let t = (0, l.v4)(),
         n = i => {
           let {
@@ -46,12 +46,12 @@ function f(e, t, n) {
               normalizedVolumeMultipler: r
             }
           } = i;
-          t === s && (e(l), u(r)), null == a || a.removeEventListener("message", n)
+          t === s && (e(l), o(r)), null == a || a.removeEventListener("message", n)
         };
       null == a || a.addEventListener("message", n), null == a || a.postMessage({
         id: t,
         options: r,
-        config: o,
+        config: u,
         width: s,
         rawBufferData: i
       })
@@ -60,8 +60,8 @@ function f(e, t, n) {
   return i.useEffect(() => {
     if (null == e || null == t) return;
     let i = (0, r.getWaveformId)(e, n);
-    o !== i && (u(i), E(e, t))
-  }, [e, E, t, n, o]), i.useEffect(() => {
-    g(m)
-  }, [m, g]), d
+    u !== i && (o(i), E(e, t))
+  }, [e, E, t, n, u]), i.useEffect(() => {
+    g(h)
+  }, [h, g]), d
 }

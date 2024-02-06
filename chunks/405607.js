@@ -5,10 +5,10 @@ i.r(t), i.d(t, {
   }
 });
 var n = i("37983"),
-  l = i("884691"),
-  s = i("414456"),
-  a = i.n(s),
-  r = i("124299"),
+  s = i("884691"),
+  l = i("414456"),
+  r = i.n(l),
+  a = i("124299"),
   o = i("538282"),
   u = i("49111"),
   c = i("742773");
@@ -17,17 +17,17 @@ let d = e => {
     activeIndex: t,
     categoryListRef: i,
     getScrollOffsetForIndex: n
-  } = e, s = l.useRef(u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), a = l.useRef(t);
-  return l.useEffect(() => {
-    null != t && t !== a.current && (s.current !== u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(s.current), s.current = window.requestAnimationFrame(() => {
+  } = e, l = s.useRef(u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), r = s.useRef(t);
+  return s.useEffect(() => {
+    null != t && t !== r.current && (l.current !== u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(l.current), l.current = window.requestAnimationFrame(() => {
       var e;
       if (null == i.current) return;
-      let l = t > (null !== (e = a.current) && void 0 !== e ? e : -1),
-        r = null != n ? n(t, l) : 0;
+      let s = t > (null !== (e = r.current) && void 0 !== e ? e : -1),
+        a = null != n ? n(t, s) : 0;
       i.current.scrollRowIntoView(t, {
         animate: !0,
-        offset: r
-      }), s.current = u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID, a.current = t
+        offset: a
+      }), l.current = u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID, r.current = t
     }))
   }, [t, i, n]), {
     categoryListRef: i
@@ -37,7 +37,7 @@ var f = function(e) {
   let {
     categoryListRef: t,
     expressionsListRef: i,
-    categories: s,
+    categories: l,
     store: u,
     children: f,
     className: E,
@@ -55,7 +55,7 @@ var f = function(e) {
     categoryListRef: t,
     getScrollOffsetForIndex: p
   });
-  let N = l.useCallback(e => {
+  let N = s.useCallback(e => {
       let {
         searchQuery: t
       } = o.useExpressionPickerStore.getState();
@@ -65,11 +65,11 @@ var f = function(e) {
         null === (n = i.current) || void 0 === n || n.scrollToSectionTop(e)
       }
     }, [i, u]),
-    v = l.useCallback(e => S(s[e], e, () => N(e), T === e), [T, s, N, S]),
-    A = l.useMemo(() => "function" == typeof g ? e => g(s[e], e) : g, [s, g]);
+    v = s.useCallback(e => S(l[e], e, () => N(e), T === e), [T, l, N, S]),
+    A = s.useMemo(() => "function" == typeof g ? e => g(l[e], e) : g, [l, g]);
   return (0, n.jsxs)("div", {
-    className: a(c.wrapper, E),
-    children: [(0, n.jsx)(r.default, {
+    className: r(c.wrapper, E),
+    children: [(0, n.jsx)(a.default, {
       listPadding: m,
       onScroll: _,
       ref: t,

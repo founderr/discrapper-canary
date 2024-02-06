@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return b
   }
 });
 var i = n("37983");
@@ -34,18 +34,18 @@ var s = n("627445"),
   G = n("49111"),
   C = n("782340");
 
-function b(e) {
+function v(e) {
   let {
     guild: t,
     onSelect: s,
     hideSettings: o
-  } = e, r = t.id, b = _.default.getDefaultChannel(r), v = (0, l.useStateFromStores)([M.default], () => {
+  } = e, r = t.id, v = _.default.getDefaultChannel(r), b = (0, l.useStateFromStores)([M.default], () => {
     let e = M.default.getCurrentUser();
     return a(null != e, "GuildContextMenu: user cannot be undefined"), t.isOwner(e)
   }, [t]), x = (0, R.default)({
     guild: t,
     source: G.InstantInviteSources.GUILD_CONTEXT_MENU,
-    channel: b
+    channel: v
   }), j = (0, m.default)(r), y = (0, L.default)(t), F = (0, p.default)(t), D = (0, U.default)(t), P = (0, h.default)({
     guildId: t.id,
     userId: E.default.getId(),
@@ -86,7 +86,7 @@ function b(e) {
           })
         })
       }), P]
-    }), v ? null : (0, i.jsx)(u.MenuGroup, {
+    }), b ? null : (0, i.jsx)(u.MenuGroup, {
       children: (0, i.jsx)(u.MenuItem, {
         id: "leave-guild",
         label: C.default.Messages.LEAVE_HUB,
@@ -124,7 +124,7 @@ function b(e) {
     }), (0, i.jsxs)(u.MenuGroup, {
       children: [H, k]
     }), (0, i.jsxs)(u.MenuGroup, {
-      children: [X, !v && (0, i.jsx)(u.MenuItem, {
+      children: [X, !b && (0, i.jsx)(u.MenuItem, {
         id: "leave-guild",
         label: C.default.Messages.LEAVE_SERVER,
         action: z,
@@ -136,12 +136,12 @@ function b(e) {
   })
 }
 
-function v(e) {
+function b(e) {
   let {
     AnalyticsLocationProvider: t
   } = (0, r.default)(o.default.CONTEXT_MENU);
   return (0, i.jsx)(t, {
-    children: (0, i.jsx)(b, {
+    children: (0, i.jsx)(v, {
       ...e
     })
   })

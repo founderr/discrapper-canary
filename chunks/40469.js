@@ -7,8 +7,8 @@ r.r(t), r.d(t, {
 var o = r("37983");
 r("884691");
 var a = r("414456"),
-  l = r.n(a),
-  s = r("446674"),
+  s = r.n(a),
+  l = r("446674"),
   i = r("669491"),
   n = r("819855"),
   u = r("77078"),
@@ -87,7 +87,7 @@ function B(e) {
   return (0, o.jsxs)("div", {
     className: w.tooltipPremiumFooterContainer,
     children: [(0, o.jsxs)("div", {
-      className: l(w.tooltipPremiumFooterSegment, w.tooltipPremiumFooterTierSegment),
+      className: s(w.tooltipPremiumFooterSegment, w.tooltipPremiumFooterTierSegment),
       children: [(0, o.jsx)(T.default, {
         width: 18,
         height: 18,
@@ -98,7 +98,7 @@ function B(e) {
         children: _.getTierName(t.premiumTier)
       })]
     }), (0, o.jsx)("div", {
-      className: l(w.tooltipPremiumFooterSegment),
+      className: s(w.tooltipPremiumFooterSegment),
       children: (0, o.jsx)(u.Text, {
         variant: "text-xs/semibold",
         color: "always-white",
@@ -116,8 +116,8 @@ function A(e) {
     guildTraits: r
   } = e, {
     tooltipTitle: a,
-    tooltipSubtitle: l,
-    tooltipDescription: s
+    tooltipSubtitle: s,
+    tooltipDescription: l
   } = function(e, t) {
     let r = t === c.GuildVisibility.PUBLIC ? x.default.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN : x.default.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY;
     switch (e) {
@@ -158,14 +158,14 @@ function A(e) {
         color: "interactive-active",
         variant: "text-xs/bold",
         children: a
-      }), null != l ? (0, o.jsx)(u.Text, {
-        color: "text-muted",
-        variant: "text-xs/medium",
-        children: l
-      }) : null, null != s ? (0, o.jsx)(u.Text, {
+      }), null != s ? (0, o.jsx)(u.Text, {
         color: "text-muted",
         variant: "text-xs/medium",
         children: s
+      }) : null, null != l ? (0, o.jsx)(u.Text, {
+        color: "text-muted",
+        variant: "text-xs/medium",
+        children: l
       }) : null]
     }), r.premium ? (0, o.jsx)(B, {
       guildTraits: r
@@ -176,7 +176,7 @@ function A(e) {
 function O(e) {
   let t, r, {
       guild: a,
-      tooltipColor: l = u.Tooltip.Colors.BRAND,
+      tooltipColor: s = u.Tooltip.Colors.BRAND,
       tooltipPosition: i,
       className: _,
       flowerStarClassName: h,
@@ -187,15 +187,15 @@ function O(e) {
       disableBoostClick: m,
       "aria-label": D = !1
     } = e,
-    x = (0, s.useStateFromStores)([g.default, C.default], () => {
+    x = (0, l.useStateFromStores)([g.default, C.default], () => {
       let e = g.default.getCurrentUser();
       return C.default.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id)
     }),
-    B = (0, s.useStateFromStores)([E.default], () => E.default.theme),
+    B = (0, l.useStateFromStores)([E.default], () => E.default.theme),
     O = (0, c.getGuildTraits)(a),
-    V = (0, d.getBadgeCategory)(O);
-  if (V === d.BadgeCategory.NONE) return null;
-  let v = M[V],
+    v = (0, d.getBadgeCategory)(O);
+  if (v === d.BadgeCategory.NONE) return null;
+  let V = M[v],
     {
       IconComponent: S,
       backgroundDarkColor: G,
@@ -204,7 +204,7 @@ function O(e) {
       foregroundLightColor: b,
       premiumBackgroundColor: P,
       premiumForegroundColor: F
-    } = v;
+    } = V;
   if (null == S) return null;
   O.premium && (t = F, r = P);
   let k = (0, n.isThemeDark)(B) ? y : b,
@@ -220,11 +220,11 @@ function O(e) {
     }))
   };
   return (0, o.jsx)(u.Tooltip, {
-    color: l,
+    color: s,
     position: i,
     "aria-label": D,
     text: (0, o.jsx)(A, {
-      badgeType: V,
+      badgeType: v,
       guildTraits: O
     }),
     tooltipContentClassName: w.tooltipRemovePadding,

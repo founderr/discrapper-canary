@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return Y
+    return j
   }
 }), n("222007");
 var l = n("448105"),
@@ -26,8 +26,8 @@ var l = n("448105"),
   S = n("352326"),
   _ = n("718517"),
   T = n("117362"),
-  I = n("449008"),
-  N = n("964889"),
+  N = n("449008"),
+  I = n("964889"),
   v = n("773336"),
   R = n("50885"),
   b = n("602043"),
@@ -87,7 +87,7 @@ function K() {
       let u = d.default.getApplication(e.id);
       if (null == u) return null;
       let s = V(u, n);
-      if (t.add(e.id), !(0, N.isUserEntitledToLibraryApplication)(e) && !A.default.isInstalled(e.id, e.branchId)) return null;
+      if (t.add(e.id), !(0, I.isUserEntitledToLibraryApplication)(e) && !A.default.isInstalled(e.id, e.branchId)) return null;
       return {
         key: "".concat(e.id, "-").concat(e.branchId),
         application: u,
@@ -106,10 +106,10 @@ function K() {
           branchId: e.branchId
         }),
         isUpdatingFlags: g.default.isUpdatingFlags(e.id, e.branchId),
-        shouldShowInLibrary: (0, N.shouldShowGameInLibrary)(u, e, C.default),
+        shouldShowInLibrary: (0, I.shouldShowGameInLibrary)(u, e, C.default),
         defaultAction: (0, M.getDefaultLibraryApplicationAction)(e, A.default, S.default)
       }
-    })(l, n, t, e, !0)).filter(I.isNotNullish),
+    })(l, n, t, e, !0)).filter(N.isNotNullish),
     u = l.map(l => (function(e, t, n, l) {
       let r = null != e ? d.default.getApplication(e) : null;
       if (null == r || null == e || t.has(e)) return null;
@@ -135,11 +135,11 @@ function K() {
         libraryApplication: null,
         defaultAction: null
       }
-    })(l, n, t, e)).filter(I.isNotNullish),
+    })(l, n, t, e)).filter(N.isNotNullish),
     s = [...u, ...a].sort((e, t) => e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1);
   return G = null != m.default.lastFetched && g.default.fetched, !i.isEqual(s, O) && (O = s, v.isPlatformEmbedded && R.default.setSystemTrayApplications(F(O).map(e => e.application).slice(0, 5)), !0)
 }
-class j extends s.default.Store {
+class Y extends s.default.Store {
   initialize() {
     this.syncWith([d.default, m.default, f.default, E.default, A.default, S.default, g.default, y.default, C.default, h.default], K, 200), this.syncWith([L.default, p.default], () => !0)
   }
@@ -168,8 +168,8 @@ class j extends s.default.Store {
     return G
   }
 }
-j.displayName = "ApplicationViewStore";
-var Y = new j(c.default, {
+Y.displayName = "ApplicationViewStore";
+var j = new Y(c.default, {
   LIBRARY_APPLICATION_FILTER_UPDATE: function(e) {
     let {
       query: t

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return v
   }
 }), n("222007");
 var l = n("37983"),
@@ -13,78 +13,78 @@ var l = n("37983"),
   u = n("430568"),
   d = n("277855"),
   c = n("305122"),
-  f = n("462550"),
-  m = n("235004"),
+  m = n("462550"),
+  f = n("235004"),
   h = n("520497"),
   p = n("812809"),
   g = n("948613"),
   E = n("368121"),
-  v = n("653110"),
-  C = function(e) {
+  C = n("653110"),
+  v = function(e) {
     let {
       soundId: t,
       jumbo: n = !1
     } = e, {
       currentPreviewRef: s
-    } = a.useContext(f.default), C = (0, r.default)([m.default], () => m.default.getSoundById(t)), I = (null == C ? void 0 : C.emojiId) != null || (null == C ? void 0 : C.emojiName) != null, [x, _] = a.useState(!1), S = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), N = a.useCallback(() => {
+    } = a.useContext(m.default), v = (0, r.default)([f.default], () => f.default.getSoundById(t)), I = (null == v ? void 0 : v.emojiId) != null || (null == v ? void 0 : v.emojiName) != null, [S, _] = a.useState(!1), x = (0, d.useSoundmojiExperiment)("soundmoji_chat_mention"), N = a.useCallback(() => {
       var e;
-      null == C && (0, c.maybeFetchSoundboardSounds)();
+      null == v && (0, c.maybeFetchSoundboardSounds)();
       let n = new Audio((0, h.default)(t));
-      null != s.current && s.current.pause(), s.current = n, n.currentTime = 0, n.volume = (0, p.default)(null !== (e = null == C ? void 0 : C.volume) && void 0 !== e ? e : .5), _(!0), n.play(), n.addEventListener("ended", () => {
+      null != s.current && s.current.pause(), s.current = n, n.currentTime = 0, n.volume = (0, p.default)(null !== (e = null == v ? void 0 : v.volume) && void 0 !== e ? e : .5), _(!0), n.play(), n.addEventListener("ended", () => {
         _(!1)
       }, {
         once: !0
       })
-    }, [t, C, s, _]);
-    return S ? null == C ? (0, l.jsxs)(o.Clickable, {
+    }, [t, v, s, _]);
+    return x ? null == v ? (0, l.jsxs)(o.Clickable, {
       title: "Risky Click",
       tag: "span",
       onClick: N,
-      className: v.container,
+      className: C.container,
       children: [(0, l.jsx)(E.default, {
-        className: v.unknownSound
+        className: C.unknownSound
       }), (0, l.jsx)(o.Text, {
         tag: "span",
         variant: "text-md/normal",
         color: "none",
-        className: v.text,
+        className: C.text,
         children: "Unknown"
       })]
     }) : n ? (0, l.jsxs)(o.Clickable, {
       onClick: N,
-      className: v.jumboContainer,
+      className: C.jumboContainer,
       children: [(0, l.jsx)("div", {
-        className: i(v.jumboOverlay, {
-          [v.playing]: x
+        className: i(C.jumboOverlay, {
+          [C.playing]: S
         }),
         children: (0, l.jsx)(g.default, {
-          className: v.jumboPlayIcon
+          className: C.jumboPlayIcon
         })
       }), I && (0, l.jsx)(u.default, {
-        emojiId: null == C ? void 0 : C.emojiId,
-        emojiName: null == C ? void 0 : C.emojiName,
-        className: v.jumboEmoji
+        emojiId: null == v ? void 0 : v.emojiId,
+        emojiName: null == v ? void 0 : v.emojiName,
+        className: C.jumboEmoji
       }), (0, l.jsx)(o.Text, {
         tag: "span",
         variant: "text-lg/normal",
         color: "none",
-        className: v.text,
-        children: C.name
+        className: C.text,
+        children: v.name
       })]
     }) : (0, l.jsxs)(o.Clickable, {
       tag: "span",
       onClick: N,
-      className: v.container,
+      className: C.container,
       children: [I && (0, l.jsx)(u.default, {
-        emojiId: null == C ? void 0 : C.emojiId,
-        emojiName: null == C ? void 0 : C.emojiName,
-        className: v.emoji
+        emojiId: null == v ? void 0 : v.emojiId,
+        emojiName: null == v ? void 0 : v.emojiName,
+        className: C.emoji
       }), (0, l.jsx)(o.Text, {
         tag: "span",
         variant: "text-md/normal",
         color: "none",
-        className: v.text,
-        children: C.name
+        className: C.text,
+        children: v.name
       })]
     }) : null
   }

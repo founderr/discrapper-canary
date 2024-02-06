@@ -36,7 +36,7 @@ function m(e) {
     imageCTA: p,
     imageAriaLabel: U,
     setFilename: v
-  } = (0, S.default)(m), j = n.useMemo(() => {
+  } = (0, S.default)(m), P = n.useMemo(() => {
     var e;
     return null !== (e = null == t ? void 0 : t.map(e => ({
       value: e,
@@ -44,7 +44,7 @@ function m(e) {
     }))) && void 0 !== e ? e : []
   }, [t]);
 
-  function P(e, t) {
+  function j(e, t) {
     null != t && v(t.name), x(e)
   }
   let y = (0, _.useRoleSubscriptionSettingsDisabled)(),
@@ -78,7 +78,7 @@ function m(e) {
           titleId: B,
           disabled: y,
           children: (0, a.jsx)(i.SingleSelect, {
-            options: j,
+            options: P,
             className: A.formInput,
             isDisabled: y || null == t,
             placeholder: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_PRICE_PLACEHOLDER,
@@ -120,7 +120,7 @@ function m(e) {
           disabled: y,
           children: g.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_SYMBOL_DESCRIPTION
         }), (0, a.jsx)(u.default, {
-          onChange: P,
+          onChange: j,
           buttonCTA: p,
           "aria-label": U,
           disabled: y,
@@ -135,7 +135,7 @@ function m(e) {
         hideSize: !0,
         className: L.iconUploader,
         imageClassName: L.tierSymbolUploaderInner,
-        onChange: P,
+        onChange: j,
         "aria-label": U,
         disabled: y
       })]

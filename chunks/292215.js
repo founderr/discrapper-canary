@@ -4,26 +4,26 @@ n.r(t), n.d(t, {
     return f
   },
   ONE_TIME_PAYMENT_ADD_PAYMENT_STEP_CONFIG: function() {
-    return p
+    return E
   },
   REVIEW_STEP_CONFIG: function() {
-    return h
+    return I
   },
   ONE_TIME_PAYMENT_CONFIRM_STEP_CONFIG: function() {
-    return m
+    return S
   },
   SHARED_STEP_CONFIGS: function() {
-    return I
+    return h
   }
 });
 var s = n("37983");
 n("884691");
 var r = n("357957"),
-  i = n("85336"),
-  l = n("262683"),
+  l = n("85336"),
+  i = n("262683"),
   a = n("946359"),
-  u = n("724269"),
-  o = n("7127"),
+  o = n("724269"),
+  u = n("7127"),
   d = n("99836"),
   c = n("217796");
 let f = {
@@ -32,16 +32,16 @@ let f = {
       ...e
     })
   },
-  p = {
-    key: i.Step.ADD_PAYMENT_STEPS,
+  E = {
+    key: l.Step.ADD_PAYMENT_STEPS,
     renderStep: e => (0, s.jsx)(s.Fragment, {
-      children: (0, s.jsx)(l.PaymentModalAddPaymentStep, {
+      children: (0, s.jsx)(i.PaymentModalAddPaymentStep, {
         ...e,
-        breadcrumbSteps: [i.Step.ADD_PAYMENT_STEPS, i.Step.REVIEW, i.Step.CONFIRM],
+        breadcrumbSteps: [l.Step.ADD_PAYMENT_STEPS, l.Step.REVIEW, l.Step.CONFIRM],
         onReturn: () => {
           let t = r.default.paymentSources;
-          0 === Object.keys(t).length ? e.handleClose() : e.handleStepChange(i.Step.REVIEW, {
-            trackedFromStep: i.Step.ADD_PAYMENT_STEPS
+          0 === Object.keys(t).length ? e.handleClose() : e.handleStepChange(l.Step.REVIEW, {
+            trackedFromStep: l.Step.ADD_PAYMENT_STEPS
           })
         }
       })
@@ -50,24 +50,24 @@ let f = {
       renderHeader: !0
     }
   },
-  E = {
-    key: i.Step.AWAITING_PURCHASE_TOKEN_AUTH,
-    renderStep: () => (0, s.jsx)(u.default, {})
+  p = {
+    key: l.Step.AWAITING_PURCHASE_TOKEN_AUTH,
+    renderStep: () => (0, s.jsx)(o.default, {})
   },
-  S = {
-    key: i.Step.AWAITING_AUTHENTICATION,
+  _ = {
+    key: l.Step.AWAITING_AUTHENTICATION,
     renderStep: () => (0, s.jsx)(a.default, {})
   },
-  h = {
-    key: i.Step.REVIEW,
+  I = {
+    key: l.Step.REVIEW,
     renderStep: e => (0, s.jsx)(d.PaymentModalReviewStep, {
       ...e
     })
   },
-  m = {
-    key: i.Step.CONFIRM,
-    renderStep: e => (0, s.jsx)(o.PaymentModalConfirmStep, {
+  S = {
+    key: l.Step.CONFIRM,
+    renderStep: e => (0, s.jsx)(u.PaymentModalConfirmStep, {
       ...e
     })
   },
-  I = [E, S]
+  h = [p, _]

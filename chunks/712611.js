@@ -206,7 +206,7 @@ function M(e) {
   })
 }
 
-function x() {
+function v() {
   let e = h.default.getCurrentSearchId();
   if (null == e || null == S[e]) return;
   let {
@@ -224,7 +224,7 @@ function x() {
     autocompletes: C(e, n)
   })
 }
-class v extends a.default.Store {
+class x extends a.default.Store {
   initialize() {
     this.waitFor(f.default, E.default)
   }
@@ -235,8 +235,8 @@ class v extends a.default.Store {
     })
   }
 }
-v.displayName = "SearchAutocompleteStore";
-let R = new v(l.default, {
+x.displayName = "SearchAutocompleteStore";
+let R = new x(l.default, {
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function(e) {
     var t;
     let n, {
@@ -276,9 +276,9 @@ let R = new v(l.default, {
   },
   CHANNEL_CREATE: A,
   CHANNEL_DELETE: A,
-  STREAMER_MODE_UPDATE: x,
-  SEARCH_MODAL_OPEN: x,
-  SEARCH_SCREEN_OPEN: x,
+  STREAMER_MODE_UPDATE: v,
+  SEARCH_MODAL_OPEN: v,
+  SEARCH_SCREEN_OPEN: v,
   SEARCH_CLEAR_HISTORY: function(e) {
     let {
       searchId: t

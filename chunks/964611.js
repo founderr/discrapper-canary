@@ -5,9 +5,9 @@ i.r(t), i.d(t, {
   }
 }), i("222007");
 var n = i("37983"),
-  l = i("884691"),
-  s = i("414456"),
-  r = i.n(s),
+  s = i("884691"),
+  l = i("414456"),
+  r = i.n(l),
   a = i("917351"),
   o = i.n(a),
   u = i("974667"),
@@ -49,7 +49,7 @@ function K(e) {
   let {
     activeIndex: t,
     categoryIndex: i,
-    analyticsContext: s,
+    analyticsContext: l,
     categories: a,
     category: o,
     handleCategorySelect: c,
@@ -66,7 +66,7 @@ function K(e) {
     }),
     onClick: () => {
       null != _ && h.default.track(R.AnalyticEvents.EXPRESSION_PICKER_CATEGORY_SELECTED, {
-        location: null == s ? void 0 : s.location,
+        location: null == l ? void 0 : l.location,
         tab: j.ExpressionPickerViewType.EMOJI,
         guild_id: _.id
       }), c(i)
@@ -82,7 +82,7 @@ function K(e) {
       width: P
     }) : null]
   }), C = a[i + 1], A = null != C && o.type === y.EmojiCategoryTypes.GUILD && C.type !== y.EmojiCategoryTypes.GUILD;
-  return null != _ ? (0, n.jsxs)(l.Fragment, {
+  return null != _ ? (0, n.jsxs)(s.Fragment, {
     children: [(0, n.jsx)(g.default, {
       guild: _,
       includeActivity: !1,
@@ -98,13 +98,13 @@ var B = e => {
   let {
     className: t,
     emojiListRef: i,
-    sectionDescriptors: s,
+    sectionDescriptors: l,
     intention: a,
     channel: u
   } = e, d = I.EmojiPickerStore.useStore(e => e.activeCategoryIndex), g = (0, A.useCategorySelectHandler)({
-    sectionDescriptors: s,
+    sectionDescriptors: l,
     emojiListRef: i
-  }), h = (0, E.useAnalyticsContext)(), C = (0, T.useEmojiCategories)(a, u), N = l.useRef(null), v = (0, c.useStateFromStores)([_.default], () => _.default.isFocused()), R = (0, c.useStateFromStores)([m.default], () => m.default.useReducedMotion, []), j = l.useMemo(() => o.memoize((e, t) => {
+  }), h = (0, E.useAnalyticsContext)(), C = (0, T.useEmojiCategories)(a, u), N = s.useRef(null), v = (0, c.useStateFromStores)([_.default], () => _.default.isFocused()), R = (0, c.useStateFromStores)([m.default], () => m.default.useReducedMotion, []), j = s.useMemo(() => o.memoize((e, t) => {
     let i = C[t];
     if (null != i) return (0, n.jsx)(K, {
       activeIndex: d,
@@ -116,7 +116,7 @@ var B = e => {
       isWindowFocused: v,
       useReducedMotion: R
     }, t)
-  }), [d, h, C, g, v, R]), x = l.useMemo(() => [8, 8, 0, 8], []), b = l.useCallback((e, t) => {
+  }), [d, h, C, g, v, R]), x = s.useMemo(() => [8, 8, 0, 8], []), b = s.useCallback((e, t) => {
     let i = C[t];
     if (i.type === y.EmojiCategoryTypes.RECENT) return k;
     if (i.type === y.EmojiCategoryTypes.GUILD) {
@@ -130,38 +130,38 @@ var B = e => {
     firstUnicodeCategoryIndex: J,
     firstUnicodeCategoryOffsetTop: z,
     rowCountBySection: W
-  } = l.useMemo(() => {
+  } = s.useMemo(() => {
     let e = 0,
       t = 0,
       i = 0,
       n = 0;
-    C.forEach(l => {
-      l.type === y.EmojiCategoryTypes.GUILD ? (t += 1, i += 1) : l.type === y.EmojiCategoryTypes.UNICODE ? n += 1 : (e += 1, t += 1)
+    C.forEach(s => {
+      s.type === y.EmojiCategoryTypes.GUILD ? (t += 1, i += 1) : s.type === y.EmojiCategoryTypes.UNICODE ? n += 1 : (e += 1, t += 1)
     });
-    let l = [e, i, n],
-      s = k + t * V + F;
+    let s = [e, i, n],
+      l = k + t * V + F;
     return {
       nonUnicodeCategoryCount: t,
       firstUnicodeCategoryIndex: t,
-      firstUnicodeCategoryOffsetTop: s,
-      rowCountBySection: l
+      firstUnicodeCategoryOffsetTop: l,
+      rowCountBySection: s
     }
-  }, [C]), [Z, Y] = l.useState(!0);
-  l.useLayoutEffect(() => {
+  }, [C]), [Z, Y] = s.useState(!0);
+  s.useLayoutEffect(() => {
     Y(B >= 7)
   }, [B]);
-  let Q = l.useCallback(e => {
+  let Q = s.useCallback(e => {
       var t;
       let i = null === (t = N.current) || void 0 === t ? void 0 : t.getListDimensions();
       if (null == i) return;
       let n = e + i.height;
       n - w >= z ? Y(!1) : Y(!0)
     }, [z]),
-    X = l.useCallback(e => {
+    X = s.useCallback(e => {
       var t;
       e(J), null === (t = N.current) || void 0 === t || t.scrollTo(z)
     }, [z, J]),
-    q = l.useCallback((e, t) => {
+    q = s.useCallback((e, t) => {
       let i = C[e];
       if (null == i) return 0;
       let n = Z ? U : 0;
@@ -172,8 +172,8 @@ var B = e => {
       }
       return t ? L + n : 2 * L
     }, [C, Z]),
-    $ = l.useMemo(() => function(e, t) {
-      return (0, n.jsx)(l.Fragment, {
+    $ = s.useMemo(() => function(e, t) {
+      return (0, n.jsx)(s.Fragment, {
         children: t
       }, e)
     }, []),

@@ -1,64 +1,64 @@
 "use strict";
 n.r(t), n.d(t, {
   InstantInviteSettingsPage: function() {
-    return g
+    return h
   }
 });
 var l = n("37983");
 n("884691");
-var i = n("414456"),
-  s = n.n(i),
-  a = n("77078"),
+var s = n("414456"),
+  a = n.n(s),
+  i = n("77078"),
   r = n("841098"),
-  o = n("825691"),
-  u = n("339485"),
+  u = n("825691"),
+  o = n("339485"),
   d = n("782340"),
   c = n("435808"),
   f = n("926622");
-let g = e => {
+let h = e => {
   let {
     handleDone: t,
     headerId: n,
-    modalState: i,
-    shouldHideTemporaryInviteToggle: g,
-    onGenerateNewLink: h,
+    modalState: s,
+    shouldHideTemporaryInviteToggle: h,
+    onGenerateNewLink: g,
     onToggleTemporary: I,
     onSelectMaxAge: E,
-    onSelectMaxUses: m
-  } = e, v = (0, r.default)(), {
+    onSelectMaxUses: v
+  } = e, m = (0, r.default)(), {
     maxAge: p,
-    maxUses: T,
-    temporary: _
-  } = i;
+    maxUses: _,
+    temporary: T
+  } = s;
   return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)(a.ModalHeader, {
-      children: [(0, l.jsx)(a.ModalCloseButton, {
+    children: [(0, l.jsxs)(i.ModalHeader, {
+      children: [(0, l.jsx)(i.ModalCloseButton, {
         className: c.closeButton,
         onClick: t
       }), (0, l.jsx)("div", {
         className: c.headerContainer,
-        children: (0, l.jsx)(a.FormTitle, {
+        children: (0, l.jsx)(i.FormTitle, {
           id: n,
           tag: "h2",
-          className: s(f.marginReset, c.headerCloseButtonSpacing, c.headerText),
+          className: a(f.marginReset, c.headerCloseButtonSpacing, c.headerText),
           children: d.default.Messages.INVITE_SETTINGS_TITLE
         })
       })]
-    }), (0, l.jsx)(o.default, {
-      shouldHideTemporaryInviteToggle: g,
+    }), (0, l.jsx)(u.default, {
+      shouldHideTemporaryInviteToggle: h,
       maxAge: p,
-      maxUses: T,
-      temporary: _,
+      maxUses: _,
+      temporary: T,
       onToggleTemporary: I,
       onSelectMaxAge: E,
-      onSelectMaxUses: m,
-      onGenerateNewLink: h
-    }), (0, l.jsx)(a.ModalFooter, {
+      onSelectMaxUses: v,
+      onGenerateNewLink: g
+    }), (0, l.jsx)(i.ModalFooter, {
       className: c.settingsFooter,
-      children: (0, l.jsx)(u.default, {
-        theme: v,
+      children: (0, l.jsx)(o.default, {
+        theme: m,
         onConfirm: () => {
-          h(), t()
+          g(), t()
         },
         onDismiss: t
       })

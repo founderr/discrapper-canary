@@ -36,9 +36,9 @@ var n = s("446674"),
   p = s("724210"),
   U = s("810367"),
   v = s("782340"),
-  j = s("621452");
+  P = s("621452");
 
-function P(e) {
+function j(e) {
   let {
     application: t,
     guild: s
@@ -181,9 +181,9 @@ function B(e) {
       (0, S.assertNever)(_)
   }
   return (0, a.jsxs)("div", {
-    className: j.container,
+    className: P.container,
     children: [(0, a.jsxs)("div", {
-      className: j.mainContent,
+      className: P.mainContent,
       children: [(0, a.jsx)(l.FormTitle, {
         tag: "h1",
         children: v.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
@@ -195,9 +195,9 @@ function B(e) {
       }), d && (0, a.jsx)(y, {
         application: r
       }), (0, a.jsxs)("div", {
-        className: j.tabBarContainer,
+        className: P.tabBarContainer,
         children: [(0, a.jsxs)(l.TabBar, {
-          className: j.tabBar,
+          className: P.tabBar,
           "aria-label": v.default.Messages.OPTIONS,
           selectedItem: _,
           type: "top",
@@ -219,12 +219,12 @@ function B(e) {
             disabled: !d,
             children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_EMOJI
           }), R ? (0, a.jsx)(l.TabBar.Item, {
-            className: j.tabBarItem,
+            className: P.tabBarItem,
             id: M.TabBarSection.PAYMENT,
             children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PAYMENT
           }) : null]
         }), d && (0, a.jsx)("div", {
-          className: j.previewButton,
+          className: P.previewButton,
           children: (0, a.jsx)(l.Tooltip, {
             text: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW_DISABLED,
             children: e => {
@@ -241,14 +241,14 @@ function B(e) {
                 size: l.Button.Sizes.SMALL,
                 grow: !C,
                 look: l.Button.Looks.OUTLINED,
-                className: j.previewButton,
+                className: P.previewButton,
                 children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW
               })
             }
           })
         })]
       }), t]
-    }), (0, a.jsx)(P, {
+    }), (0, a.jsx)(j, {
       application: r,
       guild: s
     })]

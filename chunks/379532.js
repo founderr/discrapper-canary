@@ -8,14 +8,14 @@ var l = s("37983");
 s("884691");
 var n = s("77078"),
   a = s("292687"),
-  o = s("974889"),
-  r = s("599110"),
+  r = s("974889"),
+  o = s("599110"),
   i = s("49111");
 
 function c(e, t) {
   let c = null != t ? t : "".concat(i.AnalyticsSections.PREMIUM_GUILD_UPSELL_MODAL);
   null != e.targetBoostedGuildTier && (c += " - Tier ".concat(e.targetBoostedGuildTier));
-  r.default.track(i.AnalyticEvents.OPEN_MODAL, {
+  o.default.track(i.AnalyticEvents.OPEN_MODAL, {
     type: c,
     location: e.analyticsSourceLocation
   });
@@ -23,7 +23,7 @@ function c(e, t) {
     openInPopoutEnabled: u,
     ...d
   } = e, f = a.default.getWindowOpen(i.PopoutWindowKeys.CHANNEL_CALL_POPOUT) && null != u && u;
-  f && (0, o.default)(i.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+  f && (0, r.default)(i.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
   let _ = f ? n.POPOUT_MODAL_CONTEXT : n.DEFAULT_MODAL_CONTEXT;
   (0, n.openModalLazy)(async () => {
     let {
@@ -35,7 +35,7 @@ function c(e, t) {
     })
   }, {
     onCloseCallback: () => {
-      r.default.track(i.AnalyticEvents.MODAL_DISMISSED, {
+      o.default.track(i.AnalyticEvents.MODAL_DISMISSED, {
         type: c,
         location: e.analyticsSourceLocation
       })

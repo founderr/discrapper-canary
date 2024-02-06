@@ -1,240 +1,240 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   RichTagTypes: function() {
-    return i
+    return n
   },
   SearchBarIcon: function() {
-    return S
+    return _
   },
   default: function() {
-    return T
+    return h
   }
-}), n("424973"), n("222007");
-var i, l, r = n("37983"),
-  o = n("884691"),
-  a = n("414456"),
-  s = n.n(a),
-  u = n("77078"),
-  c = n("476263"),
-  d = n("945330"),
-  f = n("229915"),
-  E = n("439932"),
-  p = n("49111"),
-  h = n("782340"),
-  _ = n("515315");
-let C = Object.freeze({
-  SMALL: _.small,
-  MEDIUM: _.medium,
-  LARGE: _.large
+}), i("424973"), i("222007");
+var n, s, l = i("37983"),
+  r = i("884691"),
+  a = i("414456"),
+  o = i.n(a),
+  u = i("77078"),
+  c = i("476263"),
+  d = i("945330"),
+  f = i("229915"),
+  E = i("439932"),
+  m = i("49111"),
+  I = i("782340"),
+  p = i("515315");
+let g = Object.freeze({
+  SMALL: p.small,
+  MEDIUM: p.medium,
+  LARGE: p.large
 });
-(l = i || (i = {})).MEMBER = "MEMBER", l.ROLE = "ROLE", l.CHANNEL = "CHANNEL", l.GUILD = "GUILD", l.USER = "USER";
-let S = e => {
+(s = n || (n = {})).MEMBER = "MEMBER", s.ROLE = "ROLE", s.CHANNEL = "CHANNEL", s.GUILD = "GUILD", s.USER = "USER";
+let _ = e => {
   let {
     hasContent: t,
-    onClear: n,
-    className: i,
-    themeOverride: l,
-    size: o = C.SMALL
+    onClear: i,
+    className: n,
+    themeOverride: s,
+    size: r = g.SMALL
   } = e;
-  return (0, r.jsx)(u.Clickable, {
-    className: s(i, _.iconLayout, o, (0, E.getThemeClass)(l), {
-      [_.clear]: t
+  return (0, l.jsx)(u.Clickable, {
+    className: o(n, p.iconLayout, r, (0, E.getThemeClass)(s), {
+      [p.clear]: t
     }),
     onClick: e => {
-      e.stopPropagation(), null != n && n(e)
+      e.stopPropagation(), null != i && i(e)
     },
     onMouseDown: e => {
       e.preventDefault(), e.stopPropagation()
     },
     tabIndex: t ? 0 : -1,
     "aria-hidden": !t,
-    "aria-label": h.default.Messages.SEARCH_CLEAR,
+    "aria-label": I.default.Messages.SEARCH_CLEAR,
     focusProps: {
       offset: 4
     },
-    children: (0, r.jsxs)("div", {
-      className: _.iconContainer,
-      children: [(0, r.jsx)(f.default, {
-        className: s({
-          [_.icon]: !0,
-          [_.visible]: !t
+    children: (0, l.jsxs)("div", {
+      className: p.iconContainer,
+      children: [(0, l.jsx)(f.default, {
+        className: o({
+          [p.icon]: !0,
+          [p.visible]: !t
         })
-      }), (0, r.jsx)(d.default, {
-        className: s({
-          [_.icon]: !0,
-          [_.visible]: t
+      }), (0, l.jsx)(d.default, {
+        className: o({
+          [p.icon]: !0,
+          [p.visible]: t
         })
       })]
     })
   })
 };
-class I extends o.Component {
+class S extends r.Component {
   componentDidUpdate(e) {
     let {
       focusAfterReady: t,
-      isReady: n
+      isReady: i
     } = this.props;
-    t && !e.isReady && n && this.focus()
+    t && !e.isReady && i && this.focus()
   }
   handleKeyDownGrid(e) {
     let {
       selectedRow: t,
-      selectedColumn: n,
-      sections: i,
-      query: l,
-      tags: r,
-      onSelectionChange: o,
+      selectedColumn: i,
+      sections: n,
+      query: s,
+      tags: l,
+      onSelectionChange: r,
       onSelect: a,
-      onRemoveTag: s,
+      onRemoveTag: o,
       preventEscapePropagation: u
     } = this.props;
-    if (0 !== i.length) {
+    if (0 !== n.length) {
       switch (e.keyCode) {
-        case p.KeyboardKeys.BACKSPACE:
-          (null == l || 0 === l.length) && null != r && r.length > 0 && (e.preventDefault(), e.stopPropagation(), null == s || s(r.length - 1));
+        case m.KeyboardKeys.BACKSPACE:
+          (null == s || 0 === s.length) && null != l && l.length > 0 && (e.preventDefault(), e.stopPropagation(), null == o || o(l.length - 1));
           break;
-        case p.KeyboardKeys.ARROW_DOWN:
-          e.preventDefault(), e.stopPropagation(), -1 === t ? (t = 0, n = 0) : ((t += 1) >= i.length && (t = i.length - 1), n >= i[t] && (n = i[t] - 1));
+        case m.KeyboardKeys.ARROW_DOWN:
+          e.preventDefault(), e.stopPropagation(), -1 === t ? (t = 0, i = 0) : ((t += 1) >= n.length && (t = n.length - 1), i >= n[t] && (i = n[t] - 1));
           break;
-        case p.KeyboardKeys.ARROW_UP:
-          e.preventDefault(), e.stopPropagation(), (t -= 1) < 0 ? (t = 0, n = 0) : n >= i[t] && (n = i[t] - 1);
+        case m.KeyboardKeys.ARROW_UP:
+          e.preventDefault(), e.stopPropagation(), (t -= 1) < 0 ? (t = 0, i = 0) : i >= n[t] && (i = n[t] - 1);
           break;
-        case p.KeyboardKeys.ARROW_LEFT:
-          e.preventDefault(), e.stopPropagation(), -1 === t && (t = 0), (n -= 1) < 0 && ((t -= 1) >= 0 ? n = i[t] - 1 : t < 0 && (t = 0, n = 0));
+        case m.KeyboardKeys.ARROW_LEFT:
+          e.preventDefault(), e.stopPropagation(), -1 === t && (t = 0), (i -= 1) < 0 && ((t -= 1) >= 0 ? i = n[t] - 1 : t < 0 && (t = 0, i = 0));
           break;
-        case p.KeyboardKeys.ARROW_RIGHT:
-          e.preventDefault(), e.stopPropagation(), -1 === t && (t = 0), (n += 1) >= i[t] && (n = 0, (t += 1) >= i.length && (t = i.length - 1, n = i[t] - 1));
+        case m.KeyboardKeys.ARROW_RIGHT:
+          e.preventDefault(), e.stopPropagation(), -1 === t && (t = 0), (i += 1) >= n[t] && (i = 0, (t += 1) >= n.length && (t = n.length - 1, i = n[t] - 1));
           break;
-        case p.KeyboardKeys.ENTER:
-          if (e.preventDefault(), e.stopPropagation(), -1 === t && (t = 0), -1 === n && (n = 0), t >= i.length || n >= i[t]) return;
-          null != a && a(t, n, e);
+        case m.KeyboardKeys.ENTER:
+          if (e.preventDefault(), e.stopPropagation(), -1 === t && (t = 0), -1 === i && (i = 0), t >= n.length || i >= n[t]) return;
+          null != a && a(t, i, e);
           return;
-        case p.KeyboardKeys.ESCAPE:
+        case m.KeyboardKeys.ESCAPE:
           e.preventDefault(), u && e.stopPropagation(), null != a && a(null, null, e);
           return;
         default:
           return
       }
-      null != o && o(t, n)
+      null != r && r(t, i)
     }
   }
   handleKeyDownList(e) {
     let {
       sections: t,
-      selectedSection: n,
-      selectedRow: i,
-      onSelect: l,
-      onSelectionChange: r,
-      query: o,
+      selectedSection: i,
+      selectedRow: n,
+      onSelect: s,
+      onSelectionChange: l,
+      query: r,
       tags: a,
-      preventEscapePropagation: s
+      preventEscapePropagation: o
     } = this.props, {
       current: u
     } = this.ref;
     if (null != u) switch (e.keyCode) {
-      case p.KeyboardKeys.BACKSPACE:
-        if ((null == o || 0 === o.length) && null != a && a.length > 0) {
+      case m.KeyboardKeys.BACKSPACE:
+        if ((null == r || 0 === r.length) && null != a && a.length > 0) {
           var c, d;
           e.preventDefault(), e.stopPropagation(), null === (c = (d = this.props).onRemoveTag) || void 0 === c || c.call(d, a.length - 1)
         }
         break;
-      case p.KeyboardKeys.ARROW_DOWN:
-        e.preventDefault(), e.stopPropagation(), t.length > n && ++i >= t[n] && (++n >= t.length && (n = 0), i = 0), null == r || r(n, i);
+      case m.KeyboardKeys.ARROW_DOWN:
+        e.preventDefault(), e.stopPropagation(), t.length > i && ++n >= t[i] && (++i >= t.length && (i = 0), n = 0), null == l || l(i, n);
         break;
-      case p.KeyboardKeys.ARROW_UP:
-        e.preventDefault(), e.stopPropagation(), --i < 0 && (--n < 0 && (n = t.length - 1), i = t[n] - 1), null == r || r(n, i);
+      case m.KeyboardKeys.ARROW_UP:
+        e.preventDefault(), e.stopPropagation(), --n < 0 && (--i < 0 && (i = t.length - 1), n = t[i] - 1), null == l || l(i, n);
         break;
-      case p.KeyboardKeys.ENTER:
-        e.preventDefault(), e.stopPropagation(), t.length > n && t[n] > i && (null == l || l(n, i, e));
+      case m.KeyboardKeys.ENTER:
+        e.preventDefault(), e.stopPropagation(), t.length > i && t[i] > n && (null == s || s(i, n, e));
         break;
-      case p.KeyboardKeys.ESCAPE:
-        e.preventDefault(), s && e.stopPropagation(), null == l || l(null, null, e), u.blur()
+      case m.KeyboardKeys.ESCAPE:
+        e.preventDefault(), o && e.stopPropagation(), null == s || s(null, null, e), u.blur()
     }
   }
   render() {
     let {
       autoFocus: e,
       query: t,
-      placeholder: n = h.default.Messages.DM_SEARCH_PLACEHOLDER,
-      themeOverride: i,
-      disabled: l,
-      onClear: o,
+      placeholder: i = I.default.Messages.DM_SEARCH_PLACEHOLDER,
+      themeOverride: n,
+      disabled: s,
+      onClear: r,
       size: a,
       maxHeight: f,
-      tags: p,
-      onActivate: C,
-      className: I,
-      inputProps: T,
-      focusAfterReady: g
-    } = this.props, N = null != t && t.length > 0, v = !1, A = [];
-    return null != p && p.length > 0 && ("string" == typeof p[0] ? p.forEach((e, t) => A.push((0, r.jsxs)(u.Anchor, {
+      tags: m,
+      onActivate: g,
+      className: S,
+      inputProps: h,
+      focusAfterReady: C
+    } = this.props, T = null != t && t.length > 0, N = !1, v = [];
+    return null != m && m.length > 0 && ("string" == typeof m[0] ? m.forEach((e, t) => v.push((0, l.jsxs)(u.Anchor, {
       focusProps: {
         offset: 4
       },
-      className: _.tag,
+      className: p.tag,
       onClick: this.handleRemoveTag.bind(this, t),
-      children: [e, (0, r.jsx)(d.default, {
-        className: _.close,
-        "aria-label": h.default.Messages.REMOVE
+      children: [e, (0, l.jsx)(d.default, {
+        className: p.close,
+        "aria-label": I.default.Messages.REMOVE
       })]
-    }, t))) : (v = !0, p.forEach((e, t) => A.push((0, r.jsxs)(u.Anchor, {
-      className: s(_.tag, _.richTag),
+    }, t))) : (N = !0, m.forEach((e, t) => v.push((0, l.jsxs)(u.Anchor, {
+      className: o(p.tag, p.richTag),
       onClick: this.handleRemoveTag.bind(this, t),
-      children: [("MEMBER" === e.type || "USER" === e.type) && null != e.avatar && (0, r.jsx)(u.Avatar, {
+      children: [("MEMBER" === e.type || "USER" === e.type) && null != e.avatar && (0, l.jsx)(u.Avatar, {
         src: e.avatar,
         "aria-hidden": !0,
         size: u.AvatarSizes.SIZE_16
-      }), "ROLE" === e.type && null != e.color && (0, r.jsx)("span", {
-        className: _.tagRoleColor,
+      }), "ROLE" === e.type && null != e.color && (0, l.jsx)("span", {
+        className: p.tagRoleColor,
         style: {
           backgroundColor: e.color
         }
-      }), "GUILD" === e.type && null != e.guild && (0, r.jsx)(c.default, {
+      }), "GUILD" === e.type && null != e.guild && (0, l.jsx)(c.default, {
         guild: e.guild,
         active: !0,
         size: c.default.Sizes.SMOL
-      }), (0, r.jsx)("span", {
-        className: _.tagLabel,
+      }), (0, l.jsx)("span", {
+        className: p.tagLabel,
         children: e.label
-      }), (0, r.jsx)(d.default, {
-        className: _.close,
-        "aria-label": h.default.Messages.REMOVE
+      }), (0, l.jsx)(d.default, {
+        className: p.close,
+        "aria-label": I.default.Messages.REMOVE
       })]
-    }, t))))), (0, r.jsx)(u.FocusRing, {
+    }, t))))), (0, l.jsx)(u.FocusRing, {
       focusTarget: this.ref,
       ringTarget: this.containerRef,
-      children: (0, r.jsx)("div", {
+      children: (0, l.jsx)("div", {
         ref: this.containerRef,
-        className: s(I, _.container, a, (0, E.getThemeClass)(i), {
-          [_.disabled]: l
+        className: o(S, p.container, a, (0, E.getThemeClass)(n), {
+          [p.disabled]: s
         }),
-        children: (0, r.jsxs)(u.ScrollerThin, {
-          className: _.inner,
+        children: (0, l.jsxs)(u.ScrollerThin, {
+          className: p.inner,
           style: {
             maxHeight: f
           },
-          children: [A, (0, r.jsx)("input", {
-            className: s(_.input, {
-              [_.richTagInput]: v
+          children: [v, (0, l.jsx)("input", {
+            className: o(p.input, {
+              [p.richTagInput]: N
             }),
             type: "text",
             ref: this.ref,
             spellCheck: "false",
-            placeholder: n,
+            placeholder: i,
             value: t,
             onChange: this.handleChange,
             onKeyDown: this.handleKeyDown,
             onFocus: this.handleFocus,
-            disabled: l,
-            "aria-disabled": l,
-            autoFocus: !g && e,
-            onMouseDown: C,
+            disabled: s,
+            "aria-disabled": s,
+            autoFocus: !C && e,
+            onMouseDown: g,
             ...this.defaultInputProps,
-            ...T
-          }), null != o ? (0, r.jsx)(S, {
+            ...h
+          }), null != r ? (0, l.jsx)(_, {
             size: a,
-            themeOverride: i,
-            hasContent: N,
+            themeOverride: n,
+            hasContent: T,
             onClear: this.handleClear
           }) : null]
         })
@@ -246,26 +246,26 @@ class I extends o.Component {
       role: "combobox",
       "aria-haspopup": "listbox",
       "aria-autocomplete": "list"
-    }, this.ref = o.createRef(), this.containerRef = o.createRef(), this.handleKeyDown = e => {
+    }, this.ref = r.createRef(), this.containerRef = r.createRef(), this.handleKeyDown = e => {
       let {
         onActivate: t,
-        onKeyDown: n,
-        onQueryChange: i,
-        useKeyboardNavigation: l
+        onKeyDown: i,
+        onQueryChange: n,
+        useKeyboardNavigation: s
       } = this.props;
-      null != n && n(e);
+      null != i && i(e);
       let {
-        current: r
+        current: l
       } = this.ref;
-      if (null == r || null != t) {
-        e.keyCode !== p.KeyboardKeys.TAB && null != t && t(e);
+      if (null == l || null != t) {
+        e.keyCode !== m.KeyboardKeys.TAB && null != t && t(e);
         return
       }
-      if (e.keyCode === p.KeyboardKeys.ESCAPE && null != r.value && "" !== r.value && r.value.length > 0) {
-        r.value = "", null != i && i("");
+      if (e.keyCode === m.KeyboardKeys.ESCAPE && null != l.value && "" !== l.value && l.value.length > 0) {
+        l.value = "", null != n && n("");
         return
       }
-      l && (this.props.gridResults ? this.handleKeyDownGrid(e) : this.handleKeyDownList(e))
+      s && (this.props.gridResults ? this.handleKeyDownGrid(e) : this.handleKeyDownList(e))
     }, this.handleChange = e => {
       let {
         onQueryChange: t
@@ -296,8 +296,8 @@ class I extends o.Component {
     }
   }
 }
-I.Sizes = C, I.defaultProps = {
-  size: C.SMALL,
+S.Sizes = g, S.defaultProps = {
+  size: g.SMALL,
   query: "",
   sections: [],
   selectedSection: 0,
@@ -309,4 +309,4 @@ I.Sizes = C, I.defaultProps = {
   preventEscapePropagation: !0,
   useKeyboardNavigation: !0
 };
-var T = I
+var h = S

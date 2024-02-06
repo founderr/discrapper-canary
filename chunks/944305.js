@@ -25,8 +25,8 @@ s.r(t), s.d(t, {
 var l = s("669491"),
   n = s("245307"),
   a = s("571658"),
-  o = s("118503"),
-  r = s("110006"),
+  r = s("118503"),
+  o = s("110006"),
   i = s("682344"),
   c = s("238521"),
   u = s("394832"),
@@ -45,7 +45,7 @@ let M = () => ({
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.default.unsafe_rawColors.PREMIUM_PERK_ORANGE.css;
     return {
       color: e,
-      icon: r.default,
+      icon: o.default,
       description: R.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_ANIMATED_ICON
     }
   },
@@ -56,7 +56,7 @@ let M = () => ({
   }),
   C = () => ({
     color: l.default.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
-    icon: r.default,
+    icon: o.default,
     description: R.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_ANIMATED_GUILD_BANNER
   }),
   L = () => ({
@@ -105,7 +105,7 @@ let M = () => ({
     description: R.default.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
   }),
   S = () => ({
-    icon: o.default,
+    icon: r.default,
     color: l.default.unsafe_rawColors.PREMIUM_PERK_PINK.css,
     description: R.default.Messages.PREMIUM_GUILD_USER_FEATURE_BOOST_CRYSTAL
   }),

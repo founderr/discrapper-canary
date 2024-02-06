@@ -7,8 +7,8 @@ i.r(t), i.d(t, {
 var a = i("37983"),
   l = i("884691"),
   n = i("77078"),
-  o = i("506885"),
-  s = i("981601"),
+  s = i("506885"),
+  o = i("981601"),
   r = i("42203"),
   u = i("441823");
 
@@ -35,11 +35,11 @@ function d(e, t, i) {
       };
     return null != e ? (0, a.jsx)(n.Popout, {
       position: "right",
-      preload: () => (0, o.default)(e.id, e.getAvatarURL(i, 80), {
+      preload: () => (0, s.default)(e.id, e.getAvatarURL(i, 80), {
         guildId: i,
         channelId: t
       }),
-      renderPopout: l => (0, a.jsx)(s.default, {
+      renderPopout: l => (0, a.jsx)(o.default, {
         ...l,
         userId: e.id,
         guildId: i,

@@ -30,9 +30,9 @@ var n = s("37983"),
   l = s("414456"),
   i = s.n(l),
   r = s("627445"),
-  o = s.n(r),
-  u = s("866227"),
-  d = s.n(u),
+  u = s.n(r),
+  o = s("866227"),
+  d = s.n(o),
   c = s("974667"),
   h = s("446674"),
   f = s("669491"),
@@ -87,7 +87,7 @@ var el = a.memo(function(e) {
     goToThread: s,
     observePostVisibilityAnalytics: l,
     overrideMedia: r,
-    className: u,
+    className: o,
     containerWidth: d
   } = e, {
     channel: f,
@@ -101,7 +101,7 @@ var el = a.memo(function(e) {
       threadId: t,
       overrideMedia: s
     } = e, n = (0, h.useStateFromStores)([F.default], () => F.default.getChannel(t));
-    o(null != n, "the thread should not be null here, a store must have missed an update");
+    u(null != n, "the thread should not be null here, a store must have missed an update");
     let a = (0, h.useStateFromStores)([M.default], () => M.default.getCurrentSidebarChannelId(n.parent_id) === n.id),
       {
         firstMessage: l
@@ -113,12 +113,12 @@ var el = a.memo(function(e) {
         firstMessage: l
       }),
       {
-        messageCountText: u
+        messageCountText: o
       } = (0, B.useMessageCount)(n);
     return {
       channel: n,
       isOpen: a,
-      messageCount: u,
+      messageCount: o,
       firstMessage: l,
       content: i,
       media: null != s ? s : r
@@ -159,7 +159,7 @@ var el = a.memo(function(e) {
     "data-item-id": t,
     onClick: _,
     onContextMenu: A,
-    className: i(et.container, u, {
+    className: i(et.container, o, {
       [et.isOpen]: g
     }),
     children: [(0, n.jsx)(m.Clickable, {
@@ -188,7 +188,7 @@ var el = a.memo(function(e) {
         })
       }), (0, n.jsx)(m.FocusBlock, {
         enabled: !y,
-        children: (0, n.jsx)(eu, {
+        children: (0, n.jsx)(eo, {
           channel: f,
           firstMessage: v,
           facepileRef: I
@@ -209,12 +209,12 @@ function ei(e) {
     hasMediaAttachment: l,
     containerWidth: r
   } = e, {
-    isNew: o,
-    hasUnreads: u
+    isNew: u,
+    hasUnreads: o
   } = (0, B.useForumPostReadStates)(t), d = er(t), {
     postTitleRef: c,
     isNewBadgeOverflow: h
-  } = (0, X.useNewBadgeOverflowAware)(o, 24, r);
+  } = (0, X.useNewBadgeOverflowAware)(u, 24, r);
   return (0, n.jsxs)("div", {
     className: et.body,
     children: [(0, n.jsx)(q.default, {
@@ -227,12 +227,12 @@ function ei(e) {
         className: et.headerText,
         children: [(0, n.jsx)(m.Heading, {
           variant: "heading-lg/semibold",
-          color: u ? "header-primary" : "text-muted",
+          color: o ? "header-primary" : "text-muted",
           lineClamp: 2,
           className: et.postTitleText,
           children: (0, n.jsxs)("span", {
             ref: c,
-            children: [d, o && (0, n.jsx)("span", {
+            children: [d, u && (0, n.jsx)("span", {
               className: et.newBadgeWrapper,
               children: (0, n.jsx)(D.TextBadge, {
                 className: et.newBadge,
@@ -241,7 +241,7 @@ function ei(e) {
               })
             })]
           })
-        }), o && h && (0, n.jsx)(D.TextBadge, {
+        }), u && h && (0, n.jsx)(D.TextBadge, {
           className: et.newBadge,
           color: f.default.unsafe_rawColors.BRAND_260.css,
           text: ee.default.Messages.NEW
@@ -249,12 +249,12 @@ function ei(e) {
       })
     }), (0, n.jsx)("div", {
       className: et.message,
-      children: (0, n.jsx)(eo, {
+      children: (0, n.jsx)(eu, {
         channel: t,
         message: s,
         content: a,
         hasMediaAttachment: l,
-        hasUnreads: u
+        hasUnreads: o
       })
     })]
   })
@@ -272,15 +272,15 @@ function er(e) {
     }).content, [e.name, n]);
   return l
 }
-let eo = a.memo(function(e) {
+let eu = a.memo(function(e) {
   let {
     message: t,
     channel: s,
     content: a,
     hasMediaAttachment: l,
     hasUnreads: r
-  } = e, o = (0, h.useStateFromStores)([O.default], () => null != t && O.default.isBlocked(t.author.id)), u = (0, h.useStateFromStores)([G.default], () => G.default.isLoading(s.id)), d = (0, h.useStateFromStores)([j.default], () => j.default.can(J.Permissions.MANAGE_MESSAGES, s)), c = A.RenderSpoilers.useSetting(), f = null;
-  if (o) f = (0, n.jsx)(m.Text, {
+  } = e, u = (0, h.useStateFromStores)([O.default], () => null != t && O.default.isBlocked(t.author.id)), o = (0, h.useStateFromStores)([G.default], () => G.default.isLoading(s.id)), d = (0, h.useStateFromStores)([j.default], () => j.default.can(J.Permissions.MANAGE_MESSAGES, s)), c = A.RenderSpoilers.useSetting(), f = null;
+  if (u) f = (0, n.jsx)(m.Text, {
     className: et.blockedMessage,
     variant: "text-sm/medium",
     color: "text-muted",
@@ -293,7 +293,7 @@ let eo = a.memo(function(e) {
     } = null == t ? {
       contentPlaceholder: null,
       renderedContent: null
-    } : (0, P.renderSingleLineMessage)(t, a, o, i(et.messageContent, es.inlineFormat, es.smallFontSize), {
+    } : (0, P.renderSingleLineMessage)(t, a, u, i(et.messageContent, es.inlineFormat, es.smallFontSize), {
       iconClass: et.messageContentIcon,
       iconSize: $.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
     });
@@ -306,12 +306,12 @@ let eo = a.memo(function(e) {
       variant: "text-sm/medium",
       color: r ? "header-secondary" : "text-muted",
       className: et.messageContent,
-      children: null == t ? u ? null : ee.default.Messages.REPLY_QUOTE_MESSAGE_DELETED : e
+      children: null == t ? o ? null : ee.default.Messages.REPLY_QUOTE_MESSAGE_DELETED : e
     })
   }
   return (0, n.jsxs)(R.ObscuredDisplayContext.Provider, {
     value: (0, T.default)(c, d),
-    children: [!o && (0, n.jsx)(Z.default, {
+    children: [!u && (0, n.jsx)(Z.default, {
       channel: s,
       message: t,
       renderColon: null != f,
@@ -323,7 +323,7 @@ let eo = a.memo(function(e) {
   })
 });
 
-function eu(e) {
+function eo(e) {
   let {
     channel: t,
     facepileRef: s,
@@ -410,7 +410,7 @@ function ec(e) {
   } = e, a = (0, h.useStateFromStores)([F.default], () => F.default.getChannel(s.parent_id)), l = (0, B.useDefaultReactionEmoji)(a), {
     disableReactionCreates: i,
     isLurking: r,
-    isPendingMember: o
+    isPendingMember: u
   } = (0, E.default)(s);
   return null == l || i ? null : (0, n.jsx)(_.Reaction, {
     className: et.updateReactionButton,
@@ -418,7 +418,7 @@ function ec(e) {
     readOnly: s.isArchivedLockedThread(),
     useChatFontScaling: !1,
     isLurking: r,
-    isPendingMember: o,
+    isPendingMember: u,
     emoji: l,
     hideCount: !0,
     count: 0,
@@ -438,14 +438,14 @@ function eh(e) {
   } = e, l = (0, B.useMostUsedReaction)(s), {
     disableReactionUpdates: i,
     isLurking: r,
-    isPendingMember: o
+    isPendingMember: u
   } = (0, E.default)(a);
   return null == l ? null : (0, n.jsx)(_.Reaction, {
     className: et.updateReactionButton,
     message: s,
     readOnly: i || a.isArchivedLockedThread(),
     isLurking: r,
-    isPendingMember: o,
+    isPendingMember: u,
     useChatFontScaling: !1,
     type: l.burst_count >= l.count ? C.ReactionTypes.BURST : C.ReactionTypes.NORMAL,
     emojiSize: "reaction",
@@ -502,8 +502,8 @@ function eg(e) {
       firstMedia: l
     } = e,
     r = (0, h.useStateFromStores)([w.default], () => w.default.isFocused()),
-    o = (0, v.isAnimatedImageUrl)(l.src),
-    u = A.GifAutoPlay.useSetting(),
+    u = (0, v.isAnimatedImageUrl)(l.src),
+    o = A.GifAutoPlay.useSetting(),
     [d, c] = (0, x.useShouldObscure)({
       media: l,
       channel: a
@@ -539,8 +539,8 @@ function eg(e) {
         width: S,
         height: p,
         alt: null != C && d ? f : C,
-        autoPlay: u,
-        animated: o && !d && r,
+        autoPlay: o,
+        animated: u && !d && r,
         containerClassName: et.thumbnailContainer,
         imageClassName: i({
           [et.obscured]: d

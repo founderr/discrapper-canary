@@ -14,14 +14,14 @@ var l, a, s = n("37983"),
   u = n("669491"),
   d = n("681187"),
   c = n("77078"),
-  f = n("605160"),
-  m = n("449008"),
+  m = n("605160"),
+  f = n("449008"),
   h = n("462579"),
   p = n("867544"),
   g = n("782340"),
   E = n("145719");
 (a = l || (l = {})).TEXT = "text", a.ATTACHMENT = "attachment", a.EMBED = "embed";
-let v = e => {
+let C = e => {
     let {
       className: t
     } = e;
@@ -30,7 +30,7 @@ let v = e => {
       children: g.default.Messages.SPOILER
     })
   },
-  C = e => {
+  v = e => {
     let {
       className: t,
       isSingleMosaicItem: n,
@@ -54,38 +54,38 @@ let v = e => {
   },
   I = e => {
     let {
-      reason: t = f.ObscureReason.SPOILER,
+      reason: t = m.ObscureReason.SPOILER,
       className: n,
       isSingleMosaicItem: l = !1
     } = e;
     switch (t) {
-      case f.ObscureReason.SPOILER:
-        return (0, s.jsx)(v, {
+      case m.ObscureReason.SPOILER:
+        return (0, s.jsx)(C, {
           className: n
         });
-      case f.ObscureReason.EXPLICIT_CONTENT:
-        return (0, s.jsx)(C, {
+      case m.ObscureReason.EXPLICIT_CONTENT:
+        return (0, s.jsx)(v, {
           isSingleMosaicItem: l,
           className: n
         });
-      case f.ObscureReason.POTENTIAL_EXPLICIT_CONTENT:
-        return (0, s.jsx)(C, {
+      case m.ObscureReason.POTENTIAL_EXPLICIT_CONTENT:
+        return (0, s.jsx)(v, {
           isSingleMosaicItem: l,
           className: n,
           obscureOnly: !0
         });
       default:
-        return (0, m.assertNever)(t)
+        return (0, f.assertNever)(t)
     }
   },
-  x = e => {
+  S = e => {
     let {
       obscureReason: t,
       isVisible: n,
       handleToggleObscurity: l,
       obscurityControlClassName: a
     } = e;
-    return t !== f.ObscureReason.EXPLICIT_CONTENT ? null : (0, s.jsx)("div", {
+    return t !== m.ObscureReason.EXPLICIT_CONTENT ? null : (0, s.jsx)("div", {
       className: o(E.obscureButtonContainer, a),
       children: (0, s.jsx)(c.Clickable, {
         className: o(E.obscureHoverButton),
@@ -102,7 +102,7 @@ let v = e => {
     })
   },
   _ = i.createContext(!1);
-class S extends i.PureComponent {
+class x extends i.PureComponent {
   renderWithTooltip(e) {
     return (0, s.jsx)(c.Tooltip, {
       position: "left",
@@ -126,15 +126,15 @@ class S extends i.PureComponent {
       className: n,
       containerStyles: l,
       obscured: a = !0,
-      reason: i = f.ObscureReason.SPOILER,
+      reason: i = m.ObscureReason.SPOILER,
       isSingleMosaicItem: r = !1,
       obscurityControlClassName: u
     } = this.props, {
       visible: d
-    } = this.state, m = (0, s.jsx)(_.Consumer, {
-      children: m => {
-        let h = m || d || !a;
-        return [f.ObscureReason.EXPLICIT_CONTENT, f.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(i) && !t ? (0, s.jsxs)("div", {
+    } = this.state, f = (0, s.jsx)(_.Consumer, {
+      children: f => {
+        let h = f || d || !a;
+        return [m.ObscureReason.EXPLICIT_CONTENT, m.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(i) && !t ? (0, s.jsxs)("div", {
           "aria-label": h ? void 0 : this.ariaLabel,
           "aria-expanded": h,
           style: l,
@@ -151,7 +151,7 @@ class S extends i.PureComponent {
             "aria-hidden": !h,
             className: E.spoilerInnerContainer,
             children: e(!h)
-          }), (0, s.jsx)(x, {
+          }), (0, s.jsx)(S, {
             obscureReason: i,
             isVisible: d,
             handleToggleObscurity: this.handleToggleObscurity,
@@ -179,7 +179,7 @@ class S extends i.PureComponent {
         })
       }
     });
-    return t ? this.renderWithTooltip(m) : m
+    return t ? this.renderWithTooltip(f) : f
   }
   renderObscuredEmbed() {
     let {
@@ -188,14 +188,14 @@ class S extends i.PureComponent {
       containerStyles: n,
       isSingleMosaicItem: l,
       obscurityControlClassName: a,
-      reason: i = f.ObscureReason.SPOILER
+      reason: i = m.ObscureReason.SPOILER
     } = this.props, {
       visible: r
     } = this.state;
     return (0, s.jsx)(_.Consumer, {
       children: u => {
         let d = u || r;
-        return [f.ObscureReason.EXPLICIT_CONTENT, f.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(i) ? (0, s.jsxs)("div", {
+        return [m.ObscureReason.EXPLICIT_CONTENT, m.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(i) ? (0, s.jsxs)("div", {
           "aria-label": r ? void 0 : this.ariaLabel,
           "aria-expanded": d,
           style: n,
@@ -211,7 +211,7 @@ class S extends i.PureComponent {
             "aria-hidden": !d,
             className: E.spoilerInnerContainer,
             children: e(!d)
-          }), (0, s.jsx)(x, {
+          }), (0, s.jsx)(S, {
             obscureReason: i,
             isVisible: r,
             handleToggleObscurity: this.handleToggleObscurity,
@@ -288,37 +288,37 @@ class S extends i.PureComponent {
       case "embed":
         return this.renderObscuredEmbed();
       default:
-        return (0, m.assertNever)(e)
+        return (0, f.assertNever)(e)
     }
   }
   get ariaLabel() {
     let {
-      reason: e = f.ObscureReason.SPOILER
+      reason: e = m.ObscureReason.SPOILER
     } = this.props;
     switch (e) {
-      case f.ObscureReason.SPOILER:
+      case m.ObscureReason.SPOILER:
         return g.default.Messages.SPOILER;
-      case f.ObscureReason.EXPLICIT_CONTENT:
+      case m.ObscureReason.EXPLICIT_CONTENT:
         return g.default.Messages.EXPLICIT_CONTENT_WARNING_TOOLTIP;
-      case f.ObscureReason.POTENTIAL_EXPLICIT_CONTENT:
+      case m.ObscureReason.POTENTIAL_EXPLICIT_CONTENT:
         return g.default.Messages.EXPLICIT_CONTENT_WARNING_PENDING;
       default:
-        return (0, m.assertNever)(e)
+        return (0, f.assertNever)(e)
     }
   }
   get tooltipText() {
     let {
-      reason: e = f.ObscureReason.SPOILER
+      reason: e = m.ObscureReason.SPOILER
     } = this.props;
     switch (e) {
-      case f.ObscureReason.SPOILER:
+      case m.ObscureReason.SPOILER:
         return g.default.Messages.SPOILER;
-      case f.ObscureReason.EXPLICIT_CONTENT:
+      case m.ObscureReason.EXPLICIT_CONTENT:
         return g.default.Messages.EXPLICIT_CONTENT_WARNING_TOOLTIP;
-      case f.ObscureReason.POTENTIAL_EXPLICIT_CONTENT:
+      case m.ObscureReason.POTENTIAL_EXPLICIT_CONTENT:
         return g.default.Messages.EXPLICIT_CONTENT_WARNING_PENDING;
       default:
-        return (0, m.assertNever)(e)
+        return (0, f.assertNever)(e)
     }
   }
   constructor(...e) {
@@ -354,5 +354,5 @@ class S extends i.PureComponent {
     }
   }
 }
-S.Types = l, S.Reasons = f.ObscureReason;
-var N = S
+x.Types = l, x.Reasons = m.ObscureReason;
+var N = x

@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return C
   }
 });
 var l = n("37983"),
-  s = n("884691"),
-  i = n("414456"),
-  r = n.n(i),
-  o = n("90915"),
-  a = n("446674"),
-  u = n("669491"),
-  d = n("77078"),
-  c = n("80300"),
+  a = n("884691"),
+  r = n("414456"),
+  s = n.n(r),
+  i = n("90915"),
+  u = n("446674"),
+  o = n("669491"),
+  c = n("77078"),
+  d = n("80300"),
   f = n("471671"),
-  p = n("103603"),
+  E = n("103603"),
   h = n("474293"),
-  m = n("580357"),
-  E = n("491088");
-let I = {
+  g = n("580357"),
+  v = n("491088");
+let _ = {
     SMOL: "Smol",
     MINI: "Mini",
     SMALLER: "Smaller",
@@ -29,33 +29,33 @@ let I = {
     XLARGE: "XLarge"
   },
   S = {
-    [I.SMOL]: 16,
-    [I.MINI]: 20,
-    [I.SMALLER]: 24,
-    [I.SMALL]: 30,
-    [I.MEDIUM]: 40,
-    [I.LARGE]: 50,
-    [I.LARGER]: 64,
-    [I.XLARGE]: 100
+    [_.SMOL]: 16,
+    [_.MINI]: 20,
+    [_.SMALLER]: 24,
+    [_.SMALL]: 30,
+    [_.MEDIUM]: 40,
+    [_.LARGE]: 50,
+    [_.LARGER]: 64,
+    [_.XLARGE]: 100
   },
-  g = {
-    [I.SMOL]: [10, 10, 8, 6, 6, 4],
-    [I.MINI]: [12, 12, 10, 10, 8, 6, 4],
-    [I.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
-    [I.SMALL]: [14, 14, 12, 12, 10, 8, 6],
-    [I.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
-    [I.LARGE]: [18, 18, 16, 16, 14, 12, 10],
-    [I.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-    [I.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
+  R = {
+    [_.SMOL]: [10, 10, 8, 6, 6, 4],
+    [_.MINI]: [12, 12, 10, 10, 8, 6, 4],
+    [_.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
+    [_.SMALL]: [14, 14, 12, 12, 10, 8, 6],
+    [_.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
+    [_.LARGE]: [18, 18, 16, 16, 14, 12, 10],
+    [_.LARGER]: [19, 19, 17, 17, 15, 13, 11],
+    [_.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
   };
-class _ extends s.PureComponent {
+class m extends a.PureComponent {
   renderAcronym() {
     let {
       guild: e,
       iconSrc: t
     } = this.props;
     return null != e.icon || null != t ? null : (0, l.jsx)("div", {
-      className: E.acronym,
+      className: v.acronym,
       children: e.acronym
     })
   }
@@ -65,8 +65,8 @@ class _ extends s.PureComponent {
       guild: t,
       badgeStrokeColor: n
     } = this.props;
-    return e && null != t.hasFeature ? (0, l.jsx)(m.default, {
-      className: E.guildIconBadge,
+    return e && null != t.hasFeature ? (0, l.jsx)(g.default, {
+      className: v.guildIconBadge,
       guild: t,
       badgeStrokeColor: n
     }) : null
@@ -75,37 +75,37 @@ class _ extends s.PureComponent {
     var e, t;
     let {
       guild: n,
-      className: s,
-      showBadge: i,
-      active: o,
-      size: a,
-      style: u = {},
-      textScale: c,
+      className: a,
+      showBadge: r,
+      active: i,
+      size: u,
+      style: o = {},
+      textScale: d,
       showTooltip: f,
-      tooltipPosition: p,
-      onClick: m,
-      to: I,
+      tooltipPosition: E,
+      onClick: g,
+      to: _,
       badgeStrokeColor: S,
-      animate: _,
-      tabIndex: C,
-      iconSrc: L,
-      "aria-hidden": R,
-      ...N
-    } = this.props, v = g[a], x = null != m ? d.Clickable : "div";
-    return (0, l.jsxs)(x, {
-      className: r(E.icon, s, (0, h.getClass)(E, "iconSize", a), {
-        [null !== (e = (0, h.getClass)(E, "iconActive", a)) && void 0 !== e ? e : ""]: o,
-        [E.iconInactive]: !o,
-        [E.noIcon]: null == n.icon
+      animate: m,
+      tabIndex: N,
+      iconSrc: T,
+      "aria-hidden": C,
+      ...p
+    } = this.props, x = R[u], I = null != g ? c.Clickable : "div";
+    return (0, l.jsxs)(I, {
+      className: s(v.icon, a, (0, h.getClass)(v, "iconSize", u), {
+        [null !== (e = (0, h.getClass)(v, "iconActive", u)) && void 0 !== e ? e : ""]: i,
+        [v.iconInactive]: !i,
+        [v.noIcon]: null == n.icon
       }),
-      "aria-hidden": R,
+      "aria-hidden": C,
       style: null == n.icon ? {
-        fontSize: (null !== (t = v[n.acronym.length]) && void 0 !== t ? t : v[v.length - 1]) * c,
-        ...u
-      } : u,
-      onClick: null != I || null == m ? void 0 : m,
-      tabIndex: C,
-      ...N,
+        fontSize: (null !== (t = x[n.acronym.length]) && void 0 !== t ? t : x[x.length - 1]) * d,
+        ...o
+      } : o,
+      onClick: null != _ || null == g ? void 0 : g,
+      tabIndex: N,
+      ...p,
       children: [this.renderAcronym(), this.renderBadge()]
     })
   }
@@ -115,11 +115,11 @@ class _ extends s.PureComponent {
       showTooltip: t,
       tooltipPosition: n
     } = this.props;
-    return t ? (0, l.jsx)(d.Tooltip, {
+    return t ? (0, l.jsx)(c.Tooltip, {
       text: e.name,
       position: n,
       "aria-label": !1,
-      children: e => s.cloneElement(s.Children.only(this.renderIcon()), {
+      children: e => a.cloneElement(a.Children.only(this.renderIcon()), {
         ...e
       })
     }) : this.renderIcon()
@@ -129,11 +129,11 @@ class _ extends s.PureComponent {
       to: e,
       guild: t,
       source: n,
-      tabIndex: s,
-      "aria-hidden": i
+      tabIndex: a,
+      "aria-hidden": r
     } = this.props;
-    return null != e ? (0, l.jsx)(o.Link, {
-      "aria-hidden": i,
+    return null != e ? (0, l.jsx)(i.Link, {
+      "aria-hidden": r,
       to: {
         pathname: e,
         state: null != n ? {
@@ -141,43 +141,43 @@ class _ extends s.PureComponent {
         } : null
       },
       "aria-label": t.toString(),
-      tabIndex: s,
+      tabIndex: a,
       children: this.renderTooltip()
     }) : this.renderTooltip()
   }
 }
-let C = a.default.connectStores([f.default], e => {
+let N = u.default.connectStores([f.default], e => {
   let {
     guild: t,
     animate: n,
     iconSrc: l,
-    style: s,
-    size: i
+    style: a,
+    size: r
   } = e;
   return {
     style: {
-      ...s,
-      backgroundImage: (0, p.makeCssUrlString)(null != l ? l : t.getIconURL(S[i], n && f.default.isFocused()))
+      ...a,
+      backgroundImage: (0, E.makeCssUrlString)(null != l ? l : t.getIconURL(S[r], n && f.default.isFocused()))
     }
   }
-})((0, c.backgroundImagePreloader)(e => (0, l.jsx)(_, {
+})((0, d.backgroundImagePreloader)(e => (0, l.jsx)(m, {
   ...e
 })));
-class L extends s.PureComponent {
+class T extends a.PureComponent {
   render() {
-    return (0, l.jsx)(C, {
+    return (0, l.jsx)(N, {
       ...this.props
     })
   }
 }
-L.Sizes = I, L.defaultProps = {
-  size: I.LARGE,
+T.Sizes = _, T.defaultProps = {
+  size: _.LARGE,
   textScale: 1,
   showBadge: !1,
   showTooltip: !1,
   active: !1,
   tooltipPosition: "top",
-  badgeStrokeColor: u.default.unsafe_rawColors.WHITE_500.css,
+  badgeStrokeColor: o.default.unsafe_rawColors.WHITE_500.css,
   animate: !1
 };
-var R = L
+var C = T

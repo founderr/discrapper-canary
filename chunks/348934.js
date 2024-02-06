@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return l
   },
   canCurrentUserManageAutomod: function() {
-    return d
+    return s
   },
   useCanCurrentUserManageAutomod: function() {
-    return s
+    return d
   },
   useIsUserProfileRuleEnabled: function() {
     return T
@@ -30,12 +30,12 @@ function l(e) {
   return t
 }
 
-function d(e) {
+function s(e) {
   let t = a(e);
   return t
 }
 
-function s(e) {
+function d(e) {
   return (0, r.useStateFromStores)([o.default, i.default], () => a(e, [o.default, i.default]), [e])
 }
 

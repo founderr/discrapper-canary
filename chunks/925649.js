@@ -120,7 +120,7 @@ let C = n.memo(function() {
           startingChannelId: t.id
         })
       }), !0
-    }, j = e => {
+    }, P = e => {
       t.isGuildVocal() ? (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -154,7 +154,7 @@ let C = n.memo(function() {
           }),
           ...e,
           onClick: v,
-          onContextMenu: j,
+          onContextMenu: P,
           children: [(0, a.jsx)("div", {
             className: L.channelInfo,
             children: (0, a.jsxs)("div", {

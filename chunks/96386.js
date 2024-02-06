@@ -1,32 +1,32 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return r
+    return a
   }
 });
 var n = i("37983");
 i("884691");
-var l = i("414456"),
-  s = i.n(l),
-  a = i("691870"),
-  r = e => {
+var s = i("414456"),
+  l = i.n(s),
+  r = i("691870"),
+  a = e => {
     let {
       message: t,
       className: i,
-      noResultsImageURL: l,
-      forceLightTheme: r,
+      noResultsImageURL: s,
+      forceLightTheme: a,
       suggestions: o
     } = e;
     return (0, n.jsx)("div", {
-      className: s({
-        [a.forceLightTheme]: r
+      className: l({
+        [r.forceLightTheme]: a
       }, i),
       children: (0, n.jsxs)("div", {
-        className: a.wrapper,
+        className: r.wrapper,
         children: [(0, n.jsx)("div", {
-          className: a.sadImage,
-          style: null != l ? {
-            backgroundImage: "url(".concat(l, ")")
+          className: r.sadImage,
+          style: null != s ? {
+            backgroundImage: "url(".concat(s, ")")
           } : {}
         }), (0, n.jsx)("div", {
           children: t

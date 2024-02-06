@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var l = n("37983"),
-  i = n("884691"),
-  s = n("819855"),
-  a = n("77078"),
+  s = n("884691"),
+  a = n("819855"),
+  i = n("77078"),
   r = n("782340");
 
-function o(e) {
+function u(e) {
   let {
     onConfirm: t,
     onDismiss: n,
-    theme: o
+    theme: u
   } = e;
-  return (0, l.jsxs)(i.Fragment, {
-    children: [(0, l.jsx)(a.Button, {
+  return (0, l.jsxs)(s.Fragment, {
+    children: [(0, l.jsx)(i.Button, {
       onClick: t,
       children: r.default.Messages.GENERATE_A_NEW_LINK
-    }), (0, l.jsx)(a.Button, {
-      look: a.Button.Looks.LINK,
-      color: (0, s.isThemeLight)(o) ? a.Button.Colors.PRIMARY : a.Button.Colors.WHITE,
+    }), (0, l.jsx)(i.Button, {
+      look: i.Button.Looks.LINK,
+      color: (0, a.isThemeLight)(u) ? i.Button.Colors.PRIMARY : i.Button.Colors.WHITE,
       onClick: n,
       children: r.default.Messages.CANCEL
     })]

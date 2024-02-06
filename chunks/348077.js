@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 });
 var i = s("37983"),
-  l = s("884691"),
-  n = s("414456"),
-  a = s.n(n),
+  n = s("884691"),
+  l = s("414456"),
+  a = s.n(l),
   r = s("77078"),
   d = s("660279"),
   o = s("149943"),
@@ -63,7 +63,7 @@ function E(e) {
 }
 
 function m(e) {
-  let t = l.useRef(null);
+  let t = n.useRef(null);
   return (0, i.jsxs)(r.ModalRoot, {
     size: r.ModalSize.MEDIUM,
     transitionState: e.transitionState,

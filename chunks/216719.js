@@ -1,44 +1,44 @@
 "use strict";
-let r;
-n.r(t), n.d(t, {
+let n;
+r.r(t), r.d(t, {
   default: function() {
     return d
   }
 });
-var l = n("446674"),
-  i = n("913144");
+var l = r("446674"),
+  i = r("913144");
 let s = [],
   a = s,
-  o = null,
-  u = e => {
-    a = s, o = null
+  u = null,
+  o = e => {
+    a = s, u = null
   };
 class c extends l.default.Store {
   get analyticsLocations() {
     return a
   }
   get analyticsSource() {
-    return o
+    return u
   }
   get initialProductSkuId() {
-    return r
+    return n
   }
   getAnalytics() {
     return {
       analyticsLocations: a,
-      analyticsSource: o
+      analyticsSource: u
     }
   }
 }
 c.displayName = "CollectiblesShopStore";
 var d = new c(i.default, {
   COLLECTIBLES_SHOP_OPEN: e => {
-    var t, n;
-    a = null !== (t = e.analyticsLocations) && void 0 !== t ? t : s, o = null !== (n = e.analyticsSource) && void 0 !== n ? n : null, r = e.initialProductSkuId
+    var t, r;
+    a = null !== (t = e.analyticsLocations) && void 0 !== t ? t : s, u = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, n = e.initialProductSkuId
   },
-  COLLECTIBLES_SHOP_CLOSE: u,
+  COLLECTIBLES_SHOP_CLOSE: o,
   COLLECTIBLES_PRODUCT_DETAILS_OPEN: e => {
-    e.item.skuId === r && (r = void 0)
+    e.item.skuId === n && (n = void 0)
   },
-  LOGOUT: u
+  LOGOUT: o
 })

@@ -8,8 +8,8 @@ var n = s("37983"),
   l = s("884691"),
   o = s("907002"),
   r = s("669491"),
-  a = s("77078"),
-  i = s("659500"),
+  i = s("77078"),
+  a = s("659500"),
   u = s("49111"),
   c = s("782340"),
   d = s("317404"),
@@ -42,19 +42,19 @@ var n = s("37983"),
           delay: 1e3
         })
       }
-      return i.ComponentDispatch.subscribe(u.ComponentActions.EMPHASIZE_NOTICE, e), () => {
-        i.ComponentDispatch.unsubscribe(u.ComponentActions.EMPHASIZE_NOTICE, e)
+      return a.ComponentDispatch.subscribe(u.ComponentActions.EMPHASIZE_NOTICE, e), () => {
+        a.ComponentDispatch.unsubscribe(u.ComponentActions.EMPHASIZE_NOTICE, e)
       }
     }, [m]);
     let L = T.to({
         range: [0, 1],
-        output: [(0, a.useToken)(r.default.colors.TEXT_NORMAL).hex(), (0, a.useToken)(r.default.unsafe_rawColors.WHITE_500).hex()]
+        output: [(0, i.useToken)(r.default.colors.TEXT_NORMAL).hex(), (0, i.useToken)(r.default.unsafe_rawColors.WHITE_500).hex()]
       }),
       x = T.to({
         range: [0, 1],
-        output: [(0, a.useToken)(r.default.colors.BACKGROUND_FLOATING).hex(), (0, a.useToken)(r.default.colors.STATUS_DANGER).hex()]
+        output: [(0, i.useToken)(r.default.colors.BACKGROUND_FLOATING).hex(), (0, i.useToken)(r.default.colors.STATUS_DANGER).hex()]
       }),
-      v = (0, a.useToken)(r.default.colors.TEXT_DANGER).hex();
+      v = (0, i.useToken)(r.default.colors.TEXT_DANGER).hex();
     return (0, n.jsx)(o.animated.div, {
       className: d.container,
       style: {
@@ -63,7 +63,7 @@ var n = s("37983"),
       children: (0, n.jsx)("div", {
         className: d.flexContainer,
         ref: R,
-        children: (0, n.jsxs)(a.FocusRingScope, {
+        children: (0, n.jsxs)(i.FocusRingScope, {
           containerRef: R,
           children: [(0, n.jsx)("div", {
             className: d.shrinkingContainer,
@@ -76,11 +76,11 @@ var n = s("37983"),
             })
           }), (0, n.jsxs)("div", {
             className: d.actions,
-            children: [null != C && (0, n.jsx)(a.Button, {
+            children: [null != C && (0, n.jsx)(i.Button, {
               className: d.resetButton,
-              size: a.Button.Sizes.SMALL,
-              color: a.Button.Colors.PRIMARY,
-              look: a.Button.Looks.LINK,
+              size: i.Button.Sizes.SMALL,
+              color: i.Button.Colors.PRIMARY,
+              look: i.Button.Looks.LINK,
               onClick: C,
               children: (0, n.jsx)(o.animated.span, {
                 style: {
@@ -88,11 +88,11 @@ var n = s("37983"),
                 },
                 children: null != I ? I : c.default.Messages.RESET
               })
-            }), null != _ ? (0, n.jsx)(a.Tooltip, {
+            }), null != _ ? (0, n.jsx)(i.Tooltip, {
               text: g,
-              children: e => (0, n.jsx)(a.Button, {
-                size: a.Button.Sizes.SMALL,
-                color: null != N ? N : a.Button.Colors.GREEN,
+              children: e => (0, n.jsx)(i.Button, {
+                size: i.Button.Sizes.SMALL,
+                color: null != N ? N : i.Button.Colors.GREEN,
                 submitting: f,
                 disabled: p,
                 onClick: _,

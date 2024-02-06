@@ -13,8 +13,8 @@ var s = n("37983"),
   l = n.n(a),
   i = n("446674"),
   u = n("77078"),
-  o = n("405932"),
-  c = n("798609"),
+  c = n("405932"),
+  o = n("798609"),
   d = n("837148"),
   f = n("903494"),
   m = n("635357"),
@@ -76,12 +76,12 @@ function Y(e) {
     customGiftMessage: ea,
     setCustomGiftMessage: el
   } = (0, m.useGiftContext)(), ei = (0, S.isCustomGiftEnabled)(es), eu = en && (0, S.shouldShowCustomGiftExperience)(es, !0, "PremiumSwitchPlanSelectBody"), {
-    confirmUpsellEnabled: eo
+    confirmUpsellEnabled: ec
   } = (0, d.default)({
     location: "PremiumSwitchPlanSelectBody"
   });
   h = null != h ? h : $, l(void 0 !== (T = null != T ? T : q), "should not be undefined");
-  let [ec, ed] = (0, i.useStateFromStoresArray)([p.default], () => [null != T ? p.default.get(T.planId) : null, null != j ? p.default.get(j) : null]), ef = (0, M.usePremiumTrialOffer)(K), em = null == ef ? void 0 : ef.subscription_trial, e_ = (0, g.usePremiumDiscountOffer)(), eE = null == e_ ? void 0 : null === (t = e_.discount) || void 0 === t ? void 0 : t.plan_ids, eI = null != ed ? ed : ee, ep = r.useCallback(e => {
+  let [eo, ed] = (0, i.useStateFromStoresArray)([p.default], () => [null != T ? p.default.get(T.planId) : null, null != j ? p.default.get(j) : null]), ef = (0, M.usePremiumTrialOffer)(K), em = null == ef ? void 0 : ef.subscription_trial, e_ = (0, g.usePremiumDiscountOffer)(), eE = null == e_ ? void 0 : null === (t = e_.discount) || void 0 === t ? void 0 : t.plan_ids, eI = null != ed ? ed : ee, ep = r.useCallback(e => {
     null != G ? G(e) : Q(e)
   }, [G, Q]), eN = null != Y ? Y : et;
   l(null != eN, "Price option has to be set");
@@ -96,13 +96,13 @@ function Y(e) {
   let eC = (null == eI ? void 0 : eI.id) != null && W.includes(eI.id);
   r.useEffect(() => {
     if (!eC) {
-      if (null == ec || en) ep(W[0]);
-      else if (null != ec) {
-        let e = W.find(e => e !== ec.id);
+      if (null == eo || en) ep(W[0]);
+      else if (null != eo) {
+        let e = W.find(e => e !== eo.id);
         null != e && ep(e)
       }
     }
-  }, [eC, en, W, ec, ep]);
+  }, [eC, en, W, eo, ep]);
   let eA = !eu && (en || !eS && !eP) && eC && z,
     eO = (0, u.useRadioGroup)(),
     eh = (null == eI ? void 0 : eI.id) != null ? (0, C.getPrice)(eI.id, !1, en, eN) : void 0,
@@ -113,7 +113,7 @@ function Y(e) {
     eM = (0, C.isPrepaidPaymentSource)(eN.paymentSourceId),
     ev = (null == em ? void 0 : em.interval) === B.SubscriptionIntervalTypes.DAY ? w.default.Messages.BILLING_TRIAL_2_WEEK_PERIOD : w.default.Messages.BILLING_TRIAL_30_DAY_PERIOD,
     ex = !en && (eP || null != em && eS && null != V),
-    eL = null == X ? void 0 : null === (E = X.find(e => e.subscriptionPlanId === B.SubscriptionPlans.PREMIUM_MONTH_TIER_2)) || void 0 === E ? void 0 : null === (a = E.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === c.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount;
+    eL = null == X ? void 0 : null === (E = X.find(e => e.subscriptionPlanId === B.SubscriptionPlans.PREMIUM_MONTH_TIER_2)) || void 0 === E ? void 0 : null === (a = E.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === o.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount;
   return (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)("div", {
       className: eu ? H.stepBodyCustomGift : H.stepBody,
@@ -134,7 +134,7 @@ function Y(e) {
             pendingText: ea,
             currentText: ea
           })
-        })(), null != ec && !en && (0, s.jsx)("div", {
+        })(), null != eo && !en && (0, s.jsx)("div", {
           className: H.bodyText,
           children: function(e, t) {
             let n = w.default.Messages.BILLING_SWITCH_PLAN_DOWNGRADE_BODY_MONTH,
@@ -183,7 +183,7 @@ function Y(e) {
               default:
                 return r
             }
-          }(ec, h)
+          }(eo, h)
         }), (I = eS, N = eP, eu ? (0, s.jsx)(u.FormTitle, {
           children: w.default.Messages.GIFT_SUBSCRIPTION_SELECTION
         }) : ex ? I ? (0, s.jsxs)("div", {
@@ -239,15 +239,15 @@ function Y(e) {
               className: H.selectPlanTotalRow
             })]
           }) : null
-        }), eg && (0, s.jsx)(o.default, {
+        }), eg && (0, s.jsx)(c.default, {
           message: w.default.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format({
             kunaPriceWithCurrency: (0, A.formatPrice)(7.5345 * eh.amount, k.CurrencyCodes.HRK)
           })
-        }), !en && !ex && z && (0, s.jsx)(o.default, {
+        }), !en && !ex && z && (0, s.jsx)(c.default, {
           message: w.default.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({
             documentationLink: P.default.getArticleURL(F.HelpdeskArticles.LOCALIZED_PRICING)
           })
-        }), eo && en && (0, s.jsx)(f.default, {
+        }), ec && en && (0, s.jsx)(f.default, {
           onClose: J
         })]
       })]
@@ -263,8 +263,8 @@ function W(e) {
     onBackClick: a,
     showBackButton: l,
     planOptions: i,
-    shouldRenderUpdatedPaymentModal: o = !1,
-    isTrial: c
+    shouldRenderUpdatedPaymentModal: c = !1,
+    isTrial: o
   } = e, {
     paymentSources: d,
     selectedPlan: f
@@ -277,8 +277,8 @@ function W(e) {
       onStepChange: t,
       selectedPlanId: n,
       isGift: E,
-      shouldRenderUpdatedPaymentModal: o,
-      isTrial: c
+      shouldRenderUpdatedPaymentModal: c,
+      isTrial: o
     }) : (0, s.jsx)(u.Button, {
       disabled: !0,
       children: w.default.Messages.SELECT
@@ -295,10 +295,10 @@ function Z(e) {
     isGift: r,
     paymentSources: a,
     shouldRenderUpdatedPaymentModal: l,
-    isTrial: o
-  } = e, c = (0, i.useStateFromStores)([N.default], () => N.default.getPremiumTypeSubscription()), {
+    isTrial: c
+  } = e, o = (0, i.useStateFromStores)([N.default], () => N.default.getPremiumTypeSubscription()), {
     hasEntitlements: d
-  } = (0, G.useSubscriptionEntitlements)(n, r), f = null != c && null != c.paymentSourceId || Object.keys(a).length > 0 || d && !o;
+  } = (0, G.useSubscriptionEntitlements)(n, r), f = null != o && null != o.paymentSourceId || Object.keys(a).length > 0 || d && !c;
   var m = l ? w.default.Messages.NEXT : w.default.Messages.SELECT,
     _ = E.Step.ADD_PAYMENT_STEPS;
   return f ? _ = E.Step.REVIEW : (0, T.isDesktop)() && function() {

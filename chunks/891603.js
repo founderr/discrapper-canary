@@ -8,8 +8,8 @@ var l = n("37983");
 n("884691");
 var u = n("446674"),
   a = n("77078"),
-  d = n("267567"),
-  i = n("271938"),
+  i = n("267567"),
+  d = n("271938"),
   r = n("398604"),
   s = n("322224"),
   o = n("397680"),
@@ -21,9 +21,9 @@ function f(e) {
     guildEventId: t,
     guildId: n,
     recurrenceId: f
-  } = e, _ = (0, u.useStateFromStores)([d.default], () => d.default.isLurking(n), [n]), T = (0, u.useStateFromStores)([i.default], () => i.default.getId()), {
-    rsvped: S,
-    baseRsvp: v,
+  } = e, _ = (0, u.useStateFromStores)([i.default], () => i.default.isLurking(n), [n]), T = (0, u.useStateFromStores)([d.default], () => d.default.getId()), {
+    rsvped: v,
+    baseRsvp: S,
     recurrenceRsvp: g
   } = (0, u.useStateFromStoresObject)([r.default], () => ({
     rsvped: r.default.isInterestedInEventRecurrence(t, f),
@@ -33,14 +33,14 @@ function f(e) {
   if (_ || (null == I ? void 0 : I.is_canceled)) return null;
   let N = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-      l = (null == v ? void 0 : v.response) === c.GuildScheduledEventUserResponses.INTERESTED,
+      l = (null == S ? void 0 : S.response) === c.GuildScheduledEventUserResponses.INTERESTED,
       u = l ? c.GuildScheduledEventUserResponses.UNINTERESTED : c.GuildScheduledEventUserResponses.INTERESTED,
       a = e ? null : f;
     s.default.updateRsvp(t, a, n, u)
   };
   return (0, l.jsxs)(a.MenuItem, {
-    id: S ? E.default.Messages.EVENT_MARK_NOT_INTERESTED : E.default.Messages.EVENT_MARK_INTERESTED,
-    label: S ? E.default.Messages.EVENT_MARK_NOT_INTERESTED : E.default.Messages.EVENT_MARK_INTERESTED,
+    id: v ? E.default.Messages.EVENT_MARK_NOT_INTERESTED : E.default.Messages.EVENT_MARK_INTERESTED,
+    label: v ? E.default.Messages.EVENT_MARK_NOT_INTERESTED : E.default.Messages.EVENT_MARK_INTERESTED,
     action: void 0,
     children: [(0, l.jsx)(a.MenuItem, {
       id: E.default.Messages.GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE,

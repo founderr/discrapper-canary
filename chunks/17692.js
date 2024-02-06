@@ -5,9 +5,9 @@ t.r(A), t.d(A, {
   }
 });
 var a = t("37983"),
-  l = t("884691"),
-  n = t("414456"),
-  r = t.n(n),
+  n = t("884691"),
+  l = t("414456"),
+  r = t.n(l),
   s = t("77078"),
   o = t("931164"),
   i = t("289162"),
@@ -17,10 +17,10 @@ function u(e) {
   let {
     color: A,
     className: t,
-    variant: n,
+    variant: l,
     text: u,
     lineClamp: c
-  } = e, f = (0, s.usePrivateHeadingLevel)(), C = l.useMemo(() => null == u ? null : (0, o.default)(u, !0, {
+  } = e, f = (0, s.usePrivateHeadingLevel)(), C = n.useMemo(() => null == u ? null : (0, o.default)(u, !0, {
     allowHeading: null == c,
     allowList: null == c,
     initialHeaderLevel: f
@@ -31,7 +31,7 @@ function u(e) {
       [i.lineClamp1]: 1 === c
     }),
     color: A,
-    variant: n,
+    variant: l,
     lineClamp: c,
     children: C
   })

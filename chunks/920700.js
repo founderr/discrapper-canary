@@ -11,8 +11,8 @@ var n = s("37983"),
   l = s("884691"),
   o = s("414456"),
   r = s.n(o),
-  a = s("77078"),
-  i = s("474293"),
+  i = s("77078"),
+  a = s("474293"),
   u = s("145131"),
   c = s("782340"),
   d = s("863448");
@@ -33,7 +33,7 @@ class f extends l.PureComponent {
       mode: l
     } = this.props, o = null === (t = this.context) || void 0 === t ? void 0 : t.titleId;
     return (0, n.jsx)("input", {
-      className: r((0, i.getClass)(d, "input", l), {
+      className: r((0, a.getClass)(d, "input", l), {
         [d.inputHidden]: e
       }),
       ref: this.inputRef,
@@ -55,19 +55,19 @@ class f extends l.PureComponent {
     } = this.props, C = null != l;
     switch (s) {
       case E.SUCCESS:
-        e = a.ButtonColors.GREEN;
+        e = i.ButtonColors.GREEN;
         break;
       case E.ERROR:
-        e = a.ButtonColors.RED;
+        e = i.ButtonColors.RED;
         break;
       default:
         e = this.props.buttonColor
     }
-    return (0, n.jsx)(a.FocusRing, {
+    return (0, n.jsx)(i.FocusRing, {
       focusTarget: this.inputRef,
       ringTarget: this.containerRef,
       children: (0, n.jsx)("div", {
-        className: r((0, i.getClass)(d, "copyInput", s), o),
+        className: r((0, a.getClass)(d, "copyInput", s), o),
         ref: this.containerRef,
         children: (0, n.jsxs)(u.default, {
           className: d.layout,
@@ -83,10 +83,10 @@ class f extends l.PureComponent {
             style: {
               margin: 0
             },
-            children: (0, n.jsx)(a.Button, {
+            children: (0, n.jsx)(i.Button, {
               className: d.button,
               onClick: this.handleButtonClick,
-              size: a.ButtonSizes.MIN,
+              size: i.ButtonSizes.MIN,
               color: e,
               look: f,
               children: t
@@ -109,10 +109,10 @@ class f extends l.PureComponent {
     }
   }
 }
-f.contextType = a.FormContext, f.defaultProps = {
+f.contextType = i.FormContext, f.defaultProps = {
   supportsCopy: !0,
-  buttonColor: a.ButtonColors.PRIMARY,
-  buttonLook: a.ButtonLooks.FILLED,
+  buttonColor: i.ButtonColors.PRIMARY,
+  buttonLook: i.ButtonLooks.FILLED,
   mode: E.DEFAULT
-}, f.Modes = E, f.ButtonColors = a.ButtonColors, f.ButtonLooks = a.ButtonLooks;
+}, f.Modes = E, f.ButtonColors = i.ButtonColors, f.ButtonLooks = i.ButtonLooks;
 var C = f

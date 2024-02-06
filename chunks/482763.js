@@ -50,7 +50,7 @@ function R(e) {
   let p = (0, r.useStateFromStores)([c.default], () => c.default.getHighestRole(M), [M]),
     U = (0, r.useStateFromStores)([c.default], () => !c.default.isRoleHigher(M, p, G)),
     v = n.useRef(null),
-    j = (0, r.useStateFromStores)([S.default], () => S.default.getProps().integrations);
+    P = (0, r.useStateFromStores)([S.default], () => S.default.getProps().integrations);
   if (n.useEffect(() => {
       var e, t;
       let a = (0, N.getSectionAnalyticsName)(R),
@@ -93,7 +93,7 @@ function R(e) {
         role: G,
         locked: U,
         setSelectedSection: D,
-        integrations: null != j ? j : void 0
+        integrations: null != P ? P : void 0
       });
       break;
     case C.GuildSettingsRoleEditSections.MEMBERS:

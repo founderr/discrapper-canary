@@ -10,8 +10,8 @@ var a = t("37983"),
   n = t("77078"),
   o = t("206230"),
   c = t("10641"),
-  d = t("491605"),
-  r = t("571658"),
+  r = t("491605"),
+  d = t("571658"),
   m = t("71216"),
   u = t("191735"),
   h = t("898260"),
@@ -41,7 +41,7 @@ function L(e) {
     size: n.ModalSize.SMALL,
     children: [(0, a.jsxs)(n.ModalContent, {
       className: M.modalContent,
-      children: [(0, a.jsx)(d.default, {
+      children: [(0, a.jsx)(r.default, {
         autoplay: !0,
         shouldAnimate: !o.default.useReducedMotion,
         importData: () => t.el("805888").then(t.t.bind(t, "805888", 19)),
@@ -84,7 +84,7 @@ function L(e) {
           className: M.divider
         }), (0, a.jsxs)("li", {
           className: M.listItem,
-          children: [(0, a.jsx)(r.default, {
+          children: [(0, a.jsx)(d.default, {
             className: M.smileIcon,
             height: "24",
             width: "24"

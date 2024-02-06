@@ -11,6 +11,6 @@ var n = s("568734"),
 function i(e, t, s, i) {
   let r = null == t ? void 0 : t.application_id;
   if (null == e || null == t || !(0, a.default)(t, l.ActivityFlags.JOIN) || null == r) return !1;
-  let o = i.getApplication(r);
-  return !(null == o || (0, n.hasFlag)(o.flags, l.ApplicationFlags.EMBEDDED)) && s.shouldShowEducation(r)
+  let u = i.getApplication(r);
+  return !(null == u || (0, n.hasFlag)(u.flags, l.ApplicationFlags.EMBEDDED)) && s.shouldShowEducation(r)
 }

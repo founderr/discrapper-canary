@@ -19,15 +19,15 @@ let d = (e, t) => {
       {
         explicitContentGuilds: d,
         explicitContentFriendDm: c,
-        explicitContentNonFriendDm: f
+        explicitContentNonFriendDm: m
       } = (0, u.useExplicitContentSettingOrDefault)(),
-      m = (0, l.default)([s.default], () => s.default.getFriendIDs().includes(t)),
+      f = (0, l.default)([s.default], () => s.default.getFriendIDs().includes(t)),
       h = (0, l.default)([i.default], () => i.default.getCurrentUser()),
       p = (0, l.default)([a.default], () => {
         let t = a.default.getChannel(e);
         return null != t && t.isPrivate()
       });
-    return !!n && null != h && h.id !== t && (p && m ? (0, o.getShouldObscureForSetting)(c) : p ? (0, o.getShouldObscureForSetting)(f) : (0, o.getShouldObscureForSetting)(d))
+    return !!n && null != h && h.id !== t && (p && f ? (0, o.getShouldObscureForSetting)(c) : p ? (0, o.getShouldObscureForSetting)(m) : (0, o.getShouldObscureForSetting)(d))
   },
   c = () => {
     let e = (0, r.useIsEligibleForExplicitMediaRedaction)(),

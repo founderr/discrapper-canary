@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return p
+    return f
   }
 });
 var a = l("37983");
@@ -24,14 +24,14 @@ let d = {
     let t, {
       game: s,
       guild: h,
-      skuId: p,
-      pid: f,
+      skuId: f,
+      pid: p,
       className: I,
       guildClassName: A,
       size: L = d.MEDIUM,
       ...m
     } = e;
-    if (null != p && (t = function(e) {
+    if (null != f && (t = function(e) {
         if (null == e) return null;
         switch (e) {
           case u.PremiumSubscriptionSKUs.GUILD:
@@ -46,7 +46,7 @@ let d = {
           default:
             return null
         }
-      }(p)), null != s && null == t && (t = s.getIconURL(function(e) {
+      }(f)), null != s && null == t && (t = s.getIconURL(function(e) {
         switch (e) {
           case d.XXSMALL:
             return 16;
@@ -61,7 +61,7 @@ let d = {
           default:
             return 80
         }
-      }(L))), null == (t = (0, i.default)(f, t)) && null != h) {
+      }(L))), null == (t = (0, i.default)(p, t)) && null != h) {
       let e = function(e) {
         switch (e) {
           case d.XSMALL:
@@ -92,4 +92,4 @@ let d = {
     })
   };
 h.Sizes = d;
-var p = h
+var f = h

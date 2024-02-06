@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("77078"),
   i = s("290381"),
   l = s("812204"),
-  o = s("685665"),
-  u = s("594098"),
+  u = s("685665"),
+  o = s("594098"),
   d = s("599110"),
   c = s("706922"),
   _ = s("830648"),
@@ -32,7 +32,7 @@ var a = s("37983"),
       {
         AnalyticsLocationProvider: g,
         analyticsLocations: C
-      } = (0, o.default)(l.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
+      } = (0, u.default)(l.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
       [P, O] = n.useState(!1);
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(r.AdvancedScrollerAuto, {
@@ -77,7 +77,7 @@ var a = s("37983"),
               children: (0, a.jsx)("div", {
                 className: m.bottomOfPageVisibilitySensor
               })
-            }), (0, a.jsx)(u.default, {
+            }), (0, a.jsx)(o.default, {
               src: N,
               className: m.bottomIllustration,
               width: 112,

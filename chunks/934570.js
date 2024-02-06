@@ -10,8 +10,8 @@ var n = s("414456"),
   r = s.n(n),
   i = s("446674"),
   l = s("77078"),
-  o = s("915639"),
-  u = s("521012"),
+  u = s("915639"),
+  o = s("521012"),
   d = s("909469"),
   c = s("485138"),
   _ = s("218435"),
@@ -23,9 +23,9 @@ var n = s("414456"),
     let {
       localizedPricingPromo: t,
       smallGap: s
-    } = e, n = t.countryCode, S = (0, i.useStateFromStores)([o.default], () => o.default.locale);
+    } = e, n = t.countryCode, S = (0, i.useStateFromStores)([u.default], () => u.default.locale);
     (0, c.useTrackLocalizedPricingPromoImpression)(T.AnalyticsSections.SETTINGS_PREMIUM_BANNER, n);
-    let R = (0, i.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()),
+    let R = (0, i.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()),
       {
         localizedPricingBannerHeader: A,
         localizedPricingBannerBody: m

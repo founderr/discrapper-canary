@@ -8,11 +8,11 @@ s.r(t), s.d(t, {
 var i = s("446674"),
   l = s("913144");
 
-function o() {
+function u() {
   n = {}, a = {}, r = new Set
 }
-o();
-class u extends i.default.Store {
+u();
+class o extends i.default.Store {
   getStatisticsForApplication(e) {
     return a[e]
   }
@@ -21,8 +21,8 @@ class u extends i.default.Store {
     return !r.has(e) && (null == t || Date.now() - t > 36e5)
   }
 }
-u.displayName = "ApplicationStatisticsStore";
-var d = new u(l.default, {
+o.displayName = "ApplicationStatisticsStore";
+var d = new o(l.default, {
   APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function(e) {
     let {
       applicationId: t
@@ -42,5 +42,5 @@ var d = new u(l.default, {
     } = e;
     n[s] = Date.now(), r.delete(s), a[s] = t
   },
-  LOGOUT: o
+  LOGOUT: u
 })

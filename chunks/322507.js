@@ -10,8 +10,8 @@ var n = s("414456"),
   r = s.n(n),
   i = s("448052"),
   l = s("77078"),
-  o = s("782340"),
-  u = s("16358"),
+  u = s("782340"),
+  o = s("16358"),
   d = s("460026"),
   c = e => {
     let {
@@ -19,31 +19,31 @@ var n = s("414456"),
       onBackClick: s
     } = e;
     return (0, a.jsxs)("div", {
-      className: r(u.container, t),
+      className: r(o.container, t),
       "data-testid": "all-perks-hero-header",
       children: [(0, a.jsx)("img", {
         src: d,
         alt: "",
-        className: u.headerArt
+        className: o.headerArt
       }), (0, a.jsxs)("div", {
-        className: u.containerInner,
+        className: o.containerInner,
         children: [(0, a.jsx)("div", {
-          className: u.backButtonContainer,
+          className: o.backButtonContainer,
           children: (0, a.jsxs)(l.Clickable, {
             onClick: s,
-            className: u.backButton,
+            className: o.backButton,
             children: [(0, a.jsx)(i.ChevronSmallLeftIcon, {
               color: "currentColor"
-            }), o.default.Messages.BACK]
+            }), u.default.Messages.BACK]
           })
         }), (0, a.jsx)("div", {
-          className: u.contentContainer,
+          className: o.contentContainer,
           children: (0, a.jsx)("div", {
-            className: u.content,
+            className: o.content,
             children: (0, a.jsx)(l.Heading, {
               variant: "display-lg",
               color: "always-white",
-              children: o.default.Messages.NITRO_HOME_ALL_YOUR_NITRO_PERKS
+              children: u.default.Messages.NITRO_HOME_ALL_YOUR_NITRO_PERKS
             })
           })
         })]

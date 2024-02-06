@@ -4,17 +4,17 @@ var n = {
   "./spritesheet-emoji-48.png": "958327"
 };
 
-function l(e) {
-  return i(s(e))
+function s(e) {
+  return i(l(e))
 }
 
-function s(e) {
+function l(e) {
   if (!i.o(n, e)) {
     var t = Error("Cannot find module '" + e + "'");
     throw t.code = "MODULE_NOT_FOUND", t
   }
   return n[e]
 }
-l.id = '"996542"', l.keys = function() {
+s.id = '"996542"', s.keys = function() {
   return Object.keys(n)
-}, l.resolve = s, e.exports = l
+}, s.resolve = l, e.exports = s

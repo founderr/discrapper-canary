@@ -6,11 +6,11 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var l = n("77078"),
-  r = n("79112"),
+var r = n("77078"),
+  l = n("79112"),
   a = n("792105"),
-  o = n("573240"),
-  s = n("170213"),
+  s = n("573240"),
+  o = n("170213"),
   u = n("49111"),
   c = n("782340"),
   d = n("581935"),
@@ -22,9 +22,9 @@ var l = n("77078"),
       classificationId: E,
       source: _
     } = e, S = (0, a.default)(), p = () => {
-      n(), r.default.open(u.UserSettingsSections.PRIVACY_AND_SAFETY, s.SafetyHubView.ACCOUNT_STANDING)
+      n(), l.default.open(u.UserSettingsSections.PRIVACY_AND_SAFETY, o.SafetyHubView.ACCOUNT_STANDING)
     };
-    return (0, i.jsxs)(l.ModalRoot, {
+    return (0, i.jsxs)(r.ModalRoot, {
       className: d.modalRoot,
       transitionState: t,
       children: [(0, i.jsxs)("div", {
@@ -33,22 +33,22 @@ var l = n("77078"),
           className: d.image,
           src: f,
           alt: ""
-        }), (0, i.jsx)(l.ModalCloseButton, {
+        }), (0, i.jsx)(r.ModalCloseButton, {
           className: d.modalClose,
           onClick: n
         })]
-      }), (0, i.jsx)(l.ModalContent, {
+      }), (0, i.jsx)(r.ModalContent, {
         className: d.modalContent,
-        children: S ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(o.default, {
+        children: S ? (0, i.jsx)(r.Spinner, {}) : (0, i.jsx)(s.default, {
           classificationId: E,
           source: _,
           onError: p
         })
-      }), (0, i.jsx)(l.ModalFooter, {
-        children: (0, i.jsx)(l.Button, {
+      }), (0, i.jsx)(r.ModalFooter, {
+        children: (0, i.jsx)(r.Button, {
           className: d.button,
           type: "button",
-          color: l.Button.Colors.BRAND,
+          color: r.Button.Colors.BRAND,
           onClick: p,
           children: c.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT
         })

@@ -18,8 +18,8 @@ var n = s("37983"),
   l = s("414456"),
   i = s.n(l),
   r = s("669491"),
-  o = s("77078"),
-  u = s("120027"),
+  u = s("77078"),
+  o = s("120027"),
   d = s("566998"),
   c = s("956089"),
   h = s("339792"),
@@ -36,14 +36,14 @@ function T(e) {
   let {
     channel: t,
     isNew: s
-  } = e, n = (0, f.useAppliedTags)(t), a = n.slice(void 0, 3), l = n.slice(3), i = n.length > 3 ? n.length - 3 : 0, r = t.hasFlag(g.ChannelFlags.PINNED), o = a.length > 0 || r || s, u = n.length > 0;
+  } = e, n = (0, f.useAppliedTags)(t), a = n.slice(void 0, 3), l = n.slice(3), i = n.length > 3 ? n.length - 3 : 0, r = t.hasFlag(g.ChannelFlags.PINNED), u = a.length > 0 || r || s, o = n.length > 0;
   return {
     shownTags: a,
     remainingTags: l,
     moreTagsCount: i,
     isPinned: r,
-    shouldRenderTagsRow: o,
-    forumPostContainsTags: u
+    shouldRenderTagsRow: u,
+    forumPostContainsTags: o
   }
 }
 
@@ -69,7 +69,7 @@ function N(e) {
     className: i(x.increasedActivityTags, r),
     children: [p && (0, n.jsx)("div", {
       className: v.pinIcon,
-      children: (0, n.jsx)(o.Tooltip, {
+      children: (0, n.jsx)(u.Tooltip, {
         text: S.default.Messages.PINNED_POST,
         children: e => (0, n.jsx)(d.default, {
           ...e,
@@ -85,7 +85,7 @@ function N(e) {
         className: i(l, {
           [x.tagFiltered]: E.has(e.id)
         })
-      }), (t < c.length - 1 || g > 0) && (0, n.jsx)(u.default, {
+      }), (t < c.length - 1 || g > 0) && (0, n.jsx)(o.default, {
         height: 4,
         width: 4,
         "aria-hidden": "true",
@@ -106,7 +106,7 @@ function E(e) {
     tagsClassName: a,
     className: l
   } = e, {
-    shownTags: u,
+    shownTags: o,
     remainingTags: f,
     moreTagsCount: g,
     isPinned: v,
@@ -125,7 +125,7 @@ function E(e) {
       text: S.default.Messages.NEW
     }) : null, v && (0, n.jsx)("div", {
       className: x.pinIcon,
-      children: (0, n.jsx)(o.Tooltip, {
+      children: (0, n.jsx)(u.Tooltip, {
         text: S.default.Messages.PINNED_POST,
         children: e => (0, n.jsx)(d.default, {
           ...e,
@@ -134,7 +134,7 @@ function E(e) {
           color: "white"
         })
       })
-    }), u.map(e => (0, n.jsx)(m.default, {
+    }), o.map(e => (0, n.jsx)(m.default, {
       tag: e,
       size: m.default.Sizes.SMALL,
       className: i(a, {

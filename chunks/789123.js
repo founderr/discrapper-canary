@@ -143,7 +143,7 @@ function x() {
   });
   let u = null != t && null == t.getFirstFieldErrorMessage("name") && null == t.getFirstFieldErrorMessage("description");
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(v, {}), (0, a.jsx)(j, {
+    children: [(0, a.jsx)(v, {}), (0, a.jsx)(P, {
       guild: e,
       guildTemplate: r
     }), u ? (0, a.jsx)(c.Text, {
@@ -265,12 +265,12 @@ function v() {
   })
 }
 
-function j(e) {
+function P(e) {
   let {
     guild: t,
     guildTemplate: s
   } = e;
-  return null == s ? (0, a.jsx)(P, {
+  return null == s ? (0, a.jsx)(j, {
     guild: t
   }) : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(c.FormItem, {
@@ -308,7 +308,7 @@ function j(e) {
   })
 }
 
-function P(e) {
+function j(e) {
   var t;
   let {
     guild: s

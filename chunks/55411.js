@@ -1,45 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return U
   }
 }), n("222007");
 var i = n("917351"),
-  s = n.n(i),
-  l = n("866227"),
-  r = n.n(l),
+  l = n.n(i),
+  s = n("866227"),
+  r = n.n(s),
   a = n("446674"),
   u = n("862337"),
-  o = n("913144"),
-  d = n("569272"),
+  d = n("913144"),
+  o = n("569272"),
   c = n("560208"),
   E = n("671484"),
   f = n("659632"),
   _ = n("49111");
-let p = {},
-  S = {},
+let S = {},
+  p = {},
   h = [],
   m = [],
   C = [],
   I = new Set,
   g = {},
   R = {},
-  T = new Set;
+  v = new Set;
 
-function A(e) {
+function T(e) {
   let t = E.default.createFromServer(e),
     n = t.code;
-  if (null != S[n]) S[n] = S[n].merge(t);
-  else if (S[n] = t, null != t.expiresAt) {
+  if (null != p[n]) p[n] = p[n].merge(t);
+  else if (p[n] = t, null != t.expiresAt) {
     let e = new u.Timeout;
-    p[n] = e,
+    S[n] = e,
       function e(t) {
-        let n = S[t];
+        let n = p[t];
         if (null == n || null == n.expiresAt) return;
         let i = n.expiresAt.valueOf() - r().valueOf();
-        if (i <= 0) delete S[t], delete p[t], U.emitChange();
+        if (i <= 0) delete p[t], delete S[t], x.emitChange();
         else {
-          let n = p[t];
+          let n = S[t];
           if (null == n) return;
           n.start(Math.min(2147483647, i), () => e(t))
         }
@@ -47,18 +47,18 @@ function A(e) {
   }
 }
 
-function O(e) {
+function A(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  if (t && !T.has(e.channel_id)) return !1;
+  if (t && !v.has(e.channel_id)) return !1;
   let n = (0, f.isGiftCodeEmbed)(e) ? (0, f.findGiftCodes)((null == e ? void 0 : e.embeds) != null ? null == e ? void 0 : e.embeds[0].url : void 0) : (0, f.findGiftCodes)(e.content);
   return 0 !== n.length && (n.forEach(e => {
-    !h.includes(e) && !C.includes(e) && (v({
+    !h.includes(e) && !C.includes(e) && (O({
       code: e
-    }), o.default.wait(() => d.default.resolveGiftCode(e, !1, !0).catch(_.NOOP_NULL)))
+    }), d.default.wait(() => o.default.resolveGiftCode(e, !1, !0).catch(_.NOOP_NULL)))
   }), !1)
 }
 
-function v(e) {
+function O(e) {
   let {
     code: t
   } = e;
@@ -69,7 +69,7 @@ function N(e) {
   let {
     message: t
   } = e;
-  return O(t, !0)
+  return A(t, !0)
 }
 
 function D(e) {
@@ -77,7 +77,7 @@ function D(e) {
     channelId: t,
     messages: n
   } = e;
-  T.add(t), n.forEach(e => O(e, !0))
+  v.add(t), n.forEach(e => A(e, !0))
 }
 
 function b(e) {
@@ -85,18 +85,18 @@ function b(e) {
     firstMessages: t
   } = e;
   if (null == t) return !1;
-  null == t || t.forEach(e => O(e))
+  null == t || t.forEach(e => A(e))
 }
 class L extends a.default.Store {
   get(e) {
-    let t = S[e];
+    let t = p[e];
     return null == t || t.isExpired() ? null : t
   }
   getError(e) {
     return null != e ? R[e] : null
   }
   getForGifterSKUAndPlan(e, t, n) {
-    return s.values(S).filter(i => i.userId === e && i.skuId === t && (null == n || i.subscriptionPlanId === n) && !i.isExpired())
+    return l.values(p).filter(i => i.userId === e && i.skuId === t && (null == n || i.subscriptionPlanId === n) && !i.isExpired())
   }
   getIsResolving(e) {
     return h.includes(e)
@@ -124,22 +124,22 @@ class L extends a.default.Store {
   }
 }
 L.displayName = "GiftCodeStore";
-let U = new L(o.default, {
+let x = new L(d.default, {
   CONNECTION_OPEN: function() {
-    return T.clear(), !1
+    return v.clear(), !1
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return null != t && T.add(t), !1
+    return null != t && v.add(t), !1
   },
-  GIFT_CODE_RESOLVE: v,
+  GIFT_CODE_RESOLVE: O,
   GIFT_CODE_RESOLVE_SUCCESS: function(e) {
     let {
       giftCode: t
     } = e;
-    return h = h.filter(e => e !== t.code), !C.includes(t.code) && (C = [...C, t.code]), A(t)
+    return h = h.filter(e => e !== t.code), !C.includes(t.code) && (C = [...C, t.code]), T(t)
   },
   GIFT_CODE_RESOLVE_FAILURE: function(e) {
     let {
@@ -158,8 +158,8 @@ let U = new L(o.default, {
       code: t
     } = e;
     m = m.filter(e => e !== t);
-    let n = S[t];
-    null != n && (S[t] = n.merge({
+    let n = p[t];
+    null != n && (p[t] = n.merge({
       redeemed: !0,
       uses: n.uses + 1
     }))
@@ -170,28 +170,28 @@ let U = new L(o.default, {
       error: n
     } = e;
     m = m.filter(e => e !== t);
-    let i = S[t];
+    let i = p[t];
     if (R[t] = n, null != i) switch (n.code) {
       case _.AbortCodes.UNKNOWN_GIFT_CODE:
-        S[t] = i.set("revoked", !0);
+        p[t] = i.set("revoked", !0);
         break;
       case _.AbortCodes.INVALID_GIFT_REDEMPTION_EXHAUSTED:
-        S[t] = i.set("uses", i.maxUses)
+        p[t] = i.set("uses", i.maxUses)
     }
   },
   GIFT_CODE_REVOKE_SUCCESS: function(e) {
     let {
       code: t
     } = e;
-    delete S[t];
-    let n = p[t];
-    null != n && (n.stop(), delete p[t]), !C.includes(t) && (C = [...C, t])
+    delete p[t];
+    let n = S[t];
+    null != n && (n.stop(), delete S[t]), !C.includes(t) && (C = [...C, t])
   },
   GIFT_CODE_CREATE_SUCCESS: function(e) {
     let {
       giftCode: t
     } = e;
-    A(t)
+    T(t)
   },
   GIFT_CODES_FETCH: function(e) {
     let {
@@ -206,9 +206,9 @@ let U = new L(o.default, {
       skuId: n,
       subscriptionPlanId: i
     } = e;
-    t.forEach(A);
-    let s = (0, f.makeComboId)(n, i);
-    g[s] = Date.now(), I.delete(s)
+    t.forEach(T);
+    let l = (0, f.makeComboId)(n, i);
+    g[l] = Date.now(), I.delete(l)
   },
   GIFT_CODES_FETCH_FAILURE: function(e) {
     let {
@@ -226,31 +226,31 @@ let U = new L(o.default, {
     let {
       messages: t
     } = e;
-    t.forEach(e => O(e))
+    t.forEach(e => A(e))
   },
   LOAD_PINNED_MESSAGES_SUCCESS: function(e) {
     let {
       messages: t
     } = e;
-    t.forEach(e => O(e))
+    t.forEach(e => A(e))
   },
   SEARCH_FINISH: function(e) {
     e.messages.forEach(e => {
-      e.forEach(e => O(e))
+      e.forEach(e => A(e))
     })
   },
   GIFT_CODE_UPDATE: function(e) {
     let {
       uses: t,
       code: n
-    } = e, i = S[n];
-    null != i && (S[n] = i.set("uses", Math.max(i.uses, t)))
+    } = e, i = p[n];
+    null != i && (p[n] = i.set("uses", Math.max(i.uses, t)))
   },
   GUILD_FEED_FETCH_SUCCESS: function(e) {
     let {
       data: t
     } = e;
-    (0, c.getMessagesFromGuildFeedFetch)(t).forEach(e => O(e))
+    (0, c.getMessagesFromGuildFeedFetch)(t).forEach(e => A(e))
   },
   LOAD_THREADS_SUCCESS: b,
   LOAD_ARCHIVED_THREADS_SUCCESS: b,
@@ -262,8 +262,8 @@ let U = new L(o.default, {
       let {
         first_message: t
       } = e;
-      return null != t && O(t)
+      return null != t && A(t)
     })
   }
 });
-var x = U
+var U = x

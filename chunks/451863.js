@@ -22,8 +22,8 @@ var n, a, s = l("37983"),
   _ = l("305961"),
   p = l("42887"),
   I = l("568307"),
-  x = l("18494"),
-  v = l("697218"),
+  v = l("18494"),
+  x = l("697218"),
   A = l("703370"),
   R = l("145131"),
   T = l("476765"),
@@ -57,8 +57,8 @@ function B(e) {
     preset: X,
     resolution: Q,
     fps: q
-  } = (0, d.useStateFromStoresObject)([N.default], () => N.default.getState()), $ = (0, d.useStateFromStores)([x.default, g.default], () => g.default.getChannel(x.default.getVoiceChannelId())), ee = (0, d.useStateFromStores)([I.default, A.default], () => (0, M.isWindows)() ? (0, P.default)(I.default, A.default) : null), et = (0, d.useStateFromStores)([v.default], () => {
-    let e = v.default.getCurrentUser();
+  } = (0, d.useStateFromStoresObject)([N.default], () => N.default.getState()), $ = (0, d.useStateFromStores)([v.default, g.default], () => g.default.getChannel(v.default.getVoiceChannelId())), ee = (0, d.useStateFromStores)([I.default, A.default], () => (0, M.isWindows)() ? (0, P.default)(I.default, A.default) : null), et = (0, d.useStateFromStores)([x.default], () => {
+    let e = x.default.getCurrentUser();
     return u(null != e, "GoLiveModal: user cannot be undefined"), e
   }), el = null !== (t = null == $ ? void 0 : $.getGuildId()) && void 0 !== t ? t : Z, en = (0, d.useStateFromStores)([_.default], () => {
     var e;
@@ -66,7 +66,7 @@ function B(e) {
   }), [ea, es] = null !== (n = (0, D.default)(X, et, en)) && void 0 !== n ? n : [w.ApplicationStreamResolutions.RESOLUTION_720, w.ApplicationStreamFPS.FPS_30];
   X !== w.ApplicationStreamPresets.PRESET_CUSTOM && (Q = ea, q = es);
   let er = (0, T.useUID)();
-  let [ei, eu] = r.useState((i = W, B = z, i ? 0 : B ? 1 : 2)), [eo, ed] = r.useState(null), [ec, ef] = r.useState(!1), [em, eS] = r.useState(null), [eC, eE] = r.useState(null), [eh, eN] = r.useState(null), [eg, e_] = r.useState(X), [ep, eI] = r.useState(Q), [ex, ev] = r.useState(q), [eA, eR] = r.useState(!0), [eT, eL] = r.useState(null != Z ? Z : null), eM = null !== (a = null == $ ? void 0 : $.id) && void 0 !== a ? a : em;
+  let [ei, eu] = r.useState((i = W, B = z, i ? 0 : B ? 1 : 2)), [eo, ed] = r.useState(null), [ec, ef] = r.useState(!1), [em, eS] = r.useState(null), [eC, eE] = r.useState(null), [eh, eN] = r.useState(null), [eg, e_] = r.useState(X), [ep, eI] = r.useState(Q), [ev, ex] = r.useState(q), [eA, eR] = r.useState(!0), [eT, eL] = r.useState(null != Z ? Z : null), eM = null !== (a = null == $ ? void 0 : $.id) && void 0 !== a ? a : em;
   r.useEffect(() => {
     let e = (0, M.isWindows)() ? (0, P.default)(I.default, A.default) : null,
       t = (null == e ? void 0 : e.id) != null ? E.default.getApplication(e.id) : null;
@@ -90,7 +90,7 @@ function B(e) {
       null == $ && m.default.selectVoiceChannel(l);
       let s = eg,
         r = ep,
-        i = ex;
+        i = ev;
       !(0, O.default)(s, r, i, et, en) && (s = w.ApplicationStreamPresets.PRESET_VIDEO, r = w.ApplicationStreamResolutions.RESOLUTION_720, i = w.ApplicationStreamFPS.FPS_30), (0, S.updateStreamSettings)({
         preset: s,
         resolution: r,
@@ -123,8 +123,8 @@ function B(e) {
       let [e, n] = (0, D.default)(w.ApplicationStreamPresets.PRESET_VIDEO, et, en);
       t = e, l = n
     }
-    l !== ex && ev(l), t !== ep && eI(t), a !== t || s !== l ? e_(w.ApplicationStreamPresets.PRESET_CUSTOM) : e !== eg && e_(e)
-  }, [et, en, ex, ep, eg]);
+    l !== ev && ex(l), t !== ep && eI(t), a !== t || s !== l ? e_(w.ApplicationStreamPresets.PRESET_CUSTOM) : e !== eg && e_(e)
+  }, [et, en, ev, ep, eg]);
   async function eD(e) {
     if (e.preventDefault(), 1 === ei) return eu(2);
     let t = (0, U.default)(ee, eC, I.default.getRunningGames()),
@@ -236,13 +236,13 @@ function B(e) {
             selectedPreset: eg,
             selectedResolution: ep,
             selectedSource: eC,
-            selectedFPS: ex,
+            selectedFPS: ev,
             sound: eA,
             sourceChanged: ec,
             selectSource: z,
             onChangeSelectedFPS: e => eO(eg, ep, e),
-            onChangeSelectedResolution: e => eO(eg, e, ex),
-            onChangeSelectedPreset: e => eO(e, ep, ex),
+            onChangeSelectedResolution: e => eO(eg, e, ev),
+            onChangeSelectedPreset: e => eO(e, ep, ev),
             onChangeSelectedChannelId: eS,
             onChangeSelectedSource: eP,
             onChangeSource: () => eu(1),

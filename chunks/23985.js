@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("414456"),
   i = s.n(r),
   l = s("446674"),
-  o = s("1017"),
-  u = s("102985"),
+  u = s("1017"),
+  o = s("102985"),
   d = s("697218"),
   c = s("71010"),
   _ = s("552712"),
@@ -73,13 +73,13 @@ class m extends n.Component {
     })
   }
 }
-var N = l.default.connectStores([_.default, d.default, E.default, o.default, c.default, u.default], e => {
+var N = l.default.connectStores([_.default, d.default, E.default, u.default, c.default, o.default], e => {
   let {
     sku: t
   } = e;
   return {
-    socialReasons: (0, T.getSocialRecommendationReasons)(t.id, _.default, d.default, o.default, c.default),
+    socialReasons: (0, T.getSocialRecommendationReasons)(t.id, _.default, d.default, u.default, c.default),
     nonSocialReasons: (0, T.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
-    hidePersonalInformation: u.default.hidePersonalInformation
+    hidePersonalInformation: o.default.hidePersonalInformation
   }
 })(m)

@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return Y
   }
 }), s("222007"), s("424973");
-var i, l, n = s("37983"),
+var i, n, l = s("37983"),
   a = s("884691"),
   r = s("917351"),
   d = s.n(r),
@@ -25,8 +25,8 @@ var i, l, n = s("37983"),
   p = s("308305"),
   C = s("319165"),
   O = s("233069"),
-  M = s("42203"),
-  v = s("245997"),
+  v = s("42203"),
+  M = s("245997"),
   L = s("525065"),
   A = s("305961"),
   j = s("27618"),
@@ -41,7 +41,7 @@ var i, l, n = s("37983"),
   H = s("468200"),
   y = s("782340"),
   k = s("296884");
-(l = i || (i = {})).MUTED = "muted", l.MESSAGE_NOTIFICATIONS = "message_notifications", l.SUPPRESS_EVERYONE = "suppress_everyone", l.SUPPRESS_ROLES = "suppress_roles", l.MOBILE_PUSH = "mobile_push", l.MUTE_EVENTS = "mute_scheduled_events", l.NOTIFY_HIGHLIGHTS = "notify_highlights";
+(n = i || (i = {})).MUTED = "muted", n.MESSAGE_NOTIFICATIONS = "message_notifications", n.SUPPRESS_EVERYONE = "suppress_everyone", n.SUPPRESS_ROLES = "suppress_roles", n.MOBILE_PUSH = "mobile_push", n.MUTE_EVENTS = "mute_scheduled_events", n.NOTIFY_HIGHLIGHTS = "notify_highlights";
 class B extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
@@ -60,8 +60,8 @@ class B extends a.PureComponent {
     if (null != this._scroller && null != i && s !== t.lastSelected) {
       let e = (0, c.findDOMNode)(i);
       if (null != this._scroller && (0, h.isElement)(e, HTMLElement)) {
-        var l;
-        null === (l = this._scroller) || void 0 === l || l.scrollIntoViewNode({
+        var n;
+        null === (n = this._scroller) || void 0 === n || n.scrollIntoViewNode({
           node: e,
           animate: !0,
           padding: 20,
@@ -97,27 +97,27 @@ class B extends a.PureComponent {
     let {
       guild: e
     } = this.props;
-    return null == e ? null : (0, n.jsxs)(g.ModalHeader, {
-      children: [(0, n.jsxs)(G.default.Child, {
-        children: [(0, n.jsx)(g.Heading, {
+    return null == e ? null : (0, l.jsxs)(g.ModalHeader, {
+      children: [(0, l.jsxs)(G.default.Child, {
+        children: [(0, l.jsx)(g.Heading, {
           variant: "heading-lg/semibold",
           children: y.default.Messages.NOTIFICATION_SETTINGS
-        }), (0, n.jsx)(g.Text, {
+        }), (0, l.jsx)(g.Text, {
           variant: "text-md/normal",
           className: k.guildName,
           children: e.name
         })]
-      }), (0, n.jsx)(G.default.Child, {
+      }), (0, l.jsx)(G.default.Child, {
         grow: 0,
-        children: (0, n.jsx)(g.ModalCloseButton, {
+        children: (0, l.jsx)(g.ModalCloseButton, {
           onClick: this.props.onClose
         })
       })]
     })
   }
   renderFooter() {
-    return (0, n.jsx)(g.ModalFooter, {
-      children: (0, n.jsx)(g.Button, {
+    return (0, l.jsx)(g.ModalFooter, {
+      children: (0, l.jsx)(g.Button, {
         onClick: this.props.onClose,
         children: y.default.Messages.DONE
       })
@@ -129,10 +129,10 @@ class B extends a.PureComponent {
       muted: t,
       muteConfig: s,
       guild: i
-    } = this.props, l = null !== (e = null == s ? void 0 : s.selected_time_window) && void 0 !== e ? e : H.MuteUntilSeconds.ALWAYS;
-    return null == i ? null : (0, n.jsxs)(g.FormItem, {
+    } = this.props, n = null !== (e = null == s ? void 0 : s.selected_time_window) && void 0 !== e ? e : H.MuteUntilSeconds.ALWAYS;
+    return null == i ? null : (0, l.jsxs)(g.FormItem, {
       className: k.largeSpacing,
-      children: [(0, n.jsx)(g.FormSwitch, {
+      children: [(0, l.jsx)(g.FormSwitch, {
         hideBorder: !0,
         value: t,
         onChange: e => this.handleCheckboxChange("muted", e, P.NotificationLabel.muted(e)),
@@ -140,27 +140,27 @@ class B extends a.PureComponent {
         children: y.default.Messages.FORM_LABEL_MUTE_SERVER.format({
           name: i.name
         })
-      }), t ? (0, n.jsxs)(G.default, {
+      }), t ? (0, l.jsxs)(G.default, {
         className: k.spacing,
         align: G.default.Align.CENTER,
-        children: [(0, n.jsxs)(G.default, {
+        children: [(0, l.jsxs)(G.default, {
           direction: G.default.Direction.VERTICAL,
           className: k.muteUntilTextWrapper,
-          children: [(0, n.jsx)(g.FormTitle, {
+          children: [(0, l.jsx)(g.FormTitle, {
             tag: "h3",
             className: k.muteUntilTitle,
             children: y.default.Messages.MUTE_UNTIL
-          }), (0, n.jsx)(C.default, {
+          }), (0, l.jsx)(C.default, {
             className: k.muteUntilText,
             muteConfig: s
           })]
-        }), (0, n.jsx)(g.SingleSelect, {
+        }), (0, l.jsx)(g.SingleSelect, {
           className: k.muteTimeSelector,
           options: (0, x.getMuteTimeOptions)(),
-          value: l,
+          value: n,
           onChange: this.handleSelectMuteTime
         })]
-      }) : null, (0, n.jsx)(g.FormDivider, {})]
+      }) : null, (0, l.jsx)(g.FormDivider, {})]
     })
   }
   renderServerSettings() {
@@ -170,12 +170,12 @@ class B extends a.PureComponent {
       muted: s,
       memberCount: i
     } = this.props;
-    return (0, n.jsxs)("div", {
+    return (0, l.jsxs)("div", {
       className: k.spacing,
-      children: [(0, n.jsx)(g.FormItem, {
+      children: [(0, l.jsx)(g.FormItem, {
         title: y.default.Messages.FORM_LABEL_SERVER_NOTIFICATION_SETTINGS,
         className: k.largeSpacing,
-        children: (0, n.jsx)(g.RadioGroup, {
+        children: (0, l.jsx)(g.RadioGroup, {
           disabled: s,
           value: t,
           onChange: e => this.handleRadioChange("message_notifications", e, P.NotificationLabel.notifications(e.value)),
@@ -191,7 +191,7 @@ class B extends a.PureComponent {
             value: w.UserNotificationSettings.NO_MESSAGES
           }])
         })
-      }), (0, n.jsx)(g.FormDivider, {})]
+      }), (0, l.jsx)(g.FormDivider, {})]
     })
   }
   renderNotificationOptions() {
@@ -200,21 +200,21 @@ class B extends a.PureComponent {
       suppressRoles: t,
       mobilePush: s,
       muted: i,
-      muteEvents: l,
+      muteEvents: n,
       notifyHighlights: a,
       guildId: r
     } = this.props;
-    return (0, n.jsxs)(g.FormItem, {
+    return (0, l.jsxs)(g.FormItem, {
       className: k.largeSpacing,
-      children: [(0, n.jsx)(g.FormSwitch, {
+      children: [(0, l.jsx)(g.FormSwitch, {
         onChange: e => this.handleCheckboxChange("suppress_everyone", e, P.NotificationLabel.suppressEveryone(e)),
         value: e,
         children: y.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format()
-      }), (0, n.jsx)(g.FormSwitch, {
+      }), (0, l.jsx)(g.FormSwitch, {
         onChange: e => this.handleCheckboxChange("suppress_roles", e, P.NotificationLabel.suppressRoles(e)),
         value: t,
         children: y.default.Messages.FORM_LABEL_SUPPRESS_ROLES
-      }), (0, n.jsx)(g.FormSwitch, {
+      }), (0, l.jsx)(g.FormSwitch, {
         onChange: e => {
           S.default.updateGuildNotificationSettings(r, {
             notify_highlights: e ? w.HighlightSettings.DISABLED : w.HighlightSettings.ENABLED
@@ -222,26 +222,26 @@ class B extends a.PureComponent {
         },
         value: i || a === w.HighlightSettings.DISABLED,
         disabled: i,
-        note: (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)(g.Text, {
+        note: (0, l.jsxs)(l.Fragment, {
+          children: [(0, l.jsx)(g.Text, {
             variant: "text-sm/normal",
             children: y.default.Messages.HIGHLIGHTS_NOTE_SUBTEXT
-          }), (0, n.jsx)("div", {
+          }), (0, l.jsx)("div", {
             className: k.highlightsLink,
-            children: (0, n.jsx)(g.Anchor, {
+            children: (0, l.jsx)(g.Anchor, {
               href: D.default.getArticleURL(w.HelpdeskArticles.HIGHLIGHTS),
               children: y.default.Messages.HIGHLIGHTS_LEARN_MORE
             })
           })]
         }),
-        children: (0, n.jsx)(n.Fragment, {
+        children: (0, l.jsx)(l.Fragment, {
           children: y.default.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS
         })
-      }), (0, n.jsx)(g.FormSwitch, {
-        value: l,
+      }), (0, l.jsx)(g.FormSwitch, {
+        value: n,
         onChange: e => this.handleCheckboxChange("mute_scheduled_events", e, P.NotificationLabel.mutedEvents(e)),
         children: y.default.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS
-      }), (0, n.jsx)(g.FormSwitch, {
+      }), (0, l.jsx)(g.FormSwitch, {
         value: !i && s,
         disabled: i,
         onChange: e => this.handleCheckboxChange("mobile_push", e, P.NotificationLabel.mobilePush(e)),
@@ -267,14 +267,14 @@ class B extends a.PureComponent {
         label: (0, T.computeChannelName)(t, b.default, j.default)
       }
     }).value();
-    return (0, n.jsxs)(g.FormItem, {
+    return (0, l.jsxs)(g.FormItem, {
       title: y.default.Messages.NOTIFICATION_OVERRIDES,
       className: k.largeSpacing,
-      children: [(0, n.jsx)(g.FormText, {
+      children: [(0, l.jsx)(g.FormText, {
         type: g.FormText.Types.DESCRIPTION,
         className: k.smallSpacing,
         children: y.default.Messages.ADD_CHANNEL_TO_OVERRIDE
-      }), (0, n.jsx)(g.SearchableSelect, {
+      }), (0, l.jsx)(g.SearchableSelect, {
         value: "",
         placeholder: y.default.Messages.SELECT_CHANNEL_OR_CATEGORY,
         renderOptionLabel: this.renderOptionLabel,
@@ -289,7 +289,7 @@ class B extends a.PureComponent {
       muted: t,
       channels: s,
       messageNotifications: i,
-      categories: l,
+      categories: n,
       checkboxColor: a
     } = this.props, {
       overrides: r
@@ -297,9 +297,9 @@ class B extends a.PureComponent {
       let {
         channel: d
       } = s;
-      if (!r.has(d.id) || null != l[d.id] && 0 === l[d.id].length) return null;
+      if (!r.has(d.id) || null != n[d.id] && 0 === n[d.id].length) return null;
       let o = e[d.id];
-      return (0, n.jsx)(p.ChannelNotificationSettings, {
+      return (0, l.jsx)(p.ChannelNotificationSettings, {
         ref: e => {
           this._channelRefs[d.id] = e
         },
@@ -312,39 +312,39 @@ class B extends a.PureComponent {
         checkboxColor: a
       }, d.id)
     }).filter(F.isNotNullish);
-    return (0 === r.size || 0 === d.length) && d.push((0, n.jsx)("div", {
+    return (0 === r.size || 0 === d.length) && d.push((0, l.jsx)("div", {
       className: k.overridePlaceholder,
-      children: (0, n.jsx)(g.Text, {
+      children: (0, l.jsx)(g.Text, {
         className: k.overrideHeader,
         variant: "text-sm/semibold",
         children: y.default.Messages.ADD_CHANNEL_TO_OVERRIDE
       })
-    }, "placeholder")), (0, n.jsxs)("div", {
+    }, "placeholder")), (0, l.jsxs)("div", {
       className: k.overrideList,
-      children: [(0, n.jsxs)(G.default, {
-        children: [(0, n.jsx)(g.Heading, {
+      children: [(0, l.jsxs)(G.default, {
+        children: [(0, l.jsx)(g.Heading, {
           variant: "eyebrow",
           className: k.headerName,
           children: y.default.Messages.CHANNEL_OR_CATEGORY
-        }), (0, n.jsx)(g.Heading, {
+        }), (0, l.jsx)(g.Heading, {
           variant: "eyebrow",
           className: k.headerOption,
           children: y.default.Messages.FORM_LABEL_ALL
-        }), (0, n.jsx)(g.Heading, {
+        }), (0, l.jsx)(g.Heading, {
           variant: "eyebrow",
           className: k.headerOption,
           children: y.default.Messages.FORM_LABEL_MENTIONS
-        }), (0, n.jsx)(g.Heading, {
+        }), (0, l.jsx)(g.Heading, {
           variant: "eyebrow",
           className: k.headerOption,
           children: y.default.Messages.FORM_LABEL_NOTHING
-        }), (0, n.jsx)(g.Heading, {
+        }), (0, l.jsx)(g.Heading, {
           variant: "eyebrow",
           className: k.headerOption,
-          children: (0, n.jsx)(g.Tooltip, {
+          children: (0, l.jsx)(g.Tooltip, {
             text: y.default.Messages.FORM_LABEL_MUTE_SERVER_DESCRIPTION,
             position: "bottom",
-            children: e => (0, n.jsx)("span", {
+            children: e => (0, l.jsx)("span", {
               ...e,
               children: y.default.Messages.SOUND_MUTE
             })
@@ -354,11 +354,11 @@ class B extends a.PureComponent {
     })
   }
   render() {
-    return (0, n.jsxs)(g.ModalRoot, {
+    return (0, l.jsxs)(g.ModalRoot, {
       "aria-label": y.default.Messages.NOTIFICATION_SETTINGS,
       size: g.ModalSize.MEDIUM,
       transitionState: this.props.transitionState,
-      children: [this.renderHeader(), (0, n.jsxs)(g.ModalContent, {
+      children: [this.renderHeader(), (0, l.jsxs)(g.ModalContent, {
         scrollerRef: this.setScrollerRef,
         children: [this.renderMute(), this.renderServerSettings(), this.renderNotificationOptions(), this.renderOverrideSelect(), this.renderChannelNotifications()]
       }), this.renderFooter()]
@@ -397,11 +397,11 @@ class B extends a.PureComponent {
         overrides: t
       })
     }, this.renderOptionLabel = e => {
-      let t = M.default.getChannel(e.value);
+      let t = v.default.getChannel(e.value);
       if (null == t) return e.label;
-      let s = M.default.getChannel(t.parent_id),
+      let s = v.default.getChannel(t.parent_id),
         i = null != s ? s.name : null;
-      return (0, n.jsx)(U.default, {
+      return (0, l.jsx)(U.default, {
         icon: (0, _.getChannelIconComponent)(t),
         title: e.label,
         subtitle: i
@@ -414,8 +414,8 @@ function V(e) {
   let {
     guildId: t,
     ...s
-  } = e, i = (0, N.useStateFromStoresObject)([v.default, A.default, L.default, R.default], () => {
-    let e = v.default.getCategories(t);
+  } = e, i = (0, N.useStateFromStoresObject)([M.default, A.default, L.default, R.default], () => {
+    let e = M.default.getCategories(t);
     return {
       guildId: t,
       categories: e,
@@ -439,18 +439,18 @@ function V(e) {
       }),
       notifyHighlights: R.default.getNotifyHighlights(t)
     }
-  }), l = (0, g.useToken)(f.default.unsafe_rawColors.GREEN_360).hex();
-  return (0, n.jsx)(B, {
+  }), n = (0, g.useToken)(f.default.unsafe_rawColors.GREEN_360).hex();
+  return (0, l.jsx)(B, {
     ...i,
     ...s,
-    checkboxColor: l
+    checkboxColor: n
   })
 }
 
 function Y(e) {
   let t = (0, x.useShouldUseNewNotificationSystem)("NotificationSettingsModal"),
     s = t ? I.default : V;
-  return (0, n.jsx)(s, {
+  return (0, l.jsx)(s, {
     ...e
   })
 }

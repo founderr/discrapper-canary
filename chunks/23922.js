@@ -24,8 +24,8 @@ var n = l("37983"),
   _ = l("756898"),
   p = l("375202"),
   I = l("321443"),
-  x = l("444276"),
-  v = l("353927"),
+  v = l("444276"),
+  x = l("353927"),
   A = l("782340"),
   R = l("45122");
 async function T() {
@@ -100,7 +100,7 @@ function j(e) {
     enableGoLiveCaptureCard: s
   } = g.default.useExperiment({
     location: "GoLive_Source_Select"
-  }), i = m.default.supports(v.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [S, C] = a.useState(null), [N, _] = a.useState(null), p = null != N && N.length > 0, [L, M] = a.useState(u.DesktopSources.WINDOW), [j, O] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
+  }), i = m.default.supports(x.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [S, C] = a.useState(null), [N, _] = a.useState(null), p = null != N && N.length > 0, [L, M] = a.useState(u.DesktopSources.WINDOW), [j, O] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
   a.useEffect(() => {
     let e = P.current;
     return T().then(e => {
@@ -152,7 +152,7 @@ function j(e) {
         [R.selected]: s
       }),
       onClick: () => l(e, null),
-      children: (0, n.jsx)(x.default, {
+      children: (0, n.jsx)(v.default, {
         source: e,
         selectedSource: t
       }, e.id)

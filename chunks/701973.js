@@ -36,8 +36,8 @@ var a, n, l = s("37983"),
   p = s("577357"),
   U = s("880993"),
   v = s("833531"),
-  j = s("559979"),
-  P = s("49111"),
+  P = s("559979"),
+  j = s("49111"),
   y = s("782340"),
   b = s("943134");
 let B = (0, C.uid)(),
@@ -143,7 +143,7 @@ function k(e) {
         children: [(0, l.jsx)(I.Text, {
           color: "header-primary",
           variant: "text-md/semibold",
-          children: (0, j.default)(e)
+          children: (0, P.default)(e)
         }), (0, l.jsx)(I.Text, {
           color: "interactive-normal",
           variant: "text-sm/normal",
@@ -244,7 +244,7 @@ function K(e) {
       children: null != r ? (0, l.jsx)(G.default, {
         ...r
       }) : (0, l.jsx)(M.default, {
-        color: null !== (t = a.colorString) && void 0 !== t ? t : (0, c.int2hex)(P.DEFAULT_ROLE_COLOR),
+        color: null !== (t = a.colorString) && void 0 !== t ? t : (0, c.int2hex)(j.DEFAULT_ROLE_COLOR),
         className: b.roleRowIconDefault
       })
     }), (0, l.jsxs)("div", {
@@ -286,7 +286,7 @@ function W(e) {
     return t
   })), [a]), r = i.useMemo(() => Object.values(t.roles).flatMap(e => {
     var s;
-    if (e.id === t.id || (null === (s = e.tags) || void 0 === s ? void 0 : s.subscription_listing_id) != null || u.default.hasAny(e.permissions, P.ElevatedPermissions)) return [];
+    if (e.id === t.id || (null === (s = e.tags) || void 0 === s ? void 0 : s.subscription_listing_id) != null || u.default.hasAny(e.permissions, j.ElevatedPermissions)) return [];
     let a = (0, U.default)(n, e).length;
     return a > 0 ? {
       role: e,

@@ -27,8 +27,8 @@ var a = n("917351"),
 let C = "recentMentionFilterSettings",
   A = [],
   M = {},
-  x = !1,
-  v = !0,
+  v = !1,
+  x = !0,
   R = i.default.get(C, {
     guildFilter: I.RecentMentionsFilters.ALL_SERVERS,
     everyoneFilter: !0,
@@ -143,10 +143,10 @@ class H extends s.default.Store {
     return M[e]
   }
   get loading() {
-    return x
+    return v
   }
   get hasMore() {
-    return v
+    return x
   }
   get guildFilter() {
     return R.guildFilter
@@ -167,7 +167,7 @@ var V = new H(o.default, {
     let {
       guildId: t
     } = e;
-    x = !0, null == t && R.guildFilter === I.RecentMentionsFilters.THIS_SERVER && k({
+    v = !0, null == t && R.guildFilter === I.RecentMentionsFilters.THIS_SERVER && k({
       guildFilter: I.RecentMentionsFilters.ALL_SERVERS
     })
   },
@@ -179,10 +179,10 @@ var V = new H(o.default, {
     } = e, s = l.map(n, j);
     a ? A = A.concat(s) : (A = s, M = {}), l.forEach(s, e => {
       M[e.id] = !0
-    }), x = !1, v = t, O = (0, r.now)(), L = !0
+    }), v = !1, x = t, O = (0, r.now)(), L = !0
   },
   LOAD_RECENT_MENTIONS_FAILURE: function() {
-    x = !1
+    v = !1
   },
   SET_RECENT_MENTIONS_FILTER: k,
   CLEAR_MENTIONS: function(e) {
@@ -194,7 +194,7 @@ var V = new H(o.default, {
     } = e;
     for (let e = t; e < A.length; ++e) delete M[A[e].id];
     let n = A.length;
-    n > (A = A.slice(0, t)).length && (v = !0)
+    n > (A = A.slice(0, t)).length && (x = !0)
   },
   CHANNEL_SELECT: function() {
     if (R.guildFilter !== I.RecentMentionsFilters.THIS_SERVER) return !1;

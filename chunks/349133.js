@@ -1,36 +1,36 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return E
   }
 });
 var s = n("37983");
 n("884691");
 var r = n("77078"),
-  i = n("446674"),
-  l = n("87657"),
+  l = n("446674"),
+  i = n("87657"),
   a = n("635357"),
-  u = n("27618"),
-  o = n("697218"),
+  o = n("27618"),
+  u = n("697218"),
   d = n("158998"),
   c = n("21526"),
   f = n("782340"),
-  p = e => {
+  E = e => {
     let {
       selectedSkuId: t,
       className: n
-    } = e, p = (0, i.useStateFromStoresArray)([u.default], () => u.default.getFriendIDs()), E = (0, i.useStateFromStoresArray)([o.default], () => o.default.filter(e => p.includes(e.id) && !e.bot), [p]), {
-      giftRecipient: S,
-      setGiftRecipient: h,
-      giftRecipientError: m,
-      setGiftRecipientError: I,
-      setValidatingGiftRecipient: _
+    } = e, E = (0, l.useStateFromStoresArray)([o.default], () => o.default.getFriendIDs()), p = (0, l.useStateFromStoresArray)([u.default], () => u.default.filter(e => E.includes(e.id) && !e.bot), [E]), {
+      giftRecipient: _,
+      setGiftRecipient: I,
+      giftRecipientError: S,
+      setGiftRecipientError: h,
+      setValidatingGiftRecipient: m
     } = (0, a.useGiftContext)();
     if (null == t) return null;
     let C = async e => {
-      _(!0), null != m && I(), h(e);
+      m(!0), null != S && h(), I(e);
       let n = await (0, c.validateCollectiblesRecipient)(e.id, t);
-      !n && I(f.default.Messages.COLLECTIBLES_GIFT_SEND_ERROR_OWNED), _(!1)
+      !n && h(f.default.Messages.COLLECTIBLES_GIFT_SEND_ERROR_OWNED), m(!1)
     };
     return (0, s.jsxs)("div", {
       className: n,
@@ -38,13 +38,13 @@ var r = n("77078"),
         children: f.default.Messages.FORM_LABEL_SEND_TO
       }), (0, s.jsx)(r.SearchableSelect, {
         placeholder: f.default.Messages.COLLECTIBLES_GIFT_RECIPIENT_PLACEHOLDER,
-        renderOptionPrefix: e => (null == e ? void 0 : e.value) == null ? null : (0, s.jsx)(l.default, {
+        renderOptionPrefix: e => (null == e ? void 0 : e.value) == null ? null : (0, s.jsx)(i.default, {
           user: e.value,
           size: r.AvatarSizes.SIZE_20
         }),
-        value: S,
+        value: _,
         onChange: C,
-        options: E.map(e => ({
+        options: p.map(e => ({
           value: e,
           label: "".concat(d.default.getUserTag(e))
         }))

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var l = n("446674"),
   u = n("913144"),
   a = n("271938"),
-  d = n("398604"),
-  i = n("49129"),
+  i = n("398604"),
+  d = n("49129"),
   r = n("745049");
 let s = {},
   o = {};
@@ -77,12 +77,12 @@ var f = new E(u.default, {
       guildEventId: n
     } = e, l = a.default.getId();
     if (t !== l) return;
-    let u = d.default.getGuildScheduledEvent(n);
+    let u = i.default.getGuildScheduledEvent(n);
     if (null == u || u.status !== r.GuildScheduledEventStatus.SCHEDULED) return;
     let c = s[n];
     if (null != c) return;
     let E = o[n],
-      f = (0, i.getNextShownUpcomingEventNoticeType)(u, void 0, E, !1);
+      f = (0, d.getNextShownUpcomingEventNoticeType)(u, void 0, E, !1);
     if (f === r.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
       let e = {
         ...s

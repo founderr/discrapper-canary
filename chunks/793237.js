@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   setHighlightedSummary: function() {
-    return S
+    return x
   },
   toggleTopicsBar: function() {
     return N
   },
   setSelectedSummary: function() {
-    return M
-  },
-  updateVisibleMessages: function() {
     return T
   },
+  updateVisibleMessages: function() {
+    return M
+  },
   useSummaryPolling: function() {
-    return j
+    return O
   },
   setSummaryFeedback: function() {
-    return y
+    return j
   },
   deleteSummary: function() {
-    return O
+    return R
   },
   default: function() {
     return D
@@ -34,16 +34,16 @@ var l = n("884691"),
   u = n("913144"),
   d = n("448993"),
   c = n("734575"),
-  f = n("104589"),
-  m = n("116460"),
+  m = n("104589"),
+  f = n("116460"),
   h = n("42203"),
   p = n("718517"),
   g = n("347738");
 let E = 30 * p.default.Millis.SECOND,
-  v = 5 * p.default.Millis.SECOND,
-  C = {},
+  C = 5 * p.default.Millis.SECOND,
+  v = {},
   I = {};
-async function x(e, t) {
+async function S(e, t) {
   let n, l;
   if (!g.default.shouldFetch(e, t)) return;
   let a = Date.now();
@@ -94,7 +94,7 @@ async function _(e) {
   })
 }
 
-function S(e, t) {
+function x(e, t) {
   u.default.dispatch({
     type: "SET_HIGHLIGHTED_SUMMARY",
     channelId: e,
@@ -108,15 +108,15 @@ function N() {
   })
 }
 
-function M(e, t) {
-  null != e && null != t && x(e, t), u.default.dispatch({
+function T(e, t) {
+  null != e && null != t && S(e, t), u.default.dispatch({
     type: "SET_SELECTED_SUMMARY",
     channelId: e,
     summaryId: null != t ? t : null
   })
 }
 
-function T(e, t) {
+function M(e, t) {
   u.default.dispatch({
     type: "UPDATE_VISIBLE_MESSAGES",
     topVisibleMessage: null != e ? e : null,
@@ -125,10 +125,10 @@ function T(e, t) {
 }
 
 function A(e, t) {
-  return null == C[e] && (C[e] = 0), null === t ? C[e] = 0 : C[e] += t, C[e]
+  return null == v[e] && (v[e] = 0), null === t ? v[e] = 0 : v[e] += t, v[e]
 }
 
-function j(e) {
+function O(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     n = (0, r.default)([h.default], () => h.default.getChannel(e), [e]),
     [a, s] = l.useState(null),
@@ -144,14 +144,14 @@ function j(e) {
   }, [e, t, a, o])
 }
 
-function y(e, t) {
+function j(e, t) {
   u.default.dispatch({
     type: "SET_SUMMARY_FEEDBACK",
     summary: e,
     rating: t
   })
 }
-async function R() {
+async function y() {
   var e;
   let t, n;
   if (!g.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
@@ -221,7 +221,7 @@ async function L(e) {
     error: t
   })
 }
-async function O(e) {
+async function R(e) {
   try {
     await o.default.delete("/channels/".concat(e.channelId, "/summaries/").concat(e.id)), u.default.dispatch({
       type: "DELETE_SUMMARY",
@@ -236,17 +236,17 @@ let b = {
     let t = A(e, 1);
     t - 1 == 0 && (I[e] = setInterval(async () => {
       await b.fetchSummaries(e)
-    }, v))
+    }, C))
   },
   stopPolling: function(e) {
     let t = A(e, -1);
     t <= 0 && (A(e, 0), clearInterval(I[e]))
   },
-  setSummaryFeedback: y,
-  useSummaryPolling: j,
-  updateVisibleMessages: T,
-  setSelectedSummary: M,
-  setHighlightedSummary: S,
+  setSummaryFeedback: j,
+  useSummaryPolling: O,
+  updateVisibleMessages: M,
+  setSelectedSummary: T,
+  setHighlightedSummary: x,
   fetchSummaries: _,
   fetchSummariesBulk: L,
   useChannelSummaries: function(e) {
@@ -259,17 +259,17 @@ let b = {
       l.useEffect(() => {
         (async function e() {
           try {
-            await R()
+            await y()
           } catch (e) {}
           try {
             var e, n;
-            (null === (e = m.default.getProps().results) || void 0 === e ? void 0 : e.length) === 0 && (0, f.search)(null !== (n = m.default.getProps().query) && void 0 !== n ? n : "")
+            (null === (e = f.default.getProps().results) || void 0 === e ? void 0 : e.length) === 0 && (0, m.search)(null !== (n = f.default.getProps().query) && void 0 !== n ? n : "")
           } catch (e) {}
           await L(t.split(","))
         })()
       }, [t])
     }(t), (0, r.useStateFromStoresArray)([g.default], () => g.default.topSummaries(), [])
   },
-  deleteSummary: O
+  deleteSummary: R
 };
 var D = b

@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var i = s("37983"),
-  l = s("884691"),
-  n = s("414456"),
-  a = s.n(n),
+  n = s("884691"),
+  l = s("414456"),
+  a = s.n(l),
   r = s("446674"),
   d = s("669491"),
   o = s("77078"),
@@ -27,8 +27,8 @@ var i = s("37983"),
   p = s("47495"),
   C = s("437756"),
   O = s("277796"),
-  M = s("507313"),
-  v = s("661740"),
+  v = s("507313"),
+  M = s("661740"),
   L = s("432082"),
   A = s("49111"),
   j = s("782340"),
@@ -38,7 +38,7 @@ function b(e) {
   let {
     guildId: t,
     requestScrollToBottom: s
-  } = e, l = (0, r.useStateFromStoresArray)([S.default, T.default], () => {
+  } = e, n = (0, r.useStateFromStoresArray)([S.default, T.default], () => {
     let e = (0, p.filterOverrides)(T.default.getChannelOverrides(t), {
       ignoreMute: !0,
       ignoreUnreadSetting: !1,
@@ -46,14 +46,14 @@ function b(e) {
     });
     return e.map(e => S.default.getChannel(e)).filter(x.isNotNullish)
   });
-  (0, v.default)(l, () => s());
-  let n = (0, r.useStateFromStores)([E.default], () => E.default.getCategories(t)),
-    a = l.map((e, t) => (0, i.jsxs)("div", {
+  (0, M.default)(n, () => s());
+  let l = (0, r.useStateFromStores)([E.default], () => E.default.getCategories(t)),
+    a = n.map((e, t) => (0, i.jsxs)("div", {
       className: R.channelRow,
       children: [(0, i.jsx)(G, {
         channel: e,
-        categories: n
-      }, e.id), t < l.length - 1 && (0, i.jsx)("div", {
+        categories: l
+      }, e.id), t < n.length - 1 && (0, i.jsx)("div", {
         className: R.separator
       })]
     }, e.id));
@@ -61,7 +61,7 @@ function b(e) {
     children: [(0, i.jsx)(L.default, {
       guildId: t,
       onSelected: e => {
-        if (null != l.find(t => t.id === e)) return;
+        if (null != n.find(t => t.id === e)) return;
         let s = S.default.getChannel(e);
         null != s && c.default.updateChannelOverrideSettings(t, e, {
           muted: !1,
@@ -111,7 +111,7 @@ function G(e) {
   let {
     channel: t,
     categories: s
-  } = e, n = (0, o.useToken)(d.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(null == t ? void 0 : t.parent_id)), E = (0, C.useChannelPresetSettings)(t), [T, x] = l.useState(!1);
+  } = e, l = (0, o.useToken)(d.default.unsafe_rawColors.GREEN_360).hex(), c = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(null == t ? void 0 : t.parent_id)), E = (0, C.useChannelPresetSettings)(t), [T, x] = n.useState(!1);
   if (null == t) return null;
   let I = j.default.Messages.NO_CATEGORY,
     p = (0, g.getChannelIconComponent)(t);
@@ -120,7 +120,7 @@ function G(e) {
   }) : null != c && (I = j.default.Messages.IN_CATEGORY.format({
     categoryName: (0, N.computeChannelName)(c, _.default, m.default)
   }));
-  let O = T ? M.Presets.CUSTOM : E.preset;
+  let O = T ? v.Presets.CUSTOM : E.preset;
   return (0, i.jsx)("div", {
     children: (0, i.jsxs)("div", {
       className: a(R.row, R.channel),
@@ -145,33 +145,33 @@ function G(e) {
         className: R.rowOption,
         children: (0, i.jsx)("div", {
           children: (0, i.jsx)(o.Checkbox, {
-            color: n,
+            color: l,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
-            value: O === M.Presets.ALL_MESSAGES,
-            onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, M.Presets.ALL_MESSAGES), x(!1))
+            value: O === v.Presets.ALL_MESSAGES,
+            onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, v.Presets.ALL_MESSAGES), x(!1))
           })
         })
       }), (0, i.jsx)("div", {
         className: R.rowOption,
         children: (0, i.jsx)("div", {
           children: (0, i.jsx)(o.Checkbox, {
-            color: n,
+            color: l,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
-            value: O === M.Presets.MENTIONS,
-            onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, M.Presets.MENTIONS), x(!1))
+            value: O === v.Presets.MENTIONS,
+            onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, v.Presets.MENTIONS), x(!1))
           })
         })
       }), (0, i.jsx)("div", {
         className: R.rowOption,
         children: (0, i.jsx)("div", {
           children: (0, i.jsx)(o.Checkbox, {
-            color: n,
+            color: l,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
-            value: O === M.Presets.NOTHING,
-            onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, M.Presets.NOTHING), x(!1))
+            value: O === v.Presets.NOTHING,
+            onChange: () => ((0, C.updateChannelPreset)(t.guild_id, t.id, v.Presets.NOTHING), x(!1))
           })
         })
       }), (0, i.jsx)("div", {
@@ -187,10 +187,10 @@ function G(e) {
                 children: (0, f.useChannelNotificationCustomSettingsItem)(t, () => x(!1))
               }))
             },
-            color: n,
+            color: l,
             shape: o.Checkbox.Shapes.ROUND,
             type: o.Checkbox.Types.INVERTED,
-            value: O === M.Presets.CUSTOM,
+            value: O === v.Presets.CUSTOM,
             onChange: () => x(!0)
           })
         })

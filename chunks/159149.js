@@ -7,12 +7,12 @@ n.r(t), n.d(t, {
     return E
   }
 });
-var r, i, l = n("37983");
+var r, i, s = n("37983");
 n("884691");
-var o = n("77078"),
-  s = n("145131"),
-  a = n("181114"),
-  u = n("376641"),
+var u = n("77078"),
+  a = n("145131"),
+  o = n("181114"),
+  l = n("376641"),
   c = n("782340"),
   d = n("198699");
 (r = i || (i = {}))[r.CONTINUE = 0] = "CONTINUE", r[r.UPGRADE = 1] = "UPGRADE", r[r.PURCHASE = 2] = "PURCHASE";
@@ -25,50 +25,50 @@ let f = e => {
     primaryType: f,
     primaryText: E,
     primaryTooltip: _,
-    primaryDisabled: p,
+    primaryDisabled: I,
     primarySubmitting: C,
-    onPrimary: I,
-    secondaryText: A,
-    onSecondary: R
+    onPrimary: p,
+    secondaryText: R,
+    onSecondary: A
   } = e;
-  return (0, l.jsxs)(o.ModalFooter, {
-    justify: s.default.Justify.BETWEEN,
-    align: s.default.Align.CENTER,
+  return (0, s.jsxs)(u.ModalFooter, {
+    justify: a.default.Justify.BETWEEN,
+    align: a.default.Align.CENTER,
     children: [(() => {
       if (null == i || null == E) return null;
-      let e = 2 === i ? a.default : o.Button,
+      let e = 2 === i ? o.default : u.Button,
         t = {
           innerClassName: d.button,
           type: f,
-          disabled: p,
+          disabled: I,
           submitting: C,
-          color: 0 === i ? o.Button.Colors.BRAND : o.Button.Colors.GREEN,
-          onClick: I
+          color: 0 === i ? u.Button.Colors.BRAND : u.Button.Colors.GREEN,
+          onClick: p
         };
-      return null != _ ? (0, l.jsx)(o.Tooltip, {
+      return null != _ ? (0, s.jsx)(u.Tooltip, {
         text: _,
-        children: n => (0, l.jsxs)(e, {
+        children: n => (0, s.jsxs)(e, {
           ...n,
           ...t,
-          children: [null == r ? null : (0, l.jsx)(r, {
+          children: [null == r ? null : (0, s.jsx)(r, {
             className: d.primaryIcon
           }), E]
         })
-      }) : (0, l.jsxs)(e, {
+      }) : (0, s.jsxs)(e, {
         ...t,
-        children: [null == r ? null : (0, l.jsx)(r, {
+        children: [null == r ? null : (0, s.jsx)(r, {
           className: d.primaryIcon
         }), E]
       })
-    })(), null == A ? null : (0, l.jsx)(o.Button, {
-      color: o.Button.Colors.PRIMARY,
-      look: o.Button.Looks.LINK,
-      onClick: R,
-      children: A
-    }), (0, l.jsx)(u.default, {}), null == t ? null : (0, l.jsx)(o.Button, {
+    })(), null == R ? null : (0, s.jsx)(u.Button, {
+      color: u.Button.Colors.PRIMARY,
+      look: u.Button.Looks.LINK,
+      onClick: A,
+      children: R
+    }), (0, s.jsx)(l.default, {}), null == t ? null : (0, s.jsx)(u.Button, {
       className: d.back,
-      color: o.Button.Colors.PRIMARY,
-      look: o.Button.Looks.LINK,
+      color: u.Button.Colors.PRIMARY,
+      look: u.Button.Looks.LINK,
       onClick: t,
       children: null != n ? n : c.default.Messages.BACK
     })]

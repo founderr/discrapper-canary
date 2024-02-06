@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   GuestVoiceInvitesExperiment: function() {
-    return i
+    return s
   }
 });
 var l = n("862205");
-let i = (0, l.createExperiment)({
+let s = (0, l.createExperiment)({
   kind: "guild",
   id: "2023-02_guest_voice_invites",
   label: "Guest Voice Invites",

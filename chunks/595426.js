@@ -9,8 +9,8 @@ var a = s("37983"),
   r = s("414456"),
   i = s.n(r),
   l = s("446674"),
-  o = s("77078"),
-  u = s("913144"),
+  u = s("77078"),
+  o = s("913144"),
   d = s("850068"),
   c = s("583367"),
   _ = s("775433"),
@@ -50,7 +50,7 @@ var a = s("37983"),
     n.useEffect(() => {
       !J && d.getNitroAffinity()
     }, [J]), n.useEffect(() => {
-      u.default.wait(async () => {
+      o.default.wait(async () => {
         let e = Date.now();
         await Promise.all([d.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), d.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(X, null, j.RevenueSurfaces.DISCOVERY)]), Y.current = Date.now() - e, V(!1)
       })
@@ -77,6 +77,6 @@ var a = s("37983"),
       })
     }) : (0, a.jsx)("div", {
       className: i(G.container, G.loading),
-      children: (0, a.jsx)(o.Spinner, {})
+      children: (0, a.jsx)(u.Spinner, {})
     })
   }

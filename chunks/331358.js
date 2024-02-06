@@ -9,8 +9,8 @@ var a = s("65597"),
   r = s("79112"),
   i = s("841098"),
   l = s("697218"),
-  o = s("719923"),
-  u = s("49111"),
+  u = s("719923"),
+  o = s("49111"),
   d = s("397336"),
   c = s("782340"),
   _ = s("737117"),
@@ -44,7 +44,7 @@ let k = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
       styles: t
     } = e, s = (0, i.default)(), n = (0, a.default)([l.default], () => {
       let e = l.default.getCurrentUser();
-      return o.default.canUsePremiumProfileCustomization(e)
+      return u.default.canUsePremiumProfileCustomization(e)
     }), B = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, y = {
       badge: {
         title: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
@@ -81,7 +81,7 @@ let k = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
         title: c.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
         description: e => {
           let t = () => {
-            r.default.open(u.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
+            r.default.open(o.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
               scrollPosition: d.ProfileCustomizationScrollPositions.TRY_IT_OUT,
               analyticsLocations: e
             })

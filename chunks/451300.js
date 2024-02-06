@@ -48,7 +48,7 @@ function I(e) {
   let R = (0, f.usePremiumTrialOffer)(),
     O = (0, c.usePremiumDiscountOffer)(),
     M = null != R || null != O,
-    k = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === v.PremiumSubscriptionSKUs.TIER_0;
+    b = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === v.PremiumSubscriptionSKUs.TIER_0;
   return (0, l.jsxs)("div", {
     className: o(x.emptyState, I, {
       [x.unifyTrialUpsell]: M
@@ -80,7 +80,7 @@ function I(e) {
       })]
     }), !M && (0, l.jsx)(g.default, {
       analyticsSection: T.AnalyticsSections.EXPRESSION_PICKER,
-      buttonText: M ? k ? y.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : y.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
+      buttonText: M ? b ? y.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : y.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
     })]
   })
 }

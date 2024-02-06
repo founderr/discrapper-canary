@@ -35,8 +35,8 @@ var D = n("901946"),
   L = n("590401"),
   M = n("599110"),
   U = n("35468"),
-  k = n("773336"),
-  w = n("49671"),
+  w = n("773336"),
+  k = n("49671"),
   V = n("199948"),
   G = n("422791"),
   F = n("642099"),
@@ -91,7 +91,7 @@ s = class extends _.default {
   }
   destroy() {
     var e, t, n, i, s;
-    if (this.logger.info("Destroy RTCConnection"), U.default.removeOnlineCallback(this._handleNetworkOnline), U.default.removeOfflineCallback(this._handleNetworkOffline), (0, k.isDesktop)() && (null === (s = this.powerMonitorListener) || void 0 === s || s.call(this)), this._backoff.cancel(), this._cleanupSocket(), null === (e = this._voiceQuality) || void 0 === e || e.stop(), this._voiceQuality = null, clearInterval(this._voiceQualityPeriodicStatsInterval), this._voiceQualityPeriodicStatsInterval = null, this._voiceQualityPeriodicStatsSequenceId = 0, null === (t = this._voiceDuration) || void 0 === t || t.stop(), this._voiceDuration = null, null === (n = this._videoQuality) || void 0 === n || n.stop(), this._videoQuality = null, this._videoHealthManager = null, null === (i = this._localMediaSinkWantsManager) || void 0 === i || i.reset(), null != this._connection) {
+    if (this.logger.info("Destroy RTCConnection"), U.default.removeOnlineCallback(this._handleNetworkOnline), U.default.removeOfflineCallback(this._handleNetworkOffline), (0, w.isDesktop)() && (null === (s = this.powerMonitorListener) || void 0 === s || s.call(this)), this._backoff.cancel(), this._cleanupSocket(), null === (e = this._voiceQuality) || void 0 === e || e.stop(), this._voiceQuality = null, clearInterval(this._voiceQualityPeriodicStatsInterval), this._voiceQualityPeriodicStatsInterval = null, this._voiceQualityPeriodicStatsSequenceId = 0, null === (t = this._voiceDuration) || void 0 === t || t.stop(), this._voiceDuration = null, null === (n = this._videoQuality) || void 0 === n || n.stop(), this._videoQuality = null, this._videoHealthManager = null, null === (i = this._localMediaSinkWantsManager) || void 0 === i || i.reset(), null != this._connection) {
       let e = this._connection;
       this._connection = null, e.destroy()
     }
@@ -912,7 +912,7 @@ s = class extends _.default {
         null === (i = this._connection) || void 0 === i || i.createUser(e, t, n)
       })
     }
-    this._remoteVideoSinkWants = B.DEFAULT_WANTS_FULL, b.default.shouldRecordNextConnection() ? (this._recordingEnabled = !0, E.setShouldRecordNextConnection(!1)) : this._recordingEnabled = !1, this._soundshareStats = new H.default, U.default.addOnlineCallback(this._handleNetworkOnline), U.default.addOfflineCallback(this._handleNetworkOffline), (0, k.isDesktop)() && (this.powerMonitorListener = w.default.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, P.default.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
+    this._remoteVideoSinkWants = B.DEFAULT_WANTS_FULL, b.default.shouldRecordNextConnection() ? (this._recordingEnabled = !0, E.setShouldRecordNextConnection(!1)) : this._recordingEnabled = !1, this._soundshareStats = new H.default, U.default.addOnlineCallback(this._handleNetworkOnline), U.default.addOfflineCallback(this._handleNetworkOffline), (0, w.isDesktop)() && (this.powerMonitorListener = k.default.remotePowerMonitor.on("resume", this._handlePowerResume)), this._supportedBandwidthEstimationExperiments = [], this._bandwidthEstimationExperiment = null, P.default.getMediaEngine().getSupportedBandwidthEstimationExperiments(e => {
       this._supportedBandwidthEstimationExperiments = e
     })
   }

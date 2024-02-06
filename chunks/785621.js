@@ -7,8 +7,8 @@ i.r(t), i.d(t, {
 var a = i("37983"),
   l = i("884691"),
   n = i("917351"),
-  o = i("65597"),
-  s = i("880731"),
+  s = i("65597"),
+  o = i("880731"),
   r = i("232268"),
   u = i("759432"),
   d = i("798592"),
@@ -18,7 +18,7 @@ function p(e) {
   let {
     reactionRef: t,
     count: i
-  } = e, a = l.useRef(i), r = (0, o.default)([s.default], () => s.default.getState()), c = (0, d.default)(), p = (0, u.default)(t);
+  } = e, a = l.useRef(i), r = (0, s.default)([o.default], () => o.default.getState()), c = (0, d.default)(), p = (0, u.default)(t);
   return l.useEffect(() => {
     if (i > a.current && null != p) {
       let e = (0, n.clamp)(i, r.confettiCount / 2, 2 * r.confettiCount);

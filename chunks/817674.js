@@ -41,8 +41,8 @@ var a = s("37983"),
   p = s("701909"),
   U = s("62418"),
   v = s("592407"),
-  j = s("900938"),
-  P = s("797944"),
+  P = s("900938"),
+  j = s("797944"),
   y = s("380993"),
   b = s("378826"),
   B = s("998728"),
@@ -98,7 +98,7 @@ function w(e) {
             children: H.default.Messages.GUILD_ANTIRAID_SAFETY_JOIN_RAIDS_TITLE
           })]
         }),
-        highlightColor: P.HighlightColors.GREEN,
+        highlightColor: j.HighlightColors.GREEN,
         action: i ? (0, a.jsx)(d.Button, {
           look: d.Button.Looks.LINK,
           size: d.Button.Sizes.MIN,
@@ -171,7 +171,7 @@ function w(e) {
             children: H.default.Messages.GUILD_ANTIRAID_SAFETY_MENTION_RAIDS_TITLE
           })]
         }),
-        highlightColor: P.HighlightColors.GREEN,
+        highlightColor: j.HighlightColors.GREEN,
         action: (0, a.jsx)(d.Button, {
           look: d.Button.Looks.LINK,
           size: d.Button.Sizes.MIN,
@@ -408,7 +408,7 @@ function Z() {
   let {
     guild: t,
     mfaLevel: s
-  } = (0, o.useStateFromStoresObject)([j.default], () => j.default.getProps(), []), n = (0, o.useStateFromStores)([C.default], () => C.default.enabled, []), {
+  } = (0, o.useStateFromStoresObject)([P.default], () => P.default.getProps(), []), n = (0, o.useStateFromStores)([C.default], () => C.default.enabled, []), {
     showAlertMode: l
   } = (0, S.useGuildAlertModeEnabled)(null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : "");
   return null == t ? null : n ? (0, a.jsx)(c.default, {}) : (0, a.jsxs)(d.FormSection, {

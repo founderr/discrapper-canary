@@ -91,8 +91,8 @@ function U() {
     showLoadMore: O,
     hasError: U,
     hasOlderLogs: v,
-    rawLogs: j,
-    theme: P,
+    rawLogs: P,
+    theme: j,
     hide: y
   } = (0, c.useStateFromStoresObject)([f.default, A.default, N.default, L.default, g.default], () => {
     let e = f.default.getGuildId(),
@@ -115,7 +115,7 @@ function U() {
     expandedId: null,
     lastExpandedId: null,
     actionFilterQuery: ""
-  }), F = C.transformLogs(j, l), H = !1, V = n.useRef(null), w = (0, I.default)(b), k = (0, I.default)(F), Y = () => {
+  }), F = C.transformLogs(P, l), H = !1, V = n.useRef(null), w = (0, I.default)(b), k = (0, I.default)(F), Y = () => {
     var e;
     return (null === (e = V.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1
   };
@@ -223,7 +223,7 @@ function U() {
               let e = U ? R.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_BODY : R.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_BODY,
                 t = U ? R.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_ERROR_TITLE : R.default.Messages.GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE;
               return (0, a.jsxs)(m.default, {
-                theme: P,
+                theme: j,
                 className: D.empty,
                 children: [(0, a.jsx)(m.EmptyStateImage, {
                   darkSrc: G,

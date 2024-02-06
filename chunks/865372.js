@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return p
   }
 }), n("424973");
 var i = n("917351"),
-  l = n.n(i),
-  r = n("446674"),
-  o = n("913144"),
-  a = n("80507"),
-  s = n("374363"),
+  r = n.n(i),
+  o = n("446674"),
+  s = n("913144"),
+  l = n("80507"),
+  a = n("374363"),
   u = n("718517"),
   c = n("364685"),
   d = n("397336");
@@ -17,7 +17,7 @@ let f = {
   pendingUsages: []
 };
 u.default.Millis.DAY;
-let E = new a.default({
+let E = new l.default({
     computeBonus: () => 100,
     computeWeight: e => {
       let t = 0;
@@ -27,25 +27,25 @@ let E = new a.default({
     afterCompute: () => {},
     numFrequentlyItems: 20
   }),
-  p = () => {
+  _ = () => {
     c.default.isLoaded && E.compute()
   },
-  h = () => {
-    p()
+  I = () => {
+    _()
   };
 
-function _() {
+function h() {
   var e;
-  let t = null === (e = s.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
+  let t = null === (e = a.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
   if (null == t) return !1;
-  E.overwriteHistory(l.mapValues(t, e => ({
+  E.overwriteHistory(r.mapValues(t, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), f.pendingUsages)
 }
-class C extends r.default.PersistedStore {
+class S extends o.default.PersistedStore {
   initialize(e) {
-    this.waitFor(c.default), null != e && (f = e), this.syncWith([c.default], h), this.syncWith([s.default], _)
+    this.waitFor(c.default), null != e && (f = e), this.syncWith([c.default], I), this.syncWith([a.default], h)
   }
   getState() {
     return f
@@ -57,8 +57,8 @@ class C extends r.default.PersistedStore {
     return E
   }
 }
-C.displayName = "StickersPersistedStore", C.persistKey = "StickersPersistedStoreV2";
-var S = new C(o.default, {
+S.displayName = "StickersPersistedStore", S.persistKey = "StickersPersistedStoreV2";
+var p = new S(s.default, {
   STICKER_TRACK_USAGE: e => {
     let {
       stickerIds: t
@@ -68,7 +68,7 @@ var S = new C(o.default, {
         key: e,
         timestamp: Date.now()
       })
-    }), p()
+    }), _()
   },
   USER_SETTINGS_PROTO_UPDATE: function(e) {
     let {

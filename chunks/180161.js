@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return v
   }
 });
 var l = n("37983");
@@ -14,20 +14,20 @@ var a = n("77078"),
   u = n("537325"),
   d = n("233069"),
   c = n("42203"),
-  f = n("305961"),
-  m = n("666897"),
+  m = n("305961"),
+  f = n("666897"),
   h = n("848825"),
   p = n("794818"),
   g = n("844659"),
   E = n("49111");
-async function v(e, t, n) {
+async function C(e, t, n) {
   if (null == t) return;
   if (r.default.trackDiscordLinkClicked({
       guildId: e,
       channelId: t,
       messageId: n
     }), null != e) {
-    let n = f.default.getGuild(e);
+    let n = m.default.getGuild(e);
     if ((null == n ? void 0 : n.joinedAt) == null) try {
       await p.startLurking(e, {}, {
         channelId: t
@@ -42,12 +42,12 @@ async function v(e, t, n) {
   }(0, u.default)(E.Routes.CHANNEL(e, t, n))
 }
 
-function C(e) {
+function v(e) {
   return {
     react(t, i, r) {
       let o = c.default.getChannel(t.channelId),
         u = r.noStyleAndInteraction ? void 0 : n => {
-          e.shouldStopPropagation && (null == n || n.stopPropagation()), v(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, a.closeAllModals)()
+          e.shouldStopPropagation && (null == n || n.stopPropagation()), C(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, a.closeAllModals)()
         },
         d = r.noStyleAndInteraction || null == t.channelId || null == o && null == t.originalLink ? E.NOOP : e => {
           (0, s.openContextMenuLazy)(e, async () => {
@@ -66,7 +66,7 @@ function C(e) {
             }
           })
         };
-      return (0, l.jsxs)(m.default, {
+      return (0, l.jsxs)(f.default, {
         role: "link",
         onClick: u,
         onContextMenu: d,

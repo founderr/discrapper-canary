@@ -39,7 +39,7 @@ let U = (0, c.makeLazy)({
   }),
   v = o.debounce((e, t) => (0, g.updateRoleName)(e, t), 200);
 
-function j(e) {
+function P(e) {
   let {
     role: t,
     disabled: s
@@ -61,7 +61,7 @@ function j(e) {
   })
 }
 
-function P(e) {
+function j(e) {
   let {
     role: t,
     disabled: s
@@ -210,7 +210,7 @@ function B(e) {
           selectedSection: h.GuildSettingsRoleEditSections.DISPLAY,
           setSelectedSection: l
         })
-      }), (0, a.jsx)(j, {
+      }), (0, a.jsx)(P, {
         role: s,
         disabled: o
       }), (0, a.jsx)("div", {
@@ -220,7 +220,7 @@ function B(e) {
         })
       }), (0, a.jsx)(u.FormDivider, {
         className: M.divider
-      }), (0, a.jsx)(P, {
+      }), (0, a.jsx)(j, {
         role: s,
         disabled: o
       }), (0, a.jsx)(L.default, {

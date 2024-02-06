@@ -13,8 +13,8 @@ var r = n("917351"),
   u = n("448993"),
   a = n("449008"),
   l = n("600798"),
-  d = n("454686"),
-  s = n("296839"),
+  s = n("454686"),
+  d = n("296839"),
   T = n("702873"),
   E = n("314865"),
   A = n("254365"),
@@ -44,7 +44,7 @@ let f = Object.freeze({
     },
     createNewEditingRule: (t, n, r) => {
       let o = {
-        ...(0, d.createDefaultRule)(t, n),
+        ...(0, s.createDefaultRule)(t, n),
         ...null != r ? r : {}
       };
       return e({
@@ -65,7 +65,7 @@ let f = Object.freeze({
       }), null;
       try {
         var r, o, i;
-        (0, d.isRuleKeywordFilter)(t) && (t.triggerMetadata.keywordFilter = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (r = t.triggerMetadata.keywordFilter) && void 0 !== r ? r : [])), t.triggerMetadata.allowList = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (o = t.triggerMetadata.allowList) && void 0 !== o ? o : []))), (0, d.isRuleDefaultKeywordListFilter)(t) && (t.triggerMetadata.allowList = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (i = t.triggerMetadata.allowList) && void 0 !== i ? i : []))), (0, s.validateRuleByTriggerConfigOrThrow)(t, n), (0, d.validateRuleBeforeSaveOrThrow)(t)
+        (0, s.isRuleKeywordFilter)(t) && (t.triggerMetadata.keywordFilter = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (r = t.triggerMetadata.keywordFilter) && void 0 !== r ? r : [])), t.triggerMetadata.allowList = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (o = t.triggerMetadata.allowList) && void 0 !== o ? o : []))), (0, s.isRuleDefaultKeywordListFilter)(t) && (t.triggerMetadata.allowList = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (i = t.triggerMetadata.allowList) && void 0 !== i ? i : []))), (0, d.validateRuleByTriggerConfigOrThrow)(t, n), (0, s.validateRuleBeforeSaveOrThrow)(t)
       } catch (t) {
         return t instanceof l.InvalidKeywordError ? e({
           errorMessage: c.default.Messages.GUILD_AUTOMOD_KEYWORD_GENERIC_SAVE_ERROR,
@@ -83,7 +83,7 @@ let f = Object.freeze({
           isLoading: !0
         });
         let n = null;
-        return n = (0, d.isBackendPersistedRule)(t) && !(0, A.isDefaultRuleId)(t.id) ? await (0, T.updateAutomodRule)(t) : await (0, T.createAutomodRule)(t), e({
+        return n = (0, s.isBackendPersistedRule)(t) && !(0, A.isDefaultRuleId)(t.id) ? await (0, T.updateAutomodRule)(t) : await (0, T.createAutomodRule)(t), e({
           ...f
         }), n
       } catch (n) {

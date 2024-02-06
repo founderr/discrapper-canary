@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return m
   }
 });
 var l = n("37983");
@@ -14,7 +14,7 @@ var a = n("446674"),
   u = n("563680"),
   d = n("981913"),
   c = n("782340"),
-  f = a.default.connectStores([i.default, s.default], e => {
+  m = a.default.connectStores([i.default, s.default], e => {
     let {
       node: t,
       guestWindow: n

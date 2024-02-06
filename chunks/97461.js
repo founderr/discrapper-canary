@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PremiumPaymentPlanSelectStep: function() {
-    return j
+    return v
   }
 }), n("222007");
 var s = n("37983"),
@@ -37,11 +37,11 @@ var s = n("37983"),
   U = n("782340"),
   k = n("424650");
 
-function j(e) {
+function v(e) {
   var t, n, r;
   let {
-    handleStepChange: j,
-    initialPlanId: v,
+    handleStepChange: v,
+    initialPlanId: j,
     subscriptionTier: D,
     trialId: G,
     referralTrialOfferId: B,
@@ -144,9 +144,9 @@ function j(e) {
         justify: p.default.Justify.BETWEEN,
         align: p.default.Align.CENTER,
         children: (0, s.jsx)(m.PremiumSwitchPlanSelectFooter, {
-          onStepChange: j,
-          onBackClick: () => j(R.Step.SKU_SELECT),
-          showBackButton: null == v && null == D,
+          onStepChange: v,
+          onBackClick: () => v(R.Step.SKU_SELECT),
+          showBackButton: null == j && null == D,
           planOptions: ec,
           shouldRenderUpdatedPaymentModal: eT,
           isTrial: er

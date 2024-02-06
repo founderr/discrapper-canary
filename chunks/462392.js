@@ -10,8 +10,8 @@ var r = n("679653"),
   u = n("697218"),
   a = n("593195"),
   l = n("635731"),
-  d = n("491401"),
-  s = n("381546"),
+  s = n("491401"),
+  d = n("381546"),
   T = n("143460"),
   E = n("903639"),
   A = n("782340");
@@ -91,11 +91,11 @@ let _ = e => {
   S = e => {
     switch (e) {
       case T.AutomodActionType.BLOCK_MESSAGE:
-        return s.default;
+        return d.default;
       case T.AutomodActionType.FLAG_TO_CHANNEL:
         return a.default;
       case T.AutomodActionType.USER_COMMUNICATION_DISABLED:
-        return d.default;
+        return s.default;
       case T.AutomodActionType.QUARANTINE_USER:
         return l.default
     }
@@ -107,7 +107,7 @@ function p(e, t, n) {
     headerText: null !== (r = f(e)) && void 0 !== r ? r : "",
     descriptionText: null !== (o = I(e, n)) && void 0 !== o ? o : "",
     helperText: null !== (i = g(e, t)) && void 0 !== i ? i : null,
-    icon: null !== (u = S(e)) && void 0 !== u ? u : s.default,
+    icon: null !== (u = S(e)) && void 0 !== u ? u : d.default,
     isEditable: _(e)
   } : null
 }

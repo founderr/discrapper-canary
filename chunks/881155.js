@@ -10,8 +10,8 @@ var n = s("819855"),
   r = s("77078"),
   i = s("841098"),
   l = s("719923"),
-  o = s("154889"),
-  u = s("917247"),
+  u = s("154889"),
+  o = s("917247"),
   d = s("635956"),
   c = s("646718"),
   _ = s("782340"),
@@ -46,10 +46,10 @@ var f = e => {
     isPersistentCTA: S = !1,
     useShorterCTA: R = !1,
     ...A
-  } = e, m = (0, i.default)(), N = (0, n.isThemeDark)(m) || s, p = null === (t = (0, u.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, l.formatTrialOfferIntervalDuration)({
+  } = e, m = (0, i.default)(), N = (0, n.isThemeDark)(m) || s, p = null === (t = (0, o.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, g = (0, l.formatTrialOfferIntervalDuration)({
     intervalType: null == p ? void 0 : p.interval,
     intervalCount: null == p ? void 0 : p.interval_count
-  }), C = (0, o.usePremiumDiscountOffer)(), P = null != p && c === p.sku_id, O = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != C ? T(c, R, S, C.discount.amount) : I({
+  }), C = (0, u.usePremiumDiscountOffer)(), P = null != p && c === p.sku_id, O = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != C ? T(c, R, S, C.discount.amount) : I({
     showTrialCTA: P,
     subscriptionTier: c,
     shouldShowUpsells: !1,

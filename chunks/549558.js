@@ -19,9 +19,9 @@ var a = s("37983"),
   g = s("271972"),
   x = s("578198"),
   C = s("855455"),
-  T = s("476765"),
-  _ = s("857171"),
-  S = s("832132"),
+  _ = s("476765"),
+  S = s("857171"),
+  T = s("832132"),
   p = s("808404"),
   E = s("987772"),
   N = s("228220"),
@@ -34,7 +34,7 @@ let R = [{
     name: "Media Post Thumbnail",
     extensions: ["jpg", "jpeg", "png", "gif", "webp"]
   }],
-  O = (0, T.uid)();
+  O = (0, _.uid)();
 
 function F(e) {
   let {
@@ -78,13 +78,13 @@ let L = e => {
     return {
       textAreaState: t
     }
-  }), C = (0, u.default)([m.default], () => m.default.keyboardModeEnabled), T = (0, v.default)(l, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), M = n.useMemo(() => T.find(e => e.isThumbnail), [T]), L = null != T && T.length > 0, b = n.useMemo(() => {
-    let e = (null == T ? void 0 : T.length) > 1 ? 1.15 : 1;
+  }), C = (0, u.default)([m.default], () => m.default.keyboardModeEnabled), _ = (0, v.default)(l, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), M = n.useMemo(() => _.find(e => e.isThumbnail), [_]), L = null != _ && _.length > 0, b = n.useMemo(() => {
+    let e = (null == _ ? void 0 : _.length) > 1 ? 1.15 : 1;
     return {
       width: 153 * e,
       height: 86 * e
     }
-  }, [T]), P = n.useCallback(e => {
+  }, [_]), P = n.useCallback(e => {
     null != M && c.default.remove(l.id, M.id, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type), (0, A.promptToUpload)(e.currentTarget.files, l, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type, {
       requireConfirm: !0,
       isThumbnail: !0
@@ -116,7 +116,7 @@ let L = e => {
         disableSpoiler: !0
       })
     })
-  }, D = (0, a.jsx)(_.default, {
+  }, D = (0, a.jsx)(S.default, {
     color: d.ButtonColors.CUSTOM,
     className: r(j.uploadFileInputContainer),
     innerClassName: j.uploadThumbnailContainer,
@@ -128,18 +128,18 @@ let L = e => {
     "aria-label": L ? I.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL : I.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL,
     children: L ? (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(F, {
-        mediaAttachments: T,
+        mediaAttachments: _,
         containerWidth: b.width,
         containerHeight: b.height
       }), (0, a.jsxs)("div", {
         className: r(j.changeThumbnailLabelContainer, {
-          [j.changeThumbnailLabelOverflow]: (null == T ? void 0 : T.length) > 2
+          [j.changeThumbnailLabelOverflow]: (null == _ ? void 0 : _.length) > 2
         }),
         children: [(0, a.jsx)(d.Text, {
           variant: "text-xs/medium",
           color: "header-secondary",
           children: I.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL
-        }), null == M && (0, a.jsx)(S.default, {
+        }), null == M && (0, a.jsx)(T.default, {
           className: j.editIcon,
           width: 16,
           height: 16

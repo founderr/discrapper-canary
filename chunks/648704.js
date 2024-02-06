@@ -35,8 +35,8 @@ var a = s("37983"),
   p = s("706866"),
   U = s("764151"),
   v = s("832931"),
-  j = s("49111"),
-  P = s("782340"),
+  P = s("49111"),
+  j = s("782340"),
   y = s("505324");
 
 function b() {
@@ -76,8 +76,8 @@ function B(e) {
         delay: 1e3
       })
     }
-    return g.ComponentDispatch.subscribe(j.ComponentActions.EMPHASIZE_NOTICE, e), () => {
-      g.ComponentDispatch.unsubscribe(j.ComponentActions.EMPHASIZE_NOTICE, e)
+    return g.ComponentDispatch.subscribe(P.ComponentActions.EMPHASIZE_NOTICE, e), () => {
+      g.ComponentDispatch.unsubscribe(P.ComponentActions.EMPHASIZE_NOTICE, e)
     }
   }, [W]);
   let z = (0, E.useToken)(d.default.colors.BACKGROUND_FLOATING).hex(),
@@ -115,14 +115,14 @@ function B(e) {
       }
       return !0
     }, ee = async () => {
-      f.default.track(j.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+      f.default.track(P.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
         ...(0, I.collectGuildAnalyticsMetadata)(l),
         step: M.GuildSettingsOnboardingPage[A],
         back: !1,
         skip: !B
       }), (0, m.dismissEducationUpsell)((0, M.pageToEducationUpsellType)(A)), await $() && (0, m.goToNextOnboardingStep)(l, A)
     }, et = async () => {
-      f.default.track(j.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+      f.default.track(P.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
         ...(0, I.collectGuildAnalyticsMetadata)(l),
         step: M.GuildSettingsOnboardingPage[A],
         back: !0,
@@ -144,7 +144,7 @@ function B(e) {
         children: [(0, a.jsx)(S.default, {
           className: y.arrow,
           direction: S.default.Directions.LEFT
-        }), P.default.Messages.BACK]
+        }), j.default.Messages.BACK]
       })
     }),
     en = (0, a.jsx)(E.Button, {
@@ -159,7 +159,7 @@ function B(e) {
         style: {
           color: J
         },
-        children: [F ? P.default.Messages.NEXT : P.default.Messages.SKIP, (0, a.jsx)(S.default, {
+        children: [F ? j.default.Messages.NEXT : j.default.Messages.SKIP, (0, a.jsx)(S.default, {
           className: y.arrow,
           direction: S.default.Directions.RIGHT
         })]
@@ -200,7 +200,7 @@ function B(e) {
                 children: [H ? (0, a.jsx)(E.Text, {
                   variant: "text-sm/normal",
                   color: "status-warning",
-                  children: P.default.Messages.ONBOARDING_PROMPTS_INCOMPLETE
+                  children: j.default.Messages.ONBOARDING_PROMPTS_INCOMPLETE
                 }) : null, q ? null : en]
               })]
             })

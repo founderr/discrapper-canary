@@ -35,9 +35,9 @@ var a = s("37983"),
   p = s("772871"),
   U = s("49111"),
   v = s("782340"),
-  j = s("282802");
+  P = s("282802");
 
-function P(e) {
+function j(e) {
   var t;
   let {
     transitionState: s,
@@ -65,40 +65,40 @@ function P(e) {
     }
   }
   return (0, a.jsxs)(u.ModalRoot, {
-    className: j.bannedUserModal,
+    className: P.bannedUserModal,
     transitionState: s,
     children: [(0, a.jsxs)(u.ModalHeader, {
-      className: j.header,
+      className: P.header,
       separator: !1,
       children: [(0, a.jsx)(O.default, {
         size: O.default.Sizes.SIZE_24,
-        className: j.userUsername,
+        className: P.userUsername,
         children: D.default.getUserTag(i, {
           mode: "username",
           identifiable: o ? "never" : "always"
         })
       }), o || i.isPomelo() ? null : (0, a.jsxs)(O.default, {
         size: O.default.Sizes.SIZE_24,
-        className: j.userDiscrim,
+        className: P.userDiscrim,
         children: ["#", i.discriminator]
       })]
     }), (0, a.jsxs)(u.ModalContent, {
-      className: j.content,
+      className: P.content,
       children: [(0, a.jsx)(u.Text, {
-        className: j.reasonHeader,
+        className: P.reasonHeader,
         variant: "text-xs/normal",
         children: v.default.Messages.BAN_REASON
       }), (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
         children: null != r.reason && "" !== r.reason ? r.reason : v.default.Messages.NO_BAN_REASON
       }), null != I ? (0, a.jsx)(u.Text, {
-        className: j.error,
+        className: P.error,
         color: "text-danger",
         variant: "text-sm/normal",
         children: I.getAnyErrorMessage()
       }) : null]
     }), (0, a.jsxs)(u.ModalFooter, {
-      className: j.footer,
+      className: P.footer,
       children: [(0, a.jsx)(u.Button, {
         onClick: L,
         look: u.Button.Looks.LINK,
@@ -120,24 +120,24 @@ class y extends n.PureComponent {
       guild: s
     } = this.props, n = D.default.getGlobalName(e);
     return (0, a.jsxs)(u.Clickable, {
-      className: i(j.bannedUser),
+      className: i(P.bannedUser),
       onClick: this.handleShowModal,
       onContextMenu: this.handleContextMenu,
       children: [(0, a.jsx)(u.Avatar, {
         src: e.getAvatarURL(null == s ? void 0 : s.id, 40),
         "aria-label": e.username,
         size: u.AvatarSizes.SIZE_40,
-        className: j.bannedUserAvatar
+        className: P.bannedUserAvatar
       }), (0, a.jsxs)("div", {
-        className: j.username,
+        className: P.username,
         children: [D.default.getUserTag(e, {
           mode: "username",
           identifiable: t ? "never" : "always"
         }), !t && !e.isPomelo() && (0, a.jsxs)("span", {
-          className: j.discrim,
+          className: P.discrim,
           children: ["#", e.discriminator]
         }), e.isPomelo() && (0, a.jsxs)("span", {
-          className: j.discrim,
+          className: P.discrim,
           children: ["(", n, ")"]
         })]
       })]
@@ -151,7 +151,7 @@ class y extends n.PureComponent {
         hideDiscriminator: s,
         ban: n
       } = this.props;
-      (0, u.openModal)(l => (0, a.jsx)(P, {
+      (0, u.openModal)(l => (0, a.jsx)(j, {
         ...l,
         guild: e,
         user: t,
@@ -185,7 +185,7 @@ let b = n.forwardRef(function(e, t) {
   }, [i, l]), c = n.useCallback(e => {
     var t;
     if (null == i && 0 === e) return (0, a.jsx)(u.Spinner, {
-      className: j.spinner,
+      className: P.spinner,
       type: u.Spinner.Type.SPINNING_CIRCLE
     }, "spinner");
     let n = l[e],
@@ -236,18 +236,18 @@ function B(e) {
     tag: u.FormTitleTags.H1,
     title: v.default.Messages.BANS_HEADER_NEW,
     children: [(0, a.jsx)("div", {
-      className: j.settingsHeader,
+      className: P.settingsHeader,
       children: (0, a.jsx)(u.FormText, {
         type: u.FormTextTypes.DESCRIPTION,
-        className: j.description,
+        className: P.description,
         children: v.default.Messages.BANS_HINT.format({
           onModerationClick: d
         })
       })
     }), (0, a.jsxs)("div", {
-      className: j.bansSearchContainer,
+      className: P.bansSearchContainer,
       children: [(0, a.jsx)(m.default, {
-        className: j.searchBar,
+        className: P.searchBar,
         query: null != l ? l : "",
         placeholder: v.default.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
         "aria-label": v.default.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
@@ -262,7 +262,7 @@ function B(e) {
         size: u.Button.Sizes.SMALL,
         disabled: r,
         submitting: r,
-        className: j.searchButton,
+        className: P.searchButton,
         children: v.default.Messages.SEARCH
       })]
     })]
@@ -288,7 +288,7 @@ function F() {
       null != e && D(t)(e) && a.push(e)
     }
     return a
-  }, [D]), x = n.useMemo(() => M(g, c, m), [g, M, c, m]), p = null != g, U = x.length % 1e3 == 0 && x.length > 0 && p, P = 0 === x.length, [y, F] = n.useState({
+  }, [D]), x = n.useMemo(() => M(g, c, m), [g, M, c, m]), p = null != g, U = x.length % 1e3 == 0 && x.length > 0 && p, j = 0 === x.length, [y, F] = n.useState({
     currentPage: 1,
     pageSize: 100
   });
@@ -321,20 +321,20 @@ function F() {
     return null !== (e = V[y.currentPage - 1]) && void 0 !== e ? e : []
   }, [V, y.currentPage]);
   return null == l ? null : (0, a.jsxs)("div", {
-    className: i(j.container),
+    className: i(P.container),
     children: [(0, a.jsx)(B, {
       guildId: O,
       storedSearchQuery: c
     }), (0, a.jsxs)("div", {
-      className: i(j.scrollerContainer),
-      children: [!P && (0, a.jsx)(b, {
+      className: i(P.scrollerContainer),
+      children: [!j && (0, a.jsx)(b, {
         guild: l,
         bans: g,
         sortedBans: Y,
         ref: h
-      }), !U && P && (0, a.jsxs)(L.default, {
+      }), !U && j && (0, a.jsxs)(L.default, {
         theme: C,
-        className: j.emptyState,
+        className: P.emptyState,
         children: [(0, a.jsx)(L.EmptyStateImage, {
           darkSrc: s("325911"),
           lightSrc: s("138147"),
@@ -349,9 +349,9 @@ function F() {
         })]
       })]
     }), (0, a.jsx)("div", {
-      className: i(j.paginationContainer),
+      className: i(P.paginationContainer),
       children: (0, a.jsx)(u.Paginator, {
-        className: i(j.paginationInput),
+        className: i(P.paginationInput),
         totalCount: x.length + (U ? y.pageSize : 0),
         pageSize: y.pageSize,
         currentPage: y.currentPage,

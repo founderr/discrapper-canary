@@ -10,8 +10,8 @@ var s = n("627445"),
   l = n("917247"),
   i = n("724522"),
   u = n("599110"),
-  o = n("635357"),
-  c = n("642906"),
+  c = n("635357"),
+  o = n("642906"),
   d = n("85336"),
   f = n("49111"),
   m = n("646718");
@@ -35,9 +35,9 @@ function _(e) {
     purchaseErrorBlockRef: O,
     paymentAuthenticationState: h,
     selectedSkuId: R
-  } = (0, c.usePaymentContext)(), {
+  } = (0, o.usePaymentContext)(), {
     isGift: g
-  } = (0, o.useGiftContext)(), M = {
+  } = (0, c.useGiftContext)(), M = {
     ...(0, i.useSharedPaymentModal)(),
     paymentSources: S,
     paymentSourceId: P,

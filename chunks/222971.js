@@ -8,8 +8,8 @@ var l = n("37983");
 n("884691");
 var u = n("446674"),
   a = n("77078"),
-  d = n("817963"),
-  i = n("398604"),
+  i = n("817963"),
+  d = n("398604"),
   r = n("397680"),
   s = n("466148"),
   o = n("842672"),
@@ -23,10 +23,10 @@ function E(e) {
     recurrenceId: _,
     isRecurrenceItem: T
   } = e, {
-    canManageGuildEvent: S
-  } = (0, d.useManageResourcePermissions)(null != f ? f : E), v = (0, u.useStateFromStores)([i.default], () => i.default.getGuildScheduledEvent(t)), g = S(v), I = (0, o.default)(), N = (0, r.default)(_, null == v ? void 0 : v.id), m = (0, s.default)(t, _);
-  if (!g || null == v) return null;
-  let h = null != v.recurrence_rule && !T,
+    canManageGuildEvent: v
+  } = (0, i.useManageResourcePermissions)(null != f ? f : E), S = (0, u.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(t)), g = v(S), I = (0, o.default)(), N = (0, r.default)(_, null == S ? void 0 : S.id), m = (0, s.default)(t, _);
+  if (!g || null == S) return null;
+  let h = null != S.recurrence_rule && !T,
     M = e => {
       (null == _ || e) && !T ? (0, a.openModalLazy)(async () => {
         let {
@@ -43,7 +43,7 @@ function E(e) {
         } = await n.el("229798").then(n.bind(n, "229798"));
         return t => (0, l.jsx)(e, {
           ...t,
-          guildEvent: v,
+          guildEvent: S,
           recurrenceId: _
         })
       }, I)
@@ -62,7 +62,7 @@ function E(e) {
         id: c.default.Messages.EDIT_ALL_EVENTS,
         label: c.default.Messages.EDIT_ALL_EVENTS,
         action: () => M(!0),
-        disabled: new Date(v.scheduled_start_time).getTime() < Date.now()
+        disabled: new Date(S.scheduled_start_time).getTime() < Date.now()
       })]
     })
   })

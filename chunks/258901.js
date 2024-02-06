@@ -106,13 +106,13 @@ function j(e) {
     emojiSearchProps: E,
     recentlyUsedEmojis: S,
     analyticsOverride: _
-  } = e, j = (0, C.useUID)(), [L, O] = l.useState(!1), y = (0, f.useFrequentlyUsedEmojis)(t.guild_id), P = (0, r.uniqBy)([...y, ...A], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
+  } = e, j = (0, C.useUID)(), [L, O] = l.useState(!1), y = (0, f.useFrequentlyUsedEmojis)(t.guild_id), b = (0, r.uniqBy)([...y, ...A], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
     emoji: e,
     channel: t,
     intention: N
   })).slice(0, I.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT);
-  null != S && S.length > 0 && P.splice(P.length - 1, 1, S[0]);
-  let b = e => {
+  null != S && S.length > 0 && b.splice(b.length - 1, 1, S[0]);
+  let P = e => {
       O(e), null == p || p(e)
     },
     D = (e, t) => {
@@ -121,7 +121,7 @@ function j(e) {
         return
       }
       null != e && d(e);
-      b(!t), t && m.EmojiPickerStore.setSearchPlaceholder(null)
+      P(!t), t && m.EmojiPickerStore.setSearchPlaceholder(null)
     };
   return (0, a.jsxs)(u.Dialog, {
     "aria-labelledby": j,
@@ -154,18 +154,18 @@ function j(e) {
           accessory: (0, a.jsx)(R, {
             otherAccessories: null == E ? void 0 : E.accessory,
             isEmojiPickerExpanded: L,
-            onSetExpanded: b,
+            onSetExpanded: P,
             onFocus: o
           }),
           onKeyDown: e => {
-            null != e && e.key !== v.KeyboardKeysUpdated.TAB && (e.key !== v.KeyboardKeysUpdated.ENTER || e.shiftKey ? b(!0) : b(!L))
+            null != e && e.key !== v.KeyboardKeysUpdated.TAB && (e.key !== v.KeyboardKeysUpdated.ENTER || e.shiftKey ? P(!0) : P(!L))
           }
         }
       }), (0, a.jsx)("div", {
         className: x.slotsContainer,
         children: (0, a.jsx)("div", {
           className: i(x.slots, x.slotsWide),
-          children: P.map(e => {
+          children: b.map(e => {
             let n = g.default.isEmojiDisabled({
               emoji: e,
               channel: t,

@@ -32,10 +32,10 @@ function S(e, t) {
   } = (0, o.useAutomodEditingRuleState)(), [h, A] = i.useState(!1), [_, T] = (0, u.useSyncAutomodRules)(t), {
     rulesByTriggerType: C,
     updateRule: R
-  } = (0, u.useAutomodRulesList)(t), x = i.useMemo(() => {
+  } = (0, u.useAutomodRulesList)(t), O = i.useMemo(() => {
     var e;
     return null !== (e = C[I]) && void 0 !== e ? e : []
-  }, [C]), O = 0 === x.length, y = n > x.length && !O, N = i.useMemo(() => (0, d.canCurrentUserManageMessageFilters)(t), [t]);
+  }, [C]), x = 0 === O.length, y = n > O.length && !x, N = i.useMemo(() => (0, d.canCurrentUserManageMessageFilters)(t), [t]);
   if (!N || null == e || 0 === e.length || null == t) return null;
   let b = e.split(" ").length,
     j = () => {
@@ -61,7 +61,7 @@ function S(e, t) {
           keywordFilter: [...null !== (a = null === (n = t.triggerMetadata) || void 0 === n ? void 0 : n.keywordFilter) && void 0 !== a ? a : [], e]
         }
       };
-      await S(l, x), R(l)
+      await S(l, O), R(l)
     }, D = (0, a.jsx)(a.Fragment, {
       children: (0, a.jsx)(l.MenuItem, {
         id: "automod-rules-loading",
@@ -69,12 +69,12 @@ function S(e, t) {
       })
     });
   return !_ && (D = (0, a.jsxs)(a.Fragment, {
-    children: [O && (0, a.jsx)(l.MenuItem, {
+    children: [x && (0, a.jsx)(l.MenuItem, {
       id: "add-first-rule",
       label: g.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
       action: j,
       disabled: M
-    }), x.map(e => {
+    }), O.map(e => {
       let t = (0, r.getAvailableActionTypes)(I).reduce((t, n) => {
         let a = e.actions.find(e => {
           let {

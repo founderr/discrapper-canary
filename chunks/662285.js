@@ -32,8 +32,8 @@ var a, o, l = n("917351"),
 let L = m.default.get(b.PlatformTypes.SPOTIFY),
   M = "hm://pusher/v1/connections/",
   U = 30 * D.default.Millis.SECOND,
-  k = 30 * D.default.Millis.SECOND,
-  w = 5 * D.default.Millis.MINUTE,
+  w = 30 * D.default.Millis.SECOND,
+  k = 5 * D.default.Millis.MINUTE,
   V = 5 * D.default.Millis.SECOND,
   G = 1.5 * D.default.Millis.SECOND,
   F = 1 * D.default.Millis.MINUTE,
@@ -274,7 +274,7 @@ function ef(e) {
         checkSoundSharing: !0,
         checkSoundboardSounds: !1
       });
-    t && n && null != i ? (j.start(k, ec, !1), W.stop()) : W.start(100, () => j.stop(), !1)
+    t && n && null != i ? (j.start(w, ec, !1), W.stop()) : W.start(100, () => j.stop(), !1)
   }
   return !1
 }
@@ -353,7 +353,7 @@ class eg extends c.default.Store {
       let {
         userId: t
       } = s, n = en(t);
-      if (null == n) return K.start(w, () => {
+      if (null == n) return K.start(k, () => {
         null != s && s.userId === t && (0, E.default)()
       }), !1;
       K.stop();
@@ -505,7 +505,7 @@ let em = new eg(h.default, {
         null == e ? (Q[t].push(l), c = !0) : !(0, f.default)(e, l) && (Object.assign(e, l), c = !0), eo(t, l.id)
       } else Q[t] = [l], c = !0
     }
-    n ? null == $ || $.start(k, ec) : (a = null, null == $ || $.stop());
+    n ? null == $ || $.start(w, ec) : (a = null, null == $ || $.stop());
     let _ = S.default.getAccount(t, b.PlatformTypes.SPOTIFY);
     if (null == _) return c;
     let h = Z[t],
@@ -608,7 +608,7 @@ let em = new eg(h.default, {
         sourceId: e,
         sound: n
       } = null == t ? void 0 : t.desktopSettings, i = null != e && C.default.getObservedAppNameForWindow(e) === L.name;
-      i && n ? ($ = new _.Interval).start(k, ec) : $ = null
+      i && n ? ($ = new _.Interval).start(w, ec) : $ = null
     }
   }
 });

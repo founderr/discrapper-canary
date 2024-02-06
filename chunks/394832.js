@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return i
   }
 });
 var l = n("37983");
 n("884691");
 var u = n("469563"),
   a = n("125094"),
-  d = (0, u.replaceIcon)(function(e) {
+  i = (0, u.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: n = 24,
       color: u = "currentColor",
       className: a,
-      foreground: d
+      foreground: i
     } = e;
     return (0, l.jsx)("svg", {
       className: a,
@@ -24,7 +24,7 @@ var u = n("469563"),
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
       children: (0, l.jsx)("path", {
-        className: d,
+        className: i,
         fill: u,
         fillRule: "evenodd",
         clipRule: "evenodd",

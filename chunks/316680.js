@@ -13,8 +13,8 @@ var l = n("37983"),
   u = n("368121"),
   d = n("570511"),
   c = n("974261"),
-  f = n("782340"),
-  m = n("906419");
+  m = n("782340"),
+  f = n("906419");
 class h extends a.PureComponent {
   componentDidMount() {
     this.updateMediaBar()
@@ -41,25 +41,25 @@ class h extends a.PureComponent {
       minValue: p,
       maxValue: g,
       value: E,
-      onVolumeShow: v,
-      onVolumeHide: C
+      onVolumeShow: C,
+      onVolumeHide: v
     } = this.props, {
       hovered: I,
-      focused: x,
+      focused: S,
       dragging: _
-    } = this.state, S = u.default;
-    return h || E === p ? S = d.default : E < g / 2 && (S = c.default), (0, l.jsxs)("div", {
-      className: i(t, m.container),
+    } = this.state, x = u.default;
+    return h || E === p ? x = d.default : E < g / 2 && (x = c.default), (0, l.jsxs)("div", {
+      className: i(t, f.container),
       onMouseEnter: () => {
         clearTimeout(this._hoverTimeout), this.setState({
           hovered: !0
-        }), null == v || v()
+        }), null == C || C()
       },
       onMouseLeave: () => {
         clearTimeout(this._hoverTimeout), this._hoverTimeout = setTimeout(() => {
           this.setState({
             hovered: !1
-          }), null == C || C()
+          }), null == v || v()
         }, 150)
       },
       onFocus: () => this.setState({
@@ -70,8 +70,8 @@ class h extends a.PureComponent {
       }),
       onKeyDown: this.handleKeyDown,
       children: [(0, l.jsx)("div", {
-        className: i(m.volumeButtonSlider, n, {
-          [m.sliderVisible]: I || x || _
+        className: i(f.volumeButtonSlider, n, {
+          [f.sliderVisible]: I || S || _
         }),
         onMouseEnter: () => {
           clearTimeout(this._hoverTimeout), this.setState({
@@ -94,12 +94,12 @@ class h extends a.PureComponent {
           ref: this._mediaBar
         })
       }), (0, l.jsx)(r.Button, {
-        className: m.volumeButton,
-        "aria-label": f.default.Messages.CONTROL_VOLUME,
+        className: f.volumeButton,
+        "aria-label": m.default.Messages.CONTROL_VOLUME,
         size: r.Button.Sizes.NONE,
         look: r.Button.Looks.BLANK,
         onClick: this.handleToggleMute,
-        children: (0, l.jsx)(S, {
+        children: (0, l.jsx)(x, {
           className: e
         })
       })]

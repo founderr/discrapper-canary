@@ -60,8 +60,8 @@ function I(e) {
     creatorRevenuePolicyUrl: r.default.getArticleURL(_.HelpdeskArticles.CREATOR_POLICY)
   }));
   let v = s && N && !1 === S,
-    j = s && !1 === I,
-    P = (0, E.getCreatorMonetizationAcceptTermsCheckboxText)(),
+    P = s && !1 === I,
+    j = (0, E.getCreatorMonetizationAcceptTermsCheckboxText)(),
     y = R && p && N ? T.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RESUBMIT_V2.format() : void 0;
   return a.useEffect(() => {
     v && O()
@@ -80,9 +80,9 @@ function I(e) {
     hasPreviousApplicationRejection: R,
     requestRejectedNoticeText: t,
     reapplyNoticeText: y,
-    showAcceptTermsFlow: j,
-    wasRejectedInV1: j && (M || R),
+    showAcceptTermsFlow: P,
+    wasRejectedInV1: P && (M || R),
     requirementsFinePrintText: U,
-    acceptTermsCheckboxText: P
+    acceptTermsCheckboxText: j
   }
 }

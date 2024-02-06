@@ -8,8 +8,8 @@ var l = n("37983");
 n("884691");
 var u = n("77078"),
   a = n("272030"),
-  d = n("901582"),
-  i = n("861370"),
+  i = n("901582"),
+  d = n("861370"),
   r = n("455933"),
   s = n("248900"),
   o = n("385752"),
@@ -18,8 +18,8 @@ var u = n("77078"),
   f = n("876725"),
   _ = n("367989"),
   T = n("891603"),
-  S = n("510692"),
-  v = n("49111"),
+  v = n("510692"),
+  S = n("49111"),
   g = n("782340");
 
 function I(e) {
@@ -47,7 +47,7 @@ function I(e) {
     channel: I,
     recurrenceId: n,
     isRecurrenceItem: h
-  }), D = (0, E.default)(t, N, I), O = (0, S.default)(t, N, I), A = (0, s.default)(t, N.id, n), L = (0, f.default)(t), y = (0, i.default)({
+  }), D = (0, E.default)(t, N, I), O = (0, v.default)(t, N, I), A = (0, s.default)(t, N.id, n), L = (0, f.default)(t), y = (0, d.default)({
     id: null != n ? n : t,
     label: g.default.Messages.COPY_ID_EVENT
   }), x = (0, r.default)(t, N.id, I, n), G = (0, T.default)({
@@ -55,9 +55,9 @@ function I(e) {
     guildId: N.id,
     recurrenceId: n
   });
-  return (0, l.jsx)(d.default, {
+  return (0, l.jsx)(i.default, {
     context: m,
-    object: v.AnalyticsObjects.CONTEXT_MENU,
+    object: S.AnalyticsObjects.CONTEXT_MENU,
     children: (0, l.jsxs)(u.Menu, {
       navId: "user-context",
       onClose: a.closeContextMenu,

@@ -4,31 +4,31 @@ n.r(t), n.d(t, {
     return E
   },
   handleProfileAccessibilityTooltipViewed: function() {
-    return p
-  },
-  resetPendingProfileChanges: function() {
-    return h
-  },
-  setPendingBanner: function() {
     return _
   },
-  setPendingBio: function() {
-    return C
-  },
-  setPendingPronouns: function() {
-    return S
-  },
-  setPendingAccentColor: function() {
+  resetPendingProfileChanges: function() {
     return I
   },
-  setPendingThemeColors: function() {
+  setPendingBanner: function() {
+    return h
+  },
+  setPendingBio: function() {
+    return S
+  },
+  setPendingPronouns: function() {
+    return p
+  },
+  setPendingAccentColor: function() {
     return T
   },
+  setPendingThemeColors: function() {
+    return N
+  },
   setTryItOutAvatar: function() {
-    return g
+    return C
   },
   setTryItOutAvatarDecoration: function() {
-    return N
+    return R
   },
   setTryItOutBanner: function() {
     return v
@@ -38,11 +38,11 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("872717"),
-  l = n("913144"),
-  r = n("448993"),
-  o = n("884351"),
-  a = n("845579"),
-  s = n("697218"),
+  r = n("913144"),
+  o = n("448993"),
+  s = n("884351"),
+  l = n("845579"),
+  a = n("697218"),
   u = n("599110"),
   c = n("49111"),
   d = n("646718");
@@ -55,12 +55,12 @@ function f(e) {
 }
 async function E(e, t) {
   var n, u;
-  let d = null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+  let d = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
   if (null == d) return;
-  let f = a.UseLegacyChatInput.getSetting();
-  null != e.bio && f && (e.bio = o.default.parse(void 0, e.bio).content);
+  let f = l.UseLegacyChatInput.getSetting();
+  null != e.bio && f && (e.bio = s.default.parse(void 0, e.bio).content);
   try {
-    l.default.dispatch({
+    r.default.dispatch({
       type: "USER_PROFILE_UPDATE_START",
       userId: d
     });
@@ -70,15 +70,15 @@ async function E(e, t) {
     });
     if (n.ok) {
       let e = null === (u = n.body.profile_effect) || void 0 === u ? void 0 : u.id;
-      l.default.dispatch({
+      r.default.dispatch({
         type: "USER_PROFILE_UPDATE_SUCCESS",
         userId: d,
         profileEffectId: e,
         ...n.body
       })
     } else {
-      let e = new r.APIError(n);
-      l.default.dispatch({
+      let e = new o.APIError(n);
+      r.default.dispatch({
         type: "USER_PROFILE_UPDATE_FAILURE",
         errors: n.body,
         apiError: e
@@ -86,8 +86,8 @@ async function E(e, t) {
     }
     return n
   } catch (t) {
-    let e = new r.APIError(t);
-    l.default.dispatch({
+    let e = new o.APIError(t);
+    r.default.dispatch({
       type: "USER_PROFILE_UPDATE_FAILURE",
       errors: {},
       apiError: e
@@ -95,76 +95,76 @@ async function E(e, t) {
   }
 }
 
-function p() {
-  l.default.dispatch({
+function _() {
+  r.default.dispatch({
     type: "USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED"
   })
 }
 
-function h() {
-  l.default.dispatch({
+function I() {
+  r.default.dispatch({
     type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES"
   })
 }
 
-function _(e) {
-  l.default.dispatch({
+function h(e) {
+  r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER",
     banner: e
   })
 }
 
-function C(e) {
-  l.default.dispatch({
+function S(e) {
+  r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO",
     bio: e
   })
 }
 
-function S(e) {
-  l.default.dispatch({
+function p(e) {
+  r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
     pronouns: e
   })
 }
 
-function I(e) {
-  l.default.dispatch({
+function T(e) {
+  r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
     color: e
   })
 }
 
-function T(e) {
-  l.default.dispatch({
+function N(e) {
+  r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS",
     themeColors: e
   })
 }
 
-function g(e) {
-  l.default.dispatch({
+function C(e) {
+  r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
     avatar: e
   }), f(d.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)
 }
 
-function N(e) {
-  l.default.dispatch({
+function R(e) {
+  r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
     avatarDecoration: e
   }), f(d.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
 }
 
 function v(e) {
-  l.default.dispatch({
+  r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
     banner: e
   }), f(d.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
 }
 
 function A(e) {
-  l.default.dispatch({
+  r.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
     themeColors: e
   }), f(d.AnalyticsPremiumFeatureNames.PROFILE_THEME_COLOR)

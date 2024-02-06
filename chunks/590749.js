@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var r = n("37983");
 n("884691");
 var i = n("85336"),
-  l = n("262683"),
-  s = n("946359"),
+  s = n("262683"),
+  l = n("946359"),
   u = n("724269"),
   a = n("559362"),
   o = n("671672"),
@@ -43,7 +43,7 @@ function I(e) {
   }, {
     key: i.Step.ADD_PAYMENT_STEPS,
     renderStep: e => (0, r.jsx)(r.Fragment, {
-      children: (0, r.jsx)(l.PaymentModalAddPaymentStep, {
+      children: (0, r.jsx)(s.PaymentModalAddPaymentStep, {
         ...e,
         breadcrumbSteps: [i.Step.ADD_PAYMENT_STEPS, i.Step.REVIEW, i.Step.CONFIRM]
       })
@@ -56,7 +56,7 @@ function I(e) {
     renderStep: () => (0, r.jsx)(u.default, {})
   }, {
     key: i.Step.AWAITING_AUTHENTICATION,
-    renderStep: () => (0, r.jsx)(s.default, {})
+    renderStep: () => (0, r.jsx)(l.default, {})
   }, {
     key: i.Step.REVIEW,
     renderStep: e => (0, r.jsx)(d.default, {

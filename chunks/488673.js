@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return T
+    return M
   }
 }), a("222007");
 var n = a("37983"),
@@ -22,18 +22,18 @@ var n = a("37983"),
   C = a("803725"),
   N = a("142485"),
   x = a("643290"),
-  S = a("431734"),
+  g = a("431734"),
   I = a("80028"),
-  g = a("846325"),
-  _ = a("782340"),
+  _ = a("846325"),
+  S = a("782340"),
   L = a("515597"),
-  M = a("446825").Buffer;
+  T = a("446825").Buffer;
 
-function T(e) {
+function M(e) {
   let {
     clip: t,
     cropData: i,
-    channelId: T,
+    channelId: M,
     clipName: A,
     voiceAudioEnabled: R,
     applicationAudioEnabled: j,
@@ -45,11 +45,11 @@ function T(e) {
   } = e, [O, k] = l.useState(null), {
     onShareClick: F
   } = (0, N.default)({
-    channelId: T,
+    channelId: M,
     setExporting: e => k(null != e ? "share" : null)
   });
-  async function G() {
-    let e = f.default.getChannel(T);
+  async function U() {
+    let e = f.default.getChannel(M);
     k("export"), D(!0);
     try {
       let l = await (0, C.exportClip)(t, {
@@ -60,7 +60,7 @@ function T(e) {
       (0, u.openModalLazy)(async () => {
         let {
           default: i
-        } = await a.el("823749").then(a.bind(a, "823749")), r = (null == e ? void 0 : e.guild_id) != null ? m.default.getGuild(e.guild_id) : null, s = null != r && (0, c.getManageResourcePermissions)(r, v.default, E.default).canCreateExpressions, u = null == A || "" === A ? (0, I.CLIP_NAME_TEMPLATE)(h.default.extractTimestamp(t.id)) : A, o = u.slice(0, g.MAX_LENGTH_SOUND_NAME);
+        } = await a.el("823749").then(a.bind(a, "823749")), r = (null == e ? void 0 : e.guild_id) != null ? m.default.getGuild(e.guild_id) : null, s = null != r && (0, c.getManageResourcePermissions)(r, v.default, E.default).canCreateExpressions, u = null == A || "" === A ? (0, I.CLIP_NAME_TEMPLATE)(h.default.extractTimestamp(t.id)) : A, o = u.slice(0, _.MAX_LENGTH_SOUND_NAME);
         return t => (0, n.jsx)(i, {
           ...t,
           showGuildPicker: !0,
@@ -77,7 +77,7 @@ function T(e) {
       k(null), D(!1)
     }
   }
-  async function U() {
+  async function G() {
     k("export"), D(!0);
     try {
       let e = await (0, C.exportClip)(t, {
@@ -86,7 +86,7 @@ function T(e) {
           voiceAudio: R
         }),
         a = await e.arrayBuffer();
-      await d.default.fileManager.saveWithDialog(M.from(a), (0, I.CLIPS_EXPORT_FILENAME)(t.id))
+      await d.default.fileManager.saveWithDialog(T.from(a), (0, I.CLIPS_EXPORT_FILENAME)(t.id))
     } catch (e) {} finally {
       k(null), D(!1)
     }
@@ -115,7 +115,7 @@ function T(e) {
       className: r(L.clipFormSection, L.editSection),
       children: [(0, n.jsx)(u.FormItem, {
         className: L.clipFormItem,
-        title: _.default.Messages.CLIPS_EDIT_TITLE,
+        title: S.default.Messages.CLIPS_EDIT_TITLE,
         children: (0, n.jsx)(u.TextInput, {
           onChange: e => {
             "" === e ? b(void 0) : b(e)
@@ -123,7 +123,7 @@ function T(e) {
           value: A,
           minLength: I.CLIP_NAME_MIN_CHAR_LENGTH,
           maxLength: I.CLIP_NAME_MAX_CHAR_LENGTH,
-          placeholder: _.default.Messages.CLIPS_UNTITLED
+          placeholder: S.default.Messages.CLIPS_UNTITLED
         })
       }), (0, n.jsxs)("div", {
         className: L.clipFormSwitches,
@@ -131,19 +131,19 @@ function T(e) {
           onChange: w,
           value: j,
           hideBorder: !0,
-          children: _.default.Messages.CLIPS_EDIT_GAME_AUDIO
+          children: S.default.Messages.CLIPS_EDIT_GAME_AUDIO
         }), (0, n.jsx)(u.FormSwitch, {
           onChange: P,
           value: R,
           hideBorder: !0,
-          children: _.default.Messages.CLIPS_EDIT_VOICE_CHANNEL_AUDIO
+          children: S.default.Messages.CLIPS_EDIT_VOICE_CHANNEL_AUDIO
         })]
       })]
     }), (0, n.jsxs)("div", {
       className: r(L.clipFormSection, L.metadataSection),
       children: [(0, n.jsx)(x.default, {
         clip: t
-      }), (0, n.jsx)(S.default, {
+      }), (0, n.jsx)(g.default, {
         className: L.userList,
         clip: t
       })]
@@ -166,7 +166,7 @@ function T(e) {
             s.closeModal(I.CLIPS_EDIT_MODAL_KEY), s.closeModal(I.CLIPS_GALLERY_MODAL_KEY)
           }
         }),
-        children: _.default.Messages.CLIPS_EDIT_SHARE_CLIP
+        children: S.default.Messages.CLIPS_EDIT_SHARE_CLIP
       }), (0, n.jsx)(u.Button, {
         size: u.Button.Sizes.ICON,
         className: L.clipFormFooterButton,
@@ -176,9 +176,9 @@ function T(e) {
         }),
         color: u.Button.Colors.PRIMARY,
         onClick: y,
-        children: _.default.Messages.SAVE_CHANGES
+        children: S.default.Messages.SAVE_CHANGES
       }), (0, n.jsx)(u.Button, {
-        "aria-label": _.default.Messages.MORE_OPTIONS,
+        "aria-label": S.default.Messages.MORE_OPTIONS,
         size: u.Button.Sizes.ICON,
         wrapperClassName: r(L.clipFormFooterButton, {
           [L.submittingWrapperFix]: null != O
@@ -193,10 +193,10 @@ function T(e) {
             } = await a.el("87102").then(a.bind(a, "87102"));
             return t => (0, n.jsx)(e, {
               ...t,
-              onExportToSoundboard: G,
-              onExportToFile: U,
+              onExportToSoundboard: U,
+              onExportToFile: G,
               onDelete: B,
-              channelId: T
+              channelId: M
             })
           })
         },

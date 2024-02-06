@@ -44,8 +44,8 @@ function S(e) {
       giftRecipient: b,
       giftCode: U,
       hasSentMessage: k,
-      isSendingMessage: j,
-      sendGiftMessage: v
+      isSendingMessage: v,
+      sendGiftMessage: j
     } = (0, _.useGiftContext)();
   l(null != A, "Expected plan to selected"), l(null != g, "Expected selectedSkuId"), l(null != O, "Step should be set");
   let {
@@ -56,14 +56,14 @@ function S(e) {
     S(), null == p || p()
   }, [S, p]);
   return a.useEffect(() => {
-    if (!y || null == b || null == U || k || j || (0, d.shouldShowCustomGiftExperience)(b, !0, "PremiumPaymentConfirmStep")) return;
+    if (!y || null == b || null == U || k || v || (0, d.shouldShowCustomGiftExperience)(b, !0, "PremiumPaymentConfirmStep")) return;
     let e = u.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
       location: "36b986_1"
     }).enabled;
-    e && v({
+    e && j({
       onSubscriptionConfirmation: p
     })
-  }, [v, y, b, U, k, j, p]), r = null != T ? T(A, G, x) : y ? (0, s.jsx)(o.PremiumSubscriptionGiftPurchaseConfirmation, {
+  }, [j, y, b, U, k, v, p]), r = null != T ? T(A, G, x) : y ? (0, s.jsx)(o.PremiumSubscriptionGiftPurchaseConfirmation, {
     planId: A.id,
     onClose: G
   }) : h.current === A.id ? (0, s.jsx)(o.default, {

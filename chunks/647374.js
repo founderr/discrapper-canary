@@ -91,11 +91,11 @@ var C = {
       },
       M = n.allowEmojiLinks ? E : m,
       U = [...M, ...p],
-      k = [...v, ...S],
-      w = t(y, L),
-      V = T(w, U, [c.AST_KEY.EMOJI]),
+      w = [...v, ...S],
+      k = t(y, L),
+      V = T(k, U, [c.AST_KEY.EMOJI]),
       G = t(N, L),
-      F = T(G, k);
+      F = T(G, w);
     if (null == V || null == F) return f();
     let x = function e(t) {
         let n = "";

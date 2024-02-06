@@ -143,7 +143,7 @@ function G(e) {
     handleDragStart: x,
     handleDragReset: p,
     handleDragComplete: U
-  } = (0, L.default)(o), v = n.useRef(null), j = n.useCallback(e => {
+  } = (0, L.default)(o), v = n.useRef(null), P = n.useCallback(e => {
     var t, s;
     let a = o.findIndex(t => t.id === e);
     null === (s = v.current) || void 0 === s || null === (t = s.getScrollerNode()) || void 0 === t || t.scrollTo({
@@ -151,11 +151,11 @@ function G(e) {
     })
   }, [o]);
   n.useEffect(() => {
-    j(s)
+    P(s)
   }, []), n.useEffect(() => {
-    o.length > A && j(s), o.length !== A && O(o.length)
-  }, [o.length, A, O, j, s]);
-  let P = () => {
+    o.length > A && P(s), o.length !== A && O(o.length)
+  }, [o.length, A, O, P, s]);
+  let j = () => {
     E.default.createRole(t.id), r(C.GuildSettingsRoleEditSections.DISPLAY)
   };
   return (0, a.jsx)(S.default.Sidebar, {
@@ -188,7 +188,7 @@ function G(e) {
           children: e => (0, a.jsx)(u.Clickable, {
             className: R.addRole,
             ...e,
-            onClick: P,
+            onClick: j,
             children: (0, a.jsx)(f.default, {
               width: 20,
               height: 20

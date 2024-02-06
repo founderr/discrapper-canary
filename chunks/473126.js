@@ -35,8 +35,8 @@ var a = s("37983"),
   p = s("900938"),
   U = s("826485"),
   v = s("49111"),
-  j = s("846325"),
-  P = s("782340"),
+  P = s("846325"),
+  j = s("782340"),
   y = s("28058");
 let b = x.isPlatformEmbedded || "Safari" !== o.name && "Firefox" !== o.name;
 
@@ -44,7 +44,7 @@ function B() {
   let e = (0, d.useStateFromStores)([p.default], () => p.default.getProps().guild);
   return null == e ? null : (0, a.jsx)(c.FormSection, {
     tag: c.FormTitleTags.H1,
-    title: P.default.Messages.GUILD_SETTINGS_SOUNDBOARD,
+    title: j.default.Messages.GUILD_SETTINGS_SOUNDBOARD,
     children: (0, a.jsx)(k, {
       guild: e
     })
@@ -70,13 +70,13 @@ function H(e) {
     guildId: n
   } = e, l = (0, G.getTotalSoundboardSoundCountForTier)(t);
   return 0 === t ? (0, a.jsx)(a.Fragment, {
-    children: P.default.Messages.GUILD_SETTINGS_SOUND_LIST_SOUNDS_AVAILABLE.format({
+    children: j.default.Messages.GUILD_SETTINGS_SOUND_LIST_SOUNDS_AVAILABLE.format({
       slots: s,
       totalSlots: l
     })
   }) : (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(c.Tooltip, {
-      text: P.default.Messages.GUILD_SETTINGS_SOUNDBOARD_BOOST_LEVEL.format({
+      text: j.default.Messages.GUILD_SETTINGS_SOUNDBOARD_BOOST_LEVEL.format({
         currentBoostLevel: t
       }),
       children: e => (0, a.jsx)(c.Clickable, {
@@ -96,7 +96,7 @@ function H(e) {
           ...e
         })
       })
-    }), P.default.Messages.GUILD_SETTINGS_SOUND_LIST_SOUNDS_AVAILABLE_BOOST_LEVEL.format({
+    }), j.default.Messages.GUILD_SETTINGS_SOUND_LIST_SOUNDS_AVAILABLE_BOOST_LEVEL.format({
       slots: s,
       totalSlots: l,
       boostLevel: t
@@ -129,12 +129,12 @@ let V = e => {
     renderPopoutBody: () => (0, a.jsx)(c.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
-      children: P.default.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND_NOT_SUPPORTED.format()
+      children: j.default.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND_NOT_SUPPORTED.format()
     }),
     renderPopoutChildren: e => (0, a.jsx)(c.Button, {
       ...e,
       disabled: !0,
-      children: P.default.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND
+      children: j.default.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND
     })
   });
 
@@ -143,7 +143,7 @@ function k(e) {
     guild: t
   } = e, [l, i] = (0, d.useStateFromStoresArray)([f.default], () => {
     var e;
-    return [null !== (e = f.default.getSoundsForGuild(t.id)) && void 0 !== e ? e : j.EMPTY_SOUND_LIST, f.default.isFetchingSounds() || f.default.isFetchingDefaultSounds()]
+    return [null !== (e = f.default.getSoundsForGuild(t.id)) && void 0 !== e ? e : P.EMPTY_SOUND_LIST, f.default.isFetchingSounds() || f.default.isFetchingDefaultSounds()]
   }), {
     canCreateExpressions: r
   } = (0, S.useManageResourcePermissions)(t), o = n.useRef(null), u = (0, T.default)(), E = t.premiumTier, _ = (0, G.getAvailableSoundboardSoundCount)(l, E);
@@ -177,7 +177,7 @@ function k(e) {
       })
     },
     disabled: _ <= 0 || !r,
-    children: P.default.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND
+    children: j.default.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND
   }) : (0, a.jsx)(w, {});
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
@@ -185,7 +185,7 @@ function k(e) {
         className: y.helpText,
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: P.default.Messages.GUILD_SETTINGS_SOUNDBOARD_DESCRIPTION
+        children: j.default.Messages.GUILD_SETTINGS_SOUNDBOARD_DESCRIPTION
       }), (0, a.jsx)("div", {
         className: y.buttons,
         children: !L && O
@@ -199,9 +199,9 @@ function k(e) {
         width: 272,
         height: 212
       }), (0, a.jsx)(m.EmptyStateText, {
-        note: P.default.Messages.NO_SOUNDS,
+        note: j.default.Messages.NO_SOUNDS,
         noteClassName: y.emptyText,
-        children: P.default.Messages.NO_SOUNDS_TITLE
+        children: j.default.Messages.NO_SOUNDS_TITLE
       }), O]
     }) : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(c.FormDivider, {
@@ -224,11 +224,11 @@ function k(e) {
         children: [(0, a.jsxs)("div", {
           className: y.tableHeaders,
           children: [(0, a.jsx)(F, {
-            children: P.default.Messages.EMOJI
+            children: j.default.Messages.EMOJI
           }), (0, a.jsx)(F, {
-            children: P.default.Messages.GUILD_SETTINGS_SOUND_NAME_COLUMN
+            children: j.default.Messages.GUILD_SETTINGS_SOUND_NAME_COLUMN
           }), (0, a.jsx)(F, {
-            children: P.default.Messages.GUILD_SETTINGS_SOUND_UPLOADER_COLUMN
+            children: j.default.Messages.GUILD_SETTINGS_SOUND_UPLOADER_COLUMN
           })]
         }), l.map(e => (0, a.jsx)(Y, {
           sound: e,
@@ -319,7 +319,7 @@ function Y(e) {
             })
           })
         },
-        "aria-label": P.default.Messages.EDIT,
+        "aria-label": j.default.Messages.EDIT,
         children: (0, a.jsx)(R.default, {
           className: y.soundEditIcon
         })
@@ -327,22 +327,22 @@ function Y(e) {
         className: y.soundRemove,
         onClick: function(e) {
           e.stopPropagation(), (0, c.openModal)(e => (0, a.jsx)(c.ConfirmModal, {
-            header: P.default.Messages.GUILD_SETTINGS_SOUNDBOARD_DELETE_SOUND_TITLE.format({
+            header: j.default.Messages.GUILD_SETTINGS_SOUNDBOARD_DELETE_SOUND_TITLE.format({
               soundName: T
             }),
-            confirmText: P.default.Messages.DELETE,
-            cancelText: P.default.Messages.CANCEL,
+            confirmText: j.default.Messages.DELETE,
+            cancelText: j.default.Messages.CANCEL,
             onConfirm: v,
             ...e,
             children: (0, a.jsx)(c.Text, {
               variant: "text-md/normal",
-              children: P.default.Messages.GUILD_SETTINGS_SOUNDBOARD_DELETE_SOUND_BODY.format({
+              children: j.default.Messages.GUILD_SETTINGS_SOUNDBOARD_DELETE_SOUND_BODY.format({
                 soundName: T
               })
             })
           }))
         },
-        "aria-label": P.default.Messages.REMOVE,
+        "aria-label": j.default.Messages.REMOVE,
         children: (0, a.jsx)(O.default, {
           className: y.soundEditIcon
         })

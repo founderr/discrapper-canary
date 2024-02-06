@@ -42,17 +42,17 @@ function C(e) {
   let {
     onClose: t,
     transitionState: s
-  } = e, [n, l] = r.useState(""), [c, f] = r.useState(""), [C, p] = r.useState(null), [R, O] = r.useState(!1), [v, M] = r.useState("DOMAIN"), g = () => {
-    O(!0), p(null), a.default.post({
+  } = e, [n, l] = r.useState(""), [c, f] = r.useState(""), [C, p] = r.useState(null), [R, v] = r.useState(!1), [O, M] = r.useState("DOMAIN"), g = () => {
+    v(!0), p(null), a.default.post({
       url: I.Endpoints.CONNECTION(I.PlatformTypes.DOMAIN, n),
       body: {}
     }).then(() => {
       t()
     }).catch(e => {
       var t, s, n, l, o, r, a;
-      (null === (t = e.body) || void 0 === t ? void 0 : t.proof) && "DOMAIN" === v ? (f(e.body.proof), M("PROOF_DNS")) : p((null === (r = e.body) || void 0 === r ? void 0 : null === (o = r.errors) || void 0 === o ? void 0 : null === (l = o.domain) || void 0 === l ? void 0 : null === (n = l._errors) || void 0 === n ? void 0 : null === (s = n[0]) || void 0 === s ? void 0 : s.message) || (null === (a = e.body) || void 0 === a ? void 0 : a.message) || e.message)
+      (null === (t = e.body) || void 0 === t ? void 0 : t.proof) && "DOMAIN" === O ? (f(e.body.proof), M("PROOF_DNS")) : p((null === (r = e.body) || void 0 === r ? void 0 : null === (o = r.errors) || void 0 === o ? void 0 : null === (l = o.domain) || void 0 === l ? void 0 : null === (n = l._errors) || void 0 === n ? void 0 : null === (s = n[0]) || void 0 === s ? void 0 : s.message) || (null === (a = e.body) || void 0 === a ? void 0 : a.message) || e.message)
     }).finally(() => {
-      O(!1)
+      v(!1)
     })
   };
   return (0, o.jsxs)(i.ModalRoot, {
@@ -70,7 +70,7 @@ function C(e) {
         onClick: t
       })]
     }), (0, o.jsxs)(i.Slides, {
-      activeSlide: v,
+      activeSlide: O,
       width: 440,
       children: [(0, o.jsx)(i.Slide, {
         id: "DOMAIN",

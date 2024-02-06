@@ -44,7 +44,7 @@ function h(e) {
     onPromptDragReset: U
   } = e, {
     dropdownsAllowed: v
-  } = (0, E.useOnboardingDropdownExperiment)(s.id), j = (0, r.useStateFromStores)([N.default], () => N.default.editedDefaultChannelIds), P = v ? L.DROPDOWN_MAX_NUM_OPTIONS : L.MULTIPLE_CHOICE_MAX_NUM_OPTIONS, {
+  } = (0, E.useOnboardingDropdownExperiment)(s.id), P = (0, r.useStateFromStores)([N.default], () => N.default.editedDefaultChannelIds), j = v ? L.DROPDOWN_MAX_NUM_OPTIONS : L.MULTIPLE_CHOICE_MAX_NUM_OPTIONS, {
     drag: y,
     dragSourcePosition: b,
     drop: B,
@@ -59,7 +59,7 @@ function h(e) {
   }), H = (0, r.useStateFromStoresObject)([g.default], () => {
     var e;
     return null !== (e = g.default.errors[A]) && void 0 !== e ? e : O
-  }), [V, w] = n.useState(!1), [k, Y] = n.useState(!1), K = null !== (t = H.options) && void 0 !== t ? t : H.optionErrors.filter(S.isNotNullish)[0], W = H.config, z = v && l.options.length >= L.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD, Z = (0, c.getMinimumSetOfDefaultChannelIds)(s.id, Array.from(j), [l]).length - j.size, X = n.useRef(null);
+  }), [V, w] = n.useState(!1), [k, Y] = n.useState(!1), K = null !== (t = H.options) && void 0 !== t ? t : H.optionErrors.filter(S.isNotNullish)[0], W = H.config, z = v && l.options.length >= L.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD, Z = (0, c.getMinimumSetOfDefaultChannelIds)(s.id, Array.from(P), [l]).length - P.size, X = n.useRef(null);
   return (n.useLayoutEffect(() => {
     setTimeout(() => {
       if (0 === A && !u) {
@@ -163,10 +163,10 @@ function h(e) {
         color: "text-muted",
         children: z ? m.default.Messages.ONBOARDING_PROMPT_DROPDOWN_OPTIONS_HEADER.format({
           count: l.options.length,
-          total: P
+          total: j
         }) : m.default.Messages.ONBOARDING_PROMPT_OPTIONS_HEADER.format({
           count: l.options.length,
-          total: P
+          total: j
         })
       }), (0, a.jsx)(D, {
         guild: s,

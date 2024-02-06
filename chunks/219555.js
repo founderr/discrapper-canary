@@ -119,10 +119,10 @@ function I(e) {
   }, [A]), n.useEffect(() => () => {
     clearTimeout(U.current)
   }, []);
-  let j = n.useCallback(e => {
+  let P = n.useCallback(e => {
       s(e.target.value)
     }, [s]),
-    P = n.useCallback(function() {
+    j = n.useCallback(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         s = t.trim().length <= 0;
       if (s && S(), null != L.current && null != h.current && null != m.current) {
@@ -133,8 +133,8 @@ function I(e) {
     }, [t, h, l, S]),
     y = n.useCallback(e => {
       let s = t.trim().length <= 0;
-      E.NEXT_CHIP_INPUT_KEY.has(e.key) ? (e.preventDefault(), e.stopPropagation(), P(!0)) : "Backspace" === e.key && s && (e.preventDefault(), e.stopPropagation(), P(!0))
-    }, [P, t]),
+      E.NEXT_CHIP_INPUT_KEY.has(e.key) ? (e.preventDefault(), e.stopPropagation(), j(!0)) : "Backspace" === e.key && s && (e.preventDefault(), e.stopPropagation(), j(!0))
+    }, [j, t]),
     b = n.useCallback(e => {
       let t = e.metaKey || e.ctrlKey;
       I(t), t ? e.preventDefault() : O(!0), e.stopPropagation()
@@ -155,7 +155,7 @@ function I(e) {
       }),
       children: [(0, a.jsxs)(o.Clickable, {
         tag: "div",
-        onBlur: () => P(!1),
+        onBlur: () => j(!1),
         onClick: b,
         ignoreKeyPress: !0,
         onMouseEnter: () => p(!0),
@@ -171,7 +171,7 @@ function I(e) {
             [_.isSelecting]: f
           }),
           ref: L,
-          onChange: j,
+          onChange: P,
           onKeyDownCapture: y,
           value: t,
           style: {

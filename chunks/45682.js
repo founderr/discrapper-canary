@@ -5,10 +5,10 @@ i.r(t), i.d(t, {
   }
 }), i("222007");
 var n = i("37983"),
-  l = i("884691"),
-  s = i("414456"),
-  a = i.n(s),
-  r = i("907002"),
+  s = i("884691"),
+  l = i("414456"),
+  r = i.n(l),
+  a = i("907002"),
   o = i("446674"),
   u = i("151426"),
   c = i("856567"),
@@ -32,22 +32,22 @@ function T(e) {
   let {
     tooltipText: t,
     headingText: i,
-    textColor: l
-  } = e, s = null != i;
+    textColor: s
+  } = e, l = null != i;
   return (0, n.jsxs)("span", {
-    className: s ? void 0 : h.tooltipContainer,
+    className: l ? void 0 : h.tooltipContainer,
     children: [(0, n.jsxs)("span", {
       className: h.tooltipContainer,
       children: [(0, n.jsx)(p.default, {
         className: h.nitroWheel
-      }), s ? (0, n.jsx)(d.Heading, {
-        color: null != l ? l : "text-normal",
+      }), l ? (0, n.jsx)(d.Heading, {
+        color: null != s ? s : "text-normal",
         variant: "heading-sm/semibold",
         children: i
       }) : null]
     }), (0, n.jsx)(d.Text, {
-      variant: s ? "text-xs/normal" : "text-sm/medium",
-      color: null != l ? l : "text-normal",
+      variant: l ? "text-xs/normal" : "text-sm/medium",
+      color: null != s ? s : "text-normal",
       children: t
     })]
   })
@@ -57,24 +57,24 @@ function N(e) {
   let {
     checked: t,
     onClick: i,
-    id: s = "burst-reaction-toggle-button"
-  } = e, p = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), N = m.default.getCurrentUser(), v = null != N && !(0, g.isPremium)(N), A = v ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [y, j] = (0, E.useSelectedDismissibleContent)(A), [R, O] = l.useState(!1), [M, x] = (0, r.useSpring)(() => ({})), P = (0, r.animated)(c.SuperReactionIcon);
-  l.useEffect(() => {
+    id: l = "burst-reaction-toggle-button"
+  } = e, p = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), N = m.default.getCurrentUser(), v = null != N && !(0, g.isPremium)(N), A = v ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [y, R] = (0, E.useSelectedDismissibleContent)(A), [j, O] = s.useState(!1), [M, x] = (0, a.useSpring)(() => ({})), L = (0, a.animated)(c.SuperReactionIcon);
+  s.useEffect(() => {
     let e = y === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-    e && (j(_.ContentDismissActionType.DISMISS), setTimeout(() => O(e), 200))
-  }, [y, j]);
-  let L = R ? S.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? S.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : S.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
-    D = R ? S.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
+    e && (R(_.ContentDismissActionType.DISMISS), setTimeout(() => O(e), 200))
+  }, [y, R]);
+  let P = j ? S.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? S.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : S.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
+    D = j ? S.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
   return (0, n.jsxs)(d.TooltipContainer, {
     position: "top",
     text: (0, n.jsx)(T, {
       textColor: "always-white",
-      tooltipText: L,
+      tooltipText: P,
       headingText: D
     }),
     color: d.Tooltip.Colors.BRAND,
-    forceOpen: R,
-    "aria-label": L,
+    forceOpen: j,
+    "aria-label": P,
     tooltipClassName: h.tooltip,
     children: [(0, n.jsx)("input", {
       className: h.visuallyHidden,
@@ -90,17 +90,17 @@ function N(e) {
           config: C
         }), null == i || i(), O(!1)
       },
-      id: s,
+      id: l,
       type: "checkbox"
     }), (0, n.jsxs)("label", {
-      htmlFor: s,
-      className: a(h.label, {
+      htmlFor: l,
+      className: r(h.label, {
         [h.labelChecked]: t
       }),
       children: [t ? (0, n.jsx)(I.Shine, {
         className: h.shine,
         shinePaused: p
-      }) : null, (0, n.jsx)(P, {
+      }) : null, (0, n.jsx)(L, {
         style: p ? void 0 : M,
         width: 20,
         height: 20,

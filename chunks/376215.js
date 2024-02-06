@@ -49,13 +49,13 @@ function _(e) {
       commandOptions: e.options,
       commandOptionStates: n
     }
-  }), k = i.useMemo(() => {
+  }), b = i.useMemo(() => {
     var e;
     return null !== (e = null == O ? void 0 : O.filter(e => {
       var t;
       return e.type === f.ApplicationCommandOptionType.ATTACHMENT && (null == M ? void 0 : null === (t = M[e.name]) || void 0 === t ? void 0 : t.hasValue)
     })) && void 0 !== e ? e : []
-  }, [O, M]), [b, P] = i.useState([]);
+  }, [O, M]), [k, P] = i.useState([]);
   i.useEffect(() => {
     let e = () => {
       c.default.clearAll(t, n.drafts.type)
@@ -71,13 +71,13 @@ function _(e) {
   }), i.useEffect(() => {
     if (R) {
       let e = [];
-      b.forEach(t => {
-        !k.some(e => t.name === e.name) && e.push(t)
+      k.forEach(t => {
+        !b.some(e => t.name === e.name) && e.push(t)
       }), e.forEach(e => {
         c.default.remove(t, e.name, n.drafts.type)
-      }), P(k)
+      }), P(b)
     }
-  }, [t, k.length, n]), !R && 0 === A.length || R && 0 === k.length) ? null : (0, l.jsxs)(i.Fragment, {
+  }, [t, b.length, n]), !R && 0 === A.length || R && 0 === b.length) ? null : (0, l.jsxs)(i.Fragment, {
     children: [(0, l.jsx)(s.ListNavigatorProvider, {
       navigator: _,
       children: (0, l.jsx)(s.ListNavigatorContainer, {
@@ -90,7 +90,7 @@ function _(e) {
             ref: i,
             ...s,
             className: o(x.channelAttachmentArea, I.scrollbarGhost),
-            children: R ? k.map(e => (0, l.jsx)(T.default, {
+            children: R ? b.map(e => (0, l.jsx)(T.default, {
               channelId: t,
               keyboardModeEnabled: r,
               option: e

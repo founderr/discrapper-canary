@@ -72,11 +72,11 @@ function _(e, t, n, d) {
     }
     return p(n)
   }, e.isInline = e => !!x.has(e.type) || m(e), e.isVoid = e => !!("applicationCommandOption" === e.type && I.has(e.optionType)) || h(e), e.deleteBackward = t => {
-    k(e, () => P(t))
+    b(e, () => P(t))
   }, e.deleteForward = t => {
-    k(e, () => L(t))
+    b(e, () => L(t))
   }, e.deleteFragment = t => {
-    k(e, () => U(t))
+    b(e, () => U(t))
   };
   let j = null,
     D = null,
@@ -144,7 +144,7 @@ function _(e, t, n, d) {
                       if (null != c)
                         for (let l of c) {
                           e.add(l.name);
-                          let i = null !== (s = b(n, t, l.name)) && void 0 !== s ? s : l.text,
+                          let i = null !== (s = k(n, t, l.name)) && void 0 !== s ? s : l.text,
                             r = {
                               type: "applicationCommandOption",
                               optionName: l.name,
@@ -159,7 +159,7 @@ function _(e, t, n, d) {
                       for (let l of d.options)
                         if (!e.has(l.name) && (l.required || null != u[l.name])) {
                           let e, i;
-                          m.length > 0 && !I.has(l.type) ? (e = m, m = "") : e = null != (i = b(n, t, l.name)) ? i : "";
+                          m.length > 0 && !I.has(l.type) ? (e = m, m = "") : e = null != (i = k(n, t, l.name)) ? i : "";
                           let r = {
                             type: "applicationCommandOption",
                             optionName: l.name,
@@ -192,8 +192,8 @@ function _(e, t, n, d) {
                         voids: !0
                       })
                     });
-                    let k = null;
-                    return null != A ? (C.SlateTransforms.selectCommandOption(e, A.optionName), k = A.optionName) : null != O ? (C.SlateTransforms.selectCommandOption(e, O.optionName, !1), k = O.optionName) : C.SlateTransforms.resetSelectionToEnd(e), null == O && R(e, d), k
+                    let b = null;
+                    return null != A ? (C.SlateTransforms.selectCommandOption(e, A.optionName), b = A.optionName) : null != O ? (C.SlateTransforms.selectCommandOption(e, O.optionName, !1), b = O.optionName) : C.SlateTransforms.resetSelectionToEnd(e), null == O && R(e, d), b
                   }(t, r, n),
                   l = E.getOptionValues(t, S);
                 return O({
@@ -432,7 +432,7 @@ function M(e) {
   }
 }
 
-function k(e, t) {
+function b(e, t) {
   let n = E.getOptionNames(e)[0];
   t();
   let l = T.RangeUtils.toPoint(e.selection);
@@ -447,7 +447,7 @@ function k(e, t) {
   }) && C.SlateTransforms.insertText(e, " ")
 }
 
-function b(e, t, n) {
+function k(e, t, n) {
   var i, r, o, s, a;
   let u = null === (r = e.activeCommand) || void 0 === r ? void 0 : null === (i = r.options) || void 0 === i ? void 0 : i.find(e => e.name === n),
     d = e.initialValues[n];

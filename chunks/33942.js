@@ -50,8 +50,8 @@ var i, s, r, a, o = n("37983"),
   L = n("8222"),
   M = n("164386"),
   U = n("978970"),
-  k = n("29479"),
-  w = n("357974"),
+  w = n("29479"),
+  k = n("357974"),
   V = n("580363"),
   G = n("613070"),
   F = n("530487"),
@@ -153,10 +153,10 @@ function J(e) {
     }),
     eE = em.userAppsTreatment === I.UserAppsTreatment.ALLOWED;
   !eE && (e_ = !1);
-  let [ep, ev] = l.useState(0), [eS, eT] = l.useState(null), [eI, eC] = l.useState(O.default.NONE), [eA, ey] = l.useState(1), [eN, eR] = l.useState(null), [eD] = l.useState(k.OrderedAccountScopes.filter(e => eh.includes(e))), [eO, eP] = l.useState(null != ee ? ee : null), [eb, eL] = l.useState(null != et ? et : null), [eM, eU] = l.useState(!1), ek = l.useMemo(() => {
+  let [ep, ev] = l.useState(0), [eS, eT] = l.useState(null), [eI, eC] = l.useState(O.default.NONE), [eA, ey] = l.useState(1), [eN, eR] = l.useState(null), [eD] = l.useState(w.OrderedAccountScopes.filter(e => eh.includes(e))), [eO, eP] = l.useState(null != ee ? ee : null), [eb, eL] = l.useState(null != et ? et : null), [eM, eU] = l.useState(!1), ew = l.useMemo(() => {
     var e;
     return null == eS ? void 0 : null === (e = eS.guilds) || void 0 === e ? void 0 : e.find(e => e.id === eO)
-  }, [null == eS ? void 0 : eS.guilds, eO]), ew = (0, _.useStateFromStoresObject)([p.default, v.default], () => {
+  }, [null == eS ? void 0 : eS.guilds, eO]), ek = (0, _.useStateFromStoresObject)([p.default, v.default], () => {
     var e, t;
     let n;
     let i = null === (e = v.default.getSelfEmbeddedActivities().values().next()) || void 0 === e ? void 0 : e.value,
@@ -165,7 +165,7 @@ function J(e) {
       ...W.DEFAULT_EMBEDDED_ACTIVITY_CONFIG,
       ...n
     } : {}
-  }), eV = Object.keys(ew).length > 0 ? ew : null, eG = l.useCallback(async e => {
+  }), eV = Object.keys(ek).length > 0 ? ek : null, eG = l.useCallback(async e => {
     if (null != el) {
       el(e);
       return
@@ -173,7 +173,7 @@ function J(e) {
     if (!e && !ed) {
       null != eo && (eo({
         application: null == eS ? void 0 : eS.application,
-        guild: ek
+        guild: ew
       }), null == eu || eu());
       return
     }
@@ -196,7 +196,7 @@ function J(e) {
       if (null != eo) eo({
         application: null == eS ? void 0 : eS.application,
         location: t.location,
-        guild: ek
+        guild: ew
       }), null == eu || eu();
       else if (null != t.location) {
         let {
@@ -206,7 +206,7 @@ function J(e) {
         P.default.isDiscordHostname(e) && n === j.Routes.OAUTH2_AUTHORIZED ? (0, y.transitionTo)(j.Routes.OAUTH2_AUTHORIZED, {
           state: {
             application: null == eS ? void 0 : eS.application,
-            guild: ek
+            guild: ew
           }
         }) : window.location = t.location
       } else eU(!1)
@@ -214,7 +214,7 @@ function J(e) {
       let e = t.body;
       (null == e ? void 0 : e.message) != null && "" !== e.message ? eR(Error(e.message)) : eR(e), ey(1), ev(2), eU(!1)
     }
-  }, [eo, el, A, Z, J, eI, eu, en, Q, X, eh, eO, eb, $, ed, null == eS ? void 0 : eS.application, ek, e_]), eF = l.useRef(!1), ex = l.useCallback(async () => {
+  }, [eo, el, A, Z, J, eI, eu, en, Q, X, eh, eO, eb, $, ed, null == eS ? void 0 : eS.application, ew, e_]), eF = l.useRef(!1), ex = l.useCallback(async () => {
     if (0 === ep) {
       if (ev(1), !R.default.isAuthenticated()) {
         (0, L.logoutWithRedirect)(eg);
@@ -233,7 +233,7 @@ function J(e) {
             state: $,
             userInstall: eE && e_
           });
-          eT((0, M.convertOAuth2Authorization)(e)), ei === w.OAuth2Prompts.NONE && e.authorized ? eG(!0) : ev(2), (0, S.trackWithMetadata)(j.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
+          eT((0, M.convertOAuth2Authorization)(e)), ei === k.OAuth2Prompts.NONE && e.authorized ? eG(!0) : ev(2), (0, S.trackWithMetadata)(j.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
             application_id: e.application.id
           })
         } catch (n) {
@@ -255,7 +255,7 @@ function J(e) {
     eC(n => e ? f.default.remove(n, t) : f.default.add(n, t))
   }, []);
   l.useEffect(() => {
-    let e = eh.filter(e => !k.ValidScopes.includes(e));
+    let e = eh.filter(e => !w.ValidScopes.includes(e));
     0 === eh.length ? (eR(Error("No scopes were provided.")), ev(2)) : e.length > 0 ? (eR(Error("Invalid scope: ".concat(e[0]))), ev(2)) : (0, U.containsDisallowedPermission)(null != en ? en : O.default.NONE) ? (eR(Error("Invalid permission(s) provided.")), ev(2)) : ex()
   }, [ex, eh, en]);
   let eH = null != eb ? null == eS ? void 0 : null === (t = eS.channels) || void 0 === t ? void 0 : t.find(e => e.id === eb) : null,

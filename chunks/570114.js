@@ -12,8 +12,8 @@ t.r(A), t.d(A, {
 });
 var a = t("37983");
 t("884691");
-var l = t("627445"),
-  n = t.n(l),
+var n = t("627445"),
+  l = t.n(n),
   r = t("509043"),
   s = t("65597"),
   o = t("77078"),
@@ -39,17 +39,17 @@ function I() {
 function p(e) {
   let A, {
     onRemove: t,
-    role: l
+    role: n
   } = e;
-  return A = null != l ? (0, a.jsxs)(a.Fragment, {
+  return A = null != n ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(o.HiddenVisually, {
       children: m.default.Messages.GUILD_PRODUCT_SETTINGS_ROLE_COLOR_ARIA.format({
-        color: (0, r.int2hex)(l.color)
+        color: (0, r.int2hex)(n.color)
       })
     }), (0, a.jsx)("div", {
       className: U.attachedRoleColor,
       style: {
-        backgroundColor: (0, r.int2hex)(l.color)
+        backgroundColor: (0, r.int2hex)(n.color)
       }
     }), (0, a.jsx)(d.default, {
       size: 8,
@@ -57,7 +57,7 @@ function p(e) {
     }), (0, a.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "text-normal",
-      children: l.name
+      children: n.name
     }), null != t && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(d.default, {
         size: 12,
@@ -143,7 +143,7 @@ function E(e) {
 function q(e) {
   let {
     newRoleParams: A,
-    setNewRoleParams: l,
+    setNewRoleParams: n,
     guildId: r,
     productId: u,
     listingRoleId: c,
@@ -183,7 +183,7 @@ function q(e) {
         innerClassName: U.restoreDetachedRoleButtonInner,
         color: o.Button.Colors.PRIMARY,
         onClick: () => {
-          l(void 0)
+          n(void 0)
         },
         children: [(0, a.jsx)(o.Text, {
           variant: "text-md/normal",
@@ -212,10 +212,10 @@ function q(e) {
     }), (0, a.jsx)(p, {
       role: g,
       onRemove: () => {
-        n(null != u, "productId cannot be null"), n(null != g, "no role attached"), ! function(e) {
+        l(null != u, "productId cannot be null"), l(null != g, "no role attached"), ! function(e) {
           let {
             onConfirm: A,
-            roleName: l
+            roleName: n
           } = e;
           (0, o.openModalLazy)(async () => {
             let {
@@ -224,7 +224,7 @@ function q(e) {
             return t => (0, a.jsx)(e, {
               title: m.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_TITLE,
               body: (0, a.jsx)(E, {
-                roleName: l
+                roleName: n
               }),
               cta: m.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_REMOVE_CTA,
               closeLabel: m.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_REMOVE_CLOSE_LABEL,
@@ -234,11 +234,11 @@ function q(e) {
           })
         }({
           roleName: g.name,
-          onConfirm: () => l(null)
+          onConfirm: () => n(null)
         })
       }
     })]
-  }) : (n(null != A, "newRoleParams cannot be null at this point"), (0, a.jsxs)(o.FormItem, {
+  }) : (l(null != A, "newRoleParams cannot be null at this point"), (0, a.jsxs)(o.FormItem, {
     required: !0,
     title: m.default.Messages.GUILD_PRODUCT_SETTINGS_ADD_ROLE_HEADER,
     tag: "label",
@@ -252,7 +252,7 @@ function q(e) {
       size: 8
     }), (0, a.jsx)(T.default, {
       newRoleParams: A,
-      setNewRoleParams: l
+      setNewRoleParams: n
     })]
   }))
 }

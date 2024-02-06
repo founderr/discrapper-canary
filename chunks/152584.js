@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   accountDetailsInit: function() {
-    return h
-  },
-  accountDetailsClose: function() {
-    return _
-  },
-  disableAccount: function() {
-    return C
-  },
-  saveAccountRequest: function() {
-    return S
-  },
-  saveAccountChanges: function() {
     return I
   },
-  getHarvestStatus: function() {
+  accountDetailsClose: function() {
+    return h
+  },
+  disableAccount: function() {
+    return S
+  },
+  saveAccountRequest: function() {
+    return p
+  },
+  saveAccountChanges: function() {
     return T
   },
+  getHarvestStatus: function() {
+    return N
+  },
   requestHarvest: function() {
-    return g
+    return C
   },
   setPendingAvatar: function() {
-    return N
+    return R
   },
   setPendingGlobalNameName: function() {
     return v
@@ -31,54 +31,54 @@ n.r(t), n.d(t, {
     return A
   },
   setPendingProfileEffectId: function() {
-    return m
+    return g
   },
   clearErrors: function() {
-    return L
+    return m
   },
   resetPendingAccountChanges: function() {
-    return R
-  },
-  resetAllPending: function() {
-    return y
-  },
-  resetAndCloseUserProfileForm: function() {
     return U
   },
-  setDisableSubmit: function() {
+  resetAllPending: function() {
     return O
+  },
+  resetAndCloseUserProfileForm: function() {
+    return L
+  },
+  setDisableSubmit: function() {
+    return D
   }
 });
 var i = n("872717"),
-  l = n("95410"),
-  r = n("819855"),
-  o = n("913144"),
-  a = n("393414"),
-  s = n("599110"),
+  r = n("95410"),
+  o = n("819855"),
+  s = n("913144"),
+  l = n("393414"),
+  a = n("599110"),
   u = n("315102"),
   c = n("730622"),
   d = n("437822"),
   f = n("49111"),
   E = n("191349"),
-  p = n("782340");
+  _ = n("782340");
 
-function h() {
-  o.default.dispatch({
+function I() {
+  s.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_INIT"
   })
 }
 
-function _() {
-  o.default.dispatch({
+function h() {
+  s.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_CLOSE"
   })
 }
 
-function C(e, t) {
-  let n = t ? p.default.Messages.DELETE_ACCOUNT : p.default.Messages.DISABLE_ACCOUNT,
-    l = t ? f.Endpoints.DELETE_ACCOUNT : f.Endpoints.DISABLE_ACCOUNT;
+function S(e, t) {
+  let n = t ? _.default.Messages.DELETE_ACCOUNT : _.default.Messages.DISABLE_ACCOUNT,
+    r = t ? f.Endpoints.DELETE_ACCOUNT : f.Endpoints.DISABLE_ACCOUNT;
   return (0, c.default)(t => i.default.post({
-    url: l,
+    url: r,
     body: {
       password: e,
       ...t
@@ -90,10 +90,10 @@ function C(e, t) {
     },
     checkEnabled: !1
   }).then(() => {
-    d.default.logoutInternal(), (0, a.transitionTo)(f.Routes.DEFAULT_LOGGED_OUT)
+    d.default.logoutInternal(), (0, l.transitionTo)(f.Routes.DEFAULT_LOGGED_OUT)
   })
 }
-async function S(e) {
+async function p(e) {
   let t = await i.default.patch({
       url: f.Endpoints.ME,
       oldFormErrors: !0,
@@ -102,145 +102,145 @@ async function S(e) {
     n = t.body;
   if (n.token) {
     let t = n.token;
-    delete n.token, o.default.dispatch({
+    delete n.token, s.default.dispatch({
       type: "UPDATE_TOKEN",
       token: t,
       userId: n.id
-    }), (null == e ? void 0 : e.password) != null && (null == e ? void 0 : e.new_password) != null && o.default.dispatch({
+    }), (null == e ? void 0 : e.password) != null && (null == e ? void 0 : e.new_password) != null && s.default.dispatch({
       type: "PASSWORD_UPDATED",
       userId: n.id
     })
   }
-  return o.default.dispatch({
+  return s.default.dispatch({
     type: "CURRENT_USER_UPDATE",
     user: n
   }), t
 }
 
-function I(e) {
+function T(e) {
   let {
     username: t,
     discriminator: n,
     email: i,
-    emailToken: r,
-    password: a,
+    emailToken: o,
+    password: l,
     avatar: d,
-    avatarDecoration: h,
-    newPassword: _,
-    globalName: C
+    avatarDecoration: I,
+    newPassword: h,
+    globalName: S
   } = e;
-  return o.default.dispatch({
+  return s.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SUBMIT"
   }), (0, c.default)(e => {
-    let o = {
+    let s = {
       username: t,
       email: i,
-      email_token: r,
-      password: a,
+      email_token: o,
+      password: l,
       avatar: d,
       discriminator: n,
-      global_name: C,
-      new_password: _,
+      global_name: S,
+      new_password: h,
       ...e
     };
-    null === h && (o.avatar_decoration_id = null), null != h && (o.avatar_decoration_id = h.id, o.avatar_decoration_sku_id = h.skuId);
-    let s = l.default.get(f.DEVICE_TOKEN),
+    null === I && (s.avatar_decoration_id = null), null != I && (s.avatar_decoration_id = I.id, s.avatar_decoration_sku_id = I.skuId);
+    let a = r.default.get(f.DEVICE_TOKEN),
       u = (0, E.getDevicePushProvider)();
-    null != u && null != s && (o.push_provider = u, o.push_token = s);
-    let c = l.default.get(f.DEVICE_VOIP_TOKEN);
-    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != c && (o.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = c), S(o)
+    null != u && null != a && (s.push_provider = u, s.push_token = a);
+    let c = r.default.get(f.DEVICE_VOIP_TOKEN);
+    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != c && (s.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, s.push_voip_token = c), p(s)
   }, {
     checkEnabled: !1,
     modalProps: {
-      title: p.default.Messages.TWO_FA_CHANGE_ACCOUNT
+      title: _.default.Messages.TWO_FA_CHANGE_ACCOUNT
     },
     hooks: {
-      onEarlyClose: () => o.default.dispatch({
+      onEarlyClose: () => s.default.dispatch({
         type: "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE",
         errors: {}
       })
     }
   }).then(e => {
     let t = e.body;
-    return s.default.track(f.AnalyticEvents.USER_AVATAR_UPDATED, {
+    return a.default.track(f.AnalyticEvents.USER_AVATAR_UPDATED, {
       animated: (0, u.isAnimatedIconHash)(t.avatar)
-    }), o.default.dispatch({
+    }), s.default.dispatch({
       type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS"
     }), e
-  }, e => (o.default.dispatch({
+  }, e => (s.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE",
     errors: e.body
   }), e))
 }
 
-function T() {
+function N() {
   return i.default.get({
     url: f.Endpoints.USER_HARVEST,
     oldFormErrors: !0
   })
 }
 
-function g() {
+function C() {
   return i.default.post({
     url: f.Endpoints.USER_HARVEST,
     oldFormErrors: !0
   })
 }
 
-function N(e) {
-  o.default.dispatch({
+function R(e) {
+  s.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
     avatar: e
-  }), null == e ? r.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : r.AccessibilityAnnouncer.announce(p.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
+  }), null == e ? o.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : o.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
 }
 
 function v(e) {
-  o.default.dispatch({
+  s.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
     globalName: e
   })
 }
 
 function A(e) {
-  o.default.dispatch({
+  s.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
     avatarDecoration: e
   })
 }
 
-function m(e) {
-  o.default.dispatch({
+function g(e) {
+  s.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID",
     profileEffectId: e
   })
 }
 
-function L() {
-  o.default.dispatch({
+function m() {
+  s.default.dispatch({
     type: "USER_SETTINGS_CLEAR_ERRORS"
   })
 }
 
-function R() {
-  o.default.dispatch({
+function U() {
+  s.default.dispatch({
     type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
   })
 }
 
-function y() {
-  o.default.dispatch({
+function O() {
+  s.default.dispatch({
     type: "USER_SETTINGS_RESET_ALL_PENDING"
   })
 }
 
-function U() {
-  o.default.dispatch({
+function L() {
+  s.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
   })
 }
 
-function O(e) {
-  o.default.dispatch({
+function D(e) {
+  s.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
     disable: e
   })

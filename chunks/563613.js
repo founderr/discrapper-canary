@@ -10,40 +10,40 @@ var s = n("37983"),
   l = n("86678"),
   i = n("46829"),
   u = n("49111"),
-  o = n("958706"),
-  c = n("782340"),
+  c = n("958706"),
+  o = n("782340"),
   d = n("347609");
 let f = {
     section: u.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
     openPopoutType: "gift_effect_emoji_picker"
   },
-  m = o.EmojiIntention.GIFT;
+  m = c.EmojiIntention.GIFT;
 
 function _(e) {
   let {
     setEmojiConfetti: t,
     emojiConfetti: n
-  } = e, [u, o] = r.useState(!1), _ = e => (0, s.jsxs)("div", {
+  } = e, [u, c] = r.useState(!1), _ = e => (0, s.jsxs)("div", {
     className: d.customGiftContent,
     children: [(0, s.jsxs)("div", {
       className: d.customGiftHeader,
       children: [(0, s.jsx)(a.Text, {
         variant: "text-md/bold",
-        children: c.default.Messages.GIFT_SELECT_EMOJI
+        children: o.default.Messages.GIFT_SELECT_EMOJI
       }), (0, s.jsx)(a.Text, {
         variant: "text-sm/normal",
-        children: c.default.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
+        children: o.default.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
       })]
     }), e]
   }), E = e => {
-    null != t && (t(e), o(!1))
+    null != t && (t(e), c(!1))
   };
   return (0, s.jsx)(a.Popout, {
     shouldShow: u,
     position: "bottom",
     align: "left",
     autoInvert: !1,
-    onRequestClose: () => o(!1),
+    onRequestClose: () => c(!1),
     renderPopout: e => {
       let {
         closePopout: t
@@ -67,7 +67,7 @@ function _(e) {
       className: d.container,
       children: (0, s.jsx)(a.Clickable, {
         className: d.emoji,
-        onClick: () => o(!0),
+        onClick: () => c(!0),
         children: (null == n ? void 0 : n.name) == null ? (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)(i.default, {
             className: d.emojiIcon,
@@ -76,7 +76,7 @@ function _(e) {
           }), (0, s.jsx)(a.Text, {
             className: d.text,
             variant: "text-sm/semibold",
-            children: c.default.Messages.GIFT_SELECT_EMOJI
+            children: o.default.Messages.GIFT_SELECT_EMOJI
           })]
         }) : (0, s.jsxs)(s.Fragment, {
           children: [(0, s.jsx)(a.Text, {

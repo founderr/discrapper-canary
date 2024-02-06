@@ -25,7 +25,7 @@ n.r(t), n.d(t, {
     return U
   },
   isPendingScan: function() {
-    return k
+    return w
   },
   TrackMediaRedactionActionType: function() {
     return s
@@ -34,7 +34,7 @@ n.r(t), n.d(t, {
     return r
   },
   trackMediaRedactionAction: function() {
-    return w
+    return k
   },
   TimeoutCancelSource: function() {
     return a
@@ -152,11 +152,11 @@ function U(e) {
   }
 }
 
-function k(e) {
+function w(e) {
   return !_.default.get("explicit_media_redaction_ignore_pending_scan") && null == e
 }
 
-function w(e) {
+function k(e) {
   let {
     action: t,
     channelId: n,

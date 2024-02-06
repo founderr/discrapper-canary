@@ -10,8 +10,8 @@ var a = l("37983"),
   s = l.n(i),
   r = l("917351"),
   o = l.n(r),
-  d = l("759843"),
-  u = l("446674"),
+  u = l("759843"),
+  d = l("446674"),
   c = l("551042"),
   f = l("77078"),
   p = l("812204"),
@@ -32,12 +32,12 @@ function S(e) {
     channelId: t,
     onClose: i,
     transitionState: r
-  } = e, [S, N] = n.useState(""), [A, M] = n.useState("descending"), [R, P] = n.useState(!0), [j, y] = n.useState(null), D = n.useDeferredValue(S), O = (0, u.useStateFromStores)([v.default], () => v.default.getClips()), b = (0, u.useStateFromStores)([v.default], () => v.default.getPendingClips()), H = (0, u.useStateFromStores)([v.default], () => v.default.getSettings().storageLocation), w = (0, u.useStateFromStoresArray)([v.default], () => v.default.getNewClipIds()), {
+  } = e, [S, N] = n.useState(""), [A, M] = n.useState("descending"), [R, P] = n.useState(!0), [j, y] = n.useState(null), D = n.useDeferredValue(S), O = (0, d.useStateFromStores)([v.default], () => v.default.getClips()), b = (0, d.useStateFromStores)([v.default], () => v.default.getPendingClips()), H = (0, d.useStateFromStores)([v.default], () => v.default.getSettings().storageLocation), w = (0, d.useStateFromStoresArray)([v.default], () => v.default.getNewClipIds()), {
     AnalyticsLocationProvider: k
   } = (0, m.default)(p.default.CLIPS_GALLERY), U = n.useMemo(() => [...b, ...O], [O, b]);
   (0, h.default)({
-    type: d.ImpressionTypes.MODAL,
-    name: d.ImpressionNames.CLIP_GALLERY_VIEWED,
+    type: u.ImpressionTypes.MODAL,
+    name: u.ImpressionNames.CLIP_GALLERY_VIEWED,
     properties: {
       number_of_clips_loaded: U.length
     }

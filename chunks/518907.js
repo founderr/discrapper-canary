@@ -18,8 +18,8 @@ var l = a("37983"),
   C = a("812204"),
   E = a("685665"),
   h = a("606292"),
-  g = a("688318"),
-  p = a("946964"),
+  p = a("688318"),
+  g = a("946964"),
   T = a("635956"),
   L = a("38766"),
   x = a("601095"),
@@ -94,7 +94,7 @@ var Y = function(e) {
     avatarDecorationSrc: et,
     eventHandlers: ea,
     avatarPlaceholderSrc: el
-  } = (0, g.default)({
+  } = (0, p.default)({
     user: Q,
     avatarDecorationOverride: (null == ee ? void 0 : ee.type) === d.CollectiblesItemType.AVATAR_DECORATION ? ee : void 0,
     size: z,
@@ -138,8 +138,8 @@ var Y = function(e) {
       })
     },
     eh = eE(C.default.COLLECTIBLES_SHOP_CARD),
-    eg = eE(C.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
-    ep = () => (0, l.jsx)("div", {
+    ep = eE(C.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+    eg = () => (0, l.jsx)("div", {
       className: U.hoverUpsellContainer,
       children: (0, l.jsx)(T.default, {
         fullWidth: !0,
@@ -168,7 +168,7 @@ var Y = function(e) {
       disableTooltipPointerEvents: !0
     }),
     eL = () => en ? null : ei ? (0, l.jsx)(K, {
-      onClick: eg
+      onClick: ep
     }) : (0, l.jsx)(P.default, {
       product: t,
       returnRef: X,
@@ -177,7 +177,7 @@ var Y = function(e) {
       tooltipDelay: 250
     }),
     ex = () => {
-      if (en && !_ && !ei) return ep();
+      if (en && !_ && !ei) return eg();
       let e = en ? {
         submitting: eu,
         submittingStartedLabel: H.default.Messages.COLLECTIBLES_COLLECTING,
@@ -189,7 +189,7 @@ var Y = function(e) {
           })
         }
       } : {
-        onClick: () => (0, p.default)({
+        onClick: () => (0, g.default)({
           skuId: t.skuId,
           analyticsLocations: Y,
           returnRef: X
