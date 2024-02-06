@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 }), n("222007");
 var a = n("884691"),
@@ -12,8 +12,9 @@ var a = n("884691"),
   o = n("158998"),
   u = n("351348"),
   d = n("801894"),
-  c = n("994428"),
-  f = () => {
+  c = n("408381"),
+  f = n("994428"),
+  E = () => {
     let e = (0, s.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
       {
         newBadgeEnabled: t
@@ -25,18 +26,19 @@ var a = n("884691"),
       } = (0, d.default)({
         location: "useCollectiblesShopTabNewBadge"
       }),
-      f = a.useMemo(() => {
+      E = a.useMemo(() => {
         if ((0, o.ageEligibleForPremiumUpsell)(e)) {
           if (n) return [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE];
           if (t) return [l.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE]
         }
         return []
       }, [t, n, e]),
-      [E, _] = (0, i.useSelectedDismissibleContent)(f, void 0, !0);
+      [_, h] = (0, i.useSelectedDismissibleContent)(E, void 0, !0),
+      C = null != _ ? c.CollectiblesDCToDisplayOptions[_] : null;
     return {
-      collectiblesShopTabNewBadge: E,
+      collectiblesShopTabNewBadgeDisplayOptions: C,
       dismissCollectiblesShopTabNewBadge: () => {
-        E && [l.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE, l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE].includes(E) && _(c.ContentDismissActionType.AUTO)
+        null != C && h(f.ContentDismissActionType.AUTO)
       }
     }
   }
