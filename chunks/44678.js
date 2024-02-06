@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return I
   },
   getOutboundPromotionRedemptionUrl: function() {
-    return P
+    return p
   },
   shouldShowOutboundPromotionNotice: function() {
-    return p
+    return P
   },
   shouldShowOutboundPromotionOnPlatform: function() {
     return S
@@ -53,6 +53,7 @@ function f(e) {
     id: e.id,
     startDate: e.start_date,
     endDate: e.end_date,
+    outboundRedemptionEndDate: e.outbound_redemption_end_date,
     outboundTitle: e.outbound_title,
     outboundRedemptionModalBody: e.outbound_redemption_modal_body,
     outboundRedemptionPageLink: e.outbound_redemption_page_link,
@@ -97,11 +98,11 @@ async function I(e) {
   return E(n)
 }
 
-function P(e, t) {
+function p(e, t) {
   return null != t.outboundRedemptionUrlFormat ? t.outboundRedemptionUrlFormat.replace("{code}", encodeURIComponent(e)) : t.outboundRedemptionPageLink
 }
 
-function p() {
+function P() {
   let e = d.default.lastSeenOutboundPromotionStartDate,
     t = d.default.outboundPromotions,
     n = d.default.consumedInboundPromotionId,
