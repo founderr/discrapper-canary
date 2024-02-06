@@ -16,15 +16,15 @@ var s = a("37983"),
   E = a("289918"),
   f = a("935409"),
   m = a("158998"),
-  g = a("415133"),
-  S = a("500645"),
+  S = a("415133"),
+  g = a("500645"),
   _ = a("925922"),
   I = a("935583"),
   T = a("590456"),
   h = a("782340"),
   O = a("341923"),
-  M = a("107681");
-let N = n.forwardRef(function(e, t) {
+  N = a("107681");
+let M = n.forwardRef(function(e, t) {
   let {
     style: a,
     value: n,
@@ -58,8 +58,8 @@ var L = n.forwardRef(function(e, t) {
     error: i,
     formValues: L,
     displayProfile: R,
-    onChangeFormValue: v,
-    onFocusDisplayName: P,
+    onChangeFormValue: P,
+    onFocusDisplayName: v,
     onFocusUsername: C,
     editState: x,
     footerNotice: p,
@@ -161,7 +161,7 @@ var L = n.forwardRef(function(e, t) {
             children: (0, s.jsx)("img", {
               className: O.legacyUsernameBadge,
               alt: "",
-              src: M
+              src: N
             })
           })
         })
@@ -178,15 +178,15 @@ var L = n.forwardRef(function(e, t) {
           color: "text-muted",
           variant: "text-sm/semibold",
           children: h.default.Messages.DISPLAY_NAME
-        }), (0, s.jsx)(N, {
+        }), (0, s.jsx)(M, {
           style: l(O.displayNameHeight, O["heading-xl/bold"]),
           value: null != G ? G : "",
           placeholder: m.default.getName(a),
           maxLength: I.MAX_DISPLAY_NAME_LENGTH,
-          onChange: e => v({
+          onChange: e => P({
             globalName: e
           }),
-          onFocus: P,
+          onFocus: v,
           ref: b
         })]
       }), (x === I.EditState.EDIT_USERNAME || x === I.EditState.SUGGESTION) && (0, s.jsxs)(s.Fragment, {
@@ -195,12 +195,12 @@ var L = n.forwardRef(function(e, t) {
           color: "text-muted",
           variant: "text-sm/semibold",
           children: h.default.Messages.USERNAME
-        }), (0, s.jsx)(N, {
+        }), (0, s.jsx)(M, {
           style: l(O.userCardHeight, O.lowercaseUsername, O["heading-lg/medium"]),
           value: null != U ? U : "",
           placeholder: a.username,
           maxLength: I.MAX_DISPLAY_NAME_LENGTH,
-          onChange: e => v({
+          onChange: e => P({
             username: e.replace("@", "")
           }),
           onFocus: C,
@@ -209,7 +209,7 @@ var L = n.forwardRef(function(e, t) {
       }), (0, s.jsx)("div", {
         className: O.messageContainer,
         children: (() => {
-          if (null != i) return (0, s.jsx)(S.default, {
+          if (null != i) return (0, s.jsx)(g.default, {
             type: "error",
             children: i
           });
@@ -218,7 +218,7 @@ var L = n.forwardRef(function(e, t) {
               variant: "text-sm/normal",
               children: p
             });
-            if (!A) return (0, s.jsx)(S.default, {
+            if (!A) return (0, s.jsx)(g.default, {
               type: "success",
               children: p
             })
@@ -244,7 +244,7 @@ var L = n.forwardRef(function(e, t) {
         color: "text-muted",
         variant: "text-sm/medium",
         children: h.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
-          date: (0, g.getMemberSince)(a.id)
+          date: (0, S.getMemberSince)(a.id)
         })
       })]
     })]

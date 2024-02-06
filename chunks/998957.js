@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), a("222007");
 var s = a("37983"),
@@ -16,19 +16,19 @@ var s = a("37983"),
   E = a("935583"),
   f = a("49111"),
   m = a("782340"),
-  g = a("341923");
+  S = a("341923");
 
-function S(e) {
+function g(e) {
   let {
     userRef: t,
     usernameSuggestionLoading: a = !1,
-    oneClickFlow: S = !1,
+    oneClickFlow: g = !1,
     ..._
   } = e, {
     user: I,
     editState: T,
     onClose: h
-  } = _, O = (0, o.default)(I.id), M = function(e, t, a) {
+  } = _, O = (0, o.default)(I.id), N = function(e, t, a) {
     switch (e) {
       case E.EditState.EDIT_USERNAME:
         return {
@@ -59,7 +59,7 @@ function S(e) {
           header: m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE, subtitle: m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE
         }
     }
-  }(T, u.default.getName(I), h), [N, L] = (0, i.useSpring)(() => ({
+  }(T, u.default.getName(I), h), [M, L] = (0, i.useSpring)(() => ({
     opacity: 0,
     y: 10
   }));
@@ -73,28 +73,28 @@ function S(e) {
       }
     })
   }, [L, T]), (0, s.jsxs)("div", {
-    className: g.displayNameContainer,
+    className: S.displayNameContainer,
     children: [(0, s.jsxs)(i.animated.div, {
       style: {
-        opacity: N.opacity,
-        y: N.y
+        opacity: M.opacity,
+        y: M.y
       },
       children: [(0, s.jsx)(l.Heading, {
-        className: g.title,
+        className: S.title,
         color: "header-primary",
         variant: "heading-xl/extrabold",
-        children: M.header
+        children: N.header
       }), (0, s.jsxs)("div", {
-        className: g.subtitle,
+        className: S.subtitle,
         children: [(0, s.jsx)(l.Heading, {
           color: "header-secondary",
           variant: "heading-sm/medium",
-          children: M.subtitle
-        }), null != M.link && (0, s.jsx)(l.Text, {
-          className: g.link,
+          children: N.subtitle
+        }), null != N.link && (0, s.jsx)(l.Text, {
+          className: S.link,
           color: "header-secondary",
           variant: "text-sm/medium",
-          children: M.link
+          children: N.link
         })]
       })]
     }), (0, s.jsx)(c.default, {
@@ -102,7 +102,7 @@ function S(e) {
       displayProfile: O,
       ref: t,
       usernameSuggestionLoading: a,
-      oneClickFlow: S
+      oneClickFlow: g
     })]
   })
 }

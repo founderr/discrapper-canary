@@ -2,7 +2,7 @@
 let a, i;
 n.r(e), n.d(e, {
   default: function() {
-    return A
+    return f
   }
 }), n("222007");
 var l = n("446674"),
@@ -44,7 +44,7 @@ class p extends l.default.Store {
   }
 }
 p.displayName = "InteractionStore";
-var A = new p(r.default, {
+var f = new p(r.default, {
   LOGOUT: function() {
     c = {}, s = {}, E = {}
   },

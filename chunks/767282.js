@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var s = a("37983");
@@ -18,7 +18,7 @@ var n = a("414456"),
   f = a("341923"),
   m = a("259707");
 
-function g(e) {
+function S(e) {
   let {
     user: t
   } = e;

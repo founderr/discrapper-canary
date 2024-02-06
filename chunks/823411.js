@@ -16,8 +16,8 @@ var a = n("522632"),
   E = n("686470"),
   I = n("535974"),
   p = n("568734"),
-  A = n("269180"),
-  f = n("773336"),
+  f = n("269180"),
+  A = n("773336"),
   _ = n("260365"),
   T = n("438931"),
   C = n("215082"),
@@ -34,7 +34,7 @@ function D(t) {
     embedded: r = !1,
     analyticsLocations: u = []
   } = t;
-  S(e, null, a, r, u).then(() => A.default.waitConnected(e)).then(() => Promise.race([A.default.waitSubscribed(e, y.RPCEvents.ACTIVITY_JOIN)])).then(() => {
+  S(e, null, a, r, u).then(() => f.default.waitConnected(e)).then(() => Promise.race([f.default.waitSubscribed(e, y.RPCEvents.ACTIVITY_JOIN)])).then(() => {
     l.default.dispatch({
       type: "ACTIVITY_JOIN",
       applicationId: e,
@@ -59,16 +59,16 @@ function S(t, e, n) {
     e = null != n ? n.branchId : t
   }
   if (I.default.isLaunchable(t, e)) {
-    var f;
+    var A;
     let n = I.default.getState(t, e),
       l = E.default.getActiveLaunchOptionId(t, e);
     if (null == n) throw Error("Missing dispatch game when launching");
     let r = E.default.getLibraryApplication(t, e);
     if (null == r) throw Error("Missing library application when launching");
-    p = (f = t, i.default.post({
+    p = (A = t, i.default.post({
       url: y.Endpoints.OAUTH2_AUTHORIZE,
       query: {
-        client_id: f,
+        client_id: A,
         response_type: "token",
         scope: [y.OAuth2Scopes.IDENTIFY].join(" ")
       },
@@ -89,10 +89,10 @@ function S(t, e, n) {
     }, t => {
       if (404 === t.status) return null;
       throw t
-    })).then(t => A.default.launchDispatchApplication(n, t, o.default.locale, r.getBranchName(), l))
+    })).then(t => f.default.launchDispatchApplication(n, t, o.default.locale, r.getBranchName(), l))
   } else {
     let e = u.default.getApplication(t);
-    p = null != e ? A.default.launch(e) : A.default.launchGame(t)
+    p = null != e ? f.default.launch(e) : f.default.launchGame(t)
   }
   let _ = Error("game not found");
   return null != p ? (l.default.dispatch({
@@ -229,7 +229,7 @@ var m = {
         url: y.Endpoints.UNVERIFIED_APPLICATIONS,
         body: {
           name: e,
-          os: (0, f.getPlatformName)(),
+          os: (0, A.getPlatformName)(),
           icon: n,
           distributor_application: (s = r, E = u, null == s || "" === s ? null : {
             distributor: s,

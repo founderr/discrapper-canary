@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), a("794252");
 var s = a("37983");
@@ -30,7 +30,7 @@ let E = () => (0, s.jsx)(d.default, {
     color: r.default.colors.TEXT_WARNING.css
   });
 
-function g(e) {
+function S(e) {
   let t = (0, l.match)(e.type).with("info", () => (0, s.jsx)(m, {})).with("error", () => (0, s.jsx)(f, {})).with("success", () => (0, s.jsx)(E, {})).otherwise(() => null);
   return (0, s.jsxs)(s.Fragment, {
     children: [t, (0, s.jsx)(o.Text, {
