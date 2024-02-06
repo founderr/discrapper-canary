@@ -167,7 +167,7 @@ function D(e) {
           isDisabled: C,
           currentValue: N.permission,
           onChange: R ? e => {
-            T.default.dismissToggleTooltip(null == g ? void 0 : g.id), d(e)
+            T.default.dismissToggleTooltip(r.id, g), d(e)
           } : d
         })
       })
