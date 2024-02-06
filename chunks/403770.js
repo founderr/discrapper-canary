@@ -49,6 +49,14 @@ let s = (0, i.createExperiment)({
         canSupportSecureFrames: !0,
         canSupportMls: !0
       }
+    }, {
+      id: 5,
+      label: "Can support secure frames above protocol version 109 (MLS)",
+      config: {
+        protocolVersionFloor: 9,
+        canSupportSecureFrames: !0,
+        canSupportMls: !0
+      }
     }]
   }),
   r = (0, i.createExperiment)({
@@ -89,6 +97,14 @@ let s = (0, i.createExperiment)({
       label: "Can support secure frames above protocol version 108 (MLS)",
       config: {
         protocolVersionFloor: 8,
+        canSupportSecureFrames: !0,
+        canSupportMls: !0
+      }
+    }, {
+      id: 5,
+      label: "Can support secure frames above protocol version 109 (MLS)",
+      config: {
+        protocolVersionFloor: 9,
         canSupportSecureFrames: !0,
         canSupportMls: !0
       }
