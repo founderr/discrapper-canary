@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return N
   }
 }), n("222007");
 var s = n("37983"),
@@ -15,39 +15,59 @@ var s = n("37983"),
   c = n("98352"),
   f = n("970366"),
   E = n("271938"),
-  I = n("760190"),
-  _ = n("124969"),
-  p = n("782340"),
-  h = n("926622");
+  _ = n("760190"),
+  I = n("124969"),
+  p = n("49111"),
+  h = n("782340"),
+  T = n("926622");
 l.default.initialize();
-var T = e => {
+var N = e => {
   let {
     location: t
-  } = e, n = (0, l.useStateFromStores)([E.default], () => E.default.isAuthenticated()), T = (0, l.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments), N = (0, c.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [m, g] = a.useState(!1), [A, S] = a.useState(p.default.Messages.AUTHORIZING), [C, v] = a.useState(!0);
+  } = e, n = (0, l.useStateFromStores)([E.default], () => E.default.isAuthenticated()), N = (0, l.useStateFromStores)([_.default], () => _.default.hasLoadedExperiments), m = (0, c.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [g, A] = a.useState(!1), [S, C] = a.useState(h.default.Messages.AUTHORIZING), [v, R] = a.useState(!0), O = e => {
+    switch (e) {
+      case p.AbortCodes.INVALID_FORM_BODY:
+      case p.AbortCodes.DSA_RSL_REPORT_NOT_FOUND:
+        C(h.default.Messages.REPORT_SECOND_LOOK_NOT_FOUND_ERROR);
+        break;
+      case p.AbortCodes.DSA_RSL_ALREADY_REQUESTED:
+        C(h.default.Messages.REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR);
+        break;
+      case p.AbortCodes.DSA_RSL_LIMITED_TIME:
+        C(h.default.Messages.REPORT_SECOND_LOOK_LIMITED_TIME_ERROR);
+        break;
+      case p.AbortCodes.DSA_RSL_REPORT_INELIGIBLE:
+        C(h.default.Messages.REPORT_SECOND_LOOK_INELIGIBLE_ERROR);
+        break;
+      default:
+        C(h.default.Messages.REPORT_SECOND_LOOK_UNKNOWN_ERROR)
+    }
+  };
   return a.useEffect(() => {
-    n ? (v(!0), u.fetchCurrentUser({
+    n ? (R(!0), u.fetchCurrentUser({
       withAnalyticsToken: !0
-    }).then(() => v(!1)).catch(() => v(!1))) : v(!1)
+    }).then(() => R(!1)).catch(() => R(!1))) : R(!1)
   }, [n]), a.useEffect(() => {
-    !T && !N && r.default.getExperiments()
-  }, [T, N]), a.useEffect(() => {
+    !N && !m && r.default.getExperiments()
+  }, [N, m]), a.useEffect(() => {
     let e = async e => {
+      var t, n;
       try {
-        let t = null != e ? await (0, d.submitReportSecondLook)(e) : void 0;
-        null != t ? S(p.default.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : S(p.default.Messages.REPORT_SECOND_LOOK_FAILURE_TITLE)
+        let n = null != e ? await (0, d.submitReportSecondLook)(e) : void 0;
+        null != n ? C(h.default.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : O(null === (t = n.body) || void 0 === t ? void 0 : t.code)
       } catch (e) {
-        S(p.default.Messages.REPORT_SECOND_LOOK_FAILURE_TITLE)
+        O(null === (n = e.body) || void 0 === n ? void 0 : n.code)
       } finally {
-        g(!1)
+        A(!1)
       }
     };
-    g(!0);
+    A(!0);
     let n = (0, o.default)(t);
     e(n), (0, f.trackAppUIViewed)("report_second_look")
-  }, [t]), N && !C && (0, s.jsxs)(_.default, {
-    children: [(0, s.jsx)(_.Title, {
-      className: h.marginBottom8,
-      children: A
-    }), m && (0, s.jsx)(i.Spinner, {})]
+  }, [t]), m && !v && (0, s.jsxs)(I.default, {
+    children: [(0, s.jsx)(I.Title, {
+      className: T.marginBottom8,
+      children: S
+    }), g && (0, s.jsx)(i.Spinner, {})]
   })
 }
