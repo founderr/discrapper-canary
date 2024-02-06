@@ -109,6 +109,9 @@ S.displayName = "GameStore", S.persistKey = "GameStore", S.migrations = [e => {
     detectableGamesEtag: e.detectableGamesEtag,
     detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map(e => p(new u.default(e)))) && void 0 !== n ? n : []
   }
+}, e => (0, d.isDesktop)() ? e : {
+  detectableGamesEtag: "",
+  detectableGames: []
 }];
 var T = new S(o.default, {
   OVERLAY_INITIALIZE: function(e) {
