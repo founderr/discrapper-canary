@@ -93,28 +93,30 @@ function S(e) {
       instant: o,
       Layer: s,
       onCloseRequest: l,
-      onCloseCallback: a
+      onCloseCallback: a,
+      backdropStyle: u
     } = t,
-    u = null != i ? i : r();
+    c = null != i ? i : r();
   return f.setState(t => {
     let i = t[n];
     return void 0 !== i && i.some(e => {
       let {
         key: t
       } = e;
-      return t === u
+      return t === c
     }) ? t : {
       ...t,
       [n]: [...i, {
-        key: u,
+        key: c,
         Layer: s,
         render: e,
-        onCloseRequest: null != l ? l : () => g(u, n),
+        onCloseRequest: null != l ? l : () => g(c, n),
         onCloseCallback: a,
-        instant: o
+        instant: o,
+        backdropStyle: u
       }]
     }
-  }), u
+  }), c
 }
 
 function g(e) {

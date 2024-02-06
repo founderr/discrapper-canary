@@ -111,13 +111,14 @@ function C() {
   return (0, i.jsxs)(u.default, {
     component: s.Fragment,
     children: [v.map((e, n) => {
-      let s = l.findLast(t, t => t.Layer === e || null == t.Layer && e === f.default);
+      var s;
+      let r = l.findLast(t, t => t.Layer === e || null == t.Layer && e === f.default);
       return (0, i.jsx)(c.default, {
         isVisible: d[n],
-        backdropStyle: c.BackdropStyles.DARK,
+        backdropStyle: null !== (s = null == r ? void 0 : r.backdropStyle) && void 0 !== s ? s : c.BackdropStyles.DARK,
         onClose: a,
         LayerComponent: e,
-        backdropInstant: null == s ? void 0 : s.instant
+        backdropInstant: null == r ? void 0 : r.instant
       }, "layer-".concat(n))
     }), t.map((e, n) => {
       let {
