@@ -4,7 +4,7 @@ l.r(t), l.d(t, {
     return a
   },
   ChatInputTypes: function() {
-    return g
+    return A
   }
 });
 var n, a, s = l("394846"),
@@ -299,7 +299,7 @@ let r = {
       disableEnterToSubmit: !0
     }
   },
-  E = {
+  T = {
     analyticsName: "profile_bio_input",
     drafts: {
       type: i.DraftType.ChannelMessage
@@ -317,7 +317,7 @@ let r = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  T = {
+  E = {
     analyticsName: "custom_gift_type",
     drafts: {
       type: i.DraftType.ChannelMessage
@@ -367,6 +367,24 @@ let r = {
     toolbarType: 1
   },
   g = {
+    analyticsName: "atomic_reator_reply_input",
+    drafts: {
+      type: i.DraftType.ChannelMessage
+    },
+    emojis: {
+      button: !0
+    },
+    permissions: {
+      requireSendMessages: !0
+    },
+    submit: {
+      useDisabledStylesOnSubmit: !0,
+      disableEnterToSubmit: !0
+    },
+    disableAutoFocus: !0,
+    showCharacterCount: !0
+  },
+  A = {
     NORMAL: r,
     OVERLAY: o,
     SIDEBAR: u,
@@ -374,10 +392,11 @@ let r = {
     FORM: c,
     VOICE_CHANNEL_STATUS: f,
     THREAD_CREATION: m,
-    PROFILE_BIO_INPUT: E,
-    CUSTOM_GIFT: T,
+    PROFILE_BIO_INPUT: T,
+    CUSTOM_GIFT: E,
     RULES_INPUT: S,
     CREATE_FORUM_POST: p,
     CREATE_POLL: h,
-    FORUM_CHANNEL_GUIDELINES: _
+    FORUM_CHANNEL_GUIDELINES: _,
+    ATOMIC_REACTOR_REPLY_INPUT: g
   }

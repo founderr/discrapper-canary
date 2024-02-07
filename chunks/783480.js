@@ -126,12 +126,13 @@ async function R(e) {
       uploads: R,
       draftType: I
     }))
-  }), N.on("complete", e => {
+  }), N.on("complete", (e, t) => {
     n.default.dispatch({
       type: "UPLOAD_COMPLETE",
       channelId: E,
       file: e,
-      aborted: N._aborted
+      aborted: N._aborted,
+      messageRecord: t
     })
   }), await N.uploadFiles(R, w), F.resolve(), F.promise
 }
