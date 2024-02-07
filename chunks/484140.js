@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return P
   }
 }), n("222007");
 var a = n("37983"),
@@ -16,128 +16,124 @@ var a = n("37983"),
   f = n("673527"),
   E = n("410348"),
   _ = n("271938"),
-  h = n("546463"),
-  C = n("18494"),
-  I = n("697218"),
-  T = n("953109"),
-  S = n("277174"),
-  p = n("368121"),
-  m = n("811305"),
-  A = n("158998"),
-  g = n("882278"),
-  N = n("754493"),
-  R = n("813531"),
-  O = n("49111"),
-  L = n("706530"),
-  v = n("782340"),
-  M = n("42845");
+  h = n("18494"),
+  C = n("697218"),
+  I = n("953109"),
+  T = n("277174"),
+  S = n("368121"),
+  p = n("811305"),
+  m = n("158998"),
+  A = n("882278"),
+  g = n("754493"),
+  N = n("813531"),
+  R = n("49111"),
+  O = n("706530"),
+  L = n("782340"),
+  v = n("42845");
 
-function P(e) {
+function M(e) {
   let {
     users: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: M.viewers,
-    children: [(0, a.jsx)(p.default, {
+    className: v.viewers,
+    children: [(0, a.jsx)(S.default, {
       width: 16,
       height: 16,
       color: i.default.colors.HEADER_PRIMARY.css
-    }), (0, a.jsx)(m.default, {
+    }), (0, a.jsx)(p.default, {
       showUserPopout: !0,
       useFallbackUserForPopout: !0,
       users: t,
       max: 6,
-      size: m.Sizes.SIZE_24
+      size: p.Sizes.SIZE_24
     })]
   })
 }
 
-function D(e) {
+function P(e) {
   var t;
   let {
     broadcast: n
   } = e, {
     userId: i,
-    applicationId: p,
-    channelId: m,
-    streamKey: D
-  } = n, [y, x] = s.useState(!1), b = (0, l.useStateFromStores)([I.default], () => I.default.getUser(i)), U = (0, l.useStateFromStores)([h.default], () => {
-    var e, t;
-    return null !== (t = null === (e = h.default.getDetectableGame(p)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : ""
-  }), [G] = (0, c.default)([U]), j = null !== (t = A.default.getGlobalName(b)) && void 0 !== t ? t : A.default.getUserTag(b), w = (0, R.default)(), k = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, m, i)), F = (0, l.useStateFromStores)([C.default], () => C.default.getVoiceChannelId()), B = (0, N.default)(), H = (0, g.default)(m);
+    applicationId: S,
+    channelId: p,
+    streamKey: P
+  } = n, [D, y] = s.useState(!1), x = (0, l.useStateFromStores)([C.default], () => C.default.getUser(i)), [b] = (0, c.default)([S]), U = null !== (t = m.default.getGlobalName(x)) && void 0 !== t ? t : m.default.getUserTag(x), G = (0, N.default)(), j = (0, l.useStateFromStores)([E.default], () => E.default.getPreviewURL(null, p, i)), w = (0, l.useStateFromStores)([h.default], () => h.default.getVoiceChannelId()), k = (0, g.default)(), F = (0, A.default)(p);
   if (s.useEffect(() => {
-      y && F === m && x(!1)
-    }, [F, y, m]), null == b || null == j) return null;
+      D && w === p && y(!1)
+    }, [w, D, p]), null == x || null == U) return null;
   let {
-    buttonColor: V,
-    buttonCTA: Y,
-    disabled: W
+    buttonColor: B,
+    buttonCTA: H,
+    disabled: V
   } = function(e, t) {
     let n = _.default.getId(),
       a = t.some(e => e.id === n) || e === n,
-      s = t.length >= O.MAX_GROUP_DM_BROADCAST_PARTICIPANTS;
+      s = t.length >= R.MAX_GROUP_DM_BROADCAST_PARTICIPANTS;
     return {
       buttonColor: s ? r.ButtonColors.RED : r.ButtonColors.GREEN,
-      buttonCTA: s ? v.default.Messages.BROADCAST_FULL : a ? v.default.Messages.VIEW_BROADCAST : v.default.Messages.JOIN_BROADCAST,
+      buttonCTA: s ? L.default.Messages.BROADCAST_FULL : a ? L.default.Messages.VIEW_BROADCAST : L.default.Messages.JOIN_BROADCAST,
       disabled: s
     }
-  }(i, H);
+  }(i, F);
   return (0, a.jsxs)("div", {
-    className: M.container,
+    className: v.container,
     children: [(0, a.jsx)(r.Avatar, {
       size: r.AvatarSizes.SIZE_32,
-      src: b.getAvatarURL(null, 32),
-      "aria-label": j
+      src: x.getAvatarURL(null, 32),
+      "aria-label": U
     }), (0, a.jsxs)("div", {
-      className: M.details,
+      className: v.details,
       children: [(0, a.jsx)(r.Text, {
         variant: "text-md/semibold",
-        children: j
+        children: U
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: null != G ? v.default.Messages.STREAMING.format({
-          name: G.name
-        }) : v.default.Messages.STREAMING_A_GAME
+        children: null != b ? L.default.Messages.STREAMING.format({
+          name: b.name
+        }) : L.default.Messages.STREAMING_A_GAME
       }), (0, a.jsxs)("div", {
-        className: M.activity,
-        children: [H.length > 0 && (0, a.jsx)(P, {
-          users: H
+        className: v.activity,
+        children: [F.length > 0 && (0, a.jsx)(M, {
+          users: F
         }), (0, a.jsxs)(r.Button, {
           onClick: () => {
-            if (F === m) {
-              o.default.selectPrivateChannel(m);
+            if (w === p) {
+              o.default.selectPrivateChannel(p);
               return
             }
-            x(!0), (0, u.joinPrivateChannelAndWatchStream)(m, D), d.default.trackWithMetadata(O.AnalyticEvents.BROADCAST_VIEWED, {
-              num_active_broadcasts: w.length,
-              broadcast_position: w.findIndex(e => e.userId === i) + 1,
-              is_broadcasting: B,
-              broadcast_channel_id: m
+            y(!0), (0, u.joinPrivateChannelAndWatchStream)(p, P), d.default.trackWithMetadata(R.AnalyticEvents.BROADCAST_VIEWED, {
+              num_active_broadcasts: G.length,
+              broadcast_position: G.findIndex(e => e.userId === i) + 1,
+              is_broadcasting: k,
+              broadcast_channel_id: p
             })
           },
-          color: V,
+          color: B,
           size: r.ButtonSizes.SMALL,
-          className: M.button,
-          disabled: W,
-          innerClassName: M.innerButton,
-          children: [(0, a.jsx)(S.default, {
+          className: v.button,
+          disabled: V,
+          innerClassName: v.innerButton,
+          children: [(0, a.jsx)(T.default, {
             width: 16,
             height: 16
-          }), Y]
+          }), H]
         })]
       })]
-    }), null != k ? (0, a.jsx)(f.default, {
-      className: M.stream,
+    }), null != j ? (0, a.jsx)(f.default, {
+      className: v.stream,
       stream: {
-        streamType: L.StreamTypes.CALL,
+        streamType: O.StreamTypes.CALL,
         ownerId: i,
-        channelId: m
+        channelId: p
       }
-    }) : (0, a.jsx)(T.default, {
-      game: G,
-      size: T.default.Sizes.LARGE,
-      className: M.gameIcon
+    }) : (0, a.jsx)(I.default, {
+      game: b,
+      size: I.default.Sizes.LARGE,
+      className: v.gameIcon
     })]
   })
 }
