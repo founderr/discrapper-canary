@@ -1,3 +1,3 @@
-e.exports = function(e) {
-  return e != e
+t.exports = function(t) {
+  return t != t
 }

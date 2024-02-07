@@ -1,2 +1,2 @@
-var r = n("367753")(Object, "create");
-e.exports = r
+var e = n("367753")(Object, "create");
+t.exports = e

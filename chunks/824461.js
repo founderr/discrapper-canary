@@ -1,2 +1,2 @@
-var r = n("319456")();
-e.exports = r
+var e = n("319456")();
+t.exports = e

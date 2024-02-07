@@ -1,2 +1,2 @@
-var r = n("761197")(Object.keys, Object);
-e.exports = r
+var e = n("761197")(Object.keys, Object);
+t.exports = e
